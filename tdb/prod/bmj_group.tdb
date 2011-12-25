@@ -230,18 +230,18 @@
 
     param[base_url] = http://fn.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 80 ; 80 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 81 ; 81 >
+    au < HighWirePressH20Plugin ; testing ; 1994 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; testing ; 1994 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; testing ; 1995 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; testing ; 1995 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; testing ; 1996 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; testing ; 1996 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; testing ; 1997 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; testing ; 1997 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; testing ; 1998 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; testing ; 1998 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; testing ; 1999 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; testing ; 1999 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; released ; 2000 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; released ; 2000 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; released ; 2001 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 84 ; 84 >
@@ -540,11 +540,11 @@
     au < HighWirePressH20Plugin ; manifest ; 1992 ; British Journal of Sports Medicine Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; British Journal of Sports Medicine Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; manifest ; 1994 ; British Journal of Sports Medicine Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; British Journal of Sports Medicine Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; British Journal of Sports Medicine Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; British Journal of Sports Medicine Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; British Journal of Sports Medicine Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; British Journal of Sports Medicine Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; testing ; 1995 ; British Journal of Sports Medicine Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; testing ; 1996 ; British Journal of Sports Medicine Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; testing ; 1997 ; British Journal of Sports Medicine Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; testing ; 1998 ; British Journal of Sports Medicine Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; testing ; 1999 ; British Journal of Sports Medicine Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 2000 ; British Journal of Sports Medicine Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; released ; 2001 ; British Journal of Sports Medicine Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2002 ; British Journal of Sports Medicine Volume 36 ; 36 >
@@ -1531,26 +1531,28 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     >
 
     param[base_url] = http://sti.bmj.com/
-    
-    comment[v87] = hash mismatch
 
-    au < HighWirePressH20Plugin ; testing ; 1925 ; Sexually Transmitted Infections Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 1927 ; Sexually Transmitted Infections Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; testing ; 1928 ; Sexually Transmitted Infections Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; testing ; 1929 ; Sexually Transmitted Infections Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; testing ; 1930 ; Sexually Transmitted Infections Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; 1931 ; Sexually Transmitted Infections Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; testing ; 1932 ; Sexually Transmitted Infections Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 1933 ; Sexually Transmitted Infections Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; testing ; 1934 ; Sexually Transmitted Infections Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 1935 ; Sexually Transmitted Infections Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 1936 ; Sexually Transmitted Infections Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 1937 ; Sexually Transmitted Infections Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 1938 ; Sexually Transmitted Infections Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; testing ; 1939 ; Sexually Transmitted Infections Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 1943 ; Sexually Transmitted Infections Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; 1944 ; Sexually Transmitted Infections Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 1945 ; Sexually Transmitted Infections Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 1925 ; Sexually Transmitted Infections Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1926 ; Sexually Transmitted Infections Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1927 ; Sexually Transmitted Infections Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1928 ; Sexually Transmitted Infections Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 1929 ; Sexually Transmitted Infections Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 1930 ; Sexually Transmitted Infections Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 1931 ; Sexually Transmitted Infections Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1932 ; Sexually Transmitted Infections Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 1933 ; Sexually Transmitted Infections Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 1934 ; Sexually Transmitted Infections Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1935 ; Sexually Transmitted Infections Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 1936 ; Sexually Transmitted Infections Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 1937 ; Sexually Transmitted Infections Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 1938 ; Sexually Transmitted Infections Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1939 ; Sexually Transmitted Infections Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 1940 ; Sexually Transmitted Infections Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 1941 ; Sexually Transmitted Infections Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; testing ; 1942 ; Sexually Transmitted Infections Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; ready ; 1943 ; Sexually Transmitted Infections Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 1944 ; Sexually Transmitted Infections Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; ready ; 1945 ; Sexually Transmitted Infections Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; ready ; 1946 ; Sexually Transmitted Infections Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; ready ; 1947 ; Sexually Transmitted Infections Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; ready ; 1948 ; Sexually Transmitted Infections Volume 24 ; 24 >
