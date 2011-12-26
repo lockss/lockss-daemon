@@ -42,6 +42,7 @@
       au < manifest ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
       au < manifest ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
       au < manifest ; 2011 ; AAP Grand Rounds Volume 25 ; 25 >
+      au < manifest ; 2011 ; AAP Grand Rounds Volume 26 ; 26 >
 
     }
 
@@ -257,6 +258,7 @@
       au < manifest ; 2010 ; Pediatrics Volume 125 ; 125 >
       au < manifest ; 2010 ; Pediatrics Volume 126 ; 126 >
       au < manifest ; 2011 ; Pediatrics Volume 127 ; 127 >
+      au < manifest ; 2011 ; Pediatrics Volume 128 ; 128 >
 
     }
 
@@ -318,13 +320,25 @@
 
     title <
       name = Red Book Online ;
-      type = book ;
       issn = 1080-0131 ;
       eissn = 1544-9300 ;
       issnl = 1080-0131
     >
-
+    
     comment[0] = This is a serialized book that requires a slight change to the H10 plugin, do not process unless the change is ready
+
+    param[base_url] = http://aapredbook.aappublications.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWirePlugin
+    
+      au < doNotProcess ; 2003 ; Red Book Online Volume 2003 ; 2003 >
+      au < doNotProcess ; 2006 ; Red Book Online Volume 2006 ; 2006 >
+      au < doNotProcess ; 2009 ; Red Book Online Volume 2009 ; 2009 >
+    
+    }
 
   }
 
