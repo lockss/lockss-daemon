@@ -865,7 +865,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[18] = found a login page
 
-    au < exists ; 2004 ; Vascular Volume 12 ; 12 >
+    au < manifest ; 2004 ; Vascular Volume 12 ; 12 >
     au < released ; 2005 ; Vascular Volume 13 ; 13 >
     au < released ; 2006 ; Vascular Volume 14 ; 14 >
     au < released ; 2007 ; Vascular Volume 15 ; 15 >
