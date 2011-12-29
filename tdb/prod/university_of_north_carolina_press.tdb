@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = appalachian_heritage
+    attr[journal_id] = aph
 
     au < released ; 2008 ; Appalachian Heritage Volume 36 ; 36 >
     au < released ; 2009 ; Appalachian Heritage Volume 37 ; 37 >
@@ -33,6 +34,7 @@
     >
 
     param[journal_dir] = the_comparatist
+    attr[journal_id] = com
 
     au < released ; 2005 ; The Comparatist Volume 29 ; 29 >
     au < released ; 2006 ; The Comparatist Volume 30 ; 30 >
@@ -53,6 +55,7 @@
     >
 
     param[journal_dir] = early_american_literature
+    attr[journal_id] = eal
 
     au < released ; 2000 ; Early American Literature Volume 35 ; 35 >
     au < released ; 2001 ; Early American Literature Volume 36 ; 36 >
@@ -78,6 +81,7 @@
     >
 
     param[journal_dir] = high_school_journal
+    atttr[journal_id]= hsj
 
     au < released ; 2001 ; The High School Journal Volume 84 ; 84 >
     au < released ; 2002 ; The High School Journal Volume 85 ; 85 >
@@ -102,6 +106,7 @@
     >
 
     param[journal_dir] = journal_of_the_civil_war_era
+    attr[journal_id] = cwe
 
     au < released ; 2011 ; The Journal of the Civil War Era Volume 1 ; 1 >
 
@@ -116,6 +121,7 @@
     >
 
     param[journal_dir] = social_forces
+    attr[journal_id] = sof
     comment[platform] = moving to OUP in 2011
     comment[79] = issue nos.3-4
 
@@ -142,6 +148,7 @@
     >
 
     param[journal_dir] = southeastern_geographer
+    attr[journal_id] = sgo
 
     au < released ; 2004 ; Southeastern Geographer Volume 44 ; 44 >
     au < released ; 2005 ; Southeastern Geographer Volume 45 ; 45 >
@@ -163,6 +170,7 @@
     >
 
     param[journal_dir] = southern_cultures
+    attr[journal_id] = scu
 
     au < released ; 2000 ; Southern Cultures Volume 6 ; 6 >
     au < released ; 2001 ; Southern Cultures Volume 7 ; 7 >
@@ -188,6 +196,7 @@
     >
 
     param[journal_dir] = southern_literary_journal
+    attr[journal_id] = slj
 
     au < released ; 2000-2001 ; The Southern Literary Journal Volume 33 ; 33 >
     au < released ; 2001-2002 ; The Southern Literary Journal Volume 34 ; 34 >
@@ -212,6 +221,7 @@
     >
 
     param[journal_dir] = studies_in_philology
+    attr[journal_id] = sip
 
     au < released ; 2003 ; Studies in Philology Volume 100 ; 100 >
     au < released ; 2004 ; Studies in Philology Volume 101 ; 101 >
