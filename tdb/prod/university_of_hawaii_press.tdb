@@ -17,10 +17,13 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = archives_of_asian_art
+      attr[journal_id] = aaa
 
       au < released ; 2008 ; Archives of Asian Art Volume 58 ; 58 >
       au < released ; 2009 ; Archives of Asian Art Volume 59 ; 59 >
       au < released ; 2010 ; Archives of Asian Art Volume 60 ; 60 >
+      au < manifest ; 2011 ; Archives of Asian Art Volume 61 ; 61 >
+      
     }
 
   }  
@@ -38,6 +41,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = asian_perspectives
+      attr[journal_id] = asi
 
       au < released ; 2000 ; Asian Perspectives Volume 39 ; 39 >
       au < released ; 2001 ; Asian Perspectives Volume 40 ; 40 >
@@ -68,6 +72,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = asian_theatre_journal
+      attr[journal_id] = atj
 
       au < released ; 1999 ; Asian Theatre Journal Volume 16 ; 16 >
       au < released ; 2000 ; Asian Theatre Journal Volume 17 ; 17 >
@@ -100,6 +105,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = azalea
+      attr[journal_id] = aza
 
       au < released ; 2007 ; Azalea: Journal of Korean Literature & Culture Volume 1 ; 1 >
       au < released ; 2008 ; Azalea: Journal of Korean Literature & Culture Volume 2 ; 2 >
@@ -123,6 +129,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = biography
+      attr[journal_id] = bio
       
       au < released ; 1978 ; Biography Volume 1 ; 1 >
       au < released ; 1979 ; Biography Volume 2 ; 2 >
@@ -173,8 +180,9 @@
     {
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
+      param[base_url] = http://muse.jhu.edu/  
       param[journal_dir] = buddhist-christian_studies
+      attr[journal_id] = bcs
 
       au < released ; 1999 ; Buddhist-Christian Studies Volume 19 ; 19 >
       au < released ; 2000 ; Buddhist-Christian Studies Volume 20 ; 20 >
@@ -188,6 +196,7 @@
       au < released ; 2008 ; Buddhist-Christian Studies Volume 28 ; 28 >
       au < released ; 2009 ; Buddhist-Christian Studies Volume 29 ; 29 >
       au < released ; 2010 ; Buddhist-Christian Studies Volume 30 ; 30 >
+      au < manifest ; 2011 ; Buddhist-Christian Studies Volume 31 ; 31 >
 
     }      
   }
@@ -205,6 +214,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = china_review_international
+      attr[journal_id] = cri
 
       au < released ; 1994 ; China Review International Volume 1 ; 1 >
       au < released ; 1995 ; China Review International Volume 2 ; 2 >
@@ -239,6 +249,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = contemporary_pacific
+      attr[journal_id] = cp
 
       au < released ; 2000 ; The Contemporary Pacific Volume 12 ; 12 >
       au < released ; 2001 ; The Contemporary Pacific Volume 13 ; 13 >
@@ -303,6 +314,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_world_history
+      attr[journal_id] = jwh
 
       au < released ; 1996 ; Journal of World History Volume 7 ; 7 >
       au < released ; 1997 ; Journal of World History Volume 8 ; 8 >
@@ -337,6 +349,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = ka_hooilina_the_legacy
+      attr[journal_id] = kah
       
       au < released ; 2002 ; Ka Ho'oilina/The Legacy Puke (Volume) 1 ; 1 >
       au < released ; 2003 ; Ka Ho'oilina/The Legacy Puke (Volume) 2 ; 2 >
@@ -360,6 +373,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = korean_studies
+      attr[journal_id] = ks
 
       au < released ; 1977 ; Korean Studies Volume 1 ; 1 >
       au < released ; 1978 ; Korean Studies Volume 2 ; 2 >
@@ -414,6 +428,7 @@ comment[mn20] = URL with 403 Forbidden error
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = manoa
+      attr[journal_id] = man
 
       au < released ; 1999 ; Manoa Volume 11 ; 11 >
       au < released ; 2000 ; Manoa Volume 12 ; 12 >
@@ -445,6 +460,7 @@ comment[mn20] = URL with 403 Forbidden error
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = oceanic_linguistics
+      attr[journal_id] = ol
 
       au < released ; 1999 ; Oceanic Linguistics Volume 38 ; 38 >
       au < released ; 2000 ; Oceanic Linguistics Volume 39 ; 39 >
@@ -477,6 +493,7 @@ comment[mn20] = URL with 403 Forbidden error
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = pasc
+      attr[journal_id] = pasc
   
       au < manifest ; 2005 ; Pacific Science Volume 59 ; 59 >
       au < manifest ; 2006 ; Pacific Science Volume 60 ; 60 >
@@ -493,6 +510,7 @@ comment[mn20] = URL with 403 Forbidden error
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = pacific_science
+      attr[journal_id] = psc
 
       au < released ; 2001 ; Pacific Science Volume 55 ; 55 >
       au < released ; 2002 ; Pacific Science Volume 56 ; 56 >
@@ -501,6 +519,8 @@ comment[mn20] = URL with 403 Forbidden error
       au < released ; 2005 ; Pacific Science Volume 59 ; 59 >
       au < released ; 2006 ; Pacific Science Volume 60 ; 60 >
       au < released ; 2007 ; Pacific Science Volume 61 ; 61 >
+      
+      
     }
 
   }
@@ -518,6 +538,7 @@ comment[mn20] = URL with 403 Forbidden error
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = philosophy_east_and_west
+      attr[journal_id] = pew
 
       au < released ; 2000 ; Philosophy East and West Volume 50 ; 50 >
       au < released ; 2001 ; Philosophy East and West Volume 51 ; 51 >
@@ -548,6 +569,7 @@ comment[mn20] = URL with 403 Forbidden error
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = yearbook_of_the_association_of_pacific_coast_geographers
+      attr[journal_id] = pcg
 
       au < released ; 2004 ; Yearbook of the Association of Pacific Coast Geographers Volume 66 ; 66 >
       au < released ; 2005 ; Yearbook of the Association of Pacific Coast Geographers Volume 67 ; 67 >
