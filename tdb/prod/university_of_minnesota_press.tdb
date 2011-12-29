@@ -17,6 +17,7 @@
     >
 
     param[journal_dir] = buildings_and_landscapes
+    attr[journal_id] = bdl
 
     au < released ; 2007 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 14 ; 14 >
     au < released ; 2008 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 15 ; 15 >
@@ -35,6 +36,7 @@
     >
 
     param[journal_dir] = cultural_critique
+    attr[journal_id] = cul
 
     au < released ; 2001 ; Cultural Critique 47 ; 47 >
     au < released ; 2001 ; Cultural Critique 48 ; 48 >
@@ -80,6 +82,7 @@
     >
 
     param[journal_dir] = future_anterior
+    attr[journal_id] = fta
 
     au < released ; 2008 ; Future Anterior Volume 5 ; 5 >
     au < released ; 2009 ; Future Anterior Volume 6 ; 6 >
@@ -96,13 +99,15 @@
     >
 
     param[journal_dir] = mechademia
+    attr[journal_id] = mec
 
     au < released ; 2006 ; Mechademia Volume 1 ; 1 >
     au < released ; 2007 ; Mechademia Volume 2 ; 2 >
     au < released ; 2008 ; Mechademia Volume 3 ; 3 >
     au < released ; 2009 ; Mechademia Volume 4 ; 4 >
     au < ready ; 2010 ; Mechademia Volume 5 ; 5 >
-
+    au < manifest ; 2011 ; Mechademia Volume 6 ; 6 >
+    
   }
 
   {
@@ -114,6 +119,7 @@
     >
 
     param[journal_dir] = the_moving_image
+    attr[journal_id] = mov
 
     au < released ; 2003 ; The Moving Image Volume 3 ; 3 >
     au < released ; 2004 ; The Moving Image Volume 4 ; 4 >
@@ -136,6 +142,7 @@
     >
 
     param[journal_dir] = wicazo_sa_review
+    attr[journal_id] = wic
 
     au < released ; 2000 ; Wicazo Sa Review Volume 15 ; 15 >
     au < released ; 2001 ; Wicazo Sa Review Volume 16 ; 16 >
