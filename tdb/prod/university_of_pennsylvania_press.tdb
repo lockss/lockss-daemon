@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = change_over_time
+    attr[journal_id] = cot
 
     au < ready ; 2011 ; Change Over Time Volume 1 ; 1 >
 
@@ -30,6 +31,7 @@
     >
 
     param[journal_dir] = dissent
+    attr[journal_id] = dss
 
     au < released ; 2009 ; Dissent Volume 56 ; 56 >
     au < released ; 2010 ; Dissent Volume 57 ; 57 >
@@ -46,6 +48,7 @@
     >
 
     param[journal_dir] = early_american_studies_an_interdisciplinary_journal
+    attr[journal_id] = eam
 
     au < released ; 2003 ; Early American Studies: An Interdisciplinary Journal Volume 1 ; 1 >
     au < released ; 2004 ; Early American Studies: An Interdisciplinary Journal Volume 2 ; 2 >
@@ -68,6 +71,7 @@
     >
 
     param[journal_dir] = the_eighteenth_century
+    attr[journal_id] = ecy
 
     au < released ; 2006 ; The Eighteenth Century Volume 47 ; 47 >
     au < released ; 2007 ; The Eighteenth Century Volume 48 ; 48 >
@@ -87,6 +91,7 @@
     >
 
     param[journal_dir] = hispanic_review
+    attr[journal_id] = hir
 
     au < released ; 2005 ; Hispanic Review Volume 73 ; 73 >
     au < released ; 2006 ; Hispanic Review Volume 74 ; 74 >
@@ -143,6 +148,7 @@
     >
 
     param[journal_dir] = journal_for_early_modern_cultural_studies
+    attr[journal_id] = jem
 
     au < released ; 2004 ; Journal for Early Modern Cultural Studies Volume 4 ; 4 >
     au < released ; 2005 ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
@@ -164,6 +170,7 @@
     >
 
     param[journal_dir] = journal_of_the_early_republic
+    attr[journal_id] = jer
 
     au < released ; 2005 ; Journal of the Early Republic Volume 25 ; 25 >
     au < released ; 2006 ; Journal of the Early Republic Volume 26 ; 26 >
@@ -184,6 +191,7 @@
     >
 
     param[journal_dir] = journal_of_the_history_of_ideas
+    attr[journal_id] = jhi
 
     au < released ; 1996 ; Journal of the History of Ideas Volume 57 ; 57 >
     au < released ; 1997 ; Journal of the History of Ideas Volume 58 ; 58 >
@@ -213,6 +221,7 @@
     >
 
     param[journal_dir] = magic_ritual_and_witchcraft
+    attr[journal_id] = mrw
 
     au < released ; 2006 ; Magic, Ritual, and Witchcraft Volume 1 ; 1 >
     au < released ; 2007 ; Magic, Ritual, and Witchcraft Volume 2 ; 2 >
@@ -232,6 +241,7 @@
     >
 
     param[journal_dir] = revista_hispanica_moderna
+    attr[journal_id]= rhm
 
     au < released ; 2009 ; Revista Hispánica Moderna Volume 62 ; 62 >
     au < ready ; 2010 ; Revista Hispánica Moderna Volume 63 ; 63 >
