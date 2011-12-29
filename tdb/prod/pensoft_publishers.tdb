@@ -90,10 +90,10 @@
   {
 
     title <
-      name =  Nature Conservation ;
-      eissn = 1313-2652 ;
-      issnl = 1313-2652
+      name =  Nature Conservation 
     >
+    
+    comment[issn] = issn is probably not 1313-2652 as on website. Same as eissn for BioRisk 2011-12-29
     
     param[base_url] = http://www.pensoft.net/journals/natureconservation/
     implicit < status ; year ; name ; param[year] >
