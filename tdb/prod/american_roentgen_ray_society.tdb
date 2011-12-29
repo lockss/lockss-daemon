@@ -17,26 +17,26 @@
       param[base_url] = http://www.ajronline.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1965 ; American Journal of Roentgenology Volume 95 ; 95 >
-      au < testing ; 1966 ; American Journal of Roentgenology Volume 96 ; 96 >
-      au < testing ; 1966 ; American Journal of Roentgenology Volume 97 ; 97 >
-      au < testing ; 1966 ; American Journal of Roentgenology Volume 98 ; 98 >
-      au < testing ; 1967 ; American Journal of Roentgenology Volume 99 ; 99 >
-      au < testing ; 1967 ; American Journal of Roentgenology Volume 100 ; 100 >
-      au < testing ; 1967 ; American Journal of Roentgenology Volume 101 ; 101 >
-      au < testing ; 1968 ; American Journal of Roentgenology Volume 102 ; 102 >
-      au < testing ; 1968 ; American Journal of Roentgenology Volume 103 ; 103 >
-      au < testing ; 1968 ; American Journal of Roentgenology Volume 104 ; 104 >
-      au < testing ; 1969 ; American Journal of Roentgenology Volume 105 ; 105 >
-      au < testing ; 1969 ; American Journal of Roentgenology Volume 106 ; 106 >
-      au < testing ; 1969 ; American Journal of Roentgenology Volume 107 ; 107 >
-      au < testing ; 1970 ; American Journal of Roentgenology Volume 108 ; 108 >
-      au < testing ; 1970 ; American Journal of Roentgenology Volume 109 ; 109 >
-      au < testing ; 1970 ; American Journal of Roentgenology Volume 110 ; 110 >
-      au < testing ; 1971 ; American Journal of Roentgenology Volume 111 ; 111 >
-      au < testing ; 1971 ; American Journal of Roentgenology Volume 112 ; 112 >
-      au < testing ; 1971 ; American Journal of Roentgenology Volume 113 ; 113 >
-      au < testing ; 1972 ; American Journal of Roentgenology Volume 114 ; 114 >
+      au < ready ; 1965 ; American Journal of Roentgenology Volume 95 ; 95 >
+      au < ready ; 1966 ; American Journal of Roentgenology Volume 96 ; 96 >
+      au < ready ; 1966 ; American Journal of Roentgenology Volume 97 ; 97 >
+      au < ready ; 1966 ; American Journal of Roentgenology Volume 98 ; 98 >
+      au < ready ; 1967 ; American Journal of Roentgenology Volume 99 ; 99 >
+      au < ready ; 1967 ; American Journal of Roentgenology Volume 100 ; 100 >
+      au < ready ; 1967 ; American Journal of Roentgenology Volume 101 ; 101 >
+      au < ready ; 1968 ; American Journal of Roentgenology Volume 102 ; 102 >
+      au < ready ; 1968 ; American Journal of Roentgenology Volume 103 ; 103 >
+      au < ready ; 1968 ; American Journal of Roentgenology Volume 104 ; 104 >
+      au < ready ; 1969 ; American Journal of Roentgenology Volume 105 ; 105 >
+      au < ready ; 1969 ; American Journal of Roentgenology Volume 106 ; 106 >
+      au < ready ; 1969 ; American Journal of Roentgenology Volume 107 ; 107 >
+      au < ready ; 1970 ; American Journal of Roentgenology Volume 108 ; 108 >
+      au < ready ; 1970 ; American Journal of Roentgenology Volume 109 ; 109 >
+      au < ready ; 1970 ; American Journal of Roentgenology Volume 110 ; 110 >
+      au < ready ; 1971 ; American Journal of Roentgenology Volume 111 ; 111 >
+      au < ready ; 1971 ; American Journal of Roentgenology Volume 112 ; 112 >
+      au < ready ; 1971 ; American Journal of Roentgenology Volume 113 ; 113 >
+      au < ready ; 1972 ; American Journal of Roentgenology Volume 114 ; 114 >
       au < testing ; 1972 ; American Journal of Roentgenology Volume 115 ; 115 >
       au < testing ; 1972 ; American Journal of Roentgenology Volume 116 ; 116 >
       au < testing ; 1973 ; American Journal of Roentgenology Volume 117 ; 117 >
@@ -57,26 +57,26 @@
       au < testing ; 1979 ; American Journal of Roentgenology Volume 132 ; 132 >
       au < testing ; 1979 ; American Journal of Roentgenology Volume 133 ; 133 >
       au < testing ; 1980 ; American Journal of Roentgenology Volume 134 ; 134 >
-      au < manifest ; 1980 ; American Journal of Roentgenology Volume 135 ; 135 >
-      au < manifest ; 1981 ; American Journal of Roentgenology Volume 136 ; 136 >
-      au < manifest ; 1981 ; American Journal of Roentgenology Volume 137 ; 137 >
-      au < manifest ; 1982 ; American Journal of Roentgenology Volume 138 ; 138 >
-      au < manifest ; 1982 ; American Journal of Roentgenology Volume 139 ; 139 >
-      au < manifest ; 1983 ; American Journal of Roentgenology Volume 140 ; 140 >
-      au < manifest ; 1983 ; American Journal of Roentgenology Volume 141 ; 141 >
-      au < manifest ; 1984 ; American Journal of Roentgenology Volume 142 ; 142 >
-      au < manifest ; 1984 ; American Journal of Roentgenology Volume 143 ; 143 >
-      au < manifest ; 1985 ; American Journal of Roentgenology Volume 144 ; 144 >
-      au < manifest ; 1985 ; American Journal of Roentgenology Volume 145 ; 145 >
-      au < manifest ; 1986 ; American Journal of Roentgenology Volume 146 ; 146 >
-      au < manifest ; 1986 ; American Journal of Roentgenology Volume 147 ; 147 >
-      au < manifest ; 1987 ; American Journal of Roentgenology Volume 148 ; 148 >
-      au < manifest ; 1987 ; American Journal of Roentgenology Volume 149 ; 149 >
-      au < manifest ; 1988 ; American Journal of Roentgenology Volume 150 ; 150 >
-      au < manifest ; 1988 ; American Journal of Roentgenology Volume 151 ; 151 >
-      au < manifest ; 1989 ; American Journal of Roentgenology Volume 152 ; 152 >
-      au < manifest ; 1989 ; American Journal of Roentgenology Volume 153 ; 153 >
-      au < manifest ; 1990 ; American Journal of Roentgenology Volume 154 ; 154 >
+      au < testing ; 1980 ; American Journal of Roentgenology Volume 135 ; 135 >
+      au < testing ; 1981 ; American Journal of Roentgenology Volume 136 ; 136 >
+      au < testing ; 1981 ; American Journal of Roentgenology Volume 137 ; 137 >
+      au < testing ; 1982 ; American Journal of Roentgenology Volume 138 ; 138 >
+      au < testing ; 1982 ; American Journal of Roentgenology Volume 139 ; 139 >
+      au < testing ; 1983 ; American Journal of Roentgenology Volume 140 ; 140 >
+      au < testing ; 1983 ; American Journal of Roentgenology Volume 141 ; 141 >
+      au < testing ; 1984 ; American Journal of Roentgenology Volume 142 ; 142 >
+      au < testing ; 1984 ; American Journal of Roentgenology Volume 143 ; 143 >
+      au < testing ; 1985 ; American Journal of Roentgenology Volume 144 ; 144 >
+      au < testing ; 1985 ; American Journal of Roentgenology Volume 145 ; 145 >
+      au < testing ; 1986 ; American Journal of Roentgenology Volume 146 ; 146 >
+      au < testing ; 1986 ; American Journal of Roentgenology Volume 147 ; 147 >
+      au < testing ; 1987 ; American Journal of Roentgenology Volume 148 ; 148 >
+      au < testing ; 1987 ; American Journal of Roentgenology Volume 149 ; 149 >
+      au < testing ; 1988 ; American Journal of Roentgenology Volume 150 ; 150 >
+      au < testing ; 1988 ; American Journal of Roentgenology Volume 151 ; 151 >
+      au < testing ; 1989 ; American Journal of Roentgenology Volume 152 ; 152 >
+      au < testing ; 1989 ; American Journal of Roentgenology Volume 153 ; 153 >
+      au < testing ; 1990 ; American Journal of Roentgenology Volume 154 ; 154 >
       au < manifest ; 1990 ; American Journal of Roentgenology Volume 155 ; 155 >
       au < manifest ; 1991 ; American Journal of Roentgenology Volume 156 ; 156 >
       au < manifest ; 1991 ; American Journal of Roentgenology Volume 157 ; 157 >
@@ -110,16 +110,16 @@
       au < manifest ; 2005 ; American Journal of Roentgenology Volume 185 ; 185 >
       au < manifest ; 2006 ; American Journal of Roentgenology Volume 186 ; 186 >
       au < manifest ; 2006 ; American Journal of Roentgenology Volume 187 ; 187 >
-      au < manifest ; 2007 ; American Journal of Roentgenology Volume 188 ; 188 >
-      au < manifest ; 2007 ; American Journal of Roentgenology Volume 189 ; 189 >
-      au < manifest ; 2008 ; American Journal of Roentgenology Volume 190 ; 190 >
-      au < manifest ; 2008 ; American Journal of Roentgenology Volume 191 ; 191 >
-      au < manifest ; 2009 ; American Journal of Roentgenology Volume 192 ; 192 >
-      au < manifest ; 2009 ; American Journal of Roentgenology Volume 193 ; 193 >
-      au < manifest ; 2010 ; American Journal of Roentgenology Volume 194 ; 194 >
-      au < manifest ; 2010 ; American Journal of Roentgenology Volume 195 ; 195 >
-      au < manifest ; 2011 ; American Journal of Roentgenology Volume 196 ; 196 >
-      au < manifest ; 2011 ; American Journal of Roentgenology Volume 197 ; 197 >
+      au < testing ; 2007 ; American Journal of Roentgenology Volume 188 ; 188 >
+      au < testing ; 2007 ; American Journal of Roentgenology Volume 189 ; 189 >
+      au < testing ; 2008 ; American Journal of Roentgenology Volume 190 ; 190 >
+      au < testing ; 2008 ; American Journal of Roentgenology Volume 191 ; 191 >
+      au < testing ; 2009 ; American Journal of Roentgenology Volume 192 ; 192 >
+      au < testing ; 2009 ; American Journal of Roentgenology Volume 193 ; 193 >
+      au < testing ; 2010 ; American Journal of Roentgenology Volume 194 ; 194 >
+      au < testing ; 2010 ; American Journal of Roentgenology Volume 195 ; 195 >
+      au < testing ; 2011 ; American Journal of Roentgenology Volume 196 ; 196 >
+      au < testing ; 2011 ; American Journal of Roentgenology Volume 197 ; 197 >
 
     }
 
