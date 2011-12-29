@@ -6,7 +6,7 @@
 
   {
     title <
-      name = The Condor ;
+      name = The Condor: An International Journal of Avian Biology ;
       issn = 0010-5422 ;
       eissn = 1938-5422 ;
       issnl = 0010-5422
@@ -18,14 +18,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0010-5422
   
-      au < doNotProcess ; 2000 ; The Condor Volume 102 ; 102 >
-      au < doNotProcess ; 2001 ; The Condor Volume 103 ; 103 >
-      au < doNotProcess ; 2002 ; The Condor Volume 104 ; 104 >
-      au < doNotProcess ; 2003 ; The Condor Volume 105 ; 105 >
-      au < doNotProcess ; 2004 ; The Condor Volume 106 ; 106 >
-      au < superseded ; 2005 ; The Condor Volume 107 ; 107 >
-      au < doNotProcess ; 2006 ; The Condor Volume 108 ; 108 >
-      au < doNotProcess ; 2007 ; The Condor Volume 109 ; 109 >
+      au < doNotProcess ; 2000 ; The Condor: An International Journal of Avian Biology Volume 102 ; 102 >
+      au < doNotProcess ; 2001 ; The Condor: An International Journal of Avian Biology Volume 103 ; 103 >
+      au < doNotProcess ; 2002 ; The Condor: An International Journal of Avian Biology Volume 104 ; 104 >
+      au < doNotProcess ; 2003 ; The Condor: An International Journal of Avian Biology Volume 105 ; 105 >
+      au < doNotProcess ; 2004 ; The Condor: An International Journal of Avian Biology Volume 106 ; 106 >
+      au < superseded ; 2005 ; The Condor: An International Journal of Avian Biology Volume 107 ; 107 >
+      au < doNotProcess ; 2006 ; The Condor: An International Journal of Avian Biology Volume 108 ; 108 >
+      au < doNotProcess ; 2007 ; The Condor: An International Journal of Avian Biology Volume 109 ; 109 >
     }
 
     {
