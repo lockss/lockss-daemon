@@ -124,7 +124,8 @@
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = latin_american_theatre_review      
+      param[journal_dir] = latin_american_theatre_review  
+      attr[journal_id] = ltr    
       implicit < status ; year ; name ; param[volume] >
 
       au < ready ; 2010-2011 ; Latin American Theatre Review Volume 44 ; 44 >
