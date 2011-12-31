@@ -138,7 +138,7 @@
       au < doNotProcess ; 2003 ; American Museum Novitates Volume 3403 ; 3403 >
       au < doNotProcess ; 2003 ; American Museum Novitates Volume 3404 ; 3404 >
       au < doNotProcess ; 2003 ; American Museum Novitates Volume 3405 ; 3405 >
-      au < doNotProcess ; 2003 ; American Mican_mosquito_control_associationuseum Novitates Volume 3406 ; 3406 >
+      au < doNotProcess ; 2003 ; American Museum Novitates Volume 3406 ; 3406 >
       au < doNotProcess ; 2003 ; American Museum Novitates Volume 3407 ; 3407 >
       au < doNotProcess ; 2003 ; American Museum Novitates Volume 3408 ; 3408 >
       au < doNotProcess ; 2003 ; American Museum Novitates Volume 3409 ; 3409 >
@@ -335,6 +335,12 @@
       au < doNotProcess ; 2007 ; American Museum Novitates Volume 3600 ; 3600 >
       au < doNotProcess ; 2007 ; American Museum Novitates Volume 3601 ; 3601 >
     }
+    
+    {
+    
+    comment[0] = Atypon AUs
+    
+    }
 
   }
   
@@ -395,7 +401,7 @@
       au < doNotProcess ; 2004 ; Bulletin of the American Museum of Natural History Volume 284 ; 284 >
       au < doNotProcess ; 2004 ; Bulletin of the American Museum of Natural History Volume 285 ; 285 >
       au < doNotProcess ; 2004 ; Bulletin of the American Museum of Natural History Volume 286 ; 286 >
-      au < superseded ; 2004 ; Bulletin of the American Museum of Natural History Volume 287 ; 287 >
+      au < down ; 2004 ; Bulletin of the American Museum of Natural History Volume 287 ; 287 >
       au < doNotProcess ; 2005 ; Bulletin of the American Museum of Natural History Volume 288 ; 288 >
       au < doNotProcess ; 2005 ; Bulletin of the American Museum of Natural History Volume 289 ; 289 >
       au < doNotProcess ; 2005 ; Bulletin of the American Museum of Natural History Volume 290 ; 290 >
@@ -463,7 +469,7 @@
       au < doNotProcess ; 2004 ; Bulletin of the American Museum of Natural History Volume 284 ; 284 >
       au < doNotProcess ; 2004 ; Bulletin of the American Museum of Natural History Volume 285 ; 285 >
       au < doNotProcess ; 2004 ; Bulletin of the American Museum of Natural History Volume 286 ; 286 >
-      au < superseded ; 2004 ; Bulletin of the American Museum of Natural History Volume 287 ; 287 >
+      au < doNotProcess ; 2004 ; Bulletin of the American Museum of Natural History Volume 287 ; 287 >
       au < doNotProcess ; 2005 ; Bulletin of the American Museum of Natural History Volume 288 ; 288 >
       au < doNotProcess ; 2005 ; Bulletin of the American Museum of Natural History Volume 289 ; 289 >
       au < doNotProcess ; 2005 ; Bulletin of the American Museum of Natural History Volume 290 ; 290 >
@@ -498,7 +504,7 @@
       au < manifest ; 2009 ; Bulletin of the American Museum of Natural History Volume 319 ; 319 >
       au < manifest ; 2009 ; Bulletin of the American Museum of Natural History Volume 320 ; 320 >
       au < manifest ; 2009 ; Bulletin of the American Museum of Natural History Volume 321 ; 321 >
-      au < manifest ; 2009 ; Bulletin of the American Museum of Natural History Volume 322 ; 322 >    
+      au < manifest ; 2009 ; Bulletin of the American Museum of Natural History Volume 322 ; 322 >
       au < manifest ; 2009 ; Bulletin of the American Museum of Natural History Volume 323 ; 323 >
       au < manifest ; 2009 ; Bulletin of the American Museum of Natural History Volume 324 ; 324 >
       au < manifest ; 2009 ; Bulletin of the American Museum of Natural History Volume 325 ; 325 >
@@ -507,7 +513,7 @@
       au < manifest ; 2009 ; Bulletin of the American Museum of Natural History Volume 328 ; 327 >
       au < manifest ; 2009 ; Bulletin of the American Museum of Natural History Volume 329 ; 329 >
       au < manifest ; 2009 ; Bulletin of the American Museum of Natural History Volume 330 ; 330 >
-      au < manifest ; 2009 ; Bulletin of the American Museum of Natural History Volume 331 ; 331 > 
+      au < manifest ; 2009 ; Bulletin of the American Museum of Natural History Volume 331 ; 331 >
       au < manifest ; 2010 ; Bulletin of the American Museum of Natural History Volume 332 ; 332 >
       au < manifest ; 2010 ; Bulletin of the American Museum of Natural History Volume 333 ; 333 >
       au < manifest ; 2010 ; Bulletin of the American Museum of Natural History Volume 334 ; 334 >
