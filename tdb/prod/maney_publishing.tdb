@@ -4189,7 +4189,9 @@
 
     title <
       name = Twentieth-Century China ;
-      issn = 1521-5385 
+      issn = 1521-5385 ;
+      eissn = 1940-5065 ;
+      issnl = 1521-5385
     >
 
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
