@@ -923,7 +923,6 @@
     title <
       name = Dix-Neuf ;
       issn = 1478-7318 ;
-      eissn = 1478-7318 ;
       issnl = 1478-7318 
     >
 
@@ -3206,8 +3205,9 @@
 
     title <
       name = Nutritional Neuroscience ;
-      issn = 1478-7318 ;
-      issnl = 1478-7318 
+      issn = 1028-415X ;
+      eissn = 1476-8305 ;
+      issnl = 1028-415X 
     >
 
     plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
