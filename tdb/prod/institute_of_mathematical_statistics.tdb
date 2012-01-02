@@ -33,7 +33,7 @@
     
     {
     
-      plugin = org.lockss.plugin.ojs.OJS2Plugin
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
       param[base_url] = http://ecp.ejpecp.org/
       param[journal_id] = ecp
       
@@ -83,7 +83,7 @@
     }
     
     {
-      plugin = org.lockss.plugin.ojs.OJS2Plugin
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
       param[base_url] = http://ejp.ejpecp.org/
       param[journal_id] = ejp
       
