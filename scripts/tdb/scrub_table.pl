@@ -21,10 +21,15 @@ while (my $line = <>) {
     }
 }
 
-print "Duplicate ISSNs and EISSNs:\n";
+print "ISSN and EISSN issues:\n";
 print "*** NOTE: In cases where the issn and eissn are identical, sets will be listed twice ***\n";
 foreach my $issn (sort(keys(%issn_eissn))) {
     next if ($issn eq "");
+    if ($issn !~ m/^\d\d\d\d-\d\d\d[0-9X]$/) {
+    	print "$issn incorrect format\n\n";
+    } elsif (! &verify_issn($issn)) {
+    	print "$issn bad check digit\n\n";
+    }
     if (int(@{$issn_eissn{$issn}}) > 1) {
         my $print_this = 1;
         if (int(@{$issn_eissn{$issn}}) == 2 && 
@@ -45,3 +50,23 @@ foreach my $issn (sort(keys(%issn_eissn))) {
 
 exit(0);
 
+sub verify_issn {
+  my ($issn) = @_;
+  
+  # Remove the dash.
+  $issn =~ s/-//;
+  my $checksum = 0;
+  for (my $x = 0; $x < 7; ++$x) {
+  	$checksum += substr($issn, $x, 1) * (8 - $x);
+  }
+  if (substr($issn, 7, 1) eq "X") {
+  	$checksum += 10;
+  } else {
+  	$checksum += substr($issn, 7, 1);
+  }
+  if ($checksum % 11 == 0) {
+  	return(1);
+  } else {
+  	return(0);
+  }
+}
