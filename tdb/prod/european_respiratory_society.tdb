@@ -17,8 +17,6 @@
     >
 
     param[base_url] = http://erj.ersjournals.com/
-  
-    comment[0] = missing manifests for volumes 1 thru 35
     
     au < manifest ; 1988 ; European Respiratory Journal Volume 1 [abstracts only] ; 1 >
     au < manifest ; 1989 ; European Respiratory Journal Volume 2 [abstracts only] ; 2 >
@@ -71,8 +69,6 @@
     >
 
     param[base_url] = http://err.ersjournals.com/
-
-    comment[0] = missing manifests for volumes 14 thru 18
       
     au < manifest ; 2005 ; European Respiratory Review Volume 14 ; 14 >
     au < manifest ; 2006 ; European Respiratory Review Volume 15 ; 15 >
