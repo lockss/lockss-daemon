@@ -89,13 +89,12 @@
 
     title <
       name = Journal of Chemical Research ;
-      issn = 0308-2342 ;
-      eissn = 1364-5560 ;
-      issnl = 0308-2342
+      issn = 1747-5198 ;
+      issnl = 1747-5198
     >
 
     param[journal_id] = jcr   
-    param[journal_issn] = 0308-2342
+    param[journal_issn] = 1747-5198
 
 
     au < testing ; 2000 ; Journal of Chemical Research Volume 2000 ; 2000 >
