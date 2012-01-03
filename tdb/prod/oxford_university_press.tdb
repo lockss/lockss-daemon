@@ -747,6 +747,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = american_literary_history
+    attr[journal_id] = jlh
     implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2000 ; American Literary History Volume 12 ; 12 >
@@ -2757,6 +2758,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = cambridge_quarterly
+    attr[journal_id] = bcq
     implicit < status ; year ; name ; param[volume] >
     
     au < released ; 2006 ; The Cambridge Quarterly Volume 35 ; 35 >
@@ -3768,12 +3770,14 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = early_music
+    attr[journal_id] = emu
     implicit < status ; year ; name ; param[volume] >  
 
     au < released ; 2004 ; Early Music Volume 32 ; 32 >
     au < released ; 2005 ; Early Music Volume 33 ; 33 >
     au < released ; 2006 ; Early Music Volume 34 ; 34 >
     au < released ; 2007 ; Early Music Volume 35 ; 35 >
+   
      
     }
 
@@ -4107,6 +4111,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = enterprise_and_society
+    attr[journal_id] = ens
     implicit < status ; year ; name ; param[volume] >    
 
     au < released ; 2003 ; Enterprise & Society Volume 4 ; 4 >
@@ -4320,6 +4325,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = essays_in_criticism
+    attr[journal_id] = eic
     implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2006 ; Essays in Criticism Volume 56 ; 56 >
@@ -5352,6 +5358,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = french_studies_a_quarterly_review
+    attr[journal_id] = frs
     implicit < status ; year ; name ; param[volume] >
     
     au < released ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 >
@@ -5866,6 +5873,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = history_workshop_journal
+    attr[journal_id] = hwj
     implicit < status ; year ; name ; param[volume] >
     
     au < released ; 2004 ; History Workshop Journal Volume 57 ; 57 >
@@ -5936,6 +5944,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = holocaust_and_genocide_studies
+    attr[journal_id] = hgs
     implicit < status ; year ; name ; param[volume] >
     
     au < released ; 2003 ; Holocaust and Genocide Studies Volume 17 ; 17 >
@@ -7900,6 +7909,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = journal_of_the_american_academy_of_religion
+    attr[journal_id] = aar
     implicit < status ; year ; name ; param[volume] >
     
     au < released ; 2006 ; Journal of the American Academy of Religion Volume 74 ; 74 >
@@ -9346,6 +9356,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = journal_of_the_history_of_medicine_and_allied_sciences
+    attr[journal_id] = jhm
     implicit < status ; year ; name ; param[volume] >
     
     au < released ; 2000 ; Journal of the History of Medicine and Allied Sciences Volume 55 ; 55 >
@@ -10774,6 +10785,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = journal_of_the_royal_musical_association
+    attr[journal_id] = rma
     implicit < status ; year ; name ; param[volume] >
     
     au < released ; 2005 ; Journal of the Royal Musical Association Volume 130 ; 130 >
@@ -11561,6 +11573,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = the_library_the_transactions_of_the_bibliographical_society
+    attr[journal_id] = lbt
     implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2006 ; The Library: The Transactions of the Bibliographical Society Volume 7 ; 7 >
@@ -12109,6 +12122,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = modern_judaism
+    attr[journal_id] = mj
     implicit < status ; year ; name ; param[volume] >
     
     au < released ; 1996 ; Modern Judaism Volume 16 ; 16 >
@@ -12403,6 +12417,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = music_and_letters
+    attr[journal_id] = mal
     implicit < status ; year ; name ; param[volume] >
     
     au < released ; 2004 ; Music and Letters Volume 85 ; 85 >
@@ -13315,6 +13330,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = opera_quarterly
+    attr[journal_id] = opq
     implicit < status ; year ; name ; param[volume] >
     
     au < released ; 2002 ; The Opera Quarterly Volume 18 ; 18 >
@@ -13392,6 +13408,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = oral_history_review
+    attr[journal_id] = ohr
     implicit < status ; year ; name ; param[volume] >
     
     au < ready ; 2008 ; The Oral History Review Volume 35 ; 35 >
@@ -14024,6 +14041,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = past_and_present
+    attr[journal_id] = ptp
     implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2005 ; Past & Present Volume 188 ; 188 >
@@ -16046,6 +16064,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = social_politics
+    attr[journal_id] = sop
     implicit < status ; year ; name ; param[volume] >
     
     au < released ; 2003 ; Social Politics Volume 10 ; 10 >
