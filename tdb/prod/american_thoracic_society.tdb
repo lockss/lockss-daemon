@@ -4,7 +4,7 @@
     name = American Thoracic Society
   >
 
-  plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
   implicit < status ; year ; name ; param[volume_name] >
 
   {
