@@ -18,18 +18,28 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0006-3606
   
-      au < superseded ; 2000 ; BIOTROPICA Volume 32 ; 32 >
-      au < superseded ; 2001 ; BIOTROPICA Volume 33 ; 33 >
-      au < superseded ; 2002 ; BIOTROPICA Volume 34 ; 34 >
-      au < superseded ; 2003 ; BIOTROPICA Volume 35 ; 35 >
-      au < superseded ; 2004 ; BIOTROPICA Volume 36 ; 036 >
+      au < down ; 2000 ; BIOTROPICA Volume 32 ; 32 >
+      au < down ; 2001 ; BIOTROPICA Volume 33 ; 33 >
+      au < down ; 2002 ; BIOTROPICA Volume 34 ; 34 >
+      au < down ; 2003 ; BIOTROPICA Volume 35 ; 35 >
+      au < down ; 2004 ; BIOTROPICA Volume 36 ; 036 >
       au < doNotProcess ; 2005 ; BIOTROPICA Volume 36 ; 36 >
     }
 
     {
 
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = bitr
+      
+      au < doNotProcess ; 2000 ; BIOTROPICA Volume 32 ; 32 >
+      au < doNotProcess ; 2001 ; BIOTROPICA Volume 33 ; 33 >
+      au < doNotProcess ; 2002 ; BIOTROPICA Volume 34 ; 34 >
+      au < doNotProcess ; 2003 ; BIOTROPICA Volume 35 ; 35 >
+      au < doNotProcess ; 2004 ; BIOTROPICA Volume 36 ; 36 >
 
+      
     }
 
   }
