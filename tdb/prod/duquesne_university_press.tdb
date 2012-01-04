@@ -27,11 +27,10 @@
   {
 
     title <
-      name = Milton Studies ;
-      issn = 0022-6860 ;
-      issnl = 0022-6860
+      name = Milton Studies 
     >
 
+    comment[issn] = 0022-6860 is not the correct issn.
     param[journal_dir] = milton_studies
 
     au < doesNotExist ; 0 ; Milton Studies Volume 1 ; 1 >
