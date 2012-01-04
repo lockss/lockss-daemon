@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>60</string>
+    <string>61</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -123,7 +123,7 @@
   </entry>
   <entry>
     <string>au_crawlwindow</string>
-    <string>org.lockss.plugin.highwire.HighWireCrawlWindow</string>
+    <string>org.lockss.plugin.highwire.HighWirePressCrawlWindow</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -180,6 +180,15 @@
       <entry>
 	<string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
 	<string>1/4000</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>content-testing_override</string>
+    <map>
+      <entry>
+	<string>au_crawlwindow</string>
+	<string>org.lockss.plugin.highwire.HighWirePressContentTestingCrawlWindow</string>
       </entry>
     </map>
   </entry>

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>70</string>
+    <string>71</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -70,7 +70,7 @@
 	    <string>&quot;%scontent/vol%s/issue%s/index.dtl&quot;, base_url, volume_name, issue</string>
 	  </entry>
   	</map>
-  </entry>  
+  </entry>    
   <entry>
     <string>au_permission_checker_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePermissionCheckerFactory</string>
@@ -93,6 +93,10 @@
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlwindow</string>
+    <string>org.lockss.plugin.highwire.HighWirePressContentTestingCrawlWindow</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
@@ -143,29 +147,15 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>200</long>
+    <long>800</long>
   </entry>
   <entry>
     <string>au_mime_rate_limiter_map</string>
     <map>
       <entry>
-	<string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-	<string>1/2000</string>
+        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+        <string>1/3250</string>
       </entry>
     </map>
   </entry>
-<!--
-  <entry>
-    <string>application/pdf_fetch_rate_limit</string>
-    <string>1/2000</string>
-  </entry>
-  <entry>
-    <string>application/vnd.ms-powerpoint_fetch_rate_limit</string>
-    <string>1/2000</string>
-  </entry>
-  <entry>
-    <string>text/html_fetch_rate_limit</string>
-    <string>1/2000</string>
-  </entry>
--->
 </map>
