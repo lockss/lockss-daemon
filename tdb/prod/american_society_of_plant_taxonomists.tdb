@@ -11,7 +11,22 @@
       eissn = 1548-2324 ;
       issnl = 0363-6445
     >
-
+{
+      implicit < status ; year ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0363-6445
+  
+      au < down ; 2000 ; Systematic Botany Volume 25 ; 25 >
+      au < down ; 2001 ; Systematic Botany Volume 26 ; 26 >
+      au < down ; 2002 ; Systematic Botany Volume 27 ; 27 >
+      au < down ; 2003 ; Systematic Botany Volume 28 ; 028 >
+      au < doNotProcess ; 2003 ; Systematic Botany Volume 28 ; 28 >
+      au < down ; 2004 ; Systematic Botany Volume 29 ; 29 >
+      au < down ; 2005 ; Systematic Botany Volume 30 ; 30 >
+      au < down ; 2006 ; Systematic Botany Volume 31 ; 31 >
+      au < down ; 2007 ; Systematic Botany Volume 32 ; 32 >
+    }
 
     {
 
