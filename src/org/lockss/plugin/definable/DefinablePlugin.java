@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.61 2011-09-25 04:37:39 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.61.2.1 2012-01-04 04:21:35 tlipkis Exp $
  */
 
 /*
@@ -137,6 +137,7 @@ public class DefinablePlugin extends BasePlugin {
       throws FileNotFoundException {
     // convert the plugin class name to an xml file name
     // load the configuration map from jar file
+    theDaemon = daemon;
     ExternalizableMap defMap = loadMap(extMapName, loader);
     this.initPlugin(daemon, extMapName, defMap, loader);
   }
@@ -220,7 +221,7 @@ public class DefinablePlugin extends BasePlugin {
   }
 
   String getTestingMode() {
-    return theDaemon == null ? null : theDaemon.getTestingMode();
+    return theDaemon.getTestingMode();
   }
 
   // Used by tests
