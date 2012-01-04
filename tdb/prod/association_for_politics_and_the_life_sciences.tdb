@@ -30,9 +30,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = poli
       
-      au < down ; 2004 ; Politics and the Life Sciences Volume 23 ; 23 >
-      au < down ; 2005 ; Politics and the Life Sciences Volume 24 ; 24 >
-      au < down ; 2006 ; Politics and the Life Sciences Volume 25 ; 25 >
+      au < doNotProcess ; 2004 ; Politics and the Life Sciences Volume 23 ; 23 >
+      au < doNotProcess ; 2005 ; Politics and the Life Sciences Volume 24 ; 24 >
+      au < doNotProcess ; 2006 ; Politics and the Life Sciences Volume 25 ; 25 >
       au < manifest ; 2007 ; Politics and the Life Sciences Volume 26 ; 26 >
       au < manifest ; 2008 ; Politics and the Life Sciences Volume 27 ; 27 >
       au < manifest ; 2009 ; Politics and the Life Sciences Volume 28 ; 28 >
