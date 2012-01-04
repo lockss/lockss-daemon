@@ -56,7 +56,7 @@
     au < manifest ; exists ; 2009 ; European Respiratory Journal Volume 34 ; 34 >
     au < manifest ; exists ; 2010 ; European Respiratory Journal Volume 35 ; 35 >
     au < manifest ; exists ; 2010 ; European Respiratory Journal Volume 36 ; 36 >
-    au < manifest ; exists ; 2011 ; European Respiratory Journal Volume 37 ; 37 >
+    au < testing ; exists ; 2011 ; European Respiratory Journal Volume 37 ; 37 >
     au < exists ; exists ; 2011 ; European Respiratory Journal Volume 38 ; 38 >
     au < exists ; exists ; 2012 ; European Respiratory Journal Volume 39 ; 39 >
 
@@ -72,8 +72,6 @@
     >
 
     param[base_url] = http://err.ersjournals.com/
- 
-    comment[0] = missing manifests RU 3616
   
     au < manifest ; exists ; 2005 ; European Respiratory Review Volume 14 ; 14 >
     au < manifest ; exists ; 2006 ; European Respiratory Review Volume 15 ; 15 >
@@ -81,7 +79,7 @@
     au < manifest ; exists ; 2008 ; European Respiratory Review Volume 17 ; 17 >
     au < manifest ; exists ; 2009 ; European Respiratory Review Volume 18 ; 18 >
     au < manifest ; exists ; 2010 ; European Respiratory Review Volume 19 ; 19 >
-    au < manifest ; exists ; 2011 ; European Respiratory Review Volume 20 ; 20 >
+    au < testing ; exists ; 2011 ; European Respiratory Review Volume 20 ; 20 >
 
   }
 
