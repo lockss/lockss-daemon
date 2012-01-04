@@ -720,7 +720,7 @@
   {
 
     title <
-      name = Competition and Change ;
+      name = Competition & Change ;
       issn = 1024-5294 ;
       eissn = 1477-2221 ;
       issnl = 1024-5294 
@@ -736,16 +736,16 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < manifest ; exists ; 2002 ; Competition and Change Volume 6 ; 6 > 
-    au < manifest ; exists ; 2003 ; Competition and Change Volume 7 ; 7 > 
-    au < manifest ; exists ; 2004 ; Competition and Change Volume 8 ; 8 > 
-    au < manifest ; exists ; 2005 ; Competition and Change Volume 9 ; 9 > 
-    au < manifest ; exists ; 2006 ; Competition and Change Volume 10 ; 10 > 
-    au < manifest ; exists ; 2007 ; Competition and Change Volume 11 ; 11 > 
-    au < manifest ; exists ; 2008 ; Competition and Change Volume 12 ; 12 > 
-    au < manifest ; exists ; 2009 ; Competition and Change Volume 13 ; 13 > 
-    au < manifest ; exists ; 2010 ; Competition and Change Volume 14 ; 14 > 
-    au < crawling ; exists ; 2011 ; Competition and Change Volume 15 ; 15 > 
+    au < manifest ; exists ; 2002 ; Competition & Change Volume 6 ; 6 > 
+    au < manifest ; exists ; 2003 ; Competition & Change Volume 7 ; 7 > 
+    au < manifest ; exists ; 2004 ; Competition & Change Volume 8 ; 8 > 
+    au < manifest ; exists ; 2005 ; Competition & Change Volume 9 ; 9 > 
+    au < manifest ; exists ; 2006 ; Competition & Change Volume 10 ; 10 > 
+    au < manifest ; exists ; 2007 ; Competition & Change Volume 11 ; 11 > 
+    au < manifest ; exists ; 2008 ; Competition & Change Volume 12 ; 12 > 
+    au < manifest ; exists ; 2009 ; Competition & Change Volume 13 ; 13 > 
+    au < manifest ; exists ; 2010 ; Competition & Change Volume 14 ; 14 > 
+    au < crawling ; exists ; 2011 ; Competition & Change Volume 15 ; 15 > 
 
   }
 
