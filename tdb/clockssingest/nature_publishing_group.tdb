@@ -2996,6 +2996,8 @@
       eissn = 1470-634X ;
       issnl = 0893-133X
     >
+    
+    comment[issn] = eissn check digit is not correct.
 
     param[journal_id] = npp
 
