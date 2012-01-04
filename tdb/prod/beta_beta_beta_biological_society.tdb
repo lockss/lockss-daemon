@@ -20,9 +20,7 @@
       param[journal_id] = 0005-3155
   
       au < down ; 2004 ; BIOS Volume 75 ; 075 >
-      au < doNotProcess ; 2005 ; BIOS Volume 76 ; 76 >
-      au < doNotProcess ; 2006 ; BIOS Volume 77 ; 77 >
-      au < doNotProcess ; 2007 ; BIOS Volume 78 ; 78 >
+ 
     }
 
     {
@@ -32,7 +30,7 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = bios
       
-      au < doNotProcess ; 2004 ; BIOS Volume 75 ; 075 >
+      au < manifest ; 2004 ; BIOS Volume 75 ; 75 >
       au < doNotProcess ; 2005 ; BIOS Volume 76 ; 76 >
       au < doNotProcess ; 2006 ; BIOS Volume 77 ; 77 >
       au < doNotProcess ; 2007 ; BIOS Volume 78 ; 78 >
