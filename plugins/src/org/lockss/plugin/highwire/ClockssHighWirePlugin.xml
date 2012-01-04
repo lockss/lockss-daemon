@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>71</string>
+    <string>72</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -69,6 +69,19 @@
 	    <string>au_issue</string>
 	    <string>&quot;%scontent/vol%s/issue%s/index.dtl&quot;, base_url, volume_name, issue</string>
 	  </entry>
+	  <entry>
+      <string>au_article</string>
+      <map>
+        <entry>
+          <string>pdf</string>
+          <string>&quot;%scgi/reprint/%s/%s/%s&quot;, base_url, volume_name, issue, article</string>
+        </entry>
+        <entry>
+          <string>html;*</string>
+          <string>&quot;%s/cgi/content/full/%s/%s/%s&quot;, base_url, volume_name, issue, article</string>
+        </entry>
+      </map>
+    </entry>
   	</map>
   </entry>    
   <entry>
