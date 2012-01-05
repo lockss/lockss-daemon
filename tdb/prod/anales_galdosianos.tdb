@@ -17,7 +17,7 @@
     >
 
     param[journal_dir] = anales_galdosianos
-    param[journal_id] = ang
+    attr[journal_id] = ang
 
     au < exists ; 2011 ; Anales Galdosianos Volume 46 ; 46 >
 
