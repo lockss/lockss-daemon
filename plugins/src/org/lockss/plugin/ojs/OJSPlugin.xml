@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -34,6 +34,23 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%spubmanifest.php?year=%d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+  <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>&quot;%s&quot;, base_url</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>&quot;%spubmanifest.php?year=%d&quot;, base_url, year</string>
+    </entry>
+    <entry>
+      <string>au_article</string>
+      <string>&quot;%sviewarticle.php?id=%s&amp;layout=abstract&quot;, base_url, article</string>
+    </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_config_props</string>

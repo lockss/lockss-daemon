@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -50,6 +50,19 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%sindex.php/%s/gateway/lockss?year=%d&quot;, base_url, journal_id, year</string>
+  </entry>
+  <entry>
+  <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>&quot;%sindex.php/%s&quot;, base_url, journal_id</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>&quot;%sindex.php/%s/gateway/lockss?year=%d&quot;, base_url, journal_id, year</string>
+    </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_config_props</string>
