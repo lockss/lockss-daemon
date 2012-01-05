@@ -1645,7 +1645,7 @@
     >
 
     param[journal_dir] = spiritus
-    attr[journal] = scs
+    attr[journal_id] = scs
 
     au < released ; 2001 ; Spiritus: A Journal of Christian Spirituality Volume 1 ; 1 >
     au < released ; 2002 ; Spiritus: A Journal of Christian Spirituality Volume 2 ; 2 >

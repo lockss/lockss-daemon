@@ -20,7 +20,7 @@
     comment[lang85] = 500 Internal Server Error http://muse.jhu.edu/journals/language/v085/85.1.levinson.pdf
 
     param[journal_dir] = language
-    attr[journal] = lan
+    attr[journal_id] = lan
 
     au < released ; 2001 ; Language Volume 77 ; 77 >
     au < released ; 2002 ; Language Volume 78 ; 78 >
