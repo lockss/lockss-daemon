@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -39,6 +39,19 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%spublications/login/lockss_manifest/lockss-%d.html&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>&quot;%spublications/login/&quot;, base_url</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>&quot;%spublications/login/lockss_manifest/lockss-%d.html&quot;, base_url, year</string>
+    </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_config_props</string>
