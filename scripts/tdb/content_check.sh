@@ -8,9 +8,9 @@ uniq /tmp/foo > /tmp/bar
 allAUs=`cat /tmp/foo | wc -l`
 echo "---------------------"
 echo "---------------------"
-echo "GLN. Num AUs with duplicates = $allAUs"
+echo "GLN. AUs with all duplicates = $allAUs"
 uniqAUs=`cat /tmp/bar | wc -l`
-echo "GLN. Num AUs without duplicates = $uniqAUs"
+echo "GLN. AUs without duplicates = $uniqAUs"
 diff /tmp/foo /tmp/bar | grep "<" | sed s/..//
 echo " "
 #
@@ -20,9 +20,9 @@ uniq /tmp/foo > /tmp/bar
 allAUs=`cat /tmp/foo | wc -l`
 echo "---------------------"
 echo "---------------------"
-echo "CLOCKSS. Num AUs with duplicates = $allAUs"
+echo "CLOCKSS. AUs with all duplicates = $allAUs"
 uniqAUs=`cat /tmp/bar | wc -l`
-echo "CLOCKSS. Num AUs without duplicates = $uniqAUs"
+echo "CLOCKSS. AUs without duplicates = $uniqAUs"
 diff /tmp/foo /tmp/bar | grep "<" | sed s/..//
 echo " "
 #
@@ -39,4 +39,9 @@ echo "---------------------"
 echo "---------------------"
 echo "CLOCKSS. ISSN issues"
 ./scrub_table.pl /tmp/foo
-
+#
+# Find Muse titles that don't have attr[journal_id]
+echo "---------------------"
+echo "---------------------"
+echo "GLN. Muse. Titles missing journal_id"
+cat *.tdb | ../../scripts/tdb/tdbout -t publisher,param[journal_dir] -Q 'plugin ~ "Muse" and attr[journal_id] is not set' | sort -u
