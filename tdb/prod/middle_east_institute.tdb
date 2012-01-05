@@ -16,7 +16,7 @@
     >
 
     param[journal_dir] = the_middle_east_journal
-    param[journal_id] = mej
+    attr[journal_id] = mej
 
     au < ready ; 2009 ; The Middle East Journal Volume 63 ; 63 >
     au < ready ; 2010 ; The Middle East Journal Volume 64 ; 64 >
