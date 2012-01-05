@@ -14,13 +14,14 @@
 
     comment[RLG] = "RLG has merged with OCLC and you have activated an RLG link that is no longer in service"
     comment[down] = "RLG DigiNews ceased publication after the April 15, 2007 issue (Vol. 11, no. 1)" 
+    comment[back_issues] = "Back issues from 1997 (vol 1) through 2002 (vol. 6) are at http://webdoc.gwdg.de/edoc/aw/rlgdn/preserv/diginews/issues.html"
        
     rights = openaccess
     plugin = org.lockss.plugin.rlg.RLGDigiNewsPlugin
     param[base_url] = http://www.rlg.org/
-    implicit < status ; name >
+    implicit < status ; year ; volume ; name >
     
-    au < down ; RLG DigiNews >
+    au < down ; 1997-2007 ; 1-11 ; RLG DigiNews >
   
   }
   
