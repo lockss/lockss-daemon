@@ -129,7 +129,7 @@
     >
 
     param[journal_dir] = jewish_quarterly_review
-    param[journal_id] = jqr
+    attr[journal_id] = jqr
 
     au < released ; 2005 ; Jewish Quarterly Review Volume 95 ; 95 >
     au < released ; 2006 ; Jewish Quarterly Review Volume 96 ; 96 >
