@@ -38,10 +38,10 @@
     au < manifest ; 2004 ; Additional Government Publications 2004 ; 2004 >
     au < manifest ; 2005 ; Additional Government Publications 2005 ; 2005 >
     au < manifest ; 2006 ; Additional Government Publications 2006 ; 2006 >
-    au < manifest ; 2007 ; Additional Government Publications 2007 ; 2007 >
-    au < manifest ; 2008 ; Additional Government Publications 2008 ; 2008 >
-    au < manifest ; 2009 ; Additional Government Publications 2009 ; 2009 >
-    au < manifest ; 2010 ; Additional Government Publications 2010 ; 2010 >
+    au < testing ; 2007 ; Additional Government Publications 2007 ; 2007 >
+    au < testing ; 2008 ; Additional Government Publications 2008 ; 2008 >
+    au < testing ; 2009 ; Additional Government Publications 2009 ; 2009 >
+    au < testing ; 2010 ; Additional Government Publications 2010 ; 2010 >
 
   }
   
@@ -56,7 +56,7 @@
     param[collection_id] = BUDGET
     implicit < status ; year ; name ; param[year] >
     
-    au < testing ; 2009 ; Budget of the United States Government 2009 ; 2009 >
+    au < ready ; 2009 ; Budget of the United States Government 2009 ; 2009 >
     au < ready ; 2010 ; Budget of the United States Government 2010 ; 2010 >
 
   }
