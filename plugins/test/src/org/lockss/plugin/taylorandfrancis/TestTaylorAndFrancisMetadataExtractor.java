@@ -50,7 +50,7 @@ import org.lockss.plugin.simulated.*;
  */
 public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
 
-  static Logger log = Logger.getLogger("TestBePressMetadataExtractor");
+  static Logger log = Logger.getLogger("TestTaylorAndFrancisMetadataExtractor");
 
   private MockLockssDaemon theDaemon;
   private SimulatedArchivalUnit sau; // Simulated AU to generate content
@@ -155,7 +155,7 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
           + "<meta name=\"dc.Coverage\" content=\"" + goodCoverage + "\"></meta>"
           + "<meta name=\"keywords\" content=\"" + goodKeywords[0] + "; " + goodKeywords[1] + "; " + goodKeywords[2] + "\"></meta>";
   
-		
+  
   /**
    * Method that creates a simulated Cached URL from the source code provided by the goodContent String.
    * It then asserts that the metadata extracted with TaylorAndFrancisHtmlMetadataExtractorFactory
