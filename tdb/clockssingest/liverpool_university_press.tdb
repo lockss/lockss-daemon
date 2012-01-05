@@ -27,7 +27,7 @@
     au < manifest ; exists ; 2008 ; Australian Journal of French Studies Volume 45 ; 45 >
     au < manifest ; exists ; 2009 ; Australian Journal of French Studies Volume 46 ; 46 >
     au < manifest ; exists ; 2010 ; Australian Journal of French Studies Volume 47 ; 47 >    
-    au < crawling ; exists ; 2011 ; Australian Journal of French Studies Volume 48 ; 48 >
+    au < released ; manifest ; 2011 ; Australian Journal of French Studies Volume 48 ; 48 >
     
   }
 
@@ -50,7 +50,7 @@
     au < manifest ; exists ; 2008 ; British Journal of Canadian Studies Volume 21 ; 21 >
     au < manifest ; exists ; 2009 ; British Journal of Canadian Studies Volume 22 ; 22 >
     au < manifest ; exists ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 >    
-    au < crawling ; exists ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
+    au < released ; manifest ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
     
   }
  
@@ -83,7 +83,7 @@
     au < manifest ; exists ; 2008 ; Bulletin of Hispanic Studies Volume 85 ; 85 >
     au < manifest ; exists ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 >
     au < manifest ; exists ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
-    au < crawling ; exists ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
+    au < released ; manifest ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
 
   }
    
@@ -105,7 +105,7 @@
     au < manifest ; exists ; 2008 ; The Byron Journal Volume 36 ; 36 >
     au < manifest ; exists ; 2009 ; The Byron Journal Volume 37 ; 37 >
     au < manifest ; exists ; 2010 ; The Byron Journal Volume 38 ; 38 >    
-    au < crawling ; exists ; 2011 ; The Byron Journal Volume 39 ; 39 >
+    au < released ; manifest ; 2011 ; The Byron Journal Volume 39 ; 39 >
 
   }
 
@@ -138,8 +138,8 @@
     au < manifest ; exists ; 2008 ; Contemporary French Civilization Volume 32 ; 32 >
     au < manifest ; exists ; 2009 ; Contemporary French Civilization Volume 33 ; 33 >
     au < manifest ; exists ; 2010 ; Contemporary French Civilization Volume 34 ; 34 >
-    au < crawling ; exists ; 2011 ; Contemporary French Civilization Volume 35 ; 35 >    
-    au < crawling ; exists ; 2011 ; Contemporary French Civilization Volume 36 ; 36 >
+    au < released ; manifest ; 2011 ; Contemporary French Civilization Volume 35 ; 35 >    
+    au < released ; manifest ; 2011 ; Contemporary French Civilization Volume 36 ; 36 >
 
   }  
   
@@ -157,7 +157,7 @@
     au < manifest ; exists ; 2008 ; European Comic Art Volume 1 ; 1 >
     au < manifest ; exists ; 2009 ; European Comic Art Volume 2 ; 2 >
     au < manifest ; exists ; 2010 ; European Comic Art Volume 3 ; 3 >    
-    au < crawling ; exists ; 2011 ; European Comic Art Volume 4 ; 4 >
+    au < released ; manifest ; 2011 ; European Comic Art Volume 4 ; 4 >
 
   }  
   
@@ -174,7 +174,7 @@
 
     au < manifest ; exists ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 >
     au < manifest ; exists ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
-    au < crawling ; exists ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
+    au < released ; manifest ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
 
   }
    
@@ -190,7 +190,7 @@
     comment[upcoming] = this journal is upcoming in projectmuse
     param[journal_issn] = 2047-7708 
 
-    au < crawling ; exists ; 2011 ; Extrapolation Volume 52 ; 52 >
+    au < released ; manifest ; 2011 ; Extrapolation Volume 52 ; 52 >
 
   }
 
@@ -214,7 +214,7 @@
     au < manifest ; exists ; 2008 ; International Development Planning Review Volume 30 ; 30 >
     au < manifest ; exists ; 2009 ; International Development Planning Review Volume 31 ; 31 >
     au < manifest ; exists ; 2010 ; International Development Planning Review Volume 32 ; 32 >
-    au < crawling ; exists ; 2011 ; International Development Planning Review Volume 33 ; 33 >
+    au < released ; manifest ; 2011 ; International Development Planning Review Volume 33 ; 33 >
 
   }
    
@@ -233,7 +233,7 @@
     au < manifest ; exists ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
     au < manifest ; exists ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
     au < manifest ; exists ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
-    au < crawling ; exists ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
+    au < released ; manifest ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
 
   }
    
@@ -268,7 +268,7 @@
     au < manifest ; exists ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
     au < manifest ; exists ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
     au < manifest ; exists ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
-    au < crawling ; exists ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
+    au < released ; manifest ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
 
   }
   
@@ -310,7 +310,7 @@
     au < manifest ; exists ; 2008 ; Romani Studies Volume 18 ; 18 >
     au < manifest ; exists ; 2009 ; Romani Studies Volume 19 ; 19 >
     au < manifest ; exists ; 2010 ; Romani Studies Volume 20 ; 20 >
-    au < crawling ; exists ; 2011 ; Romani Studies Volume 21 ; 21 >
+    au < released ; manifest ; 2011 ; Romani Studies Volume 21 ; 21 >
 
   }
    
@@ -328,7 +328,7 @@
     au < manifest ; exists ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
     au < manifest ; exists ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
     au < manifest ; exists ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
-    au < crawling ; exists ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
+    au < released ; manifest ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
 
   }
    
@@ -350,7 +350,7 @@
     au < manifest ; exists ; 2008 ; Sculpture Journal Volume 17 ; 17 >
     au < manifest ; exists ; 2009 ; Sculpture Journal Volume 18 ; 18 >
     au < manifest ; exists ; 2010 ; Sculpture Journal Volume 19 ; 19 > 
-    au < crawling ; exists ; 2011 ; Sculpture Journal Volume 20 ; 20 >
+    au < released ; manifest ; 2011 ; Sculpture Journal Volume 20 ; 20 >
 
   }
   
@@ -398,7 +398,7 @@
     au < manifest ; exists ; 2008 ; Town Planning Review Volume 79 ; 79 >
     au < manifest ; exists ; 2009 ; Town Planning Review Volume 80 ; 80 >
     au < manifest ; exists ; 2010 ; Town Planning Review Volume 81 ; 81 >
-    au < crawling ; exists ; 2011 ; Town Planning Review Volume 82 ; 82 >
+    au < released ; manifest ; 2011 ; Town Planning Review Volume 82 ; 82 >
     au < manifest ; exists ; 2012 ; Town Planning Review Volume 83 ; 83 >
 
   }
