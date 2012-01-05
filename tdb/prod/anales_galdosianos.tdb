@@ -17,8 +17,9 @@
     >
 
     param[journal_dir] = anales_galdosianos
+    param[journal_id] = ang
 
-    au < doesNotExist ; 0 ; Anales Galdosianos Volume 1 ; 1 >
+    au < exists ; 2011 ; Anales Galdosianos Volume 46 ; 46 >
 
   }
 
