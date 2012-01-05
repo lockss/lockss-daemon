@@ -332,7 +332,7 @@
     >
 
     param[journal_dir] = american_journal_of_bioethics
-    param[journal_id] = ajb
+    attr[journal_id] = ajb
 
     au < released ; 2001 ; The American Journal of Bioethics Volume 1 ; 1 >
     au < released ; 2002 ; The American Journal of Bioethics Volume 2 ; 2 >
