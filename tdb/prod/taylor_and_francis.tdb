@@ -12726,7 +12726,8 @@
   {
 
     title <
-      name = Computational and Mathematical Methods in Medicine: An Interdisciplinary Journal of Mathematical, Theoretical and Clinical Aspects of Medicine ;
+      name = Computational and Mathematical Methods in Medicine ;
+      subtitle = An Interdisciplinary Journal of Mathematical, Theoretical and Clinical Aspects of Medicine ;
       issn = 1748-670X ;
       eissn = 1748-6718 ;
       issnl = 1748-670X
@@ -12736,11 +12737,11 @@
     param[journal_id] = gthm20 
     comment[0] = Published by Hindawi from 2011 
 
-    au < manifest ; 2006 ; Computational and Mathematical Methods in Medicine: An Interdisciplinary Journal of Mathematical, Theoretical and Clinical Aspects of Medicine Volume 7 ; 7 > 
-    au < manifest ; 2007 ; Computational and Mathematical Methods in Medicine: An Interdisciplinary Journal of Mathematical, Theoretical and Clinical Aspects of Medicine Volume 8 ; 8 > 
-    au < manifest ; 2008 ; Computational and Mathematical Methods in Medicine: An Interdisciplinary Journal of Mathematical, Theoretical and Clinical Aspects of Medicine Volume 9 ; 9 > 
-    au < manifest ; 2009 ; Computational and Mathematical Methods in Medicine: An Interdisciplinary Journal of Mathematical, Theoretical and Clinical Aspects of Medicine Volume 10 ; 10 > 
-    au < manifest ; 2010 ; Computational and Mathematical Methods in Medicine: An Interdisciplinary Journal of Mathematical, Theoretical and Clinical Aspects of Medicine Volume 11 ; 11 > 
+    au < manifest ; 2006 ; Computational and Mathematical Methods in Medicine Volume 7 ; 7 > 
+    au < manifest ; 2007 ; Computational and Mathematical Methods in Medicine Volume 8 ; 8 > 
+    au < manifest ; 2008 ; Computational and Mathematical Methods in Medicine Volume 9 ; 9 > 
+    au < manifest ; 2009 ; Computational and Mathematical Methods in Medicine Volume 10 ; 10 > 
+    au < manifest ; 2010 ; Computational and Mathematical Methods in Medicine Volume 11 ; 11 > 
 
   }
 
@@ -13423,9 +13424,8 @@
 
     title <
       name = Contemporary Record ;
-      issn = 1361-9462 ;
-      eissn = 1743-7997 ;
-      issnl = 1361-9462
+      issn = 0950-9224 ;
+      issnl = 0950-9224
     >
 
     comment[continued_by] = 1361-9462
@@ -18484,8 +18484,9 @@
 
     title <
       name = Energy Sources ;
-      issn = 1556-7036 ;
-      issnl = 1556-7036
+      issn = 0090-8312 ;
+      eissn = 1521-0510 ;
+      issnl = 0090-8312
     >
 
     comment[split] = into 1556-7036 and 1556-7249
@@ -18530,7 +18531,7 @@
       issnl = 1556-7036
     >
 
-    comment[split] = from 1556-7036
+    comment[split] = from 0090-8312
     param[journal_id] = ueso20 
 
     au < manifest ; 2006 ; Energy Sources Part A: Recovery, Utilization, and Environmental Effects Volume 28 ; 28 > 
@@ -18551,7 +18552,7 @@
       issnl = 1556-7249
     >
 
-    comment[split] = from 1556-7036
+    comment[split] = from 0090-8312
     param[journal_id] = uesb20 
 
     au < manifest ; 2006 ; Energy Sources Part B: Economics, Planning, and Policy Volume 1 ; 1 > 
@@ -31312,11 +31313,11 @@
 
     title <
       name = International Review of Sociology (Series 1) ;
-      issn = 1743-9035 ;
-      issnl = 1743-9035
+      issn = 0390-6701 ;
+      issnl = 0390-6701
     >
 
-    comment[continued_by] = 0390-6701
+    comment[continued_by] = International Review of Sociology
     param[journal_id] = cirs19 
 
     au < manifest ; 1987 ; International Review of Sociology (Series 1) Volume 1 (1987) ; 1 > 
@@ -31334,7 +31335,7 @@
       issnl = 0390-6701
     >
 
-    comment[contiunes] = 1743-9035
+    comment[continues] = International Review of Sociology (Series 1)
     param[journal_id] = cirs20 
 
     au < manifest ; 1990 ; International Review of Sociology: Revue Internationale de Sociologie Volume 1 (1990) ; 1 > 
@@ -73231,12 +73232,11 @@
 
     title <
       name = Travesia ;
-      issn = 1356-9325 ;
-      eissn = 1469-9575 ;
-      issnl = 1356-9325
+      issn = 0965-8343 ;
+      issnl = 0965-8343
     >
 
-    comment[continued_by] = 0965-8343 
+    comment[continued_by] = 1356-9325 
     param[journal_id] = cjla19 
 
     au < manifest ; 1992 ; Travesia Volume 1 ; 1 > 
