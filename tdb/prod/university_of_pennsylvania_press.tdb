@@ -112,7 +112,7 @@
     >
 
     param[journal_dir] = humanity
-    param[journal_id] = hum
+    attr[journal_id] = hum
 
     au < ready ; 2010 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 1 ; 1 >
     au < ready ; 2011 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 2 ; 2 >
