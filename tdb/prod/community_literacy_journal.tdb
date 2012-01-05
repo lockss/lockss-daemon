@@ -16,7 +16,7 @@
     >
 
     param[journal_dir] = community_literacy_journal
-    param[journal_id] =
+    attr[journal_id] =
     comment[journal_id] = need to fill in journal_id
 
     au < doesNotExist ; 0 ; Community Literacy Journal Volume 1 ; 1 >
