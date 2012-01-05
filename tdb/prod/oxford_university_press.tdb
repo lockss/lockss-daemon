@@ -3166,6 +3166,41 @@
   {
 
     title <
+      name = Children & School ;
+      issn = 1532-8759 ;
+      eissn = 1545-682X ;
+      issnl = 1532-8759
+    >
+
+    {
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://cs.oxfordjournals.org
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Children & School Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Children & School Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Children & School Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Children & School Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Children & School Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Children & School Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Children & School Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Children & School Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Children & School Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; Children & School Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; Children & School Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; Children & School Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; Children & School Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; Children & School Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; Children & School Volume 33 ; 33 >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = The Chinese Journal of International Politics ;
       issn = 1750-8916 ;
       eissn = 1750-8924 ;
