@@ -19,6 +19,8 @@
     >
 
     param[journal_dir] = levinas_studies
+    param[journal_id] =
+    comment[journal_id] = need to fill in journal_id
 
     au < doesNotExist ; 0 ; Levinas Studies Volume 1 ; 1 >
 
@@ -31,7 +33,10 @@
     >
 
     comment[issn] = 0022-6860 is not the correct issn.
-    param[journal_dir] = milton_studies
+    param[journal_dir] = 
+    param[journal_id] =
+    comment[journal_id] = need to fill in journal_id
+
 
     au < doesNotExist ; 0 ; Milton Studies Volume 1 ; 1 >
 
