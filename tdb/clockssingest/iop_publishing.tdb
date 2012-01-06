@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = IOP Publishing
+    name = IOP Publishing ;
+    attr[contract] = 2008
   >
 
   plugin = org.lockss.plugin.iop.ClockssIOPSciencePlugin

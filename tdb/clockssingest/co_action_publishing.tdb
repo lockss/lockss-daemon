@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Co-Action Publishing
+    name = Co-Action Publishing ;
+    attr[contract] = 2010
   >
 
   plugin = org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin

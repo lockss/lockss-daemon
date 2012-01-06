@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = British Institute of Radiology
+    name = British Institute of Radiology ;
+    attr[contract] = 2011
   >
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
