@@ -16,6 +16,7 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.jwildlifedis.org/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[46] = found a login page
 
       au < ready ; 1965 ; Journal of Wildlife Diseases Volume 1 ; 1 >
       au < ready ; 1966 ; Journal of Wildlife Diseases Volume 2 ; 2 >
@@ -32,21 +33,21 @@
       au < ready ; 1977 ; Journal of Wildlife Diseases Volume 13 ; 13 >
       au < ready ; 1978 ; Journal of Wildlife Diseases Volume 14 ; 14 >
       au < ready ; 1979 ; Journal of Wildlife Diseases Volume 15 ; 15 >
-      au < testing ; 1980 ; Journal of Wildlife Diseases Volume 16 ; 16 >
-      au < testing ; 1981 ; Journal of Wildlife Diseases Volume 17 ; 17 >
-      au < testing ; 1982 ; Journal of Wildlife Diseases Volume 18 ; 18 >
-      au < testing ; 1983 ; Journal of Wildlife Diseases Volume 19 ; 19 >
-      au < testing ; 1984 ; Journal of Wildlife Diseases Volume 20 ; 20 >
-      au < testing ; 1985 ; Journal of Wildlife Diseases Volume 21 ; 21 >
-      au < testing ; 1986 ; Journal of Wildlife Diseases Volume 22 ; 22 >
-      au < testing ; 1987 ; Journal of Wildlife Diseases Volume 23 ; 23 >
-      au < testing ; 1988 ; Journal of Wildlife Diseases Volume 24 ; 24 >
-      au < testing ; 1989 ; Journal of Wildlife Diseases Volume 25 ; 25 >
-      au < testing ; 1990 ; Journal of Wildlife Diseases Volume 26 ; 26 >
-      au < testing ; 1991 ; Journal of Wildlife Diseases Volume 27 ; 27 >
-      au < testing ; 1992 ; Journal of Wildlife Diseases Volume 28 ; 28 >
-      au < testing ; 1993 ; Journal of Wildlife Diseases Volume 29 ; 29 >
-      au < testing ; 1994 ; Journal of Wildlife Diseases Volume 30 ; 30 >
+      au < ready ; 1980 ; Journal of Wildlife Diseases Volume 16 ; 16 >
+      au < ready ; 1981 ; Journal of Wildlife Diseases Volume 17 ; 17 >
+      au < ready ; 1982 ; Journal of Wildlife Diseases Volume 18 ; 18 >
+      au < ready ; 1983 ; Journal of Wildlife Diseases Volume 19 ; 19 >
+      au < ready ; 1984 ; Journal of Wildlife Diseases Volume 20 ; 20 >
+      au < ready ; 1985 ; Journal of Wildlife Diseases Volume 21 ; 21 >
+      au < ready ; 1986 ; Journal of Wildlife Diseases Volume 22 ; 22 >
+      au < ready ; 1987 ; Journal of Wildlife Diseases Volume 23 ; 23 >
+      au < ready ; 1988 ; Journal of Wildlife Diseases Volume 24 ; 24 >
+      au < ready ; 1989 ; Journal of Wildlife Diseases Volume 25 ; 25 >
+      au < ready ; 1990 ; Journal of Wildlife Diseases Volume 26 ; 26 >
+      au < ready ; 1991 ; Journal of Wildlife Diseases Volume 27 ; 27 >
+      au < ready ; 1992 ; Journal of Wildlife Diseases Volume 28 ; 28 >
+      au < ready ; 1993 ; Journal of Wildlife Diseases Volume 29 ; 29 >
+      au < ready ; 1994 ; Journal of Wildlife Diseases Volume 30 ; 30 >
       au < ready ; 1995 ; Journal of Wildlife Diseases Volume 31 ; 31 >
       au < ready ; 1996 ; Journal of Wildlife Diseases Volume 32 ; 32 >
       au < ready ; 1997 ; Journal of Wildlife Diseases Volume 33 ; 33 >
@@ -60,9 +61,9 @@
       au < testing ; 2005 ; Journal of Wildlife Diseases Volume 41 ; 41 >
       au < testing ; 2006 ; Journal of Wildlife Diseases Volume 42 ; 42 >
       au < testing ; 2007 ; Journal of Wildlife Diseases Volume 43 ; 43 >
-      au < testing ; 2008 ; Journal of Wildlife Diseases Volume 44 ; 44 >
-      au < testing ; 2009 ; Journal of Wildlife Diseases Volume 45 ; 45 >
-      au < testing ; 2010 ; Journal of Wildlife Diseases Volume 46 ; 46 >
+      au < ready ; 2008 ; Journal of Wildlife Diseases Volume 44 ; 44 >
+      au < ready ; 2009 ; Journal of Wildlife Diseases Volume 45 ; 45 >
+      au < notReady ; 2010 ; Journal of Wildlife Diseases Volume 46 ; 46 >
       au < testing ; 2011 ; Journal of Wildlife Diseases Volume 47 ; 47 >
 
     }
