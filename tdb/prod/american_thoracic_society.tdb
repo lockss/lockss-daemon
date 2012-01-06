@@ -82,13 +82,13 @@
 
     param[base_url] = http://ajrcmb.atsjournals.org/
 
-    au < testing ; 1989 ; American Journal of Respiratory Cell and Molecular Biology Volume 1 ; 1 >
-    au < testing ; 1990 ; American Journal of Respiratory Cell and Molecular Biology Volume 2 ; 2 >
-    au < testing ; 1990 ; American Journal of Respiratory Cell and Molecular Biology Volume 3 ; 3 >
-    au < testing ; 1991 ; American Journal of Respiratory Cell and Molecular Biology Volume 4 ; 4 >
-    au < testing ; 1991 ; American Journal of Respiratory Cell and Molecular Biology Volume 5 ; 5 >
-    au < testing ; 1992 ; American Journal of Respiratory Cell and Molecular Biology Volume 6 ; 6 >
-    au < testing ; 1992 ; American Journal of Respiratory Cell and Molecular Biology Volume 7 ; 7 >
+    au < ready ; 1989 ; American Journal of Respiratory Cell and Molecular Biology Volume 1 ; 1 >
+    au < ready ; 1990 ; American Journal of Respiratory Cell and Molecular Biology Volume 2 ; 2 >
+    au < ready ; 1990 ; American Journal of Respiratory Cell and Molecular Biology Volume 3 ; 3 >
+    au < ready ; 1991 ; American Journal of Respiratory Cell and Molecular Biology Volume 4 ; 4 >
+    au < ready ; 1991 ; American Journal of Respiratory Cell and Molecular Biology Volume 5 ; 5 >
+    au < ready ; 1992 ; American Journal of Respiratory Cell and Molecular Biology Volume 6 ; 6 >
+    au < ready ; 1992 ; American Journal of Respiratory Cell and Molecular Biology Volume 7 ; 7 >
     au < testing ; 1993 ; American Journal of Respiratory Cell and Molecular Biology Volume 8 ; 8 >
     au < testing ; 1993 ; American Journal of Respiratory Cell and Molecular Biology Volume 9 ; 9 >
     au < testing ; 1994 ; American Journal of Respiratory Cell and Molecular Biology Volume 10 ; 10 >
@@ -97,12 +97,12 @@
     au < testing ; 1995 ; American Journal of Respiratory Cell and Molecular Biology Volume 13 ; 13 >
     au < testing ; 1996 ; American Journal of Respiratory Cell and Molecular Biology Volume 14 ; 14 >
     au < testing ; 1996 ; American Journal of Respiratory Cell and Molecular Biology Volume 15 ; 15 >
-    au < manifest ; 1997 ; American Journal of Respiratory Cell and Molecular Biology Volume 16 ; 16 >
-    au < manifest ; 1997 ; American Journal of Respiratory Cell and Molecular Biology Volume 17 ; 17 >
-    au < manifest ; 1998 ; American Journal of Respiratory Cell and Molecular Biology Volume 18 ; 18 >
-    au < manifest ; 1998 ; American Journal of Respiratory Cell and Molecular Biology Volume 19 ; 19 >
-    au < manifest ; 1999 ; American Journal of Respiratory Cell and Molecular Biology Volume 20 ; 20 >
-    au < manifest ; 1999 ; American Journal of Respiratory Cell and Molecular Biology Volume 21 ; 21 >
+    au < testing ; 1997 ; American Journal of Respiratory Cell and Molecular Biology Volume 16 ; 16 >
+    au < testing ; 1997 ; American Journal of Respiratory Cell and Molecular Biology Volume 17 ; 17 >
+    au < testing ; 1998 ; American Journal of Respiratory Cell and Molecular Biology Volume 18 ; 18 >
+    au < testing ; 1998 ; American Journal of Respiratory Cell and Molecular Biology Volume 19 ; 19 >
+    au < testing ; 1999 ; American Journal of Respiratory Cell and Molecular Biology Volume 20 ; 20 >
+    au < testing ; 1999 ; American Journal of Respiratory Cell and Molecular Biology Volume 21 ; 21 >
     au < manifest ; 2000 ; American Journal of Respiratory Cell and Molecular Biology Volume 22 ; 22 >
     au < manifest ; 2000 ; American Journal of Respiratory Cell and Molecular Biology Volume 23 ; 23 >
     au < manifest ; 2001 ; American Journal of Respiratory Cell and Molecular Biology Volume 24 ; 24 >
@@ -141,14 +141,14 @@
 
     param[base_url] = http://pats.atsjournals.org/
 
-    au < testing ; 2004 ; Proceedings of the American Thoracic Society Volume 1 ; 1 >
-    au < testing ; 2005 ; Proceedings of the American Thoracic Society Volume 2 ; 2 >
-    au < testing ; 2006 ; Proceedings of the American Thoracic Society Volume 3 ; 3 >
-    au < testing ; 2007 ; Proceedings of the American Thoracic Society Volume 4 ; 4 >
-    au < manifest ; 2008 ; Proceedings of the American Thoracic Society Volume 5 ; 5 >
-    au < manifest ; 2009 ; Proceedings of the American Thoracic Society Volume 6 ; 6 >
-    au < manifest ; 2010 ; Proceedings of the American Thoracic Society Volume 7 ; 7 >
-    au < manifest ; 2011 ; Proceedings of the American Thoracic Society Volume 8 ; 8 >
+    au < ready ; 2004 ; Proceedings of the American Thoracic Society Volume 1 ; 1 >
+    au < ready ; 2005 ; Proceedings of the American Thoracic Society Volume 2 ; 2 >
+    au < ready ; 2006 ; Proceedings of the American Thoracic Society Volume 3 ; 3 >
+    au < ready ; 2007 ; Proceedings of the American Thoracic Society Volume 4 ; 4 >
+    au < testing ; 2008 ; Proceedings of the American Thoracic Society Volume 5 ; 5 >
+    au < testing ; 2009 ; Proceedings of the American Thoracic Society Volume 6 ; 6 >
+    au < testing ; 2010 ; Proceedings of the American Thoracic Society Volume 7 ; 7 >
+    au < testing ; 2011 ; Proceedings of the American Thoracic Society Volume 8 ; 8 >
 
   }
 
