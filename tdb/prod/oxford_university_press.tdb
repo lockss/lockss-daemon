@@ -4882,7 +4882,21 @@
     param[base_url] = http://ereh.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-	comment[ereh] = new journal to OUP
+    au < exists ; 1997 ; European Review of Economic History Volume 1 ; 1 >
+    au < exists ; 1998 ; European Review of Economic History Volume 2 ; 2 >
+    au < exists ; 1999 ; European Review of Economic History Volume 3 ; 3 >
+    au < exists ; 2000 ; European Review of Economic History Volume 4 ; 4 >
+    au < exists ; 2001 ; European Review of Economic History Volume 5 ; 5 >
+    au < exists ; 2002 ; European Review of Economic History Volume 6 ; 6 >
+    au < exists ; 2003 ; European Review of Economic History Volume 7 ; 7 >
+    au < exists ; 2004 ; European Review of Economic History Volume 8 ; 8 >
+    au < exists ; 2005 ; European Review of Economic History Volume 9 ; 9 >
+    au < exists ; 2006 ; European Review of Economic History Volume 10 ; 10 >
+    au < exists ; 2007 ; European Review of Economic History Volume 11 ; 11 >
+    au < exists ; 2008 ; European Review of Economic History Volume 12 ; 12 >
+    au < exists ; 2009 ; European Review of Economic History Volume 13 ; 13 >
+    au < exists ; 2010 ; European Review of Economic History Volume 14 ; 14 >
+    au < exists ; 2011 ; European Review of Economic History Volume 15 ; 15 >
 
   }
 
