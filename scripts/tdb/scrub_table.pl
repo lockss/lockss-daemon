@@ -25,6 +25,7 @@ print "ISSN and EISSN issues:\n";
 print "*** NOTE: In cases where the issn and eissn are identical, sets will be listed twice ***\n";
 foreach my $issn (sort(keys(%issn_eissn))) {
     next if ($issn eq "");
+    $issn = &trim($issn);
     if ($issn !~ m/^\d\d\d\d-\d\d\d[0-9X]$/) {
     	print "$issn incorrect format\n\n";
     } elsif (! &verify_issn($issn)) {
@@ -69,4 +70,14 @@ sub verify_issn {
   } else {
   	return(0);
   }
+
+# Perl trim function to remove whitespace from the start and end of the string
+sub trim($)
+{
+	my $string = shift;
+	$string =~ s/^\s+//;
+	$string =~ s/\s+$//;
+	return $string;
+}
+
 }
