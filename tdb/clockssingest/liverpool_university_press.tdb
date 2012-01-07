@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Liverpool University Press
+    name = Liverpool University Press ;
+    attr[contract] = 2009
   >
 
   plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin

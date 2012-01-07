@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Pennsylvania State University Press
+    name = Pennsylvania State University Press ;
+    attr[contract] = 2011
   >
 
   plugin = org.lockss.plugin.jstor.JSTORPlugin

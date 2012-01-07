@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Pace University
+    name = Pace University ;
+    attr[contract] = 2011
   >
 
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
