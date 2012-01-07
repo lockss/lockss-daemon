@@ -17,6 +17,7 @@
       param[base_url] = http://www.jwildlifedis.org/
       implicit < status ; year ; name ; param[volume_name] >
       comment[46] = found a login page
+      comment[47] = multiple can't fetch permission page 500 errors
 
       au < ready ; 1965 ; Journal of Wildlife Diseases Volume 1 ; 1 >
       au < ready ; 1966 ; Journal of Wildlife Diseases Volume 2 ; 2 >
@@ -64,7 +65,7 @@
       au < ready ; 2008 ; Journal of Wildlife Diseases Volume 44 ; 44 >
       au < ready ; 2009 ; Journal of Wildlife Diseases Volume 45 ; 45 >
       au < notReady ; 2010 ; Journal of Wildlife Diseases Volume 46 ; 46 >
-      au < testing ; 2011 ; Journal of Wildlife Diseases Volume 47 ; 47 >
+      au < notReady ; 2011 ; Journal of Wildlife Diseases Volume 47 ; 47 >
 
     }
 
