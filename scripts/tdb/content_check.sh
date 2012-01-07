@@ -44,4 +44,4 @@ echo "CLOCKSS. ISSN issues"
 echo "---------------------"
 echo "---------------------"
 echo "GLN. Muse. Titles missing journal_id"
-cat ../../tdb/prod/*.tdb | ./tdbout -t publisher,param[journal_dir] -Q 'plugin ~ "Muse" and attr[journal_id] is not set' | sort -u
+cat ../../tdb/prod/*.tdb | ./tdbout -t publisher,param[journal_dir] -Q 'plugin ~ "ProjectMusePlugin" and attr[journal_id] is not set' | sort -u
