@@ -3,7 +3,7 @@
 # Script to provide alerts to problems in the title database
 #
 # Find duplicates in the gln title database
-tpath="/home/$USER/tmp"
+tpath="/home/$LOGNAME/tmp"
 mkdir -p $tpath
 cat ../../tdb/prod/*.tdb | ./tdbout -Aa | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
