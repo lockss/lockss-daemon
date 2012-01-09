@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Oxford University Press
+    name = Oxford University Press ;
+    attr[contract] = 2009
   >
 
     pluginPrefix = org.lockss.plugin.highwire.

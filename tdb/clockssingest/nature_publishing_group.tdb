@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Nature Publishing Group
+    name = Nature Publishing Group ;
+    attr[contract] = 2008
   >
 
   plugin = org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin
