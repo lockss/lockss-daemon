@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Company of Biologists
+    name = Company of Biologists ;
+    attr[contract] = 2011
   >
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin

@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Edinburgh University Press
+    name = Edinburgh University Press ;
+    attr[contract] = 2009
   >
 
   plugin = org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin
