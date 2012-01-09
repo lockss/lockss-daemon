@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Boston College Law School
+    name = Boston College Law School ;
+    attr[contract] = 2011
   >
   
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
