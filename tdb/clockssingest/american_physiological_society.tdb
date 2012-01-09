@@ -65,7 +65,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < crawling ; exists ; 2011 ; Advances in Physiology Education Volume 35 ; 35 ; >
+      au < testing ; exists ; 2011 ; Advances in Physiology Education Volume 35 ; 35 ; >
 
     }
     
@@ -422,8 +422,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Cell Physiology Volume 300 ; 300 ; >
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Cell Physiology Volume 301 ; 301 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Cell Physiology Volume 300 ; 300 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Cell Physiology Volume 301 ; 301 ; >
+      au < manifest ; exists ; 2012 ; American Journal of Physiology - Cell Physiology Volume 302 ; 302 ; >
 
     }
     
@@ -519,8 +520,10 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Endocrinology and Metabolism Volume 300 ; 300 ; >
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Endocrinology and Metabolism Volume 301 ; 301 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Endocrinology and Metabolism Volume 300 ; 300 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Endocrinology and Metabolism Volume 301 ; 301 ; >
+      au < manifest ; exists ; 2012 ; American Journal of Physiology - Endocrinology and Metabolism Volume 302 ; 302 ; >
+      
     }
     
   }
@@ -621,8 +624,9 @@
       au < released ; crawling ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 257 ; 257 ; >
       au < released ; crawling ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 264 ; 264 ; >
       au < released ; crawling ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 265 ; 265 ; >
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 300 ; 300 ; >
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 301 ; 301 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 300 ; 300 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 301 ; 301 ; >
+      au < manifest ; exists ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 302 ; 302 ; >
 
     }
     
@@ -718,8 +722,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 300 ; 300 ; >
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 301 ; 301 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 300 ; 300 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 301 ; 301 ; >
+      au < manifest ; exists ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 302 ; 302 ; >
 
     }
     
@@ -790,8 +795,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 300 ; 300 ; >
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 301 ; 301 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 300 ; 300 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 301 ; 301 ; >
+      au < manifest ; exists ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 302 ; 302 ; >
 
     }
     
@@ -887,8 +893,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 300 ; 300 ; >
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 301 ; 301 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 300 ; 300 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 301 ; 301 ; >
+      au < manifest ; exists ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 302 ; 302 ; >
 
     }
     
@@ -984,8 +991,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Renal Physiology Volume 300 ; 300 ; >
-      au < crawling ; exists ; 2011 ; American Journal of Physiology - Renal Physiology Volume 301 ; 301 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Renal Physiology Volume 300 ; 300 ; >
+      au < testing ; exists ; 2011 ; American Journal of Physiology - Renal Physiology Volume 301 ; 301 ; >
+      au < manifest ; exists ; 2012 ; American Journal of Physiology - Renal Physiology Volume 302 ; 302 ; >
 
     }
     
@@ -1123,8 +1131,9 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < released ; crawling ; 1968 ; Journal of Applied Physiology Volume 25 ; 25 ;  >      
-      au < crawling ; exists ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 ; >
-      au < crawling ; exists ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 ; >
+      au < testing ; exists ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 ; >
+      au < testing ; exists ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 ; >
+      au < manifest ; exists ; 2012 ; Journal of Applied Physiology Volume 112 ; 112 ; >
 
     }
     
@@ -1257,8 +1266,9 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < notReady ; exists ; 2003 ; Journal of Neurophysiology Volume 89 ; 89 ; >      
-      au < crawling ; exists ; 2011 ; Journal of Neurophysiology Volume 105 ; 105 ; >
-      au < crawling ; exists ; 2011 ; Journal of Neurophysiology Volume 106 ; 106 ; >
+      au < testing ; exists ; 2011 ; Journal of Neurophysiology Volume 105 ; 105 ; >
+      au < testing ; exists ; 2011 ; Journal of Neurophysiology Volume 106 ; 106 ; >
+      au < manifest ; exists ; 2012 ; Journal of Neurophysiology Volume 107 ; 107 ; >
       
     }
     
@@ -1329,7 +1339,8 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < crawling ; exists ; 2011 ; Physiological Genomics Volume 43 ; 43 ; >
+      au < testing ; exists ; 2011 ; Physiological Genomics Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2012 ; Physiological Genomics Volume 44 ; 44 ; >
 
     }
     
@@ -1451,7 +1462,8 @@
       au < released ; crawling ; 1937 ; Physiological Reviews Volume 17 ; 17 ; >
       au < released ; crawling ; 1941 ; Physiological Reviews Volume 21 ; 21 ; >
       au < released ; crawling ; 1945 ; Physiological Reviews Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2011 ; Physiological Reviews Volume 91 ; 91 ; >
+      au < testing ; exists ; 2011 ; Physiological Reviews Volume 91 ; 91 ; >
+      au < manifest ; exists ; 2012 ; Physiological Reviews Volume 92 ; 92 ; >
 
     }
     
@@ -1504,7 +1516,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < crawling ; exists ; 2011 ; Physiology Volume 26 ; 26 ; >
+      au < testing ; exists ; 2011 ; Physiology Volume 26 ; 26 ; >
 
     }
     
