@@ -1,10 +1,10 @@
 {
 
   publisher <
-    name = Bloomsbury Qatar Foundation Journals ;
-    attr[contract] = 2011
+    name = Bloomsbury Qatar Foundation Journals
   >
   
+  attr[contract] = 2011
   rights = openaccess
   comment[platform] = Atypon -- RT ticket 3556
   plugin = needs.plugin

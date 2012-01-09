@@ -1,10 +1,10 @@
 {
 
   publisher <
-    name = European Respiratory Society ;
-    attr[contract] = 2011
+    name = European Respiratory Society
   >
 
+  attr[contract] = 2011
   plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
   implicit < status ; status2 ; year ; name ; param[volume_name] >
 
