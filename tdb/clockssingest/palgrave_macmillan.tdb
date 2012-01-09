@@ -1,8 +1,8 @@
 {
   publisher <
-    name = Palgrave Macmillan ;
-    attr[contract] = 2011
+    name = Palgrave Macmillan
   >
+    attr[contract] = 2011
     plugin = org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin
     param[base_url] = http://www.palgrave-journals.com/
     implicit < status ; status2 ; year ; name ; param[year] ; param[volume_name] >
