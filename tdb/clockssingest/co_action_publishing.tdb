@@ -1,12 +1,11 @@
 {
 
   publisher <
-    name = Co-Action Publishing ;
-    attr[contract] = 2010
+    name = Co-Action Publishing
   >
 
+  attr[contract] = 2010
   comment[notReady] = RU issue 3836
-
   plugin = org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin
   implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
