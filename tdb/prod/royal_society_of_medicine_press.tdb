@@ -173,14 +173,14 @@
     param[base_url] = http://ht.rsmjournals.com/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Hand Therapy Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Hand Therapy Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Hand Therapy Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; Hand Therapy Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; Hand Therapy Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Hand Therapy Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Hand Therapy Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; Hand Therapy Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Hand Therapy Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Hand Therapy Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Hand Therapy Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Hand Therapy Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; Hand Therapy Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; Hand Therapy Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Hand Therapy Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Hand Therapy Volume 13 ; 13 >
     au < HighWirePressPlugin ; down ; 2009 ; Hand Therapy Volume 14 ; 14 >
     au < HighWirePressPlugin ; down ; 2010 ; Hand Therapy Volume 15 ; 15 >
     au < HighWirePressPlugin ; down ; 2011 ; Hand Therapy Volume 16 ; 16 >
@@ -208,7 +208,7 @@
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
-      param[base_url] = http://ht.rsmjournals.com/
+      param[base_url] = http://hii.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     
       au < HighWirePressPlugin ; down ; 2001 ; He@lth Information on the Internet Volume 21 ; 21 >
@@ -254,7 +254,7 @@
       au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 >
       au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 >
       au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 >
-      au < HighWirePressH20Plugin ; testing ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; ready ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
       au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 >
       au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 >
 
@@ -686,7 +686,7 @@
       au < HighWirePressPlugin ; down ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
       au < HighWirePressPlugin ; down ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
       au < HighWirePressPlugin ; down ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
-      au < HighWirePressH20Plugin ; testing ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; ready ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
 
     }
 
