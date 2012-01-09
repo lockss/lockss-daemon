@@ -1,10 +1,10 @@
 {
 
   publisher <
-    name = Royal Society of Chemistry ;
-    attr[contract] = 2009
+    name = Royal Society of Chemistry
   >
   
+  attr[contract] = 2009
   plugin = org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin
   param[base_url] = http://www.rsc.org/
   param[resolver_url] = http://xlink.rsc.org/

@@ -1,10 +1,11 @@
 {
   
   publisher <
-    name = Pion ;
-    attr[contract] = 2010
+    name = Pion
   >
   
+    attr[contract] = 2010
+
   {
     
     plugin = org.lockss.plugin.pion.ClockssPionPlugin
