@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = United Kingdom Serials Group
+    name = United Kingdom Serials Group ;
+    attr[contract] = 2011
   >
 
   plugin = needs.plugin

@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Rockefeller University Press
+    name = Rockefeller University Press ;
+    attr[contract] = 2009
   >
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin

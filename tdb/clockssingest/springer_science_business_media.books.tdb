@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Springer Science+Business Media
+    name = Springer Science+Business Media ;
+    attr[contract] = 2008
   >
 
   plugin = org.lockss.plugin.springer.ClockssSpringerLinkBookPlugin
