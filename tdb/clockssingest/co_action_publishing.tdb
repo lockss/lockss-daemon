@@ -5,6 +5,8 @@
     attr[contract] = 2010
   >
 
+  comment[notReady] = RU issue 3836
+
   plugin = org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin
   implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
@@ -177,8 +179,9 @@
 
     param[base_url] = http://www.infectionecologyandepidemiology.net/
     param[journal_id] = iee
+    comment[notReady] = crawl failure -- no permission?
 
-    au < testing ; exists ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
+    au < notReady ; exists ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
 
   }
   
@@ -404,6 +407,7 @@
 
     param[base_url] = http://www.polarresearch.net/
     param[journal_id] = polar
+    comment[notReady] = 500 internal service error
 
     au < manifest ; exists ; 1982 ; Polar Research Volume 1982 ; 1982 ; 1982 >
     au < manifest ; exists ; 1983 ; Polar Research Volume 1 ; 1 ; 1983 >
@@ -434,7 +438,7 @@
     au < manifest ; exists ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
     au < manifest ; exists ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
     au < manifest ; exists ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
-    au < testing ; exists ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
+    au < notReady ; exists ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
 
 
   }
