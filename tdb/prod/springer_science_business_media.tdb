@@ -37960,39 +37960,6 @@
   {
 
     title <
-      name = The VLDB Journal ;
-      issn = 1066-8888 ;
-      eissn = 0949-877X ;
-      issnl = 1066-8888
-    >
-
-    param[journal_issn] = 1066-8888
-
-    au < released ; 1992 ; The VLDB Journal Volume 1 ; 1 >
-    au < released ; 1993 ; The VLDB Journal Volume 2 ; 2 >
-    au < released ; 1994 ; The VLDB Journal Volume 3 ; 3 >
-    au < released ; 1995 ; The VLDB Journal Volume 4 ; 4 >
-    au < released ; 1996 ; The VLDB Journal Volume 5 ; 5 >
-    au < released ; 1997 ; The VLDB Journal Volume 6 ; 6 >
-    au < released ; 1998 ; The VLDB Journal Volume 7 ; 7 >
-    au < released ; 1999 ; The VLDB Journal Volume 8 ; 8 >
-    au < released ; 2000 ; The VLDB Journal Volume 9 ; 9 >
-    au < released ; 2001 ; The VLDB Journal Volume 10 ; 10 >
-    au < released ; 2002 ; The VLDB Journal Volume 11 ; 11 >
-    au < released ; 2003 ; The VLDB Journal Volume 12 ; 12 >
-    au < released ; 2004 ; The VLDB Journal Volume 13 ; 13 >
-    au < released ; 2005 ; The VLDB Journal Volume 14 ; 14 >
-    au < released ; 2006 ; The VLDB Journal Volume 15 ; 15 >
-    au < released ; 2007 ; The VLDB Journal Volume 16 ; 16 >
-    au < released ; 2008 ; The VLDB Journal Volume 17 ; 17 >
-    au < released ; 2009 ; The VLDB Journal Volume 18 ; 18 >
-    au < released ; 2010 ; The VLDB Journal Volume 19 ; 19 >
-
-  }
-
-  {
-
-    title <
       name = Theoretical and Applied Climatology ;
       issn = 0177-798X ;
       eissn = 1434-4483 ;
@@ -39228,6 +39195,39 @@
     >
 
     param[journal_issn] = 1610-2924
+
+  }
+
+  {
+
+    title <
+      name = The VLDB Journal ;
+      issn = 1066-8888 ;
+      eissn = 0949-877X ;
+      issnl = 1066-8888
+    >
+
+    param[journal_issn] = 1066-8888
+
+    au < released ; 1992 ; The VLDB Journal Volume 1 ; 1 >
+    au < released ; 1993 ; The VLDB Journal Volume 2 ; 2 >
+    au < released ; 1994 ; The VLDB Journal Volume 3 ; 3 >
+    au < released ; 1995 ; The VLDB Journal Volume 4 ; 4 >
+    au < released ; 1996 ; The VLDB Journal Volume 5 ; 5 >
+    au < released ; 1997 ; The VLDB Journal Volume 6 ; 6 >
+    au < released ; 1998 ; The VLDB Journal Volume 7 ; 7 >
+    au < released ; 1999 ; The VLDB Journal Volume 8 ; 8 >
+    au < released ; 2000 ; The VLDB Journal Volume 9 ; 9 >
+    au < released ; 2001 ; The VLDB Journal Volume 10 ; 10 >
+    au < released ; 2002 ; The VLDB Journal Volume 11 ; 11 >
+    au < released ; 2003 ; The VLDB Journal Volume 12 ; 12 >
+    au < released ; 2004 ; The VLDB Journal Volume 13 ; 13 >
+    au < released ; 2005 ; The VLDB Journal Volume 14 ; 14 >
+    au < released ; 2006 ; The VLDB Journal Volume 15 ; 15 >
+    au < released ; 2007 ; The VLDB Journal Volume 16 ; 16 >
+    au < released ; 2008 ; The VLDB Journal Volume 17 ; 17 >
+    au < released ; 2009 ; The VLDB Journal Volume 18 ; 18 >
+    au < released ; 2010 ; The VLDB Journal Volume 19 ; 19 >
 
   }
 
