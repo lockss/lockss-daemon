@@ -39,13 +39,24 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1526-3096
   
-      au < superseded ; 2006 ; Turtle and Tortoise Newsletter Volume 9 ; 9 >
-      au < superseded ; 2007 ; Turtle and Tortoise Newsletter Volume 10 ; 10 >
+      au < down ; 2006 ; Turtle and Tortoise Newsletter Volume 9 ; 9 >
+      au < down ; 2007 ; Turtle and Tortoise Newsletter Volume 10 ; 10 >
     }
 
     {
 
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = turt
+      
+      au < doNotProcess ; 2006 ; Turtle and Tortoise Newsletter Volume 9 ; 9 >
+      au < doNotProcess ; 2007 ; Turtle and Tortoise Newsletter Volume 10 ; 10 >   
+      au < manifest ; 2007-2008 ; Turtle and Tortoise Newsletter Volume 11 ; 11 >
+      au < manifest ; 2008 ; Turtle and Tortoise Newsletter Volume 12 ; 12 >
+      au < manifest ; 2009 ; Turtle and Tortoise Newsletter Volume 13 ; 13 >
+      au < manifest ; 2009 ; Turtle and Tortoise Newsletter Volume 14 ; 14 >
+      au < manifest ; 2010 ; Turtle and Tortoise Newsletter Volume 15 ; 15 >
 
     }
 
