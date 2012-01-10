@@ -40,6 +40,36 @@ foreach my $issn (sort(keys(%issn_eissn))) {
             (@{$issn_eissn{$issn}}->[0]->[3] eq @{$issn_eissn{$issn}}->[1]->[3])) {
             $print_this = 0;
         }
+
+	# Suppress printing if:
+	#  Publisher is "Taylor & Francis" for all records.
+	#  ISSN is the same for all records.
+	#  EISSN is the same for all records.
+	my $check_issn = "";
+	my $check_eissn = "";
+	my $suppress_this = 1;
+	foreach my $rec_ref (@{$issn_eissn{$issn}}) {
+	    if ($rec_ref->[0] ne "Taylor & Francis") {
+		$suppress_this = 0;
+		last;
+	    }
+	    if ($check_issn eq "") {
+		$check_issn = $rec_ref->[2];
+	    } elsif ($rec_ref->[2] ne $check_issn) {
+		$suppress_this = 0;
+		last;
+	    }
+	    if ($check_eissn eq "") {
+		$check_eissn = $rec_ref->[3];
+	    } elsif ($rec_ref->[3] ne $check_eissn) {
+		$suppress_this = 0;
+		last;
+	    }
+	}
+	if ($suppress_this == 1) {
+	    $print_this = 0;
+	}
+
         if ($print_this) {
             foreach my $rec (@{$issn_eissn{$issn}}) {
 	        print "$rec->[0]\t$rec->[1]\t$rec->[2]\t$rec->[3]\n";
