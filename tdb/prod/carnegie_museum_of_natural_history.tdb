@@ -39,15 +39,25 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0145-9058
   
-      au < superseded ; 2004 ; Bulletin of Carnegie Museum of Natural History Volume 35 ; 35 >
-      au < superseded ; 2004 ; Bulletin of Carnegie Museum of Natural History Volume 36 ; 36 >
-      au < superseded ; 2006 ; Bulletin of Carnegie Museum of Natural History Volume 37 ; 37 >
+      au < down ; 2004 ; Bulletin of Carnegie Museum of Natural History Volume 35 ; 35 >
+      au < down ; 2004 ; Bulletin of Carnegie Museum of Natural History Volume 36 ; 36 >
+      au < down ; 2006 ; Bulletin of Carnegie Museum of Natural History Volume 37 ; 37 >
     }
 
     {
 
-comment[0] = Atypon AUs
-
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = carb
+      
+      au < doNotProcess ; 2004 ; Bulletin of Carnegie Museum of Natural History Volume 35 ; 35 >
+      au < doNotProcess ; 2004 ; Bulletin of Carnegie Museum of Natural History Volume 36 ; 36 >
+      au < doNotProcess ; 2006 ; Bulletin of Carnegie Museum of Natural History Volume 37 ; 37 >
+      au < manifest ; 2007 ; Bulletin of Carnegie Museum of Natural History Volume 38 ; 38 >
+      au < manifest ; 2008 ; Bulletin of Carnegie Museum of Natural History Volume 39 ; 39 >
+      au < manifest ; 2009 ; Bulletin of Carnegie Museum of Natural History Volume 40 ; 40 >
+       
     }
 
   }
