@@ -21,6 +21,7 @@
     
 comment[bj_allnotReady_aus] = 500 errors, unless otherwise noted
 comment[bj1] = no permission from publisher
+comment[bj430] = see RU3802 login for Legacy HTML links
 
     au < exists ; 1906 ; Biochemical Journal Volume 1 ; 001 >
     au < released ; 1907 ; Biochemical Journal Volume 2 ; 002 >
@@ -451,7 +452,7 @@ comment[bj1] = no permission from publisher
     au < ready ; 2010 ; Biochemical Journal Volume 427 ; 427 >
     au < ready ; 2010 ; Biochemical Journal Volume 428 ; 428 >
     au < ready ; 2010 ; Biochemical Journal Volume 429 ; 429 >
-    au < manifest ; 2010 ; Biochemical Journal Volume 430 ; 430 >
+    au < notReady ; 2010 ; Biochemical Journal Volume 430 ; 430 >
     au < ready ; 2010 ; Biochemical Journal Volume 431 ; 431 >
     au < ready ; 2010 ; Biochemical Journal Volume 432 ; 432 >
     au < ready ; 2011 ; Biochemical Journal Volume 433 ; 433 >
