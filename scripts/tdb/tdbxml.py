@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.20 2011-08-25 23:40:49 thib_gc Exp $
+# $Id: tdbxml.py,v 1.21 2012-01-11 21:04:12 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -37,7 +37,7 @@ import tdbparse
 
 class TdbxmlConstants:
     
-    OPTION_NO_PUB_DOWN = 'nopubdown'
+    OPTION_NO_PUB_DOWN = 'no-pub-down'
     OPTION_NO_PUB_DOWN_SHORT = 'd'
     OPTION_NO_PUB_DOWN_HELP = 'do not include pub_down markers'
 
@@ -189,7 +189,7 @@ def __process_au(au, options):
     au_proxy = au.proxy()
     if au_proxy is not None:
         __do_param(au, 98, 'crawl_proxy', value=au_proxy)
-    if not options.nopubdown and au.status() in [AU.Status.DOWN, AU.Status.SUPERSEDED]:
+    if not options.no_pub_down and au.status() in [AU.Status.DOWN, AU.Status.SUPERSEDED, AU.Status.EXPUNGED]:
         __do_param(au, 99, 'pub_down', value='true')
     au_attrs = au.attrs()
     for attr in au_attrs:
