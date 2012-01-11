@@ -12,16 +12,13 @@
       issnl = 0006-9698
     >
 
-    {
-
-  }
   {
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = brvo
       
-      au < doNotProcess ; 2004 ; Breviora Volume 512 ; 512 >
+      au < manifest ; 2004 ; Breviora Volume 512 ; 512 >
       au < manifest ; 2008 ; Breviora Volume 513 ; 513 > 
       au < manifest ; 2008 ; Breviora Volume 514 ; 514 >
       au < manifest ; 2009 ; Breviora Volume 515 ; 515 >
@@ -52,17 +49,14 @@
     >
 
     {
-    }
-
-    {
 
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = harv
       
-      au < doNotProcess ; 2003-2007 ; Bulletin of the Museum of Comparative Zoology Volume 158 ; 158 >
-      au < doNotProcess ; 2007-2009 ; Bulletin of the Museum of Comparative Zoology Volume 159 ; 159 > 
+      au < manifest ; 2003-2007 ; Bulletin of the Museum of Comparative Zoology Volume 158 ; 158 >
+      au < manifest ; 2007-2009 ; Bulletin of the Museum of Comparative Zoology Volume 159 ; 159 > 
       au < manifest ; 2010-2011 ; Bulletin of the Museum of Comparative Zoology Volume 160 ; 160 >
 
     }
