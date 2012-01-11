@@ -3156,7 +3156,7 @@
       issnl = 1532-8759
     >
 
-    param[base_url] = http://cs.oxfordjournals.org
+    param[base_url] = http://cs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1997 ; Children & Schools Volume 19 ; 19 ; >
@@ -7819,7 +7819,7 @@
     param[base_url] = http://jat.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     
-    comment[jat] = new journal to OUP
+    au < manifest ; exists ; 2011; Journal of Analytical Toxicology Volume 35 ; 35 ; >
     
   }
   
@@ -8112,7 +8112,8 @@
     param[base_url] = http://chromsci.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    comment[chromsci] = new journal to OUP
+    au < manifest ; exists ; 2010 ; Journal of Chromatographic Science Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2011 ; Journal of Chromatographic Science Volume 50 ; 50 ; >
     
   }
   
@@ -15019,14 +15020,10 @@
         issn = 0958-2029
       >
 
-    comment = New to Oxford Journals in 2012, no journals published yet.
-     
-    {
-   
     param[base_url] = 
     pluginSuffix = ClockssHighWirePressH20Plugin
-     
-    }
+
+    au < manifest ; exists ; 2011 ; Research Evaluation Volume 20 ; 20 ; >
      
   }
 
@@ -15442,15 +15439,15 @@
   
     title <
       name = Science and Public Policy ;
-      issn = 1471-5430 ;
-      eissn = 0302-3427 ;
+      issn = 0302-3427 ;
+      eissn = 1471-5430 ;
       issnl = 0302-3427
     >
 
-    param[base_url] = 
+    param[base_url] = http://spp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-	comment = new journal to OUP
+    au < manifest ; exists ; 2011 ; Science and Public Policy Volume 38 ; 38 ; >
 	
   }
   
@@ -15718,6 +15715,68 @@
 
     }
 
+  }
+
+  {
+  
+    title <
+      name = Social Work ;
+      subtitle = A Journal of the National Association of Social Workers ;
+      issn = 0037-8046 ;
+      eissn = 1545-6846 ;
+      issnl = 0037-8046
+    >
+ 
+    param[base_url] = http://sw.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+   
+    au < manifest ; exists ; 1997 ; Social Work Volume 42 ; 42 ; >
+    au < manifest ; exists ; 1998 ; Social Work Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1999 ; Social Work Volume 44 ; 44 ; >
+    au < manifest ; exists ; 2000 ; Social Work Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2001 ; Social Work Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2002 ; Social Work Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2003 ; Social Work Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2004 ; Social Work Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2005 ; Social Work Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2006 ; Social Work Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2007 ; Social Work Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2008 ; Social Work Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2009 ; Social Work Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2010 ; Social Work Volume 55 ; 55 ; >
+    au < manifest ; exists ; 2011 ; Social Work Volume 56 ; 56 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Social Work Research ;
+      subtitle = A Journal of the National Association of Social Workers ;
+      issn = 1070-5309 ;
+      eissn = 1545-6838 ;
+      issnl = 1070-5309
+    >
+ 
+    param[base_url] = http://swr.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+   
+    au < manifest ; exists ; 1997 ; Social Work Research Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1998 ; Social Work Research Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1999 ; Social Work Research Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2000 ; Social Work Research Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2001 ; Social Work Research Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2002 ; Social Work Research Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2003 ; Social Work Research Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2004 ; Social Work Research Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2005 ; Social Work Research Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2006 ; Social Work Research Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2007 ; Social Work Research Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2008 ; Social Work Research Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2009 ; Social Work Research Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2010 ; Social Work Research Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2011 ; Social Work Research Volume 35 ; 35 ; >
+    
   }
 
   {
