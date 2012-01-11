@@ -17,6 +17,8 @@
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0010-065X
+      
+     au < down ; 2004 ; The Coleopterists Bulletin Volume 57 ; 57 >
   
     }
 
