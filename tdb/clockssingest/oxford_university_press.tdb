@@ -3173,7 +3173,7 @@
     au < manifest ; exists ; 2008 ; Children & Schools Volume 30 ; 30 ; >
     au < manifest ; exists ; 2009 ; Children & Schools Volume 31 ; 31 ; >
     au < manifest ; exists ; 2010 ; Children & Schools Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2011 ; Children & Schools Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2011 ; Children & Schools Volume 33 ; 33 ; >
 
   }
 
@@ -4762,7 +4762,7 @@
     au < manifest ; exists ; 2008 ; European Review of Economic History Volume 12 ; 12 ; >
     au < manifest ; exists ; 2009 ; European Review of Economic History Volume 13 ; 13 ; >
     au < manifest ; exists ; 2010 ; European Review of Economic History Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2011 ; European Review of Economic History Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2011 ; European Review of Economic History Volume 15 ; 15 ; >
 
   }
   
@@ -5511,7 +5511,7 @@
     au < manifest ; exists ; 2008 ; Health & Social Work Volume 33 ; 33 ; >
     au < manifest ; exists ; 2009 ; Health & Social Work Volume 34 ; 34 ; >
     au < manifest ; exists ; 2010 ; Health & Social Work Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2011 ; Health & Social Work Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2011 ; Health & Social Work Volume 36 ; 36 ; >
     
   }
 
@@ -7819,7 +7819,7 @@
     param[base_url] = http://jat.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     
-    au < manifest ; exists ; 2011; Journal of Analytical Toxicology Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2011; Journal of Analytical Toxicology Volume 35 ; 35 ; >
     
   }
   
@@ -8113,7 +8113,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2010 ; Journal of Chromatographic Science Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2011 ; Journal of Chromatographic Science Volume 50 ; 50 ; >
+    au < crawling ; exists ; 2011 ; Journal of Chromatographic Science Volume 50 ; 50 ; >
     
   }
   
@@ -15023,7 +15023,7 @@
     param[base_url] = http://rev.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2011 ; Research Evaluation Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2011 ; Research Evaluation Volume 20 ; 20 ; >
      
   }
 
@@ -15447,7 +15447,7 @@
     param[base_url] = http://spp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2011 ; Science and Public Policy Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2011 ; Science and Public Policy Volume 38 ; 38 ; >
 	
   }
   
@@ -15744,7 +15744,7 @@
     au < manifest ; exists ; 2008 ; Social Work Volume 53 ; 53 ; >
     au < manifest ; exists ; 2009 ; Social Work Volume 54 ; 54 ; >
     au < manifest ; exists ; 2010 ; Social Work Volume 55 ; 55 ; >
-    au < manifest ; exists ; 2011 ; Social Work Volume 56 ; 56 ; >
+    au < crawling ; exists ; 2011 ; Social Work Volume 56 ; 56 ; >
 
   }
 
@@ -15775,7 +15775,7 @@
     au < manifest ; exists ; 2008 ; Social Work Research Volume 32 ; 32 ; >
     au < manifest ; exists ; 2009 ; Social Work Research Volume 33 ; 33 ; >
     au < manifest ; exists ; 2010 ; Social Work Research Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2011 ; Social Work Research Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2011 ; Social Work Research Volume 35 ; 35 ; >
     
   }
 
