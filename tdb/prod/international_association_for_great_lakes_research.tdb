@@ -16,13 +16,12 @@
     >
     
     param[journal_id] = jglr
-  
+    comment[defunct] = Last issue published was Dec. 2010
     au < manifest ; 2006 ; Journal of Great Lakes Research Volume 32 ; 32 >
     au < manifest ; 2007 ; Journal of Great Lakes Research Volume 33 ; 33 >
     au < manifest ; 2008 ; Journal of Great Lakes Research Volume 34 ; 34 >
     au < manifest ; 2009 ; Journal of Great Lakes Research Volume 35 ; 35 >
     au < manifest ; 2010 ; Journal of Great Lakes Research Volume 36 ; 36 >
-    au < exists ; 2011 ; Journal of Great Lakes Research Volume 37 ; 37 >
 
   }
   
