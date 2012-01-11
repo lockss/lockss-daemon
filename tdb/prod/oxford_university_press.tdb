@@ -3126,6 +3126,37 @@
   {
 
     title <
+      name = Children & Schools ;
+      issn = 1532-8759 ;
+      eissn = 1545-682X ;
+      issnl = 1532-8759
+    >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://cs.oxfordjournals.org
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Children & Schools Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Children & Schools Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Children & Schools Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Children & Schools Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Children & Schools Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Children & Schools Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Children & Schools Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Children & Schools Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Children & Schools Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; Children & Schools Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; Children & Schools Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; Children & Schools Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; Children & Schools Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; Children & Schools Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; Children & Schools Volume 33 ; 33 >
+
+  }
+
+  {
+
+    title <
       name = Chinese Journal of International Law ;
       issn = 1540-1650 ;
       eissn = 1746-9937 ;
@@ -3158,41 +3189,6 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Chinese Journal of International Law Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Chinese Journal of International Law Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Chinese Journal of International Law Volume 10 ; 10 >
-
-    }
-
-  }
-
-  {
-
-    title <
-      name = Children & School ;
-      issn = 1532-8759 ;
-      eissn = 1545-682X ;
-      issnl = 1532-8759
-    >
-
-    {
-
-    pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://cs.oxfordjournals.org
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Children & School Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; Children & School Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; Children & School Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Children & School Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; Children & School Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Children & School Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; Children & School Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; Children & School Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Children & School Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; exists ; 2006 ; Children & School Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; exists ; 2007 ; Children & School Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; exists ; 2008 ; Children & School Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; exists ; 2009 ; Children & School Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; exists ; 2010 ; Children & School Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; Children & School Volume 33 ; 33 >
 
     }
 
@@ -3333,6 +3329,40 @@
   {
 
     title <
+      name = Communication Theory ;
+      issn = 1050-3293 ;
+      eissn = 1468-2885 ;
+      issnl = 1050-3293
+    >
+
+    comment[down] = Published by Blackwell Publishing from Volume 16, 2006
+
+    {
+
+    plugin = org.lockss.plugin.highwire.HighWirePlugin
+    param[base_url] = http://ct.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume] >
+
+    au < down ; 2005 ; Communication Theory Volume 15 ; 15 >
+
+    }
+
+    {
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://ct.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressPlugin ; doNotProcess ; 2005 ; Communication Theory Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; Communication Theory Volume 16 ; 16 >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = Community Development Journal ;
       issn = 0010-3802 ;
       eissn = 1468-2656 ;
@@ -3401,40 +3431,6 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Community Development Journal Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Community Development Journal Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Community Development Journal Volume 46 ; 46 >
-
-    }
-
-  }
-  
-  {
-
-    title <
-      name = Communication Theory ;
-      issn = 1050-3293 ;
-      eissn = 1468-2885 ;
-      issnl = 1050-3293
-    >
-
-    comment[down] = Published by Blackwell Publishing from Volume 16, 2006
-
-    {
-
-    plugin = org.lockss.plugin.highwire.HighWirePlugin
-    param[base_url] = http://ct.oxfordjournals.org/
-    implicit < status ; year ; name ; param[volume] >
-
-    au < down ; 2005 ; Communication Theory Volume 15 ; 15 >
-
-    }
-
-    {
-
-    pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://ct.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    au < HighWirePressPlugin ; doNotProcess ; 2005 ; Communication Theory Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Communication Theory Volume 16 ; 16 >
 
     }
 
@@ -3810,8 +3806,7 @@
     au < released ; 2005 ; Early Music Volume 33 ; 33 >
     au < released ; 2006 ; Early Music Volume 34 ; 34 >
     au < released ; 2007 ; Early Music Volume 35 ; 35 >
-   
-     
+        
     }
 
   }
@@ -4873,7 +4868,7 @@
   
     title <
       name = European Review of Economic History ;
-      issn = 1361-4916  ;
+      issn = 1361-4916 ;
       eissn = 1474-0044 ;
       issnl = 1361-4916 
     >
@@ -4882,21 +4877,21 @@
     param[base_url] = http://ereh.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1997 ; European Review of Economic History Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; European Review of Economic History Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; European Review of Economic History Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; European Review of Economic History Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; European Review of Economic History Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; European Review of Economic History Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; European Review of Economic History Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; European Review of Economic History Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; European Review of Economic History Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; exists ; 2006 ; European Review of Economic History Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; exists ; 2007 ; European Review of Economic History Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; exists ; 2008 ; European Review of Economic History Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; exists ; 2009 ; European Review of Economic History Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; exists ; 2010 ; European Review of Economic History Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; European Review of Economic History Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; European Review of Economic History Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; European Review of Economic History Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; European Review of Economic History Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; European Review of Economic History Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; European Review of Economic History Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; European Review of Economic History Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; European Review of Economic History Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; European Review of Economic History Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; European Review of Economic History Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; European Review of Economic History Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; European Review of Economic History Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; European Review of Economic History Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; European Review of Economic History Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; European Review of Economic History Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; European Review of Economic History Volume 15 ; 15 >
 
   }
 
@@ -5644,6 +5639,37 @@
     
     }
 
+  }
+
+  {
+  
+    title <
+      name = Health & Social Work  ;
+      issn = 0360-7283 ;
+      eissn = 1545-6854 ;
+      issnl = 0360-7283
+    >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://hsw.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; Health & Social Work Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; Health & Social Work Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; Health & Social Work Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; Health & Social Work Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Health & Social Work Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Health & Social Work Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; Health & Social Work Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Health & Social Work Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; Health & Social Work Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; Health & Social Work Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Health & Social Work Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; Health & Social Work Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Health & Social Work Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Health & Social Work Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Health & Social Work Volume 36 ; 36 >
+    
   }
 
   {
