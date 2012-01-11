@@ -27,9 +27,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = coac
       
-      au < doNotProcess ; 2002 ; Journal of Coastal Conservation Volume 8 ; 8 >
+      au < manifest ; 2002 ; Journal of Coastal Conservation Volume 8 ; 8 >
       au < doNotProcess ; 2003 ; Journal of Coastal Conservation Volume 9 ; 009 >
-      au < doNotProcess ; 2004 ; Journal of Coastal Conservation Volume 10 ; 10 >
+      au < manfest ; 2004 ; Journal of Coastal Conservation Volume 10 ; 10 >
       
     }
 
