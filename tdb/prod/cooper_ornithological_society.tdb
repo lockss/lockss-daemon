@@ -28,14 +28,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = cond
       
-      au < doNotProcess ; 2000 ; The Condor: An International Journal of Avian Biology Volume 102 ; 102 >
-      au < doNotProcess ; 2001 ; The Condor: An International Journal of Avian Biology Volume 103 ; 103 >
-      au < doNotProcess ; 2002 ; The Condor: An International Journal of Avian Biology Volume 104 ; 104 >
-      au < doNotProcess ; 2003 ; The Condor: An International Journal of Avian Biology Volume 105 ; 105 >
-      au < doNotProcess ; 2004 ; The Condor: An International Journal of Avian Biology Volume 106 ; 106 >
+      au < manifest ; 2000 ; The Condor: An International Journal of Avian Biology Volume 102 ; 102 >
+      au < manifest ; 2001 ; The Condor: An International Journal of Avian Biology Volume 103 ; 103 >
+      au < manifest ; 2002 ; The Condor: An International Journal of Avian Biology Volume 104 ; 104 >
+      au < manifest ; 2003 ; The Condor: An International Journal of Avian Biology Volume 105 ; 105 >
+      au < manifest ; 2004 ; The Condor: An International Journal of Avian Biology Volume 106 ; 106 >
       au < doNotProcess ; 2005 ; The Condor: An International Journal of Avian Biology Volume 107 ; 107 >
-      au < doNotProcess ; 2006 ; The Condor: An International Journal of Avian Biology Volume 108 ; 108 >
-      au < doNotProcess ; 2007 ; The Condor: An International Journal of Avian Biology Volume 109 ; 109 >      
+      au < manifest ; 2006 ; The Condor: An International Journal of Avian Biology Volume 108 ; 108 >
+      au < manifest ; 2007 ; The Condor: An International Journal of Avian Biology Volume 109 ; 109 >
       au < manifest ; 2008 ; The Condor: An International Journal of Avian Biology Volume 110 ; 110 >
       au < manifest ; 2008 ; The Condor: An International Journal of Avian Biology Volume 111 ; 1119 >
       au < manifest ; 2010 ; The Condor: An International Journal of Avian Biology Volume 112 ; 112 >
