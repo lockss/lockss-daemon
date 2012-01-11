@@ -27,12 +27,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = herp
       
-      au < doNotProcess ; 2002 ; Herpetologica Volume 58 ; 58 >
-      au < doNotProcess ; 2003 ; Herpetologica Volume 59 ; 59 >
-      au < doNotProcess ; 2004 ; Herpetologica Volume 60 ; 60 >
-      au < down ; 2005 ; Herpetologica Volume 61 ; 061 >
-      au < doNotProcess ; 2006 ; Herpetologica Volume 62 ; 62 >
-      au < doNotProcess ; 2007 ; Herpetologica Volume 63 ; 63 >
+      au < manifest ; 2002 ; Herpetologica Volume 58 ; 58 >
+      au < manifest ; 2003 ; Herpetologica Volume 59 ; 59 >
+      au < manifest ; 2004 ; Herpetologica Volume 60 ; 60 >
+      au < doNotProcess ; 2005 ; Herpetologica Volume 61 ; 061 >
+      au < manifest ; 2006 ; Herpetologica Volume 62 ; 62 >
+      au < manifest ; 2007 ; Herpetologica Volume 63 ; 63 >
       au < manifest ; 2008 ; Herpetologica Volume 64 ; 64 >
       au < manifest ; 2009 ; Herpetologica Volume 65 ; 65 >
       au < manifest ; 2010 ; Herpetologica Volume 66 ; 66 >
