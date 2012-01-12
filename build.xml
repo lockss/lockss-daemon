@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.287 2011-09-02 13:03:08 pgust Exp $
+ $Id: build.xml,v 1.288 2012-01-12 12:47:21 easyonthemayo Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -246,6 +246,7 @@ Args:
   <property name="bcel.jar"  value="${test.lib}/bcel.jar"/>
   <property name="oro.jar"  value="${test.lib}/jakarta-oro-2.0.8.jar"/>
   <property name="getopt.jar"  value="${test.lib}/gnu-getopt-1.0.13.jar"/>
+  <property name="javacsv.jar"  value="${test.lib}/javacsv.jar"/>
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
   <property name="pdfbox.jar" value="${lib}/PDFBox-0.7.3.jar" />
   <!-- Needed by PDFBox: -->
@@ -400,6 +401,7 @@ Args:
     <path refid="compile.classpath" />
     <pathelement path="${jdk.tools.jar}" />
     <pathelement path="${commons.cli.jar}" />
+    <pathelement path="${javacsv.jar}" />
   </path>
 
   <path id="tools.run.classpath">
@@ -969,13 +971,13 @@ Must specify pln with -Dplnname=name
     <mkdir dir="${outdir}" />
 
     <apply executable="scripts/tdb/tdbxml" dir="${basedir}"
-	   addsourcefile="true"
-	   dest="${outdir}"
+           addsourcefile="true"
+           dest="${outdir}"
            failonerror="true"
            failifexecutionfails="true"
            relative="false"
            parallel="false">
-
+      
       <fileset dir="${indir}" includes="**/*.tdb"/>
       <mapper type="glob" from="*.tdb" to="*.xml"/>
       <arg value="-A"/>
