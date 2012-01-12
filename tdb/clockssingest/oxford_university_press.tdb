@@ -6642,7 +6642,7 @@
     param[base_url] = http://icvts.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 14 ; 14 ; >  
+    au < manifest ; exists ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 14 ; 14 ; >  
      
   }
     
