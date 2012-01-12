@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.22 2011-12-19 11:33:58 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.23 2012-01-12 00:49:40 easyonthemayo Exp $
  */
 
 /*
@@ -43,10 +43,7 @@ import org.apache.commons.lang.StringUtils;
 import org.lockss.config.*;
 import org.lockss.config.TdbUtil.ContentScope;
 import org.lockss.daemon.AuHealthMetric;
-import org.lockss.exporter.kbart.KbartConverter;
-import org.lockss.exporter.kbart.KbartExportFilter;
-import org.lockss.exporter.kbart.KbartExporter;
-import org.lockss.exporter.kbart.KbartTitle;
+import org.lockss.exporter.kbart.*;
 import org.lockss.exporter.kbart.KbartExporter.OutputFormat;
 import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering;
 import org.lockss.exporter.kbart.KbartExportFilter.FieldOrdering;
@@ -93,14 +90,13 @@ public class ListHoldings extends LockssServlet {
    * not when set false */
   public static final String PARAM_ENABLE_HOLDINGS = PREFIX + "enabled";
   public static final boolean DEFAULT_ENABLE_HOLDINGS = false;
-  
+
   /** Enable "preserved" option when ListHoldings UI is enabled
    */
-  public static final String 
+  public static final String
     PARAM_ENABLE_PRESERVED_HOLDINGS = PREFIX + "enablePreserved";
-  public static final boolean DEFAULT_ENABLE_PRESERVED_HOLDINGS = false;
-  
-  
+  public static final boolean DEFAULT_ENABLE_PRESERVED_HOLDINGS = true;
+
   /** Default output format is HTML. */
   static final OutputFormat OUTPUT_DEFAULT = OutputFormat.HTML;
   /** Default field selection and ordering is KBART. */
@@ -193,7 +189,7 @@ public class ListHoldings extends LockssServlet {
     }
     
     // Get a set of custom opts, constructed with defaults if necessary
-    CustomOptions customOpts = getSessionCustomOpts();
+    KbartCustomOptions customOpts = getSessionCustomOpts();
 
     // ---------- Get parameters ----------
     Properties params = getParamsAsProps();
@@ -258,7 +254,7 @@ public class ListHoldings extends LockssServlet {
       else if (customAction.equals(ACTION_CUSTOM_CANCEL)) {
 	setCustomFieldOrdering(manualOrdering);
 	if (doExport) manualOrdering = lastManualOrdering;
-	omitEmptyColumns = customOpts.omitEmptyColumns;
+	omitEmptyColumns = customOpts.isOmitEmptyColumns();
       }
       // Reset the ordering customisation to the default
       else if (customAction.equals(ACTION_CUSTOM_RESET)) {
@@ -268,7 +264,7 @@ public class ListHoldings extends LockssServlet {
       
       // Create an object encapsulating the custom HTML options, and store it
       // in the session.
-      customOpts = new CustomOptions(omitEmptyColumns, showHealthRatings,
+      customOpts = new KbartCustomOptions(omitEmptyColumns, showHealthRatings,
           customFieldOrdering);
       putSessionCustomOpts(customOpts);
     
@@ -334,18 +330,21 @@ public class ListHoldings extends LockssServlet {
     // processing the list of AUs in the given scope. It is provided as 
     // information in the export, but is actually a little meaningless and 
     // should probably be omitted.
-    int numTdbTitles = TdbUtil.getNumberTdbTitles(scope);     
+    int numTdbTitles = TdbUtil.getNumberTdbTitles(scope);
 
-    CustomOptions opts = getSessionCustomOpts(false);
+    KbartCustomOptions opts = getSessionCustomOpts(false);
 
     // The list of KbartTitles to export; each title represents a TdbTitle over
     // a particular range of coverage.
     List<KbartTitle> titles = getKbartTitlesForExport(scope);
+    //KbartTitleIterator titles = getKbartTitlesForExport(scope);
  
-    log.info(String.format("Creating exporter for %d titles in scope %s\n", 
-	titles.size(), scope));
+    /*log.info(String.format("Creating exporter for %d titles in scope %s\n",
+	titles.size(), scope));*/
+    log.info(String.format("Creating exporter for titles in scope %s\n", scope));
     
     // Return if there are no titles
+    //if (!titles.hasNext()) {
     if (titles.isEmpty()) {
       errMsg = "No "+scope.label+" titles for export.";
       return null;
@@ -356,8 +355,8 @@ public class ListHoldings extends LockssServlet {
 
     //if (outputFormat.isHtml() && opts !=null) {
     if (opts !=null) {
-      filter = new KbartExportFilter(titles, opts.fieldOrdering, 
-	  opts.omitEmptyColumns, opts.showHealthRatings);
+      filter = new KbartExportFilter(titles, opts.getFieldOrdering(),
+          opts.isOmitEmptyColumns(), opts.isShowHealthRatings());
     } else {
       filter = new KbartExportFilter(titles);
     }
@@ -367,27 +366,29 @@ public class ListHoldings extends LockssServlet {
     kexp.setTdbTitleTotal(numTdbTitles);
     kexp.setContentScope(scope);
     
-    // Set an HTML form for the HTML output
-    assignHtmlCustomForm(kexp);
+    // Set an HTML form for the HTML output if necessary
+    if (kexp.getOutputFormat().isHtml()) {
+      kexp.setHtmlCustomForm(makeHtmlCustomForm());
+    }
+
     return kexp;    
   }
   
   /**
-   * Get the list of TdbTitles or AUs in the given scope, and turn them into 
+   * Get the list of TdbTitles or AUs in the given scope, and turn them into
    * KbartTitles which represent the coverage ranges available for titles in 
    * the scope.
    * 
    * @param scope the scope of titles to create
-   * @return a list of KbartTitles
+   * @return an iterator over KbartTitles
    */
-  private List<KbartTitle> getKbartTitlesForExport(ContentScope scope) {
-    
-    List<KbartTitle> titles;
-    // If we are exporting in a scope where ArchivalUnits are not available, 
+  /*private KbartTitleIterator getKbartTitlesForExport(ContentScope scope) {
+    // If we are exporting in a scope where ArchivalUnits are not available,
     // act on a list of TdbTitles, with their full AU ranges. 
     if (!scope.areAusAvailable) {
       Collection<TdbTitle> tdbTitles = TdbUtil.getTdbTitles(scope);
-      titles = KbartConverter.convertTitles(tdbTitles);
+      return KbartTitleIterator.getKbartTitleIterator(tdbTitles);
+      //titles = KbartConverter.convertTitles(tdbTitles);
     }
     // Otherwise we need to look at the lists of individual AUs in order to
     // calculate ranges
@@ -395,12 +396,49 @@ public class ListHoldings extends LockssServlet {
       // Whether the output will include any range fields; if there is no custom 
       // ordering, then the default will be used, which will include range fields
       boolean rangeFieldsIncluded = KbartExportFilter.includesRangeFields(
-	  getSessionCustomOpts().fieldOrdering.getOrdering());
+	  getSessionCustomOpts().getFieldOrdering().getOrdering());
+      Collection<ArchivalUnit> aus = TdbUtil.getAus(scope);
+      Map<TdbTitle, List<ArchivalUnit>> map = TdbUtil.mapTitlesToAus(aus);
+      return KbartTitleIterator.getKbartTitleIterator(map.values().iterator(),
+          getShowHealthRatings(), rangeFieldsIncluded);
+    }
+  }*/
+
+  /**
+   * Get the list of TdbTitles or AUs in the given scope, and turn them into
+   * KbartTitles which represent the coverage ranges available for titles in
+   * the scope.
+   *
+   * @param scope the scope of titles to create
+   * @return a list of KbartTitles
+   */
+  private List<KbartTitle> getKbartTitlesForExport(ContentScope scope) {
+
+    List<KbartTitle> titles;
+    Iterator<KbartTitle> titleIterator;
+    // If we are exporting in a scope where ArchivalUnits are not available,
+    // act on a list of TdbTitles, with their full AU ranges.
+    if (!scope.areAusAvailable) {
+      Collection<TdbTitle> tdbTitles = TdbUtil.getTdbTitles(scope);
+      // TODO Sort the TdbTitles first if we are expecting an iterator back (??)
+      titles = KbartConverter.convertTitles(tdbTitles);
+      // TODO titleIterator = new KbartConverter.TdbTitleKbartTitleIterator(tdbTitles.iterator());
+    }
+    // Otherwise we need to look at the lists of individual AUs in order to
+    // calculate ranges
+    else {
+      // Whether the output will include any range fields; if there is no custom
+      // ordering, then the default will be used, which will include range fields
+      boolean rangeFieldsIncluded = KbartExportFilter.includesRangeFields(
+          getSessionCustomOpts().getFieldOrdering().getOrdering());
       Collection<ArchivalUnit> aus = TdbUtil.getAus(scope);
       Map<TdbTitle, List<ArchivalUnit>> map = TdbUtil.mapTitlesToAus(aus);
       titles = KbartConverter.convertTitleAus(map.values(), getShowHealthRatings(),
           rangeFieldsIncluded);
+      //TODO titleIterator = new KbartConverter.AuKbartTitleIterator(
+      // map.values().iterator(), getShowHealthRatings(), rangeFieldsIncluded);
     }
+    // TODO Sort here if not performed in KbartConverter
     return titles;
   }
 
@@ -408,10 +446,26 @@ public class ListHoldings extends LockssServlet {
    * Assign an HTML form of custom options to the exporter if necessary.
    * @param kexp the exporter 
    */
-  private void assignHtmlCustomForm(KbartExporter kexp) {
+  /*private void assignHtmlCustomForm(KbartExporter kexp) {
     if (kexp.getOutputFormat().isHtml()) {
       kexp.setHtmlCustomForm(makeHtmlCustomForm());
     }
+  }*/
+
+  /**
+   * Use the supplied exporter to export the data to the given output stream.
+   *
+   * @param kexp an exporter to use for export
+   * @param out an output stream for the export
+   * @throws IOException
+   */
+  public void doExport(KbartExporter kexp, OutputStream out) throws IOException {
+    long s = System.currentTimeMillis();
+    kexp.export(out);
+    System.err.format("Export took approximately %ss\n",
+        (System.currentTimeMillis() - s) / 1000);
+    out.flush();
+    out.close();
   }
 
   /**
@@ -440,14 +494,8 @@ public class ListHoldings extends LockssServlet {
     //resp.setContentLength(  );
 
     // Export to the response OutputStream
-    OutputStream out = resp.getOutputStream();
-    long s = System.currentTimeMillis();
-    kexp.export(out);
-    log.debug(String.format("Export took approximately %ss",
-        (System.currentTimeMillis()-s)/1000));
-    out.flush();
-    out.close();
-
+    doExport(kexp, resp.getOutputStream());
+    
     // Check errors (Note: the response has already been written by here, so there is no point setting the err/status msgs)
     List<String> errs = kexp.getErrors();
     log.debug("errs: " + errs);
@@ -464,7 +512,7 @@ public class ListHoldings extends LockssServlet {
    * @return a string URL indicating the direct address for default output
    */
   public String getDefaultUpdateUrl() {
-    return srvAbsURL(myServletDescr(), "format="+OUTPUT_DEFAULT.name() );
+    return srvAbsURL(myServletDescr(), "format=" + OUTPUT_DEFAULT.name());
   }
   
   /**
@@ -506,10 +554,16 @@ public class ListHoldings extends LockssServlet {
       	"that are available for preservation, configured for collection, " +
     	"or preserved in your LOCKSS box."
       );
-      form.add(addFootnote("Titles in the 'preserved' output are " +
+      // Footenote for healthmetric-based preserved option
+      /*form.add(addFootnote("Titles in the 'ingested' output are " +
     	"included based on a metric which assigns each configured volume " +
     	"a health value. This health value is currently experimental and the " +
     	"output of this option should not yet be considered authoritative."
+      ));*/
+      form.add(addFootnote("Titles in the 'collected' output are " +
+          "included based on whether each configured volume appears " +
+          "to have 'substance', that is whether enough material has been " +
+          "ingested."
       ));
     } else {
       form.add("View or export a list of titles " +
@@ -633,7 +687,7 @@ public class ListHoldings extends LockssServlet {
     for (ContentScope scope : ContentScope.values()) {
       //long s = System.currentTimeMillis();
       boolean scopeEnabled = true;
-      if (scope==ContentScope.PRESERVED) {
+      if (scope==ContentScope.COLLECTED) {
         if (!isEnablePreserved()) continue;
         scopeEnabled = AuHealthMetric.isSupported();
       }
@@ -685,7 +739,7 @@ public class ListHoldings extends LockssServlet {
   private void layoutFormCustomOpts(Composite comp) {
     
     // Get the opts from the session
-    CustomOptions opts = getSessionCustomOpts();
+    KbartCustomOptions opts = getSessionCustomOpts();
     
     // Add a format parameter
     comp.add(new Input(Input.Hidden, KEY_FORMAT, OutputFormat.HTML.name()));
@@ -721,22 +775,22 @@ public class ListHoldings extends LockssServlet {
     int taLines = Field.values().length+1;
     tab.add("Field ordering<br/>");
     tab.add(new TextArea(KEY_CUSTOM_ORDERING_LIST, 
-	getOrderingAsCustomFieldList(opts.fieldOrdering)).setSize(taCols, taLines));
+        getOrderingAsCustomFieldList(opts.getFieldOrdering())).setSize(taCols, taLines));
     // Omit empty columns option
     tab.add("<br/>");
     tab.add(ServletUtil.checkbox(this, KEY_OMIT_EMPTY_COLS, 
-	Boolean.TRUE.toString(), "Omit empty columns<br/>", 
-	opts.omitEmptyColumns));
+        Boolean.TRUE.toString(), "Omit empty columns<br/>",
+        opts.isOmitEmptyColumns()));
     // Show health option if available
-    if (isEnablePreserved()) {
-      tab.add(ServletUtil.checkbox(this, KEY_SHOW_HEALTH, 
-  	Boolean.TRUE.toString(), "Show health ratings", 
-  	opts.showHealthRatings, AuHealthMetric.isSupported()));
+    if (isEnablePreserved() && getShowHealthRatings()) {
+      tab.add(ServletUtil.checkbox(this, KEY_SHOW_HEALTH,
+          Boolean.TRUE.toString(), "Show health ratings",
+          opts.isShowHealthRatings(), AuHealthMetric.isSupported()));
       if (!AuHealthMetric.isSupported()) {
         tab.add(notAvailFootnote);
       } else {
         tab.add(addFootnote("Health ratings will only be shown for titles which " +
-  	  "you have configured on your box. The '"+ContentScope.ALL+"' export " +
+            "you have configured on your box. The '"+ContentScope.ALL+"' export " +
             "will not show health ratings."));
       }
     }
@@ -776,16 +830,16 @@ public class ListHoldings extends LockssServlet {
    */
   private Form makeHtmlCustomForm() {
     // Get the opts from the session
-    CustomOptions opts = getSessionCustomOpts();
+    KbartCustomOptions opts = getSessionCustomOpts();
     String servletUrl = srvURL(myServletDescr());
     Form form = ServletUtil.newForm(servletUrl);
     form.add(new Input(Input.Hidden, KEY_TITLE_SCOPE, selectedScope.name()));
     form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST,
-        getOrderingAsCustomFieldList(opts.fieldOrdering)));
+        getOrderingAsCustomFieldList(opts.getFieldOrdering())));
     form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS,
-        htmlInputTruthValue(opts.omitEmptyColumns)));
+        htmlInputTruthValue(opts.isOmitEmptyColumns())));
     form.add(new Input(Input.Hidden, KEY_SHOW_HEALTH,
-        htmlInputTruthValue(opts.showHealthRatings)));
+        htmlInputTruthValue(opts.isShowHealthRatings())));
     form.add(new Input(Input.Hidden, KEY_FORMAT, outputFormat.name()));
     ServletUtil.layoutSubmitButton(this, form, ACTION_TAG, ACTION_CUSTOM_EXPORT);
     form.add(new Link(servletUrl, "Return to main title list page"));
@@ -868,8 +922,8 @@ public class ListHoldings extends LockssServlet {
 
   
   protected boolean getShowHealthRatings() {
-    CustomOptions opts = getSessionCustomOpts();
-    return opts == null ? SHOW_HEALTH_RATINGS_BY_DEFAULT : opts.showHealthRatings; 
+    KbartCustomOptions opts = getSessionCustomOpts();
+    return opts == null ? SHOW_HEALTH_RATINGS_BY_DEFAULT : opts.isShowHealthRatings();
   }
   
   /**
@@ -878,7 +932,7 @@ public class ListHoldings extends LockssServlet {
    * convenience method which does not return null.
    * @return a CustomOptions object from the session
    */
-  protected CustomOptions getSessionCustomOpts() {
+  protected KbartCustomOptions getSessionCustomOpts() {
     return getSessionCustomOpts(true); 
   }
 
@@ -891,21 +945,21 @@ public class ListHoldings extends LockssServlet {
    * @param createIfAbsent whether to create a new CustomOptions in the session
    * @return a CustomOptions object from the session, or null
    */
-  protected CustomOptions getSessionCustomOpts(boolean createIfAbsent) {
+  protected KbartCustomOptions getSessionCustomOpts(boolean createIfAbsent) {
     Object o = getSession().getAttribute(SESSION_KEY_CUSTOM_OPTS);
     if (o==null && createIfAbsent) {
-     CustomOptions opts = CustomOptions.getDefaultOptions();
+      KbartCustomOptions opts = KbartCustomOptions.getDefaultOptions();
      putSessionCustomOpts(opts);
      return opts;
     }
-    return o==null ? null : (CustomOptions)o; 
+    return o==null ? null : (KbartCustomOptions)o;
   }
   
   /**
    * Puts the supplied custom HTML options into the session.
    * @param opts a CustomOptions object
    */
-  protected void putSessionCustomOpts(CustomOptions opts) {
+  protected void putSessionCustomOpts(KbartCustomOptions opts) {
     getSession().setAttribute(SESSION_KEY_CUSTOM_OPTS, opts);
   }
 
@@ -913,7 +967,7 @@ public class ListHoldings extends LockssServlet {
    * Put a default set of options in the session.
    */
   protected void resetSessionOptions() {
-    putSessionCustomOpts(CustomOptions.getDefaultOptions()); 
+    putSessionCustomOpts(KbartCustomOptions.getDefaultOptions());
   }
   
   /**
@@ -938,26 +992,5 @@ public class ListHoldings extends LockssServlet {
   /*protected void putSessionOutputFormat(OutputFormat format) {
     getSession().setAttribute(SESSION_KEY_OUTPUT_FORMAT, format);
   }*/
-  
-  /**
-   * A simple class for encapsulating customisation options.
-   * @author Neil Mayo
-   */
-  private static class CustomOptions {
-    boolean omitEmptyColumns;
-    boolean showHealthRatings;
-    FieldOrdering fieldOrdering;
-    
-    public CustomOptions(boolean omit, boolean health, FieldOrdering ord) {
-      this.omitEmptyColumns = omit;
-      this.showHealthRatings = health;
-      this.fieldOrdering = ord;
-    }
-    
-    public static CustomOptions getDefaultOptions() {
-      return new CustomOptions(OMIT_EMPTY_COLUMNS_BY_DEFAULT, 
-	  SHOW_HEALTH_RATINGS_BY_DEFAULT, FIELD_ORDERING_DEFAULT);      
-    }
-  }
-  
+
 }

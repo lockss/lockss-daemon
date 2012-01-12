@@ -58,13 +58,13 @@ public class TestTdbUtil extends LockssTestCase {
     defaultTitles = TdbUtil.getTdbTitles(null);
     allTitles = TdbUtil.getTdbTitles(ContentScope.ALL);
     configuredTitles = TdbUtil.getTdbTitles(ContentScope.CONFIGURED);
-    preservedTitles = TdbUtil.getTdbTitles(ContentScope.PRESERVED);
+    preservedTitles = TdbUtil.getTdbTitles(ContentScope.COLLECTED);
     
     numNull = TdbUtil.getNumberTdbTitles(null);
     numDefault = TdbUtil.getNumberTdbTitles(ContentScope.DEFAULT_SCOPE);
     numAll = TdbUtil.getNumberTdbTitles(ContentScope.ALL);
     numConfigured = TdbUtil.getNumberTdbTitles(ContentScope.CONFIGURED);
-    numPreserved = TdbUtil.getNumberTdbTitles(ContentScope.PRESERVED);
+    numPreserved = TdbUtil.getNumberTdbTitles(ContentScope.COLLECTED);
   }
 
   protected void tearDown() throws Exception {
