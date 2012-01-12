@@ -15517,7 +15517,7 @@
     param[base_url] = http://raps.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
 
-    au < HighWirePressH20Plugin ; exists ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 ; >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 >
      
   }
 
