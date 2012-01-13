@@ -138,12 +138,12 @@
       param[base_url] = http://ebm.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1999 ; Experimental Biology and Medicine Volume 220 ; 220 >
-      au < manifest ; 1999 ; Experimental Biology and Medicine Volume 221 ; 221 >
-      au < manifest ; 1999 ; Experimental Biology and Medicine Volume 222 ; 222 >
-      au < manifest ; 2000 ; Experimental Biology and Medicine Volume 223 ; 223 >
-      au < manifest ; 2000 ; Experimental Biology and Medicine Volume 224 ; 224 >
-      au < manifest ; 2000 ; Experimental Biology and Medicine Volume 225 ; 225 >
+      au < ready ; 1999 ; Experimental Biology and Medicine Volume 220 ; 220 >
+      au < ready ; 1999 ; Experimental Biology and Medicine Volume 221 ; 221 >
+      au < ready ; 1999 ; Experimental Biology and Medicine Volume 222 ; 222 >
+      au < ready ; 2000 ; Experimental Biology and Medicine Volume 223 ; 223 >
+      au < ready ; 2000 ; Experimental Biology and Medicine Volume 224 ; 224 >
+      au < ready ; 2000 ; Experimental Biology and Medicine Volume 225 ; 225 >
       au < ready ; 2001 ; Experimental Biology and Medicine Volume 226 ; 226 >
       au < ready ; 2002 ; Experimental Biology and Medicine Volume 227 ; 227 >
       au < ready ; 2003 ; Experimental Biology and Medicine Volume 228 ; 228 >
