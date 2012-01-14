@@ -288,56 +288,56 @@
       param[base_url] = http://mic.sgmjournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; manifest ; 1947 ; Microbiology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1948 ; Microbiology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1949 ; Microbiology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1950 ; Microbiology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1951 ; Microbiology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1952 ; Microbiology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1952 ; Microbiology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1953 ; Microbiology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 1953 ; Microbiology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 1954 ; Microbiology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 1954 ; Microbiology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 1955 ; Microbiology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 1955 ; Microbiology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 1956 ; Microbiology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 1956 ; Microbiology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; manifest ; 1957 ; Microbiology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 1957 ; Microbiology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 1958 ; Microbiology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; manifest ; 1958 ; Microbiology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; manifest ; 1959 ; Microbiology Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; manifest ; 1959 ; Microbiology Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; manifest ; 1960 ; Microbiology Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; manifest ; 1960 ; Microbiology Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; manifest ; 1961 ; Microbiology Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; manifest ; 1961 ; Microbiology Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; manifest ; 1961 ; Microbiology Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; manifest ; 1962 ; Microbiology Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; manifest ; 1962 ; Microbiology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; manifest ; 1962 ; Microbiology Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; manifest ; 1963 ; Microbiology Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; manifest ; 1963 ; Microbiology Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; manifest ; 1963 ; Microbiology Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; manifest ; 1963 ; Microbiology Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; manifest ; 1964 ; Microbiology Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; manifest ; 1964 ; Microbiology Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; manifest ; 1964 ; Microbiology Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; manifest ; 1964 ; Microbiology Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; manifest ; 1965 ; Microbiology Volume 38 ; 38 >
-      au < HighWirePressH20Plugin ; manifest ; 1965 ; Microbiology Volume 39 ; 39 >
-      au < HighWirePressH20Plugin ; manifest ; 1965 ; Microbiology Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; manifest ; 1965 ; Microbiology Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; manifest ; 1966 ; Microbiology Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; manifest ; 1966 ; Microbiology Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; manifest ; 1966 ; Microbiology Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; manifest ; 1966 ; Microbiology Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; manifest ; 1967 ; Microbiology Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; manifest ; 1967 ; Microbiology Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; manifest ; 1967 ; Microbiology Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; manifest ; 1967 ; Microbiology Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; manifest ; 1968 ; Microbiology Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; testing ; 1947 ; Microbiology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 1948 ; Microbiology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 1949 ; Microbiology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 1950 ; Microbiology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1951 ; Microbiology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 1952 ; Microbiology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 1952 ; Microbiology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 1953 ; Microbiology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 1953 ; Microbiology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 1954 ; Microbiology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 1954 ; Microbiology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; testing ; 1955 ; Microbiology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; testing ; 1955 ; Microbiology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; testing ; 1956 ; Microbiology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; testing ; 1956 ; Microbiology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; testing ; 1957 ; Microbiology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; testing ; 1957 ; Microbiology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; testing ; 1958 ; Microbiology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; testing ; 1958 ; Microbiology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; testing ; 1959 ; Microbiology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; testing ; 1959 ; Microbiology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; testing ; 1960 ; Microbiology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; testing ; 1960 ; Microbiology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; testing ; 1961 ; Microbiology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; testing ; 1961 ; Microbiology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; testing ; 1961 ; Microbiology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; testing ; 1962 ; Microbiology Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; testing ; 1962 ; Microbiology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; testing ; 1962 ; Microbiology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; testing ; 1963 ; Microbiology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; testing ; 1963 ; Microbiology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; testing ; 1963 ; Microbiology Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; testing ; 1963 ; Microbiology Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; testing ; 1964 ; Microbiology Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; testing ; 1964 ; Microbiology Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; testing ; 1964 ; Microbiology Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; testing ; 1964 ; Microbiology Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; testing ; 1965 ; Microbiology Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; testing ; 1965 ; Microbiology Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; testing ; 1965 ; Microbiology Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; testing ; 1965 ; Microbiology Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; testing ; 1966 ; Microbiology Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; testing ; 1966 ; Microbiology Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; testing ; 1966 ; Microbiology Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; testing ; 1966 ; Microbiology Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; testing ; 1967 ; Microbiology Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; testing ; 1967 ; Microbiology Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; testing ; 1967 ; Microbiology Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; testing ; 1967 ; Microbiology Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; testing ; 1968 ; Microbiology Volume 50 ; 50 >
       au < HighWirePressH20Plugin ; manifest ; 1968 ; Microbiology Volume 51 ; 51 >
       au < HighWirePressH20Plugin ; manifest ; 1968 ; Microbiology Volume 52 ; 52 >
       au < HighWirePressH20Plugin ; manifest ; 1968 ; Microbiology Volume 53 ; 53 >
@@ -388,50 +388,50 @@
       au < HighWirePressH20Plugin ; manifest ; 1977 ; Microbiology Volume 98 ; 98 >
       au < HighWirePressH20Plugin ; manifest ; 1977 ; Microbiology Volume 99 ; 99 >
       au < HighWirePressH20Plugin ; manifest ; 1977 ; Microbiology Volume 100 ; 100 >
-      au < HighWirePressH20Plugin ; manifest ; 1977 ; Microbiology Volume 101 ; 101 >
-      au < HighWirePressH20Plugin ; manifest ; 1977 ; Microbiology Volume 102 ; 102 >
-      au < HighWirePressH20Plugin ; manifest ; 1977 ; Microbiology Volume 103 ; 103 >
-      au < HighWirePressH20Plugin ; manifest ; 1978 ; Microbiology Volume 104 ; 104 >
-      au < HighWirePressH20Plugin ; manifest ; 1978 ; Microbiology Volume 105 ; 105 >
-      au < HighWirePressH20Plugin ; manifest ; 1978 ; Microbiology Volume 106 ; 106 >
-      au < HighWirePressH20Plugin ; manifest ; 1978 ; Microbiology Volume 107 ; 107 >
-      au < HighWirePressH20Plugin ; manifest ; 1978 ; Microbiology Volume 108 ; 108 >
-      au < HighWirePressH20Plugin ; manifest ; 1978 ; Microbiology Volume 109 ; 109 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Microbiology Volume 110 ; 110 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Microbiology Volume 111 ; 111 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Microbiology Volume 112 ; 112 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Microbiology Volume 113 ; 113 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Microbiology Volume 114 ; 114 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Microbiology Volume 115 ; 115 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Microbiology Volume 116 ; 116 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Microbiology Volume 117 ; 117 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Microbiology Volume 118 ; 118 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Microbiology Volume 119 ; 119 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Microbiology Volume 120 ; 120 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Microbiology Volume 121 ; 121 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Microbiology Volume 122 ; 122 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Microbiology Volume 123 ; 123 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Microbiology Volume 124 ; 124 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Microbiology Volume 125 ; 125 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Microbiology Volume 126 ; 126 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Microbiology Volume 127 ; 127 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Microbiology Volume 128 ; 128 >
-      au < HighWirePressH20Plugin ; manifest ; 1983 ; Microbiology Volume 129 ; 129 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Microbiology Volume 130 ; 130 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Microbiology Volume 131 ; 131 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Microbiology Volume 132 ; 132 >
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; Microbiology Volume 133 ; 133 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Microbiology Volume 134 ; 134 >
-      au < HighWirePressH20Plugin ; manifest ; 1989 ; Microbiology Volume 135 ; 135 >
-      au < HighWirePressH20Plugin ; manifest ; 1990 ; Microbiology Volume 136 ; 136 >
-      au < HighWirePressH20Plugin ; manifest ; 1991 ; Microbiology Volume 137 ; 137 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Microbiology Volume 138 ; 138 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Microbiology Volume 139 ; 139 >
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Microbiology Volume 140 ; 140 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Microbiology Volume 141 ; 141 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Microbiology Volume 142 ; 142 >
-      au < HighWirePressH20Plugin ; manifest ; 1997 ; Microbiology Volume 143 ; 143 >
-      au < HighWirePressH20Plugin ; manifest ; 1998 ; Microbiology Volume 144 ; 144 >
+      au < HighWirePressH20Plugin ; testing; 1977 ; Microbiology Volume 101 ; 101 >
+      au < HighWirePressH20Plugin ; testing; 1977 ; Microbiology Volume 102 ; 102 >
+      au < HighWirePressH20Plugin ; testing; 1977 ; Microbiology Volume 103 ; 103 >
+      au < HighWirePressH20Plugin ; testing; 1978 ; Microbiology Volume 104 ; 104 >
+      au < HighWirePressH20Plugin ; testing; 1978 ; Microbiology Volume 105 ; 105 >
+      au < HighWirePressH20Plugin ; testing; 1978 ; Microbiology Volume 106 ; 106 >
+      au < HighWirePressH20Plugin ; testing; 1978 ; Microbiology Volume 107 ; 107 >
+      au < HighWirePressH20Plugin ; testing; 1978 ; Microbiology Volume 108 ; 108 >
+      au < HighWirePressH20Plugin ; testing; 1978 ; Microbiology Volume 109 ; 109 >
+      au < HighWirePressH20Plugin ; testing; 1979 ; Microbiology Volume 110 ; 110 >
+      au < HighWirePressH20Plugin ; testing; 1979 ; Microbiology Volume 111 ; 111 >
+      au < HighWirePressH20Plugin ; testing; 1979 ; Microbiology Volume 112 ; 112 >
+      au < HighWirePressH20Plugin ; testing; 1979 ; Microbiology Volume 113 ; 113 >
+      au < HighWirePressH20Plugin ; testing; 1979 ; Microbiology Volume 114 ; 114 >
+      au < HighWirePressH20Plugin ; testing; 1979 ; Microbiology Volume 115 ; 115 >
+      au < HighWirePressH20Plugin ; testing; 1980 ; Microbiology Volume 116 ; 116 >
+      au < HighWirePressH20Plugin ; testing; 1980 ; Microbiology Volume 117 ; 117 >
+      au < HighWirePressH20Plugin ; testing; 1980 ; Microbiology Volume 118 ; 118 >
+      au < HighWirePressH20Plugin ; testing; 1980 ; Microbiology Volume 119 ; 119 >
+      au < HighWirePressH20Plugin ; testing; 1980 ; Microbiology Volume 120 ; 120 >
+      au < HighWirePressH20Plugin ; testing; 1980 ; Microbiology Volume 121 ; 121 >
+      au < HighWirePressH20Plugin ; testing; 1981 ; Microbiology Volume 122 ; 122 >
+      au < HighWirePressH20Plugin ; testing; 1981 ; Microbiology Volume 123 ; 123 >
+      au < HighWirePressH20Plugin ; testing; 1981 ; Microbiology Volume 124 ; 124 >
+      au < HighWirePressH20Plugin ; testing; 1981 ; Microbiology Volume 125 ; 125 >
+      au < HighWirePressH20Plugin ; testing; 1981 ; Microbiology Volume 126 ; 126 >
+      au < HighWirePressH20Plugin ; testing; 1981 ; Microbiology Volume 127 ; 127 >
+      au < HighWirePressH20Plugin ; testing; 1982 ; Microbiology Volume 128 ; 128 >
+      au < HighWirePressH20Plugin ; testing; 1983 ; Microbiology Volume 129 ; 129 >
+      au < HighWirePressH20Plugin ; testing; 1984 ; Microbiology Volume 130 ; 130 >
+      au < HighWirePressH20Plugin ; testing; 1985 ; Microbiology Volume 131 ; 131 >
+      au < HighWirePressH20Plugin ; testing; 1986 ; Microbiology Volume 132 ; 132 >
+      au < HighWirePressH20Plugin ; testing; 1987 ; Microbiology Volume 133 ; 133 >
+      au < HighWirePressH20Plugin ; testing; 1988 ; Microbiology Volume 134 ; 134 >
+      au < HighWirePressH20Plugin ; testing; 1989 ; Microbiology Volume 135 ; 135 >
+      au < HighWirePressH20Plugin ; testing; 1990 ; Microbiology Volume 136 ; 136 >
+      au < HighWirePressH20Plugin ; testing; 1991 ; Microbiology Volume 137 ; 137 >
+      au < HighWirePressH20Plugin ; testing; 1992 ; Microbiology Volume 138 ; 138 >
+      au < HighWirePressH20Plugin ; testing; 1993 ; Microbiology Volume 139 ; 139 >
+      au < HighWirePressH20Plugin ; testing; 1994 ; Microbiology Volume 140 ; 140 >
+      au < HighWirePressH20Plugin ; testing; 1995 ; Microbiology Volume 141 ; 141 >
+      au < HighWirePressH20Plugin ; testing; 1996 ; Microbiology Volume 142 ; 142 >
+      au < HighWirePressH20Plugin ; testing; 1997 ; Microbiology Volume 143 ; 143 >
+      au < HighWirePressH20Plugin ; testing; 1998 ; Microbiology Volume 144 ; 144 >
       au < HighWirePressH20Plugin ; manifest ; 1999 ; Microbiology Volume 145 ; 145 >
       au < HighWirePressH20Plugin ; manifest ; 2000 ; Microbiology Volume 146 ; 146 >
       au < HighWirePressH20Plugin ; manifest ; 2001 ; Microbiology Volume 147 ; 147 >
