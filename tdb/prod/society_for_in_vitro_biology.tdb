@@ -71,11 +71,11 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = invp
 
-      au < testing ; 2003 ; In Vitro Cellular & Developmental Biology - Plant Volume 39 ; 39 >
+      au < ready ; 2003 ; In Vitro Cellular & Developmental Biology - Plant Volume 39 ; 39 >
       au < doNotProcess ; 2004 ; In Vitro Cellular & Developmental Biology - Plant Volume 40 ; 40 >
       au < testing ; 2005 ; In Vitro Cellular & Developmental Biology - Plant Volume 41 ; 41 >
-      au < testing ; 2006 ; In Vitro Cellular & Developmental Biology - Plant Volume 42 ; 42 >
-      au < testing ; 2007 ; In Vitro Cellular & Developmental Biology - Plant Volume 43 ; 43 >
+      au < ready ; 2006 ; In Vitro Cellular & Developmental Biology - Plant Volume 42 ; 42 >
+      au < ready ; 2007 ; In Vitro Cellular & Developmental Biology - Plant Volume 43 ; 43 >
       au < ready ; 2008 ; In Vitro Cellular & Developmental Biology - Plant Volume 44 ; 44 >
 
     }
