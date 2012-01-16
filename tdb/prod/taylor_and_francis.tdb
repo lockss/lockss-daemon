@@ -22,7 +22,7 @@
     au < manifest ; 2008 ; The Academy of Management Annals Volume 2 ; 2 > 
     au < manifest ; 2009 ; The Academy of Management Annals Volume 3 ; 3 > 
     au < manifest ; 2010 ; The Academy of Management Annals Volume 4 ; 4 > 
-    au < manifest ; 2011 ; The Academy of Management Annals Volume 5 ; 5 > 
+    au < ready ; 2011 ; The Academy of Management Annals Volume 5 ; 5 > 
 
 
   }
@@ -143,7 +143,7 @@
     au < manifest ; 2008 ; Accounting Education: An International Journal Volume 17 ; 17 > 
     au < manifest ; 2009 ; Accounting Education: An International Journal Volume 18 ; 18 > 
     au < manifest ; 2010 ; Accounting Education: An International Journal Volume 19 ; 19 > 
-    au < manifest ; 2011 ; Accounting Education: An International Journal Volume 20 ; 20 > 
+    au < ready ; 2011 ; Accounting Education: An International Journal Volume 20 ; 20 > 
 
   }
 
@@ -181,7 +181,7 @@
     au < manifest ; 2008 ; Accounting in Europe Volume 5 ; 5 > 
     au < manifest ; 2009 ; Accounting in Europe Volume 6 ; 6 > 
     au < manifest ; 2010 ; Accounting in Europe Volume 7 ; 7 > 
-    au < manifest ; 2011 ; Accounting in Europe Volume 8 ; 8 > 
+    au < ready ; 2011 ; Accounting in Europe Volume 8 ; 8 > 
 
   }
 
@@ -305,7 +305,7 @@
     au < manifest ; 2008 ; Acta Agriculturae Scandinavica, Section A - Animal Science Volume 58 ; 58 > 
     au < manifest ; 2009 ; Acta Agriculturae Scandinavica, Section A - Animal Science Volume 59 ; 59 > 
     au < manifest ; 2010 ; Acta Agriculturae Scandinavica, Section A - Animal Science Volume 60 ; 60 > 
-    au < manifest ; 2011 ; Acta Agriculturae Scandinavica, Section A - Animal Science Volume 61 ; 61 > 
+    au < ready ; 2011 ; Acta Agriculturae Scandinavica, Section A - Animal Science Volume 61 ; 61 > 
 
   }
 
@@ -340,7 +340,7 @@
     au < manifest ; 2008 ; Acta Agriculturae Scandinavica, Section B - Soil & Plant Science Volume 58 ; 58 > 
     au < manifest ; 2009 ; Acta Agriculturae Scandinavica, Section B - Soil & Plant Science Volume 59 ; 59 > 
     au < manifest ; 2010 ; Acta Agriculturae Scandinavica, Section B - Soil & Plant Science Volume 60 ; 60 > 
-    au < manifest ; 2011 ; Acta Agriculturae Scandinavica, Section B - Soil & Plant Science Volume 61 ; 61 > 
+    au < ready ; 2011 ; Acta Agriculturae Scandinavica, Section B - Soil & Plant Science Volume 61 ; 61 > 
 
   }
 
@@ -382,7 +382,7 @@
     au < manifest ; 2008 ; Acta Borealia: A Nordic Journal of Circumpolar Societies Volume 25 ; 25 > 
     au < manifest ; 2009 ; Acta Borealia: A Nordic Journal of Circumpolar Societies Volume 26 ; 26 > 
     au < manifest ; 2010 ; Acta Borealia: A Nordic Journal of Circumpolar Societies Volume 27 ; 27 > 
-    au < manifest ; 2011 ; Acta Borealia: A Nordic Journal of Circumpolar Societies Volume 28 ; 28 > 
+    au < ready ; 2011 ; Acta Borealia: A Nordic Journal of Circumpolar Societies Volume 28 ; 28 > 
 
   }
 
@@ -414,8 +414,8 @@
 
     param[journal_id] = uate20 
 
-    au < manifest ; 2011 ; Action in Teacher Education Volume 32 ; 32 > 
-    au < manifest ; 2011 ; Action in Teacher Education Volume 33 ; 33 > 
+    au < ready ; 2011 ; Action in Teacher Education Volume 32 ; 32 > 
+    au < ready ; 2011 ; Action in Teacher Education Volume 33 ; 33 > 
 
   }
 
@@ -437,7 +437,7 @@
     au < manifest ; 2008 ; Action Learning: Research and Practice Volume 5 ; 5 > 
     au < manifest ; 2009 ; Action Learning: Research and Practice Volume 6 ; 6 > 
     au < manifest ; 2010 ; Action Learning: Research and Practice Volume 7 ; 7 > 
-    au < manifest ; 2011 ; Action Learning: Research and Practice Volume 8 ; 8 > 
+    au < ready ; 2011 ; Action Learning: Research and Practice Volume 8 ; 8 > 
 
   }
 
@@ -486,7 +486,7 @@
     au < manifest ; 2008 ; Activities, Adaptation & Aging Volume 32 ; 32 > 
     au < manifest ; 2009 ; Activities, Adaptation & Aging Volume 33 ; 33 > 
     au < manifest ; 2010 ; Activities, Adaptation & Aging Volume 34 ; 34 > 
-    au < manifest ; 2011 ; Activities, Adaptation & Aging Volume 35 ; 35 > 
+    au < ready ; 2011 ; Activities, Adaptation & Aging Volume 35 ; 35 > 
 
   }
 
@@ -643,7 +643,7 @@
     au < manifest ; 2008 ; Adoption Quarterly Volume 11 ; 11 > 
     au < manifest ; 2009 ; Adoption Quarterly Volume 12 ; 12 > 
     au < manifest ; 2010 ; Adoption Quarterly Volume 13 ; 13 > 
-    au < manifest ; 2011 ; Adoption Quarterly Volume 14 ; 14 > 
+    au < ready ; 2011 ; Adoption Quarterly Volume 14 ; 14 > 
 
   }
 
@@ -717,7 +717,7 @@
     au < manifest ; 2008 ; Advances in Building Energy Research Volume 2 ; 2 > 
     au < manifest ; 2009 ; Advances in Building Energy Research Volume 3 ; 3 > 
     au < manifest ; 2010 ; Advances in Building Energy Research Volume 4 ; 4 > 
-    au < manifest ; 2011 ; Advances in Building Energy Research Volume 5 ; 5 > 
+    au < ready ; 2011 ; Advances in Building Energy Research Volume 5 ; 5 > 
 
   }
 
@@ -748,7 +748,7 @@
     param[journal_id] = taol20 
 
     au < manifest ; 2010 ; Advances in Oceanography and Limnology Volume 1 ; 1 > 
-    au < manifest ; 2011 ; Advances in Oceanography and Limnology Volume 2 ; 2 > 
+    au < ready ; 2011 ; Advances in Oceanography and Limnology Volume 2 ; 2 > 
 
   }
 
@@ -837,7 +837,7 @@
 
     param[journal_id] = uahr20 
 
-    au < manifest ; 2011 ; Advances in the History of Rhetoric Volume 14 ; 14 > 
+    au < ready ; 2011 ; Advances in the History of Rhetoric Volume 14 ; 14 > 
 
   }
 
@@ -1029,7 +1029,7 @@
     au < manifest ; 2008 ; African Journal of Aquatic Science Volume 33 ; 33 > 
     au < manifest ; 2009 ; African Journal of Aquatic Science Volume 34 ; 34 > 
     au < manifest ; 2010 ; African Journal of Aquatic Science Volume 35 ; 35 > 
-    au < manifest ; 2011 ; African Journal of Aquatic Science Volume 36 ; 36 > 
+    au < ready ; 2011 ; African Journal of Aquatic Science Volume 36 ; 36 > 
 
   }
 
@@ -1060,7 +1060,7 @@
     au < manifest ; 2008 ; African Journal of Herpetology Volume 57 ; 57 > 
     au < manifest ; 2009 ; African Journal of Herpetology Volume 58 ; 58 > 
     au < manifest ; 2010 ; African Journal of Herpetology Volume 59 ; 59 > 
-    au < manifest ; 2011 ; African Journal of Herpetology Volume 60 ; 60 > 
+    au < ready ; 2011 ; African Journal of Herpetology Volume 60 ; 60 > 
 
   }
 
@@ -1118,7 +1118,7 @@
     au < manifest ; 2008 ; African Journal of Range & Forage Science Volume 25 ; 25 > 
     au < manifest ; 2009 ; African Journal of Range & Forage Science Volume 26 ; 26 > 
     au < manifest ; 2010 ; African Journal of Range & Forage Science Volume 27 ; 27 > 
-    au < manifest ; 2011 ; African Journal of Range & Forage Science Volume 28 ; 28 > 
+    au < ready ; 2011 ; African Journal of Range & Forage Science Volume 28 ; 28 > 
 
   }
 
@@ -1315,7 +1315,7 @@
     au < manifest ; 2008 ; Agenda: Empowering women for gender equity Volume 22 ; 22 > 
     au < manifest ; 2009 ; Agenda: Empowering women for gender equity Volume 23 ; 23 > 
     au < manifest ; 2010 ; Agenda: Empowering women for gender equity Volume 24 ; 24 > 
-    au < manifest ; 2011 ; Agenda: Empowering women for gender equity Volume 25 ; 25 > 
+    au < ready ; 2011 ; Agenda: Empowering women for gender equity Volume 25 ; 25 > 
 
   }
 
@@ -1344,7 +1344,7 @@
     au < manifest ; 2008 ; Aging & Mental Health Volume 12 ; 12 > 
     au < manifest ; 2009 ; Aging & Mental Health Volume 13 ; 13 > 
     au < manifest ; 2010 ; Aging & Mental Health Volume 14 ; 14 > 
-    au < manifest ; 2011 ; Aging & Mental Health Volume 15 ; 15 > 
+    au < ready ; 2011 ; Aging & Mental Health Volume 15 ; 15 > 
 
   }
 
@@ -1478,7 +1478,7 @@
     au < manifest ; 2008 ; AIDS Care: Psychological and Socio-medical Aspects of AIDS/HIV Volume 20 ; 20 > 
     au < manifest ; 2009 ; AIDS Care: Psychological and Socio-medical Aspects of AIDS/HIV Volume 21 ; 21 > 
     au < manifest ; 2010 ; AIDS Care: Psychological and Socio-medical Aspects of AIDS/HIV Volume 22 ; 22 > 
-    au < manifest ; 2011 ; AIDS Care: Psychological and Socio-medical Aspects of AIDS/HIV Volume 23 ; 23 > 
+    au < ready ; 2011 ; AIDS Care: Psychological and Socio-medical Aspects of AIDS/HIV Volume 23 ; 23 > 
 
   }
 
@@ -1556,7 +1556,7 @@
     param[journal_id] = uabn20 
 
     au < manifest ; 2010 ; AJOB Neuroscience Volume 1 ; 1 > 
-    au < manifest ; 2011 ; AJOB Neuroscience Volume 2 ; 2 > 
+    au < ready ; 2011 ; AJOB Neuroscience Volume 2 ; 2 > 
 
   }
 
@@ -1572,7 +1572,7 @@
     param[journal_id] = uabr20 
 
     au < manifest ; 2010 ; AJOB Primary Research Volume 1 ; 1 > 
-    au < manifest ; 2011 ; AJOB Primary Research Volume 2 ; 2 > 
+    au < ready ; 2011 ; AJOB Primary Research Volume 2 ; 2 > 
 
   }
 
@@ -1609,7 +1609,7 @@
     au < manifest ; 2008 ; Al-Masāq: Islam and the Medieval Mediterranean Volume 20 ; 20 > 
     au < manifest ; 2009 ; Al-Masāq: Islam and the Medieval Mediterranean Volume 21 ; 21 > 
     au < manifest ; 2010 ; Al-Masāq: Islam and the Medieval Mediterranean Volume 22 ; 22 > 
-    au < manifest ; 2011 ; Al-Masāq: Islam and the Medieval Mediterranean Volume 23 ; 23 > 
+    au < ready ; 2011 ; Al-Masāq: Islam and the Medieval Mediterranean Volume 23 ; 23 > 
 
   }
 
@@ -1658,7 +1658,7 @@
     au < manifest ; 2008 ; Alcheringa: An Australasian Journal of Palaeontology Volume 32 ; 32 > 
     au < manifest ; 2009 ; Alcheringa: An Australasian Journal of Palaeontology Volume 33 ; 33 > 
     au < manifest ; 2010 ; Alcheringa: An Australasian Journal of Palaeontology Volume 34 ; 34 > 
-    au < manifest ; 2011 ; Alcheringa: An Australasian Journal of Palaeontology Volume 35 ; 35 > 
+    au < ready ; 2011 ; Alcheringa: An Australasian Journal of Palaeontology Volume 35 ; 35 > 
 
   }
 
@@ -1759,7 +1759,7 @@
     au < manifest ; 2008 ; American Communist History Volume 7 ; 7 > 
     au < manifest ; 2009 ; American Communist History Volume 8 ; 8 > 
     au < manifest ; 2010 ; American Communist History Volume 9 ; 9 > 
-    au < manifest ; 2011 ; American Communist History Volume 10 ; 10 > 
+    au < ready ; 2011 ; American Communist History Volume 10 ; 10 > 
 
   }
 
@@ -1792,7 +1792,7 @@
     au < manifest ; 2008 ; American Foreign Policy Interests: The Journal of the National Committee on American Foreign Policy Volume 30 ; 30 > 
     au < manifest ; 2009 ; American Foreign Policy Interests: The Journal of the National Committee on American Foreign Policy Volume 31 ; 31 > 
     au < manifest ; 2010 ; American Foreign Policy Interests: The Journal of the National Committee on American Foreign Policy Volume 32 ; 32 > 
-    au < manifest ; 2011 ; American Foreign Policy Interests: The Journal of the National Committee on American Foreign Policy Volume 33 ; 33 > 
+    au < ready ; 2011 ; American Foreign Policy Interests: The Journal of the National Committee on American Foreign Policy Volume 33 ; 33 > 
 
   }
 
@@ -1932,7 +1932,7 @@
     au < manifest ; 2008 ; The American Journal of Bioethics Volume 8 ; 8 > 
     au < manifest ; 2009 ; The American Journal of Bioethics Volume 9 ; 9 > 
     au < manifest ; 2010 ; The American Journal of Bioethics Volume 10 ; 10 > 
-    au < manifest ; 2011 ; The American Journal of Bioethics Volume 11 ; 11 > 
+    au < ready ; 2011 ; The American Journal of Bioethics Volume 11 ; 11 > 
 
   }
 
@@ -1947,7 +1947,7 @@
 
     param[journal_id] = ujhy20 
 
-    au < manifest ; 2011 ; American Journal of Clinical Hypnosis Volume 54 ; 54 > 
+    au < ready ; 2011 ; American Journal of Clinical Hypnosis Volume 54 ; 54 > 
 
   }
 
@@ -1986,7 +1986,7 @@
     au < manifest ; 2008 ; American Journal of Distance Education Volume 22 ; 22 > 
     au < manifest ; 2009 ; American Journal of Distance Education Volume 23 ; 23 > 
     au < manifest ; 2010 ; American Journal of Distance Education Volume 24 ; 24 > 
-    au < manifest ; 2011 ; American Journal of Distance Education Volume 25 ; 25 > 
+    au < ready ; 2011 ; American Journal of Distance Education Volume 25 ; 25 > 
 
   }
 
@@ -2034,7 +2034,7 @@
     au < manifest ; 2008 ; The American Journal of Family Therapy Volume 36 ; 36 > 
     au < manifest ; 2009 ; The American Journal of Family Therapy Volume 37 ; 37 > 
     au < manifest ; 2010 ; The American Journal of Family Therapy Volume 38 ; 38 > 
-    au < manifest ; 2011 ; The American Journal of Family Therapy Volume 39 ; 39 > 
+    au < ready ; 2011 ; The American Journal of Family Therapy Volume 39 ; 39 > 
 
   }
 
@@ -2079,7 +2079,7 @@
     au < manifest ; 2008 ; American Journal of Psychiatric Rehabilitation Volume 11 ; 11 > 
     au < manifest ; 2009 ; American Journal of Psychiatric Rehabilitation Volume 12 ; 12 > 
     au < manifest ; 2010 ; American Journal of Psychiatric Rehabilitation Volume 13 ; 13 > 
-    au < manifest ; 2011 ; American Journal of Psychiatric Rehabilitation Volume 14 ; 14 > 
+    au < ready ; 2011 ; American Journal of Psychiatric Rehabilitation Volume 14 ; 14 > 
 
   }
 
@@ -2099,7 +2099,7 @@
     au < manifest ; 2007-2008 ; American Journal of Sexuality Education Volume 3 ; 3 > 
     au < manifest ; 2009 ; American Journal of Sexuality Education Volume 4 ; 4 > 
     au < manifest ; 2010 ; American Journal of Sexuality Education Volume 5 ; 5 > 
-    au < manifest ; 2011 ; American Journal of Sexuality Education Volume 6 ; 6 > 
+    au < ready ; 2011 ; American Journal of Sexuality Education Volume 6 ; 6 > 
 
   }
 
@@ -2125,7 +2125,7 @@
     au < manifest ; 2008 ; American Nineteenth Century History Volume 9 ; 9 > 
     au < manifest ; 2009 ; American Nineteenth Century History Volume 10 ; 10 > 
     au < manifest ; 2010 ; American Nineteenth Century History Volume 11 ; 11 > 
-    au < manifest ; 2011 ; American Nineteenth Century History Volume 12 ; 12 > 
+    au < ready ; 2011 ; American Nineteenth Century History Volume 12 ; 12 > 
 
   }
 
@@ -2180,7 +2180,7 @@
     au < manifest ; 2008 ; American Review of Canadian Studies Volume 38 ; 38 > 
     au < manifest ; 2009 ; American Review of Canadian Studies Volume 39 ; 39 > 
     au < manifest ; 2010 ; American Review of Canadian Studies Volume 40 ; 40 > 
-    au < manifest ; 2011 ; American Review of Canadian Studies Volume 41 ; 41 > 
+    au < ready ; 2011 ; American Review of Canadian Studies Volume 41 ; 41 > 
 
   }
 
@@ -2281,7 +2281,7 @@
     au < manifest ; 2008 ; Anatolia: An International Journal of Tourism and Hospitality Research Volume 19 ; 19 > 
     au < manifest ; 2009 ; Anatolia: An International Journal of Tourism and Hospitality Research Volume 20 ; 20 > 
     au < manifest ; 2010 ; Anatolia: An International Journal of Tourism and Hospitality Research Volume 21 ; 21 > 
-    au < manifest ; 2011 ; Anatolia: An International Journal of Tourism and Hospitality Research Volume 22 ; 22 > 
+    au < ready ; 2011 ; Anatolia: An International Journal of Tourism and Hospitality Research Volume 22 ; 22 > 
 
   }
 
@@ -2325,7 +2325,7 @@
     au < manifest ; 2008 ; Angelaki: Journal of the Theoretical Humanities Volume 13 ; 13 > 
     au < manifest ; 2009 ; Angelaki: Journal of the Theoretical Humanities Volume 14 ; 14 > 
     au < manifest ; 2010 ; Angelaki: Journal of the Theoretical Humanities Volume 15 ; 15 > 
-    au < manifest ; 2011 ; Angelaki: Journal of the Theoretical Humanities Volume 16 ; 16 > 
+    au < ready ; 2011 ; Angelaki: Journal of the Theoretical Humanities Volume 16 ; 16 > 
 
   }
 
@@ -2361,7 +2361,7 @@
     au < manifest ; 2008 ; Animal Biotechnology Volume 19 ; 19 > 
     au < manifest ; 2009 ; Animal Biotechnology Volume 20 ; 20 > 
     au < manifest ; 2010 ; Animal Biotechnology Volume 21 ; 21 > 
-    au < manifest ; 2011 ; Animal Biotechnology Volume 22 ; 22 > 
+    au < ready ; 2011 ; Animal Biotechnology Volume 22 ; 22 > 
 
   }
 
@@ -2380,7 +2380,7 @@
     au < manifest ; 2008 ; Animal Cells and Systems Volume 12 ; 12 > 
     au < manifest ; 2009 ; Animal Cells and Systems Volume 13 ; 13 > 
     au < manifest ; 2010 ; Animal Cells and Systems Volume 14 ; 14 > 
-    au < manifest ; 2011 ; Animal Cells and Systems Volume 15 ; 15 > 
+    au < ready ; 2011 ; Animal Cells and Systems Volume 15 ; 15 > 
 
   }
 
@@ -2845,7 +2845,7 @@
     au < manifest ; 2008 ; Annals of GIS Volume 14 ; 14 > 
     au < manifest ; 2009 ; Annals of GIS Volume 15 ; 15 > 
     au < manifest ; 2010 ; Annals of GIS Volume 16 ; 16 > 
-    au < manifest ; 2011 ; Annals of GIS Volume 17 ; 17 > 
+    au < ready ; 2011 ; Annals of GIS Volume 17 ; 17 > 
 
   }
 
@@ -2860,7 +2860,7 @@
 
     param[journal_id] = ranz20 
 
-    au < manifest ; 2011 ; Annals of Leisure Research Volume 14 ; 14 > 
+    au < ready ; 2011 ; Annals of Leisure Research Volume 14 ; 14 > 
 
   }
 
@@ -2942,7 +2942,7 @@
     au < manifest ; 2008 ; Annals of Science Volume 65 ; 65 > 
     au < manifest ; 2009 ; Annals of Science Volume 66 ; 66 > 
     au < manifest ; 2010 ; Annals of Science Volume 67 ; 67 > 
-    au < manifest ; 2011 ; Annals of Science Volume 68 ; 68 > 
+    au < ready ; 2011 ; Annals of Science Volume 68 ; 68 > 
 
   }
 
@@ -3057,7 +3057,7 @@
     au < manifest ; 2008 ; Annals of the Association of American Geographers Volume 98 ; 98 > 
     au < manifest ; 2009 ; Annals of the Association of American Geographers Volume 99 ; 99 > 
     au < manifest ; 2010 ; Annals of the Association of American Geographers Volume 100 ; 100 > 
-    au < manifest ; 2011 ; Annals of the Association of American Geographers Volume 101 ; 101 > 
+    au < ready ; 2011 ; Annals of the Association of American Geographers Volume 101 ; 101 > 
 
   }
 
@@ -3086,7 +3086,7 @@
     au < manifest ; 2008 ; ANQ: A Quarterly Journal of Short Articles, Notes and Reviews Volume 21 ; 21 > 
     au < manifest ; 2009 ; ANQ: A Quarterly Journal of Short Articles, Notes and Reviews Volume 22 ; 22 > 
     au < manifest ; 2010 ; ANQ: A Quarterly Journal of Short Articles, Notes and Reviews Volume 23 ; 23 > 
-    au < manifest ; 2011 ; ANQ: A Quarterly Journal of Short Articles, Notes and Reviews Volume 24 ; 24 > 
+    au < ready ; 2011 ; ANQ: A Quarterly Journal of Short Articles, Notes and Reviews Volume 24 ; 24 > 
 
   }
 
@@ -3121,7 +3121,7 @@
     au < manifest ; 2008 ; Anthropological Forum: A journal of social anthropology and comparative sociology Volume 18 ; 18 > 
     au < manifest ; 2009 ; Anthropological Forum: A journal of social anthropology and comparative sociology Volume 19 ; 19 > 
     au < manifest ; 2010 ; Anthropological Forum: A journal of social anthropology and comparative sociology Volume 20 ; 20 > 
-    au < manifest ; 2011 ; Anthropological Forum: A journal of social anthropology and comparative sociology Volume 21 ; 21 > 
+    au < ready ; 2011 ; Anthropological Forum: A journal of social anthropology and comparative sociology Volume 21 ; 21 > 
 
   }
 
@@ -3151,7 +3151,7 @@
     au < manifest ; 2008 ; Anthropology & Medicine Volume 15 ; 15 > 
     au < manifest ; 2009 ; Anthropology & Medicine Volume 16 ; 16 > 
     au < manifest ; 2010 ; Anthropology & Medicine Volume 17 ; 17 > 
-    au < manifest ; 2011 ; Anthropology & Medicine Volume 18 ; 18 > 
+    au < ready ; 2011 ; Anthropology & Medicine Volume 18 ; 18 > 
 
   }
 
@@ -3204,7 +3204,7 @@
     au < manifest ; 2008 ; Anxiety, Stress & Coping: An International Journal Volume 21 ; 21 > 
     au < manifest ; 2009 ; Anxiety, Stress & Coping: An International Journal Volume 22 ; 22 > 
     au < manifest ; 2010 ; Anxiety, Stress & Coping: An International Journal Volume 23 ; 23 > 
-    au < manifest ; 2011 ; Anxiety, Stress & Coping: An International Journal Volume 24 ; 24 > 
+    au < ready ; 2011 ; Anxiety, Stress & Coping: An International Journal Volume 24 ; 24 > 
 
   }
 
@@ -3386,7 +3386,7 @@
     au < manifest ; 2008 ; Applied Artificial Intelligence: An International Journal Volume 22 ; 22 > 
     au < manifest ; 2009 ; Applied Artificial Intelligence: An International Journal Volume 23 ; 23 > 
     au < manifest ; 2010 ; Applied Artificial Intelligence: An International Journal Volume 24 ; 24 > 
-    au < manifest ; 2011 ; Applied Artificial Intelligence: An International Journal Volume 25 ; 25 > 
+    au < ready ; 2011 ; Applied Artificial Intelligence: An International Journal Volume 25 ; 25 > 
 
   }
 
@@ -3436,7 +3436,7 @@
     au < manifest ; 2008 ; Applied Developmental Science Volume 12 ; 12 > 
     au < manifest ; 2009 ; Applied Developmental Science Volume 13 ; 13 > 
     au < manifest ; 2010 ; Applied Developmental Science Volume 14 ; 14 > 
-    au < manifest ; 2011 ; Applied Developmental Science Volume 15 ; 15 > 
+    au < ready ; 2011 ; Applied Developmental Science Volume 15 ; 15 > 
 
   }
 
@@ -3493,9 +3493,9 @@
     au < manifest ; 2008 ; Applied Economics Volume 40 ; 40 > 
     au < manifest ; 2009 ; Applied Economics Volume 41 ; 41 > 
     au < manifest ; 2010 ; Applied Economics Volume 42 ; 42 > 
-    au < manifest ; 2011 ; Applied Economics Volume 43 ; 43 > 
-    au < manifest ; 2011 ; Applied Economics Volume 44 ; 44 > 
-    au < manifest ; 2011 ; Applied Economics Volume 45 ; 45 > 
+    au < ready ; 2011 ; Applied Economics Volume 43 ; 43 > 
+    au < ready ; 2011 ; Applied Economics Volume 44 ; 44 > 
+    au < ready ; 2011 ; Applied Economics Volume 45 ; 45 > 
 
   }
 
@@ -3529,7 +3529,7 @@
     au < manifest ; 2009 ; Applied Economics Letters Volume 16 ; 16 > 
     au < manifest ; 2009-2010 ; Applied Economics Letters Volume 17 ; 17 > 
     au < manifest ; 2010-2011 ; Applied Economics Letters Volume 18 ; 18 > 
-    au < manifest ; 2011 ; Applied Economics Letters Volume 19 ; 19 >
+    au < ready ; 2011 ; Applied Economics Letters Volume 19 ; 19 >
 
   }
 
@@ -3553,7 +3553,7 @@
     au < manifest ; 2008 ; Applied Environmental Education and Communication Volume 7 ; 7 > 
     au < manifest ; 2009 ; Applied Environmental Education and Communication Volume 8 ; 8 > 
     au < manifest ; 2010 ; Applied Environmental Education and Communication Volume 9 ; 9 > 
-    au < manifest ; 2011 ; Applied Environmental Education and Communication Volume 10 ; 10 > 
+    au < ready ; 2011 ; Applied Environmental Education and Communication Volume 10 ; 10 > 
 
   }
 
@@ -3588,7 +3588,7 @@
     au < manifest ; 2008 ; Applied Financial Economics Volume 18 ; 18 > 
     au < manifest ; 2009 ; Applied Financial Economics Volume 19 ; 19 > 
     au < manifest ; 2010 ; Applied Financial Economics Volume 20 ; 20 > 
-    au < manifest ; 2011 ; Applied Financial Economics Volume 21 ; 21 > 
+    au < ready ; 2011 ; Applied Financial Economics Volume 21 ; 21 > 
 
   }
 
@@ -3657,7 +3657,7 @@
     au < manifest ; 2008 ; Applied Mathematical Finance Volume 15 ; 15 > 
     au < manifest ; 2009 ; Applied Mathematical Finance Volume 16 ; 16 > 
     au < manifest ; 2010 ; Applied Mathematical Finance Volume 17 ; 17 > 
-    au < manifest ; 2011 ; Applied Mathematical Finance Volume 18 ; 18 > 
+    au < ready ; 2011 ; Applied Mathematical Finance Volume 18 ; 18 > 
 
   }
 
@@ -3695,7 +3695,7 @@
     au < manifest ; 2008 ; Applied Measurement in Education Volume 21 ; 21 > 
     au < manifest ; 2009 ; Applied Measurement in Education Volume 22 ; 22 > 
     au < manifest ; 2010 ; Applied Measurement in Education Volume 23 ; 23 > 
-    au < manifest ; 2011 ; Applied Measurement in Education Volume 24 ; 24 > 
+    au < ready ; 2011 ; Applied Measurement in Education Volume 24 ; 24 > 
 
   }
 
@@ -3727,7 +3727,7 @@
     au < manifest ; 2008 ; Applied Neuropsychology Volume 15 ; 15 > 
     au < manifest ; 2009 ; Applied Neuropsychology Volume 16 ; 16 > 
     au < manifest ; 2010 ; Applied Neuropsychology Volume 17 ; 17 > 
-    au < manifest ; 2011 ; Applied Neuropsychology Volume 18 ; 18 > 
+    au < ready ; 2011 ; Applied Neuropsychology Volume 18 ; 18 > 
 
   }
 
@@ -61908,7 +61908,7 @@
     au < manifest ; 2008 ; The Quarterly Journal of Experimental Psychology Volume 61 ; 61 > 
     au < manifest ; 2009 ; The Quarterly Journal of Experimental Psychology Volume 62 ; 62 > 
     au < manifest ; 2010 ; The Quarterly Journal of Experimental Psychology Volume 63 ; 63 > 
-    au < manifest ; 2011 ; The Quarterly Journal of Experimental Psychology Volume 64 ; 64 > 
+    au < ready ; 2011 ; The Quarterly Journal of Experimental Psychology Volume 64 ; 64 > 
 
   }
 
@@ -62101,7 +62101,7 @@
     au < manifest ; 2008 ; Quarterly Journal of Speech Volume 94 ; 94 > 
     au < manifest ; 2009 ; Quarterly Journal of Speech Volume 95 ; 95 > 
     au < manifest ; 2010 ; Quarterly Journal of Speech Volume 96 ; 96 > 
-    au < manifest ; 2011 ; Quarterly Journal of Speech Volume 97 ; 97 > 
+    au < ready ; 2011 ; Quarterly Journal of Speech Volume 97 ; 97 > 
 
   }
 
@@ -62199,7 +62199,7 @@
     au < manifest ; 2008 ; Race Ethnicity and Education Volume 11 ; 11 > 
     au < manifest ; 2009 ; Race Ethnicity and Education Volume 12 ; 12 > 
     au < manifest ; 2010 ; Race Ethnicity and Education Volume 13 ; 13 > 
-    au < manifest ; 2011 ; Race Ethnicity and Education Volume 14 ; 14 > 
+    au < ready ; 2011 ; Race Ethnicity and Education Volume 14 ; 14 > 
 
   }
 
@@ -62489,7 +62489,7 @@
     au < manifest ; 2008 ; Reading Psychology Volume 29 ; 29 > 
     au < manifest ; 2009 ; Reading Psychology Volume 30 ; 30 > 
     au < manifest ; 2010 ; Reading Psychology Volume 31 ; 31 > 
-    au < manifest ; 2011 ; Reading Psychology Volume 32 ; 32 > 
+    au < ready ; 2011 ; Reading Psychology Volume 32 ; 32 > 
 
   }
 
@@ -62679,7 +62679,7 @@
     au < manifest ; 2008 ; Regional & Federal Studies Volume 18 ; 18 > 
     au < manifest ; 2009 ; Regional & Federal Studies Volume 19 ; 19 > 
     au < manifest ; 2010 ; Regional & Federal Studies Volume 20 ; 20 > 
-    au < manifest ; 2011 ; Regional & Federal Studies Volume 21 ; 21 > 
+    au < ready ; 2011 ; Regional & Federal Studies Volume 21 ; 21 > 
 
   }
   {
@@ -62755,7 +62755,7 @@
     au < manifest ; 2008 ; Regional Studies Volume 42 ; 42 > 
     au < manifest ; 2009 ; Regional Studies Volume 43 ; 43 > 
     au < manifest ; 2010 ; Regional Studies Volume 44 ; 44 > 
-    au < manifest ; 2011 ; Regional Studies Volume 45 ; 45 > 
+    au < ready ; 2011 ; Regional Studies Volume 45 ; 45 > 
 
   }
 
@@ -62810,7 +62810,7 @@
     au < manifest ; 2008 ; Religion Volume 38 ; 38 > 
     au < manifest ; 2009 ; Religion Volume 39 ; 39 > 
     au < manifest ; 2010 ; Religion Volume 40 ; 40 > 
-    au < manifest ; 2011 ; Religion Volume 41 ; 41 > 
+    au < ready ; 2011 ; Religion Volume 41 ; 41 > 
 
   }
 
@@ -74101,7 +74101,7 @@
     au < manifest ; 2008 ; Waves in Random and Complex Media Volume 18 ; 18 > 
     au < manifest ; 2009 ; Waves in Random and Complex Media Volume 19 ; 19 > 
     au < manifest ; 2010 ; Waves in Random and Complex Media Volume 20 ; 20 > 
-    au < manifest ; 2011 ; Waves in Random and Complex Media Volume 21 ; 21 > 
+    au < ready ; 2011 ; Waves in Random and Complex Media Volume 21 ; 21 > 
 
   }
 
@@ -74793,7 +74793,7 @@
     au < manifest ; 2008 ; Women: A Cultural Review Volume 19 ; 19 > 
     au < manifest ; 2009 ; Women: A Cultural Review Volume 20 ; 20 > 
     au < manifest ; 2010 ; Women: A Cultural Review Volume 21 ; 21 > 
-    au < manifest ; 2011 ; Women: A Cultural Review Volume 22 ; 22 > 
+    au < ready ; 2011 ; Women: A Cultural Review Volume 22 ; 22 > 
 
   }
 
@@ -74827,7 +74827,7 @@
     au < manifest ; 2008 ; Women's History Review Volume 17 ; 17 > 
     au < manifest ; 2009 ; Women's History Review Volume 18 ; 18 > 
     au < manifest ; 2010 ; Women's History Review Volume 19 ; 19 > 
-    au < manifest ; 2011 ; Women's History Review Volume 20 ; 20 > 
+    au < ready ; 2011 ; Women's History Review Volume 20 ; 20 > 
 
   }
 
@@ -74910,7 +74910,7 @@
     au < manifest ; 2008 ; Women's Studies in Communication Volume 31 ; 31 > 
     au < manifest ; 2009 ; Women's Studies in Communication Volume 32 ; 32 > 
     au < manifest ; 2010 ; Women's Studies in Communication Volume 33 ; 33 > 
-    au < manifest ; 2011 ; Women's Studies in Communication Volume 34 ; 34 > 
+    au < ready ; 2011 ; Women's Studies in Communication Volume 34 ; 34 > 
 
   }
 
@@ -74942,7 +74942,7 @@
     au < manifest ; 2008 ; Women's Writing Volume 15 ; 15 > 
     au < manifest ; 2009 ; Women's Writing Volume 16 ; 16 > 
     au < manifest ; 2010 ; Women's Writing Volume 17 ; 17 > 
-    au < manifest ; 2011 ; Women's Writing Volume 18 ; 18 > 
+    au < ready ; 2011 ; Women's Writing Volume 18 ; 18 > 
 
   }
 
@@ -74979,7 +74979,7 @@
 
     au < manifest ; 2009 ; Word & Image: A Journal of Verbal/Visual Enquiry Volume 25 ; 25 > 
     au < manifest ; 2009-2010 ; Word & Image: A Journal of Verbal/Visual Enquiry Volume 26 ; 26 > 
-    au < manifest ; 2011 ; Word & Image: A Journal of Verbal/Visual Enquiry Volume 27 ; 27 > 
+    au < ready ; 2011 ; Word & Image: A Journal of Verbal/Visual Enquiry Volume 27 ; 27 > 
 
   }
 
@@ -75075,7 +75075,7 @@
     au < manifest ; 2008 ; World Archaeology Volume 40 ; 40 > 
     au < manifest ; 2009 ; World Archaeology Volume 41 ; 41 > 
     au < manifest ; 2010 ; World Archaeology Volume 42 ; 42 > 
-    au < manifest ; 2011 ; World Archaeology Volume 43 ; 43 > 
+    au < ready ; 2011 ; World Archaeology Volume 43 ; 43 > 
 
   }
 
