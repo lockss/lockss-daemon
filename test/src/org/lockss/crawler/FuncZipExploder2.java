@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.18 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: FuncZipExploder2.java,v 1.19 2012-01-16 17:49:25 pgust Exp $
  */
 
 /*
@@ -296,7 +296,7 @@ public class FuncZipExploder2 extends LockssTestCase {
 	    assertNotNull(md);
 	    String doi = md.get(MetadataField.FIELD_DOI);
 	    log.debug(cu.getUrl() + " doi " + doi);
-	    assertTrue(MetadataUtil.isDOI(doi));
+	    assertTrue(MetadataUtil.isDoi(doi));
 	    foundDoiSet.add(doi);
 	  } catch (Exception ex) {
 	    fail(ex.toString());
