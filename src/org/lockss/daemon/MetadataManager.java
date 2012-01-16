@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.23 2011-11-08 21:29:08 pgust Exp $
+ * $Id: MetadataManager.java,v 1.24 2012-01-16 18:00:00 pgust Exp $
  */
 
 /*
@@ -958,18 +958,32 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         return;
       }
 
-      if (dbIsNew) {
-        try {
-          Collection<ArchivalUnit> allAus = pluginMgr.getAllAus();
-          addToPendingAus(conn, allAus);
-          safeCommit(conn);
-          dbIsNew = false;
-        } catch (SQLException ex) {
-          log.error(  "Cannot add pending AUs table \"" + PENDINGAUS_TABLE
-                    + "\"", ex);
-          safeClose(conn);
-          return;
+      Collection<ArchivalUnit> allAus = pluginMgr.getRandomizedAus();
+      if (!dbIsNew) {
+        // add only AUs whose metadata feature version has changed
+        for (Iterator<ArchivalUnit> itr = allAus.iterator(); itr.hasNext(); ) {
+          ArchivalUnit au = itr.next();
+          if (   !AuUtil.hasCrawled(au)
+              || AuUtil.isCurrentFeatureVersion(au, Feature.Metadata)) { 
+            itr.remove();
+          } else {
+            log.debug("'" + au.getName() + "': Au feature vsn: " 
+                + AuUtil.getAuState(au).getFeatureVersion(Feature.Metadata)
+                + " plugin feature vsn: " 
+                + au.getPlugin().getFeatureVersion(Feature.Metadata));
+          }
         }
+      }
+      
+      try {
+        addToPendingAus(conn, allAus);
+        safeCommit(conn);
+        dbIsNew = false;
+      } catch (SQLException ex) {
+        log.error(  "Cannot add pending AUs table \"" + PENDINGAUS_TABLE
+                  + "\"", ex);
+        safeClose(conn);
+        return;
       }
 
       startReindexing(conn);
@@ -1234,10 +1248,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                   // update AU's feature version to that of the plugin
                   // so we can test whether it's up-to-date in case of a
                   // later reload of the plugin
-                  AuUtil.getAuState(au).setFeatureVersion(
-                      Feature.Metadata, 
+                  AuUtil.getAuState(au).setFeatureVersion(Feature.Metadata, 
                       au.getPlugin().getFeatureVersion(Feature.Metadata));
-                  
                   if (log.isDebug2()) {
                     long elapsedCpuTime = threadCpuTime = startCpuTime;
                     long elapsedUserTime = threadUserTime - startUserTime;
