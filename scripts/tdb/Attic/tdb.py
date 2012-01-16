@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.10 2011-08-25 23:40:49 thib_gc Exp $
+# $Id: tdb.py,v 1.11 2012-01-16 17:13:59 pgust Exp $
 
 # Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -205,6 +205,9 @@ class AU(_ChainedMap):
         EXPUNGED = 'expunged'
 
     ATTR = 'attr'
+    EDITION = 'edition'
+    EISBN = 'eisbn'
+    ISBN = 'isbn'
     NAME = 'name'
     NONDEFPARAM = 'nondefparam'
     PARAM = 'param'
@@ -227,6 +230,9 @@ class AU(_ChainedMap):
     def attr(self, attr): return self.get( (AU.ATTR, attr) )
     def attrs(self): return self.get(AU.ATTR) or {}
     def auid(self): return AU.computeAuid(self.plugin(), self.params())
+    def edition(self): return self.get(AU.EDITION)
+    def eisbn(self): return self.get(AU.EISBN)
+    def isbn(self): return self.get(AU.ISBN)
     def name(self): return self.get(AU.NAME)
     def nondefparam(self, nondefparam):
         val = self.get( (AU.NONDEFPARAM, nondefparam) )

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.21 2012-01-11 21:04:12 thib_gc Exp $
+# $Id: tdbxml.py,v 1.22 2012-01-16 17:13:59 pgust Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -194,6 +194,12 @@ def __process_au(au, options):
     au_attrs = au.attrs()
     for attr in au_attrs:
         __do_attr(au, attr, au_attrs[attr])
+    if au.edition() is not None:
+        __do_attr(au, 'edition', au.edition());
+    if au.eisbn() is not None:
+        __do_attr(au, 'eisbn', au.eisbn());
+    if au.isbn() is not None:
+        __do_attr(au, 'isbn', au.isbn());
     if au.year() is not None:
         __do_attr(au, 'year', au.year())
     if au.volumeName() is not None:
