@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.26 2011-12-19 11:14:27 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.27 2012-01-16 17:51:20 pgust Exp $
  */
 
 /*
@@ -556,11 +556,11 @@ public class KbartConverter {
     // Now add information that can be retrieved from the AUs.
     // Add ISSN, EISSN and ISSN-L if available.
     baseKbt.setField(PRINT_IDENTIFIER,
-        MetadataUtil.validateISSN(au.getPrintIssn()));
+        MetadataUtil.validateIssn(au.getPrintIssn()));
     baseKbt.setField(ONLINE_IDENTIFIER,
-        MetadataUtil.validateISSN(au.getEissn()));
+        MetadataUtil.validateIssn(au.getEissn()));
     baseKbt.setField(TITLE_ID,
-        MetadataUtil.validateISSN(au.getIssnL()));
+        MetadataUtil.validateIssn(au.getIssnL()));
 
     // Title URL
     // Set using a substitution parameter 
