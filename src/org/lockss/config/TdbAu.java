@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.14 2011-12-19 11:14:27 easyonthemayo Exp $
+ * $Id: TdbAu.java,v 1.15 2012-01-16 17:46:10 pgust Exp $
  */
 
 /*
@@ -40,12 +40,19 @@ import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.*;
 
+import sun.util.logging.resources.logging;
+
 /**
  * This class represents a title database archival unit (AU).
  *
  * @author  Philip Gust
  */
 public class TdbAu implements BibliographicItem {
+  /**
+   * Set up logger
+   */
+  protected final static Logger logger = Logger.getLogger("TdbAu");
+
   /**
    * The name of this instance
    */
@@ -258,6 +265,16 @@ public class TdbAu implements BibliographicItem {
     }
     
     this.title = title;
+  }
+  
+  /**
+   * Determines whether this AU is marked "down".
+   * 
+   * @return <code>true</code> if this AU is marked "down"
+   */
+  public boolean isDown() {
+    return "true".equals(getParam("pub_down"));
+
   }
   
   /**
@@ -590,32 +607,76 @@ public class TdbAu implements BibliographicItem {
   }
   
   /**
-   * Return ISBN for this title.
-   * 
-   * @return the ISBN for this title or <code>null</code> if not specified
-   */
-  public String getIsbn() {
-    return getPropertyByName("isbn");
-  }
-
-  /**
    * Return representative ISSN for this title. 
    * Uses ISSN-L, then eISSN, and finally print ISSN.
    * Each ISSN is checked for well-formedness, but is not checksummed.
    * 
-   * @return representative for this title or <code>null</code> if not specified or ill-formed
+   * @return representative for this title or <code>null</code> if not 
+   *  specified or is ill-formed
    */
   public String getIssn() {
     String issn = getIssnL();
-    if (!MetadataUtil.isISSN(issn)) {
+    if (!MetadataUtil.isIssn(issn)) {
       issn = getEissn();
-      if (!MetadataUtil.isISSN(issn)) {
+      if (!MetadataUtil.isIssn(issn)) {
         issn = getPrintIssn();
+        if (!MetadataUtil.isIssn(issn)) {
+          issn = null;
+        }
       }
     }
-    return MetadataUtil.isISSN(issn) ? issn : null;
+    return issn;
   }
   
+  /**
+   * Return the print ISBN for this TdbAu.
+   * 
+   * @return the print ISBN for this TdbAu or <code>null</code> if not specified
+   */
+  public String getPrintIsbn() {
+    String printIsbn = (attrs == null) ? null : attrs.get("isbn");
+    if (printIsbn != null) {
+      logger.debug("Found " + printIsbn + " for " + getName());
+    }
+    return printIsbn;
+  }
+
+  /**
+   * Return the eISBN for this TdbAu.
+   * 
+   * @return the print ISBN for this TdbAu or <code>null</code> if not specified
+   */
+  public String getEisbn() {
+    String eisbn = (attrs == null) ? null : attrs.get("eisbn");
+    if (eisbn != null) {
+      logger.debug("Found " + eisbn + " for " + getName());
+    }
+    return eisbn;
+  }
+
+  /**
+   * Return a representative ISBN for this TdbAu; the eISBN if specified or the
+   * print ISBN. Each ISBN is check for well-formedness but is not checksummed.
+   * Also checks deprecated "isbn' title property if ISBN or eISBN attribute
+   * are not present. 
+   * 
+   * @return the ISBN for this title or <code>null</code> if not specified
+   *  or is malformed
+   */
+  public String getIsbn() {
+    String isbn = getEisbn();
+    if (!MetadataUtil.isIsbn(isbn)) {
+      isbn = getPrintIsbn();
+      if (!MetadataUtil.isIsbn(isbn)) {
+        isbn = (props == null) ? null : props.get("isbn");
+        if ((isbn != null) && !MetadataUtil.isIsbn(isbn)) {
+          isbn = null;
+        }
+      }
+    }
+    return isbn;
+  }
+
   /**
    * Get the start year for this AU. Allows for the year string to represent
    * a delimited list of ranges.
