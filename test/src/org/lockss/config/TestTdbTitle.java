@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbTitle.java,v 1.5 2011-03-22 12:58:51 pgust Exp $
+ * $Id: TestTdbTitle.java,v 1.6 2012-01-16 17:47:39 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbTitle</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbTitle.java,v 1.5 2011-03-22 12:58:51 pgust Exp $
+ * @version $Id: TestTdbTitle.java,v 1.6 2012-01-16 17:47:39 pgust Exp $
  */
 
 public class TestTdbTitle extends LockssTestCase {
@@ -362,13 +362,13 @@ public class TestTdbTitle extends LockssTestCase {
     au.setPropertyByName("issn", "1234-5678");
     au.setPropertyByName("eissn", "2468-1357");
     au.setPropertyByName("issnl", "8765-4321");
-    au.setPropertyByName("isbn", "1234567890");
+    au.setAttr("isbn", "1234567890");
     assertEquals("1234-5678", title.getPrintIssn());
     assertEquals("2468-1357", title.getEissn());
     assertEquals("8765-4321", title.getIssnL());
     assertNotNull(title.getIssn());
     assertEquals(3, title.getIssns().length);
-    assertEquals("1234567890", title.getIsbn());
+    assertEquals(1, title.getTdbAusByIsbn("1234567890").size());
   }
   
   /**
