@@ -1,5 +1,5 @@
 /*
- * $Id: SqlStoredProcedures.java,v 1.4 2012-01-04 23:35:38 pgust Exp $
+ * $Id: SqlStoredProcedures.java,v 1.5 2012-01-16 17:43:17 pgust Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 import java.util.Date;
 
 import org.lockss.app.LockssDaemon;
@@ -55,28 +56,68 @@ import org.lockss.util.Logger;
  * The following SQL stored procedure definitions can be used in conjunction
  * with these functions:
  * 
+ * create function titleFromIssn(issn varchar(9)) returns varchar(512) 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getTitleFromIssn' 
+ * parameter style java no sql;
+ * 
+ * create function volumeTitleFromIsbn(issn varchar(18)) returns varchar(512) 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromIsbn' 
+ * parameter style java no sql;
+ * 
  * create function publisherFromUrl(url varchar(4096)) returns varchar(256) 
  * language java external name 'org.lockss.util.SqlStoredProcedures.getPublisherFromArticleUrl' 
  * parameter style java no sql;
  * 
+ * create function volumeTitleFromUrl(url varchar(4096)) returns varchar(512) 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromArticleUrl' 
+ * parameter style java no sql;
+ * 
  * create function titleFromUrl(url varchar(4096)) returns varchar(512) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getJournalTitleFromArticleUrl' 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getTitleFromArticleUrl' 
+ * parameter style java no sql;
+ * 
+ * create function isbnFromUrl(url varchar(4096)) returns varchar(13) 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getIsbnFromArticleUrl' 
+ * parameter style java no sql;
+ * 
+ * create function printIsbnFromUrl(url varchar(4096)) returns varchar(13) 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getPrintIsbnFromArticleUrl' 
+ * parameter style java no sql;
+ * 
+ * create function eisbnFromUrl(url varchar(4096)) returns varchar(13) 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getEisbnFromArticleUrl' 
  * parameter style java no sql;
  * 
  * create function issnFromUrl(url varchar(4096)) returns varchar(8) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getJournalIssnFromArticleUrl' 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getIssnFromArticleUrl' 
  * parameter style java no sql;
  * 
  * create function printIssnFromUrl(url varchar(4096)) returns varchar(8) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getJournalPrintIssnFromArticleUrl' 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getPrintIssnFromArticleUrl' 
  * parameter style java no sql;
  * 
  * create function eissnFromUrl(url varchar(4096)) returns varchar(8) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getJournalEissnFromArticleUrl' 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getEissnFromArticleUrl' 
  * parameter style java no sql;
  * 
  * create function issnlFromUrl(url varchar(4096)) returns varchar(8) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getJournalIssnLFromArticleUrl' 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getIssnLFromArticleUrl' 
+ * parameter style java no sql;
+ * 
+ * create function startVolumeFromUrl(url varchar(4096)) returns varchar(16) 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getStartVolumeFromArticleUrl' 
+ * parameter style java no sql;
+ * 
+ * create function endVolumeFromUrl(url varchar(4096)) returns varchar(16) 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getEndVolumeFromArticleUrl' 
+ * parameter style java no sql;
+ * 
+ * create function startYearFromUrl(url varchar(4096)) returns varchar(16) 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getStartYearFromArticleUrl' 
+ * parameter style java no sql;
+ * 
+ * create function endYearFromArticleUrl(url varchar(4096)) returns varchar(16) 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getEndYearFromArticleUrl' 
  * parameter style java no sql;
  * 
  * create function ingestDateFromUrl(url varchar(4096)) returns varchar(16) 
@@ -87,59 +128,64 @@ import org.lockss.util.Logger;
  * language java external name 'org.lockss.util.SqlStoredProcedures.getIngestYearFromArticleUrl' 
  * parameter style java no sql;
  * 
- * create function publisherFromAuId(pluginId varchar(128), auId varchar(512)) 
+ * create function publisherFromAuId(pluginId varchar(128), auKey varchar(512)) 
  * returns varchar(256) 
  * language java external name 'org.lockss.util.SqlStoredProcedures.getPublisherFromAuId' 
  * parameter style java no sql;
  * 
- * create function titleFromAuId(pluginId varchar(128), auId varchar(512)) 
+ * create function volumeTitleFromAuId(pluginId varchar(128), auKey varchar(512)) 
  * returns varchar(256) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getJournalTitleFromAuId' 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromAuId' 
  * parameter style java no sql;
  * 
- * create function issnFromAuId(pluginId varchar(128), auId varchar(512)) returns varchar(8) 
+ * create function titleFromAuId(pluginId varchar(128), auKey varchar(512)) 
+ * returns varchar(256) 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getTitleFromAuId' 
+ * parameter style java no sql;
+ * 
+ * create function issnFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(8) 
  * language java external name 'org.lockss.util.SqlStoredProcedures.getPrintIssnFromAuId' 
  * parameter style java no sql;
  * 
- * create function printIssnFromAuId(pluginId varchar(128), auId varchar(512)) returns varchar(8) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getJournalPrintIssnFromAuId' 
+ * create function printIssnFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(8) 
+ * language java external name 'org.lockss.util.SqlStoredProcedures.getPrintIssnFromAuId' 
  * parameter style java no sql;
  * 
- * create function eissnFromAuId(pluginId varchar(128), auId varchar(512)) returns varchar(8) 
+ * create function eissnFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(8) 
  * language java external name 'org.lockss.util.SqlStoredProcedures.getEissnFromAuId' 
  * parameter style java no sql;
  * 
- * create function issnlFromAuId(pluginId varchar(128), auId varchar(512)) returns varchar(8) 
+ * create function issnlFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(8) 
  * language java external name 'org.lockss.util.SqlStoredProcedures.getIssnLFromAuId' 
  * parameter style java no sql;
  * 
- * create function startVolumeFromAuId(pluginId varchar(128), auId varchar(512)) returns varchar(16) 
+ * create function startVolumeFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(16) 
  * language java external name 'org.lockss.util.SqlStoredProcedures.getStartVolumeFromAuId' 
  * parameter style java no sql;
  * 
- * create function endVolumeFromAuId(pluginId varchar(128), auId varchar(512)) returns varchar(16) 
+ * create function endVolumeFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(16) 
  * language java external name 'org.lockss.util.SqlStoredProcedures.getEndVolumeFromAuId' 
  * parameter style java no sql;
  * 
- * create function startYearFromAuId(pluginId varchar(128), auId varchar(512)) returns varchar(16) 
+ * create function startYearFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(16) 
  * language java external name 'org.lockss.util.SqlStoredProcedures.getStartYearFromAuId' 
  * parameter style java no sql;
  * 
- * create function endYearFromAuId(pluginId varchar(128), auId varchar(512)) returns varchar(16) 
+ * create function endYearFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(16) 
  * language java external name 'org.lockss.util.SqlStoredProcedures.getEndYearFromAuId' 
  * parameter style java no sql;
  * 
- * create function ingestDateFromAuId(pluginId varchar(128), auId varchar(512)) 
+ * create function ingestDateFromAuId(pluginId varchar(128), auKey varchar(512)) 
  * returns varchar(16) 
  * language java external name 'org.lockss.util.SqlStoredProcedures.getingestDateFromAuId' 
  * parameter style java no sql;
  * 
- * create function ingestYearFromAuId(pluginId varchar(128), auId varchar(512)) 
+ * create function ingestYearFromAuId(pluginId varchar(128), auKey varchar(512)) 
  * returns varchar(4) 
  * language java external name 'org.lockss.util.SqlStoredProcedures.getIngestYearFromAuId' 
  * parameter style java no sql;
  * 
- * create function generateAuId(pluginId varchar(128), auId varchar(512)) 
+ * create function generateAuId(pluginId varchar(128), auKey varchar(512)) 
  * returns varchar(640) 
  * language java external name 'org.lockss.plugin.PluginManager.generateAuId' 
  * parameter style java no sql;
@@ -152,9 +198,16 @@ import org.lockss.util.Logger;
  *
  */
 public class SqlStoredProcedures {
+  /** logger to report issues */
   static Logger log = Logger.getLogger("SqlStoredProcedures");
+  
+  /** logger to report query issues */
+  static Logger queryLog = Logger.getLogger("SqlStoredProcedureQueryLog");
 
+  /** Formatter for ISO formatted date */
   static SimpleDateFormat isoDateFormatter = new SimpleDateFormat("yyyy-MM-dd");
+  
+  /** The plugin manager */
   static PluginManager pluginManager = null;
 
   /**
@@ -163,6 +216,30 @@ public class SqlStoredProcedures {
   private SqlStoredProcedures() {
   }
   
+  /**
+   * Set the cached plugin manager for this class. Primarily used 
+   * in testing
+   * 
+   * @param pluginManager the plugin manager
+   */
+  static void setPluginManager(PluginManager pluginManager) {
+    SqlStoredProcedures.pluginManager = pluginManager;
+  }
+  
+  /**
+   * Returns the plugin manager for the current LOCKSS daemon. Does
+   * lazy initialization on first reference.
+   * 
+   * @return the plugin manager
+   */
+  static private PluginManager getPluginManager() {
+    // get lockss daemon plugin manager
+    if (pluginManager == null) {
+      setPluginManager(LockssDaemon.getLockssDaemon().getPluginManager());
+    }
+    return pluginManager;
+  }
+
   /**
    * Return the title from the title title database that corresponds
    * to the URL of an article in that title.
@@ -175,20 +252,10 @@ public class SqlStoredProcedures {
       throw new IllegalArgumentException("null articleUrl");
     }
     
-    // get lockss daemon plugin manager
-    if (pluginManager == null) {
-      LockssDaemon daemon = LockssDaemon.getLockssDaemon();
-      if (daemon == null) {
-        log.info("no lockss daemon");
-        return null;
-      }
-      pluginManager = daemon.getPluginManager();
-    }
-
     // get the CachedUrl from the article URL
-    CachedUrl cu = pluginManager.findCachedUrl(articleUrl);
+    CachedUrl cu = getPluginManager().findCachedUrl(articleUrl);
     if (cu == null) {
-      log.info("no cu for articleUrl " + articleUrl);
+      queryLog.debug2("No CachedUrl for articleUrl " + articleUrl);
       return null;
     }
     
@@ -198,7 +265,7 @@ public class SqlStoredProcedures {
     // return the TdbAu from the AU
     TitleConfig tc = au.getTitleConfig();
     if (tc == null) {
-      log.info("no titleconfig for au " + au.toString());
+      log.debug2("no titleconfig for au " + au.toString());
       return null;
     }
 
@@ -219,27 +286,21 @@ public class SqlStoredProcedures {
     }
     String auId = PluginManager.generateAuId(pluginId, auKey);
     
-    // get lockss daemon plugin manager
-    if (pluginManager == null) {
-      LockssDaemon daemon = LockssDaemon.getLockssDaemon();
-      if (daemon == null) {
-        log.info("no lockss daemon");
-        return null;
-      }
-      pluginManager = daemon.getPluginManager();
-    }
-
     // get the AU from the Auid
-    ArchivalUnit au = pluginManager.getAuFromId(auId);
+    System.out.println(LockssDaemon.getLockssDaemon().getPluginManager());
+    System.out.println(LockssDaemon.getLockssDaemon().getPluginManager());
+    System.out.println(getPluginManager());
+    ArchivalUnit au = getPluginManager().getAuFromId(auId);
     if (au == null) {
-      log.info("no au for auid " + auId);
+      queryLog.debug2(  "No ArchivalUnit for pluginId: " + pluginId 
+                      + " auKey: " + auKey);
       return null;
     }
     
     // return the TdbAu from the AU
     TitleConfig tc = au.getTitleConfig();
     if (tc == null) {
-      log.info("no titleconfig for au " + au.toString());
+      log.debug2("no titleconfig for au " + au.toString());
       return null;
     }
 
@@ -247,13 +308,52 @@ public class SqlStoredProcedures {
   }
 
   /**
-   * Return the Journal title from that corresponds
+   * Return the volume title that corresponds to the auid 
+   * of a journal or series AU.
+   * 
+   * @param pluginId the pluginId part of the auid
+   * @param auKey the auKey part of the auid
+   * @return the publisher for the given auid
+   */
+  static public String getVolumeTitleFromAuId(String pluginId, String auKey) {
+    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    return tdbAu == null ? null : tdbAu.getName();
+  }
+  
+  /**
+   * Return the journal or series title from that corresponds
    * to the URL of an article in that journal.
    * 
    * @param articleUrl the URL of the article
    * @return the title for the given URL or null if not available
    */
-  static public String getJournalTitleFromArticleUrl(String articleUrl) {
+  static public String getVolumeTitleFromArticleUrl(String articleUrl) {
+    // get the TdbAu from the AU
+    TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
+    return (tdbAu == null) ? null : tdbAu.getName();
+  }
+
+  /**
+   * Return the journal or series title that corresponds to the auid 
+   * of a journal or series AU.
+   * 
+   * @param pluginId the pluginId part of the auid
+   * @param auKey the auKey part of the auid
+   * @return the publisher for the given auid
+   */
+  static public String getTitleFromAuId(String pluginId, String auKey) {
+    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    return tdbAu == null ? null : tdbAu.getJournalTitle();
+  }
+  
+  /**
+   * Return the journal or series title from that corresponds
+   * to the URL of an article in that journal.
+   * 
+   * @param articleUrl the URL of the article
+   * @return the title for the given URL or null if not available
+   */
+  static public String getTitleFromArticleUrl(String articleUrl) {
     // get the TdbAu from the AU
     TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
     return (tdbAu == null) ? null : tdbAu.getJournalTitle();
@@ -271,141 +371,286 @@ public class SqlStoredProcedures {
     TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
     return (tdbAu == null) ? null : tdbAu.getTdbPublisher().getName();
   }
+
+  /**
+   * Remove punctuation from a string.
+   * 
+   * @param s the string
+   * @return an unpunctated version of the string
+   */
+  static private String unpunctuate(String s) {
+    return (s == null) ? null : s.replaceAll("-", "");
+  }
   
   /**
-   * Return the journal eISSN from that corresponds
-   * to the URL of an article in that journal.
+   * Return the eISBN from that corresponds
+   * to the URL of an article.
+   * The value returned is without punctuation.
+   * 
+   * @param articleUrl the URL of the article
+   * @return the eISBN for the given URL or null if not available
+   */
+  static public String getEisbnFromArticleUrl(String articleUrl) {
+    // get the TdbAu from the AU
+    TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
+    if (tdbAu == null) {
+      queryLog.debug2("No TdbAu for article url: " + articleUrl);
+      return null;
+    }
+    String eisbn = tdbAu.getEisbn();
+    return unpunctuate(eisbn);
+  }
+
+  /**
+   * Return the eISBN from that corresponds
+   * to the auId of an AU.
+   * The value returned is without punctuation.
+   * 
+   * @param pluginId the pluginID of an article AU
+   * @param auKey the auKey of an article AU
+   * @return the eISBN for the given auId or null if not available
+   */
+  static public String getEisbnFromAuId(String pluginId, String auKey) {
+    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    if (tdbAu == null) {
+      queryLog.debug2(  "No TdbAu for pluginId: " + pluginId 
+                      + " auKey: " + auKey);
+      return null;
+    }
+    String eisbn = tdbAu.getEisbn();
+    return unpunctuate(eisbn);
+  }
+
+  /**
+   * Return the print ISBN from that corresponds
+   * to the URL of an article.
+   * The value returned is without punctuation.
+   * 
+   * @param articleUrl the URL of the article
+   * @return the print ISBN for the given URL or null if not available
+   */
+  static public String getPrintIsbnFromArticleUrl(String articleUrl) {
+    // get the TdbAu from the AU
+    TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
+    if (tdbAu == null) {
+      queryLog.debug2("No TdbAu for article url: " + articleUrl);
+      return null;
+    }
+    String printIsbn = tdbAu.getPrintIsbn();
+    return unpunctuate(printIsbn);
+  }
+
+  /**
+   * Return the print ISBN from that corresponds
+   * to the auId of an AU.
+   * The value returned is without punctuation.
+   * 
+   * @param pluginId the pluginID of an article AU
+   * @param auKey the auKey of an article AU
+   * @return the print ISBN for the given auId or null if not available
+   */
+  static public String getPrintIsbnFromAuId(String pluginId, String auKey) {
+    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    if (tdbAu == null) {
+      queryLog.debug2(  "No TdbAu for pluginId: " + pluginId 
+                      + " auKey: " + auKey);
+      return null;
+    }
+    String printIsbn = tdbAu.getPrintIsbn();
+    return unpunctuate(printIsbn);
+  }
+
+  /**
+   * Return an ISBN from that corresponds
+   * to the URL of an article.
+   * The value returned is without punctuation.
+   * 
+   * @param articleUrl the URL of the article
+   * @return the eISBN for the given URL or null if not available
+   */
+  static public String getIsbnFromArticleUrl(String articleUrl) {
+    // get the TdbAu from the AU
+    TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
+    if (tdbAu == null) {
+      queryLog.debug2("No TdbAu for article url: " + articleUrl);
+      return null;
+    }
+    String isbn = tdbAu.getIsbn();
+    return unpunctuate(isbn);
+  }
+
+  /**
+   * Return an ISBN from that corresponds
+   * to the auId of an AU.
+   * The value returned is without punctuation.
+   * 
+   * @param pluginId the pluginID of an article AU
+   * @param auKey the auKey of an article AU
+   * @return an ISBN for the given auId or null if not available
+   */
+  static public String getIsbnFromAuId(String pluginId, String auKey) {
+    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    if (tdbAu == null) {
+      queryLog.debug2(  "No TdbAu for pluginId: " + pluginId 
+                      + " auKey: " + auKey);
+      return null;
+    }
+    String isbn = tdbAu.getIsbn();
+    return unpunctuate(isbn);
+  }
+
+  /**
+   * Return the eISSN from that corresponds to the URL 
+   * of an article in that journal or series.
+   * The value returned is without punctuation.
    * 
    * @param articleUrl the URL of the article
    * @return the eISSN for the given URL or null if not available
    */
-  static public String getJournalEissnFromArticleUrl(String articleUrl) {
+  static public String getEissnFromArticleUrl(String articleUrl) {
     // get the TdbAu from the AU
     TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
     if (tdbAu == null) {
+      queryLog.debug2("No TdbAu for article url: " + articleUrl);
       return null;
     }
     String eissn = tdbAu.getEissn();
-    return (eissn == null) ? null : eissn.replaceAll("-", "");
+    return unpunctuate(eissn);
   }
 
   /**
-   * Return the journal eISSN from that corresponds
-   * to the auId of an AU in that journal.
+   * Return the eISSN from that corresponds to the auId 
+   * of an AU in that journal or series
+   * The value returned is without punctuation.
    * 
    * @param pluginId the pluginID of an article AU
    * @param auKey the auKey of an article AU
    * @return the eISSN for the given auId or null if not available
    */
-  static public String getJournalEissnFromAuId(String pluginId, String auKey) {
+  static public String getEissnFromAuId(String pluginId, String auKey) {
     TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
     if (tdbAu == null) {
+      queryLog.debug2(  "No TdbAu for pluginId: " + pluginId 
+                      + " auKey: " + auKey);
       return null;
     }
     String eissn = tdbAu.getEissn();
-    return (eissn == null) ? null : eissn.replaceAll("-", "");
+    return unpunctuate(eissn);
   }
 
   /**
-   * Return the journal ISSN-L from that corresponds
-   * to the URL of an article in that journal.
+   * Return the ISSN-L from that corresponds to the URL 
+   * of an article in that journal or series.
+   * The value returned is without punctuation.
    * 
    * @param articleUrl the URL of the article
    * @return the ISSN-L for the given URL or null if not available
    */
-  static public String getJournalIssnLFromArticleUrl(String articleUrl) {
+  static public String getIssnLFromArticleUrl(String articleUrl) {
     // get the TdbAu from the AU
     TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
     if (tdbAu == null) {
+      queryLog.debug2("No TdbAu for article url: " + articleUrl);
       return null;
     }
     String issnl = tdbAu.getIssnL();
-    return (issnl == null) ? null : issnl.replaceAll("-", "");
+    return unpunctuate(issnl);
   }
 
   /**
-   * Return the journal ISSN-L from that corresponds
-   * to the auId of an AU in that journal.
+   * Return the ISSN-L from that corresponds to the auId 
+   * of an AU in that journal or series.
+   * The value returned is without punctuation.
    * 
    * @param pluginId the pluginID of an article AU
    * @param auKey the auKey of an article AU
    * @return the ISSN-L for the given auId or null if not available
    */
-  static public String getJournalIssnLFromAuId(String pluginId, String auKey) {
+  static public String getIssnLFromAuId(String pluginId, String auKey) {
     TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
     if (tdbAu == null) {
       return null;
     }
     String issnl = tdbAu.getEissn();
-    return (issnl == null) ? null : issnl.replaceAll("-", "");
+    return unpunctuate(issnl);
   }
 
   /**
-   * Return a journal ISSN that corresponds
-   * to the URL of an article in that journal.
+   * Return a ISSN that corresponds to the URL 
+   * of an article in that journal or series.
+   * The value returned is without punctuation.
    * 
    * @param articleUrl the URL of the article
    * @return an ISSN for the given URL or null if not available
    */
-  static public String getJournalIssnFromArticleUrl(String articleUrl) {
+  static public String getIssnFromArticleUrl(String articleUrl) {
     // get the TdbAu from the AU
     TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
     if (tdbAu == null) {
+      queryLog.debug2("No TdbAu for article url: " + articleUrl);
       return null;
     }
     String issn = tdbAu.getIssn();
-    return (issn == null) ? null : issn.replaceAll("-", "");
+    return unpunctuate(issn);
   }
 
   /**
-   * Return a journal ISSN that corresponds
-   * to the auId of an AU in that journal.
+   * Return a ISSN that corresponds to the auId 
+   * of an AU in that journal or series.
+   * The value returned is without punctuation.
    * 
    * @param pluginId the pluginID of an article AU
    * @param auKey the auKey of an article AU
    * @return an ISSN for the given auId or null if not available
    */
-  static public String getJournalIssnFromAuId(String pluginId, String auKey) {
+  static public String getIssnFromAuId(String pluginId, String auKey) {
     TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
     if (tdbAu == null) {
+      queryLog.debug2(  "No TdbAu for pluginId: " + pluginId 
+                      + " auKey: " + auKey);
       return null;
     }
     String issn = tdbAu.getIssn();
-    return (issn == null) ? null : issn.replaceAll("-", "");
+    return unpunctuate(issn);
   }
 
   /**
-   * Return the journal print ISSN from that corresponds
-   * to the URL of an article in that journal.
+   * Return the print ISSN from that corresponds to the URL 
+   * of an article in that journal or series.
+   * The value returned is without punctuation.
    * 
    * @param articleUrl the URL of the article
    * @return the print ISSN for the given URL or null if not available
    */
-  static public String getJournalPrintIssnFromArticleUrl(String articleUrl) {
+  static public String getPrintIssnFromArticleUrl(String articleUrl) {
     // get the TdbAu from the AU
     TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
     if (tdbAu == null) {
+      queryLog.debug2("No tdbAu for articleUrl: " + articleUrl);
       return null;
     }
-    String issn = tdbAu.getPrintIssn();
-    return (issn == null) ? null : issn.replaceAll("-", "");
+    String printIssn = tdbAu.getPrintIssn();
+    return unpunctuate(printIssn);
   }
 
   /**
-   * Return the journal print ISSN from that corresponds
-   * to the auId of an AU in that journal.
+   * Return the print ISSN from that corresponds to the auId 
+   * of an AU in that journal or series
+   * The value returned is without punctuation.
    * 
    * @param pluginId the pluginID of an article AU
    * @param auKey the auKey of an article AU
    * @return the print ISSN for the given auId or null if not available
    */
-  static public String getJournalPrintIssnFromAuId(String pluginId, String auKey) {
+  static public String getPrintIssnFromAuId(String pluginId, String auKey) {
     TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
     if (tdbAu == null) {
+      queryLog.debug2(  "No tdbAu for pluginId: " + pluginId 
+                      + " auKey: " + auKey);
       return null;
     }
     String printIssn = tdbAu.getPrintIssn();
-    return (printIssn == null) ? null : printIssn.replaceAll("-", "");
+    return unpunctuate(printIssn);
   }
 
   /**
@@ -423,6 +668,7 @@ public class SqlStoredProcedures {
           return year;
         }
       } catch (NumberFormatException ex) {
+        queryLog.debug2("Year field of date is not a number: " + dateStr);
       }
     }
     return null;
@@ -438,7 +684,6 @@ public class SqlStoredProcedures {
   static public String getIngestYearFromArticleUrl(String articleUrl) {
     String ingestDate = getIngestDateFromArticleUrl(articleUrl);
     String ingestYear = getYearFromDate(ingestDate);
-    log.info("articleUrl: " + articleUrl + " ingestDate: " + ingestDate + " ingestYear: " + ingestYear);
     return ingestYear;
   }
   
@@ -450,19 +695,10 @@ public class SqlStoredProcedures {
    * @return the ingest date for the given URL or null if not available
    */
   static public String getIngestDateFromArticleUrl(String articleUrl) {
-    // get lockss daemon plugin manager
-    if (pluginManager == null) {
-      LockssDaemon daemon = LockssDaemon.getLockssDaemon();
-      if (daemon == null) {
-        log.info("no lockss daemon");
-        return null;
-      }
-      pluginManager = daemon.getPluginManager();
-    }
-    
     // get the CachedUrl from the article URL
-    CachedUrl cu = pluginManager.findCachedUrl(articleUrl);
+    CachedUrl cu = getPluginManager().findCachedUrl(articleUrl);
     if (cu == null) {
+      queryLog.debug2("No CachedUrl for articleUrl: " + articleUrl);
       return null;
     }
     
@@ -470,47 +706,131 @@ public class SqlStoredProcedures {
     CIProperties ciProps = cu.getProperties();
     String fetchTime = ciProps.getProperty(CachedUrl.PROPERTY_FETCH_TIME);
     if (fetchTime == null) {
+      log.warning("No fetch time for articleUrl: " + articleUrl);
       return null;
     }
     
-    // last-modified date is of the form: Wed, 02 Nov 2011 06:11:51 GMT 
     try {
       Date date = new Date(Long.parseLong(fetchTime));
       String ingestDate = isoDateFormatter.format(date);
       return ingestDate;
     } catch (NumberFormatException ex) {
-      log.warning("error parsing date: " + fetchTime);
+      log.warning(  "error parsing fetchtime: " + fetchTime
+                 + " for article url: " + articleUrl);
       return null;
     }
   }
   
   /**
    * Return the title from the title database that corresponds
-   * to the ISSN of the journal.
+   * to the ISBN of a book volume.
    * 
-   * @param journalIssn the ISSN of the journal
-   * @return the title for the given ISSN
+   * @param isbn the ISBN of the book
+   * @return the book title for the given ISBN
    */
-  static public String getJournalTitleFromIssn(String journalIssn) {
-    if (journalIssn == null) {
+  static public String getVolumeTitleFromIsbn(String isbn) {
+    if (isbn == null) {
       return null;
     }
 
     // get the tdb
     Tdb tdb = ConfigManager.getCurrentConfig().getTdb(); 
     if (tdb == null) {
+      log.debug2("No Tdb in configuration");
+      return null;
+    }
+  
+    // get the tdbAus for this isbn
+    Collection<TdbAu> tdbAus = tdb.getTdbAusByIsbn(isbn);
+  
+    // return the title
+    return tdbAus.isEmpty() ? null : tdbAus.iterator().next().getName();
+  }
+
+  /**
+   * Return the series title from the title database that corresponds
+   * to the ISSB of the volume.
+   * 
+   * @param isbn the ISBN of the series
+   * @return the series title for the given ISBN
+   */
+  static public String getTitleFromIsbn(String isbn) {
+    if (isbn == null) {
+      return null;
+    }
+
+    // get the tdb
+    Tdb tdb = ConfigManager.getCurrentConfig().getTdb(); 
+    if (tdb == null) {
+      log.debug2("No Tdb in configuration");
+      return null;
+    }
+  
+    // get the tdbAus from the ISBN
+    Collection<TdbAu> tdbAus = tdb.getTdbAusByIsbn(isbn);
+  
+    // return the title
+    return tdbAus.isEmpty() ? null : tdbAus.iterator().next().getJournalTitle();
+  }
+  
+  /**
+   * Return the title from the title database that corresponds
+   * to the ISSN of the journal or series.
+   * 
+   * @param issn the ISSN of the journal or series
+   * @return the title for the given ISSN
+   */
+  static public String getTitleFromIssn(String issn) {
+    if (issn == null) {
+      return null;
+    }
+
+    // get the tdb
+    Tdb tdb = ConfigManager.getCurrentConfig().getTdb(); 
+    if (tdb == null) {
+      log.debug2("No Tdb in configuration");
       return null;
     }
   
     // get the title from the ISSN
-    TdbTitle tdbTitle = tdb.getTdbTitleByIssn(journalIssn);
+    TdbTitle tdbTitle = tdb.getTdbTitleByIssn(issn);
   
     // return the title
     return tdbTitle == null ? null : tdbTitle.getName();
   }
 
   /**
-   * Return the publisher from the publisher database that corresponds
+   * Return the publisher from the title database that corresponds
+   * to the ISBN of a book volume. If the volume has multiple publishers,
+   * the name of the first one is returned.
+   * 
+   * @param journalIssn the ISSN of the journal
+   * @return the publisher for the given ISSN
+   */
+  static public String getPublisherFromIsbn(String isbn) {
+    if (isbn == null) {
+      return null;
+    }
+
+    Tdb tdb = ConfigManager.getCurrentConfig().getTdb(); 
+    if (tdb == null) {
+      log.debug2("No Tdb in configuration");
+      return null;
+    }
+  
+    // get the publisher from the ISSN
+    Collection<TdbAu> tdbAus = tdb.getTdbAusByIsbn(isbn);
+    if (tdbAus.isEmpty()) {
+      queryLog.debug2("No TdbAus for isbn: " + isbn);
+      return null;
+    }
+    
+    // return the publisher
+    return tdbAus.iterator().next().getPublisherName();
+  }
+  
+  /**
+   * Return the publisher from the title database that corresponds
    * to the ISSN of the journal.
    * 
    * @param journalIssn the ISSN of the journal
@@ -523,30 +843,20 @@ public class SqlStoredProcedures {
 
     Tdb tdb = ConfigManager.getCurrentConfig().getTdb(); 
     if (tdb == null) {
+      log.debug2("No Tdb in configuration");
       return null;
     }
   
     // get the publisher from the ISSN
     TdbTitle tdbTitle = tdb.getTdbTitleByIssn(journalIssn);
     if (tdbTitle == null) {
+      queryLog.debug2("No TdbTitle for journal issn: " + journalIssn);
       return null;
     }
     
     // return the publisher
     TdbPublisher tdbPublisher = tdbTitle.getTdbPublisher();
     return tdbPublisher == null ? null : tdbPublisher.getName();
-  }
-  
-  /**
-   * Return the journal title that corresponds to the auid of a journal AU.
-   * 
-   * @param pluginId the pluginId part of the auid
-   * @param auKey the auKey part of the auid
-   * @return the publisher for the given ISSN
-   */
-  static public String getJournalTitleFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
-    return tdbAu == null ? null : tdbAu.getJournalTitle();
   }
   
   /**
@@ -603,10 +913,6 @@ public class SqlStoredProcedures {
     }
     String ingestDate = getIngestDateFromAuId(pluginId, auKey);
     String ingestYear = getYearFromDate(ingestDate);
-    log.debug3(  "pluginId: " + pluginId
-               + " auKey: " + auKey
-               + " ingestDate: " + ingestDate 
-               + " ingestYear: " + ingestYear);
     return ingestYear;
   }
   
@@ -627,18 +933,8 @@ public class SqlStoredProcedures {
       return null;
     }
 
-    // get lockss daemon plugin manager
-    if (pluginManager == null) {
-      LockssDaemon daemon = LockssDaemon.getLockssDaemon();
-      if (daemon == null) {
-        log.info("no lockss daemon");
-        return null;
-      }
-      pluginManager = daemon.getPluginManager();
-    }
-    
     String auId = PluginManager.generateAuId(pluginId, auKey);
-    ArchivalUnit au = pluginManager.getAuFromId(auId);
+    ArchivalUnit au = getPluginManager().getAuFromId(auId);
     return getAuDateFromAu(au);
   }
   
@@ -655,6 +951,17 @@ public class SqlStoredProcedures {
   }
   
   /**
+   * Return the starting volume for the specified article URL
+   * 
+   * @param articleUrl
+   * @return the starting volume for the given url or null if not available
+   */
+  static public String getStartVolumeFromArticleUrl(String articleUrl) {
+    TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
+    return (tdbAu == null) ? null : tdbAu.getStartVolume();
+  }
+  
+  /**
    * Return the ending volume for the specified AU.
    * 
    * @param pluginId the pluginId
@@ -667,7 +974,18 @@ public class SqlStoredProcedures {
   }
   
   /**
-   * Return the starting volume for the specified AU.
+   * Return the ending volume for the specified article URL
+   * 
+   * @param articleUrl
+   * @return the ending volume for the given url or null if not available
+   */
+  static public String getEndVolumeFromArticleUrl(String articleUrl) {
+    TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
+    return (tdbAu == null) ? null : tdbAu.getEndVolume();
+  }
+  
+  /**
+   * Return the starting year for the specified AU.
    * 
    * @param pluginId the pluginId
    * @param au_key the au key
@@ -675,6 +993,17 @@ public class SqlStoredProcedures {
    */
   static public String getStartYearFromAuId(String pluginId, String auKey) {
     TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    return (tdbAu == null) ? null : tdbAu.getStartYear();
+  }
+  
+  /**
+   * Return the starting year for the specified article URL.
+   * 
+   * @param articleUrl the article URL
+   * @return the starting year for the given url or null if not available
+   */
+  static public String getStartYearFromArticleUrl(String articleUrl) {
+    TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
     return (tdbAu == null) ? null : tdbAu.getStartYear();
   }
   
@@ -687,6 +1016,17 @@ public class SqlStoredProcedures {
    */
   static public String getEndYearFromAuId(String pluginId, String auKey) {
     TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    return (tdbAu == null) ? null : tdbAu.getEndYear();
+  }
+  
+  /**
+   * Return the ending year for the specified article URL.
+   * 
+   * @param articleUrl the article URL
+   * @return the ending year for the given url or null if not available
+   */
+  static public String getEndYearFromArticleUrl(String articleUrl) {
+    TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
     return (tdbAu == null) ? null : tdbAu.getEndYear();
   }
   
