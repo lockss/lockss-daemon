@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.220 2011-08-21 23:22:49 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.221 2012-01-16 18:09:13 pgust Exp $
  */
 
 /*
@@ -232,7 +232,7 @@ public class PluginManager
   // maps auid to AU
   private Map auMap = Collections.synchronizedMap(new HashMap());
   // A set of all aus sorted by title.  The UI relies on this behavior.
-  private Set auSet = new TreeSet(auComparator);
+  private Set<ArchivalUnit> auSet = new TreeSet<ArchivalUnit>(auComparator);
   private List<ArchivalUnit> auList = null;
 
   // maps host to collections of AUs.  Used to quickly locate candidate AUs
@@ -1858,7 +1858,7 @@ public class PluginManager
    */
   // putting this here in PluginManager saves having to make an extra copy
   // of auSet
-  public List getRandomizedAus() {
+  public List<ArchivalUnit> getRandomizedAus() {
     synchronized (auSet) {
       return CollectionUtil.randomPermutation(auSet);
     }
