@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.5 2011-06-26 05:42:06 pgust Exp $
+ * $Id: MetadataField.java,v 1.6 2012-01-16 17:53:17 pgust Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class MetadataField {
 	  throws MetadataException.ValidationException {
 	// normalize away leading "doi:" before checking validity
 	String doi = StringUtils.removeStartIgnoreCase(val, PROTOCOL_DOI);
-	if (!MetadataUtil.isDOI(doi)) {
+	if (!MetadataUtil.isDoi(doi)) {
 	  throw new MetadataException.ValidationException("Illegal DOI: "
 							  + val);
 	}
@@ -74,7 +74,7 @@ public class MetadataField {
 	  throws MetadataException.ValidationException {
 	// normalize away leading "issn:" before checking validity
 	String issn = StringUtils.removeStartIgnoreCase(val, PROTOCOL_ISSN);
-	if (!MetadataUtil.isISSN(issn)) {
+	if (!MetadataUtil.isIssn(issn)) {
 	  throw new MetadataException.ValidationException("Illegal ISSN: "
 							  + val);
 	}
@@ -90,7 +90,7 @@ public class MetadataField {
 	  throws MetadataException.ValidationException {
 	// normalize away leading "eissn:" before checking validity
 	String issn = StringUtils.removeStartIgnoreCase(val, PROTOCOL_EISSN);
-	if (!MetadataUtil.isISSN(issn)) {
+	if (!MetadataUtil.isIssn(issn)) {
 	  throw new MetadataException.ValidationException("Illegal EISSN: "
 							  + val);
 	}
@@ -106,7 +106,7 @@ public class MetadataField {
         throws MetadataException.ValidationException {
       // normalize away leading "isbn:" before checking validity
       String isbn = StringUtils.removeStartIgnoreCase(val, PROTOCOL_ISBN);
-      if (!MetadataUtil.isISBN(isbn, false)) {  // ignore publisher malformed ISBNs
+      if (!MetadataUtil.isIsbn(isbn, false)) {  // ignore publisher malformed ISBNs
         throw new MetadataException.ValidationException("Illegal ISBN: "
                                                         + val);
       }

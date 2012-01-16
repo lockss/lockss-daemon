@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.2 2011-12-19 11:14:27 easyonthemayo Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.3 2012-01-16 17:52:18 pgust Exp $
  */
 
 /*
@@ -162,17 +162,17 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
 
   // Setters (chainable)
   public BibliographicItemAdapter setPrintIssn(String printIssn) {
-    if (MetadataUtil.isISSN(printIssn)) this.printIssn = printIssn;
+    if (MetadataUtil.isIssn(printIssn)) this.printIssn = printIssn;
     return this;
   }
 
   public BibliographicItemAdapter setEissn(String eIssn) {
-    if (MetadataUtil.isISSN(eIssn)) this.eIssn = eIssn;
+    if (MetadataUtil.isIssn(eIssn)) this.eIssn = eIssn;
     return this;
   }
 
   public BibliographicItemAdapter setIssnL(String issnL) {
-    if (MetadataUtil.isISSN(issnL)) this.issnL = issnL;
+    if (MetadataUtil.isIssn(issnL)) this.issnL = issnL;
     return this;
   }
 
