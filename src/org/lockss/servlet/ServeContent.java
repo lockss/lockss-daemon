@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.42 2011-11-01 11:41:58 pgust Exp $
+ * $Id: ServeContent.java,v 1.43 2012-01-16 17:20:10 pgust Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.*;
 import java.util.List;
 import java.util.regex.*;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.commons.collections.*;
 import org.apache.commons.httpclient.util.DateParseException;
@@ -47,12 +48,14 @@ import org.apache.commons.lang.StringEscapeUtils;
 import org.mortbay.http.*;
 import org.mortbay.html.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.LockssUrlConnection;
 import org.lockss.util.urlconn.LockssUrlConnectionPool;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.BaseUrlCacher;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.state.*;
 import org.lockss.rewriter.*;
@@ -438,30 +441,31 @@ public class ServeContent extends LockssServlet {
 
     if (isNeverProxy()) {
       if (isInCache) {
-	serveFromCache();
-	logAccess("200 from cache");
+        serveFromCache();
+        logAccess("200 from cache");
       } else {
-	handleMissingUrlRequest(url, PubState.KnownDown);
+        handleMissingUrlRequest(url, PubState.KnownDown);
       }
       return;
     }
-
+    
     LockssUrlConnectionPool connPool = proxyMgr.getNormalConnectionPool();
 
     if (!isInCache && isHostDown) {
       switch (proxyMgr.getHostDownAction()) {
       case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504:
-	handleMissingUrlRequest(url, PubState.RecentlyDown);
-	return;
+        handleMissingUrlRequest(url, PubState.RecentlyDown);
+        return;
       case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_QUICK:
-	connPool = proxyMgr.getQuickConnectionPool();
-	break;
+        connPool = proxyMgr.getQuickConnectionPool();
+        break;
       default:
       case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_NORMAL:
-	connPool = proxyMgr.getNormalConnectionPool();
-	break;
+        connPool = proxyMgr.getNormalConnectionPool();
+        break;
       }
     }
+    
     // Send request to publisher
     LockssUrlConnection conn = null;
     PubState pstate = PubState.Unknown;
@@ -486,16 +490,21 @@ public class ServeContent extends LockssServlet {
       if (conn != null) {
         int response = conn.getResponseCode();
         if (log.isDebug2())
-	  log.debug2("response: " + response + " " + conn.getResponseMessage());
+          log.debug2("response: " + response + " " + conn.getResponseMessage());
         if (response == HttpResponse.__200_OK) {
           // If publisher responds with content, serve it to user
-	  // XXX Should check for a login page here
-          serveFromPublisher(conn);
-	  logAccess(present(isInCache, "200 from publisher"));
-          return;
+          // XXX Should check for a login page here
+          try {
+            serveFromPublisher(conn);
+            logAccess(present(isInCache, "200 from publisher"));
+            return;
+          } catch (CacheException.PermissionException ex) {
+            logAccess("login exception: " + ex.getMessage());
+            pstate = PubState.NoContent;
+          }
         } else {
-	  pstate = PubState.NoContent;
-	}
+      	  pstate = PubState.NoContent;
+      	}
       }
     } finally {
       // ensure connection is closed
@@ -529,12 +538,12 @@ public class ServeContent extends LockssServlet {
         if (!HeaderUtil.isEarlier(ifModifiedSince, cuLastModified)) {
           ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
           String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
-	  if (log.isDebug3()) {
-	    log.debug3( "Cached content not modified for: " + url
-			+ " mime type=" + mimeType
-			+ " size=" + cu.getContentSize()
-			+ " cu=" + cu);
-	  }
+      	  if (log.isDebug3()) {
+      	    log.debug3( "Cached content not modified for: " + url
+      			+ " mime type=" + mimeType
+      			+ " size=" + cu.getContentSize()
+      			+ " cu=" + cu);
+      	  }
           resp.setStatus(HttpResponse.__304_Not_Modified);
           return;
         }
@@ -575,6 +584,127 @@ public class ServeContent extends LockssServlet {
   }
   
   /**
+   * Return the input stream for this connection, after first determining
+   * that it is not to a login page. Be sure to close the returned input
+   * stream when done with it.
+   *  
+   * @param conn the connection
+   * @return the input stream
+   * @throws IOException if error getting input stream
+   * @throws CacheException.PermissionException if the connection is to a 
+   * login page or there was an error checking for a login page
+   */
+  private InputStream getInputStream(LockssUrlConnection conn) 
+    throws CacheException.PermissionException, IOException {
+    // get the input stream from the connection
+    InputStream input = conn.getResponseInputStream();
+
+    // only check for HTML login pages to avoid doing unnecessary
+    // work for other document types; publishers typically return 
+    // a 200 response code and an HTML page with a login form
+    String ctype = conn.getResponseContentType();
+    String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
+    if ("text/html".equalsIgnoreCase(mimeType)) {
+      // build list of response header properties
+      CIProperties headers = new CIProperties();
+      for (int i = 0; true; i++) {
+        String key = conn.getResponseHeaderFieldKey(i);
+        String val = conn.getResponseHeaderFieldVal(i);
+        if ((key == null) && (val == null)) {
+          break;
+        }
+        headers.put(key, val);
+      }
+      // throws CacheException.PermissionException if found login page
+      input = checkLoginPage(input, headers);
+    }
+    
+    return input;
+  }
+    
+  /**
+   * Check whether the input stream is to a publisher's html permission page.
+   * Throws a CacheExcepiton.PermissionException if so; otherwise returns an
+   * input stream positioned at the same position. The original input stream
+   * will be closed if a new one is created.
+   * 
+   * @param input an input stream
+   * @param headers a set of header properties
+   * @return an input stream positioned at the same position as the original
+   *  one if the original stream is not a login page
+   * @throws CacheException.PermissionException if the connection is to a 
+   *  login page or the LoginPageChecker for the plugin reported an error
+   * @throws IOException if IO error while checking the stream
+   */
+  private InputStream checkLoginPage(InputStream input, CIProperties headers)
+    throws CacheException.PermissionException, IOException {
+
+    LoginPageChecker checker = au.getCrawlSpec().getLoginPageChecker();
+    if (checker != null) {
+      InputStream oldInput = input;
+      
+      // buffer html page stream to allow login page checker to read it
+      int limit = CurrentConfig.getIntParam(
+                    BaseUrlCacher.PARAM_LOGIN_CHECKER_MARK_LIMIT,
+                    BaseUrlCacher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT);
+      DeferredTempFileOutputStream dos = 
+        new DeferredTempFileOutputStream(limit);
+      try {
+        StreamUtil.copy(input, dos);
+        if (dos.isInMemory()) {
+          input = new ByteArrayInputStream(dos.getData());
+        } else {
+          // create an input stream whose underlying file is deleted
+          // when the input stream closes.
+          File tempFile = null; 
+          try {
+            tempFile = dos.getFile();
+            input = new CloseCallbackInputStream(
+                          new FileInputStream(tempFile),
+                          new CloseCallbackInputStream.Callback() {
+                            public void streamClosed(Object file) {
+                              FileUtils.deleteQuietly(((File)file));
+                            }
+                          },
+                          tempFile);
+          } catch (FileNotFoundException fnfe) {
+            FileUtils.deleteQuietly(tempFile);
+            throw fnfe;
+          }
+        }
+      } finally {
+        IOUtil.safeClose(oldInput);
+        IOUtil.safeClose(dos);
+      }
+      
+      // create reader for input stream
+      String ctype = headers.getProperty("Content-Type");
+      String charset = 
+        (ctype == null) ? null : HeaderUtil.getCharsetFromContentType(ctype);
+      if (charset == null) {
+        charset = Constants.DEFAULT_ENCODING;
+      }
+
+      Reader reader = new InputStreamReader(input, charset);
+  
+      try {
+        if (checker.isLoginPage(headers, reader)) {
+          throw new CacheException.PermissionException("Found a login page");
+        }
+        input.reset();
+        
+      } catch (PluginException e) {
+        CacheException.PermissionException ex = 
+          new CacheException.PermissionException("Error checking login page");
+        ex.initCause(e);
+        throw ex;
+      }
+    }
+    
+    return input;
+  }
+
+  /**
    * Serve content from publisher.
    * 
    * @param conn the connection
@@ -606,36 +736,37 @@ public class ServeContent extends LockssServlet {
       val=conn.getResponseHeaderFieldVal(h);
     }
     
-    // get input stream and encoding
-    InputStream respStrm = conn.getResponseInputStream();
-    String charset = HeaderUtil.getCharsetFromContentType(ctype);
     String contentEncoding = conn.getResponseContentEncoding();
+    long responseContentLength = conn.getResponseContentLength();
+
+    // get input stream and encoding
+    InputStream respStrm = getInputStream(conn);
 
     LinkRewriterFactory lrf = getLinkRewriterFactory(mimeType);
     if (lrf != null) {
       // we're going to rewrite, must deal with content encoding.
       if (contentEncoding != null) {
-	if (log.isDebug2())
-	  log.debug2("Wrapping Content-Encoding: " + contentEncoding);
-	try {
-	  respStrm =
-	    StreamUtil.getUncompressedInputStream(respStrm, contentEncoding);
-	  // Rewritten response is not encoded
-	  contentEncoding = null;
-	} catch (UnsupportedEncodingException e) {
-	  log.warning("Unsupported Content-Encoding: " + contentEncoding +
-		      ", not rewriting " + url);
-	  lrf = null;
-	}
-
+        if (log.isDebug2())
+          log.debug2("Wrapping Content-Encoding: " + contentEncoding);
+      	try {
+      	  respStrm =
+      	    StreamUtil.getUncompressedInputStream(respStrm, contentEncoding);
+      	  // Rewritten response is not encoded
+      	  contentEncoding = null;
+      	} catch (UnsupportedEncodingException e) {
+      	  log.warning("Unsupported Content-Encoding: " + contentEncoding +
+      		      ", not rewriting " + url);
+      	  lrf = null;
+      	}
       }
     }
     if (contentEncoding != null) {
       resp.setHeader(HttpFields.__ContentEncoding, contentEncoding);
     }
 
+    String charset = HeaderUtil.getCharsetFromContentType(ctype);
     handleRewriteInputStream(respStrm, mimeType, charset,
-			     conn.getResponseContentLength());
+			     responseContentLength);
   }
 
   // Patterm to extract url query arg from Referer string
@@ -675,8 +806,8 @@ public class ServeContent extends LockssServlet {
       }
 
       if (HttpFields.__Referer.equalsIgnoreCase(hdr)) {
-	referer = req.getHeader(hdr);
-	continue;
+      	referer = req.getHeader(hdr);
+      	continue;
       }
 
       // XXX Conceivably should suppress Accept-Encoding: header if it
