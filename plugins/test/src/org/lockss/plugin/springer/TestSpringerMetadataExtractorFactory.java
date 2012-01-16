@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpringerMetadataExtractorFactory.java,v 1.6 2011-10-05 05:57:51 tlipkis Exp $
+ * $Id: TestSpringerMetadataExtractorFactory.java,v 1.7 2012-01-16 18:25:31 pgust Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class TestSpringerMetadataExtractorFactory extends LockssTestCase {
       assertNotNull(md);
       String doi = md.get(MetadataField.FIELD_DOI);
       log.debug(fcu.getUrl() + " doi " + doi);
-      assertTrue(MetadataUtil.isDOI(doi));
+      assertTrue(MetadataUtil.isDoi(doi));
       foundDoiSet.add(doi);
     }
     log.debug("Article count is " + count);
