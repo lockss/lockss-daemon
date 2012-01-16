@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.15 2011-11-08 21:41:08 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.16 2012-01-16 18:02:02 pgust Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     Properties tdbProps = new Properties();
     tdbProps = new Properties();
     tdbProps.setProperty("title", "Title[10.0135/12345678]");
-    tdbProps.setProperty("isbn", "976-1-58562-317-7");
+    tdbProps.setProperty("attributes.isbn", "976-1-58562-317-7");
     tdbProps.setProperty("journalTitle", "Journal[10.0135/12345678]");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.0135/12345678]");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin3");
@@ -120,7 +120,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
 
     tdbProps = new Properties();
     tdbProps.setProperty("title", "Title[Manual of Clinical Psychopharmacology]");
-    tdbProps.setProperty("isbn", "978-1-58562-317-4");
+    tdbProps.setProperty("attributes.isbn", "978-1-58562-317-4");
     tdbProps.setProperty("journalTitle", "Manual of Clinical Psychopharmacology");
     tdbProps.setProperty("attributes.publisher", "Publisher[Manual of Clinical Psychopharmacology]");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin2");
@@ -658,51 +658,51 @@ public class TestOpenUrlResolver extends LockssTestCase {
     // expect url for chapter on specified page
     params = new HashMap<String,String>();
     params.put("rft.pub", "Publisher[Manual of Clinical Psychopharmacology]");
-    params.put("rft.btitle", "Manual of Clinical Psychopharmacology");
+    params.put("rft.btitle", "Title[Manual of Clinical Psychopharmacology]");
     params.put("rft.spage", "1");
     url = openUrlResolver.resolveOpenUrl(params);
-	if (disableMetadataManager) {
-	  assertEquals("http://www.title2.org/", url);
-	} else {
-	  assertEquals("http://www.title2.org/plugin2/1993/p1", url);
-	}
+  	if (disableMetadataManager) {
+  	  assertEquals("http://www.title2.org/", url);
+  	} else {
+  	  assertEquals("http://www.title2.org/plugin2/1993/p1", url);
+  	}
 
     
     // from SimulatedPlugin2 book title and page only, without publisher
 	// expect url for chapter on specified page
     params.clear();
-    params.put("rft.btitle", "Manual of Clinical Psychopharmacology");
+    params.put("rft.btitle", "Title[Manual of Clinical Psychopharmacology]");
     params.put("rft.spage", "1");
     url = openUrlResolver.resolveOpenUrl(params);
-	if (disableMetadataManager) {
-	  assertEquals("http://www.title2.org/", url);
-	} else {
-	  assertEquals("http://www.title2.org/plugin2/1993/p1", url);
-	}
+  	if (disableMetadataManager) {
+  	  assertEquals("http://www.title2.org/", url);
+  	} else {
+  	  assertEquals("http://www.title2.org/plugin2/1993/p1", url);
+  	}
 
     // from SimulatedPlugin2 book title and page only, without publisher
 	// expect url for specified article
     params.clear();
-    params.put("rft.btitle", "Manual of Clinical Psychopharmacology");
+    params.put("rft.btitle", "Title[Manual of Clinical Psychopharmacology]");
     params.put("rft.atitle", "Title[10.1357/9781585623174.1]");
     url = openUrlResolver.resolveOpenUrl(params);
-	if (disableMetadataManager) {
-	  assertEquals("http://www.title2.org/", url);
-	} else {
-	  assertEquals("http://www.title2.org/plugin2/1993/p1", url);
-	}
+  	if (disableMetadataManager) {
+  	  assertEquals("http://www.title2.org/", url);
+  	} else {
+  	  assertEquals("http://www.title2.org/plugin2/1993/p1", url);
+  	}
 
     // from SimulatedPlugin2 book title only
     // expect url of book landing page
     params.clear();
-    params.put("rft.btitle", "Manual of Clinical Psychopharmacology");
+    params.put("rft.btitle", "Title[Manual of Clinical Psychopharmacology]");
     url = openUrlResolver.resolveOpenUrl(params);
     assertEquals("http://www.title2.org/", url);
 
     // from SimulatedPlugin2 book title and year
     // expect url of book landing page
     params.clear();
-    params.put("rft.btitle", "Manual of Clinical Psychopharmacology");
+    params.put("rft.btitle", "Title[Manual of Clinical Psychopharmacology]");
     params.put("rft.date", "1993");
     url = openUrlResolver.resolveOpenUrl(params);
     assertEquals("http://www.title2.org/plugin2/1993", url);
@@ -856,7 +856,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     // book title and page only, without publisher
     // expect article url because start page is unique within the book
     params.clear();
-    params.put("rft.btitle", "Journal[10.0135/12345678]");
+    params.put("rft.btitle", "Title[10.0135/12345678]");
     params.put("rft.spage", "1");
     url = openUrlResolver.resolveOpenUrl(params);
     if (disableMetadataManager) {
@@ -869,7 +869,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     // book title only, without publisher
     // expect au url for book
     params.clear();
-    params.put("rft.btitle", "Journal[10.0135/12345678]");
+    params.put("rft.jtitle", "Journal[10.0135/12345678]");
     url = openUrlResolver.resolveOpenUrl(params);
     assertEquals("http://www.title3.org/", url);
   }
