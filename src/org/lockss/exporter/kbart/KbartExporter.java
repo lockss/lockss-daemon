@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.16 2012-01-12 12:47:21 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.17 2012-01-17 19:43:50 easyonthemayo Exp $
  */
 
 /*
@@ -84,9 +84,8 @@ public abstract class KbartExporter {
 
   private static Logger log = Logger.getLogger("KbartExporter");
 
-   // Footnotes for the interface options
-  private static final String CSV_NOTE = "CSV export values are quoted "+
-  "where necessary, and quotes within values are escaped.";
+  // Footnotes for the interface options
+  private static final String CSV_NOTE = "CSV files can be imported into spreadsheet programs.";
   
   //private static final String TSV_NOTE = "The TSV export values are quoted "+
   //"where necessary, and quotes within values are escaped.";

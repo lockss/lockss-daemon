@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.23 2012-01-12 00:49:40 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.24 2012-01-17 19:43:50 easyonthemayo Exp $
  */
 
 /*
@@ -551,29 +551,29 @@ public class ListHoldings extends LockssServlet {
     form.add(new Input(Input.Hidden, "isForm", "true"));
     if (isEnablePreserved()) {
       form.add("View or export a list of titles " +
-      	"that are available for preservation, configured for collection, " +
-    	"or preserved in your LOCKSS box."
+      	"that are available for collection, configured for collection, " +
+    	"or actually collected in your LOCKSS box."
       );
-      // Footenote for healthmetric-based preserved option
+      // Footnote for HealthMetric-based preserved option
       /*form.add(addFootnote("Titles in the 'ingested' output are " +
     	"included based on a metric which assigns each configured volume " +
     	"a health value. This health value is currently experimental and the " +
     	"output of this option should not yet be considered authoritative."
       ));*/
-      form.add(addFootnote("Titles in the 'collected' output are " +
+      /*form.add(addFootnote("Titles in the 'collected' output are " +
           "included based on whether each configured volume appears " +
           "to have 'substance', that is whether enough material has been " +
-          "ingested."
+          "ingested."*/
       ));
     } else {
       form.add("View or export a list of titles " +
-      "available for preservation, or configured for collection in " +
+      "available for collection, or configured for collection in " +
       "your LOCKSS box."
       );
     }
     form.add(BREAK);
     form.add(String.format(
-	"There are %s titles available for preservation, from %s publishers.", 
+	"There are %s titles available for collection, from %s publishers.", 
 	tdb.getTdbTitleCount(), tdb.getTdbPublisherCount()
     ));
     // Add an option to select the scope of exported holdings
@@ -643,21 +643,21 @@ public class ListHoldings extends LockssServlet {
     Table tab2 = new Table();
     tab.add(tab2);
     for (OutputFormat fmt : OutputFormat.values()) {
-    tab2.newRow();
-    tab2.newCell();
-	//String link = String.format("%s?%s=%s", thisPath, KEY_FORMAT, fmt.name());
-	//String label = "Export as "+fmt.getLabel();
-	//subTab.add( new Link(link, label) );
-	boolean selected = outputFormat!=null ?
-            fmt==outputFormat : fmt==OUTPUT_DEFAULT;
-	tab2.add(ServletUtil.radioButton(this, KEY_FORMAT,
-            fmt.name(), fmt.getLabel(), selected));
-	tab2.add(addFootnote(fmt.getFootnote()));
+      tab2.newRow();
+      tab2.newCell();
+      //String link = String.format("%s?%s=%s", thisPath, KEY_FORMAT, fmt.name());
+      //String label = "Export as "+fmt.getLabel();
+      //subTab.add( new Link(link, label) );
+      boolean selected = outputFormat!=null ?
+        fmt==outputFormat : fmt==OUTPUT_DEFAULT;
+      tab2.add(ServletUtil.radioButton(this, KEY_FORMAT,
+                                       fmt.name(), fmt.getLabel(), selected));
+      tab2.add(addFootnote(fmt.getFootnote()));
     }
     addBlankRow(tab);
   }
- 
-  
+
+
   /**
    * Create a table listing KBART field labels and descriptions.
    */
@@ -790,8 +790,8 @@ public class ListHoldings extends LockssServlet {
         tab.add(notAvailFootnote);
       } else {
         tab.add(addFootnote("Health ratings will only be shown for titles which " +
-            "you have configured on your box. The '"+ContentScope.ALL+"' export " +
-            "will not show health ratings."));
+                            "you have configured on your box. The '"+ContentScope.ALL+"' export " +
+                            "will not show health ratings."));
       }
     }
     // Add buttons
