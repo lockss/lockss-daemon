@@ -495,13 +495,13 @@ comment[mn20] = URL with 403 Forbidden error
       param[journal_id] = pasc
       attr[journal_id] = pasc
   
-      au < testing ; 2005 ; Pacific Science Volume 59 ; 59 >
-      au < testing ; 2006 ; Pacific Science Volume 60 ; 60 >
-      au < testing ; 2007 ; Pacific Science Volume 61 ; 61 >
-      au < testing ; 2008 ; Pacific Science Volume 62 ; 62 >
-      au < testing ; 2009 ; Pacific Science Volume 63 ; 63 >
-      au < testing ; 2010 ; Pacific Science Volume 64 ; 64 > 
-      au < testing ; 2011 ; Pacific Science Volume 65 ; 65 >           
+      au < ready ; 2005 ; Pacific Science Volume 59 ; 59 >
+      au < ready ; 2006 ; Pacific Science Volume 60 ; 60 >
+      au < ready ; 2007 ; Pacific Science Volume 61 ; 61 >
+      au < ready ; 2008 ; Pacific Science Volume 62 ; 62 >
+      au < ready ; 2009 ; Pacific Science Volume 63 ; 63 >
+      au < ready ; 2010 ; Pacific Science Volume 64 ; 64 > 
+      au < ready ; 2011 ; Pacific Science Volume 65 ; 65 >           
 
     }
     
