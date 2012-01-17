@@ -6,7 +6,7 @@
 
 for i in ingest1 ingest2 ingest3 ingest4
 do
-$(dirname "$0")/../../bulk_add/bin/bulk_add $i.clockss.org 8081 $*
+$(dirname "$0")/../bulk_add/bin/bulk_add $i.clockss.org 8081 $*
 # Use sleep command for debug.
 #sleep 5
 done
