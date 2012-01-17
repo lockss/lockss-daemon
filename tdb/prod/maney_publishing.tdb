@@ -136,6 +136,7 @@
     param[journal_id] = atmp 
     param[journal_issn] = 0003-4983
     implicit < status ; year ; name ; param[volume_name] >
+    comment[continued_by] = 2047-7724
     comment[dnp] = no manifest pages and html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 2002 ; Annals of Tropical Medicine and Parasitology Volume 96 ; 96 > 
@@ -168,6 +169,7 @@
     param[journal_id] = atp 
     param[journal_issn] = 0272-4936
     implicit < status ; year ; name ; param[volume_name] >
+    comment[continued_by] = 2046-9047 
     comment[dnp] = no manifest pages and html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 2002 ; Annals of Tropical Paediatrics: International Child Health Volume 22 ; 22 > 
@@ -294,6 +296,27 @@
     au < manifest ; 2000 ; British Corrosion Journal Volume 35 ; 35 > 
     au < manifest ; 2001 ; British Corrosion Journal Volume 36 ; 36 > 
     au < manifest ; 2002 ; British Corrosion Journal Volume 37 ; 37 >
+
+  }
+
+  {
+
+    title <
+      name = The British Journal of Development Disabilities ;
+      issn = 0969-7950
+    >
+
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = maney
+    param[journal_id] = bjdd 
+    param[journal_issn] = 0969-7950
+    implicit < status ; year ; name ; param[volume_name] >
+    comment[0] = changing name to International Journal of Developmental Disabilities (IJDD) in 2012
+   
+    au < manifest ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
 
   }
 
@@ -482,7 +505,7 @@
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
     param[publisher_id] = maney
-    param[journal_id] =   
+    param[journal_id] = cmq  
     param[journal_issn] = 0008-4433
     implicit < status ; year ; name ; param[volume_name] >
     comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
@@ -639,6 +662,29 @@
     au < manifest ; 2010 ; Central Europe Volume 8 ; 8 > 
     au < testing ; 2011 ; Central Europe Volume 9 ; 9 > 
 
+  }
+
+  {
+
+    title <
+      name = The Chinese Historical Review ;
+      issn = 1547-402X ;
+      eissn = 2048-7827 ;
+      issnl = 1547-402X
+    >
+
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = maney
+    param[journal_id] = tcr
+    param[journal_issn] = 1547-402X
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
+   
+    au < manifest ; exists ; 2011 ; The Chinese Historical Review Volume 18 ; 18 >    
+    
   }
 
   {
@@ -1047,6 +1093,30 @@
   {
 
     title <
+      name = English Heritage Historical Review ;
+      issn = 1752-0169
+    >
+
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = maney
+    param[journal_id] = ehr
+    param[journal_issn] = 1752-0169
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < manifest ; 2006 ; English Heritage Historical Review Volume 1 ; 1 > 
+    au < manifest ; 2007 ; English Heritage Historical Review Volume 2 ; 2 >
+    au < manifest ; 2008 ; English Heritage Historical Review Volume 3 ; 3 >     
+    au < manifest ; 2009 ; English Heritage Historical Review Volume 4 ; 4 >   
+    au < manifest ; 2010 ; English Heritage Historical Review Volume 5 ; 5 >
+   
+  }
+
+  {
+
+    title <
       name = Environmental Archaeology ;
       issn = 1461-4103 ;
       eissn = 1749-6314 ;
@@ -1078,6 +1148,28 @@
     au < manifest ; 2009 ; Environmental Archaeology Volume 14 ; 14 > 
     au < manifest ; 2010 ; Environmental Archaeology Volume 15 ; 15 > 
 
+  }
+
+  {
+
+    title <
+      name = European Journal of Archaeology ;
+      issn = 1461-9571 ;
+      eissn = 1741-2722 ;
+      issnl = 1461-9571
+    >
+
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = maney
+    param[journal_id] =  eja
+    param[journal_issn] = 1461-9571
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < manifest ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
+    
   }
 
   {
@@ -3041,6 +3133,27 @@
   {
 
     title <
+      name = New Journal of Botany ;
+      issn = 2042-3489
+    >
+
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = maney
+    param[journal_id] = njb 
+    param[journal_issn] = 2042-3489
+    implicit < status ; year ; name ; param[volume_name] >
+    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+
+    au < doNotProcess ; 2011 ; New Journal of Botany Volume 1 ; 1 > 
+
+  }
+
+  {
+
+    title <
       name = Northern History ;
       issn = 0078-172X ;
       eissn = 1745-8706 ;
@@ -3233,6 +3346,26 @@
   {
 
     title <
+      name = Paediatrics and International Child Health ;
+      issn = 2046-9047 
+    >
+
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = maney
+    param[journal_id] = pch 
+    param[journal_issn] = 2046-9047
+    implicit < status ; year ; name ; param[volume_name] >
+    comment[continues] = 0272-4936 
+    comment[0] = forthcoming in 2012
+    
+  }
+
+  {
+
+    title <
       name = The Pain Clinic ;
       issn = 0169-1112 ;
       eissn = 1568-5691 ; 
@@ -3312,6 +3445,26 @@
     au < manifest ; 2004 ; Papillomavirus Report Volume 15 ; 15 > 
     au < manifest ; 2005 ; Papillomavirus Report Volume 16 ; 16 > 
 
+  }
+
+  {
+
+    title <
+      name = Pathogens and Global Health ;
+      issn = 2047-7724
+    >
+
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = maney
+    param[journal_id] = pgh
+    param[journal_issn] = 2047-7724
+    implicit < status ; year ; name ; param[volume_name] >
+    comment[continues] = 0003-4983
+    comment[0] = forthcoming in 2012
+    
   }
 
   {
@@ -3601,6 +3754,29 @@
   {
 
     title <
+      name = Republican China ;
+      issn = 0893-2344 
+    >
+
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = maney
+    param[journal_id] = repc
+    param[journal_issn] = 0893-2344
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < manifest ; 1994-1995 ; Republican China Volume 20 ; 20 > 
+    au < manifest ; 1996 ; Republican China Volume 21 ; 21 >
+    au < manifest ; 1996-1997 ; Republican China Volume 22 ; 22 >
+    
+  }
+
+  {
+
+    title <
       name = Romance Studies ;
       issn = 0263-9904 ;
       eissn = 1745-8153 ;
@@ -3776,6 +3952,27 @@
     au < manifest ; 2010 ; Slavonica Volume 16 ; 16 > 
     au < manifest ; 2011 ; Slavonica Volume 17 ; 17 > 
 
+  }
+
+  {
+
+    title <
+      name = Studies in Conservation ;
+      issn = 0039-3630
+    >
+
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = maney
+    param[journal_id] = sic 
+    param[journal_issn] = 0039-3630
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
+ 
+   au < manifest ; exists ; 2011 ; Studies in Conservation Volume 56 ; 56 > 
+    
   }
 
   {
@@ -4291,7 +4488,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1971 ; Vernacular Architecture Volume 1 ; 1 > 
-    au < doesNotExist ; ; Vernacular Architecture Volume 2 ; 2 > 
+    au < doesNotExist ; 0 ; Vernacular Architecture Volume 2 ; 2 > 
     au < manifest ; 1972 ; Vernacular Architecture Volume 3 ; 3 > 
     au < manifest ; 1973 ; Vernacular Architecture Volume 4 ; 4 > 
     au < manifest ; 1974 ; Vernacular Architecture Volume 5 ; 5 > 
