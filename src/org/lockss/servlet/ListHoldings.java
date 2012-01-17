@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.24 2012-01-17 19:43:50 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.25 2012-01-17 23:44:31 pgust Exp $
  */
 
 /*
@@ -563,8 +563,8 @@ public class ListHoldings extends LockssServlet {
       /*form.add(addFootnote("Titles in the 'collected' output are " +
           "included based on whether each configured volume appears " +
           "to have 'substance', that is whether enough material has been " +
-          "ingested."*/
-      ));
+          "ingested."
+      ));*/
     } else {
       form.add("View or export a list of titles " +
       "available for collection, or configured for collection in " +
