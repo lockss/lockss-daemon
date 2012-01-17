@@ -324,7 +324,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[0] = changing name to International Journal of Developmental Disabilities (IJDD) in 2012
     
-    au < manifest ; exists ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
+    au < crawling ; exists ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
 
   }
 
@@ -696,7 +696,7 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
    
-    au < manifest ; exists ; 2011 ; The Chinese Historical Review Volume 18 ; 18 >    
+    au < crawling ; exists ; 2011 ; The Chinese Historical Review Volume 18 ; 18 >    
     
   }
 
@@ -1194,7 +1194,7 @@
     param[journal_issn] = 1461-9571
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < manifest ; exists ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
+    au < crawling ; exists ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
     
   }
 
@@ -4086,7 +4086,7 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
  
-   au < manifest ; exists ; 2011 ; Studies in Conservation Volume 56 ; 56 > 
+   au < crawling ; exists ; 2011 ; Studies in Conservation Volume 56 ; 56 > 
     
   }
 
@@ -4616,7 +4616,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < manifest ; exists ; 1971 ; Vernacular Architecture Volume 1 ; 1 > 
-    au < doesNotExist ; exists ; ; Vernacular Architecture Volume 2 ; 2 > 
+    au < doesNotExist ; exists ; 0 ; Vernacular Architecture Volume 2 ; 2 > 
     au < manifest ; exists ; 1972 ; Vernacular Architecture Volume 3 ; 3 > 
     au < manifest ; exists ; 1973 ; Vernacular Architecture Volume 4 ; 4 > 
     au < manifest ; exists ; 1974 ; Vernacular Architecture Volume 5 ; 5 > 
