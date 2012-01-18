@@ -1,10 +1,10 @@
 /*
- * $Id: XmlStatusTable.java,v 1.16 2011-06-21 00:31:47 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.17 2012-01-18 03:42:55 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -272,6 +272,24 @@ public class XmlStatusTable {
     addTextElement(refElement, XmlStatusConstants.NAME, refVal.getTableName());
     if (refVal.getKey() != null) {
       addTextElement(refElement, XmlStatusConstants.KEY, refVal.getKey());
+    }
+    Properties refProps = refVal.getProperties();
+    if (refVal.getPeerId() != null) {
+      refElement.setAttribute(XmlStatusConstants.PEERID,
+			      refVal.getPeerId().getIdString());
+      // XXX 8081 shouldn't be hardwired
+      refElement.setAttribute(XmlStatusConstants.URL_STEM,
+			      refVal.getPeerId().getUiUrlStem(8081/*reqURL.getPort()*/));
+    }
+    if (refProps != null) {
+      for (Iterator iter = refProps.entrySet().iterator(); iter.hasNext(); ) {
+	Map.Entry ent = (Map.Entry)iter.next();
+	Element propElement =
+	  xmlBuilder.createElement(refElement, XmlStatusConstants.PROPERTY);
+	propElement.setAttribute(XmlStatusConstants.PROP_NAME,
+				 ent.getKey().toString());
+	XmlDomBuilder.addText(propElement, formatByType(ent.getValue(), type));
+      }
     }
     addNonLinkValueElement(refElement, refVal.getValue(), type);
     return element;

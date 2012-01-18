@@ -42,6 +42,24 @@
         </st:cell>
     </st:row>
     <st:row>
+        <st:cell>
+            <st:columnname>intCol</st:columnname>
+            <st:value st:bold="true" st:color="color1">456</st:value>
+        </st:cell>
+        <st:cell>
+            <st:columnname>strCol</st:columnname>
+            <st:value>
+                <st:reference peerid="TCP:[127.0.0.1]:9729" urlstem="http://127.0.0.1:8081">
+                    <st:name>tableN</st:name>
+                    <st:key>keyN</st:key>
+                    <st:property prop="prop4">val4</st:property>
+                    <st:property prop="prop8">no</st:property>
+                    <st:value>row3 string3</st:value>
+                </st:reference>
+            </st:value>
+        </st:cell>
+    </st:row>
+    <st:row>
         <st:rowseparator/>
         <st:cell>
             <st:columnname>intCol</st:columnname>

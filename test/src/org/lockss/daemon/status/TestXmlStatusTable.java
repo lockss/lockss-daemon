@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlStatusTable.java,v 1.11 2008-06-09 05:42:02 tlipkis Exp $
+ * $Id: TestXmlStatusTable.java,v 1.12 2012-01-18 03:42:55 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.protocol.*;
 import org.lockss.servlet.*;
 
 import org.w3c.dom.*;
@@ -46,7 +47,17 @@ public class TestXmlStatusTable extends LockssTestCase {
 
   static ServletDescr srvDescr =
     new ServletDescr("test", LockssServlet.class, "name");
+  static String peerKey = "TCP:[127.0.0.1]:9729";
 
+
+  private MyIdentityManager idMgr;
+
+  public void setUp() throws Exception {
+    super.setUp();
+
+    idMgr = new MyIdentityManager();
+    getMockLockssDaemon().setIdentityManager(idMgr);
+  }
 
   // The expected value for this test is in statustest1.xml in this dir.
   // Edit it to correspond to changes in the xml generation or the table
@@ -70,12 +81,19 @@ public class TestXmlStatusTable extends LockssTestCase {
         new StatusTable.DisplayedValue(new Integer(456));
     dispValue.setColor("color1");
     dispValue.setBold(true);
-    StatusTable.Reference refValue =
-        new StatusTable.Reference("row2 string", "table2", "key2");
+    StatusTable.Reference refValue1 =
+      new StatusTable.Reference("row2 string", "table2", "key2");
+
+    PeerIdentity pid = idMgr.findPeerIdentity(peerKey);
+    StatusTable.Reference refValue2 =
+      new StatusTable.Reference("row3 string3", pid, "tableN", "keyN");
+    refValue2.setProperty("prop4", "val4");
+    refValue2.setProperty("prop8", "no");
 
     Object[][] rowObj = {
       {new Integer(123), "row1 string"},
-      {dispValue, refValue},
+      {dispValue, refValue1},
+      {dispValue, refValue2},
       {new Integer(99997), Collections.EMPTY_LIST},
       {new Integer(99998)},		// sparse row
       {new StatusTable.SrvLink(new Integer(99999), srvDescr, null),
@@ -84,7 +102,7 @@ public class TestXmlStatusTable extends LockssTestCase {
 
 
     List rowList = MockStatusAccessor.makeRowsFrom(colList, rowObj);
-    Map row97 = (Map)rowList.get(2);
+    Map row97 = (Map)rowList.get(3);
     row97.put(StatusTable.ROW_SEPARATOR, "1");
     accessor.setRows(rowList, "key");
 
@@ -119,5 +137,10 @@ public class TestXmlStatusTable extends LockssTestCase {
     String exp = StringUtil.fromReader(rdr);
     assertEquals(exp, wrtr.toString());
 
+  }
+
+  static class MyIdentityManager extends IdentityManagerImpl {
+    public void storeIdentities() throws org.lockss.protocol.ProtocolException {
+    }
   }
 }
