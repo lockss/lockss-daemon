@@ -1,10 +1,10 @@
 /*
- * $Id: NullPlugin.java,v 1.108 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.109 2012-01-18 03:40:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -299,6 +299,12 @@ public class NullPlugin {
     public void setWatchdog(LockssWatchdog wdog) {
     }
 
+    public void setPreviousContentType(String previousContentType) {
+    }
+
+    public void setCrawlRateLimiter(CrawlRateLimiter crl) {
+    }
+
     public int cache() throws IOException {
       return CACHE_RESULT_NOT_MODIFIED;
     }
@@ -489,6 +495,9 @@ public class NullPlugin {
 
     public TitleConfig getTitleConfig() {
       return null;
+    }
+
+    public void pauseBeforeFetch(String previousContentType) {
     }
 
     public RateLimiter findFetchRateLimiter() {

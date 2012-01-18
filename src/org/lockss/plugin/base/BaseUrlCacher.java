@@ -1,10 +1,10 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.87 2011-11-29 06:50:50 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.88 2012-01-18 03:40:42 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -105,6 +105,8 @@ public class BaseUrlCacher implements UrlCacher {
   private IPAddr localAddr = null;
   private Properties reqProps;
   private LockssWatchdog wdog;
+  private String previousContentType;
+  private CrawlRateLimiter crl;
   private BitSet fetchFlags = new BitSet();
 
   private static final String SHOULD_REFETCH_ON_SET_COOKIE =
@@ -212,6 +214,14 @@ public class BaseUrlCacher implements UrlCacher {
 
   public void setWatchdog(LockssWatchdog wdog) {
     this.wdog = wdog;
+  }
+
+  public void setPreviousContentType(String previousContentType) {
+    this.previousContentType = previousContentType;
+  }
+
+  public void setCrawlRateLimiter(CrawlRateLimiter crl) {
+    this.crl = crl;
   }
 
   private boolean isDamaged() {
@@ -657,9 +667,9 @@ public class BaseUrlCacher implements UrlCacher {
   }
 
   /**
-   * If we haven't already connected, creates a connection from url, setting
-   * the user-agent and ifmodifiedsince values.  Then actually connects to the
-   * site and throws if we get an error code
+   * Create a connection object from url, set the user-agent and
+   * ifmodifiedsince values.  Then actually connect to the site and throw
+   * if we get an error response
    */
   private void openOneConnection(String lastModified) throws IOException {
     if (conn != null) {
@@ -695,6 +705,7 @@ public class BaseUrlCacher implements UrlCacher {
       if (lastModified != null) {
 	conn.setIfModifiedSince(lastModified);
       }
+      pauseBeforeFetch();
       conn.execute();
     } catch (MalformedURLException ex) {
       logger.debug2("openConnection", ex);
@@ -714,6 +725,12 @@ public class BaseUrlCacher implements UrlCacher {
       logger.debug3("conn isn't null, releasing");
       conn.release();
       conn = null;
+    }
+  }
+
+  protected void pauseBeforeFetch() {
+    if (crl != null) {
+      crl.pauseBeforeFetch(fetchUrl, previousContentType);
     }
   }
 

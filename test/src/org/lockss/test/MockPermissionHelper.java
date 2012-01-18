@@ -1,10 +1,10 @@
 /*
- * $Id: MockPermissionHelper.java,v 1.7 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: MockPermissionHelper.java,v 1.8 2012-01-18 03:40:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,6 +60,10 @@ public class MockPermissionHelper implements PermissionHelper {
   }
 
   public void refetchPermissionPage(String url) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public void setPreviousContentType(String previousContentType) {
     throw new UnsupportedOperationException("not implemented");
   }
 

@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlRateLimiter.java,v 1.1 2011-09-25 04:20:40 tlipkis Exp $
+ * $Id: CrawlRateLimiter.java,v 1.2 2012-01-18 03:40:42 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -71,6 +71,7 @@ public class CrawlRateLimiter {
 
   UrlLimiters urlLimiters;
   MimeLimiters mimeLimiterMap;
+  int pauseCounter = 0;
 
   /** Create a CrawlRateLimiter from an AU
    */
@@ -163,10 +164,15 @@ public class CrawlRateLimiter {
     RateLimiter limiter = getRateLimiterFor(url, previousContentType);
     try {
       if (log.isDebug3()) log.debug3("Pausing: " + limiter.rateString());
+      pauseCounter++;
       limiter.fifoWaitAndSignalEvent();
     } catch (InterruptedException ignore) {
       // no action
     }
   }
 
+  /** Used to check that rate limiter is actually being invoked, */
+  public int getPauseCounter() {
+    return pauseCounter;
+  }
 }

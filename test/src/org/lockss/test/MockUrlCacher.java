@@ -1,10 +1,10 @@
 /*
- * $Id: MockUrlCacher.java,v 1.38 2011-11-08 20:22:26 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.39 2012-01-18 03:40:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +38,7 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.crawler.PermissionMap;
+import org.lockss.crawler.*;
 
 /**
  * This is a mock version of <code>UrlCacher</code> used for testing
@@ -61,6 +61,8 @@ public class MockUrlCacher implements UrlCacher {
   private IPAddr localAddr = null;
   private BitSet fetchFlags = new BitSet();
   private PermissionMapSource permissionMapSource;
+  private String previousContentType;
+  private CrawlRateLimiter crl;
 
   public MockUrlCacher(String url, MockArchivalUnit au){
     this.url = url;
@@ -121,6 +123,22 @@ public class MockUrlCacher implements UrlCacher {
 
   public BitSet getFetchFlags() {
     return this.fetchFlags;
+  }
+
+  public void setPreviousContentType(String previousContentType) {
+    this.previousContentType = previousContentType;
+  }
+
+  public String getPreviousContentType() {
+    return previousContentType;
+  }
+
+  public void setCrawlRateLimiter(CrawlRateLimiter crl) {
+    this.crl = crl;
+  }
+
+  public CrawlRateLimiter getCrawlRateLimiter() {
+    return crl;
   }
 
   public void setRequestProperty(String key, String value) {
@@ -230,6 +248,7 @@ public class MockUrlCacher implements UrlCacher {
     if (executed) {
       throw new IllegalStateException("getUncachedInputStream() called twice");
     }
+    pauseBeforeFetch();
     executed = true;
     throwExceptionIfSet();
     if (uncachedIS == null && cu != null) {
@@ -240,6 +259,12 @@ public class MockUrlCacher implements UrlCacher {
 
   public CIProperties getUncachedProperties() {
     return uncachedProp;
+  }
+
+  private void pauseBeforeFetch() {
+    if (crl != null) {
+      crl.pauseBeforeFetch(url, previousContentType);
+    }
   }
 
   public void reset() {

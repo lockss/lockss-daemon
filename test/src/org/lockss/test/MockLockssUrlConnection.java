@@ -1,10 +1,10 @@
 /*
- * $Id: MockLockssUrlConnection.java,v 1.7 2011-01-24 23:58:15 pgust Exp $
+ * $Id: MockLockssUrlConnection.java,v 1.8 2012-01-18 03:40:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -153,10 +153,7 @@ public class MockLockssUrlConnection extends BaseLockssUrlConnection {
   }
 
   public InputStream getResponseInputStream() throws IOException {
-    if (respInputStream != null) {
-      return respInputStream;
-    }
-    throw new UnsupportedOperationException();
+    return respInputStream;
   }
 
   public void setResponseInputStream(InputStream stream) {

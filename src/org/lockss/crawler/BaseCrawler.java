@@ -1,10 +1,10 @@
 /*
- * $Id: BaseCrawler.java,v 1.42 2011-11-08 20:21:18 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.43 2012-01-18 03:40:42 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -147,6 +147,11 @@ public abstract class BaseCrawler
   public static final boolean DEFAULT_MIME_TYPE_PAUSE_AFTER_304 =
     false;
 
+  public static final String PARAM_THROW_IF_RATE_LIMITER_NOT_USED =
+    PREFIX + "throwIfRateLimiterNotUsed";
+  public static final boolean DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED =
+    true;
+
   protected ArchivalUnit au;
 
   protected LockssUrlConnectionPool connectionPool =
@@ -188,6 +193,8 @@ public abstract class BaseCrawler
 
   protected CrawlRateLimiter crl;
   protected String previousContentType;
+  protected int pauseCounter = 0;
+  protected boolean expectRateLimiterUsed = false;
 
   protected BaseCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
     if (au == null) {
@@ -284,14 +291,6 @@ public abstract class BaseCrawler
       }
     }
     return crl;
-  }
-
-  protected void pauseBeforeFetch(UrlCacher uc) {
-    pauseBeforeFetch(uc.getUrl());
-  }
-
-  protected void pauseBeforeFetch(String url) {
-    getCrawlRateLimiter().pauseBeforeFetch(url, previousContentType);
   }
 
   List getDaemonPermissionCheckers() {
@@ -431,11 +430,11 @@ public abstract class BaseCrawler
     // XXX can't reuse UrlCacher
     UrlCacher uc = makeUrlCacher(permissionPage);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW);
-    pauseBeforeFetch(permissionPage);
     updateCacheStats(uc.cache(), uc);
   }
 
   protected void updateCacheStats(int cacheResult, UrlCacher uc) {
+    expectRateLimiterUsed = true;
     switch (cacheResult) {
     case UrlCacher.CACHE_RESULT_FETCHED:
       crawlStatus.signalUrlFetched(uc.getUrl());
@@ -464,6 +463,10 @@ public abstract class BaseCrawler
     }
   }
 
+  public void setPreviousContentType(String previousContentType) {
+    this.previousContentType = previousContentType;
+  }
+
   /** All UrlCachers should be made via this method, so they get their
    * connection pool set. */
   public UrlCacher makeUrlCacher(String url) {
@@ -474,6 +477,23 @@ public abstract class BaseCrawler
     uc.setConnectionPool(connectionPool);
     uc.setPermissionMapSource(this);
     uc.setWatchdog(wdog);
+    if (previousContentType != null) {
+      uc.setPreviousContentType(previousContentType);
+//       previousContentType = null;
+    }
+    CrawlRateLimiter crl = getCrawlRateLimiter();
+    if (expectRateLimiterUsed) {
+      if (pauseCounter == crl.getPauseCounter()) {
+	logger.critical("CrawlRateLimiter not used " + crl, new Throwable());
+	if (CurrentConfig.getBooleanParam(PARAM_THROW_IF_RATE_LIMITER_NOT_USED,
+					  DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED)) {
+	  throw new RuntimeException("CrawlRateLimiter not used");
+	}
+      }
+      expectRateLimiterUsed = false;
+    }
+    pauseCounter = crl.getPauseCounter();
+    uc.setCrawlRateLimiter(crl);
     if (crawlFromAddr != null) {
       uc.setLocalAddress(crawlFromAddr);
     }

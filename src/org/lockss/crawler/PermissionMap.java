@@ -1,10 +1,10 @@
 /*
- * $Id: PermissionMap.java,v 1.29 2011-06-20 07:09:44 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.30 2012-01-18 03:40:42 tlipkis Exp $
  */
 
 /*
 
- Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -446,6 +446,13 @@ public class PermissionMap {
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
 
     InputStream uis = uc.getUncachedInputStream();
+    CIProperties props = uc.getUncachedProperties();
+    if (props != null) {
+      String previousContentType =
+	props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+      pHelper.setPreviousContentType(previousContentType);
+    }
+
 //     if (uis == null) {
 //       String msg = "getUncachedInputStream("+ uc.getUrl()+") returned null";
 //       logger.critical(msg);
@@ -472,7 +479,10 @@ public class PermissionMap {
           break; //we just need one permission to be sucessful here
         } else {
           logger.debug3("Didn't find permission on "+checker);
-          is = pHelper.resetInputStream(is, pUrl);
+	  // reset stream only if another permission checker will be run.
+	  if (it.hasNext()) {
+	    is = pHelper.resetInputStream(is, pUrl);
+	  }
         }
       }
       // if we didn't find at least one required lockss permission - fail.

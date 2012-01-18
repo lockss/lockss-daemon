@@ -1,10 +1,10 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.25 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.26 2012-01-18 03:40:42 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,7 +50,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
 
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
-  private CrawlManagerImpl crawlMgr;
+  private NoPauseCrawlManagerImpl crawlMgr;
   private static final int DEFAULT_MAX_DEPTH = 1000;
   private static final int DEFAULT_FILESIZE = 3000;
   private static int fileSize = DEFAULT_FILESIZE;
@@ -167,10 +167,10 @@ public class FuncNewContentCrawler extends LockssTestCase {
 
     String th = "text/html";
     String tp = "text/plain";
-    String[] ct = {null, null, tp, tp, th, th, tp, tp, th, tp};
+    String[] ct = {null, th, th, tp, tp, th, th, tp, tp, th, tp};
     Bag ctb = new HashBag(ListUtil.fromArray(ct));
     CrawlRateLimiter crl = crawlMgr.getCrawlRateLimiter(sau);
-    assertEquals(ctb, new HashBag(crawler.getPauseContentTypes()));
+    assertEquals(ctb, new HashBag(crawlMgr.getPauseContentTypes(sau)));
   }
 
   //recursive caller to check through the whole file tree

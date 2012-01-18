@@ -1,10 +1,10 @@
 /*
- * $Id: NoPauseCrawlManagerImpl.java,v 1.1 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: NoPauseCrawlManagerImpl.java,v 1.2 2012-01-18 03:40:42 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,6 +46,7 @@ import org.lockss.plugin.base.*;
  * For testing, uses a CrawlRateLimiter that records args and doesn't pause
  */
 public class NoPauseCrawlManagerImpl extends CrawlManagerImpl {
+  static Logger log = Logger.getLogger("NoPauseCrawlManagerImpl");
 
   private Map<ArchivalUnit,CrawlRateLimiter> limiterMap =
     new HashMap<ArchivalUnit,CrawlRateLimiter>();
@@ -58,12 +59,16 @@ public class NoPauseCrawlManagerImpl extends CrawlManagerImpl {
 
   public CrawlRateLimiter getCrawlRateLimiter(ArchivalUnit au) {
     CrawlRateLimiter crl = limiterMap.get(au);
-    if (crl != null) {
-      return crl;
-    } else {
-      return super.getCrawlRateLimiter(au);
+    if (crl == null) {
+      crl = super.getCrawlRateLimiter(au);
     }
+    return crl;
   }
+
+  public List getPauseContentTypes(ArchivalUnit au) {
+    return ((NoPauseCrawlRateLimiter)getCrawlRateLimiter(au)).getPauseContentTypes();
+  }
+
 
   public static class NoPauseCrawlRateLimiter extends CrawlRateLimiter {
     List pauseContentTypes = new ArrayList();
@@ -74,6 +79,8 @@ public class NoPauseCrawlManagerImpl extends CrawlManagerImpl {
 
     @Override
     public void pauseBeforeFetch(String url, String previousContentType) {
+      log.debug3("NoPausing: " + url + ", prev: " + previousContentType);
+      pauseCounter++;
       pauseContentTypes.add(previousContentType);
     }
 

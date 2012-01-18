@@ -1,10 +1,10 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.26 2011-04-04 07:15:36 tlipkis Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.27 2012-01-18 03:40:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -75,6 +75,7 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
   // overrides base behavior to get local file
   public InputStream getUncachedInputStreamOnly(String lastModified)
       throws IOException {
+    pauseBeforeFetch();
     if (getUrl().indexOf("xxxfail") > 0) {
       throw new CacheException.NoRetryDeadLinkException("Simulated failed fetch");
     }

@@ -1,10 +1,10 @@
 /*
- * $Id: Crawler.java,v 1.53 2008-09-09 07:52:07 tlipkis Exp $
+ * $Id: Crawler.java,v 1.54 2012-01-18 03:40:42 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -135,6 +135,8 @@ public interface Crawler {
 	throws IOException;
 
     public void refetchPermissionPage(String url) throws IOException;
+
+    public void setPreviousContentType(String previousContentType);
 
     public CrawlerStatus getCrawlerStatus();
 
