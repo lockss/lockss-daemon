@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.46 2011-11-08 20:21:50 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.47 2012-01-18 04:51:38 tlipkis Exp $
  */
 
 /*
@@ -278,6 +278,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   public static final ConfigParamDescr CRAWL_INTERVAL =
     new ConfigParamDescr()
     .setDefinitional(false)
+    .setDefaultOnly(true)
     .setKey("nc_interval")
     .setDisplayName("Crawl Interval")
     .setType(TYPE_TIME_INTERVAL)
