@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.57 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.58 2012-01-18 04:51:58 tlipkis Exp $
  */
 
 /*
@@ -606,11 +606,11 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     props.setProperty(BaseArchivalUnit.KEY_PAUSE_TIME, "10000");
-    props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "10000");
+    props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "10001");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
     assertEquals(10000, mbau.findFetchRateLimiter().getInterval());
-    assertEquals(10000, mbau.newContentCrawlIntv);
+    assertEquals(10001, mbau.newContentCrawlIntv);
     assertEquals(auName,mbau.getName());
     assertEquals(ListUtil.list(startUrl), mbau.getNewContentCrawlUrls());
     assertTrue(mbau.getCrawlSpec().getCrawlWindow()

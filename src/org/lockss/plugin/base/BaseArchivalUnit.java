@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.152 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.153 2012-01-18 04:51:58 tlipkis Exp $
  */
 
 /*
@@ -396,9 +396,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     try {
       List<String> perms = getPermissionPages();
       Set<String> set = new HashSet<String>();
-      for (String url : perms) {
-	String stem = UrlUtil.getUrlPrefix(url);
-	set.add(stem);
+      if (perms != null) {
+	for (String url : perms) {
+	  String stem = UrlUtil.getUrlPrefix(url);
+	  set.add(stem);
+	}
       }
       ArrayList<String> res = new ArrayList<String>(set);
 //       res.trimToSize();
