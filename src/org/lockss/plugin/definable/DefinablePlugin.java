@@ -1,10 +1,10 @@
 /*
- * $Id: DefinablePlugin.java,v 1.62 2012-01-04 04:22:18 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.63 2012-01-18 03:33:54 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -213,9 +213,15 @@ public class DefinablePlugin extends BasePlugin {
       for (Map.Entry entry : (Set<Map.Entry>)overrideMap.entrySet()) {
 	String key = (String)entry.getKey();
 	Object val = entry.getValue();
-	log.debug(getDefaultPluginName() + ": Overriding "
-		  + key + " with " + val);
-	map.setMapElement(key, val);
+	if (val instanceof org.lockss.util.Default) {
+	  log.debug(getDefaultPluginName() + ": Overriding "
+		    + key + " with default value");
+	  map.removeMapElement(key);
+	} else {
+	  log.debug(getDefaultPluginName() + ": Overriding "
+		    + key + " with " + val);
+	  map.setMapElement(key, val);
+	}
       }
     }
   }

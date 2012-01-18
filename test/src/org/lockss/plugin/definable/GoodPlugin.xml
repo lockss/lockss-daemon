@@ -62,6 +62,10 @@
     <long>6000</long>
   </entry>
   <entry>
+    <string>parent_cancel</string>
+    <string>child_val</string>
+  </entry>
+  <entry>
     <string>content-testing_override</string>
     <map>
       <entry>
@@ -71,6 +75,10 @@
       <entry>
         <string>parent_only</string>
 	<string>pval</string>
+      </entry>
+      <entry>
+        <string>parent_cancel</string>
+	<org.lockss.util.Default />
       </entry>
     </map>
   </entry>
