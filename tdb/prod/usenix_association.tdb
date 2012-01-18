@@ -17,7 +17,7 @@
     implicit < status ; year ; name ; volume ; param[year] ; nondefparam[optional_standards] >
 
     comment[access] = content becomes open access after a year
-    comment[2011] = missing manifest
+    comment[2011] = missing manifest see RU3571/RT1617
     
     au < released ; 1997 ; ";login: 1997" ; ; 1997 ; stndrdswrthit,1,2,3,4,5,6,7,9,10,11 >
     au < released ; 1998 ; ";login: 1998" ; ; 1998 ; 12,13,14,15,16.posix,17,16.editorial,18,19,20,21,22 >
