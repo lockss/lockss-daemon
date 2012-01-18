@@ -1,10 +1,10 @@
 /*
- * $Id: LockssDaemon.java,v 1.108 2011-08-09 04:16:28 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.109 2012-01-18 03:38:39 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -827,6 +827,10 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
     log.info("Started");
     ausStarted.fill();
+
+    AlertManager alertMgr = getAlertManager();
+    alertMgr.raiseAlert(Alert.cacheAlert(Alert.DAEMON_STARTED),
+			  "LOCKSS daemon started");
   }
 
 
