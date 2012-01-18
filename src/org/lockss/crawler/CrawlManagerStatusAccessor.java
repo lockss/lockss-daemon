@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.22 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.23 2012-01-18 03:42:08 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -129,25 +129,12 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 
 
   private CrawlManager.StatusSource statusSource;
-  private boolean includeDeletedAus = DEFAULT_INCLUDE_DELETED_AUS;
   private PluginManager pluginMgr;
 
   public CrawlManagerStatusAccessor(CrawlManager.StatusSource statusSource) {
     this.statusSource = statusSource;
     LockssDaemon daemon = statusSource.getDaemon();
     this.pluginMgr = daemon.getPluginManager();
-    initConfig();
-  }
-
-  protected CrawlManagerStatusAccessor() {
-    //for testing
-    initConfig();
-  }
-
-  private void initConfig() {
-    Configuration config = ConfigManager.getCurrentConfig();
-    includeDeletedAus = config.getBoolean(PARAM_INCLUDE_DELETED_AUS,
-					  DEFAULT_INCLUDE_DELETED_AUS);
   }
 
   public String getDisplayName() {
@@ -205,6 +192,9 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
     List rows = new ArrayList();
     int rowNum = 0;
     if (allCrawls != null) {
+      boolean includeDeletedAus =
+	CurrentConfig.getBooleanParam(PARAM_INCLUDE_DELETED_AUS,
+				      DEFAULT_INCLUDE_DELETED_AUS);
       for (Iterator it = allCrawls.iterator(); it.hasNext();) {
 	CrawlerStatus crawlStat = (CrawlerStatus)it.next();
 	if (key != null && !key.equals(crawlStat.getAuId())) {
