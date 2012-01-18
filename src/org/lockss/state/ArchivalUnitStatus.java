@@ -1,9 +1,9 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.101 2011-08-09 03:59:38 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.102 2012-01-18 03:34:35 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -231,24 +231,29 @@ public class ArchivalUnitStatus
       PluginManager pluginMgr = theDaemon.getPluginManager();
 
       String key = table.getKey();
-      String plugidfilt = null;
+      Plugin onlyPlug = null;
       if (key != null && key.startsWith("plugin:")) {
 	String[] foo = org.apache.commons.lang.StringUtils.split(key, ":", 2);
-	plugidfilt = foo[1];
-	table.setTitle(TABLE_TITLE + " for plugin " +
-		       StringUtil.shortName(plugidfilt));
+	String plugid = foo[1];
+	if (!StringUtil.isNullString(plugid)) {
+	  onlyPlug = pluginMgr.getPlugin(PluginManager.pluginKeyFromId(plugid));
+	  if (onlyPlug != null) {
+	    table.setTitle(TABLE_TITLE + " for plugin " +
+			   StringUtil.shortName(onlyPlug.getPluginName()));
+	  }
+	}
       }	
       boolean includeInternalAus =
 	table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       List rowL = new ArrayList();
-      for (Iterator iter = pluginMgr.getAllAus().iterator();
-	   iter.hasNext(); ) {
-        ArchivalUnit au = (ArchivalUnit)iter.next();
+      Collection<ArchivalUnit> aus;
+      if (onlyPlug != null) {
+	aus = onlyPlug.getAllAus();
+      } else {
+	aus = pluginMgr.getAllAus();
+      }
+      for (ArchivalUnit au : aus) {
 	if (!includeInternalAus && pluginMgr.isInternalAu(au)) {
-	  continue;
-	}
-	if (plugidfilt != null &&
-	    !au.getPlugin().getPluginId().equals(plugidfilt)) {
 	  continue;
 	}
 	try {
