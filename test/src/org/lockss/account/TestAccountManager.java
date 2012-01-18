@@ -1,10 +1,10 @@
 /*
- * $Id: TestAccountManager.java,v 1.5 2009-06-19 08:27:25 tlipkis Exp $
+ * $Id: TestAccountManager.java,v 1.6 2012-01-18 03:37:52 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -311,6 +311,22 @@ public class TestAccountManager extends LockssTestCase {
     } catch (IllegalArgumentException e) {
     }
   }
+
+  public void testUpdateV0Acct() throws Exception {
+    File acctfile = new File(acctMgr.getAcctDir(), "v0acct");
+    InputStream is = this.getClass().getResourceAsStream("v0acct.xml");
+    String orig = StringUtil.fromInputStream(is);
+    FileTestUtil.writeFile(acctfile, orig);
+    UserAccount acct = acctMgr.loadUser(acctfile);
+    assertTrue(acct.isUserInRole(LockssServlet.ROLE_CONTENT_ACCESS));
+    String updated = StringUtil.fromFile(acctfile);
+    assertNotEquals(orig, updated);
+    assertNotMatchesRE("version", orig);
+    assertMatchesRE("version", updated);
+    assertNotMatchesRE("accessContentRole", orig);
+    assertMatchesRE("accessContentRole", updated);
+  }
+
 
   public void testDeleteUser() throws Exception {
     String name = "lu@ser";

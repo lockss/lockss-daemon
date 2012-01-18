@@ -1,10 +1,10 @@
 /*
- * $Id: DaemonStatus.java,v 1.82 2011-06-21 00:31:47 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.83 2012-01-18 03:37:52 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -763,7 +763,13 @@ public class DaemonStatus extends LockssServlet {
     if (val instanceof StatusTable.Reference) {
       return getRefString((StatusTable.Reference)val, type);
     } else if (val instanceof StatusTable.SrvLink) {
-      return getSrvLinkString((StatusTable.SrvLink)val, type);
+      // Display as link iff user is allowed access to the target servlet
+      StatusTable.SrvLink slink = (StatusTable.SrvLink)val;
+      if (isServletAllowed(slink.getServletDescr())) {
+	return getSrvLinkString(slink, type);
+      } else {
+	return getDisplayString1(StatusTable.getActualValue(val), type);
+      }
     } else if (val instanceof StatusTable.LinkValue) {
       // A LinkValue type we don't know about.  Just display its embedded
       // value.

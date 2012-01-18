@@ -1,10 +1,10 @@
 /*
- * $Id: DebugPanel.java,v 1.20 2011-06-02 18:59:52 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.21 2012-01-18 03:37:52 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -334,7 +334,9 @@ public class DebugPanel extends LockssServlet {
     setTabOrder(crawlplug);
     frm.add("<br><center>"+crawlplug+"</center>");
     ServletDescr d1 = AdminServletManager.SERVLET_HASH_CUS;
-    frm.add("<br><center>"+srvLink(d1, d1.heading)+"</center>");
+    if (isServletAllowed(d1)) {
+      frm.add("<br><center>"+srvLink(d1, d1.heading)+"</center>");
+    }
     Input thrw = new Input(Input.Submit, KEY_ACTION, ACTION_THROW_IOEXCEPTION);
     Input thmsg = new Input(Input.Text, KEY_MSG);
     setTabOrder(thrw);

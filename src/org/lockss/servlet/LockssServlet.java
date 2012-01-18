@@ -1,10 +1,10 @@
 /*
- * $Id: LockssServlet.java,v 1.120 2011-03-03 18:57:32 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.121 2012-01-18 03:37:52 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -111,6 +111,9 @@ public abstract class LockssServlet extends HttpServlet
 
   /** User may change AU configuration (add/delete content) */
   public static final String ROLE_AU_ADMIN = "auAdminRole";
+
+  /** User may access content) */
+  public static final String ROLE_CONTENT_ACCESS = "accessContentRole";
 
   public static final String ROLE_DEBUG = "debugRole";
 
@@ -493,6 +496,7 @@ public abstract class LockssServlet extends HttpServlet
     noRoleParams.put(ROLE_USER_ADMIN, "noadmin");
     noRoleParams.put(ROLE_CONTENT_ADMIN, "nocontent");
     noRoleParams.put(ROLE_AU_ADMIN, "noau");
+    noRoleParams.put(ROLE_CONTENT_ACCESS, "noaccess");
     noRoleParams.put(ROLE_DEBUG, "nodebug");
   }
 
@@ -515,6 +519,8 @@ public abstract class LockssServlet extends HttpServlet
     if (d.needsContentAdminRole() && !doesUserHaveRole(ROLE_CONTENT_ADMIN))
       return false;
     if (d.needsAuAdminRole() && !doesUserHaveRole(ROLE_AU_ADMIN))
+      return false;
+    if (d.needsContentAccessRole() && !doesUserHaveRole(ROLE_CONTENT_ACCESS))
       return false;
     
     return d.isEnabled(getLockssDaemon());

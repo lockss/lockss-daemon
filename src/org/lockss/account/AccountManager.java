@@ -1,10 +1,10 @@
 /*
- * $Id: AccountManager.java,v 1.10 2010-07-21 06:08:29 tlipkis Exp $
+ * $Id: AccountManager.java,v 1.11 2012-01-18 03:37:52 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-20010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -411,13 +411,22 @@ public class AccountManager
     if (acct.isStaticUser()) {
       throw new IllegalArgumentException("Can't store static account: " + acct);
     }
+    if (getUser(acct.getName()) != acct) {
+      throw new IllegalArgumentException("Can't store uninstalled account: "
+					 + acct);
+    }
+    storeUserInternal(acct);
+  }
+
+  /** Store the current state of the user account on disk */
+  public void storeUserInternal(UserAccount acct) throws NotStoredException {
     String filename = acct.getFilename();
     if (filename == null) {
       filename = generateFilename(acct);
     }
     File file =  new File(getAcctDir(), filename);
     try {
-      storeUser(acct, file);
+      storeUserInternal(acct, file);
     } catch (SerializationException e) {
       throw new NotStoredException("Error storing user in database", e);
     } catch (IOException e) {
@@ -427,15 +436,8 @@ public class AccountManager
     acct.setFilename(file.getName());
   }
 
-  void storeUser(UserAccount acct, File file)
+  void storeUserInternal(UserAccount acct, File file)
       throws IOException, SerializationException {
-    if (acct.isStaticUser()) {
-      throw new IllegalArgumentException("Can't store static account: " + acct);
-    }
-    if (getUser(acct.getName()) != acct) {
-      throw new IllegalArgumentException("Can't store uninstalled account: "
-					 + acct);
-    }
     if (acct.isChanged()) {
       if (log.isDebug2()) log.debug2("Storing account in " + file);
       makeObjectSerializer().serialize(file, acct);
