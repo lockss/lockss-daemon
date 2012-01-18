@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.137 2011-09-25 04:20:40 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.138 2012-01-18 03:41:46 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -174,6 +174,17 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   public static final String PARAM_FAVOR_UNSHARED_RATE_THREADS =
     ODC_PREFIX + "favorUnsharedRateThreads";
   static final int DEFAULT_FAVOR_UNSHARED_RATE_THREADS = 1;
+
+  enum CrawlOrder {CrawlDate, CreationDate};
+
+  /** Determines how the crawl queues are sorted.  <code>CrawlDate</code>:
+   * By recency of previous crawl attempt, etc. (Attempts to give all AUs
+   * an equal chance to crawl as often as they want.);
+   * <code>CreationDate</code>: by order in which AUs were
+   * created. (Attempts to synchronize crawls of AU across machines to
+   * optimize for earliest polling.) */
+  public static final String PARAM_CRAWL_ORDER = PREFIX + "crawlOrder";
+  public static final CrawlOrder DEFAULT_CRAWL_ORDER = CrawlOrder.CrawlDate;
 
   /** Maximum rate at which we will start repair crawls for any particular
    * AU */
@@ -449,6 +460,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	config.getInt(PARAM_FAVOR_UNSHARED_RATE_THREADS,
 		      DEFAULT_FAVOR_UNSHARED_RATE_THREADS);
 
+      paramCrawlOrder = (CrawlOrder)config.getEnum(CrawlOrder.class,
+						   PARAM_CRAWL_ORDER,
+						   DEFAULT_CRAWL_ORDER);
+
       paramRebuildCrawlQueueInterval =
 	config.getTimeInterval(PARAM_REBUILD_CRAWL_QUEUE_INTERVAL,
 			       DEFAULT_REBUILD_CRAWL_QUEUE_INTERVAL);
@@ -578,7 +593,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  /** Info about all the crawls running on a single AU.  (Possibly a repair
+  /** Info about all the crawls running on a single AU.  (Possibly N repair
    * crawls and a new content crawl.)  Ensures that they all use the same
    * set of rate limiters. */
   class AuCrawlers {
@@ -1334,6 +1349,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   int paramUnsharedQueueMax = DEFAULT_UNSHARED_QUEUE_MAX;
   int paramSharedQueueMax = DEFAULT_SHARED_QUEUE_MAX;
   int paramFavorUnsharedRateThreads = DEFAULT_FAVOR_UNSHARED_RATE_THREADS;
+  CrawlOrder paramCrawlOrder = DEFAULT_CRAWL_ORDER;
 
   Deadline timeToRebuildCrawlQueue = Deadline.in(0);
   Deadline startOneWait = Deadline.in(0);
@@ -1589,6 +1605,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
    * <li>Explicit request priority
    * <li>Plugin registry AUs
    * <li>Crawl window reopened
+   * <li>if crawlOrder==CreationDate:<ol>
+   * <li>AU Creation date
+   * <li>AUID
+   * </ol>
    * <li>Least recent crawl attempt
    * <li>Least recent crawl success
    * </ol>
@@ -1604,17 +1624,28 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       ArchivalUnit au2 = r2.au;
       AuState aus1 = r1.aus;
       AuState aus2 = r2.aus;
-      return new CompareToBuilder()
+      CompareToBuilder ctb = 
+	new CompareToBuilder()
 	.append(-r1.priority, -r2.priority)
 	.append(!(au1 instanceof RegistryArchivalUnit),
 		!(au2 instanceof RegistryArchivalUnit))
 	.append(previousResultOrder(aus1.getLastCrawlResult()),
-		previousResultOrder(aus2.getLastCrawlResult()))
-	.append(aus1.getLastCrawlAttempt(), aus2.getLastCrawlAttempt())
-	.append(aus1.getLastCrawlTime(), aus2.getLastCrawlTime())
-// 	.append(au1.toString(), au2.toString())
-	.append(System.identityHashCode(r1), System.identityHashCode(r2))
-	.toComparison();
+		previousResultOrder(aus2.getLastCrawlResult()));
+      switch (paramCrawlOrder) {
+      case CreationDate:
+	ctb.append(aus1.getAuCreationTime(), aus2.getAuCreationTime());
+	ctb.append(au1.getAuId(), au2.getAuId());
+	break;
+      case CrawlDate:
+      default:
+	ctb
+	  .append(aus1.getLastCrawlAttempt(), aus2.getLastCrawlAttempt())
+	  .append(aus1.getLastCrawlTime(), aus2.getLastCrawlTime())
+// 	  .append(au1.toString(), au2.toString())
+	  .append(System.identityHashCode(r1), System.identityHashCode(r2));
+	break;
+      }
+      return ctb.toComparison();
     }
 
     int previousResultOrder(int crawlResult) {

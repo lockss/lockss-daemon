@@ -1,10 +1,10 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.88 2011-09-25 04:20:39 tlipkis Exp $
- */
+ * $Id: TestCrawlManagerImpl.java,v 1.89 2012-01-18 03:41:46 tlipkis Exp $
+*/
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1107,7 +1107,12 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     CrawlReq[] makeReqs(int n) {
       CrawlReq[] res = new CrawlReq[n];
       for (int ix = 0; ix < n; ix++) {
-	res[ix] = new CrawlReq(newMockArchivalUnit("mau" + ix));
+	MockArchivalUnit mau = newMockArchivalUnit("mau" + ix);
+	MockNodeManager nm = new MockNodeManager();
+	theDaemon.setNodeManager(nm, mau);
+	maus = new MockAuState();
+	nodeManager.setAuState(maus);
+	res[ix] = new CrawlReq(mau);
       }
       return res;
     }
@@ -1152,7 +1157,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
     public void testCrawlPriorityComparator(CrawlReq[] reqs) {
-      for (int ix = 0; ix <= 5; ix++) {
+      for (int ix = 0; ix <= reqs.length - 2; ix++) {
 	assertCompareLess(reqs[ix], reqs[ix+1]);
       }
       List lst = ListUtil.fromArray(reqs);
@@ -1190,6 +1195,31 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       setReq(reqs[5], 0, 0, 123, -1);
       setReq(reqs[6], 0, 0, 123, 456);
       setReq(reqs[7], 0, Crawler.STATUS_RUNNING_AT_CRASH, 1000, 1000);
+      testCrawlPriorityComparator(reqs);
+    }
+
+    void setAuCreationTime(CrawlReq req, long time) {
+      MockAuState aus = (MockAuState)AuUtil.getAuState(req.au);
+      aus.setAuCreationTime(time);
+    }
+
+    public void testCrawlPriorityComparatorCreationOrder() {
+      ConfigurationUtil.setFromArgs(CrawlManagerImpl.PARAM_RESTART_AFTER_CRASH,
+				    "false",
+				    CrawlManagerImpl.PARAM_CRAWL_ORDER,
+				    "CreationDate"); 
+      CrawlReq[] reqs = makeReqs(8);
+      setReq(reqs[0], 0, Crawler.STATUS_WINDOW_CLOSED, 1001, 1001);
+      setReq(reqs[1], 0, Crawler.STATUS_RUNNING_AT_CRASH, 1000, 1000);
+      setReq(reqs[2], 0, 0, 123, 456);
+      setReq(reqs[3], 0, 0, 123, -1);
+      setReq(reqs[4], 0, 0, -1, 500);
+      setReq(reqs[5], 0, 0, -1, 2000);
+      setReq(reqs[6], 0, 0, 5000, 5000);
+      setReq(reqs[7], 0, 0, 9999, 9999);
+      for (int ix = 0; ix < reqs.length; ix++) {
+	setAuCreationTime(reqs[ix], 9990 + ix);
+      }
       testCrawlPriorityComparator(reqs);
     }
 
