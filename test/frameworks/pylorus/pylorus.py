@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''Pylorus content validation and ingestion gateway
 Michael R Bax, 2008-2009
-$Id: pylorus.py,v 2.17 2011-06-08 17:00:06 barry409 Exp $'''
+$Id: pylorus.py,v 2.18 2012-01-18 04:40:11 thib_gc Exp $'''
 
 
 import ConfigParser
@@ -27,16 +27,16 @@ fix_auth_failure.fix_auth_failure()
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.17 $'.split()[ 1 ]
+REVISION = '$Revision: 2.18 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
-SERVER_READY_TIMEOUT = 60
+SERVER_READY_TIMEOUT = 600
 MINIMUM_SLEEP_DURATION = 15
 MAXIMUM_SLEEP_DURATION = 120
 REMOTE_CRAWL_RETRY_TOTAL = 3
 POLL_FAILURE_RETRY_TOTAL = 3
 POLL_MISMATCH_RETRY_TOTAL = 3
-MAXIMUM_URLError = 3
+MAXIMUM_URLError = SERVER_READY_TIMEOUT / MINIMUM_SLEEP_DURATION
 CONFIGURATION_DEFAULTS = { 
     'configuration':    '',
     'local_servers':    'validate://localhost:8081\nvalidate://localhost:8082\ningest://localhost:8081\ningest://localhost:8082',
@@ -492,7 +492,7 @@ def wait_for_clients( clients ):
     for action_clients in clients.itervalues():
         for client in action_clients:
             try:
-                assert client.waitForDaemonReady( 60 )
+                assert client.waitForDaemonReady( SERVER_READY_TIMEOUT )
             except ( AssertionError, lockss_daemon.LockssError ):
                 raise Exception( 'Unavailable server %s' % client )
 
