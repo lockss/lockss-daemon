@@ -209,31 +209,31 @@
       param[base_url] = http://jmm.sgmjournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of Medical Microbiology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of Medical Microbiology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1970 ; Journal of Medical Microbiology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1971 ; Journal of Medical Microbiology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of Medical Microbiology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Medical Microbiology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Medical Microbiology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Medical Microbiology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Medical Microbiology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Medical Microbiology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Medical Microbiology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Medical Microbiology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Medical Microbiology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Medical Microbiology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Medical Microbiology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Medical Microbiology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Medical Microbiology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Medical Microbiology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Medical Microbiology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Medical Microbiology Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Medical Microbiology Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Medical Microbiology Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Medical Microbiology Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Medical Microbiology Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Medical Microbiology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; testing ; 1968 ; Journal of Medical Microbiology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 1969 ; Journal of Medical Microbiology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 1970 ; Journal of Medical Microbiology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of Medical Microbiology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of Medical Microbiology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of Medical Microbiology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of Medical Microbiology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 1975 ; Journal of Medical Microbiology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Medical Microbiology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of Medical Microbiology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of Medical Microbiology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Medical Microbiology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of Medical Microbiology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of Medical Microbiology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of Medical Microbiology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; testing ; 1983 ; Journal of Medical Microbiology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; testing ; 1984 ; Journal of Medical Microbiology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; testing ; 1984 ; Journal of Medical Microbiology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of Medical Microbiology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of Medical Microbiology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of Medical Microbiology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of Medical Microbiology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; testing ; 1987 ; Journal of Medical Microbiology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; testing ; 1987 ; Journal of Medical Microbiology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; testing ; 1988 ; Journal of Medical Microbiology Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Medical Microbiology Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Medical Microbiology Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Medical Microbiology Volume 28 ; 28 >
