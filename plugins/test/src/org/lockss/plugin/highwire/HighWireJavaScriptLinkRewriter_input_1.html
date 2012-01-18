@@ -1,0 +1,17 @@
+<html>
+<script language="JavaScript"><!--
+    var timeoutID = 0;
+    
+    function loadPDF() {
+       window.location = "/cgi/reprint/13/1/5.pdf";
+    }
+
+    function handleOnLoad() {
+        timeoutID = setTimeout('loadPDF()', 1500);
+        return true;
+    }
+
+    window.onload = handleOnLoad;
+// --></script>
+
+</html>
