@@ -119,18 +119,13 @@
       eissn = 1654-661X ;
       issnl = 1654-661X
     >
-
+    
+    comment[continues] = 1748-2976
     param[base_url] = http://www.foodandnutritionresearch.net/
     param[journal_id] = fnr
 
 	comment[fnr2008] = 502 Proxy Error
 
-    au < ready ; 2002 ; Food & Nutrition Research Volume 46 ; 46 ; 2002 >
-    au < ready ; 2003 ; Food & Nutrition Research Volume 47 ; 47 ; 2003 >
-    au < ready ; 2004 ; Food & Nutrition Research Volume 48 ; 48 ; 2004 >
-    au < ready ; 2005 ; Food & Nutrition Research Volume 49 ; 49 ; 2005 >
-    au < ready ; 2006 ; Food & Nutrition Research Volume 50 ; 50 ; 2006 >
-    au < ready ; 2007 ; Food & Nutrition Research Volume 51 ; 51 ; 2007 >
     au < notReady ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
     au < ready ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
     au < ready ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 >
@@ -357,7 +352,7 @@
     param[journal_id] = nano
 
     au < ready ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 >
-    au < manifest ; 2011 ; Nano Reviews Volume 2 ; 2 ; 2011 >
+    au < ready ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
 
   }
 
@@ -452,6 +447,51 @@
     au < manifest ; 2009 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 17 ; 17 ; 2009 >
     au < manifest ; 2010 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 18 ; 18 ; 2010 >
     au < manifest ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 ; 2011 >
+
+  }
+
+  {
+
+    title <
+      name = Scandinavian Journal of Food and Nutrition ;
+      issn = 1748-2976 ;
+      eissn = 1748-2984 ;
+      issnl = 1748-2976 
+    >
+
+    comment[continues] = 1102-6480
+    comment[continued_by] = 1654-661X
+    param[base_url] = http://www.foodandnutritionresearch.net/
+    param[journal_id] = fnr
+    
+    au < ready ; 2006 ; Scandinavian Journal of Food and Nutrition Volume 50 ; 50 ; 2006 >
+    au < ready ; 2007 ; Scandinavian Journal of Food and Nutrition Volume 51 ; 51 ; 2007 >
+
+  }
+
+  {
+
+    title <
+      name = Scandinavian Journal of Nutrition ;
+      issn = 1102-6480 ;
+      eissn = 1651-2359 ;
+      issnl = 1102-6480 
+    >
+
+    comment[continued_by] = 1748-2976
+    param[base_url] = http://www.foodandnutritionresearch.net/
+    param[journal_id] = fnr
+    
+    au < manifest ; 1996 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 40 ; 40 ; 1996 >
+    au < manifest ; 1997 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 41 ; 41 ; 1997 >
+    au < manifest ; 1998 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 42 ; 42 ; 1998 >
+    au < manifest ; 1999 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 43 ; 43 ; 1999 >
+    au < manifest ; 2000 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 44 ; 44 ; 2000 >
+    au < manifest ; 2001 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 45 ; 45 ; 2001 >    
+    au < ready ; 2002 ; Scandinavian Journal of Nutrition Volume 46 ; 46 ; 2002 >
+    au < ready ; 2003 ; Scandinavian Journal of Nutrition Volume 47 ; 47 ; 2003 >
+    au < ready ; 2004 ; Scandinavian Journal of Nutrition Volume 48 ; 48 ; 2004 >
+    au < ready ; 2005 ; Scandinavian Journal of Nutrition Volume 49 ; 49 ; 2005 >
 
   }
 
