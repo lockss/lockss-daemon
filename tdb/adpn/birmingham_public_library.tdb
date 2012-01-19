@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = Birmingham Public Library
+  >
+
+  plugin = org.bplonline.adpn.BirminghamPublicLibraryBasePlugin
+  param[base_url] = http://bpldb.bplonline.org/adpn/load/
+  implicit < status ; name ; param[collection] >
+  
+  {
+  
+    title <
+      name = Birmingham Public Library Cartography Collection
+    >
+    
+    param[group] = Cartography
+    
+    au < manifest ; Birmingham Public Library Cartography Collection: Maps (000001-000199) ; 000001-000199 >
+  
+  }  
+  
+  {
+  
+    title <
+      name = Birmingham Public Library Photography Collection
+    >
+    
+    param[group] = Cartography
+    
+    au < manifest ; Birmingham Public Library Photography Collection: Charles A. Preston (Coll.98) ; Coll.98 >
+  
+  }  
+  
+}
