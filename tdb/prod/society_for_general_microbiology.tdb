@@ -98,26 +98,26 @@
       param[base_url] = http://vir.sgmjournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; testing ; 1967 ; Journal of General Virology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 1968 ; Journal of General Virology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; testing ; 1968 ; Journal of General Virology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; testing ; 1969 ; Journal of General Virology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; testing ; 1969 ; Journal of General Virology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; testing ; 1970 ; Journal of General Virology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; testing ; 1970 ; Journal of General Virology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; testing ; 1970 ; Journal of General Virology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; testing ; 1970 ; Journal of General Virology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of General Virology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of General Virology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of General Virology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of General Virology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of General Virology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of General Virology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of General Virology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of General Virology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of General Virology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of General Virology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of General Virology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; ready ; 1967 ; Journal of General Virology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; ready ; 1968 ; Journal of General Virology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 1968 ; Journal of General Virology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; ready ; 1969 ; Journal of General Virology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; ready ; 1969 ; Journal of General Virology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; ready ; 1970 ; Journal of General Virology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; ready ; 1970 ; Journal of General Virology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; ready ; 1970 ; Journal of General Virology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; ready ; 1970 ; Journal of General Virology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; ready ; 1971 ; Journal of General Virology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; ready ; 1971 ; Journal of General Virology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; ready ; 1971 ; Journal of General Virology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; ready ; 1971 ; Journal of General Virology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; ready ; 1972 ; Journal of General Virology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; ready ; 1972 ; Journal of General Virology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; ready ; 1972 ; Journal of General Virology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; ready ; 1972 ; Journal of General Virology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; ready ; 1973 ; Journal of General Virology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; ready ; 1973 ; Journal of General Virology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; ready ; 1973 ; Journal of General Virology Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of General Virology Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of General Virology Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of General Virology Volume 23 ; 23 >
@@ -138,46 +138,46 @@
       au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of General Virology Volume 38 ; 38 >
       au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of General Virology Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of General Virology Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of General Virology Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of General Virology Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of General Virology Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of General Virology Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of General Virology Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of General Virology Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of General Virology Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of General Virology Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of General Virology Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of General Virology Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of General Virology Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of General Virology Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of General Virology Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of General Virology Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of General Virology Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of General Virology Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of General Virology Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of General Virology Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of General Virology Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of General Virology Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of General Virology Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of General Virology Volume 62 ; 62 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of General Virology Volume 63 ; 63 >
-      au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of General Virology Volume 64 ; 64 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of General Virology Volume 65 ; 65 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of General Virology Volume 66 ; 66 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of General Virology Volume 67 ; 67 >
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of General Virology Volume 68 ; 68 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of General Virology Volume 69 ; 69 >
-      au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of General Virology Volume 70 ; 70 >
-      au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of General Virology Volume 71 ; 71 >
-      au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of General Virology Volume 72 ; 72 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of General Virology Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of General Virology Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Journal of General Virology Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of General Virology Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of General Virology Volume 77 ; 77 >
-      au < HighWirePressH20Plugin ; manifest ; 1997 ; Journal of General Virology Volume 78 ; 78 >
-      au < HighWirePressH20Plugin ; manifest ; 1998 ; Journal of General Virology Volume 79 ; 79 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Journal of General Virology Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of General Virology Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of General Virology Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of General Virology Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of General Virology Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of General Virology Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of General Virology Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of General Virology Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of General Virology Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of General Virology Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of General Virology Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of General Virology Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of General Virology Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of General Virology Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of General Virology Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of General Virology Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of General Virology Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of General Virology Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of General Virology Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of General Virology Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of General Virology Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of General Virology Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of General Virology Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of General Virology Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; testing ; 1983 ; Journal of General Virology Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; testing ; 1984 ; Journal of General Virology Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of General Virology Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of General Virology Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; testing ; 1987 ; Journal of General Virology Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; testing ; 1988 ; Journal of General Virology Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; testing ; 1989 ; Journal of General Virology Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; testing ; 1990 ; Journal of General Virology Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; testing ; 1991 ; Journal of General Virology Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; testing ; 1992 ; Journal of General Virology Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; testing ; 1993 ; Journal of General Virology Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; testing ; 1994 ; Journal of General Virology Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; testing ; 1995 ; Journal of General Virology Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; testing ; 1996 ; Journal of General Virology Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; testing ; 1997 ; Journal of General Virology Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; testing ; 1998 ; Journal of General Virology Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; testing ; 1999 ; Journal of General Virology Volume 80 ; 80 >
       au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of General Virology Volume 81 ; 81 >
       au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of General Virology Volume 82 ; 82 >
       au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of General Virology Volume 83 ; 83 >
@@ -236,29 +236,29 @@
       au < HighWirePressH20Plugin ; ready ; 1988 ; Journal of Medical Microbiology Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; testing ; 1988 ; Journal of Medical Microbiology Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; testing ; 1988 ; Journal of Medical Microbiology Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; testing ; 1989 ; Journal of Medical Microbiology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; testing ; 1989 ; Journal of Medical Microbiology Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; testing ; 1989 ; Journal of Medical Microbiology Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; testing ; 1990 ; Journal of Medical Microbiology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; ready ; 1989 ; Journal of Medical Microbiology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; ready ; 1989 ; Journal of Medical Microbiology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; ready ; 1989 ; Journal of Medical Microbiology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; ready ; 1990 ; Journal of Medical Microbiology Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; testing ; 1990 ; Journal of Medical Microbiology Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; testing ; 1990 ; Journal of Medical Microbiology Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; ready ; 1990 ; Journal of Medical Microbiology Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; testing ; 1991 ; Journal of Medical Microbiology Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; testing ; 1991 ; Journal of Medical Microbiology Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; testing ; 1992 ; Journal of Medical Microbiology Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; testing ; 1992 ; Journal of Medical Microbiology Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; testing ; 1993 ; Journal of Medical Microbiology Volume 38 ; 38 >
-      au < HighWirePressH20Plugin ; testing ; 1993 ; Journal of Medical Microbiology Volume 39 ; 39 >
-      au < HighWirePressH20Plugin ; testing ; 1994 ; Journal of Medical Microbiology Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; testing ; 1994 ; Journal of Medical Microbiology Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; testing ; 1995 ; Journal of Medical Microbiology Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; testing ; 1995 ; Journal of Medical Microbiology Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; testing ; 1996 ; Journal of Medical Microbiology Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; testing ; 1996 ; Journal of Medical Microbiology Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of Medical Microbiology Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of Medical Microbiology Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of Medical Microbiology Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; ready ; 1993 ; Journal of Medical Microbiology Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; ready ; 1993 ; Journal of Medical Microbiology Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; ready ; 1994 ; Journal of Medical Microbiology Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; ready ; 1994 ; Journal of Medical Microbiology Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; ready ; 1995 ; Journal of Medical Microbiology Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; ready ; 1995 ; Journal of Medical Microbiology Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; ready ; 1996 ; Journal of Medical Microbiology Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; ready ; 1996 ; Journal of Medical Microbiology Volume 45 ; 45 >
       au < HighWirePressH20Plugin ; testing ; 1997 ; Journal of Medical Microbiology Volume 46 ; 46 >
       au < HighWirePressH20Plugin ; testing ; 1998 ; Journal of Medical Microbiology Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; testing ; 1999 ; Journal of Medical Microbiology Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; testing ; 2000 ; Journal of Medical Microbiology Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; Journal of Medical Microbiology Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; ready ; 1999 ; Journal of Medical Microbiology Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; ready ; 2000 ; Journal of Medical Microbiology Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; Journal of Medical Microbiology Volume 50 ; 50 >
       au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Medical Microbiology Volume 51 ; 51 >
       au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Medical Microbiology Volume 52 ; 52 >
       au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Medical Microbiology Volume 53 ; 53 >
