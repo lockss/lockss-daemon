@@ -400,7 +400,7 @@
     au < manifest ; 2010 ; American Journal of Physiology - Cell Physiology Volume 299 ; 299 >
     au < ready ; 2011 ; American Journal of Physiology - Cell Physiology Volume 300 ; 300 >
     au < ready ; 2011 ; American Journal of Physiology - Cell Physiology Volume 301 ; 301 >
-    au < exists ; 2012 ; American Journal of Physiology - Cell Physiology Volume 302 ; 302 >
+    au < manifest ; 2012 ; American Journal of Physiology - Cell Physiology Volume 302 ; 302 >
 
   }
 
@@ -606,7 +606,7 @@
       au < manifest ; 2010 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 299 ; 299 >
       au < ready ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 300 ; 300 >
       au < ready ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 301 ; 301 >
-      au < exists ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 302 ; 302 >
+      au < manifest ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 302 ; 302 >
 
     }
 
@@ -710,7 +710,7 @@
       au < manifest ; 2010 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 299 ; 299 >
       au < ready ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 300 ; 300 >
       au < ready ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 301 ; 301 >
-      au < exists ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 302 ; 302 >
+      au < manifest ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 302 ; 302 >
 
     }
     
@@ -789,7 +789,7 @@
       au < manifest ; 2010 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 299 ; 299 >
       au < ready ; 2011 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 300 ; 300 >
       au < ready ; 2011 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 301 ; 301 >
-      au < exists ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 302 ; 302 >
+      au < manifest ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 302 ; 302 >
 
     }
 
@@ -891,9 +891,9 @@
       au < manifest ; 2009 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 297 ; 297 >
       au < manifest ; 2010 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 298 ; 298 >
       au < manifest ; 2010 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 299 ; 299 >
-      au < manifest ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 300 ; 300 >
-      au < manifest ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 301 ; 301 >
-      au < exists ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 302 ; 302 >
+      au < ready ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 300 ; 300 >
+      au < ready ; 2011 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 301 ; 301 >
+      au < manifest ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 302 ; 302 >
 
     }
 
@@ -995,9 +995,9 @@
       au < manifest ; 2009 ; American Journal of Physiology - Renal Physiology Volume 297 ; 297 >
       au < manifest ; 2010 ; American Journal of Physiology - Renal Physiology Volume 298 ; 298 >
       au < manifest ; 2010 ; American Journal of Physiology - Renal Physiology Volume 299 ; 299 >
-      au < manifest ; 2011 ; American Journal of Physiology - Renal Physiology Volume 300 ; 300 >
-      au < manifest ; 2011 ; American Journal of Physiology - Renal Physiology Volume 301 ; 301 >
-      au < exists ; 2012 ; American Journal of Physiology - Renal Physiology Volume 302 ; 302 >
+      au < ready ; 2011 ; American Journal of Physiology - Renal Physiology Volume 300 ; 300 >
+      au < ready ; 2011 ; American Journal of Physiology - Renal Physiology Volume 301 ; 301 >
+      au < manifest ; 2012 ; American Journal of Physiology - Renal Physiology Volume 302 ; 302 >
 
     }
 
@@ -1141,8 +1141,9 @@
       au < manifest ; 2009 ; Journal of Applied Physiology Volume 107 ; 107 >
       au < manifest ; 2010 ; Journal of Applied Physiology Volume 108 ; 108 >
       au < manifest ; 2010 ; Journal of Applied Physiology Volume 109 ; 109 >      
-      au < manifest ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 >
-      au < manifest ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 >
+      au < ready ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 >
+      au < ready ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 >
+      au < manifest ; 2012 ; Journal of Applied Physiology Volume 112 ; 112 >
       
     }
 
@@ -1280,8 +1281,8 @@
       au < manifest ; 2009 ; Journal of Neurophysiology Volume 102 ; 102 >
       au < manifest ; 2010 ; Journal of Neurophysiology Volume 103 ; 103 >
       au < manifest ; 2010 ; Journal of Neurophysiology Volume 104 ; 104 >
-      au < manifest ; 2011 ; Journal of Neurophysiology Volume 105 ; 105 >
-      au < manifest ; 2011 ; Journal of Neurophysiology Volume 106 ; 106 >
+      au < ready ; 2011 ; Journal of Neurophysiology Volume 105 ; 105 >
+      au < ready ; 2011 ; Journal of Neurophysiology Volume 106 ; 106 >
 
     }
 
@@ -1363,7 +1364,7 @@
       au < manifest ; 2010 ; Physiological Genomics Volume 41 ; 41 >
       au < manifest ; 2010 ; Physiological Genomics Volume 42 ; 42 >
       au < manifest ; 2010 ; Physiological Genomics Volume 42A ; 42A >
-      au < manifest ; 2011 ; Physiological Genomics Volume 43 ; 43 >
+      au < ready ; 2011 ; Physiological Genomics Volume 43 ; 43 >
 
     }
 
@@ -1485,7 +1486,7 @@
       au < manifest ; 2008 ; Physiological Reviews Volume 88 ; 88 >
       au < manifest ; 2009 ; Physiological Reviews Volume 89 ; 89 >
       au < manifest ; 2010 ; Physiological Reviews Volume 90 ; 90 >
-      au < manifest ; 2011 ; Physiological Reviews Volume 91 ; 91 >
+      au < ready ; 2011 ; Physiological Reviews Volume 91 ; 91 >
 
     }
     
@@ -1516,6 +1517,7 @@
     {
 
       pluginSuffix = HighWirePressH20Plugin
+      comment[0] = manifest page has malformed links
 
       au < manifest ; 1986 ; Physiology Volume 1 ; 1 >
       au < manifest ; 1987 ; Physiology Volume 2 ; 2 >
@@ -1542,7 +1544,7 @@
       au < manifest ; 2008 ; Physiology Volume 23 ; 23 >
       au < manifest ; 2009 ; Physiology Volume 24 ; 24 >
       au < manifest ; 2010 ; Physiology Volume 25 ; 25 >
-      au < manifest ; 2011 ; Physiology Volume 26 ; 26 >
+      au < notReady ; 2011 ; Physiology Volume 26 ; 26 >
 
     }
 
