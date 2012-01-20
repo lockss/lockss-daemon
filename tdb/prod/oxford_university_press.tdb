@@ -4567,6 +4567,38 @@
     au < HighWirePressH20Plugin ; exists ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 >
   
   }
+
+  {
+  
+    title <
+      name = European Heart Journal - Cardiovascular Imaging ;
+      issn = 2047-2404 ;
+      eissn = 2047-2412 ;
+      issnl = 2047-2404
+    >
+
+    comment[continues] = 1525-2167
+    comment[0] = title change in January 2012 
+    comment[13] = forthcoming
+    comment[dNP] = vols. 9-11 processed under previous title
+    param[base_url] = http://ehjcimaging.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < manifest ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 ; >
+    au < manifest ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 ; >
+    au < manifest ; 2002 ; European Journal of Echocardiography Volume 3 ; 3 ; >
+    au < manifest ; 2003 ; European Journal of Echocardiography Volume 4 ; 4 ; >
+    au < manifest ; 2004 ; European Journal of Echocardiography Volume 5 ; 5 ; >
+    au < manifest ; 2005 ; European Journal of Echocardiography Volume 6 ; 6 ; >
+    au < manifest ; 2006 ; European Journal of Echocardiography Volume 7 ; 7 ; >
+    au < manifest ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 ; >
+    au < manifest ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
+    au < manifest ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; >
+    au < manifest ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
+    au < manifest ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
+    au < doesNotExist ;  2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 ; >
+
+  }
     
   {
   
@@ -4577,24 +4609,27 @@
       issnl = 1525-2167
     >
 
+    comment[continued_by] = 2047-2404
+
     {
  
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ejechocard.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[dNP] = title change in 2012 -- base url redirects to that of new title
 
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; European Journal of Echocardiography Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; European Journal of Echocardiography Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; European Journal of Echocardiography Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; European Journal of Echocardiography Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; European Journal of Echocardiography Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; European Journal of Echocardiography Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; European Journal of Echocardiography Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; European Journal of Echocardiography Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; European Journal of Echocardiography Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; European Journal of Echocardiography Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 >
 
     }
 
