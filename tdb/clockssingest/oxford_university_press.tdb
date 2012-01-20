@@ -4432,6 +4432,8 @@
       eissn = 1532-2114 ;
       issnl = 1525-2167
     >
+    
+    comment[continued_by] = 2047-2404
 
     {
 
@@ -4447,19 +4449,20 @@
 
     param[base_url] = http://ejechocard.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[dNP] = title change in 2012 -- base URL redirects to that of new title
 
-    au < manifest ; exists ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2002 ; European Journal of Echocardiography Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2003 ; European Journal of Echocardiography Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2004 ; European Journal of Echocardiography Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2005 ; European Journal of Echocardiography Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2006 ; European Journal of Echocardiography Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; European Journal of Echocardiography Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; European Journal of Echocardiography Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; European Journal of Echocardiography Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; European Journal of Echocardiography Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; European Journal of Echocardiography Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; >
-    au < released ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
+    au < down ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
 
     }
 
@@ -4667,6 +4670,38 @@
     au < crawling ; exists ; 2011 ; European Journal of Public Health Volume 21 ; 21 ; >
 
     }
+
+  }
+
+  {
+  
+    title <
+      name = European Heart Journal - Cardiovascular Imaging ;
+      issn = 2047-2404 ;
+      eissn = 2047-2412 ;
+      issnl = 2047-2404
+    >
+
+    comment[continues] = 1525-2167
+    comment[0] = title change in January 2012 
+    comment[13] = forthcoming
+    comment[dNP] = vols. 9-11 processed under previous title
+    param[base_url] = http://ehjcimaging.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < manifest ; exists ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2002 ; European Journal of Echocardiography Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2003 ; European Journal of Echocardiography Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2004 ; European Journal of Echocardiography Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2005 ; European Journal of Echocardiography Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2006 ; European Journal of Echocardiography Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
+    au < doesNotExist ; doesNotExist ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 ; >
 
   }
 
