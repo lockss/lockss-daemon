@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireJavaScriptLinkRewriterFactory.java,v 1.1 2012-01-17 18:01:18 pgust Exp $
+ * $Id: HighWireJavaScriptLinkRewriterFactory.java,v 1.2 2012-01-20 20:53:29 pgust Exp $
  */
 
 /*
@@ -47,16 +47,24 @@ import org.lockss.util.ReaderInputStream;
  * Rewrites links in HighWire javascript code.  Handles specific cases as
  * the come up:
  * 
- * 1. A PDF articles is displayed in a frameset. The document in the
- * "framedprint" frame that contains the PDF content dispalys a document
- * of the form: <i>http://jid.sagepub.com/cgi/framedreprint/13/1/55</i>. 
- * The window.onload handler sets a timer that sets window.location to a 
+ * 1.PDF articles is displayed in a frameset. A document of the form: 
+ * <i>http://jid.sagepub.com/cgi/framedreprint/13/1/55</i> or 
+ * <i>http://archfami.ama-assn.org/cgi/reprintframed/3/9/747</i> have a 
+ * window.onload handler that sets a timer, which sets window.location to a 
  * relative URL of the form: </i>/cgi/reprint/13/1/55.pdf</i>. This transform 
  * rewrites the relative URL to a ServeContent relative URL of the form 
  * <i>/ServeContent?url=http://jid.sagepub.com/cgi/reprint/13/1/55.pdf</i>.
  * 
  * 2. For any other document, this transform simply removes the window.onload
  * handler of the form: <i>window.onload = handleOnLoad;</i>.
+ * 
+ * Note that this really should be generalized, using watch handlers on
+ * window.location.href and window.open(). This is a standard method on
+ * Object since javascript 1.2. Unfortunately, some modern browsers,
+ * including Safari 5.1.2 (JS 1.6) and IE 9 don't support it.  There are
+ * several JS shims available (e.g. https://gist.github.com/384583) that
+ * provide the functionality for many browsers, but still not IE 9. This
+ * will require further investigation before using any of them. 
  */
 public class HighWireJavaScriptLinkRewriterFactory 
 implements LinkRewriterFactory {
@@ -70,18 +78,26 @@ implements LinkRewriterFactory {
     logger.debug2("Rewriting " + url + " in AU " + au);
     
     String origStr, replaceStr;
+    // highwire seems to use several URL paths for these pages
     int i = url.indexOf("/cgi/framedreprint/");
+    if (i < 0) {
+      i = url.indexOf("/cgi/reprintframed/");
+    }
     if (i >= 0) {
+      // Rewrite URL to go through LOCKSS ServeContent servlet 
       // example from: http://jid.sagepub.com/reprint/13/1/55
       // replace: window.location = "/cgi/reprint/" 
       // with: window.location = "/ServeContent?url=[[base_url]]/cgi/reprint/
-      origStr = "window.location = \"/cgi/reprint/";
+      // Note: assumes RHS that is server relative; should be generalized
+      // to handle page-relative and absolute addresses, as well as a
+      // RHS that is a variable.
+      origStr = "window.location = ";
       replaceStr =   "window.location = \"/ServeContent?url=" 
-                   + url.substring(0,i) + "/cgi/reprint/";
+                   + url.substring(0,i) + "\" + ";
     } else {
-      // edit out entire window.onload handler
-      origStr = "window.onload = handleOnLoad;";
-      replaceStr = "";
+      // disable setting the new URL
+      origStr = "window.location = ";
+      replaceStr = "/* window.location = */ ";
     }
     // HTML gets default URL rewriting
     StringFilter sf = new StringFilter(FilterUtil.getReader(in, encoding),
