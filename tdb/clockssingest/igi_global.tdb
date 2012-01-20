@@ -248,7 +248,7 @@
       issnl = 2155-4153
     >
 
-    comment[0] = forthcoming in 2012
+    au < exists ; exists ; 2012 ; International Journal of Applied Industrial Engineering (IJAIE) Volume 1 ; 1 > 
 
   }
 
@@ -1508,6 +1508,16 @@
   {
 
     title <
+      name = International Journal of Monitoring and Surveillance Technologies Research (IJMSTR)
+    >
+    
+    comment[0] = forthcoming 2013 no eissn yet
+    
+  }
+
+  {
+
+    title <
       name = International Journal of Multimedia Data Engineering and Management (IJMDEM);
       issn = 1947-8534 ;
       eissn = 1947-8542 ;
@@ -1717,6 +1727,16 @@
     >
 
     au < exists ; exists ; 2012 ; International Journal of Risk and Contingency Management (IJRCM) Volume 1 ; 1 > 
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Robotics Applications and Technologies (IJRAT) 
+    >
+
+    comment[0] = forthcoming 2013 no eissn yet
 
   }
 
@@ -1946,7 +1966,8 @@
       issnl = 2160-9586
     >
 
-    comment[0] = forthcoming in 2012
+    au < exists ; exists ; 2012 ; International Journal of Systems Biology and Biomedical Technologies (IJSBBT) Volume 1 ; 1 > 
+
 
   }
 
@@ -2020,15 +2041,8 @@
       issnl = 2160-9896
     >
 
-    au < exists ; exists ; 2004 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 1 ; 1 > 
-    au < exists ; exists ; 2005 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 2 ; 2 > 
-    au < exists ; exists ; 2006 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 3 ; 3 > 
-    au < exists ; exists ; 2007 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 4 ; 4 > 
-    au < exists ; exists ; 2008 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 5 ; 5 > 
-    au < exists ; exists ; 2009 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 6 ; 6 > 
-    au < exists ; exists ; 2010 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 7 ; 7 > 
-    au < exists ; exists ; 2011 ; International Journal of Telework and Telecommuting Technologies (IJTTT) Volume 8 ; 8 > 
-
+    comment[0] = forthcoming
+ 
   }
 
   {
