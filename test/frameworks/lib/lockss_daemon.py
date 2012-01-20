@@ -1171,22 +1171,78 @@ class Local_Client( Client ):
 
 
 class AU:
-    """General-purpose Archival Unit"""
+    """General-purpose Archival Unit.
+
+    >>> AU("foo")
+    Traceback (most recent call last):
+      ...
+    LockssError: Could not find a & character in AU ID "foo"
+
+    >>> AU("foo&bar")
+    Traceback (most recent call last):
+      ...
+    LockssError: Plugin id "foo" should have | as separators in AU ID "foo&bar"
+
+    >>> AU("org.foo|baz&bar")
+    Traceback (most recent call last):
+      ...
+    LockssError: Plugin id "org.foo|baz" should have no . characters in AU ID "org.foo|baz&bar"
+
+    >>> AU("org|foo|baz&bar")
+    Traceback (most recent call last):
+      ...
+    LockssError: Expected to find a ~ character in property "bar" in AU ID "org|foo|baz&bar"
+
+    >>> AU("org|foo|baz&bar~42")
+    Traceback (most recent call last):
+      ...
+    LockssError: Failed to find required key "base_url" in AU ID "org|foo|baz&bar~42"
+
+    >>> AU("org|foo|baz&bar~42&base_url~http:yab") #doctest: +ELLIPSIS
+    <__main__.AU instance at 0x...>
+
+    """
 
     def __init__( self, auId ):
         self.auId = auId.strip()
         try:
-            self.pluginId, AU_key = self.auId.split( '&', 1 )
-            if '|' not in self.pluginId or '.' in self.pluginId:
-                raise ValueError
+            self.pluginId, properties = self.auId.split( '&', 1 )
         except ValueError:
-            raise LockssError( 'Invalid AU ID "%s"' % self.auId )
+            raise LockssError( 'Could not find a & character in'
+                               ' AU ID "%s"' % self.auId )
+        if '|' not in self.pluginId:
+            raise LockssError( 'Plugin id "%s" should have | as separators in'
+                               ' AU ID "%s"' % ( self.pluginId, self.auId ) )
+        if '.' in self.pluginId:
+            raise LockssError( 'Plugin id "%s" should have no . characters in'
+                               ' AU ID "%s"' % ( self.pluginId, self.auId ) )
         self.pluginId = self.pluginId.replace( '|', '.' )
-        self.title = urllib.unquote_plus( AU_key )
-        for property in AU_key.split( '&' ):
-            key, value = ( urllib.unquote_plus( encoded ) for encoded in property.split( '~' ) )
-            assert not hasattr( self, key )
-            setattr( self, urllib.unquote_plus( key ), urllib.unquote_plus( value ) )
+        self.title = urllib.unquote_plus( properties )
+        for property in properties.split( '&' ):
+            try:
+                key, value = property.split( '~', 1 )
+            except ValueError:
+                raise LockssError( 'Expected to find a ~ character in'
+                                   ' property "%s" in AU ID "%s"' %
+                                   ( property, self.auId ) )
+            # unquote_plus doesn't raise any exceptions.
+            key = urllib.unquote_plus( key )
+            value = urllib.unquote_plus( value )
+
+            if hasattr( self, key ):
+                # This could be a dup or something we use in class AU,
+                # like 'title'.
+
+                # todo: Make properties a dict, not attributes, or
+                # make the internal attribues less likely to collide
+                # with AU properties.
+                raise LockssError( 'Duplicate or illegal key "%s" in' 
+                                   ' property "%s" in AU ID "%s"' %
+                                   ( key, property, self.auId ) )
+            setattr( self, key, value )
+        if not hasattr( self, "base_url" ):
+            raise LockssError( 'Failed to find required key "base_url" in'
+                               ' AU ID "%s"' % self.auId )
 
     def __str__( self ):
         return self.title
@@ -1223,3 +1279,8 @@ class Simulated_AU( AU ):
 
 hash_locks = {}
 frameworkCount = 0
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
