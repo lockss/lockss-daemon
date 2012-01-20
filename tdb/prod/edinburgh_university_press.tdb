@@ -614,14 +614,14 @@
 
     {
 
-    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
-    param[base_url] = http://www.euppublishing.com/
-    param[journal_id] = iur
-    implicit < status ; year ; name ; param[volume_name] >
-
-    au < exists ; 2012 ; Irish University Review Volume 42 ; 42 >
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = iur
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      au < exists ; 2012 ; Irish University Review Volume 42 ; 42 >
   
-  }
+    }
   
   }
 
@@ -930,14 +930,14 @@
 
     {
 
-    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
-    param[base_url] = http://www.euppublishing.com/
-    param[journal_id] = nfs
-    implicit < status ; year ; name ; param[volume_name] >
-
-    au < exists ; 2012 ; Nottingham French Studies Volume 50 ; 50 >
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = nfs
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      au < exists ; 2012 ; Nottingham French Studies Volume 50 ; 50 >
   
-  }
+    }
   
   }
 
