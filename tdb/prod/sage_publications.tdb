@@ -30836,6 +30836,43 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://pwq.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        au < exists ; 1976-1977 ; Psychology of Women Quarterly Volume 1 ; 1 >
+        au < exists ; 1978 ; Psychology of Women Quarterly Volume 2 ; 2 >
+        au < exists ; 1979 ; Psychology of Women Quarterly Volume 3 ; 3 >
+        au < exists ; 1980 ; Psychology of Women Quarterly Volume 4 ; 4 >
+        au < exists ; 1981 ; Psychology of Women Quarterly Volume 5 ; 5 >
+        au < exists ; 1982 ; Psychology of Women Quarterly Volume 6 ; 6 >
+        au < exists ; 1983 ; Psychology of Women Quarterly Volume 7 ; 7 >
+        au < exists ; 1984 ; Psychology of Women Quarterly Volume 8 ; 8 >
+        au < exists ; 1985 ; Psychology of Women Quarterly Volume 9 ; 9 >
+        au < exists ; 1986 ; Psychology of Women Quarterly Volume 10 ; 10 >
+        au < exists ; 1987 ; Psychology of Women Quarterly Volume 11 ; 11 >
+        au < exists ; 1988 ; Psychology of Women Quarterly Volume 12 ; 12 >
+        au < exists ; 1989 ; Psychology of Women Quarterly Volume 13 ; 13 >
+        au < exists ; 1990 ; Psychology of Women Quarterly Volume 14 ; 14 >
+        au < exists ; 1991 ; Psychology of Women Quarterly Volume 15 ; 15 >
+        au < exists ; 1992 ; Psychology of Women Quarterly Volume 16 ; 16 >
+        au < exists ; 1993 ; Psychology of Women Quarterly Volume 17 ; 17 >
+        au < exists ; 1994 ; Psychology of Women Quarterly Volume 18 ; 18 >
+        au < exists ; 1995 ; Psychology of Women Quarterly Volume 19 ; 19 >
+        au < exists ; 1996 ; Psychology of Women Quarterly Volume 20 ; 20 >
+        au < exists ; 1997 ; Psychology of Women Quarterly Volume 21 ; 21 >
+        au < exists ; 1998 ; Psychology of Women Quarterly Volume 22 ; 22 >
+        au < exists ; 1999 ; Psychology of Women Quarterly Volume 23 ; 23 >
+        au < exists ; 2000 ; Psychology of Women Quarterly Volume 24 ; 24 >
+        au < exists ; 2001 ; Psychology of Women Quarterly Volume 25 ; 25 >
+        au < exists ; 2002 ; Psychology of Women Quarterly Volume 26 ; 26 >
+        au < exists ; 2003 ; Psychology of Women Quarterly Volume 27 ; 27 >
+        au < exists ; 2004 ; Psychology of Women Quarterly Volume 28 ; 28 >
+        au < exists ; 2005 ; Psychology of Women Quarterly Volume 29 ; 29 >
+        au < exists ; 2006 ; Psychology of Women Quarterly Volume 30 ; 30 >
+        au < exists ; 2007 ; Psychology of Women Quarterly Volume 31 ; 31 >
+        au < exists ; 2008 ; Psychology of Women Quarterly Volume 32 ; 32 >
+        au < exists ; 2009 ; Psychology of Women Quarterly Volume 33 ; 33 >
+        au < exists ; 2010 ; Psychology of Women Quarterly Volume 34 ; 34 >
+        au < exists ; 2011 ; Psychology of Women Quarterly Volume 35 ; 35 >
+        au < exists ; 2012 ; Psychology of Women Quarterly Volume 36 ; 36 >
 
       }
 
