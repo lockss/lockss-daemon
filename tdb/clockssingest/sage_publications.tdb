@@ -9674,6 +9674,22 @@
 
   }
 
+    {
+
+      title <
+        name = Gifted Education International ;
+        issn = 0261-4294 ;
+        issnl = 0261-4294
+      >
+
+      {
+
+        comment[pending] = should be online by Feb 2011
+        
+      }
+      
+    }
+    
   {
   
     title <
@@ -10892,6 +10908,27 @@
 
   }
 
+    {
+
+      title <
+        name = Human Genomics and Proteomics ;
+        issn = 1757-4242 
+      >
+
+      {
+
+        param[base_url] = http://hgp.sagepub.com/
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        rights = openaccess
+
+        au < exists ; exists ; 2009 ; Human Genomics and Proteomics Volume 1 ; 1 ; >
+        au < exists ; exists ; 2010 ; Human Genomics and Proteomics Volume 2 ; 2 ; >
+        au < exists ; exists ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 ; >
+
+      }
+
+    }
+
   {
   
     title <
@@ -12083,6 +12120,35 @@
 
   }
 
+    {
+
+      title <
+        name = International Journal of Discrimination and the Law ;
+        issn = 1358-2291 ;
+        issnl = 1358-2291
+      >
+
+      {
+        param[base_url] = http://jdi.sagepub.com/
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        
+        au < exists ; exists ; 1995-1996 ; International Journal of Discrimination and the Law Volume 1 ; 1 ; >
+        au < exists ; exists ; 1996-1997 ; International Journal of Discrimination and the Law Volume 2 ; 2 ; >
+        au < exists ; exists ; 1998-1999 ; International Journal of Discrimination and the Law Volume 3 ; 3 ; >
+        au < exists ; exists ; 2000 ; International Journal of Discrimination and the Law Volume 4 ; 4 ; >
+        au < exists ; exists ; 2001-2002 ; International Journal of Discrimination and the Law Volume 5 ; 5 ; >
+        au < exists ; exists ; 2003-2005 ; International Journal of Discrimination and the Law Volume 6 ; 6 ; >
+        au < exists ; exists ; 2005 ; International Journal of Discrimination and the Law Volume 7 ; 7 ; >
+        au < exists ; exists ; 2005-2007 ; International Journal of Discrimination and the Law Volume 8 ; 8 ; >
+        au < exists ; exists ; 2007-2008 ; International Journal of Discrimination and the Law Volume 9 ; 9 ; >
+        au < exists ; exists ; 2009 ; International Journal of Discrimination and the Law Volume 10 ; 10 ; >
+        au < exists ; exists ; 2011 ; International Journal of Discrimination and the Law Volume 11 ; 11 ; >
+        au < exists ; exists ; 2012 ; International Journal of Discrimination and the Law Volume 12 ; 12 ; >
+
+      }
+      
+    }
+    
   {
 
     title <
@@ -13054,6 +13120,41 @@
 
   }
 
+    {
+  
+        title <
+          name = International Review of Victimology ;
+          issn = 0269-7580 
+      >
+      
+        param[base_url] = http://irv.sagepub.com/
+
+      {
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+
+        au < exists ; exists ; 1990 ; International Review of Victimology Volume 1 ; 1 ; >
+        au < exists ; exists ; 1991 ; International Review of Victimology Volume 2 ; 2 ; >
+        au < exists ; exists ; 1992 ; International Review of Victimology Volume 3 ; 3 ; >
+        au < exists ; exists ; 1993 ; International Review of Victimology Volume 4 ; 4 ; >
+        au < exists ; exists ; 1994 ; International Review of Victimology Volume 5 ; 5 ; >
+        au < exists ; exists ; 1995 ; International Review of Victimology Volume 6 ; 6 ; >
+        au < exists ; exists ; 1996 ; International Review of Victimology Volume 7 ; 7 ; >
+        au < exists ; exists ; 1997 ; International Review of Victimology Volume 8 ; 8 ; >
+        au < exists ; exists ; 1998 ; International Review of Victimology Volume 9 ; 9 ; >
+        au < exists ; exists ; 1999 ; International Review of Victimology Volume 10 ; 10 ; >
+        au < exists ; exists ; 2000 ; International Review of Victimology Volume 11 ; 11 ; >
+        au < exists ; exists ; 2001 ; International Review of Victimology Volume 12 ; 12 ; >
+        au < exists ; exists ; 2002 ; International Review of Victimology Volume 13 ; 13 ; >
+        au < exists ; exists ; 2003 ; International Review of Victimology Volume 14 ; 14 ; >
+        au < exists ; exists ; 2004 ; International Review of Victimology Volume 15 ; 15 ; >
+        au < exists ; exists ; 2005 ; International Review of Victimology Volume 16 ; 16 ; >
+        au < exists ; exists ; 2006 ; International Review of Victimology Volume 17 ; 17 ; >
+  
+      }
+  
+    }
+    
   {
   
     title <
@@ -13756,6 +13857,39 @@
 
 
   }
+  
+  {
+
+      title <
+        name = Journal of Advanced Academics ;
+        issn = 1932-202X 
+      >
+
+        param[base_url] = http://joa.sagepub.com/
+
+      {
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        
+        comment[notReady] = in the GLN this volume has a manifest page but the links to issues are incorrect 20111117
+
+        au < exists ; exists ; 1999-2000 ; Journal of Advanced Academics Volume 11 ; 11 ; >
+        au < exists ; exists ; 2000-2001 ; Journal of Advanced Academics Volume 12 ; 12 ; >
+        au < exists ; exists ; 2001-2002 ; Journal of Advanced Academics Volume 13 ; 13 ; >
+        au < exists ; exists ; 2002-2003 ; Journal of Advanced Academics Volume 14 ; 14 ; >
+        au < exists ; exists ; 2003-2004 ; Journal of Advanced Academics Volume 15 ; 15 ; >
+        au < exists ; exists ; 2004-2005 ; Journal of Advanced Academics Volume 16 ; 16 ; >
+        au < exists ; exists ; 2005-2006 ; Journal of Advanced Academics Volume 17 ; 17 ; >
+        au < exists ; exists ; 2006-2007 ; Journal of Advanced Academics Volume 18 ; 18 ; >
+        au < exists ; exists ; 2007-2008 ; Journal of Advanced Academics Volume 19 ; 19 ; >
+        au < exists ; exists ; 2008-2009 ; Journal of Advanced Academics Volume 20 ; 20 ; >
+        au < exists ; exists ; 2009-2010 ; Journal of Advanced Academics Volume 21 ; 21 ; >
+        au < exists ; notReady ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 ; >
+        au < exists ; exists ; 2012 ; Journal of Advanced Academics Volume 23 ; 23 ; >
+
+      }
+
+    }
 
   {
   
@@ -15849,6 +15983,26 @@
 
   }
 
+    {
+
+      title <
+        name = Journal of Dental Biomechanics ;
+        issn = 1758-7360
+      >
+    
+        param[base_url] = http://dbm.sagepub.com/
+
+      {
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        rights = openaccess
+
+        au < exists ; exists ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 ; >
+        
+      }
+      
+    }
+    
   {
   
     title <
@@ -18259,6 +18413,23 @@
 
   }
 
+    {
+
+      title <
+        name = Journal of Interdisciplinary Economics ;
+        issn = 0260-1079 ;
+        issnl = 0260-1079
+      >
+
+      {
+
+        comment[pending] = Starting publishing in 2012 
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        
+      }
+      
+    }
+    
   {
   
     title <
@@ -21157,6 +21328,25 @@
 
   }
 
+  {
+
+      title <
+        name = Journal of Tissue Engineering ;
+        eissn = 2041-7314 
+    >
+
+      param[base_url] = http://tej.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2010 ; Journal of Tissue Engineering Volume 1 ; 1 ; >
+
+    }
+
+  }
+  
   {
   
     title <
