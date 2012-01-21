@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireJavaScriptLinkRewriterFactory.java,v 1.2 2012-01-20 20:53:29 pgust Exp $
+ * $Id: HighWireJavaScriptLinkRewriterFactory.java,v 1.3 2012-01-21 00:38:53 pgust Exp $
  */
 
 /*
@@ -61,9 +61,10 @@ import org.lockss.util.ReaderInputStream;
  * Note that this really should be generalized, using watch handlers on
  * window.location.href and window.open(). This is a standard method on
  * Object since javascript 1.2. Unfortunately, some modern browsers,
- * including Safari 5.1.2 (JS 1.6) and IE 9 don't support it.  There are
- * several JS shims available (e.g. https://gist.github.com/384583) that
- * provide the functionality for many browsers, but still not IE 9. This
+ * including Safari 5.1.2 (JS 1.6) and IE 9 don't support it.  
+ * 
+ * There are several JS shims available (e.g. https://gist.github.com/384583) 
+ * that provide the functionality for many browsers, but still not IE 9. This
  * will require further investigation before using any of them. 
  */
 public class HighWireJavaScriptLinkRewriterFactory 
