@@ -14592,8 +14592,9 @@
       >
 
       {
+        pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jdi.sagepub.com/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        implicit < status ; year ; name ; param[volume_name] >
         
         au < exists ; 1995-1996 ; International Journal of Discrimination and the Law Volume 1 ; 1 >
         au < exists ; 1996-1997 ; International Journal of Discrimination and the Law Volume 2 ; 2 >
@@ -26958,8 +26959,22 @@ comment[mpj] = now published by Brill
       >
 
       {
-
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://mli.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        au < exists ; 1993-1995 ; Medical Law International Volume 1 ; 1 >
+        au < exists ; 1995-1997 ; Medical Law International Volume 2 ; 2 >
+        au < exists ; 1997-1998 ; Medical Law International Volume 3 ; 3 >
+        au < exists ; 1999-2000 ; Medical Law International Volume 4 ; 4 >
+        au < exists ; 2000-2002 ; Medical Law International Volume 5 ; 5 >
+        au < exists ; 2003-2004 ; Medical Law International Volume 6 ; 6 >
+        au < exists ; 2005-2006 ; Medical Law International Volume 7 ; 7 >
+        au < exists ; 2006-2007 ; Medical Law International Volume 8 ; 8 >
+        au < exists ; 2008 ; Medical Law International Volume 9 ; 9 >
+        au < exists ; 2009-2010 ; Medical Law International Volume 10 ; 10 >
+        au < exists ; 2011 ; Medical Law International Volume 11 ; 11 >
+        au < exists ; 2012 ; Medical Law International Volume 12 ; 12 >
         
       }
       
@@ -26978,7 +26993,6 @@ comment[mpj] = now published by Brill
 
         param[base_url] = http://mhj.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
 
         au < HighWireStrVolPlugin ; down ; 2005 ; The Medieval History Journal Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; down ; 2006 ; The Medieval History Journal Volume 9 ; 9 >
