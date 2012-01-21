@@ -8133,7 +8133,7 @@
 
       {
 
-comment[ecc] = this journal does not exist on Sage website.  moved to Brill
+        comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
         param[base_url] = http://ecc.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -10301,7 +10301,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       {
 
-comment[exm] = now published by Springer
+        comment[exm] = now published by Springer
 
         pluginSuffix = HighWirePlugin
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
@@ -11529,6 +11529,7 @@ comment[exm] = now published by Springer
       {
 
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        comment[pending] = should be online by Feb 2011
         
       }
       
@@ -13178,6 +13179,7 @@ comment[exm] = now published by Springer
 
         au < exists ; 2009 ; Human Genomics and Proteomics Volume 1 ; 1 >
         au < manifest ; 2010 ; Human Genomics and Proteomics Volume 2 ; 2 >
+        au < exists ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 >
 
       }
 
@@ -14590,9 +14592,22 @@ comment[exm] = now published by Springer
       >
 
       {
-
+        param[base_url] = http://jdi.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
         
+        au < exists ; 1995-1996 ; International Journal of Discrimination and the Law Volume 1 ; 1 >
+        au < exists ; 1996-1997 ; International Journal of Discrimination and the Law Volume 2 ; 2 >
+        au < exists ; 1998-1999 ; International Journal of Discrimination and the Law Volume 3 ; 3 >
+        au < exists ; 2000 ; International Journal of Discrimination and the Law Volume 4 ; 4 >
+        au < exists ; 2001-2002 ; International Journal of Discrimination and the Law Volume 5 ; 5 >
+        au < exists ; 2003-2005 ; International Journal of Discrimination and the Law Volume 6 ; 6 >
+        au < exists ; 2005 ; International Journal of Discrimination and the Law Volume 7 ; 7 >
+        au < exists ; 2005-2007 ; International Journal of Discrimination and the Law Volume 8 ; 8 >
+        au < exists ; 2007-2008 ; International Journal of Discrimination and the Law Volume 9 ; 9 >
+        au < exists ; 2009 ; International Journal of Discrimination and the Law Volume 10 ; 10 >
+        au < exists ; 2011 ; International Journal of Discrimination and the Law Volume 11 ; 11 >
+        au < exists ; 2012 ; International Journal of Discrimination and the Law Volume 12 ; 12 >
+
       }
       
     }
@@ -21717,6 +21732,8 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
         
+        comment[pending] = Starting publishing in 2012 
+        
       }
       
     }
@@ -25120,24 +25137,25 @@ comment[mpj] = now published by Brill
 
     }
 
-  {
-
-      title <
-        name = Journal of Tissue Engineering ;
-        eissn = 2041-7314 
-    >
-
     {
-
-      pluginSuffix = HighWirePressH20Plugin
-      param[base_url] = http://tej.sagepub.com/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < manifest ; 2010 ; Journal of Tissue Engineering Volume 1 ; 1 >
-
+  
+        title <
+          name = Journal of Tissue Engineering ;
+          eissn = 2041-7314 
+      >
+  
+      {
+  
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tej.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < manifest ; 2010 ; Journal of Tissue Engineering Volume 1 ; 1 >
+  
+      }
+  
     }
-
-  }
+    
     {
 
       title <
@@ -34714,7 +34732,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://tjx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[existsv90] = V90 has a dead link for the first issue. 2011-12-07
+        comment[notReadyv90] = V90 has a dead link for the first issue. 2011-12-07
         
         au < manifest ; 1947 ; Theology Volume 50 ; 50 >
         au < manifest ; 1948 ; Theology Volume 51 ; 51 >
@@ -34756,7 +34774,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1984 ; Theology Volume 87 ; 87 >
         au < manifest ; 1985 ; Theology Volume 88 ; 88 >
         au < manifest ; 1986 ; Theology Volume 89 ; 89 >
-        au < manifest ; 1987 ; Theology Volume 90 ; 90 >
+        au < notReady ; 1987 ; Theology Volume 90 ; 90 >
         au < manifest ; 1988 ; Theology Volume 91 ; 91 >
         au < manifest ; 1989 ; Theology Volume 92 ; 92 >
         au < manifest ; 1990 ; Theology Volume 93 ; 93 >
