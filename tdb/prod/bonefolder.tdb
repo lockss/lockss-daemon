@@ -17,8 +17,6 @@
     implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://www.philobiblon.com/bonefolder/
     
-    comment[bfr_v8] = manifest checked 20120118
-  
     au < released ; 2004-2005 ; The Bonefolder Volume 1 ; 1 >
     au < released ; 2005-2006 ; The Bonefolder Volume 2 ; 2 >
     au < released ; 2006-2007 ; The Bonefolder Volume 3 ; 3 >
