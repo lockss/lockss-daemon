@@ -43,16 +43,16 @@
       
       comment[years] = years in web addresses are two years behind the publishing year as of 20110912
       
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; American Literary Scholarship 2002 ; 2000 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; American Literary Scholarship 2003 ; 2001 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; American Literary Scholarship 2004 ; 2002 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; American Literary Scholarship 2002 ; 2000 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; American Literary Scholarship 2003 ; 2001 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; American Literary Scholarship 2004 ; 2002 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Literary Scholarship 2005 ; 2003 >
       au < HighWireStrVolPlugin ; down ; 2006 ; American Literary Scholarship 2006 ; 2004 >
       au < HighWirePressH20Plugin ; released ; 2007 ; American Literary Scholarship 2007 ; 2005 >
       au < HighWirePressH20Plugin ; released ; 2008 ; American Literary Scholarship 2008 ; 2006 >
       au < HighWirePressH20Plugin ; released ; 2009 ; American Literary Scholarship 2009 ; 2007 >
       au < HighWirePressH20Plugin ; released ; 2010 ; American Literary Scholarship 2010 ; 2008 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; American Literary Scholarship 2011 ; 2009 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; American Literary Scholarship 2011 ; 2009 >
       
     }
     
@@ -90,11 +90,11 @@
       param[base_url] = http://americanliterature.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; American Literature Volume 72 ; 72 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; American Literature Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; American Literature Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; American Literature Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; American Literature Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; American Literature Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; American Literature Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; American Literature Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; American Literature Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; American Literature Volume 76 ; 76 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Literature Volume 77 ; 77 >
       au < HighWireStrVolPlugin ; down ; 2006 ; American Literature Volume 78 ; 78 >
       au < HighWireStrVolPlugin ; down ; 2007 ; American Literature Volume 79 ; 79 >
@@ -139,10 +139,10 @@
       param[base_url] = http://americanspeech.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; American Speech Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; American Speech Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; American Speech Volume 77 ; 77 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; American Speech Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; American Speech Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; American Speech Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; American Speech Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; American Speech Volume 78 ; 78 >
       au < HighWirePressH20Plugin ; testing ; 2004 ; American Speech Volume 79 ; 79 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Speech Volume 80 ; 80 >
       au < HighWireStrVolPlugin ; down ; 2006 ; American Speech Volume 81 ; 81 >
