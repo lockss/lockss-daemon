@@ -151,6 +151,8 @@ ensure_dir() {
 }
 
 set_java_heap () {
+  # Don't set LOCKSS_JAVA_HEAP if it's already set
+  if [ "${LOCKSS_JAVA_HEAP}X" = X ] ; then
     case `uname -s` in
     Linux)
         # Use 2/3 of physical memory for all daemons combined
@@ -181,6 +183,7 @@ set_java_heap () {
         fi
 	;;
     esac
+  fi
 }
 
 # True if argument is accessible only by root
