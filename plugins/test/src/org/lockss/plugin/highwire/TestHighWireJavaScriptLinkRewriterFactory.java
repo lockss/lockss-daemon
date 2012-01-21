@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireJavaScriptLinkRewriterFactory.java,v 1.1 2012-01-18 18:08:17 pgust Exp $
+ * $Id: TestHighWireJavaScriptLinkRewriterFactory.java,v 1.2 2012-01-21 00:33:11 pgust Exp $
  */
 
 /*
@@ -71,8 +71,9 @@ public class TestHighWireJavaScriptLinkRewriterFactory extends LockssTestCase {
     filtered = fact.createLinkRewriter("text/html", mau, input, "UTF-8", 
         "http://jid.sagepub.com/cgi/framedreprint/13/1/5", null);
     expected = getClass().getClassLoader().getResourceAsStream(output_1);
-    assertEquals(StringUtil.fromInputStream(expected),
-                 StringUtil.fromInputStream(filtered));
+    String s_expected = StringUtil.fromInputStream(expected);
+    String s_filtered = StringUtil.fromInputStream(filtered); 
+    assertEquals(s_expected, s_filtered);
     } finally {
       IOUtil.safeClose(input);
       IOUtil.safeClose(filtered);
@@ -90,8 +91,9 @@ public class TestHighWireJavaScriptLinkRewriterFactory extends LockssTestCase {
     filtered = fact.createLinkRewriter("text/html", mau, input, "UTF-8", 
         "http://jid.sagepub.com/xyzzy/plugh", null);
     expected = getClass().getClassLoader().getResourceAsStream(output_2);
-    assertEquals(StringUtil.fromInputStream(expected),
-                 StringUtil.fromInputStream(filtered));
+    String s_expected = StringUtil.fromInputStream(expected);
+    String s_filtered = StringUtil.fromInputStream(filtered); 
+    assertEquals(s_expected, s_filtered);
     } finally {
       IOUtil.safeClose(input);
       IOUtil.safeClose(filtered);

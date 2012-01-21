@@ -1,17 +1,20 @@
 <html>
 <script language="JavaScript"><!--
-    var timeoutID = 0;
-    
-    function loadPDF() {
-       window.location = "/ServeContent?url=http://jid.sagepub.com/cgi/reprint/13/1/5.pdf";
-    }
+  function loadPDF() {
+    window.location = "/ServeContent?url=http://jid.sagepub.com" + "/cgi/reprint/13/1/5.pdf";
+  }
 
-    function handleOnLoad() {
-        timeoutID = setTimeout('loadPDF()', 1500);
-        return true;
-    }
+  function handleOnLoad() {
+    loadPDF();
+    return true;
+  }
 
-    window.onload = handleOnLoad;
+  function addLoadEvent(func) {
+    window.onLoad = func
+  }
+
+  window.onload = handleOnLoad;
+  addLoadEvent(handlOnLoad);
 // --></script>
 
 </html>
