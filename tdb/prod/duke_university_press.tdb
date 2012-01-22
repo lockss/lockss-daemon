@@ -188,11 +188,11 @@
       param[base_url] = http://boundary2.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; testing ; 2000 ; boundary 2 Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; boundary 2 Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; boundary 2 Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; testing ; 2003 ; boundary 2 Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; testing ; 2004 ; boundary 2 Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; ready ; 2000 ; boundary 2 Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; boundary 2 Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; ready ; 2002 ; boundary 2 Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; ready ; 2003 ; boundary 2 Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; ready ; 2004 ; boundary 2 Volume 31 ; 31 >
       au < HighWireStrVolPlugin ; down ; 2005 ; boundary 2 Volume 32 ; 32 >
       au < HighWireStrVolPlugin ; down ; 2006 ; boundary 2 Volume 33 ; 33 >
       au < HighWireStrVolPlugin ; down ; 2007 ; boundary 2 Volume 34 ; 34 >      
@@ -374,11 +374,11 @@
       param[base_url] = http://easts.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; testing ; 2007 ; East Asian Science, Technology and Society: an International Journal Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 2008 ; East Asian Science, Technology and Society: an International Journal Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; testing ; 2009 ; East Asian Science, Technology and Society: an International Journal Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; East Asian Science, Technology and Society: an International Journal Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; testing ; 2011 ; East Asian Science, Technology and Society: an International Journal Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; exists ; 2007 ; East Asian Science, Technology and Society: an International Journal Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; exists ; 2008 ; East Asian Science, Technology and Society: an International Journal Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; exists ; 2009 ; East Asian Science, Technology and Society: an International Journal Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; exists ; 2010 ; East Asian Science, Technology and Society: an International Journal Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; exists ; 2011 ; East Asian Science, Technology and Society: an International Journal Volume 5 ; 5 >
 
     }
     
@@ -537,18 +537,18 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://genre.dukejournals.org/
 
-      au < testing ; 2000 ; Genre: Forms of Discourse and Culture Volume 33 ; 33 >
-      au < testing ; 2001 ; Genre: Forms of Discourse and Culture Volume 34 ; 34 >
-      au < testing ; 2002 ; Genre: Forms of Discourse and Culture Volume 35 ; 35 >
-      au < testing ; 2003 ; Genre: Forms of Discourse and Culture Volume 36 ; 36 >
-      au < testing ; 2004 ; Genre: Forms of Discourse and Culture Volume 37 ; 37 >
-      au < testing ; 2005 ; Genre: Forms of Discourse and Culture Volume 38 ; 38 >
-      au < testing ; 2006 ; Genre: Forms of Discourse and Culture Volume 39 ; 39 >
-      au < testing ; 2007 ; Genre: Forms of Discourse and Culture Volume 40 ; 40 >
-      au < testing ; 2008 ; Genre: Forms of Discourse and Culture Volume 41 ; 41 >
-      au < testing ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 >
-      au < testing ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 >
-      au < testing ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 >
+      au < ready ; 2000 ; Genre: Forms of Discourse and Culture Volume 33 ; 33 >
+      au < ready ; 2001 ; Genre: Forms of Discourse and Culture Volume 34 ; 34 >
+      au < ready ; 2002 ; Genre: Forms of Discourse and Culture Volume 35 ; 35 >
+      au < ready ; 2003 ; Genre: Forms of Discourse and Culture Volume 36 ; 36 >
+      au < ready ; 2004 ; Genre: Forms of Discourse and Culture Volume 37 ; 37 >
+      au < ready ; 2005 ; Genre: Forms of Discourse and Culture Volume 38 ; 38 >
+      au < ready ; 2006 ; Genre: Forms of Discourse and Culture Volume 39 ; 39 >
+      au < ready ; 2007 ; Genre: Forms of Discourse and Culture Volume 40 ; 40 >
+      au < ready ; 2008 ; Genre: Forms of Discourse and Culture Volume 41 ; 41 >
+      au < ready ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 >
+      au < ready ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 >
+      au < ready ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 >
       
     }
   }
@@ -862,13 +862,13 @@
       param[base_url] = http://minnesotareview.dukejournals.org/
       implicit < status ; year ; name ; param[volume_name] >  
       
-      au < manifest ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
+      au < testing ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
+      au < testing ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
+      au < testing ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
+      au < testing ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
+      au < testing ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
       au < ready ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
+      au < testing ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
       
     }
     
@@ -1066,18 +1066,18 @@
       param[base_url] = http://pads.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
-      au < HighWirePressH20Plugin ; manifest ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
-      au < HighWirePressH20Plugin ; manifest ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
-      au < HighWirePressH20Plugin ; manifest ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; testing ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; testing ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; testing ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; testing ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
+      au < HighWirePressH20Plugin ; testing ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; testing ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
 
     }
   
