@@ -54,29 +54,6 @@
   {
 
     title <
-      name = Africa Bibliography ;
-      issn = 0266-6731 ;
-      eissn = 1757-1642 ;
-      issnl = 0266-6731 
-     >
-
-	{
-	
-      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
-      param[base_url] = http://www.euppublishing.com/
-      param[journal_id] = abib
-      implicit < status ; year ; name ; param[volume_name] >
-      comment[2011] = from 2011 published by Cambridge University Press
-
-      au < doesNotExist ; 2011 ; Africa Bibliography Volume 2010 (2011) ; 2010 >
-      
-    }
-    
-  }
-
-  {
-
-    title <
       name = African Journal of International and Comparative Law ;
       issn = 0954-8890 ;
       eissn = 1755-1609 ;
