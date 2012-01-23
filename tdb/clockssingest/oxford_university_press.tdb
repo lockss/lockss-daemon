@@ -4589,7 +4589,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Europace Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Europace Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; Europace Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2011 ; Europace Volume 13 ; 13 ; >
+    au < released ; manifest ; 2011 ; Europace Volume 13 ; 13 ; >
     au < manifest ; exists ; 2012 ; Europace Volume 14 ; 14 ; >
 
     }
@@ -4651,7 +4651,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Heart Journal Volume 30 ; 30 ; >
     au < testing ; exists ; 2010 ; European Heart Journal Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2011 ; European Heart Journal Volume 32 ; 32 ; >
+    au < released ; manifest ; 2011 ; European Heart Journal Volume 32 ; 32 ; >
 
     }
 
@@ -4681,7 +4681,7 @@
     au < manifest ; exists ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 ; >
     au < released ; manifest ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ; >
     au < released ; manifest ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 ; >
+    au < testing ; exists ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 ; >
 
     }
 
@@ -4795,6 +4795,7 @@
     param[base_url] = http://ehjcimaging.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     comment[base_url] = title change in 2012 -- base url redirects to that of new title
+    comment[nR] = malformed manifest page -- links cite old base URLs
 
     au < manifest ; exists ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 ; >
     au < manifest ; exists ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 ; >
@@ -4807,7 +4808,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; >
     au < down ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
+    au < notReady ; exists ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
 
     }
 
@@ -4849,7 +4850,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 ; >
+    au < released ; manifest ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 ; >
 
     }
 
@@ -4925,7 +4926,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of International Law Volume 19 ; 19 ; >
     au < released ; crawling ; 2009 ; European Journal of International Law Volume 20 ; 20 ; >
     au < released ; crawling ; 2010 ; European Journal of International Law Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2011 ; European Journal of International Law Volume 22 ; 22 ; >
+    au < released ; manifest ; 2011 ; European Journal of International Law Volume 22 ; 22 ; >
 
     }
 
@@ -4987,7 +4988,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 ; >
     au < released ; crawling ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ; > 
+    au < released ; manifest ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ; > 
 
     }
 
@@ -5037,7 +5038,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Public Health Volume 18 ; 18 ; >
     au < released ; crawling ; 2009 ; European Journal of Public Health Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; European Journal of Public Health Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2011 ; European Journal of Public Health Volume 21 ; 21 ; >
+    au < released ; manifest ; 2011 ; European Journal of Public Health Volume 21 ; 21 ; >
 
     }
 
@@ -5104,7 +5105,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 ; >
     au < released ; crawling ; 2010 ; European Review of Agricultural Economics Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2011 ; European Review of Agricultural Economics Volume 38 ; 38 ; >  
+    au < released ; manifest ; 2011 ; European Review of Agricultural Economics Volume 38 ; 38 ; >  
 
     }
 
@@ -5190,7 +5191,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Sociological Review Volume 24 ; 24 ; >
     au < released ; crawling ; 2009 ; European Sociological Review Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; European Sociological Review Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2011 ; European Sociological Review Volume 27 ; 27 ; >
+    au < released ; manifest ; 2011 ; European Sociological Review Volume 27 ; 27 ; >
 
     }
 
@@ -5279,7 +5280,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Family Practice Volume 25 ; 25 ; >
     au < released ; crawling ; 2009 ; Family Practice Volume 26 ; 26 ; >
     au < released ; crawling ; 2010 ; Family Practice Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2011 ; Family Practice Volume 28 ; 28 ; >
+    au < released ; manifest ; 2011 ; Family Practice Volume 28 ; 28 ; >
 
     }
 
@@ -5445,7 +5446,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Forestry Volume 81 ; 81 ; >
     au < released ; crawling ; 2009 ; Forestry Volume 82 ; 82 ; >
     au < released ; crawling ; 2010 ; Forestry Volume 83 ; 83 ; >
-    au < crawling ; exists ; 2011 ; Forestry Volume 84 ; 84 ; >
+    au < released ; manifest ; 2011 ; Forestry Volume 84 ; 84 ; >
 
     }
 
@@ -5521,7 +5522,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 ; >
     au < released ; crawling ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 ; >
     au < released ; crawling ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 ; >   
+    au < released ; manifest ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 ; >   
 
     }
 
@@ -5575,7 +5576,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; French History Volume 22 ; 22 ; >
     au < released ; crawling ; 2009 ; French History Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; French History Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2011 ; French History Volume 25 ; 25 ; >
+    au < released ; manifest ; 2011 ; French History Volume 25 ; 25 ; >
 
     }
 
@@ -5669,7 +5670,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 ; >
     au < released ; crawling ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 ; >
     au < released ; crawling ; 2010 ; French Studies Volume 64 ; 64 ; >
-    au < crawling ; exists ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 ; >
+    au < released ; manifest ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 ; >
 
     }
     
@@ -5719,7 +5720,7 @@
     au < manifest ; exists ; 2008 ; French Studies Bulletin Volume 29 ; 29 ; >
     au < released ; manifest ; 2009 ; French Studies Bulletin Volume 30 ; 30 ; >
     au < released ; manifest ; 2010 ; French Studies Bulletin Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2011 ; French Studies Bulletin Volume 32 ; 32 ; >
+    au < released ; manifest ; 2011 ; French Studies Bulletin Volume 32 ; 32 ; >
     
     }
       
@@ -5794,7 +5795,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; German History Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; German History Volume 27 ; 27 ; >
     au < released ; crawling ; 2010 ; German History Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2011 ; German History Volume 29 ; 29 ; >
+    au < released ; manifest ; 2011 ; German History Volume 29 ; 29 ; >
 
     }
 
@@ -5873,7 +5874,7 @@
     au < manifest ; exists ; 2008 ; The Gerontologist Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Gerontologist Volume 49 ; 49 ; >
     au < released ; crawling ; 2010 ; The Gerontologist Volume 50 ; 50 ; >
-    au < crawling ; exists ; 2011 ; The Gerontologist Volume 51 ; 51 ; > 
+    au < released ; manifest ; 2011 ; The Gerontologist Volume 51 ; 51 ; > 
 
     }
 
@@ -5923,7 +5924,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Glycobiology Volume 18 ; 18 ; >
     au < released ; crawling ; 2009 ; Glycobiology Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Glycobiology Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2011 ; Glycobiology Volume 21 ; 21 ; >
+    au < released ; manifest ; 2011 ; Glycobiology Volume 21 ; 21 ; >
 
     }
 
@@ -6008,7 +6009,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Health Education Research Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; Health Education Research Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Health Education Research Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2011 ; Health Education Research Volume 26 ; 26 ; >
+    au < released ; manifest ; 2011 ; Health Education Research Volume 26 ; 26 ; >
 
     }
 
@@ -6063,7 +6064,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Health Policy and Planning Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; Health Policy and Planning Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Health Policy and Planning Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2011 ; Health Policy and Planning Volume 26 ; 26 ; >
+    au < released ; manifest ; 2011 ; Health Policy and Planning Volume 26 ; 26 ; >
 
     }
 
@@ -6118,7 +6119,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; Health Promotion International Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Health Promotion International Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2011 ; Health Promotion International Volume 26 ; 26 ; >
+    au < released ; manifest ; 2011 ; Health Promotion International Volume 26 ; 26 ; >
 
     }
 
@@ -6214,7 +6215,7 @@
     au < released ; crawling ; 2009 ; History Workshop Journal Volume 68 ; 68 ; >
     au < notReady ; exists ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
     au < released ; crawling ; 2010 ; History Workshop Journal Volume 70 ; 70 ; >
-    au < crawling ; exists ; 2011 ; History Workshop Journal Volume 71 ; 71 ; >  
+    au < released ; manifest ; 2011 ; History Workshop Journal Volume 71 ; 71 ; >  
 
     }
     
@@ -6268,7 +6269,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2011 ; Holocaust and Genocide Studies Volume 25 ; 25 ; >
+    au < released ; manifest ; 2011 ; Holocaust and Genocide Studies Volume 25 ; 25 ; >
 
     }
     
