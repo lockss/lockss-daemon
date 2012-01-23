@@ -39,7 +39,11 @@
       issn = 0967-201X ;
       eissn = 1752-2285 ;
       issnl = 0967-201X
-    >    
+    >   
+    
+    param[journal_id] = antiac
+    param[journal_issn] = 0967-201X
+     
     au < manifest ; 2005 ; Anthropology in Action Volume 12 ; 12 >
     au < manifest ; 2006 ; Anthropology in Action Volume 13 ; 13 >
     au < manifest ; 2007 ; Anthropology in Action Volume 14 ; 14 >
@@ -58,6 +62,10 @@
       eissn = 1746-0727 ;
       issnl = 1746-0719
     >    
+    
+    param[journal_id] = antmid
+    param[journal_issn] = 1746-0719
+    
     au < manifest ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 >
     au < manifest ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 >
     au < manifest ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 >
@@ -74,7 +82,11 @@
       issn = 2042-6143 ;
       eissn = 2042-6151 ;
       issnl = 2042-6143
-    >    
+    > 
+    
+    param[journal_id] = apw
+    param[journal_issn] = 2042-6143
+           
     au < manifest ; 2010 ; Asia Pacific World Volume 1 ; 1 >
     au < manifest ; 2011 ; Asia Pacific World Volume 2 ; 2 >
     
@@ -87,7 +99,10 @@
       issn = 1933-2882 ;
       eissn = 1933-2890 ;
       issnl = 1933-2882
-    >    
+    > 
+    param[journal_id] = aspa
+    param[journal_issn] = 1933-2882   
+       
     au < manifest ; 2007 ; Aspasia Volume 1 ; 1 >
     au < manifest ; 2008 ; Aspasia Volume 2 ; 2 >
     au < manifest ; 2009 ; Aspasia Volume 3 ; 3 >
@@ -103,7 +118,11 @@
       issn = 0011-1570 ;
       eissn = 1752-2293 ;
       issnl = 0011-1570
-    >    
+    >  
+         
+    param[journal_id] = csurv
+    param[journal_issn] = 0011-1570
+          
     au < manifest ; 1997 ; Critical Survey Volume 9 ; 9 >
     au < manifest ; 1998 ; Critical Survey Volume 10 ; 10 >
     au < manifest ; 1999 ; Critical Survey Volume 11 ; 11 >
@@ -129,7 +148,12 @@
       issn = 1362-024X ;
       eissn = 1752-2307 ;
       issnl = 1362-024X
-    >    
+ > 
+ 
+    param[journal_id] = durk
+    param[journal_issn] = 1362-024X
+    
+      
     au < manifest ; 2003 ; Durkheimian Studies Volume 9 ; 9 >
     au < manifest ; 2004 ; Durkheimian Studies Volume 10 ; 10 >
     au < manifest ; 2005 ; Durkheimian Studies Volume 11 ; 11 >
@@ -148,7 +172,11 @@
       name = Environment and Society ;
       issn = 2150-6779 ;
       eissn = 2150-6787
-    >    
+    >
+    
+    param[journal_id] = ares
+    param[journal_issn] = 2150-6779
+     
     au < manifest ; 2010 ; Environment and Society Volume 1 ; 1 >
     
   }
@@ -160,7 +188,11 @@
       issn = 0014-3006 ;
       eissn = 1752-2323 ;
       issnl = 0014-3006
-    >    
+    >
+    
+    param[journal_id] = ejud
+    param[journal_issn] = 0014-3006
+   
     au < manifest ; 1999 ; European Judaism Volume 32 ; 32 >
     au < manifest ; 2001 ; European Judaism Volume 34 ; 34 >
     au < manifest ; 2002 ; European Judaism Volume 35 ; 35 >
@@ -184,7 +216,11 @@
       issn = 0920-1297 ;
       eissn = 1558-5263 ;
       issnl = 0920-1297
-    >    
+    >
+    
+    param[journal_id] = focaal
+    param[journal_issn] = 0920-1297
+   
     au < manifest ; 2004 ; Focaal Volume 2004 ; 2004 >
     au < manifest ; 2005 ; Focaal Volume 2005 ; 2005 >
     au < manifest ; 2006 ; Focaal Volume 2006 ; 2006 >
@@ -260,7 +296,11 @@
       issn = 1938-8209 ;
       eissn = 1938-8322 ;
       issnl = 1938-8209
-    >    
+    >
+    
+    param[journal_id] = gs
+    param[journal_issn] = 1938-8209
+
     au < manifest ; 2008 ; Girlhood Studies Volume 1 ; 1 >
     au < manifest ; 2009 ; Girlhood Studies Volume 2 ; 2 >
     au < manifest ; 2010 ; Girlhood Studies Volume 3 ; 3 >
@@ -275,7 +315,11 @@
       issn = 0315-7997 ;
       eissn = 1939-2419 ;
       issnl = 0315-7997
-    >    
+    >
+    
+    param[journal_id] = hisref
+    param[journal_issn] = 0315-7997
+      
     au < manifest ; 2008 ; Historical Reflections/Reflexions Historiques Volume 34 ; 34 >
     au < manifest ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 >
     au < manifest ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 >
@@ -290,7 +334,10 @@
       issn = 2159-0389  ;
       eissn = 1558-545X ;
       issnl = 1557-2455
-    >    
+    >
+    
+    param[journal_id] = isr
+    param[journal_issn] = 2159-0389  
     
     au < manifest ; 2011 ; Israel Studies Review Volume 26 ; 26 >
     
@@ -303,7 +350,11 @@
       issn = 2041-6938 ;
       eissn = 2041-6946 ;
       issnl = 2041-6938
-    >    
+    >
+    
+    param[journal_id] = emms
+    param[journal_issn] = 2041-6938
+       
     au < manifest ; 2009 ; Journal of Educational Memory, Media, and Society Volume 1 ; 1 >
     au < manifest ; 2010 ; Journal of Educational Memory, Media, and Society Volume 2 ; 2 >
     au < manifest ; 2011 ; Journal of Educational Memory, Media, and Society Volume 3 ; 3 >
@@ -317,7 +368,12 @@
       issn = 1473-3536 ;
       eissn = 1752-2331 ;
       issnl = 1473-3536
-    >    
+      
+    > 
+    
+    param[journal_id] = romance
+    param[journal_issn] = 1473-3536
+       
     au < manifest ; 2001 ; Journal of Romance Studies Volume 1 ; 1 >
     au < manifest ; 2002 ; Journal of Romance Studies Volume 2 ; 2 >
     au < manifest ; 2003 ; Journal of Romance Studies Volume 3 ; 3 >
@@ -339,7 +395,11 @@
       issn = 1465-2609 ;
       eissn = 1752-2358 ;
       issnl = 1465-2609
-    >    
+    > 
+    
+    param[journal_id] = journ
+    param[journal_issn] = 1465-2609
+       
     au < manifest ; 2000 ; Journeys Volume 1 ; 1 >
     au < manifest ; 2001 ; Journeys Volume 2 ; 2 >
     au < manifest ; 2002 ; Journeys Volume 3 ; 3 >
@@ -362,7 +422,10 @@
       issn = 1755-2273 ;
       eissn = 1755-2281 ;
       issnl = 1755-2273
-    >    
+    > 
+    param[journal_id] = latiss
+    param[journal_issn] = 1755-2273
+       
     au < manifest ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 >
     au < manifest ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 >
     au < manifest ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 >
@@ -377,7 +440,10 @@
       issn = 1558-6073 ;
       eissn = 1558-5468 ;
       issnl = 1558-6073
-    >    
+    >
+    param[journal_id] = natcult
+    param[journal_issn] = 1558-6073
+        
     au < manifest ; 2006 ; Nature and Culture Volume 1 ; 1 >
     au < manifest ; 2007 ; Nature and Culture Volume 2 ; 2 >
     au < manifest ; 2008 ; Nature and Culture Volume 3 ; 3 >
@@ -394,7 +460,10 @@
       issn = 0822-7942 ;
       eissn = 1752-2366 ;
       issnl = 0822-7942
-    >    
+    >
+    param[journal_id] = nomp
+    param[journal_issn] = 0822-7942
+        
     au < manifest ; 1997 ; Nomadic Peoples Volume 1 ; 1 >
     au < manifest ; 1998 ; Nomadic Peoples Volume 2 ; 2 >
     au < manifest ; 1999 ; Nomadic Peoples Volume 3 ; 3 >
@@ -420,7 +489,11 @@
       issn = 1934-9688 ;
       eissn = 1934-9696 ;
       issnl = 1934-9688
-    >    
+    >
+    
+    param[journal_id] = proj
+    param[journal_issn] = 1934-9688
+        
     au < manifest ; 2007 ; Projections Volume 1 ; 1 >
     au < manifest ; 2008 ; Projections Volume 2 ; 2 >
     au < manifest ; 2009 ; Projections Volume 3 ; 3 >
@@ -453,6 +526,10 @@
       eissn = 2150-9301 ;
       issnl = 2150-9298
     >    
+
+    param[journal_id] = arrs
+    param[journal_issn] = 2150-9298
+
     au < manifest ; 2010 ; Religion and Society Volume 1 ; 1 >
    
   }
@@ -465,6 +542,9 @@
       eissn = 1558-5476 ;
       issnl = 1357-1559
     >    
+    param[journal_id] = sartre
+    param[journal_issn] = 1357-1559
+
     au < manifest ; 1997 ; Sartre Studies International Volume 3 ; 3 >
     au < manifest ; 1998 ; Sartre Studies International Volume 4 ; 5 >
     au < manifest ; 1999 ; Sartre Studies International Volume 5 ; 5 >
@@ -490,7 +570,10 @@
       issn = 1361-7362 ;
       eissn = 1476-6787 ;
       issnl = 1361-7362
-    >    
+    > 
+    param[journal_id] = sibiric
+    param[journal_issn] = 1361-7362
+       
     au < manifest ; 2002 ; Sibirica Volume 2 ; 2 >
     au < manifest ; 2003 ; Sibirica Volume 3 ; 3 >
     au < manifest ; 2004 ; Sibirica Volume 4 ; 4 >
@@ -511,7 +594,10 @@
       issn = 0155-977X ;
       eissn = 1558-5727 ;
       issnl = 0155-977X
-    >    
+    >
+    param[journal_id] = socan
+    param[journal_issn] = 0155-977X
+        
     au < manifest ; 2002 ; Social Analsysis Volume 46 ; 46 >
     au < manifest ; 2003 ; Social Analsysis Volume 47 ; 47 >
     au < manifest ; 2004 ; Social Analsysis Volume 48 ; 48 >
@@ -533,6 +619,10 @@
       eissn = 1558-5816 ;
       issnl = 0040-5817
     >    
+    param[journal_id] = theoria
+    param[journal_issn] = 0040-5817
+
+
     au < manifest ; 1997 ; Theoria Volume 44 ; 44 >
     au < manifest ; 1998 ; Theoria Volume 45 ; 45 >
     au < manifest ; 1999 ; Theoria Volume 46 ; 46 >
@@ -559,6 +649,10 @@
       eissn = 2045-4821 ;
       issnl = 2045-4813
     >    
+    param[journal_id] = trans
+    param[journal_issn] = 2045-4813
+
+
     au < manifest ; 2011 ; Transfers Volume 1 ; 1 >
     
   }
