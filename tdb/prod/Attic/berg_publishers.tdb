@@ -19,6 +19,8 @@
       eissn = 1753-0377 ;
       issnl = 0892-7936
     >    
+    param[journal_id] = anthroz
+    param[journal_issn] = 0892-7936
 
 
      au < testing ; 1987-1988 ; Anthrozoös Volume 1 ; 1 >
@@ -72,6 +74,8 @@
       eissn = 1478-0046 ;
       issnl = 1478-0038
     >    
+    param[journal_id] = cash
+    param[journal_issn] = 1478-0038
 
     au < manifest ; 2004 ; Cultural and Social History Volume 1 ; 1 >
     au < manifest ; 2005 ; Cultural and Social History Volume 2 ; 2 >
@@ -93,6 +97,8 @@
       eissn = 1751-7435 ;
       issnl = 1743-2197
     >    
+    param[journal_id] = cpij
+    param[journal_issn] = 1743-2197
 
     au < manifest ; 2005 ; Cultural Politics Volume 1 ; 1 >
     au < manifest ; 2006 ; Cultural Politics Volume 2 ; 2 >
@@ -112,6 +118,10 @@
       eissn = 1754-7083 ;
       issnl = 1754-7075
     >    
+    param[journal_id] = dgcj
+    param[journal_issn] = 1754-7075
+
+
     au < manifest ; 2009 ; Design and Culture Volume 1 ; 1 >
     au < manifest ; 2010 ; Design and Culture Volume 2 ; 2 >
     au < manifest ; 2011 ; Design and Culture Volume 3 ; 3 >
@@ -127,6 +137,10 @@
       eissn = 1756-3062 ;
       issnl = 1460-6925
     >    
+    param[journal_id] = dsgj
+    param[journal_issn] = 1460-6925
+
+
     au < manifest ; 1997-1998 ; The Design Journal Volume 1 ; 1 >
     au < manifest ; 1999 ; The Design Journal Volume 2 ; 2 >
     au < manifest ; 2000 ; The Design Journal Volume 3 ; 3 >
@@ -153,6 +167,10 @@
       eissn = 1756-9389 ;
       issnl = 1756-9370
     >    
+    param[journal_id] = fpcj
+    param[journal_issn] = 1756-9370
+
+
     au < manifest ; 2009 ; Fashion Practice Volume 1 ; 1 >
     au < manifest ; 2010 ; Fashion Practice Volume 2 ; 2 >
     au < manifest ; 2011 ; Fashion Practice Volume 3 ; 3 >
@@ -167,6 +185,10 @@
       eissn = 1751-7419 ;
       issnl = 1362-704X
     >    
+    param[journal_id] = jdbc
+    param[journal_issn] = 1362-704X
+
+
     au < manifest ; 1997 ; Fashion Theory Volume 1 ; 1 >
     au < manifest ; 1998 ; Fashion Theory Volume 2 ; 2 >
     au < manifest ; 1999 ; Fashion Theory Volume 3 ; 3 >
@@ -194,6 +216,10 @@
       eissn = 1751-7443 ;
       issnl = 1552-8014
     >    
+    param[journal_id] = fcs
+    param[journal_issn] = 1552-8014
+
+
     au < manifest ; 2004 ; Food, Culture and Society Volume 7 ; 7 >
     au < manifest ; 2005 ; Food, Culture and Society Volume 8 ; 8 >
     au < manifest ; 2006 ; Food, Culture and Society Volume 9 ; 97 >
@@ -213,6 +239,10 @@
       eissn = 1751-7427 ;
       issnl = 1740-6315
     >    
+
+    param[journal_id] = hcu
+    param[journal_issn] = 1740-6315
+    
     au < manifest ; 2004 ; Home Cultures Volume 1 ; 1 >
     au < manifest ; 2005 ; Home Cultures Volume 2 ; 2 >
     au < manifest ; 2006 ; Home Cultures Volume 3 ; 3 >
@@ -231,6 +261,10 @@
       issn = 2041-9112 ;
       eissn = 2041-9120
     >    
+    param[journal_id] = idacj
+    param[journal_issn] = 2041-9112
+
+
     au < manifest ; 2010 ; Interiors Volume 1 ; 1 >
     au < manifest ; 2011 ; Interiors Volume 2 ; 2 >
     
@@ -242,6 +276,10 @@
       name = Journal for the Study of Food and Society ;
       issn = 1528-9796 
     >    
+    param[journal_id] = jasfs
+    param[journal_issn] = 1528-9796
+
+
     au < manifest ; 1996 ; Journal for the Study of Food and Society Volume 1 ; 1 >
     au < manifest ; 1998 ; Journal for the Study of Food and Society Volume 2 ; 2 >
     au < manifest ; 1999 ; Journal for the Study of Food and Society Volume 3 ; 3 >
@@ -259,6 +297,10 @@
       eissn = 1749-6780 ;
       issnl = 1749-6772
     >    
+    param[journal_id] = cftj
+    param[journal_issn] = 1749-6772
+
+
     au < manifest ; 2008 ; The Journal of Modern Craft Volume 1 ; 1 >
     au < manifest ; 2009 ; The Journal of Modern Craft Volume 2 ; 2 >
     au < manifest ; 2010 ; The Journal of Modern Craft Volume 3 ; 3 >
@@ -274,6 +316,10 @@
       eissn = 1751-8342 ;
       issnl = 1743-2200
     >    
+    param[journal_id] = mar
+    param[journal_issn] = 1743-2200
+
+
     au < manifest ; 2005 ; Material Religion Volume 1 ; 1 >
     au < manifest ; 2006 ; Material Religion Volume 2 ; 2 >
     au < manifest ; 2007 ; Material Religion Volume 3 ; 3 >
@@ -292,6 +338,10 @@
       eissn = 1751-4525 ;
       issnl = 1751-4517
     >    
+    param[journal_id] = pgcj
+    param[journal_issn] = 1751-4517
+
+
     au < manifest ; 2008 ; Photography & Culture Volume 1 ; 1 >
     au < manifest ; 2009 ; Photography & Culture Volume 2 ; 2 >
     au < manifest ; 2010 ; Photography & Culture Volume 3 ; 3 >
@@ -307,6 +357,10 @@
       eissn = 1745-8935 ;
       issnl = 1745-8927
     >    
+    param[journal_id] = tsas
+    param[journal_issn] = 1745-8927
+
+
     au < manifest ; 2006 ; The Senses & Society Volume 1 ; 1 >
     au < manifest ; 2007 ; The Senses & Society Volume 2 ; 2 >
     au < manifest ; 2008 ; The Senses & Society Volume 3 ; 3 >
@@ -325,6 +379,10 @@
       eissn = 1751-8350 ;
       issnl = 1475-9756
     >    
+    param[journal_id] = tjcc
+    param[journal_issn] = 1475-9756
+
+
     au < manifest ; 2003 ; Textile Volume 1 ; 1 >
     au < manifest ; 2004 ; Textile Volume 2 ; 2 >
     au < manifest ; 2005 ; Textile Volume 3 ; 3 >
@@ -345,6 +403,10 @@
       eissn = 1751-6978 ;
       issnl = 1751-696X
     >    
+    param[journal_id] = tmdj
+    param[journal_issn] = 1751-696X
+
+
     au < manifest ; 2008 ; Time & Mind Volume 1 ; 1 >
     au < manifest ; 2009 ; Time & Mind Volume 2 ; 2 >
     au < manifest ; 2010 ; Time & Mind Volume 3 ; 3 >
