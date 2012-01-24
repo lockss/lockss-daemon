@@ -26,21 +26,21 @@
       
     {
       
-      comment[thib] = Thib is not 100% certain this base URL is still good for release
-      param[base_url] = http://www.sipa.columbia.edu/ece/research/intermarium/  
+      param[base_url] = http://ece.columbia.edu/research/intermarium/ 
+       
     
-      au < manifest ; InterMarium Volume 1  ; 1 ; 1997 >
-      au < manifest ; InterMarium Volume 2  ; 2 ; 1998 >
-      au < manifest ; InterMarium Volume 3  ; 3 ; 1999 >
-      au < manifest ; InterMarium Volume 4  ; 4 ; 2000 >
-      au < manifest ; InterMarium Volume 5  ; 5 ; 2002 >
-      au < manifest ; InterMarium Volume 6  ; 6 ; 2003 >
-      au < manifest ; InterMarium Volume 7  ; 7 ; 2004 >
-      au < manifest ; InterMarium Volume 8  ; 8 ; 2005 >
-      au < manifest ; InterMarium Volume 9  ; 9 ; 2006 >
-      au < manifest ; InterMarium Volume 10 ; 10 ; 2007 >
+      au < testing ; InterMarium Volume 1  ; 1 ; 1997 >
+      au < testing ; InterMarium Volume 2  ; 2 ; 1998 >
+      au < testing ; InterMarium Volume 3  ; 3 ; 1999 >
+      au < testing ; InterMarium Volume 4  ; 4 ; 2000 >
+      au < testing ; InterMarium Volume 5  ; 5 ; 2002 >
+      au < testing ; InterMarium Volume 6  ; 6 ; 2003 >
+      au < testing ; InterMarium Volume 7  ; 7 ; 2004 >
+      au < testing ; InterMarium Volume 8  ; 8 ; 2005 >
+      au < testing ; InterMarium Volume 9  ; 9 ; 2006 >
+      au < testing ; InterMarium Volume 10 ; 10 ; 2007 >
       au < doNotProcess ; InterMarium Volume 11 ; 11 ; 0 >
-      au < manifest ; InterMarium Volume 12 ; 12 ; 2008 >
+      au < testing ; InterMarium Volume 12 ; 12 ; 2008 >
       
     }
     
