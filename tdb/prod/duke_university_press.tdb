@@ -862,13 +862,13 @@
       param[base_url] = http://minnesotareview.dukejournals.org/
       implicit < status ; year ; name ; param[volume_name] >  
       
-      au < testing ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
-      au < testing ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
-      au < testing ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
-      au < testing ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
-      au < testing ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
+      au < ready ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
+      au < ready ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
+      au < ready ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
+      au < ready ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
+      au < ready ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
       au < ready ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
-      au < testing ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
+      au < ready ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
       
     }
     
@@ -1066,18 +1066,18 @@
       param[base_url] = http://pads.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; testing ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
-      au < HighWirePressH20Plugin ; testing ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
-      au < HighWirePressH20Plugin ; testing ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
-      au < HighWirePressH20Plugin ; testing ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
-      au < HighWirePressH20Plugin ; testing ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
-      au < HighWirePressH20Plugin ; testing ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
-      au < HighWirePressH20Plugin ; testing ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
-      au < HighWirePressH20Plugin ; testing ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; ready ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; ready ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; ready ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; ready ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; ready ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; ready ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; ready ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; ready ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; ready ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
+      au < HighWirePressH20Plugin ; ready ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; ready ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
 
     }
   
@@ -1299,10 +1299,10 @@
       param[base_url] = http://saq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; The South Atlantic Quarterly Volume 100 ; 100 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; The South Atlantic Quarterly Volume 102 ; 102 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; The South Atlantic Quarterly Volume 103 ; 103 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; The South Atlantic Quarterly Volume 100 ; 100 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; The South Atlantic Quarterly Volume 102 ; 102 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; The South Atlantic Quarterly Volume 103 ; 103 >
       au < HighWireStrVolPlugin ; down ; 2005 ; The South Atlantic Quarterly Volume 104 ; 104 >
       au < HighWireStrVolPlugin ; down ; 2006 ; The South Atlantic Quarterly Volume 105 ; 105 >
       au < HighWireStrVolPlugin ; down ; 2007 ; The South Atlantic Quarterly Volume 106 ; 106 >
