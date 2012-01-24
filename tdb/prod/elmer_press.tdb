@@ -85,10 +85,10 @@
       param[base_url] = http://jcs.elmerpress.com/
       param[journal_id] = jocmr
 
-      au < manifest ; 2009 ; Journal of Clinical Medicine Research Volume 1 ; 1 ; 2009 >
-      au < manifest ; 2010 ; Journal of Clinical Medicine Research Volume 2 ; 2 ; 2010 >
-      au < manifest ; 2011 ; Journal of Clinical Medicine Research Volume 3 ; 3 ; 2011 >
-      au < manifest ; 2012 ; Journal of Clinical Medicine Research Volume 4 ; 4 ; 2012 >
+      au < testing ; 2009 ; Journal of Clinical Medicine Research Volume 1 ; 1 ; 2009 >
+      au < testing ; 2010 ; Journal of Clinical Medicine Research Volume 2 ; 2 ; 2010 >
+      au < testing ; 2011 ; Journal of Clinical Medicine Research Volume 3 ; 3 ; 2011 >
+      au < testing ; 2012 ; Journal of Clinical Medicine Research Volume 4 ; 4 ; 2012 >
 
     }
 
@@ -118,7 +118,7 @@
       param[base_url] = http://jofem.elmerpress.com/
       param[journal_id] = jofem
 
-      au < manifest ; 2011 ; Journal of Endocrinology and Metabolism Volume 1 ; 1 ; 2011 >
+      au < testing ; 2011 ; Journal of Endocrinology and Metabolism Volume 1 ; 1 ; 2011 >
 
     }
 
@@ -148,9 +148,9 @@
       param[base_url] = http://jmc.elmerpress.com/
       param[journal_id] = jmc
 
-      au < manifest ; 2010 ; Journal of Medical Cases Volume 1 ; 1 ; 2010 >
-      au < manifest ; 2011 ; Journal of Medical Cases Volume 1 ; 1 ; 2011 >
-      au < manifest ; 2012 ; Journal of Medical Cases Volume 1 ; 1 ; 2012 >
+      au < testing ; 2010 ; Journal of Medical Cases Volume 1 ; 1 ; 2010 >
+      au < testing ; 2011 ; Journal of Medical Cases Volume 1 ; 1 ; 2011 >
+      au < testing ; 2012 ; Journal of Medical Cases Volume 1 ; 1 ; 2012 >
 
     }
 
@@ -165,7 +165,7 @@
       param[base_url] = http://neurores.elmerpress.com/
       param[journal_id] = neurores
 
-      au < manifest ; 2011 ; Journal of Medical Cases Volume 1 ; 1 ; 2011 >
+      au < testing ; 2011 ; Journal of Medical Cases Volume 1 ; 1 ; 2011 >
 
     }
 
@@ -195,8 +195,8 @@
       param[base_url] = http://wjon.elmerpress.com/
       param[journal_id] = wjon
 
-      au < manifest ; 2010 ; World Journal of Oncology Volume 1 ; 1 ; 2010 >
-      au < manifest ; 2011 ; World Journal of Oncology Volume 2 ; 2 ; 2011 >
+      au < testing ; 2010 ; World Journal of Oncology Volume 1 ; 1 ; 2010 >
+      au < testing ; 2011 ; World Journal of Oncology Volume 2 ; 2 ; 2011 >
 
     }
     
