@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.25 2012-01-17 23:44:31 pgust Exp $
+ * $Id: ListHoldings.java,v 1.25.2.1 2012-01-24 03:11:54 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.lockss.util.TimeBase;;
 import org.mortbay.html.Form;
 import org.mortbay.html.Input;
 import org.mortbay.html.Table;
@@ -460,10 +461,10 @@ public class ListHoldings extends LockssServlet {
    * @throws IOException
    */
   public void doExport(KbartExporter kexp, OutputStream out) throws IOException {
-    long s = System.currentTimeMillis();
+    long s = TimeBase.nowMs();
     kexp.export(out);
-    System.err.format("Export took approximately %ss\n",
-        (System.currentTimeMillis() - s) / 1000);
+    log.debug("Export took approximately "
+	      + StringUtil.timeIntervalToString(TimeBase.msSince(s)));
     out.flush();
     out.close();
   }
