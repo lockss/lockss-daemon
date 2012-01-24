@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.43 2012-01-18 03:40:42 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.43.2.1 2012-01-24 03:11:25 tlipkis Exp $
  */
 
 /*
@@ -171,6 +171,9 @@ public abstract class BaseCrawler
 
   protected boolean mimeTypePauseAfter304 = DEFAULT_MIME_TYPE_PAUSE_AFTER_304;
 
+  protected boolean throwIfRateLimiterNotUsed =
+    DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED;
+
   protected abstract boolean doCrawl0();
   public abstract int getType();
 
@@ -194,7 +197,6 @@ public abstract class BaseCrawler
   protected CrawlRateLimiter crl;
   protected String previousContentType;
   protected int pauseCounter = 0;
-  protected boolean expectRateLimiterUsed = false;
 
   protected BaseCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
     if (au == null) {
@@ -241,6 +243,10 @@ public abstract class BaseCrawler
                                               DEFAULT_DATA_TIMEOUT);
     connectionPool.setConnectTimeout(connectTimeout);
     connectionPool.setDataTimeout(dataTimeout);
+
+    throwIfRateLimiterNotUsed =
+      config.getBoolean(PARAM_THROW_IF_RATE_LIMITER_NOT_USED,
+			DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED);
 
     String crawlFrom = config.get(PARAM_CRAWL_FROM_ADDR);
     if (StringUtil.isNullString(crawlFrom)) {
@@ -434,7 +440,17 @@ public abstract class BaseCrawler
   }
 
   protected void updateCacheStats(int cacheResult, UrlCacher uc) {
-    expectRateLimiterUsed = true;
+
+    // Paranoia - assert that the rate limiter was actually used
+    CrawlRateLimiter crl = getCrawlRateLimiter();
+    if (pauseCounter == crl.getPauseCounter()) {
+      logger.critical("CrawlRateLimiter not used after " + uc, new Throwable());
+      if (throwIfRateLimiterNotUsed) {
+	throw new RuntimeException("CrawlRateLimiter not used");
+      }
+    }
+    pauseCounter = crl.getPauseCounter();
+
     switch (cacheResult) {
     case UrlCacher.CACHE_RESULT_FETCHED:
       crawlStatus.signalUrlFetched(uc.getUrl());
@@ -482,17 +498,6 @@ public abstract class BaseCrawler
 //       previousContentType = null;
     }
     CrawlRateLimiter crl = getCrawlRateLimiter();
-    if (expectRateLimiterUsed) {
-      if (pauseCounter == crl.getPauseCounter()) {
-	logger.critical("CrawlRateLimiter not used " + crl, new Throwable());
-	if (CurrentConfig.getBooleanParam(PARAM_THROW_IF_RATE_LIMITER_NOT_USED,
-					  DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED)) {
-	  throw new RuntimeException("CrawlRateLimiter not used");
-	}
-      }
-      expectRateLimiterUsed = false;
-    }
-    pauseCounter = crl.getPauseCounter();
     uc.setCrawlRateLimiter(crl);
     if (crawlFromAddr != null) {
       uc.setLocalAddress(crawlFromAddr);
