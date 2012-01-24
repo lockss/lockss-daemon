@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.23 2012-01-18 03:37:52 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.23.2.1 2012-01-24 03:11:43 tlipkis Exp $
  */
 
 /*
@@ -359,7 +359,9 @@ public class AdminServletManager extends BaseServletManager {
 		     null,
                      "Logs",
                      "log",
-                     ServletDescr.IN_NAV | ServletDescr.NEED_ROLE_DEBUG);
+                     ServletDescr.IN_NAV
+		     | ServletDescr.NEED_ROLE_DEBUG
+		     | ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   protected static final ServletDescr LINK_EXPORTS =
     new ServletDescr(null,
 		     null,

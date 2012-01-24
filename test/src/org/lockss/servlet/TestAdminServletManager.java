@@ -1,5 +1,5 @@
 /*
- * $Id: TestAdminServletManager.java,v 1.7 2012-01-18 03:37:52 tlipkis Exp $
+ * $Id: TestAdminServletManager.java,v 1.7.2.1 2012-01-24 03:11:43 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,6 @@ public class TestAdminServletManager extends LockssTestCase {
     SERVLET_DAEMON_STATUS,
     SERVLET_LIST_OBJECTS,
     SERVLET_LIST_HOLDINGS,   
-    LINK_LOGS,
     SERVLET_THREAD_DUMP,
     LINK_CONTACT,
     LINK_HELP,
@@ -91,6 +90,7 @@ public class TestAdminServletManager extends LockssTestCase {
     SERVLET_DISPLAY_CONTENT,
     SERVLET_HASH_CUS,
     LINK_EXPORTS,
+    LINK_LOGS,
   };
 
   ServletDescr debugDescrs[] = {
