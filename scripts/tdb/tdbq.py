@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.13 2011-05-20 19:35:58 pgust Exp $
+# $Id: tdbq.py,v 1.14 2012-01-25 11:10:28 easyonthemayo Exp $
 
 # Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -638,6 +638,9 @@ def str_to_lambda_au(str):
                    ('rights', lambda au: au.rights()),
                    ('auid', lambda au: au.auid()),
                    ('title', lambda au: au.title().name()),
+                   ('type', lambda au: au.title().type()),
+                   ('isbn', lambda au: au.title().isbn()),
+                   ('eisbn', lambda au: au.title().eisbn()),
                    ('issn', lambda au: au.title().issn()),
                    ('eissn', lambda au: au.title().eissn()),
                    ('issnl', lambda au: au.title().issnl()),

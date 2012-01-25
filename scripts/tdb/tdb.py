@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.11 2012-01-16 17:13:59 pgust Exp $
+# $Id: tdb.py,v 1.12 2012-01-25 11:10:28 easyonthemayo Exp $
 
 # Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -157,6 +157,7 @@ class Publisher(_Map):
 class Title(_Map):
     '''A tdb Title object.'''
     NAME = 'name'
+    TYPE = 'type'
     EISBN = 'eisbn'
     EISSN = 'eissn'
     ISBN = 'isbn'
@@ -176,6 +177,7 @@ class Title(_Map):
     def set_publisher(self, publisher): self.set(Title.PUBLISHER, publisher)
 
     def name(self): return self.get(Title.NAME)
+    def type(self): return self.get(Title.TYPE)
     def eisbn(self): return self.get(Title.EISBN)
     def eissn(self): return self.get(Title.EISSN)
     def isbn(self): return self.get(Title.ISBN)
