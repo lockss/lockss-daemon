@@ -28124,6 +28124,26 @@
 
   }
 
+    {
+
+      title <
+        name = Sage Open ;
+        eissn = 2158-2440
+      >
+      
+        param[base_url] = http://sgo.sagepub.com/
+        
+        {
+        
+          pluginSuffix = ClockssHighWirePressH20Plugin
+
+          au < exists ; exists ; 2011 ; Sage Open Volume 1 ; 1 ; >
+          au < exists ; exists ; 2012 ; Sage Open Volume 2 ; 2 ; >
+        
+        }
+
+    }
+
   {
   
     title <
