@@ -76,12 +76,13 @@ then
     if [[ $file == "sage_publications.tdb" ]]
     then
       echo "!ignore SAGE Publications,Graft: Organ and Cell Transplantation,1522-1628,"
+      echo "!ignore SAGE Publications,Ecclesiology,1744-1366,1745-5316"
     fi
   else
     maxnumAUs1=$numdiffAUs
     maxnumAUs2=$numdiffAUs
     echo "No title differences"
-    ./tdbout -c auid,title -i ../../tdb/prod/$file | grep -v "projmuse" | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/glnt.txt
+    ./tdbout -c auid,title -i ../../tdb/prod/$file | grep -v "projmuse" | grep -v "bioone" | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/glnt.txt
     ./tdbout -c auid,title -i ../../tdb/clockssingest/$file | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/clocksst.txt
     if ! diff $tpath/glnt.txt $tpath/clocksst.txt > $tpath/diff.txt
     then
