@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -17,6 +17,10 @@
       <entry>
         <string>Metadata</string>
         <string>2</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
       </entry>
     </map>
   </entry>
@@ -115,5 +119,12 @@
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.ojs2.OJS2ArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+        <string>&quot;^%sindex\.php/%s/article/download/[0-9]{4}/[0-9]{4}$&quot;, base_url, journal_id</string>
+        <string>&quot;^%sindex\.php/%s/article/view/[0-9]{4}/$&quot;, base_url, journal_id</string>
+      </list>
   </entry>
 </map>
