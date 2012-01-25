@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.83 2012-01-18 03:37:52 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.84 2012-01-25 10:46:33 tlipkis Exp $
  */
 
 /*
@@ -164,7 +164,7 @@ public class DaemonStatus extends LockssServlet {
       try {
         doXmlStatusTable();
       } catch (XmlDomBuilder.XmlDomException xde) {
-        throw new IOException("Error with XML: "+xde.toString());
+        throw new IOException("Error building XML", xde);
       }
       break;
     case OUTPUT_TEXT:
@@ -822,7 +822,9 @@ public class DaemonStatus extends LockssServlet {
   private String getDisplayString1(Object val, int type) {
     if (val instanceof StatusTable.DisplayedValue) {
       StatusTable.DisplayedValue aval = (StatusTable.DisplayedValue)val;
-      String str = getDisplayString1(aval.getValue(), type);
+      String str = aval.hasDisplayString()
+	? HtmlUtil.htmlEncode(aval.getDisplayString())
+	: getDisplayString1(aval.getValue(), type);
       String color = aval.getColor();
       String footnote = aval.getFootnote();
       if (color != null) {
@@ -894,13 +896,13 @@ public class DaemonStatus extends LockssServlet {
 	return StringUtil.timeIntervalToString(millis);
       }
     } catch (NumberFormatException e) {
-      log.warning("Bad number: " + val.toString() + ": " + e.toString());
+      log.warning("Bad number: " + val.toString(), e);
       return val.toString();
     } catch (ClassCastException e) {
-      log.warning("Wrong type value: " + val.toString() + ": " + e.toString());
+      log.warning("Wrong type value: " + val.toString(), e);
       return val.toString();
     } catch (Exception e) {
-      log.warning("Error formatting value: " + val.toString() + ": " + e.toString());
+      log.warning("Error formatting value: " + val.toString(), e);
       return val.toString();
     }
   }

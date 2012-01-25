@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.35 2011-10-03 05:54:34 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.36 2012-01-25 10:46:33 tlipkis Exp $
  */
 
 /*
@@ -211,9 +211,10 @@ public class V3PollStatus {
         long remainingTime = status.getNextPollStartTime().getRemainingTime();
         String timeStr = remainingTime > 0 ?
             StringUtil.timeIntervalToString(remainingTime) : "running";
+	Object val = new StatusTable.DisplayedValue(remainingTime, timeStr);
         summary.add(new SummaryInfo("Poll Starter",
-                                    ColumnDescriptor.TYPE_STRING,
-                                    timeStr));
+                                    ColumnDescriptor.TYPE_TIME_INTERVAL,
+				    val));
       }
       List<PollManager.PollReq> queue = pollManager.getPendingQueue();
       if (!queue.isEmpty()) {

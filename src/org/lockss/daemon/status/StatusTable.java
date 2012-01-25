@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.57 2011-09-25 04:16:13 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.58 2012-01-25 10:46:33 tlipkis Exp $
  */
 
 /*
@@ -395,14 +395,27 @@ public class StatusTable {
     private String color = null;
     private String footnote = null;
     private boolean bold = false;
+    private String displayStr;  // if present, human-friendly display string
 
     /** Create a DisplayedValue with the specified value.  Any
-     * non-EmbeddedValue value is legal. */
+     * non-EmbeddedValue value is legal.
+     * @param value the wrapped value
+     */
     public DisplayedValue(Object value) {
       if (value instanceof EmbeddedValue) {
 	throw new IllegalArgumentException("Value of a DisplayedValue can't be an EmbeddedValue");
       }
       this.value = value;
+    }
+
+    /** Create a DisplayedValue with the specified value and display value.
+     * Any non-EmbeddedValue value is legal. 
+     * @param value the wrapped value
+     * @param displayString human-friendly display value
+     */
+    public DisplayedValue(Object value, String displayString) {
+      this(value);
+      this.displayStr = displayString;
     }
 
     /** Get the value */
@@ -421,6 +434,24 @@ public class StatusTable {
     /** Get the color */
     public String getColor() {
       return color;
+    }
+
+    /** Set the human-friendly display string.
+     * @param displayString human-friendly display string
+     */
+    public DisplayedValue setDisplayString(String displayString) {
+      this.displayStr = displayString;
+      return this;
+    }
+
+    /** Get the human-friendly display string, if any */
+    public String getDisplayString() {
+      return displayStr;
+    }
+
+    /** Return true if a human-friendly display string has been supplied */
+    public boolean hasDisplayString() {
+      return displayStr != null;
     }
 
     /** Set bold.

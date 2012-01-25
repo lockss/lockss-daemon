@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.17 2012-01-18 03:42:55 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.18 2012-01-25 10:46:33 tlipkis Exp $
  */
 
 /*
@@ -210,7 +210,9 @@ public class XmlStatusTable {
 	addTextElement(siElement,
 		       XmlStatusConstants.FOOTNOTE, si.getHeaderFootnote());
       }
-      addValueElement(siElement, si.getValue(), si.getType());
+      if (si.getValue() != null) {
+	addValueElement(siElement, si.getValue(), si.getType());
+      }
     }
   }
 
@@ -299,6 +301,7 @@ public class XmlStatusTable {
   Element addNonLinkValueElement(Element parent, Object value, int type) {
     Element element =
       xmlBuilder.createElement(parent, XmlStatusConstants.VALUE);
+    Object dval = value;
     if (value != StatusTable.NO_VALUE) {
       if (value instanceof StatusTable.DisplayedValue) {
 	// A DisplayedValue - save display characteristics
@@ -310,9 +313,22 @@ public class XmlStatusTable {
 	if (dv.getBold()) {
 	  xmlBuilder.setAttribute(element, XmlStatusConstants.BOLD, "true");
 	}
-	value = dv.getValue();
+	switch (outputVersion) {
+	case 1:
+	default:
+	  if (dv.hasDisplayString()) {
+	    XmlDomBuilder.addText(element, dv.getDisplayString());
+	    return element;
+	  } else {
+	    dval = dv.getValue();
+	  }
+	  break;
+	case 2:
+	  dval = dv.getValue();
+	  break;
+	}
       }
-      XmlDomBuilder.addText(element, formatByType(value, type));
+      XmlDomBuilder.addText(element, formatByType(dval, type));
     }
     return element;
   }
@@ -325,7 +341,12 @@ public class XmlStatusTable {
       str = DaemonStatus.convertDisplayString(object, type);
       break;
     case 2:
-      str = object.toString();
+      if (object instanceof Date) {
+	str = Long.toString(((Date)object).getTime());
+      } else if (object instanceof Deadline) {
+	str = Long.toString(((Deadline)object).getExpirationTime());
+      } else 
+	str = object.toString();
       break;
     }
 //     if (type == ColumnDescriptor.TYPE_STRING) {
