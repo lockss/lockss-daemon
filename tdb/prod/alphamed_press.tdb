@@ -42,6 +42,12 @@
       eissn = 2157-6580 ;
       issnl = 2157-6564
     >
+    
+    param[base_url] = http://www.stemcellstm.com/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2012 ; Stem Cells: Translational Medicine Volume 1 ; 1 >
 
   }
   
