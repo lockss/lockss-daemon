@@ -5264,6 +5264,26 @@
     {
 
       title <
+        name = Clinical Pharmacology in Drug Development ;
+        issn = 2160-763X ;
+        eissn = 2160-7648 ;
+        issnl = 2160-763X
+      >
+
+      {
+      
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 >
+
+      }
+      
+    }
+
+    {
+
+      title <
         name = Clinical Rehabilitation ;
         issn = 0269-2155 ;
         eissn = 1477-0873 ;
