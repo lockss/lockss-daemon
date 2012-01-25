@@ -18,6 +18,8 @@
     >
 
     param[base_url] = http://rsbm.royalsocietypublishing.org/
+    param[journal_id] = rsbm
+    param[journal_issn] = 0080-4606
     comment[legacy] = there are more AUs in an earlier incarnation of the journal
 
     au < wanted ; exists ; 1955 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 ; 1 >
@@ -76,6 +78,7 @@
     au < wanted ; exists ; 2008 ; Biographical Memoirs of Fellows of the Royal Society Volume 54 ; 54 >
     au < testing ; exists ; 2009 ; Biographical Memoirs of Fellows of the Royal Society Volume 55 ; 55 >
     au < released ; crawling ; 2010 ; Biographical Memoirs of Fellows of the Royal Society Volume 56 ; 56 >
+    au < manifest ; crawling ; 2011 ; Biographical Memoirs of Fellows of the Royal Society Volume 57 ; 57 >
 
   }
 
@@ -89,6 +92,8 @@
     >
 
     param[base_url] = http://rsbl.royalsocietypublishing.org/
+    param[journal_id] = rsbl
+    param[journal_issn] = 1744-9561
 
     au < wanted ; exists ; 2005 ; Biology Letters Volume 1 ; 1 >
     au < wanted ; exists ; 2006 ; Biology Letters Volume 2 ; 2 >
@@ -97,6 +102,7 @@
     au < released ; crawling ; 2009 ; Biology Letters Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; Biology Letters Volume 6 ; 6 >
     au < crawling ; exists ; 2011 ; Biology Letters Volume 7 ; 7 >
+    au < manifest ; exists ; 2012 ; Biology Letters Volume 8 ; 8 >
 
   }
 
@@ -109,11 +115,15 @@
       issnl = 2042-8901
     >
 
-    comment[rsfs] = From 2008 to 2010 Interface Focus was published as a supplement to J R Soc Interface
 
     param[base_url] = http://rsfs.royalsocietypublishing.org/
+    param[journal_id] = rsfs
+    param[journal_issn] = 2042-8898
+
+    comment[rsfs] = Do not add earlier issues - From 2008 to 2010 Interface Focus was published as a supplement to J R Soc Interface 
 
     au < manifest ; exists ; 2011 ; Interface Focus Volume 1 ; 1 >
+    au < manifest ; exists ; 2012 ; Interface Focus Volume 2 ; 2 >
     
   }
   
@@ -127,6 +137,8 @@
     >
 
     param[base_url] = http://rsif.royalsocietypublishing.org/
+    param[journal_id] = rsif
+    param[journal_issn] = 1742-5689
 
     au < manifest ; exists ; 2004 ; Journal of the Royal Society Interface Volume 1 ; 1 >
     au < manifest ; exists ; 2005 ; Journal of the Royal Society Interface Volume 2 ; 2 >
@@ -136,6 +148,7 @@
     au < released ; crawling ; 2009 ; Journal of the Royal Society Interface Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Journal of the Royal Society Interface Volume 7 ; 7 >
     au < crawling ; exists ; 2011 ; Journal of the Royal Society Interface Volume 8 ; 8 >
+    au < manifest ; exists ; 2012 ; Journal of the Royal Society Interface Volume 9 ; 9 >
 
   }
 
@@ -149,6 +162,8 @@
     >
 
     param[base_url] = http://rsnr.royalsocietypublishing.org/
+    param[journal_id] = rsnr
+    param[journal_issn] = 0035-9149
 
     au < wanted ; exists ; 1938 ; Notes and Records of the Royal Society Volume 1 ; 1 >
     au < wanted ; exists ; 1939 ; Notes and Records of the Royal Society Volume 2 ; 2 >
@@ -215,6 +230,7 @@
     au < released ; crawling ; 2009 ; Notes and Records of the Royal Society Volume 63 ; 63 >
     au < released ; crawling ; 2010 ; Notes and Records of the Royal Society Volume 64 ; 64 >
     au < crawling ; exists ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 >
+    au < manifest ; exists ; 2012 ; Notes and Records of the Royal Society Volume 66 ; 66 >
 
   }
 
@@ -227,6 +243,10 @@
     >
 
     param[base_url] = http://rsta.royalsocietypublishing.org/
+    param[journal_id] = rsob
+    param[journal_issn] = 2046-2441
+    
+    
     comment = Open Biology will begin receiving submissions of research articles starting in July 2011
     
     au < exists ; exists ; 2011 ; Open Biology Volume 1 ; 1 >
@@ -245,6 +265,8 @@
     >
 
     param[base_url] = http://rsta.royalsocietypublishing.org/
+    param[journal_id] = rsta
+    param[journal_issn] = 1364-503X
     
     au < wanted ; exists ; 1887 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 178 ; 178 >
     au < wanted ; exists ; 1888 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 179 ; 179 >
@@ -438,6 +460,7 @@
     au < testing ; exists ; 2009 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 367 ; 367 >
     au < released ; crawling ; 2010 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 368 ; 368 >
     au < crawling ; exists ; 2011 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 369 ; 369 >
+    au < manifest ; exists ; 2012 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 367 ; 367 >
 
   }
 
@@ -451,6 +474,8 @@
     >
 
     param[base_url] = http://rstb.royalsocietypublishing.org/
+    param[journal_id] = rstb
+    param[journal_issn] = 0962-8436
 
     au < wanted ; exists ; 1887 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 178 ; 178 >
     au < wanted ; exists ; 1888 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 179 ; 179 >
@@ -641,6 +666,7 @@
     au < released ; crawling ; 2009 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 364 ; 364 >
     au < released ; crawling ; 2010 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 365 ; 365 >
     au < crawling ; exists ; 2011 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 366 ; 366 >
+    au < crawling ; exists ; 2012 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 367 ; 367 >
 
   }
 
@@ -653,6 +679,8 @@
     >
 
     param[base_url] = http://rstl.royalsocietypublishing.org/
+    param[journal_id] = rstl
+    param[journal_issn] = 0261-0523
 
     au < wanted ; exists ; 1665-1966 ; Philosophical Transactions of the Royal Society of London Volume 1 ; 1 >
     au < wanted ; exists ; 1666-1967 ; Philosophical Transactions of the Royal Society of London Volume 2 ; 2 >
@@ -844,6 +872,10 @@
     >
 
     param[base_url] = http://rspa.royalsocietypublishing.org/
+    param[journal_id] = rspa
+    param[journal_issn] = 1364-5021
+    
+        
 
     au < wanted ; exists ; 1905 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 76 ; 76 >
     au < wanted ; exists ; 1906 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 77 ; 77 >
@@ -1237,6 +1269,7 @@
     au < released ; crawling ; 2009 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 465 ; 465 >
     au < released ; crawling ; 2010 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 466 ; 466 >
     au < crawling ; exists ; 2011 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 467 ; 467 >
+    au < manifest ; exists ; 2012 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 468 ; 468 >
 
   }
 
@@ -1250,6 +1283,9 @@
     >
 
     param[base_url] = http://rspb.royalsocietypublishing.org/
+    param[journal_id] = rspb
+    param[journal_issn] = 0962-8452
+    
 
     au < wanted ; exists ; 1905 ; Proceedings of the Royal Society B: Biological Sciences Volume 76 ; 76 >
     au < wanted ; exists ; 1905-1906 ; Proceedings of the Royal Society B: Biological Sciences Volume 77 ; 77 >
@@ -1454,6 +1490,7 @@
     au < released ; crawling ; 2009 ; Proceedings of the Royal Society B: Biological Sciences Volume 276 ; 276 >
     au < released ; crawling ; 2010 ; Proceedings of the Royal Society B: Biological Sciences Volume 277 ; 277 >
     au < crawling ; exists ; 2011 ; Proceedings of the Royal Society B: Biological Sciences Volume 278 ; 278 >
+    au < crawling ; exists ; 2012 ; Proceedings of the Royal Society B: Biological Sciences Volume 279 ; 279 >
 
   }
 
@@ -1466,6 +1503,8 @@
     >
 
     param[base_url] = http://rspl.royalsocietypublishing.org/
+    param[journal_id] = rspl
+    param[journal_issn] = 0370-1662
 
     au < wanted ; exists ; 1800 ; Proceedings of the Royal Society of London Volume 1 ; 1 >
     au < wanted ; exists ; 1815 ; Proceedings of the Royal Society of London Volume 2 ; 2 >
