@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataField.java,v 1.6 2011-06-26 06:15:46 pgust Exp $
+ * $Id: TestMetadataField.java,v 1.7 2012-01-26 23:26:46 akanshab01 Exp $
  */
 
 /*
@@ -277,4 +277,18 @@ public class TestMetadataField extends LockssTestCase {
     assertSame(FIELD_VOLUME, MetadataField.findField(KEY_VOLUME));
     assertNull(MetadataField.findField("nosuchfield"));
   }
+  
+  public void testExtractor() {
+    String startpattern = "pp\\.[ ]+(.*)-.*";
+    String endpattern = "pp\\.[ ]+.*-(.*)";
+    ArticleMetadata articleMetadata =new ArticleMetadata();
+     MetadataField testvalf =new MetadataField(MetadataField.FIELD_START_PAGE,MetadataField.extract(startpattern));
+     MetadataField testvale =new MetadataField(MetadataField.FIELD_END_PAGE,MetadataField.extract(endpattern));
+  
+   assertEquals("23", testvalf.extract(articleMetadata,"pp. 23-45"));
+   assertEquals("45", testvale.extract(articleMetadata,"pp. 23-45"));
+   assertNull(testvalf.extract(articleMetadata,"pp. 2345"));
+   assertNull(testvalf.extract(articleMetadata,"23-45"));
+  }
+  
 }
