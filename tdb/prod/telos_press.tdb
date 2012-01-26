@@ -17,6 +17,36 @@
       param[base_url] = http://journal.telospress.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+      au < HighWirePressH20Plugin ; exists ; 1968 ; Telos Volume 1968 ; 1968 >
+      au < HighWirePressH20Plugin ; exists ; 1969 ; Telos Volume 1969 ; 1969 >
+      au < HighWirePressH20Plugin ; exists ; 1970 ; Telos Volume 1970 ; 1970 >
+      au < HighWirePressH20Plugin ; exists ; 1971 ; Telos Volume 1971 ; 1971 >
+      au < HighWirePressH20Plugin ; exists ; 1972 ; Telos Volume 1972 ; 1972 >
+      au < HighWirePressH20Plugin ; exists ; 1973 ; Telos Volume 1973 ; 1973 >
+      au < HighWirePressH20Plugin ; exists ; 1974 ; Telos Volume 1974 ; 1974 >
+      au < HighWirePressH20Plugin ; exists ; 1975 ; Telos Volume 1975 ; 1975 >
+      au < HighWirePressH20Plugin ; exists ; 1976 ; Telos Volume 1976 ; 1976 >
+      au < HighWirePressH20Plugin ; exists ; 1977 ; Telos Volume 1977 ; 1977 >
+      au < HighWirePressH20Plugin ; exists ; 1978 ; Telos Volume 1978 ; 1978 >
+      au < HighWirePressH20Plugin ; exists ; 1979 ; Telos Volume 1979 ; 1979 >
+      au < HighWirePressH20Plugin ; exists ; 1980 ; Telos Volume 1980 ; 1980 >
+      au < HighWirePressH20Plugin ; exists ; 1981 ; Telos Volume 1981 ; 1981 >
+      au < HighWirePressH20Plugin ; exists ; 1982 ; Telos Volume 1982 ; 1982 >
+      au < HighWirePressH20Plugin ; exists ; 1983 ; Telos Volume 1983 ; 1983 >
+      au < HighWirePressH20Plugin ; exists ; 1984 ; Telos Volume 1984 ; 1984 >
+      au < HighWirePressH20Plugin ; exists ; 1985 ; Telos Volume 1985 ; 1985 >
+      au < HighWirePressH20Plugin ; exists ; 1986 ; Telos Volume 1986 ; 1986 >
+      au < HighWirePressH20Plugin ; exists ; 1987 ; Telos Volume 1987 ; 1987 >
+      au < HighWirePressH20Plugin ; exists ; 1988 ; Telos Volume 1988 ; 1988 >
+      au < HighWirePressH20Plugin ; exists ; 1989 ; Telos Volume 1989 ; 1989 >
+      au < HighWirePressH20Plugin ; exists ; 1990 ; Telos Volume 1990 ; 1990 >
+      au < HighWirePressH20Plugin ; exists ; 1991 ; Telos Volume 1991 ; 1991 >
+      au < HighWirePressH20Plugin ; exists ; 1992 ; Telos Volume 1992 ; 1992 >
+      au < HighWirePressH20Plugin ; exists ; 1993 ; Telos Volume 1993 ; 1993 >
+      au < HighWirePressH20Plugin ; exists ; 1994 ; Telos Volume 1994 ; 1994 >
+      au < HighWirePressH20Plugin ; exists ; 1995 ; Telos Volume 1995 ; 1995 >
+      au < HighWirePressH20Plugin ; exists ; 1996 ; Telos Volume 1996 ; 1996 >
+      au < HighWirePressH20Plugin ; doesNotExist ; 1997 ; Telos Volume 1997 ; 1997 >
       au < HighWirePressPlugin ; down ; 1998 ; Telos Volume 1998 ; 1998 >
       au < HighWirePressPlugin ; down ; 1999 ; Telos Volume 1999 ; 1999 >
       au < HighWirePressPlugin ; down ; 2000 ; Telos Volume 2000 ; 2000 >
@@ -31,6 +61,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Telos Volume 2009 ; 2009 >
       au < HighWirePressPlugin ; down ; 2010 ; Telos Volume 2010 ; 2010 >
       au < HighWirePressPlugin ; down ; 2011 ; Telos Volume 2011 ; 2011 >
+      au < HighWirePressH20Plugin ; exists ; 2012 ; Telos Volume 2012 ; 2012 >
 
     }
 
