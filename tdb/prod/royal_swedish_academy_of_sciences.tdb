@@ -5,6 +5,7 @@
   >
 
   {
+
     title <
       name = AMBIO: A Journal of the Human Environment ;
       issn = 0044-7447 ;
@@ -13,6 +14,7 @@
     >
 
     {
+
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
@@ -23,24 +25,26 @@
     }
 
     {
+    
       implicit < status ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = ambi
   
-      au < manifest ; 2000 ; AMBIO: A Journal of the Human Environment Volume 29 ; 29 >
-      au < manifest ; 2001 ; AMBIO: A Journal of the Human Environment Volume 30 ; 30 >
-      au < manifest ; 2002 ; AMBIO: A Journal of the Human Environment Volume 31 ; 31 >
-      au < manifest ; 2003 ; AMBIO: A Journal of the Human Environment Volume 32 ; 32 >
+      au < testing ; 2000 ; AMBIO: A Journal of the Human Environment Volume 29 ; 29 >
+      au < testing ; 2001 ; AMBIO: A Journal of the Human Environment Volume 30 ; 30 >
+      au < testing ; 2002 ; AMBIO: A Journal of the Human Environment Volume 31 ; 31 >
+      au < testing ; 2003 ; AMBIO: A Journal of the Human Environment Volume 32 ; 32 >
       au < doNotProcess ; 2004 ; AMBIO: A Journal of the Human Environment Volume 33 ; 33 >
-      au < manifest ; 2005 ; AMBIO: A Journal of the Human Environment Volume 34 ; 34 >
-      au < manifest ; 2006 ; AMBIO: A Journal of the Human Environment Volume 35 ; 35 >
-      au < manifest ; 2007 ; AMBIO: A Journal of the Human Environment Volume 36 ; 36 >
-      au < manifest ; 2008 ; AMBIO: A Journal of the Human Environment Volume 37 ; 37 >
-      au < manifest ; 2009 ; AMBIO: A Journal of the Human Environment Volume 38 ; 38 >
-      au < manifest ; 2010 ; AMBIO: A Journal of the Human Environment Volume 39 ; 39 >
-      au < manifest ; 2011 ; AMBIO: A Journal of the Human Environment Volume 40 ; 40 >
-      au < manifest ; 2012 ; AMBIO: A Journal of the Human Environment Volume 41 ; 41 >
+      au < testing ; 2005 ; AMBIO: A Journal of the Human Environment Volume 34 ; 34 >
+      au < testing ; 2006 ; AMBIO: A Journal of the Human Environment Volume 35 ; 35 >
+      au < testing ; 2007 ; AMBIO: A Journal of the Human Environment Volume 36 ; 36 >
+      au < testing ; 2008 ; AMBIO: A Journal of the Human Environment Volume 37 ; 37 >
+      au < testing ; 2009 ; AMBIO: A Journal of the Human Environment Volume 38 ; 38 >
+      au < testing ; 2010 ; AMBIO: A Journal of the Human Environment Volume 39 ; 39 >
+      au < testing ; 2011 ; AMBIO: A Journal of the Human Environment Volume 40 ; 40 >
+      au < testing ; 2012 ; AMBIO: A Journal of the Human Environment Volume 41 ; 41 >
+
     }
 
   }
