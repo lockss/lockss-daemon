@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.6 2012-01-16 17:53:17 pgust Exp $
+ * $Id: MetadataField.java,v 1.7 2012-01-26 23:27:41 akanshab01 Exp $
  */
 
 /*
@@ -34,8 +34,12 @@ package org.lockss.extractor;
 
 import java.util.*;
 
+import org.lockss.extractor.MetadataField.Extractor;
+import org.lockss.extractor.MetadataField.Splitter;
 import org.lockss.util.*;
 import org.apache.commons.lang.StringUtils;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Describes a field (key-value pair) in metadata: key name, required
@@ -67,6 +71,7 @@ public class MetadataField {
 
   public static final String PROTOCOL_ISSN = "issn:";
   public static final String KEY_ISSN = "issn";
+ 
   public static final MetadataField FIELD_ISSN =
     new MetadataField(KEY_ISSN, Cardinality.Single) {
       @Override
@@ -128,6 +133,11 @@ public class MetadataField {
   public static final String KEY_START_PAGE = "startpage";
   public static final MetadataField FIELD_START_PAGE =
     new MetadataField(KEY_START_PAGE, Cardinality.Single);
+  
+  
+  public static final String KEY_END_PAGE = "startpage";
+  public static final MetadataField FIELD_END_PAGE =
+    new MetadataField(KEY_END_PAGE, Cardinality.Single);
 
   /*
    * A date can be just a year, a month and year, or a specific issue date.
@@ -399,12 +409,13 @@ public class MetadataField {
   protected final Cardinality cardinality;
   protected final Validator validator;
   protected final Splitter splitter;
+  protected final Extractor extractor;
 
   /** Create a metadata field descriptor with Cardinality.Single
    * @param key the map key
    */
   public MetadataField(String key) {
-    this(key, Cardinality.Single, null, null);
+    this(key, Cardinality.Single, null, (Splitter)null);
   }
 
   /** Create a metadata field descriptor
@@ -412,7 +423,7 @@ public class MetadataField {
    * @param cardinality
    */
   public MetadataField(String key, Cardinality cardinality) {
-    this(key, cardinality, null, null);
+    this(key, cardinality, null, (Splitter)null);
   }
 
   /** Create a metadata field descriptor
@@ -422,7 +433,7 @@ public class MetadataField {
    */
   public MetadataField(String key, Cardinality cardinality,
 		       Validator validator) {
-    this(key, cardinality, validator, null);
+    this(key, cardinality, validator, (Splitter)null);
   }
 
   /** Create a metadata field descriptor
@@ -449,8 +460,33 @@ public class MetadataField {
       throw new IllegalArgumentException("Splitter legal only with Cardinality.Multi");
     }
     this.splitter = splitter;
+    this.extractor = null;
   }
 
+  /** Create a metadata field descriptor
+   * @param key the map key
+   * @param cardinality
+   * @param splitter
+   */
+  public MetadataField(String key, Cardinality cardinality,
+          Extractor extractor) {
+    this(key, cardinality, null, extractor);
+  }
+
+  /** Create a metadata field descriptor
+   * @param key the map key
+   * @param cardinality
+   * @param validator
+   */
+  public MetadataField(String key, Cardinality cardinality,
+           Validator validator, Extractor extractor) {
+    this.key = key;
+    this.cardinality = cardinality;
+    this.validator = validator;
+    this.splitter = null;
+    this.extractor = extractor;
+  }
+  
   /** Create a MetadataField that's a copy of another one
    * @param field the MetadataField to copy
    * @param splitter
@@ -466,7 +502,15 @@ public class MetadataField {
     this(field.getKey(), field.getCardinality(),
 	 field.getValidator(), splitter);
   }
-
+  
+  /** Create a MetadataField that's a copy of another one
+   * @param field the MetadataField to copy
+   */
+  public MetadataField(MetadataField field, Extractor extractor) {
+    this(field.getKey(), field.getCardinality(),
+   field.getValidator(), extractor);
+  }
+ 
   /** Return the field's key. */
   public String getKey() {
     return key;
@@ -501,12 +545,25 @@ public class MetadataField {
     }
     return ListUtil.list(value);
   }
-
-  public boolean hasSplitter() {
+  
+  /** If a extractor is present, apply it to the argument return a string.
+   * If no extractor is present, return the argument */
+  public String extract(ArticleMetadata am, String value) {
+    if (extractor != null) {
+      return extractor.extract(am, this, value);
+    }
+    return value;
+  }
+  
+   public boolean hasSplitter() {
     return splitter != null;
   }
 
-
+  public boolean hasExtractor() {
+    return extractor != null;
+  }
+  
+  
   /** Cardinality of a MetadataField: single-valued or multi-valued */
   public static enum Cardinality {Single, Multi};
 
@@ -548,7 +605,7 @@ public class MetadataField {
 			      MetadataField field,
 			      String value);
   }
-
+ 
   /** Return a Splitter that splits substrings separated by the separator
    * string.
    * @param separator the separator string
@@ -611,4 +668,93 @@ public class MetadataField {
       return StringUtil.breakAt(value, splitSep, -1, true, true);
     }
   }
+  /**
+   * Defines an extractor class that extracts 
+   * the matched value from given input string.
+   * @author akansha
+   *
+   */
+  public static class ExtractFrom implements Extractor {
+    /** Pattern matched. */
+    protected Pattern pattern;
+    
+    /**
+     * Creates an instance for the pattern
+     * @param pattern
+     */
+    public ExtractFrom(String pattern) {
+      this(Pattern.compile(pattern));
+    }
+    
+    /**
+     * Creates an instance for the pattern
+     * @param pattern
+     */
+    public ExtractFrom(Pattern pattern) {
+      this.pattern =pattern;
+    }
+    
+    /**
+     * Method definition for extracting the match
+     * from the input.
+     * @param am ArticleMetadata
+     * @param field MetadataField 
+     * @param value string from which to extract
+     * @return extracted value or <code>null</code> if value does not match.
+     */
+    public String extract(ArticleMetadata am,MetadataField field,String value) {
+     
+      Matcher m = pattern.matcher(value);
+      if (m.find( )) {
+        log.debug2("Found value: " + m.group(1));
+        return m.group(1); 
+      } else {
+        log.debug2("NO MATCH");
+        return null;
+      }
+    
+    }
+    
+   
+  }
+ 
+  /**
+   * Returns the extractor for this pattern.
+   * @param pattern pattern to match
+   * @return Extractor that matches the pattern.
+   */
+ public static Extractor extract(String pattern) {
+   return extract(Pattern.compile(pattern));
 }
+ 
+ /**
+  * Returns the extractor for this pattern.
+  * @param pattern pattern to match
+  * @return Extractor that matches the pattern.
+  */
+ public static Extractor extract(Pattern pattern) {
+   return new ExtractFrom(pattern);
+}
+
+
+/**
+ * Defines an extractor that extracts the string on a pattern.
+ * @author akansha
+ *
+ */
+public interface Extractor {
+  /** Extract a value embedded in a string
+   * @param am the ArticleMeta being stored into (source of Locale, if
+   * necessary)
+   * @param field the field being stored
+   * @param value the value being stored
+   * @return extracted value or <code>null</code> if value does not match.
+   */
+  public String extract(ArticleMetadata am,
+          MetadataField field,
+          String value);
+  
+ 
+}
+}
+
