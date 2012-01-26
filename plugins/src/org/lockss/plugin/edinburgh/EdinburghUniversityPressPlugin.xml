@@ -9,7 +9,24 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_name</string>
@@ -78,6 +95,12 @@
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+        <string>&quot;^%sdoi/(abs|pdf|pdfplus)/[0-9a-zA-Z.]+/%s[0-9a-zA-Z.]+$&quot;, base_url, journal_id</string>
+      </list>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
