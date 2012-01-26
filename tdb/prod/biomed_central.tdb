@@ -2832,6 +2832,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       param[base_url] = http://www.jibtherapies.com/
       param[journal_issn] = 1476-8518
+      
+      comment[moved] = as of 1/1/2012 this journal has moved platforms.
 
       au < released ; 2003 ; Journal of Immune Based Therapies and Vaccines Volume 1 ; 1 >
       au < released ; 2004 ; Journal of Immune Based Therapies and Vaccines Volume 2 ; 2 >
@@ -2840,6 +2842,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Journal of Immune Based Therapies and Vaccines Volume 5 ; 5 >
       au < released ; 2008 ; Journal of Immune Based Therapies and Vaccines Volume 6 ; 6 >
       au < manifest ; 2009 ; Journal of Immune Based Therapies and Vaccines Volume 7 ; 7 >
+      au < exists ; 2010 ; Journal of Immune Based Therapies and Vaccines Volume 8 ; 8 >
+      au < exists ; 2011 ; Journal of Immune Based Therapies and Vaccines Volume 9 ; 9 >
 
     }
 
