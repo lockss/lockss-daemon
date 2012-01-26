@@ -32,9 +32,11 @@ echo " "
 echo "---------------------"
 echo "---------------------"
 echo "GLN. HighWire Dupe AUs across plugins"
-cat ../../tdb/prod/*.tdb | ./tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher | perl -pe 's/\t+/ /g' | sort -k 1,2 | > $tpath/HW_g_all
-cat ../../tdb/prod/*.tdb | ./tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher | perl -pe 's/\t+/ /g' | sort -k 1,2 -u | > $tpath/HW_g_dedupe
-diff $tpath/HW_g_all $tpath/HW_g_dedupe | grep "< " | sort
+cat ../../tdb/prod/*.tdb | ./tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher | perl -pe 's/\t+/ /g' | sort -k 1,2 > $tpath/HW_g_all
+cat ../../tdb/prod/*.tdb | ./tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher | perl -pe 's/\t+/ /g' | sort -k 1,2 -u > $tpath/HW_g_dedupe
+cat $tpath/HW_g_all | wc -l
+cat $tpath/HW_g_dedupe | wc -l
+diff $tpath/HW_g_all $tpath/HW_g_dedupe
 diff $tpath/HW_g_all $tpath/HW_g_dedupe | grep "< " | wc -l
 echo "expect 1"
 echo " "
