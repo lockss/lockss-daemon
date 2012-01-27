@@ -2702,6 +2702,45 @@
   }
 
   {
+
+    title <
+      name = Australasian Psychiatry ;
+      issn = 1039-8562 ;
+      eissn = 1440-1665 
+    >
+
+    param[base_url] = http://apy.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1993 ; Australasian Psychiatry Volume 1 ; 1 ; >
+      au < exists ; exists ; 1994 ; Australasian Psychiatry Volume 2 ; 2 ; >
+      au < exists ; exists ; 1995 ; Australasian Psychiatry Volume 3 ; 3 ; >
+      au < exists ; exists ; 1996 ; Australasian Psychiatry Volume 4 ; 4 ; >
+      au < exists ; exists ; 1997 ; Australasian Psychiatry Volume 5 ; 5 ; >
+      au < exists ; exists ; 1998 ; Australasian Psychiatry Volume 6 ; 6 ; >
+      au < exists ; exists ; 1999 ; Australasian Psychiatry Volume 7 ; 7 ; >
+      au < exists ; exists ; 2000 ; Australasian Psychiatry Volume 8 ; 8 ; >
+      au < exists ; exists ; 2001 ; Australasian Psychiatry Volume 9 ; 9 ; >
+      au < exists ; exists ; 2002 ; Australasian Psychiatry Volume 10 ; 10 ; >
+      au < exists ; exists ; 2003 ; Australasian Psychiatry Volume 11 ; 11 ; >
+      au < exists ; exists ; 2004 ; Australasian Psychiatry Volume 12 ; 12 ; >
+      au < exists ; exists ; 2005 ; Australasian Psychiatry Volume 13 ; 13 ; >
+      au < exists ; exists ; 2006 ; Australasian Psychiatry Volume 14 ; 14 ; >
+      au < exists ; exists ; 2007 ; Australasian Psychiatry Volume 15 ; 15 ; >
+      au < exists ; exists ; 2008 ; Australasian Psychiatry Volume 16 ; 16 ; >
+      au < exists ; exists ; 2009 ; Australasian Psychiatry Volume 17 ; 17 ; >
+      au < exists ; exists ; 2010 ; Australasian Psychiatry Volume 18 ; 18 ; >
+      au < exists ; exists ; 2011 ; Australasian Psychiatry Volume 19 ; 19 ; >
+      au < exists ; exists ; 2012 ; Australasian Psychiatry Volume 20 ; 20 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Behavior Modification ;
