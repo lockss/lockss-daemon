@@ -1581,7 +1581,7 @@
         au < manifest ; 2009 ; American Sociological Review Volume 74 ; 74 >
         au < manifest ; 2010 ; American Sociological Review Volume 75 ; 75 >
         au < manifest ; 2011 ; American Sociological Review Volume 76 ; 76 >
-        au < exists ; 2012 ; American Sociological Review Volume 77 ; 77 >
+        au < manifest ; 2012 ; American Sociological Review Volume 77 ; 77 >
 
       }
 
@@ -8571,7 +8571,7 @@
         au < doNotProcess ; 2009 ; Educational Administration Quarterly Volume 45 ; 45 >
         au < ready ; 2010 ; Educational Administration Quarterly Volume 46 ; 46 >
         au < manifest ; 2011 ; Educational Administration Quarterly Volume 47 ; 47 >
-        au < exists ; 2012 ; Educational Administration Quarterly Volume 48 ; 48 >
+        au < manifest ; 2012 ; Educational Administration Quarterly Volume 48 ; 48 >
 
       }
 
@@ -9516,6 +9516,8 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://cpr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[continued_by] = European Journal of Preventitive Cardiology, 2047-4873
 
 
         au < manifest ; 1994 ; European Journal of Cardiovascular Prevention & Rehabilitation 1 ; 1 >
@@ -9536,7 +9538,31 @@
         au < manifest ; 2009 ; European Journal of Cardiovascular Prevention & Rehabilitation 16 ; 16 >
         au < manifest ; 2010 ; European Journal of Cardiovascular Prevention & Rehabilitation 17 ; 17 >
         au < manifest ; 2011 ; European Journal of Cardiovascular Prevention & Rehabilitation 18 ; 18 >
-        au < exists ; 2012 ; European Journal of Cardiovascular Prevention & Rehabilitation 19 ; 19 >
+        au < doesNotExist ; 2012 ; European Journal of Cardiovascular Prevention & Rehabilitation 19 ; 19 >
+
+      }
+
+    }
+
+    {
+      title <
+        name = European Journal of Preventitive Cardiology ;
+        issn = 2047-4873 ;
+        eissn = 2047-4881 ;
+        issnl = 2047-4873
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cpr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[continued_from] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
+        comment[0] = Previous issues are at the same url.
+        
+        au < doesNotExist ; 2011 ; European Journal of Preventitive Cardiology 18 ; 18 >
+        au < manifest ; 2012 ; European Journal of Preventitive Cardiology 19 ; 19 >
 
       }
 
@@ -11739,7 +11765,7 @@
         au < doNotProcess ; 2009 ; Global Journal of Emerging Market Economies Volume 1 ; 1 >
         au < ready ; 2010 ; Global Journal of Emerging Market Economies Volume 2 ; 2 >
         au < manifest ; 2011 ; Global Journal of Emerging Market Economies Volume 3 ; 3 >
-        au < exists ; 2012 ; Global Journal of Emerging Market Economies Volume 4 ; 4 >
+        au < manifest ; 2012 ; Global Journal of Emerging Market Economies Volume 4 ; 4 >
 
       }
 
@@ -13836,7 +13862,7 @@
         au < doNotProcess ; 2009 ; Indian Journal of Gender Studies Volume 16 ; 16 >
         au < ready ; 2010 ; Indian Journal of Gender Studies Volume 17 ; 17 >
         au < manifest ; 2011 ; Indian Journal of Gender Studies Volume 18 ; 18 >
-        au < exists ; 2012 ; Indian Journal of Gender Studies Volume 19 ; 19 >
+        au < manifest ; 2012 ; Indian Journal of Gender Studies Volume 19 ; 19 >
 
       }
 
@@ -13925,7 +13951,7 @@
         au < manifest ; 2009 ; ICAN: Infant, Child, & Adolescent Nutrition Volume 1 ; 1 >
         au < ready ; 2010 ; ICAN: Infant, Child, & Adolescent Nutrition Volume 2 ; 2 >
         au < manifest ; 2011 ; ICAN: Infant, Child, & Adolescent Nutrition Volume 3 ; 3 >
-        au < exists ; 2012 ; ICAN: Infant, Child, & Adolescent Nutrition Volume 4 ; 4 >
+        au < manifest ; 2012 ; ICAN: Infant, Child, & Adolescent Nutrition Volume 4 ; 4 >
 
       }
 
@@ -19231,7 +19257,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 2009 ; Journal of Diagnostic Medical Sonography Volume 25 ; 25 >
         au < manifest ; 2010 ; Journal of Diagnostic Medical Sonography Volume 26 ; 26 >
         au < manifest ; 2011 ; Journal of Diagnostic Medical Sonography Volume 27 ; 27 >
-        au < exists ; 2012 ; Journal of Diagnostic Medical Sonography Volume 28 ; 28 >
+        au < manifest ; 2012 ; Journal of Diagnostic Medical Sonography Volume 28 ; 28 >
 
       }
 
@@ -23831,7 +23857,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; The Journal of School Nursing Volume 25 ; 25 >
         au < manifest ; 2010 ; The Journal of School Nursing Volume 26 ; 26 >
         au < manifest ; 2011 ; The Journal of School Nursing Volume 27 ; 27 >
-        au < exists ; 2012 ; The Journal of School Nursing Volume 28 ; 28 >
+        au < manifest ; 2012 ; The Journal of School Nursing Volume 28 ; 28 >
 
       }
 
@@ -25532,7 +25558,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Journal of Vacation Marketing Volume 15 ; 15 >
         au < manifest ; 2010 ; Journal of Vacation Marketing Volume 16 ; 16 >
         au < manifest ; 2011 ; Journal of Vacation Marketing Volume 17 ; 17 >
-        au < exists ; 2012 ; Journal of Vacation Marketing Volume 18 ; 18 >
+        au < manifest ; 2012 ; Journal of Vacation Marketing Volume 18 ; 18 >
 
       }
 
@@ -25714,7 +25740,7 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Journalism & Communication Educator ;
+        name = Journalism & Mass Communication Educator ;
         issn = 1077-6958 ;
         eissn = 2161-4326 ;
         issnl = 1077-6958
@@ -25725,53 +25751,55 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jmc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[notReady] = Vol 66 has incorrect link to issue 1, jmc.sagepub.com/cgi/content/66/1.long
 
-        au < exists ; 1967 ; Journalism & Communication Educator Volume 22 ; 22 >
-        au < exists ; 1968 ; Journalism & Communication Educator Volume 23 ; 23 >
-        au < doesNotExist ; 0 ; Journalism & Communication Educator Volume 24 ; 24 >
-        au < doesNotExist ; 0 ; Journalism & Communication Educator Volume 25 ; 25 >
-        au < exists ; 1971 ; Journalism & Communication Educator Volume 26 ; 26 >
-        au < exists ; 1972 ; Journalism & Communication Educator Volume 27 ; 27 >
-        au < exists ; 1973 ; Journalism & Communication Educator Volume 28 ; 28 >
-        au < exists ; 1974 ; Journalism & Communication Educator Volume 29 ; 29 >
-        au < exists ; 1975 ; Journalism & Communication Educator Volume 30 ; 30 >
-        au < exists ; 1976 ; Journalism & Communication Educator Volume 31 ; 31 >
-        au < exists ; 1977 ; Journalism & Communication Educator Volume 32 ; 32 >
-        au < exists ; 1978 ; Journalism & Communication Educator Volume 33 ; 33 >
-        au < exists ; 1979 ; Journalism & Communication Educator Volume 34 ; 34 >
-        au < exists ; 1980 ; Journalism & Communication Educator Volume 35 ; 35 >
-        au < exists ; 1981 ; Journalism & Communication Educator Volume 36 ; 36 >
-        au < exists ; 1982 ; Journalism & Communication Educator Volume 37 ; 37 >
-        au < exists ; 1983 ; Journalism & Communication Educator Volume 38 ; 38 >
-        au < exists ; 1984 ; Journalism & Communication Educator Volume 39 ; 39 >
-        au < exists ; 1985 ; Journalism & Communication Educator Volume 40 ; 40 >
-        au < exists ; 1986 ; Journalism & Communication Educator Volume 41 ; 41 >
-        au < exists ; 1987 ; Journalism & Communication Educator Volume 42 ; 42 >
-        au < exists ; 1988 ; Journalism & Communication Educator Volume 43 ; 43 >
-        au < exists ; 1989 ; Journalism & Communication Educator Volume 44 ; 44 >
-        au < exists ; 1990 ; Journalism & Communication Educator Volume 45 ; 45 >
-        au < exists ; 1991 ; Journalism & Communication Educator Volume 46 ; 46 >
-        au < exists ; 1992 ; Journalism & Communication Educator Volume 47 ; 47 >
-        au < exists ; 1993 ; Journalism & Communication Educator Volume 48 ; 48 >
-        au < exists ; 1994 ; Journalism & Communication Educator Volume 49 ; 49 >
-        au < exists ; 1995 ; Journalism & Communication Educator Volume 50 ; 50 >
-        au < exists ; 1996 ; Journalism & Communication Educator Volume 51 ; 51 >
-        au < exists ; 1997 ; Journalism & Communication Educator Volume 52 ; 52 >
-        au < exists ; 1998 ; Journalism & Communication Educator Volume 53 ; 53 >
-        au < exists ; 1999 ; Journalism & Communication Educator Volume 54 ; 54 >
-        au < exists ; 2000 ; Journalism & Communication Educator Volume 55 ; 55 >
-        au < exists ; 2001 ; Journalism & Communication Educator Volume 56 ; 56 >
-        au < exists ; 2002 ; Journalism & Communication Educator Volume 57 ; 57 >
-        au < exists ; 2003 ; Journalism & Communication Educator Volume 58 ; 58 >
-        au < exists ; 2004 ; Journalism & Communication Educator Volume 59 ; 59 >
-        au < exists ; 2005 ; Journalism & Communication Educator Volume 60 ; 60 >
-        au < exists ; 2006 ; Journalism & Communication Educator Volume 61 ; 61 >
-        au < exists ; 2007 ; Journalism & Communication Educator Volume 62 ; 62 >
-        au < exists ; 2008 ; Journalism & Communication Educator Volume 63 ; 63 >
-        au < exists ; 2009 ; Journalism & Communication Educator Volume 64 ; 64 >
-        au < exists ; 2010 ; Journalism & Communication Educator Volume 65 ; 65 >
-        au < exists ; 2011 ; Journalism & Communication Educator Volume 66 ; 66 >
-        au < exists ; 2012 ; Journalism & Communication Educator Volume 67 ; 67 >
+        au < exists ; 1967 ; Journalism & Mass Communication Educator Volume 22 ; 22 >
+        au < exists ; 1968 ; Journalism & Mass Communication Educator Volume 23 ; 23 >
+        au < doesNotExist ; 0 ; Journalism & Mass Communication Educator Volume 24 ; 24 >
+        au < doesNotExist ; 0 ; Journalism & Mass Communication Educator Volume 25 ; 25 >
+        au < exists ; 1971 ; Journalism & Mass Communication Educator Volume 26 ; 26 >
+        au < exists ; 1972 ; Journalism & Mass Communication Educator Volume 27 ; 27 >
+        au < exists ; 1973 ; Journalism & Mass Communication Educator Volume 28 ; 28 >
+        au < exists ; 1974 ; Journalism & Mass Communication Educator Volume 29 ; 29 >
+        au < exists ; 1975 ; Journalism & Mass Communication Educator Volume 30 ; 30 >
+        au < exists ; 1976 ; Journalism & Mass Communication Educator Volume 31 ; 31 >
+        au < exists ; 1977 ; Journalism & Mass Communication Educator Volume 32 ; 32 >
+        au < exists ; 1978 ; Journalism & Mass Communication Educator Volume 33 ; 33 >
+        au < exists ; 1979 ; Journalism & Mass Communication Educator Volume 34 ; 34 >
+        au < exists ; 1980 ; Journalism & Mass Communication Educator Volume 35 ; 35 >
+        au < exists ; 1981 ; Journalism & Mass Communication Educator Volume 36 ; 36 >
+        au < exists ; 1982 ; Journalism & Mass Communication Educator Volume 37 ; 37 >
+        au < exists ; 1983 ; Journalism & Mass Communication Educator Volume 38 ; 38 >
+        au < exists ; 1984 ; Journalism & Mass Communication Educator Volume 39 ; 39 >
+        au < exists ; 1985 ; Journalism & Mass Communication Educator Volume 40 ; 40 >
+        au < exists ; 1986 ; Journalism & Mass Communication Educator Volume 41 ; 41 >
+        au < exists ; 1987 ; Journalism & Mass Communication Educator Volume 42 ; 42 >
+        au < exists ; 1988 ; Journalism & Mass Communication Educator Volume 43 ; 43 >
+        au < exists ; 1989 ; Journalism & Mass Communication Educator Volume 44 ; 44 >
+        au < exists ; 1990 ; Journalism & Mass Communication Educator Volume 45 ; 45 >
+        au < exists ; 1991 ; Journalism & Mass Communication Educator Volume 46 ; 46 >
+        au < exists ; 1992 ; Journalism & Mass Communication Educator Volume 47 ; 47 >
+        au < exists ; 1993 ; Journalism & Mass Communication Educator Volume 48 ; 48 >
+        au < exists ; 1994 ; Journalism & Mass Communication Educator Volume 49 ; 49 >
+        au < exists ; 1995 ; Journalism & Mass Communication Educator Volume 50 ; 50 >
+        au < exists ; 1996 ; Journalism & Mass Communication Educator Volume 51 ; 51 >
+        au < exists ; 1997 ; Journalism & Mass Communication Educator Volume 52 ; 52 >
+        au < exists ; 1998 ; Journalism & Mass Communication Educator Volume 53 ; 53 >
+        au < exists ; 1999 ; Journalism & Mass Communication Educator Volume 54 ; 54 >
+        au < exists ; 2000 ; Journalism & Mass Communication Educator Volume 55 ; 55 >
+        au < exists ; 2001 ; Journalism & Mass Communication Educator Volume 56 ; 56 >
+        au < exists ; 2002 ; Journalism & Mass Communication Educator Volume 57 ; 57 >
+        au < exists ; 2003 ; Journalism & Mass Communication Educator Volume 58 ; 58 >
+        au < exists ; 2004 ; Journalism & Mass Communication Educator Volume 59 ; 59 >
+        au < exists ; 2005 ; Journalism & Mass Communication Educator Volume 60 ; 60 >
+        au < exists ; 2006 ; Journalism & Mass Communication Educator Volume 61 ; 61 >
+        au < exists ; 2007 ; Journalism & Mass Communication Educator Volume 62 ; 62 >
+        au < exists ; 2008 ; Journalism & Mass Communication Educator Volume 63 ; 63 >
+        au < exists ; 2009 ; Journalism & Mass Communication Educator Volume 64 ; 64 >
+        au < exists ; 2010 ; Journalism & Mass Communication Educator Volume 65 ; 65 >
+        au < notReady ; 2011 ; Journalism & Mass Communication Educator Volume 66 ; 66 >
+        au < exists ; 2012 ; Journalism & Mass Communication Educator Volume 67 ; 67 >
 
       }
 
@@ -25791,6 +25819,8 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jmo.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[notReady] = manifest page for V13 has incorrect link to issue: jmo.sagepub.com/cgi/content/13/2.long
 
         au < exists ; 1999 ; Journalism & Communication Monographs Volume 1 ; 1 >
         au < exists ; 2000 ; Journalism & Communication Monographs Volume 2 ; 2 >
@@ -25804,7 +25834,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2008 ; Journalism & Communication Monographs Volume 10 ; 10 >
         au < exists ; 2009 ; Journalism & Communication Monographs Volume 11 ; 11 >
         au < exists ; 2010 ; Journalism & Communication Monographs Volume 12 ; 12 >
-        au < exists ; 2011 ; Journalism & Communication Monographs Volume 13 ; 13 >
+        au < notReady ; 2011 ; Journalism & Communication Monographs Volume 13 ; 13 >
         au < exists ; 2012 ; Journalism & Communication Monographs Volume 14 ; 14 >
 
       }
@@ -25814,7 +25844,7 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Journalism & Communication Quarterly ;
+        name = Journalism & Mass Communication Quarterly ;
         issn = 1077-6990 ;
         eissn = 2161-430X ;
         issnl = 1077-6990
@@ -25825,65 +25855,67 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jmq.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[notReady] = V88 manifest page has incorrect link to issue. jmq.sagepub.com/cgi/content/88/2.long
 
-        au < exists ; 1955 ; Journalism & Communication Quarterly Volume 32 ; 32 >
-        au < exists ; 1956 ; Journalism & Communication Quarterly Volume 33 ; 33 >
-        au < exists ; 1957 ; Journalism & Communication Quarterly Volume 34 ; 34 >
-        au < exists ; 1958 ; Journalism & Communication Quarterly Volume 35 ; 35 >
-        au < exists ; 1959 ; Journalism & Communication Quarterly Volume 36 ; 36 >
-        au < exists ; 1960 ; Journalism & Communication Quarterly Volume 37 ; 37 >
-        au < exists ; 1961 ; Journalism & Communication Quarterly Volume 38 ; 38 >
-        au < exists ; 1962 ; Journalism & Communication Quarterly Volume 39 ; 39 >
-        au < exists ; 1963 ; Journalism & Communication Quarterly Volume 40 ; 40 >
-        au < exists ; 1964 ; Journalism & Communication Quarterly Volume 41 ; 41 >
-        au < exists ; 1965 ; Journalism & Communication Quarterly Volume 42 ; 42 >
-        au < exists ; 1966 ; Journalism & Communication Quarterly Volume 43 ; 43 >
-        au < exists ; 1967 ; Journalism & Communication Quarterly Volume 44 ; 44 >
-        au < exists ; 1968 ; Journalism & Communication Quarterly Volume 45 ; 45 >
-        au < exists ; 1969 ; Journalism & Communication Quarterly Volume 46 ; 46 >
-        au < exists ; 1970 ; Journalism & Communication Quarterly Volume 47 ; 47 >
-        au < exists ; 1971 ; Journalism & Communication Quarterly Volume 48 ; 48 >
-        au < exists ; 1972 ; Journalism & Communication Quarterly Volume 49 ; 49 >
-        au < exists ; 1973 ; Journalism & Communication Quarterly Volume 50 ; 50 >
-        au < exists ; 1974 ; Journalism & Communication Quarterly Volume 51 ; 51 >
-        au < exists ; 1975 ; Journalism & Communication Quarterly Volume 52 ; 52 >
-        au < exists ; 1976 ; Journalism & Communication Quarterly Volume 53 ; 53 >
-        au < exists ; 1977 ; Journalism & Communication Quarterly Volume 54 ; 54 >
-        au < exists ; 1978 ; Journalism & Communication Quarterly Volume 55 ; 55 >
-        au < exists ; 1979 ; Journalism & Communication Quarterly Volume 56 ; 56 >
-        au < exists ; 1980 ; Journalism & Communication Quarterly Volume 57 ; 57 >
-        au < exists ; 1981 ; Journalism & Communication Quarterly Volume 58 ; 58 >
-        au < exists ; 1982 ; Journalism & Communication Quarterly Volume 59 ; 59 >
-        au < exists ; 1983 ; Journalism & Communication Quarterly Volume 60 ; 60 >
-        au < exists ; 1984 ; Journalism & Communication Quarterly Volume 61 ; 61 >
-        au < exists ; 1985 ; Journalism & Communication Quarterly Volume 62 ; 62 >
-        au < exists ; 1986 ; Journalism & Communication Quarterly Volume 63 ; 63 >
-        au < exists ; 1987 ; Journalism & Communication Quarterly Volume 64 ; 64 >
-        au < exists ; 1988 ; Journalism & Communication Quarterly Volume 65 ; 65 >
-        au < exists ; 1989 ; Journalism & Communication Quarterly Volume 66 ; 66 >
-        au < exists ; 1990 ; Journalism & Communication Quarterly Volume 67 ; 67 >
-        au < exists ; 1991 ; Journalism & Communication Quarterly Volume 68 ; 68 >
-        au < exists ; 1992 ; Journalism & Communication Quarterly Volume 69 ; 69 >
-        au < exists ; 1993 ; Journalism & Communication Quarterly Volume 70 ; 70 >
-        au < exists ; 1994 ; Journalism & Communication Quarterly Volume 71 ; 71 >
-        au < exists ; 1995 ; Journalism & Communication Quarterly Volume 72 ; 72 >
-        au < exists ; 1996 ; Journalism & Communication Quarterly Volume 73 ; 73 >
-        au < exists ; 1997 ; Journalism & Communication Quarterly Volume 74 ; 74 >
-        au < exists ; 1998 ; Journalism & Communication Quarterly Volume 75 ; 75 >
-        au < exists ; 1999 ; Journalism & Communication Quarterly Volume 76 ; 76 >
-        au < exists ; 2000 ; Journalism & Communication Quarterly Volume 77 ; 77 >
-        au < exists ; 2001 ; Journalism & Communication Quarterly Volume 78 ; 78 >
-        au < exists ; 2002 ; Journalism & Communication Quarterly Volume 79 ; 79 >
-        au < exists ; 2003 ; Journalism & Communication Quarterly Volume 80 ; 80 >
-        au < exists ; 2004 ; Journalism & Communication Quarterly Volume 81 ; 81 >
-        au < exists ; 2005 ; Journalism & Communication Quarterly Volume 82 ; 82 >
-        au < exists ; 2006 ; Journalism & Communication Quarterly Volume 83 ; 83 >
-        au < exists ; 2007 ; Journalism & Communication Quarterly Volume 84 ; 84 >
-        au < exists ; 2008 ; Journalism & Communication Quarterly Volume 85 ; 85 >
-        au < exists ; 2009 ; Journalism & Communication Quarterly Volume 86 ; 86 >
-        au < exists ; 2010 ; Journalism & Communication Quarterly Volume 87 ; 87 >
-        au < exists ; 2011 ; Journalism & Communication Quarterly Volume 88 ; 88 >
-        au < exists ; 2012 ; Journalism & Communication Quarterly Volume 89 ; 89 >
+        au < exists ; 1955 ; Journalism & Mass Communication Quarterly Volume 32 ; 32 >
+        au < exists ; 1956 ; Journalism & Mass Communication Quarterly Volume 33 ; 33 >
+        au < exists ; 1957 ; Journalism & Mass Communication Quarterly Volume 34 ; 34 >
+        au < exists ; 1958 ; Journalism & Mass Communication Quarterly Volume 35 ; 35 >
+        au < exists ; 1959 ; Journalism & Mass Communication Quarterly Volume 36 ; 36 >
+        au < exists ; 1960 ; Journalism & Mass Communication Quarterly Volume 37 ; 37 >
+        au < exists ; 1961 ; Journalism & Mass Communication Quarterly Volume 38 ; 38 >
+        au < exists ; 1962 ; Journalism & Mass Communication Quarterly Volume 39 ; 39 >
+        au < exists ; 1963 ; Journalism & Mass Communication Quarterly Volume 40 ; 40 >
+        au < exists ; 1964 ; Journalism & Mass Communication Quarterly Volume 41 ; 41 >
+        au < exists ; 1965 ; Journalism & Mass Communication Quarterly Volume 42 ; 42 >
+        au < exists ; 1966 ; Journalism & Mass Communication Quarterly Volume 43 ; 43 >
+        au < exists ; 1967 ; Journalism & Mass Communication Quarterly Volume 44 ; 44 >
+        au < exists ; 1968 ; Journalism & Mass Communication Quarterly Volume 45 ; 45 >
+        au < exists ; 1969 ; Journalism & Mass Communication Quarterly Volume 46 ; 46 >
+        au < exists ; 1970 ; Journalism & Mass Communication Quarterly Volume 47 ; 47 >
+        au < exists ; 1971 ; Journalism & Mass Communication Quarterly Volume 48 ; 48 >
+        au < exists ; 1972 ; Journalism & Mass Communication Quarterly Volume 49 ; 49 >
+        au < exists ; 1973 ; Journalism & Mass Communication Quarterly Volume 50 ; 50 >
+        au < exists ; 1974 ; Journalism & Mass Communication Quarterly Volume 51 ; 51 >
+        au < exists ; 1975 ; Journalism & Mass Communication Quarterly Volume 52 ; 52 >
+        au < exists ; 1976 ; Journalism & Mass Communication Quarterly Volume 53 ; 53 >
+        au < exists ; 1977 ; Journalism & Mass Communication Quarterly Volume 54 ; 54 >
+        au < exists ; 1978 ; Journalism & Mass Communication Quarterly Volume 55 ; 55 >
+        au < exists ; 1979 ; Journalism & Mass Communication Quarterly Volume 56 ; 56 >
+        au < exists ; 1980 ; Journalism & Mass Communication Quarterly Volume 57 ; 57 >
+        au < exists ; 1981 ; Journalism & Mass Communication Quarterly Volume 58 ; 58 >
+        au < exists ; 1982 ; Journalism & Mass Communication Quarterly Volume 59 ; 59 >
+        au < exists ; 1983 ; Journalism & Mass Communication Quarterly Volume 60 ; 60 >
+        au < exists ; 1984 ; Journalism & Mass Communication Quarterly Volume 61 ; 61 >
+        au < exists ; 1985 ; Journalism & Mass Communication Quarterly Volume 62 ; 62 >
+        au < exists ; 1986 ; Journalism & Mass Communication Quarterly Volume 63 ; 63 >
+        au < exists ; 1987 ; Journalism & Mass Communication Quarterly Volume 64 ; 64 >
+        au < exists ; 1988 ; Journalism & Mass Communication Quarterly Volume 65 ; 65 >
+        au < exists ; 1989 ; Journalism & Mass Communication Quarterly Volume 66 ; 66 >
+        au < exists ; 1990 ; Journalism & Mass Communication Quarterly Volume 67 ; 67 >
+        au < exists ; 1991 ; Journalism & Mass Communication Quarterly Volume 68 ; 68 >
+        au < exists ; 1992 ; Journalism & Mass Communication Quarterly Volume 69 ; 69 >
+        au < exists ; 1993 ; Journalism & Mass Communication Quarterly Volume 70 ; 70 >
+        au < exists ; 1994 ; Journalism & Mass Communication Quarterly Volume 71 ; 71 >
+        au < exists ; 1995 ; Journalism & Mass Communication Quarterly Volume 72 ; 72 >
+        au < exists ; 1996 ; Journalism & Mass Communication Quarterly Volume 73 ; 73 >
+        au < exists ; 1997 ; Journalism & Mass Communication Quarterly Volume 74 ; 74 >
+        au < exists ; 1998 ; Journalism & Mass Communication Quarterly Volume 75 ; 75 >
+        au < exists ; 1999 ; Journalism & Mass Communication Quarterly Volume 76 ; 76 >
+        au < exists ; 2000 ; Journalism & Mass Communication Quarterly Volume 77 ; 77 >
+        au < exists ; 2001 ; Journalism & Mass Communication Quarterly Volume 78 ; 78 >
+        au < exists ; 2002 ; Journalism & Mass Communication Quarterly Volume 79 ; 79 >
+        au < exists ; 2003 ; Journalism & Mass Communication Quarterly Volume 80 ; 80 >
+        au < exists ; 2004 ; Journalism & Mass Communication Quarterly Volume 81 ; 81 >
+        au < exists ; 2005 ; Journalism & Mass Communication Quarterly Volume 82 ; 82 >
+        au < exists ; 2006 ; Journalism & Mass Communication Quarterly Volume 83 ; 83 >
+        au < exists ; 2007 ; Journalism & Mass Communication Quarterly Volume 84 ; 84 >
+        au < exists ; 2008 ; Journalism & Mass Communication Quarterly Volume 85 ; 85 >
+        au < exists ; 2009 ; Journalism & Mass Communication Quarterly Volume 86 ; 86 >
+        au < exists ; 2010 ; Journalism & Mass Communication Quarterly Volume 87 ; 87 >
+        au < notReady ; 2011 ; Journalism & Mass Communication Quarterly Volume 88 ; 88 >
+        au < exists ; 2012 ; Journalism & Mass Communication Quarterly Volume 89 ; 89 >
 
       }
 
@@ -26217,7 +26249,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Language Testing Volume 26 ; 26 >
         au < manifest ; 2010 ; Language Testing Volume 27 ; 27 >
         au < manifest ; 2011 ; Language Testing Volume 28 ; 28 >
-        au < exists ; 2012 ; Language Testing Volume 29 ; 29 >
+        au < manifest ; 2012 ; Language Testing Volume 29 ; 29 >
 
       }
 
@@ -27303,7 +27335,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Memory Studies Volume 2 ; 2 >
         au < manifest ; 2010 ; Memory Studies Volume 3 ; 3 >
         au < manifest ; 2011 ; Memory Studies Volume 4 ; 4 >
-        au < exists ; 2012 ; Memory Studies Volume 5 ; 5 >
+        au < manifest ; 2012 ; Memory Studies Volume 5 ; 5 >
 
       }
 
@@ -29098,7 +29130,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Personality and Social Psychology Bulletin Volume 35 ; 35 >
         au < manifest ; 2010 ; Personality and Social Psychology Bulletin Volume 36 ; 36 >
         au < manifest ; 2011 ; Personality and Social Psychology Bulletin Volume 37 ; 37 >
-        au < exists ; 2012 ; Personality and Social Psychology Bulletin Volume 38 ; 38 >
+        au < manifest ; 2012 ; Personality and Social Psychology Bulletin Volume 38 ; 38 >
 
       }
 
@@ -29146,7 +29178,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Personality and Social Psychology Review Volume 13 ; 13 >
         au < manifest ; 2010 ; Personality and Social Psychology Review Volume 14 ; 14 >
         au < manifest ; 2011 ; Personality and Social Psychology Review Volume 15 ; 15 >
-        au < exists ; 2012 ; Personality and Social Psychology Review Volume 16 ; 16 >
+        au < manifest ; 2012 ; Personality and Social Psychology Review Volume 16 ; 16 >
 
       }
 
@@ -29276,7 +29308,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Philosophy & Social Criticism Volume 35 ; 35 >
         au < manifest ; 2010 ; Philosophy & Social Criticism Volume 36 ; 36 >
         au < manifest ; 2011 ; Philosophy & Social Criticism Volume 37 ; 37 >
-        au < exists ; 2012 ; Philosophy & Social Criticism Volume 38 ; 38 >
+        au < manifest ; 2012 ; Philosophy & Social Criticism Volume 38 ; 38 >
 
       }
 
@@ -29395,7 +29427,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Planning Theory Volume 8 ; 8 >
         au < manifest ; 2010 ; Planning Theory Volume 9 ; 9 >
         au < manifest ; 2011 ; Planning Theory Volume 10 ; 10 >
-        au < exists ; 2012 ; Planning Theory Volume 11 ; 11 >
+        au < manifest ; 2012 ; Planning Theory Volume 11 ; 11 >
 
       }
 
@@ -29662,7 +29694,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Political Theory Volume 37 ; 37 >
         au < manifest ; 2010 ; Political Theory Volume 38 ; 38 >
         au < manifest ; 2011 ; Political Theory Volume 39 ; 39 >
-        au < exists ; 2012 ; Political Theory Volume 40 ; 40 >
+        au < manifest ; 2012 ; Political Theory Volume 40 ; 40 >
 
       }
 
@@ -29905,7 +29937,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; The Prison Journal Volume 89 ; 89 >
         au < manifest ; 2010 ; The Prison Journal Volume 90 ; 90 >
         au < manifest ; 2011 ; The Prison Journal Volume 91 ; 91 >
-        au < exists ; 2012 ; The Prison Journal Volume 92 ; 92 >
+        au < manifest ; 2012 ; The Prison Journal Volume 92 ; 92 >
 
       }
 
@@ -30118,7 +30150,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 223 ; 223 >
         au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 224 ; 224 >
         au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 225 ; 225 >
-        au < exists ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 226 ; 226 >
+        au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 226 ; 226 >
 
       }
 
@@ -30167,7 +30199,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 223 ; 223 >
         au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 224 ; 224 >
         au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 225 ; 225 >
-        au < exists ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 226 ; 226 >
+        au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 226 ; 226 >
 
       }
 
@@ -31077,7 +31109,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Psychology of Music Volume 37 ; 37 >
         au < manifest ; 2010 ; Psychology of Music Volume 38 ; 38 >
         au < ready ; 2011 ; Psychology of Music Volume 39 ; 39 >
-        au < exists ; 2012 ; Psychology of Music Volume 40 ; 40 >
+        au < manifest ; 2012 ; Psychology of Music Volume 40 ; 40 >
 
       }
 
@@ -35344,7 +35376,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Theory & Psychology Volume 19 ; 19 >
         au < manifest ; 2010 ; Theory & Psychology Volume 20 ; 20 >
         au < ready ; 2011 ; Theory & Psychology Volume 21 ; 21 >
-        au < exists ; 2012 ; Theory & Psychology Volume 22 ; 22 >
+        au < manifest ; 2012 ; Theory & Psychology Volume 22 ; 22 >
 
       }
 
@@ -36257,7 +36289,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Transactions of the Institute of Measurement and Control Volume 31 ; 31 >
         au < manifest ; 2010 ; Transactions of the Institute of Measurement and Control Volume 32 ; 32 >
         au < ready ; 2011 ; Transactions of the Institute of Measurement and Control Volume 33 ; 33 >
-        au < exists ; 2012 ; Transactions of the Institute of Measurement and Control Volume 34 ; 34 >
+        au < manifest ; 2012 ; Transactions of the Institute of Measurement and Control Volume 34 ; 34 >
 
       }
 
@@ -37172,7 +37204,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Visual Communication Volume 8 ; 8 >
         au < manifest ; 2010 ; Visual Communication Volume 9 ; 9 >
         au < ready ; 2011 ; Visual Communication Volume 10 ; 10 >
-        au < exists ; 2012 ; Visual Communication Volume 11 ; 11 >
+        au < manifest ; 2012 ; Visual Communication Volume 11 ; 11 >
 
       }
 
@@ -37704,7 +37736,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Young Volume 17 ; 17 >
         au < manifest ; 2010 ; Young Volume 18 ; 18 >
         au < ready ; 2011 ; Young Volume 19 ; 19 >
-        au < exists ; 2012 ; Young Volume 20 ; 20 >
+        au < manifest ; 2012 ; Young Volume 20 ; 20 >
 
       }
 
