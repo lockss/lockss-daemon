@@ -45914,48 +45914,59 @@
       issnl = 0964-9069
     >
 
-    param[journal_id] = rjsf20 
+    comment[continues] = 0141-8033
+    param[journal_id] = rjsf20    
 
-    au < manifest ; 1978-1979 ; Journal of Social Welfare and Family Law Volume 1 ; 1 > 
-    au < manifest ; 1979 ; Journal of Social Welfare and Family Law Volume 2 ; 2 > 
-    au < manifest ; 1980 ; Journal of Social Welfare and Family Law Volume 3 ; 3 > 
-    au < manifest ; 1981 ; Journal of Social Welfare and Family Law Volume 4 ; 4 > 
-    au < manifest ; 1982 ; Journal of Social Welfare and Family Law Volume 5 ; 5 > 
-    au < manifest ; 1983 ; Journal of Social Welfare and Family Law Volume 6 ; 6 > 
-    au < manifest ; 1984-1985 ; Journal of Social Welfare and Family Law Volume 7 ; 7 > 
-    au < manifest ; 1985-1986 ; Journal of Social Welfare and Family Law Volume 8 ; 8 > 
-    au < manifest ; 1986-1987 ; Journal of Social Welfare and Family Law Volume 9 ; 9 > 
-    au < manifest ; 1987 ; Journal of Social Welfare and Family Law Volume 10 ; 10 > 
-    au < manifest ; 1988 ; Journal of Social Welfare and Family Law Volume 11 ; 11 > 
-    au < manifest ; 1989 ; Journal of Social Welfare and Family Law Volume 12 ; 12 > 
-    au < manifest ; 1989-1990 ; Journal of Social Welfare and Family Law Volume 13 ; 13 > 
-    au < manifest ; 1991 ; Journal of Social Welfare and Family Law Volume 14 ; 14 > 
-    au < manifest ; 1991-1992 ; Journal of Social Welfare and Family Law Volume 15 ; 15 > 
-    au < manifest ; 1993 ; Journal of Social Welfare and Family Law Volume 16 ; 16 > 
-    au < manifest ; 1993 ; Journal of Social Welfare and Family Law Volume 17 ; 17 > 
-    au < manifest ; 1994 ; Journal of Social Welfare and Family Law Volume 18 ; 18 > 
-    au < manifest ; 1994-1995 ; Journal of Social Welfare and Family Law Volume 19 ; 19 > 
-    au < manifest ; 1995 ; Journal of Social Welfare and Family Law Volume 20 ; 20 > 
-    au < manifest ; 1996 ; Journal of Social Welfare and Family Law Volume 21 ; 21 > 
-    au < manifest ; 1997 ; Journal of Social Welfare and Family Law Volume 22 ; 22 > 
-    au < manifest ; 1997-1998 ; Journal of Social Welfare and Family Law Volume 23 ; 23 > 
-    au < manifest ; 1998 ; Journal of Social Welfare and Family Law Volume 24 ; 24 > 
-    au < manifest ; 1998-1999 ; Journal of Social Welfare and Family Law Volume 25 ; 25 > 
-    au < manifest ; 1999-2000 ; Journal of Social Welfare and Family Law Volume 26 ; 26 > 
-    au < manifest ; 2000-2001 ; Journal of Social Welfare and Family Law Volume 27 ; 27 > 
-    au < manifest ; 2002 ; Journal of Social Welfare and Family Law Volume 28 ; 28 > 
-    au < manifest ; 2003 ; Journal of Social Welfare and Family Law Volume 29 ; 29 > 
-    au < manifest ; 2003-2004 ; Journal of Social Welfare and Family Law Volume 30 ; 30 > 
-    au < manifest ; 2004-2006 ; Journal of Social Welfare and Family Law Volume 31 ; 31 > 
-    au < manifest ; 2006 ; Journal of Social Welfare and Family Law Volume 32 ; 32 > 
-    au < manifest ; 2006-2007 ; Journal of Social Welfare and Family Law Volume 33 ; 33 > 
-    au < manifest ; 2007-2008 ; Journal of Social Welfare and Family Law Volume 34 ; 34 > 
-    au < manifest ; 2008-2009 ; Journal of Social Welfare and Family Law Volume 35 ; 35 > 
-    au < manifest ; 2009-2010 ; Journal of Social Welfare and Family Law Volume 36 ; 36 > 
-    au < manifest ; 2010-2011 ; Journal of Social Welfare and Family Law Volume 37 ; 37 > 
+    au < manifest ; 1991 ; Journal of Social Welfare and Family Law Volume 13 ; 13 > 
+    au < manifest ; 1992 ; Journal of Social Welfare and Family Law Volume 14 ; 14 > 
+    au < manifest ; 1993 ; Journal of Social Welfare and Family Law Volume 15 ; 15 > 
+    au < manifest ; 1994 ; Journal of Social Welfare and Family Law Volume 16 ; 16 > 
+    au < manifest ; 1995 ; Journal of Social Welfare and Family Law Volume 17 ; 17 > 
+    au < manifest ; 1996 ; Journal of Social Welfare and Family Law Volume 18 ; 18 > 
+    au < manifest ; 1997 ; Journal of Social Welfare and Family Law Volume 19 ; 19 > 
+    au < manifest ; 1998 ; Journal of Social Welfare and Family Law Volume 20 ; 20 > 
+    au < manifest ; 1999 ; Journal of Social Welfare and Family Law Volume 21 ; 21 > 
+    au < manifest ; 2000 ; Journal of Social Welfare and Family Law Volume 22 ; 22 > 
+    au < manifest ; 2001 ; Journal of Social Welfare and Family Law Volume 23 ; 23 > 
+    au < manifest ; 2002 ; Journal of Social Welfare and Family Law Volume 24 ; 24 > 
+    au < manifest ; 2003 ; Journal of Social Welfare and Family Law Volume 25 ; 25 > 
+    au < manifest ; 2004 ; Journal of Social Welfare and Family Law Volume 26 ; 26 > 
+    au < manifest ; 2005 ; Journal of Social Welfare and Family Law Volume 27 ; 27 > 
+    au < manifest ; 2006 ; Journal of Social Welfare and Family Law Volume 28 ; 28 > 
+    au < manifest ; 2007 ; Journal of Social Welfare and Family Law Volume 29 ; 29 > 
+    au < manifest ; 2008 ; Journal of Social Welfare and Family Law Volume 30 ; 30 > 
+    au < manifest ; 2009 ; Journal of Social Welfare and Family Law Volume 31 ; 31 > 
+    au < manifest ; 2010 ; Journal of Social Welfare and Family Law Volume 32 ; 32 > 
+    au < manifest ; 2011 ; Journal of Social Welfare and Family Law Volume 33 ; 33 > 
 
   }
 
+  {
+
+    title <
+      name = The Journal of Social Welfare Law ;
+      issn = 0141-8033 ;
+      issnl = 0141-8033
+    >
+
+    comment[continued_by] = 0964-9069
+    param[journal_id] = rjsf19 
+
+    au < manifest ; 1978 ; The Journal of Social Welfare Law Volume 1 ; 1 > 
+    au < manifest ; 1980 ; The Journal of Social Welfare Law Volume 2 ; 2 > 
+    au < manifest ; 1981 ; The Journal of Social Welfare Law Volume 3 ; 3 > 
+    au < manifest ; 1982 ; The Journal of Social Welfare Law Volume 4 ; 4 > 
+    au < manifest ; 1983 ; The Journal of Social Welfare Law Volume 5 ; 5 > 
+    au < manifest ; 1984 ; The Journal of Social Welfare Law Volume 6 ; 6 > 
+    au < manifest ; 1985 ; The Journal of Social Welfare Law Volume 7 ; 7 > 
+    au < manifest ; 1986 ; The Journal of Social Welfare Law Volume 8 ; 8 > 
+    au < manifest ; 1987 ; The Journal of Social Welfare Law Volume 9 ; 9 > 
+    au < manifest ; 1988 ; The Journal of Social Welfare Law Volume 10 ; 10 > 
+    au < manifest ; 1989 ; The Journal of Social Welfare Law Volume 11 ; 11 > 
+    au < manifest ; 1990 ; The Journal of Social Welfare Law Volume 12 ; 12 > 
+    
+  }
+  
   {
 
     title <
