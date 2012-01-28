@@ -54,8 +54,8 @@ then
 fi
 if [[ $exists_cks == 1  &&  $exists_gln == 1 ]]
 then
-  ./tdbout -j -i ../../tdb/prod/$file | sort | uniq > $tpath/glnt.txt
-  ./tdbout -j -i ../../tdb/clockssingest/$file | sort | uniq > $tpath/clocksst.txt
+  ./tdbout -j -i ../../tdb/prod/$file | sort | uniq | grep -vf gvc_gln.txt > $tpath/glnt.txt
+  ./tdbout -j -i ../../tdb/clockssingest/$file | sort | uniq | grep -vf gvc_clockss.txt > $tpath/clocksst.txt
   rm $tpath/diff.txt
   if ! diff $tpath/glnt.txt $tpath/clocksst.txt > $tpath/diff.txt
     #echo Diff Lines: $diff_lines
@@ -63,33 +63,28 @@ then
     echo "Title differences: GLN v CLOCKSSingest"
     linenum=`cat $tpath/diff.txt | grep "<" | wc -l`
     echo "*** GLN Titles -- $linenum ***"
-    cat $tpath/diff.txt | grep "<"
+    cat $tpath/diff.txt | grep "<" | sed s/..// 
     #cat $tpath/diff.txt | grep "<" | head -n8
     #linenum=`cat $tpath/diff.txt | grep "<" | wc -l`
     #echo "First 8 out of $linenum" 
     linenum=`cat $tpath/diff.txt | grep ">" | wc -l`
     echo "*** CLOCKSS Titles -- $linenum ***"
-    cat $tpath/diff.txt | grep ">"
+    cat $tpath/diff.txt | grep ">" | sed s/..//
     #cat $tpath/diff.txt | grep ">" | head -n8
     #linenum=`cat $tpath/diff.txt | grep ">" | wc -l`
     #echo "First 8 out of $linenum"
-    if [[ $file == "sage_publications.tdb" ]]
-    then
-      echo "!ignore SAGE Publications,Graft: Organ and Cell Transplantation,1522-1628,"
-      echo "!ignore SAGE Publications,Ecclesiology,1744-1366,1745-5316"
-    fi
   else
     maxnumAUs1=$numdiffAUs
     maxnumAUs2=$numdiffAUs
     echo "No title differences"
-    ./tdbout -c auid,title -i ../../tdb/prod/$file | grep -v "projmuse" | grep -v "bioone" | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/glnt.txt
-    ./tdbout -c auid,title -i ../../tdb/clockssingest/$file | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/clocksst.txt
+    ./tdbout -c auid,title -i ../../tdb/prod/$file | grep -vf gvc_gln.txt | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/glnt.txt
+    ./tdbout -c auid,title -i ../../tdb/clockssingest/$file | grep -vf gvc_clockss.txt | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/clocksst.txt
     if ! diff $tpath/glnt.txt $tpath/clocksst.txt > $tpath/diff.txt
     then
       echo "AU differences: GLN v CLOCKSSingest"
       #cat $tpath/diff.txt
       echo "***GLN AUs***"
-      cat $tpath/diff.txt | grep "<" | head -n8
+      cat $tpath/diff.txt | grep "<" | sed s/..// | head -n8
       linenum1=`cat $tpath/diff.txt | grep "<" | wc -l`
       if [ $linenum1 -lt $maxnumAUs1 ]
       then
@@ -97,7 +92,7 @@ then
       fi
       echo "First $maxnumAUs1 out of $linenum1" 
       echo "***CLOCKSS AUs***"
-      cat $tpath/diff.txt | grep ">" | head -n8
+      cat $tpath/diff.txt | grep ">" | sed s/..// | head -n8
       linenum2=`cat $tpath/diff.txt | grep ">" | wc -l`
       if [ $linenum2 -lt $maxnumAUs2 ]
       then
