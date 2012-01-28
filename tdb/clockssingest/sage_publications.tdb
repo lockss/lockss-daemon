@@ -8209,6 +8209,8 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      comment[continued_by] = European Journal of Preventitive Cardiology, 2047-4873
+
       au < exists ; exists ; 1994 ; European Journal of Cardiovascular Prevention & Rehabilitation 1 ; 1 ; >
       au < exists ; exists ; 1995 ; European Journal of Cardiovascular Prevention & Rehabilitation 2 ; 2 ; >
       au < exists ; exists ; 1996 ; European Journal of Cardiovascular Prevention & Rehabilitation 3 ; 3 ; >
@@ -8227,11 +8229,35 @@
       au < manifest ; exists ; 2009 ; European Journal of Cardiovascular Prevention & Rehabilitation 16 ; 16 ; >
       au < manifest ; exists ; 2010 ; European Journal of Cardiovascular Prevention & Rehabilitation 17 ; 17 ; >
       au < released ; manifest ; 2011 ; European Journal of Cardiovascular Prevention & Rehabilitation 18 ; 18 ; >
-      au < exists ; exists ; 2012 ; European Journal of Cardiovascular Prevention & Rehabilitation 19 ; 19 ; >
+      au < doesNotExist ; doesNotExist ; 2012 ; European Journal of Cardiovascular Prevention & Rehabilitation 19 ; 19 ; >
 
     }
 
   }
+
+    {
+      title <
+        name = European Journal of Preventitive Cardiology ;
+        issn = 2047-4873 ;
+        eissn = 2047-4881 ;
+        issnl = 2047-4873
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cpr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[continued_from] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
+        comment[0] = Previous issues are at the same url.
+        
+        au < doesNotExist ; 2011 ; European Journal of Preventitive Cardiology 18 ; 18 >
+        au < exists ; 2012 ; European Journal of Preventitive Cardiology 19 ; 19 >
+
+      }
+
+    }
 
   {
   
@@ -22363,7 +22389,7 @@
   {
   
     title <
-      name = Journalism ;
+      name = Journalism: Theory, Practice, and Criticism ;
       issn = 1464-8849 ;
       eissn = 1741-3001
     >
@@ -22375,8 +22401,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journalism Volume 9 ; 9 ;  >
-      au < down ; crawling ; 2009 ; Journalism Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < down ; crawling ; 2008 ; Journalism: Theory, Practice, and Criticism Volume 9 ; 9 ;  >
+      au < down ; crawling ; 2009 ; Journalism: Theory, Practice, and Criticism Volume 10 ; 10 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -22384,19 +22410,19 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2000 ; Journalism Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2001 ; Journalism Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2002 ; Journalism Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2003 ; Journalism Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2004 ; Journalism Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2005 ; Journalism Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2006 ; Journalism Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2007 ; Journalism Volume 8 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Journalism Volume 9 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Journalism Volume 10 ; 10 ; >
-      au < wanted ; exists ; 2010 ; Journalism Volume 11 ; 11 ;  >
-      au < released ; manifest ; 2011 ; Journalism Volume 12 ; 12 ; >
-      au < exists ; exists ; 2012 ; Journalism Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2000 ; Journalism: Theory, Practice, and Criticism Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2001 ; Journalism: Theory, Practice, and Criticism Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2002 ; Journalism: Theory, Practice, and Criticism Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2003 ; Journalism: Theory, Practice, and Criticism Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2004 ; Journalism: Theory, Practice, and Criticism Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2005 ; Journalism: Theory, Practice, and Criticism Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2006 ; Journalism: Theory, Practice, and Criticism Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2007 ; Journalism: Theory, Practice, and Criticism Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Journalism: Theory, Practice, and Criticism Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Journalism: Theory, Practice, and Criticism Volume 10 ; 10 ; >
+      au < wanted ; exists ; 2010 ; Journalism: Theory, Practice, and Criticism Volume 11 ; 11 ;  >
+      au < released ; manifest ; 2011 ; Journalism: Theory, Practice, and Criticism Volume 12 ; 12 ; >
+      au < exists ; exists ; 2012 ; Journalism: Theory, Practice, and Criticism Volume 13 ; 13 ; >
 
     }
 
