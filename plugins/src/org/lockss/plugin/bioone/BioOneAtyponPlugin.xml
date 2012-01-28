@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -67,12 +67,16 @@
     <string>au_feature_urls</string>
     <map>
       <entry>
+        <string>au_title</string>
+        <string>&quot;%sloi/%s&quot;, base_url, journal_id</string>
+      </entry>
+      <entry>
         <string>au_volume</string>
-        <string>&quot;%stoc/%s/%s/%s, base_url, journal_id, volume, issue</string>
+        <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
       </entry>
       <entry>
         <string>au_issue</string>
-        <string>&quot;%stoc/%s/%s/%s, base_url, journal_id, volume, issue</string>
+        <string>&quot;%stoc/%s/%s/%s&quot;, base_url, journal_id, volume_name, issue</string>
       </entry>
     </map>
   </entry>
