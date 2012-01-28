@@ -1,5 +1,5 @@
 /*
- * $Id: DiskVoteBlocks.java,v 1.20 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: DiskVoteBlocks.java,v 1.20.44.1 2012-01-28 06:53:04 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.nio.*;
 
 import org.lockss.app.LockssApp;
 import org.lockss.util.*;
+import org.lockss.config.*;
 
 /**
  * A VoteBlocks data structure backed by a disk file.  This implementation
@@ -47,6 +48,11 @@ import org.lockss.util.*;
  */
 public class DiskVoteBlocks implements VoteBlocks {
   private static final Logger log = Logger.getLogger("DiskVoteBlocks");
+
+  /** If true, input streams are monitored for missed close()s */
+  public static final String PARAM_MONITOR_INPUT_STREAMS =
+    Configuration.PREFIX + "monitor.inputStreams";
+  public static final boolean DEFAULT_MONITOR_INPUT_STREAMS = false;
 
   private String m_filePath;
   private transient File m_file;
@@ -78,9 +84,8 @@ public class DiskVoteBlocks implements VoteBlocks {
       // Close
       os.close();
       this.m_size = blocksToRead;
-    } catch (IOException e) {
+    } finally {
       IOUtil.safeClose(os);
-      throw e;
     }
   }
 
@@ -108,11 +113,14 @@ public class DiskVoteBlocks implements VoteBlocks {
     // Append to the end of the file.
     FileOutputStream fos = new FileOutputStream(m_file, true);
     DataOutputStream dos = new DataOutputStream(fos);
-    byte[] encodedBlock = b.getEncoded();
-    dos.writeShort(encodedBlock.length);
-    dos.write(encodedBlock);
-    this.m_size++;
-    dos.close();
+    try {
+      byte[] encodedBlock = b.getEncoded();
+      dos.writeShort(encodedBlock.length);
+      dos.write(encodedBlock);
+      this.m_size++;
+    } finally {
+      dos.close();
+    }
   }
   
   public VoteBlocksIterator iterator() throws FileNotFoundException {
@@ -166,7 +174,12 @@ public class DiskVoteBlocks implements VoteBlocks {
   }
 
   public synchronized InputStream getInputStream() throws IOException {
-    return new BufferedInputStream(new FileInputStream(m_file));
+    InputStream is = new BufferedInputStream(new FileInputStream(m_file));
+    if (CurrentConfig.getBooleanParam(PARAM_MONITOR_INPUT_STREAMS,
+				      DEFAULT_MONITOR_INPUT_STREAMS)) {
+      is = new MonitoringInputStream(is, "dvb getInputStream()");
+    }
+    return is;
   }
   
   class Iterator implements VoteBlocksIterator {
@@ -174,11 +187,17 @@ public class DiskVoteBlocks implements VoteBlocks {
     private VoteBlock m_nextVB;  // Next block to be returned by next(), peek()
     
     public Iterator() throws FileNotFoundException {
+      if (log.isDebug2()) {
+	log.debug2("Open raf: " + m_file);
+      }
       m_raf = new RandomAccessFile(m_file, "r"); 
     }
     
     /* Inherit documentation */
     public void release() {
+      if (log.isDebug2()) {
+	log.debug2("Release raf: " + m_file);
+      }
       IOUtil.safeClose(m_raf);
     }
 
