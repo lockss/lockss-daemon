@@ -4544,6 +4544,7 @@
     au < HighWirePressH20Plugin ; released ; 2008 ; Epidemiologic Reviews Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Epidemiologic Reviews Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Epidemiologic Reviews Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Epidemiologic Reviews Volume 33 ; 33 >
     
     }
 
@@ -4806,8 +4807,6 @@
 
     {
 
-    comment[h20] = has switched to H20 early
-
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://eurheartjsupp.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
@@ -4817,8 +4816,6 @@
     }
 
     {
-
-    comment[h20] = has switched to H20 early
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://eurheartjsupp.oxfordjournals.org/
@@ -4837,6 +4834,7 @@
     au < HighWirePressH20Plugin ; released ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 >
 
     }
 
@@ -7483,6 +7481,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Integrative and Comparative Biology Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Integrative and Comparative Biology Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Integrative and Comparative Biology Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Integrative and Comparative Biology Volume 51 ; 51 >
     
     }
 
@@ -7674,6 +7673,7 @@
     au < HighWirePressH20Plugin ; released ; 2008 ; International Journal of Constitutional Law Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; International Journal of Constitutional Law Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 2010 ; International Journal of Constitutional Law Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; International Journal of Constitutional Law Volume 9 ; 9 >
    
     }
 
@@ -8820,6 +8820,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Antimicrobial Chemotherapy Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Antimicrobial Chemotherapy Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Antimicrobial Chemotherapy Volume 67 ; 67 >
     
     }
 
@@ -10343,7 +10344,8 @@
     au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Infectious Diseases Volume 201 ; 201 >
     au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Infectious Diseases Volume 202 ; 202 >
     au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Infectious Diseases Volume 204 ; 204 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Infectious Diseases Volume 204 ; 204 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 >
          
     }
 
@@ -14353,13 +14355,14 @@
     au < HighWirePressH20Plugin ; manifest ; 2002 ; Oxford Economic Papers Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Oxford Economic Papers Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Oxford Economic Papers Volume 56 ; 56 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; Oxford Economic Papers Volume 57 ; 57 >
-    au < HighWirePressPlugin ; doNotProcess ; 2008 ; Oxford Economic Papers Volume 58 ; 58 >
-    au < HighWireStrVolPlugin ; down ; 2009 ; Oxford Economic Papers Volume 59 ; 59 >
-    au < HighWirePressPlugin ; down ; 2010 ; Oxford Economic Papers Volume 60 ; 60 >
-    au < HighWirePressPlugin ; down ; 2011 ; Oxford Economic Papers Volume 61 ; 61 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Oxford Economic Papers Volume 57 ; 57 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Oxford Economic Papers Volume 58 ; 58 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Oxford Economic Papers Volume 59 ; 59 >
+    au < HighWirePressPlugin ; down ; 2008 ; Oxford Economic Papers Volume 60 ; 60 >
+    au < HighWirePressPlugin ; down ; 2009 ; Oxford Economic Papers Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Oxford Economic Papers Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Oxford Economic Papers Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Oxford Economic Papers Volume 64 ; 64 >
  
     }
 
@@ -16663,7 +16666,7 @@
     >
 	
     pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] =
+    param[base_url] = http://spp.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Science and Public Policy Volume 38 ; 38 >
