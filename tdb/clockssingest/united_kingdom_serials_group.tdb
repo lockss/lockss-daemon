@@ -5,8 +5,7 @@
   >
 
   attr[contract] = 2011
-  plugin = needs.plugin
-  comment[platform] = MetaPress (see RT 3765)
+  plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
   param[base_url] = http://uksg.metapress.com/
 
   {
