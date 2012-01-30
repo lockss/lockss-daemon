@@ -8245,7 +8245,7 @@
 
       {
 
-        pluginSuffix = HighWirePressH20Plugin
+        pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://cpr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
@@ -25757,6 +25757,164 @@
   }
 
   {
+
+    title <
+      name = The Journal of the Royal Society for the Promotion of Health ;
+      issn = 1466-4240 ;
+      eissn = 1476-9042 ;
+      issnl = 1466-4240
+    >
+    
+    comment[continued_by] = 1757-9139
+    comment[rsh] = journal name changed to Perspectives in Public Health
+    param[base_url] = http://rsh.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1879 ; The Journal of the Royal Society for the Promotion of Health Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1881 ; The Journal of the Royal Society for the Promotion of Health Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1882 ; The Journal of the Royal Society for the Promotion of Health Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1883 ; The Journal of the Royal Society for the Promotion of Health Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1884 ; The Journal of the Royal Society for the Promotion of Health Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1885 ; The Journal of the Royal Society for the Promotion of Health Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1886 ; The Journal of the Royal Society for the Promotion of Health Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1887 ; The Journal of the Royal Society for the Promotion of Health Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1888 ; The Journal of the Royal Society for the Promotion of Health Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1889 ; The Journal of the Royal Society for the Promotion of Health Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1890 ; The Journal of the Royal Society for the Promotion of Health Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1891 ; The Journal of the Royal Society for the Promotion of Health Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1892 ; The Journal of the Royal Society for the Promotion of Health Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1893 ; The Journal of the Royal Society for the Promotion of Health Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1894 ; The Journal of the Royal Society for the Promotion of Health Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1895 ; The Journal of the Royal Society for the Promotion of Health Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1896 ; The Journal of the Royal Society for the Promotion of Health Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1897 ; The Journal of the Royal Society for the Promotion of Health Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1898 ; The Journal of the Royal Society for the Promotion of Health Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1899 ; The Journal of the Royal Society for the Promotion of Health Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1900 ; The Journal of the Royal Society for the Promotion of Health Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1901 ; The Journal of the Royal Society for the Promotion of Health Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1902 ; The Journal of the Royal Society for the Promotion of Health Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1903 ; The Journal of the Royal Society for the Promotion of Health Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1904 ; The Journal of the Royal Society for the Promotion of Health Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1905 ; The Journal of the Royal Society for the Promotion of Health Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1906 ; The Journal of the Royal Society for the Promotion of Health Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1907 ; The Journal of the Royal Society for the Promotion of Health Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1908 ; The Journal of the Royal Society for the Promotion of Health Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1909 ; The Journal of the Royal Society for the Promotion of Health Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1910 ; The Journal of the Royal Society for the Promotion of Health Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1911 ; The Journal of the Royal Society for the Promotion of Health Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1912 ; The Journal of the Royal Society for the Promotion of Health Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1913 ; The Journal of the Royal Society for the Promotion of Health Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1914 ; The Journal of the Royal Society for the Promotion of Health Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1915 ; The Journal of the Royal Society for the Promotion of Health Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1916 ; The Journal of the Royal Society for the Promotion of Health Volume 37 ; 37 ; >
+      au < manifest ; exists ; 1917 ; The Journal of the Royal Society for the Promotion of Health Volume 38 ; 38 ; >
+      au < manifest ; exists ; 1918 ; The Journal of the Royal Society for the Promotion of Health Volume 39 ; 39 ; >
+      au < manifest ; exists ; 1919 ; The Journal of the Royal Society for the Promotion of Health Volume 40 ; 40 ; >
+      au < manifest ; exists ; 1920 ; The Journal of the Royal Society for the Promotion of Health Volume 41 ; 41 ; >
+      au < manifest ; exists ; 1921 ; The Journal of the Royal Society for the Promotion of Health Volume 42 ; 42 ; >
+      au < manifest ; exists ; 1922 ; The Journal of the Royal Society for the Promotion of Health Volume 43 ; 43 ; >
+      au < manifest ; exists ; 1923 ; The Journal of the Royal Society for the Promotion of Health Volume 44 ; 44 ; >
+      au < manifest ; exists ; 1924 ; The Journal of the Royal Society for the Promotion of Health Volume 45 ; 45 ; >
+      au < manifest ; exists ; 1925 ; The Journal of the Royal Society for the Promotion of Health Volume 46 ; 46 ; >
+      au < manifest ; exists ; 1926 ; The Journal of the Royal Society for the Promotion of Health Volume 47 ; 47 ; >
+      au < manifest ; exists ; 1927 ; The Journal of the Royal Society for the Promotion of Health Volume 48 ; 48 ; >
+      au < manifest ; exists ; 1928 ; The Journal of the Royal Society for the Promotion of Health Volume 49 ; 49 ; >
+      au < manifest ; exists ; 1929 ; The Journal of the Royal Society for the Promotion of Health Volume 50 ; 50 ; >
+      au < manifest ; exists ; 1930 ; The Journal of the Royal Society for the Promotion of Health Volume 51 ; 51 ; >
+      au < manifest ; exists ; 1931 ; The Journal of the Royal Society for the Promotion of Health Volume 52 ; 52 ; >
+      au < manifest ; exists ; 1932 ; The Journal of the Royal Society for the Promotion of Health Volume 53 ; 53 ; >
+      au < manifest ; exists ; 1933 ; The Journal of the Royal Society for the Promotion of Health Volume 54 ; 54 ; >
+      au < manifest ; exists ; 1934 ; The Journal of the Royal Society for the Promotion of Health Volume 55 ; 55 ; >
+      au < manifest ; exists ; 1935 ; The Journal of the Royal Society for the Promotion of Health Volume 56 ; 56 ; >
+      au < manifest ; exists ; 1936 ; The Journal of the Royal Society for the Promotion of Health Volume 57 ; 57 ; >
+      au < manifest ; exists ; 1937 ; The Journal of the Royal Society for the Promotion of Health Volume 58 ; 58 ; >
+      au < manifest ; exists ; 1938 ; The Journal of the Royal Society for the Promotion of Health Volume 59 ; 59 ; >
+      au < manifest ; exists ; 1939 ; The Journal of the Royal Society for the Promotion of Health Volume 60 ; 60 ; >
+      au < manifest ; exists ; 1940 ; The Journal of the Royal Society for the Promotion of Health Volume 61 ; 61 ; >
+      au < manifest ; exists ; 1942 ; The Journal of the Royal Society for the Promotion of Health Volume 62 ; 62 ; >
+      au < manifest ; exists ; 1943 ; The Journal of the Royal Society for the Promotion of Health Volume 63 ; 63 ; >
+      au < manifest ; exists ; 1943 ; The Journal of the Royal Society for the Promotion of Health Volume 64 ; 64 ; >
+      au < manifest ; exists ; 1945 ; The Journal of the Royal Society for the Promotion of Health Volume 65 ; 65 ; >
+      au < manifest ; exists ; 1946 ; The Journal of the Royal Society for the Promotion of Health Volume 66 ; 66 ; >
+      au < manifest ; exists ; 1947 ; The Journal of the Royal Society for the Promotion of Health Volume 67 ; 67 ; >
+      au < manifest ; exists ; 1948 ; The Journal of the Royal Society for the Promotion of Health Volume 68 ; 68 ; >
+      au < manifest ; exists ; 1949 ; The Journal of the Royal Society for the Promotion of Health Volume 69 ; 69 ; >
+      au < manifest ; exists ; 1950 ; The Journal of the Royal Society for the Promotion of Health Volume 70 ; 70 ; >
+      au < manifest ; exists ; 1951 ; The Journal of the Royal Society for the Promotion of Health Volume 71 ; 71 ; >
+      au < manifest ; exists ; 1952 ; The Journal of the Royal Society for the Promotion of Health Volume 72 ; 72 ; >
+      au < manifest ; exists ; 1953 ; The Journal of the Royal Society for the Promotion of Health Volume 73 ; 73 ; >
+      au < manifest ; exists ; 1954 ; The Journal of the Royal Society for the Promotion of Health Volume 74 ; 74 ; >
+      au < manifest ; exists ; 1955 ; The Journal of the Royal Society for the Promotion of Health Volume 75 ; 75 ; >
+      au < manifest ; exists ; 1955 ; The Journal of the Royal Society for the Promotion of Health Volume 76 ; 76 ; >
+      au < manifest ; exists ; 1957 ; The Journal of the Royal Society for the Promotion of Health Volume 77 ; 77 ; >
+      au < manifest ; exists ; 1958 ; The Journal of the Royal Society for the Promotion of Health Volume 78 ; 78 ; >
+      au < manifest ; exists ; 1959 ; The Journal of the Royal Society for the Promotion of Health Volume 79 ; 79 ; >
+      au < manifest ; exists ; 1960 ; The Journal of the Royal Society for the Promotion of Health Volume 80 ; 80 ; >
+      au < manifest ; exists ; 1961 ; The Journal of the Royal Society for the Promotion of Health Volume 81 ; 81 ; >
+      au < manifest ; exists ; 1962 ; The Journal of the Royal Society for the Promotion of Health Volume 82 ; 82 ; >
+      au < manifest ; exists ; 1963 ; The Journal of the Royal Society for the Promotion of Health Volume 83 ; 83 ; >
+      au < manifest ; exists ; 1964 ; The Journal of the Royal Society for the Promotion of Health Volume 84 ; 84 ; >
+      au < manifest ; exists ; 1965 ; The Journal of the Royal Society for the Promotion of Health Volume 85 ; 85 ; >
+      au < manifest ; exists ; 1966 ; The Journal of the Royal Society for the Promotion of Health Volume 86 ; 86 ; >
+      au < manifest ; exists ; 1967 ; The Journal of the Royal Society for the Promotion of Health Volume 87 ; 87 ; >
+      au < manifest ; exists ; 1968 ; The Journal of the Royal Society for the Promotion of Health Volume 88 ; 88 ; >
+      au < manifest ; exists ; 1969 ; The Journal of the Royal Society for the Promotion of Health Volume 89 ; 89 ; >
+      au < manifest ; exists ; 1970 ; The Journal of the Royal Society for the Promotion of Health Volume 90 ; 90 ; >
+      au < manifest ; exists ; 1971 ; The Journal of the Royal Society for the Promotion of Health Volume 91 ; 91 ; >
+      au < manifest ; exists ; 1972 ; The Journal of the Royal Society for the Promotion of Health Volume 92 ; 92 ; >
+      au < manifest ; exists ; 1973 ; The Journal of the Royal Society for the Promotion of Health Volume 93 ; 93 ; >
+      au < manifest ; exists ; 1974 ; The Journal of the Royal Society for the Promotion of Health Volume 94 ; 94 ; >
+      au < manifest ; exists ; 1975 ; The Journal of the Royal Society for the Promotion of Health Volume 95 ; 95 ; >
+      au < manifest ; exists ; 1976 ; The Journal of the Royal Society for the Promotion of Health Volume 96 ; 96 ; >
+      au < manifest ; exists ; 1977 ; The Journal of the Royal Society for the Promotion of Health Volume 97 ; 97 ; >
+      au < manifest ; exists ; 1978 ; The Journal of the Royal Society for the Promotion of Health Volume 98 ; 98 ; >
+      au < manifest ; exists ; 1979 ; The Journal of the Royal Society for the Promotion of Health Volume 99 ; 99 ; >
+      au < manifest ; exists ; 1980 ; The Journal of the Royal Society for the Promotion of Health Volume 100 ; 100 ; >
+      au < manifest ; exists ; 1981 ; The Journal of the Royal Society for the Promotion of Health Volume 101 ; 101 ; >
+      au < manifest ; exists ; 1982 ; The Journal of the Royal Society for the Promotion of Health Volume 102 ; 102 ; >
+      au < manifest ; exists ; 1983 ; The Journal of the Royal Society for the Promotion of Health Volume 103 ; 103 ; >
+      au < manifest ; exists ; 1984 ; The Journal of the Royal Society for the Promotion of Health Volume 104 ; 104 ; >
+      au < manifest ; exists ; 1985 ; The Journal of the Royal Society for the Promotion of Health Volume 105 ; 105 ; >
+      au < manifest ; exists ; 1986 ; The Journal of the Royal Society for the Promotion of Health Volume 106 ; 106 ; >
+      au < manifest ; exists ; 1987 ; The Journal of the Royal Society for the Promotion of Health Volume 107 ; 107 ; >
+      au < manifest ; exists ; 1988 ; The Journal of the Royal Society for the Promotion of Health Volume 108 ; 108 ; >
+      au < manifest ; exists ; 1989 ; The Journal of the Royal Society for the Promotion of Health Volume 109 ; 109 ; >
+      au < manifest ; exists ; 1990 ; The Journal of the Royal Society for the Promotion of Health Volume 110 ; 110 ; >
+      au < manifest ; exists ; 1991 ; The Journal of the Royal Society for the Promotion of Health Volume 111 ; 111 ; >
+      au < manifest ; exists ; 1992 ; The Journal of the Royal Society for the Promotion of Health Volume 112 ; 112 ; >
+      au < manifest ; exists ; 1993 ; The Journal of the Royal Society for the Promotion of Health Volume 113 ; 113 ; >
+      au < manifest ; exists ; 1994 ; The Journal of the Royal Society for the Promotion of Health Volume 114 ; 114 ; >
+      au < manifest ; exists ; 1995 ; The Journal of the Royal Society for the Promotion of Health Volume 115 ; 115 ; >
+      au < manifest ; exists ; 1996 ; The Journal of the Royal Society for the Promotion of Health Volume 116 ; 116 ; >
+      au < manifest ; exists ; 1997 ; The Journal of the Royal Society for the Promotion of Health Volume 117 ; 117 ; >
+      au < manifest ; exists ; 1998 ; The Journal of the Royal Society for the Promotion of Health Volume 118 ; 118 ; >
+      au < manifest ; exists ; 1999 ; The Journal of the Royal Society for the Promotion of Health Volume 119 ; 119 ; >
+      au < manifest ; exists ; 2000 ; The Journal of the Royal Society for the Promotion of Health Volume 120 ; 120 ; >
+      au < manifest ; exists ; 2001 ; The Journal of the Royal Society for the Promotion of Health Volume 121 ; 121 ; >
+      au < manifest ; exists ; 2002 ; The Journal of the Royal Society for the Promotion of Health Volume 122 ; 122 ; >
+      au < manifest ; exists ; 2003 ; The Journal of the Royal Society for the Promotion of Health Volume 123 ; 123 ; >
+      au < manifest ; exists ; 2004 ; The Journal of the Royal Society for the Promotion of Health Volume 124 ; 124 ; >
+      au < manifest ; exists ; 2005 ; The Journal of the Royal Society for the Promotion of Health Volume 125 ; 125 ; >
+      au < manifest ; exists ; 2006 ; The Journal of the Royal Society for the Promotion of Health Volume 126 ; 126 ; >
+      au < manifest ; exists ; 2007 ; The Journal of the Royal Society for the Promotion of Health Volume 127 ; 127 ; >
+
+    }
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+
+      au < down ; crawling ; 2008 ; The Journal of the Royal Society for the Promotion of Health Volume 128 ; 128 ;  >
+
+    }
+
+
+  }
+  
+  {
   
     title <
       name = Perspectives in Public Health ;
@@ -25764,7 +25922,7 @@
       eissn = 1757-9147
     >
     
-    comment[name] = Previously The Journal of the Royal Society for the Promotion of Health, issn:1466-4240
+    comment[continued_from] = Before 2009, The Journal of the Royal Society for the Promotion of Health, issn:1466-4240
 
     param[base_url] = http://rsh.sagepub.com/
 
@@ -25773,7 +25931,6 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Perspectives in Public Health Volume 128 ; 128 ;  >
       au < down ; crawling ; 2009 ; Perspectives in Public Health Volume 129 ; 129 ; reingest3.clockss.org:8083 >
 
     }
@@ -25781,135 +25938,9 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      
+      comment[0] = title before 2009 changed.
 
-      au < exists ; exists ; 1880 ; Perspectives in Public Health Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1881 ; Perspectives in Public Health Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1882 ; Perspectives in Public Health Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1883 ; Perspectives in Public Health Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1884 ; Perspectives in Public Health Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1885 ; Perspectives in Public Health Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1886 ; Perspectives in Public Health Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1887 ; Perspectives in Public Health Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1888 ; Perspectives in Public Health Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1889 ; Perspectives in Public Health Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1890 ; Perspectives in Public Health Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1891 ; Perspectives in Public Health Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1892 ; Perspectives in Public Health Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1893 ; Perspectives in Public Health Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1894 ; Perspectives in Public Health Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1895 ; Perspectives in Public Health Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1896 ; Perspectives in Public Health Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1897 ; Perspectives in Public Health Volume 18 ; 18 ; >
-      au < manifest ; exists ; 1898 ; Perspectives in Public Health Volume 19 ; 19 ; >
-      au < manifest ; exists ; 1899 ; Perspectives in Public Health Volume 20 ; 20 ; >
-      au < manifest ; exists ; 1900 ; Perspectives in Public Health Volume 21 ; 21 ; >
-      au < manifest ; exists ; 1901 ; Perspectives in Public Health Volume 22 ; 22 ; >
-      au < manifest ; exists ; 1902 ; Perspectives in Public Health Volume 23 ; 23 ; >
-      au < manifest ; exists ; 1903 ; Perspectives in Public Health Volume 24 ; 24 ; >
-      au < manifest ; exists ; 1904 ; Perspectives in Public Health Volume 25 ; 25 ; >
-      au < manifest ; exists ; 1905 ; Perspectives in Public Health Volume 26 ; 26 ; >
-      au < manifest ; exists ; 1906 ; Perspectives in Public Health Volume 27 ; 27 ; >
-      au < manifest ; exists ; 1907 ; Perspectives in Public Health Volume 28 ; 28 ; >
-      au < manifest ; exists ; 1908 ; Perspectives in Public Health Volume 29 ; 29 ; >
-      au < manifest ; exists ; 1909 ; Perspectives in Public Health Volume 30 ; 30 ; >
-      au < manifest ; exists ; 1910 ; Perspectives in Public Health Volume 31 ; 31 ; >
-      au < manifest ; exists ; 1911 ; Perspectives in Public Health Volume 32 ; 32 ; >
-      au < manifest ; exists ; 1912 ; Perspectives in Public Health Volume 33 ; 33 ; >
-      au < manifest ; exists ; 1913 ; Perspectives in Public Health Volume 34 ; 34 ; >
-      au < manifest ; exists ; 1914 ; Perspectives in Public Health Volume 35 ; 35 ; >
-      au < manifest ; exists ; 1915 ; Perspectives in Public Health Volume 36 ; 36 ; >
-      au < manifest ; exists ; 1916 ; Perspectives in Public Health Volume 37 ; 37 ; >
-      au < manifest ; exists ; 1917 ; Perspectives in Public Health Volume 38 ; 38 ; >
-      au < manifest ; exists ; 1918 ; Perspectives in Public Health Volume 39 ; 39 ; >
-      au < manifest ; exists ; 1919 ; Perspectives in Public Health Volume 40 ; 40 ; >
-      au < manifest ; exists ; 1920 ; Perspectives in Public Health Volume 41 ; 41 ; >
-      au < manifest ; exists ; 1921 ; Perspectives in Public Health Volume 42 ; 42 ; >
-      au < manifest ; exists ; 1922 ; Perspectives in Public Health Volume 43 ; 43 ; >
-      au < manifest ; exists ; 1923 ; Perspectives in Public Health Volume 44 ; 44 ; >
-      au < manifest ; exists ; 1924 ; Perspectives in Public Health Volume 45 ; 45 ; >
-      au < manifest ; exists ; 1925 ; Perspectives in Public Health Volume 46 ; 46 ; >
-      au < manifest ; exists ; 1926 ; Perspectives in Public Health Volume 47 ; 47 ; >
-      au < manifest ; exists ; 1927 ; Perspectives in Public Health Volume 48 ; 48 ; >
-      au < manifest ; exists ; 1928 ; Perspectives in Public Health Volume 49 ; 49 ; >
-      au < manifest ; exists ; 1929 ; Perspectives in Public Health Volume 50 ; 50 ; >
-      au < manifest ; exists ; 1930 ; Perspectives in Public Health Volume 51 ; 51 ; >
-      au < manifest ; exists ; 1931 ; Perspectives in Public Health Volume 52 ; 52 ; >
-      au < manifest ; exists ; 1932 ; Perspectives in Public Health Volume 53 ; 53 ; >
-      au < manifest ; exists ; 1933 ; Perspectives in Public Health Volume 54 ; 54 ; >
-      au < manifest ; exists ; 1934 ; Perspectives in Public Health Volume 55 ; 55 ; >
-      au < manifest ; exists ; 1935 ; Perspectives in Public Health Volume 56 ; 56 ; >
-      au < manifest ; exists ; 1936 ; Perspectives in Public Health Volume 57 ; 57 ; >
-      au < manifest ; exists ; 1937 ; Perspectives in Public Health Volume 58 ; 58 ; >
-      au < manifest ; exists ; 1938 ; Perspectives in Public Health Volume 59 ; 59 ; >
-      au < manifest ; exists ; 1939 ; Perspectives in Public Health Volume 60 ; 60 ; >
-      au < manifest ; exists ; 1940 ; Perspectives in Public Health Volume 61 ; 61 ; >
-      au < manifest ; exists ; 1942 ; Perspectives in Public Health Volume 62 ; 62 ; >
-      au < manifest ; exists ; 1943 ; Perspectives in Public Health Volume 63 ; 63 ; >
-      au < manifest ; exists ; 1943 ; Perspectives in Public Health Volume 64 ; 64 ; >
-      au < manifest ; exists ; 1945 ; Perspectives in Public Health Volume 65 ; 65 ; >
-      au < manifest ; exists ; 1946 ; Perspectives in Public Health Volume 66 ; 66 ; >
-      au < manifest ; exists ; 1947 ; Perspectives in Public Health Volume 67 ; 67 ; >
-      au < manifest ; exists ; 1948 ; Perspectives in Public Health Volume 68 ; 68 ; >
-      au < manifest ; exists ; 1949 ; Perspectives in Public Health Volume 69 ; 69 ; >
-      au < manifest ; exists ; 1950 ; Perspectives in Public Health Volume 70 ; 70 ; >
-      au < manifest ; exists ; 1951 ; Perspectives in Public Health Volume 71 ; 71 ; >
-      au < manifest ; exists ; 1952 ; Perspectives in Public Health Volume 72 ; 72 ; >
-      au < manifest ; exists ; 1953 ; Perspectives in Public Health Volume 73 ; 73 ; >
-      au < manifest ; exists ; 1954 ; Perspectives in Public Health Volume 74 ; 74 ; >
-      au < manifest ; exists ; 1955 ; Perspectives in Public Health Volume 75 ; 75 ; >
-      au < manifest ; exists ; 1955 ; Perspectives in Public Health Volume 76 ; 76 ; >
-      au < manifest ; exists ; 1957 ; Perspectives in Public Health Volume 77 ; 77 ; >
-      au < manifest ; exists ; 1958 ; Perspectives in Public Health Volume 78 ; 78 ; >
-      au < manifest ; exists ; 1959 ; Perspectives in Public Health Volume 79 ; 79 ; >
-      au < manifest ; exists ; 1960 ; Perspectives in Public Health Volume 80 ; 80 ; >
-      au < manifest ; exists ; 1961 ; Perspectives in Public Health Volume 81 ; 81 ; >
-      au < manifest ; exists ; 1962 ; Perspectives in Public Health Volume 82 ; 82 ; >
-      au < manifest ; exists ; 1963 ; Perspectives in Public Health Volume 83 ; 83 ; >
-      au < manifest ; exists ; 1964 ; Perspectives in Public Health Volume 84 ; 84 ; >
-      au < manifest ; exists ; 1965 ; Perspectives in Public Health Volume 85 ; 85 ; >
-      au < manifest ; exists ; 1966 ; Perspectives in Public Health Volume 86 ; 86 ; >
-      au < manifest ; exists ; 1967 ; Perspectives in Public Health Volume 87 ; 87 ; >
-      au < manifest ; exists ; 1968 ; Perspectives in Public Health Volume 88 ; 88 ; >
-      au < manifest ; exists ; 1969 ; Perspectives in Public Health Volume 89 ; 89 ; >
-      au < manifest ; exists ; 1970 ; Perspectives in Public Health Volume 90 ; 90 ; >
-      au < manifest ; exists ; 1971 ; Perspectives in Public Health Volume 91 ; 91 ; >
-      au < manifest ; exists ; 1972 ; Perspectives in Public Health Volume 92 ; 92 ; >
-      au < manifest ; exists ; 1973 ; Perspectives in Public Health Volume 93 ; 93 ; >
-      au < manifest ; exists ; 1974 ; Perspectives in Public Health Volume 94 ; 94 ; >
-      au < manifest ; exists ; 1975 ; Perspectives in Public Health Volume 95 ; 95 ; >
-      au < manifest ; exists ; 1976 ; Perspectives in Public Health Volume 96 ; 96 ; >
-      au < manifest ; exists ; 1977 ; Perspectives in Public Health Volume 97 ; 97 ; >
-      au < manifest ; exists ; 1978 ; Perspectives in Public Health Volume 98 ; 98 ; >
-      au < manifest ; exists ; 1979 ; Perspectives in Public Health Volume 99 ; 99 ; >
-      au < manifest ; exists ; 1980 ; Perspectives in Public Health Volume 100 ; 100 ; >
-      au < manifest ; exists ; 1981 ; Perspectives in Public Health Volume 101 ; 101 ; >
-      au < manifest ; exists ; 1982 ; Perspectives in Public Health Volume 102 ; 102 ; >
-      au < manifest ; exists ; 1983 ; Perspectives in Public Health Volume 103 ; 103 ; >
-      au < manifest ; exists ; 1984 ; Perspectives in Public Health Volume 104 ; 104 ; >
-      au < manifest ; exists ; 1985 ; Perspectives in Public Health Volume 105 ; 105 ; >
-      au < manifest ; exists ; 1986 ; Perspectives in Public Health Volume 106 ; 106 ; >
-      au < manifest ; exists ; 1987 ; Perspectives in Public Health Volume 107 ; 107 ; >
-      au < manifest ; exists ; 1988 ; Perspectives in Public Health Volume 108 ; 108 ; >
-      au < manifest ; exists ; 1989 ; Perspectives in Public Health Volume 109 ; 109 ; >
-      au < manifest ; exists ; 1990 ; Perspectives in Public Health Volume 110 ; 110 ; >
-      au < manifest ; exists ; 1991 ; Perspectives in Public Health Volume 111 ; 111 ; >
-      au < manifest ; exists ; 1992 ; Perspectives in Public Health Volume 112 ; 112 ; >
-      au < manifest ; exists ; 1993 ; Perspectives in Public Health Volume 113 ; 113 ; >
-      au < manifest ; exists ; 1994 ; Perspectives in Public Health Volume 114 ; 114 ; >
-      au < manifest ; exists ; 1995 ; Perspectives in Public Health Volume 115 ; 115 ; >
-      au < manifest ; exists ; 1996 ; Perspectives in Public Health Volume 116 ; 116 ; >
-      au < manifest ; exists ; 1997 ; Perspectives in Public Health Volume 117 ; 117 ; >
-      au < manifest ; exists ; 1998 ; Perspectives in Public Health Volume 118 ; 118 ; >
-      au < manifest ; exists ; 1999 ; Perspectives in Public Health Volume 119 ; 119 ; >
-      au < manifest ; exists ; 2000 ; Perspectives in Public Health Volume 120 ; 120 ; >
-      au < manifest ; exists ; 2001 ; Perspectives in Public Health Volume 121 ; 121 ; >
-      au < manifest ; exists ; 2002 ; Perspectives in Public Health Volume 122 ; 122 ; >
-      au < manifest ; exists ; 2003 ; Perspectives in Public Health Volume 123 ; 123 ; >
-      au < manifest ; exists ; 2004 ; Perspectives in Public Health Volume 124 ; 124 ; >
-      au < manifest ; exists ; 2005 ; Perspectives in Public Health Volume 125 ; 125 ; >
-      au < manifest ; exists ; 2006 ; Perspectives in Public Health Volume 126 ; 126 ; >
-      au < manifest ; exists ; 2007 ; Perspectives in Public Health Volume 127 ; 127 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Perspectives in Public Health Volume 128 ; 128 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Perspectives in Public Health Volume 129 ; 129 ; >
       au < wanted ; exists ; 2010 ; Perspectives in Public Health Volume 130 ; 130 ;  >
       au < released ; manifest ; 2011 ; Perspectives in Public Health Volume 131 ; 131 ; >
