@@ -30,20 +30,21 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = ambi
+      comment[ambi41] = crawl failed 4 times
   
-      au < testing ; 2000 ; AMBIO: A Journal of the Human Environment Volume 29 ; 29 >
-      au < testing ; 2001 ; AMBIO: A Journal of the Human Environment Volume 30 ; 30 >
-      au < testing ; 2002 ; AMBIO: A Journal of the Human Environment Volume 31 ; 31 >
-      au < testing ; 2003 ; AMBIO: A Journal of the Human Environment Volume 32 ; 32 >
+      au < ready ; 2000 ; AMBIO: A Journal of the Human Environment Volume 29 ; 29 >
+      au < ready ; 2001 ; AMBIO: A Journal of the Human Environment Volume 30 ; 30 >
+      au < ready ; 2002 ; AMBIO: A Journal of the Human Environment Volume 31 ; 31 >
+      au < ready ; 2003 ; AMBIO: A Journal of the Human Environment Volume 32 ; 32 >
       au < doNotProcess ; 2004 ; AMBIO: A Journal of the Human Environment Volume 33 ; 33 >
-      au < testing ; 2005 ; AMBIO: A Journal of the Human Environment Volume 34 ; 34 >
-      au < testing ; 2006 ; AMBIO: A Journal of the Human Environment Volume 35 ; 35 >
-      au < testing ; 2007 ; AMBIO: A Journal of the Human Environment Volume 36 ; 36 >
-      au < testing ; 2008 ; AMBIO: A Journal of the Human Environment Volume 37 ; 37 >
-      au < testing ; 2009 ; AMBIO: A Journal of the Human Environment Volume 38 ; 38 >
-      au < testing ; 2010 ; AMBIO: A Journal of the Human Environment Volume 39 ; 39 >
-      au < testing ; 2011 ; AMBIO: A Journal of the Human Environment Volume 40 ; 40 >
-      au < testing ; 2012 ; AMBIO: A Journal of the Human Environment Volume 41 ; 41 >
+      au < ready ; 2005 ; AMBIO: A Journal of the Human Environment Volume 34 ; 34 >
+      au < ready ; 2006 ; AMBIO: A Journal of the Human Environment Volume 35 ; 35 >
+      au < ready ; 2007 ; AMBIO: A Journal of the Human Environment Volume 36 ; 36 >
+      au < ready ; 2008 ; AMBIO: A Journal of the Human Environment Volume 37 ; 37 >
+      au < ready ; 2009 ; AMBIO: A Journal of the Human Environment Volume 38 ; 38 >
+      au < ready ; 2010 ; AMBIO: A Journal of the Human Environment Volume 39 ; 39 >
+      au < ready ; 2011 ; AMBIO: A Journal of the Human Environment Volume 40 ; 40 >
+      au < notReady ; 2012 ; AMBIO: A Journal of the Human Environment Volume 41 ; 41 >
 
     }
 
