@@ -297,7 +297,7 @@
     comment[superseded] = see journal code 'rlms', incongruent overlap
     param[journal_id] = amse
 
-    au < manifest ; Research Letters in Materials Science Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < testing ; Research Letters in Materials Science Volume 2007 ; 2007 ; 2007 ; 2007 >
     au < released ; Advances in Materials Science and Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Advances in Materials Science and Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Materials Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
@@ -554,8 +554,8 @@
     comment[superseded] = see journal code 'rlpc', incongruent overlap
     param[journal_id] = apc
 
-    au < testing ; Research Letters in Physical Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < testing ; Research Letters in Physical Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < ready ; Research Letters in Physical Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < ready ; Research Letters in Physical Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Advances in Physical Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Physical Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Physical Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
@@ -798,9 +798,9 @@
     comment[superseded] = see journal code 'rlbc'
     param[journal_id] = bcri
 
-    au < testing ; Biochemistry Research International Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < testing ; Biochemistry Research International Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Biochemistry Research International Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Biochemistry Research International Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < ready ; Biochemistry Research International Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; Biochemistry Research International Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Biochemistry Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
@@ -2374,9 +2374,9 @@
     comment[superseded] = see journal code 'denm'
     param[journal_id] = ijde
 
-    au < testing ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < testing ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < testing ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < ready ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < ready ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < ready ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; International Journal of Differential Equations Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Differential Equations Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Differential Equations Volume 2011 ; 2011 ; 2011 ; 2011 >
@@ -2431,10 +2431,10 @@
     comment[superseded] = see journal code 'rleco'
     param[journal_id] = ijeco
 
-    au < testing ; Research Letters in Ecology Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < testing ; Research Letters in Ecology Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < testing ; Research Letters in Ecology Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Research Letters in Ecology Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Research Letters in Ecology Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < ready ; Research Letters in Ecology Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < ready ; Research Letters in Ecology Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; Research Letters in Ecology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Ecology Volume 2011 ; 2011 ; 2011 ; 2011 >
     au < released ; International Journal of Ecology Volume 2012 ; 2012 ; 2012 ; 2012 >
     
@@ -2586,9 +2586,9 @@
     comment[superseded] = see journal code 'rlic'
     param[journal_id] = ijic
 
-    au < testing ; Research Letters in Inorganic Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < testing ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Research Letters in Inorganic Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Research Letters in Inorganic Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < ready ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; Research Letters in Inorganic Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Inorganic Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
     
   }
@@ -3102,30 +3102,30 @@
     comment[superseded] = see journal code 'jamsa'
     param[journal_id] = ijsa
 
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 1 (1987) ; 1987 ; 1 ; 1987 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 1 (1988) ; 1988 ; 1 ; 1988 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 2 (1989) ; 1989 ; 2 ; 1989 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 3 (1990) ; 1990 ; 3 ; 1990 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 4 (1991) ; 1991 ; 4 ; 1991 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 5 (1992) ; 1992 ; 5 ; 1992 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 6 (1993) ; 1993 ; 6 ; 1993 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 7 (1994) ; 1994 ; 7 ; 1994 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 8 (1995) ; 1995 ; 8 ; 1995 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 9 (1996) ; 1996 ; 9 ; 1996 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 10 (1997) ; 1997 ; 10 ; 1997 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 11 (1998) ; 1998 ; 11 ; 1998 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 12 (1999) ; 1999 ; 12 ; 1999 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 13 (2000) ; 2000 ; 13 ; 2000 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 14 (2001) ; 2001 ; 14 ; 2001 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 15 (2002) ; 2002 ; 15 ; 2002 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 16 (2003) ; 2003 ; 16 ; 2003 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 2004 ; 2004 ; 2004 ; 2004 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Journal of Applied Mathematics and Simulation Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 1 (1987) ; 1987 ; 1 ; 1987 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 1 (1988) ; 1988 ; 1 ; 1988 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 2 (1989) ; 1989 ; 2 ; 1989 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 3 (1990) ; 1990 ; 3 ; 1990 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 4 (1991) ; 1991 ; 4 ; 1991 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 5 (1992) ; 1992 ; 5 ; 1992 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 6 (1993) ; 1993 ; 6 ; 1993 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 7 (1994) ; 1994 ; 7 ; 1994 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 8 (1995) ; 1995 ; 8 ; 1995 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 9 (1996) ; 1996 ; 9 ; 1996 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 10 (1997) ; 1997 ; 10 ; 1997 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 11 (1998) ; 1998 ; 11 ; 1998 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 12 (1999) ; 1999 ; 12 ; 1999 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 13 (2000) ; 2000 ; 13 ; 2000 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 14 (2001) ; 2001 ; 14 ; 2001 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 15 (2002) ; 2002 ; 15 ; 2002 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 16 (2003) ; 2003 ; 16 ; 2003 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 2004 ; 2004 ; 2004 ; 2004 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; Journal of Applied Mathematics and Simulation Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Stochastic Analysis Volume 2011 ; 2011 ; 2011 ; 2011 >
         
   }
@@ -3526,7 +3526,7 @@
     comment[superseded] = see journal code 'ijrs'
     param[journal_id] = jc
 
-    au < manifest ; International Journal of Reacting Systems Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < testing ; International Journal of Reacting Systems Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < doesNotExist ; Journal of Combustion Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Combustion Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Combustion Volume 2011 ; 2011 ; 2011 ; 2011 >
@@ -3611,10 +3611,10 @@
     comment[supserseded] = this journal's earlier volumes seem to be a mashup of older journals
     param[journal_id] = jece
 
-    au < manifest ; Journal of Electrical and Computer Engineering Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < manifest ; Journal of Electrical and Computer Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < manifest ; Journal of Electrical and Computer Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < manifest ; Journal of Electrical and Computer Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Electrical and Computer Engineering Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < testing ; Journal of Electrical and Computer Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < testing ; Journal of Electrical and Computer Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < testing ; Journal of Electrical and Computer Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Electrical and Computer Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
     
   }
@@ -4416,9 +4416,9 @@
     comment[superseded] = see journal code 'rloc'
     param[journal_id] = oci
 
-    au < manifest ; Research Letters in Organic Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < manifest ; Research Letters in Organic Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < manifest ; Research Letters in Organic Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < testing ; Research Letters in Organic Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < testing ; Research Letters in Organic Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < testing ; Research Letters in Organic Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Organic Chemistry International Volume 2011 ; 2011 ; 2011 ; 2011 >
     
   }
@@ -4494,9 +4494,9 @@
     comment[superseded] = see journal code 'rlp'
     param[journal_id] = phys
 
-    au < manifest ; Research Letters in Physics Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < manifest ; Research Letters in Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < manifest ; Research Letters in Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < testing ; Research Letters in Physics Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < testing ; Research Letters in Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < testing ; Research Letters in Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Physics Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
     
   }
