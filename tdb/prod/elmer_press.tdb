@@ -82,7 +82,7 @@
         eissn = 1918-3011 ;
         issnl = 1918-3003 
       >
-      param[base_url] = http://jcs.elmerpress.com/
+      param[base_url] = http://www.jocmr.org/
       param[journal_id] = jocmr
 
       au < testing ; 2009 ; Journal of Clinical Medicine Research Volume 1 ; 1 ; 2009 >
@@ -103,7 +103,8 @@
 
       param[base_url] = http://jcs.elmerpress.com/
       param[journal_id] = jcs
-      comment[0] = no content published yet--Dec 2011 launch
+      
+      au < testing ; 2011 ; Journal of Current Surgery Volume 1 ; 1 ; 2011 >
 
     }
 
@@ -115,7 +116,7 @@
         eissn = 1923-287X ;
         issnl = 1923-2861 
       >
-      param[base_url] = http://jofem.elmerpress.com/
+      param[base_url] = http://www.jofem.org/
       param[journal_id] = jofem
 
       au < testing ; 2011 ; Journal of Endocrinology and Metabolism Volume 1 ; 1 ; 2011 >
@@ -145,7 +146,7 @@
         eissn = 1923-4163 ;
         issnl = 1923-4155 
       >
-      param[base_url] = http://jmc.elmerpress.com/
+      param[base_url] = http://www.journalmc.org/
       param[journal_id] = jmc
 
       au < testing ; 2010 ; Journal of Medical Cases Volume 1 ; 1 ; 2010 >
@@ -162,7 +163,7 @@
         eissn = 1923-2853 ;
         issnl = 1923-2845 
       >
-      param[base_url] = http://neurores.elmerpress.com/
+      param[base_url] = http://www.neurores.org/
       param[journal_id] = neurores
 
       au < testing ; 2011 ; Journal of Medical Cases Volume 1 ; 1 ; 2011 >
@@ -192,7 +193,7 @@
         eissn = 1920-454X ;
         issnl = 1920-4531 
       >
-      param[base_url] = http://wjon.elmerpress.com/
+      param[base_url] = http://www.wjon.org/
       param[journal_id] = wjon
 
       au < testing ; 2010 ; World Journal of Oncology Volume 1 ; 1 ; 2010 >
