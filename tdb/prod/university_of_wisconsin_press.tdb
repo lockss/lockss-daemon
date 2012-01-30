@@ -218,6 +218,7 @@
       au < exists ; 2009 ; The Journal of Human Resources Volume 44 ; 44 >
       au < exists ; 2010 ; The Journal of Human Resources Volume 45 ; 45 >
       au < exists ; 2011 ; The Journal of Human Resources Volume 46 ; 46 >
+      au < exists ; 2012 ; The Journal of Human Resources Volume 47 ; 47 >
 
     }
 
@@ -228,7 +229,7 @@
       param[journal_dir] = journal_of_human_resources
       implicit < status ; year ; name ; param[volume] >
       
-      comment[0] = no content online yet
+      au < exists ; 2012 ; The Journal of Human Resources Volume 47 ; 47 >
 
     }
 
