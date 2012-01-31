@@ -33,66 +33,68 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = coas
       
-      au < testing ; 2004 ; Journal of Coastal Research Volume 20, Issue 1 ; 201 >
-      au < testing ; 2004 ; Journal of Coastal Research Volume 20, Issue 2 ; 202 >
-      au < testing ; 2004 ; Journal of Coastal Research Volume 20, Issue 3 ; 203 >
-      au < testing ; 2004 ; Journal of Coastal Research Volume 20, Issue 4 ; 204 >
-      au < testing ; 2004 ; Journal of Coastal Research Special Issue 45 ; 10045 >    
-      au < testing ; 2005 ; Journal of Coastal Research Volume 21, Issue 1 ; 211 >
-      au < testing ; 2005 ; Journal of Coastal Research Volume 21, issue 2 ; 212 >
-      au < testing ; 2005 ; Journal of Coastal Research Volume 21, Issue 3 ; 213 >
-      au < testing ; 2005 ; Journal of Coastal Research Volume 21, Issue 4 ; 214 >
-      au < testing ; 2005 ; Journal of Coastal Research Volume 21, Issue 5 ; 215 >
-      au < testing ; 2005 ; Journal of Coastal Research Volume 21, Issue 6 ; 216 >     
-      au < testing ; 2006 ; Journal of Coastal Research Volume 22, Issue 1 ; 221 >
-      au < testing ; 2006 ; Journal of Coastal Research Volume 22, Issue 2 ; 222 >
-      au < testing ; 2006 ; Journal of Coastal Research Volume 22, Issue 3 ; 223 >
-      au < testing ; 2006 ; Journal of Coastal Research Volume 22, Issue 4 ; 224 >
-      au < testing ; 2006 ; Journal of Coastal Research Volume 22, Issue 5 ; 225 >
-      au < testing ; 2006 ; Journal of Coastal Research Volume 22, Issue 6 ; 226 >         
-      au < testing ; 2007 ; Journal of Coastal Research Volume 23, Issue 1 ; 231 >
-      au < testing ; 2007 ; Journal of Coastal Research Volume 23, Issue 2 ; 232 >
-      au < testing ; 2007 ; Journal of Coastal Research Volume 23, Issue 3 ; 233 >
-      au < testing ; 2007 ; Journal of Coastal Research Volume 23, Issue 4 ; 234 >
-      au < testing ; 2007 ; Journal of Coastal Research Volume 23, Issue 5 ; 235 >
-      au < testing ; 2007 ; Journal of Coastal Research Volume 23, Issue 6 ; 236 >
-      au < testing ; 2007 ; Journal of Coastal Research Special Issue 47 ; 10047 >     
-      au < testing ; 2008 ; Journal of Coastal Research Volume 24, Issue 1 ; 241 >
-      au < testing ; 2008 ; Journal of Coastal Research Volume 24, Issue 2 ; 242 >
-      au < testing ; 2008 ; Journal of Coastal Research Volume 24, Issue 3 ; 243 >
-      au < testing ; 2008 ; Journal of Coastal Research Volume 24, Issue 4 ; 244 >
-      au < testing ; 2008 ; Journal of Coastal Research Volume 24, Issue 5 ; 245 >
-      au < testing ; 2008 ; Journal of Coastal Research Volume 24, Issue 6 ; 246 >
-      au < testing ; 2008 ; Journal of Coastal Research Issue 1 Supplement ; 1 >
-      au < testing ; 2008 ; Journal of Coastal Research Issue 4 Supplement ; 4 >
-      au < testing ; 2008 ; Journal of Coastal Research Special Issue 52 ; 10052 >
-      au < testing ; 2008 ; Journal of Coastal Research Special Issue 55 ; 10055 >    
-      au < testing ; 2009 ; Journal of Coastal Research Volume 25, Issue 1 ; 251 >
-      au < testing ; 2009 ; Journal of Coastal Research Volume 25, Issue 2 ; 252 >
-      au < testing ; 2009 ; Journal of Coastal Research Volume 25, Issue 3 ; 253 >
-      au < testing ; 2009 ; Journal of Coastal Research Volume 25, Issue 4 ; 254 >
-      au < testing ; 2009 ; Journal of Coastal Research Volume 25, Issue 5 ; 255 >
-      au < testing ; 2009 ; Journal of Coastal Research Volume 25, Issue 6 ; 256 >
-      au < testing ; 2009 ; Journal of Coastal Research Special Issue 53 ; 10053 >
-      au < testing ; 2009 ; Journal of Coastal Research Special Issue 54 ; 10054 >
-      au < testing ; 2009 ; Journal of Coastal Research Special Issue 57 ; 10057 >
-      au < testing ; 2010 ; Journal of Coastal Research Volume 26, Issue 1 ; 261 >
-      au < testing ; 2010 ; Journal of Coastal Research Volume 26, Issue 2 ; 262 >
-      au < testing ; 2010 ; Journal of Coastal Research Volume 26, Issue 3 ; 263 >
-      au < testing ; 2010 ; Journal of Coastal Research Volume 26, Issue 4 ; 264 >
-      au < testing ; 2010 ; Journal of Coastal Research Volume 26, Issue 5 ; 265 >
-      au < testing ; 2010 ; Journal of Coastal Research Volume 26, Issue 6 ; 266 >
-      au < testing ; 2011 ; Journal of Coastal Research Special Issue 58 ; 270 >
-      au < testing ; 2011 ; Journal of Coastal Research Volume 27, Issue 1 ; 271 >
-      au < testing ; 2011 ; Journal of Coastal Research Volume 27, Issue 2 ; 272 >
-      au < testing ; 2011 ; Journal of Coastal Research Volume 27, Issue 3 ; 273 >
-      au < testing ; 2011 ; Journal of Coastal Research Volume 27, Issue 4 ; 274 >
-      au < testing ; 2011 ; Journal of Coastal Research Volume 27, Issue 5 ; 276 >
-      au < testing ; 2011 ; Journal of Coastal Research Volume 27, Issue 6A ; 275 >
-      au < testing ; 2011 ; Journal of Coastal Research Volume 27, Issue 6 ; 277 >
-      au < testing ; 2011 ; Journal of Coastal Research Special Issue 59 ; 59 >
-      au < testing ; 2011 ; Journal of Coastal Research Special Issue 62 ; 62 >      
-      au < testing ; 2012 ; Journal of Coastal Research Volume 28, Issue 1A ; 278 >
+      comment[notReady] = links from manifest go to content page but double forward slash affects crawl
+      
+      au < notReady ; 2004 ; Journal of Coastal Research Volume 20, Issue 1 ; 201 >
+      au < notReady ; 2004 ; Journal of Coastal Research Volume 20, Issue 2 ; 202 >
+      au < notReady ; 2004 ; Journal of Coastal Research Volume 20, Issue 3 ; 203 >
+      au < notReady ; 2004 ; Journal of Coastal Research Volume 20, Issue 4 ; 204 >
+      au < notReady ; 2004 ; Journal of Coastal Research Special Issue 45 ; 10045 >    
+      au < notReady ; 2005 ; Journal of Coastal Research Volume 21, Issue 1 ; 211 >
+      au < notReady ; 2005 ; Journal of Coastal Research Volume 21, issue 2 ; 212 >
+      au < notReady ; 2005 ; Journal of Coastal Research Volume 21, Issue 3 ; 213 >
+      au < notReady ; 2005 ; Journal of Coastal Research Volume 21, Issue 4 ; 214 >
+      au < notReady ; 2005 ; Journal of Coastal Research Volume 21, Issue 5 ; 215 >
+      au < notReady ; 2005 ; Journal of Coastal Research Volume 21, Issue 6 ; 216 >     
+      au < notReady ; 2006 ; Journal of Coastal Research Volume 22, Issue 1 ; 221 >
+      au < notReady ; 2006 ; Journal of Coastal Research Volume 22, Issue 2 ; 222 >
+      au < notReady ; 2006 ; Journal of Coastal Research Volume 22, Issue 3 ; 223 >
+      au < notReady ; 2006 ; Journal of Coastal Research Volume 22, Issue 4 ; 224 >
+      au < notReady ; 2006 ; Journal of Coastal Research Volume 22, Issue 5 ; 225 >
+      au < notReady ; 2006 ; Journal of Coastal Research Volume 22, Issue 6 ; 226 >         
+      au < notReady ; 2007 ; Journal of Coastal Research Volume 23, Issue 1 ; 231 >
+      au < notReady ; 2007 ; Journal of Coastal Research Volume 23, Issue 2 ; 232 >
+      au < notReady ; 2007 ; Journal of Coastal Research Volume 23, Issue 3 ; 233 >
+      au < notReady ; 2007 ; Journal of Coastal Research Volume 23, Issue 4 ; 234 >
+      au < notReady ; 2007 ; Journal of Coastal Research Volume 23, Issue 5 ; 235 >
+      au < notReady ; 2007 ; Journal of Coastal Research Volume 23, Issue 6 ; 236 >
+      au < notReady ; 2007 ; Journal of Coastal Research Special Issue 47 ; 10047 >     
+      au < notReady ; 2008 ; Journal of Coastal Research Volume 24, Issue 1 ; 241 >
+      au < notReady ; 2008 ; Journal of Coastal Research Volume 24, Issue 2 ; 242 >
+      au < notReady ; 2008 ; Journal of Coastal Research Volume 24, Issue 3 ; 243 >
+      au < notReady ; 2008 ; Journal of Coastal Research Volume 24, Issue 4 ; 244 >
+      au < notReady ; 2008 ; Journal of Coastal Research Volume 24, Issue 5 ; 245 >
+      au < notReady ; 2008 ; Journal of Coastal Research Volume 24, Issue 6 ; 246 >
+      au < notReady ; 2008 ; Journal of Coastal Research Issue 1 Supplement ; 1 >
+      au < notReady ; 2008 ; Journal of Coastal Research Issue 4 Supplement ; 4 >
+      au < notReady ; 2008 ; Journal of Coastal Research Special Issue 52 ; 10052 >
+      au < notReady ; 2008 ; Journal of Coastal Research Special Issue 55 ; 10055 >    
+      au < notReady ; 2009 ; Journal of Coastal Research Volume 25, Issue 1 ; 251 >
+      au < notReady ; 2009 ; Journal of Coastal Research Volume 25, Issue 2 ; 252 >
+      au < notReady ; 2009 ; Journal of Coastal Research Volume 25, Issue 3 ; 253 >
+      au < notReady ; 2009 ; Journal of Coastal Research Volume 25, Issue 4 ; 254 >
+      au < notReady ; 2009 ; Journal of Coastal Research Volume 25, Issue 5 ; 255 >
+      au < notReady ; 2009 ; Journal of Coastal Research Volume 25, Issue 6 ; 256 >
+      au < notReady ; 2009 ; Journal of Coastal Research Special Issue 53 ; 10053 >
+      au < notReady ; 2009 ; Journal of Coastal Research Special Issue 54 ; 10054 >
+      au < notReady ; 2009 ; Journal of Coastal Research Special Issue 57 ; 10057 >
+      au < notReady ; 2010 ; Journal of Coastal Research Volume 26, Issue 1 ; 261 >
+      au < notReady ; 2010 ; Journal of Coastal Research Volume 26, Issue 2 ; 262 >
+      au < notReady ; 2010 ; Journal of Coastal Research Volume 26, Issue 3 ; 263 >
+      au < notReady ; 2010 ; Journal of Coastal Research Volume 26, Issue 4 ; 264 >
+      au < notReady ; 2010 ; Journal of Coastal Research Volume 26, Issue 5 ; 265 >
+      au < notReady ; 2010 ; Journal of Coastal Research Volume 26, Issue 6 ; 266 >
+      au < notReady ; 2011 ; Journal of Coastal Research Special Issue 58 ; 270 >
+      au < notReady ; 2011 ; Journal of Coastal Research Volume 27, Issue 1 ; 271 >
+      au < notReady ; 2011 ; Journal of Coastal Research Volume 27, Issue 2 ; 272 >
+      au < notReady ; 2011 ; Journal of Coastal Research Volume 27, Issue 3 ; 273 >
+      au < notReady ; 2011 ; Journal of Coastal Research Volume 27, Issue 4 ; 274 >
+      au < notReady ; 2011 ; Journal of Coastal Research Volume 27, Issue 5 ; 276 >
+      au < notReady ; 2011 ; Journal of Coastal Research Volume 27, Issue 6A ; 275 >
+      au < notReady ; 2011 ; Journal of Coastal Research Volume 27, Issue 6 ; 277 >
+      au < notReady ; 2011 ; Journal of Coastal Research Special Issue 59 ; 59 >
+      au < notReady ; 2011 ; Journal of Coastal Research Special Issue 62 ; 62 >      
+      au < notReady ; 2012 ; Journal of Coastal Research Volume 28, Issue 1A ; 278 >
 
 
      }
