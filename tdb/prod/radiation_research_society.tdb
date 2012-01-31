@@ -41,6 +41,8 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = rare
+
+      attr[where] = AUtest
   
       au < doNotProcess ; 2000 ; Radiation Research Volume 153 ; 153 >
       au < doNotProcess ; 2000 ; Radiation Research Volume 154 ; 154 >
