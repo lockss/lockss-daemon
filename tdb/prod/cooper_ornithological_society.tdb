@@ -28,18 +28,18 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = cond
       
-      au < testing ; 2000 ; The Condor: An International Journal of Avian Biology Volume 102 ; 102 >
-      au < testing ; 2001 ; The Condor: An International Journal of Avian Biology Volume 103 ; 103 >
-      au < testing ; 2002 ; The Condor: An International Journal of Avian Biology Volume 104 ; 104 >
-      au < testing ; 2003 ; The Condor: An International Journal of Avian Biology Volume 105 ; 105 >
-      au < testing ; 2004 ; The Condor: An International Journal of Avian Biology Volume 106 ; 106 >
+      au < ready ; 2000 ; The Condor: An International Journal of Avian Biology Volume 102 ; 102 >
+      au < ready ; 2001 ; The Condor: An International Journal of Avian Biology Volume 103 ; 103 >
+      au < ready ; 2002 ; The Condor: An International Journal of Avian Biology Volume 104 ; 104 >
+      au < ready ; 2003 ; The Condor: An International Journal of Avian Biology Volume 105 ; 105 >
+      au < ready ; 2004 ; The Condor: An International Journal of Avian Biology Volume 106 ; 106 >
       au < doNotProcess ; 2005 ; The Condor: An International Journal of Avian Biology Volume 107 ; 107 >
-      au < testing ; 2006 ; The Condor: An International Journal of Avian Biology Volume 108 ; 108 >
-      au < testing ; 2007 ; The Condor: An International Journal of Avian Biology Volume 109 ; 109 >
-      au < testing ; 2008 ; The Condor: An International Journal of Avian Biology Volume 110 ; 110 >
-      au < testing ; 2008 ; The Condor: An International Journal of Avian Biology Volume 111 ; 111 >
-      au < testing ; 2010 ; The Condor: An International Journal of Avian Biology Volume 112 ; 112 >
-      au < testing ; 2011 ; The Condor: An International Journal of Avian Biology Volume 113 ; 113 >
+      au < ready ; 2006 ; The Condor: An International Journal of Avian Biology Volume 108 ; 108 >
+      au < ready ; 2007 ; The Condor: An International Journal of Avian Biology Volume 109 ; 109 >
+      au < ready ; 2008 ; The Condor: An International Journal of Avian Biology Volume 110 ; 110 >
+      au < ready ; 2008 ; The Condor: An International Journal of Avian Biology Volume 111 ; 111 >
+      au < ready ; 2010 ; The Condor: An International Journal of Avian Biology Volume 112 ; 112 >
+      au < ready ; 2011 ; The Condor: An International Journal of Avian Biology Volume 113 ; 113 >
       
     }
 

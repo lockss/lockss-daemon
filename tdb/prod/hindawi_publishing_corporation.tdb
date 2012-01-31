@@ -297,7 +297,7 @@
     comment[superseded] = see journal code 'rlms', incongruent overlap
     param[journal_id] = amse
 
-    au < testing ; Research Letters in Materials Science Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < ready ; Research Letters in Materials Science Volume 2007 ; 2007 ; 2007 ; 2007 >
     au < released ; Advances in Materials Science and Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Advances in Materials Science and Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Materials Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
@@ -3526,7 +3526,7 @@
     comment[superseded] = see journal code 'ijrs'
     param[journal_id] = jc
 
-    au < testing ; International Journal of Reacting Systems Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < ready ; International Journal of Reacting Systems Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < doesNotExist ; Journal of Combustion Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Combustion Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Combustion Volume 2011 ; 2011 ; 2011 ; 2011 >
@@ -3611,10 +3611,10 @@
     comment[supserseded] = this journal's earlier volumes seem to be a mashup of older journals
     param[journal_id] = jece
 
-    au < testing ; Journal of Electrical and Computer Engineering Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < testing ; Journal of Electrical and Computer Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < testing ; Journal of Electrical and Computer Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Journal of Electrical and Computer Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Electrical and Computer Engineering Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < ready ; Journal of Electrical and Computer Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < ready ; Journal of Electrical and Computer Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; Journal of Electrical and Computer Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Electrical and Computer Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
     
   }
@@ -4416,9 +4416,9 @@
     comment[superseded] = see journal code 'rloc'
     param[journal_id] = oci
 
-    au < testing ; Research Letters in Organic Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < testing ; Research Letters in Organic Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Research Letters in Organic Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Research Letters in Organic Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < ready ; Research Letters in Organic Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; Research Letters in Organic Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Organic Chemistry International Volume 2011 ; 2011 ; 2011 ; 2011 >
     
   }
@@ -4494,9 +4494,9 @@
     comment[superseded] = see journal code 'rlp'
     param[journal_id] = phys
 
-    au < testing ; Research Letters in Physics Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < testing ; Research Letters in Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Research Letters in Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Research Letters in Physics Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < ready ; Research Letters in Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; Research Letters in Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Physics Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
     
   }

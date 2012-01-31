@@ -208,10 +208,10 @@
     au < exists ; 2005 ; Geosphere Volume 1 ; 1 >
     au < exists ; 2006 ; Geosphere Volume 2 ; 2 >
     au < exists ; 2007 ; Geosphere Volume 3 ; 3 >
-    au < testing ; 2008 ; Geosphere Volume 4 ; 4 >
-    au < testing ; 2009 ; Geosphere Volume 5 ; 5 >
-    au < testing ; 2010 ; Geosphere Volume 6 ; 6 >
-    au < testing ; 2011 ; Geosphere Volume 7 ; 7 >
+    au < ready ; 2008 ; Geosphere Volume 4 ; 4 >
+    au < ready ; 2009 ; Geosphere Volume 5 ; 5 >
+    au < ready ; 2010 ; Geosphere Volume 6 ; 6 >
+    au < ready ; 2011 ; Geosphere Volume 7 ; 7 >
 
   }
 
@@ -252,14 +252,14 @@
       implicit < status ; year ; comment[isbn] ; name ; param[volume_name] >
     
     
-      au < testing ; 2008 ; 978-0-8137-0014-4 ; GSA Field Guides Volume 14 ; 14 >
-      au < testing ; 2009 ; 978-0-8137-0015-1 ; GSA Field Guides Volume 15 ; 15 >
-      au < testing ; 2010 ; 978-0-8137-0016-8 ; GSA Field Guides Volume 16 ; 16 >
-      au < testing ; 2010 ; 978-0-8137-0017-5 ; GSA Field Guides Volume 17 ; 17 >
-      au < testing ; 2010 ; 978-0-8137-0018-2 ; GSA Field Guides Volume 18 ; 18 >
-      au < testing ; 2011 ; 978-0-8137-0019-9 ; GSA Field Guides Volume 19 ; 19 >
-      au < testing ; 2011 ; 978-0-8137-0020-5 ; GSA Field Guides Volume 20 ; 20 >
-      au < testing ; 2011 ; 978-0-8137-0021-2 ; GSA Field Guides Volume 21 ; 21 >
+      au < ready ; 2008 ; 978-0-8137-0014-4 ; GSA Field Guides Volume 14 ; 14 >
+      au < ready ; 2009 ; 978-0-8137-0015-1 ; GSA Field Guides Volume 15 ; 15 >
+      au < ready ; 2010 ; 978-0-8137-0016-8 ; GSA Field Guides Volume 16 ; 16 >
+      au < ready ; 2010 ; 978-0-8137-0017-5 ; GSA Field Guides Volume 17 ; 17 >
+      au < ready ; 2010 ; 978-0-8137-0018-2 ; GSA Field Guides Volume 18 ; 18 >
+      au < ready ; 2011 ; 978-0-8137-0019-9 ; GSA Field Guides Volume 19 ; 19 >
+      au < ready ; 2011 ; 978-0-8137-0020-5 ; GSA Field Guides Volume 20 ; 20 >
+      au < ready ; 2011 ; 978-0-8137-0021-2 ; GSA Field Guides Volume 21 ; 21 >
 
     }
   
@@ -280,7 +280,7 @@
 
     au < released ; 2009 ; Lithosphere Volume 1 ; 1 >
     au < released ; 2010 ; Lithosphere Volume 2 ; 2 >
-    au < testing ; 2011 ; Lithosphere Volume 3 ; 3 >
+    au < ready ; 2011 ; Lithosphere Volume 3 ; 3 >
 
   }
 
