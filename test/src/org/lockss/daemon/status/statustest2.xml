@@ -74,7 +74,7 @@
         </st:cell>
         <st:cell>
             <st:columnname>dateCol</st:columnname>
-            <st:value>00:20:00 01/01/70</st:value>
+            <st:value>30000000</st:value>
         </st:cell>
     </st:row>
     <st:row>
@@ -100,7 +100,7 @@
         </st:cell>
         <st:cell>
             <st:columnname>strCol</st:columnname>
-            <st:value>disp value</st:value>
+            <st:value>raw value</st:value>
         </st:cell>
     </st:row>
     <st:row>

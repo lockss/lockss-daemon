@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlStatusTable.java,v 1.12 2012-01-18 03:42:55 tlipkis Exp $
+ * $Id: TestXmlStatusTable.java,v 1.13 2012-01-31 07:20:47 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class TestXmlStatusTable extends LockssTestCase {
   // This should use a more xml-aware comparison (one that doesn't depend
   // on the output formatting), either by parsing the expected file, or
   // canonicalizing both.
-  public void testCreateTableDocument() throws Exception {
+  public void testCreateTableDocument(int outver, String file) throws Exception {
     // create a status table
     StatusTable table = new StatusTable("table", "key");
     MockStatusAccessor accessor = new MockStatusAccessor();
@@ -73,7 +73,8 @@ public class TestXmlStatusTable extends LockssTestCase {
     List colList = ListUtil.list(
       new ColumnDescriptor("intCol", "title1", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor("strCol", "title2", ColumnDescriptor.TYPE_STRING,
-			   "c2foot")
+			   "c2foot"),
+      new ColumnDescriptor("dateCol", "title3", ColumnDescriptor.TYPE_DATE)
       );
     accessor.setColumnDescriptors(colList, "key");
 
@@ -93,10 +94,12 @@ public class TestXmlStatusTable extends LockssTestCase {
     Object[][] rowObj = {
       {new Integer(123), "row1 string"},
       {dispValue, refValue1},
-      {dispValue, refValue2},
-      {new Integer(99997), Collections.EMPTY_LIST},
-      {new Integer(99998)},		// sparse row
-      {new StatusTable.SrvLink(new Integer(99999), srvDescr, null),
+      {dispValue, refValue2, new Date(30000000)},
+      {new Integer(99960), Collections.EMPTY_LIST},
+      {new Integer(99970)},		// sparse row
+      {StatusTable.NO_VALUE, "missing value row"}, // elem w/ no value, sorts first
+      {new Integer(99980), new StatusTable.DisplayedValue("raw value", "disp value")},
+      {new StatusTable.SrvLink(new Integer(99990), srvDescr, null),
        ListUtil.list("cc", new StatusTable.Reference("x1", "tt", "k42"))},
     };
 
@@ -124,19 +127,34 @@ public class TestXmlStatusTable extends LockssTestCase {
 
     // create the XML
     XmlStatusTable xmlTable = new XmlStatusTable(table);
+    if (outver >= 0) {
+      xmlTable.setOutputVersion(outver);
+    }
     Document tableDoc = xmlTable.getTableDocument();
 
     // serialize it and compare to the expected file, statustest1.xml
     StringWriter wrtr = new StringWriter();
     XmlDomBuilder.serialize(tableDoc, wrtr);
-    String file = "statustest1.xml";
     URL url = getClass().getResource(file);
     assertNotNull(file + " missing.", url);
     Reader rdr = new InputStreamReader(UrlUtil.openInputStream(url.toString()),
 				       Constants.DEFAULT_ENCODING);
     String exp = StringUtil.fromReader(rdr);
-    assertEquals(exp, wrtr.toString());
+    String actual = wrtr.toString();
+    log.debug3("XML output:\n" + actual);
+    assertEquals(exp, actual);
+  }
 
+  public void testCreateTableDocument1() throws Exception {
+    testCreateTableDocument(-1, "statustest1.xml");
+  }
+
+  public void testCreateTableDocument2() throws Exception {
+    testCreateTableDocument(1, "statustest1.xml");
+  }
+
+  public void testCreateTableDocument3() throws Exception {
+    testCreateTableDocument(2, "statustest2.xml");
   }
 
   static class MyIdentityManager extends IdentityManagerImpl {

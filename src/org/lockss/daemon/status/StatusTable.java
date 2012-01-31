@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.58 2012-01-25 10:46:33 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.59 2012-01-31 07:23:55 tlipkis Exp $
  */
 
 /*
@@ -361,7 +361,7 @@ public class StatusTable {
   }
 
   public String toString() {
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     sb.append("[StatusTable:");
     sb.append(name);
     sb.append(", ");
@@ -480,7 +480,30 @@ public class StatusTable {
       return footnote;
     }
 
+    public String toString() {
+      StringBuilder sb = new StringBuilder();
+      sb.append("[StatusTable.DisplayedValue: ");
+      sb.append(value);
+      if (hasDisplayString()) {
+	sb.append(", dv: ");
+	sb.append(getDisplayString());
+      }
+      if (getColor() != null) {
+	sb.append(", color: ");
+	sb.append(getColor());
+      }	
+      if (getBold()) {
+	sb.append(", bold");
+      }	
+      if (getFootnote() != null) {
+	sb.append(", foot: ");
+	sb.append(getFootnote());
+      }	
+      return sb.toString();
+    }
+
   }
+
   /**
    * Object which refers to another table
    */
@@ -579,8 +602,8 @@ public class StatusTable {
     }
 
     public String toString() {
-      StringBuffer sb = new StringBuffer();
-      sb.append("[StatusTable.Reference:");
+      StringBuilder sb = new StringBuilder();
+      sb.append("[StatusTable.Reference: ");
       sb.append(value);
       sb.append(", ");
       if (peerId != null) {
@@ -655,8 +678,8 @@ public class StatusTable {
     }
 
     public String toString() {
-      StringBuffer sb = new StringBuffer();
-      sb.append("[StatusTable.SrvLink:");
+      StringBuilder sb = new StringBuilder();
+      sb.append("[StatusTable.SrvLink: ");
       sb.append(value);
       sb.append(", ");
       sb.append(srvDescr.getPath());
@@ -914,9 +937,9 @@ public class StatusTable {
     static int compareHandlingNulls(Comparable val1,
 					    Comparable val2) {
       int returnVal = 0;
-      if (val1 == null) {
-	returnVal = val2 == null ? 0 : -1;
-      } else if (val2 == null) {
+      if (isNull(val1)) {
+	returnVal = isNull(val2) ? 0 : -1;
+      } else if (isNull(val2)) {
 	returnVal = 1;
       } else {
 	returnVal = val1.compareTo(val2);
@@ -924,8 +947,12 @@ public class StatusTable {
       return returnVal;
     }
 
+    static boolean isNull(Object obj) {
+      return obj == null || obj == NO_VALUE;
+    }
+
     public String toString() {
-      StringBuffer sb = new StringBuffer();
+      StringBuilder sb = new StringBuilder();
       sb.append("[SortRule: ");
       sb.append(columnName);
       sb.append(sortAscending ? ":A" : "D:");

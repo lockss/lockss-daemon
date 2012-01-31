@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.18 2012-01-25 10:46:33 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.19 2012-01-31 07:20:47 tlipkis Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class XmlStatusTable {
       return doc;
     } catch (Exception e) {
       logger.warning("Error building XML status table", e);
-      throw new XmlDomBuilder.XmlDomException(e.getMessage());
+      throw new XmlDomBuilder.XmlDomException("Error building XML status table");
     }
   }
 
@@ -217,26 +217,24 @@ public class XmlStatusTable {
   }
 
   /** Add element of type to parent, with text value  */
-  Element addTextElement(Element parent, String type, String value) {
+  void addTextElement(Element parent, String type, String value) {
     Element element = xmlBuilder.createElement(parent, type);
     if (value != null) {
       XmlDomBuilder.addText(element, value);
     }
-    return element;
   }
 
   /** Add cell element to parent, with embedded value */
-  Element addCellElement(Element parent, Object value,
-			 String colName, int type) {
+  void addCellElement(Element parent, Object value,
+		      String colName, int type) {
     Element element =
       xmlBuilder.createElement(parent, XmlStatusConstants.CELL);
     addTextElement(element, XmlStatusConstants.COLUMN_NAME, colName);
     addValueElement(element, value, type);
-    return element;
   }
 
   /** Add value element to parent.  If list, add multiple values  */
-  Element addValueElement(Element parent, Object value, int type) {
+  void addValueElement(Element parent, Object value, int type) {
     if (value instanceof List) {
       for (Iterator iter = ((List)value).iterator(); iter.hasNext(); ) {
 	addLinkValueElement(parent, iter.next(), type);
@@ -244,29 +242,24 @@ public class XmlStatusTable {
     } else {
       addLinkValueElement(parent, value, type);
     }
-    return parent;
   }
 
   /** Add value element to parent, possibly embedding in reference element */
-  Element addLinkValueElement(Element parent, Object value, int type) {
+  void addLinkValueElement(Element parent, Object value, int type) {
     if (value instanceof StatusTable.Reference) {
-      return addReferenceValueElement(parent, (StatusTable.Reference)value,
-				      type);
+      addReferenceValueElement(parent, (StatusTable.Reference)value, type);
 //     } else if (value instanceof StatusTable.SrvLink) {
-//       return addSrvLinkValueElement(parent, (StatusTable.SrvLink)value,
-// 				    type);
+//       addSrvLinkValueElement(parent, (StatusTable.SrvLink)value, type);
     } else if (value instanceof StatusTable.LinkValue) {
       // A LinkValue type we don't know about.  Just display its embedded
       // value.
-      return addNonLinkValueElement(parent, StatusTable.getActualValue(value),
-				    type);
+      addNonLinkValueElement(parent, StatusTable.getActualValue(value), type);
     } else {
-      return addNonLinkValueElement(parent, value, type);
+      addNonLinkValueElement(parent, value, type);
     }
   }
 
-  Element addReferenceValueElement(Element parent,
-				   StatusTable.Reference refVal, int type) {
+  void addReferenceValueElement(Element parent, StatusTable.Reference refVal, int type) {
     Element element =
       xmlBuilder.createElement(parent, XmlStatusConstants.VALUE);
     Element refElement =
@@ -294,15 +287,15 @@ public class XmlStatusTable {
       }
     }
     addNonLinkValueElement(refElement, refVal.getValue(), type);
-    return element;
   }
 
   /** Add value element to parent, with any display attributes */
-  Element addNonLinkValueElement(Element parent, Object value, int type) {
-    Element element =
-      xmlBuilder.createElement(parent, XmlStatusConstants.VALUE);
-    Object dval = value;
-    if (value != StatusTable.NO_VALUE) {
+  void addNonLinkValueElement(Element parent, Object value, int type) {
+    Object dval = getValueToDisplay(value);
+    if (dval != StatusTable.NO_VALUE) {
+      Element element =
+	xmlBuilder.createElement(parent, XmlStatusConstants.VALUE);
+    
       if (value instanceof StatusTable.DisplayedValue) {
 	// A DisplayedValue - save display characteristics
 	StatusTable.DisplayedValue dv = (StatusTable.DisplayedValue)value;
@@ -317,20 +310,35 @@ public class XmlStatusTable {
 	case 1:
 	default:
 	  if (dv.hasDisplayString()) {
+	    // If an explicit display string was supplied, use it w/out formatting
 	    XmlDomBuilder.addText(element, dv.getDisplayString());
-	    return element;
-	  } else {
-	    dval = dv.getValue();
+	    return;
 	  }
-	  break;
 	case 2:
-	  dval = dv.getValue();
-	  break;
+	  break;			// fall thru
 	}
       }
       XmlDomBuilder.addText(element, formatByType(dval, type));
     }
-    return element;
+  }
+
+  Object getValueToDisplay(Object value) {
+    if (value instanceof StatusTable.DisplayedValue) {
+      StatusTable.DisplayedValue dv = (StatusTable.DisplayedValue)value;
+      switch (outputVersion) {
+      case 1:
+      default:
+	if (dv.hasDisplayString()) {
+	  return dv.getDisplayString();
+	} else {
+	  return dv.getValue();
+	}
+      case 2:
+	return dv.getValue();
+      }
+    } else {
+      return value;
+    }
   }
 
   String formatByType(Object object, int type) {
