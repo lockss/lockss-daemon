@@ -16,6 +16,8 @@
     plugin = edu.harvard.plugin.jrs.JRSPlugin
     param[base_url] = http://moses.creighton.edu/JRS/
     implicit < status ; year ; name ; volume ; param[year] >
+    
+    comment[notReady] = bad manifest URLs Roundup 3993
 
     au < released ; 1999 ; Journal of Religion & Society 1999 ; 1 ; 1999 >
     au < released ; 2000 ; Journal of Religion & Society 2000 ; 2 ; 2000 >
@@ -25,9 +27,9 @@
     au < released ; 2004 ; Journal of Religion & Society 2004 ; 6 ; 2004 >
     au < released ; 2005 ; Journal of Religion & Society 2005 ; 7 ; 2005 >
     au < released ; 2006 ; Journal of Religion & Society 2006 ; 8 ; 2006 >
-    au < testing ; 2007 ; Journal of Religion & Society 2007 ; 9 ; 2007 >
-    au < testing ; 2008 ; Journal of Religion & Society 2008 ; 10 ; 2008 >
-    au < testing ; 2009 ; Journal of Religion & Society 2009 ; 11 ; 2009 >
+    au < notReady ; 2007 ; Journal of Religion & Society 2007 ; 9 ; 2007 >
+    au < notReady ; 2008 ; Journal of Religion & Society 2008 ; 10 ; 2008 >
+    au < notReady ; 2009 ; Journal of Religion & Society 2009 ; 11 ; 2009 >
   
   }
 
