@@ -1967,6 +1967,10 @@
     param[base_url] = http://bfgp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
+    au < manifest ; exists ; 2006 ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 ; > 
+    au < manifest ; exists ; 2007 ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 ; > 
+    au < doNotProcess ; doNotProcess ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; > 
+    au < doNotProcess ; doNotProcess ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; >                    
     au < released ; crawling ; 2010 ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 ; >
 
     }
@@ -1985,10 +1989,10 @@
     param[base_url] = http://bfg.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
         
-    au < manifest ; exists ; 2002 ; Briefings in Functional Genomics Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2003 ; Briefings in Functional Genomics Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2004 ; Briefings in Functional Genomics Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2005 ; Briefings in Functional Genomics Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2002-2003 ; Briefings in Functional Genomics Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2003-2004 ; Briefings in Functional Genomics Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2004-2005 ; Briefings in Functional Genomics Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2005-2006 ; Briefings in Functional Genomics Volume 4 ; 4 ; >
     au < manifest ; exists ; 2006 ; Briefings in Functional Genomics Volume 5 ; 5 ; >
     au < manifest ; exists ; 2007 ; Briefings in Functional Genomics Volume 6 ; 6 ; >
     au < manifest ; exists ; 2008 ; Briefings in Functional Genomics Volume 7 ; 7 ; >
@@ -2220,8 +2224,8 @@
     param[base_url] = http://bjc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The British Journal of Criminology Volume 48 ; 48 ; >
-    au < down ; crawling ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    au < down ; crawling ; 2008 ; The British Journal of Criminology: An International Review of Crime and Society Volume 48 ; 48 ; >
+    au < down ; crawling ; 2009 ; The British Journal of Criminology: An International Review of Crime and Society Volume 49 ; 49 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -2230,57 +2234,57 @@
     param[base_url] = http://bjc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 1960-1961 ; The British Journal of Criminology Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1961-1962 ; The British Journal of Criminology Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1962-1963 ; The British Journal of Criminology Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1963-1964 ; The British Journal of Criminology Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1965 ; The British Journal of Criminology Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1966 ; The British Journal of Criminology Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1967 ; The British Journal of Criminology Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1968 ; The British Journal of Criminology Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1969 ; The British Journal of Criminology Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1970 ; The British Journal of Criminology Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1971 ; The British Journal of Criminology Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1972 ; The British Journal of Criminology Volume 12 ; 12 ; >
-    au < manifest ; exists ; 1973 ; The British Journal of Criminology Volume 13 ; 13 ; >
-    au < manifest ; exists ; 1974 ; The British Journal of Criminology Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1975 ; The British Journal of Criminology Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1976 ; The British Journal of Criminology Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1977 ; The British Journal of Criminology Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1978 ; The British Journal of Criminology Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1979 ; The British Journal of Criminology Volume 19 ; 19 ; >
-    au < manifest ; exists ; 1980 ; The British Journal of Criminology Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1981 ; The British Journal of Criminology Volume 21 ; 21 ; >
-    au < manifest ; exists ; 1982 ; The British Journal of Criminology Volume 22 ; 22 ; >
-    au < manifest ; exists ; 1983 ; The British Journal of Criminology Volume 23 ; 23 ; >
-    au < manifest ; exists ; 1984 ; The British Journal of Criminology Volume 24 ; 24 ; >
-    au < manifest ; exists ; 1985 ; The British Journal of Criminology Volume 25 ; 25 ; >
-    au < manifest ; exists ; 1986 ; The British Journal of Criminology Volume 26 ; 26 ; >
-    au < manifest ; exists ; 1987 ; The British Journal of Criminology Volume 27 ; 27 ; >
-    au < manifest ; exists ; 1988 ; The British Journal of Criminology Volume 28 ; 28 ; >
-    au < manifest ; exists ; 1989 ; The British Journal of Criminology Volume 29 ; 29 ; >
-    au < manifest ; exists ; 1990 ; The British Journal of Criminology Volume 30 ; 30 ; >
-    au < manifest ; exists ; 1991 ; The British Journal of Criminology Volume 31 ; 31 ; >
-    au < manifest ; exists ; 1992 ; The British Journal of Criminology Volume 32 ; 32 ; >
-    au < manifest ; exists ; 1993 ; The British Journal of Criminology Volume 33 ; 33 ; >
-    au < manifest ; exists ; 1994 ; The British Journal of Criminology Volume 34 ; 34 ; >
-    au < manifest ; exists ; 1995 ; The British Journal of Criminology Volume 35 ; 35 ; >
-    au < manifest ; exists ; 1996 ; The British Journal of Criminology Volume 36 ; 36 ; >
-    au < manifest ; exists ; 1997 ; The British Journal of Criminology Volume 37 ; 37 ; >
-    au < manifest ; exists ; 1998 ; The British Journal of Criminology Volume 38 ; 38 ; >
-    au < manifest ; exists ; 1999 ; The British Journal of Criminology Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2000 ; The British Journal of Criminology Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2001 ; The British Journal of Criminology Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2002 ; The British Journal of Criminology Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2003 ; The British Journal of Criminology Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2004 ; The British Journal of Criminology Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2005 ; The British Journal of Criminology Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2006 ; The British Journal of Criminology Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2007 ; The British Journal of Criminology Volume 47 ; 47 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; The British Journal of Criminology Volume 48 ; 48 ; >
-    au < released ; crawling ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; >
-    au < released ; crawling ; 2010 ; The British Journal of Criminology Volume 50 ; 50 ; >
-    au < released ; manifest ; 2011 ; The British Journal of Criminology Volume 51 ; 51 ; >
+    au < manifest ; exists ; 1960-1961 ; The British Journal of Criminology: An International Review of Crime and SocietyVolume 1 ; 1 ; >
+    au < manifest ; exists ; 1961-1962 ; The British Journal of Criminology: An International Review of Crime and SocietyVolume 2 ; 2 ; >
+    au < manifest ; exists ; 1962-1963 ; The British Journal of Criminology: An International Review of Crime and SocietyVolume 3 ; 3 ; >
+    au < manifest ; exists ; 1963-1964 ; The British Journal of Criminology: An International Review of Crime and SocietyVolume 4 ; 4 ; >
+    au < manifest ; exists ; 1965 ; The British Journal of Criminology: An International Review of Crime and Society Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1966 ; The British Journal of Criminology: An International Review of Crime and Society Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1967 ; The British Journal of Criminology: An International Review of Crime and Society Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1968 ; The British Journal of Criminology: An International Review of Crime and Society Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1969 ; The British Journal of Criminology: An International Review of Crime and Society Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1970 ; The British Journal of Criminology: An International Review of Crime and Society Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1971 ; The British Journal of Criminology: An International Review of Crime and Society Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1972 ; The British Journal of Criminology: An International Review of Crime and Society Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1973 ; The British Journal of Criminology: An International Review of Crime and Society Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1974 ; The British Journal of Criminology: An International Review of Crime and Society Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1975 ; The British Journal of Criminology: An International Review of Crime and Society Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1976 ; The British Journal of Criminology: An International Review of Crime and Society Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1977 ; The British Journal of Criminology: An International Review of Crime and Society Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1978 ; The British Journal of Criminology: An International Review of Crime and Society Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1979 ; The British Journal of Criminology: An International Review of Crime and Society Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1980 ; The British Journal of Criminology: An International Review of Crime and Society Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1981 ; The British Journal of Criminology: An International Review of Crime and Society Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1982 ; The British Journal of Criminology: An International Review of Crime and Society Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1983 ; The British Journal of Criminology: An International Review of Crime and Society Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1984 ; The British Journal of Criminology: An International Review of Crime and Society Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1985 ; The British Journal of Criminology: An International Review of Crime and Society Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1986 ; The British Journal of Criminology: An International Review of Crime and Society Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1987 ; The British Journal of Criminology: An International Review of Crime and Society Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1988 ; The British Journal of Criminology: An International Review of Crime and Society Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1989 ; The British Journal of Criminology: An International Review of Crime and Society Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1990 ; The British Journal of Criminology: An International Review of Crime and Society Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1991 ; The British Journal of Criminology: An International Review of Crime and Society Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1992 ; The British Journal of Criminology: An International Review of Crime and Society Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1993 ; The British Journal of Criminology: An International Review of Crime and Society Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1994 ; The British Journal of Criminology: An International Review of Crime and Society Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1995 ; The British Journal of Criminology: An International Review of Crime and Society Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1996 ; The British Journal of Criminology: An International Review of Crime and Society Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1997 ; The British Journal of Criminology: An International Review of Crime and Society Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1998 ; The British Journal of Criminology: An International Review of Crime and Society Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1999 ; The British Journal of Criminology: An International Review of Crime and Society Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2000 ; The British Journal of Criminology: An International Review of Crime and Society Volume 40 ; 40 ; >
+    au < manifest ; exists ; 2001 ; The British Journal of Criminology: An International Review of Crime and Society Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2002 ; The British Journal of Criminology: An International Review of Crime and Society Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2003 ; The British Journal of Criminology: An International Review of Crime and Society Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2004 ; The British Journal of Criminology: An International Review of Crime and Society Volume 44 ; 44 ; >
+    au < manifest ; exists ; 2005 ; The British Journal of Criminology: An International Review of Crime and Society Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2006 ; The British Journal of Criminology: An International Review of Crime and Society Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2007 ; The British Journal of Criminology: An International Review of Crime and Society Volume 47 ; 47 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; The British Journal of Criminology: An International Review of Crime and Society Volume 48 ; 48 ; >
+    au < released ; crawling ; 2009 ; The British Journal of Criminology: An International Review of Crime and Society Volume 49 ; 49 ; >
+    au < released ; crawling ; 2010 ; The British Journal of Criminology: An International Review of Crime and Society Volume 50 ; 50 ; >
+    au < released ; manifest ; 2011 ; The British Journal of Criminology: An International Review of Crime and Society Volume 51 ; 51 ; >
 
     }
 
@@ -4390,6 +4394,7 @@
     param[base_url] = http://epirev.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
+    au < manifest ; exists ; 1979 ; Epidemiologic Reviews Volume 1 ; 1 ; >
     au < manifest ; exists ; 1980 ; Epidemiologic Reviews Volume 2 ; 2 ; >
     au < manifest ; exists ; 1981 ; Epidemiologic Reviews Volume 3 ; 3 ; >
     au < manifest ; exists ; 1982 ; Epidemiologic Reviews Volume 4 ; 4 ; >
@@ -5363,90 +5368,90 @@
     param[base_url] = http://forestry.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 1927 ; Forestry Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1928 ; Forestry Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1929 ; Forestry Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1930 ; Forestry Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1931 ; Forestry Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1932 ; Forestry Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1933 ; Forestry Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1934 ; Forestry Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1935 ; Forestry Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1936 ; Forestry Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1937 ; Forestry Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1938 ; Forestry Volume 12 ; 12 ; >
-    au < manifest ; exists ; 1939 ; Forestry Volume 13 ; 13 ; >
-    au < manifest ; exists ; 1940 ; Forestry Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1941 ; Forestry Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1942 ; Forestry Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1943 ; Forestry Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1944 ; Forestry Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1945 ; Forestry Volume 19 ; 19 ; >
-    au < manifest ; exists ; 1947 ; Forestry Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1948 ; Forestry Volume 21 ; 21 ; >
-    au < manifest ; exists ; 1949 ; Forestry Volume 22 ; 22 ; >
-    au < manifest ; exists ; 1950 ; Forestry Volume 23 ; 23 ; >
-    au < manifest ; exists ; 1951 ; Forestry Volume 24 ; 24 ; >
-    au < manifest ; exists ; 1952 ; Forestry Volume 25 ; 25 ; >
-    au < manifest ; exists ; 1953 ; Forestry Volume 26 ; 26 ; >
-    au < manifest ; exists ; 1954 ; Forestry Volume 27 ; 27 ; >
-    au < manifest ; exists ; 1955 ; Forestry Volume 28 ; 28 ; >
-    au < manifest ; exists ; 1956 ; Forestry Volume 29 ; 29 ; >
-    au < manifest ; exists ; 1957 ; Forestry Volume 30 ; 30 ; >
-    au < manifest ; exists ; 1958 ; Forestry Volume 31 ; 31 ; >
-    au < manifest ; exists ; 1959 ; Forestry Volume 32 ; 32 ; >
-    au < manifest ; exists ; 1960 ; Forestry Volume 33 ; 33 ; >
-    au < manifest ; exists ; 1961 ; Forestry Volume 34 ; 34 ; >
-    au < manifest ; exists ; 1962 ; Forestry Volume 35 ; 35 ; >
-    au < manifest ; exists ; 1963 ; Forestry Volume 36 ; 36 ; >
-    au < manifest ; exists ; 1964 ; Forestry Volume 37 ; 37 ; >
-    au < manifest ; exists ; 1965 ; Forestry Volume 38 ; 38 ; >
-    au < manifest ; exists ; 1966 ; Forestry Volume 39 ; 39 ; >
-    au < manifest ; exists ; 1967 ; Forestry Volume 40 ; 40 ; >
-    au < manifest ; exists ; 1968 ; Forestry Volume 41 ; 41 ; >
-    au < manifest ; exists ; 1969 ; Forestry Volume 42 ; 42 ; >
-    au < manifest ; exists ; 1970 ; Forestry Volume 43 ; 43 ; >
-    au < manifest ; exists ; 1971 ; Forestry Volume 44 ; 44 ; >
-    au < manifest ; exists ; 1972 ; Forestry Volume 45 ; 45 ; >
-    au < manifest ; exists ; 1973 ; Forestry Volume 46 ; 46 ; >
-    au < manifest ; exists ; 1974 ; Forestry Volume 47 ; 47 ; >
-    au < manifest ; exists ; 1975 ; Forestry Volume 48 ; 48 ; >
-    au < manifest ; exists ; 1976 ; Forestry Volume 49 ; 49 ; >
-    au < manifest ; exists ; 1977 ; Forestry Volume 50 ; 50 ; >
-    au < manifest ; exists ; 1978 ; Forestry Volume 51 ; 51 ; >
-    au < manifest ; exists ; 1979 ; Forestry Volume 52 ; 52 ; >
-    au < manifest ; exists ; 1980 ; Forestry Volume 53 ; 53 ; >
-    au < manifest ; exists ; 1981 ; Forestry Volume 54 ; 54 ; >
-    au < manifest ; exists ; 1982 ; Forestry Volume 55 ; 55 ; >
-    au < manifest ; exists ; 1983 ; Forestry Volume 56 ; 56 ; >
-    au < manifest ; exists ; 1984 ; Forestry Volume 57 ; 57 ; >
-    au < manifest ; exists ; 1985 ; Forestry Volume 58 ; 58 ; >
-    au < manifest ; exists ; 1986 ; Forestry Volume 59 ; 59 ; >
-    au < manifest ; exists ; 1987 ; Forestry Volume 60 ; 60 ; >
-    au < manifest ; exists ; 1988 ; Forestry Volume 61 ; 61 ; >
-    au < manifest ; exists ; 1989 ; Forestry Volume 62 ; 62 ; >
-    au < manifest ; exists ; 1990 ; Forestry Volume 63 ; 63 ; >
-    au < manifest ; exists ; 1991 ; Forestry Volume 64 ; 64 ; >
-    au < manifest ; exists ; 1992 ; Forestry Volume 65 ; 65 ; >
-    au < manifest ; exists ; 1993 ; Forestry Volume 66 ; 66 ; >
-    au < manifest ; exists ; 1994 ; Forestry Volume 67 ; 67 ; >
-    au < manifest ; exists ; 1995 ; Forestry Volume 68 ; 68 ; >
-    au < manifest ; exists ; 1996 ; Forestry Volume 69 ; 69 ; >
-    au < manifest ; exists ; 1997 ; Forestry Volume 70 ; 70 ; >
-    au < manifest ; exists ; 1998 ; Forestry Volume 71 ; 71 ; >
-    au < manifest ; exists ; 1999 ; Forestry Volume 72 ; 72 ; >
-    au < manifest ; exists ; 2000 ; Forestry Volume 73 ; 73 ; >
-    au < manifest ; exists ; 2001 ; Forestry Volume 74 ; 74 ; >
-    au < manifest ; exists ; 2002 ; Forestry Volume 75 ; 75 ; >
-    au < manifest ; exists ; 2003 ; Forestry Volume 76 ; 76 ; >
-    au < manifest ; exists ; 2004 ; Forestry Volume 77 ; 77 ; >
-    au < wanted ; exists ; 2005 ; Forestry Volume 78 ; 78 ; >
-    au < wanted ; exists ; 2006 ; Forestry Volume 79 ; 79 ; >
-    au < wanted ; exists ; 2007 ; Forestry Volume 80 ; 80 ; >
+    au < manifest ; exists ; 1927 ; Forestry: An International Journal of Forest Research Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1928 ; Forestry: An International Journal of Forest Research Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1929 ; Forestry: An International Journal of Forest Research Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1930 ; Forestry: An International Journal of Forest Research Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1931 ; Forestry: An International Journal of Forest Research Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1932 ; Forestry: An International Journal of Forest Research Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1933 ; Forestry: An International Journal of Forest Research Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1934 ; Forestry: An International Journal of Forest Research Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1935 ; Forestry: An International Journal of Forest Research Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1936 ; Forestry: An International Journal of Forest Research Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1937 ; Forestry: An International Journal of Forest Research Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1938 ; Forestry: An International Journal of Forest Research Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1939 ; Forestry: An International Journal of Forest Research Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1940 ; Forestry: An International Journal of Forest Research Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1941 ; Forestry: An International Journal of Forest Research Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1942 ; Forestry: An International Journal of Forest Research Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1943 ; Forestry: An International Journal of Forest Research Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1944 ; Forestry: An International Journal of Forest Research Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1945 ; Forestry: An International Journal of Forest Research Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1947 ; Forestry: An International Journal of Forest Research Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1948 ; Forestry: An International Journal of Forest Research Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1949 ; Forestry: An International Journal of Forest Research Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1950 ; Forestry: An International Journal of Forest Research Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1951 ; Forestry: An International Journal of Forest Research Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1952 ; Forestry: An International Journal of Forest Research Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1953 ; Forestry: An International Journal of Forest Research Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1954 ; Forestry: An International Journal of Forest Research Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1955 ; Forestry: An International Journal of Forest Research Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1956 ; Forestry: An International Journal of Forest Research Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1957 ; Forestry: An International Journal of Forest Research Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1958 ; Forestry: An International Journal of Forest Research Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1959 ; Forestry: An International Journal of Forest Research Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1960 ; Forestry: An International Journal of Forest Research Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1961 ; Forestry: An International Journal of Forest Research Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1962 ; Forestry: An International Journal of Forest Research Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1963 ; Forestry: An International Journal of Forest Research Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1964 ; Forestry: An International Journal of Forest Research Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1965 ; Forestry: An International Journal of Forest Research Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1966 ; Forestry: An International Journal of Forest Research Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1967 ; Forestry: An International Journal of Forest Research Volume 40 ; 40 ; >
+    au < manifest ; exists ; 1968 ; Forestry: An International Journal of Forest Research Volume 41 ; 41 ; >
+    au < manifest ; exists ; 1969 ; Forestry: An International Journal of Forest Research Volume 42 ; 42 ; >
+    au < manifest ; exists ; 1970 ; Forestry: An International Journal of Forest Research Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1971 ; Forestry: An International Journal of Forest Research Volume 44 ; 44 ; >
+    au < manifest ; exists ; 1972 ; Forestry: An International Journal of Forest Research Volume 45 ; 45 ; >
+    au < manifest ; exists ; 1973 ; Forestry: An International Journal of Forest Research Volume 46 ; 46 ; >
+    au < manifest ; exists ; 1974 ; Forestry: An International Journal of Forest Research Volume 47 ; 47 ; >
+    au < manifest ; exists ; 1975 ; Forestry: An International Journal of Forest Research Volume 48 ; 48 ; >
+    au < manifest ; exists ; 1976 ; Forestry: An International Journal of Forest Research Volume 49 ; 49 ; >
+    au < manifest ; exists ; 1977 ; Forestry: An International Journal of Forest Research Volume 50 ; 50 ; >
+    au < manifest ; exists ; 1978 ; Forestry: An International Journal of Forest Research Volume 51 ; 51 ; >
+    au < manifest ; exists ; 1979 ; Forestry: An International Journal of Forest Research Volume 52 ; 52 ; >
+    au < manifest ; exists ; 1980 ; Forestry: An International Journal of Forest Research Volume 53 ; 53 ; >
+    au < manifest ; exists ; 1981 ; Forestry: An International Journal of Forest Research Volume 54 ; 54 ; >
+    au < manifest ; exists ; 1982 ; Forestry: An International Journal of Forest Research Volume 55 ; 55 ; >
+    au < manifest ; exists ; 1983 ; Forestry: An International Journal of Forest Research Volume 56 ; 56 ; >
+    au < manifest ; exists ; 1984 ; Forestry: An International Journal of Forest Research Volume 57 ; 57 ; >
+    au < manifest ; exists ; 1985 ; Forestry: An International Journal of Forest Research Volume 58 ; 58 ; >
+    au < manifest ; exists ; 1986 ; Forestry: An International Journal of Forest Research Volume 59 ; 59 ; >
+    au < manifest ; exists ; 1987 ; Forestry: An International Journal of Forest Research Volume 60 ; 60 ; >
+    au < manifest ; exists ; 1988 ; Forestry: An International Journal of Forest Research Volume 61 ; 61 ; >
+    au < manifest ; exists ; 1989 ; Forestry: An International Journal of Forest Research Volume 62 ; 62 ; >
+    au < manifest ; exists ; 1990 ; Forestry: An International Journal of Forest Research Volume 63 ; 63 ; >
+    au < manifest ; exists ; 1991 ; Forestry: An International Journal of Forest Research Volume 64 ; 64 ; >
+    au < manifest ; exists ; 1992 ; Forestry: An International Journal of Forest Research Volume 65 ; 65 ; >
+    au < manifest ; exists ; 1993 ; Forestry: An International Journal of Forest Research Volume 66 ; 66 ; >
+    au < manifest ; exists ; 1994 ; Forestry: An International Journal of Forest Research Volume 67 ; 67 ; >
+    au < manifest ; exists ; 1995 ; Forestry: An International Journal of Forest Research Volume 68 ; 68 ; >
+    au < manifest ; exists ; 1996 ; Forestry: An International Journal of Forest Research Volume 69 ; 69 ; >
+    au < manifest ; exists ; 1997 ; Forestry: An International Journal of Forest Research Volume 70 ; 70 ; >
+    au < manifest ; exists ; 1998 ; Forestry: An International Journal of Forest Research Volume 71 ; 71 ; >
+    au < manifest ; exists ; 1999 ; Forestry: An International Journal of Forest Research Volume 72 ; 72 ; >
+    au < manifest ; exists ; 2000 ; Forestry: An International Journal of Forest Research Volume 73 ; 73 ; >
+    au < manifest ; exists ; 2001 ; Forestry: An International Journal of Forest Research Volume 74 ; 74 ; >
+    au < manifest ; exists ; 2002 ; Forestry: An International Journal of Forest Research Volume 75 ; 75 ; >
+    au < manifest ; exists ; 2003 ; Forestry: An International Journal of Forest Research Volume 76 ; 76 ; >
+    au < manifest ; exists ; 2004 ; Forestry: An International Journal of Forest Research Volume 77 ; 77 ; >
+    au < wanted ; exists ; 2005 ; Forestry: An International Journal of Forest Research Volume 78 ; 78 ; >
+    au < wanted ; exists ; 2006 ; Forestry: An International Journal of Forest Research Volume 79 ; 79 ; >
+    au < wanted ; exists ; 2007 ; Forestry: An International Journal of Forest Research Volume 80 ; 80 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Forestry Volume 81 ; 81 ; >
-    au < released ; crawling ; 2009 ; Forestry Volume 82 ; 82 ; >
-    au < released ; crawling ; 2010 ; Forestry Volume 83 ; 83 ; >
-    au < released ; manifest ; 2011 ; Forestry Volume 84 ; 84 ; >
+    au < released ; crawling ; 2009 ; Forestry: An International Journal of Forest Research Volume 82 ; 82 ; >
+    au < released ; crawling ; 2010 ; Forestry: An International Journal of Forest Research Volume 83 ; 83 ; >
+    au < released ; manifest ; 2011 ; Forestry: An International Journal of Forest Research Volume 84 ; 84 ; >
 
     }
 
@@ -8192,15 +8197,16 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1933 ; Journal of the American Academy of Religion Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1934 ; Journal of the American Academy of Religion Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1933 ; Journal of the American Academy of Religion Volume I ; I ; >
+    au < manifest ; exists ; 1934 ; Journal of the American Academy of Religion Volume II ; II ; >
     au < manifest ; exists ; 1935 ; Journal of the American Academy of Religion Volume 3 ; 3 ; >
     au < manifest ; exists ; 1936 ; Journal of the American Academy of Religion Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1937 ; Journal of the American Academy of Religion Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1938 ; Journal of the American Academy of Religion Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1939 ; Journal of the American Academy of Religion Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1940 ; Journal of the American Academy of Religion Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1941 ; Journal of the American Academy of Religion Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1942 ; Journal of the American Academy of Religion Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1937 ; Journal of the American Academy of Religion Volume V ; V ; >
+    au < manifest ; exists ; 1938 ; Journal of the American Academy of Religion Volume VI ; VI ; >
+    au < manifest ; exists ; 1939 ; Journal of the American Academy of Religion Volume VII; VII ; >
+    au < manifest ; exists ; 1940 ; Journal of the American Academy of Religion Volume VIII; VIII ; >
+    au < manifest ; exists ; 1941 ; Journal of the American Academy of Religion Volume IX ; IX ; >
+    au < manifest ; exists ; 1942 ; Journal of the American Academy of Religion Volume X ; X ; >
     au < manifest ; exists ; 1943 ; Journal of the American Academy of Religion Volume 11 ; 11 ; >
     au < manifest ; exists ; 1944 ; Journal of the American Academy of Religion Volume 12 ; 12 ; >
     au < manifest ; exists ; 1945 ; Journal of the American Academy of Religion Volume 13 ; 13 ; >
@@ -10291,6 +10297,7 @@
 
     param[base_url] = http://jlms.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[jlms19] = malformed manifest page
 
     au < exists ; exists ; 1926 ; Journal of the London Mathematical Society Volume s1-1 ; s1-1 ; >
     au < exists ; exists ; 1927 ; Journal of the London Mathematical Society Volume s1-2 ; s1-2 ; >
@@ -10310,7 +10317,7 @@
     au < exists ; exists ; 1941 ; Journal of the London Mathematical Society Volume s1-16 ; s1-16 ; >
     au < exists ; exists ; 1942 ; Journal of the London Mathematical Society Volume s1-17 ; s1-17 ; >
     au < exists ; exists ; 1943 ; Journal of the London Mathematical Society Volume s1-18 ; s1-18 ; >
-    au < exists ; exists ; 1944 ; Journal of the London Mathematical Society Volume s1-19 ; s1-19 ; >
+    au < exists ; exists ; 1944 ; Journal of the London Mathematical Society Volume 19 ; 19 ; >
     au < exists ; exists ; 1945 ; Journal of the London Mathematical Society Volume s1-20 ; s1-20 ; >
     au < exists ; exists ; 1946 ; Journal of the London Mathematical Society Volume s1-21 ; s1-21 ; >
     au < exists ; exists ; 1947 ; Journal of the London Mathematical Society Volume s1-22 ; s1-22 ; >
@@ -11240,12 +11247,12 @@
     au < manifest ; exists ; 1968 ; Journal of Semitic Studies Volume 13 ; 13 ; >
     au < manifest ; exists ; 1969 ; Journal of Semitic Studies Volume 14 ; 14 ; >
     au < manifest ; exists ; 1970 ; Journal of Semitic Studies Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1971 ; Journal of Semitic Studies Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1971 ; Journal of Semitic Studies Volume XVI ; XVI ; >
     au < manifest ; exists ; 1972 ; Journal of Semitic Studies Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1973 ; Journal of Semitic Studies Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1974 ; Journal of Semitic Studies Volume 19 ; 19 ; >
-    au < manifest ; exists ; 1975 ; Journal of Semitic Studies Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1976 ; Journal of Semitic Studies Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1973 ; Journal of Semitic Studies Volume XVIII ; XVIII ; >
+    au < manifest ; exists ; 1974 ; Journal of Semitic Studies Volume XIX ; XIX ; >
+    au < manifest ; exists ; 1975 ; Journal of Semitic Studies Volume XX ; XX ; >
+    au < manifest ; exists ; 1976 ; Journal of Semitic Studies Volume XXI ; XXI ; >
     au < manifest ; exists ; 1977 ; Journal of Semitic Studies Volume 22 ; 22 ; >
     au < manifest ; exists ; 1978 ; Journal of Semitic Studies Volume 23 ; 23 ; >
     au < manifest ; exists ; 1979 ; Journal of Semitic Studies Volume 24 ; 24 ; >
@@ -12253,6 +12260,7 @@
 
     param[base_url] = http://mind.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[mind1889] = see RU3577
 
     au < manifest ; exists ; 1876 ; Mind Volume os-1 ; os-1 ; >
     au < manifest ; exists ; 1877 ; Mind Volume os-2 ; os-2 ; >
@@ -12399,12 +12407,11 @@
   
     title <
       name = MHR: Basic science of reproductive medicine ;
+      alt_title = Molecular Human Reproduction ;
       issn = 1360-9947 ;
       eissn = 1460-2407 ;
       issnl = 1360-9947
     >
-	
-	comment[molehr] = the alternative title is "Molecular Human Reproduction"
 	
     {
 
