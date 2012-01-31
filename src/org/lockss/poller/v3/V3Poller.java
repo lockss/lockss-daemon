@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.110 2011-12-16 19:14:09 barry409 Exp $
+ * $Id: V3Poller.java,v 1.111 2012-01-31 06:04:18 tlipkis Exp $
  */
 
 /*
@@ -860,6 +860,11 @@ public class V3Poller extends BasePoll {
     // Reset the duration to reflect reality
     pollerState.setDuration(now - pollerState.getCreateTime());
 
+    if (urlTallier != null) {
+      urlTallier.release();
+      urlTallier = null;
+    }
+
     // Clean up any lingering participants.
     synchronized(theParticipants) {
       for (ParticipantUserData ud : theParticipants.values()) {
@@ -1570,16 +1575,20 @@ public class V3Poller extends BasePoll {
         log.debug3("Finished hashing repair sent for block " + hashBlock);
         // Replay the block comparison using the new hash results.
 	UrlTallier urlTallier = makeUrlTallier();
-	urlTallier.seek(url);
-	BlockTally tally = urlTallier.tallyPollerUrl(url, hashBlock);
-	// NOTE: ParticipantUserData was updated from the initial
-	// pre-repair tally. Results of a repair do not change the
-	// ParticipantUserData.
-        setStatus(V3Poller.POLLER_STATUS_TALLYING);
-        BlockTally.Result result = checkTally(tally, url);
-        log.debug3("After-vote hash tally for repaired block " + url
-                   + ": " + result.printString);
-	pollerState.getRepairQueue().markComplete(url);
+	try {
+	  urlTallier.seek(url);
+	  BlockTally tally = urlTallier.tallyPollerUrl(url, hashBlock);
+	  // NOTE: ParticipantUserData was updated from the initial
+	  // pre-repair tally. Results of a repair do not change the
+	  // ParticipantUserData.
+	  setStatus(V3Poller.POLLER_STATUS_TALLYING);
+	  BlockTally.Result result = checkTally(tally, url);
+	  log.debug3("After-vote hash tally for repaired block " + url
+		     + ": " + result.printString);
+	  pollerState.getRepairQueue().markComplete(url);
+ 	} finally {
+ 	  urlTallier.release();
+ 	}
       }
     };
 
@@ -2711,12 +2720,15 @@ public class V3Poller extends BasePoll {
   public void release() {
     pollerState.release();
     
+    if (urlTallier != null) {
+      urlTallier.release();
+    }
+
     synchronized(theParticipants) {
       for (ParticipantUserData ud : theParticipants.values()) {
         ud.release();
       }
     }
-
     stateDir = null;
     pollCompleteRequest = null;
     voteCompleteRequest = null;
@@ -2724,6 +2736,7 @@ public class V3Poller extends BasePoll {
     serializer = null;
     pollManager = null;
     idManager = null;
+    urlTallier = null;
   }
 
   private PsmMachine makeMachine() {
