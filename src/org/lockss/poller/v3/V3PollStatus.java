@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.36 2012-01-25 10:46:33 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.37 2012-01-31 07:21:16 tlipkis Exp $
  */
 
 /*
@@ -80,14 +80,6 @@ public class V3PollStatus {
   private static final DecimalFormat agreementFormat =
     new DecimalFormat("0.00");
     
-  /* DecimalFormat automatically applies half-even rounding to
-   * values being formatted under Java < 1.6.  This is a workaround. */ 
-  private static String doubleToPercent(double d) {
-    int i = (int)(d * 10000);
-    double pc = i / 100.0;
-    return agreementFormat.format(pc);
-  }
-
   private static StatusTable.Reference makeAuRef(ArchivalUnit au,
 						 String table) {
     return new StatusTable.Reference(au.getName(),
@@ -143,7 +135,7 @@ public class V3PollStatus {
                                          ColumnDescriptor.TYPE_INT,
                                          "Completed repairs."),
                     new ColumnDescriptor("agreement", "Agreement",
-                                         ColumnDescriptor.TYPE_STRING),
+                                         ColumnDescriptor.TYPE_AGREEMENT),
                     new ColumnDescriptor("start", "Start",
                                          ColumnDescriptor.TYPE_DATE),
                     new ColumnDescriptor("deadline", "Deadline",
@@ -269,11 +261,10 @@ public class V3PollStatus {
         row.put("hashErrors", "--");
       }
       row.put("completedRepairs", new Integer(poller.getCompletedRepairs().size()));
-      if (poller.getStatus() == V3Poller.PEER_STATUS_COMPLETE) {
-        row.put("agreement", doubleToPercent(poller.getPercentAgreement()) + "%");
-      } else {
-        row.put("agreement", "--");
-      }
+      Object agmt = (poller.getStatus() == V3Poller.PEER_STATUS_COMPLETE)
+	? poller.getPercentAgreement()
+	: new StatusTable.DisplayedValue(StatusTable.NO_VALUE, "--");
+      row.put("agreement", agmt);
       row.put("start", new Long(poller.getCreateTime()));
       row.put("deadline", poller.getDeadline());
       if (!poller.isPollActive()) {
@@ -549,7 +540,7 @@ public class V3PollStatus {
                     new ColumnDescriptor("peerStatus", "Status",
                                          ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor("agreement", "Agreement",
-                                         ColumnDescriptor.TYPE_STRING),
+                                         ColumnDescriptor.TYPE_AGREEMENT),
                     new ColumnDescriptor("state", "PSM State",
                                          ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor("when", "When",
@@ -620,7 +611,7 @@ public class V3PollStatus {
       row.put("sort", sort);
       PsmInterp interp = voter.getPsmInterp();
       if (voter.hasVoted()) {
-	row.put("agreement", doubleToPercent(voter.getPercentAgreement()));
+	row.put("agreement", voter.getPercentAgreement());
       }
       if (interp != null) {
 	PsmState state = interp.getCurrentState();
@@ -652,10 +643,9 @@ public class V3PollStatus {
                                     pollerState.getErrorDetail()));
       }
       if (poll.getStatus() == STATUS_COMPLETE) {
-	String agreePercent = doubleToPercent(poll.getPercentAgreement());
 	summary.add(new SummaryInfo("Agreement",
-				    ColumnDescriptor.TYPE_STRING,
-				    agreePercent));
+				    ColumnDescriptor.TYPE_AGREEMENT,
+				    poll.getPercentAgreement()));
       }
       if (isDebug && pollerState.getAdditionalInfo() != null) {
         summary.add(new SummaryInfo("Info",
@@ -1193,11 +1183,9 @@ public class V3PollStatus {
                                     new Long(remain)));
       }
       if (voter.getStatus() == STATUS_COMPLETE) {
-	String agreePercent =
-	  doubleToPercent(voter.getVoterUserData().getAgreementHint());
 	summary.add(new SummaryInfo("Agreement",
-				    ColumnDescriptor.TYPE_STRING,
-				    agreePercent));
+				    ColumnDescriptor.TYPE_AGREEMENT,
+				    voter.getVoterUserData().getAgreementHint()));
       }
       summary.add(new SummaryInfo("Poller Nonce",
                                   ColumnDescriptor.TYPE_STRING,

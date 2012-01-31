@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.102 2012-01-18 03:34:35 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.103 2012-01-31 07:21:16 tlipkis Exp $
  */
 
 /*
@@ -1489,14 +1489,14 @@ public class ArchivalUnitStatus
       new ColumnDescriptor("Last", "Consensus",
                            ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor("HighestPercentAgreement", "Highest Agreement",
-                           ColumnDescriptor.TYPE_PERCENT),
+                           ColumnDescriptor.TYPE_AGREEMENT),
       new ColumnDescriptor("LastPercentAgreement", "Last Agreement",
-                           ColumnDescriptor.TYPE_PERCENT),
+                           ColumnDescriptor.TYPE_AGREEMENT),
       new ColumnDescriptor("HighestPercentAgreementHint",
 			   "Highest Agreement Hint",
-                           ColumnDescriptor.TYPE_PERCENT),
+                           ColumnDescriptor.TYPE_AGREEMENT),
       new ColumnDescriptor("LastPercentAgreementHint", "Last Agreement Hint",
-                           ColumnDescriptor.TYPE_PERCENT),
+                           ColumnDescriptor.TYPE_AGREEMENT),
       new ColumnDescriptor("LastAgree",
 			   "Last Consensus",
                            ColumnDescriptor.TYPE_DATE)
