@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.38 2011-12-06 23:58:44 barry409 Exp $
+ * $Id: TestV3Poller.java,v 1.39 2012-01-31 07:21:56 tlipkis Exp $
  */
 
 /*
@@ -512,7 +512,7 @@ public class TestV3Poller extends LockssTestCase {
     return v3Poller.getAvailablePeers().keySet();
   }
 
-  public void testgetAvailablePeers() throws Exception {
+  public void testGetAvailablePeers() throws Exception {
     PeerIdentity p1 = findPeerIdentity("TCP:[10.1.0.100]:9729");
     PeerIdentity p2 = findPeerIdentity("TCP:[10.1.0.101]:9729");
 
@@ -537,7 +537,7 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(exp, avail);
   }
   
-  public void testgetAvailablePeersInitialPeersOnly() throws Exception {
+  public void testGetAvailablePeersInitialPeersOnly() throws Exception {
     ConfigurationUtil.addFromArgs(V3Poller.PARAM_ENABLE_DISCOVERY, "false");
     findPeerIdentity("TCP:[10.1.0.100]:9729");
     findPeerIdentity("TCP:[10.1.0.101]:9729");
@@ -546,7 +546,7 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(6, getAvailablePeers(v3Poller).size());
   }
   
-  public void testgetAvailablePeersDoesNotIncludeLocalIdentity() throws Exception {
+  public void testGetAvailablePeersDoesNotIncludeLocalIdentity() throws Exception {
     ConfigurationUtil.addFromArgs(V3Poller.PARAM_ENABLE_DISCOVERY, "false");
     // append our local config to the initial Peer List
     List initialPeersCopy = new ArrayList(initialPeers);
