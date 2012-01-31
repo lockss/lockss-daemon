@@ -37,9 +37,10 @@
     {  
       
       param[base_url] = http://library.web.cern.ch/ 
+      comment[notReady] = Roundup 3994 need plugin edit
     
-      au < manifest ; 2004 ; High Energy Physics Libraries Webzine Issue 10 ; 10 >
-      au < manifest ; 2005 ; High Energy Physics Libraries Webzine Issue 11 ; 11 >
+      au < notReady ; 2004 ; High Energy Physics Libraries Webzine Issue 10 ; 10 >
+      au < notReady ; 2005 ; High Energy Physics Libraries Webzine Issue 11 ; 11 >
       au < exists ; 2006 ; High Energy Physics Libraries Webzine Issue 12 ; 12 >
       au < exists ; 2006 ; High Energy Physics Libraries Webzine Issue 13 ; 13 >
       
