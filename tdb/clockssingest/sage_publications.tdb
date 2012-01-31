@@ -581,7 +581,7 @@
       au < exists ; exists ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 ; >
       au < exists ; exists ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 ; >
       au < exists ; exists ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
-      au < testing ; exists ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 ; >
+      au < released ; manifest ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 ; >
       au < released ; manifest ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 ; >
       au < manifest ; exists ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 ; >
 
@@ -1321,7 +1321,7 @@
       au < exists ; exists ; 2007 ; American Sociological Review Volume 72 ; 72 ; >
       au < exists ; exists ; 2008 ; American Sociological Review Volume 73 ; 73 ; >
       au < manifest ; exists ; 2009 ; American Sociological Review Volume 74 ; 74 ; >
-      au < testing ; exists ; 2010 ; American Sociological Review Volume 75 ; 75 ; >
+      au < released ; manifest ; 2010 ; American Sociological Review Volume 75 ; 75 ; >
       au < released ; manifest ; 2011 ; American Sociological Review Volume 76 ; 76 ; >
       au < manifest ; exists ; 2012 ; American Sociological Review Volume 77 ; 77 ; >
 
@@ -2120,14 +2120,14 @@
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 628 ; 628 ;  >
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 629 ; 629 ;  >
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 630 ; 630 ;  >
-      au < testing ; exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 631 ; 631 ; >
-      au < testing ; exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 632 ; 632 ; >
+      au < released ; manifest ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 631 ; 631 ; >
+      au < released ; manifest ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 632 ; 632 ; >
       au < exists ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 633 ; 633 ; >
       au < released ; manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 634 ; 634 ; >
       au < released ; manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 635 ; 635 ; >
       au < released ; manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 636 ; 636 ; >
       au < released ; manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 637 ; 637 ; >
-      au < manifest ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 638 ; 638 ; >
+      au < crawling ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 638 ; 638 ; >
       au < manifest ; exists ; 2012 ; The ANNALS of the American Academy of Political and Social Science Volume 639 ; 639 ; >
       au < exists ; exists ; 2012 ; The ANNALS of the American Academy of Political and Social Science Volume 640 ; 640 ; >
       au < exists ; exists ; 2012 ; The ANNALS of the American Academy of Political and Social Science Volume 641 ; 641 ; >
@@ -2620,7 +2620,7 @@
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Assessment for Effective Intervention Volume 34 ; 34 ; >
       au < released ; crawling ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 ;  >
       au < released ; manifest ; 2010-2011 ; Assessment for Effective Intervention Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 ; >
 
     }
 
@@ -2759,7 +2759,7 @@
       au < exists ; exists ; 2007 ; Australian Journal of Management Volume 32 ; 32 ; >
       au < exists ; exists ; 2008 ; Australian Journal of Management Volume 33 ; 33 ; >
       au < exists ; exists ; 2009 ; Australian Journal of Management Volume 34 ; 34 ; >
-      au < testing ; exists ; 2010 ; Australian Journal of Management Volume 35 ; 35 ; >
+      au < released ; manifest ; 2010 ; Australian Journal of Management Volume 35 ; 35 ; >
       au < released ; manifest ; 2011 ; Australian Journal of Management Volume 36 ; 36 ; >
       au < exists ; exists ; 2012 ; Australian Journal of Management Volume 37 ; 37 ; >
 
@@ -2804,7 +2804,7 @@
       au < manifest ; exists ; 2007 ; Autism Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Autism Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; Autism Volume 13 ; 13 ;  >
-      au < testing ; exists ; 2010 ; Autism Volume 14 ; 14 ; >
+      au < released ; manifest ; 2010 ; Autism Volume 14 ; 14 ; >
       au < released ; manifest ; 2011 ; Autism Volume 15 ; 15 ; >
       au < exists ; exists ; 2012 ; Autism Volume 16 ; 16 ; >
 
@@ -3065,7 +3065,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; BioScope: South Asian Screen Studies Volume 1 ; 1 ; >
+      au < released ; manifest ; 2010 ; BioScope: South Asian Screen Studies Volume 1 ; 1 ; >
       au < released ; manifest ; 2011 ; BioScope: South Asian Screen Studies Volume 2 ; 2 ; >
       au < exists ; exists ; 2012 ; BioScope: South Asian Screen Studies Volume 3 ; 3 ; >
 
@@ -3416,10 +3416,10 @@
       au < exists ; exists ; 2009 ; Bulletin de Méthodologie Sociologique Volume 102 ; 102 ; >
       au < exists ; exists ; 2009 ; Bulletin de Méthodologie Sociologique Volume 103 ; 103 ; >
       au < exists ; exists ; 2009 ; Bulletin de Méthodologie Sociologique Volume 104 ; 104 ; >
-      au < testing ; exists ; 2010 ; Bulletin de Méthodologie Sociologique Volume 105 ; 105 ; >
-      au < testing ; exists ; 2010 ; Bulletin de Méthodologie Sociologique Volume 106 ; 106 ; >
-      au < testing ; exists ; 2010 ; Bulletin de Méthodologie Sociologique Volume 107 ; 107 ; >
-      au < testing ; exists ; 2010 ; Bulletin de Méthodologie Sociologique Volume 108 ; 108 ; >
+      au < released ; manifest ; 2010 ; Bulletin de Méthodologie Sociologique Volume 105 ; 105 ; >
+      au < released ; manifest ; 2010 ; Bulletin de Méthodologie Sociologique Volume 106 ; 106 ; >
+      au < released ; manifest ; 2010 ; Bulletin de Méthodologie Sociologique Volume 107 ; 107 ; >
+      au < released ; manifest ; 2010 ; Bulletin de Méthodologie Sociologique Volume 108 ; 108 ; >
       au < released ; manifest ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 109 ; 109 ; >
       au < exists ; exists ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 109 ; 109 ; >
       au < released ; manifest ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 110 ; 110 ; >
@@ -3456,7 +3456,7 @@
       au < exists ; exists ; 2007 ; Bulletin of the Atomic Scientists Volume 63 ; 63 ; >
       au < exists ; exists ; 2008 ; Bulletin of the Atomic Scientists Volume 64 ; 64 ; >
       au < exists ; exists ; 2009 ; Bulletin of the Atomic Scientists Volume 65 ; 65 ; >
-      au < manifest ; exists ; 2010 ; Bulletin of the Atomic Scientists Volume 66 ; 66 ; >
+      au < crawling ; exists ; 2010 ; Bulletin of the Atomic Scientists Volume 66 ; 66 ; >
       au < released ; manifest ; 2011 ; Bulletin of the Atomic Scientists Volume 67 ; 67 ; >
       au < exists ; exists ; 2012 ; Bulletin of the Atomic Scientists Volume 68 ; 68 ; >
 
@@ -3723,7 +3723,7 @@
       au < exists ; exists ; 2007 ; Capital & Class Volume 31 ; 31 ; >
       au < exists ; exists ; 2008 ; Capital & Class Volume 32 ; 32 ; >
       au < exists ; exists ; 2009 ; Capital & Class Volume 33 ; 33 ; >
-      au < manifest ; exists ; 2010 ; Capital & Class Volume 34 ; 34 ; >
+      au < crawling ; exists ; 2010 ; Capital & Class Volume 34 ; 34 ; >
       au < released ; manifest ; 2011 ; Capital & Class Volume 35 ; 35 ; >
       au < exists ; exists ; 2012 ; Capital & Class Volume 36 ; 36 ; >
 
@@ -3863,7 +3863,7 @@
 
       au < exists ; exists ; 2008 ; Cephalalgia Volume 28 ; 28 ; >
       au < exists ; exists ; 2009 ; Cephalalgia Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2010 ; Cephalalgia Volume 30 ; 30 ; >
+      au < crawling ; exists ; 2010 ; Cephalalgia Volume 30 ; 30 ; >
       au < released ; manifest ; 2011 ; Cephalalgia Volume 31 ; 31 ; >
       au < exists ; exists ; 2012 ; Cephalalgia Volume 32 ; 32 ; >
 
@@ -4134,8 +4134,8 @@
       au < manifest ; exists ; 2007 ; China Report Volume 43 ; 43 ; >
       au < manifest ; exists ; 2008 ; China Report Volume 44 ; 44 ; >
       au < released ; crawling ; 2009 ; China Report Volume 45 ; 45 ;  >
-      au < manifest ; exists ; 2010 ; China Report Volume 46 ; 46 ; >
-      au < testing ; exists ; 2011 ; China Report Volume 47 ; 47 ; >
+      au < crawling ; exists ; 2010 ; China Report Volume 46 ; 46 ; >
+      au < released ; manifest ; 2011 ; China Report Volume 47 ; 47 ; >
       au < exists ; exists ; 2012 ; China Report Volume 48 ; 48 ; >
 
 
@@ -4780,7 +4780,7 @@
       au < manifest ; exists ; 2006-2007 ; Communication Disorders Quarterly Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2007-2008 ; Communication Disorders Quarterly Volume 29 ; 29 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Communication Disorders Quarterly Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2009-2010 ; Communication Disorders Quarterly Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2009-2010 ; Communication Disorders Quarterly Volume 31 ; 31 ; >
       au < released ; manifest ; 2010-2011 ; Communication Disorders Quarterly Volume 32 ; 32 ; >
       au < exists ; exists ; 2011-2012 ; Communication Disorders Quarterly Volume 33 ; 33 ; >
 
@@ -5275,7 +5275,7 @@
       au < exists ; exists ; 2007 ; Contemporary Sociology: A Journal of Reviews Volume 36 ; 36 ; >
       au < exists ; exists ; 2008 ; Contemporary Sociology: A Journal of Reviews Volume 37 ; 37 ; >
       au < exists ; exists ; 2009 ; Contemporary Sociology: A Journal of Reviews Volume 38 ; 38 ; >
-      au < manifest ; exists ; 2010 ; Contemporary Sociology: A Journal of Reviews Volume 39 ; 39 ; >
+      au < crawling ; exists ; 2010 ; Contemporary Sociology: A Journal of Reviews Volume 39 ; 39 ; >
       au < released ; manifest ; 2011 ; Contemporary Sociology: A Journal of Reviews Volume 40 ; 40 ; >
       au < exists ; exists ; 2012 ; Contemporary Sociology: A Journal of Reviews Volume 41 ; 41 ; >
 
@@ -5305,7 +5305,7 @@
       au < exists ; exists ; 2007 ; Contexts Volume 6 ; 6 ; >
       au < exists ; exists ; 2008 ; Contexts Volume 7 ; 7 ; >
       au < exists ; exists ; 2009 ; Contexts Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2010 ; Contexts Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2010 ; Contexts Volume 9 ; 9 ; >
       au < released ; manifest ; 2011 ; Contexts Volume 10 ; 10 ; >
       au < exists ; exists ; 2012 ; Contexts Volume 11 ; 11 ; >
 
@@ -5380,7 +5380,7 @@
       au < manifest ; exists ; 2007 ; Contributions to Indian Sociology Volume 41 ; 41 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Contributions to Indian Sociology Volume 42 ; 42 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Contributions to Indian Sociology Volume 43 ; 43 ; >
-      au < manifest ; exists ; 2010 ; Contributions to Indian Sociology Volume 44 ; 44 ; >
+      au < crawling ; exists ; 2010 ; Contributions to Indian Sociology Volume 44 ; 44 ; >
       au < released ; manifest ; 2011 ; Contributions to Indian Sociology Volume 45 ; 45 ; >
       au < exists ; exists ; 2012 ; Contributions to Indian Sociology Volume 46 ; 46 ; >
 
@@ -14342,8 +14342,8 @@
         au < exists ; exists ; 2007-2008 ; Journal of Advanced Academics Volume 19 ; 19 ; >
         au < exists ; exists ; 2008-2009 ; Journal of Advanced Academics Volume 20 ; 20 ; >
         au < exists ; exists ; 2009-2010 ; Journal of Advanced Academics Volume 21 ; 21 ; >
-        au < manifest ; exists ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 ; >
-        au < testing ; exists ; 2011-2012 ; Journal of Advanced Academics Volume 23 ; 23 ; >
+        au < crawling ; exists ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 ; >
+        au < released ; manifest ; 2011-2012 ; Journal of Advanced Academics Volume 23 ; 23 ; >
         au < exists ; exists ; 2012-2013 ; Journal of Advanced Academics Volume 24 ; 24 ; >
 
       }
@@ -18944,7 +18944,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Intensive Care Medicine Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Intensive Care Medicine Volume 24 ; 24 ; >
       au < wanted ; exists ; 2010 ; Journal of Intensive Care Medicine Volume 25 ; 25 ;  >
-      au < wanted ; exists ; 2011 ; Journal of Intensive Care Medicine Volume 26 ; 26 ;  >
+      au < crawling ; exists ; 2011 ; Journal of Intensive Care Medicine Volume 26 ; 26 ;  >
       au < exists ; exists ; 2012 ; Journal of Intensive Care Medicine Volume 27 ; 27 ;  >
 
     }
@@ -23906,7 +23906,7 @@
         au < exists ; exists ; 2006-2007 ; Medical Law International Volume 8 ; 8 ; >
         au < exists ; exists ; 2008 ; Medical Law International Volume 9 ; 9 ; >
         au < exists ; exists ; 2009-2010 ; Medical Law International Volume 10 ; 10 ; >
-        au < testing ; exists ; 2011 ; Medical Law International Volume 11 ; 11 ; >
+        au < released ; manifest ; 2011 ; Medical Law International Volume 11 ; 11 ; >
         au < exists ; exists ; 2012 ; Medical Law International Volume 12 ; 12 ; >
         
       }
@@ -27671,7 +27671,7 @@
         au < exists ; exists ; 2008 ; Psychology of Women Quarterly Volume 32 ; 32 ; >
         au < exists ; exists ; 2009 ; Psychology of Women Quarterly Volume 33 ; 33 ; >
         au < exists ; exists ; 2010 ; Psychology of Women Quarterly Volume 34 ; 34 ; >
-        au < testing ; exists ; 2011 ; Psychology of Women Quarterly Volume 35 ; 35 ; >
+        au < released ; manifest ; 2011 ; Psychology of Women Quarterly Volume 35 ; 35 ; >
         au < exists ; exists ; 2012 ; Psychology of Women Quarterly Volume 36 ; 36 ; >
 
       }
@@ -29050,7 +29050,7 @@
       au < exists ; exists ; 2008 ; Reviews of Human Factors and Ergonomics Volume 4 ; 4 ; >
       au < exists ; exists ; 2009 ; Reviews of Human Factors and Ergonomics Volume 5 ; 5 ; >
       au < exists ; exists ; 2010 ; Reviews of Human Factors and Ergonomics Volume 6 ; 6 ; >
-      au < testing ; exists ; 2011 ; Reviews of Human Factors and Ergonomics Volume 7 ; 7 ; >
+      au < released ; manifest ; 2011 ; Reviews of Human Factors and Ergonomics Volume 7 ; 7 ; >
       au < exists ; exists ; 2012 ; Reviews of Human Factors and Ergonomics Volume 8 ; 8 ; >
 
     }
@@ -29070,7 +29070,7 @@
         
           pluginSuffix = ClockssHighWirePressH20Plugin
 
-          au < testing ; exists ; 2011 ; Sage Open Volume 1 ; 1 ; >
+          au < released ; manifest ; 2011 ; Sage Open Volume 1 ; 1 ; >
           au < exists ; exists ; 2012 ; Sage Open Volume 2 ; 2 ; >
         
         }
