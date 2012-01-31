@@ -1982,10 +1982,10 @@
     param[base_url] = http://bfg.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
         
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Briefings in Functional Genomics Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Briefings in Functional Genomics Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Briefings in Functional Genomics Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Briefings in Functional Genomics Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2002-2003 ; Briefings in Functional Genomics Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2003-2004 ; Briefings in Functional Genomics Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2004-2005 ; Briefings in Functional Genomics Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2005-2006 ; Briefings in Functional Genomics Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Briefings in Functional Genomics Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Briefings in Functional Genomics Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Briefings in Functional Genomics Volume 7 ; 7 >
@@ -3484,7 +3484,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressPlugin ; doNotProcess ; 2005 ; Communication Theory Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Communication Theory Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; doesNotExist ; 2006 ; Communication Theory Volume 16 ; 16 >
 
     }
 
@@ -4734,7 +4734,8 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Europace Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Europace Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Europace Volume 13 ; 13 >
-    
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Europace Volume 14 ; 14 >
+     
     }
 
   }
@@ -4749,8 +4750,6 @@
     >
 
     {
-
-    comment[h20] = has switched to H20 early
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://eurheartj.oxfordjournals.org/
@@ -5340,7 +5339,7 @@
       issnl = 1741-427X
     >
 
-    comment[ecam] = This journal url does not exist or the URL has changed 
+    comment[moved] = Published by Hindawi from 2011
 
     {
 
@@ -5360,7 +5359,7 @@
 
     au < HighWireStrVolPlugin ; down ; 2005 ; Evidence-based Complementary and Alternative Medicine Volume 2 ; 2 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; Evidence-based Complementary and Alternative Medicine Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Evidence-based Complementary and Alternative Medicine Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; doesNotExist ; 2007 ; Evidence-based Complementary and Alternative Medicine Volume 4 ; 4 >
 
     }
 
@@ -6491,13 +6490,12 @@
       issnl = 0360-3989
     >
 
-    comment[hcr] = This journal has transferred from Oxford Journals to another publisher in previous years
+    comment[moved] = Published by Blackwell Publishing from Volume 32, 2006. 
 
     {
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://hcr.oxfordjournals.org/
-    comment[down] = Published by Blackwell Publishing from Volume 32, 2006.
     implicit < status ; year ; name ; param[volume] >
 
     au < down ; 2005 ; Human Communication Research Volume 31 ; 31 >
@@ -6511,7 +6509,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressPlugin ; doNotProcess ; 2005 ; Human Communication Research Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Human Communication Research Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; doesNotExist ; 2006 ; Human Communication Research Volume 32 ; 32 >
 
     }
 
@@ -7548,8 +7546,6 @@
     }
 
     {
-
-    comment[down] = Published by Cambridge University Press from Volume 57, 2008.
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://iclq.oxfordjournals.org/
@@ -10091,12 +10087,11 @@
 
     title <
       name = Journal of the ICRU ;
+      alt_title = Journal of the International Commission on Radiation Units and Measurements ;
       issn = 1473-6691 ;
       eissn = 1742-3422 ;
       issnl = 1473-6691
     >
-
-	comment[jicru] = the alternative title is "Journal of the International Commission on Radiation Units and Measurements" 
 	
     {
 
@@ -11495,9 +11490,9 @@
       issnl = 0269-0403
     >
     
-    {
-
     comment[jrma] = moved to informaworld. http://www.informaworld.com/smpp/title~content=t794546064~link=cover
+    
+    {
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://jrma.oxfordjournals.org/
@@ -11508,8 +11503,6 @@
     }
 
     {
-
-    comment[jrma] = moved to informaworld. http://www.informaworld.com/smpp/title~content=t794546064~link=cover
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jrma.oxfordjournals.org/
@@ -11690,8 +11683,6 @@
       issnl = 0022-4529
     >
     
-    comment[jsh] = has moved to from George Mason U in summer 2011
-    
     {
 
     pluginPrefix = org.lockss.plugin.highwire.
@@ -11742,6 +11733,7 @@
     au < HighWirePressH20Plugin ; exists ; 2008-2009 ; Journal of Social History Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; exists ; 2009-2010 ; Journal of Social History Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 2010-2011 ; Journal of Social History Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Social History Volume 45 ; 45 >
     
     }
     
@@ -12195,7 +12187,7 @@
     au < HighWirePressH20Plugin ; exists ; 1909 ; The Library Volume s2-X ; s2-X >
     au < HighWirePressH20Plugin ; exists ; 1909 ; The Library Volume TBS-10 ; TBS-10 >
     au < HighWirePressH20Plugin ; exists ; 1909 ; The Library Volume TBS-11 ; TBS-11 >   
-    au < HighWirePressH20Plugin ; exists ; 1910 ; The Library Volume s3-I ; s3-I >
+    au < HighWirePressH20Plugin ; exists ; 1910 ; The Library Volume s3-1 ; s3-1 >
     au < HighWirePressH20Plugin ; exists ; 1911 ; The Library Volume s3-II ; s3-II >
     au < HighWirePressH20Plugin ; exists ; 1912 ; The Library Volume s3-III ; s3-III >
     au < HighWirePressH20Plugin ; exists ; 1913 ; The Library Volume s3-IV ; s3-IV >
@@ -12951,6 +12943,7 @@
 
     title <
       name = MHR: Basic science of reproductive medicine ;
+      alt_title = Molecular Human Reproduction ;
       issn = 1360-9947 ;
       eissn = 1460-2407 ;
       issnl = 1360-9947
@@ -12961,8 +12954,6 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://molehr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-	comment[molehr] = the alternative title is "Molecular Human Reproduction"
 	
     au < HighWirePressH20Plugin ; manifest ; 1995 ; MHR: Basic science of reproductive medicine Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; MHR: Basic science of reproductive medicine Volume 2 ; 2 >
