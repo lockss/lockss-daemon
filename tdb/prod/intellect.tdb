@@ -11,6 +11,8 @@
     param[publisher_id] = intellect
     implicit < status ; year ; name ; param[volume_name] >
 
+    comment[notReady] = PDF filter for Ingenta Plugin needed
+
     {
       title <
         name = Animation Practice, Production & Process ;
@@ -21,7 +23,7 @@
       param[journal_id] = ap3
       param[journal_issn] = 2042-7875
       
-      au < manifest ; 2011 ; Animation Practice, Production & Process Volume 1 ; 1 >
+      au < notReady ; 2011 ; Animation Practice, Production & Process Volume 1 ; 1 >
 
     }
 
@@ -35,7 +37,7 @@
       param[journal_id] = aps
       param[journal_issn] = 2042-793X
       
-      au < manifest ; 2011 ; Art & the Public Sphere Volume 1 ; 1 >
+      au < notReady ; 2011 ; Art & the Public Sphere Volume 1 ; 1 >
 
     }
 
@@ -49,15 +51,15 @@
       param[journal_id] = adche
       param[journal_issn] = 1474-273X
       
-      au < manifest ; 2002-2003 ; Art, Design & Communication in Higher Education Volume 1 ; 1 >
-      au < manifest ; 2003-2004 ; Art, Design & Communication in Higher Education Volume 2 ; 2 >
-      au < manifest ; 2004 ; Art, Design & Communication in Higher Education Volume 3 ; 3 >
-      au < manifest ; 2005 ; Art, Design & Communication in Higher Education Volume 4 ; 4 >
-      au < manifest ; 2006-2007 ; Art, Design & Communication in Higher Education Volume 5 ; 5 >
-      au < manifest ; 2007-2008 ; Art, Design & Communication in Higher Education Volume 6 ; 6 >
-      au < manifest ; 2008-2009 ; Art, Design & Communication in Higher Education Volume 7 ; 7 >
-      au < manifest ; 2009 ; Art, Design & Communication in Higher Education Volume 8 ; 8 >
-      au < manifest ; 2010 ; Art, Design & Communication in Higher Education Volume 9 ; 9 >
+      au < notReady ; 2002-2003 ; Art, Design & Communication in Higher Education Volume 1 ; 1 >
+      au < notReady ; 2003-2004 ; Art, Design & Communication in Higher Education Volume 2 ; 2 >
+      au < notReady ; 2004 ; Art, Design & Communication in Higher Education Volume 3 ; 3 >
+      au < notReady ; 2005 ; Art, Design & Communication in Higher Education Volume 4 ; 4 >
+      au < notReady ; 2006-2007 ; Art, Design & Communication in Higher Education Volume 5 ; 5 >
+      au < notReady ; 2007-2008 ; Art, Design & Communication in Higher Education Volume 6 ; 6 >
+      au < notReady ; 2008-2009 ; Art, Design & Communication in Higher Education Volume 7 ; 7 >
+      au < notReady ; 2009 ; Art, Design & Communication in Higher Education Volume 8 ; 8 >
+      au < notReady ; 2010 ; Art, Design & Communication in Higher Education Volume 9 ; 9 >
 
     }
 
@@ -71,7 +73,7 @@
       param[journal_id] = ajpc
       param[journal_issn] = 2045-5852
       
-      au < manifest ; 2011 ; The Australasian Journal of Popular Culture Volume 1 ; 1 >
+      au < notReady ; 2011 ; The Australasian Journal of Popular Culture Volume 1 ; 1 >
 
     }
     
@@ -85,9 +87,9 @@
       param[journal_id] = bsr
       param[journal_issn] = 1354-8697
       
-      au < manifest ; 2007 ; Baha'i Studies Review Volume 14 ; 14 >
-      au < manifest ; 2009 ; Baha'i Studies Review Volume 15 ; 15 >
-      au < manifest ; 2010 ; Baha'i Studies Review Volume 16 ; 16 >
+      au < notReady ; 2007 ; Baha'i Studies Review Volume 14 ; 14 >
+      au < notReady ; 2009 ; Baha'i Studies Review Volume 15 ; 15 >
+      au < notReady ; 2010 ; Baha'i Studies Review Volume 16 ; 16 >
 
     }
 
@@ -133,9 +135,9 @@
 	  param[journal_id] = cjcs
       param[journal_issn] = 1757-1898
 
-      au < manifest ; 2009 ; Catalan Journal of Communication & Cultural Studies Volume 1 ; 1 >
-      au < manifest ; 2010 ; Catalan Journal of Communication & Cultural Studies Volume 2 ; 2 >
-      au < manifest ; 2011 ; Catalan Journal of Communication & Cultural Studies Volume 3 ; 3 >
+      au < notReady ; 2009 ; Catalan Journal of Communication & Cultural Studies Volume 1 ; 1 >
+      au < notReady ; 2010 ; Catalan Journal of Communication & Cultural Studies Volume 2 ; 2 >
+      au < notReady ; 2011 ; Catalan Journal of Communication & Cultural Studies Volume 3 ; 3 >
 
     }
 
@@ -149,7 +151,7 @@
 	  param[journal_id] = chor
       param[journal_issn] = 2040-5669
 
-      au < manifest ; 2011 ; Choreographic Practices Volume 1 ; 1 >
+      au < notReady ; 2011 ; Choreographic Practices Volume 1 ; 1 >
 
     }
 
@@ -163,8 +165,8 @@
 	  param[journal_id] = ctl
       param[journal_issn] = 1751-1917
       
-      au < manifest ; 2010-2011 ; Citizenship Teaching and Learning Volume 6 ; 6 >
-      au < manifest ; 2011 ; Citizenship Teaching and Learning Volume 7 ; 7 >
+      au < notReady ; 2010-2011 ; Citizenship Teaching and Learning Volume 6 ; 6 >
+      au < notReady ; 2011 ; Citizenship Teaching and Learning Volume 7 ; 7 >
 
     }
 
@@ -178,8 +180,8 @@
       param[journal_id] = cost
       param[journal_issn] = 2040-610X
       
-      au < manifest ; 2010 ; Comedy Studies Volume 1 ; 1 >
-      au < manifest ; 2011 ; Comedy Studies Volume 2 ; 2 >
+      au < notReady ; 2010 ; Comedy Studies Volume 1 ; 1 >
+      au < notReady ; 2011 ; Comedy Studies Volume 2 ; 2 >
 
     }
 
@@ -193,8 +195,8 @@
       param[journal_id] = crre
       param[journal_issn] = 2040-4689
       
-      au < manifest ; 2010 ; Craft Research Volume 1 ; 1 >
-      au < manifest ; 2011 ; Craft Research Volume 2 ; 2 >
+      au < notReady ; 2010 ; Craft Research Volume 1 ; 1 >
+      au < notReady ; 2011 ; Craft Research Volume 2 ; 2 >
 
     }
 
@@ -208,10 +210,10 @@
       param[journal_id] = cij
       param[journal_issn] = 1751-0694
       
-      au < manifest ; 2008-2009 ; Creative Industries Journal Volume 1 ; 1 >
-      au < manifest ; 2009 ; Creative Industries Journal Volume 2 ; 2 >
-      au < manifest ; 2010-2011 ; Creative Industries Journal Volume 3 ; 3 >
-      au < manifest ; 2011 ; Creative Industries Journal Volume 4 ; 4 >
+      au < notReady ; 2008-2009 ; Creative Industries Journal Volume 1 ; 1 >
+      au < notReady ; 2009 ; Creative Industries Journal Volume 2 ; 2 >
+      au < notReady ; 2010-2011 ; Creative Industries Journal Volume 3 ; 3 >
+      au < notReady ; 2011 ; Creative Industries Journal Volume 4 ; 4 >
 
     }
 
@@ -225,7 +227,7 @@
       param[journal_id] = csfb
       param[journal_issn] = 2040-4417
       
-      au < manifest ; 2010 ; Critical Studies in Fashion & Beauty Volume 1 ; 1 >
+      au < notReady ; 2010 ; Critical Studies in Fashion & Beauty Volume 1 ; 1 >
 
     }
 
@@ -239,8 +241,8 @@
       param[journal_id] = cjmc
       param[journal_issn] = 2040-4344
       
-      au < manifest ; 2010 ; Crossings: Journal of Migration & Culture Volume 1 ; 1 >
-      au < manifest ; 2011 ; Crossings: Journal of Migration & Culture Volume 2 ; 2 >
+      au < notReady ; 2010 ; Crossings: Journal of Migration & Culture Volume 1 ; 1 >
+      au < notReady ; 2011 ; Crossings: Journal of Migration & Culture Volume 2 ; 2 >
 
     }
 
@@ -254,7 +256,7 @@
       param[journal_id] = des
       param[journal_issn] = 2043-068X
       
-      au < manifest ; 2011 ; Design Ecologies Volume 1 ; 1 >
+      au < notReady ; 2011 ; Design Ecologies Volume 1 ; 1 >
 
     }
 
@@ -268,8 +270,8 @@
       param[journal_id] = ejpc
       param[journal_issn] = 1757-1952
       
-      au < manifest ; 2009-2010 ; Empedocles: European Journal for the Philosophy of Communication Volume 1 ; 1 >
-      au < manifest ; 2011 ; Empedocles: European Journal for the Philosophy of Communication Volume 2 ; 2 >
+      au < notReady ; 2009-2010 ; Empedocles: European Journal for the Philosophy of Communication Volume 1 ; 1 >
+      au < notReady ; 2011 ; Empedocles: European Journal for the Philosophy of Communication Volume 2 ; 2 >
 
     }
 
@@ -283,17 +285,17 @@
       param[journal_id] = ejac
       param[journal_issn] = 1466-0407
       
-      au < manifest ; 2001-2002 ; European Journal of American Culture Volume 20 ; 20 >
-      au < manifest ; 2002 ; European Journal of American Culture Volume 21 ; 21 >
-      au < manifest ; 2003 ; European Journal of American Culture Volume 22 ; 22 >
-      au < manifest ; 2004 ; European Journal of American Culture Volume 23 ; 23 >
-      au < manifest ; 2005 ; European Journal of American Culture Volume 24 ; 24 >
-      au < manifest ; 2005-2007 ; European Journal of American Culture Volume 25 ; 25 >
-      au < manifest ; 2007-2008 ; European Journal of American Culture Volume 26 ; 26 >
-      au < manifest ; 2008 ; European Journal of American Culture Volume 27 ; 27 >
-      au < manifest ; 2009 ; European Journal of American Culture Volume 28 ; 28 >
-      au < manifest ; 2010-2011 ; European Journal of American Culture Volume 29 ; 29 >
-      au < manifest ; 2011 ; European Journal of American Culture Volume 30 ; 30 >
+      au < notReady ; 2001-2002 ; European Journal of American Culture Volume 20 ; 20 >
+      au < notReady ; 2002 ; European Journal of American Culture Volume 21 ; 21 >
+      au < notReady ; 2003 ; European Journal of American Culture Volume 22 ; 22 >
+      au < notReady ; 2004 ; European Journal of American Culture Volume 23 ; 23 >
+      au < notReady ; 2005 ; European Journal of American Culture Volume 24 ; 24 >
+      au < notReady ; 2005-2007 ; European Journal of American Culture Volume 25 ; 25 >
+      au < notReady ; 2007-2008 ; European Journal of American Culture Volume 26 ; 26 >
+      au < notReady ; 2008 ; European Journal of American Culture Volume 27 ; 27 >
+      au < notReady ; 2009 ; European Journal of American Culture Volume 28 ; 28 >
+      au < notReady ; 2010-2011 ; European Journal of American Culture Volume 29 ; 29 >
+      au < notReady ; 2011 ; European Journal of American Culture Volume 30 ; 30 >
 
     }
     
@@ -307,10 +309,10 @@
       param[journal_id] = eme
       param[journal_issn] = 1539-7785
       
-      au < manifest ; 2007 ; Explorations in Media Ecology Volume 6 ; 6 >
-      au < manifest ; 2008 ; Explorations in Media Ecology Volume 7 ; 7 >
-      au < manifest ; 2009 ; Explorations in Media Ecology Volume 8 ; 8 >
-      au < manifest ; 2010 ; Explorations in Media Ecology Volume 9 ; 9 >
+      au < notReady ; 2007 ; Explorations in Media Ecology Volume 6 ; 6 >
+      au < notReady ; 2008 ; Explorations in Media Ecology Volume 7 ; 7 >
+      au < notReady ; 2009 ; Explorations in Media Ecology Volume 8 ; 8 >
+      au < notReady ; 2010 ; Explorations in Media Ecology Volume 9 ; 9 >
 
     }
     
@@ -324,15 +326,15 @@
       param[journal_id] = fint
       param[journal_issn] = 1651-6826
       
-      au < manifest ; 2003 ; Film International Volume 1 ; 1 >
-      au < manifest ; 2004 ; Film International Volume 2 ; 2 >
-      au < manifest ; 2005 ; Film International Volume 3 ; 3 >
-      au < manifest ; 2006 ; Film International Volume 4 ; 4 >
-      au < manifest ; 2007 ; Film International Volume 5 ; 5 >
-      au < manifest ; 2008 ; Film International Volume 6 ; 6 >
-      au < manifest ; 2009 ; Film International Volume 7 ; 7 >
-      au < manifest ; 2010 ; Film International Volume 8 ; 8 >
-      au < manifest ; 2011 ; Film International Volume 9 ; 9 >
+      au < notReady ; 2003 ; Film International Volume 1 ; 1 >
+      au < notReady ; 2004 ; Film International Volume 2 ; 2 >
+      au < notReady ; 2005 ; Film International Volume 3 ; 3 >
+      au < notReady ; 2006 ; Film International Volume 4 ; 4 >
+      au < notReady ; 2007 ; Film International Volume 5 ; 5 >
+      au < notReady ; 2008 ; Film International Volume 6 ; 6 >
+      au < notReady ; 2009 ; Film International Volume 7 ; 7 >
+      au < notReady ; 2010 ; Film International Volume 8 ; 8 >
+      au < notReady ; 2011 ; Film International Volume 9 ; 9 >
 
     }
 
@@ -346,8 +348,8 @@
       param[journal_id] = fm
       param[journal_issn] = 2042-1869
       
-      au < manifest ; 2010-2011 ; Film Matters Volume 1 ; 1 >
-      au < manifest ; 2011 ; Film Matters Volume 2 ; 2 >
+      au < notReady ; 2010-2011 ; Film Matters Volume 1 ; 1 >
+      au < notReady ; 2011 ; Film Matters Volume 2 ; 2 >
 
     }
 
@@ -361,7 +363,7 @@
       param[journal_id] = ffc
       param[journal_issn] = 2044-2823
       
-      au < manifest ; 2011 ; Film, Fashion & Consumption Volume 1 ; 1 >
+      au < notReady ; 2011 ; Film, Fashion & Consumption Volume 1 ; 1 >
       
     }
 
@@ -374,8 +376,8 @@
       param[journal_id] = host
       param[journal_issn] = 2040-3275
 
-      au < manifest ; 2010 ; Horror Studies Volume 1 ; 1 >
-      au < manifest ; 2011 ; Horror Studies Volume 2 ; 2 >
+      au < notReady ; 2010 ; Horror Studies Volume 1 ; 1 >
+      au < notReady ; 2011 ; Horror Studies Volume 2 ; 2 >
  
     }
 
@@ -388,7 +390,7 @@
       param[journal_id] = hosp
       param[journal_issn] = 2042-7913
 
-      au < manifest ; 2011 ; Hospitality & Society Volume 1 ; 1 >
+      au < notReady ; 2011 ; Hospitality & Society Volume 1 ; 1 >
  
     }
 
@@ -401,7 +403,7 @@
       param[journal_id] = iscc
       param[journal_issn] = 1757-2681
 
-      au < manifest ; 2009-2011 ; Interactions: Studies in Communication & Culture Volume 1 ; 1 >
+      au < notReady ; 2009-2011 ; Interactions: Studies in Communication & Culture Volume 1 ; 1 >
  
     }
 
@@ -414,10 +416,10 @@
       param[journal_id] = ijcm
       param[journal_issn] = 1752-6299
 
-      au < manifest ; 2007-2009 ; International Journal of Community Music Volume 1 ; 1 >
-      au < manifest ; 2009 ; International Journal of Community Music Volume 2 ; 2 >
-      au < manifest ; 2010 ; International Journal of Community Music Volume 3 ; 3 >
-      au < manifest ; 2011 ; International Journal of Community Music Volume 4 ; 4 >
+      au < notReady ; 2007-2009 ; International Journal of Community Music Volume 1 ; 1 >
+      au < notReady ; 2009 ; International Journal of Community Music Volume 2 ; 2 >
+      au < notReady ; 2010 ; International Journal of Community Music Volume 3 ; 3 >
+      au < notReady ; 2011 ; International Journal of Community Music Volume 4 ; 4 >
 
     }
 
@@ -430,11 +432,11 @@
       param[journal_id] = ijcis
       param[journal_issn] = 1751-2867
 
-      au < manifest ; 2006-2007 ; International Journal of Contemporary Iraqi Studies Volume 1 ; 1 >
-      au < manifest ; 2008-2009 ; International Journal of Contemporary Iraqi Studies Volume 2 ; 2 >
-      au < manifest ; 2009 ; International Journal of Contemporary Iraqi Studies Volume 3 ; 3 >
-      au < manifest ; 2010 ; International Journal of Contemporary Iraqi Studies Volume 4 ; 4 >
-      au < manifest ; 2011 ; International Journal of Contemporary Iraqi Studies Volume 5 ; 5 >
+      au < notReady ; 2006-2007 ; International Journal of Contemporary Iraqi Studies Volume 1 ; 1 >
+      au < notReady ; 2008-2009 ; International Journal of Contemporary Iraqi Studies Volume 2 ; 2 >
+      au < notReady ; 2009 ; International Journal of Contemporary Iraqi Studies Volume 3 ; 3 >
+      au < notReady ; 2010 ; International Journal of Contemporary Iraqi Studies Volume 4 ; 4 >
+      au < notReady ; 2011 ; International Journal of Contemporary Iraqi Studies Volume 5 ; 5 >
 
     }
 
@@ -447,8 +449,8 @@
       param[journal_id] = jdtv
       param[journal_issn] = 2040-4182
 
-      au < manifest ; 2010 ; International Journal of Digital Television Volume 1 ; 1 >
-      au < manifest ; 2011 ; International Journal of Digital Television Volume 2 ; 2 >
+      au < notReady ; 2010 ; International Journal of Digital Television Volume 1 ; 1 >
+      au < notReady ; 2011 ; International Journal of Digital Television Volume 2 ; 2 >
  
     }
 
@@ -461,13 +463,13 @@
       param[journal_id] = eta
       param[journal_issn] = 1743-5234
 
-      au < manifest ; 2005 ; International Journal of Education through Art Volume 1 ; 1 >
-      au < manifest ; 2006 ; International Journal of Education through Art Volume 2 ; 2 >
-      au < manifest ; 2007-2008 ; International Journal of Education through Art Volume 3 ; 3 >
-      au < manifest ; 2008 ; International Journal of Education through Art Volume 4 ; 4 >
-      au < manifest ; 2009 ; International Journal of Education through Art Volume 5 ; 5 >
-      au < manifest ; 2010 ; International Journal of Education through Art Volume 6 ; 6 >
-      au < manifest ; 2011 ; International Journal of Education through Art Volume 7 ; 7 >
+      au < notReady ; 2005 ; International Journal of Education through Art Volume 1 ; 1 >
+      au < notReady ; 2006 ; International Journal of Education through Art Volume 2 ; 2 >
+      au < notReady ; 2007-2008 ; International Journal of Education through Art Volume 3 ; 3 >
+      au < notReady ; 2008 ; International Journal of Education through Art Volume 4 ; 4 >
+      au < notReady ; 2009 ; International Journal of Education through Art Volume 5 ; 5 >
+      au < notReady ; 2010 ; International Journal of Education through Art Volume 6 ; 6 >
+      au < notReady ; 2011 ; International Journal of Education through Art Volume 7 ; 7 >
 
     }
     
@@ -480,17 +482,17 @@
       param[journal_id] = ijfs
       param[journal_issn] = 1368-2679
 
-      au < manifest ; 2002 ; International Journal of Francophone Studies Volume 4 ; 4 >
-      au < manifest ; 2003 ; International Journal of Francophone Studies Volume 5 ; 5 >
-      au < manifest ; 2003 ; International Journal of Francophone Studies Volume 6 ; 6 >
-      au < manifest ; 2004 ; International Journal of Francophone Studies Volume 7 ; 7 >
-      au < manifest ; 2005 ; International Journal of Francophone Studies Volume 8 ; 8 >
-      au < manifest ; 2006 ; International Journal of Francophone Studies Volume 9 ; 9 >
-      au < manifest ; 2007 ; International Journal of Francophone Studies Volume 10 ; 10 >
-      au < manifest ; 2008 ; International Journal of Francophone Studies Volume 11 ; 11 >
-      au < manifest ; 2009 ; International Journal of Francophone Studies Volume 12 ; 12 >
-      au < manifest ; 2010-2011 ; International Journal of Francophone Studies Volume 13 ; 13 >
-      au < manifest ; 2011 ; International Journal of Francophone Studies Volume 14 ; 14 >
+      au < notReady ; 2002 ; International Journal of Francophone Studies Volume 4 ; 4 >
+      au < notReady ; 2003 ; International Journal of Francophone Studies Volume 5 ; 5 >
+      au < notReady ; 2003 ; International Journal of Francophone Studies Volume 6 ; 6 >
+      au < notReady ; 2004 ; International Journal of Francophone Studies Volume 7 ; 7 >
+      au < notReady ; 2005 ; International Journal of Francophone Studies Volume 8 ; 8 >
+      au < notReady ; 2006 ; International Journal of Francophone Studies Volume 9 ; 9 >
+      au < notReady ; 2007 ; International Journal of Francophone Studies Volume 10 ; 10 >
+      au < notReady ; 2008 ; International Journal of Francophone Studies Volume 11 ; 11 >
+      au < notReady ; 2009 ; International Journal of Francophone Studies Volume 12 ; 12 >
+      au < notReady ; 2010-2011 ; International Journal of Francophone Studies Volume 13 ; 13 >
+      au < notReady ; 2011 ; International Journal of Francophone Studies Volume 14 ; 14 >
 
     }
     
@@ -503,17 +505,17 @@
       param[journal_id] = ijis
       param[journal_issn] = 1364-971X
 
-      au < manifest ; 2001 ; International Journal of Iberian Studies Volume 14 ; 14 >
-      au < manifest ; 2002-2003 ; International Journal of Iberian Studies Volume 15 ; 15 >
-      au < manifest ; 2003-2004 ; International Journal of Iberian Studies Volume 16 ; 16 >
-      au < manifest ; 2004 ; International Journal of Iberian Studies Volume 17 ; 17 >
-      au < manifest ; 2005 ; International Journal of Iberian Studies Volume 18 ; 18 >
-      au < manifest ; 2006-2007 ; International Journal of Iberian Studies Volume 19 ; 19 >
-      au < manifest ; 2007 ; International Journal of Iberian Studies Volume 20 ; 20 >
-      au < manifest ; 2008 ; International Journal of Iberian Studies Volume 21 ; 21 >
-      au < manifest ; 2009 ; International Journal of Iberian Studies Volume 22 ; 22 >
-      au < manifest ; 2010 ; International Journal of Iberian Studies Volume 23 ; 23 >
-      au < manifest ; 2011 ; International Journal of Iberian Studies Volume 24 ; 24 >
+      au < notReady ; 2001 ; International Journal of Iberian Studies Volume 14 ; 14 >
+      au < notReady ; 2002-2003 ; International Journal of Iberian Studies Volume 15 ; 15 >
+      au < notReady ; 2003-2004 ; International Journal of Iberian Studies Volume 16 ; 16 >
+      au < notReady ; 2004 ; International Journal of Iberian Studies Volume 17 ; 17 >
+      au < notReady ; 2005 ; International Journal of Iberian Studies Volume 18 ; 18 >
+      au < notReady ; 2006-2007 ; International Journal of Iberian Studies Volume 19 ; 19 >
+      au < notReady ; 2007 ; International Journal of Iberian Studies Volume 20 ; 20 >
+      au < notReady ; 2008 ; International Journal of Iberian Studies Volume 21 ; 21 >
+      au < notReady ; 2009 ; International Journal of Iberian Studies Volume 22 ; 22 >
+      au < notReady ; 2010 ; International Journal of Iberian Studies Volume 23 ; 23 >
+      au < notReady ; 2011 ; International Journal of Iberian Studies Volume 24 ; 24 >
 
     }
     
@@ -536,13 +538,13 @@
       param[journal_id] = mpc
       param[journal_issn] = 1740-8296
 
-      au < manifest ; 2005 ; International Journal of Media & Cultural Politics Volume 1 ; 1 >
-      au < manifest ; 2006-2007 ; International Journal of Media & Cultural Politics Volume 2 ; 2 >
-      au < manifest ; 2007 ; International Journal of Media & Cultural Politics Volume 3 ; 3 >
-      au < manifest ; 2008 ; International Journal of Media & Cultural Politics Volume 4 ; 4 >
-      au < manifest ; 2009 ; International Journal of Media & Cultural Politics Volume 5 ; 5 >
-      au < manifest ; 2010-2011 ; International Journal of Media & Cultural Politics Volume 6 ; 6 >
-      au < manifest ; 2011 ; International Journal of Media & Cultural Politics Volume 7 ; 7 >
+      au < notReady ; 2005 ; International Journal of Media & Cultural Politics Volume 1 ; 1 >
+      au < notReady ; 2006-2007 ; International Journal of Media & Cultural Politics Volume 2 ; 2 >
+      au < notReady ; 2007 ; International Journal of Media & Cultural Politics Volume 3 ; 3 >
+      au < notReady ; 2008 ; International Journal of Media & Cultural Politics Volume 4 ; 4 >
+      au < notReady ; 2009 ; International Journal of Media & Cultural Politics Volume 5 ; 5 >
+      au < notReady ; 2010-2011 ; International Journal of Media & Cultural Politics Volume 6 ; 6 >
+      au < notReady ; 2011 ; International Journal of Media & Cultural Politics Volume 7 ; 7 >
 
     }
 
@@ -564,14 +566,14 @@
       param[journal_id] = jotsc
       param[journal_issn] = 1477-9633
 
-      au < manifest ; 2004 ; Journal of Organisation Transformation & Social Change Volume 1 ; 1 >
-      au < manifest ; 2005 ; Journal of Organisation Transformation & Social Change Volume 2 ; 2 >
-      au < manifest ; 2006-2007 ; Journal of Organisation Transformation & Social Change Volume 3 ; 3 >
-      au < manifest ; 2007 ; Journal of Organisation Transformation & Social Change Volume 4 ; 4 >
-      au < manifest ; 2008 ; Journal of Organisation Transformation & Social Change Volume 5 ; 5 >
-      au < manifest ; 2009 ; Journal of Organisation Transformation & Social Change Volume 6 ; 6 >
-      au < manifest ; 2010 ; Journal of Organisation Transformation & Social Change Volume 7 ; 7 >
-      au < manifest ; 2011 ; Journal of Organisation Transformation & Social Change Volume 8 ; 8 >
+      au < notReady ; 2004 ; Journal of Organisation Transformation & Social Change Volume 1 ; 1 >
+      au < notReady ; 2005 ; Journal of Organisation Transformation & Social Change Volume 2 ; 2 >
+      au < notReady ; 2006-2007 ; Journal of Organisation Transformation & Social Change Volume 3 ; 3 >
+      au < notReady ; 2007 ; Journal of Organisation Transformation & Social Change Volume 4 ; 4 >
+      au < notReady ; 2008 ; Journal of Organisation Transformation & Social Change Volume 5 ; 5 >
+      au < notReady ; 2009 ; Journal of Organisation Transformation & Social Change Volume 6 ; 6 >
+      au < notReady ; 2010 ; Journal of Organisation Transformation & Social Change Volume 7 ; 7 >
+      au < notReady ; 2011 ; Journal of Organisation Transformation & Social Change Volume 8 ; 8 >
 
     }
 
@@ -584,7 +586,7 @@
       param[journal_id] = jsca
       param[journal_issn] = 2042-7891
 
-      au < manifest ; 2010-11 ; Journal of Scandinavian Cinema Volume 1 ; 1 >
+      au < notReady ; 2010-11 ; Journal of Scandinavian Cinema Volume 1 ; 1 >
 
     }
 
@@ -597,9 +599,9 @@
       param[journal_id] = josc
       param[journal_issn] = 1759-7137
 
-      au < manifest ; 2010 ; Journal of Screenwriting Volume 1 ; 1 >
-      au < manifest ; 2011 ; Journal of Screenwriting Volume 2 ; 2 >
-      au < manifest ; 2011 ; Journal of Screenwriting Volume 3 ; 3 >
+      au < notReady ; 2010 ; Journal of Screenwriting Volume 1 ; 1 >
+      au < notReady ; 2011 ; Journal of Screenwriting Volume 2 ; 2 >
+      au < notReady ; 2011 ; Journal of Screenwriting Volume 3 ; 3 >
 
     }
 
@@ -612,16 +614,16 @@
       param[journal_id] = jvap
       param[journal_issn] = 1470-2029
 
-      au < manifest ; 2001-2002 ; Journal of Visual Art Practice Volume 1 ; 1 >
-      au < manifest ; 2002-2003 ; Journal of Visual Art Practice Volume 2 ; 2 >
-      au < manifest ; 2004 ; Journal of Visual Art Practice Volume 3 ; 3 >
-      au < manifest ; 2005 ; Journal of Visual Art Practice Volume 4 ; 4 >
-      au < manifest ; 2006 ; Journal of Visual Art Practice Volume 5 ; 5 >
-      au < manifest ; 2007 ; Journal of Visual Art Practice Volume 6 ; 6 >
-      au < manifest ; 2008 ; Journal of Visual Art Practice Volume 7 ; 7 >
-      au < manifest ; 2009 ; Journal of Visual Art Practice Volume 8 ; 8 >
-      au < manifest ; 2010 ; Journal of Visual Art Practice Volume 9 ; 9 >
-      au < manifest ; 2011 ; Journal of Visual Art Practice Volume 10 ; 10 >
+      au < notReady ; 2001-2002 ; Journal of Visual Art Practice Volume 1 ; 1 >
+      au < notReady ; 2002-2003 ; Journal of Visual Art Practice Volume 2 ; 2 >
+      au < notReady ; 2004 ; Journal of Visual Art Practice Volume 3 ; 3 >
+      au < notReady ; 2005 ; Journal of Visual Art Practice Volume 4 ; 4 >
+      au < notReady ; 2006 ; Journal of Visual Art Practice Volume 5 ; 5 >
+      au < notReady ; 2007 ; Journal of Visual Art Practice Volume 6 ; 6 >
+      au < notReady ; 2008 ; Journal of Visual Art Practice Volume 7 ; 7 >
+      au < notReady ; 2009 ; Journal of Visual Art Practice Volume 8 ; 8 >
+      au < notReady ; 2010 ; Journal of Visual Art Practice Volume 9 ; 9 >
+      au < notReady ; 2011 ; Journal of Visual Art Practice Volume 10 ; 10 >
 
     }
             
@@ -634,13 +636,13 @@
       param[journal_id] = padm
       param[journal_issn] = 1479-4713
 
-      au < manifest ; 2005 ; International Journal of Performance Arts & Digital Media Volume 1 ; 1 >
-      au < manifest ; 2006-2007 ; International Journal of Performance Arts & Digital Media Volume 2 ; 2 >
-      au < manifest ; 2007 ; International Journal of Performance Arts & Digital Media Volume 3 ; 3 >
-      au < manifest ; 2008 ; International Journal of Performance Arts & Digital Media Volume 4 ; 4 >
-      au < manifest ; 2009 ; International Journal of Performance Arts & Digital Media Volume 5 ; 5 >
-      au < manifest ; 2010 ; International Journal of Performance Arts & Digital Media Volume 6 ; 6 >
-      au < manifest ; 2011 ; International Journal of Performance Arts & Digital Media Volume 7 ; 7 >
+      au < notReady ; 2005 ; International Journal of Performance Arts & Digital Media Volume 1 ; 1 >
+      au < notReady ; 2006-2007 ; International Journal of Performance Arts & Digital Media Volume 2 ; 2 >
+      au < notReady ; 2007 ; International Journal of Performance Arts & Digital Media Volume 3 ; 3 >
+      au < notReady ; 2008 ; International Journal of Performance Arts & Digital Media Volume 4 ; 4 >
+      au < notReady ; 2009 ; International Journal of Performance Arts & Digital Media Volume 5 ; 5 >
+      au < notReady ; 2010 ; International Journal of Performance Arts & Digital Media Volume 6 ; 6 >
+      au < notReady ; 2011 ; International Journal of Performance Arts & Digital Media Volume 7 ; 7 >
 
     }
 
@@ -653,16 +655,16 @@
       param[journal_id] = tmsd
       param[journal_issn] = 1474-2748
 
-      au < manifest ; 2002 ; International Journal of Technology Management & Sustainable Development Volume 1 ; 1 >
-      au < manifest ; 2003-2004 ; International Journal of Technology Management & Sustainable Development Volume 2 ; 2 >
-      au < manifest ; 2004 ; International Journal of Technology Management & Sustainable Development Volume 3 ; 3 >
-      au < manifest ; 2005 ; International Journal of Technology Management & Sustainable Development Volume 4 ; 4 >
-      au < manifest ; 2006 ; International Journal of Technology Management & Sustainable Development Volume 5 ; 5 >
-      au < manifest ; 2007 ; International Journal of Technology Management & Sustainable Development Volume 6 ; 6 >
-      au < manifest ; 2008 ; International Journal of Technology Management & Sustainable Development Volume 7 ; 7 >
-      au < manifest ; 2009 ; International Journal of Technology Management & Sustainable Development Volume 8 ; 8 >
-      au < manifest ; 2010-2011 ; International Journal of Technology Management & Sustainable Development Volume 9 ; 9 >
-      au < manifest ; 2011 ; International Journal of Technology Management & Sustainable Development Volume 10 ; 10 >
+      au < notReady ; 2002 ; International Journal of Technology Management & Sustainable Development Volume 1 ; 1 >
+      au < notReady ; 2003-2004 ; International Journal of Technology Management & Sustainable Development Volume 2 ; 2 >
+      au < notReady ; 2004 ; International Journal of Technology Management & Sustainable Development Volume 3 ; 3 >
+      au < notReady ; 2005 ; International Journal of Technology Management & Sustainable Development Volume 4 ; 4 >
+      au < notReady ; 2006 ; International Journal of Technology Management & Sustainable Development Volume 5 ; 5 >
+      au < notReady ; 2007 ; International Journal of Technology Management & Sustainable Development Volume 6 ; 6 >
+      au < notReady ; 2008 ; International Journal of Technology Management & Sustainable Development Volume 7 ; 7 >
+      au < notReady ; 2009 ; International Journal of Technology Management & Sustainable Development Volume 8 ; 8 >
+      au < notReady ; 2010-2011 ; International Journal of Technology Management & Sustainable Development Volume 9 ; 9 >
+      au < notReady ; 2011 ; International Journal of Technology Management & Sustainable Development Volume 10 ; 10 >
 
     }
 
@@ -675,10 +677,10 @@
       param[journal_id] = jafp
       param[journal_issn] = 1753-6421
 
-      au < manifest ; 2007-2009 ; Journal of Adaptation in Film & Performance Volume 1 ; 1 >
-      au < manifest ; 2009 ; Journal of Adaptation in Film & Performance Volume 2 ; 2 >
-      au < manifest ; 2010-2011 ; Journal of Adaptation in Film & Performance Volume 3 ; 3 >
-      au < manifest ; 2011 ; Journal of Adaptation in Film & Performance Volume 4 ; 4 >
+      au < notReady ; 2007-2009 ; Journal of Adaptation in Film & Performance Volume 1 ; 1 >
+      au < notReady ; 2009 ; Journal of Adaptation in Film & Performance Volume 2 ; 2 >
+      au < notReady ; 2010-2011 ; Journal of Adaptation in Film & Performance Volume 3 ; 3 >
+      au < notReady ; 2011 ; Journal of Adaptation in Film & Performance Volume 4 ; 4 >
 
     }
 
@@ -691,9 +693,9 @@
       param[journal_id] = jac
       param[journal_issn] = 1754-9221
 
-      au < manifest ; 2009 ; Journal of African Cinema Volume 1 ; 1 >
-      au < manifest ; 2010 ; Journal of African Cinema Volume 2 ; 2 >
-      au < manifest ; 2011 ; Journal of African Cinema Volume 3 ; 3 >
+      au < notReady ; 2009 ; Journal of African Cinema Volume 1 ; 1 >
+      au < notReady ; 2010 ; Journal of African Cinema Volume 2 ; 2 >
+      au < notReady ; 2011 ; Journal of African Cinema Volume 3 ; 3 >
 
     }
 
@@ -706,9 +708,9 @@
       param[journal_id] = jams
       param[journal_issn] = 2040-199X
 
-      au < manifest ; 2009 ; Journal of African Media Studies Volume 1 ; 1 >
-      au < manifest ; 2010 ; Journal of African Media Studies Volume 2 ; 2 >
-      au < manifest ; 2011 ; Journal of African Media Studies Volume 3 ; 3 >
+      au < notReady ; 2009 ; Journal of African Media Studies Volume 1 ; 1 >
+      au < notReady ; 2010 ; Journal of African Media Studies Volume 2 ; 2 >
+      au < notReady ; 2011 ; Journal of African Media Studies Volume 3 ; 3 >
 
     }
 
@@ -721,8 +723,8 @@
       param[journal_id] = jaah
       param[journal_issn] = 2040-2457
 
-      au < manifest ; 2010 ; Journal of Applied Arts & Health Volume 1 ; 1 >
-      au < manifest ; 2011 ; Journal of Applied Arts & Health Volume 2 ; 2 >
+      au < notReady ; 2010 ; Journal of Applied Arts & Health Volume 1 ; 1 >
+      au < notReady ; 2011 ; Journal of Applied Arts & Health Volume 2 ; 2 >
 
     }
 
@@ -735,10 +737,10 @@
       param[journal_id] = jammr
       param[journal_issn] = 1751-9411
 
-      au < manifest ; 2007-2009 ; Journal of Arab & Muslim Media Research Volume 1 ; 1 >
-      au < manifest ; 2009 ; Journal of Arab & Muslim Media Research Volume 2 ; 2 >
-      au < manifest ; 2010 ; Journal of Arab & Muslim Media Research Volume 3 ; 3 >
-      au < manifest ; 2011 ; Journal of Arab & Muslim Media Research Volume 4 ; 4 >
+      au < notReady ; 2007-2009 ; Journal of Arab & Muslim Media Research Volume 1 ; 1 >
+      au < notReady ; 2009 ; Journal of Arab & Muslim Media Research Volume 2 ; 2 >
+      au < notReady ; 2010 ; Journal of Arab & Muslim Media Research Volume 3 ; 3 >
+      au < notReady ; 2011 ; Journal of Arab & Muslim Media Research Volume 4 ; 4 >
 
     }
 
@@ -751,8 +753,8 @@
       param[journal_id] = jaac
       param[journal_issn] = 1757-1936
 
-      au < manifest ; 2009-2011 ; Journal of Arts & Communities Volume 1 ; 1 >
-      au < manifest ; 2011 ; Journal of Arts & Communities Volume 2 ; 2 >
+      au < notReady ; 2009-2011 ; Journal of Arts & Communities Volume 1 ; 1 >
+      au < notReady ; 2011 ; Journal of Arts & Communities Volume 2 ; 2 >
 
     }
 
@@ -765,11 +767,11 @@
       param[journal_id] = jcc
       param[journal_issn] = 1750-8061
 
-      au < manifest ; 2006-2007 ; Journal of Chinese Cinemas Volume 1 ; 1 >
-      au < manifest ; 2008 ; Journal of Chinese Cinemas Volume 2 ; 2 >
-      au < manifest ; 2009 ; Journal of Chinese Cinemas Volume 3 ; 3 >
-      au < manifest ; 2010 ; Journal of Chinese Cinemas Volume 4 ; 4 >
-      au < manifest ; 2011 ; Journal of Chinese Cinemas Volume 5 ; 5 >
+      au < notReady ; 2006-2007 ; Journal of Chinese Cinemas Volume 1 ; 1 >
+      au < notReady ; 2008 ; Journal of Chinese Cinemas Volume 2 ; 2 >
+      au < notReady ; 2009 ; Journal of Chinese Cinemas Volume 3 ; 3 >
+      au < notReady ; 2010 ; Journal of Chinese Cinemas Volume 4 ; 4 >
+      au < notReady ; 2011 ; Journal of Chinese Cinemas Volume 5 ; 5 >
 
     }
 
@@ -792,8 +794,8 @@
       param[journal_id] = jdsp
       param[journal_issn] = 1757-1871
 
-      au < manifest ; 2009 ; Journal of Dance & Somatic Practices Volume 1 ; 1 >
-      au < manifest ; 2010 ; Journal of Dance & Somatic Practices Volume 2 ; 2 >
+      au < notReady ; 2009 ; Journal of Dance & Somatic Practices Volume 1 ; 1 >
+      au < notReady ; 2010 ; Journal of Dance & Somatic Practices Volume 2 ; 2 >
 
     }
 
@@ -807,7 +809,7 @@
       param[journal_id] = jepc
       param[journal_issn] = 2040-6134
 
-      au < manifest ; 2010 ; Journal of European Popular Culture Volume 1 ; 1 >
+      au < notReady ; 2010 ; Journal of European Popular Culture Volume 1 ; 1 >
 
     }
 
@@ -832,9 +834,9 @@
       param[journal_id] = jgvw
       param[journal_issn] = 1757-191X
 
-      au < manifest ; 2009 ; Journal of Gaming & Virtual Worlds Volume 1 ; 1 >
-      au < manifest ; 2010 ; Journal of Gaming & Virtual Worlds Volume 2 ; 2 >
-      au < manifest ; 2011 ; Journal of Gaming & Virtual Worlds Volume 3 ; 3 >
+      au < notReady ; 2009 ; Journal of Gaming & Virtual Worlds Volume 1 ; 1 >
+      au < notReady ; 2010 ; Journal of Gaming & Virtual Worlds Volume 2 ; 2 >
+      au < notReady ; 2011 ; Journal of Gaming & Virtual Worlds Volume 3 ; 3 >
 
     }
 
@@ -848,8 +850,8 @@
       param[journal_id] = jjkc
       param[journal_issn] = 1756-4905
 
-      au < manifest ; 2009 ; Journal of Japanese & Korean Cinema Volume 1 ; 1 >
-      au < manifest ; 2010-2011 ; Journal of Japanese & Korean Cinema Volume 2 ; 2 >
+      au < notReady ; 2009 ; Journal of Japanese & Korean Cinema Volume 1 ; 1 >
+      au < notReady ; 2010-2011 ; Journal of Japanese & Korean Cinema Volume 2 ; 2 >
 
     }
 
@@ -863,17 +865,17 @@
       param[journal_id] = jmp
       param[journal_issn] = 1468-2753
 
-      au < manifest ; 2001-2002 ; Journal of Media Practice Volume 2 ; 2 >
-      au < manifest ; 2002-2003 ; Journal of Media Practice Volume 3 ; 3 >
-      au < manifest ; 2003-2004 ; Journal of Media Practice Volume 4 ; 4 >
-      au < manifest ; 2004 ; Journal of Media Practice Volume 5 ; 5 >
-      au < manifest ; 2005 ; Journal of Media Practice Volume 6 ; 6 >
-      au < manifest ; 2006-2007 ; Journal of Media Practice Volume 7 ; 7 >
-      au < manifest ; 2007 ; Journal of Media Practice Volume 8 ; 8 >
-      au < manifest ; 2008 ; Journal of Media Practice Volume 9 ; 9 >
-      au < manifest ; 2009 ; Journal of Media Practice Volume 10 ; 10 >
-      au < manifest ; 2010 ; Journal of Media Practice Volume 11 ; 11 >
-      au < manifest ; 2011 ; Journal of Media Practice Volume 12 ; 12 >
+      au < notReady ; 2001-2002 ; Journal of Media Practice Volume 2 ; 2 >
+      au < notReady ; 2002-2003 ; Journal of Media Practice Volume 3 ; 3 >
+      au < notReady ; 2003-2004 ; Journal of Media Practice Volume 4 ; 4 >
+      au < notReady ; 2004 ; Journal of Media Practice Volume 5 ; 5 >
+      au < notReady ; 2005 ; Journal of Media Practice Volume 6 ; 6 >
+      au < notReady ; 2006-2007 ; Journal of Media Practice Volume 7 ; 7 >
+      au < notReady ; 2007 ; Journal of Media Practice Volume 8 ; 8 >
+      au < notReady ; 2008 ; Journal of Media Practice Volume 9 ; 9 >
+      au < notReady ; 2009 ; Journal of Media Practice Volume 10 ; 10 >
+      au < notReady ; 2010 ; Journal of Media Practice Volume 11 ; 11 >
+      au < notReady ; 2011 ; Journal of Media Practice Volume 12 ; 12 >
 
     }
 
@@ -887,10 +889,10 @@
       param[journal_id] = jmte
       param[journal_issn] = 1752-7066
 
-      au < manifest ; 2007-2008 ; Journal of Music, Technology & Education Volume 1 ; 1 >
-      au < manifest ; 2009 ; Journal of Music, Technology & Education Volume 2 ; 2 >
-      au < manifest ; 2010-2011 ; Journal of Music, Technology & Education Volume 3 ; 3 >
-      au < manifest ; 2011 ; Journal of Music, Technology & Education Volume 4 ; 4 >
+      au < notReady ; 2007-2008 ; Journal of Music, Technology & Education Volume 1 ; 1 >
+      au < notReady ; 2009 ; Journal of Music, Technology & Education Volume 2 ; 2 >
+      au < notReady ; 2010-2011 ; Journal of Music, Technology & Education Volume 3 ; 3 >
+      au < notReady ; 2011 ; Journal of Music, Technology & Education Volume 4 ; 4 >
 
     }
     {
@@ -914,10 +916,10 @@
       param[journal_id] = jwcs
       param[journal_issn] = 1752-6272
 
-      au < manifest ; 2007-2008 ; Journal of War & Culture Studies Volume 1 ; 1 >
-      au < manifest ; 2009 ; Journal of War & Culture Studies Volume 2 ; 2 >
-      au < manifest ; 2010-2011 ; Journal of War & Culture Studies Volume 3 ; 3 >
-      au < manifest ; 2011 ; Journal of War & Culture Studies Volume 4 ; 4 >
+      au < notReady ; 2007-2008 ; Journal of War & Culture Studies Volume 1 ; 1 >
+      au < notReady ; 2009 ; Journal of War & Culture Studies Volume 2 ; 2 >
+      au < notReady ; 2010-2011 ; Journal of War & Culture Studies Volume 3 ; 3 >
+      au < notReady ; 2011 ; Journal of War & Culture Studies Volume 4 ; 4 >
 
     }
 
@@ -931,10 +933,10 @@
       param[journal_id] = jwcp
       param[journal_issn] = 1753-5190
 
-      au < manifest ; 2007-2008 ; Journal of Writing in Creative Practice Volume 1 ; 1 >
-      au < manifest ; 2009 ; Journal of Writing in Creative Practice Volume 2 ; 2 >
-      au < manifest ; 2010 ; Journal of Writing in Creative Practice Volume 3 ; 3 >
-      au < manifest ; 2011 ; Journal of Writing in Creative Practice Volume 4 ; 4 >
+      au < notReady ; 2007-2008 ; Journal of Writing in Creative Practice Volume 1 ; 1 >
+      au < notReady ; 2009 ; Journal of Writing in Creative Practice Volume 2 ; 2 >
+      au < notReady ; 2010 ; Journal of Writing in Creative Practice Volume 3 ; 3 >
+      au < notReady ; 2011 ; Journal of Writing in Creative Practice Volume 4 ; 4 >
 
     }
 
@@ -956,7 +958,7 @@
       param[journal_id] = mecr
       param[journal_issn] = 2040-3550
 
-      au < manifest ; 2010-2011 ; Metaverse Creativity Volume 1 ; 1 >
+      au < notReady ; 2010-2011 ; Metaverse Creativity Volume 1 ; 1 >
 
     }
 
@@ -979,15 +981,15 @@
       param[journal_id] = nc
       param[journal_issn] = 1474-2756
 
-      au < manifest ; 2002-2003 ; New Cinemas: Journal of Contemporary Film Volume 1 ; 1 >
-      au < manifest ; 2004 ; New Cinemas: Journal of Contemporary Film Volume 2 ; 2 >
-      au < manifest ; 2005 ; New Cinemas: Journal of Contemporary Film Volume 3 ; 3 >
-      au < manifest ; 2006-2007 ; New Cinemas: Journal of Contemporary Film Volume 4 ; 4 >
-      au < manifest ; 2007 ; New Cinemas: Journal of Contemporary Film Volume 5 ; 5 >
-      au < manifest ; 2008-2009 ; New Cinemas: Journal of Contemporary Film Volume 6 ; 6 >
-      au < manifest ; 2009 ; New Cinemas: Journal of Contemporary Film Volume 7 ; 7 >
-      au < manifest ; 2010-2011 ; New Cinemas: Journal of Contemporary Film Volume 8 ; 8 >
-      au < manifest ; 2011 ; New Cinemas: Journal of Contemporary Film Volume 9 ; 9 >
+      au < notReady ; 2002-2003 ; New Cinemas: Journal of Contemporary Film Volume 1 ; 1 >
+      au < notReady ; 2004 ; New Cinemas: Journal of Contemporary Film Volume 2 ; 2 >
+      au < notReady ; 2005 ; New Cinemas: Journal of Contemporary Film Volume 3 ; 3 >
+      au < notReady ; 2006-2007 ; New Cinemas: Journal of Contemporary Film Volume 4 ; 4 >
+      au < notReady ; 2007 ; New Cinemas: Journal of Contemporary Film Volume 5 ; 5 >
+      au < notReady ; 2008-2009 ; New Cinemas: Journal of Contemporary Film Volume 6 ; 6 >
+      au < notReady ; 2009 ; New Cinemas: Journal of Contemporary Film Volume 7 ; 7 >
+      au < notReady ; 2010-2011 ; New Cinemas: Journal of Contemporary Film Volume 8 ; 8 >
+      au < notReady ; 2011 ; New Cinemas: Journal of Contemporary Film Volume 9 ; 9 >
 
     }
 
@@ -1001,11 +1003,11 @@
       param[journal_id] = nl
       param[journal_issn] = 1601-829X
 
-      au < manifest ; 2007 ; Northern Lights: Film and Media Studies Yearbook Volume 5 ; 5 >
-      au < manifest ; 2008 ; Northern Lights: Film and Media Studies Yearbook Volume 6 ; 6 >
-      au < manifest ; 2009 ; Northern Lights: Film and Media Studies Yearbook Volume 7 ; 7 >
-      au < manifest ; 2010 ; Northern Lights: Film and Media Studies Yearbook Volume 8 ; 8 >
-      au < manifest ; 2011 ; Northern Lights: Film and Media Studies Yearbook Volume 9 ; 9 >
+      au < notReady ; 2007 ; Northern Lights: Film and Media Studies Yearbook Volume 5 ; 5 >
+      au < notReady ; 2008 ; Northern Lights: Film and Media Studies Yearbook Volume 6 ; 6 >
+      au < notReady ; 2009 ; Northern Lights: Film and Media Studies Yearbook Volume 7 ; 7 >
+      au < notReady ; 2010 ; Northern Lights: Film and Media Studies Yearbook Volume 8 ; 8 >
+      au < notReady ; 2011 ; Northern Lights: Film and Media Studies Yearbook Volume 9 ; 9 >
 
     }
 
@@ -1019,7 +1021,7 @@
       param[journal_id] = peet
       param[journal_issn] = 1757-1979
     
-      au < manifest ; 2010-2011 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 1 ; 1 >
+      au < notReady ; 2010-2011 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 1 ; 1 >
     }
 
     {
@@ -1041,8 +1043,8 @@
       param[journal_id] = pop
       param[journal_issn] = 2040-3682
     
-      au < manifest ; 2010 ; Philosophy of Photography Volume 1 ; 1 >
-      au < manifest ; 2011 ; Philosophy of Photography Volume 2 ; 2 >
+      au < notReady ; 2010 ; Philosophy of Photography Volume 1 ; 1 >
+      au < notReady ; 2011 ; Philosophy of Photography Volume 2 ; 2 >
     }
 
     {
@@ -1055,16 +1057,16 @@
       param[journal_id] = pjss
       param[journal_issn] = 1476-413X
     
-      au < manifest ; 2002-2003 ; Portuguese Journal of Social Science Volume 1 ; 1 >
-      au < manifest ; 2003-2004 ; Portuguese Journal of Social Science Volume 2 ; 2 >
-      au < manifest ; 2004 ; Portuguese Journal of Social Science Volume 3 ; 3 >
-      au < manifest ; 2005 ; Portuguese Journal of Social Science Volume 4 ; 4 >
-      au < manifest ; 2006-2007 ; Portuguese Journal of Social Science Volume 5 ; 5 >
-      au < manifest ; 2007-2008 ; Portuguese Journal of Social Science Volume 6 ; 6 >
-      au < manifest ; 2008 ; Portuguese Journal of Social Science Volume 7 ; 7 >
-      au < manifest ; 2009 ; Portuguese Journal of Social Science Volume 8 ; 8 >
-      au < manifest ; 2010 ; Portuguese Journal of Social Science Volume 9 ; 9 >
-      au < manifest ; 2011 ; Portuguese Journal of Social Science Volume 10 ; 10 >
+      au < notReady ; 2002-2003 ; Portuguese Journal of Social Science Volume 1 ; 1 >
+      au < notReady ; 2003-2004 ; Portuguese Journal of Social Science Volume 2 ; 2 >
+      au < notReady ; 2004 ; Portuguese Journal of Social Science Volume 3 ; 3 >
+      au < notReady ; 2005 ; Portuguese Journal of Social Science Volume 4 ; 4 >
+      au < notReady ; 2006-2007 ; Portuguese Journal of Social Science Volume 5 ; 5 >
+      au < notReady ; 2007-2008 ; Portuguese Journal of Social Science Volume 6 ; 6 >
+      au < notReady ; 2008 ; Portuguese Journal of Social Science Volume 7 ; 7 >
+      au < notReady ; 2009 ; Portuguese Journal of Social Science Volume 8 ; 8 >
+      au < notReady ; 2010 ; Portuguese Journal of Social Science Volume 9 ; 9 >
+      au < notReady ; 2011 ; Portuguese Journal of Social Science Volume 10 ; 10 >
     }
 
     {
@@ -1076,7 +1078,7 @@
       param[journal_id] = post
       param[journal_issn] = 2040-3704
     
-      au < manifest ; 2010-2011 ; The Poster Volume 1 ; 1 >
+      au < notReady ; 2010-2011 ; The Poster Volume 1 ; 1 >
     }
 
     {
@@ -1107,15 +1109,15 @@
       param[journal_id] = rj
       param[journal_issn] = 1476-4504
     
-      au < manifest ; 2003-2004 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 1 ; 1 >
-      au < manifest ; 2004 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 2 ; 2 >
-      au < manifest ; 2005 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 3 ; 3 >
-      au < manifest ; 2007 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 4 ; 4 >
-      au < manifest ; 2007-2008 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 5 ; 5 >
-      au < manifest ; 2008 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 6 ; 6 >
-      au < manifest ; 2009 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 7 ; 7 >
-      au < manifest ; 2010-2011 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 8 ; 8 >
-      au < manifest ; 2011 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 9 ; 9 >
+      au < notReady ; 2003-2004 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 1 ; 1 >
+      au < notReady ; 2004 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 2 ; 2 >
+      au < notReady ; 2005 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 3 ; 3 >
+      au < notReady ; 2007 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 4 ; 4 >
+      au < notReady ; 2007-2008 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 5 ; 5 >
+      au < notReady ; 2008 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 6 ; 6 >
+      au < notReady ; 2009 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 7 ; 7 >
+      au < notReady ; 2010-2011 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 8 ; 8 >
+      au < notReady ; 2011 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 9 ; 9 >
 
     }
 
@@ -1138,7 +1140,7 @@
       param[journal_id] = fict
       param[journal_issn] = 2043-0701
     
-      au < manifest ; 2011 ; Short Fiction in Theory & Practice Volume 1 ; 1 >
+      au < notReady ; 2011 ; Short Fiction in Theory & Practice Volume 1 ; 1 >
 
     }
 
@@ -1151,8 +1153,8 @@
       param[journal_id] = sfs
       param[journal_issn] = 2042-7824
     
-      au < manifest ; 2010-2011 ; Short Film Studies Volume 1 ; 1 >
-      au < manifest ; 2012 ; Short Film Studies Volume 2 ; 2 >
+      au < notReady ; 2010-2011 ; Short Film Studies Volume 1 ; 1 >
+      au < notReady ; 2012 ; Short Film Studies Volume 2 ; 2 >
 
     }
 
@@ -1166,10 +1168,10 @@
       param[journal_id] = ts
       param[journal_issn] = 1751-4193
     
-      au < manifest ; 2007-2008 ; The Soundtrack Volume 1 ; 1 >
-      au < manifest ; 2009 ; The Soundtrack Volume 2 ; 2 >
-      au < manifest ; 2010 ; The Soundtrack Volume 3 ; 3 >
-      au < manifest ; 2011 ; The Soundtrack Volume 4 ; 4 >
+      au < notReady ; 2007-2008 ; The Soundtrack Volume 1 ; 1 >
+      au < notReady ; 2009 ; The Soundtrack Volume 2 ; 2 >
+      au < notReady ; 2010 ; The Soundtrack Volume 3 ; 3 >
+      au < notReady ; 2011 ; The Soundtrack Volume 4 ; 4 >
 
     }
 
@@ -1182,11 +1184,11 @@
       param[journal_id] = sac
       param[journal_issn] = 1750-3175
     
-      au < manifest ; 2007 ; Studies in Australasian Cinema Volume 1 ; 1 >
-      au < manifest ; 2008 ; Studies in Australasian Cinema Volume 2 ; 2 >
-      au < manifest ; 2009 ; Studies in Australasian Cinema Volume 3 ; 3 >
-      au < manifest ; 2010 ; Studies in Australasian Cinema Volume 4 ; 4 >
-      au < manifest ; 2011 ; Studies in Australasian Cinema Volume 5 ; 5 >
+      au < notReady ; 2007 ; Studies in Australasian Cinema Volume 1 ; 1 >
+      au < notReady ; 2008 ; Studies in Australasian Cinema Volume 2 ; 2 >
+      au < notReady ; 2009 ; Studies in Australasian Cinema Volume 3 ; 3 >
+      au < notReady ; 2010 ; Studies in Australasian Cinema Volume 4 ; 4 >
+      au < notReady ; 2011 ; Studies in Australasian Cinema Volume 5 ; 5 >
 
     }
 
@@ -1199,8 +1201,8 @@
       param[journal_id] = stic
       param[journal_issn] = 2040-3232
     
-      au < manifest ; 2010 ; Studies in Comics Volume 1 ; 1 >
-      au < manifest ; 2011-2012 ; Studies in Comics Volume 2 ; 2 >
+      au < notReady ; 2010 ; Studies in Comics Volume 1 ; 1 >
+      au < notReady ; 2011-2012 ; Studies in Comics Volume 2 ; 2 >
 
     }
 
@@ -1224,11 +1226,11 @@
       param[journal_id] = sdf
       param[journal_issn] = 1750-3280
     
-      au < manifest ; 2007 ; Studies in Documentary Film Volume 1 ; 1 >
-      au < manifest ; 2008 ; Studies in Documentary Film Volume 2 ; 2 >
-      au < manifest ; 2009 ; Studies in Documentary Film Volume 3 ; 3 >
-      au < manifest ; 2010 ; Studies in Documentary Film Volume 4 ; 4 >
-      au < manifest ; 2011 ; Studies in Documentary Film Volume 5 ; 5 >
+      au < notReady ; 2007 ; Studies in Documentary Film Volume 1 ; 1 >
+      au < notReady ; 2008 ; Studies in Documentary Film Volume 2 ; 2 >
+      au < notReady ; 2009 ; Studies in Documentary Film Volume 3 ; 3 >
+      au < notReady ; 2010 ; Studies in Documentary Film Volume 4 ; 4 >
+      au < notReady ; 2011 ; Studies in Documentary Film Volume 5 ; 5 >
 
     }
 
@@ -1242,8 +1244,8 @@
       param[journal_id] = seec
       param[journal_issn] = 2040-350X
     
-      au < manifest ; 2010 ; Studies in Eastern European Cinema Volume 1 ; 1 >
-      au < manifest ; 2011 ; Studies in Eastern European Cinema Volume 2 ; 2 >
+      au < notReady ; 2010 ; Studies in Eastern European Cinema Volume 1 ; 1 >
+      au < notReady ; 2011 ; Studies in Eastern European Cinema Volume 2 ; 2 >
 
     }
 
@@ -1257,14 +1259,14 @@
       param[journal_id] = sec
       param[journal_issn] = 1471-5880
     
-      au < manifest ; 2004 ; Studies in European Cinema Volume 1 ; 1 >
-      au < manifest ; 2005 ; Studies in European Cinema Volume 2 ; 2 >
-      au < manifest ; 2006-2007 ; Studies in European Cinema Volume 3 ; 3 >
-      au < manifest ; 2007 ; Studies in European Cinema Volume 4 ; 4 >
-      au < manifest ; 2008-2009 ; Studies in European Cinema Volume 5 ; 5 >
-      au < manifest ; 2009 ; Studies in European Cinema Volume 6 ; 6 >
-      au < manifest ; 2010 ; Studies in European Cinema Volume 7 ; 7 >
-      au < manifest ; 2011 ; Studies in European Cinema Volume 8 ; 8 >
+      au < notReady ; 2004 ; Studies in European Cinema Volume 1 ; 1 >
+      au < notReady ; 2005 ; Studies in European Cinema Volume 2 ; 2 >
+      au < notReady ; 2006-2007 ; Studies in European Cinema Volume 3 ; 3 >
+      au < notReady ; 2007 ; Studies in European Cinema Volume 4 ; 4 >
+      au < notReady ; 2008-2009 ; Studies in European Cinema Volume 5 ; 5 >
+      au < notReady ; 2009 ; Studies in European Cinema Volume 6 ; 6 >
+      au < notReady ; 2010 ; Studies in European Cinema Volume 7 ; 7 >
+      au < notReady ; 2011 ; Studies in European Cinema Volume 8 ; 8 >
 
     }
 
@@ -1278,17 +1280,17 @@
       param[journal_id] = sfc
       param[journal_issn] = 1471-5880
     
-      au < manifest ; 2001 ; Studies in French Cinema Volume 1 ; 1 >
-      au < manifest ; 2002 ; Studies in French Cinema Volume 2 ; 2 >
-      au < manifest ; 2003 ; Studies in French Cinema Volume 3 ; 3 >
-      au < manifest ; 2004 ; Studies in French Cinema Volume 4 ; 4 >
-      au < manifest ; 2005 ; Studies in French Cinema Volume 5 ; 5 >
-      au < manifest ; 2006 ; Studies in French Cinema Volume 6 ; 6 >
-      au < manifest ; 2007 ; Studies in French Cinema Volume 7 ; 7 >
-      au < manifest ; 2008 ; Studies in French Cinema Volume 8 ; 8 >
-      au < manifest ; 2009 ; Studies in French Cinema Volume 9 ; 9 >
-      au < manifest ; 2010 ; Studies in French Cinema Volume 10 ; 10 >
-      au < manifest ; 2011 ; Studies in French Cinema Volume 11 ; 11 >   
+      au < notReady ; 2001 ; Studies in French Cinema Volume 1 ; 1 >
+      au < notReady ; 2002 ; Studies in French Cinema Volume 2 ; 2 >
+      au < notReady ; 2003 ; Studies in French Cinema Volume 3 ; 3 >
+      au < notReady ; 2004 ; Studies in French Cinema Volume 4 ; 4 >
+      au < notReady ; 2005 ; Studies in French Cinema Volume 5 ; 5 >
+      au < notReady ; 2006 ; Studies in French Cinema Volume 6 ; 6 >
+      au < notReady ; 2007 ; Studies in French Cinema Volume 7 ; 7 >
+      au < notReady ; 2008 ; Studies in French Cinema Volume 8 ; 8 >
+      au < notReady ; 2009 ; Studies in French Cinema Volume 9 ; 9 >
+      au < notReady ; 2010 ; Studies in French Cinema Volume 10 ; 10 >
+      au < notReady ; 2011 ; Studies in French Cinema Volume 11 ; 11 >   
 
     }
 
@@ -1302,13 +1304,13 @@
       param[journal_id] = shc
       param[journal_issn] = 1478-0488
      
-      au < manifest ; 2004-2005 ; Studies in Hispanic Cinemas Volume 1 ; 1 >
-      au < manifest ; 2005-2006 ; Studies in Hispanic Cinemas Volume 2 ; 2 >
-      au < manifest ; 2006-2007 ; Studies in Hispanic Cinemas Volume 3 ; 3 >
-      au < manifest ; 2007-2008 ; Studies in Hispanic Cinemas Volume 4 ; 4 >
-      au < manifest ; 2009 ; Studies in Hispanic Cinemas Volume 5 ; 5 >
-      au < manifest ; 2010 ; Studies in Hispanic Cinemas Volume 6 ; 6 >
-      au < manifest ; 2011 ; Studies in Hispanic Cinemas Volume 7 ; 7 >
+      au < notReady ; 2004-2005 ; Studies in Hispanic Cinemas Volume 1 ; 1 >
+      au < notReady ; 2005-2006 ; Studies in Hispanic Cinemas Volume 2 ; 2 >
+      au < notReady ; 2006-2007 ; Studies in Hispanic Cinemas Volume 3 ; 3 >
+      au < notReady ; 2007-2008 ; Studies in Hispanic Cinemas Volume 4 ; 4 >
+      au < notReady ; 2009 ; Studies in Hispanic Cinemas Volume 5 ; 5 >
+      au < notReady ; 2010 ; Studies in Hispanic Cinemas Volume 6 ; 6 >
+      au < notReady ; 2011 ; Studies in Hispanic Cinemas Volume 7 ; 7 >
 
     }
 
@@ -1322,11 +1324,11 @@
       param[journal_id] = smt
       param[journal_issn] = 1750-3167
       
-      au < manifest ; 2006-2007 ; Studies in Musical Theatre Volume 1 ; 1 >
-      au < manifest ; 2008 ; Studies in Musical Theatre Volume 2 ; 2 >
-      au < manifest ; 2009 ; Studies in Musical Theatre Volume 3 ; 3 >
-      au < manifest ; 2010 ; Studies in Musical Theatre Volume 4 ; 4 >
-      au < manifest ; 2011 ; Studies in Musical Theatre Volume 5 ; 5 >
+      au < notReady ; 2006-2007 ; Studies in Musical Theatre Volume 1 ; 1 >
+      au < notReady ; 2008 ; Studies in Musical Theatre Volume 2 ; 2 >
+      au < notReady ; 2009 ; Studies in Musical Theatre Volume 3 ; 3 >
+      au < notReady ; 2010 ; Studies in Musical Theatre Volume 4 ; 4 >
+      au < notReady ; 2011 ; Studies in Musical Theatre Volume 5 ; 5 >
 
     }
 
@@ -1340,11 +1342,11 @@
       param[journal_id] = srcs
       param[journal_issn] = 1750-3132
       
-      au < manifest ; 2007 ; Studies in Russian & Soviet Cinema Volume 1 ; 1 >
-      au < manifest ; 2008 ; Studies in Russian & Soviet Cinema Volume 2 ; 2 >
-      au < manifest ; 2009 ; Studies in Russian & Soviet Cinema Volume 3 ; 3 >
-      au < manifest ; 2010 ; Studies in Russian & Soviet Cinema Volume 4 ; 4 >
-      au < manifest ; 2011 ; Studies in Russian & Soviet Cinema Volume 5 ; 5 >
+      au < notReady ; 2007 ; Studies in Russian & Soviet Cinema Volume 1 ; 1 >
+      au < notReady ; 2008 ; Studies in Russian & Soviet Cinema Volume 2 ; 2 >
+      au < notReady ; 2009 ; Studies in Russian & Soviet Cinema Volume 3 ; 3 >
+      au < notReady ; 2010 ; Studies in Russian & Soviet Cinema Volume 4 ; 4 >
+      au < notReady ; 2011 ; Studies in Russian & Soviet Cinema Volume 5 ; 5 >
 
     }
 
@@ -1357,8 +1359,8 @@
       param[journal_id] = safm
       param[journal_issn] = 1756-4921
     
-      au < manifest ; 2009 ; Studies in South Asian Film & Media Volume 1 ; 1 >
-      au < manifest ; 2010-2011 ; Studies in South Asian Film & Media Volume 2 ; 2 >
+      au < notReady ; 2009 ; Studies in South Asian Film & Media Volume 1 ; 1 >
+      au < notReady ; 2010-2011 ; Studies in South Asian Film & Media Volume 2 ; 2 >
     
     }
 
@@ -1371,17 +1373,17 @@
       param[journal_id] = stp
       param[journal_issn] = 1468-2761
     
-      au < manifest ; 2001-2002 ; Studies in Theater & Performance Volume 21 ; 21 >
-      au < manifest ; 2002-2003 ; Studies in Theater & Performance Volume 22 ; 22 >
-      au < manifest ; 2003-2004 ; Studies in Theater & Performance Volume 23 ; 23 >
-      au < manifest ; 2004 ; Studies in Theater & Performance Volume 24 ; 24 >
-      au < manifest ; 2005 ; Studies in Theater & Performance Volume 25 ; 25 >
-      au < manifest ; 2006 ; Studies in Theater & Performance Volume 26 ; 26 >
-      au < manifest ; 2007 ; Studies in Theater & Performance Volume 27 ; 27 >
-      au < manifest ; 2007-2008 ; Studies in Theater & Performance Volume 28 ; 28 >
-      au < manifest ; 2009 ; Studies in Theater & Performance Volume 29 ; 29 >
-      au < manifest ; 2010 ; Studies in Theater & Performance Volume 30 ; 30 >
-      au < manifest ; 2011 ; Studies in Theater & Performance Volume 31 ; 31 >
+      au < notReady ; 2001-2002 ; Studies in Theater & Performance Volume 21 ; 21 >
+      au < notReady ; 2002-2003 ; Studies in Theater & Performance Volume 22 ; 22 >
+      au < notReady ; 2003-2004 ; Studies in Theater & Performance Volume 23 ; 23 >
+      au < notReady ; 2004 ; Studies in Theater & Performance Volume 24 ; 24 >
+      au < notReady ; 2005 ; Studies in Theater & Performance Volume 25 ; 25 >
+      au < notReady ; 2006 ; Studies in Theater & Performance Volume 26 ; 26 >
+      au < notReady ; 2007 ; Studies in Theater & Performance Volume 27 ; 27 >
+      au < notReady ; 2007-2008 ; Studies in Theater & Performance Volume 28 ; 28 >
+      au < notReady ; 2009 ; Studies in Theater & Performance Volume 29 ; 29 >
+      au < notReady ; 2010 ; Studies in Theater & Performance Volume 30 ; 30 >
+      au < notReady ; 2011 ; Studies in Theater & Performance Volume 31 ; 31 >
 
     }
 
@@ -1395,15 +1397,15 @@
       param[journal_id] = ta
       param[journal_issn] = 1477-965X
       
-      au < manifest ; 2003 ; Technoetic Arts Volume 1 ; 1 >
-      au < manifest ; 2004 ; Technoetic Arts Volume 2 ; 2 >
-      au < manifest ; 2005 ; Technoetic Arts Volume 3 ; 3 >
-      au < manifest ; 2006 ; Technoetic Arts Volume 4 ; 4 >
-      au < manifest ; 2007 ; Technoetic Arts Volume 5 ; 5 >
-      au < manifest ; 2008-2009 ; Technoetic Arts Volume 6 ; 6 >
-      au < manifest ; 2009 ; Technoetic Arts Volume 7 ; 7 >
-      au < manifest ; 2010-2011 ; Technoetic Arts Volume 8 ; 8 >
-      au < manifest ; 2011 ; Technoetic Arts Volume 9 ; 9 >
+      au < notReady ; 2003 ; Technoetic Arts Volume 1 ; 1 >
+      au < notReady ; 2004 ; Technoetic Arts Volume 2 ; 2 >
+      au < notReady ; 2005 ; Technoetic Arts Volume 3 ; 3 >
+      au < notReady ; 2006 ; Technoetic Arts Volume 4 ; 4 >
+      au < notReady ; 2007 ; Technoetic Arts Volume 5 ; 5 >
+      au < notReady ; 2008-2009 ; Technoetic Arts Volume 6 ; 6 >
+      au < notReady ; 2009 ; Technoetic Arts Volume 7 ; 7 >
+      au < notReady ; 2010-2011 ; Technoetic Arts Volume 8 ; 8 >
+      au < notReady ; 2011 ; Technoetic Arts Volume 9 ; 9 >
 
     }
 
@@ -1417,8 +1419,8 @@
       param[journal_id] = trac
       param[journal_issn] = 2040-3526
       
-      au < manifest ; 2010 ; Transnational Cinemas Volume 1 ; 1 >
-      au < manifest ; 2011 ; Transnational Cinemas Volume 2 ; 2 >
+      au < notReady ; 2010 ; Transnational Cinemas Volume 1 ; 1 >
+      au < notReady ; 2011 ; Transnational Cinemas Volume 2 ; 2 >
 
     }
 
@@ -1442,7 +1444,7 @@
       param[journal_id] = viq
       param[journal_issn] = 2045-5879
       
-      au < manifest ; 2011 ; Visual Inquiry: Learning & Teaching Art Volume 1 ; 1 >
+      au < notReady ; 2011 ; Visual Inquiry: Learning & Teaching Art Volume 1 ; 1 >
 
     }
 
