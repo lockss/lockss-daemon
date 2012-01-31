@@ -1,5 +1,5 @@
 /*
- * $Id: ColumnDescriptor.java,v 1.10 2005-10-11 05:44:14 tlipkis Exp $
+ * $Id: ColumnDescriptor.java,v 1.11 2012-01-31 07:19:31 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,13 @@ public class ColumnDescriptor {
    * Instanceof number (Integer, Long, Float, etc.)
    */
   public static final int TYPE_DATE=6;
+
+  /**
+   * Like TYPE_PERCENT but formatted as 
+   * Instanceof floating point number (Float, Double, etc.) and floatValue()
+   * must return between 0 and 1, inclusive
+   */
+  public static final int TYPE_AGREEMENT=7;
 
 
   private String columnName;
