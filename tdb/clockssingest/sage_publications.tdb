@@ -1315,6 +1315,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 2004 ; American Sociological Review Volume 69 ; 69 ; >
+      au < exists ; exists ; 2005 ; American Sociological Review Volume 70 ; 70 ; >
+      au < exists ; exists ; 2006 ; American Sociological Review Volume 71 ; 71 ; >
       au < exists ; exists ; 2007 ; American Sociological Review Volume 72 ; 72 ; >
       au < exists ; exists ; 2008 ; American Sociological Review Volume 73 ; 73 ; >
       au < manifest ; exists ; 2009 ; American Sociological Review Volume 74 ; 74 ; >
@@ -2722,6 +2725,37 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1976 ; Australian Journal of Management Volume 1 ; 1 ; >
+      au < exists ; exists ; 1977 ; Australian Journal of Management Volume 2 ; 2 ; >
+      au < exists ; exists ; 1978 ; Australian Journal of Management Volume 3 ; 3 ; >
+      au < exists ; exists ; 1979 ; Australian Journal of Management Volume 4 ; 4 ; >
+      au < exists ; exists ; 1980 ; Australian Journal of Management Volume 5 ; 5 ; >
+      au < exists ; exists ; 1981 ; Australian Journal of Management Volume 6 ; 6 ; >
+      au < exists ; exists ; 1982 ; Australian Journal of Management Volume 7 ; 7 ; >
+      au < exists ; exists ; 1983 ; Australian Journal of Management Volume 8 ; 8 ; >
+      au < exists ; exists ; 1984 ; Australian Journal of Management Volume 9 ; 9 ; >
+      au < exists ; exists ; 1985 ; Australian Journal of Management Volume 10 ; 10 ; >
+      au < exists ; exists ; 1986 ; Australian Journal of Management Volume 11 ; 11 ; >
+      au < exists ; exists ; 1987 ; Australian Journal of Management Volume 12 ; 12 ; >
+      au < exists ; exists ; 1988 ; Australian Journal of Management Volume 13 ; 13 ; >
+      au < exists ; exists ; 1989 ; Australian Journal of Management Volume 14 ; 14 ; >
+      au < exists ; exists ; 1990 ; Australian Journal of Management Volume 15 ; 15 ; >
+      au < exists ; exists ; 1991 ; Australian Journal of Management Volume 16 ; 16 ; >
+      au < exists ; exists ; 1992 ; Australian Journal of Management Volume 17 ; 17 ; >
+      au < exists ; exists ; 1993 ; Australian Journal of Management Volume 18 ; 18 ; >
+      au < exists ; exists ; 1994 ; Australian Journal of Management Volume 19 ; 19 ; >
+      au < exists ; exists ; 1995 ; Australian Journal of Management Volume 20 ; 20 ; >
+      au < exists ; exists ; 1996 ; Australian Journal of Management Volume 21 ; 21 ; >
+      au < exists ; exists ; 1997 ; Australian Journal of Management Volume 22 ; 22 ; >
+      au < exists ; exists ; 1998 ; Australian Journal of Management Volume 23 ; 23 ; >
+      au < exists ; exists ; 1999 ; Australian Journal of Management Volume 24 ; 24 ; >
+      au < exists ; exists ; 2000 ; Australian Journal of Management Volume 25 ; 25 ; >
+      au < exists ; exists ; 2001 ; Australian Journal of Management Volume 26 ; 26 ; >
+      au < exists ; exists ; 2002 ; Australian Journal of Management Volume 27 ; 27 ; >
+      au < exists ; exists ; 2003 ; Australian Journal of Management Volume 28 ; 28 ; >
+      au < exists ; exists ; 2004 ; Australian Journal of Management Volume 29 ; 29 ; >
+      au < exists ; exists ; 2005 ; Australian Journal of Management Volume 30 ; 30 ; >
+      au < exists ; exists ; 2006 ; Australian Journal of Management Volume 31 ; 31 ; >
       au < exists ; exists ; 2007 ; Australian Journal of Management Volume 32 ; 32 ; >
       au < exists ; exists ; 2008 ; Australian Journal of Management Volume 33 ; 33 ; >
       au < exists ; exists ; 2009 ; Australian Journal of Management Volume 34 ; 34 ; >
@@ -12693,53 +12727,57 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      
+      comment[notReady] = No manifests for original series. Links to os are in new series manifests.
 
-      au < manifest ; exists ; 1983 ; International Journal of Music Education Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1983 ; International Journal of Music Education Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1984 ; International Journal of Music Education Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1984 ; International Journal of Music Education Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1985 ; International Journal of Music Education Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1985 ; International Journal of Music Education Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1986 ; International Journal of Music Education Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1986 ; International Journal of Music Education Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1987 ; International Journal of Music Education Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1987 ; International Journal of Music Education Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1988 ; International Journal of Music Education Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1988 ; International Journal of Music Education Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1989 ; International Journal of Music Education Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1989 ; International Journal of Music Education Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1990 ; International Journal of Music Education Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1990 ; International Journal of Music Education Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1991 ; International Journal of Music Education Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1991 ; International Journal of Music Education Volume 18 ; 18 ; >
-      au < manifest ; exists ; 1992 ; International Journal of Music Education Volume 19 ; 19 ; >
-      au < manifest ; exists ; 1992 ; International Journal of Music Education Volume 20 ; 20 ; >
-      au < manifest ; exists ; 1993 ; International Journal of Music Education Volume 21 ; 21 ; >
-      au < manifest ; exists ; 1993 ; International Journal of Music Education Volume 22 ; 22 ; >
-      au < manifest ; exists ; 1994 ; International Journal of Music Education Volume 23 ; 23 ; >
-      au < manifest ; exists ; 1994 ; International Journal of Music Education Volume 24 ; 24 ; >
-      au < manifest ; exists ; 1995 ; International Journal of Music Education Volume 25 ; 25 ; >
+      au < exists ; exists ; 1983 ; International Journal of Music Education Volume os-1 ; os-1 ; >
+      au < exists ; exists ; 1983 ; International Journal of Music Education Volume os-2 ; os-2 ; >
+      au < exists ; exists ; 1984 ; International Journal of Music Education Volume os-3 ; os-3 ; >
+      au < exists ; exists ; 1984 ; International Journal of Music Education Volume os-4 ; os-4 ; >
+      au < exists ; exists ; 1985 ; International Journal of Music Education Volume os-5 ; os-5 ; >
+      au < exists ; exists ; 1985 ; International Journal of Music Education Volume os-6 ; os-6 ; >
+      au < exists ; exists ; 1986 ; International Journal of Music Education Volume os-7 ; os-7 ; >
+      au < exists ; exists ; 1986 ; International Journal of Music Education Volume os-8 ; os-8 ; >
+      au < exists ; exists ; 1987 ; International Journal of Music Education Volume os-9 ; os-9 ; >
+      au < exists ; exists ; 1987 ; International Journal of Music Education Volume os-10 ; os-10 ; >
+      au < exists ; exists ; 1988 ; International Journal of Music Education Volume os-11 ; os-11 ; >
+      au < exists ; exists ; 1988 ; International Journal of Music Education Volume os-12 ; os-12 ; >
+      au < exists ; exists ; 1989 ; International Journal of Music Education Volume os-13 ; os-13 ; >
+      au < exists ; exists ; 1989 ; International Journal of Music Education Volume os-14 ; os-14 ; >
+      au < exists ; exists ; 1990 ; International Journal of Music Education Volume os-15 ; os-15 ; >
+      au < exists ; exists ; 1990 ; International Journal of Music Education Volume os-16 ; os-16 ; >
+      au < exists ; exists ; 1991 ; International Journal of Music Education Volume os-17 ; os-17 ; >
+      au < exists ; exists ; 1991 ; International Journal of Music Education Volume os-18 ; os-18 ; >
+      au < exists ; exists ; 1992 ; International Journal of Music Education Volume os-19 ; os-19 ; >
+      au < exists ; exists ; 1992 ; International Journal of Music Education Volume os-20 ; os-20 ; >
+      au < exists ; exists ; 1993 ; International Journal of Music Education Volume os-21 ; os-21 ; >
+      au < exists ; exists ; 1993 ; International Journal of Music Education Volume os-22 ; os-22 ; >
+      au < exists ; exists ; 1994 ; International Journal of Music Education Volume os-23 ; os-23 ; >
+      au < exists ; exists ; 1994 ; International Journal of Music Education Volume os-24 ; os-24 ; >
+      au < exists ; exists ; 1995 ; International Journal of Music Education Volume os-25 ; os-25 ; >
+      au < exists ; exists ; 1995 ; International Journal of Music Education Volume os-26 ; os-26 ; >
+      au < exists ; exists ; 1996 ; International Journal of Music Education Volume os-27 ; os-27 ; >
+      au < exists ; exists ; 1996 ; International Journal of Music Education Volume os-28 ; os-28 ; >
+      au < exists ; exists ; 1997 ; International Journal of Music Education Volume os-29 ; os-29 ; >
+      au < exists ; exists ; 1997 ; International Journal of Music Education Volume os-30 ; os-30 ; >
+      au < exists ; exists ; 1998 ; International Journal of Music Education Volume os-31 ; os-31 ; >
+      au < exists ; exists ; 1998 ; International Journal of Music Education Volume os-32 ; os-32 ; >
+      au < exists ; exists ; 1999 ; International Journal of Music Education Volume os-33 ; os-33 ; >
+      au < exists ; exists ; 1999 ; International Journal of Music Education Volume os-34 ; os-34 ; >
+      au < exists ; exists ; 2000 ; International Journal of Music Education Volume os-35 ; os-35 ; >
+      au < exists ; exists ; 2000 ; International Journal of Music Education Volume os-36 ; os-36 ; >
+      au < exists ; exists ; 2001 ; International Journal of Music Education Volume os-37 ; os-37 ; >
+      au < exists ; exists ; 2001 ; International Journal of Music Education Volume os-38 ; os-38 ; >
+      au < exists ; exists ; 2002 ; International Journal of Music Education Volume os-39 ; os-39 ; >
+      au < exists ; exists ; 2003 ; International Journal of Music Education Volume os-40 ; os-40 ; >
+      au < exists ; exists ; 2004 ; International Journal of Music Education Volume 22 ; 22 ; >
+      au < exists ; exists ; 2005 ; International Journal of Music Education Volume 23 ; 23 ; >
+      au < exists ; exists ; 2006 ; International Journal of Music Education Volume 24 ; 24 ; >
+      au < exists ; exists ; 2007 ; International Journal of Music Education Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Music Education Volume 26 ; 26 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Music Education Volume 27 ; 27 ; >
       au < released ; crawling ; 2010 ; International Journal of Music Education Volume 28 ; 28 ; >
-      au < manifest ; exists ; 1997 ; International Journal of Music Education Volume 29 ; 29 ; >
-      au < manifest ; exists ; 1997 ; International Journal of Music Education Volume 30 ; 30 ; >
-      au < manifest ; exists ; 1998 ; International Journal of Music Education Volume 31 ; 31 ; >
-      au < manifest ; exists ; 1998 ; International Journal of Music Education Volume 32 ; 32 ; >
-      au < manifest ; exists ; 1999 ; International Journal of Music Education Volume 33 ; 33 ; >
-      au < manifest ; exists ; 1999 ; International Journal of Music Education Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2000 ; International Journal of Music Education Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2000 ; International Journal of Music Education Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2001 ; International Journal of Music Education Volume 37 ; 37 ; >
-      au < manifest ; exists ; 2001 ; International Journal of Music Education Volume 38 ; 38 ; >
-      au < manifest ; exists ; 2002 ; International Journal of Music Education Volume 39 ; 39 ; >
-      au < manifest ; exists ; 2003 ; International Journal of Music Education Volume 40 ; 40 ; >
-      au < exists ; exists ; 2004 ; International Journal of Music Education Volume 41 ; 41 ; >
-      au < exists ; exists ; 2005 ; International Journal of Music Education Volume 42 ; 42 ; >
-      au < exists ; exists ; 2006 ; International Journal of Music Education Volume 43 ; 43 ; >
-      au < exists ; exists ; 2007 ; International Journal of Music Education Volume 44 ; 44 ; >
-      au < exists ; exists ; 2008 ; International Journal of Music Education Volume 45 ; 45 ; >
-      au < exists ; exists ; 2009 ; International Journal of Music Education Volume 46 ; 46 ; >
+      au < exists ; exists ; 2011 ; International Journal of Music Education Volume 29 ; 29 ; >
 
     }
 

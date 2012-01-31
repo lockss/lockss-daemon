@@ -14952,7 +14952,7 @@
         param[base_url] = http://ijm.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
         
-        comment[ijm40] = Original series ended at vol 40, and issue numbering started at 22 again in 2004. Manifests exist, but are malformed.
+        comment[notReady] = Original series ended at vol 40, and issue numbering started at 22 again in 2004. Manifests exist, but are malformed.
 
         au < HighWirePressH20Plugin ; exists ; 1983 ; International Journal of Music Education Volume os-1 ; os-1 >
         au < HighWirePressH20Plugin ; exists ; 1983 ; International Journal of Music Education Volume os-2 ; os-2 >
@@ -14994,25 +14994,25 @@
         au < HighWirePressH20Plugin ; exists ; 2001 ; International Journal of Music Education Volume os-38 ; os-38 >
         au < HighWirePressH20Plugin ; exists ; 2002 ; International Journal of Music Education Volume os-39 ; os-39 >
         au < HighWirePressH20Plugin ; exists ; 2003 ; International Journal of Music Education Volume os-40 ; os-40 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; International Journal of Music Education Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; International Journal of Music Education Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; 2005 ; International Journal of Music Education Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; down ; 2006 ; International Journal of Music Education Volume 24 ; 24 >
         au < HighWireStrVolPlugin ; down ; 2007 ; International Journal of Music Education Volume 25 ; 25 >
         au < HighWirePressPlugin ; down ; 2008 ; International Journal of Music Education Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; down ; 2009 ; International Journal of Music Education Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; International Journal of Music Education Volume 28 ; 28 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; International Journal of Music Education Volume 29 ; 29 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; International Journal of Music Education Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; International Journal of Music Education Volume 31 ; 31 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; International Journal of Music Education Volume 32 ; 32 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; International Journal of Music Education Volume 33 ; 33 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; International Journal of Music Education Volume 34 ; 34 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; International Journal of Music Education Volume 35 ; 35 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; International Journal of Music Education Volume 36 ; 36 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; International Journal of Music Education Volume 37 ; 37 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; International Journal of Music Education Volume 38 ; 38 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; International Journal of Music Education Volume 39 ; 39 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; International Journal of Music Education Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; exists ; 2010 ; International Journal of Music Education Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; exists ; 2011 ; International Journal of Music Education Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; exists ; 1997 ; International Journal of Music Education Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; International Journal of Music Education Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; International Journal of Music Education Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; International Journal of Music Education Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; International Journal of Music Education Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; International Journal of Music Education Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; International Journal of Music Education Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; International Journal of Music Education Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; International Journal of Music Education Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; International Journal of Music Education Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; International Journal of Music Education Volume 40 ; 40 >
 
       }
 
