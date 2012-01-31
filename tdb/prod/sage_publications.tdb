@@ -2427,7 +2427,10 @@
         au < manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 635 ; 635 >
         au < manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 636 ; 636 >
         au < manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 637 ; 637 >
-        au < manifest ; 2012 ; The ANNALS of the American Academy of Political and Social Science Volume 638 ; 638 >
+        au < manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 638 ; 638 >
+        au < manifest ; 2012 ; The ANNALS of the American Academy of Political and Social Science Volume 639 ; 639 >
+        au < manifest ; 2012 ; The ANNALS of the American Academy of Political and Social Science Volume 640 ; 640 >
+        au < manifest ; 2012 ; The ANNALS of the American Academy of Political and Social Science Volume 641 ; 641 >
 
       }
 
@@ -2756,6 +2759,7 @@
         au < doNotProcess ; 2009 ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
         au < ready ; 2010 ; Asia Pacific Journal of Human Resources Volume 48 ; 48 >
         au < manifest ; 2011 ; Asia Pacific Journal of Human Resources Volume 49 ; 49 >
+        au < exists ; 2012 ; Asia Pacific Journal of Human Resources Volume 50 ; 50 >
         
       }
 
@@ -2811,6 +2815,7 @@
         au < doNotProcess ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
         au < ready ; 2010 ; Asia-Pacific Journal of Public Health Volume 22 ; 22 >
         au < manifest ; 2011 ; Asia-Pacific Journal of Public Health Volume 23 ; 23 >
+        au < exists ; 2012 ; Asia-Pacific Journal of Public Health Volume 24 ; 24 >
       }
 
     }
@@ -3081,7 +3086,8 @@
 
         au < ready ; 2010 ; Australian & New Zealand Journal of Criminology Volume 43 ; 43 >
         au < manifest ; 2011 ; Australian & New Zealand Journal of Criminology Volume 44 ; 44 >
-      
+        au < manifest ; 2012 ; Australian & New Zealand Journal of Criminology Volume 45 ; 45 >
+
       }
       
     }
@@ -4148,6 +4154,7 @@
         au < doNotProcess ; 2009 ; Business & Society Volume 48 ; 48 >
         au < ready ; 2010 ; Business & Society Volume 49 ; 49 >
         au < manifest ; 2011 ; Business & Society Volume 50 ; 50 >
+        au < exists ; 2012 ; Business & Society Volume 51 ; 51 >
         
       }
 
@@ -4886,6 +4893,8 @@
         au < doNotProcess ; 2008 ; China Report Volume 44 ; 44 >
         au < ready ; 2009 ; China Report Volume 45 ; 45 >
         au < manifest ; 2010 ; China Report Volume 46 ; 46 >
+        au < exists ; 2011 ; China Report Volume 47 ; 47 >
+        au < exists ; 2012 ; China Report Volume 48 ; 48 >
 
       }
 
@@ -4967,6 +4976,7 @@
         au < doNotProcess ; 2009 ; Chronic Respiratory Disease Volume 6 ; 6 >
         au < ready ; 2010 ; Chronic Respiratory Disease Volume 7 ; 7 >
         au < manifest ; 2011 ; Chronic Respiratory Disease Volume 8 ; 8 >
+        au < exists ; 2012 ; Chronic Respiratory Disease Volume 9 ; 9 >
         
       }
 
@@ -5051,6 +5061,7 @@
         au < doNotProcess ; 2009 ; Clin-Alert Volume 47 ; 47 >
         au < ready ; 2010 ; Clin-Alert Volume 48 ; 48 >
         au < manifest ; 2011 ; Clin-Alert Volume 49 ; 49 >
+        au < exists ; 2012 ; Clin-Alert Volume 50 ; 50 >
         
       }
 
@@ -5669,6 +5680,7 @@
         au < doNotProcess ; 2009 ; Communication Research Volume 36 ; 36 >
         au < ready ; 2010 ; Communication Research Volume 37 ; 37 >
         au < manifest ; 2011 ; Communication Research Volume 38 ; 38 >
+        au < exists ; 2012 ; Communication Research Volume 39 ; 39 >
         
       }
 
@@ -19082,6 +19094,9 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 2007 ; Journal of Creative Communications Volume 2 ; 2 >
         au < doNotProcess ; 2008 ; Journal of Creative Communications Volume 3 ; 3 >
         au < manifest ; 2009 ; Journal of Creative Communications Volume 4 ; 4 >
+        au < exists ; 2010 ; Journal of Creative Communications Volume 5 ; 5 >
+        au < exists ; 2011 ; Journal of Creative Communications Volume 6 ; 6 >
+        au < exists ; 2012 ; Journal of Creative Communications Volume 7 ; 7 >
 
       }
 
@@ -24982,11 +24997,134 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
+        au < HighWirePressH20Plugin ; manifest ; 1879 ; The Journal of the Royal Society for the Promotion of Health Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; manifest ; 1881 ; The Journal of the Royal Society for the Promotion of Health Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; manifest ; 1882 ; The Journal of the Royal Society for the Promotion of Health Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; manifest ; 1883 ; The Journal of the Royal Society for the Promotion of Health Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; manifest ; 1884 ; The Journal of the Royal Society for the Promotion of Health Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; manifest ; 1885 ; The Journal of the Royal Society for the Promotion of Health Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; manifest ; 1886 ; The Journal of the Royal Society for the Promotion of Health Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; manifest ; 1887 ; The Journal of the Royal Society for the Promotion of Health Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; 1888 ; The Journal of the Royal Society for the Promotion of Health Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; manifest ; 1889 ; The Journal of the Royal Society for the Promotion of Health Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; 1890 ; The Journal of the Royal Society for the Promotion of Health Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; manifest ; 1891 ; The Journal of the Royal Society for the Promotion of Health Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; 1892 ; The Journal of the Royal Society for the Promotion of Health Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; 1893 ; The Journal of the Royal Society for the Promotion of Health Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; 1894 ; The Journal of the Royal Society for the Promotion of Health Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; 1895 ; The Journal of the Royal Society for the Promotion of Health Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; manifest ; 1896 ; The Journal of the Royal Society for the Promotion of Health Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; manifest ; 1897 ; The Journal of the Royal Society for the Promotion of Health Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; manifest ; 1898 ; The Journal of the Royal Society for the Promotion of Health Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; manifest ; 1899 ; The Journal of the Royal Society for the Promotion of Health Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; manifest ; 1900 ; The Journal of the Royal Society for the Promotion of Health Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; 1901 ; The Journal of the Royal Society for the Promotion of Health Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; manifest ; 1902 ; The Journal of the Royal Society for the Promotion of Health Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; manifest ; 1903 ; The Journal of the Royal Society for the Promotion of Health Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; manifest ; 1904 ; The Journal of the Royal Society for the Promotion of Health Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; manifest ; 1905 ; The Journal of the Royal Society for the Promotion of Health Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; manifest ; 1906 ; The Journal of the Royal Society for the Promotion of Health Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; manifest ; 1907 ; The Journal of the Royal Society for the Promotion of Health Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; manifest ; 1908 ; The Journal of the Royal Society for the Promotion of Health Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; manifest ; 1909 ; The Journal of the Royal Society for the Promotion of Health Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; manifest ; 1910 ; The Journal of the Royal Society for the Promotion of Health Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; 1911 ; The Journal of the Royal Society for the Promotion of Health Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; manifest ; 1912 ; The Journal of the Royal Society for the Promotion of Health Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; manifest ; 1913 ; The Journal of the Royal Society for the Promotion of Health Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; manifest ; 1914 ; The Journal of the Royal Society for the Promotion of Health Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; manifest ; 1915 ; The Journal of the Royal Society for the Promotion of Health Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; manifest ; 1916 ; The Journal of the Royal Society for the Promotion of Health Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; manifest ; 1917 ; The Journal of the Royal Society for the Promotion of Health Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; manifest ; 1918 ; The Journal of the Royal Society for the Promotion of Health Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; manifest ; 1919 ; The Journal of the Royal Society for the Promotion of Health Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; manifest ; 1920 ; The Journal of the Royal Society for the Promotion of Health Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; manifest ; 1921 ; The Journal of the Royal Society for the Promotion of Health Volume 42 ; 42 >
+        au < HighWirePressH20Plugin ; manifest ; 1922 ; The Journal of the Royal Society for the Promotion of Health Volume 43 ; 43 >
+        au < HighWirePressH20Plugin ; manifest ; 1923 ; The Journal of the Royal Society for the Promotion of Health Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; manifest ; 1924 ; The Journal of the Royal Society for the Promotion of Health Volume 45 ; 45 >
+        au < HighWirePressH20Plugin ; manifest ; 1925 ; The Journal of the Royal Society for the Promotion of Health Volume 46 ; 46 >
+        au < HighWirePressH20Plugin ; manifest ; 1926 ; The Journal of the Royal Society for the Promotion of Health Volume 47 ; 47 >
+        au < HighWirePressH20Plugin ; manifest ; 1927 ; The Journal of the Royal Society for the Promotion of Health Volume 48 ; 48 >
+        au < HighWirePressH20Plugin ; manifest ; 1928 ; The Journal of the Royal Society for the Promotion of Health Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; manifest ; 1929 ; The Journal of the Royal Society for the Promotion of Health Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; manifest ; 1930 ; The Journal of the Royal Society for the Promotion of Health Volume 51 ; 51 >
+        au < HighWirePressH20Plugin ; manifest ; 1931 ; The Journal of the Royal Society for the Promotion of Health Volume 52 ; 52 >
+        au < HighWirePressH20Plugin ; manifest ; 1932 ; The Journal of the Royal Society for the Promotion of Health Volume 53 ; 53 >
+        au < HighWirePressH20Plugin ; manifest ; 1933 ; The Journal of the Royal Society for the Promotion of Health Volume 54 ; 54 >
+        au < HighWirePressH20Plugin ; manifest ; 1934 ; The Journal of the Royal Society for the Promotion of Health Volume 55 ; 55 >
+        au < HighWirePressH20Plugin ; manifest ; 1935 ; The Journal of the Royal Society for the Promotion of Health Volume 56 ; 56 >
+        au < HighWirePressH20Plugin ; manifest ; 1936 ; The Journal of the Royal Society for the Promotion of Health Volume 57 ; 57 >
+        au < HighWirePressH20Plugin ; manifest ; 1937 ; The Journal of the Royal Society for the Promotion of Health Volume 58 ; 58 >
+        au < HighWirePressH20Plugin ; manifest ; 1938 ; The Journal of the Royal Society for the Promotion of Health Volume 59 ; 59 >
+        au < HighWirePressH20Plugin ; manifest ; 1939 ; The Journal of the Royal Society for the Promotion of Health Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; manifest ; 1940 ; The Journal of the Royal Society for the Promotion of Health Volume 61 ; 61 >
+        au < HighWirePressH20Plugin ; manifest ; 1942 ; The Journal of the Royal Society for the Promotion of Health Volume 62 ; 62 >
+        au < HighWirePressH20Plugin ; manifest ; 1943 ; The Journal of the Royal Society for the Promotion of Health Volume 63 ; 63 >
+        au < HighWirePressH20Plugin ; manifest ; 1943 ; The Journal of the Royal Society for the Promotion of Health Volume 64 ; 64 >
+        au < HighWirePressH20Plugin ; manifest ; 1945 ; The Journal of the Royal Society for the Promotion of Health Volume 65 ; 65 >
+        au < HighWirePressH20Plugin ; manifest ; 1946 ; The Journal of the Royal Society for the Promotion of Health Volume 66 ; 66 >
+        au < HighWirePressH20Plugin ; manifest ; 1947 ; The Journal of the Royal Society for the Promotion of Health Volume 67 ; 67 >
+        au < HighWirePressH20Plugin ; manifest ; 1948 ; The Journal of the Royal Society for the Promotion of Health Volume 68 ; 68 >
+        au < HighWirePressH20Plugin ; manifest ; 1949 ; The Journal of the Royal Society for the Promotion of Health Volume 69 ; 69 >
+        au < HighWirePressH20Plugin ; manifest ; 1950 ; The Journal of the Royal Society for the Promotion of Health Volume 70 ; 70 >
+        au < HighWirePressH20Plugin ; manifest ; 1951 ; The Journal of the Royal Society for the Promotion of Health Volume 71 ; 71 >
+        au < HighWirePressH20Plugin ; manifest ; 1952 ; The Journal of the Royal Society for the Promotion of Health Volume 72 ; 72 >
+        au < HighWirePressH20Plugin ; manifest ; 1953 ; The Journal of the Royal Society for the Promotion of Health Volume 73 ; 73 >
+        au < HighWirePressH20Plugin ; manifest ; 1954 ; The Journal of the Royal Society for the Promotion of Health Volume 74 ; 74 >
+        au < HighWirePressH20Plugin ; manifest ; 1955 ; The Journal of the Royal Society for the Promotion of Health Volume 75 ; 75 >
+        au < HighWirePressH20Plugin ; manifest ; 1955 ; The Journal of the Royal Society for the Promotion of Health Volume 76 ; 76 >
+        au < HighWirePressH20Plugin ; manifest ; 1957 ; The Journal of the Royal Society for the Promotion of Health Volume 77 ; 77 >
+        au < HighWirePressH20Plugin ; manifest ; 1958 ; The Journal of the Royal Society for the Promotion of Health Volume 78 ; 78 >
+        au < HighWirePressH20Plugin ; manifest ; 1959 ; The Journal of the Royal Society for the Promotion of Health Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; manifest ; 1960 ; The Journal of the Royal Society for the Promotion of Health Volume 80 ; 80 >
+        au < HighWirePressH20Plugin ; manifest ; 1961 ; The Journal of the Royal Society for the Promotion of Health Volume 81 ; 81 >
+        au < HighWirePressH20Plugin ; manifest ; 1962 ; The Journal of the Royal Society for the Promotion of Health Volume 82 ; 82 >
+        au < HighWirePressH20Plugin ; manifest ; 1963 ; The Journal of the Royal Society for the Promotion of Health Volume 83 ; 83 >
+        au < HighWirePressH20Plugin ; manifest ; 1964 ; The Journal of the Royal Society for the Promotion of Health Volume 84 ; 84 >
+        au < HighWirePressH20Plugin ; manifest ; 1965 ; The Journal of the Royal Society for the Promotion of Health Volume 85 ; 85 >
+        au < HighWirePressH20Plugin ; manifest ; 1966 ; The Journal of the Royal Society for the Promotion of Health Volume 86 ; 86 >
+        au < HighWirePressH20Plugin ; manifest ; 1967 ; The Journal of the Royal Society for the Promotion of Health Volume 87 ; 87 >
+        au < HighWirePressH20Plugin ; manifest ; 1968 ; The Journal of the Royal Society for the Promotion of Health Volume 88 ; 88 >
+        au < HighWirePressH20Plugin ; manifest ; 1969 ; The Journal of the Royal Society for the Promotion of Health Volume 89 ; 89 >
+        au < HighWirePressH20Plugin ; manifest ; 1970 ; The Journal of the Royal Society for the Promotion of Health Volume 90 ; 90 >
+        au < HighWirePressH20Plugin ; manifest ; 1971 ; The Journal of the Royal Society for the Promotion of Health Volume 91 ; 91 >
+        au < HighWirePressH20Plugin ; manifest ; 1972 ; The Journal of the Royal Society for the Promotion of Health Volume 92 ; 92 >
+        au < HighWirePressH20Plugin ; manifest ; 1973 ; The Journal of the Royal Society for the Promotion of Health Volume 93 ; 93 >
+        au < HighWirePressH20Plugin ; manifest ; 1974 ; The Journal of the Royal Society for the Promotion of Health Volume 94 ; 94 >
+        au < HighWirePressH20Plugin ; manifest ; 1975 ; The Journal of the Royal Society for the Promotion of Health Volume 95 ; 95 >
+        au < HighWirePressH20Plugin ; manifest ; 1976 ; The Journal of the Royal Society for the Promotion of Health Volume 96 ; 96 >
+        au < HighWirePressH20Plugin ; manifest ; 1977 ; The Journal of the Royal Society for the Promotion of Health Volume 97 ; 97 >
+        au < HighWirePressH20Plugin ; manifest ; 1978 ; The Journal of the Royal Society for the Promotion of Health Volume 98 ; 98 >
+        au < HighWirePressH20Plugin ; manifest ; 1979 ; The Journal of the Royal Society for the Promotion of Health Volume 99 ; 99 >
+        au < HighWirePressH20Plugin ; manifest ; 1980 ; The Journal of the Royal Society for the Promotion of Health Volume 100 ; 100 >
+        au < HighWirePressH20Plugin ; manifest ; 1981 ; The Journal of the Royal Society for the Promotion of Health Volume 101 ; 101 >
+        au < HighWirePressH20Plugin ; manifest ; 1982 ; The Journal of the Royal Society for the Promotion of Health Volume 102 ; 102 >
+        au < HighWirePressH20Plugin ; manifest ; 1983 ; The Journal of the Royal Society for the Promotion of Health Volume 103 ; 103 >
+        au < HighWirePressH20Plugin ; manifest ; 1984 ; The Journal of the Royal Society for the Promotion of Health Volume 104 ; 104 >
+        au < HighWirePressH20Plugin ; manifest ; 1985 ; The Journal of the Royal Society for the Promotion of Health Volume 105 ; 105 >
+        au < HighWirePressH20Plugin ; manifest ; 1986 ; The Journal of the Royal Society for the Promotion of Health Volume 106 ; 106 >
+        au < HighWirePressH20Plugin ; manifest ; 1987 ; The Journal of the Royal Society for the Promotion of Health Volume 107 ; 107 >
+        au < HighWirePressH20Plugin ; manifest ; 1988 ; The Journal of the Royal Society for the Promotion of Health Volume 108 ; 108 >
+        au < HighWirePressH20Plugin ; manifest ; 1989 ; The Journal of the Royal Society for the Promotion of Health Volume 109 ; 109 >
+        au < HighWirePressH20Plugin ; manifest ; 1990 ; The Journal of the Royal Society for the Promotion of Health Volume 110 ; 110 >
+        au < HighWirePressH20Plugin ; manifest ; 1991 ; The Journal of the Royal Society for the Promotion of Health Volume 111 ; 111 >
+        au < HighWirePressH20Plugin ; manifest ; 1992 ; The Journal of the Royal Society for the Promotion of Health Volume 112 ; 112 >
+        au < HighWirePressH20Plugin ; manifest ; 1993 ; The Journal of the Royal Society for the Promotion of Health Volume 113 ; 113 >
+        au < HighWirePressH20Plugin ; manifest ; 1994 ; The Journal of the Royal Society for the Promotion of Health Volume 114 ; 114 >
+        au < HighWirePressH20Plugin ; manifest ; 1995 ; The Journal of the Royal Society for the Promotion of Health Volume 115 ; 115 >
+        au < HighWirePressH20Plugin ; manifest ; 1996 ; The Journal of the Royal Society for the Promotion of Health Volume 116 ; 116 >
+        au < HighWirePressH20Plugin ; manifest ; 1997 ; The Journal of the Royal Society for the Promotion of Health Volume 117 ; 117 >
+        au < HighWirePressH20Plugin ; manifest ; 1998 ; The Journal of the Royal Society for the Promotion of Health Volume 118 ; 118 >
+        au < HighWirePressH20Plugin ; manifest ; 1999 ; The Journal of the Royal Society for the Promotion of Health Volume 119 ; 119 >
+        au < HighWirePressH20Plugin ; manifest ; 2000 ; The Journal of the Royal Society for the Promotion of Health Volume 120 ; 120 >
+        au < HighWirePressH20Plugin ; manifest ; 2001 ; The Journal of the Royal Society for the Promotion of Health Volume 121 ; 121 >
+        au < HighWirePressH20Plugin ; manifest ; 2002 ; The Journal of the Royal Society for the Promotion of Health Volume 122 ; 122 >
+        au < HighWirePressH20Plugin ; manifest ; 2003 ; The Journal of the Royal Society for the Promotion of Health Volume 123 ; 123 >
+        au < HighWirePressH20Plugin ; manifest ; 2004 ; The Journal of the Royal Society for the Promotion of Health Volume 124 ; 124 >
         au < HighWireStrVolPlugin ; down ; 2005 ; The Journal of the Royal Society for the Promotion of Health Volume 125 ; 125 >
         au < HighWireStrVolPlugin ; down ; 2006 ; The Journal of the Royal Society for the Promotion of Health Volume 126 ; 126 >
         au < HighWireStrVolPlugin ; down ; 2007 ; The Journal of the Royal Society for the Promotion of Health Volume 127 ; 127 >
         au < HighWirePressPlugin ; down ; 2008 ; The Journal of the Royal Society for the Promotion of Health Volume 128 ; 128 >
-        au < HighWireStrVolPlugin ; down ; 2009 ; The Journal of the Royal Society for the Promotion of Health Volume 129 ; 129 >
 
       }
     
@@ -25005,142 +25143,13 @@ comment[mpj] = now published by Brill
 
       {
 
-        pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://rsh.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1879 ; Perspectives in Public Health Volume 1 ; 1 >
-        au < manifest ; 1881 ; Perspectives in Public Health Volume 2 ; 2 >
-        au < manifest ; 1882 ; Perspectives in Public Health Volume 3 ; 3 >
-        au < manifest ; 1883 ; Perspectives in Public Health Volume 4 ; 4 >
-        au < manifest ; 1884 ; Perspectives in Public Health Volume 5 ; 5 >
-        au < manifest ; 1885 ; Perspectives in Public Health Volume 6 ; 6 >
-        au < manifest ; 1886 ; Perspectives in Public Health Volume 7 ; 7 >
-        au < manifest ; 1887 ; Perspectives in Public Health Volume 8 ; 8 >
-        au < manifest ; 1888 ; Perspectives in Public Health Volume 9 ; 9 >
-        au < manifest ; 1889 ; Perspectives in Public Health Volume 10 ; 10 >
-        au < manifest ; 1890 ; Perspectives in Public Health Volume 11 ; 11 >
-        au < manifest ; 1891 ; Perspectives in Public Health Volume 12 ; 12 >
-        au < manifest ; 1892 ; Perspectives in Public Health Volume 13 ; 13 >
-        au < manifest ; 1893 ; Perspectives in Public Health Volume 14 ; 14 >
-        au < manifest ; 1894 ; Perspectives in Public Health Volume 15 ; 15 >
-        au < manifest ; 1895 ; Perspectives in Public Health Volume 16 ; 16 >
-        au < manifest ; 1896 ; Perspectives in Public Health Volume 17 ; 17 >
-        au < manifest ; 1897 ; Perspectives in Public Health Volume 18 ; 18 >
-        au < manifest ; 1898 ; Perspectives in Public Health Volume 19 ; 19 >
-        au < manifest ; 1899 ; Perspectives in Public Health Volume 20 ; 20 >
-        au < manifest ; 1900 ; Perspectives in Public Health Volume 21 ; 21 >
-        au < manifest ; 1901 ; Perspectives in Public Health Volume 22 ; 22 >
-        au < manifest ; 1902 ; Perspectives in Public Health Volume 23 ; 23 >
-        au < manifest ; 1903 ; Perspectives in Public Health Volume 24 ; 24 >
-        au < manifest ; 1904 ; Perspectives in Public Health Volume 25 ; 25 >
-        au < manifest ; 1905 ; Perspectives in Public Health Volume 26 ; 26 >
-        au < manifest ; 1906 ; Perspectives in Public Health Volume 27 ; 27 >
-        au < manifest ; 1907 ; Perspectives in Public Health Volume 28 ; 28 >
-        au < manifest ; 1908 ; Perspectives in Public Health Volume 29 ; 29 >
-        au < manifest ; 1909 ; Perspectives in Public Health Volume 30 ; 30 >
-        au < manifest ; 1910 ; Perspectives in Public Health Volume 31 ; 31 >
-        au < manifest ; 1911 ; Perspectives in Public Health Volume 32 ; 32 >
-        au < manifest ; 1912 ; Perspectives in Public Health Volume 33 ; 33 >
-        au < manifest ; 1913 ; Perspectives in Public Health Volume 34 ; 34 >
-        au < manifest ; 1914 ; Perspectives in Public Health Volume 35 ; 35 >
-        au < manifest ; 1915 ; Perspectives in Public Health Volume 36 ; 36 >
-        au < manifest ; 1916 ; Perspectives in Public Health Volume 37 ; 37 >
-        au < manifest ; 1917 ; Perspectives in Public Health Volume 38 ; 38 >
-        au < manifest ; 1918 ; Perspectives in Public Health Volume 39 ; 39 >
-        au < manifest ; 1919 ; Perspectives in Public Health Volume 40 ; 40 >
-        au < manifest ; 1920 ; Perspectives in Public Health Volume 41 ; 41 >
-        au < manifest ; 1921 ; Perspectives in Public Health Volume 42 ; 42 >
-        au < manifest ; 1922 ; Perspectives in Public Health Volume 43 ; 43 >
-        au < manifest ; 1923 ; Perspectives in Public Health Volume 44 ; 44 >
-        au < manifest ; 1924 ; Perspectives in Public Health Volume 45 ; 45 >
-        au < manifest ; 1925 ; Perspectives in Public Health Volume 46 ; 46 >
-        au < manifest ; 1926 ; Perspectives in Public Health Volume 47 ; 47 >
-        au < manifest ; 1927 ; Perspectives in Public Health Volume 48 ; 48 >
-        au < manifest ; 1928 ; Perspectives in Public Health Volume 49 ; 49 >
-        au < manifest ; 1929 ; Perspectives in Public Health Volume 50 ; 50 >
-        au < manifest ; 1930 ; Perspectives in Public Health Volume 51 ; 51 >
-        au < manifest ; 1931 ; Perspectives in Public Health Volume 52 ; 52 >
-        au < manifest ; 1932 ; Perspectives in Public Health Volume 53 ; 53 >
-        au < manifest ; 1933 ; Perspectives in Public Health Volume 54 ; 54 >
-        au < manifest ; 1934 ; Perspectives in Public Health Volume 55 ; 55 >
-        au < manifest ; 1935 ; Perspectives in Public Health Volume 56 ; 56 >
-        au < manifest ; 1936 ; Perspectives in Public Health Volume 57 ; 57 >
-        au < manifest ; 1937 ; Perspectives in Public Health Volume 58 ; 58 >
-        au < manifest ; 1938 ; Perspectives in Public Health Volume 59 ; 59 >
-        au < manifest ; 1939 ; Perspectives in Public Health Volume 60 ; 60 >
-        au < manifest ; 1940 ; Perspectives in Public Health Volume 61 ; 61 >
-        au < manifest ; 1942 ; Perspectives in Public Health Volume 62 ; 62 >
-        au < manifest ; 1943 ; Perspectives in Public Health Volume 63 ; 63 >
-        au < manifest ; 1943 ; Perspectives in Public Health Volume 64 ; 64 >
-        au < manifest ; 1945 ; Perspectives in Public Health Volume 65 ; 65 >
-        au < manifest ; 1946 ; Perspectives in Public Health Volume 66 ; 66 >
-        au < manifest ; 1947 ; Perspectives in Public Health Volume 67 ; 67 >
-        au < manifest ; 1948 ; Perspectives in Public Health Volume 68 ; 68 >
-        au < manifest ; 1949 ; Perspectives in Public Health Volume 69 ; 69 >
-        au < manifest ; 1950 ; Perspectives in Public Health Volume 70 ; 70 >
-        au < manifest ; 1951 ; Perspectives in Public Health Volume 71 ; 71 >
-        au < manifest ; 1952 ; Perspectives in Public Health Volume 72 ; 72 >
-        au < manifest ; 1953 ; Perspectives in Public Health Volume 73 ; 73 >
-        au < manifest ; 1954 ; Perspectives in Public Health Volume 74 ; 74 >
-        au < manifest ; 1955 ; Perspectives in Public Health Volume 75 ; 75 >
-        au < manifest ; 1955 ; Perspectives in Public Health Volume 76 ; 76 >
-        au < manifest ; 1957 ; Perspectives in Public Health Volume 77 ; 77 >
-        au < manifest ; 1958 ; Perspectives in Public Health Volume 78 ; 78 >
-        au < manifest ; 1959 ; Perspectives in Public Health Volume 79 ; 79 >
-        au < manifest ; 1960 ; Perspectives in Public Health Volume 80 ; 80 >
-        au < manifest ; 1961 ; Perspectives in Public Health Volume 81 ; 81 >
-        au < manifest ; 1962 ; Perspectives in Public Health Volume 82 ; 82 >
-        au < manifest ; 1963 ; Perspectives in Public Health Volume 83 ; 83 >
-        au < manifest ; 1964 ; Perspectives in Public Health Volume 84 ; 84 >
-        au < manifest ; 1965 ; Perspectives in Public Health Volume 85 ; 85 >
-        au < manifest ; 1966 ; Perspectives in Public Health Volume 86 ; 86 >
-        au < manifest ; 1967 ; Perspectives in Public Health Volume 87 ; 87 >
-        au < manifest ; 1968 ; Perspectives in Public Health Volume 88 ; 88 >
-        au < manifest ; 1969 ; Perspectives in Public Health Volume 89 ; 89 >
-        au < manifest ; 1970 ; Perspectives in Public Health Volume 90 ; 90 >
-        au < manifest ; 1971 ; Perspectives in Public Health Volume 91 ; 91 >
-        au < manifest ; 1972 ; Perspectives in Public Health Volume 92 ; 92 >
-        au < manifest ; 1973 ; Perspectives in Public Health Volume 93 ; 93 >
-        au < manifest ; 1974 ; Perspectives in Public Health Volume 94 ; 94 >
-        au < manifest ; 1975 ; Perspectives in Public Health Volume 95 ; 95 >
-        au < manifest ; 1976 ; Perspectives in Public Health Volume 96 ; 96 >
-        au < manifest ; 1977 ; Perspectives in Public Health Volume 97 ; 97 >
-        au < manifest ; 1978 ; Perspectives in Public Health Volume 98 ; 98 >
-        au < manifest ; 1979 ; Perspectives in Public Health Volume 99 ; 99 >
-        au < manifest ; 1980 ; Perspectives in Public Health Volume 100 ; 100 >
-        au < manifest ; 1981 ; Perspectives in Public Health Volume 101 ; 101 >
-        au < manifest ; 1982 ; Perspectives in Public Health Volume 102 ; 102 >
-        au < manifest ; 1983 ; Perspectives in Public Health Volume 103 ; 103 >
-        au < manifest ; 1984 ; Perspectives in Public Health Volume 104 ; 104 >
-        au < manifest ; 1985 ; Perspectives in Public Health Volume 105 ; 105 >
-        au < manifest ; 1986 ; Perspectives in Public Health Volume 106 ; 106 >
-        au < manifest ; 1987 ; Perspectives in Public Health Volume 107 ; 107 >
-        au < manifest ; 1988 ; Perspectives in Public Health Volume 108 ; 108 >
-        au < manifest ; 1989 ; Perspectives in Public Health Volume 109 ; 109 >
-        au < manifest ; 1990 ; Perspectives in Public Health Volume 110 ; 110 >
-        au < manifest ; 1991 ; Perspectives in Public Health Volume 111 ; 111 >
-        au < manifest ; 1992 ; Perspectives in Public Health Volume 112 ; 112 >
-        au < manifest ; 1993 ; Perspectives in Public Health Volume 113 ; 113 >
-        au < manifest ; 1994 ; Perspectives in Public Health Volume 114 ; 114 >
-        au < manifest ; 1995 ; Perspectives in Public Health Volume 115 ; 115 >
-        au < manifest ; 1996 ; Perspectives in Public Health Volume 116 ; 116 >
-        au < manifest ; 1997 ; Perspectives in Public Health Volume 117 ; 117 >
-        au < manifest ; 1998 ; Perspectives in Public Health Volume 118 ; 118 >
-        au < manifest ; 1999 ; Perspectives in Public Health Volume 119 ; 119 >
-        au < manifest ; 2000 ; Perspectives in Public Health Volume 120 ; 120 >
-        au < manifest ; 2001 ; Perspectives in Public Health Volume 121 ; 121 >
-        au < manifest ; 2002 ; Perspectives in Public Health Volume 122 ; 122 >
-        au < manifest ; 2003 ; Perspectives in Public Health Volume 123 ; 123 >
-        au < manifest ; 2004 ; Perspectives in Public Health Volume 124 ; 124 >
-        au < doNotProcess ; 2005 ; Perspectives in Public Health Volume 125 ; 125 >
-        au < doNotProcess ; 2006 ; Perspectives in Public Health Volume 126 ; 126 >
-        au < doNotProcess ; 2007 ; Perspectives in Public Health Volume 127 ; 127 >
-        au < doNotProcess ; 2008 ; Perspectives in Public Health Volume 128 ; 128 >
-        au < doNotProcess ; 2009 ; Perspectives in Public Health Volume 129 ; 129 >
-        au < manifest ; 2010 ; Perspectives in Public Health Volume 130 ; 130 >
-        au < manifest ; 2011 ; Perspectives in Public Health Volume 131 ; 131 >
-        au < manifest ; 2012 ; Perspectives in Public Health Volume 132 ; 132 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; Perspectives in Public Health Volume 129 ; 129 >
+        au < HighWirePressH20Plugin ; manifest ; 2010 ; Perspectives in Public Health Volume 130 ; 130 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; Perspectives in Public Health Volume 131 ; 131 >
+        au < HighWirePressH20Plugin ; manifest ; 2012 ; Perspectives in Public Health Volume 132 ; 132 >
 
       }
 
