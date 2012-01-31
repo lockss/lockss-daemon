@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.84 2012-01-25 10:46:33 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.85 2012-01-31 07:21:40 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 
 import javax.servlet.*;
 
+import org.apache.commons.lang.time.FastDateFormat;
 import org.mortbay.html.*;
 import org.w3c.dom.Document;
 
@@ -59,13 +60,6 @@ public class DaemonStatus extends LockssServlet {
   static final int OUTPUT_TEXT = 2;
   static final int OUTPUT_XML = 3;
   static final int OUTPUT_CSV = 4;
-
-  /** Format to display date/time in tables */
-  public static final DateFormat tableDf =
-    new SimpleDateFormat("HH:mm:ss MM/dd/yy");
-
-//   public static final DateFormat tableDf =
-//     DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
 
   private String tableName;
   private String tableKey;
@@ -705,6 +699,7 @@ public class DaemonStatus extends LockssServlet {
       return "left";
     case ColumnDescriptor.TYPE_INT:
     case ColumnDescriptor.TYPE_PERCENT:
+    case ColumnDescriptor.TYPE_AGREEMENT:
     case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
       return "right";
     }
@@ -719,6 +714,7 @@ public class DaemonStatus extends LockssServlet {
       return true;
     case ColumnDescriptor.TYPE_INT:
     case ColumnDescriptor.TYPE_PERCENT:
+    case ColumnDescriptor.TYPE_AGREEMENT:
     case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
     case ColumnDescriptor.TYPE_DATE:
       return false;
@@ -846,12 +842,63 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  static NumberFormat bigIntFmt = NumberFormat.getInstance();
-  static NumberFormat floatFmt = new DecimalFormat("0.0");
-  static {
-//     if (bigIntFmt instanceof DecimalFormat) {
-//       ((DecimalFormat)bigIntFmt).setDecimalSeparatorAlwaysShown(true);
-//     }
+  // Thread-safe formatters.
+  // FastDateFormat is thread-safe, NumberFormat & subclasses aren't.
+
+  /** Format to display date/time in tables */
+  private static final Format tableDf =
+    FastDateFormat.getInstance("HH:mm:ss MM/dd/yy");
+
+//   public static final DateFormat tableDf =
+//     DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
+
+  static Format getTableDateFormat() {
+    return tableDf;
+  }
+
+  private static final ThreadLocal<NumberFormat> agmntFmt = 
+    new ThreadLocal<NumberFormat> () {
+    @Override protected NumberFormat initialValue() {
+      return new DecimalFormat("0.00");
+    }
+  };
+
+  static NumberFormat getAgreementFormat() {
+    return agmntFmt.get();
+  }
+
+  private static final ThreadLocal<NumberFormat> floatFmt = 
+    new ThreadLocal<NumberFormat> () {
+    @Override protected NumberFormat initialValue() {
+      return new DecimalFormat("0.0");
+    }
+  };
+
+  static NumberFormat getFloatFormat() {
+    return floatFmt.get();
+  }
+
+  private static final ThreadLocal<NumberFormat> bigIntFmt = 
+    new ThreadLocal<NumberFormat> () {
+    @Override protected NumberFormat initialValue() {
+      NumberFormat fmt = NumberFormat.getInstance();
+//       if (fmt instanceof DecimalFormat) {
+//         ((DecimalFormat)fmt).setDecimalSeparatorAlwaysShown(true);
+//       }
+      return fmt;
+    }
+  };
+
+  static NumberFormat getBigIntFormat() {
+    return bigIntFmt.get();
+  }
+
+  /* DecimalFormat automatically applies half-even rounding to
+   * values being formatted under Java < 1.6.  This is a workaround. */ 
+  private static String doubleToPercent(double d) {
+    int i = (int)(d * 10000);
+    double pc = i / 100.0;
+    return getAgreementFormat().format(pc);
   }
 
   // turn a value into a display string
@@ -865,7 +912,7 @@ public class DaemonStatus extends LockssServlet {
 	if (val instanceof Number) {
 	  long lv = ((Number)val).longValue();
 	  if (lv >= 1000000) {
-	    return bigIntFmt.format(lv);
+	    return getBigIntFormat().format(lv);
 	  }
 	}
 	// fall thru
@@ -873,10 +920,13 @@ public class DaemonStatus extends LockssServlet {
       default:
 	return val.toString();
       case ColumnDescriptor.TYPE_FLOAT:
-	return floatFmt.format(((Number)val).doubleValue());
+	return getFloatFormat().format(((Number)val).doubleValue());
       case ColumnDescriptor.TYPE_PERCENT:
 	float fv = ((Number)val).floatValue();
 	return Integer.toString(Math.round(fv * 100)) + "%";
+      case ColumnDescriptor.TYPE_AGREEMENT:
+	float av = ((Number)val).floatValue();
+	return doubleToPercent(av) + "%";
       case ColumnDescriptor.TYPE_DATE:
 	Date d;
 	if (val instanceof Number) {
@@ -912,7 +962,7 @@ public class DaemonStatus extends LockssServlet {
     if (val == 0 || val == -1) {
       return "never";
     } else {
-      return tableDf.format(d);
+      return getTableDateFormat().format(d);
     }
   }
 
