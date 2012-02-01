@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -86,7 +86,7 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^https?://%s/&quot;, base_url_host</string>
       <string>1,&quot;^%slockss/%s/%s/index\.html$&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%stoc/%s/%s/&quot;, base_url, journal_id, volume_name</string>
+      <string>1,&quot;^%stoc/%s/%s($|/)&quot;, base_url, journal_id, volume_name</string>
       <string>2,&quot;^%sdoi/[^/]+/[^/]+/[-.9]+$&quot;, base_url</string>
       <string>2,&quot;^%saction/showFullPopup\?doi=.*&amp;id=$&quot;, base_url</string>
       <string>1,&quot;^%s(action/showFullPopup\?doi=|doi/)&quot;, base_url</string>
