@@ -211,14 +211,8 @@ my $showKbartWarnings = 0; # Hide them by default
 # Show help
 my $help = 0;
 
-# List of all the TDB files
-my $tdbs = "$daemonHome/tdb/prod/*.tdb";
-# Location of the tdbout script
-my $tdbout = "$daemonHome/scripts/tdb/tdbout.py";
-
-
 # ------------------------------------------------------------------------------
-# Process
+# Option processing and setup
 # ------------------------------------------------------------------------------
 
 # Long option processing
@@ -230,6 +224,16 @@ GetOptions ("daemon-home=s"     => \$daemonHome, # LOCKSS Daemon home dir
             "show-kbart-warnings" => \$showKbartWarnings, # Show the warning messages from the KBART converter
             "help|?"            => \$help
     );
+
+# Now set up the paths based on lockss-daemon-home
+# List of all the TDB files
+my $tdbs = "$daemonHome/tdb/prod/*.tdb";
+# Location of the tdbout script
+my $tdbout = "$daemonHome/scripts/tdb/tdbout.py";
+
+# ------------------------------------------------------------------------------
+# Do the conversions
+# ------------------------------------------------------------------------------
 
 # Show help if needed
 usage() if $help;
