@@ -1,5 +1,5 @@
 /*
- * $Id: RunKbartReport.java,v 1.1 2012-01-12 12:47:22 easyonthemayo Exp $
+ * $Id: RunKbartReport.java,v 1.2 2012-02-01 21:57:40 easyonthemayo Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ package org.lockss.devtools;
 
 import org.apache.commons.cli.*;
 import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang.StringUtils;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.exporter.biblio.BibliographicItemImpl;
 import org.lockss.exporter.biblio.BibliographicUtil;
@@ -54,6 +55,9 @@ import java.util.*;
  * The iteration over the input should probably be extracted to an external
  * class.
  * <p>
+ * The input CSV format must be ...
+ *
+ * <p>
  * Uses the Apache Commons cli library, which has some quirks:
  * <ul>
  *   <li>By default, it is not possible to display a usage message where the
@@ -67,7 +71,31 @@ import java.util.*;
  * @author Neil Mayo
  */
 public class RunKbartReport {
-  
+
+  // Alternative names for non-KBART fields in the input file.
+  /** Case-insensitive name for a volume string. */
+  protected static final String VOLUME_STR = "volume";
+  /** Case-insensitive name for a year/date string. */
+  protected static final String YEAR_STR = "year";
+  /** Case-insensitive name for a issue string. */
+  protected static final String ISSUE_STR = "issue";
+  /** Case-insensitive name for an ISSN-L string. */
+  protected static final String ISSNL_STR = "issnl";
+  /** Array of the non-KBART field names. */
+  protected static final String[] nonKbartFields =
+      {VOLUME_STR, YEAR_STR, ISSUE_STR, ISSNL_STR};
+  /** Array of the possible fields for volume string. */
+  protected static final String[] volFields =
+      {VOLUME_STR, "param[volume]", "param[volume_name]", "param[volume_str]"};
+  /** Array of the possible fields for year string. */
+  protected static final String[] yrFields =
+      {YEAR_STR, "param[year]"};
+  /** Array of the possible fields for issue string. */
+  protected static final String[] issFields =
+      {ISSUE_STR, "param[num_issue_range]", "param[issue_set]", 
+          "param[issue_no]", "param[issues]", "param[issue_no.]", 
+          "param[issue_dir]"};
+
   /** An input stream providing the CSV input data. */
   private final InputStream inputStream;
   // Settings from the command line
@@ -93,23 +121,6 @@ public class RunKbartReport {
       }};*/
 
   // ---------------------------------------------------------------------------
-
-  /**
-   * Construct an instance of this class, for running a single report.
-   */
-  private RunKbartReport(CommandLine clopts) throws FileNotFoundException,
-      IllegalArgumentException {
-    // Parse options and pass to constructor
-    // See new KbartExportFilter(titles) for default options
-    this(
-        clopts.hasOption(SOPT_HIDE_EMPTY_COLS),
-        clopts.hasOption(SOPT_SHOW_STATUS),
-        KbartExportFilter.PredefinedFieldOrdering.valueOf(
-            clopts.getOptionValue(SOPT_DATA)),
-        new FileInputStream(clopts.getOptionValue(SOPT_FILE)),
-        System.out
-    );
-  }
 
   /**
    * Construct an instance of this class with the supplied properties.
@@ -255,7 +266,7 @@ public class RunKbartReport {
 
     private final CsvReader csvReader;
     private String[] nextLine;
-    protected final KbartFieldMapping mapping;
+    protected final BibliographicItemFieldMapping mapping;
 
     /**
      * Create an iterator on a CSV file, which returns a BibliographicItem for
@@ -273,7 +284,7 @@ public class RunKbartReport {
       csvReader.readHeaders();
       // If the first line is not an appropriate list of field names
       // for the mapping, an exception is thrown
-      this.mapping = new KbartFieldMapping(csvReader.getHeaders());
+      this.mapping = new BibliographicItemFieldMapping(csvReader.getHeaders());
 
       // Read the first line of data
       try {
@@ -327,27 +338,34 @@ public class RunKbartReport {
     }
 
     /**
-     * A mapping of KBART fields to their column positions in the input file.
+     * A mapping of BibliographicItem fields to their column positions in the
+     * input file. Looks for standard KBART field names, and also combined 
+     * range strings for volume, year and issue.
      */
-    class KbartFieldMapping {
-      private final Map<Field, Integer> fieldPositions;
+    protected class BibliographicItemFieldMapping {
+      /** Map of KBART Fields to field positions. */
+      private final Map<Field, Integer> kbartFieldPositions;
+      /** Map of alternative field names to field positions. */
+      private final Map<String, Integer> otherFieldPositions;
       protected final boolean containsIdField;
       protected final boolean containsRangeField;
 
       /**
-       *
+       * Takes an array of header labels, and
        * @param header an array of header strings
        */
-      KbartFieldMapping(String[] header) {
-        this.fieldPositions = new HashMap<Field, Integer>();
+      BibliographicItemFieldMapping(String[] header) {
+        this.kbartFieldPositions = new HashMap<Field, Integer>();
+        this.otherFieldPositions = new HashMap<String, Integer>();
         // Map field names that match KBART names, to their position
         for (int i=0; i< header.length; i++) {
           String s = header[i];
           try {
             Field field = Field.valueOf(s.toUpperCase());
-            fieldPositions.put(field, i);
+            kbartFieldPositions.put(field, i);
           } catch (Exception e) {
-            // No such KBART field; ignore
+            // No such KBART field; map the field name to a position
+            otherFieldPositions.put(s.toLowerCase(), i);
           }
         }
         this.containsIdField = containsIdField();
@@ -359,15 +377,31 @@ public class RunKbartReport {
       }
 
       /**
-       * Get the value of the field from the array using the mapping.
+       * Get the value of the field from the array, using the mapping.
        * @param f the field to find
        * @param values a list of values matching the field mapping
-       * @return the mapped value of the field, or <tt>null</tt> if no such field or it is empty
+       * @return the mapped value of the field, or empty string if no such field or it is empty
        */
       public String getValue(Field f, String[] values) {
         try {
           //return fieldPositions.containsKey(f) ? values[fieldPositions.get(f)] : null;
-          String s = values[fieldPositions.get(f)];
+          String s = values[kbartFieldPositions.get(f)];
+          // Return empty string if the string is empty or null
+          return StringUtil.isNullString(s) ? "" : s;
+        } catch (Exception e) {
+          return "";
+        }
+      }
+
+      /**
+       * Get the value of the field from the array, using the mapping.
+       * @param name the name of the field to find
+       * @param values a list of values matching the field mapping
+       * @return the mapped value of the field, or <tt>null</tt> if no such field or it is empty
+       */
+      public String getValue(String name, String[] values) {
+        try {
+          String s = values[otherFieldPositions.get(name)];
           // Return null if the string is empty
           return StringUtil.isNullString(s) ? null : s;
         } catch (Exception e) {
@@ -375,23 +409,38 @@ public class RunKbartReport {
         }
       }
 
+      /**
+       * Try and find a field value from one of the several possible field names
+       * enumerated in the candidates. The first non-null non-empty value is
+       * returned.
+       * @param values
+       * @return
+       */
+      public String findValue(String[] values, String[] candidates) {
+        for (String f : candidates) {
+          String val = getValue(f, values);
+          if (val!=null) return val;
+        }
+        return null;
+      }
+
       private boolean containsIdField() {
         for (Field f : Field.idFields) {
-          if (fieldPositions.keySet().contains(f)) return true;
+          if (kbartFieldPositions.keySet().contains(f)) return true;
         }
         return false;
       }
 
       private boolean containsRangeField() {
         for (Field f : Field.rangeFields) {
-          if (fieldPositions.keySet().contains(f)) return true;
+          if (kbartFieldPositions.keySet().contains(f)) return true;
         }
         return false;
       }
 
       /**
-       * Create a BibliographicItem that returns values for KBART fields from
-       * the value set supplied. Uses BibliographicItemImpl to take advantage of
+       * Create a BibliographicItem with field values taken from the value set
+       * supplied. Uses BibliographicItemImpl to take advantage of
        * its basic functionality, in particular the getIssn() implementation.
        * @param values an array of mapped String values
        * @return
@@ -404,19 +453,23 @@ public class RunKbartReport {
         }
             .setPrintIssn(getValue(Field.PRINT_IDENTIFIER, values))
             .setEissn(getValue(Field.ONLINE_IDENTIFIER, values))
-                //.setIssnL("")
+            .setIssnL(getValue(ISSNL_STR, values))
             .setJournalTitle(getValue(Field.PUBLICATION_TITLE, values))
             .setPublisherName(getValue(Field.PUBLISHER_NAME, values))
             .setName(getValue(Field.PUBLICATION_TITLE, values))
-                //.setVolume("")
-                //.setYear("")
-                //.setIssue("")
             .setStartVolume(getValue(Field.NUM_FIRST_VOL_ONLINE, values))
             .setEndVolume(getValue(Field.NUM_LAST_VOL_ONLINE, values))
             .setStartYear(getValue(Field.DATE_FIRST_ISSUE_ONLINE, values))
             .setEndYear(getValue(Field.DATE_LAST_ISSUE_ONLINE, values))
             .setStartIssue(getValue(Field.NUM_FIRST_ISSUE_ONLINE, values))
             .setEndIssue(getValue(Field.NUM_LAST_ISSUE_ONLINE, values))
+            // Set volume/year/issue strings last - if they are non-null, they
+            // will be used to set the start and end values too, overriding
+            // what might have been set earlier in set[Start|End]*
+            .setVolume(findValue(values, volFields))
+            .setYear(findValue(values, yrFields))
+            .setIssue(findValue(values, issFields))
+
             ;
       }
     }
@@ -543,6 +596,8 @@ public class RunKbartReport {
         return i.compareTo(i1);
       }
     });
+    // Print blank line
+    System.err.println();
     help.printHelp("RunKbartReport", options, true);
     if (error) {
       for (Object o : options.getRequiredOptions()) {
@@ -561,12 +616,15 @@ public class RunKbartReport {
         KbartExportFilter.PredefinedFieldOrdering.values()) {
       System.err.format("  %s (%s)\n", ord.name(), ord.description);
     }
-    System.err.println("\nInput file should be UTF-8 encoded.\n");
+    System.err.format("\nInput file should be UTF-8 encoded and include a " +
+        "header row with field names matching KBART field names or any of the " +
+        "following: %s.\n\n", StringUtils.join(nonKbartFields, ", "));
     System.exit(0);
   }
 
   /**
    * Parse options and create an instance.
+   * See new KbartExportFilter(titles) for default options.
    * @param args
    */
   public static void main(String[] args) {
@@ -581,12 +639,29 @@ public class RunKbartReport {
     }
     if (cl==null || cl.hasOption(SOPT_HELP)) usage(false);
 
+    // Determine the ordering for the output data
+    PredefinedFieldOrdering ordering;
+    try {
+      ordering = KbartExportFilter.PredefinedFieldOrdering.valueOf(
+          cl.getOptionValue(SOPT_DATA)
+      );
+    } catch (Exception e) {
+      ordering = defaultFieldOrdering;
+    }
+
     // Create an instance
     try {
-      RunKbartReport report = new RunKbartReport(cl);
+      new RunKbartReport(
+          cl.hasOption(SOPT_HIDE_EMPTY_COLS),
+          cl.hasOption(SOPT_SHOW_STATUS),
+          ordering,
+          new FileInputStream(cl.getOptionValue(SOPT_FILE)),
+          System.out
+      );
     } catch (Exception e) {
-      System.err.println(e.getMessage());
+      System.err.println("Could not create RunKbartReport: "+e.getMessage());
     }
   }
+
 
 }
