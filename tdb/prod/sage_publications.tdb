@@ -5390,6 +5390,7 @@
       
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
+        param[base_url] = http://cpd.sagepub.com/
 
         au < exists ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 >
 
