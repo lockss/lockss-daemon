@@ -516,7 +516,10 @@ sub convertCsvIntoKbart {
 
 sub fileHasMoreThanAHeader() {
     my $f = shift;
-    my @res = split(/\s+/, `wc -l $f`);
+    my $n = `wc -l $f`;
+    $n =~ s/^\s+//g;
+    $n =~ s/\s+$//g;
+    my @res = split(/\s+/, $n);
     $res[0] > 1;
 }
 
