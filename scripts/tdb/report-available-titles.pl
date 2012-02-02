@@ -5,7 +5,8 @@
 # Produce a list of titles that are available in LOCKSS based on the best
 # information available. This version takes a reference file with the 
 # definitive list of committed titles, and produces a record for each
-# by cross-referencing with the TDB files.
+# by cross-referencing with the TDB files. The output is sorted by publisher
+# then publication title.
 # 
 # To do this we need to look at the full list of titles in the TDB (which 
 # should represent titles committed through publisher agreements) and 
@@ -204,6 +205,9 @@ my $kbartUnreleased = "kbart_unreleased.csv";
 # Name of the report listing all committed titles; consists of "Publisher","Title","ISSN","eISSN"
 my $committedTitles = "committed_titles.csv";
 
+# KBART output is ordered KBART field by default
+my $kborder = "KBART"; #$kborder = "PUBLISHER_PUBLICATION"
+
 # Generate fresh CSV metadata (time-consuming)
 my $generateCsvMetadata = 0; # Don't generate by default
 # Show the warning messages from the KBART converter
@@ -230,6 +234,10 @@ GetOptions ("daemon-home=s"     => \$daemonHome, # LOCKSS Daemon home dir
 my $tdbs = "$daemonHome/tdb/prod/*.tdb";
 # Location of the tdbout script
 my $tdbout = "$daemonHome/scripts/tdb/tdbout.py";
+
+
+my $kborder = "PUBLISHER_PUBLICATION";
+
 
 # ------------------------------------------------------------------------------
 # Do the conversions
@@ -266,8 +274,8 @@ print join(',', $PUBL, $TITLE, $ISSN, $EISSN,
            $IN_PROGRESS." ".$VOLS, $IN_PROGRESS." ".$YEARS, #$IN_PROGRESS." ".$ISSUES
     )."\n";
 
-# 5. Match identifying tuples to the KBART coverage records
-for my $id (keys %committedTuples) {
+# 5. Match identifying tuples to the KBART coverage records - sort the keys first 
+for my $id (sort keys %committedTuples) {
     # Find title in kbart reports; print coverage with status Preserved/In Progress
     my $pres  = $kbartProductionTuples{$id};
     my $unrel = $kbartUnreleasedTuples{$id};
@@ -505,12 +513,12 @@ sub convertCsvIntoKbart {
 
     # (1) KBART metadata for titles released into production
     print STDERR " 1. Production AUs  ($kbartProduction)\n";
-    system("$runKbartReport -d KBART -i $tdbCsvProduction > $kbartProduction $errRedir") 
+    system("$runKbartReport -d $kborder -i $tdbCsvProduction > $kbartProduction $errRedir") 
         == 0 or die  "RunKbartReport failed: $?\n";
 
     # (2) KBART metadata for titles not released into production
     print STDERR " 2. Unreleased AUs  ($kbartUnreleased)\n";
-    system("$runKbartReport -d KBART -i $tdbCsvUnreleased > $kbartUnreleased $errRedir") 
+    system("$runKbartReport -d $kborder -i $tdbCsvUnreleased > $kbartUnreleased $errRedir") 
         == 0 or die  "RunKbartReport failed: $?\n";
 } 
 
