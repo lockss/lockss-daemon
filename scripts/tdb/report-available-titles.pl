@@ -236,9 +236,6 @@ my $tdbs = "$daemonHome/tdb/prod/*.tdb";
 my $tdbout = "$daemonHome/scripts/tdb/tdbout.py";
 
 
-my $kborder = "PUBLISHER_PUBLICATION";
-
-
 # ------------------------------------------------------------------------------
 # Do the conversions
 # ------------------------------------------------------------------------------
