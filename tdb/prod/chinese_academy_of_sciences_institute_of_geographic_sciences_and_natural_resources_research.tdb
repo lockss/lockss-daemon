@@ -16,7 +16,10 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jore
-  
+      comment[bad_aus] = Bogus AUs for volumes 3 and 4  
+
+      au < manifest ; 2010 ; Journal of Resources and Ecology Volume 1 ; 1 >
+      au < manifest ; 2011 ; Journal of Resources and Ecology Volume 2 ; 2 >
 
     }
 
