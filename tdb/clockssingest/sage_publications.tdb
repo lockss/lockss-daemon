@@ -2127,7 +2127,7 @@
       au < released ; manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 635 ; 635 ; >
       au < released ; manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 636 ; 636 ; >
       au < released ; manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 637 ; 637 ; >
-      au < crawling ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 638 ; 638 ; >
+      au < testing ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 638 ; 638 ; >
       au < manifest ; exists ; 2012 ; The ANNALS of the American Academy of Political and Social Science Volume 639 ; 639 ; >
       au < exists ; exists ; 2012 ; The ANNALS of the American Academy of Political and Social Science Volume 640 ; 640 ; >
       au < exists ; exists ; 2012 ; The ANNALS of the American Academy of Political and Social Science Volume 641 ; 641 ; >
@@ -2620,7 +2620,7 @@
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Assessment for Effective Intervention Volume 34 ; 34 ; >
       au < released ; crawling ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 ;  >
       au < released ; manifest ; 2010-2011 ; Assessment for Effective Intervention Volume 36 ; 36 ; >
-      au < crawling ; exists ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 ; >
 
     }
 
@@ -12775,7 +12775,8 @@
       au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Music Education Volume 26 ; 26 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Music Education Volume 27 ; 27 ; >
       au < released ; crawling ; 2010 ; International Journal of Music Education Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2011 ; International Journal of Music Education Volume 29 ; 29 ; >
+      au < testing ; exists ; 2011 ; International Journal of Music Education Volume 29 ; 29 ; >
+      au < exists ; exists ; 2012 ; International Journal of Music Education Volume 30 ; 30 ; >
 
     }
 
@@ -14340,7 +14341,7 @@
         au < exists ; exists ; 2007-2008 ; Journal of Advanced Academics Volume 19 ; 19 ; >
         au < exists ; exists ; 2008-2009 ; Journal of Advanced Academics Volume 20 ; 20 ; >
         au < exists ; exists ; 2009-2010 ; Journal of Advanced Academics Volume 21 ; 21 ; >
-        au < crawling ; exists ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 ; >
+        au < testing ; exists ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 ; >
         au < released ; manifest ; 2011-2012 ; Journal of Advanced Academics Volume 23 ; 23 ; >
         au < exists ; exists ; 2012-2013 ; Journal of Advanced Academics Volume 24 ; 24 ; >
 
@@ -18942,7 +18943,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Intensive Care Medicine Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Intensive Care Medicine Volume 24 ; 24 ; >
       au < wanted ; exists ; 2010 ; Journal of Intensive Care Medicine Volume 25 ; 25 ;  >
-      au < crawling ; exists ; 2011 ; Journal of Intensive Care Medicine Volume 26 ; 26 ;  >
+      au < testing ; exists ; 2011 ; Journal of Intensive Care Medicine Volume 26 ; 26 ;  >
       au < manifest ; exists ; 2012 ; Journal of Intensive Care Medicine Volume 27 ; 27 ;  >
 
     }
