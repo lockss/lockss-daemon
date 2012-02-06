@@ -434,13 +434,16 @@
   
     title <
       name = Transportation Journal ;
-      issn = 0041-1612 ;
-      eissn = 2157-328X ;
-      issnl = 0041-1612 
+      issn = 2157-328X ;
+      eissn = 0022-6865 ;
+      issnl = 2157-328X 
     >
 
     param[journal_dir] = transportation_journal
+    attr[journal_id] = tnp
     
+    au < exists ; 2012 ; Transportation Journal Volume 1 ; 1 >
+
   }
 
   {
