@@ -20,8 +20,8 @@
       param[base_url] =  http://www.cardiologyres.org/
       param[journal_id] = Cardiologyres
 
-      au < testing ; 2010 ; Cardiology Research Volume 1 ; 1 ; 2010 >
-      au < testing ; 2011 ; Cardiology Research Volume 2 ; 2 ; 2011 >
+      au < ready ; 2010 ; Cardiology Research Volume 1 ; 1 ; 2010 >
+      au < ready ; 2011 ; Cardiology Research Volume 2 ; 2 ; 2011 >
 
     }
 
@@ -37,7 +37,7 @@
       param[base_url] = http://www.gastrores.org/
       param[journal_id] = Gastrores
       
-      au < testing ; 2008 ; Gastroenterology Research Volume 1 ; 1 ; 2008 >
+      au < ready ; 2008 ; Gastroenterology Research Volume 1 ; 1 ; 2008 >
       au < testing ; 2009 ; Gastroenterology Research Volume 2 ; 2 ; 2009 >
       au < testing ; 2010 ; Gastroenterology Research Volume 3 ; 3 ; 2010 >
       au < testing ; 2011 ; Gastroenterology Research Volume 4 ; 4 ; 2011 >
@@ -196,8 +196,8 @@
       param[base_url] = http://www.wjon.org/
       param[journal_id] = wjon
 
-      au < testing ; 2010 ; World Journal of Oncology Volume 1 ; 1 ; 2010 >
-      au < testing ; 2011 ; World Journal of Oncology Volume 2 ; 2 ; 2011 >
+      au < ready ; 2010 ; World Journal of Oncology Volume 1 ; 1 ; 2010 >
+      au < ready ; 2011 ; World Journal of Oncology Volume 2 ; 2 ; 2011 >
 
     }
     
