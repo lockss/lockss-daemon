@@ -1081,7 +1081,7 @@
     au < exists ; exists ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 >
     au < exists ; exists ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 >
     au < exists ; exists ; 2010 ; Journal of Cerebral Blood Flow and Metabolism Volume 30 ; 2010 ; 30 >
-    au < testing ; exists ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
+    au < notReady ; exists ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
 
   }
 
@@ -1636,7 +1636,7 @@
     au < exists ; exists ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
     au < exists ; exists ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
     au < exists ; exists ; 2010 ; Mucosal Immunology Volume 3 ; 2010 ; 3 >
-    au < testing ; exists ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
+    au < notReady ; exists ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
 
   }
 
@@ -2265,7 +2265,7 @@
     au < released ; crawling ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
     au < released ; crawling ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
     au < released ; crawling ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 >
-    au < testing ; exists ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 >
+    au < notReady ; exists ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 >
 
   }
 
@@ -2286,7 +2286,7 @@
     au < released ; crawling ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 >
-    au < testing ; exists ; 2010 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 >
+    au < notReady ; exists ; 2010 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 >
 
   }
 
@@ -2303,7 +2303,7 @@
 
     au < released ; crawling ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
     au < released ; crawling ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 >
-    au < testing ; exists ; 2011 ; Nature Chemistry Volume 3 ; 2011 ; 3 >
+    au < notReady ; exists ; 2011 ; Nature Chemistry Volume 3 ; 2011 ; 3 >
 
   }
 
@@ -2380,7 +2380,7 @@
     au < released ; crawling ; 2008 ; Nature Genetics Volume 40 ; 2008 ; 40 >
     au < released ; crawling ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 >
     au < released ; crawling ; 2010 ; Nature Genetics Volume 42 ; 2010 ; 42 >
-    au < testing ; exists ; 2011 ; Nature Genetics Volume 43 ; 2011 ; 43 >
+    au < notReady ; exists ; 2011 ; Nature Genetics Volume 43 ; 2011 ; 43 >
 
   }
 
@@ -2398,7 +2398,7 @@
     au < released ; crawling ; 2008 ; Nature Geoscience Volume 1 ; 2008 ; 1 >
     au < released ; crawling ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 >
     au < released ; crawling ; 2010 ; Nature Geoscience Volume 3 ; 2010 ; 3 >
-    au < testing ; exists ; 2011 ; Nature Geoscience Volume 4 ; 2011 ; 4 >
+    au < notReady ; exists ; 2011 ; Nature Geoscience Volume 4 ; 2011 ; 4 >
 
   }
 
@@ -2424,7 +2424,7 @@
     au < released ; crawling ; 2008 ; Nature Immunology Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Immunology Volume 11 ; 2010 ; 11 >
-    au < testing ; exists ; 2011 ; Nature Immunology Volume 12 ; 2011 ; 12 >
+    au < notReady ; exists ; 2011 ; Nature Immunology Volume 12 ; 2011 ; 12 >
 
   }
 
@@ -2448,7 +2448,7 @@
     au < released ; crawling ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
     au < released ; crawling ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
     au < released ; crawling ; 2010 ; Nature Materials Volume 9 ; 2010 ; 9 >
-    au < testing ; exists ; 2011 ; Nature Materials Volume 10 ; 2011 ; 10 >
+    au < notReady ; exists ; 2011 ; Nature Materials Volume 10 ; 2011 ; 10 >
 
   }
 
@@ -2479,7 +2479,7 @@
     au < released ; crawling ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 >
     au < released ; crawling ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 >
     au < released ; crawling ; 2010 ; Nature Medicine Volume 16 ; 2010 ; 16 >
-    au < crawling ; exists ; 2011 ; Nature Medicine Volume 17 ; 2011 ; 17 >
+    au < testing ; exists ; 2011 ; Nature Medicine Volume 17 ; 2011 ; 17 >
 
   }
 
@@ -2501,7 +2501,7 @@
     au < released ; crawling ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 >
-    au < crawling ; exists ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 >
+    au < testing ; exists ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 >
 
   }
 
@@ -2521,7 +2521,7 @@
     au < released ; crawling ; 2008 ; Nature Nanotechnology Volume 3 ; 2008 ; 3 >
     au < released ; crawling ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 >
     au < released ; crawling ; 2010 ; Nature Nanotechnology Volume 5 ; 2010 ; 5 >
-    au < crawling ; exists ; 2011 ; Nature Nanotechnology Volume 6 ; 2011 ; 6 >
+    au < testing ; exists ; 2011 ; Nature Nanotechnology Volume 6 ; 2011 ; 6 >
 
   }
 
@@ -2549,7 +2549,7 @@
     au < released ; crawling ; 2008 ; Nature Neuroscience Volume 11 ; 2008 ; 11 >
     au < released ; crawling ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
     au < released ; crawling ; 2010 ; Nature Neuroscience Volume 13 ; 2010 ; 13 >
-    au < crawling ; exists ; 2011 ; Nature Neuroscience Volume 14 ; 2011 ; 14 >
+    au < testing ; exists ; 2011 ; Nature Neuroscience Volume 14 ; 2011 ; 14 >
 
   }
 
@@ -2590,7 +2590,7 @@
     au < released ; crawling ; 2008 ; Nature Physics Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Physics Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Physics Volume 6 ; 2010 ; 6 >
-    au < crawling ; exists ; 2011 ; Nature Physics Volume 7 ; 2011 ; 7 >
+    au < testing ; exists ; 2011 ; Nature Physics Volume 7 ; 2011 ; 7 >
 
   }
 
@@ -2610,7 +2610,7 @@
     au < released ; crawling ; 2008 ; Nature Protocols Volume 3 ; 2008 ; 3 >
     au < released ; crawling ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 >
     au < released ; crawling ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 >
-    au < crawling ; exists ; 2011 ; Nature Protocols Volume 6 ; 2011 ; 6 >
+    au < testing ; exists ; 2011 ; Nature Protocols Volume 6 ; 2011 ; 6 >
     au < exists ; exists ; 2012 ; Nature Protocols Volume 7 ; 2012 ; 7 >
 
   }
@@ -2636,7 +2636,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Cancer Volume 8 ; 2008 ; 8 >
     au < released ; crawling ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; Nature Reviews Cancer Volume 10 ; 2010 ; 10 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Cancer Volume 11 ; 2011 ; 11 >
+    au < testing ; exists ; 2011 ; Nature Reviews Cancer Volume 11 ; 2011 ; 11 >
 
   }
 
@@ -2680,7 +2680,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Clinical Oncology Volume 7 ; 2010 ; 7 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Clinical Oncology Volume 8 ; 2011 ; 8 >
+    au < testing ; exists ; 2011 ; Nature Reviews Clinical Oncology Volume 8 ; 2011 ; 8 >
 
   }
 
