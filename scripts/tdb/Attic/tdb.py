@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.12 2012-01-25 11:10:28 easyonthemayo Exp $
+# $Id: tdb.py,v 1.13 2012-02-07 00:32:49 thib_gc Exp $
 
-# Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.3'''
+__version__ = '''0.3.4'''
 
 import re
 
@@ -190,8 +190,9 @@ class AU(_ChainedMap):
     '''Adds convenience getters to a _ChainedMap.'''
     class Status:
         DOES_NOT_EXIST = 'doesNotExist'
-        EXISTS = 'exists'
         DO_NOT_PROCESS = 'doNotProcess'
+        EXISTS = 'exists'
+        EXPECTED = 'expected'
         MANIFEST = 'manifest'
         WANTED = 'wanted'
         CRAWLING = 'crawling'
@@ -204,7 +205,7 @@ class AU(_ChainedMap):
         RELEASED = 'released'
         DOWN = 'down'
         SUPERSEDED = 'superseded'
-        EXPUNGED = 'expunged'
+        ZAPPED = 'zapped'
 
     ATTR = 'attr'
     EDITION = 'edition'
