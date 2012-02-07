@@ -2127,7 +2127,7 @@
       au < released ; manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 635 ; 635 ; >
       au < released ; manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 636 ; 636 ; >
       au < released ; manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 637 ; 637 ; >
-      au < testing ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 638 ; 638 ; >
+      au < released ; manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 638 ; 638 ; >
       au < manifest ; exists ; 2012 ; The ANNALS of the American Academy of Political and Social Science Volume 639 ; 639 ; >
       au < exists ; exists ; 2012 ; The ANNALS of the American Academy of Political and Social Science Volume 640 ; 640 ; >
       au < exists ; exists ; 2012 ; The ANNALS of the American Academy of Political and Social Science Volume 641 ; 641 ; >
@@ -8274,7 +8274,7 @@
       au < manifest ; exists ; 2009 ; European Journal of Cardiovascular Prevention & Rehabilitation 16 ; 16 ; >
       au < manifest ; exists ; 2010 ; European Journal of Cardiovascular Prevention & Rehabilitation 17 ; 17 ; >
       au < released ; manifest ; 2011 ; European Journal of Cardiovascular Prevention & Rehabilitation 18 ; 18 ; >
-      au < manifest ; exists ; 2012 ; European Journal of Cardiovascular Prevention & Rehabilitation 19 ; 19 ; >
+      au < doesNotExist ; doesNotExist ; 2012 ; European Journal of Cardiovascular Prevention & Rehabilitation 19 ; 19 ; >
 
     }
 
@@ -12775,7 +12775,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Music Education Volume 26 ; 26 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Music Education Volume 27 ; 27 ; >
       au < released ; crawling ; 2010 ; International Journal of Music Education Volume 28 ; 28 ; >
-      au < testing ; exists ; 2011 ; International Journal of Music Education Volume 29 ; 29 ; >
+      au < released ; manifest ; 2011 ; International Journal of Music Education Volume 29 ; 29 ; >
       au < exists ; exists ; 2012 ; International Journal of Music Education Volume 30 ; 30 ; >
 
     }
@@ -14341,7 +14341,7 @@
         au < exists ; exists ; 2007-2008 ; Journal of Advanced Academics Volume 19 ; 19 ; >
         au < exists ; exists ; 2008-2009 ; Journal of Advanced Academics Volume 20 ; 20 ; >
         au < exists ; exists ; 2009-2010 ; Journal of Advanced Academics Volume 21 ; 21 ; >
-        au < testing ; exists ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 ; >
+        au < released ; manifest ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 ; >
         au < released ; manifest ; 2011-2012 ; Journal of Advanced Academics Volume 23 ; 23 ; >
         au < exists ; exists ; 2012-2013 ; Journal of Advanced Academics Volume 24 ; 24 ; >
 
@@ -16707,7 +16707,7 @@
       au < manifest ; exists ; 2007 ; Journal of Diagnostic Medical Sonography Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Diagnostic Medical Sonography Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Diagnostic Medical Sonography Volume 25 ; 25 ; >
-      au < wanted ; exists ; 2010 ; Journal of Diagnostic Medical Sonography Volume 26 ; 26 ;  >
+      au < crawling ; exists ; 2010 ; Journal of Diagnostic Medical Sonography Volume 26 ; 26 ;  >
       au < released ; manifest ; 2011 ; Journal of Diagnostic Medical Sonography Volume 27 ; 27 ; >
       au < manifest ; exists ; 2012 ; Journal of Diagnostic Medical Sonography Volume 28 ; 28 ; >
 
@@ -16759,7 +16759,7 @@
       au < manifest ; exists ; 2007 ; Journal of Disability Policy Studies Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Disability Policy Studies Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Disability Policy Studies Volume 20 ; 20 ; >
-      au < wanted ; exists ; 2010 ; Journal of Disability Policy Studies Volume 21 ; 21 ;  >
+      au < crawling ; exists ; 2010 ; Journal of Disability Policy Studies Volume 21 ; 21 ;  >
       au < released ; manifest ; 2011 ; Journal of Disability Policy Studies Volume 22 ; 22 ; >
       au < exists ; exists ; 2012 ; Journal of Disability Policy Studies Volume 23 ; 23 ; >
 
@@ -16820,7 +16820,7 @@
       au < manifest ; exists ; 2007 ; The Journal of Early Adolescence Volume 27 ; 27 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Early Adolescence Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Early Adolescence Volume 29 ; 29 ; >
-      au < wanted ; exists ; 2010 ; The Journal of Early Adolescence Volume 30 ; 30 ;  >
+      au < crawling ; exists ; 2010 ; The Journal of Early Adolescence Volume 30 ; 30 ;  >
       au < released ; manifest ; 2011 ; The Journal of Early Adolescence Volume 31 ; 31 ; >
       au < exists ; exists ; 2012 ; The Journal of Early Adolescence Volume 32 ; 32 ; >
 
@@ -16861,7 +16861,7 @@
       au < manifest ; exists ; 2007 ; Journal of Early Childhood Literacy Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Early Childhood Literacy Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Early Childhood Literacy Volume 9 ; 9 ; >
-      au < wanted ; exists ; 2010 ; Journal of Early Childhood Literacy Volume 10 ; 10 ;  >
+      au < crawling ; exists ; 2010 ; Journal of Early Childhood Literacy Volume 10 ; 10 ;  >
       au < released ; manifest ; 2011 ; Journal of Early Childhood Literacy Volume 11 ; 11 ; >
       au < exists ; exists ; 2012 ; Journal of Early Childhood Literacy Volume 12 ; 12 ; >
 
@@ -16901,7 +16901,7 @@
       au < manifest ; exists ; 2007 ; Journal of Early Childhood Research Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Early Childhood Research Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Early Childhood Research Volume 7 ; 7 ; >
-      au < wanted ; exists ; 2010 ; Journal of Early Childhood Research Volume 8 ; 8 ;  >
+      au < crawling ; exists ; 2010 ; Journal of Early Childhood Research Volume 8 ; 8 ;  >
       au < released ; manifest ; 2011 ; Journal of Early Childhood Research Volume 9 ; 9 ; >
       au < exists ; exists ; 2012 ; Journal of Early Childhood Research Volume 10 ; 10 ; >
 
@@ -16925,7 +16925,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Early Intervention Volume 31 ; 31 ;  >
+      au < down ; crawling ; 2008-2009 ; Journal of Early Intervention Volume 31 ; 31 ;  >
 
     }
 
@@ -16933,18 +16933,18 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1978 ; Journal of Early Intervention Volume 1 ; 1 ; >
-      au < exists ; exists ; 1979 ; Journal of Early Intervention Volume 2 ; 2 ; >
-      au < exists ; exists ; 1980 ; Journal of Early Intervention Volume 3 ; 3 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Early Intervention Volume 1 ; 1 ; >
+      au < exists ; exists ; 1981 ; Journal of Early Intervention Volume 2 ; 2 ; >
+      au < exists ; exists ; 1981 ; Journal of Early Intervention Volume 3 ; 3 ; >
       au < exists ; exists ; 1981 ; Journal of Early Intervention Volume 4 ; 4 ; >
       au < manifest ; exists ; 1982 ; Journal of Early Intervention Volume 5 ; 5 ; >
       au < manifest ; exists ; 1982 ; Journal of Early Intervention Volume 6 ; 6 ; >
       au < manifest ; exists ; 1983 ; Journal of Early Intervention Volume 7 ; 7 ; >
       au < manifest ; exists ; 1984 ; Journal of Early Intervention Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1984 ; Journal of Early Intervention Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1986 ; Journal of Early Intervention Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1986 ; Journal of Early Intervention Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1987 ; Journal of Early Intervention Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1984-1985 ; Journal of Early Intervention Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1985-1986 ; Journal of Early Intervention Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1986-1987 ; Journal of Early Intervention Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1987-1988 ; Journal of Early Intervention Volume 12 ; 12 ; >
       au < manifest ; exists ; 1989 ; Journal of Early Intervention Volume 13 ; 13 ; >
       au < manifest ; exists ; 1990 ; Journal of Early Intervention Volume 14 ; 14 ; >
       au < manifest ; exists ; 1991 ; Journal of Early Intervention Volume 15 ; 15 ; >
@@ -16953,19 +16953,20 @@
       au < manifest ; exists ; 1994 ; Journal of Early Intervention Volume 18 ; 18 ; >
       au < manifest ; exists ; 1995 ; Journal of Early Intervention Volume 19 ; 19 ; >
       au < manifest ; exists ; 1996 ; Journal of Early Intervention Volume 20 ; 20 ; >
-      au < manifest ; exists ; 1997 ; Journal of Early Intervention Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1997-1998 ; Journal of Early Intervention Volume 21 ; 21 ; >
       au < manifest ; exists ; 1999 ; Journal of Early Intervention Volume 22 ; 22 ; >
       au < manifest ; exists ; 2000 ; Journal of Early Intervention Volume 23 ; 23 ; >
       au < manifest ; exists ; 2001 ; Journal of Early Intervention Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2002 ; Journal of Early Intervention Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2003 ; Journal of Early Intervention Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2004 ; Journal of Early Intervention Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2005 ; Journal of Early Intervention Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2006 ; Journal of Early Intervention Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2007 ; Journal of Early Intervention Volume 30 ; 30 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Journal of Early Intervention Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2009 ; Journal of Early Intervention Volume 32 ; 32 ;  >
-      au < wanted ; exists ; 2010 ; Journal of Early Intervention Volume 33 ; 33 ;  >
+      au < manifest ; exists ; 2002-2003 ; Journal of Early Intervention Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2003-2004 ; Journal of Early Intervention Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2004-2005 ; Journal of Early Intervention Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2005-2006 ; Journal of Early Intervention Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2006-2007 ; Journal of Early Intervention Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2007-2008 ; Journal of Early Intervention Volume 30 ; 30 ; >
+      au < doNotProcess ; doNotProcess ; 2008-2009 ; Journal of Early Intervention Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2009-2010 ; Journal of Early Intervention Volume 32 ; 32 ;  >
+      au < crawling ; exists ; 2011 ; Journal of Early Intervention Volume 33 ; 33 ;  >
+      au < expected ; exists ; 2012 ; Journal of Early Intervention Volume 34 ; 34 ;  >
 
     }
 
@@ -16998,7 +16999,7 @@
       au < manifest ; exists ; 2007 ; Journal of Education for Sustainable Development Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Education for Sustainable Development Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Education for Sustainable Development Volume 3 ; 3 ; >
-      au < wanted ; exists ; 2010 ; Journal of Education for Sustainable Development Volume 4 ; 4 ;  >
+      au < crawling ; exists ; 2010 ; Journal of Education for Sustainable Development Volume 4 ; 4 ;  >
       au < released ; manifest ; 2011 ; Journal of Education for Sustainable Development Volume 5 ; 5 ; >
       au < exists ; exists ; 2012 ; Journal of Education for Sustainable Development Volume 6 ; 6 ; >
 
@@ -17064,7 +17065,7 @@
       au < manifest ; exists ; 2007 ; Journal of Educational and Behavioral Statistics Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Educational and Behavioral Statistics Volume 33 ; 33 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Educational and Behavioral Statistics Volume 34 ; 34 ; >
-      au < wanted ; exists ; 2010 ; Journal of Educational and Behavioral Statistics Volume 35 ; 35 ;  >
+      au < crawling ; exists ; 2010 ; Journal of Educational and Behavioral Statistics Volume 35 ; 35 ;  >
       au < released ; manifest ; 2011 ; Journal of Educational and Behavioral Statistics Volume 36 ; 36 ; >
       au < manifest ; exists ; 2012 ; Journal of Educational and Behavioral Statistics Volume 37 ; 37 ; >
 
@@ -17137,7 +17138,7 @@
       au < manifest ; exists ; 2007 ; Journal of Elastomers and Plastics Volume 39 ; 39 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Elastomers and Plastics Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Elastomers and Plastics Volume 41 ; 41 ; >
-      au < wanted ; exists ; 2010 ; Journal of Elastomers and Plastics Volume 42 ; 42 ;  >
+      au < crawling ; exists ; 2010 ; Journal of Elastomers and Plastics Volume 42 ; 42 ;  >
       au < released ; manifest ; 2011 ; Journal of Elastomers and Plastics Volume 43 ; 43 ; >
       au < manifest ; exists ; 2012 ; Journal of Elastomers and Plastics Volume 44 ; 44 ; >
 
@@ -18943,7 +18944,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Intensive Care Medicine Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Intensive Care Medicine Volume 24 ; 24 ; >
       au < wanted ; exists ; 2010 ; Journal of Intensive Care Medicine Volume 25 ; 25 ;  >
-      au < testing ; exists ; 2011 ; Journal of Intensive Care Medicine Volume 26 ; 26 ;  >
+      au < released ; manifest ; 2011 ; Journal of Intensive Care Medicine Volume 26 ; 26 ;  >
       au < manifest ; exists ; 2012 ; Journal of Intensive Care Medicine Volume 27 ; 27 ;  >
 
     }
@@ -19124,7 +19125,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Leadership & Organizational Studies Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Leadership & Organizational Studies Volume 16 ; 16 ; >
       au < wanted ; exists ; 2010 ; Journal of Leadership & Organizational Studies Volume 17 ; 17 ;  >
-      au < testing ; exists ; 2011 ; Journal of Leadership & Organizational Studies Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2011 ; Journal of Leadership & Organizational Studies Volume 18 ; 18 ; >
       au < manifest ; exists ; 2012 ; Journal of Leadership & Organizational Studies Volume 19 ; 19 ; >
 
     }
@@ -19292,7 +19293,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < released ; manifest ; 2011 ; Journal of Literacy Research Volume 43 ; 43 ; >
-      au < manifest ; exists ; 2012 ; Journal of Literacy Research Volume 43 ; 43 ; >
+      au < exists ; exists ; 2012 ; Journal of Literacy Research Volume 44 ; 44 ; >
 
     }
 
