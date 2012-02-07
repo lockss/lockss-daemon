@@ -9576,7 +9576,7 @@
         param[base_url] = http://cpr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[continued_by] = European Journal of Preventitive Cardiology, 2047-4873
+        comment[continued_by] = European Journal of Preventive Cardiology, 2047-4873
 
 
         au < manifest ; 1994 ; European Journal of Cardiovascular Prevention & Rehabilitation 1 ; 1 >
@@ -9605,7 +9605,7 @@
 
     {
       title <
-        name = European Journal of Preventitive Cardiology ;
+        name = European Journal of Preventive Cardiology ;
         issn = 2047-4873 ;
         eissn = 2047-4881 ;
         issnl = 2047-4873
@@ -9620,8 +9620,8 @@
         comment[continued_from] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
         comment[0] = Previous issues are at the same url.
         
-        au < doesNotExist ; 2011 ; European Journal of Preventitive Cardiology 18 ; 18 >
-        au < manifest ; 2012 ; European Journal of Preventitive Cardiology 19 ; 19 >
+        au < doesNotExist ; 2011 ; European Journal of Preventive Cardiology 18 ; 18 >
+        au < manifest ; 2012 ; European Journal of Preventive Cardiology 19 ; 19 >
 
       }
 
