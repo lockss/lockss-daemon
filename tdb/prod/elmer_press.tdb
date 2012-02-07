@@ -7,6 +7,7 @@
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
   implicit < status ; year ; name ; volume ; param[year] >
   comment[0] = publisher title list at http://www.elmerpress.com/journals.html
+  comment[notReady] = Roundup 3997, 3998
 
     {
 
@@ -38,9 +39,9 @@
       param[journal_id] = Gastrores
       
       au < ready ; 2008 ; Gastroenterology Research Volume 1 ; 1 ; 2008 >
-      au < testing ; 2009 ; Gastroenterology Research Volume 2 ; 2 ; 2009 >
-      au < testing ; 2010 ; Gastroenterology Research Volume 3 ; 3 ; 2010 >
-      au < testing ; 2011 ; Gastroenterology Research Volume 4 ; 4 ; 2011 >
+      au < notReady ; 2009 ; Gastroenterology Research Volume 2 ; 2 ; 2009 >
+      au < notReady ; 2010 ; Gastroenterology Research Volume 3 ; 3 ; 2010 >
+      au < notReady ; 2011 ; Gastroenterology Research Volume 4 ; 4 ; 2011 >
 
     }
 
@@ -85,10 +86,10 @@
       param[base_url] = http://www.jocmr.org/
       param[journal_id] = jocmr
 
-      au < testing ; 2009 ; Journal of Clinical Medicine Research Volume 1 ; 1 ; 2009 >
-      au < testing ; 2010 ; Journal of Clinical Medicine Research Volume 2 ; 2 ; 2010 >
-      au < testing ; 2011 ; Journal of Clinical Medicine Research Volume 3 ; 3 ; 2011 >
-      au < testing ; 2012 ; Journal of Clinical Medicine Research Volume 4 ; 4 ; 2012 >
+      au < notReady ; 2009 ; Journal of Clinical Medicine Research Volume 1 ; 1 ; 2009 >
+      au < notReady ; 2010 ; Journal of Clinical Medicine Research Volume 2 ; 2 ; 2010 >
+      au < notReady ; 2011 ; Journal of Clinical Medicine Research Volume 3 ; 3 ; 2011 >
+      au < notReady ; 2012 ; Journal of Clinical Medicine Research Volume 4 ; 4 ; 2012 >
 
     }
 
@@ -104,7 +105,7 @@
       param[base_url] = http://jcs.elmerpress.com/
       param[journal_id] = jcs
       
-      au < testing ; 2011 ; Journal of Current Surgery Volume 1 ; 1 ; 2011 >
+      au < notReady ; 2011 ; Journal of Current Surgery Volume 1 ; 1 ; 2011 >
 
     }
 
@@ -119,7 +120,7 @@
       param[base_url] = http://www.jofem.org/
       param[journal_id] = jofem
 
-      au < testing ; 2011 ; Journal of Endocrinology and Metabolism Volume 1 ; 1 ; 2011 >
+      au < notReady ; 2011 ; Journal of Endocrinology and Metabolism Volume 1 ; 1 ; 2011 >
 
     }
 
@@ -149,9 +150,9 @@
       param[base_url] = http://www.journalmc.org/
       param[journal_id] = jmc
 
-      au < testing ; 2010 ; Journal of Medical Cases Volume 1 ; 1 ; 2010 >
-      au < testing ; 2011 ; Journal of Medical Cases Volume 1 ; 1 ; 2011 >
-      au < testing ; 2012 ; Journal of Medical Cases Volume 1 ; 1 ; 2012 >
+      au < notReady ; 2010 ; Journal of Medical Cases Volume 1 ; 1 ; 2010 >
+      au < notReady ; 2011 ; Journal of Medical Cases Volume 1 ; 1 ; 2011 >
+      au < notReady ; 2012 ; Journal of Medical Cases Volume 1 ; 1 ; 2012 >
 
     }
 
@@ -166,7 +167,7 @@
       param[base_url] = http://www.neurores.org/
       param[journal_id] = neurores
 
-      au < testing ; 2011 ; Journal of Medical Cases Volume 1 ; 1 ; 2011 >
+      au < notReady ; 2011 ; Journal of Medical Cases Volume 1 ; 1 ; 2011 >
 
     }
 
