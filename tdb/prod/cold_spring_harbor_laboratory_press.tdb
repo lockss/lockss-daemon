@@ -19,12 +19,12 @@
       param[base_url] = http://cshprotocols.cshlp.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2006 ; Cold Spring Harbor Protocols Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; Cold Spring Harbor Protocols Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; Cold Spring Harbor Protocols Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; Cold Spring Harbor Protocols Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; Cold Spring Harbor Protocols Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; Cold Spring Harbor Protocols Volume 2011 ; 2011 >
+      au < testing ; 2006 ; Cold Spring Harbor Protocols Volume 2006 ; 2006 >
+      au < testing ; 2007 ; Cold Spring Harbor Protocols Volume 2007 ; 2007 >
+      au < testing ; 2008 ; Cold Spring Harbor Protocols Volume 2008 ; 2008 >
+      au < testing ; 2009 ; Cold Spring Harbor Protocols Volume 2009 ; 2009 >
+      au < testing ; 2010 ; Cold Spring Harbor Protocols Volume 2010 ; 2010 >
+      au < testing ; 2011 ; Cold Spring Harbor Protocols Volume 2011 ; 2011 >
       
     }
     
@@ -165,7 +165,7 @@
       au < released ; 2009 ; Genes & Development Volume 23 ; 23 >
       au < released ; 2010 ; Genes & Development Volume 24 ; 24 >
       au < ready ; 2011 ; Genes & Development Volume 25 ; 25 >
-      au < manifest ; 2012 ; Genes & Development Volume 26 ; 26 >
+      au < testing ; 2012 ; Genes & Development Volume 26 ; 26 >
 
     }
 
@@ -209,7 +209,7 @@
       au < released ; 2009 ; Genome Research Volume 19 ; 19 >
       au < released ; 2010 ; Genome Research Volume 20 ; 20 >
       au < ready ; 2011 ; Genome Research Volume 21 ; 21 >
-      au < manifest ; 2012 ; Genome Research Volume 22 ; 22 >
+      au < testing ; 2012 ; Genome Research Volume 22 ; 22 >
 
     }
 
@@ -248,7 +248,7 @@
       au < released ; 2009 ; Learning & Memory Volume 16 ; 16 >
       au < released ; 2010 ; Learning & Memory Volume 17 ; 17 >
       au < ready ; 2011 ; Learning & Memory Volume 18 ; 18 >
-      au < manifest ; 2012 ; Learning & Memory Volume 19 ; 19 >
+      au < testing ; 2012 ; Learning & Memory Volume 19 ; 19 >
 
     }
 
@@ -268,10 +268,10 @@
       param[base_url] = http://cshperspectives.cshlp.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2009 ; Perspectives in Biology Volume 1 ; 1 >
-      au < exists ; 2010 ; Perspectives in Biology Volume 2 ; 2 >
-      au < exists ; 2011 ; Perspectives in Biology Volume 3 ; 3 >
-      au < exists ; 2012 ; Perspectives in Biology Volume 4 ; 4 >
+      au < manifest ; 2009 ; Perspectives in Biology Volume 1 ; 1 >
+      au < manifest ; 2010 ; Perspectives in Biology Volume 2 ; 2 >
+      au < manifest ; 2011 ; Perspectives in Biology Volume 3 ; 3 >
+      au < testing ; 2012 ; Perspectives in Biology Volume 4 ; 4 >
       
     }
     
@@ -291,8 +291,8 @@
       param[base_url] = http://www.perspectivesinmedicine.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2011 ; Perspectives in Medicine Volume 1 ; 1 >
-      au < exists ; 2012 ; Perspectives in Medicine Volume 2 ; 2 >
+      au < manifest ; 2011 ; Perspectives in Medicine Volume 1 ; 1 >
+      au < testing ; 2012 ; Perspectives in Medicine Volume 2 ; 2 >
       
     }
     
@@ -330,7 +330,7 @@
       au < released ; 2009 ; RNA Volume 15 ; 15 >
       au < ready ; 2010 ; RNA Volume 16 ; 16 >
       au < ready ; 2011 ; RNA Volume 17 ; 17 >
-      au < manifest ; 2012 ; RNA Volume 18 ; 18 >
+      au < testing ; 2012 ; RNA Volume 18 ; 18 >
 
     }
 
