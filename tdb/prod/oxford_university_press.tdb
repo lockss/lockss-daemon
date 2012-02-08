@@ -12156,141 +12156,141 @@
     param[base_url] = http://library.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1889 ; The Library Volume s1-1 ; s1-1 >
-    au < HighWirePressH20Plugin ; exists ; 1890 ; The Library Volume s1-2 ; s1-2 >
-    au < HighWirePressH20Plugin ; exists ; 1891 ; The Library Volume s1-3 ; s1-3 >
-    au < HighWirePressH20Plugin ; exists ; 1892 ; The Library Volume s1-4 ; s1-4 >
-    au < HighWirePressH20Plugin ; exists ; 1893 ; The Library Volume s1-V ; s1-V >
-    au < HighWirePressH20Plugin ; exists ; 1893 ; The Library Volume TBS-1 ; TBS-1 >
-    au < HighWirePressH20Plugin ; exists ; 1894 ; The Library Volume s1-6 ; s1-6 >   
-    au < HighWirePressH20Plugin ; exists ; 1895 ; The Library Volume s1-VII ; s1-VII >
-    au < HighWirePressH20Plugin ; exists ; 1895 ; The Library Volume TBS-2 ; TBS-2 >
-    au < HighWirePressH20Plugin ; exists ; 1896 ; The Library Volume s1-8 ; s1-8 >
-    au < HighWirePressH20Plugin ; exists ; 1896 ; The Library Volume TBS-3 ; TBS-3 >
-    au < HighWirePressH20Plugin ; exists ; 1897 ; The Library Volume s1-9 ; s1-9 >
-    au < HighWirePressH20Plugin ; exists ; 1898 ; The Library Volume s1-X ; s1-X >
-    au < HighWirePressH20Plugin ; exists ; 1898 ; The Library Volume TBS-4 ; TBS-4 >
-    au < HighWirePressH20Plugin ; exists ; 1899 ; The Library Volume s2-I ; s2-I >
-    au < HighWirePressH20Plugin ; exists ; 1901 ; The Library Volume s2-II ; s2-II >
-    au < HighWirePressH20Plugin ; exists ; 1901 ; The Library Volume TBS-5 ; TBS-5 >
-    au < HighWirePressH20Plugin ; exists ; 1901 ; The Library Volume TBS-6 ; TBS-6 >
-    au < HighWirePressH20Plugin ; exists ; 1902 ; The Library Volume s2-III ; s2-III >
-    au < HighWirePressH20Plugin ; exists ; 1902 ; The Library Volume TBS-7 ; TBS-7 >
-    au < HighWirePressH20Plugin ; exists ; 1903 ; The Library Volume s2-IV ; s2-IV >
-    au < HighWirePressH20Plugin ; exists ; 1904 ; The Library Volume s2-V ; s2-V >
-    au < HighWirePressH20Plugin ; exists ; 1905 ; The Library Volume s2-VI ; s2-VI >
-    au < HighWirePressH20Plugin ; exists ; 1906 ; The Library Volume s2-VII ; s2-VII >
-    au < HighWirePressH20Plugin ; exists ; 1906 ; The Library Volume TBS-8 ; TBS-8 >
-    au < HighWirePressH20Plugin ; exists ; 1906 ; The Library Volume TBS-9 ; TBS-9 >
-    au < HighWirePressH20Plugin ; exists ; 1907 ; The Library Volume s2-VIII ; s2-VIII >
-    au < HighWirePressH20Plugin ; exists ; 1908 ; The Library Volume s2-IX ; s2-IX >
-    au < HighWirePressH20Plugin ; exists ; 1909 ; The Library Volume s2-X ; s2-X >
-    au < HighWirePressH20Plugin ; exists ; 1909 ; The Library Volume TBS-10 ; TBS-10 >
-    au < HighWirePressH20Plugin ; exists ; 1909 ; The Library Volume TBS-11 ; TBS-11 >   
-    au < HighWirePressH20Plugin ; exists ; 1910 ; The Library Volume s3-1 ; s3-1 >
-    au < HighWirePressH20Plugin ; exists ; 1911 ; The Library Volume s3-II ; s3-II >
-    au < HighWirePressH20Plugin ; exists ; 1912 ; The Library Volume s3-III ; s3-III >
-    au < HighWirePressH20Plugin ; exists ; 1913 ; The Library Volume s3-IV ; s3-IV >
-    au < HighWirePressH20Plugin ; exists ; 1913 ; The Library Volume TBS-12 ; TBS-12 >
-    au < HighWirePressH20Plugin ; exists ; 1913 ; The Library Volume TBS-13 ; TBS-13 >
-    au < HighWirePressH20Plugin ; exists ; 1914 ; The Library Volume s3-V ; s3-V >
-    au < HighWirePressH20Plugin ; exists ; 1915 ; The Library Volume s3-VI ; s3-VI >
-    au < HighWirePressH20Plugin ; exists ; 1916 ; The Library Volume s3-VII ; s3-VII >
-    au < HighWirePressH20Plugin ; exists ; 1917 ; The Library Volume s3-VIII ; s3-VIII >
-    au < HighWirePressH20Plugin ; exists ; 1917 ; The Library Volume TBS-14 ; TBS-14 >
-    au < HighWirePressH20Plugin ; exists ; 1917-1919 ; The Library Volume TBS-15 ; TBS-15 >
-    au < HighWirePressH20Plugin ; exists ; 1918 ; The Library Volume s3-IX ; s3-IX >
-    au < HighWirePressH20Plugin ; exists ; 1919 ; The Library Volume s3-X ; s3-X >
-    au < HighWirePressH20Plugin ; exists ; 1920 ; The Library Volume s4-I ; s4-I >
-    au < HighWirePressH20Plugin ; exists ; 1921-1922 ; The Library Volume s4-II ; s4-II >
-    au < HighWirePressH20Plugin ; exists ; 1922-1923 ; The Library Volume s4-III ; s4-III >
-    au < HighWirePressH20Plugin ; exists ; 1923-1924 ; The Library Volume s4-IV ; s4-IV >
-    au < HighWirePressH20Plugin ; exists ; 1924-1925 ; The Library Volume s4-V ; s4-V >
-    au < HighWirePressH20Plugin ; exists ; 1925-1926 ; The Library Volume s4-VI ; s4-VI >
-    au < HighWirePressH20Plugin ; exists ; 1926-1927 ; The Library Volume s4-VII ; s4-VII >
-    au < HighWirePressH20Plugin ; exists ; 1927-1928 ; The Library Volume s4-VIII ; s4-VIII >
-    au < HighWirePressH20Plugin ; exists ; 1928 ; The Library Volume s4-IX ; s4-IX >
-    au < HighWirePressH20Plugin ; exists ; 1929-1930 ; The Library Volume s4-X ; s4-X >    
-    au < HighWirePressH20Plugin ; exists ; 1930-1931 ; The Library Volume s4-XI ; s4-XI >
-    au < HighWirePressH20Plugin ; exists ; 1931-1932 ; The Library Volume s4-XII ; s4-XII >
-    au < HighWirePressH20Plugin ; exists ; 1932-1933 ; The Library Volume s4-XIII ; s4-XIII >
-    au < HighWirePressH20Plugin ; exists ; 1933-1934 ; The Library Volume s4-XIV ; s4-XIV >
-    au < HighWirePressH20Plugin ; exists ; 1934-1935 ; The Library Volume s4-XV ; s4-XV >
-    au < HighWirePressH20Plugin ; exists ; 1935-1936 ; The Library Volume s4-XVI ; s4-XVI >
-    au < HighWirePressH20Plugin ; exists ; 1936-1937 ; The Library Volume s4-XVII ; s4-XVII >
-    au < HighWirePressH20Plugin ; exists ; 1937-1938 ; The Library Volume s4-XVIII ; s4-XVIII >
-    au < HighWirePressH20Plugin ; exists ; 1938-1939 ; The Library Volume s4-XIX ; s4-XIX >
-    au < HighWirePressH20Plugin ; exists ; 1939-1940 ; The Library Volume s4-XX ; s4-XX >
-    au < HighWirePressH20Plugin ; exists ; 1940 ; The Library Volume s4-XXI ; s4-XXI >
-    au < HighWirePressH20Plugin ; exists ; 1941-1942 ; The Library Volume s4-XXII ; s4-XXII >
-    au < HighWirePressH20Plugin ; exists ; 1942 ; The Library Volume s4-XXIII ; s4-XXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1889 ; The Library Volume s1-1 ; s1-1 >
+    au < HighWirePressH20Plugin ; manifest ; 1890 ; The Library Volume s1-2 ; s1-2 >
+    au < HighWirePressH20Plugin ; manifest ; 1891 ; The Library Volume s1-3 ; s1-3 >
+    au < HighWirePressH20Plugin ; manifest ; 1892 ; The Library Volume s1-4 ; s1-4 >
+    au < HighWirePressH20Plugin ; manifest ; 1893 ; The Library Volume s1-V ; s1-V >
+    au < HighWirePressH20Plugin ; manifest ; 1893 ; The Library Volume TBS-1 ; TBS-1 >
+    au < HighWirePressH20Plugin ; manifest ; 1894 ; The Library Volume s1-6 ; s1-6 >   
+    au < HighWirePressH20Plugin ; manifest ; 1895 ; The Library Volume s1-VII ; s1-VII >
+    au < HighWirePressH20Plugin ; manifest ; 1895 ; The Library Volume TBS-2 ; TBS-2 >
+    au < HighWirePressH20Plugin ; manifest ; 1896 ; The Library Volume s1-8 ; s1-8 >
+    au < HighWirePressH20Plugin ; manifest ; 1896 ; The Library Volume TBS-3 ; TBS-3 >
+    au < HighWirePressH20Plugin ; manifest ; 1897 ; The Library Volume s1-9 ; s1-9 >
+    au < HighWirePressH20Plugin ; manifest ; 1898 ; The Library Volume s1-X ; s1-X >
+    au < HighWirePressH20Plugin ; manifest ; 1898 ; The Library Volume TBS-4 ; TBS-4 >
+    au < HighWirePressH20Plugin ; manifest ; 1899 ; The Library Volume s2-I ; s2-I >
+    au < HighWirePressH20Plugin ; manifest ; 1901 ; The Library Volume s2-II ; s2-II >
+    au < HighWirePressH20Plugin ; manifest ; 1901 ; The Library Volume TBS-5 ; TBS-5 >
+    au < HighWirePressH20Plugin ; manifest ; 1901 ; The Library Volume TBS-6 ; TBS-6 >
+    au < HighWirePressH20Plugin ; manifest ; 1902 ; The Library Volume s2-III ; s2-III >
+    au < HighWirePressH20Plugin ; manifest ; 1902 ; The Library Volume TBS-7 ; TBS-7 >
+    au < HighWirePressH20Plugin ; manifest ; 1903 ; The Library Volume s2-IV ; s2-IV >
+    au < HighWirePressH20Plugin ; manifest ; 1904 ; The Library Volume s2-V ; s2-V >
+    au < HighWirePressH20Plugin ; manifest ; 1905 ; The Library Volume s2-VI ; s2-VI >
+    au < HighWirePressH20Plugin ; manifest ; 1906 ; The Library Volume s2-VII ; s2-VII >
+    au < HighWirePressH20Plugin ; manifest ; 1906 ; The Library Volume TBS-8 ; TBS-8 >
+    au < HighWirePressH20Plugin ; manifest ; 1906 ; The Library Volume TBS-9 ; TBS-9 >
+    au < HighWirePressH20Plugin ; manifest ; 1907 ; The Library Volume s2-VIII ; s2-VIII >
+    au < HighWirePressH20Plugin ; manifest ; 1908 ; The Library Volume s2-IX ; s2-IX >
+    au < HighWirePressH20Plugin ; manifest ; 1909 ; The Library Volume s2-X ; s2-X >
+    au < HighWirePressH20Plugin ; manifest ; 1909 ; The Library Volume TBS-10 ; TBS-10 >
+    au < HighWirePressH20Plugin ; manifest ; 1909 ; The Library Volume TBS-11 ; TBS-11 >   
+    au < HighWirePressH20Plugin ; manifest ; 1910 ; The Library Volume s3-1 ; s3-1 >
+    au < HighWirePressH20Plugin ; manifest ; 1911 ; The Library Volume s3-II ; s3-II >
+    au < HighWirePressH20Plugin ; manifest ; 1912 ; The Library Volume s3-III ; s3-III >
+    au < HighWirePressH20Plugin ; manifest ; 1913 ; The Library Volume s3-IV ; s3-IV >
+    au < HighWirePressH20Plugin ; manifest ; 1913 ; The Library Volume TBS-12 ; TBS-12 >
+    au < HighWirePressH20Plugin ; manifest ; 1913 ; The Library Volume TBS-13 ; TBS-13 >
+    au < HighWirePressH20Plugin ; manifest ; 1914 ; The Library Volume s3-V ; s3-V >
+    au < HighWirePressH20Plugin ; manifest ; 1915 ; The Library Volume s3-VI ; s3-VI >
+    au < HighWirePressH20Plugin ; manifest ; 1916 ; The Library Volume s3-VII ; s3-VII >
+    au < HighWirePressH20Plugin ; manifest ; 1917 ; The Library Volume s3-VIII ; s3-VIII >
+    au < HighWirePressH20Plugin ; manifest ; 1917 ; The Library Volume TBS-14 ; TBS-14 >
+    au < HighWirePressH20Plugin ; manifest ; 1917-1919 ; The Library Volume TBS-15 ; TBS-15 >
+    au < HighWirePressH20Plugin ; manifest ; 1918 ; The Library Volume s3-IX ; s3-IX >
+    au < HighWirePressH20Plugin ; manifest ; 1919 ; The Library Volume s3-X ; s3-X >
+    au < HighWirePressH20Plugin ; manifest ; 1920 ; The Library Volume s4-I ; s4-I >
+    au < HighWirePressH20Plugin ; manifest ; 1921-1922 ; The Library Volume s4-II ; s4-II >
+    au < HighWirePressH20Plugin ; manifest ; 1922-1923 ; The Library Volume s4-III ; s4-III >
+    au < HighWirePressH20Plugin ; manifest ; 1923-1924 ; The Library Volume s4-IV ; s4-IV >
+    au < HighWirePressH20Plugin ; manifest ; 1924-1925 ; The Library Volume s4-V ; s4-V >
+    au < HighWirePressH20Plugin ; manifest ; 1925-1926 ; The Library Volume s4-VI ; s4-VI >
+    au < HighWirePressH20Plugin ; manifest ; 1926-1927 ; The Library Volume s4-VII ; s4-VII >
+    au < HighWirePressH20Plugin ; manifest ; 1927-1928 ; The Library Volume s4-VIII ; s4-VIII >
+    au < HighWirePressH20Plugin ; manifest ; 1928 ; The Library Volume s4-IX ; s4-IX >
+    au < HighWirePressH20Plugin ; manifest ; 1929-1930 ; The Library Volume s4-X ; s4-X >    
+    au < HighWirePressH20Plugin ; manifest ; 1930-1931 ; The Library Volume s4-XI ; s4-XI >
+    au < HighWirePressH20Plugin ; manifest ; 1931-1932 ; The Library Volume s4-XII ; s4-XII >
+    au < HighWirePressH20Plugin ; manifest ; 1932-1933 ; The Library Volume s4-XIII ; s4-XIII >
+    au < HighWirePressH20Plugin ; manifest ; 1933-1934 ; The Library Volume s4-XIV ; s4-XIV >
+    au < HighWirePressH20Plugin ; manifest ; 1934-1935 ; The Library Volume s4-XV ; s4-XV >
+    au < HighWirePressH20Plugin ; manifest ; 1935-1936 ; The Library Volume s4-XVI ; s4-XVI >
+    au < HighWirePressH20Plugin ; manifest ; 1936-1937 ; The Library Volume s4-XVII ; s4-XVII >
+    au < HighWirePressH20Plugin ; manifest ; 1937-1938 ; The Library Volume s4-XVIII ; s4-XVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1938-1939 ; The Library Volume s4-XIX ; s4-XIX >
+    au < HighWirePressH20Plugin ; manifest ; 1939-1940 ; The Library Volume s4-XX ; s4-XX >
+    au < HighWirePressH20Plugin ; manifest ; 1940 ; The Library Volume s4-XXI ; s4-XXI >
+    au < HighWirePressH20Plugin ; manifest ; 1941-1942 ; The Library Volume s4-XXII ; s4-XXII >
+    au < HighWirePressH20Plugin ; manifest ; 1942 ; The Library Volume s4-XXIII ; s4-XXIII >
     au < HighWirePressH20Plugin ; manifest ; 1943-1944 ; The Library Volume s4-XXIV ; s4-XXIV >
-    au < HighWirePressH20Plugin ; exists ; 1944 ; The Library Volume s4-XXV ; s4-XXV >
+    au < HighWirePressH20Plugin ; manifest ; 1944 ; The Library Volume s4-XXV ; s4-XXV >
     au < HighWirePressH20Plugin ; manifest ; 1945 ; The Library Volume s4-XXVI ; s4-XXVI >
-    au < HighWirePressH20Plugin ; exists ; 1946 ; The Library Volume s5-I ; s5-I >
-    au < HighWirePressH20Plugin ; exists ; 1947 ; The Library Volume s5-II ; s5-II >
-    au < HighWirePressH20Plugin ; exists ; 1948-1949 ; The Library Volume s5-III ; s5-III >
-    au < HighWirePressH20Plugin ; exists ; 1949-1950 ; The Library Volume s5-IV ; s5-IV >
-    au < HighWirePressH20Plugin ; exists ; 1950-1951 ; The Library Volume s5-V ; s5-V >
-    au < HighWirePressH20Plugin ; exists ; 1951 ; The Library Volume s5-VI ; s5-VI >
-    au < HighWirePressH20Plugin ; exists ; 1952 ; The Library Volume s5-VII ; s5-VII >
-    au < HighWirePressH20Plugin ; exists ; 1953 ; The Library Volume s5-VIII ; s5-VIII >
-    au < HighWirePressH20Plugin ; exists ; 1954 ; The Library Volume s5-IX ; s5-IX >
-    au < HighWirePressH20Plugin ; exists ; 1955 ; The Library Volume s5-X ; s5-X >
-    au < HighWirePressH20Plugin ; exists ; 1956 ; The Library Volume s5-XI ; s5-XI >
-    au < HighWirePressH20Plugin ; exists ; 1957 ; The Library Volume s5-XII ; s5-XII >
-    au < HighWirePressH20Plugin ; exists ; 1958 ; The Library Volume s5-XIII ; s5-XIII >
-    au < HighWirePressH20Plugin ; exists ; 1959 ; The Library Volume s5-XIV ; s5-XIV >
-    au < HighWirePressH20Plugin ; exists ; 1960 ; The Library Volume s5-XV ; s5-XV >
-    au < HighWirePressH20Plugin ; exists ; 1961 ; The Library Volume s5-XVI ; s5-XVI >
-    au < HighWirePressH20Plugin ; exists ; 1962 ; The Library Volume s5-XVII ; s5-XVII >
-    au < HighWirePressH20Plugin ; exists ; 1963 ; The Library Volume s5-XVIII ; s5-XVIII >
-    au < HighWirePressH20Plugin ; exists ; 1964 ; The Library Volume s5-XIX ; s5-XIX >
-    au < HighWirePressH20Plugin ; exists ; 1965 ; The Library Volume s5-XX ; s5-XX >
-    au < HighWirePressH20Plugin ; exists ; 1966 ; The Library Volume s5-XXI ; s5-XXI >
-    au < HighWirePressH20Plugin ; exists ; 1967 ; The Library Volume s5-XXII ; s5-XXII >
-    au < HighWirePressH20Plugin ; exists ; 1968 ; The Library Volume s5-XXIII ; s5-XXIII >
-    au < HighWirePressH20Plugin ; exists ; 1969 ; The Library Volume s5-XXIV ; s5-XXIV >
-    au < HighWirePressH20Plugin ; exists ; 1970 ; The Library Volume s5-XXV ; s5-XXV >
-    au < HighWirePressH20Plugin ; exists ; 1971 ; The Library Volume s5-XXVI ; s5-XXVI >
-    au < HighWirePressH20Plugin ; exists ; 1972 ; The Library Volume s5-XXVII ; s5-XXVII >
-    au < HighWirePressH20Plugin ; exists ; 1973 ; The Library Volume s5-XXVIII ; s5-XXVIII >
-    au < HighWirePressH20Plugin ; exists ; 1974 ; The Library Volume s5-XXIX ; s5-XXIX >
-    au < HighWirePressH20Plugin ; exists ; 1975 ; The Library Volume s5-XXX ; s5-XXX >
-    au < HighWirePressH20Plugin ; exists ; 1976 ; The Library Volume s5-XXXI ; s5-XXXI >
-    au < HighWirePressH20Plugin ; exists ; 1977 ; The Library Volume s5-XXXII ; s5-XXXII >
-    au < HighWirePressH20Plugin ; exists ; 1978 ; The Library Volume s5-XXXIII ; s5-XXXIII >
-    au < HighWirePressH20Plugin ; exists ; 1979 ; The Library Volume s6-I ; s6-I >
-    au < HighWirePressH20Plugin ; exists ; 1980 ; The Library Volume s6-II ; s6-II >
-    au < HighWirePressH20Plugin ; exists ; 1981 ; The Library Volume s6-3 ; s6-3 >
-    au < HighWirePressH20Plugin ; exists ; 1981 ; The Library Volume s6-III ; s6-III >
-    au < HighWirePressH20Plugin ; exists ; 1982 ; The Library Volume s6-4 ; s6-4 >
-    au < HighWirePressH20Plugin ; exists ; 1982 ; The Library Volume s6-IV ; s6-IV >
-    au < HighWirePressH20Plugin ; exists ; 1983 ; The Library Volume s6-5 ; s6-5 >
-    au < HighWirePressH20Plugin ; exists ; 1983 ; The Library Volume s6-V ; s6-V >
-    au < HighWirePressH20Plugin ; exists ; 1984 ; The Library Volume s6-VI ; s6-VI >
-    au < HighWirePressH20Plugin ; exists ; 1985 ; The Library Volume s6-VII ; s6-VII >
-    au < HighWirePressH20Plugin ; exists ; 1986 ; The Library Volume s6-VIII ; s6-VIII >
-    au < HighWirePressH20Plugin ; exists ; 1987 ; The Library Volume s6-9 ; s6-9 >
-    au < HighWirePressH20Plugin ; exists ; 1987 ; The Library Volume s6-IX ; s6-IX >
+    au < HighWirePressH20Plugin ; manifest ; 1946 ; The Library Volume s5-I ; s5-I >
+    au < HighWirePressH20Plugin ; manifest ; 1947 ; The Library Volume s5-II ; s5-II >
+    au < HighWirePressH20Plugin ; manifest ; 1948-1949 ; The Library Volume s5-III ; s5-III >
+    au < HighWirePressH20Plugin ; manifest ; 1949-1950 ; The Library Volume s5-IV ; s5-IV >
+    au < HighWirePressH20Plugin ; manifest ; 1950-1951 ; The Library Volume s5-V ; s5-V >
+    au < HighWirePressH20Plugin ; manifest ; 1951 ; The Library Volume s5-VI ; s5-VI >
+    au < HighWirePressH20Plugin ; manifest ; 1952 ; The Library Volume s5-VII ; s5-VII >
+    au < HighWirePressH20Plugin ; manifest ; 1953 ; The Library Volume s5-VIII ; s5-VIII >
+    au < HighWirePressH20Plugin ; manifest ; 1954 ; The Library Volume s5-IX ; s5-IX >
+    au < HighWirePressH20Plugin ; manifest ; 1955 ; The Library Volume s5-X ; s5-X >
+    au < HighWirePressH20Plugin ; manifest ; 1956 ; The Library Volume s5-XI ; s5-XI >
+    au < HighWirePressH20Plugin ; manifest ; 1957 ; The Library Volume s5-XII ; s5-XII >
+    au < HighWirePressH20Plugin ; manifest ; 1958 ; The Library Volume s5-XIII ; s5-XIII >
+    au < HighWirePressH20Plugin ; manifest ; 1959 ; The Library Volume s5-XIV ; s5-XIV >
+    au < HighWirePressH20Plugin ; manifest ; 1960 ; The Library Volume s5-XV ; s5-XV >
+    au < HighWirePressH20Plugin ; manifest ; 1961 ; The Library Volume s5-XVI ; s5-XVI >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; The Library Volume s5-XVII ; s5-XVII >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; The Library Volume s5-XVIII ; s5-XVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; The Library Volume s5-XIX ; s5-XIX >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; The Library Volume s5-XX ; s5-XX >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; The Library Volume s5-XXI ; s5-XXI >
+    au < HighWirePressH20Plugin ; manifest ; 1967 ; The Library Volume s5-XXII ; s5-XXII >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; The Library Volume s5-XXIII ; s5-XXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; The Library Volume s5-XXIV ; s5-XXIV >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; The Library Volume s5-XXV ; s5-XXV >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; The Library Volume s5-XXVI ; s5-XXVI >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; The Library Volume s5-XXVII ; s5-XXVII >
+    au < HighWirePressH20Plugin ; manifest ; 1973 ; The Library Volume s5-XXVIII ; s5-XXVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1974 ; The Library Volume s5-XXIX ; s5-XXIX >
+    au < HighWirePressH20Plugin ; manifest ; 1975 ; The Library Volume s5-XXX ; s5-XXX >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; The Library Volume s5-XXXI ; s5-XXXI >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; The Library Volume s5-XXXII ; s5-XXXII >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; The Library Volume s5-XXXIII ; s5-XXXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; The Library Volume s6-I ; s6-I >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; The Library Volume s6-II ; s6-II >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; The Library Volume s6-3 ; s6-3 >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; The Library Volume s6-III ; s6-III >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; The Library Volume s6-4 ; s6-4 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; The Library Volume s6-IV ; s6-IV >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; The Library Volume s6-5 ; s6-5 >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; The Library Volume s6-V ; s6-V >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; The Library Volume s6-VI ; s6-VI >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; The Library Volume s6-VII ; s6-VII >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; The Library Volume s6-VIII ; s6-VIII >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; The Library Volume s6-9 ; s6-9 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; The Library Volume s6-IX ; s6-IX >
     au < HighWirePressH20Plugin ; manifest ; 1988 ; The Library Volume s6-X ; s6-X >
-    au < HighWirePressH20Plugin ; exists ; 1989 ; The Library Volume s6-11 ; s6-11 >
-    au < HighWirePressH20Plugin ; exists ; 1989 ; The Library Volume s6-XI ; s6-XI >
-    au < HighWirePressH20Plugin ; exists ; 1990 ; The Library Volume s6-12 ; s6-12 >
-    au < HighWirePressH20Plugin ; exists ; 1991 ; The Library Volume s6-13 ; s6-13 >
-    au < HighWirePressH20Plugin ; exists ; 1992 ; The Library Volume s6-14 ; s6-14 >
-    au < HighWirePressH20Plugin ; exists ; 1993 ; The Library Volume s6-15 ; s6-15 >
-    au < HighWirePressH20Plugin ; exists ; 1994 ; The Library Volume s6-16 ; s6-16 >
-    au < HighWirePressH20Plugin ; exists ; 1995 ; The Library Volume s6-17 ; s6-17 >
-    au < HighWirePressH20Plugin ; exists ; 1996 ; The Library Volume s6-XVIII ; s6-XVIII >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; The Library Volume s6-19 ; s6-19 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; The Library Volume s6-XX ; s6-XX >   
-    au < HighWirePressH20Plugin ; exists ; 1999 ; The Library Volume s6-21 ; s6-21 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; The Library Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; The Library Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; The Library Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; The Library Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; The Library Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; The Library Volume s6-11 ; s6-11 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; The Library Volume s6-XI ; s6-XI >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; The Library Volume s6-12 ; s6-12 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; The Library Volume s6-13 ; s6-13 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; The Library Volume s6-14 ; s6-14 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; The Library Volume s6-15 ; s6-15 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; The Library Volume s6-16 ; s6-16 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; The Library Volume s6-17 ; s6-17 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; The Library Volume s6-XVIII ; s6-XVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; The Library Volume s6-19 ; s6-19 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; The Library Volume s6-XX ; s6-XX >   
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; The Library Volume s6-21 ; s6-21 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; The Library Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; The Library Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; The Library Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; The Library Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; The Library Volume 5 ; 5 >
     au < HighWireStrVolPlugin ; down ; 2005 ; The Library Volume 6 ; 6 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; The Library Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 2007 ; The Library Volume 8 ; 8 >
@@ -12345,25 +12345,25 @@
     param[base_url] = http://llc.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1986 ; Literary and Linguistic Computing Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1987 ; Literary and Linguistic Computing Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1988 ; Literary and Linguistic Computing Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 1989 ; Literary and Linguistic Computing Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 1990 ; Literary and Linguistic Computing Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 1991 ; Literary and Linguistic Computing Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 1992 ; Literary and Linguistic Computing Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 1993 ; Literary and Linguistic Computing Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; 1994 ; Literary and Linguistic Computing Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; exists ; 1995 ; Literary and Linguistic Computing Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; exists ; 1996 ; Literary and Linguistic Computing Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Literary and Linguistic Computing Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; Literary and Linguistic Computing Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; Literary and Linguistic Computing Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Literary and Linguistic Computing Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; Literary and Linguistic Computing Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Literary and Linguistic Computing Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; Literary and Linguistic Computing Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; Literary and Linguistic Computing Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; Literary and Linguistic Computing Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; Literary and Linguistic Computing Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; Literary and Linguistic Computing Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; Literary and Linguistic Computing Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; Literary and Linguistic Computing Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; Literary and Linguistic Computing Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; Literary and Linguistic Computing Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; Literary and Linguistic Computing Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; Literary and Linguistic Computing Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; Literary and Linguistic Computing Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; Literary and Linguistic Computing Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; Literary and Linguistic Computing Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; Literary and Linguistic Computing Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; Literary and Linguistic Computing Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; Literary and Linguistic Computing Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Literary and Linguistic Computing Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Literary and Linguistic Computing Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; Literary and Linguistic Computing Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Literary and Linguistic Computing Volume 19 ; 19 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Literary and Linguistic Computing Volume 20 ; 20 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; Literary and Linguistic Computing Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Literary and Linguistic Computing Volume 22 ; 22 >
@@ -12391,13 +12391,13 @@
     param[base_url] = http://litimag.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1999 ; Literary Imagination Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Literary Imagination Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; Literary Imagination Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Literary Imagination Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; Literary Imagination Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; Literary Imagination Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Literary Imagination Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; Literary Imagination Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; Literary Imagination Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Literary Imagination Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Literary Imagination Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; Literary Imagination Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Literary Imagination Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; Literary Imagination Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 2006 ; Literary Imagination Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Literary Imagination Volume 9 ; 9 >
     au < HighWirePressPlugin ; down ; 2008 ; Literary Imagination Volume 10 ; 10 >
@@ -12434,24 +12434,24 @@
     param[base_url] = http://litthe.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1987 ; Literature and Theology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1988 ; Literature and Theology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1989 ; Literature and Theology Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 1990 ; Literature and Theology Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 1991 ; Literature and Theology Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 1992 ; Literature and Theology Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 1993 ; Literature and Theology Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 1994 ; Literature and Theology Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; 1995 ; Literature and Theology Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; exists ; 1996 ; Literature and Theology Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Literature and Theology Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; Literature and Theology Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; Literature and Theology Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Literature and Theology Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; Literature and Theology Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Literature and Theology Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; Literature and Theology Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; Literature and Theology Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; Literature and Theology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; Literature and Theology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; Literature and Theology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; Literature and Theology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; Literature and Theology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; Literature and Theology Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; Literature and Theology Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; Literature and Theology Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; Literature and Theology Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; Literature and Theology Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; Literature and Theology Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; Literature and Theology Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; Literature and Theology Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; Literature and Theology Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Literature and Theology Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Literature and Theology Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; Literature and Theology Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Literature and Theology Volume 18 ; 18 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Literature and Theology Volume 19 ; 19 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; Literature and Theology Volume 20 ; 20 >
     au < HighWirePressPlugin ; down ; 2007 ;Literature and Theology Volume 21 ; 21 >
@@ -12648,122 +12648,122 @@
     param[base_url] = http://mind.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1876 ; Mind Volume os-1 ; os-1 >
-    au < HighWirePressH20Plugin ; exists ; 1877 ; Mind Volume os-2 ; os-2 >
-    au < HighWirePressH20Plugin ; exists ; 1878 ; Mind Volume os-3 ; os-3 >
-    au < HighWirePressH20Plugin ; exists ; 1879 ; Mind Volume os-4 ; os-4 >
-    au < HighWirePressH20Plugin ; exists ; 1880 ; Mind Volume os-V ; os-V >
-    au < HighWirePressH20Plugin ; exists ; 1881 ; Mind Volume os-VI ; os-VI >
-    au < HighWirePressH20Plugin ; exists ; 1882 ; Mind Volume os-VII ; os-VII >
-    au < HighWirePressH20Plugin ; exists ; 1883 ; Mind Volume os-VIII ; os-VIII >
-    au < HighWirePressH20Plugin ; exists ; 1884 ; Mind Volume os-IX ; os-IX >
-    au < HighWirePressH20Plugin ; exists ; 1885 ; Mind Volume os-X ; os-X >
-    au < HighWirePressH20Plugin ; exists ; 1886 ; Mind Volume os-XI ; os-XI >
-    au < HighWirePressH20Plugin ; exists ; 1887 ; Mind Volume os-12 ; os-12 >
+    au < HighWirePressH20Plugin ; manifest ; 1876 ; Mind Volume os-1 ; os-1 >
+    au < HighWirePressH20Plugin ; manifest ; 1877 ; Mind Volume os-2 ; os-2 >
+    au < HighWirePressH20Plugin ; manifest ; 1878 ; Mind Volume os-3 ; os-3 >
+    au < HighWirePressH20Plugin ; manifest ; 1879 ; Mind Volume os-4 ; os-4 >
+    au < HighWirePressH20Plugin ; manifest ; 1880 ; Mind Volume os-V ; os-V >
+    au < HighWirePressH20Plugin ; manifest ; 1881 ; Mind Volume os-VI ; os-VI >
+    au < HighWirePressH20Plugin ; manifest ; 1882 ; Mind Volume os-VII ; os-VII >
+    au < HighWirePressH20Plugin ; manifest ; 1883 ; Mind Volume os-VIII ; os-VIII >
+    au < HighWirePressH20Plugin ; manifest ; 1884 ; Mind Volume os-IX ; os-IX >
+    au < HighWirePressH20Plugin ; manifest ; 1885 ; Mind Volume os-X ; os-X >
+    au < HighWirePressH20Plugin ; manifest ; 1886 ; Mind Volume os-XI ; os-XI >
+    au < HighWirePressH20Plugin ; manifest ; 1887 ; Mind Volume os-12 ; os-12 >
     au < HighWirePressH20Plugin ; exists ; 1888 ; Mind Volume os-XIII ; os-XIII >
-    au < HighWirePressH20Plugin ; exists ; 1889 ; Mind Volume XIV ; XIV >
-    au < HighWirePressH20Plugin ; exists ; 1890 ; Mind Volume os-XV ; os-XV >
-    au < HighWirePressH20Plugin ; exists ; 1891 ; Mind Volume os-XVI ; os-XVI >
+    au < HighWirePressH20Plugin ; doesNotExist ; 1889 ; Mind Volume os-XIV ; os-XIV >
+    au < HighWirePressH20Plugin ; manifest ; 1890 ; Mind Volume os-XV ; os-XV >
+    au < HighWirePressH20Plugin ; manifest ; 1891 ; Mind Volume os-XVI ; os-XVI >
     au < HighWirePressH20Plugin ; manifest ; 1892 ; Mind Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1893 ; Mind Volume II ; II >
-    au < HighWirePressH20Plugin ; exists ; 1894 ; Mind Volume III ; III >
-    au < HighWirePressH20Plugin ; exists ; 1895 ; Mind Volume IV ; IV >
-    au < HighWirePressH20Plugin ; exists ; 1896 ; Mind Volume V ; V >
-    au < HighWirePressH20Plugin ; exists ; 1897 ; Mind Volume VI ; VI >
-    au < HighWirePressH20Plugin ; exists ; 1898 ; Mind Volume VII ; VII >
-    au < HighWirePressH20Plugin ; exists ; 1899 ; Mind Volume VIII ; VIII >
-    au < HighWirePressH20Plugin ; exists ; 1900 ; Mind Volume IX ; IX >
-    au < HighWirePressH20Plugin ; exists ; 1901 ; Mind Volume X ; X >
-    au < HighWirePressH20Plugin ; exists ; 1902 ; Mind Volume XI ; XI >
-    au < HighWirePressH20Plugin ; exists ; 1903 ; Mind Volume XII ; XII >
-    au < HighWirePressH20Plugin ; exists ; 1904 ; Mind Volume XIII ; XIII >
-    au < HighWirePressH20Plugin ; exists ; 1905 ; Mind Volume XIV ; XIV >
-    au < HighWirePressH20Plugin ; exists ; 1906 ; Mind Volume XV ; XV >
-    au < HighWirePressH20Plugin ; exists ; 1907 ; Mind Volume XVI ; XVI >
-    au < HighWirePressH20Plugin ; exists ; 1908 ; Mind Volume XVII ; XVII >
-    au < HighWirePressH20Plugin ; exists ; 1909 ; Mind Volume XVIII ; XVIII >
-    au < HighWirePressH20Plugin ; exists ; 1910 ; Mind Volume XIX ; XIX >
-    au < HighWirePressH20Plugin ; exists ; 1911 ; Mind Volume XX ; XX >
-    au < HighWirePressH20Plugin ; exists ; 1912 ; Mind Volume XXI ; XXI >
-    au < HighWirePressH20Plugin ; exists ; 1913 ; Mind Volume XXII ; XXII >
-    au < HighWirePressH20Plugin ; exists ; 1914 ; Mind Volume XXIII ; XXIII >
-    au < HighWirePressH20Plugin ; exists ; 1915 ; Mind Volume XXIV ; XXIV >
-    au < HighWirePressH20Plugin ; exists ; 1916 ; Mind Volume XXV ; XXV >
-    au < HighWirePressH20Plugin ; exists ; 1917 ; Mind Volume XXVI ; XXVI >
-    au < HighWirePressH20Plugin ; exists ; 1918 ; Mind Volume XXVII ; XXVII >
-    au < HighWirePressH20Plugin ; exists ; 1919 ; Mind Volume XXVIII ; XXVIII >
-    au < HighWirePressH20Plugin ; exists ; 1920 ; Mind Volume XXIX ; XXIX >
-    au < HighWirePressH20Plugin ; exists ; 1921 ; Mind Volume XXX ; XXX >
-    au < HighWirePressH20Plugin ; exists ; 1922 ; Mind Volume XXXI ; XXXI >
-    au < HighWirePressH20Plugin ; exists ; 1923 ; Mind Volume XXXII ; XXXII >
-    au < HighWirePressH20Plugin ; exists ; 1924 ; Mind Volume XXXIII ; XXXIII >
-    au < HighWirePressH20Plugin ; exists ; 1925 ; Mind Volume XXXIV ; XXXIV >
-    au < HighWirePressH20Plugin ; exists ; 1926 ; Mind Volume XXXV ; XXXV >
-    au < HighWirePressH20Plugin ; exists ; 1927 ; Mind Volume XXXVI ; XXXVI >
-    au < HighWirePressH20Plugin ; exists ; 1928 ; Mind Volume XXXVII ; XXXVII >
-    au < HighWirePressH20Plugin ; exists ; 1929 ; Mind Volume XXXVIII ; XXXVIII >
-    au < HighWirePressH20Plugin ; exists ; 1930 ; Mind Volume XXXIX ; XXXIX >
-    au < HighWirePressH20Plugin ; exists ; 1931 ; Mind Volume XL ; XL >
-    au < HighWirePressH20Plugin ; exists ; 1932 ; Mind Volume XLI ; XLI >
-    au < HighWirePressH20Plugin ; exists ; 1933 ; Mind Volume XLII ; XLII >
-    au < HighWirePressH20Plugin ; exists ; 1934 ; Mind Volume XLIII ; XLIII >
-    au < HighWirePressH20Plugin ; exists ; 1935 ; Mind Volume XLIV ; XLIV >
-    au < HighWirePressH20Plugin ; exists ; 1936 ; Mind Volume XLV ; XLV >
-    au < HighWirePressH20Plugin ; exists ; 1937 ; Mind Volume XLVI ; XLVI >
-    au < HighWirePressH20Plugin ; exists ; 1938 ; Mind Volume XLVII ; XLVII >
-    au < HighWirePressH20Plugin ; exists ; 1939 ; Mind Volume XLVIII ; XLVIII >
-    au < HighWirePressH20Plugin ; exists ; 1940 ; Mind Volume XLIX ; XLIX >
-    au < HighWirePressH20Plugin ; exists ; 1941 ; Mind Volume L ; L >
-    au < HighWirePressH20Plugin ; exists ; 1942 ; Mind Volume LI ; LI >
-    au < HighWirePressH20Plugin ; exists ; 1943 ; Mind Volume LII ; LII >
-    au < HighWirePressH20Plugin ; exists ; 1944 ; Mind Volume LIII ; LIII >
-    au < HighWirePressH20Plugin ; exists ; 1945 ; Mind Volume LIV ; LIV >
-    au < HighWirePressH20Plugin ; exists ; 1946 ; Mind Volume LV ; LV >
-    au < HighWirePressH20Plugin ; exists ; 1947 ; Mind Volume LVI ; LVI >
-    au < HighWirePressH20Plugin ; exists ; 1948 ; Mind Volume LVII ; LVII >
-    au < HighWirePressH20Plugin ; exists ; 1949 ; Mind Volume LVIII ; LVIII >
-    au < HighWirePressH20Plugin ; exists ; 1950 ; Mind Volume LIX ; LIX >
-    au < HighWirePressH20Plugin ; exists ; 1951 ; Mind Volume LX ; LX >
-    au < HighWirePressH20Plugin ; exists ; 1952 ; Mind Volume LXI ; LXI >
-    au < HighWirePressH20Plugin ; exists ; 1953 ; Mind Volume LXII ; LXII >
-    au < HighWirePressH20Plugin ; exists ; 1954 ; Mind Volume LXIII ; LXIII >
-    au < HighWirePressH20Plugin ; exists ; 1955 ; Mind Volume LXIV ; LXIV >
-    au < HighWirePressH20Plugin ; exists ; 1956 ; Mind Volume LXV ; LXV >
-    au < HighWirePressH20Plugin ; exists ; 1957 ; Mind Volume LXVI ; LXVI >
-    au < HighWirePressH20Plugin ; exists ; 1958 ; Mind Volume LXVII ; LXVII >
-    au < HighWirePressH20Plugin ; exists ; 1959 ; Mind Volume LXVIII ; LXVIII >
-    au < HighWirePressH20Plugin ; exists ; 1960 ; Mind Volume LXIX ; LXIX >
-    au < HighWirePressH20Plugin ; exists ; 1961 ; Mind Volume LXX ; LXX >
-    au < HighWirePressH20Plugin ; exists ; 1962 ; Mind Volume LXXI ; LXXI >
-    au < HighWirePressH20Plugin ; exists ; 1963 ; Mind Volume LXXII ; LXXII >
-    au < HighWirePressH20Plugin ; exists ; 1964 ; Mind Volume LXXIII ; LXXIII >
-    au < HighWirePressH20Plugin ; exists ; 1965 ; Mind Volume LXXIV ; LXXIV >
-    au < HighWirePressH20Plugin ; exists ; 1966 ; Mind Volume LXXV ; LXXV >
-    au < HighWirePressH20Plugin ; exists ; 1967 ; Mind Volume LXXVI ; LXXVI >
-    au < HighWirePressH20Plugin ; exists ; 1968 ; Mind Volume LXXVII ; LXXVII >
-    au < HighWirePressH20Plugin ; exists ; 1969 ; Mind Volume LXXVIII ; LXXVIII >
-    au < HighWirePressH20Plugin ; exists ; 1970 ; Mind Volume LXXIX ; LXXIX >
-    au < HighWirePressH20Plugin ; exists ; 1971 ; Mind Volume LXXX ; LXXX >
-    au < HighWirePressH20Plugin ; exists ; 1972 ; Mind Volume LXXXI ; LXXXI >
-    au < HighWirePressH20Plugin ; exists ; 1973 ; Mind Volume LXXXII ; LXXXII >
-    au < HighWirePressH20Plugin ; exists ; 1974 ; Mind Volume LXXXIII ; LXXXIII >
-    au < HighWirePressH20Plugin ; exists ; 1975 ; Mind Volume LXXXIV ; LXXXIV >
-    au < HighWirePressH20Plugin ; exists ; 1976 ; Mind Volume LXXXV ; LXXXV >
-    au < HighWirePressH20Plugin ; exists ; 1977 ; Mind Volume LXXXVI ; LXXXVI >
-    au < HighWirePressH20Plugin ; exists ; 1978 ; Mind Volume LXXXVII ; LXXXVII >
-    au < HighWirePressH20Plugin ; exists ; 1979 ; Mind Volume LXXXVIII ; LXXXVIII >
-    au < HighWirePressH20Plugin ; exists ; 1980 ; Mind Volume LXXXIX ; LXXXIX >
-    au < HighWirePressH20Plugin ; exists ; 1981 ; Mind Volume XC ; XC >
-    au < HighWirePressH20Plugin ; exists ; 1982 ; Mind Volume XCI ; XCI >
-    au < HighWirePressH20Plugin ; exists ; 1983 ; Mind Volume XCII ; XCII >
-    au < HighWirePressH20Plugin ; exists ; 1984 ; Mind Volume XCIII ; XCIII >
-    au < HighWirePressH20Plugin ; exists ; 1985 ; Mind Volume XCIV ; XCIV >
-    au < HighWirePressH20Plugin ; exists ; 1986 ; Mind Volume XCV ; XCV >
-    au < HighWirePressH20Plugin ; exists ; 1987 ; Mind Volume XCVI ; XCVI >
-    au < HighWirePressH20Plugin ; exists ; 1988 ; Mind Volume XCVII ; XCVII >
-    au < HighWirePressH20Plugin ; exists ; 1989 ; Mind Volume XCVIII ; XCVIII >
-    au < HighWirePressH20Plugin ; exists ; 1990 ; Mind Volume XCIX ; XCIX >
-    au < HighWirePressH20Plugin ; exists ; 1991 ; Mind Volume C ; C >
+    au < HighWirePressH20Plugin ; manifest ; 1893 ; Mind Volume II ; II >
+    au < HighWirePressH20Plugin ; manifest ; 1894 ; Mind Volume III ; III >
+    au < HighWirePressH20Plugin ; manifest ; 1895 ; Mind Volume IV ; IV >
+    au < HighWirePressH20Plugin ; manifest ; 1896 ; Mind Volume V ; V >
+    au < HighWirePressH20Plugin ; manifest ; 1897 ; Mind Volume VI ; VI >
+    au < HighWirePressH20Plugin ; manifest ; 1898 ; Mind Volume VII ; VII >
+    au < HighWirePressH20Plugin ; manifest ; 1899 ; Mind Volume VIII ; VIII >
+    au < HighWirePressH20Plugin ; manifest ; 1900 ; Mind Volume IX ; IX >
+    au < HighWirePressH20Plugin ; manifest ; 1901 ; Mind Volume X ; X >
+    au < HighWirePressH20Plugin ; manifest ; 1902 ; Mind Volume XI ; XI >
+    au < HighWirePressH20Plugin ; manifest ; 1903 ; Mind Volume XII ; XII >
+    au < HighWirePressH20Plugin ; manifest ; 1904 ; Mind Volume XIII ; XIII >
+    au < HighWirePressH20Plugin ; manifest ; 1905 ; Mind Volume XIV ; XIV >
+    au < HighWirePressH20Plugin ; manifest ; 1906 ; Mind Volume XV ; XV >
+    au < HighWirePressH20Plugin ; manifest ; 1907 ; Mind Volume XVI ; XVI >
+    au < HighWirePressH20Plugin ; manifest ; 1908 ; Mind Volume XVII ; XVII >
+    au < HighWirePressH20Plugin ; manifest ; 1909 ; Mind Volume XVIII ; XVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1910 ; Mind Volume XIX ; XIX >
+    au < HighWirePressH20Plugin ; manifest ; 1911 ; Mind Volume XX ; XX >
+    au < HighWirePressH20Plugin ; manifest ; 1912 ; Mind Volume XXI ; XXI >
+    au < HighWirePressH20Plugin ; manifest ; 1913 ; Mind Volume XXII ; XXII >
+    au < HighWirePressH20Plugin ; manifest ; 1914 ; Mind Volume XXIII ; XXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1915 ; Mind Volume XXIV ; XXIV >
+    au < HighWirePressH20Plugin ; manifest ; 1916 ; Mind Volume XXV ; XXV >
+    au < HighWirePressH20Plugin ; manifest ; 1917 ; Mind Volume XXVI ; XXVI >
+    au < HighWirePressH20Plugin ; manifest ; 1918 ; Mind Volume XXVII ; XXVII >
+    au < HighWirePressH20Plugin ; manifest ; 1919 ; Mind Volume XXVIII ; XXVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1920 ; Mind Volume XXIX ; XXIX >
+    au < HighWirePressH20Plugin ; manifest ; 1921 ; Mind Volume XXX ; XXX >
+    au < HighWirePressH20Plugin ; manifest ; 1922 ; Mind Volume XXXI ; XXXI >
+    au < HighWirePressH20Plugin ; manifest ; 1923 ; Mind Volume XXXII ; XXXII >
+    au < HighWirePressH20Plugin ; manifest ; 1924 ; Mind Volume XXXIII ; XXXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1925 ; Mind Volume XXXIV ; XXXIV >
+    au < HighWirePressH20Plugin ; manifest ; 1926 ; Mind Volume XXXV ; XXXV >
+    au < HighWirePressH20Plugin ; manifest ; 1927 ; Mind Volume XXXVI ; XXXVI >
+    au < HighWirePressH20Plugin ; manifest ; 1928 ; Mind Volume XXXVII ; XXXVII >
+    au < HighWirePressH20Plugin ; manifest ; 1929 ; Mind Volume XXXVIII ; XXXVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1930 ; Mind Volume XXXIX ; XXXIX >
+    au < HighWirePressH20Plugin ; manifest ; 1931 ; Mind Volume XL ; XL >
+    au < HighWirePressH20Plugin ; manifest ; 1932 ; Mind Volume XLI ; XLI >
+    au < HighWirePressH20Plugin ; manifest ; 1933 ; Mind Volume XLII ; XLII >
+    au < HighWirePressH20Plugin ; manifest ; 1934 ; Mind Volume XLIII ; XLIII >
+    au < HighWirePressH20Plugin ; manifest ; 1935 ; Mind Volume XLIV ; XLIV >
+    au < HighWirePressH20Plugin ; manifest ; 1936 ; Mind Volume XLV ; XLV >
+    au < HighWirePressH20Plugin ; manifest ; 1937 ; Mind Volume XLVI ; XLVI >
+    au < HighWirePressH20Plugin ; manifest ; 1938 ; Mind Volume XLVII ; XLVII >
+    au < HighWirePressH20Plugin ; manifest ; 1939 ; Mind Volume XLVIII ; XLVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1940 ; Mind Volume XLIX ; XLIX >
+    au < HighWirePressH20Plugin ; manifest ; 1941 ; Mind Volume L ; L >
+    au < HighWirePressH20Plugin ; manifest ; 1942 ; Mind Volume LI ; LI >
+    au < HighWirePressH20Plugin ; manifest ; 1943 ; Mind Volume LII ; LII >
+    au < HighWirePressH20Plugin ; manifest ; 1944 ; Mind Volume LIII ; LIII >
+    au < HighWirePressH20Plugin ; manifest ; 1945 ; Mind Volume LIV ; LIV >
+    au < HighWirePressH20Plugin ; manifest ; 1946 ; Mind Volume LV ; LV >
+    au < HighWirePressH20Plugin ; manifest ; 1947 ; Mind Volume LVI ; LVI >
+    au < HighWirePressH20Plugin ; manifest ; 1948 ; Mind Volume LVII ; LVII >
+    au < HighWirePressH20Plugin ; manifest ; 1949 ; Mind Volume LVIII ; LVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1950 ; Mind Volume LIX ; LIX >
+    au < HighWirePressH20Plugin ; manifest ; 1951 ; Mind Volume LX ; LX >
+    au < HighWirePressH20Plugin ; manifest ; 1952 ; Mind Volume LXI ; LXI >
+    au < HighWirePressH20Plugin ; manifest ; 1953 ; Mind Volume LXII ; LXII >
+    au < HighWirePressH20Plugin ; manifest ; 1954 ; Mind Volume LXIII ; LXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1955 ; Mind Volume LXIV ; LXIV >
+    au < HighWirePressH20Plugin ; manifest ; 1956 ; Mind Volume LXV ; LXV >
+    au < HighWirePressH20Plugin ; manifest ; 1957 ; Mind Volume LXVI ; LXVI >
+    au < HighWirePressH20Plugin ; manifest ; 1958 ; Mind Volume LXVII ; LXVII >
+    au < HighWirePressH20Plugin ; manifest ; 1959 ; Mind Volume LXVIII ; LXVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1960 ; Mind Volume LXIX ; LXIX >
+    au < HighWirePressH20Plugin ; manifest ; 1961 ; Mind Volume LXX ; LXX >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; Mind Volume LXXI ; LXXI >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; Mind Volume LXXII ; LXXII >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; Mind Volume LXXIII ; LXXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; Mind Volume LXXIV ; LXXIV >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; Mind Volume LXXV ; LXXV >
+    au < HighWirePressH20Plugin ; manifest ; 1967 ; Mind Volume LXXVI ; LXXVI >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; Mind Volume LXXVII ; LXXVII >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; Mind Volume LXXVIII ; LXXVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; Mind Volume LXXIX ; LXXIX >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; Mind Volume LXXX ; LXXX >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; Mind Volume LXXXI ; LXXXI >
+    au < HighWirePressH20Plugin ; manifest ; 1973 ; Mind Volume LXXXII ; LXXXII >
+    au < HighWirePressH20Plugin ; manifest ; 1974 ; Mind Volume LXXXIII ; LXXXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1975 ; Mind Volume LXXXIV ; LXXXIV >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; Mind Volume LXXXV ; LXXXV >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; Mind Volume LXXXVI ; LXXXVI >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; Mind Volume LXXXVII ; LXXXVII >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; Mind Volume LXXXVIII ; LXXXVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; Mind Volume LXXXIX ; LXXXIX >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; Mind Volume XC ; XC >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; Mind Volume XCI ; XCI >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; Mind Volume XCII ; XCII >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; Mind Volume XCIII ; XCIII >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; Mind Volume XCIV ; XCIV >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; Mind Volume XCV ; XCV >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; Mind Volume XCVI ; XCVI >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; Mind Volume XCVII ; XCVII >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; Mind Volume XCVIII ; XCVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; Mind Volume XCIX ; XCIX >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; Mind Volume C ; C >
     au < HighWirePressH20Plugin ; manifest ; 1992 ; Mind Volume 101 ; 101 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Mind Volume 102 ; 102 >
     au < HighWirePressH20Plugin ; manifest ; 1994 ; Mind Volume 103 ; 103 >
@@ -13048,64 +13048,64 @@
     param[base_url] = http://ml.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1920 ; Music and Letters Volume I ; I >
-    au < HighWirePressH20Plugin ; exists ; 1921 ; Music and Letters Volume II ; II >
-    au < HighWirePressH20Plugin ; exists ; 1922 ; Music and Letters Volume III ; III >
-    au < HighWirePressH20Plugin ; exists ; 1923 ; Music and Letters Volume IV ; IV >
-    au < HighWirePressH20Plugin ; exists ; 1924 ; Music and Letters Volume V ; V >
-    au < HighWirePressH20Plugin ; exists ; 1925 ; Music and Letters Volume VI ; VI >
-    au < HighWirePressH20Plugin ; exists ; 1926 ; Music and Letters Volume VII ; VII >
-    au < HighWirePressH20Plugin ; exists ; 1927 ; Music and Letters Volume VIII ; VIII >
-    au < HighWirePressH20Plugin ; exists ; 1928 ; Music and Letters Volume IX ; IX >
-    au < HighWirePressH20Plugin ; exists ; 1929 ; Music and Letters Volume X ; X >
-    au < HighWirePressH20Plugin ; exists ; 1930 ; Music and Letters Volume XI ; XI >
-    au < HighWirePressH20Plugin ; exists ; 1931 ; Music and Letters Volume XII ; XII >
-    au < HighWirePressH20Plugin ; exists ; 1932 ; Music and Letters Volume XIII ; XIII >
-    au < HighWirePressH20Plugin ; exists ; 1933 ; Music and Letters Volume XIV ; XIV >
-    au < HighWirePressH20Plugin ; exists ; 1934 ; Music and Letters Volume XV ; XV >
-    au < HighWirePressH20Plugin ; exists ; 1935 ; Music and Letters Volume XVI ; XVI >
-    au < HighWirePressH20Plugin ; exists ; 1936 ; Music and Letters Volume XVII ; XVII >
-    au < HighWirePressH20Plugin ; exists ; 1937 ; Music and Letters Volume XVIII ; XVIII >
-    au < HighWirePressH20Plugin ; exists ; 1938 ; Music and Letters Volume XIX ; XIX >
-    au < HighWirePressH20Plugin ; exists ; 1939 ; Music and Letters Volume XX ; XX >
-    au < HighWirePressH20Plugin ; exists ; 1940 ; Music and Letters Volume XXI ; XXI >
-    au < HighWirePressH20Plugin ; exists ; 1941 ; Music and Letters Volume XXII ; XXII >
-    au < HighWirePressH20Plugin ; exists ; 1942 ; Music and Letters Volume XXIII ; XXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1920 ; Music and Letters Volume I ; I >
+    au < HighWirePressH20Plugin ; manifest ; 1921 ; Music and Letters Volume II ; II >
+    au < HighWirePressH20Plugin ; manifest ; 1922 ; Music and Letters Volume III ; III >
+    au < HighWirePressH20Plugin ; manifest ; 1923 ; Music and Letters Volume IV ; IV >
+    au < HighWirePressH20Plugin ; manifest ; 1924 ; Music and Letters Volume V ; V >
+    au < HighWirePressH20Plugin ; manifest ; 1925 ; Music and Letters Volume VI ; VI >
+    au < HighWirePressH20Plugin ; manifest ; 1926 ; Music and Letters Volume VII ; VII >
+    au < HighWirePressH20Plugin ; manifest ; 1927 ; Music and Letters Volume VIII ; VIII >
+    au < HighWirePressH20Plugin ; manifest ; 1928 ; Music and Letters Volume IX ; IX >
+    au < HighWirePressH20Plugin ; manifest ; 1929 ; Music and Letters Volume X ; X >
+    au < HighWirePressH20Plugin ; manifest ; 1930 ; Music and Letters Volume XI ; XI >
+    au < HighWirePressH20Plugin ; manifest ; 1931 ; Music and Letters Volume XII ; XII >
+    au < HighWirePressH20Plugin ; manifest ; 1932 ; Music and Letters Volume XIII ; XIII >
+    au < HighWirePressH20Plugin ; manifest ; 1933 ; Music and Letters Volume XIV ; XIV >
+    au < HighWirePressH20Plugin ; manifest ; 1934 ; Music and Letters Volume XV ; XV >
+    au < HighWirePressH20Plugin ; manifest ; 1935 ; Music and Letters Volume XVI ; XVI >
+    au < HighWirePressH20Plugin ; manifest ; 1936 ; Music and Letters Volume XVII ; XVII >
+    au < HighWirePressH20Plugin ; manifest ; 1937 ; Music and Letters Volume XVIII ; XVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1938 ; Music and Letters Volume XIX ; XIX >
+    au < HighWirePressH20Plugin ; manifest ; 1939 ; Music and Letters Volume XX ; XX >
+    au < HighWirePressH20Plugin ; manifest ; 1940 ; Music and Letters Volume XXI ; XXI >
+    au < HighWirePressH20Plugin ; manifest ; 1941 ; Music and Letters Volume XXII ; XXII >
+    au < HighWirePressH20Plugin ; manifest ; 1942 ; Music and Letters Volume XXIII ; XXIII >
     au < HighWirePressH20Plugin ; manifest ; 1943 ; Music and Letters Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; exists ; 1944 ; Music and Letters Volume XXV ; XXV >
-    au < HighWirePressH20Plugin ; exists ; 1945 ; Music and Letters Volume XXVI ; XXVI >
-    au < HighWirePressH20Plugin ; exists ; 1946 ; Music and Letters Volume XXVII ; XXVII >
-    au < HighWirePressH20Plugin ; exists ; 1947 ; Music and Letters Volume XXVIII ; XXVIII >
-    au < HighWirePressH20Plugin ; exists ; 1948 ; Music and Letters Volume XXIX ; XXIX >
-    au < HighWirePressH20Plugin ; exists ; 1949 ; Music and Letters Volume XXX ; XXX >
-    au < HighWirePressH20Plugin ; exists ; 1950 ; Music and Letters Volume XXXI ; XXXI >
-    au < HighWirePressH20Plugin ; exists ; 1951 ; Music and Letters Volume XXXII ; XXXII >
-    au < HighWirePressH20Plugin ; exists ; 1952 ; Music and Letters Volume XXXIII ; XXXIII >
-    au < HighWirePressH20Plugin ; exists ; 1953 ; Music and Letters Volume XXXIV ; XXXIV >
-    au < HighWirePressH20Plugin ; exists ; 1954 ; Music and Letters Volume XXXV ; XXXV >
-    au < HighWirePressH20Plugin ; exists ; 1955 ; Music and Letters Volume XXXVI ; XXXVI >
+    au < HighWirePressH20Plugin ; manifest ; 1944 ; Music and Letters Volume XXV ; XXV >
+    au < HighWirePressH20Plugin ; manifest ; 1945 ; Music and Letters Volume XXVI ; XXVI >
+    au < HighWirePressH20Plugin ; manifest ; 1946 ; Music and Letters Volume XXVII ; XXVII >
+    au < HighWirePressH20Plugin ; manifest ; 1947 ; Music and Letters Volume XXVIII ; XXVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1948 ; Music and Letters Volume XXIX ; XXIX >
+    au < HighWirePressH20Plugin ; manifest ; 1949 ; Music and Letters Volume XXX ; XXX >
+    au < HighWirePressH20Plugin ; manifest ; 1950 ; Music and Letters Volume XXXI ; XXXI >
+    au < HighWirePressH20Plugin ; manifest ; 1951 ; Music and Letters Volume XXXII ; XXXII >
+    au < HighWirePressH20Plugin ; manifest ; 1952 ; Music and Letters Volume XXXIII ; XXXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1953 ; Music and Letters Volume XXXIV ; XXXIV >
+    au < HighWirePressH20Plugin ; manifest ; 1954 ; Music and Letters Volume XXXV ; XXXV >
+    au < HighWirePressH20Plugin ; manifest ; 1955 ; Music and Letters Volume XXXVI ; XXXVI >
     au < HighWirePressH20Plugin ; manifest ; 1956 ; Music and Letters Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; exists ; 1957 ; Music and Letters Volume XXXVIII ; XXXVIII >
-    au < HighWirePressH20Plugin ; exists ; 1958 ; Music and Letters Volume XXXIX ; XXXIX >
-    au < HighWirePressH20Plugin ; exists ; 1959 ; Music and Letters Volume XL ; XL >
+    au < HighWirePressH20Plugin ; manifest ; 1957 ; Music and Letters Volume XXXVIII ; XXXVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1958 ; Music and Letters Volume XXXIX ; XXXIX >
+    au < HighWirePressH20Plugin ; manifest ; 1959 ; Music and Letters Volume XL ; XL >
     au < HighWirePressH20Plugin ; manifest ; 1960 ; Music and Letters Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 1961 ; Music and Letters Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; manifest ; 1962 ; Music and Letters Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 1963 ; Music and Letters Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; manifest ; 1964 ; Music and Letters Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; exists ; 1965 ; Music and Letters Volume XLVI ; XLVI >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; Music and Letters Volume XLVI ; XLVI >
     au < HighWirePressH20Plugin ; manifest ; 1966 ; Music and Letters Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; exists ; 1967 ; Music and Letters Volume XLVIII ; XLVIII >
-    au < HighWirePressH20Plugin ; exists ; 1968 ; Music and Letters Volume XLIX ; XLIX >
-    au < HighWirePressH20Plugin ; exists ; 1969 ; Music and Letters Volume L ; L >
-    au < HighWirePressH20Plugin ; exists ; 1970 ; Music and Letters Volume LI ; LI >
-    au < HighWirePressH20Plugin ; exists ; 1971 ; Music and Letters Volume LII ; LII >
-    au < HighWirePressH20Plugin ; exists ; 1972 ; Music and Letters Volume LIII ; LIII >
-    au < HighWirePressH20Plugin ; exists ; 1973 ; Music and Letters Volume LIV ; LIV >
-    au < HighWirePressH20Plugin ; exists ; 1974 ; Music and Letters Volume LV ; LV >
+    au < HighWirePressH20Plugin ; manifest ; 1967 ; Music and Letters Volume XLVIII ; XLVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; Music and Letters Volume XLIX ; XLIX >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; Music and Letters Volume L ; L >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; Music and Letters Volume LI ; LI >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; Music and Letters Volume LII ; LII >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; Music and Letters Volume LIII ; LIII >
+    au < HighWirePressH20Plugin ; manifest ; 1973 ; Music and Letters Volume LIV ; LIV >
+    au < HighWirePressH20Plugin ; manifest ; 1974 ; Music and Letters Volume LV ; LV >
     au < HighWirePressH20Plugin ; manifest ; 1975 ; Music and Letters Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; exists ; 1975 ; Music and Letters Volume LVI ; LVI >
-    au < HighWirePressH20Plugin ; exists ; 1976 ; Music and Letters Volume LVII ; LVII >
+    au < HighWirePressH20Plugin ; manifest ; 1975 ; Music and Letters Volume LVI ; LVI >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; Music and Letters Volume LVII ; LVII >
     au < HighWirePressH20Plugin ; manifest ; 1977 ; Music and Letters Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; manifest ; 1978 ; Music and Letters Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; manifest ; 1979 ; Music and Letters Volume 60 ; 60 >
@@ -13189,78 +13189,78 @@
     param[base_url] = http://mq.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1915 ; The Musical Quarterly Volume I ; I >
-    au < HighWirePressH20Plugin ; exists ; 1916 ; The Musical Quarterly Volume II ; II >
-    au < HighWirePressH20Plugin ; exists ; 1917 ; The Musical Quarterly Volume III ; III >
-    au < HighWirePressH20Plugin ; exists ; 1918 ; The Musical Quarterly Volume IV ; IV >
-    au < HighWirePressH20Plugin ; exists ; 1919 ; The Musical Quarterly Volume V ; V >
-    au < HighWirePressH20Plugin ; exists ; 1920 ; The Musical Quarterly Volume VI ; VI >
-    au < HighWirePressH20Plugin ; exists ; 1921 ; The Musical Quarterly Volume VII ; VII >
-    au < HighWirePressH20Plugin ; exists ; 1922 ; The Musical Quarterly Volume VIII ; VIII >
-    au < HighWirePressH20Plugin ; exists ; 1923 ; The Musical Quarterly Volume IX ; IX >
-    au < HighWirePressH20Plugin ; exists ; 1924 ; The Musical Quarterly Volume X ; X >
-    au < HighWirePressH20Plugin ; exists ; 1925 ; The Musical Quarterly Volume XI ; XI >
-    au < HighWirePressH20Plugin ; exists ; 1926 ; The Musical Quarterly Volume XII ; XII >
-    au < HighWirePressH20Plugin ; exists ; 1927 ; The Musical Quarterly Volume XIII ; XIII >
-    au < HighWirePressH20Plugin ; exists ; 1928 ; The Musical Quarterly Volume XIV ; XIV >
-    au < HighWirePressH20Plugin ; exists ; 1929 ; The Musical Quarterly Volume XV ; XV >
-    au < HighWirePressH20Plugin ; exists ; 1930 ; The Musical Quarterly Volume XVI ; XVI >
-    au < HighWirePressH20Plugin ; exists ; 1931 ; The Musical Quarterly Volume XVII ; XVII >
-    au < HighWirePressH20Plugin ; exists ; 1932 ; The Musical Quarterly Volume XVIII ; XVIII >
-    au < HighWirePressH20Plugin ; exists ; 1933 ; The Musical Quarterly Volume XIX ; XIX >
-    au < HighWirePressH20Plugin ; exists ; 1934 ; The Musical Quarterly Volume XX ; XX >
-    au < HighWirePressH20Plugin ; exists ; 1935 ; The Musical Quarterly Volume XXI ; XXI >
-    au < HighWirePressH20Plugin ; exists ; 1936 ; The Musical Quarterly Volume XXII ; XXII >
-    au < HighWirePressH20Plugin ; exists ; 1937 ; The Musical Quarterly Volume XXIII ; XXIII >
-    au < HighWirePressH20Plugin ; exists ; 1938 ; The Musical Quarterly Volume XXIV ; XXIV >
-    au < HighWirePressH20Plugin ; exists ; 1939 ; The Musical Quarterly Volume XXV ; XXV >
-    au < HighWirePressH20Plugin ; exists ; 1940 ; The Musical Quarterly Volume XXVI ; XXVI >
-    au < HighWirePressH20Plugin ; exists ; 1941 ; The Musical Quarterly Volume XXVII ; XXVII >
-    au < HighWirePressH20Plugin ; exists ; 1942 ; The Musical Quarterly Volume XXVIII ; XXVIII >
-    au < HighWirePressH20Plugin ; exists ; 1943 ; The Musical Quarterly Volume XXIX ; XXIX >
-    au < HighWirePressH20Plugin ; exists ; 1944 ; The Musical Quarterly Volume XXX ; XXX >
-    au < HighWirePressH20Plugin ; exists ; 1945 ; The Musical Quarterly Volume XXXI ; XXXI >
-    au < HighWirePressH20Plugin ; exists ; 1946 ; The Musical Quarterly Volume XXXII ; XXXII >
-    au < HighWirePressH20Plugin ; exists ; 1947 ; The Musical Quarterly Volume XXXIII ; XXXIII >
-    au < HighWirePressH20Plugin ; exists ; 1948 ; The Musical Quarterly Volume XXXIV ; XXXIV >
-    au < HighWirePressH20Plugin ; exists ; 1949 ; The Musical Quarterly Volume XXXV ; XXXV >
-    au < HighWirePressH20Plugin ; exists ; 1950 ; The Musical Quarterly Volume XXXVI ; XXXVI >
-    au < HighWirePressH20Plugin ; exists ; 1951 ; The Musical Quarterly Volume XXXVII ; XXXVII >
-    au < HighWirePressH20Plugin ; exists ; 1952 ; The Musical Quarterly Volume XXXVIII ; XXXVIII >
-    au < HighWirePressH20Plugin ; exists ; 1953 ; The Musical Quarterly Volume XXXIX ; XXXIX >
-    au < HighWirePressH20Plugin ; exists ; 1954 ; The Musical Quarterly Volume XL ; XL >
-    au < HighWirePressH20Plugin ; exists ; 1955 ; The Musical Quarterly Volume XLI ; XLI >
-    au < HighWirePressH20Plugin ; exists ; 1956 ; The Musical Quarterly Volume XLII ; XLII >
-    au < HighWirePressH20Plugin ; exists ; 1957 ; The Musical Quarterly Volume XLIII ; XLIII >
-    au < HighWirePressH20Plugin ; exists ; 1958 ; The Musical Quarterly Volume XLIV ; XLIV >
-    au < HighWirePressH20Plugin ; exists ; 1959 ; The Musical Quarterly Volume XLV ; XLV >
-    au < HighWirePressH20Plugin ; exists ; 1960 ; The Musical Quarterly Volume XLVI ; XLVI >
-    au < HighWirePressH20Plugin ; exists ; 1961 ; The Musical Quarterly Volume XLVII ; XLVII >
-    au < HighWirePressH20Plugin ; exists ; 1962 ; The Musical Quarterly Volume XLVIII ; XLVIII >
-    au < HighWirePressH20Plugin ; exists ; 1963 ; The Musical Quarterly Volume XLIX ; XLIX >
-    au < HighWirePressH20Plugin ; exists ; 1964 ; The Musical Quarterly Volume L ; L >
-    au < HighWirePressH20Plugin ; exists ; 1965 ; The Musical Quarterly Volume LI ; LI >
-    au < HighWirePressH20Plugin ; exists ; 1966 ; The Musical Quarterly Volume LII ; LII >
-    au < HighWirePressH20Plugin ; exists ; 1967 ; The Musical Quarterly Volume LIII ; LIII >
-    au < HighWirePressH20Plugin ; exists ; 1968 ; The Musical Quarterly Volume LIV ; LIV >
-    au < HighWirePressH20Plugin ; exists ; 1969 ; The Musical Quarterly Volume LV ; LV >
-    au < HighWirePressH20Plugin ; exists ; 1970 ; The Musical Quarterly Volume LVI ; LVI >
-    au < HighWirePressH20Plugin ; exists ; 1971 ; The Musical Quarterly Volume LVII ; LVII >
-    au < HighWirePressH20Plugin ; exists ; 1972 ; The Musical Quarterly Volume LVIII ; LVIII >
-    au < HighWirePressH20Plugin ; exists ; 1973 ; The Musical Quarterly Volume LIX ; LIX >
-    au < HighWirePressH20Plugin ; exists ; 1974 ; The Musical Quarterly Volume LX ; LX >
-    au < HighWirePressH20Plugin ; exists ; 1975 ; The Musical Quarterly Volume LXI ; LXI >
-    au < HighWirePressH20Plugin ; exists ; 1976 ; The Musical Quarterly Volume LXII ; LXII >
-    au < HighWirePressH20Plugin ; exists ; 1977 ; The Musical Quarterly Volume LXIII ; LXIII >
-    au < HighWirePressH20Plugin ; exists ; 1978 ; The Musical Quarterly Volume LXIV ; LXIV >
-    au < HighWirePressH20Plugin ; exists ; 1979 ; The Musical Quarterly Volume LXV ; LXV >
-    au < HighWirePressH20Plugin ; exists ; 1980 ; The Musical Quarterly Volume LXVI ; LXVI >
-    au < HighWirePressH20Plugin ; exists ; 1981 ; The Musical Quarterly Volume LXVII ; LXVII >
-    au < HighWirePressH20Plugin ; exists ; 1982 ; The Musical Quarterly Volume LXVIII ; LXVIII >
-    au < HighWirePressH20Plugin ; exists ; 1983 ; The Musical Quarterly Volume LXIX ; LXIX >
-    au < HighWirePressH20Plugin ; exists ; 1984 ; The Musical Quarterly Volume LXX ; LXX >
-    au < HighWirePressH20Plugin ; exists ; 1985 ; The Musical Quarterly Volume LXXI ; LXXI >
-    au < HighWirePressH20Plugin ; exists ; 1986 ; The Musical Quarterly Volume LXXII ; LXXII >
+    au < HighWirePressH20Plugin ; manifest ; 1915 ; The Musical Quarterly Volume I ; I >
+    au < HighWirePressH20Plugin ; manifest ; 1916 ; The Musical Quarterly Volume II ; II >
+    au < HighWirePressH20Plugin ; manifest ; 1917 ; The Musical Quarterly Volume III ; III >
+    au < HighWirePressH20Plugin ; manifest ; 1918 ; The Musical Quarterly Volume IV ; IV >
+    au < HighWirePressH20Plugin ; manifest ; 1919 ; The Musical Quarterly Volume V ; V >
+    au < HighWirePressH20Plugin ; manifest ; 1920 ; The Musical Quarterly Volume VI ; VI >
+    au < HighWirePressH20Plugin ; manifest ; 1921 ; The Musical Quarterly Volume VII ; VII >
+    au < HighWirePressH20Plugin ; manifest ; 1922 ; The Musical Quarterly Volume VIII ; VIII >
+    au < HighWirePressH20Plugin ; manifest ; 1923 ; The Musical Quarterly Volume IX ; IX >
+    au < HighWirePressH20Plugin ; manifest ; 1924 ; The Musical Quarterly Volume X ; X >
+    au < HighWirePressH20Plugin ; manifest ; 1925 ; The Musical Quarterly Volume XI ; XI >
+    au < HighWirePressH20Plugin ; manifest ; 1926 ; The Musical Quarterly Volume XII ; XII >
+    au < HighWirePressH20Plugin ; manifest ; 1927 ; The Musical Quarterly Volume XIII ; XIII >
+    au < HighWirePressH20Plugin ; manifest ; 1928 ; The Musical Quarterly Volume XIV ; XIV >
+    au < HighWirePressH20Plugin ; manifest ; 1929 ; The Musical Quarterly Volume XV ; XV >
+    au < HighWirePressH20Plugin ; manifest ; 1930 ; The Musical Quarterly Volume XVI ; XVI >
+    au < HighWirePressH20Plugin ; manifest ; 1931 ; The Musical Quarterly Volume XVII ; XVII >
+    au < HighWirePressH20Plugin ; manifest ; 1932 ; The Musical Quarterly Volume XVIII ; XVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1933 ; The Musical Quarterly Volume XIX ; XIX >
+    au < HighWirePressH20Plugin ; manifest ; 1934 ; The Musical Quarterly Volume XX ; XX >
+    au < HighWirePressH20Plugin ; manifest ; 1935 ; The Musical Quarterly Volume XXI ; XXI >
+    au < HighWirePressH20Plugin ; manifest ; 1936 ; The Musical Quarterly Volume XXII ; XXII >
+    au < HighWirePressH20Plugin ; manifest ; 1937 ; The Musical Quarterly Volume XXIII ; XXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1938 ; The Musical Quarterly Volume XXIV ; XXIV >
+    au < HighWirePressH20Plugin ; manifest ; 1939 ; The Musical Quarterly Volume XXV ; XXV >
+    au < HighWirePressH20Plugin ; manifest ; 1940 ; The Musical Quarterly Volume XXVI ; XXVI >
+    au < HighWirePressH20Plugin ; manifest ; 1941 ; The Musical Quarterly Volume XXVII ; XXVII >
+    au < HighWirePressH20Plugin ; manifest ; 1942 ; The Musical Quarterly Volume XXVIII ; XXVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1943 ; The Musical Quarterly Volume XXIX ; XXIX >
+    au < HighWirePressH20Plugin ; manifest ; 1944 ; The Musical Quarterly Volume XXX ; XXX >
+    au < HighWirePressH20Plugin ; manifest ; 1945 ; The Musical Quarterly Volume XXXI ; XXXI >
+    au < HighWirePressH20Plugin ; manifest ; 1946 ; The Musical Quarterly Volume XXXII ; XXXII >
+    au < HighWirePressH20Plugin ; manifest ; 1947 ; The Musical Quarterly Volume XXXIII ; XXXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1948 ; The Musical Quarterly Volume XXXIV ; XXXIV >
+    au < HighWirePressH20Plugin ; manifest ; 1949 ; The Musical Quarterly Volume XXXV ; XXXV >
+    au < HighWirePressH20Plugin ; manifest ; 1950 ; The Musical Quarterly Volume XXXVI ; XXXVI >
+    au < HighWirePressH20Plugin ; manifest ; 1951 ; The Musical Quarterly Volume XXXVII ; XXXVII >
+    au < HighWirePressH20Plugin ; manifest ; 1952 ; The Musical Quarterly Volume XXXVIII ; XXXVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1953 ; The Musical Quarterly Volume XXXIX ; XXXIX >
+    au < HighWirePressH20Plugin ; manifest ; 1954 ; The Musical Quarterly Volume XL ; XL >
+    au < HighWirePressH20Plugin ; manifest ; 1955 ; The Musical Quarterly Volume XLI ; XLI >
+    au < HighWirePressH20Plugin ; manifest ; 1956 ; The Musical Quarterly Volume XLII ; XLII >
+    au < HighWirePressH20Plugin ; manifest ; 1957 ; The Musical Quarterly Volume XLIII ; XLIII >
+    au < HighWirePressH20Plugin ; manifest ; 1958 ; The Musical Quarterly Volume XLIV ; XLIV >
+    au < HighWirePressH20Plugin ; manifest ; 1959 ; The Musical Quarterly Volume XLV ; XLV >
+    au < HighWirePressH20Plugin ; manifest ; 1960 ; The Musical Quarterly Volume XLVI ; XLVI >
+    au < HighWirePressH20Plugin ; manifest ; 1961 ; The Musical Quarterly Volume XLVII ; XLVII >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; The Musical Quarterly Volume XLVIII ; XLVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; The Musical Quarterly Volume XLIX ; XLIX >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; The Musical Quarterly Volume L ; L >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; The Musical Quarterly Volume LI ; LI >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; The Musical Quarterly Volume LII ; LII >
+    au < HighWirePressH20Plugin ; manifest ; 1967 ; The Musical Quarterly Volume LIII ; LIII >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; The Musical Quarterly Volume LIV ; LIV >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; The Musical Quarterly Volume LV ; LV >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; The Musical Quarterly Volume LVI ; LVI >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; The Musical Quarterly Volume LVII ; LVII >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; The Musical Quarterly Volume LVIII ; LVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1973 ; The Musical Quarterly Volume LIX ; LIX >
+    au < HighWirePressH20Plugin ; manifest ; 1974 ; The Musical Quarterly Volume LX ; LX >
+    au < HighWirePressH20Plugin ; manifest ; 1975 ; The Musical Quarterly Volume LXI ; LXI >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; The Musical Quarterly Volume LXII ; LXII >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; The Musical Quarterly Volume LXIII ; LXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; The Musical Quarterly Volume LXIV ; LXIV >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; The Musical Quarterly Volume LXV ; LXV >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; The Musical Quarterly Volume LXVI ; LXVI >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; The Musical Quarterly Volume LXVII ; LXVII >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; The Musical Quarterly Volume LXVIII ; LXVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; The Musical Quarterly Volume LXIX ; LXIX >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; The Musical Quarterly Volume LXX ; LXX >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; The Musical Quarterly Volume LXXI ; LXXI >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; The Musical Quarterly Volume LXXII ; LXXII >
     au < HighWirePressH20Plugin ; manifest ; 1989 ; The Musical Quarterly Volume 73 ; 73 >
     au < HighWirePressH20Plugin ; manifest ; 1990 ; The Musical Quarterly Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; manifest ; 1991 ; The Musical Quarterly Volume 75 ; 75 >
@@ -13528,16 +13528,16 @@
     param[base_url] = http://nq.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1849-1850 ; Notes and Queries Volume s1-I ; s1-I >
-    au < HighWirePressH20Plugin ; exists ; 1850 ; Notes and Queries Volume s1-II ; s1-II >
-    au < HighWirePressH20Plugin ; exists ; 1851 ; Notes and Queries Volume s1-III ; s1-III >
-    au < HighWirePressH20Plugin ; exists ; 1851 ; Notes and Queries Volume s1-IV ; s1-IV >
-    au < HighWirePressH20Plugin ; exists ; 1852 ; Notes and Queries Volume s1-V ; s1-V >
-    au < HighWirePressH20Plugin ; exists ; 1852 ; Notes and Queries Volume s1-VI ; s1-VI >
-    au < HighWirePressH20Plugin ; exists ; 1853 ; Notes and Queries Volume s1-VII ; s1-VII >
-    au < HighWirePressH20Plugin ; exists ; 1853 ; Notes and Queries Volume s1-VIII ; s1-VIII >
-    au < HighWirePressH20Plugin ; exists ; 1854 ; Notes and Queries Volume s1-IX ; s1-IX >
-    au < HighWirePressH20Plugin ; exists ; 1854 ; Notes and Queries Volume s1-X ; s1-X >
+    au < HighWirePressH20Plugin ; manifest ; 1849-1850 ; Notes and Queries Volume s1-I ; s1-I >
+    au < HighWirePressH20Plugin ; manifest ; 1850 ; Notes and Queries Volume s1-II ; s1-II >
+    au < HighWirePressH20Plugin ; manifest ; 1851 ; Notes and Queries Volume s1-III ; s1-III >
+    au < HighWirePressH20Plugin ; manifest ; 1851 ; Notes and Queries Volume s1-IV ; s1-IV >
+    au < HighWirePressH20Plugin ; manifest ; 1852 ; Notes and Queries Volume s1-V ; s1-V >
+    au < HighWirePressH20Plugin ; manifest ; 1852 ; Notes and Queries Volume s1-VI ; s1-VI >
+    au < HighWirePressH20Plugin ; manifest ; 1853 ; Notes and Queries Volume s1-VII ; s1-VII >
+    au < HighWirePressH20Plugin ; manifest ; 1853 ; Notes and Queries Volume s1-VIII ; s1-VIII >
+    au < HighWirePressH20Plugin ; manifest ; 1854 ; Notes and Queries Volume s1-IX ; s1-IX >
+    au < HighWirePressH20Plugin ; manifest ; 1854 ; Notes and Queries Volume s1-X ; s1-X >
     au < HighWirePressH20Plugin ; exists ; 1855 ; Notes and Queries Volume s1-XI ; s1-XI >
     au < HighWirePressH20Plugin ; exists ; 1855 ; Notes and Queries Volume s1-XII ; s1-XII >
     au < HighWirePressH20Plugin ; exists ; 1856 ; Notes and Queries Volume s2-I ; s2-I >
