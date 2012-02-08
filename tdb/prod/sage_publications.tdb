@@ -15005,6 +15005,7 @@
         au < HighWireStrVolPlugin ; down ; 2009 ; International Journal of Music Education Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; manifest ; 2010 ; International Journal of Music Education Volume 28 ; 28 >
         au < HighWirePressH20Plugin ; manifest ; 2011 ; International Journal of Music Education Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; exists ; 2012 ; International Journal of Music Education Volume 30 ; 30 >
 
       }
 
@@ -16277,7 +16278,8 @@
         au < manifest ; 2008-2009 ; Journal for the Study of the New Testament Volume 31 ; 31 >
         au < ready ; 2009-2010 ; Journal for the Study of the New Testament Volume 32 ; 32 >
         au < ready ; 2010-2011 ; Journal for the Study of the New Testament Volume 33 ; 33 >
-        au < manifest ; 2012 ; Journal for the Study of the New Testament Volume 34 ; 34 >
+        au < manifest ; 2011-2012 ; Journal for the Study of the New Testament Volume 34 ; 34 >
+        au < exists ; 2012-2013 ; Journal for the Study of the New Testament Volume 35 ; 35 >
 
       }
 
@@ -16547,8 +16549,6 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://joa.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        
-        comment[notReady] = this volume has a manifest page but the links to issues are incorrect 20111117
 
         au < exists ; 1999-2000 ; Journal of Advanced Academics Volume 11 ; 11 >
         au < exists ; 2000-2001 ; Journal of Advanced Academics Volume 12 ; 12 >
@@ -16562,7 +16562,8 @@
         au < exists ; 2008-2009 ; Journal of Advanced Academics Volume 20 ; 20 >
         au < exists ; 2009-2010 ; Journal of Advanced Academics Volume 21 ; 21 >
         au < manifest ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 >
-        au < manifest ; 2012 ; Journal of Advanced Academics Volume 23 ; 23 >
+        au < manifest ; 2011-2012 ; Journal of Advanced Academics Volume 23 ; 23 >
+        au < expected ; 2012-2013 ; Journal of Advanced Academics Volume 24 ; 24 >
 
       }
 
@@ -17467,7 +17468,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 2008-2009 ; Journal of Building Physics Volume 32 ; 32 >
         au < doNotProcess ; 2009-2010 ; Journal of Building Physics Volume 33 ; 33 >
         au < ready ; 2010-2011 ; Journal of Building Physics Volume 34 ; 34 >
-        au < manifest ; 2012 ; Journal of Building Physics Volume 35 ; 35 >
+        au < manifest ; 2011-2012 ; Journal of Building Physics Volume 35 ; 35 >
 
       }
 
@@ -21068,8 +21069,9 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 2009 ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
         au < manifest ; 2010 ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
         au < ready ; 2011 ; Journal of Histochemistry and Cytochemistry Volume 59 ; 59 >
-        
-      }       
+        au < exists ; 2012 ; Journal of Histochemistry and Cytochemistry Volume 60 ; 60 >
+
+      }
       
     }
 
@@ -21618,7 +21620,8 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < doNotProcess ; 2008-2009 ; Journal of Industrial Textiles Volume 38 ; 38 >
         au < doNotProcess ; 2009-2010 ; Journal of Industrial Textiles Volume 39 ; 39 >
         au < manifest ; 2010-2011 ; Journal of Industrial Textiles Volume 40 ; 40 >
-        au < manifest ; 2012 ; Journal of Industrial Textiles Volume 41 ; 41 >
+        au < manifest ; 2011-2012 ; Journal of Industrial Textiles Volume 41 ; 41 >
+        au < expected ; 2012-2013 ; Journal of Industrial Textiles Volume 42 ; 42 >
 
       }
 
@@ -23323,6 +23326,8 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Journal of Plastic Film and Sheeting Volume 24 ; 24 >
         au < manifest ; 2009 ; Journal of Plastic Film and Sheeting Volume 25 ; 25 >
         au < manifest ; 2010 ; Journal of Plastic Film and Sheeting Volume 26 ; 26 >
+        au < manifest ; 2011 ; Journal of Plastic Film and Sheeting Volume 27 ; 27 >
+        au < manifest ; 2012 ; Journal of Plastic Film and Sheeting Volume 28 ; 28 >
 
       }
 
