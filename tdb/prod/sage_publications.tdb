@@ -168,7 +168,7 @@
         au < doNotProcess ; 2009 ; Acta Sociologica Volume 52 ; 52 >
         au < ready ; 2010 ; Acta Sociologica Volume 53 ; 53 >
         au < ready ; 2011 ; Acta Sociologica Volume 54 ; 54 >
-        au < exists ; 2012 ; Acta Sociologica Volume 55 ; 55 >
+        au < manifest ; 2012 ; Acta Sociologica Volume 55 ; 55 >
 
       }
 
@@ -348,7 +348,7 @@
         au < doNotProcess ; 2009 ; Adaptive Behavior Volume 17 ; 17 >
         au < ready ; 2010 ; Adaptive Behavior Volume 18 ; 18 >
         au < ready ; 2011 ; Adaptive Behavior Volume 19 ; 19 >
-        au < exists ; 2012 ; Adaptive Behavior Volume 20 ; 20 >
+        au < manifest ; 2012 ; Adaptive Behavior Volume 20 ; 20 >
 
       }
 
@@ -990,7 +990,7 @@
         au < doNotProcess ; 2009 ; American Educational Research Journal Volume 46 ; 46 >
         au < ready ; 2010 ; American Educational Research Journal Volume 47 ; 47 >
         au < manifest ; 2011 ; American Educational Research Journal Volume 48 ; 48 >
-        au < exists ; 2012 ; American Educational Research Journal Volume 49 ; 49 >
+        au < manifest ; 2012 ; American Educational Research Journal Volume 49 ; 49 >
 
       }
 
@@ -1130,7 +1130,7 @@
         au < doNotProcess ; 2009 ; American Journal of Evaluation Volume 30 ; 30 >
         au < ready ; 2010 ; American Journal of Evaluation Volume 31 ; 31 >
         au < ready ; 2011 ; American Journal of Evaluation Volume 32 ; 32 >
-        au < exists ; 2012 ; American Journal of Evaluation Volume 33 ; 33 >
+        au < manifest ; 2012 ; American Journal of Evaluation Volume 33 ; 33 >
 
       }
 
@@ -1194,7 +1194,7 @@
         au < doNotProcess ; 2009 ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 >
         au < ready ; 2010 ; American Journal of Hospice and Palliative Medicine Volume 27 ; 27 >
         au < ready ; 2011 ; American Journal of Hospice and Palliative Medicine Volume 28 ; 28 >
-        au < exists ; 2012 ; American Journal of Hospice and Palliative Medicine Volume 29 ; 29 >
+        au < manifest ; 2012 ; American Journal of Hospice and Palliative Medicine Volume 29 ; 29 >
 
       }
 
@@ -2675,7 +2675,7 @@
         au < doNotProcess ; 2009 ; Arts and Humanities in Higher Education Volume 8 ; 8 >
         au < ready ; 2010 ; Arts and Humanities in Higher Education Volume 9 ; 9 >
         au < manifest ; 2011 ; Arts and Humanities in Higher Education Volume 10 ; 10 >
-        au < exists ; 2012 ; Arts and Humanities in Higher Education Volume 11 ; 11 >
+        au < manifest ; 2012 ; Arts and Humanities in Higher Education Volume 11 ; 11 >
 
       }
 
@@ -3065,7 +3065,7 @@
         au < exists ; 2009 ; Australasian Psychiatry Volume 17 ; 17 >
         au < exists ; 2010 ; Australasian Psychiatry Volume 18 ; 18 >
         au < exists ; 2011 ; Australasian Psychiatry Volume 19 ; 19 >
-        au < exists ; 2012 ; Australasian Psychiatry Volume 20 ; 20 >
+        au < manifest ; 2012 ; Australasian Psychiatry Volume 20 ; 20 >
       }
       
     }
@@ -3400,7 +3400,7 @@
         au < doNotProcess ; 2009 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 39 ; 39 >
         au < ready ; 2010 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 40 ; 40 >
         au < manifest ; 2011 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 41 ; 41 >
-        au < exists ; 2012 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 42 ; 42 >
+        au < manifest ; 2012 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 42 ; 42 >
 
       }
 
@@ -3482,7 +3482,7 @@
 
         au < manifest ; 2010 ; BioScope: South Asian Screen Studies Volume 1 ; 1 >
         au < manifest ; 2011 ; BioScope: South Asian Screen Studies Volume 2 ; 2 >
-        au < exists ; 2012 ; BioScope: South Asian Screen Studies Volume 3 ; 3 >
+        au < manifest ; 2012 ; BioScope: South Asian Screen Studies Volume 3 ; 3 >
 
       }
 
@@ -4934,7 +4934,7 @@
         au < doNotProcess ; 2009 ; Chronic Illness Volume 5 ; 5 >
         au < ready ; 2010 ; Chronic Illness Volume 6 ; 6 >
         au < manifest ; 2011 ; Chronic Illness Volume 7 ; 7 >
-        au < exists ; 2012 ; Chronic Illness Volume 8 ; 8 >
+        au < manifest ; 2012 ; Chronic Illness Volume 8 ; 8 >
 
       }
 
@@ -4976,7 +4976,7 @@
         au < doNotProcess ; 2009 ; Chronic Respiratory Disease Volume 6 ; 6 >
         au < ready ; 2010 ; Chronic Respiratory Disease Volume 7 ; 7 >
         au < manifest ; 2011 ; Chronic Respiratory Disease Volume 8 ; 8 >
-        au < exists ; 2012 ; Chronic Respiratory Disease Volume 9 ; 9 >
+        au < manifest ; 2012 ; Chronic Respiratory Disease Volume 9 ; 9 >
         
       }
 
@@ -5061,7 +5061,7 @@
         au < doNotProcess ; 2009 ; Clin-Alert Volume 47 ; 47 >
         au < ready ; 2010 ; Clin-Alert Volume 48 ; 48 >
         au < manifest ; 2011 ; Clin-Alert Volume 49 ; 49 >
-        au < exists ; 2012 ; Clin-Alert Volume 50 ; 50 >
+        au < manifest ; 2012 ; Clin-Alert Volume 50 ; 50 >
         
       }
 
@@ -5392,7 +5392,7 @@
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://cpd.sagepub.com/
 
-        au < exists ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 >
+        au < manifest ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 >
 
       }
       
@@ -6336,7 +6336,7 @@
         au < doNotProcess ; 2009 ; Convergence: The International Journal of Research into New Media Technologies Volume 15 ; 15 >
         au < ready ; 2010 ; Convergence: The International Journal of Research into New Media Technologies Volume 16 ; 16 >
         au < manifest ; 2011 ; Convergence: The International Journal of Research into New Media Technologies Volume 17 ; 17 >
-        au < exists ; 2012 ; Convergence: The International Journal of Research into New Media Technologies Volume 18 ; 18 >
+        au < manifest ; 2012 ; Convergence: The International Journal of Research into New Media Technologies Volume 18 ; 18 >
 
       }
 
@@ -6716,7 +6716,7 @@
         au < doNotProcess ; 2009 ; Crime & Delinquency Volume 55 ; 55 >
         au < ready ; 2010 ; Crime & Delinquency Volume 56 ; 56 >
         au < manifest ; 2011 ; Crime & Delinquency Volume 57 ; 57 >
-        au < exists ; 2012 ; Crime & Delinquency Volume 58 ; 58 >
+        au < manifest ; 2012 ; Crime & Delinquency Volume 58 ; 58 >
 
       }
 
@@ -6804,7 +6804,7 @@
         au < doNotProcess ; 2009 ; Criminology and Criminal Justice Volume 9 ; 9 >
         au < ready ; 2010 ; Criminology and Criminal Justice Volume 10 ; 10 >
         au < manifest ; 2011 ; Criminology and Criminal Justice Volume 11 ; 11 >
-        au < exists ; 2012 ; Criminology and Criminal Justice Volume 12 ; 12 >
+        au < manifest ; 2012 ; Criminology and Criminal Justice Volume 12 ; 12 >
 
       }
 
@@ -7639,7 +7639,7 @@
         au < manifest ; 2009 ; Current Directions in Psychological Science Volume 18 ; 18 >
         au < manifest ; 2010 ; Current Directions in Psychological Science Volume 19 ; 19 >
         au < manifest ; 2011 ; Current Directions in Psychological Science Volume 20 ; 20 >
-        au < exists ; 2012 ; Current Directions in Psychological Science Volume 21 ; 21 >
+        au < manifest ; 2012 ; Current Directions in Psychological Science Volume 21 ; 21 >
 
       }
 
@@ -8147,7 +8147,7 @@
         au < doNotProcess ; 2009 ; Discourse & Society Volume 20 ; 20 >
         au < ready ; 2010 ; Discourse & Society Volume 21 ; 21 >
         au < manifest ; 2011 ; Discourse & Society Volume 22 ; 22 >
-        au < exists ; 2012 ; Discourse & Society Volume 23 ; 23 >
+        au < manifest ; 2012 ; Discourse & Society Volume 23 ; 23 >
 
       }
 
@@ -9020,7 +9020,7 @@
         au < manifest ; 2009 ; Educational Researcher Volume 38 ; 38 >
         au < manifest ; 2010 ; Educational Researcher Volume 39 ; 39 >
         au < manifest ; 2011 ; Educational Researcher Volume 40 ; 40 >
-        au < exists ; 2012 ; Educational Researcher Volume 41 ; 41 >
+        au < manifest ; 2012 ; Educational Researcher Volume 41 ; 41 >
 
       }
 
@@ -9365,7 +9365,7 @@
         au < doNotProcess ; 2009 ; Ethnicities Volume 9 ; 9 >
         au < ready ; 2010 ; Ethnicities Volume 10 ; 10 >
         au < manifest ; 2011 ; Ethnicities Volume 11 ; 11 >
-        au < exists ; 2012 ; Ethnicities Volume 12 ; 12 >
+        au < manifest ; 2012 ; Ethnicities Volume 12 ; 12 >
 
       }
 
@@ -9499,7 +9499,7 @@
         au < doNotProcess ; 2009 ; European History Quarterly Volume 39 ; 39 >
         au < ready ; 2010 ; European History Quarterly Volume 40 ; 40 >
         au < manifest ; 2011 ; European History Quarterly Volume 41 ; 41 >
-        au < exists ; 2012 ; European History Quarterly Volume 42 ; 42 >
+        au < manifest ; 2012 ; European History Quarterly Volume 42 ; 42 >
 
       }
 
@@ -10835,7 +10835,7 @@
         au < manifest ; 2009 ; Feminism & Psychology Volume 19 ; 19 >
         au < ready ; 2010 ; Feminism & Psychology Volume 20 ; 20 >
         au < manifest ; 2011 ; Feminism & Psychology Volume 21 ; 21 >
-        au < exists ; 2012 ; Feminism & Psychology Volume 22 ; 22 >
+        au < manifest ; 2012 ; Feminism & Psychology Volume 22 ; 22 >
 
       }
 
@@ -12431,7 +12431,7 @@
         au < doNotProcess ; 2009 ; Health Education & Behavior Volume 36 ; 36 >
         au < ready ; 2010 ; Health Education & Behavior Volume 37 ; 37 >
         au < manifest ; 2011 ; Health Education & Behavior Volume 38 ; 38 >
-        au < exists ; 2012 ; Health Education & Behavior Volume 39 ; 39 >
+        au < manifest ; 2012 ; Health Education & Behavior Volume 39 ; 39 >
 
       }
 
@@ -14047,7 +14047,7 @@
 
         au < manifest ; 2010 ; ICU Director Volume 1 ; 1 >
         au < manifest ; 2011 ; ICU Director Volume 2 ; 2 >
-        au < exists ; 2012 ; ICU Director Volume 3 ; 3 >
+        au < manifest ; 2012 ; ICU Director Volume 3 ; 3 >
 
       }
 
@@ -14120,7 +14120,7 @@
         au < doNotProcess ; 2009 ; Information Development Volume 25 ; 25 >
         au < manifest ; 2010 ; Information Development Volume 26 ; 26 >
         au < manifest ; 2011 ; Information Development Volume 27 ; 27 >
-        au < exists ; 2012 ; Information Development Volume 28 ; 28 >
+        au < manifest ; 2012 ; Information Development Volume 28 ; 28 >
 
       }
 
@@ -14995,25 +14995,14 @@
         au < HighWirePressH20Plugin ; exists ; 2001 ; International Journal of Music Education Volume os-38 ; os-38 >
         au < HighWirePressH20Plugin ; exists ; 2002 ; International Journal of Music Education Volume os-39 ; os-39 >
         au < HighWirePressH20Plugin ; exists ; 2003 ; International Journal of Music Education Volume os-40 ; os-40 >
-        au < HighWirePressH20Plugin ; exists ; 2004 ; International Journal of Music Education Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; manifest ; 2004 ; International Journal of Music Education Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; 2005 ; International Journal of Music Education Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; down ; 2006 ; International Journal of Music Education Volume 24 ; 24 >
         au < HighWireStrVolPlugin ; down ; 2007 ; International Journal of Music Education Volume 25 ; 25 >
         au < HighWirePressPlugin ; down ; 2008 ; International Journal of Music Education Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; down ; 2009 ; International Journal of Music Education Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; exists ; 2010 ; International Journal of Music Education Volume 28 ; 28 >
-        au < HighWirePressH20Plugin ; exists ; 2011 ; International Journal of Music Education Volume 29 ; 29 >
-        au < HighWirePressH20Plugin ; exists ; 1997 ; International Journal of Music Education Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; exists ; 1998 ; International Journal of Music Education Volume 31 ; 31 >
-        au < HighWirePressH20Plugin ; exists ; 1998 ; International Journal of Music Education Volume 32 ; 32 >
-        au < HighWirePressH20Plugin ; exists ; 1999 ; International Journal of Music Education Volume 33 ; 33 >
-        au < HighWirePressH20Plugin ; exists ; 1999 ; International Journal of Music Education Volume 34 ; 34 >
-        au < HighWirePressH20Plugin ; exists ; 2000 ; International Journal of Music Education Volume 35 ; 35 >
-        au < HighWirePressH20Plugin ; exists ; 2000 ; International Journal of Music Education Volume 36 ; 36 >
-        au < HighWirePressH20Plugin ; exists ; 2001 ; International Journal of Music Education Volume 37 ; 37 >
-        au < HighWirePressH20Plugin ; exists ; 2001 ; International Journal of Music Education Volume 38 ; 38 >
-        au < HighWirePressH20Plugin ; exists ; 2002 ; International Journal of Music Education Volume 39 ; 39 >
-        au < HighWirePressH20Plugin ; exists ; 2003 ; International Journal of Music Education Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; manifest ; 2010 ; International Journal of Music Education Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; International Journal of Music Education Volume 29 ; 29 >
 
       }
 
@@ -15690,7 +15679,7 @@
         au < doNotProcess ; 2009 ; International Review for the Sociology of Sport Volume 44 ; 44 >
         au < ready ; 2010 ; International Review for the Sociology of Sport Volume 45 ; 45 >
         au < manifest ; 2011 ; International Review for the Sociology of Sport Volume 46 ; 46 >
-        au < exists ; 2012 ; International Review for the Sociology of Sport Volume 47 ; 47 >
+        au < manifest ; 2012 ; International Review for the Sociology of Sport Volume 47 ; 47 >
 
       }
 
@@ -15891,7 +15880,7 @@
         au < doNotProcess ; 2009 ; International Small Business Journal Volume 27 ; 27 >
         au < ready ; 2010 ; International Small Business Journal Volume 28 ; 28 >
         au < manifest ; 2011 ; International Small Business Journal Volume 29 ; 29 >
-        au < exists ; 2012 ; International Small Business Journal Volume 30 ; 30 >
+        au < manifest ; 2012 ; International Small Business Journal Volume 30 ; 30 >
 
       }
 
@@ -16918,7 +16907,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 2009 ; Journal of Asian and African Studies Volume 44 ; 44 >
         au < ready ; 2010 ; Journal of Asian and African Studies Volume 45 ; 45 >
         au < manifest ; 2011 ; Journal of Asian and African Studies Volume 46 ; 46 >
-        au < exists ; 2012 ; Journal of Asian and African Studies Volume 47 ; 47 >
+        au < manifest ; 2012 ; Journal of Asian and African Studies Volume 47 ; 47 >
 
       }
 
@@ -17118,7 +17107,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 2009 ; Journal of Biological Rhythms Volume 24 ; 24 >
         au < ready ; 2010 ; Journal of Biological Rhythms Volume 25 ; 25 >
         au < manifest ; 2011 ; Journal of Biological Rhythms Volume 26 ; 26 >
-        au < exists ; 2012 ; Journal of Biological Rhythms Volume 27 ; 27 >
+        au < manifest ; 2012 ; Journal of Biological Rhythms Volume 27 ; 27 >
 
       }
 
@@ -17546,7 +17535,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < doNotProcess ; 2009 ; Journal of Business and Technical Communication Volume 23 ; 23 >
         au < ready ; 2010 ; Journal of Business and Technical Communication Volume 24 ; 24 >
         au < manifest ; 2011 ; Journal of Business and Technical Communication Volume 25 ; 25 >
-        au < exists ; 2012 ; Journal of Business and Technical Communication Volume 26 ; 26 >
+        au < manifest ; 2012 ; Journal of Business and Technical Communication Volume 26 ; 26 >
 
       }
 
@@ -17822,7 +17811,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < doNotProcess ; 2009 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 14 ; 14 >
         au < ready ; 2010 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 15 ; 15 >
         au < manifest ; 2011 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 16 ; 16 >
-        au < exists ; 2012 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 17 ; 17 >
+        au < manifest ; 2012 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 17 ; 17 >
 
       }
 
@@ -18376,7 +18365,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 2009 ; Journal of Cognitive Engineering and Decision Making Volume 3 ; 3 >
         au < manifest ; 2010 ; Journal of Cognitive Engineering and Decision Making Volume 4 ; 4 >
         au < manifest ; 2011 ; Journal of Cognitive Engineering and Decision Making Volume 5 ; 5 >
-        au < exists ; 2012 ; Journal of Cognitive Engineering and Decision Making Volume 6 ; 6 >
+        au < manifest ; 2012 ; Journal of Cognitive Engineering and Decision Making Volume 6 ; 6 >
 
       }
 
@@ -18932,7 +18921,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < doNotProcess ; 2009 ; Journal of Contemporary Ethnography Volume 38 ; 38 >
         au < ready ; 2010 ; Journal of Contemporary Ethnography Volume 39 ; 39 >
         au < manifest ; 2011 ; Journal of Contemporary Ethnography Volume 40 ; 40 >
-        au < exists ; 2012 ; Journal of Contemporary Ethnography Volume 41 ; 41 >
+        au < manifest ; 2012 ; Journal of Contemporary Ethnography Volume 41 ; 41 >
 
       }
 
@@ -19715,7 +19704,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < doNotProcess ; 2009 ; Journal of Educational and Behavioral Statistics Volume 34 ; 34 >
         au < manifest ; 2010 ; Journal of Educational and Behavioral Statistics Volume 35 ; 35 >
         au < manifest ; 2011 ; Journal of Educational and Behavioral Statistics Volume 36 ; 36 >
-        au < exists ; 2012 ; Journal of Educational and Behavioral Statistics Volume 37 ; 37 >
+        au < manifest ; 2012 ; Journal of Educational and Behavioral Statistics Volume 37 ; 37 >
 
       }
 
@@ -21837,7 +21826,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < doNotProcess ; 2009 ; Journal of Intelligent Material Systems and Structures Volume 20 ; 20 >
         au < manifest ; 2010 ; Journal of Intelligent Material Systems and Structures Volume 21 ; 21 >
         au < manifest ; 2011 ; Journal of Intelligent Material Systems and Structures Volume 22 ; 22 >
-        au < exists ; 2012 ; Journal of Intelligent Material Systems and Structures Volume 23 ; 23 >
+        au < manifest ; 2012 ; Journal of Intelligent Material Systems and Structures Volume 23 ; 23 >
 
       }
 
@@ -22042,7 +22031,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < doNotProcess ; 2009 ; Journal of Language and Social Psychology Volume 28 ; 28 >
         au < manifest ; 2010 ; Journal of Language and Social Psychology Volume 29 ; 29 >
         au < manifest ; 2011 ; Journal of Language and Social Psychology Volume 30 ; 30 >
-        au < exists ; 2012 ; Journal of Language and Social Psychology Volume 31 ; 31 >
+        au < manifest ; 2012 ; Journal of Language and Social Psychology Volume 31 ; 31 >
 
       }
 
@@ -32755,7 +32744,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Scandinavian Journal of Public Health Volume 37 ; 37 >
         au < manifest ; 2010 ; Scandinavian Journal of Public Health Volume 38 ; 38 >
         au < ready ; 2011 ; Scandinavian Journal of Public Health Volume 39 ; 39 >
-        au < exists ; 2012 ; Scandinavian Journal of Public Health Volume 40 ; 40 >
+        au < manifest ; 2012 ; Scandinavian Journal of Public Health Volume 40 ; 40 >
 
       }
 
@@ -34587,7 +34576,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Strategic Organization Volume 7 ; 7 >
         au < manifest ; 2010 ; Strategic Organization Volume 8 ; 8 >
         au < ready ; 2011 ; Strategic Organization Volume 9 ; 9 >
-        au < exists ; 2012 ; Strategic Organization Volume 10 ; 10 >
+        au < manifest ; 2012 ; Strategic Organization Volume 10 ; 10 >
 
       }
 
@@ -35588,7 +35577,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Therapeutic Advances in Cardiovascular Disease Volume 3 ; 3 >
         au < manifest ; 2010 ; Therapeutic Advances in Cardiovascular Disease Volume 4 ; 4 >
         au < ready ; 2011 ; Therapeutic Advances in Cardiovascular Disease Volume 5 ; 5 >
-        au < exists ; 2012 ; Therapeutic Advances in Cardiovascular Disease Volume 6 ; 6 >
+        au < manifest ; 2012 ; Therapeutic Advances in Cardiovascular Disease Volume 6 ; 6 >
 
       }
 
@@ -37328,7 +37317,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; War in History Volume 16 ; 16 >
         au < manifest ; 2010 ; War in History Volume 17 ; 17 >
         au < ready ; 2011 ; War in History Volume 18 ; 18 >
-        au < exists ; 2012 ; War in History Volume 19 ; 19 >
+        au < manifest ; 2012 ; War in History Volume 19 ; 19 >
 
       }
 
