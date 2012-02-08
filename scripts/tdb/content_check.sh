@@ -76,5 +76,10 @@ echo "---------------------"
 echo "GLN. Titles with no AUs"
 cat ../../tdb/prod/*.tdb | ./tdbout -j | sort -u > $tpath/AllTitles.txt
 cat ../../tdb/prod/*.tdb | ./tdbout -c publisher,title,issn,eissn | sort -u > $tpath/TitlesWAUs.txt
-titlesNoAUs = `diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | grep -v "Springer Science+Business Media" | wc -l
-echo "Titles w/o AUs (not incl Spring Sci+Bu):  $titlesNoAUs"
+echo "All"
+diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | wc -l
+echo "Not incl Springer SBM"
+diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | wc -l
+diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | head 
+
+
