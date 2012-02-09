@@ -29,6 +29,7 @@
     au < manifest ; exists ; 2009 ; Australian Journal of French Studies Volume 46 ; 46 >
     au < manifest ; exists ; 2010 ; Australian Journal of French Studies Volume 47 ; 47 >    
     au < released ; manifest ; 2011 ; Australian Journal of French Studies Volume 48 ; 48 >
+    au < manifest ; exists ; 2012 ; Australian Journal of French Studies Volume 49 ; 49 >
     
   }
 
@@ -52,6 +53,7 @@
     au < manifest ; exists ; 2009 ; British Journal of Canadian Studies Volume 22 ; 22 >
     au < manifest ; exists ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 >    
     au < released ; manifest ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
+    au < expected ; exists ; 2012 ; British Journal of Canadian Studies Volume 25 ; 25 >
     
   }
  
@@ -85,6 +87,7 @@
     au < manifest ; exists ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 >
     au < manifest ; exists ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
     au < released ; manifest ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
+    au < expected ; exists ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
 
   }
    
@@ -107,6 +110,7 @@
     au < manifest ; exists ; 2009 ; The Byron Journal Volume 37 ; 37 >
     au < manifest ; exists ; 2010 ; The Byron Journal Volume 38 ; 38 >    
     au < released ; manifest ; 2011 ; The Byron Journal Volume 39 ; 39 >
+    au < expected ; exists ; 2012 ; The Byron Journal Volume 40 ; 40 >
 
   }
 
@@ -141,6 +145,7 @@
     au < manifest ; exists ; 2010 ; Contemporary French Civilization Volume 34 ; 34 >
     au < released ; manifest ; 2011 ; Contemporary French Civilization Volume 35 ; 35 >    
     au < released ; manifest ; 2011 ; Contemporary French Civilization Volume 36 ; 36 >
+    au < expected ; exists ; 2012 ; Contemporary French Civilization Volume 37 ; 37 >
 
   }  
   
@@ -159,6 +164,7 @@
     au < manifest ; exists ; 2009 ; European Comic Art Volume 2 ; 2 >
     au < manifest ; exists ; 2010 ; European Comic Art Volume 3 ; 3 >    
     au < released ; manifest ; 2011 ; European Comic Art Volume 4 ; 4 >
+    au < expected ; exists ; 2012 ; European Comic Art Volume 5 ; 5 >
 
   }  
   
@@ -176,6 +182,7 @@
     au < manifest ; exists ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 >
     au < manifest ; exists ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
     au < released ; manifest ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
+    au < expected ; exists ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 >
 
   }
    
@@ -192,6 +199,7 @@
     param[journal_issn] = 2047-7708 
 
     au < released ; manifest ; 2011 ; Extrapolation Volume 52 ; 52 >
+    au < expected ; exists ; 2012 ; Extrapolation Volume 53 ; 53 >
 
   }
 
@@ -216,6 +224,7 @@
     au < manifest ; exists ; 2009 ; International Development Planning Review Volume 31 ; 31 >
     au < manifest ; exists ; 2010 ; International Development Planning Review Volume 32 ; 32 >
     au < released ; manifest ; 2011 ; International Development Planning Review Volume 33 ; 33 >
+    au < expected ; exists ; 2012 ; International Development Planning Review Volume 34 ; 34 >
 
   }
    
@@ -235,6 +244,7 @@
     au < manifest ; exists ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
     au < manifest ; exists ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
     au < released ; manifest ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
+    au < expected ; exists ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
 
   }
         
@@ -269,6 +279,7 @@
     au < manifest ; exists ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
     au < manifest ; exists ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
     au < released ; manifest ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
+    au < expected ; exists ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
 
   }
   
@@ -282,9 +293,14 @@
     >
 
     param[journal_issn] = 1754-3827 
+    
+    comment[ceased_publication]=after 2009
 
     au < manifest ; exists ; 2008 ; Popular Narrative Media Volume 1 ; 1 >
     au < crawling ; exists ; 2009 ; Popular Narrative Media Volume 2 ; 2 >
+
+
+ 
 
   }
    
@@ -311,6 +327,7 @@
     au < manifest ; exists ; 2009 ; Romani Studies Volume 19 ; 19 >
     au < manifest ; exists ; 2010 ; Romani Studies Volume 20 ; 20 >
     au < released ; manifest ; 2011 ; Romani Studies Volume 21 ; 21 >
+    au < expected ; exists ; 2012 ; Romani Studies Volume 22 ; 22 >
 
   }
    
@@ -329,6 +346,7 @@
     au < manifest ; exists ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
     au < manifest ; exists ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
     au < released ; manifest ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
+    au < expected ; exists ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
 
   }
    
@@ -351,6 +369,7 @@
     au < manifest ; exists ; 2009 ; Sculpture Journal Volume 18 ; 18 >
     au < manifest ; exists ; 2010 ; Sculpture Journal Volume 19 ; 19 > 
     au < released ; manifest ; 2011 ; Sculpture Journal Volume 20 ; 20 >
+    au < expected ; exists ; 2012 ; Sculpture Journal Volume 21 ; 21 >
 
   }
   
@@ -363,6 +382,7 @@
     >
     
     param[journal_issn] = 0142-7849 
+    comment[ceased_publication]=after 2000
 
     au < manifest ; exists ; 1993 ; Third World Planning Review Volume 15 ; 15 >
     au < manifest ; exists ; 1994 ; Third World Planning Review Volume 16 ; 16 >
