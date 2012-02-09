@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.6 2011-11-02 19:16:19 pgust Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.7 2012-02-09 23:16:44 pgust Exp $
  */
 
 /*
@@ -47,9 +47,12 @@ public class BaseArticleMetadataExtractor
   private static Logger log = Logger.getLogger("BaseArticleMetadataExtractor");
 
 
-  protected String cuRole;
+  protected String cuRole = null;
   protected boolean emitDefaultIfNone = false;
 
+  public BaseArticleMetadataExtractor() {
+  }
+  
   public BaseArticleMetadataExtractor(String cuRole) {
     this.cuRole = cuRole;
   }
