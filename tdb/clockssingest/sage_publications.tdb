@@ -7199,6 +7199,67 @@
   }
 
   {
+
+      title <
+        name = Drug Information Journal ;
+        issn = 0092-8615 
+    >
+
+       param[base_url] = http://dij.sagepub.com/
+       
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1970 ; Drug Information Journal Volume 4 ; 4 ; >
+      au < exists ; exists ; 1971 ; Drug Information Journal Volume 5 ; 5 ; >
+      au < exists ; exists ; 1972 ; Drug Information Journal Volume 6 ; 6 ; >
+      au < exists ; exists ; 1973 ; Drug Information Journal Volume 7 ; 7 ; >
+      au < exists ; exists ; 1974 ; Drug Information Journal Volume 8 ; 8 ; >
+      au < exists ; exists ; 1975 ; Drug Information Journal Volume 9 ; 9 ; >
+      au < exists ; exists ; 1976 ; Drug Information Journal Volume 10 ; 10 ; >
+      au < exists ; exists ; 1977 ; Drug Information Journal Volume 11 ; 11 ; >
+      au < exists ; exists ; 1978 ; Drug Information Journal Volume 12 ; 12 ; >
+      au < exists ; exists ; 1979 ; Drug Information Journal Volume 13 ; 13 ; >
+      au < exists ; exists ; 1980 ; Drug Information Journal Volume 14 ; 14 ; >
+      au < exists ; exists ; 1981 ; Drug Information Journal Volume 15 ; 15 ; >
+      au < exists ; exists ; 1982 ; Drug Information Journal Volume 16 ; 16 ; >
+      au < exists ; exists ; 1983 ; Drug Information Journal Volume 17 ; 17 ; >
+      au < exists ; exists ; 1984 ; Drug Information Journal Volume 18 ; 18 ; >
+      au < exists ; exists ; 1985 ; Drug Information Journal Volume 19 ; 19 ; >
+      au < exists ; exists ; 1986 ; Drug Information Journal Volume 20 ; 20 ; >
+      au < exists ; exists ; 1987 ; Drug Information Journal Volume 21 ; 21 ; >
+      au < exists ; exists ; 1988 ; Drug Information Journal Volume 22 ; 22 ; >
+      au < exists ; exists ; 1989 ; Drug Information Journal Volume 23 ; 23 ; >
+      au < exists ; exists ; 1990 ; Drug Information Journal Volume 24 ; 24 ; >
+      au < exists ; exists ; 1991 ; Drug Information Journal Volume 25 ; 25 ; >
+      au < exists ; exists ; 1992 ; Drug Information Journal Volume 26 ; 26 ; >
+      au < exists ; exists ; 1993 ; Drug Information Journal Volume 27 ; 27 ; >
+      au < exists ; exists ; 1994 ; Drug Information Journal Volume 28 ; 28 ; >
+      au < exists ; exists ; 1995 ; Drug Information Journal Volume 29 ; 29 ; >
+      au < exists ; exists ; 1996 ; Drug Information Journal Volume 30 ; 30 ; >
+      au < exists ; exists ; 1997 ; Drug Information Journal Volume 31 ; 31 ; >
+      au < exists ; exists ; 1998 ; Drug Information Journal Volume 32 ; 32 ; >
+      au < exists ; exists ; 1999 ; Drug Information Journal Volume 33 ; 33 ; >
+      au < exists ; exists ; 2000 ; Drug Information Journal Volume 34 ; 34 ; >
+      au < exists ; exists ; 2001 ; Drug Information Journal Volume 35 ; 35 ; >
+      au < exists ; exists ; 2002 ; Drug Information Journal Volume 36 ; 36 ; >
+      au < exists ; exists ; 2003 ; Drug Information Journal Volume 37 ; 37 ; >
+      au < exists ; exists ; 2004 ; Drug Information Journal Volume 38 ; 38 ; >
+      au < exists ; exists ; 2005 ; Drug Information Journal Volume 39 ; 39 ; >
+      au < exists ; exists ; 2006 ; Drug Information Journal Volume 40 ; 40 ; >
+      au < exists ; exists ; 2007 ; Drug Information Journal Volume 41 ; 41 ; >
+      au < exists ; exists ; 2008 ; Drug Information Journal Volume 42 ; 42 ; >
+      au < exists ; exists ; 2009 ; Drug Information Journal Volume 43 ; 43 ; >
+      au < exists ; exists ; 2010 ; Drug Information Journal Volume 44 ; 44 ; >
+      au < exists ; exists ; 2011 ; Drug Information Journal Volume 45 ; 45 ; >
+      au < exists ; exists ; 2012 ; Drug Information Journal Volume 46 ; 46 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = East European Politics & Societies ;
@@ -17069,7 +17130,7 @@
       au < manifest ; exists ; 2007-2008 ; Journal of Early Intervention Volume 30 ; 30 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Journal of Early Intervention Volume 31 ; 31 ; >
       au < manifest ; exists ; 2009-2010 ; Journal of Early Intervention Volume 32 ; 32 ;  >
-      au < crawling ; exists ; 2011 ; Journal of Early Intervention Volume 33 ; 33 ;  >
+      au < released ; manifest ; 2011 ; Journal of Early Intervention Volume 33 ; 33 ;  >
       au < expected ; exists ; 2012 ; Journal of Early Intervention Volume 34 ; 34 ;  >
 
     }
@@ -17282,7 +17343,7 @@
       au < manifest ; exists ; 2007 ; Journal of Emerging Market Finance Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Emerging Market Finance Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Emerging Market Finance Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2010 ; Journal of Emerging Market Finance Volume 9 ; 9 ;  >
+      au < released ; manifest ; 2010 ; Journal of Emerging Market Finance Volume 9 ; 9 ;  >
       au < released ; manifest ; 2011 ; Journal of Emerging Market Finance Volume 10 ; 10 ; >
       au < expected ; exists ; 2012 ; Journal of Emerging Market Finance Volume 11 ; 11 ; >
 
@@ -17331,7 +17392,7 @@
       au < manifest ; exists ; 2007 ; Journal of Emotional and Behavioral Disorders Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Emotional and Behavioral Disorders Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Emotional and Behavioral Disorders Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2010 ; Journal of Emotional and Behavioral Disorders Volume 18 ; 18 ;  >
+      au < released ; manifest ; 2010 ; Journal of Emotional and Behavioral Disorders Volume 18 ; 18 ;  >
       au < released ; manifest ; 2011 ; Journal of Emotional and Behavioral Disorders Volume 19 ; 19 ; >
       au < expected ; exists ; 2012 ; Journal of Emotional and Behavioral Disorders Volume 20 ; 20 ; >
 
@@ -17400,7 +17461,7 @@
       au < manifest ; exists ; 2007 ; Journal of English Linguistics Volume 35 ; 35 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of English Linguistics Volume 36 ; 36 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of English Linguistics Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2010 ; Journal of English Linguistics Volume 38 ; 38 ;  >
+      au < released ; manifest ; 2010 ; Journal of English Linguistics Volume 38 ; 38 ;  >
       au < released ; manifest ; 2011 ; Journal of English Linguistics Volume 39 ; 39 ; >
       au < expected ; exists ; 2012 ; Journal of English Linguistics Volume 40 ; 40 ; >
 
@@ -17450,7 +17511,7 @@
       au < manifest ; exists ; 2007 ; Journal of Entrepreneurship Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Entrepreneurship Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Entrepreneurship Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2010 ; Journal of Entrepreneurship Volume 19 ; 19 ;  >
+      au < released ; manifest ; 2010 ; Journal of Entrepreneurship Volume 19 ; 19 ;  >
       au < released ; manifest ; 2011 ; Journal of Entrepreneurship Volume 20 ; 20 ; >
       au < manifest ; exists ; 2012 ; Journal of Entrepreneurship Volume 21 ; 21 ; >
 
@@ -17500,7 +17561,7 @@
       au < manifest ; exists ; 2007 ; The Journal of Environment & Development Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Environment & Development Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Environment & Development Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2010 ; The Journal of Environment & Development Volume 19 ; 19 ;  >
+      au < released ; manifest ; 2010 ; The Journal of Environment & Development Volume 19 ; 19 ;  >
       au < released ; manifest ; 2011 ; The Journal of Environment & Development Volume 20 ; 20 ; >
       au < expected ; exists ; 2012 ; The Journal of Environment & Development Volume 21 ; 21 ; >
 
@@ -17551,7 +17612,7 @@
       au < manifest ; exists ; 2007 ; Journal of European Social Policy Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of European Social Policy Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of European Social Policy Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2010 ; Journal of European Social Policy Volume 20 ; 20 ;  >
+      au < released ; manifest ; 2010 ; Journal of European Social Policy Volume 20 ; 20 ;  >
       au < released ; manifest ; 2011 ; Journal of European Social Policy Volume 21 ; 21 ; >
       au < expected ; exists ; 2012 ; Journal of European Social Policy Volume 22 ; 22 ; >
 
@@ -17622,7 +17683,7 @@
       au < manifest ; exists ; 2007 ; Journal of European Studies Volume 37 ; 37 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of European Studies Volume 38 ; 38 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of European Studies Volume 39 ; 39 ; >
-      au < crawling ; exists ; 2010 ; Journal of European Studies Volume 40 ; 40 ;  >
+      au < released ; manifest ; 2010 ; Journal of European Studies Volume 40 ; 40 ;  >
       au < released ; manifest ; 2011 ; Journal of European Studies Volume 41 ; 41 ; >
       au < expected ; exists ; 2012 ; Journal of European Studies Volume 42 ; 42 ; >
 
@@ -17688,7 +17749,7 @@
       au < manifest ; exists ; 2007 ; Journal of Family History Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Family History Volume 33 ; 33 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Family History Volume 34 ; 34 ; >
-      au < crawling ; exists ; 2010 ; Journal of Family History Volume 35 ; 35 ;  >
+      au < released ; manifest ; 2010 ; Journal of Family History Volume 35 ; 35 ;  >
       au < released ; manifest ; 2011 ; Journal of Family History Volume 36 ; 36 ; >
       au < expected ; exists ; 2012 ; Journal of Family History Volume 37 ; 37 ; >
 
@@ -17750,7 +17811,7 @@
       au < manifest ; exists ; 2007 ; Journal of Family Issues Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Family Issues Volume 29 ; 29 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Family Issues Volume 30 ; 30 ; >
-      au < crawling ; exists ; 2010 ; Journal of Family Issues Volume 31 ; 31 ;  >
+      au < released ; manifest ; 2010 ; Journal of Family Issues Volume 31 ; 31 ;  >
       au < released ; manifest ; 2011 ; Journal of Family Issues Volume 32 ; 32 ; >
       au < manifest ; exists ; 2012 ; Journal of Family Issues Volume 33 ; 33 ; >
 
@@ -17797,7 +17858,7 @@
       au < manifest ; exists ; 2007 ; Journal of Family Nursing Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Family Nursing Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Family Nursing Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2010 ; Journal of Family Nursing Volume 16 ; 16 ;  >
+      au < released ; manifest ; 2010 ; Journal of Family Nursing Volume 16 ; 16 ;  >
       au < released ; manifest ; 2011 ; Journal of Family Nursing Volume 17 ; 17 ; >
       au < expected ; exists ; 2012 ; Journal of Family Nursing Volume 18 ; 18 ; >
 
