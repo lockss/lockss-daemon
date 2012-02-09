@@ -2725,7 +2725,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 >
-    au < testing ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
+    au < notReady ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
 
   }
 
@@ -2773,7 +2773,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Genetics Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Reviews Genetics Volume 11 ; 2010 ; 11 >
-    au < testing ; exists ; 2011 ; Nature Reviews Genetics Volume 12 ; 2011 ; 12 >
+    au < released ; manifest ; 2011 ; Nature Reviews Genetics Volume 12 ; 2011 ; 12 >
 
   }
 
@@ -2889,7 +2889,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Neurology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 >
-    au < testing ; exists ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 >
+    au < released ; manifest ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 >
 
   }
 
@@ -2915,7 +2915,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Neuroscience Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Reviews Neuroscience Volume 11 ; 2010 ; 11 >
-    au < testing ; exists ; 2011 ; Nature Reviews Neuroscience Volume 12 ; 2011 ; 12 >
+    au < released ; manifest ; 2011 ; Nature Reviews Neuroscience Volume 12 ; 2011 ; 12 >
 
   }
 
@@ -2936,7 +2936,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Rheumatology Volume 7 ; 2011 ; 7 >
+    au < testing ; exists ; 2011 ; Nature Reviews Rheumatology Volume 7 ; 2011 ; 7 >
 
   }
 
@@ -2990,7 +2990,7 @@
     au < released ; crawling ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 >
     au < released ; crawling ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 >
-    au < crawling ; exists ; 2011 ; Nature Structural and Molecular Biology Volume 18 ; 2011 ; 18 >
+    au < testing ; exists ; 2011 ; Nature Structural and Molecular Biology Volume 18 ; 2011 ; 18 >
 
   }
 
@@ -3032,7 +3032,7 @@
     au < exists ; exists ; 2008 ; Neuropsychopharmacology Volume 33 ; 2008 ; 33 >
     au < exists ; exists ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 >
     au < manifest ; exists ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
-    au < crawling ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
+    au < testing ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
 
   }
 
@@ -3058,7 +3058,7 @@
     au < exists ; exists ; 2008 ; Obesity Volume 16 ; 2008 ; 16 >
     au < exists ; exists ; 2009 ; Obesity Volume 17 ; 2009 ; 17 >
     au < exists ; exists ; 2010 ; Obesity Volume 18 ; 2010 ; 18 >
-    au < crawling ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
+    au < testing ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
 
   }
 
