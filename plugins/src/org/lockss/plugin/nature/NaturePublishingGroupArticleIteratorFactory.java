@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.9 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.10 2012-02-09 23:19:25 pgust Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class NaturePublishingGroupArticleIteratorFactory
 
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+    return new BaseArticleMetadataExtractor(null);
   }
 
   protected static class NaturePublishingGroupArticleIterator
