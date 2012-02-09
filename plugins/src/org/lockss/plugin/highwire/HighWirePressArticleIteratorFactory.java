@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.8 2011-06-14 09:26:33 tlipkis Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.9 2012-02-09 20:58:03 pgust Exp $
  */
 
 /*
@@ -173,7 +173,7 @@ public class HighWirePressArticleIteratorFactory
 
       ArticleFiles af = new ArticleFiles();
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-//      guessPdfLandingPage(af, pdfMat);
+      guessPdfLandingPage(af, pdfMat);
       af.setFullTextCu(af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE) != null
                        ? af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE)
                        : pdfCu);
@@ -197,18 +197,18 @@ public class HighWirePressArticleIteratorFactory
 //      }
 //    }
 //    
-//    protected void guessPdfLandingPage(ArticleFiles af, Matcher mat) {
-//      CachedUrl pdfLandCu = guess(mat,
-//                                  "/cgi/reprint/$1$2",
-//                                  "/cgi/reprint/$2",
-//                                  "/cgi/reprintframed/$1$2",
-//                                  "/cgi/reprintframed/$2",
-//                                  "/cgi/framedreprint/$1$2",
-//                                  "/cgi/framedreprint/$2");
-//      if (pdfLandCu != null) {
-//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
-//      }
-//    }
+    protected void guessPdfLandingPage(ArticleFiles af, Matcher mat) {
+      CachedUrl pdfLandCu = guess(mat,
+                                  "/cgi/reprint/$1$2",
+                                  "/cgi/reprint/$2",
+                                  "/cgi/reprintframed/$1$2",
+                                  "/cgi/reprintframed/$2",
+                                  "/cgi/framedreprint/$1$2",
+                                  "/cgi/framedreprint/$2");
+      if (pdfLandCu != null) {
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
+      }
+    }
 //
 //    protected void guessAbstract(ArticleFiles af, Matcher mat) {
 //      CachedUrl absCu = guess(mat,
@@ -240,35 +240,35 @@ public class HighWirePressArticleIteratorFactory
 //      }
 //    }
 //    
-//    /**
-//     * <p>Tries various URLs in this AU similar to the one in the
-//     * given matcher, using each one of the given matcher replacement
-//     * patterns in turn, until one is found that exists and has
-//     * content.</p>
-//     * <p>The replacement patterns are applied to the matcher using
-//     * {@link Matcher#replaceFirst(String)}.</p>
-//     * <p>This method is a candidate to be refactored into a utility
-//     * framework for article iterators.</p>
-//     * @param mat      A matcher encapsulating a previously-matched
-//     *                 URL in this AU.
-//     * @param replPats Any number of replacement patterns consistent
-//     *                 with the matcher, to try in sequence.
-//     * @return A {@link CachedUrl} if one of the replacement patterns
-//     *         produces a URL in this AU that exists and has content,
-//     *         or <code>null</code> otherwise.
-//     * @see Matcher#replaceFirst(String)
-//     * @see CachedUrl#hasContent()
-//     */
-//    protected CachedUrl guess(Matcher mat,
-//                              String... replPats) {
-//      for (String replPat : replPats) {
-//        CachedUrl guessCu = au.makeCachedUrl(mat.replaceFirst(replPat));
-//        if (guessCu != null && guessCu.hasContent()) {
-//          return guessCu;
-//        }
-//      }
-//      return null;
-//    }
+    /**
+     * <p>Tries various URLs in this AU similar to the one in the
+     * given matcher, using each one of the given matcher replacement
+     * patterns in turn, until one is found that exists and has
+     * content.</p>
+     * <p>The replacement patterns are applied to the matcher using
+     * {@link Matcher#replaceFirst(String)}.</p>
+     * <p>This method is a candidate to be refactored into a utility
+     * framework for article iterators.</p>
+     * @param mat      A matcher encapsulating a previously-matched
+     *                 URL in this AU.
+     * @param replPats Any number of replacement patterns consistent
+     *                 with the matcher, to try in sequence.
+     * @return A {@link CachedUrl} if one of the replacement patterns
+     *         produces a URL in this AU that exists and has content,
+     *         or <code>null</code> otherwise.
+     * @see Matcher#replaceFirst(String)
+     * @see CachedUrl#hasContent()
+     */
+    protected CachedUrl guess(Matcher mat,
+                              String... replPats) {
+      for (String replPat : replPats) {
+        CachedUrl guessCu = au.makeCachedUrl(mat.replaceFirst(replPat));
+        if (guessCu != null && guessCu.hasContent()) {
+          return guessCu;
+        }
+      }
+      return null;
+    }
     
     /**
      * <p>Does the same thing as
