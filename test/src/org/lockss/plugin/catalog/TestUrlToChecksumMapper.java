@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlToChecksumMapper.java,v 1.1.2.1 2011-12-23 19:30:15 nchondros Exp $
+ * $Id: TestUrlToChecksumMapper.java,v 1.1.2.2 2012-02-11 17:44:53 nchondros Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import java.io.StringWriter;
 import java.security.*;
 
+import org.custommonkey.xmlunit.XMLAssert;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -136,11 +137,12 @@ public class TestUrlToChecksumMapper extends LockssTestCase {
     }
   }
   
-  public void testMapper() throws Exception {
+  public void testBufferedMapper() throws Exception {
     //anticipate a sorted list of the test urls
     String[] sortedUrls = urls.clone();
     Arrays.sort(sortedUrls);
-    UrlToChecksumMap map = UrlToChecksumMapper.generateMap(testau);
+    UrlToChecksumMapperBuffered mapper = new UrlToChecksumMapperBuffered();
+    UrlToChecksumMap map = mapper.generateMap(testau);
     int iSortedUrls = 0;
     for( String key : map.keySet() ) {
       assertEquals(key, sortedUrls[iSortedUrls++]);
@@ -149,8 +151,9 @@ public class TestUrlToChecksumMapper extends LockssTestCase {
     assertEquals(iSortedUrls, sortedUrls.length);
   }
   
-  public void testXMLMarshaling() throws Exception {
-    UrlToChecksumMap originalMap = UrlToChecksumMapper.generateMap(testau);
+  public void testBufferedMapperXMLMarshaling() throws Exception {
+    UrlToChecksumMapperBuffered mapper = new UrlToChecksumMapperBuffered();
+    UrlToChecksumMap originalMap = mapper.generateMap(testau);
     XStream xStream = new XStream(new DomDriver());
     xStream.alias("UrlToChecksumMap",UrlToChecksumMap.class);
     xStream.registerConverter(new UrlToChecksumMapConverter());
@@ -160,14 +163,24 @@ public class TestUrlToChecksumMapper extends LockssTestCase {
     assertEquals(originalMap, unmarshalledMap);
   }
   
-  public void xtestDumpXMLMapper() throws Exception {
+  public void xtestDumpXMLBufferedMapper() throws Exception {
     StringWriter sw = new StringWriter();
-    UrlToChecksumMapper.generateXMLMap(testau, sw);
-    System.out.println(sw.toString());
+    UrlToChecksumMapper mapper = new UrlToChecksumMapperBuffered();
+    mapper.generateXMLMap(testau, sw);
+    System.out.println("Buffered:" + sw.toString());
+  }
+  
+  public void testDumpXMLDirectMapper() throws Exception {
+    StringWriter sw = new StringWriter();
+    UrlToChecksumMapper mapper = new UrlToChecksumMapperDirect();
+    mapper.generateXMLMap(testau, sw);
+    //System.out.println("Direct:" + sw.toString());
+    XMLAssert.assertXMLEqual(sw.toString(), expectedDirectXML);
   }
   
   public void xtestDumpMapper() throws Exception {
-    UrlToChecksumMap map = UrlToChecksumMapper.generateMap(testau);
+    UrlToChecksumMapperBuffered mapper = new UrlToChecksumMapperBuffered();
+    UrlToChecksumMap map = mapper.generateMap(testau);
     for( String key : map.keySet() ) {
       System.out.println(String.format("  url %s -> %s ", key, map.get(key)));
     }
@@ -180,4 +193,61 @@ public class TestUrlToChecksumMapper extends LockssTestCase {
     byte[] bchecksum = checksumProducer.digest();
     return ByteArray.toHexString(bchecksum);
   }
+  
+  private String expectedDirectXML =
+          "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+          "<UrlToChecksumMap>\n" +
+          "    <entry>\n" +
+          "        <url>lockssau:</url>\n" +
+          "        <checksum>594D83A41AB4304997A8E3CBED187DDA1FF3997D</checksum>\n" +
+          "    </entry>\n" +
+          "    <entry>\n" +
+          "        <url>http://www.test.org/</url>\n" +
+          "        <checksum>BCC964D42C957F9D64D8EC47B1BF31A1DD3AB5CB</checksum>\n" +
+          "    </entry>\n" +
+          "    <entry>\n" +
+          "        <url>http://www.test.org/index.html</url>\n" +
+          "        <checksum>273B27ECA7DBBFB8215BE707ECEDC87E07687B47</checksum>\n" +
+          "    </entry>\n" +
+          "    <entry>\n" +
+          "        <url>http://www.test.org/file1.html</url>\n" +
+          "        <checksum>9C2038ACDD61740198D6CF72E3912E8F2960E2AD</checksum>\n" +
+          "    </entry>\n" +
+          "    <entry>\n" +
+          "        <url>http://www.test.org/file2.html</url>\n" +
+          "        <checksum>2A195FBF19F1B71DEF081A8F2B41CF8D8F8665B2</checksum>\n" +
+          "    </entry>\n" +
+          "    <entry>\n" +
+          "        <url>http://www.test.org/branch1/</url>\n" +
+          "        <checksum>6ED5FC900B1B2562AF2BCDFEA4994BBD75EC421A</checksum>\n" +
+          "    </entry>\n" +
+          "    <entry>\n" +
+          "        <url>http://www.test.org/branch1/index.html</url>\n" +
+          "        <checksum>B41F8A3E8D90344BFF0845247504509BB3F2F205</checksum>\n" +
+          "    </entry>\n" +
+          "    <entry>\n" +
+          "        <url>http://www.test.org/branch1/file1.html</url>\n" +
+          "        <checksum>39F2435E05740276E84D61E5CFA2638A16BEE160</checksum>\n" +
+          "    </entry>\n" +
+          "    <entry>\n" +
+          "        <url>http://www.test.org/branch1/file2.html</url>\n" +
+          "        <checksum>ED33BB9C800E8049B9D1D8C1E093850E04A1ADB1</checksum>\n" +
+          "    </entry>\n" +
+          "    <entry>\n" +
+          "        <url>http://www.test.org/branch2/</url>\n" +
+          "        <checksum>908CE4FC2554DCF2534F146D41C6DC06BB3C3D25</checksum>\n" +
+          "    </entry>\n" +
+          "    <entry>\n" +
+          "        <url>http://www.test.org/branch2/index.html</url>\n" +
+          "        <checksum>FF3CB6108D2847321EF01861C346C59E81DF71F3</checksum>\n" +
+          "    </entry>\n" +
+          "    <entry>\n" +
+          "        <url>http://www.test.org/branch2/file1.html</url>\n" +
+          "        <checksum>9A32BA6F1FB1142220B2F8F310B221482BC8587A</checksum>\n" +
+          "    </entry>\n" +
+          "    <entry>\n" +
+          "        <url>http://www.test.org/branch2/file2.html</url>\n" +
+          "        <checksum>2AF5D83D2C62C802B319B5A6D157305F248F214D</checksum>\n" +
+          "    </entry>\n" +
+          "</UrlToChecksumMap>";
 }

@@ -10,20 +10,22 @@ import org.lockss.plugin.CachedUrlSetNode;
 import org.lockss.util.CIProperties;
 import org.lockss.util.StringUtil;
 
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
-/*
- * Utility class to map the urls of a single {@link ArchivalUnit} to their checksum
- */
-public class UrlToChecksumMapper {
-  
+public abstract class UrlToChecksumMapper {
+
   /*
-   * Generates a {@link UrlToChecksumMap} object that contains the url-to-checksum mapping 
+   * Generates and marshals to XML the url-to-checksum mapping 
    * for the specified {@link ArchivalUnit}
    */
-  protected static UrlToChecksumMap generateMap(ArchivalUnit au) {
-    UrlToChecksumMap map = new UrlToChecksumMap();
-    
+  public abstract void generateXMLMap(ArchivalUnit au, Writer out) throws Exception;
+  
+  protected interface UrlProcessor {
+    void process(String url, String checksum) throws Exception;
+  }
+
+  /*
+   * Iterates through all Urls of an {@link ArchivalUnit} and calls the supplied visitor
+   */
+  protected void iterateUrls(ArchivalUnit au, UrlProcessor processor) throws Exception {
     CachedUrlSet cus = au.getAuCachedUrlSet();
     Iterator iter = cus.contentHashIterator();
     while (iter.hasNext()) {
@@ -42,25 +44,12 @@ public class UrlToChecksumMapper {
             String checksum = headers.getProperty(CachedUrl.PROPERTY_CHECKSUM);
             //only store entries with checksums
             if( ! StringUtil.isNullString(checksum) ) {
-              map.put(url, checksum);
+              processor.process(url, checksum);
             }
           }
           break;
       }
     }
-    return map;
   }
   
-  /*
-   * Generates and marshals to XML the url-to-checksum mapping 
-   * for the specified {@link ArchivalUnit}
-   */
-  public static void generateXMLMap(ArchivalUnit au, Writer out) {
-    UrlToChecksumMap map = generateMap(au);
-    
-    XStream xStream = new XStream(new DomDriver());
-    xStream.alias("UrlToChecksumMap",UrlToChecksumMap.class);
-    xStream.registerConverter(new UrlToChecksumMapConverter());
-    xStream.toXML(map, out);
-  }
 }
