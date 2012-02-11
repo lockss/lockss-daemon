@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataField.java,v 1.8 2012-02-11 00:15:06 akanshab01 Exp $
+ * $Id: TestMetadataField.java,v 1.9 2012-02-11 00:42:32 akanshab01 Exp $
  */
 
 /*
@@ -298,10 +298,10 @@ public class TestMetadataField extends LockssTestCase {
     
    
     MetadataField testvalf4 = new MetadataField(MetadataField.FIELD_START_PAGE,
-        MetadataField.groupExtractor(testpagepattern1,1));
+        MetadataField.groupExtractor(testpagepattern1,2));
    
     MetadataField testvalf5 = new MetadataField(MetadataField.FIELD_START_PAGE,
-        MetadataField.groupExtractor(testpagepattern3,1));
+        MetadataField.groupExtractor(testpagepattern3,2));
    
     
     
