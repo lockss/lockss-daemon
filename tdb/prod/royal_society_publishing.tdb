@@ -75,6 +75,7 @@
     au < released ; 2008 ; Biographical Memoirs of Fellows of the Royal Society Volume 54 ; 54 >
     au < released ; 2009 ; Biographical Memoirs of Fellows of the Royal Society Volume 55 ; 55 >
     au < released ; 2010 ; Biographical Memoirs of Fellows of the Royal Society Volume 56 ; 56 >
+    au < released ; 2011 ; Biographical Memoirs of Fellows of the Royal Society Volume 57 ; 57 >
 
   }
 
@@ -96,6 +97,7 @@
     au < released ; 2009 ; Biology Letters Volume 5 ; 5 >
     au < released ; 2010 ; Biology Letters Volume 6 ; 6 >
     au < released ; 2011 ; Biology Letters Volume 7 ; 7 >
+    au < ready ; 2012 ; Biology Letters Volume 8 ; 8 >
 
   }
 
@@ -112,7 +114,7 @@
 
     param[base_url] = http://rsfs.royalsocietypublishing.org/
 
-    au < testing ; 2011 ; Interface Focus Volume 1 ; 1 >
+    au < ready ; 2011 ; Interface Focus Volume 1 ; 1 >
 
   }
 
@@ -228,7 +230,7 @@
 
     param[base_url] = http://rsob.royalsocietypublishing.org/
     
-    au < testing ; 2011 ; Open Biology Volume 1 ; 1 >
+    au < ready ; 2011 ; Open Biology Volume 1 ; 1 >
     au < manifest ; 2012 ; Open Biology Volume 2 ; 2 >
   
   }
