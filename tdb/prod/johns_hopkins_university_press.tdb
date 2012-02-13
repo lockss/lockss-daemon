@@ -568,12 +568,16 @@
 
     title <
       name = German Studies Review ;
-      issn = ;
-      eissn = ;
-      issnl =
+      issn = 0149-7952 ;
+      eissn = 2164-8646 ;
+      issnl = 0149-7952 
     >
     
-	comment[upcoming] = this journal is upcoming in projectmuse
+    param[journal_dir] = german_studies_review
+    attr[journal_id] = gsr
+    
+    
+    au < exists ; 2011 ; German Studies Review Volume 1 ; 1 >
 
   }
   
