@@ -60,7 +60,7 @@
     param[journal_abbr] = pelroc
 
     au < released ; manifest ; 2011 ; Pace Environmental Law Review Online Companion Volume 1 ; 1 >
-    au < expected ; exists ; 2012 ; Pace Environmental Law Review Online Companion Volume 2 ; 2 >
+    au < manifest ; exists ; 2012 ; Pace Environmental Law Review Online Companion Volume 2 ; 2 >
 
   }
 
@@ -165,7 +165,7 @@
     param[journal_abbr] = pipself
 
     au < released ; manifest ; 2011 ; Pace I.P., Sports & Entertainment Law Forum Volume 1 ; 1 >
-    au < expected ; manifest ; 2012 ; Pace I.P., Sports & Entertainment Law Forum Volume 2 ; 1 >
+    au < manifest ; exists ; 2012 ; Pace I.P., Sports & Entertainment Law Forum Volume 2 ; 1 >
 
   }
 
