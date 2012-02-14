@@ -173,7 +173,7 @@
         au < released ; crawling ; 2009 ; Archives of Dermatology Volume 145 ; 145 ; >
         au < released ; crawling ; 2010 ; Archives of Dermatology Volume 146 ; 146 ; >
         au < released ; manifest ; 2011 ; Archives of Dermatology Volume 147 ; 147 ; >
-        au < crawling ; exists ; 2012 ; Archives of Dermatology Volume 148 ; 148 ; >
+        au < manifest ; exists ; 2012 ; Archives of Dermatology Volume 148 ; 148 ; >
         
       }
       
@@ -269,7 +269,7 @@
         au < released ; crawling ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
         au < released ; crawling ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ; >      
         au < released ; manifest ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; >      
-        au < crawling ; exists ; 2012 ; Archives of Facial Plastic Surgery Volume 14 ; 14 ; >      
+        au < manifest ; exists ; 2012 ; Archives of Facial Plastic Surgery Volume 14 ; 14 ; >      
 
       }
     
@@ -359,7 +359,7 @@
         au < released ; crawling ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 ; >
         au < released ; crawling ; 2010 ; Archives of General Psychiatry Volume 67 ; 67 ; >
         au < released ; manifest ; 2011 ; Archives of General Psychiatry Volume 68 ; 68 ; >
-        au < crawling ; exists ; 2012 ; Archives of General Psychiatry Volume 69 ; 69 ; >
+        au < manifest ; exists ; 2012 ; Archives of General Psychiatry Volume 69 ; 69 ; >
 
       }
       
@@ -558,7 +558,7 @@
         au < released ; crawling ; 2009 ; Archives of Internal Medicine Volume 169 ; 169 ; >
         au < released ; crawling ; 2010 ; Archives of Internal Medicine Volume 170 ; 170 ; >
         au < released ; manifest ; 2011 ; Archives of Internal Medicine Volume 171 ; 171 ; >
-        au < crawling ; exists ; 2012 ; Archives of Internal Medicine Volume 172 ; 172 ; >
+        au < manifest ; exists ; 2012 ; Archives of Internal Medicine Volume 172 ; 172 ; >
 
       }
       
@@ -654,7 +654,7 @@
         au < released ; crawling ; 2009 ; Archives of Neurology Volume 66 ; 66 ; >
         au < released ; crawling ; 2010 ; Archives of Neurology Volume 67 ; 67 ; >
         au < released ; manifest ; 2011 ; Archives of Neurology Volume 68 ; 68 ; >
-        au < crawling ; exists ; 2012 ; Archives of Neurology Volume 69 ; 69 ; >
+        au < manifest ; exists ; 2012 ; Archives of Neurology Volume 69 ; 69 ; >
 
       }
       
@@ -910,7 +910,7 @@
         au < released ; crawling ; 2009 ; Archives of Ophthalmology Volume 127 ; 127 ; >
         au < released ; crawling ; 2010 ; Archives of Ophthalmology Volume 128 ; 128 ; >
         au < released ; manifest ; 2011 ; Archives of Ophthalmology Volume 129 ; 129 ; >
-        au < crawling ; exists ; 2012 ; Archives of Ophthalmology Volume 130 ; 130 ; >
+        au < manifest ; exists ; 2012 ; Archives of Ophthalmology Volume 130 ; 130 ; >
 
       }
       
@@ -1075,7 +1075,7 @@
          au < released ; crawling ; 2009 ; Archives of Otolaryngology - Head & Neck Surgery Volume 135 ; 135 ; >
          au < released ; crawling ; 2010 ; Archives of Otolaryngology - Head & Neck Surgery Volume 136 ; 136 ; >
          au < released ; manifest ; 2011 ; Archives of Otolaryngology - Head & Neck Surgery Volume 137 ; 137 ; >
-         au < crawling ; exists ; 2012 ; Archives of Otolaryngology - Head & Neck Surgery Volume 138 ; 138 ; >
+         au < manifest ; exists ; 2012 ; Archives of Otolaryngology - Head & Neck Surgery Volume 138 ; 138 ; >
 
       }
       
@@ -1268,7 +1268,7 @@
         au < released ; crawling ; 2009 ; Archives of Pediatrics & Adolescent Medicine Volume 163 ; 163 ; >
         au < released ; crawling ; 2010 ; Archives of Pediatrics & Adolescent Medicine Volume 164 ; 164 ; >
         au < released ; manifest ; 2011 ; Archives of Pediatrics & Adolescent Medicine Volume 165 ; 165 ; >
-        au < crawling ; exists ; 2012 ; Archives of Pediatrics & Adolescent Medicine Volume 166 ; 166 ; >
+        au < manifest ; exists ; 2012 ; Archives of Pediatrics & Adolescent Medicine Volume 166 ; 166 ; >
 
       }
       
@@ -1442,7 +1442,7 @@
         au < released ; crawling ; 2009 ; Archives of Surgery Volume 144 ; 144 ; >
         au < released ; crawling ; 2010 ; Archives of Surgery Volume 145 ; 145 ; >
         au < released ; manifest ; 2011 ; Archives of Surgery Volume 146 ; 146 ; >
-        au < crawling ; exists ; 2012 ; Archives of Surgery Volume 147 ; 147 ; >
+        au < manifest ; exists ; 2012 ; Archives of Surgery Volume 147 ; 147 ; >
 
       }
       
@@ -1788,7 +1788,7 @@
 
         au < released ; manifest ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305 ; 305 ; >
         au < released ; manifest ; 2011 ; JAMA: The Journal of the American Medical Association Volume 306 ; 306 ; >
-        au < crawling ; exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307 ; 307 ; >
+        au < manifest ; exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307 ; 307 ; >
 
       }
 
@@ -1849,7 +1849,7 @@
     au < released ; crawling ; 2009 ; Virtual Mentor Volume 11 ; 11 ; 2009 >
     au < released ; crawling ; 2010 ; Virtual Mentor Volume 12 ; 12 ; 2010 >
     au < released ; manifest ; 2011 ; Virtual Mentor Volume 13 ; 13 ; 2011 >
-    au < crawling ; exists ; 2012 ; Virtual Mentor Volume 14 ; 14 ; 2012 >
+    au < manifest ; exists ; 2012 ; Virtual Mentor Volume 14 ; 14 ; 2012 >
 
   }
   
