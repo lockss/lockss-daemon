@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.19 2011-04-28 02:23:39 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.20 2012-02-14 23:09:23 tlipkis Exp $
  */
 
 /*
@@ -116,8 +116,9 @@ public class ListObjects extends LockssServlet {
     }
   }
 
-  // Used by status table(s) to determine whether to display link to DOIs
-  public static boolean hasDoiList(ArchivalUnit au) {
+  // Used by status table(s) to determine whether to display links to
+  // Metadata and DOIs
+  public static boolean hasArticleMetadata(ArchivalUnit au) {
     return null !=
       au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au);
 
@@ -128,7 +129,7 @@ public class ListObjects extends LockssServlet {
 
   // Used by status table(s) to determine whether to display link to articles
   public static boolean hasArticleList(ArchivalUnit au) {
-    return hasDoiList(au);
+    return null != au.getPlugin().getArticleIteratorFactory();
   }
 
   void displayError(String error) throws IOException {

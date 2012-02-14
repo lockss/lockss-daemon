@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.103 2012-01-31 07:21:16 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.104 2012-02-14 23:09:23 tlipkis Exp $
  */
 
 /*
@@ -991,32 +991,44 @@ public class ArchivalUnitStatus
 							", ",
 							fileListLink)));
 
+      List artLinks = new ArrayList();
       if (ListObjects.hasArticleList(au)) {
-	StatusTable.SrvLink doiListLink =
-	  new StatusTable.SrvLink("DOIs",
-				  AdminServletManager.SERVLET_LIST_OBJECTS,
-				  PropUtil.fromArgs("type", "dois",
-						    "auid", au.getAuId()));
-	StatusTable.SrvLink articleListLink =
-	  new StatusTable.SrvLink("Articles",
-				  AdminServletManager.SERVLET_LIST_OBJECTS,
-				  PropUtil.fromArgs("type", "articles",
-						    "auid", au.getAuId()));
-	StatusTable.SrvLink metadataListLink =
-	  new StatusTable.SrvLink("Metadata",
-				  AdminServletManager.SERVLET_LIST_OBJECTS,
-				  PropUtil.fromArgs("type", "metadata",
-						    "auid", au.getAuId()));
+	addLink(artLinks,
+		new StatusTable
+		.SrvLink("Articles",
+			 AdminServletManager.SERVLET_LIST_OBJECTS,
+			 PropUtil.fromArgs("type", "articles",
+					   "auid", au.getAuId())));
+      }
+      if (ListObjects.hasArticleMetadata(au)) {
+	addLink(artLinks,
+		new StatusTable
+		.SrvLink("DOIs",
+			 AdminServletManager.SERVLET_LIST_OBJECTS,
+			 PropUtil.fromArgs("type", "dois",
+					   "auid", au.getAuId())));
+	addLink(artLinks,
+		new StatusTable
+		.SrvLink("Metadata",
+			 AdminServletManager.SERVLET_LIST_OBJECTS,
+			 PropUtil.fromArgs("type", "metadata",
+					   "auid", au.getAuId())));
+      }
+      if (!artLinks.isEmpty()) {
         res.add(new StatusTable.SummaryInfo(null,
 					    ColumnDescriptor.TYPE_STRING,
-					    ListUtil.list("List: ",
-							  articleListLink,
-							  ", ",
-							  doiListLink,
-							  ", ",
-							  metadataListLink)));
+					    artLinks));
       }
       return res;
+    }
+
+    void addLink(List links, StatusTable.SrvLink link) {
+      if (links.isEmpty()) {
+	links.add("List: ");
+      } else {
+	links.add(", ");
+      }
+      links.add(link);
     }
 
     void addStringIfNotNull(List lst, String val, String heading) {
