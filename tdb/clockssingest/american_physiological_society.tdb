@@ -1904,6 +1904,7 @@
       au < released ; crawling ; 1941 ; Physiological Reviews Volume 21 ; 21 ; >
       au < released ; crawling ; 1945 ; Physiological Reviews Volume 25 ; 25 ; >
       au < released ; manifest ; 2011 ; Physiological Reviews Volume 91 ; 91 ; >
+      au < manifest ; exist ; 2012 ; Physiological Reviews Volume 92 ; 92 ; >
 
     }
     
@@ -1955,9 +1956,10 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment[notReady] = manifest page has malformed links -- see RU3956 
+      comment[notReady] = manifest pages have links that redirect -- see RU3956 
       
       au < notReady ; exists ; 2011 ; Physiology Volume 26 ; 26 ; >
+      au < notReady ; exists ; 2012 ; Physiology Volume 27 ; 27 ; >
 
     }
     

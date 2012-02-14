@@ -1491,6 +1491,7 @@
       au < ready ; 2009 ; Physiological Reviews Volume 89 ; 89 >
       au < ready ; 2010 ; Physiological Reviews Volume 90 ; 90 >
       au < ready ; 2011 ; Physiological Reviews Volume 91 ; 91 >
+      au < manifest ; 2012 ; Physiological Reviews Volume 92 ; 92 >
 
     }
     
@@ -1521,7 +1522,7 @@
     {
 
       pluginSuffix = HighWirePressH20Plugin
-      comment[0] = manifest page has malformed links
+      comment[0] = manifest page has malformed urls-- see RU3956
 
       au < manifest ; 1986 ; Physiology Volume 1 ; 1 >
       au < manifest ; 1987 ; Physiology Volume 2 ; 2 >
@@ -1549,6 +1550,7 @@
       au < manifest ; 2009 ; Physiology Volume 24 ; 24 >
       au < manifest ; 2010 ; Physiology Volume 25 ; 25 >
       au < notReady ; 2011 ; Physiology Volume 26 ; 26 >
+      au < notReady ; 2012 ; Physiology Volume 27 ; 27 >
 
     }
 
