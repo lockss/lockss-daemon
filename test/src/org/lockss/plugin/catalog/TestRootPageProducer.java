@@ -1,5 +1,5 @@
 /*
- * $Id: TestRootPageProducer.java,v 1.1.2.1 2012-02-11 17:44:54 nchondros Exp $
+ * $Id: TestRootPageProducer.java,v 1.1.2.2 2012-02-15 17:51:34 nchondros Exp $
  */
 
 /*
@@ -39,34 +39,22 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
-
 public class TestRootPageProducer extends LockssTestCase {
   private static final String checksumAlgorithm = "SHA-1";
 
-  static String mockPlugKey =
-      PluginManager.pluginKeyFromName(MockPlugin.class.getName());
+  static String mockPlugKey = PluginManager.pluginKeyFromName(MockPlugin.class.getName());
   private MockLockssDaemon theDaemon;
   private ArchivalUnit testau[], catalogAU;
   private MessageDigest checksumProducer = null;
-  
-  private static final String[] BASE_URL = {"http://www.test0.org/", "http://www.test1.org/", "http://www.test2.org/"};
-  
-  //BASE_URL
-  private static String[] urls = {
-    "lockssau:",
-    "%s",
-    "%sindex.html",
-    "%sfile1.html",
-    "%sfile2.html",
-    "%sbranch1/",
-    "%sbranch1/index.html",
-    "%sbranch1/file1.html",
-    "%sbranch1/file2.html",
-    "%sbranch2/",
-    "%sbranch2/index.html",
-    "%sbranch2/file1.html",
-    "%sbranch2/file2.html",
-  };
+
+  private static final String[] BASE_URL = { "http://www.test0.org/",
+      "http://www.test1.org/", "http://www.test2.org/" };
+
+  // BASE_URL
+  private static String[] urls = { "lockssau:", "%s", "%sindex.html",
+      "%sfile1.html", "%sfile2.html", "%sbranch1/", "%sbranch1/index.html",
+      "%sbranch1/file1.html", "%sbranch1/file2.html", "%sbranch2/",
+      "%sbranch2/index.html", "%sbranch2/file1.html", "%sbranch2/file2.html", };
 
   public void setUp() throws Exception {
     super.setUp();
@@ -74,11 +62,12 @@ public class TestRootPageProducer extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
     theDaemon.getPluginManager();
     theDaemon.setDaemonInited(true);
-    
+
     TimeBase.setSimulated();
-    testau = new ArchivalUnit[BASE_URL.length]; 
-    for(int i=0; i< BASE_URL.length; i++) {
-      testau[i] = setupAu(String.format("mock%d",i), String.format("MockAU%d",i), BASE_URL[i]); 
+    testau = new ArchivalUnit[BASE_URL.length];
+    for (int i = 0; i < BASE_URL.length; i++) {
+      testau[i] = setupAu(String.format("mock%d", i),
+          String.format("MockAU%d", i), BASE_URL[i]);
       setupRepo(testau[i], i, BASE_URL[i]);
     }
     catalogAU = setupAu("catalog", "CatalogAU", "");
@@ -90,14 +79,15 @@ public class TestRootPageProducer extends LockssTestCase {
     mau.setAuId(id);
     mau.setName(name);
     PluginTestUtil.registerArchivalUnit(mau);
-    
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+
+    MockCachedUrlSet cus = (MockCachedUrlSet) mau.getAuCachedUrlSet();
     cus.setEstimatedHashDuration(1000);
     List files = new ArrayList();
     if (!base_url.isEmpty()) {
       for (int ix = 0; ix < urls.length; ix++) {
         String url = String.format(urls[ix], base_url);
-        MockCachedUrl cu = (MockCachedUrl)mau.addUrl(url, "This is content for CUS file " + url);
+        MockCachedUrl cu = (MockCachedUrl) mau.addUrl(url,
+            "This is content for CUS file " + url);
         cu.getProperties().put(CachedUrl.PROPERTY_CHECKSUM, checksum(url));
         files.add(cu);
       }
@@ -105,31 +95,33 @@ public class TestRootPageProducer extends LockssTestCase {
     cus.setHashItSource(files);
     return mau;
   }
-  
-  private void setupRepo(ArchivalUnit au, int i, String base_url) throws Exception {
-    MockLockssRepository repo = new MockLockssRepository(String.format("/foo%d", i), au);
+
+  private void setupRepo(ArchivalUnit au, int i, String base_url)
+      throws Exception {
+    MockLockssRepository repo = new MockLockssRepository(String.format(
+        "/foo%d", i), au);
     if (!base_url.isEmpty()) {
-      for (int ix =  0; ix < urls.length; ix++) {
+      for (int ix = 0; ix < urls.length; ix++) {
         String url = String.format(urls[ix], base_url);
         repo.createNewNode(url);
       }
     }
-    ((MockLockssDaemon)theDaemon).setLockssRepository(repo, au);
+    ((MockLockssDaemon) theDaemon).setLockssRepository(repo, au);
   }
-  
+
   public void tearDown() throws Exception {
-    for( ArchivalUnit au : testau )
+    for (ArchivalUnit au : testau)
       theDaemon.getLockssRepository(au).stopService();
     TimeBase.setReal();
     super.tearDown();
   }
 
   public void testProducer() throws Exception {
-    //RootPageProducer.produce(theDaemon, catalogAU, null);
+    // RootPageProducer.produce(theDaemon, catalogAU, null);
   }
-  
+
   private String checksum(String url) {
-    //for lack of content, just do a checksum of the url itself
+    // for lack of content, just do a checksum of the url itself
     checksumProducer.reset();
     checksumProducer.update(url.getBytes());
     byte[] bchecksum = checksumProducer.digest();

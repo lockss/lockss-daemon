@@ -7,39 +7,36 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin;
 
 public class WritableLockssRepositoryImpl extends LockssRepositoryImpl {
-    boolean dontNormalize = false;
-    void setDontNormalize(boolean val) {
-      dontNormalize = val;
-    }
+  boolean dontNormalize = false;
 
-    WritableLockssRepositoryImpl(String rootPath) {
-      super(rootPath);
-    }
+  void setDontNormalize(boolean val) {
+    dontNormalize = val;
+  }
 
-    public String canonicalizePath(String url)
-    throws MalformedURLException {
-      if (dontNormalize) return url;
-      return super.canonicalizePath(url);
-    }
+  WritableLockssRepositoryImpl(String rootPath) {
+    super(rootPath);
+  }
 
-    public static LockssRepository createNewLockssRepository(String root, ArchivalUnit au) {
-//      String root = getRepositoryRoot(au);
-//      if (root == null) {
-//        throw new LockssRepository.RepositoryStateException("null root");
-//      }
-      String auDir = LockssRepositoryImpl.mapAuToFileLocation(root, au);
-      // staticCacheLocation = extendCacheLocation(root);
-      LockssRepositoryImpl repo = new WritableLockssRepositoryImpl(auDir);
-      Plugin plugin = au.getPlugin();
-      if (plugin != null) {
-        LockssDaemon daemon = plugin.getDaemon();
-        if (daemon != null) {
-          RepositoryManager mgr = daemon.getRepositoryManager();
-          if (mgr != null) {
-            mgr.setRepositoryForPath(auDir, repo);
-          }
+  public String canonicalizePath(String url) throws MalformedURLException {
+    if (dontNormalize)
+      return url;
+    return super.canonicalizePath(url);
+  }
+
+  public static LockssRepository createNewLockssRepository(String root,
+      ArchivalUnit au) {
+    String auDir = LockssRepositoryImpl.mapAuToFileLocation(root, au);
+    LockssRepositoryImpl repo = new WritableLockssRepositoryImpl(auDir);
+    Plugin plugin = au.getPlugin();
+    if (plugin != null) {
+      LockssDaemon daemon = plugin.getDaemon();
+      if (daemon != null) {
+        RepositoryManager mgr = daemon.getRepositoryManager();
+        if (mgr != null) {
+          mgr.setRepositoryForPath(auDir, repo);
         }
       }
-      return repo;
     }
+    return repo;
+  }
 }

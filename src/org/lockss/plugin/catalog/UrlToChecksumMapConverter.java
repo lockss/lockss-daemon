@@ -33,7 +33,8 @@ public class UrlToChecksumMapConverter implements Converter {
   }
 
   @Override
-  public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
+  public Object unmarshal(HierarchicalStreamReader reader,
+      UnmarshallingContext context) {
     UrlToChecksumMap u2c = new UrlToChecksumMap();
     while (reader.hasMoreChildren()) {
       reader.moveDown();
@@ -47,7 +48,7 @@ public class UrlToChecksumMapConverter implements Converter {
             checksum = (String) context.convertAnother(u2c, String.class);
           }
           reader.moveUp();
-          if ( !(StringUtil.isNullString(url) || StringUtil.isNullString(checksum)) ) 
+          if (!(StringUtil.isNullString(url) || StringUtil.isNullString(checksum)))
             u2c.put(url, checksum);
         }
       }
