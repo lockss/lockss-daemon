@@ -18,6 +18,10 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0276-4741
   
+      comment[AUs048] = 024 was tested and released normally, accidentally deleted and reinstated.
+      comment[AUs48] = 24 was accidentally created on 6/28/2011.
+
+      au < down ; 2004 ; Mountain Research and Development Volume 024 ; 024 >
       au < down ; 2004 ; Mountain Research and Development Volume 24 ; 24 >
       
     }
