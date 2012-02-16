@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.57 2011-09-05 02:57:26 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.58 2012-02-16 10:40:11 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -949,6 +949,17 @@ public class UrlUtil {
       return url.substring(pos + PROTOCOL_SUBSTRING.length());
     }
     return url;
+  }
+
+  /** Return the extension of the filename in the URL, if possible */
+  public static String getFileExtension(String urlString)
+      throws MalformedURLException {
+    URL url = new URL(urlString);
+    String filename = url.getPath();
+    if (StringUtil.isNullString(filename)) {
+      return null;
+    }
+    return FileUtil.getExtension(filename);
   }
 
   /**

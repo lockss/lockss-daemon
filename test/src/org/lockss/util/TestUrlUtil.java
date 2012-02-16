@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.40 2011-09-05 02:57:25 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.41 2012-02-16 10:40:11 tlipkis Exp $
  */
 
 /*
@@ -865,7 +865,26 @@ public class TestUrlUtil extends LockssTestCase {
 		 UrlUtil.stripProtocol("rtsp://www.example.com:8080/"));
   }
 
-
+  public void testGetFileExtension() throws MalformedURLException {
+    try {
+      UrlUtil.getFileExtension(null);
+      fail("getFileExtension(null should throw MalformedURLException");
+    } catch (MalformedURLException e) {
+    }
+    try {
+      UrlUtil.getFileExtension("");
+      fail("getFileExtension(null should throw MalformedURLException");
+    } catch (MalformedURLException e) {
+    }
+    assertEquals("zip",
+		 UrlUtil.getFileExtension("http://a.b/file.zip"));
+    assertEquals("zip",
+		 UrlUtil.getFileExtension("http://a.b/file.bar.zip"));
+    assertEquals("zip",
+		 UrlUtil.getFileExtension("http://a.b/file.zip?foo=bar"));
+    assertEquals("zip",
+		 UrlUtil.getFileExtension("http://a.b/file.zip#ref"));
+  }
 
   public void testResolveJavascriptUrl() {
     assertEquals("http://www.example.com/link2.html",
