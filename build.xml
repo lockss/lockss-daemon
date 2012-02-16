@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.288 2012-01-12 12:47:21 easyonthemayo Exp $
+ $Id: build.xml,v 1.289 2012-02-16 10:30:31 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -224,7 +224,26 @@ Args:
 	        value="${lib}/commons-io-1.4.jar" />
   <property name="commons.jxpath.jar"
 				  value="${lib}/commons-jxpath-1.3.jar"/>
-  <property name="javatar.jar"    value="${lib}/tar-2.3.jar"/>
+  <property name="commons.compress.jar"
+				  value="${lib}/commons-compress-1.3.jar"/>
+
+
+
+<!--   <property name="truezip-archetype-file.jar" -->
+<!-- 	    value="${lib}/truezip-archetype-file-7.4.3.jar" /> -->
+  <property name="truezip-driver-file.jar"
+	    value="${lib}/truezip-driver-file-7.4.3.jar" />
+  <property name="truezip-driver-tar.jar"
+	    value="${lib}/truezip-driver-tar-7.4.3.jar" />
+  <property name="truezip-driver-zip.jar"
+	    value="${lib}/truezip-driver-zip-7.4.3.jar" />
+<!--   <property name="truezip-driver-tzp.jar" -->
+<!-- 	    value="${lib}/truezip-driver-tzp-7.4.3.jar" /> -->
+  <property name="truezip-file.jar" value="${lib}/truezip-file-7.4.3.jar" />
+  <property name="truezip-kernel.jar" value="${lib}/truezip-kernel-7.4.3.jar" />
+  <property name="truezip-swing.jar" value="${lib}/truezip-swing-7.4.3.jar" />
+
+  <property name="javatar.jar" value="${lib}/javagnutar.jar" />
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
   <property name="apiviz.jar"     value="${lib}/apiviz-1.3.1.jar"/>
@@ -305,6 +324,14 @@ Args:
     <pathelement path="${commons.httpclient.jar}" />
     <pathelement path="${commons.io.jar}" />
     <pathelement path="${commons.jxpath.jar}" />
+    <pathelement path="${commons.compress.jar}" />
+    <pathelement path="${truezip-kernel.jar}" />
+    <pathelement path="${truezip-file.jar}" />
+    <pathelement path="${truezip-driver-file.jar}" />
+    <pathelement path="${truezip-driver-zip.jar}" />
+    <pathelement path="${truezip-driver-tar.jar}" />
+<!-- XXX Shouldn't need this - figure out how to avoid dependency -->
+    <pathelement path="${truezip-swing.jar}" />
     <pathelement path="${javatar.jar}" />
     <pathelement path="${log4j.jar}" />
     <pathelement path="${concurrent.jar}" />
