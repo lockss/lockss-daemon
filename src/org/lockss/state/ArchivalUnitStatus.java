@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.104 2012-02-14 23:09:23 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.105 2012-02-16 10:38:52 tlipkis Exp $
  */
 
 /*
@@ -971,25 +971,40 @@ public class ArchivalUnitStatus
 					  ColumnDescriptor.TYPE_STRING,
 					  peers));
 
+      List urlLinks = new ArrayList();
 
 
-      StatusTable.SrvLink urlListLink =
-	new StatusTable.SrvLink("URLs",
-				AdminServletManager.SERVLET_LIST_OBJECTS,
-				PropUtil.fromArgs("type", "urls",
-						  "auid", au.getAuId()));
+      addLink(urlLinks,
+	      new StatusTable
+	      .SrvLink("URLs",
+		       AdminServletManager.SERVLET_LIST_OBJECTS,
+		       PropUtil.fromArgs("type", "urls",
+					 "auid", au.getAuId())));
 
-      StatusTable.SrvLink fileListLink =
-	new StatusTable.SrvLink("Files",
-				AdminServletManager.SERVLET_LIST_OBJECTS,
-				PropUtil.fromArgs("type", "files",
-						  "auid", au.getAuId()));
+      addLink(urlLinks,
+	      new StatusTable
+	      .SrvLink("Files",
+		       AdminServletManager.SERVLET_LIST_OBJECTS,
+		       PropUtil.fromArgs("type", "files",
+					 "auid", au.getAuId())));
+      if (au.getArchiveFileTypes() != null) {
+	addLink(urlLinks,
+		new StatusTable
+		.SrvLink("URLs*",
+			 AdminServletManager.SERVLET_LIST_OBJECTS,
+			 PropUtil.fromArgs("type", "urlsm",
+					   "auid", au.getAuId())));
+
+	addLink(urlLinks,
+		new StatusTable
+		.SrvLink("Files*",
+			 AdminServletManager.SERVLET_LIST_OBJECTS,
+			 PropUtil.fromArgs("type", "filesm",
+					   "auid", au.getAuId())));
+      }
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
-					  ListUtil.list("List: ",
-							urlListLink,
-							", ",
-							fileListLink)));
+					  urlLinks));
 
       List artLinks = new ArrayList();
       if (ListObjects.hasArticleList(au)) {
