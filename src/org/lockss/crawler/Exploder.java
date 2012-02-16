@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.19 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: Exploder.java,v 1.20 2012-02-16 10:39:47 tlipkis Exp $
  */
 
 /*
@@ -349,45 +349,6 @@ public abstract class Exploder {
     }
   }
 
-  // XXX move this to a MimeUtil class.  Needs ability to have local
-  // XXX override of some map entries.
-  // XXX One array with alternating keys and values is more readeable
-  protected static final String[] extension = {
-    ".html",
-    ".htm",
-    ".txt",
-    ".xml",
-    ".pdf",
-    ".raw",
-    ".sgm",
-    ".gif",
-    ".jpg",
-    ".toc",
-    ".fil",
-    ".sml",
-    ".tiff",
-    ".doc",
-    ".meta", // XXX for Springer - remove
-  };
-  protected static final String[] contentType = {
-    "text/html",
-    "text/html",
-    "text/plain",
-    "application/xml",
-    "application/pdf",
-    "text/plain",
-    "application/sgml",
-    "image/gif",
-    "image/jpeg",
-    "text/plain", // XXX check
-    "text/plain", // XXX check
-    "application/sgml",
-    "image/tiff",
-    "application/msword",
-    "application/xml", // XXX for Springer - remove
-  };
-  private static HashMap mimeMap = null;
-
   /**
    * Return a CIProperties object containing a set of header fields
    * and values that seem appropriate for the URL in question.
@@ -395,18 +356,10 @@ public abstract class Exploder {
   public static CIProperties syntheticHeaders(String url, long size) {
     CIProperties ret = new CIProperties();
 
-    // XXX needs static initializer
-    if (mimeMap == null) {
-      mimeMap = new HashMap();
-      for (int i = 0; i < extension.length; i++) {
-	mimeMap.put(extension[i], contentType[i]);
-      }
-    }
-
     String mimeType = "text/plain";
     int ix = url.lastIndexOf(".");
     if (ix > 0) {
-      String mt = (String)mimeMap.get(url.substring(ix));
+      String mt = MimeUtil.getMimeTypeFromExtension(url.substring(ix));
       if (mt !=null) {
 	mimeType = mt;
       }
