@@ -17,38 +17,38 @@
       param[base_url] = http://www.ajnr.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1980 ; American Journal of Neuroradiology [abstracts only] Volume 1 ; 1 >
-      au < manifest ; 1981 ; American Journal of Neuroradiology [abstracts only] Volume 2 ; 2 >
-      au < manifest ; 1982 ; American Journal of Neuroradiology [abstracts only] Volume 3 ; 3 >
-      au < manifest ; 1983 ; American Journal of Neuroradiology [abstracts only] Volume 4 ; 4 >
-      au < manifest ; 1984 ; American Journal of Neuroradiology [abstracts only] Volume 5 ; 5 >
-      au < manifest ; 1985 ; American Journal of Neuroradiology [abstracts only] Volume 6 ; 6 >
-      au < manifest ; 1986 ; American Journal of Neuroradiology [abstracts only] Volume 7 ; 7 >
-      au < manifest ; 1987 ; American Journal of Neuroradiology [abstracts only] Volume 8 ; 8 >
-      au < manifest ; 1988 ; American Journal of Neuroradiology [abstracts only] Volume 9 ; 9 >
-      au < manifest ; 1989 ; American Journal of Neuroradiology [abstracts only] Volume 10 ; 10 >
-      au < manifest ; 1990 ; American Journal of Neuroradiology [abstracts only] Volume 11 ; 11 >
-      au < manifest ; 1991 ; American Journal of Neuroradiology [abstracts only] Volume 12 ; 12 >
-      au < manifest ; 1992 ; American Journal of Neuroradiology [abstracts only] Volume 13 ; 13 >
-      au < manifest ; 1993 ; American Journal of Neuroradiology [abstracts only] Volume 14 ; 14 >
-      au < manifest ; 1994 ; American Journal of Neuroradiology [abstracts only] Volume 15 ; 15 >
-      au < manifest ; 1995 ; American Journal of Neuroradiology Volume 16 ; 16 >
-      au < manifest ; 1996 ; American Journal of Neuroradiology Volume 17 ; 17 >
-      au < manifest ; 1997 ; American Journal of Neuroradiology Volume 18 ; 18 >
-      au < manifest ; 1998 ; American Journal of Neuroradiology Volume 19 ; 19 >
-      au < manifest ; 1999 ; American Journal of Neuroradiology Volume 20 ; 20 >
-      au < manifest ; 2000 ; American Journal of Neuroradiology Volume 21 ; 21 >
-      au < manifest ; 2001 ; American Journal of Neuroradiology Volume 22 ; 22 >
-      au < manifest ; 2002 ; American Journal of Neuroradiology Volume 23 ; 23 >
-      au < manifest ; 2003 ; American Journal of Neuroradiology Volume 24 ; 24 >
-      au < manifest ; 2004 ; American Journal of Neuroradiology Volume 25 ; 25 >
-      au < manifest ; 2005 ; American Journal of Neuroradiology Volume 26 ; 26 >
-      au < manifest ; 2006 ; American Journal of Neuroradiology Volume 27 ; 27 >
-      au < manifest ; 2007 ; American Journal of Neuroradiology Volume 28 ; 28 >
-      au < manifest ; 2008 ; American Journal of Neuroradiology Volume 29 ; 29 >
-      au < manifest ; 2009 ; American Journal of Neuroradiology Volume 30 ; 30 >
-      au < manifest ; 2010 ; American Journal of Neuroradiology Volume 31 ; 31 >
-      au < manifest ; 2011 ; American Journal of Neuroradiology Volume 32 ; 32 >
+      au < testing ; 1980 ; American Journal of Neuroradiology [abstracts only] Volume 1 ; 1 >
+      au < testing ; 1981 ; American Journal of Neuroradiology [abstracts only] Volume 2 ; 2 >
+      au < testing ; 1982 ; American Journal of Neuroradiology [abstracts only] Volume 3 ; 3 >
+      au < testing ; 1983 ; American Journal of Neuroradiology [abstracts only] Volume 4 ; 4 >
+      au < testing ; 1984 ; American Journal of Neuroradiology [abstracts only] Volume 5 ; 5 >
+      au < testing ; 1985 ; American Journal of Neuroradiology [abstracts only] Volume 6 ; 6 >
+      au < testing ; 1986 ; American Journal of Neuroradiology [abstracts only] Volume 7 ; 7 >
+      au < testing ; 1987 ; American Journal of Neuroradiology [abstracts only] Volume 8 ; 8 >
+      au < testing ; 1988 ; American Journal of Neuroradiology [abstracts only] Volume 9 ; 9 >
+      au < testing ; 1989 ; American Journal of Neuroradiology [abstracts only] Volume 10 ; 10 >
+      au < testing ; 1990 ; American Journal of Neuroradiology [abstracts only] Volume 11 ; 11 >
+      au < testing ; 1991 ; American Journal of Neuroradiology [abstracts only] Volume 12 ; 12 >
+      au < testing ; 1992 ; American Journal of Neuroradiology [abstracts only] Volume 13 ; 13 >
+      au < testing ; 1993 ; American Journal of Neuroradiology [abstracts only] Volume 14 ; 14 >
+      au < testing ; 1994 ; American Journal of Neuroradiology [abstracts only] Volume 15 ; 15 >
+      au < testing ; 1995 ; American Journal of Neuroradiology Volume 16 ; 16 >
+      au < testing ; 1996 ; American Journal of Neuroradiology Volume 17 ; 17 >
+      au < testing ; 1997 ; American Journal of Neuroradiology Volume 18 ; 18 >
+      au < testing ; 1998 ; American Journal of Neuroradiology Volume 19 ; 19 >
+      au < testing ; 1999 ; American Journal of Neuroradiology Volume 20 ; 20 >
+      au < testing ; 2000 ; American Journal of Neuroradiology Volume 21 ; 21 >
+      au < testing ; 2001 ; American Journal of Neuroradiology Volume 22 ; 22 >
+      au < testing ; 2002 ; American Journal of Neuroradiology Volume 23 ; 23 >
+      au < testing ; 2003 ; American Journal of Neuroradiology Volume 24 ; 24 >
+      au < testing ; 2004 ; American Journal of Neuroradiology Volume 25 ; 25 >
+      au < testing ; 2005 ; American Journal of Neuroradiology Volume 26 ; 26 >
+      au < testing ; 2006 ; American Journal of Neuroradiology Volume 27 ; 27 >
+      au < testing ; 2007 ; American Journal of Neuroradiology Volume 28 ; 28 >
+      au < testing ; 2008 ; American Journal of Neuroradiology Volume 29 ; 29 >
+      au < testing ; 2009 ; American Journal of Neuroradiology Volume 30 ; 30 >
+      au < testing ; 2010 ; American Journal of Neuroradiology Volume 31 ; 31 >
+      au < testing ; 2011 ; American Journal of Neuroradiology Volume 32 ; 32 >
 
     }
 
