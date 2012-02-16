@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.23 2012-01-18 03:42:08 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.24 2012-02-16 10:41:41 tlipkis Exp $
  */
 
 /*
@@ -352,6 +352,19 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
     addIfNonZero(res, "Pending Crawls", ct.waiting);
     addIfNonZero(res, "Successful Crawls", cms.getSuccessCount());
     addIfNonZero(res, "Failed Crawls", cms.getFailedCount());
+    Configuration config = ConfigManager.getCurrentConfig();
+    if (config.getBoolean(BaseCrawler.PARAM_PROXY_ENABLED,
+			  BaseCrawler.DEFAULT_PROXY_ENABLED)) {
+      String proxyHost = config.get(BaseCrawler.PARAM_PROXY_HOST);
+      int proxyPort = config.getInt(BaseCrawler.PARAM_PROXY_PORT,
+			       BaseCrawler.DEFAULT_PROXY_PORT);
+      if (!StringUtil.isNullString(proxyHost) && proxyPort > 0) {
+	res.add(new StatusTable.SummaryInfo("Crawl Proxy",
+					    ColumnDescriptor.TYPE_STRING,
+					    proxyHost + ":" + proxyPort));
+      }	
+    }
+
     Deadline nextStarter = cms.getNextCrawlStarter();
     if (!statusSource.isCrawlerEnabled()) {
       res.add(new StatusTable.SummaryInfo("Crawler is disabled",
