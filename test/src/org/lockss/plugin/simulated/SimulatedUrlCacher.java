@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.27 2012-01-18 03:40:41 tlipkis Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.28 2012-02-16 10:41:08 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,7 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
   private File contentFile = null;
   private CIProperties props = null;
   private SimulatedContentGenerator scgen = null;
+  private Properties addProps = null;
 
   public SimulatedUrlCacher(ArchivalUnit owner, String url, String contentRoot) {
     super(owner, url);
@@ -72,30 +73,54 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
     return contentFile;
   }
 
+  SimulatedContentGenerator getScgen(String root) {
+    if (scgen == null) {
+      logger.debug2("Creating SimulatedContentGenerator at: " + contentFile);
+      scgen = SimulatedContentGenerator.getInstance(fileRoot);
+    }
+    return scgen;
+  }
+
   // overrides base behavior to get local file
-  public InputStream getUncachedInputStreamOnly(String lastModified)
+  @Override
+  protected InputStream getUncachedInputStreamOnly(String lastModified)
       throws IOException {
     pauseBeforeFetch();
     if (getUrl().indexOf("xxxfail") > 0) {
       throw new CacheException.NoRetryDeadLinkException("Simulated failed fetch");
     }
-    if (contentFile!=null) {
-      return getDefaultStream(contentFile, lastModified);
+    if (contentFile == null) {
+      contentFile = getContentFile();
     }
-    contentFile = getContentFile();
+
     if (contentFile.isDirectory()) {
-      if (scgen == null) {
-	logger.info("dirfile: " + contentFile);
-	scgen = SimulatedContentGenerator.getInstance(fileRoot);
-      }
-      File dirContentFile =
-	new File(scgen.getDirectoryContentFile(contentFile.getPath()));
-      if (dirContentFile.exists()) {
-        return getDefaultStream(dirContentFile, lastModified);
+      if (au.getConfiguration().getBoolean("redirectDirToIndex", false)) {
+	String newUrlString = UrlUtil.resolveUri(fetchUrl, "index.html");
+	fetchUrl = newUrlString;
+	contentFile = null;
+	logger.debug2("Following redirect to " + newUrlString);
+	return getUncachedInputStreamOnly(lastModified);
       } else {
-        logger.error("Couldn't find file: "+dirContentFile.getAbsolutePath());
-        return null;
+	File dirContentFile =
+	  new File(getScgen(fileRoot).getDirectoryContentFile(contentFile.getPath()));
+	if (dirContentFile.exists()) {
+	  return getDefaultStream(dirContentFile, lastModified);
+	} else {
+	  logger.error("Couldn't find file: "+dirContentFile.getAbsolutePath());
+	  return null;
+	}
       }
+    } else if (!contentFile.exists() &&
+	       contentFile.toString().endsWith("/index.html") &&
+	       au.getConfiguration().getBoolean("autoGenIndexHtml", false)) {
+      logger.debug2("Generating index: " + new File(contentFile.getParent(),
+						    "index.html"));
+      String indexContent =
+	getScgen(fileRoot).getIndexContent(contentFile.getParentFile(),
+					   "index.html", null);
+      addProps = PropUtil.fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE,
+				   "text/html");
+      return new StringInputStream(indexContent);
     } else {
       return getDefaultStream(contentFile, lastModified);
     }
@@ -144,17 +169,21 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
     Date date = new Date(getContentFile().lastModified());
     props.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
 		      GMT_DATE_FORMAT.format(date));
+    if (addProps != null) {
+      props.putAll(addProps);
+      addProps = null;
+    }
     return props;
   }
 
   private String mapUrlToContentFileName() {
-    return ((SimulatedArchivalUnit) au).mapUrlToContentFileName(origUrl);
+    return ((SimulatedArchivalUnit) au).mapUrlToContentFileName(fetchUrl);
   }
 
   private boolean toBeDamaged() {
     try {
       SimulatedArchivalUnit unit = (SimulatedArchivalUnit) au;
-      return unit.isUrlToBeDamaged(origUrl);
+      return unit.isUrlToBeDamaged(fetchUrl);
     } catch (ClassCastException e ) {
       return false;
     }
