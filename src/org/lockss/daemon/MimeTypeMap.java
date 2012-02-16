@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeMap.java,v 1.12 2011-09-25 04:16:32 tlipkis Exp $
+ * $Id: MimeTypeMap.java,v 1.13 2012-02-16 10:42:09 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,8 @@ public class MimeTypeMap {
   static Logger log = Logger.getLogger("MimeTypeMap");
 
   public static MimeTypeMap DEFAULT = new MimeTypeMap();
+
+  public static String WILD_CARD = "*/*";
 
   static final String PREFIX = Configuration.PREFIX + "mimeInfo.";
 

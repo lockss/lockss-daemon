@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlRateLimiter.java,v 1.1 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: TestCrawlRateLimiter.java,v 1.2 2012-02-16 10:42:09 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,38 @@ public class TestCrawlRateLimiter extends LockssTestCase {
     limiter = crl.getRateLimiterFor("url", "image/gif");
     assertEquals("5/1s", limiter.getRate());
     assertSame(limiter, crl.getRateLimiterFor("url", "image/png"));
+
+    limiter = crl.getRateLimiterFor("url", "noimage/gif");
+    assertEquals("1/50000", limiter.getRate());
+    assertSame(limiter, crl.getRateLimiterFor("url", "application/*"));
+  }
+
+  public void testMimeWithDefault() {
+    RateLimiterInfo rli = new RateLimiterInfo("key1", 1, 50000);
+    Map<String,String> mimes =
+      MapUtil.map("text/html,text/x-html,application/pdf", "10/1m",
+		  "text/*", "31/4159",
+		  "image/*", "5/1s", "*/*", "22/23");
+    rli.setMimeRates(mimes);
+    CrawlRateLimiter crl = new CrawlRateLimiter(rli);
+    RateLimiter limiter = crl.getRateLimiterFor("url", "text/html");
+    assertEquals("10/1m", limiter.getRate());
+    assertSame(limiter, crl.getRateLimiterFor("url", "text/html"));
+    assertSame(limiter, crl.getRateLimiterFor("url",
+					      "text/html; charset=utf-8"));
+    assertSame(limiter, crl.getRateLimiterFor("url", "text/x-html"));
+    assertSame(limiter, crl.getRateLimiterFor("url", "application/pdf"));
+    limiter = crl.getRateLimiterFor("url", "text/xml");
+    assertEquals("31/4159", limiter.getRate());
+    assertSame(limiter, crl.getRateLimiterFor("url", "text/bar"));
+
+    limiter = crl.getRateLimiterFor("url", "image/gif");
+    assertEquals("5/1s", limiter.getRate());
+    assertSame(limiter, crl.getRateLimiterFor("url", "image/png"));
+
+    limiter = crl.getRateLimiterFor("url", "noimage/gif");
+    assertEquals("22/23", limiter.getRate());
+    assertSame(limiter, crl.getRateLimiterFor("url", "application/*"));
   }
 
   public void testUrl() {

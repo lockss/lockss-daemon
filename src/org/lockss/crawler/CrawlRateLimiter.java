@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRateLimiter.java,v 1.2 2012-01-18 03:40:42 tlipkis Exp $
+ * $Id: CrawlRateLimiter.java,v 1.3 2012-02-16 10:42:09 tlipkis Exp $
  */
 
 /*
@@ -146,6 +146,9 @@ public class CrawlRateLimiter {
       RateLimiter res = mimeLimiterMap.get(mime);
       if (res == null) {
 	res = mimeLimiterMap.get(MimeTypeMap.wildSubType(mime));
+      }
+      if (res == null) {
+	res = mimeLimiterMap.get(MimeTypeMap.WILD_CARD);
       }
       if (res == null) {
 	res = defaultLimiter;
