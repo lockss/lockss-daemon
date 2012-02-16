@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.63 2012-01-18 03:33:54 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.64 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -89,6 +89,9 @@ public class DefinablePlugin extends BasePlugin {
   public static final String KEY_PLUGIN_FETCH_RATE_LIMITER_SOURCE =
     "plugin_fetch_rate_limiter_source";
 
+  public static final String KEY_PLUGIN_ARCHIVE_FILE_TYPES =
+    "plugin_archive_file_types";
+
   public static final String KEY_PLUGIN_ARTICLE_ITERATOR_FACTORY =
     "plugin_article_iterator_factory";
 
@@ -126,6 +129,7 @@ public class DefinablePlugin extends BasePlugin {
   protected List<String> loadedFromUrls;
   protected CrawlWindow crawlWindow;
   protected Map<Plugin.Feature,String> featureVersion;
+  protected ArchiveFileTypes archiveFileSpec;
 
   public void initPlugin(LockssDaemon daemon, String extMapName)
       throws FileNotFoundException {
@@ -152,6 +156,7 @@ public class DefinablePlugin extends BasePlugin {
     initMimeMap();
     initFeatureVersions();
     initAuFeatureMap();
+    initArchiveFileTypes();
     checkParamAgreement();
   }
 
@@ -624,6 +629,29 @@ public class DefinablePlugin extends BasePlugin {
 	}
       }
     }
+  }
+
+  protected void initArchiveFileTypes () {
+    if (definitionMap.containsKey(KEY_PLUGIN_ARCHIVE_FILE_TYPES)) {
+      Object obj = 
+	definitionMap.getMapElement(KEY_PLUGIN_ARCHIVE_FILE_TYPES);
+      log.critical("obj: " + obj);
+
+      if (obj instanceof ArchiveFileTypes) {
+	archiveFileSpec = (ArchiveFileTypes)obj;
+	log.debug2(getPluginName() + ": ArchiveFileTypes: "
+		   + archiveFileSpec.getExtMimeMap());
+      } else if (obj instanceof String) {
+	if ("standard".equalsIgnoreCase((String)obj)) {
+	  archiveFileSpec = ArchiveFileTypes.DEFAULT;
+	  log.debug2(getPluginName() + ": ArchiveFileTypes: STANDARD");
+	}
+      }
+    }
+  }
+
+  public ArchiveFileTypes getArchiveFileTypes() {
+    return archiveFileSpec;
   }
 
   /** Create a CrawlWindow if necessary and return it.  The CrawlWindow

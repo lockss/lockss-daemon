@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.43 2012-01-18 03:33:54 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.44 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -319,6 +319,9 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertEquals(6000, map.getLong("au_def_pause_time"));
     assertFalse(map.containsKey("parent_only"));
     assertEquals("child_val", map.getString("parent_cancel"));
+
+    ArchiveFileTypes aft = definablePlugin.getArchiveFileTypes();
+    assertSame(aft,ArchiveFileTypes.DEFAULT);
   }
 
   public void testGoodPluginWithOverrise() throws Exception {

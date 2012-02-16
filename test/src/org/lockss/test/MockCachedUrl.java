@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.48 2011-01-22 08:22:29 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.49 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -290,6 +290,10 @@ public class MockCachedUrl implements CachedUrl {
     this.content = content;
   }
 
+  public String getContent() {
+    return content;
+  }
+
   public void setContentSize(long size) {
     this.contentSize = size;
   }
@@ -311,6 +315,10 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public void release() {
+  }
+
+  public CachedUrl getArchiveMemberCu(ArchiveMember am) {
+    return null;
   }
 
   public String toString() {

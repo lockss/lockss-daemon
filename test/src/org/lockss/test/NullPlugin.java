@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.109 2012-01-18 03:40:41 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.110 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -245,6 +245,10 @@ public class NullPlugin {
 
     public void release() {
     }
+
+    public CachedUrl getArchiveMemberCu(ArchiveMember am) {
+      return null;
+    }
   }
 
   /**
@@ -372,6 +376,10 @@ public class NullPlugin {
     }
 
     public Iterator contentHashIterator() {
+      return null;
+    }
+
+    public Iterator<org.lockss.plugin.CachedUrl> archiveMemberIterator() {
       return null;
     }
 
@@ -570,6 +578,10 @@ public class NullPlugin {
     }
 
     public List<String> getAuFeatureUrls(String auFeature) {
+      return null;
+    }
+
+    public ArchiveFileTypes getArchiveFileTypes() {
       return null;
     }
   }

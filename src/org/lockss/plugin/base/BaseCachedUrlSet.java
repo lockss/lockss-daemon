@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.26 2009-09-17 02:53:38 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.27 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -32,9 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.base;
 
+import java.io.*;
 import java.util.*;
 import java.security.*;
 import java.net.MalformedURLException;
+import de.schlichtherle.truezip.file.*;
+// import de.schlichtherle.truezip.fs.*;
 
 import org.lockss.plugin.*;
 import org.lockss.app.*;
@@ -44,6 +47,7 @@ import org.lockss.scheduler.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
+import org.lockss.truezip.*;
 
 /**
  * Base class for CachedUrlSets.  Utilizes the LockssRepository.
@@ -188,8 +192,12 @@ public class BaseCachedUrlSet implements CachedUrlSet {
    * no range or a SingleNodeCachedUrlSetSpec
    * @return an {@link Iterator}
    */
-  public Iterator contentHashIterator() {
+  public Iterator<CachedUrlSetNode> contentHashIterator() {
     return new CusIterator();
+  }
+
+  public Iterator<CachedUrl> archiveMemberIterator() {
+    return new ArcMemIterator();
   }
 
   public CachedUrlSetHasher getContentHasher(MessageDigest digest) {
@@ -431,7 +439,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   /**
    * Iterator over all the elements in a CachedUrlSet
    */
-  protected class CusIterator implements Iterator {
+  public class CusIterator implements Iterator<CachedUrlSetNode> {
     //Stack of flatSetIterators at each tree level
     LinkedList stack = new LinkedList();
 
@@ -453,8 +461,8 @@ public class BaseCachedUrlSet implements CachedUrlSet {
       return findNextElement() != null;
     }
 
-    public Object next() {
-      Object element = findNextElement();
+    public CachedUrlSetNode next() {
+      CachedUrlSetNode element = findNextElement();
       nextElement = null;
 
       if (element != null) {
@@ -493,5 +501,159 @@ public class BaseCachedUrlSet implements CachedUrlSet {
       }
     }
   }
+  /**
+   * Iterator over all the content files in a CachedUrlSet, including
+   * archive members  */
+  public class ArcMemIterator implements Iterator<CachedUrl> {
+    private Iterator<CachedUrlSetNode> cusIter;
+    // Iterator over the current directory in the current archive
+    private Iterator<TFile> arcIter = null;
+    // stack of directory iterators in the current archive
+    LinkedList<Iterator<TFile>> stack = new LinkedList<Iterator<TFile>>();
 
+    // if null, we have to look for nextElement
+    private CachedUrl nextCu = null;
+    // the CU of the archive we're currently traversing
+    private CachedUrl curCu = null;
+
+    ArcMemIterator(Iterator cusIter) {
+      this.cusIter = cusIter;
+    }
+
+    ArcMemIterator() {
+      this(BaseCachedUrlSet.this.contentHashIterator());
+    }
+
+    public void remove() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public boolean hasNext() {
+      return findNextElement() != null;
+    }
+
+    public CachedUrl next() {
+      CachedUrl cu = findNextElement();
+      nextCu = null;
+
+      if (cu != null) {
+        return cu;
+      }
+      throw new NoSuchElementException();
+    }
+
+    /**
+     * Does a pre-order traversal of the CachedUrlSet tree
+     * @return a {@link CachedUrlSetNode}
+     */
+    private CachedUrl findNextElement() {
+      if (nextCu != null) {
+        return nextCu;
+      }
+      while (true) {
+	if (arcIter != null) {
+	  if (arcIter.hasNext()) {
+	    TFile tf = arcIter.next();
+	    if (tf.isFile()) {
+	      nextCu = makeCu(curCu, tf);
+	      break;
+	    } else if (tf.isDirectory()) {
+	      // push the current dir iterator onto the stack
+	      stack.addFirst(arcIter);
+	      // and start iterating over new subdir
+	      arcIter = new ArrayIterator(tf.listFiles());
+	      continue;
+	    } else {
+	      logger.warning("Archive element was neither file nor dir: "
+			     + tf + ", in " + curCu);
+	      continue;
+	    }
+	  } else {
+	    if (!stack.isEmpty()) {
+	      arcIter = stack.removeFirst();
+	      continue;
+	    } else {
+	      arcIter = null;
+	      curCu = null;
+	      continue;
+	    }
+	  }
+        } else if (cusIter.hasNext()) {
+	  CachedUrl cu = AuUtil.getCu(cusIter.next());
+	  if (cu == null || !cu.hasContent()) {
+	    continue;
+	  }
+	  String arcExt = ArchiveFileTypes.getArchiveExtension(cu);
+	  if (arcExt != null) {
+	    TFile tf;
+	    try {
+	      tf = getTFile(cu);
+	      if (!tf.isDirectory()) {
+		logger.error("isDirectory(" + tf + ") = false");
+		continue;
+	      }
+	      TFile[] tfiles = tf.listFiles();
+	      // Is this necessary?  Tfile.listFiles() appears already to
+	      // be sorted
+	      Arrays.sort(tfiles);
+	      if (logger.isDebug3()) {
+		logger.debug3("Found archive: " + tf + " in " + cu);
+	      }
+	      arcIter = new ArrayIterator(tfiles);
+	      curCu = cu;
+	      continue;
+	    } catch (IOException e) {
+	      logger.warning("Error opening archive: "
+			     + BaseCachedUrlSet.this, e);
+	      arcIter = null;
+	      curCu = cu;
+	      continue;
+	    }
+	  } else {
+	    nextCu = cu;
+	    break;
+	  }
+	} else {	
+	  nextCu = null;
+	  break;
+	}
+      }
+      return nextCu;
+    }
+
+    private TFile getTFile(CachedUrl cu) throws IOException {
+      TrueZipManager tzm = theDaemon.getTrueZipManager();
+      return tzm.getCachedTFile(au.makeCachedUrl(cu.getUrl()));
+    }
+
+    // Create a CU representing an archive member
+    private CachedUrl makeCu(CachedUrl curCu, TFile tf) {
+      CachedUrl res = au.makeCachedUrl(curCu.getUrl());
+      TFile top = tf.getTopLevelArchive();
+      if (top == null) {
+	String msg = "Shouldn't: TFile.getTopLevelArchive(" + tf + ") = null";
+	logger.critical(msg);
+	throw new RuntimeException(msg);
+      } else {
+	String path = tf.getPath();
+	String toppath = top.getPath();
+	if (path.startsWith(toppath)) {
+	  int pos = (int)toppath.length();
+	  if (path.charAt(pos) == '/') {
+	    pos++;
+	  } else {
+	    logger.debug2("no / after archive name in path: " + path);
+	  }
+	  path = path.substring(pos);
+	  res = res.getArchiveMemberCu(new CachedUrl.ArchiveMember(path));
+	} else {
+	  String msg = "Shouldn't: TFile path (" + path
+	    + ") doesn't begin with top level archive path (" + toppath + ")";
+	  logger.critical(msg);
+	  throw new RuntimeException(msg);
+	}
+      }
+      return res;
+    }
+  }
 }

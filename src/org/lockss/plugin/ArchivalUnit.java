@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.59 2011-09-25 04:20:40 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.60 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -302,6 +302,13 @@ public interface ArchivalUnit {
    * there is none
    */
   public LinkRewriterFactory getLinkRewriterFactory(String contentType);
+
+  /**
+   * Return the {@link ArchiveFileTypes} describing which archive (zip,
+   * etc.) files should have their members exposed as pseudo-CachedUrls.
+   * @return an {@link ArchiveFileTypes} or null if none
+   */
+  public ArchiveFileTypes getArchiveFileTypes();
 
   /**
    * Returns an Iterator for articles from the AU's plugin. If there isn't

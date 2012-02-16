@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubTreeArticleIterator.java,v 1.7 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: TestSubTreeArticleIterator.java,v 1.8 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -111,6 +111,17 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
   public void testOne() throws Exception {
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath + "1/"));
     crawlSimAu(sau);
+
+    MySubTreeArticleIterator iter =
+      new MySubTreeArticleIterator(sau, new Spec());
+    iter.hasNext();
+    assertClass(BaseCachedUrlSet.CusIterator.class, iter.getCusIterator());
+
+    MySubTreeArticleIterator iter2 =
+      new MySubTreeArticleIterator(sau,
+				   new Spec().setVisitArchiveMembers(true));
+    iter2.hasNext();
+    assertClass(BaseCachedUrlSet.ArcMemIterator.class, iter2.getCusIterator());
 
     assertEquals(226, countArticles(new Spec()));
     assertEquals(121, countArticles(new Spec().setMimeType("text/html")));
@@ -341,6 +352,11 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
       
   public static class MySubTreeArticleIterator extends SubTreeArticleIterator {
     int exceptionCount;
+
+    MySubTreeArticleIterator(ArchivalUnit au, Spec spec) {
+      this(au, spec, 0);
+    }
+
     MySubTreeArticleIterator(ArchivalUnit au, Spec spec, int exceptionCount) {
       super(au, spec);
       this.exceptionCount = exceptionCount;
@@ -356,6 +372,10 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 	return true;
       }
       return false;
+    }
+
+    Iterator getCusIterator() {
+      return cusIter;
     }
   }
 

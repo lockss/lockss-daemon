@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.27 2011-11-29 06:50:50 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.28 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -201,4 +201,31 @@ public interface CachedUrl extends CachedUrlSetNode {
    */
   public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target);
 
+  /**
+   * If the CachedUrl is an archive file, return a CachedUrl that
+   * references the specified member of the archive instead of the whole
+   * archive.  Behavior is undefined if applied to a CU that isn't an
+   * archive file.
+   * @param am describes the archive member.
+   */
+  public CachedUrl getArchiveMemberCu(ArchiveMember am);
+
+  /** Specifies which member of an archive file to access.  Currently a
+   * single directory path, possibly referencing nested archive. */
+  public static class ArchiveMember {
+    /** The character sequence that separates the URL of a cached file from
+     * the member name to access */
+    public static final String URL_SEPARATOR = "!/";
+
+    private String name;
+
+    public ArchiveMember(String name) {
+      this.name = name;
+    }
+    
+    /** Return the member name */
+    public String getName() {
+      return name;
+    }
+  }
 }

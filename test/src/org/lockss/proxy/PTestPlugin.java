@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.30 2011-01-22 08:22:29 tlipkis Exp $
+ * $Id: PTestPlugin.java,v 1.31 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -149,6 +149,9 @@ public class PTestPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
+    public CachedUrl getArchiveMemberCu(ArchiveMember am) {
+      return null;
+    }
   }
 
   static class AU extends NullPlugin.ArchivalUnit {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.97 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.98 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -584,6 +584,16 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public List<String> getAuFeatureUrls(String auFeature) {
     return null;
+  }
+
+  public ArchiveFileTypes getArchiveFileTypes() {
+    return aft;
+  }
+
+  ArchiveFileTypes aft = null;
+
+  public void setArchiveFileTypes(ArchiveFileTypes aft) {
+    this.aft = aft;
   }
 
   public String toString() {

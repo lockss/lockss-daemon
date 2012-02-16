@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.43 2011-10-03 05:54:18 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.44 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -34,13 +34,18 @@ package org.lockss.plugin.base;
 
 import java.io.*;
 import java.util.*;
-import java.net.MalformedURLException;
+import java.net.*;
+import de.schlichtherle.truezip.file.*;
+import de.schlichtherle.truezip.fs.*;
 
+import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.truezip.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.rewriter.*;
 import org.lockss.extractor.*;
 
@@ -87,7 +92,7 @@ public class BaseCachedUrl implements CachedUrl {
    * @return the string form
    */
   public String toString() {
-    return "[BCU: "+url+"]";
+    return "[BCU: "+ getUrl() + "]";
   }
 
   /**
@@ -181,15 +186,14 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   public Reader openForReading() {
-    ensureRnc();
     try {
       return
-	new BufferedReader(new InputStreamReader(rnc.getInputStream(),
+	new BufferedReader(new InputStreamReader(getUnfilteredInputStream(),
 						 getEncoding()));
     } catch (IOException e) {
       // XXX Wrong Exception.  Should this method be declared to throw
       // UnsupportedEncodingException?
-      logger.error("Creating InputStreamReader for '" + url + "'", e);
+      logger.error("Creating InputStreamReader for '" + getUrl() + "'", e);
       throw new LockssRepository.RepositoryStateException
 	("Couldn't create InputStreamReader:" + e.toString());
     }
@@ -236,8 +240,12 @@ public class BaseCachedUrl implements CachedUrl {
     }
   }
 
+  private LockssDaemon getDaemon() {
+    return au.getPlugin().getDaemon();
+  }
+
   private void getRepository() {
-    repository = au.getPlugin().getDaemon().getLockssRepository(au);
+    repository = getDaemon().getLockssRepository(au);
   }
 
   private void ensureLeafLoaded() {
@@ -249,7 +257,7 @@ public class BaseCachedUrl implements CachedUrl {
         leaf = repository.createNewNode(url);
       } catch (MalformedURLException mue) {
         logger.error("Couldn't load node due to bad url: "+url);
-        throw new IllegalArgumentException("Couldn't parse url properly.");
+        throw new IllegalArgumentException("Couldn't parse url properly.", mue);
       }
     }
   }
@@ -295,6 +303,15 @@ public class BaseCachedUrl implements CachedUrl {
     return getUnfilteredInputStream();
   }
 
+  public CachedUrl getArchiveMemberCu(ArchiveMember am) {
+    Member memb = new Member(au, url, this, am);
+    return memb;
+  }
+
+  boolean isArchiveMember() {
+    return false;
+  }
+
   /** A CachedUrl that's bound to a specific version. */
   static class Version extends BaseCachedUrl {
     private RepositoryNodeVersion nodeVer;
@@ -322,4 +339,210 @@ public class BaseCachedUrl implements CachedUrl {
     }
   }
 
+  /** Special behavior for CUs that are archive members.  This isn't
+   * logically a subtype of CachedUrl becuase not all places that accept a
+   * CachedUrl can operate an archive member, but it's the convenient way
+   * to implement it.  Perhaps it should be a supertype (interface)? */
+  class Member extends BaseCachedUrl {
+    protected CachedUrl.ArchiveMember am;
+    protected TFileCache.Entry tfcEntry = null;
+    protected TFile memberTf = null;
+    protected CIProperties memberProps = null;
+
+    Member(ArchivalUnit au, String url, BaseCachedUrl bcu, ArchiveMember am) {
+      super(au, url);
+      this.am = am;
+    }
+
+    @Override
+    public String getUrl() {
+      return getArchiveUrl() + ArchiveMember.URL_SEPARATOR + am.getName();
+    }
+
+    @Override
+    /** True if the archive exists and the member exists */
+    public boolean hasContent() {
+      if (!super.hasContent()) {
+	return false;
+      }
+      try {
+	TFile tf = getTFile();
+	if (tf == null) {
+	  return false;
+	}
+	if (!tf.isDirectory()) {
+	  return false;
+	}
+	return getMemberTFile().exists();
+      } catch (FileNotFoundException e) {
+	String msg =
+	  "Couldn't open member for which exists() was true: " + this;
+	logger.error(msg);
+	throw new LockssRepository.RepositoryStateException(msg, e);
+      } catch (Exception e) {
+	String msg =
+	  "Couldn't open member for which exists() was true: " + this;
+	logger.error(msg);
+	throw new LockssRepository.RepositoryStateException(msg, e);
+      }
+    }
+
+    @Override
+    public InputStream getUnfilteredInputStream() {
+      if (!super.hasContent()) {
+	return null;
+      }
+      try {
+	TFile tf = getTFile();
+	if (tf == null) {
+	  return null;
+	}
+	if (!tf.isDirectory()) {
+	  logger.error("tf.isDirectory() = false");
+	  return null;
+	}
+	TFile membtf = getMemberTFile();
+	if (!membtf.exists()) {
+	  return null;
+	}
+	return new TFileInputStream(membtf);
+      } catch (FileNotFoundException e) {
+	String msg =
+	  "Couldn't open member for which exists() was true: " + this;
+	logger.error(msg);
+	throw new LockssRepository.RepositoryStateException(msg, e);
+      } catch (Exception e) {
+	String msg =
+	  "Couldn't open member for which exists() was true: " + this;
+	logger.error(msg);
+	throw new LockssRepository.RepositoryStateException(msg, e);
+      }
+    }
+
+    /** Properties of an archive member are synthesized from its size and
+     * extension, and the enclosing archive's collection properties
+     * (collection date, Last-Modified) */
+    @Override
+    public CIProperties getProperties() {
+      if (memberProps == null) {
+	memberProps = synthesizeProperties();
+      }
+      return memberProps;
+    }
+
+    private CIProperties synthesizeProperties() {
+      CIProperties res = new CIProperties();
+      try {
+	TFileCache.Entry ent = getTFileCacheEntry();
+	if (ent.getArcCuProps() != null) {
+	  res.putAll(ent.getArcCuProps());
+	}
+      } catch (IOException e) {
+	logger.warning("Couldn't copy archive props to member CU", e);
+      }
+
+      res.put(CachedUrl.PROPERTY_NODE_URL, getUrl());
+      res.put("Length", getContentSize());
+      String ctype = inferContentType();
+      if (!StringUtil.isNullString(ctype)) {
+	res.put("Content-Type", ctype);
+	res.put(PROPERTY_CONTENT_TYPE, ctype);
+
+      }
+      return res;
+    }
+
+    private String inferContentType() {
+      String ext = FileUtil.getExtension(am.getName());
+      if (ext == null) {
+	return null;
+      }
+      return MimeUtil.getMimeTypeFromExtension(ext);
+    }
+
+    @Override
+    public long getContentSize() {
+      try {
+	return getMemberTFile().length();
+      } catch (IOException e) {
+	throw new LockssRepository.RepositoryStateException
+	  ("Couldn't get archive member length", e);
+      }
+    }
+
+
+    // XXX Should release do something other than release the archive CU?
+//     public void release() {
+//       if (rnc != null) {
+// 	rnc.release();
+//       }
+//     }
+
+    private TFile getMemberTFile() throws IOException {
+      checkValidTfcEntry();
+      if (memberTf == null) {
+	memberTf = new TFile(getTFile(), am.getName());
+      }
+      return memberTf;
+    }
+
+    private TFile getTFile() throws IOException {
+      TFileCache.Entry ent = getTFileCacheEntry();
+      if (ent == null) {
+	return null;
+      }
+      return ent.getTFile();
+    }
+
+    void checkValidTfcEntry() {
+      if (tfcEntry != null && !tfcEntry.isValid()) {
+	tfcEntry = null;
+      }
+    }
+
+    private TFileCache.Entry getTFileCacheEntry() throws IOException {
+      checkValidTfcEntry();
+      if (tfcEntry == null) {
+	TrueZipManager tzm = getDaemon().getTrueZipManager();
+	tfcEntry = tzm.getCachedTFileEntry(au.makeCachedUrl(url));
+      }
+      return tfcEntry;
+    }
+
+    ArchiveMember getArchiveMember() {
+      return am;
+    }
+
+    @Override
+    boolean isArchiveMember() {
+      return true;
+    }
+
+    String getArchiveUrl() {
+      return super.getUrl();
+    }
+
+    @Override
+    public CachedUrl getArchiveMemberCu(ArchiveMember am) {
+      throw new UnsupportedOperationException("Can't create a CU member from a CU member: "
+					      + this);
+    }
+
+    @Override
+    public CachedUrl getCuVersion(int version) {
+      throw new UnsupportedOperationException("Can't access versions of a CU member: "
+					      + this);
+    }
+
+    @Override
+    public CachedUrl[] getCuVersions(int maxVersions) {
+      throw new UnsupportedOperationException("Can't access versions of a CU member: "
+					      + this);
+    }
+
+    public String toString() {
+      return "[BCUM: "+ getUrl() + "]";
+    }
+
+  }
 }

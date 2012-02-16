@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.31 2011-05-09 00:47:11 tlipkis Exp $
+ * $Id: CrawlRuleTester.java,v 1.32 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -585,5 +585,10 @@ public class CrawlRuleTester extends Thread {
     public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target) {
       return null;
     }
+
+    public CachedUrl getArchiveMemberCu(ArchiveMember am) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
   }
 }

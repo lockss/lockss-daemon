@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.153 2012-01-18 04:51:58 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.154 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -111,7 +111,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected TitleConfig titleConfig;   // matching entry from titledb, if any
   protected String auTitle;   // the title of the AU (from titledb, if any)
   protected Configuration auConfig;
-  private String auId = null;
+  protected String auId = null;
 
   protected TypedEntryMap paramMap;
 
@@ -165,11 +165,28 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return new BaseCachedUrlSet(this, cuss);
   }
 
+  /** Return a CachedUrl for the specified url in this AU.  If the url
+   * specifies an archive member (<tt><i>URL</i>!/<i>member</i></tt>), the
+   * returned CU accesses the contents of the named archive member. */
   public CachedUrl makeCachedUrl(String url) {
-    return new BaseCachedUrl(this, url);
+    String member = null;
+    int pos = url.indexOf(CachedUrl.ArchiveMember.URL_SEPARATOR);
+    if (pos > 0) {
+      member = url.substring(pos + 2);
+      url =  url.substring(0, pos);
+    }      
+    CachedUrl cu = new BaseCachedUrl(this, url);
+    if (member != null) {
+      cu = cu.getArchiveMemberCu(new CachedUrl.ArchiveMember(member));
+    }
+    return cu;
   }
 
   public UrlCacher makeUrlCacher(String url) {
+    int pos = url.indexOf(CachedUrl.ArchiveMember.URL_SEPARATOR);
+    if (pos > 0) {
+      throw new IllegalArgumentException("Cannot make a UrlCacher for an archive member: " + url);
+    }
     return new BaseUrlCacher(this, url);
   }
 
@@ -703,6 +720,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public LinkRewriterFactory getLinkRewriterFactory(String contentType) {
     return plugin.getLinkRewriterFactory(contentType);
+  }
+
+  public ArchiveFileTypes getArchiveFileTypes() {
+    return plugin.getArchiveFileTypes();
   }
 
   /**

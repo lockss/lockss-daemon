@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.53 2011-11-08 20:22:43 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.54 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -1164,6 +1164,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       getHttpResultMap(defplug).mapException(null, null, 522, null);
     assertClass(CacheException.RetryDeadLinkException.class, ex);
     assertEquals("522 from handler", ex.getMessage());
+
+    ArchiveFileTypes aft = defplug.getArchiveFileTypes();
+    assertNotNull(aft);
+    assertEquals(MapUtil.map(".zip", ".zip", "application/x-tar", ".tar"),
+		 aft.getExtMimeMap());
   }
 
   public void testFeatureUrls() throws Exception {

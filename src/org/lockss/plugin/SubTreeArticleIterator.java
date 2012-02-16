@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.13 2011-09-08 23:40:57 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.14 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -63,6 +63,9 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     private Pattern pat;
     private String patTempl;
     private int patFlags = 0;		// Pattern compilation flags
+    /** If true, iterator will descend into archive files (zip, etc.) and
+     * include their members rather than the archive file itself */
+    private boolean isVisitArchiveMembers = false;
 
 
     /** Set the MIME type of the desired files.  If null or not set, MIME
@@ -218,6 +221,17 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     public int getPatternFlags() {
       return patFlags;
     }
+
+    /** If true, will descend into archive files */
+    public Spec setVisitArchiveMembers(boolean val) {
+      isVisitArchiveMembers = val;
+      return this;
+    }
+
+    /** Return true if should descend into archive files */
+    public boolean isVisitArchiveMembers() {
+      return isVisitArchiveMembers;
+    }
   }
 
 
@@ -339,7 +353,8 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
 	      return null;
 	    } else {
 	      CachedUrlSet root = rootIter.next();
-	      cusIter = root.contentHashIterator();
+	      cusIter = spec.isVisitArchiveMembers
+		? root.archiveMemberIterator() : root.contentHashIterator();
 	      continue;
 	    }
 	  } else {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.58 2012-01-18 04:51:58 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.59 2012-02-16 10:37:40 tlipkis Exp $
  */
 
 /*
@@ -61,7 +61,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
 
-    pollMgr = getMockLockssDaemon().getPollManager();
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    pollMgr = daemon.getPollManager();
 
     List rules = new LinkedList();
     // exclude anything which doesn't start with our base url
@@ -70,7 +71,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     rules.add(new CrawlRules.RE(startUrl, CrawlRules.RE.MATCH_INCLUDE));
     CrawlRule rule = new CrawlRules.FirstMatch(rules);
     mplug = new MyMockPlugin();
-    mplug.initPlugin(getMockLockssDaemon());
+    mplug.initPlugin(daemon);
     mbau =  new MyBaseArchivalUnit(mplug, auName, rule, startUrl);
   }
 
@@ -792,6 +793,46 @@ try {
     assertEquals(10000, pmap.getLong(key));
   }
 
+  public void testMakeCachedUrl() {
+    String u1 = "http://www.example.com/1";
+    CachedUrl cu = mbau.makeCachedUrl(u1);
+    assertEquals(u1, cu.getUrl());
+    assertClass(BaseCachedUrl.class, cu);
+    BaseCachedUrl bcu = (BaseCachedUrl)cu;
+    assertFalse(bcu.isArchiveMember());
+  }
+
+  public void testMakeCachedUrlWithMember() {
+    String u1 = "http://www.example.com/foo.zip!/member/path.ext";
+    CachedUrl cu = mbau.makeCachedUrl(u1);
+    assertEquals(u1, cu.getUrl());
+    assertClass(BaseCachedUrl.Member.class, cu);
+    BaseCachedUrl.Member bcu = (BaseCachedUrl.Member)cu;
+    assertTrue(bcu.isArchiveMember());
+    assertEquals("http://www.example.com/foo.zip", bcu.getArchiveUrl());
+    CachedUrl.ArchiveMember am = bcu.getArchiveMember();
+    assertNotNull(am);
+    assertEquals("member/path.ext", am.getName());
+  }
+
+  public void testMakeUrlCacher() {
+    mbau.setAuId("random");
+    String u1 = "http://www.example.com/1.zip";
+    UrlCacher uc = mbau.makeUrlCacher(u1);
+    assertEquals(u1, uc.getUrl());
+    assertClass(BaseUrlCacher.class, uc);
+  }
+
+  public void testMakeUrlCacherWithMember() {
+    mbau.setAuId("random");
+    String u1 = "http://www.example.com/1.zip!/foo/bar";
+    try {
+      mbau.makeUrlCacher(u1);
+      fail("Should not be able to make a UrlCacher for an archive member");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
   public static void main(String[] argv) {
     String[] testCaseList = { MyBaseArchivalUnit.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
@@ -865,7 +906,6 @@ try {
   }
 
   static class MyBaseArchivalUnit extends BaseArchivalUnit {
-    private String auId = null;
     private String m_name = "MockBaseArchivalUnit";
     private CrawlRule m_rules = null;
     private String m_startUrl ="http://www.example.com/index.html";
@@ -954,6 +994,10 @@ try {
 
     public void setFetchRateLimiter(RateLimiter limit) {
       fetchRateLimiter = limit;      
+    }
+
+    void setAuId(String auid) {
+      this.auId = auid;
     }
   }
 }
