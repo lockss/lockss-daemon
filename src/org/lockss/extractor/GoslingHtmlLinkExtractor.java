@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlLinkExtractor.java,v 1.8 2011-05-09 00:31:26 tlipkis Exp $
+ * $Id: GoslingHtmlLinkExtractor.java,v 1.9 2012-02-16 10:42:29 tlipkis Exp $
  */
 
 /*
@@ -619,9 +619,6 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
 	logger.debug("Couldn't resolve URL, base: \"" + srcUrl +
 		     "\", link: \"" + returnStr + "\": " + e);
 	return false;
-      }
-      if (isTrace) {
-	logger.debug2("Parsed: " + returnStr);
       }
     }
     if (returnStr != null) {

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginUtil.java,v 1.3 2006-09-23 19:23:56 tlipkis Exp $
+ * $Id: PluginUtil.java,v 1.4 2012-02-16 10:42:29 tlipkis Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class PluginUtil {
 	String url = cu.getUrl();
 	String nodeUrl = props.getProperty(CachedUrl.PROPERTY_NODE_URL);
 	if (nodeUrl != null && !nodeUrl.equals(url)) {
-	  log.debug("getBaseUrl(" + url + "), nodeUrl: " + nodeUrl);
+	  log.debug2("getBaseUrl(" + url + "), nodeUrl: " + nodeUrl);
 	  if (dirNodeCheckSlash) {
 	    URI uri = new URI(url);
 	    if (!uri.getPath().endsWith("/")) {
