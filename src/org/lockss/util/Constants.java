@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.23 2012-02-16 19:56:52 thib_gc Exp $
+ * $Id: Constants.java,v 1.24 2012-02-16 20:28:42 thib_gc Exp $
  */
 
 /*
@@ -163,5 +163,11 @@ public interface Constants {
 
   /** The MIME type string for PDF ({@value}). */
   public static final String MIME_TYPE_PDF = "application/pdf";
+
+  /** The MIME type string for browser PAC files ({@value}). */
+  public static final String MIME_TYPE_PAC = "application/x-ns-proxy-autoconfig";
+
+  /** The MIME type string for RealAudio Media ({@value}). */
+  public static String MIME_TYPE_RAM = "audio/x-pn-realaudio";
 
 }

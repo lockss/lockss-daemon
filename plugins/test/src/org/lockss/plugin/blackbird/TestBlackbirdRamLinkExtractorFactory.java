@@ -1,10 +1,10 @@
 /*
- * $Id: TestBlackbirdRamLinkExtractorFactory.java,v 1.2 2008-09-09 07:53:07 tlipkis Exp $
+ * $Id: TestBlackbirdRamLinkExtractorFactory.java,v 1.3 2012-02-16 20:28:42 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,12 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.blackbird;
 
-import java.io.*;
 import java.util.*;
-import junit.framework.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.plugin.*;
 import org.lockss.extractor.*;
 
 public class TestBlackbirdRamLinkExtractorFactory
@@ -47,7 +44,7 @@ public class TestBlackbirdRamLinkExtractorFactory
   static final String TO_URL = "http://www.blackbird.vcu.edu/lockss_media/";
 
   public String getMimeType() {
-    return MIME_TYPE_RAM;
+    return Constants.MIME_TYPE_RAM;
   }
 
   public LinkExtractorFactory getFactory() {

@@ -1,10 +1,10 @@
 /*
- * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.8 2011-11-09 05:13:03 pgust Exp $
+ * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.9 2012-02-16 20:28:42 thib_gc Exp $
  */
 
 /*
 
-  Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+  Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
   all rights reserved.
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,12 +32,8 @@
 
 package org.lockss.extractor;
 
-import java.io.*;
-import java.util.*;
-import junit.framework.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 
 public class TestSimpleHtmlMetaTagMetadataExtractor
@@ -51,7 +47,7 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
   }
 
   public String getMimeType() {
-    return MIME_TYPE_HTML;
+    return Constants.MIME_TYPE_HTML;
   }
 
   public void testSingleTag() throws Exception {

@@ -1,10 +1,10 @@
 /*
- * $Id: ProxyConfig.java,v 1.28 2008-11-08 08:17:03 tlipkis Exp $
+ * $Id: ProxyConfig.java,v 1.29 2012-02-16 20:28:42 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,7 +54,6 @@ public class ProxyConfig extends LockssServlet {
   // Used for serialization
   private static final long serialVersionUID = 1L;  // To stop an Eclipse complaint.  See "http://www.eaze.org/patrick/java/objectserialization.jsp"
 
-  private static final String MIME_TYPE_PAC = "application/x-ns-proxy-autoconfig";
   private static final String TAG_MIME = "mime";
   private static final String TAG_SQUID = "squid";
   private static final String TAG_SQUID_CONFIG = "squidconfig";
@@ -201,7 +200,7 @@ public class ProxyConfig extends LockssServlet {
     // Serve as PAC mime type if requested
     String mime = getParameter(TAG_MIME);
     if (TAG_PAC.equalsIgnoreCase(mime)) {
-      resp.setContentType(MIME_TYPE_PAC);
+      resp.setContentType(Constants.MIME_TYPE_PAC);
     }
 
     wrtr.print(pi.generatePacFile(urlStems, req.getRequestURI(), isDirectFirst));
@@ -244,7 +243,7 @@ public class ProxyConfig extends LockssServlet {
       // Serve as PAC mime type if requested
       String mime = getParameter(TAG_MIME);
       if (TAG_PAC.equalsIgnoreCase(mime)) {
-	resp.setContentType(MIME_TYPE_PAC);
+	resp.setContentType(Constants.MIME_TYPE_PAC);
       }
       wrtr.print(pac);
     } catch (Exception e) {

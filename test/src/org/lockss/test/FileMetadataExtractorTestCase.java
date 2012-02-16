@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractorTestCase.java,v 1.5 2011-06-14 09:30:12 tlipkis Exp $
+ * $Id: FileMetadataExtractorTestCase.java,v 1.6 2012-02-16 20:28:41 thib_gc Exp $
  */
 
 /*
@@ -46,10 +46,7 @@ import org.lockss.plugin.*;
 public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
   public static String URL = "http://www.example.com/";
 
-  public static String MIME_TYPE_HTML = "text/html";
   public static String MIME_TYPE_XML = "application/xml";
-  public static String MIME_TYPE_RAM = "audio/x-pn-realaudio";
-
   protected FileMetadataListExtractor extractor = null;
   protected String encoding;
   protected MockArchivalUnit mau;

@@ -1,5 +1,5 @@
 /*
- * $Id: LinkExtractorTestCase.java,v 1.4 2011-08-30 04:42:11 tlipkis Exp $
+ * $Id: LinkExtractorTestCase.java,v 1.5 2012-02-16 20:28:41 thib_gc Exp $
  */
 
 /*
@@ -44,9 +44,6 @@ import org.lockss.plugin.*;
  * #extractUrls(String)}. */
 public abstract class LinkExtractorTestCase extends LockssTestCase {
   public static String URL = "http://www.example.com/";
-
-  public static String MIME_TYPE_HTML = "text/html";
-  public static String MIME_TYPE_RAM = "audio/x-pn-realaudio";
 
   protected LinkExtractor extractor = null;
   protected MyLinkExtractorCallback cb = null;
