@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.104 2011-09-08 23:41:38 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.105 2012-02-16 10:41:21 tlipkis Exp $
  */
 
 /*
@@ -1435,6 +1435,24 @@ public class LockssTestCase extends TestCase {
     return pat.matcher(s).find();
   }
 
+  static String reFailMsg(String msg, java.util.regex.Pattern pattern,
+			  String string) {
+    return reFailMsg(msg, pattern.pattern(), string);
+  }
+
+  static String reFailMsg(String msg, Pattern pattern, String string) {
+    return reFailMsg(msg, pattern.getPattern(), string);
+  }
+
+  static String reFailMsg(String msg, String regexp, String string) {
+    String failmsg = 
+      "No match for " + regexp + " in \"" + string + "\"";
+    if (msg != null) {
+      failmsg = msg + ": " + failmsg;
+    }
+    return failmsg;
+  }
+
   /**
    * Asserts that a string matches a regular expression.  The match is
    * unanchored; use "^...$" to ensure that the entire string is matched.
@@ -1449,10 +1467,7 @@ public class LockssTestCase extends TestCase {
    */
   public static void assertMatchesRE(String msg,
 				     String regexp, String string) {
-    if (msg == null) {
-      msg = "No match for " + regexp + " in \"" + string + "\"";
-    }
-    assertTrue(msg, isMatchRe(string, regexp));
+    assertTrue(reFailMsg(msg, regexp, string), isMatchRe(string, regexp));
   }
 
   /**
@@ -1469,10 +1484,7 @@ public class LockssTestCase extends TestCase {
    */
   public static void assertMatchesRE(String msg,
 				     Pattern regexp, String string) {
-    if (msg == null) {
-      msg = "No match for " + regexp.getPattern() + " in \"" + string + "\"";
-    }
-    assertTrue(msg, isMatchRe(string, regexp));
+    assertTrue(reFailMsg(msg, regexp, string), isMatchRe(string, regexp));
   }
 
   /**
@@ -1491,10 +1503,7 @@ public class LockssTestCase extends TestCase {
   public static void assertMatchesRE(String msg,
 				     java.util.regex.Pattern regexp,
 				     String string) {
-    if (msg == null) {
-      msg = "No match for " + regexp.pattern() + " in \"" + string + "\"";
-    }
-    assertTrue(msg, isMatchRe(string, regexp));
+    assertTrue(reFailMsg(msg, regexp, string), isMatchRe(string, regexp));
   }
 
   /**
