@@ -1,10 +1,10 @@
 /*
- * $Id: Constants.java,v 1.22 2011-05-18 04:11:26 tlipkis Exp $
+ * $Id: Constants.java,v 1.23 2012-02-16 19:56:52 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -154,8 +154,14 @@ public interface Constants {
   enum RegexpContext {
     /** Regexp wil be used to match against unencoded strings */
     String,
-      /** Regexp will be used to match against URL-encoded URLs */
-      Url,
-      };
+    /** Regexp will be used to match against URL-encoded URLs */
+    Url,
+  };
+
+  /** The MIME type string for HTML ({@value}). */
+  public static final String MIME_TYPE_HTML = "text/html";
+
+  /** The MIME type string for PDF ({@value}). */
+  public static final String MIME_TYPE_PDF = "application/pdf";
 
 }
