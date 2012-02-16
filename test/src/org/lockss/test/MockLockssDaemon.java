@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.67 2011-01-25 00:51:50 pgust Exp $
+ * $Id: MockLockssDaemon.java,v 1.68 2012-02-16 10:31:08 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.daemon.status.StatusService;
 import org.lockss.hasher.HashService;
 import org.lockss.mail.MailService;
 import org.lockss.plugin.*;
+import org.lockss.truezip.*;
 import org.lockss.poller.PollManager;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
@@ -86,6 +87,7 @@ public class MockLockssDaemon extends LockssDaemon {
   PluginManager pluginManager = null;
   MetadataManager metadataManager = null;
   IdentityManager identityManager = null;
+  TrueZipManager tzipManager = null;
   StatusService statusService = null;
   RemoteApi remoteApi = null;
   IcpManager icpManager = null;
@@ -401,6 +403,18 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * return the TrueZip manager instance
+   * @return the TrueZipManager
+   */
+  public TrueZipManager getTrueZipManager() {
+    if (tzipManager == null) {
+      tzipManager = (TrueZipManager)newManager(LockssDaemon.TRUEZIP_MANAGER);
+      managerMap.put(LockssDaemon.TRUEZIP_MANAGER, tzipManager);
+    }
+    return tzipManager;
+  }
+
+  /**
    * return the crawl manager instance
    * @return the CrawlManager
    */
@@ -705,6 +719,15 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setServletManager(ServletManager servletMgr) {
     servletManager = servletMgr;
     managerMap.put(LockssDaemon.SERVLET_MANAGER, servletManager);
+  }
+
+  /**
+   * Set the TrueZipManager
+   * @param tzMgr the new manager
+   */
+  public void setTrueZipManager(TrueZipManager tzMgr) {
+    tzipManager = tzMgr;
+    managerMap.put(LockssDaemon.TRUEZIP_MANAGER, tzipManager);
   }
 
   /**

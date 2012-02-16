@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.109 2012-01-18 03:38:39 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.110 2012-02-16 10:31:08 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.account.*;
 import org.lockss.hasher.*;
 import org.lockss.scheduler.*;
 import org.lockss.plugin.*;
+import org.lockss.truezip.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
@@ -138,6 +139,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String ICP_MANAGER = "IcpManager";
   public static final String CRON = "Cron";
   public static final String CLOCKSS_PARAMS = "ClockssParams";
+  public static final String TRUEZIP_MANAGER = "TrueZipManager";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
@@ -147,6 +149,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(MAIL_SERVICE, DEFAULT_MAIL_SERVICE),
     new ManagerDesc(ALERT_MANAGER, "org.lockss.alert.AlertManagerImpl"),
     new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
+    new ManagerDesc(TRUEZIP_MANAGER, "org.lockss.truezip.TrueZipManager"),
     new ManagerDesc(URL_MANAGER, "org.lockss.daemon.UrlManager"),
     new ManagerDesc(TIMER_SERVICE, "org.lockss.util.TimerQueue$Manager"),
     new ManagerDesc(SCHED_SERVICE, DEFAULT_SCHED_SERVICE),
@@ -521,6 +524,15 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public ArchivalUnitStatus getArchivalUnitStatus() {
     return (ArchivalUnitStatus) getManager(ARCHIVAL_UNIT_STATUS);
+  }
+
+  /**
+   * return TrueZipManager instance
+   * @return the TrueZipManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public TrueZipManager getTrueZipManager() {
+    return (TrueZipManager)getManager(TRUEZIP_MANAGER);
   }
 
   /**
