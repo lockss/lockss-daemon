@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.10 2012-02-09 23:19:25 pgust Exp $
+ * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.11 2012-02-17 16:29:08 pgust Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.nature;
 
-import java.io.*;
 import java.util.*;
 import java.util.regex.*;
 
