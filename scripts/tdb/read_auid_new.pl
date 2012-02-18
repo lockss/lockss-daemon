@@ -334,15 +334,15 @@ while (my $line = <>) {
     }
     sleep(5);
         
-  } elsif ($plugin eq "BonefolderPlugin") {
-    $url = sprintf("%sBonefolderVol%dManifest.htm", 
-      $param{base_url}, $param{volume});
+  } elsif ($plugin eq "ClockssNaturePublishingGroupPlugin") {
+    $url = sprintf("%s%s/clockss/%s_clockss_%d.html", 
+      $param{base_url}, $param{journal_id}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$cc_tag/))) {
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         if ($man_contents =~ m/<TITLE>\s*(.*)\s*<\/TITLE>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
