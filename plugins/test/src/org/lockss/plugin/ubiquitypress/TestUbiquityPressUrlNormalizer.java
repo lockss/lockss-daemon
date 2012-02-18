@@ -1,5 +1,5 @@
 /*
- * $Id: TestUbiquityPressUrlNormalizer.java,v 1.1 2012-02-18 13:31:01 pgust Exp $
+ * $Id: TestUbiquityPressUrlNormalizer.java,v 1.2 2012-02-18 16:44:18 pgust Exp $
  */
 
 /*
@@ -41,22 +41,28 @@ public class TestUbiquityPressUrlNormalizer extends LockssTestCase{
   public void testUbiquityPressNormalizer() 
       throws MetadataException.ValidationException {
     UbiquityPressUrlNormalizer norm = new UbiquityPressUrlNormalizer();
-       try {
-      assertNull("http://www.presentpasts.info/index.php/pp/article/52/64"
-        ,norm.normalizeUrl("http://www.google.com/ui/uo"
-        ,"http://www.presentpasts.info/","pp"));
-      assertEquals("http://www.presentpasts.info/index.php/pp/article/52/64"
-        ,norm.normalizeUrl("http://www.presentpasts.info/article/52/64"
-        ,"http://www.presentpasts.info/","pp"));
-      assertEquals("http://www.presentpasts.info/index.php/pp/article/view/pp.52/92"
-          ,norm.normalizeUrl("http://www.presentpasts.info/article/view/pp.52/92"
-          ,"http://www.presentpasts.info/","pp"));
-      assertEquals("http://www.presentpasts.info/index.php/pp/help.html"
-          ,norm.normalizeUrl("http://www.presentpasts.info/help.html"
-          ,"http://www.presentpasts.info/","pp"));
-    } catch (PluginException e) {
-      e.printStackTrace();
-    }
     
+    assertEquals("http://www.google.com/ui/uo",
+                 norm.normalizeUrl("http://www.google.com/ui/uo",
+                                   "http://www.presentpasts.info/","pp"));
+    assertEquals("http://www.google.com/ui/uo",
+                 norm.normalizeUrl("http://www.google.com/ui/uo",
+                                   "http://www.presentpasts.info/",null));
+    assertEquals("http://www.google.com/ui/uo",
+                 norm.normalizeUrl("http://www.google.com/ui/uo",
+                                   null,"pp"));
+    assertEquals("http://www.presentpasts.info/article/52/64",
+                 norm.normalizeUrl("http://www.presentpasts.info/article/52/64",
+                                   "http://www.presentpasts.info/", null));
+    assertEquals("http://www.presentpasts.info/index.php/pp/article/52/64",
+                 norm.normalizeUrl("http://www.presentpasts.info/article/52/64",
+                                   "http://www.presentpasts.info/","pp"));
+    assertEquals(
+        "http://www.presentpasts.info/index.php/pp/article/view/pp.52/92",
+        norm.normalizeUrl("http://www.presentpasts.info/article/view/pp.52/92",
+                          "http://www.presentpasts.info/","pp"));
+    assertEquals("http://www.presentpasts.info/index.php/pp/help.html",
+                 norm.normalizeUrl("http://www.presentpasts.info/help.html",
+                                   "http://www.presentpasts.info/","pp"));
   }
 }
