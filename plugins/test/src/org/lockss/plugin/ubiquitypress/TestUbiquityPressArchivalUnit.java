@@ -51,6 +51,25 @@ public class TestUbiquityPressArchivalUnit extends LockssTestCase {
     return au;
   }
 
+  public void testSiteNormalizer() throws Exception {
+    URL base = new URL(ROOT_URL);
+    ArchivalUnit pmAu = makeAu(base, "pp","2003");
+    theDaemon.getLockssRepository(pmAu);
+    theDaemon.getNodeManager(pmAu);
+
+    assertEquals("http://www.google.com/ui/uo",
+                 pmAu.siteNormalizeUrl("http://www.google.com/ui/uo"));
+    assertEquals(
+        "http://www.presentpasts.info/index.php/pp/article/52/64",
+        pmAu.siteNormalizeUrl("http://www.presentpasts.info/article/52/64"));
+    assertEquals(
+        "http://www.presentpasts.info/index.php/pp/article/view/pp.52/92",
+        pmAu.siteNormalizeUrl("http://www.presentpasts.info/article/view/pp.52/92"));
+    assertEquals(
+        "http://www.presentpasts.info/index.php/pp/help.html",
+        pmAu.siteNormalizeUrl("http://www.presentpasts.info/help.html"));
+  }
+  
   public void testConstructNullUrl() throws Exception {
     try {
       makeAu(null, "pp","2003");
