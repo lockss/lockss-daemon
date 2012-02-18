@@ -429,11 +429,11 @@
     au < HighWirePressH20Plugin ; ready ; 1931 ; British Journal of Ophthalmology Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; ready ; 1932 ; British Journal of Ophthalmology Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; ready ; 1933 ; British Journal of Ophthalmology Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; 1934 ; British Journal of Ophthalmology Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; 1935 ; British Journal of Ophthalmology Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 1934 ; British Journal of Ophthalmology Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; ready ; 1935 ; British Journal of Ophthalmology Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; testing ; 1936 ; British Journal of Ophthalmology Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 1937 ; British Journal of Ophthalmology Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; testing ; 1938 ; British Journal of Ophthalmology Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 1937 ; British Journal of Ophthalmology Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 1938 ; British Journal of Ophthalmology Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; testing ; 1939 ; British Journal of Ophthalmology Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; manifest ; 1940 ; British Journal of Ophthalmology Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 1941 ; British Journal of Ophthalmology Volume 25 ; 25 >
@@ -1135,10 +1135,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://jme.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Medical Ethics Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Medical Ethics Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Medical Ethics Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Medical Ethics Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1975 ; Journal of Medical Ethics Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of Medical Ethics Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of Medical Ethics Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Medical Ethics Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Medical Ethics Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Medical Ethics Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Medical Ethics Volume 8 ; 8 >
