@@ -1,5 +1,5 @@
 /*
- * $Id: UbiquityPressUrlNormalizer.java,v 1.1 2012-02-18 00:57:50 akanshab01 Exp $
+ * $Id: UbiquityPressUrlNormalizer.java,v 1.2 2012-02-18 16:43:17 pgust Exp $
  */
 
 /*
@@ -29,7 +29,7 @@
  in this Software without prior written authorization from Stanford University.
 
  *//*
- * $Id: UbiquityPressUrlNormalizer.java,v 1.1 2012-02-18 00:57:50 akanshab01 Exp $
+ * $Id: UbiquityPressUrlNormalizer.java,v 1.2 2012-02-18 16:43:17 pgust Exp $
  */
 
 /*
@@ -65,6 +65,7 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.UrlNormalizer;
+import org.lockss.util.StringUtil;
 
 public class UbiquityPressUrlNormalizer implements UrlNormalizer {
  
@@ -75,25 +76,8 @@ public class UbiquityPressUrlNormalizer implements UrlNormalizer {
                                           .getKey());
     String journalCode = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID
                                               .getKey());
-    return normalizeProtectedUrl(url,baseUrl,journalCode) ; 
+    return normalizeUrl(url,baseUrl,journalCode) ; 
   }
-  
-  /**Describes a public normalizer method which makes call to the 
-   *   normalizeProtectedUrl Method.
-   * 
-   * @param url
-   * @param baseUrl
-   * @param journalCode
-   * @return normalizeUrl method which converts short urls to actual urls defined
-   *    in the plugin xml file.
-   * @throws PluginException
-   */
-  
-  public String normalizeUrl(String url,String baseUrl,String journalCode)
-      throws PluginException {
-    return normalizeProtectedUrl(url,baseUrl,journalCode) ; 
-  }
-  
   
   /**Defines the protected normalize method  which will normalize the url into 
    *   the correct format.
@@ -103,28 +87,23 @@ public class UbiquityPressUrlNormalizer implements UrlNormalizer {
    * @param journalCode
    * @return normalized url with the appended index.php and journal code.
    */
-  
-  protected String normalizeProtectedUrl(String url,String baseUrl,
-      String journalCode){
-    String returnVal = ""; 
-    if(url.contains(baseUrl)) {
+  protected String normalizeUrl(String url,String baseUrl, String journalCode) {
+    if (   StringUtil.isNullString(journalCode) 
+        || StringUtil.isNullString(baseUrl)
+        || !StringUtil.startsWithIgnoreCase(url, baseUrl)) {
+      return url;
+    }
+    
      // for eg. url refers to http://www.presentpasts.info/article/view/pp.52/92 
-    String[] splitArr = url.split(baseUrl);
     // urlDetailInfo = article/view/pp.52/92 will be extracted from url
-    String urlDetailInfo = splitArr[1];
-    if(journalCode != null && urlDetailInfo != null ){
-    StringBuilder buffer = new StringBuilder(baseUrl + "index.php");
+    String urlDetailInfo = url.substring(baseUrl.length());
+    StringBuilder buffer = new StringBuilder();
+    buffer.append(baseUrl);
+    buffer.append("index.php");
     buffer.append("/");
     buffer.append(journalCode);
     buffer.append("/");
     buffer.append(urlDetailInfo);
-    returnVal = buffer.toString(); 
-    return returnVal;
-    }
-    else{
-    return returnVal;
-    }
-    }
-    return null;
-    }
+    return buffer.toString();
   }
+}
