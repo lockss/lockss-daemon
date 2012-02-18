@@ -3057,7 +3057,7 @@
     au < released ; crawling ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 >
     au < released ; crawling ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 >
-    au < testing ; exists ; 2011 ; Nature Structural and Molecular Biology Volume 18 ; 2011 ; 18 >
+    au < notReady ; exists ; 2011 ; Nature Structural and Molecular Biology Volume 18 ; 2011 ; 18 >
     au < expected ; exists ; 2012 ; Nature Structural and Molecular Biology Volume 19 ; 2012 ; 19 >
 
   }
@@ -3100,7 +3100,7 @@
     au < exists ; exists ; 2008 ; Neuropsychopharmacology Volume 33 ; 2008 ; 33 >
     au < exists ; exists ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 >
     au < manifest ; exists ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
-    au < testing ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
+    au < notReady ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
     au < expected ; exists ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
 
   }
@@ -3127,7 +3127,7 @@
     au < exists ; exists ; 2008 ; Obesity Volume 16 ; 2008 ; 16 >
     au < exists ; exists ; 2009 ; Obesity Volume 17 ; 2009 ; 17 >
     au < exists ; exists ; 2010 ; Obesity Volume 18 ; 2010 ; 18 >
-    au < testing ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
+    au < notReady ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
     au < expected ; exists ; 2012 ; Obesity Volume 20 ; 2012 ; 20 >
 
   }
@@ -3158,8 +3158,8 @@
     au < manifest ; exists ; 2007 ; Oncogene Volume 26 ; 2007 ; 26 >
     au < released ; crawling ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
     au < notReady ; exists ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
-    au < testing ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
-    au < testing ; exists ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
+    au < notReady ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
+    au < notReady ; exists ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
     au < expected ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
 
   }
@@ -3185,7 +3185,7 @@
     au < released ; crawling ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 2008 ; 8 >
     au < notReady ; exists ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 >
-    au < crawling ; exists ; 2011 ; The Pharmacogenomics Journal Volume 11 ; 2011 ; 11 >
+    au < testing ; exists ; 2011 ; The Pharmacogenomics Journal Volume 11 ; 2011 ; 11 >
     au < expected ; exists ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 >
     
   }
@@ -3215,7 +3215,7 @@
     au < released ; crawling ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 2008 ; 11 >
     au < released ; crawling ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
     au < released ; crawling ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
-    au < crawling ; exists ; 2011 ; Prostate Cancer and Prostatic Diseases Volume 14 ; 2011 ; 14 >
+    au < testing ; exists ; 2011 ; Prostate Cancer and Prostatic Diseases Volume 14 ; 2011 ; 14 >
     au < expected ; exists ; 2012 ; Prostate Cancer and Prostatic Diseases Volume 15 ; 2012 ; 15 >
 
   }
@@ -3313,7 +3313,7 @@
     au < released ; crawling ; 2008 ; Spinal Cord Volume 46 ; 2008 ; 46 >
     au < released ; crawling ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
     au < released ; crawling ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 >
-    au < crawling ; exists ; 2011 ; Spinal Cord Volume 49 ; 2011 ; 49 >
+    au < testing ; exists ; 2011 ; Spinal Cord Volume 49 ; 2011 ; 49 >
     au < expected ; exists ; 2012 ; Spinal Cord Volume 50 ; 2012 ; 50 >
     
   }
@@ -3340,7 +3340,7 @@
     au < released ; crawling ; 2009 ; Vital Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2009 ; Vital Volume 7 (2009) ; 2009 ; 7 >
     au < released ; crawling ; 2010 ; Vital Volume 7 (2010) ; 2010 ; 7 >
-    au < crawling ; exists ; 2011 ; Vital Volume 8 ; 2011 ; 8 >
+    au < testing ; exists ; 2011 ; Vital Volume 8 ; 2011 ; 8 >
     au < expected ; exists ; 2012 ; Vital Volume 9 ; 2012 ; 9 >
 
   }
