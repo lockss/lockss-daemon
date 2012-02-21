@@ -118,7 +118,7 @@
     au < manifest ; exists ; 2008 ; Ambix Volume 55 ; 55 >
     au < manifest ; exists ; 2009 ; Ambix Volume 56 ; 56 >
     au < manifest ; exists ; 2010 ; Ambix Volume 57 ; 57 >
-    au < crawling ; exists ; 2011 ; Ambix Volume 58 ; 58 >
+    au < testing ; exists ; 2011 ; Ambix Volume 58 ; 58 >
 
   }
 
@@ -249,7 +249,7 @@
     au < manifest ; exists ; 2008 ; Arms & Armour Volume 5 ; 5 > 
     au < manifest ; exists ; 2009 ; Arms & Armour Volume 6 ; 6 > 
     au < manifest ; exists ; 2010 ; Arms & Armour Volume 7 ; 7 > 
-    au < crawling ; exists ; 2011 ; Arms & Armour Volume 8 ; 8 > 
+    au < testing ; exists ; 2011 ; Arms & Armour Volume 8 ; 8 > 
 
   }
 
@@ -324,7 +324,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[0] = changing name to International Journal of Developmental Disabilities (IJDD) in 2012
     
-    au < crawling ; exists ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
+    au < testing ; exists ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
 
   }
 
@@ -388,7 +388,7 @@
     au < manifest ; exists ; 2008 ; Bronte Studies Volume 33 ; 33 > 
     au < manifest ; exists ; 2009 ; Bronte Studies Volume 34 ; 34 > 
     au < manifest ; exists ; 2010 ; Bronte Studies Volume 35 ; 35 > 
-    au < crawling ; exists ; 2011 ; Bronte Studies Volume 36 ; 36 > 
+    au < testing ; exists ; 2011 ; Bronte Studies Volume 36 ; 36 > 
 
   }
 
@@ -498,7 +498,7 @@
     au < manifest ; exists ; 2008 ; Byzantine and Modern Greek Studies Volume 32 ; 32 >
     au < manifest ; exists ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 >
     au < manifest ; exists ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
-    au < crawling ; exists ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
+    au < testing ; exists ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
 
   }
 
@@ -673,7 +673,7 @@
     au < manifest ; exists ; 2008 ; Central Europe Volume 6 ; 6 > 
     au < manifest ; exists ; 2009 ; Central Europe Volume 7 ; 7 > 
     au < manifest ; exists ; 2010 ; Central Europe Volume 8 ; 8 > 
-    au < crawling ; exists ; 2011 ; Central Europe Volume 9 ; 9 > 
+    au < testing ; exists ; 2011 ; Central Europe Volume 9 ; 9 > 
 
   }
 
@@ -696,7 +696,7 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
    
-    au < crawling ; exists ; 2011 ; The Chinese Historical Review Volume 18 ; 18 >    
+    au < testing ; exists ; 2011 ; The Chinese Historical Review Volume 18 ; 18 >    
     
   }
 
@@ -761,7 +761,7 @@
     au < manifest ; exists ; 2008 ; Comparative American Studies Volume 6 ; 6 > 
     au < manifest ; exists ; 2009 ; Comparative American Studies Volume 7 ; 7 > 
     au < manifest ; exists ; 2010 ; Comparative American Studies Volume 8 ; 8 > 
-    au < crawling ; exists ; 2011 ; Comparative American Studies Volume 9 ; 9 > 
+    au < testing ; exists ; 2011 ; Comparative American Studies Volume 9 ; 9 > 
 
   }
 
@@ -793,7 +793,7 @@
     au < manifest ; exists ; 2008 ; Competition & Change Volume 12 ; 12 > 
     au < manifest ; exists ; 2009 ; Competition & Change Volume 13 ; 13 > 
     au < manifest ; exists ; 2010 ; Competition & Change Volume 14 ; 14 > 
-    au < crawling ; exists ; 2011 ; Competition & Change Volume 15 ; 15 > 
+    au < testing ; exists ; 2011 ; Competition & Change Volume 15 ; 15 > 
 
   }
 
@@ -859,7 +859,7 @@
     au < manifest ; exists ; 2008 ; Corrosion Engineering, Science and Technology Volume 43 ; 43 > 
     au < manifest ; exists ; 2009 ; Corrosion Engineering, Science and Technology Volume 44 ; 44 > 
     au < manifest ; exists ; 2010 ; Corrosion Engineering, Science and Technology Volume 45 ; 45 > 
-    au < crawling ; exists ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 ; 46 > 
+    au < testing ; exists ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 ; 46 > 
 
   }
 
@@ -998,7 +998,7 @@
     au < manifest ; exists ; 2009 ; Dix-Neuf Volume 12 ; 12 > 
     au < manifest ; exists ; 2009 ; Dix-Neuf Volume 13 ; 13 > 
     au < manifest ; exists ; 2010 ; Dix-Neuf Volume 14 ; 14 > 
-    au < crawling ; exists ; 2011 ; Dix-Neuf Volume 15 ; 15 > 
+    au < testing ; exists ; 2011 ; Dix-Neuf Volume 15 ; 15 > 
 
   }
 
