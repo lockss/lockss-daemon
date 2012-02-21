@@ -3025,7 +3025,7 @@
         au < doNotProcess ; 2009 ; Autism Volume 13 ; 13 >
         au < manifest ; 2010 ; Autism Volume 14 ; 14 >
         au < manifest ; 2011 ; Autism Volume 15 ; 15 >
-        au < expected ; 2012 ; Autism Volume 16 ; 16 >
+        au < manifest ; 2012 ; Autism Volume 16 ; 16 >
 
       }
       
@@ -4742,7 +4742,7 @@
         au < doNotProcess ; 2009 ; Childhood Volume 16 ; 16 >
         au < ready ; 2010 ; Childhood Volume 17 ; 17 >
         au < manifest ; 2011 ; Childhood Volume 18 ; 18 >
-        au < expected ; 2012 ; Childhood Volume 19 ; 19 >
+        au < manifest ; 2012 ; Childhood Volume 19 ; 19 >
 
       }
 
@@ -13118,7 +13118,7 @@
         au < doNotProcess ; 2009 ; History of the Human Sciences Volume 22 ; 22 >
         au < ready ; 2010 ; History of the Human Sciences Volume 23 ; 23 >
         au < manifest ; 2011 ; History of the Human Sciences Volume 24 ; 24 >
-        au < expected ; 2012 ; History of the Human Sciences Volume 25 ; 25 >
+        au < manifest ; 2012 ; History of the Human Sciences Volume 25 ; 25 >
 
       }
 
@@ -13450,7 +13450,7 @@
         rights = openaccess
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2009 ; Human Genomics and Proteomics Volume 1 ; 1 >
+        au < manifest ; 2009 ; Human Genomics and Proteomics Volume 1 ; 1 >
         au < manifest ; 2010 ; Human Genomics and Proteomics Volume 2 ; 2 >
         au < exists ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 >
         au < expected ; 2012 ; Human Genomics and Proteomics Volume 4 ; 4 >
@@ -15049,46 +15049,46 @@
         
         comment[notReady] = Original series ended at vol 40, and issue numbering started at 22 again in 2004. Manifests exist, but are malformed.
 
-        au < HighWirePressH20Plugin ; exists ; 1983 ; International Journal of Music Education Volume os-1 ; os-1 >
-        au < HighWirePressH20Plugin ; exists ; 1983 ; International Journal of Music Education Volume os-2 ; os-2 >
-        au < HighWirePressH20Plugin ; exists ; 1984 ; International Journal of Music Education Volume os-3 ; os-3 >
-        au < HighWirePressH20Plugin ; exists ; 1984 ; International Journal of Music Education Volume os-4 ; os-4 >
-        au < HighWirePressH20Plugin ; exists ; 1985 ; International Journal of Music Education Volume os-5 ; os-5 >
-        au < HighWirePressH20Plugin ; exists ; 1985 ; International Journal of Music Education Volume os-6 ; os-6 >
-        au < HighWirePressH20Plugin ; exists ; 1986 ; International Journal of Music Education Volume os-7 ; os-7 >
-        au < HighWirePressH20Plugin ; exists ; 1986 ; International Journal of Music Education Volume os-8 ; os-8 >
-        au < HighWirePressH20Plugin ; exists ; 1987 ; International Journal of Music Education Volume os-9 ; os-9 >
-        au < HighWirePressH20Plugin ; exists ; 1987 ; International Journal of Music Education Volume os-10 ; os-10 >
-        au < HighWirePressH20Plugin ; exists ; 1988 ; International Journal of Music Education Volume os-11 ; os-11 >
-        au < HighWirePressH20Plugin ; exists ; 1988 ; International Journal of Music Education Volume os-12 ; os-12 >
-        au < HighWirePressH20Plugin ; exists ; 1989 ; International Journal of Music Education Volume os-13 ; os-13 >
-        au < HighWirePressH20Plugin ; exists ; 1989 ; International Journal of Music Education Volume os-14 ; os-14 >
-        au < HighWirePressH20Plugin ; exists ; 1990 ; International Journal of Music Education Volume os-15 ; os-15 >
-        au < HighWirePressH20Plugin ; exists ; 1990 ; International Journal of Music Education Volume os-16 ; os-16 >
-        au < HighWirePressH20Plugin ; exists ; 1991 ; International Journal of Music Education Volume os-17 ; os-17 >
-        au < HighWirePressH20Plugin ; exists ; 1991 ; International Journal of Music Education Volume os-18 ; os-18 >
-        au < HighWirePressH20Plugin ; exists ; 1992 ; International Journal of Music Education Volume os-19 ; os-19 >
-        au < HighWirePressH20Plugin ; exists ; 1992 ; International Journal of Music Education Volume os-20 ; os-20 >
-        au < HighWirePressH20Plugin ; exists ; 1993 ; International Journal of Music Education Volume os-21 ; os-21 >
-        au < HighWirePressH20Plugin ; exists ; 1993 ; International Journal of Music Education Volume os-22 ; os-22 >
-        au < HighWirePressH20Plugin ; exists ; 1994 ; International Journal of Music Education Volume os-23 ; os-23 >
-        au < HighWirePressH20Plugin ; exists ; 1994 ; International Journal of Music Education Volume os-24 ; os-24 >
-        au < HighWirePressH20Plugin ; exists ; 1995 ; International Journal of Music Education Volume os-25 ; os-25 >
-        au < HighWirePressH20Plugin ; exists ; 1995 ; International Journal of Music Education Volume os-26 ; os-26 >
-        au < HighWirePressH20Plugin ; exists ; 1996 ; International Journal of Music Education Volume os-27 ; os-27 >
-        au < HighWirePressH20Plugin ; exists ; 1996 ; International Journal of Music Education Volume os-28 ; os-28 >
-        au < HighWirePressH20Plugin ; exists ; 1997 ; International Journal of Music Education Volume os-29 ; os-29 >
-        au < HighWirePressH20Plugin ; exists ; 1997 ; International Journal of Music Education Volume os-30 ; os-30 >
-        au < HighWirePressH20Plugin ; exists ; 1998 ; International Journal of Music Education Volume os-31 ; os-31 >
-        au < HighWirePressH20Plugin ; exists ; 1998 ; International Journal of Music Education Volume os-32 ; os-32 >
-        au < HighWirePressH20Plugin ; exists ; 1999 ; International Journal of Music Education Volume os-33 ; os-33 >
-        au < HighWirePressH20Plugin ; exists ; 1999 ; International Journal of Music Education Volume os-34 ; os-34 >
-        au < HighWirePressH20Plugin ; exists ; 2000 ; International Journal of Music Education Volume os-35 ; os-35 >
-        au < HighWirePressH20Plugin ; exists ; 2000 ; International Journal of Music Education Volume os-36 ; os-36 >
-        au < HighWirePressH20Plugin ; exists ; 2001 ; International Journal of Music Education Volume os-37 ; os-37 >
-        au < HighWirePressH20Plugin ; exists ; 2001 ; International Journal of Music Education Volume os-38 ; os-38 >
-        au < HighWirePressH20Plugin ; exists ; 2002 ; International Journal of Music Education Volume os-39 ; os-39 >
-        au < HighWirePressH20Plugin ; exists ; 2003 ; International Journal of Music Education Volume os-40 ; os-40 >
+        au < HighWirePressH20Plugin ; manifest ; 1983 ; International Journal of Music Education Volume os-1 ; os-1 >
+        au < HighWirePressH20Plugin ; manifest ; 1983 ; International Journal of Music Education Volume os-2 ; os-2 >
+        au < HighWirePressH20Plugin ; manifest ; 1984 ; International Journal of Music Education Volume os-3 ; os-3 >
+        au < HighWirePressH20Plugin ; manifest ; 1984 ; International Journal of Music Education Volume os-4 ; os-4 >
+        au < HighWirePressH20Plugin ; manifest ; 1985 ; International Journal of Music Education Volume os-5 ; os-5 >
+        au < HighWirePressH20Plugin ; manifest ; 1985 ; International Journal of Music Education Volume os-6 ; os-6 >
+        au < HighWirePressH20Plugin ; manifest ; 1986 ; International Journal of Music Education Volume os-7 ; os-7 >
+        au < HighWirePressH20Plugin ; manifest ; 1986 ; International Journal of Music Education Volume os-8 ; os-8 >
+        au < HighWirePressH20Plugin ; manifest ; 1987 ; International Journal of Music Education Volume os-9 ; os-9 >
+        au < HighWirePressH20Plugin ; manifest ; 1987 ; International Journal of Music Education Volume os-10 ; os-10 >
+        au < HighWirePressH20Plugin ; manifest ; 1988 ; International Journal of Music Education Volume os-11 ; os-11 >
+        au < HighWirePressH20Plugin ; manifest ; 1988 ; International Journal of Music Education Volume os-12 ; os-12 >
+        au < HighWirePressH20Plugin ; manifest ; 1989 ; International Journal of Music Education Volume os-13 ; os-13 >
+        au < HighWirePressH20Plugin ; manifest ; 1989 ; International Journal of Music Education Volume os-14 ; os-14 >
+        au < HighWirePressH20Plugin ; manifest ; 1990 ; International Journal of Music Education Volume os-15 ; os-15 >
+        au < HighWirePressH20Plugin ; manifest ; 1990 ; International Journal of Music Education Volume os-16 ; os-16 >
+        au < HighWirePressH20Plugin ; manifest ; 1991 ; International Journal of Music Education Volume os-17 ; os-17 >
+        au < HighWirePressH20Plugin ; manifest ; 1991 ; International Journal of Music Education Volume os-18 ; os-18 >
+        au < HighWirePressH20Plugin ; manifest ; 1992 ; International Journal of Music Education Volume os-19 ; os-19 >
+        au < HighWirePressH20Plugin ; manifest ; 1992 ; International Journal of Music Education Volume os-20 ; os-20 >
+        au < HighWirePressH20Plugin ; manifest ; 1993 ; International Journal of Music Education Volume os-21 ; os-21 >
+        au < HighWirePressH20Plugin ; manifest ; 1993 ; International Journal of Music Education Volume os-22 ; os-22 >
+        au < HighWirePressH20Plugin ; manifest ; 1994 ; International Journal of Music Education Volume os-23 ; os-23 >
+        au < HighWirePressH20Plugin ; manifest ; 1994 ; International Journal of Music Education Volume os-24 ; os-24 >
+        au < HighWirePressH20Plugin ; manifest ; 1995 ; International Journal of Music Education Volume os-25 ; os-25 >
+        au < HighWirePressH20Plugin ; manifest ; 1995 ; International Journal of Music Education Volume os-26 ; os-26 >
+        au < HighWirePressH20Plugin ; manifest ; 1996 ; International Journal of Music Education Volume os-27 ; os-27 >
+        au < HighWirePressH20Plugin ; manifest ; 1996 ; International Journal of Music Education Volume os-28 ; os-28 >
+        au < HighWirePressH20Plugin ; manifest ; 1997 ; International Journal of Music Education Volume os-29 ; os-29 >
+        au < HighWirePressH20Plugin ; manifest ; 1997 ; International Journal of Music Education Volume os-30 ; os-30 >
+        au < HighWirePressH20Plugin ; manifest ; 1998 ; International Journal of Music Education Volume os-31 ; os-31 >
+        au < HighWirePressH20Plugin ; manifest ; 1998 ; International Journal of Music Education Volume os-32 ; os-32 >
+        au < HighWirePressH20Plugin ; manifest ; 1999 ; International Journal of Music Education Volume os-33 ; os-33 >
+        au < HighWirePressH20Plugin ; manifest ; 1999 ; International Journal of Music Education Volume os-34 ; os-34 >
+        au < HighWirePressH20Plugin ; manifest ; 2000 ; International Journal of Music Education Volume os-35 ; os-35 >
+        au < HighWirePressH20Plugin ; manifest ; 2000 ; International Journal of Music Education Volume os-36 ; os-36 >
+        au < HighWirePressH20Plugin ; manifest ; 2001 ; International Journal of Music Education Volume os-37 ; os-37 >
+        au < HighWirePressH20Plugin ; manifest ; 2001 ; International Journal of Music Education Volume os-38 ; os-38 >
+        au < HighWirePressH20Plugin ; manifest ; 2002 ; International Journal of Music Education Volume os-39 ; os-39 >
+        au < HighWirePressH20Plugin ; manifest ; 2003 ; International Journal of Music Education Volume os-40 ; os-40 >
         au < HighWirePressH20Plugin ; manifest ; 2004 ; International Journal of Music Education Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; 2005 ; International Journal of Music Education Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; down ; 2006 ; International Journal of Music Education Volume 24 ; 24 >
@@ -15896,23 +15896,23 @@
         param[base_url] = http://irv.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < exists ; 1990 ; International Review of Victimology Volume 1 ; 1 >
-        au < exists ; 1991 ; International Review of Victimology Volume 2 ; 2 >
-        au < exists ; 1992 ; International Review of Victimology Volume 3 ; 3 >
-        au < exists ; 1993 ; International Review of Victimology Volume 4 ; 4 >
-        au < exists ; 1994 ; International Review of Victimology Volume 5 ; 5 >
-        au < exists ; 1995 ; International Review of Victimology Volume 6 ; 6 >
-        au < exists ; 1996 ; International Review of Victimology Volume 7 ; 7 >
-        au < exists ; 1997 ; International Review of Victimology Volume 8 ; 8 >
-        au < exists ; 1998 ; International Review of Victimology Volume 9 ; 9 >
-        au < exists ; 1999 ; International Review of Victimology Volume 10 ; 10 >
-        au < exists ; 2000 ; International Review of Victimology Volume 11 ; 11 >
-        au < exists ; 2001 ; International Review of Victimology Volume 12 ; 12 >
-        au < exists ; 2002 ; International Review of Victimology Volume 13 ; 13 >
-        au < exists ; 2003 ; International Review of Victimology Volume 14 ; 14 >
-        au < exists ; 2004 ; International Review of Victimology Volume 15 ; 15 >
-        au < exists ; 2005 ; International Review of Victimology Volume 16 ; 16 >
-        au < exists ; 2006 ; International Review of Victimology Volume 17 ; 17 >
+        au < manifest ; 1990 ; International Review of Victimology Volume 1 ; 1 >
+        au < manifest ; 1991 ; International Review of Victimology Volume 2 ; 2 >
+        au < manifest ; 1992 ; International Review of Victimology Volume 3 ; 3 >
+        au < manifest ; 1993 ; International Review of Victimology Volume 4 ; 4 >
+        au < manifest ; 1994 ; International Review of Victimology Volume 5 ; 5 >
+        au < manifest ; 1995 ; International Review of Victimology Volume 6 ; 6 >
+        au < manifest ; 1996 ; International Review of Victimology Volume 7 ; 7 >
+        au < manifest ; 1997 ; International Review of Victimology Volume 8 ; 8 >
+        au < manifest ; 1998 ; International Review of Victimology Volume 9 ; 9 >
+        au < manifest ; 1999 ; International Review of Victimology Volume 10 ; 10 >
+        au < manifest ; 2000 ; International Review of Victimology Volume 11 ; 11 >
+        au < manifest ; 2001 ; International Review of Victimology Volume 12 ; 12 >
+        au < manifest ; 2002 ; International Review of Victimology Volume 13 ; 13 >
+        au < manifest ; 2003 ; International Review of Victimology Volume 14 ; 14 >
+        au < manifest ; 2004 ; International Review of Victimology Volume 15 ; 15 >
+        au < manifest ; 2005 ; International Review of Victimology Volume 16 ; 16 >
+        au < manifest ; 2006 ; International Review of Victimology Volume 17 ; 17 >
   
       }
   
@@ -16642,17 +16642,17 @@
         param[base_url] = http://joa.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1999-2000 ; Journal of Advanced Academics Volume 11 ; 11 >
-        au < exists ; 2000-2001 ; Journal of Advanced Academics Volume 12 ; 12 >
-        au < exists ; 2001-2002 ; Journal of Advanced Academics Volume 13 ; 13 >
-        au < exists ; 2002-2003 ; Journal of Advanced Academics Volume 14 ; 14 >
-        au < exists ; 2003-2004 ; Journal of Advanced Academics Volume 15 ; 15 >
-        au < exists ; 2004-2005 ; Journal of Advanced Academics Volume 16 ; 16 >
-        au < exists ; 2005-2006 ; Journal of Advanced Academics Volume 17 ; 17 >
-        au < exists ; 2006-2007 ; Journal of Advanced Academics Volume 18 ; 18 >
-        au < exists ; 2007-2008 ; Journal of Advanced Academics Volume 19 ; 19 >
-        au < exists ; 2008-2009 ; Journal of Advanced Academics Volume 20 ; 20 >
-        au < exists ; 2009-2010 ; Journal of Advanced Academics Volume 21 ; 21 >
+        au < manifest ; 1999-2000 ; Journal of Advanced Academics Volume 11 ; 11 >
+        au < manifest ; 2000-2001 ; Journal of Advanced Academics Volume 12 ; 12 >
+        au < manifest ; 2001-2002 ; Journal of Advanced Academics Volume 13 ; 13 >
+        au < manifest ; 2002-2003 ; Journal of Advanced Academics Volume 14 ; 14 >
+        au < manifest ; 2003-2004 ; Journal of Advanced Academics Volume 15 ; 15 >
+        au < manifest ; 2004-2005 ; Journal of Advanced Academics Volume 16 ; 16 >
+        au < manifest ; 2005-2006 ; Journal of Advanced Academics Volume 17 ; 17 >
+        au < manifest ; 2006-2007 ; Journal of Advanced Academics Volume 18 ; 18 >
+        au < manifest ; 2007-2008 ; Journal of Advanced Academics Volume 19 ; 19 >
+        au < manifest ; 2008-2009 ; Journal of Advanced Academics Volume 20 ; 20 >
+        au < manifest ; 2009-2010 ; Journal of Advanced Academics Volume 21 ; 21 >
         au < manifest ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 >
         au < manifest ; 2011-2012 ; Journal of Advanced Academics Volume 23 ; 23 >
         au < expected ; 2012-2013 ; Journal of Advanced Academics Volume 24 ; 24 >
@@ -22392,7 +22392,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < doNotProcess ; 2009 ; Journal of Librarianship and Information Science Volume 41 ; 41 >
         au < manifest ; 2010 ; Journal of Librarianship and Information Science Volume 42 ; 42 >
         au < manifest ; 2011 ; Journal of Librarianship and Information Science Volume 43 ; 43 >
-        au < expected ; 2012 ; Journal of Librarianship and Information Science Volume 44 ; 44 >
+        au < manifest ; 2012 ; Journal of Librarianship and Information Science Volume 44 ; 44 >
 
       }
 
@@ -24902,7 +24902,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Journal of the American Psychiatric Nurses Association Volume 15 ; 15 >
         au < manifest ; 2010 ; Journal of the American Psychiatric Nurses Association Volume 16 ; 16 >
         au < manifest ; 2011 ; Journal of the American Psychiatric Nurses Association Volume 17 ; 17 >
-        au < expected ; 2012 ; Journal of the American Psychiatric Nurses Association Volume 18 ; 18 >
+        au < manifest ; 2012 ; Journal of the American Psychiatric Nurses Association Volume 18 ; 18 >
 
       }
 
@@ -25013,65 +25013,64 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
 
-        au < exists ; 1911 ; Journal of the Institution of Locomotive Engineers Volume 1 ; 1 >
-        au < exists ; 1912 ; Journal of the Institution of Locomotive Engineers Volume 2 ; 2 >
-        au < exists ; 1913 ; Journal of the Institution of Locomotive Engineers Volume 3 ; 3 >
-        au < exists ; 1914 ; Journal of the Institution of Locomotive Engineers Volume 4 ; 4 >
-        au < exists ; 1915 ; Journal of the Institution of Locomotive Engineers Volume 5 ; 5 >
-        au < exists ; 1916 ; Journal of the Institution of Locomotive Engineers Volume 6 ; 6 >
-        au < exists ; 1917 ; Journal of the Institution of Locomotive Engineers Volume 7 ; 7 >
-        au < exists ; 1918 ; Journal of the Institution of Locomotive Engineers Volume 8 ; 8 >
-        au < exists ; 1919 ; Journal of the Institution of Locomotive Engineers Volume 9 ; 9 >
-        au < exists ; 1920 ; Journal of the Institution of Locomotive Engineers Volume 10 ; 10 >
-        au < exists ; 1921 ; Journal of the Institution of Locomotive Engineers Volume 11 ; 11 >
-        au < exists ; 1922 ; Journal of the Institution of Locomotive Engineers Volume 12 ; 12 >
-        au < exists ; 1923 ; Journal of the Institution of Locomotive Engineers Volume 13 ; 13 >
-        au < exists ; 1924 ; Journal of the Institution of Locomotive Engineers Volume 14 ; 14 >
-        au < exists ; 1925 ; Journal of the Institution of Locomotive Engineers Volume 15 ; 15 >
-        au < exists ; 1926 ; Journal of the Institution of Locomotive Engineers Volume 16 ; 16 >
-        au < exists ; 1927 ; Journal of the Institution of Locomotive Engineers Volume 17 ; 17 >
-        au < exists ; 1928 ; Journal of the Institution of Locomotive Engineers Volume 18 ; 18 >
-        au < exists ; 1929 ; Journal of the Institution of Locomotive Engineers Volume 19 ; 19 >
-        au < exists ; 1930 ; Journal of the Institution of Locomotive Engineers Volume 20 ; 20 >
-        au < exists ; 1931 ; Journal of the Institution of Locomotive Engineers Volume 21 ; 21 >
-        au < exists ; 1932 ; Journal of the Institution of Locomotive Engineers Volume 22 ; 22 >
-        au < exists ; 1933 ; Journal of the Institution of Locomotive Engineers Volume 23 ; 23 >
-        au < exists ; 1934 ; Journal of the Institution of Locomotive Engineers Volume 24 ; 24 >
-        au < exists ; 1935 ; Journal of the Institution of Locomotive Engineers Volume 25 ; 25 >
-        au < exists ; 1936 ; Journal of the Institution of Locomotive Engineers Volume 26 ; 26 >
-        au < exists ; 1937 ; Journal of the Institution of Locomotive Engineers Volume 27 ; 27 >
-        au < exists ; 1938 ; Journal of the Institution of Locomotive Engineers Volume 28 ; 28 >
-        au < exists ; 1939 ; Journal of the Institution of Locomotive Engineers Volume 29 ; 29 >
-        au < exists ; 1940 ; Journal of the Institution of Locomotive Engineers Volume 30 ; 30 >
-        au < exists ; 1941 ; Journal of the Institution of Locomotive Engineers Volume 31 ; 31 >
-        au < exists ; 1942 ; Journal of the Institution of Locomotive Engineers Volume 32 ; 32 >
-        au < exists ; 1943 ; Journal of the Institution of Locomotive Engineers Volume 33 ; 33 >
-        au < exists ; 1944 ; Journal of the Institution of Locomotive Engineers Volume 34 ; 34 >
-        au < exists ; 1945 ; Journal of the Institution of Locomotive Engineers Volume 35 ; 35 >
-        au < exists ; 1946 ; Journal of the Institution of Locomotive Engineers Volume 36 ; 36 >
-        au < exists ; 1947 ; Journal of the Institution of Locomotive Engineers Volume 37 ; 37 >
-        au < exists ; 1948 ; Journal of the Institution of Locomotive Engineers Volume 38 ; 38 >
-        au < exists ; 1949 ; Journal of the Institution of Locomotive Engineers Volume 39 ; 39 >
-        au < exists ; 1950 ; Journal of the Institution of Locomotive Engineers Volume 40 ; 40 >
-        au < exists ; 1951 ; Journal of the Institution of Locomotive Engineers Volume 41 ; 41 >
-        au < exists ; 1952 ; Journal of the Institution of Locomotive Engineers Volume 42 ; 42 >
-        au < exists ; 1953 ; Journal of the Institution of Locomotive Engineers Volume 43 ; 43 >
-        au < exists ; 1954 ; Journal of the Institution of Locomotive Engineers Volume 44 ; 44 >
-        au < exists ; 1955 ; Journal of the Institution of Locomotive Engineers Volume 45 ; 45 >
-        au < exists ; 1956 ; Journal of the Institution of Locomotive Engineers Volume 46 ; 46 >
-        au < exists ; 1957 ; Journal of the Institution of Locomotive Engineers Volume 47 ; 47 >
-        au < exists ; 1958 ; Journal of the Institution of Locomotive Engineers Volume 48 ; 48 >
-        au < exists ; 1959 ; Journal of the Institution of Locomotive Engineers Volume 49 ; 49 >
-        au < exists ; 1960 ; Journal of the Institution of Locomotive Engineers Volume 50 ; 50 >
-        au < exists ; 1961 ; Journal of the Institution of Locomotive Engineers Volume 51 ; 51 >
-        au < exists ; 1962 ; Journal of the Institution of Locomotive Engineers Volume 52 ; 52 >
-        au < exists ; 1963 ; Journal of the Institution of Locomotive Engineers Volume 53 ; 53 >
-        au < exists ; 1964 ; Journal of the Institution of Locomotive Engineers Volume 54 ; 54 >
-        au < exists ; 1965 ; Journal of the Institution of Locomotive Engineers Volume 55 ; 55 >
-        au < exists ; 1965 ; Journal of the Institution of Locomotive Engineers Volume 55 ; 55 >
-        au < exists ; 1966 ; Journal of the Institution of Locomotive Engineers Volume 56 ; 56 >
-        au < exists ; 1967 ; Journal of the Institution of Locomotive Engineers Volume 57 ; 57 >
-        au < exists ; 1968 ; Journal of the Institution of Locomotive Engineers Volume 58 ; 58 >
+        au < manifest ; 1911 ; Journal of the Institution of Locomotive Engineers Volume 1 ; 1 >
+        au < manifest ; 1912 ; Journal of the Institution of Locomotive Engineers Volume 2 ; 2 >
+        au < manifest ; 1913 ; Journal of the Institution of Locomotive Engineers Volume 3 ; 3 >
+        au < manifest ; 1914 ; Journal of the Institution of Locomotive Engineers Volume 4 ; 4 >
+        au < manifest ; 1915 ; Journal of the Institution of Locomotive Engineers Volume 5 ; 5 >
+        au < manifest ; 1916 ; Journal of the Institution of Locomotive Engineers Volume 6 ; 6 >
+        au < manifest ; 1917 ; Journal of the Institution of Locomotive Engineers Volume 7 ; 7 >
+        au < manifest ; 1918 ; Journal of the Institution of Locomotive Engineers Volume 8 ; 8 >
+        au < manifest ; 1919 ; Journal of the Institution of Locomotive Engineers Volume 9 ; 9 >
+        au < manifest ; 1920 ; Journal of the Institution of Locomotive Engineers Volume 10 ; 10 >
+        au < manifest ; 1921 ; Journal of the Institution of Locomotive Engineers Volume 11 ; 11 >
+        au < manifest ; 1922 ; Journal of the Institution of Locomotive Engineers Volume 12 ; 12 >
+        au < manifest ; 1923 ; Journal of the Institution of Locomotive Engineers Volume 13 ; 13 >
+        au < manifest ; 1924 ; Journal of the Institution of Locomotive Engineers Volume 14 ; 14 >
+        au < manifest ; 1925 ; Journal of the Institution of Locomotive Engineers Volume 15 ; 15 >
+        au < manifest ; 1926 ; Journal of the Institution of Locomotive Engineers Volume 16 ; 16 >
+        au < manifest ; 1927 ; Journal of the Institution of Locomotive Engineers Volume 17 ; 17 >
+        au < manifest ; 1928 ; Journal of the Institution of Locomotive Engineers Volume 18 ; 18 >
+        au < manifest ; 1929 ; Journal of the Institution of Locomotive Engineers Volume 19 ; 19 >
+        au < manifest ; 1930 ; Journal of the Institution of Locomotive Engineers Volume 20 ; 20 >
+        au < manifest ; 1931 ; Journal of the Institution of Locomotive Engineers Volume 21 ; 21 >
+        au < manifest ; 1932 ; Journal of the Institution of Locomotive Engineers Volume 22 ; 22 >
+        au < manifest ; 1933 ; Journal of the Institution of Locomotive Engineers Volume 23 ; 23 >
+        au < manifest ; 1934 ; Journal of the Institution of Locomotive Engineers Volume 24 ; 24 >
+        au < manifest ; 1935 ; Journal of the Institution of Locomotive Engineers Volume 25 ; 25 >
+        au < manifest ; 1936 ; Journal of the Institution of Locomotive Engineers Volume 26 ; 26 >
+        au < manifest ; 1937 ; Journal of the Institution of Locomotive Engineers Volume 27 ; 27 >
+        au < manifest ; 1938 ; Journal of the Institution of Locomotive Engineers Volume 28 ; 28 >
+        au < manifest ; 1939 ; Journal of the Institution of Locomotive Engineers Volume 29 ; 29 >
+        au < manifest ; 1940 ; Journal of the Institution of Locomotive Engineers Volume 30 ; 30 >
+        au < manifest ; 1941 ; Journal of the Institution of Locomotive Engineers Volume 31 ; 31 >
+        au < manifest ; 1942 ; Journal of the Institution of Locomotive Engineers Volume 32 ; 32 >
+        au < manifest ; 1943 ; Journal of the Institution of Locomotive Engineers Volume 33 ; 33 >
+        au < manifest ; 1944 ; Journal of the Institution of Locomotive Engineers Volume 34 ; 34 >
+        au < manifest ; 1945 ; Journal of the Institution of Locomotive Engineers Volume 35 ; 35 >
+        au < manifest ; 1946 ; Journal of the Institution of Locomotive Engineers Volume 36 ; 36 >
+        au < manifest ; 1947 ; Journal of the Institution of Locomotive Engineers Volume 37 ; 37 >
+        au < manifest ; 1948 ; Journal of the Institution of Locomotive Engineers Volume 38 ; 38 >
+        au < manifest ; 1949 ; Journal of the Institution of Locomotive Engineers Volume 39 ; 39 >
+        au < manifest ; 1950 ; Journal of the Institution of Locomotive Engineers Volume 40 ; 40 >
+        au < manifest ; 1951 ; Journal of the Institution of Locomotive Engineers Volume 41 ; 41 >
+        au < manifest ; 1952 ; Journal of the Institution of Locomotive Engineers Volume 42 ; 42 >
+        au < doesNotExist ; 1953 ; Journal of the Institution of Locomotive Engineers Volume 43 ; 43 >
+        au < manifest ; 1954 ; Journal of the Institution of Locomotive Engineers Volume 44 ; 44 >
+        au < manifest ; 1955 ; Journal of the Institution of Locomotive Engineers Volume 45 ; 45 >
+        au < manifest ; 1956 ; Journal of the Institution of Locomotive Engineers Volume 46 ; 46 >
+        au < manifest ; 1957 ; Journal of the Institution of Locomotive Engineers Volume 47 ; 47 >
+        au < manifest ; 1958 ; Journal of the Institution of Locomotive Engineers Volume 48 ; 48 >
+        au < manifest ; 1959 ; Journal of the Institution of Locomotive Engineers Volume 49 ; 49 >
+        au < manifest ; 1960 ; Journal of the Institution of Locomotive Engineers Volume 50 ; 50 >
+        au < manifest ; 1961 ; Journal of the Institution of Locomotive Engineers Volume 51 ; 51 >
+        au < manifest ; 1962 ; Journal of the Institution of Locomotive Engineers Volume 52 ; 52 >
+        au < manifest ; 1963 ; Journal of the Institution of Locomotive Engineers Volume 53 ; 53 >
+        au < manifest ; 1964 ; Journal of the Institution of Locomotive Engineers Volume 54 ; 54 >
+        au < manifest ; 1965 ; Journal of the Institution of Locomotive Engineers Volume 55 ; 55 >
+        au < manifest ; 1966 ; Journal of the Institution of Locomotive Engineers Volume 56 ; 56 >
+        au < manifest ; 1967 ; Journal of the Institution of Locomotive Engineers Volume 57 ; 57 >
+        au < manifest ; 1968 ; Journal of the Institution of Locomotive Engineers Volume 58 ; 58 >
         au < manifest ; 1969 ; Journal of the Institution of Locomotive Engineers Volume 59 ; 59 >
 
       }
@@ -26029,7 +26028,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2009 ; Journalism & Mass Communication Educator Volume 64 ; 64 >
         au < exists ; 2010 ; Journalism & Mass Communication Educator Volume 65 ; 65 >
         au < notReady ; 2011 ; Journalism & Mass Communication Educator Volume 66 ; 66 >
-        au < expected ; 2012 ; Journalism & Mass Communication Educator Volume 67 ; 67 >
+        au < manifest ; 2012 ; Journalism & Mass Communication Educator Volume 67 ; 67 >
 
       }
 
@@ -27084,7 +27083,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Margin: The Journal of Applied Economic Research Volume 3 ; 3 >
         au < manifest ; 2010 ; Margin: The Journal of Applied Economic Research Volume 4 ; 4 >
         au < manifest ; 2011 ; Margin: The Journal of Applied Economic Research Volume 5 ; 5 >
-        au < expected ; 2012 ; Margin: The Journal of Applied Economic Research Volume 6 ; 6 >
+        au < manifest ; 2012 ; Margin: The Journal of Applied Economic Research Volume 6 ; 6 >
 
       }
 
@@ -27398,7 +27397,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Medical Care Research and Review Volume 66 ; 66 >
         au < manifest ; 2010 ; Medical Care Research and Review Volume 67 ; 67 >
         au < manifest ; 2011 ; Medical Care Research and Review Volume 68 ; 68 >
-        au < expected ; 2012 ; Medical Care Research and Review Volume 69 ; 69 >
+        au < manifest ; 2012 ; Medical Care Research and Review Volume 69 ; 69 >
 
       }
 
@@ -30277,11 +30276,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pro.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2007 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 51 ; 51 >
-        au < exists ; 2008 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 52 ; 52 >
-        au < exists ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 >
-        au < exists ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 >
-        au < exists ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 >
+        au < manifest ; 2007 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 51 ; 51 >
+        au < manifest ; 2008 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 52 ; 52 >
+        au < manifest ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 >
+        au < manifest ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 >
+        au < manifest ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 >
         au < expected ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 56 ; 56 >
 
       }
@@ -30944,7 +30943,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Progress in Development Studies Volume 9 ; 9 >
         au < manifest ; 2010 ; Progress in Development Studies Volume 10 ; 10 >
         au < ready ; 2011 ; Progress in Development Studies Volume 11 ; 11 >
-        au < expected ; 2012 ; Progress in Development Studies Volume 12 ; 12 >
+        au < manifest ; 2012 ; Progress in Development Studies Volume 12 ; 12 >
 
       }
 
@@ -32061,7 +32060,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Rationality and Society Volume 21 ; 21 >
         au < manifest ; 2010 ; Rationality and Society Volume 22 ; 22 >
         au < ready ; 2011 ; Rationality and Society Volume 23 ; 23 >
-        au < expected ; 2012 ; Rationality and Society Volume 24 ; 24 >
+        au < manifest ; 2012 ; Rationality and Society Volume 24 ; 24 >
 
       }
 
@@ -36155,18 +36154,18 @@ comment[mpj] = now published by Brill
         au < manifest ; 1981 ; Thesis Eleven Volume 2 ; 2 >
         au < manifest ; 1981 ; Thesis Eleven Volume 3 ; 3 >
         au < manifest ; 1982 ; Thesis Eleven Volume 4 ; 4 >
-        au < exists ; 1982 ; Thesis Eleven Volume 5-6 ; 5-6 >
+        au < manifest ; 1982 ; Thesis Eleven Volume 5-6 ; 5-6 >
         au < manifest ; 1983 ; Thesis Eleven Volume 7 ; 7 >
         au < manifest ; 1984 ; Thesis Eleven Volume 8 ; 8 >
         au < manifest ; 1984 ; Thesis Eleven Volume 9 ; 9 >
-        au < exists ; 1985 ; Thesis Eleven Volume 10-11 ; 10-11 >
+        au < manifest ; 1985 ; Thesis Eleven Volume 10-11 ; 10-11 >
         au < manifest ; 1985 ; Thesis Eleven Volume 12 ; 12 >
         au < manifest ; 1986 ; Thesis Eleven Volume 13 ; 13 >
         au < manifest ; 1986 ; Thesis Eleven Volume 14 ; 14 >
         au < manifest ; 1986 ; Thesis Eleven Volume 15 ; 15 >
         au < manifest ; 1987 ; Thesis Eleven Volume 16 ; 16 >
         au < manifest ; 1987 ; Thesis Eleven Volume 17 ; 17 >
-        au < exists ; 1987 ; Thesis Eleven Volume 18-19 ; 18-19 >
+        au < manifest ; 1987 ; Thesis Eleven Volume 18-19 ; 18-19 >
         au < manifest ; 1988 ; Thesis Eleven Volume 20 ; 20 >
         au < manifest ; 1988 ; Thesis Eleven Volume 21 ; 21 >
         au < manifest ; 1989 ; Thesis Eleven Volume 22 ; 22 >
