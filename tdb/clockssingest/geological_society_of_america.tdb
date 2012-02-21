@@ -266,7 +266,7 @@
     
       implicit < status ; status2 ; year ; name ; param[volume_name] >
     
-      au < exists ; exists ; 1999 ; GSA Field Guides Volume 1 ; 1 >
+      au < manifest ; exists ; 1999 ; GSA Field Guides Volume 1 ; 1 >
       au < manifest ; exists ; 2000 ; GSA Field Guides Volume 2 ; 2 >
       au < manifest ; exists ; 2002 ; GSA Field Guides Volume 3 ; 3 >
       au < manifest ; exists ; 2003 ; GSA Field Guides Volume 4 ; 4 >
