@@ -799,6 +799,7 @@
       au < manifest ; 2003 ; Public Papers of the Presidents of the United States 2003 ; 2003 >
       au < manifest ; 2004 ; Public Papers of the Presidents of the United States 2004 ; 2004 >
       au < testing ; 2005 ; Public Papers of the Presidents of the United States 2005 ; 2005 >
+      au < manifest ; 2006 ; Public Papers of the Presidents of the United States 2006 ; 2006 >
 
     }
 
@@ -881,6 +882,8 @@
       au < manifest ; 2007 ; United States Government Manual 2007 ; 2007 >
       au < manifest ; 2008 ; United States Government Manual 2008 ; 2008 >
       au < manifest ; 2009 ; United States Government Manual 2009 ; 2009 >
+      au < doesNotExist ; 2010 ; United States Government Manual 2010 ; 2010 >
+      au < manifest ; 2011 ; United States Government Manual 2011 ; 2011 >
 
     }
 
@@ -898,6 +901,29 @@
     implicit < status ; year ; name ; param[year] >
 
     au < manifest ; 1951 ; United States Statutes at Large 1951 ; 1951 >
+    au < manifest ; 1952 ; United States Statutes at Large 1952 ; 1952 >
+    au < manifest ; 1953 ; United States Statutes at Large 1953 ; 1953 >
+    au < manifest ; 1954 ; United States Statutes at Large 1954 ; 1954 >
+    au < manifest ; 1955 ; United States Statutes at Large 1955 ; 1955 >
+    au < manifest ; 1956 ; United States Statutes at Large 1956 ; 1956 >
+    au < manifest ; 1957 ; United States Statutes at Large 1957 ; 1957 >
+    au < manifest ; 1958 ; United States Statutes at Large 1958 ; 1958 >
+    au < manifest ; 1959 ; United States Statutes at Large 1959 ; 1959 >
+    au < manifest ; 1960 ; United States Statutes at Large 1960 ; 1960 >
+    au < manifest ; 1961 ; United States Statutes at Large 1961 ; 1961 >
+    au < manifest ; 1962 ; United States Statutes at Large 1962 ; 1962 >
+    au < manifest ; 1963 ; United States Statutes at Large 1963 ; 1963 >
+    au < manifest ; 1964 ; United States Statutes at Large 1964 ; 1964 >
+    au < manifest ; 1965 ; United States Statutes at Large 1965 ; 1965 >
+    au < manifest ; 1966 ; United States Statutes at Large 1966 ; 1966 >
+    au < manifest ; 1967 ; United States Statutes at Large 1967 ; 1967 >
+    au < manifest ; 1968 ; United States Statutes at Large 1968 ; 1968 >
+    au < manifest ; 1969 ; United States Statutes at Large 1969 ; 1969 >
+
+
+
+
+
     au < manifest ; 2003 ; United States Statutes at Large 2003 ; 2003 >
     au < manifest ; 2004 ; United States Statutes at Large 2004 ; 2004 >
     au < testing ; 2005 ; United States Statutes at Large 2005 ; 2005 >
