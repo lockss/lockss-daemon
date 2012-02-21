@@ -14046,6 +14046,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 ; >
     au < released ; crawling ; 2010 ; Oxford Journal of Legal Studies Volume 30 ; 30 ; >
     au < released ; manifest ; 2011 ; Oxford Journal of Legal Studies Volume 31 ; 31 ; >
+    au < expected ; exists ; 2012 ; Oxford Journal of Legal Studies Volume 32 ; 32 ; >
 
     }
 
@@ -14101,6 +14102,8 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Oxford Review of Economic Policy Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; Oxford Review of Economic Policy Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2011 ; Oxford Review of Economic Policy Volume 27 ; 27 ; >
+    au < expected ; exists ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 ; >
 
     }
 
@@ -14195,6 +14198,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Parliamentary Affairs Volume 62 ; 62 ; >
     au < released ; crawling ; 2010 ; Parliamentary Affairs Volume 63 ; 63 ; >
     au < released ; manifest ; 2011 ; Parliamentary Affairs Volume 64 ; 64 ; >
+    au < manifest ; exists ; 2012 ; Parliamentary Affairs Volume 65 ; 65 ; >
 
     }
 
@@ -14439,6 +14443,12 @@
     au < released ; crawling ; 2010 ; Past & Present Volume 209 ; 209 ; >
     au < released ; manifest ; 2011 ; Past & Present Volume 210 ; 210 ; >
     au < released ; manifest ; 2011 ; Past & Present Volume 211 ; 211 ; >
+    au < manifest ; exists ; 2011 ; Past & Present Volume 212 ; 212 ; >
+    au < manifest ; exists ; 2011 ; Past & Present Volume 213 ; 213 ; >
+    au < expected ; exists ; 2012 ; Past & Present Volume 214 ; 214 ; >
+    au < expected ; exists ; 2012 ; Past & Present Volume 215 ; 215 ; >
+    au < expected ; exists ; 2012 ; Past & Present Volume 216 ; 216 ; >
+    au < expected ; exists ; 2012 ; Past & Present Volume 217 ; 217 ; >
 
     }
     
@@ -14467,6 +14477,8 @@
 
     param[base_url] = http://philmat.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    comment[0] = manifests are duplicated i.e. volume s1-8 and volume 18
 
     au < manifest ; exists ; 1964 ; Philosophia Mathematica Volume s1-1 ; s1-1 ; >
     au < manifest ; exists ; 1965 ; Philosophia Mathematica Volume s1-2 ; s1-2 ; >
@@ -14510,6 +14522,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Philosophia Mathematica Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Philosophia Mathematica Volume 18 ; 18 ; >
     au < released ; manifest ; 2011 ; Philosophia Mathematica Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2012 ; Philosophia Mathematica Volume 20 ; 20 ; >
 
     }
 
@@ -14591,6 +14604,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Plant and Cell Physiology Volume 50 ; 50 ; >
     au < released ; crawling ; 2010 ; Plant and Cell Physiology Volume 51 ; 51 ; >
     au < released ; manifest ; 2011 ; Plant and Cell Physiology Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2012 ; Plant and Cell Physiology Volume 53 ; 53 ; >
 
     }
 
@@ -14625,6 +14639,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
     au < released ; crawling ; 2010 ; Policing: A Journal of Policy and Practice Volume 4 ; 4 ; >
     au < released ; manifest ; 2011 ; Policing: A Journal of Policy and Practice Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2012 ; Policing: A Journal of Policy and Practice Volume 6 ; 6 ; >
 
     }
 
@@ -14673,6 +14688,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Political Analysis Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Political Analysis Volume 18 ; 18 ; >
     au < released ; manifest ; 2011 ; Political Analysis Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2012 ; Political Analysis Volume 20 ; 20 ; >
 
     }
 
