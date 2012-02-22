@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>31</string>
+    <string>32</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -21,6 +21,10 @@
       <entry>
         <string>Metadata</string>
         <string>2</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
       </entry>
     </map>
   </entry>
@@ -104,7 +108,13 @@
 	    <string>&quot;%s%s/journal/v%s/n%s/full/%s.%d.%s.html&quot;, base_url, journal_id, volume_name, issue, journal_id, year, article</string>
 	  </entry>
   	</map>
-  </entry>    
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%s%s/journal/v%s/[^/]+/(full|pdf)/[^/]+\.(html|pdf)$&quot;, base_url, journal_id, volume_name</string>
+    </list>
+  </entry>
   <entry>
     <string>plugin_config_props</string>
     <list>
