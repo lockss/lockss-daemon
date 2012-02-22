@@ -9,20 +9,20 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>74</string>
+    <string>76</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.48.0</string>
+    <string>1.52.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -165,14 +165,14 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>4000</long>
+    <long>6000</long>
   </entry>
   <entry>
     <string>au_mime_rate_limiter_map</string>
     <map>
       <entry>
         <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-        <string>1/4000</string>
+        <string>1/6000</string>
       </entry>
     </map>
   </entry>

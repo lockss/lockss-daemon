@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>75</string>
+    <string>76</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.48.0</string>
+    <string>1.52.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -172,7 +172,7 @@
     <map>
       <entry>
         <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-        <string>1/3250</string>
+        <string>1/6000</string>
       </entry>
     </map>
   </entry>
