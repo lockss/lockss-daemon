@@ -2554,7 +2554,7 @@
     au < released ; crawling ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 >
     au < testing ; exists ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 >
-    au < expected ; exists ; 2012 ; Nature Methods Volume 9 ; 2012 ; 9 >
+    au < manifest ; exists ; 2012 ; Nature Methods Volume 9 ; 2012 ; 9 >
 
   }
 
@@ -2575,7 +2575,7 @@
     au < released ; crawling ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 >
     au < released ; crawling ; 2010 ; Nature Nanotechnology Volume 5 ; 2010 ; 5 >
     au < testing ; exists ; 2011 ; Nature Nanotechnology Volume 6 ; 2011 ; 6 >
-    au < expected ; exists ; 2012 ; Nature Nanotechnology Volume 7 ; 2012 ; 7 >
+    au < manifest ; exists ; 2012 ; Nature Nanotechnology Volume 7 ; 2012 ; 7 >
 
   }
 
@@ -2604,7 +2604,7 @@
     au < released ; crawling ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
     au < released ; crawling ; 2010 ; Nature Neuroscience Volume 13 ; 2010 ; 13 >
     au < testing ; exists ; 2011 ; Nature Neuroscience Volume 14 ; 2011 ; 14 >
-    au < expected ; exists ; 2012 ; Nature Neuroscience Volume 15 ; 2012 ; 15 >
+    au < manifest ; exists ; 2012 ; Nature Neuroscience Volume 15 ; 2012 ; 15 >
 
   }
 
@@ -2619,13 +2619,13 @@
 
     param[journal_id] = nphoton
 
-    au < exists ; exists ; 2006 ; Nature Photonics Volume sample ; 2008 ; sample >
-    au < exists ; exists ; 2007 ; Nature Photonics Volume 1 ; 2007 ; 1 >
+    au < manifest ; exists ; 2006 ; Nature Photonics Volume sample ; 2008 ; sample >
+    au < manifest ; exists ; 2007 ; Nature Photonics Volume 1 ; 2007 ; 1 >
     au < released ; crawling ; 2008 ; Nature Photonics Volume 2 ; 2008 ; 2 >
     au < released ; crawling ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 >
     au < released ; crawling ; 2010 ; Nature Photonics Volume 4 ; 2010 ; 4 >
     au < released ; manifest ; 2011 ; Nature Photonics Volume 5 ; 2011 ; 5 >
-    au < expected ; exists ; 2012 ; Nature Photonics Volume 6 ; 2012 ; 6 >
+    au < manifest ; exists ; 2012 ; Nature Photonics Volume 6 ; 2012 ; 6 >
 
   }
 
@@ -2647,7 +2647,7 @@
     au < released ; crawling ; 2009 ; Nature Physics Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Physics Volume 6 ; 2010 ; 6 >
     au < testing ; exists ; 2011 ; Nature Physics Volume 7 ; 2011 ; 7 >
-    au < expected ; exists ; 2012 ; Nature Physics Volume 8 ; 2012 ; 8 >
+    au < manifest ; exists ; 2012 ; Nature Physics Volume 8 ; 2012 ; 8 >
 
   }
 
@@ -2668,7 +2668,7 @@
     au < released ; crawling ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 >
     au < released ; crawling ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 >
     au < testing ; exists ; 2011 ; Nature Protocols Volume 6 ; 2011 ; 6 >
-    au < exists ; exists ; 2012 ; Nature Protocols Volume 7 ; 2012 ; 7 >
+    au < manifest ; exists ; 2012 ; Nature Protocols Volume 7 ; 2012 ; 7 >
 
   }
 
@@ -2694,7 +2694,7 @@
     au < released ; crawling ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; Nature Reviews Cancer Volume 10 ; 2010 ; 10 >
     au < testing ; exists ; 2011 ; Nature Reviews Cancer Volume 11 ; 2011 ; 11 >
-    au < expected ; exists ; 2012 ; Nature Reviews Cancer Volume 12 ; 2012 ; 12 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Cancer Volume 12 ; 2012 ; 12 >
 
   }
 
@@ -2717,7 +2717,7 @@
     au < released ; crawling ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Cardiology Volume 7 ; 2010 ; 7 >
     au < released ; manifest ; 2011 ; Nature Reviews Cardiology Volume 8 ; 2011 ; 8 >
-    au < expected ; exists ; 2012 ; Nature Reviews Cardiology Volume 9 ; 2012 ; 9 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Cardiology Volume 9 ; 2012 ; 9 >
 
   }
 
@@ -2740,7 +2740,7 @@
     au < released ; crawling ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Clinical Oncology Volume 7 ; 2010 ; 7 >
     au < testing ; exists ; 2011 ; Nature Reviews Clinical Oncology Volume 8 ; 2011 ; 8 >
-    au < expected ; exists ; 2012 ; Nature Reviews Clinical Oncology Volume 9 ; 2012 ; 9 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Clinical Oncology Volume 9 ; 2012 ; 9 >
 
   }
 
@@ -2757,15 +2757,15 @@
 
     au < exists ; exists ; 2002 ; Nature Reviews Drug Discovery Volume 1 ; 2002 ; 1 >
     au < exists ; exists ; 2003 ; Nature Reviews Drug Discovery Volume 2 ; 2003 ; 2 >
-    au < exists ; exists ; 2004 ; Nature Reviews Drug Discovery Volume 3 ; 2004 ; 3 >
+    au < manifest ; exists ; 2004 ; Nature Reviews Drug Discovery Volume 3 ; 2004 ; 3 >
     au < exists ; exists ; 2005 ; Nature Reviews Drug Discovery Volume 4 ; 2005 ; 4 >
     au < exists ; exists ; 2006 ; Nature Reviews Drug Discovery Volume 5 ; 2006 ; 5 >
-    au < exists ; exists ; 2007 ; Nature Reviews Drug Discovery Volume 6 ; 2007 ; 6 >
+    au < manifest ; exists ; 2007 ; Nature Reviews Drug Discovery Volume 6 ; 2007 ; 6 >
     au < released ; crawling ; 2008 ; Nature Reviews Drug Discovery Volume 7 ; 2008 ; 7 >
     au < released ; crawling ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
     au < released ; crawling ; 2010 ; Nature Reviews Drug Discovery Volume 9 ; 2010 ; 9 >
     au < released ; manifest ; 2011 ; Nature Reviews Drug Discovery Volume 10 ; 2011 ; 10 >
-    au < expected ; exists ; 2012 ; Nature Reviews Drug Discovery Volume 11 ; 2012 ; 11 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Drug Discovery Volume 11 ; 2012 ; 11 >
 
   }
 
@@ -2787,7 +2787,7 @@
     au < released ; crawling ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 >
     au < testing ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
-    au < expected ; exists ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 >
 
   }
 
@@ -2810,7 +2810,7 @@
     au < released ; crawling ; 2009 ; Nature Reviews Gastroenterology and Hepatology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Gastroenterology and Hepatology Volume 7 ; 2010 ; 7 >
     au < released ; manifest ; 2011 ; Nature Reviews Gastroenterology and Hepatology Volume 8 ; 2011 ; 8 >
-    au < expected ; exists ; 2012 ; Nature Reviews Gastroenterology and Hepatology Volume 9 ; 2012 ; 9 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Gastroenterology and Hepatology Volume 9 ; 2012 ; 9 >
 
   }
 
@@ -2837,7 +2837,7 @@
     au < released ; crawling ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Reviews Genetics Volume 11 ; 2010 ; 11 >
     au < released ; manifest ; 2011 ; Nature Reviews Genetics Volume 12 ; 2011 ; 12 >
-    au < expected ; exists ; 2012 ; Nature Reviews Genetics Volume 13 ; 2012 ; 13 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Genetics Volume 13 ; 2012 ; 13 >
 
   }
 
@@ -2863,7 +2863,7 @@
     au < released ; crawling ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; Nature Reviews Immunology Volume 10 ; 2010 ; 10 >
     au < released ; manifest ; 2011 ; Nature Reviews Immunology Volume 11 ; 2011 ; 11 >
-    au < expected ; exists ; 2012 ; Nature Reviews Immunology Volume 12 ; 2012 ; 12 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Immunology Volume 12 ; 2012 ; 12 >
 
   }
 
@@ -2880,14 +2880,14 @@
 
     au < exists ; exists ; 2003 ; Nature Reviews Microbiology Volume 1 ; 2003 ; 1 >
     au < exists ; exists ; 2004 ; Nature Reviews Microbiology Volume 2 ; 2004 ; 2 >
-    au < exists ; exists ; 2005 ; Nature Reviews Microbiology Volume 3 ; 2005 ; 3 >
+    au < manifest ; exists ; 2005 ; Nature Reviews Microbiology Volume 3 ; 2005 ; 3 >
     au < exists ; exists ; 2006 ; Nature Reviews Microbiology Volume 4 ; 2006 ; 4 >
     au < exists ; exists ; 2007 ; Nature Reviews Microbiology Volume 5 ; 2007 ; 5 >
     au < released ; crawling ; 2008 ; Nature Reviews Microbiology Volume 6 ; 2008 ; 6 >
     au < released ; crawling ; 2009 ; Nature Reviews Microbiology Volume 7 ; 2009 ; 7 >
     au < released ; crawling ; 2010 ; Nature Reviews Microbiology Volume 8 ; 2010 ; 8 >
     au < released ; manifest ; 2011 ; Nature Reviews Microbiology Volume 9 ; 2011 ; 9 >
-    au < expected ; exists ; 2012 ; Nature Reviews Microbiology Volume 10 ; 2012 ; 10 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Microbiology Volume 10 ; 2012 ; 10 >
 
   }
 
@@ -2903,7 +2903,7 @@
     param[journal_id] = nrm
 
     au < exists ; exists ; 2000 ; Nature Reviews Molecular Cell Biology Volume 1 ; 2000 ; 1 >
-    au < exists ; exists ; 2001 ; Nature Reviews Molecular Cell Biology Volume 2 ; 2001 ; 2 >
+    au < manifest ; exists ; 2001 ; Nature Reviews Molecular Cell Biology Volume 2 ; 2001 ; 2 >
     au < exists ; exists ; 2002 ; Nature Reviews Molecular Cell Biology Volume 3 ; 2002 ; 3 >
     au < exists ; exists ; 2003 ; Nature Reviews Molecular Cell Biology Volume 4 ; 2003 ; 4 >
     au < exists ; exists ; 2004 ; Nature Reviews Molecular Cell Biology Volume 5 ; 2004 ; 5 >
@@ -2914,7 +2914,7 @@
     au < released ; crawling ; 2009 ; Nature Reviews Molecular Cell Biology Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Reviews Molecular Cell Biology Volume 11 ; 2010 ; 11 >
     au < released ; manifest ; 2011 ; Nature Reviews Molecular Cell Biology Volume 12 ; 2011 ; 12 >
-    au < expected ; exists ; 2012 ; Nature Reviews Molecular Cell Biology Volume 13 ; 2012 ; 13 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Molecular Cell Biology Volume 13 ; 2012 ; 13 >
 
   }
 
@@ -2936,7 +2936,7 @@
     au < released ; crawling ; 2009 ; Nature Reviews Nephrology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Nephrology Volume 6 ; 2010 ; 6 >
     au < released ; manifest ; 2011 ; Nature Reviews Nephrology Volume 7 ; 2011 ; 7 >
-    au < expected ; exists ; 2012 ; Nature Reviews Nephrology Volume 8 ; 2012 ; 8 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Nephrology Volume 8 ; 2012 ; 8 >
 
   }
 
@@ -2958,7 +2958,7 @@
     au < released ; crawling ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 >
     au < released ; manifest ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 >
-    au < expected ; exists ; 2012 ; Nature Reviews Neurology Volume 8 ; 2012 ; 8 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Neurology Volume 8 ; 2012 ; 8 >
 
   }
 
@@ -2985,7 +2985,7 @@
     au < released ; crawling ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Reviews Neuroscience Volume 11 ; 2010 ; 11 >
     au < released ; manifest ; 2011 ; Nature Reviews Neuroscience Volume 12 ; 2011 ; 12 >
-    au < expected ; exists ; 2012 ; Nature Reviews Neuroscience Volume 13 ; 2012 ; 13 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Neuroscience Volume 13 ; 2012 ; 13 >
 
   }
 
@@ -3007,7 +3007,7 @@
     au < released ; crawling ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 >
     au < released ; manifest ; 2011 ; Nature Reviews Rheumatology Volume 7 ; 2011 ; 7 >
-    au < expected ; exists ; 2012 ; Nature Reviews Rheumatology Volume 8 ; 2012 ; 8 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Rheumatology Volume 8 ; 2012 ; 8 >
 
   }
 
@@ -3030,7 +3030,7 @@
     au < released ; crawling ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 >
     au < released ; manifest ; 2011 ; Nature Reviews Urology Volume 8 ; 2011 ; 8 >
-    au < expected ; exists ; 2012 ; Nature Reviews Urology Volume 9 ; 2012 ; 9 >
+    au < manifest ; exists ; 2012 ; Nature Reviews Urology Volume 9 ; 2012 ; 9 >
 
   }
 
@@ -3063,7 +3063,7 @@
     au < released ; crawling ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 >
     au < testing ; exists ; 2011 ; Nature Structural and Molecular Biology Volume 18 ; 2011 ; 18 >
-    au < expected ; exists ; 2012 ; Nature Structural and Molecular Biology Volume 19 ; 2012 ; 19 >
+    au < manifest ; exists ; 2012 ; Nature Structural and Molecular Biology Volume 19 ; 2012 ; 19 >
 
   }
 
@@ -3081,10 +3081,10 @@
     param[journal_id] = npp
 
     au < exists ; exists ; 1994 ; Neuropsychopharmacology Volume 11 ; 1994 ; 11 >
-    au < exists ; exists ; 1995 ; Neuropsychopharmacology Volume 12 (1995) ; 1995 ; 12 >
-    au < exists ; exists ; 1996 ; Neuropsychopharmacology Volume 13 (1995) ; 1995 ; 13 >
-    au < exists ; exists ; 1997 ; Neuropsychopharmacology Volume 14 (1996) ; 1996 ; 14 >
-    au < exists ; exists ; 1998 ; Neuropsychopharmacology Volume 15 (1996) ; 1996 ; 15 >
+    au < manifest ; exists ; 1995 ; Neuropsychopharmacology Volume 12 (1995) ; 1995 ; 12 >
+    au < manifest ; exists ; 1996 ; Neuropsychopharmacology Volume 13 (1995) ; 1995 ; 13 >
+    au < manifest ; exists ; 1997 ; Neuropsychopharmacology Volume 14 (1996) ; 1996 ; 14 >
+    au < manifest ; exists ; 1998 ; Neuropsychopharmacology Volume 15 (1996) ; 1996 ; 15 >
     au < exists ; exists ; 1999 ; Neuropsychopharmacology Volume 16 (1997) ; 1997 ; 16 >
     au < exists ; exists ; 2000 ; Neuropsychopharmacology Volume 17 (1997) ; 2007 ; 17 >
     au < exists ; exists ; 2001 ; Neuropsychopharmacology Volume 18 (1998) ; 1998 ; 18 >
@@ -3106,7 +3106,7 @@
     au < exists ; exists ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 >
     au < manifest ; exists ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
     au < testing ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
-    au < expected ; exists ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
+    au < manifest ; exists ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
 
   }
 
@@ -3133,7 +3133,7 @@
     au < exists ; exists ; 2009 ; Obesity Volume 17 ; 2009 ; 17 >
     au < exists ; exists ; 2010 ; Obesity Volume 18 ; 2010 ; 18 >
     au < testing ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
-    au < expected ; exists ; 2012 ; Obesity Volume 20 ; 2012 ; 20 >
+    au < manifest ; exists ; 2012 ; Obesity Volume 20 ; 2012 ; 20 >
 
   }
 
@@ -3165,7 +3165,7 @@
     au < testing ; exists ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
     au < testing ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
     au < testing ; exists ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
-    au < expected ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
+    au < manifest ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
 
   }
 
@@ -3191,7 +3191,7 @@
     au < testing ; exists ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 >
     au < released ; manifest ; 2011 ; The Pharmacogenomics Journal Volume 11 ; 2011 ; 11 >
-    au < expected ; exists ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 >
+    au < manifest ; exists ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 >
 
   }
 
@@ -3221,7 +3221,7 @@
     au < released ; crawling ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
     au < released ; crawling ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
     au < released ; manifest ; 2011 ; Prostate Cancer and Prostatic Diseases Volume 14 ; 2011 ; 14 >
-    au < expected ; exists ; 2012 ; Prostate Cancer and Prostatic Diseases Volume 15 ; 2012 ; 15 >
+    au < manifest ; exists ; 2012 ; Prostate Cancer and Prostatic Diseases Volume 15 ; 2012 ; 15 >
 
   }
 
@@ -3254,56 +3254,56 @@
 
     param[journal_id] = sc
 
-    au < exists ; exists ; 1963 ; Spinal Cord Volume 1 (1963) ; 1963 ; 1 >
-    au < exists ; exists ; 1964 ; Spinal Cord Volume 1 (1964) ; 1964 ; 1 >
-    au < exists ; exists ; 1964 ; Spinal Cord Volume 2 (1964) ; 1964 ; 2 >
-    au < exists ; exists ; 1965 ; Spinal Cord Volume 2 (1965) ; 1965 ; 2 >
-    au < exists ; exists ; 1965 ; Spinal Cord Volume 3 (1965) ; 1965 ; 3 >
-    au < exists ; exists ; 1966 ; Spinal Cord Volume 3 (1966) ; 1966 ; 3 >
-    au < exists ; exists ; 1966 ; Spinal Cord Volume 4 (1966) ; 1966 ; 4 >
-    au < exists ; exists ; 1967 ; Spinal Cord Volume 4 (1967) ; 1967 ; 4 >
-    au < exists ; exists ; 1967 ; Spinal Cord Volume 5 (1967) ; 1967 ; 5 >
-    au < exists ; exists ; 1968 ; Spinal Cord Volume 5 (1968) ; 1968 ; 5 >
-    au < exists ; exists ; 1968 ; Spinal Cord Volume 6 (1968) ; 1968 ; 6 >
-    au < exists ; exists ; 1969 ; Spinal Cord Volume 6 (1969) ; 1969 ; 6 >
-    au < exists ; exists ; 1969 ; Spinal Cord Volume 7 (1969) ; 1969 ; 7 >
-    au < exists ; exists ; 1970 ; Spinal Cord Volume 7 (1970) ; 1970 ; 7 >
-    au < exists ; exists ; 1970 ; Spinal Cord Volume 8 (1970) ; 1970 ; 8 >
-    au < exists ; exists ; 1971 ; Spinal Cord Volume 8 (1971) ; 1971 ; 8 >
-    au < exists ; exists ; 1971 ; Spinal Cord Volume 9 (1971) ; 1971 ; 9 >
-    au < exists ; exists ; 1972 ; Spinal Cord Volume 9 (1972) ; 1972 ; 9 >
-    au < exists ; exists ; 1972 ; Spinal Cord Volume 10 (1972) ; 1972 ; 10 >
-    au < exists ; exists ; 1973 ; Spinal Cord Volume 10 (1973) ; 1973 ; 10 >
-    au < exists ; exists ; 1973 ; Spinal Cord Volume 11 (1973) ; 1973 ; 11 >
-    au < exists ; exists ; 1974 ; Spinal Cord Volume 11 (1974) ; 1974 ; 11 >
-    au < exists ; exists ; 1974 ; Spinal Cord Volume 12 (1974) ; 1974 ; 12 >
-    au < exists ; exists ; 1975 ; Spinal Cord Volume 12 (1975) ; 1975 ; 12 >
-    au < exists ; exists ; 1975 ; Spinal Cord Volume 13 (1975) ; 1975 ; 13 >
-    au < exists ; exists ; 1976 ; Spinal Cord Volume 13 (1976) ; 1976 ; 13 >
-    au < exists ; exists ; 1976 ; Spinal Cord Volume 14 (1976) ; 1976 ; 14 >
-    au < exists ; exists ; 1977 ; Spinal Cord Volume 14 (1977) ; 1977 ; 14 >
-    au < exists ; exists ; 1977 ; Spinal Cord Volume 15 (1977) ; 1977 ; 15 >
-    au < exists ; exists ; 1978 ; Spinal Cord Volume 15 (1978) ; 1978 ; 15 >
-    au < exists ; exists ; 1978 ; Spinal Cord Volume 16 (1978) ; 1978 ; 16 >
-    au < exists ; exists ; 1979 ; Spinal Cord Volume 16 (1979) ; 1979 ; 16 >
-    au < exists ; exists ; 1979 ; Spinal Cord Volume 17 ; 1979 ; 17 >
-    au < exists ; exists ; 1980 ; Spinal Cord Volume 18 ; 1980 ; 18 >
-    au < exists ; exists ; 1981 ; Spinal Cord Volume 19 ; 1981 ; 19 >
-    au < exists ; exists ; 1982 ; Spinal Cord Volume 20 ; 1982 ; 20 >
-    au < exists ; exists ; 1983 ; Spinal Cord Volume 21 ; 1983 ; 21 >
-    au < exists ; exists ; 1984 ; Spinal Cord Volume 22 ; 1984 ; 22 >
-    au < exists ; exists ; 1985 ; Spinal Cord Volume 23 ; 1985 ; 23 >
-    au < exists ; exists ; 1986 ; Spinal Cord Volume 24 ; 1986 ; 24 >
-    au < exists ; exists ; 1987 ; Spinal Cord Volume 25 ; 1987 ; 25 >
-    au < exists ; exists ; 1988 ; Spinal Cord Volume 26 ; 1988 ; 26 >
-    au < exists ; exists ; 1989 ; Spinal Cord Volume 27 ; 1989 ; 27 >
-    au < exists ; exists ; 1990 ; Spinal Cord Volume 28 ; 1990 ; 28 >
-    au < exists ; exists ; 1991 ; Spinal Cord Volume 29 ; 1991 ; 29 >
-    au < exists ; exists ; 1992 ; Spinal Cord Volume 30 ; 1992 ; 30 >
-    au < exists ; exists ; 1993 ; Spinal Cord Volume 31 ; 1993 ; 31 >
-    au < exists ; exists ; 1994 ; Spinal Cord Volume 32 ; 1994 ; 32 >
-    au < exists ; exists ; 1995 ; Spinal Cord Volume 33 ; 1995 ; 33 >
-    au < exists ; exists ; 1996 ; Spinal Cord Volume 34 ; 1996 ; 34 >
+    au < manifest ; exists ; 1963 ; Spinal Cord Volume 1 (1963) ; 1963 ; 1 >
+    au < manifest ; exists ; 1964 ; Spinal Cord Volume 1 (1964) ; 1964 ; 1 >
+    au < manifest ; exists ; 1964 ; Spinal Cord Volume 2 (1964) ; 1964 ; 2 >
+    au < manifest ; exists ; 1965 ; Spinal Cord Volume 2 (1965) ; 1965 ; 2 >
+    au < manifest ; exists ; 1965 ; Spinal Cord Volume 3 (1965) ; 1965 ; 3 >
+    au < manifest ; exists ; 1966 ; Spinal Cord Volume 3 (1966) ; 1966 ; 3 >
+    au < manifest ; exists ; 1966 ; Spinal Cord Volume 4 (1966) ; 1966 ; 4 >
+    au < manifest ; exists ; 1967 ; Spinal Cord Volume 4 (1967) ; 1967 ; 4 >
+    au < manifest ; exists ; 1967 ; Spinal Cord Volume 5 (1967) ; 1967 ; 5 >
+    au < manifest ; exists ; 1968 ; Spinal Cord Volume 5 (1968) ; 1968 ; 5 >
+    au < manifest ; exists ; 1968 ; Spinal Cord Volume 6 (1968) ; 1968 ; 6 >
+    au < manifest ; exists ; 1969 ; Spinal Cord Volume 6 (1969) ; 1969 ; 6 >
+    au < manifest ; exists ; 1969 ; Spinal Cord Volume 7 (1969) ; 1969 ; 7 >
+    au < manifest ; exists ; 1970 ; Spinal Cord Volume 7 (1970) ; 1970 ; 7 >
+    au < manifest ; exists ; 1970 ; Spinal Cord Volume 8 (1970) ; 1970 ; 8 >
+    au < manifest ; exists ; 1971 ; Spinal Cord Volume 8 (1971) ; 1971 ; 8 >
+    au < manifest ; exists ; 1971 ; Spinal Cord Volume 9 (1971) ; 1971 ; 9 >
+    au < manifest ; exists ; 1972 ; Spinal Cord Volume 9 (1972) ; 1972 ; 9 >
+    au < manifest ; exists ; 1972 ; Spinal Cord Volume 10 (1972) ; 1972 ; 10 >
+    au < manifest ; exists ; 1973 ; Spinal Cord Volume 10 (1973) ; 1973 ; 10 >
+    au < manifest ; exists ; 1973 ; Spinal Cord Volume 11 (1973) ; 1973 ; 11 >
+    au < manifest ; exists ; 1974 ; Spinal Cord Volume 11 (1974) ; 1974 ; 11 >
+    au < manifest ; exists ; 1974 ; Spinal Cord Volume 12 (1974) ; 1974 ; 12 >
+    au < manifest ; exists ; 1975 ; Spinal Cord Volume 12 (1975) ; 1975 ; 12 >
+    au < manifest ; exists ; 1975 ; Spinal Cord Volume 13 (1975) ; 1975 ; 13 >
+    au < manifest ; exists ; 1976 ; Spinal Cord Volume 13 (1976) ; 1976 ; 13 >
+    au < manifest ; exists ; 1976 ; Spinal Cord Volume 14 (1976) ; 1976 ; 14 >
+    au < manifest ; exists ; 1977 ; Spinal Cord Volume 14 (1977) ; 1977 ; 14 >
+    au < manifest ; exists ; 1977 ; Spinal Cord Volume 15 (1977) ; 1977 ; 15 >
+    au < manifest ; exists ; 1978 ; Spinal Cord Volume 15 (1978) ; 1978 ; 15 >
+    au < manifest ; exists ; 1978 ; Spinal Cord Volume 16 (1978) ; 1978 ; 16 >
+    au < manifest ; exists ; 1979 ; Spinal Cord Volume 16 (1979) ; 1979 ; 16 >
+    au < manifest ; exists ; 1979 ; Spinal Cord Volume 17 ; 1979 ; 17 >
+    au < manifest ; exists ; 1980 ; Spinal Cord Volume 18 ; 1980 ; 18 >
+    au < manifest ; exists ; 1981 ; Spinal Cord Volume 19 ; 1981 ; 19 >
+    au < manifest ; exists ; 1982 ; Spinal Cord Volume 20 ; 1982 ; 20 >
+    au < manifest ; exists ; 1983 ; Spinal Cord Volume 21 ; 1983 ; 21 >
+    au < manifest ; exists ; 1984 ; Spinal Cord Volume 22 ; 1984 ; 22 >
+    au < manifest ; exists ; 1985 ; Spinal Cord Volume 23 ; 1985 ; 23 >
+    au < manifest ; exists ; 1986 ; Spinal Cord Volume 24 ; 1986 ; 24 >
+    au < manifest ; exists ; 1987 ; Spinal Cord Volume 25 ; 1987 ; 25 >
+    au < manifest ; exists ; 1988 ; Spinal Cord Volume 26 ; 1988 ; 26 >
+    au < manifest ; exists ; 1989 ; Spinal Cord Volume 27 ; 1989 ; 27 >
+    au < manifest ; exists ; 1990 ; Spinal Cord Volume 28 ; 1990 ; 28 >
+    au < manifest ; exists ; 1991 ; Spinal Cord Volume 29 ; 1991 ; 29 >
+    au < manifest ; exists ; 1992 ; Spinal Cord Volume 30 ; 1992 ; 30 >
+    au < manifest ; exists ; 1993 ; Spinal Cord Volume 31 ; 1993 ; 31 >
+    au < manifest ; exists ; 1994 ; Spinal Cord Volume 32 ; 1994 ; 32 >
+    au < manifest ; exists ; 1995 ; Spinal Cord Volume 33 ; 1995 ; 33 >
+    au < manifest ; exists ; 1996 ; Spinal Cord Volume 34 ; 1996 ; 34 >
     au < manifest ; exists ; 1997 ; Spinal Cord Volume 35 ; 1997 ; 35 >
     au < manifest ; exists ; 1998 ; Spinal Cord Volume 36 ; 1998 ; 36 >
     au < manifest ; exists ; 1999 ; Spinal Cord Volume 37 ; 1999 ; 37 >
@@ -3319,7 +3319,7 @@
     au < released ; crawling ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
     au < released ; crawling ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 >
     au < released ; manifest ; 2011 ; Spinal Cord Volume 49 ; 2011 ; 49 >
-    au < expected ; exists ; 2012 ; Spinal Cord Volume 50 ; 2012 ; 50 >
+    au < manifest ; exists ; 2012 ; Spinal Cord Volume 50 ; 2012 ; 50 >
 
   }
 
