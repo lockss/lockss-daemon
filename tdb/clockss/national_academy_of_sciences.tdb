@@ -3,6 +3,8 @@
   publisher <
     name = National Academy of Sciences
   >
+  
+    attr[contract] = 2010
 
   {
   
@@ -123,7 +125,8 @@
     au < released ; crawling ; 2008 ; Proceedings of the National Academy of Sciences Volume 105 ; 105 ; reingest1.clockss.org:8082 >
     au < released ; crawling ; 2009 ; Proceedings of the National Academy of Sciences Volume 106 ; 106 ; reingest2.clockss.org:8085 >
     au < released ; crawling ; 2010 ; Proceedings of the National Academy of Sciences Volume 107 ; 107 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2011 ; Proceedings of the National Academy of Sciences Volume 108 ; 108 ; >
+    au < testing ; exists ; 2011 ; Proceedings of the National Academy of Sciences Volume 108 ; 108 ; >
+    au < crawling ; exists ; 2012 ; Proceedings of the National Academy of Sciences Volume 109 ; 109 ; >
 
   }
 

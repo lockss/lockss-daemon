@@ -2,6 +2,8 @@
   publisher <
     name = Inderscience
   >
+
+    attr[contract] = 2011
     plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
     param[base_url] = http://www.inderscience.com/
     implicit < status1 ; status ; year ; name ; param[volume_name] >

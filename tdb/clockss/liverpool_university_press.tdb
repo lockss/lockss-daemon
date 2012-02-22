@@ -4,6 +4,7 @@
     name = Liverpool University Press
   >
 
+  attr[contract] = 2009
   plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
   param[base_url] = http://liverpool.metapress.com/
   implicit < status1 ; status ; year ; name ; param[volume_name] >
@@ -14,12 +15,21 @@
     title <
       name = Australian Journal of French Studies ;
       issn = 0004-9468 ;
-      eissn = 2046-2913
+      eissn = 2046-2913 ;
+      issnl = 0004-9468 
     >
     
     param[journal_issn] = 2046-2913
-    
-    au < crawling ; exists ; 2011 ; Australian Journal of French Studies Volume 48 ; 48 >
+
+    au < manifest ; exists ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 >
+    au < manifest ; exists ; 2005 ; Australian Journal of French Studies Volume 42 ; 42 >
+    au < manifest ; exists ; 2006 ; Australian Journal of French Studies Volume 43 ; 43 >
+    au < manifest ; exists ; 2007 ; Australian Journal of French Studies Volume 44 ; 44 >
+    au < manifest ; exists ; 2008 ; Australian Journal of French Studies Volume 45 ; 45 >
+    au < manifest ; exists ; 2009 ; Australian Journal of French Studies Volume 46 ; 46 >
+    au < manifest ; exists ; 2010 ; Australian Journal of French Studies Volume 47 ; 47 >    
+    au < released ; manifest ; 2011 ; Australian Journal of French Studies Volume 48 ; 48 >
+    au < manifest ; exists ; 2012 ; Australian Journal of French Studies Volume 49 ; 49 >
     
   }
 
@@ -28,12 +38,22 @@
     title <
       name = British Journal of Canadian Studies ;
       issn = 0269-9222 ;
-      eissn = 1757-8078
+      eissn = 1757-8078 ;
+      issnl = 0269-9222 
     >
     
     param[journal_issn] = 1757-8078
-    
-    au < crawling ; exists ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
+
+    au < manifest ; exists ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 >
+    au < manifest ; exists ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 >
+    au < manifest ; exists ; 2005 ; British Journal of Canadian Studies Volume 18 ; 18 >
+    au < manifest ; exists ; 2006 ; British Journal of Canadian Studies Volume 19 ; 19 >
+    au < manifest ; exists ; 2007 ; British Journal of Canadian Studies Volume 20 ; 20 >
+    au < manifest ; exists ; 2008 ; British Journal of Canadian Studies Volume 21 ; 21 >
+    au < manifest ; exists ; 2009 ; British Journal of Canadian Studies Volume 22 ; 22 >
+    au < manifest ; exists ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 >    
+    au < released ; manifest ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
+    au < expected ; exists ; 2012 ; British Journal of Canadian Studies Volume 25 ; 25 >
     
   }
  
@@ -42,12 +62,32 @@
     title <
       name = Bulletin of Hispanic Studies ;
       issn = 1475-3839 ;
-      eissn = 1478-3398
+      eissn = 1478-3398 ;
+      issnl = 1475-3839 
     >
     
     param[journal_issn] = 1478-3398 
-    
-    au < crawling ; exists ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
+    comment[0] = vols. 73-79 currently not available online
+
+    au < manifest ; exists ; 1994 ; Bulletin of Hispanic Studies Volume 71 ; 71 >
+    au < manifest ; exists ; 1995 ; Bulletin of Hispanic Studies Volume 72 ; 72 >
+    au < doesNotExist ; doesNotExist ; 1996 ; Bulletin of Hispanic Studies Volume 73 ; 73 >
+    au < doesNotExist ; doesNotExist ; 1997 ; Bulletin of Hispanic Studies Volume 74 ; 74 >
+    au < doesNotExist ; doesNotExist ; 1998 ; Bulletin of Hispanic Studies Volume 75 ; 75 >
+    au < doesNotExist ; doesNotExist ; 1999 ; Bulletin of Hispanic Studies Volume 76 ; 76 >
+    au < doesNotExist ; doesNotExist ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 >
+    au < doesNotExist ; doesNotExist ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 >
+    au < doesNotExist ; doesNotExist ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 >
+    au < manifest ; exists ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 >
+    au < manifest ; exists ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 >
+    au < manifest ; exists ; 2005 ; Bulletin of Hispanic Studies Volume 82 ; 82 >
+    au < manifest ; exists ; 2006 ; Bulletin of Hispanic Studies Volume 83 ; 83 >
+    au < manifest ; exists ; 2007 ; Bulletin of Hispanic Studies Volume 84 ; 84 >
+    au < manifest ; exists ; 2008 ; Bulletin of Hispanic Studies Volume 85 ; 85 >
+    au < manifest ; exists ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 >
+    au < manifest ; exists ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
+    au < released ; manifest ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
+    au < expected ; exists ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
 
   }
    
@@ -56,37 +96,75 @@
     title <
       name = The Byron Journal ;
       issn = 0301-7257 ;
-      eissn = 1757-0263 
+      eissn = 1757-0263 ; 
+      issnl = 0301-7257
     >
     
     param[journal_issn] = 1757-0263 
-    
-    au < crawling ; exists ; 2011 ; The Byron Journal Volume 39 ; 39 >
+
+    au < manifest ; exists ; 2004 ; The Byron Journal Volume 32 ; 32 >
+    au < manifest ; exists ; 2005 ; The Byron Journal Volume 33 ; 33 >
+    au < manifest ; exists ; 2006 ; The Byron Journal Volume 34 ; 34 >
+    au < manifest ; exists ; 2007 ; The Byron Journal Volume 35 ; 35 >
+    au < manifest ; exists ; 2008 ; The Byron Journal Volume 36 ; 36 >
+    au < manifest ; exists ; 2009 ; The Byron Journal Volume 37 ; 37 >
+    au < manifest ; exists ; 2010 ; The Byron Journal Volume 38 ; 38 >    
+    au < released ; manifest ; 2011 ; The Byron Journal Volume 39 ; 39 >
+    au < expected ; exists ; 2012 ; The Byron Journal Volume 40 ; 40 >
 
   }
+
+  {
   
-    {
+    title <
+      name = Comma ;
+      issn = 1680-1865 ; 
+      issnl = 1680-1865
+    >
+    
+    param[journal_issn] = 1680-1865
+    comment[0] = no content online yet
+    
+  }
+  
+  {
   
     title <
       name = Contemporary French Civilization ;
-      issn = 0147-9156 
+      issn = 0147-9156 ; 
+      issnl = 0147-9156
     >
     
     param[journal_issn] = 0147-9156 
     
-    au < crawling ; exists ; 2011 ; Contemporary French Civilization Volume 36 ; 36 >
+    au < manifest ; exists ; 2005 ; Contemporary French Civilization Volume 29 ; 29 >
+    au < manifest ; exists ; 2006 ; Contemporary French Civilization Volume 30 ; 30 >
+    au < manifest ; exists ; 2007 ; Contemporary French Civilization Volume 31 ; 31 >
+    au < manifest ; exists ; 2008 ; Contemporary French Civilization Volume 32 ; 32 >
+    au < manifest ; exists ; 2009 ; Contemporary French Civilization Volume 33 ; 33 >
+    au < manifest ; exists ; 2010 ; Contemporary French Civilization Volume 34 ; 34 >
+    au < released ; manifest ; 2011 ; Contemporary French Civilization Volume 35 ; 35 >    
+    au < released ; manifest ; 2011 ; Contemporary French Civilization Volume 36 ; 36 >
+    au < expected ; exists ; 2012 ; Contemporary French Civilization Volume 37 ; 37 >
 
-  }  {
+  }  
+  
+  {
   
     title <
       name = European Comic Art ;
       issn = 1754-3797 ;
-      eissn = 1754-3800 
+      eissn = 1754-3800 ; 
+      issnl = 1754-3797 
     >
     
     param[journal_issn] = 1754-3800 
-    
-    au < crawling ; exists ; 2011 ; European Comic Art Volume 4 ; 4 >
+
+    au < manifest ; exists ; 2008 ; European Comic Art Volume 1 ; 1 >
+    au < manifest ; exists ; 2009 ; European Comic Art Volume 2 ; 2 >
+    au < manifest ; exists ; 2010 ; European Comic Art Volume 3 ; 3 >    
+    au < released ; manifest ; 2011 ; European Comic Art Volume 4 ; 4 >
+    au < expected ; exists ; 2012 ; European Comic Art Volume 5 ; 5 >
 
   }  
   
@@ -95,12 +173,16 @@
     title <
       name = European Journal of Language Policy / Revue européenne de politique linguistique ;
       issn = 1757-6822 ;
-      eissn = 1757-6830  
+      eissn = 1757-6830 ;  
+      issnl = 1757-6822
     >
     
     param[journal_issn] = 1757-6830     
 
-    au < crawling ; exists ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
+    au < manifest ; exists ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 >
+    au < manifest ; exists ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
+    au < released ; manifest ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
+    au < expected ; exists ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 >
 
   }
    
@@ -109,13 +191,15 @@
     title <
       name = Extrapolation ;
       issn = 0014-5483 ;
+      eissn = 2047-7708 ;
       issnl = 0014-5483
     >
 
-    comment[upcoming] = this journal is upcoming in projectmuse and might also in Meta-Press
-    param[journal_issn] = 0014-5483 
+    comment[upcoming] = this journal is upcoming in projectmuse
+    param[journal_issn] = 2047-7708 
 
-    au < crawling ; exists ; 2011 ; Extrapolation Volume 52 ; 52 >
+    au < released ; manifest ; 2011 ; Extrapolation Volume 52 ; 52 >
+    au < expected ; exists ; 2012 ; Extrapolation Volume 53 ; 53 >
 
   }
 
@@ -124,12 +208,23 @@
     title <
       name = International Development Planning Review ;
       issn = 1474-6743 ;
-      eissn = 1478-3401  
+      eissn = 1478-3401 ;  
+      issnl = 1474-6743
     >
 
     param[journal_issn] = 1478-3401 
 
-    au < crawling ; exists ; 2011 ; International Development Planning Review Volume 33 ; 33 >
+    au < manifest ; exists ; 2002 ; International Development Planning Review Volume 24 ; 24 >
+    au < manifest ; exists ; 2003 ; International Development Planning Review Volume 25 ; 25 >
+    au < manifest ; exists ; 2004 ; International Development Planning Review Volume 26 ; 26 >
+    au < manifest ; exists ; 2005 ; International Development Planning Review Volume 27 ; 27 >
+    au < manifest ; exists ; 2006 ; International Development Planning Review Volume 28 ; 28 >
+    au < manifest ; exists ; 2007 ; International Development Planning Review Volume 29 ; 29 >
+    au < manifest ; exists ; 2008 ; International Development Planning Review Volume 30 ; 30 >
+    au < manifest ; exists ; 2009 ; International Development Planning Review Volume 31 ; 31 >
+    au < manifest ; exists ; 2010 ; International Development Planning Review Volume 32 ; 32 >
+    au < released ; manifest ; 2011 ; International Development Planning Review Volume 33 ; 33 >
+    au < expected ; exists ; 2012 ; International Development Planning Review Volume 34 ; 34 >
 
   }
    
@@ -138,27 +233,33 @@
     title <
       name = Journal of Literary & Cultural Disability Studies ;
       issn = 1757-6458 ;
-      eissn = 1757-6466  
+      eissn = 1757-6466 ;  
+      issnl = 1757-6458
     >
     
     param[journal_issn] = 1757-6466 
 
-    au < crawling ; exists ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
+    au < manifest ; exists ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
+    au < manifest ; exists ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
+    au < manifest ; exists ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
+    au < manifest ; exists ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
+    au < released ; manifest ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
+    au < expected ; exists ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
 
   }
-   
         
   {
 
     title <
       name = Labour History Review ;
       issn = 0961-5652 ;
-      eissn = 1745-8188 
+      eissn = 1745-8188 ;
+      issnl = 0961-5652
     >
     
     param[journal_issn] = 1745-8188     
 
-	comment[2012]=coming in 2012
+	comment[2012] = coming in 2012
 
   }
    
@@ -167,26 +268,39 @@
     title <
       name = Music, Sound, and the Moving Image ;
       issn = 1753-0768 ;
-      eissn = 1753-0776  
+      eissn = 1753-0776 ; 
+      issnl = 1753-0768
     >
 
     param[journal_issn] = 1753-0776 
 
-    au < crawling ; exists ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
+    au < manifest ; exists ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 >
+    au < manifest ; exists ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
+    au < manifest ; exists ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
+    au < manifest ; exists ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
+    au < released ; manifest ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
+    au < expected ; exists ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
 
   }
   
-     {
+  {
   
     title <
       name = Popular Narrative Media ;
       issn = 1754-3819 ;
-      eissn = 1754-3827  
+      eissn = 1754-3827 ;  
+      issnl = 1754-3819
     >
 
     param[journal_issn] = 1754-3827 
+    
+    comment[ceased_publication]=after 2009
 
-    au < manifest ; exists ; 2009 ; Popular Narrative Media Volume 2 ; 2 >
+    au < manifest ; exists ; 2008 ; Popular Narrative Media Volume 1 ; 1 >
+    au < crawling ; exists ; 2009 ; Popular Narrative Media Volume 2 ; 2 >
+
+
+ 
 
   }
    
@@ -195,12 +309,25 @@
     title <
       name = Romani Studies ;
       issn = 1528-0748 ;
-      eissn = 1757-2274  
+      eissn = 1757-2274 ;  
+      issnl = 1528-0748
     >
 
     param[journal_issn] = 1757-2274 
 
-    au < crawling ; exists ; 2011 ; Romani Studies Volume 21 ; 21 >
+    au < manifest ; exists ; 2000 ; Romani Studies Volume 10 ; 10 >
+    au < manifest ; exists ; 2001 ; Romani Studies Volume 11 ; 11 >
+    au < manifest ; exists ; 2002 ; Romani Studies Volume 12 ; 12 >
+    au < manifest ; exists ; 2003 ; Romani Studies Volume 13 ; 13 >
+    au < manifest ; exists ; 2004 ; Romani Studies Volume 14 ; 14 >
+    au < manifest ; exists ; 2005 ; Romani Studies Volume 15 ; 15 >
+    au < manifest ; exists ; 2006 ; Romani Studies Volume 16 ; 16 >
+    au < manifest ; exists ; 2007 ; Romani Studies Volume 17 ; 17 >
+    au < manifest ; exists ; 2008 ; Romani Studies Volume 18 ; 18 >
+    au < manifest ; exists ; 2009 ; Romani Studies Volume 19 ; 19 >
+    au < manifest ; exists ; 2010 ; Romani Studies Volume 20 ; 20 >
+    au < released ; manifest ; 2011 ; Romani Studies Volume 21 ; 21 >
+    au < expected ; exists ; 2012 ; Romani Studies Volume 22 ; 22 >
 
   }
    
@@ -209,12 +336,17 @@
     title <
       name = Science Fiction Film and Television ;
       issn = 1754-3770 ;
-      eissn = 1754-3789  
+      eissn = 1754-3789 ;
+      issnl = 1754-3770
     >
     
     param[journal_issn] = 1754-3789 
 
-    au < crawling ; exists ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
+    au < manifest ; exists ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
+    au < manifest ; exists ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
+    au < manifest ; exists ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
+    au < released ; manifest ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
+    au < expected ; exists ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
 
   }
    
@@ -223,12 +355,21 @@
     title <
       name = Sculpture Journal ;
       issn = 1366-2724 ;
-      eissn = 1756-9923  
+      eissn = 1756-9923 ;  
+      issnl = 1366-2724
     >
     
     param[journal_issn] = 1756-9923 
 
-    au < crawling ; exists ; 2011 ; Sculpture Journal Volume 20 ; 20 >
+    au < manifest ; exists ; 2005 ; Sculpture Journal Volume 13 ; 13 >
+    au < manifest ; exists ; 2005 ; Sculpture Journal Volume 14 ; 14 >
+    au < manifest ; exists ; 2006 ; Sculpture Journal Volume 15 ; 15 >
+    au < manifest ; exists ; 2007 ; Sculpture Journal Volume 16 ; 16 >
+    au < manifest ; exists ; 2008 ; Sculpture Journal Volume 17 ; 17 >
+    au < manifest ; exists ; 2009 ; Sculpture Journal Volume 18 ; 18 >
+    au < manifest ; exists ; 2010 ; Sculpture Journal Volume 19 ; 19 > 
+    au < released ; manifest ; 2011 ; Sculpture Journal Volume 20 ; 20 >
+    au < expected ; exists ; 2012 ; Sculpture Journal Volume 21 ; 21 >
 
   }
   
@@ -236,12 +377,21 @@
   
     title <
       name = Third World Planning Review ;
-      issn = 0142-7849 
+      issn = 0142-7849 ; 
+      issnl = 0142-7849
     >
     
     param[journal_issn] = 0142-7849 
+    comment[ceased_publication]=after 2000
 
-    au < crawling ; exists ; 2011 ; Third World Planning Review Volume 22 ; 22 >
+    au < manifest ; exists ; 1993 ; Third World Planning Review Volume 15 ; 15 >
+    au < manifest ; exists ; 1994 ; Third World Planning Review Volume 16 ; 16 >
+    au < manifest ; exists ; 1995 ; Third World Planning Review Volume 17 ; 17 >
+    au < manifest ; exists ; 1996 ; Third World Planning Review Volume 18 ; 18 >
+    au < manifest ; exists ; 1997 ; Third World Planning Review Volume 19 ; 19 >
+    au < manifest ; exists ; 1998 ; Third World Planning Review Volume 20 ; 20 >
+    au < manifest ; exists ; 1999 ; Third World Planning Review Volume 21 ; 21 >
+    au < crawling ; exists ; 2000 ; Third World Planning Review Volume 22 ; 22 >
 
   }
   
@@ -250,12 +400,26 @@
     title <
       name = Town Planning Review ;
       issn = 0041-0020 ;
-      eissn = 1478-341X 
+      eissn = 1478-341X ; 
+      issnl = 0041-0020
     >
 
     param[journal_issn] = 1478-341X 
 
-    au < crawling ; exists ; 2011 ; Town Planning Review Volume 82 ; 82 >
+    au < manifest ; exists ; 1999 ; Town Planning Review Volume 70 ; 70 >
+    au < manifest ; exists ; 2000 ; Town Planning Review Volume 71 ; 71 >
+    au < doesNotExist ; doesNotExist ; 2001 ; Town Planning Review Volume 72 ; 72 >
+    au < manifest ; exists ; 2002 ; Town Planning Review Volume 73 ; 73 >
+    au < manifest ; exists ; 2003 ; Town Planning Review Volume 74 ; 74 >
+    au < manifest ; exists ; 2004 ; Town Planning Review Volume 75 ; 75 >
+    au < manifest ; exists ; 2005 ; Town Planning Review Volume 76 ; 76 >
+    au < manifest ; exists ; 2006 ; Town Planning Review Volume 77 ; 77 >
+    au < manifest ; exists ; 2007 ; Town Planning Review Volume 78 ; 78 >
+    au < manifest ; exists ; 2008 ; Town Planning Review Volume 79 ; 79 >
+    au < manifest ; exists ; 2009 ; Town Planning Review Volume 80 ; 80 >
+    au < manifest ; exists ; 2010 ; Town Planning Review Volume 81 ; 81 >
+    au < released ; manifest ; 2011 ; Town Planning Review Volume 82 ; 82 >
+    au < manifest ; exists ; 2012 ; Town Planning Review Volume 83 ; 83 >
 
   }
  

@@ -4,6 +4,7 @@
     name = Bloomsbury Qatar Foundation Journals
   >
   
+  attr[contract] = 2011
   rights = openaccess
   comment[platform] = Atypon -- RT ticket 3556
   plugin = needs.plugin
@@ -20,8 +21,8 @@
     param[journal_dir] = ahcsps
  
     au < manifest ; exists ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
-    au < crawling ; exists ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 >
-  
+    au < expected ; exists ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 >
+ 
   }
 
   {
@@ -35,7 +36,7 @@
 
     au < manifest ; exists ; 2010 ; Avicenna Volume 2010 ; 2010 >
     au < manifest ; exists ; 2011 ; Avicenna Volume 2011 ; 2011 >    
-    au < crawling ; exists ; 2012 ; Avicenna Volume 2012 ; 2012 >    
+    au < expected ; exists ; 2012 ; Avicenna Volume 2012 ; 2012 >    
     
   }
 
@@ -50,7 +51,7 @@
 
     au < manifest ; exists ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 >
     au < manifest ; exists ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 >  
-    au < crawling ; exists ; 2012 ; Contemporary Islamic Studies Volume 2012 ; 2012 >  
+    au < expected ; exists ; 2012 ; Contemporary Islamic Studies Volume 2012 ; 2012 >  
     
   }
 
@@ -67,7 +68,7 @@
     au < manifest ; exists ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 > 
     au < manifest ; exists ; 2010 ; Near and Middle Eastern Journal of Research in Education Volume 2010 ; 2010 >
     au < manifest ; exists ; 2011 ; Near and Middle Eastern Journal of Research in Education Volume 2011 ; 2011 > 
-    au < crawling ; exists ; 2012 ; Near and Middle Eastern Journal of Research in Education Volume 2012 ; 2012 > 
+    au < expected ; exists ; 2012 ; Near and Middle Eastern Journal of Research in Education Volume 2012 ; 2012 > 
     
   }
 
@@ -82,7 +83,7 @@
 
     au < manifest ; exists ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
     au < manifest ; exists ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >  
-    au < crawling ; exists ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 >  
+    au < expected ; exists ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 >  
     
   }
 
@@ -96,7 +97,9 @@
     param[journal_dir] = qfarf
 
     au < manifest ; exists ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 >
-    
+    au < manifest ; exists ; 2011 ; Qatar Foundation Annual Research Forum Proceedings Volume 2011 ; 2011 >
+    au < expected ; exists ; 2012 ; Qatar Foundation Annual Research Forum Proceedings Volume 2012 ; 2012 >
+	    
   }
 
   {

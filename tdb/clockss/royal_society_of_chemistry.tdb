@@ -4,6 +4,7 @@
     name = Royal Society of Chemistry
   >
   
+  attr[contract] = 2009
   plugin = org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin
   param[base_url] = http://www.rsc.org/
   param[resolver_url] = http://xlink.rsc.org/
@@ -246,7 +247,8 @@
 
     title <
       name = Geochemical Transactions ;
-      eissn = 1467-4866
+      issn = 1467-4866 ;
+      issnl = 1467-4866
     >
 
     param[journal_code] = gt
@@ -343,9 +345,9 @@
 
     title <
       name = Journal of the Chemical Society, Perkin Transactions 1 ;
-      issn = 1472-7781 ;
-      eissn = 1472-7781 ;
-      issnl = 1472-7781
+      issn = 0300-922X ;
+      eissn = 1364-5463 ;
+      issnl = 0300-922X
     >
 
     param[journal_code] = p1

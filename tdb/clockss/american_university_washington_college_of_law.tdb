@@ -4,6 +4,7 @@
     name = American University Washington College of Law
   >
   
+  attr[contract] = 2010
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
   param[base_url] = http://digitalcommons.wcl.american.edu/
   implicit < status1 ; status ; year ; name ; param[volume] >
@@ -19,7 +20,6 @@
 
     au < released ; manifest ; 2010 ; Administrative Law Review Volume 62 ; 62 >
     au < released ; manifest ; 2011 ; Administrative Law Review Volume 63 ; 63 >
-    au < expected ; exists ; 2012 ; Administrative Law Review Volume 64 ; 64 >
 
   }
 
@@ -31,7 +31,8 @@
     >
 
     param[journal_abbr] = auilr
-    comment[vol26] = vol 26 not published yet as of 2011-09-29
+    
+    comment[v26] = not online as of 20120118
 
     au < released ; manifest ; 1986 ; American University International Law Review Volume 1 ; 1 >
     au < released ; manifest ; 1987 ; American University International Law Review Volume 2 ; 2 >
@@ -59,7 +60,6 @@
     au < released ; manifest ; 2008-2009 ; American University International Law Review Volume 24 ; 24 >
     au < released ; manifest ; 2009-2010 ; American University International Law Review Volume 25 ; 25 >
     au < exists ; exists ; 2011 ; American University International Law Review Volume 26 ; 26 >
-    au < expected ; exists ; 2012 ; American University International Law Review Volume 27 ; 27 >
 
   }
 
@@ -70,10 +70,11 @@
     >
 
     param[journal_abbr] = ipbrief
-    comment[vol3] = vol 3 not published yet as of 2012-02-15
+    comment[vol3] = vol 3 not published yet as of 2012-01-18
 
     au < released ; manifest ; 2010 ; American University Intellectual Property Brief Issue 1 ; 1 >
     au < released ; manifest ; 2010 ; American University Intellectual Property Brief Issue 2 ; 2 >
+    au < exists ; exists ; 2010 ; American University Intellectual Property Brief Issue 3 ; 3 >
 
   }
 
@@ -86,7 +87,6 @@
     param[journal_abbr] = lelb
 
     au < released ; crawling ; 2011 ; American University Labor & Employment Law Forum Volume 1 ; 1 >
-    au < expected ; exist ; 2012 ; American University Labor & Employment Law Forum Volume 2 ; 2 >
 
   }
 
@@ -98,7 +98,6 @@
     >
 
     param[journal_abbr] = aulr
-    comment[vol60] = vol 60 not published yet as of 2011-09-29
 
     au < released ; manifest ; 1992-1993 ; American University Law Review Volume 42 ; 42 >
     au < released ; manifest ; 1993-1994 ; American University Law Review Volume 43 ; 43 >
@@ -118,8 +117,7 @@
     au < released ; manifest ; 2007-2008 ; American University Law Review Volume 57 ; 57 >
     au < released ; manifest ; 2008-2009 ; American University Law Review Volume 58 ; 58 >
     au < released ; manifest ; 2009-2010 ; American University Law Review Volume 59 ; 59 >
-    au < manifest ; exists ; 2010-2011 ; American University Law Review Volume 60 ; 60 >
-    au < expected ; exists ; 2011-2012 ; American University Law Review Volume 61 ; 61 >
+    au < released ; manifest ; 2010-2011 ; American University Law Review Volume 60 ; 60 >
 
   }
 
@@ -131,7 +129,6 @@
     >
 
     param[journal_abbr] = jgspl
-    comment[vol19] = vol 19 not published yet as of 2012-02-15
 
     au < released ; manifest ; 1993 ; The Journal of Gender, Social Policy & the Law Volume 1 ; 1 >
     au < released ; manifest ; 1994 ; The Journal of Gender, Social Policy & the Law Volume 2 ; 2 >
@@ -151,6 +148,7 @@
     au < released ; manifest ; 2007-2008 ; The Journal of Gender, Social Policy & the Law Volume 16 ; 16 >
     au < released ; manifest ; 2009 ; The Journal of Gender, Social Policy & the Law Volume 17 ; 17 >
     au < released ; crawling ; 2010 ; The Journal of Gender, Social Policy & the Law Volume 18 ; 18 >
+    au < exists ; exists ; 2011 ; The Journal of Gender, Social Policy & the Law Volume 19 ; 19 >
 
   }
 
@@ -165,7 +163,6 @@
     au < released ; manifest ; 2009 ; Legislation and Policy Brief Volume 1 ; 1 >
     au < released ; manifest ; 2010 ; Legislation and Policy Brief Volume 2 ; 2 >
     au < released ; crawling ; 2011 ; Legislation and Policy Brief Volume 3 ; 3 >
-    au < expected ; exists ; 2012 ; Legislation and Policy Brief Volume 4 ; 4 >
 
   }
 
@@ -183,8 +180,7 @@
     au < released ; manifest ; 2008 ; The Modern American Volume 4 ; 4 >
     au < released ; manifest ; 2009 ; The Modern American Volume 5 ; 5 >
     au < released ; manifest ; 2010 ; The Modern American Volume 6 ; 6 >
-    au < manifest ; exists ; 2011 ; The Modern American Volume 7 ; 7 >
-    au < expected ; exists ; 2012 ; The Modern American Volume 8 ; 8 >
+    au < released ; manifest ; 2011 ; The Modern American Volume 7 ; 7 >
 
   }
 
@@ -195,7 +191,6 @@
     >
 
     param[journal_abbr] = sdlp
-    comment[vol12] = vol 12 not published yet as of 2012-02-15
 
     au < released ; manifest ; 2000 ; Sustainable Development Law & Policy Volume 1 ; 1 >
     au < released ; manifest ; 2002 ; Sustainable Development Law & Policy Volume 2 ; 2 >
@@ -208,6 +203,7 @@
     au < released ; manifest ; 2008-2009 ; Sustainable Development Law & Policy Volume 9 ; 9 >
     au < released ; manifest ; 2009-2010 ; Sustainable Development Law & Policy Volume 10 ; 10 >
     au < released ; crawling ; 2010-2011 ; Sustainable Development Law & Policy Volume 11 ; 11 >
+    au < exists ; exists ; 2011-2012 ; Sustainable Development Law & Policy Volume 12 ; 12 >
 
   }
 

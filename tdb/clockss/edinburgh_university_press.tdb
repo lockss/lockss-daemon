@@ -4,6 +4,7 @@
     name = Edinburgh University Press
   >
 
+  attr[contract] = 2009
   plugin = org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin
   param[base_url] = http://www.euppublishing.com/
   implicit < status1 ; status ; year ; name ; param[volume_name] >
@@ -91,7 +92,7 @@
       issnl = 1350-7524 
      >
 
-    comment[issue] = single issue per year, comes out in November.
+    comment[issue] = single issue per year, comes out in November . 2011 not yet released. 2012/01/09
     param[journal_id] = arch
     comment[0] = Volumes 19 and 20 are currently represented as Arabic numerals on the website.
 
@@ -409,6 +410,25 @@
   {
 
     title <
+      name = Irish University Review ;
+      issn = 0021-1427 ;
+      eissn = 2047-2153 ;
+      issnl = 0021-1427 
+     >
+
+    {
+
+      param[journal_id] = iur
+      
+      au < exists ; exists ; 2012 ; Irish University Review Volume 42 ; 42 >
+  
+    }
+  
+  }
+
+  {
+
+    title <
       name = Journal of Beckett Studies ;
       issn = 0309-5207 ;
       eissn = 1759-7811 ;
@@ -545,7 +565,8 @@
       issnl = 1355-5502
     >
 
-      comment[jvc] = no AUs in clockss
+ comment[jvc] = no AUs in clockss
+      
    }
 
 
@@ -618,6 +639,25 @@
     au < released ; manifest ; 2011 ; Northern Scotland Volume 2 ; 2 >
 
 
+  }
+
+  {
+
+    title <
+      name = Nottingham French Studies ;
+      issn = 0029-4586 ;
+      eissn = 2047-7236 ;
+      issnl = 0029-4586 
+     >
+
+    {
+
+      param[journal_id] = nfs
+      
+      au < exists ; exists ; 2012 ; Nottingham French Studies Volume 50 ; 50 >
+  
+    }
+  
   }
 
   {

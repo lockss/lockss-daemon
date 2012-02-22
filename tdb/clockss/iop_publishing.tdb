@@ -4,6 +4,7 @@
     name = IOP Publishing
   >
 
+    attr[contract] = 2008
   plugin = org.lockss.plugin.iop.ClockssIOPSciencePlugin
   param[base_url] = http://iopscience.iop.org/
   implicit < status1 ; status ; year; name ; param[volume_name] >
@@ -181,7 +182,7 @@
     au < manifest ; exists ; 2005 ; Chinese Journal of Astronomy and Astrophysics Volume 5 ; 5 > 
     au < manifest ; exists ; 2006 ; Chinese Journal of Astronomy and Astrophysics Volume 6 ; 6 > 
     au < manifest ; exists ; 2007 ; Chinese Journal of Astronomy and Astrophysics Volume 7 ; 7 > 
-    au < notReady ; exists; 2008 ; Chinese Journal of Astronomy and Astrophysics Volume 8 ; 8 > 
+    au < released ; manifest ; 2008 ; Chinese Journal of Astronomy and Astrophysics Volume 8 ; 8 > 
 
   }
 
@@ -335,7 +336,7 @@
     au < manifest ; exists ; 2005 ; Classical and Quantum Gravity Volume 22 ; 22 > 
     au < manifest ; exists ; 2006 ; Classical and Quantum Gravity Volume 23 ; 23 > 
     au < manifest ; exists ; 2007 ; Classical and Quantum Gravity Volume 24 ; 24 > 
-    au < notReady ; exists ; 2008 ; Classical and Quantum Gravity Volume 25 ; 25 > 
+    au < released ; manifest ; 2008 ; Classical and Quantum Gravity Volume 25 ; 25 > 
     au < released ; manifest ; 2009 ; Classical and Quantum Gravity Volume 26 ; 26 > 
     au < released ; crawling ; 2010 ; Classical and Quantum Gravity Volume 27 ; 27 > 
     au < released ; manifest ; 2011 ; Classical and Quantum Gravity Volume 28 ; 28 > 

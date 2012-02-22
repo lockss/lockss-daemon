@@ -4,6 +4,7 @@
     name = Pace University
   >
 
+  attr[contract] = 2011
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
   param[base_url] = http://digitalcommons.pace.edu/ 
   implicit < status1 ; status ; year ; name ; param[volume] >
@@ -45,6 +46,7 @@
     au < released ; manifest ; 2009 ; Pace Environmental Law Review Volume 26 ; 26 >    
     au < released ; manifest ; 2009-2010 ; Pace Environmental Law Review Volume 27 ; 27 >
     au < released ; manifest ; 2011 ; Pace Environmental Law Review Volume 28 ; 28 >
+    au < manifest ; exists ; 2012 ; Pace Environmental Law Review Volume 29 ; 29 >
 
   }
 
@@ -58,6 +60,7 @@
     param[journal_abbr] = pelroc
 
     au < released ; manifest ; 2011 ; Pace Environmental Law Review Online Companion Volume 1 ; 1 >
+    au < manifest ; exists ; 2012 ; Pace Environmental Law Review Online Companion Volume 2 ; 2 >
 
   }
 
@@ -93,6 +96,7 @@
     au < released ; manifest ; 2009 ; Pace International Law Review Volume 21 ; 21 >
     au < released ; manifest ; 2010 ; Pace International Law Review Volume 22 ; 22 >
     au < released ; manifest ; 2011 ; Pace International Law Review Volume 23 ; 23 >
+    au < expected ; exists ; 2012 ; Pace International Law Review Volume 24 ; 24 >
 
   }
 
@@ -146,7 +150,8 @@
     au < released ; manifest ; 2007-2008 ; Pace Law Review Volume 28 ; 28 >
     au < released ; manifest ; 2008-2009 ; Pace Law Review Volume 29 ; 29 >
     au < released ; manifest ; 2009-2010 ; Pace Law Review Volume 30 ; 30 >
-    au < released ; manifest ; 2010 ; Pace Law Review Volume 31 ; 31 >
+    au < released ; manifest ; 2010-2011 ; Pace Law Review Volume 31 ; 31 >
+    au < expected ; exists ; 2011-2012 ; Pace Law Review Volume 32 ; 32 >
 
   }
 
@@ -160,6 +165,7 @@
     param[journal_abbr] = pipself
 
     au < released ; manifest ; 2011 ; Pace I.P., Sports & Entertainment Law Forum Volume 1 ; 1 >
+    au < exists ; exists ; 2012 ; Pace I.P., Sports & Entertainment Law Forum Volume 2 ; 2 >
 
   }
 

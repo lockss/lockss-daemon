@@ -4,6 +4,8 @@
     name = Geological Society of America
   >
 
+    attr[contract] = 2011
+
   {
   
     comment[1] = Environmental and Engineering Geoscience
@@ -124,11 +126,46 @@
   }
 
   {
+    title <
+      name = Geological Society of America Memoirs ;
+      type = bookSeries ;
+      issn = 0072-1069
+    >
   
-    comment[1] = Geological Society of America Memoirs
-    comment[2] = not in usual HighWire shape
-    comment[3] = http://memoirs.gsapubs.org/
-  
+    comment[1] = this title has no issues, just volumes check/test to see if it works with h20 plugin-- -SC
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://memoirs.gsapubs.org/
+
+    {
+      implicit < status ; year ; isbn ; name ; param[volume_name] >
+    
+      au < exists ; 1995 ; 978-0-8137-1186-7 ; Geological Society of America Memoirs Volume 186 ; 186 >
+      au < exists ; 1995 ; 978-0-8137-1187-4 ; Geological Society of America Memoirs Volume 187 ; 187 >
+      au < exists ; 1996 ; 978-0-8137-1188-1 ; Geological Society of America Memoirs Volume 188 ; 188 >
+      au < exists ; 1996 ; 978-0-8137-1189-8 ; Geological Society of America Memoirs Volume 189 ; 189 >
+      au < exists ; 1997 ; 978-0-8137-1190-4 ; Geological Society of America Memoirs Volume 190 ; 190 >
+      au < exists ; 1997 ; 978-0-8137-1191-1 ; Geological Society of America Memoirs Volume 191 ; 191 >
+      au < exists ; 1999 ; 978-0-8137-1192-8 ; Geological Society of America Memoirs Volume 192 ; 192 >
+      au < exists ; 2001 ; 978-0-8137-1193-5 ; Geological Society of America Memoirs Volume 193 ; 193 >
+      au < exists ; 2001 ; 978-0-8137-1194-2 ; Geological Society of America Memoirs Volume 194 ; 194 >
+      au < exists ; 2002 ; 978-0-8137-1195-9 ; Geological Society of America Memoirs Volume 195 ; 195 >
+      au < exists ; 2003 ; 978-0-8137-1196-6 ; Geological Society of America Memoirs Volume 196 ; 196 >
+      au < exists ; 2004 ; 978-0-8137-1197-3 ; Geological Society of America Memoirs Volume 197 ; 197 >
+      au < exists ; 2006 ; 978-0-8137-1198-0 ; Geological Society of America Memoirs Volume 198 ; 198 >
+      au < exists ; 2007 ; 978-0-8137-1199-7 ; Geological Society of America Memoirs Volume 199 ; 199 >
+      au < exists ; 2007 ; 978-0-8137-1200-0 ; Geological Society of America Memoirs Volume 200 ; 200 >
+      au < exists ; 2008 ; 978-0-8137-1201-7 ; Geological Society of America Memoirs Volume 201 ; 201 >
+      au < exists ; 2008 ; 978-0-8137-1202-4 ; Geological Society of America Memoirs Volume 202 ; 202 >
+      au < manifest ; 2009 ; 978-0-8137-1203-1 ; Geological Society of America Memoirs Volume 203 ; 203 >
+      au < manifest ; 2009 ; 978-0-8137-1204-8 ; Geological Society of America Memoirs Volume 204 ; 204 >
+      au < manifest ; 2010 ; 978-0-8137-1205-5 ; Geological Society of America Memoirs Volume 205 ; 205 >
+      au < manifest ; 2010 ; 978-0-8137-1206-2 ; Geological Society of America Memoirs Volume 206 ; 206 >
+      au < manifest ; 2011 ; 978-0-8137-1207-9 ; Geological Society of America Memoirs Volume 207 ; 207 >
+      
+      
+    }
+
   }
 
   {
@@ -258,6 +295,7 @@
       au < manifest ; exists ; 2011 ; 978-0-8137-0019-9 ; GSA Field Guides Volume 19 ; 19 >
       au < manifest ; exists ; 2011 ; 978-0-8137-0020-5 ; GSA Field Guides Volume 20 ; 20 >
       au < manifest ; exists ; 2011 ; 978-0-8137-0021-2 ; GSA Field Guides Volume 21 ; 21 >
+      au < manifest ; exists ; 2012 ; 978-0-8137-0022-9 ; GSA Field Guides Volume 22 ; 22 >
 
     }
   
@@ -279,6 +317,7 @@
     au < manifest ; exists ; 2009 ; Lithosphere Volume 1 ; 1 >
     au < manifest ; exists ; 2010 ; Lithosphere Volume 2 ; 2 >
     au < crawling ; exists ; 2011 ; Lithosphere Volume 3 ; 3 >
+    au < crawling ; exists ; 2012 ; Lithosphere Volume 4 ; 4 >
 
   }
 

@@ -4,12 +4,9 @@
     name = British Institute of Radiology
   >
 
-  plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+  attr[contract] = 2011
+  plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin 
   implicit < status1 ; status ; year ; name ; param[volume_name] >
-  
-  {
-    comment[0] = 2011 AUs added were as H10
-  }
   
   {
 
@@ -105,8 +102,9 @@
     au < manifest ; exists ; 2008 ; British Journal of Radiology Volume 81 ; 81 >
     au < manifest ; exists ; 2009 ; British Journal of Radiology Volume 82 ; 82 >
     au < manifest ; exists ; 2010 ; British Journal of Radiology Volume 83 ; 83 >
-    au < crawling ; exists ; 2011 ; British Journal of Radiology Volume 84 ; 84 >
-    
+    au < released ; manifest ; 2011 ; British Journal of Radiology Volume 84 ; 84 >
+    au < crawling ; exists ; 2012 ; British Journal of Radiology Volume 85 ; 85 >
+     
   }
   
   {
@@ -119,7 +117,7 @@
     >
 
     param[base_url] = http://dmfr.birjournals.org/
-    
+        
     au < manifest ; exists ; 1989 ; Dentomaxillofacial Radiology Volume 18 ; 18 >
     au < manifest ; exists ; 1990 ; Dentomaxillofacial Radiology Volume 19 ; 19 >
     au < manifest ; exists ; 1991 ; Dentomaxillofacial Radiology Volume 20 ; 20 >
@@ -142,7 +140,8 @@
     au < manifest ; exists ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 >
     au < manifest ; exists ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 >
     au < manifest ; exists ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 >
-    au < crawling ; exists ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 >
+    au < released ; manifest ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 > 
+    au < crawling ; exists ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 >
 
   }
   
@@ -158,19 +157,18 @@
     param[base_url] = http://imaging.birjournals.org/
     comment[0] = last published volume in 2009  
     
-    au < crawling ; exists ; 1999 ; Imaging Volume 11 ; 11 >
-    au < crawling ; exists ; 2000 ; Imaging Volume 12 ; 12 >
-    au < crawling ; exists ; 2001 ; Imaging Volume 13 ; 13 >
-    au < crawling ; exists ; 2002 ; Imaging Volume 14 ; 14 >
-    au < crawling ; exists ; 2003 ; Imaging Volume 15 ; 15 >
-    au < crawling ; exists ; 2004 ; Imaging Volume 16 ; 16 >
-    au < crawling ; exists ; 2005 ; Imaging Volume 17 ; 17 >
-    au < crawling ; exists ; 2006 ; Imaging Volume 18 ; 18 >
-    au < crawling ; exists ; 2007 ; Imaging Volume 19 ; 19 >
-    au < crawling ; exists ; 2008 ; Imaging Volume 20 ; 20 >
-    au < crawling ; exists ; 2009 ; Imaging Volume 21 ; 21 >
+    au < released ; manifest ; 1999 ; Imaging Volume 11 ; 11 >
+    au < released ; manifest ; 2000 ; Imaging Volume 12 ; 12 >
+    au < released ; manifest ; 2001 ; Imaging Volume 13 ; 13 >
+    au < released ; manifest ; 2002 ; Imaging Volume 14 ; 14 >
+    au < released ; manifest ; 2003 ; Imaging Volume 15 ; 15 >
+    au < released ; manifest ; 2004 ; Imaging Volume 16 ; 16 >
+    au < released ; manifest ; 2005 ; Imaging Volume 17 ; 17 >
+    au < released ; manifest ; 2006 ; Imaging Volume 18 ; 18 >
+    au < released ; manifest ; 2007 ; Imaging Volume 19 ; 19 >
+    au < released ; manifest ; 2008 ; Imaging Volume 20 ; 20 >
+    au < released ; manifest ; 2009 ; Imaging Volume 21 ; 21 >
 
   }
 
 }
-
