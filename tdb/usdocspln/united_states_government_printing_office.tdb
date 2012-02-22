@@ -38,10 +38,10 @@
     au < ready ; 2004 ; Additional Government Publications 2004 ; 2004 >
     au < ready ; 2005 ; Additional Government Publications 2005 ; 2005 >
     au < ready ; 2006 ; Additional Government Publications 2006 ; 2006 >
-    au < ready; 2007 ; Additional Government Publications 2007 ; 2007 >
-    au < ready; 2008 ; Additional Government Publications 2008 ; 2008 >
-    au < ready; 2009 ; Additional Government Publications 2009 ; 2009 >
-    au < ready; 2010 ; Additional Government Publications 2010 ; 2010 >
+    au < ready ; 2007 ; Additional Government Publications 2007 ; 2007 >
+    au < ready ; 2008 ; Additional Government Publications 2008 ; 2008 >
+    au < ready ; 2009 ; Additional Government Publications 2009 ; 2009 >
+    au < ready ; 2010 ; Additional Government Publications 2010 ; 2010 >
 
   }
   
@@ -339,7 +339,7 @@
     implicit < status ; year ; name ; param[year] >
 
     au < manifest ; 1999 ; Congressional Record (Bound) 1999 ; 1999 >
-    au < testing ; 2000 ; Congressional Record (Bound) 2000 ; 2000 >
+    au < ready ; 2000 ; Congressional Record (Bound) 2000 ; 2000 >
     au < manifest ; 2001 ; Congressional Record (Bound) 2001 ; 2001 >
     au < manifest ; 2002 ; Congressional Record (Bound) 2002 ; 2002 >
 
