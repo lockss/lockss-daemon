@@ -78,6 +78,9 @@
     au < exists ; exists ; 2007 ; Information Technology Management Volume 20 ; 20 > 
     au < exists ; exists ; 2008 ; Information Technology Management Volume 21 ; 21 > 
     au < exists ; exists ; 2009 ; Information Technology Management Volume 22 ; 22 > 
+    au < exists ; exists ; 2010 ; Information Technology Management Volume 23 ; 23 > 
+    au < exists ; exists ; 2011 ; Information Technology Management Volume 24 ; 24 > 
+    au < exists ; exists ; 2012 ; Information Technology Management Volume 25 ; 25 > 
 
   }
 
@@ -106,6 +109,7 @@
     au < exists ; exists ; 2009 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 1 ; 1 > 
     au < exists ; exists ; 2010 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 2 ; 2 > 
     au < exists ; exists ; 2011 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 3 ; 3 > 
+    au < expected ; exists ; 2012 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 4 ; 4 > 
 
   }
 
@@ -135,6 +139,7 @@
 
     au < exists ; exists ; 2010 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 1 ; 1 > 
     au < exists ; exists ; 2011 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 2 ; 2 > 
+    au < expected ; exists ; 2012 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 3 ; 3 > 
 
   }
 
@@ -150,6 +155,7 @@
     au < exists ; exists ; 2009 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 1 ; 1 > 
     au < exists ; exists ; 2010 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 2 ; 2 > 
     au < exists ; exists ; 2011 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 3 ; 3 > 
+    au < expected ; exists ; 2012 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 4 ; 4 > 
 
   }
 
@@ -165,6 +171,7 @@
     au < exists ; exists ; 2009 ; International Journal of Agent Technologies and Systems (IJATS) Volume 1 ; 1 > 
     au < exists ; exists ; 2010 ; International Journal of Agent Technologies and Systems (IJATS) Volume 2 ; 2 > 
     au < exists ; exists ; 2011 ; International Journal of Agent Technologies and Systems (IJATS) Volume 3 ; 3 > 
+    au < expected ; exists ; 2012 ; International Journal of Agent Technologies and Systems (IJATS) Volume 4 ; 4 > 
 
   }
 
@@ -195,6 +202,7 @@
     au < exists ; exists ; 2009 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 1 ; 1 > 
     au < exists ; exists ; 2010 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 2 ; 2 > 
     au < exists ; exists ; 2011 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 3 ; 3 > 
+    au < expected ; exists ; 2012 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 4 ;  > 
 
   }
 
@@ -222,6 +230,7 @@
 
     au < exists ; exists ; 2010 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 1 ; 1 > 
     au < exists ; exists ; 2011 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 2 ; 2 > 
+    au < expected ; exists ; 2012 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 3 ; 3 > 
 
   }
 
@@ -279,6 +288,7 @@
 
     au < exists ; exists ; 2010 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 1 ; 1 > 
     au < exists ; exists ; 2011 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 2 ; 2 > 
+    au < expected ; exists ; 2012 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 3 ; 3 > 
 
   }
 
@@ -292,6 +302,7 @@
     >
 
     au < exists ; exists ; 2011 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 1 ; 1 > 
+    au < expected ; exists ; 2012 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 2 ; 2 > 
 
   }
 
@@ -306,6 +317,7 @@
 
     au < exists ; exists ; 2010 ; International Journal of Artificial Life Research (IJALR) Volume 1 ; 1 > 
     au < exists ; exists ; 2011 ; International Journal of Artificial Life Research (IJALR) Volume 2 ; 2 > 
+    au < expected ; exists ; 2012 ; International Journal of Artificial Life Research (IJALR) Volume 3 ; 3 > 
 
   }
 
@@ -320,6 +332,7 @@
 
     au < exists ; exists ; 2010 ; International Journal of Asian Business and Information Management (IJABIM) Volume 1 ; 1 > 
     au < exists ; exists ; 2011 ; International Journal of Asian Business and Information Management (IJABIM) Volume 2 ; 2 > 
+    au < expected ; exists ; 2012 ; International Journal of Asian Business and Information Management (IJABIM) Volume 3 ; 3 > 
 
   }
 
@@ -333,6 +346,7 @@
     >
 
     au < exists ; exists ; 2011 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 1 ; 1 > 
+    au < expected ; exists ; 2012 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 2 ; 2 > 
 
   }
 
@@ -381,6 +395,7 @@
     au < exists ; exists ; 2009 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 5 ; 5 > 
     au < exists ; exists ; 2010 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 6 ; 6 > 
     au < exists ; exists ; 2011 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 7 ; 7 > 
+    au < expected ; exists ; 2012 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 8 ; 8 > 
 
   }
 
@@ -405,7 +420,10 @@
       name = International Journal of Cases on Electronic Commerce (IJCEC);
       issn = 1548-0623 ;
       issnl = 1548-0623
-    >
+      
+      >
+      
+      comment[0] = ceased publication in 2007
 
     au < exists ; exists ; 2005 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 1 ; 1 > 
     au < exists ; exists ; 2006 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 2 ; 2 > 
