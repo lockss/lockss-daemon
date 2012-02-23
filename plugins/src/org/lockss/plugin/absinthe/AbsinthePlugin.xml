@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -32,7 +32,20 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%sarchives%02d.htm&quot;, base_url, au_short_year</string>
-  </entry>  
+  </entry>
+  <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+	    <string>&quot;%s&quot;, base_url</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+	    <string>&quot;%sarchives%02d.htm&quot;, base_url, volume_name</string>
+	  </entry>
+	</map>
+  </entry>    
   <entry>
     <string>plugin_config_props</string>
     <list>

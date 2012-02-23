@@ -4,6 +4,10 @@
     <string>org.lockss.plugin.jackmagazine.JackMagazinePlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
@@ -30,6 +34,23 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%slockss/volume%s.html&quot;, base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>&quot;%s&quot;, base_url</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>&quot;%slockss/volume%s.html&quot;, base_url, volume_name</string>
+    </entry>
+    <entry>
+      <string>au_issue</string>
+      <string>&quot;%sissue%s/&quot;, base_url, issue</string>
+    </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_config_props</string>
