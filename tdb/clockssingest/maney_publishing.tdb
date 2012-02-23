@@ -3940,6 +3940,7 @@
     au < manifest ; exists ; 2009 ; Publications of the English Goethe Society Volume 78 ; 78 > 
     au < manifest ; exists ; 2010 ; Publications of the English Goethe Society Volume 79 ; 79 > 
     au < crawling ; exists ; 2011 ; Publications of the English Goethe Society Volume 80 ; 80 > 
+    au < expected ; exists ; 2012 ; Publications of the English Goethe Society Volume 81 ; 81 > 
 
   }
 
@@ -3976,6 +3977,7 @@
     au < doNotProcess ; exists ; 2009 ; Redox Report Volume 14 ; 14 > 
     au < doNotProcess ; exists ; 2010 ; Redox Report Volume 15 ; 15 > 
     au < doNotProcess ; exists ; 2011 ; Redox Report Volume 16 ; 16 > 
+    au < manifest ; exists ; 2012 ; Redox Report Volume 17 ; 17 > 
 
   }
 
@@ -3995,6 +3997,7 @@
     param[journal_issn] = 0893-2344
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    comment[continued_by] = 1521-5385 
 
     au < manifest ; exists ; 1994-1995 ; Republican China Volume 20 ; 20 > 
     au < manifest ; exists ; 1996 ; Republican China Volume 21 ; 21 >
@@ -4050,6 +4053,7 @@
     au < manifest ; exists ; 2009 ; Romance Studies Volume 27 ; 27 > 
     au < manifest ; exists ; 2010 ; Romance Studies Volume 28 ; 28 > 
     au < crawling ; exists ; 2011 ; Romance Studies Volume 29 ; 29 > 
+    au < expected ; exists ; 2012 ; Romance Studies Volume 30 ; 30 > 
 
   }
 
@@ -4089,6 +4093,7 @@
     au < doNotProcess ; exists ; 2009 ; Science and Technology of Welding & Joining Volume 14 ; 14 > 
     au < doNotProcess ; exists ; 2010 ; Science and Technology of Welding & Joining Volume 15 ; 15 > 
     au < doNotProcess ; exists ; 2011 ; Science and Technology of Welding & Joining Volume 16 ; 16 > 
+    au < manifest ; exists ; 2012 ; Science and Technology of Welding & Joining Volume 17 ; 17 > 
 
   }
 
@@ -4144,6 +4149,7 @@
     au < manifest ; exists ; 2009 ; Seventeenth-Century French Studies Volume 31 ; 31 > 
     au < manifest ; exists ; 2010 ; Seventeenth-Century French Studies Volume 32 ; 32 > 
     au < crawling ; exists ; 2011 ; Seventeenth-Century French Studies Volume 33 ; 33 > 
+    au < expected ; exists ; 2012 ; Seventeenth-Century French Studies Volume 34 ; 34 > 
 
   }
 
@@ -4183,6 +4189,7 @@
     au < manifest ; exists ; 2009 ; Slavonica Volume 15 ; 15 > 
     au < manifest ; exists ; 2010 ; Slavonica Volume 16 ; 16 > 
     au < crawling ; exists ; 2011 ; Slavonica Volume 17 ; 17 > 
+    au < expected ; exists ; 2012 ; Slavonica Volume 18 ; 18 > 
 
   }
 
@@ -4190,7 +4197,8 @@
 
     title <
       name = Studies in Conservation ;
-      issn = 0039-3630
+      issn = 0039-3630 ;
+      eissn = 2047-0584 
     >
 
     plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
@@ -4204,6 +4212,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
  
    au < crawling ; exists ; 2011 ; Studies in Conservation Volume 56 ; 56 > 
+   au < manifest ; exists ; 2012 ; Studies in Conservation Volume 57 ; 57 > 
     
   }
 
@@ -4240,6 +4249,7 @@
     au < doNotProcess ; exists ; 2009 ; Surface Engineering Volume 25 ; 25 > 
     au < doNotProcess ; exists ; 2010 ; Surface Engineering Volume 26 ; 26 > 
     au < doNotProcess ; exists ; 2011 ; Surface Engineering Volume 27 ; 27 > 
+    au < manifest ; exists ; 2012 ; Surface Engineering Volume 28 ; 28 > 
 
   }
 
@@ -4304,7 +4314,8 @@
     au < manifest ; exists ; 2008 ; Survey Review Volume 40 ; 40 > 
     au < manifest ; exists ; 2009 ; Survey Review Volume 41 ; 41 > 
     au < manifest ; exists ; 2010 ; Survey Review Volume 42 ; 42 > 
-    au < crawling ; exists ; 2011 ; Survey Review Volume 43 ; 43 > 
+    au < crawling ; exists ; 2011 ; Survey Review Volume 43 ; 43 >  
+    au < manifest ; exists ; 2012 ; Survey Review Volume 44 ; 44 > 
 
   }
 
@@ -4349,6 +4360,8 @@
     au < manifest ; exists ; 2008 ; T'ang Studies Volume 2008 ; 2008 > 
     au < manifest ; exists ; 2009 ; T'ang Studies Volume 27 ; 27 > 
     au < manifest ; exists ; 2010 ; T'ang Studies Volume 2010 ; 2010 > 
+    au < manifest ; exists ; 2011 ; T'ang Studies Volume 2011 ; 2011 > 
+    au < manifest ; exists ; 2012 ; T'ang Studies Volume 2012 ; 2012 > 
 
   }
 
@@ -4408,6 +4421,7 @@
     au < manifest ; exists ; 2009 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2009 ; 2009 ; 36 > 
     au < manifest ; exists ; 2010 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 37 ; 37 ; 37 > 
     au < crawling ; exists ; 2011 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 38 ; 38 ; 38 > 
+    au < expected ; exists ; 2012 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 39 ; 39 ; 39 > 
 
   }
 
@@ -4473,6 +4487,7 @@
     au < manifest ; exists ; 2009 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 41 ; 41 > 
     au < manifest ; exists ; 2010 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 42 ; 42 > 
     au < crawling ; exists ; 2011 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 43 ; 43 > 
+    au < expected ; exists ; 2012 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 44 ; 44 > 
 
   }
 
@@ -4537,6 +4552,7 @@
     au < manifest ; exists ; 2009 ; Textile History Volume 40 ; 40 > 
     au < manifest ; exists ; 2010 ; Textile History Volume 41 ; 41 > 
     au < crawling ; exists ; 2011 ; Textile History Volume 42 ; 42 > 
+    au < expected ; exists ; 2012 ; Textile History Volume 43 ; 43 > 
 
   }
 
@@ -4567,6 +4583,7 @@
     au < doNotProcess ; exists ; 2009 ; Transactions of the Institute of Metal Finishing Volume 87 ; 87 > 
     au < doNotProcess ; exists ; 2010 ; Transactions of the Institute of Metal Finishing Volume 88 ; 88 > 
     au < doNotProcess ; exists ; 2011 ; Transactions of the Institute of Metal Finishing Volume 89 ; 89 > 
+    au < manifest ; exists ; 2012 ; Transactions of the Institute of Metal Finishing Volume 90 ; 90 > 
 
   }
 
@@ -4588,6 +4605,7 @@
     param[journal_issn] = 0372-0187
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    comment[continued_by] = 1758-1206
 
     au < manifest ; exists ; 2006 ; Transactions of the Newcomen Society Volume 76 ; 76 > 
     au < manifest ; exists ; 2007 ; Transactions of the Newcomen Society Volume 77 ; 77 > 
@@ -4620,6 +4638,7 @@
     au < doNotProcess ; exists ; 2009 ; Tribology - Materials, Surfaces & Interfaces Volume 3 ; 3 > 
     au < doNotProcess ; exists ; 2010 ; Tribology - Materials, Surfaces & Interfaces Volume 4 ; 4 > 
     au < doNotProcess ; exists ; 2011 ; Tribology - Materials, Surfaces & Interfaces Volume 5 ; 5 > 
+    au < expected ; exists ; 2012 ; Tribology - Materials, Surfaces & Interfaces Volume 6 ; 6 > 
 
   }
 
@@ -4641,6 +4660,7 @@
     param[journal_issn] = 1521-5385
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    comment[continued_from] = 0893-2344 
 
     au < manifest ; exists ; 1997-1998 ; Twentieth-Century China Volume 23 ; 23 > 
     au < manifest ; exists ; 1998-1999 ; Twentieth-Century China Volume 24 ; 24 > 
@@ -4656,6 +4676,7 @@
     au < manifest ; exists ; 2009 ; Twentieth-Century China Volume 34 ; 34 > 
     au < manifest ; exists ; 2010 ; Twentieth-Century China Volume 35 ; 35 > 
     au < crawling ; exists ; 2011 ; Twentieth-Century China Volume 36 ; 36 > 
+    au < manfiest ; exists ; 2012 ; Twentieth-Century China Volume 37 ; 37 > 
 
   }
 
@@ -4677,7 +4698,7 @@
     param[journal_issn] = 1742-271X
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[moved] = to RSMP in 2010
+    comment[moved] = published by Royal Society of Medicine Press from 2010
     comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2004 ; Ultrasound Volume 12 ; 12 > 
@@ -4709,7 +4730,8 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < manifest ; exists ; 2010 ; Usus Antiquior Volume 1 ; 1 > 
-    au < crawling ; exists ; 2011 ; Usus Antiquior Volume 2 ; 2 > 
+    au < crawling ; exists ; 2011 ; Usus Antiquior Volume 2 ; 2 >  
+    au < manifest ; exists ; 2012 ; Usus Antiquior Volume 3 ; 3 >
 
   }
 
@@ -4773,6 +4795,8 @@
     au < manifest ; exists ; 2008 ; Vernacular Architecture Volume 39 ; 39 > 
     au < manifest ; exists ; 2009 ; Vernacular Architecture Volume 40 ; 40 > 
     au < manifest ; exists ; 2010 ; Vernacular Architecture Volume 41 ; 41 > 
+    au < manifest ; exists ; 2011 ; Vernacular Architecture Volume 42 ; 42 > 
+    au < expected ; exists ; 2012 ; Vernacular Architecture Volume 43 ; 43 > 
 
   }
 
@@ -4825,6 +4849,7 @@
     au < manifest ; exists ; 2009 ; War & Society Volume 28 ; 28 > 
     au < manifest ; exists ; 2010 ; War & Society Volume 29 ; 29 > 
     au < crawling ; exists ; 2011 ; War & Society Volume 30 ; 30 > 
+    au < expected ; exists ; 2012 ; War & Society Volume 31 ; 31 > 
 
   }
 
@@ -4832,7 +4857,8 @@
 
     title <
       name = Yorkshire Archaeological Journal ;
-      issn = 0084-4276 
+      issn = 0084-4276 ;
+      eissn = 2045-0664
     >
 
     plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
@@ -4846,6 +4872,8 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < manifest ; exists ; 2010 ; Yorkshire Archaeological Journal Volume 82 ; 82 >
+    au < manifest ; exists ; 2011 ; Yorkshire Archaeological Journal Volume 83 ; 83 >
+    au < expected ; exists ; 2012 ; Yorkshire Archaeological Journal Volume 84 ; 84 >
 
   }
 
