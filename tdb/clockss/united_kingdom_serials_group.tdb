@@ -39,30 +39,30 @@
     param[journal_issn] = 0953-0460
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
-    au < released ; manifest ; 1988 ; Serials: The Journal for the Serials Community Volume 1 ; 1 >
-    au < released ; manifest ; 1989 ; Serials: The Journal for the Serials Community Volume 2 ; 2 >
-    au < released ; manifest ; 1990 ; Serials: The Journal for the Serials Community Volume 3 ; 3 >
-    au < released ; manifest ; 1991 ; Serials: The Journal for the Serials Community Volume 4 ; 4 >
-    au < released ; manifest ; 1992 ; Serials: The Journal for the Serials Community Volume 5 ; 5 >
-    au < released ; manifest ; 1993 ; Serials: The Journal for the Serials Community Volume 6 ; 6 >
-    au < released ; manifest ; 1994 ; Serials: The Journal for the Serials Community Volume 7 ; 7 >
-    au < released ; manifest ; 1995 ; Serials: The Journal for the Serials Community Volume 8 ; 8 >
-    au < released ; manifest ; 1996 ; Serials: The Journal for the Serials Community Volume 9 ; 9 >
-    au < released ; manifest ; 1997 ; Serials: The Journal for the Serials Community Volume 10 ; 10 >
-    au < released ; manifest ; 1998 ; Serials: The Journal for the Serials Community Volume 11 ; 11 >
-    au < released ; manifest ; 1999 ; Serials: The Journal for the Serials Community Volume 12 ; 12 >
-    au < released ; manifest ; 2000 ; Serials: The Journal for the Serials Community Volume 13 ; 13 >
-    au < released ; manifest ; 2001 ; Serials: The Journal for the Serials Community Volume 14 ; 14 >
-    au < released ; manifest ; 2002 ; Serials: The Journal for the Serials Community Volume 15 ; 15 >
-    au < released ; manifest ; 2003 ; Serials: The Journal for the Serials Community Volume 16 ; 16 >
-    au < released ; manifest ; 2004 ; Serials: The Journal for the Serials Community Volume 17 ; 17 >
-    au < released ; manifest ; 2005 ; Serials: The Journal for the Serials Community Volume 18 ; 18 >
-    au < released ; manifest ; 2006 ; Serials: The Journal for the Serials Community Volume 19 ; 19 >
-    au < released ; manifest ; 2007 ; Serials: The Journal for the Serials Community Volume 20 ; 20 >
+    au < released ; crawling ; 1988 ; Serials: The Journal for the Serials Community Volume 1 ; 1 >
+    au < released ; crawling ; 1989 ; Serials: The Journal for the Serials Community Volume 2 ; 2 >
+    au < released ; crawling ; 1990 ; Serials: The Journal for the Serials Community Volume 3 ; 3 >
+    au < released ; crawling ; 1991 ; Serials: The Journal for the Serials Community Volume 4 ; 4 >
+    au < released ; crawling ; 1992 ; Serials: The Journal for the Serials Community Volume 5 ; 5 >
+    au < released ; crawling ; 1993 ; Serials: The Journal for the Serials Community Volume 6 ; 6 >
+    au < released ; crawling ; 1994 ; Serials: The Journal for the Serials Community Volume 7 ; 7 >
+    au < released ; crawling ; 1995 ; Serials: The Journal for the Serials Community Volume 8 ; 8 >
+    au < released ; crawling ; 1996 ; Serials: The Journal for the Serials Community Volume 9 ; 9 >
+    au < released ; crawling ; 1997 ; Serials: The Journal for the Serials Community Volume 10 ; 10 >
+    au < released ; crawling ; 1998 ; Serials: The Journal for the Serials Community Volume 11 ; 11 >
+    au < released ; crawling ; 1999 ; Serials: The Journal for the Serials Community Volume 12 ; 12 >
+    au < released ; crawling ; 2000 ; Serials: The Journal for the Serials Community Volume 13 ; 13 >
+    au < released ; crawling ; 2001 ; Serials: The Journal for the Serials Community Volume 14 ; 14 >
+    au < released ; crawling ; 2002 ; Serials: The Journal for the Serials Community Volume 15 ; 15 >
+    au < released ; crawling ; 2003 ; Serials: The Journal for the Serials Community Volume 16 ; 16 >
+    au < released ; crawling ; 2004 ; Serials: The Journal for the Serials Community Volume 17 ; 17 >
+    au < released ; crawling ; 2005 ; Serials: The Journal for the Serials Community Volume 18 ; 18 >
+    au < released ; crawling ; 2006 ; Serials: The Journal for the Serials Community Volume 19 ; 19 >
+    au < released ; crawling ; 2007 ; Serials: The Journal for the Serials Community Volume 20 ; 20 >
     au < notReady ; exists ; 2008 ; Serials: The Journal for the Serials Community Volume 21 ; 21 >
     au < notReady ; exists ; 2009 ; Serials: The Journal for the Serials Community Volume 22 ; 22 >
     au < testing ; exists ; 2010 ; Serials: The Journal for the Serials Community Volume 23 ; 23 >
-    au < released ; manifest ; 2011 ; Serials: The Journal for the Serials Community Volume 24 ; 24 >
+    au < released ; crawling ; 2011 ; Serials: The Journal for the Serials Community Volume 24 ; 24 >
     au < expected ; exists ; 2012 ; Serials: The Journal for the Serials Community Volume 25 ; 25 >
 
   }
