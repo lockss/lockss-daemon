@@ -10,7 +10,7 @@
       name = Wiley Source Content
     >
     
-    plugin = org.lockss.plugin.springer.ClockssWileySourcePlugin
+    plugin = org.lockss.plugin.wiley.ClockssWileySourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wiley-released/
     proxy = DIRECT
     implicit < status ; year ; name ; param[year] >
