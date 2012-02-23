@@ -230,8 +230,8 @@ GetOptions ("daemon-home=s"     => \$daemonHome, # LOCKSS Daemon home dir
     );
 
 # Now set up the paths based on lockss-daemon-home
-# List of all the TDB files
-my $tdbs = "$daemonHome/tdb/prod/*.tdb";
+# List of all the TDB files (including UK)
+my $tdbs = "$daemonHome/tdb/prod*/*.tdb";
 # Location of the tdbout script
 my $tdbout = "$daemonHome/scripts/tdb/tdbout.py";
 
