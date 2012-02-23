@@ -2031,7 +2031,7 @@
     au < released ; manifest ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; >
     au < manifest ; exists ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 ; >
     au < released ; manifest ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 ; >
   
     }
 
@@ -4681,7 +4681,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Europace Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; Europace Volume 12 ; 12 ; >
     au < released ; manifest ; 2011 ; Europace Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2012 ; Europace Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2012 ; Europace Volume 14 ; 14 ; >
 
     }
 
@@ -4743,7 +4743,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; European Heart Journal Volume 30 ; 30 ; >
     au < testing ; exists ; 2010 ; European Heart Journal Volume 31 ; 31 ; >
     au < released ; manifest ; 2011 ; European Heart Journal Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2012 ; European Heart Journal Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2012 ; European Heart Journal Volume 33 ; 33 ; >
 
     }
 
@@ -4832,7 +4832,7 @@
     au < manifest ; exists ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 38 ; 38 ; >
     au < manifest ; exists ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 ; >
     au < manifest ; exists ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 41 ; 41 ; >
     au < expected ; exists ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 ; >
   
   }
@@ -4903,7 +4903,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; >
     au < down ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
     au < manifest ; exists ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2012 ; European Journal of Echocardiography Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2012 ; European Journal of Echocardiography Volume 13 ; 13 ; >
 
     }
 
@@ -4946,7 +4946,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
     au < released ; manifest ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2012 ; European Journal of Heart Failure Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2012 ; European Journal of Heart Failure Volume 14 ; 14 ; >
 
     }
 
@@ -5138,7 +5138,7 @@
     au < released ; crawling ; 2009 ; European Journal of Public Health Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; European Journal of Public Health Volume 20 ; 20 ; >
     au < released ; manifest ; 2011 ; European Journal of Public Health Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2012 ; European Journal of Public Health Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2012 ; European Journal of Public Health Volume 22 ; 22 ; >
 
     }
 
@@ -5206,7 +5206,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 ; >
     au < released ; crawling ; 2010 ; European Review of Agricultural Economics Volume 37 ; 37 ; >
     au < released ; manifest ; 2011 ; European Review of Agricultural Economics Volume 38 ; 38 ; > 
-    au < manifest ; exists ; 2012 ; European Review of Agricultural Economics Volume 39 ; 39 ; >  
+    au < crawling ; exists ; 2012 ; European Review of Agricultural Economics Volume 39 ; 39 ; >  
 
     }
 
@@ -5239,7 +5239,7 @@
     au < manifest ; exists ; 2009 ; European Review of Economic History Volume 13 ; 13 ; >
     au < manifest ; exists ; 2010 ; European Review of Economic History Volume 14 ; 14 ; >
     au < released ; manifest ; 2011 ; European Review of Economic History Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2012 ; European Review of Economic History Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2012 ; European Review of Economic History Volume 16 ; 16 ; >
 
   }
   
@@ -5294,7 +5294,7 @@
     au < released ; crawling ; 2009 ; European Sociological Review Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; European Sociological Review Volume 26 ; 26 ; >
     au < released ; manifest ; 2011 ; European Sociological Review Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2012 ; European Sociological Review Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2012 ; European Sociological Review Volume 28 ; 28 ; >
 
     }
 
@@ -5375,7 +5375,7 @@
     au < released ; crawling ; 2009 ; Family Practice Volume 26 ; 26 ; >
     au < released ; crawling ; 2010 ; Family Practice Volume 27 ; 27 ; >
     au < released ; manifest ; 2011 ; Family Practice Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2012 ; Family Practice Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2012 ; Family Practice Volume 29 ; 29 ; >
 
     }
 
@@ -5619,7 +5619,7 @@
     au < released ; crawling ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 ; >
     au < released ; crawling ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 ; >
     au < released ; manifest ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 ; > 
-    au < manifest ; exists ; 2012 ; Forum for Modern Language Studies Volume 48 ; 48 ; >   
+    au < crawling ; exists ; 2012 ; Forum for Modern Language Studies Volume 48 ; 48 ; >   
 
     }
 
@@ -5674,7 +5674,7 @@
     au < released ; crawling ; 2009 ; French History Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; French History Volume 24 ; 24 ; >
     au < released ; manifest ; 2011 ; French History Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2012 ; French History Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2012 ; French History Volume 26 ; 26 ; >
 
     }
 
@@ -5769,7 +5769,7 @@
     au < released ; crawling ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 ; >
     au < released ; crawling ; 2010 ; French Studies Volume 64 ; 64 ; >
     au < released ; manifest ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 ; >
+    au < crawling ; exists ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 ; >
 
     }
     
@@ -5840,7 +5840,7 @@
     au < manifest ; exists ; 2009 ; Genome Biology and Evolution Volume 1 ; 1 ; > 
     au < manifest ; exists ; 2010 ; Genome Biology and Evolution Volume 2 ; 2 ; > 
     au < testing ; exists ; 2011 ; Genome Biology and Evolution Volume 3 ; 3 ; > 
-    au < manifest ; exists ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 ; > 
+    au < crawling ; exists ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 ; > 
 
   }
       
@@ -5897,7 +5897,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; German History Volume 27 ; 27 ; >
     au < released ; crawling ; 2010 ; German History Volume 28 ; 28 ; >
     au < released ; manifest ; 2011 ; German History Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2012 ; German History Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2012 ; German History Volume 30 ; 30 ; >
 
     }
 
@@ -5977,7 +5977,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Gerontologist Volume 49 ; 49 ; >
     au < released ; crawling ; 2010 ; The Gerontologist Volume 50 ; 50 ; >
     au < released ; manifest ; 2011 ; The Gerontologist Volume 51 ; 51 ; > 
-    au < manifest ; exists ; 2012 ; The Gerontologist Volume 52 ; 52 ; > 
+    au < crawling ; exists ; 2012 ; The Gerontologist Volume 52 ; 52 ; > 
 
     }
 
@@ -7237,7 +7237,7 @@
     param[base_url] = http://icvts.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 14 ; 14 ; >  
+    au < crawling ; exists ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 14 ; 14 ; >  
      
   }
     
@@ -8606,7 +8606,7 @@
     au < released ; crawling ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 ; >
     au < released ; crawling ; 2010 ; Journal of Antimicrobial Chemotherapy Volume 65 ; 65 ; >
     au < released ; crawling ; 2011 ; Journal of Antimicrobial Chemotherapy Volume 66 ; 66 ; >
-    au < manifest ; exists ; 2012 ; Journal of Antimicrobial Chemotherapy Volume 67 ; 67 ; >
+    au < crawling ; exists ; 2012 ; Journal of Antimicrobial Chemotherapy Volume 67 ; 67 ; >
 
     }
 
@@ -10054,7 +10054,7 @@
     au < manifest ; exists ; 2010 ; Journal of Infectious Diseases Volume 202 ; 202 ; >
     au < manifest ; exists ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 ; >
     au < released ; manifest ; 2011 ; Journal of Infectious Diseases Volume 204 ; 204 ; >
-    au < manifest ; exists ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 ; >
+    au < crawling ; exists ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 ; >
          
     }
 
@@ -13110,7 +13110,7 @@
     au < manifest ; exists ; 2009 ; Neuro-Oncology Volume 11 ; 11 ; > 
     au < manifest ; exists ; 2010 ; Neuro-Oncology Volume 12 ; 12 ; > 
     au < released ; manifest ; 2011 ; Neuro-Oncology Volume 13 ; 13 ; > 
-    au < manifest ; exists ; 2012 ; Neuro-Oncology Volume 14 ; 14 ; > 
+    au < crawling ; exists ; 2012 ; Neuro-Oncology Volume 14 ; 14 ; > 
 
   }
 
@@ -13969,7 +13969,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Economic Papers Volume 61 ; 61 ; >
     au < released ; crawling ; 2010 ; Oxford Economic Papers Volume 62 ; 62 ; >
     au < released ; manifest ; 2011 ; Oxford Economic Papers Volume 63 ; 63 ; >
-    au < manifest ; exists ; 2012 ; Oxford Economic Papers Volume 64 ; 64 ; >
+    au < crawling ; exists ; 2012 ; Oxford Economic Papers Volume 64 ; 64 ; >
 
     }
 
