@@ -129,4 +129,13 @@
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.pion.PionArticleIteratorFactory</string>
   </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
 </map>

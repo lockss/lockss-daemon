@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>76</string>
+    <string>77</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -173,6 +173,24 @@
       <entry>
         <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
         <string>1/6000</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+      <entry>
+        <string>au_mime_rate_limiter_map</string>
+        <map>
+          <entry>
+            <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+            <string>1/100</string>
+          </entry>
+        </map>
       </entry>
     </map>
   </entry>
