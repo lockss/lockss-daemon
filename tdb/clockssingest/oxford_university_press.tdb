@@ -75,6 +75,7 @@
     au < released ; crawling ; 2010 ; Adaptation Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; Adaptation Volume 4 ; 4 ; >
     au < manifest ; exists ; 2011 ; Adaptation Volume 5 ; 5 ; >
+    au < expected ; exists ; 2012 ; Adaptation Volume 6 ; 6 ; >
 
     }
 
@@ -3399,6 +3400,7 @@
     au < doNotProcess ; doNotProcess ; 2008-2009 ;The Chinese Journal of International Politics Volume 2 ; 2 ; >
     au < released ; crawling ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 ; >
     au < manifest ; exists ; 2011 ; The Chinese Journal of International Politics Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 ; >
 
     }
 
@@ -3750,7 +3752,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Contemporary Women's Writing Volume 3 ; 3 ; >
     au < released ; crawling ; 2010 ; Contemporary Women's Writing Volume 4 ; 4 ; >
     au < released ; crawling ; 2011 ; Contemporary Women's Writing Volume 5 ; 5 ; >
-    au < expected ; exists ; 2011 ; Contemporary Women's Writing Volume 6 ; 6 ; >
+    au < expected ; exists ; 2012 ; Contemporary Women's Writing Volume 6 ; 6 ; >
 
     }
 
@@ -4339,7 +4341,7 @@
     au < released ; crawling ; 2009 ; ELT Journal Volume 63 ; 63 ; >
     au < released ; crawling ; 2010 ; ELT Journal Volume 64 ; 64 ; >
     au < released ; crawling ; 2011 ; ELT Journal Volume 65 ; 65 ; > 
-    au < manifest ; exists ; 2011 ; ELT Journal Volume 66 ; 66 ; > 
+    au < manifest ; exists ; 2012 ; ELT Journal Volume 66 ; 66 ; > 
 
     }
 
@@ -5087,7 +5089,7 @@
     au < released ; crawling ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ; >
     au < released ; crawling ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ; > 
-    au < manifest ; exists ; 2011 ; European Journal of Orthodontics Volume 34 ; 34 ; > 
+    au < manifest ; exists ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 ; > 
 
     }
 
@@ -6028,7 +6030,7 @@
     au < released ; crawling ; 2009 ; Glycobiology Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Glycobiology Volume 20 ; 20 ; >
     au < released ; crawling ; 2011 ; Glycobiology Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2011 ; Glycobiology Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2012 ; Glycobiology Volume 22 ; 22 ; >
 
     }
 
@@ -6115,6 +6117,7 @@
     au < released ; crawling ; 2009 ; Health Education Research Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Health Education Research Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; Health Education Research Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2012 ; Health Education Research Volume 27 ; 27 ; >
 
     }
 
@@ -6170,6 +6173,7 @@
     au < released ; crawling ; 2009 ; Health Policy and Planning Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Health Policy and Planning Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; Health Policy and Planning Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2012 ; Health Policy and Planning Volume 27 ; 27 ; >
 
     }
 
@@ -6225,6 +6229,7 @@
     au < released ; crawling ; 2009 ; Health Promotion International Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Health Promotion International Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; Health Promotion International Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2012 ; Health Promotion International Volume 27 ; 27 ; >
 
     }
 
@@ -6321,6 +6326,9 @@
     au < notReady ; exists ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
     au < released ; crawling ; 2010 ; History Workshop Journal Volume 70 ; 70 ; >
     au < released ; crawling ; 2011 ; History Workshop Journal Volume 71 ; 71 ; >  
+    au < manifest ; exists ; 2011 ; History Workshop Journal Volume 72 ; 72 ; >  
+    au < expected ; exists ; 2012 ; History Workshop Journal Volume 73 ; 73 ; >  
+    au < expected ; exists ; 2012 ; History Workshop Journal Volume 74 ; 74 ; >  
 
     }
     
@@ -6375,6 +6383,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 ; >
     au < released ; crawling ; 2011 ; Holocaust and Genocide Studies Volume 25 ; 25 ; >
+    au < expected ; exists ; 2012 ; Holocaust and Genocide Studies Volume 26 ; 26 ; >
 
     }
     
@@ -6423,7 +6432,8 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; >
     au < released ; crawling ; 2010 ; Human Molecular Genetics Volume 19 ; 19 ; >
-    au < released ; manifest; 2011 ; Human Molecular Genetics Volume 20 ; 20 ; >
+    au < released ; manifest ; 2011 ; Human Molecular Genetics Volume 20 ; 20 ; >
+    au < expected ; exists ; 2012 ; Human Molecular Genetics Volume 21 ; 21 ; >
 
     }
 
@@ -6479,6 +6489,7 @@
     au < released ; crawling ; 2009 ; Human Reproduction Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Human Reproduction Volume 25 ; 25 ; >
     au < testing ; exists ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2012 ; Human Reproduction Volume 27 ; 27 ; >
 
     }
 
@@ -6525,6 +6536,7 @@
     au < released ; crawling ; 2009 ; Human Reproduction Update Volume 15 ; 15 ; >
     au < released ; crawling ; 2010 ; Human Reproduction Update Volume 16 ; 16 ; >
     au < testing ; exists ; 2011 ; Human Reproduction Update Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2012 ; Human Reproduction Update Volume 18 ; 18 ; >
 
     }
 
@@ -10728,6 +10740,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 ; >
     au < released ; crawling ; 2010 ; Journal of Molluscan Studies Volume 76 ; 76 ; >
     au < released ; crawling ; 2011 ; Journal of Molluscan Studies Volume 77 ; 77 ; >
+    au < manifest ; crawling ; 2012 ; Journal of Molluscan Studies Volume 78 ; 78 ; >
 
     }
 
