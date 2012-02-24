@@ -1023,6 +1023,8 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2010 ; Dress Volume 36 ; 36 > 
+	au < manifest ; 2011 ; Dress Volume 37 ; 37 > 
+	au < expected ; 2012 ; Dress Volume 38 ; 38 > 
 
   }
 
@@ -1047,6 +1049,7 @@
     au < manifest ; 2009 ; Dutch Crossing: Journal of Low Countries Studies Volume 33 ; 33 > 
     au < manifest ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 > 
     au < manifest ; 2011 ; Dutch Crossing: Journal of Low Countries Studies Volume 35 ; 35 > 
+    au < expected ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 > 
 
   }
 
@@ -1085,6 +1088,8 @@
     au < manifest ; 2008 ; Early Medieval China Volume 2008 ; 2008 > 
     au < manifest ; 2009 ; Early Medieval China Volume 2009 ; 2009 > 
     au < manifest ; 2010 ; Early Medieval China Volume 2010 ; 2010 > 
+    au < manifest ; 2011 ; Early Medieval China Volume 2011 ; 2011 > 
+    au < expected ; 2012 ; Early Medieval China Volume 2012 ; 2012 > 
 
   }
 
@@ -1110,6 +1115,8 @@
     au < manifest ; 2007 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 2 ; 2 > 
     au < manifest ; 2008 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 3 ; 3 > 
     au < manifest ; 2009 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 4 ; 4 > 
+    au < expected ; 2010 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 5 ; 5 > 
+    au < expected ; 2011 ; Energy Materials: Materials Science and Engineering for Energy Systems Volume 6 ; 6 > 
 
   }
 
@@ -1133,7 +1140,9 @@
     au < manifest ; 2007 ; English Heritage Historical Review Volume 2 ; 2 >
     au < manifest ; 2008 ; English Heritage Historical Review Volume 3 ; 3 >     
     au < manifest ; 2009 ; English Heritage Historical Review Volume 4 ; 4 >   
-    au < manifest ; 2010 ; English Heritage Historical Review Volume 5 ; 5 >
+    au < manifest ; 2010 ; English Heritage Historical Review Volume 5 ; 5 > 
+    au < expected ; 2011 ; English Heritage Historical Review Volume 6 ; 6 > 
+    au < expected ; 2012 ; English Heritage Historical Review Volume 7 ; 7 >
    
   }
 
@@ -1170,6 +1179,8 @@
     au < manifest ; 2008 ; Environmental Archaeology Volume 13 ; 13 > 
     au < manifest ; 2009 ; Environmental Archaeology Volume 14 ; 14 > 
     au < manifest ; 2010 ; Environmental Archaeology Volume 15 ; 15 > 
+    au < manifest ; 2011 ; Environmental Archaeology Volume 16 ; 16 > 
+    au < expected ; 2012 ; Environmental Archaeology Volume 17 ; 17 > 
 
   }
 
@@ -1192,6 +1203,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
+    au < expected ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
     
   }
 
@@ -1236,6 +1248,7 @@
     au < manifest ; 2009 ; Exemplaria Volume 21 ; 21 > 
     au < manifest ; 2010 ; Exemplaria Volume 22 ; 22 > 
     au < manifest ; 2011 ; Exemplaria Volume 23 ; 23 > 
+    au < expected ; 2012 ; Exemplaria Volume 24 ; 24 > 
 
   }
 
@@ -1262,6 +1275,8 @@
     au < manifest ; 2008 ; Family & Community History Volume 11 ; 11 > 
     au < manifest ; 2009 ; Family & Community History Volume 12 ; 12 > 
     au < manifest ; 2010 ; Family & Community History Volume 13 ; 13 > 
+    au < manifest ; 2011 ; Family & Community History Volume 14 ; 14 > 
+    au < expected ; 2012 ; Family & Community History Volume 15 ; 15 > 
 
   }
 
@@ -1286,6 +1301,7 @@
     au < manifest ; 2009 ; Folk Life: Journal of Ethnological Studies Volume 47 ; 47 > 
     au < manifest ; 2010 ; Folk Life: Journal of Ethnological Studies Volume 48 ; 48 > 
     au < manifest ; 2011 ; Folk Life: Journal of Ethnological Studies Volume 49 ; 49 > 
+    au < expected ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 > 
 
   }
 
@@ -1377,6 +1393,7 @@
     au < manifest ; 2009 ; Hispanic Research Journal Volume 10 ; 10 > 
     au < manifest ; 2010 ; Hispanic Research Journal Volume 11 ; 11 > 
     au < manifest ; 2011 ; Hispanic Research Journal Volume 12 ; 12 > 
+    au < manifest ; 2012 ; Hispanic Research Journal Volume 13 ; 13 > 
 
   }
 
@@ -1430,6 +1447,7 @@
     au < doNotProcess ; 2009 ; The Imaging Science Journal Volume 57 ; 57 > 
     au < doNotProcess ; 2010 ; The Imaging Science Journal Volume 58 ; 58 > 
     au < doNotProcess ; 2011 ; The Imaging Science Journal Volume 59 ; 59 > 
+    au < doNotProcess ; 2012 ; The Imaging Science Journal Volume 60 ; 60 > 
 
   }
 
@@ -1593,6 +1611,7 @@
     au < manifest ; 2009 ; International Journal for the History of Engineering & Technology Volume 79 ; 79 > 
     au < manifest ; 2010 ; International Journal for the History of Engineering & Technology Volume 80 ; 80 > 
     au < manifest ; 2011 ; International Journal for the History of Engineering & Technology Volume 81 ; 81 > 
+    au < manifest ; 2012 ; International Journal for the History of Engineering & Technology Volume 82 ; 82 > 
 
   }
 
@@ -1623,6 +1642,7 @@
     au < doNotProcess ; 2009 ; International Journal of Cast Metals Research Volume 22 ; 22 > 
     au < doNotProcess ; 2010 ; International Journal of Cast Metals Research Volume 23 ; 23 > 
     au < doNotProcess ; 2011 ; International Journal of Cast Metals Research Volume 24 ; 24 > 
+    au < doNotProcess ; 2012 ; International Journal of Cast Metals Research Volume 25 ; 25 > 
 
   }
 
@@ -1672,6 +1692,7 @@
     au < doNotProcess ; 2009 ; International Materials Reviews Volume 54 ; 54 > 
     au < doNotProcess ; 2010 ; International Materials Reviews Volume 55 ; 55 > 
     au < doNotProcess ; 2011 ; International Materials Reviews Volume 56 ; 56 > 
+    au < doNotProcess ; 2012 ; International Materials Reviews Volume 57 ; 57 > 
 
   }
 
@@ -1752,6 +1773,7 @@
     au < doNotProcess ; 2009 ; International Musculoskeletal Medicine Volume 31 ; 31 > 
     au < doNotProcess ; 2010 ; International Musculoskeletal Medicine Volume 32 ; 32 > 
     au < doNotProcess ; 2011 ; International Musculoskeletal Medicine Volume 33 ; 33 > 
+    au < doNotProcess ; 2012 ; International Musculoskeletal Medicine Volume 34 ; 34 > 
 
   }
 
@@ -1776,6 +1798,7 @@
     
     au < doNotProcess ; 2010 ; International Wood Products Journal Volume 1 ; 1 > 
     au < doNotProcess ; 2011 ; International Wood Products Journal Volume 2 ; 2 > 
+    au < doNotProcess ; 2012 ; International Wood Products Journal Volume 3 ; 3 > 
 
   }
 
@@ -1810,6 +1833,7 @@
     au < doNotProcess ; 2009 ; Ironmaking & Steelmaking Volume 36 ; 36 > 
     au < doNotProcess ; 2010 ; Ironmaking & Steelmaking Volume 37 ; 37 > 
     au < doNotProcess ; 2011 ; Ironmaking & Steelmaking Volume 38 ; 38 > 
+    au < doNotProcess ; 2012 ; Ironmaking & Steelmaking Volume 39 ; 39 > 
 
   }
 
@@ -1833,6 +1857,7 @@
     au < manifest ; 2009 ; Italian Culture Volume 27 ; 27 > 
     au < manifest ; 2010 ; Italian Culture Volume 28 ; 28 > 
     au < manifest ; 2011 ; Italian Culture Volume 29 ; 29 > 
+    au < manifest ; 2012 ; Italian Culture Volume 30 ; 30 > 
 
   }
 
@@ -1919,6 +1944,7 @@
     au < manifest ; 2009 ; Italian Studies Volume 64 ; 64 > 
     au < manifest ; 2010 ; Italian Studies Volume 65 ; 65 > 
     au < manifest ; 2011 ; Italian Studies Volume 66 ; 66 > 
+    au < expected ; 2012 ; Italian Studies Volume 67 ; 67 > 
 
   }
 
@@ -1970,6 +1996,7 @@
     au < manifest ; 2009 ; The Italianist Volume 29 ; 29 > 
     au < manifest ; 2010 ; The Italianist Volume 30 ; 30 > 
     au < manifest ; 2011 ; The Italianist Volume 31 ; 31 > 
+    au < expected ; 2012 ; The Italianist Volume 32 ; 32 > 
 
   }
 
@@ -2001,6 +2028,7 @@
     au < doNotProcess ; 2009 ; Journal of Bryology Volume 31 ; 31 > 
     au < doNotProcess ; 2010 ; Journal of Bryology Volume 32 ; 32 > 
     au < doNotProcess ; 2011 ; Journal of Bryology Volume 33 ; 33 > 
+    au < doNotProcess ; 2012 ; Journal of Bryology Volume 34 ; 34 > 
 
   }
 
@@ -2027,6 +2055,7 @@
     au < doNotProcess ; 2008-2009 ; Journal of Care Services Management Volume 3 ; 3 > 
     au < doNotProcess ; 2009-2010 ; Journal of Care Services Management Volume 4 ; 4 > 
     au < doNotProcess ; 2010-2011 ; Journal of Care Services Management Volume 5 ; 5 > 
+    au < doNotProcess ; 2011-2011 ; Journal of Care Services Management Volume 6 ; 6 > 
 
   }
 
@@ -2052,6 +2081,7 @@
     au < doNotProcess ; 2009 ; Journal of Communication in Healthcare Volume 2 ; 2 > 
     au < doNotProcess ; 2010 ; Journal of Communication in Healthcare Volume 3 ; 3 > 
     au < doNotProcess ; 2011 ; Journal of Communication in Healthcare Volume 4 ; 4 > 
+    au < doNotProcess ; 2012 ; Journal of Communication in Healthcare Volume 5 ; 5 > 
 
   }
 
@@ -2078,6 +2108,7 @@
     au < manifest ; 2008 ; Journal of Conflict Archaeology Volume 4 ; 4 > 
     au < manifest ; 2009 ; Journal of Conflict Archaeology Volume 5 ; 5 > 
     au < manifest ; 2011 ; Journal of Conflict Archaeology Volume 6 ; 6 > 
+    au < manifest ; 2012 ; Journal of Conflict Archaeology Volume 7 ; 7 > 
 
   }
 
@@ -2134,6 +2165,7 @@
     au < manifest ; 2009 ; Journal of Field Archaeology Volume 34 ; 34 > 
     au < manifest ; 2010 ; Journal of Field Archaeology Volume 35 ; 35 > 
     au < manifest ; 2011 ; Journal of Field Archaeology Volume 36 ; 36 > 
+    au < expected ; 2012 ; Journal of Field Archaeology Volume 37 ; 37 > 
 
   }
 
@@ -2188,7 +2220,8 @@
     au < doNotProcess ; 2008 ; Journal of Histotechnology Volume 31 ; 31 > 
     au < doNotProcess ; 2009 ; Journal of Histotechnology Volume 32 ; 32 > 
     au < doNotProcess ; 2010 ; Journal of Histotechnology Volume 33 ; 33 > 
-    au < doNotProcess ; 2011 ; Journal of Histotechnology Volume 34 ; 34 > 
+    au < doNotProcess ; 2011 ; Journal of Histotechnology Volume 34 ; 34 >  
+    au < doNotProcess ; 2012 ; Journal of Histotechnology Volume 35 ; 35 >
 
   }
 
@@ -2214,6 +2247,7 @@
     au < doNotProcess ; 2009 ; Journal of Management & Marketing in Healthcare Volume 2 ; 2 > 
     au < doNotProcess ; 2010 ; Journal of Management & Marketing in Healthcare Volume 3 ; 3 > 
     au < doNotProcess ; 2011 ; Journal of Management & Marketing in Healthcare Volume 4 ; 4 > 
+    au < doNotProcess ; 2012 ; Journal of Management & Marketing in Healthcare Volume 5 ; 5 > 
 
   }
 
@@ -2254,6 +2288,7 @@
     au < doNotProcess ; 2009 ; Journal of Manual & Manipulative Therapy Volume 17 ; 17 > 
     au < doNotProcess ; 2010 ; Journal of Manual & Manipulative Therapy Volume 18 ; 18 > 
     au < doNotProcess ; 2011 ; Journal of Manual & Manipulative Therapy Volume 19 ; 19 > 
+    au < doNotProcess ; 2012 ; Journal of Manual & Manipulative Therapy Volume 20 ; 20 > 
 
   }
 
@@ -2307,6 +2342,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Orthodontics Volume 36 ; 36 > 
     au < HighWirePressPlugin ; down ; 2010 ; Journal of Orthodontics Volume 37 ; 37 > 
     au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Orthodontics Volume 38 ; 38 > 
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Orthodontics Volume 39 ; 39 > 
 
   }
 
@@ -2327,6 +2363,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2011 ; Journal of Spinal Cord Medicine Volume 34 ; 34 > 
+    au < manifest ; 2012 ; Journal of Spinal Cord Medicine Volume 35 ; 35 > 
 
   }
 
