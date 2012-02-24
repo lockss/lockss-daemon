@@ -2526,7 +2526,9 @@
     au < manifest ; exists ; 2007 ; Journal of the British Archaeological Association Volume 160 ; 160 > 
     au < manifest ; exists ; 2008 ; Journal of the British Archaeological Association Volume 161 ; 161 > 
     au < manifest ; exists ; 2009 ; Journal of the British Archaeological Association Volume 162 ; 162 > 
-    au < manifest ; exists ; 2010 ; Journal of the British Archaeological Association Volume 163 ; 163 > 
+    au < manifest ; exists ; 2010 ; Journal of the British Archaeological Association Volume 163 ; 163 >  
+    au < manifest ; exists ; 2011 ; Journal of the British Archaeological Association Volume 164 ; 164 >  
+    au < expected ; exists ; 2012 ; Journal of the British Archaeological Association Volume 165 ; 165 > 
 
   }
 
@@ -2557,6 +2559,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of the Energy Institute Volume 82 ; 82 > 
     au < doNotProcess ; exists ; 2010 ; Journal of the Energy Institute Volume 83 ; 83 > 
     au < doNotProcess ; exists ; 2011 ; Journal of the Energy Institute Volume 84 ; 84 > 
+    au < manifest ; exists ; 2012 ; Journal of the Energy Institute Volume 85 ; 85 > 
 
   }
 
@@ -2607,6 +2610,7 @@
 
     au < manifest ; exists ; 2010 ; The Keats-Shelley Review Volume 24 ; 24 > 
     au < crawling ; exists ; 2011 ; The Keats-Shelley Review Volume 25 ; 25 > 
+    au < expected ; exists ; 2012 ; The Keats-Shelley Review Volume 26 ; 26 > 
 
   }
 
@@ -2636,6 +2640,7 @@
     au < manifest ; exists ; 2009 ; Labour History Review Volume 74 ; 74 > 
     au < manifest ; exists ; 2010 ; Labour History Review Volume 75 ; 75 > 
     au < crawling ; exists ; 2011 ; Labour History Review Volume 76 ; 76 > 
+    au < expected ; exists ; 2012 ; Labour History Review Volume 77 ; 77 > 
 
   }
 
@@ -2661,6 +2666,7 @@
     au < manifest ; exists ; 2009 ; Language & History Volume 52 ; 52 > 
     au < manifest ; exists ; 2010 ; Language & History Volume 53 ; 53 > 
     au < crawling ; exists ; 2011 ; Language & History Volume 54 ; 54 > 
+    au < expected ; exists ; 2012 ; Language & History Volume 55 ; 55 >
 
   }
 
@@ -2726,6 +2732,7 @@
     au < manifest ; exists ; 2009 ; Levant Volume 41 ; 41 > 
     au < manifest ; exists ; 2010 ; Levant Volume 42 ; 42 > 
     au < crawling ; exists ; 2011 ; Levant Volume 43 ; 43 > 
+    au < expected ; exists ; 2012 ; Levant Volume 44 ; 44 > 
 
   }
 
@@ -2777,6 +2784,7 @@
     au < manifest ; exists ; 2009 ; Library & Information History Volume 25 ; 25 > 
     au < manifest ; exists ; 2010 ; Library & Information History Volume 26 ; 26 > 
     au < crawling ; exists ; 2011 ; Library & Information History Volume 27 ; 27 > 
+    au < manifest ; exists ; 2012 ; Library & Information History Volume 28 ; 28 > 
 
   }
 
@@ -2835,6 +2843,7 @@
     au < manifest ; exists ; 2009 ; The London Journal Volume 34 ; 34 > 
     au < manifest ; exists ; 2010 ; The London Journal Volume 35 ; 35 > 
     au < crawling ; exists ; 2011 ; The London Journal Volume 36 ; 36 > 
+    au < expected ; exists ; 2012 ; The London Journal Volume 37 ; 37 > 
 
   }
 
@@ -2864,6 +2873,7 @@
     au < doNotProcess ; exists ; 2009 ; Materials Research Innovations Volume 13 ; 13 > 
     au < doNotProcess ; exists ; 2010 ; Materials Research Innovations Volume 14 ; 14 > 
     au < doNotProcess ; exists ; 2011 ; Materials Research Innovations Volume 15 ; 15 > 
+    au < manifest ; exists ; 2012 ; Materials Research Innovations Volume 16 ; 16 > 
 
   }
 
@@ -2915,6 +2925,7 @@
     au < doNotProcess ; exists ; 2009 ; Materials Science and Technology Volume 25 ; 25 > 
     au < doNotProcess ; exists ; 2010 ; Materials Science and Technology Volume 26 ; 26 > 
     au < doNotProcess ; exists ; 2011 ; Materials Science and Technology Volume 27 ; 27 > 
+    au < expected ; exists ; 2012 ; Materials Science and Technology Volume 28 ; 28 > 
 
   }
 
@@ -2944,6 +2955,7 @@
     au < doNotProcess ; exists ; 2009 ; Materials Technology: Advanced Performance Materials Volume 24 ; 24 > 
     au < doNotProcess ; exists ; 2010 ; Materials Technology: Advanced Performance Materials Volume 25 ; 25 > 
     au < doNotProcess ; exists ; 2011 ; Materials Technology: Advanced Performance Materials Volume 26 ; 26 > 
+    au < manifest ; exists ; 2012 ; Materials Technology: Advanced Performance Materials Volume 27 ; 27 > 
 
   }
 
