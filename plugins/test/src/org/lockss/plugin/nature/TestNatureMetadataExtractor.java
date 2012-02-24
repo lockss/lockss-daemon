@@ -1,5 +1,5 @@
 /*
- * $Id: TestNatureMetadataExtractor.java,v 1.1 2011-03-25 17:58:40 pgust Exp $
+ * $Id: TestNatureMetadataExtractor.java,v 1.2 2012-02-24 22:51:24 pgust Exp $
  */
 
 /*
@@ -122,16 +122,20 @@ public class TestNatureMetadataExtractor extends LockssTestCase {
   String goodISSN = "1234-5679";
   String goodEISSN = "9876-5432";
   String goodDate = "2009-12-29";
-  String goodAuthor = "G Poelmans, J K Buitelaar, D L Pauls, B Franke";
   String[] goodAuthors = new String[] {
       "G Poelmans", "J K Buitelaar", "D L Pauls", "B Franke" };
   String goodArticleTitle = "Spurious Results";
   String goodJournalTitle = "Chemical Product and Process Modeling";
 
-  // a chunk of html source code from the publisher's site from where the metadata should be extracted
-  String goodContent = "<HTML><HEAD><TITLE>"+ goodArticleTitle+ "</TITLE></HEAD><BODY>\n"
+  // a chunk of html source code from the publisher's site from where the 
+  // metadata should be extracted
+  String goodContent = 
+      "<HTML><HEAD><TITLE>"+ goodArticleTitle+ "</TITLE></HEAD><BODY>\n"
     + "<meta name=\"citation_journal_title\" content=\""+ goodJournalTitle+ "\">\n"
-    + "<meta name=\"citation_authors\" content=\""+ goodAuthor+ "\">\n"
+    + "<meta name=\"dc.creator\" content=\""+ goodAuthors[0]+ "\">\n"
+    + "<meta name=\"dc.creator\" content=\""+ goodAuthors[1]+ "\">\n"
+    + "<meta name=\"dc.creator\" content=\""+ goodAuthors[2]+ "\">\n"
+    + "<meta name=\"dc.creator\" content=\""+ goodAuthors[3]+ "\">\n"
     + "<meta name=\"citation_title\" content=\""+ goodArticleTitle+ "\">\n"
     + "<meta name=\"citation_journal_title\" content=\""+ goodJournalTitle+ "\">\n"
     + "<meta name=\"citation_date\" content=\""+ goodDate+ "\">\n"
@@ -143,7 +147,8 @@ public class TestNatureMetadataExtractor extends LockssTestCase {
     + "<meta name=\"prism.eIssn\"" + " content=\""     + goodEISSN + "\">\n";	
 		
   /**
-   * Method that creates a simulated Cached URL from the source code provided by the goodContent String. It then asserts that the metadata extracted, by using
+   * Method that creates a simulated Cached URL from the source code provided by 
+   * the goodContent String. It then asserts that the metadata extracted, by using
    * the NatureHtmlMetadataExtractorFactory, match the metadata in the source code. 
    * @throws Exception
    */
