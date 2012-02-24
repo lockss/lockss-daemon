@@ -360,7 +360,7 @@
       au < manifest ; exists ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 ; >
       au < manifest ; exists ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 ; >
       au < manifest ; exists ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 ; >
-      au < expected ; exists ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 ; >
       au < expected ; exists ; 2012 ; Administrative Science Quarterly Volume 57 ; 57 ; >
 
     }
@@ -1151,12 +1151,12 @@
 
       au < manifest ; exists ; 2005 ; The American Journal of Sports Medicine Volume 33 ; 33 ; >
       au < manifest ; exists ; 2006 ; The American Journal of Sports Medicine Volume 34 ; 34 ; >
-      au < exists ; exists ; 2007 ; The American Journal of Sports Medicine Volume 35 ; 35 ; >
-      au < exists ; exists ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 ; >
-      au < exists ; exists ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 ; >
-      au < exists ; exists ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 ; >
-      au < exists ; exists ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 ; >
-      au < expected ; exists ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2007 ; The American Journal of Sports Medicine Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 ; >
 
     }
 
@@ -1911,7 +1911,7 @@
       au < manifest ; exists ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 418 ; 418 ; >
       au < manifest ; exists ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 419 ; 419 ; >
       au < manifest ; exists ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 420 ; 420 ; >
-      au < exists ; exists ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 421 ; 421 ; >
+      au < manifest ; exists ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 421 ; 421 ; >
       au < manifest ; exists ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 422 ; 422 ; >
       au < manifest ; exists ; 1976 ; The ANNALS of the American Academy of Political and Social Science Volume 423 ; 423 ; >
       au < manifest ; exists ; 1976 ; The ANNALS of the American Academy of Political and Social Science Volume 424 ; 424 ; >
@@ -2117,13 +2117,13 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 624 ; 624 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 625 ; 625 ; >
       au < released ; crawling ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 626 ; 626 ;  >
-      au < exists ; exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 627 ; 627 ; >
+      au < manifest ; exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 627 ; 627 ; >
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 628 ; 628 ;  >
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 629 ; 629 ;  >
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 630 ; 630 ;  >
       au < released ; crawling ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 631 ; 631 ; >
       au < released ; crawling ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 632 ; 632 ; >
-      au < exists ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 633 ; 633 ; >
+      au < manifest ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 633 ; 633 ; >
       au < released ; crawling ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 634 ; 634 ; >
       au < released ; crawling ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 635 ; 635 ; >
       au < released ; crawling ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 636 ; 636 ; >
@@ -2560,7 +2560,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Assessment Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; Assessment Volume 17 ; 17 ;  >
       au < released ; crawling ; 2011 ; Assessment Volume 18 ; 18 ; >
-      au < expected ; exists ; 2012 ; Assessment Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2012 ; Assessment Volume 19 ; 19 ; >
 
     }
 
@@ -2807,7 +2807,7 @@
       au < released ; crawling ; 2010 ; Autism Volume 13 ; 13 ;  >
       au < released ; crawling ; 2010 ; Autism Volume 14 ; 14 ; >
       au < released ; crawling ; 2011 ; Autism Volume 15 ; 15 ; >
-      au < expected ; exists ; 2012 ; Autism Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2012 ; Autism Volume 16 ; 16 ; >
 
     }
 
@@ -7536,7 +7536,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Education, Citizenship and Social Justice Volume 4 ; 4 ; >
       au < released ; crawling ; 2010 ; Education, Citizenship and Social Justice Volume 5 ; 5 ;  >
       au < released ; crawling ; 2011 ; Education, Citizenship and Social Justice Volume 6 ; 6 ; >
-      au < expected ; exists ; 2012 ; Education, Citizenship and Social Justice Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2012 ; Education, Citizenship and Social Justice Volume 7 ; 7 ; >
 
     }
 
@@ -7777,7 +7777,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Educational Evaluation and Policy Analysis Volume 31 ; 31 ; >
       au < manifest ; exists ; 2010 ; Educational Evaluation and Policy Analysis Volume 32 ; 32 ;  >
       au < released ; crawling ; 2011 ; Educational Evaluation and Policy Analysis Volume 33 ; 33 ; >
-      au < expected ; exists ; 2012 ; Educational Evaluation and Policy Analysis Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2012 ; Educational Evaluation and Policy Analysis Volume 34 ; 34 ; >
 
     }
 
@@ -11244,7 +11244,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1991 ; The Holocene Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1991 ; The Holocene Volume 1 ; 1 ; >
       au < manifest ; exists ; 1992 ; The Holocene Volume 2 ; 2 ; >
       au < manifest ; exists ; 1993 ; The Holocene Volume 3 ; 3 ; >
       au < manifest ; exists ; 1994 ; The Holocene Volume 4 ; 4 ; >
@@ -12931,46 +12931,46 @@
       
       comment[notReady] = No manifests for original series. Links to os are in new series manifests.
 
-      au < exists ; exists ; 1983 ; International Journal of Music Education Volume os-1 ; os-1 ; >
-      au < exists ; exists ; 1983 ; International Journal of Music Education Volume os-2 ; os-2 ; >
-      au < exists ; exists ; 1984 ; International Journal of Music Education Volume os-3 ; os-3 ; >
-      au < exists ; exists ; 1984 ; International Journal of Music Education Volume os-4 ; os-4 ; >
-      au < exists ; exists ; 1985 ; International Journal of Music Education Volume os-5 ; os-5 ; >
-      au < exists ; exists ; 1985 ; International Journal of Music Education Volume os-6 ; os-6 ; >
-      au < exists ; exists ; 1986 ; International Journal of Music Education Volume os-7 ; os-7 ; >
-      au < exists ; exists ; 1986 ; International Journal of Music Education Volume os-8 ; os-8 ; >
-      au < exists ; exists ; 1987 ; International Journal of Music Education Volume os-9 ; os-9 ; >
-      au < exists ; exists ; 1987 ; International Journal of Music Education Volume os-10 ; os-10 ; >
-      au < exists ; exists ; 1988 ; International Journal of Music Education Volume os-11 ; os-11 ; >
-      au < exists ; exists ; 1988 ; International Journal of Music Education Volume os-12 ; os-12 ; >
-      au < exists ; exists ; 1989 ; International Journal of Music Education Volume os-13 ; os-13 ; >
-      au < exists ; exists ; 1989 ; International Journal of Music Education Volume os-14 ; os-14 ; >
-      au < exists ; exists ; 1990 ; International Journal of Music Education Volume os-15 ; os-15 ; >
-      au < exists ; exists ; 1990 ; International Journal of Music Education Volume os-16 ; os-16 ; >
-      au < exists ; exists ; 1991 ; International Journal of Music Education Volume os-17 ; os-17 ; >
-      au < exists ; exists ; 1991 ; International Journal of Music Education Volume os-18 ; os-18 ; >
-      au < exists ; exists ; 1992 ; International Journal of Music Education Volume os-19 ; os-19 ; >
-      au < exists ; exists ; 1992 ; International Journal of Music Education Volume os-20 ; os-20 ; >
-      au < exists ; exists ; 1993 ; International Journal of Music Education Volume os-21 ; os-21 ; >
-      au < exists ; exists ; 1993 ; International Journal of Music Education Volume os-22 ; os-22 ; >
-      au < exists ; exists ; 1994 ; International Journal of Music Education Volume os-23 ; os-23 ; >
-      au < exists ; exists ; 1994 ; International Journal of Music Education Volume os-24 ; os-24 ; >
-      au < exists ; exists ; 1995 ; International Journal of Music Education Volume os-25 ; os-25 ; >
-      au < exists ; exists ; 1995 ; International Journal of Music Education Volume os-26 ; os-26 ; >
-      au < exists ; exists ; 1996 ; International Journal of Music Education Volume os-27 ; os-27 ; >
-      au < exists ; exists ; 1996 ; International Journal of Music Education Volume os-28 ; os-28 ; >
-      au < exists ; exists ; 1997 ; International Journal of Music Education Volume os-29 ; os-29 ; >
-      au < exists ; exists ; 1997 ; International Journal of Music Education Volume os-30 ; os-30 ; >
-      au < exists ; exists ; 1998 ; International Journal of Music Education Volume os-31 ; os-31 ; >
-      au < exists ; exists ; 1998 ; International Journal of Music Education Volume os-32 ; os-32 ; >
-      au < exists ; exists ; 1999 ; International Journal of Music Education Volume os-33 ; os-33 ; >
-      au < exists ; exists ; 1999 ; International Journal of Music Education Volume os-34 ; os-34 ; >
-      au < exists ; exists ; 2000 ; International Journal of Music Education Volume os-35 ; os-35 ; >
-      au < exists ; exists ; 2000 ; International Journal of Music Education Volume os-36 ; os-36 ; >
-      au < exists ; exists ; 2001 ; International Journal of Music Education Volume os-37 ; os-37 ; >
-      au < exists ; exists ; 2001 ; International Journal of Music Education Volume os-38 ; os-38 ; >
-      au < exists ; exists ; 2002 ; International Journal of Music Education Volume os-39 ; os-39 ; >
-      au < exists ; exists ; 2003 ; International Journal of Music Education Volume os-40 ; os-40 ; >
+      au < manifest ; exists ; 1983 ; International Journal of Music Education Volume os-1 ; os-1 ; >
+      au < manifest ; exists ; 1983 ; International Journal of Music Education Volume os-2 ; os-2 ; >
+      au < manifest ; exists ; 1984 ; International Journal of Music Education Volume os-3 ; os-3 ; >
+      au < manifest ; exists ; 1984 ; International Journal of Music Education Volume os-4 ; os-4 ; >
+      au < manifest ; exists ; 1985 ; International Journal of Music Education Volume os-5 ; os-5 ; >
+      au < manifest ; exists ; 1985 ; International Journal of Music Education Volume os-6 ; os-6 ; >
+      au < manifest ; exists ; 1986 ; International Journal of Music Education Volume os-7 ; os-7 ; >
+      au < manifest ; exists ; 1986 ; International Journal of Music Education Volume os-8 ; os-8 ; >
+      au < manifest ; exists ; 1987 ; International Journal of Music Education Volume os-9 ; os-9 ; >
+      au < manifest ; exists ; 1987 ; International Journal of Music Education Volume os-10 ; os-10 ; >
+      au < manifest ; exists ; 1988 ; International Journal of Music Education Volume os-11 ; os-11 ; >
+      au < manifest ; exists ; 1988 ; International Journal of Music Education Volume os-12 ; os-12 ; >
+      au < manifest ; exists ; 1989 ; International Journal of Music Education Volume os-13 ; os-13 ; >
+      au < manifest ; exists ; 1989 ; International Journal of Music Education Volume os-14 ; os-14 ; >
+      au < manifest ; exists ; 1990 ; International Journal of Music Education Volume os-15 ; os-15 ; >
+      au < manifest ; exists ; 1990 ; International Journal of Music Education Volume os-16 ; os-16 ; >
+      au < manifest ; exists ; 1991 ; International Journal of Music Education Volume os-17 ; os-17 ; >
+      au < manifest ; exists ; 1991 ; International Journal of Music Education Volume os-18 ; os-18 ; >
+      au < manifest ; exists ; 1992 ; International Journal of Music Education Volume os-19 ; os-19 ; >
+      au < manifest ; exists ; 1992 ; International Journal of Music Education Volume os-20 ; os-20 ; >
+      au < manifest ; exists ; 1993 ; International Journal of Music Education Volume os-21 ; os-21 ; >
+      au < manifest ; exists ; 1993 ; International Journal of Music Education Volume os-22 ; os-22 ; >
+      au < manifest ; exists ; 1994 ; International Journal of Music Education Volume os-23 ; os-23 ; >
+      au < manifest ; exists ; 1994 ; International Journal of Music Education Volume os-24 ; os-24 ; >
+      au < manifest ; exists ; 1995 ; International Journal of Music Education Volume os-25 ; os-25 ; >
+      au < manifest ; exists ; 1995 ; International Journal of Music Education Volume os-26 ; os-26 ; >
+      au < manifest ; exists ; 1996 ; International Journal of Music Education Volume os-27 ; os-27 ; >
+      au < manifest ; exists ; 1996 ; International Journal of Music Education Volume os-28 ; os-28 ; >
+      au < manifest ; exists ; 1997 ; International Journal of Music Education Volume os-29 ; os-29 ; >
+      au < manifest ; exists ; 1997 ; International Journal of Music Education Volume os-30 ; os-30 ; >
+      au < manifest ; exists ; 1998 ; International Journal of Music Education Volume os-31 ; os-31 ; >
+      au < manifest ; exists ; 1998 ; International Journal of Music Education Volume os-32 ; os-32 ; >
+      au < manifest ; exists ; 1999 ; International Journal of Music Education Volume os-33 ; os-33 ; >
+      au < manifest ; exists ; 1999 ; International Journal of Music Education Volume os-34 ; os-34 ; >
+      au < manifest ; exists ; 2000 ; International Journal of Music Education Volume os-35 ; os-35 ; >
+      au < manifest ; exists ; 2000 ; International Journal of Music Education Volume os-36 ; os-36 ; >
+      au < manifest ; exists ; 2001 ; International Journal of Music Education Volume os-37 ; os-37 ; >
+      au < manifest ; exists ; 2001 ; International Journal of Music Education Volume os-38 ; os-38 ; >
+      au < manifest ; exists ; 2002 ; International Journal of Music Education Volume os-39 ; os-39 ; >
+      au < manifest ; exists ; 2003 ; International Journal of Music Education Volume os-40 ; os-40 ; >
       au < manifest ; exists ; 2004 ; International Journal of Music Education Volume 22 ; 22 ; >
       au < manifest ; exists ; 2005 ; International Journal of Music Education Volume 23 ; 23 ; >
       au < manifest ; exists ; 2006 ; International Journal of Music Education Volume 24 ; 24 ; >
@@ -13306,7 +13306,7 @@
 
       au < manifest ; exists ; 1993 ; International Journal of Surgical Pathology Volume 1 ; 1 ; >
       au < manifest ; exists ; 1994 ; International Journal of Surgical Pathology Volume 2 ; 2 ; >
-      au < exists ; exists ; 1995 ; International Journal of Surgical Pathology Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1995 ; International Journal of Surgical Pathology Volume 3 ; 3 ; >
       au < manifest ; exists ; 1996 ; International Journal of Surgical Pathology Volume 4 ; 4 ; >
       au < manifest ; exists ; 1997 ; International Journal of Surgical Pathology Volume 5 ; 5 ; >
       au < manifest ; exists ; 1998 ; International Journal of Surgical Pathology Volume 6 ; 6 ; >
@@ -13383,7 +13383,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Toxicology Volume 28 ; 28 ; >
       au < released ; crawling ; 2010 ; International Journal of Toxicology Volume 29 ; 29 ;  >
       au < released ; crawling ; 2011 ; International Journal of Toxicology Volume 30 ; 30 ; >
-      au < expected ; exists ; 2012 ; International Journal of Toxicology Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2012 ; International Journal of Toxicology Volume 31 ; 31 ; >
 
     }
 
@@ -13528,7 +13528,7 @@
       au < manifest ; exists ; 1993 ; International Regional Science Review Volume 16 ; 16 ; >
       au < manifest ; exists ; 1994 ; International Regional Science Review Volume 17 ; 17 ; >
       au < manifest ; exists ; 1995 ; International Regional Science Review Volume 18 ; 18 ; >
-      au < exists ; exists ; 1996 ; International Regional Science Review Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1996 ; International Regional Science Review Volume 19 ; 19 ; >
       au < manifest ; exists ; 1997 ; International Regional Science Review Volume 20 ; 20 ; >
       au < manifest ; exists ; 1998 ; International Regional Science Review Volume 21 ; 21 ; >
       au < manifest ; exists ; 1999 ; International Regional Science Review Volume 22 ; 22 ; >
@@ -13574,7 +13574,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1959 ; International Relations Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1959 ; International Relations Volume 1 ; 1 ; >
       au < manifest ; exists ; 1960 ; International Relations Volume 2 ; 2 ; >
       au < manifest ; exists ; 1967 ; International Relations Volume 3 ; 3 ; >
       au < manifest ; exists ; 1972 ; International Relations Volume 4 ; 4 ; >
@@ -13629,7 +13629,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1966 ; International Review for the Sociology of Sport Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1966 ; International Review for the Sociology of Sport Volume 1 ; 1 ; >
       au < manifest ; exists ; 1967 ; International Review for the Sociology of Sport Volume 2 ; 2 ; >
       au < manifest ; exists ; 1968 ; International Review for the Sociology of Sport Volume 3 ; 3 ; >
       au < manifest ; exists ; 1969 ; International Review for the Sociology of Sport Volume 4 ; 4 ; >
@@ -14025,7 +14025,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       comment[isq48] = not online as of Oct 2011
 
-      au < exists ; exists ; 1959 ; International Studies Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1959 ; International Studies Volume 1 ; 1 ; >
       au < manifest ; exists ; 1960 ; International Studies Volume 2 ; 2 ; >
       au < manifest ; exists ; 1961 ; International Studies Volume 3 ; 3 ; >
       au < manifest ; exists ; 1962 ; International Studies Volume 4 ; 4 ; >
@@ -14229,7 +14229,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Irish Theological Quarterly Volume 74 ; 74 ; >
       au < released ; crawling ; 2010 ; Irish Theological Quarterly Volume 75 ; 75 ; >
       au < released ; crawling ; 2011 ; Irish Theological Quarterly Volume 76 ; 76 ; >
-      au < expected ; exists ; 2012 ; Irish Theological Quarterly Volume 77 ; 77 ; >
+      au < manifest ; exists ; 2012 ; Irish Theological Quarterly Volume 77 ; 77 ; >
 
     }
 
@@ -14321,7 +14321,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1976 ; Journal for the Study of the Old Testament Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1976 ; Journal for the Study of the Old Testament Volume 1 ; 1 ; >
       au < manifest ; exists ; 1977 ; Journal for the Study of the Old Testament Volume 2 ; 2 ; >
       au < manifest ; exists ; 1978 ; Journal for the Study of the Old Testament Volume 3 ; 3 ; >
       au < manifest ; exists ; 1979 ; Journal for the Study of the Old Testament Volume 4 ; 4 ; >
@@ -14426,31 +14426,31 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1986 ; Journal of Accounting, Auditing & Finance Volume 1 ; 1 ; >
-      au < exists ; exists ; 1987 ; Journal of Accounting, Auditing & Finance Volume 2 ; 2 ; >
-      au < exists ; exists ; 1988 ; Journal of Accounting, Auditing & Finance Volume 3 ; 3 ; >
-      au < exists ; exists ; 1989 ; Journal of Accounting, Auditing & Finance Volume 4 ; 4 ; >
-      au < exists ; exists ; 1990 ; Journal of Accounting, Auditing & Finance Volume 5 ; 5 ; >
-      au < exists ; exists ; 1991 ; Journal of Accounting, Auditing & Finance Volume 6 ; 6 ; >
-      au < exists ; exists ; 1992 ; Journal of Accounting, Auditing & Finance Volume 7 ; 7 ; >
-      au < exists ; exists ; 1993 ; Journal of Accounting, Auditing & Finance Volume 8 ; 8 ; >
-      au < exists ; exists ; 1994 ; Journal of Accounting, Auditing & Finance Volume 9 ; 9 ; >
-      au < exists ; exists ; 1995 ; Journal of Accounting, Auditing & Finance Volume 10 ; 10 ; >
-      au < exists ; exists ; 1996 ; Journal of Accounting, Auditing & Finance Volume 11 ; 11 ; >
-      au < exists ; exists ; 1997 ; Journal of Accounting, Auditing & Finance Volume 12 ; 12 ; >
-      au < exists ; exists ; 1998 ; Journal of Accounting, Auditing & Finance Volume 13 ; 13 ; >
-      au < exists ; exists ; 1999 ; Journal of Accounting, Auditing & Finance Volume 14 ; 14 ; >
-      au < exists ; exists ; 2000 ; Journal of Accounting, Auditing & Finance Volume 15 ; 15 ; >
-      au < exists ; exists ; 2001 ; Journal of Accounting, Auditing & Finance Volume 16 ; 16 ; >
-      au < exists ; exists ; 2002 ; Journal of Accounting, Auditing & Finance Volume 17 ; 17 ; >
-      au < exists ; exists ; 2003 ; Journal of Accounting, Auditing & Finance Volume 18 ; 18 ; >
-      au < exists ; exists ; 2004 ; Journal of Accounting, Auditing & Finance Volume 19 ; 19 ; >
-      au < exists ; exists ; 2005 ; Journal of Accounting, Auditing & Finance Volume 20 ; 20 ; >
-      au < exists ; exists ; 2006 ; Journal of Accounting, Auditing & Finance Volume 21 ; 21 ; >
-      au < exists ; exists ; 2007 ; Journal of Accounting, Auditing & Finance Volume 22 ; 22 ; >
-      au < exists ; exists ; 2008 ; Journal of Accounting, Auditing & Finance Volume 23 ; 23 ; >
-      au < exists ; exists ; 2009 ; Journal of Accounting, Auditing & Finance Volume 24 ; 24 ; >
-      au < exists ; exists ; 2010 ; Journal of Accounting, Auditing & Finance Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1986 ; Journal of Accounting, Auditing & Finance Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1987 ; Journal of Accounting, Auditing & Finance Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1988 ; Journal of Accounting, Auditing & Finance Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1989 ; Journal of Accounting, Auditing & Finance Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1990 ; Journal of Accounting, Auditing & Finance Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1991 ; Journal of Accounting, Auditing & Finance Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1992 ; Journal of Accounting, Auditing & Finance Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1993 ; Journal of Accounting, Auditing & Finance Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1994 ; Journal of Accounting, Auditing & Finance Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1995 ; Journal of Accounting, Auditing & Finance Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1996 ; Journal of Accounting, Auditing & Finance Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1997 ; Journal of Accounting, Auditing & Finance Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1998 ; Journal of Accounting, Auditing & Finance Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1999 ; Journal of Accounting, Auditing & Finance Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2000 ; Journal of Accounting, Auditing & Finance Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2001 ; Journal of Accounting, Auditing & Finance Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2002 ; Journal of Accounting, Auditing & Finance Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2003 ; Journal of Accounting, Auditing & Finance Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2004 ; Journal of Accounting, Auditing & Finance Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2005 ; Journal of Accounting, Auditing & Finance Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2006 ; Journal of Accounting, Auditing & Finance Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2007 ; Journal of Accounting, Auditing & Finance Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2008 ; Journal of Accounting, Auditing & Finance Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2009 ; Journal of Accounting, Auditing & Finance Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2010 ; Journal of Accounting, Auditing & Finance Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; Journal of Accounting, Auditing & Finance Volume 26 ; 26 ; >
       au < manifest ; exists ; 2012 ; Journal of Accounting, Auditing & Finance Volume 27 ; 27 ; >
 
@@ -14761,7 +14761,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1966 ; Journal of Asian and African Studies Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1966 ; Journal of Asian and African Studies Volume 1 ; 1 ; >
       au < manifest ; exists ; 1967 ; Journal of Asian and African Studies Volume 2 ; 2 ; >
       au < manifest ; exists ; 1968 ; Journal of Asian and African Studies Volume 3 ; 3 ; >
       au < manifest ; exists ; 1969 ; Journal of Asian and African Studies Volume 4 ; 4 ; >
@@ -15016,7 +15016,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1986 ; Journal of Biomaterials Applications Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1986 ; Journal of Biomaterials Applications Volume 1 ; 1 ; >
       au < manifest ; exists ; 1987 ; Journal of Biomaterials Applications Volume 2 ; 2 ; >
       au < manifest ; exists ; 1988 ; Journal of Biomaterials Applications Volume 3 ; 3 ; >
       au < manifest ; exists ; 1989-1990 ; Journal of Biomaterials Applications Volume 4 ; 4 ; >
@@ -15184,7 +15184,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 1970 ; Journal of Black Studies Volume 1 ; 1 ; >
-      au < exists ; exists ; 1971 ; Journal of Black Studies Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1971 ; Journal of Black Studies Volume 2 ; 2 ; >
       au < manifest ; exists ; 1972 ; Journal of Black Studies Volume 3 ; 3 ; >
       au < manifest ; exists ; 1974 ; Journal of Black Studies Volume 4 ; 4 ; >
       au < manifest ; exists ; 1974 ; Journal of Black Studies Volume 5 ; 5 ; >
@@ -15451,7 +15451,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1996 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1996 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 1 ; 1 ; >
       au < manifest ; exists ; 1997 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 2 ; 2 ; >
       au < manifest ; exists ; 1998 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 3 ; 3 ; >
       au < manifest ; exists ; 1999 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 4 ; 4 ; >
@@ -15573,7 +15573,7 @@
       au < manifest ; exists ; 1998 ; Journal of Career Development Volume 25 ; 25 ; >
       au < manifest ; exists ; 1999 ; Journal of Career Development Volume 26 ; 26 ; >
       au < manifest ; exists ; 2000 ; Journal of Career Development Volume 27 ; 27 ; >
-      au < exists ; exists ; 2001 ; Journal of Career Development Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2001 ; Journal of Career Development Volume 28 ; 28 ; >
       au < manifest ; exists ; 2003 ; Journal of Career Development Volume 29 ; 29 ; >
       au < manifest ; exists ; 2003 ; Journal of Career Development Volume 30 ; 30 ; >
       au < manifest ; exists ; 2004 ; Journal of Career Development Volume 31 ; 31 ; >
@@ -15876,58 +15876,58 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1961 ; The Journal of Clinical Pharmacology Volume 1  ; 1 ; >
-      au < exists ; exists ; 1962 ; The Journal of Clinical Pharmacology Volume 2  ; 2 ; >
-      au < exists ; exists ; 1963 ; The Journal of Clinical Pharmacology Volume 3  ; 3 ; >
-      au < exists ; exists ; 1964 ; The Journal of Clinical Pharmacology Volume 4  ; 4 ; >
-      au < exists ; exists ; 1965 ; The Journal of Clinical Pharmacology Volume 5  ; 5 ; >
-      au < exists ; exists ; 1966 ; The Journal of Clinical Pharmacology Volume 6  ; 6 ; >
-      au < exists ; exists ; 1967 ; The Journal of Clinical Pharmacology Volume 7  ; 7 ; >
-      au < exists ; exists ; 1968 ; The Journal of Clinical Pharmacology Volume 8  ; 8 ; >
-      au < exists ; exists ; 1969 ; The Journal of Clinical Pharmacology Volume 9  ; 9 ; >
-      au < exists ; exists ; 1970 ; The Journal of Clinical Pharmacology Volume 10 ; 10 ; >
-      au < exists ; exists ; 1971 ; The Journal of Clinical Pharmacology Volume 11 ; 11 ; >
-      au < exists ; exists ; 1972 ; The Journal of Clinical Pharmacology Volume 12 ; 12 ; >
-      au < exists ; exists ; 1973 ; The Journal of Clinical Pharmacology Volume 13 ; 13 ; >
-      au < exists ; exists ; 1974 ; The Journal of Clinical Pharmacology Volume 14 ; 14 ; >
-      au < exists ; exists ; 1975 ; The Journal of Clinical Pharmacology Volume 15 ; 15 ; >
-      au < exists ; exists ; 1976 ; The Journal of Clinical Pharmacology Volume 16 ; 16 ; >
-      au < exists ; exists ; 1977 ; The Journal of Clinical Pharmacology Volume 17 ; 17 ; >
-      au < exists ; exists ; 1978 ; The Journal of Clinical Pharmacology Volume 18 ; 18 ; >
-      au < exists ; exists ; 1979 ; The Journal of Clinical Pharmacology Volume 19 ; 19 ; >
-      au < exists ; exists ; 1980 ; The Journal of Clinical Pharmacology Volume 20 ; 20 ; >
-      au < exists ; exists ; 1981 ; The Journal of Clinical Pharmacology Volume 21 ; 21 ; >
-      au < exists ; exists ; 1982 ; The Journal of Clinical Pharmacology Volume 22 ; 22 ; >
-      au < exists ; exists ; 1983 ; The Journal of Clinical Pharmacology Volume 23 ; 23 ; >
-      au < exists ; exists ; 1984 ; The Journal of Clinical Pharmacology Volume 24 ; 24 ; >
-      au < exists ; exists ; 1985 ; The Journal of Clinical Pharmacology Volume 25 ; 25 ; >
-      au < exists ; exists ; 1986 ; The Journal of Clinical Pharmacology Volume 26 ; 26 ; >
-      au < exists ; exists ; 1987 ; The Journal of Clinical Pharmacology Volume 27 ; 27 ; >
-      au < exists ; exists ; 1988 ; The Journal of Clinical Pharmacology Volume 28 ; 28 ; >
-      au < exists ; exists ; 1989 ; The Journal of Clinical Pharmacology Volume 29 ; 29 ; >
-      au < exists ; exists ; 1990 ; The Journal of Clinical Pharmacology Volume 30 ; 30 ; >
-      au < exists ; exists ; 1991 ; The Journal of Clinical Pharmacology Volume 31 ; 31 ; >
-      au < exists ; exists ; 1992 ; The Journal of Clinical Pharmacology Volume 32 ; 32 ; >
-      au < exists ; exists ; 1993 ; The Journal of Clinical Pharmacology Volume 33 ; 33 ; >
-      au < exists ; exists ; 1994 ; The Journal of Clinical Pharmacology Volume 34 ; 34 ; >
-      au < exists ; exists ; 1995 ; The Journal of Clinical Pharmacology Volume 35 ; 35 ; >
-      au < exists ; exists ; 1996 ; The Journal of Clinical Pharmacology Volume 36 ; 36 ; >
-      au < exists ; exists ; 1997 ; The Journal of Clinical Pharmacology Volume 37 ; 37 ; >
-      au < exists ; exists ; 1998 ; The Journal of Clinical Pharmacology Volume 38 ; 38 ; >
+      au < manifest ; exists ; 1961 ; The Journal of Clinical Pharmacology Volume 1  ; 1 ; >
+      au < manifest ; exists ; 1962 ; The Journal of Clinical Pharmacology Volume 2  ; 2 ; >
+      au < manifest ; exists ; 1963 ; The Journal of Clinical Pharmacology Volume 3  ; 3 ; >
+      au < manifest ; exists ; 1964 ; The Journal of Clinical Pharmacology Volume 4  ; 4 ; >
+      au < manifest ; exists ; 1965 ; The Journal of Clinical Pharmacology Volume 5  ; 5 ; >
+      au < manifest ; exists ; 1966 ; The Journal of Clinical Pharmacology Volume 6  ; 6 ; >
+      au < manifest ; exists ; 1967 ; The Journal of Clinical Pharmacology Volume 7  ; 7 ; >
+      au < manifest ; exists ; 1968 ; The Journal of Clinical Pharmacology Volume 8  ; 8 ; >
+      au < manifest ; exists ; 1969 ; The Journal of Clinical Pharmacology Volume 9  ; 9 ; >
+      au < manifest ; exists ; 1970 ; The Journal of Clinical Pharmacology Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1971 ; The Journal of Clinical Pharmacology Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1972 ; The Journal of Clinical Pharmacology Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1973 ; The Journal of Clinical Pharmacology Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1974 ; The Journal of Clinical Pharmacology Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1975 ; The Journal of Clinical Pharmacology Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1976 ; The Journal of Clinical Pharmacology Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1977 ; The Journal of Clinical Pharmacology Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1978 ; The Journal of Clinical Pharmacology Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1979 ; The Journal of Clinical Pharmacology Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1980 ; The Journal of Clinical Pharmacology Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1981 ; The Journal of Clinical Pharmacology Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1982 ; The Journal of Clinical Pharmacology Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1983 ; The Journal of Clinical Pharmacology Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1984 ; The Journal of Clinical Pharmacology Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1985 ; The Journal of Clinical Pharmacology Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1986 ; The Journal of Clinical Pharmacology Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1987 ; The Journal of Clinical Pharmacology Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1988 ; The Journal of Clinical Pharmacology Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1989 ; The Journal of Clinical Pharmacology Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1990 ; The Journal of Clinical Pharmacology Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1991 ; The Journal of Clinical Pharmacology Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1992 ; The Journal of Clinical Pharmacology Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1993 ; The Journal of Clinical Pharmacology Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1994 ; The Journal of Clinical Pharmacology Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1995 ; The Journal of Clinical Pharmacology Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1996 ; The Journal of Clinical Pharmacology Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1997 ; The Journal of Clinical Pharmacology Volume 37 ; 37 ; >
+      au < manifest ; exists ; 1998 ; The Journal of Clinical Pharmacology Volume 38 ; 38 ; >
       au < manifest ; exists ; 1999 ; The Journal of Clinical Pharmacology Volume 39 ; 39 ; >
       au < manifest ; exists ; 2000 ; The Journal of Clinical Pharmacology Volume 40 ; 40 ; >
       au < manifest ; exists ; 2001 ; The Journal of Clinical Pharmacology Volume 41 ; 41 ; >
       au < manifest ; exists ; 2002 ; The Journal of Clinical Pharmacology Volume 42 ; 42 ; >
       au < manifest ; exists ; 2003 ; The Journal of Clinical Pharmacology Volume 43 ; 43 ; >
-      au < exists ; exists ; 2004 ; The Journal of Clinical Pharmacology Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2004 ; The Journal of Clinical Pharmacology Volume 44 ; 44 ; >
       au < manifest ; exists ; 2005 ; The Journal of Clinical Pharmacology Volume 45 ; 45 ; >
       au < manifest ; exists ; 2006 ; The Journal of Clinical Pharmacology Volume 46 ; 46 ; >
-      au < exists ; exists ; 2007 ; The Journal of Clinical Pharmacology Volume 47 ; 47 ; >
-      au < exists ; exists ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 ; >
-      au < exists ; exists ; 2009 ; The Journal of Clinical Pharmacology Volume 49 ; 49 ; >
+      au < manifest ; exists ; 2007 ; The Journal of Clinical Pharmacology Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 ; >
+      au < manifest ; exists ; 2009 ; The Journal of Clinical Pharmacology Volume 49 ; 49 ; >
       au < manifest ; exists ; 2010 ; The Journal of Clinical Pharmacology Volume 50 ; 50 ; >
-      au < exists ; exists ; 2011 ; The Journal of Clinical Pharmacology Volume 51 ; 51 ; >
-      au < expected ; exists ; 2012 ; The Journal of Clinical Pharmacology Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2011 ; The Journal of Clinical Pharmacology Volume 51 ; 51 ; >
+      au < manifest ; exists ; 2012 ; The Journal of Clinical Pharmacology Volume 52 ; 52 ; >
 
     }
 
@@ -15946,10 +15946,10 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2007 ; Journal of Cognitive Engineering and Decision Making Volume 1 ; 1 ; >
-      au < exists ; exists ; 2008 ; Journal of Cognitive Engineering and Decision Making Volume 2 ; 2 ; >
-      au < exists ; exists ; 2009 ; Journal of Cognitive Engineering and Decision Making Volume 3 ; 3 ; >
-      au < exists ; exists ; 2010 ; Journal of Cognitive Engineering and Decision Making Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2007 ; Journal of Cognitive Engineering and Decision Making Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2008 ; Journal of Cognitive Engineering and Decision Making Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2009 ; Journal of Cognitive Engineering and Decision Making Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2010 ; Journal of Cognitive Engineering and Decision Making Volume 4 ; 4 ; >
       au < released ; crawling ; 2011 ; Journal of Cognitive Engineering and Decision Making Volume 5 ; 5 ; >
       au < manifest ; exists ; 2012 ; Journal of Cognitive Engineering and Decision Making Volume 6 ; 6 ; >
 
@@ -15971,7 +15971,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1966 ; The Journal of Commonwealth Literature Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1966 ; The Journal of Commonwealth Literature Volume 1 ; 1 ; >
       au < manifest ; exists ; 1967 ; The Journal of Commonwealth Literature Volume 2 ; 2 ; >
       au < manifest ; exists ; 1968 ; The Journal of Commonwealth Literature Volume 3 ; 3 ; >
       au < manifest ; exists ; 1969 ; The Journal of Commonwealth Literature Volume 4 ; 4 ; >
@@ -16072,7 +16072,7 @@
       au < manifest ; exists ; 2009 ; Journal of Communication Inquiry Volume 33 ; 33 ;  >
       au < released ; crawling ; 2010 ; Journal of Communication Inquiry Volume 34 ; 34 ;  >
       au < released ; crawling ; 2011 ; Journal of Communication Inquiry Volume 35 ; 35 ; >
-      au < expected ; exists ; 2012 ; Journal of Communication Inquiry Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2012 ; Journal of Communication Inquiry Volume 36 ; 36 ; >
 
     }
 
@@ -16126,7 +16126,7 @@
       au < manifest ; exists ; 1988 ; Journal of Composite Materials Volume 22 ; 22 ; >
       au < manifest ; exists ; 1989 ; Journal of Composite Materials Volume 23 ; 23 ; >
       au < manifest ; exists ; 1990 ; Journal of Composite Materials Volume 24 ; 24 ; >
-      au < exists ; exists ; 1991 ; Journal of Composite Materials Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1991 ; Journal of Composite Materials Volume 25 ; 25 ; >
       au < manifest ; exists ; 1992 ; Journal of Composite Materials Volume 26 ; 26 ; >
       au < manifest ; exists ; 1993 ; Journal of Composite Materials Volume 27 ; 27 ; >
       au < manifest ; exists ; 1994 ; Journal of Composite Materials Volume 28 ; 28 ; >
@@ -16330,7 +16330,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Contemporary Criminal Justice Volume 25 ; 25 ; >
       au < released ; crawling ; 2010 ; Journal of Contemporary Criminal Justice Volume 26 ; 26 ;  >
       au < released ; crawling ; 2011 ; Journal of Contemporary Criminal Justice Volume 27 ; 27 ; >
-      au < expected ; exists ; 2012 ; Journal of Contemporary Criminal Justice Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2012 ; Journal of Contemporary Criminal Justice Volume 28 ; 28 ; >
 
     }
 
@@ -16430,9 +16430,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1966 ; Journal of Contemporary History Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1966 ; Journal of Contemporary History Volume 1 ; 1 ; >
       au < manifest ; exists ; 1967 ; Journal of Contemporary History Volume 2 ; 2 ; >
-      au < exists ; exists ; 1968 ; Journal of Contemporary History Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1968 ; Journal of Contemporary History Volume 3 ; 3 ; >
       au < manifest ; exists ; 1969 ; Journal of Contemporary History Volume 4 ; 4 ; >
       au < manifest ; exists ; 1970 ; Journal of Contemporary History Volume 5 ; 5 ; >
       au < manifest ; exists ; 1971 ; Journal of Contemporary History Volume 6 ; 6 ; >
@@ -16848,7 +16848,7 @@
       au < manifest ; exists ; 2009 ; Journal of Developing Societies Volume 25 ; 25 ;  >
       au < released ; crawling ; 2010 ; Journal of Developing Societies Volume 26 ; 26 ;  >
       au < released ; crawling ; 2011 ; Journal of Developing Societies Volume 27 ; 27 ; >
-      au < expected ; exists ; 2012 ; Journal of Developing Societies Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2012 ; Journal of Developing Societies Volume 28 ; 28 ; >
 
     }
 
@@ -17018,7 +17018,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Early Adolescence Volume 29 ; 29 ; >
       au < released ; crawling ; 2010 ; The Journal of Early Adolescence Volume 30 ; 30 ;  >
       au < released ; crawling ; 2011 ; The Journal of Early Adolescence Volume 31 ; 31 ; >
-      au < expected ; exists ; 2012 ; The Journal of Early Adolescence Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2012 ; The Journal of Early Adolescence Volume 32 ; 32 ; >
 
     }
 
@@ -17099,7 +17099,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Early Childhood Research Volume 7 ; 7 ; >
       au < released ; crawling ; 2010 ; Journal of Early Childhood Research Volume 8 ; 8 ;  >
       au < released ; crawling ; 2011 ; Journal of Early Childhood Research Volume 9 ; 9 ; >
-      au < expected ; exists ; 2012 ; Journal of Early Childhood Research Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2012 ; Journal of Early Childhood Research Volume 10 ; 10 ; >
 
     }
 
@@ -17130,9 +17130,9 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doesNotExist ; doesNotExist ; 0 ; Journal of Early Intervention Volume 1 ; 1 ; >
-      au < exists ; exists ; 1981 ; Journal of Early Intervention Volume 2 ; 2 ; >
-      au < exists ; exists ; 1981 ; Journal of Early Intervention Volume 3 ; 3 ; >
-      au < exists ; exists ; 1981 ; Journal of Early Intervention Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1981 ; Journal of Early Intervention Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1981 ; Journal of Early Intervention Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1981 ; Journal of Early Intervention Volume 4 ; 4 ; >
       au < manifest ; exists ; 1982 ; Journal of Early Intervention Volume 5 ; 5 ; >
       au < manifest ; exists ; 1982 ; Journal of Early Intervention Volume 6 ; 6 ; >
       au < manifest ; exists ; 1983 ; Journal of Early Intervention Volume 7 ; 7 ; >
@@ -17227,7 +17227,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1976 ; Journal of Educational and Behavioral Statistics Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1976 ; Journal of Educational and Behavioral Statistics Volume 1 ; 1 ; >
       au < manifest ; exists ; 1977 ; Journal of Educational and Behavioral Statistics Volume 2 ; 2 ; >
       au < manifest ; exists ; 1978 ; Journal of Educational and Behavioral Statistics Volume 3 ; 3 ; >
       au < manifest ; exists ; 1979 ; Journal of Educational and Behavioral Statistics Volume 4 ; 4 ; >
@@ -17494,7 +17494,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of English Linguistics Volume 37 ; 37 ; >
       au < released ; crawling ; 2010 ; Journal of English Linguistics Volume 38 ; 38 ;  >
       au < released ; crawling ; 2011 ; Journal of English Linguistics Volume 39 ; 39 ; >
-      au < expected ; exists ; 2012 ; Journal of English Linguistics Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2012 ; Journal of English Linguistics Volume 40 ; 40 ; >
 
     }
 
@@ -17594,7 +17594,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Environment & Development Volume 18 ; 18 ; >
       au < released ; crawling ; 2010 ; The Journal of Environment & Development Volume 19 ; 19 ;  >
       au < released ; crawling ; 2011 ; The Journal of Environment & Development Volume 20 ; 20 ; >
-      au < expected ; exists ; 2012 ; The Journal of Environment & Development Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2012 ; The Journal of Environment & Development Volume 21 ; 21 ; >
 
     }
 
@@ -17645,7 +17645,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of European Social Policy Volume 19 ; 19 ; >
       au < released ; crawling ; 2010 ; Journal of European Social Policy Volume 20 ; 20 ;  >
       au < released ; crawling ; 2011 ; Journal of European Social Policy Volume 21 ; 21 ; >
-      au < expected ; exists ; 2012 ; Journal of European Social Policy Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2012 ; Journal of European Social Policy Volume 22 ; 22 ; >
 
     }
 
@@ -17761,10 +17761,10 @@
       au < manifest ; exists ; 1988 ; Journal of Family History Volume 13 ; 13 ; >
       au < manifest ; exists ; 1989 ; Journal of Family History Volume 14 ; 14 ; >
       au < manifest ; exists ; 1990 ; Journal of Family History Volume 15 ; 15 ; >
-      au < exists ; exists ; 1991 ; Journal of Family History Volume 16 ; 16 ; >
-      au < exists ; exists ; 1992 ; Journal of Family History Volume 17 ; 17 ; >
-      au < exists ; exists ; 1993 ; Journal of Family History Volume 18 ; 18 ; >
-      au < exists ; exists ; 1994 ; Journal of Family History Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1991 ; Journal of Family History Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1992 ; Journal of Family History Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1993 ; Journal of Family History Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1994 ; Journal of Family History Volume 19 ; 19 ; >
       au < manifest ; exists ; 1995 ; Journal of Family History Volume 20 ; 20 ; >
       au < manifest ; exists ; 1996 ; Journal of Family History Volume 21 ; 21 ; >
       au < manifest ; exists ; 1997 ; Journal of Family History Volume 22 ; 22 ; >
@@ -17891,7 +17891,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Family Nursing Volume 15 ; 15 ; >
       au < released ; crawling ; 2010 ; Journal of Family Nursing Volume 16 ; 16 ;  >
       au < released ; crawling ; 2011 ; Journal of Family Nursing Volume 17 ; 17 ; >
-      au < expected ; exists ; 2012 ; Journal of Family Nursing Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2012 ; Journal of Family Nursing Volume 18 ; 18 ; >
 
     }
 
@@ -17924,7 +17924,7 @@
       au < exists ; exists ; 2009 ; Journal of Feline Medicine and Surgery Volume 11 ; 11 ; >
       au < exists ; exists ; 2010 ; Journal of Feline Medicine and Surgery Volume 12 ; 12 ; >
       au < exists ; exists ; 2011 ; Journal of Feline Medicine and Surgery Volume 13 ; 13 ; >
-      au < expected ; exists ; 2012 ; Journal of Feline Medicine and Surgery Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2012 ; Journal of Feline Medicine and Surgery Volume 14 ; 14 ; >
 
     }
 
@@ -17954,7 +17954,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1989 ; Journal of Fire Protection Engineering Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1989 ; Journal of Fire Protection Engineering Volume 1 ; 1 ; >
       au < manifest ; exists ; 1990 ; Journal of Fire Protection Engineering Volume 2 ; 2 ; >
       au < manifest ; exists ; 1991 ; Journal of Fire Protection Engineering Volume 3 ; 3 ; >
       au < manifest ; exists ; 1992 ; Journal of Fire Protection Engineering Volume 4 ; 4 ; >
@@ -18005,7 +18005,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1983 ; Journal of Fire Sciences Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1983 ; Journal of Fire Sciences Volume 1 ; 1 ; >
       au < manifest ; exists ; 1984 ; Journal of Fire Sciences Volume 2 ; 2 ; >
       au < manifest ; exists ; 1985 ; Journal of Fire Sciences Volume 3 ; 3 ; >
       au < manifest ; exists ; 1986 ; Journal of Fire Sciences Volume 4 ; 4 ; >
@@ -18054,13 +18054,13 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2003-2004 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 1 ; 1 ; >
-      au < exists ; exists ; 2004-2005 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 2 ; 2 ; >
-      au < exists ; exists ; 2005-2006 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 3 ; 3 ; >
-      au < exists ; exists ; 2006-2007 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 4 ; 4 ; >
-      au < exists ; exists ; 2007-2008 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 5 ; 5 ; >
-      au < exists ; exists ; 2008-2009 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 6 ; 6 ; >
-      au < exists ; exists ; 2009-2010 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2003-2004 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2004-2005 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2005-2006 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2006-2007 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2007-2008 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2008-2009 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2009-2010 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 7 ; 7 ; >
       au < released ; crawling ; 2010-2011 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 8 ; 8 ; >
       au < exists ; exists ; 2011-2012 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 9 ; 9 ; >
 
@@ -18096,8 +18096,8 @@
       au < manifest ; exists ; 1989 ; Journal of Geriatric Psychiatry and Neurology Volume 2 ; 2 ; >
       au < manifest ; exists ; 1990 ; Journal of Geriatric Psychiatry and Neurology Volume 3 ; 3 ; >
       au < manifest ; exists ; 1991 ; Journal of Geriatric Psychiatry and Neurology Volume 4 ; 4 ; >
-      au < exists ; exists ; 1992 ; Journal of Geriatric Psychiatry and Neurology Volume 5 ; 5 ; >
-      au < exists ; exists ; 1993 ; Journal of Geriatric Psychiatry and Neurology Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1992 ; Journal of Geriatric Psychiatry and Neurology Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1993 ; Journal of Geriatric Psychiatry and Neurology Volume 6 ; 6 ; >
       au < manifest ; exists ; 1994 ; Journal of Geriatric Psychiatry and Neurology Volume 7 ; 7 ; >
       au < manifest ; exists ; 1995 ; Journal of Geriatric Psychiatry and Neurology Volume 8 ; 8 ; >
       au < exists ; exists ; 1996 ; Journal of Geriatric Psychiatry and Neurology Volume 9 ; 9 ; >
@@ -18202,11 +18202,11 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2004 ; Journal of Health and Social Behavior Volume 45 ; 45 ; >
-      au < exists ; exists ; 2005 ; Journal of Health and Social Behavior Volume 46 ; 46 ; >
-      au < exists ; exists ; 2006 ; Journal of Health and Social Behavior Volume 47 ; 47 ; >
-      au < exists ; exists ; 2007 ; Journal of Health and Social Behavior Volume 48 ; 48 ; >
-      au < exists ; exists ; 2008 ; Journal of Health and Social Behavior Volume 49 ; 49 ; >
+      au < manifest ; exists ; 2004 ; Journal of Health and Social Behavior Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2005 ; Journal of Health and Social Behavior Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2006 ; Journal of Health and Social Behavior Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2007 ; Journal of Health and Social Behavior Volume 48 ; 48 ; >
+      au < manifest ; exists ; 2008 ; Journal of Health and Social Behavior Volume 49 ; 49 ; >
       au < manifest ; exists ; 2009 ; Journal of Health and Social Behavior Volume 50 ; 50 ; >
       au < manifest ; exists ; 2010 ; Journal of Health and Social Behavior Volume 51 ; 51 ; >
       au < released ; crawling ; 2011 ; Journal of Health and Social Behavior Volume 52 ; 52 ; >
