@@ -17,7 +17,8 @@
     param[base_url] = http://cancerdiscovery.aacrjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
     
-    au < exists ; 2011 ; Cancer Discovery Volume 1 ; 1 >
+    au < manifest ; 2011 ; Cancer Discovery Volume 1 ; 1 >
+    au < expected ; 2012 ; Cancer Discovery Volume 2 ; 2 >
 
 
   }

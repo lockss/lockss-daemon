@@ -17,23 +17,24 @@
       param[base_url] = http://www.jaaha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 1995 ; Journal of the American Animal Hospital Association [abstracts only] Volume 31 ; 31 >
-      au < exists ; 1996 ; Journal of the American Animal Hospital Association [abstracts only] Volume 32 ; 32 >
-      au < exists ; 1997 ; Journal of the American Animal Hospital Association [abstracts only] Volume 33 ; 33 >
-      au < exists ; 1998 ; Journal of the American Animal Hospital Association Volume 34 ; 34 >
-      au < exists ; 1999 ; Journal of the American Animal Hospital Association Volume 35 ; 35 >
-      au < exists ; 2000 ; Journal of the American Animal Hospital Association Volume 36 ; 36 >
-      au < exists ; 2001 ; Journal of the American Animal Hospital Association Volume 37 ; 37 >
-      au < exists ; 2002 ; Journal of the American Animal Hospital Association Volume 38 ; 38 >
-      au < exists ; 2003 ; Journal of the American Animal Hospital Association Volume 39 ; 39 >
-      au < exists ; 2004 ; Journal of the American Animal Hospital Association Volume 40 ; 40 >
-      au < exists ; 2005 ; Journal of the American Animal Hospital Association Volume 41 ; 41 >
-      au < exists ; 2006 ; Journal of the American Animal Hospital Association Volume 42 ; 42 >
-      au < exists ; 2007 ; Journal of the American Animal Hospital Association Volume 43 ; 43 >
-      au < exists ; 2008 ; Journal of the American Animal Hospital Association Volume 44 ; 44 >
-      au < exists ; 2009 ; Journal of the American Animal Hospital Association Volume 45 ; 45 >
-      au < exists ; 2010 ; Journal of the American Animal Hospital Association Volume 46 ; 46 >
-      au < exists ; 2011 ; Journal of the American Animal Hospital Association Volume 47 ; 47 >
+      au < manifest ; 1995 ; Journal of the American Animal Hospital Association [abstracts only] Volume 31 ; 31 >
+      au < manifest ; 1996 ; Journal of the American Animal Hospital Association [abstracts only] Volume 32 ; 32 >
+      au < manifest ; 1997 ; Journal of the American Animal Hospital Association [abstracts only] Volume 33 ; 33 >
+      au < manifest ; 1998 ; Journal of the American Animal Hospital Association Volume 34 ; 34 >
+      au < manifest ; 1999 ; Journal of the American Animal Hospital Association Volume 35 ; 35 >
+      au < manifest ; 2000 ; Journal of the American Animal Hospital Association Volume 36 ; 36 >
+      au < manifest ; 2001 ; Journal of the American Animal Hospital Association Volume 37 ; 37 >
+      au < manifest ; 2002 ; Journal of the American Animal Hospital Association Volume 38 ; 38 >
+      au < manifest ; 2003 ; Journal of the American Animal Hospital Association Volume 39 ; 39 >
+      au < manifest ; 2004 ; Journal of the American Animal Hospital Association Volume 40 ; 40 >
+      au < manifest ; 2005 ; Journal of the American Animal Hospital Association Volume 41 ; 41 >
+      au < manifest ; 2006 ; Journal of the American Animal Hospital Association Volume 42 ; 42 >
+      au < manifest ; 2007 ; Journal of the American Animal Hospital Association Volume 43 ; 43 >
+      au < manifest ; 2008 ; Journal of the American Animal Hospital Association Volume 44 ; 44 >
+      au < manifest ; 2009 ; Journal of the American Animal Hospital Association Volume 45 ; 45 >
+      au < manifest ; 2010 ; Journal of the American Animal Hospital Association Volume 46 ; 46 >
+      au < manifest ; 2011 ; Journal of the American Animal Hospital Association Volume 47 ; 47 >
+      au < expected ; 2012 ; Journal of the American Animal Hospital Association Volume 48 ; 48 >
 
     }
 
