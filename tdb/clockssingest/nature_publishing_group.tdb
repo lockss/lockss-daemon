@@ -153,8 +153,8 @@
     au < released ; crawling ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
     au < released ; crawling ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 >
     au < superseded ; down ; 2010 ; Bone Marrow Transplantation Volume 46 [superseded] ; 2010 ; 46 >
-    au < exists ; exists ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 >
-    au < exists ; exists ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 >
+    au < manifest ; exists ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 >
+    au < manifest ; exists ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 >
 
   }
 
@@ -2331,7 +2331,7 @@
     au < released ; crawling ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 >
     au < testing ; exists ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 >
-    au < expected ; exists ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 >
+    au < manifest ; exists ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 >
 
   }
 
