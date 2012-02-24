@@ -28062,6 +28062,27 @@
   }
 
   {
+
+      title <
+        name = Public Relations Inquiry ;
+        issn = 2046-147X ;
+        eissn = 2046-1488 
+    >
+
+      param[base_url] = http://pri.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      comment[notReady] = Vol 1 has manifest page with incorrect link: http://pri.sagepub.com/cgi/content/1/1.long
+
+      au < notReady ; exists ; 2012 ; Public Relations Inquiry Volume 1 ; 1 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Public Understanding of Science ;
@@ -28751,6 +28772,35 @@
       au < manifest ; exists ; 2010 ; Reproductive Sciences Volume 17 ; 17 ;  >
       au < released ; crawling ; 2011 ; Reproductive Sciences Volume 18 ; 18 ; >
       au < manifest ; exists ; 2012 ; Reproductive Sciences Volume 19 ; 19 ; >
+
+    }
+
+  }
+
+  {
+
+      title <
+        name = Research Ethics ;
+        issn = 1747-0161 ;
+        eissn = 2047-6094 
+    >
+
+      param[base_url] = http://rea.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+      comment[notReady] = 2011 manifest page has bad links like: http://rea.sagepub.com/cgi/content/7/1.long
+
+      au < exists ; exists ; 2005 ; Research Ethics Volume 1 ; 1 ; >
+      au < exists ; exists ; 2006 ; Research Ethics Volume 2 ; 2 ; >
+      au < exists ; exists ; 2007 ; Research Ethics Volume 3 ; 3 ; >
+      au < exists ; exists ; 2008 ; Research Ethics Volume 4 ; 4 ; >
+      au < exists ; exists ; 2009 ; Research Ethics Volume 5 ; 5 ; >
+      au < exists ; exists ; 2010 ; Research Ethics Volume 6 ; 6 ; >
+      au < notReady ; exists ; 2011 ; Research Ethics Volume 7 ; 7 ; >
+      au < expected ; exists ; 2012 ; Research Ethics Volume 8 ; 8 ; >
 
     }
 
@@ -31463,6 +31513,52 @@
 
       au < released ; crawling ; 2011 ; Teaching of Psychology Volume 38 ; 38 ; >
       au < manifest ; exists ; 2012 ; Teaching of Psychology Volume 39 ; 39 ; >
+
+    }
+
+  }
+
+  {
+
+      title <
+        name = Teaching Public Administration ;
+        issn = 0144-7394 ;
+        eissn = 2047-8720 
+    >
+
+      param[base_url] = http://tpa.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1977 ; Teaching Public Administration Volume 1 ; 1 ; >
+      au < exists ; exists ; 1978 ; Teaching Public Administration Volume 2 ; 2 ; >
+      au < exists ; exists ; 1979 ; Teaching Public Administration Volume 3 ; 3 ; >
+      au < exists ; exists ; 1980 ; Teaching Public Administration Volume 4 ; 4 ; >
+      au < exists ; exists ; 1981 ; Teaching Public Administration Volume 5 ; 5 ; >
+      au < exists ; exists ; 1982 ; Teaching Public Administration Volume 6 ; 6 ; >
+      au < exists ; exists ; 1983 ; Teaching Public Administration Volume 7 ; 7 ; >
+      au < exists ; exists ; 1984 ; Teaching Public Administration Volume 8 ; 8 ; >
+      au < exists ; exists ; 1985 ; Teaching Public Administration Volume 9 ; 9 ; >
+      au < exists ; exists ; 1986 ; Teaching Public Administration Volume 10 ; 10 ; >
+      au < exists ; exists ; 1987 ; Teaching Public Administration Volume 11 ; 11 ; >
+      au < exists ; exists ; 1988 ; Teaching Public Administration Volume 12 ; 12 ; >
+      au < exists ; exists ; 1989 ; Teaching Public Administration Volume 13 ; 13 ; >
+      au < exists ; exists ; 1990 ; Teaching Public Administration Volume 14 ; 14 ; >
+      au < exists ; exists ; 1991 ; Teaching Public Administration Volume 15 ; 15 ; >
+      au < exists ; exists ; 1992 ; Teaching Public Administration Volume 16 ; 16 ; >
+      au < exists ; exists ; 1993 ; Teaching Public Administration Volume 17 ; 17 ; >
+      au < exists ; exists ; 1994 ; Teaching Public Administration Volume 18 ; 18 ; >
+      au < exists ; exists ; 1995 ; Teaching Public Administration Volume 19 ; 19 ; >
+      au < exists ; exists ; 1996 ; Teaching Public Administration Volume 20 ; 20 ; >
+      au < exists ; exists ; 1997 ; Teaching Public Administration Volume 21 ; 21 ; >
+      au < exists ; exists ; 1998 ; Teaching Public Administration Volume 22 ; 22 ; >
+      au < exists ; exists ; 1999 ; Teaching Public Administration Volume 23 ; 23 ; >
+      au < exists ; exists ; 2000 ; Teaching Public Administration Volume 24 ; 24 ; >
+      au < exists ; exists ; 2001 ; Teaching Public Administration Volume 25 ; 25 ; >
+      au < exists ; exists ; 2002 ; Teaching Public Administration Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2003 ; Teaching Public Administration Volume 27 ; 27 ; >
 
     }
 
