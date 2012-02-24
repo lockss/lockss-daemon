@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.13 2011-12-19 11:14:27 easyonthemayo Exp $
+ * $Id: NumberUtil.java,v 1.14 2012-02-24 15:39:57 easyonthemayo Exp $
  */
 
 /*
@@ -361,7 +361,7 @@ public class NumberUtil {
    * single value or a start/stop range separated by a dash. If the range
    * is a single value, it will be used as both the start and stop values.
    * Convenience method which calculates the endpoints for 
-   *{@link #rangeIncludes(String, String, String)}.
+   * {@link #rangeIncludes(String, String, String)}.
    * @param range a single value or a start/stop range separated by a dash, optionally with whitespace
    * @param value the value
    * @return <code>true</code> if this range includes the value
@@ -377,12 +377,12 @@ public class NumberUtil {
   }
 
   /**
-   * Determine whether a range includes a given value. 
+   * Determine whether a range includes a given value. Note that the range "v-x"
+   * includes "vi", "w" and "word" - it is interpreted as a Roman sequence or a
+   * letter/topic range depending on the context implied by the search value.
    * <p>
    * If the range and value can be interpreted as numbers (Arabic or Roman),
-   * the value is compared numerically with the range. If the range can be
-   * interpreted as numbers but the value cannot, <tt>false</tt> is returned.
-   * Otherwise, the value 
+   * the value is compared numerically with the range. Otherwise, the value
    * is compared to the range start and stop values as a topic range. That 
    * is, "Georgia", "Kansas", and "Massachusetts" are topics within the
    * volume "Ge-Ma.
@@ -409,15 +409,7 @@ public class NumberUtil {
       // see if value is within range
       int srange = NumberUtil.parseInt(startRange);
       int erange = NumberUtil.parseInt(endRange);
-      //int ival = NumberUtil.parseInt(value);
-      int ival;
-      // If the start and end parse as numbers but the value doesn't, it is not in the range
-      // This will prevent for example w being in the roman range v-x.
-      try {
-        ival = NumberUtil.parseInt(value);
-      } catch (NumberFormatException ex) {
-        return false;
-      }
+      int ival = NumberUtil.parseInt(value);
       return ( ival >= srange && ival <= erange);
     } catch (NumberFormatException ex) {
       // can't compare numerically, so compare as topic ranges

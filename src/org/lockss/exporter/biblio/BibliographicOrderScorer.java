@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicOrderScorer.java,v 1.2 2011-12-19 11:14:27 easyonthemayo Exp $
+ * $Id: BibliographicOrderScorer.java,v 1.3 2012-02-24 15:39:57 easyonthemayo Exp $
  */
 
 /*
@@ -569,8 +569,8 @@ public final class BibliographicOrderScorer {
    */
   static final boolean areValuesIncreasing(String first, String second)
       throws NumberFormatException {
-    return areValuesIncreasing(NumberUtil.parseInt(first.trim()),
-        NumberUtil.parseInt(second.trim()));
+    return areValuesIncreasing(NumberUtil.parseInt(first),
+        NumberUtil.parseInt(second));
   }
 
   /**
@@ -585,7 +585,7 @@ public final class BibliographicOrderScorer {
    */
   static final boolean areValuesDecreasing(String first, String second)
       throws NumberFormatException {
-    return NumberUtil.parseInt(first.trim()) > NumberUtil.parseInt(second.trim());
+    return NumberUtil.parseInt(first) > NumberUtil.parseInt(second);
   }
 
   /**
@@ -686,8 +686,8 @@ public final class BibliographicOrderScorer {
    */
   static final boolean areYearsIncreasing(String first, String second)
       throws NumberFormatException {
-    return areYearsIncreasing(NumberUtil.parseInt(first.trim()),
-        NumberUtil.parseInt(second.trim()));
+    return areYearsIncreasing(NumberUtil.parseInt(first),
+        NumberUtil.parseInt(second));
   }
 
   /**
@@ -922,7 +922,7 @@ public final class BibliographicOrderScorer {
       } catch (NumberFormatException e) {
         // There's something funny about the year field values, so issue a
         // warning and carry on without counting a break.
-        log.warning("Could not check if year values constitute a break." +
+        log.warning("Could not check if year values constitute a break. " +
             e.getMessage());
       }
     }
@@ -962,7 +962,7 @@ public final class BibliographicOrderScorer {
         // There's something funny about the field values, so issue a
         // warning and carry on without counting a negative break.
         log.warning("Could not check if " + fieldToCheck +
-            " values constitute a negative break." + e.getMessage());
+            " values constitute a negative break. " + e.getMessage());
       }
     }
     return (float)total/(float)numPairs;

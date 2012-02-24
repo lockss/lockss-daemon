@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicUtil.java,v 1.2 2011-12-19 11:14:27 easyonthemayo Exp $
+ * $Id: BibliographicUtil.java,v 1.3 2012-02-24 15:39:57 easyonthemayo Exp $
  */
 
 /*
@@ -149,20 +149,32 @@ public class BibliographicUtil {
   
   /**
    * Compares two <code>BibliographicItem</code>s to see if they appear to have
-   * the same identity, by comparing their identifying fields. Returns
-   * <code>true</code> if either the ISSNs or the names are equal.
+   * the same identity, by comparing their identifying fields. If the ISSNs are
+   * both non-empty, returns whether they match; otherwise returns
+   * <code>true</code> if the names are equal and non-empty.
+   * <p>
+   * If either argument is null, an exception will be thrown.
+   *
    * @param au1 a BibliographicItem
    * @param au2 another BibliographicItem
-   * @return <code>true</code> if they have the same issn or name
+   * @return <code>true</code> if they have the same issn, or no issn and same name
    */
   public static boolean haveSameIdentity(BibliographicItem au1, BibliographicItem au2) {
     String au1issn = au1.getIssn();
     String au2issn = au2.getIssn();
     String au1name = au1.getName();
     String au2name = au2.getName();
-    boolean issn = au1issn!=null && au2issn!=null && au1issn.equals(au2issn);
-    boolean name = au1name!=null && au2name!=null && au1name.equals(au2name);
-    return issn || name;
+    /*boolean issn = !StringUtil.isNullString(au1issn) &&
+        !StringUtil.isNullString(au2issn) && au1issn.equals(au2issn);
+    boolean name = !StringUtil.isNullString(au1name) &&
+        !StringUtil.isNullString(au2name) && au1name.equals(au2name);
+    return issn || name;*/
+
+    if (!StringUtil.isNullString(au1issn) && !StringUtil.isNullString(au2issn))
+      return au1issn.equals(au2issn);
+    else
+      return !StringUtil.isNullString(au1name) &&
+          !StringUtil.isNullString(au2name) && au1name.equals(au2name);
   }
   
   /**
@@ -198,7 +210,8 @@ public class BibliographicUtil {
    * (ISSN or name), and all available indexing fields (volume or year). This is
    * to try and match up duplicate bibliographic records which arise from
    * duplicate releases of the same volume of a title under a different plugin
-   * for example.
+   * for example. If the ISSNs are available, they take precedence; different
+   * ISSNs means non-equivalent items, regardless of the name.
    *
    * @param au1 a BibliographicItem
    * @param au2 another BibliographicItem
@@ -214,32 +227,22 @@ public class BibliographicUtil {
    * Returns less than 0 if the first is less than the second, greater than 0 if
    * the first is greater than the second, and 0 if they are the same. If the
    * strings cannot be parsed the default NumberFormatException is propagated to
-   * the caller. Currently this method just calls <code>compareIntStrings()</code>.
+   * the caller.
    *
    * @param year1 a string representing a year
    * @param year2 a string representing a year
    * @return the value 0 if the years are the same; less than 0 if the first is less than the second; and greater than 0 if the first is greater than the second
+   * @throws NumberFormatException if either of the strings does not parse as an integer
+   * @deprecated no longer useful
    */
   public static int compareStringYears(String year1, String year2)
       throws NumberFormatException {
     // Note that in practise if the strings do represent comparable publication years,
-    // they will be 4 digits long and so comparable as strings with the same results.
-    return compareIntStrings(year1, year2);
-  }
-
-  /**
-   * Compare two strings that represent integers.
-   * @param int1 a string which should parse as an integer
-   * @param int2 a string which should parse as an integer
-   * @return the value 0 if the ints are the same; less than 0 if the first is less than the second; and greater than 0 if the first is greater than the second
-   * @throws NumberFormatException
-   */
-  public static int compareIntStrings(String int1, String int2)
-      throws NumberFormatException {
+    // they should be 4 digits long and so comparable as strings with the same results.
     // Return zero if the strings are equal
-    if (int1.equals(int2)) return 0;
-    Integer i1 = NumberUtil.parseInt(int1);
-    Integer i2 = NumberUtil.parseInt(int2);
+    if (year1.equals(year2)) return 0;
+    Integer i1 = NumberUtil.parseInt(year1);
+    Integer i2 = NumberUtil.parseInt(year2);
     return i1.compareTo(i2);
   }
 
@@ -427,24 +430,11 @@ public class BibliographicUtil {
 
 
   /**
-   * Determine whether a coverage range includes a given value. The range can be a
-   * single value or a start/stop range separated by a dash. If the range
-   * is a single value, it will be used as both the start and stop values.
-   * <p>
-   * If the range endpoints and the value can be interpreted as numbers (Arabic
-   * or Roman), the value is compared numerically with the range. Otherwise,
-   * the value is compared to the endpoints of the range.
-   * <p>
-   * The range string can also include whitespace, which is trimmed from the
-   * resulting year. Java's <code>String.trim()</code> method trims blanks and
-   * also control characters, but doesn't trim all the forms of blank
-   * specified in the Unicode character set. The value to search for is
-   * <i>not</i> trimmed.
-   * <p>
-   * This method is protected and only intended for internal use, as it
-   * stipulates that the range string must represent a single range. Clients
-   * should instead call {@link #coverageIncludes(String, String)}, which
-   * will handle a wider range of inputs.
+   * Determine whether a coverage range includes a given value. This version
+   * of the method parses the start and end of the range from a string. The
+   * range can be a single value or a start/stop range separated by a dash. If
+   * the range is a single value, it will be used as both the start and stop
+   * values.
    *
    * @param rangeStr a string representing a range or a single value
    * @param value an identifier that may occur in the range
@@ -464,11 +454,25 @@ public class BibliographicUtil {
     return rangeIncludes(start, end, value);
   }
 
-
   /**
-   * Determine whether a coverage range includes a given value. This version
-   * of the method allows the start and end of the range to be specified 
-   * separately.
+   * Determine whether a coverage range includes a given value.
+   * <p>
+   * If the range endpoints and the value can be interpreted as numbers (Arabic
+   * or Roman), the value is compared numerically with the range. Otherwise,
+   * the value is compared alphabetically to the endpoints of the range,
+   * excluding any common prefix, and zero-padding numbers.
+   * <p>
+   * The range string can also include whitespace, which is trimmed from the
+   * resulting year. Java's <code>String.trim()</code> method trims blanks and
+   * also control characters, but doesn't trim all the forms of blank
+   * specified in the Unicode character set. The value to search for is
+   * <i>not</i> trimmed.
+   * <p>
+   * This method is protected and only intended for internal use, as it
+   * stipulates that the range string must represent a single range. Clients
+   * should instead call {@link #coverageIncludes(String, String)}, which
+   * will handle a wider range of input strings.
+   *
    * @param start a single value representing the start of the range
    * @param end a single value representing the end of the range
    * @param value an identifier that may occur in the range
@@ -476,20 +480,12 @@ public class BibliographicUtil {
    */
   protected static boolean rangeIncludes(String start, String end, String value) {
     try {
-      // see if value is within a numerical range
+      // See if value is within a numerical range
       int s = NumberUtil.parseInt(start);
       int e = NumberUtil.parseInt(end);
-      int ival;
-      // If the start and end parse as numbers but the value doesn't, it is not in the range
-      try {
-        ival = NumberUtil.parseInt(value);
-      } catch (NumberFormatException ex) {
-        return false;
-      }
-      //System.out.format("Comparing as ints: %s (%s) <= %s (%s) <= %s (%s)\n", s, start, ival, value, e, end);
+      int ival = NumberUtil.parseInt(value);
       return (ival >= s && ival <= e);
     } catch (NumberFormatException ex) {
-      //System.out.format("Comparing as common prefix: %s <= %s <= %s\n", start, value, end);
       // True if start or end equal to value
       if (value.equals(start) || value.equals(end)) {
         return true;

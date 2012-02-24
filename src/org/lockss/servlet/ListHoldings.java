@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.27 2012-01-24 12:37:16 pgust Exp $
+ * $Id: ListHoldings.java,v 1.28 2012-02-24 15:39:56 easyonthemayo Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ import org.mortbay.html.Page;
 /** 
  * This servlet provides access to holdings metadata, transforming the TDB data 
  * into KBART format data which can be imported into a spreadsheet. There are
- * predefined output options for CSV, TSV (disabled) and HTML. The content of
+ * predefined output options for CSV, TSV and HTML. The content of
  * the output can be strict KBART, or can be customised in terms of fields and
  * field ordering. A health metric rating can also be appended to the custom
  * output, though this is currently disabled.
@@ -86,7 +86,7 @@ public class ListHoldings extends LockssServlet {
   static final String PREFIX = Configuration.PREFIX + "listHoldings.";
 
   private static final String BREAK = "<br/><br/>";
-  
+
   /** Enable ListHoldings in UI.  Daemon restart required when set to true,
    * not when set false */
   public static final String PARAM_ENABLE_HOLDINGS = PREFIX + "enabled";

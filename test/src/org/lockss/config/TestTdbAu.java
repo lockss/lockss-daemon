@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.11 2012-01-16 17:47:39 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.12 2012-02-24 15:39:57 easyonthemayo Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.11 2012-01-16 17:47:39 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.12 2012-02-24 15:39:57 easyonthemayo Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -297,11 +297,12 @@ public class TestTdbAu extends LockssTestCase {
     volStr = "s1v-s1x; s1i, s1ii";
     au.setAttr("volume", volStr);
     assertEquals(volStr, au.getVolume());
-    // Do not contain values from an alphabetic interpretation (topic ranges)
-    // s1v-s1x to include s1ix but not s1w
+    // Include values from an alphabetic interpretation (topic ranges)
+    // s1v-s1x to include s1ix and also s1w and
     assertTrue(au.includesVolume("s1vi"));
     assertTrue(au.includesVolume("s1ix"));
-    assertFalse(au.includesVolume("s1w"));
+    assertTrue(au.includesVolume("s1w"));
+    assertTrue(au.includesVolume("s1word"));
     // s1ii to not include s1iii
     assertFalse(au.includesVolume("s1iii"));
 

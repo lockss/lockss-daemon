@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.17 2011-09-23 13:23:15 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.18 2012-02-24 15:39:57 easyonthemayo Exp $
  */
 
 /*
@@ -112,9 +112,9 @@ public class HtmlKbartExporter extends KbartExporter {
     super(titles, format);
   }
   
-  public void sortByField(Field f) {
+  /*public void sortByField(Field f) {
     Collections.sort(titles, KbartTitleComparatorFactory.getComparator(f));
-  }
+  }*/
   
   /** Called by org.lockss.config.MiscConfig
    */
@@ -203,9 +203,12 @@ public class HtmlKbartExporter extends KbartExporter {
   protected void setup(OutputStream os) throws IOException {
     super.setup(os);
     // Construct a title and summary
-    this.exportSummary = String.format("%s title list created on %s by %s " +
+    /*this.exportSummary = String.format("%s title list created on %s by %s " +
 	"| %d items listed from %d titles.",
-	scope, getDate(), getHostName(), titles.size(), tdbTitleTotal);
+	scope, getDate(), getHostName(), titles.size(), tdbTitleTotal);*/
+    this.exportSummary = String.format(
+        "%s title list created on %s by %s from %d titles.",
+        scope, getDate(), getHostName(), tdbTitleTotal);
     this.header = makeHeader();
     this.issnFieldIndex = findFieldIndex(Field.PRINT_IDENTIFIER);
     this.eissnFieldIndex = findFieldIndex(Field.ONLINE_IDENTIFIER);

@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.17 2012-01-17 19:43:50 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.18 2012-02-24 15:39:57 easyonthemayo Exp $
  */
 
 /*
@@ -86,7 +86,8 @@ public abstract class KbartExporter {
 
   // Footnotes for the interface options
   private static final String CSV_NOTE = "CSV files can be imported into spreadsheet programs.";
-  
+  private static final String TSV_NOTE = "TSV files can be imported into spreadsheet programs.";
+
   //private static final String TSV_NOTE = "The TSV export values are quoted "+
   //"where necessary, and quotes within values are escaped.";
   
@@ -532,18 +533,19 @@ public abstract class KbartExporter {
    */
   public static enum OutputFormat {
         
-    // Don't compress the TSV output
-    /*KBART_TSV("KBART TSV (tab-separated values)", 
+    TSV("Export TSV (tab-separated values)",
      "text/tab-separated-values", "tsv", 
-     true, false, TSV_NOTE) {
+     true, false, false,
+        TSV_NOTE) {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, 
           KbartExportFilter filter) {
-	KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this);
+	KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this,
+            SeparatedValuesKbartExporter.SEPARATOR_TAB);
 	kbe.setFilter(filter);
 	return kbe;
       }
-    },*/
+    },
     
     CSV(
         "Export CSV (comma-separated values)", 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicUtil.java,v 1.2 2011-12-19 11:14:27 easyonthemayo Exp $
+ * $Id: TestBibliographicUtil.java,v 1.3 2012-02-24 15:39:57 easyonthemayo Exp $
  */
 
 /*
@@ -163,7 +163,7 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertTrue(BibliographicUtil.haveSameIdentity(afrTod, afrTod));
     assertTrue(BibliographicUtil.haveSameIdentity(afrTod, afrTodEquiv));
     assertTrue(BibliographicUtil.haveSameIdentity(afrTod, afrTodDiffUrl));
-    // Should throw exception if any arg is null
+    // Should return false if any arg is null
     try {
       BibliographicUtil.haveSameIdentity(null, null);
       fail("Should throw exception with null BibliographicItems.");
@@ -453,13 +453,15 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertTrue(BibliographicUtil.coverageIncludes(romanRng, "viii"));
     assertTrue(BibliographicUtil.coverageIncludes(romanRng, "iix"));
 
-    // Test that Roman tokens get interpreted as Roman tokens
+    // Test that Roman tokens get interpreted as Roman tokens when necessary
     // Do not contain values from an alphabetic interpretation (topic ranges)
-    // s1v-s1x to include s1ix but not s1w
+    // (1) s1v-s1x to include s1vi and s1ix (should be interpreted as Roman nums)
     assertTrue(BibliographicUtil.coverageIncludes("s1v-s1x", "s1vi"));
     assertTrue(BibliographicUtil.coverageIncludes("s1v-s1x", "s1ix"));
-    assertFalse(BibliographicUtil.coverageIncludes("s1v-s1x", "s1w"));
-    // s1ii to not include s1iii
+    // (2) s1v-s1x to also include s1w - interpret as alphabetic not Roman,
+    // given the context provided by the search value
+    assertTrue(BibliographicUtil.coverageIncludes("s1v-s1x", "s1w"));
+    // (3) s1ii to not include s1iii (should be interpreted as Roman nums)
     assertFalse(BibliographicUtil.coverageIncludes("s1i, s1ii", "s1iii"));
 
     // Alphabetic/topic range examples
@@ -484,7 +486,7 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertTrue(BibliographicUtil.coverageIncludes(weirdMix, "s1"));
     assertTrue(BibliographicUtil.coverageIncludes(weirdMix, "s2"));
     assertTrue(BibliographicUtil.coverageIncludes(weirdMix, "vi"));
-    assertFalse(BibliographicUtil.coverageIncludes(weirdMix, "w"));
+    assertTrue(BibliographicUtil.coverageIncludes(weirdMix, "w"));
     assertTrue(BibliographicUtil.coverageIncludes(weirdMix, "vol040"));
   }
 
@@ -526,7 +528,8 @@ public class TestBibliographicUtil extends LockssTestCase {
    
     // Roman ranges
     assertTrue(BibliographicUtil.rangeIncludes("v-x", "vii"));
-    assertFalse(BibliographicUtil.rangeIncludes("v-x", "w"));
+    // Potentially alphabetical range
+    assertTrue(BibliographicUtil.rangeIncludes("v-x", "w"));
     // Mixed cases should be normalised
     assertTrue(BibliographicUtil.rangeIncludes("i-x", "VII"));
     assertTrue(BibliographicUtil.rangeIncludes("i-X", "Vii"));
@@ -543,13 +546,19 @@ public class TestBibliographicUtil extends LockssTestCase {
     // Zero-padded number components
     assertTrue(BibliographicUtil.rangeIncludes("vol001-vol090", "vol040"));
 
-    // Test that Roman tokens get interpreted as Roman tokens
+    // Textual numbers are not recognised - they are interpreted alphabetically
+    assertFalse(BibliographicUtil.rangeIncludes("one-three", "two"));
+    assertFalse(BibliographicUtil.rangeIncludes("one-seven", "three"));
+
+    // Test that Roman tokens get interpreted as Roman tokens when necessary
     // Do not contain values from an alphabetic interpretation (topic ranges)
-    // (1) s1v-s1x to include s1ix but not s1w
+    // (1) s1v-s1x to include s1vi and s1ix (should be interpreted as Roman nums)
     assertTrue(BibliographicUtil.rangeIncludes("s1v-s1x", "s1vi"));
     assertTrue(BibliographicUtil.rangeIncludes("s1v-s1x", "s1ix"));
-    assertFalse(BibliographicUtil.rangeIncludes("s1v-s1x", "s1w"));
-    // (2) s1ii to not include s1iii
+    // (2) s1v-s1x to also include s1w - interpret as alphabetic not Roman,
+    // given the context provided by the search value
+    assertTrue(BibliographicUtil.rangeIncludes("s1v-s1x", "s1w"));
+    // (3) s1ii to not include s1iii (should be interpreted as Roman nums)
     assertFalse(BibliographicUtil.rangeIncludes("s1i, s1ii", "s1iii"));
 
     // Identifiers with hyphens

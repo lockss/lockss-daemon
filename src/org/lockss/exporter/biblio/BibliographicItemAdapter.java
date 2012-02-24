@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.3 2012-01-16 17:52:18 pgust Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.4 2012-02-24 15:39:57 easyonthemayo Exp $
  */
 
 /*
@@ -194,24 +194,30 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   public BibliographicItemAdapter setVolume(String volume) {
     this.volume = volume;
     // Set the start and end volumes from this string to maintain internal consistency
-    this.setStartVolume(BibliographicUtil.getRangeSetStart(volume));
-    this.setEndVolume(BibliographicUtil.getRangeSetEnd(volume));
+    if (volume!=null) {
+      this.setStartVolume(BibliographicUtil.getRangeSetStart(volume));
+      this.setEndVolume(BibliographicUtil.getRangeSetEnd(volume));
+    }
     return this;
   }
 
   public BibliographicItemAdapter setYear(String year) {
     this.year = year;
     // Set the start and end years from this string to maintain internal consistency
-    this.setStartYear(BibliographicUtil.getRangeSetStart(year));
-    this.setEndYear(BibliographicUtil.getRangeSetEnd(year));
+    if (year!=null) {
+      this.setStartYear(BibliographicUtil.getRangeSetStart(year));
+      this.setEndYear(BibliographicUtil.getRangeSetEnd(year));
+    }
     return this;
   }
 
   public BibliographicItemAdapter setIssue(String issue) {
     this.issue = issue;
     // Set the start and end issues from this string to maintain internal consistency
-    this.setStartIssue(BibliographicUtil.getRangeSetStart(issue));
-    this.setEndIssue(BibliographicUtil.getRangeSetEnd(issue));
+    if (issue!=null) {
+      this.setStartIssue(BibliographicUtil.getRangeSetStart(issue));
+      this.setEndIssue(BibliographicUtil.getRangeSetEnd(issue));
+    }
     return this;
   }
 
