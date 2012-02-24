@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.15 2012-01-16 17:46:10 pgust Exp $
+ * $Id: TdbAu.java,v 1.16 2012-02-24 18:56:44 pgust Exp $
  */
 
 /*
@@ -607,9 +607,10 @@ public class TdbAu implements BibliographicItem {
   }
   
   /**
-   * Return representative ISSN for this title. 
-   * Uses ISSN-L, then eISSN, and finally print ISSN.
-   * Each ISSN is checked for well-formedness, but is not checksummed.
+   * Return representative ISSN for this title.  Returns ISSN-L if available, 
+   * then print ISSN, and finally eISSN. This approximates the way ISSN-Ls
+   * are assigned. The returned ISSN is checked for well-formedness, but is 
+   * not checksummed.
    * 
    * @return representative for this title or <code>null</code> if not 
    *  specified or is ill-formed
@@ -617,9 +618,9 @@ public class TdbAu implements BibliographicItem {
   public String getIssn() {
     String issn = getIssnL();
     if (!MetadataUtil.isIssn(issn)) {
-      issn = getEissn();
+      issn = getPrintIssn();
       if (!MetadataUtil.isIssn(issn)) {
-        issn = getPrintIssn();
+        issn = getEissn();
         if (!MetadataUtil.isIssn(issn)) {
           issn = null;
         }
