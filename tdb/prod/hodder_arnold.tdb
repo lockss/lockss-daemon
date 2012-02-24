@@ -24,11 +24,11 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.HodderArnoldPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < released ; 1998 ; Pain Reviews Volume 5 ; 5 >
-    au < released ; 1999 ; Pain Reviews Volume 6 ; 6 >
-    au < released ; 2000 ; Pain Reviews Volume 7 ; 7 >
-    au < released ; 2001 ; Pain Reviews Volume 8 ; 8 >
-    au < released ; 2002 ; Pain Reviews Volume 9 ; 9 >
+    au < down ; 1998 ; Pain Reviews Volume 5 ; 5 >
+    au < down ; 1999 ; Pain Reviews Volume 6 ; 6 >
+    au < down ; 2000 ; Pain Reviews Volume 7 ; 7 >
+    au < down ; 2001 ; Pain Reviews Volume 8 ; 8 >
+    au < down ; 2002 ; Pain Reviews Volume 9 ; 9 >
   
   }
   
