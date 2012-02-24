@@ -17,16 +17,16 @@
       param[base_url] = http://aapgrandrounds.aappublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1999 ; AAP Grand Rounds Volume 1 ; 1 >
-      au < manifest ; 1999 ; AAP Grand Rounds Volume 2 ; 2 >
-      au < manifest ; 2000 ; AAP Grand Rounds Volume 3 ; 3 >
-      au < manifest ; 2000 ; AAP Grand Rounds Volume 4 ; 4 >
-      au < manifest ; 2001 ; AAP Grand Rounds Volume 5 ; 5 >
-      au < manifest ; 2001 ; AAP Grand Rounds Volume 6 ; 6 >
-      au < manifest ; 2002 ; AAP Grand Rounds Volume 7 ; 7 >
-      au < manifest ; 2002 ; AAP Grand Rounds Volume 8 ; 8 >
-      au < manifest ; 2003 ; AAP Grand Rounds Volume 9 ; 9 >
-      au < manifest ; 2003 ; AAP Grand Rounds Volume 10 ; 10 >
+      au < testing ; 1999 ; AAP Grand Rounds Volume 1 ; 1 >
+      au < testing ; 1999 ; AAP Grand Rounds Volume 2 ; 2 >
+      au < testing ; 2000 ; AAP Grand Rounds Volume 3 ; 3 >
+      au < testing ; 2000 ; AAP Grand Rounds Volume 4 ; 4 >
+      au < testing ; 2001 ; AAP Grand Rounds Volume 5 ; 5 >
+      au < testing ; 2001 ; AAP Grand Rounds Volume 6 ; 6 >
+      au < testing ; 2002 ; AAP Grand Rounds Volume 7 ; 7 >
+      au < testing ; 2002 ; AAP Grand Rounds Volume 8 ; 8 >
+      au < testing ; 2003 ; AAP Grand Rounds Volume 9 ; 9 >
+      au < testing ; 2003 ; AAP Grand Rounds Volume 10 ; 10 >
       au < manifest ; 2004 ; AAP Grand Rounds Volume 11 ; 11 >
       au < manifest ; 2004 ; AAP Grand Rounds Volume 12 ; 12 >
       au < manifest ; 2005 ; AAP Grand Rounds Volume 13 ; 13 >
