@@ -43,6 +43,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Antimicrobial Agents and Chemotherapy Volume 53 ; 53 >
       au < HighWirePressH20Plugin ; ready ; 2010 ; Antimicrobial Agents and Chemotherapy Volume 54 ; 54 >
       au < HighWirePressH20Plugin ; ready ; 2011 ; Antimicrobial Agents and Chemotherapy Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Antimicrobial Agents and Chemotherapy Volume 56 ; 56 >
   
     }
   
@@ -80,6 +81,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Applied and Environmental Microbiology Volume 75 ; 75 >
       au < HighWirePressH20Plugin ; ready ; 2010 ; Applied and Environmental Microbiology Volume 76 ; 76 >
       au < HighWirePressH20Plugin ; ready ; 2011 ; Applied and Environmental Microbiology Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Applied and Environmental Microbiology Volume 78 ; 78 >
   
     }
   
@@ -110,6 +112,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Clinical and Vaccine Immunology Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; ready ; 2010 ; Clinical and Vaccine Immunology Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; ready ; 2011 ; Clinical and Vaccine Immunology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Clinical and Vaccine Immunology Volume 19 ; 19 >
   
     }
   
@@ -146,6 +149,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Clinical Microbiology Reviews Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; ready ; 2010 ; Clinical Microbiology Reviews Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; ready ; 2011 ; Clinical Microbiology Reviews Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Clinical Microbiology Reviews Volume 25 ; 25 >
   
     }
   
@@ -168,6 +172,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Eukaryotic Cell Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; down ; 2010 ; Eukaryotic Cell Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; manifest ; 2011 ; Eukaryotic Cell Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Eukaryotic Cell Volume 11 ; 11 >
       
   
     }
@@ -260,6 +265,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Infection and Immunity Volume 77 ; 77 >
       au < HighWirePressH20Plugin ; down ; 2010 ; Infection and Immunity Volume 78 ; 78 >
       au < HighWirePressH20Plugin ; ready ; 2011 ; Infection and Immunity Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Infection and Immunity Volume 80 ; 80 >
   
     }
   
@@ -297,6 +303,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Journal of Bacteriology Volume 191 ; 191 >
       au < HighWirePressH20Plugin ; down ; 2010 ; Journal of Bacteriology Volume 192 ; 192 >
       au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Bacteriology Volume 193 ; 193 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Bacteriology Volume 194 ; 194 >
   
     }
   
@@ -358,6 +365,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Journal of Clinical Microbiology Volume 47 ; 47 >
       au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Clinical Microbiology Volume 48 ; 48 >
       au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Clinical Microbiology Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Clinical Microbiology Volume 50 ; 50 >
   
     }
   
@@ -455,6 +463,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Journal of Virology Volume 83 ; 83 >
       au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Virology Volume 84 ; 84 >
       au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Virology Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Virology Volume 86 ; 86 >
   
     }
   
@@ -467,36 +476,36 @@
       >
       param[base_url] = http://mmbr.asm.org/
   
-      au < HighWirePressH20Plugin ; exists ; 1937 ; Microbiology and Molecular Biology Reviews Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; 1938 ; Microbiology and Molecular Biology Reviews Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; 1939 ; Microbiology and Molecular Biology Reviews Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; 1940 ; Microbiology and Molecular Biology Reviews Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; 1941 ; Microbiology and Molecular Biology Reviews Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; 1942 ; Microbiology and Molecular Biology Reviews Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; 1943 ; Microbiology and Molecular Biology Reviews Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; 1944 ; Microbiology and Molecular Biology Reviews Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; exists ; 1945 ; Microbiology and Molecular Biology Reviews Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; 1946 ; Microbiology and Molecular Biology Reviews Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; exists ; 1947 ; Microbiology and Molecular Biology Reviews Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; exists ; 1948 ; Microbiology and Molecular Biology Reviews Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; exists ; 1949 ; Microbiology and Molecular Biology Reviews Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; exists ; 1950 ; Microbiology and Molecular Biology Reviews Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; exists ; 1951 ; Microbiology and Molecular Biology Reviews Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; exists ; 1952 ; Microbiology and Molecular Biology Reviews Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; exists ; 1953 ; Microbiology and Molecular Biology Reviews Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; exists ; 1954 ; Microbiology and Molecular Biology Reviews Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; exists ; 1955 ; Microbiology and Molecular Biology Reviews Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; exists ; 1956 ; Microbiology and Molecular Biology Reviews Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; exists ; 1957 ; Microbiology and Molecular Biology Reviews Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; exists ; 1958 ; Microbiology and Molecular Biology Reviews Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; exists ; 1959 ; Microbiology and Molecular Biology Reviews Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; exists ; 1960 ; Microbiology and Molecular Biology Reviews Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; exists ; 1961 ; Microbiology and Molecular Biology Reviews Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; exists ; 1962 ; Microbiology and Molecular Biology Reviews Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; exists ; 1963 ; Microbiology and Molecular Biology Reviews Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; exists ; 1964 ; Microbiology and Molecular Biology Reviews Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; exists ; 1965 ; Microbiology and Molecular Biology Reviews Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; exists ; 1966 ; Microbiology and Molecular Biology Reviews Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; manifest ; 1937 ; Microbiology and Molecular Biology Reviews Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1938 ; Microbiology and Molecular Biology Reviews Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1939 ; Microbiology and Molecular Biology Reviews Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1940 ; Microbiology and Molecular Biology Reviews Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1941 ; Microbiology and Molecular Biology Reviews Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1942 ; Microbiology and Molecular Biology Reviews Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1943 ; Microbiology and Molecular Biology Reviews Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1944 ; Microbiology and Molecular Biology Reviews Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1945 ; Microbiology and Molecular Biology Reviews Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1946 ; Microbiology and Molecular Biology Reviews Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1947 ; Microbiology and Molecular Biology Reviews Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1948 ; Microbiology and Molecular Biology Reviews Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 1949 ; Microbiology and Molecular Biology Reviews Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 1950 ; Microbiology and Molecular Biology Reviews Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 1951 ; Microbiology and Molecular Biology Reviews Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 1952 ; Microbiology and Molecular Biology Reviews Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 1953 ; Microbiology and Molecular Biology Reviews Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 1954 ; Microbiology and Molecular Biology Reviews Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 1955 ; Microbiology and Molecular Biology Reviews Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 1956 ; Microbiology and Molecular Biology Reviews Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 1957 ; Microbiology and Molecular Biology Reviews Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 1958 ; Microbiology and Molecular Biology Reviews Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 1959 ; Microbiology and Molecular Biology Reviews Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 1960 ; Microbiology and Molecular Biology Reviews Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 1961 ; Microbiology and Molecular Biology Reviews Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 1962 ; Microbiology and Molecular Biology Reviews Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 1963 ; Microbiology and Molecular Biology Reviews Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 1964 ; Microbiology and Molecular Biology Reviews Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 1965 ; Microbiology and Molecular Biology Reviews Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 1966 ; Microbiology and Molecular Biology Reviews Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; ready ; 1967 ; Microbiology and Molecular Biology Reviews Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; ready ; 1968 ; Microbiology and Molecular Biology Reviews Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; ready ; 1969 ; Microbiology and Molecular Biology Reviews Volume 33 ; 33 >
@@ -542,6 +551,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Microbiology and Molecular Biology Reviews Volume 73 ; 73 >
       au < HighWirePressH20Plugin ; down ; 2010 ; Microbiology and Molecular Biology Reviews Volume 74 ; 74 >
       au < HighWirePressH20Plugin ; ready ; 2011 ; Microbiology and Molecular Biology Reviews Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Microbiology and Molecular Biology Reviews Volume 76 ; 76 >
   
     }
   
@@ -585,6 +595,7 @@
       au < HighWirePressH20Plugin ; down ; 2009 ; Molecular and Cellular Biology Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; down ; 2010 ; Molecular and Cellular Biology Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; ready ; 2011 ; Molecular and Cellular Biology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Molecular and Cellular Biology Volume 32 ; 32 >
   
     }
   

@@ -33,25 +33,25 @@
 
     param[base_url] = http://www.ajcn.org/
 
-    au < HighWirePressH20Plugin ; exists ; 1952-1953 ; American Journal of Clinical Nutrition Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1954 ; American Journal of Clinical Nutrition Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1955 ; American Journal of Clinical Nutrition Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 1956 ; American Journal of Clinical Nutrition Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 1957 ; American Journal of Clinical Nutrition Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 1958 ; American Journal of Clinical Nutrition Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 1959 ; American Journal of Clinical Nutrition Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 1960 ; American Journal of Clinical Nutrition Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; 1961 ; American Journal of Clinical Nutrition Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; exists ; 1962 ; American Journal of Clinical Nutrition Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; exists ; 1962 ; American Journal of Clinical Nutrition Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; exists ; 1963 ; American Journal of Clinical Nutrition Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; exists ; 1963 ; American Journal of Clinical Nutrition Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; exists ; 1964 ; American Journal of Clinical Nutrition Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; exists ; 1964 ; American Journal of Clinical Nutrition Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; exists ; 1965 ; American Journal of Clinical Nutrition Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; exists ; 1965 ; American Journal of Clinical Nutrition Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; exists ; 1966 ; American Journal of Clinical Nutrition Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; exists ; 1966 ; American Journal of Clinical Nutrition Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1952-1953 ; American Journal of Clinical Nutrition Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1954 ; American Journal of Clinical Nutrition Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1955 ; American Journal of Clinical Nutrition Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1956 ; American Journal of Clinical Nutrition Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1957 ; American Journal of Clinical Nutrition Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1958 ; American Journal of Clinical Nutrition Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1959 ; American Journal of Clinical Nutrition Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1960 ; American Journal of Clinical Nutrition Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1961 ; American Journal of Clinical Nutrition Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; American Journal of Clinical Nutrition Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; American Journal of Clinical Nutrition Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; American Journal of Clinical Nutrition Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; American Journal of Clinical Nutrition Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; American Journal of Clinical Nutrition Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; American Journal of Clinical Nutrition Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; American Journal of Clinical Nutrition Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; American Journal of Clinical Nutrition Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; American Journal of Clinical Nutrition Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; American Journal of Clinical Nutrition Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; ready ; 1967 ; American Journal of Clinical Nutrition Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; ready ; 1968 ; American Journal of Clinical Nutrition Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; ready ; 1969 ; American Journal of Clinical Nutrition Volume 22 ; 22 >
@@ -126,6 +126,7 @@
     au < HighWirePressH20Plugin ; ready ; 2010 ; American Journal of Clinical Nutrition Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; released ; 2010 ; American Journal of Clinical Nutrition Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; American Journal of Clinical Nutrition Volume 93 ; 93 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; American Journal of Clinical Nutrition Volume 94 ; 94 >
 
   }
 
@@ -140,7 +141,7 @@
 
     param[base_url] = http://jn.nutrition.org/
 
-    au < HighWirePressH20Plugin ; exists ; 1966 ; The Journal of Nutrition Volume 90 ; 90 >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; The Journal of Nutrition Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; ready ; 1967 ; The Journal of Nutrition Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; ready ; 1967 ; The Journal of Nutrition Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; ready ; 1967 ; The Journal of Nutrition Volume 93 ; 93 >
@@ -192,6 +193,7 @@
     au < HighWirePressH20Plugin ; ready ; 2009 ; The Journal of Nutrition Volume 139 ; 139 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Journal of Nutrition Volume 140 ; 140 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; The Journal of Nutrition Volume 141 ; 141 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; The Journal of Nutrition Volume 142 ; 142 >
 
   }
 
