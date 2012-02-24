@@ -382,7 +382,7 @@
     param[base_url] = http://bmjopen.bmj.com/
 
     au < HighWirePressH20Plugin ; ready ; 2011 ; BMJ Open Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 2012 ; BMJ Open Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; BMJ Open Volume 2 ; 2 >
 
   }
 
@@ -395,8 +395,8 @@
 
     param[base_url] = http://spcare.bmj.com/
 
-    au < HighWirePressH20Plugin ; exists ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 >
 
   }
 
@@ -521,7 +521,7 @@
 
     param[base_url] = http://bjsm.bmj.com/
 
-    au < HighWirePressH20Plugin ; exists ; 1964 ; British Journal of Sports Medicine Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; British Journal of Sports Medicine Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; ready ; 1965 ; British Journal of Sports Medicine Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; ready ; 1967-1968 ; British Journal of Sports Medicine Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; doesNotExist ; 1969 ; British Journal of Sports Medicine Volume 4 ; 4 >
