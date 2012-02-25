@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.8 2012-02-10 23:54:16 akanshab01 Exp $
+ * $Id: MetadataField.java,v 1.9 2012-02-25 00:27:08 akanshab01 Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.extractor;
 
 import java.util.*;
 
+import org.lockss.extractor.MetadataException.ValidationException;
 import org.lockss.extractor.MetadataField.Extractor;
 import org.lockss.extractor.MetadataField.Splitter;
 import org.lockss.util.*;
@@ -70,11 +71,10 @@ public class MetadataField {
 
   public static final String PROTOCOL_ISSN = "issn:";
   public static final String KEY_ISSN = "issn";
-
-  public static final MetadataField FIELD_ISSN = new MetadataField(KEY_ISSN,
-      Cardinality.Single) {
+  
+  private static  Validator issnvalid = new Validator(){
     @Override
-    public String validate(ArticleMetadata am, String val)
+    public String validate(ArticleMetadata am,MetadataField field,String val)
         throws MetadataException.ValidationException {
       // normalize away leading "issn:" before checking validity
       String issn = StringUtils.removeStartIgnoreCase(val, PROTOCOL_ISSN);
@@ -84,13 +84,15 @@ public class MetadataField {
       return issn;
     }
   };
+  
+  public static final MetadataField FIELD_ISSN = new MetadataField(KEY_ISSN,
+      Cardinality.Single,issnvalid);
 
   public static final String PROTOCOL_EISSN = "eissn:";
   public static final String KEY_EISSN = "eissn";
-  public static final MetadataField FIELD_EISSN = new MetadataField(KEY_EISSN,
-      Cardinality.Single) {
+  private static  Validator eissnvalid = new Validator(){
     @Override
-    public String validate(ArticleMetadata am, String val)
+    public String validate(ArticleMetadata am,MetadataField field,String val)
         throws MetadataException.ValidationException {
       // normalize away leading "eissn:" before checking validity
       String issn = StringUtils.removeStartIgnoreCase(val, PROTOCOL_EISSN);
@@ -101,13 +103,14 @@ public class MetadataField {
       return issn;
     }
   };
+  public static final MetadataField FIELD_EISSN = new MetadataField(KEY_EISSN,
+      Cardinality.Single,eissnvalid);
 
   public static final String PROTOCOL_ISBN = "isbn:";
   public static final String KEY_ISBN = "isbn";
-  public static final MetadataField FIELD_ISBN = new MetadataField(KEY_ISBN,
-      Cardinality.Single) {
+  private static  Validator isbnvalid = new Validator(){
     @Override
-    public String validate(ArticleMetadata am, String val)
+    public String validate(ArticleMetadata am,MetadataField field, String val)
         throws MetadataException.ValidationException {
       // normalize away leading "isbn:" before checking validity
       String isbn = StringUtils.removeStartIgnoreCase(val, PROTOCOL_ISBN);
@@ -119,6 +122,8 @@ public class MetadataField {
     }
   };
 
+  public static final MetadataField FIELD_ISBN = new MetadataField(KEY_ISBN,
+      Cardinality.Single,isbnvalid);
   public static final String KEY_PUBLISHER = "publisher";
   public static final MetadataField FIELD_PUBLISHER = new MetadataField(
       KEY_PUBLISHER, Cardinality.Single);
@@ -155,10 +160,24 @@ public class MetadataField {
       KEY_JOURNAL_TITLE, Cardinality.Single);
 
   /* Author is currently a delimited list of one or more authors. */
+  
   public static final String KEY_AUTHOR = "author";
+  private static  Validator authorvalid = new Validator(){
+    public String validate(ArticleMetadata am,MetadataField field,String val)
+        throws MetadataException.ValidationException {
+      // normalize author entries especially with no names .
+      // For example : <meta name="citation_authors" content=", "/>
+        if(!MetadataUtil.isAuthor(val)) {
+          throw new MetadataException.ValidationException("Illegal Author: " 
+        + val);
+        }
+        return val;
+        }
+   };
+   
   public static final MetadataField FIELD_AUTHOR = new MetadataField(
-      KEY_AUTHOR, Cardinality.Multi);
-
+      KEY_AUTHOR, Cardinality.Multi,authorvalid);
+    
   public static final String KEY_ACCESS_URL = "access.url";
   public static final MetadataField FIELD_ACCESS_URL = new MetadataField(
       KEY_ACCESS_URL, Cardinality.Single);
@@ -567,7 +586,7 @@ public class MetadataField {
     }
     return value;
   }
-
+ 
   /**
    * If a splitter is present, apply it to the argument return a list of
    * strings. If no splitter is present, return a singleton list of the argument
@@ -630,7 +649,7 @@ public class MetadataField {
      */
     public String validate(ArticleMetadata am, MetadataField field,String value)
         throws MetadataException.ValidationException;
-  }
+   }
 
   /**
    * Splitter can be associated with a MetadataField to split value strings into
@@ -744,9 +763,7 @@ public class MetadataField {
     public GroupExtractor(String pattern) {
       this(Pattern.compile(pattern));
     }
-   
-   
-    
+         
     /**
      * Creates an instance for the pattern
      * 
@@ -764,10 +781,6 @@ public class MetadataField {
     public GroupExtractor(String pattern,int gnum) {
       this(Pattern.compile(pattern),gnum);
     }
-
-    
-   
-
     /**
      * Method definition for extracting the match from the input.
      * 
