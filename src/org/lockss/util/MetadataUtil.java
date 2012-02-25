@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.14 2012-01-16 17:44:30 pgust Exp $
+ * $Id: MetadataUtil.java,v 1.15 2012-02-25 00:25:23 akanshab01 Exp $
  */
 
 /*
@@ -60,6 +60,10 @@ public class MetadataUtil {
 
   private static Pattern ISSN_PAT =
     Pattern.compile("\\d{4}-\\d{3}[\\d{1}|x{1}|X{1}]");
+  
+  private static Pattern AUTHOR_PAT =
+   // pattern to check whether it has atleast one letter.   
+    Pattern.compile(".*\\p{L}");
 
   /**
    * Check that ISSN is valid. If it is, return the ISSN, otherwise return
@@ -121,7 +125,7 @@ public class MetadataUtil {
       return false;
     }
     
-    // matches form of an ISSN if not doing strict checking
+    // matches form of an ISSN if not doing stricvalidateIssnt checking
     if (!strict) {
       return true;
     }
@@ -131,7 +135,7 @@ public class MetadataUtil {
 
     char issnChars[] = issnStr.toCharArray();
     int checkSum = 0;
-
+    
     // calculate what the check digit should be
     for (int i = 0; i < issnChars.length - 1; i++) {
       checkSum += Integer.parseInt(String.valueOf(issnChars[i])) * (issnChars.length - i);
@@ -812,7 +816,16 @@ public class MetadataUtil {
     log.debug2("proxyResolver returns " + ret);
     return ret;
   }
-
-
-
+  /**
+   * Check that the author field is valid or at least has a letter.
+   * @param keyAuthor the author string
+   * @return true if author has a letter at least, false otherwise
+   */
+  public static boolean isAuthor(String author) {
+    if (author == null) {
+      return false;
+    }
+    Matcher m = AUTHOR_PAT.matcher(author);
+    return (m.matches());
+  }
 }
