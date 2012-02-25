@@ -56,23 +56,23 @@
       >
       param[base_url] = http://aem.asm.org/
   
-      au < HighWirePressH20Plugin ; testing ; 1987 ; Applied and Environmental Microbiology Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; testing ; 1988 ; Applied and Environmental Microbiology Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; ready ; 1987 ; Applied and Environmental Microbiology Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; ready ; 1988 ; Applied and Environmental Microbiology Volume 54 ; 54 >
       au < HighWirePressH20Plugin ; testing ; 1989 ; Applied and Environmental Microbiology Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; testing ; 1990 ; Applied and Environmental Microbiology Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; testing ; 1991 ; Applied and Environmental Microbiology Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; testing ; 1992 ; Applied and Environmental Microbiology Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; testing ; 1993 ; Applied and Environmental Microbiology Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; testing ; 1994 ; Applied and Environmental Microbiology Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; testing ; 1995 ; Applied and Environmental Microbiology Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; testing ; 1996 ; Applied and Environmental Microbiology Volume 62 ; 62 >
-      au < HighWirePressH20Plugin ; testing ; 1997 ; Applied and Environmental Microbiology Volume 63 ; 63 >
-      au < HighWirePressH20Plugin ; testing ; 1998 ; Applied and Environmental Microbiology Volume 64 ; 64 >
-      au < HighWirePressH20Plugin ; testing ; 1999 ; Applied and Environmental Microbiology Volume 65 ; 65 >
-      au < HighWirePressH20Plugin ; testing ; 2000 ; Applied and Environmental Microbiology Volume 66 ; 66 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; Applied and Environmental Microbiology Volume 67 ; 67 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; Applied and Environmental Microbiology Volume 68 ; 68 >
-      au < HighWirePressH20Plugin ; testing ; 2003 ; Applied and Environmental Microbiology Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; ready ; 1990 ; Applied and Environmental Microbiology Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; ready ; 1991 ; Applied and Environmental Microbiology Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; ready ; 1992 ; Applied and Environmental Microbiology Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; ready ; 1993 ; Applied and Environmental Microbiology Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; ready ; 1994 ; Applied and Environmental Microbiology Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; ready ; 1995 ; Applied and Environmental Microbiology Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; ready ; 1996 ; Applied and Environmental Microbiology Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; ready ; 1997 ; Applied and Environmental Microbiology Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; ready ; 1998 ; Applied and Environmental Microbiology Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; ready ; 1999 ; Applied and Environmental Microbiology Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; ready ; 2000 ; Applied and Environmental Microbiology Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; Applied and Environmental Microbiology Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; ready ; 2002 ; Applied and Environmental Microbiology Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; ready ; 2003 ; Applied and Environmental Microbiology Volume 69 ; 69 >
       au < HighWirePressH20Plugin ; testing ; 2004 ; Applied and Environmental Microbiology Volume 70 ; 70 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Applied and Environmental Microbiology Volume 71 ; 71 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Applied and Environmental Microbiology Volume 72 ; 72 >
@@ -94,17 +94,17 @@
       >
       param[base_url] = http://cvi.asm.org/
   
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; Clinical and Vaccine Immunology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Clinical and Vaccine Immunology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Clinical and Vaccine Immunology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1997 ; Clinical and Vaccine Immunology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1998 ; Clinical and Vaccine Immunology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Clinical and Vaccine Immunology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Clinical and Vaccine Immunology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Clinical and Vaccine Immunology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Clinical and Vaccine Immunology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Clinical and Vaccine Immunology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Clinical and Vaccine Immunology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; testing ; 1994 ; Clinical and Vaccine Immunology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 1995 ; Clinical and Vaccine Immunology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 1996 ; Clinical and Vaccine Immunology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 1997 ; Clinical and Vaccine Immunology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1998 ; Clinical and Vaccine Immunology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 1999 ; Clinical and Vaccine Immunology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; Clinical and Vaccine Immunology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Clinical and Vaccine Immunology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Clinical and Vaccine Immunology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Clinical and Vaccine Immunology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Clinical and Vaccine Immunology Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; down ; 2005 ; Clinical and Vaccine Immunology Volume 12 ; 12 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Clinical and Vaccine Immunology Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; down ; 2007 ; Clinical and Vaccine Immunology Volume 14 ; 14 >
