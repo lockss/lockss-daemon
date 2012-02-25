@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.17 2012-02-25 08:10:31 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.18 2012-02-25 08:43:32 pgust Exp $
  */
 
 /*
@@ -600,8 +600,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
 	if (disableMetadataManager) {
 	  assertEquals("http://www.title2.org/", url);
 	} else {
-//PJG	  assertEquals("http://www.title2.org/plugin2/1993/p1", url);
-    assertEquals("http://www.title2.org/", url);
+	  assertEquals("http://www.title2.org/plugin2/1993/p1", url);
 	}
 	
     // from SimulatedPlugin2 with ISBN only
@@ -764,8 +763,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
 	if (disableMetadataManager) {
 	  assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/key1/toc", url);
 	} else {
-//PJG	  assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/p_1", url);
-    assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/key1/toc", url);
+	  assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/p_1", url);
 	}
 
     // from SimulatedPlugin1, journal ISSN, volume, issue, and start page
@@ -803,8 +801,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
 	if (disableMetadataManager) {
    	  assertEquals("http://www.title1.org/plugin1/toc", url);
    	} else {
-//PJG   	  assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/p_1", url);
-      assertEquals("http://www.title1.org/plugin1/toc", url);
+   	  assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/p_1", url);
    	}
   }
   /**
