@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.25 2012-01-16 18:01:20 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.26 2012-02-25 01:51:22 pgust Exp $
  */
 
 /*
@@ -252,6 +252,88 @@ public class OpenUrlResolver {
   }
   
   /**
+   * Returns the TdbTitle corresponding to the specified OpenUrl params.
+   * 
+   * @param params the OpenURL parameters
+   * @return a TdbTitle or <code>null</code> if not found
+   */
+  public TdbTitle resolveTdbTitleForOpenUrl(Map<String,String> params) {
+    Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
+    if (tdb != null) {
+      // get TdbTitle for ISBN
+      String isbn = getRftParam(params, "isbn");
+      if (isbn != null) {
+        Collection<TdbAu> tdbAus = tdb.getTdbAusByIsbn(isbn);
+        return tdbAus.isEmpty() ? null : tdbAus.iterator().next().getTdbTitle();
+      }
+      
+      // get TdbTitle for ISSN
+      String issn = getRftParam(params, "issn");
+      if (issn != null) {
+        return tdb.getTdbTitleByIssn(issn);
+      }
+      
+      
+      // get TdbTitle for BICI
+      String bici = getRftParam(params, "bici");
+      if (bici != null) {
+        int i = bici.indexOf('(');
+        if (i > 0) {
+          isbn = bici.substring(0,i);
+          Collection<TdbAu> tdbAus = tdb.getTdbAusByIsbn(isbn);
+          return tdbAus.isEmpty() ? null : tdbAus.iterator().next().getTdbTitle();
+        }
+      }
+
+      // get TdbTitle for SICI
+      String sici = getRftParam(params, "sici");
+      if (sici != null) {
+        int i = sici.indexOf('(');
+        if (i > 0) {
+          issn = sici.substring(0,i);
+          return tdb.getTdbTitleByIssn(issn);
+        }
+      }
+
+      // get TdbTitle for journal pubisher and title
+      String publisher = getRftParam(params, "publisher");
+      String title = getRftParam(params, "jtitle");
+      if (title == null) {
+        title = getRftParam(params, "title");
+      }
+      if (title != null) {
+        Collection<TdbTitle> tdbTitles;
+        if (publisher != null) {
+          TdbPublisher tdbPublisher = tdb.getTdbPublisher(publisher);
+          tdbTitles = (tdbPublisher == null) 
+              ? Collections.<TdbTitle>emptyList() 
+              :tdbPublisher.getTdbTitlesLikeName(title);
+        } else {
+          tdbTitles = tdb.getTdbTitlesByName(title);
+        }
+        return tdbTitles.isEmpty() ? null : tdbTitles.iterator().next();
+      }
+      
+      // get TdbTitle for book pubisher and title
+      String btitle = getRftParam(params, "btitle");
+      if (btitle != null) {
+        Collection<TdbAu> tdbAus;
+        if (publisher != null) {
+          TdbPublisher tdbPublisher = tdb.getTdbPublisher(publisher);
+          tdbAus = (tdbPublisher == null) 
+              ? Collections.<TdbAu>emptyList() 
+              :tdbPublisher.getTdbAusLikeName(title);
+        } else {
+          tdbAus = tdb.getTdbAusByName(title);
+        }
+        return tdbAus.isEmpty() ? null : tdbAus.iterator().next().getTdbTitle();
+      }
+    }
+
+    return null;
+  }
+
+  /**
    * Resolve an OpenURL from a set of parameter keys and values.
    * 
    * @param params the OpenURL parameters
@@ -336,6 +418,39 @@ public class OpenUrlResolver {
       log.debug3("Failed to resolve from ISSN: " + anyIssn);
     }
     
+    
+    String bici = params.get("rft.bici");
+    if (bici != null) {
+      // get cached URL from book book ICI code
+      String url = null;
+      try {
+        url = resolveFromBici(bici);
+        if (url != null) {
+          log.debug3("Located url " + url + "for bici " + bici);
+          return url;
+        }
+      } catch (ParseException ex) {
+        log.warning(ex.getMessage());
+      }
+      log.debug3("Failed to resolve from BICI: " + bici);
+    }
+
+    String sici = params.get("rft.sici");
+    // get cached URL from serial ICI code
+    if (sici != null) {
+      String url = null;
+      try {
+        url = resolveFromSici(sici);
+        if (url != null) {
+          log.debug3("Located url " + url + "for sici " + sici);
+          return url;
+        }
+      } catch (ParseException ex) {
+        log.warning(ex.getMessage());
+      }
+      log.debug3("Failed to resolve from SICI: " + sici);
+    }
+
     // process a journal or book based on its title
     String title = getRftParam(params, "title");
     boolean isbook = false;
@@ -357,6 +472,7 @@ public class OpenUrlResolver {
         TdbPublisher tdbPub = (pub == null) ? null : tdb.getTdbPublisher(pub);
         
         if (isbook) {
+          // search as though it is a book title
           Collection<TdbAu> tdbAus;
           if (tdbPub != null) {
             tdbAus = tdbPub.getTdbAusLikeName(title);
@@ -366,7 +482,7 @@ public class OpenUrlResolver {
           
           Collection<TdbAu> noTdbAus = new ArrayList<TdbAu>();
           for (TdbAu tdbAu : tdbAus) {
-            // search for journal through its ISSN
+            // search for journal through its ISBN
             String id = tdbAu.getIsbn();
             if (id != null) {
               // try resolving from ISBN
@@ -389,8 +505,9 @@ public class OpenUrlResolver {
             }
           }
         
+          // search matching titles without ISBNs
           String url = 
-            resolveBookFromTdbAus(noTdbAus,date,volume,edition, spage);
+            resolveBookFromTdbAus(noTdbAus, date, volume, edition, spage);
           if (url != null) {
             if (log.isDebug3()) {
               log.debug3("Located url " + url + ", title \"" + title + "\"");
@@ -398,6 +515,7 @@ public class OpenUrlResolver {
             return url;
           }       
         } else {
+          // search as though it is a journal title
           Collection<TdbTitle> tdbTitles;
           if (tdbPub != null) {
             tdbTitles = tdbPub.getTdbTitlesLikeName(title);
@@ -430,6 +548,7 @@ public class OpenUrlResolver {
             }
           }
 
+          // search matching titles without ISSNs
           for (TdbTitle noTdbTitle : noTdbTitles) {
             Collection<TdbAu> tdbAus =  noTdbTitle.getTdbAus();
             String url = 
@@ -444,38 +563,6 @@ public class OpenUrlResolver {
         }
       }
       log.debug3("Failed to resolve from title: \"" + title + "\"");
-    }
-    
-    String bici = params.get("rft.bici");
-    if (bici != null) {
-      // get cached URL from book book ICI code
-      String url = null;
-      try {
-        url = resolveFromBici(bici);
-        if (url != null) {
-          log.debug3("Located url " + url + "for bici " + bici);
-          return url;
-        }
-      } catch (ParseException ex) {
-        log.warning(ex.getMessage());
-      }
-      log.debug3("Failed to resolve from BICI: " + bici);
-    }
-
-    String sici = params.get("rft.sici");
-    // get cached URL from serial ICI code
-    if (sici != null) {
-      String url = null;
-      try {
-        url = resolveFromSici(sici);
-        if (url != null) {
-          log.debug3("Located url " + url + "for sici " + sici);
-          return url;
-        }
-      } catch (ParseException ex) {
-        log.warning(ex.getMessage());
-      }
-      log.debug3("Failed to resolve from SICI: " + sici);
     }
 
     return null;
@@ -1271,6 +1358,14 @@ public class OpenUrlResolver {
       paramMap.setMapElement("volume_str", volumeName);
       paramMap.setMapElement("volume_name", volumeName);
       paramMap.setMapElement("year", year);
+      String issn = tdbau.getIssn();
+      if (issn != null) {
+        paramMap.setMapElement("issn", issn);
+      }
+      String eissn = tdbau.getEissn();
+      if (eissn != null) {
+        paramMap.setMapElement("eissn", eissn);
+      }
       if (!StringUtil.isNullString(year)) {
         try {
           paramMap.setMapElement("au_short_year",
@@ -1386,7 +1481,9 @@ public class OpenUrlResolver {
         continue;
       }
       
-      log.debug3("Trying plugin key: " + pluginKey);
+      log.debug3(  "Trying plugin key: " + pluginKey 
+                 + " for plugin: " + plugin.getPluginId()
+                 + " with " + printfStrings.size() + " printf strings");
 
       // set up converter for use with feature URL printf strings
       UrlListConverter converter = 
@@ -1406,7 +1503,7 @@ public class OpenUrlResolver {
         }
             
         // validate URL: either it's cached, or it can be reached
-        if (url != null) {
+        if (!StringUtil.isNullString(url)) {
           log.debug3("Resolving from url: " + url);
           url = resolveFromUrl(url);
           if (url != null) {
