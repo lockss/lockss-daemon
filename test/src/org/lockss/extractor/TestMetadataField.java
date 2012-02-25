@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataField.java,v 1.9 2012-02-11 00:42:32 akanshab01 Exp $
+ * $Id: TestMetadataField.java,v 1.10 2012-02-25 00:23:30 akanshab01 Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.extractor;
 import org.lockss.extractor.MetadataField.Cardinality;
 import org.lockss.test.*;
 import org.lockss.util.*;
+
 import static org.lockss.extractor.MetadataField.*;
 
 public class TestMetadataField extends LockssTestCase {
@@ -154,6 +155,9 @@ public class TestMetadataField extends LockssTestCase {
     }
   }
 
+ 
+  
+  
   public void testIssn() throws MetadataException.ValidationException {
     MetadataField f1 = FIELD_ISSN;
     assertEquals("1234-5679", f1.validate(am, "1234-5679"));
@@ -172,6 +176,7 @@ public class TestMetadataField extends LockssTestCase {
   }
 
   public void testEissn() throws MetadataException.ValidationException {
+  
     MetadataField f1 = FIELD_EISSN;
     assertEquals("1234-5679", f1.validate(am, "1234-5679"));
     assertEquals("1234-5679", f1.validate(am, "eissn:1234-5679"));
@@ -271,7 +276,8 @@ public class TestMetadataField extends LockssTestCase {
     assertSame(FIELD_VOLUME, MetadataField.findField(KEY_VOLUME));
     assertNull(MetadataField.findField("nosuchfield"));
   }
-
+  
+  
   public void testExtractor()throws MetadataException.ValidationException  {
    
     MetadataField f1 = FIELD_START_PAGE;
@@ -295,16 +301,11 @@ public class TestMetadataField extends LockssTestCase {
         MetadataField.groupExtractor(testpagepattern3,1));
     MetadataField testvalf3 = new MetadataField(MetadataField.FIELD_START_PAGE,
         MetadataField.groupExtractor(testpagepattern4,1));
-    
-   
-    MetadataField testvalf4 = new MetadataField(MetadataField.FIELD_START_PAGE,
+    MetadataField testvalf4 = new MetadataField(MetadataField.FIELD_END_PAGE,
         MetadataField.groupExtractor(testpagepattern1,2));
-   
-    MetadataField testvalf5 = new MetadataField(MetadataField.FIELD_START_PAGE,
+    MetadataField testvalf5 = new MetadataField(MetadataField.FIELD_END_PAGE,
         MetadataField.groupExtractor(testpagepattern3,2));
    
-    
-    
     //test for start page pattern 
     assertEquals("23", testvalf1.extract(articleMetadata,"p23"));
     assertEquals("23", testvalf0.extract(articleMetadata, "pp. 23-45"));
@@ -312,12 +313,30 @@ public class TestMetadataField extends LockssTestCase {
     assertEquals("23", testvalf3.extract(articleMetadata, "P23"));
     
    //test for end page pattern
-    
     assertEquals("45", testvalf4.extract(articleMetadata, "pp. 23-45"));
     assertEquals("45", testvalf5.extract(articleMetadata, "23-45"));
-   
-    
- 
-  }
 
+  }
+  public void testAuthor()throws MetadataException.ValidationException {
+    MetadataField f1 = FIELD_AUTHOR;
+    try {
+      f1.validate(am, ", ");
+      fail("Should throw ValidationException");
+    } catch (MetadataException.ValidationException e) {
+    }
+    try {
+      f1.validate(am, ", , : /");
+      fail("Should throw ValidationException");
+    } catch (MetadataException.ValidationException e) {
+    }
+    try {
+      f1.validate(am, ",");
+      fail("Should throw ValidationException");
+    } catch (MetadataException.ValidationException e) {
+    }
+ 
+    assertEquals("Herron, David;Haglund, Lotta", f1.validate(am, "Herron, David;Haglund, Lotta"));
+      
+    }
+   
 }
