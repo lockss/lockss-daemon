@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.15 2012-02-25 00:25:23 akanshab01 Exp $
+ * $Id: MetadataUtil.java,v 1.16 2012-02-25 08:34:05 pgust Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class MetadataUtil {
   
   private static Pattern AUTHOR_PAT =
    // pattern to check whether it has atleast one letter.   
-    Pattern.compile(".*\\p{L}");
+    Pattern.compile(".*\\p{L}.*");
 
   /**
    * Check that ISSN is valid. If it is, return the ISSN, otherwise return
