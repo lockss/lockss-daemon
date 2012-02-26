@@ -1,5 +1,5 @@
 /*
- * $Id: TestRunKbartReport.java,v 1.1 2012-01-12 12:47:23 easyonthemayo Exp $
+ * $Id: TestRunKbartReport.java,v 1.2 2012-02-26 08:20:25 pgust Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.exporter.kbart.KbartTitle;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.StringInputStream;
 import org.lockss.exporter.kbart.KbartExportFilter.PredefinedFieldOrdering;
+import org.lockss.util.MetadataUtil;
 import org.lockss.util.StringUtil;
 import static org.lockss.devtools.RunKbartReport.*;
 
@@ -192,11 +193,21 @@ public class TestRunKbartReport extends LockssTestCase {
     // The BibItem will return null for empty fields.
     assertEquals(expectedProps.get(0), item.getPublisherName());
     assertEquals(expectedProps.get(1), item.getName());
-    assertEquals(expectedProps.get(2), item.getPrintIssn());
-    assertEquals(expectedProps.get(3), item.getEissn());
+    assertEquals(asIssn(expectedProps.get(2)), item.getPrintIssn());
+    assertEquals(asIssn(expectedProps.get(3)), item.getEissn());
     assertEquals(expectedProps.get(4), item.getStartVolume());
     // Return the record number that we have reached
     return recordNum;
+  }
+  
+  /**
+   * If the input string is a valid ISSN, returns the string,
+   * othewise returns null.
+   * @param s the string
+   * @return s if it is a valid ISSN or null otherwise
+   */
+  private String asIssn(String s) {
+    return MetadataUtil.isIssn(s) ? s : null;
   }
 
   /**
@@ -213,7 +224,7 @@ public class TestRunKbartReport extends LockssTestCase {
       String prop = StringUtils.trim(props.get(i));
       Matcher m = ptn.matcher(prop);
       if (m.matches()) prop = m.group(1);
-      props.set(i,  StringUtil.isNullString(prop) ? null : prop);
+      props.set(i,  prop);
     }
     return props;
   }
