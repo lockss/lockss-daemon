@@ -80,6 +80,7 @@
     au < released ; crawling ; 2009 ; African Journal of International and Comparative Law Volume 17 ; 17 >
     au < released ; crawling ; 2010 ; African Journal of International and Comparative Law Volume 18 ; 18 >
     au < released ; crawling ; 2011 ; African Journal of International and Comparative Law Volume 19 ; 19 >
+    au < manifest ; exists ; 2012 ; African Journal of International and Comparative Law Volume 20 ; 20 >
 
   }
 
@@ -104,7 +105,7 @@
     au < released ; crawling ; 2008 ; Architectural Heritage Volume XIX ; XIX >
     au < released ; crawling ; 2009 ; Architectural Heritage Volume XX ; XX >
     au < released ; crawling ; 2010 ; Architectural Heritage Volume 21 ; 21 >
-    au < doesNotExist ; doesNotExist ; 0 ; Architectural Heritage Volume 22 ; 22 >
+    au < expected ; exists ; 2011 ; Architectural Heritage Volume 22 ; 22 >
 
   }
 
@@ -128,6 +129,7 @@
     au < released ; crawling ; 2009 ; Archives of Natural History Volume 36 ; 36 >
     au < released ; crawling ; 2010 ; Archives of Natural History Volume 37 ; 37 >
     au < released ; crawling ; 2011 ; Archives of Natural History Volume 38 ; 38 >
+    au < expected ; exists ; 2012 ; Archives of Natural History Volume 39 ; 39 >
 
   }
 
@@ -147,6 +149,7 @@
     au < released ; crawling ; 2009 ; Ben Jonson Journal Volume 16 ; 16 >
     au < released ; crawling ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
     au < released ; crawling ; 2011 ; Ben Jonson Journal Volume 18 ; 18 >
+    au < expected ; exists ; 2012 ; Ben Jonson Journal Volume 19 ; 19 >
 
   }
 
@@ -165,6 +168,7 @@
     au < released ; crawling ; 2009-2010 ; Britain and the World Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; Britain and the World Volume 3 ; 3 >
     au < released ; crawling ; 2011 ; Britain and the World Volume 4 ; 4 >
+    au < expected ; exists ; 2012 ; Britain and the World Volume 5 ; 5 >
 
   }
 
@@ -187,6 +191,7 @@
     au < released ; crawling ; 2009 ; Comparative Critical Studies Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Comparative Critical Studies Volume 7 ; 7 >
     au < released ; crawling ; 2011 ; Comparative Critical Studies Volume 8 ; 8 >
+    au < manifest ; exists ; 20112 ; Comparative Critical Studies Volume 9 ; 9 >
 
   }
 
@@ -207,6 +212,7 @@
     au < released ; crawling ; 2009 ; Corpora Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Corpora Volume 5 ; 5 >
     au < released ; crawling ; 2011 ; Corpora Volume 6 ; 6 >
+    au < expected ; exists ; 2012 ; Corpora Volume 7 ; 7 >
 
   }
 
@@ -233,6 +239,7 @@
     au < released ; crawling ; 2009 ; Dance Research Volume 27 ; 27 >
     au < released ; crawling ; 2010 ; Dance Research Volume 28 ; 28 >
     au < released ; crawling ; 2011 ; Dance Research Volume 29 ; 29 >
+    au < expected ; exists ; 2012 ; Dance Research Volume 30 ; 30 >
 
   }
 
@@ -252,6 +259,7 @@
     au < released ; crawling ; 2009 ; Deleuze Studies Volume 3 ; 3 >
     au < released ; crawling ; 2010 ; Deleuze Studies Volume 4 ; 4 >
     au < released ; crawling ; 2011 ; Deleuze Studies Volume 5 ; 5 >
+    au < expected ; exists ; 2012 ; Deleuze Studies Volume 6 ; 6 >
 
   }
 
@@ -270,6 +278,7 @@
     au < released ; crawling ; 2009 ; Derrida Today Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; Derrida Today Volume 3 ; 3 >
     au < released ; crawling ; 2011 ; Derrida Today Volume 4 ; 4 >
+    au < expected ; exists ; 2012 ; Derrida Today Volume 5 ; 5 >
 
   }
 
@@ -292,6 +301,7 @@
     au < released ; crawling ; 2009 ; Edinburgh Law Review Volume 13 ; 13 >
     au < released ; crawling ; 2010 ; Edinburgh Law Review Volume 14 ; 14 >
     au < released ; crawling ; 2011 ; Edinburgh Law Review Volume 15 ; 15 >
+    au < manifest ; exists ; 2012 ; Edinburgh Law Review Volume 16 ; 16 >
 
   }
 
@@ -314,6 +324,7 @@
     au < released ; crawling ; 2009 ; Episteme Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Episteme Volume 7 ; 7 >
     au < released ; crawling ; 2011 ; Episteme Volume 8 ; 8 >
+    au < expected ; exists ; 2012 ; Episteme Volume 9 ; 9 >
 
   }
 
@@ -336,6 +347,7 @@
     au < released ; crawling ; 2009 ; Holy Land Studies Volume 8 ; 8 >
     au < released ; crawling ; 2010 ; Holy Land Studies Volume 9 ; 9 >
     au < released ; crawling ; 2011 ; Holy Land Studies Volume 10 ; 10 >
+    au < expected ; exists ; 2012 ; Holy Land Studies Volume 11 ; 11 >
 
   }
 
@@ -358,6 +370,7 @@
     au < released ; crawling ; 2009 ; The Innes Review Volume 60 ; 60 >
     au < released ; crawling ; 2010 ; The Innes Review Volume 61 ; 61 >
     au < released ; crawling ; 2011 ; The Innes Review Volume 62 ; 62 >
+    au < expected ; exists ; 2012 ; The Innes Review Volume 63 ; 63 >
 
   }
 
@@ -371,21 +384,24 @@
      >
 
     param[journal_id] = ijhac
+    comment[changed_name] = formerly History and Computing until 2002
+    comment[0] = old journal id volumes consolidated with new journal id volumes
 
-    au < released ; crawling ; 1994 ; International Journal of Humanities and Arts Computing Volume 6 (1994) ; 6 >
-    au < released ; crawling ; 1995 ; International Journal of Humanities and Arts Computing Volume 7 (1995) ; 7 >
-    au < released ; crawling ; 1996 ; International Journal of Humanities and Arts Computing Volume 8 (1996) ; 8 >
-    au < released ; crawling ; 1997 ; International Journal of Humanities and Arts Computing Volume 9 (1997) ; 9 >
-    au < released ; crawling ; 1998 ; International Journal of Humanities and Arts Computing Volume 10 (1998) ; 10 >
-    au < released ; crawling ; 1999 ; International Journal of Humanities and Arts Computing Volume 11 (1999) ; 11 >
-    au < released ; crawling ; 2000 ; International Journal of Humanities and Arts Computing Volume 12 (2000) ; 12 >
-    au < released ; crawling ; 2001 ; International Journal of Humanities and Arts Computing Volume 13 (2001) ; 13 >
-    au < released ; crawling ; 2002 ; International Journal of Humanities and Arts Computing Volume 14 (2002) ; 14 >
+    au < released ; crawling ; 1994 ; History and Computing Volume 6 (1994) ; 6 >
+    au < released ; crawling ; 1995 ; History and Computing Volume 7 (1995) ; 7 >
+    au < released ; crawling ; 1996 ; History and Computing Volume 8 (1996) ; 8 >
+    au < released ; crawling ; 1997 ; History and Computing Volume 9 (1997) ; 9 >
+    au < released ; crawling ; 1998 ; History and Computing Volume 10 (1998) ; 10 >
+    au < released ; crawling ; 1999 ; History and Computing Volume 11 (1999) ; 11 >
+    au < released ; crawling ; 2000 ; History and Computing Volume 12 (2000) ; 12 >
+    au < released ; crawling ; 2001 ; History and Computing Volume 13 (2001) ; 13 >
+    au < released ; crawling ; 2002 ; History and Computing Volume 14 (2002) ; 14 >
     au < released ; crawling ; 2007 ; International Journal of Humanities and Arts Computing Volume 1 (2007) ; 1 >
     au < released ; crawling ; 2008 ; International Journal of Humanities and Arts Computing Volume 2 (2008) ; 2 >
     au < released ; crawling ; 2009 ; International Journal of Humanities and Arts Computing Volume 3 (2009) ; 3 >
     au < released ; crawling ; 2010 ; International Journal of Humanities and Arts Computing Volume 4 (2010) ; 4 >
     au < released ; crawling ; 2011 ; International Journal of Humanities and Arts Computing Volume 5 (2011) ; 5 >
+    au < manifest ; exists ; 2012 ; International Journal of Humanities and Arts Computing Volume 6 (2012) ; 6 >
 
   }
 
@@ -404,6 +420,7 @@
     au < released ; crawling ; 2009 ; International Research in Children's Literature Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; International Research in Children's Literature Volume 3 ; 3 >
     au < released ; crawling ; 2011 ; International Research in Children's Literature Volume 4 ; 4 >
+    au < expected ; exists ; 2012 ; International Research in Children's Literature Volume 5 ; 5 >
 
   }
 
@@ -441,6 +458,7 @@
     au < released ; crawling ; 2009 ; Journal of Beckett Studies Volume 18 ; 18 >
     au < released ; crawling ; 2010 ; Journal of Beckett Studies Volume 19 ; 19 >
     au < released ; crawling ; 2011 ; Journal of Beckett Studies Volume 20 ; 20 >
+    au < expected ; exists ; 2012 ; Journal of Beckett Studies Volume 21 ; 21 >
 
   }
 
@@ -463,6 +481,7 @@
     au < released ; crawling ; 2009 ; Journal of British Cinema and Television Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Journal of British Cinema and Television Volume 7 ; 7 >
     au < released ; crawling ; 2011 ; Journal of British Cinema and Television Volume 8 ; 8 >
+    au < manifest ; exists ; 2012 ; Journal of British Cinema and Television Volume 9 ; 9 >
 
   }
 
@@ -484,6 +503,7 @@
     au < released ; crawling ; 2009 ; Journal of International Political Theory Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; Journal of International Political Theory Volume 6 ; 6 >
     au < released ; crawling ; 2011 ; Journal of International Political Theory Volume 7 ; 7 >
+    au < expected ; exists ; 2012 ; Journal of International Political Theory Volume 8 ; 8 >
 
   }
 
@@ -505,6 +525,7 @@
     au < released ; crawling ; 2009 ; Journal of Qur'anic Studies Volume 11 ; 11 >
     au < released ; crawling ; 2010 ; Journal of Qur'anic Studies Volume 12 ; 12 >
     au < released ; crawling ; 2011 ; Journal of Qur'anic Studies Volume 13 ; 13 >
+    au < expected ; exists ; 2012 ; Journal of Qur'anic Studies Volume 14 ; 14 >
 
   }
 
@@ -530,6 +551,7 @@
     au < released ; crawling ; 2009 ; Journal of Scottish Historical Studies Volume 29 ; 29 >
     au < released ; crawling ; 2010 ; Journal of Scottish Historical Studies Volume 30 ; 30 >
     au < released ; crawling ; 2011 ; Journal of Scottish Historical Studies Volume 31 ; 31 >
+    au < expected ; exists ; 2012 ; Journal of Scottish Historical Studies Volume 32 ; 32 >
 
   }
 
@@ -553,6 +575,7 @@
     au < released ; crawling ; 2009 ; Journal of Scottish Philosophy Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; Journal of Scottish Philosophy Volume 8 ; 8 >
     au < released ; crawling ; 2011 ; Journal of Scottish Philosophy Volume 9 ; 9 >
+    au < expected ; exists ; 2012 ; Journal of Scottish Philosophy Volume 10 ; 10 >
 
   }
 
@@ -584,6 +607,7 @@
     au < released ; crawling ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
     au < released ; crawling ; 2010 ; Katherine Mansfield Studies Volume 2 ; 2 >
     au < released ; crawling ; 2011 ; Katherine Mansfield Studies Volume 3 ; 3 >
+    au < expected ; exists ; 2012 ; Katherine Mansfield Studies Volume 4 ; 4 >
 
   }
 
@@ -604,6 +628,7 @@
     au < released ; crawling ; 2009 ; Modernist Cultures Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Modernist Cultures Volume 5 ; 5 >
     au < released ; crawling ; 2011 ; Modernist Cultures Volume 6 ; 6 >
+    au < expected ; exists ; 2012 ; Modernist Cultures Volume 7 ; 7 >
 
 
   }
@@ -620,6 +645,7 @@
     param[journal_id] = sound
 
     au < released ; crawling ; 2011 ; The New Soundtrack Volume 1 ; 1 >
+    au < manifest ; exists ; 2012 ; The New Soundtrack Volume 2 ; 2 >
 
 
   }
@@ -637,6 +663,7 @@
 
     au < released ; crawling ; 2010 ; Northern Scotland Volume 1 ; 1 >
     au < released ; crawling ; 2011 ; Northern Scotland Volume 2 ; 2 >
+    au < expected ; exists ; 2012 ; Northern Scotland Volume 3 ; 3 >
 
 
   }
@@ -676,6 +703,7 @@
     au < released ; crawling ; 2009 ; Oxford Literary Review Volume 31 ; 31 >
     au < released ; crawling ; 2010 ; Oxford Literary Review Volume 32 ; 32 >
     au < released ; crawling ; 2011 ; Oxford Literary Review Volume 33 ; 33 >
+    au < expected ; exists ; 2012 ; Oxford Literary Review Volume 34 ; 34 >
 
   }
 
@@ -712,6 +740,7 @@
     au < released ; crawling ; 2009 ; Paragraph Volume 32 ; 32 >
     au < released ; crawling ; 2010 ; Paragraph Volume 33 ; 33 >
     au < released ; crawling ; 2011 ; Paragraph Volume 34 ; 34 >
+    au < expected ; exists ; 2012 ; Paragraph Volume 35 ; 35 >
 
   }
 
@@ -739,6 +768,7 @@
     au < released ; crawling ; 2009 ; Psychoanalysis and History Volume 11 ; 11 >
     au < released ; crawling ; 2010 ; Psychoanalysis and History Volume 12 ; 12 >
     au < released ; crawling ; 2011 ; Psychoanalysis and History Volume 13 ; 13 >
+    au < manifest ; exists ; 2012 ; Psychoanalysis and History Volume 14 ; 14 >
 
   }
 
@@ -764,6 +794,7 @@
     au < released ; crawling ; 2009 ; Romanticism Volume 15 ; 15 >
     au < released ; crawling ; 2010 ; Romanticism Volume 16 ; 16 >
     au < released ; crawling ; 2011 ; Romanticism Volume 17 ; 17 >
+    au < expected ; exists ; 2012 ; Romanticism Volume 18 ; 18 >
 
   }
 
@@ -809,6 +840,7 @@
     au < released ; crawling ; 2007 ; Scottish Archaeological Journal Volume 29 ; 29 >
     au < released ; crawling ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
     au < released ; crawling ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
+    au < expected ; exists ; 2010 ; Scottish Archaeological Journal Volume 32 ; 32 >
 
   }
 
@@ -835,6 +867,7 @@
     au < released ; crawling ; 2009 ; Scottish Historical Review Volume 88 ; 88 >
     au < released ; crawling ; 2010 ; Scottish Historical Review Volume 89 ; 89 >
     au < released ; crawling ; 2011 ; Scottish Historical Review Volume 90 ; 90 >
+    au < expected ; exists ; 2012 ; Scottish Historical Review Volume 91 ; 91 >
 
   }
 
@@ -860,6 +893,7 @@
     au < released ; crawling ; 2009 ; Studies in World Christianity Volume 15 ; 15 >
     au < released ; crawling ; 2010 ; Studies in World Christianity Volume 16 ; 16 >
     au < released ; crawling ; 2011 ; Studies in World Christianity Volume 17 ; 17 >
+    au < expected ; exists ; 2012 ; Studies in World Christianity Volume 18 ; 18 >
 
   }
 
@@ -884,6 +918,7 @@
     au < released ; crawling ; 2009 ; Translation and Literature Volume 18 ; 18 >
     au < released ; crawling ; 2010 ; Translation and Literature Volume 19 ; 19 >
     au < released ; crawling ; 2011 ; Translation and Literature Volume 20 ; 20 >
+    au < expected ; exists ; 2012 ; Translation and Literature Volume 21 ; 21 >
 
   }
 
@@ -902,6 +937,7 @@
     au < released ; crawling ; 2009 ; Word Structure Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; Word Structure Volume 3 ; 3 >
     au < released ; crawling ; 2011 ; Word Structure Volume 4 ; 4 >
+    au < expected ; exists ; 2012 ; Word Structure Volume 5 ; 5 >
 
   }
 
