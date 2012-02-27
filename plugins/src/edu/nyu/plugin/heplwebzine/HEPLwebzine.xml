@@ -4,16 +4,20 @@
     <string>edu.nyu.plugin.heplwebzine.HEPLwebzine</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;%s %d&quot;, base_url, issue_no</string>
+    <string>&quot;High Energy Physics Libraries Webzine Plugin, Base URL %s, Issue %d&quot;, base_url, issue_no</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>HEPL webzine</string>
+    <string>High Energy Physics Libraries Webzine Plugin</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -22,18 +26,16 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sHEPLW/lockss/issue%d-manifest.html&quot;, base_url, issue_no</string>
-      <string>1,&quot;^%sHEPLW/%d/.*&quot;, base_url, issue_no</string>
-      <string>1,&quot;%sHEPLW/[^/]+\.html&quot;, base_url</string>
-      <string>1,&quot;%sHEPLW/template/&quot;, base_url</string>
-      <string>1,&quot;%sOATaskForce_public.pdf&quot;, base_url</string>
-      <string>1,&quot;.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE][gG]|[jJ][pP][gG]|[jJ][sS]|[pP][nN][gG])$&quot;</string>
+      <string>1,&quot;^%s(HEPLW|library/Webzine)/lockss/issue%d-manifest\.html$&quot;, base_url, issue_no</string>
+      <string>1,&quot;^%s(HEPLW|library/Webzine)/%d/&quot;, base_url, issue_no</string>
+      <string>1,&quot;^%sOATaskForce_public.pdf&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sHEPLW/lockss/issue%d-manifest.html&quot;, base_url, issue_no</string>
+    <string>&quot;%slibrary/Webzine/lockss/issue%d-manifest.html&quot;, base_url, issue_no</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
