@@ -17,7 +17,7 @@
     param[base_url] = http://www.unomaha.edu/jrf/
     implicit < status ; year ; name ; param[volume] >
     comment[0] = see RU3573
-    comment[0] = volume 14 manifest links to volume 13 content, 2/27 sc
+    comment[1] = volume 14 manifest links to volume 13 content, 2/27 sc
     
     au < manifest ; 1997 ; The Journal of Religion and Film Volume 1 ; 1 >
     au < manifest ; 1998 ; The Journal of Religion and Film Volume 2 ; 2 >
