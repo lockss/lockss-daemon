@@ -462,6 +462,8 @@
         au < manifest ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 >
         au < manifest ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 >
         au < manifest ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 >
+        au < exists ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 >
+        au < expected ; 2012 ; Administrative Science Quarterly Volume 57 ; 57 >
 
       }
 
@@ -25634,11 +25636,57 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
+        au < HighWirePressH20Plugin ; exists ; 1962 ; Journal of Travel Research Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; 1963 ; Journal of Travel Research Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; 1964 ; Journal of Travel Research Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; 1965 ; Journal of Travel Research Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; 1966 ; Journal of Travel Research Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; exists ; 1967 ; Journal of Travel Research Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; exists ; 1968 ; Journal of Travel Research Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; exists ; 1969 ; Journal of Travel Research Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; exists ; 1970 ; Journal of Travel Research Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; exists ; 1971 ; Journal of Travel Research Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; 1972 ; Journal of Travel Research Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; 1973 ; Journal of Travel Research Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; 1974 ; Journal of Travel Research Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; 1975 ; Journal of Travel Research Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; 1976 ; Journal of Travel Research Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; 1977 ; Journal of Travel Research Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; 1978 ; Journal of Travel Research Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; 1979 ; Journal of Travel Research Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 1980 ; Journal of Travel Research Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; 1981 ; Journal of Travel Research Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; exists ; 1982 ; Journal of Travel Research Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; exists ; 1983 ; Journal of Travel Research Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; exists ; 1984 ; Journal of Travel Research Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; exists ; 1985 ; Journal of Travel Research Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; exists ; 1986 ; Journal of Travel Research Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; exists ; 1987 ; Journal of Travel Research Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; exists ; 1988 ; Journal of Travel Research Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; exists ; 1989 ; Journal of Travel Research Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; exists ; 1990 ; Journal of Travel Research Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; exists ; 1991 ; Journal of Travel Research Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; exists ; 1992 ; Journal of Travel Research Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; exists ; 1993 ; Journal of Travel Research Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; exists ; 1994 ; Journal of Travel Research Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; exists ; 1995 ; Journal of Travel Research Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of Travel Research Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of Travel Research Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Travel Research Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of Travel Research Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Travel Research Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Travel Research Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Travel Research Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Travel Research Volume 42 ; 42 >
         au < HighWireStrVolPlugin ; down ; 2004 ; Journal of Travel Research Volume 43 ; 43 >
         au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Travel Research Volume 44 ; 44 >
         au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Travel Research Volume 45 ; 45 >
         au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Travel Research Volume 46 ; 46 >
         au < HighWirePressPlugin ; down ; 2008 ; Journal of Travel Research Volume 47 ; 47 >
+        au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Travel Research Volume 48 ; 48 >
+        au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Travel Research Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Travel Research Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Travel Research Volume 51 ; 51 >
 
       }
 
