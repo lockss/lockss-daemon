@@ -383,7 +383,9 @@
       issnl = 1753-8548 
      >
 
-    param[journal_id] = ijhac
+    {
+    
+    param[journal_id] = hac
     comment[changed_name] = formerly History and Computing until 2002
     comment[0] = old journal id volumes consolidated with new journal id volumes
 
@@ -396,12 +398,23 @@
     au < released ; crawling ; 2000 ; History and Computing Volume 12 (2000) ; 12 >
     au < released ; crawling ; 2001 ; History and Computing Volume 13 (2001) ; 13 >
     au < released ; crawling ; 2002 ; History and Computing Volume 14 (2002) ; 14 >
+    
+    }
+
+    {
+    
+    param[journal_id] = ijhac
+    comment[changed_name] = formerly History and Computing until 2002
+    comment[0] = old journal id volumes consolidated with new journal id volumes
+
     au < released ; crawling ; 2007 ; International Journal of Humanities and Arts Computing Volume 1 (2007) ; 1 >
     au < released ; crawling ; 2008 ; International Journal of Humanities and Arts Computing Volume 2 (2008) ; 2 >
     au < released ; crawling ; 2009 ; International Journal of Humanities and Arts Computing Volume 3 (2009) ; 3 >
     au < released ; crawling ; 2010 ; International Journal of Humanities and Arts Computing Volume 4 (2010) ; 4 >
     au < released ; crawling ; 2011 ; International Journal of Humanities and Arts Computing Volume 5 (2011) ; 5 >
     au < crawling ; exists ; 2012 ; International Journal of Humanities and Arts Computing Volume 6 (2012) ; 6 >
+    
+    }
 
   }
 
