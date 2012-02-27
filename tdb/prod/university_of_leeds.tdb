@@ -34,6 +34,7 @@
     
     comment[base_url] = The plugin is written such that the base URL has no trailing slash
     param[base_url] = http://lics.leeds.ac.uk
+    comment[0] = AUtest doesn't like the AUs. seeing what the problem is.
 
     implicit < status ; volume ; name ; param[year] ; param[volume_str] >
   
