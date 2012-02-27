@@ -17,15 +17,15 @@
     param[collection_id] = GPO
     implicit < status ; year ; name ; param[year] >
     
-    au < manifest ; 1907 ; Additional Government Publications 1907 ; 1907 >
-    au < manifest ; 1936 ; Additional Government Publications 1936 ; 1936 >
-    au < manifest ; 1970 ; Additional Government Publications 1970 ; 1970 >
-    au < manifest ; 1986 ; Additional Government Publications 1986 ; 1986 >
-    au < manifest ; 1987 ; Additional Government Publications 1987 ; 1987 >
-    au < manifest ; 1989 ; Additional Government Publications 1989 ; 1989 >
-    au < manifest ; 1990 ; Additional Government Publications 1990 ; 1990 >
-    au < manifest ; 1992 ; Additional Government Publications 1992 ; 1992 >
-    au < manifest ; 1994 ; Additional Government Publications 1994 ; 1994 >
+    au < ready ; 1907 ; Additional Government Publications 1907 ; 1907 >
+    au < ready ; 1936 ; Additional Government Publications 1936 ; 1936 >
+    au < ready ; 1970 ; Additional Government Publications 1970 ; 1970 >
+    au < ready ; 1986 ; Additional Government Publications 1986 ; 1986 >
+    au < ready ; 1987 ; Additional Government Publications 1987 ; 1987 >
+    au < ready ; 1989 ; Additional Government Publications 1989 ; 1989 >
+    au < ready ; 1990 ; Additional Government Publications 1990 ; 1990 >
+    au < ready ; 1992 ; Additional Government Publications 1992 ; 1992 >
+    au < ready ; 1994 ; Additional Government Publications 1994 ; 1994 >
     au < ready ; 1995 ; Additional Government Publications 1995 ; 1995 >
     au < ready ; 1996 ; Additional Government Publications 1996 ; 1996 >
     au < ready ; 1997 ; Additional Government Publications 1997 ; 1997 >
@@ -338,10 +338,10 @@
     param[collection_id] = CRECB
     implicit < status ; year ; name ; param[year] >
 
-    au < manifest ; 1999 ; Congressional Record (Bound) 1999 ; 1999 >
+    au < ready ; 1999 ; Congressional Record (Bound) 1999 ; 1999 >
     au < ready ; 2000 ; Congressional Record (Bound) 2000 ; 2000 >
-    au < manifest ; 2001 ; Congressional Record (Bound) 2001 ; 2001 >
-    au < manifest ; 2002 ; Congressional Record (Bound) 2002 ; 2002 >
+    au < ready ; 2001 ; Congressional Record (Bound) 2001 ; 2001 >
+    au < ready ; 2002 ; Congressional Record (Bound) 2002 ; 2002 >
 
   }
 
@@ -356,35 +356,35 @@
     param[collection_id] = CRI
     implicit < status ; year ; name ; param[year] >
 
-    au < manifest ; 1983 ; Congressional Record Index 1983 ; 1983 >
-    au < manifest ; 1984 ; Congressional Record Index 1984 ; 1984 >
-    au < manifest ; 1985 ; Congressional Record Index 1985 ; 1985 >
-    au < manifest ; 1986 ; Congressional Record Index 1986 ; 1986 >
-    au < manifest ; 1987 ; Congressional Record Index 1987 ; 1987 >
-    au < manifest ; 1988 ; Congressional Record Index 1988 ; 1988 >
-    au < manifest ; 1989 ; Congressional Record Index 1989 ; 1989 >
+    au < ready ; 1983 ; Congressional Record Index 1983 ; 1983 >
+    au < ready ; 1984 ; Congressional Record Index 1984 ; 1984 >
+    au < ready ; 1985 ; Congressional Record Index 1985 ; 1985 >
+    au < ready ; 1986 ; Congressional Record Index 1986 ; 1986 >
+    au < ready ; 1987 ; Congressional Record Index 1987 ; 1987 >
+    au < ready ; 1988 ; Congressional Record Index 1988 ; 1988 >
+    au < ready ; 1989 ; Congressional Record Index 1989 ; 1989 >
     au < ready ; 1990 ; Congressional Record Index 1990 ; 1990 >
-    au < manifest ; 1991 ; Congressional Record Index 1991 ; 1991 >
-    au < manifest ; 1992 ; Congressional Record Index 1992 ; 1992 >
-    au < manifest ; 1993 ; Congressional Record Index 1993 ; 1993 >
-    au < manifest ; 1994 ; Congressional Record Index 1994 ; 1994 >
+    au < ready ; 1991 ; Congressional Record Index 1991 ; 1991 >
+    au < ready ; 1992 ; Congressional Record Index 1992 ; 1992 >
+    au < ready ; 1993 ; Congressional Record Index 1993 ; 1993 >
+    au < ready ; 1994 ; Congressional Record Index 1994 ; 1994 >
     au < ready ; 1995 ; Congressional Record Index 1995 ; 1995 >
-    au < manifest ; 1996 ; Congressional Record Index 1996 ; 1996 >
-    au < manifest ; 1997 ; Congressional Record Index 1997 ; 1997 >
-    au < manifest ; 1999 ; Congressional Record Index 1999 ; 1999 >
+    au < ready ; 1996 ; Congressional Record Index 1996 ; 1996 >
+    au < ready ; 1997 ; Congressional Record Index 1997 ; 1997 >
+    au < ready ; 1999 ; Congressional Record Index 1999 ; 1999 >
     au < ready ; 2000 ; Congressional Record Index 2000 ; 2000 >
-    au < manifest ; 2001 ; Congressional Record Index 2001 ; 2001 >
-    au < manifest ; 2002 ; Congressional Record Index 2002 ; 2002 >
-    au < manifest ; 2003 ; Congressional Record Index 2003 ; 2003 >
-    au < manifest ; 2004 ; Congressional Record Index 2004 ; 2004 >
+    au < ready ; 2001 ; Congressional Record Index 2001 ; 2001 >
+    au < ready ; 2002 ; Congressional Record Index 2002 ; 2002 >
+    au < ready ; 2003 ; Congressional Record Index 2003 ; 2003 >
+    au < ready ; 2004 ; Congressional Record Index 2004 ; 2004 >
     au < ready ; 2005 ; Congressional Record Index 2005 ; 2005 >
-    au < manifest ; 2006 ; Congressional Record Index 2006 ; 2006 >
-    au < manifest ; 2007 ; Congressional Record Index 2007 ; 2007 >
-    au < manifest ; 2008 ; Congressional Record Index 2008 ; 2008 >
-    au < manifest ; 2009 ; Congressional Record Index 2009 ; 2009 >
+    au < ready ; 2006 ; Congressional Record Index 2006 ; 2006 >
+    au < ready ; 2007 ; Congressional Record Index 2007 ; 2007 >
+    au < ready ; 2008 ; Congressional Record Index 2008 ; 2008 >
+    au < ready ; 2009 ; Congressional Record Index 2009 ; 2009 >
     au < ready ; 2010 ; Congressional Record Index 2010 ; 2010 >
-    au < manifest ; 2011 ; Congressional Record Index 2011 ; 2011 >
-    au < manifest ; 2012 ; Congressional Record Index 2012 ; 20120 >
+    au < ready ; 2011 ; Congressional Record Index 2011 ; 2011 >
+    au < ready ; 2012 ; Congressional Record Index 2012 ; 20120 >
       
   }
 
@@ -401,24 +401,24 @@
       param[collection_id] = CRPT
       implicit < status ; year ; name ; param[year] >
 
-      au < manifest ; 1995 ; Congressional Reports 1995 ; 1995 >
-      au < manifest ; 1996 ; Congressional Reports 1996 ; 1996 >
-      au < manifest ; 1997 ; Congressional Reports 1997 ; 1997 >
-      au < manifest ; 1998 ; Congressional Reports 1998 ; 1998 >
-      au < manifest ; 1999 ; Congressional Reports 1999 ; 1999 >
+      au < ready ; 1995 ; Congressional Reports 1995 ; 1995 >
+      au < ready ; 1996 ; Congressional Reports 1996 ; 1996 >
+      au < ready ; 1997 ; Congressional Reports 1997 ; 1997 >
+      au < ready ; 1998 ; Congressional Reports 1998 ; 1998 >
+      au < ready ; 1999 ; Congressional Reports 1999 ; 1999 >
       au < ready ; 2000 ; Congressional Reports 2000 ; 2000 >
-      au < manifest ; 2001 ; Congressional Reports 2001 ; 2001 >
-      au < manifest ; 2002 ; Congressional Reports 2002 ; 2002 >
-      au < manifest ; 2003 ; Congressional Reports 2003 ; 2003 >
-      au < manifest ; 2004 ; Congressional Reports 2004 ; 2004 >
+      au < ready ; 2001 ; Congressional Reports 2001 ; 2001 >
+      au < ready ; 2002 ; Congressional Reports 2002 ; 2002 >
+      au < ready ; 2003 ; Congressional Reports 2003 ; 2003 >
+      au < ready ; 2004 ; Congressional Reports 2004 ; 2004 >
       au < ready ; 2005 ; Congressional Reports 2005 ; 2005 >
-      au < manifest ; 2006 ; Congressional Reports 2006 ; 2006 >
-      au < manifest ; 2007 ; Congressional Reports 2007 ; 2007 >
-      au < manifest ; 2008 ; Congressional Reports 2008 ; 2008 >
-      au < manifest ; 2009 ; Congressional Reports 2009 ; 2009 >
+      au < ready ; 2006 ; Congressional Reports 2006 ; 2006 >
+      au < ready ; 2007 ; Congressional Reports 2007 ; 2007 >
+      au < ready ; 2008 ; Congressional Reports 2008 ; 2008 >
+      au < ready ; 2009 ; Congressional Reports 2009 ; 2009 >
       au < ready ; 2010 ; Congressional Reports 2010 ; 2010 >
-      au < manifest ; 2011 ; Congressional Reports 2011 ; 2011 >
-      au < manifest ; 2012 ; Congressional Reports 2012 ; 2012 >      
+      au < ready ; 2011 ; Congressional Reports 2011 ; 2011 >
+      au < ready ; 2012 ; Congressional Reports 2012 ; 2012 >      
     }
       
   }
