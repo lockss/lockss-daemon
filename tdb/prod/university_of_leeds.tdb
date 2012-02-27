@@ -18,7 +18,7 @@
     plugin = edu.nyu.plugin.LeedsICSPlugin
 
     comment[base_url] = The plugin is written such that the base URL has no trailing slash
-    param[base_url] = http://lics.leeds.ac.uk/
+    param[base_url] = http://www.leeds.ac.uk/classics/lics
 
     implicit < status ; volume ; name ; param[year] ; param[volume_str] >
   
