@@ -489,11 +489,11 @@
     au < manifest ; 1998 ; Economic Report of the President 1998 ; 1998 >
     au < manifest ; 1999 ; Economic Report of the President 1999 ; 1999 >
     au < ready ; 2000 ; Economic Report of the President 2000 ; 2000 >
-    au < manifest ; 2001 ; Economic Report of the President 2001 ; 2001 >
-    au < manifest ; 2002 ; Economic Report of the President 2002 ; 2002 >
-    au < manifest ; 2003 ; Economic Report of the President 2003 ; 2003 >
-    au < manifest ; 2004 ; Economic Report of the President 2004 ; 2004 >
-    au < testing ; 2005 ; Economic Report of the President 2005 ; 2005 >
+    au < ready ; 2001 ; Economic Report of the President 2001 ; 2001 >
+    au < ready ; 2002 ; Economic Report of the President 2002 ; 2002 >
+    au < ready ; 2003 ; Economic Report of the President 2003 ; 2003 >
+    au < ready ; 2004 ; Economic Report of the President 2004 ; 2004 >
+    au < ready ; 2005 ; Economic Report of the President 2005 ; 2005 >
     au < manifest ; 2006 ; Economic Report of the President 2006 ; 2006 >
     au < manifest ; 2007 ; Economic Report of the President 2007 ; 2007 >
     au < manifest ; 2008 ; Economic Report of the President 2008 ; 2008 >
@@ -587,7 +587,7 @@
     au < manifest ; 2002 ; Government Accountability Office Reports and Comptroller General Decisions 2002 ; 2002 >
     au < manifest ; 2003 ; Government Accountability Office Reports and Comptroller General Decisions 2003 ; 2003 >
     au < manifest ; 2004 ; Government Accountability Office Reports and Comptroller General Decisions 2004 ; 2004 >
-    au < testing ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; 2005 >
+    au < ready ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; 2005 >
     au < manifest ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; 2006 >
     au < manifest ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; 2007 >
     au < testing ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 >
@@ -623,11 +623,11 @@
     au < manifest ; 1998 ; History of Bills 1998 ; 1998 >
     au < manifest ; 1999 ; History of Bills 1999 ; 1999 >
     au < ready ; 2000 ; History of Bills 2000 ; 2000 >
-    au < manifest ; 2001 ; History of Bills 2001 ; 2001 >
-    au < manifest ; 2002 ; History of Bills 2002 ; 2002 >
-    au < manifest ; 2003 ; History of Bills 2003 ; 2003 >
-    au < manifest ; 2004 ; History of Bills 2004 ; 2004 >
-    au < testing ; 2005 ; History of Bills 2005 ; 2005 >
+    au < ready ; 2001 ; History of Bills 2001 ; 2001 >
+    au < ready ; 2002 ; History of Bills 2002 ; 2002 >
+    au < ready ; 2003 ; History of Bills 2003 ; 2003 >
+    au < ready ; 2004 ; History of Bills 2004 ; 2004 >
+    au < ready ; 2005 ; History of Bills 2005 ; 2005 >
     au < manifest ; 2006 ; History of Bills 2006 ; 2006 >
     au < manifest ; 2007 ; History of Bills 2007 ; 2007 >
     au < manifest ; 2008 ; History of Bills 2008 ; 2008 >
@@ -678,7 +678,7 @@
     au < testing ; 1995 ; House Rules and Manual 1995 ; 1995 >
     au < manifest ; 1999 ; House Rules and Manual 1999 ; 1999 >
     au < manifest ; 2001 ; House Rules and Manual 2001 ; 2001 >
-    au < testing ; 2005 ; House Rules and Manual 2005 ; 2005 >
+    au < ready ; 2005 ; House Rules and Manual 2005 ; 2005 >
     au < manifest ; 2007 ; House Rules and Manual 2007 ; 2007 >
     au < manifest ; 2009 ; House Rules and Manual 2009 ; 2009 >
     au < testing ; 2011 ; House Rules and Manual 2011 ; 2011 >
@@ -798,7 +798,7 @@
       au < manifest ; 2002 ; Public Papers of the Presidents of the United States 2002 ; 2002 >
       au < manifest ; 2003 ; Public Papers of the Presidents of the United States 2003 ; 2003 >
       au < manifest ; 2004 ; Public Papers of the Presidents of the United States 2004 ; 2004 >
-      au < testing ; 2005 ; Public Papers of the Presidents of the United States 2005 ; 2005 >
+      au < ready ; 2005 ; Public Papers of the Presidents of the United States 2005 ; 2005 >
       au < testing ; 2006 ; Public Papers of the Presidents of the United States 2006 ; 2006 >
 
     }
