@@ -1136,7 +1136,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     param[base_url] = http://jme.bmj.com/
 
     au < HighWirePressH20Plugin ; ready ; 1975 ; Journal of Medical Ethics Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1976 ; Journal of Medical Ethics Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Medical Ethics Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; ready ; 1977 ; Journal of Medical Ethics Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 1978 ; Journal of Medical Ethics Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Medical Ethics Volume 5 ; 5 >
