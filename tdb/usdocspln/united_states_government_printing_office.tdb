@@ -436,7 +436,7 @@
 
     au < manifest ; 2009 ; Daily Compilation of Presidential Documents 2009 ; 2009 >
     au < testing ; 2010 ; Daily Compilation of Presidential Documents 2010 ; 2010 >
-    au < manifest ; 2011 ; Daily Compilation of Presidential Documents 2011 ; 2011 >
+    au < testing ; 2011 ; Daily Compilation of Presidential Documents 2011 ; 2011 >
     au < manifest ; 2012 ; Daily Compilation of Presidential Documents 2012 ; 2012 >
       
   }
@@ -468,7 +468,7 @@
     au < manifest ; 2008 ; Economic Indicators 2008 ; 2008 >
     au < manifest ; 2009 ; Economic Indicators 2009 ; 2009 >
     au < ready ; 2010 ; Economic Indicators 2010 ; 2010 >
-    au < manifest ; 2011 ; Economic Indicators 2011 ; 2011 >
+    au < testing ; 2011 ; Economic Indicators 2011 ; 2011 >
     au < manifest ; 2012 ; Economic Indicators 2012 ; 2012 >
       
   }
@@ -499,7 +499,7 @@
     au < manifest ; 2008 ; Economic Report of the President 2008 ; 2008 >
     au < manifest ; 2009 ; Economic Report of the President 2009 ; 2009 >
     au < testing ; 2010 ; Economic Report of the President 2010 ; 2010 >
-    au < manifest ; 2011 ; Economic Report of the President 2011 ; 2011 >
+    au < testing ; 2011 ; Economic Report of the President 2011 ; 2011 >
       
   }
 
@@ -520,10 +520,10 @@
     au < manifest ; 1998 ; Education Report from ERIC 1998 ; 1998 >
     au < manifest ; 1999 ; Education Report from ERIC 1999 ; 1999 >
     au < ready ; 2000 ; Education Report from ERIC 2000 ; 2000 >
-    au < manifest ; 2001 ; Education Report from ERIC 2001 ; 2001 >
-    au < manifest ; 2002 ; Education Report from ERIC 2002 ; 2002 >
-    au < manifest ; 2003 ; Education Report from ERIC 2003 ; 2003 >
-    au < manifest ; 2004 ; Education Report from ERIC 2004 ; 2004 >
+    au < ready ; 2001 ; Education Report from ERIC 2001 ; 2001 >
+    au < ready ; 2002 ; Education Report from ERIC 2002 ; 2002 >
+    au < ready ; 2003 ; Education Report from ERIC 2003 ; 2003 >
+    au < ready ; 2004 ; Education Report from ERIC 2004 ; 2004 >
 
   }
 
@@ -590,7 +590,7 @@
     au < testing ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; 2005 >
     au < manifest ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; 2006 >
     au < manifest ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; 2007 >
-    au < manifest ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 >
+    au < testing ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 >
    
   }
 
@@ -633,7 +633,7 @@
     au < manifest ; 2008 ; History of Bills 2008 ; 2008 >
     au < manifest ; 2009 ; History of Bills 2009 ; 2009 >
     au < testing ; 2010 ; History of Bills 2010 ; 2010 >
-    au < manifest ; 2011 ; History of Bills 2011 ; 2011 >
+    au < testing ; 2011 ; History of Bills 2011 ; 2011 >
     au < manifest ; 2012 ; History of Bills 2012 ; 2012 >
       
   }
@@ -658,7 +658,7 @@
       au < manifest ; 1996 ; House Journal 1996 ; 1996 >
       au < manifest ; 1997 ; House Journal 1997 ; 1997 >
       au < manifest ; 1998 ; House Journal 1998 ; 1998 >
-      au < manifest ; 1999 ; House Journal 1999 ; 1999 >
+      au < testing ; 1999 ; House Journal 1999 ; 1999 >
 
     }
 
@@ -681,7 +681,7 @@
     au < testing ; 2005 ; House Rules and Manual 2005 ; 2005 >
     au < manifest ; 2007 ; House Rules and Manual 2007 ; 2007 >
     au < manifest ; 2009 ; House Rules and Manual 2009 ; 2009 >
-    au < manifest ; 2011 ; House Rules and Manual 2011 ; 2011 >
+    au < testing ; 2011 ; House Rules and Manual 2011 ; 2011 >
       
   }
 
@@ -710,7 +710,7 @@
     au < manifest ; 2008 ; List of CFR Sections Affected 2008 ; 2008 >
     au < manifest ; 2009 ; List of CFR Sections Affected 2009 ; 2009 >
     au < testing; 2010 ; List of CFR Sections Affected 2010 ; 2010 >
-    au < manifest; 2011 ; List of CFR Sections Affected 2011 ; 2011 >
+    au < testing; 2011 ; List of CFR Sections Affected 2011 ; 2011 >
     au < manifest; 2012 ; List of CFR Sections Affected 2012 ; 2012 >
       
   }
@@ -764,7 +764,7 @@
       au < manifest ; 2008 ; Public and Private Laws 2008 ; 2008 >
       au < manifest ; 2009 ; Public and Private Laws 2009 ; 2009 >
       au < testing ; 2010 ; Public and Private Laws 2010 ; 2010 >
-      au < manifest ; 2011 ; Public and Private Laws 2011 ; 2011>
+      au < testing ; 2011 ; Public and Private Laws 2011 ; 2011>
       au < manifest ; 2012 ; Public and Private Laws 2012 ; 2012 >
 
     }
@@ -799,7 +799,7 @@
       au < manifest ; 2003 ; Public Papers of the Presidents of the United States 2003 ; 2003 >
       au < manifest ; 2004 ; Public Papers of the Presidents of the United States 2004 ; 2004 >
       au < testing ; 2005 ; Public Papers of the Presidents of the United States 2005 ; 2005 >
-      au < manifest ; 2006 ; Public Papers of the Presidents of the United States 2006 ; 2006 >
+      au < testing ; 2006 ; Public Papers of the Presidents of the United States 2006 ; 2006 >
 
     }
 
@@ -819,7 +819,7 @@
     au < manifest ; 1996 ; Senate Manual 1996 ; 1996 >
     au < testing ; 2000 ; Senate Manual 2000 ; 2000 >
     au < manifest ; 2002 ; Senate Manual 2002 ; 2002 >
-    au < manifest ; 2008 ; Senate Manual 2008 ; 2008 >
+    au < testing ; 2008 ; Senate Manual 2008 ; 2008 >
 
   }
 
@@ -868,10 +868,10 @@
       implicit < status ; year ; name ; param[year] >
 
       au < ready ; 1995 ; United States Government Manual 1995 ; 1995 >
-      au < manifest ; 1996 ; United States Government Manual 1996 ; 1996 >
-      au < manifest ; 1997 ; United States Government Manual 1997 ; 1997 >
-      au < manifest ; 1998 ; United States Government Manual 1998 ; 1998 >
-      au < manifest ; 1999 ; United States Government Manual 1999 ; 1999 >
+      au < ready ; 1996 ; United States Government Manual 1996 ; 1996 >
+      au < ready ; 1997 ; United States Government Manual 1997 ; 1997 >
+      au < ready ; 1998 ; United States Government Manual 1998 ; 1998 >
+      au < ready ; 1999 ; United States Government Manual 1999 ; 1999 >
       au < ready ; 2000 ; United States Government Manual 2000 ; 2000 >
       au < manifest ; 2001 ; United States Government Manual 2001 ; 2001 >
       au < manifest ; 2002 ; United States Government Manual 2002 ; 2002 >
@@ -883,7 +883,7 @@
       au < manifest ; 2008 ; United States Government Manual 2008 ; 2008 >
       au < manifest ; 2009 ; United States Government Manual 2009 ; 2009 >
       au < doesNotExist ; 2010 ; United States Government Manual 2010 ; 2010 >
-      au < manifest ; 2011 ; United States Government Manual 2011 ; 2011 >
+      au < testingt ; 2011 ; United States Government Manual 2011 ; 2011 >
 
     }
 
@@ -945,7 +945,7 @@
     au < manifest ; 2003 ; United States Statutes at Large 2003 ; 2003 >
     au < manifest ; 2004 ; United States Statutes at Large 2004 ; 2004 >
     au < testing ; 2005 ; United States Statutes at Large 2005 ; 2005 >
-    au < manifest ; 2006 ; United States Statutes at Large 2006 ; 2006 >
+    au < testingt ; 2006 ; United States Statutes at Large 2006 ; 2006 >
 
   }
 
@@ -976,7 +976,7 @@
     au < manifest ; 2006 ; Weekly Compilation of Presidential Documents 2006 ; 2006 >
     au < manifest ; 2007 ; Weekly Compilation of Presidential Documents 2007 ; 2007 >
     au < manifest ; 2008 ; Weekly Compilation of Presidential Documents 2008 ; 2008 >
-    au < manifest ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; 2009 >
+    au < testing ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; 2009 >
       
   }
 
