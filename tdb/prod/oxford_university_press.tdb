@@ -331,6 +331,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 >
 
     }
 
@@ -1508,6 +1509,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Bioinformatics Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Bioinformatics Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Bioinformatics Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Bioinformatics Volume 28 ; 28 >
 
 
     }
@@ -3484,7 +3486,7 @@
     param[base_url] = http://ckj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    comment[0] = forthcoming in 2012
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Clinical Kidney Journal Volume 5 ; 5 >
 
   }
 
@@ -12540,6 +12542,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 >
    
     }
 
@@ -12598,6 +12601,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Mathematical Medicine and Biology Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Mathematical Medicine and Biology Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Mathematical Medicine and Biology Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Mathematical Medicine and Biology Volume 29 ; 29 >
     
     }
 
@@ -12650,6 +12654,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Medical Law Review Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Medical Law Review Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Medical Law Review Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Medical Law Review Volume 20 ; 20 >
 
     }
 
@@ -12817,6 +12822,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Mind Volume 118 ; 118 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Mind Volume 119 ; 119 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Mind Volume 120 ; 120 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Mind Volume 121 ; 121 >
     
     }
 
@@ -12879,6 +12885,7 @@
     au < HighWirePressPlugin ; down ; 2009 ;  Modern Judaism Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Modern Judaism Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Modern Judaism Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Modern Judaism Volume 32 ; 32 >
   
     }
     
@@ -12966,6 +12973,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Molecular Biology and Evolution Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Molecular Biology and Evolution Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Molecular Biology and Evolution Volume 29 ; 29 >
 
     }
 
@@ -13006,6 +13014,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; released ; 2010 ; MHR: Basic science of reproductive medicine Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2011 ; MHR: Basic science of reproductive medicine Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; MHR: Basic science of reproductive medicine Volume 18 ; 18 >
    
     }
     
@@ -13030,6 +13039,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Molecular Plant Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Molecular Plant Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Molecular Plant Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Molecular Plant Volume 5 ; 5 >
 
     }
 
@@ -13049,8 +13059,9 @@
     param[base_url] = http://mmcts.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     
-    comment[mmcts] = New journal to OUP
+    comment[mmcts] = New journal to OUP in 2012
     
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Multimedia Manual of Cardio-Thoracic Surgery Volume 1 ; 1 >
     }
     
   }
@@ -13173,6 +13184,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Music and Letters Volume 90 ; 90 >
     au < HighWirePressPlugin ; doNotProcess ; 2010 ; Music and Letters Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Music and Letters Volume 92 ; 92 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Music and Letters Volume 93 ; 93 >
 
     }
     
@@ -13315,6 +13327,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Musical Quarterly Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Musical Quarterly Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; The Musical Quarterly Volume 94 ; 94 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; The Musical Quarterly Volume 95 ; 95 >
+    
 
     }
 
@@ -13371,6 +13385,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Mutagenesis Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; testing ; 2010 ; Mutagenesis Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Mutagenesis Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Mutagenesis Volume 27 ; 27 >
     
     }
 
@@ -13467,6 +13482,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; testing ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Nephrology Dialysis Transplantation Volume 27 ; 27 >
 
     }
 
@@ -13530,6 +13546,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Nicotine and Tobacco Research Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Nicotine and Tobacco Research Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Nicotine and Tobacco Research Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Nicotine and Tobacco Research Volume 14 ; 14 >
     
     }
 
@@ -13822,6 +13839,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Notes and Queries Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Notes and Queries Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Notes and Queries Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Notes and Queries Volume 59 ; 59 >
     
     }
 
@@ -13891,6 +13909,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Nucleic Acids Research Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; testing ; 2010 ; Nucleic Acids Research Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Nucleic Acids Research Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Nucleic Acids Research Volume 40 ; 40 >
     
     }
 
@@ -13904,6 +13923,8 @@
       eissn = 1746-8272 ;
       issnl = 0261-3166
     >
+    
+    comment[0] = series ends in 2009
 
     {
 
@@ -13979,6 +14000,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; OAH Magazine of History Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; OAH Magazine of History Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2011 ; OAH Magazine of History Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; OAH Magazine of History Volume 26 ; 26 >
     
     }
       
@@ -14071,6 +14093,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Occupational Medicine Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; testing ; 2010 ; Occupational Medicine Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Occupational Medicine Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Occupational Medicine Volume 62 ; 62 >
 
     }
 
@@ -14128,6 +14151,7 @@
     au < HighWirePressPlugin ; doNotProcess ; 2009 ; The Opera Quarterly Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Opera Quarterly Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; The Opera Quarterly Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; The Opera Quarterly Volume 28 ; 28 >
         
     }
     
@@ -14206,6 +14230,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; The Oral History Review Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Oral History Review Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; The Oral History Review Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; The Oral History Review Volume 39 ; 39 >
 
     }
     
@@ -14251,33 +14276,33 @@
     param[base_url] = http://oaj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Oxford Art Journa Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Oxford Art Journa Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Oxford Art Journa Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Oxford Art Journa Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Oxford Art Journa Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Oxford Art Journa Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Oxford Art Journa Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Oxford Art Journa Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Oxford Art Journa Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Oxford Art Journa Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Oxford Art Journa Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Oxford Art Journa Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Oxford Art Journa Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Oxford Art Journa Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Oxford Art Journa Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Oxford Art Journa Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Oxford Art Journa Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Oxford Art Journa Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Oxford Art Journa Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Oxford Art Journa Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Oxford Art Journa Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Oxford Art Journa Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Oxford Art Journa Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Oxford Art Journa Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Oxford Art Journa Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Oxford Art Journa Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Oxford Art Journa Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; Oxford Art Journal Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; Oxford Art Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; Oxford Art Journal Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; Oxford Art Journal Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; Oxford Art Journal Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; Oxford Art Journal Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; Oxford Art Journal Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; Oxford Art Journal Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; Oxford Art Journal Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; Oxford Art Journal Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; Oxford Art Journal Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; Oxford Art Journal Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; Oxford Art Journal Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; Oxford Art Journal Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; Oxford Art Journal Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; Oxford Art Journal Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; Oxford Art Journal Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; Oxford Art Journal Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; Oxford Art Journal Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; Oxford Art Journal Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; Oxford Art Journal Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; Oxford Art Journal Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; Oxford Art Journal Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Oxford Art Journal Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Oxford Art Journal Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; Oxford Art Journal Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Oxford Art Journal Volume 27 ; 27 >
     au < HighWirePressPlugin ; doNotProcess ; 2005 ; Oxford Art Journal Volume 28 ; 28 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; Oxford Art Journal Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Oxford Art Journa Volume 30 ; 30 >
@@ -14285,6 +14310,8 @@
     au < HighWirePressPlugin ; down ; 2009 ; Oxford Art Journal Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Oxford Art Journa Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Oxford Art Journa Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Oxford Art Journa Volume 35 ; 35 >
+    
 
     }
 
@@ -14465,6 +14492,8 @@
     au < HighWirePressPlugin ; down ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Oxford Journal of Legal Studies Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Oxford Journal of Legal Studies Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Oxford Journal of Legal Studies Volume 32 ; 32 >
+    
 
     }
 
@@ -14521,6 +14550,8 @@
     au < HighWirePressPlugin ; down ; 2008 ; Oxford Review of Economic Policy Volume 24 ; 24 >
     au < HighWirePressPlugin ; down ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Oxford Review of Economic Policy Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Oxford Review of Economic Policy Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 >
 
     }
 
@@ -14615,6 +14646,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Parliamentary Affairs Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Parliamentary Affairs Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Parliamentary Affairs Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Parliamentary Affairs Volume 65 ; 65 >
                 
     }
 
@@ -17670,6 +17702,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Trusts & Trustees Volume 15 ; 15 >
     au < HighWirePressPlugin ; down ; 2010 ; Trusts & Trustees Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Trusts & Trustees Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Trusts & Trustees Volume 18 ; 18 >
     
     }
 
@@ -17724,6 +17757,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Twentieth Century British History Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Twentieth Century British History Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Twentieth Century British History Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Twentieth Century British History Volume 23 ; 23 >
     
     }
 
@@ -17782,6 +17816,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; The World Bank Economic Review Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The World Bank Economic Review Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The World Bank Economic Review Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; The World Bank Economic Review Volume 26 ; 26 >
     
     }
 
@@ -17839,6 +17874,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; The World Bank Research Observer Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The World Bank Research Observer Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; The World Bank Research Observer Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; The World Bank Research Observer Volume 27 ; 27 >
     
     }
 
@@ -17887,6 +17923,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Yearbook of European Law Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Yearbook of European Law Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Yearbook of European Law Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; expected ; 2011 ; Yearbook of European Law Volume 31 ; 31 >
 
   }
 
@@ -17923,6 +17960,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Yearbook of International Environmental Law Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Yearbook of International Environmental Law Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Yearbook of International Environmental Law Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; expected ; 2011 ; Yearbook of International Environmental Law Volume 21 ; 21 >
 
   }
 
@@ -17972,6 +18010,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Year's Work in Critical and Cultural Theory Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; The Year's Work in Critical and Cultural Theory Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; The Year's Work in Critical and Cultural Theory Volume 20 ; 20 >
     
     }
 
@@ -18097,6 +18136,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; The Year's Work in English Studies Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; The Year's Work in English Studies Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; The Year's Work in English Studies Volume 90 ; 90 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; The Year's Work in English Studies Volume 91 ; 91 >
 
     }
 
