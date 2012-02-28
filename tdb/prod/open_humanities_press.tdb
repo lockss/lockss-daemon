@@ -43,19 +43,19 @@
       param[journal_id] = cm
       comment[Interzone] =  we need to update the year of Culture Machine Interzone every year 
       
-      au < manifest ; 2001-2010 ; Culture Machine Interzone ; 0 ; 0>
+      au < testing ; 2001-2010 ; Culture Machine Interzone ; 0 ; 0>
       au < ready ; 1999 ; Culture Machine Volume 1 ; 1 ; 1999 >
       au < ready ; 2000 ; Culture Machine Volume 2 ; 2 ; 2000 >
       au < ready ; 2001 ; Culture Machine Volume 3 ; 3 ; 2001 >
       au < ready ; 2002 ; Culture Machine Volume 4 ; 4 ; 2002 >
       au < ready ; 2003 ; Culture Machine Volume 5 ; 5 ; 2003 >
       au < ready ; 2004 ; Culture Machine Volume 6 ; 6 ; 2004 >
-      au < manifest ; 2005 ; Culture Machine Volume 7 ; 7 ; 2005 >
-      au < manifest ; 2006 ; Culture Machine Volume 8 ; 8 ; 2006 >
-      au < manifest ; 2007 ; Culture Machine Volume 9 ; 9 ; 2007 >
-      au < manifest ; 2009 ; Culture Machine Volume 10 ; 10 ; 2009 >
-      au < manifest ; 2010 ; Culture Machine Volume 11 ; 11 ; 2010 >
-      au < manifest ; 2011 ; Culture Machine Volume 12 ; 12 ; 2011 >
+      au < testing ; 2005 ; Culture Machine Volume 7 ; 7 ; 2005 >
+      au < testing ; 2006 ; Culture Machine Volume 8 ; 8 ; 2006 >
+      au < testing ; 2007 ; Culture Machine Volume 9 ; 9 ; 2007 >
+      au < testing ; 2009 ; Culture Machine Volume 10 ; 10 ; 2009 >
+      au < testing ; 2010 ; Culture Machine Volume 11 ; 11 ; 2010 >
+      au < testing ; 2011 ; Culture Machine Volume 12 ; 12 ; 2011 >
     
     }
   
