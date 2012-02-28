@@ -90,7 +90,8 @@
       param[base_url] = http://div17perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
       
-      au < exists ; 2011 ; Global Issues in Communication Sciences and Related Disorders Volume 1 ; 1 >
+      au < manifest ; 2011 ; Global Issues in Communication Sciences and Related Disorders Volume 1 ; 1 >
+      au < expected ; 2012 ; Global Issues in Communication Sciences and Related Disorders Volume 2 ; 2 >
       
     }
       
