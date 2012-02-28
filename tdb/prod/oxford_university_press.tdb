@@ -1958,12 +1958,27 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://bfgp.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    
+    comment[vol9] = check content
 
-    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 >
     au < HighWirePressPlugin ; down ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 >
+    
+    }
+    {
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://bfg.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; manifest ; 2002-2003 ; Briefings in Functional Genomics and Proteomics Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2003-2004 ; Briefings in Functional Genomics and Proteomics Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2004-2005 ; Briefings in Functional Genomics and Proteomics Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2005-2006 ; Briefings in Functional Genomics and Proteomics Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 >
   
     }
 
@@ -1985,16 +2000,9 @@
     param[base_url] = http://bfg.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
         
-    au < HighWirePressH20Plugin ; manifest ; 2002-2003 ; Briefings in Functional Genomics Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2003-2004 ; Briefings in Functional Genomics Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2004-2005 ; Briefings in Functional Genomics Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2005-2006 ; Briefings in Functional Genomics Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Briefings in Functional Genomics Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Briefings in Functional Genomics Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Briefings in Functional Genomics Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Briefings in Functional Genomics Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 >
   
     }
 
