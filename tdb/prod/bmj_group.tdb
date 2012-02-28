@@ -395,7 +395,7 @@
 
     param[base_url] = http://spcare.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 >
 
   }
@@ -431,10 +431,10 @@
     au < HighWirePressH20Plugin ; ready ; 1933 ; British Journal of Ophthalmology Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; ready ; 1934 ; British Journal of Ophthalmology Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; ready ; 1935 ; British Journal of Ophthalmology Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; 1936 ; British Journal of Ophthalmology Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; ready ; 1936 ; British Journal of Ophthalmology Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; ready ; 1937 ; British Journal of Ophthalmology Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; ready ; 1938 ; British Journal of Ophthalmology Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; testing ; 1939 ; British Journal of Ophthalmology Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 1939 ; British Journal of Ophthalmology Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; manifest ; 1940 ; British Journal of Ophthalmology Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 1941 ; British Journal of Ophthalmology Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 1942 ; British Journal of Ophthalmology Volume 26 ; 26 >
@@ -521,7 +521,7 @@
 
     param[base_url] = http://bjsm.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; British Journal of Sports Medicine Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1964 ; British Journal of Sports Medicine Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; ready ; 1965 ; British Journal of Sports Medicine Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; ready ; 1967-1968 ; British Journal of Sports Medicine Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; doesNotExist ; 1969 ; British Journal of Sports Medicine Volume 4 ; 4 >
@@ -566,7 +566,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; British Journal of Sports Medicine Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Journal of Sports Medicine Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; released ; 2011 ; British Journal of Sports Medicine Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; British Journal of Sports Medicine Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; testing ; 2012 ; British Journal of Sports Medicine Volume 46 ; 46 >
 
   }
 
@@ -611,21 +611,23 @@
     >
 
     param[base_url] = http://emj.bmj.com/
+    
+    comment[notReady] = tested multiple times to low agreement.
 
     au < HighWirePressH20Plugin ; ready ; 1984 ; Emergency Medicine Journal Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 1985 ; Emergency Medicine Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1985 ; Emergency Medicine Journal Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; ready ; 1986 ; Emergency Medicine Journal Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 1987 ; Emergency Medicine Journal Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; ready ; 1988 ; Emergency Medicine Journal Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; testing ; 1989 ; Emergency Medicine Journal Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; notReady ; 1989 ; Emergency Medicine Journal Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; ready ; 1990 ; Emergency Medicine Journal Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; ready ; 1991 ; Emergency Medicine Journal Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 1992 ; Emergency Medicine Journal Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; notReady ; 1992 ; Emergency Medicine Journal Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; ready ; 1993 ; Emergency Medicine Journal Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; ready ; 1994 ; Emergency Medicine Journal Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; ready ; 1995 ; Emergency Medicine Journal Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; ready ; 1996 ; Emergency Medicine Journal Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 1997 ; Emergency Medicine Journal Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1997 ; Emergency Medicine Journal Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; ready ; 1998 ; Emergency Medicine Journal Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; ready ; 1999 ; Emergency Medicine Journal Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2000 ; Emergency Medicine Journal Volume 17 ; 17 >
@@ -1136,20 +1138,20 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     param[base_url] = http://jme.bmj.com/
 
     au < HighWirePressH20Plugin ; ready ; 1975 ; Journal of Medical Ethics Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Medical Ethics Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Medical Ethics Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; ready ; 1977 ; Journal of Medical Ethics Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 1978 ; Journal of Medical Ethics Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Medical Ethics Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Medical Ethics Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Medical Ethics Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Medical Ethics Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Medical Ethics Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Medical Ethics Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Medical Ethics Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Medical Ethics Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Medical Ethics Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Medical Ethics Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Medical Ethics Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1979 ; Journal of Medical Ethics Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of Medical Ethics Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of Medical Ethics Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of Medical Ethics Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; testing ; 1983 ; Journal of Medical Ethics Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 1984 ; Journal of Medical Ethics Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of Medical Ethics Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of Medical Ethics Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 1987 ; Journal of Medical Ethics Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; testing ; 1988 ; Journal of Medical Ethics Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 1989 ; Journal of Medical Ethics Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Medical Ethics Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of Medical Ethics Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of Medical Ethics Volume 18 ; 18 >
