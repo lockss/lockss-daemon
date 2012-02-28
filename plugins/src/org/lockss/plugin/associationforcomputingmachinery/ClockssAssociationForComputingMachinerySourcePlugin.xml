@@ -4,10 +4,6 @@
     <string>org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>3</string>
-  </entry>
-  <entry>
     <string>required_daemon_version</string>
     <string>1.38.0</string>
   </entry>
@@ -20,11 +16,76 @@
     <string>5</string>
   </entry>
   <entry>
-    <string>plugin_name</string>
-    <string>Association for Computing Machinery Source Plugin (CLOCKSS)</string>
+    <string>plugin_version</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>au_name</string>
     <string>&quot;Association for Computing Machinery Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
-</map>
+  <entry>
+    <string>plugin_name</string>
+    <string>Association for Computing Machinery Source Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^%s%d/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url, year</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>2,&quot;^%s%d.*\.(fil|md5sum)$&quot;, base_url, year</string>
+      <string>1,&quot;^%s%d&quot;, base_url, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%s&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.associationforcomputingmachinery.AssociationForComputingMachineryArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.associationforcomputingmachinery.AssociationForComputingMachineryArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.associationforcomputingmachinery.AssociationForComputingMachineryXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base Url</displayName>
+        <description>Points to the dev archive for the moment</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+      	<key>year</key>
+      	<displayName>Year</displayName>
+      	<description>Tells the AU which year's content to include</description>
+      	<type>4</type>
+      	<size>4</size>
+      	<definitional>true</definitional>
+      	<defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>    
