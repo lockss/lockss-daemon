@@ -2004,6 +2004,22 @@
     au < down ; crawling ; 2010 ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 ; >
 
     }
+    
+    {
+
+    param[base_url] = http://bfg.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < manifest ; exists ; 2002-2003 ; Briefings in Functional Genomics and Proteomics Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2003-2004 ; Briefings in Functional Genomics and Proteomics Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2004-2005 ; Briefings in Functional Genomics and Proteomics Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2005-2006 ; Briefings in Functional Genomics and Proteomics Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2006 ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2007 ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
+    au < released ; crawling ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; >
+    
+    }
 
   }
 
@@ -2022,14 +2038,6 @@
     param[base_url] = http://bfg.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
         
-    au < manifest ; exists ; 2002-2003 ; Briefings in Functional Genomics and Proteomics Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2003-2004 ; Briefings in Functional Genomics and Proteomics Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2004-2005 ; Briefings in Functional Genomics and Proteomics Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2005-2006 ; Briefings in Functional Genomics and Proteomics Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2006 ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2007 ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
-    au < released ; crawling ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; >
     au < manifest ; exists ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 ; >
     au < released ; crawling ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 ; >
     au < crawling ; exists ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 ; >
