@@ -495,7 +495,7 @@
     au < manifest ; exists ; 2005 ; EMBO Reports Volume 6 ; 2005 ; 6 >
     au < manifest ; exists ; 2006 ; EMBO Reports Volume 7 ; 2006 ; 7 >
     au < manifest ; exists ; 2007 ; EMBO Reports Volume 8 ; 2007 ; 8 >
-    au < manifest ; exists ; 2008 ; EMBO Reports Volume 9 ; 2008 ; 9 >
+    au < crawling ; exists ; 2008 ; EMBO Reports Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; EMBO Reports Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 >
     au < released ; crawling ; 2011 ; EMBO Reports Volume 12 ; 2011 ; 12 >
@@ -554,8 +554,8 @@
     au < manifest ; exists ; 2005 ; European Journal of Human Genetics Volume 13 ; 2005 ; 13 >
     au < manifest ; exists ; 2006 ; European Journal of Human Genetics Volume 14 ; 2006 ; 14 >
     au < manifest ; exists ; 2007 ; European Journal of Human Genetics Volume 15 ; 2007 ; 15 >
-    au < manifest ; exists ; 2008 ; European Journal of Human Genetics Volume 16 ; 2008 ; 16 >
-    au < manifest ; exists ; 2009 ; European Journal of Human Genetics Volume 17 ; 2009 ; 17 >
+    au < crawling ; exists ; 2008 ; European Journal of Human Genetics Volume 16 ; 2008 ; 16 >
+    au < crawling ; exists ; 2009 ; European Journal of Human Genetics Volume 17 ; 2009 ; 17 >
     au < manifest ; exists ; 2010 ; European Journal of Human Genetics Volume 18 ; 2010 ; 18 >
     au < released ; crawling ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 >
     au < manifest ; exists ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 >
@@ -1007,8 +1007,8 @@
     param[journal_id] = ismej
 
     au < manifest ; exists ; 2007 ; The ISME Journal Volume 1 ; 2007 ; 1 >
-    au < manifest ; exists ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 >
-    au < manifest ; exists ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 >
+    au < crawling ; exists ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 >
+    au < crawling ; exists ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 >
     au < manifest ; exists ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 >
     au < released ; crawling ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 >
     au < manifest ; exists ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 >
@@ -1106,7 +1106,7 @@
     au < exists ; exists ; 2006 ; Journal of Cerebral Blood Flow and Metabolism Volume 26 ; 2006 ; 26 >
     au < exists ; exists ; 2007 ; Journal of Cerebral Blood Flow and Metabolism Volume 27 ; 2007 ; 27 >
     au < exists ; exists ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 >
-    au < manifest ; exists ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 >
+    au < crawling ; exists ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 >
     au < exists ; exists ; 2010 ; Journal of Cerebral Blood Flow and Metabolism Volume 30 ; 2010 ; 30 >
     au < notReady ; exists ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
     au < manifest ; exists ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 >
