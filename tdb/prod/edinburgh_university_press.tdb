@@ -52,7 +52,7 @@
 
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
-      attr[journal_id] = ajicl
+      param[journal_id] = ajicl
       implicit < status ; year ; name ; param[volume_name] >
 
       au < ready ; 2005 ; African Journal of International and Comparative Law Volume 13 ; 13 >
@@ -112,7 +112,7 @@
 	
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
-      attr[journal_id] = anh
+      param[journal_id] = anh
       implicit < status ; year ; name ; param[volume_name] >
 
       au < ready ; 2003 ; Archives of Natural History Volume 30 ; 30 >
@@ -170,7 +170,7 @@
 	
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
-      attr[journal_id] = brw
+      param[journal_id] = brw
       implicit < status ; year ; name ; param[volume_name] >
     
       au < ready ; 2008-2009 ; Britain and the World Volume 1 ; 1 >
