@@ -394,8 +394,10 @@
     >
 
     param[base_url] = http://spcare.bmj.com/
+    
+    comment[notReady] = Found a permission page for V1.
 
-    au < HighWirePressH20Plugin ; testing ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; notReady ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 >
 
   }
@@ -814,10 +816,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://heart.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1939 ; Heart Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1940 ; Heart Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1941 ; Heart Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1943 ; Heart Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1939 ; Heart Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1940 ; Heart Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1941 ; Heart Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1943 ; Heart Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 1944 ; Heart Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 1945 ; Heart Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 1946 ; Heart Volume 8 ; 8 >
@@ -1152,7 +1154,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; testing ; 1987 ; Journal of Medical Ethics Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; ready ; 1988 ; Journal of Medical Ethics Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; testing ; 1989 ; Journal of Medical Ethics Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Medical Ethics Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 1990 ; Journal of Medical Ethics Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of Medical Ethics Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of Medical Ethics Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of Medical Ethics Volume 19 ; 19 >
