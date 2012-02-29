@@ -395,7 +395,7 @@
 
     param[base_url] = http://spcare.bmj.com/
     
-    comment[notReady] = Found a permission page for V1.
+    comment[notReady] = Found a logon page for V1.
 
     au < HighWirePressH20Plugin ; notReady ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 >
