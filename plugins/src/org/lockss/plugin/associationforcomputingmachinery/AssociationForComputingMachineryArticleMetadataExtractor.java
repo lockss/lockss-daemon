@@ -54,10 +54,10 @@ public class AssociationForComputingMachineryArticleMetadataExtractor implements
 		super();
 	}
 	
-	 protected void addAccessUrl(ArticleMetadata am, ArticleFiles af) 
+	 protected void addAccessUrl(ArticleMetadata am, CachedUrl cu) 
 	 {
 		    if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL)) 
-		      am.put(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
+		      am.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
 	 }
 	
 	@Override
@@ -123,8 +123,10 @@ public class AssociationForComputingMachineryArticleMetadataExtractor implements
 	    }
 
 	    public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
+	    	if(collectedArticles.contains(cu.getUrl()))
+	    		return;
 	    	collectedArticles.add(cu.getUrl());
-	      addAccessUrl(am, af);
+	      addAccessUrl(am, cu);
 	      parent.emitMetadata(af, am);
 	    }
 
