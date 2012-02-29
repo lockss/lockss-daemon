@@ -5231,6 +5231,25 @@
     {
 
       title <
+        name = Clinical EEG and Neuroscience ;
+        issn = 1550-0594 ;
+        issnl = 1550-0594
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eeg.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+
+        au < exists ; 1988 ; Clinical EEG and Neuroscience Volume 19 ; 19 >
+        au < exists ; 1989 ; Clinical EEG and Neuroscience Volume 20 ; 20 >
+        au < exists ; 2012 ; Clinical EEG and Neuroscience Volume 43 ; 43 >
+      
+    }
+    
+    {
+
+      title <
         name = Clinical Nursing Research ;
         issn = 1054-7738 ;
         eissn = 1552-3799 ;
