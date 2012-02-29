@@ -4334,7 +4334,6 @@
         param[base_url] = http://cjs.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doesNotExist ; 1984 ; Canadian Journal of School Psychology Volume 8 ; 8 >
         au < manifest ; 1985 ; Canadian Journal of School Psychology Volume 9 ; 9 >
         au < manifest ; 1995 ; Canadian Journal of School Psychology Volume 10 ; 10 >
         au < manifest ; 1996 ; Canadian Journal of School Psychology Volume 11 ; 11 >
@@ -5243,6 +5242,28 @@
 
         au < exists ; 1988 ; Clinical EEG and Neuroscience Volume 19 ; 19 >
         au < exists ; 1989 ; Clinical EEG and Neuroscience Volume 20 ; 20 >
+        au < exists ; 1990 ; Clinical EEG and Neuroscience Volume 21 ; 21 >
+        au < exists ; 1991 ; Clinical EEG and Neuroscience Volume 22 ; 22 >
+        au < exists ; 1992 ; Clinical EEG and Neuroscience Volume 23 ; 23 >
+        au < exists ; 1993 ; Clinical EEG and Neuroscience Volume 24 ; 24 >
+        au < exists ; 1994 ; Clinical EEG and Neuroscience Volume 25 ; 25 >
+        au < exists ; 1995 ; Clinical EEG and Neuroscience Volume 26 ; 26 >
+        au < exists ; 1996 ; Clinical EEG and Neuroscience Volume 27 ; 27 >
+        au < exists ; 1997 ; Clinical EEG and Neuroscience Volume 28 ; 28 >
+        au < exists ; 1998 ; Clinical EEG and Neuroscience Volume 29 ; 29 >
+        au < exists ; 1999 ; Clinical EEG and Neuroscience Volume 30 ; 30 >
+        au < exists ; 2000 ; Clinical EEG and Neuroscience Volume 31 ; 31 >
+        au < exists ; 2001 ; Clinical EEG and Neuroscience Volume 32 ; 32 >
+        au < exists ; 2002 ; Clinical EEG and Neuroscience Volume 33 ; 33 >
+        au < exists ; 2003 ; Clinical EEG and Neuroscience Volume 34 ; 34 >
+        au < exists ; 2004 ; Clinical EEG and Neuroscience Volume 35 ; 35 >
+        au < exists ; 2005 ; Clinical EEG and Neuroscience Volume 36 ; 36 >
+        au < exists ; 2006 ; Clinical EEG and Neuroscience Volume 37 ; 37 >
+        au < exists ; 2007 ; Clinical EEG and Neuroscience Volume 38 ; 38 >
+        au < exists ; 2008 ; Clinical EEG and Neuroscience Volume 39 ; 39 >
+        au < exists ; 2009 ; Clinical EEG and Neuroscience Volume 40 ; 40 >
+        au < exists ; 2010 ; Clinical EEG and Neuroscience Volume 41 ; 41 >
+        au < exists ; 2011 ; Clinical EEG and Neuroscience Volume 42 ; 42 >
         au < exists ; 2012 ; Clinical EEG and Neuroscience Volume 43 ; 43 >
       
     }
@@ -29077,6 +29098,8 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2011 ; Organizational Psychology Review Volume 1 ; 1 >
+        au < expected ; 2012 ; Organizational Psychology Review Volume 2 ; 2 >
+
       }
 
     }
@@ -30912,6 +30935,8 @@ comment[mpj] = now published by Brill
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 222 ; 222 >
         au < manifest ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 223 ; 223 >
         au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 224 ; 224 >
+        au < doesNotExist ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 225 ; 225 >
+        au < expected ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 226 ; 226 >
 
       }
 
