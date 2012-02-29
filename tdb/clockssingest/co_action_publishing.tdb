@@ -336,6 +336,7 @@
     au < manifest ; exists ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
     au < released ; crawling ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
     au < released ; crawling ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
+    au < exists ; exists ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
     
   }
 
@@ -375,6 +376,7 @@
     au < manifest ; exists ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 >
     au < manifest ; exists ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 >
     au < notReady ; exists ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
+    au < exists ; exists ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
 
   }
 
@@ -391,6 +393,7 @@
 
     au < released ; crawling ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 >
     au < released ; crawling ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
+    au < exists ; exists ; 2012 ; Nano Reviews [including Supplements] Volume 3 ; 3 ; 2012 >
 
   }
 
@@ -406,6 +409,7 @@
     param[journal_id] = pba
 
     au < released ; crawling ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 21 ; 2012 >
 
   }
 
@@ -452,6 +456,7 @@
     au < manifest ; exists ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
     au < manifest ; exists ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
     au < notReady ; exists ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
+    au < exists ; exists ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
 
 
   }
@@ -487,6 +492,7 @@
     au < manifest ; exists ; 2009 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 17 ; 17 ; 2009 >
     au < manifest ; exists ; 2010 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 18 ; 18 ; 2010 >
     au < crawling ; exists ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 ; 2011 >
+    au < exists ; exists ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 >
 
   }
 
@@ -547,6 +553,7 @@
     param[journal_id] = snp
 
     au < released ; crawling ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 >
+    au < exists ; exists ; 2012 ; Socioaffective Neuroscience & Psychology Volume 2 ; 2 ; 2012 >
 
   }
 
