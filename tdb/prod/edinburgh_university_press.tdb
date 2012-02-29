@@ -15,18 +15,6 @@
 
     {
 
-      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
-      param[base_url] = http://www.euppublishing.com/
-      param[journal_id] = afr
-      implicit < status ; year ; name ; param[volume_name] >
-      comment[2011] = from 2011 published by Cambridge University Press
-
-      au < doesNotExist ; 2011 ; Africa: The Journal of the International African Institute Volume 81 ; 81 >
-
-    }
-
-    {
-
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = africa_the_journal_of_the_international_african_institute
