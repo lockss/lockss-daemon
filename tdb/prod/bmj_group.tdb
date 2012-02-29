@@ -566,7 +566,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; British Journal of Sports Medicine Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Journal of Sports Medicine Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; released ; 2011 ; British Journal of Sports Medicine Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; British Journal of Sports Medicine Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; British Journal of Sports Medicine Volume 46 ; 46 >
 
   }
 
@@ -1138,19 +1138,19 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     param[base_url] = http://jme.bmj.com/
 
     au < HighWirePressH20Plugin ; ready ; 1975 ; Journal of Medical Ethics Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Medical Ethics Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1976 ; Journal of Medical Ethics Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; ready ; 1977 ; Journal of Medical Ethics Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 1978 ; Journal of Medical Ethics Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; ready ; 1979 ; Journal of Medical Ethics Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of Medical Ethics Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of Medical Ethics Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1981 ; Journal of Medical Ethics Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of Medical Ethics Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; testing ; 1983 ; Journal of Medical Ethics Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; Journal of Medical Ethics Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1984 ; Journal of Medical Ethics Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of Medical Ethics Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of Medical Ethics Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; testing ; 1987 ; Journal of Medical Ethics Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 1988 ; Journal of Medical Ethics Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1988 ; Journal of Medical Ethics Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; testing ; 1989 ; Journal of Medical Ethics Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Medical Ethics Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of Medical Ethics Volume 17 ; 17 >
