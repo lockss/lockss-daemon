@@ -726,7 +726,7 @@
     param[collection_id] = PAI
     implicit < status ; year ; name ; param[year] >
 
-    au < testing ; 1995 ; Privacy Act Issuances 1995 ; 1995 >
+    au < ready ; 1995 ; Privacy Act Issuances 1995 ; 1995 >
     au < manifest ; 1997 ; Privacy Act Issuances 1997 ; 1997 >
     au < manifest ; 1999 ; Privacy Act Issuances 1999 ; 1999 >
     au < manifest ; 2001 ; Privacy Act Issuances 2001 ; 2001 >
@@ -962,11 +962,11 @@
 
     au < manifest ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; 1993 >
     au < manifest ; 1994 ; Weekly Compilation of Presidential Documents 1994 ; 1994 >
-    au < testing ; 1995 ; Weekly Compilation of Presidential Documents 1995 ; 1995 >
-    au < manifest ; 1996 ; Weekly Compilation of Presidential Documents 1996 ; 1996 >
-    au < manifest ; 1997 ; Weekly Compilation of Presidential Documents 1997 ; 1997 >
-    au < manifest ; 1998 ; Weekly Compilation of Presidential Documents 1998 ; 1998 >
-    au < manifest ; 1999 ; Weekly Compilation of Presidential Documents 1999 ; 1999 >
+    au < ready ; 1995 ; Weekly Compilation of Presidential Documents 1995 ; 1995 >
+    au < ready ; 1996 ; Weekly Compilation of Presidential Documents 1996 ; 1996 >
+    au < ready ; 1997 ; Weekly Compilation of Presidential Documents 1997 ; 1997 >
+    au < ready ; 1998 ; Weekly Compilation of Presidential Documents 1998 ; 1998 >
+    au < ready ; 1999 ; Weekly Compilation of Presidential Documents 1999 ; 1999 >
     au < ready ; 2000 ; Weekly Compilation of Presidential Documents 2000 ; 2000 >
     au < manifest ; 2001 ; Weekly Compilation of Presidential Documents 2001 ; 2001 >
     au < manifest ; 2002 ; Weekly Compilation of Presidential Documents 2002 ; 2002 >
