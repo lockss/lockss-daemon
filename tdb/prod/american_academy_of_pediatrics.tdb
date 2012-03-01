@@ -27,22 +27,22 @@
       au < ready ; 2002 ; AAP Grand Rounds Volume 8 ; 8 >
       au < ready ; 2003 ; AAP Grand Rounds Volume 9 ; 9 >
       au < ready ; 2003 ; AAP Grand Rounds Volume 10 ; 10 >
-      au < testing ; 2004 ; AAP Grand Rounds Volume 11 ; 11 >
-      au < testing ; 2004 ; AAP Grand Rounds Volume 12 ; 12 >
+      au < ready ; 2004 ; AAP Grand Rounds Volume 11 ; 11 >
+      au < ready ; 2004 ; AAP Grand Rounds Volume 12 ; 12 >
       au < testing ; 2005 ; AAP Grand Rounds Volume 13 ; 13 >
-      au < testing ; 2005 ; AAP Grand Rounds Volume 14 ; 14 >
-      au < testing ; 2006 ; AAP Grand Rounds Volume 15 ; 15 >
+      au < ready ; 2005 ; AAP Grand Rounds Volume 14 ; 14 >
+      au < ready ; 2006 ; AAP Grand Rounds Volume 15 ; 15 >
       au < testing ; 2006 ; AAP Grand Rounds Volume 16 ; 16 >
       au < testing ; 2007 ; AAP Grand Rounds Volume 17 ; 17 >
       au < testing ; 2007 ; AAP Grand Rounds Volume 18 ; 18 >
-      au < testing ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
+      au < ready ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
       au < testing ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
-      au < testing ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
-      au < testing ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
-      au < testing ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
-      au < testing ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
-      au < testing ; 2011 ; AAP Grand Rounds Volume 25 ; 25 >
-      au < testing ; 2011 ; AAP Grand Rounds Volume 26 ; 26 >
+      au < ready ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
+      au < ready ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
+      au < ready ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
+      au < ready ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
+      au < ready ; 2011 ; AAP Grand Rounds Volume 25 ; 25 >
+      au < ready ; 2011 ; AAP Grand Rounds Volume 26 ; 26 >
       au < testing ; 2012 ; AAP Grand Rounds Volume 27 ; 27 >
       au < expected ; 2012 ; AAP Grand Rounds Volume 28 ; 28 >
 
@@ -64,15 +64,15 @@
       param[base_url] = http://aapnews.aappublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1985 ; AAP News Volume 1 ; 1 >
-      au < manifest ; 1986 ; AAP News Volume 2 ; 2 >
-      au < manifest ; 1987 ; AAP News Volume 3 ; 3 >
-      au < manifest ; 1988 ; AAP News Volume 4 ; 4 >
-      au < manifest ; 1989 ; AAP News Volume 5 ; 5 >
-      au < manifest ; 1990 ; AAP News Volume 6 ; 6 >
-      au < manifest ; 1991 ; AAP News Volume 7 ; 7 >
-      au < manifest ; 1992 ; AAP News Volume 8 ; 8 >
-      au < manifest ; 1993 ; AAP News Volume 9 ; 9 >
+      au < testing ; 1985 ; AAP News Volume 1 ; 1 >
+      au < testing ; 1986 ; AAP News Volume 2 ; 2 >
+      au < testing ; 1987 ; AAP News Volume 3 ; 3 >
+      au < testing ; 1988 ; AAP News Volume 4 ; 4 >
+      au < testing ; 1989 ; AAP News Volume 5 ; 5 >
+      au < testing ; 1990 ; AAP News Volume 6 ; 6 >
+      au < testing ; 1991 ; AAP News Volume 7 ; 7 >
+      au < testing ; 1992 ; AAP News Volume 8 ; 8 >
+      au < testing ; 1993 ; AAP News Volume 9 ; 9 >
       au < manifest ; 1994 ; AAP News Volume 10 ; 10 >
       au < manifest ; 1995 ; AAP News Volume 11 ; 11 >
       au < manifest ; 1996 ; AAP News Volume 12 ; 12 >
