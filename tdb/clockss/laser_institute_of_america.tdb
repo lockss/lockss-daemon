@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Laser Institute of America
+  >
+  
+  {
+  
+    title <
+      name = Laser Institute of America Source Content
+    >
+    
+    plugin = org.lockss.plugin.laserinstituteofamerica.ClockssLaserInstituteOfAmericaSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/lia-released/
+    proxy = DIRECT
+    comment[publishing_platform] = Another publisher on the AIP platform
+    implicit < status ; year ; name ; param[year] >
+    
+    au < expected ; 2011 ; Laser Institute of America Source Content 2011 ; 2011 >
+    au < expected ; 2012 ; Laser Institute of America Source Content 2012 ; 2012 >
+
+  }
+
+}
