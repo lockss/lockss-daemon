@@ -817,10 +817,11 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     param[base_url] = http://heart.bmj.com/
 
     au < HighWirePressH20Plugin ; testing ; 1939 ; Heart Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 1940 ; Heart Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 1941 ; Heart Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1940 ; Heart Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1941 ; Heart Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1942 ; Heart Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; testing ; 1943 ; Heart Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1944 ; Heart Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 1944 ; Heart Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 1945 ; Heart Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 1946 ; Heart Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 1947 ; Heart Volume 9 ; 9 >
@@ -1251,9 +1252,9 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://jnis.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of NeuroInterventional Surgery Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of NeuroInterventional Surgery Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of NeuroInterventional Surgery Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Journal of NeuroInterventional Surgery Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of NeuroInterventional Surgery Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of NeuroInterventional Surgery Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of NeuroInterventional Surgery Volume 4 ; 4 >
 
   }
