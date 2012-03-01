@@ -285,7 +285,7 @@ while (my $line = <>) {
       if (defined($man_contents)) {
         printf("Page Found!\n");
         if ($man_contents =~ m/$lockss_tag/) {
-          printf("Lockss tag found!");
+          printf("Clockss tag found!");
         } else {
           printf("No Clockss tag found!\n");
         }
@@ -337,6 +337,30 @@ while (my $line = <>) {
   } elsif ($plugin eq "ClockssNaturePublishingGroupPlugin") {
     $url = sprintf("%s%s/clockss/%s_clockss_%d.html", 
       $param{base_url}, $param{journal_id}, $param{journal_id}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+        if ($man_contents =~ m/<TITLE>\s*(.*)\s*<\/TITLE>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--"
+      }
+    } else {
+      $result = "--"
+    }
+    sleep(5);
+  } elsif ($plugin eq "ClockssIOPSciencePlugin") {
+    $url = sprintf("%s%s/%s", 
+      $param{base_url}, $param{journal_issn}, $param{volume_name});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
