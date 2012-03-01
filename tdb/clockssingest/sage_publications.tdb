@@ -30073,11 +30073,10 @@
       eissn = 1461-7382
     >
 
-    param[base_url] = http://sex.sagepub.com/
-
     {
 
       pluginSuffix = ClockssHighWirePlugin
+      param[base_url] = http://sexualities.sagepub.com/
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Sexualities Volume 11 ; 11 ;  >
@@ -30088,6 +30087,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://sex.sagepub.com/
 
       au < manifest ; exists ; 1998 ; Sexualities Volume 1 ; 1 ; >
       au < manifest ; exists ; 1999 ; Sexualities Volume 2 ; 2 ; >
