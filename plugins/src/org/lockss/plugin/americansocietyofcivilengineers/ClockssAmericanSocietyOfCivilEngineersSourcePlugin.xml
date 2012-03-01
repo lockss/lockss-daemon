@@ -4,6 +4,10 @@
     <string>org.lockss.plugin.americansocietyofcivilengineers.ClockssAmericanSocietyOfCivilEngineersSourcePlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
     <string>required_daemon_version</string>
     <string>1.38.0</string>
   </entry>
@@ -13,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -24,41 +28,17 @@
     <string>&quot;American Society of Civil Engineers Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>1</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,&quot;^%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$&quot;, base_url</string>
-      <string>4,&quot;^%s%d&quot;, base_url, year</string>
-      <string>1,&quot;^%s%d&quot;, base_url, year</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%s%d&quot;, base_url, year</string>
-  </entry>
-  <entry>
-  	<string>au_feature_urls</string>
-  	<map>
-  	  <entry>
-  	    <string>au_title</string>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
         <string>&quot;%s%d&quot;, base_url, year</string>
-  	  </entry>
-  	</map>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_archive_file_types</string>
     <string>standard</string>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -77,27 +57,4 @@
       </entry>
     </map>
   </entry>
-  <entry>
-    <string>plugin_config_props</string>
-    <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base Pathname (uses base_url attribute)</displayName>
-        <description>Of the form: XXX0000/</description>
-        <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-      	<key>year</key>
-      	<displayName>Year</displayName>
-      	<description>Tells the AU which year's content to include</description>
-      	<type>4</type>
-      	<size>4</size>
-      	<definitional>true</definitional>
-      	<defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-    </list>
-  </entry>
-</map>    
+</map>
