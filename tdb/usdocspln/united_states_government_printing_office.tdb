@@ -462,7 +462,7 @@
     au < manifest ; 2002 ; Economic Indicators 2002 ; 2002 >
     au < manifest ; 2003 ; Economic Indicators 2003 ; 2003 >
     au < manifest ; 2004 ; Economic Indicators 2004 ; 2004 >
-    au < testing ; 2005 ; Economic Indicators 2005 ; 2005 >
+    au < ready ; 2005 ; Economic Indicators 2005 ; 2005 >
     au < manifest ; 2006 ; Economic Indicators 2006 ; 2006 >
     au < manifest ; 2007 ; Economic Indicators 2007 ; 2007 >
     au < manifest ; 2008 ; Economic Indicators 2008 ; 2008 >
@@ -727,11 +727,11 @@
     implicit < status ; year ; name ; param[year] >
 
     au < ready ; 1995 ; Privacy Act Issuances 1995 ; 1995 >
-    au < manifest ; 1997 ; Privacy Act Issuances 1997 ; 1997 >
-    au < manifest ; 1999 ; Privacy Act Issuances 1999 ; 1999 >
-    au < manifest ; 2001 ; Privacy Act Issuances 2001 ; 2001 >
-    au < manifest ; 2003 ; Privacy Act Issuances 2003 ; 2003 >
-    au < testing ; 2005 ; Privacy Act Issuances 2005 ; 2005 >
+    au < ready ; 1997 ; Privacy Act Issuances 1997 ; 1997 >
+    au < ready ; 1999 ; Privacy Act Issuances 1999 ; 1999 >
+    au < ready ; 2001 ; Privacy Act Issuances 2001 ; 2001 >
+    au < ready ; 2003 ; Privacy Act Issuances 2003 ; 2003 >
+    au < ready ; 2005 ; Privacy Act Issuances 2005 ; 2005 >
 
   }
 
