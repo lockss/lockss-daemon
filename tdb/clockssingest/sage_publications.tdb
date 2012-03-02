@@ -4765,24 +4765,27 @@
 
   }
 
+  {
+
+    title <
+      name = Clinical Pharmacology in Drug Development ;
+      issn = 2160-763X ;
+      eissn = 2160-7648 ;
+      issnl = 2160-763X
+    >
+
+    param[base_url] = http://cpd.sagepub.com/
+
+
     {
+    
+      pluginSuffix = ClockssHighWirePressH20Plugin
 
-      title <
-        name = Clinical Pharmacology in Drug Development ;
-        issn = 2160-763X ;
-        eissn = 2160-7648 ;
-        issnl = 2160-763X
-      >
+      au < expected ; exists ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 ; >
 
-      {
-      
-        pluginSuffix = ClockssHighWirePressH20Plugin
-
-        au < expected ; exists ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 ; >
-
-      }
-      
     }
+    
+  }
 
   {
   
@@ -12326,6 +12329,41 @@
   }
 
   {
+
+    title <
+      name = Journal of Endotoxin Research ;
+      issn = 0968-0519 ;
+      eissn = 1743-2839 ;
+      issnl = 0968-0519
+    >
+    
+    comment[continued_by] = 1753-4259
+    comment[ini] = Discontinued in 2007. Continued by Innate Immunity.
+
+    {
+
+      param[base_url] = http://ini.sagepub.com/
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 1994 ; Journal of Endotoxin Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1995 ; Journal of Endotoxin Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1996 ; Journal of Endotoxin Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1997 ; Journal of Endotoxin Research Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1999 ; Journal of Endotoxin Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2000 ; Journal of Endotoxin Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2001 ; Journal of Endotoxin Research Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2002 ; Journal of Endotoxin Research Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2003 ; Journal of Endotoxin Research Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2004 ; Journal of Endotoxin Research Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2005 ; Journal of Endotoxin Research Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2006 ; Journal of Endotoxin Research Volume 12 ; 12 ; >
+
+    }
+    
+  }
+
+  {
   
     title <
       name = Innate Immunity ;
@@ -12349,18 +12387,6 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1994 ; Innate Immunity Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1995 ; Innate Immunity Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1996 ; Innate Immunity Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1997 ; Innate Immunity Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1999 ; Innate Immunity Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2000 ; Innate Immunity Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2001 ; Innate Immunity Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2002 ; Innate Immunity Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2003 ; Innate Immunity Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2004 ; Innate Immunity Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2005 ; Innate Immunity Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2006 ; Innate Immunity Volume 12 ; 12 ; >
       au < manifest ; exists ; 2007 ; Innate Immunity Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Innate Immunity Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Innate Immunity Volume 15 ; 15 ; >
