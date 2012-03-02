@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.289 2012-02-16 10:30:31 tlipkis Exp $
+ $Id: build.xml,v 1.290 2012-03-02 03:06:36 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1942,7 +1942,7 @@ published on the Web. http://www.lockss.org
 
   <!-- ==================================================================== -->
   <target name="test-plugins"
-   depends="prepare.run.test,jar-plugins-tests,load-plugins"
+   depends="prepare.run.test,jar-plugins-tests,xmllint-plugins,load-plugins"
    description="Run all plugin unit tests (plugins/test/src/**/Test*.class)" >
     <condition property="plug.include" value="${include}" else="**/Test*.java">
       <isset property="include" />
@@ -2219,6 +2219,7 @@ Test results in ${test.results}
   </target>
 
   <target name="xmllint"
+   depends="xmllint-plugins"
    description="Run xmllint on xml files" >
     <echo message="Checking .xml files"/>
     <apply executable="xmllint" dir="${basedir}"
@@ -2231,7 +2232,22 @@ Test results in ${test.results}
       <fileset dir="${basedir}" includes="test/frameworks/*.xml"/>
       <fileset dir="${basedir}" includes="src/**/*.xml"/>
       <fileset dir="${basedir}" includes="*/src/**/*.xml"/>
-      <fileset dir="${basedir}" includes="*/*/src/**/*.xml"/>
+      <fileset dir="${basedir}" includes="*/*/src/**/*.xml"
+	       excludes="plugins/**/*.xml"/>
+    </apply>
+  </target>
+
+  <target name="xmllint-plugins"
+   description="Run xmllint on plugin xml files" >
+    <echo message="Checking plugin .xml files"/>
+    <apply executable="xmllint" dir="${basedir}"
+           failonerror="true"
+           failifexecutionfails="false"
+           resultproperty="xmllint.result"
+           relative="true"
+           parallel="true">
+      <arg value="--noout"/>
+      <fileset dir="${basedir}" includes="plugins/**/*.xml"/>
     </apply>
   </target>
 
