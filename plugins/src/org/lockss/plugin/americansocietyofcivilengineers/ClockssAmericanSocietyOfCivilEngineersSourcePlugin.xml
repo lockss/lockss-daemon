@@ -4,9 +4,9 @@
     <string>org.lockss.plugin.americansocietyofcivilengineers.ClockssAmericanSocietyOfCivilEngineersSourcePlugin</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>3</string>
-  </entry>
+  	<string>plugin_version</string>
+  	<string>4</string>
+  </entry
   <entry>
     <string>required_daemon_version</string>
     <string>1.38.0</string>
@@ -28,15 +28,6 @@
     <string>&quot;American Society of Civil Engineers Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
-    <string>au_feature_urls</string>
-    <map>
-      <entry>
-        <string>au_title</string>
-        <string>&quot;%s%d&quot;, base_url, year</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
     <string>plugin_archive_file_types</string>
     <string>standard</string>
   </entry>
@@ -52,7 +43,7 @@
     <string>application/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
-        <string>*;DublinCore</string>
+        <string>*</string>
         <string>org.lockss.plugin.americansocietyofcivilengineers.AmericanSocietyOfCivilEngineersMetadataExtractorFactory</string>
       </entry>
     </map>

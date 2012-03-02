@@ -1,0 +1,100 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.americaninstituteofphysics.AmericanInstituteOfPhysicsFTPPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;American Institute of Physics FTP Plugin (CLOCKSS), Base Pathname %s, Year %d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>American Institute of Physics FTP Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$&quot;, base_url</string>
+      <string>4,&quot;^%s%d&quot;, base_url, year</string>
+      <string>2,&quot;printimages&quot;</string>
+      <string>1,&quot;^%s%d&quot;, base_url, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%s%d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+  	  <entry>
+  	    <string>au_title</string>
+        <string>&quot;%s%d&quot;, base_url, year</string>
+  	  </entry>
+  	  <entry>
+  	    <string>au_issue</string>
+        <string>&quot;%s%d/[^/]+/[^/]+/vol_\\d+/iss_\\d+&quot;, base_url, year</string>
+  	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+    	<string>&quot;%s%d/[^/]+/[^/]+/vol_\\d+&quot;, base_url, year</string>
+	  </entry>
+  	</map>
+  </entry>
+  <entry>
+    <string>plugin_archive_file_types</string>
+    <string>standard</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.americaninstituteofphysics.AmericanInstituteOfPhysicsArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.americaninstituteofphysics.AmericanInstituteOfPhysicsArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.americaninstituteofphysics.AmericanInstituteOfPhysicsMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base Pathname (uses base_url attribute)</displayName>
+        <description>Of the form: XXX0000/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+      	<key>year</key>
+      	<displayName>Year</displayName>
+      	<description>Tells the AU which year's content to include</description>
+      	<type>4</type>
+      	<size>4</size>
+      	<definitional>true</definitional>
+      	<defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>    
