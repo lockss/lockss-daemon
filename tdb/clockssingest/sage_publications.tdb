@@ -2116,11 +2116,11 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 623 ; 623 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 624 ; 624 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 625 ; 625 ; >
-      au < released ; crawling ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 626 ; 626 ;  >
+      au < manifest ; exists ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 626 ; 626 ;  >
       au < manifest ; exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 627 ; 627 ; >
-      au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 628 ; 628 ;  >
-      au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 629 ; 629 ;  >
-      au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 630 ; 630 ;  >
+      au < manifest ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 628 ; 628 ;  >
+      au < manifest ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 629 ; 629 ;  >
+      au < manifest ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 630 ; 630 ;  >
       au < released ; crawling ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 631 ; 631 ; >
       au < released ; crawling ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 632 ; 632 ; >
       au < manifest ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 633 ; 633 ; >
@@ -11026,7 +11026,7 @@
       au < manifest ; exists ; 2007 ; Health Informatics Journal Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Health Informatics Journal Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Health Informatics Journal Volume 15 ; 15 ; >
-      au < released ; crawling ; 2010 ; Health Informatics Journal Volume 16 ; 16 ;  >
+      au < manifest ; exists ; 2010 ; Health Informatics Journal Volume 16 ; 16 ;  >
       au < released ; crawling ; 2011 ; Health Informatics Journal Volume 17 ; 17 ; >
       au < expected ; exists ; 2012 ; Health Informatics Journal Volume 18 ; 18 ; >
 
@@ -13361,11 +13361,11 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       comment[irm7] = no more issues after 2010
 
-      au < released ; crawling ; 2005 ; International Journal of Rural Management Volume 1 ; 1 ;  >
-      au < released ; crawling ; 2006 ; International Journal of Rural Management Volume 2 ; 2 ;  >
-      au < released ; crawling ; 2007 ; International Journal of Rural Management Volume 3 ; 3 ;  >
-      au < released ; crawling ; 2008 ; International Journal of Rural Management Volume 4 ; 4 ;  >
-      au < released ; crawling ; 2009 ; International Journal of Rural Management Volume 5 ; 5 ;  >
+      au < manifest ; exists ; 2005 ; International Journal of Rural Management Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 2006 ; International Journal of Rural Management Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2007 ; International Journal of Rural Management Volume 3 ; 3 ;  >
+      au < manifest ; exists ; 2008 ; International Journal of Rural Management Volume 4 ; 4 ;  >
+      au < manifest ; exists ; 2009 ; International Journal of Rural Management Volume 5 ; 5 ;  >
       au < manifest ; exists ; 2010 ; International Journal of Rural Management Volume 6 ; 6 ; >
 
     }
@@ -22920,7 +22920,7 @@
         au < exists ; exists ; 2008 ; Journalism & Mass Communication Educator Volume 63 ; 63 ; >
         au < exists ; exists ; 2009 ; Journalism & Mass Communication Educator Volume 64 ; 64 ; >
         au < exists ; exists ; 2010 ; Journalism & Mass Communication Educator Volume 65 ; 65 ; >
-        au < exists ; exists ; 2011 ; Journalism & Mass Communication Educator Volume 66 ; 66 ; >
+        au < notReady ; exists ; 2011 ; Journalism & Mass Communication Educator Volume 66 ; 66 ; >
         au < manifest ; exists ; 2012 ; Journalism & Mass Communication Educator Volume 67 ; 67 ; >
 
       }
@@ -29750,7 +29750,7 @@
       au < manifest ; exists ; 2007 ; Science Communication Volume 29 ; 29 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Science Communication Volume 30 ; 30 ; >
       au < manifest ; exists ; 2009 ; Science Communication Volume 31 ; 31 ;  >
-      au < released ; crawling ; 2010 ; Science Communication Volume 32 ; 32 ;  >
+      au < manifest ; exists ; 2010 ; Science Communication Volume 32 ; 32 ;  >
       au < released ; crawling ; 2011 ; Science Communication Volume 33 ; 33 ; >
       au < manifest ; exists ; 2012 ; Science Communication Volume 34 ; 34 ; >
 
@@ -31996,7 +31996,7 @@
       au < exists ; exists ; 2008 ; Theology Volume 111 ; 111 ; >
       au < manifest ; exists ; 2009 ; Theology Volume 112 ; 112 ; >
       au < manifest ; exists ; 2010 ; Theology Volume 113 ; 113 ; >
-      au < released ; crawling ; 2011 ; Theology Volume 114 ; 114 ; >
+      au < manifest ; exists ; 2011 ; Theology Volume 114 ; 114 ; >
       au < manifest ; exists ; 2012 ; Theology Volume 115 ; 115 ; >
 
     }
