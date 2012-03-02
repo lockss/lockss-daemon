@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanSocietyOfCivilEngineersMetadataExtractorFactory.java,v 1.1 2012-03-01 01:36:52 dylanrhodes Exp $
+ * $Id: AmericanSocietyOfCivilEngineersMetadataExtractorFactory.java,v 1.2 2012-03-02 16:26:36 dylanrhodes Exp $
  */
 
 /*
@@ -33,20 +33,12 @@
 package org.lockss.plugin.americansocietyofcivilengineers;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.apache.commons.collections.MultiMap;
-import org.apache.commons.collections.map.MultiValueMap;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.BaseCachedUrl;
-
 
 /**
  * Files used to write this class constructed from ASCE FTP archive:
@@ -67,20 +59,20 @@ public class AmericanSocietyOfCivilEngineersMetadataExtractorFactory
     implements FileMetadataExtractor {
 	  
     private Pattern[] articleTags = {
-    	Pattern.compile("(<title>)([^<]+)(.*)([^>]+)(</title>)"),
-    	Pattern.compile("(<author.*<fname>)(.*)(</fname>.*<surname>)(.*)(</surname></author>.*)"),
+    	Pattern.compile("(.*<title>)([^<]+)(.*)([^>]+)(</title>.*)"),
+    	Pattern.compile("(.*?<author[^<]+<fname>)([^<]+)(</fname>(<middlename>([^<]+)</middlename>)?)(<surname>)([^<]+)(</surname></author>.*)"),
     	Pattern.compile("(.*issn=\")(.*)(\" jcode.*)"),
     	Pattern.compile("(.*<volume>)(.*)(</volume>.*)"),
-    	Pattern.compile("(<issue printdate=\")(.*)(\">.*</issue>.*)"),
-    	Pattern.compile("(<issue printdate=\".*\">)(.*)(</issue>.*)"),
-    	Pattern.compile("(<doi>)(.*)(</doi>)"),
-    	Pattern.compile("(<country>)(.*)(</country>.*)"),
-    	Pattern.compile("(<keywords.*>)(.*)(</keywords>)"),
-    	Pattern.compile("(<abstract>)|(</abstract>.*)"),
-    	Pattern.compile("(<cpyrt><cpyrtdate date=\")(.*)(\"/><cpyrtholder>)(.*)(</cpyrtholder></cpyrt>)")};
+    	Pattern.compile("(.*<issue printdate=\")(.*)(\">.*</issue>.*)"),
+    	Pattern.compile("(.*<issue printdate=\".*\">)(.*)(</issue>.*)"),
+    	Pattern.compile("(.*<doi>)(.*)(</doi>.*)"),
+    	Pattern.compile("(.*<country>)(.*)(</country>.*)"),
+    	Pattern.compile("(.*<keywords.*>)(.*)(</keywords>.*)"),
+    	Pattern.compile("(.*<abstract>)|(</abstract>.*)"),
+    	Pattern.compile("(.*<cpyrt><cpyrtdate date=\")(.*)(\"/><cpyrtholder>)(.*)(</cpyrtholder></cpyrt>.*)")};
     
     private String[] valueRegex = {
-    		"$2$4",";$2 $4","$2","$2","$2","$2","$2","$2",";$2","gap","$2"};
+    		"$2$4",";$2 $5 $7","$2","$2","$2","$2","$2","$2",";$2","gap","$2"};
     
     private String[] articleValues = initArticleValues();
     
@@ -89,6 +81,8 @@ public class AmericanSocietyOfCivilEngineersMetadataExtractorFactory
     		MetadataField.FIELD_DOI, MetadataField.DC_FIELD_SOURCE, MetadataField.FIELD_KEYWORDS,
     		MetadataField.DC_FIELD_DESCRIPTION, MetadataField.DC_FIELD_RIGHTS};
     
+    private final int AUTHOR_INDEX = 1;
+        
     /**
      * Use SimpleHtmlMetaTagMetadataExtractor to extract raw metadata, map
      * to cooked fields, then extract extra tags by reading the file.
@@ -101,7 +95,7 @@ public class AmericanSocietyOfCivilEngineersMetadataExtractorFactory
       BufferedReader bReader = new BufferedReader(cu.openForReading());
 	  ArticleMetadata am = new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
 	  boolean emitted = false;
-
+	  
       try {
         for (String line = bReader.readLine(); line != null; line = bReader.readLine()) 
         {
@@ -130,16 +124,14 @@ public class AmericanSocietyOfCivilEngineersMetadataExtractorFactory
      * @param am
      */
     private void putMetadataIn(ArticleMetadata am)
-    {   
-    	log.debug3("Putting metadata into articleMetadata");
-    	
+    {       	
         for(int i = 0; i < articleValues.length; ++i)
         	if(articleValues[i] != null)
         		if(valueRegex[i].contains(";"))
         			am.put(new MetadataField(metadataFields[i],MetadataField.splitAt(";")),
         					articleValues[i]);
         		else
-        			am.put(metadataFields[i],articleValues[i]);
+          			am.put(metadataFields[i],articleValues[i]);
     }
  
     /**
@@ -149,21 +141,38 @@ public class AmericanSocietyOfCivilEngineersMetadataExtractorFactory
     private void extractFrom(String line, BufferedReader reader) throws IOException
     {
     	for(int i = 0; i < articleTags.length; ++i)
-    		if(articleTags[i].matcher(line).find() && !line.contains("bibciteref"))
+       		if(articleTags[i].matcher(line).find() && !line.contains("bibciteref"))
     			if(!valueRegex[i].equals("gap"))
-    				articleValues[i] += articleTags[i].matcher(line).replaceFirst(valueRegex[i]);
-    			else
     			{
-    				log.debug3(line);
+    				articleValues[i] += line.replaceFirst(articleTags[i].toString(), valueRegex[i]);
     				
+    				while(line.contains("</author>") && i == AUTHOR_INDEX)
+    				{
+    					line = removeFirstAuthorFrom(line);
+    					if(line.contains("</author>"))
+    						articleValues[i] += line.replaceFirst(articleTags[i].toString(), valueRegex[i]);
+    				}
+    			}	
+    			else
+    			{    				
     				while(line != null && !articleTags[i].matcher(line).find())
     				{
-    					articleValues[i] += line;
+    					articleValues[i] += sanitize(line);
     					line = reader.readLine();
     				}
     			}
     }
     
+    private String removeFirstAuthorFrom(String str)
+    {
+    	return str.replaceFirst("<author[^<]+<fname>[^<]+</fname>(<middlename>[^<]+</middlename>)?<surname>[^<]+</surname></author>","");
+    }
+    
+    private String sanitize(String str)
+    {
+    	return str.replaceAll("\\<.*?>","");
+    }
+        
     /**
      * Returns a String[] of length articleTags.length whose fields are all null
      * @return
