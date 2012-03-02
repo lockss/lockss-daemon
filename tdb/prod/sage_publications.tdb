@@ -25760,7 +25760,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 1974-1975 ; Journal of Urban History Volume 1 ; 1 >
-        au < exists ; 1975-1976 ; Journal of Urban History Volume 2 ; 2 >
+        au < doesNotExist ; 1975-1976 ; Journal of Urban History Volume 2 ; 2 >
         au < manifest ; 1976-1977 ; Journal of Urban History Volume 3 ; 3 >
         au < manifest ; 1977-1978 ; Journal of Urban History Volume 4 ; 4 >
         au < manifest ; 1978-1979 ; Journal of Urban History Volume 5 ; 5 >
@@ -37868,6 +37868,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009-2010 ; Word of Mouth Volume 21 ; 21 >
         au < manifest ; 2010-2011 ; Word of Mouth Volume 22 ; 22 >
         au < manifest ; 2012 ; Word of Mouth Volume 23 ; 23 >
+        au < expected ; 2012 ; Word of Mouth Volume 24 ; 24 >
 
       }
 
