@@ -10794,7 +10794,7 @@
         issnl = 1077-727X
       >
       
-      comment[fcsrj] = no longer at sage.
+      comment[fcsrj] = Family and Consumer Sciences Research Journal has moved to Wiley.
 
       {
 
@@ -24490,6 +24490,8 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Journal of South Asian Development Volume 3 ; 3 >
         au < doNotProcess ; 2009 ; Journal of South Asian Development Volume 4 ; 4 >
         au < manifest ; 2010 ; Journal of South Asian Development Volume 5 ; 5 >
+        au < exists ; 2011 ; Journal of South Asian Development Volume 6 ; 6 >
+        au < expected ; 2012 ; Journal of South Asian Development Volume 7 ; 7 >
 
       }
 
@@ -33488,6 +33490,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 >
         au < manifest ; 2010 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 14 ; 14 >
         au < ready ; 2011 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 15 ; 15 >
+        au < expected ; 2012 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 16 ; 16 >
         
       }
 
@@ -35232,6 +35235,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < ready ; 2011 ; Teaching of Psychology Volume 38 ; 38 >
+        au < exists ; 2012 ; Teaching of Psychology Volume 39 ; 39 >
         
       }
       
@@ -36132,6 +36136,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < ready ; 2011 ; Therapeutic Advances in Psychopharmacology Volume 1 ; 1 >
+        au < expected ; 2012 ; Therapeutic Advances in Psychopharmacology Volume 2 ; 2 >
         
       }
 
@@ -37075,11 +37080,20 @@ comment[mpj] = now published by Brill
         param[base_url] = http://upd.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1984-1985 ; Update: Applications of Research in Music Education Volume 3 ; 3 >
+        au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 4 ; 4 >
+        au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 5 ; 5 >
+        au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 6 ; 6 >
+        au < exists ; 1988-1989 ; Update: Applications of Research in Music Education Volume 7 ; 7 >
         au < manifest ; 1989-1990 ; Update: Applications of Research in Music Education Volume 8 ; 8 >
         au < manifest ; 1990-1991 ; Update: Applications of Research in Music Education Volume 9 ; 9 >
         au < manifest ; 1991-1992 ; Update: Applications of Research in Music Education Volume 10 ; 10 >
         au < manifest ; 1992-1993 ; Update: Applications of Research in Music Education Volume 11 ; 11 >
         au < manifest ; 1993-1994 ; Update: Applications of Research in Music Education Volume 12 ; 12 >
+        au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 13 ; 13 >
+        au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 14 ; 14 >
+        au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 15 ; 15 >
+        au < doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 16 ; 16 >
         au < manifest ; 1998 ; Update: Applications of Research in Music Education Volume 17 ; 17 >
         au < manifest ; 1999-2000 ; Update: Applications of Research in Music Education Volume 18 ; 18 >
         au < manifest ; 2000-2001 ; Update: Applications of Research in Music Education Volume 19 ; 19 >

@@ -12132,6 +12132,14 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1999 ; Indian Historical Review Volume 26 ; 26 ; >
+      au < exists ; exists ; 2000 ; Indian Historical Review Volume 27 ; 27 ; >
+      au < exists ; exists ; 2001 ; Indian Historical Review Volume 28 ; 28 ; >
+      au < exists ; exists ; 2002 ; Indian Historical Review Volume 29 ; 29 ; >
+      au < exists ; exists ; 2003 ; Indian Historical Review Volume 30 ; 30 ; >
+      au < exists ; exists ; 2004 ; Indian Historical Review Volume 31 ; 31 ; >
+      au < exists ; exists ; 2005 ; Indian Historical Review Volume 32 ; 32 ; >
+      au < exists ; exists ; 2006 ; Indian Historical Review Volume 33 ; 33 ; >
       au < manifest ; exists ; 2007 ; Indian Historical Review Volume 34 ; 34 ; >
       au < manifest ; exists ; 2008 ; Indian Historical Review Volume 35 ; 35 ; >
       au < manifest ; exists ; 2009 ; Indian Historical Review Volume 36 ; 36 ; >
@@ -31121,8 +31129,6 @@
       au < doNotProcess ; doNotProcess ; 2008 ; South Asian Survey Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; South Asian Survey Volume 16 ; 16 ; >
       au < manifest ; exists ; 2010 ; South Asian Survey Volume 17 ; 17 ;  >
-      au < doesNotExist ; doesNotExist ; 2011 ; South Asian Survey Volume 18 ; 18 ; >
-      au < expected ; exists ; 2012 ; South Asian Survey Volume 19 ; 19 ; >
 
     }
 
@@ -31524,8 +31530,6 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Studies in History Volume 24 ; 24 ; >
       au < manifest ; exists ; 2009 ; Studies in History Volume 25 ; 25 ;  >
       au < manifest ; exists ; 2010 ; Studies in History Volume 26 ; 26 ;  >
-      au < doesNotExist ; doesNotExist ; 2011 ; Studies in History Volume 27 ; 27 ; >
-      au < expected ; exists ; 2012 ; Studies in History Volume 28 ; 28 ; >
 
     }
 
@@ -32679,21 +32683,18 @@
       au < manifest ; exists ; 1981 ; Thesis Eleven Volume 2 ; 2 ; >
       au < manifest ; exists ; 1981 ; Thesis Eleven Volume 3 ; 3 ; >
       au < manifest ; exists ; 1982 ; Thesis Eleven Volume 4 ; 4 ; >
-      au < exists ; exists ; 1983 ; Thesis Eleven Volume 5 ; 5 ; >
-      au < exists ; exists ; 1984 ; Thesis Eleven Volume 6 ; 6 ; >
+      au < exists ; exists ; 1982 ; Thesis Eleven Volume 5-6 ; 5-6 ; >
       au < manifest ; exists ; 1983 ; Thesis Eleven Volume 7 ; 7 ; >
       au < manifest ; exists ; 1984 ; Thesis Eleven Volume 8 ; 8 ; >
       au < manifest ; exists ; 1984 ; Thesis Eleven Volume 9 ; 9 ; >
-      au < exists ; exists ; 1985 ; Thesis Eleven Volume 10 ; 10 ; >
-      au < exists ; exists ; 1986 ; Thesis Eleven Volume 11 ; 11 ; >
+      au < exists ; exists ; 1985 ; Thesis Eleven Volume 10-11 ; 10-11 ; >
       au < manifest ; exists ; 1985 ; Thesis Eleven Volume 12 ; 12 ; >
       au < manifest ; exists ; 1986 ; Thesis Eleven Volume 13 ; 13 ; >
       au < manifest ; exists ; 1986 ; Thesis Eleven Volume 14 ; 14 ; >
       au < manifest ; exists ; 1986 ; Thesis Eleven Volume 15 ; 15 ; >
       au < manifest ; exists ; 1987 ; Thesis Eleven Volume 16 ; 16 ; >
       au < manifest ; exists ; 1987 ; Thesis Eleven Volume 17 ; 17 ; >
-      au < exists ; exists ; 1988 ; Thesis Eleven Volume 18 ; 18 ; >
-      au < exists ; exists ; 1989 ; Thesis Eleven Volume 19 ; 19 ; >
+      au < exists ; exists ; 1987 ; Thesis Eleven Volume 18-19 ; 18-19 ; >
       au < manifest ; exists ; 1988 ; Thesis Eleven Volume 20 ; 20 ; >
       au < manifest ; exists ; 1988 ; Thesis Eleven Volume 21 ; 21 ; >
       au < manifest ; exists ; 1989 ; Thesis Eleven Volume 22 ; 22 ; >
@@ -33479,8 +33480,6 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Trends in Amplification Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Trends in Amplification Volume 13 ; 13 ; >
       au < manifest ; exists ; 2010 ; Trends in Amplification Volume 14 ; 14 ;  >
-      au < doesNotExist ; doesNotExist ; 2011 ; Trends in Amplification Volume 15 ; 15 ; >
-      au < expected ; exists ; 2012 ; Trends in Amplification Volume 16 ; 16 ; >
 
     }
 
@@ -33501,7 +33500,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Update: Applications of Research in Music Education Volume 27 ; 27 ;  >
+      au < down ; crawling ; 2008-2009 ; Update: Applications of Research in Music Education Volume 27 ; 27 ;  >
 
     }
 
@@ -33509,35 +33508,33 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1982 ; Update: Applications of Research in Music Education Volume 1 ; 1 ; >
-      au < exists ; exists ; 1983 ; Update: Applications of Research in Music Education Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1984 ; Update: Applications of Research in Music Education Volume 3 ; 3 ; >
-      au < exists ; exists ; 1985 ; Update: Applications of Research in Music Education Volume 4 ; 4 ; >
-      au < exists ; exists ; 1986 ; Update: Applications of Research in Music Education Volume 5 ; 5 ; >
-      au < exists ; exists ; 1987 ; Update: Applications of Research in Music Education Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1988 ; Update: Applications of Research in Music Education Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1989 ; Update: Applications of Research in Music Education Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1990 ; Update: Applications of Research in Music Education Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1991 ; Update: Applications of Research in Music Education Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1992 ; Update: Applications of Research in Music Education Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1993 ; Update: Applications of Research in Music Education Volume 12 ; 12 ; >
-      au < exists ; exists ; 1994 ; Update: Applications of Research in Music Education Volume 13 ; 13 ; >
-      au < exists ; exists ; 1995 ; Update: Applications of Research in Music Education Volume 14 ; 14 ; >
-      au < exists ; exists ; 1996 ; Update: Applications of Research in Music Education Volume 15 ; 15 ; >
-      au < exists ; exists ; 1997 ; Update: Applications of Research in Music Education Volume 16 ; 16 ; >
+      au < exists ; exists ; 1984-1985 ; Update: Applications of Research in Music Education Volume 3 ; 3 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 4 ; 4 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 5 ; 5 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1988-1989 ; Update: Applications of Research in Music Education Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1989-1990 ; Update: Applications of Research in Music Education Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1990-1991 ; Update: Applications of Research in Music Education Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1991-1992 ; Update: Applications of Research in Music Education Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1992-1993 ; Update: Applications of Research in Music Education Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1993-1994 ; Update: Applications of Research in Music Education Volume 12 ; 12 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 13 ; 13 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 14 ; 14 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 15 ; 15 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Update: Applications of Research in Music Education Volume 16 ; 16 ; >
       au < manifest ; exists ; 1998 ; Update: Applications of Research in Music Education Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1999 ; Update: Applications of Research in Music Education Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2000 ; Update: Applications of Research in Music Education Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2001 ; Update: Applications of Research in Music Education Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1999-2000 ; Update: Applications of Research in Music Education Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2000-2001 ; Update: Applications of Research in Music Education Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2001-2002 ; Update: Applications of Research in Music Education Volume 20 ; 20 ; >
       au < manifest ; exists ; 2002 ; Update: Applications of Research in Music Education Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2003 ; Update: Applications of Research in Music Education Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2004 ; Update: Applications of Research in Music Education Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2005 ; Update: Applications of Research in Music Education Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2006 ; Update: Applications of Research in Music Education Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2007 ; Update: Applications of Research in Music Education Volume 26 ; 26 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Update: Applications of Research in Music Education Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2009 ; Update: Applications of Research in Music Education Volume 28 ; 28 ;  >
-      au < manifest ; exists ; 2010 ; Update: Applications of Research in Music Education Volume 29 ; 29 ;  >
+      au < manifest ; exists ; 2003-2004 ; Update: Applications of Research in Music Education Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2004-2005 ; Update: Applications of Research in Music Education Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2005-2006 ; Update: Applications of Research in Music Education Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2006-2007 ; Update: Applications of Research in Music Education Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2007-2008 ; Update: Applications of Research in Music Education Volume 26 ; 26 ; >
+      au < doNotProcess ; doNotProcess ; 2008-2009 ; Update: Applications of Research in Music Education Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2009-2010 ; Update: Applications of Research in Music Education Volume 28 ; 28 ;  >
+      au < manifest ; exists ; 2010-2011 ; Update: Applications of Research in Music Education Volume 29 ; 29 ;  >
       au < released ; crawling ; 2011 ; Update: Applications of Research in Music Education Volume 30 ; 30 ; >
       au < expected ; exists ; 2012 ; Update: Applications of Research in Music Education Volume 31 ; 31 ; >
 
