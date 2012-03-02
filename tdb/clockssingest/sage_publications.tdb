@@ -22862,14 +22862,12 @@
         issnl = 1077-6958
       >
       
-        param[base_url] = http://jmc.sagepub.com/
+      param[base_url] = http://jmc.sagepub.com/
 
       {
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         
-        comment[notReady] = Vol 66 has incorrect link to issue 1, jmc.sagepub.com/cgi/content/66/1.long
-
         au < exists ; exists ; 1967 ; Journalism & Mass Communication Educator Volume 22 ; 22 ; >
         au < exists ; exists ; 1968 ; Journalism & Mass Communication Educator Volume 23 ; 23 ; >
         au < doesNotExist ; doesNotExist ; 0 ; Journalism & Mass Communication Educator Volume 24 ; 24 ; >
@@ -22914,7 +22912,7 @@
         au < exists ; exists ; 2008 ; Journalism & Mass Communication Educator Volume 63 ; 63 ; >
         au < exists ; exists ; 2009 ; Journalism & Mass Communication Educator Volume 64 ; 64 ; >
         au < exists ; exists ; 2010 ; Journalism & Mass Communication Educator Volume 65 ; 65 ; >
-        au < notReady ; notReady ; 2011 ; Journalism & Mass Communication Educator Volume 66 ; 66 ; >
+        au < exists ; exists ; 2011 ; Journalism & Mass Communication Educator Volume 66 ; 66 ; >
         au < manifest ; exists ; 2012 ; Journalism & Mass Communication Educator Volume 67 ; 67 ; >
 
       }
