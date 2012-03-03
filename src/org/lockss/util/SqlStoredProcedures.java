@@ -1,5 +1,5 @@
 /*
- * $Id: SqlStoredProcedures.java,v 1.5 2012-01-16 17:43:17 pgust Exp $
+ * $Id: SqlStoredProcedures.java,v 1.6 2012-03-03 23:09:56 pgust Exp $
  */
 
 /*
@@ -53,147 +53,6 @@ import org.lockss.util.Logger;
  * This utility class contains static methods that enable SQL stored
  * procedures to access LOCKSS functionality.
  * 
- * The following SQL stored procedure definitions can be used in conjunction
- * with these functions:
- * 
- * create function titleFromIssn(issn varchar(9)) returns varchar(512) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getTitleFromIssn' 
- * parameter style java no sql;
- * 
- * create function volumeTitleFromIsbn(issn varchar(18)) returns varchar(512) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromIsbn' 
- * parameter style java no sql;
- * 
- * create function publisherFromUrl(url varchar(4096)) returns varchar(256) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getPublisherFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function volumeTitleFromUrl(url varchar(4096)) returns varchar(512) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function titleFromUrl(url varchar(4096)) returns varchar(512) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getTitleFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function isbnFromUrl(url varchar(4096)) returns varchar(13) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getIsbnFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function printIsbnFromUrl(url varchar(4096)) returns varchar(13) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getPrintIsbnFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function eisbnFromUrl(url varchar(4096)) returns varchar(13) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getEisbnFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function issnFromUrl(url varchar(4096)) returns varchar(8) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getIssnFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function printIssnFromUrl(url varchar(4096)) returns varchar(8) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getPrintIssnFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function eissnFromUrl(url varchar(4096)) returns varchar(8) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getEissnFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function issnlFromUrl(url varchar(4096)) returns varchar(8) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getIssnLFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function startVolumeFromUrl(url varchar(4096)) returns varchar(16) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getStartVolumeFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function endVolumeFromUrl(url varchar(4096)) returns varchar(16) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getEndVolumeFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function startYearFromUrl(url varchar(4096)) returns varchar(16) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getStartYearFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function endYearFromArticleUrl(url varchar(4096)) returns varchar(16) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getEndYearFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function ingestDateFromUrl(url varchar(4096)) returns varchar(16) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getIngestDateFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function ingestYearFromUrl(url varchar(4096)) returns varchar(4) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getIngestYearFromArticleUrl' 
- * parameter style java no sql;
- * 
- * create function publisherFromAuId(pluginId varchar(128), auKey varchar(512)) 
- * returns varchar(256) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getPublisherFromAuId' 
- * parameter style java no sql;
- * 
- * create function volumeTitleFromAuId(pluginId varchar(128), auKey varchar(512)) 
- * returns varchar(256) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromAuId' 
- * parameter style java no sql;
- * 
- * create function titleFromAuId(pluginId varchar(128), auKey varchar(512)) 
- * returns varchar(256) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getTitleFromAuId' 
- * parameter style java no sql;
- * 
- * create function issnFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(8) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getPrintIssnFromAuId' 
- * parameter style java no sql;
- * 
- * create function printIssnFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(8) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getPrintIssnFromAuId' 
- * parameter style java no sql;
- * 
- * create function eissnFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(8) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getEissnFromAuId' 
- * parameter style java no sql;
- * 
- * create function issnlFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(8) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getIssnLFromAuId' 
- * parameter style java no sql;
- * 
- * create function startVolumeFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(16) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getStartVolumeFromAuId' 
- * parameter style java no sql;
- * 
- * create function endVolumeFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(16) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getEndVolumeFromAuId' 
- * parameter style java no sql;
- * 
- * create function startYearFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(16) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getStartYearFromAuId' 
- * parameter style java no sql;
- * 
- * create function endYearFromAuId(pluginId varchar(128), auKey varchar(512)) returns varchar(16) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getEndYearFromAuId' 
- * parameter style java no sql;
- * 
- * create function ingestDateFromAuId(pluginId varchar(128), auKey varchar(512)) 
- * returns varchar(16) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getingestDateFromAuId' 
- * parameter style java no sql;
- * 
- * create function ingestYearFromAuId(pluginId varchar(128), auKey varchar(512)) 
- * returns varchar(4) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getIngestYearFromAuId' 
- * parameter style java no sql;
- * 
- * create function generateAuId(pluginId varchar(128), auKey varchar(512)) 
- * returns varchar(640) 
- * language java external name 'org.lockss.plugin.PluginManager.generateAuId' 
- * parameter style java no sql;
- * 
- * create function yearFromDate(date varchar(16)) returns varchar(4) 
- * language java external name 'org.lockss.util.SqlStoredProcedures.getYearFromDate' 
- * parameter style java no sql;
- *  
  * @author pgust, mellen
  *
  */
@@ -287,9 +146,6 @@ public class SqlStoredProcedures {
     String auId = PluginManager.generateAuId(pluginId, auKey);
     
     // get the AU from the Auid
-    System.out.println(LockssDaemon.getLockssDaemon().getPluginManager());
-    System.out.println(LockssDaemon.getLockssDaemon().getPluginManager());
-    System.out.println(getPluginManager());
     ArchivalUnit au = getPluginManager().getAuFromId(auId);
     if (au == null) {
       queryLog.debug2(  "No ArchivalUnit for pluginId: " + pluginId 
