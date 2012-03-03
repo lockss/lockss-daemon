@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.26 2012-03-03 23:33:54 pgust Exp $
+ * $Id: MetadataManager.java,v 1.27 2012-03-03 23:49:50 pgust Exp $
  */
 
 /*
@@ -1974,7 +1974,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           && !StringUtil.isNullString(journalTitle)) {
         PreparedStatement insertTitle = conn.prepareStatement(
           "insert into " + TITLE_TABLE + " " + "values (?,?)");
-        insertTitle.setString(1, journalTitle);
+        // truncate to MAX_TITLE_FIELD for database
+        String title = journalTitle.substring(0,Math.min(journalTitle.length(), 
+                                                         MAX_TITLE_FIELD));
+        insertTitle.setString(1, title);
         insertTitle.setInt(2, mdid);
         insertTitle.execute();
         log.debug3(  "added [title:'" + journalTitle + "', md_id: " + mdid 
