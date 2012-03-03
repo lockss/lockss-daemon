@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.26 2012-02-25 01:51:22 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.27 2012-03-03 23:28:36 pgust Exp $
  */
 
 /*
@@ -1358,7 +1358,7 @@ public class OpenUrlResolver {
       paramMap.setMapElement("volume_str", volumeName);
       paramMap.setMapElement("volume_name", volumeName);
       paramMap.setMapElement("year", year);
-      String issn = tdbau.getIssn();
+      String issn = tdbau.getPrintIssn();
       if (issn != null) {
         paramMap.setMapElement("issn", issn);
       }
