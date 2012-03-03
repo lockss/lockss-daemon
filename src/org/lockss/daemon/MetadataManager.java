@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.25 2012-03-03 23:15:10 pgust Exp $
+ * $Id: MetadataManager.java,v 1.26 2012-03-03 23:33:54 pgust Exp $
  */
 
 /*
@@ -1969,8 +1969,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         }
       }
 
-      // insert row for title
-      if ((tdbauJournalTitle == null) && !StringUtil.isNullString(journalTitle)) {
+      // insert row for title only if the title is not available from tdbau
+      if (   (tdbauJournalTitle == null) 
+          && !StringUtil.isNullString(journalTitle)) {
         PreparedStatement insertTitle = conn.prepareStatement(
           "insert into " + TITLE_TABLE + " " + "values (?,?)");
         insertTitle.setString(1, journalTitle);
