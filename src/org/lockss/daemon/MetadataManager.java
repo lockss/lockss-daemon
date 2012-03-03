@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.24 2012-01-16 18:00:00 pgust Exp $
+ * $Id: MetadataManager.java,v 1.25 2012-03-03 23:15:10 pgust Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ import org.lockss.scheduler.TaskCallback;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.TimeInterval;
-import org.mortbay.util.StringUtil;
+import org.lockss.util.StringUtil;
 
 /**
  * This class implements a metadata manager that is responsible for managing an
@@ -100,7 +100,7 @@ import org.mortbay.util.StringUtil;
 public class MetadataManager extends BaseLockssDaemonManager implements
     ConfigurableManager {
 
-  private static Logger log = Logger.getLogger("MetadataMgr");
+  private static Logger log = Logger.getLogger("MetadataManager");
 
   /** prefix for config properties */
   static public final String PREFIX = "org.lockss.daemon.metadataManager.";
@@ -184,11 +184,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Name of DOI table */
   static final String DOI_TABLE = "DOI";
 
+  /** Name of ISBN table */
+  static final String ISBN_TABLE = "ISBN";
+
   /** Name of ISSN table */
   static final String ISSN_TABLE = "ISSN";
 
-  /** Name of ISBN table */
-  static final String ISBN_TABLE = "ISBN";
+  /** Name of ISSN to title table */
+  static final String TITLE_TABLE = "Title";
 
   /** Name of Feature table */
   static final String FEATURE_TABLE = "Feature";
@@ -223,6 +226,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Name of issn field */
   static public final String ISSN_FIELD = "issn";
   
+  /** Name of jornal or book title field */
+  static public final String TITLE_FIELD = "title";
+  
   /** Name of journal issue field */
   static public final String ISSUE_FIELD = "issue";
   
@@ -250,6 +256,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   /** Length of database article title field */
   static public final int MAX_ATITLE_FIELD = 512;
+
+  /** Length of database book or journal title field */
+  static public final int MAX_TITLE_FIELD = 512;
 
   /** public of au key field */
   static private final int MAX_AU_KEY_FIELD = 512;
@@ -326,18 +335,25 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     // create schema and initialize tables if schema does not exist
+    String[] schemas = null;
+
     dbIsNew = !tableExists(conn, PENDINGAUS_TABLE);
     if (dbIsNew) {
+      schemas = createSchema;
+    } else if (!tableExists(conn, TITLE_TABLE)) {
+      // add new title table if needed
+      schemas = new String[] {create_TITLE_TABLE};
+    }
+    if (schemas != null) {
       try {
-        executeBatch(conn, createSchema);
-        safeCommit(conn);
+        executeBatch(conn, schemas);
       } catch (BatchUpdateException ex) {
         // handle batch update exception
         int[] counts = ex.getUpdateCounts();
         for (int i = 0; i < counts.length; i++) {
           log.error(  "Error in schema statement " + i 
                             + "(" + counts[i] + "): "
-                    + createSchema[i]);
+                    + schemas[i]);
         }
         log.error("Cannot initialize schema -- service not started", ex);
         safeClose(conn);
@@ -348,7 +364,41 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         return;
       }
     }
+    
+    if (!dbIsNew) {
+      // delete all old functions
+      try {
+        executeBatch(conn, deleteFunctions);
+      } catch (BatchUpdateException ex) {
+        // handle batch update exception
+        int[] counts = ex.getUpdateCounts();
+        for (int i = 0; i < counts.length; i++) {
+          log.error(  "Error in schema statement " + i 
+                            + "(" + counts[i] + "): "
+                    + deleteFunctions[i]);
+        }
+      } catch (SQLException ex) {
+        log.error("Cannot delete functions", ex);
+      }
+    }
 
+    // add new functions
+    try {
+      executeBatch(conn, createFunctions);
+      safeCommit(conn);
+    } catch (BatchUpdateException ex) {
+      // handle batch update exception
+      int[] counts = ex.getUpdateCounts();
+      for (int i = 0; i < counts.length; i++) {
+        log.error(  "Error in schema statement " + i 
+                          + "(" + counts[i] + "): "
+                  + createFunctions[i]);
+      }
+    } catch (SQLException ex) {
+      log.error("Cannot create functions", ex);
+    }
+
+    safeCommit(conn);
     safeClose(conn);
 
     // register to receive content change notifications to 
@@ -694,46 +744,77 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /**
    * SQL statements that create the database schema
    */
+  
+  /** Table for recording pending AUs to index */
+  private static final String create_PENDINGAUS_TABLE = 
+      "create table " + PENDINGAUS_TABLE + " ("
+     + PLUGIN_ID_FIELD + " VARCHAR(" + MAX_PLUGIN_ID_FIELD + ") NOT NULL," 
+     + AU_KEY_FIELD + " VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL" + ")";
+  
+  /** table for recording bibliobraphic metadata for an article */
+  private static final String create_METADATA_TABLE =
+      "create table " + METADATA_TABLE + " ("
+          + MD_ID_FIELD + " BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,"
+          + DATE_FIELD + " VARCHAR(" + MAX_DATE_FIELD + "),"
+          + VOLUME_FIELD + " VARCHAR(" + MAX_VOLUME_FIELD + ")," 
+          + ISSUE_FIELD + " VARCHAR(" + MAX_ISSUE_FIELD + "),"
+          + START_PAGE_FIELD + " VARCHAR(" + MAX_STARTPAGE_FIELD + "),"
+          + ARTICLE_TITLE_FIELD + " VARCHAR(" + MAX_ATITLE_FIELD + ")," 
+          // author field is a semicolon-separated list
+          + AUTHOR_FIELD + " VARCHAR(" + MAX_AUTHOR_FIELD + "),"
+          + PLUGIN_ID_FIELD + " VARCHAR(" + MAX_PLUGIN_ID_FIELD + ") NOT NULL,"
+          // partition by
+          + AU_KEY_FIELD + " VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL,"
+          + ACCESS_URL_FIELD + " VARCHAR(" + MAX_ACCESS_URL_FIELD + ") NOT NULL" 
+          + ")";
+
+  /** table for recording a feature URL for an article */
+  private static final String create_FEATURE_TABLE =
+      "create table " + FEATURE_TABLE + " (" 
+          + FEATURE_FIELD + " VARCHAR(" + MAX_FEATURE_FIELD + ") NOT NULL,"
+          + ACCESS_URL_FIELD + " VARCHAR(" + MAX_ACCESS_URL_FIELD + ") NOT NULL" 
+          + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
+          + "(md_id) on delete cascade" + ")";
+  
+  /** table for recording a DOI for an article */
+  private static final String create_DOI_TABLE =
+      "create table " + DOI_TABLE + " (" 
+          + DOI_FIELD + " VARCHAR(" + MAX_DOI_FIELD + ") NOT NULL,"
+          + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
+          + "(md_id) on delete cascade" + ")";
+      
+  /** table for recording an ISBN for an article */
+  private static final String create_ISBN_TABLE =
+      "create table " + ISBN_TABLE + " (" 
+          + ISBN_FIELD + " VARCHAR(" + MAX_ISBN_FIELD + ") NOT NULL,"
+          + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
+          + "(md_id) on delete cascade" + ")";
+
+  /** table for recording an ISSN for an article */
+  private static final String create_ISSN_TABLE = 
+      "create table " + ISSN_TABLE + " (" 
+          + ISSN_FIELD + " VARCHAR(" + MAX_ISSN_FIELD + ") NOT NULL,"
+          + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
+          + "(md_id) on delete cascade" + ")";
+  
+  /** table for recording title journal/book title of an article */ 
+  private static final String create_TITLE_TABLE = 
+      "create table " + TITLE_TABLE + " (" 
+          + TITLE_FIELD + " VARCHAR(" +  MAX_TITLE_FIELD + ") NOT NULL,"
+          + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
+          + "(md_id) on delete cascade" + ")";
+  
+  
+  /** array of tables to create */
   private static final String createSchema[] = {
-    "create table " + PENDINGAUS_TABLE + " ("
-        + PLUGIN_ID_FIELD + " VARCHAR(" + MAX_PLUGIN_ID_FIELD + ") NOT NULL," 
-        + AU_KEY_FIELD + " VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL" + ")",
-        
-    "create table " + METADATA_TABLE + " ("
-        + MD_ID_FIELD + " BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,"
-        + DATE_FIELD + " VARCHAR(" + MAX_DATE_FIELD + "),"
-        + VOLUME_FIELD + " VARCHAR(" + MAX_VOLUME_FIELD + ")," 
-        + ISSUE_FIELD + " VARCHAR(" + MAX_ISSUE_FIELD + "),"
-        + START_PAGE_FIELD + " VARCHAR(" + MAX_STARTPAGE_FIELD + "),"
-        + ARTICLE_TITLE_FIELD + " VARCHAR(" + MAX_ATITLE_FIELD + ")," 
-        // author field is a semicolon-separated list
-        + AUTHOR_FIELD + " VARCHAR(" + MAX_AUTHOR_FIELD + "),"
-        + PLUGIN_ID_FIELD + " VARCHAR(" + MAX_PLUGIN_ID_FIELD + ") NOT NULL,"
-        // partition by
-        + AU_KEY_FIELD + " VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL,"
-        + ACCESS_URL_FIELD + " VARCHAR(" + MAX_ACCESS_URL_FIELD + ") NOT NULL" 
-        + ")",
-/*
-    "create table " + FEATURE_TABLE + " (" 
-        + FEATURE_FIELD + " VARCHAR(" + MAX_FEATURE_FIELD + ") NOT NULL,"
-        + ACCESS_URL_FIELD + " VARCHAR(" + MAX_ACCESS_URL_FIELD + ") NOT NULL" 
-        + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
-        + "(md_id) on delete cascade" + ")",
-*/
-    "create table " + DOI_TABLE + " (" 
-        + DOI_FIELD + " VARCHAR(" + MAX_DOI_FIELD + ") NOT NULL,"
-        + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
-        + "(md_id) on delete cascade" + ")",
-
-    "create table " + ISBN_TABLE + " (" 
-        + ISBN_FIELD + " VARCHAR(" + MAX_ISBN_FIELD + ") NOT NULL,"
-        + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
-        + "(md_id) on delete cascade" + ")",
-
-    "create table " + ISSN_TABLE + " (" 
-        + ISSN_FIELD + " VARCHAR(" + MAX_ISSN_FIELD + ") NOT NULL,"
-        + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
-        + "(md_id) on delete cascade" + ")", };
+    create_PENDINGAUS_TABLE,
+    create_METADATA_TABLE,
+//    create_FEATURE_TABLE,
+    create_DOI_TABLE,
+    create_ISBN_TABLE,
+    create_ISSN_TABLE,
+    create_TITLE_TABLE,
+  };
 
   /**
    * SQL statements that drop the database schema
@@ -743,8 +824,239 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     "drop table " + DOI_TABLE,
     "drop table " + ISSN_TABLE, 
     "drop table " + ISBN_TABLE,
+    "drop table " + TITLE_TABLE,
 //    "drop table " + FEATURE_TABLE,
-    "drop table " + METADATA_TABLE, };
+    "drop table " + METADATA_TABLE, 
+  };
+
+  /** 
+   * SQL statements that create stored functions 
+   */
+  private static final String[] createFunctions = new String[] {
+    
+      "create function eisbnFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(8) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getEisbnFromAuId' "
+    + "parameter style java no sql",
+
+      "create function eisbnFromUrl(url varchar(4096)) "
+    + "returns varchar(13) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getEisbnFromArticleUrl' " 
+    + "parameter style java no sql",
+    
+      "create function eissnFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(8) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getEissnFromAuId' "
+    + "parameter style java no sql",
+  
+      "create function eissnFromUrl(url varchar(4096)) "
+    + "returns varchar(8) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getEissnFromArticleUrl' " 
+    + "parameter style java no sql",
+    
+      "create function endVolumeFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(16) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getEndVolumeFromAuId' "
+    + "parameter style java no sql",
+  
+      "create function endVolumeFromUrl(url varchar(4096)) "
+    + "returns varchar(16) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getEndVolumeFromArticleUrl' "
+    + "parameter style java no sql",
+    
+      "create function endYearFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(16) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getEndYearFromAuId' "
+    + "parameter style java no sql",
+  
+      "create function endYearFromUrl(url varchar(4096)) "
+    + "returns varchar(16) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getEndYearFromArticleUrl' "
+    + "parameter style java no sql",
+
+      "create function generateAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(640) language java external name "
+    + "'org.lockss.plugin.PluginManager.generateAuId' "
+    + "parameter style java no sql",
+  
+      "create function ingestDateFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(16) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getingestDateFromAuId' "
+    + "parameter style java no sql",
+
+      "create function ingestDateFromUrl(url varchar(4096)) "
+    + "returns varchar(16) language java external name " 
+    + "'org.lockss.util.SqlStoredProcedures.getIngestDateFromArticleUrl' " 
+    + "parameter style java no sql",
+    
+      "create function ingestYearFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(4) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getIngestYearFromAuId' "
+    + "parameter style java no sql",
+  
+      "create function ingestYearFromUrl(url varchar(4096)) "
+    + "returns varchar(4) language java external name " 
+    + "'org.lockss.util.SqlStoredProcedures.getIngestYearFromArticleUrl' "
+    + "parameter style java no sql",
+
+      "create function isbnFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(8) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getPrintIsbnFromAuId' "
+    + "parameter style java no sql",
+    
+      "create function isbnFromUrl(url varchar(4096)) "
+    + "returns varchar(13) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getIsbnFromArticleUrl' "
+    + "parameter style java no sql",
+    
+      "create function issnFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(8) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getPrintIssnFromAuId' "
+    + "parameter style java no sql",
+  
+      "create function issnFromUrl(url varchar(4096)) "
+    + "returns varchar(8) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getIssnFromArticleUrl' " 
+    + "parameter style java no sql",
+    
+      "create function issnlFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(8) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getIssnLFromAuId' "
+    + "parameter style java no sql",
+  
+      "create function issnlFromUrl(url varchar(4096)) "
+    + "returns varchar(8) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getIssnLFromArticleUrl' " 
+    + "parameter style java no sql",
+
+      "create function printIsbnFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(8) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getPrintIsbnFromAuId' "
+    + "parameter style java no sql",
+  
+      "create function printIsbnFromUrl(url varchar(4096)) "
+    + "returns varchar(13) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getPrintIsbnFromArticleUrl' " 
+    + "parameter style java no sql",
+    
+      "create function printIssnFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(8) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getPrintIssnFromAuId' "
+    + "parameter style java no sql",
+
+      "create function printIssnFromUrl(url varchar(4096)) "
+    + "returns varchar(8) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getPrintIssnFromArticleUrl' " 
+    + "parameter style java no sql",
+    
+      "create function publisherFromUrl(url varchar(4096)) "
+    + "returns varchar(256) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getPublisherFromArticleUrl' " 
+    + "parameter style java no sql",
+    
+      "create function publisherFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(256)  language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getPublisherFromAuId' " 
+    + "parameter style java no sql",
+  
+      "create function startVolumeFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(16) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getStartVolumeFromAuId' "
+    + "parameter style java no sql",
+  
+      "create function startVolumeFromUrl(url varchar(4096)) "
+    + "returns varchar(16) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getStartVolumeFromArticleUrl' "
+    + "parameter style java no sql",
+
+      "create function startYearFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(16) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getStartYearFromAuId' "
+    + "parameter style java no sql",
+    
+      "create function startYearFromUrl(url varchar(4096)) "
+    + "returns varchar(16) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getStartYearFromArticleUrl' "
+    + "parameter style java no sql",
+        
+      "create function titleFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(256) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getTitleFromAuId' "
+    + "parameter style java no sql",
+  
+      "create function titleFromIssn(issn varchar(9)) "
+    + "returns varchar(512) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getTitleFromIssn' " 
+    + "parameter style java no sql",
+    
+      "create function titleFromUrl(url varchar(4096)) "
+    + "returns varchar(512) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getTitleFromArticleUrl' " 
+    + "parameter style java no sql",
+
+      "create function volumeTitleFromAuId(pluginId varchar(128), "
+    + "auKey varchar(512)) returns varchar(256) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromAuId' "
+    + "parameter style java no sql",
+    
+      "create function volumeTitleFromIsbn(issn varchar(18)) "
+    + "returns varchar(512) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromIsbn' " 
+    + "parameter style java no sql",
+    
+      "create function volumeTitleFromUrl(url varchar(4096)) "
+    + "returns varchar(512) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromArticleUrl' " 
+    + "parameter style java no sql",
+    
+      "create function yearFromDate(date varchar(16)) returns varchar(4) "
+    + "language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getYearFromDate' "
+    + "parameter style java no sql",
+  };
+
+  /**
+   * SQL statements that drop the functions
+   */
+  private static final String[] deleteFunctions = new String[] {
+    "drop function eisbnFromAuId",
+    "drop function eisbnFromUrl",
+    "drop function eissnFromAuId",
+    "drop function eissnFromUrl",
+    "drop function endVolumeFromAuId",
+    "drop function endVolumeFromUrl",
+    "drop function endYearFromAuId",
+    "drop function endYearFromUrl",
+    "drop function generateAuId",
+    "drop function ingestDateFromAuId",
+    "drop function ingestDateFromUrl",
+    "drop function ingestYearFromAuId",
+    "drop function ingestYearFromUrl",
+    "drop function isbnFromAuId",
+    "drop function isbnFromUrl",
+    "drop function issnFromAuId",
+    "drop function issnFromUrl",
+    "drop function issnlFromAuId",
+    "drop function issnlFromUrl",
+    "drop function printIsbnFromAuId",
+    "drop function printIsbnFromUrl",
+    "drop function printIssnFromAuId",
+    "drop function printIssnFromUrl",
+    "drop function publisherFromAuId",
+    "drop function publisherFromUrl",
+    "drop function startVolumeFromAuId",
+    "drop function startVolumeFromUrl",
+    "drop function startYearFromAuId",
+    "drop function startYearFromUrl",
+    "drop function titleFromAuId",
+    "drop function titleFromIssn",
+    "drop function titleFromUrl",
+    "drop function volumeTitleFromAuId",
+    "drop function volumeTitleFromIsbn",
+    "drop function volumeTitleFromUrl",
+    "drop function yearFromDate",
+  };
+
 
   /**
    * Execute a batch of statements.
@@ -1161,6 +1473,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     private final String tdbauYear;
     private final String tdbauJournalTitle;
     private final String tdbauName;
+    
+    private final boolean isTitleInTdb;
 
 
     /**
@@ -1182,16 +1496,30 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // initialize values used for processing every article in the AU
       auid = au.getAuId();
       pluginId = PluginManager.pluginIdFromAuId(auid);
+
+      // TEMPORARY KLUDGE FOR DEVELOPMENT ONLY -- HONEST!
+      isTitleInTdb =   !pluginId.endsWith("SourcePlugin"); 
+      
       auKey = PluginManager.auKeyFromAuId(auid);
       TitleConfig tc = au.getTitleConfig();
       tdbau = (tc == null) ? null : tc.getTdbAu();
       tdbauName = (tdbau == null) ? null : tdbau.getName();
       tdbauStartYear = (tdbau == null) ? null : tdbau.getStartYear();
-      tdbauIsbn = (tdbau == null) ? null : tdbau.getIsbn();
-      tdbauIssn = (tdbau == null) ? null : tdbau.getPrintIssn();
-      tdbauEissn = (tdbau == null) ? null : tdbau.getEissn();
       tdbauYear = (tdbau == null) ? null : tdbau.getYear();
-      tdbauJournalTitle = (tdbau == null) ? null : tdbau.getJournalTitle();
+
+      if (isTitleInTdb && (tdbau != null)) {
+        // get title information from TDB
+        tdbauIsbn = tdbau.getIsbn();
+        tdbauIssn = tdbau.getPrintIssn();
+        tdbauEissn = tdbau.getEissn();
+        tdbauJournalTitle = tdbau.getJournalTitle();
+      } else {
+        // TDB does not have title information
+        tdbauIsbn = null;
+        tdbauIssn = null;
+        tdbauEissn = null;
+        tdbauJournalTitle = null;
+      }
 
       // set task callback after construction to ensure instance is initialized
       callback = new TaskCallback() {
@@ -1439,42 +1767,21 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       if (eissn != null) issns.add(eissn);
       
       // validate data against TDB information
+      
       if (tdbau != null) {
         // validate journal title against tdb journal title
-        if (journalTitle != null) {
-          if (tdbauJournalTitle == null) {
-            taskWarning(  "tdb title missing for " +  tdbauName
-                        + " -- should be " + journalTitle);
-          } else if (!journalTitle.equals(tdbauJournalTitle)) {
-            taskWarning ("tdb title " + tdbauJournalTitle
-                         + " for " + tdbauName
-                         + " -- does not match metadata journal title "
-                         + journalTitle);
-          }
-        } else if (tdbauJournalTitle != null) {
-          taskWarning("tdb title  is " + tdbauJournalTitle 
-                      + " for " + tdbauName
-                      + " -- metadata title is missing");
-        }
-        
-        // validate publication date against tdb year 
-        if (pubYear != null) {
-          if (!tdbau.includesYear(pubYear)) {
-            if (tdbauYear != null) {
-              taskWarning(  "tdb year " + tdbauYear 
-                          + " for " + tdbauName
-                          + " -- does not match metadata year " + pubYear);
+        if (tdbauJournalTitle != null) {
+          if (!tdbauJournalTitle.equals(journalTitle)) {
+            if (journalTitle == null) {
+              taskWarning("tdb title  is " + tdbauJournalTitle 
+                  + " for " + tdbauName
+                  + " -- metadata title is missing");
             } else {
-              taskWarning(  "tdb year missing for " + tdbauName
-                          + " -- should include year " + pubYear);
+              taskWarning ("tdb title " + tdbauJournalTitle
+                  + " for " + tdbauName
+                  + " -- does not match metadata journal title "
+                  + journalTitle);
             }
-          }
-        } else {
-          pubYear = tdbauStartYear;
-          if (pubYear != null) {
-            taskWarning( "using tdb start year " + pubYear
-                        + " for " + tdbauName
-                        + " -- metadata year is missing");
           }
         }
         
@@ -1494,6 +1801,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           } else if (isbn != null) {
             taskWarning(  "tdb isbn missing for " + tdbauName
                         + " -- should be: " + isbn);
+          }
+        } else if (isbn != null) {
+          if (isTitleInTdb) {
+            taskWarning(  "tdb isbn missing for " + tdbauName
+                + " -- should be: " + isbn);
           }
         }
         
@@ -1522,7 +1834,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             taskWarning( "tdb eissn " + tdbauEissn
                         + " for " + tdbauName
                         + " -- reported by metadata as print issn");
-          } else {
+          } else if (isTitleInTdb) {
             taskWarning(  "tdb issn missing for " + tdbauName
                         + " -- should be: " + issn);
           }
@@ -1552,9 +1864,30 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             taskWarning( "tdb print issn " + tdbauIssn
                         + " for " + tdbauName
                         + " -- reported by metadata as print eissn");
-          } else {
+          } else if (isTitleInTdb) {
             taskWarning(  "tdb eissn missing for " + tdbauName
                         + " -- should be: " + eissn);
+          }
+        }
+
+        // validate publication date against tdb year 
+        if (pubYear != null) {
+          if (!tdbau.includesYear(pubYear)) {
+            if (tdbauYear != null) {
+              taskWarning(  "tdb year " + tdbauYear 
+                          + " for " + tdbauName
+                          + " -- does not match metadata year " + pubYear);
+            } else {
+              taskWarning(  "tdb year missing for " + tdbauName
+                          + " -- should include year " + pubYear);
+            }
+          }
+        } else {
+          pubYear = tdbauStartYear;
+          if (pubYear != null) {
+            taskWarning( "using tdb start year " + pubYear
+                        + " for " + tdbauName
+                        + " -- metadata year is missing");
           }
         }
       }
@@ -1634,6 +1967,17 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           log.debug3(  "added [issn:" + anIssn + ", md_id: " + mdid 
                      + ", pluginId:" + pluginId + "]");
         }
+      }
+
+      // insert row for title
+      if ((tdbauJournalTitle == null) && !StringUtil.isNullString(journalTitle)) {
+        PreparedStatement insertTitle = conn.prepareStatement(
+          "insert into " + TITLE_TABLE + " " + "values (?,?)");
+        insertTitle.setString(1, journalTitle);
+        insertTitle.setInt(2, mdid);
+        insertTitle.execute();
+        log.debug3(  "added [title:'" + journalTitle + "', md_id: " + mdid 
+            + ", pluginId:" + pluginId + "]");
       }
     }
 
