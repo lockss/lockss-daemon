@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.221 2012-01-16 18:09:13 pgust Exp $
+ * $Id: PluginManager.java,v 1.222 2012-03-04 09:04:17 tlipkis Exp $
  */
 
 /*
@@ -1697,7 +1697,6 @@ public class PluginManager
 
   private Map recentCuMap = Collections.synchronizedMap(new LRUMap(20));
 
-
   /** Find a CachedUrl for the URL.  
    */
   private CachedUrl findTheCachedUrl(String url, boolean withContent) {
@@ -1739,6 +1738,7 @@ public class PluginManager
     // is known unique.
     String normUrl;
     String normStem;
+    boolean isTrace = log.isDebug3();
     try {
       normUrl = UrlUtil.normalizeUrl(url);
       normStem = UrlUtil.getUrlPrefix(normUrl);
@@ -1758,20 +1758,34 @@ public class PluginManager
       int auIx = 0;
       for (Iterator iter = candidateAus.iterator(); iter.hasNext(); auIx++) {
 	ArchivalUnit au = (ArchivalUnit)iter.next();
-	log.debug3("findTheCachedUrl: " + normUrl + " check " + au.toString());
+	if (isTrace) {
+	  log.debug3("findTheCachedUrl: " + normUrl + " check "
+		     + au.toString());
+	}
+	ArchiveMemberSpec ams = ArchiveMemberSpec.fromUrl(au, normUrl);
+	if (ams != null) {
+	  if (isTrace) log.debug3("Recognized archive member: " + ams);
+	  normUrl = ams.getUrl();
+	}
 	if (au.shouldBeCached(normUrl)) {
-	  log.debug3("findTheCachedUrl: " + normUrl + " should be in "
-		     + au.getAuId());
+	  if (isTrace) {
+	    log.debug3("findTheCachedUrl: " + normUrl + " should be in "
+		       + au.getAuId());
+	  }
 	  try {
 	    String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
 	    CachedUrl cu = au.makeCachedUrl(siteUrl);
-	    log.debug3("findTheCachedUrl: " + siteUrl + " got " +
-		       (cu == null ? "no cu" : cu.toString()));
+	    if (ams != null) {
+	      cu = cu.getArchiveMemberCu(ams);
+	    }
+	    if (isTrace) {
+	      log.debug3("findTheCachedUrl(" + siteUrl + ") = " + cu);
+	    }
 	    if (cu != null && (!withContent || cu.hasContent())) {
 	      int score = score(au, cu);
 	      if (score == 0) {
 		makeFirstCandidate(candidateAus, auIx);
-		log.debug3("findTheCachedUrl: " + siteUrl + " is it");
+		if (isTrace) log.debug3("findTheCachedUrl: ret: " + siteUrl);
 		return cu;
 	      }
 	      if (score < bestScore) {
@@ -1791,7 +1805,10 @@ public class PluginManager
 	}
       }
       makeFirstCandidate(candidateAus, bestAuIx);
-      log.debug3("bestCu was " + (bestCu == null ? "null" : bestCu.toString()));
+      if (isTrace) {
+	log.debug3("bestCu was " +
+		   (bestCu == null ? "null" : bestCu.toString()));
+      }
       return bestCu;
     }
   }
@@ -1847,7 +1864,8 @@ public class PluginManager
   public List<ArchivalUnit> getAllAus() {
     synchronized (auSet) {
       if (auList == null) {
-	auList = new ArrayList<ArchivalUnit>(auSet);
+	auList =
+	  Collections.unmodifiableList(new ArrayList<ArchivalUnit>(auSet));
       }
       return auList;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.60 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.61 2012-03-04 09:04:17 tlipkis Exp $
  */
 
 /*
@@ -334,7 +334,8 @@ public interface ArchivalUnit {
   public CachedUrlSet makeCachedUrlSet( CachedUrlSetSpec spec);
 
   /**
-   * Create a {@link CachedUrl} object within the set.
+   * Create a {@link CachedUrl} object representing the URL within this AU
+   * (even if the URL doesn't exist or is excluded by the crawl rules).
    * @param url the url of interest
    * @return a {@link CachedUrl} object representing the url.
    */

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchiveFileTypes.java,v 1.1 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: ArchiveFileTypes.java,v 1.2 2012-03-04 09:04:17 tlipkis Exp $
  */
 
 /*
@@ -73,8 +73,8 @@ public class ArchiveFileTypes {
     return extMimeMap;
   }
 
-  /** Return the archive file type corresponding corresponding to the CU's
-   * MIME type or filename extension, or null if none.
+  /** Return the archive file type corresponding to the CU's MIME type or
+   * filename extension, or null if none.
    */
   public String getFromCu(CachedUrl cu) throws MalformedURLException {
     String res = getFromMime(cu.getContentType());
@@ -100,7 +100,6 @@ public class ArchiveFileTypes {
    */
   public String getFromMime(String contentType) {
     String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
-    log.critical("getFromMime("+mimeType+")");
     if (mimeType == null) {
       return null;
     }

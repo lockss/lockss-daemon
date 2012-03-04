@@ -1,10 +1,10 @@
 /*
- * $Id: CachedUrl.java,v 1.28 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.29 2012-03-04 09:04:17 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -206,26 +206,8 @@ public interface CachedUrl extends CachedUrlSetNode {
    * references the specified member of the archive instead of the whole
    * archive.  Behavior is undefined if applied to a CU that isn't an
    * archive file.
-   * @param am describes the archive member.
+   * @param ams describes the archive member.
    */
-  public CachedUrl getArchiveMemberCu(ArchiveMember am);
+  public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams);
 
-  /** Specifies which member of an archive file to access.  Currently a
-   * single directory path, possibly referencing nested archive. */
-  public static class ArchiveMember {
-    /** The character sequence that separates the URL of a cached file from
-     * the member name to access */
-    public static final String URL_SEPARATOR = "!/";
-
-    private String name;
-
-    public ArchiveMember(String name) {
-      this.name = name;
-    }
-    
-    /** Return the member name */
-    public String getName() {
-      return name;
-    }
-  }
 }

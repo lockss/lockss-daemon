@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.32 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: CrawlRuleTester.java,v 1.33 2012-03-04 09:04:16 tlipkis Exp $
  */
 
 /*
@@ -586,7 +586,7 @@ public class CrawlRuleTester extends Thread {
       return null;
     }
 
-    public CachedUrl getArchiveMemberCu(ArchiveMember am) {
+    public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
       throw new UnsupportedOperationException("Not implemented");
     }
 

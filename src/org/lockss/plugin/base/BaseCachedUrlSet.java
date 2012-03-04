@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.27 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.28 2012-03-04 09:04:17 tlipkis Exp $
  */
 
 /*
@@ -506,15 +506,14 @@ public class BaseCachedUrlSet implements CachedUrlSet {
    * archive members  */
   public class ArcMemIterator implements Iterator<CachedUrl> {
     private Iterator<CachedUrlSetNode> cusIter;
-    // Iterator over the current directory in the current archive
-    private Iterator<TFile> arcIter = null;
-    // stack of directory iterators in the current archive
-    LinkedList<Iterator<TFile>> stack = new LinkedList<Iterator<TFile>>();
+    // Stack of directory iterators in the current archive
+    private LinkedList<Iterator<TFile>> arcIterStack =
+      new LinkedList<Iterator<TFile>>();
 
     // if null, we have to look for nextElement
     private CachedUrl nextCu = null;
     // the CU of the archive we're currently traversing
-    private CachedUrl curCu = null;
+    private CachedUrl curArcCu = null;
 
     ArcMemIterator(Iterator cusIter) {
       this.cusIter = cusIter;
@@ -551,34 +550,29 @@ public class BaseCachedUrlSet implements CachedUrlSet {
         return nextCu;
       }
       while (true) {
-	if (arcIter != null) {
+	if (!arcIterStack.isEmpty()) {
+	  Iterator<TFile> arcIter = arcIterStack.getFirst();
 	  if (arcIter.hasNext()) {
 	    TFile tf = arcIter.next();
 	    if (tf.isFile()) {
-	      nextCu = makeCu(curCu, tf);
+	      nextCu = makeCu(curArcCu, tf);
 	      break;
 	    } else if (tf.isDirectory()) {
-	      // push the current dir iterator onto the stack
-	      stack.addFirst(arcIter);
-	      // and start iterating over new subdir
-	      arcIter = new ArrayIterator(tf.listFiles());
+	      // push a new dir iterator onto the stack
+	      arcIterStack.addFirst(new ArrayIterator(sortedDir(tf)));
 	      continue;
 	    } else {
 	      logger.warning("Archive element was neither file nor dir: "
-			     + tf + ", in " + curCu);
+			     + tf + ", in " + curArcCu);
 	      continue;
 	    }
 	  } else {
-	    if (!stack.isEmpty()) {
-	      arcIter = stack.removeFirst();
-	      continue;
-	    } else {
-	      arcIter = null;
-	      curCu = null;
-	      continue;
-	    }
+	    arcIterStack.removeFirst();
+	    continue;
 	  }
-        } else if (cusIter.hasNext()) {
+	}
+	curArcCu = null;
+	if (cusIter.hasNext()) {
 	  CachedUrl cu = AuUtil.getCu(cusIter.next());
 	  if (cu == null || !cu.hasContent()) {
 	    continue;
@@ -589,24 +583,20 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 	    try {
 	      tf = getTFile(cu);
 	      if (!tf.isDirectory()) {
-		logger.error("isDirectory(" + tf + ") = false");
-		continue;
+		logger.error("isDirectory(" + tf +
+			     ") = false, including in iterator");
+		nextCu = cu;
+		break;
 	      }
-	      TFile[] tfiles = tf.listFiles();
-	      // Is this necessary?  Tfile.listFiles() appears already to
-	      // be sorted
-	      Arrays.sort(tfiles);
 	      if (logger.isDebug3()) {
 		logger.debug3("Found archive: " + tf + " in " + cu);
 	      }
-	      arcIter = new ArrayIterator(tfiles);
-	      curCu = cu;
+	      TFile[] tfiles = sortedDir(tf);
+	      arcIterStack.addFirst(new ArrayIterator(tfiles));
+	      curArcCu = cu;
 	      continue;
 	    } catch (IOException e) {
-	      logger.warning("Error opening archive: "
-			     + BaseCachedUrlSet.this, e);
-	      arcIter = null;
-	      curCu = cu;
+	      logger.warning("Error opening archive: " + cu, e);
 	      continue;
 	    }
 	  } else {
@@ -621,35 +611,41 @@ public class BaseCachedUrlSet implements CachedUrlSet {
       return nextCu;
     }
 
+    private TFile[] sortedDir(TFile tf) {
+      TFile[] tfiles = tf.listFiles();
+      Arrays.sort(tfiles);
+      return tfiles;
+    }
+
     private TFile getTFile(CachedUrl cu) throws IOException {
       TrueZipManager tzm = theDaemon.getTrueZipManager();
       return tzm.getCachedTFile(au.makeCachedUrl(cu.getUrl()));
     }
 
     // Create a CU representing an archive member
-    private CachedUrl makeCu(CachedUrl curCu, TFile tf) {
-      CachedUrl res = au.makeCachedUrl(curCu.getUrl());
+    private CachedUrl makeCu(CachedUrl cu, TFile tf) {
+      CachedUrl res = au.makeCachedUrl(cu.getUrl());
       TFile top = tf.getTopLevelArchive();
       if (top == null) {
 	String msg = "Shouldn't: TFile.getTopLevelArchive(" + tf + ") = null";
-	logger.critical(msg);
 	throw new RuntimeException(msg);
       } else {
+	// Find member_path from full_path and topmost_archive_path
+	//   Full path = topmost_archive_path + "/" + member_path
 	String path = tf.getPath();
 	String toppath = top.getPath();
 	if (path.startsWith(toppath)) {
-	  int pos = (int)toppath.length();
+	  int pos = toppath.length();
 	  if (path.charAt(pos) == '/') {
 	    pos++;
 	  } else {
 	    logger.debug2("no / after archive name in path: " + path);
 	  }
 	  path = path.substring(pos);
-	  res = res.getArchiveMemberCu(new CachedUrl.ArchiveMember(path));
+	  res = res.getArchiveMemberCu(ArchiveMemberSpec.fromCu(cu, path));
 	} else {
 	  String msg = "Shouldn't: TFile path (" + path
 	    + ") doesn't begin with top level archive path (" + toppath + ")";
-	  logger.critical(msg);
 	  throw new RuntimeException(msg);
 	}
       }

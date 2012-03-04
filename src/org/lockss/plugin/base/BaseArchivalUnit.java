@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.154 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.155 2012-03-04 09:04:17 tlipkis Exp $
  */
 
 /*
@@ -169,22 +169,17 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * specifies an archive member (<tt><i>URL</i>!/<i>member</i></tt>), the
    * returned CU accesses the contents of the named archive member. */
   public CachedUrl makeCachedUrl(String url) {
-    String member = null;
-    int pos = url.indexOf(CachedUrl.ArchiveMember.URL_SEPARATOR);
-    if (pos > 0) {
-      member = url.substring(pos + 2);
-      url =  url.substring(0, pos);
-    }      
-    CachedUrl cu = new BaseCachedUrl(this, url);
-    if (member != null) {
-      cu = cu.getArchiveMemberCu(new CachedUrl.ArchiveMember(member));
+    ArchiveMemberSpec ams = ArchiveMemberSpec.fromUrl(this, url);
+    if (ams != null) {
+      CachedUrl cu = new BaseCachedUrl(this, ams.getUrl());
+      return cu.getArchiveMemberCu(ams);
     }
-    return cu;
+    return new BaseCachedUrl(this, url);
   }
 
   public UrlCacher makeUrlCacher(String url) {
-    int pos = url.indexOf(CachedUrl.ArchiveMember.URL_SEPARATOR);
-    if (pos > 0) {
+    ArchiveMemberSpec ams = ArchiveMemberSpec.fromUrl(url);
+    if (ams != null) {
       throw new IllegalArgumentException("Cannot make a UrlCacher for an archive member: " + url);
     }
     return new BaseUrlCacher(this, url);

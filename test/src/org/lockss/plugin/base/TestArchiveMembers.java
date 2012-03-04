@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchiveMembers.java,v 1.1 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: TestArchiveMembers.java,v 1.2 2012-03-04 09:04:17 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,7 @@ public class TestArchiveMembers extends LockssTestCase {
   protected static Logger log = Logger.getLogger("TestArchiveMembers");
 
   private MockLockssDaemon daemon;
+  PluginManager pluginMgr;
   private String tempDirPath;
   private SimulatedArchivalUnit simau;
   MySimulatedArchivalUnit msau;
@@ -68,7 +69,7 @@ public class TestArchiveMembers extends LockssTestCase {
     ConfigurationUtil.addFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
 				  tempDirPath);
     daemon = getMockLockssDaemon();
-    PluginManager pluginMgr = daemon.getPluginManager();
+    pluginMgr = daemon.getPluginManager();
     pluginMgr.setLoadablePluginsReady(true);
     daemon.setDaemonInited(true);
     pluginMgr.startService();
@@ -118,7 +119,7 @@ public class TestArchiveMembers extends LockssTestCase {
   CachedUrl memberCu(String url, String memberName) throws IOException {
     CachedUrl cu0 = simau.makeCachedUrl(url);
     assertTrue(cu0.hasContent());
-    return cu0.getArchiveMemberCu(new CachedUrl.ArchiveMember(memberName));
+    return cu0.getArchiveMemberCu(ArchiveMemberSpec.fromCu(cu0, memberName));
   }    
 
   void assertNoArchive(String url, String memberName)
@@ -126,7 +127,7 @@ public class TestArchiveMembers extends LockssTestCase {
     CachedUrl cu0 = simau.makeCachedUrl(url);
     assertFalse(cu0.hasContent());
     CachedUrl cu =
-      cu0.getArchiveMemberCu(new CachedUrl.ArchiveMember(memberName));
+      cu0.getArchiveMemberCu(ArchiveMemberSpec.fromCu(cu0, memberName));
     assertFalse(cu.hasContent());
     assertNull(cu.getUnfilteredInputStream());
   }
@@ -136,7 +137,7 @@ public class TestArchiveMembers extends LockssTestCase {
     CachedUrl cu0 = simau.makeCachedUrl(url);
     assertTrue(cu0.hasContent());
     CachedUrl cu =
-      cu0.getArchiveMemberCu(new CachedUrl.ArchiveMember(memberName));
+      cu0.getArchiveMemberCu(ArchiveMemberSpec.fromCu(cu0, memberName));
     assertFalse(cu.hasContent());
     assertNull(cu.getUnfilteredInputStream());
   }
@@ -147,16 +148,27 @@ public class TestArchiveMembers extends LockssTestCase {
     CachedUrl cu0 = simau.makeCachedUrl(url);
     assertTrue(cu0.hasContent());
     CachedUrl cu =
-      cu0.getArchiveMemberCu(new CachedUrl.ArchiveMember(memberName));
+      cu0.getArchiveMemberCu(ArchiveMemberSpec.fromCu(cu0, memberName));
+    assertArchiveMemberCu(expContentRe, expMime, expSize,
+			  url + "!/" + memberName, cu);
+  }
+
+  void assertArchiveMemberCu(String expContentRe, String expMime, long expSize,
+			     String expMembUrl, CachedUrl cu)
+      throws IOException {
+    assertArchiveMemberCu(expContentRe, expMime, expSize, expMembUrl, cu, null);
+  }
+
+  void assertArchiveMemberCu(String expContentRe, String expMime, long expSize,
+			     String expMembUrl, CachedUrl cu, CachedUrl arcCu)
+      throws IOException {
+    assertClass(BaseCachedUrl.Member.class, cu);
     assertTrue(cu.hasContent());
-    log.critical("assertArchiveMember("+cu+")");
-    String expMembUrl = url + "!/" + memberName;
     assertEquals(expMembUrl, cu.getUrl());
     InputStream is = cu.getUnfilteredInputStream();
     assertNotNull("getUnfilteredInputStream was null: " + cu, is);
     String s = StringUtil.fromInputStream(is);
     is.close();
-    log.critical("fff1: " + s);
     assertMatchesRE(expContentRe, s);
     assertEquals(expSize, cu.getContentSize());
 
@@ -166,9 +178,15 @@ public class TestArchiveMembers extends LockssTestCase {
     assertEquals(expMembUrl, props.get(CachedUrl.PROPERTY_NODE_URL));
     assertEquals(expMime, props.get(CachedUrl.PROPERTY_CONTENT_TYPE));
 
-    Properties arcProps = cu0.getProperties();
-    assertEquals(arcProps.get(CachedUrl.PROPERTY_LAST_MODIFIED),
-		 props.get(CachedUrl.PROPERTY_LAST_MODIFIED));
+    if (arcCu != null) {
+      Properties arcProps = arcCu.getProperties();
+
+      // Last-Modified should be present and not the same as that of the
+      // archive (see BaseCachedUrl.synthesizeProperties() )
+      assertNotEquals(arcProps.get(CachedUrl.PROPERTY_LAST_MODIFIED),
+		      props.get(CachedUrl.PROPERTY_LAST_MODIFIED));
+    }
+    assertNotNull(props.get(CachedUrl.PROPERTY_LAST_MODIFIED));
   }
 
   public void testReadMember() throws Exception {
@@ -197,9 +215,9 @@ public class TestArchiveMembers extends LockssTestCase {
     CachedUrl cu0 = simau.makeCachedUrl(aurl);
     assertTrue(cu0.hasContent());
     CachedUrl cu =
-      cu0.getArchiveMemberCu(new CachedUrl.ArchiveMember(memberName));
+      cu0.getArchiveMemberCu(ArchiveMemberSpec.fromCu(cu0, memberName));
     try {
-      cu.getArchiveMemberCu(new CachedUrl.ArchiveMember(memberName));
+      cu.getArchiveMemberCu(ArchiveMemberSpec.fromCu(cu, memberName));
       fail("Shouldn't be able to create a CU member from a CU member");
     } catch (UnsupportedOperationException e) {
     }
@@ -308,6 +326,46 @@ public class TestArchiveMembers extends LockssTestCase {
 
     assertTrue(didCheckDelete);
   }
+
+  public void testFindCu() throws Exception {
+    CachedUrl cu;
+
+    String arcUrl = "http://www.example.com/branch1/branch1/zip5.zip";
+    
+    cu = pluginMgr.findCachedUrl(arcUrl + "!/001file.html");
+    assertArchiveMemberCu("file 1, depth 0, branch 0", "text/html", 226,
+			  arcUrl + "!/001file.html", cu);
+
+    // The archive file itesle
+    cu = pluginMgr.findCachedUrl(arcUrl);
+    assertTrue(cu.hasContent());
+    assertEquals(5162, cu.getContentSize());
+
+    cu = pluginMgr.findCachedUrl(arcUrl + "!/no/such/member");
+    assertNull(cu);
+
+    cu = pluginMgr.findCachedUrl(arcUrl + "!/no/such/member", false);
+    assertFalse(cu.hasContent());
+
+    cu = pluginMgr.findCachedUrl(arcUrl + "nofile!/no/such/member");
+    assertNull(cu);
+
+    cu = pluginMgr.findCachedUrl(arcUrl + "nofile!/no/such/member", false);
+    assertFalse(cu.hasContent());
+
+    // If AU has no archive file types, currently CU will still be a Member
+    // but with no content.  Must use a different member name because of
+    // PluginManager.recentCuMap
+    msau.setArchiveFileTypes(null);
+    cu = pluginMgr.findCachedUrl(arcUrl + "!/002file.html");
+    assertNull(cu);
+
+    cu = pluginMgr.findCachedUrl(arcUrl + "!/002file.html", false);
+    assertNotClass(BaseCachedUrl.Member.class, cu);
+    assertFalse(cu.hasContent());
+  }    
+
+
 
   String stringFromCu(CachedUrl cu) throws IOException {
     InputStream is = cu.getUnfilteredInputStream();

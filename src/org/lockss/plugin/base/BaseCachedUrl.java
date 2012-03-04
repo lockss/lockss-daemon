@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.44 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.45 2012-03-04 09:04:17 tlipkis Exp $
  */
 
 /*
@@ -303,8 +303,8 @@ public class BaseCachedUrl implements CachedUrl {
     return getUnfilteredInputStream();
   }
 
-  public CachedUrl getArchiveMemberCu(ArchiveMember am) {
-    Member memb = new Member(au, url, this, am);
+  public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
+    Member memb = new Member(au, url, this, ams);
     return memb;
   }
 
@@ -340,23 +340,26 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   /** Special behavior for CUs that are archive members.  This isn't
-   * logically a subtype of CachedUrl becuase not all places that accept a
+   * logically a subtype of CachedUrl because not all places that accept a
    * CachedUrl can operate an archive member, but it's the convenient way
    * to implement it.  Perhaps it should be a supertype (interface)? */
-  class Member extends BaseCachedUrl {
-    protected CachedUrl.ArchiveMember am;
+  static class Member extends BaseCachedUrl {
+    protected BaseCachedUrl bcu;
+    protected ArchiveMemberSpec ams;
     protected TFileCache.Entry tfcEntry = null;
     protected TFile memberTf = null;
     protected CIProperties memberProps = null;
 
-    Member(ArchivalUnit au, String url, BaseCachedUrl bcu, ArchiveMember am) {
+    Member(ArchivalUnit au, String url, BaseCachedUrl bcu,
+	   ArchiveMemberSpec ams) {
       super(au, url);
-      this.am = am;
+      this.ams = ams;
+      this.bcu = bcu;
     }
 
     @Override
     public String getUrl() {
-      return getArchiveUrl() + ArchiveMember.URL_SEPARATOR + am.getName();
+      return ams.toUrl();
     }
 
     @Override
@@ -374,11 +377,6 @@ public class BaseCachedUrl implements CachedUrl {
 	  return false;
 	}
 	return getMemberTFile().exists();
-      } catch (FileNotFoundException e) {
-	String msg =
-	  "Couldn't open member for which exists() was true: " + this;
-	logger.error(msg);
-	throw new LockssRepository.RepositoryStateException(msg, e);
       } catch (Exception e) {
 	String msg =
 	  "Couldn't open member for which exists() was true: " + this;
@@ -406,11 +404,6 @@ public class BaseCachedUrl implements CachedUrl {
 	  return null;
 	}
 	return new TFileInputStream(membtf);
-      } catch (FileNotFoundException e) {
-	String msg =
-	  "Couldn't open member for which exists() was true: " + this;
-	logger.error(msg);
-	throw new LockssRepository.RepositoryStateException(msg, e);
       } catch (Exception e) {
 	String msg =
 	  "Couldn't open member for which exists() was true: " + this;
@@ -443,6 +436,20 @@ public class BaseCachedUrl implements CachedUrl {
 
       res.put(CachedUrl.PROPERTY_NODE_URL, getUrl());
       res.put("Length", getContentSize());
+
+      try {
+	// If member has last modified, overwrite any inherited from archive
+	// props.
+	TFile membtf = getMemberTFile();
+	long lastMod = membtf.lastModified();
+	if (lastMod > 0) {
+	  res.put(CachedUrl.PROPERTY_LAST_MODIFIED,
+		  BaseUrlCacher.GMT_DATE_FORMAT.format(new Date(lastMod)));
+	}
+      } catch (IOException e) {
+	logger.warning("Couldn't get member Last-Modified", e);
+      }
+
       String ctype = inferContentType();
       if (!StringUtil.isNullString(ctype)) {
 	res.put("Content-Type", ctype);
@@ -453,7 +460,7 @@ public class BaseCachedUrl implements CachedUrl {
     }
 
     private String inferContentType() {
-      String ext = FileUtil.getExtension(am.getName());
+      String ext = FileUtil.getExtension(ams.getName());
       if (ext == null) {
 	return null;
       }
@@ -481,7 +488,7 @@ public class BaseCachedUrl implements CachedUrl {
     private TFile getMemberTFile() throws IOException {
       checkValidTfcEntry();
       if (memberTf == null) {
-	memberTf = new TFile(getTFile(), am.getName());
+	memberTf = new TFile(getTFile(), ams.getName());
       }
       return memberTf;
     }
@@ -503,14 +510,14 @@ public class BaseCachedUrl implements CachedUrl {
     private TFileCache.Entry getTFileCacheEntry() throws IOException {
       checkValidTfcEntry();
       if (tfcEntry == null) {
-	TrueZipManager tzm = getDaemon().getTrueZipManager();
+	TrueZipManager tzm = bcu.getDaemon().getTrueZipManager();
 	tfcEntry = tzm.getCachedTFileEntry(au.makeCachedUrl(url));
       }
       return tfcEntry;
     }
 
-    ArchiveMember getArchiveMember() {
-      return am;
+    ArchiveMemberSpec getArchiveMemberSpec() {
+      return ams;
     }
 
     @Override
@@ -523,7 +530,7 @@ public class BaseCachedUrl implements CachedUrl {
     }
 
     @Override
-    public CachedUrl getArchiveMemberCu(ArchiveMember am) {
+    public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
       throw new UnsupportedOperationException("Can't create a CU member from a CU member: "
 					      + this);
     }

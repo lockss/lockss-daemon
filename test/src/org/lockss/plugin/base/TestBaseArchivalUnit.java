@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.59 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.60 2012-03-04 09:04:17 tlipkis Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     CrawlRule rule = new CrawlRules.FirstMatch(rules);
     mplug = new MyMockPlugin();
     mplug.initPlugin(daemon);
-    mbau =  new MyBaseArchivalUnit(mplug, auName, rule, startUrl);
+    mbau = new MyBaseArchivalUnit(mplug, auName, rule, startUrl);
   }
 
   public void tearDown() throws Exception {
@@ -802,7 +802,20 @@ try {
     assertFalse(bcu.isArchiveMember());
   }
 
+  public void testMakeCachedUrlNotInAu() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
+    Configuration exp = ConfigurationUtil.fromProps(props);
+    mbau.setConfiguration(exp);
+    String url = "http://other.site/non-preserved.html";
+    CachedUrl cu = mbau.makeCachedUrl(url);
+    assertEquals(url, cu.getUrl());
+    assertFalse(mbau.shouldBeCached(url));
+  }
+
   public void testMakeCachedUrlWithMember() {
+    mbau.setArchiveFileTypes(ArchiveFileTypes.DEFAULT);
     String u1 = "http://www.example.com/foo.zip!/member/path.ext";
     CachedUrl cu = mbau.makeCachedUrl(u1);
     assertEquals(u1, cu.getUrl());
@@ -810,9 +823,16 @@ try {
     BaseCachedUrl.Member bcu = (BaseCachedUrl.Member)cu;
     assertTrue(bcu.isArchiveMember());
     assertEquals("http://www.example.com/foo.zip", bcu.getArchiveUrl());
-    CachedUrl.ArchiveMember am = bcu.getArchiveMember();
-    assertNotNull(am);
-    assertEquals("member/path.ext", am.getName());
+    ArchiveMemberSpec ams = bcu.getArchiveMemberSpec();
+    assertNotNull(ams);
+    assertEquals("member/path.ext", ams.getName());
+  }
+
+  public void testMakeCachedUrlWithFalseMember() {
+    String u1 = "http://www.example.com/foo.zip!/member/path.ext";
+    CachedUrl cu = mbau.makeCachedUrl(u1);
+    assertEquals(u1, cu.getUrl());
+    assertNotClass(BaseCachedUrl.Member.class, cu);
   }
 
   public void testMakeUrlCacher() {
@@ -998,6 +1018,16 @@ try {
 
     void setAuId(String auid) {
       this.auId = auid;
+    }
+
+    ArchiveFileTypes aft = null;
+
+    public ArchiveFileTypes getArchiveFileTypes() {
+      return aft;
+    }
+
+    public void setArchiveFileTypes(ArchiveFileTypes aft) {
+      this.aft = aft;
     }
   }
 }

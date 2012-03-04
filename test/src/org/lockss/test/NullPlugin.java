@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.110 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.111 2012-03-04 09:04:17 tlipkis Exp $
  */
 
 /*
@@ -246,7 +246,7 @@ public class NullPlugin {
     public void release() {
     }
 
-    public CachedUrl getArchiveMemberCu(ArchiveMember am) {
+    public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
       return null;
     }
   }
