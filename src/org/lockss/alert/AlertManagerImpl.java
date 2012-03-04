@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.20 2012-01-18 03:38:17 tlipkis Exp $
+ * $Id: AlertManagerImpl.java,v 1.21 2012-03-04 03:34:03 tlipkis Exp $
  *
 
  Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -306,11 +306,9 @@ public class AlertManagerImpl
     boolean doRaise = false;
     if (enabledAlerts != null) {
       doRaise = enabledAlerts.contains(alert.getName());
-      log.critical("ena " + enabledAlerts + ", doRaise: " + doRaise);
     } else {
       doRaise =
 	(ignoredAlerts == null) || !ignoredAlerts.contains(alert.getName());
-      log.critical("ign " + ignoredAlerts + ", doRaise: " + doRaise);
     }
     if (!doRaise) {
       if (log.isDebug3()) log.debug3("Raised but ignored: " + alert);
