@@ -3009,6 +3009,20 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Journal of Physiological Anthropology ;
+        issn = 1880-6805 ;
+        issnl = 1880-6805
+      >
+
+      param[base_url] = http://www.jphysiolanthropol.com/
+      param[journal_issn] = 1880-6805
+
+      au < exists ; 2012 ; Journal of Physiological Anthropology Volume 31 ; 31 >
+
+    }
+
+    {
+      title <
         name = Journal of the International Society of Sports Nutrition ;
         issn = 1550-2783 ;
         issnl = 1550-2783
