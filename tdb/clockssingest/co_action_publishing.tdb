@@ -78,7 +78,7 @@
     au < manifest ; exists ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
     au < released ; crawling ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
-    au < manifest ; exists ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
+    au < testing ; exists ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
 
   } 
     
@@ -115,8 +115,8 @@
     comment[0] = includes supplements
     comment[notReady] = 403 Forbidden error
 
-    au < manifest ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
-    au < notReady ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
+    au < testing ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
+    au < testing ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
     au < expected ; exists ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
 
   }
@@ -189,7 +189,7 @@
     param[journal_id] = iee
     comment[notReady] = crawl failure -- no permission?
 
-    au < manifest ; exists ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
+    au < testing ; exists ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
     au < manifest ; exists ; 2012 ; Infection Ecology & Epidemiology [including Supplements] Volume 2 ; 2 ; 2012 >
 
   }
@@ -231,7 +231,7 @@
 
     au < manifest ; exists ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; 2009 >
     au < released ; crawling ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; 2010 >
-    au < manifest ; exists ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
+    au < testing ; exists ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 ; 2012 >
 
   }
@@ -375,7 +375,7 @@
     au < manifest ; exists ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 ; 2007 >
     au < manifest ; exists ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 >
     au < manifest ; exists ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 >
-    au < notReady ; exists ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
+    au < testing ; exists ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
     au < exists ; exists ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
 
   }
@@ -455,7 +455,7 @@
     au < manifest ; exists ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
     au < manifest ; exists ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
     au < manifest ; exists ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
-    au < notReady ; exists ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
+    au < testing ; exists ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
     au < exists ; exists ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
 
 
