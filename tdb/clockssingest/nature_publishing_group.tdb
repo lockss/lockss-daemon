@@ -1574,7 +1574,7 @@
     au < exists ; exists ; 2008 ; Modern Pathology Volume 21 ; 2008 ; 21 >
     au < exists ; exists ; 2009 ; Modern Pathology Volume 22 ; 2009 ; 22 >
     au < crawling ; exists ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 >
-    au < testing ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
+    au < notReady ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
     au < manifest ; exists ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
 
   }
@@ -1677,7 +1677,7 @@
     au < exists ; exists ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
     au < exists ; exists ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
     au < exists ; exists ; 2010 ; Mucosal Immunology Volume 3 ; 2010 ; 3 >
-    au < testing ; exists ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
+    au < notReady ; exists ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
     au < manifest ; exists ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 >
 
   }
@@ -2786,7 +2786,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 >
-    au < testing ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
+    au < notReady ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
     au < manifest ; exists ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 >
 
   }
@@ -3105,7 +3105,7 @@
     au < exists ; exists ; 2008 ; Neuropsychopharmacology Volume 33 ; 2008 ; 33 >
     au < exists ; exists ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 >
     au < crawling ; exists ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
-    au < testing ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
+    au < notReady ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
     au < manifest ; exists ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
 
   }
@@ -3132,7 +3132,7 @@
     au < exists ; exists ; 2008 ; Obesity Volume 16 ; 2008 ; 16 >
     au < exists ; exists ; 2009 ; Obesity Volume 17 ; 2009 ; 17 >
     au < exists ; exists ; 2010 ; Obesity Volume 18 ; 2010 ; 18 >
-    au < testing ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
+    au < notReady ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
     au < manifest ; exists ; 2012 ; Obesity Volume 20 ; 2012 ; 20 >
 
   }
