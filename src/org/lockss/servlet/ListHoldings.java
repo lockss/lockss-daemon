@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.25.2.1 2012-01-24 03:11:54 tlipkis Exp $
+ * $Id: ListHoldings.java,v 1.25.2.2 2012-03-05 00:58:06 pgust Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
-import org.lockss.util.TimeBase;;
+import org.lockss.util.TimeBase;
 import org.mortbay.html.Form;
 import org.mortbay.html.Input;
 import org.mortbay.html.Table;
