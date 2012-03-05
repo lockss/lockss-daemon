@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractorTestCase.java,v 1.6 2012-02-16 20:28:41 thib_gc Exp $
+ * $Id: FileMetadataExtractorTestCase.java,v 1.7 2012-03-05 00:47:46 pgust Exp $
  */
 
 /*
@@ -119,9 +119,14 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
 	}
       } else {
 	String actual = md.getRaw(key);
-	if (!expval.equals(actual)) {
-	  errors.add("Key: " + key + " expected:<" + expval + "> but was:<"
-		     + actual + ">");
+	if (expval == null) {
+	  if (actual != null) {
+	    errors.add("Key: " + key + " expected:<" + expval + "> but was:<"
+	         + actual + ">");
+	  }
+  } else if (!expval.equals(actual)) {
+    errors.add("Key: " + key + " expected:<" + expval + "> but was:<"
+  	     + actual + ">");
 	}
       }
     }
