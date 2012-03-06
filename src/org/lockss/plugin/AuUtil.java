@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.29 2011-06-20 16:30:03 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.29.12.1 2012-03-06 04:57:36 tlipkis Exp $
  */
 
 /*
@@ -299,9 +299,16 @@ public class AuUtil {
       }
     }
 
+    // In RegistryArchivalUnit, CRAWL_PROXY is set in au.getProperties(),
+    // not in au.getConfiguration().  Unless/until
+    // getAuParamOrTitleDefault() is changed, we need to look in
+    // au.getProperties() ourselves
     String auProxySpec =
       getStringValue(getAuParamOrTitleDefault(au, ConfigParamDescr.CRAWL_PROXY),
 		     null);
+    auProxySpec =
+      au.getProperties().getString(ConfigParamDescr.CRAWL_PROXY.getKey(),
+				   auProxySpec);
     if (!StringUtil.isNullString(auProxySpec)) {
       AuProxyInfo res = new AuProxyInfo();
       try {
@@ -360,6 +367,12 @@ public class AuUtil {
     return dfault;
   }
 
+  /** Return the value of a config param either from the AU config or from
+   * a default value in its TitleConfig */
+
+  // This should probably look in au.getProperties() instead of
+  // au.getConfiguration() so it sees inferred params.  That's a little
+  // harder because it's typed.
   public static Object getAuParamOrTitleDefault(ArchivalUnit au,
 						ConfigParamDescr cpd) {
     String key = cpd.getKey();

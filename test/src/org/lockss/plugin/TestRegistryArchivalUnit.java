@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.13 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.13.8.1 2012-03-06 04:57:35 tlipkis Exp $
  */
 
 /*
@@ -87,7 +87,26 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     TypedEntryMap paramMap = au.getProperties();
     assertEquals(107 * Constants.MINUTE,
 		 paramMap.getLong(ArchivalUnit.KEY_AU_NEW_CONTENT_CRAWL_INTERVAL));
+    assertEquals(baseUrl,
+		 paramMap.getString(ConfigParamDescr.BASE_URL.getKey()));
+    assertNull(paramMap.getString(ConfigParamDescr.CRAWL_PROXY.getKey(), null));
     assertEquals("org|lockss|plugin|TestRegistryArchivalUnit$MyRegistryPlugin&base_url~http%3A%2F%2Ffoo%2Ecom%2Fbar", au.getAuId());
+  }
+
+  public void testCrawlProxy()
+      throws ArchivalUnit.ConfigurationException {
+    Configuration auConfig =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+
+    ConfigurationUtil.addFromArgs(RegistryArchivalUnit.PARAM_REGISTRY_CRAWL_PROXY,
+				  "proxy.host:1234");
+    ArchivalUnit au = regPlugin.createAu(auConfig);
+    TypedEntryMap paramMap = au.getProperties();
+    assertEquals("crawl_proxy", ConfigParamDescr.CRAWL_PROXY.getKey());
+    assertEquals("proxy.host:1234", paramMap.getString("crawl_proxy"));
+    AuUtil.AuProxyInfo aupinfo = AuUtil.getAuProxyInfo(au);
+    assertEquals("proxy.host", aupinfo.getHost());
+    assertEquals(1234, aupinfo.getPort());
   }
 
   public void testRateLimiter() throws Exception {
