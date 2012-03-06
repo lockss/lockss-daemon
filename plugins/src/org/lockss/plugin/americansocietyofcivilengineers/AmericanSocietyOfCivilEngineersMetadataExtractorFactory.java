@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanSocietyOfCivilEngineersMetadataExtractorFactory.java,v 1.3 2012-03-06 00:04:35 pgust Exp $
+ * $Id: AmericanSocietyOfCivilEngineersMetadataExtractorFactory.java,v 1.4 2012-03-06 00:24:58 pgust Exp $
  */
 
 /*
@@ -43,9 +43,9 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.extractor.XmlMetadataExtractor.TextValue;
-import org.lockss.extractor.XmlMetadataExtractor.NodeValue;
-import org.lockss.extractor.XmlMetadataExtractor.XPathValue;
+import org.lockss.extractor.XmlDomMetadataExtractor.TextValue;
+import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
+import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.lockss.plugin.*;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -113,30 +113,30 @@ public class AmericanSocietyOfCivilEngineersMetadataExtractorFactory
         new HashMap<String,XPathValue>();
     static {
       // normal journal article schema
-      nodeMap.put("/article/front/titlegrp/title", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/front/pubfront/journal", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/front/pubfront/journal/@issn", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/front/pubfront/volume", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/front/pubfront/issue", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/front/pubfront/issue/@printdate", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/front/pubfront/fpage", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/front/pubfront/lpage", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/front/pubfront/doi", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/front/keywords/keyword", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/front/cpyrt/cpyrtholder", XmlMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/titlegrp/title", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/journal", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/journal/@issn", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/volume", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/issue", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/issue/@printdate", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/fpage", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/lpage", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/doi", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/keywords/keyword", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/cpyrt/cpyrtholder", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/article/front/authgrp/author", AUTHOR_VALUE);
 
       // book review journal article schema
       nodeMap.put("/article/bookreview/booktitlegrp/booktitle", BOOKREVIEW_TITLE_VALUE);
-      nodeMap.put("/article/bookreview/pubfront/journal", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/bookreview/pubfront/journal/@issn", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/bookreview/pubfront/volume", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/bookreview/pubfront/issue", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/bookreview/pubfront/issue/@printdate", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/bookreview/pubfront/fpage", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/bookreview/pubfront/lpage", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/bookreview/pubfront/doi", XmlMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/article/bookreview/cpyrt/cpyrtholder", XmlMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/journal", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/journal/@issn", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/volume", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/issue", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/issue/@printdate", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/fpage", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/lpage", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/doi", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/cpyrt/cpyrtholder", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/article/bookreview/authgrp/author", AUTHOR_VALUE);
 
     }
@@ -187,7 +187,7 @@ public class AmericanSocietyOfCivilEngineersMetadataExtractorFactory
       log.debug3("Attempting to extract metadata from cu: "+cu);
       try {
       ArticleMetadata am = 
-          new XmlMetadataExtractor(nodeMap).extract(target, cu);
+          new XmlDomMetadataExtractor(nodeMap).extract(target, cu);
         am.cook(xpathMap);
         emitter.emitMetadata(cu,  am);
       } catch (XPathExpressionException ex) {
