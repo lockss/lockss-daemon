@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlMetadataExtractor.java,v 1.4 2012-03-06 00:26:13 pgust Exp $
+ * $Id: TestXmlMetadataExtractor.java,v 1.5 2012-03-06 00:50:27 pgust Exp $
  */
 
 /*
@@ -130,45 +130,38 @@ public abstract class TestXmlMetadataExtractor
   public static class TestXPath extends TestXmlMetadataExtractor {
     public FileMetadataExtractorFactory getFactory() {
       return new FileMetadataExtractorFactory() {
-  public FileMetadataExtractor
-    createFileMetadataExtractor(MetadataTarget target, String mimeType)
-      throws PluginException {
-        try {
-          return new MyXmlMetadataExtractor(Arrays.asList(TEST_TAGS));
-        } catch (XPathExpressionException ex) {
-          PluginException ex2 = 
-              new PluginException("Error parsing XPath expressions");
-          ex2.initCause(ex);
-          throw ex2;
+        public FileMetadataExtractor
+          createFileMetadataExtractor(MetadataTarget target, String mimeType)
+          throws PluginException {
+          try {
+            return new MyXmlMetadataExtractor(Arrays.asList(TEST_TAGS));
+          } catch (XPathExpressionException ex) {
+            PluginException ex2 = 
+                new PluginException("Error parsing XPath expressions");
+            ex2.initCause(ex);
+            throw ex2;
+          }
         }
-        }};
+      };
     }
 
     public void testNestedTag() throws Exception {
       String text =
-  "<root>" +
-  "<FirstTag>FirstValue</FirstTag>" +
-  "<SecondTag>SecondValue" +
-  "<ThirdTag>ThirdValue</ThirdTag>" +
-  "MoreValueSecond</SecondTag>" +
-  "</root>";
-      if (this instanceof TestXmlMetadataExtractor.TestXPath) {
-        // The XML Document parser resolves this differently
-        assertRawEquals(ListUtil.list("FirstTag", "FirstValue",
-            "SecondTag", "SecondValueThirdValueMoreValueSecond",
-            "ThirdTag", "ThirdValue"),
-           
-          extractFrom(text));
-        
-      } else {
-        assertRawEquals(ListUtil.list("FirstTag", "FirstValue",
-            "SecondTag", "SecondValue<ThirdTag>ThirdValue</ThirdTag>MoreValueSecond",
-            "ThirdTag", "ThirdValue"),
-           
-          extractFrom(text));
-      }
+        "<root>" +
+        "<FirstTag>FirstValue</FirstTag>" +
+        "<SecondTag>SecondValue" +
+        "<ThirdTag>ThirdValue</ThirdTag>" +
+        "MoreValueSecond</SecondTag>" +
+        "</root>";
+      // The XML Document parser resolves this differently
+      assertRawEquals(ListUtil.list("FirstTag", "FirstValue",
+          "SecondTag", "SecondValueThirdValueMoreValueSecond",
+          "ThirdTag", "ThirdValue"),
+         
+        extractFrom(text));
     }
   }
+  
   public static Test suite() {
     return variantSuites(new Class[] {
 	TestSax.class,
