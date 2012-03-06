@@ -266,7 +266,6 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://jem.rupress.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[202] = The status does not match the CLOCKSS version, because LOCKSS has a HighWireStrVolPlugin version.      
 
       au < manifest ; 1896 ; The Journal of Experimental Medicine Volume 1 ; 1 >
       au < manifest ; 1897 ; The Journal of Experimental Medicine Volume 2 ; 2 >
