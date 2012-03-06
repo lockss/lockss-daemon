@@ -17,13 +17,13 @@
     param[base_url] = http://www.jbc.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2005 ; Journal of Biological Chemistry Volume 280 ; 280 >
-    au < manifest ; 2006 ; Journal of Biological Chemistry Volume 281 ; 281 >
-    au < manifest ; 2007 ; Journal of Biological Chemistry Volume 282 ; 282 >
+    au < testing ; 2005 ; Journal of Biological Chemistry Volume 280 ; 280 >
+    au < testing ; 2006 ; Journal of Biological Chemistry Volume 281 ; 281 >
+    au < testing ; 2007 ; Journal of Biological Chemistry Volume 282 ; 282 >
     au < ready ; 2008 ; Journal of Biological Chemistry Volume 283 ; 283 >
     au < ready ; 2009 ; Journal of Biological Chemistry Volume 284 ; 284 >
     au < ready ; 2010 ; Journal of Biological Chemistry Volume 285 ; 285 >
-    au < manifest ; 2011 ; Journal of Biological Chemistry Volume 286 ; 286 >
+    au < testing ; 2011 ; Journal of Biological Chemistry Volume 286 ; 286 >
 
   }
 
@@ -65,16 +65,16 @@
       param[base_url] = http://www.mcponline.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Molecular & Cellular Proteomics Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Molecular & Cellular Proteomics Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Molecular & Cellular Proteomics Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Molecular & Cellular Proteomics Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Molecular & Cellular Proteomics Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Molecular & Cellular Proteomics Volume 3 ; 3 >
       au < HighWirePressPlugin ; down ; 2005 ; Molecular & Cellular Proteomics Volume 4 ; 4 >
       au < HighWirePressPlugin ; down ; 2006 ; Molecular & Cellular Proteomics Volume 5 ; 5 >
       au < HighWirePressPlugin ; down ; 2007 ; Molecular & Cellular Proteomics Volume 6 ; 6 >
       au < HighWirePressPlugin ; down ; 2008 ; Molecular & Cellular Proteomics Volume 7 ; 7 >
       au < HighWirePressPlugin ; down ; 2009 ; Molecular & Cellular Proteomics Volume 8 ; 8 >
       au < HighWirePressPlugin ; down ; 2010 ; Molecular & Cellular Proteomics Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Molecular & Cellular Proteomics Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Molecular & Cellular Proteomics Volume 10 ; 10 >
 
     }
 
