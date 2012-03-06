@@ -21,7 +21,7 @@
     param[journal_code] = an
 
     au < down ; 1997 ; The Analyst Volume 122 ; 122 ; 1997 >
-    au < testing ; 1998 ; The Analyst Volume 123 ; 123 ; 1998 >
+    au < manifest ; 1998 ; The Analyst Volume 123 ; 123 ; 1998 >
     au < down ; 1999 ; The Analyst Volume 124 ; 124 ; 1999 >
     au < down ; 2000 ; The Analyst Volume 125 ; 125 ; 2000 >
     au < down ; 2001 ; The Analyst Volume 126 ; 126 ; 2001 >
@@ -33,6 +33,7 @@
     au < down ; 2007 ; The Analyst Volume 132 ; 132 ; 2007 >
     au < down ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 >
     au < down ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 >
+    au < down ; 2010 ; The Analyst Volume 135 ; 135 ; 2010 >
 
   }
 
@@ -153,15 +154,15 @@
     param[journal_code] = cs
 
     au < down ; 1997 ; Chemical Society Reviews Volume 26 ; 26 ; 1997 >
-    au < testing ; 1998 ; Chemical Society Reviews Volume 27 ; 27 ; 1998 >
-    au < testing ; 1999 ; Chemical Society Reviews Volume 28 ; 28 ; 1999 >
-    au < testing ; 2000 ; Chemical Society Reviews Volume 29 ; 29 ; 2000 >
-    au < testing ; 2001 ; Chemical Society Reviews Volume 30 ; 30 ; 2001 >
-    au < testing ; 2002 ; Chemical Society Reviews Volume 31 ; 31 ; 2002 >
-    au < testing ; 2003 ; Chemical Society Reviews Volume 32 ; 32 ; 2003 >
-    au < testing ; 2004 ; Chemical Society Reviews Volume 33 ; 33 ; 2004 >
-    au < testing ; 2005 ; Chemical Society Reviews Volume 34 ; 34 ; 2005 >
-    au < testing ; 2006 ; Chemical Society Reviews Volume 35 ; 35 ; 2006 >
+    au < manifest ; 1998 ; Chemical Society Reviews Volume 27 ; 27 ; 1998 >
+    au < manifest ; 1999 ; Chemical Society Reviews Volume 28 ; 28 ; 1999 >
+    au < manifest ; 2000 ; Chemical Society Reviews Volume 29 ; 29 ; 2000 >
+    au < manifest ; 2001 ; Chemical Society Reviews Volume 30 ; 30 ; 2001 >
+    au < manifest ; 2002 ; Chemical Society Reviews Volume 31 ; 31 ; 2002 >
+    au < manifest ; 2003 ; Chemical Society Reviews Volume 32 ; 32 ; 2003 >
+    au < manifest ; 2004 ; Chemical Society Reviews Volume 33 ; 33 ; 2004 >
+    au < manifest ; 2005 ; Chemical Society Reviews Volume 34 ; 34 ; 2005 >
+    au < manifest ; 2006 ; Chemical Society Reviews Volume 35 ; 35 ; 2006 >
     au < down ; 2007 ; Chemical Society Reviews Volume 36 ; 36 ; 2007 >
     au < down ; 2008 ; Chemical Society Reviews Volume 37 ; 37 ; 2008 >
     au < down ; 2009 ; Chemical Society Reviews Volume 38 ; 38 ; 2009 >
@@ -192,7 +193,7 @@
 
     param[journal_code] = co
 
-    au < testing ; 1997 ; Contemporary Organic Synthesis Volume 4 ; 4 ; 1997 >
+    au < manifest ; 1997 ; Contemporary Organic Synthesis Volume 4 ; 4 ; 1997 >
 
   }
 
@@ -231,18 +232,18 @@
 
     param[journal_code] = dt
 
-    au < testing ; 1997 ; Dalton Transactions 1997 ; 0 ; 1997 >
-    au < testing ; 1998 ; Dalton Transactions 1998 ; 0 ; 1998 >
-    au < testing ; 1999 ; Dalton Transactions 1999 ; 0 ; 1999 >
-    au < testing ; 2000 ; Dalton Transactions 2000 ; 0 ; 2000 >
-    au < testing ; 2001 ; Dalton Transactions 2001 ; 0 ; 2001 >
+    au < manifest ; 1997 ; Dalton Transactions 1997 ; 0 ; 1997 >
+    au < manifest ; 1998 ; Dalton Transactions 1998 ; 0 ; 1998 >
+    au < manifest ; 1999 ; Dalton Transactions 1999 ; 0 ; 1999 >
+    au < manifest ; 2000 ; Dalton Transactions 2000 ; 0 ; 2000 >
+    au < manifest ; 2001 ; Dalton Transactions 2001 ; 0 ; 2001 >
     au < down ; 2002 ; Dalton Transactions 2002 ; 0 ; 2002 >
-    au < testing ; 2003 ; Dalton Transactions 2003 ; 0 ; 2003 >
-    au < testing ; 2004 ; Dalton Transactions 2004 ; 0 ; 2004 >
-    au < testing ; 2005 ; Dalton Transactions 2005 ; 0 ; 2005 >
-    au < testing ; 2006 ; Dalton Transactions 2006 ; 0 ; 2006 >
-    au < testing ; 2007 ; Dalton Transactions 2007 ; 0 ; 2007 >
-    au < testing ; 2008 ; Dalton Transactions 2008 ; 0 ; 2008 >
+    au < manifest ; 2003 ; Dalton Transactions 2003 ; 0 ; 2003 >
+    au < manifest ; 2004 ; Dalton Transactions 2004 ; 0 ; 2004 >
+    au < manifest ; 2005 ; Dalton Transactions 2005 ; 0 ; 2005 >
+    au < manifest ; 2006 ; Dalton Transactions 2006 ; 0 ; 2006 >
+    au < manifest ; 2007 ; Dalton Transactions 2007 ; 0 ; 2007 >
+    au < manifest ; 2008 ; Dalton Transactions 2008 ; 0 ; 2008 >
     au < down ; 2009 ; Dalton Transactions 2009 ; 0 ; 2009 >
 
   }
@@ -274,9 +275,9 @@
     
     param[journal_code] = fd
 
-    au < testing ; 2008 ; Faraday Discussions Volume 137 ; 137 ; 2008 >
-    au < testing ; 2008 ; Faraday Discussions Volume 138 ; 138 ; 2008 >
-    au < testing ; 2008 ; Faraday Discussions Volume 139 ; 139 ; 2008 >
+    au < manifest ; 2008 ; Faraday Discussions Volume 137 ; 137 ; 2008 >
+    au < manifest ; 2008 ; Faraday Discussions Volume 138 ; 138 ; 2008 >
+    au < manifest ; 2008 ; Faraday Discussions Volume 139 ; 139 ; 2008 >
     au < down ; 2009 ; Faraday Discussions Volume 140 ; 140 ; 2009 >
     au < down ; 2009 ; Faraday Discussions Volume 141 ; 141 ; 2009 >
     au < down ; 2009 ; Faraday Discussions Volume 142 ; 142 ; 2009 >
@@ -381,8 +382,8 @@
 
     param[journal_code] = jc
 
-    au < testing ; 1997 ; Journal of Chemical Research, Synopses 1997 ; 0 ; 1997 >
-    au < testing ; 1998 ; Journal of Chemical Research, Synopses 1998 ; 0 ; 1998 >
+    au < manifest ; 1997 ; Journal of Chemical Research, Synopses 1997 ; 0 ; 1997 >
+    au < manifest ; 1998 ; Journal of Chemical Research, Synopses 1998 ; 0 ; 1998 >
     au < down ; 1999 ; Journal of Chemical Research, Synopses 1999 ; 0 ; 1999 >
 
   }
@@ -398,7 +399,7 @@
     param[journal_code] = ft
 
     au < down ; 1997 ; Journal of the Chemical Society, Faraday Transactions Volume 93 ; 93 ; 1997 >
-    au < testing ; 1998 ; Journal of the Chemical Society, Faraday Transactions Volume 94 ; 94 ; 1998 >
+    au < manifest ; 1998 ; Journal of the Chemical Society, Faraday Transactions Volume 94 ; 94 ; 1998 >
 
   }
 
@@ -413,11 +414,11 @@
 
     param[journal_code] = p1
 
-    au < testing ; 1997 ; Journal of the Chemical Society, Perkin Transactions 1 1997 ; 0 ; 1997 >
-    au < testing ; 1998 ; Journal of the Chemical Society, Perkin Transactions 1 1998 ; 0 ; 1998 >
-    au < testing ; 1999 ; Journal of the Chemical Society, Perkin Transactions 1 1999 ; 0 ; 1999 >
-    au < testing ; 2000 ; Journal of the Chemical Society, Perkin Transactions 1 2000 ; 0 ; 2000 >
-    au < testing ; 2001 ; Journal of the Chemical Society, Perkin Transactions 1 2001 ; 0 ; 2001 >
+    au < manifest ; 1997 ; Journal of the Chemical Society, Perkin Transactions 1 1997 ; 0 ; 1997 >
+    au < manifest ; 1998 ; Journal of the Chemical Society, Perkin Transactions 1 1998 ; 0 ; 1998 >
+    au < manifest ; 1999 ; Journal of the Chemical Society, Perkin Transactions 1 1999 ; 0 ; 1999 >
+    au < manifest ; 2000 ; Journal of the Chemical Society, Perkin Transactions 1 2000 ; 0 ; 2000 >
+    au < manifest ; 2001 ; Journal of the Chemical Society, Perkin Transactions 1 2001 ; 0 ; 2001 >
     au < down ; 2002 ; Journal of the Chemical Society, Perkin Transactions 1 2002 ; 0 ; 2002 >
 
   }
@@ -433,9 +434,9 @@
 
     param[journal_code] = p2
 
-    au < testing ; 1997 ; Journal of the Chemical Society, Perkin Transactions 2 1997 ; 0 ; 1997 >
-    au < testing ; 1998 ; Journal of the Chemical Society, Perkin Transactions 2 1998 ; 0 ; 1998 >
-    au < testing ; 1999 ; Journal of the Chemical Society, Perkin Transactions 2 1999 ; 0 ; 1999 >
+    au < manifest ; 1997 ; Journal of the Chemical Society, Perkin Transactions 2 1997 ; 0 ; 1997 >
+    au < manifest ; 1998 ; Journal of the Chemical Society, Perkin Transactions 2 1998 ; 0 ; 1998 >
+    au < manifest ; 1999 ; Journal of the Chemical Society, Perkin Transactions 2 1999 ; 0 ; 1999 >
     au < down ; 2000 ; Journal of the Chemical Society, Perkin Transactions 2 2000 ; 0 ; 2000 >
     au < down ; 2001 ; Journal of the Chemical Society, Perkin Transactions 2 2001 ; 0 ; 2001 >
     au < down ; 2002 ; Journal of the Chemical Society, Perkin Transactions 2 2002 ; 0 ; 2002 >
@@ -453,14 +454,14 @@
 
     param[journal_code] = em
 
-    au < testing ; 1999 ; Journal of Environmental Monitoring Volume 1 ; 1 ; 1999 >
-    au < testing ; 2000 ; Journal of Environmental Monitoring Volume 2 ; 2 ; 2000 >
-    au < testing ; 2001 ; Journal of Environmental Monitoring Volume 3 ; 3 ; 2001 >
-    au < testing ; 2002 ; Journal of Environmental Monitoring Volume 4 ; 4 ; 2002 >
-    au < testing ; 2003 ; Journal of Environmental Monitoring Volume 5 ; 5 ; 2003 >
-    au < testing ; 2004 ; Journal of Environmental Monitoring Volume 6 ; 6 ; 2004 >
-    au < testing ; 2005 ; Journal of Environmental Monitoring Volume 7 ; 7 ; 2005 >
-    au < testing ; 2006 ; Journal of Environmental Monitoring Volume 8 ; 8 ; 2006 >
+    au < manifest ; 1999 ; Journal of Environmental Monitoring Volume 1 ; 1 ; 1999 >
+    au < manifest ; 2000 ; Journal of Environmental Monitoring Volume 2 ; 2 ; 2000 >
+    au < manifest ; 2001 ; Journal of Environmental Monitoring Volume 3 ; 3 ; 2001 >
+    au < manifest ; 2002 ; Journal of Environmental Monitoring Volume 4 ; 4 ; 2002 >
+    au < manifest ; 2003 ; Journal of Environmental Monitoring Volume 5 ; 5 ; 2003 >
+    au < manifest ; 2004 ; Journal of Environmental Monitoring Volume 6 ; 6 ; 2004 >
+    au < manifest ; 2005 ; Journal of Environmental Monitoring Volume 7 ; 7 ; 2005 >
+    au < manifest ; 2006 ; Journal of Environmental Monitoring Volume 8 ; 8 ; 2006 >
     au < down ; 2007 ; Journal of Environmental Monitoring Volume 9 ; 9 ; 2007 >
     au < down ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 >
     au < down ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 >
@@ -477,17 +478,17 @@
 
     param[journal_code] = jm
 
-    au < testing ; 1997 ; Journal of Materials Chemistry Volume 7 ; 7 ; 1997 >
-    au < testing ; 1998 ; Journal of Materials Chemistry Volume 8 ; 8 ; 1998 >
-    au < testing ; 1999 ; Journal of Materials Chemistry Volume 9 ; 9 ; 1999 >
+    au < manifest ; 1997 ; Journal of Materials Chemistry Volume 7 ; 7 ; 1997 >
+    au < manifest ; 1998 ; Journal of Materials Chemistry Volume 8 ; 8 ; 1998 >
+    au < manifest ; 1999 ; Journal of Materials Chemistry Volume 9 ; 9 ; 1999 >
     au < down ; 2000 ; Journal of Materials Chemistry Volume 10 ; 10 ; 2000 >
     au < down ; 2001 ; Journal of Materials Chemistry Volume 11 ; 11 ; 2001 >
-    au < testing ; 2002 ; Journal of Materials Chemistry Volume 12 ; 12 ; 2002 >
+    au < manifest ; 2002 ; Journal of Materials Chemistry Volume 12 ; 12 ; 2002 >
     au < down ; 2003 ; Journal of Materials Chemistry Volume 13 ; 13 ; 2003 >
-    au < testing ; 2004 ; Journal of Materials Chemistry Volume 14 ; 14 ; 2004 >
+    au < manifest ; 2004 ; Journal of Materials Chemistry Volume 14 ; 14 ; 2004 >
     au < down ; 2005 ; Journal of Materials Chemistry Volume 15 ; 15 ; 2005 >
     au < down ; 2006 ; Journal of Materials Chemistry Volume 16 ; 16 ; 2006 >
-    au < testing ; 2007 ; Journal of Materials Chemistry Volume 17 ; 17 ; 2007 >
+    au < manifest ; 2007 ; Journal of Materials Chemistry Volume 17 ; 17 ; 2007 >
     au < down ; 2008 ; Journal of Materials Chemistry Volume 18 ; 18 ; 2008 >
     au < down ; 2009 ; Journal of Materials Chemistry Volume 19 ; 19 ; 2009 >
 
@@ -505,11 +506,11 @@
     param[journal_code] = lc
 
     au < down ; 2001 ; Lab on a Chip Volume 1 ; 1 ; 2001 >
-    au < testing ; 2002 ; Lab on a Chip Volume 2 ; 2 ; 2002 >
-    au < testing ; 2003 ; Lab on a Chip Volume 3 ; 3 ; 2003 >
-    au < testing ; 2004 ; Lab on a Chip Volume 4 ; 4 ; 2004 >
-    au < testing ; 2005 ; Lab on a Chip Volume 5 ; 5 ; 2005 >
-    au < testing ; 2006 ; Lab on a Chip Volume 6 ; 6 ; 2006 >
+    au < manifest ; 2002 ; Lab on a Chip Volume 2 ; 2 ; 2002 >
+    au < manifest ; 2003 ; Lab on a Chip Volume 3 ; 3 ; 2003 >
+    au < manifest ; 2004 ; Lab on a Chip Volume 4 ; 4 ; 2004 >
+    au < manifest ; 2005 ; Lab on a Chip Volume 5 ; 5 ; 2005 >
+    au < manifest ; 2006 ; Lab on a Chip Volume 6 ; 6 ; 2006 >
     au < down ; 2007 ; Lab on a Chip Volume 7 ; 7 ; 2007 >
     au < down ; 2008 ; Lab on a Chip Volume 8 ; 8 ; 2008 >
     au < down ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 >
@@ -542,8 +543,8 @@
 
     param[journal_code] = mb
 
-    au < testing ; 2005 ; Molecular BioSystems Volume 1 ; 1 ; 2005 >
-    au < testing ; 2006 ; Molecular BioSystems Volume 2 ; 2 ; 2006 >
+    au < manifest ; 2005 ; Molecular BioSystems Volume 1 ; 1 ; 2005 >
+    au < manifest ; 2006 ; Molecular BioSystems Volume 2 ; 2 ; 2006 >
     au < down ; 2007 ; Molecular BioSystems Volume 3 ; 3 ; 2007 >
     au < down ; 2008 ; Molecular BioSystems Volume 4 ; 4 ; 2008 >
     au < down ; 2009 ; Molecular BioSystems Volume 5 ; 5 ; 2009 >
@@ -576,17 +577,17 @@
 
     param[journal_code] = np
 
-    au < testing ; 1997 ; Natural Product Reports Volume 14 ; 14 ; 1997 >
-    au < testing ; 1998 ; Natural Product Reports Volume 15 ; 15 ; 1998 >
-    au < testing ; 1999 ; Natural Product Reports Volume 16 ; 16 ; 1999 >
-    au < testing ; 2000 ; Natural Product Reports Volume 17 ; 17 ; 2000 >
-    au < testing ; 2001 ; Natural Product Reports Volume 18 ; 18 ; 2001 >
-    au < testing ; 2002 ; Natural Product Reports Volume 19 ; 19 ; 2002 >
-    au < testing ; 2003 ; Natural Product Reports Volume 20 ; 20 ; 2003 >
-    au < testing ; 2004 ; Natural Product Reports Volume 21 ; 21 ; 2004 >
-    au < testing ; 2005 ; Natural Product Reports Volume 22 ; 22 ; 2005 >
-    au < testing ; 2006 ; Natural Product Reports Volume 23 ; 23 ; 2006 >
-    au < testing ; 2007 ; Natural Product Reports Volume 24 ; 24 ; 2007 >
+    au < manifest ; 1997 ; Natural Product Reports Volume 14 ; 14 ; 1997 >
+    au < manifest ; 1998 ; Natural Product Reports Volume 15 ; 15 ; 1998 >
+    au < manifest ; 1999 ; Natural Product Reports Volume 16 ; 16 ; 1999 >
+    au < manifest ; 2000 ; Natural Product Reports Volume 17 ; 17 ; 2000 >
+    au < manifest ; 2001 ; Natural Product Reports Volume 18 ; 18 ; 2001 >
+    au < manifest ; 2002 ; Natural Product Reports Volume 19 ; 19 ; 2002 >
+    au < manifest ; 2003 ; Natural Product Reports Volume 20 ; 20 ; 2003 >
+    au < manifest ; 2004 ; Natural Product Reports Volume 21 ; 21 ; 2004 >
+    au < manifest ; 2005 ; Natural Product Reports Volume 22 ; 22 ; 2005 >
+    au < manifest ; 2006 ; Natural Product Reports Volume 23 ; 23 ; 2006 >
+    au < manifest ; 2007 ; Natural Product Reports Volume 24 ; 24 ; 2007 >
     au < down ; 2008 ; Natural Product Reports Volume 25 ; 25 ; 2008 >
     au < down ; 2009 ; Natural Product Reports Volume 26 ; 26 ; 2009 >
 
@@ -603,11 +604,11 @@
 
     param[journal_code] = nj
 
-    au < testing ; 1998 ; New Journal of Chemistry Volume 22 ; 22 ; 1998 >
-    au < testing ; 1999 ; New Journal of Chemistry Volume 23 ; 23 ; 1999 >
-    au < testing ; 2000 ; New Journal of Chemistry Volume 24 ; 24 ; 2000 >
+    au < manifest ; 1998 ; New Journal of Chemistry Volume 22 ; 22 ; 1998 >
+    au < manifest ; 1999 ; New Journal of Chemistry Volume 23 ; 23 ; 1999 >
+    au < manifest ; 2000 ; New Journal of Chemistry Volume 24 ; 24 ; 2000 >
     au < down ; 2001 ; New Journal of Chemistry Volume 25 ; 25 ; 2001 >
-    au < testing ; 2002 ; New Journal of Chemistry Volume 26 ; 26 ; 2002 >
+    au < manifest ; 2002 ; New Journal of Chemistry Volume 26 ; 26 ; 2002 >
     au < down ; 2003 ; New Journal of Chemistry Volume 27 ; 27 ; 2003 >
     au < down ; 2004 ; New Journal of Chemistry Volume 28 ; 28 ; 2004 >
     au < down ; 2005 ; New Journal of Chemistry Volume 29 ; 29 ; 2005 >
@@ -650,10 +651,10 @@
 
     param[journal_code] = po
 
-    au < testing ; 2000 ; Pesticide Outlook Volume 11 ; 11 ; 2000 >
-    au < testing ; 2001 ; Pesticide Outlook Volume 12 ; 12 ; 2001 >
-    au < testing ; 2002 ; Pesticide Outlook Volume 13 ; 13 ; 2002 >
-    au < testing ; 2003 ; Pesticide Outlook Volume 14 ; 14 ; 2003 >
+    au < manifest ; 2000 ; Pesticide Outlook Volume 11 ; 11 ; 2000 >
+    au < manifest ; 2001 ; Pesticide Outlook Volume 12 ; 12 ; 2001 >
+    au < manifest ; 2002 ; Pesticide Outlook Volume 13 ; 13 ; 2002 >
+    au < manifest ; 2003 ; Pesticide Outlook Volume 14 ; 14 ; 2003 >
 
   }
 
@@ -707,7 +708,7 @@
 
     param[journal_code] = cp
 
-    au < testing ; 1999 ; Physical Chemistry Chemical Physics Volume 1 ; 1 ; 1999 >
+    au < manifest ; 1999 ; Physical Chemistry Chemical Physics Volume 1 ; 1 ; 1999 >
     au < down ; 2000 ; Physical Chemistry Chemical Physics Volume 2 ; 2 ; 2000 >
     au < down ; 2001 ; Physical Chemistry Chemical Physics Volume 3 ; 3 ; 2001 >
     au < down ; 2002 ; Physical Chemistry Chemical Physics Volume 4 ; 4 ; 2002 >
@@ -715,7 +716,7 @@
     au < down ; 2004 ; Physical Chemistry Chemical Physics Volume 6 ; 6 ; 2004 >
     au < down ; 2005 ; Physical Chemistry Chemical Physics Volume 7 ; 7 ; 2005 >
     au < down ; 2006 ; Physical Chemistry Chemical Physics Volume 8 ; 8 ; 2006 >
-    au < testing ; 2007 ; Physical Chemistry Chemical Physics Volume 9 ; 9 ; 2007 >
+    au < manifest ; 2007 ; Physical Chemistry Chemical Physics Volume 9 ; 9 ; 2007 >
     au < down ; 2008 ; Physical Chemistry Chemical Physics Volume 10 ; 10 ; 2008 >
     au < down ; 2009 ; Physical Chemistry Chemical Physics Volume 11 ; 11 ; 2009 >
 
@@ -732,7 +733,7 @@
 
     param[journal_code] = rc
 
-    au < testing ; 1998 ; Russian Chemical Reviews Volume 67 ; 67 ; 1998 >
+    au < manifest ; 1998 ; Russian Chemical Reviews Volume 67 ; 67 ; 1998 >
     au < down ; 1999 ; Russian Chemical Reviews Volume 68 ; 68 ; 1999 >
     au < down ; 2000 ; Russian Chemical Reviews Volume 69 ; 69 ; 2000 >
     au < down ; 2001 ; Russian Chemical Reviews Volume 70 ; 70 ; 2001 >
@@ -753,9 +754,9 @@
 
     param[journal_code] = sm
 
-    au < testing ; 2005 ; Soft Matter Volume 1 ; 1 ; 2005 >
-    au < testing ; 2006 ; Soft Matter Volume 2 ; 2 ; 2006 >
-    au < testing ; 2007 ; Soft Matter Volume 3 ; 3 ; 2007 >
+    au < manifest ; 2005 ; Soft Matter Volume 1 ; 1 ; 2005 >
+    au < manifest ; 2006 ; Soft Matter Volume 2 ; 2 ; 2006 >
+    au < manifest ; 2007 ; Soft Matter Volume 3 ; 3 ; 2007 >
     au < down ; 2008 ; Soft Matter Volume 4 ; 4 ; 2008 >
     au < down ; 2009 ; Soft Matter Volume 5 ; 5 ; 2009 >
 
