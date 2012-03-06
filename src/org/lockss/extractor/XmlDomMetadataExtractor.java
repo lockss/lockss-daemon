@@ -1,5 +1,5 @@
 /*
- * $Id: XmlDomMetadataExtractor.java,v 1.1 2012-03-06 00:23:54 pgust Exp $
+ * $Id: XmlDomMetadataExtractor.java,v 1.2 2012-03-06 00:39:07 pgust Exp $
  */
 
 /*
@@ -45,8 +45,6 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
-
-import org.lockss.daemon.PluginException;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
@@ -210,7 +208,7 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
    * @param in the input stream to use as the source
    */
   public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
-      throws IOException, PluginException {
+      throws IOException {
     if (cu == null) {
       throw new IllegalArgumentException("null CachedUrl");
     }
@@ -234,7 +232,7 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
     try {
       doc = builder.parse(bReader);
     } catch (SAXException ex) {
-      log.warning(ex.toString());
+      log.warning(ex.getMessage());
       return am;
     }
 
