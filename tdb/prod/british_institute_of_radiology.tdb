@@ -18,21 +18,21 @@
 
     param[base_url] = http://bjr.birjournals.org/
     
-    au < testing ; 1928 ; British Journal of Radiology Volume 1 ; 1 >
-    au < testing ; 1929 ; British Journal of Radiology Volume 2 ; 2 >
-    au < testing ; 1930 ; British Journal of Radiology Volume 3 ; 3 >
-    au < testing ; 1931 ; British Journal of Radiology Volume 4 ; 4 >
-    au < testing ; 1932 ; British Journal of Radiology Volume 5 ; 5 >
-    au < testing ; 1933 ; British Journal of Radiology Volume 6 ; 6 >
-    au < testing ; 1934 ; British Journal of Radiology Volume 7 ; 7 >
-    au < testing ; 1935 ; British Journal of Radiology Volume 8 ; 8 >
-    au < testing ; 1936 ; British Journal of Radiology Volume 9 ; 9 >
-    au < testing ; 1937 ; British Journal of Radiology Volume 10 ; 10 >
-    au < manifest ; 1938 ; British Journal of Radiology Volume 11 ; 11 >
-    au < manifest ; 1939 ; British Journal of Radiology Volume 12 ; 12 >
-    au < manifest ; 1940 ; British Journal of Radiology Volume 13 ; 13 >
-    au < manifest ; 1941 ; British Journal of Radiology Volume 14 ; 14 >
-    au < manifest ; 1942 ; British Journal of Radiology Volume 15 ; 15 >
+    au < ready ; 1928 ; British Journal of Radiology Volume 1 ; 1 >
+    au < ready ; 1929 ; British Journal of Radiology Volume 2 ; 2 >
+    au < ready ; 1930 ; British Journal of Radiology Volume 3 ; 3 >
+    au < ready ; 1931 ; British Journal of Radiology Volume 4 ; 4 >
+    au < ready ; 1932 ; British Journal of Radiology Volume 5 ; 5 >
+    au < ready ; 1933 ; British Journal of Radiology Volume 6 ; 6 >
+    au < ready ; 1934 ; British Journal of Radiology Volume 7 ; 7 >
+    au < notReady ; 1935 ; British Journal of Radiology Volume 8 ; 8 >
+    au < ready ; 1936 ; British Journal of Radiology Volume 9 ; 9 >
+    au < ready ; 1937 ; British Journal of Radiology Volume 10 ; 10 >
+    au < testing ; 1938 ; British Journal of Radiology Volume 11 ; 11 >
+    au < testing ; 1939 ; British Journal of Radiology Volume 12 ; 12 >
+    au < testing ; 1940 ; British Journal of Radiology Volume 13 ; 13 >
+    au < testing ; 1941 ; British Journal of Radiology Volume 14 ; 14 >
+    au < testing ; 1942 ; British Journal of Radiology Volume 15 ; 15 >
     au < manifest ; 1943 ; British Journal of Radiology Volume 16 ; 16 >
     au < manifest ; 1944 ; British Journal of Radiology Volume 17 ; 17 >
     au < manifest ; 1945 ; British Journal of Radiology Volume 18 ; 18 >
@@ -100,7 +100,7 @@
     au < manifest ; 2007 ; British Journal of Radiology Volume 80 ; 80 >
     au < manifest ; 2008 ; British Journal of Radiology Volume 81 ; 81 >
     au < ready ; 2009 ; British Journal of Radiology Volume 82 ; 82 >
-    au < manifest ; 2010 ; British Journal of Radiology Volume 83 ; 83 >
+    au < testing ; 2010 ; British Journal of Radiology Volume 83 ; 83 >
     au < ready ; 2011 ; British Journal of Radiology Volume 84 ; 84 >
     au < manifest ; 2012 ; British Journal of Radiology Volume 85 ; 85 >
     
