@@ -54,7 +54,7 @@
     au < exists ; exists ; 2007 ; American Journal of Gastroenterology Volume 102 ; 2007 ; 102 >
     au < exists ; exists ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
     au < exists ; exists ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
-    au < manifest ; exists ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
+    au < crawling ; exists ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
     au < released ; crawling ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 >
     au < manifest ; exists ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 >
 
@@ -153,8 +153,8 @@
     au < released ; crawling ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
     au < released ; crawling ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 >
     au < superseded ; down ; 2010 ; Bone Marrow Transplantation Volume 46 [superseded] ; 2010 ; 46 >
-    au < exists ; exists ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 >
-    au < exists ; exists ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 >
+    au < testing ; exists ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 >
+    au < manifest ; exists ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 >
 
   }
 
@@ -350,13 +350,13 @@
 
     param[journal_id] = cr
 
-    au < exists ; exists ; 1999 ; Cell Research Volume 9 ; 1999 ; 9 >
-    au < exists ; exists ; 2000 ; Cell Research Volume 10 ; 2000 ; 10 >
-    au < exists ; exists ; 2001 ; Cell Research Volume 11 ; 2001 ; 11 >
-    au < exists ; exists ; 2002 ; Cell Research Volume 12 ; 2002 ; 12 >
-    au < exists ; exists ; 2003 ; Cell Research Volume 13 ; 2003 ; 13 >
-    au < exists ; exists ; 2004 ; Cell Research Volume 14 ; 2004 ; 14 >
-    au < exists ; exists ; 2005 ; Cell Research Volume 15 ; 2005 ; 15 >
+    au < manifest ; exists ; 1999 ; Cell Research Volume 9 ; 1999 ; 9 >
+    au < manifest ; exists ; 2000 ; Cell Research Volume 10 ; 2000 ; 10 >
+    au < manifest ; exists ; 2001 ; Cell Research Volume 11 ; 2001 ; 11 >
+    au < manifest ; exists ; 2002 ; Cell Research Volume 12 ; 2002 ; 12 >
+    au < manifest ; exists ; 2003 ; Cell Research Volume 13 ; 2003 ; 13 >
+    au < manifest ; exists ; 2004 ; Cell Research Volume 14 ; 2004 ; 14 >
+    au < manifest ; exists ; 2005 ; Cell Research Volume 15 ; 2005 ; 15 >
     au < manifest ; exists ; 2006 ; Cell Research Volume 16 ; 2006 ; 16 >
     au < manifest ; exists ; 2007 ; Cell Research Volume 17 ; 2007 ; 17 >
     au < released ; crawling ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
@@ -439,7 +439,7 @@
     au < exists ; exists ; 2009 ; Clinical Pharmacology & Therapeutics Volume 85 ; 2009 ; 85 >
     au < exists ; exists ; 2009 ; Clinical Pharmacology & Therapeutics Volume 86 ; 2009 ; 86 >
     au < released ; crawling ; 2010 ; Clinical Pharmacology & Therapeutics Volume 87 ; 2010 ; 87 >
-    au < manifest ; exists ; 2010 ; Clinical Pharmacology & Therapeutics Volume 88 ; 2010 ; 88 >
+    au < crawling ; exists ; 2010 ; Clinical Pharmacology & Therapeutics Volume 88 ; 2010 ; 88 >
     au < released ; crawling ; 2011 ; Clinical Pharmacology & Therapeutics Volume 89 ; 2011 ; 89 >
     au < released ; crawling ; 2011 ; Clinical Pharmacology & Therapeutics Volume 90 ; 2011 ; 90 >
     au < manifest ; exists ; 2012 ; Clinical Pharmacology & Therapeutics Volume 91 ; 2012 ; 91 >
@@ -495,7 +495,7 @@
     au < manifest ; exists ; 2005 ; EMBO Reports Volume 6 ; 2005 ; 6 >
     au < manifest ; exists ; 2006 ; EMBO Reports Volume 7 ; 2006 ; 7 >
     au < manifest ; exists ; 2007 ; EMBO Reports Volume 8 ; 2007 ; 8 >
-    au < manifest ; exists ; 2008 ; EMBO Reports Volume 9 ; 2008 ; 9 >
+    au < crawling ; exists ; 2008 ; EMBO Reports Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; EMBO Reports Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 >
     au < released ; crawling ; 2011 ; EMBO Reports Volume 12 ; 2011 ; 12 >
@@ -554,9 +554,9 @@
     au < manifest ; exists ; 2005 ; European Journal of Human Genetics Volume 13 ; 2005 ; 13 >
     au < manifest ; exists ; 2006 ; European Journal of Human Genetics Volume 14 ; 2006 ; 14 >
     au < manifest ; exists ; 2007 ; European Journal of Human Genetics Volume 15 ; 2007 ; 15 >
-    au < manifest ; exists ; 2008 ; European Journal of Human Genetics Volume 16 ; 2008 ; 16 >
-    au < manifest ; exists ; 2009 ; European Journal of Human Genetics Volume 17 ; 2009 ; 17 >
-    au < manifest ; exists ; 2010 ; European Journal of Human Genetics Volume 18 ; 2010 ; 18 >
+    au < crawling ; exists ; 2008 ; European Journal of Human Genetics Volume 16 ; 2008 ; 16 >
+    au < crawling ; exists ; 2009 ; European Journal of Human Genetics Volume 17 ; 2009 ; 17 >
+    au < crawling ; exists ; 2010 ; European Journal of Human Genetics Volume 18 ; 2010 ; 18 >
     au < released ; crawling ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 >
     au < manifest ; exists ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 >
 
@@ -1007,9 +1007,9 @@
     param[journal_id] = ismej
 
     au < manifest ; exists ; 2007 ; The ISME Journal Volume 1 ; 2007 ; 1 >
-    au < manifest ; exists ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 >
-    au < manifest ; exists ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 >
-    au < manifest ; exists ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 >
+    au < crawling ; exists ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 >
+    au < crawling ; exists ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 >
+    au < crawling ; exists ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 >
     au < released ; crawling ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 >
     au < manifest ; exists ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 >
 
@@ -1106,7 +1106,7 @@
     au < exists ; exists ; 2006 ; Journal of Cerebral Blood Flow and Metabolism Volume 26 ; 2006 ; 26 >
     au < exists ; exists ; 2007 ; Journal of Cerebral Blood Flow and Metabolism Volume 27 ; 2007 ; 27 >
     au < exists ; exists ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 >
-    au < manifest ; exists ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 >
+    au < crawling ; exists ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 >
     au < exists ; exists ; 2010 ; Journal of Cerebral Blood Flow and Metabolism Volume 30 ; 2010 ; 30 >
     au < notReady ; exists ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
     au < manifest ; exists ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 >
@@ -1515,7 +1515,7 @@
     au < exists ; exists ; 2007 ; Laboratory Investigation Volume 87 ; 2007 ; 87 >
     au < exists ; exists ; 2008 ; Laboratory Investigation Volume 88 ; 2008 ; 88 >
     au < exists ; exists ; 2009 ; Laboratory Investigation Volume 89 ; 2009 ; 89 >
-    au < manifest ; exists ; 2010 ; Laboratory Investigation Volume 90 ; 2010 ; 90 >
+    au < crawling ; exists ; 2010 ; Laboratory Investigation Volume 90 ; 2010 ; 90 >
     au < released ; crawling ; 2011 ; Laboratory Investigation Volume 91 ; 2011 ; 91 >
     au < manifest ; exists ; 2012 ; Laboratory Investigation Volume 92 ; 2012 ; 92 >
 
@@ -1573,8 +1573,8 @@
     au < exists ; exists ; 2007 ; Modern Pathology Volume 20 ; 2007 ; 20 >
     au < exists ; exists ; 2008 ; Modern Pathology Volume 21 ; 2008 ; 21 >
     au < exists ; exists ; 2009 ; Modern Pathology Volume 22 ; 2009 ; 22 >
-    au < manifest ; exists ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 >
-    au < testing ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
+    au < crawling ; exists ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 >
+    au < notReady ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
     au < manifest ; exists ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
 
   }
@@ -1677,7 +1677,7 @@
     au < exists ; exists ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
     au < exists ; exists ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
     au < exists ; exists ; 2010 ; Mucosal Immunology Volume 3 ; 2010 ; 3 >
-    au < testing ; exists ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
+    au < notReady ; exists ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
     au < manifest ; exists ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 >
 
   }
@@ -2233,9 +2233,9 @@
     au < released ; crawling ; 2011 ; Nature Volume 475 ; 2011 ; 475 >
     au < released ; crawling ; 2011 ; Nature Volume 476 ; 2011 ; 476 >
     au < released ; crawling ; 2011 ; Nature Volume 477 ; 2011 ; 477 >
-    au < manifest ; exists ; 2011 ; Nature Volume 478 ; 2011 ; 478 >
-    au < manifest ; exists ; 2011 ; Nature Volume 479 ; 2011 ; 479 >
-    au < manifest ; exists ; 2011 ; Nature Volume 480 ; 2011 ; 480 >
+    au < testing ; exists ; 2011 ; Nature Volume 478 ; 2011 ; 478 >
+    au < testing ; exists ; 2011 ; Nature Volume 479 ; 2011 ; 479 >
+    au < testing ; exists ; 2011 ; Nature Volume 480 ; 2011 ; 480 >
     au < manifest ; exists ; 2012 ; Nature Volume 481 ; 2012 ; 481 >
     au < manifest ; exists ; 2012 ; Nature Volume 482 ; 2012 ; 482 >
 
@@ -2331,7 +2331,7 @@
     au < released ; crawling ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 >
     au < testing ; exists ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 >
-    au < expected ; exists ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 >
+    au < manifest ; exists ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 >
 
   }
 
@@ -2574,7 +2574,7 @@
     au < released ; crawling ; 2008 ; Nature Nanotechnology Volume 3 ; 2008 ; 3 >
     au < released ; crawling ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 >
     au < released ; crawling ; 2010 ; Nature Nanotechnology Volume 5 ; 2010 ; 5 >
-    au < testing ; exists ; 2011 ; Nature Nanotechnology Volume 6 ; 2011 ; 6 >
+    au < released ; manifest ; 2011 ; Nature Nanotechnology Volume 6 ; 2011 ; 6 >
     au < manifest ; exists ; 2012 ; Nature Nanotechnology Volume 7 ; 2012 ; 7 >
 
   }
@@ -2693,7 +2693,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Cancer Volume 8 ; 2008 ; 8 >
     au < released ; crawling ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; Nature Reviews Cancer Volume 10 ; 2010 ; 10 >
-    au < testing ; exists ; 2011 ; Nature Reviews Cancer Volume 11 ; 2011 ; 11 >
+    au < released ; manifest ; 2011 ; Nature Reviews Cancer Volume 11 ; 2011 ; 11 >
     au < manifest ; exists ; 2012 ; Nature Reviews Cancer Volume 12 ; 2012 ; 12 >
 
   }
@@ -2739,7 +2739,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Clinical Oncology Volume 7 ; 2010 ; 7 >
-    au < testing ; exists ; 2011 ; Nature Reviews Clinical Oncology Volume 8 ; 2011 ; 8 >
+    au < released ; manifest ; 2011 ; Nature Reviews Clinical Oncology Volume 8 ; 2011 ; 8 >
     au < manifest ; exists ; 2012 ; Nature Reviews Clinical Oncology Volume 9 ; 2012 ; 9 >
 
   }
@@ -2786,7 +2786,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 >
-    au < testing ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
+    au < notReady ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
     au < manifest ; exists ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 >
 
   }
@@ -3104,8 +3104,8 @@
     au < exists ; exists ; 2007 ; Neuropsychopharmacology Volume 32 ; 2007 ; 32 >
     au < exists ; exists ; 2008 ; Neuropsychopharmacology Volume 33 ; 2008 ; 33 >
     au < exists ; exists ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 >
-    au < manifest ; exists ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
-    au < testing ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
+    au < crawling ; exists ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
+    au < notReady ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
     au < manifest ; exists ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
 
   }
@@ -3132,7 +3132,7 @@
     au < exists ; exists ; 2008 ; Obesity Volume 16 ; 2008 ; 16 >
     au < exists ; exists ; 2009 ; Obesity Volume 17 ; 2009 ; 17 >
     au < exists ; exists ; 2010 ; Obesity Volume 18 ; 2010 ; 18 >
-    au < testing ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
+    au < notReady ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
     au < manifest ; exists ; 2012 ; Obesity Volume 20 ; 2012 ; 20 >
 
   }
@@ -3162,9 +3162,9 @@
     au < manifest ; exists ; 2006 ; Oncogene Volume 25 ; 2006 ; 25 >
     au < manifest ; exists ; 2007 ; Oncogene Volume 26 ; 2007 ; 26 >
     au < released ; crawling ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
-    au < testing ; exists ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
+    au < released ; manifest ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
     au < testing ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
-    au < testing ; exists ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
+    au < released ; manifest ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
     au < manifest ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
 
   }
@@ -3188,7 +3188,7 @@
     au < manifest ; exists ; 2006 ; The Pharmacogenomics Journal Volume 6 ; 2006 ; 6 >
     au < manifest ; exists ; 2007 ; The Pharmacogenomics Journal Volume 7 ; 2007 ; 7 >
     au < released ; crawling ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 2008 ; 8 >
-    au < testing ; exists ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
+    au < released ; manifest ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 >
     au < released ; crawling ; 2011 ; The Pharmacogenomics Journal Volume 11 ; 2011 ; 11 >
     au < manifest ; exists ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 >

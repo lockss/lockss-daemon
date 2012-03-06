@@ -8,7 +8,7 @@
   rights = openaccess
   comment[platform] = Atypon -- RT ticket 3556
   plugin = needs.plugin
-  param[base_url] = http:///
+  param[base_url] = http://www.qscience.com/
   implicit < status ;  status2 ; year ; name ; param[volume_name] >
   
   {

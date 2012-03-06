@@ -39,7 +39,7 @@
     au < doNotProcess ; exists ; 2009 ; Advances in Applied Ceramics Volume 108 ; 108 > 
     au < doNotProcess ; exists ; 2010 ; Advances in Applied Ceramics Volume 109 ; 109 > 
     au < doNotProcess ; exists ; 2011 ; Advances in Applied Ceramics Volume 110 ; 110 >
-    au < manifest ; exists ; 2012 ; Advances in Applied Ceramics Volume 111 ; 111 > 
+    au < crawling ; exists ; 2012 ; Advances in Applied Ceramics Volume 111 ; 111 > 
 
   }
 
@@ -222,7 +222,7 @@
     au < manifest ; exists ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
     au < manifest ; exists ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
     au < manifest ; exists ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
-    au < manifest ; exists ; 2012 ; Applied Earth Science: IMM Transactions section B Volume 120 ; 120 > 
+    au < crawling ; exists ; 2012 ; Applied Earth Science: IMM Transactions section B Volume 120 ; 120 > 
 
   }
 
@@ -393,7 +393,7 @@
     au < manifest ; exists ; 2009 ; Bronte Studies Volume 34 ; 34 > 
     au < manifest ; exists ; 2010 ; Bronte Studies Volume 35 ; 35 > 
     au < testing ; exists ; 2011 ; Bronte Studies Volume 36 ; 36 > 
-    au < manifest ; exists ; 2012 ; Bronte Studies Volume 37 ; 37 > 
+    au < crawling ; exists ; 2012 ; Bronte Studies Volume 37 ; 37 > 
 
   }
 
@@ -419,9 +419,8 @@
 
     au < doNotProcess ; exists ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
-    au < doNotProcess ; exists ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 > 
-    au < doNotProcess ; exists ; 2011 ; Bubble Science, Engineering and Technology Volume 4 ; 4 > 
-    au < expected ; exists ; 2012 ; Bubble Science, Engineering and Technology Volume 5 ; 5 > 
+    au < doNotProcess ; exists ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 >
+    au < expected ; exists ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 > 
 
   }
 
@@ -508,7 +507,7 @@
     au < manifest ; exists ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 >
     au < manifest ; exists ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
     au < testing ; exists ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
-    au < expected ; exists ; 2012 ; Byzantine and Modern Greek Studies Volume 36 ; 36 >
+    au < manifest ; exists ; 2012 ; Byzantine and Modern Greek Studies Volume 36 ; 36 >
 
   }
 
@@ -582,7 +581,7 @@
     au < doNotProcess ; exists ; 2009 ; Canadian Metallurgical Quarterly Volume 48 ; 48 >
     au < doNotProcess ; exists ; 2010 ; Canadian Metallurgical Quarterly Volume 49 ; 49 >
     au < doNotProcess ; exists ; 2011 ; Canadian Metallurgical Quarterly Volume 50 ; 50 >
-    au < manifest ; exists ; 2012 ; Canadian Metallurgical Quarterly Volume 51 ; 51 >
+    au < crawling ; exists ; 2012 ; Canadian Metallurgical Quarterly Volume 51 ; 51 >
 
   }
 
@@ -745,7 +744,7 @@
     au < doNotProcess ; exists ; 2009 ; Cochlear Implants International Volume 10 ; 10 > 
     au < doNotProcess ; exists ; 2010 ; Cochlear Implants International Volume 11 ; 11 > 
     au < doNotProcess ; exists ; 2011 ; Cochlear Implants International Volume 12 ; 12 > 
-    au < manifest ; exists ; 2012 ; Cochlear Implants International Volume 13 ; 13 > 
+    au < crawling ; exists ; 2012 ; Cochlear Implants International Volume 13 ; 13 > 
 
   }
 
@@ -879,7 +878,7 @@
     au < manifest ; exists ; 2009 ; Corrosion Engineering, Science and Technology Volume 44 ; 44 > 
     au < manifest ; exists ; 2010 ; Corrosion Engineering, Science and Technology Volume 45 ; 45 > 
     au < testing ; exists ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 ; 46 > 
-    au < manifest ; exists ; 2012 ; Corrosion Engineering, Science and Technology Volume 47 ; 47 > 
+    au < crawling ; exists ; 2012 ; Corrosion Engineering, Science and Technology Volume 47 ; 47 > 
 
   }
 
@@ -947,7 +946,7 @@
     au < manifest ; exists ; 2009 ; Costume Volume 43 ; 43 > 
     au < manifest ; exists ; 2010 ; Costume Volume 44 ; 44 > 
     au < exists ; exists ; 2011 ; Costume Volume 45 ; 45 > 
-    au < manifest ; exists ; 2012 ; Costume Volume 46 ; 46 > 
+    au < crawling ; exists ; 2012 ; Costume Volume 46 ; 46 > 
 
   }
 
@@ -1021,7 +1020,7 @@
     au < manifest ; exists ; 2009 ; Dix-Neuf Volume 13 ; 13 > 
     au < manifest ; exists ; 2010 ; Dix-Neuf Volume 14 ; 14 > 
     au < testing ; exists ; 2011 ; Dix-Neuf Volume 15 ; 15 > 
-    au < expected ; exists ; 2011 ; Dix-Neuf Volume 16 ; 16 > 
+    au < expected ; exists ; 2012 ; Dix-Neuf Volume 16 ; 16 > 
 
   }
 
@@ -1072,7 +1071,7 @@
     au < manifest ; exists ; 2009 ; Dutch Crossing: Journal of Low Countries Studies Volume 33 ; 33 > 
     au < manifest ; exists ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 > 
     au < crawling ; exists ; 2011 ; Dutch Crossing: Journal of Low Countries Studies Volume 35 ; 35 > 
-    au < manifest ; exists ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 > 
+    au < crawling ; exists ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 > 
 
   }
 
@@ -1428,7 +1427,7 @@
     au < manifest ; exists ; 2009 ; Hispanic Research Journal Volume 10 ; 10 > 
     au < manifest ; exists ; 2010 ; Hispanic Research Journal Volume 11 ; 11 > 
     au < crawling ; exists ; 2011 ; Hispanic Research Journal Volume 12 ; 12 > 
-    au < manifest ; exists ; 2012 ; Hispanic Research Journal Volume 13 ; 13 > 
+    au < crawling ; exists ; 2012 ; Hispanic Research Journal Volume 13 ; 13 > 
 
   }
 
@@ -1485,7 +1484,7 @@
     au < doNotProcess ; exists ; 2009 ; The Imaging Science Journal Volume 57 ; 57 > 
     au < doNotProcess ; exists ; 2010 ; The Imaging Science Journal Volume 58 ; 58 > 
     au < doNotProcess ; exists ; 2011 ; The Imaging Science Journal Volume 59 ; 59 >  
-    au < manifest ; exists ; 2012 ; The Imaging Science Journal Volume 60 ; 60 >
+    au < crawling ; exists ; 2012 ; The Imaging Science Journal Volume 60 ; 60 >
 
   }
 
@@ -1657,7 +1656,7 @@
     au < manifest ; exists ; 2009 ; International Journal for the History of Engineering & Technology Volume 79 ; 79 > 
     au < manifest ; exists ; 2010 ; International Journal for the History of Engineering & Technology Volume 80 ; 80 > 
     au < crawling ; exists ; 2011 ; International Journal for the History of Engineering & Technology Volume 81 ; 81 > 
-    au < manifest ; exists ; 2012 ; International Journal for the History of Engineering & Technology Volume 82 ; 82 > 
+    au < crawling ; exists ; 2012 ; International Journal for the History of Engineering & Technology Volume 82 ; 82 > 
 
   }
 
@@ -1689,7 +1688,7 @@
     au < doNotProcess ; exists ; 2009 ; International Journal of Cast Metals Research Volume 22 ; 22 > 
     au < doNotProcess ; exists ; 2010 ; International Journal of Cast Metals Research Volume 23 ; 23 > 
     au < doNotProcess ; exists ; 2011 ; International Journal of Cast Metals Research Volume 24 ; 24 > 
-    au < manifest ; exists ; 2012 ; International Journal of Cast Metals Research Volume 25 ; 25 > 
+    au < crawling ; exists ; 2012 ; International Journal of Cast Metals Research Volume 25 ; 25 > 
 
   }
 
@@ -1765,7 +1764,7 @@
     au < doNotProcess ; exists ; 2009 ; International Materials Reviews Volume 54 ; 54 > 
     au < doNotProcess ; exists ; 2010 ; International Materials Reviews Volume 55 ; 55 > 
     au < doNotProcess ; exists ; 2011 ; International Materials Reviews Volume 56 ; 56 > 
-    au < manifest ; exists ; 2012 ; International Materials Reviews Volume 57 ; 57 > 
+    au < crawling ; exists ; 2012 ; International Materials Reviews Volume 57 ; 57 > 
 
   }
 
@@ -1855,6 +1854,7 @@
     au < doNotProcess ; exists ; 2009 ; International Musculoskeletal Medicine Volume 31 ; 31 > 
     au < doNotProcess ; exists ; 2010 ; International Musculoskeletal Medicine Volume 32 ; 32 > 
     au < doNotProcess ; exists ; 2011 ; International Musculoskeletal Medicine Volume 33 ; 33 > 
+    au < expected ; exists ; 2012 ; International Musculoskeletal Medicine Volume 34 ; 34 > 
 
   }
 
@@ -1880,6 +1880,7 @@
     
     au < doNotProcess ; exists ; 2010 ; International Wood Products Journal Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 2011 ; International Wood Products Journal Volume 2 ; 2 > 
+    au < expected ; exists ; 2012 ; International Wood Products Journal Volume 3 ; 3 > 
 
   }
 
@@ -1915,6 +1916,7 @@
     au < doNotProcess ; exists ; 2009 ; Ironmaking & Steelmaking Volume 36 ; 36 > 
     au < doNotProcess ; exists ; 2010 ; Ironmaking & Steelmaking Volume 37 ; 37 > 
     au < doNotProcess ; exists ; 2011 ; Ironmaking & Steelmaking Volume 38 ; 38 > 
+    au < crawling ; exists ; 2012 ; Ironmaking & Steelmaking Volume 39 ; 39 > 
 
   }
 
@@ -1939,6 +1941,7 @@
     au < manifest ; exists ; 2009 ; Italian Culture Volume 27 ; 27 > 
     au < manifest ; exists ; 2010 ; Italian Culture Volume 28 ; 28 > 
     au < crawling ; exists ; 2011 ; Italian Culture Volume 29 ; 29 > 
+    au < crawling ; exists ; 2012 ; Italian Culture Volume 30 ; 30 > 
 
   }
 
@@ -2026,6 +2029,7 @@
     au < manifest ; exists ; 2009 ; Italian Studies Volume 64 ; 64 > 
     au < manifest ; exists ; 2010 ; Italian Studies Volume 65 ; 65 > 
     au < crawling ; exists ; 2011 ; Italian Studies Volume 66 ; 66 > 
+    au < expected ; exists ; 2012 ; Italian Studies Volume 67 ; 67 > 
 
   }
 
@@ -2078,6 +2082,7 @@
     au < manifest ; exists ; 2009 ; The Italianist Volume 29 ; 29 > 
     au < manifest ; exists ; 2010 ; The Italianist Volume 30 ; 30 > 
     au < crawling ; exists ; 2011 ; The Italianist Volume 31 ; 31 > 
+    au < expected ; exists ; 2012 ; The Italianist Volume 32 ; 32 > 
 
   }
 
@@ -2110,6 +2115,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Bryology Volume 31 ; 31 > 
     au < doNotProcess ; exists ; 2010 ; Journal of Bryology Volume 32 ; 32 > 
     au < doNotProcess ; exists ; 2011 ; Journal of Bryology Volume 33 ; 33 > 
+    au < expected ; exists ; 2012 ; Journal of Bryology Volume 34 ; 34 > 
 
   }
 
@@ -2136,7 +2142,8 @@
     au < doNotProcess ; exists ; 2007-2008 ; Journal of Care Services Management Volume 2 ; 2 > 
     au < doNotProcess ; exists ; 2008-2009 ; Journal of Care Services Management Volume 3 ; 3 > 
     au < doNotProcess ; exists ; 2009-2010 ; Journal of Care Services Management Volume 4 ; 4 > 
-    au < doNotProcess ; exists ; 2010-2011 ; Journal of Care Services Management Volume 5 ; 5 > 
+    au < doNotProcess ; exists ; 2010-2011 ; Journal of Care Services Management Volume 5 ; 5 >  
+    au < expected ; exists ; 2011-2012 ; Journal of Care Services Management Volume 6 ; 6 > 
 
   }
 
@@ -2163,6 +2170,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Communication in Healthcare Volume 2 ; 2 > 
     au < doNotProcess ; exists ; 2010 ; Journal of Communication in Healthcare Volume 3 ; 3 > 
     au < doNotProcess ; exists ; 2011 ; Journal of Communication in Healthcare Volume 4 ; 4 > 
+    au < expected ; exists ; 2012 ; Journal of Communication in Healthcare Volume 5 ; 5 > 
 
   }
 
@@ -2190,6 +2198,7 @@
     au < manifest ; exists ; 2008 ; Journal of Conflict Archaeology Volume 4 ; 4 > 
     au < manifest ; exists ; 2009 ; Journal of Conflict Archaeology Volume 5 ; 5 > 
     au < crawling ; exists ; 2011 ; Journal of Conflict Archaeology Volume 6 ; 6 > 
+    au < crawling ; exists ; 2012 ; Journal of Conflict Archaeology Volume 7 ; 7 > 
 
   }
 
@@ -2247,6 +2256,7 @@
     au < manifest ; exists ; 2009 ; Journal of Field Archaeology Volume 34 ; 34 > 
     au < manifest ; exists ; 2010 ; Journal of Field Archaeology Volume 35 ; 35 > 
     au < crawling ; exists ; 2011 ; Journal of Field Archaeology Volume 36 ; 36 > 
+    au < manifest ; exists ; 2012 ; Journal of Field Archaeology Volume 37 ; 37 > 
 
   }
 
@@ -2303,6 +2313,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Histotechnology Volume 32 ; 32 > 
     au < doNotProcess ; exists ; 2010 ; Journal of Histotechnology Volume 33 ; 33 > 
     au < doNotProcess ; exists ; 2011 ; Journal of Histotechnology Volume 34 ; 34 > 
+    au < expected ; exists ; 2012 ; Journal of Histotechnology Volume 35 ; 35 > 
 
   }
 
@@ -2329,6 +2340,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Management & Marketing in Healthcare Volume 2 ; 2 > 
     au < doNotProcess ; exists ; 2010 ; Journal of Management & Marketing in Healthcare Volume 3 ; 3 > 
     au < doNotProcess ; exists ; 2011 ; Journal of Management & Marketing in Healthcare Volume 4 ; 4 > 
+    au < expected ; exists ; 2012 ; Journal of Management & Marketing in Healthcare Volume 5 ; 5 > 
 
   }
 
@@ -2370,6 +2382,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Manual & Manipulative Therapy Volume 17 ; 17 > 
     au < doNotProcess ; exists ; 2010 ; Journal of Manual & Manipulative Therapy Volume 18 ; 18 > 
     au < doNotProcess ; exists ; 2011 ; Journal of Manual & Manipulative Therapy Volume 19 ; 19 > 
+    au < crawling ; exists ; 2012 ; Journal of Manual & Manipulative Therapy Volume 20 ; 20 > 
 
   }
 
@@ -2436,6 +2449,7 @@
       au < manifest ; exists ; 2009 ; Journal of Orthodontics Volume 36 ; 36 > 
       au < released ; crawling ; 2010 ; Journal of Orthodontics Volume 37 ; 37 > 
       au < released ; crawling ; 2011 ; Journal of Orthodontics Volume 38 ; 38 > 
+      au < expected ; exists ; 2012 ; Journal of Orthodontics Volume 39 ; 39 > 
       
     }
 
@@ -2459,6 +2473,7 @@
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
     au < crawling ; exists ; 2011 ; Journal of Spinal Cord Medicine Volume 34 ; 34 > 
+    au < crawling ; exists ; 2012 ; Journal of Spinal Cord Medicine Volume 35 ; 35 > 
 
   }
 
@@ -2511,7 +2526,9 @@
     au < manifest ; exists ; 2007 ; Journal of the British Archaeological Association Volume 160 ; 160 > 
     au < manifest ; exists ; 2008 ; Journal of the British Archaeological Association Volume 161 ; 161 > 
     au < manifest ; exists ; 2009 ; Journal of the British Archaeological Association Volume 162 ; 162 > 
-    au < manifest ; exists ; 2010 ; Journal of the British Archaeological Association Volume 163 ; 163 > 
+    au < manifest ; exists ; 2010 ; Journal of the British Archaeological Association Volume 163 ; 163 >  
+    au < manifest ; exists ; 2011 ; Journal of the British Archaeological Association Volume 164 ; 164 >  
+    au < expected ; exists ; 2012 ; Journal of the British Archaeological Association Volume 165 ; 165 > 
 
   }
 
@@ -2542,6 +2559,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of the Energy Institute Volume 82 ; 82 > 
     au < doNotProcess ; exists ; 2010 ; Journal of the Energy Institute Volume 83 ; 83 > 
     au < doNotProcess ; exists ; 2011 ; Journal of the Energy Institute Volume 84 ; 84 > 
+    au < crawling ; exists ; 2012 ; Journal of the Energy Institute Volume 85 ; 85 > 
 
   }
 
@@ -2592,6 +2610,7 @@
 
     au < manifest ; exists ; 2010 ; The Keats-Shelley Review Volume 24 ; 24 > 
     au < crawling ; exists ; 2011 ; The Keats-Shelley Review Volume 25 ; 25 > 
+    au < expected ; exists ; 2012 ; The Keats-Shelley Review Volume 26 ; 26 > 
 
   }
 
@@ -2621,6 +2640,7 @@
     au < manifest ; exists ; 2009 ; Labour History Review Volume 74 ; 74 > 
     au < manifest ; exists ; 2010 ; Labour History Review Volume 75 ; 75 > 
     au < crawling ; exists ; 2011 ; Labour History Review Volume 76 ; 76 > 
+    au < expected ; exists ; 2012 ; Labour History Review Volume 77 ; 77 > 
 
   }
 
@@ -2646,6 +2666,7 @@
     au < manifest ; exists ; 2009 ; Language & History Volume 52 ; 52 > 
     au < manifest ; exists ; 2010 ; Language & History Volume 53 ; 53 > 
     au < crawling ; exists ; 2011 ; Language & History Volume 54 ; 54 > 
+    au < expected ; exists ; 2012 ; Language & History Volume 55 ; 55 >
 
   }
 
@@ -2711,6 +2732,7 @@
     au < manifest ; exists ; 2009 ; Levant Volume 41 ; 41 > 
     au < manifest ; exists ; 2010 ; Levant Volume 42 ; 42 > 
     au < crawling ; exists ; 2011 ; Levant Volume 43 ; 43 > 
+    au < expected ; exists ; 2012 ; Levant Volume 44 ; 44 > 
 
   }
 
@@ -2762,6 +2784,7 @@
     au < manifest ; exists ; 2009 ; Library & Information History Volume 25 ; 25 > 
     au < manifest ; exists ; 2010 ; Library & Information History Volume 26 ; 26 > 
     au < crawling ; exists ; 2011 ; Library & Information History Volume 27 ; 27 > 
+    au < crawling ; exists ; 2012 ; Library & Information History Volume 28 ; 28 > 
 
   }
 
@@ -2820,6 +2843,7 @@
     au < manifest ; exists ; 2009 ; The London Journal Volume 34 ; 34 > 
     au < manifest ; exists ; 2010 ; The London Journal Volume 35 ; 35 > 
     au < crawling ; exists ; 2011 ; The London Journal Volume 36 ; 36 > 
+    au < manifest ; exists ; 2012 ; The London Journal Volume 37 ; 37 > 
 
   }
 
@@ -2849,6 +2873,7 @@
     au < doNotProcess ; exists ; 2009 ; Materials Research Innovations Volume 13 ; 13 > 
     au < doNotProcess ; exists ; 2010 ; Materials Research Innovations Volume 14 ; 14 > 
     au < doNotProcess ; exists ; 2011 ; Materials Research Innovations Volume 15 ; 15 > 
+    au < crawling ; exists ; 2012 ; Materials Research Innovations Volume 16 ; 16 > 
 
   }
 
@@ -2900,6 +2925,7 @@
     au < doNotProcess ; exists ; 2009 ; Materials Science and Technology Volume 25 ; 25 > 
     au < doNotProcess ; exists ; 2010 ; Materials Science and Technology Volume 26 ; 26 > 
     au < doNotProcess ; exists ; 2011 ; Materials Science and Technology Volume 27 ; 27 > 
+    au < manifest ; exists ; 2012 ; Materials Science and Technology Volume 28 ; 28 > 
 
   }
 
@@ -2929,6 +2955,7 @@
     au < doNotProcess ; exists ; 2009 ; Materials Technology: Advanced Performance Materials Volume 24 ; 24 > 
     au < doNotProcess ; exists ; 2010 ; Materials Technology: Advanced Performance Materials Volume 25 ; 25 > 
     au < doNotProcess ; exists ; 2011 ; Materials Technology: Advanced Performance Materials Volume 26 ; 26 > 
+    au < crawling ; exists ; 2012 ; Materials Technology: Advanced Performance Materials Volume 27 ; 27 > 
 
   }
 
@@ -3161,7 +3188,7 @@
     au < doNotProcess ; exists ; 2009 ; Mineral Processing and Extractive Metallurgy Volume 118 ; 118 > 
     au < doNotProcess ; exists ; 2010 ; Mineral Processing and Extractive Metallurgy Volume 119 ; 119 > 
     au < doNotProcess ; exists ; 2011 ; Mineral Processing and Extractive Metallurgy Volume 120 ; 120 >  
-    au < manifest ; exists ; 2012 ; Mineral Processing and Extractive Metallurgy Volume 121 ; 121 > 
+    au < crawling ; exists ; 2012 ; Mineral Processing and Extractive Metallurgy Volume 121 ; 121 > 
 
   }
 
@@ -3284,7 +3311,7 @@
     au < manifest ; exists ; 2009 ; Names: A Journal of Onomastics Volume 57 ; 57 > 
     au < manifest ; exists ; 2010 ; Names: A Journal of Onomastics Volume 58 ; 58 > 
     au < crawling ; exists ; 2011 ; Names: A Journal of Onomastics Volume 59 ; 59 > 
-    au < manifest ; exists ; 2012 ; Names: A Journal of Onomastics Volume 60 ; 60 > 
+    au < crawling ; exists ; 2012 ; Names: A Journal of Onomastics Volume 60 ; 60 > 
 
   }
 
@@ -3319,7 +3346,7 @@
     au < doNotProcess ; exists ; 2009 ; Neurological Research Volume 31 ; 31 > 
     au < doNotProcess ; exists ; 2010 ; Neurological Research Volume 32 ; 32 > 
     au < doNotProcess ; exists ; 2011 ; Neurological Research Volume 33 ; 33 > 
-    au < manifest ; exists ; 2012 ; Neurological Research Volume 34 ; 34 > 
+    au < crawling ; exists ; 2012 ; Neurological Research Volume 34 ; 34 > 
 
   }
 
@@ -3412,7 +3439,7 @@
     au < manifest ; exists ; 2009 ; Northern History Volume 46 ; 46 > 
     au < manifest ; exists ; 2010 ; Northern History Volume 47 ; 47 > 
     au < crawling ; exists ; 2011 ; Northern History Volume 48 ; 48 >  
-    au < manifest ; exists ; 2012 ; Northern History Volume 49 ; 49 > 
+    au < crawling ; exists ; 2012 ; Northern History Volume 49 ; 49 > 
 
   }
 
@@ -3446,7 +3473,7 @@
     au < doNotProcess ; exists ; 2009 ; Nutritional Neuroscience Volume 12 ; 12 > 
     au < doNotProcess ; exists ; 2010 ; Nutritional Neuroscience Volume 13 ; 13 > 
     au < doNotProcess ; exists ; 2011 ; Nutritional Neuroscience Volume 14 ; 14 >  
-    au < manifest ; exists ; 2012 ; Nutritional Neuroscience Volume 15 ; 15 > 
+    au < crawling ; exists ; 2012 ; Nutritional Neuroscience Volume 15 ; 15 > 
 
   }
 
@@ -3741,7 +3768,7 @@
     au < doNotProcess ; exists ; 2009 ; Physical Therapy Reviews Volume 14 ; 14 > 
     au < doNotProcess ; exists ; 2010 ; Physical Therapy Reviews Volume 15 ; 15 > 
     au < doNotProcess ; exists ; 2011 ; Physical Therapy Reviews Volume 16 ; 16 > 
-    au < manifest ; exists ; 2012 ; Physical Therapy Reviews Volume 17 ; 17 > 
+    au < crawling ; exists ; 2012 ; Physical Therapy Reviews Volume 17 ; 17 > 
 
   }
 
@@ -3778,7 +3805,7 @@
     au < doNotProcess ; exists ; 2009 ; Plastics, Rubber and Composites Volume 38 ; 38 > 
     au < doNotProcess ; exists ; 2010 ; Plastics, Rubber and Composites Volume 39 ; 39 > 
     au < doNotProcess ; exists ; 2011 ; Plastics, Rubber and Composites Volume 40 ; 40 > 
-    au < manifest ; exists ; 2012 ; Plastics, Rubber and Composites Volume 41 ; 41 > 
+    au < crawling ; exists ; 2012 ; Plastics, Rubber and Composites Volume 41 ; 41 > 
 
   }
 
@@ -3940,6 +3967,7 @@
     au < manifest ; exists ; 2009 ; Publications of the English Goethe Society Volume 78 ; 78 > 
     au < manifest ; exists ; 2010 ; Publications of the English Goethe Society Volume 79 ; 79 > 
     au < crawling ; exists ; 2011 ; Publications of the English Goethe Society Volume 80 ; 80 > 
+    au < expected ; exists ; 2012 ; Publications of the English Goethe Society Volume 81 ; 81 > 
 
   }
 
@@ -3976,6 +4004,7 @@
     au < doNotProcess ; exists ; 2009 ; Redox Report Volume 14 ; 14 > 
     au < doNotProcess ; exists ; 2010 ; Redox Report Volume 15 ; 15 > 
     au < doNotProcess ; exists ; 2011 ; Redox Report Volume 16 ; 16 > 
+    au < crawling ; exists ; 2012 ; Redox Report Volume 17 ; 17 > 
 
   }
 
@@ -3995,6 +4024,7 @@
     param[journal_issn] = 0893-2344
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
+    comment[continued_by] = 1521-5385 
 
     au < manifest ; exists ; 1994-1995 ; Republican China Volume 20 ; 20 > 
     au < manifest ; exists ; 1996 ; Republican China Volume 21 ; 21 >
@@ -4050,6 +4080,7 @@
     au < manifest ; exists ; 2009 ; Romance Studies Volume 27 ; 27 > 
     au < manifest ; exists ; 2010 ; Romance Studies Volume 28 ; 28 > 
     au < crawling ; exists ; 2011 ; Romance Studies Volume 29 ; 29 > 
+    au < expected ; exists ; 2012 ; Romance Studies Volume 30 ; 30 > 
 
   }
 
@@ -4089,6 +4120,7 @@
     au < doNotProcess ; exists ; 2009 ; Science and Technology of Welding & Joining Volume 14 ; 14 > 
     au < doNotProcess ; exists ; 2010 ; Science and Technology of Welding & Joining Volume 15 ; 15 > 
     au < doNotProcess ; exists ; 2011 ; Science and Technology of Welding & Joining Volume 16 ; 16 > 
+    au < crawling ; exists ; 2012 ; Science and Technology of Welding & Joining Volume 17 ; 17 > 
 
   }
 
@@ -4144,6 +4176,7 @@
     au < manifest ; exists ; 2009 ; Seventeenth-Century French Studies Volume 31 ; 31 > 
     au < manifest ; exists ; 2010 ; Seventeenth-Century French Studies Volume 32 ; 32 > 
     au < crawling ; exists ; 2011 ; Seventeenth-Century French Studies Volume 33 ; 33 > 
+    au < expected ; exists ; 2012 ; Seventeenth-Century French Studies Volume 34 ; 34 > 
 
   }
 
@@ -4183,6 +4216,7 @@
     au < manifest ; exists ; 2009 ; Slavonica Volume 15 ; 15 > 
     au < manifest ; exists ; 2010 ; Slavonica Volume 16 ; 16 > 
     au < crawling ; exists ; 2011 ; Slavonica Volume 17 ; 17 > 
+    au < expected ; exists ; 2012 ; Slavonica Volume 18 ; 18 > 
 
   }
 
@@ -4190,7 +4224,8 @@
 
     title <
       name = Studies in Conservation ;
-      issn = 0039-3630
+      issn = 0039-3630 ;
+      eissn = 2047-0584 
     >
 
     plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
@@ -4204,6 +4239,7 @@
     implicit < status1 ; status ; year ; name ; param[volume_name] >
  
    au < crawling ; exists ; 2011 ; Studies in Conservation Volume 56 ; 56 > 
+   au < crawling ; exists ; 2012 ; Studies in Conservation Volume 57 ; 57 > 
     
   }
 
@@ -4240,6 +4276,7 @@
     au < doNotProcess ; exists ; 2009 ; Surface Engineering Volume 25 ; 25 > 
     au < doNotProcess ; exists ; 2010 ; Surface Engineering Volume 26 ; 26 > 
     au < doNotProcess ; exists ; 2011 ; Surface Engineering Volume 27 ; 27 > 
+    au < crawling ; exists ; 2012 ; Surface Engineering Volume 28 ; 28 > 
 
   }
 
@@ -4304,7 +4341,8 @@
     au < manifest ; exists ; 2008 ; Survey Review Volume 40 ; 40 > 
     au < manifest ; exists ; 2009 ; Survey Review Volume 41 ; 41 > 
     au < manifest ; exists ; 2010 ; Survey Review Volume 42 ; 42 > 
-    au < crawling ; exists ; 2011 ; Survey Review Volume 43 ; 43 > 
+    au < crawling ; exists ; 2011 ; Survey Review Volume 43 ; 43 >  
+    au < crawling ; exists ; 2012 ; Survey Review Volume 44 ; 44 > 
 
   }
 
@@ -4349,6 +4387,8 @@
     au < manifest ; exists ; 2008 ; T'ang Studies Volume 2008 ; 2008 > 
     au < manifest ; exists ; 2009 ; T'ang Studies Volume 27 ; 27 > 
     au < manifest ; exists ; 2010 ; T'ang Studies Volume 2010 ; 2010 > 
+    au < manifest ; exists ; 2011 ; T'ang Studies Volume 2011 ; 2011 > 
+    au < crawling ; exists ; 2012 ; T'ang Studies Volume 2012 ; 2012 > 
 
   }
 
@@ -4408,6 +4448,7 @@
     au < manifest ; exists ; 2009 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2009 ; 2009 ; 36 > 
     au < manifest ; exists ; 2010 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 37 ; 37 ; 37 > 
     au < crawling ; exists ; 2011 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 38 ; 38 ; 38 > 
+    au < expected ; exists ; 2012 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 39 ; 39 ; 39 > 
 
   }
 
@@ -4473,6 +4514,7 @@
     au < manifest ; exists ; 2009 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 41 ; 41 > 
     au < manifest ; exists ; 2010 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 42 ; 42 > 
     au < crawling ; exists ; 2011 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 43 ; 43 > 
+    au < expected ; exists ; 2012 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 44 ; 44 > 
 
   }
 
@@ -4537,6 +4579,7 @@
     au < manifest ; exists ; 2009 ; Textile History Volume 40 ; 40 > 
     au < manifest ; exists ; 2010 ; Textile History Volume 41 ; 41 > 
     au < crawling ; exists ; 2011 ; Textile History Volume 42 ; 42 > 
+    au < expected ; exists ; 2012 ; Textile History Volume 43 ; 43 > 
 
   }
 
@@ -4567,6 +4610,7 @@
     au < doNotProcess ; exists ; 2009 ; Transactions of the Institute of Metal Finishing Volume 87 ; 87 > 
     au < doNotProcess ; exists ; 2010 ; Transactions of the Institute of Metal Finishing Volume 88 ; 88 > 
     au < doNotProcess ; exists ; 2011 ; Transactions of the Institute of Metal Finishing Volume 89 ; 89 > 
+    au < crawling ; exists ; 2012 ; Transactions of the Institute of Metal Finishing Volume 90 ; 90 > 
 
   }
 
@@ -4588,6 +4632,7 @@
     param[journal_issn] = 0372-0187
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
+    comment[continued_by] = 1758-1206
 
     au < manifest ; exists ; 2006 ; Transactions of the Newcomen Society Volume 76 ; 76 > 
     au < manifest ; exists ; 2007 ; Transactions of the Newcomen Society Volume 77 ; 77 > 
@@ -4620,6 +4665,7 @@
     au < doNotProcess ; exists ; 2009 ; Tribology - Materials, Surfaces & Interfaces Volume 3 ; 3 > 
     au < doNotProcess ; exists ; 2010 ; Tribology - Materials, Surfaces & Interfaces Volume 4 ; 4 > 
     au < doNotProcess ; exists ; 2011 ; Tribology - Materials, Surfaces & Interfaces Volume 5 ; 5 > 
+    au < expected ; exists ; 2012 ; Tribology - Materials, Surfaces & Interfaces Volume 6 ; 6 > 
 
   }
 
@@ -4641,6 +4687,7 @@
     param[journal_issn] = 1521-5385
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
+    comment[continued_from] = 0893-2344 
 
     au < manifest ; exists ; 1997-1998 ; Twentieth-Century China Volume 23 ; 23 > 
     au < manifest ; exists ; 1998-1999 ; Twentieth-Century China Volume 24 ; 24 > 
@@ -4656,6 +4703,7 @@
     au < manifest ; exists ; 2009 ; Twentieth-Century China Volume 34 ; 34 > 
     au < manifest ; exists ; 2010 ; Twentieth-Century China Volume 35 ; 35 > 
     au < crawling ; exists ; 2011 ; Twentieth-Century China Volume 36 ; 36 > 
+    au < manfiest ; exists ; 2012 ; Twentieth-Century China Volume 37 ; 37 > 
 
   }
 
@@ -4677,7 +4725,7 @@
     param[journal_issn] = 1742-271X
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[moved] = to RSMP in 2010
+    comment[moved] = published by Royal Society of Medicine Press from 2010
     comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2004 ; Ultrasound Volume 12 ; 12 > 
@@ -4709,7 +4757,8 @@
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
     au < manifest ; exists ; 2010 ; Usus Antiquior Volume 1 ; 1 > 
-    au < crawling ; exists ; 2011 ; Usus Antiquior Volume 2 ; 2 > 
+    au < crawling ; exists ; 2011 ; Usus Antiquior Volume 2 ; 2 >  
+    au < crawling ; exists ; 2012 ; Usus Antiquior Volume 3 ; 3 >
 
   }
 
@@ -4773,6 +4822,8 @@
     au < manifest ; exists ; 2008 ; Vernacular Architecture Volume 39 ; 39 > 
     au < manifest ; exists ; 2009 ; Vernacular Architecture Volume 40 ; 40 > 
     au < manifest ; exists ; 2010 ; Vernacular Architecture Volume 41 ; 41 > 
+    au < manifest ; exists ; 2011 ; Vernacular Architecture Volume 42 ; 42 > 
+    au < expected ; exists ; 2012 ; Vernacular Architecture Volume 43 ; 43 > 
 
   }
 
@@ -4825,6 +4876,7 @@
     au < manifest ; exists ; 2009 ; War & Society Volume 28 ; 28 > 
     au < manifest ; exists ; 2010 ; War & Society Volume 29 ; 29 > 
     au < crawling ; exists ; 2011 ; War & Society Volume 30 ; 30 > 
+    au < manifest ; exists ; 2012 ; War & Society Volume 31 ; 31 > 
 
   }
 
@@ -4832,7 +4884,8 @@
 
     title <
       name = Yorkshire Archaeological Journal ;
-      issn = 0084-4276 
+      issn = 0084-4276 ;
+      eissn = 2045-0664
     >
 
     plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
@@ -4846,6 +4899,8 @@
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
     au < manifest ; exists ; 2010 ; Yorkshire Archaeological Journal Volume 82 ; 82 >
+    au < manifest ; exists ; 2011 ; Yorkshire Archaeological Journal Volume 83 ; 83 >
+    au < expected ; exists ; 2012 ; Yorkshire Archaeological Journal Volume 84 ; 84 >
 
   }
 

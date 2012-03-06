@@ -5,15 +5,15 @@
 
     attr[contract] = 2011
     plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
-    param[base_url] = http://www.inderscience.com/
+    param[base_url] = http://inderscience.metapress.com/
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
     {
 
       title <
         name = African Journal of Accounting, Auditing and Finance;
-        issn = 2046-8083;
-        eissn = 2046-8091;
+        issn = 2046-8083 ;
+        eissn = 2046-8091 ;
         issnl = 2046-8083
       >
 
@@ -25,8 +25,8 @@
 
       title <
         name = African Journal of Economic and Sustainable Development;
-        issn = 2046-4770;
-        eissn = 2046-4789;
+        issn = 2046-4770 ;
+        eissn = 2046-4789 ;
         issnl = 2046-4770
       >
 
@@ -37,91 +37,145 @@
     {
 
       title <
-        name = Afro-Asian J. of Finance and Accounting;
-        issn = 1751-6447;
-        eissn = 1751-6455;
+        name = Afro-Asian Journal of Finance and Accounting;
+        issn = 1751-6447 ;
+        eissn = 1751-6455 ;
         issnl = 1751-6447
       >
 
       param[journal_issn] = 1751-6455
+      
+      au < exists ; exists ; 2008-2009 ; Afro-Asian Journal of Finance and Accounting Volume 1 ; 1 >
+      au < exists ; exists ; 2010-2011 ; Afro-Asian Journal of Finance and Accounting Volume 2 ; 2 >
+
 
     }
 
     {
 
       title <
-        name = American J. of Finance and Accounting;
-        issn = 1752-7767;
-        eissn = 1752-7775;
+        name = American Journal of Finance and Accounting;
+        issn = 1752-7767 ;
+        eissn = 1752-7775 ;
         issnl = 1752-7767
       >
 
       param[journal_issn] = 1752-7775
 
+      au < exists ; exists ; 2008-2009 ; American Journal of Finance and Accounting Volume 1 ; 1 >
+      au < exists ; exists ; 2010-2011 ; American Journal of Finance and Accounting Volume 2 ; 2 >
+
     }
 
     {
 
       title <
-        name = Atoms for Peace: an Int. J.;
-        issn = 1741-640X;
-        eissn = 1741-6418;
+        name = Atoms for Peace: an International Journal ;
+        issn = 1741-640X ;
+        eissn = 1741-6418 ;
         issnl = 1741-640X
       >
 
       param[journal_issn] = 1741-6418
 
+      au < exists ; exists ; 2005-2007 ; Atoms for Peace: an International Journal Volume 1 ; 1 >
+      au < exists ; exists ; 2008-2009 ; Atoms for Peace: an International Journal Volume 2 ; 2 >
+      au < exists ; exists ; 2010 ; Atoms for Peace: an International Journal Volume 3 ; 3 >
+
     }
 
     {
 
       title <
-        name = Electronic Government, an Int. J.;
-        issn = 1740-7494;
-        eissn = 1740-7508;
+        name = The Botulinum Journal ;
+        issn = 1754-7318 ;
+        eissn = 1754-7326 ;
+        issnl = 1754-7318
+      >
+
+      param[journal_issn] = 1754-7326
+
+      au < exists ; exists ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
+      au < testing ; exists ; 2011 ; The Botulinum Journal Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = Electronic Government, an International Journal ;
+        issn = 1740-7494 ;
+        eissn = 1740-7508 ;
         issnl = 1740-7494
       >
 
       param[journal_issn] = 1740-7508
+      
+      au < exists ; exists ; 2004 ; Electronic Government, an International Journal Volume 1 ; 1 >
+      au < exists ; exists ; 2005 ; Electronic Government, an International Journal Volume 2 ; 2 >
+      au < exists ; exists ; 2006 ; Electronic Government, an International Journal Volume 3 ; 3 >
+      au < exists ; exists ; 2007 ; Electronic Government, an International Journal Volume 4 ; 4 >
+      au < exists ; exists ; 2008 ; Electronic Government, an International Journal Volume 5 ; 5 >
+      au < exists ; exists ; 2009 ; Electronic Government, an International Journal Volume 6 ; 6 >
+      au < exists ; exists ; 2010 ; Electronic Government, an International Journal Volume 7 ; 7 >
+      au < testing ; exists ; 2011 ; Electronic Government, an International Journal Volume 8 ; 8 >
+      au < testing ; exists ; 2012 ; Electronic Government, an International Journal Volume 9 ; 9 >
 
     }
 
     {
 
       title <
-        name = European J. of Cross-Cultural Competence and Management;
-        issn = 1758-1508;
-        eissn = 1758-1516;
+        name = European Journal of Cross-Cultural Competence and Management;
+        issn = 1758-1508 ;
+        eissn = 1758-1516 ;
         issnl = 1758-1508
       >
 
       param[journal_issn] = 1758-1516
 
+      au < exists ; exists ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 >
+      au < exists ; exists ; 2010-2011 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 >
+
     }
 
     {
 
       title <
-        name = European J. of Industrial Engineering;
-        issn = 1751-5254;
-        eissn = 1751-5262;
+        name = European Journal of Industrial Engineering;
+        issn = 1751-5254 ;
+        eissn = 1751-5262 ;
         issnl = 1751-5254
       >
 
       param[journal_issn] = 1751-5262
+      
+      au < exists ; exists ; 2007 ; European Journal of Industrial Engineering Volume 1 ; 1 >
+      au < exists ; exists ; 2008 ; European Journal of Industrial Engineering Volume 2 ; 2 >
+      au < exists ; exists ; 2009 ; European Journal of Industrial Engineering Volume 3 ; 3 >
+      au < exists ; exists ; 2010 ; European Journal of Industrial Engineering Volume 4 ; 4 >
+      au < exists ; exists ; 2011 ; European Journal of Industrial Engineering Volume 5 ; 5 >
+      au < exists ; exists ; 2012 ; European Journal of Industrial Engineering Volume 6 ; 6 >
 
     }
 
     {
 
       title <
-        name = European J. of International Management;
-        issn = 1751-6757;
-        eissn = 1751-6765;
+        name = European Journal of International Management;
+        issn = 1751-6757 ;
+        eissn = 1751-6765 ;
         issnl = 1751-6757
       >
 
       param[journal_issn] = 1751-6765
+
+      au < exists ; exists ; 2007 ; European Journal of International Management Volume 1 ; 1 >
+      au < exists ; exists ; 2008 ; European Journal of International Management Volume 2 ; 2 >
+      au < exists ; exists ; 2009 ; European Journal of International Management Volume 3 ; 3 >
+      au < exists ; exists ; 2010 ; European Journal of International Management Volume 4 ; 4 >
+      au < exists ; exists ; 2011 ; European Journal of International Management Volume 5 ; 5 >
+      au < exists ; exists ; 2012 ; European Journal of International Management Volume 6 ; 6 >
 
     }
 
@@ -129,21 +183,32 @@
 
       title <
         name = Global Business and Economics Review;
-        issn = 1097-4954;
-        eissn = 1745-1329;
+        issn = 1097-4954 ;
+        eissn = 1745-1329 ;
         issnl = 1097-4954
       >
 
       param[journal_issn] = 1745-1329
+      
+      au < exists ; exists ; 2004 ; European Journal of International Management Volume 6 ; 6 >
+      au < exists ; exists ; 2005 ; European Journal of International Management Volume 7 ; 7 >
+      au < exists ; exists ; 2006 ; European Journal of International Management Volume 8 ; 8 >
+      au < exists ; exists ; 2007 ; European Journal of International Management Volume 9 ; 9 >
+      au < exists ; exists ; 2008 ; European Journal of International Management Volume 10 ; 10 >
+      au < exists ; exists ; 2009 ; European Journal of International Management Volume 11 ; 11 >
+      au < exists ; exists ; 2010 ; European Journal of International Management Volume 12 ; 12 >
+      au < exists ; exists ; 2011 ; European Journal of International Management Volume 13 ; 13 >
+      au < exists ; exists ; 2012 ; European Journal of International Management Volume 14 ; 14 >
+
 
     }
 
     {
 
       title <
-        name = Int. J. of Abrasive Technology;
-        issn = 1752-2641;
-        eissn = 1752-265X;
+        name = International Journal of Abrasive Technology;
+        issn = 1752-2641 ;
+        eissn = 1752-265X ;
         issnl = 1752-2641
       >
 
@@ -154,9 +219,9 @@
     {
 
       title <
-        name = Int. J. of Accounting and Finance;
-        issn = 1752-8224;
-        eissn = 1752-8232;
+        name = International Journal of Accounting and Finance;
+        issn = 1752-8224 ;
+        eissn = 1752-8232 ;
         issnl = 1752-8224
       >
 
@@ -167,9 +232,9 @@
     {
 
       title <
-        name = Int. J. of Accounting, Auditing and Performance Evaluation;
-        issn = 1740-8008;
-        eissn = 1740-8016;
+        name = International Journal of Accounting, Auditing and Performance Evaluation;
+        issn = 1740-8008 ;
+        eissn = 1740-8016 ;
         issnl = 1740-8008
       >
 
@@ -180,9 +245,9 @@
     {
 
       title <
-        name = Int. J. of Ad Hoc and Ubiquitous Computing;
-        issn = 1743-8225;
-        eissn = 1743-8233;
+        name = International Journal of Ad Hoc and Ubiquitous Computing;
+        issn = 1743-8225 ;
+        eissn = 1743-8233 ;
         issnl = 1743-8225
       >
 
@@ -193,9 +258,9 @@
     {
 
       title <
-        name = Int. J. of Adaptive and Innovative Systems;
-        issn = 1740-2107;
-        eissn = 1740-2115;
+        name = International Journal of Adaptive and Innovative Systems;
+        issn = 1740-2107 ;
+        eissn = 1740-2115 ;
         issnl = 1740-2107
       >
 
@@ -206,9 +271,9 @@
     {
 
       title <
-        name = Int. J. of Advanced Intelligence Paradigms;
-        issn = 1755-0386;
-        eissn = 1755-0394;
+        name = International Journal of Advanced Intelligence Paradigms;
+        issn = 1755-0386 ;
+        eissn = 1755-0394 ;
         issnl = 1755-0386
       >
 
@@ -219,9 +284,9 @@
     {
 
       title <
-        name = Int. J. of Advanced Mechatronic Systems;
-        issn = 1756-8412;
-        eissn = 1756-8420;
+        name = International Journal of Advanced Mechatronic Systems;
+        issn = 1756-8412 ;
+        eissn = 1756-8420 ;
         issnl = 1756-8412
       >
 
@@ -232,9 +297,9 @@
     {
 
       title <
-        name = Int. J. of Advanced Media and Communication;
-        issn = 1462-4613;
-        eissn = 1741-8003;
+        name = International Journal of Advanced Media and Communication;
+        issn = 1462-4613 ;
+        eissn = 1741-8003 ;
         issnl = 1462-4613
       >
 
@@ -245,9 +310,9 @@
     {
 
       title <
-        name = Int. J. of Advanced Operations Management;
-        issn = 1758-938X;
-        eissn = 1758-9398;
+        name = International Journal of Advanced Operations Management;
+        issn = 1758-938X ;
+        eissn = 1758-9398 ;
         issnl = 1758-938X
       >
 
@@ -258,9 +323,9 @@
     {
 
       title <
-        name = Int. J. of Aerodynamics;
-        issn = 1743-5447;
-        eissn = 1743-5455;
+        name = International Journal of Aerodynamics;
+        issn = 1743-5447 ;
+        eissn = 1743-5455 ;
         issnl = 1743-5447
       >
 
@@ -271,9 +336,9 @@
     {
 
       title <
-        name = Int. J. of Agent-Oriented Software Engineering;
-        issn = 1746-1375;
-        eissn = 1746-1383;
+        name = International Journal of Agent-Oriented Software Engineering;
+        issn = 1746-1375 ;
+        eissn = 1746-1383 ;
         issnl = 1746-1375
       >
 
@@ -284,9 +349,9 @@
     {
 
       title <
-        name = Int. J. of Agile and Extreme Software Development;
-        issn = 1743-5137;
-        eissn = 1743-5145;
+        name = International Journal of Agile and Extreme Software Development;
+        issn = 1743-5137 ;
+        eissn = 1743-5145 ;
         issnl = 1743-5137
       >
 
@@ -297,9 +362,9 @@
     {
 
       title <
-        name = Int. J. of Agile Systems and Management;
-        issn = 1741–9174;
-        eissn = 1741–9182;
+        name = International Journal of Agile Systems and Management;
+        issn = 1741–9174 ;
+        eissn = 1741–9182 ;
         issnl = 1741–9174
       >
 
@@ -310,9 +375,9 @@
     {
 
       title <
-        name = Int. J. of Agricultural Resources, Governance and Ecology;
-        issn = 1462-4605;
-        eissn = 1471-5004;
+        name = International Journal of Agricultural Resources, Governance and Ecology;
+        issn = 1462-4605 ;
+        eissn = 1471-5004 ;
         issnl = 1462-4605
       >
 
@@ -323,9 +388,9 @@
     {
 
       title <
-        name = Int. J. of Alternative Propulsion;
-        issn = 1471-0234;
-        eissn = 1741-8011;
+        name = International Journal of Alternative Propulsion;
+        issn = 1471-0234 ;
+        eissn = 1741-8011 ;
         issnl = 1471-0234
       >
 
@@ -336,9 +401,9 @@
     {
 
       title <
-        name = Int. J. of Applied Cryptography;
-        issn = 1753-0563;
-        eissn = 1753-0571;
+        name = International Journal of Applied Cryptography;
+        issn = 1753-0563 ;
+        eissn = 1753-0571 ;
         issnl = 1753-0563
       >
 
@@ -349,9 +414,9 @@
     {
 
       title <
-        name = Int. J. of Applied Decision Sciences;
-        issn = 1755-8077;
-        eissn = 1755-8085;
+        name = International Journal of Applied Decision Sciences;
+        issn = 1755-8077 ;
+        eissn = 1755-8085 ;
         issnl = 1755-8077
       >
 
@@ -362,9 +427,9 @@
     {
 
       title <
-        name = Int. J. of Applied Management Science;
-        issn = 1755-8913;
-        eissn = 1755-8921;
+        name = International Journal of Applied Management Science;
+        issn = 1755-8913 ;
+        eissn = 1755-8921 ;
         issnl = 1755-8913
       >
 
@@ -375,9 +440,9 @@
     {
 
       title <
-        name = Int. J. of Applied Nonlinear Science;
-        issn = 1752-2862;
-        eissn = 1752-2870;
+        name = International Journal of Applied Nonlinear Science;
+        issn = 1752-2862 ;
+        eissn = 1752-2870 ;
         issnl = 1752-2862
       >
 
@@ -388,9 +453,9 @@
     {
 
       title <
-        name = Int. J. of Applied Systemic Studies;
-        issn = 1751-0589;
-        eissn = 1751-0597;
+        name = International Journal of Applied Systemic Studies;
+        issn = 1751-0589 ;
+        eissn = 1751-0597 ;
         issnl = 1751-0589
       >
 
@@ -401,9 +466,9 @@
     {
 
       title <
-        name = Int. J. of Arab Culture, Management and Sustainable Development;
-        issn = 1753-9412;
-        eissn = 1753-9420;
+        name = International Journal of Arab Culture, Management and Sustainable Development;
+        issn = 1753-9412 ;
+        eissn = 1753-9420 ;
         issnl = 1753-9412
       >
 
@@ -414,9 +479,9 @@
     {
 
       title <
-        name = Int. J. of Artificial Intelligence and Soft Computing;
-        issn = 1755-4950;
-        eissn = 1755-4969;
+        name = International Journal of Artificial Intelligence and Soft Computing;
+        issn = 1755-4950 ;
+        eissn = 1755-4969 ;
         issnl = 1755-4950
       >
 
@@ -427,9 +492,9 @@
     {
 
       title <
-        name = Int. J. of Arts and Technology;
-        issn = 1754-8853;
-        eissn = 1754-8861;
+        name = International Journal of Arts and Technology;
+        issn = 1754-8853 ;
+        eissn = 1754-8861 ;
         issnl = 1754-8853
       >
 
@@ -440,9 +505,9 @@
     {
 
       title <
-        name = Int. J. of Auditing Technology;
-        issn = 1757-8752;
-        eissn = 1757-8760;
+        name = International Journal of Auditing Technology;
+        issn = 1757-8752 ;
+        eissn = 1757-8760 ;
         issnl = 1757-8752
       >
 
@@ -453,9 +518,9 @@
     {
 
       title <
-        name = Int. J. of Automation and Control;
-        issn = 1740-7516;
-        eissn = 1740-7524;
+        name = International Journal of Automation and Control;
+        issn = 1740-7516 ;
+        eissn = 1740-7524 ;
         issnl = 1740-7516
       >
 
@@ -466,9 +531,9 @@
     {
 
       title <
-        name = Int. J. of Automotive Technology and Management;
-        issn = 1470-9511;
-        eissn = 1741-5012;
+        name = International Journal of Automotive Technology and Management;
+        issn = 1470-9511 ;
+        eissn = 1741-5012 ;
         issnl = 1470-9511
       >
 
@@ -479,9 +544,9 @@
     {
 
       title <
-        name = Int. J. of Autonomic Computing;
-        issn = 1741-8569;
-        eissn = 1741-8577;
+        name = International Journal of Autonomic Computing;
+        issn = 1741-8569 ;
+        eissn = 1741-8577 ;
         issnl = 1741-8569
       >
 
@@ -492,9 +557,9 @@
     {
 
       title <
-        name = Int. J. of Autonomous and Adaptive Communications Systems;
-        issn = 1754-8632;
-        eissn = 1754-8640;
+        name = International Journal of Autonomous and Adaptive Communications Systems;
+        issn = 1754-8632 ;
+        eissn = 1754-8640 ;
         issnl = 1754-8632
       >
 
@@ -505,9 +570,9 @@
     {
 
       title <
-        name = Int. J. of Aviation Management;
-        issn = 1755-9901;
-        eissn = 1755-991X;
+        name = International Journal of Aviation Management;
+        issn = 1755-9901 ;
+        eissn = 1755-991X ;
         issnl = 1755-9901
       >
 
@@ -518,9 +583,9 @@
     {
 
       title <
-        name = Int. J. of Aviation Management and Logistics;
-        issn = 1744-2796;
-        eissn = 1744-280X;
+        name = International Journal of Aviation Management and Logistics;
+        issn = 1744-2796 ;
+        eissn = 1744-280X ;
         issnl = 1744-2796
       >
 
@@ -531,9 +596,9 @@
     {
 
       title <
-        name = Int. J. of Banking, Accounting and Finance;
-        issn = 1755-3830;
-        eissn = 1755-3849;
+        name = International Journal of Banking, Accounting and Finance;
+        issn = 1755-3830 ;
+        eissn = 1755-3849 ;
         issnl = 1755-3830
       >
 
@@ -544,9 +609,9 @@
     {
 
       title <
-        name = Int. J. of Behavioural Accounting and Finance;
-        issn = 1753-1969;
-        eissn = 1753-1977;
+        name = International Journal of Behavioural Accounting and Finance;
+        issn = 1753-1969 ;
+        eissn = 1753-1977 ;
         issnl = 1753-1969
       >
 
@@ -557,9 +622,9 @@
     {
 
       title <
-        name = Int. J. of Behavioural and Healthcare Research;
-        issn = 1755-3539;
-        eissn = 1755-3547;
+        name = International Journal of Behavioural and Healthcare Research;
+        issn = 1755-3539 ;
+        eissn = 1755-3547 ;
         issnl = 1755-3539
       >
 
@@ -570,9 +635,9 @@
     {
 
       title <
-        name = Int. J. of Bioinformatics Research and Applications;
-        issn = 1744-5485;
-        eissn = 1744-5493;
+        name = International Journal of Bioinformatics Research and Applications;
+        issn = 1744-5485 ;
+        eissn = 1744-5493 ;
         issnl = 1744-5485
       >
 
@@ -583,9 +648,9 @@
     {
 
       title <
-        name = Int. J. of Bio-Inspired Computation;
-        issn = 1758-0366;
-        eissn = 1758-0374;
+        name = International Journal of Bio-Inspired Computation;
+        issn = 1758-0366 ;
+        eissn = 1758-0374 ;
         issnl = 1758-0366
       >
 
@@ -596,9 +661,9 @@
     {
 
       title <
-        name = Int. J. of Biomechatronics and Biomedical Robotics;
-        issn = 1757-6792;
-        eissn = 1757-6806;
+        name = International Journal of Biomechatronics and Biomedical Robotics;
+        issn = 1757-6792 ;
+        eissn = 1757-6806 ;
         issnl = 1757-6792
       >
 
@@ -609,9 +674,9 @@
     {
 
       title <
-        name = Int. J. of Biomedical Engineering and Technology;
-        issn = 1752-6418;
-        eissn = 1752-6426;
+        name = International Journal of Biomedical Engineering and Technology;
+        issn = 1752-6418 ;
+        eissn = 1752-6426 ;
         issnl = 1752-6418
       >
 
@@ -622,9 +687,9 @@
     {
 
       title <
-        name = Int. J. of Biomedical Nanoscience and Nanotechnology;
-        issn = 1756-0799;
-        eissn = 1756-0802;
+        name = International Journal of Biomedical Nanoscience and Nanotechnology;
+        issn = 1756-0799 ;
+        eissn = 1756-0802 ;
         issnl = 1756-0799
       >
 
@@ -635,9 +700,9 @@
     {
 
       title <
-        name = Int. J. of Biometrics;
-        issn = 1755-8301;
-        eissn = 1755-831X;
+        name = International Journal of Biometrics;
+        issn = 1755-8301 ;
+        eissn = 1755-831X ;
         issnl = 1755-8301
       >
 
@@ -648,9 +713,9 @@
     {
 
       title <
-        name = Int. J. of Biotechnology;
-        issn = 0963-6048;
-        eissn = 1741-5020;
+        name = International Journal of Biotechnology;
+        issn = 0963-6048 ;
+        eissn = 1741-5020 ;
         issnl = 0963-6048
       >
 
@@ -661,9 +726,9 @@
     {
 
       title <
-        name = Int. J. of Border Security and Immigration Policy;
-        issn = 1755-2419;
-        eissn = 1755-2427;
+        name = International Journal of Border Security and Immigration Policy;
+        issn = 1755-2419 ;
+        eissn = 1755-2427 ;
         issnl = 1755-2419
       >
 
@@ -674,9 +739,9 @@
     {
 
       title <
-        name = Int. J. of Business and Emerging Markets;
-        issn = 1753-6219;
-        eissn = 1753-6227;
+        name = International Journal of Business and Emerging Markets;
+        issn = 1753-6219 ;
+        eissn = 1753-6227 ;
         issnl = 1753-6219
       >
 
@@ -687,9 +752,9 @@
     {
 
       title <
-        name = Int. J. of Business and Globalisation;
-        issn = 1753-3627;
-        eissn = 1753-3635;
+        name = International Journal of Business and Globalisation;
+        issn = 1753-3627 ;
+        eissn = 1753-3635 ;
         issnl = 1753-3627
       >
 
@@ -700,9 +765,9 @@
     {
 
       title <
-        name = Int. J. of Business and Systems Research;
-        issn = 1751-200X;
-        eissn = 1751-2018;
+        name = International Journal of Business and Systems Research;
+        issn = 1751-200X ;
+        eissn = 1751-2018 ;
         issnl = 1751-200X
       >
 
@@ -713,9 +778,9 @@
     {
 
       title <
-        name = Int. J. of Business Competition and Growth;
-        issn = 2042-3845;
-        eissn = 2042-3853;
+        name = International Journal of Business Competition and Growth;
+        issn = 2042-3845 ;
+        eissn = 2042-3853 ;
         issnl = 2042-3845
       >
 
@@ -726,9 +791,9 @@
     {
 
       title <
-        name = Int. J. of Business Continuity and Risk Management;
-        issn = 1758-2164;
-        eissn = 1758-2172;
+        name = International Journal of Business Continuity and Risk Management;
+        issn = 1758-2164 ;
+        eissn = 1758-2172 ;
         issnl = 1758-2164
       >
 
@@ -739,9 +804,9 @@
     {
 
       title <
-        name = Int. J. of Business Environment;
-        issn = 1740-0589;
-        eissn = 1740-0597;
+        name = International Journal of Business Environment;
+        issn = 1740-0589 ;
+        eissn = 1740-0597 ;
         issnl = 1740-0589
       >
 
@@ -752,9 +817,9 @@
     {
 
       title <
-        name = Int. J. of Business Excellence;
-        issn = 1756-0047;
-        eissn = 1756-0055;
+        name = International Journal of Business Excellence;
+        issn = 1756-0047 ;
+        eissn = 1756-0055 ;
         issnl = 1756-0047
       >
 
@@ -765,9 +830,9 @@
     {
 
       title <
-        name = Int. J. of Business Forecasting and Marketing Intelligence;
-        issn = 1744-6635;
-        eissn = 1744-6643;
+        name = International Journal of Business Forecasting and Marketing Intelligence;
+        issn = 1744-6635 ;
+        eissn = 1744-6643 ;
         issnl = 1744-6635
       >
 
@@ -778,9 +843,9 @@
     {
 
       title <
-        name = Int. J. of Business Governance and Ethics;
-        issn = 1477-9048;
-        eissn = 1741-802X;
+        name = International Journal of Business Governance and Ethics;
+        issn = 1477-9048 ;
+        eissn = 1741-802X ;
         issnl = 1477-9048
       >
 
@@ -791,9 +856,9 @@
     {
 
       title <
-        name = Int. J. of Business Information Systems;
-        issn = 1746-0972;
-        eissn = 1746-0980;
+        name = International Journal of Business Information Systems;
+        issn = 1746-0972 ;
+        eissn = 1746-0980 ;
         issnl = 1746-0972
       >
 
@@ -804,9 +869,9 @@
     {
 
       title <
-        name = Int. J. of Business Innovation and Research;
-        issn = 1751-0252;
-        eissn = 1751-0260;
+        name = International Journal of Business Innovation and Research;
+        issn = 1751-0252 ;
+        eissn = 1751-0260 ;
         issnl = 1751-0252
       >
 
@@ -817,9 +882,9 @@
     {
 
       title <
-        name = Int. J. of Business Intelligence and Data Mining;
-        issn = 1743-8187;
-        eissn = 1743-8195;
+        name = International Journal of Business Intelligence and Data Mining;
+        issn = 1743-8187 ;
+        eissn = 1743-8195 ;
         issnl = 1743-8187
       >
 
@@ -830,9 +895,9 @@
     {
 
       title <
-        name = Int. J. of Business Performance and Supply Chain Modelling;
-        issn = 1758-9401;
-        eissn = 1758-941X;
+        name = International Journal of Business Performance and Supply Chain Modelling;
+        issn = 1758-9401 ;
+        eissn = 1758-941X ;
         issnl = 1758-9401
       >
 
@@ -843,9 +908,9 @@
     {
 
       title <
-        name = Int. J. of Business Performance Management;
-        issn = 1368-4892;
-        eissn = 1741-5039;
+        name = International Journal of Business Performance Management;
+        issn = 1368-4892 ;
+        eissn = 1741-5039 ;
         issnl = 1368-4892
       >
 
@@ -856,9 +921,9 @@
     {
 
       title <
-        name = Int. J. of Business Process Integration and Management;
-        issn = 1741-8763;
-        eissn = 1741-8771;
+        name = International Journal of Business Process Integration and Management;
+        issn = 1741-8763 ;
+        eissn = 1741-8771 ;
         issnl = 1741-8763
       >
 
@@ -869,9 +934,9 @@
     {
 
       title <
-        name = Int. J. of Chinese Culture and Management;
-        issn = 1752-1270;
-        eissn = 1752-1289;
+        name = International Journal of Chinese Culture and Management;
+        issn = 1752-1270 ;
+        eissn = 1752-1289 ;
         issnl = 1752-1270
       >
 
@@ -882,9 +947,9 @@
     {
 
       title <
-        name = Int. J. of Cloud Computing;
-        issn = 2043-9989;
-        eissn = 2043-9997;
+        name = International Journal of Cloud Computing;
+        issn = 2043-9989 ;
+        eissn = 2043-9997 ;
         issnl = 2043-9989
       >
 
@@ -895,9 +960,9 @@
     {
 
       title <
-        name = Int. J. of Cognitive Biometrics;
-        issn = 2042-6461;
-        eissn = 2042-647X;
+        name = International Journal of Cognitive Biometrics;
+        issn = 2042-6461 ;
+        eissn = 2042-647X ;
         issnl = 2042-6461
       >
 
@@ -908,9 +973,9 @@
     {
 
       title <
-        name = Int. J. of Cognitive Performance Support;
-        issn = 1742–7207;
-        eissn = 1742–7215;
+        name = International Journal of Cognitive Performance Support;
+        issn = 1742–7207 ;
+        eissn = 1742–7215 ;
         issnl = 1742–7207
       >
 
@@ -921,9 +986,9 @@
     {
 
       title <
-        name = Int. J. of Collaborative Engineering;
-        issn = 1745-0039;
-        eissn = 1745-0047;
+        name = International Journal of Collaborative Engineering;
+        issn = 1745-0039 ;
+        eissn = 1745-0047 ;
         issnl = 1745-0039
       >
 
@@ -934,9 +999,9 @@
     {
 
       title <
-        name = Int. J. of Collaborative Enterprise;
-        issn = 1740-2085;
-        eissn = 1740-2093;
+        name = International Journal of Collaborative Enterprise;
+        issn = 1740-2085 ;
+        eissn = 1740-2093 ;
         issnl = 1740-2085
       >
 
@@ -947,9 +1012,9 @@
     {
 
       title <
-        name = Int. J. of Communication Networks and Distributed Systems;
-        issn = 1754-3916;
-        eissn = 1754-3924;
+        name = International Journal of Communication Networks and Distributed Systems;
+        issn = 1754-3916 ;
+        eissn = 1754-3924 ;
         issnl = 1754-3916
       >
 
@@ -960,9 +1025,9 @@
     {
 
       title <
-        name = Int. J. of Complexity in Applied Science and Engineering;
-        issn = 1740-0546;
-        eissn = 1740-0554;
+        name = International Journal of Complexity in Applied Science and Engineering;
+        issn = 1740-0546 ;
+        eissn = 1740-0554 ;
         issnl = 1740-0546
       >
 
@@ -973,9 +1038,9 @@
     {
 
       title <
-        name = Int. J. of Complexity in Leadership and Management;
-        issn = 1759-0256;
-        eissn = 1759-0264;
+        name = International Journal of Complexity in Leadership and Management;
+        issn = 1759-0256 ;
+        eissn = 1759-0264 ;
         issnl = 1759-0256
       >
 
@@ -986,9 +1051,9 @@
     {
 
       title <
-        name = Int. J. of Computational Biology and Drug Design;
-        issn = 1756-0756;
-        eissn = 1756-0764;
+        name = International Journal of Computational Biology and Drug Design;
+        issn = 1756-0756 ;
+        eissn = 1756-0764 ;
         issnl = 1756-0756
       >
 
@@ -999,9 +1064,9 @@
     {
 
       title <
-        name = Int. J. of Computational Economics and Econometrics;
-        issn = 1757-1170;
-        eissn = 1757-1189;
+        name = International Journal of Computational Economics and Econometrics;
+        issn = 1757-1170 ;
+        eissn = 1757-1189 ;
         issnl = 1757-1170
       >
 
@@ -1012,9 +1077,9 @@
     {
 
       title <
-        name = Int. J. of Computational Intelligence in Bioinformatics and Systems Biology;
-        issn = 1755-8034;
-        eissn = 1755-8042;
+        name = International Journal of Computational Intelligence in Bioinformatics and Systems Biology;
+        issn = 1755-8034 ;
+        eissn = 1755-8042 ;
         issnl = 1755-8034
       >
 
@@ -1025,9 +1090,9 @@
     {
 
       title <
-        name = Int. J. of Computational Intelligence Studies;
-        issn = 1755-4977;
-        eissn = 1755-4985;
+        name = International Journal of Computational Intelligence Studies;
+        issn = 1755-4977 ;
+        eissn = 1755-4985 ;
         issnl = 1755-4977
       >
 
@@ -1038,9 +1103,9 @@
     {
 
       title <
-        name = Int. J. of Computational Materials Science and Surface Engineering;
-        issn = 1753-3465;
-        eissn = 1753-3473;
+        name = International Journal of Computational Materials Science and Surface Engineering;
+        issn = 1753-3465 ;
+        eissn = 1753-3473 ;
         issnl = 1753-3465
       >
 
@@ -1051,9 +1116,9 @@
     {
 
       title <
-        name = Int. J. of Computational Medicine and Healthcare;
-        issn = 1755-4500;
-        eissn = 1755-4519;
+        name = International Journal of Computational Medicine and Healthcare;
+        issn = 1755-4500 ;
+        eissn = 1755-4519 ;
         issnl = 1755-4500
       >
 
@@ -1064,9 +1129,9 @@
     {
 
       title <
-        name = Int. J. of Computational Science and Engineering;
-        issn = 1742–7185;
-        eissn = 1742–7193;
+        name = International Journal of Computational Science and Engineering;
+        issn = 1742–7185 ;
+        eissn = 1742–7193 ;
         issnl = 1742–7185
       >
 
@@ -1077,9 +1142,9 @@
     {
 
       title <
-        name = Int. J. of Computational Systems Engineering;
-        issn = 2046-3391;
-        eissn = 2046-3405;
+        name = International Journal of Computational Systems Engineering;
+        issn = 2046-3391 ;
+        eissn = 2046-3405 ;
         issnl = 2046-3391
       >
 
@@ -1090,9 +1155,9 @@
     {
 
       title <
-        name = Int. J. of Computational Vision and Robotics;
-        issn = 1752-9131;
-        eissn = 1752-914X;
+        name = International Journal of Computational Vision and Robotics;
+        issn = 1752-9131 ;
+        eissn = 1752-914X ;
         issnl = 1752-9131
       >
 
@@ -1103,9 +1168,9 @@
     {
 
       title <
-        name = Int. J. of Computer Aided Engineering and Technology;
-        issn = 1757-2657;
-        eissn = 1757-2665;
+        name = International Journal of Computer Aided Engineering and Technology;
+        issn = 1757-2657 ;
+        eissn = 1757-2665 ;
         issnl = 1757-2657
       >
 
@@ -1116,9 +1181,9 @@
     {
 
       title <
-        name = Int. J. of Computer Applications in Technology;
-        issn = 0952-8091;
-        eissn = 1741-5047;
+        name = International Journal of Computer Applications in Technology;
+        issn = 0952-8091 ;
+        eissn = 1741-5047 ;
         issnl = 0952-8091
       >
 
@@ -1129,9 +1194,9 @@
     {
 
       title <
-        name = Int. J. of Computers in Healthcare;
-        issn = 1755-3199;
-        eissn = 1755-3202;
+        name = International Journal of Computers in Healthcare;
+        issn = 1755-3199 ;
+        eissn = 1755-3202 ;
         issnl = 1755-3199
       >
 
@@ -1142,9 +1207,9 @@
     {
 
       title <
-        name = Int. J. of Computing Science and Mathematics;
-        issn = 1752-5055;
-        eissn = 1752-5063;
+        name = International Journal of Computing Science and Mathematics;
+        issn = 1752-5055 ;
+        eissn = 1752-5063 ;
         issnl = 1752-5055
       >
 
@@ -1155,9 +1220,9 @@
     {
 
       title <
-        name = Int. J. of Continuing Engineering Education and Life-Long Learning;
-        issn = 1560-4624;
-        eissn = 1741-5055;
+        name = International Journal of Continuing Engineering Education and Life-Long Learning;
+        issn = 1560-4624 ;
+        eissn = 1741-5055 ;
         issnl = 1560-4624
       >
 
@@ -1168,9 +1233,9 @@
     {
 
       title <
-        name = Int. J. of Corporate Governance;
-        issn = 1754-3037;
-        eissn = 1754-3045;
+        name = International Journal of Corporate Governance;
+        issn = 1754-3037 ;
+        eissn = 1754-3045 ;
         issnl = 1754-3037
       >
 
@@ -1181,9 +1246,9 @@
     {
 
       title <
-        name = Int. J. of Creative Computing;
-        issn = 2043-8346;
-        eissn = 2043-8354;
+        name = International Journal of Creative Computing;
+        issn = 2043-8346 ;
+        eissn = 2043-8354 ;
         issnl = 2043-8346
       >
 
@@ -1194,9 +1259,9 @@
     {
 
       title <
-        name = Int. J. of Critical Accounting;
-        issn = 1757-9848;
-        eissn = 1757-9856;
+        name = International Journal of Critical Accounting;
+        issn = 1757-9848 ;
+        eissn = 1757-9856 ;
         issnl = 1757-9848
       >
 
@@ -1207,9 +1272,9 @@
     {
 
       title <
-        name = Int. J. of Critical Computer-Based Systems;
-        issn = 1757-8779;
-        eissn = 1757-8787;
+        name = International Journal of Critical Computer-Based Systems;
+        issn = 1757-8779 ;
+        eissn = 1757-8787 ;
         issnl = 1757-8779
       >
 
@@ -1220,9 +1285,9 @@
     {
 
       title <
-        name = Int. J. of Critical Infrastructures;
-        issn = 1475-3219;
-        eissn = 1741-8038;
+        name = International Journal of Critical Infrastructures;
+        issn = 1475-3219 ;
+        eissn = 1741-8038 ;
         issnl = 1475-3219
       >
 
@@ -1233,9 +1298,9 @@
     {
 
       title <
-        name = Int. J. of Cultural Management;
-        issn = 1756-5669;
-        eissn = 1756-5677;
+        name = International Journal of Cultural Management;
+        issn = 1756-5669 ;
+        eissn = 1756-5677 ;
         issnl = 1756-5669
       >
 
@@ -1246,9 +1311,9 @@
     {
 
       title <
-        name = Int. J. of Data Analysis Techniques and Strategies;
-        issn = 1755-8050;
-        eissn = 1755-8069;
+        name = International Journal of Data Analysis Techniques and Strategies;
+        issn = 1755-8050 ;
+        eissn = 1755-8069 ;
         issnl = 1755-8050
       >
 
@@ -1259,9 +1324,9 @@
     {
 
       title <
-        name = Int. J. of Data Mining and Bioinformatics;
-        issn = 1748-5673;
-        eissn = 1748-5681;
+        name = International Journal of Data Mining and Bioinformatics;
+        issn = 1748-5673 ;
+        eissn = 1748-5681 ;
         issnl = 1748-5673
       >
 
@@ -1272,9 +1337,9 @@
     {
 
       title <
-        name = Int. J. of Data Mining, Modelling and Management ;
-        issn = 1759-1163;
-        eissn = 1759-1171;
+        name = International Journal of Data Mining, Modelling and Management ;
+        issn = 1759-1163 ;
+        eissn = 1759-1171 ;
         issnl = 1759-1163
       >
 
@@ -1285,9 +1350,9 @@
     {
 
       title <
-        name = Int. J. of Decision Sciences, Risk and Management;
-        issn = 1753-7169;
-        eissn = 1753-7177;
+        name = International Journal of Decision Sciences, Risk and Management;
+        issn = 1753-7169 ;
+        eissn = 1753-7177 ;
         issnl = 1753-7169
       >
 
@@ -1298,9 +1363,9 @@
     {
 
       title <
-        name = Int. J. of Design Engineering;
-        issn = 1751-5874;
-        eissn = 1751-5882;
+        name = International Journal of Design Engineering;
+        issn = 1751-5874 ;
+        eissn = 1751-5882 ;
         issnl = 1751-5874
       >
 
@@ -1311,9 +1376,9 @@
     {
 
       title <
-        name = Int. J. of Digital Culture and Electronic Tourism;
-        issn = 1753-5212;
-        eissn = 1753-5220;
+        name = International Journal of Digital Culture and Electronic Tourism;
+        issn = 1753-5212 ;
+        eissn = 1753-5220 ;
         issnl = 1753-5212
       >
 
@@ -1324,9 +1389,9 @@
     {
 
       title <
-        name = Int. J. of Digital Enterprise Technology;
-        issn = 1756-2554;
-        eissn = 1756-2562;
+        name = International Journal of Digital Enterprise Technology;
+        issn = 1756-2554 ;
+        eissn = 1756-2562 ;
         issnl = 1756-2554
       >
 
@@ -1337,9 +1402,9 @@
     {
 
       title <
-        name = Int. J. of Dynamical Systems and Differential Equations;
-        issn = 1752-3583;
-        eissn = 1752-3591;
+        name = International Journal of Dynamical Systems and Differential Equations;
+        issn = 1752-3583 ;
+        eissn = 1752-3591 ;
         issnl = 1752-3583
       >
 
@@ -1350,9 +1415,9 @@
     {
 
       title <
-        name = Int. J. of Economic Policy in Emerging Economies;
-        issn = 1752-0452;
-        eissn = 1752-0460;
+        name = International Journal of Economic Policy in Emerging Economies;
+        issn = 1752-0452 ;
+        eissn = 1752-0460 ;
         issnl = 1752-0452
       >
 
@@ -1363,9 +1428,9 @@
     {
 
       title <
-        name = Int. J. of Economics and Accounting;
-        issn = 2041-868X;
-        eissn = 2041-8698;
+        name = International Journal of Economics and Accounting;
+        issn = 2041-868X ;
+        eissn = 2041-8698 ;
         issnl = 2041-868X
       >
 
@@ -1376,9 +1441,9 @@
     {
 
       title <
-        name = Int. J. of Economics and Business Research;
-        issn = 1756-9850;
-        eissn = 1756-9869;
+        name = International Journal of Economics and Business Research;
+        issn = 1756-9850 ;
+        eissn = 1756-9869 ;
         issnl = 1756-9850
       >
 
@@ -1389,9 +1454,9 @@
     {
 
       title <
-        name = Int. J. of Education Economics and Development;
-        issn = 1759-5673;
-        eissn = 1759-5681;
+        name = International Journal of Education Economics and Development;
+        issn = 1759-5673 ;
+        eissn = 1759-5681 ;
         issnl = 1759-5673
       >
 
@@ -1402,9 +1467,9 @@
     {
 
       title <
-        name = Int. J. of Electric and Hybrid Vehicles;
-        issn = 1751-4088;
-        eissn = 1751-4096;
+        name = International Journal of Electric and Hybrid Vehicles;
+        issn = 1751-4088 ;
+        eissn = 1751-4096 ;
         issnl = 1751-4088
       >
 
@@ -1415,9 +1480,9 @@
     {
 
       title <
-        name = Int. J. of Electronic Banking;
-        issn = 1753-5239;
-        eissn = 1753-5247;
+        name = International Journal of Electronic Banking;
+        issn = 1753-5239 ;
+        eissn = 1753-5247 ;
         issnl = 1753-5239
       >
 
@@ -1428,9 +1493,9 @@
     {
 
       title <
-        name = Int. J. of Electronic Business;
-        issn = 1470-6067;
-        eissn = 1741-5063;
+        name = International Journal of Electronic Business;
+        issn = 1470-6067 ;
+        eissn = 1741-5063 ;
         issnl = 1470-6067
       >
 
@@ -1441,9 +1506,9 @@
     {
 
       title <
-        name = Int. J. of Electronic Customer Relationship Management;
-        issn = 1750-0664;
-        eissn = 1750-0672;
+        name = International Journal of Electronic Customer Relationship Management;
+        issn = 1750-0664 ;
+        eissn = 1750-0672 ;
         issnl = 1750-0664
       >
 
@@ -1454,9 +1519,9 @@
     {
 
       title <
-        name = Int. J. of Electronic Democracy;
-        issn = 1742-4224;
-        eissn = 1742-4232;
+        name = International Journal of Electronic Democracy;
+        issn = 1742-4224 ;
+        eissn = 1742-4232 ;
         issnl = 1742-4224
       >
 
@@ -1467,9 +1532,9 @@
     {
 
       title <
-        name = Int. J. of Electronic Finance;
-        issn = 1746-0069;
-        eissn = 1746-0077;
+        name = International Journal of Electronic Finance;
+        issn = 1746-0069 ;
+        eissn = 1746-0077 ;
         issnl = 1746-0069
       >
 
@@ -1480,9 +1545,9 @@
     {
 
       title <
-        name = Int. J. of Electronic Governance;
-        issn = 1742-7509;
-        eissn = 1742-7517;
+        name = International Journal of Electronic Governance;
+        issn = 1742-7509 ;
+        eissn = 1742-7517 ;
         issnl = 1742-7509
       >
 
@@ -1493,9 +1558,9 @@
     {
 
       title <
-        name = Int. J. of Electronic Healthcare;
-        issn = 1741-8453;
-        eissn = 1741-8461;
+        name = International Journal of Electronic Healthcare;
+        issn = 1741-8453 ;
+        eissn = 1741-8461 ;
         issnl = 1741-8453
       >
 
@@ -1506,9 +1571,9 @@
     {
 
       title <
-        name = Int. J. of Electronic Marketing and Retailing;
-        issn = 1741-1025;
-        eissn = 1741-1033;
+        name = International Journal of Electronic Marketing and Retailing;
+        issn = 1741-1025 ;
+        eissn = 1741-1033 ;
         issnl = 1741-1025
       >
 
@@ -1519,9 +1584,9 @@
     {
 
       title <
-        name = Int. J. of Electronic Security and Digital Forensics;
-        issn = 1751-911X;
-        eissn = 1751-9128;
+        name = International Journal of Electronic Security and Digital Forensics;
+        issn = 1751-911X ;
+        eissn = 1751-9128 ;
         issnl = 1751-911X
       >
 
@@ -1532,9 +1597,9 @@
     {
 
       title <
-        name = Int. J. of Electronic Trade;
-        issn = 1742-7525;
-        eissn = 1742-7533;
+        name = International Journal of Electronic Trade;
+        issn = 1742-7525 ;
+        eissn = 1742-7533 ;
         issnl = 1742-7525
       >
 
@@ -1545,9 +1610,9 @@
     {
 
       title <
-        name = Int. J. of Electronic Transport;
-        issn = 1742-6952;
-        eissn = 1742-6960;
+        name = International Journal of Electronic Transport;
+        issn = 1742-6952 ;
+        eissn = 1742-6960 ;
         issnl = 1742-6952
       >
 
@@ -1558,9 +1623,9 @@
     {
 
       title <
-        name = Int. J. of Embedded Systems;
-        issn = 1741-1068;
-        eissn = 1741-1076;
+        name = International Journal of Embedded Systems;
+        issn = 1741-1068 ;
+        eissn = 1741-1076 ;
         issnl = 1741-1068
       >
 
@@ -1571,9 +1636,9 @@
     {
 
       title <
-        name = Int. J. of Emergency Management;
-        issn = 1471-4825;
-        eissn = 1741-5071;
+        name = International Journal of Emergency Management;
+        issn = 1471-4825 ;
+        eissn = 1741-5071 ;
         issnl = 1471-4825
       >
 
@@ -1584,9 +1649,9 @@
     {
 
       title <
-        name = Int. J. of Energy Technology and Policy;
-        issn = 1472-8923;
-        eissn = 1741-508X;
+        name = International Journal of Energy Technology and Policy;
+        issn = 1472-8923 ;
+        eissn = 1741-508X ;
         issnl = 1472-8923
       >
 
@@ -1597,9 +1662,9 @@
     {
 
       title <
-        name = Int. J. of Engineering Management and Economics;
-        issn = 1756-5154;
-        eissn = 1756-5162;
+        name = International Journal of Engineering Management and Economics;
+        issn = 1756-5154 ;
+        eissn = 1756-5162 ;
         issnl = 1756-5154
       >
 
@@ -1610,9 +1675,9 @@
     {
 
       title <
-        name = Int. J. of Engineering Systems Modelling and Simulation;
-        issn = 1755-9758;
-        eissn = 1755-9766;
+        name = International Journal of Engineering Systems Modelling and Simulation;
+        issn = 1755-9758 ;
+        eissn = 1755-9766 ;
         issnl = 1755-9758
       >
 
@@ -1623,9 +1688,9 @@
     {
 
       title <
-        name = Int. J. of Enterprise Network Management;
-        issn = 1748-1252;
-        eissn = 1748-1260;
+        name = International Journal of Enterprise Network Management;
+        issn = 1748-1252 ;
+        eissn = 1748-1260 ;
         issnl = 1748-1252
       >
 
@@ -1636,9 +1701,9 @@
     {
 
       title <
-        name = Int. J. of Enterprise Systems Integration and Interoperability;
-        issn = 1745-3143;
-        eissn = 1745-3151;
+        name = International Journal of Enterprise Systems Integration and Interoperability;
+        issn = 1745-3143 ;
+        eissn = 1745-3151 ;
         issnl = 1745-3143
       >
 
@@ -1649,9 +1714,9 @@
     {
 
       title <
-        name = Int. J. of Entertainment Technology and Management;
-        issn = 1475-8954;
-        eissn = 1741-8046;
+        name = International Journal of Entertainment Technology and Management;
+        issn = 1475-8954 ;
+        eissn = 1741-8046 ;
         issnl = 1475-8954
       >
 
@@ -1662,9 +1727,9 @@
     {
 
       title <
-        name = Int. J. of Entrepreneurial Venturing;
-        issn = 1742-5360;
-        eissn = 1742-5379;
+        name = International Journal of Entrepreneurial Venturing;
+        issn = 1742-5360 ;
+        eissn = 1742-5379 ;
         issnl = 1742-5360
       >
 
@@ -1675,9 +1740,9 @@
     {
 
       title <
-        name = Int. J. of Entrepreneurship and Innovation Management;
-        issn = 1368-275X;
-        eissn = 1741-5098;
+        name = International Journal of Entrepreneurship and Innovation Management;
+        issn = 1368-275X ;
+        eissn = 1741-5098 ;
         issnl = 1368-275X
       >
 
@@ -1688,9 +1753,9 @@
     {
 
       title <
-        name = Int. J. of Entrepreneurship and Small Business;
-        issn = 1476-1297;
-        eissn = 1741-8054;
+        name = International Journal of Entrepreneurship and Small Business;
+        issn = 1476-1297 ;
+        eissn = 1741-8054 ;
         issnl = 1476-1297
       >
 
@@ -1701,9 +1766,9 @@
     {
 
       title <
-        name = Int. J. of Environment and Health;
-        issn = 1743-4955;
-        eissn = 1743-4963;
+        name = International Journal of Environment and Health;
+        issn = 1743-4955 ;
+        eissn = 1743-4963 ;
         issnl = 1743-4955
       >
 
@@ -1714,9 +1779,9 @@
     {
 
       title <
-        name = Int. J. of Environment and Pollution;
-        issn = 0957-4352;
-        eissn = 1741-5101;
+        name = International Journal of Environment and Pollution;
+        issn = 0957-4352 ;
+        eissn = 1741-5101 ;
         issnl = 0957-4352
       >
 
@@ -1727,9 +1792,9 @@
     {
 
       title <
-        name = Int. J. of Environment and Sustainable Development;
-        issn = 1474-6778;
-        eissn = 1478-7466;
+        name = International Journal of Environment and Sustainable Development;
+        issn = 1474-6778 ;
+        eissn = 1478-7466 ;
         issnl = 1474-6778
       >
 
@@ -1740,9 +1805,9 @@
     {
 
       title <
-        name = Int. J. of Environment and Waste Management;
-        issn = 1478-9876;
-        eissn = 1478-9868;
+        name = International Journal of Environment and Waste Management;
+        issn = 1478-9876 ;
+        eissn = 1478-9868 ;
         issnl = 1478-9876
       >
 
@@ -1753,9 +1818,9 @@
     {
 
       title <
-        name = Int. J. of Environment, Workplace and Employment;
-        issn = 1741-8437;
-        eissn = 1741-8445;
+        name = International Journal of Environment, Workplace and Employment;
+        issn = 1741-8437 ;
+        eissn = 1741-8445 ;
         issnl = 1741-8437
       >
 
@@ -1766,9 +1831,9 @@
     {
 
       title <
-        name = Int. J. of Environmental Engineering;
-        issn = 1756-8463;
-        eissn = 1756-8471;
+        name = International Journal of Environmental Engineering;
+        issn = 1756-8463 ;
+        eissn = 1756-8471 ;
         issnl = 1756-8463
       >
 
@@ -1779,9 +1844,9 @@
     {
 
       title <
-        name = Int. J. of Environmental Policy and Decision Making;
-        issn = 1752-6906;
-        eissn = 1752-6914;
+        name = International Journal of Environmental Policy and Decision Making;
+        issn = 1752-6906 ;
+        eissn = 1752-6914 ;
         issnl = 1752-6906
       >
 
@@ -1792,9 +1857,9 @@
     {
 
       title <
-        name = Int. J. of Environmental Technology and Management;
-        issn = 1466-2132;
-        eissn = 1741-511X;
+        name = International Journal of Environmental Technology and Management;
+        issn = 1466-2132 ;
+        eissn = 1741-511X ;
         issnl = 1466-2132
       >
 
@@ -1805,9 +1870,9 @@
     {
 
       title <
-        name = Int. J. of Exergy;
-        issn = 1742-8297;
-        eissn = 1742-8300;
+        name = International Journal of Exergy;
+        issn = 1742-8297 ;
+        eissn = 1742-8300 ;
         issnl = 1742-8297
       >
 
@@ -1818,9 +1883,9 @@
     {
 
       title <
-        name = Int. J. of Experimental and Computational Biomechanics;
-        issn = 1755-8735;
-        eissn = 1755-8743;
+        name = International Journal of Experimental and Computational Biomechanics;
+        issn = 1755-8735 ;
+        eissn = 1755-8743 ;
         issnl = 1755-8735
       >
 
@@ -1831,9 +1896,9 @@
     {
 
       title <
-        name = Int. J. of Experimental Design and Process Optimisation;
-        issn = 2040-2252;
-        eissn = 2040-2260;
+        name = International Journal of Experimental Design and Process Optimisation;
+        issn = 2040-2252 ;
+        eissn = 2040-2260 ;
         issnl = 2040-2252
       >
 
@@ -1844,9 +1909,9 @@
     {
 
       title <
-        name = Int. J. of Financial Markets and Derivatives;
-        issn = 1756-7130;
-        eissn = 1756-7149;
+        name = International Journal of Financial Markets and Derivatives;
+        issn = 1756-7130 ;
+        eissn = 1756-7149 ;
         issnl = 1756-7130
       >
 
@@ -1857,9 +1922,9 @@
     {
 
       title <
-        name = Int. J. of Financial Services Management;
-        issn = 1460-6712;
-        eissn = 1741-8062;
+        name = International Journal of Financial Services Management;
+        issn = 1460-6712 ;
+        eissn = 1741-8062 ;
         issnl = 1460-6712
       >
 
@@ -1870,9 +1935,9 @@
     {
 
       title <
-        name = Int. J. of Food Safety, Nutrition and Public Health;
-        issn = 1479-3911;
-        eissn = 1479-392X;
+        name = International Journal of Food Safety, Nutrition and Public Health;
+        issn = 1479-3911 ;
+        eissn = 1479-392X ;
         issnl = 1479-3911
       >
 
@@ -1883,9 +1948,9 @@
     {
 
       title <
-        name = Int. J. of Forensic Engineering;
-        issn = 1744-9944;
-        eissn = 1744-9952;
+        name = International Journal of Forensic Engineering;
+        issn = 1744-9944 ;
+        eissn = 1744-9952 ;
         issnl = 1744-9944
       >
 
@@ -1896,9 +1961,9 @@
     {
 
       title <
-        name = Int. J. of Forensic Engineering and Management;
-        issn = 1478-1476;
-        eissn = 1479-3091;
+        name = International Journal of Forensic Engineering and Management;
+        issn = 1478-1476 ;
+        eissn = 1479-3091 ;
         issnl = 1478-1476
       >
 
@@ -1909,9 +1974,9 @@
     {
 
       title <
-        name = Int. J. of Forensic Software Engineering;
-        issn = 1743-5099;
-        eissn = 1743-5102;
+        name = International Journal of Forensic Software Engineering;
+        issn = 1743-5099 ;
+        eissn = 1743-5102 ;
         issnl = 1743-5099
       >
 
@@ -1922,9 +1987,9 @@
     {
 
       title <
-        name = Int. J. of Foresight and Innovation Policy;
-        issn = 1740-2816;
-        eissn = 1740-2824;
+        name = International Journal of Foresight and Innovation Policy;
+        issn = 1740-2816 ;
+        eissn = 1740-2824 ;
         issnl = 1740-2816
       >
 
@@ -1935,9 +2000,9 @@
     {
 
       title <
-        name = Int. J. of Functional Informatics and Personalised Medicine;
-        issn = 1756-2104;
-        eissn = 1756-2112;
+        name = International Journal of Functional Informatics and Personalised Medicine;
+        issn = 1756-2104 ;
+        eissn = 1756-2112 ;
         issnl = 1756-2104
       >
 
@@ -1948,9 +2013,9 @@
     {
 
       title <
-        name = Int. J. of Global Energy Issues;
-        issn = 0954-7118;
-        eissn = 1741-5128;
+        name = International Journal of Global Energy Issues;
+        issn = 0954-7118 ;
+        eissn = 1741-5128 ;
         issnl = 0954-7118
       >
 
@@ -1961,9 +2026,9 @@
     {
 
       title <
-        name = Int. J. of Global Environmental Issues;
-        issn = 1466-6650;
-        eissn = 1741-5136;
+        name = International Journal of Global Environmental Issues;
+        issn = 1466-6650 ;
+        eissn = 1741-5136 ;
         issnl = 1466-6650
       >
 
@@ -1974,9 +2039,9 @@
     {
 
       title <
-        name = Int. J. of Global Warming;
-        issn = 1758-2083;
-        eissn = 1758-2091;
+        name = International Journal of Global Warming;
+        issn = 1758-2083 ;
+        eissn = 1758-2091 ;
         issnl = 1758-2083
       >
 
@@ -1987,9 +2052,9 @@
     {
 
       title <
-        name = Int. J. of Globalisation and Small Business;
-        issn = 1479-3059;
-        eissn = 1479-3067;
+        name = International Journal of Globalisation and Small Business;
+        issn = 1479-3059 ;
+        eissn = 1479-3067 ;
         issnl = 1479-3059
       >
 
@@ -2000,9 +2065,9 @@
     {
 
       title <
-        name = Int. J. of Granular Computing, Rough Sets and Intelligent Systems;
-        issn = 1757-2703;
-        eissn = 1757-2711;
+        name = International Journal of Granular Computing, Rough Sets and Intelligent Systems;
+        issn = 1757-2703 ;
+        eissn = 1757-2711 ;
         issnl = 1757-2703
       >
 
@@ -2013,9 +2078,9 @@
     {
 
       title <
-        name = Int. J. of Green Economics;
-        issn = 1744-9928;
-        eissn = 1744-9936;
+        name = International Journal of Green Economics;
+        issn = 1744-9928 ;
+        eissn = 1744-9936 ;
         issnl = 1744-9928
       >
 
@@ -2026,9 +2091,9 @@
     {
 
       title <
-        name = Int. J. of Grid and Utility Computing;
-        issn = 1741-847X;
-        eissn = 1741-8488;
+        name = International Journal of Grid and Utility Computing;
+        issn = 1741-847X ;
+        eissn = 1741-8488 ;
         issnl = 1741-847X
       >
 
@@ -2039,9 +2104,9 @@
     {
 
       title <
-        name = Int. J. of Healthcare Technology and Management;
-        issn = 1368-2156;
-        eissn = 1741-5144;
+        name = International Journal of Healthcare Technology and Management;
+        issn = 1368-2156 ;
+        eissn = 1741-5144 ;
         issnl = 1368-2156
       >
 
@@ -2052,9 +2117,9 @@
     {
 
       title <
-        name = Int. J. of Heavy Vehicle Systems;
-        issn = 1744-232X;
-        eissn = 1741-5152;
+        name = International Journal of Heavy Vehicle Systems;
+        issn = 1744-232X ;
+        eissn = 1741-5152 ;
         issnl = 1744-232X
       >
 
@@ -2065,9 +2130,9 @@
     {
 
       title <
-        name = Int. J. of High Performance Computing and Networking;
-        issn = 1740-0562;
-        eissn = 1740-0570;
+        name = International Journal of High Performance Computing and Networking;
+        issn = 1740-0562 ;
+        eissn = 1740-0570 ;
         issnl = 1740-0562
       >
 
@@ -2078,9 +2143,9 @@
     {
 
       title <
-        name = Int. J. of High Performance Systems Architecture;
-        issn = 1751-6528;
-        eissn = 1751-6536;
+        name = International Journal of High Performance Systems Architecture;
+        issn = 1751-6528 ;
+        eissn = 1751-6536 ;
         issnl = 1751-6528
       >
 
@@ -2091,9 +2156,9 @@
     {
 
       title <
-        name = Int. J. of Human Factors and Ergonomics;
-        issn = 2045-7804;
-        eissn = 2045-7812;
+        name = International Journal of Human Factors and Ergonomics;
+        issn = 2045-7804 ;
+        eissn = 2045-7812 ;
         issnl = 2045-7804
       >
 
@@ -2104,9 +2169,9 @@
     {
 
       title <
-        name = Int. J. of Human Factors Modelling and Simulation;
-        issn = 1742-5549;
-        eissn = 1742-5557;
+        name = International Journal of Human Factors Modelling and Simulation;
+        issn = 1742-5549 ;
+        eissn = 1742-5557 ;
         issnl = 1742-5549
       >
 
@@ -2117,9 +2182,9 @@
     {
 
       title <
-        name = Int. J. of Human Resources Development and Management;
-        issn = 1465-6612;
-        eissn = 1741-5160;
+        name = International Journal of Human Resources Development and Management;
+        issn = 1465-6612 ;
+        eissn = 1741-5160 ;
         issnl = 1465-6612
       >
 
@@ -2130,9 +2195,9 @@
     {
 
       title <
-        name = Int. J. of Hydrology Science and Technology;
-        issn = 2042-7808;
-        eissn = 2042-7816;
+        name = International Journal of Hydrology Science and Technology;
+        issn = 2042-7808 ;
+        eissn = 2042-7816 ;
         issnl = 2042-7808
       >
 
@@ -2143,9 +2208,9 @@
     {
 
       title <
-        name = Int. J. of Immunological Studies;
-        issn = 1754-1441;
-        eissn = 1754-145X;
+        name = International Journal of Immunological Studies;
+        issn = 1754-1441 ;
+        eissn = 1754-145X ;
         issnl = 1754-1441
       >
 
@@ -2156,9 +2221,9 @@
     {
 
       title <
-        name = Int. J. of Indian Culture and Business Management;
-        issn = 1753-0806;
-        eissn = 1753-0814;
+        name = International Journal of Indian Culture and Business Management;
+        issn = 1753-0806 ;
+        eissn = 1753-0814 ;
         issnl = 1753-0806
       >
 
@@ -2169,9 +2234,9 @@
     {
 
       title <
-        name = Int. J. of Industrial and Systems Engineering;
-        issn = 1748-5037;
-        eissn = 1748-5045;
+        name = International Journal of Industrial and Systems Engineering;
+        issn = 1748-5037 ;
+        eissn = 1748-5045 ;
         issnl = 1748-5037
       >
 
@@ -2182,9 +2247,9 @@
     {
 
       title <
-        name = Int. J. of Industrial Electronics and Drives;
-        issn = 1757-3874;
-        eissn = 1757-3882;
+        name = International Journal of Industrial Electronics and Drives;
+        issn = 1757-3874 ;
+        eissn = 1757-3882 ;
         issnl = 1757-3874
       >
 
@@ -2195,9 +2260,9 @@
     {
 
       title <
-        name = Int. J. of Information and Coding Theory;
-        issn = 1753-7703;
-        eissn = 1753-7711;
+        name = International Journal of Information and Coding Theory;
+        issn = 1753-7703 ;
+        eissn = 1753-7711 ;
         issnl = 1753-7703
       >
 
@@ -2208,9 +2273,9 @@
     {
 
       title <
-        name = Int. J. of Information and Communication Technology;
-        issn = 1466-6642;
-        eissn = 1741-8070;
+        name = International Journal of Information and Communication Technology;
+        issn = 1466-6642 ;
+        eissn = 1741-8070 ;
         issnl = 1466-6642
       >
 
@@ -2221,9 +2286,9 @@
     {
 
       title <
-        name = Int. J. of Information and Computer Security;
-        issn = 1744-1765;
-        eissn = 1744-1773;
+        name = International Journal of Information and Computer Security;
+        issn = 1744-1765 ;
+        eissn = 1744-1773 ;
         issnl = 1744-1765
       >
 
@@ -2234,9 +2299,9 @@
     {
 
       title <
-        name = Int. J. of Information and Decision Sciences;
-        issn = 1756-7017;
-        eissn = 1756-7025;
+        name = International Journal of Information and Decision Sciences;
+        issn = 1756-7017 ;
+        eissn = 1756-7025 ;
         issnl = 1756-7017
       >
 
@@ -2247,9 +2312,9 @@
     {
 
       title <
-        name = Int. J. of Information and Operations Management Education;
-        issn = 1744-2303;
-        eissn = 1744-2311;
+        name = International Journal of Information and Operations Management Education;
+        issn = 1744-2303 ;
+        eissn = 1744-2311 ;
         issnl = 1744-2303
       >
 
@@ -2260,9 +2325,9 @@
     {
 
       title <
-        name = Int. J. of Information Privacy, Security and Integrity;
-        issn = 1741-8496;
-        eissn = 1741-850X;
+        name = International Journal of Information Privacy, Security and Integrity;
+        issn = 1741-8496 ;
+        eissn = 1741-850X ;
         issnl = 1741-8496
       >
 
@@ -2273,9 +2338,9 @@
     {
 
       title <
-        name = Int. J. of Information Quality;
-        issn = 1751-0457;
-        eissn = 1751-0465;
+        name = International Journal of Information Quality;
+        issn = 1751-0457 ;
+        eissn = 1751-0465 ;
         issnl = 1751-0457
       >
 
@@ -2286,9 +2351,9 @@
     {
 
       title <
-        name = Int. J. of Information Systems and Change Management;
-        issn = 1479-3121;
-        eissn = 1479-313X;
+        name = International Journal of Information Systems and Change Management;
+        issn = 1479-3121 ;
+        eissn = 1479-313X ;
         issnl = 1479-3121
       >
 
@@ -2299,9 +2364,9 @@
     {
 
       title <
-        name = Int. J. of Information Systems and Management;
-        issn = 1751-3227;
-        eissn = 1751-3235;
+        name = International Journal of Information Systems and Management;
+        issn = 1751-3227 ;
+        eissn = 1751-3235 ;
         issnl = 1751-3227
       >
 
@@ -2312,9 +2377,9 @@
     {
 
       title <
-        name = Int. J. of Information Technology and Management;
-        issn = 1461-4111;
-        eissn = 1741-5179;
+        name = International Journal of Information Technology and Management;
+        issn = 1461-4111 ;
+        eissn = 1741-5179 ;
         issnl = 1461-4111
       >
 
@@ -2325,9 +2390,9 @@
     {
 
       title <
-        name = Int. J. of Information Technology, Communications and Convergence;
-        issn = 2042-3217;
-        eissn = 2042-3225;
+        name = International Journal of Information Technology, Communications and Convergence;
+        issn = 2042-3217 ;
+        eissn = 2042-3225 ;
         issnl = 2042-3217
       >
 
@@ -2338,9 +2403,9 @@
     {
 
       title <
-        name = Int. J. of Innovation and Learning;
-        issn = 1471-8197;
-        eissn = 1741-8089;
+        name = International Journal of Innovation and Learning;
+        issn = 1471-8197 ;
+        eissn = 1741-8089 ;
         issnl = 1471-8197
       >
 
@@ -2351,9 +2416,9 @@
     {
 
       title <
-        name = Int. J. of Innovation and Regional Development;
-        issn = 1753-0660;
-        eissn = 1753-0679;
+        name = International Journal of Innovation and Regional Development;
+        issn = 1753-0660 ;
+        eissn = 1753-0679 ;
         issnl = 1753-0660
       >
 
@@ -2364,9 +2429,9 @@
     {
 
       title <
-        name = Int. J. of Innovation and Sustainable Development;
-        issn = 1740-8822;
-        eissn = 1740-8830;
+        name = International Journal of Innovation and Sustainable Development;
+        issn = 1740-8822 ;
+        eissn = 1740-8830 ;
         issnl = 1740-8822
       >
 
@@ -2377,9 +2442,9 @@
     {
 
       title <
-        name = Int. J. of Innovation in Education;
-        issn = 1755-151X;
-        eissn = 1755-1528;
+        name = International Journal of Innovation in Education;
+        issn = 1755-151X ;
+        eissn = 1755-1528 ;
         issnl = 1755-151X
       >
 
@@ -2390,9 +2455,9 @@
     {
 
       title <
-        name = Int. J. of Innovative Computing and Applications;
-        issn = 1751-648X;
-        eissn = 1751-6498;
+        name = International Journal of Innovative Computing and Applications;
+        issn = 1751-648X ;
+        eissn = 1751-6498 ;
         issnl = 1751-648X
       >
 
@@ -2403,9 +2468,9 @@
     {
 
       title <
-        name = Int. J. of Instrumentation Technology;
-        issn = 2043-7854;
-        eissn = 2043-7862;
+        name = International Journal of Instrumentation Technology;
+        issn = 2043-7854 ;
+        eissn = 2043-7862 ;
         issnl = 2043-7854
       >
 
@@ -2416,9 +2481,9 @@
     {
 
       title <
-        name = Int. J. of Integrated Supply Management;
-        issn = 1477-5360;
-        eissn = 1741-8097;
+        name = International Journal of Integrated Supply Management;
+        issn = 1477-5360 ;
+        eissn = 1741-8097 ;
         issnl = 1477-5360
       >
 
@@ -2429,9 +2494,9 @@
     {
 
       title <
-        name = Int. J. of Intellectual Property Management;
-        issn = 1478–9647;
-        eissn = 1478–9655;
+        name = International Journal of Intellectual Property Management;
+        issn = 1478–9647 ;
+        eissn = 1478–9655 ;
         issnl = 1478–9647
       >
 
@@ -2442,9 +2507,9 @@
     {
 
       title <
-        name = Int. J. of Intelligent Defence Support Systems;
-        issn = 1755-1587;
-        eissn = 1755-1595;
+        name = International Journal of Intelligent Defence Support Systems;
+        issn = 1755-1587 ;
+        eissn = 1755-1595 ;
         issnl = 1755-1587
       >
 
@@ -2455,9 +2520,9 @@
     {
 
       title <
-        name = Int. J. of Intelligent Engineering Informatics;
-        issn = 1758-8715;
-        eissn = 1758-8723;
+        name = International Journal of Intelligent Engineering Informatics;
+        issn = 1758-8715 ;
+        eissn = 1758-8723 ;
         issnl = 1758-8715
       >
 
@@ -2468,9 +2533,9 @@
     {
 
       title <
-        name = Int. J. of Intelligent Enterprise;
-        issn = 1745-3232;
-        eissn = 1745-3240;
+        name = International Journal of Intelligent Enterprise;
+        issn = 1745-3232 ;
+        eissn = 1745-3240 ;
         issnl = 1745-3232
       >
 
@@ -2481,9 +2546,9 @@
     {
 
       title <
-        name = Int. J. of Intelligent Information and Database Systems;
-        issn = 1751-5858;
-        eissn = 1751-5866;
+        name = International Journal of Intelligent Information and Database Systems;
+        issn = 1751-5858 ;
+        eissn = 1751-5866 ;
         issnl = 1751-5858
       >
 
@@ -2494,9 +2559,9 @@
     {
 
       title <
-        name = Int. J. of Intelligent Systems Technologies and Applications;
-        issn = 1740-8865;
-        eissn = 1740-8873;
+        name = International Journal of Intelligent Systems Technologies and Applications;
+        issn = 1740-8865 ;
+        eissn = 1740-8873 ;
         issnl = 1740-8865
       >
 
@@ -2507,9 +2572,9 @@
     {
 
       title <
-        name = Int. J. of Intercultural Information Management;
-        issn = 1750-0028;
-        eissn = 1750-0036;
+        name = International Journal of Intercultural Information Management;
+        issn = 1750-0028 ;
+        eissn = 1750-0036 ;
         issnl = 1750-0028
       >
 
@@ -2520,9 +2585,9 @@
     {
 
       title <
-        name = Int. J. of Internet and Enterprise Management;
-        issn = 1476-1300;
-        eissn = 1741-5330;
+        name = International Journal of Internet and Enterprise Management;
+        issn = 1476-1300 ;
+        eissn = 1741-5330 ;
         issnl = 1476-1300
       >
 
@@ -2533,9 +2598,9 @@
     {
 
       title <
-        name = Int. J. of Internet Manufacturing and Services;
-        issn = 1751-6048;
-        eissn = 1751-6056;
+        name = International Journal of Internet Manufacturing and Services;
+        issn = 1751-6048 ;
+        eissn = 1751-6056 ;
         issnl = 1751-6048
       >
 
@@ -2546,9 +2611,9 @@
     {
 
       title <
-        name = Int. J. of Internet Marketing and Advertising;
-        issn = 1477-5212;
-        eissn = 1741-8100;
+        name = International Journal of Internet Marketing and Advertising;
+        issn = 1477-5212 ;
+        eissn = 1741-8100 ;
         issnl = 1477-5212
       >
 
@@ -2559,9 +2624,9 @@
     {
 
       title <
-        name = Int. J. of Internet Protocol Technology;
-        issn = 1743-8209;
-        eissn = 1743-8217;
+        name = International Journal of Internet Protocol Technology;
+        issn = 1743-8209 ;
+        eissn = 1743-8217 ;
         issnl = 1743-8209
       >
 
@@ -2572,9 +2637,9 @@
     {
 
       title <
-        name = Int. J. of Internet Technology and Secured Transactions;
-        issn = 1748-569X;
-        eissn = 1748-5703;
+        name = International Journal of Internet Technology and Secured Transactions;
+        issn = 1748-569X ;
+        eissn = 1748-5703 ;
         issnl = 1748-569X
       >
 
@@ -2585,9 +2650,9 @@
     {
 
       title <
-        name = Int. J. of Inventory Research;
-        issn = 1746-6962;
-        eissn = 1746-6970;
+        name = International Journal of Inventory Research;
+        issn = 1746-6962 ;
+        eissn = 1746-6970 ;
         issnl = 1746-6962
       >
 
@@ -2598,9 +2663,9 @@
     {
 
       title <
-        name = Int. J. of Knowledge and Learning;
-        issn = 1741-1009;
-        eissn = 1741-1017;
+        name = International Journal of Knowledge and Learning;
+        issn = 1741-1009 ;
+        eissn = 1741-1017 ;
         issnl = 1741-1009
       >
 
@@ -2611,9 +2676,9 @@
     {
 
       title <
-        name = Int. J. of Knowledge and Web Intelligence;
-        issn = 1755-8255;
-        eissn = 1755-8263;
+        name = International Journal of Knowledge and Web Intelligence;
+        issn = 1755-8255 ;
+        eissn = 1755-8263 ;
         issnl = 1755-8255
       >
 
@@ -2624,9 +2689,9 @@
     {
 
       title <
-        name = Int. J. of Knowledge Engineering and Data Mining;
-        issn = 1755-2087;
-        eissn = 1755-2095;
+        name = International Journal of Knowledge Engineering and Data Mining;
+        issn = 1755-2087 ;
+        eissn = 1755-2095 ;
         issnl = 1755-2087
       >
 
@@ -2637,9 +2702,9 @@
     {
 
       title <
-        name = Int. J. of Knowledge Engineering and Soft Data Paradigms;
-        issn = 1755-3210;
-        eissn = 1755-3229;
+        name = International Journal of Knowledge Engineering and Soft Data Paradigms;
+        issn = 1755-3210 ;
+        eissn = 1755-3229 ;
         issnl = 1755-3210
       >
 
@@ -2650,9 +2715,9 @@
     {
 
       title <
-        name = Int. J. of Knowledge Management in Tourism and Hospitality;
-        issn = 1756-0322;
-        eissn = 1756-0330;
+        name = International Journal of Knowledge Management in Tourism and Hospitality;
+        issn = 1756-0322 ;
+        eissn = 1756-0330 ;
         issnl = 1756-0322
       >
 
@@ -2663,9 +2728,9 @@
     {
 
       title <
-        name = Int. J. of Knowledge Management Studies;
-        issn = 1743-8268;
-        eissn = 1743-8276;
+        name = International Journal of Knowledge Management Studies;
+        issn = 1743-8268 ;
+        eissn = 1743-8276 ;
         issnl = 1743-8268
       >
 
@@ -2676,9 +2741,9 @@
     {
 
       title <
-        name = Int. J. of Knowledge-Based Development;
-        issn = 2040-4468;
-        eissn = 2040-4476;
+        name = International Journal of Knowledge-Based Development;
+        issn = 2040-4468 ;
+        eissn = 2040-4476 ;
         issnl = 2040-4468
       >
 
@@ -2689,9 +2754,9 @@
     {
 
       title <
-        name = Int. J. of Lean Enterprise Research;
-        issn = 1754-2294;
-        eissn = 1754-2308;
+        name = International Journal of Lean Enterprise Research;
+        issn = 1754-2294 ;
+        eissn = 1754-2308 ;
         issnl = 1754-2294
       >
 
@@ -2702,9 +2767,9 @@
     {
 
       title <
-        name = Int. J. of Learning and Change;
-        issn = 1740-2875;
-        eissn = 1740-2883;
+        name = International Journal of Learning and Change;
+        issn = 1740-2875 ;
+        eissn = 1740-2883 ;
         issnl = 1740-2875
       >
 
@@ -2715,9 +2780,9 @@
     {
 
       title <
-        name = Int. J. of Learning and Intellectual Capital;
-        issn = 1479-4853;
-        eissn = 1479-4861;
+        name = International Journal of Learning and Intellectual Capital;
+        issn = 1479-4853 ;
+        eissn = 1479-4861 ;
         issnl = 1479-4853
       >
 
@@ -2728,9 +2793,9 @@
     {
 
       title <
-        name = Int. J. of Learning Technology;
-        issn = 1477-8386;
-        eissn = 1741-8119;
+        name = International Journal of Learning Technology;
+        issn = 1477-8386 ;
+        eissn = 1741-8119 ;
         issnl = 1477-8386
       >
 
@@ -2741,9 +2806,9 @@
     {
 
       title <
-        name = Int. J. of Legal Information Design;
-        issn = 1750-8142;
-        eissn = 1750-8150;
+        name = International Journal of Legal Information Design;
+        issn = 1750-8142 ;
+        eissn = 1750-8150 ;
         issnl = 1750-8142
       >
 
@@ -2754,9 +2819,9 @@
     {
 
       title <
-        name = Int. J. of Leisure and Tourism Marketing;
-        issn = 1757-5567;
-        eissn = 1757-5575;
+        name = International Journal of Leisure and Tourism Marketing;
+        issn = 1757-5567 ;
+        eissn = 1757-5575 ;
         issnl = 1757-5567
       >
 
@@ -2767,9 +2832,9 @@
     {
 
       title <
-        name = Int. J. of Liability and Scientific Enquiry;
-        issn = 1741-6426;
-        eissn = 1741-6434;
+        name = International Journal of Liability and Scientific Enquiry;
+        issn = 1741-6426 ;
+        eissn = 1741-6434 ;
         issnl = 1741-6426
       >
 
@@ -2780,9 +2845,9 @@
     {
 
       title <
-        name = Int. J. of Lifecycle Performance Engineering;
-        issn = 2043-8648;
-        eissn = 2043-8656;
+        name = International Journal of Lifecycle Performance Engineering;
+        issn = 2043-8648 ;
+        eissn = 2043-8656 ;
         issnl = 2043-8648
       >
 
@@ -2793,9 +2858,9 @@
     {
 
       title <
-        name = Int. J. of Logistics Economics and Globalisation;
-        issn = 1741-5373;
-        eissn = 1741-5381;
+        name = International Journal of Logistics Economics and Globalisation;
+        issn = 1741-5373 ;
+        eissn = 1741-5381 ;
         issnl = 1741-5373
       >
 
@@ -2806,9 +2871,9 @@
     {
 
       title <
-        name = Int. J. of Logistics Systems and Management;
-        issn = 1742-7967;
-        eissn = 1742-7975;
+        name = International Journal of Logistics Systems and Management;
+        issn = 1742-7967 ;
+        eissn = 1742-7975 ;
         issnl = 1742-7967
       >
 
@@ -2819,9 +2884,9 @@
     {
 
       title <
-        name = Int. J. of Low Radiation;
-        issn = 1477-6545;
-        eissn = 1741-9190;
+        name = International Journal of Low Radiation;
+        issn = 1477-6545 ;
+        eissn = 1741-9190 ;
         issnl = 1477-6545
       >
 
@@ -2832,9 +2897,9 @@
     {
 
       title <
-        name = Int. J. of Machining and Machinability of Materials;
-        issn = 1748-5711;
-        eissn = 1748-572X;
+        name = International Journal of Machining and Machinability of Materials;
+        issn = 1748-5711 ;
+        eissn = 1748-572X ;
         issnl = 1748-5711
       >
 
@@ -2845,9 +2910,9 @@
     {
 
       title <
-        name = Int. J. of Management and Decision Making;
-        issn = 1462-4621;
-        eissn = 1741-5187;
+        name = International Journal of Management and Decision Making;
+        issn = 1462-4621 ;
+        eissn = 1741-5187 ;
         issnl = 1462-4621
       >
 
@@ -2858,9 +2923,9 @@
     {
 
       title <
-        name = Int. J. of Management and Enterprise Development;
-        issn = 1468-4330;
-        eissn = 1741-8127;
+        name = International Journal of Management and Enterprise Development;
+        issn = 1468-4330 ;
+        eissn = 1741-8127 ;
         issnl = 1468-4330
       >
 
@@ -2871,9 +2936,9 @@
     {
 
       title <
-        name = Int. J. of Management and Network Economics;
-        issn = 1754-2316;
-        eissn = 1754-2324;
+        name = International Journal of Management and Network Economics;
+        issn = 1754-2316 ;
+        eissn = 1754-2324 ;
         issnl = 1754-2316
       >
 
@@ -2884,9 +2949,9 @@
     {
 
       title <
-        name = Int. J. of Management Concepts and Philosophy;
-        issn = 1478-1484;
-        eissn = 1741-8135;
+        name = International Journal of Management Concepts and Philosophy;
+        issn = 1478-1484 ;
+        eissn = 1741-8135 ;
         issnl = 1478-1484
       >
 
@@ -2897,9 +2962,9 @@
     {
 
       title <
-        name = Int. J. of Management Development;
-        issn = 1752-8240;
-        eissn = 1752-850X;
+        name = International Journal of Management Development;
+        issn = 1752-8240 ;
+        eissn = 1752-850X ;
         issnl = 1752-8240
       >
 
@@ -2910,9 +2975,9 @@
     {
 
       title <
-        name = Int. J. of Management in Education;
-        issn = 1750-385X;
-        eissn = 1750-3868;
+        name = International Journal of Management in Education;
+        issn = 1750-385X ;
+        eissn = 1750-3868 ;
         issnl = 1750-385X
       >
 
@@ -2923,9 +2988,9 @@
     {
 
       title <
-        name = Int. J. of Management Practice;
-        issn = 1477-9064;
-        eissn = 1741-8143;
+        name = International Journal of Management Practice;
+        issn = 1477-9064 ;
+        eissn = 1741-8143 ;
         issnl = 1477-9064
       >
 
@@ -2936,9 +3001,9 @@
     {
 
       title <
-        name = Int. J. of Managerial and Financial Accounting;
-        issn = 1753-6715;
-        eissn = 1753-6723;
+        name = International Journal of Managerial and Financial Accounting;
+        issn = 1753-6715 ;
+        eissn = 1753-6723 ;
         issnl = 1753-6715
       >
 
@@ -2949,9 +3014,9 @@
     {
 
       title <
-        name = Int. J. of Manufacturing Research;
-        issn = 1750-0591;
-        eissn = 1750-0605;
+        name = International Journal of Manufacturing Research;
+        issn = 1750-0591 ;
+        eissn = 1750-0605 ;
         issnl = 1750-0591
       >
 
@@ -2962,9 +3027,9 @@
     {
 
       title <
-        name = Int. J. of Manufacturing Technology and Management;
-        issn = 1368-2148;
-        eissn = 1741-5195;
+        name = International Journal of Manufacturing Technology and Management;
+        issn = 1368-2148 ;
+        eissn = 1741-5195 ;
         issnl = 1368-2148
       >
 
@@ -2975,9 +3040,9 @@
     {
 
       title <
-        name = Int. J. of Mass Customisation;
-        issn = 1742-4208;
-        eissn = 1742-4216;
+        name = International Journal of Mass Customisation;
+        issn = 1742-4208 ;
+        eissn = 1742-4216 ;
         issnl = 1742-4208
       >
 
@@ -2988,9 +3053,9 @@
     {
 
       title <
-        name = Int. J. of Materials and Product Technology;
-        issn = 0268-1900;
-        eissn = 1741-5209;
+        name = International Journal of Materials and Product Technology;
+        issn = 0268-1900 ;
+        eissn = 1741-5209 ;
         issnl = 0268-1900
       >
 
@@ -3001,9 +3066,9 @@
     {
 
       title <
-        name = Int. J. of Materials and Structural Integrity;
-        issn = 1745-0055;
-        eissn = 1745-0063;
+        name = International Journal of Materials and Structural Integrity;
+        issn = 1745-0055 ;
+        eissn = 1745-0063 ;
         issnl = 1745-0055
       >
 
@@ -3014,9 +3079,9 @@
     {
 
       title <
-        name = Int. J. of Materials Engineering Innovation;
-        issn = 1757-2754;
-        eissn = 1757-2762;
+        name = International Journal of Materials Engineering Innovation;
+        issn = 1757-2754 ;
+        eissn = 1757-2762 ;
         issnl = 1757-2754
       >
 
@@ -3027,9 +3092,9 @@
     {
 
       title <
-        name = Int. J. of Mathematical Modelling and Numerical Optimisation;
-        issn = 2040-3607;
-        eissn = 2040-3615;
+        name = International Journal of Mathematical Modelling and Numerical Optimisation;
+        issn = 2040-3607 ;
+        eissn = 2040-3615 ;
         issnl = 2040-3607
       >
 
@@ -3040,9 +3105,9 @@
     {
 
       title <
-        name = Int. J. of Mathematics in Operational Research;
-        issn = 1757-5850;
-        eissn = 1757-5869;
+        name = International Journal of Mathematics in Operational Research;
+        issn = 1757-5850 ;
+        eissn = 1757-5869 ;
         issnl = 1757-5850
       >
 
@@ -3053,9 +3118,9 @@
     {
 
       title <
-        name = Int. J. of Mechatronics and Automation;
-        issn = 2045-1059;
-        eissn = 2045-1067;
+        name = International Journal of Mechatronics and Automation;
+        issn = 2045-1059 ;
+        eissn = 2045-1067 ;
         issnl = 2045-1059
       >
 
@@ -3066,9 +3131,9 @@
     {
 
       title <
-        name = Int. J. of Mechatronics and Manufacturing Systems;
-        issn = 1753-1039;
-        eissn = 1753-1047;
+        name = International Journal of Mechatronics and Manufacturing Systems;
+        issn = 1753-1039 ;
+        eissn = 1753-1047 ;
         issnl = 1753-1039
       >
 
@@ -3079,9 +3144,9 @@
     {
 
       title <
-        name = Int. J. of Medical Engineering and Informatics;
-        issn = 1755-0653;
-        eissn = 1755-0661;
+        name = International Journal of Medical Engineering and Informatics;
+        issn = 1755-0653 ;
+        eissn = 1755-0661 ;
         issnl = 1755-0653
       >
 
@@ -3092,9 +3157,9 @@
     {
 
       title <
-        name = Int. J. of Metadata, Semantics and Ontologies;
-        issn = 1744-2621;
-        eissn = 1744-263X;
+        name = International Journal of Metadata, Semantics and Ontologies;
+        issn = 1744-2621 ;
+        eissn = 1744-263X ;
         issnl = 1744-2621
       >
 
@@ -3105,9 +3170,9 @@
     {
 
       title <
-        name = Int. J. of Metaheuristics;
-        issn = 1755-2176;
-        eissn = 1755-2184;
+        name = International Journal of Metaheuristics;
+        issn = 1755-2176 ;
+        eissn = 1755-2184 ;
         issnl = 1755-2176
       >
 
@@ -3118,9 +3183,9 @@
     {
 
       title <
-        name = Int. J. of Microstructure and Materials Properties;
-        issn = 1741-8410;
-        eissn = 1741-8429;
+        name = International Journal of Microstructure and Materials Properties;
+        issn = 1741-8410 ;
+        eissn = 1741-8429 ;
         issnl = 1741-8410
       >
 
@@ -3131,9 +3196,9 @@
     {
 
       title <
-        name = Int. J. of Mining and Mineral Engineering;
-        issn = 1754-890X;
-        eissn = 1754-8918;
+        name = International Journal of Mining and Mineral Engineering;
+        issn = 1754-890X ;
+        eissn = 1754-8918 ;
         issnl = 1754-890X
       >
 
@@ -3144,9 +3209,9 @@
     {
 
       title <
-        name = Int. J. of Mobile Communications;
-        issn = 1470-949X;
-        eissn = 1741-5217;
+        name = International Journal of Mobile Communications;
+        issn = 1470-949X ;
+        eissn = 1741-5217 ;
         issnl = 1470-949X
       >
 
@@ -3157,9 +3222,9 @@
     {
 
       title <
-        name = Int. J. of Mobile Learning and Organisation;
-        issn = 1746-725X;
-        eissn = 1746-7268;
+        name = International Journal of Mobile Learning and Organisation;
+        issn = 1746-725X ;
+        eissn = 1746-7268 ;
         issnl = 1746-725X
       >
 
@@ -3170,9 +3235,9 @@
     {
 
       title <
-        name = Int. J. of Mobile Network Design and Innovation;
-        issn = 1744-2869;
-        eissn = 1744-2850;
+        name = International Journal of Mobile Network Design and Innovation;
+        issn = 1744-2869 ;
+        eissn = 1744-2850 ;
         issnl = 1744-2869
       >
 
@@ -3183,9 +3248,9 @@
     {
 
       title <
-        name = Int. J. of Modelling in Operations Management;
-        issn = 2042-4094;
-        eissn = 2042-4108;
+        name = International Journal of Modelling in Operations Management;
+        issn = 2042-4094 ;
+        eissn = 2042-4108 ;
         issnl = 2042-4094
       >
 
@@ -3196,9 +3261,9 @@
     {
 
       title <
-        name = Int. J. of Modelling, Identification and Control;
-        issn = 1746-6172;
-        eissn = 1746-6180;
+        name = International Journal of Modelling, Identification and Control;
+        issn = 1746-6172 ;
+        eissn = 1746-6180 ;
         issnl = 1746-6172
       >
 
@@ -3209,9 +3274,9 @@
     {
 
       title <
-        name = Int. J. of Molecular Engineering;
-        issn = 1743-8241;
-        eissn = 1743-825X;
+        name = International Journal of Molecular Engineering;
+        issn = 1743-8241 ;
+        eissn = 1743-825X ;
         issnl = 1743-8241
       >
 
@@ -3222,9 +3287,9 @@
     {
 
       title <
-        name = Int. J. of Monetary Economics and Finance;
-        issn = 1752-0479;
-        eissn = 1752-0487;
+        name = International Journal of Monetary Economics and Finance;
+        issn = 1752-0479 ;
+        eissn = 1752-0487 ;
         issnl = 1752-0479
       >
 
@@ -3235,9 +3300,9 @@
     {
 
       title <
-        name = Int. J. of Multicriteria Decision Making;
-        issn = 2040-106X;
-        eissn = 2040-1078;
+        name = International Journal of Multicriteria Decision Making;
+        issn = 2040-106X ;
+        eissn = 2040-1078 ;
         issnl = 2040-106X
       >
 
@@ -3248,9 +3313,9 @@
     {
 
       title <
-        name = Int. J. of Multimedia Intelligence and Security;
-        issn = 2042-3462;
-        eissn = 2042-3470;
+        name = International Journal of Multimedia Intelligence and Security;
+        issn = 2042-3462 ;
+        eissn = 2042-3470 ;
         issnl = 2042-3462
       >
 
@@ -3261,9 +3326,9 @@
     {
 
       title <
-        name = Int. J. of Nano and Biomaterials;
-        issn = 1752-8933;
-        eissn = 1752-8941;
+        name = International Journal of Nano and Biomaterials;
+        issn = 1752-8933 ;
+        eissn = 1752-8941 ;
         issnl = 1752-8933
       >
 
@@ -3274,9 +3339,9 @@
     {
 
       title <
-        name = Int. J. of Nanomanufacturing;
-        issn = 1746-9392;
-        eissn = 1746-9406;
+        name = International Journal of Nanomanufacturing;
+        issn = 1746-9392 ;
+        eissn = 1746-9406 ;
         issnl = 1746-9392
       >
 
@@ -3287,9 +3352,9 @@
     {
 
       title <
-        name = Int. J. of Nanoparticles;
-        issn = 1753-2507;
-        eissn = 1753-2515;
+        name = International Journal of Nanoparticles;
+        issn = 1753-2507 ;
+        eissn = 1753-2515 ;
         issnl = 1753-2507
       >
 
@@ -3300,9 +3365,9 @@
     {
 
       title <
-        name = Int. J. of Nanotechnology;
-        issn = 1475-7435;
-        eissn = 1741-8151;
+        name = International Journal of Nanotechnology;
+        issn = 1475-7435 ;
+        eissn = 1741-8151 ;
         issnl = 1475-7435
       >
 
@@ -3313,9 +3378,9 @@
     {
 
       title <
-        name = Int. J. of Networking and Virtual Organisations;
-        issn = 1470-9503;
-        eissn = 1741-5225;
+        name = International Journal of Networking and Virtual Organisations;
+        issn = 1470-9503 ;
+        eissn = 1741-5225 ;
         issnl = 1470-9503
       >
 
@@ -3326,9 +3391,9 @@
     {
 
       title <
-        name = Int. J. of Nuclear Desalination;
-        issn = 1476-914X;
-        eissn = 1741-9204;
+        name = International Journal of Nuclear Desalination;
+        issn = 1476-914X ;
+        eissn = 1741-9204 ;
         issnl = 1476-914X
       >
 
@@ -3339,9 +3404,9 @@
     {
 
       title <
-        name = Int. J. of Nuclear Energy Science and Technology;
-        issn = 1741-6361;
-        eissn = 1741-637X;
+        name = International Journal of Nuclear Energy Science and Technology;
+        issn = 1741-6361 ;
+        eissn = 1741-637X ;
         issnl = 1741-6361
       >
 
@@ -3352,9 +3417,9 @@
     {
 
       title <
-        name = Int. J. of Nuclear Governance, Economy and Ecology;
-        issn = 1742-4186;
-        eissn = 1742-4194;
+        name = International Journal of Nuclear Governance, Economy and Ecology;
+        issn = 1742-4186 ;
+        eissn = 1742-4194 ;
         issnl = 1742-4186
       >
 
@@ -3365,9 +3430,9 @@
     {
 
       title <
-        name = Int. J. of Nuclear Hydrogen Production and Applications;
-        issn = 1743-4939;
-        eissn = 1743-4947;
+        name = International Journal of Nuclear Hydrogen Production and Applications;
+        issn = 1743-4939 ;
+        eissn = 1743-4947 ;
         issnl = 1743-4939
       >
 
@@ -3378,9 +3443,9 @@
     {
 
       title <
-        name = Int. J. of Nuclear Knowledge Management;
-        issn = 1479-540X;
-        eissn = 1479-5418;
+        name = International Journal of Nuclear Knowledge Management;
+        issn = 1479-540X ;
+        eissn = 1479-5418 ;
         issnl = 1479-540X
       >
 
@@ -3391,9 +3456,9 @@
     {
 
       title <
-        name = Int. J. of Nuclear Law;
-        issn = 1741-6388;
-        eissn = 1741-6396;
+        name = International Journal of Nuclear Law;
+        issn = 1741-6388 ;
+        eissn = 1741-6396 ;
         issnl = 1741-6388
       >
 
@@ -3404,9 +3469,9 @@
     {
 
       title <
-        name = Int. J. of Nuclear Safety and Security;
-        issn = 2043-0329;
-        eissn = 2043-0337;
+        name = International Journal of Nuclear Safety and Security;
+        issn = 2043-0329 ;
+        eissn = 2043-0337 ;
         issnl = 2043-0329
       >
 
@@ -3417,9 +3482,9 @@
     {
 
       title <
-        name = Int. J. of Ocean Systems Management;
-        issn = 1752-6582;
-        eissn = 1752-6590;
+        name = International Journal of Ocean Systems Management;
+        issn = 1752-6582 ;
+        eissn = 1752-6590 ;
         issnl = 1752-6582
       >
 
@@ -3430,9 +3495,9 @@
     {
 
       title <
-        name = Int. J. of Oil, Gas and Coal Technology;
-        issn = 1753-3309;
-        eissn = 1753-3317;
+        name = International Journal of Oil, Gas and Coal Technology;
+        issn = 1753-3309 ;
+        eissn = 1753-3317 ;
         issnl = 1753-3309
       >
 
@@ -3443,9 +3508,9 @@
     {
 
       title <
-        name = Int. J. of Operational Research;
-        issn = 1745-7645;
-        eissn = 1745-7653;
+        name = International Journal of Operational Research;
+        issn = 1745-7645 ;
+        eissn = 1745-7653 ;
         issnl = 1745-7645
       >
 
@@ -3456,9 +3521,9 @@
     {
 
       title <
-        name = Int. J. of Organisational Design and Engineering;
-        issn = 1758-9797;
-        eissn = 1758-9800;
+        name = International Journal of Organisational Design and Engineering;
+        issn = 1758-9797 ;
+        eissn = 1758-9800 ;
         issnl = 1758-9797
       >
 
@@ -3469,9 +3534,9 @@
     {
 
       title <
-        name = Int. J. of Petroleum Engineering;
-        issn = 1754-8888;
-        eissn = 1754-8896;
+        name = International Journal of Petroleum Engineering;
+        issn = 1754-8888 ;
+        eissn = 1754-8896 ;
         issnl = 1754-8888
       >
 
@@ -3482,9 +3547,9 @@
     {
 
       title <
-        name = Int. J. of Physiotherapy and Life Physics;
-        issn = 2040-4549;
-        eissn = 2040-4557;
+        name = International Journal of Physiotherapy and Life Physics;
+        issn = 2040-4549 ;
+        eissn = 2040-4557 ;
         issnl = 2040-4549
       >
 
@@ -3495,9 +3560,9 @@
     {
 
       title <
-        name = Int. J. of Planning and Scheduling;
-        issn = 2044-494X;
-        eissn = 2044-4958;
+        name = International Journal of Planning and Scheduling;
+        issn = 2044-494X ;
+        eissn = 2044-4958 ;
         issnl = 2044-494X
       >
 
@@ -3508,9 +3573,9 @@
     {
 
       title <
-        name = Int. J. of Pluralism and Economics Education;
-        issn = 1757-5648;
-        eissn = 1757-5656;
+        name = International Journal of Pluralism and Economics Education;
+        issn = 1757-5648 ;
+        eissn = 1757-5656 ;
         issnl = 1757-5648
       >
 
@@ -3521,9 +3586,9 @@
     {
 
       title <
-        name = Int. J. of Postharvest Technology and Innovation;
-        issn = 1744-7550;
-        eissn = 1744-7569;
+        name = International Journal of Postharvest Technology and Innovation;
+        issn = 1744-7550 ;
+        eissn = 1744-7569 ;
         issnl = 1744-7550
       >
 
@@ -3534,9 +3599,9 @@
     {
 
       title <
-        name = Int. J. of Power and Energy Conversion;
-        issn = 1757-1154;
-        eissn = 1757-1162;
+        name = International Journal of Power and Energy Conversion;
+        issn = 1757-1154 ;
+        eissn = 1757-1162 ;
         issnl = 1757-1154
       >
 
@@ -3547,9 +3612,9 @@
     {
 
       title <
-        name = Int. J. of Power Electronics;
-        issn = 1756-638X;
-        eissn = 1756-6398;
+        name = International Journal of Power Electronics;
+        issn = 1756-638X ;
+        eissn = 1756-6398 ;
         issnl = 1756-638X
       >
 
@@ -3560,9 +3625,9 @@
     {
 
       title <
-        name = Int. J. of Powertrain;
-        issn = 1742-4267;
-        eissn = 1742-4275;
+        name = International Journal of Powertrain;
+        issn = 1742-4267 ;
+        eissn = 1742-4275 ;
         issnl = 1742-4267
       >
 
@@ -3573,9 +3638,9 @@
     {
 
       title <
-        name = Int. J. of Precision Technology;
-        issn = 1755-2060;
-        eissn = 1755-2079;
+        name = International Journal of Precision Technology;
+        issn = 1755-2060 ;
+        eissn = 1755-2079 ;
         issnl = 1755-2060
       >
 
@@ -3586,9 +3651,9 @@
     {
 
       title <
-        name = Int. J. of Private Law;
-        issn = 1753-6235;
-        eissn = 1753-6243;
+        name = International Journal of Private Law;
+        issn = 1753-6235 ;
+        eissn = 1753-6243 ;
         issnl = 1753-6235
       >
 
@@ -3599,9 +3664,9 @@
     {
 
       title <
-        name = Int. J. of Process Management and Benchmarking;
-        issn = 1460-6739;
-        eissn = 1741-816X;
+        name = International Journal of Process Management and Benchmarking;
+        issn = 1460-6739 ;
+        eissn = 1741-816X ;
         issnl = 1460-6739
       >
 
@@ -3612,9 +3677,9 @@
     {
 
       title <
-        name = Int. J. of Process Systems Engineering;
-        issn = 1757-6342;
-        eissn = 1757-6350;
+        name = International Journal of Process Systems Engineering;
+        issn = 1757-6342 ;
+        eissn = 1757-6350 ;
         issnl = 1757-6342
       >
 
@@ -3625,9 +3690,9 @@
     {
 
       title <
-        name = Int. J. of Procurement Management;
-        issn = 1753-8432;
-        eissn = 1753-8440;
+        name = International Journal of Procurement Management;
+        issn = 1753-8432 ;
+        eissn = 1753-8440 ;
         issnl = 1753-8432
       >
 
@@ -3638,9 +3703,9 @@
     {
 
       title <
-        name = Int. J. of Product Development;
-        issn = 1477-9056;
-        eissn = 1741-8178;
+        name = International Journal of Product Development;
+        issn = 1477-9056 ;
+        eissn = 1741-8178 ;
         issnl = 1477-9056
       >
 
@@ -3651,9 +3716,9 @@
     {
 
       title <
-        name = Int. J. of Product Lifecycle Management;
-        issn = 1743-5110;
-        eissn = 1743-5129;
+        name = International Journal of Product Lifecycle Management;
+        issn = 1743-5110 ;
+        eissn = 1743-5129 ;
         issnl = 1743-5110
       >
 
@@ -3664,9 +3729,9 @@
     {
 
       title <
-        name = Int. J. of Product Sound Quality;
-        issn = 1742-6758;
-        eissn = 1742-6766;
+        name = International Journal of Product Sound Quality;
+        issn = 1742-6758 ;
+        eissn = 1742-6766 ;
         issnl = 1742-6758
       >
 
@@ -3677,9 +3742,9 @@
     {
 
       title <
-        name = Int. J. of Productivity and Quality Management;
-        issn = 1746-6474;
-        eissn = 1746-6482;
+        name = International Journal of Productivity and Quality Management;
+        issn = 1746-6474 ;
+        eissn = 1746-6482 ;
         issnl = 1746-6474
       >
 
@@ -3690,9 +3755,9 @@
     {
 
       title <
-        name = Int. J. of Project Organisation and Management;
-        issn = 1740-2891;
-        eissn = 1740-2905;
+        name = International Journal of Project Organisation and Management;
+        issn = 1740-2891 ;
+        eissn = 1740-2905 ;
         issnl = 1740-2891
       >
 
@@ -3703,9 +3768,9 @@
     {
 
       title <
-        name = Int. J. of Public Law and Policy;
-        issn = 2044-7663;
-        eissn = 2044-7671;
+        name = International Journal of Public Law and Policy;
+        issn = 2044-7663 ;
+        eissn = 2044-7671 ;
         issnl = 2044-7663
       >
 
@@ -3716,9 +3781,9 @@
     {
 
       title <
-        name = Int. J. of Public Policy;
-        issn = 1740-0600;
-        eissn = 1740-0619;
+        name = International Journal of Public Policy;
+        issn = 1740-0600 ;
+        eissn = 1740-0619 ;
         issnl = 1740-0600
       >
 
@@ -3729,9 +3794,9 @@
     {
 
       title <
-        name = Int. J. of Public Sector Performance Management;
-        issn = 1741-1041;
-        eissn = 1741-105X;
+        name = International Journal of Public Sector Performance Management;
+        issn = 1741-1041 ;
+        eissn = 1741-105X ;
         issnl = 1741-1041
       >
 
@@ -3742,9 +3807,9 @@
     {
 
       title <
-        name = Int. J. of Quality and Innovation;
-        issn = 1756-6975;
-        eissn = 1756-6983;
+        name = International Journal of Quality and Innovation;
+        issn = 1756-6975 ;
+        eissn = 1756-6983 ;
         issnl = 1756-6975
       >
 
@@ -3755,9 +3820,9 @@
     {
 
       title <
-        name = Int. J. of Quality Engineering and Technology;
-        issn = 1757-2177;
-        eissn = 1757-2185;
+        name = International Journal of Quality Engineering and Technology;
+        issn = 1757-2177 ;
+        eissn = 1757-2185 ;
         issnl = 1757-2177
       >
 
@@ -3768,9 +3833,9 @@
     {
 
       title <
-        name = Int. J. of Radio Frequency Identification Technology and Applications;
-        issn = 1745-3216;
-        eissn = 1745-3224;
+        name = International Journal of Radio Frequency Identification Technology and Applications;
+        issn = 1745-3216 ;
+        eissn = 1745-3224 ;
         issnl = 1745-3216
       >
 
@@ -3781,9 +3846,9 @@
     {
 
       title <
-        name = Int. J. of Rapid Manufacturing;
-        issn = 1757-8817;
-        eissn = 1757-8825;
+        name = International Journal of Rapid Manufacturing;
+        issn = 1757-8817 ;
+        eissn = 1757-8825 ;
         issnl = 1757-8817
       >
 
@@ -3794,9 +3859,9 @@
     {
 
       title <
-        name = Int. J. of Reasoning-based Intelligent Systems;
-        issn = 1755-0556;
-        eissn = 1755-0564;
+        name = International Journal of Reasoning-based Intelligent Systems;
+        issn = 1755-0556 ;
+        eissn = 1755-0564 ;
         issnl = 1755-0556
       >
 
@@ -3807,9 +3872,9 @@
     {
 
       title <
-        name = Int. J. of Reliability and Safety;
-        issn = 1479-389X;
-        eissn = 1479-3903;
+        name = International Journal of Reliability and Safety;
+        issn = 1479-389X ;
+        eissn = 1479-3903 ;
         issnl = 1479-389X
       >
 
@@ -3820,9 +3885,9 @@
     {
 
       title <
-        name = Int. J. of Remanufacturing;
-        issn = 1758-7964;
-        eissn = 1758-7972;
+        name = International Journal of Remanufacturing;
+        issn = 1758-7964 ;
+        eissn = 1758-7972 ;
         issnl = 1758-7964
       >
 
@@ -3833,9 +3898,9 @@
     {
 
       title <
-        name = Int. J. of Renewable Energy Technology;
-        issn = 1757-3971;
-        eissn = 1757-398X;
+        name = International Journal of Renewable Energy Technology;
+        issn = 1757-3971 ;
+        eissn = 1757-398X ;
         issnl = 1757-3971
       >
 
@@ -3846,9 +3911,9 @@
     {
 
       title <
-        name = Int. J. of Revenue Management;
-        issn = 1474-7332;
-        eissn = 1741-8186;
+        name = International Journal of Revenue Management;
+        issn = 1474-7332 ;
+        eissn = 1741-8186 ;
         issnl = 1474-7332
       >
 
@@ -3859,9 +3924,9 @@
     {
 
       title <
-        name = Int. J. of Risk Assessment and Management;
-        issn = 1466-8297;
-        eissn = 1741-5241;
+        name = International Journal of Risk Assessment and Management;
+        issn = 1466-8297 ;
+        eissn = 1741-5241 ;
         issnl = 1466-8297
       >
 
@@ -3872,9 +3937,9 @@
     {
 
       title <
-        name = Int. J. of Satellite Communications Policy and Management;
-        issn = 1742-7568;
-        eissn = 1742-7576;
+        name = International Journal of Satellite Communications Policy and Management;
+        issn = 1742-7568 ;
+        eissn = 1742-7576 ;
         issnl = 1742-7568
       >
 
@@ -3885,9 +3950,9 @@
     {
 
       title <
-        name = Int. J. of Security and Networks;
-        issn = 1747-8405;
-        eissn = 1747-8413;
+        name = International Journal of Security and Networks;
+        issn = 1747-8405 ;
+        eissn = 1747-8413 ;
         issnl = 1747-8405
       >
 
@@ -3898,9 +3963,9 @@
     {
 
       title <
-        name = Int. J. of Sensor Networks;
-        issn = 1748-1279;
-        eissn = 1748-1287;
+        name = International Journal of Sensor Networks;
+        issn = 1748-1279 ;
+        eissn = 1748-1287 ;
         issnl = 1748-1279
       >
 
@@ -3911,9 +3976,9 @@
     {
 
       title <
-        name = Int. J. of Service and Computing Oriented Manufacturing;
-        issn = 2045-175X;
-        eissn = 2045-1768;
+        name = International Journal of Service and Computing Oriented Manufacturing;
+        issn = 2045-175X ;
+        eissn = 2045-1768 ;
         issnl = 2045-175X
       >
 
@@ -3924,9 +3989,9 @@
     {
 
       title <
-        name = Int. J. of Services and Operations Management;
-        issn = 1744-2370;
-        eissn = 1744-2389;
+        name = International Journal of Services and Operations Management;
+        issn = 1744-2370 ;
+        eissn = 1744-2389 ;
         issnl = 1744-2370
       >
 
@@ -3937,9 +4002,9 @@
     {
 
       title <
-        name = Int. J. of Services and Standards;
-        issn = 1740-8849;
-        eissn = 1740-8857;
+        name = International Journal of Services and Standards;
+        issn = 1740-8849 ;
+        eissn = 1740-8857 ;
         issnl = 1740-8849
       >
 
@@ -3950,9 +4015,9 @@
     {
 
       title <
-        name = Int. J. of Services Operations and Informatics;
-        issn = 1741-539X;
-        eissn = 1741-5403;
+        name = International Journal of Services Operations and Informatics;
+        issn = 1741-539X ;
+        eissn = 1741-5403 ;
         issnl = 1741-539X
       >
 
@@ -3963,9 +4028,9 @@
     {
 
       title <
-        name = Int. J. of Services Sciences;
-        issn = 1753-1446;
-        eissn = 1753-1454;
+        name = International Journal of Services Sciences;
+        issn = 1753-1446 ;
+        eissn = 1753-1454 ;
         issnl = 1753-1446
       >
 
@@ -3976,9 +4041,9 @@
     {
 
       title <
-        name = Int. J. of Services Technology and Management;
-        issn = 1460-6720;
-        eissn = 1741-525X;
+        name = International Journal of Services Technology and Management;
+        issn = 1460-6720 ;
+        eissn = 1741-525X ;
         issnl = 1460-6720
       >
 
@@ -3989,9 +4054,9 @@
     {
 
       title <
-        name = Int. J. of Services, Economics and Management;
-        issn = 1753-0822;
-        eissn = 1753-0830;
+        name = International Journal of Services, Economics and Management;
+        issn = 1753-0822 ;
+        eissn = 1753-0830 ;
         issnl = 1753-0822
       >
 
@@ -4002,9 +4067,9 @@
     {
 
       title <
-        name = Int. J. of Shipping and Transport Logistics;
-        issn = 1756-6517;
-        eissn = 1756-6525;
+        name = International Journal of Shipping and Transport Logistics;
+        issn = 1756-6517 ;
+        eissn = 1756-6525 ;
         issnl = 1756-6517
       >
 
@@ -4015,9 +4080,9 @@
     {
 
       title <
-        name = Int. J. of Signal and Imaging Systems Engineering;
-        issn = 1748-0698;
-        eissn = 1748-0701;
+        name = International Journal of Signal and Imaging Systems Engineering;
+        issn = 1748-0698 ;
+        eissn = 1748-0701 ;
         issnl = 1748-0698
       >
 
@@ -4028,9 +4093,9 @@
     {
 
       title <
-        name = Int. J. of Simulation and Process Modelling;
-        issn = 1740-2123;
-        eissn = 1740-2131;
+        name = International Journal of Simulation and Process Modelling;
+        issn = 1740-2123 ;
+        eissn = 1740-2131 ;
         issnl = 1740-2123
       >
 
@@ -4041,9 +4106,9 @@
     {
 
       title <
-        name = Int. J. of Six Sigma and Competitive Advantage;
-        issn = 1479-2494;
-        eissn = 1479-2753;
+        name = International Journal of Six Sigma and Competitive Advantage;
+        issn = 1479-2494 ;
+        eissn = 1479-2753 ;
         issnl = 1479-2494
       >
 
@@ -4054,9 +4119,9 @@
     {
 
       title <
-        name = Int. J. of Social and Humanistic Computing;
-        issn = 1752-6124;
-        eissn = 1752-6132;
+        name = International Journal of Social and Humanistic Computing;
+        issn = 1752-6124 ;
+        eissn = 1752-6132 ;
         issnl = 1752-6124
       >
 
@@ -4067,9 +4132,9 @@
     {
 
       title <
-        name = Int. J. of Social Computing and Cyber-Physical Systems;
-        issn = 2040-0721;
-        eissn = 2040-073X;
+        name = International Journal of Social Computing and Cyber-Physical Systems;
+        issn = 2040-0721 ;
+        eissn = 2040-073X ;
         issnl = 2040-0721
       >
 
@@ -4080,9 +4145,9 @@
     {
 
       title <
-        name = Int. J. of Social Entrepreneurship and Innovation;
-        issn = 2043-8257;
-        eissn = 2043-8265;
+        name = International Journal of Social Entrepreneurship and Innovation;
+        issn = 2043-8257 ;
+        eissn = 2043-8265 ;
         issnl = 2043-8257
       >
 
@@ -4093,9 +4158,9 @@
     {
 
       title <
-        name = Int. J. of Social Network Mining;
-        issn = 1757-8485;
-        eissn = 1757-8493;
+        name = International Journal of Social Network Mining;
+        issn = 1757-8485 ;
+        eissn = 1757-8493 ;
         issnl = 1757-8485
       >
 
@@ -4106,9 +4171,9 @@
     {
 
       title <
-        name = Int. J. of Society Systems Science;
-        issn = 1756-2511;
-        eissn = 1756-252X;
+        name = International Journal of Society Systems Science;
+        issn = 1756-2511 ;
+        eissn = 1756-252X ;
         issnl = 1756-2511
       >
 
@@ -4119,9 +4184,9 @@
     {
 
       title <
-        name = Int. J. of Space-Based and Situated Computing;
-        issn = 2044-4893;
-        eissn = 2044-4907;
+        name = International Journal of Space-Based and Situated Computing;
+        issn = 2044-4893 ;
+        eissn = 2044-4907 ;
         issnl = 2044-4893
       >
 
@@ -4132,9 +4197,9 @@
     {
 
       title <
-        name = Int. J. of Sport Management and Marketing;
-        issn = 1475-8962;
-        eissn = 1740-2808;
+        name = International Journal of Sport Management and Marketing;
+        issn = 1475-8962 ;
+        eissn = 1740-2808 ;
         issnl = 1475-8962
       >
 
@@ -4145,9 +4210,9 @@
     {
 
       title <
-        name = Int. J. of Strategic Business Alliances;
-        issn = 1756-6444;
-        eissn = 1756-6452;
+        name = International Journal of Strategic Business Alliances;
+        issn = 1756-6444 ;
+        eissn = 1756-6452 ;
         issnl = 1756-6444
       >
 
@@ -4158,9 +4223,9 @@
     {
 
       title <
-        name = Int. J. of Strategic Change Management;
-        issn = 1740-2859;
-        eissn = 1740-2867;
+        name = International Journal of Strategic Change Management;
+        issn = 1740-2859 ;
+        eissn = 1740-2867 ;
         issnl = 1740-2859
       >
 
@@ -4171,9 +4236,9 @@
     {
 
       title <
-        name = Int. J. of Strategic Engineering Asset Management;
-        issn = 1759-9733;
-        eissn = 1759-9741;
+        name = International Journal of Strategic Engineering Asset Management;
+        issn = 1759-9733 ;
+        eissn = 1759-9741 ;
         issnl = 1759-9733
       >
 
@@ -4184,9 +4249,9 @@
     {
 
       title <
-        name = Int. J. of Structural Engineering ;
-        issn = 1758-7328;
-        eissn = 1758-7336;
+        name = International Journal of Structural Engineering ;
+        issn = 1758-7328 ;
+        eissn = 1758-7336 ;
         issnl = 1758-7328
       >
 
@@ -4197,9 +4262,9 @@
     {
 
       title <
-        name = Int. J. of Sudan Research, Policy and Sustainable Development;
-        issn = 2040-4247;
-        eissn = 2040-4255;
+        name = International Journal of Sudan Research, Policy and Sustainable Development;
+        issn = 2040-4247 ;
+        eissn = 2040-4255 ;
         issnl = 2040-4247
       >
 
@@ -4210,9 +4275,9 @@
     {
 
       title <
-        name = Int. J. of Surface Science and Engineering;
-        issn = 1749-785X;
-        eissn = 1749-7868;
+        name = International Journal of Surface Science and Engineering;
+        issn = 1749-785X ;
+        eissn = 1749-7868 ;
         issnl = 1749-785X
       >
 
@@ -4223,9 +4288,9 @@
     {
 
       title <
-        name = Int. J. of Sustainable Design;
-        issn = 1743-8284;
-        eissn = 1743-8292;
+        name = International Journal of Sustainable Design;
+        issn = 1743-8284 ;
+        eissn = 1743-8292 ;
         issnl = 1743-8284
       >
 
@@ -4236,9 +4301,9 @@
     {
 
       title <
-        name = Int. J. of Sustainable Development;
-        issn = 0960-1406;
-        eissn = 1741-5268;
+        name = International Journal of Sustainable Development;
+        issn = 0960-1406 ;
+        eissn = 1741-5268 ;
         issnl = 0960-1406
       >
 
@@ -4249,9 +4314,9 @@
     {
 
       title <
-        name = Int. J. of Sustainable Economy;
-        issn = 1756-5804;
-        eissn = 1756-5812;
+        name = International Journal of Sustainable Economy;
+        issn = 1756-5804 ;
+        eissn = 1756-5812 ;
         issnl = 1756-5804
       >
 
@@ -4262,9 +4327,9 @@
     {
 
       title <
-        name = Int. J. of Sustainable Manufacturing;
-        issn = 1742–7223;
-        eissn = 1742–7231;
+        name = International Journal of Sustainable Manufacturing;
+        issn = 1742–7223 ;
+        eissn = 1742–7231 ;
         issnl = 1742–7223
       >
 
@@ -4275,9 +4340,9 @@
     {
 
       title <
-        name = Int. J. of Sustainable Materials and Structural Systems;
-        issn = 2043-8621;
-        eissn = 2043-863X;
+        name = International Journal of Sustainable Materials and Structural Systems;
+        issn = 2043-8621 ;
+        eissn = 2043-863X ;
         issnl = 2043-8621
       >
 
@@ -4288,9 +4353,9 @@
     {
 
       title <
-        name = Int. J. of Sustainable Society;
-        issn = 1756-2538;
-        eissn = 1756-2546;
+        name = International Journal of Sustainable Society;
+        issn = 1756-2538 ;
+        eissn = 1756-2546 ;
         issnl = 1756-2538
       >
 
@@ -4301,9 +4366,9 @@
     {
 
       title <
-        name = Int. J. of Sustainable Strategic Management;
-        issn = 1753-3600;
-        eissn = 1753-3619;
+        name = International Journal of Sustainable Strategic Management;
+        issn = 1753-3600 ;
+        eissn = 1753-3619 ;
         issnl = 1753-3600
       >
 
@@ -4314,9 +4379,9 @@
     {
 
       title <
-        name = Int. J. of System of Systems Engineering;
-        issn = 1748-0671;
-        eissn = 1748-068X;
+        name = International Journal of System of Systems Engineering;
+        issn = 1748-0671 ;
+        eissn = 1748-068X ;
         issnl = 1748-0671
       >
 
@@ -4327,9 +4392,9 @@
     {
 
       title <
-        name = Int. J. of Systems Control and Information Processing;
-        issn = 1759-9334;
-        eissn = 1759-9342;
+        name = International Journal of Systems Control and Information Processing;
+        issn = 1759-9334 ;
+        eissn = 1759-9342 ;
         issnl = 1759-9334
       >
 
@@ -4340,9 +4405,9 @@
     {
 
       title <
-        name = Int. J. of Systems, Control and Communications;
-        issn = 1755-9340;
-        eissn = 1755-9359;
+        name = International Journal of Systems, Control and Communications;
+        issn = 1755-9340 ;
+        eissn = 1755-9359 ;
         issnl = 1755-9340
       >
 
@@ -4353,9 +4418,9 @@
     {
 
       title <
-        name = Int. J. of Teaching and Case Studies;
-        issn = 1749-9151;
-        eissn = 1749-916X;
+        name = International Journal of Teaching and Case Studies;
+        issn = 1749-9151 ;
+        eissn = 1749-916X ;
         issnl = 1749-9151
       >
 
@@ -4366,9 +4431,9 @@
     {
 
       title <
-        name = Int. J. of Technoentrepreneurship;
-        issn = 1746-5370;
-        eissn = 1746-5389;
+        name = International Journal of Technoentrepreneurship;
+        issn = 1746-5370 ;
+        eissn = 1746-5389 ;
         issnl = 1746-5370
       >
 
@@ -4379,9 +4444,9 @@
     {
 
       title <
-        name = Int. J. of Technological Learning, Innovation and Development;
-        issn = 1753-1942;
-        eissn = 1753-1950;
+        name = International Journal of Technological Learning, Innovation and Development;
+        issn = 1753-1942 ;
+        eissn = 1753-1950 ;
         issnl = 1753-1942
       >
 
@@ -4392,9 +4457,9 @@
     {
 
       title <
-        name = Int. J. of Technology and Globalisation;
-        issn = 1476-5667;
-        eissn = 1741-8194;
+        name = International Journal of Technology and Globalisation;
+        issn = 1476-5667 ;
+        eissn = 1741-8194 ;
         issnl = 1476-5667
       >
 
@@ -4405,9 +4470,9 @@
     {
 
       title <
-        name = Int. J. of Technology Enhanced Learning;
-        issn = 1753-5255;
-        eissn = 1753-5263;
+        name = International Journal of Technology Enhanced Learning;
+        issn = 1753-5255 ;
+        eissn = 1753-5263 ;
         issnl = 1753-5255
       >
 
@@ -4418,9 +4483,9 @@
     {
 
       title <
-        name = Int. J. of Technology Intelligence and Planning;
-        issn = 1740-2832;
-        eissn = 1740-2840;
+        name = International Journal of Technology Intelligence and Planning;
+        issn = 1740-2832 ;
+        eissn = 1740-2840 ;
         issnl = 1740-2832
       >
 
@@ -4431,9 +4496,9 @@
     {
 
       title <
-        name = Int. J. of Technology Management;
-        issn = 0267-5730;
-        eissn = 1741-5276;
+        name = International Journal of Technology Management;
+        issn = 0267-5730 ;
+        eissn = 1741-5276 ;
         issnl = 0267-5730
       >
 
@@ -4444,9 +4509,9 @@
     {
 
       title <
-        name = Int. J. of Technology Marketing;
-        issn = 1741-878X;
-        eissn = 1741-8798;
+        name = International Journal of Technology Marketing;
+        issn = 1741-878X ;
+        eissn = 1741-8798 ;
         issnl = 1741-878X
       >
 
@@ -4457,9 +4522,9 @@
     {
 
       title <
-        name = Int. J. of Technology Policy and Law;
-        issn = 1742-4240;
-        eissn = 1742-4259;
+        name = International Journal of Technology Policy and Law;
+        issn = 1742-4240 ;
+        eissn = 1742-4259 ;
         issnl = 1742-4240
       >
 
@@ -4470,9 +4535,9 @@
     {
 
       title <
-        name = Int. J. of Technology Transfer and Commercialisation;
-        issn = 1470-6075;
-        eissn = 1741-5284;
+        name = International Journal of Technology Transfer and Commercialisation;
+        issn = 1470-6075 ;
+        eissn = 1741-5284 ;
         issnl = 1470-6075
       >
 
@@ -4483,9 +4548,9 @@
     {
 
       title <
-        name = Int. J. of Technology, Policy and Management;
-        issn = 1468-4322;
-        eissn = 1741-5292;
+        name = International Journal of Technology, Policy and Management;
+        issn = 1468-4322 ;
+        eissn = 1741-5292 ;
         issnl = 1468-4322
       >
 
@@ -4496,9 +4561,9 @@
     {
 
       title <
-        name = Int. J. of the Built Environment and Asset Management;
-        issn = 2046-4533;
-        eissn = 2046-4541;
+        name = International Journal of the Built Environment and Asset Management;
+        issn = 2046-4533 ;
+        eissn = 2046-4541 ;
         issnl = 2046-4533
       >
 
@@ -4509,9 +4574,9 @@
     {
 
       title <
-        name = Int. J. of the Digital Human;
-        issn = 2046-3375;
-        eissn = 2046-3383;
+        name = International Journal of the Digital Human;
+        issn = 2046-3375 ;
+        eissn = 2046-3383 ;
         issnl = 2046-3375
       >
 
@@ -4522,9 +4587,9 @@
     {
 
       title <
-        name = Int. J. of Theoretical and Applied Multiscale Mechanics;
-        issn = 1755-9995;
-        eissn = 1756-0004;
+        name = International Journal of Theoretical and Applied Multiscale Mechanics;
+        issn = 1755-9995 ;
+        eissn = 1756-0004 ;
         issnl = 1755-9995
       >
 
@@ -4535,9 +4600,9 @@
     {
 
       title <
-        name = Int. J. of Tourism Anthropology;
-        issn = 1759-0442;
-        eissn = 1759-0450;
+        name = International Journal of Tourism Anthropology;
+        issn = 1759-0442 ;
+        eissn = 1759-0450 ;
         issnl = 1759-0442
       >
 
@@ -4548,9 +4613,9 @@
     {
 
       title <
-        name = Int. J. of Tourism Policy;
-        issn = 1750-4090;
-        eissn = 1750-4104;
+        name = International Journal of Tourism Policy;
+        issn = 1750-4090 ;
+        eissn = 1750-4104 ;
         issnl = 1750-4090
       >
 
@@ -4561,9 +4626,9 @@
     {
 
       title <
-        name = Int. J. of Trade and Global Markets;
-        issn = 1742-7541;
-        eissn = 1742-755X;
+        name = International Journal of Trade and Global Markets;
+        issn = 1742-7541 ;
+        eissn = 1742-755X ;
         issnl = 1742-7541
       >
 
@@ -4574,9 +4639,9 @@
     {
 
       title <
-        name = Int. J. of Transitions and Innovation Systems;
-        issn = 1745-0071;
-        eissn = 1745-008X;
+        name = International Journal of Transitions and Innovation Systems;
+        issn = 1745-0071 ;
+        eissn = 1745-008X ;
         issnl = 1745-0071
       >
 
@@ -4587,9 +4652,9 @@
     {
 
       title <
-        name = Int. J. of Ultra Wideband Communications and Systems ;
-        issn = 1758-728X;
-        eissn = 1758-7298;
+        name = International Journal of Ultra Wideband Communications and Systems ;
+        issn = 1758-728X ;
+        eissn = 1758-7298 ;
         issnl = 1758-728X
       >
 
@@ -4600,9 +4665,9 @@
     {
 
       title <
-        name = Int. J. of Value Chain Management;
-        issn = 1741-5357;
-        eissn = 1741-5365;
+        name = International Journal of Value Chain Management;
+        issn = 1741-5357 ;
+        eissn = 1741-5365 ;
         issnl = 1741-5357
       >
 
@@ -4613,9 +4678,9 @@
     {
 
       title <
-        name = Int. J. of Vehicle Autonomous Systems;
-        issn = 1471-0226;
-        eissn = 1741-5306;
+        name = International Journal of Vehicle Autonomous Systems;
+        issn = 1471-0226 ;
+        eissn = 1741-5306 ;
         issnl = 1471-0226
       >
 
@@ -4626,9 +4691,9 @@
     {
 
       title <
-        name = Int. J. of Vehicle Design;
-        issn = 0143-3369;
-        eissn = 1741-5314;
+        name = International Journal of Vehicle Design;
+        issn = 0143-3369 ;
+        eissn = 1741-5314 ;
         issnl = 0143-3369
       >
 
@@ -4639,9 +4704,9 @@
     {
 
       title <
-        name = Int. J. of Vehicle Information and Communication Systems;
-        issn = 1471-0242;
-        eissn = 1741-8208;
+        name = International Journal of Vehicle Information and Communication Systems;
+        issn = 1471-0242 ;
+        eissn = 1741-8208 ;
         issnl = 1471-0242
       >
 
@@ -4652,9 +4717,9 @@
     {
 
       title <
-        name = Int. J. of Vehicle Noise and Vibration;
-        issn = 1479-1471;
-        eissn = 1479-148X;
+        name = International Journal of Vehicle Noise and Vibration;
+        issn = 1479-1471 ;
+        eissn = 1479-148X ;
         issnl = 1479-1471
       >
 
@@ -4665,9 +4730,9 @@
     {
 
       title <
-        name = Int. J. of Vehicle Performance;
-        issn = 1745-3194;
-        eissn = 1745-3208;
+        name = International Journal of Vehicle Performance;
+        issn = 1745-3194 ;
+        eissn = 1745-3208 ;
         issnl = 1745-3194
       >
 
@@ -4678,9 +4743,9 @@
     {
 
       title <
-        name = Int. J. of Vehicle Safety;
-        issn = 1479-3105;
-        eissn = 1479-3113;
+        name = International Journal of Vehicle Safety;
+        issn = 1479-3105 ;
+        eissn = 1479-3113 ;
         issnl = 1479-3105
       >
 
@@ -4691,9 +4756,9 @@
     {
 
       title <
-        name = Int. J. of Vehicle Systems Modelling and Testing;
-        issn = 1745-6436;
-        eissn = 1745-6444;
+        name = International Journal of Vehicle Systems Modelling and Testing;
+        issn = 1745-6436 ;
+        eissn = 1745-6444 ;
         issnl = 1745-6436
       >
 
@@ -4704,9 +4769,9 @@
     {
 
       title <
-        name = Int. J. of Virtual Technology and Multimedia;
-        issn = 1741-1874;
-        eissn = 1741-1882;
+        name = International Journal of Virtual Technology and Multimedia;
+        issn = 1741-1874 ;
+        eissn = 1741-1882 ;
         issnl = 1741-1874
       >
 
@@ -4717,9 +4782,9 @@
     {
 
       title <
-        name = Int. J. of Water;
-        issn = 1465-6620;
-        eissn = 1741-5322;
+        name = International Journal of Water;
+        issn = 1465-6620 ;
+        eissn = 1741-5322 ;
         issnl = 1465-6620
       >
 
@@ -4730,9 +4795,9 @@
     {
 
       title <
-        name = Int. J. of Web and Grid Services;
-        issn = 1741-1106;
-        eissn = 1741-1114;
+        name = International Journal of Web and Grid Services;
+        issn = 1741-1106 ;
+        eissn = 1741-1114 ;
         issnl = 1741-1106
       >
 
@@ -4743,9 +4808,9 @@
     {
 
       title <
-        name = Int. J. of Web Based Communities;
-        issn = 1477-8394;
-        eissn = 1741-8216;
+        name = International Journal of Web Based Communities;
+        issn = 1477-8394 ;
+        eissn = 1741-8216 ;
         issnl = 1477-8394
       >
 
@@ -4756,9 +4821,9 @@
     {
 
       title <
-        name = Int. J. of Web Engineering and Technology;
-        issn = 1476-1289;
-        eissn = 1741-9212;
+        name = International Journal of Web Engineering and Technology;
+        issn = 1476-1289 ;
+        eissn = 1741-9212 ;
         issnl = 1476-1289
       >
 
@@ -4769,9 +4834,9 @@
     {
 
       title <
-        name = Int. J. of Web Science;
-        issn = 1757-8795;
-        eissn = 1757-8809;
+        name = International Journal of Web Science;
+        issn = 1757-8795 ;
+        eissn = 1757-8809 ;
         issnl = 1757-8795
       >
 
@@ -4782,9 +4847,9 @@
     {
 
       title <
-        name = Int. J. of Wireless and Mobile Computing;
-        issn = 1741-1084;
-        eissn = 1741-1092;
+        name = International Journal of Wireless and Mobile Computing;
+        issn = 1741-1084 ;
+        eissn = 1741-1092 ;
         issnl = 1741-1084
       >
 
@@ -4795,9 +4860,9 @@
     {
 
       title <
-        name = Int. J. of Work Innovation;
-        issn = 2043-9032;
-        eissn = 2043-9040;
+        name = International Journal of Work Innovation;
+        issn = 2043-9032 ;
+        eissn = 2043-9040 ;
         issnl = 2043-9032
       >
 
@@ -4808,9 +4873,9 @@
     {
 
       title <
-        name = Int. J. of Work Organisation and Emotion;
-        issn = 1740-8938;
-        eissn = 1740-8946;
+        name = International Journal of Work Organisation and Emotion;
+        issn = 1740-8938 ;
+        eissn = 1740-8946 ;
         issnl = 1740-8938
       >
 
@@ -4822,8 +4887,8 @@
 
       title <
         name = Interdisciplinary Environmental Review;
-        issn = 1521-0227;
-        eissn = 2042-6992;
+        issn = 1521-0227 ;
+        eissn = 2042-6992 ;
         issnl = 1521-0227
       >
 
@@ -4834,9 +4899,9 @@
     {
 
       title <
-        name = J. for Global Business Advancement;
-        issn = 1746-966X;
-        eissn = 1746-9678;
+        name = Journal for Global Business Advancement;
+        issn = 1746-966X ;
+        eissn = 1746-9678 ;
         issnl = 1746-966X
       >
 
@@ -4847,9 +4912,9 @@
     {
 
       title <
-        name = J. for International Business and Entrepreneurship Development;
-        issn = 1549-9324;
-        eissn = 1747-6763;
+        name = Journal for International Business and Entrepreneurship Development;
+        issn = 1549-9324 ;
+        eissn = 1747-6763 ;
         issnl = 1549-9324
       >
 
@@ -4860,9 +4925,9 @@
     {
 
       title <
-        name = J. of Design Research;
-        issn = 1748-3050;
-        eissn = 1569-1551;
+        name = Journal of Design Research;
+        issn = 1748-3050 ;
+        eissn = 1569-1551 ;
         issnl = 1748-3050
       >
 
@@ -4873,9 +4938,9 @@
     {
 
       title <
-        name = Luxury Intelligence, An Int. J.;
-        issn = 2041-3831;
-        eissn = 2041-384X;
+        name = Luxury Intelligence, An International Journal ;
+        issn = 2041-3831 ;
+        eissn = 2041-384X ;
         issnl = 2041-3831
       >
 
@@ -4886,9 +4951,9 @@
     {
 
       title <
-        name = Progress in Computational Fluid Dynamics, An Int. J.;
-        issn = 1468-4349;
-        eissn = 1741-5233;
+        name = Progress in Computational Fluid Dynamics, An International Journal ;
+        issn = 1468-4349 ;
+        eissn = 1741-5233 ;
         issnl = 1468-4349
       >
 
@@ -4899,9 +4964,9 @@
     {
 
       title <
-        name = Progress in Industrial Ecology, An Int. J.;
-        issn = 1476-8917;
-        eissn = 1478-8764;
+        name = Progress in Industrial Ecology, An International Journal ;
+        issn = 1476-8917 ;
+        eissn = 1478-8764 ;
         issnl = 1476-8917
       >
 
@@ -4913,8 +4978,8 @@
 
       title <
         name = The Botulinum J.;
-        issn = 1754-7318;
-        eissn = 1754-7326;
+        issn = 1754-7318 ;
+        eissn = 1754-7326 ;
         issnl = 1754-7318
       >
 
@@ -4926,8 +4991,8 @@
 
       title <
         name = World Review of Entrepreneurship, Management and Sustainable Development;
-        issn = 1746-0573;
-        eissn = 1746-0581;
+        issn = 1746-0573 ;
+        eissn = 1746-0581 ;
         issnl = 1746-0573
       >
 
@@ -4939,8 +5004,8 @@
 
       title <
         name = World Review of Intermodal Transportation Research;
-        issn = 1749-4729;
-        eissn = 1749-4737;
+        issn = 1749-4729 ;
+        eissn = 1749-4737 ;
         issnl = 1749-4729
       >
 
@@ -4952,8 +5017,8 @@
 
       title <
         name = World Review of Science, Technology and Sustainable Development;
-        issn = 1741-2242;
-        eissn = 1741-2234;
+        issn = 1741-2242 ;
+        eissn = 1741-2234 ;
         issnl = 1741-2242
       >
 
