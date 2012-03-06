@@ -3,7 +3,7 @@
     name = Duquesne University Press
   >
 
-  comment[0] = upcoming journals with no content online yet
+  comment[0] = Levinas Studies provided online at Philosophy Documentation Center, Milton Quarterly with Blackwell Publishing
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -20,7 +20,7 @@
 
     param[journal_dir] = levinas_studies
     attr[journal_id] =
-    comment[journal_id] = need to fill in journal_id
+    comment[journal_id] = not with Muse as of 3/2012
 
     au < doesNotExist ; 0 ; Levinas Studies Volume 1 ; 1 >
 
@@ -29,13 +29,15 @@
   {
 
     title <
-      name = Milton Studies 
+      name = Milton Studies ;
+      issn = 0026-4326 ; 
+      eissn = 1094-348X
     >
 
-    comment[issn] = 0022-6860 is not the correct issn.
     param[journal_dir] = milton_studies
     attr[journal_id] =
-    comment[journal_id] = need to fill in journal_id
+    comment[journal_id] = can't check journal_id yet--no manifest page access, due to new Muse website? RT4256
+    comment[moved] = moved to blackwell publishing (all volumes). vols 31-34 remain online and accessible via Muse
 
 
     au < doesNotExist ; 0 ; Milton Studies Volume 1 ; 1 >
