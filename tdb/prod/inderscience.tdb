@@ -77,6 +77,22 @@
     {
 
       title <
+        name = The Botulinum Journal ;
+        issn = 1754-7318 ;
+        eissn = 1754-7326 ;
+        issnl = 1754-7318
+      >
+
+      param[journal_issn] = 1754-7326
+
+      au < exists ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
+      au < testing ; 2011 ; The Botulinum Journal Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
         name = Electronic Government, an International Journal ;
         issn = 1740-7494 ;
         eissn = 1740-7508 ;
