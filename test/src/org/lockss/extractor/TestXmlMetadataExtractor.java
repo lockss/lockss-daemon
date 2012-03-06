@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlMetadataExtractor.java,v 1.3 2012-03-05 01:25:33 pgust Exp $
+ * $Id: TestXmlMetadataExtractor.java,v 1.4 2012-03-06 00:26:13 pgust Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public abstract class TestXmlMetadataExtractor
    * 
    * @author phil
    */
-  public static class MyXmlMetadataExtractor extends XmlMetadataExtractor {
+  public static class MyXmlMetadataExtractor extends XmlDomMetadataExtractor {
     public MyXmlMetadataExtractor(Collection<String> keys) 
         throws XPathExpressionException {
       super(keys.size());
