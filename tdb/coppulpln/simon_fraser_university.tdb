@@ -123,6 +123,7 @@
       au < released ; 2009 ; International Journal of Education Policy and Leadership Volume 4 ; 2009 >      
       au < released ; 2010 ; International Journal of Education Policy and Leadership Volume 5 ; 2010 >      
       au < released ; 2011 ; International Journal of Education Policy and Leadership Volume 6 ; 2011 >      
+      au < testing ; 2012 ; International Journal of Education Policy and Leadership Volume 7 ; 2012 >      
       
     }
       
@@ -135,11 +136,11 @@
       param[base_url] = http://journals.sfu.ca/paideusis/
       param[journal_id] = paideusis
   
-      comment = requires subscription and has login pages
-  
-      au < exists ; 2006 ; Paideusis Volume 15 ; 2006 >
-      au < exists ; 2007 ; Paideusis Volume 16 ; 2007 >
-      au < exists ; 2008 ; Paideusis Volume 17 ; 2008 >
+      au < testing ; 2006 ; Paideusis Volume 15 ; 2006 >
+      au < testing ; 2007 ; Paideusis Volume 16 ; 2007 >
+      au < testing ; 2008 ; Paideusis Volume 17 ; 2008 >
+      au < testing ; 2009 ; Paideusis Volume 18 ; 2009 >
+      au < testing ; 2010 ; Paideusis Volume 19 ; 2010 >
       
     }
 

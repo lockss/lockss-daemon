@@ -164,16 +164,36 @@
       issn = 1715-0094
     >
     
-    param[base_url] = http://m1.cust.educ.ubc.ca/journal/
-    param[journal_id] = workplace
     comment[0] = the 2006 AU seems empty
 
-    au < released ; 2005 ; Workplace: A Journal for Academic Labor 2005 ; 2005 >
-    au < released ; 2006 ; Workplace: A Journal for Academic Labor 2006 ; 2006 >
-    au < released ; 2007 ; Workplace: A Journal for Academic Labor 2007 ; 2007 >
-    au < released ; 2008 ; Workplace: A Journal for Academic Labor 2008 ; 2008 >
-    au < released ; 2009 ; Workplace: A Journal for Academic Labor 2009 ; 2009 >
-    au < released ; 2010 ; Workplace: A Journal for Academic Labor 2010 ; 2010 >
+    {
+
+      param[base_url] = http://m1.cust.educ.ubc.ca/journal/
+      param[journal_id] = workplace
+
+      au < superseded ; 2005 ; Workplace: A Journal for Academic Labor 2005 [superseded] ; 2005 >
+      au < superseded ; 2006 ; Workplace: A Journal for Academic Labor 2006 [superseded] ; 2006 >
+      au < superseded ; 2007 ; Workplace: A Journal for Academic Labor 2007 [superseded] ; 2007 >
+      au < superseded ; 2008 ; Workplace: A Journal for Academic Labor 2008 [superseded] ; 2008 >
+      au < superseded ; 2009 ; Workplace: A Journal for Academic Labor 2009 [superseded] ; 2009 >
+      au < superseded ; 2010 ; Workplace: A Journal for Academic Labor 2010 [superseded] ; 2010 >
+
+    }
+
+    {
+
+      param[base_url] = http://ojs.library.ubc.ca/
+      param[journal_id] = workplace
+
+      au < testing ; 2005 ; Workplace: A Journal for Academic Labor 2005 ; 2005 >
+      au < testing ; 2006 ; Workplace: A Journal for Academic Labor 2006 ; 2006 >
+      au < testing ; 2007 ; Workplace: A Journal for Academic Labor 2007 ; 2007 >
+      au < testing ; 2008 ; Workplace: A Journal for Academic Labor 2008 ; 2008 >
+      au < testing ; 2009 ; Workplace: A Journal for Academic Labor 2009 ; 2009 >
+      au < testing ; 2010 ; Workplace: A Journal for Academic Labor 2010 ; 2010 >
+      au < testing ; 2011 ; Workplace: A Journal for Academic Labor 2011 ; 2011 >
+
+    }
 
   }
 
