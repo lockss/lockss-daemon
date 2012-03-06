@@ -1,5 +1,5 @@
 /*
- * $Id: XmlMetadataExtractor.java,v 1.2 2012-03-05 01:23:50 pgust Exp $
+ * $Id: XmlMetadataExtractor.java,v 1.3 2012-03-06 00:03:41 pgust Exp $
  */
 
 /*
@@ -46,12 +46,14 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 
+import org.lockss.daemon.PluginException;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 /**
@@ -78,24 +80,20 @@ public class XmlMetadataExtractor extends SimpleFileMetadataExtractor {
   /** The xpath map to use for extracting */
   final protected XPathExpression[] xpathExprs;
   final protected String[] xpathKeys;
-  final protected NodeValue[] nodeValues;
+  final protected XPathValue[] nodeValues;
 
   /**
-   * This interface defines a function to extract text from a Node
-   * if type is XPathConstants.NODESET, a String if type is 
-   * XPathConstants.STRING, a Boolean if type is XPathConstants.BOOLEAN,
-   * or Number if type is XPathConstants.NUMBER. 
-   * <p>
-   * The default type is XPathConstants.NODESET. Be sure to override 
-   * {@link #getType()} to specify a different XPath expression type.
+   * This class defines a function to extract text from an XPath value
+   * according to the specified type: as a nodeset if type is 
+   * XPathConstants.NODESET, as a String if type is XPathConstants.STRING, 
+   * as a Boolean if type is XPathConstants.BOOLEAN, or as a Number 
+   * if type is XPathConstants.NUMBER. 
    * 
    * @author Philip Gust
    */
-  static public class NodeValue {
+  static abstract public class XPathValue {
     /** Override this method to specify a different type */
-    public QName getType() {
-      return XPathConstants.NODESET;
-    }
+    public abstract QName getType();
     /** Override this method to handle nodes differently */
     public String getValue(Node node) {
       return (node == null) ? null : node.getTextContent();
@@ -114,9 +112,43 @@ public class XmlMetadataExtractor extends SimpleFileMetadataExtractor {
     }
   }
   
-  /** NodeValue for extracting textContent from a node */
-  static final public NodeValue TEXT_VALUE = new NodeValue();
+  /** XPathValue for a nodeset */
+  static public class NodeValue extends XPathValue {
+    @Override
+    public QName getType() {
+      return XPathConstants.NODESET;
+    }
+  }
+  static final public XPathValue NODE_VALUE = new NodeValue();
+  
+  /** XPathValue value for text */
+  static public class TextValue extends XPathValue {
+    @Override
+    public QName getType() {
+      return XPathConstants.STRING;
+    }
+  }
+  static final public XPathValue TEXT_VALUE = new TextValue();
 
+  /** XPathValue for a number */
+  static public class NumberValue extends XPathValue {
+    @Override
+    public QName getType() {
+      return XPathConstants.NUMBER;
+    }
+  }
+  static final public XPathValue NUMBER_VALUE = new NumberValue();
+
+  /** XPathValue for a boolean */
+  static public class BooleanValue extends XPathValue {
+    @Override
+    public QName getType() {
+      return XPathConstants.BOOLEAN;
+    }
+  }
+  static final public XPathValue BOOLEAN_VALUE = new BooleanValue();
+
+  
   /**
    * Create an extractor based on the required size.
    * 
@@ -125,7 +157,7 @@ public class XmlMetadataExtractor extends SimpleFileMetadataExtractor {
   protected XmlMetadataExtractor(int size) {
     xpathExprs = new XPathExpression[size];
     xpathKeys = new String[size];
-    nodeValues = new NodeValue[size];
+    nodeValues = new XPathValue[size];
   }
   
   /**
@@ -157,13 +189,13 @@ public class XmlMetadataExtractor extends SimpleFileMetadataExtractor {
    * @param xpathMap the map of XPath expressions whose value to extract 
    *  by applying the corresponding NodeValues.
    */
-  public XmlMetadataExtractor(Map<String, NodeValue> xpathMap)
+  public XmlMetadataExtractor(Map<String, XPathValue> xpathMap)
       throws XPathExpressionException {
     this(xpathMap.size());
     
     int i = 0;
     XPath xpath = XPathFactory.newInstance().newXPath();
-    for (Map.Entry<String,NodeValue> entry : xpathMap.entrySet()) {
+    for (Map.Entry<String,XPathValue> entry : xpathMap.entrySet()) {
       xpathKeys[i] = entry.getKey();
       xpathExprs[i] = xpath.compile(entry.getKey());
       nodeValues[i] = entry.getValue();
@@ -172,51 +204,37 @@ public class XmlMetadataExtractor extends SimpleFileMetadataExtractor {
   }
 
   /**
-   * Extract metadata from source specified by the CachedUrl.
-   * 
-   * @param target the MetadataTarget
-   * @param cu CachedUrl to use as the source
-   */
-  public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
-      throws IOException {
-    if (cu == null) {
-      throw new IllegalArgumentException("null CachedUrl");
-    }
-    return extract(target, cu.getUnfilteredInputStream());
-  }
-  
-  /**
    * Extract metadata from source specified by the input stream.
    * 
    * @param target the MetadataTarget
    * @param in the input stream to use as the source
    */
-  public ArticleMetadata extract(MetadataTarget target, InputStream in)
-      throws IOException {
-    ArticleMetadata am = new ArticleMetadata();
-    if (in == null) {
-      return am;
+  public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
+      throws IOException, PluginException {
+    if (cu == null) {
+      throw new IllegalArgumentException("null CachedUrl");
     }
+    ArticleMetadata am = new ArticleMetadata();
 
-    Document doc;
+    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+    DocumentBuilder builder;
     try {
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         dbf.setValidating(false);
         dbf.setFeature("http://xml.org/sax/features/namespaces", false);
         dbf.setFeature("http://xml.org/sax/features/validation", false);
         dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
         dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);          
-        DocumentBuilder builder = dbf.newDocumentBuilder();
-        doc = builder.parse(in);
+        builder = dbf.newDocumentBuilder();
     } catch (ParserConfigurationException ex) {
       log.warning(ex.getMessage());
-      // XXX Should this terminate the extraction?
       return am;
+    }
+    Document doc;
+    InputSource bReader = new InputSource(cu.openForReading());
+    try {
+      doc = builder.parse(bReader);
     } catch (SAXException ex) {
-      log.warning(ex.getMessage());
-      // XXX Should this terminate the extraction?
-      // SimpleXmlMetadataExtractor simply skips malformed constructs
-      //       throw new IOException(e);
+      log.warning(ex.toString());
       return am;
     }
 
@@ -236,7 +254,7 @@ public class XmlMetadataExtractor extends SimpleFileMetadataExtractor {
           String value = nodeValues[i].getValue((Number)result);
           if (!StringUtil.isNullString(value)) am.putRaw(xpathKeys[i], value);
         } else if (result instanceof Boolean) {
-          String value = nodeValues[i].getValue((Number)result);
+          String value = nodeValues[i].getValue((Boolean)result);
           if (!StringUtil.isNullString(value)) am.putRaw(xpathKeys[i], value);
         } else if (result instanceof String) {
           String value = nodeValues[i].getValue((String)result);
@@ -247,7 +265,7 @@ public class XmlMetadataExtractor extends SimpleFileMetadataExtractor {
         }
       } catch (XPathExpressionException ex) {
         // ignore evaluation errors
-        log.warning("xpath", ex);
+        log.warning("ignorning xpath error", ex);
       }
     }
 
