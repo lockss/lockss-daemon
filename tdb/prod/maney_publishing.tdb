@@ -1649,6 +1649,29 @@
   {
 
     title <
+      name = International Journal of Developmental Disabilities ;
+      issn = 2047-3869 ;
+      eissn = 2047-3877 
+    >
+
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = maney
+    param[journal_id] = jdd
+    param[journal_issn] = 2047-3869
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
+    implicit < status ; year ; name ; param[volume_name] >
+    comment[continued_from] = 0969-7950
+    
+    au < expected ; 2012 ; International Journal of Developmental Disabilities Volume 1 ; 1 > 
+
+  }  
+
+  {
+
+    title <
       name = International Materials Reviews ;
       issn = 0950-6608 ;
       eissn = 1743-2804 ;
@@ -4061,7 +4084,8 @@
 
     title <
       name = Studies in Conservation ;
-      issn = 0039-3630
+      issn = 0039-3630 ;
+      eissn = 2047-0584 
     >
 
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
@@ -4704,7 +4728,8 @@
 
     title <
       name = Yorkshire Archaeological Journal ;
-      issn = 0084-4276 
+      issn = 0084-4276 ;
+      eissn = 2045-0664
     >
 
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
