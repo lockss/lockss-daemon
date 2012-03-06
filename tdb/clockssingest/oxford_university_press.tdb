@@ -4839,8 +4839,8 @@
     au < manifest ; exists ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 36 ; 36 ; >
     au < manifest ; exists ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37 ; 37 ; >
     au < manifest ; exists ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 ; >
     au < crawling ; exists ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 41 ; 41 ; >
     au < expected ; exists ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 ; >
   
@@ -4911,7 +4911,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; >
     au < down ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
     au < crawling ; exists ; 2012 ; European Journal of Echocardiography Volume 13 ; 13 ; >
 
     }
@@ -6333,7 +6333,7 @@
     au < notReady ; exists ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
     au < released ; crawling ; 2010 ; History Workshop Journal Volume 70 ; 70 ; >
     au < released ; crawling ; 2011 ; History Workshop Journal Volume 71 ; 71 ; >  
-    au < manifest ; exists ; 2011 ; History Workshop Journal Volume 72 ; 72 ; >  
+    au < crawling ; exists ; 2011 ; History Workshop Journal Volume 72 ; 72 ; >  
     au < expected ; exists ; 2012 ; History Workshop Journal Volume 73 ; 73 ; >  
     au < expected ; exists ; 2012 ; History Workshop Journal Volume 74 ; 74 ; >  
 
@@ -10125,7 +10125,7 @@
     au < manifest ; exists ; 2009 ; Journal of Infectious Diseases Volume 200 ; 200 ; >
     au < manifest ; exists ; 2010 ; Journal of Infectious Diseases Volume 201 ; 201 ; >
     au < manifest ; exists ; 2010 ; Journal of Infectious Diseases Volume 202 ; 202 ; >
-    au < manifest ; exists ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 ; >
+    au < crawling ; exists ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 ; >
     au < released ; crawling ; 2011 ; Journal of Infectious Diseases Volume 204 ; 204 ; >
     au < crawling ; exists ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 ; >
          
@@ -10395,7 +10395,7 @@
 
     au < manifest ; exists ; 2009 ; Journal of Legal Analysis Volume 1 ; 1 ; >
     au < manifest ; exists ; 2010 ; Journal of Legal Analysis Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 ; >
     au < expected ; exists ; 2012 ; Journal of Legal Analysis Volume 4 ; 4 ; >
     
     }
@@ -11546,7 +11546,7 @@
     au < manifest ; exists ; 2008-2009 ; Journal of Social History Volume 42 ; 42 ; >
     au < manifest ; exists ; 2009-2010 ; Journal of Social History Volume 43 ; 43 ; >
     au < manifest ; exists ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2011-2012 ; Journal of Social History Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2011-2012 ; Journal of Social History Volume 45 ; 45 ; >
     
     }
     
@@ -14230,7 +14230,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Oxford Review of Economic Policy Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; Oxford Review of Economic Policy Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2011 ; Oxford Review of Economic Policy Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2011 ; Oxford Review of Economic Policy Volume 27 ; 27 ; >
     au < expected ; exists ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 ; >
 
     }
@@ -14571,8 +14571,8 @@
     au < released ; crawling ; 2010 ; Past & Present Volume 209 ; 209 ; >
     au < released ; crawling ; 2011 ; Past & Present Volume 210 ; 210 ; >
     au < released ; crawling ; 2011 ; Past & Present Volume 211 ; 211 ; >
-    au < manifest ; exists ; 2011 ; Past & Present Volume 212 ; 212 ; >
-    au < manifest ; exists ; 2011 ; Past & Present Volume 213 ; 213 ; >
+    au < crawling ; exists ; 2011 ; Past & Present Volume 212 ; 212 ; >
+    au < crawling ; exists ; 2011 ; Past & Present Volume 213 ; 213 ; >
     au < crawling ; exists ; 2012 ; Past & Present Volume 214 ; 214 ; >
     au < expected ; exists ; 2012 ; Past & Present Volume 215 ; 215 ; >
     au < expected ; exists ; 2012 ; Past & Present Volume 216 ; 216 ; >
@@ -15851,8 +15851,8 @@
     au < released ; crawling ; 2011 ; Radiation Protection Dosimetry Volume 143 ; 143 ; >
     au < released ; crawling ; 2011 ; Radiation Protection Dosimetry Volume 144 ; 144 ; >
     au < released ; crawling ; 2011 ; Radiation Protection Dosimetry Volume 145 ; 145 ; >
-    au < manifest ; exists ; 2011 ; Radiation Protection Dosimetry Volume 146 ; 146 ; >
-    au < manifest ; exists ; 2011 ; Radiation Protection Dosimetry Volume 147 ; 147 ; >
+    au < crawling ; exists ; 2011 ; Radiation Protection Dosimetry Volume 146 ; 146 ; >
+    au < crawling ; exists ; 2011 ; Radiation Protection Dosimetry Volume 147 ; 147 ; >
     au < crawling ; exists ; 2012 ; Radiation Protection Dosimetry Volume 148 ; 148 ; >
     au < expected ; exists ; 2012 ; Radiation Protection Dosimetry Volume 149 ; 149 ; >
     au < expected ; exists ; 2012 ; Radiation Protection Dosimetry Volume 150 ; 150 ; >
@@ -16017,7 +16017,7 @@
     param[base_url] = http://raps.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 ; >
     au < expected ; exists ; 2012 ; The Review of Asset Pricing Studies Volume 2 ; 2 ; >
      
   }
@@ -17381,9 +17381,9 @@
     au < released ; crawling ; 2011 ; Toxicological Sciences Volume 119 ; 119 ; >
     au < released ; crawling ; 2011 ; Toxicological Sciences Volume 120 ; 120 ; >
     au < released ; crawling ; 2011 ; Toxicological Sciences Volume 121 ; 121 ; > 
-    au < manifest ; exists ; 2011 ; Toxicological Sciences Volume 122 ; 122 ; >  
-    au < manifest ; exists ; 2011 ; Toxicological Sciences Volume 123 ; 123 ; >  
-    au < manifest ; exists ; 2011 ; Toxicological Sciences Volume 124 ; 124 ; >   
+    au < crawling ; exists ; 2011 ; Toxicological Sciences Volume 122 ; 122 ; >  
+    au < crawling ; exists ; 2011 ; Toxicological Sciences Volume 123 ; 123 ; >  
+    au < crawling ; exists ; 2011 ; Toxicological Sciences Volume 124 ; 124 ; >   
     au < crawling ; exists ; 2012 ; Toxicological Sciences Volume 125 ; 125 ; >  
     au < manifest ; exists ; 2012 ; Toxicological Sciences Volume 126 ; 126 ; >  
     au < expected ; exists ; 2012 ; Toxicological Sciences Volume 127 ; 127 ; >  
