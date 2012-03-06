@@ -38,10 +38,10 @@
       param[base_url] = http://jcb.rupress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1955 ; The Journal of Cell Biology Volume 1 ; 1 >
-      au < testing ; 1956 ; The Journal of Cell Biology Volume 2 ; 2 >
+      au < ready ; 1955 ; The Journal of Cell Biology Volume 1 ; 1 >
+      au < ready ; 1956 ; The Journal of Cell Biology Volume 2 ; 2 >
       au < testing ; 1957 ; The Journal of Cell Biology Volume 3 ; 3 >
-      au < testing ; 1958 ; The Journal of Cell Biology Volume 4 ; 4 >
+      au < ready ; 1958 ; The Journal of Cell Biology Volume 4 ; 4 >
       au < testing ; 1959 ; The Journal of Cell Biology Volume 5 ; 5 >
       au < testing ; 1959 ; The Journal of Cell Biology Volume 6 ; 6 >
       au < testing ; 1960 ; The Journal of Cell Biology Volume 7 ; 7 >
@@ -52,10 +52,10 @@
       au < testing ; 1962 ; The Journal of Cell Biology Volume 12 ; 12 >
       au < testing ; 1962 ; The Journal of Cell Biology Volume 13 ; 13 >
       au < testing ; 1962 ; The Journal of Cell Biology Volume 14 ; 14 >
-      au < testing ; 1962 ; The Journal of Cell Biology Volume 15 ; 15 >
+      au < ready ; 1962 ; The Journal of Cell Biology Volume 15 ; 15 >
       au < testing ; 1963 ; The Journal of Cell Biology Volume 16 ; 16 >
       au < testing ; 1963 ; The Journal of Cell Biology Volume 17 ; 17 >
-      au < testing ; 1963 ; The Journal of Cell Biology Volume 18 ; 18 >
+      au < ready ; 1963 ; The Journal of Cell Biology Volume 18 ; 18 >
       au < testing ; 1963 ; The Journal of Cell Biology Volume 19 ; 19 >
       au < testing ; 1964 ; The Journal of Cell Biology Volume 20 ; 20 >
       au < testing ; 1964 ; The Journal of Cell Biology Volume 21 ; 21 >
@@ -81,12 +81,12 @@
       au < testing ; 1969 ; The Journal of Cell Biology Volume 41 ; 41 >
       au < testing ; 1969 ; The Journal of Cell Biology Volume 42 ; 42 >
       au < testing ; 1969 ; The Journal of Cell Biology Volume 43 ; 43 >
-      au < testing ; 1970 ; The Journal of Cell Biology Volume 44 ; 44 >
-      au < testing ; 1970 ; The Journal of Cell Biology Volume 45 ; 45 >
+      au < ready ; 1970 ; The Journal of Cell Biology Volume 44 ; 44 >
+      au < ready ; 1970 ; The Journal of Cell Biology Volume 45 ; 45 >
       au < testing ; 1970 ; The Journal of Cell Biology Volume 46 ; 46 >
       au < testing ; 1970 ; The Journal of Cell Biology Volume 47 ; 47 >
       au < testing ; 1971 ; The Journal of Cell Biology Volume 48 ; 48 >
-      au < testing ; 1971 ; The Journal of Cell Biology Volume 49 ; 49 >
+      au < ready ; 1971 ; The Journal of Cell Biology Volume 49 ; 49 >
       au < testing ; 1971 ; The Journal of Cell Biology Volume 50 ; 50 >
       au < testing ; 1971 ; The Journal of Cell Biology Volume 51 ; 51 >
       au < testing ; 1972 ; The Journal of Cell Biology Volume 52 ; 52 >
@@ -95,11 +95,11 @@
       au < testing ; 1972 ; The Journal of Cell Biology Volume 55 ; 55 >
       au < testing ; 1973 ; The Journal of Cell Biology Volume 56 ; 56 >
       au < testing ; 1973 ; The Journal of Cell Biology Volume 57 ; 57 >
-      au < testing ; 1973 ; The Journal of Cell Biology Volume 58 ; 58 >
+      au < ready ; 1973 ; The Journal of Cell Biology Volume 58 ; 58 >
       au < testing ; 1973 ; The Journal of Cell Biology Volume 59 ; 59 >
       au < testing ; 1974 ; The Journal of Cell Biology Volume 60 ; 60 >
       au < testing ; 1974 ; The Journal of Cell Biology Volume 61 ; 61 >
-      au < testing ; 1974 ; The Journal of Cell Biology Volume 62 ; 62 >
+      au < ready ; 1974 ; The Journal of Cell Biology Volume 62 ; 62 >
       au < testing ; 1974 ; The Journal of Cell Biology Volume 63 ; 63 >
       au < testing ; 1975 ; The Journal of Cell Biology Volume 64 ; 64 >
       au < testing ; 1975 ; The Journal of Cell Biology Volume 65 ; 65 >
@@ -108,7 +108,7 @@
       au < testing ; 1976 ; The Journal of Cell Biology Volume 68 ; 68 >
       au < testing ; 1976 ; The Journal of Cell Biology Volume 69 ; 69 >
       au < testing ; 1976 ; The Journal of Cell Biology Volume 70 ; 70 >
-      au < testing ; 1976 ; The Journal of Cell Biology Volume 71 ; 71 >
+      au < ready ; 1976 ; The Journal of Cell Biology Volume 71 ; 71 >
       au < testing ; 1977 ; The Journal of Cell Biology Volume 72 ; 72 >
       au < testing ; 1977 ; The Journal of Cell Biology Volume 73 ; 73 >
       au < testing ; 1977 ; The Journal of Cell Biology Volume 74 ; 74 >
@@ -134,8 +134,8 @@
       au < testing ; 1982 ; The Journal of Cell Biology Volume 94 ; 94 >
       au < testing ; 1982 ; The Journal of Cell Biology Volume 95 ; 95 >
       au < testing ; 1983 ; The Journal of Cell Biology Volume 96 ; 96 >
-      au < testing ; 1983 ; The Journal of Cell Biology Volume 97 ; 97 >
-      au < testing ; 1984 ; The Journal of Cell Biology Volume 98 ; 98 >
+      au < ready ; 1983 ; The Journal of Cell Biology Volume 97 ; 97 >
+      au < ready ; 1984 ; The Journal of Cell Biology Volume 98 ; 98 >
       au < testing ; 1984 ; The Journal of Cell Biology Volume 99 ; 99 >
       au < testing ; 1985 ; The Journal of Cell Biology Volume 100 ; 100 >
       au < testing ; 1985 ; The Journal of Cell Biology Volume 101 ; 101 >
@@ -144,9 +144,9 @@
       au < testing ; 1987 ; The Journal of Cell Biology Volume 104 ; 104 >
       au < testing ; 1987 ; The Journal of Cell Biology Volume 105 ; 105 >
       au < testing ; 1988 ; The Journal of Cell Biology Volume 106 ; 106 >
-      au < testing ; 1988 ; The Journal of Cell Biology Volume 107 ; 107 >
+      au < ready ; 1988 ; The Journal of Cell Biology Volume 107 ; 107 >
       au < testing ; 1989 ; The Journal of Cell Biology Volume 108 ; 108 >
-      au < testing ; 1989 ; The Journal of Cell Biology Volume 109 ; 109 >
+      au < ready ; 1989 ; The Journal of Cell Biology Volume 109 ; 109 >
       au < testing ; 1990 ; The Journal of Cell Biology Volume 110 ; 110 >
       au < testing ; 1990 ; The Journal of Cell Biology Volume 111 ; 111 >
       au < testing ; 1991 ; The Journal of Cell Biology Volume 112 ; 112 >
@@ -154,7 +154,7 @@
       au < testing ; 1991 ; The Journal of Cell Biology Volume 114 ; 114 >
       au < testing ; 1991 ; The Journal of Cell Biology Volume 115 ; 115 >
       au < testing ; 1992 ; The Journal of Cell Biology Volume 116 ; 116 >
-      au < testing ; 1992 ; The Journal of Cell Biology Volume 117 ; 117 >
+      au < ready ; 1992 ; The Journal of Cell Biology Volume 117 ; 117 >
       au < testing ; 1992 ; The Journal of Cell Biology Volume 118 ; 118 >
       au < testing ; 1992 ; The Journal of Cell Biology Volume 119 ; 119 >
       au < testing ; 1993 ; The Journal of Cell Biology Volume 120 ; 120 >
@@ -170,8 +170,8 @@
       au < testing ; 1995 ; The Journal of Cell Biology Volume 130 ; 130 >
       au < testing ; 1995 ; The Journal of Cell Biology Volume 131 ; 131 >
       au < testing ; 1996 ; The Journal of Cell Biology Volume 132 ; 132 >
-      au < testing ; 1996 ; The Journal of Cell Biology Volume 133 ; 133 >
-      au < testing ; 1996 ; The Journal of Cell Biology Volume 134 ; 134 >
+      au < ready ; 1996 ; The Journal of Cell Biology Volume 133 ; 133 >
+      au < ready ; 1996 ; The Journal of Cell Biology Volume 134 ; 134 >
       au < testing ; 1996 ; The Journal of Cell Biology Volume 135 ; 135 >
       au < testing ; 1997 ; The Journal of Cell Biology Volume 136 ; 136 >
       au < testing ; 1997 ; The Journal of Cell Biology Volume 137 ; 137 >
@@ -188,13 +188,13 @@
       au < testing ; 2000 ; The Journal of Cell Biology Volume 148 ; 148 >
       au < testing ; 2000 ; The Journal of Cell Biology Volume 149 ; 149 >
       au < testing ; 2000 ; The Journal of Cell Biology Volume 150 ; 150 >
-      au < testing ; 2000 ; The Journal of Cell Biology Volume 151 ; 151 >
+      au < ready ; 2000 ; The Journal of Cell Biology Volume 151 ; 151 >
       au < testing ; 2001 ; The Journal of Cell Biology Volume 152 ; 152 >
       au < testing ; 2001 ; The Journal of Cell Biology Volume 153 ; 153 >
-      au < testing ; 2001 ; The Journal of Cell Biology Volume 154 ; 154 >
+      au < ready ; 2001 ; The Journal of Cell Biology Volume 154 ; 154 >
       au < testing ; 2001 ; The Journal of Cell Biology Volume 155 ; 155 >
       au < testing ; 2002 ; The Journal of Cell Biology Volume 156 ; 156 >
-      au < testing ; 2002 ; The Journal of Cell Biology Volume 157 ; 157 >
+      au < ready ; 2002 ; The Journal of Cell Biology Volume 157 ; 157 >
       au < testing ; 2002 ; The Journal of Cell Biology Volume 158 ; 158 >
       au < testing ; 2002 ; The Journal of Cell Biology Volume 159 ; 159 >
       au < testing ; 2003 ; The Journal of Cell Biology Volume 160 ; 160 >
