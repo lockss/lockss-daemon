@@ -8,6 +8,7 @@
   param[base_url] = http://www.rsc.org/
   param[resolver_url] = http://xlink.rsc.org/
   implicit < status ; year ; name ; param[volume_name] ; param[year] >
+  comment[RUissue] = Roundup 3637, needs plugin work
 
   {
 
