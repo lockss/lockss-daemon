@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.47 2012-01-18 04:51:38 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.48 2012-03-07 00:06:58 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -551,17 +551,18 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
         }
         break;
       case TYPE_YEAR:
-        if (val.length() == 4) {
+        if (val.length() == 4 || "0".equals(val)) {
           try {
             int i_val = Integer.parseInt(val);
-            if (i_val > 0) {
+            if (i_val >= 0) {
               ret_val = new Integer(val);
             }
           }
           catch (NumberFormatException fe) {
+            // Defer to the throw statement below
           }
         }
-        if(ret_val == null) {
+        if (ret_val == null) {
           throw new InvalidFormatException("Invalid Year: " + val);
         }
         break;
