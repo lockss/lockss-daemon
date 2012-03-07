@@ -1,5 +1,5 @@
 /*
- * $Id: TestByteArray.java,v 1.7 2008-11-02 21:15:00 tlipkis Exp $
+ * $Id: TestByteArray.java,v 1.8 2012-03-07 20:37:49 barry409 Exp $
  */
 
 /*
@@ -173,4 +173,53 @@ public class TestByteArray extends LockssTestCase {
       assertTrue("Missing " + ix, flgs[ix]);
     }
   }
+
+  public void testLexicographicalCompareNull() {
+    byte b[] = {1, 2};
+    try {
+      ByteArray.lexicographicalCompare(b, null);
+      fail("lexicographicalCompare should throw NullPointerException");
+    } catch (NullPointerException ignore) {
+    }
+    try {
+      ByteArray.lexicographicalCompare(null, b);
+      fail("lexicographicalCompare should throw NullPointerException");
+    } catch (NullPointerException ignore) {
+    }
+  }
+
+  public void testLexicographicalCompareEmpty() {
+    byte empty[] = {};
+    byte some[] = {1};
+    assertEquals(0, ByteArray.lexicographicalCompare(empty, empty));
+    assertTrue(ByteArray.lexicographicalCompare(empty, some) < 0);
+    assertTrue(ByteArray.lexicographicalCompare(some, empty) > 0);
+  }
+
+  public void testLexicographicalCompareEqual() {
+    byte empty1[] = {};
+    byte empty2[] = {};
+    byte some1[] = {1, 1, 1};
+    byte some2[] = {1, 1, 1};
+    assertEquals(0, ByteArray.lexicographicalCompare(empty1, empty2));
+    assertEquals(0, ByteArray.lexicographicalCompare(some1, some2));
+  }
+
+  public void testLexicographicalCompareDiffLengths() {
+    byte some[] = {1};
+    byte more[] = {1, 1, 1};
+    assertTrue(ByteArray.lexicographicalCompare(some, more) < 0);
+    assertTrue(ByteArray.lexicographicalCompare(more, some) > 0);
+  }
+
+  public void testLexicographicalCompareDiffValues() {
+    byte b1[] = {1};
+    byte b2[] = {5};
+    byte b3[] = {(byte)0xff};
+    assertTrue(ByteArray.lexicographicalCompare(b1, b2) < 0);
+    assertTrue(ByteArray.lexicographicalCompare(b2, b3) < 0);
+    assertTrue(ByteArray.lexicographicalCompare(b2, b1) > 0);
+    assertTrue(ByteArray.lexicographicalCompare(b3, b2) > 0);
+  }
+
 }
