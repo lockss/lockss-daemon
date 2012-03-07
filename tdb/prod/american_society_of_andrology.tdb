@@ -5,7 +5,7 @@
 
 comment[urgent1] = This publisher is leaving HWP Dec 2011
 comment[urgent2] = Well, maybe not -- they just signed a 3-month extension
-comment[urgent3] = They've also asked to pull from the GLN for now, marked 2010-2011 as doNotProcess
+comment[urgent3] = They've also asked to pull from the GLN for now, marked 2010,2011,2012 as doNotProcess
 
   {
     title <
@@ -53,6 +53,7 @@ comment[urgent3] = They've also asked to pull from the GLN for now, marked 2010-
       au < released ; 2009 ; Journal of Andrology Volume 30 ; 30 >
       au < doNotProcess ; 2010 ; Journal of Andrology Volume 31 ; 31 >
       au < doNotProcess ; 2011 ; Journal of Andrology Volume 32 ; 32 >
+      au < doNotProcess ; 2012 ; Journal of Andrology Volume 33 ; 33 >
 
     }
 
