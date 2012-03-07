@@ -1,5 +1,5 @@
 /*
- * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.2 2012-03-07 05:19:18 dylanrhodes Exp $
+ * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.3 2012-03-07 09:21:53 pgust Exp $
  */
 
 /*
@@ -43,7 +43,9 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.extractor.XmlMetadataExtractor.NodeValue;
+import org.lockss.extractor.FileMetadataExtractor.Emitter;
+import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
+import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import java.util.*;
@@ -185,23 +187,23 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
 	    }
 	    
 	    /** Map of raw xpath key to node value function */
-	    static private final Map<String,NodeValue> nodeMap = 
-	        new HashMap<String,NodeValue>();
+	    static private final Map<String,XPathValue> nodeMap = 
+	        new HashMap<String,XPathValue>();
 	    static {
 	      // normal journal article schema
-	      nodeMap.put("/periodical/journal_rec/journal_name", XmlMetadataExtractor.TEXT_VALUE);
-	      nodeMap.put("/periodical/journal_rec/issn", XmlMetadataExtractor.TEXT_VALUE);
-	      nodeMap.put("/periodical/journal_rec/eissn", XmlMetadataExtractor.TEXT_VALUE);
-	      nodeMap.put("/periodical/issue_rec/volume", XmlMetadataExtractor.TEXT_VALUE);
-	      nodeMap.put("/periodical/issue_rec/issue", XmlMetadataExtractor.TEXT_VALUE);
-	      nodeMap.put("/periodical/issue_rec/issue_date", XmlMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/periodical/journal_rec/journal_name", XmlDomMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/periodical/journal_rec/issn", XmlDomMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/periodical/journal_rec/eissn", XmlDomMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/periodical/issue_rec/volume", XmlDomMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/periodical/issue_rec/issue", XmlDomMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/periodical/issue_rec/issue_date", XmlDomMetadataExtractor.TEXT_VALUE);
 
 	      // conference proceeding schema
-	      nodeMap.put("/proceeding/conference_rec/conference_date/start_date", XmlMetadataExtractor.TEXT_VALUE);
-	      nodeMap.put("/proceeding/proceeding_rec/proc_title", XmlMetadataExtractor.TEXT_VALUE);
-	      nodeMap.put("/proceeding/proceeding_rec/isbn", XmlMetadataExtractor.TEXT_VALUE);
-	      nodeMap.put("/proceeding/proceeding_rec/copyright_year", XmlMetadataExtractor.TEXT_VALUE);
-	      nodeMap.put("/proceeding/proceeding_rec/publisher/publisher_name", XmlMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/proceeding/conference_rec/conference_date/start_date", XmlDomMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/proceeding/proceeding_rec/proc_title", XmlDomMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/proceeding/proceeding_rec/isbn", XmlDomMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/proceeding/proceeding_rec/copyright_year", XmlDomMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/proceeding/proceeding_rec/publisher/publisher_name", XmlDomMetadataExtractor.TEXT_VALUE);
 	      
 	      // individual article's metadata
 	      nodeMap.put("/periodical/section", SECTION_VALUE);
@@ -241,53 +243,56 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
 	    	MetadataField.FIELD_PUBLISHER
 	    };
 
-	    /**
-	     * Use XmlMetadataExtractor to extract raw metadata, map
-	     * to cooked fields, then extract extra tags by reading the file.
-	     * 
-	     * @param target the MetadataTarget
-	     * @param cu the CachedUrl from which to read input
-	     * @param emitter the emitter to output the resulting ArticleMetadata
-	     */
-	    @Override
-	    public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
-	        throws IOException, PluginException {
-	      log.debug3("The MetadataExtractor attempted to extract metadata from cu: "+cu);
-	      CachedUrl metadata = cu.getArchivalUnit().makeCachedUrl(getMetadataFile(cu));
-	      	if(metadata == null || !metadata.hasContent())
-	      	{
-	      		log.debug("The metadata file does not exist or is not readable: "+metadata.getUrl());
-	      		return;
-	      	}
-	      	
-	      	currCachedUrl = cu;
-	      	
-	      ArticleMetadata am = extract(target, metadata.getUnfilteredInputStream(), emitter);
-	      emitter.emitMetadata(cu,am);
-	    }
+      /**
+       * Use XmlMetadataExtractor to extract raw metadata, map
+       * to cooked fields, then extract extra tags by reading the file.
+       * 
+       * @param target the MetadataTarget
+       * @param cu the CachedUrl from which to read input
+       * @param emitter the emitter to output the resulting ArticleMetadata
+       */
+      @Override
+      public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
+          throws IOException, PluginException {
+        log.debug3("Attempting to extract metadata from cu: "+cu);
+        CachedUrl metadataCu = cu.getArchivalUnit().makeCachedUrl(getMetadataFile(cu));
+          if(metadataCu == null || !metadataCu.hasContent())
+          {
+            log.debug("The metadata file does not exist or is not readable: "+metadataCu.getUrl());
+            return;
+          }
+          
+          currCachedUrl = cu;
+          
+        ArticleMetadata am = do_extract(target, metadataCu, emitter);
+        emitter.emitMetadata(cu,am);
+        // need to release created CU
+        metadataCu.release();
+      }
 
-	    /**
-	     * Use XmlMetadataExtractor to extract raw metadata, map
-	     * to cooked fields, then extract extra tags by reading the file.
-	     * 
-	     * @param target the MetadataTarget
-	     * @param in the Xml input stream to parse
-	     * @param emitter the emitter to output the resulting ArticleMetadata
-	     */
-	    public ArticleMetadata extract(MetadataTarget target, InputStream in, Emitter emit)
-	        throws IOException, PluginException {
-	      try {
-	      ArticleMetadata am = 
-	          new XmlMetadataExtractor(nodeMap).extract(target, in);
-	        am.cook(xpathMap);
-	        emitAllMetadata(am, emit);
-	        return am;
-	      } catch (XPathExpressionException ex) {
-	        PluginException ex2 = new PluginException("Error parsing XPaths");
-	        ex2.initCause(ex);
-	        throw ex2;
-	      }
-	    }
+      /**
+       * Use XmlMetadataExtractor to extract raw metadata, map
+       * to cooked fields, then extract extra tags by reading the file.
+       * 
+       * @param target the MetadataTarget
+       * @param in the Xml input stream to parse
+       * @param emitter the emitter to output the resulting ArticleMetadata
+       */
+      public ArticleMetadata do_extract(MetadataTarget target, CachedUrl cu, Emitter emit)
+          throws IOException, PluginException {
+        try {
+          ArticleMetadata am = 
+            new XmlDomMetadataExtractor(nodeMap).extract(target, cu);
+          am.cook(xpathMap);
+          emitAllMetadata(am, emit);
+          return am;
+        } catch (XPathExpressionException ex) {
+          PluginException ex2 = new PluginException("Error parsing XPaths");
+          ex2.initCause(ex);
+          throw ex2;
+        }
+      }
+           
 	    	   
 	    /**
 	     * Emits metadata for all of the CachedUrl's stored in CachedUrlList using
