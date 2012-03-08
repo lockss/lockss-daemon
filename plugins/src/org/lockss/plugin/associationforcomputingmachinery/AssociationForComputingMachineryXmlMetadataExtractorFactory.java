@@ -1,5 +1,5 @@
 /*
- * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.3 2012-03-07 09:21:53 pgust Exp $
+ * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.4 2012-03-08 00:52:43 dylanrhodes Exp $
  */
 
 /*
@@ -33,9 +33,6 @@
 package org.lockss.plugin.associationforcomputingmachinery;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.List;
-import java.util.HashSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -43,7 +40,6 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.extractor.FileMetadataExtractor.Emitter;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.w3c.dom.Node;
@@ -143,6 +139,8 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
 					        				  }
 					        			  }
 					        			  
+					        			  if(xpathValArr[i] == null)
+					        				  xpathValArr[i] = "";
 				        				  xpathValArr[i] += "; " + last_name + ", " + first_name + " " + (middle_name != null ? middle_name : "");
 			        				  }
 			        			  }
@@ -265,7 +263,6 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
           currCachedUrl = cu;
           
         ArticleMetadata am = do_extract(target, metadataCu, emitter);
-        emitter.emitMetadata(cu,am);
         // need to release created CU
         metadataCu.release();
       }
@@ -292,8 +289,7 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
           throw ex2;
         }
       }
-           
-	    	   
+           	    	   
 	    /**
 	     * Emits metadata for all of the CachedUrl's stored in CachedUrlList using
 	     * articleMetadataList
@@ -301,11 +297,11 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
 	     * 	in the volume and which is copied into their individual ArticleMetadata
 	     * @param emit - an AcmEmitter to emit the metadata
 	     */
-	    private void emitAllMetadata(ArticleMetadata journalMetadata, Emitter emit) {
+	    private void emitAllMetadata(ArticleMetadata journalMetadata, Emitter emit) {	    	
 	    	for(int i = 0; i < cachedUrlList.size(); ++i) {
 	    		ArticleMetadata am = articleMetadataList.get(i);
 	    		CachedUrl cu = cachedUrlList.get(i);
-	    		
+	    			    		
 	    		for(int j = 0; j < journalMetadataFields.length; ++j) {
 	    			am.put(journalMetadataFields[j], journalMetadata.get(journalMetadataFields[j]));
 	    		}
@@ -339,7 +335,7 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
 	     */
 	    private static String getPdfUrl(String fileName)
 	    {
-	        Pattern pattern = Pattern.compile("(http://clockss-ingest.lockss.org/sourcefiles/[^/]+/[\\d]+/[^/]+/)([^/]+)(/[^/]+.pdf)",Pattern.CASE_INSENSITIVE);
+	        Pattern pattern = Pattern.compile("(http://clockss-ingest.lockss.org/sourcefiles/[^/]+/[\\d]+/[^/]+/)([^/]+)(/[^/]+.xml)",Pattern.CASE_INSENSITIVE);
 	        Matcher matcher = pattern.matcher(currCachedUrl.getUrl());
 	        return matcher.replaceFirst("$1$2/"+fileName);
 	    }
@@ -365,7 +361,7 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
      */
     private static String getMetadataFile(CachedUrl cu)
     {
-        Pattern pattern = Pattern.compile("(http://clockss-ingest.lockss.org/sourcefiles/[^/]+/[\\d]+/[^/]+/)([^/]+)(/[^/]+.pdf)",Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile("(http://clockss-ingest.lockss.org/sourcefiles/[^/]+/[\\d]+/[^/]+/)([^/]+)(/[^/]+.xml)",Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(cu.getUrl());
         return matcher.replaceFirst("$1$2/$2.xml");
     }

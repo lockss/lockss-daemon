@@ -36,7 +36,7 @@
     <string>org.lockss.plugin.associationforcomputingmachinery.AssociationForComputingMachineryArticleIteratorFactory</string>
   </entry>
   <entry>
-    <string>application/pdf_metadata_extractor_factory_map</string>
+    <string>text/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
