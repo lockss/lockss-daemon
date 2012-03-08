@@ -776,14 +776,14 @@ title <
     param[collection_id] = LSA
     implicit < status ; year ; name ; param[year] >
 
-    au < manifest ; 1997 ; List of CFR Sections Affected 1997 ; 1997 >
-    au < manifest ; 1998 ; List of CFR Sections Affected 1998 ; 1998 >
-    au < manifest ; 1999 ; List of CFR Sections Affected 1999 ; 1999 >
-    au < testing ; 2000 ; List of CFR Sections Affected 2000 ; 2000 >
-    au < manifest ; 2001 ; List of CFR Sections Affected 2001 ; 2001 >
-    au < manifest ; 2002 ; List of CFR Sections Affected 2002 ; 2002 >
-    au < manifest ; 2003 ; List of CFR Sections Affected 2003 ; 2003 >
-    au < manifest ; 2004 ; List of CFR Sections Affected 2004 ; 2004 >
+    au < ready ; 1997 ; List of CFR Sections Affected 1997 ; 1997 >
+    au < ready ; 1998 ; List of CFR Sections Affected 1998 ; 1998 >
+    au < ready ; 1999 ; List of CFR Sections Affected 1999 ; 1999 >
+    au < ready ; 2000 ; List of CFR Sections Affected 2000 ; 2000 >
+    au < ready ; 2001 ; List of CFR Sections Affected 2001 ; 2001 >
+    au < ready ; 2002 ; List of CFR Sections Affected 2002 ; 2002 >
+    au < ready ; 2003 ; List of CFR Sections Affected 2003 ; 2003 >
+    au < ready ; 2004 ; List of CFR Sections Affected 2004 ; 2004 >
     au < ready ; 2005 ; List of CFR Sections Affected 2005 ; 2005 >
     au < ready ; 2006 ; List of CFR Sections Affected 2006 ; 2006 >
     au < ready ; 2007 ; List of CFR Sections Affected 2007 ; 2007 >
