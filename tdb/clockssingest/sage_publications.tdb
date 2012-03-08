@@ -360,7 +360,7 @@
       au < manifest ; exists ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 ; >
       au < manifest ; exists ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 ; >
       au < manifest ; exists ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 ; >
-      au < boost ; exists ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 ; >
+      au < crawling ; exists ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 ; >
       au < expected ; exists ; 2012 ; Administrative Science Quarterly Volume 57 ; 57 ; >
 
     }
@@ -1155,7 +1155,7 @@
       au < manifest ; exists ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 ; >
       au < manifest ; exists ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 ; >
       au < manifest ; exists ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 ; >
-      au < boost ; exists ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 ; >
+      au < crawling ; exists ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 ; >
       au < crawling ; exists ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 ; >
 
     }
@@ -2123,7 +2123,7 @@
       au < manifest ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 630 ; 630 ;  >
       au < released ; crawling ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 631 ; 631 ; >
       au < released ; crawling ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 632 ; 632 ; >
-      au < boost ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 633 ; 633 ; >
+      au < crawling ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 633 ; 633 ; >
       au < released ; crawling ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 634 ; 634 ; >
       au < released ; crawling ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 635 ; 635 ; >
       au < released ; crawling ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 636 ; 636 ; >
@@ -2621,7 +2621,7 @@
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Assessment for Effective Intervention Volume 34 ; 34 ; >
       au < released ; crawling ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 ;  >
       au < released ; crawling ; 2010-2011 ; Assessment for Effective Intervention Volume 36 ; 36 ; >
-      au < boost ; exists ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 ; >
 
     }
 
@@ -3554,7 +3554,7 @@
       au < manifest ; exists ; 2009 ; Bulletin of the Atomic Scientists Volume 65 ; 65 ; >
       au < released ; crawling ; 2010 ; Bulletin of the Atomic Scientists Volume 66 ; 66 ; >
       au < released ; crawling ; 2011 ; Bulletin of the Atomic Scientists Volume 67 ; 67 ; >
-      au < boost ; exists ; 2012 ; Bulletin of the Atomic Scientists Volume 68 ; 68 ; >
+      au < crawling ; exists ; 2012 ; Bulletin of the Atomic Scientists Volume 68 ; 68 ; >
 
     }
 
@@ -3634,7 +3634,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Business & Society Volume 48 ; 48 ; >
       au < released ; crawling ; 2010 ; Business & Society Volume 49 ; 49 ;  >
       au < released ; crawling ; 2011 ; Business & Society Volume 50 ; 50 ; >
-      au < boost ; exists ; 2012 ; Business & Society Volume 51 ; 51 ; >
+      au < crawling ; exists ; 2012 ; Business & Society Volume 51 ; 51 ; >
 
     }
 
@@ -3708,7 +3708,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Business Communication Quarterly Volume 72 ; 72 ; >
       au < released ; crawling ; 2010 ; Business Communication Quarterly Volume 73 ; 73 ;  >
       au < released ; crawling ; 2011 ; Business Communication Quarterly Volume 74 ; 74 ; >
-      au < boost ; exists ; 2012 ; Business Communication Quarterly Volume 75 ; 75 ; >
+      au < crawling ; exists ; 2012 ; Business Communication Quarterly Volume 75 ; 75 ; >
 
     }
 
@@ -3813,8 +3813,8 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Canadian Journal of School Psychology Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Canadian Journal of School Psychology Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; Canadian Journal of School Psychology Volume 25 ; 25 ; >
-      au < boost ; exists ; 2011 ; Canadian Journal of School Psychology Volume 26 ; 26 ; >
-      au < boost ; exists ; 2012 ; Canadian Journal of School Psychology Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2011 ; Canadian Journal of School Psychology Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2012 ; Canadian Journal of School Psychology Volume 27 ; 27 ; >
 
     }
 
@@ -3869,7 +3869,7 @@
       au < manifest ; exists ; 2009 ; Capital & Class Volume 33 ; 33 ; >
       au < released ; crawling ; 2010 ; Capital & Class Volume 34 ; 34 ; >
       au < released ; crawling ; 2011 ; Capital & Class Volume 35 ; 35 ; >
-      au < boost ; exists ; 2012 ; Capital & Class Volume 36 ; 36 ; >
+      au < crawling ; exists ; 2012 ; Capital & Class Volume 36 ; 36 ; >
 
     }
 
@@ -3985,7 +3985,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Cartilage Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Cartilage Volume 2 ; 2 ; >
-      au < boost ; exists ; 2012 ; Cartilage Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2012 ; Cartilage Volume 3 ; 3 ; >
 
     }
 
@@ -4036,7 +4036,7 @@
       au < manifest ; exists ; 2009 ; Cephalalgia Volume 29 ; 29 ; >
       au < released ; crawling ; 2010 ; Cephalalgia Volume 30 ; 30 ; >
       au < released ; crawling ; 2011 ; Cephalalgia Volume 31 ; 31 ; >
-      au < boost ; exists ; 2012 ; Cephalalgia Volume 32 ; 32 ; >
+      au < crawling ; exists ; 2012 ; Cephalalgia Volume 32 ; 32 ; >
 
     }
 
@@ -4995,7 +4995,7 @@
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Communication Disorders Quarterly Volume 30 ; 30 ; >
       au < released ; crawling ; 2009-2010 ; Communication Disorders Quarterly Volume 31 ; 31 ; >
       au < released ; crawling ; 2010-2011 ; Communication Disorders Quarterly Volume 32 ; 32 ; >
-      au < boost ; exists ; 2011-2012 ; Communication Disorders Quarterly Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2011-2012 ; Communication Disorders Quarterly Volume 33 ; 33 ; >
 
     }
 
@@ -6933,7 +6933,7 @@
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Currents in Biblical Research Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Currents in Biblical Research Volume 8 ; 8 ; >
       au < released ; crawling ; 2010-2011 ; Currents in Biblical Research Volume 9 ; 9 ; >
-      au < boost ; exists ; 2011-2012 ; Currents in Biblical Research Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2011-2012 ; Currents in Biblical Research Volume 10 ; 10 ; >
 
     }
 
@@ -16128,7 +16128,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 ; >
       au < manifest ; exists ; 2009 ; The Journal of Clinical Pharmacology Volume 49 ; 49 ; >
       au < manifest ; exists ; 2010 ; The Journal of Clinical Pharmacology Volume 50 ; 50 ; >
-      au < boost ; exists ; 2011 ; The Journal of Clinical Pharmacology Volume 51 ; 51 ; >
+      au < crawling ; exists ; 2011 ; The Journal of Clinical Pharmacology Volume 51 ; 51 ; >
       au < manifest ; exists ; 2012 ; The Journal of Clinical Pharmacology Volume 52 ; 52 ; >
 
     }
@@ -32230,7 +32230,7 @@
       au < exists ; exists ; 2008 ; Theology Volume 111 ; 111 ; >
       au < manifest ; exists ; 2009 ; Theology Volume 112 ; 112 ; >
       au < manifest ; exists ; 2010 ; Theology Volume 113 ; 113 ; >
-      au < boost ; exists ; 2011 ; Theology Volume 114 ; 114 ; >
+      au < crawling ; exists ; 2011 ; Theology Volume 114 ; 114 ; >
       au < manifest ; exists ; 2012 ; Theology Volume 115 ; 115 ; >
 
     }
