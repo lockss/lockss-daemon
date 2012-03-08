@@ -121,7 +121,7 @@
     au < manifest ; exists ; 2008 ; Geological Society of America Bulletin Volume 120 ; 120 >
     au < manifest ; exists ; 2009 ; Geological Society of America Bulletin Volume 121 ; 121 >
     au < manifest ; exists ; 2010 ; Geological Society of America Bulletin Volume 122 ; 122 >
-    au < testing ; exists ; 2011 ; Geological Society of America Bulletin Volume 123 ; 123 >
+    au < released ; manifest ; 2011 ; Geological Society of America Bulletin Volume 123 ; 123 >
     au < crawling ; exists ; 2012 ; Geological Society of America Bulletin Volume 124 ; 124 >
 
   }
@@ -134,6 +134,7 @@
     >
   
     comment[1] = this title has no issues, just volumes check/test to see if it works with h20 plugin-- -SC
+    comment[2] = cannot add AUs to ingest machine. -Mep 2012/03/07
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://memoirs.gsapubs.org/
@@ -162,7 +163,7 @@
       au < manifest ; exists ; 2009 ; 978-0-8137-1204-8 ; Geological Society of America Memoirs Volume 204 ; 204 >
       au < manifest ; exists ; 2010 ; 978-0-8137-1205-5 ; Geological Society of America Memoirs Volume 205 ; 205 >
       au < manifest ; exists ; 2010 ; 978-0-8137-1206-2 ; Geological Society of America Memoirs Volume 206 ; 206 >
-      au < testing ; exists ; 2011 ; 978-0-8137-1207-9 ; Geological Society of America Memoirs Volume 207 ; 207 >
+      au < notReady ; exists ; 2011 ; 978-0-8137-1207-9 ; Geological Society of America Memoirs Volume 207 ; 207 >
       au < expected ; exists ; 2012 ; comment[expected-isbn] ; Geological Society of America Memoirs Volume 208 ; 208 >
       
       
