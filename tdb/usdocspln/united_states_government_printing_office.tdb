@@ -5,6 +5,9 @@
   >
 
   rights = openaccess
+  plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
+  param[base_url] = http://www.gpo.gov/
+  implicit < status ; year ; name ; param[year] >
 
   {
   
@@ -12,36 +15,33 @@
       name = Additional Government Publications
     >
     
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = GPO
-    implicit < status ; year ; name ; param[year] >
     
-    au < ready ; 1907 ; Additional Government Publications 1907 ; 1907 >
-    au < ready ; 1936 ; Additional Government Publications 1936 ; 1936 >
-    au < ready ; 1970 ; Additional Government Publications 1970 ; 1970 >
-    au < ready ; 1986 ; Additional Government Publications 1986 ; 1986 >
-    au < ready ; 1987 ; Additional Government Publications 1987 ; 1987 >
-    au < ready ; 1989 ; Additional Government Publications 1989 ; 1989 >
-    au < ready ; 1990 ; Additional Government Publications 1990 ; 1990 >
-    au < ready ; 1992 ; Additional Government Publications 1992 ; 1992 >
-    au < ready ; 1994 ; Additional Government Publications 1994 ; 1994 >
-    au < ready ; 1995 ; Additional Government Publications 1995 ; 1995 >
-    au < ready ; 1996 ; Additional Government Publications 1996 ; 1996 >
-    au < ready ; 1997 ; Additional Government Publications 1997 ; 1997 >
-    au < ready ; 1998 ; Additional Government Publications 1998 ; 1998 >
-    au < ready ; 1999 ; Additional Government Publications 1999 ; 1999 >
-    au < ready ; 2000 ; Additional Government Publications 2000 ; 2000 >
-    au < ready ; 2001 ; Additional Government Publications 2001 ; 2001 >
-    au < ready ; 2002 ; Additional Government Publications 2002 ; 2002 >
-    au < ready ; 2003 ; Additional Government Publications 2003 ; 2003 >
-    au < ready ; 2004 ; Additional Government Publications 2004 ; 2004 >
-    au < ready ; 2005 ; Additional Government Publications 2005 ; 2005 >
-    au < ready ; 2006 ; Additional Government Publications 2006 ; 2006 >
-    au < ready ; 2007 ; Additional Government Publications 2007 ; 2007 >
-    au < ready ; 2008 ; Additional Government Publications 2008 ; 2008 >
-    au < ready ; 2009 ; Additional Government Publications 2009 ; 2009 >
-    au < ready ; 2010 ; Additional Government Publications 2010 ; 2010 >
+    au < released ; 1907 ; Additional Government Publications 1907 ; 1907 >
+    au < released ; 1936 ; Additional Government Publications 1936 ; 1936 >
+    au < released ; 1970 ; Additional Government Publications 1970 ; 1970 >
+    au < released ; 1986 ; Additional Government Publications 1986 ; 1986 >
+    au < released ; 1987 ; Additional Government Publications 1987 ; 1987 >
+    au < released ; 1989 ; Additional Government Publications 1989 ; 1989 >
+    au < released ; 1990 ; Additional Government Publications 1990 ; 1990 >
+    au < released ; 1992 ; Additional Government Publications 1992 ; 1992 >
+    au < released ; 1994 ; Additional Government Publications 1994 ; 1994 >
+    au < released ; 1995 ; Additional Government Publications 1995 ; 1995 >
+    au < released ; 1996 ; Additional Government Publications 1996 ; 1996 >
+    au < released ; 1997 ; Additional Government Publications 1997 ; 1997 >
+    au < released ; 1998 ; Additional Government Publications 1998 ; 1998 >
+    au < released ; 1999 ; Additional Government Publications 1999 ; 1999 >
+    au < released ; 2000 ; Additional Government Publications 2000 ; 2000 >
+    au < released ; 2001 ; Additional Government Publications 2001 ; 2001 >
+    au < released ; 2002 ; Additional Government Publications 2002 ; 2002 >
+    au < released ; 2003 ; Additional Government Publications 2003 ; 2003 >
+    au < released ; 2004 ; Additional Government Publications 2004 ; 2004 >
+    au < released ; 2005 ; Additional Government Publications 2005 ; 2005 >
+    au < released ; 2006 ; Additional Government Publications 2006 ; 2006 >
+    au < released ; 2007 ; Additional Government Publications 2007 ; 2007 >
+    au < released ; 2008 ; Additional Government Publications 2008 ; 2008 >
+    au < released ; 2009 ; Additional Government Publications 2009 ; 2009 >
+    au < released ; 2010 ; Additional Government Publications 2010 ; 2010 >
 
   }
   
@@ -51,27 +51,21 @@
       name =  Budget of the United States Government
     >
     
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = BUDGET
-    implicit < status ; year ; name ; param[year] >
     
-    au < ready ; 2009 ; Budget of the United States Government 2009 ; 2009 >
-    au < ready ; 2010 ; Budget of the United States Government 2010 ; 2010 >
+    au < released ; 2009 ; Budget of the United States Government 2009 ; 2009 >
+    au < released ; 2010 ; Budget of the United States Government 2010 ; 2010 >
   
       
   }
 
   {
   
-  title <
+    title <
       name =  Coastal Zone Information Center
     >
     
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = CZID
-    implicit < status ; year ; name ; param[year] >
     
     au < manifest ; 1951 ; Coastal Zone Information Center 1951 ; 1951 >
     au < manifest ; 1959 ; Coastal Zone Information Center 1959 ; 1959 > 
@@ -124,32 +118,25 @@
       name = Code of Federal Regulations
     >
     
-    {
+    param[collection_id] = CFR
 
-      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-      param[base_url] = http://www.gpo.gov/
-      param[collection_id] = CFR
-      implicit < status ; year ; name ; param[year] >
+    au < released ; 1996 ; Code of Federal Regulations 1996 ; 1996 >
+    au < released ; 1997 ; Code of Federal Regulations 1997 ; 1997 >
+    au < released ; 1998 ; Code of Federal Regulations 1998 ; 1998 >
+    au < released ; 1999 ; Code of Federal Regulations 1999 ; 1999 >
+    au < released ; 2000 ; Code of Federal Regulations 2000 ; 2000 >
+    au < released ; 2001 ; Code of Federal Regulations 2001 ; 2001 >
+    au < released ; 2002 ; Code of Federal Regulations 2002 ; 2002 >
+    au < released ; 2003 ; Code of Federal Regulations 2003 ; 2003 >
+    au < released ; 2004 ; Code of Federal Regulations 2004 ; 2004 >
+    au < released ; 2005 ; Code of Federal Regulations 2005 ; 2005 >
+    au < released ; 2006 ; Code of Federal Regulations 2006 ; 2006 >
+    au < released ; 2007 ; Code of Federal Regulations 2007 ; 2007 >
+    au < released ; 2008 ; Code of Federal Regulations 2008 ; 2008 >
+    au < released ; 2009 ; Code of Federal Regulations 2009 ; 2009 >
+    au < released ; 2010 ; Code of Federal Regulations 2010 ; 2010 >
+    au < released ; 2011 ; Code of Federal Regulations 2011 ; 2011 >
 
-      au < released ; 1996 ; Code of Federal Regulations 1996 ; 1996 >
-      au < released ; 1997 ; Code of Federal Regulations 1997 ; 1997 >
-      au < released ; 1998 ; Code of Federal Regulations 1998 ; 1998 >
-      au < released ; 1999 ; Code of Federal Regulations 1999 ; 1999 >
-      au < released ; 2000 ; Code of Federal Regulations 2000 ; 2000 >
-      au < released ; 2001 ; Code of Federal Regulations 2001 ; 2001 >
-      au < released ; 2002 ; Code of Federal Regulations 2002 ; 2002 >
-      au < released ; 2003 ; Code of Federal Regulations 2003 ; 2003 >
-      au < released ; 2004 ; Code of Federal Regulations 2004 ; 2004 >
-      au < released ; 2005 ; Code of Federal Regulations 2005 ; 2005 >
-      au < released ; 2006 ; Code of Federal Regulations 2006 ; 2006 >
-      au < released ; 2007 ; Code of Federal Regulations 2007 ; 2007 >
-      au < released ; 2008 ; Code of Federal Regulations 2008 ; 2008 >
-      au < released ; 2009 ; Code of Federal Regulations 2009 ; 2009 >
-      au < released ; 2010 ; Code of Federal Regulations 2010 ; 2010 >
-      au < released ; 2011 ; Code of Federal Regulations 2011 ; 2011 >
-
-    }
-      
   }
 
   {
@@ -158,34 +145,27 @@
       name = Congressional Bills
     >
 
-    {
+    param[collection_id] = BILLS
 
-      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-      param[base_url] = http://www.gpo.gov/
-      param[collection_id] = BILLS
-      implicit < status ; year ; name ; param[year] >
+    au < released ; 1993 ; Congressional Bills 1993 ; 1993 >
+    au < released ; 1994 ; Congressional Bills 1994 ; 1994 >
+    au < released ; 1995 ; Congressional Bills 1995 ; 1995 >
+    au < released ; 1996 ; Congressional Bills 1996 ; 1996 >
+    au < released ; 1997 ; Congressional Bills 1997 ; 1997 >
+    au < released ; 1998 ; Congressional Bills 1998 ; 1998 >
+    au < released ; 1999 ; Congressional Bills 1999 ; 1999 >
+    au < released ; 2000 ; Congressional Bills 2000 ; 2000 >
+    au < released ; 2001 ; Congressional Bills 2001 ; 2001 >
+    au < released ; 2002 ; Congressional Bills 2002 ; 2002 >
+    au < released ; 2003 ; Congressional Bills 2003 ; 2003 >
+    au < released ; 2004 ; Congressional Bills 2004 ; 2004 >
+    au < released ; 2005 ; Congressional Bills 2005 ; 2005 >
+    au < released ; 2006 ; Congressional Bills 2006 ; 2006 >
+    au < released ; 2007 ; Congressional Bills 2007 ; 2007 >
+    au < released ; 2008 ; Congressional Bills 2008 ; 2008 >
+    au < released ; 2009 ; Congressional Bills 2009 ; 2009 >
+    au < released ; 2010 ; Congressional Bills 2010 ; 2010 >
 
-      au < ready ; 1993 ; Congressional Bills 1993 ; 1993 >
-      au < ready ; 1994 ; Congressional Bills 1994 ; 1994 >
-      au < ready ; 1995 ; Congressional Bills 1995 ; 1995 >
-      au < ready ; 1996 ; Congressional Bills 1996 ; 1996 >
-      au < ready ; 1997 ; Congressional Bills 1997 ; 1997 >
-      au < ready ; 1998 ; Congressional Bills 1998 ; 1998 >
-      au < ready ; 1999 ; Congressional Bills 1999 ; 1999 >
-      au < ready ; 2000 ; Congressional Bills 2000 ; 2000 >
-      au < ready ; 2001 ; Congressional Bills 2001 ; 2001 >
-      au < ready ; 2002 ; Congressional Bills 2002 ; 2002 >
-      au < ready ; 2003 ; Congressional Bills 2003 ; 2003 >
-      au < ready ; 2004 ; Congressional Bills 2004 ; 2004 >
-      au < ready ; 2005 ; Congressional Bills 2005 ; 2005 >
-      au < ready ; 2006 ; Congressional Bills 2006 ; 2006 >
-      au < ready ; 2007 ; Congressional Bills 2007 ; 2007 >
-      au < ready ; 2008 ; Congressional Bills 2008 ; 2008 >
-      au < ready ; 2009 ; Congressional Bills 2009 ; 2009 >
-      au < ready ; 2010 ; Congressional Bills 2010 ; 2010 >
-
-    }
-      
   }
 
   {
@@ -194,10 +174,7 @@
       name = Congressional Calendars
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = CCAL
-    implicit < status ; year ; name ; param[year] >
 
     au < released ; 1996 ; Congressional Calendars 1996 ; 1996 >
     au < released ; 1998 ; Congressional Calendars 1998 ; 1998 >
@@ -219,33 +196,26 @@
       name = Congressional Committee Prints
     >
 
-    {
+    param[collection_id] = CPRT
 
-      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-      param[base_url] = http://www.gpo.gov/
-      param[collection_id] = CPRT
-      implicit < status ; year ; name ; param[year] >
+    au < released ; 1968 ; Congressional Committee Prints 1968 ; 1968 >
+    au < released ; 1995 ; Congressional Committee Prints 1995 ; 1995 >
+    au < released ; 1996 ; Congressional Committee Prints 1996 ; 1996 >
+    au < released ; 1997 ; Congressional Committee Prints 1997 ; 1997 >
+    au < released ; 1998 ; Congressional Committee Prints 1998 ; 1998 >
+    au < released ; 1999 ; Congressional Committee Prints 1999 ; 1999 >
+    au < released ; 2000 ; Congressional Committee Prints 2000 ; 2000 >
+    au < released ; 2001 ; Congressional Committee Prints 2001 ; 2001 >
+    au < released ; 2002 ; Congressional Committee Prints 2002 ; 2002 >
+    au < released ; 2003 ; Congressional Committee Prints 2003 ; 2003 >
+    au < released ; 2004 ; Congressional Committee Prints 2004 ; 2004 >
+    au < released ; 2005 ; Congressional Committee Prints 2005 ; 2005 >
+    au < released ; 2006 ; Congressional Committee Prints 2006 ; 2006 >
+    au < released ; 2007 ; Congressional Committee Prints 2007 ; 2007 >
+    au < released ; 2008 ; Congressional Committee Prints 2008 ; 2008 >
+    au < released ; 2009 ; Congressional Committee Prints 2009 ; 2009 >
+    au < released ; 2010 ; Congressional Committee Prints 2010 ; 2010 >
 
-      au < released ; 1968 ; Congressional Committee Prints 1968 ; 1968 >
-      au < released ; 1995 ; Congressional Committee Prints 1995 ; 1995 >
-      au < released ; 1996 ; Congressional Committee Prints 1996 ; 1996 >
-      au < released ; 1997 ; Congressional Committee Prints 1997 ; 1997 >
-      au < released ; 1998 ; Congressional Committee Prints 1998 ; 1998 >
-      au < released ; 1999 ; Congressional Committee Prints 1999 ; 1999 >
-      au < released ; 2000 ; Congressional Committee Prints 2000 ; 2000 >
-      au < released ; 2001 ; Congressional Committee Prints 2001 ; 2001 >
-      au < released ; 2002 ; Congressional Committee Prints 2002 ; 2002 >
-      au < released ; 2003 ; Congressional Committee Prints 2003 ; 2003 >
-      au < released ; 2004 ; Congressional Committee Prints 2004 ; 2004 >
-      au < released ; 2005 ; Congressional Committee Prints 2005 ; 2005 >
-      au < released ; 2006 ; Congressional Committee Prints 2006 ; 2006 >
-      au < released ; 2007 ; Congressional Committee Prints 2007 ; 2007 >
-      au < released ; 2008 ; Congressional Committee Prints 2008 ; 2008 >
-      au < released ; 2009 ; Congressional Committee Prints 2009 ; 2009 >
-      au < released ; 2010 ; Congressional Committee Prints 2010 ; 2010 >
-
-    }
-      
   }
   
   {
@@ -254,10 +224,7 @@
       name = Congressional Directory
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = CDIR
-    implicit < status ; year ; name ; param[year] >
 
     au < released ; 1997 ; Congressional Directory 1997 ; 1997 >
     au < released ; 1999 ; Congressional Directory 1999 ; 1999 >
@@ -280,37 +247,30 @@
       name = Congressional Documents
     >
 
-    {
+    param[collection_id] = CDOC
 
-      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-      param[base_url] = http://www.gpo.gov/
-      param[collection_id] = CDOC
-      implicit < status ; year ; name ; param[year] >
-
-      au < released ; 1862 ; Congressional Documents 1862 ; 1862 >
-      au < released ; 1936 ; Congressional Documents 1936 ; 1936 >
-      au < released ; 1960 ; Congressional Documents 1960 ; 1960 >
-      au < released ; 1992 ; Congressional Documents 1992 ; 1992 >
-      au < released ; 1994 ; Congressional Documents 1994 ; 1994 >
-      au < released ; 1995 ; Congressional Documents 1995 ; 1995 >
-      au < released ; 1996 ; Congressional Documents 1996 ; 1996 >
-      au < released ; 1997 ; Congressional Documents 1997 ; 1997 >
-      au < released ; 1998 ; Congressional Documents 1998 ; 1998 >
-      au < released ; 1999 ; Congressional Documents 1999 ; 1999 >
-      au < released ; 2000 ; Congressional Documents 2000 ; 2000 >
-      au < released ; 2001 ; Congressional Documents 2001 ; 2001 >
-      au < released ; 2002 ; Congressional Documents 2002 ; 2002 >
-      au < released ; 2003 ; Congressional Documents 2003 ; 2003 >
-      au < released ; 2004 ; Congressional Documents 2004 ; 2004 >
-      au < released ; 2005 ; Congressional Documents 2005 ; 2005 >
-      au < released ; 2006 ; Congressional Documents 2006 ; 2006 >
-      au < released ; 2007 ; Congressional Documents 2007 ; 2007 >
-      au < released ; 2008 ; Congressional Documents 2008 ; 2008 >
-      au < released ; 2009 ; Congressional Documents 2009 ; 2009 >
-      au < released ; 2010 ; Congressional Documents 2010 ; 2010 >
-      au < released ; 2011 ; Congressional Documents 2011 ; 2011 >
-
-    }
+    au < released ; 1862 ; Congressional Documents 1862 ; 1862 >
+    au < released ; 1936 ; Congressional Documents 1936 ; 1936 >
+    au < released ; 1960 ; Congressional Documents 1960 ; 1960 >
+    au < released ; 1992 ; Congressional Documents 1992 ; 1992 >
+    au < released ; 1994 ; Congressional Documents 1994 ; 1994 >
+    au < released ; 1995 ; Congressional Documents 1995 ; 1995 >
+    au < released ; 1996 ; Congressional Documents 1996 ; 1996 >
+    au < released ; 1997 ; Congressional Documents 1997 ; 1997 >
+    au < released ; 1998 ; Congressional Documents 1998 ; 1998 >
+    au < released ; 1999 ; Congressional Documents 1999 ; 1999 >
+    au < released ; 2000 ; Congressional Documents 2000 ; 2000 >
+    au < released ; 2001 ; Congressional Documents 2001 ; 2001 >
+    au < released ; 2002 ; Congressional Documents 2002 ; 2002 >
+    au < released ; 2003 ; Congressional Documents 2003 ; 2003 >
+    au < released ; 2004 ; Congressional Documents 2004 ; 2004 >
+    au < released ; 2005 ; Congressional Documents 2005 ; 2005 >
+    au < released ; 2006 ; Congressional Documents 2006 ; 2006 >
+    au < released ; 2007 ; Congressional Documents 2007 ; 2007 >
+    au < released ; 2008 ; Congressional Documents 2008 ; 2008 >
+    au < released ; 2009 ; Congressional Documents 2009 ; 2009 >
+    au < released ; 2010 ; Congressional Documents 2010 ; 2010 >
+    au < released ; 2011 ; Congressional Documents 2011 ; 2011 >
       
   }
 
@@ -320,32 +280,25 @@
       name = Congressional Hearings
     >
 
-    {
+    param[collection_id] = CHRG
 
-      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-      param[base_url] = http://www.gpo.gov/
-      param[collection_id] = CHRG
-      implicit < status ; year ; name ; param[year] >
+    au < released ; 1995 ; Congressional Hearings 1995 ; 1995 >
+    au < released ; 1996 ; Congressional Hearings 1996 ; 1996 >
+    au < released ; 1997 ; Congressional Hearings 1997 ; 1997 >
+    au < released ; 1998 ; Congressional Hearings 1998 ; 1998 >
+    au < released ; 1999 ; Congressional Hearings 1999 ; 1999 >
+    au < released ; 2000 ; Congressional Hearings 2000 ; 2000 >
+    au < released ; 2001 ; Congressional Hearings 2001 ; 2001 >
+    au < released ; 2002 ; Congressional Hearings 2002 ; 2002 >
+    au < released ; 2003 ; Congressional Hearings 2003 ; 2003 >
+    au < released ; 2004 ; Congressional Hearings 2004 ; 2004 >
+    au < released ; 2005 ; Congressional Hearings 2005 ; 2005 >
+    au < released ; 2006 ; Congressional Hearings 2006 ; 2006 >
+    au < released ; 2007 ; Congressional Hearings 2007 ; 2007 >
+    au < released ; 2008 ; Congressional Hearings 2008 ; 2008 >
+    au < released ; 2009 ; Congressional Hearings 2009 ; 2009 >
+    au < released ; 2010 ; Congressional Hearings 2010 ; 2010 >
 
-      au < released ; 1995 ; Congressional Hearings 1995 ; 1995 >
-      au < released ; 1996 ; Congressional Hearings 1996 ; 1996 >
-      au < released ; 1997 ; Congressional Hearings 1997 ; 1997 >
-      au < released ; 1998 ; Congressional Hearings 1998 ; 1998 >
-      au < released ; 1999 ; Congressional Hearings 1999 ; 1999 >
-      au < released ; 2000 ; Congressional Hearings 2000 ; 2000 >
-      au < released ; 2001 ; Congressional Hearings 2001 ; 2001 >
-      au < released ; 2002 ; Congressional Hearings 2002 ; 2002 >
-      au < released ; 2003 ; Congressional Hearings 2003 ; 2003 >
-      au < released ; 2004 ; Congressional Hearings 2004 ; 2004 >
-      au < released ; 2005 ; Congressional Hearings 2005 ; 2005 >
-      au < released ; 2006 ; Congressional Hearings 2006 ; 2006 >
-      au < released ; 2007 ; Congressional Hearings 2007 ; 2007 >
-      au < released ; 2008 ; Congressional Hearings 2008 ; 2008 >
-      au < released ; 2009 ; Congressional Hearings 2009 ; 2009 >
-      au < released ; 2010 ; Congressional Hearings 2010 ; 2010 >
-
-    }
-      
   }
 
   {
@@ -354,34 +307,27 @@
       name = Congressional Record
     >
 
-    {
+    param[collection_id] = CREC
 
-      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-      param[base_url] = http://www.gpo.gov/
-      param[collection_id] = CREC
-      implicit < status ; year ; name ; param[year] >
+    au < released ; 1994 ; Congressional Record 1994 ; 1994 >
+    au < released ; 1995 ; Congressional Record 1995 ; 1995 >
+    au < released ; 1996 ; Congressional Record 1996 ; 1996 >
+    au < released ; 1997 ; Congressional Record 1997 ; 1997 >
+    au < released ; 1998 ; Congressional Record 1998 ; 1998 >
+    au < released ; 1999 ; Congressional Record 1999 ; 1999 >
+    au < released ; 2000 ; Congressional Record 2000 ; 2000 >
+    au < released ; 2001 ; Congressional Record 2001 ; 2001 >
+    au < released ; 2002 ; Congressional Record 2002 ; 2002 >
+    au < released ; 2003 ; Congressional Record 2003 ; 2003 >
+    au < released ; 2004 ; Congressional Record 2004 ; 2004 >
+    au < released ; 2005 ; Congressional Record 2005 ; 2005 >
+    au < released ; 2006 ; Congressional Record 2006 ; 2006 >
+    au < released ; 2007 ; Congressional Record 2007 ; 2007 >
+    au < released ; 2008 ; Congressional Record 2008 ; 2008 >
+    au < released ; 2009 ; Congressional Record 2009 ; 2009 >
+    au < released ; 2010 ; Congressional Record 2010 ; 2010 >
+    au < released ; 2011 ; Congressional Record 2011 ; 2011 >
 
-      au < released ; 1994 ; Congressional Record 1994 ; 1994 >
-      au < released ; 1995 ; Congressional Record 1995 ; 1995 >
-      au < released ; 1996 ; Congressional Record 1996 ; 1996 >
-      au < released ; 1997 ; Congressional Record 1997 ; 1997 >
-      au < released ; 1998 ; Congressional Record 1998 ; 1998 >
-      au < released ; 1999 ; Congressional Record 1999 ; 1999 >
-      au < released ; 2000 ; Congressional Record 2000 ; 2000 >
-      au < released ; 2001 ; Congressional Record 2001 ; 2001 >
-      au < released ; 2002 ; Congressional Record 2002 ; 2002 >
-      au < released ; 2003 ; Congressional Record 2003 ; 2003 >
-      au < released ; 2004 ; Congressional Record 2004 ; 2004 >
-      au < released ; 2005 ; Congressional Record 2005 ; 2005 >
-      au < released ; 2006 ; Congressional Record 2006 ; 2006 >
-      au < released ; 2007 ; Congressional Record 2007 ; 2007 >
-      au < released ; 2008 ; Congressional Record 2008 ; 2008 >
-      au < released ; 2009 ; Congressional Record 2009 ; 2009 >
-      au < released ; 2010 ; Congressional Record 2010 ; 2010 >
-      au < released ; 2011 ; Congressional Record 2011 ; 2011 >
-
-    }
-      
   }
   
   {
@@ -390,15 +336,12 @@
       name = Congressional Record (Bound)
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = CRECB
-    implicit < status ; year ; name ; param[year] >
 
-    au < ready ; 1999 ; Congressional Record (Bound) 1999 ; 1999 >
-    au < ready ; 2000 ; Congressional Record (Bound) 2000 ; 2000 >
-    au < ready ; 2001 ; Congressional Record (Bound) 2001 ; 2001 >
-    au < ready ; 2002 ; Congressional Record (Bound) 2002 ; 2002 >
+    au < released ; 1999 ; Congressional Record (Bound) 1999 ; 1999 >
+    au < released ; 2000 ; Congressional Record (Bound) 2000 ; 2000 >
+    au < released ; 2001 ; Congressional Record (Bound) 2001 ; 2001 >
+    au < released ; 2002 ; Congressional Record (Bound) 2002 ; 2002 >
 
   }
 
@@ -408,40 +351,37 @@
       name = Congressional Record Index 
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = CRI
-    implicit < status ; year ; name ; param[year] >
 
-    au < ready ; 1983 ; Congressional Record Index 1983 ; 1983 >
-    au < ready ; 1984 ; Congressional Record Index 1984 ; 1984 >
-    au < ready ; 1985 ; Congressional Record Index 1985 ; 1985 >
-    au < ready ; 1986 ; Congressional Record Index 1986 ; 1986 >
-    au < ready ; 1987 ; Congressional Record Index 1987 ; 1987 >
-    au < ready ; 1988 ; Congressional Record Index 1988 ; 1988 >
-    au < ready ; 1989 ; Congressional Record Index 1989 ; 1989 >
-    au < ready ; 1990 ; Congressional Record Index 1990 ; 1990 >
-    au < ready ; 1991 ; Congressional Record Index 1991 ; 1991 >
-    au < ready ; 1992 ; Congressional Record Index 1992 ; 1992 >
-    au < ready ; 1993 ; Congressional Record Index 1993 ; 1993 >
-    au < ready ; 1994 ; Congressional Record Index 1994 ; 1994 >
-    au < ready ; 1995 ; Congressional Record Index 1995 ; 1995 >
-    au < ready ; 1996 ; Congressional Record Index 1996 ; 1996 >
-    au < ready ; 1997 ; Congressional Record Index 1997 ; 1997 >
-    au < ready ; 1999 ; Congressional Record Index 1999 ; 1999 >
-    au < ready ; 2000 ; Congressional Record Index 2000 ; 2000 >
-    au < ready ; 2001 ; Congressional Record Index 2001 ; 2001 >
-    au < ready ; 2002 ; Congressional Record Index 2002 ; 2002 >
-    au < ready ; 2003 ; Congressional Record Index 2003 ; 2003 >
-    au < ready ; 2004 ; Congressional Record Index 2004 ; 2004 >
-    au < ready ; 2005 ; Congressional Record Index 2005 ; 2005 >
-    au < ready ; 2006 ; Congressional Record Index 2006 ; 2006 >
-    au < ready ; 2007 ; Congressional Record Index 2007 ; 2007 >
-    au < ready ; 2008 ; Congressional Record Index 2008 ; 2008 >
-    au < ready ; 2009 ; Congressional Record Index 2009 ; 2009 >
-    au < ready ; 2010 ; Congressional Record Index 2010 ; 2010 >
-    au < ready ; 2011 ; Congressional Record Index 2011 ; 2011 >
-    au < ready ; 2012 ; Congressional Record Index 2012 ; 20120 >
+    au < released ; 1983 ; Congressional Record Index 1983 ; 1983 >
+    au < released ; 1984 ; Congressional Record Index 1984 ; 1984 >
+    au < released ; 1985 ; Congressional Record Index 1985 ; 1985 >
+    au < released ; 1986 ; Congressional Record Index 1986 ; 1986 >
+    au < released ; 1987 ; Congressional Record Index 1987 ; 1987 >
+    au < released ; 1988 ; Congressional Record Index 1988 ; 1988 >
+    au < released ; 1989 ; Congressional Record Index 1989 ; 1989 >
+    au < released ; 1990 ; Congressional Record Index 1990 ; 1990 >
+    au < released ; 1991 ; Congressional Record Index 1991 ; 1991 >
+    au < released ; 1992 ; Congressional Record Index 1992 ; 1992 >
+    au < released ; 1993 ; Congressional Record Index 1993 ; 1993 >
+    au < released ; 1994 ; Congressional Record Index 1994 ; 1994 >
+    au < released ; 1995 ; Congressional Record Index 1995 ; 1995 >
+    au < released ; 1996 ; Congressional Record Index 1996 ; 1996 >
+    au < released ; 1997 ; Congressional Record Index 1997 ; 1997 >
+    au < released ; 1999 ; Congressional Record Index 1999 ; 1999 >
+    au < released ; 2000 ; Congressional Record Index 2000 ; 2000 >
+    au < released ; 2001 ; Congressional Record Index 2001 ; 2001 >
+    au < released ; 2002 ; Congressional Record Index 2002 ; 2002 >
+    au < released ; 2003 ; Congressional Record Index 2003 ; 2003 >
+    au < released ; 2004 ; Congressional Record Index 2004 ; 2004 >
+    au < released ; 2005 ; Congressional Record Index 2005 ; 2005 >
+    au < released ; 2006 ; Congressional Record Index 2006 ; 2006 >
+    au < released ; 2007 ; Congressional Record Index 2007 ; 2007 >
+    au < released ; 2008 ; Congressional Record Index 2008 ; 2008 >
+    au < released ; 2009 ; Congressional Record Index 2009 ; 2009 >
+    au < released ; 2010 ; Congressional Record Index 2010 ; 2010 >
+    au < released ; 2011 ; Congressional Record Index 2011 ; 2011 >
+    au < released ; 2012 ; Congressional Record Index 2012 ; 20120 >
       
   }
 
@@ -451,33 +391,26 @@
       name = Congressional Reports
     >
 
-    {
+    param[collection_id] = CRPT
 
-      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-      param[base_url] = http://www.gpo.gov/
-      param[collection_id] = CRPT
-      implicit < status ; year ; name ; param[year] >
-
-      au < ready ; 1995 ; Congressional Reports 1995 ; 1995 >
-      au < ready ; 1996 ; Congressional Reports 1996 ; 1996 >
-      au < ready ; 1997 ; Congressional Reports 1997 ; 1997 >
-      au < ready ; 1998 ; Congressional Reports 1998 ; 1998 >
-      au < ready ; 1999 ; Congressional Reports 1999 ; 1999 >
-      au < ready ; 2000 ; Congressional Reports 2000 ; 2000 >
-      au < ready ; 2001 ; Congressional Reports 2001 ; 2001 >
-      au < ready ; 2002 ; Congressional Reports 2002 ; 2002 >
-      au < ready ; 2003 ; Congressional Reports 2003 ; 2003 >
-      au < ready ; 2004 ; Congressional Reports 2004 ; 2004 >
-      au < ready ; 2005 ; Congressional Reports 2005 ; 2005 >
-      au < ready ; 2006 ; Congressional Reports 2006 ; 2006 >
-      au < ready ; 2007 ; Congressional Reports 2007 ; 2007 >
-      au < ready ; 2008 ; Congressional Reports 2008 ; 2008 >
-      au < ready ; 2009 ; Congressional Reports 2009 ; 2009 >
-      au < ready ; 2010 ; Congressional Reports 2010 ; 2010 >
-      au < ready ; 2011 ; Congressional Reports 2011 ; 2011 >
-      au < ready ; 2012 ; Congressional Reports 2012 ; 2012 >      
-    }
-      
+    au < released ; 1995 ; Congressional Reports 1995 ; 1995 >
+    au < released ; 1996 ; Congressional Reports 1996 ; 1996 >
+    au < released ; 1997 ; Congressional Reports 1997 ; 1997 >
+    au < released ; 1998 ; Congressional Reports 1998 ; 1998 >
+    au < released ; 1999 ; Congressional Reports 1999 ; 1999 >
+    au < released ; 2000 ; Congressional Reports 2000 ; 2000 >
+    au < released ; 2001 ; Congressional Reports 2001 ; 2001 >
+    au < released ; 2002 ; Congressional Reports 2002 ; 2002 >
+    au < released ; 2003 ; Congressional Reports 2003 ; 2003 >
+    au < released ; 2004 ; Congressional Reports 2004 ; 2004 >
+    au < released ; 2005 ; Congressional Reports 2005 ; 2005 >
+    au < released ; 2006 ; Congressional Reports 2006 ; 2006 >
+    au < released ; 2007 ; Congressional Reports 2007 ; 2007 >
+    au < released ; 2008 ; Congressional Reports 2008 ; 2008 >
+    au < released ; 2009 ; Congressional Reports 2009 ; 2009 >
+    au < released ; 2010 ; Congressional Reports 2010 ; 2010 >
+    au < released ; 2011 ; Congressional Reports 2011 ; 2011 >
+    au < released ; 2012 ; Congressional Reports 2012 ; 2012 >      
   }
 
   {
@@ -486,10 +419,7 @@
       name = Daily Compilation of Presidential Documents
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = DCPD
-    implicit < status ; year ; name ; param[year] >
 
     au < manifest ; 2009 ; Daily Compilation of Presidential Documents 2009 ; 2009 >
     au < testing ; 2010 ; Daily Compilation of Presidential Documents 2010 ; 2010 >
@@ -504,10 +434,7 @@
       name = Economic Indicators
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = ECONI
-    implicit < status ; year ; name ; param[year] >
 
     au < testing ; 1995 ; Economic Indicators 1995 ; 1995 >
     au < manifest ; 1996 ; Economic Indicators 1996 ; 1996 >
@@ -536,10 +463,7 @@
       name = Economic Report of the President
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = ERP
-    implicit < status ; year ; name ; param[year] >
 
     au < manifest ; 1996 ; Economic Report of the President 1996 ; 1996 >
     au < manifest ; 1997 ; Economic Report of the President 1997 ; 1997 >
@@ -566,10 +490,7 @@
       name = Education Report from ERIC
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = ERIC
-    implicit < status ; year ; name ; param[year] >
 
     au < testing ; 1995 ; Education Report from ERIC 1995 ; 1995 >
     au < manifest ; 1996 ; Education Report from ERIC 1996 ; 1996 >
@@ -590,35 +511,28 @@
       name = Federal Register
     >
 
-    {
+    param[collection_id] = FR
 
-      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-      param[base_url] = http://www.gpo.gov/
-      param[collection_id] = FR
-      implicit < status ; year ; name ; param[year] >
+    au < released ; 1994 ; Federal Register 1994 ; 1994 >
+    au < testing ; 1995 ; Federal Register 1995 ; 1995 >
+    au < released ; 1996 ; Federal Register 1996 ; 1996 >
+    au < released ; 1997 ; Federal Register 1997 ; 1997 >
+    au < released ; 1998 ; Federal Register 1998 ; 1998 >
+    au < released ; 1999 ; Federal Register 1999 ; 1999 >
+    au < testing ; 2000 ; Federal Register 2000 ; 2000 >
+    au < released ; 2001 ; Federal Register 2001 ; 2001 >
+    au < released ; 2002 ; Federal Register 2002 ; 2002 >
+    au < released ; 2003 ; Federal Register 2003 ; 2003 >
+    au < released ; 2004 ; Federal Register 2004 ; 2004 >
+    au < testing ; 2005 ; Federal Register 2005 ; 2005 >
+    au < released ; 2006 ; Federal Register 2006 ; 2006 >
+    au < released ; 2007 ; Federal Register 2007 ; 2007 >
+    au < released ; 2008 ; Federal Register 2008 ; 2008 >
+    au < released ; 2009 ; Federal Register 2009 ; 2009 >
+    au < ready ; 2010 ; Federal Register 2010 ; 2010 >
+    au < released ; 2011 ; Federal Register 2011 ; 2011 >
+    au < manifest ; 2012 ; Federal Register 2012 ; 2012 >
 
-      au < released ; 1994 ; Federal Register 1994 ; 1994 >
-      au < testing ; 1995 ; Federal Register 1995 ; 1995 >
-      au < released ; 1996 ; Federal Register 1996 ; 1996 >
-      au < released ; 1997 ; Federal Register 1997 ; 1997 >
-      au < released ; 1998 ; Federal Register 1998 ; 1998 >
-      au < released ; 1999 ; Federal Register 1999 ; 1999 >
-      au < testing ; 2000 ; Federal Register 2000 ; 2000 >
-      au < released ; 2001 ; Federal Register 2001 ; 2001 >
-      au < released ; 2002 ; Federal Register 2002 ; 2002 >
-      au < released ; 2003 ; Federal Register 2003 ; 2003 >
-      au < released ; 2004 ; Federal Register 2004 ; 2004 >
-      au < testing ; 2005 ; Federal Register 2005 ; 2005 >
-      au < released ; 2006 ; Federal Register 2006 ; 2006 >
-      au < released ; 2007 ; Federal Register 2007 ; 2007 >
-      au < released ; 2008 ; Federal Register 2008 ; 2008 >
-      au < released ; 2009 ; Federal Register 2009 ; 2009 >
-      au < ready ; 2010 ; Federal Register 2010 ; 2010 >
-      au < released ; 2011 ; Federal Register 2011 ; 2011 >
-      au < manifest ; 2012 ; Federal Register 2012 ; 2012 >
-
-    }
-      
   }  
 
   {
@@ -627,10 +541,7 @@
       name = Government Accountability Office Reports and Comptroller General Decisions
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = GAOREPORTS
-    implicit < status ; year ; name ; param[year] >
 
     au < manifest ; 1993 ; Government Accountability Office Reports and Comptroller General Decisions 1993 ; 1993 >
     au < manifest ; 1994 ; Government Accountability Office Reports and Comptroller General Decisions 1994 ; 1994 >
@@ -657,10 +568,7 @@
       name = History of Bills
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = HOB
-    implicit < status ; year ; name ; param[year] >
 
     au < manifest ; 1983 ; History of Bills 1983 ; 1983 >
     au < manifest ; 1984 ; History of Bills 1984 ; 1984 >
@@ -701,23 +609,16 @@
       name = House Journal
     >
 
-    {
+    param[collection_id] = HJOURNAL
 
-      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-      param[base_url] = http://www.gpo.gov/
-      param[collection_id] = HJOURNAL
-      implicit < status ; year ; name ; param[year] >
-
-      au < manifest ; 1992 ; House Journal 1992 ; 1992 >
-      au < manifest ; 1993 ; House Journal 1993 ; 1993 >
-      au < manifest ; 1994 ; House Journal 1994 ; 1994 >
-      au < testing ; 1995 ; House Journal 1995 ; 1995 >
-      au < manifest ; 1996 ; House Journal 1996 ; 1996 >
-      au < manifest ; 1997 ; House Journal 1997 ; 1997 >
-      au < manifest ; 1998 ; House Journal 1998 ; 1998 >
-      au < testing ; 1999 ; House Journal 1999 ; 1999 >
-
-    }
+    au < manifest ; 1992 ; House Journal 1992 ; 1992 >
+    au < manifest ; 1993 ; House Journal 1993 ; 1993 >
+    au < manifest ; 1994 ; House Journal 1994 ; 1994 >
+    au < testing ; 1995 ; House Journal 1995 ; 1995 >
+    au < manifest ; 1996 ; House Journal 1996 ; 1996 >
+    au < manifest ; 1997 ; House Journal 1997 ; 1997 >
+    au < manifest ; 1998 ; House Journal 1998 ; 1998 >
+    au < testing ; 1999 ; House Journal 1999 ; 1999 >
 
   }
   
@@ -727,31 +628,25 @@
       name = House Rules and Manual
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = HMAN
-    implicit < status ; year ; name ; param[year] >
 
-    au < ready ; 1995 ; House Rules and Manual 1995 ; 1995 >
-    au < ready ; 1999 ; House Rules and Manual 1999 ; 1999 >
-    au < ready ; 2001 ; House Rules and Manual 2001 ; 2001 >
-    au < ready ; 2005 ; House Rules and Manual 2005 ; 2005 >
-    au < ready ; 2007 ; House Rules and Manual 2007 ; 2007 >
-    au < ready ; 2009 ; House Rules and Manual 2009 ; 2009 >
-    au < ready ; 2011 ; House Rules and Manual 2011 ; 2011 >
+    au < released ; 1995 ; House Rules and Manual 1995 ; 1995 >
+    au < released ; 1999 ; House Rules and Manual 1999 ; 1999 >
+    au < released ; 2001 ; House Rules and Manual 2001 ; 2001 >
+    au < released ; 2005 ; House Rules and Manual 2005 ; 2005 >
+    au < released ; 2007 ; House Rules and Manual 2007 ; 2007 >
+    au < released ; 2009 ; House Rules and Manual 2009 ; 2009 >
+    au < released ; 2011 ; House Rules and Manual 2011 ; 2011 >
       
   }
 
   {
 
-title <
+    title <
       name = Journal of the House of Representatives
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = HJOURNAL
-    implicit < status ; year ; name ; param[year] >
 
     au < manifest ; 1992 ; Journal of the House of Representatives 1992 ; 1992 >
     au < manifest ; 1993 ; Journal of the House of Representatives 1993 ; 1993 >
@@ -771,10 +666,7 @@ title <
       name = List of CFR Sections Affected
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = LSA
-    implicit < status ; year ; name ; param[year] >
 
     au < ready ; 1997 ; List of CFR Sections Affected 1997 ; 1997 >
     au < ready ; 1998 ; List of CFR Sections Affected 1998 ; 1998 >
@@ -801,17 +693,14 @@ title <
       name = Privacy Act Issuances
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = PAI
-    implicit < status ; year ; name ; param[year] >
 
-    au < ready ; 1995 ; Privacy Act Issuances 1995 ; 1995 >
-    au < ready ; 1997 ; Privacy Act Issuances 1997 ; 1997 >
-    au < ready ; 1999 ; Privacy Act Issuances 1999 ; 1999 >
-    au < ready ; 2001 ; Privacy Act Issuances 2001 ; 2001 >	
-    au < ready ; 2003 ; Privacy Act Issuances 2003 ; 2003 >
-    au < ready ; 2005 ; Privacy Act Issuances 2005 ; 2005 >
+    au < released ; 1995 ; Privacy Act Issuances 1995 ; 1995 >
+    au < released ; 1997 ; Privacy Act Issuances 1997 ; 1997 >
+    au < released ; 1999 ; Privacy Act Issuances 1999 ; 1999 >
+    au < released ; 2001 ; Privacy Act Issuances 2001 ; 2001 >	
+    au < released ; 2003 ; Privacy Act Issuances 2003 ; 2003 >
+    au < released ; 2005 ; Privacy Act Issuances 2005 ; 2005 >
 
   }
 
@@ -821,34 +710,27 @@ title <
       name = Public and Private Laws
     >
     
-    {
+    param[collection_id] = PLAW
 
-      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-      param[base_url] = http://www.gpo.gov/
-      param[collection_id] = PLAW
-      implicit < status ; year ; name ; param[year] >
+    au < ready ; 1995 ; Public and Private Laws 1995 ; 1995 >
+    au < ready ; 1996 ; Public and Private Laws 1996 ; 1996 >
+    au < ready ; 1997 ; Public and Private Laws 1997 ; 1997 >
+    au < ready ; 1998 ; Public and Private Laws 1998 ; 1998 >
+    au < ready ; 1999 ; Public and Private Laws 1999 ; 1999 >
+    au < ready ; 2000 ; Public and Private Laws 2000 ; 2000 >
+    au < ready ; 2001 ; Public and Private Laws 2001 ; 2001 >
+    au < ready ; 2002 ; Public and Private Laws 2002 ; 2002 >
+    au < ready ; 2003 ; Public and Private Laws 2003 ; 2003 >
+    au < ready ; 2004 ; Public and Private Laws 2004 ; 2004 >
+    au < ready ; 2005 ; Public and Private Laws 2005 ; 2005 >
+    au < manifest ; 2006 ; Public and Private Laws 2006 ; 2006 >
+    au < manifest ; 2007 ; Public and Private Laws 2007 ; 2007 >
+    au < manifest ; 2008 ; Public and Private Laws 2008 ; 2008 >
+    au < manifest ; 2009 ; Public and Private Laws 2009 ; 2009 >
+    au < testing ; 2010 ; Public and Private Laws 2010 ; 2010 >
+    au < testing ; 2011 ; Public and Private Laws 2011 ; 2011>
+    au < manifest ; 2012 ; Public and Private Laws 2012 ; 2012 >
 
-      au < ready ; 1995 ; Public and Private Laws 1995 ; 1995 >
-      au < ready ; 1996 ; Public and Private Laws 1996 ; 1996 >
-      au < ready ; 1997 ; Public and Private Laws 1997 ; 1997 >
-      au < ready ; 1998 ; Public and Private Laws 1998 ; 1998 >
-      au < ready ; 1999 ; Public and Private Laws 1999 ; 1999 >
-      au < ready ; 2000 ; Public and Private Laws 2000 ; 2000 >
-      au < ready ; 2001 ; Public and Private Laws 2001 ; 2001 >
-      au < ready ; 2002 ; Public and Private Laws 2002 ; 2002 >
-      au < ready ; 2003 ; Public and Private Laws 2003 ; 2003 >
-      au < ready ; 2004 ; Public and Private Laws 2004 ; 2004 >
-      au < ready ; 2005 ; Public and Private Laws 2005 ; 2005 >
-      au < manifest ; 2006 ; Public and Private Laws 2006 ; 2006 >
-      au < manifest ; 2007 ; Public and Private Laws 2007 ; 2007 >
-      au < manifest ; 2008 ; Public and Private Laws 2008 ; 2008 >
-      au < manifest ; 2009 ; Public and Private Laws 2009 ; 2009 >
-      au < testing ; 2010 ; Public and Private Laws 2010 ; 2010 >
-      au < testing ; 2011 ; Public and Private Laws 2011 ; 2011>
-      au < manifest ; 2012 ; Public and Private Laws 2012 ; 2012 >
-
-    }
-      
   }
   
   {
@@ -857,31 +739,24 @@ title <
       name = Public Papers of the Presidents of the United States
     >
 
-    {
+    param[collection_id] = PPP
 
-      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-      param[base_url] = http://www.gpo.gov/
-      param[collection_id] = PPP
-      implicit < status ; year ; name ; param[year] >
-
-      au < manifest ; 1991 ; Public Papers of the Presidents of the United States 1991 ; 1991 >
-      au < manifest ; 1992 ; Public Papers of the Presidents of the United States 1992 ; 1992 >
-      au < manifest ; 1993 ; Public Papers of the Presidents of the United States 1993 ; 1993 >
-      au < manifest ; 1994 ; Public Papers of the Presidents of the United States 1994 ; 1994 >
-      au < ready ; 1995 ; Public Papers of the Presidents of the United States 1995 ; 1995 >
-      au < manifest ; 1996 ; Public Papers of the Presidents of the United States 1996 ; 1996 >
-      au < manifest ; 1997 ; Public Papers of the Presidents of the United States 1997 ; 1997 >
-      au < manifest ; 1998 ; Public Papers of the Presidents of the United States 1998 ; 1998 >
-      au < manifest ; 1999 ; Public Papers of the Presidents of the United States 1999 ; 1999 >
-      au < testing ; 2000 ; Public Papers of the Presidents of the United States 2000 ; 2000 >
-      au < manifest ; 2001 ; Public Papers of the Presidents of the United States 2001 ; 2001 >
-      au < manifest ; 2002 ; Public Papers of the Presidents of the United States 2002 ; 2002 >
-      au < manifest ; 2003 ; Public Papers of the Presidents of the United States 2003 ; 2003 >
-      au < manifest ; 2004 ; Public Papers of the Presidents of the United States 2004 ; 2004 >
-      au < ready ; 2005 ; Public Papers of the Presidents of the United States 2005 ; 2005 >
-      au < testing ; 2006 ; Public Papers of the Presidents of the United States 2006 ; 2006 >
-
-    }
+    au < manifest ; 1991 ; Public Papers of the Presidents of the United States 1991 ; 1991 >
+    au < manifest ; 1992 ; Public Papers of the Presidents of the United States 1992 ; 1992 >
+    au < manifest ; 1993 ; Public Papers of the Presidents of the United States 1993 ; 1993 >
+    au < manifest ; 1994 ; Public Papers of the Presidents of the United States 1994 ; 1994 >
+    au < ready ; 1995 ; Public Papers of the Presidents of the United States 1995 ; 1995 >
+    au < manifest ; 1996 ; Public Papers of the Presidents of the United States 1996 ; 1996 >
+    au < manifest ; 1997 ; Public Papers of the Presidents of the United States 1997 ; 1997 >
+    au < manifest ; 1998 ; Public Papers of the Presidents of the United States 1998 ; 1998 >
+    au < manifest ; 1999 ; Public Papers of the Presidents of the United States 1999 ; 1999 >
+    au < testing ; 2000 ; Public Papers of the Presidents of the United States 2000 ; 2000 >
+    au < manifest ; 2001 ; Public Papers of the Presidents of the United States 2001 ; 2001 >
+    au < manifest ; 2002 ; Public Papers of the Presidents of the United States 2002 ; 2002 >
+    au < manifest ; 2003 ; Public Papers of the Presidents of the United States 2003 ; 2003 >
+    au < manifest ; 2004 ; Public Papers of the Presidents of the United States 2004 ; 2004 >
+    au < ready ; 2005 ; Public Papers of the Presidents of the United States 2005 ; 2005 >
+    au < testing ; 2006 ; Public Papers of the Presidents of the United States 2006 ; 2006 >
 
   }
 
@@ -891,10 +766,7 @@ title <
       name = Senate Manual
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = SMAN
-    implicit < status ; year ; name ; param[year] >
 
     au < manifest ; 1996 ; Senate Manual 1996 ; 1996 >
     au < ready ; 2000 ; Senate Manual 2000 ; 2000 >
@@ -909,10 +781,7 @@ title <
       name = United States Code
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = USCODE
-    implicit < status ; year ; name ; param[year] >
 
     au < released ; 1994 ; United States Code 1994 ; 1994 >
     au < released ; 1995 ; United States Code 1995 ; 1995 >
@@ -939,10 +808,7 @@ title <
       name = United States Courts
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = USCOURTS
-    implicit < status ; year ; name ; param[year] >
 
     au < manifest ; 2004 ; United States Courts 2004 ; 2004 >
     au < testing ; 2005 ; United States Courts 2005 ; 2005 >
@@ -962,32 +828,25 @@ title <
       name = United States Government Manual
     >
 
-    {
+    param[collection_id] = GOVMAN
 
-      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-      param[base_url] = http://www.gpo.gov/
-      param[collection_id] = GOVMAN
-      implicit < status ; year ; name ; param[year] >
-
-      au < ready ; 1995 ; United States Government Manual 1995 ; 1995 >
-      au < ready ; 1996 ; United States Government Manual 1996 ; 1996 >
-      au < ready ; 1997 ; United States Government Manual 1997 ; 1997 >
-      au < ready ; 1998 ; United States Government Manual 1998 ; 1998 >
-      au < ready ; 1999 ; United States Government Manual 1999 ; 1999 >
-      au < ready ; 2000 ; United States Government Manual 2000 ; 2000 >
-      au < ready ; 2001 ; United States Government Manual 2001 ; 2001 >
-      au < ready ; 2002 ; United States Government Manual 2002 ; 2002 >
-      au < ready ; 2003 ; United States Government Manual 2003 ; 2003 >
-      au < ready ; 2004 ; United States Government Manual 2004 ; 2004 >
-      au < ready ; 2005 ; United States Government Manual 2005 ; 2005 >
-      au < manifest ; 2006 ; United States Government Manual 2006 ; 2006 >
-      au < manifest ; 2007 ; United States Government Manual 2007 ; 2007 >
-      au < manifest ; 2008 ; United States Government Manual 2008 ; 2008 >
-      au < manifest ; 2009 ; United States Government Manual 2009 ; 2009 >
-      au < doesNotExist ; 2010 ; United States Government Manual 2010 ; 2010 >
-      au < testing ; 2011 ; United States Government Manual 2011 ; 2011 >
-
-    }
+    au < ready ; 1995 ; United States Government Manual 1995 ; 1995 >
+    au < ready ; 1996 ; United States Government Manual 1996 ; 1996 >
+    au < ready ; 1997 ; United States Government Manual 1997 ; 1997 >
+    au < ready ; 1998 ; United States Government Manual 1998 ; 1998 >
+    au < ready ; 1999 ; United States Government Manual 1999 ; 1999 >
+    au < ready ; 2000 ; United States Government Manual 2000 ; 2000 >
+    au < ready ; 2001 ; United States Government Manual 2001 ; 2001 >
+    au < ready ; 2002 ; United States Government Manual 2002 ; 2002 >
+    au < ready ; 2003 ; United States Government Manual 2003 ; 2003 >
+    au < ready ; 2004 ; United States Government Manual 2004 ; 2004 >
+    au < ready ; 2005 ; United States Government Manual 2005 ; 2005 >
+    au < manifest ; 2006 ; United States Government Manual 2006 ; 2006 >
+    au < manifest ; 2007 ; United States Government Manual 2007 ; 2007 >
+    au < manifest ; 2008 ; United States Government Manual 2008 ; 2008 >
+    au < manifest ; 2009 ; United States Government Manual 2009 ; 2009 >
+    au < doesNotExist ; 2010 ; United States Government Manual 2010 ; 2010 >
+    au < testing ; 2011 ; United States Government Manual 2011 ; 2011 >
 
   }
 
@@ -997,10 +856,7 @@ title <
       name = United States Statutes at Large
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = STATUTE
-    implicit < status ; year ; name ; param[year] >
 
     au < manifest ; 1951 ; United States Statutes at Large 1951 ; 1951 >
     au < manifest ; 1952 ; United States Statutes at Large 1952 ; 1952 >
@@ -1067,10 +923,7 @@ title <
       name = Weekly Compilation of Presidential Documents
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-    param[base_url] = http://www.gpo.gov/
     param[collection_id] = WCPD
-    implicit < status ; year ; name ; param[year] >
 
     au < manifest ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; 1993 >
     au < manifest ; 1994 ; Weekly Compilation of Presidential Documents 1994 ; 1994 >
