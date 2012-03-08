@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -26,5 +26,39 @@
   <entry>
     <string>au_name</string>
     <string>&quot;Wiley Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%s%d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>&quot;%s%d&quot;, base_url, year</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_archive_file_types</string>
+    <string>standard</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.wiley.WileyArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.wiley.WileyMetadataExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.wiley.WileyMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
 </map>
