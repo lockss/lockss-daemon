@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -27,4 +27,33 @@
     <string>au_name</string>
     <string>&quot;Springer Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
-</map>
+  <entry>
+    <string>plugin_archive_file_types</string>
+    <string>standard</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>2,&quot;^%s%d/.*ftp_PUB_10-05-17_06-11-02.zip$&quot;, base_url, year</string>
+      <string>1,&quot;^%s%d/&quot;, base_url, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.springer.SpringerSourceArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.springer.SpringerSourceArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.springer.SpringerSourceMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>    
