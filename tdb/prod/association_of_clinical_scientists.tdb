@@ -13,7 +13,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.annclinlabsci.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -54,6 +54,9 @@
       au < exists ; 2007 ; Annals of Clinical & Laboratory Science Volume 37 ; 37 >
       au < exists ; 2008 ; Annals of Clinical & Laboratory Science Volume 38 ; 38 >
       au < exists ; 2009 ; Annals of Clinical & Laboratory Science Volume 39 ; 39 >
+      au < exists ; 2010 ; Annals of Clinical & Laboratory Science Volume 40 ; 40 >
+      au < expected ; 2011 ; Annals of Clinical & Laboratory Science Volume 41 ; 41 >
+      au < expected ; 2012 ; Annals of Clinical & Laboratory Science Volume 42 ; 42 >
 
     }
 
