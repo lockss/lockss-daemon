@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerSourceMetadataExtractorFactory.java,v 1.1 2012-03-08 01:54:09 dylanrhodes Exp $
+ * $Id: SpringerSourceMetadataExtractorFactory.java,v 1.2 2012-03-09 00:00:54 dylanrhodes Exp $
  */
 
 /*
@@ -130,7 +130,7 @@ public class SpringerSourceMetadataExtractorFactory
 	      nodeMap.put("/Publisher/Journal/JournalTitle", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/Publisher/Journal/Volume/VolumeInfo/VolumeIDStart", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueIDStart", XmlDomMetadataExtractor.TEXT_VALUE);
-	      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/OnlineDate", DATE_VALUE);
+	      nodeMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueHistory/CoverDate", DATE_VALUE);
 	      nodeMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueCopyright/CopyrightYear", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleDOI", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleTitle/@Language", XmlDomMetadataExtractor.TEXT_VALUE);
@@ -151,7 +151,7 @@ public class SpringerSourceMetadataExtractorFactory
 	      xpathMap.put("/Publisher/Journal/JournalTitle", MetadataField.FIELD_JOURNAL_TITLE);
 	      xpathMap.put("/Publisher/Journal/Volume/VolumeInfo/VolumeIDStart", MetadataField.FIELD_VOLUME);
 	      xpathMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueIDStart", MetadataField.FIELD_ISSUE);
-	      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/OnlineDate", MetadataField.FIELD_DATE);
+	      xpathMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueHistory/CoverDate", MetadataField.FIELD_DATE);
 	      xpathMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueCopyright/CopyrightYear", MetadataField.DC_FIELD_RIGHTS);
 	      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleDOI", MetadataField.FIELD_DOI);
 	      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleTitle/@Language", MetadataField.DC_FIELD_LANGUAGE);

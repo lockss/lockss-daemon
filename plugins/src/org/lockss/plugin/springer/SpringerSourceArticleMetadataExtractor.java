@@ -29,7 +29,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.springer;
 
 import java.io.IOException;
-import java.util.HashSet;
 
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
@@ -65,8 +64,6 @@ public class SpringerSourceArticleMetadataExtractor implements ArticleMetadataEx
 			throws IOException, PluginException {
 		if(emit == null)
 			emit = new SpringerEmitter(af,emitter);
-		if(emit.hasEmitted(af.getFullTextUrl()))
-			return;
 		
 		CachedUrl cu = af.getFullTextCu();
 		FileMetadataExtractor me = null;
@@ -114,29 +111,19 @@ public class SpringerSourceArticleMetadataExtractor implements ArticleMetadataEx
 	class SpringerEmitter implements FileMetadataExtractor.Emitter {
 	    private Emitter parent;
 	    private ArticleFiles af;
-	    private HashSet<String> collectedArticles;
 
 	    SpringerEmitter(ArticleFiles af, Emitter parent) {
 	      this.af = af;
 	      this.parent = parent;
-	      collectedArticles = new HashSet<String>();
 	    }
 
 	    public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
-	    	if(collectedArticles.contains(cu.getUrl()))
-	    		return;
-	    	collectedArticles.add(cu.getUrl());
 	      addAccessUrl(am, cu);
 	      parent.emitMetadata(af, am);
 	    }
 
 	    void setParentEmitter(Emitter parent) {
 	      this.parent = parent;
-	    }
-	    
-	    public boolean hasEmitted(String url)
-	    {
-	    	return collectedArticles.contains(url);
 	    }
 	  }
 }

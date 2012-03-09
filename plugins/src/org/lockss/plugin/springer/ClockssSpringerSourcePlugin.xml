@@ -41,14 +41,6 @@
     <string>standard</string>
   </entry>
   <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>2,&quot;^%s%d/.*ftp_PUB_10-05-17_06-11-02.zip$&quot;, base_url, year</string>
-      <string>1,&quot;^%s%d/&quot;, base_url, year</string>
-    </list>
-  </entry>
-  <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.springer.SpringerSourceArticleIteratorFactory</string>
   </entry>
