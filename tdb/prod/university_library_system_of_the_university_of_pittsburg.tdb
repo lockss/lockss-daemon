@@ -9,6 +9,19 @@
 
     {
       title <
+        name = BIBLIOS: Librarianship and Information Science Journal ;
+        eissn = 1562-4730
+      >
+
+      param[base_url] = http://biblios.pitt.edu/ojs/
+      param[journal_id] = biblios
+
+      au < exists ; 2011 ; BIBLIOS: Librarianship and Information Science Journal Volume 2011 ; 2011 ; 2011 >
+
+    }
+
+    {
+      title <
         name = Bolivian Studies Journal ;
         issn = 1074-2247 ;
         eissn = 2156-5163
@@ -18,6 +31,65 @@
       param[journal_id] = bsj
 
       au < released ; 2008-2010 ; Bolivian Studies Journal Volume 15-17 ; 2010 ; 15-17 >
+
+    }
+
+    {
+      title <
+        name = CINEJ Cinema e-Journal ;
+        issn = 2159-2411 ;
+        eissn = 2158-8724
+      >
+
+      param[base_url] = http://cinej.pitt.edu/ojs/
+      param[journal_id] = cinej
+
+      au < exists ; 2011 ; CINEJ Cinema e-Journal Volume 1 ; 2011 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Contemporaneity: Historical Presence in Visual Culture ;
+        eissn = 2153-5914
+      >
+
+      param[base_url] = http://contemporaneity.pitt.edu/ojs/
+      param[journal_id] = contemporaneity
+
+      au < exists ; 2011 ; Contemporaneity: Historical Presence in Visual Culture Volume 1 ; 2011 ; 1 >
+
+    }
+
+    {
+      title <
+        name = EMAJ: Emerging Markets e-Journal of Management ;
+        issn = 2159-242X ;
+        eissn = 2158-8708
+      >
+
+      param[base_url] = http://emaj.pitt.edu/ojs/
+      param[journal_id] = emaj
+
+      comment[notATypo] = Volume 1 is split over 2011 and 2012
+      
+      au < exists ; 2011 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 ; 2011 ; 1 >
+      au < exists ; 2012 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 ; 2012 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Ethnology ;
+        issn = 0014-1828 
+      >
+
+      param[base_url] = http://ethnology.pitt.edu/ojs/
+      param[journal_id] = Ethnology
+
+      au < exists ; 2008 ; Ethnology Volume 47 ; 2008 ; 47 >
+      au < exists ; 2009 ; Ethnology Volume 48 ; 2009 ; 48 >
+      au < exists ; 2010 ; Ethnology Volume 49 ; 2010 ; 49 >
 
     }
 
