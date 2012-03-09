@@ -15952,7 +15952,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Child Health Care Volume 13 ; 13 ; >
       au < released ; crawling ; 2010 ; Journal of Child Health Care Volume 14 ; 14 ;  >
       au < released ; crawling ; 2011 ; Journal of Child Health Care Volume 15 ; 15 ; >
-      au < expected ; exists ; 2012 ; Journal of Child Health Care Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2012 ; Journal of Child Health Care Volume 16 ; 16 ; >
 
     }
 
@@ -18264,7 +18264,8 @@
       au < manifest ; exists ; 2008-2009 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 6 ; 6 ; >
       au < manifest ; exists ; 2009-2010 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 7 ; 7 ; >
       au < released ; crawling ; 2010-2011 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 8 ; 8 ; >
-      au < exists ; exists ; 2011-2012 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2011-2012 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 9 ; 9 ; >
+      au < expected ; exists ; 2012-2013 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 10 ; 10 ; >
 
     }
 
@@ -27404,32 +27405,32 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1983 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 197 ; 197 ; >
-      au < exists ; exists ; 1984 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 198 ; 198 ; >
-      au < exists ; exists ; 1985 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 199 ; 199 ; >
-      au < exists ; exists ; 1986 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 200 ; 200 ; >
-      au < exists ; exists ; 1987 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 201 ; 201 ; >
-      au < exists ; exists ; 1988 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 202 ; 202 ; >
-      au < exists ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 203 ; 203 ; >
-      au < exists ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 204 ; 204 ; >
-      au < exists ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 205 ; 205 ; >
-      au < exists ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 206 ; 206 ; >
-      au < exists ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 207 ; 207 ; >
-      au < exists ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 208 ; 208 ; >
-      au < exists ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 209 ; 209 ; >
-      au < exists ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 210 ; 210 ; >
-      au < exists ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 211 ; 211 ; >
-      au < exists ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 212 ; 212 ; >
-      au < exists ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 213 ; 213 ; >
-      au < exists ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 214 ; 214 ; >
-      au < exists ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 215 ; 215 ; >
-      au < exists ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 216 ; 216 ; >
-      au < exists ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 217 ; 217 ; >
-      au < exists ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 218 ; 218 ; >
-      au < exists ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 219 ; 219 ; >
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 221 ; 221 ; >
-      au < exists ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 222 ; 222 ; >
+      au < manifest ; exists ; 1983 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 197 ; 197 ; >
+      au < manifest ; exists ; 1984 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 198 ; 198 ; >
+      au < manifest ; exists ; 1985 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 199 ; 199 ; >
+      au < manifest ; exists ; 1986 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 200 ; 200 ; >
+      au < manifest ; exists ; 1987 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 201 ; 201 ; >
+      au < manifest ; exists ; 1988 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 202 ; 202 ; >
+      au < manifest ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 203 ; 203 ; >
+      au < manifest ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 204 ; 204 ; >
+      au < manifest ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 205 ; 205 ; >
+      au < manifest ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 206 ; 206 ; >
+      au < manifest ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 207 ; 207 ; >
+      au < manifest ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 208 ; 208 ; >
+      au < manifest ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 209 ; 209 ; >
+      au < manifest ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 210 ; 210 ; >
+      au < manifest ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 211 ; 211 ; >
+      au < manifest ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 212 ; 212 ; >
+      au < manifest ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 213 ; 213 ; >
+      au < manifest ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 214 ; 214 ; >
+      au < manifest ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 215 ; 215 ; >
+      au < manifest ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 221 ; 221 ; >
+      au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 222 ; 222 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 222 ; 222 ; >
       au < manifest ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 223 ; 223 ; >
       au < manifest ; exists ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 224 ; 224 ; >
@@ -27454,30 +27455,30 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1984 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 198 ; 198 ; >
-      au < exists ; exists ; 1985 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 199 ; 199 ; >
-      au < exists ; exists ; 1986 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 200 ; 200 ; >
-      au < exists ; exists ; 1987 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 201 ; 201 ; >
-      au < exists ; exists ; 1988 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 202 ; 202 ; >
-      au < exists ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 203 ; 203 ; >
-      au < exists ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 204 ; 204 ; >
-      au < exists ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 205 ; 205 ; >
-      au < exists ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 206 ; 206 ; >
-      au < exists ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 207 ; 207 ; >
-      au < exists ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 208 ; 208 ; >
-      au < exists ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 209 ; 209 ; >
-      au < exists ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 210 ; 210 ; >
-      au < exists ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 211 ; 211 ; >
-      au < exists ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 212 ; 212 ; >
-      au < exists ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 213 ; 213 ; >
-      au < exists ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 214 ; 214 ; >
-      au < exists ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 215 ; 215 ; >
-      au < exists ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 216 ; 216 ; >
-      au < exists ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 217 ; 217 ; >
-      au < exists ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 218 ; 218 ; >
-      au < exists ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 219 ; 219 ; >
-      au < exists ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 220 ; 220 ; >
-      au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 221 ; 221 ; >
+      au < manifest ; exists ; 1984 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 198 ; 198 ; >
+      au < manifest ; exists ; 1985 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 199 ; 199 ; >
+      au < manifest ; exists ; 1986 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 200 ; 200 ; >
+      au < manifest ; exists ; 1987 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 201 ; 201 ; >
+      au < manifest ; exists ; 1988 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 202 ; 202 ; >
+      au < manifest ; exists ; 1989 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 203 ; 203 ; >
+      au < manifest ; exists ; 1990 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 204 ; 204 ; >
+      au < manifest ; exists ; 1991 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 205 ; 205 ; >
+      au < manifest ; exists ; 1992 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 206 ; 206 ; >
+      au < manifest ; exists ; 1993 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 207 ; 207 ; >
+      au < manifest ; exists ; 1994 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 208 ; 208 ; >
+      au < manifest ; exists ; 1995 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 209 ; 209 ; >
+      au < manifest ; exists ; 1996 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 210 ; 210 ; >
+      au < manifest ; exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 211 ; 211 ; >
+      au < manifest ; exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 212 ; 212 ; >
+      au < manifest ; exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 213 ; 213 ; >
+      au < manifest ; exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 214 ; 214 ; >
+      au < manifest ; exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 215 ; 215 ; >
+      au < manifest ; exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 222 ; 222 ; >
       au < manifest ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 223 ; 223 ; >
       au < manifest ; exists ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 224 ; 224 ; >
@@ -28175,7 +28176,7 @@
       au < manifest ; exists ; 2009 ; Psychological Science in the Public Interest Volume 10 ; 10 ; >
       au < manifest ; exists ; 2010 ; Psychological Science in the Public Interest Volume 11 ; 11 ; >
       au < released ; crawling ; 2011 ; Psychological Science in the Public Interest Volume 12 ; 12 ; >
-      au < expected ; exists ; 2012 ; Psychological Science in the Public Interest Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2012 ; Psychological Science in the Public Interest Volume 13 ; 13 ; >
 
     }
 
@@ -29524,7 +29525,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Review of Educational Research Volume 79 ; 79 ; >
       au < manifest ; exists ; 2010 ; Review of Educational Research Volume 80 ; 80 ;  >
       au < released ; crawling ; 2011 ; Review of Educational Research Volume 81 ; 81 ; >
-      au < expected ; exists ; 2012 ; Review of Educational Research Volume 82 ; 82 ; >
+      au < manifest ; exists ; 2012 ; Review of Educational Research Volume 82 ; 82 ; >
 
     }
 
@@ -30325,7 +30326,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Sexual Abuse: A Journal of Research and Treatment Volume 21 ; 21 ; >
       au < manifest ; exists ; 2010 ; Sexual Abuse: A Journal of Research and Treatment Volume 22 ; 22 ;  >
       au < released ; crawling ; 2011 ; Sexual Abuse: A Journal of Research and Treatment Volume 23 ; 23 ; >
-      au < expected ; exists ; 2012 ; Sexual Abuse: A Journal of Research and Treatment Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2012 ; Sexual Abuse: A Journal of Research and Treatment Volume 24 ; 24 ; >
 
     }
 
@@ -30558,7 +30559,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Simulation & Gaming Volume 40 ; 40 ; >
       au < manifest ; exists ; 2010 ; Simulation & Gaming Volume 41 ; 41 ;  >
       au < released ; crawling ; 2011 ; Simulation & Gaming Volume 42 ; 42 ; >
-      au < expected ; exists ; 2012 ; Simulation & Gaming Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2012 ; Simulation & Gaming Volume 43 ; 43 ; >
 
     }
 
@@ -32645,7 +32646,7 @@
 
       au < manifest ; exists ; 2010 ; Therapeutic Advances in Endocrinology and Metabolism Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Therapeutic Advances in Endocrinology and Metabolism Volume 2 ; 2 ; >
-      au < expected ; exists ; 2012 ; Therapeutic Advances in Endocrinology and Metabolism Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2012 ; Therapeutic Advances in Endocrinology and Metabolism Volume 3 ; 3 ; >
 
     }
 
