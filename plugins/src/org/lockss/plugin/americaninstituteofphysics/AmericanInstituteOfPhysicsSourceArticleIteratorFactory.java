@@ -39,7 +39,7 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class AmericanInstituteOfPhysicsArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class AmericanInstituteOfPhysicsSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
   protected static Logger log = Logger.getLogger("AIPArticleIteratorFactory");
   

@@ -42,18 +42,18 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.americaninstituteofphysics.AmericanInstituteOfPhysicsArticleIteratorFactory</string>
+    <string>org.lockss.plugin.americaninstituteofphysics.AmericanInstituteOfPhysicsSourceArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.americaninstituteofphysics.AmericanInstituteOfPhysicsArticleIteratorFactory</string>
+    <string>org.lockss.plugin.americaninstituteofphysics.AmericanInstituteOfPhysicsSourceArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>application/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
       	<string>*</string>
-        <string>org.lockss.plugin.americaninstituteofphysics.AmericanInstituteOfPhysicsMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.americaninstituteofphysics.AmericanInstituteOfPhysicsSourceMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
