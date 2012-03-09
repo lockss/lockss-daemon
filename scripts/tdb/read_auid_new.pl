@@ -199,8 +199,9 @@ while (my $line = <>) {
     if ($man_contents =~ m/<title>(.*) LOCKSS Manifest Page<\/title>/si) {
         $vol_title = $1;
         $vol_title =~ s/\s*\n\s*/ /g;
+        $vol_title =~ s/2012/Volume $param{volume_name}/g;
         if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-      $vol_title = "\"" . $vol_title . "\"";
+          $vol_title = "\"" . $vol_title . "\"";
         }
     } 
     $result = "Manifest";
@@ -224,8 +225,9 @@ while (my $line = <>) {
     if ($man_contents =~ m/<title>(.*) CLOCKSS Manifest Page<\/title>/si) {
         $vol_title = $1;
         $vol_title =~ s/\s*\n\s*/ /g;
+        $vol_title =~ s/2012/Volume $param{volume_name}/g;
         if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-      $vol_title = "\"" . $vol_title . "\"";
+          $vol_title = "\"" . $vol_title . "\"";
         }
     } 
     $result = "Manifest";
