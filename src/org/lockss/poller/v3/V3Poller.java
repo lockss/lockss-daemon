@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.112 2012-03-09 20:51:45 barry409 Exp $
+ * $Id: V3Poller.java,v 1.113 2012-03-09 21:17:55 barry409 Exp $
  */
 
 /*
@@ -1156,6 +1156,7 @@ public class V3Poller extends BasePoll {
     log.debug3("tallyPollerUrl: "+pollerUrl);
     BlockTally tally = urlTallier.tallyPollerUrl(pollerUrl, hashBlock);
     updateUserData(tally);
+    signalNodeAgreement(tally, pollerUrl);
     checkTally(tally, pollerUrl);
     return tally;
   }
@@ -1169,6 +1170,28 @@ public class V3Poller extends BasePoll {
     }
     for (PeerIdentity peerId: tally.getAgreeVoters()) {
       getParticipant(peerId).incrementAgreedBlocks();
+    }
+  }
+
+  /**
+   * <p>Update the node agreement history for the URL.</p>
+   *
+   * @param tally The tally containing votes.
+   * @param url The target URL.
+   */
+  private void signalNodeAgreement(BlockTally tally, String url) {
+    if (tally.getAgreeVoters().size() > 0) {
+      try {
+        RepositoryNode node = AuUtil.getRepositoryNode(getAu(), url);
+        if (node == null) {
+	  // CR: throw new ShouldNotHappenException();
+	} else {
+          node.signalAgreement(tally.getAgreeVoters());
+	}
+      } catch (MalformedURLException ex) {
+        log.error("Malformed URL while updating agreement history: " 
+                  + url);
+      }
     }
   }
 
@@ -1190,23 +1213,6 @@ public class V3Poller extends BasePoll {
       tally.getTallyResult(pollerState.getQuorum(),
 			   pollerState.getVoteMargin());
     PollerStateBean.TallyStatus tallyStatus = pollerState.getTallyStatus();
-    
-    // If there are any agreeing peers, update our agreement
-    // history for them.
-    
-    if (tally.getAgreeVoters().size() > 0) {
-      try {
-        RepositoryNode node = AuUtil.getRepositoryNode(getAu(), url);
-        if (node != null) {
-	  // "agree" can also mean neither the poller nor the voter
-	  // had the URL, so this isn't unexpected.
-          node.signalAgreement(tally.getAgreeVoters());
-	}
-      } catch (MalformedURLException ex) {
-        log.error("Malformed URL while updating agreement history: " 
-                  + url);
-      }
-    }
 
     // Have now counted agreement in tally and recorded per-file agreement.
     // Check tally only for quorate polls
@@ -1569,6 +1575,7 @@ public class V3Poller extends BasePoll {
 	  // pre-repair tally. Results of a repair do not change the
 	  // ParticipantUserData.
 	  setStatus(V3Poller.POLLER_STATUS_TALLYING);
+	  signalNodeAgreement(tally, url);
 	  BlockTally.Result result = checkTally(tally, url);
 	  log.debug3("After-vote hash tally for repaired block " + url
 		     + ": " + result.printString);
