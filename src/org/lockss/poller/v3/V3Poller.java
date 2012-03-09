@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.111 2012-01-31 06:04:18 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.112 2012-03-09 20:51:45 barry409 Exp $
  */
 
 /*
@@ -1139,7 +1139,7 @@ public class V3Poller extends BasePoll {
   private void tallyVoterUrl(String voterUrl) {
     log.debug3("tallyVoterUrl: "+voterUrl);
     BlockTally tally = urlTallier.tallyVoterUrl(voterUrl);
-    updateUserDataVoterUrl(tally);
+    updateUserData(tally);
     checkTally(tally, voterUrl);
   }
 
@@ -1155,35 +1155,20 @@ public class V3Poller extends BasePoll {
   private BlockTally tallyPollerUrl(String pollerUrl, HashBlock hashBlock) {
     log.debug3("tallyPollerUrl: "+pollerUrl);
     BlockTally tally = urlTallier.tallyPollerUrl(pollerUrl, hashBlock);
-    updateUserDataPollerUrl(tally);
+    updateUserData(tally);
     checkTally(tally, pollerUrl);
     return tally;
   }
 
   /**
-   * Update the all the votes in the tally for a voter-only URL.
+   * Update the user data for all the votes in the tally.
    */
-  private void updateUserDataVoterUrl(BlockTally tally) {
-    // Since the poller does not have the URL, it's in the union of
-    // the poller and a participant iff the participant has it.
-    // NOTE: There are "agree" votes in the tally for voters who also
-    // didn't have this URL, but since neither the poller nor the
-    // voter had it, don't increment anything.
-    for (PeerIdentity peerId: tally.getDisagreeVoters()) {
+  private void updateUserData(BlockTally tally) {
+    for (PeerIdentity peerId: tally.getTalliedVoters()) {
       getParticipant(peerId).incrementTalliedBlocks();
     }
-  }
-
-  /**
-   * Update the all the votes in the tally for a URL known to the poller.
-   */
-  private void updateUserDataPollerUrl(BlockTally tally) {
     for (PeerIdentity peerId: tally.getAgreeVoters()) {
-      getParticipant(peerId).incrementTalliedBlocks();
       getParticipant(peerId).incrementAgreedBlocks();
-    }
-    for (PeerIdentity peerId: tally.getDisagreeVoters()) {
-      getParticipant(peerId).incrementTalliedBlocks();
     }
   }
 
@@ -1213,6 +1198,8 @@ public class V3Poller extends BasePoll {
       try {
         RepositoryNode node = AuUtil.getRepositoryNode(getAu(), url);
         if (node != null) {
+	  // "agree" can also mean neither the poller nor the voter
+	  // had the URL, so this isn't unexpected.
           node.signalAgreement(tally.getAgreeVoters());
 	}
       } catch (MalformedURLException ex) {

@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.19 2012-03-09 19:24:43 barry409 Exp $
+ * $Id: BlockTally.java,v 1.20 2012-03-09 20:51:45 barry409 Exp $
  */
 
 /*
@@ -81,12 +81,21 @@ public class BlockTally {
 
   private static final Logger log = Logger.getLogger("BlockTally");
 
+  // Also used for testing.
+  BlockTally(HashBlockComparer comparer) {
+    this.comparer = comparer;
+  }
+
   public BlockTally() {
-    this.comparer = null;
+    this((HashBlockComparer)null);
   }
 
   public BlockTally(HashBlock hashBlock) {
-    this.comparer = new HashBlockComparer(hashBlock);
+    this(new HashBlockComparerImpl(hashBlock));
+  }
+
+  private boolean pollerHas() {
+    return comparer != null;
   }
 
   public Result getTallyResult(int quorum, int voteMargin) {
@@ -118,7 +127,7 @@ public class BlockTally {
   }
 
   public void vote(VoteBlock voteBlock, PeerIdentity id, int participantIndex) {
-    if (comparer != null) {
+    if (pollerHas()) {
       if (comparer.compare(voteBlock, participantIndex)) {
 	log.debug3(id+"  agreed");
 	addAgreeVoter(id);
@@ -134,7 +143,7 @@ public class BlockTally {
 
   public void voteMissing(PeerIdentity id) {
     log.debug3(id+"  didn't have");
-    if (comparer != null) {
+    if (pollerHas()) {
       addPollerOnlyBlockVoter(id);
     } else {
       // The poller and this voter both do not have the URL, so
@@ -179,6 +188,28 @@ public class BlockTally {
     return voterOnlyBlockVoters;
   }
 
+  /**
+   * @return All of the non-spoiled voters.
+   */
+  public Collection<PeerIdentity> getTalliedVoters() {
+    Collection<PeerIdentity> tallied = new ArrayList(agreeVoters);
+    tallied.addAll(disagreeVoters);
+    return Collections.unmodifiableCollection(tallied);
+  }
+
+  /**
+   * @return The subset of the voters who agree on at least one
+   * version with the poller.
+   */
+  public Collection<PeerIdentity> getVersionAgreedVoters() {
+    if (pollerHas()) {
+      return Collections.unmodifiableCollection(agreeVoters);
+    } else {
+      // If the poller didn't have it, nobody agreed on a version.
+      return Collections.EMPTY_LIST;
+    }
+  }
+
   boolean isWithinMargin(int voteMargin) {
     int numAgree = agreeVoters.size();
     int numDisagree = disagreeVoters.size();
@@ -198,18 +229,22 @@ public class BlockTally {
   }
 
 
+  static interface HashBlockComparer {
+    public boolean compare(VoteBlock voteBlock, int participantIndex);
+  }
+
   /**
    * <p>Encapsulate the comparing of {@link HashBlock} and {@link
    * VoteBlock} objects.</p>
    */
-  static class HashBlockComparer {
+  static class HashBlockComparerImpl implements HashBlockComparer {
     private final HashBlock.Version[] hbVersions;
 
     /**
      * <p>Create a {@link HashBlockComparer} for the given {@link
      * HashBlock}.</p>
      */
-    HashBlockComparer(HashBlock hashBlock) {
+    HashBlockComparerImpl(HashBlock hashBlock) {
       hbVersions = hashBlock.getVersions();
       for (int versionIndex = 0; versionIndex < hbVersions.length;
 	   versionIndex++) {
@@ -230,7 +265,7 @@ public class BlockTally {
      * any version of the poller's expected hashes for that
      * participant.
      */
-    boolean compare(VoteBlock voteBlock, int participantIndex) {
+    public boolean compare(VoteBlock voteBlock, int participantIndex) {
       // Note: At worst, n*m byte[] compares to notice a non-match. In
       // reality: "versioned voting" needs to be improved, and the
       // "any match of any version" condition needs to be refined.
