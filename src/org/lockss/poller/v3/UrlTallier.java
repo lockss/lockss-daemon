@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.3 2011-12-16 19:14:09 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.4 2012-03-09 19:24:43 barry409 Exp $
  */
 
 /*
@@ -271,21 +271,9 @@ final class UrlTallier {
 					 peekUrl()+" not "+url);
     }
 
+    log.debug3("tallyVoterUrl: "+url);
     BlockTally tally = new BlockTally();
-    for (Entry e : participantsList) {
-      if (e.voteSpoiled()) {
-	// Don't vote
-      } else {
-	if (url.equals(e.getUrl())) {
-	  nextVoteBlock(e);
-	  tally.addVoterOnlyBlockVoter(e.userData.getVoterId());
-	} else {
-	  // The poller and this voter both do not have the URL, so
-	  // tally is "agree".
-	  tally.addAgreeVoter(e.userData.getVoterId());
-	}
-      }
-    }
+    voteAllParticipants(url, tally);
     return tally;
   }
 
@@ -307,36 +295,28 @@ final class UrlTallier {
 					 " comes before "+url);
     }
 
-    BlockTally tally = new BlockTally();
-    HashBlockComparer comparer = new HashBlockComparer(hashBlock);
     log.debug3("tallyPollerUrl: "+url);
+    BlockTally tally = new BlockTally(hashBlock);
+    voteAllParticipants(url, tally);
+    return tally;
+  }
+
+  void voteAllParticipants(String url, BlockTally tally) {
     for (int participantIndex = 0; participantIndex < participantsList.size();
 	 participantIndex++) {
       Entry e = participantsList.get(participantIndex);
-      String voterLog = "Voter "+e.userData;
-      // todo(bhayes): How should spoiled votes be counted?
-      // Should this abort the poll?
       if (e.voteSpoiled()) {
-	// Don't vote
-	log.debug3(voterLog+"  spoiled");
+	tally.voteSpoiled(e.userData.getVoterId());
       } else {
 	if (url.equals(e.getUrl())) {
 	  VoteBlock voteBlock = e.voteBlock;
 	  nextVoteBlock(e);
-	  if (comparer.compare(voteBlock, participantIndex)) {
-	    log.debug3(voterLog+"  agreed");
-	    tally.addAgreeVoter(e.userData.getVoterId());
-	  } else {
-	    log.debug3(voterLog+"  disagreed");
-	    tally.addDisagreeVoter(e.userData.getVoterId());
-	  }
+	  tally.vote(voteBlock, e.userData.getVoterId(), participantIndex);
 	} else {
-	  log.debug3(voterLog+"  didn't have");
-	  tally.addPollerOnlyBlockVoter(e.userData.getVoterId());
+	  tally.voteMissing(e.userData.getVoterId());
 	}
       }
     }
-    return tally;
   }
 
   // Called only from testing
@@ -358,64 +338,5 @@ final class UrlTallier {
     participantsQueue.remove(e);
     e.nextVoteBlock();
     participantsQueue.add(e);
-  }
-
-  /**
-   * <p>Encapsulate the comparing of {@link HashBlock} and {@link
-   * VoteBlock} objects.</p>
-   */
-  static class HashBlockComparer {
-    private final HashBlock.Version[] hbVersions;
-
-    /**
-     * <p>Create a {@link HashBlockComparer} for the given {@link
-     * HashBlock}.</p>
-     */
-    HashBlockComparer(HashBlock hashBlock) {
-      hbVersions = hashBlock.getVersions();
-      for (int versionIndex = 0; versionIndex < hbVersions.length;
-	   versionIndex++) {
-	HashBlock.Version hbVersion = hbVersions[versionIndex];
-	if (hbVersion.getHashError() != null) {
-	  // Only log the hash error in the poller at
-	  // initialize. There's probably a more detailed error in the
-	  // log.
-	  log.warning("HashBlock version "+versionIndex+" had hashing error.");
-	} 
-      }
-    }
-
-    /**
-     * <p>Compare the given {@link VoteBlock} to the {@link HashBlock}
-     * provided at construction.</p>
-     * @return true iff any version of the participant's hash matches
-     * any version of the poller's expected hashes for that
-     * participant.
-     */
-    boolean compare(VoteBlock voteBlock, int participantIndex) {
-      // Note: At worst, n*m byte[] compares to notice a non-match. In
-      // reality: "versioned voting" needs to be improved, and the
-      // "any match of any version" condition needs to be refined.
-      for (HashBlock.Version hbVersion : hbVersions) {
-	if (hbVersion.getHashError() == null) {
-	  byte[] hbHash = hbVersion.getHashes()[participantIndex];
-	  VoteBlock.Version[] vbVersions = voteBlock.getVersions();
-	  for (int versionIndex = 0; versionIndex < vbVersions.length;
-	       versionIndex++) {
-	    VoteBlock.Version vbVersion = vbVersions[versionIndex];
-	    if (vbVersion.getHashError()) {
-	      log.warning("Voter version "+versionIndex+
-			  " had a hashing error.");
-	    } else {
-	      byte[] vbHash = vbVersion.getHash();
-	      if (Arrays.equals(hbHash, vbHash)) {
-		return true;
-	      }
-	    }
-	  }
-	}
-      }
-      return false;
-    }
   }
 }
