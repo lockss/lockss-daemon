@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerSourceMetadataExtractorFactory.java,v 1.2 2012-03-09 00:00:54 dylanrhodes Exp $
+ * $Id: SpringerSourceMetadataExtractorFactory.java,v 1.3 2012-03-10 14:24:47 pgust Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class SpringerSourceMetadataExtractorFactory
 			      }
 		        }
 		        
-		        return month + (day != null ? "-" + day : "") + "-" + year;
+		        return year + "-" + month + (day != null ? "-" + day : "");
 		      }
 		    };
 	    
@@ -125,9 +125,9 @@ public class SpringerSourceMetadataExtractorFactory
 	    static {
 	      // normal journal article schema
 	      nodeMap.put("/Publisher/PublisherInfo/PublisherName", XmlDomMetadataExtractor.TEXT_VALUE);
-	      nodeMap.put("/Publisher/Journal/JournalPrintISSN", XmlDomMetadataExtractor.TEXT_VALUE);
-	      nodeMap.put("/Publisher/Journal/JournalElectronicISSN", XmlDomMetadataExtractor.TEXT_VALUE);
-	      nodeMap.put("/Publisher/Journal/JournalTitle", XmlDomMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/Publisher/Journal/JournalInfo/JournalPrintISSN", XmlDomMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/Publisher/Journal/JournalInfo/JournalElectronicISSN", XmlDomMetadataExtractor.TEXT_VALUE);
+	      nodeMap.put("/Publisher/Journal/JournalInfo/JournalTitle", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/Publisher/Journal/Volume/VolumeInfo/VolumeIDStart", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueIDStart", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueHistory/CoverDate", DATE_VALUE);
@@ -146,9 +146,9 @@ public class SpringerSourceMetadataExtractorFactory
 	    static {
 	      // normal journal article schema
 	      xpathMap.put("/Publisher/PublisherInfo/PublisherName", MetadataField.FIELD_PUBLISHER);
-	      xpathMap.put("/Publisher/Journal/JournalPrintISSN", MetadataField.FIELD_ISSN);
-	      xpathMap.put("/Publisher/Journal/JournalElectronicISSN", MetadataField.FIELD_EISSN);
-	      xpathMap.put("/Publisher/Journal/JournalTitle", MetadataField.FIELD_JOURNAL_TITLE);
+	      xpathMap.put("/Publisher/Journal/JournalInfo/JournalPrintISSN", MetadataField.FIELD_ISSN);
+	      xpathMap.put("/Publisher/Journal/JournalInfo/JournalElectronicISSN", MetadataField.FIELD_EISSN);
+	      xpathMap.put("/Publisher/Journal/JournalInfo/JournalTitle", MetadataField.FIELD_JOURNAL_TITLE);
 	      xpathMap.put("/Publisher/Journal/Volume/VolumeInfo/VolumeIDStart", MetadataField.FIELD_VOLUME);
 	      xpathMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueIDStart", MetadataField.FIELD_ISSUE);
 	      xpathMap.put("/Publisher/Journal/Volume/Issue/IssueInfo/IssueHistory/CoverDate", MetadataField.FIELD_DATE);
