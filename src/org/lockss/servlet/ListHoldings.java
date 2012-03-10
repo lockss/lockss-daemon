@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.28 2012-02-24 15:39:56 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.28.2.1 2012-03-10 15:22:13 pgust Exp $
  */
 
 /*
@@ -43,6 +43,8 @@ import org.apache.commons.lang.StringUtils;
 import org.lockss.config.*;
 import org.lockss.config.TdbUtil.ContentScope;
 import org.lockss.daemon.AuHealthMetric;
+import org.lockss.daemon.MetadataDatabaseUtil;
+import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.exporter.kbart.*;
 import org.lockss.exporter.kbart.KbartExporter.OutputFormat;
 import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering;
@@ -432,12 +434,47 @@ public class ListHoldings extends LockssServlet {
       // ordering, then the default will be used, which will include range fields
       boolean rangeFieldsIncluded = KbartExportFilter.includesRangeFields(
           getSessionCustomOpts().getFieldOrdering().getOrdering());
+      if (scope == ContentScope.COLLECTED) {
+        // try listing collected content from the metadata database first
+        // TODO (PJG) note: should return AUs from DB and 
+        // show aggregate health of AU for each title
+        List<? extends BibliographicItem> items = 
+            MetadataDatabaseUtil.getBibliographicItems();
+        if (items.size() > 0) {
+          log.debug("Found bibliographic items: " + items.size());
+          titles = new ArrayList<KbartTitle>();
+          int i = 0;
+          if (i < items.size()) {
+            for (int j = i+1; j <= items.size(); j++) {
+              if (   (j == items.size()) 
+                  || !items.get(i).getIssn().equals(items.get(j).getIssn())) {
+                for (int k = i; k < j; k++) {
+                  log.debug("printIssn: " + items.get(k).getPrintIssn()
+                            + " eissn: " + items.get(k).getEissn());
+                }
+                List<KbartTitle> currentTitles =
+                  KbartConverter.convertTitleToKbartTitles(items.subList(i, j));
+                titles.addAll(currentTitles);
+                i = j;
+              }
+            }
+          }
+          for (KbartTitle title : titles) {
+            log.debug("printIssn: " + title.getField(KbartTitle.Field.PRINT_IDENTIFIER)
+                      + "eIssn: " + title.getField(KbartTitle.Field.ONLINE_IDENTIFIER));
+          }
+          return titles;
+        }
+      }
+      
+      // list content from the title database
       Collection<ArchivalUnit> aus = TdbUtil.getAus(scope);
       Map<TdbTitle, List<ArchivalUnit>> map = TdbUtil.mapTitlesToAus(aus);
       titles = KbartConverter.convertTitleAus(map.values(), getShowHealthRatings(),
-          rangeFieldsIncluded);
+        rangeFieldsIncluded);
       //TODO titleIterator = new KbartConverter.AuKbartTitleIterator(
       // map.values().iterator(), getShowHealthRatings(), rangeFieldsIncluded);
+
     }
     // TODO Sort here if not performed in KbartConverter
     return titles;
