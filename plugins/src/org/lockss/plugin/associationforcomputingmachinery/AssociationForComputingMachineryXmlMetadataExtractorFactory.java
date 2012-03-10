@@ -1,5 +1,5 @@
 /*
- * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.4 2012-03-08 00:52:43 dylanrhodes Exp $
+ * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.5 2012-03-10 15:09:28 pgust Exp $
  */
 
 /*
@@ -139,9 +139,11 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
 					        				  }
 					        			  }
 					        			  
-					        			  if(xpathValArr[i] == null)
+					        			  if(StringUtil.isNullString(xpathValArr[i]))
 					        				  xpathValArr[i] = "";
-				        				  xpathValArr[i] += "; " + last_name + ", " + first_name + " " + (middle_name != null ? middle_name : "");
+					        			  else
+					        			    xpathValArr[i] += "; ";
+				        				  xpathValArr[i] += last_name + ", " + first_name + " " + (middle_name != null ? middle_name : "");
 			        				  }
 			        			  }
 			        		  } else if (i == FILE_NAME_INDEX) {
