@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.27 2012-03-03 23:49:50 pgust Exp $
+ * $Id: MetadataManager.java,v 1.28 2012-03-10 15:12:21 pgust Exp $
  */
 
 /*
@@ -2126,10 +2126,20 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private static String getAuthorField(ArticleMetadata md) {
     StringBuilder sb = new StringBuilder();
     List<String> authors = md.getList(MetadataField.FIELD_AUTHOR);
+
     // create author field as semicolon-separated list of authors from metadata
     if (authors != null) {
       for (String a : authors) {
-        if (sb.length() > 0) {
+        if (sb.length() == 0) {
+          // check first author to see if it's too long -- probably caused 
+          // by metadata extractor not properly splitting a list of authors
+          if (a.length() >= MAX_AUTHOR_FIELD) {
+            // just truncate first author to max length
+            log.warning("Author metadata too long -- truncating:'" + a + "'");
+            a = a.substring(0,MAX_AUTHOR_FIELD);
+            break;
+          }
+        } else {
           // include as many authors as will fit in the field
           if (sb.length() + a.length() + 1 > MAX_AUTHOR_FIELD) {
             break;
