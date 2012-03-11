@@ -1,5 +1,5 @@
 /*
- * $Id: TFileCache.java,v 1.1 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: TFileCache.java,v 1.1.2.1 2012-03-11 00:49:35 tlipkis Exp $
  */
 
 /*
@@ -100,6 +100,7 @@ public class TFileCache {
     if (!tmpDir.canWrite()) {
       throw new RuntimeException("Temp dir is not writable: " + tmpDir);
     }
+    FileUtil.emptyDir(tmpDir);
   }
 
   /** Set the target maximum amount of disk space to use, in bytes.  Will
@@ -152,6 +153,7 @@ public class TFileCache {
       curSize += ent.size;
     } else {
       // TFile wasn't fully created, delete temp file and remove from map
+      log.warning("Incompletely created TFile for: " + cu);
       flushEntry(ent);
       return null;
     }
@@ -189,6 +191,7 @@ public class TFileCache {
       throw new RuntimeException(msg, e);
     } finally {
       IOUtil.safeClose(is);
+      AuUtil.safeRelease(cu);
     }
   }
 
@@ -296,9 +299,14 @@ public class TFileCache {
     synchronized (cmap) {
       ent.invalidate();
       try {
+	TFile.umount(ent.ctf);
+      } catch (FsSyncException e) {
+	log.warning("Error unmounting " + ent.ctf, e);
+      }
+      try {
 	deleteFile(ent);
       } catch (Exception e) {
-	log.warning("Error deleting " + ent.ctf);
+	log.warning("Error deleting " + ent.ctf, e);
       }	
       cmap.remove(ent.key);
     }
