@@ -1,5 +1,5 @@
 /*
- * $Id: XmlDomMetadataExtractor.java,v 1.2.2.2 2012-03-06 01:10:20 pgust Exp $
+ * $Id: XmlDomMetadataExtractor.java,v 1.2.2.3 2012-03-11 00:50:06 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.lockss.plugin.CachedUrl;
+import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.w3c.dom.Document;
@@ -228,12 +229,15 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
       return am;
     }
     Document doc;
-    InputSource bReader = new InputSource(cu.openForReading());
+    Reader rdr = cu.openForReading();
     try {
+      InputSource bReader = new InputSource(rdr);
       doc = builder.parse(bReader);
     } catch (SAXException ex) {
       log.warning(ex.getMessage());
       return am;
+    } finally {
+      IOUtil.safeClose(rdr);
     }
 
     // search for values using specified XPath expressions and

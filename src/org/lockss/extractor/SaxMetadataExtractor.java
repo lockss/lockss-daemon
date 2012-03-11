@@ -1,5 +1,5 @@
 /*
- * $Id: SaxMetadataExtractor.java,v 1.2 2011-06-14 09:28:35 tlipkis Exp $
+ * $Id: SaxMetadataExtractor.java,v 1.2.12.1 2012-03-11 00:50:06 tlipkis Exp $
  */
 
 /*
@@ -77,8 +77,9 @@ public class SaxMetadataExtractor extends SimpleFileMetadataExtractor {
       throw new IllegalArgumentException("extract() called with null CachedUrl");
     }
     am = new ArticleMetadata();
-    InputSource bReader = new InputSource(cu.openForReading());
+    Reader rdr = cu.openForReading();
     try {
+      InputSource bReader = new InputSource(rdr);
       XMLReader xmlReader = XMLReaderFactory.createXMLReader();
       xmlReader.setErrorHandler(new LoggingErrorHandler());
       xmlReader.setContentHandler(getContentHandler());
@@ -87,6 +88,8 @@ public class SaxMetadataExtractor extends SimpleFileMetadataExtractor {
       // XXX Should this terminate the extraction?
       // SimpleXmlMetadataExtractor simply skips malformed constructs
       //       throw new IOException(e);
+    } finally {
+      IOUtil.safeClose(rdr);
     }
     return am;
   }

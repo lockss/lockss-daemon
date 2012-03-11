@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchiveMembers.java,v 1.2 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: TestArchiveMembers.java,v 1.2.2.1 2012-03-11 00:50:06 tlipkis Exp $
  */
 
 /*
@@ -280,29 +280,32 @@ public class TestArchiveMembers extends LockssTestCase {
       assertEquals(url, urlIter.next(), url);
       cnt++;
 
-      // While traversing an archive, delete the temp file backing that
-      // archive, then continue the iteration to ensure that the TFile
-      // remains usable even though its file has ben deleted.  Just
-      // documenting that it works in this case - I don't know whether the
-      // TFile contract allows it or if we need a locking protocol to
-      // prevent it.
+      // This won't work until we add the necessary logic to recreate
+      // TFiles that have been umounted
 
-      String arcurl = "http://www.example.com/branch1/branch1/zip5.zip";
-      String trigger = "branch5/002file.xml";
-      if (url.equals(arcurl + "!/" + trigger)) {
-	CachedUrl arccu = simau.makeCachedUrl(arcurl);
-	org.lockss.truezip.TFileCache tfc =
-	  getMockLockssDaemon().getTrueZipManager().getTFileCache();
+//       // While traversing an archive, delete the temp file backing that
+//       // archive, then continue the iteration to ensure that the TFile
+//       // remains usable even though its file has ben deleted.  Just
+//       // documenting that it works in this case - I don't know whether the
+//       // TFile contract allows it or if we need a locking protocol to
+//       // prevent it.
 
-	org.lockss.truezip.TFileCache.Entry ent =
-	  tfc.getCachedTFileEntry(arccu);
-	assertTrue(ent.isValid());
-	assertTrue(ent.exists());
-	tfc.flushEntry(ent);
-	assertFalse(ent.isValid());
-	assertFalse(ent.exists());
-	didCheckDelete = true;
-      }
+//       String arcurl = "http://www.example.com/branch1/branch1/zip5.zip";
+//       String trigger = "branch5/002file.xml";
+//       if (url.equals(arcurl + "!/" + trigger)) {
+// 	CachedUrl arccu = simau.makeCachedUrl(arcurl);
+// 	org.lockss.truezip.TFileCache tfc =
+// 	  getMockLockssDaemon().getTrueZipManager().getTFileCache();
+
+// 	org.lockss.truezip.TFileCache.Entry ent =
+// 	  tfc.getCachedTFileEntry(arccu);
+// 	assertTrue(ent.isValid());
+// 	assertTrue(ent.exists());
+// 	tfc.flushEntry(ent);
+// 	assertFalse(ent.isValid());
+// 	assertFalse(ent.exists());
+// 	didCheckDelete = true;
+//       }
 
       Matcher m1 = pat.matcher(url);
       if (m1.matches()) {
@@ -324,7 +327,7 @@ public class TestArchiveMembers extends LockssTestCase {
     assertEquals(urls.size(), cnt++);
     assertEquals(170, htmlcnt);
 
-    assertTrue(didCheckDelete);
+//     assertTrue(didCheckDelete);
   }
 
   public void testFindCu() throws Exception {

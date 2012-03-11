@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.14 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.14.2.1 2012-03-11 00:50:06 tlipkis Exp $
  */
 
 /*
@@ -362,6 +362,8 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
 	    cu = AuUtil.getCu(node);
 	    if (cu != null && cu.hasContent()) {
 	      if (isArticleCu(cu)) {
+		// isArticleCu() might have caused file to open
+		cu.release();
 		visitArticleCu(cu);
 		if (nextElement == null) {
 		  continue;
