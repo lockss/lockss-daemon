@@ -17,15 +17,15 @@
     param[journal_dir] = ahr
     implicit < status ; year ; name ; param[volume] >
 
-    au < manifest ; 1999 ; American Historical Review Volume 104 ; 104 >
-    au < manifest ; 2000 ; American Historical Review Volume 105 ; 105 >
-    au < manifest ; 2001 ; American Historical Review Volume 106 ; 106 >
-    au < manifest ; 2002 ; American Historical Review Volume 107 ; 107 >
-    au < down ; 2003 ; American Historical Review Volume 108 ; 108 >
-    au < manifest ; 2004 ; American Historical Review Volume 109 ; 109 >
-    au < manifest ; 2005 ; American Historical Review Volume 110 ; 110 >
-    au < manifest ; 2006 ; American Historical Review Volume 111 ; 111 >
-    au < manifest ; 2007 ; American Historical Review Volume 112 ; 112 >
+    au < testing ; 1999 ; American Historical Review Volume 104 ; 104 >
+    au < testing ; 2000 ; American Historical Review Volume 105 ; 105 >
+    au < testing ; 2001 ; American Historical Review Volume 106 ; 106 >
+    au < testing ; 2002 ; American Historical Review Volume 107 ; 107 >
+    au < testing ; 2003 ; American Historical Review Volume 108 ; 108 >
+    au < testing ; 2004 ; American Historical Review Volume 109 ; 109 >
+    au < testing ; 2005 ; American Historical Review Volume 110 ; 110 >
+    au < testing ; 2006 ; American Historical Review Volume 111 ; 111 >
+    au < testing ; 2007 ; American Historical Review Volume 112 ; 112 >
 
   }
 
