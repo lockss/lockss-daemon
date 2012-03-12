@@ -218,6 +218,7 @@
     au < manifest ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
     au < manifest ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
     au < manifest ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
+    au < manifest ; 2011 ; Applied Earth Science: IMM Transactions section B Volume 120 ; 120 > 
 
   }
 
@@ -1328,6 +1329,7 @@
     au < manifest ; 2009 ; The Hardy Review Volume 11 ; 11 > 
     au < manifest ; 2010 ; The Hardy Review Volume 12 ; 12 > 
     au < manifest ; 2011 ; The Hardy Review Volume 13 ; 13 > 
+    au < manifest ; 2012 ; The Hardy Review Volume 14 ; 14 > 
 
   }
 
@@ -1360,6 +1362,7 @@
     au < doNotProcess ; 2009 ; Hematology Volume 14 ; 14 > 
     au < doNotProcess ; 2010 ; Hematology Volume 15 ; 15 > 
     au < doNotProcess ; 2011 ; Hematology Volume 16 ; 16 > 
+    au < doNotProcess ; 2012 ; Hematology Volume 17 ; 17 > 
 
   }
 
@@ -1417,6 +1420,7 @@
 
     au < manifest ; 2010 ; The Historic Environment: Policy & Practice Volume 1 ; 1 > 
     au < manifest ; 2011 ; The Historic Environment: Policy & Practice Volume 2 ; 2 > 
+    au < expected ; 2012 ; The Historic Environment: Policy & Practice Volume 3 ; 3 > 
 
   }
 
@@ -1501,6 +1505,8 @@
     au < manifest ; 2008 ; Industrial Archaeology Review Volume 30 ; 30 > 
     au < manifest ; 2009 ; Industrial Archaeology Review Volume 31 ; 31 > 
     au < manifest ; 2010 ; Industrial Archaeology Review Volume 32 ; 32 > 
+    au < manifest ; 2011 ; Industrial Archaeology Review Volume 33 ; 33 > 
+    au < expected ; 2012 ; Industrial Archaeology Review Volume 34 ; 34 > 
 
   }
 
@@ -1586,6 +1592,7 @@
     au < doNotProcess ; 2009 ; International Heat Treatment & Surface Engineering Volume 3 ; 3 > 
     au < doNotProcess ; 2010 ; International Heat Treatment & Surface Engineering Volume 4 ; 4 > 
     au < doNotProcess ; 2011 ; International Heat Treatment & Surface Engineering Volume 5 ; 5 > 
+    au < expected ; 2012 ; International Heat Treatment & Surface Engineering Volume 6 ; 6 > 
 
   }
 
@@ -1767,10 +1774,17 @@
     comment[continued_by] = 0950-6608
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
 
-    au < manifest ; 1972 ; International Metals Reviews Volume 17 ; 17 > 
-    au < manifest ; 1973 ; International Metals Reviews Volume 18 ; 18 > 
-    au < manifest ; 1974 ; International Metals Reviews Volume 19 ; 19 > 
-    au < manifest ; 1975 ; International Metals Reviews Volume 20 ; 20 > 
+    au < manifest ; 1976 ; International Metals Reviews Volume 21 ; 21 > 
+    au < manifest ; 1977 ; International Metals Reviews Volume 22 ; 22 > 
+    au < manifest ; 1978 ; International Metals Reviews Volume 23 ; 23 > 
+    au < manifest ; 1979 ; International Metals Reviews Volume 24 ; 24 > 
+    au < manifest ; 1980 ; International Metals Reviews Volume 25 ; 25 > 
+    au < manifest ; 1981 ; International Metals Reviews Volume 26 ; 26 > 
+    au < manifest ; 1982 ; International Metals Reviews Volume 27 ; 27 > 
+    au < manifest ; 1983 ; International Metals Reviews Volume 28 ; 28 > 
+    au < manifest ; 1984 ; International Metals Reviews Volume 29 ; 29 > 
+    au < manifest ; 1985 ; International Metals Reviews Volume 31 ; 30 >
+    au < manifest ; 1986 ; International Metals Reviews Volume 31 ; 31 >  
 
   }
 
