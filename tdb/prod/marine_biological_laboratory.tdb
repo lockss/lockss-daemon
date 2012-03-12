@@ -19,73 +19,73 @@
       param[base_url] = http://www.biolbull.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; testing ; 1950 ; The Biological Bulletin Volume 98 ; 98 >
+      au < HighWirePressH20Plugin ; ready ; 1950 ; The Biological Bulletin Volume 98 ; 98 >
       au < HighWirePressH20Plugin ; ready ; 1950 ; The Biological Bulletin Volume 99 ; 99 >
       au < HighWirePressH20Plugin ; ready ; 1951 ; The Biological Bulletin Volume 100 ; 100 >
-      au < HighWirePressH20Plugin ; testing ; 1951 ; The Biological Bulletin Volume 101 ; 101 >
+      au < HighWirePressH20Plugin ; ready ; 1951 ; The Biological Bulletin Volume 101 ; 101 >
       au < HighWirePressH20Plugin ; testing ; 1952 ; The Biological Bulletin Volume 102 ; 102 >
-      au < HighWirePressH20Plugin ; testing ; 1952 ; The Biological Bulletin Volume 103 ; 103 >
+      au < HighWirePressH20Plugin ; ready ; 1952 ; The Biological Bulletin Volume 103 ; 103 >
       au < HighWirePressH20Plugin ; testing ; 1953 ; The Biological Bulletin Volume 104 ; 104 >
-      au < HighWirePressH20Plugin ; testing ; 1953 ; The Biological Bulletin Volume 105 ; 105 >
-      au < HighWirePressH20Plugin ; testing ; 1954 ; The Biological Bulletin Volume 106 ; 106 >
+      au < HighWirePressH20Plugin ; ready ; 1953 ; The Biological Bulletin Volume 105 ; 105 >
+      au < HighWirePressH20Plugin ; ready ; 1954 ; The Biological Bulletin Volume 106 ; 106 >
       au < HighWirePressH20Plugin ; ready ; 1954 ; The Biological Bulletin Volume 107 ; 107 >
       au < HighWirePressH20Plugin ; testing ; 1955 ; The Biological Bulletin Volume 108 ; 108 >
-      au < HighWirePressH20Plugin ; testing ; 1955 ; The Biological Bulletin Volume 109 ; 109 >
+      au < HighWirePressH20Plugin ; ready ; 1955 ; The Biological Bulletin Volume 109 ; 109 >
       au < HighWirePressH20Plugin ; testing ; 1956 ; The Biological Bulletin Volume 110 ; 110 >
       au < HighWirePressH20Plugin ; ready ; 1956 ; The Biological Bulletin Volume 111 ; 111 >
-      au < HighWirePressH20Plugin ; testing ; 1957 ; The Biological Bulletin Volume 112 ; 112 >
-      au < HighWirePressH20Plugin ; testing ; 1957 ; The Biological Bulletin Volume 113 ; 113 >
-      au < HighWirePressH20Plugin ; testing ; 1958 ; The Biological Bulletin Volume 114 ; 114 >
-      au < HighWirePressH20Plugin ; testing ; 1958 ; The Biological Bulletin Volume 115 ; 115 >
-      au < HighWirePressH20Plugin ; testing ; 1959 ; The Biological Bulletin Volume 116 ; 116 >
+      au < HighWirePressH20Plugin ; ready ; 1957 ; The Biological Bulletin Volume 112 ; 112 >
+      au < HighWirePressH20Plugin ; ready ; 1957 ; The Biological Bulletin Volume 113 ; 113 >
+      au < HighWirePressH20Plugin ; ready ; 1958 ; The Biological Bulletin Volume 114 ; 114 >
+      au < HighWirePressH20Plugin ; ready ; 1958 ; The Biological Bulletin Volume 115 ; 115 >
+      au < HighWirePressH20Plugin ; ready ; 1959 ; The Biological Bulletin Volume 116 ; 116 >
       au < HighWirePressH20Plugin ; ready ; 1959 ; The Biological Bulletin Volume 117 ; 117 >
       au < HighWirePressH20Plugin ; ready ; 1960 ; The Biological Bulletin Volume 118 ; 118 >
       au < HighWirePressH20Plugin ; testing ; 1960 ; The Biological Bulletin Volume 119 ; 119 >
-      au < HighWirePressH20Plugin ; testing ; 1961 ; The Biological Bulletin Volume 120 ; 120 >
+      au < HighWirePressH20Plugin ; ready ; 1961 ; The Biological Bulletin Volume 120 ; 120 >
       au < HighWirePressH20Plugin ; ready ; 1961 ; The Biological Bulletin Volume 121 ; 121 >
       au < HighWirePressH20Plugin ; testing ; 1962 ; The Biological Bulletin Volume 122 ; 122 >
-      au < HighWirePressH20Plugin ; testing ; 1962 ; The Biological Bulletin Volume 123 ; 123 >
-      au < HighWirePressH20Plugin ; testing ; 1963 ; The Biological Bulletin Volume 124 ; 124 >
-      au < HighWirePressH20Plugin ; testing ; 1963 ; The Biological Bulletin Volume 125 ; 125 >
+      au < HighWirePressH20Plugin ; ready ; 1962 ; The Biological Bulletin Volume 123 ; 123 >
+      au < HighWirePressH20Plugin ; ready ; 1963 ; The Biological Bulletin Volume 124 ; 124 >
+      au < HighWirePressH20Plugin ; ready ; 1963 ; The Biological Bulletin Volume 125 ; 125 >
       au < HighWirePressH20Plugin ; testing ; 1964 ; The Biological Bulletin Volume 126 ; 126 >
       au < HighWirePressH20Plugin ; testing ; 1964 ; The Biological Bulletin Volume 127 ; 127 >
       au < HighWirePressH20Plugin ; ready ; 1965 ; The Biological Bulletin Volume 128 ; 128 >
       au < HighWirePressH20Plugin ; testing ; 1965 ; The Biological Bulletin Volume 129 ; 129 >
-      au < HighWirePressH20Plugin ; testing ; 1966 ; The Biological Bulletin Volume 130 ; 130 >
-      au < HighWirePressH20Plugin ; testing ; 1966 ; The Biological Bulletin Volume 131 ; 131 >
+      au < HighWirePressH20Plugin ; ready ; 1966 ; The Biological Bulletin Volume 130 ; 130 >
+      au < HighWirePressH20Plugin ; ready ; 1966 ; The Biological Bulletin Volume 131 ; 131 >
       au < HighWirePressH20Plugin ; testing ; 1967 ; The Biological Bulletin Volume 132 ; 132 >
-      au < HighWirePressH20Plugin ; testing ; 1967 ; The Biological Bulletin Volume 133 ; 133 >
+      au < HighWirePressH20Plugin ; ready ; 1967 ; The Biological Bulletin Volume 133 ; 133 >
       au < HighWirePressH20Plugin ; ready ; 1968 ; The Biological Bulletin Volume 134 ; 134 >
-      au < HighWirePressH20Plugin ; testing ; 1968 ; The Biological Bulletin Volume 135 ; 135 >
-      au < HighWirePressH20Plugin ; testing ; 1969 ; The Biological Bulletin Volume 136 ; 136 >
-      au < HighWirePressH20Plugin ; testing ; 1969 ; The Biological Bulletin Volume 137 ; 137 >
-      au < HighWirePressH20Plugin ; testing ; 1970 ; The Biological Bulletin Volume 138 ; 138 >
-      au < HighWirePressH20Plugin ; testing ; 1970 ; The Biological Bulletin Volume 139 ; 139 >
-      au < HighWirePressH20Plugin ; testing ; 1971 ; The Biological Bulletin Volume 140 ; 140 >
+      au < HighWirePressH20Plugin ; ready ; 1968 ; The Biological Bulletin Volume 135 ; 135 >
+      au < HighWirePressH20Plugin ; ready ; 1969 ; The Biological Bulletin Volume 136 ; 136 >
+      au < HighWirePressH20Plugin ; ready ; 1969 ; The Biological Bulletin Volume 137 ; 137 >
+      au < HighWirePressH20Plugin ; ready ; 1970 ; The Biological Bulletin Volume 138 ; 138 >
+      au < HighWirePressH20Plugin ; ready ; 1970 ; The Biological Bulletin Volume 139 ; 139 >
+      au < HighWirePressH20Plugin ; ready ; 1971 ; The Biological Bulletin Volume 140 ; 140 >
       au < HighWirePressH20Plugin ; ready ; 1971 ; The Biological Bulletin Volume 141 ; 141 >
-      au < HighWirePressH20Plugin ; testing ; 1972 ; The Biological Bulletin Volume 142 ; 142 >
+      au < HighWirePressH20Plugin ; ready ; 1972 ; The Biological Bulletin Volume 142 ; 142 >
       au < HighWirePressH20Plugin ; ready ; 1972 ; The Biological Bulletin Volume 143 ; 143 >
       au < HighWirePressH20Plugin ; ready ; 1973 ; The Biological Bulletin Volume 144 ; 144 >
       au < HighWirePressH20Plugin ; testing ; 1973 ; The Biological Bulletin Volume 145 ; 145 >
       au < HighWirePressH20Plugin ; ready ; 1974 ; The Biological Bulletin Volume 146 ; 146 >
-      au < HighWirePressH20Plugin ; testing ; 1974 ; The Biological Bulletin Volume 147 ; 147 >
-      au < HighWirePressH20Plugin ; testing ; 1975 ; The Biological Bulletin Volume 148 ; 148 >
+      au < HighWirePressH20Plugin ; ready ; 1974 ; The Biological Bulletin Volume 147 ; 147 >
+      au < HighWirePressH20Plugin ; ready ; 1975 ; The Biological Bulletin Volume 148 ; 148 >
       au < HighWirePressH20Plugin ; ready ; 1975 ; The Biological Bulletin Volume 149 ; 149 >
       au < HighWirePressH20Plugin ; ready ; 1976 ; The Biological Bulletin Volume 150 ; 150 >
       au < HighWirePressH20Plugin ; ready ; 1976 ; The Biological Bulletin Volume 151 ; 151 >
-      au < HighWirePressH20Plugin ; testing ; 1977 ; The Biological Bulletin Volume 152 ; 152 >
-      au < HighWirePressH20Plugin ; testing ; 1977 ; The Biological Bulletin Volume 153 ; 153 >
-      au < HighWirePressH20Plugin ; testing ; 1978 ; The Biological Bulletin Volume 154 ; 154 >
-      au < HighWirePressH20Plugin ; testing ; 1978 ; The Biological Bulletin Volume 155 ; 155 >
-      au < HighWirePressH20Plugin ; testing ; 1979 ; The Biological Bulletin Volume 156 ; 156 >
+      au < HighWirePressH20Plugin ; ready ; 1977 ; The Biological Bulletin Volume 152 ; 152 >
+      au < HighWirePressH20Plugin ; ready ; 1977 ; The Biological Bulletin Volume 153 ; 153 >
+      au < HighWirePressH20Plugin ; ready ; 1978 ; The Biological Bulletin Volume 154 ; 154 >
+      au < HighWirePressH20Plugin ; ready ; 1978 ; The Biological Bulletin Volume 155 ; 155 >
+      au < HighWirePressH20Plugin ; ready ; 1979 ; The Biological Bulletin Volume 156 ; 156 >
       au < HighWirePressH20Plugin ; ready ; 1979 ; The Biological Bulletin Volume 157 ; 157 >
-      au < HighWirePressH20Plugin ; testing ; 1980 ; The Biological Bulletin Volume 158 ; 158 >
-      au < HighWirePressH20Plugin ; testing ; 1980 ; The Biological Bulletin Volume 159 ; 159 >
-      au < HighWirePressH20Plugin ; testing ; 1981 ; The Biological Bulletin Volume 160 ; 160 >
-      au < HighWirePressH20Plugin ; testing ; 1981 ; The Biological Bulletin Volume 161 ; 161 >
+      au < HighWirePressH20Plugin ; ready ; 1980 ; The Biological Bulletin Volume 158 ; 158 >
+      au < HighWirePressH20Plugin ; ready ; 1980 ; The Biological Bulletin Volume 159 ; 159 >
+      au < HighWirePressH20Plugin ; ready ; 1981 ; The Biological Bulletin Volume 160 ; 160 >
+      au < HighWirePressH20Plugin ; ready ; 1981 ; The Biological Bulletin Volume 161 ; 161 >
       au < HighWirePressH20Plugin ; testing ; 1982 ; The Biological Bulletin Volume 162 ; 162 >
-      au < HighWirePressH20Plugin ; testing ; 1982 ; The Biological Bulletin Volume 163 ; 163 >
-      au < HighWirePressH20Plugin ; testing ; 1983 ; The Biological Bulletin Volume 164 ; 164 >
+      au < HighWirePressH20Plugin ; ready ; 1982 ; The Biological Bulletin Volume 163 ; 163 >
+      au < HighWirePressH20Plugin ; ready ; 1983 ; The Biological Bulletin Volume 164 ; 164 >
       au < HighWirePressH20Plugin ; testing ; 1983 ; The Biological Bulletin Volume 165 ; 165 >
       au < HighWirePressH20Plugin ; testing ; 1984 ; The Biological Bulletin Volume 166 ; 166 >
       au < HighWirePressH20Plugin ; testing ; 1984 ; The Biological Bulletin Volume 167 ; 167 >
@@ -95,37 +95,37 @@
       au < HighWirePressH20Plugin ; ready ; 1986 ; The Biological Bulletin Volume 171 ; 171 >
       au < HighWirePressH20Plugin ; testing ; 1987 ; The Biological Bulletin Volume 172 ; 172 >
       au < HighWirePressH20Plugin ; ready ; 1987 ; The Biological Bulletin Volume 173 ; 173 >
-      au < HighWirePressH20Plugin ; testing ; 1988 ; The Biological Bulletin Volume 174 ; 174 >
+      au < HighWirePressH20Plugin ; ready ; 1988 ; The Biological Bulletin Volume 174 ; 174 >
       au < HighWirePressH20Plugin ; testing ; 1988 ; The Biological Bulletin Volume 175 ; 175 >
-      au < HighWirePressH20Plugin ; testing ; 1989 ; The Biological Bulletin Volume 176 ; 176 >
-      au < HighWirePressH20Plugin ; testing ; 1989 ; The Biological Bulletin Volume 177 ; 177 >
-      au < HighWirePressH20Plugin ; testing ; 1990 ; The Biological Bulletin Volume 178 ; 178 >
-      au < HighWirePressH20Plugin ; testing ; 1990 ; The Biological Bulletin Volume 179 ; 179 >
-      au < HighWirePressH20Plugin ; testing ; 1991 ; The Biological Bulletin Volume 180 ; 180 >
-      au < HighWirePressH20Plugin ; testing ; 1991 ; The Biological Bulletin Volume 181 ; 181 >
-      au < HighWirePressH20Plugin ; testing ; 1992 ; The Biological Bulletin Volume 182 ; 182 >
-      au < HighWirePressH20Plugin ; testing ; 1992 ; The Biological Bulletin Volume 183 ; 183 >
-      au < HighWirePressH20Plugin ; testing ; 1993 ; The Biological Bulletin Volume 184 ; 184 >
-      au < HighWirePressH20Plugin ; testing ; 1993 ; The Biological Bulletin Volume 185 ; 185 >
+      au < HighWirePressH20Plugin ; ready ; 1989 ; The Biological Bulletin Volume 176 ; 176 >
+      au < HighWirePressH20Plugin ; ready ; 1989 ; The Biological Bulletin Volume 177 ; 177 >
+      au < HighWirePressH20Plugin ; ready ; 1990 ; The Biological Bulletin Volume 178 ; 178 >
+      au < HighWirePressH20Plugin ; ready ; 1990 ; The Biological Bulletin Volume 179 ; 179 >
+      au < HighWirePressH20Plugin ; ready ; 1991 ; The Biological Bulletin Volume 180 ; 180 >
+      au < HighWirePressH20Plugin ; ready ; 1991 ; The Biological Bulletin Volume 181 ; 181 >
+      au < HighWirePressH20Plugin ; ready ; 1992 ; The Biological Bulletin Volume 182 ; 182 >
+      au < HighWirePressH20Plugin ; ready ; 1992 ; The Biological Bulletin Volume 183 ; 183 >
+      au < HighWirePressH20Plugin ; ready ; 1993 ; The Biological Bulletin Volume 184 ; 184 >
+      au < HighWirePressH20Plugin ; ready ; 1993 ; The Biological Bulletin Volume 185 ; 185 >
       au < HighWirePressH20Plugin ; ready ; 1994 ; The Biological Bulletin Volume 186 ; 186 >
-      au < HighWirePressH20Plugin ; testing ; 1994 ; The Biological Bulletin Volume 187 ; 187 >
+      au < HighWirePressH20Plugin ; ready ; 1994 ; The Biological Bulletin Volume 187 ; 187 >
       au < HighWirePressH20Plugin ; ready ; 1995 ; The Biological Bulletin Volume 188 ; 188 >
       au < HighWirePressH20Plugin ; ready ; 1995 ; The Biological Bulletin Volume 189 ; 189 >
-      au < HighWirePressH20Plugin ; testing ; 1996 ; The Biological Bulletin Volume 190 ; 190 >
-      au < HighWirePressH20Plugin ; testing ; 1996 ; The Biological Bulletin Volume 191 ; 191 >
+      au < HighWirePressH20Plugin ; ready ; 1996 ; The Biological Bulletin Volume 190 ; 190 >
+      au < HighWirePressH20Plugin ; ready ; 1996 ; The Biological Bulletin Volume 191 ; 191 >
       au < HighWirePressH20Plugin ; ready ; 1997 ; The Biological Bulletin Volume 192 ; 192 >
-      au < HighWirePressH20Plugin ; testing ; 1997 ; The Biological Bulletin Volume 193 ; 193 >
+      au < HighWirePressH20Plugin ; ready ; 1997 ; The Biological Bulletin Volume 193 ; 193 >
       au < HighWirePressH20Plugin ; ready ; 1998 ; The Biological Bulletin Volume 194 ; 194 >
       au < HighWirePressH20Plugin ; ready ; 1998 ; The Biological Bulletin Volume 195 ; 195 >
       au < HighWirePressH20Plugin ; testing ; 1999 ; The Biological Bulletin Volume 196 ; 196 >
       au < HighWirePressH20Plugin ; ready ; 1999 ; The Biological Bulletin Volume 197 ; 197 >
       au < HighWirePressH20Plugin ; testing ; 2000 ; The Biological Bulletin Volume 198 ; 198 >
-      au < HighWirePressH20Plugin ; testing ; 2000 ; The Biological Bulletin Volume 199 ; 199 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; The Biological Bulletin Volume 200 ; 200 >
+      au < HighWirePressH20Plugin ; ready ; 2000 ; The Biological Bulletin Volume 199 ; 199 >
+      au < HighWirePressH20Plugin ; ready ; 2001 ; The Biological Bulletin Volume 200 ; 200 >
       au < HighWirePressH20Plugin ; testing ; 2001 ; The Biological Bulletin Volume 201 ; 201 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; The Biological Bulletin Volume 202 ; 202 >
+      au < HighWirePressH20Plugin ; ready ; 2002 ; The Biological Bulletin Volume 202 ; 202 >
       au < HighWirePressH20Plugin ; ready ; 2002 ; The Biological Bulletin Volume 203 ; 203 >
-      au < HighWirePressH20Plugin ; testing ; 2003 ; The Biological Bulletin Volume 204 ; 204 >
+      au < HighWirePressH20Plugin ; ready ; 2003 ; The Biological Bulletin Volume 204 ; 204 >
       au < HighWirePressH20Plugin ; testing ; 2003 ; The Biological Bulletin Volume 205 ; 205 >
       au < HighWirePressH20Plugin ; ready ; 2004 ; The Biological Bulletin Volume 206 ; 206 >
       au < HighWirePressH20Plugin ; testing ; 2004 ; The Biological Bulletin Volume 207 ; 207 >  
