@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.2 2011-12-06 23:26:09 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.3 2012-03-12 22:58:39 barry409 Exp $
  */
 
 /*
@@ -255,6 +255,7 @@ public class TestUrlTallier extends LockssTestCase {
     PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
     PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
     PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
+    PeerIdentity id4 = findPeerIdentity("TCP:[127.0.0.1]:8994");
     
     HashBlock [] hashblocks = {
 	makeHashBlock("http://test.com/foo1", "content for foo1"),
@@ -295,9 +296,6 @@ public class TestUrlTallier extends LockssTestCase {
     assertEquals("http://test.com/foo2", urlTallier.peekUrl());
     urlTallier.tallyPollerUrl("http://test.com/foo2", hashblocks[1]);
     assertEquals("http://test.com/foo3", urlTallier.peekUrl());
-
-    
-
     urlTallier.tallyPollerUrl("http://test.com/foo3", hashblocks[2]);
     assertEquals("http://test.com/foo4", urlTallier.peekUrl());
     urlTallier.tallyPollerUrl("http://test.com/foo4", hashblocks[3]);
@@ -346,21 +344,32 @@ public class TestUrlTallier extends LockssTestCase {
     tally = urlTallier.tallyVoterUrl("http://test.com/foo1");
     // todo(bhayes): BlockTally needs to have a better interface, both
     // for testing and for use.
+    assertEquals(tally.getVoterOnlyBlockVoters().size(), 1);
+    // todo(bhayes): This seems incorrect; foo1 was only present at
+    // one voter, but incrementTalliedBlocks will be called for each
+    // voter.
+    assertEquals(3, tally.getTalliedVoters().size());
     assertContains(tally.getVoterOnlyBlockVoters(), id1);
     assertEquals("http://test.com/foo2", urlTallier.peekUrl());
 
     tally = urlTallier.tallyVoterUrl("http://test.com/foo2");
+    assertEquals(tally.getVoterOnlyBlockVoters().size(), 2);
+    assertEquals(3, tally.getTalliedVoters().size());
     assertContains(tally.getVoterOnlyBlockVoters(), id1);
     assertContains(tally.getVoterOnlyBlockVoters(), id2);
     assertEquals("http://test.com/foo3", urlTallier.peekUrl());
 
     tally = urlTallier.tallyVoterUrl("http://test.com/foo3");
+    assertEquals(tally.getVoterOnlyBlockVoters().size(), 3);
+    assertEquals(3, tally.getTalliedVoters().size());
     assertContains(tally.getVoterOnlyBlockVoters(), id1);
     assertContains(tally.getVoterOnlyBlockVoters(), id2);
     assertContains(tally.getVoterOnlyBlockVoters(), id3);
     assertEquals("http://test.com/foo4", urlTallier.peekUrl());
 
     tally = urlTallier.tallyVoterUrl("http://test.com/foo4");
+    assertEquals(tally.getVoterOnlyBlockVoters().size(), 1);
+    assertEquals(3, tally.getTalliedVoters().size());
     assertContains(tally.getVoterOnlyBlockVoters(), id3);
     assertEquals(null, urlTallier.peekUrl());
   }
