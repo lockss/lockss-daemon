@@ -28,30 +28,30 @@
 
       param[base_url] = http://radiographics.rsna.org/
 
-      au < HighWirePressH20Plugin ; manifest ; 1981 ; RadioGraphics Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1982 ; RadioGraphics Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1983 ; RadioGraphics Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; RadioGraphics Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; RadioGraphics Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; RadioGraphics Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; RadioGraphics Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; RadioGraphics Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 1989 ; RadioGraphics Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 1990 ; RadioGraphics Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; manifest ; 1991 ; RadioGraphics Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; RadioGraphics Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; RadioGraphics Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; 1994 ; RadioGraphics Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; RadioGraphics Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; RadioGraphics Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 1997 ; RadioGraphics Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 1998 ; RadioGraphics Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; RadioGraphics Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; RadioGraphics Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; RadioGraphics Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; RadioGraphics Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; RadioGraphics Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; RadioGraphics Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; testing ; 1981 ; RadioGraphics Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 1982 ; RadioGraphics Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 1983 ; RadioGraphics Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 1984 ; RadioGraphics Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1985 ; RadioGraphics Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 1986 ; RadioGraphics Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 1987 ; RadioGraphics Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 1988 ; RadioGraphics Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 1989 ; RadioGraphics Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 1990 ; RadioGraphics Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 1991 ; RadioGraphics Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; testing ; 1992 ; RadioGraphics Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; testing ; 1993 ; RadioGraphics Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; testing ; 1994 ; RadioGraphics Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; testing ; 1995 ; RadioGraphics Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; testing ; 1996 ; RadioGraphics Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; testing ; 1997 ; RadioGraphics Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; testing ; 1998 ; RadioGraphics Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; testing ; 1999 ; RadioGraphics Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; RadioGraphics Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; RadioGraphics Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; RadioGraphics Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; RadioGraphics Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; RadioGraphics Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 2005 ; RadioGraphics Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; RadioGraphics Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; released ; 2007 ; RadioGraphics Volume 27 ; 27 >
@@ -85,15 +85,15 @@
 
       param[base_url] = http://radiology.rsna.org/
 
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Radiology Volume 230 ; 230 >
-      au < HighWirePressH20Plugin ; manifest ; 2005 ; Radiology Volume 231 ; 231 >
-      au < HighWirePressH20Plugin ; manifest ; 2006 ; Radiology Volume 232 ; 232 >
-      au < HighWirePressH20Plugin ; manifest ; 2007 ; Radiology Volume 233 ; 233 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Radiology Volume 230 ; 230 >
+      au < HighWirePressH20Plugin ; testing ; 2005 ; Radiology Volume 231 ; 231 >
+      au < HighWirePressH20Plugin ; testing ; 2006 ; Radiology Volume 232 ; 232 >
+      au < HighWirePressH20Plugin ; testing ; 2007 ; Radiology Volume 233 ; 233 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Radiology Volume 234 ; 234 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Radiology Volume 235 ; 235 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Radiology Volume 236 ; 236 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Radiology Volume 237 ; 237 >
-      au < HighWirePressH20Plugin ; manifest ; 2006 ; Radiology Volume 238 ; 238 >
+      au < HighWirePressH20Plugin ; testing ; 2006 ; Radiology Volume 238 ; 238 >
       au < HighWirePressH20Plugin ; released ; 2006 ; Radiology Volume 239 ; 239 >
       au < HighWirePressH20Plugin ; released ; 2006 ; Radiology Volume 240 ; 240 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Radiology Volume 241 ; 241 >
