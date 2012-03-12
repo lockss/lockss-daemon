@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.28 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.29 2012-03-12 05:22:44 tlipkis Exp $
  */
 
 /*
@@ -574,34 +574,38 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 	curArcCu = null;
 	if (cusIter.hasNext()) {
 	  CachedUrl cu = AuUtil.getCu(cusIter.next());
-	  if (cu == null || !cu.hasContent()) {
-	    continue;
-	  }
-	  String arcExt = ArchiveFileTypes.getArchiveExtension(cu);
-	  if (arcExt != null) {
-	    TFile tf;
-	    try {
-	      tf = getTFile(cu);
-	      if (!tf.isDirectory()) {
-		logger.error("isDirectory(" + tf +
-			     ") = false, including in iterator");
-		nextCu = cu;
-		break;
-	      }
-	      if (logger.isDebug3()) {
-		logger.debug3("Found archive: " + tf + " in " + cu);
-	      }
-	      TFile[] tfiles = sortedDir(tf);
-	      arcIterStack.addFirst(new ArrayIterator(tfiles));
-	      curArcCu = cu;
-	      continue;
-	    } catch (IOException e) {
-	      logger.warning("Error opening archive: " + cu, e);
+	  try {
+	    if (cu == null || !cu.hasContent()) {
 	      continue;
 	    }
-	  } else {
-	    nextCu = cu;
-	    break;
+	    String arcExt = ArchiveFileTypes.getArchiveExtension(cu);
+	    if (arcExt != null) {
+	      TFile tf;
+	      try {
+		tf = getTFile(cu);
+		if (!tf.isDirectory()) {
+		  logger.error("isDirectory(" + tf +
+			       ") = false, including in iterator");
+		  nextCu = cu;
+		  break;
+		}
+		if (logger.isDebug3()) {
+		  logger.debug3("Found archive: " + tf + " in " + cu);
+		}
+		TFile[] tfiles = sortedDir(tf);
+		arcIterStack.addFirst(new ArrayIterator(tfiles));
+		curArcCu = cu;
+		continue;
+	      } catch (IOException e) {
+		logger.warning("Error opening archive: " + cu, e);
+		continue;
+	      }
+	    } else {
+	      nextCu = cu;
+	      break;
+	    }
+	  } finally {
+	    AuUtil.safeRelease(cu);
 	  }
 	} else {	
 	  nextCu = null;
@@ -642,7 +646,16 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 	    logger.debug2("no / after archive name in path: " + path);
 	  }
 	  path = path.substring(pos);
-	  res = res.getArchiveMemberCu(ArchiveMemberSpec.fromCu(cu, path));
+
+	  if (false) {
+	    // experimental - reuse the TFile returned by listFiles() in
+	    // the member CU
+	    BaseCachedUrl bcu = (BaseCachedUrl)res;
+	    res = bcu.getArchiveMemberCu(ArchiveMemberSpec.fromCu(cu, path),
+					 tf);
+	  } else {
+	    res = res.getArchiveMemberCu(ArchiveMemberSpec.fromCu(cu, path));
+	  }
 	} else {
 	  String msg = "Shouldn't: TFile path (" + path
 	    + ") doesn't begin with top level archive path (" + toppath + ")";

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.45 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.46 2012-03-12 05:22:44 tlipkis Exp $
  */
 
 /*
@@ -231,6 +231,7 @@ public class BaseCachedUrl implements CachedUrl {
   public void release() {
     if (rnc != null) {
       rnc.release();
+      rnc = null;
     }
   }
 
@@ -308,6 +309,12 @@ public class BaseCachedUrl implements CachedUrl {
     return memb;
   }
 
+  CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams, TFile memberTf) {
+    Member memb = new Member(au, url, this, ams, memberTf);
+    logger.critical("getAMC("+ams+", "+memberTf+"): " + memb);
+    return memb;
+  }
+
   boolean isArchiveMember() {
     return false;
   }
@@ -357,6 +364,14 @@ public class BaseCachedUrl implements CachedUrl {
       this.bcu = bcu;
     }
 
+    Member(ArchivalUnit au, String url, BaseCachedUrl bcu,
+	   ArchiveMemberSpec ams, TFile memberTf) {
+      super(au, url);
+      this.ams = ams;
+      this.bcu = bcu;
+      this.memberTf = memberTf;
+    }
+
     @Override
     public String getUrl() {
       return ams.toUrl();
@@ -403,7 +418,12 @@ public class BaseCachedUrl implements CachedUrl {
 	if (!membtf.exists()) {
 	  return null;
 	}
-	return new TFileInputStream(membtf);
+	InputStream is = new TFileInputStream(membtf);
+	if (CurrentConfig.getBooleanParam(RepositoryNodeImpl.PARAM_MONITOR_INPUT_STREAMS,
+					  RepositoryNodeImpl.DEFAULT_MONITOR_INPUT_STREAMS)) {
+	  is = new MonitoringInputStream(is, this.toString());
+	}
+	return is;
       } catch (Exception e) {
 	String msg =
 	  "Couldn't open member for which exists() was true: " + this;
