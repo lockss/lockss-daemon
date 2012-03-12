@@ -5,11 +5,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.38.0</string>
+    <string>1.53.10</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -24,25 +24,17 @@
     <string>Elsevier Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
-    <string>au_name</string>
-    <string>&quot;Elsevier Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
-  </entry>
-  <entry>
-    <string>au_feature_urls</string>
+    <string>plugin_feature_version_map</string>
     <map>
       <entry>
-        <string>au_title</string>
-        <string>&quot;%s&quot;, base_url</string>
+        <string>Metadata</string>
+        <string>2</string>
       </entry>
-      <entry>
-        <string>au_issue</string>
-        <string>&quot;%s0+%s0+%s/[\d]+/&quot;, base_url, volume, issue</string>
-      </entry>
-    <entry>
-      <string>au_volume</string>
-      <string>&quot;%s0+%s0+%s/&quot;, base_url, volume, issue</string>
-    </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Elsevier Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
