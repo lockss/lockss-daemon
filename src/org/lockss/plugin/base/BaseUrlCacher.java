@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.88 2012-01-18 03:40:42 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.89 2012-03-12 05:26:51 tlipkis Exp $
  */
 
 /*
@@ -448,7 +448,11 @@ public class BaseUrlCacher implements UrlCacher {
 	}
 
 	os = leaf.getNewOutputStream();
-	StreamUtil.copy(input, os, -1, wdog, true, checksumProducer);
+	long bytes =
+	  StreamUtil.copy(input, os, -1, wdog, true, checksumProducer);
+	if (logger.isDebug3()) {
+	  logger.debug3("Stored " + bytes + " bytes in " + this);
+	}
 	if (!fetchFlags.get(DONT_CLOSE_INPUT_STREAM_FLAG)) {
 	  try {
 	    input.close();
