@@ -4,6 +4,7 @@ import java.security.*;
 import java.util.*;
 
 import org.lockss.test.*;
+import org.lockss.util.ByteArray;
 
 public class TestHashBlock extends LockssTestCase {
   
@@ -12,14 +13,19 @@ public class TestHashBlock extends LockssTestCase {
     return new HashBlock(cu);
   }
   
-  private void addVersion(HashBlock block, int versionNum) throws Exception {
+  private void addVersion(HashBlock block, int versionNum, String input)
+      throws Exception {
     MessageDigest[] digests = new MessageDigest[1];
     digests[0] = MessageDigest.getInstance("MD5");
-    digests[0].update("foobarbazquux".getBytes());
+    digests[0].update(input.getBytes());
     
     block.addVersion(0, 100, 0, 100, digests, versionNum, null);    
   }
   
+  private void addVersion(HashBlock block, int versionNum) throws Exception {
+    addVersion(block, versionNum, "foobarbazquux");
+  }
+
   public void testArraySortOrder() throws Exception {
     HashBlock block = makeHashBlock();
     addVersion(block, 100);
@@ -54,6 +60,43 @@ public class TestHashBlock extends LockssTestCase {
     while (iter.hasNext()) {
       HashBlock.Version version = (HashBlock.Version)iter.next();
       assertEquals(idx--, version.repositoryVersion);
+    }
+  }
+  
+  public void testSortedVersions() throws Exception {
+    String[] expected = {
+      "N7UdGUp1E+RbVvZSTy1R8g==",
+      "N7UdGUp1E+RbVvZSTy1R8g==",
+      "U26/Ks0PtsL3PpixMQn7bw==",
+      "c/7/pLf2u2jkTPmEyF9uiA==",
+      "c/7/pLf2u2jkTPmEyF9uiA==",
+      "rL0Y20zC+Fzt72VPzMSk2A=="};
+
+    HashBlock block = makeHashBlock();
+    addVersion(block, 100, "foo");
+    addVersion(block, 50, "bar");
+    addVersion(block, 1, "bar");
+    addVersion(block, 75, "baz");
+    addVersion(block, 10, "baz");
+    addVersion(block, 6, "yab");
+    
+    Comparator<HashBlock.Version> comparator =
+      new Comparator<HashBlock.Version>() {
+        public int compare(HashBlock.Version o1, HashBlock.Version o2) {
+	  byte[] hash1 = o1.getHashes()[0];
+	  byte[] hash2 = o2.getHashes()[0];
+	  return ByteArray.lexicographicalCompare(hash1, hash2);
+	}
+    };
+
+    assertEquals(4, block.countUniqueVersions(comparator));
+
+    HashBlock.Version[] versions = block.sortedVersions(comparator);
+    assertEquals(expected.length, versions.length);
+
+    for (int idx = 0; idx < expected.length; idx++) {
+      assertEquals(expected[idx],
+		   ByteArray.toBase64(versions[idx].getHashes()[0]));
     }
   }
 }
