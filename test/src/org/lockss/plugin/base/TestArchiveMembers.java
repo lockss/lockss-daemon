@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchiveMembers.java,v 1.3 2012-03-12 05:22:44 tlipkis Exp $
+ * $Id: TestArchiveMembers.java,v 1.4 2012-03-12 07:06:55 tlipkis Exp $
  */
 
 /*
@@ -237,12 +237,13 @@ public class TestArchiveMembers extends LockssTestCase {
     String aurl = "http://www.example.com/branch1/branch1/zip5.zip";
     CachedUrlSet cus = simau.makeCachedUrlSet(new RangeCachedUrlSetSpec(aurl));
     Iterator<CachedUrl> iter = ((BaseCachedUrlSet)cus).archiveMemberIterator();
+    int cnt = 0;
     while (iter.hasNext()) {
       CachedUrl cu = iter.next();
       assertTrue(cu.hasContent());
-//       assertEquals("", cu.getUrl());
+      cnt++;
     }
-
+    assertEquals(16, cnt);
   }
 
   List<String> readLinesFromResource(String resource) throws IOException {
@@ -328,6 +329,53 @@ public class TestArchiveMembers extends LockssTestCase {
     assertEquals(170, htmlcnt);
 
 //     assertTrue(didCheckDelete);
+  }
+
+  public void testIterPruned() throws Exception {
+    CachedUrlSetSpec cuss =
+      PrunedCachedUrlSetSpec.excludeMatchingSubTrees("http://www.example.com/",
+						     "http://www.example.com/.*\\.zip");
+    CachedUrlSet cus = simau.makeCachedUrlSet(cuss);
+    List urls = new ArrayList();
+    for (String s : readLinesFromResource("srcpub_urls.txt")) {
+      if (!s.matches(".*\\.zip.*")) {
+	urls.add(s);
+      }
+    }
+    
+    Iterator<CachedUrl> cuIter =
+      ((BaseCachedUrlSet)cus).archiveMemberIterator();
+    Iterator<String> urlIter = urls.iterator();
+
+    int cnt = 0;
+    int htmlcnt = 0;
+
+    while (cuIter.hasNext()) {
+      CachedUrl cu = cuIter.next();
+      String url = cu.getUrl();
+      assertTrue(cu.hasContent());
+      assertEquals(url, urlIter.next(), url);
+      cnt++;
+
+      Matcher m1 = pat.matcher(url);
+      if (m1.matches()) {
+	htmlcnt++;
+	int depth =
+	  (m1.group(1) != null ? 1 : 0) + (m1.group(2) != null ? 1 : 0);
+	String expContent =
+	  String.format("This is file %s, depth %s, branch %s",
+			m1.group(3),
+			depth,
+			(m1.group(2) != null
+			 ? m1.group(2)
+			 : (m1.group(1) != null ? m1.group(1) : "0")));
+	String content = stringFromCu(cu);
+	assertEquals(content.length(), cu.getContentSize());
+	assertMatchesRE(url, expContent, content);
+      }
+    }
+    assertEquals(urls.size(), cnt++);
+    assertEquals(106, htmlcnt);
   }
 
   public void testFindCu() throws Exception {
