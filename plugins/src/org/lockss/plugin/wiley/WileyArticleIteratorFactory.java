@@ -43,27 +43,30 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class WileyArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class WileyArticleIteratorFactory 
+  implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
   protected static Logger log = Logger.getLogger("WileyArticleIteratorFactory");
   
   protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
   
-  protected static final String PATTERN_TEMPLATE = "\"%s%d/[A-Z]/[^/]+$\",base_url,year";
+  protected static final String PATTERN_TEMPLATE = "\"%s%d/[A-Z0-9]/[^/]+\\.zip!/.*\\.pdf$\",base_url,year";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
-    return new WileyArticleIterator(au, new SubTreeArticleIterator.Spec()
-                                       .setTarget(target)
-                                       .setRootTemplate(ROOT_TEMPLATE)
-                                       .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
+    return new WileyArticleIterator(
+        au, new SubTreeArticleIterator.Spec()
+              .setTarget(target)
+              .setRootTemplate(ROOT_TEMPLATE)
+              .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
   }
   
   protected static class WileyArticleIterator extends SubTreeArticleIterator {
 	 
-    protected static Pattern PATTERN = Pattern.compile("(/[^/]+\\.zip!/([^/]+)(\\.pdf)$", Pattern.CASE_INSENSITIVE);
+    protected final static Pattern PATTERN = 
+      Pattern.compile("(/[^/]+\\.zip!/.*)(\\.pdf)$", Pattern.CASE_INSENSITIVE);
     
     protected WileyArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
@@ -88,21 +91,24 @@ public class WileyArticleIteratorFactory implements ArticleIteratorFactory, Arti
       af.setFullTextCu(cu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
       
-      if(spec.getTarget() != MetadataTarget.Article)
-  		guessAdditionalFiles(af, mat);
+      if(spec.getTarget() != MetadataTarget.Article) {
+        guessAdditionalFiles(af, mat);
+      }
         
       return af;
     }
     
     protected void guessAdditionalFiles(ArticleFiles af, Matcher mat) {
-        CachedUrl metadataCu = au.makeCachedUrl(mat.replaceFirst("$1$3.xml"));
-        CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1$3.xml"));
-        
-        if (metadataCu != null && metadataCu.hasContent()) 
-      	  af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, metadataCu);
-        if (xmlCu != null && xmlCu.hasContent())
-      	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, xmlCu);
+      CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1$3.wml.xml"));
+      
+      if (xmlCu != null && xmlCu.hasContent()) {
+    	  af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, xmlCu);
       }
+      
+      if (xmlCu != null && xmlCu.hasContent()) {
+    	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, xmlCu);
+      }
+    }
   }
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)

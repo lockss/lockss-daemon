@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -32,22 +32,13 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>&quot;%s%d&quot;, base_url, year</string>
-  </entry>
-  <entry>
-    <string>au_feature_urls</string>
-    <map>
-      <entry>
-        <string>au_title</string>
-        <string>&quot;%s%d&quot;, base_url, year</string>
-      </entry>
-    </map>
   </entry>
   <entry>
     <string>plugin_archive_file_types</string>
@@ -59,10 +50,10 @@
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.wiley.WileyMetadataExtractorFactory</string>
+    <string>org.lockss.plugin.wiley.WileyArticleIteratorFactory</string>
   </entry>
   <entry>
-    <string>application/xml_metadata_extractor_factory_map</string>
+    <string>application/pdf_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*;DublinCore</string>
