@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.28.2.1 2012-03-11 00:50:06 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.28.2.2 2012-03-12 07:04:45 tlipkis Exp $
  */
 
 /*
@@ -489,11 +489,13 @@ public class BaseCachedUrlSet implements CachedUrlSet {
           stack.removeFirst();
         } else {
           CachedUrlSetNode curNode = (CachedUrlSetNode)it.next();
-
+	  if (!spec.matches(curNode.getUrl())) {
+	    continue;
+	  }
           if (!curNode.isLeaf()) {
-            CachedUrlSet cus = (CachedUrlSet)curNode;
-            //push the iterator of this child node onto the stack
-            stack.addFirst(cus.flatSetIterator());
+	    CachedUrlSet cus = (CachedUrlSet)curNode;
+	    //push the iterator of this child node onto the stack
+	    stack.addFirst(cus.flatSetIterator());
           }
           nextElement = curNode;
           return nextElement;
@@ -554,8 +556,12 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 	  Iterator<TFile> arcIter = arcIterStack.getFirst();
 	  if (arcIter.hasNext()) {
 	    TFile tf = arcIter.next();
+	    ArchiveMemberSpec ams = amsOf(curArcCu, tf);
+	    if (!spec.matches(ams.toUrl())) {
+	      continue;
+	    }
 	    if (tf.isFile()) {
-	      nextCu = makeCu(curArcCu, tf);
+	      nextCu = makeCu(curArcCu, tf, ams);
 	      break;
 	    } else if (tf.isDirectory()) {
 	      // push a new dir iterator onto the stack
@@ -626,9 +632,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
       return tzm.getCachedTFile(au.makeCachedUrl(cu.getUrl()));
     }
 
-    // Create a CU representing an archive member
-    private CachedUrl makeCu(CachedUrl cu, TFile tf) {
-      CachedUrl res = au.makeCachedUrl(cu.getUrl());
+    private ArchiveMemberSpec amsOf(CachedUrl cu, TFile tf) {
       TFile top = tf.getTopLevelArchive();
       if (top == null) {
 	String msg = "Shouldn't: TFile.getTopLevelArchive(" + tf + ") = null";
@@ -647,22 +651,26 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 	  }
 	  path = path.substring(pos);
 
-	  if (false) {
-	    // experimental - reuse the TFile returned by listFiles() in
-	    // the member CU
-	    BaseCachedUrl bcu = (BaseCachedUrl)res;
-	    res = bcu.getArchiveMemberCu(ArchiveMemberSpec.fromCu(cu, path),
-					 tf);
-	  } else {
-	    res = res.getArchiveMemberCu(ArchiveMemberSpec.fromCu(cu, path));
-	  }
+	  return ArchiveMemberSpec.fromCu(cu, path);
 	} else {
 	  String msg = "Shouldn't: TFile path (" + path
 	    + ") doesn't begin with top level archive path (" + toppath + ")";
 	  throw new RuntimeException(msg);
 	}
       }
-      return res;
+    }
+
+    // Create a CU representing an archive member
+    private CachedUrl makeCu(CachedUrl cu, TFile tf, ArchiveMemberSpec ams) {
+      CachedUrl res = au.makeCachedUrl(cu.getUrl());
+      if (false) {
+	// experimental - reuse the TFile returned by listFiles() in
+	// the member CU
+	BaseCachedUrl bcu = (BaseCachedUrl)res;
+	return bcu.getArchiveMemberCu(ams, tf);
+      } else {
+	return res.getArchiveMemberCu(ams);
+      }
     }
   }
 }

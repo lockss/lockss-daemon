@@ -1,10 +1,10 @@
 /*
- * $Id: TestSubTreeArticleIterator.java,v 1.8 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: TestSubTreeArticleIterator.java,v 1.8.2.1 2012-03-12 07:04:45 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -108,7 +108,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
   }
 
   // Multiple tests combined just to avoid recreating simulated content
-  public void testOne() throws Exception {
+  public void testLots() throws Exception {
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath + "1/"));
     crawlSimAu(sau);
 
@@ -123,6 +123,17 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     iter2.hasNext();
     assertClass(BaseCachedUrlSet.ArcMemIterator.class, iter2.getCusIterator());
 
+    doTestArticleCounts();
+
+    doTestCreateArticleFiles();
+
+    doTestCustomVisitArticleCu();
+
+    doTestIncludeSubTree();
+    doTestExcludeSubTree();
+  }
+
+  void doTestArticleCounts() {
     assertEquals(226, countArticles(new Spec()));
     assertEquals(121, countArticles(new Spec().setMimeType("text/html")));
     assertEquals(105, countArticles(new Spec().setMimeType("application/pdf")));
@@ -171,6 +182,9 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     assertEquals(0, countArticles(new Spec()
 				   .setRootTemplate("\"%sbranch1\",base_url")
 				   .setPattern("^\\.pdf")));
+  }
+
+  void doTestCreateArticleFiles() {
     Spec s1 = new Spec().setPatternTemplate("\"00%dfile\\.html\",branch");
     Spec s2 = new Spec().setPattern("002file\\.html");
     List l1 = getArticles(s1);
@@ -202,9 +216,42 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 	}
       });
     assertEquals(concatEach(exp, "arole"), getRoleStrings(l2, "akey"));
+  }
 
-    // Test overriding visitArticleCu() to emit zero, one, two or three
-    // ArticleFiles per CU
+  public void testFlags() throws Exception {
+    Configuration config2 = simAuConfig(tempDirPath + "1/");
+    // arrange for different numbers of upper and lower case names
+    config2.put("branch", "3");
+    config2.put("depth", "2");
+    config2.put("mixed_case", "true");
+    sau = PluginTestUtil.createAndStartSimAu(config2);
+    crawlSimAu(sau);
+
+    assertEquals(151, countArticles(new Spec()
+				    .setPattern("/branch")));
+    assertEquals(181, countArticles(new Spec()
+				    .setPattern("/branch",
+						Pattern.CASE_INSENSITIVE)));
+    assertEquals(90, countArticles(new Spec()
+				   .setPattern("/BRANCH")));
+    assertEquals(181, countArticles(new Spec()
+				    .setPattern("/BRANCH",
+						Pattern.CASE_INSENSITIVE)));
+
+    assertEquals(8,
+		 countArticles(new Spec()
+			       .setPatternTemplate("\"/branch[0-9]+/00%dfile\\.html\",branch")));
+    assertEquals(12,
+		 countArticles(new Spec()
+			       .setPatternTemplate("\"/branch[0-9]+/00%dfile\\.html\",branch",
+						   Pattern.CASE_INSENSITIVE)));
+  }
+
+  // Test overriding visitArticleCu() to emit zero, one, two or three
+  // ArticleFiles per CU
+  void doTestCustomVisitArticleCu() {
+    String a = "http://example.org/wombat/";
+    Spec s3 = new Spec().setPattern("branch2/002file\\.html");
     List exp3 =
       ListUtil.list(a+"branch1/branch2/002file.html",
 		    a+"branch1/branch2/branch2/002file.html",
@@ -254,33 +301,77 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     assertEquals(exp3, getFullTextUrls(l3));
   }
 
-  public void testFlags() throws Exception {
-    Configuration config2 = simAuConfig(tempDirPath + "1/");
-    // arrange for different numbers of upper and lower case names
-    config2.put("branch", "3");
-    config2.put("depth", "2");
-    config2.put("mixed_case", "true");
-    sau = PluginTestUtil.createAndStartSimAu(config2);
-    crawlSimAu(sau);
+  // Test including only specified subtrees
+  void doTestIncludeSubTree() {
+    // whole tree, for comparison
+    Spec s1 = new Spec();
+    MySubTreeArticleIterator iter1 = new MySubTreeArticleIterator(sau, s1);
+    iter1.setRecordPredInvocations();
+    List art1 = getArticles(iter1);
+    assertEquals(226, art1.size());
+    assertEquals(226, iter1.getPredInvocations().size());
 
-    assertEquals(151, countArticles(new Spec()
-				    .setPattern("/branch")));
-    assertEquals(181, countArticles(new Spec()
-				    .setPattern("/branch",
-						Pattern.CASE_INSENSITIVE)));
-    assertEquals(90, countArticles(new Spec()
-				   .setPattern("/BRANCH")));
-    assertEquals(181, countArticles(new Spec()
-				    .setPattern("/BRANCH",
-						Pattern.CASE_INSENSITIVE)));
+    // add a pattern that matches a subtree, reduces article count but not
+    // number of nodes visited
+    Spec s2 = new Spec().setPatternTemplate("\"%sbranch2\",base_url");
+    MySubTreeArticleIterator iter2 = new MySubTreeArticleIterator(sau, s2);
+    iter2.setRecordPredInvocations();
+    List art2 = getArticles(iter2);
+    assertEquals(105, art2.size());
+    assertEquals(226, iter2.getPredInvocations().size());
 
-    assertEquals(8,
-		 countArticles(new Spec()
-			       .setPatternTemplate("\"/branch[0-9]+/00%dfile\\.html\",branch")));
-    assertEquals(12,
-		 countArticles(new Spec()
-			       .setPatternTemplate("\"/branch[0-9]+/00%dfile\\.html\",branch",
-						   Pattern.CASE_INSENSITIVE)));
+    // replace pattern with a subtree include pattern, should reduce number
+    // of nodes visited
+    Spec s3 = new Spec().setIncludeSubTreePatternTemplate("\"%sbranch2\",base_url");
+    MySubTreeArticleIterator iter3 = new MySubTreeArticleIterator(sau, s3);
+    iter3.setRecordPredInvocations();
+    List art3 = getArticles(iter3);
+    assertEquals(105, art3.size());
+    assertEquals(105, iter3.getPredInvocations().size());
+
+    // Same thing with explicit root, which is slightly different case in
+    // SubTreeArticleIterator
+    Spec s4 = new Spec()
+      .setRoot("http://example.org")
+      .setIncludeSubTreePatternTemplate("\"%sbranch2\",base_url");
+    MySubTreeArticleIterator iter4 = new MySubTreeArticleIterator(sau, s4);
+    iter4.setRecordPredInvocations();
+    List art4 = getArticles(iter4);
+    assertEquals(105, art4.size());
+    assertEquals(105, iter4.getPredInvocations().size());
+  }
+    
+  // Test excluding specified subtrees
+  void doTestExcludeSubTree() {
+    // whole tree, for comparison
+    Spec s1 = new Spec().setRoot("http://example.org");
+    MySubTreeArticleIterator iter1 = new MySubTreeArticleIterator(sau, s1);
+    iter1.setRecordPredInvocations();
+    List art1 = getArticles(iter1);
+    assertEquals(226, art1.size());
+    assertEquals(226, iter1.getPredInvocations().size());
+
+    // add a pattern that matches a subtree, reduces article count but not
+    // number of nodes visited
+    Spec s2 = new Spec()
+      .setRoot("http://example.org")
+      .setPatternTemplate("\"%sbranch[13]\",base_url");
+    MySubTreeArticleIterator iter2 = new MySubTreeArticleIterator(sau, s2);
+    iter2.setRecordPredInvocations();
+    List art2 = getArticles(iter2);
+    assertEquals(106, art2.size());
+    assertEquals(226, iter2.getPredInvocations().size());
+
+    // replace pattern with a subtree exclude pattern, should reduce number
+    // of nodes visited
+    Spec s3 = new Spec()
+      .setRoot("http://example.org")
+      .setExcludeSubTreePatternTemplate("\"%sbranch2\",base_url");
+    MySubTreeArticleIterator iter3 = new MySubTreeArticleIterator(sau, s3);
+    iter3.setRecordPredInvocations();
+    List art3 = getArticles(iter3);
+    assertEquals(121, art3.size());
+    assertEquals(121, iter3.getPredInvocations().size());
   }
 
   public void testException() throws Exception {
@@ -350,8 +441,9 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     return res;
   }
       
-  public static class MySubTreeArticleIterator extends SubTreeArticleIterator {
+  static class MySubTreeArticleIterator extends SubTreeArticleIterator {
     int exceptionCount;
+    List predList = null;
 
     MySubTreeArticleIterator(ArchivalUnit au, Spec spec) {
       this(au, spec, 0);
@@ -364,6 +456,9 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 
     @Override
     protected boolean isArticleCu(CachedUrl cu) {
+      if (predList != null) {
+	predList.add(cu);
+      }
       if (super.isArticleCu(cu)) {
 	if (exceptionCount > 0 && cu.getUrl().endsWith(".html")) {
 	  exceptionCount--;
@@ -376,6 +471,14 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 
     Iterator getCusIterator() {
       return cusIter;
+    }
+
+    void setRecordPredInvocations() {
+      predList = new ArrayList();
+    }
+
+    List getPredInvocations() {
+      return predList;
     }
   }
 
