@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanSocietyOfCivilEngineersMetadataExtractorFactory.java,v 1.2 2012-03-02 16:26:36 dylanrhodes Exp $
+ * $Id: AmericanSocietyOfCivilEngineersMetadataExtractorFactory.java,v 1.2.2.1 2012-03-12 05:36:16 pgust Exp $
  */
 
 /*
@@ -33,156 +33,168 @@
 package org.lockss.plugin.americansocietyofcivilengineers;
 
 import java.io.*;
-import java.util.regex.Pattern;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.xml.xpath.XPathExpressionException;
+
+import org.apache.commons.collections.map.MultiValueMap;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.XmlDomMetadataExtractor.TextValue;
+import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
+import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.lockss.plugin.*;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 
 /**
+ * This class implements a FileMetadataExtractorFactory for the
+ * American Society of Civil Engineers..
+ * <p>
  * Files used to write this class constructed from ASCE FTP archive:
  * ~/2010/ASCE_xml_9.tar.gz/ASCE_xml_9.tar/./APPLAB/vol_96/iss_1/
  */
-
 public class AmericanSocietyOfCivilEngineersMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("AmericanSocietyOfCivilEngineersMetadataExtractorFactory");
+  static Logger log = 
+    Logger.getLogger("AmericanSocietyOfCivilEngineersMetadataExtractorFactory");
 
-  public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
-							   String contentType)
-      throws PluginException {
+  public FileMetadataExtractor createFileMetadataExtractor(
+      MetadataTarget target, String contentType) throws PluginException {
     return new AmericanSocietyOfCivilEngineersMetadataExtractor();
   }
 
+  /**
+   * This class implements a FileMetadataExtractor for the
+   * American Society of Civil Engineers.
+   */
   public static class AmericanSocietyOfCivilEngineersMetadataExtractor 
     implements FileMetadataExtractor {
-	  
-    private Pattern[] articleTags = {
-    	Pattern.compile("(.*<title>)([^<]+)(.*)([^>]+)(</title>.*)"),
-    	Pattern.compile("(.*?<author[^<]+<fname>)([^<]+)(</fname>(<middlename>([^<]+)</middlename>)?)(<surname>)([^<]+)(</surname></author>.*)"),
-    	Pattern.compile("(.*issn=\")(.*)(\" jcode.*)"),
-    	Pattern.compile("(.*<volume>)(.*)(</volume>.*)"),
-    	Pattern.compile("(.*<issue printdate=\")(.*)(\">.*</issue>.*)"),
-    	Pattern.compile("(.*<issue printdate=\".*\">)(.*)(</issue>.*)"),
-    	Pattern.compile("(.*<doi>)(.*)(</doi>.*)"),
-    	Pattern.compile("(.*<country>)(.*)(</country>.*)"),
-    	Pattern.compile("(.*<keywords.*>)(.*)(</keywords>.*)"),
-    	Pattern.compile("(.*<abstract>)|(</abstract>.*)"),
-    	Pattern.compile("(.*<cpyrt><cpyrtdate date=\")(.*)(\"/><cpyrtholder>)(.*)(</cpyrtholder></cpyrt>.*)")};
     
-    private String[] valueRegex = {
-    		"$2$4",";$2 $5 $7","$2","$2","$2","$2","$2","$2",";$2","gap","$2"};
-    
-    private String[] articleValues = initArticleValues();
-    
-    private MetadataField[] metadataFields = {MetadataField.FIELD_ARTICLE_TITLE, MetadataField.FIELD_AUTHOR,
-    		MetadataField.FIELD_ISSN, MetadataField.FIELD_VOLUME, MetadataField.FIELD_DATE, MetadataField.FIELD_ISSUE,
-    		MetadataField.FIELD_DOI, MetadataField.DC_FIELD_SOURCE, MetadataField.FIELD_KEYWORDS,
-    		MetadataField.DC_FIELD_DESCRIPTION, MetadataField.DC_FIELD_RIGHTS};
-    
-    private final int AUTHOR_INDEX = 1;
+    /** NodeValue for creating value of subfields from author tag */
+    static private final XPathValue AUTHOR_VALUE = new NodeValue() {
+      @Override
+      public String getValue(Node node) {
+        if (node == null) {
+          return null;
+        }
         
+        NodeList nameNodes = node.getChildNodes();
+        String fname = null, mname = null, sname = null;
+        for (int k = 0; k < nameNodes.getLength(); k++) {
+          Node nameNode = nameNodes.item(k);
+          if (nameNode.getNodeName().equals("fname")) {
+            fname = nameNode.getTextContent();
+          } else if (nameNode.getNodeName().equals("surname")) {
+            sname = nameNode.getTextContent();
+          } else if (nameNode.getNodeName().equals("middlename")) {
+            mname = nameNode.getTextContent();
+          }
+        }
+        // return name as [surname], [firstname] [middlename]
+        return sname + ", " + fname + ((mname == null) ? "" : " " + mname);
+      }
+    };
+
+    /** NodeValue for creating value of subfields from author tag */
+    static private final XPathValue BOOKREVIEW_TITLE_VALUE = new TextValue() {
+      @Override
+      public String getValue(String s) {
+        return "Review of: " + s;
+      }
+    };
+    
+    /** Map of raw xpath key to node value function */
+    static private final Map<String,XPathValue> nodeMap = 
+        new HashMap<String,XPathValue>();
+    static {
+      // normal journal article schema
+      nodeMap.put("/article/front/titlegrp/title", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/journal", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/journal/@issn", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/volume", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/issue", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/issue/@printdate", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/fpage", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/lpage", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/pubfront/doi", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/keywords/keyword", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/cpyrt/cpyrtholder", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/front/authgrp/author", AUTHOR_VALUE);
+
+      // book review journal article schema
+      nodeMap.put("/article/bookreview/booktitlegrp/booktitle", BOOKREVIEW_TITLE_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/journal", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/journal/@issn", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/volume", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/issue", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/issue/@printdate", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/fpage", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/lpage", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/pubfront/doi", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/cpyrt/cpyrtholder", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/article/bookreview/authgrp/author", AUTHOR_VALUE);
+
+    }
+
+    /** Map of raw xpath key to cooked MetadataField */
+    static private final MultiValueMap xpathMap = new MultiValueMap();
+    static {
+      // normal journal article schema
+      xpathMap.put("/article/front/titlegrp/title", MetadataField.FIELD_ARTICLE_TITLE);
+      xpathMap.put("/article/front/pubfront/journal", MetadataField.FIELD_JOURNAL_TITLE);
+      xpathMap.put("/article/front/pubfront/journal/@issn", MetadataField.FIELD_ISSN);
+      xpathMap.put("/article/front/pubfront/volume", MetadataField.FIELD_VOLUME);
+      xpathMap.put("/article/front/pubfront/issue", MetadataField.FIELD_ISSUE);
+      xpathMap.put("/article/front/pubfront/issue/@printdate", MetadataField.FIELD_DATE);
+      xpathMap.put("/article/front/pubfront/fpage", MetadataField.FIELD_START_PAGE);
+      xpathMap.put("/article/front/pubfront/lpage", MetadataField.FIELD_END_PAGE);
+      xpathMap.put("/article/front/pubfront/doi", MetadataField.FIELD_DOI);
+      xpathMap.put("/article/front/keywords/keyword", MetadataField.FIELD_KEYWORDS);
+      xpathMap.put("/article/front/cpyrt/cpyrtholder", MetadataField.FIELD_PUBLISHER);
+      xpathMap.put("/article/front/authgrp/author", MetadataField.FIELD_AUTHOR);
+      
+      // book review jouranl article schema
+      xpathMap.put("/article/bookreview/booktitlegrp/booktitle", MetadataField.FIELD_ARTICLE_TITLE);
+      xpathMap.put("/article/bookreview/pubfront/journal", MetadataField.FIELD_JOURNAL_TITLE);
+      xpathMap.put("/article/bookreview/pubfront/journal/@issn", MetadataField.FIELD_ISSN);
+      xpathMap.put("/article/bookreview/pubfront/volume", MetadataField.FIELD_VOLUME);
+      xpathMap.put("/article/bookreview/pubfront/issue", MetadataField.FIELD_ISSUE);
+      xpathMap.put("/article/bookreview/pubfront/issue/@printdate", MetadataField.FIELD_DATE);
+      xpathMap.put("/article/bookreview/pubfront/fpage", MetadataField.FIELD_START_PAGE);
+      xpathMap.put("/article/bookreview/pubfront/lpage", MetadataField.FIELD_END_PAGE);
+      xpathMap.put("/article/bookreview/pubfront/doi", MetadataField.FIELD_DOI);
+      xpathMap.put("/article/bookreview/keywords/keyword", MetadataField.FIELD_KEYWORDS);
+      xpathMap.put("/article/bookreview/cpyrt/cpyrtholder", MetadataField.FIELD_PUBLISHER);
+      xpathMap.put("/article/bookreview/authgrp/author", MetadataField.FIELD_AUTHOR);
+    }
+
     /**
-     * Use SimpleHtmlMetaTagMetadataExtractor to extract raw metadata, map
+     * Use XmlMetadataExtractor to extract raw metadata, map
      * to cooked fields, then extract extra tags by reading the file.
+     * 
+     * @param target the MetadataTarget
+     * @param cu the CachedUrl from which to read input
+     * @param emitter the emiter to output the resulting ArticleMetadata
      */
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
-      throws IOException {
-    	log.debug3("The MetadataExtractor attempted to extract metadata from cu: "+cu);
-
-      BufferedReader bReader = new BufferedReader(cu.openForReading());
-	  ArticleMetadata am = new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
-	  boolean emitted = false;
-	  
+        throws IOException, PluginException {
+      log.debug3("Attempting to extract metadata from cu: "+cu);
       try {
-        for (String line = bReader.readLine(); line != null; line = bReader.readLine()) 
-        {
-          line = line.trim();
-          
-          if(line.contains("<body>"))
-          {
-        	  log.debug3("Emitting metadata for cu: "+cu.getUrl());
-        	  putMetadataIn(am);
-        	  emitter.emitMetadata(cu,am);
-        	  emitted = true;
-        	  return;
-          }
-          else
-        	  extractFrom(line,bReader);
-        }
-      } finally {
-    	  if(!emitted) emitter.emitMetadata(cu,am);
-        IOUtil.safeClose(bReader);
+      ArticleMetadata am = 
+          new XmlDomMetadataExtractor(nodeMap).extract(target, cu);
+        am.cook(xpathMap);
+        emitter.emitMetadata(cu,  am);
+      } catch (XPathExpressionException ex) {
+        PluginException ex2 = new PluginException("Error parsing XPaths");
+        ex2.initCause(ex);
+        throw ex2;
       }
-    }
-    
-    /**
-     * Stores the gathered MetadataField values in the ArticleMetadata
-     * so it can be emitted
-     * @param am
-     */
-    private void putMetadataIn(ArticleMetadata am)
-    {       	
-        for(int i = 0; i < articleValues.length; ++i)
-        	if(articleValues[i] != null)
-        		if(valueRegex[i].contains(";"))
-        			am.put(new MetadataField(metadataFields[i],MetadataField.splitAt(";")),
-        					articleValues[i]);
-        		else
-          			am.put(metadataFields[i],articleValues[i]);
-    }
- 
-    /**
-     * Extracts metadata from a line if it contains any
-     * @param line - String to extract metadata from
-     */
-    private void extractFrom(String line, BufferedReader reader) throws IOException
-    {
-    	for(int i = 0; i < articleTags.length; ++i)
-       		if(articleTags[i].matcher(line).find() && !line.contains("bibciteref"))
-    			if(!valueRegex[i].equals("gap"))
-    			{
-    				articleValues[i] += line.replaceFirst(articleTags[i].toString(), valueRegex[i]);
-    				
-    				while(line.contains("</author>") && i == AUTHOR_INDEX)
-    				{
-    					line = removeFirstAuthorFrom(line);
-    					if(line.contains("</author>"))
-    						articleValues[i] += line.replaceFirst(articleTags[i].toString(), valueRegex[i]);
-    				}
-    			}	
-    			else
-    			{    				
-    				while(line != null && !articleTags[i].matcher(line).find())
-    				{
-    					articleValues[i] += sanitize(line);
-    					line = reader.readLine();
-    				}
-    			}
-    }
-    
-    private String removeFirstAuthorFrom(String str)
-    {
-    	return str.replaceFirst("<author[^<]+<fname>[^<]+</fname>(<middlename>[^<]+</middlename>)?<surname>[^<]+</surname></author>","");
-    }
-    
-    private String sanitize(String str)
-    {
-    	return str.replaceAll("\\<.*?>","");
-    }
-        
-    /**
-     * Returns a String[] of length articleTags.length whose fields are all null
-     * @return
-     */
-    private String[] initArticleValues()
-    {
-    	String[] output = new String[articleTags.length];
-    	for(int i = 0; i < output.length; ++i)
-    		output[i] = "";
-    	return output;
     }
   }
 }
