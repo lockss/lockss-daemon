@@ -84,9 +84,9 @@ public class AmericanInstituteOfPhysicsSourceArticleIteratorFactory implements A
       af.setFullTextCu(cu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, cu);
       
-      if(spec.getTarget() != MetadataTarget.Article)
-		guessAdditionalFiles(af, mat);
-      
+      if(spec.getTarget() != MetadataTarget.Article) {
+        guessAdditionalFiles(af, mat);
+      }
       return af;
     }
     
