@@ -44,7 +44,7 @@ public class AssociationForComputingMachineryArticleIteratorFactory implements A
   
   protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
   
-  protected static final String PATTERN_TEMPLATE = "\"%s%d/\\d+[^/]+\\d+/[^/]+-\\d+/p\\d+-.*\\.pdf$\",base_url,year";
+  protected static final String PATTERN_TEMPLATE = "\"%s%d/\\d+[^/]+\\d+/[^/]+-\\d+/.*\\.xml$\",base_url,year";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -59,7 +59,7 @@ public class AssociationForComputingMachineryArticleIteratorFactory implements A
   
   protected static class ACMArticleIterator extends SubTreeArticleIterator {
 	 
-    protected static Pattern articlePattern = Pattern.compile("(.*/[\\d]+[^/]+[\\d]+/)([^/]+[\\d]+)(/p[\\d]+-[^/]+\\.pdf)$", Pattern.CASE_INSENSITIVE);
+    protected static Pattern articlePattern = Pattern.compile("(.*/[\\d]+[^/]+[\\d]+/)([^/]+[\\d]+)(/[^/]+\\.xml)$", Pattern.CASE_INSENSITIVE);
     
     protected ACMArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
@@ -84,10 +84,9 @@ public class AssociationForComputingMachineryArticleIteratorFactory implements A
       
       if(spec.getTarget() != MetadataTarget.Article)
       {
-		af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
-		guessMetadataFile(af, mat);
+		//af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
+		//guessMetadataFile(af, mat);
       }
-      log.debug3("ArticleFiles constructed for: "+cu.getUrl()+" are: "+af.toString());
       
       return af;
     }
