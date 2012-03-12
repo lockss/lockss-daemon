@@ -47,14 +47,17 @@ public class AmericanInstituteOfPhysicsSourceArticleIteratorFactory implements A
   
   protected static final String PATTERN_TEMPLATE = "\"%s%d/AIP_xml_[\\d]+\\.tar\\.gz!/[^/]+/vol_[\\d]+/iss_[\\d]+/[\\d]+_1.xml$\",base_url,year";
   
+  protected static final String INCLUDE_SUBTREE_TEMPLATE = "\"%s%d/ASCE_xml_[\\d]+\\.tar\\.gz!/[^/]+/vol_[\\d]+/iss_[\\d]+/[\\d]+_1.xml$\",base_url,year";
+  
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
     return new AIPArticleIterator(au, new SubTreeArticleIterator.Spec()
-                                       .setTarget(target)
-                                       .setRootTemplate(ROOT_TEMPLATE)
-                                       .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
+                                .setTarget(target)
+                                .setRootTemplate(ROOT_TEMPLATE)
+                                .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE)
+                                .setIncludeSubTreePatternTemplate(INCLUDE_SUBTREE_TEMPLATE, Pattern.CASE_INSENSITIVE));
   }
   
   protected static class AIPArticleIterator extends SubTreeArticleIterator {
@@ -84,9 +87,10 @@ public class AmericanInstituteOfPhysicsSourceArticleIteratorFactory implements A
       af.setFullTextCu(cu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, cu);
       
-      if(spec.getTarget() != MetadataTarget.Article) {
-        guessAdditionalFiles(af, mat);
-      }
+// temporary: no need to iterate pdf, webimages, printimages for now (PJG)
+//      if(spec.getTarget() != MetadataTarget.Article) {
+//        guessAdditionalFiles(af, mat);
+//      }
       return af;
     }
     

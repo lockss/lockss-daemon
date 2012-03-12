@@ -86,9 +86,11 @@ public class AmericanSocietyOfCivilEngineersArticleIteratorFactory implements Ar
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(cu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, cu);
-      
-      if(spec.getTarget() != MetadataTarget.Article)
-		guessAdditionalFiles(af, mat);
+
+// temporary: no need to iterate pdf, webimages, printimages for now (PJG)
+//      if(spec.getTarget() != MetadataTarget.Article) {
+//        guessAdditionalFiles(af, mat);
+//      }
       
       return af;
     }
