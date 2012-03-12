@@ -1,5 +1,5 @@
 /*
- * $Id: XmlDomMetadataExtractor.java,v 1.4 2012-03-12 04:27:21 pgust Exp $
+ * $Id: XmlDomMetadataExtractor.java,v 1.5 2012-03-12 04:40:14 pgust Exp $
  */
 
 /*
@@ -287,25 +287,29 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
           } else if (type == XPathConstants.STRING) {
             // filter node text content
             String text = node.getTextContent();
-            value = nodeValues[i].getValue(text);
+            if (!StringUtil.isNullString(text)) {
+              value = nodeValues[i].getValue(text);
+            }
           } else if (type == XPathConstants.BOOLEAN) {
             // filter boolean value of node text content
             String text = node.getTextContent();
-            value = nodeValues[i].getValue(Boolean.parseBoolean(text));
+            if (!StringUtil.isNullString(text)) {
+              value = nodeValues[i].getValue(Boolean.parseBoolean(text));
+            }
           } else if (type == XPathConstants.NUMBER) {
             // filter number value of node text content
             try {
-              NumberFormat format = NumberFormat.getInstance();
               String text = node.getTextContent();
-              value = nodeValues[i].getValue(format.parse(text));
+              if (!StringUtil.isNullString(text)) {
+                NumberFormat format = NumberFormat.getInstance();
+                value = nodeValues[i].getValue(format.parse(text));
+              }
             } catch (ParseException ex) {
               // ignore invalid number
               log.debug3(ex.getMessage());
-              continue;
             }
           } else {
             log.debug("Unknown nodeValue type: " + type.toString());
-            continue;
           }
           
           if (!StringUtil.isNullString(value)) {
