@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.27 2011-09-25 04:20:40 tlipkis Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.28 2012-03-12 05:23:46 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,11 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     RegistryPlugin.PREFIX + "crawlInterval";
   static final long DEFAULT_REGISTRY_CRAWL_INTERVAL = Constants.DAY;
 
+  /** The proxy to use for registry crawls, or DIRECT to override a global
+   * crawl proxy. */
+  static final String PARAM_REGISTRY_CRAWL_PROXY =
+    RegistryPlugin.PREFIX + "crawlProxy";
+
   /** If "au", registry AUs will crawl in parallel using individual
    * rate limiters; if "plugin" they'll crawl sequentially using a shared
    * rate limiter */
@@ -105,22 +110,27 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
 				    DEFAULT_ENABLE_REGISTRY_POLLS);
   }
 
-  public void loadAuConfigDescrs(Configuration config)
+  public void loadAuConfigDescrs(Configuration auConfig)
       throws ConfigurationException {
-    super.loadAuConfigDescrs(config);
-    this.m_registryUrl = config.get(ConfigParamDescr.BASE_URL.getKey());
+    super.loadAuConfigDescrs(auConfig);
+    this.m_registryUrl = auConfig.get(ConfigParamDescr.BASE_URL.getKey());
     // Now we can construct a valid CC permission checker.
     m_permissionCheckers =
 //       ListUtil.list(new CreativeCommonsPermissionChecker(m_registryUrl));
       ListUtil.list(new CreativeCommonsPermissionChecker());
 
+    Configuration config = CurrentConfig.getCurrentConfig();
     paramMap.putLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL,
-		     CurrentConfig
-		     .getTimeIntervalParam(PARAM_REGISTRY_CRAWL_INTERVAL,
-					   DEFAULT_REGISTRY_CRAWL_INTERVAL));
+		     config.getTimeInterval(PARAM_REGISTRY_CRAWL_INTERVAL,
+					    DEFAULT_REGISTRY_CRAWL_INTERVAL));
     if (log.isDebug2()) {
       log.debug2("Setting Registry AU recrawl interval to " +
 		 StringUtil.timeIntervalToString(paramMap.getLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL)));
+    }
+    String proxy = config.get(PARAM_REGISTRY_CRAWL_PROXY);
+    if (!StringUtil.isNullString(proxy)) {
+      paramMap.putString(ConfigParamDescr.CRAWL_PROXY.getKey(), proxy);
+      log.debug2("Setting Registry AU crawl proxy to " + proxy);
     }
   }
 
