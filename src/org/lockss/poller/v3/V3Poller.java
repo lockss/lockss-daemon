@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.113 2012-03-09 21:17:55 barry409 Exp $
+ * $Id: V3Poller.java,v 1.114 2012-03-12 21:38:47 barry409 Exp $
  */
 
 /*
@@ -565,6 +565,8 @@ public class V3Poller extends BasePoll {
 
     repairHashAllVersions = c.getBoolean(PARAM_REPAIR_HASH_ALL_VERSIONS,
 					 DEFAULT_REPAIR_HASH_ALL_VERSIONS);
+    enableRepairFromCache = c.getBoolean(PARAM_V3_ENABLE_REPAIR_FROM_CACHE,
+					 DEFAULT_V3_ENABLE_REPAIR_FROM_CACHE);
   }
 
   PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {
