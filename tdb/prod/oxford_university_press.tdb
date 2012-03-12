@@ -4949,28 +4949,8 @@
       issnl = 2047-2404
     >
 
-    comment[continues] = 1525-2167
-    comment[title] = change in January 2012 
-    param[base_url] = http://ehjcimaging.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
-
-    comment[0] = forthcoming in 2012
-
-  }
-    
-  {
-  
-    title <
-      name = European Journal of Echocardiography ;
-      issn = 1525-2167 ;
-      eissn = 1532-2114 ;
-      issnl = 1525-2167
-    >
-
-    comment[continued_by] = 2047-2404
-    comment[base_url] = title change in 2012 -- base url redirects to that of new title
-    comment[notReady] = malformed manifest pages (links refer to old eje URLs)
-
+    comment[continued_from] = 1525-2167
+    comment[title] = change in January 2012, old url redirects to this one
     {
  
     pluginPrefix = org.lockss.plugin.highwire.
@@ -4989,8 +4969,27 @@
     au < HighWirePressH20Plugin ; notReady ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; notReady ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; notReady ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; notReady ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 >
 
     }
+
+  }
+    
+  {
+  
+    title <
+      name = European Journal of Echocardiography ;
+      issn = 1525-2167 ;
+      eissn = 1532-2114 ;
+      issnl = 1525-2167
+    >
+
+    comment[continued_by] = 2047-2404
+    comment[base_url] = title change in 2012 -- base url redirects to that of new title
+    comment[notReady] = malformed manifest pages (links refer to old eje URLs)
+    comment[selena] = no AU content was collected so I moved the AU block to the new title -sc
+
+
 
   }
 
