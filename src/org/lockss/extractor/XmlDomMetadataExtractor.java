@@ -1,5 +1,5 @@
 /*
- * $Id: XmlDomMetadataExtractor.java,v 1.3 2012-03-12 04:23:18 pgust Exp $
+ * $Id: XmlDomMetadataExtractor.java,v 1.4 2012-03-12 04:27:21 pgust Exp $
  */
 
 /*
@@ -254,12 +254,18 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
       return am;
     }
     Document doc;
-    InputSource bReader = new InputSource(cu.openForReading());
+    Reader cuReader = cu.openForReading();
+    InputSource bReader = new InputSource(cuReader);
     try {
       doc = builder.parse(bReader);
     } catch (SAXException ex) {
       log.warning(ex.getMessage());
       return am;
+    } finally {
+      try {
+        cuReader.close();
+      } catch (IOException ex) {
+      }
     }
 
     // search for values using specified XPath expressions and
