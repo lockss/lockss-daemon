@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.77 2012-01-18 03:40:41 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.78 2012-03-12 05:26:38 tlipkis Exp $
  */
 
 /*
@@ -500,9 +500,9 @@ public class TestNewContentCrawler extends LockssTestCase {
     CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(6, crawlStatus.getNumFetched());
     assertEmpty(crawlStatus.getUrlsOfMimeType("no-such-mimetype"));
-    assertEquals(SetUtil.set(startUrl, url1),
+    assertEquals(SetUtil.set(startUrl, url1, permissionPage),
 		 SetUtil.theSet(crawlStatus.getUrlsOfMimeType("text/html")));
-    assertEquals(2, crawlStatus.getNumUrlsOfMimeType("text/html"));   
+    assertEquals(3, crawlStatus.getNumUrlsOfMimeType("text/html"));   
     assertEquals(SetUtil.set(url2, url3),
 		 SetUtil.theSet(crawlStatus.getUrlsOfMimeType("image/png")));
     assertEquals(2, crawlStatus.getNumUrlsOfMimeType("image/png"));   
@@ -536,7 +536,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertTrue(crawlStatus.getUrlsOfMimeType("bla-ba-type").isEmpty());
     assertEquals(3, crawlStatus.getNumUrlsOfMimeType("bla-content-type"));  
     assertEquals(1, crawlStatus.getNumUrlsOfMimeType("bla-ba-type"));  
-    assertEquals(1, crawlStatus.getNumUrlsOfMimeType("text/html"));  
+    assertEquals(2, crawlStatus.getNumUrlsOfMimeType("text/html"));  
   }
   
   /** test status update of pending urls   */

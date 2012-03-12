@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.39 2012-01-18 03:40:41 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.40 2012-03-12 05:26:37 tlipkis Exp $
  */
 
 /*
@@ -62,7 +62,9 @@ public class MockUrlCacher implements UrlCacher {
   private BitSet fetchFlags = new BitSet();
   private PermissionMapSource permissionMapSource;
   private String previousContentType;
+  private byte[] storedContent;
   private CrawlRateLimiter crl;
+  private RedirectScheme redirScheme;
 
   public MockUrlCacher(String url, MockArchivalUnit au){
     this.url = url;
@@ -145,6 +147,11 @@ public class MockUrlCacher implements UrlCacher {
   }
 
   public void setRedirectScheme(RedirectScheme scheme) {
+    redirScheme = scheme;
+  }
+
+  public RedirectScheme getRedirectScheme() {
+    return redirScheme;
   }
 
   public void setWatchdog(LockssWatchdog wdog) {
@@ -174,6 +181,11 @@ public class MockUrlCacher implements UrlCacher {
 	cus.addCachedUrl(url);
       }
     }
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//     logger.critical("Storing from " + input);
+//     long bytes = StreamUtil.copy(input, baos);
+//     logger.debug3("Stored " + bytes + " bytes");
+//     storedContent = baos.toByteArray();
   }
 
   public void setCachingException(IOException e, int numTimesToThrow) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbePermissionChecker.java,v 1.9 2007-08-20 22:48:50 tlipkis Exp $
+ * $Id: TestProbePermissionChecker.java,v 1.10 2012-03-12 05:26:37 tlipkis Exp $
  */
 
 /*
@@ -34,8 +34,12 @@ package org.lockss.daemon;
 import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
+import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
+import org.lockss.config.*;
+import org.lockss.crawler.*;
+import org.lockss.crawler.BaseCrawler.StorePermissionScheme;
 
 public class TestProbePermissionChecker extends LockssTestCase {
 
@@ -122,6 +126,14 @@ public class TestProbePermissionChecker extends LockssTestCase {
 				   url));
   }
 
+  StorePermissionScheme getConfigPermissionScheme() {
+    Configuration config = ConfigManager.getCurrentConfig();
+    return (StorePermissionScheme)
+      config.getEnum(StorePermissionScheme.class,
+		     BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
+		     BaseCrawler.DEFAULT_STORE_PERMISSION_SCHEME);
+  }
+
   public void testProbeHasPermission() {
     String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
 
@@ -135,9 +147,32 @@ public class TestProbePermissionChecker extends LockssTestCase {
     assertTrue("Didn't give permission when there was a probe",
 		pc.checkPermission(helper, new StringReader(htmlSourceWProbe),
 				   "http://www.example.com"));
+
+    assertEquals(StorePermissionScheme.Legacy, getConfigPermissionScheme());
+    assertEquals(0, helper.storeCnt);
+  }
+
+  public void testProbeHasPermissionWithStore() {
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
+				  StorePermissionScheme.StoreAllInSpec.toString());
+    String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
+
+    String url = "http://www.example.com";
+    mau.addUrl(url, true, true);
+    mau.addContent(url, htmlSourceWProbe);
+    mau.addUrl(probeUrl, true, true);
+    mau.addContent(probeUrl, "");
+
+    pc = new ProbePermissionChecker(mau);
+    assertTrue("Didn't give permission when there was a probe",
+		pc.checkPermission(helper, new StringReader(htmlSourceWProbe),
+				   "http://www.example.com"));
+    assertEquals(1, helper.storeCnt);
   }
 
   public void testProbeNoPermission() {
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
+				  StorePermissionScheme.StoreAllInSpec.toString());
     String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
 
     String url = "http://www.example.com";
@@ -152,17 +187,26 @@ public class TestProbePermissionChecker extends LockssTestCase {
     assertFalse("Gave permission when the nested checker denied it",
 	       pc.checkPermission(helper, new StringReader(htmlSourceWProbe),
 				  "http://www.example.com"));
+    assertEquals(0, helper.storeCnt);
   }
 
   static class MyPermissionHelper extends MockPermissionHelper {
     ArchivalUnit au;
+    int storeCnt = 0;
 
     MyPermissionHelper(ArchivalUnit au) {
       this.au = au;
     }
 
-    public UrlCacher makeUrlCacher(String url) {
+    @Override
+    public UrlCacher makePermissionUrlCacher(String url) {
       return au.makeUrlCacher(url);
+    }
+
+    @Override
+    public void storePermissionPage(UrlCacher uc, BufferedInputStream is)
+	throws IOException {
+      storeCnt++;
     }
   }
 }

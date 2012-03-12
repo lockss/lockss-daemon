@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.54 2012-01-18 03:40:42 tlipkis Exp $
+ * $Id: Crawler.java,v 1.55 2012-03-12 05:26:38 tlipkis Exp $
  */
 
 /*
@@ -124,17 +124,20 @@ public interface Crawler {
     public ArchivalUnit getAu();
 
     /**
-     * Generate a URL cacher  for the given URL
+     * Generate a URL cacher for the given URL, suitable for fetching and
+     * possibly storing a permission page.  See {@link
+     * BaseCrawler.PARAM_STORE_PERMISSION_SCHEME}.
      * @param url
      * @return UrlCacher for the given URL
      */
-    public UrlCacher makeUrlCacher(String url);
+    public UrlCacher makePermissionUrlCacher(String url);
 
     public BufferedInputStream resetInputStream(BufferedInputStream is,
 						String url)
 	throws IOException;
 
-    public void refetchPermissionPage(String url) throws IOException;
+    public void storePermissionPage(UrlCacher uc, BufferedInputStream is)
+	throws IOException;
 
     public void setPreviousContentType(String previousContentType);
 

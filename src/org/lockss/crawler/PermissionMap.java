@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.30 2012-01-18 03:40:42 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.31 2012-03-12 05:26:38 tlipkis Exp $
  */
 
 /*
@@ -164,12 +164,13 @@ public class PermissionMap {
    */
   public boolean init() {
     List<String> pUrls = au.getCrawlSpec().getPermissionPages();
+    Configuration config = ConfigManager.getCurrentConfig();
     boolean abortOnFirstNoPermission =
-      CurrentConfig.getBooleanParam(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
-                                    BaseCrawler.DEFAULT_ABORT_ON_FIRST_NO_PERMISSION);
+      config.getBoolean(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
+			BaseCrawler.DEFAULT_ABORT_ON_FIRST_NO_PERMISSION);
 
-    streamResetMax = CurrentConfig.getIntParam(PARAM_PERMISSION_BUF_MAX,
-					       DEFAULT_PERMISSION_BUF_MAX);
+    streamResetMax =
+      config.getInt(PARAM_PERMISSION_BUF_MAX, DEFAULT_PERMISSION_BUF_MAX);
 
     logger.info("Checking permission for " + au + " at " + pUrls);
     for (String permissionPage : pUrls) {
@@ -384,7 +385,7 @@ public class PermissionMap {
 	rec.setStatus(PermissionRecord.PERMISSION_CRAWL_WINDOW_CLOSED);
       } else {
         // fetch the page and check for the permission statement
-	UrlCacher uc = pHelper.makeUrlCacher(pUrl);
+	UrlCacher uc = pHelper.makePermissionUrlCacher(pUrl);
         if (fetchAndCheck(uc, crawlStatus)) {
           rec.setStatus(PermissionRecord.PERMISSION_OK);
         } else {
@@ -431,7 +432,7 @@ public class PermissionMap {
 
   /**
    * Fetch the permission page and check for all required permission
-   * objects.
+   * objects.  Store it iff permission found.
    *
    * @param uc a UrlCacher for the permission page URL
    * @param crawlStatus
@@ -442,8 +443,6 @@ public class PermissionMap {
 
     String pUrl = uc.getUrl();
     PermissionChecker checker;
-    // fetch and cache the permission page
-    uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
 
     InputStream uis = uc.getUncachedInputStream();
     CIProperties props = uc.getUncachedProperties();
@@ -460,8 +459,7 @@ public class PermissionMap {
 //     }
     BufferedInputStream is = new BufferedInputStream(uis);
 
-    crawlStatus.signalUrlFetched(uc.getUrl());
-    boolean needPermission = true;
+    boolean foundPermission = false;
     try {
       // check the lockss checkers and find at least one checker that matches
       for (Iterator it = daemonPermissionCheckers.iterator(); it.hasNext(); ) {
@@ -475,7 +473,7 @@ public class PermissionMap {
 					      Constants.DEFAULT_ENCODING);
         if (checker.checkPermission(pHelper, reader, pUrl)) {
           logger.debug3("Found permission on "+checker);
-          needPermission = false;
+          foundPermission = true;
           break; //we just need one permission to be sucessful here
         } else {
           logger.debug3("Didn't find permission on "+checker);
@@ -486,40 +484,25 @@ public class PermissionMap {
         }
       }
       // if we didn't find at least one required lockss permission - fail.
-      if(needPermission) {
+      if (!foundPermission) {
         logger.siteError("No (C)LOCKSS crawl permission on " + pUrl);
         is.close();
         return false;
       }
 
-      //either the pluginPermissionCheckers will need this
-      //or the storeContent call will
-      is = pHelper.resetInputStream(is, pUrl);
-
-      is.mark(streamResetMax);
-      Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
       if (pluginPermissionChecker != null) {
+	is = pHelper.resetInputStream(is, pUrl);
+	is.mark(streamResetMax);
+	Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
 	if (!pluginPermissionChecker.checkPermission(pHelper, reader, pUrl)) {
 	  logger.siteError("No plugin crawl permission on " + pUrl);
 	  is.close();
 	  return false;
-	} else {
-	  is = pHelper.resetInputStream(is, pUrl);
 	}
       }
 
-      if (CurrentConfig.getBooleanParam(BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE,
-                                        BaseCrawler.DEFAULT_REFETCH_PERMISSIONS_PAGE)) {
-        logger.debug3("Permission granted. Caching permission page.");
-        pHelper.refetchPermissionPage(pUrl);
-      } else {
-        uc.storeContent(is, uc.getUncachedProperties());
-	CachedUrl cu = uc.getCachedUrl();
-	if (cu != null && cu.hasContent()) {
-	  crawlStatus.addContentBytesFetched(cu.getContentSize());
-	  cu.release();
-	}
-      }
+      logger.debug3("Permission granted. storing permission page.");
+      pHelper.storePermissionPage(uc, is);
     } finally {
       IOUtil.safeClose(is);
     }

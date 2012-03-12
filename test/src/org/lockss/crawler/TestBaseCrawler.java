@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.19 2012-01-18 03:40:42 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.20 2012-03-12 05:26:38 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.clockss.*;
 import org.lockss.test.*;
+import org.lockss.crawler.BaseCrawler.StorePermissionScheme;
 
 /**
  * This is the test class for org.lockss.crawler.BaseCrawler
@@ -296,6 +297,45 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     assertSame(crawler, muc.getPermissionMapSource());
     assertNull(muc.getLocalAddress());
     assertNotNull(muc.getCrawlRateLimiter());
+  }
+
+  StorePermissionScheme getConfigPermissionScheme() {
+    Configuration config = ConfigManager.getCurrentConfig();
+    return (StorePermissionScheme)
+      config.getEnum(StorePermissionScheme.class,
+		     BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
+		     BaseCrawler.DEFAULT_STORE_PERMISSION_SCHEME);
+  }
+
+  public void testMakePermissionUrlCacherLegacy() {
+    assertEquals(StorePermissionScheme.Legacy, getConfigPermissionScheme());
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    UrlCacher uc = crawler.makePermissionUrlCacher(startUrl);
+    assertNotNull(uc);
+    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
+		uc instanceof ClockssUrlCacher);
+    MockUrlCacher muc = (MockUrlCacher)uc;
+    assertSame(crawler, muc.getPermissionMapSource());
+    assertNull(muc.getLocalAddress());
+    assertNotNull(muc.getCrawlRateLimiter());
+    assertEquals(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST,
+		 muc.getRedirectScheme());
+  }
+
+  public void testMakePermissionUrlCacherStoreAllInSpec() {
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
+				  StorePermissionScheme.StoreAllInSpec.toString());
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    UrlCacher uc = crawler.makePermissionUrlCacher(startUrl);
+    assertNotNull(uc);
+    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
+		uc instanceof ClockssUrlCacher);
+    MockUrlCacher muc = (MockUrlCacher)uc;
+    assertSame(crawler, muc.getPermissionMapSource());
+    assertNull(muc.getLocalAddress());
+    assertNotNull(muc.getCrawlRateLimiter());
+    assertEquals(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC,
+		 muc.getRedirectScheme());
   }
 
   public void testMakeUrlCacherCrawlFromAddr() {

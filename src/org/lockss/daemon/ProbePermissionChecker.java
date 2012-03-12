@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.21 2007-10-01 08:16:05 tlipkis Exp $
+ * $Id: ProbePermissionChecker.java,v 1.22 2012-03-12 05:26:38 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,9 @@ import java.util.*;
 
 import org.lockss.plugin.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.lockss.crawler.*;
+import org.lockss.crawler.BaseCrawler.StorePermissionScheme;
 import org.lockss.extractor.*;
 
 /**
@@ -84,12 +86,22 @@ public class ProbePermissionChecker implements PermissionChecker {
     }
     if (probeUrl != null) {
       logger.debug3("Found probeUrl "+probeUrl);
+      BufferedInputStream is = null;
       try {
-	UrlCacher uc = pHelper.makeUrlCacher(probeUrl);
-	// XXX is this the right redirect option?
-	uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
- 	InputStream is = new BufferedInputStream(uc.getUncachedInputStream());
-	logger.debug3("Not a login page");
+	UrlCacher uc = pHelper.makePermissionUrlCacher(probeUrl);
+ 	is = new BufferedInputStream(uc.getUncachedInputStream());
+	logger.debug3("Non-login page: " + probeUrl);
+
+	// Retain compatibility with legacy behavior of not storing probe
+	// permission pages.
+	Configuration config = ConfigManager.getCurrentConfig();
+	StorePermissionScheme sps =
+	  (StorePermissionScheme)config.getEnum(StorePermissionScheme.class,
+						BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
+						BaseCrawler.DEFAULT_STORE_PERMISSION_SCHEME);
+ 	if (StorePermissionScheme.Legacy != sps) {
+	  pHelper.storePermissionPage(uc, is);
+	}
 	return true;
       } catch (org.lockss.util.urlconn.CacheException.PermissionException ex) {
 	logger.debug3("Found a login page");
@@ -97,6 +109,8 @@ public class ProbePermissionChecker implements PermissionChecker {
       } catch (IOException ex) {
 	logger.error("Exception trying to check for login page "+probeUrl, ex);
 	return false;
+      } finally {
+	IOUtil.safeClose(is);
       }	
     } else {
       logger.warning("Didn't find a probe URL on "+permissionUrl);

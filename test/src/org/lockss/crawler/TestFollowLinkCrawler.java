@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.39 2012-01-18 03:40:42 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.40 2012-03-12 05:26:38 tlipkis Exp $
  */
 
 /*
@@ -296,7 +296,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     Set expected = SetUtil.set(startUrl);
     Set expectedSrcUrls = SetUtil.set("http://www.example.com/extra_level/");
-    assertEquals(expectedSrcUrls, extractor.getSrcUrls());
+    assertEquals(expectedSrcUrls,extractor.getSrcUrls());
   }
 
   CIProperties fromArgs(String prop, String val) {
@@ -1348,7 +1348,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   public void testPermissionPageShouldFailAsFetchPermissionFailTwice(){
     ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
 				  "false",
-				  BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE,
+				  BaseCrawler.PARAM_REFETCH_PERMISSION_PAGE,
 				  "true");
 
     String permissionUrl1 = "http://www.example.com/index.html";
@@ -1374,7 +1374,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   public void testPermissionPageFailOnceAndOkAfterRefetch(){
     ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
 				  "false",
-				  BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE,
+				  BaseCrawler.PARAM_REFETCH_PERMISSION_PAGE,
 				  "true");
 
     String permissionUrl1 = "http://www.example.com/index.html";

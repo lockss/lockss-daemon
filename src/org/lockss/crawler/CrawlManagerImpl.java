@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.138 2012-01-18 03:41:46 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.139 2012-03-12 05:26:38 tlipkis Exp $
  */
 
 /*
@@ -1553,7 +1553,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	      }
 	      if (req.priority > MIN_CRAWL_PRIORITY) {
 		ausEligibleCrawl++;
-		Object rateKey = au.getFetchRateLimiterKey();
+		String rateKey = au.getFetchRateLimiterKey();
 		if (rateKey == null) {
 		  unsharedRateReqs.add(req);
 		  if (logger.isDebug3()) {

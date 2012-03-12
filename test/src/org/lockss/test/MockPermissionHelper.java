@@ -1,5 +1,5 @@
 /*
- * $Id: MockPermissionHelper.java,v 1.8 2012-01-18 03:40:41 tlipkis Exp $
+ * $Id: MockPermissionHelper.java,v 1.9 2012-03-12 05:26:37 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class MockPermissionHelper implements PermissionHelper {
     this.au = au;
   }
 
-  public UrlCacher makeUrlCacher(String url) {
+  public UrlCacher makePermissionUrlCacher(String url) {
     throw new UnsupportedOperationException("not implemented");
   }
 
@@ -59,7 +59,8 @@ public class MockPermissionHelper implements PermissionHelper {
     throw new UnsupportedOperationException("not implemented");
   }
 
-  public void refetchPermissionPage(String url) {
+  public void storePermissionPage(UrlCacher uc, BufferedInputStream is)
+      throws IOException {
     throw new UnsupportedOperationException("not implemented");
   }
 

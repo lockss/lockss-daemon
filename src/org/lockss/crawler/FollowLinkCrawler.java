@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.88 2012-01-18 03:40:42 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.89 2012-03-12 05:26:38 tlipkis Exp $
  */
 
 /*
@@ -338,7 +338,9 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       logger.debug("Too deep URLs: " + maxDepthUrls);
       crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR, msg);
     } else {
-      logger.info("Crawled depth = " + (hiDepth));
+      logger.info("Crawled depth = " + (hiDepth) +
+		  ", fetched " + crawlStatus.getContentBytesFetched() +
+		  " bytes in " + crawlStatus.getNumFetched() + " files");
     }
     logger.debug("Max queue len: " + fqMaxLen + ", avg: "
 		 + Math.round(((double)fqSumLen) / ((double)fqSamples)));

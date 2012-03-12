@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.44 2012-01-24 02:46:22 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.45 2012-03-12 05:26:38 tlipkis Exp $
  */
 
 /*
@@ -133,9 +133,33 @@ public abstract class BaseCrawler
     PREFIX + "proxy.port";
   public static final int DEFAULT_PROXY_PORT = -1;
 
-  public static final String PARAM_REFETCH_PERMISSIONS_PAGE =
-    PREFIX + "storePermissionsRefetch";
-  public static final boolean DEFAULT_REFETCH_PERMISSIONS_PAGE = false;
+  public enum StorePermissionScheme {Legacy, StoreAllInSpec};
+
+  /**  the crawl queues are sorted.  <code>CrawlDate</code>:
+   * By recency of previous crawl attempt, etc. (Attempts to give all AUs
+   * an equal chance to crawl as often as they want.);
+   * <code>CreationDate</code>: by order in which AUs were
+   * created. (Attempts to synchronize crawls of AU across machines to
+   * optimize for earliest polling.) */
+
+  /** Determines how permission pages are stored.  <code>Legacy</code>:
+   * Permission pages are stored only at the last URL of any redirect
+   * chain, probe permission pages aren't stored (unless otherwise
+   * encountered in the crawl).  Redirects are followed on host and not
+   * checked against the crawl rules.  <code>StoreAllInSpec</code>:
+   * Permission pages and probe permission pages are stored at all URLs in
+   * a redirect chain, as with normally fetched pages.  Redirects are
+   * followed only if in the crawl spec.  In order to serve AUs to another
+   * LOCKSS box, which will check permission, this should be true.
+   */
+  public static final String PARAM_STORE_PERMISSION_SCHEME =
+    PREFIX + "storePermissionScheme";
+  public static final StorePermissionScheme DEFAULT_STORE_PERMISSION_SCHEME =
+    StorePermissionScheme.Legacy;
+
+  public static final String PARAM_REFETCH_PERMISSION_PAGE =
+    PREFIX + "storePermissionRefetch";
+  public static final boolean DEFAULT_REFETCH_PERMISSION_PAGE = false;
 
   public static final String PARAM_ABORT_ON_FIRST_NO_PERMISSION =
     PREFIX + "abortOnFirstNoPermission";
@@ -164,6 +188,7 @@ public abstract class BaseCrawler
   protected AuState aus = null;
 
   protected CrawlManager crawlMgr = null;
+  protected AlertManager alertMgr;
 
   protected boolean crawlAborted = false;
 
@@ -185,7 +210,8 @@ public abstract class BaseCrawler
 
   protected PermissionChecker pluginPermissionChecker;
   protected List daemonPermissionCheckers = null;
-  protected AlertManager alertMgr;
+  protected StorePermissionScheme paramStorePermissionScheme =
+    DEFAULT_STORE_PERMISSION_SCHEME;
 
   protected IPAddr crawlFromAddr = null;
 
@@ -247,6 +273,12 @@ public abstract class BaseCrawler
     throwIfRateLimiterNotUsed =
       config.getBoolean(PARAM_THROW_IF_RATE_LIMITER_NOT_USED,
 			DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED);
+
+    paramStorePermissionScheme =
+      (StorePermissionScheme)config.getEnum(StorePermissionScheme.class,
+					    PARAM_STORE_PERMISSION_SCHEME,
+					    DEFAULT_STORE_PERMISSION_SCHEME);
+
 
     String crawlFrom = config.get(PARAM_CRAWL_FROM_ADDR);
     if (StringUtil.isNullString(crawlFrom)) {
@@ -420,8 +452,9 @@ public abstract class BaseCrawler
     try {
       is.reset();
     } catch (IOException e) {
-      logger.debug("Couldn't reset input stream, so getting new one: " + e);
-      is.close();
+      logger.debug("Couldn't reset input stream, so getting new one for " +
+		   url + " : " + e);
+      IOUtil.safeClose(is);
       UrlCacher uc = makeUrlCacher(url);
       uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
       is = new BufferedInputStream(uc.getUncachedInputStream());
@@ -431,12 +464,31 @@ public abstract class BaseCrawler
     return is;
   }
 
-  public void refetchPermissionPage(String permissionPage)
+  public UrlCacher makePermissionUrlCacher(String url) {
+    UrlCacher uc = makeUrlCacher(url);
+    switch (paramStorePermissionScheme) {
+    case Legacy:
+      uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
+      break;
+    case StoreAllInSpec:
+      uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
+      break;
+    }
+    return uc;
+  }
+
+  public void storePermissionPage(UrlCacher uc, BufferedInputStream is)
       throws IOException {
-    // XXX can't reuse UrlCacher
-    UrlCacher uc = makeUrlCacher(permissionPage);
-    uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW);
-    updateCacheStats(uc.cache(), uc);
+    if (CurrentConfig.getBooleanParam(PARAM_REFETCH_PERMISSION_PAGE,
+				      DEFAULT_REFETCH_PERMISSION_PAGE)) {
+      // XXX can't reuse UrlCacher
+      uc = makePermissionUrlCacher(uc.getUrl());
+      updateCacheStats(uc.cache(), uc);
+    } else {
+      is = resetInputStream(is, uc.getUrl());
+      uc.storeContent(is, uc.getUncachedProperties());
+      updateCacheStats(UrlCacher.CACHE_RESULT_FETCHED, uc);
+    }
   }
 
   protected void updateCacheStats(int cacheResult, UrlCacher uc) {
