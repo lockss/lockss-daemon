@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlMetadataExtractor.java,v 1.5 2012-03-06 00:50:27 pgust Exp $
+ * $Id: TestXmlMetadataExtractor.java,v 1.6 2012-03-12 04:30:17 pgust Exp $
  */
 
 /*
@@ -266,7 +266,6 @@ public abstract class TestXmlMetadataExtractor
 
 
   static final String[] TEST_TAGS = {
-    "FirstTag",
     "FirstTag",
     "SecondTag",
     "ThirdTag",
