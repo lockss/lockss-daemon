@@ -165,12 +165,6 @@ import org.w3c.dom.NodeList;
         CachedUrl xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
         ArticleMetadata am = 
           new XmlDomMetadataExtractor(nodeMap).extract(target, xmlCu);
-        log.info(">>> " + xmlUrl);
-        for (String s : nodeMap.keySet()) {
-          java.util.List<String> vals = am.getRawList(s);
-          String v = (vals == null) ? null : ((vals.size()==1) ? vals.get(0) : vals.toString());
-          log.info("    " + s + ": " + v);
-        }
         am.cook(xpathMap);
         emitter.emitMetadata(cu,  am);
       } catch (XPathExpressionException ex) {
