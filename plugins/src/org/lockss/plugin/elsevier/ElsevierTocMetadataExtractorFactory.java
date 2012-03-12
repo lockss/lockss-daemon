@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.1 2012-02-29 23:22:16 dylanrhodes Exp $
+ * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.1.2.1 2012-03-12 08:23:37 pgust Exp $
  */
 
 /*
@@ -66,26 +66,55 @@ public class ElsevierTocMetadataExtractorFactory
     
 	  private final int DOI_LEN = 6;
 	  
-	  private final int FILE_NAME_INDEX = 5;
-	  private final int AUTHOR_INDEX = 9;
-	  private final int DOI_INDEX = 6;
+    private final int ISSN_INDEX = 0;
+	  private final int FILE_NAME_INDEX = 6;
+	  private final int DOI_INDEX = 7;
+    private final int AUTHOR_INDEX = 10;
+	  private final int PAGE_INDEX = 13;
 	  
 	  private final int INVALID_TAG = -1;
-	  private final int REPEATED_TAG = -2;
-	  private final int ARTICLE_COMPLETE = -3;
+	  private final int REPEATED_TAG = -3;
+	  private final int ARTICLE_COMPLETE = -4;
 
-	  private List<String> articleTags = Arrays.asList(new String[]{"_vl","_pd",
-			  	"_jn", "_cr", "_is", "_t3", "_ii","_la","_ti","_au","_ab", "_kw", "_pg"});
+	  private List<String> articleTags = Arrays.asList(new String[]{
+	    "_t1",
+	    "_vl",
+      "_pd",
+		  "_jn", 
+		  "_cr", 
+		  "_is", 
+		  "_t3", 
+		  "_ii",
+		  "_la",
+		  "_ti",
+		  "_au",
+		  "_ab", 
+		  "_kw", 
+		  "_pg",
+      "_pg",
+	  });
 	  
 	  private final String END_ARTICLE_METADATA = "_mf";
 	  
 	  private String[] articleValues = new String[articleTags.size()];
 	  
-	  private MetadataField[] metadataFields = {MetadataField.FIELD_VOLUME, MetadataField.FIELD_DATE,
-	  		MetadataField.FIELD_JOURNAL_TITLE, MetadataField.DC_FIELD_RIGHTS, MetadataField.FIELD_ISSUE,
-	  		MetadataField.FIELD_ACCESS_URL, MetadataField.FIELD_DOI, MetadataField.DC_FIELD_LANGUAGE,
-	  		MetadataField.FIELD_ARTICLE_TITLE, MetadataField.FIELD_AUTHOR, MetadataField.DC_FIELD_DESCRIPTION,
-	  		MetadataField.FIELD_KEYWORDS, MetadataField.FIELD_START_PAGE};
+	  private MetadataField[] metadataFields = {
+	    MetadataField.FIELD_ISSN, 
+      MetadataField.FIELD_VOLUME, 
+      MetadataField.FIELD_DATE,
+  		MetadataField.FIELD_JOURNAL_TITLE, 
+  		MetadataField.DC_FIELD_RIGHTS, 
+  		MetadataField.FIELD_ISSUE,
+  		MetadataField.FIELD_ACCESS_URL, 
+  		MetadataField.FIELD_DOI, 
+  		MetadataField.DC_FIELD_LANGUAGE,
+  		MetadataField.FIELD_ARTICLE_TITLE, 
+  		MetadataField.FIELD_AUTHOR, 
+  		MetadataField.DC_FIELD_DESCRIPTION,
+  		MetadataField.FIELD_KEYWORDS, 
+  		MetadataField.FIELD_START_PAGE,
+      MetadataField.FIELD_END_PAGE,
+	  };
 	 
 	  private int lastTag = 0;
 	  private String base_url, year;
@@ -130,6 +159,45 @@ public class ElsevierTocMetadataExtractorFactory
 			}
 		}
     
+		private String getIssnFrom(String line) {
+      if(line.length() < 4)
+        return "";
+		  int i = line.lastIndexOf(' ');
+		  if (i > 0) {
+		    return MetadataUtil.formatIssn(line.substring(i+1));
+		  }
+		  return line;
+		}
+		
+    private String getStartPageFrom(String line) {
+      if(line.length() < 4)
+        return "";
+      int i = line.indexOf(' ');
+      if (i > 0) {
+        int j = line.lastIndexOf('-');
+        if (j < 0) {
+          j = line.length();
+        }
+        return line.substring(i+1,j);
+      }
+      return line;
+    }
+
+    private String getEndPageFrom(String line) {
+      if(line.length() < 4)
+        return "";
+      int i = line.indexOf(' ');
+      if (i > 0) {
+        int j = line.lastIndexOf('-');
+        if (j > i) {
+          i = j;
+        }
+        j = line.length();
+        return line.substring(i+1,j);
+      }
+      return line;
+    }
+
     private String getDoiFrom(String line)
     {
     	if(line.contains("[DOI] "))
@@ -190,6 +258,12 @@ public class ElsevierTocMetadataExtractorFactory
     				articleValues[tag] += getMetadataFrom(line);
     		else if(tag == DOI_INDEX)
     			articleValues[tag] = getDoiFrom(line);
+        else if(tag == ISSN_INDEX)
+          articleValues[tag] = getIssnFrom(line);
+        else if(tag == PAGE_INDEX) {
+          articleValues[tag] = getStartPageFrom(line);
+          articleValues[tag+1] = getEndPageFrom(line);
+        }
     		else
     			articleValues[tag] = getMetadataFrom(line);
     		
