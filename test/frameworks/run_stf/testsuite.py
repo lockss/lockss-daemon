@@ -151,8 +151,8 @@ class V3TestCases( LockssTestCases ):
     @staticmethod
     def _expected_agreement( numerator, denominator ):
         """Trying to mimic what the daemon does to calculate
-        agreement."""
-        return int( round( 100.0 * numerator / denominator ) )
+        agreement. See doubleToPercent in ArchivalUnitStatus.java."""
+        return '%.02f' % ( int ( 10000.0 * numerator / denominator ) / 100.0 )
 
     def __init__( self, methodName = 'runTest' ):
         LockssTestCases.__init__( self, methodName )
@@ -162,7 +162,7 @@ class V3TestCases( LockssTestCases ):
         self.offline_peers = []
         self.local_configuration = {}
         self.simulated_AU_parameters = {}
-        self.expected_agreement = 100
+        self.expected_agreement = '100.00'
 
     def _await_V3_poll_agreement( self ):
         # Expect to see a top level content poll called by all peers
@@ -263,7 +263,25 @@ class V3TestCases( LockssTestCases ):
         self._verify_voter_agreements()
         log.info( 'AU successfully repaired' )
 
+class FormatExpectedAgreementTestCase( V3TestCases ):
+    """Test the expected agreement format."""
+    def setUp( self ):
+        pass
 
+    def tearDown( self ):
+        pass
+
+    def runTest( self ):
+        """These tests match those in TestArchivalUnitStatus.java."""
+        self.assertEqual( '0.00', self._expected_agreement( 0, 1 ) )
+        self.assertEqual( '0.00', self._expected_agreement( 1, 100000 ) )
+        self.assertEqual( '0.00', self._expected_agreement( 9, 100000 ) )
+        self.assertEqual( '0.01', self._expected_agreement( 10, 100000 ) )
+        self.assertEqual( '99.99', self._expected_agreement( 999999999,
+                                                             1000000000 ) )
+        self.assertEqual( '100.00', self._expected_agreement( 100, 100 ) )
+        
+        
 class SimpleV3TestCase( V3TestCases ):
     """Test a V3 poll with no disagreement"""
 
@@ -473,7 +491,7 @@ class TotalLossRecoveryV3TestCase( V3TestCases ):
         V3TestCases.__init__( self, methodName )
         self.local_configuration = { 'org.lockss.poll.v3.enableV3Poller': True }    # Enable polling on all peers
         self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'numFiles': 30 }
-        self.expected_agreement = 0
+        self.expected_agreement = '0.00'
 
     def _setup_AU( self ):
         V3TestCases._setup_AU( self )
@@ -677,7 +695,8 @@ tinyUiTests = unittest.TestSuite( ( TinyUiUnknownHostTestCase(),
                                     TinyUiRefusedTestCase(),
                                     TinyUiFileNotFoundTestCase() ) )
 
-simpleV3Tests = unittest.TestSuite( ( SimpleV3TestCase(),
+simpleV3Tests = unittest.TestSuite( ( FormatExpectedAgreementTestCase(),
+                                      SimpleV3TestCase(),
                                       SimpleDamageV3TestCase(),
                                       SimpleDeleteV3TestCase(),
                                       SimpleExtraFileV3TestCase(),

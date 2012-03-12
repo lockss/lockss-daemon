@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.105 2012-02-16 10:38:52 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.106 2012-03-12 21:29:20 barry409 Exp $
  */
 
 /*
@@ -92,9 +92,13 @@ public class ArchivalUnitStatus
   private static final DecimalFormat agreementFormat =
     new DecimalFormat("0.00");
 
-  /* DecimalFormat automatically applies half-even rounding to
-   * values being formatted under Java < 1.6.  This is a workaround. */ 
-  private static String doubleToPercent(double d) {
+  /**
+   * Format 100 times a double to print as a percentage. An input
+   * value of 1.0 will produce "100.00".
+   * @param a value to convert.
+   * @return a String representing the double. 
+   */
+  static String doubleToPercent(double d) {
     int i = (int)(d * 10000);
     double pc = i / 100.0;
     return agreementFormat.format(pc);

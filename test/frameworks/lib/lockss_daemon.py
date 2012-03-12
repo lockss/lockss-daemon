@@ -704,7 +704,7 @@ class Client:
 
     def getAuRepairerInfo( self, AU, key ):
         """Returns a mapping of peers to poll agreement data."""
-        return dict( ( row[ 'Box' ], int( row.get( key, '0' ).split( '%', 1 )[ 0 ] ) ) for row in self._getStatusTable( 'PeerRepair', AU.auId )[ 1 ] )
+        return dict( ( row[ 'Box' ], row.get( key, '0' ).split( '%', 1 )[ 0 ] ) for row in self._getStatusTable( 'PeerRepair', AU.auId )[ 1 ] )
 
     def getNoAuPeers( self, AU ):
         """Return list of peers who have said they don't have the AU."""
