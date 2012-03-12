@@ -1,5 +1,5 @@
 /*
- * $Id: XmlDomMetadataExtractor.java,v 1.2.2.3 2012-03-11 00:50:06 tlipkis Exp $
+ * $Id: XmlDomMetadataExtractor.java,v 1.2.2.4 2012-03-12 04:28:49 pgust Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.extractor;
 
 import java.io.*;
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.*;
 
 import javax.xml.namespace.QName;
@@ -46,7 +48,6 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.lockss.plugin.CachedUrl;
-import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.w3c.dom.Document;
@@ -93,19 +94,43 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
   static abstract public class XPathValue {
     /** Override this method to specify a different type */
     public abstract QName getType();
-    /** Override this method to handle nodes differently */
+    /** 
+     * Override this method to handle a node-valued 
+     * property or attribute. The default implementation 
+     * returns the text content of the node.
+     * @param node the node value
+     * @return the text value of the node 
+     */ 
     public String getValue(Node node) {
       return (node == null) ? null : node.getTextContent();
     }
-    /** Override this method to handle strings differently */
+    /** 
+     * Override this method to handle a text-valued 
+     * property or attribute. The default implementation 
+     * returns the input string.
+     * @param s the text value
+     * @return the text value 
+     */ 
     public String getValue(String s) {
       return s;
     }
-    /** Override this method to handle booleans differently */
+    /** 
+     * Override this method to handle a boolean-valued
+     * property or attribute.  The default implementation 
+     * returns the string value of the input boolean.
+     * @param b the boolean value
+     * @return the string value of the boolean 
+     */
     public String getValue(Boolean b) {
       return (b == null) ? null : b.toString();
     }
-    /** Override this method to handle numbers differently */
+    /** 
+     * Override this method to handle a number-valued 
+     * property or attribute.  The default implementation 
+     * returns the string value of the input number.
+     * @param n the number value
+     * @return the string value of the number 
+     */ 
     public String getValue(Number n) {
       return (n == null) ? null : n.toString();
     }
@@ -115,12 +140,12 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
   static public class NodeValue extends XPathValue {
     @Override
     public QName getType() {
-      return XPathConstants.NODESET;
+      return XPathConstants.NODE;
     }
   }
   static final public XPathValue NODE_VALUE = new NodeValue();
   
-  /** XPathValue value for text */
+  /** XPathValue value for a single text value */
   static public class TextValue extends XPathValue {
     @Override
     public QName getType() {
@@ -129,7 +154,7 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
   }
   static final public XPathValue TEXT_VALUE = new TextValue();
 
-  /** XPathValue for a number */
+  /** XPathValue for a single number value */
   static public class NumberValue extends XPathValue {
     @Override
     public QName getType() {
@@ -138,7 +163,7 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
   }
   static final public XPathValue NUMBER_VALUE = new NumberValue();
 
-  /** XPathValue for a boolean */
+  /** XPathValue for a boolean value */
   static public class BooleanValue extends XPathValue {
     @Override
     public QName getType() {
@@ -229,15 +254,18 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
       return am;
     }
     Document doc;
-    Reader rdr = cu.openForReading();
+    Reader cuReader = cu.openForReading();
+    InputSource bReader = new InputSource(cuReader);
     try {
-      InputSource bReader = new InputSource(rdr);
       doc = builder.parse(bReader);
     } catch (SAXException ex) {
       log.warning(ex.getMessage());
       return am;
     } finally {
-      IOUtil.safeClose(rdr);
+      try {
+        cuReader.close();
+      } catch (IOException ex) {
+      }
     }
 
     // search for values using specified XPath expressions and
@@ -245,25 +273,44 @@ public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
     for (int i = 0; i < xpathKeys.length; i++) { 
       try {
         QName type = nodeValues[i].getType();
-        Object result = xpathExprs[i].evaluate(doc, type);
-        if (result instanceof NodeList) {
-          NodeList nodeList = (NodeList)result;
-          for (int j = 0; j < nodeList.getLength(); j++) {
-            String value = nodeValues[i].getValue(nodeList.item(j));
-            if (!StringUtil.isNullString(value)) am.putRaw(xpathKeys[i], value);
+        Object result = xpathExprs[i].evaluate(doc, XPathConstants.NODESET);
+        NodeList nodeList = (NodeList)result;
+        for (int j = 0; j < nodeList.getLength(); j++) {
+          Node node = nodeList.item(j);
+          if (node == null) {
+            continue;
           }
-        } else if (result instanceof Number) {
-          String value = nodeValues[i].getValue((Number)result);
-          if (!StringUtil.isNullString(value)) am.putRaw(xpathKeys[i], value);
-        } else if (result instanceof Boolean) {
-          String value = nodeValues[i].getValue((Boolean)result);
-          if (!StringUtil.isNullString(value)) am.putRaw(xpathKeys[i], value);
-        } else if (result instanceof String) {
-          String value = nodeValues[i].getValue((String)result);
-          if (!StringUtil.isNullString(value)) am.putRaw(xpathKeys[i], value);
-        } else {
-          log.warning("Unknown return type for XPath expression: "
-                  + ((result == null) ? "Null" : result.getClass().getName()));
+          String value = null;
+          if (type == XPathConstants.NODE) {
+            // filter node
+            value = nodeValues[i].getValue(node);
+          } else if (type == XPathConstants.STRING) {
+            // filter node text content
+            String text = node.getTextContent();
+            value = nodeValues[i].getValue(text);
+          } else if (type == XPathConstants.BOOLEAN) {
+            // filter boolean value of node text content
+            String text = node.getTextContent();
+            value = nodeValues[i].getValue(Boolean.parseBoolean(text));
+          } else if (type == XPathConstants.NUMBER) {
+            // filter number value of node text content
+            try {
+              NumberFormat format = NumberFormat.getInstance();
+              String text = node.getTextContent();
+              value = nodeValues[i].getValue(format.parse(text));
+            } catch (ParseException ex) {
+              // ignore invalid number
+              log.debug3(ex.getMessage());
+              continue;
+            }
+          } else {
+            log.debug("Unknown nodeValue type: " + type.toString());
+            continue;
+          }
+          
+          if (!StringUtil.isNullString(value)) {
+            am.putRaw(xpathKeys[i], value);
+          }
         }
       } catch (XPathExpressionException ex) {
         // ignore evaluation errors
