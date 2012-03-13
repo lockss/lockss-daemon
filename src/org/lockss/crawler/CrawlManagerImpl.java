@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.139 2012-03-12 05:26:38 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.140 2012-03-13 18:29:36 thib_gc Exp $
  */
 
 /*
@@ -293,7 +293,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     DEFAULT_START_CRAWLS_INITIAL_DELAY;
   private long paramMinWindowOpenFor = DEFAULT_MIN_WINDOW_OPEN_FOR;
   private boolean paramRestartAfterCrash = DEFAULT_RESTART_AFTER_CRASH;
+  
+  /** Note that this is an Apache ORO Pattern, not a Java Pattern */
   private Pattern globallyExcludedUrlPattern;
+  
   private Map<Pattern,Integer> crawlPriorityAuidMap;
   private Map<String,Integer> concurrentCrawlLimitMap;
 
