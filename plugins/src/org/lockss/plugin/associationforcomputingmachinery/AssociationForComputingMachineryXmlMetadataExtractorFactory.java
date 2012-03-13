@@ -1,5 +1,5 @@
 /*
- * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.1.2.1 2012-03-12 05:37:59 pgust Exp $
+ * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.1.2.2 2012-03-13 22:38:43 pgust Exp $
  */
 
 /*
@@ -266,7 +266,7 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
           
         ArticleMetadata am = do_extract(target, metadataCu, emitter);
         // need to release created CU
-        metadataCu.release();
+        AuUtil.safeRelease(metadataCu);
       }
 
       /**
