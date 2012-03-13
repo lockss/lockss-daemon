@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.2 2012-03-12 08:21:01 pgust Exp $
+ * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.3 2012-03-13 23:28:09 pgust Exp $
  */
 
 /*
@@ -144,7 +144,7 @@ public class ElsevierTocMetadataExtractorFactory
 
 					if (extractFrom(line) && articleValues[FILE_NAME_INDEX] != null) {
 						CachedUrl container = cu.getArchivalUnit().makeCachedUrl(getUrlFrom(articleValues[FILE_NAME_INDEX]));
-						log.debug("Emitting metadata for url: " + container.getUrl());
+						log.debug3("Emitting metadata for url: " + container.getUrl());
 						articleValues[FILE_NAME_INDEX] = container.getUrl();
 						
 						ArticleMetadata am = new ArticleMetadata();
