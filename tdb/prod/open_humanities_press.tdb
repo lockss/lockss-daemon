@@ -94,21 +94,21 @@
       param[base_url] = http://www.film-philosophy.com/
       param[journal_id] = f-p
 
-      au < manifest ; 1997 ; Film-Philosophy Volume 1 ; 1 ; 1997 >
-      au < doesNotExist ; 1998 ; Film-Philosophy Volume 2 ; 2 ; 1998 >
-      au < doesNotExist ; 1999 ; Film-Philosophy Volume 3 ; 3 ; 1999 >
-      au < doesNotExist ; 2000 ; Film-Philosophy Volume 4 ; 4 ; 2000 >
-      au < doesNotExist ; 2001 ; Film-Philosophy Volume 5 ; 5 ; 2001 >
-      au < doesNotExist ; 2002 ; Film-Philosophy Volume 6 ; 6 ; 2002 >
-      au < doesNotExist ; 2003 ; Film-Philosophy Volume 7 ; 7 ; 2003 >
-      au < doesNotExist ; 2004 ; Film-Philosophy Volume 8 ; 8 ; 2004 >
-      au < doesNotExist ; 2005 ; Film-Philosophy Volume 9 ; 9 ; 2005 >
-      au < manifest ; 2006 ; Film-Philosophy Volume 10 ; 10 ; 2006 >
-      au < manifest ; 2007 ; Film-Philosophy Volume 11 ; 11 ; 2007 >
-      au < manifest ; 2008 ; Film-Philosophy Volume 12 ; 12 ; 2008 >
-      au < manifest ; 2009 ; Film-Philosophy Volume 13 ; 13 ; 2009 >
-      au < manifest ; 2010 ; Film-Philosophy Volume 14 ; 14 ; 2010 >
-      au < manifest ; 2011 ; Film-Philosophy Volume 15 ; 15 ; 2011 >
+      au < testing ; 1997 ; Film-Philosophy Volume 1 ; 1 ; 1997 >
+      au < testing ; 1998 ; Film-Philosophy Volume 2 ; 2 ; 1998 >
+      au < testing ; 1999 ; Film-Philosophy Volume 3 ; 3 ; 1999 >
+      au < testing ; 2000 ; Film-Philosophy Volume 4 ; 4 ; 2000 >
+      au < testing ; 2001 ; Film-Philosophy Volume 5 ; 5 ; 2001 >
+      au < testing ; 2002 ; Film-Philosophy Volume 6 ; 6 ; 2002 >
+      au < testing ; 2003 ; Film-Philosophy Volume 7 ; 7 ; 2003 >
+      au < testing ; 2004 ; Film-Philosophy Volume 8 ; 8 ; 2004 >
+      au < testing ; 2005 ; Film-Philosophy Volume 9 ; 9 ; 2005 >
+      au < testing ; 2006 ; Film-Philosophy Volume 10 ; 10 ; 2006 >
+      au < testing ; 2007 ; Film-Philosophy Volume 11 ; 11 ; 2007 >
+      au < testing ; 2008 ; Film-Philosophy Volume 12 ; 12 ; 2008 >
+      au < testing ; 2009 ; Film-Philosophy Volume 13 ; 13 ; 2009 >
+      au < testing ; 2010 ; Film-Philosophy Volume 14 ; 14 ; 2010 >
+      au < testing ; 2011 ; Film-Philosophy Volume 15 ; 15 ; 2011 >
 
     }
 
@@ -144,20 +144,20 @@
       param[base_url] = http://www.imageandnarrative.be/
       param[journal_id] = imagenarrative
       
-      comment[manifests] = publisher has posted manifests, but each is a copy of 2011. 20110914
+      comment[testings] = publisher has posted testings, but each is a copy of 2011. 20110914
       
-      au < manifest ; 2000 ; Image and Narrative Volume 1 ; 1 ; 2000 >
-      au < manifest ; 2001 ; Image and Narrative Volume 2 ; 2 ; 2001 >
-      au < manifest ; 2002 ; Image and Narrative Volume 3 ; 3 ; 2002 >
-      au < manifest ; 2003 ; Image and Narrative Volume 4 ; 4 ; 2003 >
-      au < manifest ; 2004 ; Image and Narrative Volume 5 ; 5 ; 2004 >
-      au < manifest ; 2005 ; Image and Narrative Volume 6 ; 6 ; 2005 >
-      au < manifest ; 2006 ; Image and Narrative Volume 7 ; 7 ; 2006 >
-      au < manifest ; 2007 ; Image and Narrative Volume 8 ; 8 ; 2007 >
-      au < manifest ; 2008 ; Image and Narrative Volume 9 ; 9 ; 2008 >
-      au < manifest ; 2009 ; Image and Narrative Volume 10 ; 10 ; 2009 >
-      au < manifest ; 2010 ; Image and Narrative Volume 11 ; 11 ; 2010 >
-      au < manifest ; 2011 ; Image and Narrative Volume 12 ; 12 ; 2011 >
+      au < testing ; 2000 ; Image and Narrative Volume 1 ; 1 ; 2000 >
+      au < testing ; 2001 ; Image and Narrative Volume 2 ; 2 ; 2001 >
+      au < testing ; 2002 ; Image and Narrative Volume 3 ; 3 ; 2002 >
+      au < testing ; 2003 ; Image and Narrative Volume 4 ; 4 ; 2003 >
+      au < testing ; 2004 ; Image and Narrative Volume 5 ; 5 ; 2004 >
+      au < testing ; 2005 ; Image and Narrative Volume 6 ; 6 ; 2005 >
+      au < testing ; 2006 ; Image and Narrative Volume 7 ; 7 ; 2006 >
+      au < testing ; 2007 ; Image and Narrative Volume 8 ; 8 ; 2007 >
+      au < testing ; 2008 ; Image and Narrative Volume 9 ; 9 ; 2008 >
+      au < testing ; 2009 ; Image and Narrative Volume 10 ; 10 ; 2009 >
+      au < testing ; 2010 ; Image and Narrative Volume 11 ; 11 ; 2010 >
+      au < testing ; 2011 ; Image and Narrative Volume 12 ; 12 ; 2011 >
       
     }
 
@@ -206,7 +206,7 @@
       au < ready ; 2005 ; Postcolonial Text Volume 1 ; 1 ; 2005 >
       au < ready ; 2006 ; Postcolonial Text Volume 2 ; 2 ; 2006 >
       au < ready ; 2007 ; Postcolonial Text Volume 3 ; 3 ; 2007 >
-      au < manifest ; 2008 ; Postcolonial Text Volume 4 ; 4 ; 2008 >
+      au < testing ; 2008 ; Postcolonial Text Volume 4 ; 4 ; 2008 >
       au < ready ; 2009 ; Postcolonial Text Volume 5 ; 5 ; 2009 >
       au < ready ; 2011 ; Postcolonial Text Volume 6 ; 6 ; 2011 >
     
