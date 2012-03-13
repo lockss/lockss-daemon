@@ -63,7 +63,7 @@ public class LaserInstituteOfAmericaArticleIteratorFactory implements ArticleIte
   
   protected static class LaserInstituteOfAmericaArticleIterator extends SubTreeArticleIterator {
 	 
-    protected static Pattern PATTERN = Pattern.compile("(/ASCE_)(xml)(_\\d+\\.tar\\.gz!/[^/]+/vol_\\d+/iss_\\d+/)(\\d+)(_1.xml)$", Pattern.CASE_INSENSITIVE);
+    protected static Pattern PATTERN = Pattern.compile("(/LIA_)(xml)(_\\d+\\.tar\\.gz!/[^/]+/vol_\\d+/iss_\\d+/)(\\d+)(_1.xml)$", Pattern.CASE_INSENSITIVE);
     
     protected LaserInstituteOfAmericaArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
