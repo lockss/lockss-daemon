@@ -1,9 +1,11 @@
 {
+
   publisher <
     name = American Society of Hematology
   >
 
   {
+
     title <
       name = Hematology: ASH Education Program Book ;
       issn = 1520-4391 ;
@@ -11,29 +13,26 @@
       issnl = 1520-4383
     >
 
-    {
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://asheducationbook.hematologylibrary.org/
+    implicit < status ; year ; name ; param[volume_name] >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://asheducationbook.hematologylibrary.org/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < ready ; 2000 ; Hematology: ASH Education Program Book Volume 2000 ; 2000 >
-      au < ready ; 2001 ; Hematology: ASH Education Program Book Volume 2001 ; 2001 >
-      au < ready ; 2002 ; Hematology: ASH Education Program Book Volume 2002 ; 2002 >
-      au < ready ; 2003 ; Hematology: ASH Education Program Book Volume 2003 ; 2003 >
-      au < ready ; 2004 ; Hematology: ASH Education Program Book Volume 2004 ; 2004 >
-      au < ready ; 2005 ; Hematology: ASH Education Program Book Volume 2005 ; 2005 >
-      au < ready ; 2006 ; Hematology: ASH Education Program Book Volume 2006 ; 2006 >
-      au < ready ; 2007 ; Hematology: ASH Education Program Book Volume 2007 ; 2007 >
-      au < ready ; 2008 ; Hematology: ASH Education Program Book Volume 2008 ; 2008 >
-      au < ready ; 2009 ; Hematology: ASH Education Program Book Volume 2009 ; 2009 >
-      au < ready ; 2010 ; Hematology: ASH Education Program Book Volume 2010 ; 2010 >
-
-    }
+    au < ready ; 2000 ; Hematology: ASH Education Program Book Volume 2000 ; 2000 >
+    au < ready ; 2001 ; Hematology: ASH Education Program Book Volume 2001 ; 2001 >
+    au < ready ; 2002 ; Hematology: ASH Education Program Book Volume 2002 ; 2002 >
+    au < ready ; 2003 ; Hematology: ASH Education Program Book Volume 2003 ; 2003 >
+    au < ready ; 2004 ; Hematology: ASH Education Program Book Volume 2004 ; 2004 >
+    au < ready ; 2005 ; Hematology: ASH Education Program Book Volume 2005 ; 2005 >
+    au < ready ; 2006 ; Hematology: ASH Education Program Book Volume 2006 ; 2006 >
+    au < ready ; 2007 ; Hematology: ASH Education Program Book Volume 2007 ; 2007 >
+    au < ready ; 2008 ; Hematology: ASH Education Program Book Volume 2008 ; 2008 >
+    au < ready ; 2009 ; Hematology: ASH Education Program Book Volume 2009 ; 2009 >
+    au < ready ; 2010 ; Hematology: ASH Education Program Book Volume 2010 ; 2010 >
 
   }
 
   {
+
     title <
       name = Blood ;
       issn = 0006-4971 ;
