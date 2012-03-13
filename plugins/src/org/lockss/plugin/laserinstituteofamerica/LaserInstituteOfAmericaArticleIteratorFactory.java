@@ -45,9 +45,9 @@ public class LaserInstituteOfAmericaArticleIteratorFactory implements ArticleIte
   
   protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
   
-  protected static final String PATTERN_TEMPLATE = "\"%s%d/ASCE_xml_[\\d]+\\.tar\\.gz!/[^/]+/vol_[\\d]+/iss_[\\d]+/[\\d]+_1.xml$\",base_url,year";
+  protected static final String PATTERN_TEMPLATE = "\"%s%d/LIA_xml_[\\d]+\\.tar\\.gz!/[^/]+/vol_[\\d]+/iss_[\\d]+/[\\d]+_1.xml$\",base_url,year";
   
-  protected static final String INCLUDE_SUBTREE_TEMPLATE = "\"%s%d/ASCE_xml_[\\d]+\\.tar\\.gz!/[^/]+/vol_[\\d]+/iss_[\\d]+/[\\d]+_1.xml$\",base_url,year";
+  protected static final String INCLUDE_SUBTREE_TEMPLATE = "\"%s%d/LIA_xml_[\\d]+\\.tar\\.gz!/[^/]+/vol_[\\d]+/iss_[\\d]+/[\\d]+_1.xml$\",base_url,year";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
