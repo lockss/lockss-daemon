@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerSourceMetadataExtractorFactory.java,v 1.3.2.3 2012-03-13 22:27:08 pgust Exp $
+ * $Id: SpringerSourceMetadataExtractorFactory.java,v 1.3.2.4 2012-03-13 23:12:06 pgust Exp $
  */
 
 /*
@@ -202,7 +202,7 @@ public class SpringerSourceMetadataExtractorFactory
 	      public ArticleMetadata do_extract(MetadataTarget target, CachedUrl cu, Emitter emit)
 	          throws IOException, PluginException {
 	        try {
-	          CachedUrl metaCu getMetadataOf(cu);
+	          CachedUrl metaCu = getMetadataOf(cu);
 	          ArticleMetadata am;
 	          try {
   	          am = new XmlDomMetadataExtractor(nodeMap).extract(target, metaCu);
