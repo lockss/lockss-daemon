@@ -1,5 +1,5 @@
 /*
- * $Id: XmlDomMetadataExtractor.java,v 1.2.2.5 2012-03-12 04:38:54 pgust Exp $
+ * $Id: XmlDomMetadataExtractor.java,v 1.2.2.6 2012-03-13 21:15:10 pgust Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ import org.xml.sax.SAXException;
  * @author Philip Gust
  */
 public class XmlDomMetadataExtractor extends SimpleFileMetadataExtractor {
-  static Logger log = Logger.getLogger("XmlMetadataExtractor");
+  static Logger log = Logger.getLogger("XmlDomMetadataExtractor");
   
   /** The xpath map to use for extracting */
   final protected XPathExpression[] xpathExprs;
