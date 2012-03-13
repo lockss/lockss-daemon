@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -97,6 +97,12 @@
     <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressArticleIteratorFactory</string>
   </entry>
   <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%sdoi/(full|pdf|pdfplus)/&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
@@ -104,12 +110,6 @@
         <string>org.lockss.plugin.edinburgh.EdinburghHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-      <list>
-        <string>&quot;^%sdoi/(abs|pdf|pdfplus)/[0-9a-zA-Z.]+/%s[0-9a-zA-Z.]+$&quot;, base_url, journal_id</string>
-      </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>

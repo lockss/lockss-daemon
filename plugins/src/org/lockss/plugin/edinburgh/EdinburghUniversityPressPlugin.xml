@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -98,9 +98,9 @@
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
-      <list>
-        <string>&quot;^%sdoi/(abs|pdf|pdfplus)/[0-9a-zA-Z.]+/%s[0-9a-zA-Z.]+$&quot;, base_url, journal_id</string>
-      </list>
+    <list>
+      <string>&quot;^%sdoi/(full|pdf|pdfplus)/&quot;, base_url</string>
+    </list>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
@@ -141,5 +141,9 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>&quot;Atypon Systems host this Edinburgh University Press archival unit (AU) and require that you &lt;a href=&apos;http://caliber.ucpress.net/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional Edinburgh University Press account&lt;/a&gt; before allowing your LOCKSS box to harvest the AU. Failure to comply with this publisher requirement may trigger crawler traps, and your LOCKSS box or your entire institution may be temporarily banned from accessing the Edinburgh University Press site. You only need to register the IP address of your LOCKSS box once for all Edinburgh University Press AUs.&quot;</string>
   </entry>
 </map>    
