@@ -163,9 +163,12 @@ import org.w3c.dom.NodeList;
       try {
         String xmlUrl = cu.getUrl().replaceFirst("\\.pdf$", ".wml.xml");
         CachedUrl xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
-        ArticleMetadata am = 
-          new XmlDomMetadataExtractor(nodeMap).extract(target, xmlCu);
-        am.cook(xpathMap);
+        ArticleMetadata am;
+        try {
+          am = new XmlDomMetadataExtractor(nodeMap).extract(target, xmlCu);
+        } finally {
+          AuUtil.safeRelease(xmlCu);
+        }
         emitter.emitMetadata(cu,  am);
       } catch (XPathExpressionException ex) {
         PluginException ex2 = new PluginException("Error parsing XPaths");
