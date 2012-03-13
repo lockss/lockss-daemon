@@ -4,8 +4,7 @@
     name = United Kingdom Serials Group
   >
 
-  plugin = needs.plugin
-  comment[platform] = MetaPress (see RT 3765)
+  plugin = org.lockss.plugin.metapress.MetaPressPlugin
   param[base_url] = http://uksg.metapress.com/
 
   {
