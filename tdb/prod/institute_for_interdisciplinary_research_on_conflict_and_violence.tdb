@@ -1,18 +1,20 @@
 {
+
   publisher <
     name = Institute for Interdisciplinary Research on Conflict and Violence
   >
 
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  param[base_url] = http://www.ijcv.org/
   implicit < status ; year ; name ; volume ; param[year] >
 
   {
+
     title <
       name = International Journal of Conflict and Violence ;
       issn = 1864-1385
     >
 
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    param[base_url] = http://www.ijcv.org/
     param[journal_id] = ijcv
 
     au < ready ; 2007 ; International Journal of Conflict and Violence Volume 1 ; 1 ; 2007 >
