@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.20 2012-03-09 20:51:45 barry409 Exp $
+ * $Id: BlockTally.java,v 1.21 2012-03-13 18:29:17 barry409 Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.poller.v3;
 import java.util.*;
 
 import org.lockss.hasher.HashBlock;
-import org.lockss.poller.*;
 import org.lockss.protocol.PeerIdentity;
 import org.lockss.protocol.VoteBlock;
 import org.lockss.util.*;
@@ -64,20 +63,20 @@ public class BlockTally {
     }
   }
 
+  interface VoteTally {
+    public void voteSpoiled(PeerIdentity id);
+    public void voteAgreed(PeerIdentity id);
+    public void voteDisagreed(PeerIdentity id);
+    public void voteVoterOnly(PeerIdentity id);
+    public void votePollerOnly(PeerIdentity id);
+    public void voteNeither(PeerIdentity id);
+  }
+
+  // Null if the poller does not have this URL.
   private final HashBlockComparer comparer;
 
-  // List of voters with whom we agree
-  private Collection<PeerIdentity> agreeVoters =
-    new ArrayList<PeerIdentity>();
-  // List of voters with whom we disagree
-  private Collection<PeerIdentity> disagreeVoters =
-    new ArrayList<PeerIdentity>();
-  // List of voters who we believe do not have a block that we do.
-  private Collection<PeerIdentity> pollerOnlyBlockVoters =
-    new ArrayList<PeerIdentity>();
-  // List of voters who we believe have an block that we do not.
-  private Collection<PeerIdentity> voterOnlyBlockVoters =
-    new ArrayList<PeerIdentity>();
+  final UserDataTally userDataTally = new UserDataTally();
+  final ResultTally resultTally = new ResultTally();
 
   private static final Logger log = Logger.getLogger("BlockTally");
 
@@ -94,107 +93,108 @@ public class BlockTally {
     this(new HashBlockComparerImpl(hashBlock));
   }
 
+  // This should be done by using dispatch and a subclass.
   private boolean pollerHas() {
     return comparer != null;
   }
 
-  public Result getTallyResult(int quorum, int voteMargin) {
-    Result result;
-    int agree = agreeVoters.size();
-    int disagree = disagreeVoters.size();
-    int pollerOnlyBlocks = pollerOnlyBlockVoters.size();
-    int voterOnlyBlocks = voterOnlyBlockVoters.size();
-
-    if (agree + disagree < quorum) {
-      result = Result.NOQUORUM;
-    } else if (!isWithinMargin(voteMargin)) { 
-      result = Result.TOO_CLOSE;
-    } else if (pollerOnlyBlocks >= quorum) {
-      result = Result.LOST_POLLER_ONLY_BLOCK;
-    } else if (voterOnlyBlocks >= quorum) {
-      result = Result.LOST_VOTER_ONLY_BLOCK;
-    } else if (agree > disagree) {
-      result = Result.WON;
-    } else {
-      result = Result.LOST;
-    }
-    return result;
-  }
-
-  public void voteSpoiled(PeerIdentity id) {
-    // Don't track these for now.
-    log.debug3(id+"  spoiled");
-  }
-
+  /**
+   * Vote using all the versions of the voter's VoteBlock.
+   */
   public void vote(VoteBlock voteBlock, PeerIdentity id, int participantIndex) {
     if (pollerHas()) {
       if (comparer.compare(voteBlock, participantIndex)) {
-	log.debug3(id+"  agreed");
-	addAgreeVoter(id);
+	voteAgreed(id);
       } else {
-	log.debug3(id+"  disagreed");
-	addDisagreeVoter(id);
+	voteDisagreed(id);
       }
     } else {
-      log.debug3(id+"  voterOnly");
-      addVoterOnlyBlockVoter(id);
+      voteVoterOnly(id);
     }
-  }
-
-  public void voteMissing(PeerIdentity id) {
-    log.debug3(id+"  didn't have");
-    if (pollerHas()) {
-      addPollerOnlyBlockVoter(id);
-    } else {
-      // The poller and this voter both do not have the URL, so
-      // tally is "agree".
-      addAgreeVoter(id);
-    }
-  }
-
-  void addDisagreeVoter(PeerIdentity id) {
-    disagreeVoters.add(id);
-  }
-
-  public Collection<PeerIdentity> getDisagreeVoters() {
-    return disagreeVoters;
-  }
-
-  void addAgreeVoter(PeerIdentity id) {
-    // todo(bhayes): For versioned voting, this will have to record
-    // which versions the poller and voter agreed on.
-    agreeVoters.add(id);
-  }
-
-  public Collection<PeerIdentity> getAgreeVoters() {
-    return agreeVoters;
-  }
-
-  void addPollerOnlyBlockVoter(PeerIdentity id) {
-    pollerOnlyBlockVoters.add(id);
-    disagreeVoters.add(id);
-  }
-
-  public Collection<PeerIdentity> getPollerOnlyBlockVoters() {
-    return pollerOnlyBlockVoters;
-  }
-
-  void addVoterOnlyBlockVoter(PeerIdentity id) {
-    voterOnlyBlockVoters.add(id);
-    disagreeVoters.add(id);
-  }
-
-  public Collection<PeerIdentity> getVoterOnlyBlockVoters() {
-    return voterOnlyBlockVoters;
   }
 
   /**
-   * @return All of the non-spoiled voters.
+   * Vote that the URL is missing.
+   */
+  public void voteMissing(PeerIdentity id) {
+    if (pollerHas()) {
+      votePollerOnly(id);
+    } else {
+      voteNeither(id);
+    }
+  }
+
+  /**
+   * The voter is unable to cast a meaningful vote.
+   */
+  public void voteSpoiled(PeerIdentity id) {
+    log.debug3(id+"  spoiled");
+    userDataTally.voteSpoiled(id);
+    resultTally.voteSpoiled(id);
+  }
+
+  void voteAgreed(PeerIdentity id) {
+    log.debug3(id+"  agreed");
+    userDataTally.voteAgreed(id);
+    resultTally.voteAgreed(id);
+  }
+
+  void voteDisagreed(PeerIdentity id) {
+    log.debug3(id+"  disagreed");
+    userDataTally.voteDisagreed(id);
+    resultTally.voteDisagreed(id);
+  }
+
+  void voteVoterOnly(PeerIdentity id) {
+    log.debug3(id+"  voterOnly");
+    userDataTally.voteVoterOnly(id);
+    resultTally.voteVoterOnly(id);
+  }
+
+  void votePollerOnly(PeerIdentity id) {
+    log.debug3(id+"  didn't have");
+    userDataTally.votePollerOnly(id);
+    resultTally.votePollerOnly(id);
+  }
+
+  void voteNeither(PeerIdentity id) {
+    log.debug3(id+"  neither have");
+    userDataTally.voteNeither(id);
+    resultTally.voteNeither(id);
+  }
+
+  /**
+   * @return
    */
   public Collection<PeerIdentity> getTalliedVoters() {
-    Collection<PeerIdentity> tallied = new ArrayList(agreeVoters);
-    tallied.addAll(disagreeVoters);
-    return Collections.unmodifiableCollection(tallied);
+    return Collections.unmodifiableCollection(userDataTally.talliedVoters);
+  }
+
+  /**
+   * @return 
+   */
+  public Collection<PeerIdentity> getTalliedAgreeVoters() {
+    return Collections.unmodifiableCollection(userDataTally.talliedAgreeVoters);
+  }
+
+  public Result getTallyResult(int quorum, int voteMargin) {
+    return resultTally.getTallyResult(quorum, voteMargin);
+  }
+
+  public Collection<PeerIdentity> getAgreeVoters() {
+    return Collections.unmodifiableCollection(resultTally.agreeVoters);
+  }
+
+  public Collection<PeerIdentity> getDisagreeVoters() {
+    return Collections.unmodifiableCollection(resultTally.disagreeVoters);
+  }
+
+  public Collection<PeerIdentity> getPollerOnlyBlockVoters() {
+    return Collections.unmodifiableCollection(resultTally.pollerOnlyVoters);
+  }
+
+  public Collection<PeerIdentity> getVoterOnlyBlockVoters() {
+    return Collections.unmodifiableCollection(resultTally.voterOnlyVoters);
   }
 
   /**
@@ -203,31 +203,28 @@ public class BlockTally {
    */
   public Collection<PeerIdentity> getVersionAgreedVoters() {
     if (pollerHas()) {
-      return Collections.unmodifiableCollection(agreeVoters);
+      return getAgreeVoters();
     } else {
       // If the poller didn't have it, nobody agreed on a version.
       return Collections.EMPTY_LIST;
     }
   }
 
-  boolean isWithinMargin(int voteMargin) {
-    int numAgree = agreeVoters.size();
-    int numDisagree = disagreeVoters.size();
-    double num_votes = numAgree + numDisagree;
-    double act_margin;
-
-    if (numAgree > numDisagree) {
-      act_margin = (double) numAgree / num_votes;
+  /**
+   * @return If the poller has some the URL, the subset of the voters
+   * who have versions and agree on no version with the poller; if the
+   * poller does not have the URL, this is always EMPTY, and the
+   * voters are tallied as either voterOnly or agree.
+   */
+  public Collection<PeerIdentity> getNoVersionAgreedVoters() {
+    if (pollerHas()) {
+      return getDisagreeVoters();
     } else {
-      act_margin = (double) numDisagree / num_votes;
+      // If the poller didn't have it, nobody disagreed on a version;
+      // it's either voterOnly or agree.
+      return Collections.EMPTY_LIST;
     }
-
-    if (act_margin * 100 < voteMargin) {
-      return false;
-    }
-    return true;
   }
-
 
   static interface HashBlockComparer {
     public boolean compare(VoteBlock voteBlock, int participantIndex);

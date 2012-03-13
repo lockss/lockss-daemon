@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.114 2012-03-12 21:38:47 barry409 Exp $
+ * $Id: V3Poller.java,v 1.115 2012-03-13 18:29:17 barry409 Exp $
  */
 
 /*
@@ -1170,7 +1170,7 @@ public class V3Poller extends BasePoll {
     for (PeerIdentity peerId: tally.getTalliedVoters()) {
       getParticipant(peerId).incrementTalliedBlocks();
     }
-    for (PeerIdentity peerId: tally.getAgreeVoters()) {
+    for (PeerIdentity peerId: tally.getTalliedAgreeVoters()) {
       getParticipant(peerId).incrementAgreedBlocks();
     }
   }

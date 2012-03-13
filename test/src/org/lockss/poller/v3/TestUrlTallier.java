@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.3 2012-03-12 22:58:39 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.4 2012-03-13 18:29:17 barry409 Exp $
  */
 
 /*
@@ -348,13 +348,13 @@ public class TestUrlTallier extends LockssTestCase {
     // todo(bhayes): This seems incorrect; foo1 was only present at
     // one voter, but incrementTalliedBlocks will be called for each
     // voter.
-    assertEquals(3, tally.getTalliedVoters().size());
+    assertEquals(1, tally.getTalliedVoters().size());
     assertContains(tally.getVoterOnlyBlockVoters(), id1);
     assertEquals("http://test.com/foo2", urlTallier.peekUrl());
 
     tally = urlTallier.tallyVoterUrl("http://test.com/foo2");
     assertEquals(tally.getVoterOnlyBlockVoters().size(), 2);
-    assertEquals(3, tally.getTalliedVoters().size());
+    assertEquals(2, tally.getTalliedVoters().size());
     assertContains(tally.getVoterOnlyBlockVoters(), id1);
     assertContains(tally.getVoterOnlyBlockVoters(), id2);
     assertEquals("http://test.com/foo3", urlTallier.peekUrl());
@@ -369,7 +369,7 @@ public class TestUrlTallier extends LockssTestCase {
 
     tally = urlTallier.tallyVoterUrl("http://test.com/foo4");
     assertEquals(tally.getVoterOnlyBlockVoters().size(), 1);
-    assertEquals(3, tally.getTalliedVoters().size());
+    assertEquals(1, tally.getTalliedVoters().size());
     assertContains(tally.getVoterOnlyBlockVoters(), id3);
     assertEquals(null, urlTallier.peekUrl());
   }
