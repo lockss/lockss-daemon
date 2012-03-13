@@ -163,8 +163,12 @@ import org.w3c.dom.NodeList;
       try {
         String xmlUrl = cu.getUrl().replaceFirst("\\.pdf$", ".wml.xml");
         CachedUrl xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
-        ArticleMetadata am = 
-          new XmlDomMetadataExtractor(nodeMap).extract(target, xmlCu);
+        ArticleMetadata am;
+        try {
+          am = new XmlDomMetadataExtractor(nodeMap).extract(target, xmlCu);
+        } finally {
+          AuUtil.safeRelease(xmlCu);
+        }
         am.cook(xpathMap);
         emitter.emitMetadata(cu,  am);
       } catch (XPathExpressionException ex) {
