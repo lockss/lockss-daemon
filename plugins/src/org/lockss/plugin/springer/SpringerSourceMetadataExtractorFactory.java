@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerSourceMetadataExtractorFactory.java,v 1.3 2012-03-10 14:24:47 pgust Exp $
+ * $Id: SpringerSourceMetadataExtractorFactory.java,v 1.4 2012-03-13 22:26:48 pgust Exp $
  */
 
 /*
@@ -202,10 +202,15 @@ public class SpringerSourceMetadataExtractorFactory
 	      public ArticleMetadata do_extract(MetadataTarget target, CachedUrl cu, Emitter emit)
 	          throws IOException, PluginException {
 	        try {
-	          ArticleMetadata am = 
-	            new XmlDomMetadataExtractor(nodeMap).extract(target, getMetadataOf(cu));
-	          am.cook(xpathMap);
-	          return am;
+            CachedUrl metaCu = getMetadataOf(cu);
+            ArticleMetadata am; 
+            try {
+              am = new XmlDomMetadataExtractor(nodeMap).extract(target, metaCu);
+            } finally {
+              AuUtil.safeRelease(metaCu);
+            }
+            am.cook(xpathMap);
+            return am;
 	        } catch (XPathExpressionException ex) {
 	          PluginException ex2 = new PluginException("Error parsing XPaths");
 	          ex2.initCause(ex);
