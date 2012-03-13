@@ -1,5 +1,5 @@
 /*
- * $Id: ResultTally.java,v 1.1 2012-03-13 18:29:17 barry409 Exp $
+ * $Id: ResultTally.java,v 1.2 2012-03-13 23:41:01 barry409 Exp $
  */
 
 /*
@@ -34,41 +34,39 @@ package org.lockss.poller.v3;
 
 import java.util.*;
 
-import org.lockss.protocol.PeerIdentity;
-
 /**
  * A tally of the voters to decide on the final outcome of a vote on a URL.
  */
-class ResultTally implements BlockTally.VoteTally {
+class ResultTally<T> implements BlockTally.VoteTally<T> {
 
   // package level, for testing, and access by BlockTally.
   // List of voters with whom the poller agrees.
-  final Collection<PeerIdentity> agreeVoters =
-    new ArrayList<PeerIdentity>();
+  final Collection<T> agreeVoters =
+    new ArrayList<T>();
   // List of voters with whom the poller disagrees.
-  final Collection<PeerIdentity> disagreeVoters =
-    new ArrayList<PeerIdentity>();
+  final Collection<T> disagreeVoters =
+    new ArrayList<T>();
   // List of voters who do not have a block that the poller does.
-  final Collection<PeerIdentity> pollerOnlyVoters =
-    new ArrayList<PeerIdentity>();
+  final Collection<T> pollerOnlyVoters =
+    new ArrayList<T>();
   // List of voters who have an block that the poller does not.
-  final Collection<PeerIdentity> voterOnlyVoters =
-    new ArrayList<PeerIdentity>();
+  final Collection<T> voterOnlyVoters =
+    new ArrayList<T>();
 
-  public void voteSpoiled(PeerIdentity id) {}
-  public void voteAgreed(PeerIdentity id) {
+  public void voteSpoiled(T id) {}
+  public void voteAgreed(T id) {
     addAgreeVoter(id);
   }
-  public void voteDisagreed(PeerIdentity id) {
+  public void voteDisagreed(T id) {
     addDisagreeVoter(id);
   }
-  public void voteVoterOnly(PeerIdentity id) {
+  public void voteVoterOnly(T id) {
     addVoterOnlyVoter(id);
   }
-  public void votePollerOnly(PeerIdentity id) {
+  public void votePollerOnly(T id) {
     addPollerOnlyVoter(id);
   }
-  public void voteNeither(PeerIdentity id) {
+  public void voteNeither(T id) {
     addAgreeVoter(id);
   }
 
@@ -119,20 +117,20 @@ class ResultTally implements BlockTally.VoteTally {
     return true;
   }
 
-  void addAgreeVoter(PeerIdentity id) {
+  void addAgreeVoter(T id) {
     agreeVoters.add(id);
   }
 
-  void addDisagreeVoter(PeerIdentity id) {
+  void addDisagreeVoter(T id) {
     disagreeVoters.add(id);
   }
 
-  void addPollerOnlyVoter(PeerIdentity id) {
+  void addPollerOnlyVoter(T id) {
     pollerOnlyVoters.add(id);
     disagreeVoters.add(id);
   }
 
-  void addVoterOnlyVoter(PeerIdentity id) {
+  void addVoterOnlyVoter(T id) {
     voterOnlyVoters.add(id);
     disagreeVoters.add(id);
   }

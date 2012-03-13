@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.4 2012-03-13 18:29:17 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.5 2012-03-13 23:41:01 barry409 Exp $
  */
 
 /*
@@ -199,7 +199,7 @@ public class TestUrlTallier extends LockssTestCase {
 	makeVoteBlock("http://test.com/foo4", "content for foo4")
       };
 
-    BlockTally tally = new BlockTally();
+    BlockTally<PeerIdentity> tally = new BlockTally<PeerIdentity>();
     
     List<ParticipantUserData> theParticipants =
       new ArrayList<ParticipantUserData>();
@@ -326,7 +326,7 @@ public class TestUrlTallier extends LockssTestCase {
 	makeVoteBlock("http://test.com/foo4", "content for foo4")
       };
 
-    BlockTally tally;
+    BlockTally<PeerIdentity> tally;
     
     List<ParticipantUserData> theParticipants =
       new ArrayList<ParticipantUserData>();
@@ -388,7 +388,7 @@ public class TestUrlTallier extends LockssTestCase {
 	makeVoteBlock("http://test.com/foo3", "content for foo3")
       };
 
-    BlockTally tally;
+    BlockTally<PeerIdentity> tally;
     
     List<ParticipantUserData> theParticipants =
       new ArrayList<ParticipantUserData>();

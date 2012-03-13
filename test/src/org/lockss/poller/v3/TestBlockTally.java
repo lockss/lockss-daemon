@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockTally.java,v 1.10 2012-03-13 18:29:17 barry409 Exp $
+ * $Id: TestBlockTally.java,v 1.11 2012-03-13 23:41:01 barry409 Exp $
  */
 
 /*
@@ -83,21 +83,21 @@ public class TestBlockTally extends LockssTestCase {
   }
 
   public void testConstructPollTally() throws Exception {
-    BlockTally tally = new BlockTally();
+    BlockTally<PeerIdentity> tally = new BlockTally<PeerIdentity>();
     assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult(5, 75));
   }
 
   public void testVersionAgreedVoters() {
-    BlockTally tally;
+    BlockTally<PeerIdentity> tally;
     Collection<PeerIdentity> versionAgreedVoters;
 
-    tally = new BlockTally();
+    tally = new BlockTally<PeerIdentity>();
     tally.voteAgreed(testPeers[0]);
     tally.voteDisagreed(testPeers[1]);
     versionAgreedVoters = tally.getVersionAgreedVoters();
     assertEquals(0, versionAgreedVoters.size());
 
-    tally = new BlockTally(new BlockTally.HashBlockComparer() {
+    tally = new BlockTally<PeerIdentity>(new BlockTally.HashBlockComparer() {
 	public boolean compare(VoteBlock voteBlock, int participantIndex) {
 	  fail("Should not be called.");
 	  return true;
@@ -111,56 +111,56 @@ public class TestBlockTally extends LockssTestCase {
   }
 
   public void testVoteWithBlock() {
-    BlockTally tally;
+    BlockTally<PeerIdentity> tally;
     BlockTally.HashBlockComparer comparer = new BlockTally.HashBlockComparer() {
 	public boolean compare(VoteBlock voteBlock, int participantIndex) {
 	  return participantIndex == 0;
 	}
       };
 
-    tally = new BlockTally(comparer);
+    tally = new BlockTally<PeerIdentity>(comparer);
     tally.voteSpoiled(testPeers[0]);
     assertEquals(0, tally.resultTally.agreeVoters.size());
     assertEquals(0, tally.resultTally.disagreeVoters.size());
     assertEquals(0, tally.resultTally.voterOnlyVoters.size());
     assertEquals(0, tally.resultTally.pollerOnlyVoters.size());
 
-    tally = new BlockTally(comparer);
+    tally = new BlockTally<PeerIdentity>(comparer);
     tally.voteMissing(testPeers[0]);
     assertEquals(0, tally.resultTally.agreeVoters.size());
     assertEquals(1, tally.resultTally.disagreeVoters.size());
     assertEquals(0, tally.resultTally.voterOnlyVoters.size());
     assertEquals(1, tally.resultTally.pollerOnlyVoters.size());
 
-    tally = new BlockTally(comparer);
+    tally = new BlockTally<PeerIdentity>(comparer);
     tally.vote(null, testPeers[0], 0);
     assertEquals(1, tally.resultTally.agreeVoters.size());
     assertEquals(0, tally.resultTally.disagreeVoters.size());
     assertEquals(0, tally.resultTally.voterOnlyVoters.size());
     assertEquals(0, tally.resultTally.pollerOnlyVoters.size());
 
-    tally = new BlockTally(comparer);
+    tally = new BlockTally<PeerIdentity>(comparer);
     tally.vote(null, testPeers[1], 1);
     assertEquals(0, tally.resultTally.agreeVoters.size());
     assertEquals(1, tally.resultTally.disagreeVoters.size());
     assertEquals(0, tally.resultTally.voterOnlyVoters.size());
     assertEquals(0, tally.resultTally.pollerOnlyVoters.size());
 
-    tally = new BlockTally();
+    tally = new BlockTally<PeerIdentity>();
     tally.voteSpoiled(testPeers[0]);
     assertEquals(0, tally.resultTally.agreeVoters.size());
     assertEquals(0, tally.resultTally.disagreeVoters.size());
     assertEquals(0, tally.resultTally.voterOnlyVoters.size());
     assertEquals(0, tally.resultTally.pollerOnlyVoters.size());
 
-    tally = new BlockTally();
+    tally = new BlockTally<PeerIdentity>();
     tally.voteMissing(testPeers[0]);
     assertEquals(1, tally.resultTally.agreeVoters.size()); 
     assertEquals(0, tally.resultTally.disagreeVoters.size());
     assertEquals(0, tally.resultTally.voterOnlyVoters.size());
     assertEquals(0, tally.resultTally.pollerOnlyVoters.size());
 
-    tally = new BlockTally();
+    tally = new BlockTally<PeerIdentity>();
     tally.vote(null, testPeers[0], 0);
     assertEquals(0, tally.resultTally.agreeVoters.size());
     assertEquals(1, tally.resultTally.disagreeVoters.size());

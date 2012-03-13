@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.21 2012-03-13 18:29:17 barry409 Exp $
+ * $Id: BlockTally.java,v 1.22 2012-03-13 23:41:01 barry409 Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.poller.v3;
 import java.util.*;
 
 import org.lockss.hasher.HashBlock;
-import org.lockss.protocol.PeerIdentity;
 import org.lockss.protocol.VoteBlock;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -43,11 +42,7 @@ import org.lockss.config.*;
 /**
  * Representation of the tally for an individual vote block.
  */
-public class BlockTally {
-  // todo(bhayes): PeerIdentity is less useful than
-  // ParticipantUserData. But that would be harder to test. Make
-  // BlockTally<T>, and then we can test it with T. BlockTally never
-  // tries to look into the T, just counts them.
+public class BlockTally<T> {
 
   public enum Result {
     NOQUORUM("No Quorum"),
@@ -63,20 +58,20 @@ public class BlockTally {
     }
   }
 
-  interface VoteTally {
-    public void voteSpoiled(PeerIdentity id);
-    public void voteAgreed(PeerIdentity id);
-    public void voteDisagreed(PeerIdentity id);
-    public void voteVoterOnly(PeerIdentity id);
-    public void votePollerOnly(PeerIdentity id);
-    public void voteNeither(PeerIdentity id);
+  interface VoteTally<U> {
+    public void voteSpoiled(U id);
+    public void voteAgreed(U id);
+    public void voteDisagreed(U id);
+    public void voteVoterOnly(U id);
+    public void votePollerOnly(U id);
+    public void voteNeither(U id);
   }
 
   // Null if the poller does not have this URL.
   private final HashBlockComparer comparer;
 
-  final UserDataTally userDataTally = new UserDataTally();
-  final ResultTally resultTally = new ResultTally();
+  final UserDataTally<T> userDataTally = new UserDataTally<T>();
+  final ResultTally<T> resultTally = new ResultTally<T>();
 
   private static final Logger log = Logger.getLogger("BlockTally");
 
@@ -101,7 +96,7 @@ public class BlockTally {
   /**
    * Vote using all the versions of the voter's VoteBlock.
    */
-  public void vote(VoteBlock voteBlock, PeerIdentity id, int participantIndex) {
+  public void vote(VoteBlock voteBlock, T id, int participantIndex) {
     if (pollerHas()) {
       if (comparer.compare(voteBlock, participantIndex)) {
 	voteAgreed(id);
@@ -116,7 +111,7 @@ public class BlockTally {
   /**
    * Vote that the URL is missing.
    */
-  public void voteMissing(PeerIdentity id) {
+  public void voteMissing(T id) {
     if (pollerHas()) {
       votePollerOnly(id);
     } else {
@@ -127,37 +122,37 @@ public class BlockTally {
   /**
    * The voter is unable to cast a meaningful vote.
    */
-  public void voteSpoiled(PeerIdentity id) {
+  public void voteSpoiled(T id) {
     log.debug3(id+"  spoiled");
     userDataTally.voteSpoiled(id);
     resultTally.voteSpoiled(id);
   }
 
-  void voteAgreed(PeerIdentity id) {
+  void voteAgreed(T id) {
     log.debug3(id+"  agreed");
     userDataTally.voteAgreed(id);
     resultTally.voteAgreed(id);
   }
 
-  void voteDisagreed(PeerIdentity id) {
+  void voteDisagreed(T id) {
     log.debug3(id+"  disagreed");
     userDataTally.voteDisagreed(id);
     resultTally.voteDisagreed(id);
   }
 
-  void voteVoterOnly(PeerIdentity id) {
+  void voteVoterOnly(T id) {
     log.debug3(id+"  voterOnly");
     userDataTally.voteVoterOnly(id);
     resultTally.voteVoterOnly(id);
   }
 
-  void votePollerOnly(PeerIdentity id) {
+  void votePollerOnly(T id) {
     log.debug3(id+"  didn't have");
     userDataTally.votePollerOnly(id);
     resultTally.votePollerOnly(id);
   }
 
-  void voteNeither(PeerIdentity id) {
+  void voteNeither(T id) {
     log.debug3(id+"  neither have");
     userDataTally.voteNeither(id);
     resultTally.voteNeither(id);
@@ -166,14 +161,14 @@ public class BlockTally {
   /**
    * @return
    */
-  public Collection<PeerIdentity> getTalliedVoters() {
+  public Collection<T> getTalliedVoters() {
     return Collections.unmodifiableCollection(userDataTally.talliedVoters);
   }
 
   /**
    * @return 
    */
-  public Collection<PeerIdentity> getTalliedAgreeVoters() {
+  public Collection<T> getTalliedAgreeVoters() {
     return Collections.unmodifiableCollection(userDataTally.talliedAgreeVoters);
   }
 
@@ -181,19 +176,19 @@ public class BlockTally {
     return resultTally.getTallyResult(quorum, voteMargin);
   }
 
-  public Collection<PeerIdentity> getAgreeVoters() {
+  public Collection<T> getAgreeVoters() {
     return Collections.unmodifiableCollection(resultTally.agreeVoters);
   }
 
-  public Collection<PeerIdentity> getDisagreeVoters() {
+  public Collection<T> getDisagreeVoters() {
     return Collections.unmodifiableCollection(resultTally.disagreeVoters);
   }
 
-  public Collection<PeerIdentity> getPollerOnlyBlockVoters() {
+  public Collection<T> getPollerOnlyBlockVoters() {
     return Collections.unmodifiableCollection(resultTally.pollerOnlyVoters);
   }
 
-  public Collection<PeerIdentity> getVoterOnlyBlockVoters() {
+  public Collection<T> getVoterOnlyBlockVoters() {
     return Collections.unmodifiableCollection(resultTally.voterOnlyVoters);
   }
 
@@ -201,7 +196,7 @@ public class BlockTally {
    * @return The subset of the voters who agree on at least one
    * version with the poller.
    */
-  public Collection<PeerIdentity> getVersionAgreedVoters() {
+  public Collection<T> getVersionAgreedVoters() {
     if (pollerHas()) {
       return getAgreeVoters();
     } else {
@@ -216,7 +211,7 @@ public class BlockTally {
    * poller does not have the URL, this is always EMPTY, and the
    * voters are tallied as either voterOnly or agree.
    */
-  public Collection<PeerIdentity> getNoVersionAgreedVoters() {
+  public Collection<T> getNoVersionAgreedVoters() {
     if (pollerHas()) {
       return getDisagreeVoters();
     } else {

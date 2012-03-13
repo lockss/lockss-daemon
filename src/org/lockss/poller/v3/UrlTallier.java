@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.4 2012-03-09 19:24:43 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.5 2012-03-13 23:41:01 barry409 Exp $
  */
 
 /*
@@ -262,7 +262,7 @@ final class UrlTallier {
    * current URL known to any participant.
    * @return tally Collects the votes.
    */
-  BlockTally tallyVoterUrl(String url) {
+  BlockTally<PeerIdentity> tallyVoterUrl(String url) {
     if (url == null) {
       throw new ShouldNotHappenException("url is null.");
     }
@@ -272,7 +272,7 @@ final class UrlTallier {
     }
 
     log.debug3("tallyVoterUrl: "+url);
-    BlockTally tally = new BlockTally();
+    BlockTally<PeerIdentity> tally = new BlockTally<PeerIdentity>();
     voteAllParticipants(url, tally);
     return tally;
   }
@@ -286,7 +286,7 @@ final class UrlTallier {
    * @param hashBlock The poller's {@link HashBlock}.
    * @return tally Collects the votes.
    */
-  BlockTally tallyPollerUrl(String url, HashBlock hashBlock) {
+  BlockTally<PeerIdentity> tallyPollerUrl(String url, HashBlock hashBlock) {
     if (url == null) {
       throw new ShouldNotHappenException("url is null.");
     }
@@ -296,12 +296,12 @@ final class UrlTallier {
     }
 
     log.debug3("tallyPollerUrl: "+url);
-    BlockTally tally = new BlockTally(hashBlock);
+    BlockTally<PeerIdentity> tally = new BlockTally<PeerIdentity>(hashBlock);
     voteAllParticipants(url, tally);
     return tally;
   }
 
-  void voteAllParticipants(String url, BlockTally tally) {
+  void voteAllParticipants(String url, BlockTally<PeerIdentity> tally) {
     for (int participantIndex = 0; participantIndex < participantsList.size();
 	 participantIndex++) {
       Entry e = participantsList.get(participantIndex);

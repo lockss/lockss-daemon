@@ -1,5 +1,5 @@
 /*
- * $Id: UserDataTally.java,v 1.1 2012-03-13 18:29:17 barry409 Exp $
+ * $Id: UserDataTally.java,v 1.2 2012-03-13 23:41:01 barry409 Exp $
  */
 
 /*
@@ -42,35 +42,33 @@ import org.lockss.protocol.PeerIdentity;
  * only tallied agreement between the poller and a voter is if they
  * both have the URL, and agree on the content of some version.
  */
-class UserDataTally implements BlockTally.VoteTally {
+class UserDataTally<T> implements BlockTally.VoteTally<T> {
 
   // package level, for testing, and access by BlockTally.
-  final Collection<PeerIdentity> talliedVoters =
-    new ArrayList<PeerIdentity>();
-  final Collection<PeerIdentity> talliedAgreeVoters =
-    new ArrayList<PeerIdentity>();
+  final Collection<T> talliedVoters = new ArrayList<T>();
+  final Collection<T> talliedAgreeVoters = new ArrayList<T>();
     
-  public void voteSpoiled(PeerIdentity id) {}
-  public void voteAgreed(PeerIdentity id) {
+  public void voteSpoiled(T id) {}
+  public void voteAgreed(T id) {
     addTalliedAgreeVoter(id);
   }
-  public void voteDisagreed(PeerIdentity id) {
+  public void voteDisagreed(T id) {
     addTalliedDisagreeVoter(id);
   }
-  public void voteVoterOnly(PeerIdentity id) {
+  public void voteVoterOnly(T id) {
     addTalliedDisagreeVoter(id);
   }
-  public void votePollerOnly(PeerIdentity id) {
+  public void votePollerOnly(T id) {
     addTalliedDisagreeVoter(id);
   }
-  public void voteNeither(PeerIdentity id) {}
+  public void voteNeither(T id) {}
 
-  void addTalliedAgreeVoter(PeerIdentity id) {
+  void addTalliedAgreeVoter(T id) {
     talliedVoters.add(id);
     talliedAgreeVoters.add(id);
   }
 
-  void addTalliedDisagreeVoter(PeerIdentity id) {
+  void addTalliedDisagreeVoter(T id) {
     talliedVoters.add(id);
   }
 }
