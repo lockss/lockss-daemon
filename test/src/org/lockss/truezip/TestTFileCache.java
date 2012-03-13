@@ -1,5 +1,5 @@
 /*
- * $Id: TestTFileCache.java,v 1.1 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: TestTFileCache.java,v 1.2 2012-03-13 22:35:25 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class TestTFileCache extends LockssTestCase {
     mau = new MockArchivalUnit(new MockPlugin());
     mau.setArchiveFileTypes(ArchiveFileTypes.DEFAULT);
 
-    setupMockAus(10);
+    setupMockAus(20);
 
   }
 
@@ -71,6 +71,9 @@ public class TestTFileCache extends LockssTestCase {
   }
 
   String content(int n) {
+    if (n > 10) {
+      return "small content";
+    }
     return StringUtils.repeat(Integer.toString(n), n*n*n)
       + " shall be the number of the counting";
   }
@@ -109,7 +112,7 @@ public class TestTFileCache extends LockssTestCase {
 
 
   public void testOne() throws Exception {
-    tfc.setMaxSize(800);
+    tfc.setMaxSize(800, 5);
     assertEquals(Collections.EMPTY_LIST, dirList());
     ent[0] = tfc.getCachedTFileEntry(mcu[0]);
     assertValid(0);
@@ -175,5 +178,16 @@ public class TestTFileCache extends LockssTestCase {
 
     assertInvalid(3);
     assertEquals(704, tfc.getCurrentSize());
+
+    // add some tiny files, which should cause flushes due to max number of
+    // files in cache
+    ent[6] = tfc.getCachedTFileEntry(mcu[11]);
+    assertEquals(4, tmpDir.list().length);
+    ent[7] = tfc.getCachedTFileEntry(mcu[12]);
+    assertEquals(4, tmpDir.list().length);
+    ent[8] = tfc.getCachedTFileEntry(mcu[13]);
+    assertEquals(4, tmpDir.list().length);
+    assertEquals(10, tfc.getCacheMisses());
+    assertEquals(3, tfc.getCacheHits());
   }
 }

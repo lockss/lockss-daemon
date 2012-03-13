@@ -1,5 +1,5 @@
 /*
- * $Id: TrueZipManager.java,v 1.1 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: TrueZipManager.java,v 1.2 2012-03-13 22:35:25 tlipkis Exp $
  *
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -60,6 +60,12 @@ public class TrueZipManager extends BaseLockssManager
     PREFIX + "cacheMaxMb";
   public static long DEFAULT_CACHE_MAX_MB = 100;
 
+  /** Target maximum number of TFiles in TFiles cache.  Cache may grow
+   * larger if necessary. */
+  public static String PARAM_CACHE_MAX_FILES =
+    PREFIX + "cacheMaxFiles";
+  public static int DEFAULT_CACHE_MAX_FILES = 100;
+
   String cacheDir;
   TFileCache tfc;
 
@@ -90,7 +96,9 @@ public class TrueZipManager extends BaseLockssManager
 	tfc = new TFileCache(cacheDir);
       }
       long maxMb = config.getLong(PARAM_CACHE_MAX_MB, DEFAULT_CACHE_MAX_MB);
-      tfc.setMaxSize(maxMb * 1024 * 1024);
+      int maxFiles = config.getInt(PARAM_CACHE_MAX_FILES,
+				   DEFAULT_CACHE_MAX_FILES);
+      tfc.setMaxSize(maxMb * 1024 * 1024, maxFiles);
     }
   }
 

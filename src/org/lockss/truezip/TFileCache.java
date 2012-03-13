@@ -1,5 +1,5 @@
 /*
- * $Id: TFileCache.java,v 1.2 2012-03-12 05:23:23 tlipkis Exp $
+ * $Id: TFileCache.java,v 1.3 2012-03-13 22:35:25 tlipkis Exp $
  */
 
 /*
@@ -68,6 +68,7 @@ public class TFileCache {
 
   private File tmpDir;
   private long maxSize;
+  private long maxFiles;
   private long curSize;
 
   private Map<String,Entry> cmap = new HashMap<String,Entry>();
@@ -106,8 +107,9 @@ public class TFileCache {
   /** Set the target maximum amount of disk space to use, in bytes.  Will
    * be exceeded if necessary for larger archive files
    */
-  public void setMaxSize(long bytes) {
+  public void setMaxSize(long bytes, int files) {
     this.maxSize = bytes;
+    this.maxFiles = files;
   }
 
   /** Return a {@link de.schlichtherle.truezip.file.TFile} pointing to a
@@ -262,16 +264,18 @@ public class TFileCache {
   }
 
   void ensureSpace(Entry newEnt) {
-    long committed = curSize + newEnt.size;
-    if (log.isDebug2()) {
-      log.debug2("ensureSpace: " + sizeToString(committed)
-		 + " <= " + sizeToString(maxSize));
-    }
-    if (committed <= maxSize) {
-      return;
-    }
-    // Remove sort when switch to UnboundedLRUMap
     synchronized (cmap) {
+      long committed = curSize + newEnt.size;
+      int curFiles = cmap.size();
+      if (log.isDebug2()) {
+	log.debug2("ensureSpace: " + sizeToString(committed)
+		   + " <=? " + sizeToString(maxSize) +
+		   ", " + curFiles + " <? " + maxFiles);
+      }
+      if (committed <= maxSize && curFiles < maxFiles) {
+	return;
+      }
+      // Remove sort when switch to UnboundedLRUMap
       List<Entry> lst = new ArrayList<Entry>(cmap.values());
       Collections.sort(lst);
       for (Entry ent : lst) {
@@ -281,8 +285,9 @@ public class TFileCache {
 		       + ", " + ent.ctf.getName());
 	  }
 	  flushEntry(ent);
+	  curFiles--;
 	  committed -= ent.size;
-	  if (committed <= maxSize) {
+	  if (committed <= maxSize && curFiles < maxFiles) {
 	    break;
 	  }
 	}
