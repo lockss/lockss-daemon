@@ -43,16 +43,16 @@
       
       comment[years] = years in web addresses are two years behind the publishing year as of 20110912
       
-      au < HighWirePressH20Plugin ; ready ; 2002 ; American Literary Scholarship 2002 ; 2000 >
-      au < HighWirePressH20Plugin ; ready ; 2003 ; American Literary Scholarship 2003 ; 2001 >
-      au < HighWirePressH20Plugin ; ready ; 2004 ; American Literary Scholarship 2004 ; 2002 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; American Literary Scholarship 2002 ; 2000 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; American Literary Scholarship 2003 ; 2001 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; American Literary Scholarship 2004 ; 2002 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Literary Scholarship 2005 ; 2003 >
       au < HighWireStrVolPlugin ; down ; 2006 ; American Literary Scholarship 2006 ; 2004 >
       au < HighWirePressH20Plugin ; released ; 2007 ; American Literary Scholarship 2007 ; 2005 >
       au < HighWirePressH20Plugin ; released ; 2008 ; American Literary Scholarship 2008 ; 2006 >
       au < HighWirePressH20Plugin ; released ; 2009 ; American Literary Scholarship 2009 ; 2007 >
       au < HighWirePressH20Plugin ; released ; 2010 ; American Literary Scholarship 2010 ; 2008 >
-      au < HighWirePressH20Plugin ; ready ; 2011 ; American Literary Scholarship 2011 ; 2009 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; American Literary Scholarship 2011 ; 2009 >
       
     }
     
@@ -90,11 +90,11 @@
       param[base_url] = http://americanliterature.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; ready ; 2000 ; American Literature Volume 72 ; 72 >
-      au < HighWirePressH20Plugin ; ready ; 2001 ; American Literature Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; ready ; 2002 ; American Literature Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; ready ; 2003 ; American Literature Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; ready ; 2004 ; American Literature Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; American Literature Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; American Literature Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; American Literature Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; American Literature Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; American Literature Volume 76 ; 76 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Literature Volume 77 ; 77 >
       au < HighWireStrVolPlugin ; down ; 2006 ; American Literature Volume 78 ; 78 >
       au < HighWireStrVolPlugin ; down ; 2007 ; American Literature Volume 79 ; 79 >
@@ -139,11 +139,11 @@
       param[base_url] = http://americanspeech.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; ready ; 2000 ; American Speech Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; ready ; 2001 ; American Speech Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; ready ; 2002 ; American Speech Volume 77 ; 77 >
-      au < HighWirePressH20Plugin ; ready ; 2003 ; American Speech Volume 78 ; 78 >
-      au < HighWirePressH20Plugin ; ready ; 2004 ; American Speech Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; American Speech Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; American Speech Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; American Speech Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; American Speech Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; American Speech Volume 79 ; 79 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Speech Volume 80 ; 80 >
       au < HighWireStrVolPlugin ; down ; 2006 ; American Speech Volume 81 ; 81 >
       au < HighWireStrVolPlugin ; down ; 2007 ; American Speech Volume 82 ; 82 >
@@ -188,11 +188,11 @@
       param[base_url] = http://boundary2.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; ready ; 2000 ; boundary 2 Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; ready ; 2001 ; boundary 2 Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; ready ; 2002 ; boundary 2 Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; ready ; 2003 ; boundary 2 Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; ready ; 2004 ; boundary 2 Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; boundary 2 Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; boundary 2 Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; boundary 2 Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; boundary 2 Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; boundary 2 Volume 31 ; 31 >
       au < HighWireStrVolPlugin ; down ; 2005 ; boundary 2 Volume 32 ; 32 >
       au < HighWireStrVolPlugin ; down ; 2006 ; boundary 2 Volume 33 ; 33 >
       au < HighWireStrVolPlugin ; down ; 2007 ; boundary 2 Volume 34 ; 34 >      
@@ -1066,18 +1066,18 @@
       param[base_url] = http://pads.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; ready ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
-      au < HighWirePressH20Plugin ; ready ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
-      au < HighWirePressH20Plugin ; ready ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
-      au < HighWirePressH20Plugin ; ready ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
-      au < HighWirePressH20Plugin ; ready ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
-      au < HighWirePressH20Plugin ; ready ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
-      au < HighWirePressH20Plugin ; ready ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
-      au < HighWirePressH20Plugin ; ready ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
-      au < HighWirePressH20Plugin ; ready ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
-      au < HighWirePressH20Plugin ; ready ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
-      au < HighWirePressH20Plugin ; ready ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
-      au < HighWirePressH20Plugin ; ready ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
 
     }
   
@@ -1299,10 +1299,10 @@
       param[base_url] = http://saq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; ready ; 2001 ; The South Atlantic Quarterly Volume 100 ; 100 >
-      au < HighWirePressH20Plugin ; ready ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 >
-      au < HighWirePressH20Plugin ; ready ; 2003 ; The South Atlantic Quarterly Volume 102 ; 102 >
-      au < HighWirePressH20Plugin ; ready ; 2004 ; The South Atlantic Quarterly Volume 103 ; 103 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; The South Atlantic Quarterly Volume 100 ; 100 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; The South Atlantic Quarterly Volume 102 ; 102 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; The South Atlantic Quarterly Volume 103 ; 103 >
       au < HighWireStrVolPlugin ; down ; 2005 ; The South Atlantic Quarterly Volume 104 ; 104 >
       au < HighWireStrVolPlugin ; down ; 2006 ; The South Atlantic Quarterly Volume 105 ; 105 >
       au < HighWireStrVolPlugin ; down ; 2007 ; The South Atlantic Quarterly Volume 106 ; 106 >

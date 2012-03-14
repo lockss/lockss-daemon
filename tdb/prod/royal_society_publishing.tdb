@@ -98,7 +98,7 @@
     au < released ; 2009 ; Biology Letters Volume 5 ; 5 >
     au < released ; 2010 ; Biology Letters Volume 6 ; 6 >
     au < released ; 2011 ; Biology Letters Volume 7 ; 7 >
-    au < ready ; 2012 ; Biology Letters Volume 8 ; 8 >
+    au < released ; 2012 ; Biology Letters Volume 8 ; 8 >
 
   }
 
@@ -115,7 +115,7 @@
 
     param[base_url] = http://rsfs.royalsocietypublishing.org/
 
-    au < ready ; 2011 ; Interface Focus Volume 1 ; 1 >
+    au < released ; 2011 ; Interface Focus Volume 1 ; 1 >
     au < manifest ; 2012 ; Interface Focus Volume 2 ; 2 >
 
   }
@@ -234,7 +234,7 @@
 
     param[base_url] = http://rsob.royalsocietypublishing.org/
     
-    au < ready ; 2011 ; Open Biology Volume 1 ; 1 >
+    au < released ; 2011 ; Open Biology Volume 1 ; 1 >
     au < manifest ; 2012 ; Open Biology Volume 2 ; 2 >
   
   }

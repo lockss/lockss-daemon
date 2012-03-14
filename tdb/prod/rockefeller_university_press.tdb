@@ -4,7 +4,6 @@
     name = Rockefeller University Press
   >
 
-  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified
 
   {
 
@@ -19,6 +18,7 @@
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://www.jcb.org/
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified
       implicit < status ; year ; name ; param[volume_name] >
 
       au < down ; 2005 ; The Journal of Cell Biology Volume 168 ; 168 >
@@ -30,6 +30,7 @@
       au < down ; 2006 ; The Journal of Cell Biology Volume 174 ; 174 >
       au < down ; 2006 ; The Journal of Cell Biology Volume 175 ; 175 >
       au < down ; 2007 ; The Journal of Cell Biology Volume 176 ; 176 >
+
     }
 
     {
@@ -255,6 +256,7 @@
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://www.jem.org/
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified
       implicit < status ; year ; name ; param[volume_name] >
 
       au < down ; 2005 ; The Journal of Experimental Medicine Volume 202 ; 202 >
@@ -493,6 +495,7 @@
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://www.jgp.org/
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified
       implicit < status ; year ; name ; param[volume_name] >
 
       au < down ; 2006 ; The Journal of General Physiology Volume 127 ; 127 >

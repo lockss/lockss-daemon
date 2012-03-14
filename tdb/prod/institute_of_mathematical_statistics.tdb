@@ -37,8 +37,8 @@
       param[base_url] = http://ecp.ejpecp.org/
       param[journal_id] = ecp
       
-      au < ready ; 1996 ; Electronic Communications in Probability 1996 ; 1 ; 1996 >
-      au < ready ; 1997 ; Electronic Communications in Probability 1997 ; 2 ; 1997 >
+      au < released ; 1996 ; Electronic Communications in Probability 1996 ; 1 ; 1996 >
+      au < released ; 1997 ; Electronic Communications in Probability 1997 ; 2 ; 1997 >
       au < doNotProcess ; 1998 ; Electronic Communications in Probability 1998 ; 3 ; 1998 >
       au < doNotProcess ; 1999 ; Electronic Communications in Probability 1999 ; 4 ; 1999 >
       au < doNotProcess ; 2000 ; Electronic Communications in Probability 2000 ; 5 ; 2000 >
@@ -47,12 +47,12 @@
       au < doNotProcess ; 2003 ; Electronic Communications in Probability 2003 ; 8 ; 2003 >
       au < doNotProcess ; 2004 ; Electronic Communications in Probability 2004 ; 9 ; 2004 >
       au < doNotProcess ; 2005 ; Electronic Communications in Probability 2005 ; 10 ; 2005 >
-      au < ready ; 2006 ; Electronic Communications in Probability 2006 ; 11 ; 2006 >
-      au < ready ; 2007 ; Electronic Communications in Probability 2007 ; 12 ; 2007 >
-      au < ready ; 2008 ; Electronic Communications in Probability 2008 ; 13 ; 2008 >
-      au < ready ; 2009 ; Electronic Communications in Probability 2009 ; 14 ; 2009 >
-      au < ready ; 2010 ; Electronic Communications in Probability 2010 ; 15 ; 2010 >
-      au < ready ; 2011 ; Electronic Communications in Probability 2011 ; 16 ; 2011 >
+      au < released ; 2006 ; Electronic Communications in Probability 2006 ; 11 ; 2006 >
+      au < released ; 2007 ; Electronic Communications in Probability 2007 ; 12 ; 2007 >
+      au < released ; 2008 ; Electronic Communications in Probability 2008 ; 13 ; 2008 >
+      au < released ; 2009 ; Electronic Communications in Probability 2009 ; 14 ; 2009 >
+      au < released ; 2010 ; Electronic Communications in Probability 2010 ; 15 ; 2010 >
+      au < released ; 2011 ; Electronic Communications in Probability 2011 ; 16 ; 2011 >
     
     }
 
@@ -87,8 +87,8 @@
       param[base_url] = http://ejp.ejpecp.org/
       param[journal_id] = ejp
       
-      au < ready ; 1996 ; Electronic Journal of Probability 1996 ; 1 ; 1996 >
-      au < ready ; 1997 ; Electronic Journal of Probability 1997 ; 2 ; 1997 >
+      au < released ; 1996 ; Electronic Journal of Probability 1996 ; 1 ; 1996 >
+      au < released ; 1997 ; Electronic Journal of Probability 1997 ; 2 ; 1997 >
       au < doNotProcess ; 1998 ; Electronic Journal of Probability 1998 ; 3 ; 1998 >
       au < doNotProcess ; 1999 ; Electronic Journal of Probability 1999 ; 4 ; 1999 >
       au < doNotProcess ; 2000 ; Electronic Journal of Probability 2000 ; 5 ; 2000 >
@@ -97,12 +97,12 @@
       au < doNotProcess ; 2003 ; Electronic Journal of Probability 2003 ; 8 ; 2003 >
       au < doNotProcess ; 2004 ; Electronic Journal of Probability 2004 ; 9 ; 2004 >
       au < doNotProcess ; 2005 ; Electronic Journal of Probability 2005 ; 10 ; 2005 >
-      au < ready ; 2006 ; Electronic Journal of Probability 2006 ; 11 ; 2006 >
-      au < ready ; 2007 ; Electronic Journal of Probability 2007 ; 12 ; 2007 >
-      au < ready ; 2008 ; Electronic Journal of Probability 2008 ; 13 ; 2008 >
-      au < ready ; 2009 ; Electronic Journal of Probability 2009 ; 14 ; 2009 >
-      au < ready ; 2010 ; Electronic Journal of Probability 2010 ; 15 ; 2010 >
-      au < ready ; 2011 ; Electronic Journal of Probability 2011 ; 16 ; 2011 >
+      au < released ; 2006 ; Electronic Journal of Probability 2006 ; 11 ; 2006 >
+      au < released ; 2007 ; Electronic Journal of Probability 2007 ; 12 ; 2007 >
+      au < released ; 2008 ; Electronic Journal of Probability 2008 ; 13 ; 2008 >
+      au < released ; 2009 ; Electronic Journal of Probability 2009 ; 14 ; 2009 >
+      au < released ; 2010 ; Electronic Journal of Probability 2010 ; 15 ; 2010 >
+      au < released ; 2011 ; Electronic Journal of Probability 2011 ; 16 ; 2011 >
     
     }
   

@@ -16,20 +16,20 @@
       param[base_url] = http://hortsci.ashspublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 1990 ; HortScience Volume 25 ; 25 >
-      au < ready ; 1991 ; HortScience Volume 26 ; 26 >
-      au < ready ; 1992 ; HortScience Volume 27 ; 27 >
-      au < ready ; 1993 ; HortScience Volume 28 ; 28 >
-      au < ready ; 1994 ; HortScience Volume 29 ; 29 >
-      au < ready ; 1995 ; HortScience Volume 30 ; 30 >
-      au < ready ; 1996 ; HortScience Volume 31 ; 31 >
-      au < ready ; 1997 ; HortScience Volume 32 ; 32 >
-      au < ready ; 1998 ; HortScience Volume 33 ; 33 >
-      au < ready ; 1999 ; HortScience Volume 34 ; 34 >
-      au < ready ; 2000 ; HortScience Volume 35 ; 35 >
-      au < ready ; 2001 ; HortScience Volume 36 ; 36 >
-      au < ready ; 2002 ; HortScience Volume 37 ; 37 >
-      au < ready ; 2003 ; HortScience Volume 38 ; 38 >
+      au < released ; 1990 ; HortScience Volume 25 ; 25 >
+      au < released ; 1991 ; HortScience Volume 26 ; 26 >
+      au < released ; 1992 ; HortScience Volume 27 ; 27 >
+      au < released ; 1993 ; HortScience Volume 28 ; 28 >
+      au < released ; 1994 ; HortScience Volume 29 ; 29 >
+      au < released ; 1995 ; HortScience Volume 30 ; 30 >
+      au < released ; 1996 ; HortScience Volume 31 ; 31 >
+      au < released ; 1997 ; HortScience Volume 32 ; 32 >
+      au < released ; 1998 ; HortScience Volume 33 ; 33 >
+      au < released ; 1999 ; HortScience Volume 34 ; 34 >
+      au < released ; 2000 ; HortScience Volume 35 ; 35 >
+      au < released ; 2001 ; HortScience Volume 36 ; 36 >
+      au < released ; 2002 ; HortScience Volume 37 ; 37 >
+      au < released ; 2003 ; HortScience Volume 38 ; 38 >
       au < testing ; 2004 ; HortScience Volume 39 ; 39 >
       au < testing ; 2005 ; HortScience Volume 40 ; 40 >
       au < testing ; 2006 ; HortScience Volume 41 ; 41 >

@@ -31,14 +31,14 @@
       param[journal_id] = ameriquests
       implicit < status ; year ; name ; volume ; param[year] >
     
-      au < ready ; 2004 ; AmeriQuests Volume 1 ; 1 ; 2004 >
-      au < ready ; 2005 ; AmeriQuests Volume 2 ; 2 ; 2005 >
-      au < ready ; 2006 ; AmeriQuests Volume 3 ; 3 ; 2006 >
-      au < ready ; 2007 ; AmeriQuests Volume 4 ; 4 ; 2007 > 
-      au < ready ; 2008 ; AmeriQuests Volume 5-6 ; 5-6 ; 2008 >
-      au < doesNotExist ; 2009 ; AmeriQuests ; ; 2009 >
-      au < ready ; 2010 ; AmeriQuests Volume 7 ; 7 ; 2010 > 
-      au < ready ; 2011 ; AmeriQuests Volume 8 ; 8 ; 2011 > 
+      au < released ; 2004 ; AmeriQuests Volume 1 ; 1 ; 2004 >
+      au < released ; 2005 ; AmeriQuests Volume 2 ; 2 ; 2005 >
+      au < released ; 2006 ; AmeriQuests Volume 3 ; 3 ; 2006 >
+      au < released ; 2007 ; AmeriQuests Volume 4 ; 4 ; 2007 > 
+      au < released ; 2008 ; AmeriQuests Volume 5-6 ; 5-6 ; 2008 >
+      au < doesNotExist ; 2009 ; AmeriQuests Volume 6 ; 6 ; 2009 >
+      au < released ; 2010 ; AmeriQuests Volume 7 ; 7 ; 2010 > 
+      au < released ; 2011 ; AmeriQuests Volume 8 ; 8 ; 2011 > 
    
     }
 

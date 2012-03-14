@@ -53,10 +53,10 @@
     au < manifest ; 2009 ; European Respiratory Journal Volume 33 ; 33 >
     au < manifest ; 2009 ; European Respiratory Journal Volume 34 ; 34 >
     au < manifest ; 2010 ; European Respiratory Journal Volume 35 ; 35 >  
-    au < ready ; 2010 ; European Respiratory Journal Volume 36 ; 36 >
-    au < ready ; 2011 ; European Respiratory Journal Volume 37 ; 37 >
-    au < ready ; 2011 ; European Respiratory Journal Volume 38 ; 38 >
-    au < ready ; 2012 ; European Respiratory Journal Volume 39 ; 39 >
+    au < released ; 2010 ; European Respiratory Journal Volume 36 ; 36 >
+    au < released ; 2011 ; European Respiratory Journal Volume 37 ; 37 >
+    au < released ; 2011 ; European Respiratory Journal Volume 38 ; 38 >
+    au < released ; 2012 ; European Respiratory Journal Volume 39 ; 39 >
     
   }
 
@@ -71,13 +71,13 @@
 
     param[base_url] = http://err.ersjournals.com/
       
-    au < ready ; 2005 ; European Respiratory Review Volume 14 ; 14 >
-    au < ready ; 2006 ; European Respiratory Review Volume 15 ; 15 >
-    au < ready ; 2007 ; European Respiratory Review Volume 16 ; 16 >
-    au < ready ; 2008 ; European Respiratory Review Volume 17 ; 17 >
-    au < ready ; 2009 ; European Respiratory Review Volume 18 ; 18 >
-    au < ready ; 2010 ; European Respiratory Review Volume 19 ; 19 >
-    au < ready ; 2011 ; European Respiratory Review Volume 20 ; 20 >
+    au < released ; 2005 ; European Respiratory Review Volume 14 ; 14 >
+    au < released ; 2006 ; European Respiratory Review Volume 15 ; 15 >
+    au < released ; 2007 ; European Respiratory Review Volume 16 ; 16 >
+    au < released ; 2008 ; European Respiratory Review Volume 17 ; 17 >
+    au < released ; 2009 ; European Respiratory Review Volume 18 ; 18 >
+    au < released ; 2010 ; European Respiratory Review Volume 19 ; 19 >
+    au < released ; 2011 ; European Respiratory Review Volume 20 ; 20 >
     au < manifest ; 2012 ; European Respiratory Review Volume 21 ; 21 >
  
 

@@ -17,17 +17,17 @@
       param[base_url] = http://clinical.diabetesjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 2001 ; Clinical Diabetes Volume 19 ; 19 >
-      au < ready ; 2002 ; Clinical Diabetes Volume 20 ; 20 >
-      au < ready ; 2003 ; Clinical Diabetes Volume 21 ; 21 >
-      au < ready ; 2004 ; Clinical Diabetes Volume 22 ; 22 >
-      au < ready ; 2005 ; Clinical Diabetes Volume 23 ; 23 >
-      au < ready ; 2006 ; Clinical Diabetes Volume 24 ; 24 >
-      au < ready ; 2007 ; Clinical Diabetes Volume 25 ; 25 >
-      au < ready ; 2008 ; Clinical Diabetes Volume 26 ; 26 >
-      au < ready ; 2009 ; Clinical Diabetes Volume 27 ; 27 >
-      au < ready ; 2010 ; Clinical Diabetes Volume 28 ; 28 >
-      au < ready ; 2011 ; Clinical Diabetes Volume 29 ; 29 >
+      au < released ; 2001 ; Clinical Diabetes Volume 19 ; 19 >
+      au < released ; 2002 ; Clinical Diabetes Volume 20 ; 20 >
+      au < released ; 2003 ; Clinical Diabetes Volume 21 ; 21 >
+      au < released ; 2004 ; Clinical Diabetes Volume 22 ; 22 >
+      au < released ; 2005 ; Clinical Diabetes Volume 23 ; 23 >
+      au < released ; 2006 ; Clinical Diabetes Volume 24 ; 24 >
+      au < released ; 2007 ; Clinical Diabetes Volume 25 ; 25 >
+      au < released ; 2008 ; Clinical Diabetes Volume 26 ; 26 >
+      au < released ; 2009 ; Clinical Diabetes Volume 27 ; 27 >
+      au < released ; 2010 ; Clinical Diabetes Volume 28 ; 28 >
+      au < released ; 2011 ; Clinical Diabetes Volume 29 ; 29 >
 
     }
 
@@ -80,20 +80,20 @@
       au < ready ; 1995 ; Diabetes Volume 44 [abstracts only] ; 44 >
       au < ready ; 1996 ; Diabetes Volume 45 [abstracts only] ; 45 >
       au < ready ; 1997 ; Diabetes Volume 46 [abstracts only] ; 46 >
-      au < ready ; 1998 ; Diabetes Volume 47 ; 47 >
-      au < ready ; 1999 ; Diabetes Volume 48 ; 48 >
-      au < ready ; 2000 ; Diabetes Volume 49 ; 49 >
-      au < ready ; 2001 ; Diabetes Volume 50 ; 50 >
-      au < ready ; 2002 ; Diabetes Volume 51 ; 51 >
-      au < ready ; 2003 ; Diabetes Volume 52 ; 52 >
-      au < ready ; 2004 ; Diabetes Volume 53 ; 53 >
-      au < ready ; 2005 ; Diabetes Volume 54 ; 54 >
-      au < ready ; 2006 ; Diabetes Volume 55 ; 55 >
-      au < ready ; 2007 ; Diabetes Volume 56 ; 56 >
-      au < ready ; 2008 ; Diabetes Volume 57 ; 57 >
-      au < ready ; 2009 ; Diabetes Volume 58 ; 58 >
-      au < ready ; 2010 ; Diabetes Volume 59 ; 59 >
-      au < ready ; 2011 ; Diabetes Volume 60 ; 60 >
+      au < released ; 1998 ; Diabetes Volume 47 ; 47 >
+      au < released ; 1999 ; Diabetes Volume 48 ; 48 >
+      au < released ; 2000 ; Diabetes Volume 49 ; 49 >
+      au < released ; 2001 ; Diabetes Volume 50 ; 50 >
+      au < released ; 2002 ; Diabetes Volume 51 ; 51 >
+      au < released ; 2003 ; Diabetes Volume 52 ; 52 >
+      au < released ; 2004 ; Diabetes Volume 53 ; 53 >
+      au < released ; 2005 ; Diabetes Volume 54 ; 54 >
+      au < released ; 2006 ; Diabetes Volume 55 ; 55 >
+      au < released ; 2007 ; Diabetes Volume 56 ; 56 >
+      au < released ; 2008 ; Diabetes Volume 57 ; 57 >
+      au < released ; 2009 ; Diabetes Volume 58 ; 58 >
+      au < released ; 2010 ; Diabetes Volume 59 ; 59 >
+      au < released ; 2011 ; Diabetes Volume 60 ; 60 >
 
     }
 
@@ -133,20 +133,20 @@
       au < ready ; 1995 ; Diabetes Care Volume 18 [abstracts only] ; 18 >
       au < ready ; 1996 ; Diabetes Care Volume 19 [abstracts only] ; 19 >
       au < ready ; 1997 ; Diabetes Care Volume 20 [abstracts only] ; 20 >
-      au < ready ; 1998 ; Diabetes Care Volume 21 ; 21 >
-      au < ready ; 1999 ; Diabetes Care Volume 22 ; 22 >
-      au < ready ; 2000 ; Diabetes Care Volume 23 ; 23 >
-      au < ready ; 2001 ; Diabetes Care Volume 24 ; 24 >
-      au < ready ; 2002 ; Diabetes Care Volume 25 ; 25 >
-      au < ready ; 2003 ; Diabetes Care Volume 26 ; 26 >
-      au < ready ; 2004 ; Diabetes Care Volume 27 ; 27 >
-      au < ready ; 2005 ; Diabetes Care Volume 28 ; 28 >
-      au < ready ; 2006 ; Diabetes Care Volume 29 ; 29 >
-      au < ready ; 2007 ; Diabetes Care Volume 30 ; 30 >
-      au < ready ; 2008 ; Diabetes Care Volume 31 ; 31 >
-      au < ready ; 2009 ; Diabetes Care Volume 32 ; 32 >
-      au < ready ; 2010 ; Diabetes Care Volume 33 ; 33 >
-      au < ready ; 2011 ; Diabetes Care Volume 34 ; 34 >
+      au < released ; 1998 ; Diabetes Care Volume 21 ; 21 >
+      au < released ; 1999 ; Diabetes Care Volume 22 ; 22 >
+      au < released ; 2000 ; Diabetes Care Volume 23 ; 23 >
+      au < released ; 2001 ; Diabetes Care Volume 24 ; 24 >
+      au < released ; 2002 ; Diabetes Care Volume 25 ; 25 >
+      au < released ; 2003 ; Diabetes Care Volume 26 ; 26 >
+      au < released ; 2004 ; Diabetes Care Volume 27 ; 27 >
+      au < released ; 2005 ; Diabetes Care Volume 28 ; 28 >
+      au < released ; 2006 ; Diabetes Care Volume 29 ; 29 >
+      au < released ; 2007 ; Diabetes Care Volume 30 ; 30 >
+      au < released ; 2008 ; Diabetes Care Volume 31 ; 31 >
+      au < released ; 2009 ; Diabetes Care Volume 32 ; 32 >
+      au < released ; 2010 ; Diabetes Care Volume 33 ; 33 >
+      au < released ; 2011 ; Diabetes Care Volume 34 ; 34 >
 
     }
 
@@ -167,16 +167,16 @@
       implicit < status ; year ; name ; param[volume_name] >
       comment[ds24] = found a login page
 
-      au < ready ; 2001 ; Diabetes Spectrum Volume 14 ; 14 >
-      au < ready ; 2002 ; Diabetes Spectrum Volume 15 ; 15 >
-      au < ready ; 2003 ; Diabetes Spectrum Volume 16 ; 16 >
-      au < ready ; 2004 ; Diabetes Spectrum Volume 17 ; 17 >
-      au < ready ; 2005 ; Diabetes Spectrum Volume 18 ; 18 >
-      au < ready ; 2006 ; Diabetes Spectrum Volume 19 ; 19 >
-      au < ready ; 2007 ; Diabetes Spectrum Volume 20 ; 20 >
-      au < ready ; 2008 ; Diabetes Spectrum Volume 21 ; 21 >
-      au < ready ; 2009 ; Diabetes Spectrum Volume 22 ; 22 >
-      au < ready ; 2010 ; Diabetes Spectrum Volume 23 ; 23 >
+      au < released ; 2001 ; Diabetes Spectrum Volume 14 ; 14 >
+      au < released ; 2002 ; Diabetes Spectrum Volume 15 ; 15 >
+      au < released ; 2003 ; Diabetes Spectrum Volume 16 ; 16 >
+      au < released ; 2004 ; Diabetes Spectrum Volume 17 ; 17 >
+      au < released ; 2005 ; Diabetes Spectrum Volume 18 ; 18 >
+      au < released ; 2006 ; Diabetes Spectrum Volume 19 ; 19 >
+      au < released ; 2007 ; Diabetes Spectrum Volume 20 ; 20 >
+      au < released ; 2008 ; Diabetes Spectrum Volume 21 ; 21 >
+      au < released ; 2009 ; Diabetes Spectrum Volume 22 ; 22 >
+      au < released ; 2010 ; Diabetes Spectrum Volume 23 ; 23 >
       au < notReady ; 2011 ; Diabetes Spectrum Volume 24 ; 24 >
 
     }
@@ -198,11 +198,11 @@
       implicit < status ; year ; name ; param[volume_name] >
       comment[0] = farewell issue Jan 2008
 
-      au < ready ; 2004 ; DOC News Volume 1 ; 1 >
-      au < ready ; 2005 ; DOC News Volume 2 ; 2 >
-      au < ready ; 2006 ; DOC News Volume 3 ; 3 >
-      au < ready ; 2007 ; DOC News Volume 4 ; 4 >
-      au < ready ; 2008 ; DOC News Volume 5 ; 5 >
+      au < released ; 2004 ; DOC News Volume 1 ; 1 >
+      au < released ; 2005 ; DOC News Volume 2 ; 2 >
+      au < released ; 2006 ; DOC News Volume 3 ; 3 >
+      au < released ; 2007 ; DOC News Volume 4 ; 4 >
+      au < released ; 2008 ; DOC News Volume 5 ; 5 >
 
     }
 

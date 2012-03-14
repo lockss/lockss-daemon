@@ -138,23 +138,23 @@
       param[base_url] = http://ebm.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 1999 ; Experimental Biology and Medicine Volume 220 ; 220 >
-      au < ready ; 1999 ; Experimental Biology and Medicine Volume 221 ; 221 >
-      au < ready ; 1999 ; Experimental Biology and Medicine Volume 222 ; 222 >
-      au < ready ; 2000 ; Experimental Biology and Medicine Volume 223 ; 223 >
-      au < ready ; 2000 ; Experimental Biology and Medicine Volume 224 ; 224 >
-      au < ready ; 2000 ; Experimental Biology and Medicine Volume 225 ; 225 >
-      au < ready ; 2001 ; Experimental Biology and Medicine Volume 226 ; 226 >
-      au < ready ; 2002 ; Experimental Biology and Medicine Volume 227 ; 227 >
-      au < ready ; 2003 ; Experimental Biology and Medicine Volume 228 ; 228 >
-      au < ready ; 2004 ; Experimental Biology and Medicine Volume 229 ; 229 >
-      au < ready ; 2005 ; Experimental Biology and Medicine Volume 230 ; 230 >
-      au < ready ; 2006 ; Experimental Biology and Medicine Volume 231 ; 231 >
-      au < ready ; 2007 ; Experimental Biology and Medicine Volume 232 ; 232 >
-      au < ready ; 2008 ; Experimental Biology and Medicine Volume 233 ; 233 >
-      au < ready ; 2009 ; Experimental Biology and Medicine Volume 234 ; 234 >
-      au < ready ; 2010 ; Experimental Biology and Medicine Volume 235 ; 235 >
-      au < ready ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 >
+      au < released ; 1999 ; Experimental Biology and Medicine Volume 220 ; 220 >
+      au < released ; 1999 ; Experimental Biology and Medicine Volume 221 ; 221 >
+      au < released ; 1999 ; Experimental Biology and Medicine Volume 222 ; 222 >
+      au < released ; 2000 ; Experimental Biology and Medicine Volume 223 ; 223 >
+      au < released ; 2000 ; Experimental Biology and Medicine Volume 224 ; 224 >
+      au < released ; 2000 ; Experimental Biology and Medicine Volume 225 ; 225 >
+      au < released ; 2001 ; Experimental Biology and Medicine Volume 226 ; 226 >
+      au < released ; 2002 ; Experimental Biology and Medicine Volume 227 ; 227 >
+      au < released ; 2003 ; Experimental Biology and Medicine Volume 228 ; 228 >
+      au < released ; 2004 ; Experimental Biology and Medicine Volume 229 ; 229 >
+      au < released ; 2005 ; Experimental Biology and Medicine Volume 230 ; 230 >
+      au < released ; 2006 ; Experimental Biology and Medicine Volume 231 ; 231 >
+      au < released ; 2007 ; Experimental Biology and Medicine Volume 232 ; 232 >
+      au < released ; 2008 ; Experimental Biology and Medicine Volume 233 ; 233 >
+      au < released ; 2009 ; Experimental Biology and Medicine Volume 234 ; 234 >
+      au < released ; 2010 ; Experimental Biology and Medicine Volume 235 ; 235 >
+      au < released ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 >
 
     }
 
@@ -173,14 +173,14 @@
     param[base_url] = http://ht.rsmjournals.com/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; ready ; 2001 ; Hand Therapy Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; ready ; 2002 ; Hand Therapy Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; ready ; 2003 ; Hand Therapy Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; ready ; 2004 ; Hand Therapy Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; ready ; 2005 ; Hand Therapy Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; ready ; 2006 ; Hand Therapy Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; ready ; 2007 ; Hand Therapy Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; Hand Therapy Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; released ; 2001 ; Hand Therapy Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; released ; 2002 ; Hand Therapy Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; released ; 2003 ; Hand Therapy Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; released ; 2004 ; Hand Therapy Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 2005 ; Hand Therapy Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; released ; 2006 ; Hand Therapy Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; Hand Therapy Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Hand Therapy Volume 13 ; 13 >
     au < HighWirePressPlugin ; down ; 2009 ; Hand Therapy Volume 14 ; 14 >
     au < HighWirePressPlugin ; down ; 2010 ; Hand Therapy Volume 15 ; 15 >
     au < HighWirePressPlugin ; down ; 2011 ; Hand Therapy Volume 16 ; 16 >
@@ -254,7 +254,7 @@
       au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 >
       au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 >
       au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 >
-      au < HighWirePressH20Plugin ; ready ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
       au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 >
       au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 >
 
@@ -646,15 +646,15 @@
       param[base_url] = http://msl.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 2003 ; Medicine, Science and the Law Volume 43 ; 43 >
-      au < ready ; 2004 ; Medicine, Science and the Law Volume 44 ; 44 >
-      au < ready ; 2005 ; Medicine, Science and the Law Volume 45 ; 45 >
-      au < ready ; 2006 ; Medicine, Science and the Law Volume 46 ; 46 >
-      au < ready ; 2007 ; Medicine, Science and the Law Volume 47 ; 47 >
-      au < ready ; 2008 ; Medicine, Science and the Law Volume 48 ; 48 >
-      au < ready ; 2009 ; Medicine, Science and the Law Volume 49 ; 49 >
-      au < ready ; 2010 ; Medicine, Science and the Law Volume 50 ; 50 >
-      au < ready ; 2011 ; Medicine, Science and the Law Volume 51 ; 51 >
+      au < released ; 2003 ; Medicine, Science and the Law Volume 43 ; 43 >
+      au < released ; 2004 ; Medicine, Science and the Law Volume 44 ; 44 >
+      au < released ; 2005 ; Medicine, Science and the Law Volume 45 ; 45 >
+      au < released ; 2006 ; Medicine, Science and the Law Volume 46 ; 46 >
+      au < released ; 2007 ; Medicine, Science and the Law Volume 47 ; 47 >
+      au < released ; 2008 ; Medicine, Science and the Law Volume 48 ; 48 >
+      au < released ; 2009 ; Medicine, Science and the Law Volume 49 ; 49 >
+      au < released ; 2010 ; Medicine, Science and the Law Volume 50 ; 50 >
+      au < released ; 2011 ; Medicine, Science and the Law Volume 51 ; 51 >
 
     }
 
@@ -686,7 +686,7 @@
       au < HighWirePressPlugin ; down ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
       au < HighWirePressPlugin ; down ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
       au < HighWirePressPlugin ; down ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
-      au < HighWirePressH20Plugin ; ready ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
 
     }
 
@@ -839,14 +839,14 @@
       param[base_url] = http://ult.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 2004 ; Ultrasound Volume 12 ; 12 >
-      au < ready ; 2005 ; Ultrasound Volume 13 ; 13 >
-      au < ready ; 2006 ; Ultrasound Volume 14 ; 14 >
-      au < ready ; 2007 ; Ultrasound Volume 15 ; 15 >
-      au < ready ; 2008 ; Ultrasound Volume 16 ; 16 >
-      au < ready ; 2009 ; Ultrasound Volume 17 ; 17 >
-      au < ready ; 2010 ; Ultrasound Volume 18 ; 18 >
-      au < ready ; 2011 ; Ultrasound Volume 19 ; 19 >
+      au < released ; 2004 ; Ultrasound Volume 12 ; 12 >
+      au < released ; 2005 ; Ultrasound Volume 13 ; 13 >
+      au < released ; 2006 ; Ultrasound Volume 14 ; 14 >
+      au < released ; 2007 ; Ultrasound Volume 15 ; 15 >
+      au < released ; 2008 ; Ultrasound Volume 16 ; 16 >
+      au < released ; 2009 ; Ultrasound Volume 17 ; 17 >
+      au < released ; 2010 ; Ultrasound Volume 18 ; 18 >
+      au < released ; 2011 ; Ultrasound Volume 19 ; 19 >
 
     }
 
@@ -865,7 +865,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[18] = found a login page
 
-    au < ready ; 2004 ; Vascular Volume 12 ; 12 >
+    au < released ; 2004 ; Vascular Volume 12 ; 12 >
     au < released ; 2005 ; Vascular Volume 13 ; 13 >
     au < released ; 2006 ; Vascular Volume 14 ; 14 >
     au < released ; 2007 ; Vascular Volume 15 ; 15 >

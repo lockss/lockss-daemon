@@ -17,22 +17,22 @@
       param[base_url] = http://studiesinmycology.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 2005 ; Studies in Mycology Volume 53 ; 53 >
-      au < ready ; 2006 ; Studies in Mycology Volume 54 ; 54 >
-      au < ready ; 2006 ; Studies in Mycology Volume 55 ; 55 >
-      au < ready ; 2006 ; Studies in Mycology Volume 56 ; 56 >
-      au < ready ; 2007 ; Studies in Mycology Volume 57 ; 57 >
-      au < ready ; 2007 ; Studies in Mycology Volume 58 ; 58 >
-      au < ready ; 2007 ; Studies in Mycology Volume 59 ; 59 >
-      au < ready ; 2008 ; Studies in Mycology Volume 60 ; 60 >
-      au < ready ; 2008 ; Studies in Mycology Volume 61 ; 61 >
-      au < ready ; 2008 ; Studies in Mycology Volume 62 ; 62 >
-      au < ready ; 2009 ; Studies in Mycology Volume 63 ; 63 >
-      au < ready ; 2009 ; Studies in Mycology Volume 64 ; 64 >
-      au < ready ; 2010 ; Studies in Mycology Volume 65 ; 65 >
-      au < ready ; 2010 ; Studies in Mycology Volume 66 ; 66 >
-      au < ready ; 2010 ; Studies in Mycology Volume 67 ; 67 >
-      au < ready ; 2011 ; Studies in Mycology Volume 68 ; 68 >
+      au < released ; 2005 ; Studies in Mycology Volume 53 ; 53 >
+      au < released ; 2006 ; Studies in Mycology Volume 54 ; 54 >
+      au < released ; 2006 ; Studies in Mycology Volume 55 ; 55 >
+      au < released ; 2006 ; Studies in Mycology Volume 56 ; 56 >
+      au < released ; 2007 ; Studies in Mycology Volume 57 ; 57 >
+      au < released ; 2007 ; Studies in Mycology Volume 58 ; 58 >
+      au < released ; 2007 ; Studies in Mycology Volume 59 ; 59 >
+      au < released ; 2008 ; Studies in Mycology Volume 60 ; 60 >
+      au < released ; 2008 ; Studies in Mycology Volume 61 ; 61 >
+      au < released ; 2008 ; Studies in Mycology Volume 62 ; 62 >
+      au < released ; 2009 ; Studies in Mycology Volume 63 ; 63 >
+      au < released ; 2009 ; Studies in Mycology Volume 64 ; 64 >
+      au < released ; 2010 ; Studies in Mycology Volume 65 ; 65 >
+      au < released ; 2010 ; Studies in Mycology Volume 66 ; 66 >
+      au < released ; 2010 ; Studies in Mycology Volume 67 ; 67 >
+      au < released ; 2011 ; Studies in Mycology Volume 68 ; 68 >
 
     }
 
