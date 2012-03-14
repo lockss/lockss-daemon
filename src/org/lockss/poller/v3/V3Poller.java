@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.118 2012-03-14 22:20:21 barry409 Exp $
+ * $Id: V3Poller.java,v 1.119 2012-03-14 22:31:49 barry409 Exp $
  */
 
 /*
@@ -1389,10 +1389,8 @@ public class V3Poller extends BasePoll {
     
     // If we already have more than maxRepairs and maxRepairs is >= 0, 
     // just return.  A value less than 0 means "unlimited repairs".
-    // CR: need test for maxRepairs < 0, no test for len < 0
-    // CR: log if repairs limites
     int len = repairQueue.size();
-    if (len >= 0 &&  len > maxRepairs) {
+    if (len > maxRepairs && maxRepairs >= 0) {
       return;
     }
     
