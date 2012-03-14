@@ -62,8 +62,10 @@
       issnl = 1526-1476
     >
 
-    param[journal_dir] = 
-    comment[upcoming] = the journal is upcoming in muse
+    param[journal_dir] = pushkin_review
+    attr[journal_id] = pnr
+    
+    au < exists ; 2012 ; Pushkin Review Volume 14 ; 14 >
 
   }
   
