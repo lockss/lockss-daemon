@@ -21,7 +21,10 @@ for file in \
   company_of_biologists.tdb \
   edinburgh_university_press.tdb \
   european_respiratory_society.tdb \
+  federation_of_american_societies_for_experimental_biology.tdb \
   geological_society_of_america.tdb \
+  igi_global.tdb \
+  inderscience.tdb \
   international_union_of_crystallography.tdb \
   liverpool_university_press.tdb \
   maney_publishing.tdb \
@@ -34,11 +37,13 @@ for file in \
   royal_society_of_chemistry.tdb \
   royal_society_publishing.tdb \
   sage_publications.tdb \
+  society_for_general_microbiology.tdb \
+  society_for_leukocyte_biology.tdb \
   society_for_the_study_of_reproduction.tdb \
   springer_science_business_media.tdb \
   taylor_and_francis.tdb \
+  united_kingdom_serials_group.tdb \
   university_of_british_columbia.tdb
-  
 do
 echo "-----------------------------"
 echo $file
