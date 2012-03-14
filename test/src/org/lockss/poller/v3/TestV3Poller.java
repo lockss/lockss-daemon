@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.41 2012-03-13 23:41:01 barry409 Exp $
+ * $Id: TestV3Poller.java,v 1.42 2012-03-14 00:22:30 barry409 Exp $
  */
 
 /*
@@ -707,7 +707,7 @@ public class TestV3Poller extends LockssTestCase {
     v3Poller.lockParticipants();
     // Finally, let's test.
     
-    BlockTally<PeerIdentity> tally;
+    BlockTally<ParticipantUserData> tally;
     
     // The results expected are based on a quorum of 3.
     assertEquals(3, v3Poller.getQuorum());

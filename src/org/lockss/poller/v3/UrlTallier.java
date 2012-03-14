@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.5 2012-03-13 23:41:01 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.6 2012-03-14 00:22:30 barry409 Exp $
  */
 
 /*
@@ -262,7 +262,7 @@ final class UrlTallier {
    * current URL known to any participant.
    * @return tally Collects the votes.
    */
-  BlockTally<PeerIdentity> tallyVoterUrl(String url) {
+  BlockTally<ParticipantUserData> tallyVoterUrl(String url) {
     if (url == null) {
       throw new ShouldNotHappenException("url is null.");
     }
@@ -272,7 +272,8 @@ final class UrlTallier {
     }
 
     log.debug3("tallyVoterUrl: "+url);
-    BlockTally<PeerIdentity> tally = new BlockTally<PeerIdentity>();
+    BlockTally<ParticipantUserData> tally =
+      new BlockTally<ParticipantUserData>();
     voteAllParticipants(url, tally);
     return tally;
   }
@@ -286,7 +287,8 @@ final class UrlTallier {
    * @param hashBlock The poller's {@link HashBlock}.
    * @return tally Collects the votes.
    */
-  BlockTally<PeerIdentity> tallyPollerUrl(String url, HashBlock hashBlock) {
+  BlockTally<ParticipantUserData> tallyPollerUrl(String url,
+						 HashBlock hashBlock) {
     if (url == null) {
       throw new ShouldNotHappenException("url is null.");
     }
@@ -296,24 +298,25 @@ final class UrlTallier {
     }
 
     log.debug3("tallyPollerUrl: "+url);
-    BlockTally<PeerIdentity> tally = new BlockTally<PeerIdentity>(hashBlock);
+    BlockTally<ParticipantUserData> tally =
+      new BlockTally<ParticipantUserData>(hashBlock);
     voteAllParticipants(url, tally);
     return tally;
   }
 
-  void voteAllParticipants(String url, BlockTally<PeerIdentity> tally) {
+  void voteAllParticipants(String url, BlockTally<ParticipantUserData> tally) {
     for (int participantIndex = 0; participantIndex < participantsList.size();
 	 participantIndex++) {
       Entry e = participantsList.get(participantIndex);
       if (e.voteSpoiled()) {
-	tally.voteSpoiled(e.userData.getVoterId());
+	tally.voteSpoiled(e.userData);
       } else {
 	if (url.equals(e.getUrl())) {
 	  VoteBlock voteBlock = e.voteBlock;
 	  nextVoteBlock(e);
-	  tally.vote(voteBlock, e.userData.getVoterId(), participantIndex);
+	  tally.vote(voteBlock, e.userData, participantIndex);
 	} else {
-	  tally.voteMissing(e.userData.getVoterId());
+	  tally.voteMissing(e.userData);
 	}
       }
     }
