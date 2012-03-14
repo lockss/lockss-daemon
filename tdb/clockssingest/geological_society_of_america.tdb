@@ -230,7 +230,7 @@
     au < manifest ; exists ; 2008 ; Geology Volume 36 ; 36 >
     au < manifest ; exists ; 2009 ; Geology Volume 37 ; 37 >
     au < manifest ; exists ; 2010 ; Geology Volume 38 ; 38 >
-    au < testing ; exists ; 2011 ; Geology Volume 39 ; 39 >
+    au < released ; manifest ; 2011 ; Geology Volume 39 ; 39 >
     au < crawling ; exists ; 2012 ; Geology Volume 40 ; 40 >
 
   }
@@ -289,9 +289,9 @@
       au < manifest ; exists ; 2010 ; 978-0-8137-0016-8 ; GSA Field Guides Volume 16 ; 16 >
       au < manifest ; exists ; 2010 ; 978-0-8137-0017-5 ; GSA Field Guides Volume 17 ; 17 >
       au < manifest ; exists ; 2010 ; 978-0-8137-0018-2 ; GSA Field Guides Volume 18 ; 18 >
-      au < testing ; exists ; 2011 ; 978-0-8137-0019-9 ; GSA Field Guides Volume 19 ; 19 >
+      au < released ; manifest ; 2011 ; 978-0-8137-0019-9 ; GSA Field Guides Volume 19 ; 19 >
       au < testing ; exists ; 2011 ; 978-0-8137-0020-5 ; GSA Field Guides Volume 20 ; 20 >
-      au < testing ; exists ; 2011 ; 978-0-8137-0021-2 ; GSA Field Guides Volume 21 ; 21 >
+      au < released ; manifest ; 2011 ; 978-0-8137-0021-2 ; GSA Field Guides Volume 21 ; 21 >
       au < crawling ; exists ; 2012 ; 978-0-8137-0022-9 ; GSA Field Guides Volume 22 ; 22 >
 
     }
