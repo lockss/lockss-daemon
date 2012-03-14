@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.24 2012-02-16 20:28:42 thib_gc Exp $
+ * $Id: Constants.java,v 1.25 2012-03-14 21:04:55 wkwilson Exp $
  */
 
 /*
@@ -169,5 +169,8 @@ public interface Constants {
 
   /** The MIME type string for RealAudio Media ({@value}). */
   public static String MIME_TYPE_RAM = "audio/x-pn-realaudio";
+  
+  /** The MIME type string for RIS citation files ({@value}). */
+  public static String MIME_TYPE_RIS = "application/x-research-info-systems";
 
 }
