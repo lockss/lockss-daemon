@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.43 2012-03-14 22:20:21 barry409 Exp $
+ * $Id: TestV3Poller.java,v 1.44 2012-03-14 23:33:23 barry409 Exp $
  */
 
 /*
@@ -737,7 +737,9 @@ public class TestV3Poller extends LockssTestCase {
 
     assertEquals("2/0/1/1/0/0", v3Poller.theParticipants.get(id1).votes());
     assertEquals("2/0/1/1/0/0", v3Poller.theParticipants.get(id2).votes());
-    assertEquals("2/0/0/1/1/0", v3Poller.theParticipants.get(id3).votes());
+    // This voter sees a "neither" URL, since neither it nor the
+    // poller has foo2a.
+    assertEquals("2/0/1/0/1/0", v3Poller.theParticipants.get(id3).votes());
   }
   
   public void testBlockCompare() throws Exception {

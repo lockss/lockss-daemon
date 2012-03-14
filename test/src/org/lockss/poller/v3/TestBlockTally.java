@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockTally.java,v 1.12 2012-03-14 22:20:21 barry409 Exp $
+ * $Id: TestBlockTally.java,v 1.13 2012-03-14 23:33:23 barry409 Exp $
  */
 
 /*
@@ -329,11 +329,11 @@ public class TestBlockTally extends LockssTestCase {
 
     tally = new BlockTally<String>();
     tally.addPollerOnlyVoter(testPeers[0]);
-    assertEquals("0/1/0/1", tally.votes());
+    assertEquals("0/1/1/0", tally.votes());
 
     tally = new BlockTally<String>();
     tally.addVoterOnlyVoter(testPeers[0]);
-    assertEquals("0/1/1/0", tally.votes());
+    assertEquals("0/1/0/1", tally.votes());
   }
 
   // XXX: Tests for reputation system.
