@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.1 2012-03-14 22:20:21 barry409 Exp $
+ * $Id: VoteBlockTallier.java,v 1.2 2012-03-14 23:42:06 barry409 Exp $
  */
 
 /*
@@ -213,6 +213,9 @@ public class VoteBlockTallier<T> {
       // "any match of any version" condition needs to be refined.
       for (HashBlock.Version hbVersion : hbVersions) {
 	if (hbVersion.getHashError() == null) {
+	  // todo(bhayes): the participantIndex could be removed if
+	  // HashBlock could return versions by T
+	  // [e.g. ParticipantUserData].
 	  byte[] hbHash = hbVersion.getHashes()[participantIndex];
 	  VoteBlock.Version[] vbVersions = voteBlock.getVersions();
 	  for (int versionIndex = 0; versionIndex < vbVersions.length;
