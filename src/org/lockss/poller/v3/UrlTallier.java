@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.6 2012-03-14 00:22:30 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.7 2012-03-14 22:20:21 barry409 Exp $
  */
 
 /*
@@ -271,10 +271,14 @@ final class UrlTallier {
 					 peekUrl()+" not "+url);
     }
 
-    log.debug3("tallyVoterUrl: "+url);
     BlockTally<ParticipantUserData> tally =
       new BlockTally<ParticipantUserData>();
-    voteAllParticipants(url, tally);
+    VoteBlockTallier<ParticipantUserData> voteBlockTallier =
+      new VoteBlockTallier<ParticipantUserData>();
+    log.debug3("tallyVoterUrl: "+url);
+    voteBlockTallier.addTally(tally);
+    voteBlockTallier.addTally(ParticipantUserData.voteTally);
+    voteAllParticipants(url, voteBlockTallier);
     return tally;
   }
 
@@ -297,26 +301,60 @@ final class UrlTallier {
 					 " comes before "+url);
     }
 
-    log.debug3("tallyPollerUrl: "+url);
     BlockTally<ParticipantUserData> tally =
-      new BlockTally<ParticipantUserData>(hashBlock);
-    voteAllParticipants(url, tally);
+      new BlockTally<ParticipantUserData>();
+    VoteBlockTallier<ParticipantUserData> voteBlockTallier =
+      new VoteBlockTallier<ParticipantUserData>(hashBlock);
+    log.debug3("tallyPollerUrl: "+url);
+    voteBlockTallier.addTally(tally);
+    voteBlockTallier.addTally(ParticipantUserData.voteTally);
+    voteAllParticipants(url, voteBlockTallier);
     return tally;
   }
 
-  void voteAllParticipants(String url, BlockTally<ParticipantUserData> tally) {
+  /**
+   * <p>Call the appropriate voting routine on the tally for each
+   * participant.  The poller has the given URL.</p>
+   *
+   * @param url Must be non-null and equal to {@link peekUrl}, the
+   * minimum URL known to any participant.
+   * @param hashBlock The poller's {@link HashBlock}.
+   * @return tally Collects the votes.
+   */
+  BlockTally<ParticipantUserData> tallyRepairUrl(String url,
+						 HashBlock hashBlock) {
+    if (url == null) {
+      throw new ShouldNotHappenException("url is null.");
+    }
+    if (StringUtil.compareToNullHigh(peekUrl(), url) < 0) {
+      throw new ShouldNotHappenException("Current URL "+peekUrl()+
+					 " comes before "+url);
+    }
+
+    log.debug3("tallyRepairUrl: "+url);
+    VoteBlockTallier<ParticipantUserData> voteBlockTallier =
+      new VoteBlockTallier<ParticipantUserData>(hashBlock);
+    BlockTally<ParticipantUserData> tally =
+      new BlockTally<ParticipantUserData>();
+    voteBlockTallier.addTally(tally);
+    voteAllParticipants(url, voteBlockTallier);
+    return tally;
+  }
+
+  void voteAllParticipants(String url,
+      VoteBlockTallier<ParticipantUserData> voteBlockTallier) {
     for (int participantIndex = 0; participantIndex < participantsList.size();
 	 participantIndex++) {
       Entry e = participantsList.get(participantIndex);
       if (e.voteSpoiled()) {
-	tally.voteSpoiled(e.userData);
+	voteBlockTallier.voteSpoiled(e.userData);
       } else {
 	if (url.equals(e.getUrl())) {
 	  VoteBlock voteBlock = e.voteBlock;
 	  nextVoteBlock(e);
-	  tally.vote(voteBlock, e.userData, participantIndex);
+	  voteBlockTallier.vote(voteBlock, e.userData, participantIndex);
 	} else {
-	  tally.voteMissing(e.userData);
+	  voteBlockTallier.voteMissing(e.userData);
 	}
       }
     }

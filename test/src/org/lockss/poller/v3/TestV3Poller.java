@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.42 2012-03-14 00:22:30 barry409 Exp $
+ * $Id: TestV3Poller.java,v 1.43 2012-03-14 22:20:21 barry409 Exp $
  */
 
 /*
@@ -715,22 +715,29 @@ public class TestV3Poller extends LockssTestCase {
 
     tally = v3Poller.tallyBlock(hashblocks[0]);
     assertEquals(BlockTally.Result.WON, tally.getTallyResult(3, 75));
-    assertContains(tally.getAgreeVoters(), id1);
-    assertContains(tally.getAgreeVoters(), id2);
-    assertContains(tally.getAgreeVoters(), id3);
+    assertContains(tally.getAgreeVoters(), v3Poller.theParticipants.get(id1));
+    assertContains(tally.getAgreeVoters(), v3Poller.theParticipants.get(id2));
+    assertContains(tally.getAgreeVoters(), v3Poller.theParticipants.get(id3));
     
     tally = v3Poller.tallyBlock(hashblocks[1]);
     assertEquals(BlockTally.Result.LOST_POLLER_ONLY_BLOCK,
 		 tally.getTallyResult(3, 75));
-    assertContains(tally.getPollerOnlyBlockVoters(), id1);
-    assertContains(tally.getPollerOnlyBlockVoters(), id2);
-    assertContains(tally.getPollerOnlyBlockVoters(), id3);
+    assertContains(tally.getPollerOnlyBlockVoters(),
+		   v3Poller.theParticipants.get(id1));
+    assertContains(tally.getPollerOnlyBlockVoters(),
+		   v3Poller.theParticipants.get(id2));
+    assertContains(tally.getPollerOnlyBlockVoters(),
+		   v3Poller.theParticipants.get(id3));
     
     tally = v3Poller.tallyBlock(hashblocks[2]);
     assertEquals(BlockTally.Result.WON, tally.getTallyResult(3, 75));
-    assertContains(tally.getAgreeVoters(), id1);
-    assertContains(tally.getAgreeVoters(), id2);
-    assertContains(tally.getAgreeVoters(), id3);
+    assertContains(tally.getAgreeVoters(), v3Poller.theParticipants.get(id1));
+    assertContains(tally.getAgreeVoters(), v3Poller.theParticipants.get(id2));
+    assertContains(tally.getAgreeVoters(), v3Poller.theParticipants.get(id3));
+
+    assertEquals("2/0/1/1/0/0", v3Poller.theParticipants.get(id1).votes());
+    assertEquals("2/0/1/1/0/0", v3Poller.theParticipants.get(id2).votes());
+    assertEquals("2/0/0/1/1/0", v3Poller.theParticipants.get(id3).votes());
   }
   
   public void testBlockCompare() throws Exception {

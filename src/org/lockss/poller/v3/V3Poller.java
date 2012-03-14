@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.117 2012-03-14 00:22:30 barry409 Exp $
+ * $Id: V3Poller.java,v 1.118 2012-03-14 22:20:21 barry409 Exp $
  */
 
 /*
@@ -1142,7 +1142,6 @@ public class V3Poller extends BasePoll {
   private void tallyVoterUrl(String voterUrl) {
     log.debug3("tallyVoterUrl: "+voterUrl);
     BlockTally<ParticipantUserData> tally = urlTallier.tallyVoterUrl(voterUrl);
-    updateUserData(tally);
     checkTally(tally, voterUrl);
   }
 
@@ -1160,22 +1159,18 @@ public class V3Poller extends BasePoll {
     log.debug3("tallyPollerUrl: "+pollerUrl);
     BlockTally<ParticipantUserData> tally =
       urlTallier.tallyPollerUrl(pollerUrl, hashBlock);
-    updateUserData(tally);
     signalNodeAgreement(tally, pollerUrl);
     checkTally(tally, pollerUrl);
     return tally;
   }
 
-  /**
-   * Update the user data for all the votes in the tally.
-   */
-  private void updateUserData(BlockTally<ParticipantUserData> tally) {
-    for (ParticipantUserData voter: tally.getTalliedVoters()) {
-      voter.incrementTalliedBlocks();
+  private Collection<PeerIdentity>
+      getVotersIdentities(Collection<ParticipantUserData> voters) {
+    ArrayList<PeerIdentity> ids = new ArrayList(voters.size());
+    for (ParticipantUserData voter: voters) {
+      ids.add(voter.getVoterId());
     }
-    for (ParticipantUserData voter: tally.getTalliedAgreeVoters()) {
-      voter.incrementAgreedBlocks();
-    }
+    return ids;
   }
 
   /**
@@ -1184,14 +1179,17 @@ public class V3Poller extends BasePoll {
    * @param tally The tally containing votes.
    * @param url The target URL.
    */
-  private void signalNodeAgreement(BlockTally<ParticipantUserData> tally, String url) {
+  private void signalNodeAgreement(BlockTally<ParticipantUserData> tally,
+				   String url) {
     if (tally.getAgreeVoters().size() > 0) {
       try {
         RepositoryNode node = AuUtil.getRepositoryNode(getAu(), url);
         if (node == null) {
 	  // CR: throw new ShouldNotHappenException();
 	} else {
-          node.signalAgreement(tally.getAgreeVoters());
+	  Collection<PeerIdentity> agreeVoterIds = 
+	    getVotersIdentities(tally.getAgreeVoters());
+          node.signalAgreement(agreeVoterIds);
 	}
       } catch (MalformedURLException ex) {
         log.error("Malformed URL while updating agreement history: " 
@@ -1217,7 +1215,7 @@ public class V3Poller extends BasePoll {
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
     BlockTally.Result tallyResult =
       tally.getTallyResult(pollerState.getQuorum(),
-			   pollerState.getVoteMargin());
+				       pollerState.getVoteMargin());
     PollerStateBean.TallyStatus tallyStatus = pollerState.getTallyStatus();
 
     // Have now counted agreement in tally and recorded per-file agreement.
@@ -1228,9 +1226,7 @@ public class V3Poller extends BasePoll {
       String pollKey = pollerState.getPollKey();
       String vMsg = "";
       if (log.isDebug2()) {
-	vMsg = "(" + tally.getAgreeVoters().size()
-	  + "-" + tally.getDisagreeVoters().size()
-	  + "-" + tally.getPollerOnlyBlockVoters().size() + ") ";
+	vMsg = tally.votes();
       }
       switch (tallyResult) {
       case WON:
@@ -1385,8 +1381,9 @@ public class V3Poller extends BasePoll {
    * @param url
    * @param disagreeingVoters Set of disagreeing voters.
    */
-  private void requestRepair(final String url,
-                             final Collection disagreeingVoters) {
+  private void requestRepair(
+     final String url,
+     final Collection<ParticipantUserData> disagreeingVoters) {
 
     PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
     
@@ -1414,8 +1411,11 @@ public class V3Poller extends BasePoll {
   }
 
   /* Select a peer to attempt repair from. */
-  PeerIdentity findPeerForRepair(Collection disagreeingVoters) {
-    return (PeerIdentity)CollectionUtil.randomSelection(disagreeingVoters);
+  PeerIdentity
+      findPeerForRepair(Collection<ParticipantUserData> disagreeingVoters) {
+    ParticipantUserData voter =
+      (ParticipantUserData)CollectionUtil.randomSelection(disagreeingVoters);
+    return voter.getVoterId();
   }
 
   /**
@@ -1577,7 +1577,7 @@ public class V3Poller extends BasePoll {
 	try {
 	  urlTallier.seek(url);
 	  BlockTally<ParticipantUserData> tally =
-	    urlTallier.tallyPollerUrl(url, hashBlock);
+	    urlTallier.tallyRepairUrl(url, hashBlock);
 	  // NOTE: ParticipantUserData was updated from the initial
 	  // pre-repair tally. Results of a repair do not change the
 	  // ParticipantUserData.

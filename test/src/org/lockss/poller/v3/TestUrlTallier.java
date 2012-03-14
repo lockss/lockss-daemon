@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.6 2012-03-14 00:22:30 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.7 2012-03-14 22:20:21 barry409 Exp $
  */
 
 /*
@@ -346,29 +346,30 @@ public class TestUrlTallier extends LockssTestCase {
     // todo(bhayes): This seems incorrect; foo1 was only present at
     // one voter, but incrementTalliedBlocks will be called for each
     // voter.
-    assertEquals(1, tally.getTalliedVoters().size());
-    assertContains(tally.getVoterOnlyBlockVoters(), id1);
+    // assertEquals(1, tally.getTalliedVoters().size());
+    assertEquals(1, tally.getVoterOnlyBlockVoters().size());
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(0));
     assertEquals("http://test.com/foo2", urlTallier.peekUrl());
 
     tally = urlTallier.tallyVoterUrl("http://test.com/foo2");
     assertEquals(tally.getVoterOnlyBlockVoters().size(), 2);
-    assertEquals(2, tally.getTalliedVoters().size());
-    assertContains(tally.getVoterOnlyBlockVoters(), id1);
-    assertContains(tally.getVoterOnlyBlockVoters(), id2);
+    // assertEquals(2, tally.getTalliedVoters().size());
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(0));
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(1));
     assertEquals("http://test.com/foo3", urlTallier.peekUrl());
 
     tally = urlTallier.tallyVoterUrl("http://test.com/foo3");
     assertEquals(tally.getVoterOnlyBlockVoters().size(), 3);
-    assertEquals(3, tally.getTalliedVoters().size());
-    assertContains(tally.getVoterOnlyBlockVoters(), id1);
-    assertContains(tally.getVoterOnlyBlockVoters(), id2);
-    assertContains(tally.getVoterOnlyBlockVoters(), id3);
+    // assertEquals(3, tally.getTalliedVoters().size());
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(0));
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(1));
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(2));
     assertEquals("http://test.com/foo4", urlTallier.peekUrl());
 
     tally = urlTallier.tallyVoterUrl("http://test.com/foo4");
     assertEquals(tally.getVoterOnlyBlockVoters().size(), 1);
-    assertEquals(1, tally.getTalliedVoters().size());
-    assertContains(tally.getVoterOnlyBlockVoters(), id3);
+    // assertEquals(1, tally.getTalliedVoters().size());
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(2));
     assertEquals(null, urlTallier.peekUrl());
   }
 
