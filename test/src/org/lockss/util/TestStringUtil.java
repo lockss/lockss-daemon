@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.87 2011-11-15 00:58:19 barry409 Exp $
+ * $Id: TestStringUtil.java,v 1.88 2012-03-15 08:19:01 tlipkis Exp $
  */
 
 /*
@@ -588,6 +588,13 @@ public class TestStringUtil extends LockssTestCase {
 						    new Class[0]);
     assertEquals("TestStringUtil.testShortNameMethod",
 		 StringUtil.shortName(meth));
+  }
+
+  public void testSanitizeToIdentifier() {
+    assertEquals("foobar123", StringUtil.sanitizeToIdentifier("foobar123"));
+    assertEquals("fooBAR", StringUtil.sanitizeToIdentifier("foo.BAR"));
+    assertEquals("fooBar_",
+		 StringUtil.sanitizeToIdentifier(" +.!|,foo.Bar?<>_"));
   }
 
   public void testStackTraceString() {

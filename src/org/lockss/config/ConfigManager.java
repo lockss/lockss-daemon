@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.87 2011-09-19 03:24:12 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.88 2012-03-15 08:19:01 tlipkis Exp $
  */
 
 /*
@@ -1127,19 +1127,7 @@ public class ConfigManager implements LockssManager {
 
   String keystorePref(String name) {
     return LockssKeyStoreManager.PARAM_KEYSTORE
-      + "." + sanitizeName(name) + ".";
-  }
-
-  String sanitizeName(String name) {
-    name = name.toLowerCase();
-    StringBuilder sb = new StringBuilder();
-    for (int ix = 0; ix < name.length(); ix++) {
-      char ch = name.charAt(ix);
-      if (Character.isJavaIdentifierPart(ch)) {
-	sb.append(ch);
-      }
-    }
-    return sb.toString();
+      + "." + StringUtil.sanitizeToIdentifier(name.toLowerCase()) + ".";
   }
 
   // used by testing utilities

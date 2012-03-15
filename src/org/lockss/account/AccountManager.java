@@ -1,5 +1,5 @@
 /*
- * $Id: AccountManager.java,v 1.11 2012-01-18 03:37:52 tlipkis Exp $
+ * $Id: AccountManager.java,v 1.12 2012-03-15 08:19:01 tlipkis Exp $
  */
 
 /*
@@ -577,20 +577,8 @@ public class AccountManager
     }
   }
 
-  String sanitizeName(String name) {
-    name = name.toLowerCase();
-    StringBuilder sb = new StringBuilder();
-    for (int ix = 0; ix < name.length(); ix++) {
-      char ch = name.charAt(ix);
-      if (Character.isJavaIdentifierPart(ch)) {
-	sb.append(ch);
-      }
-    }
-    return sb.toString();
-  }
-
   String generateFilename(UserAccount acct) {
-    String name = sanitizeName(acct.getName());
+    String name = StringUtil.sanitizeToIdentifier(acct.getName()).toLowerCase();
     File dir = getAcctDir();
     if (!new File(dir, name).exists()) {
       return name;

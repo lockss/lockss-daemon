@@ -1,5 +1,5 @@
 /*
- * $Id: TestAccountManager.java,v 1.6 2012-01-18 03:37:52 tlipkis Exp $
+ * $Id: TestAccountManager.java,v 1.7 2012-03-15 08:19:01 tlipkis Exp $
  */
 
 /*
@@ -225,17 +225,13 @@ public class TestAccountManager extends LockssTestCase {
     return acct;
   }
 
-  public void testSanitizeName() {
-    assertEquals("foobar123", acctMgr.sanitizeName("foobar123"));
-    assertEquals("foobar", acctMgr.sanitizeName("foo.bar"));
-    assertEquals("foobar_", acctMgr.sanitizeName(" +.!|,foo.bar?<>_"));
-  }
-
   public void testGenerateFilename() {
     assertEquals("john_smith",
 		 acctMgr.generateFilename(makeUser("John_Smith")));
     assertEquals("foo",
 		 acctMgr.generateFilename(makeUser("foo!")));
+    assertEquals("foobar_",
+		 acctMgr.generateFilename(makeUser(" +.!|,foo.bar?<>_")));
   }
 
   static String PWD1 = "123Sb!@#";

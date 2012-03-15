@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.107 2012-03-12 05:22:44 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.108 2012-03-15 08:19:01 tlipkis Exp $
  */
 
 /*
@@ -595,6 +595,17 @@ public class StringUtil {
   public static String shortName(Method method) {
     return shortName(method.getDeclaringClass()) +
       "." + method.getName();
+  }
+
+  public static String sanitizeToIdentifier(String name) {
+    StringBuilder sb = new StringBuilder();
+    for (int ix = 0; ix < name.length(); ix++) {
+      char ch = name.charAt(ix);
+      if (Character.isJavaIdentifierPart(ch)) {
+	sb.append(ch);
+      }
+    }
+    return sb.toString();
   }
 
   static Pattern alphanum =
