@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.29 2012-03-15 05:39:55 pgust Exp $
+ * $Id: MetadataManager.java,v 1.30 2012-03-15 08:20:39 tlipkis Exp $
  */
 
 /*
@@ -2100,8 +2100,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
      * SchedService
      * @todo Update SchedService to handle this case
      */
-    LockssRunnable runnable = 
-      new LockssRunnable("ReindexingTask - " + task.au.toString()) {
+    LockssRunnable runnable = new LockssRunnable(makeThreadName();
 
       public void lockssRun() {
         task.callCallback(Schedule.EventType.START);
@@ -2113,6 +2112,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     };
     Thread runThread = new Thread(runnable);
     runThread.start();
+  }
+
+  private String makeThreadName() {
+    return AuUtil.getThreadNameFor("Reindexing", task.au());
   }
 
   /**
