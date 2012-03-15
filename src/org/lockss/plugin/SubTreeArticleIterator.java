@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.16 2012-03-12 07:06:55 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.17 2012-03-15 08:52:03 tlipkis Exp $
  */
 
 /*
@@ -501,7 +501,7 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     log.debug2("rootUrls: " + roots);
     if (roots == null || roots.isEmpty()) {
 //       return ListUtil.list(au.getAuCachedUrlSet());
-      return ListUtil.list(au.makeCachedUrlSet(makeCuss(AuUrl.PROTOCOL_COLON)));
+      return ListUtil.list(au.makeCachedUrlSet(makeCuss(AuCachedUrlSetSpec.URL)));
     }
     Collection<CachedUrlSet> res = new ArrayList<CachedUrlSet>();
     for (String root : roots) {

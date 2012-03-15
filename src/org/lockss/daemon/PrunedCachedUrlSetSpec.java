@@ -1,5 +1,5 @@
 /*
- * $Id: PrunedCachedUrlSetSpec.java,v 1.2 2012-03-12 07:06:55 tlipkis Exp $
+ * $Id: PrunedCachedUrlSetSpec.java,v 1.3 2012-03-15 08:52:03 tlipkis Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class PrunedCachedUrlSetSpec extends RangeCachedUrlSetSpec {
     }	
     if (excludePat != null) {
       Matcher mat = excludePat.matcher(url);
-      return !mat.lookingAt();
+       return !mat.lookingAt();
     }	
     return true;
   }
@@ -137,14 +137,14 @@ public class PrunedCachedUrlSetSpec extends RangeCachedUrlSetSpec {
 
   /**
    * @param obj the other spec
-   * @return true if the prefix and ranges are equal.
+   * @return true if the prefix and include/exclude patterns are equal.
    */
   public boolean equals(Object obj) {
     if (obj instanceof PrunedCachedUrlSetSpec) {
       PrunedCachedUrlSetSpec spec = (PrunedCachedUrlSetSpec)obj;
       return super.equals(obj) &&
-	ObjectUtils.equals(includePat, spec.includePat) &&
-	ObjectUtils.equals(excludePat, spec.excludePat);
+	RegexpUtil.patEquals(includePat, spec.includePat) &&
+	RegexpUtil.patEquals(excludePat, spec.excludePat);
     } else {
       // not a PrunedCachedUrlSetSpec
       return false;
@@ -157,17 +157,23 @@ public class PrunedCachedUrlSetSpec extends RangeCachedUrlSetSpec {
     if (includePat != null) {
       sb.append(" incl: ");
       sb.append(includePat.pattern());
+      sb.append("(");
+      sb.append(includePat.flags());
+      sb.append(")");
     }      
     if (excludePat != null) {
       sb.append(" excl: ");
       sb.append(excludePat.pattern());
+      sb.append("(");
+      sb.append(excludePat.flags());
+      sb.append(")");
     }      
     sb.append("]");
     return sb.toString();
   }
 
   /**
-   * @return a hash made from the prefix and bounds.
+   * @return a hash made from the prefix and include/exclude patterns.
    */
   public int hashCode() {
     int hash = super.hashCode();

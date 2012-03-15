@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.22 2011-05-09 00:40:23 tlipkis Exp $
+ * $Id: TestPollSpec.java,v 1.23 2012-03-15 08:52:03 tlipkis Exp $
  */
 
 /*
@@ -68,6 +68,17 @@ public class TestPollSpec extends LockssTestCase {
 
   public void tearDown() throws Exception {
     super.tearDown();
+  }
+
+  public void testIll() {
+    MockArchivalUnit au = new MockArchivalUnit();
+    CachedUrlSet cus =
+      new MockCachedUrlSet(au, PrunedCachedUrlSetSpec.includeMatchingSubTrees("foo", "foo"));
+    try {
+      new PollSpec(cus, Poll.V3_POLL);
+      fail("Shouldn't be able to make PollSpec from PrunedCachedUrlSetSpec");
+    } catch (IllegalArgumentException e) {
+    }
   }
 
   public void testFromCus() {
