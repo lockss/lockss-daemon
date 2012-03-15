@@ -1,10 +1,10 @@
 /*
- * $Id: PollSpec.java,v 1.38 2011-05-09 00:40:23 tlipkis Exp $
+ * $Id: PollSpec.java,v 1.38.14.1 2012-03-15 08:39:27 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -162,11 +162,14 @@ public class PollSpec {
   /** Setup common to most constructors */
   private void commonSetup(CachedUrlSet cus, String lwrBound,
                            String uprBound, int pollType) {
+    CachedUrlSetSpec cuss = cus.getSpec();
+    if (cuss instanceof PrunedCachedUrlSetSpec) {
+      throw new IllegalArgumentException("Polls do not support PrunedCachedUrlSetSpec");
+    }
     this.cus = cus;
     ArchivalUnit au = cus.getArchivalUnit();
     auId = au.getAuId();
     this.pluginVersion = AuUtil.getPollVersion(au);
-    CachedUrlSetSpec cuss = cus.getSpec();
     url = cuss.getUrl();
     this.lwrBound = lwrBound;
     this.uprBound = uprBound;

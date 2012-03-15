@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.20.104.1 2012-03-12 07:04:45 tlipkis Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.20.104.2 2012-03-15 08:39:27 tlipkis Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
    */
   public boolean matches(String url) {
     if (prefix.equals(AuCachedUrlSetSpec.URL)) {
-      return true;
+      return inRange(url);
     }
     if (!url.startsWith(prefix)) {
       // Our prefix isn't an initial substring of url
@@ -121,7 +121,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     return inRange(url);
   }
 
-  /** @return false */
+  /** @return true iff prefix is lockssau: */
   public boolean isAu() {
     if (prefix.equals(AuCachedUrlSetSpec.URL)) {
       return true;

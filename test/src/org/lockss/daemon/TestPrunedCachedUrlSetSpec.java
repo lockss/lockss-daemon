@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrunedCachedUrlSetSpec.java,v 1.1.2.1 2012-03-12 07:04:45 tlipkis Exp $
+ * $Id: TestPrunedCachedUrlSetSpec.java,v 1.1.2.2 2012-03-15 08:39:27 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,19 @@ import org.lockss.util.*;
 
 public class TestPrunedCachedUrlSetSpec extends LockssTestCase {
 
+  public void assertEquals(Object... values) {
+    assertEquals((String)null, values);
+  }
+
+  public void assertEquals(String msg, Object... values) {
+    for (int ix = 0; ix < values.length; ix++) {
+      for (int iy = 0; iy < values.length; iy++) {
+	assertEquals((msg != null ? msg : "") + "[" + ix + "," + iy + "]",
+		     values[ix], values[iy]);
+      }
+    }
+  }
+
   public void testIll() {
     try {
       PrunedCachedUrlSetSpec.includeMatchingSubTrees(null, "pat");
@@ -55,85 +68,119 @@ public class TestPrunedCachedUrlSetSpec extends LockssTestCase {
     }
   }
 
-//   public void testEquals() {
-//     CachedUrlSetSpec cuss1 = new PrunedCachedUrlSetSpec("foo", null, null);
-//     CachedUrlSetSpec cuss2 = new PrunedCachedUrlSetSpec("foo");
-//     CachedUrlSetSpec cuss3 = new PrunedCachedUrlSetSpec("foo", "a", null);
-//     CachedUrlSetSpec cuss4 = new PrunedCachedUrlSetSpec("foo", "a", null);
-//     CachedUrlSetSpec cuss5 = new PrunedCachedUrlSetSpec("foo", "a", "b");
-//     CachedUrlSetSpec cuss6 = new PrunedCachedUrlSetSpec("foo", "a", "b");
-//     CachedUrlSetSpec cuss7 = new PrunedCachedUrlSetSpec("foo", null, "b");
-//     CachedUrlSetSpec cuss8 = new PrunedCachedUrlSetSpec("foo", null, "b");
-//     CachedUrlSetSpec cuss9 = new PrunedCachedUrlSetSpec("foo", "a", "a");
-//     CachedUrlSetSpec cuss10 = new PrunedCachedUrlSetSpec("foo", "", "a");
-//     CachedUrlSetSpec cuss11 = new PrunedCachedUrlSetSpec("bar");
-//     assertEquals(cuss1, cuss2);
-//     assertNotEquals(cuss1, cuss3);
-//     assertNotEquals(cuss1, cuss11);
-//     assertEquals(cuss3, cuss4);
-//     assertNotEquals(cuss3, cuss5);
-//     assertNotEquals(cuss3, cuss7);
-//     assertNotEquals(cuss5, cuss7);
-//     assertEquals(cuss5, cuss6);
-//     assertEquals(cuss7, cuss8);
-//     assertNotEquals(cuss5, cuss9);
-//     assertNotEquals(cuss9, cuss10);
+  public void testEquals() {
+    CachedUrlSetSpec cin11 =
+      PrunedCachedUrlSetSpec.includeMatchingSubTrees("pref1", "pat1");
+    CachedUrlSetSpec cin110 =
+      PrunedCachedUrlSetSpec.includeMatchingSubTrees("pref1", "pat1", 0);
+    CachedUrlSetSpec cin11c =
+      PrunedCachedUrlSetSpec.includeMatchingSubTrees("pref1", "pat1",
+						     Pattern.CASE_INSENSITIVE);
+    CachedUrlSetSpec cin1p1 =
+      PrunedCachedUrlSetSpec.includeMatchingSubTrees("pref1",
+						     Pattern.compile("pat1"));
+    CachedUrlSetSpec cin1p10 =
+      PrunedCachedUrlSetSpec.includeMatchingSubTrees("pref1",
+						     Pattern.compile("pat1",
+								     0));
+    CachedUrlSetSpec cin1p1c =
+      PrunedCachedUrlSetSpec.includeMatchingSubTrees("pref1",
+						     Pattern.compile("pat1",
+								     Pattern.CASE_INSENSITIVE));
 
-//     assertNotEquals(cuss1, new AuCachedUrlSetSpec());
-//     assertNotEquals(cuss1, new SingleNodeCachedUrlSetSpec("foo"));
-//   }
+    assertEquals(cin11, cin1p1);
+    assertEquals(cin11, cin110, cin1p1, cin1p10);
+    assertNotEquals(cin110, cin11c);
+    assertEquals(cin11, cin1p1);
+    assertEquals(cin11c, cin1p1c);
 
-//   public void testHashCode() throws Exception {
-//     CachedUrlSetSpec cuss1 = new PrunedCachedUrlSetSpec("foo", "/abc", "/xyz");
-//     CachedUrlSetSpec cuss2 = new PrunedCachedUrlSetSpec("foo", "/abc", "/xyz");
-//     assertTrue(cuss1.hashCode() == cuss2.hashCode());
-//   }
+    CachedUrlSetSpec cin12 =
+      PrunedCachedUrlSetSpec.includeMatchingSubTrees("pref1", "pat2");
+    CachedUrlSetSpec cin21 =
+      PrunedCachedUrlSetSpec.includeMatchingSubTrees("pref2", "pat1");
 
-//   public void testTypePredicates() {
-//     CachedUrlSetSpec cuss1 = new PrunedCachedUrlSetSpec("foo");
-//     assertFalse(cuss1.isSingleNode());
-//     assertFalse(cuss1.isAu());
-//     assertFalse(cuss1.isRangeRestricted());
+    assertNotEquals(cin11, cin12);
+    assertNotEquals(cin11, cin21);
 
-//     CachedUrlSetSpec cuss2 = new PrunedCachedUrlSetSpec("foo", "a", null);
-//     assertFalse(cuss2.isSingleNode());
-//     assertFalse(cuss2.isAu());
-//     assertTrue(cuss2.isRangeRestricted());
+    CachedUrlSetSpec cex11 =
+      PrunedCachedUrlSetSpec.excludeMatchingSubTrees("pref1", "pat1");
+    CachedUrlSetSpec cex110 =
+      PrunedCachedUrlSetSpec.excludeMatchingSubTrees("pref1", "pat1", 0);
+    CachedUrlSetSpec cex11c =
+      PrunedCachedUrlSetSpec.excludeMatchingSubTrees("pref1", "pat1",
+						     Pattern.CASE_INSENSITIVE);
+    CachedUrlSetSpec cex1p1 =
+      PrunedCachedUrlSetSpec.excludeMatchingSubTrees("pref1",
+						     Pattern.compile("pat1"));
+    CachedUrlSetSpec cex1p10 =
+      PrunedCachedUrlSetSpec.excludeMatchingSubTrees("pref1",
+						     Pattern.compile("pat1",
+								     0));
+    CachedUrlSetSpec cex1p1c =
+      PrunedCachedUrlSetSpec.excludeMatchingSubTrees("pref1",
+						     Pattern.compile("pat1",
+								     Pattern.CASE_INSENSITIVE));
 
-//     CachedUrlSetSpec cuss3 = new PrunedCachedUrlSetSpec("foo", null, "b");
-//     assertFalse(cuss3.isSingleNode());
-//     assertFalse(cuss3.isAu());
-//     assertTrue(cuss3.isRangeRestricted());
+    assertEquals(cex11, cex1p1);
+    assertEquals(cex11, cex110, cex1p1, cex1p10);
+    assertNotEquals(cex110, cex11c);
+    assertEquals(cex11, cex1p1);
+    assertEquals(cex11c, cex1p1c);
 
-//     CachedUrlSetSpec cuss4 = new PrunedCachedUrlSetSpec("foo", "a", "b");
-//     assertFalse(cuss4.isSingleNode());
-//     assertFalse(cuss4.isAu());
-//     assertTrue(cuss4.isRangeRestricted());
-//   }
+    CachedUrlSetSpec cex12 =
+      PrunedCachedUrlSetSpec.excludeMatchingSubTrees("pref1", "pat2");
+    CachedUrlSetSpec cex21 =
+      PrunedCachedUrlSetSpec.excludeMatchingSubTrees("pref2", "pat1");
+
+    assertNotEquals(cex11, cex12);
+    assertNotEquals(cex11, cex21);
+
+    assertNotEquals(cin11, cex11);
+    assertNotEquals(cin1p1c, cex1p1c);
+
+    assertNotEquals(cin11, new AuCachedUrlSetSpec());
+    assertNotEquals(cin11, new RangeCachedUrlSetSpec("pref1"));
+    assertNotEquals(cin11, new RangeCachedUrlSetSpec("pref1", "pat1", null));
+    assertNotEquals(cin11, new SingleNodeCachedUrlSetSpec("pref1"));
+  }
+
+  public void assertIncls(PrunedCachedUrlSetSpec cuss) {
+    assertFalse(cuss.matches("http://xfoo/bar/abc"));
+    assertTrue(cuss.matches("http://foo/bar/abc"));
+    assertTrue(cuss.matches("http://foo/bar/abcd"));
+    assertTrue(cuss.matches("http://foo/bar/abc/"));
+    assertTrue(cuss.matches("http://foo/bar/abc/xx"));
+    assertTrue(cuss.matches("http://foo/bar/"));
+    assertFalse(cuss.matches("http://foo/bar/def"));
+  }
 
   public void testMatchIncludeSubTree() {
-    PrunedCachedUrlSetSpec cuss1 =
-      PrunedCachedUrlSetSpec.includeMatchingSubTrees("http://foo/bar/",
-						     "http://foo/bar/abc");
-    assertFalse(cuss1.matches("http://xfoo/bar/abc"));
-    assertTrue(cuss1.matches("http://foo/bar/abc"));
-    assertTrue(cuss1.matches("http://foo/bar/abcd"));
-    assertTrue(cuss1.matches("http://foo/bar/abc/"));
-    assertTrue(cuss1.matches("http://foo/bar/abc/xx"));
-    assertTrue(cuss1.matches("http://foo/bar/"));
-    assertFalse(cuss1.matches("http://foo/bar/def"));
+    assertIncls(PrunedCachedUrlSetSpec
+		.includeMatchingSubTrees("http://foo/bar/",
+					 "http://foo/bar/abc"));
+    assertIncls(PrunedCachedUrlSetSpec
+		.includeMatchingSubTrees(AuCachedUrlSetSpec.URL,
+					 "http://foo/bar/abc"));
+  }
+
+  public void assertExcls(PrunedCachedUrlSetSpec cuss) {
+    assertTrue(cuss.matches("http://foo/bar/"));
+    assertTrue(cuss.matches("http://foo/bar/abd"));
+    assertFalse(cuss.matches("http://foo/bar/abc"));
+    assertFalse(cuss.matches("http://foo/bar/abc/"));
+    assertFalse(cuss.matches("http://foo/bar/abc/xx"));
   }
 
   public void testMatchExcludeSubTree() {
     PrunedCachedUrlSetSpec cuss1 =
-      PrunedCachedUrlSetSpec.excludeMatchingSubTrees("http://foo/bar/",
-						     "http://foo/bar/abc");
+      PrunedCachedUrlSetSpec .excludeMatchingSubTrees("http://foo/bar/",
+						      "http://foo/bar/abc");
     assertFalse(cuss1.matches("http://xfoo/bar/"));
-    assertTrue(cuss1.matches("http://foo/bar/"));
-    assertTrue(cuss1.matches("http://foo/bar/abd"));
-    assertFalse(cuss1.matches("http://foo/bar/abc"));
-    assertFalse(cuss1.matches("http://foo/bar/abc/"));
-    assertFalse(cuss1.matches("http://foo/bar/abc/xx"));
+    assertExcls(cuss1);
+
+    assertExcls(PrunedCachedUrlSetSpec
+		.excludeMatchingSubTrees(AuCachedUrlSetSpec.URL,
+					 "http://foo/bar/abc"));
   }
 
   public void testDisjoint() {
