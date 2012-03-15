@@ -14175,6 +14175,33 @@
     }
 
     {
+    
+      title <
+        name = Humanity & Society ;
+        issn = 0160-5976 
+      >
+  
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+        param[base_url] = http://has.sagepub.com/
+
+        au < exists ; exists ; 2003 ; Humanity & Society Volume 27 ; 27 ; >
+        au < exists ; exists ; 2004 ; Humanity & Society Volume 28 ; 28 ; >
+        au < exists ; exists ; 2005 ; Humanity & Society Volume 29 ; 29 ; >
+        au < exists ; exists ; 2006 ; Humanity & Society Volume 30 ; 30 ; >
+        au < exists ; exists ; 2007 ; Humanity & Society Volume 31 ; 31 ; >
+        au < exists ; exists ; 2008 ; Humanity & Society Volume 32 ; 32 ; >
+        au < exists ; exists ; 2009 ; Humanity & Society Volume 33 ; 33 ; >
+        au < exists ; exists ; 2010 ; Humanity & Society Volume 34 ; 34 ; >
+        au < exists ; exists ; 2011 ; Humanity & Society Volume 35 ; 35 ; >
+  
+      }
+      
+    }
+
+    {
 
       title <
         name = ICAN: Infant, Child, & Adolescent Nutrition ;
