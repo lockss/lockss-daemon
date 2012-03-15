@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.28 2012-02-24 15:39:57 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.28.2.1 2012-03-15 08:40:24 tlipkis Exp $
  */
 
 /*
@@ -872,7 +872,7 @@ public class KbartConverter {
     }
 
     // Log which ordering is used by each title after the analysis
-    log.debug(String.format("%s will use %s ordering\n",
+    log.debug2(String.format("%s will use %s ordering\n",
         aus.get(0).getJournalTitle(), preferVolume ? "VOLUME" : "YEAR"));
 
     return new TitleRangeInfo(preferVolume ? rangesByVol : rangesByYear, hasFullVols, hasFullYears);
