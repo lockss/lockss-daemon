@@ -650,6 +650,19 @@
 
   {
     title <
+      name = European Journal of Hospital Pharmacy: Science and Practice ;
+      issn = 2047-9956 ;
+      eissn = 2047-9964
+      >
+
+    param[base_url] = http://ejhp.bmj.com/
+
+    au < HighWirePressH20Plugin ; exists ; 2012 ; European Journal of Hospital Pharmacy: Science and Practice Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
       name = Evidence-Based Medicine ;
       issn = 1356-5524 ;
       eissn = 1473-6810 ;
