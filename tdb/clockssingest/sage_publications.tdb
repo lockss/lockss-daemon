@@ -26423,6 +26423,7 @@
       au < manifest ; exists ; 2005 ; The Journal of the Royal Society for the Promotion of Health Volume 125 ; 125 ; >
       au < manifest ; exists ; 2006 ; The Journal of the Royal Society for the Promotion of Health Volume 126 ; 126 ; >
       au < manifest ; exists ; 2007 ; The Journal of the Royal Society for the Promotion of Health Volume 127 ; 127 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; The Journal of the Royal Society for the Promotion of Health Volume 128 ; 128 ;  >
 
     }
     {
@@ -28196,6 +28197,10 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 2002 ; Psychological Science in the Public Interest Volume 3 ; 3 ; >
+      au < exists ; exists ; 2003 ; Psychological Science in the Public Interest Volume 4 ; 4 ; >
+      au < exists ; exists ; 2004 ; Psychological Science in the Public Interest Volume 5 ; 5 ; >
+      au < exists ; exists ; 2005 ; Psychological Science in the Public Interest Volume 6 ; 6 ; >
       au < manifest ; exists ; 2006 ; Psychological Science in the Public Interest Volume 7 ; 7 ; >
       au < manifest ; exists ; 2007 ; Psychological Science in the Public Interest Volume 8 ; 8 ; >
       au < manifest ; exists ; 2008 ; Psychological Science in the Public Interest Volume 9 ; 9 ; >
@@ -30837,6 +30842,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 2004 ; Social Psychology Quarterly Volume 67 ; 67 ; >
+      au < exists ; exists ; 2005 ; Social Psychology Quarterly Volume 68 ; 68 ; >
+      au < exists ; exists ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 ; >
       au < manifest ; exists ; 2007 ; Social Psychology Quarterly Volume 70 ; 70 ; >
       au < manifest ; exists ; 2008 ; Social Psychology Quarterly Volume 71 ; 71 ; >
       au < manifest ; exists ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 ; >
@@ -31237,6 +31245,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 2004 ; Sociology of Education Volume 77 ; 77 ; >
+      au < exists ; exists ; 2005 ; Sociology of Education Volume 78 ; 78 ; >
+      au < exists ; exists ; 2006 ; Sociology of Education Volume 79 ; 79 ; >
       au < manifest ; exists ; 2007 ; Sociology of Education Volume 80 ; 80 ; >
       au < manifest ; exists ; 2008 ; Sociology of Education Volume 81 ; 81 ; >
       au < manifest ; exists ; 2009 ; Sociology of Education Volume 82 ; 82 ; >
@@ -31476,6 +31487,17 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1997 ; State and Local Government Review Volume 29 ; 29 ; >
+      au < exists ; exists ; 1998 ; State and Local Government Review Volume 30 ; 30 ; >
+      au < exists ; exists ; 1999 ; State and Local Government Review Volume 31 ; 31 ; >
+      au < exists ; exists ; 2000 ; State and Local Government Review Volume 32 ; 32 ; >
+      au < exists ; exists ; 2001 ; State and Local Government Review Volume 33 ; 33 ; >
+      au < exists ; exists ; 2002 ; State and Local Government Review Volume 34 ; 34 ; >
+      au < exists ; exists ; 2003 ; State and Local Government Review Volume 35 ; 35 ; >
+      au < exists ; exists ; 2004 ; State and Local Government Review Volume 36 ; 36 ; >
+      au < exists ; exists ; 2005 ; State and Local Government Review Volume 37 ; 37 ; >
+      au < exists ; exists ; 2006 ; State and Local Government Review Volume 38 ; 38 ; >
+      au < exists ; exists ; 2007 ; State and Local Government Review Volume 39 ; 39 ; >
       au < manifest ; exists ; 2008 ; State and Local Government Review Volume 40 ; 40 ; >
       au < manifest ; exists ; 2009 ; State and Local Government Review Volume 41 ; 41 ; >
       au < manifest ; exists ; 2010 ; State and Local Government Review Volume 42 ; 42 ; >
@@ -31810,6 +31832,40 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1971-1972 ; Studies in Religion/Sciences Religieuses Volume 1 ; 1 ; >
+      au < exists ; exists ; 1972-1973 ; Studies in Religion/Sciences Religieuses Volume 2 ; 2 ; >
+      au < exists ; exists ; 1973-1974 ; Studies in Religion/Sciences Religieuses Volume 3 ; 3 ; >
+      au < exists ; exists ; 1974-1975 ; Studies in Religion/Sciences Religieuses Volume 4 ; 4 ; >
+      au < exists ; exists ; 1975-1976 ; Studies in Religion/Sciences Religieuses Volume 5 ; 5 ; >
+      au < exists ; exists ; 1976-1977 ; Studies in Religion/Sciences Religieuses Volume 6 ; 6 ; >
+      au < exists ; exists ; 1978 ; Studies in Religion/Sciences Religieuses Volume 7 ; 7 ; >
+      au < exists ; exists ; 1979 ; Studies in Religion/Sciences Religieuses Volume 8 ; 8 ; >
+      au < exists ; exists ; 1980 ; Studies in Religion/Sciences Religieuses Volume 9 ; 9 ; >
+      au < exists ; exists ; 1981 ; Studies in Religion/Sciences Religieuses Volume 10 ; 10 ; >
+      au < exists ; exists ; 1982 ; Studies in Religion/Sciences Religieuses Volume 11 ; 11 ; >
+      au < exists ; exists ; 1983 ; Studies in Religion/Sciences Religieuses Volume 12 ; 12 ; >
+      au < exists ; exists ; 1984 ; Studies in Religion/Sciences Religieuses Volume 13 ; 13 ; >
+      au < exists ; exists ; 1985 ; Studies in Religion/Sciences Religieuses Volume 14 ; 14 ; >
+      au < exists ; exists ; 1986 ; Studies in Religion/Sciences Religieuses Volume 15 ; 15 ; >
+      au < exists ; exists ; 1987 ; Studies in Religion/Sciences Religieuses Volume 16 ; 16 ; >
+      au < exists ; exists ; 1988 ; Studies in Religion/Sciences Religieuses Volume 17 ; 17 ; >
+      au < exists ; exists ; 1989 ; Studies in Religion/Sciences Religieuses Volume 18 ; 18 ; >
+      au < exists ; exists ; 1990 ; Studies in Religion/Sciences Religieuses Volume 19 ; 19 ; >
+      au < exists ; exists ; 1991 ; Studies in Religion/Sciences Religieuses Volume 20 ; 20 ; >
+      au < exists ; exists ; 1992 ; Studies in Religion/Sciences Religieuses Volume 21 ; 21 ; >
+      au < exists ; exists ; 1993 ; Studies in Religion/Sciences Religieuses Volume 22 ; 22 ; >
+      au < exists ; exists ; 1994 ; Studies in Religion/Sciences Religieuses Volume 23 ; 23 ; >
+      au < exists ; exists ; 1995 ; Studies in Religion/Sciences Religieuses Volume 24 ; 24 ; >
+      au < exists ; exists ; 1996 ; Studies in Religion/Sciences Religieuses Volume 25 ; 25 ; >
+      au < exists ; exists ; 1997 ; Studies in Religion/Sciences Religieuses Volume 26 ; 26 ; >
+      au < exists ; exists ; 1998 ; Studies in Religion/Sciences Religieuses Volume 27 ; 27 ; >
+      au < exists ; exists ; 1999 ; Studies in Religion/Sciences Religieuses Volume 28 ; 28 ; >
+      au < exists ; exists ; 2000 ; Studies in Religion/Sciences Religieuses Volume 29 ; 29 ; >
+      au < exists ; exists ; 2001 ; Studies in Religion/Sciences Religieuses Volume 30 ; 30 ; >
+      au < exists ; exists ; 2002 ; Studies in Religion/Sciences Religieuses Volume 31 ; 31 ; >
+      au < exists ; exists ; 2003 ; Studies in Religion/Sciences Religieuses Volume 32 ; 32 ; >
+      au < exists ; exists ; 2004 ; Studies in Religion/Sciences Religieuses Volume 33 ; 33 ; >
+      au < exists ; exists ; 2005 ; Studies in Religion/Sciences Religieuses Volume 34 ; 34 ; >
       au < manifest ; exists ; 2006 ; Studies in Religion/Sciences Religieuses Volume 35 ; 35 ; >
       au < manifest ; exists ; 2007 ; Studies in Religion/Sciences Religieuses Volume 36 ; 36 ; >
       au < manifest ; exists ; 2008 ; Studies in Religion/Sciences Religieuses Volume 37 ; 37 ; >
@@ -33174,6 +33230,10 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 2004-2005 ; Tourism and Hospitality Research Volume 5 ; 5 ; >
+      au < exists ; exists ; 2005-2006 ; Tourism and Hospitality Research Volume 6 ; 6 ; >
+      au < exists ; exists ; 2006-2007 ; Tourism and Hospitality Research Volume 7 ; 7 ; >
+      au < exists ; exists ; 2008 ; Tourism and Hospitality Research Volume 8 ; 8 ; >
       au < manifest ; exists ; 2009 ; Tourism and Hospitality Research Volume 9 ; 9 ; >
       au < manifest ; exists ; 2010 ; Tourism and Hospitality Research Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; Tourism and Hospitality Research Volume 11 ; 11 ; >
@@ -33503,6 +33563,18 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1995 ; Transfer: European Review of Labour and Research Volume 1 ; 1 ; >
+      au < exists ; exists ; 1996 ; Transfer: European Review of Labour and Research Volume 2 ; 2 ; >
+      au < exists ; exists ; 1997 ; Transfer: European Review of Labour and Research Volume 3 ; 3 ; >
+      au < exists ; exists ; 1998 ; Transfer: European Review of Labour and Research Volume 4 ; 4 ; >
+      au < exists ; exists ; 1999 ; Transfer: European Review of Labour and Research Volume 5 ; 5 ; >
+      au < exists ; exists ; 2000 ; Transfer: European Review of Labour and Research Volume 6 ; 6 ; >
+      au < exists ; exists ; 2001 ; Transfer: European Review of Labour and Research Volume 7 ; 7 ; >
+      au < exists ; exists ; 2002 ; Transfer: European Review of Labour and Research Volume 8 ; 8 ; >
+      au < exists ; exists ; 2003 ; Transfer: European Review of Labour and Research Volume 9 ; 9 ; >
+      au < exists ; exists ; 2004 ; Transfer: European Review of Labour and Research Volume 10 ; 10 ; >
+      au < exists ; exists ; 2005 ; Transfer: European Review of Labour and Research Volume 11 ; 11 ; >
+      au < exists ; exists ; 2006 ; Transfer: European Review of Labour and Research Volume 12 ; 12 ; >
       au < manifest ; exists ; 2007 ; Transfer: European Review of Labour and Research Volume 13 ; 13 ; >
       au < manifest ; exists ; 2008 ; Transfer: European Review of Labour and Research Volume 14 ; 14 ; >
       au < manifest ; exists ; 2009 ; Transfer: European Review of Labour and Research Volume 15 ; 15 ; >
