@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.29.12.1 2012-03-06 04:57:36 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.29.12.2 2012-03-15 13:27:55 pgust Exp $
  */
 
 /*
@@ -125,6 +125,16 @@ public class AuUtil {
     LockssDaemon daemon = getDaemon(au);
     AuNodeImpl repoNode = getAuRepoNode(au);
     return repoNode.getDiskUsage(calcIfUnknown);
+  }
+
+  /** Return a string appropriate to use as a thread name for the specified
+   * process working on the au. */
+  public static String getThreadNameFor(String procName, ArchivalUnit au) {
+    StringBuffer sb = new StringBuffer();
+    sb.append(procName);
+    sb.append(": ");
+    sb.append(StringUtil.toUnaccented(au.getName()));
+    return sb.toString();
   }
 
   public static String getConfigUserMessage(ArchivalUnit au) {
