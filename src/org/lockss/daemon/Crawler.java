@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.55 2012-03-12 05:26:38 tlipkis Exp $
+ * $Id: Crawler.java,v 1.56 2012-03-15 08:20:25 tlipkis Exp $
  */
 
 /*
@@ -52,11 +52,21 @@ import org.lockss.crawler.*;
  */
 public interface Crawler {
 
-  public static final int NEW_CONTENT = 0;
-  public static final int REPAIR = 1;
-  public static final int BACKGROUND = 2;
-  public static final int OAI = 3;
-  public static final int ARC = 4;
+  public enum Type {
+    NEW_CONTENT("New Content"),
+    REPAIR("Repair"),
+    BACKGROUND("Background"),		// not used
+    OAI("OAI");
+
+    final String printString;
+    Type(String printString) {
+      this.printString = printString;
+    }
+
+    public String toString() {
+      return printString;
+    }
+  }
 
   public static final int STATUS_UNKNOWN = 0;
   public static final int STATUS_QUEUED = 1;
@@ -88,7 +98,7 @@ public interface Crawler {
    * Returns the type of crawl
    * @return crawl type
    */
-  public int getType();
+  public Type getType();
 
   /**
    * Return true iff the crawl tries to collect the entire AU content.

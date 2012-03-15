@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.40 2012-03-12 05:26:38 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.41 2012-03-15 08:20:25 tlipkis Exp $
  */
 
 /*
@@ -1637,7 +1637,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     }
 
     @Override
-    public int getType() {
+    public Crawler.Type getType() {
       throw new UnsupportedOperationException("not implemented");
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.89 2012-01-18 03:41:46 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.90 2012-03-15 08:20:25 tlipkis Exp $
 */
 
 /*
@@ -1672,7 +1672,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       SpiderCrawlSpec cs = (SpiderCrawlSpec) spec;
       crawler.setUrls(cs.getStartingUrls());
       crawler.setFollowLinks(true);
-      crawler.setType(BaseCrawler.NEW_CONTENT);
+      crawler.setType(Crawler.Type.NEW_CONTENT);
       crawler.setIsWholeAU(true);
       return crawler;
     }
@@ -1684,7 +1684,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       crawler.setAu(au);
       crawler.setUrls(repairUrls);
       crawler.setFollowLinks(false);
-      crawler.setType(BaseCrawler.REPAIR);
+      crawler.setType(Crawler.Type.REPAIR);
       crawler.setIsWholeAU(false);
       return crawler;
     }

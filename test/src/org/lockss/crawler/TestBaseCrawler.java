@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.20 2012-03-12 05:26:38 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.21 2012-03-15 08:20:25 tlipkis Exp $
  */
 
 /*
@@ -835,7 +835,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
       setCrawlManager(TestBaseCrawler.this.crawlMgr);
     }
 
-    public int getType() {
+    public Crawler.Type getType() {
       throw new UnsupportedOperationException("not implemented");
     }
 

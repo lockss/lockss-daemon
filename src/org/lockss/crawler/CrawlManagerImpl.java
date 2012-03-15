@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.140 2012-03-13 18:29:36 thib_gc Exp $
+ * $Id: CrawlManagerImpl.java,v 1.141 2012-03-15 08:20:25 tlipkis Exp $
  */
 
 /*
@@ -1065,6 +1065,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     return rc;
   }
 
+  static String makeThreadName(Crawler crawler) {
+    return AuUtil.getThreadNameFor(crawler.getType().toString() + " Crawl",
+				   crawler.getAu());
+  }
+
   private static int createIndex = 0;
 
   public class CrawlRunner extends LockssRunnable {
@@ -1089,7 +1094,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 			Object cookie, Collection locks,
 			RateLimiter auRateLimiter,
 			RateLimiter startRateLimiter) {
-      super(crawler.toString());
+      super(makeThreadName(crawler));
       this.cb = cb;
       this.cookie = cookie;
       this.crawler = crawler;

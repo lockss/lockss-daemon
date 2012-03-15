@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.48 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: TestRepairCrawler.java,v 1.49 2012-03-15 08:20:25 tlipkis Exp $
  */
 
 /*
@@ -146,7 +146,7 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testGetType() {
-    assertEquals(Crawler.REPAIR, crawler.getType());
+    assertEquals(Crawler.Type.REPAIR, crawler.getType());
     assertEquals("Repair", crawler.getTypeString());
   }
 

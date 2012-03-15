@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.78 2012-03-12 05:26:38 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.79 2012-03-15 08:20:25 tlipkis Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   public void testReturnsProperType() {
-    assertEquals(Crawler.NEW_CONTENT, crawler.getType());
+    assertEquals(Crawler.Type.NEW_CONTENT, crawler.getType());
     assertEquals("New Content", crawler.getTypeString());
   }
 

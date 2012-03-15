@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.72 2012-01-18 03:40:42 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.73 2012-03-15 08:20:25 tlipkis Exp $
  */
 
 /*
@@ -162,16 +162,12 @@ public class RepairCrawler extends BaseCrawler {
 
   }
 
-  public String getTypeString() {
-    return "Repair";
-  }
-
   public boolean isWholeAU() {
     return false;
   }
 
-  public int getType() {
-    return Crawler.REPAIR;
+  public Crawler.Type getType() {
+    return Crawler.Type.REPAIR;
   }
 
   protected Iterator getStartingUrls() {

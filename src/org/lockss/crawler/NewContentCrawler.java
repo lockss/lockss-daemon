@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.59 2010-12-01 01:41:47 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.60 2012-03-15 08:20:25 tlipkis Exp $
  */
 
 /*
@@ -53,12 +53,8 @@ public class NewContentCrawler extends FollowLinkCrawler {
 				    getTypeString());
   }
 
-  public int getType() {
-    return Crawler.NEW_CONTENT;
-  }
-
-  public String getTypeString() {
-    return "New Content";
+  public Crawler.Type getType() {
+    return Crawler.Type.NEW_CONTENT;
   }
 
   public boolean isWholeAU() {

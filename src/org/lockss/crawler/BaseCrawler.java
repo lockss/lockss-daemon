@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.45 2012-03-12 05:26:38 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.46 2012-03-15 08:20:25 tlipkis Exp $
  */
 
 /*
@@ -200,13 +200,7 @@ public abstract class BaseCrawler
     DEFAULT_THROW_IF_RATE_LIMITER_NOT_USED;
 
   protected abstract boolean doCrawl0();
-  public abstract int getType();
-
-
-  /** Return the type of crawl as a string
-   * @return crawl type
-   */
-  protected abstract String getTypeString();
+  public abstract Crawler.Type getType();
 
   protected PermissionChecker pluginPermissionChecker;
   protected List daemonPermissionCheckers = null;
@@ -318,6 +312,13 @@ public abstract class BaseCrawler
     mimeTypePauseAfter304 =
       config.getBoolean(PARAM_MIME_TYPE_PAUSE_AFTER_304,
 			DEFAULT_MIME_TYPE_PAUSE_AFTER_304);
+  }
+
+  /** Return the type of crawl as a string
+   * @return crawl type
+   */
+  protected String getTypeString() {
+    return getType().toString();
   }
 
   protected CrawlRateLimiter getCrawlRateLimiter() {
