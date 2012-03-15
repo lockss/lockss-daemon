@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.28 2012-03-10 15:12:21 pgust Exp $
+ * $Id: MetadataManager.java,v 1.29 2012-03-15 05:39:55 pgust Exp $
  */
 
 /*
@@ -1936,7 +1936,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           "insert into " + DOI_TABLE + " " + "values (?,?)");
         insertDOI.setString(1, doi);
         insertDOI.setInt(2, mdid);
-        insertDOI.execute();
+        insertDOI.executeUpdate();
         log.debug3(  "added [doi:" + doi + ", md_id: " + mdid + ", pluginId:"
                    + pluginId + "]");
       }
@@ -1949,7 +1949,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         for (String anIsbn : isbns) {
           anIsbn = anIsbn.replaceAll("-", "");
           insertISBN.setString(1, anIsbn);
-          insertISBN.execute();
+          insertISBN.executeUpdate();
           log.debug3("added [isbn:" + anIsbn + ", md_id: " + mdid 
                      + ", pluginId:" + pluginId + "]");
         }
@@ -1963,7 +1963,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         for (String anIssn : issns) {
           anIssn = anIssn.replaceAll("-", "");
           insertISSN.setString(1, anIssn);
-          insertISSN.execute();
+          insertISSN.executeUpdate();
           log.debug3(  "added [issn:" + anIssn + ", md_id: " + mdid 
                      + ", pluginId:" + pluginId + "]");
         }
@@ -1979,7 +1979,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                                                          MAX_TITLE_FIELD));
         insertTitle.setString(1, title);
         insertTitle.setInt(2, mdid);
-        insertTitle.execute();
+        insertTitle.executeUpdate();
         log.debug3(  "added [title:'" + journalTitle + "', md_id: " + mdid 
             + ", pluginId:" + pluginId + "]");
       }
@@ -2101,7 +2101,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
      * @todo Update SchedService to handle this case
      */
     LockssRunnable runnable = 
-      new LockssRunnable("ReindexingTask") {
+      new LockssRunnable("ReindexingTask - " + task.au.toString()) {
 
       public void lockssRun() {
         task.callCallback(Schedule.EventType.START);
