@@ -7,14 +7,31 @@
   {
   
     title <
+      name = Bone & Joint 360 ;
+      issn = 2048-0091 ;
+      issnl = 2048-0105
+    >
+    
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.bj360.boneandjoint.org.uk/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2012 ; Bone & Joint 360 Volume 1 ; 1 >
+    
+  }
+  
+  {
+  
+    title <
       name = Bone & Joint Research ;
       issn = 2046-3758 ;
       issnl = 2046-3758
     >
     
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    param[base_url] = http://bjr.boneandjoint.org.uk/
+    param[base_url] = http://www.bjr.boneandjoint.org.uk/
     implicit < status ; year ; name ; param[volume_name] >
+    rights = openaccess
 
     au < exists ; 2012 ; Bone & Joint Research Volume 1 ; 1 >
     
@@ -30,8 +47,10 @@
     >
     
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    param[base_url] = http://www.jbjs.boneandjoint.org.uk/
+    param[base_url] = http://web.jbjs.org.uk/
     implicit < status ; year ; name ; param[volume_name] >
+    
+    comment[manifests] = all links go to base_url http://web.jbjs.org.uk/. journal home page is at http://www.jbjs.boneandjoint.org.uk 
 
     au < exists ; 1948 ; Journal of Bone & Joint Surgery, British Volume Volume 30 ; 30-B >
     au < exists ; 1949 ; Journal of Bone & Joint Surgery, British Volume Volume 31 ; 31-B >
