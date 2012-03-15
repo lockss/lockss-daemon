@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.29 2012-03-10 15:21:23 pgust Exp $
+ * $Id: ListHoldings.java,v 1.30 2012-03-15 08:52:25 tlipkis Exp $
  */
 
 /*
@@ -448,9 +448,11 @@ public class ListHoldings extends LockssServlet {
             for (int j = i+1; j <= items.size(); j++) {
               if (   (j == items.size()) 
                   || !items.get(i).getIssn().equals(items.get(j).getIssn())) {
-                for (int k = i; k < j; k++) {
-                  log.debug("printIssn: " + items.get(k).getPrintIssn()
-                            + " eissn: " + items.get(k).getEissn());
+		if (log.isDebug3()) {
+		  for (int k = i; k < j; k++) {
+		    log.debug3("printIssn: " + items.get(k).getPrintIssn()
+			       + " eissn: " + items.get(k).getEissn());
+		  }
                 }
                 List<KbartTitle> currentTitles =
                   KbartConverter.convertTitleToKbartTitles(items.subList(i, j));
@@ -459,10 +461,12 @@ public class ListHoldings extends LockssServlet {
               }
             }
           }
-          for (KbartTitle title : titles) {
-            log.debug("printIssn: " + title.getField(KbartTitle.Field.PRINT_IDENTIFIER)
-                      + "eIssn: " + title.getField(KbartTitle.Field.ONLINE_IDENTIFIER));
-          }
+	  if (log.isDebug3()) {
+	    for (KbartTitle title : titles) {
+	      log.debug3("printIssn: " + title.getField(KbartTitle.Field.PRINT_IDENTIFIER)
+			 + "eIssn: " + title.getField(KbartTitle.Field.ONLINE_IDENTIFIER));
+	    }
+	  }
           return titles;
         }
       }
