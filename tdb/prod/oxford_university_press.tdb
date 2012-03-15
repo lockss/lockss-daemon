@@ -16306,11 +16306,11 @@
       issnl = 2046-9128
     >
 
-    pluginPrefix = org.lockss.plugin.highwire.
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://rcfs.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    comment[0] = forthcoming in 2012
+    au < expected ; 2012 ; The Review of Economic Studies Volume 1 ; 1 >
 
   }
 
