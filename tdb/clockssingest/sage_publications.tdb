@@ -14969,6 +14969,25 @@
   }
 
   {
+    title<
+      name = Journal of Applied Social Science ;
+      issn = 1936-7244 ;
+      eissn = 1937-7024
+      >
+      
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://jax.sagepub.com/
+
+      au < exists ; exists ; 2007 ; Journal of Applied Social Science Volume 1 ; 1 ; >
+      au < exists ; exists ; 2008 ; Journal of Applied Social Science Volume 2 ; 2 ; >
+      au < exists ; exists ; 2009 ; Journal of Applied Social Science Volume 3 ; 3 ; >
+      au < exists ; exists ; 2010 ; Journal of Applied Social Science Volume 4 ; 4 ; >
+      au < exists ; exists ; 2011 ; Journal of Applied Social Science Volume 5 ; 5 ; >
+      au < exists ; exists ; 2012 ; Journal of Applied Social Science Volume 6 ; 6 ; >
+
+  }
+
+  {
   
     title <
       name = Journal of Asian and African Studies ;

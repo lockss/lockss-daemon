@@ -14184,18 +14184,18 @@
       {
 
         pluginSuffix = HighWirePressH20Plugin
-        implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://has.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; exists ; 2003 ; Humanity & Society Volume 27 ; 27 ; >
-        au < exists ; exists ; 2004 ; Humanity & Society Volume 28 ; 28 ; >
-        au < exists ; exists ; 2005 ; Humanity & Society Volume 29 ; 29 ; >
-        au < exists ; exists ; 2006 ; Humanity & Society Volume 30 ; 30 ; >
-        au < exists ; exists ; 2007 ; Humanity & Society Volume 31 ; 31 ; >
-        au < exists ; exists ; 2008 ; Humanity & Society Volume 32 ; 32 ; >
-        au < exists ; exists ; 2009 ; Humanity & Society Volume 33 ; 33 ; >
-        au < exists ; exists ; 2010 ; Humanity & Society Volume 34 ; 34 ; >
-        au < exists ; exists ; 2011 ; Humanity & Society Volume 35 ; 35 ; >
+        au < exists ; 2003 ; Humanity & Society Volume 27 ; 27 >
+        au < exists ; 2004 ; Humanity & Society Volume 28 ; 28 >
+        au < exists ; 2005 ; Humanity & Society Volume 29 ; 29 >
+        au < exists ; 2006 ; Humanity & Society Volume 30 ; 30 >
+        au < exists ; 2007 ; Humanity & Society Volume 31 ; 31 >
+        au < exists ; 2008 ; Humanity & Society Volume 32 ; 32 >
+        au < exists ; 2009 ; Humanity & Society Volume 33 ; 33 >
+        au < exists ; 2010 ; Humanity & Society Volume 34 ; 34 >
+        au < exists ; 2011 ; Humanity & Society Volume 35 ; 35 >
   
       }
       
@@ -17015,6 +17015,27 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < expected ; 2012 ; Journal of Applied Gerontology Volume 31 ; 31 >
 
       }
+
+    }
+
+    {
+      title<
+        name = Journal of Applied Social Science ;
+        issn = 1936-7244 ;
+        eissn = 1937-7024
+        >
+        
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jax.sagepub.com/
+        implicit < status ; year ; name ; param[volume] >
+
+
+        au < exists ; 2007 ; Journal of Applied Social Science Volume 1 ; 1 >
+        au < exists ; 2008 ; Journal of Applied Social Science Volume 2 ; 2 >
+        au < exists ; 2009 ; Journal of Applied Social Science Volume 3 ; 3 >
+        au < exists ; 2010 ; Journal of Applied Social Science Volume 4 ; 4 >
+        au < exists ; 2011 ; Journal of Applied Social Science Volume 5 ; 5 >
+        au < exists ; 2012 ; Journal of Applied Social Science Volume 6 ; 6 >
 
     }
 
