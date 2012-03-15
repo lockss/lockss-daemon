@@ -88,7 +88,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = aibsbulletin 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 0006-3568
 
     au < manifest ; 1951 ; AIBS Bulletin Volume 1 ; 1 >  
@@ -119,7 +119,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = amerbiolteac 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1938-1939 ; The American Biology Teacher Volume 1 ; 1 >  
     au < manifest ; 1939-1940 ; The American Biology Teacher Volume 2 ; 2 >  
@@ -232,7 +232,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = asiansurvey 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[continues] = 0362-8949
       comment[dNP] = manifest page has extraneous links to related titles
 
@@ -319,7 +319,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = auk 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1884 ; The Auk: A Quarterly Journal of Ornithology Volume 1 ; 1 >  
       au < manifest ; 1885 ; The Auk: A Quarterly Journal of Ornithology Volume 2 ; 2 >  
@@ -466,7 +466,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = bioscience 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 0096-7645
 
     au < manifest ; 1964 ; BioScience Volume 14 ; 14 >  
@@ -532,7 +532,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = boomjcali 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2011 ; Boom: A Journal of California Volume 1 ; 1 >  
 
@@ -548,7 +548,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = buffcrimlawrevi 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 1933-4192
 
     au < manifest ; 1997-1998 ; Buffalo Criminal Law Review Volume 1 ; 1 >  
@@ -574,7 +574,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = bullamermusisoci
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 0003-0139
     comment[dNP] = manifest page links incorrectly to 0003-0139
     comment[check] = 1947-8 volume_name when manifests fixed
@@ -602,7 +602,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = bullcooporniclub
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 0010-5422
 
     au < manifest ; 1899 ; Bulletin of the Cooper Ornithological Club Volume 1 ; 1 >  
@@ -622,7 +622,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = calimanarevi 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2009-2010 ; California Management Review Volume 52 ; 52 >  
     au < manifest ; 2011 ; California Management Review Volume 53 ; 53 >  
@@ -639,7 +639,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = calistudclasanti 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 0278-6656 
     comment[dNP] = manifest page includes links to 0278-6656
 
@@ -668,7 +668,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = cardstudlawlite 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 1535-685X
 
     au < manifest ; 1989 ; Cardozo Studies in Law and Literature Volume 1 ; 1 >  
@@ -697,7 +697,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = chymia 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 0073-2672
     comment[dNP] = manifest page has extraneous links to related titles
 
@@ -751,7 +751,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = clasanti 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[continues] = 0068-5895
       comment[dNP] = manifest page includes links to 0068-5895
 
@@ -817,7 +817,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = condor 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[continues] = 1553-1031
 
       au < manifest ; 1900 ; The Condor: An International Journal of Avian Biology Volume 2 ; 2 >  
@@ -974,7 +974,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = fareasternsurvey 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 0004-4687
     comment[continues] = 1536-0385
     comment[dNP] = manifest page has extraneous links to related titles  
@@ -1043,7 +1043,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = fedesentrepo 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[manifests] = requested via UCPress 7/27
 
       au < manifest ; 1988-1989 ; Federal Sentencing Reporter Volume 1 ; 1 >  
@@ -1106,7 +1106,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = filmquarterly 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[continues] = 1549-0068
 
       au < manifest ; 1958-1959 ; Film Quarterly Volume 12 ; 12 >  
@@ -1201,7 +1201,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = gastronomica 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2001 ; Gastronomica: The Journal of Food and Culture Volume 1 ; 1 > 
       au < manifest ; 2002 ; Gastronomica: The Journal of Food and Culture Volume 2 ; 2 > 
@@ -1253,7 +1253,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = histstudnatsci 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[continues] = 0890-9997
 
       au < manifest ; 2008 ; Historical Studies in the Natural Sciences Volume 38 ; 38 >  
@@ -1275,7 +1275,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = histstudphysbiol 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 1939-1811
     comment[continues] = 0073-2672
 
@@ -1314,7 +1314,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = histstudphyssci 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 0890-9997
     comment[continues] = 0095-9367
     comment[dNP] = manifest page includes extraneous links
@@ -1348,7 +1348,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = hollquar 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 1549-0068
 
     au < manifest ; 1945-1946 ; Hollywood Quarterly Volume 1 ; 1 >  
@@ -1369,7 +1369,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = huntlibrbull 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 0018-7895
     comment[dNP] = manifest page incorrectly links to 0018-7895
 
@@ -1418,7 +1418,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = huntlibrquar 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[continues] = 1935-0708
 
       au < manifest ; 1937-1938 ; Huntington Library Quarterly Volume 1 ; 1 >  
@@ -1528,7 +1528,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = jempreshumreseth 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[manifests] = requested via UCPress 7/27
 
       au < manifest ; 2006 ; Journal of Empirical Research on Human Research Ethics: An International Journal Volume 1 ; 1 >  
@@ -1575,7 +1575,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = jmusicology 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1982 ; Journal of Musicology Volume 1 ; 1 >  
       au < manifest ; 1983 ; Journal of Musicology Volume 2 ; 2 >  
@@ -1643,7 +1643,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = jpalestud 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1971-1972 ; Journal of Palestine Studies Volume 1 ; 1 >  
       au < manifest ; 1972-1973 ; Journal of Palestine Studies Volume 2 ; 2 >  
@@ -1724,7 +1724,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = jamermusisoci 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[continues] = 1544-4708
 
       au < manifest ; 1948 ; Journal of the American Musicological Society Volume 1 ; 1 >  
@@ -1806,7 +1806,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = jamersociarchhis 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 0037-9808
 
     au < manifest ; 1941 ; Journal of the American Society of Architectural Historians Volume 1 ; 1 >  
@@ -1828,7 +1828,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = jsociarchhist 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 1544-9890
 
     au < manifest ; 1945-1946 ; Journal of the Society of Architectural Historians Volume 5 ; 5 >  
@@ -1928,7 +1928,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = jvietstud 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2006 ; Journal of Vietnamese Studies Volume 1 ; 1 >  
       au < manifest ; 2007 ; Journal of Vietnamese Studies Volume 2 ; 2 >  
@@ -1969,7 +1969,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = jungjcultpsyc 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[continues] = 0270-6210
       comment[dNP] = manifest page has duplicate links with 0270-6210 labels
 
@@ -2017,7 +2017,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = lawliterature 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[continues] = 1043-1500
 
       au < manifest ; 2002 ; Law and Literature Volume 14 ; 14 >  
@@ -2045,7 +2045,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = memoinstpacirela 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 0362-8949
     comment[dNP] = manifest page has extraneous links to related titles
 
@@ -2089,7 +2089,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = mexistudestumexi 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1985 ; Mexican Studies/Estudios Mexicanos Volume 1 ; 1 >  
       au < manifest ; 1986 ; Mexican Studies/Estudios Mexicanos Volume 2 ; 2 >  
@@ -2157,7 +2157,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = musicperception 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1983-1984 ; Music Perception: An Interdisciplinary Journal Volume 1 ; 1 >  
       au < manifest ; 1984-1985 ; Music Perception: An Interdisciplinary Journal Volume 2 ; 2 >  
@@ -2226,7 +2226,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = musitheospec 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[dNP] = manifest page links don't work
 
       au < doNotProcess ; 1979 ; Music Theory Spectrum Volume 1 ; 1 >  
@@ -2304,7 +2304,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = newcrimlawrevi 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[continues] = 1093-3514
 
       au < manifest ; 2007 ; New Criminal Law Review Volume 10 ; 10 >  
@@ -2327,7 +2327,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = ninecentfict 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 1526-4211
     comment[continued_by] = 0819-9356
 
@@ -2405,7 +2405,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = ninecentlite 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[continues] = 0029-0564
 
       au < manifest ; 1986-1987 ; Nineteenth-Century Literature Volume 41 ; 41 >  
@@ -2477,7 +2477,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = novareligio 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1997-1998 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 1 ; 1 >  
       au < manifest ; 1998-1999 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 2 ; 2 >  
@@ -2552,7 +2552,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = ornithmono 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[manifests] = requested via UCPress 7/27
  
       au < exists ; 1964 ; Ornithological Monographs Number 1 ; 1 >  
@@ -2665,7 +2665,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = pacihistrevi 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1932 ; Pacific Historical Review Volume 1 ; 1 >  
       au < manifest ; 1933 ; Pacific Historical Review Volume 2 ; 2 >  
@@ -2762,7 +2762,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = pacisocirevi 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 0731-1214
 
     au < manifest ; 1958 ; The Pacific Sociological Review Volume 1 ; 1 >  
@@ -2827,7 +2827,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = publichistorian 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1978-1979 ; The Public Historian Volume 1 ; 1 >  
       au < manifest ; 1979-1980 ; The Public Historian Volume 2 ; 2 >  
@@ -2877,7 +2877,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = quarfilmraditele 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 1549-0076
     comment[continued_by] = 0015-1386
 
@@ -2924,7 +2924,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = reliamercult 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1991 ; Religion and American Culture: A Journal of Interpretation: A Journal of Interpretation Volume 1 ; 1 >  
       au < manifest ; 1992 ; Religion and American Culture: A Journal of Interpretation: A Journal of Interpretation Volume 2 ; 2 >  
@@ -3015,7 +3015,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = representations 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[manifests] = requested via UCPress 7/27
 
       au < exists ; 1983 ; Representations Volume 1 ; 1 >  
@@ -3190,7 +3190,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = rhetorica 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1983 ; Rhetorica: A Journal of the History of Rhetoric Volume 1 ; 1 >  
       au < manifest ; 1984 ; Rhetorica: A Journal of the History of Rhetoric Volume 2 ; 2 >  
@@ -3236,7 +3236,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = sanfranjunginstj 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 1934-2039
     comment[dNP] = manifest page has duplicate links with 1934-2039 labels
 
@@ -3302,7 +3302,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = socialproblems 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1953-1954 ; Social Problems Volume 1 ; 1 >  
       au < manifest ; 1954-1955 ; Social Problems Volume 2 ; 2 >  
@@ -3401,7 +3401,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = socipers 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       comment[continues] = 0030-8919
 
       au < manifest ; 1983 ; Sociological Perspectives Volume 26 ; 26 >  
@@ -3452,7 +3452,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_id] = XXXX
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       
       comment[starting] = published by UC starting Feb 2012
       
@@ -3521,7 +3521,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       param[base_url] = http://www.jstor.org/
       param[journal_code] = symbinte 
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1977-1978 ; Symbolic Interaction Volume 1 ; 1 >  
       au < manifest ; 1979 ; Symbolic Interaction Volume 2 ; 2 >  
@@ -3572,7 +3572,7 @@
     plugin = org.lockss.plugin.jstor.JSTORPlugin
     param[base_url] = http://www.jstor.org/
     param[journal_code] = trollopian 
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 0029-0564
 
     au < manifest ; 1945-1947 ; Trollopian Volume 1 ; 1 >  
