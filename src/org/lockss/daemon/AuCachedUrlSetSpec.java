@@ -1,10 +1,10 @@
 /*
- * $Id: AuCachedUrlSetSpec.java,v 1.2 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: AuCachedUrlSetSpec.java,v 1.2.104.1 2012-03-15 08:38:49 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,8 +37,7 @@ import org.lockss.plugin.*;
 /**
  * A CachedUrlSetSpec that represents an entire ArchivalUnit.
  */
-
-public class AuCachedUrlSetSpec implements CachedUrlSetSpec {
+public class AuCachedUrlSetSpec extends RangeCachedUrlSetSpec {
 
   public static final String URL = AuUrl.PROTOCOL_COLON;
 
@@ -46,13 +45,7 @@ public class AuCachedUrlSetSpec implements CachedUrlSetSpec {
    * Create an AuCachedUrlSetSpec
    */
   public AuCachedUrlSetSpec() {
-  }
-
-  /**
-   * @return "LOCKSSAU:"
-   */
-  public String getUrl() {
-    return URL;
+    super(URL);
   }
 
   /**
@@ -63,59 +56,7 @@ public class AuCachedUrlSetSpec implements CachedUrlSetSpec {
     return true;
   }
 
-  /**
-   * @return true
-   */
-  public boolean isAu() {
-    return true;
-  }
-
-  /**
-   * @return false
-   */
-  public boolean isSingleNode() {
-    return false;
-  }
-
-  /**
-   * @return false
-   */
-  public boolean isRangeRestricted() {
-    return false;
-  }
-
-  /**
-   * @param spec the set to test disjointness with
-   * @return false - this overlaps any other CUSS in the same AU
-   */
-  public boolean isDisjoint(CachedUrlSetSpec spec) {
-    return false;
-  }
-
-  /**
-   * @param spec the set to test subsumption of
-   * @return true - this subsumes any other CUSS in the same AU
-   */
-  public boolean subsumes(CachedUrlSetSpec spec) {
-    return true;
-  }
-
   public String toString() {
     return "[AUCUSS]";
-  }
-
-  /**
-   * @param obj the object to compare to
-   * @return true iff the argument is also an AuCachedUrlSetSpec
-   */
-  public boolean equals(Object obj) {
-    return (obj instanceof AuCachedUrlSetSpec);
-  }
-
-  /**
-   * @return the URL's hashcode
-   */
-  public int hashCode() {
-    return URL.hashCode();
   }
 }
