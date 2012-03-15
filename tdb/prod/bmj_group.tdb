@@ -816,11 +816,11 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://heart.bmj.com/
 
-    au < HighWirePressH20Plugin ; testing ; 1939 ; Heart Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1939 ; Heart Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; ready ; 1940 ; Heart Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; ready ; 1941 ; Heart Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 1942 ; Heart Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; testing ; 1943 ; Heart Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1943 ; Heart Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; ready ; 1944 ; Heart Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; ready ; 1945 ; Heart Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; ready ; 1946 ; Heart Volume 8 ; 8 >
@@ -831,10 +831,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; ready ; 1951 ; Heart Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; ready ; 1952 ; Heart Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; ready ; 1953 ; Heart Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 1954 ; Heart Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1954 ; Heart Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; ready ; 1955 ; Heart Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; 1956 ; Heart Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; 1957 ; Heart Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1956 ; Heart Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1957 ; Heart Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; ready ; 1958 ; Heart Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; ready ; 1959 ; Heart Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; ready ; 1960 ; Heart Volume 22 ; 22 >
@@ -936,16 +936,16 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
       param[base_url] = http://injuryprevention.bmj.com/
 
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Injury Prevention Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; manifest ; 1996 ; Injury Prevention Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1997 ; Injury Prevention Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 1998 ; Injury Prevention Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Injury Prevention Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Injury Prevention Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Injury Prevention Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Injury Prevention Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Injury Prevention Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Injury Prevention Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; testing ; 1995 ; Injury Prevention Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; testing ; 1996 ; Injury Prevention Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; testing ; 1997 ; Injury Prevention Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; testing ; 1998 ; Injury Prevention Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 1999 ; Injury Prevention Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; Injury Prevention Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 2001 ; Injury Prevention Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 2002 ; Injury Prevention Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 2003 ; Injury Prevention Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; Injury Prevention Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Injury Prevention Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; released ; 2006 ; Injury Prevention Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Injury Prevention Volume 13 ; 13 >
@@ -1145,17 +1145,17 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; ready ; 1977 ; Journal of Medical Ethics Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 1978 ; Journal of Medical Ethics Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; ready ; 1979 ; Journal of Medical Ethics Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of Medical Ethics Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Medical Ethics Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; ready ; 1981 ; Journal of Medical Ethics Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of Medical Ethics Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 1983 ; Journal of Medical Ethics Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Medical Ethics Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Medical Ethics Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; ready ; 1984 ; Journal of Medical Ethics Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of Medical Ethics Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of Medical Ethics Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Medical Ethics Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Medical Ethics Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; ready ; 1987 ; Journal of Medical Ethics Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; ready ; 1988 ; Journal of Medical Ethics Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; ready ; 1989 ; Journal of Medical Ethics Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 1990 ; Journal of Medical Ethics Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Medical Ethics Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of Medical Ethics Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of Medical Ethics Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of Medical Ethics Volume 19 ; 19 >
@@ -1252,9 +1252,9 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://jnis.bmj.com/
 
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Journal of NeuroInterventional Surgery Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of NeuroInterventional Surgery Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of NeuroInterventional Surgery Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of NeuroInterventional Surgery Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of NeuroInterventional Surgery Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of NeuroInterventional Surgery Volume 4 ; 4 >
 
   }
