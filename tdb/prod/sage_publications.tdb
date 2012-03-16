@@ -3753,7 +3753,7 @@
         au < doNotProcess ; 2009 ; British Journalism Review Volume 20 ; 20 >
         au < released ; 2010 ; British Journalism Review Volume 21 ; 21 >
         au < manifest ; 2011 ; British Journalism Review Volume 22 ; 22 >
-        au < expected ; 2012 ; British Journalism Review Volume 23 ; 23 >
+        au < manifest ; 2012 ; British Journalism Review Volume 23 ; 23 >
 
       }
 
@@ -4690,7 +4690,7 @@
         au < doNotProcess ; 2009 ; Child Maltreatment Volume 14 ; 14 >
         au < released ; 2010 ; Child Maltreatment Volume 15 ; 15 >
         au < manifest ; 2011 ; Child Maltreatment Volume 16 ; 16 >
-        au < expected ; 2012 ; Child Maltreatment Volume 17 ; 17 >
+        au < manifest ; 2012 ; Child Maltreatment Volume 17 ; 17 >
 
       }
 
@@ -12336,7 +12336,7 @@
         au < manifest ; 2009 ; International Journal of Bilingualism Volume 13 ; 13 >
         au < released ; 2010 ; International Journal of Bilingualism Volume 14 ; 14 >
         au < manifest ; 2011 ; International Journal of Bilingualism Volume 15 ; 15 >
-        au < expected ; 2012 ; International Journal of Bilingualism Volume 16 ; 16 >
+        au < manifest ; 2012 ; International Journal of Bilingualism Volume 16 ; 16 >
 
       }
 
@@ -13774,7 +13774,7 @@
         au < doNotProcess ; 2009 ; IFLA Journal Volume 35 ; 35 >
         au < released ; 2010 ; IFLA Journal Volume 36 ; 36 >
         au < manifest ; 2011 ; IFLA Journal Volume 37 ; 37 >
-        au < expected ; 2012 ; IFLA Journal Volume 38 ; 38 >
+        au < manifest ; 2012 ; IFLA Journal Volume 38 ; 38 >
 
       }
 
@@ -14186,6 +14186,8 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://has.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[notReady] = manifest page has links with cgi (incorrect).
 
         au < exists ; 2003 ; Humanity & Society Volume 27 ; 27 >
         au < exists ; 2004 ; Humanity & Society Volume 28 ; 28 >
@@ -14195,7 +14197,7 @@
         au < exists ; 2008 ; Humanity & Society Volume 32 ; 32 >
         au < exists ; 2009 ; Humanity & Society Volume 33 ; 33 >
         au < exists ; 2010 ; Humanity & Society Volume 34 ; 34 >
-        au < exists ; 2011 ; Humanity & Society Volume 35 ; 35 >
+        au < notReady ; 2011 ; Humanity & Society Volume 35 ; 35 >
   
       }
       
@@ -18673,7 +18675,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 2009 ; The Journal of Commonwealth Literature Volume 44 ; 44 >
         au < released ; 2010 ; The Journal of Commonwealth Literature Volume 45 ; 45 >
         au < manifest ; 2011 ; The Journal of Commonwealth Literature Volume 46 ; 46 >
-        au < expected ; 2012 ; The Journal of Commonwealth Literature Volume 47 ; 47 >
+        au < manifest ; 2012 ; The Journal of Commonwealth Literature Volume 47 ; 47 >
 
       }
 
@@ -20045,7 +20047,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < doNotProcess ; 2009 ; Journal of Emerging Market Finance Volume 8 ; 8 >
         au < manifest ; 2010 ; Journal of Emerging Market Finance Volume 9 ; 9 >
         au < manifest ; 2011 ; Journal of Emerging Market Finance Volume 10 ; 10 >
-        au < expected ; 2012 ; Journal of Emerging Market Finance Volume 11 ; 11 >
+        au < manifest ; 2012 ; Journal of Emerging Market Finance Volume 11 ; 11 >
 
       }
 
@@ -22025,7 +22027,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < doNotProcess ; 2009 ; Journal of Intellectual Disabilities Volume 13 ; 13 >
         au < manifest ; 2010 ; Journal of Intellectual Disabilities Volume 14 ; 14 >
         au < manifest ; 2011 ; Journal of Intellectual Disabilities Volume 15 ; 15 >
-        au < expected ; 2012 ; Journal of Intellectual Disabilities Volume 16 ; 16 >
+        au < manifest ; 2012 ; Journal of Intellectual Disabilities Volume 16 ; 16 >
 
       }
 
@@ -22984,7 +22986,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < doNotProcess ; 2009 ; Journal of Mixed Methods Research Volume 3 ; 3 >
         au < manifest ; 2010 ; Journal of Mixed Methods Research Volume 4 ; 4 >
         au < manifest ; 2011 ; Journal of Mixed Methods Research Volume 5 ; 5 >
-        au < expected ; 2012 ; Journal of Mixed Methods Research Volume 6 ; 6 >
+        au < manifest ; 2012 ; Journal of Mixed Methods Research Volume 6 ; 6 >
 
       }
 
@@ -24082,7 +24084,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Journal of Research in Music Education Volume 57 ; 57 >
         au < manifest ; 2010 ; Journal of Research in Music Education Volume 58 ; 58 >
         au < manifest ; 2011 ; Journal of Research in Music Education Volume 59 ; 59 >
-        au < expected ; 2012 ; Journal of Research in Music Education Volume 60 ; 60 >
+        au < manifest ; 2012 ; Journal of Research in Music Education Volume 60 ; 60 >
 
       }
 
@@ -24610,7 +24612,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Journal of Sport & Social Issues Volume 33 ; 33 >
         au < manifest ; 2010 ; Journal of Sport & Social Issues Volume 34 ; 34 >
         au < manifest ; 2011 ; Journal of Sport & Social Issues Volume 35 ; 35 >
-        au < expected ; 2012 ; Journal of Sport & Social Issues Volume 36 ; 36 >
+        au < manifest ; 2012 ; Journal of Sport & Social Issues Volume 36 ; 36 >
 
       }
 
@@ -28234,7 +28236,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; NASSP Bulletin Volume 93 ; 93 >
         au < manifest ; 2010 ; NASSP Bulletin Volume 94 ; 94 >
         au < manifest ; 2011 ; NASSP Bulletin Volume 95 ; 95 >
-        au < expected ; 2012 ; NASSP Bulletin Volume 96 ; 96 >
+        au < manifest ; 2012 ; NASSP Bulletin Volume 96 ; 96 >
 
       }
 
@@ -29987,7 +29989,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2009 ; Political Research Quarterly Volume 62 ; 62 >
         au < manifest ; 2010 ; Political Research Quarterly Volume 63 ; 63 >
         au < manifest ; 2011 ; Political Research Quarterly Volume 64 ; 64 >
-        au < expected ; 2012 ; Political Research Quarterly Volume 65 ; 65 >
+        au < manifest ; 2012 ; Political Research Quarterly Volume 65 ; 65 >
 
       }
 
@@ -33541,7 +33543,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 >
         au < manifest ; 2010 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 14 ; 14 >
         au < released ; 2011 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 15 ; 15 >
-        au < expected ; 2012 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 16 ; 16 >
+        au < manifest ; 2012 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 16 ; 16 >
         
       }
 
@@ -34243,7 +34245,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Social Science Information Volume 48 ; 48 >
         au < manifest ; 2010 ; Social Science Information Volume 49 ; 49 >
         au < released ; 2011 ; Social Science Information Volume 50 ; 50 >
-        au < expected ; 2012 ; Social Science Information Volume 51 ; 51 >
+        au < manifest ; 2012 ; Social Science Information Volume 51 ; 51 >
 
       }
 
@@ -35039,7 +35041,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Studies in Christian Ethics Volume 22 ; 22 >
         au < manifest ; 2010 ; Studies in Christian Ethics Volume 23 ; 23 >
         au < released ; 2011 ; Studies in Christian Ethics Volume 24 ; 24 >
-        au < expected ; 2012 ; Studies in Christian Ethics Volume 25 ; 25 >
+        au < manifest ; 2012 ; Studies in Christian Ethics Volume 25 ; 25 >
 
       }
 
@@ -37637,7 +37639,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Violence Against Women Volume 15 ; 15 >
         au < manifest ; 2010 ; Violence Against Women Volume 16 ; 16 >
         au < released ; 2011 ; Violence Against Women Volume 17 ; 17 >
-        au < expected ; 2012 ; Violence Against Women Volume 18 ; 18 >
+        au < manifest ; 2012 ; Violence Against Women Volume 18 ; 18 >
 
       }
 
@@ -38248,7 +38250,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2008 ; Young Exceptional Children Volume 12 ; 12 >
         au < manifest ; 2009 ; Young Exceptional Children Volume 13 ; 13 >
         au < released ; 2011 ; Young Exceptional Children Volume 14 ; 14 >
-        au < expected ; 2012 ; Young Exceptional Children Volume 15 ; 15 >
+        au < manifest ; 2012 ; Young Exceptional Children Volume 15 ; 15 >
 
       }
 
