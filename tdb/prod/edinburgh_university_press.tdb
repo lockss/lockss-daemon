@@ -943,7 +943,7 @@
       param[journal_id] = nfs
       implicit < status ; year ; name ; param[volume_name] >
       
-      au < exists ; 2012 ; Nottingham French Studies Volume 50 ; 50 >
+      au < manifest ; 2012 ; Nottingham French Studies Volume 50 ; 50 >
   
     }
   
