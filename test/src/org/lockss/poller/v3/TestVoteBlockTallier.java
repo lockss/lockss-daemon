@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlockTallier.java,v 1.1 2012-03-14 22:20:21 barry409 Exp $
+ * $Id: TestVoteBlockTallier.java,v 1.2 2012-03-19 19:11:12 barry409 Exp $
  */
 
 /*
@@ -160,34 +160,34 @@ public class TestVoteBlockTallier extends LockssTestCase {
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(null, voter, 0);
-    assertEquals("1/0/0/0/0/0", voter.votes());
+    assertEquals("1/0/0/0/0/0", voter.getVoteCounts().votes());
 
     voteBlockTallier = new VoteBlockTallier<ParticipantUserData>(comparer);
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(null, voter, 1);
-    assertEquals("0/1/0/0/0/0", voter.votes());
+    assertEquals("0/1/0/0/0/0", voter.getVoteCounts().votes());
 
     voteBlockTallier = new VoteBlockTallier<ParticipantUserData>(comparer);
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteMissing(voter);
-    assertEquals("0/0/1/0/0/0", voter.votes());
+    assertEquals("0/0/1/0/0/0", voter.getVoteCounts().votes());
 
     voteBlockTallier = new VoteBlockTallier<ParticipantUserData>();
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(null, voter, 0);
-    assertEquals("0/0/0/1/0/0", voter.votes());
+    assertEquals("0/0/0/1/0/0", voter.getVoteCounts().votes());
 
     voteBlockTallier = new VoteBlockTallier<ParticipantUserData>(comparer);
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteSpoiled(voter);
-    assertEquals("0/0/0/0/0/1", voter.votes());
+    assertEquals("0/0/0/0/0/1", voter.getVoteCounts().votes());
   }
 }
