@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.18 2011-01-10 09:19:58 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.19 2012-03-19 20:55:12 barry409 Exp $
  */
 
 /*
@@ -334,6 +334,10 @@ public class BlockHasher extends GenericHasher {
     }
   }
 
+  // todo(bhayes): To clone 100M SHA-1 digests takes about 20 seconds
+  // on my desktop; to just reinitialize from the byte[40] takes about
+  // 30 seconds. Given the reach the code goes through to ensure that
+  // digests can be cloned, I'm not convinced it's worth it.
   private void cloneDigests() {
     // Clone initialDigests into peerDigests.
     try {

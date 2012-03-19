@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.15 2010-11-03 06:09:25 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.16 2012-03-19 20:55:12 barry409 Exp $
  */
 
 /*
@@ -865,6 +865,25 @@ public class TestBlockHasher extends LockssTestCase {
     testMultipleDigestsWithInit(1);
     testMultipleDigestsWithInit(1000);
   }
+
+//  static byte[] bytes = ByteArray.makeRandomBytes(40);
+//  static final int multiple = 100000000;
+//
+//  public void testNewDigestTime() throws Exception {
+//    int len = bytes.length;
+//    for (int i = 0; i < multiple; i++) {
+//      MessageDigest.getInstance("SHA-1").update(bytes, 0, len);
+//    }
+//  }
+//
+//  public void testCloneDigestTime() throws Exception {
+//    int len = bytes.length;
+//    MessageDigest digest = MessageDigest.getInstance("SHA-1");
+//    digest.update(bytes, 0, len);
+//    for (int i = 0; i < multiple; i++) {
+//      digest.clone();
+//    }
+//  }
 
   class Event {
     HashBlock hblock;
