@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.3 2012-03-19 18:25:09 barry409 Exp $
+ * $Id: VoteBlockTallier.java,v 1.4 2012-03-19 20:08:33 barry409 Exp $
  */
 
 /*
@@ -46,7 +46,8 @@ import org.lockss.util.Logger;
  */
 public class VoteBlockTallier<T> {
 
-  // todo(bhayes): There should be an enum of these things.
+  // todo(bhayes): There should be an enum of these things. But that
+  // leads to EnumMap<Vote, Long> with boxed longs.
   interface VoteBlockTally<U> {
     public void voteAgreed(U id);
     public void voteDisagreed(U id);
