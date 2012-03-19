@@ -1452,7 +1452,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Animation Volume 4 ; 4 ; >
       au < released ; crawling ; 2010 ; Animation Volume 5 ; 5 ;  >
       au < released ; crawling ; 2011 ; Animation Volume 6 ; 6 ; >
-      au < expected ; exists ; 2012 ; Animation Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2012 ; Animation Volume 7 ; 7 ; >
 
     }
 
@@ -2642,7 +2642,7 @@
 
       au < released ; crawling ; 2010 ; Australian & New Zealand Journal of Criminology Volume 43 ; 43 ; >
       au < released ; crawling ; 2011 ; Australian & New Zealand Journal of Criminology Volume 44 ; 44 ; >
-      au < expected ; exists ; 2012 ; Australian & New Zealand Journal of Criminology Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2012 ; Australian & New Zealand Journal of Criminology Volume 45 ; 45 ; >
 
     }
    
@@ -3267,7 +3267,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; British Journalism Review Volume 20 ; 20 ; >
       au < released ; crawling ; 2010 ; British Journalism Review Volume 21 ; 21 ;  >
       au < released ; crawling ; 2011 ; British Journalism Review Volume 22 ; 22 ; >
-      au < expected ; exists ; 2012 ; British Journalism Review Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2012 ; British Journalism Review Volume 23 ; 23 ; >
 
     }
 
@@ -6135,7 +6135,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Criminal Justice Policy Review Volume 20 ; 20 ; >
       au < released ; crawling ; 2010 ; Criminal Justice Policy Review Volume 21 ; 21 ;  >
       au < released ; crawling ; 2011 ; Criminal Justice Policy Review Volume 22 ; 22 ; >
-      au < expected ; exists ; 2012 ; Criminal Justice Policy Review Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2012 ; Criminal Justice Policy Review Volume 23 ; 23 ; >
 
     }
 
@@ -11957,7 +11957,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; IFLA Journal Volume 35 ; 35 ; >
       au < released ; crawling ; 2010 ; IFLA Journal Volume 36 ; 36 ;  >
       au < released ; crawling ; 2011 ; IFLA Journal Volume 37 ; 37 ; >
-      au < expected ; exists ; 2012 ; IFLA Journal Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2012 ; IFLA Journal Volume 38 ; 38 ; >
 
     }
 
@@ -12757,7 +12757,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Bilingualism Volume 13 ; 13 ; >
       au < released ; crawling ; 2010 ; International Journal of Bilingualism Volume 14 ; 14 ;  >
       au < released ; crawling ; 2011 ; International Journal of Bilingualism Volume 15 ; 15 ; >
-      au < expected ; exists ; 2012 ; International Journal of Bilingualism Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2012 ; International Journal of Bilingualism Volume 16 ; 16 ; >
 
     }
 
@@ -18588,7 +18588,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Hispanic Higher Education Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; Journal of Hispanic Higher Education Volume 9 ; 9 ;  >
       au < released ; crawling ; 2011 ; Journal of Hispanic Higher Education Volume 10 ; 10 ; >
-      au < expected ; exists ; 2012 ; Journal of Hispanic Higher Education Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2012 ; Journal of Hispanic Higher Education Volume 11 ; 11 ; >
 
     }
 
@@ -22276,7 +22276,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of the American Psychoanalytic Association Volume 57 ; 57 ; >
       au < released ; manifest ; 2010 ; Journal of the American Psychoanalytic Association Volume 58 ; 58 ;  >
       au < released ; crawling ; 2011 ; Journal of the American Psychoanalytic Association Volume 59 ; 59 ; >
-      au < expected ; exists ; 2012 ; Journal of the American Psychoanalytic Association Volume 60 ; 60 ; >
+      au < manifest ; exists ; 2012 ; Journal of the American Psychoanalytic Association Volume 60 ; 60 ; >
 
     }
 
@@ -25055,7 +25055,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; NASSP Bulletin Volume 93 ; 93 ; >
       au < crawling ; exists ; 2010 ; NASSP Bulletin Volume 94 ; 94 ;  >
       au < released ; crawling ; 2011 ; NASSP Bulletin Volume 95 ; 95 ; >
-      au < expected ; exists ; 2012 ; NASSP Bulletin Volume 96 ; 96 ; >
+      au < manifest ; exists ; 2012 ; NASSP Bulletin Volume 96 ; 96 ; >
 
     }
 
@@ -30349,7 +30349,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 ; >
       au < manifest ; exists ; 2010 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 14 ; 14 ;  >
       au < released ; crawling ; 2011 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 15 ; 15 ; >
-      au < expected ; exists ; 2012 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2012 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 16 ; 16 ; >
 
     }
 
@@ -33275,10 +33275,10 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2004-2005 ; Tourism and Hospitality Research Volume 5 ; 5 ; >
-      au < exists ; exists ; 2005-2006 ; Tourism and Hospitality Research Volume 6 ; 6 ; >
-      au < exists ; exists ; 2006-2007 ; Tourism and Hospitality Research Volume 7 ; 7 ; >
-      au < exists ; exists ; 2008 ; Tourism and Hospitality Research Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2004-2005 ; Tourism and Hospitality Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2005-2006 ; Tourism and Hospitality Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2006-2007 ; Tourism and Hospitality Research Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2008 ; Tourism and Hospitality Research Volume 8 ; 8 ; >
       au < manifest ; exists ; 2009 ; Tourism and Hospitality Research Volume 9 ; 9 ; >
       au < manifest ; exists ; 2010 ; Tourism and Hospitality Research Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; Tourism and Hospitality Research Volume 11 ; 11 ; >
