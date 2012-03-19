@@ -120,7 +120,7 @@
     </list>
   </entry>
   <entry>
-    <string>au_manifest</string>
+    <string>au_permission_url</string>
     <list>
       <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;year=%d&quot;, base_url, journal_code, year</string>
       <string>&quot;%slockss.htm&quot;, resolver_url</string>

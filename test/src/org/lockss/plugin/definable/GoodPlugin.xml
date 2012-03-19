@@ -25,9 +25,10 @@
     </list>
   </entry>
   <entry>
+    <!-- The old name for au_permission_url -->
     <string>au_manifest</string>
     <list>
-      <string>&quot;%s&quot;, base_url</string>
+      <string>&quot;%sperm.page&quot;, base_url</string>
     </list>
   </entry>
   <entry>

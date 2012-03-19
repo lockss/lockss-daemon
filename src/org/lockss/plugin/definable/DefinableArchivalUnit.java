@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.88 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.89 2012-03-19 17:54:24 tlipkis Exp $
  */
 
 /*
@@ -85,7 +85,11 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   public static final String KEY_AU_CRAWL_WINDOW_SER = "au_crawlwindow_ser";
   public static final String KEY_AU_EXPECTED_BASE_PATH = "au_expected_base_path";
   public static final String KEY_AU_CRAWL_DEPTH = "au_crawl_depth";
-  public static final String KEY_AU_MANIFEST = "au_manifest";
+
+  public static final String KEY_AU_PERMISSION_URL = "au_permission_url";
+  // The old name of au_permission_url
+  public static final String KEY_AU_MANIFEST_OBSOLESCENT = "au_manifest";
+
   //public static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
   public static final String KEY_AU_EXPLODER_HELPER = "au_exploder_helper";
   public static final String KEY_AU_EXPLODER_PATTERN = "au_exploder_pattern";
@@ -144,7 +148,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   static Map<String,PrintfContext> printfKeysContext = new HashMap();
   static {
     printfKeysContext.put(KEY_AU_START_URL, PrintfContext.URL);
-    printfKeysContext.put(KEY_AU_MANIFEST, PrintfContext.URL);
+    printfKeysContext.put(KEY_AU_PERMISSION_URL, PrintfContext.URL);
     printfKeysContext.put(KEY_AU_START_URL, PrintfContext.URL);
 
     printfKeysContext.put(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN,
@@ -174,7 +178,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected List<String> getPermissionPages() {
-    List res = convertUrlListList(KEY_AU_MANIFEST);
+    List res = convertUrlListList(KEY_AU_PERMISSION_URL);
     if (res == null) {
       return super.getPermissionPages();
     }

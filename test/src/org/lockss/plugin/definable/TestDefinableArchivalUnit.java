@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.54 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.55 2012-03-19 17:54:24 tlipkis Exp $
  */
 
 /*
@@ -472,7 +472,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     defMap.putString(ArchivalUnit.KEY_AU_START_URL,
 		     "\"%svolume/%i.html\", base_url, volume");
     String permUrl = "http://other.host/permission.html";
-    defMap.putString(DefinableArchivalUnit.KEY_AU_MANIFEST,
+    defMap.putString(DefinableArchivalUnit.KEY_AU_PERMISSION_URL,
 		     "\"" + permUrl + "\"");
     setupAu();
 
@@ -616,7 +616,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     String baseKey = ConfigParamDescr.BASE_URL.getKey();
     String volKey = ConfigParamDescr.VOLUME_NUMBER.getKey();
     setStdConfigProps();
-    defMap.putString(DefinableArchivalUnit.KEY_AU_MANIFEST,
+    defMap.putString(DefinableArchivalUnit.KEY_AU_PERMISSION_URL,
 		     "\"%scontents-by-date.%d.shtml\", " +
 		     baseKey + ", " + volKey);
     defMap.putString(ArchivalUnit.KEY_AU_START_URL,
@@ -636,7 +636,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     String baseKey = ConfigParamDescr.BASE_URL.getKey();
     String b2Key = ConfigParamDescr.BASE_URL2.getKey();
     configProps.add(ConfigParamDescr.BASE_URL2);
-    defMap.putCollection(DefinableArchivalUnit.KEY_AU_MANIFEST,
+    defMap.putCollection(DefinableArchivalUnit.KEY_AU_PERMISSION_URL,
 			 ListUtil.list("\"%sfoo/\", " + baseKey,
 				       "\"%sbar/\", " + b2Key));
     defMap.putString(ArchivalUnit.KEY_AU_START_URL,
@@ -653,6 +653,25 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertSameElements(ListUtil.list("http://www.example.com/",
 			       "http://mmm.example.org/"),
 		 cau.getUrlStems());
+  }
+
+  public void testObsolescentAuManifest() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a plugin definition with the old au_manifest
+    String pname = "org.lockss.plugin.definable.GoodPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue("Plugin was not successfully loaded",
+	       pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+
+    assertEquals(ListUtil.list("http://base.foo/base_path/perm.page"),
+		 au.getPermissionPages());
   }
 
   public void testGetLinkExtractor() {

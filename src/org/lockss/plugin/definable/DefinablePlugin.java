@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.64 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.65 2012-03-19 17:54:24 tlipkis Exp $
  */
 
 /*
@@ -151,6 +151,7 @@ public class DefinablePlugin extends BasePlugin {
 			 ClassLoader loader) {
     mapName = extMapName;
     this.classLoader = loader;
+    processObsolescentFields(defMap);
     this.definitionMap = defMap;
     super.initPlugin(daemon);
     initMimeMap();
@@ -199,6 +200,15 @@ public class DefinablePlugin extends BasePlugin {
     }
     loadedFromUrls = urls;
     return res;
+  }
+
+  // Move any values from obsolescent keys to their official key
+  void processObsolescentFields(TypedEntryMap map) {
+    if (map.containsKey(DefinableArchivalUnit.KEY_AU_MANIFEST_OBSOLESCENT)) {
+      map.setMapElement(DefinableArchivalUnit.KEY_AU_PERMISSION_URL,
+			map.getMapElement(DefinableArchivalUnit.KEY_AU_MANIFEST_OBSOLESCENT));
+      map.removeMapElement(DefinableArchivalUnit.KEY_AU_MANIFEST_OBSOLESCENT);
+    }
   }
 
   /** If in testing mode FOO, copy values from FOO_override map, if any, to

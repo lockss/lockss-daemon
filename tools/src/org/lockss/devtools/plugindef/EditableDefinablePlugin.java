@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.34 2010-07-21 06:12:54 tlipkis Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.35 2012-03-19 17:54:24 tlipkis Exp $
  */
 
 /*
@@ -566,21 +566,21 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_DEFAULT_PAUSE_TIME);
   }
 
-  public void setAuManifestPage(String manifest) {
+  public void setAuPermissionUrl(String manifest) {
     logger.info("Setting the AU manifest page to: " + manifest);
-    definitionMap.putString(DefinableArchivalUnit.KEY_AU_MANIFEST, manifest);
+    definitionMap.putString(DefinableArchivalUnit.KEY_AU_PERMISSION_URL, manifest);
   }
 
-  public String getAuManifestPage() {
+  public String getAuPermissionUrl() {
     // FIXME: default?
-    String ret = definitionMap.getString(DefinableArchivalUnit.KEY_AU_MANIFEST, getAuStartUrl());
+    String ret = definitionMap.getString(DefinableArchivalUnit.KEY_AU_PERMISSION_URL, getAuStartUrl());
     logger.info("The AU manifest page is: " + ret);
     return ret;
   }
 
-  public void removeAuManifestPage() {
+  public void removeAuPermissionUrl() {
     logger.info("Removing the AU manifest page");
-    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_MANIFEST);
+    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_PERMISSION_URL);
   }
 
   public void setPluginName(String name) {
