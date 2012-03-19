@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.2 2012-03-14 23:42:06 barry409 Exp $
+ * $Id: VoteBlockTallier.java,v 1.3 2012-03-19 18:25:09 barry409 Exp $
  */
 
 /*
@@ -40,10 +40,13 @@ import org.lockss.util.Logger;
 
 
 /**
- * Representation of the tally of many votes on an individual URL.
+ * Representation of the tally of many votes on an individual
+ * URL. This class encapsulates what it means to compare a VoteBlock
+ * to a HashBlock.
  */
 public class VoteBlockTallier<T> {
 
+  // todo(bhayes): There should be an enum of these things.
   interface VoteBlockTally<U> {
     public void voteAgreed(U id);
     public void voteDisagreed(U id);

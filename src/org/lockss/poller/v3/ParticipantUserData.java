@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.26 2012-03-19 17:41:23 barry409 Exp $
+ * $Id: ParticipantUserData.java,v 1.27 2012-03-19 18:25:09 barry409 Exp $
  */
 
 /*
@@ -46,26 +46,94 @@ public class ParticipantUserData implements LockssSerializable {
 
   private static transient final Logger log = Logger.getLogger("V3Poller");
 
+  public static class VoteCounts implements LockssSerializable {
+    long agreedVotes;
+    long disagreedVotes;
+    long pollerOnlyVotes;
+    long voterOnlyVotes;
+    long neitherVotes;
+    long spoiledVotes;
+
+    private VoteCounts() {
+    }
+
+    public VoteCounts(VoteCounts voteCounts) {
+      agreedVotes = voteCounts.agreedVotes;
+      disagreedVotes = voteCounts.disagreedVotes;
+      pollerOnlyVotes = voteCounts.pollerOnlyVotes;
+      voterOnlyVotes = voteCounts.voterOnlyVotes;
+      neitherVotes = voteCounts.neitherVotes;
+      spoiledVotes = voteCounts.spoiledVotes;
+    }
+
+    // For testing
+    static String votes(long agreedVotes, long disagreedVotes,
+			long pollerOnlyVotes, long voterOnlyVotes,
+			long neitherVotes, long spoiledVotes) {
+      return agreedVotes + "/" + disagreedVotes + "/" + pollerOnlyVotes + "/" +
+	voterOnlyVotes + "/" + neitherVotes + "/" + spoiledVotes;
+    }
+
+    /** 
+     * Return the percent agreement for this peer.
+     * 
+     * @return The percent agreement for this peer (a number between
+     * 0.0 and 1.0, inclusive)
+     */
+    public float getPercentAgreement() {
+      long talliedVotes = talliedVotes();
+      log.debug2("[getPercentAgreement] agreeVotes = "
+		 + agreedVotes + "; talliedVotes = " + talliedVotes);
+      if (agreedVotes > 0 && talliedVotes > 0) {
+	return (float)agreedVotes / (float)talliedVotes;
+      } else {
+	return 0.0f;
+      }
+    }
+
+    /**
+     * @return the total of the "significant" votes.
+     * This excludes "neither" and "spoiled" votes.
+     */
+    long talliedVotes() {
+      return agreedVotes + disagreedVotes + pollerOnlyVotes + voterOnlyVotes;
+    }
+
+    /**
+     * @return a String representing the votes by category, separated by "/":
+     * agree/disagree/pollerOnly/voterOnly/neither/spoiled
+     */
+    String votes() {
+      return votes(agreedVotes, disagreedVotes,
+		   pollerOnlyVotes, voterOnlyVotes,
+		   neitherVotes, spoiledVotes);
+    }
+  }
+
+  /**
+   * A static VoteBlockTally to increment the vote for any particular
+   * voter.
+   */
   public static transient final 
     VoteBlockTallier.VoteBlockTally<ParticipantUserData> voteTally =
       new VoteBlockTallier.VoteBlockTally<ParticipantUserData>() {
     public void voteAgreed(ParticipantUserData voter) {
-      voter.agreedVotes++;
+      voter.voteCounts.agreedVotes++;
     }
     public void voteDisagreed(ParticipantUserData voter) {
-      voter.disagreedVotes++;
+      voter.voteCounts.disagreedVotes++;
     }
     public void votePollerOnly(ParticipantUserData voter) {
-      voter.pollerOnlyVotes++;
+      voter.voteCounts.pollerOnlyVotes++;
     }
     public void voteVoterOnly(ParticipantUserData voter) {
-      voter.voterOnlyVotes++;
+      voter.voteCounts.voterOnlyVotes++;
     }
     public void voteNeither(ParticipantUserData voter) {
-      voter.neitherVotes++;
+      voter.voteCounts.neitherVotes++;
     }
     public void voteSpoiled(ParticipantUserData voter) {
-      voter.spoiledVotes++;
+      voter.voteCounts.spoiledVotes++;
     }
   };
 
@@ -86,12 +154,7 @@ public class ParticipantUserData implements LockssSerializable {
   private PsmInterpStateBean psmState;
   private int status = V3Poller.PEER_STATUS_INITIALIZED;
   private String statusMsg = null;
-  private long spoiledVotes;
-  private long agreedVotes;
-  private long disagreedVotes;
-  private long pollerOnlyVotes;
-  private long voterOnlyVotes;
-  private long neitherVotes;
+  private VoteCounts voteCounts = new VoteCounts();
   /** The poll NAK code, if any */
   private PollNak pollNak;
 
@@ -361,11 +424,10 @@ public class ParticipantUserData implements LockssSerializable {
   }
 
   /**
-   * @return the total of the "significant" votes.
-   * This excludes "neither" and "spoiled" votes.
+   * @return an copy of the voteCounts for this peer.
    */
-  private long talliedVotes() {
-    return agreedVotes + disagreedVotes + pollerOnlyVotes + voterOnlyVotes;
+  public VoteCounts getVoteCounts() {
+    return new VoteCounts(voteCounts);
   }
 
   /** 
@@ -374,32 +436,7 @@ public class ParticipantUserData implements LockssSerializable {
    * @return The percent agreement for this peer (a number between 0.0 and 1.0)
    */
   public float getPercentAgreement() {
-    long talliedVotes = talliedVotes();
-    log.debug2("[getPercentAgreement] agreeVotes = "
-               + agreedVotes + "; talliedVotes = " + talliedVotes);
-    if (agreedVotes > 0 && talliedVotes > 0) {
-      return (float)agreedVotes / (float)talliedVotes;
-    } else {
-      return 0.0f;
-    }
-  }
-
-  // For testing
-  static String votes(long agreedVotes, long disagreedVotes,
-		      long pollerOnlyVotes, long voterOnlyVotes,
-		      long neitherVotes, long spoiledVotes) {
-    return agreedVotes + "/" + disagreedVotes + "/" + pollerOnlyVotes + "/" +
-      voterOnlyVotes + "/" + neitherVotes + "/" + spoiledVotes;
-  }
-
-  /**
-   * @return a String representing the votes by category, separated by "/":
-   * agree/disagree/pollerOnly/voterOnly/neither/spoiled
-   */
-  String votes() {
-    return votes(agreedVotes, disagreedVotes,
-		 pollerOnlyVotes, voterOnlyVotes,
-		 neitherVotes, spoiledVotes);
+    return voteCounts.getPercentAgreement();
   }
 
   public PollNak getPollNak() {
