@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.25 2012-03-14 22:20:21 barry409 Exp $
+ * $Id: ParticipantUserData.java,v 1.26 2012-03-19 17:41:23 barry409 Exp $
  */
 
 /*
@@ -43,6 +43,8 @@ import java.util.*;
  * Persistent user data state object used by V3Poller state machine.
  */
 public class ParticipantUserData implements LockssSerializable {
+
+  private static transient final Logger log = Logger.getLogger("V3Poller");
 
   public static transient final 
     VoteBlockTallier.VoteBlockTally<ParticipantUserData> voteTally =
@@ -357,17 +359,22 @@ public class ParticipantUserData implements LockssSerializable {
   public void setPollState(PollerStateBean state) {
     this.pollState = state;
   }
-  
+
+  /**
+   * @return the total of the "significant" votes.
+   * This excludes "neither" and "spoiled" votes.
+   */
+  private long talliedVotes() {
+    return agreedVotes + disagreedVotes + pollerOnlyVotes + voterOnlyVotes;
+  }
+
   /** 
    * Return the percent agreement for this peer.
    * 
    * @return The percent agreement for this peer (a number between 0.0 and 1.0)
    */
-  private static Logger log = Logger.getLogger("V3Poller");
-
   public float getPercentAgreement() {
-    long talliedVotes = agreedVotes + disagreedVotes
-      + pollerOnlyVotes + voterOnlyVotes;
+    long talliedVotes = talliedVotes();
     log.debug2("[getPercentAgreement] agreeVotes = "
                + agreedVotes + "; talliedVotes = " + talliedVotes);
     if (agreedVotes > 0 && talliedVotes > 0) {
