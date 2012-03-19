@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.37 2012-01-31 07:21:16 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.38 2012-03-19 21:16:13 barry409 Exp $
  */
 
 /*
@@ -541,6 +541,14 @@ public class V3PollStatus {
                                          ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor("agreement", "Agreement",
                                          ColumnDescriptor.TYPE_AGREEMENT),
+                    new ColumnDescriptor("numagree", "Agreeing URLs",
+                                         ColumnDescriptor.TYPE_INT),
+                    new ColumnDescriptor("numdisagree", "Disagreeing URLs",
+                                         ColumnDescriptor.TYPE_INT),
+                    new ColumnDescriptor("numpolleronly", "Poller-only URLs",
+                                         ColumnDescriptor.TYPE_INT),
+                    new ColumnDescriptor("numvoteronly", "Voter-only URLs",
+                                         ColumnDescriptor.TYPE_INT),
                     new ColumnDescriptor("state", "PSM State",
                                          ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor("when", "When",
@@ -609,10 +617,15 @@ public class V3PollStatus {
 	      : peer.getIdString());
       row.put("peerStatus", voter.getStatusString());
       row.put("sort", sort);
-      PsmInterp interp = voter.getPsmInterp();
       if (voter.hasVoted()) {
-	row.put("agreement", voter.getPercentAgreement());
+	ParticipantUserData.VoteCounts voteCounts = voter.getVoteCounts();
+	row.put("agreement", voteCounts.getPercentAgreement());
+	row.put("numagree", voteCounts.agreedVotes);
+	row.put("numdisagree", voteCounts.disagreedVotes);
+	row.put("numpolleronly", voteCounts.pollerOnlyVotes);
+	row.put("numvoteronly", voteCounts.voterOnlyVotes);
       }
+      PsmInterp interp = voter.getPsmInterp();
       if (interp != null) {
 	PsmState state = interp.getCurrentState();
 	if (state != null) {
