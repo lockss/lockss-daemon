@@ -17029,7 +17029,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jax.sagepub.com/
-        implicit < status ; year ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume_name] >
 
 
         au < exists ; 2007 ; Journal of Applied Social Science Volume 1 ; 1 >
