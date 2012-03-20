@@ -17,14 +17,14 @@
 
     implicit < status ; year ; name ; volume ; param[year] >
 
-    au < testing ; 2005 ; Current Oncology Volume 12 ; 12 ; 2005 >
-    au < testing ; 2006 ; Current Oncology Volume 13 ; 13 ; 2006 >
-    au < testing ; 2007 ; Current Oncology Volume 14 ; 14 ; 2007 >
-    au < testing ; 2008 ; Current Oncology Volume 15 ; 15 ; 2008 >
-    au < testing ; 2009 ; Current Oncology Volume 16 ; 16 ; 2009 >
-    au < testing ; 2010 ; Current Oncology Volume 17 ; 17 ; 2010 >
-    au < testing ; 2011 ; Current Oncology Volume 18 ; 18 ; 2011 >
-    au < testing ; 2012 ; Current Oncology Volume 19 ; 19 ; 2012 >
+    au < ready ; 2005 ; Current Oncology Volume 12 ; 12 ; 2005 >
+    au < ready ; 2006 ; Current Oncology Volume 13 ; 13 ; 2006 >
+    au < ready ; 2007 ; Current Oncology Volume 14 ; 14 ; 2007 >
+    au < ready ; 2008 ; Current Oncology Volume 15 ; 15 ; 2008 >
+    au < ready ; 2009 ; Current Oncology Volume 16 ; 16 ; 2009 >
+    au < ready ; 2010 ; Current Oncology Volume 17 ; 17 ; 2010 >
+    au < ready ; 2011 ; Current Oncology Volume 18 ; 18 ; 2011 >
+    au < ready ; 2012 ; Current Oncology Volume 19 ; 19 ; 2012 >
 
   }
 
