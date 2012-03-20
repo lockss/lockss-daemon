@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.33 2010-05-18 06:15:57 tlipkis Exp $
+ * $Id: StatusServiceImpl.java,v 1.34 2012-03-20 17:38:37 tlipkis Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public class StatusServiceImpl
     }
     if (statusAccessor == null) {
       throw new StatusService.NoSuchTableException("Table not found: "
-						   +tableName+" "+key);
+						   + tableName);
     }
     if (statusAccessor.requiresKey() && table.getKey() == null) {
       throw new StatusService.NoSuchTableException(tableName +
