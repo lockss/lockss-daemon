@@ -28,6 +28,7 @@
       au < released ; 2009 ; Clinical Diabetes Volume 27 ; 27 >
       au < released ; 2010 ; Clinical Diabetes Volume 28 ; 28 >
       au < released ; 2011 ; Clinical Diabetes Volume 29 ; 29 >
+      au < manifest ; 2012 ; Clinical Diabetes Volume 30 ; 30 >
 
     }
 
@@ -94,6 +95,7 @@
       au < released ; 2009 ; Diabetes Volume 58 ; 58 >
       au < released ; 2010 ; Diabetes Volume 59 ; 59 >
       au < released ; 2011 ; Diabetes Volume 60 ; 60 >
+      au < manifest ; 2012 ; Diabetes Volume 61 ; 61 >
 
     }
 
@@ -147,6 +149,7 @@
       au < released ; 2009 ; Diabetes Care Volume 32 ; 32 >
       au < released ; 2010 ; Diabetes Care Volume 33 ; 33 >
       au < released ; 2011 ; Diabetes Care Volume 34 ; 34 >
+      au < released ; 2012 ; Diabetes Care Volume 35 ; 35 >
 
     }
 
@@ -166,6 +169,7 @@
       param[base_url] = http://spectrum.diabetesjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
       comment[ds24] = found a login page
+      comment[ds25] = login page through manifest
 
       au < released ; 2001 ; Diabetes Spectrum Volume 14 ; 14 >
       au < released ; 2002 ; Diabetes Spectrum Volume 15 ; 15 >
@@ -178,6 +182,7 @@
       au < released ; 2009 ; Diabetes Spectrum Volume 22 ; 22 >
       au < released ; 2010 ; Diabetes Spectrum Volume 23 ; 23 >
       au < notReady ; 2011 ; Diabetes Spectrum Volume 24 ; 24 >
+      au < manifest ; 2012 ; Diabetes Spectrum Volume 25 ; 25 >
 
     }
 
