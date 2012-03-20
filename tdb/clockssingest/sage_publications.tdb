@@ -21053,6 +21053,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment [notReady] = consistent low poll
 
       au < manifest ; exists ; 2000 ; Journal of Renin-Angiotensin-Aldosterone System Volume 1 ; 1 ; >
       au < manifest ; exists ; 2001 ; Journal of Renin-Angiotensin-Aldosterone System Volume 2 ; 2 ; >
@@ -21064,7 +21065,7 @@
       au < manifest ; exists ; 2007 ; Journal of Renin-Angiotensin-Aldosterone System Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Renin-Angiotensin-Aldosterone System Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Renin-Angiotensin-Aldosterone System Volume 10 ; 10 ; >
-      au < released ; manifest ; 2010 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 11 ; 11 ;  >
+      au < notReady ; exists ; 2010 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 11 ; 11 ;  >
       au < released ; crawling ; 2011 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 12 ; 12 ; >
       au < manifest ; exists ; 2012 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 13 ; 13 ; >
 
@@ -24764,6 +24765,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment [notReady] = consistent low poll
 
       au < manifest ; exists ; 1914 ; Music Educators Journal Volume 1 ; 1 ; >
       au < manifest ; exists ; 1915 ; Music Educators Journal Volume 2 ; 2 ; >
@@ -24861,7 +24863,7 @@
       au < manifest ; exists ; 2007 ; Music Educators Journal Volume 94 ; 94 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Music Educators Journal Volume 95 ; 95 ; >
       au < manifest ; exists ; 2009 ; Music Educators Journal Volume 96 ; 96 ;  >
-      au < crawling ; exists ; 2010 ; Music Educators Journal Volume 97 ; 97 ;  >
+      au < notReady ; exists ; 2010 ; Music Educators Journal Volume 97 ; 97 ;  >
       au < released ; crawling ; 2011 ; Music Educators Journal Volume 98 ; 98 ; >
       au < expected ; exists ; 2012 ; Music Educators Journal Volume 99 ; 99 ; >
 
@@ -24918,6 +24920,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment [notReady] = consistent low poll
 
       au < manifest ; exists ; 2001 ; NASN School Nurse Volume 16 ; 16 ; >
       au < manifest ; exists ; 2002 ; NASN School Nurse Volume 17 ; 17 ; >
@@ -24928,7 +24931,7 @@
       au < manifest ; exists ; 2007 ; NASN School Nurse Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; NASN School Nurse Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; NASN School Nurse Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2010 ; NASN School Nurse Volume 25 ; 25 ;  >
+      au < notReady ; exists ; 2010 ; NASN School Nurse Volume 25 ; 25 ;  >
       au < released ; crawling ; 2011 ; NASN School Nurse Volume 26 ; 26 ; >
       au < manifest ; exists ; 2012 ; NASN School Nurse Volume 27 ; 27 ; >
 
@@ -24959,6 +24962,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment [notReady] = consistent low poll
 
       au < manifest ; exists ; 1917 ; NASSP Bulletin Volume 1 ; 1 ; >
       au < manifest ; exists ; 1918 ; NASSP Bulletin Volume 2 ; 2 ; >
@@ -25053,7 +25057,7 @@
       au < manifest ; exists ; 2007 ; NASSP Bulletin Volume 91 ; 91 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; NASSP Bulletin Volume 92 ; 92 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; NASSP Bulletin Volume 93 ; 93 ; >
-      au < crawling ; exists ; 2010 ; NASSP Bulletin Volume 94 ; 94 ;  >
+      au < notReady ; exists ; 2010 ; NASSP Bulletin Volume 94 ; 94 ;  >
       au < released ; crawling ; 2011 ; NASSP Bulletin Volume 95 ; 95 ; >
       au < manifest ; exists ; 2012 ; NASSP Bulletin Volume 96 ; 96 ; >
 
@@ -26818,6 +26822,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment [notReady] = consistent low poll
 
       au < manifest ; exists ; 2000 ; Policy, Politics, & Nursing Practice Volume 1 ; 1 ; >
       au < manifest ; exists ; 2001 ; Policy, Politics, & Nursing Practice Volume 2 ; 2 ; >
@@ -26829,7 +26834,7 @@
       au < manifest ; exists ; 2007 ; Policy, Politics, & Nursing Practice Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Policy, Politics, & Nursing Practice Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Policy, Politics, & Nursing Practice Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2010 ; Policy, Politics, & Nursing Practice Volume 11 ; 11 ;  >
+      au < notReady ; exists ; 2010 ; Policy, Politics, & Nursing Practice Volume 11 ; 11 ;  >
       au < released ; crawling ; 2011 ; Policy, Politics, & Nursing Practice Volume 12 ; 12 ; >
       au < expected ; exists ; 2012 ; Policy, Politics, & Nursing Practice Volume 13 ; 13 ; >
 
@@ -27023,6 +27028,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment [notReady] = consistent low poll
 
       au < manifest ; exists ; 1970 ; Politics & Society Volume 1 ; 1 ; >
       au < manifest ; exists ; 1971 ; Politics & Society Volume 2 ; 2 ; >
@@ -27061,7 +27067,7 @@
       au < manifest ; exists ; 2007 ; Politics & Society Volume 35 ; 35 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Politics & Society Volume 36 ; 36 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Politics & Society Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2010 ; Politics & Society Volume 38 ; 38 ;  >
+      au < notReady ; exists ; 2010 ; Politics & Society Volume 38 ; 38 ;  >
       au < released ; crawling ; 2011 ; Politics & Society Volume 39 ; 39 ; >
       au < manifest ; exists ; 2012 ; Politics & Society Volume 40 ; 40 ; >
 
@@ -27132,6 +27138,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment [notReady] = consistent low poll
 
       au < manifest ; exists ; 1921 ; The Prison Journal Volume 1 ; 1 ; >
       au < manifest ; exists ; 1922 ; The Prison Journal Volume 2 ; 2 ; >
@@ -27222,7 +27229,7 @@
       au < manifest ; exists ; 2007 ; The Prison Journal Volume 87 ; 87 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; The Prison Journal Volume 88 ; 88 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The Prison Journal Volume 89 ; 89 ; >
-      au < crawling ; exists ; 2010 ; The Prison Journal Volume 90 ; 90 ;  >
+      au < notReady ; exists ; 2010 ; The Prison Journal Volume 90 ; 90 ;  >
       au < released ; crawling ; 2011 ; The Prison Journal Volume 91 ; 91 ; >
       au < manifest ; exists ; 2012 ; The Prison Journal Volume 92 ; 92 ; >
 
@@ -28523,6 +28530,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment [notReady] = consistent low poll
 
       au < manifest ; exists ; 1986 ; Public Policy and Administration Volume 1 ; 1 ; >
       au < manifest ; exists ; 1987 ; Public Policy and Administration Volume 2 ; 2 ; >
@@ -28548,7 +28556,7 @@
       au < manifest ; exists ; 2007 ; Public Policy and Administration Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Public Policy and Administration Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Public Policy and Administration Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2010 ; Public Policy and Administration Volume 25 ; 25 ;  >
+      au < notReady ; exists ; 2010 ; Public Policy and Administration Volume 25 ; 25 ;  >
       au < released ; crawling ; 2011 ; Public Policy and Administration Volume 26 ; 26 ; >
       au < manifest ; exists ; 2012 ; Public Policy and Administration Volume 27 ; 27 ; >
 
