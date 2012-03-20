@@ -9,6 +9,7 @@
     title <
       name = Journal of Rheumatology ;
       issn = 0315-162X ;
+      eissn = 1499-2752 ;
       issnl = 1499-2752
     >  
 
@@ -22,7 +23,7 @@
       param[base_url] = http://jrheum.org/
         
       au < doNotProcess ; 2011 ; Journal of Rheumatology Volume 38 ; 38 >
-      au < manifest ; 2012 ; Journal of Rheumatology Volume 39 ; 39 >
+      au < testing ; 2012 ; Journal of Rheumatology Volume 39 ; 39 >
 
      }
    
