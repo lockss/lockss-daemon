@@ -2336,6 +2336,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; The British Journal of Criminology: An International Review of Crime and Society Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The British Journal of Criminology: An International Review of Crime and Society Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The British Journal of Criminology: An International Review of Crime and Society Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; The British Journal of Criminology: An International Review of Crime and Society Volume 52 ; 52 >
 
     }
 
@@ -2429,6 +2430,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The British Journal for the Philosophy of Science Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The British Journal for the Philosophy of Science Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; The British Journal for the Philosophy of Science Volume 63 ; 63 >
 
     }
 
@@ -2500,6 +2502,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; The British Journal of Social Work Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The British Journal of Social Work Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The British Journal of Social Work Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; The British Journal of Social Work Volume 42 ; 42 >
 
     }
 
@@ -2612,6 +2615,13 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; British Medical Bulletin Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Medical Bulletin Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; released ; 2011 ; British Medical Bulletin Volume 97 ; 97 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; British Medical Bulletin Volume 98 ; 98 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; British Medical Bulletin Volume 99 ; 99 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; British Medical Bulletin Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; British Medical Bulletin Volume 101 ; 101 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; British Medical Bulletin Volume 102 ; 102 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; British Medical Bulletin Volume 103 ; 103 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; British Medical Bulletin Volume 104 ; 104 >
         
     }
 
@@ -2726,6 +2736,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Bulletin of the London Mathematical Society Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Bulletin of the London Mathematical Society Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Bulletin of the London Mathematical Society Volume 44 ; 44 >
 
     }
 
@@ -9727,6 +9738,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 65A ; 65A >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 66A ; 66A >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A >
 
     }
 
@@ -13425,7 +13437,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; NDT Plus Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; NDT Plus Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; NDT Plus Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; NDT Plus Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; NDT Plus Volume 4 ; 4 >
 
     }
 
@@ -13437,6 +13449,7 @@
     comment[base_url] = redirects to that of new title
 
     au < HighWirePressH20Plugin ; manifest ; 2010 ; NDT Plus Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; NDT Plus Volume 4 ; 4 >
 
     }
 
