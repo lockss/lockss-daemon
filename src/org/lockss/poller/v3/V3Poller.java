@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.119 2012-03-14 22:31:49 barry409 Exp $
+ * $Id: V3Poller.java,v 1.120 2012-03-20 17:24:38 barry409 Exp $
  */
 
 /*
@@ -360,6 +360,14 @@ public class V3Poller extends BasePoll {
     PREFIX + "repairHashAllVersions";
   public static final boolean DEFAULT_REPAIR_HASH_ALL_VERSIONS = false;
 
+  /**
+   * If requested, log extra information about the number of hashed
+   * versions which were unique.
+   */
+  public static final String PARAM_LOG_UNIQUE_VERSIONS = 
+    PREFIX + "logUniqueVersions";
+  public static final boolean DEFAULT_LOG_UNIQUE_VERSIONS = false;
+
   // Global state for the poll.
   private PollerStateBean pollerState;
   // The order of theParticipants is used in indexing into the Arrays
@@ -413,6 +421,7 @@ public class V3Poller extends BasePoll {
   private VoteTallyCallback voteTallyCallback;
   private boolean isAsynch;
   private boolean repairHashAllVersions = DEFAULT_REPAIR_HASH_ALL_VERSIONS;
+  private boolean logUniqueVersions = DEFAULT_LOG_UNIQUE_VERSIONS;
 
   private long tallyEnd;
 
@@ -567,6 +576,8 @@ public class V3Poller extends BasePoll {
 					 DEFAULT_REPAIR_HASH_ALL_VERSIONS);
     enableRepairFromCache = c.getBoolean(PARAM_V3_ENABLE_REPAIR_FROM_CACHE,
 					 DEFAULT_V3_ENABLE_REPAIR_FROM_CACHE);
+    logUniqueVersions = c.getBoolean(PARAM_LOG_UNIQUE_VERSIONS,
+				     DEFAULT_LOG_UNIQUE_VERSIONS);
   }
 
   PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {
@@ -1057,6 +1068,17 @@ public class V3Poller extends BasePoll {
     }
   }
 
+  /**
+   * Compare the plain hash of two versions.
+   */
+  static final Comparator<HashBlock.Version> plainHashComparator =
+    new Comparator<HashBlock.Version>() {
+      public int compare(HashBlock.Version o1, HashBlock.Version o2) {
+	byte[] lastHash1 = getPlainHash(o1.getHashes());
+	byte[] lastHash2 = getPlainHash(o2.getHashes());
+	return ByteArray.lexicographicalCompare(lastHash1, lastHash2);
+      }
+  };
 
   /**
    * Tally a hash block which the poller has, and all the blocks any
@@ -1072,6 +1094,16 @@ public class V3Poller extends BasePoll {
 
     final String pollerUrl = hashBlock.getUrl();
     log.debug3("Opening block " + pollerUrl + " to tally.");
+    if (logUniqueVersions) {
+      int uniqueSize = hashBlock.countUniqueVersions(plainHashComparator);
+      int size = hashBlock.size();
+      if (size == uniqueSize) {
+	log.debug("Hashed " + size + " versions; all unique: " + pollerUrl );
+      } else {
+	log.debug("Hashed " + size + " versions; " + uniqueSize + " unique: "
+		  + pollerUrl);
+      }
+    }
 
     tallyVoterUrls(pollerUrl);
     BlockTally<ParticipantUserData> tally =
@@ -1324,6 +1356,13 @@ public class V3Poller extends BasePoll {
       setStatus(oldStatus);
     }
     return res;
+  }
+
+  /**
+   * @return the plain hash.
+   */
+  static byte[] getPlainHash(byte[][] hasherByteArrays) {
+    return hasherByteArrays[hasherByteArrays.length-1];
   }
 
   /**
