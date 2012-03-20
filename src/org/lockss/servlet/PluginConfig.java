@@ -1,5 +1,5 @@
 /*
- * $Id: PluginConfig.java,v 1.2 2007-06-27 07:49:55 tlipkis Exp $
+ * $Id: PluginConfig.java,v 1.3 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -206,8 +206,7 @@ public class PluginConfig extends LockssServlet {
     page.add(form);
 
     // Finish laying out page
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   void spaceRow(Table table) {

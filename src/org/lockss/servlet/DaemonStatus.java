@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.85 2012-01-31 07:21:40 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.86 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -201,8 +201,7 @@ public class DaemonStatus extends LockssServlet {
 
   private void doHtmlStatusTable() throws IOException {
     Page page = doHtmlStatusTable0();
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   private void doTextStatusTable() throws IOException {

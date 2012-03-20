@@ -1,5 +1,5 @@
 /*
- * $Id: ExportContent.java,v 1.8 2011-04-26 23:54:46 tlipkis Exp $
+ * $Id: ExportContent.java,v 1.9 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -314,8 +314,7 @@ public class ExportContent extends LockssServlet {
     ServletUtil.layoutExplanationBlock(page, "");
     page.add(makeForm());
     page.add("<br>");
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   static String CENTERED_CELL = "align=\"center\" colspan=3";

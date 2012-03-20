@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.21 2012-02-16 10:38:52 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.22 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -143,8 +143,7 @@ public class ListObjects extends LockssServlet {
     comp.add(error);
     comp.add("</font></center><br>");
     page.add(comp);
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   /** Base for classes that print lists of objexts */

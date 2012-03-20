@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.73 2011-10-05 05:58:19 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.74 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -233,9 +233,6 @@ public class ServletUtil {
     "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
 
   private static final int CHOOSESETS_TABLE_BORDER = 0;
-
-  private static final String DOCTYPE =
-    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">";
 
   private static final String ENABLEPORT_CELL_ATTRIBUTES =
     ALIGN_CENTER;
@@ -1334,14 +1331,6 @@ public class ServletUtil {
                                      String label,
                                      String action) {
     return submitButton(servlet, buttonNumber, label, action, null, null);
-  }
-
-  public static void writePage(HttpServletResponse response,
-                               Page page)
-      throws IOException {
-    response.setContentType("text/html");
-    response.getWriter().println(DOCTYPE);
-    page.write(response.getWriter());
   }
 
   /** Return a (possibly labelled) checkbox.

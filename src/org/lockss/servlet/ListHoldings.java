@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.31 2012-03-20 16:45:20 pgust Exp $
+ * $Id: ListHoldings.java,v 1.32 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -772,8 +772,7 @@ public class ListHoldings extends LockssServlet {
     layoutErrorBlock(page);
     page.add(layoutTableOfOptions(custom));
     // Finish page
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   /**

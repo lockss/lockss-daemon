@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.29 2012-02-16 20:28:42 thib_gc Exp $
+ * $Id: ProxyConfig.java,v 1.30 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -315,8 +315,7 @@ public class ProxyConfig extends LockssServlet {
     frm.add(submit);
 
     page.add(frm);
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
 
@@ -390,8 +389,7 @@ public class ProxyConfig extends LockssServlet {
 
     frm.add(tbl);
     page.add(frm);
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
-    }
+    endPage(page);
+  }
 
 }

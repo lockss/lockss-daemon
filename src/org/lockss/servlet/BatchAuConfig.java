@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.44 2012-01-18 03:34:18 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.45 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -343,8 +343,7 @@ public class BatchAuConfig extends LockssServlet {
       ServletUtil.layoutBackLink(page,
           srvLink(myServletDescr(), "Back to Journal Configuration"));
     }
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   private void chooseAus() throws IOException {
@@ -640,8 +639,7 @@ public class BatchAuConfig extends LockssServlet {
       ServletUtil.layoutBackLink(page,
           srvLink(myServletDescr(), "Back to Journal Configuration"));
     }
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    super.endPage(page);
   }
 
   // make me a link in nav table if not on initial journal config page

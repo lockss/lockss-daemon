@@ -1,5 +1,5 @@
 /*
- * $Id: ThreadDump.java,v 1.10 2010-07-21 06:12:30 tlipkis Exp $
+ * $Id: ThreadDump.java,v 1.11 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -115,8 +115,7 @@ public class ThreadDump extends LockssServlet {
     Page page = newPage();
     page.add(makeHeader(tmxb));
     page.add(makeThreads(tmxb, idMap));
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   void doForm(ThreadMXBean tmxb) {

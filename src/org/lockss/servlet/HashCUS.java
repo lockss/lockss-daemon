@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.47 2010-12-01 01:43:00 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.48 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -402,8 +402,7 @@ public class HashCUS extends LockssServlet {
       }
 
     }
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   private void returnDirectResponse() throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: AdminEditAccounts.java,v 1.7 2011-02-14 00:12:28 tlipkis Exp $
+ * $Id: AdminEditAccounts.java,v 1.8 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -494,11 +494,6 @@ public class AdminEditAccounts extends EditAccountBase {
                                      ACTION_TAG);
     page.add(frm);
     endPage(page);
-  }
-
-  protected void endPage(Page page) throws IOException {
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
   }
 
   // make me a link in nav table if not on summary page

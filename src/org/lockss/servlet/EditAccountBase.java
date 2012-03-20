@@ -1,5 +1,5 @@
 /*
- * $Id: EditAccountBase.java,v 1.4 2012-01-18 03:37:52 tlipkis Exp $
+ * $Id: EditAccountBase.java,v 1.5 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -125,11 +125,6 @@ public abstract class EditAccountBase extends LockssServlet {
     setTabOrder(in);
     tbl.add(in);
     return in;
-  }
-
-  protected void endPage(Page page) throws IOException {
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
   }
 
 }

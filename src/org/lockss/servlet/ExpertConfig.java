@@ -1,5 +1,5 @@
 /*
- * $Id: ExpertConfig.java,v 1.6 2010-11-18 07:15:44 tlipkis Exp $
+ * $Id: ExpertConfig.java,v 1.7 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -186,8 +186,7 @@ public class ExpertConfig extends LockssServlet {
     }
 
     // Finish laying out page
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   void spaceRow(Table table) {

@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.44 2012-03-16 13:30:57 pgust Exp $
+ * $Id: ServeContent.java,v 1.45 2012-03-20 17:39:31 tlipkis Exp $
  */
 
 /*
@@ -1034,8 +1034,7 @@ public class ServeContent extends LockssServlet {
     comp.add(error);
     comp.add("</font></center><br>");
     page.add(comp);
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   void displayIndexPage() throws IOException {
@@ -1092,8 +1091,7 @@ public class ServeContent extends LockssServlet {
 	page.add(centeredBlock);
       }
     }
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
     if (result > 0) {
       resp.setStatus(result);
     }
