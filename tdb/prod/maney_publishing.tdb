@@ -1565,6 +1565,7 @@
     au < doNotProcess ; 2009 ; Interdisciplinary Science Reviews Volume 34 ; 34 > 
     au < doNotProcess ; 2010 ; Interdisciplinary Science Reviews Volume 35 ; 35 > 
     au < doNotProcess ; 2011 ; Interdisciplinary Science Reviews Volume 36 ; 36 > 
+    au < doNotProcess ; 2012 ; Interdisciplinary Science Reviews Volume 37 ; 37 > 
 
   }
 
@@ -2453,6 +2454,8 @@
     au < manifest ; 2008 ; Journal of the British Archaeological Association Volume 161 ; 161 > 
     au < manifest ; 2009 ; Journal of the British Archaeological Association Volume 162 ; 162 > 
     au < manifest ; 2010 ; Journal of the British Archaeological Association Volume 163 ; 163 > 
+    au < manifest ; 2011 ; Journal of the British Archaeological Association Volume 164 ; 164 >  
+    au < expected ; 2012 ; Journal of the British Archaeological Association Volume 165 ; 165 > 
 
   }
 
@@ -3486,6 +3489,8 @@
     comment[continues] = 0272-4936 
     comment[0] = forthcoming in 2012
     
+    au < expected ; 2012 ; Paediatrics and International Child Health Volume 1 ; 1 > 
+    
   }
 
   {
@@ -3590,6 +3595,8 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 0003-4983
     comment[0] = forthcoming in 2012
+    
+    au < expected ; 2012 ; Pathogens and Global Health Volume 1 ; 1 >
     
   }
 
