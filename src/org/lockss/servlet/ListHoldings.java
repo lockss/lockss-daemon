@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.30 2012-03-15 08:52:25 tlipkis Exp $
+ * $Id: ListHoldings.java,v 1.31 2012-03-20 16:45:20 pgust Exp $
  */
 
 /*
@@ -435,24 +435,26 @@ public class ListHoldings extends LockssServlet {
       boolean rangeFieldsIncluded = KbartExportFilter.includesRangeFields(
           getSessionCustomOpts().getFieldOrdering().getOrdering());
       if (scope == ContentScope.COLLECTED) {
-        // try listing collected content from the metadata database first
+        // try listing collected content from the metadata database first;
+        // list of bibliographic items is assumed to be sorted by ISSN
         // TODO (PJG) note: should return AUs from DB and 
         // show aggregate health of AU for each title
         List<? extends BibliographicItem> items = 
             MetadataDatabaseUtil.getBibliographicItems();
         if (items.size() > 0) {
-          log.debug("Found bibliographic items: " + items.size());
+          log.debug3("Found bibliographic items: " + items.size());
           titles = new ArrayList<KbartTitle>();
           int i = 0;
           if (i < items.size()) {
             for (int j = i+1; j <= items.size(); j++) {
+              // convert portion of bibliographic items list with same ISSN
               if (   (j == items.size()) 
                   || !items.get(i).getIssn().equals(items.get(j).getIssn())) {
-		if (log.isDebug3()) {
-		  for (int k = i; k < j; k++) {
-		    log.debug3("printIssn: " + items.get(k).getPrintIssn()
-			       + " eissn: " + items.get(k).getEissn());
-		  }
+                if (log.isDebug3()) {
+                  for (int k = i; k < j; k++) {
+                    log.debug3("printIssn: " + items.get(k).getPrintIssn()
+                               + " eissn: " + items.get(k).getEissn());
+                  }
                 }
                 List<KbartTitle> currentTitles =
                   KbartConverter.convertTitleToKbartTitles(items.subList(i, j));
@@ -461,12 +463,14 @@ public class ListHoldings extends LockssServlet {
               }
             }
           }
-	  if (log.isDebug3()) {
-	    for (KbartTitle title : titles) {
-	      log.debug3("printIssn: " + title.getField(KbartTitle.Field.PRINT_IDENTIFIER)
-			 + "eIssn: " + title.getField(KbartTitle.Field.ONLINE_IDENTIFIER));
-	    }
-	  }
+          if (log.isDebug3()) {
+            for (KbartTitle title : titles) {
+              log.debug3("printIssn: " 
+                         + title.getField(KbartTitle.Field.PRINT_IDENTIFIER)
+                         + "eIssn: " 
+                         + title.getField(KbartTitle.Field.ONLINE_IDENTIFIER));
+            }
+          }
           return titles;
         }
       }
