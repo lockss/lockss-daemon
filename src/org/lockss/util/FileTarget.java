@@ -1,5 +1,5 @@
 /*
- * $Id: FileTarget.java,v 1.8 2005-12-01 23:28:00 troberts Exp $
+ * $Id: FileTarget.java,v 1.9 2012-03-20 17:40:11 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class FileTarget extends PrintStreamTarget {
   }
 
   public void init() {
+    super.init();
     Configuration config = CurrentConfig.getCurrentConfig();
     reopenInterval = config.getTimeInterval(PARAM_REOPEN_INTERVAL,
                                             DEFAULT_REOPEN_INTERVAL);

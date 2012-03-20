@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrintStreamTarget.java,v 1.5 2005-01-04 03:04:25 tlipkis Exp $
+ * $Id: TestPrintStreamTarget.java,v 1.6 2012-03-20 17:40:11 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,17 @@ public class TestPrintStreamTarget extends LockssTestCase {
     org.lockss.util.PrintStreamTarget.class
   };
 
-  public void testOutputStringFormat() {
+  public void testOutputStringFormat1() {
+    testOutputStringFormat("\\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: ");
+  }
+
+  public void testOutputStringFormat2() {
+    ConfigurationUtil.setFromArgs(Logger.PARAM_TIMESTAMP_DATEFORMAT,
+				  "MM/dd/yyyy HH:mm:ss.SSS");
+    testOutputStringFormat("\\d\\d/\\d\\d/\\d\\d\\d\\d \\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: ");
+  }
+
+  public void testOutputStringFormat(String timestampRE) {
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
     PrintStream ps = new PrintStream(baos);
     PrintStreamTarget target = new PrintStreamTarget(ps);
@@ -55,14 +65,13 @@ public class TestPrintStreamTarget extends LockssTestCase {
     }
 
     // Should have one Timestamp: message followed by two copies of the message
-    String timestampRE = "\\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: ";
     String line1 = timestampRE + "Timestamp: .*"+Constants.EOL_RE;
     String line2 = timestampRE + "Error: "+errorMessage+Constants.EOL_RE;
     String re = line1 + line2 + line2;
     String debugString = baos.toString();
-    assertTrue("Debug string: \""+debugString+"\" not of correct format."+
-	       " Should be <time>: <error-level>: <error message>",
-	       isMatchRe(debugString, re));
+    assertMatchesRE("Debug string: \""+debugString+"\" not of correct format."+
+		    " Should be <time>: <error-level>: <error message>",
+		    re, debugString);
     assertEquals(3, StringUtil.countOccurences(debugString, "\n"));
   }
 

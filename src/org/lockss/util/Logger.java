@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.56 2011-06-20 07:06:15 tlipkis Exp $
+ * $Id: Logger.java,v 1.57 2012-03-20 17:40:11 tlipkis Exp $
  */
 
 /*
@@ -32,8 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
+import java.text.Format;
 
 import org.apache.commons.collections.map.ReferenceMap;
+import org.apache.commons.lang.time.FastDateFormat;
 
 import org.lockss.config.*;
 
@@ -52,6 +54,15 @@ public class Logger {
   static final String PREFIX = Configuration.PREFIX + "log.";
   static final String PARAM_DEFAULT_LEVEL = PREFIX + "default.level";
   static final String DEFAULT_DEFAULT_LEVEL = "info";
+
+  /** Dateformat used for timestamps on log messages.  See {@link
+   * org.apache.commons.lang.time.SimpleDateFormat}.
+   * <ul><li><code>HH:mm:ss.SSS</code>: 24-hour time with
+   * millisecs. <li><code>MM/dd/yyyy HH:mm:ss.SSS</code>: date and 24-hour
+   * time</ul>Doesn't apply to targets such as SyslogTarget that provide
+   * their own timestamp mechanism. */
+  static final String PARAM_TIMESTAMP_DATEFORMAT = PREFIX + "timeStampFormat";
+  private static final String DEFAULT_TIMESTAMP_DATEFORMAT = "HH:mm:ss.SSS";
 
   static final String PARAM_LOG_LEVEL = PREFIX + "<logname>.level";
   static final String PARAM_LOG_TARGETS = PREFIX + "targets";
@@ -123,6 +134,8 @@ public class Logger {
 
   private static int paramStackTraceLevel = DEFAULT_STACKTRACE_LEVEL;
   private static int paramStackTraceSeverity = DEFAULT_STACKTRACE_SEVERITY;
+  private static Format timestampDf =
+    FastDateFormat.getInstance(DEFAULT_TIMESTAMP_DATEFORMAT);
 
   private static/* final*/ Map<String, Logger> logs = new HashMap<String, Logger>();
   private static List<LogTarget> targets = new ArrayList<LogTarget>();
@@ -261,6 +274,10 @@ public class Logger {
       logs.put(name, l);
     }
     return l;
+  }
+
+  public static Format getTimeStampFormat() {
+    return timestampDf;
   }
 
   /** Get the log level for the given log name from the configuration.
@@ -468,6 +485,17 @@ public class Logger {
 	    paramStackTraceSeverity =
 	      newConfig.getInt(PARAM_STACKTRACE_SEVERITY,
 			       DEFAULT_STACKTRACE_SEVERITY);
+
+	    String df = newConfig.get(PARAM_TIMESTAMP_DATEFORMAT,
+				      DEFAULT_TIMESTAMP_DATEFORMAT);
+
+	    try {
+	      timestampDf = FastDateFormat.getInstance(df);
+	    } catch (IllegalArgumentException e) {
+	      timestampDf =
+		FastDateFormat.getInstance(DEFAULT_TIMESTAMP_DATEFORMAT);
+	      myLog.warning("Invalid DataFormat: " + df + ", using default");
+	    }
 	  }
 	}
       };
