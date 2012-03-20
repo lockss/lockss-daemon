@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.45 2012-03-19 18:25:09 barry409 Exp $
+ * $Id: TestV3Poller.java,v 1.46 2012-03-20 17:15:28 barry409 Exp $
  */
 
 /*
@@ -384,7 +384,7 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(initBytes.length, innerCircle.size() + 1); // one for plain hash
     byte[][] compareBytes = new byte[innerCircle.size() + 1][];
     compareBytes[innerCircle.size()] =
-      new byte[0]; // Plain hash
+      new byte[0]; // Plain hash last
     int ix = 0;
     for (Iterator it = innerCircle.values().iterator(); it.hasNext();) {
       ParticipantUserData proxy = (ParticipantUserData)it.next();
@@ -425,8 +425,8 @@ public class TestV3Poller extends LockssTestCase {
 
   private static int hbVersionNum = 1;
   private void addVersion(HashBlock block, String content) throws Exception {
-    MessageDigest[] digests = new MessageDigest[5];  // 1 plain hash, plus 4 voters
-    // fake "Plain Hash"
+    MessageDigest[] digests = new MessageDigest[5];  // 4 voters plus plain hash
+    // fake "Nonced Hash" for voter 0
     digests[0] = MessageDigest.getInstance("SHA1");
     digests[0].update(content.getBytes());
     // fake "Nonced Hash" for voter 1
@@ -438,7 +438,7 @@ public class TestV3Poller extends LockssTestCase {
     // fake "Nonced Hash" for voter 3
     digests[3] = MessageDigest.getInstance("SHA1");
     digests[3].update(content.getBytes());
-    // fake "Nonced Hash" for voter 4
+    // fake "Plain Hash" last
     digests[4] = MessageDigest.getInstance("SHA1");
     digests[4].update(content.getBytes());
     
