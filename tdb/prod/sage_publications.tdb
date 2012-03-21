@@ -7567,18 +7567,18 @@
         param[base_url] = http://csc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2001 ; "Cultural Studies <_> Critical Methodologies Volume 1" ; 1 >
-        au < manifest ; 2002 ; "Cultural Studies <_> Critical Methodologies Volume 2" ; 2 >
-        au < manifest ; 2003 ; "Cultural Studies <_> Critical Methodologies Volume 3" ; 3 >
-        au < manifest ; 2004 ; "Cultural Studies <_> Critical Methodologies Volume 4" ; 4 >
-        au < doNotProcess ; 2005 ; "Cultural Studies <_> Critical Methodologies Volume 5" ; 5 >
-        au < doNotProcess ; 2006 ; "Cultural Studies <_> Critical Methodologies Volume 6" ; 6 >
-        au < doNotProcess ; 2007 ; "Cultural Studies <_> Critical Methodologies Volume 7" ; 7 >
-        au < doNotProcess ; 2008 ; "Cultural Studies <_> Critical Methodologies Volume 8" ; 8 >
-        au < doNotProcess ; 2009 ; "Cultural Studies <_> Critical Methodologies Volume 9" ; 9 >
-        au < released ; 2010 ; "Cultural Studies <_> Critical Methodologies Volume 10" ; 10 >
-        au < manifest ; 2011 ; "Cultural Studies <_> Critical Methodologies Volume 11" ; 11 >
-        au < expected ; 2012 ; "Cultural Studies <_> Critical Methodologies Volume 12" ; 12 >
+        au < manifest ; 2001 ; "Cultural Studies <=> Critical Methodologies Volume 1" ; 1 >
+        au < manifest ; 2002 ; "Cultural Studies <=> Critical Methodologies Volume 2" ; 2 >
+        au < manifest ; 2003 ; "Cultural Studies <=> Critical Methodologies Volume 3" ; 3 >
+        au < manifest ; 2004 ; "Cultural Studies <=> Critical Methodologies Volume 4" ; 4 >
+        au < doNotProcess ; 2005 ; "Cultural Studies <=> Critical Methodologies Volume 5" ; 5 >
+        au < doNotProcess ; 2006 ; "Cultural Studies <=> Critical Methodologies Volume 6" ; 6 >
+        au < doNotProcess ; 2007 ; "Cultural Studies <=> Critical Methodologies Volume 7" ; 7 >
+        au < doNotProcess ; 2008 ; "Cultural Studies <=> Critical Methodologies Volume 8" ; 8 >
+        au < doNotProcess ; 2009 ; "Cultural Studies <=> Critical Methodologies Volume 9" ; 9 >
+        au < released ; 2010 ; "Cultural Studies <=> Critical Methodologies Volume 10" ; 10 >
+        au < manifest ; 2011 ; "Cultural Studies <=> Critical Methodologies Volume 11" ; 11 >
+        au < expected ; 2012 ; "Cultural Studies <=> Critical Methodologies Volume 12" ; 12 >
 
       }
 
