@@ -2,11 +2,11 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.290 2012-03-02 03:06:36 tlipkis Exp $
+ $Id: build.xml,v 1.291 2012-03-21 01:08:42 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -209,7 +209,7 @@ Args:
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
   <property name="log4j.jar" value="${lib}/log4j-1.2.13.jar"/>
   <property name="commons.lang.jar"
-				  value="${lib}/commons-lang-2.5.jar"/>
+				  value="${lib}/commons-lang-2.6.jar"/>
   <property name="commons.cli.jar"
   				  value="${lib}/commons-cli-1.2.jar"/>
   <property name="commons.collections.jar"
@@ -217,7 +217,7 @@ Args:
   <property name="commons.logging.jar"
   				  value="${lib}/commons-logging-1.1.1.jar"/>
   <property name="commons.codec.jar"
-  				  value="${lib}/commons-codec-1.4.jar"/>
+  				  value="${lib}/commons-codec-1.6.jar"/>
   <property name="commons.httpclient.jar"
   			value="${lib}/commons-httpclient-3.0-rc4.jar"/>
   <property name="commons.io.jar"
