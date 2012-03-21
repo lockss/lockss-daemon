@@ -11163,7 +11163,7 @@
       au < manifest ; exists ; 2004 ; High Performance Polymers Volume 16 ; 16 ; >
       au < manifest ; exists ; 2005 ; High Performance Polymers Volume 17 ; 17 ; >
       au < manifest ; exists ; 2006 ; High Performance Polymers Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2007 ; High Performance Polymers Volume 21 ; 19 ; >
+      au < manifest ; exists ; 2007 ; High Performance Polymers Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; High Performance Polymers Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; High Performance Polymers Volume 21 ; 21 ; >
       au < released ; crawling ; 2010 ; High Performance Polymers Volume 22 ; 22 ; >
@@ -24699,8 +24699,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Multiple Sclerosis Volume 14 ; 14 ; >
-      au < down ; crawling ; 2009 ; Multiple Sclerosis Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+      au < down ; crawling ; 2008 ; Multiple Sclerosis Journal Volume 14 ; 14 ; >
+      au < down ; crawling ; 2009 ; Multiple Sclerosis Journal Volume 15 ; 15 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -24710,20 +24710,20 @@
 
       au < manifest ; exists ; 1995 ; Multiple Sclerosis Journal Volume 1 ; 1 ; >
       au < manifest ; exists ; 1996 ; Multiple Sclerosis Journal Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1997 ; Multiple Sclerosis Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1998 ; Multiple Sclerosis Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1999 ; Multiple Sclerosis Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2000 ; Multiple Sclerosis Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2001 ; Multiple Sclerosis Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2002 ; Multiple Sclerosis Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2003 ; Multiple Sclerosis Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2004 ; Multiple Sclerosis Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2005 ; Multiple Sclerosis Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2006 ; Multiple Sclerosis Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2007 ; Multiple Sclerosis Volume 13 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Multiple Sclerosis Volume 14 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Multiple Sclerosis Volume 15 ; 15 ; >
-      au < released ; manifest ; 2010 ; Multiple Sclerosis Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1997 ; Multiple Sclerosis Journal Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1998 ; Multiple Sclerosis Journal Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1999 ; Multiple Sclerosis Journal Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2000 ; Multiple Sclerosis Journal Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2001 ; Multiple Sclerosis Journal Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2002 ; Multiple Sclerosis Journal Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2003 ; Multiple Sclerosis Journal Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2004 ; Multiple Sclerosis Journal Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2005 ; Multiple Sclerosis Journal Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2006 ; Multiple Sclerosis Journal Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2007 ; Multiple Sclerosis Journal Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Multiple Sclerosis Journal Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Multiple Sclerosis Journal Volume 15 ; 15 ; >
+      au < released ; manifest ; 2010 ; Multiple Sclerosis Journal Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; Multiple Sclerosis Journal Volume 17 ; 17 ; >
       au < manifest ; exists ; 2012 ; Multiple Sclerosis Journal Volume 18 ; 18 ; >
 

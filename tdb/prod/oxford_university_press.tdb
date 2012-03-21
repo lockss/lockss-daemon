@@ -3117,7 +3117,11 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Cardiovascular Research Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Cardiovascular Research Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Cardiovascular Research Volume 91 ; 91 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; Cardiovascular Research Volume 92 ; 92 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; Cardiovascular Research Volume 92 ; 92 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; Cardiovascular Research Volume 93 ; 93 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; Cardiovascular Research Volume 94 ; 94 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; Cardiovascular Research Volume 95 ; 95 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; Cardiovascular Research Volume 96 ; 96 >
 
     }
 
@@ -13584,12 +13588,7 @@
   
     au < HighWirePressPlugin ; down ; 2008 ;  NDT Plus Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 2009 ; NDT Plus Volume 2 ; 2 >
-    au < HighWirePressPlugin ; doNotProcess ; 2010 ; NDT Plus Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; NDT Plus Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; NDT Plus Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; NDT Plus Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; down ; 2011 ; NDT Plus Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; NDT Plus Volume 5 ; 5 >
 
     }
 
