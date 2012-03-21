@@ -6,7 +6,8 @@
 
   plugin = needs.plugin
   param[base_url] = http://www.igi-global.com/
-  
+  implicit < status ; year; name ; param[volume_name] >
+
   {
 
     title <
@@ -783,14 +784,17 @@
     >
      au < exists ; 2005 ; International Journal of e-Collaboration (IJeC) Volume 1 ; 1 > 
      au < exists ; 2006 ; International Journal of e-Collaboration (IJeC) Volume 2 ; 2 > 
-     au < exists ; 2007 ; International Journal of e-Collaboration (IJeC) Volume 3 ; 3 >  }
+     au < exists ; 2007 ; International Journal of e-Collaboration (IJeC) Volume 3 ; 3 > 
      au < exists ; 2008 ; International Journal of e-Collaboration (IJeC) Volume 4 ; 4 > 
-     au < exists ; 2009 ; International Journal of e-Collaboration (IJeC) Volume 5 ; 5 >  {
+     au < exists ; 2009 ; International Journal of e-Collaboration (IJeC) Volume 5 ; 5 > 
      au < exists ; 2010 ; International Journal of e-Collaboration (IJeC) Volume 6 ; 6 > 
-     au < exists ; 2011 ; International Journal of e-Collaboration (IJeC) Volume 7 ; 7 >    
-     au < exists ; 2012 ; International Journal of e-Collaboration (IJeC) Volume 8 ; 8 >      
+     au < exists ; 2011 ; International Journal of e-Collaboration (IJeC) Volume 7 ; 7 > 
+     au < exists ; 2012 ; International Journal of e-Collaboration (IJeC) Volume 8 ; 8 > 
      
+   }
      
+  {
+  
    title <
       name = International Journal of E-Entrepreneurship and Innovation (IJEEI) ;
       issn = 1947-8585 ;
@@ -815,8 +819,11 @@
     >
 
      au < exists ; 2010 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 1 ; 1 > 
-     au < exists ; 2011 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 2 ; 2 >  }
+     au < exists ; 2011 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 2 ; 2 > 
      au < exists ; 2012 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 3 ; 3 > 
+     
+  }
+   
   {
 
     title <
@@ -971,10 +978,14 @@
     >
 
     au < exists ; 2009 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 1 ; 1 > 
-    au < exists ; 2010 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 2 ; 2 >  }
+    au < exists ; 2010 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 2 ; 2 > 
     au < exists ; 2011 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 3 ; 3 > 
-    au < expected ; 2012 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 4 ; 4 >  {
+    au < expected ; 2012 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 4 ; 4 > 
 
+  }
+  
+  {
+  
    title <
       name = International Journal of Geotechnical Earthquake Engineering (IJGEE) ;
       issn = 1947-8488 ;
@@ -999,8 +1010,11 @@
     >
 
     au < exists ; 2010 ; International Journal of Green Computing (IJGC) Volume 1 ; 1 > 
-    au < exists ; 2011 ; International Journal of Green Computing (IJGC) Volume 2 ; 2 >   }
+    au < exists ; 2011 ; International Journal of Green Computing (IJGC) Volume 2 ; 2 > 
     au < exists ; 2012 ; International Journal of Green Computing (IJGC) Volume 3 ; 3 > 
+    
+  }
+
   {
 
     title <
@@ -1012,8 +1026,11 @@
     
     au < exists ; 2009 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 1 ; 1 > 
     au < exists ; 2010 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 2 ; 2 > 
-    au < exists ; 2011 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 3 ; 3 >   }
+    au < exists ; 2011 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 3 ; 3 > 
     au < exists ; 2012 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 4 ; 4 > 
+    
+  }
+  
   {
 
     title <
@@ -1040,9 +1057,13 @@
     >
 
     au < exists ; 2009 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 1 ; 1 > 
-    au < exists ; 2010 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 2 ; 2 >   }
+    au < exists ; 2010 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 2 ; 2 > 
     au < exists ; 2011 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 3 ; 3 > 
-    au < expected ; 2012 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 4 ; 4 >   {
+    au < expected ; 2012 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 4 ; 4 > 
+    
+  }
+    
+  {
 
     title <
       name = International Journal of Healthcare Information Systems and Informatics (IJHISI) ;
@@ -1906,9 +1927,13 @@
     >
 
      au < exists ; 2009 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 1 ; 1 > 
-     au < exists ; 2010 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 2 ; 2 >  }
+     au < exists ; 2010 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 2 ; 2 >
      au < exists ; 2011 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 3 ; 3 > 
-     au < exists ; 2012 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 4 ; 4 >  {
+     au < exists ; 2012 ; International Journal of Sociotechnology and Knowledge Development (IJSKD) Volume 4 ; 4 >
+     
+  }
+  
+  {
 
     title <
       name = International Journal of Software Science and Computational Intelligence (IJSSCI) ;
@@ -2059,7 +2084,7 @@
       issnl = 2160-9586
     >
 
-    au < exists ; exists ; 2012 ; International Journal of Systems Biology and Biomedical Technologies (IJSBBT) Volume 1 ; 1 > 
+    au < exists ; 2012 ; International Journal of Systems Biology and Biomedical Technologies (IJSBBT) Volume 1 ; 1 > 
 
 
   }
