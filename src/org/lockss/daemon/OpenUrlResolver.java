@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.27 2012-03-03 23:28:36 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.28 2012-03-21 03:52:58 pgust Exp $
  */
 
 /*
@@ -1169,8 +1169,9 @@ public class OpenUrlResolver {
    * @return the parameter map
    */
   private static TypedEntryMap getParamMap(Plugin plugin, TdbAu tdbau) {
-	TypedEntryMap paramMap = new TypedEntryMap();
-    for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
+    TypedEntryMap paramMap = new TypedEntryMap();
+    List<ConfigParamDescr> descrs = plugin.getAuConfigDescrs();
+    for (ConfigParamDescr descr : descrs) {
       String key = descr.getKey();
       String sval = tdbau.getParam(key);
       if (sval == null) {
@@ -1188,6 +1189,14 @@ public class OpenUrlResolver {
         }
       }
     }
+    
+    // add entries for attributes that do not correspond to AU params
+    for (Map.Entry<String,String> entry : tdbau.getAttrs().entrySet()) {
+      if (!paramMap.containsKey(entry.getKey())) {
+        paramMap.setMapElement(entry.getKey(), entry.getValue());
+      }
+    }
+    
 	return paramMap;
   }
   
