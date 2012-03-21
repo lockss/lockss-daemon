@@ -29,6 +29,7 @@
     au < manifest ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 >
     au < manifest ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 >
     au < manifest ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 >
+    au < expected ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 >
     
   }
 
@@ -51,6 +52,7 @@
     au < manifest ; 2009 ; Anthropology in Action Volume 16 ; 16 >
     au < manifest ; 2010 ; Anthropology in Action Volume 17 ; 17 >
     au < manifest ; 2011 ; Anthropology in Action Volume 18 ; 18 >
+    au < manifest ; 2012 ; Anthropology in Action Volume 19 ; 19 >
     
   }
 
@@ -72,6 +74,7 @@
     au < manifest ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 >
     au < manifest ; 2010 ; Anthropology of the Middle East Volume 5 ; 5 >
     au < manifest ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 >
+    au < expected ; 2012 ; Anthropology of the Middle East Volume 7 ; 7 >
     
   }
 
@@ -89,6 +92,7 @@
            
     au < manifest ; 2010 ; Asia Pacific World Volume 1 ; 1 >
     au < manifest ; 2011 ; Asia Pacific World Volume 2 ; 2 >
+    au < expected ; 2012 ; Asia Pacific World Volume 3 ; 3 >
     
   }
 
@@ -108,6 +112,7 @@
     au < manifest ; 2009 ; Aspasia Volume 3 ; 3 >
     au < manifest ; 2010 ; Aspasia Volume 4 ; 4 >
     au < manifest ; 2011 ; Aspasia Volume 5 ; 5 >
+    au < manifest ; 2012 ; Aspasia Volume 6 ; 6 >
     
   }
 
@@ -138,6 +143,7 @@
     au < manifest ; 2009 ; Critical Survey Volume 21 ; 21 >
     au < manifest ; 2010 ; Critical Survey Volume 22 ; 22 >
     au < manifest ; 2011 ; Critical Survey Volume 23 ; 23 >
+    au < expected ; 2012 ; Critical Survey Volume 24 ; 24 >
     
   }
 
@@ -163,6 +169,7 @@
     au < manifest ; 2009 ; Durkheimian Studies Volume 15 ; 15 >
     au < manifest ; 2010 ; Durkheimian Studies Volume 16 ; 16 >
     au < manifest ; 2011 ; Durkheimian Studies Volume 17 ; 17 >
+    au < expected ; 2012 ; Durkheimian Studies Volume 18 ; 18 >
     
   }
 
@@ -178,6 +185,8 @@
     param[journal_issn] = 2150-6779
      
     au < manifest ; 2010 ; Environment and Society Volume 1 ; 1 >
+    au < manifest ; 2011 ; Environment and Society Volume 2 ; 2 >
+    au < expected ; 2012 ; Environment and Society Volume 3 ; 3 >
     
   }
 
@@ -205,7 +214,7 @@
     au < manifest ; 2009 ; European Judaism Volume 42 ; 42 >
     au < manifest ; 2010 ; European Judaism Volume 43 ; 43 >
     au < manifest ; 2011 ; European Judaism Volume 44 ; 44 >
-    au < manifest ; 2012 ; European Judaism Volume 45 ; 45 >
+    au < expected ; 2012 ; European Judaism Volume 45 ; 45 >
   
   }
 
@@ -229,6 +238,7 @@
     au < manifest ; 2009 ; Focaal Volume 2009 ; 2009 >
     au < manifest ; 2010 ; Focaal Volume 2010 ; 2010 >
     au < manifest ; 2011 ; Focaal Volume 2011 ; 2011 >
+    au < manifest ; 2012 ; Focaal Volume 2012 ; 2012 >
     
   }
 
@@ -257,6 +267,7 @@
     au < ready ; 2009 ; French Politics, Culture & Society Volume 27 ; 27 >
     au < ready ; 2010 ; French Politics, Culture & Society Volume 28 ; 28 >
     au < ready ; 2011 ; French Politics, Culture & Society Volume 29 ; 29 >
+    au < expected ; 2012 ; French Politics, Culture & Society Volume 30 ; 30 >
     
   }
 
@@ -286,6 +297,7 @@
     au < ready ; 2009 ; German Politics and Society Volume 27 ; 27 >
     au < ready ; 2010 ; German Politics and Society Volume 28 ; 28 >
     au < ready ; 2011 ; German Politics and Society Volume 29 ; 29 >
+    au < expected ; 2012 ; German Politics and Society Volume 30 ; 30 >
     
   }
 
@@ -305,6 +317,7 @@
     au < manifest ; 2009 ; Girlhood Studies Volume 2 ; 2 >
     au < manifest ; 2010 ; Girlhood Studies Volume 3 ; 3 >
     au < manifest ; 2011 ; Girlhood Studies Volume 4 ; 4 >
+    au < expected ; 2012 ; Girlhood Studies Volume 5 ; 5 >
     
   }
 
@@ -324,6 +337,7 @@
     au < manifest ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 >
     au < manifest ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 >
     au < manifest ; 2011 ; Historical Reflections/Reflexions Historiques Volume 37 ; 37 >
+    au < expected ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 >
     
   }
 
@@ -340,6 +354,7 @@
     param[journal_issn] = 2159-0389  
     
     au < manifest ; 2011 ; Israel Studies Review Volume 26 ; 26 >
+    au < expected ; 2012 ; Israel Studies Review Volume 27 ; 27 >
     
   }
 
@@ -358,6 +373,7 @@
     au < manifest ; 2009 ; Journal of Educational Memory, Media, and Society Volume 1 ; 1 >
     au < manifest ; 2010 ; Journal of Educational Memory, Media, and Society Volume 2 ; 2 >
     au < manifest ; 2011 ; Journal of Educational Memory, Media, and Society Volume 3 ; 3 >
+    au < expected ; 2012 ; Journal of Educational Memory, Media, and Society Volume 4 ; 4 >
     
   }
 
@@ -385,6 +401,7 @@
     au < manifest ; 2009 ; Journal of Romance Studies Volume 9 ; 91 >
     au < manifest ; 2010 ; Journal of Romance Studies Volume 10 ; 10 >
     au < manifest ; 2011 ; Journal of Romance Studies Volume 11 ; 11 >
+    au < expected ; 2012 ; Journal of Romance Studies Volume 12 ; 12 >
     
   }
 
@@ -412,6 +429,7 @@
     au < manifest ; 2009 ; Journeys Volume 10 ; 10 >
     au < manifest ; 2010 ; Journeys Volume 11 ; 11 >
     au < manifest ; 2011 ; Journeys Volume 12 ; 12 >
+    au < expected ; 2012 ; Journeys Volume 13 ; 13 >
     
   }
 
@@ -430,6 +448,7 @@
     au < manifest ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 >
     au < manifest ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 >
     au < manifest ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 >
+    au < expected ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 >
     
   }
 
@@ -450,6 +469,7 @@
     au < manifest ; 2009 ; Nature and Culture Volume 4 ; 4 >
     au < manifest ; 2010 ; Nature and Culture Volume 5 ; 5 >
     au < manifest ; 2011 ; Nature and Culture Volume 6 ; 6 >
+    au < manifest ; 2012 ; Nature and Culture Volume 7 ; 7 >
     
   }
 
@@ -479,6 +499,7 @@
     au < manifest ; 2009 ; Nomadic Peoples Volume 13 ; 13 >
     au < manifest ; 2010 ; Nomadic Peoples Volume 14 ; 14 >
     au < manifest ; 2011 ; Nomadic Peoples Volume 15 ; 15 >
+    au < expected ; 2012 ; Nomadic Peoples Volume 16 ; 16 >
     
   }
 
@@ -499,6 +520,7 @@
     au < manifest ; 2009 ; Projections Volume 3 ; 3 >
     au < manifest ; 2010 ; Projections Volume 4 ; 4 >
     au < manifest ; 2011 ; Projections Volume 5 ; 5 >
+    au < expected ; 2012 ; Projections Volume 6 ; 6 >
     
   }
 
@@ -515,6 +537,7 @@
     param[journal_issn] = 2152-906X
 
     au < ready ; 2011 ; Regions & Cohesion Volume 1 ; 1 >
+    au < expected ; 2012 ; Regions & Cohesion Volume 2 ; 2 >
     
   }
 
@@ -560,6 +583,7 @@
     au < manifest ; 2009 ; Sartre Studies International Volume 15 ; 15 >
     au < manifest ; 2010 ; Sartre Studies International Volume 16 ; 16 >
     au < manifest ; 2011 ; Sartre Studies International Volume 17 ; 17 >
+    au < expected ; 2012 ; Sartre Studies International Volume 18 ; 18 >
     
   }
 
@@ -577,13 +601,13 @@
     au < manifest ; 2002 ; Sibirica Volume 2 ; 2 >
     au < manifest ; 2003 ; Sibirica Volume 3 ; 3 >
     au < manifest ; 2004 ; Sibirica Volume 4 ; 4 >
-    au < manifest ; 2005 ; Sibirica Volume 5 ; 5 >
-    au < manifest ; 2006 ; Sibirica Volume 6 ; 6 >
-    au < manifest ; 2007 ; Sibirica Volume 7 ; 7 >
-    au < manifest ; 2008 ; Sibirica Volume 8 ; 8 >
-    au < manifest ; 2009 ; Sibirica Volume 9 ; 9 >
-    au < manifest ; 2010 ; Sibirica Volume 10 ; 10 >
-    au < manifest ; 2011 ; Sibirica Volume 11 ; 11 >
+    au < manifest ; 2006 ; Sibirica Volume 5 ; 5 >
+    au < manifest ; 2007 ; Sibirica Volume 6 ; 6 >
+    au < manifest ; 2008 ; Sibirica Volume 7 ; 7 >
+    au < manifest ; 2009 ; Sibirica Volume 8 ; 8 >
+    au < manifest ; 2010 ; Sibirica Volume 9 ; 9 >
+    au < manifest ; 2011 ; Sibirica Volume 10 ; 10 >
+    au < expected ; 2012 ; Sibirica Volume 11 ; 11 >
     
   }
 
@@ -608,6 +632,7 @@
     au < manifest ; 2009 ; Social Analsysis Volume 53 ; 53 >
     au < manifest ; 2010 ; Social Analsysis Volume 54 ; 54 >
     au < manifest ; 2011 ; Social Analsysis Volume 55 ; 55 >
+    au < expected ; 2012 ; Social Analsysis Volume 56 ; 56 >
     
   }
 
@@ -638,6 +663,7 @@
     au < manifest ; 2009 ; Theoria Volume 56 ; 56 >
     au < manifest ; 2010 ; Theoria Volume 57 ; 57 >
     au < manifest ; 2011 ; Theoria Volume 58 ; 58 >
+    au < expected ; 2012 ; Theoria Volume 59 ; 59 >
     
   }
 
@@ -654,6 +680,7 @@
 
 
     au < manifest ; 2011 ; Transfers Volume 1 ; 1 >
+    au < expected ; 2012 ; Transfers Volume 2 ; 2 >
     
   }
 }
