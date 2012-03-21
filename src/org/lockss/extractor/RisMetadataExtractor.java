@@ -38,7 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
-/*
+/**
  * Pulls metadata from a .ris file in the format
  * TY - JOUR
  * T1 - Article Tile of the Article
@@ -46,40 +46,76 @@ import org.lockss.util.*;
  * first line of data should always be the TY (reference type)
  * there may be empty lines before the first line
  */
-
 public class RisMetadataExtractor extends SimpleFileMetadataExtractor {
 	
 	static Logger log = Logger.getLogger("RisMetadataExtractor");
-	private MultiMap risTypeToMetadataField;
+	private MultiMap risTagToMetadataField;
 	protected static final String REFTYPE_JOURNAL = "Journal";
 	protected static final String REFTYPE_BOOK = "Book";
 	protected static final String REFTYPE_OTHER = "Other";
 	private String delimiter = "-";
- 
+	
+	/**
+	 *Create a RisMetadataExtractor with a default RIS Type To MetadataField map
+	 */
 	public RisMetadataExtractor(){
-		risTypeToMetadataField = new MultiValueMap();
-		risTypeToMetadataField.put("T1", MetadataField.FIELD_ARTICLE_TITLE);
-		risTypeToMetadataField.put("AU", MetadataField.FIELD_AUTHOR);
-		risTypeToMetadataField.put("JF", MetadataField.FIELD_JOURNAL_TITLE);
-		risTypeToMetadataField.put("DO", MetadataField.FIELD_DOI);
-		risTypeToMetadataField.put("PB", MetadataField.FIELD_PUBLISHER);
-		risTypeToMetadataField.put("VL", MetadataField.FIELD_VOLUME);
-		risTypeToMetadataField.put("IS", MetadataField.FIELD_ISSUE);
-		risTypeToMetadataField.put("SP", MetadataField.FIELD_START_PAGE);
-		risTypeToMetadataField.put("EP", MetadataField.FIELD_END_PAGE);
-		risTypeToMetadataField.put("DA", MetadataField.FIELD_DATE);
+		risTagToMetadataField = new MultiValueMap();
+		risTagToMetadataField.put("T1", MetadataField.FIELD_ARTICLE_TITLE);
+		risTagToMetadataField.put("AU", MetadataField.FIELD_AUTHOR);
+		risTagToMetadataField.put("JF", MetadataField.FIELD_JOURNAL_TITLE);
+		risTagToMetadataField.put("DO", MetadataField.FIELD_DOI);
+		risTagToMetadataField.put("PB", MetadataField.FIELD_PUBLISHER);
+		risTagToMetadataField.put("VL", MetadataField.FIELD_VOLUME);
+		risTagToMetadataField.put("IS", MetadataField.FIELD_ISSUE);
+		risTagToMetadataField.put("SP", MetadataField.FIELD_START_PAGE);
+		risTagToMetadataField.put("EP", MetadataField.FIELD_END_PAGE);
+		risTagToMetadataField.put("DA", MetadataField.FIELD_DATE);
 	}
 	
+	
+	/**
+	 * Create a RisMetadataExtractor with a RIS tag To MetadataField map of fieldMap
+	 * overriding default fieldMap
+	 * @param fieldMap
+	 */
 	public RisMetadataExtractor(MultiValueMap fieldMap){
-		risTypeToMetadataField = fieldMap;
-	}
-	    
-	public void addRisType(String risType, MetadataField field){
-		risTypeToMetadataField.put(risType, field);
+		risTagToMetadataField = fieldMap;
 	}
 	
-	public boolean containsRisType(String key){
-		return risTypeToMetadataField.containsKey(key);
+	/**
+	 * Create a RisMetadataExtractor with a RIS tag To MetadataField map of default
+	 * fieldMap and adding the specified metadata field Ris tag pair
+	 * @param risTag
+	 * @param field
+	 */
+	public RisMetadataExtractor(String risTag, MetadataField field){
+		this();
+		addRisTag(risTag, field);
+	}
+	
+	/**
+	 * Add the specified metadata field Ris tag pair to the RIS tag To MetadataField map
+	 * @param risTag
+	 * @param field
+	 */
+	public void addRisTag(String risTag, MetadataField field){
+		risTagToMetadataField.put(risTag, field);
+	}
+	
+	/**
+	 * Remove entry associated with the Ris tag from the the RIS tag To MetadataField map
+	 * @param risTag
+	 */
+	public void removeRisTag(String risTag){
+		risTagToMetadataField.remove(risTag);
+	}
+	
+	/**
+	 * Check for the Ris tag in the the RIS tag To MetadataField map
+	 * @param risTag
+	 */
+	public boolean containsRisTag(String risTag){
+		return risTagToMetadataField.containsKey(risTag);
 	}
 	
 	/*	
@@ -87,8 +123,15 @@ public class RisMetadataExtractor extends SimpleFileMetadataExtractor {
 		delimiter = delim;
 	}
 	*/
-	
-	  public final ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
+	/**
+	 * Extract metadata from the content of the cu, which should be an RIS file.
+	 * Reads line by line inserting the 2 character code and value into the raw map.
+	 * The first line should be a material type witch if it is book or journal will 
+	 * determine if we interpret the SN tag as IS beltSN or ISBN.
+	 * @param target
+	 * @param cu
+	 */
+	public final ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
 				    													throws IOException, PluginException {
 		if(cu == null) {
 			throw new IllegalArgumentException();
@@ -98,7 +141,7 @@ public class RisMetadataExtractor extends SimpleFileMetadataExtractor {
 		String line;
 		String refType = null;
 	    try {
-	    	if(!containsRisType("TY")){
+	    	if(!containsRisTag("TY")){
 			    while(refType == null && (line = bReader.readLine()) != null) {
 			    	if(line.trim().toUpperCase().startsWith("TY") && line.contains(delimiter) && !line.endsWith(delimiter)) {
 			    		String value = line.substring(line.indexOf(delimiter) + 1).trim().toUpperCase();
@@ -124,12 +167,12 @@ public class RisMetadataExtractor extends SimpleFileMetadataExtractor {
 	        		String key = line.substring(0,line.indexOf(delimiter) - 1);
         			key = key.trim().toUpperCase();
         			md.putRaw(key, value.trim());
-        			if(!containsRisType("SN") && key.contentEquals("SN")){
+        			if(!containsRisTag("SN") && key.contentEquals("SN")){
         				if(refType.contentEquals(REFTYPE_BOOK)) {
-        					addRisType("SN", MetadataField.FIELD_ISBN);
+        					addRisTag("SN", MetadataField.FIELD_ISBN);
         				}
         				else {
-        					addRisType("SN", MetadataField.FIELD_ISSN);
+        					addRisTag("SN", MetadataField.FIELD_ISSN);
         				}
         			} 
 	        	}
@@ -137,7 +180,7 @@ public class RisMetadataExtractor extends SimpleFileMetadataExtractor {
 	    } finally {
 	      IOUtil.safeClose(bReader);
 	    }
-	    md.cook(risTypeToMetadataField);
+	    md.cook(risTagToMetadataField);
 		return md;
 	  }
 
