@@ -698,6 +698,18 @@ class Client:
         """Returns both the summary and table."""
         return self._getStatusTable( 'V3PollerDetailTable', key )
 
+    def getV3PollVotersCounts( self, key ):
+        """Returns the count detail columns for each voter, as a
+        dictionary keyed by peerId string of dictionaries keyed by
+        string of column name."""
+        columns = "identity;numagree;numdisagree;numpolleronly;numvoteronly"
+        d = dict()
+        for row in self._getStatusTable( 'V3PollerDetailTable', key, columns = columns )[ 1 ]:
+            identity = self.valueOfRef( row[ 'identity' ] )
+            del row[ 'identity' ]
+            d[ identity ] = row
+        return d
+
     def getV3CompletedRepairsTable( self, key ):
         """Returns the V3 completed repairs status table."""
         return self._getStatusTable( 'V3CompletedRepairsTable', key )
@@ -1240,7 +1252,8 @@ class AU:
                                    ' property "%s" in AU ID "%s"' %
                                    ( key, property, self.auId ) )
             setattr( self, key, value )
-        if not hasattr( self, "base_url" ):
+        if self.pluginId != Simulated_AU.SIMULATED_PLUGIN \
+          and not hasattr( self, "base_url" ):
             raise LockssError( 'Failed to find required key "base_url" in'
                                ' AU ID "%s"' % self.auId )
 
@@ -1250,6 +1263,7 @@ class AU:
 
 class Simulated_AU( AU ):
     """SimulatedPlugin Archival Unit."""
+    SIMULATED_PLUGIN = 'org.lockss.plugin.simulated.SimulatedPlugin'
 
     def __init__( self, root = 'simContent', depth = 0, branch = 0, numFiles = 10,
                   binFileSize = 1024, binRandomSeed = None, fileTypes = FILE_TYPE_TEXT | FILE_TYPE_BIN ):
@@ -1260,7 +1274,7 @@ class Simulated_AU( AU ):
         self.binFileSize = binFileSize
         self.binRandomSeed = int( time.time() ) if binRandomSeed is None else binRandomSeed
         self.fileTypes = fileTypes
-        self.pluginId = 'org.lockss.plugin.simulated.SimulatedPlugin'
+        self.pluginId = Simulated_AU.SIMULATED_PLUGIN
         self.auId = "%s&root~%s" % ( self.pluginId.replace( '.', '|' ), self.root )
         self.title = "Simulated Content: " + root
         self.baseUrl = 'http://www.example.com'

@@ -222,9 +222,17 @@ class V3TestCases( LockssTestCases ):
 
     def _verify_voter_agreements( self ):
         poll_key = self.victim.getV3PollKey( self.AU )
-        for ( box, agreement ) in self.victim.getAuRepairerInfo( self.AU, 'LastPercentAgreement' ).iteritems():
+        repairer_info = self.victim.getAuRepairerInfo( self.AU, 'LastPercentAgreement' )
+        self.assertEqual( len( self.clients ) - 1, len( repairer_info ) )
+        for ( box, agreement ) in repairer_info.iteritems():
             self.assertEqual( agreement, self.expected_agreement, 
                        'Voter %s had actual agreement: %s expected: %s' % ( box, agreement, self.expected_agreement ) )
+
+    def _verify_voters_counts( self ):
+        poll_key = self.victim.getV3PollKey( self.AU )
+        voters_counts = self.victim.getV3PollVotersCounts( poll_key )
+        # -1 for us, the victim
+        self.assertEqual( len( self.clients ) + len ( self.offline_peers ) - 1, len( voters_counts ) )
 
     def setUp( self ):
         LockssTestCases.setUp( self )
@@ -261,6 +269,7 @@ class V3TestCases( LockssTestCases ):
         self._verify_repair( nodes )
         self._verify_poll_results()
         self._verify_voter_agreements()
+        self._verify_voters_counts()
         log.info( 'AU successfully repaired' )
 
 class FormatExpectedAgreementTestCase( V3TestCases ):
@@ -436,7 +445,9 @@ class RandomExtraFileV3TestCase( ExtraFilesV3Tests ):
 
 class OfflinePeersV3Tests( ExtraFilesV3Tests ):
     """Abstract class"""
-    # todo(bhayes): Why is this an ExtraFilesV3Tests?
+    # todo(bhayes): Why is this an ExtraFilesV3Tests? That introduces
+    # randomness in the damage, which might be good, or maybe just
+    # annoying.
 
     def __init__( self, methodName = 'runTest' ):
         ExtraFilesV3Tests.__init__( self, methodName )
@@ -455,6 +466,22 @@ class VotersDontParticipateV3TestCase( OfflinePeersV3Tests ):
     
     def _damage_AU( self ):
         return self._create_AU_nodes( 5, 15 )
+
+    def _verify_voters_counts( self ):
+        # Since the quorum is set low, sometimes a 4th peer will be
+        # invited, sometimes not.
+        poll_key = self.victim.getV3PollKey( self.AU )
+        voters_counts = self.victim.getV3PollVotersCounts( poll_key )
+        # -1 for us, the victim
+        max_expected = len( self.clients ) + len ( self.offline_peers ) - 1
+        # todo(bhayes): Can this be made more predictable?
+        # I believe it's 6 if all 4 active peers are invited in the
+        # initial round, and 7 if only 3 are, and the 4th is invited
+        # in a second round. 
+        min_expected = max_expected - 1
+        self.assertTrue( len( voters_counts ) >= min_expected )
+        self.assertTrue( len( voters_counts ) <= max_expected )
+        # todo(bhayes): Check actual values of voter_counts
 
 
 class NoQuorumV3TestCase( OfflinePeersV3Tests ):
