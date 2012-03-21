@@ -6685,7 +6685,7 @@
   {
   
     title <
-      name = "Cultural Studies <_> Critical Methodologies" ;
+      name = "Cultural Studies <=> Critical Methodologies" ;
       issn = 1532-7086 ;
       eissn = 1552-356X
     >
@@ -6697,8 +6697,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; "Cultural Studies <_> Critical Methodologies Volume 8" ; 8 ; >
-      au < down ; crawling ; 2009 ; "Cultural Studies <_> Critical Methodologies Volume 9" ; 9 ; >
+      au < down ; crawling ; 2008 ; "Cultural Studies <=> Critical Methodologies Volume 8" ; 8 ; >
+      au < down ; crawling ; 2009 ; "Cultural Studies <=> Critical Methodologies Volume 9" ; 9 ; >
 
     }
 
@@ -6706,18 +6706,18 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2001 ; "Cultural Studies <_> Critical Methodologies Volume 1" ; 1 ; >
-      au < manifest ; exists ; 2002 ; "Cultural Studies <_> Critical Methodologies Volume 2" ; 2 ; >
-      au < manifest ; exists ; 2003 ; "Cultural Studies <_> Critical Methodologies Volume 3" ; 3 ; >
-      au < manifest ; exists ; 2004 ; "Cultural Studies <_> Critical Methodologies Volume 4" ; 4 ; >
-      au < manifest ; exists ; 2005 ; "Cultural Studies <_> Critical Methodologies Volume 5" ; 5 ; >
-      au < manifest ; exists ; 2006 ; "Cultural Studies <_> Critical Methodologies Volume 6" ; 6 ; >
-      au < manifest ; exists ; 2007 ; "Cultural Studies <_> Critical Methodologies Volume 7" ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; "Cultural Studies <_> Critical Methodologies Volume 8" ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; "Cultural Studies <_> Critical Methodologies Volume 9" ; 9 ; >
-      au < released ; crawling ; 2010 ; "Cultural Studies <_> Critical Methodologies Volume 10" ; 10 ; >
-      au < released ; crawling ; 2011 ; "Cultural Studies <_> Critical Methodologies Volume 11" ; 11 ; >
-      au < expected ; exists ; 2012 ; "Cultural Studies <_> Critical Methodologies Volume 12" ; 12 ; >
+      au < manifest ; exists ; 2001 ; "Cultural Studies <=> Critical Methodologies Volume 1" ; 1 ; >
+      au < manifest ; exists ; 2002 ; "Cultural Studies <=> Critical Methodologies Volume 2" ; 2 ; >
+      au < manifest ; exists ; 2003 ; "Cultural Studies <=> Critical Methodologies Volume 3" ; 3 ; >
+      au < manifest ; exists ; 2004 ; "Cultural Studies <=> Critical Methodologies Volume 4" ; 4 ; >
+      au < manifest ; exists ; 2005 ; "Cultural Studies <=> Critical Methodologies Volume 5" ; 5 ; >
+      au < manifest ; exists ; 2006 ; "Cultural Studies <=> Critical Methodologies Volume 6" ; 6 ; >
+      au < manifest ; exists ; 2007 ; "Cultural Studies <=> Critical Methodologies Volume 7" ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; "Cultural Studies <=> Critical Methodologies Volume 8" ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; "Cultural Studies <=> Critical Methodologies Volume 9" ; 9 ; >
+      au < released ; crawling ; 2010 ; "Cultural Studies <=> Critical Methodologies Volume 10" ; 10 ; >
+      au < released ; crawling ; 2011 ; "Cultural Studies <=> Critical Methodologies Volume 11" ; 11 ; >
+      au < expected ; exists ; 2012 ; "Cultural Studies <=> Critical Methodologies Volume 12" ; 12 ; >
 
     }
 
