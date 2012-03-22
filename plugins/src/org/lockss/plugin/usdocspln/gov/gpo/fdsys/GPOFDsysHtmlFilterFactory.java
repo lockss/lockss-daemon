@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDsysHtmlFilterFactory.java,v 1.3 2011-05-10 05:46:21 thib_gc Exp $
+ * $Id: GPOFDsysHtmlFilterFactory.java,v 1.4 2012-03-22 23:14:43 davidecorcoran Exp $
  */
 
 /*
@@ -33,33 +33,54 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.usdocspln.gov.gpo.fdsys;
 
 import java.io.*;
+import java.util.List;
 
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.HtmlTagFilter;
 import org.lockss.filter.HtmlTagFilter.TagPair;
+import org.lockss.filter.html.HtmlFilterInputStream;
+import org.lockss.filter.html.HtmlNodeFilterTransform;
+import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
-public class GPOFDsysHtmlFilterFactory implements FilterFactory {
+public class GPOFDSysHtmlFilterFactory implements FilterFactory {
 
-  @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    try {
-      return new ReaderInputStream(HtmlTagFilter.makeNestedFilter(new InputStreamReader(in, encoding),
-                                                                  ListUtil.list(// May contain a session token in a comment
-                                                                                new TagPair("<!--<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />",
-                                                                                            "\" />-->"),
-                                                                                // ...Or not in a comment, just two <input> tags in a row
-                                                                                new TagPair("<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />",
-                                                                                            "\" />"))));
-    }
-    catch (UnsupportedEncodingException uee) {
-      throw new PluginException(uee);
-    }
+public InputStream createFilteredInputStream(ArchivalUnit au,
+	                                          InputStream in,
+	                                          String encoding)
+  throws PluginException {
+	
+  NodeFilter[] filters = new NodeFilter[] {
+  // Filters the "Email a link to this page" link
+  HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^search.notificationPage\\.action\\?emailBody=")
+  };
+
+  OrFilter combinedFilter = new OrFilter(filters);
+  HtmlNodeFilterTransform transform = HtmlNodeFilterTransform.exclude(combinedFilter);
+  InputStream prefilteredStream = new HtmlFilterInputStream(in, encoding, transform);
+	    
+  try {
+	      
+  List pairs = ListUtil.list(
+  // May contain a session token in a comment
+  new TagPair("<!--<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />",
+              "\" />-->"),
+  // ...Or not in a comment, just two <input> tags in a row
+  new TagPair("<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />",
+              "\" />")
+  );
+	      
+  Reader prefilteredReader = new InputStreamReader(prefilteredStream, encoding);
+  Reader filteredReader = HtmlTagFilter.makeNestedFilter(prefilteredReader, pairs);
+  return new ReaderInputStream(filteredReader);
   }
   
-}    
+  catch (UnsupportedEncodingException uee) {
+  throw new PluginException(uee);
+  }
+}  
+}
    
