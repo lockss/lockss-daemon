@@ -2420,8 +2420,26 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < doNotProcess ; doNotProcess ; 1921 ; Physiological Reviews Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 1922 ; Physiological Reviews Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 1923 ; Physiological Reviews Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 1924 ; Physiological Reviews Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 1925 ; Physiological Reviews Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 1926 ; Physiological Reviews Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 1927 ; Physiological Reviews Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 1928 ; Physiological Reviews Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 1929 ; Physiological Reviews Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 1930 ; Physiological Reviews Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 1931 ; Physiological Reviews Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 1932 ; Physiological Reviews Volume 12 ; 12 ; >
       au < released ; crawling ; 1933 ; Physiological Reviews Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 1934 ; Physiological Reviews Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 1935 ; Physiological Reviews Volume 15 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 1936 ; Physiological Reviews Volume 16 ; 16 ; >
       au < released ; crawling ; 1937 ; Physiological Reviews Volume 17 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 1938 ; Physiological Reviews Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 1939 ; Physiological Reviews Volume 19 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 1940 ; Physiological Reviews Volume 20 ; 20 ; >
       au < released ; crawling ; 1941 ; Physiological Reviews Volume 21 ; 21 ; >
       au < released ; crawling ; 1945 ; Physiological Reviews Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; Physiological Reviews Volume 91 ; 91 ; >
@@ -2479,6 +2497,31 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       comment[notReady] = see RU3956
 
+      au < doNotProcess ; doNotProcess ; 1986 ; Physiology Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; Physiology Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; Physiology Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; Physiology Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; Physiology Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; Physiology Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; Physiology Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; Physiology Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; Physiology Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; Physiology Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; Physiology Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; Physiology Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; Physiology Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; Physiology Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; Physiology Volume 15 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; Physiology Volume 16 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; Physiology Volume 17 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; Physiology Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; Physiology Volume 19 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; Physiology Volume 20 ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; Physiology Volume 21 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; Physiology Volume 22 ; 22 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Physiology Volume 23 ; 23 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Physiology Volume 24 ; 24 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Physiology Volume 25 ; 25 ; >
       au < notReady ; exists ; 2011 ; Physiology Volume 26 ; 26 ; >
       au < manifest ; exists ; 2012 ; Physiology Volume 27 ; 27 ; >
 

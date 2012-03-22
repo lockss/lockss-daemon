@@ -5,14 +5,14 @@
   >
 
   {
-  
+
     title <
       name = Acta Biochimica et Biophysica Sinica ;
-      issn = 1672-9145 ; 
+      issn = 1672-9145 ;
       eissn = 1745-7270 ;
       issnl = 1672-9145
     >
-    
+
     {
 
     pluginPrefix = org.lockss.plugin.highwire.
@@ -28,34 +28,34 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Acta Biochimica et Biophysica Sinica Volume 44 ; 44 >
-    
+
     }
-    
+
   }
 
   {
-  
+
     title <
       name = Adaptation ;
       issn = 1755-0637 ;
       eissn = 1755-0645 ;
-      issnl = 1755-0637 
+      issnl = 1755-0637
     >
-    
+
     {
-    
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://adaptation.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Adaptation Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Adaptation Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Adaptation Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Adaptation Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Adaptation Volume 5 ; 5 >
-    
+
     }
-    
+
   }
 
   {
@@ -188,7 +188,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2004 ; African Affairs Volume 103 ; 103 >
     au < HighWirePressH20Plugin ; manifest ; 2005 ; African Affairs Volume 104 ; 104 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; African Affairs Volume 105 ; 105 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; African Affairs Volume 106 ; 106 >   
+    au < HighWireStrVolPlugin ; down ; 2007 ; African Affairs Volume 106 ; 106 >
     au < HighWirePressH20Plugin ; released ; 2008 ; African Affairs Volume 107 ; 107 >
     au < HighWirePressH20Plugin ; released ; 2009 ; African Affairs Volume 108 ; 108 >
     au < HighWirePressH20Plugin ; released ; 2010 ; African Affairs Volume 109 ; 109 >
@@ -198,7 +198,7 @@
     }
 
   }
-   
+
   {
 
     title <
@@ -286,7 +286,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 1963-1964 ; Alcohol and Alcoholism Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1965-1967 ; Alcohol and Alcoholism Volume 2 ; 2 >    
+    au < HighWirePressH20Plugin ; manifest ; 1965-1967 ; Alcohol and Alcoholism Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1968 ; Alcohol and Alcoholism Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 1969 ; Alcohol and Alcoholism Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 1970 ; Alcohol and Alcoholism Volume 5 ; 5 >
@@ -338,7 +338,7 @@
   }
 
   {
-    
+
     title <
         name = American Journal of Agricultural Economics ;
         issn = 0002-9092 ;
@@ -351,7 +351,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ajae.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-        
+
     au < HighWirePressH20Plugin ; manifest ; 1919 ; American Journal of Agricultural Economics Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1920 ; American Journal of Agricultural Economics Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1921 ; American Journal of Agricultural Economics Volume 3 ; 3 >
@@ -480,7 +480,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1922 ; American Journal of Epidemiology Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1923 ; American Journal of Epidemiology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 1924 ; American Journal of Epidemiology Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1925 ; American Journal of Epidemiology Volume 5 ; 5 >  
+    au < HighWirePressH20Plugin ; manifest ; 1925 ; American Journal of Epidemiology Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 1926 ; American Journal of Epidemiology Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 1927 ; American Journal of Epidemiology Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 1928 ; American Journal of Epidemiology Volume 8 ; 8 >
@@ -751,7 +751,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; American Literary History Volume 24 ; 24 >
 
     }
-    
+
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
@@ -779,7 +779,7 @@
   }
 
   {
-    
+
     title <
       name = Analysis ;
       issn = 0003-2638 ;
@@ -788,7 +788,7 @@
     >
 
     {
-    
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://analysis.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -867,7 +867,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Analysis Volume 72 ; 72 >
 
     }
-    
+
   }
 
   {
@@ -1176,7 +1176,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Annals of Oncology Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Annals of Oncology Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Annals of Oncology Volume 23 ; 23 >
-    
+
     }
 
   }
@@ -1185,7 +1185,7 @@
 
     title <
       name = AoB PLANTS ;
-      eissn = 2041-2851 
+      eissn = 2041-2851
     >
 
     rights = openaccess
@@ -1201,12 +1201,12 @@
   }
 
   {
-    
+
     title <
       name = Applied Economic Perspectives and Policy ;
       issn = 2040-5790 ;
       eissn = 2040-5804 ;
-      issnl = 2040-5790 
+      issnl = 2040-5790
     >
 
     {
@@ -1307,7 +1307,7 @@
     }
 
   }
-  
+
   {
 
     title <
@@ -1332,10 +1332,10 @@
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Applied Mathematics Research eXpress (AMRX) Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Applied Mathematics Research eXpress (AMRX) Volume 2012 ; 2012 >
 
-  }  
-  
+  }
+
   {
-  
+
     title <
       name = Arbitration Law Reports and Review ;
       issn = 2044-8651 ;
@@ -1359,9 +1359,9 @@
     }
 
   }
-  
+
   {
-  
+
     title <
       name = Archives of Clinical Neuropsychology ;
       issn = 0887-6177 ;
@@ -1370,7 +1370,7 @@
     >
 
     {
-    
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://acn.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -1404,9 +1404,9 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Archives of Clinical Neuropsychology Volume 27 ; 27 >
 
     }
-    
+
   }
-  
+
   {
 
     title <
@@ -1554,7 +1554,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1911-1912 ; Biometrika Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 1913 ; Biometrika Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 1914-1915 ; Biometrika Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1915-1917 ; Biometrika Volume 11 ; 11 >    
+    au < HighWirePressH20Plugin ; manifest ; 1915-1917 ; Biometrika Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 1918-1919 ; Biometrika Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 1920-1921 ; Biometrika Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 1922-1923 ; Biometrika Volume 14 ; 14 >
@@ -1649,7 +1649,7 @@
   }
 
   {
-  
+
     title <
       name = Bioscience Horizons: The National Undergraduate Research Journal ;
       eissn = 1754-7431 ;
@@ -1657,21 +1657,21 @@
     >
 
     {
-    
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://biohorizons.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 5 ; 5 >
-    
+
     }
-    
+
   }
-  
+
   {
 
     title <
@@ -1714,7 +1714,7 @@
     }
 
   }
-    
+
   {
 
     title <
@@ -1944,7 +1944,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://bib.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-   
+
     au < HighWirePressH20Plugin ; manifest ; 2000 ; Briefings in Bioinformatics Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2001 ; Briefings in Bioinformatics Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2002 ; Briefings in Bioinformatics Volume 3 ; 3 >
@@ -1953,12 +1953,12 @@
     au < HighWirePressH20Plugin ; manifest ; 2005 ; Briefings in Bioinformatics Volume 6 ; 6 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; Briefings in Bioinformatics Volume 7 ; 7 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Briefings in Bioinformatics Volume 8 ; 8 >
-    au < HighWirePressPlugin ; down ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 >     
+    au < HighWirePressPlugin ; down ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Briefings in Bioinformatics Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Briefings in Bioinformatics Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Briefings in Bioinformatics Volume 13 ; 13 >
-    
+
 
     }
 
@@ -1972,7 +1972,7 @@
       eissn = 1477-4062 ;
       issnl = 1473-9550
     >
-    
+
     comment[bfgp] = The url redirects to "http://bfg.oxfordjournals.org/", marked down
 
     {
@@ -1980,7 +1980,7 @@
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://bfgp.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
-        
+
     au < down ; 2006 ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
 
     }
@@ -1990,12 +1990,12 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://bfgp.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     comment[vol9] = check content
 
     au < HighWirePressPlugin ; down ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; down ; 2010 ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 >
-    
+
     }
     {
 
@@ -2011,11 +2011,11 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 >
-  
+
     }
 
   }
-    
+
   {
 
     title <
@@ -2031,11 +2031,11 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://bfg.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-        
+
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 >
-  
+
     }
 
   }
@@ -2119,9 +2119,9 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The British Journal of Aesthetics Volume 52 ; 52 >
 
     }
- 
+
   }
-    
+
   {
 
     title <
@@ -2437,7 +2437,7 @@
     }
 
   }
-    
+
   {
 
     title <
@@ -2462,7 +2462,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://bjsw.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-        
+
     au < HighWirePressH20Plugin ; manifest ; 1971 ; The British Journal of Social Work Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1972 ; The British Journal of Social Work Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1973 ; The British Journal of Social Work Volume 3 ; 3 >
@@ -2518,7 +2518,7 @@
       eissn = 1471-8391 ;
       issnl = 0007-1420
     >
-    
+
     {
 
     pluginPrefix = org.lockss.plugin.highwire.
@@ -2624,7 +2624,7 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; British Medical Bulletin Volume 102 ; 102 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; British Medical Bulletin Volume 103 ; 103 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; British Medical Bulletin Volume 104 ; 104 >
-        
+
     }
 
   }
@@ -2809,7 +2809,7 @@
     }
 
   }
-  
+
   {
     title <
       name = Cambridge Journal of Regions, Economy and Society ;
@@ -2817,9 +2817,9 @@
       eissn = 1752-1386 ;
       issnl = 1752-1378
     >
-    
+
     {
-    
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://cjres.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -2829,11 +2829,11 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Cambridge Journal of Regions, Economy and Society Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Cambridge Journal of Regions, Economy and Society Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Cambridge Journal of Regions, Economy and Society Volume 5 ; 5 >
- 
+
     }
-   
+
   }
-  
+
   {
 
     title <
@@ -2902,15 +2902,15 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Cambridge Quarterly Volume 41 ; 41 >
 
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = cambridge_quarterly
     attr[journal_id] = bcq
     implicit < status ; year ; name ; param[volume] >
-    
+
     au < released ; 2006 ; The Cambridge Quarterly Volume 35 ; 35 >
     au < released ; 2007 ; The Cambridge Quarterly Volume 36 ; 36 >
     au < ready ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 >
@@ -2972,7 +2972,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://carcin.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     au < HighWirePressH20Plugin ; manifest ; 1980 ; Carcinogenesis Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1981 ; Carcinogenesis Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1982 ; Carcinogenesis Volume 3 ; 3 >
@@ -3012,14 +3012,14 @@
   }
 
   {
-  
+
     title <
       name = Cardiovascular Research ;
       issn = 0008-6363 ;
       eissn = 1755-3245 ;
       issnl = 0008-6363
     >
-    
+
     {
 
     pluginPrefix = org.lockss.plugin.highwire.
@@ -3068,7 +3068,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Cardiovascular Research Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Cardiovascular Research Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Cardiovascular Research Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Cardiovascular Research Volume 43 ; 43 >    
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; Cardiovascular Research Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Cardiovascular Research Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; manifest ; 2000 ; Cardiovascular Research Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; manifest ; 2000 ; Cardiovascular Research Volume 46 ; 46 >
@@ -3081,7 +3081,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2002 ; Cardiovascular Research Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 2002 ; Cardiovascular Research Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; manifest ; 2002 ; Cardiovascular Research Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Cardiovascular Research Volume 56 ; 56 >    
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Cardiovascular Research Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Cardiovascular Research Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Cardiovascular Research Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Cardiovascular Research Volume 59 ; 59 >
@@ -3165,6 +3165,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2001 ; Cerebral Cortex Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 2002 ; Cerebral Cortex Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Cerebral Cortex Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Cerebral Cortex Volume 14 ; 14 >
     au < HighWirePressPlugin ; doNotProcess ; 2005 ; Cerebral Cortex Volume 15 ; 15 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Cerebral Cortex Volume 16 ; 16 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Cerebral Cortex Volume 17 ; 17 >
@@ -3376,13 +3377,15 @@
     au < HighWireStrVolPlugin ; down ; 2006-2007 ;The Chinese Journal of International Politics Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; testing ; 2008-2009 ;The Chinese Journal of International Politics Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010-2011 ;The Chinese Journal of International Politics Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; expected ; 2011-2012 ;The Chinese Journal of International Politics Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; expected ; 2012-2013 ;The Chinese Journal of International Politics Volume 5 ; 5 >
 
     }
 
   }
 
   {
-  
+
     title <
       name = Christian Bioethics: Non-Ecumenical Studies in Medical Morality ;
       issn = 1380-3603 ;
@@ -3391,11 +3394,11 @@
     >
 
     {
-    
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://cb.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] > 
- 
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
     au < HighWirePressH20Plugin ; manifest ; 1995 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 3 ; 3 >
@@ -3414,9 +3417,9 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 18 ; 18 >
-    
+
     }
-    
+
   }
 
   {
@@ -3506,8 +3509,10 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Clinical Infectious Diseases Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Clinical Infectious Diseases Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Clinical Infectious Diseases Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; Clinical Infectious Diseases Volume 53 ; 53 >
- 
+    au < HighWirePressH20Plugin ; expected ; 2011 ; Clinical Infectious Diseases Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Clinical Infectious Diseases Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Clinical Infectious Diseases Volume 55 ; 55 >
+
     }
 
   }
@@ -3528,6 +3533,10 @@
     param[base_url] = http://ckj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; NDT Plus Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; NDT Plus Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; NDT Plus Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; NDT Plus Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Clinical Kidney Journal Volume 5 ; 5 >
 
   }
@@ -3642,7 +3651,7 @@
     }
 
   }
-    
+
   {
 
     title <
@@ -3762,16 +3771,16 @@
   }
 
   {
-  
+
     title <
       name = Contemporary Women's Writing ;
       issn = 1754-1476 ;
       eissn = 1754-1484 ;
       issnl = 1754-1476
     >
-    
+
     {
-    
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://cww.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -3782,13 +3791,13 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Contemporary Women's Writing Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Contemporary Women's Writing Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Contemporary Women's Writing Volume 6 ; 6 >
-    
+
     }
-    
+
   }
 
   {
-  
+
     title <
       name = Continuing Education in Anaesthesia, Critical Care & Pain ;
       issn = 1743-1816 ;
@@ -3807,7 +3816,7 @@
     }
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ceaccp.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -3824,9 +3833,9 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 12 ; 12 >
-    
+
     }
-    
+
   }
 
   {
@@ -3990,7 +3999,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; DNA Research Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 2011 ; DNA Research Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; DNA Research Volume 19 ; 19 >
-    
+
     }
 
   }
@@ -4062,20 +4071,20 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; Early Music Volume 40 ; 40 >
 
     }
-    
+
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = early_music
     attr[journal_id] = emu
-    implicit < status ; year ; name ; param[volume] >  
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2004 ; Early Music Volume 32 ; 32 >
     au < released ; 2005 ; Early Music Volume 33 ; 33 >
     au < released ; 2006 ; Early Music Volume 34 ; 34 >
     au < released ; 2007 ; Early Music Volume 35 ; 35 >
-        
+
     }
 
   }
@@ -4106,11 +4115,11 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ei.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     au < HighWirePressH20Plugin ; doesNotExist ; 2005 ; Economic Inquiry Volume 43 ; 43 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; Economic Inquiry Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; doesNotExist ; 2007 ; Economic Inquiry Volume 45 ; 45 >
-    
+
     }
 
   }
@@ -4128,66 +4137,67 @@
     param[base_url] = http://english.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 1936 ; English: Journal of the English Association Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1937 ; English: Journal of the English Association Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1938 ; English: Journal of the English Association Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1939 ; English: Journal of the English Association Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1940 ; English: Journal of the English Association Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1941 ; English: Journal of the English Association Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1942 ; English: Journal of the English Association Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1943 ; English: Journal of the English Association Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1944 ; English: Journal of the English Association Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1945 ; English: Journal of the English Association Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1946 ; English: Journal of the English Association Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1947 ; English: Journal of the English Association Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; English: Journal of the English Association Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; English: Journal of the English Association Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; English: Journal of the English Association Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; English: Journal of the English Association Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1952 ; English: Journal of the English Association Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; English: Journal of the English Association Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1954 ; English: Journal of the English Association Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1955 ; English: Journal of the English Association Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1956 ; English: Journal of the English Association Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1957 ; English: Journal of the English Association Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1958 ; English: Journal of the English Association Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1959 ; English: Journal of the English Association Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 1960 ; English: Journal of the English Association Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; English: Journal of the English Association Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; English: Journal of the English Association Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; English: Journal of the English Association Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; English: Journal of the English Association Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; English: Journal of the English Association Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; English: Journal of the English Association Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; English: Journal of the English Association Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; English: Journal of the English Association Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; English: Journal of the English Association Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; English: Journal of the English Association Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; English: Journal of the English Association Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; English: Journal of the English Association Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; English: Journal of the English Association Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; English: Journal of the English Association Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; English: Journal of the English Association Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; English: Journal of the English Association Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; English: Journal of the English Association Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; English: Journal of the English Association Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; English: Journal of the English Association Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; English: Journal of the English Association Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; English: Journal of the English Association Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; English: Journal of the English Association Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; English: Journal of the English Association Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; English: Journal of the English Association Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; English: Journal of the English Association Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; English: Journal of the English Association Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; English: Journal of the English Association Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; English: Journal of the English Association Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; English: Journal of the English Association Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; English: Journal of the English Association Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; English: Journal of the English Association Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; English: Journal of the English Association Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; English: Journal of the English Association Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; English: Journal of the English Association Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; English: Journal of the English Association Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; manifest ; 1936-1937 ; English: Journal of the English Association Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1938-1939 ; English: Journal of the English Association Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1940-1941 ; English: Journal of the English Association Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1942-1943 ; English: Journal of the English Association Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1944-1945 ; English: Journal of the English Association Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1946-1947 ; English: Journal of the English Association Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1948-1949 ; English: Journal of the English Association Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1950-1951 ; English: Journal of the English Association Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1952-1953 ; English: Journal of the English Association Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1954-1955 ; English: Journal of the English Association Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1956-1957 ; English: Journal of the English Association Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1958-1959 ; English: Journal of the English Association Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1960-1961 ; English: Journal of the English Association Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1962-1963 ; English: Journal of the English Association Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 1964-1965 ; English: Journal of the English Association Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1966-1967 ; English: Journal of the English Association Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; English: Journal of the English Association Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; English: Journal of the English Association Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; English: Journal of the English Association Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; English: Journal of the English Association Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; English: Journal of the English Association Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 1973 ; English: Journal of the English Association Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 1974 ; English: Journal of the English Association Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 1975 ; English: Journal of the English Association Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; English: Journal of the English Association Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; English: Journal of the English Association Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; English: Journal of the English Association Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; English: Journal of the English Association Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; English: Journal of the English Association Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; English: Journal of the English Association Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; English: Journal of the English Association Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; English: Journal of the English Association Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; English: Journal of the English Association Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; English: Journal of the English Association Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; English: Journal of the English Association Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; English: Journal of the English Association Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; English: Journal of the English Association Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; English: Journal of the English Association Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; English: Journal of the English Association Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; English: Journal of the English Association Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; English: Journal of the English Association Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; English: Journal of the English Association Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; English: Journal of the English Association Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; English: Journal of the English Association Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; English: Journal of the English Association Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; English: Journal of the English Association Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; English: Journal of the English Association Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; English: Journal of the English Association Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; English: Journal of the English Association Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; English: Journal of the English Association Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; English: Journal of the English Association Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; English: Journal of the English Association Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; English: Journal of the English Association Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; English: Journal of the English Association Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; English: Journal of the English Association Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; English: Journal of the English Association Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; English: Journal of the English Association Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; English: Journal of the English Association Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; English: Journal of the English Association Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; English: Journal of the English Association Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; English: Journal of the English Association Volume 61 ; 61 >
 
   }
 
@@ -4334,7 +4344,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; English Historical Review Volume CXXIV ; CXXIV >
     au < HighWirePressH20Plugin ; released ; 2010 ; English Historical Review Volume CXXV ; CXXV >
     au < HighWirePressH20Plugin ; released ; 2011 ; English Historical Review Volume CXXVI ; CXXVI >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; English Historical Review Volume CXXVI ; CXXVI >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; English Historical Review Volume CXXVII ; CXXVII >
 
     }
 
@@ -4434,7 +4444,7 @@
     au < HighWirePressPlugin ; superseded ; 2009 ; ELT Journal Volume 63 [superseded] ; 63 >
     au < HighWirePressH20Plugin ; released ; 2009 ; ELT Journal Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2010 ; ELT Journal Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; ELT Journal Volume 65 ; 65 > 
+    au < HighWirePressH20Plugin ; released ; 2011 ; ELT Journal Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; ELT Journal Volume 66 ; 66 >
 
     }
@@ -4479,16 +4489,16 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Enterprise & Society Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Enterprise & Society Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Enterprise & Society Volume 13 ; 13 >
-    
+
     }
-    
+
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = enterprise_and_society
     attr[journal_id] = ens
-    implicit < status ; year ; name ; param[volume] >    
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2003 ; Enterprise & Society Volume 4 ; 4 >
     au < released ; 2004 ; Enterprise & Society Volume 5 ; 5 >
@@ -4498,9 +4508,9 @@
     au < ready ; 2008 ; Enterprise & Society Volume 9 ; 9 >
     au < ready ; 2009 ; Enterprise & Society Volume 10 ; 10 >
     au < ready ; 2010 ; Enterprise & Society Volume 11 ; 11 >
-    au < ready ; 2011 ; Enterprise & Society Volume 12 ; 12 >    
+    au < ready ; 2011 ; Enterprise & Society Volume 12 ; 12 >
     au < expected ; 2012 ; Enterprise & Society Volume 13 ; 13 >
-    
+
     }
 
   }
@@ -4635,7 +4645,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Epidemiologic Reviews Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Epidemiologic Reviews Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Epidemiologic Reviews Volume 34 ; 34 >
-    
+
     }
 
   }
@@ -4766,11 +4776,11 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Essays in Criticism Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Essays in Criticism Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Essays in Criticism Volume 62 ; 62 >
-    
+
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = essays_in_criticism
@@ -4779,9 +4789,9 @@
 
     au < released ; 2006 ; Essays in Criticism Volume 56 ; 56 >
     au < released ; 2007 ; Essays in Criticism Volume 57 ; 57 >
-        
+
     }
-    
+
   }
 
   {
@@ -4826,7 +4836,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Europace Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Europace Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Europace Volume 14 ; 14 >
-     
+
     }
 
   }
@@ -4882,7 +4892,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; European Heart Journal Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Heart Journal Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; European Heart Journal Volume 33 ; 33 >
-    
+
     }
 
   }
@@ -4931,9 +4941,9 @@
     }
 
   }
-  
+
   {
-  
+
     title <
       name = European Journal of Cardio-Thoracic Surgery ;
       issn = 1010-7940 ;
@@ -4986,11 +4996,12 @@
     au < HighWirePressH20Plugin ; manifest ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 41 ; 41 >
-  
+    au < HighWirePressH20Plugin ; expected ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 >
+
   }
 
   {
-  
+
     title <
       name = European Heart Journal - Cardiovascular Imaging ;
       issn = 2047-2404 ;
@@ -5001,7 +5012,7 @@
     comment[continued_from] = 1525-2167
     comment[title] = change in January 2012, old url redirects to this one
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ehjcimaging.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -5023,9 +5034,9 @@
     }
 
   }
-    
+
   {
-  
+
     title <
       name = European Journal of Echocardiography ;
       issn = 1525-2167 ;
@@ -5043,7 +5054,7 @@
   }
 
   {
-  
+
     title <
       name = European Journal of Heart Failure ;
       issn = 1388-9842 ;
@@ -5052,11 +5063,11 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://eurjhf.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
     au < HighWirePressH20Plugin ; manifest ; 1999 ; European Journal of Heart Failure Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2000 ; European Journal of Heart Failure Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2001 ; European Journal of Heart Failure Volume 3 ; 3 >
@@ -5071,9 +5082,9 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; European Journal of Heart Failure Volume 14 ; 14 >
-    
+
     }
-    
+
   }
 
  {
@@ -5091,14 +5102,14 @@
 
     au < HighWirePressH20Plugin ; manifest ; 2002 ; European Journal of Heart Failure Supplements Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; European Journal of Heart Failure Supplements Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; European Journal of Heart Failure Supplements Volume 3 ; 3 > 
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; European Journal of Heart Failure Supplements Volume 4 ; 4 > 
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; European Journal of Heart Failure Supplements Volume 5 ; 5 > 
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; European Journal of Heart Failure Supplements Volume 6 ; 6 > 
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; European Journal of Heart Failure Supplements Volume 7 ; 7 > 
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 > 
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 > 
-    au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Heart Failure Supplements Volume 10 ; 10 > 
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; European Journal of Heart Failure Supplements Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; European Journal of Heart Failure Supplements Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; European Journal of Heart Failure Supplements Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; European Journal of Heart Failure Supplements Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; European Journal of Heart Failure Supplements Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Heart Failure Supplements Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; European Journal of Heart Failure Supplements Volume 11 ; 11 >
 
   }
@@ -5153,7 +5164,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of International Law Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of International Law Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; European Journal of International Law Volume 23 ; 23 >
-   
+
     }
 
   }
@@ -5166,7 +5177,7 @@
       eissn = 1460-2210 ;
       issnl = 0141-5387
     >
-    
+
     {
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
@@ -5176,7 +5187,7 @@
     au < superseded ; 2006 ; European Journal of Orthodontics Volume 28 [superseded] ; 28 >
 
     }
-      
+
     {
 
     pluginPrefix = org.lockss.plugin.highwire.
@@ -5217,7 +5228,7 @@
     au < HighWirePressH20Plugin ; released ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 >    
+    au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 >
 
     }
@@ -5274,7 +5285,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Public Health Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Public Health Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; European Journal of Public Health Volume 22 ; 22 >
-    
+
     }
 
   }
@@ -5331,20 +5342,20 @@
     au < HighWirePressH20Plugin ; released ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; testing ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Review of Agricultural Economics Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; European Review of Agricultural Economics Volume 38 ; 38 >   
+    au < HighWirePressH20Plugin ; released ; 2011 ; European Review of Agricultural Economics Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; European Review of Agricultural Economics Volume 39 ; 39 >
-    
+
     }
 
   }
-  
+
   {
-  
+
     title <
       name = European Review of Economic History ;
       issn = 1361-4916 ;
       eissn = 1474-0044 ;
-      issnl = 1361-4916 
+      issnl = 1361-4916
     >
 
     pluginPrefix = org.lockss.plugin.highwire.
@@ -5426,7 +5437,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; European Sociological Review Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Sociological Review Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; European Sociological Review Volume 28 ; 28 >
-    
+
     }
 
   }
@@ -5600,7 +5611,7 @@
     }
 
     {
-      
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://forestry.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -5693,7 +5704,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Forestry: An International Journal of Forest Research Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Forestry: An International Journal of Forest Research Volume 84 ; 84 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Forestry: An International Journal of Forest Research Volume 85 ; 85 >
-    
+
     }
 
   }
@@ -5771,7 +5782,7 @@
     au < HighWirePressH20Plugin ; released ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 >   
+    au < HighWirePressH20Plugin ; released ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Forum for Modern Language Studies Volume 48 ; 48 >
 
     }
@@ -5831,7 +5842,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; French History Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2011 ; French History Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; French History Volume 26 ; 26 >
-    
+
     }
 
   }
@@ -5927,17 +5938,17 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; French Studies: A Quarterly Review Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; released ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 >
- 
+
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = french_studies_a_quarterly_review
     attr[journal_id] = frs
     implicit < status ; year ; name ; param[volume] >
-    
+
     au < released ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 >
     au < released ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 >
     au < ready ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 >
@@ -5947,7 +5958,7 @@
     au < expected ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 >
 
     }
-    
+
   }
 
   {
@@ -6026,7 +6037,7 @@
   }
 
   {
-  
+
     title <
       name = German History ;
       issn = 0266-3554 ;
@@ -6035,11 +6046,11 @@
     >
 
     {
-        
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://gh.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     au < HighWirePressH20Plugin ; manifest ; 1984 ; German History Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1985 ; German History Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1986 ; German History Volume 3 ; 3 >
@@ -6076,7 +6087,7 @@
   }
 
   {
-  
+
     title <
       name = The Gerontologist ;
       issn = 0016-9013 ;
@@ -6085,7 +6096,7 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://gerontologist.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -6142,11 +6153,11 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; The Gerontologist Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Gerontologist Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Gerontologist Volume 52 ; 52 >
-    
+
     }
-    
+
   }
-  
+
   {
 
     title <
@@ -6155,7 +6166,7 @@
       eissn = 1460-2423 ;
       issnl = 0959-6658
     >
-    
+
     {
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
@@ -6195,13 +6206,13 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Glycobiology Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Glycobiology Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Glycobiology Volume 22 ; 22 >
-    
+
     }
 
   }
 
   {
-  
+
     title <
       name = Health & Social Work  ;
       issn = 0360-7283 ;
@@ -6229,7 +6240,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Health & Social Work Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Health & Social Work Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Health & Social Work Volume 37 ; 37 >
-    
+
   }
 
   {
@@ -6406,7 +6417,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Health Promotion International Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Health Promotion International Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Health Promotion International Volume 27 ; 27 >
-    
+
     }
 
   }
@@ -6429,9 +6440,9 @@
     au < down ; 2005 ; History Workshop Journal Volume 61 ; 61 >
 
     }
-    
+
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://hwj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -6501,18 +6512,20 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; History Workshop Journal Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; released ; 2010 ; History Workshop Journal Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; released ; 2011 ; History Workshop Journal Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; History Workshop Journal Volume 72 ; 72 >
-  
+    au < HighWirePressH20Plugin ; expected ; 2011 ; History Workshop Journal Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; History Workshop Journal Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; History Workshop Journal Volume 74 ; 74 >
+
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = history_workshop_journal
     attr[journal_id] = hwj
     implicit < status ; year ; name ; param[volume] >
-    
+
     au < released ; 2004 ; History Workshop Journal Volume 57 ; 57 >
     au < released ; 2004 ; History Workshop Journal Volume 58 ; 58 >
     au < released ; 2005 ; History Workshop Journal Volume 59 ; 59 >
@@ -6574,17 +6587,17 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Holocaust and Genocide Studies Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Holocaust and Genocide Studies Volume 26 ; 26 >
-    
+
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = holocaust_and_genocide_studies
     attr[journal_id] = hgs
     implicit < status ; year ; name ; param[volume] >
-    
+
     au < released ; 2003 ; Holocaust and Genocide Studies Volume 17 ; 17 >
     au < released ; 2004 ; Holocaust and Genocide Studies Volume 18 ; 18 >
     au < released ; 2005 ; Holocaust and Genocide Studies Volume 19 ; 19 >
@@ -6609,7 +6622,7 @@
       issnl = 0360-3989
     >
 
-    comment[moved] = Published by Blackwell Publishing from Volume 32, 2006. 
+    comment[moved] = Published by Blackwell Publishing from Volume 32, 2006.
 
     {
 
@@ -6680,7 +6693,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Human Molecular Genetics Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Human Molecular Genetics Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Human Molecular Genetics Volume 21 ; 21 >
-    
+
     }
 
   }
@@ -6739,7 +6752,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Human Reproduction Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Human Reproduction Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Human Reproduction Volume 27 ; 27 >
-    
+
     }
 
   }
@@ -6790,7 +6803,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Human Reproduction Update Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Human Reproduction Update Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Human Reproduction Update Volume 18 ; 18 >
-    
+
     }
 
    }
@@ -6834,7 +6847,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Human Rights Law Review Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Human Rights Law Review Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Human Rights Law Review Volume 12 ; 12 >
-    
+
     }
 
   }
@@ -6924,20 +6937,20 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; ICES Journal of Marine Science Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; released ; 2011 ; ICES Journal of Marine Science Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; ICES Journal of Marine Science Volume 69 ; 69 >
-        
+
     }
 
   }
 
   {
-  
+
     title <
       name = ICSID Review: Foreign Investment Law Journal ;
       issn = 0258-3690 ;
       eissn = 2049-1999 ;
       issnl = 0258-3690
     >
-    
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://icsidreview.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -6959,7 +6972,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 >
-      
+
   }
 
   {
@@ -6983,7 +6996,7 @@
     au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Communications Volume E90-B ; E90-B >
 
     }
-    
+
   }
 
   {
@@ -7002,7 +7015,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ietele.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
- 
+
     au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Electronics Volume E89-C ; E89-C >
     au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Electronics Volume E90-C ; E90-C >
 
@@ -7163,7 +7176,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; IMA Journal of Applied Mathematics Volume 75 ; 75 >
     au < HighWirePressH20Plugin ; released ; 2011 ; IMA Journal of Applied Mathematics Volume 76 ; 76 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; IMA Journal of Applied Mathematics Volume 77 ; 77 >
- 
+
     }
 
   }
@@ -7280,7 +7293,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; IMA Journal of Mathematical Control and Information Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2011 ; IMA Journal of Mathematical Control and Information Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; IMA Journal of Mathematical Control and Information Volume 29 ; 29 >
-    
+
     }
 
   }
@@ -7401,7 +7414,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Industrial and Corporate Change Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Industrial and Corporate Change Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Industrial and Corporate Change Volume 21 ; 21 >
-    
+
     }
 
   }
@@ -7474,17 +7487,17 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Industrial Law Journal Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Industrial Law Journal Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Industrial Law Journal Volume 41 ; 41 >
-    
+
     }
 
   }
 
   {
-  
+
     title <
       name = Information and Inference: A Journal of the IMA
     >
-    
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://imaiai.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -7494,7 +7507,7 @@
   }
 
   {
-  
+
     title <
       name = InnovAiT ;
       issn = 1755-7380 ;
@@ -7503,38 +7516,38 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     au < HighWirePressH20Plugin ; manifest ; 2008 ; InnovAiT Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; InnovAiT Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010 ; InnovAiT Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; InnovAiT Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; InnovAiT Volume 5 ; 5 >
-    
+
     }
-          
+
   }
 
   {
-  
+
     title <
       name = Interactive Cardiovascular and Thoracic Surgery ;
       issn = 1569-9293 ;
       eissn = 1569-9285 ;
-      issnl = 1569-9285 
+      issnl = 1569-9285
     >
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://icvts.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-     
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 14 ; 14 >  
-     
+
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 14 ; 14 >
+
   }
-    
+
   {
 
     title <
@@ -7543,7 +7556,7 @@
       eissn = 1557-7023 ;
       issnl = 1540-7063
     >
-      
+
     comment[icb] = there is a BioOne incarnation of this journal under Society for Integrative and Comparative Biology
 
     {
@@ -7614,13 +7627,13 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Integrative and Comparative Biology Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Integrative and Comparative Biology Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Integrative and Comparative Biology Volume 52 ; 52 >
-    
+
     }
 
   }
 
   {
-  
+
     title <
       name = Interdisciplinary Studies in Literature and Environment ;
       issn = 1076-0962 ;
@@ -7629,7 +7642,7 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://isle.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -7761,16 +7774,16 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Immunology Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Immunology Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; International Immunology Volume 24 ; 24 >
-    
+
     }
 
   }
 
   {
-  
+
     comment[0] = International Immunology Meeting Abstracts (no ISSN) -- out of scope?
     comment[url] = http://intimmabs.oxfordjournals.org/
-    
+
   }
 
   {
@@ -7808,7 +7821,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Journal of Constitutional Law Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Journal of Constitutional Law Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; International Journal of Constitutional Law Volume 10 ; 10 >
-   
+
     }
 
   }
@@ -7879,7 +7892,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Journal of Epidemiology Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Journal of Epidemiology Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; International Journal of Epidemiology Volume 41 ; 41 >
-    
+
     }
 
   }
@@ -7900,7 +7913,7 @@
     implicit < status ; year ; name ; param[volume] >
 
     au < down ; 2005 ; International Journal of Law and Information Technology Volume 13 ; 13 >
-    
+
     }
 
     {
@@ -7985,7 +7998,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Journal of Law, Policy and the Family Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Journal of Law, Policy and the Family Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; International Journal of Law, Policy and the Family Volume 26 ; 26 >
-    
+
     }
 
   }
@@ -8040,13 +8053,13 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Journal of Lexicography Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Journal of Lexicography Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; International Journal of Lexicography Volume 25 ; 25 >
-    
+
     }
 
   }
 
   {
-  
+
     title <
       name = International Journal of Low-Carbon Technologies ;
       issn = 1748-1317 ;
@@ -8055,11 +8068,11 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ijlct.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >    
-    
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
     au < HighWirePressH20Plugin ; manifest ; 2006 ; International Journal of Low-Carbon Technologies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; International Journal of Low-Carbon Technologies Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; International Journal of Low-Carbon Technologies Volume 3 ; 3 >
@@ -8067,11 +8080,11 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Journal of Low-Carbon Technologies Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Journal of Low-Carbon Technologies Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; International Journal of Low-Carbon Technologies Volume 7 ; 7 >
-    
+
     }
-    
+
   }
-  
+
   {
 
     title <
@@ -8121,7 +8134,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Journal of Public Opinion Research Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Journal of Public Opinion Research Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; International Journal of Public Opinion Research Volume 24 ; 24 >
-    
+
     }
 
   }
@@ -8175,7 +8188,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Journal for Quality in Health Care Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Journal for Quality in Health Care Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; International Journal for Quality in Health Care Volume 24 ; 24 >
-    
+
     }
 
   }
@@ -8229,7 +8242,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Journal of Refugee Law Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Journal of Refugee Law Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; International Journal of Refugee Law Volume 24 ; 24 >
-    
+
     }
 
   }
@@ -8256,13 +8269,13 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Journal of Transitional Justice Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Journal of Transitional Justice Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; International Journal of Transitional Justice Volume 6 ; 6 >
-    
+
     }
 
   }
 
   {
-  
+
     title <
       name = International Mathematics Research Notices ;
       issn = 1073-7928 ;
@@ -8271,11 +8284,11 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://imrn.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >     
-    
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
     au < HighWirePressH20Plugin ; manifest ; 1991 ; International Mathematics Research Notices Volume 1991 ; 1991 >
     au < HighWirePressH20Plugin ; manifest ; 1992 ; International Mathematics Research Notices Volume 1992 ; 1992 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; International Mathematics Research Notices Volume 1993 ; 1993 >
@@ -8298,9 +8311,9 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Mathematics Research Notices Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Mathematics Research Notices Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; International Mathematics Research Notices Volume 2012 ; 2012 >
-    
+
     }
-    
+
   }
 
   {
@@ -8382,7 +8395,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; International Relations of the Asia-Pacific Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Relations of the Asia-Pacific Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; International Relations of the Asia-Pacific Volume 12 ; 12 >
-    
+
     }
 
   }
@@ -8433,7 +8446,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; ITNOW Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; released ; 2011 ; ITNOW Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; ITNOW Volume 54 ; 54 >
-    
+
     }
 
   }
@@ -8510,7 +8523,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Japanese Journal of Clinical Oncology Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Japanese Journal of Clinical Oncology Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Japanese Journal of Clinical Oncology Volume 42 ; 42 >
-    
+
     }
 
   }
@@ -8530,7 +8543,7 @@
 
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Jerusalem Review of Legal Studies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Jerusalem Review of Legal Studies Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 >    
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 >
 
   }
@@ -8617,7 +8630,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of African Economies Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of African Economies Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of African Economies Volume 21 ; 21 >
-    
+
     }
 
   }
@@ -8638,7 +8651,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 1933 ; Journal of the American Academy of Religion Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1933 ; Journal of the American Academy of Religion Volume I ; I >    
+    au < HighWirePressH20Plugin ; manifest ; 1933 ; Journal of the American Academy of Religion Volume I ; I >
     au < HighWirePressH20Plugin ; manifest ; 1934 ; Journal of the American Academy of Religion Volume II ; II >
     au < HighWirePressH20Plugin ; manifest ; 1935 ; Journal of the American Academy of Religion Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 1936 ; Journal of the American Academy of Religion Volume 4 ; 4 >
@@ -8721,22 +8734,22 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of the American Academy of Religion Volume 80 ; 80 >
 
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = journal_of_the_american_academy_of_religion
     attr[journal_id] = aar
     implicit < status ; year ; name ; param[volume] >
-    
+
     au < released ; 2006 ; Journal of the American Academy of Religion Volume 74 ; 74 >
     au < released ; 2007 ; Journal of the American Academy of Religion Volume 75 ; 75 >
 
     }
 
   }
-   
+
   {
 
     title <
@@ -8745,13 +8758,13 @@
       eissn = 1945-2314 ;
       issnl = 1945-2314
     >
-      
+
     {
-       
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jah.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-      
+
     au < HighWirePressH20Plugin ; manifest ; 1914 ; Journal of American History Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1915 ; Journal of American History Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1916 ; Journal of American History Volume 3 ; 3 >
@@ -8851,29 +8864,29 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of American History Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of American History Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of American History Volume 99 ; 99 >
-      
+
     }
-      
+
   }
-  
+
   {
-  
+
     title <
       name = Journal of Analytical Toxicology ;
       issn = 0146-4760  ;
       eissn = 1945-2403 ;
-      issnl = 0146-4760 
+      issnl = 0146-4760
     >
-    
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jat.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Analytical Toxicology Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Analytical Toxicology Volume 36 ; 36 >
-    
+
   }
-  
+
   {
 
     title <
@@ -8974,11 +8987,11 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Antimicrobial Chemotherapy Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Antimicrobial Chemotherapy Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Antimicrobial Chemotherapy Volume 67 ; 67 >
-    
+
     }
 
   }
-    
+
   {
 
     title <
@@ -9015,7 +9028,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1928 ; The Journal of Biochemistry Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 1928-1929 ; The Journal of Biochemistry Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 1929-1930 ; The Journal of Biochemistry Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1930 ; The Journal of Biochemistry Volume 12 ; 12 >    
+    au < HighWirePressH20Plugin ; manifest ; 1930 ; The Journal of Biochemistry Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 1930-1931 ; The Journal of Biochemistry Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 1931-1932 ; The Journal of Biochemistry Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; manifest ; 1932 ; The Journal of Biochemistry Volume 15 ; 15 >
@@ -9024,8 +9037,8 @@
     au < HighWirePressH20Plugin ; manifest ; 1933 ; The Journal of Biochemistry Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; manifest ; 1934 ; The Journal of Biochemistry Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 1934 ; The Journal of Biochemistry Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1935 ; The Journal of Biochemistry Volume 21 ; 21 >   
-    au < HighWirePressH20Plugin ; manifest ; 1935 ; The Journal of Biochemistry Volume 22 ; 22 >   
+    au < HighWirePressH20Plugin ; manifest ; 1935 ; The Journal of Biochemistry Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 1935 ; The Journal of Biochemistry Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 1936 ; The Journal of Biochemistry Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; manifest ; 1936 ; The Journal of Biochemistry Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 1937 ; The Journal of Biochemistry Volume 25 ; 25 >
@@ -9158,32 +9171,32 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; The Journal of Biochemistry Volume 148 ; 148 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journal of Biochemistry Volume 149 ; 149 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Journal of Biochemistry Volume 150 ; 150 >
-   
+
     }
-    
+
   }
 
   {
-  
+
     title <
       name = Journal of Chromatographic Science ;
       issn = 0021-9665  ;
       eissn = 1945-239X ;
-      issnl = 0021-9665 
+      issnl = 0021-9665
     >
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://chromsci.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >     
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Chromatographic Science Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Chromatographic Science Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Chromatographic Science Volume 51 ; 51 >
-    
+
   }
-  
+
   {
-  
+
     title <
       name = Journal of Church and State ;
       issn = 0021-969X ;
@@ -9192,10 +9205,10 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jcs.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >     
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 1959 ; Journal of Church and State Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1960 ; Journal of Church and State Volume 2 ; 2 >
@@ -9274,7 +9287,7 @@
     implicit < status ; year ; name ; param[volume] >
 
     au < down ; 2005 ; Journal of Communication Volume 55 ; 55 >
-    
+
     }
 
     {
@@ -9323,7 +9336,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Competition Law & Economics Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Competition Law & Economics Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Competition Law & Economics Volume 8 ; 8 >
-    
+
     }
 
   }
@@ -9370,7 +9383,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Conflict and Security Law Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Conflict and Security Law Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Conflict and Security Law Volume 17 ; 17 >
-    
+
     }
 
   }
@@ -9417,7 +9430,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Deaf Studies and Deaf Education Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Deaf Studies and Deaf Education Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Deaf Studies and Deaf Education Volume 17 ; 17 >
-    
+
     }
 
   }
@@ -9472,7 +9485,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Design History Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Design History Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Design History Volume 25 ; 25 >
-    
+
     }
 
   }
@@ -9485,7 +9498,7 @@
       eissn = 1468-2710 ;
       issnl = 1468-2702
     >
-    
+
     {
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
@@ -9514,7 +9527,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Economic Geography Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Economic Geography Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Economic Geography Volume 12 ; 12 >
-    
+
     }
 
   }
@@ -9605,7 +9618,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Electron Microscopy Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Electron Microscopy Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Electron Microscopy Volume 61 ; 61 >
-    
+
     }
 
   }
@@ -9659,7 +9672,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Environmental Law Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Environmental Law Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Environmental Law Volume 24 ; 24 >
-    
+
     }
 
   }
@@ -9699,7 +9712,7 @@
     implicit < status ; year ; name ; param[volume] >
 
     au < superseded ; 2006 ; Journal of Experimental Botany Volume 57 [superseded] ; 57 >
-    
+
     }
 
     {
@@ -9772,7 +9785,7 @@
     au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of Experimental Botany Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Experimental Botany Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Experimental Botany Volume 63 ; 63 >
-    
+
     }
 
   }
@@ -9814,13 +9827,13 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Financial Econometrics Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Financial Econometrics Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Financial Econometrics Volume 10 ; 10 >
-    
+
     }
-    
+
   }
 
   {
-  
+
     title <
       name = The Journals of Gerontology Series A: Biological Sciences and Medical Sciences ;
       issn = 1079-5006 ;
@@ -9829,11 +9842,11 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://biomedgerontology.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     au < HighWirePressH20Plugin ; manifest ; 1995 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 50A ; 50A >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 51A ; 51A >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 52A ; 52A >
@@ -9858,7 +9871,7 @@
   }
 
   {
-  
+
     title <
       name = The Journals of Gerontology Series B: Psychological Sciences and Social Sciences ;
       issn = 1079-5014 ;
@@ -9867,11 +9880,11 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://psychsocgerontology.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     au < HighWirePressH20Plugin ; manifest ; 1995 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 50B ; 50B >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 51B ; 51B >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 52B ; 52B >
@@ -9889,14 +9902,14 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 64B ; 64B >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 65B ; 65B >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 66B ; 66B >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 66B ; 66B >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67B ; 67B >
 
     }
 
   }
-    
+
   {
-    
+
     title <
       name = Journal of Heredity ;
       issn = 0022-1503 ;
@@ -10031,13 +10044,13 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Heredity Volume 101 ; 101 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Heredity Volume 102 ; 102 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Heredity Volume 103 ; 103 >
-    
+
     }
 
   }
 
   {
-  
+
     title <
       name = The Journal of Hindu Studies ;
       issn = 1756-4255 ;
@@ -10046,10 +10059,10 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jhs.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >     
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2008 ; The Journal of Hindu Studies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Journal of Hindu Studies Volume 2 ; 2 >
@@ -10077,7 +10090,7 @@
     implicit < status ; year ; name ; param[volume] >
 
     au < down ; 2005 ; Journal of the History of Collections Volume 17 ; 17 >
-    
+
     }
 
     {
@@ -10207,17 +10220,17 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of the History of Medicine and Allied Sciences Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 ; 67 >
-    
+
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = journal_of_the_history_of_medicine_and_allied_sciences
     attr[journal_id] = jhm
     implicit < status ; year ; name ; param[volume] >
-    
+
     au < released ; 2000 ; Journal of the History of Medicine and Allied Sciences Volume 55 ; 55 >
     au < released ; 2001 ; Journal of the History of Medicine and Allied Sciences Volume 56 ; 56 >
     au < released ; 2002 ; Journal of the History of Medicine and Allied Sciences Volume 57 ; 57 >
@@ -10235,7 +10248,7 @@
     }
 
   }
-    
+
   {
 
     title <
@@ -10244,9 +10257,9 @@
       eissn = 1757-9627 ;
       issnl = 1757-9619
     >
-      
-    { 
-      
+
+    {
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jhrp.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -10255,9 +10268,9 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Human Rights Practice Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Human Rights Practice Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Human Rights Practice Volume 4 ; 4 >
-   
+
     }
-  
+
   }
 
   {
@@ -10279,7 +10292,7 @@
     au < down ; 2006 ; Journal of the ICRU Volume 6 ; 6 >
 
     }
-      
+
     {
 
     pluginPrefix = org.lockss.plugin.highwire.
@@ -10295,11 +10308,11 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of the ICRU Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the ICRU Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of the ICRU Volume 12 ; 12 >
-    
+
     }
 
-  }  
-    
+  }
+
   {
     title <
       name = Journal of Infectious Diseases ;
@@ -10425,7 +10438,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1961 ; Journal of Infectious Diseases Volume 108 ; 108 >
     au < HighWirePressH20Plugin ; manifest ; 1961 ; Journal of Infectious Diseases Volume 109 ; 109 >
     au < HighWirePressH20Plugin ; manifest ; 1962 ; Journal of Infectious Diseases Volume 110 ; 110 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; Journal of Infectious Diseases Volume 111 ; 111 >     
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; Journal of Infectious Diseases Volume 111 ; 111 >
     au < HighWirePressH20Plugin ; manifest ; 1963 ; Journal of Infectious Diseases Volume 112 ; 112 >
     au < HighWirePressH20Plugin ; manifest ; 1963 ; Journal of Infectious Diseases Volume 113 ; 113 >
     au < HighWirePressH20Plugin ; manifest ; 1964 ; Journal of Infectious Diseases Volume 114 ; 114 >
@@ -10520,7 +10533,7 @@
     au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Infectious Diseases Volume 204 ; 204 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 >
-         
+
     }
 
   }
@@ -10547,7 +10560,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Intellectual Property Law & Practice Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Intellectual Property Law & Practice Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Intellectual Property Law & Practice Volume 7 ; 7 >
-    
+
     }
 
   }
@@ -10587,7 +10600,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of International Criminal Justice Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of International Criminal Justice Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of International Criminal Justice Volume 10 ; 10 >
-    
+
     }
 
   }
@@ -10610,7 +10623,7 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of International Dispute Settlement Volume 3 ; 3 >
 
   }
-    
+
   {
 
     title <
@@ -10653,7 +10666,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of International Economic Law Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of International Economic Law Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of International Economic Law Volume 15 ; 15 >
-    
+
     }
 
   }
@@ -10676,7 +10689,7 @@
     au < superseded ; 2006 ; Journal of Islamic Studies Volume 17 [superseded] ; 17 >
 
     }
-      
+
     {
 
     pluginPrefix = org.lockss.plugin.highwire.
@@ -10708,7 +10721,7 @@
     au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of Islamic Studies Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Islamic Studies Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Islamic Studies Volume 23 ; 23 >
-    
+
     }
 
   }
@@ -10767,18 +10780,18 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Law, Economics, and Organization Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Law, Economics, and Organization Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Law, Economics, and Organization Volume 28 ; 28 >
-    
+
     }
 
   }
-  
+
   {
 
     title <
       name = Journal of Legal Analysis ;
       issn = 2161-7201 ;
       eissn = 1946-5319 ;
-      issnl = 1946-5319 
+      issnl = 1946-5319
     >
 
     {
@@ -10791,10 +10804,10 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Legal Analysis Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Legal Analysis Volume 4 ; 4 >
-  
+
   	}
   	
-  }  
+  }
 
   {
 
@@ -10846,7 +10859,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Logic and Computation Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Logic and Computation Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Logic and Computation Volume 22 ; 22 >
-   
+
     }
 
   }
@@ -10918,7 +10931,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1972-1973 ; Journal of the London Mathematical Society Volume s2-6 ; s2-6 >
     au < HighWirePressH20Plugin ; manifest ; 1973-1974 ; Journal of the London Mathematical Society Volume s2-7 ; s2-7 >
     au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of the London Mathematical Society Volume s2-8 ; s2-8 >
-    au < HighWirePressH20Plugin ; manifest ; 1974-1975 ; Journal of the London Mathematical Society Volume s2-9 ; s2-9 >    
+    au < HighWirePressH20Plugin ; manifest ; 1974-1975 ; Journal of the London Mathematical Society Volume s2-9 ; s2-9 >
     au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of the London Mathematical Society Volume s2-10 ; s2-10 >
     au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of the London Mathematical Society Volume s2-11 ; s2-11 >
     au < HighWirePressH20Plugin ; manifest ; 1975-1976 ; Journal of the London Mathematical Society Volume s2-12 ; s2-12 >
@@ -10994,11 +11007,11 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of the London Mathematical Society Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the London Mathematical Society Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of the London Mathematical Society Volume 84 ; 84 >
-    
+
     }
 
   }
-  
+
   {
 
     title <
@@ -11009,7 +11022,7 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jmp.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -11051,18 +11064,18 @@
     au < HighWirePressPlugin ; doNotProcess ; 2010 ; The Journal of Medicine and Philosophy Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journal of Medicine and Philosophy Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Journal of Medicine and Philosophy Volume 37 ; 37 >
-    
+
     }
 
   }
-    
+
   {
 
     title <
       name = Journal of Molecular Cell Biology ;
       issn = 1674-2788 ;
       eissn = 1759-4685 ;
-      issnl = 1674-2788 
+      issnl = 1674-2788
     >
 
     {
@@ -11079,7 +11092,7 @@
     }
 
   }
-       
+
   {
 
     title <
@@ -11183,7 +11196,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Molluscan Studies Volume 76 ; 76 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Molluscan Studies Volume 77 ; 77 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Molluscan Studies Volume 78 ; 78 >
-    
+
     }
 
   }
@@ -11314,7 +11327,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Pediatric Psychology Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Pediatric Psychology Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Pediatric Psychology Volume 37 ; 37 >
-    
+
     }
 
   }
@@ -11397,7 +11410,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Petrology Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Petrology Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Petrology Volume 53 ; 53 >
-    
+
     }
 
   }
@@ -11461,13 +11474,13 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Plankton Research Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Plankton Research Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Plankton Research Volume 34 ; 34 >
-    
+
     }
 
   }
 
   {
-  
+
     title <
       name = Journal of Plant Ecology ;
       issn = 1752-9921 ;
@@ -11476,11 +11489,11 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jpe.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Plant Ecology Volume 3 ; 3 >
@@ -11490,7 +11503,7 @@
     }
 
   }
-       
+
   {
 
     title <
@@ -11602,7 +11615,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Public Health Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Public Health Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Public Health Volume 34 ; 34 >
-    
+
     }
 
   }
@@ -11674,9 +11687,9 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Refugee Studies Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Refugee Studies Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Refugee Studies Volume 25 ; 25 >
-    
+
     }
-      
+
   }
 
   {
@@ -11687,9 +11700,9 @@
       eissn = 1471-6933 ;
       issnl = 0269-0403
     >
-    
+
     comment[jrma] = moved to informaworld. http://www.informaworld.com/smpp/title~content=t794546064~link=cover
-    
+
     {
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
@@ -11711,15 +11724,15 @@
     au < HighWirePressH20Plugin ; doesNotExist ; 2007 ; Journal of the Royal Musical Association Volume 132 ; 132 >
 
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = journal_of_the_royal_musical_association
     attr[journal_id] = rma
     implicit < status ; year ; name ; param[volume] >
-    
+
     au < released ; 2005 ; Journal of the Royal Musical Association Volume 130 ; 130 >
     au < released ; 2006 ; Journal of the Royal Musical Association Volume 131 ; 131 >
     au < ready ; 2007 ; Journal of the Royal Musical Association Volume 132 ; 132 >
@@ -11728,7 +11741,7 @@
     }
 
   }
-  
+
   {
 
     title <
@@ -11783,7 +11796,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Semantics Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Semantics Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Semantics Volume 29 ; 29 >
-    
+
     }
 
   }
@@ -11870,7 +11883,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Semitic Studies Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Semitic Studies Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Semitic Studies Volume 57 ; 57 >
-    
+
     }
 
   }
@@ -11882,13 +11895,13 @@
       eissn = 0022-4529 ;
       issnl = 0022-4529
     >
-    
+
     {
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jsh.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     au < HighWirePressH20Plugin ; manifest ; 1967-1968 ; Journal of Social History Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1968-1969 ; Journal of Social History Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1969-1970 ; Journal of Social History Volume 3 ; 3 >
@@ -11935,9 +11948,9 @@
     au < HighWirePressH20Plugin ; manifest ; 2010-2011 ; Journal of Social History Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Social History Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Social History Volume 46 ; 46 >
-    
+
     }
-    
+
   }
 
   {
@@ -12014,7 +12027,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1946 ; The Journal of Theological Studies Volume os-XLVII ; os-XLVII >
     au < HighWirePressH20Plugin ; manifest ; 1947 ; The Journal of Theological Studies Volume os-XLVIII ; os-XLVIII >
     au < HighWirePressH20Plugin ; manifest ; 1948 ; The Journal of Theological Studies Volume os-XLIX ; os-XLIX >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; The Journal of Theological Studies Volume os-L ; os-L > 
+    au < HighWirePressH20Plugin ; manifest ; 1949 ; The Journal of Theological Studies Volume os-L ; os-L >
     au < HighWirePressH20Plugin ; manifest ; 1950 ; The Journal of Theological Studies Volume I ; I >
     au < HighWirePressH20Plugin ; manifest ; 1951 ; The Journal of Theological Studies Volume II ; II >
     au < HighWirePressH20Plugin ; manifest ; 1952 ; The Journal of Theological Studies Volume III ; III >
@@ -12078,7 +12091,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; The Journal of Theological Studies Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journal of Theological Studies Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Journal of Theological Studies Volume 63 ; 63 >
-   
+
     }
 
   }
@@ -12105,7 +12118,7 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Topology Volume 5 ; 5 >
 
     }
-    
+
   }
 
   {
@@ -12124,7 +12137,7 @@
     implicit < status ; year ; name ; param[volume] >
 
     au < down ; 2006 ; Journal of Tropical Pediatrics Volume 52 ; 52 >
-    
+
     }
 
     {
@@ -12197,7 +12210,7 @@
   }
 
   {
-  
+
     title <
       name = The Journal of World Energy Law & Business ;
       issn = 1754-9957 ;
@@ -12206,19 +12219,19 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jwelb.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     au < HighWirePressH20Plugin ; manifest ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; The Journal of World Energy Law & Business Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journal of World Energy Law & Business Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Journal of World Energy Law & Business Volume 5 ; 5 >
-    
+
     }
-    
+
   }
 
   {
@@ -12257,26 +12270,26 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Law, Probability and Risk Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Law, Probability and Risk Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Law, Probability and Risk Volume 11 ; 11 >
-    
+
     }
 
   }
-  
+
   {
-  
+
     title <
       name = The Leo Baeck Institute Yearbook ;
       issn = 0075-8744 ;
       eissn = 1758-437X ;
       issnl = 0075-8744
     >
-    
+
     {
-    
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://leobaeck.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
     au < HighWirePressH20Plugin ; manifest ; 1956 ; The Leo Baeck Institute Yearbook Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1957 ; The Leo Baeck Institute Yearbook Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1958 ; The Leo Baeck Institute Yearbook Volume 3 ; 3 >
@@ -12332,10 +12345,10 @@
     au < HighWirePressH20Plugin ; manifest ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; The Leo Baeck Institute Yearbook Volume 55 ; 55 >
-    
+
     }
-    
-  }  
+
+  }
 
   {
 
@@ -12368,7 +12381,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1892 ; The Library Volume s1-4 ; s1-4 >
     au < HighWirePressH20Plugin ; manifest ; 1893 ; The Library Volume s1-V ; s1-V >
     au < HighWirePressH20Plugin ; manifest ; 1893 ; The Library Volume TBS-1 ; TBS-1 >
-    au < HighWirePressH20Plugin ; manifest ; 1894 ; The Library Volume s1-6 ; s1-6 >   
+    au < HighWirePressH20Plugin ; manifest ; 1894 ; The Library Volume s1-6 ; s1-6 >
     au < HighWirePressH20Plugin ; manifest ; 1895 ; The Library Volume s1-VII ; s1-VII >
     au < HighWirePressH20Plugin ; manifest ; 1895 ; The Library Volume TBS-2 ; TBS-2 >
     au < HighWirePressH20Plugin ; manifest ; 1896 ; The Library Volume s1-8 ; s1-8 >
@@ -12392,7 +12405,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1908 ; The Library Volume s2-IX ; s2-IX >
     au < HighWirePressH20Plugin ; manifest ; 1909 ; The Library Volume s2-X ; s2-X >
     au < HighWirePressH20Plugin ; manifest ; 1909 ; The Library Volume TBS-10 ; TBS-10 >
-    au < HighWirePressH20Plugin ; manifest ; 1909 ; The Library Volume TBS-11 ; TBS-11 >   
+    au < HighWirePressH20Plugin ; manifest ; 1909 ; The Library Volume TBS-11 ; TBS-11 >
     au < HighWirePressH20Plugin ; manifest ; 1910 ; The Library Volume s3-1 ; s3-1 >
     au < HighWirePressH20Plugin ; manifest ; 1911 ; The Library Volume s3-II ; s3-II >
     au < HighWirePressH20Plugin ; manifest ; 1912 ; The Library Volume s3-III ; s3-III >
@@ -12416,7 +12429,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1926-1927 ; The Library Volume s4-VII ; s4-VII >
     au < HighWirePressH20Plugin ; manifest ; 1927-1928 ; The Library Volume s4-VIII ; s4-VIII >
     au < HighWirePressH20Plugin ; manifest ; 1928 ; The Library Volume s4-IX ; s4-IX >
-    au < HighWirePressH20Plugin ; manifest ; 1929-1930 ; The Library Volume s4-X ; s4-X >    
+    au < HighWirePressH20Plugin ; manifest ; 1929-1930 ; The Library Volume s4-X ; s4-X >
     au < HighWirePressH20Plugin ; manifest ; 1930-1931 ; The Library Volume s4-XI ; s4-XI >
     au < HighWirePressH20Plugin ; manifest ; 1931-1932 ; The Library Volume s4-XII ; s4-XII >
     au < HighWirePressH20Plugin ; manifest ; 1932-1933 ; The Library Volume s4-XIII ; s4-XIII >
@@ -12490,7 +12503,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1995 ; The Library Volume s6-17 ; s6-17 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; The Library Volume s6-XVIII ; s6-XVIII >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; The Library Volume s6-19 ; s6-19 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; The Library Volume s6-XX ; s6-XX >   
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; The Library Volume s6-XX ; s6-XX >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; The Library Volume s6-21 ; s6-21 >
     au < HighWirePressH20Plugin ; manifest ; 2000 ; The Library Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2001 ; The Library Volume 2 ; 2 >
@@ -12505,11 +12518,11 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; The Library Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Library Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Library Volume 13 ; 13 >
-       
+
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = the_library_the_transactions_of_the_bibliographical_society
@@ -12523,11 +12536,11 @@
     au < ready ; 2010 ; The Library: The Transactions of the Bibliographical Society Volume 11 ; 11 >
     au < ready ; 2011 ; The Library: The Transactions of the Bibliographical Society Volume 12 ; 12 >
     au < expected ; 2012 ; The Library: The Transactions of the Bibliographical Society Volume 13 ; 13 >
-  
+
     }
 
   }
-    
+
   {
 
     title <
@@ -12614,7 +12627,7 @@
     au < HighWirePressH20Plugin ; testing ; 2010 ; Literary Imagination Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Literary Imagination Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Literary Imagination Volume 14 ; 14 >
-   
+
     }
 
   }
@@ -12670,7 +12683,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Literature and Theology Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Literature and Theology Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Literature and Theology Volume 26 ; 26 >
-    
+
     }
 
   }
@@ -12720,7 +12733,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 >
-   
+
     }
 
   }
@@ -12779,7 +12792,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Mathematical Medicine and Biology Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Mathematical Medicine and Biology Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Mathematical Medicine and Biology Volume 29 ; 29 >
-    
+
     }
 
   }
@@ -13000,7 +13013,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Mind Volume 119 ; 119 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Mind Volume 120 ; 120 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Mind Volume 121 ; 121 >
-    
+
     }
 
   }
@@ -13063,17 +13076,17 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Modern Judaism Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Modern Judaism Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Modern Judaism Volume 32 ; 32 >
-  
+
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = modern_judaism
     attr[journal_id] = mj
     implicit < status ; year ; name ; param[volume] >
-    
+
     au < released ; 1996 ; Modern Judaism Volume 16 ; 16 >
     au < released ; 1997 ; Modern Judaism Volume 17 ; 17 >
     au < released ; 1998 ; Modern Judaism Volume 18 ; 18 >
@@ -13091,9 +13104,9 @@
     au < ready ; 2010 ; Modern Judaism Volume 30 ; 30 >
     au < ready ; 2011 ; Modern Judaism Volume 31 ; 31 >
     au < expected ; 2012 ; Modern Judaism Volume 32 ; 32 >
-    
+
     }
-    
+
   }
 
   {
@@ -13193,9 +13206,9 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; MHR: Basic science of reproductive medicine Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2011 ; MHR: Basic science of reproductive medicine Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; MHR: Basic science of reproductive medicine Volume 18 ; 18 >
-   
+
     }
-    
+
   }
 
   {
@@ -13206,9 +13219,9 @@
       eissn = 1752-9867 ;
       issnl = 1674-2052
     >
-      
+
     {
-      
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://mplant.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -13222,28 +13235,28 @@
     }
 
   }
-  
+
   {
-  
+
     title <
       name = Multimedia Manual of Cardio-Thoracic Surgery ;
       eissn = 1813-9175 ;
       issnl = 1813-9175
     >
-    
+
 	{
 	
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://mmcts.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     comment[mmcts] = New journal to OUP in 2012
-    
+
     au < HighWirePressH20Plugin ; expected ; 2012 ; Multimedia Manual of Cardio-Thoracic Surgery Volume 1 ; 1 >
     }
-    
+
   }
-    
+
   {
 
     title <
@@ -13365,15 +13378,15 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Music and Letters Volume 93 ; 93 >
 
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = music_and_letters
     attr[journal_id] = mal
     implicit < status ; year ; name ; param[volume] >
-    
+
     au < released ; 2004 ; Music and Letters Volume 85 ; 85 >
     au < released ; 2005 ; Music and Letters Volume 86 ; 86 >
     au < released ; 2006 ; Music and Letters Volume 87 ; 87 >
@@ -13500,13 +13513,13 @@
     au < HighWirePressPlugin ; doNotProcess ; 2004 ; The Musical Quarterly Volume 87 ; 87 >
     au < HighWireStrVolPlugin ; down ; 2005 ; The Musical Quarterly Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; manifest ; 2006 ; The Musical Quarterly Volume 89 ; 89 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; The Musical Quarterly Volume 90 ; 90 >        
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; The Musical Quarterly Volume 90 ; 90 >
     au < HighWirePressPlugin ; down ; 2008 ; The Musical Quarterly Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Musical Quarterly Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Musical Quarterly Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Musical Quarterly Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Musical Quarterly Volume 95 ; 95 >
-    
+
 
     }
 
@@ -13564,7 +13577,7 @@
     au < HighWirePressH20Plugin ; testing ; 2010 ; Mutagenesis Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Mutagenesis Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Mutagenesis Volume 27 ; 27 >
-    
+
     }
 
   }
@@ -13577,7 +13590,7 @@
       eissn = 1753-0792 ;
       issnl = 1753-0784
     >
-    
+
     comment[continued_by] = 2048-8505
 
     {
@@ -13585,28 +13598,15 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ndtplus.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
     au < HighWirePressPlugin ; down ; 2008 ;  NDT Plus Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 2009 ; NDT Plus Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; down ; 2011 ; NDT Plus Volume 4 ; 4 >
 
     }
 
-    {
-
-    pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://ckj.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[base_url] = redirects to that of new title
-
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; NDT Plus Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; NDT Plus Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; NDT Plus Volume 5 ; 5 >
-
-    }
-
   }
-  
+
   {
 
     title <
@@ -13708,7 +13708,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ntr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Nicotine and Tobacco Research Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2000 ; Nicotine and Tobacco Research Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2001 ; Nicotine and Tobacco Research Volume 3 ; 3 >
@@ -13723,7 +13723,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Nicotine and Tobacco Research Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Nicotine and Tobacco Research Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Nicotine and Tobacco Research Volume 14 ; 14 >
-    
+
     }
 
   }
@@ -13902,6 +13902,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1924 ; Notes and Queries Volume CXLVI ; CXLVI >
     au < HighWirePressH20Plugin ; manifest ; 1924 ; Notes and Queries Volume CXLVII ; CXLVII >
     au < HighWirePressH20Plugin ; manifest ; 1925 ; Notes and Queries Volume CXLVIII ; CXLVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1925 ; Notes and Queries Volume 149 ; 149 >
     au < HighWirePressH20Plugin ; manifest ; 1925 ; Notes and Queries Volume CXLIX ; CXLIX >
     au < HighWirePressH20Plugin ; manifest ; 1926 ; Notes and Queries Volume CL ; CL >
     au < HighWirePressH20Plugin ; manifest ; 1926 ; Notes and Queries Volume 150 ; 150 >
@@ -13910,11 +13911,14 @@
     au < HighWirePressH20Plugin ; manifest ; 1927 ; Notes and Queries Volume CLII ; CLII >
     au < HighWirePressH20Plugin ; manifest ; 1927 ; Notes and Queries Volume CLIII ; CLIII >
     au < HighWirePressH20Plugin ; manifest ; 1928 ; Notes and Queries Volume CLIV ; CLIV >
+    au < HighWirePressH20Plugin ; manifest ; 1928 ; Notes and Queries Volume 154 ; 154 >
     au < HighWirePressH20Plugin ; manifest ; 1928 ; Notes and Queries Volume CLV ; CLV >
-    au < HighWirePressH20Plugin ; manifest ; 1929 ; Notes and Queries Volume CLVI ; CLVI >
+    au < HighWirePressH20Plugin ; manifest ; 1928 ; Notes and Queries Volume 155 ; 155 >
+    au < HighWirePressH20Plugin ; manifest ; 1929 ; Notes and Queries Volume 156 ; 156 >
     au < HighWirePressH20Plugin ; manifest ; 1929 ; Notes and Queries Volume CLVII ; CLVII >
     au < HighWirePressH20Plugin ; manifest ; 1930 ; Notes and Queries Volume 158 ; 158 >
     au < HighWirePressH20Plugin ; manifest ; 1930 ; Notes and Queries Volume CLIX ; CLIX >
+    au < HighWirePressH20Plugin ; manifest ; 1930 ; Notes and Queries Volume 159 ; 159 >
     au < HighWirePressH20Plugin ; manifest ; 1931 ; Notes and Queries Volume CLX ; CLX >
     au < HighWirePressH20Plugin ; manifest ; 1931 ; Notes and Queries Volume CLXI ; CLXI >
     au < HighWirePressH20Plugin ; manifest ; 1932 ; Notes and Queries Volume CLXII ; CLXII >
@@ -13923,6 +13927,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1933 ; Notes and Queries Volume CLXV ; CLXV >
     au < HighWirePressH20Plugin ; manifest ; 1934 ; Notes and Queries Volume CLXVI ; CLXVI >
     au < HighWirePressH20Plugin ; manifest ; 1934 ; Notes and Queries Volume CLXVII ; CLXVII >
+    au < HighWirePressH20Plugin ; manifest ; 1934 ; Notes and Queries Volume 167 ; 167 >
     au < HighWirePressH20Plugin ; manifest ; 1935 ; Notes and Queries Volume CLXVIII ; CLXVIII >
     au < HighWirePressH20Plugin ; manifest ; 1935 ; Notes and Queries Volume CLXIX ; CLXIX >
     au < HighWirePressH20Plugin ; manifest ; 1936 ; Notes and Queries Volume CLXX ; CLXX >
@@ -13946,13 +13951,13 @@
     au < HighWirePressH20Plugin ; manifest ; 1945 ; Notes and Queries Volume 188 ; 188 >
     au < HighWirePressH20Plugin ; manifest ; 1945 ; Notes and Queries Volume 189 ; 189 >
     au < HighWirePressH20Plugin ; manifest ; 1946 ; Notes and Queries Volume 190 ; 190 >
-    au < HighWirePressH20Plugin ; manifest ; 1946 ; Notes and Queries Volume 191 ; 191 >       
+    au < HighWirePressH20Plugin ; manifest ; 1946 ; Notes and Queries Volume 191 ; 191 >
     au < HighWirePressH20Plugin ; manifest ; 1947 ; Notes and Queries Volume 192 ; 192 >
     au < HighWirePressH20Plugin ; manifest ; 1948 ; Notes and Queries Volume 193 ; 193 >
     au < HighWirePressH20Plugin ; manifest ; 1949 ; Notes and Queries Volume 194 ; 194 >
     au < HighWirePressH20Plugin ; manifest ; 1950 ; Notes and Queries Volume 195 ; 195 >
     au < HighWirePressH20Plugin ; manifest ; 1950 ; Notes and Queries Volume CXCV ; CXCV >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; Notes and Queries Volume CXCVI ; CXCVI >    
+    au < HighWirePressH20Plugin ; manifest ; 1951 ; Notes and Queries Volume CXCVI ; CXCVI >
     au < HighWirePressH20Plugin ; manifest ; 1951 ; Notes and Queries Volume 196 ; 196 >
     au < HighWirePressH20Plugin ; manifest ; 1952 ; Notes and Queries Volume 197 ; 197 >
     au < HighWirePressH20Plugin ; manifest ; 1953 ; Notes and Queries Volume CXCVIII ; CXCVIII >
@@ -14016,7 +14021,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Notes and Queries Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Notes and Queries Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Notes and Queries Volume 59 ; 59 >
-    
+
     }
 
   }
@@ -14086,7 +14091,7 @@
     au < HighWirePressH20Plugin ; testing ; 2010 ; Nucleic Acids Research Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Nucleic Acids Research Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Nucleic Acids Research Volume 40 ; 40 >
-    
+
     }
 
   }
@@ -14099,7 +14104,7 @@
       eissn = 1746-8272 ;
       issnl = 0261-3166
     >
-    
+
     comment[0] = series ends in 2009
 
     {
@@ -14120,7 +14125,7 @@
 
 
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Nucleic Acids Symposium Series Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; doesNotExist ; 1999 ; Nucleic Acids Symposium Series Volume 43 ; 43 >  
+    au < HighWirePressH20Plugin ; doesNotExist ; 1999 ; Nucleic Acids Symposium Series Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 2000 ; Nucleic Acids Symposium Series Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; manifest ; 2001 ; Nucleic Acids Symposium Series Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2002 ; Nucleic Acids Symposium Series Volume 2 ; 2 >
@@ -14131,7 +14136,7 @@
     au < HighWirePressPlugin ; down ; 2007 ; Nucleic Acids Symposium Series Volume 51 ; 51 >
     au < HighWirePressPlugin ; down ; 2008 ; Nucleic Acids Symposium Series Volume 52 ; 52 >
     au < HighWirePressPlugin ; down ; 2009 ; Nucleic Acids Symposium Series Volume 53 ; 53 >
-    
+
     }
 
   }
@@ -14142,11 +14147,11 @@
       name = OAH Magazine of History ;
       issn = 0882-228X ;
       eissn = 1938-2340 ;
-      issnl = 0882-228X        
+      issnl = 0882-228X
     >
-      
+
     {
-      
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://maghis.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -14155,7 +14160,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1986-1987 ; OAH Magazine of History Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1988 ; OAH Magazine of History Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 1989-1990 ; OAH Magazine of History Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1990-1991 ; OAH Magazine of History Volume 5 ; 5 >              
+    au < HighWirePressH20Plugin ; manifest ; 1990-1991 ; OAH Magazine of History Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 1991-1992 ; OAH Magazine of History Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 1992-1993 ; OAH Magazine of History Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 1993-1994 ; OAH Magazine of History Volume 8 ; 8 >
@@ -14177,11 +14182,11 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; OAH Magazine of History Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2011 ; OAH Magazine of History Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; OAH Magazine of History Volume 26 ; 26 >
-    
+
     }
-      
+
   }
-  
+
   {
 
     title <
@@ -14328,17 +14333,17 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; The Opera Quarterly Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Opera Quarterly Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Opera Quarterly Volume 28 ; 28 >
-        
+
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = opera_quarterly
     attr[journal_id] = opq
     implicit < status ; year ; name ; param[volume] >
-    
+
     au < released ; 2002 ; The Opera Quarterly Volume 18 ; 18 >
     au < released ; 2003 ; The Opera Quarterly Volume 19 ; 19 >
     au < released ; 2004 ;  The Opera Quarterly Volume 20 ; 20 >
@@ -14346,11 +14351,11 @@
     au < released ; 2006 ; The Opera Quarterly Volume 22 ; 22 >
     au < ready ; 2007 ; The Opera Quarterly Volume 23 ; 23 >
     au < ready ; 2008 ; The Opera Quarterly Volume 24 ; 24 >
-    au < ready ; 2009 ; The Opera Quarterly Volume 25 ; 25 >    
-    au < ready ; 2010 ; The Opera Quarterly Volume 26 ; 26 >    
-    
+    au < ready ; 2009 ; The Opera Quarterly Volume 25 ; 25 >
+    au < ready ; 2010 ; The Opera Quarterly Volume 26 ; 26 >
+
     }
-    
+
   }
 
   {
@@ -14409,15 +14414,15 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Oral History Review Volume 39 ; 39 >
 
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = oral_history_review
     attr[journal_id] = ohr
     implicit < status ; year ; name ; param[volume] >
-    
+
     au < ready ; 2008 ; The Oral History Review Volume 35 ; 35 >
     au < ready ; 2009 ; The Oral History Review Volume 36 ; 36 >
     au < ready ; 2010 ; The Oral History Review Volume 37 ; 37 >
@@ -14425,7 +14430,7 @@
     }
 
   }
-      
+
   {
 
     title <
@@ -14487,7 +14492,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Oxford Art Journal Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Oxford Art Journal Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Oxford Art Journal Volume 35 ; 35 >
-    
+
 
     }
 
@@ -14590,7 +14595,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Oxford Economic Papers Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Oxford Economic Papers Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Oxford Economic Papers Volume 64 ; 64 >
- 
+
     }
 
   }
@@ -14630,7 +14635,7 @@
     au < down ; 2005 ; Oxford Journal of Legal Studies Volume 26 ; 26 >
 
     }
-    
+
     {
 
     pluginPrefix = org.lockss.plugin.highwire.
@@ -14669,7 +14674,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Oxford Journal of Legal Studies Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Oxford Journal of Legal Studies Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Oxford Journal of Legal Studies Volume 32 ; 32 >
-    
+
 
     }
 
@@ -14734,7 +14739,7 @@
   }
 
   {
-    
+
     title <
       name = Parliamentary Affairs ;
       issn = 0031-2290 ;
@@ -14785,7 +14790,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1971-1972 ; Parliamentary Affairs Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 1972-1973 ; Parliamentary Affairs Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 1973-1974 ; Parliamentary Affairs Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Parliamentary Affairs Volume 28 ; 28 > 
+    au < HighWirePressH20Plugin ; manifest ; 1974 ; Parliamentary Affairs Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; manifest ; 1976 ; Parliamentary Affairs Volume XXIX ; XXIX >
     au < HighWirePressH20Plugin ; manifest ; 1977 ; Parliamentary Affairs Volume XXX ; XXX >
     au < HighWirePressH20Plugin ; manifest ; 1978 ; Parliamentary Affairs Volume XXXI ; XXXI >
@@ -14823,7 +14828,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Parliamentary Affairs Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Parliamentary Affairs Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Parliamentary Affairs Volume 65 ; 65 >
-                
+
     }
 
   }
@@ -14884,7 +14889,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1964 ; Past & Present Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 1964 ; Past & Present Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; manifest ; 1965 ; Past & Present Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Past & Present Volume 32 ; 32 >    
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; Past & Present Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 1966 ; Past & Present Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; manifest ; 1966 ; Past & Present Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; manifest ; 1966 ; Past & Present Volume 35 ; 35 >
@@ -14901,7 +14906,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1970 ; Past & Present Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; manifest ; 1970 ; Past & Present Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; manifest ; 1970 ; Past & Present Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Past & Present Volume 49 ; 49 > 
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; Past & Present Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; manifest ; 1971 ; Past & Present Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; manifest ; 1971 ; Past & Present Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; manifest ; 1971 ; Past & Present Volume 52 ; 52 >
@@ -14972,8 +14977,8 @@
     au < HighWirePressH20Plugin ; manifest ; 1987 ; Past & Present Volume 117 ; 117 >
     au < HighWirePressH20Plugin ; manifest ; 1988 ; Past & Present Volume 118 ; 118 >
     au < HighWirePressH20Plugin ; manifest ; 1988 ; Past & Present Volume 119 ; 119 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Past & Present Volume 120 ; 120 >     
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Past & Present Volume 121 ; 121 >     
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; Past & Present Volume 120 ; 120 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; Past & Present Volume 121 ; 121 >
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Past & Present Volume 122 ; 122 >
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Past & Present Volume 123 ; 123 >
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Past & Present Volume 124 ; 124 >
@@ -15064,12 +15069,17 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Past & Present Volume 209 ; 209 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Past & Present Volume 210 ; 210 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Past & Present Volume 211 ; 211 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; Past & Present Volume 212 ; 212 >
-            
+    au < HighWirePressH20Plugin ; expected ; 2011 ; Past & Present Volume 212 ; 212 >
+    au < HighWirePressH20Plugin ; expected ; 2011 ; Past & Present Volume 213 ; 213 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Past & Present Volume 214 ; 214 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Past & Present Volume 215 ; 215 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Past & Present Volume 216 ; 216 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Past & Present Volume 217 ; 217 >
+
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = past_and_present
@@ -15088,7 +15098,7 @@
     au < ready ; 2007 ; Past & Present Number 196 ; 196 >
     au < ready ; 2007 ; Past & Present Number 197 ; 197 >
     au < ready ; 2007 ; Past & Present 2007 Supplement 2 ; 2 >
-        
+
     }
 
   }
@@ -15159,7 +15169,7 @@
     au < HighWirePressPlugin ; doNotProcess ; 2010 ; Philosophia Mathematica Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Philosophia Mathematica Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Philosophia Mathematica Volume 20 ; 20 >
-        
+
     }
 
   }
@@ -15306,7 +15316,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1996 ; Political Analysis Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Political Analysis Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 1999-2000 ; Political Analysis Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Political Analysis Volume 9 ; 9 >    
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Political Analysis Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 2002 ; Political Analysis Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Political Analysis Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Political Analysis Volume 12 ; 12 >
@@ -15318,7 +15328,7 @@
     au < HighWirePressPlugin ; doNotProcess ; 2010 ; Political Analysis Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Political Analysis Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Political Analysis Volume 20 ; 20 >
- 
+
     }
 
   }
@@ -15399,7 +15409,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1926 ; Proceedings of the London Mathematical Society Volume s2-24 ; s2-24 >
     au < HighWirePressH20Plugin ; manifest ; 1926 ; Proceedings of the London Mathematical Society Volume s2-25 ; s2-25 >
     au < HighWirePressH20Plugin ; manifest ; 1927 ; Proceedings of the London Mathematical Society Volume s2-26 ; s2-26 >
-    au < HighWirePressH20Plugin ; manifest ; 1928 ; Proceedings of the London Mathematical Society Volume s2-27 ; s2-27 > 
+    au < HighWirePressH20Plugin ; manifest ; 1928 ; Proceedings of the London Mathematical Society Volume s2-27 ; s2-27 >
     au < HighWirePressH20Plugin ; manifest ; 1928 ; Proceedings of the London Mathematical Society Volume s2-28 ; s2-28 >
     au < HighWirePressH20Plugin ; manifest ; 1929 ; Proceedings of the London Mathematical Society Volume s2-29 ; s2-29 >
     au < HighWirePressH20Plugin ; manifest ; 1930 ; Proceedings of the London Mathematical Society Volume s2-30 ; s2-30 >
@@ -15532,7 +15542,8 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Proceedings of the London Mathematical Society Volume 102 ; 102 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Proceedings of the London Mathematical Society Volume 103 ; 103 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Proceedings of the London Mathematical Society Volume 104 ; 104 >
-    
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Proceedings of the London Mathematical Society Volume 105 ; 105 >
+
     }
 
   }
@@ -15587,9 +15598,9 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Protein engineering, design & selection : PEDS Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Protein engineering, design & selection : PEDS Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Protein engineering, design & selection : PEDS Volume 25 ; 25 >
- 
+
     }
-    
+
   }
 
   {
@@ -15606,7 +15617,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://phe.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
+
     au < HighWirePressPlugin ; down ;2008 ;  Public Health Ethics Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 2009 ; Public Health Ethics Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; testing ; 2010 ; Public Health Ethics Volume 3 ; 3 >
@@ -15614,7 +15625,7 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; Public Health Ethics Volume 5 ; 5 >
 
     }
- 
+
   }
 
   {
@@ -15792,9 +15803,9 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; Publius: The Journal of Federalism Volume 42 ; 42 >
 
     }
-    
+
   }
-    
+
   {
 
     title <
@@ -15843,7 +15854,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1927-1928 ; QJM: An International Journal of Medicine Volume os-21 ; os-21 >
     au < HighWirePressH20Plugin ; doesNotExist ; 1928 ; QJM: An International Journal of Medicine Volume os-22 ; os-22 >
     au < HighWirePressH20Plugin ; manifest ; 1929-1930 ; QJM: An International Journal of Medicine Volume os-23 ; os-23 >
-    au < HighWirePressH20Plugin ; manifest ; 1930-1931 ; QJM: An International Journal of Medicine Volume os-24 ; os-24 >    
+    au < HighWirePressH20Plugin ; manifest ; 1930-1931 ; QJM: An International Journal of Medicine Volume os-24 ; os-24 >
     au < HighWirePressH20Plugin ; manifest ; 1932 ; QJM: An International Journal of Medicine Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1933 ; QJM: An International Journal of Medicine Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1934 ; QJM: An International Journal of Medicine Volume 3 ; 3 >
@@ -15949,11 +15960,11 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; QJM: An International Journal of Medicine Volume 103 ; 103 >
     au < HighWirePressH20Plugin ; released ; 2011 ; QJM: An International Journal of Medicine Volume 104 ; 104 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; QJM: An International Journal of Medicine Volume 105 ; 105 >
-    
-    }     
-    
+
+    }
+
   }
-  
+
   {
 
     title <
@@ -16141,9 +16152,10 @@
     au < HighWirePressH20Plugin ; manifest ; 2004 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 57 ; 57 >
     au < HighWireStrVolPlugin ; down ; 2005 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 58 ; 58 >
     au < HighWireStrVolPlugin ; down ; 2006 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 59 ; 59 >
-    au < HighWirePressPlugin ; down ; 2007 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 >
-    au < HighWirePressPlugin ; down ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 >
-    au < HighWirePressPlugin ; doNotProcess ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 ; 60 >
+    au < HighWirePressPlugin ; down ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 >
+    au < HighWirePressPlugin ; down ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 >
+    au < HighWirePressPlugin ; doNotProcess ; 2010 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 65 ; 65 >
 
@@ -16214,7 +16226,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1991 ; Radiation Protection Dosimetry Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; manifest ; 1991 ; Radiation Protection Dosimetry Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; manifest ; 1991 ; Radiation Protection Dosimetry Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Radiation Protection Dosimetry Volume 39 ; 39 >  
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; Radiation Protection Dosimetry Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; manifest ; 1992 ; Radiation Protection Dosimetry Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; manifest ; 1992 ; Radiation Protection Dosimetry Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 1992 ; Radiation Protection Dosimetry Volume 42 ; 42 >
@@ -16225,25 +16237,25 @@
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Radiation Protection Dosimetry Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Radiation Protection Dosimetry Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Radiation Protection Dosimetry Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Radiation Protection Dosimetry Volume 50 ; 50 >    
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; Radiation Protection Dosimetry Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; manifest ; 1994 ; Radiation Protection Dosimetry Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; manifest ; 1994 ; Radiation Protection Dosimetry Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; manifest ; 1994 ; Radiation Protection Dosimetry Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 1994 ; Radiation Protection Dosimetry Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; manifest ; 1994 ; Radiation Protection Dosimetry Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Radiation Protection Dosimetry Volume 56 ; 56 >   
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; Radiation Protection Dosimetry Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; manifest ; 1995 ; Radiation Protection Dosimetry Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; manifest ; 1995 ; Radiation Protection Dosimetry Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; manifest ; 1995 ; Radiation Protection Dosimetry Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; manifest ; 1995 ; Radiation Protection Dosimetry Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; manifest ; 1995 ; Radiation Protection Dosimetry Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Radiation Protection Dosimetry Volume 62 ; 62 >   
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; Radiation Protection Dosimetry Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; Radiation Protection Dosimetry Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; Radiation Protection Dosimetry Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; Radiation Protection Dosimetry Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; Radiation Protection Dosimetry Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; Radiation Protection Dosimetry Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Radiation Protection Dosimetry Volume 68 ; 68 > 
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; Radiation Protection Dosimetry Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Radiation Protection Dosimetry Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Radiation Protection Dosimetry Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Radiation Protection Dosimetry Volume 71 ; 71 >
@@ -16302,7 +16314,7 @@
     au < HighWirePressH20Plugin ; released ; 2007 ; Radiation Protection Dosimetry Volume 124 ; 124 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Radiation Protection Dosimetry Volume 125 ; 125 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Radiation Protection Dosimetry Volume 126 ; 126 >
-    au < HighWirePressH20Plugin ; released ; 2007 ; Radiation Protection Dosimetry Volume 127 ; 127 >        
+    au < HighWirePressH20Plugin ; released ; 2007 ; Radiation Protection Dosimetry Volume 127 ; 127 >
     au < HighWirePressPlugin ; down ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 >
     au < HighWirePressPlugin ; down ; 2008 ; Radiation Protection Dosimetry Volume 129 ; 129 >
     au < HighWirePressPlugin ; down ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 >
@@ -16317,12 +16329,18 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Radiation Protection Dosimetry Volume 139 ; 139 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Radiation Protection Dosimetry Volume 140 ; 140 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Radiation Protection Dosimetry Volume 141 ; 141 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; Radiation Protection Dosimetry Volume 142 ; 142 >   
+    au < HighWirePressH20Plugin ; released ; 2010 ; Radiation Protection Dosimetry Volume 142 ; 142 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Radiation Protection Dosimetry Volume 143 ; 143 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Radiation Protection Dosimetry Volume 144 ; 144 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Radiation Protection Dosimetry Volume 145 ; 145 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; Radiation Protection Dosimetry Volume 146 ; 146 >
-    
+    au < HighWirePressH20Plugin ; expected ; 2011 ; Radiation Protection Dosimetry Volume 146 ; 146 >
+    au < HighWirePressH20Plugin ; expected ; 2011 ; Radiation Protection Dosimetry Volume 147 ; 147 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Radiation Protection Dosimetry Volume 148 ; 148 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Radiation Protection Dosimetry Volume 149 ; 149 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Radiation Protection Dosimetry Volume 150 ; 150 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Radiation Protection Dosimetry Volume 151 ; 151 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Radiation Protection Dosimetry Volume 152 ; 152 >
+
     }
 
   }
@@ -16386,11 +16404,11 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; Refugee Survey Quarterly Volume 31 ; 31 >
 
     }
-    
+
   }
 
   {
-  
+
     title <
       name = Reports of Patent, Design and Trade Mark Cases ;
       issn = 0080-1364 ;
@@ -16399,11 +16417,11 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://rpc.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >   
-    
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
     au < HighWirePressH20Plugin ; manifest ; 1977 ; Reports of Patent, Design and Trade Mark Cases Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; manifest ; 1978 ; Reports of Patent, Design and Trade Mark Cases Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; manifest ; 1979 ; Reports of Patent, Design and Trade Mark Cases Volume 96 ; 96 >
@@ -16438,11 +16456,11 @@
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Reports of Patent, Design and Trade Mark Cases Volume 125 ; 125 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Reports of Patent, Design and Trade Mark Cases Volume 127 ; 127 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Reports of Patent, Design and Trade Mark Cases Volume 128 ; 128 >  
+    au < HighWirePressH20Plugin ; released ; 2011 ; Reports of Patent, Design and Trade Mark Cases Volume 128 ; 128 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Reports of Patent, Design and Trade Mark Cases Volume 129 ; 129 >
-    
+
     }
-    
+
   }
 
   {
@@ -16456,11 +16474,11 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://rev.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >   
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; released ; 2011 ; Research Evaluation Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Research Evaluation Volume 21 ; 21 >
-     
+
   }
 
   {
@@ -16471,14 +16489,14 @@
         eissn = 2045-9939 ;
         issn = 2045-9920
       >
-     
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://raps.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Review of Asset Pricing Studies Volume 2 ; 2 >
-     
+
   }
 
   {
@@ -16636,7 +16654,7 @@
     au < HighWirePressH20Plugin ; testing ; 2010 ; The Review of English Studies Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Review of English Studies Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Review of English Studies Volume 63 ; 63 >
-     
+
     }
 
   }
@@ -16905,7 +16923,7 @@
   }
 
   {
-  
+
     title <
       name = Science and Public Policy ;
       issn = 0302-3427 ;
@@ -16921,7 +16939,7 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; Science and Public Policy Volume 39 ; 39 >
 	
   }
-  
+
   {
 
     title <
@@ -17128,7 +17146,7 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; Social Forces Volume 91 ; 91 >
 
   }
-   
+
   {
 
     title <
@@ -17230,15 +17248,15 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; Social Politics Volume 19 ; 19 >
 
     }
-    
+
     {
-    
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = social_politics
     attr[journal_id] = sop
     implicit < status ; year ; name ; param[volume] >
-    
+
     au < released ; 2003 ; Social Politics Volume 10 ; 10 >
     au < released ; 2004 ; Social Politics Volume 11 ; 11 >
     au < released ; 2005 ; Social Politics Volume 12 ; 12 >
@@ -17250,7 +17268,7 @@
     au < ready ; 2011 ; Social Politics Volume 18 ; 18 >
     au < expected ; 2012 ; Social Politics Volume 19 ; 19 >
 
-    
+
     }
 
   }
@@ -17301,7 +17319,7 @@
   }
 
   {
-  
+
     title <
       name = Social Work ;
       subtitle = A Journal of the National Association of Social Workers ;
@@ -17309,11 +17327,11 @@
       eissn = 1545-6846 ;
       issnl = 0037-8046
     >
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://sw.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-   
+
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Social Work Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Social Work Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Social Work Volume 44 ; 44 >
@@ -17334,7 +17352,7 @@
   }
 
   {
-  
+
     title <
       name = Social Work Research ;
       subtitle = A Journal of the National Association of Social Workers ;
@@ -17342,11 +17360,11 @@
       eissn = 1545-6838 ;
       issnl = 1070-5309
     >
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://swr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-   
+
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Social Work Research Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Social Work Research Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Social Work Research Volume 23 ; 23 >
@@ -17363,7 +17381,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Social Work Research Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Social Work Research Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Social Work Research Volume 36 ; 36 >
-    
+
   }
 
   {
@@ -17406,9 +17424,9 @@
     }
 
   }
-  
+
   {
-  
+
     title <
       name = Sociology of Religion ;
       issn = 1069-4404 ;
@@ -17417,11 +17435,11 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://socrel.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-   
+
     au < HighWirePressH20Plugin ; manifest ; 1964 ; Sociology of Religion Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 1965 ; Sociology of Religion Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 1966 ; Sociology of Religion Volume 27 ; 27 >
@@ -17475,7 +17493,7 @@
     }
 
   }
-  
+
   {
 
     title <
@@ -17536,11 +17554,11 @@
     au < HighWirePressH20Plugin ; expected ; 2012 ; Statute Law Review Volume 33 ; 33 >
 
     }
- 
+
   }
 
   {
-  
+
     title <
       name = Systematic Biology ;
       issn = 1063-5157 ;
@@ -17549,11 +17567,11 @@
     >
 
     {
- 
+
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://sysbio.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
+
     au < HighWirePressH20Plugin ; manifest ; 1952 ; Systematic Biology Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1953 ; Systematic Biology Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1954 ; Systematic Biology Volume 3 ; 3 >
@@ -17615,9 +17633,9 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Systematic Biology Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Systematic Biology Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Systematic Biology Volume 61 ; 61 >
-    
+
     }
-    
+
   }
 
   {
@@ -17676,7 +17694,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Teaching Mathematics and its Applications Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Teaching Mathematics and its Applications Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Teaching Mathematics and its Applications Volume 31 ; 31 >
- 
+
     }
 
   }
@@ -17817,7 +17835,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Toxicological Sciences Volume 109 ; 109 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Toxicological Sciences Volume 110 ; 110 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Toxicological Sciences Volume 111 ; 111 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; Toxicological Sciences Volume 112 ; 112 >      
+    au < HighWirePressH20Plugin ; released ; 2009 ; Toxicological Sciences Volume 112 ; 112 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Toxicological Sciences Volume 113 ; 113 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Toxicological Sciences Volume 114 ; 114 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Toxicological Sciences Volume 115 ; 115 >
@@ -17826,9 +17844,17 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Toxicological Sciences Volume 118 ; 118 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Toxicological Sciences Volume 119 ; 119 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Toxicological Sciences Volume 120 ; 120 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Toxicological Sciences Volume 121 ; 121 >    
-    au < HighWirePressH20Plugin ; expected ; 2012 ; Toxicological Sciences Volume 122 ; 122 >
-    
+    au < HighWirePressH20Plugin ; released ; 2011 ; Toxicological Sciences Volume 121 ; 121 >
+    au < HighWirePressH20Plugin ; expected ; 2011 ; Toxicological Sciences Volume 122 ; 122 >
+    au < HighWirePressH20Plugin ; expected ; 2011 ; Toxicological Sciences Volume 123 ; 123 >
+    au < HighWirePressH20Plugin ; expected ; 2011 ; Toxicological Sciences Volume 124 ; 124 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Toxicological Sciences Volume 125 ; 125 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Toxicological Sciences Volume 126 ; 126 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Toxicological Sciences Volume 127 ; 127 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Toxicological Sciences Volume 128 ; 128 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Toxicological Sciences Volume 129 ; 129 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Toxicological Sciences Volume 130 ; 130 >
+
     }
 
   }
@@ -17921,7 +17947,7 @@
     au < HighWirePressPlugin ; down ; 2010 ; Trusts & Trustees Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Trusts & Trustees Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Trusts & Trustees Volume 18 ; 18 >
-    
+
     }
 
   }
@@ -17976,7 +18002,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Twentieth Century British History Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Twentieth Century British History Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Twentieth Century British History Volume 23 ; 23 >
-    
+
     }
 
   }
@@ -18035,7 +18061,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; The World Bank Economic Review Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The World Bank Economic Review Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The World Bank Economic Review Volume 26 ; 26 >
-    
+
     }
 
   }
@@ -18093,7 +18119,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; The World Bank Research Observer Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The World Bank Research Observer Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The World Bank Research Observer Volume 27 ; 27 >
-    
+
     }
 
   }
@@ -18231,7 +18257,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; The Year's Work in Critical and Cultural Theory Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Year's Work in Critical and Cultural Theory Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Year's Work in Critical and Cultural Theory Volume 20 ; 20 >
-    
+
     }
 
   }
