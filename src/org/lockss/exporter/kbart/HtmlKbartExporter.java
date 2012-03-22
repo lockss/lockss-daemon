@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.18 2012-02-24 15:39:57 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.19 2012-03-22 16:16:37 easyonthemayo Exp $
  */
 
 /*
@@ -32,12 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
-import java.util.Collections;
 import java.util.List;
 import java.io.OutputStream;
 import java.io.IOException;
-
-import javax.mail.search.OrTerm;
 
 import org.lockss.config.Configuration;
 import org.lockss.exporter.kbart.KbartTitle.Field;
@@ -129,8 +126,6 @@ public class HtmlKbartExporter extends KbartExporter {
   @Override
   public void setFilter(KbartExportFilter filter) {
     super.setFilter(filter);
-    // Use the filter to sort the titles for custom output 
-    filter.sortTitlesByFirstTwoFields();
   }
   
   @Override

@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.18 2012-02-24 15:39:57 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.19 2012-03-22 16:16:37 easyonthemayo Exp $
  */
 
 /*
@@ -195,12 +195,15 @@ public abstract class KbartExporter {
 
   
   /**
-   * Set the filter to be used on this exporter.
+   * Set the filter to be used on this exporter. Also uses the filter to sort
+   * the titles for custom output.
    * 
    * @param filter an export filter
    */
   public void setFilter(KbartExportFilter filter) {
     this.filter = filter;
+    // Use the filter to sort the titles for custom output
+    filter.sortTitlesByFirstTwoFields();
   }
   
   /**
