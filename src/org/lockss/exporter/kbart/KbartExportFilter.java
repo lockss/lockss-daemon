@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExportFilter.java,v 1.8 2012-01-12 12:47:21 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.9 2012-03-22 16:27:23 easyonthemayo Exp $
  */
 
 /*
@@ -248,8 +248,11 @@ public class KbartExportFilter {
 
   public void sortTitlesByFirstTwoFields() {
     // Sort on just the first 2 columns (max):
-    log.debug(String.format("Sort by %s | %s", 
-        visibleFieldOrder.get(0), visibleFieldOrder.get(1)));
+    StringBuilder sb = new StringBuilder("Sort by ");
+    sb.append(visibleFieldOrder.get(0));
+    if (visibleFieldOrder.size() > 1)
+      sb.append(" | ").append(visibleFieldOrder.get(1));
+    log.debug(sb.toString());
     sortTitlesByFields( 
         visibleFieldOrder.subList(0, Math.min(2, visibleFieldOrder.size()))
     );
