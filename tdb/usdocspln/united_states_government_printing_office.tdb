@@ -436,22 +436,22 @@
 
     param[collection_id] = ECONI
 
-    au < testing ; 1995 ; Economic Indicators 1995 ; 1995 >
-    au < manifest ; 1996 ; Economic Indicators 1996 ; 1996 >
-    au < manifest ; 1997 ; Economic Indicators 1997 ; 1997 >
-    au < manifest ; 1998 ; Economic Indicators 1998 ; 1998 >
-    au < manifest ; 1999 ; Economic Indicators 1999 ; 1999 >
+    au < ready ; 1995 ; Economic Indicators 1995 ; 1995 >
+    au < ready ; 1996 ; Economic Indicators 1996 ; 1996 >
+    au < ready ; 1997 ; Economic Indicators 1997 ; 1997 >
+    au < ready ; 1998 ; Economic Indicators 1998 ; 1998 >
+    au < ready ; 1999 ; Economic Indicators 1999 ; 1999 >
     au < ready ; 2000 ; Economic Indicators 2000 ; 2000 >
     au < ready ; 2001 ; Economic Indicators 2001 ; 2001 >
     au < ready ; 2002 ; Economic Indicators 2002 ; 2002 >
     au < ready ; 2003 ; Economic Indicators 2003 ; 2003 >
     au < ready ; 2004 ; Economic Indicators 2004 ; 2004 >
     au < ready ; 2005 ; Economic Indicators 2005 ; 2005 >
-    au < manifest ; 2006 ; Economic Indicators 2006 ; 2006 >
-    au < manifest ; 2007 ; Economic Indicators 2007 ; 2007 >
-    au < manifest ; 2008 ; Economic Indicators 2008 ; 2008 >
-    au < manifest ; 2009 ; Economic Indicators 2009 ; 2009 >
-    au < testing ; 2010 ; Economic Indicators 2010 ; 2010 >
+    au < ready ; 2006 ; Economic Indicators 2006 ; 2006 >
+    au < ready ; 2007 ; Economic Indicators 2007 ; 2007 >
+    au < ready ; 2008 ; Economic Indicators 2008 ; 2008 >
+    au < ready ; 2009 ; Economic Indicators 2009 ; 2009 >
+    au < ready ; 2010 ; Economic Indicators 2010 ; 2010 >
     au < ready ; 2011 ; Economic Indicators 2011 ; 2011 >
     au < manifest ; 2012 ; Economic Indicators 2012 ; 2012 >
       
@@ -469,17 +469,17 @@
     au < manifest ; 1997 ; Economic Report of the President 1997 ; 1997 >
     au < manifest ; 1998 ; Economic Report of the President 1998 ; 1998 >
     au < manifest ; 1999 ; Economic Report of the President 1999 ; 1999 >
-    au < testing ; 2000 ; Economic Report of the President 2000 ; 2000 >
-    au < manifest ; 2001 ; Economic Report of the President 2001 ; 2001 >
-    au < manifest ; 2002 ; Economic Report of the President 2002 ; 2002 >
-    au < manifest ; 2003 ; Economic Report of the President 2003 ; 2003 >
-    au < manifest ; 2004 ; Economic Report of the President 2004 ; 2004 >
-    au < testing ; 2005 ; Economic Report of the President 2005 ; 2005 >
-    au < manifest ; 2006 ; Economic Report of the President 2006 ; 2006 >
-    au < manifest ; 2007 ; Economic Report of the President 2007 ; 2007 >
-    au < manifest ; 2008 ; Economic Report of the President 2008 ; 2008 >
-    au < manifest ; 2009 ; Economic Report of the President 2009 ; 2009 >
-    au < testing ; 2010 ; Economic Report of the President 2010 ; 2010 >
+    au < ready ; 2000 ; Economic Report of the President 2000 ; 2000 >
+    au < ready ; 2001 ; Economic Report of the President 2001 ; 2001 >
+    au < ready ; 2002 ; Economic Report of the President 2002 ; 2002 >
+    au < ready ; 2003 ; Economic Report of the President 2003 ; 2003 >
+    au < ready ; 2004 ; Economic Report of the President 2004 ; 2004 >
+    au < ready ; 2005 ; Economic Report of the President 2005 ; 2005 >
+    au < ready ; 2006 ; Economic Report of the President 2006 ; 2006 >
+    au < ready ; 2007 ; Economic Report of the President 2007 ; 2007 >
+    au < ready ; 2008 ; Economic Report of the President 2008 ; 2008 >
+    au < ready ; 2009 ; Economic Report of the President 2009 ; 2009 >
+    au < ready ; 2010 ; Economic Report of the President 2010 ; 2010 >
     au < ready ; 2011 ; Economic Report of the President 2011 ; 2011 >
       
   }
@@ -492,12 +492,12 @@
 
     param[collection_id] = ERIC
 
-    au < testing ; 1995 ; Education Report from ERIC 1995 ; 1995 >
-    au < manifest ; 1996 ; Education Report from ERIC 1996 ; 1996 >
-    au < manifest ; 1997 ; Education Report from ERIC 1997 ; 1997 >
-    au < manifest ; 1998 ; Education Report from ERIC 1998 ; 1998 >
-    au < manifest ; 1999 ; Education Report from ERIC 1999 ; 1999 >
-    au < testing ; 2000 ; Education Report from ERIC 2000 ; 2000 >
+    au < ready ; 1995 ; Education Report from ERIC 1995 ; 1995 >
+    au < ready ; 1996 ; Education Report from ERIC 1996 ; 1996 >
+    au < ready ; 1997 ; Education Report from ERIC 1997 ; 1997 >
+    au < ready ; 1998 ; Education Report from ERIC 1998 ; 1998 >
+    au < ready ; 1999 ; Education Report from ERIC 1999 ; 1999 >
+    au < ready ; 2000 ; Education Report from ERIC 2000 ; 2000 >
     au < ready ; 2001 ; Education Report from ERIC 2001 ; 2001 >
     au < ready ; 2002 ; Education Report from ERIC 2002 ; 2002 >
     au < ready ; 2003 ; Education Report from ERIC 2003 ; 2003 >
@@ -543,19 +543,19 @@
 
     param[collection_id] = GAOREPORTS
 
-    au < manifest ; 1993 ; Government Accountability Office Reports and Comptroller General Decisions 1993 ; 1993 >
-    au < manifest ; 1994 ; Government Accountability Office Reports and Comptroller General Decisions 1994 ; 1994 >
-    au < testing ; 1995 ; Government Accountability Office Reports and Comptroller General Decisions 1995 ; 1995 >
-    au < manifest ; 1996 ; Government Accountability Office Reports and Comptroller General Decisions 1996 ; 1996 >
-    au < manifest ; 1997 ; Government Accountability Office Reports and Comptroller General Decisions 1997 ; 1997 >
-    au < manifest ; 1998 ; Government Accountability Office Reports and Comptroller General Decisions 1998 ; 1998 >
-    au < manifest ; 1999 ; Government Accountability Office Reports and Comptroller General Decisions 1999 ; 1999 >
+    au < ready ; 1993 ; Government Accountability Office Reports and Comptroller General Decisions 1993 ; 1993 >
+    au < ready ; 1994 ; Government Accountability Office Reports and Comptroller General Decisions 1994 ; 1994 >
+    au < ready ; 1995 ; Government Accountability Office Reports and Comptroller General Decisions 1995 ; 1995 >
+    au < ready ; 1996 ; Government Accountability Office Reports and Comptroller General Decisions 1996 ; 1996 >
+    au < ready ; 1997 ; Government Accountability Office Reports and Comptroller General Decisions 1997 ; 1997 >
+    au < ready ; 1998 ; Government Accountability Office Reports and Comptroller General Decisions 1998 ; 1998 >
+    au < ready ; 1999 ; Government Accountability Office Reports and Comptroller General Decisions 1999 ; 1999 >
     au < ready ; 2000 ; Government Accountability Office Reports and Comptroller General Decisions 2000 ; 2000 >
-    au < manifest ; 2001 ; Government Accountability Office Reports and Comptroller General Decisions 2001 ; 2001 >
-    au < manifest ; 2002 ; Government Accountability Office Reports and Comptroller General Decisions 2002 ; 2002 >
-    au < manifest ; 2003 ; Government Accountability Office Reports and Comptroller General Decisions 2003 ; 2003 >
-    au < manifest ; 2004 ; Government Accountability Office Reports and Comptroller General Decisions 2004 ; 2004 >
-    au < testing ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; 2005 >
+    au < ready ; 2001 ; Government Accountability Office Reports and Comptroller General Decisions 2001 ; 2001 >
+    au < ready ; 2002 ; Government Accountability Office Reports and Comptroller General Decisions 2002 ; 2002 >
+    au < ready ; 2003 ; Government Accountability Office Reports and Comptroller General Decisions 2003 ; 2003 >
+    au < ready ; 2004 ; Government Accountability Office Reports and Comptroller General Decisions 2004 ; 2004 >
+    au < ready ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; 2005 >
     au < manifest ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; 2006 >
     au < manifest ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; 2007 >
     au < testing ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 >
@@ -570,23 +570,23 @@
 
     param[collection_id] = HOB
 
-    au < manifest ; 1983 ; History of Bills 1983 ; 1983 >
-    au < manifest ; 1984 ; History of Bills 1984 ; 1984 >
+    au < ready ; 1983 ; History of Bills 1983 ; 1983 >
+    au < ready ; 1984 ; History of Bills 1984 ; 1984 >
     au < ready ; 1985 ; History of Bills 1985 ; 1985 >
-    au < manifest ; 1986 ; History of Bills 1986 ; 1986 >
-    au < manifest ; 1987 ; History of Bills 1987 ; 1987 >
-    au < manifest ; 1988 ; History of Bills 1988 ; 1988 >
-    au < manifest ; 1989 ; History of Bills 1989 ; 1989 >
-    au < testing ; 1990 ; History of Bills 1990 ; 1990 >
-    au < manifest ; 1991 ; History of Bills 1991 ; 1991 >
-    au < manifest ; 1992 ; History of Bills 1992 ; 1992 >
-    au < manifest ; 1993 ; History of Bills 1993 ; 1993 >
-    au < manifest ; 1994 ; History of Bills 1994 ; 1994 >
-    au < testing ; 1995 ; History of Bills 1995 ; 1995 >
-    au < manifest ; 1996 ; History of Bills 1996 ; 1996 >
-    au < manifest ; 1997 ; History of Bills 1997 ; 1997 >
-    au < manifest ; 1998 ; History of Bills 1998 ; 1998 >
-    au < manifest ; 1999 ; History of Bills 1999 ; 1999 >
+    au < ready ; 1986 ; History of Bills 1986 ; 1986 >
+    au < ready ; 1987 ; History of Bills 1987 ; 1987 >
+    au < ready ; 1988 ; History of Bills 1988 ; 1988 >
+    au < ready ; 1989 ; History of Bills 1989 ; 1989 >
+    au < ready ; 1990 ; History of Bills 1990 ; 1990 >
+    au < ready ; 1991 ; History of Bills 1991 ; 1991 >
+    au < ready ; 1992 ; History of Bills 1992 ; 1992 >
+    au < ready ; 1993 ; History of Bills 1993 ; 1993 >
+    au < ready ; 1994 ; History of Bills 1994 ; 1994 >
+    au < ready ; 1995 ; History of Bills 1995 ; 1995 >
+    au < ready ; 1996 ; History of Bills 1996 ; 1996 >
+    au < ready ; 1997 ; History of Bills 1997 ; 1997 >
+    au < ready ; 1998 ; History of Bills 1998 ; 1998 >
+    au < ready ; 1999 ; History of Bills 1999 ; 1999 >
     au < ready ; 2000 ; History of Bills 2000 ; 2000 >
     au < ready ; 2001 ; History of Bills 2001 ; 2001 >
     au < ready ; 2002 ; History of Bills 2002 ; 2002 >
@@ -603,25 +603,6 @@
       
   }
 
-  {
-
-    title <
-      name = House Journal
-    >
-
-    param[collection_id] = HJOURNAL
-
-    au < manifest ; 1992 ; House Journal 1992 ; 1992 >
-    au < manifest ; 1993 ; House Journal 1993 ; 1993 >
-    au < manifest ; 1994 ; House Journal 1994 ; 1994 >
-    au < testing ; 1995 ; House Journal 1995 ; 1995 >
-    au < manifest ; 1996 ; House Journal 1996 ; 1996 >
-    au < manifest ; 1997 ; House Journal 1997 ; 1997 >
-    au < manifest ; 1998 ; House Journal 1998 ; 1998 >
-    au < testing ; 1999 ; House Journal 1999 ; 1999 >
-
-  }
-  
   {
 
     title <
@@ -651,7 +632,7 @@
     au < manifest ; 1992 ; Journal of the House of Representatives 1992 ; 1992 >
     au < manifest ; 1993 ; Journal of the House of Representatives 1993 ; 1993 >
     au < manifest ; 1994 ; Journal of the House of Representatives 1994 ; 1994 >
-    au < testing ; 1995 ; Journal of the House of Representatives 1995 ; 1995 >
+    au < ready ; 1995 ; Journal of the House of Representatives 1995 ; 1995 >
     au < manifest ; 1996 ; Journal of the House of Representatives 1996 ; 1996 >
     au < manifest ; 1997 ; Journal of the House of Representatives 1997 ; 1997 >
     au < manifest ; 1998 ; Journal of the House of Representatives 1998 ; 1998 >
@@ -893,20 +874,20 @@
     au < ready ; 1983 ; United States Statutes at Large 1983 ; 1983 >
     au < ready ; 1984 ; United States Statutes at Large 1984 ; 1984 >
     au < ready ; 1985 ; United States Statutes at Large 1985 ; 1985 >
-    au < manifest ; 1986 ; United States Statutes at Large 1986 ; 1986 >
-    au < manifest ; 1987 ; United States Statutes at Large 1987 ; 1987 >
-    au < manifest ; 1988 ; United States Statutes at Large 1988 ; 1988 >
-    au < manifest ; 1989 ; United States Statutes at Large 1989 ; 1989 >
-    au < testing ; 1990 ; United States Statutes at Large 1990 ; 1990 >
-    au < manifest ; 1991 ; United States Statutes at Large 1991 ; 1991 >
-    au < manifest ; 1992 ; United States Statutes at Large 1992 ; 1992 >
-    au < manifest ; 1993 ; United States Statutes at Large 1993 ; 1993 >
-    au < manifest ; 1994 ; United States Statutes at Large 1994 ; 1994 >
-    au < testing ; 1995 ; United States Statutes at Large 1995 ; 1995 >
-    au < manifest ; 1996 ; United States Statutes at Large 1996 ; 1996 >
-    au < manifest ; 1997 ; United States Statutes at Large 1997 ; 1997 >
-    au < manifest ; 1998 ; United States Statutes at Large 1998 ; 1998 >
-    au < manifest ; 1999 ; United States Statutes at Large 1999 ; 1999 >
+    au < ready ; 1986 ; United States Statutes at Large 1986 ; 1986 >
+    au < ready ; 1987 ; United States Statutes at Large 1987 ; 1987 >
+    au < ready ; 1988 ; United States Statutes at Large 1988 ; 1988 >
+    au < ready ; 1989 ; United States Statutes at Large 1989 ; 1989 >
+    au < ready ; 1990 ; United States Statutes at Large 1990 ; 1990 >
+    au < ready ; 1991 ; United States Statutes at Large 1991 ; 1991 >
+    au < ready ; 1992 ; United States Statutes at Large 1992 ; 1992 >
+    au < ready ; 1993 ; United States Statutes at Large 1993 ; 1993 >
+    au < ready ; 1994 ; United States Statutes at Large 1994 ; 1994 >
+    au < ready ; 1995 ; United States Statutes at Large 1995 ; 1995 >
+    au < ready ; 1996 ; United States Statutes at Large 1996 ; 1996 >
+    au < ready ; 1997 ; United States Statutes at Large 1997 ; 1997 >
+    au < ready ; 1998 ; United States Statutes at Large 1998 ; 1998 >
+    au < ready ; 1999 ; United States Statutes at Large 1999 ; 1999 >
     au < ready ; 2000 ; United States Statutes at Large 2000 ; 2000 >
     au < ready ; 2001 ; United States Statutes at Large 2001 ; 2001 >
     au < ready ; 2002 ; United States Statutes at Large 2002 ; 2002 >
@@ -933,11 +914,11 @@
     au < ready ; 1998 ; Weekly Compilation of Presidential Documents 1998 ; 1998 >
     au < ready ; 1999 ; Weekly Compilation of Presidential Documents 1999 ; 1999 >
     au < ready ; 2000 ; Weekly Compilation of Presidential Documents 2000 ; 2000 >
-    au < manifest ; 2001 ; Weekly Compilation of Presidential Documents 2001 ; 2001 >
-    au < manifest ; 2002 ; Weekly Compilation of Presidential Documents 2002 ; 2002 >
-    au < manifest ; 2003 ; Weekly Compilation of Presidential Documents 2003 ; 2003 >
-    au < manifest ; 2004 ; Weekly Compilation of Presidential Documents 2004 ; 2004 >
-    au < testing ; 2005 ; Weekly Compilation of Presidential Documents 2005 ; 2005 >
+    au < ready ; 2001 ; Weekly Compilation of Presidential Documents 2001 ; 2001 >
+    au < ready ; 2002 ; Weekly Compilation of Presidential Documents 2002 ; 2002 >
+    au < ready ; 2003 ; Weekly Compilation of Presidential Documents 2003 ; 2003 >
+    au < ready ; 2004 ; Weekly Compilation of Presidential Documents 2004 ; 2004 >
+    au < ready ; 2005 ; Weekly Compilation of Presidential Documents 2005 ; 2005 >
     au < manifest ; 2006 ; Weekly Compilation of Presidential Documents 2006 ; 2006 >
     au < manifest ; 2007 ; Weekly Compilation of Presidential Documents 2007 ; 2007 >
     au < manifest ; 2008 ; Weekly Compilation of Presidential Documents 2008 ; 2008 >
