@@ -18287,98 +18287,97 @@
     param[base_url] = http://ywes.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 1919 ; The Year's Work in English Studies Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1920 ; The Year's Work in English Studies Volume II ; II >
-    au < HighWirePressH20Plugin ; manifest ; 1922 ; The Year's Work in English Studies Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1923 ; The Year's Work in English Studies Volume IV ; IV >
-    au < HighWirePressH20Plugin ; manifest ; 1924 ; The Year's Work in English Studies Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1925 ; The Year's Work in English Studies Volume VI ; VI >
-    au < HighWirePressH20Plugin ; manifest ; 1926 ; The Year's Work in English Studies Volume VII ; VII >
-    au < HighWirePressH20Plugin ; manifest ; 1927 ; The Year's Work in English Studies Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1928 ; The Year's Work in English Studies Volume IX ; IX >
-    au < HighWirePressH20Plugin ; manifest ; 1929 ; The Year's Work in English Studies Volume X ; X >
-    au < HighWirePressH20Plugin ; manifest ; 1930 ; The Year's Work in English Studies Volume XI ; XI >
-    au < HighWirePressH20Plugin ; manifest ; 1931 ; The Year's Work in English Studies Volume XII ; XII >
-    au < HighWirePressH20Plugin ; manifest ; 1932 ; The Year's Work in English Studies Volume XIII ; XIII >
-    au < HighWirePressH20Plugin ; manifest ; 1933 ; The Year's Work in English Studies Volume XIV ; XIV >
-    au < HighWirePressH20Plugin ; manifest ; 1934 ; The Year's Work in English Studies Volume XV ; XV >
-    au < HighWirePressH20Plugin ; manifest ; 1935 ; The Year's Work in English Studies Volume XVI ; XVI >
-    au < HighWirePressH20Plugin ; manifest ; 1936 ; The Year's Work in English Studies Volume XVII ; XVII >
-    au < HighWirePressH20Plugin ; manifest ; 1937 ; The Year's Work in English Studies Volume XVIII ; XVIII >
-    au < HighWirePressH20Plugin ; manifest ; 1938 ; The Year's Work in English Studies Volume XIX ; XIX >
-    au < HighWirePressH20Plugin ; manifest ; 1939 ; The Year's Work in English Studies Volume XX ; XX >
-    au < HighWirePressH20Plugin ; manifest ; 1940 ; The Year's Work in English Studies Volume XXI ; XXI >
-    au < HighWirePressH20Plugin ; manifest ; 1941 ; The Year's Work in English Studies Volume XXII ; XXII >
-    au < HighWirePressH20Plugin ; manifest ; 1942 ; The Year's Work in English Studies Volume XXIII ; XXIII >
-    au < HighWirePressH20Plugin ; manifest ; 1943 ; The Year's Work in English Studies Volume XXIV ; XXIV >
-    au < HighWirePressH20Plugin ; manifest ; 1944 ; The Year's Work in English Studies Volume XXV ; XXV >
-    au < HighWirePressH20Plugin ; manifest ; 1945 ; The Year's Work in English Studies Volume XXVI ; XXVI >
-    au < HighWirePressH20Plugin ; manifest ; 1946 ; The Year's Work in English Studies Volume XXVII ; XXVII >
-    au < HighWirePressH20Plugin ; manifest ; 1947 ; The Year's Work in English Studies Volume XXVIII ; XXVIII >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; The Year's Work in English Studies Volume XXIX ; XXIX >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; The Year's Work in English Studies Volume XXX ; XXX >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; The Year's Work in English Studies Volume XXXI ; XXXI >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; The Year's Work in English Studies Volume XXXII ; XXXII >
-    au < HighWirePressH20Plugin ; manifest ; 1952 ; The Year's Work in English Studies Volume XXXIII ; XXXIII >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; The Year's Work in English Studies Volume XXXIV ; XXXIV >
-    au < HighWirePressH20Plugin ; manifest ; 1954 ; The Year's Work in English Studies Volume XXXV ; XXXV >
-    au < HighWirePressH20Plugin ; manifest ; 1955 ; The Year's Work in English Studies Volume XXXVI ; XXXVI >
-    au < HighWirePressH20Plugin ; manifest ; 1956 ; The Year's Work in English Studies Volume XXXVII ; XXXVII >
-    au < HighWirePressH20Plugin ; manifest ; 1957 ; The Year's Work in English Studies Volume XXXVIII ; XXXVIII >
-    au < HighWirePressH20Plugin ; manifest ; 1958 ; The Year's Work in English Studies Volume XXXIX ; XXXIX >
-    au < HighWirePressH20Plugin ; manifest ; 1959 ; The Year's Work in English Studies Volume XL ; XL >
-    au < HighWirePressH20Plugin ; manifest ; 1960 ; The Year's Work in English Studies Volume XLI ; XLI >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; The Year's Work in English Studies Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; The Year's Work in English Studies Volume XLIII ; XLIII >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; The Year's Work in English Studies Volume XLIV ; XLIV >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; The Year's Work in English Studies Volume XLV ; XLV >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; The Year's Work in English Studies Volume XLVI ; XLVI >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; The Year's Work in English Studies Volume XLVII ; XLVII >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; The Year's Work in English Studies Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; The Year's Work in English Studies Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; The Year's Work in English Studies Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; The Year's Work in English Studies Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; The Year's Work in English Studies Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; The Year's Work in English Studies Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; The Year's Work in English Studies Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; The Year's Work in English Studies Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; The Year's Work in English Studies Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; The Year's Work in English Studies Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; The Year's Work in English Studies Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; The Year's Work in English Studies Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; The Year's Work in English Studies Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; The Year's Work in English Studies Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; The Year's Work in English Studies Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; The Year's Work in English Studies Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; The Year's Work in English Studies Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; The Year's Work in English Studies Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; The Year's Work in English Studies Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; The Year's Work in English Studies Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; The Year's Work in English Studies Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; The Year's Work in English Studies Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; The Year's Work in English Studies Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; The Year's Work in English Studies Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; The Year's Work in English Studies Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; The Year's Work in English Studies Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; The Year's Work in English Studies Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; The Year's Work in English Studies Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; The Year's Work in English Studies Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; The Year's Work in English Studies Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; The Year's Work in English Studies Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; The Year's Work in English Studies Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; manifest ; 1921 ; The Year's Work in English Studies Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1922 ; The Year's Work in English Studies Volume II ; II >
+    au < HighWirePressH20Plugin ; manifest ; 1923 ; The Year's Work in English Studies Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1924 ; The Year's Work in English Studies Volume IV ; IV >
+    au < HighWirePressH20Plugin ; manifest ; 1926 ; The Year's Work in English Studies Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1927 ; The Year's Work in English Studies Volume VI ; VI >
+    au < HighWirePressH20Plugin ; manifest ; 1928 ; The Year's Work in English Studies Volume VII ; VII >
+    au < HighWirePressH20Plugin ; manifest ; 1929 ; The Year's Work in English Studies Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1930 ; The Year's Work in English Studies Volume IX ; IX >
+    au < HighWirePressH20Plugin ; manifest ; 1931 ; The Year's Work in English Studies Volume X ; X >
+    au < HighWirePressH20Plugin ; manifest ; 1932 ; The Year's Work in English Studies Volume XI ; XI >
+    au < HighWirePressH20Plugin ; manifest ; 1933 ; The Year's Work in English Studies Volume XII ; XII >
+    au < HighWirePressH20Plugin ; manifest ; 1934 ; The Year's Work in English Studies Volume XIII ; XIII >
+    au < HighWirePressH20Plugin ; manifest ; 1935 ; The Year's Work in English Studies Volume XIV ; XIV >
+    au < HighWirePressH20Plugin ; manifest ; 1936 ; The Year's Work in English Studies Volume XV ; XV >
+    au < HighWirePressH20Plugin ; manifest ; 1937 ; The Year's Work in English Studies Volume XVI ; XVI >
+    au < HighWirePressH20Plugin ; manifest ; 1938 ; The Year's Work in English Studies Volume XVII ; XVII >
+    au < HighWirePressH20Plugin ; manifest ; 1939 ; The Year's Work in English Studies Volume XVIII ; XVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1940 ; The Year's Work in English Studies Volume XIX ; XIX >
+    au < HighWirePressH20Plugin ; manifest ; 1941 ; The Year's Work in English Studies Volume XX ; XX >
+    au < HighWirePressH20Plugin ; manifest ; 1942 ; The Year's Work in English Studies Volume XXI ; XXI >
+    au < HighWirePressH20Plugin ; manifest ; 1944 ; The Year's Work in English Studies Volume XXII ; XXII >
+    au < HighWirePressH20Plugin ; manifest ; 1944 ; The Year's Work in English Studies Volume XXIII ; XXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1945 ; The Year's Work in English Studies Volume XXIV ; XXIV >
+    au < HighWirePressH20Plugin ; manifest ; 1946 ; The Year's Work in English Studies Volume XXV ; XXV >
+    au < HighWirePressH20Plugin ; manifest ; 1947 ; The Year's Work in English Studies Volume XXVI ; XXVI >
+    au < HighWirePressH20Plugin ; manifest ; 1948 ; The Year's Work in English Studies Volume XXVII ; XXVII >
+    au < HighWirePressH20Plugin ; manifest ; 1949 ; The Year's Work in English Studies Volume XXVIII ; XXVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1950 ; The Year's Work in English Studies Volume XXIX ; XXIX >
+    au < HighWirePressH20Plugin ; manifest ; 1951 ; The Year's Work in English Studies Volume XXX ; XXX >
+    au < HighWirePressH20Plugin ; manifest ; 1952 ; The Year's Work in English Studies Volume XXXI ; XXXI >
+    au < HighWirePressH20Plugin ; manifest ; 1953 ; The Year's Work in English Studies Volume XXXII ; XXXII >
+    au < HighWirePressH20Plugin ; manifest ; 1954 ; The Year's Work in English Studies Volume XXXIII ; XXXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1955 ; The Year's Work in English Studies Volume XXXIV ; XXXIV >
+    au < HighWirePressH20Plugin ; manifest ; 1956 ; The Year's Work in English Studies Volume XXXV ; XXXV >
+    au < HighWirePressH20Plugin ; manifest ; 1957 ; The Year's Work in English Studies Volume XXXVI ; XXXVI >
+    au < HighWirePressH20Plugin ; manifest ; 1958 ; The Year's Work in English Studies Volume XXXVII ; XXXVII >
+    au < HighWirePressH20Plugin ; manifest ; 1959 ; The Year's Work in English Studies Volume XXXVIII ; XXXVIII >
+    au < HighWirePressH20Plugin ; manifest ; 1960 ; The Year's Work in English Studies Volume XXXIX ; XXXIX >
+    au < HighWirePressH20Plugin ; manifest ; 1961 ; The Year's Work in English Studies Volume XL ; XL >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; The Year's Work in English Studies Volume XLI ; XLI >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; The Year's Work in English Studies Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; The Year's Work in English Studies Volume XLIII ; XLIII >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; The Year's Work in English Studies Volume XLIV ; XLIV >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; The Year's Work in English Studies Volume XLV ; XLV >
+    au < HighWirePressH20Plugin ; manifest ; 1967 ; The Year's Work in English Studies Volume XLVI ; XLVI >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; The Year's Work in English Studies Volume XLVII ; XLVII >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; The Year's Work in English Studies Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; The Year's Work in English Studies Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; The Year's Work in English Studies Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; The Year's Work in English Studies Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; manifest ; 1973 ; The Year's Work in English Studies Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; manifest ; 1974 ; The Year's Work in English Studies Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; manifest ; 1975 ; The Year's Work in English Studies Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; The Year's Work in English Studies Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; The Year's Work in English Studies Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; The Year's Work in English Studies Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; The Year's Work in English Studies Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; The Year's Work in English Studies Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; The Year's Work in English Studies Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; The Year's Work in English Studies Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; The Year's Work in English Studies Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; The Year's Work in English Studies Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; The Year's Work in English Studies Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; The Year's Work in English Studies Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; The Year's Work in English Studies Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; The Year's Work in English Studies Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; The Year's Work in English Studies Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; The Year's Work in English Studies Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; The Year's Work in English Studies Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; The Year's Work in English Studies Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; The Year's Work in English Studies Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; The Year's Work in English Studies Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; The Year's Work in English Studies Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; The Year's Work in English Studies Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; The Year's Work in English Studies Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; The Year's Work in English Studies Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; The Year's Work in English Studies Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; The Year's Work in English Studies Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; manifest ; 2001 ; The Year's Work in English Studies Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; manifest ; 2002 ; The Year's Work in English Studies Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; The Year's Work in English Studies Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; The Year's Work in English Studies Volume 83 ; 83 >
-    au < HighWirePressPlugin ; doNotProcess ; 2005 ; The Year's Work in English Studies Volume 84 [superseded] ; 84 >
     au < HighWirePressH20Plugin ; released ; 2005 ; The Year's Work in English Studies Volume 84 ; 84 >
-    au < HighWireStrVolPlugin ; superseded ; 2006 ; The Year's Work in English Studies Volume 85 [superseded] ; 85 >
+    au < HighWireStrVolPlugin ; superseded ; 2006 ; The Year's Work in English Studies Volume 85 ; 85 >
     au < HighWirePressH20Plugin ; released ; 2006 ; The Year's Work in English Studies Volume 85 ; 85 >
-    au < HighWirePressPlugin ; superseded ; 2007 ; The Year's Work in English Studies Volume 86 [superseded] ; 86 >
+    au < HighWirePressPlugin ; superseded ; 2007 ; The Year's Work in English Studies Volume 86 ; 86 >
     au < HighWirePressH20Plugin ; released ; 2007 ; The Year's Work in English Studies Volume 86 ; 86 >
-    au < HighWirePressPlugin ; superseded ; 2008 ; The Year's Work in English Studies Volume 87 [superseded] ; 87 >
+    au < HighWirePressPlugin ; superseded ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 >
     au < HighWirePressH20Plugin ; released ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 >
-    au < HighWirePressPlugin ; superseded ; 2009 ; The Year's Work in English Studies Volume 88 [superseded] ; 88 >
+    au < HighWirePressPlugin ; superseded ; 2009 ; The Year's Work in English Studies Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; released ; 2009 ; The Year's Work in English Studies Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Year's Work in English Studies Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Year's Work in English Studies Volume 90 ; 90 >
