@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDsysHtmlFilterFactory.java,v 1.5 2012-03-22 23:23:27 davidecorcoran Exp $
+ * $Id: XGPOFDsysHtmlFilterFactory.java,v 1.1 2012-03-23 05:15:02 thib_gc Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
-public class GPOFDsysHtmlFilterFactory implements FilterFactory {
+public class XGPOFDsysHtmlFilterFactory implements FilterFactory {
 
 public InputStream createFilteredInputStream(ArchivalUnit au,
 	                                          InputStream in,
