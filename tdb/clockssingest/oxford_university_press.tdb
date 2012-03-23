@@ -3568,7 +3568,7 @@
 
     au < doNotProcess ; doNotProcess ; 2008 ; NDT Plus Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; NDT Plus Volume 2 ; 2 ; >
-    au < exists ; exists ; 2010 ; NDT Plus Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2010 ; NDT Plus Volume 3 ; 3 ; >
     au < manifest ; exists ; 2011 ; NDT Plus Volume 4 ; 4 ; >
     au < manifest ; exists ; 2012 ; Clinical Kidney Journal Volume 5 ; 5 ; >
 
@@ -3763,7 +3763,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Contemporary Women's Writing Volume 3 ; 3 ; >
     au < released ; crawling ; 2010 ; Contemporary Women's Writing Volume 4 ; 4 ; >
     au < released ; crawling ; 2011 ; Contemporary Women's Writing Volume 5 ; 5 ; >
-    au < expected ; exists ; 2012 ; Contemporary Women's Writing Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2012 ; Contemporary Women's Writing Volume 6 ; 6 ; >
 
     }
 
@@ -9540,15 +9540,15 @@
     au < manifest ; exists ; 1997 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 52B ; 52B ; >
     au < manifest ; exists ; 1998 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 53B ; 53B ; >
     au < manifest ; exists ; 1999 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 54B ; 54B ; >
-    au < exists ; exists ; 2000 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 55 ; 55 ; >
-    au < exists ; exists ; 2001 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 56 ; 56 ; >
-    au < exists ; exists ; 2002 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 57 ; 57 ; >
-    au < exists ; exists ; 2003 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 58 ; 58 ; >
-    au < exists ; exists ; 2004 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 59 ; 59 ; >
-    au < exists ; exists ; 2005 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 60 ; 60 ; >
-    au < exists ; exists ; 2006 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 61 ; 61 ; >
-    au < exists ; exists ; 2007 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 62 ; 62 ; >
-    au < exists ; exists ; 2008 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 63 ; 63 ; >
+    au < manifest ; exists ; 2000 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 55 ; 55 ; >
+    au < manifest ; exists ; 2001 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2002 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 57 ; 57 ; >
+    au < manifest ; exists ; 2003 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2004 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 59 ; 59 ; >
+    au < manifest ; exists ; 2005 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2006 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2007 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 62 ; 62 ; >
+    au < manifest ; exists ; 2008 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 63 ; 63 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 64B ; 64B ; >
     au < released ; crawling ; 2010 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 65B ; 65B ; >
     au < released ; crawling ; 2011 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 66B ; 66B ; >
@@ -10267,7 +10267,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of International Economic Law Volume 12 ; 12 ; >
     au < released ; crawling ; 2010 ; Journal of International Economic Law Volume 13 ; 13 ; >
     au < released ; crawling ; 2011 ; Journal of International Economic Law Volume 14 ; 14 ; >
-    au < expected ; exists ; 2012 ; Journal of International Economic Law Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2012 ; Journal of International Economic Law Volume 15 ; 15 ; >
 
     }
 
@@ -11486,7 +11486,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 ; >
     au < released ; crawling ; 2010 ; Journal of Semitic Studies Volume 55 ; 55 ; >
     au < released ; crawling ; 2011 ; Journal of Semitic Studies Volume 56 ; 56 ; >
-    au < expected ; exists ; 2012 ; Journal of Semitic Studies Volume 57 ; 57 ; >
+    au < manifest ; exists ; 2012 ; Journal of Semitic Studies Volume 57 ; 57 ; >
 
     }
 
@@ -12718,7 +12718,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Modern Judaism Volume 29 ; 29 ; >
     au < released ; crawling ; 2010 ; Modern Judaism Volume 30 ; 30 ; >
     au < released ; crawling ; 2011 ; Modern Judaism Volume 31 ; 31 ; >
-    au < expected ; exists ; 2012 ; Modern Judaism Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2012 ; Modern Judaism Volume 32 ; 32 ; >
 
     }
 
@@ -13921,7 +13921,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
     au < released ; crawling ; 2010 ; The Oral History Review Volume 37 ; 37 ; >
     au < released ; crawling ; 2011 ; The Oral History Review Volume 38 ; 38 ; >
-    au < expected ; exists ; 2012 ; The Oral History Review Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2012 ; The Oral History Review Volume 39 ; 39 ; >
 
     }
 
@@ -14608,9 +14608,9 @@
     au < manifest ; exists ; 1973 ; Philosophia Mathematica Volume s1-10 ; s1-10 ; >
     au < manifest ; exists ; 1974 ; Philosophia Mathematica Volume s1-11 ; s1-11 ; >
     au < manifest ; exists ; 1975 ; Philosophia Mathematica Volume s1-12 ; s1-12 ; >
-    au < exists ; exists ; 1976 ; Philosophia Mathematica Volume s1-13-14 ; s1-13-14 ; >
-    au < exists ; exists ; 1978 ; Philosophia Mathematica Volume s1-15-16 ; s1-15-16 ; >
-    au < exists ; exists ; 1980 ; Philosophia Mathematica Volume s1-17-18 ; s1-17-18 ; >
+    au < manifest ; exists ; 1976 ; Philosophia Mathematica Volume s1-13-14 ; s1-13-14 ; >
+    au < manifest ; exists ; 1978 ; Philosophia Mathematica Volume s1-15-16 ; s1-15-16 ; >
+    au < manifest ; exists ; 1980 ; Philosophia Mathematica Volume s1-17-18 ; s1-17-18 ; >
     au < manifest ; exists ; 1986 ; Philosophia Mathematica Volume s2-1 ; s2-1 ; >
     au < manifest ; exists ; 1987 ; Philosophia Mathematica Volume s2-2 ; s2-2 ; >
     au < manifest ; exists ; 1988 ; Philosophia Mathematica Volume s2-3 ; s2-3 ; >
@@ -14882,7 +14882,7 @@
     au < manifest ; exists ; 1913 ; Proceedings of the London Mathematical Society Volume s2-11 ; s2-11 ; >
     au < manifest ; exists ; 1913 ; Proceedings of the London Mathematical Society Volume s2-12 ; s2-12 ; >
     au < manifest ; exists ; 1914 ; Proceedings of the London Mathematical Society Volume s2-13 ; s2-13 ; >
-    au < exists ; exists ; 1915 ; Proceedings of the London Mathematical Society Volume s2_14 ; s2_14 ; >
+    au < manifest ; exists ; 1915 ; Proceedings of the London Mathematical Society Volume s2_14 ; s2_14 ; >
     au < manifest ; exists ; 1917 ; Proceedings of the London Mathematical Society Volume s2-15 ; s2-15 ; >
     au < doesNotExist ; doesNotExist ; 1917 ; Proceedings of the London Mathematical Society Volume s2-16 ; s2-16 ; >
     au < manifest ; exists ; 1918 ; Proceedings of the London Mathematical Society Volume s2-17 ; s2-17 ; >
@@ -15116,7 +15116,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Public Health Ethics Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Public Health Ethics Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; Public Health Ethics Volume 4 ; 4 ; >
-    au < expected ; exists ; 2012 ; Public Health Ethics Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2012 ; Public Health Ethics Volume 5 ; 5 ; >
 
     }
 
