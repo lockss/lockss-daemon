@@ -1,10 +1,10 @@
 /*
- * $Id: GPOFDSysHtmlFilterFactory.java,v 1.1 2012-03-22 20:30:37 davidecorcoran Exp $
+ * $Id: GPOFDSysHtmlFilterFactory.java,v 1.2 2012-03-23 05:17:28 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
