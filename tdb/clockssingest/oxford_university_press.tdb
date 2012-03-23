@@ -1998,8 +1998,6 @@
     param[base_url] = http://bfgp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < doNotProcess ; doNotProcess ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; >
     au < down ; crawling ; 2010 ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 ; >
 
     }
@@ -5320,7 +5318,7 @@
       issnl = 1741-427X
     >
 
-    comment[moved] = Journal title moved to Hindawi, all volumes are represented in the GLN, not sure if continuation of this title is in CLOCKSS-sc
+    comment[moved] = Journal title moved to Hindawi in 2011
 
     {
 
@@ -11550,6 +11548,7 @@
     au < manifest ; exists ; 2009-2010 ; Journal of Social History Volume 43 ; 43 ; >
     au < manifest ; exists ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ; >
     au < crawling ; exists ; 2011-2012 ; Journal of Social History Volume 45 ; 45 ; >
+    au < expected ; exists ; 2011-2012 ; Journal of Social History Volume 46 ; 46 ; >
 
     }
 
@@ -12818,6 +12817,9 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     comment[mmcts] = New journal to OUP
+
+    au < expected ; exists ; 2012 ; Multimedia Manual of Cardio-Thoracic Surgery Volume 1 ; 1 ; >
+
   }
 
   {

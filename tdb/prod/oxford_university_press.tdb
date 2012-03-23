@@ -5470,8 +5470,6 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWireStrVolPlugin ; down ; 2005 ; Evidence-based Complementary and Alternative Medicine Volume 2 ; 2 >
-    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Evidence-based Complementary and Alternative Medicine Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; doesNotExist ; 2007 ; Evidence-based Complementary and Alternative Medicine Volume 4 ; 4 >
 
     }
 
@@ -11946,8 +11944,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2008-2009 ; Journal of Social History Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; manifest ; 2009-2010 ; Journal of Social History Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 2010-2011 ; Journal of Social History Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Social History Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Social History Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; manifest ; 2011-2012 ; Journal of Social History Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; expected ; 2012-2013 ; Journal of Social History Volume 46 ; 46 >
 
     }
 
