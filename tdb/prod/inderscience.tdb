@@ -2946,6 +2946,32 @@
       >
 
       param[journal_issn] = 1741-5128
+      
+      au <exists ; 1998 ; International Journal of Global Energy Issues Volume 11 ; 11 >
+      au <exists ; 1999 ; International Journal of Global Energy Issues Volume 12 ; 12 >
+      au <exists ; 2000 ; International Journal of Global Energy Issues Volume 13 ; 13 >
+      au <manifest ; 2000 ; International Journal of Global Energy Issues Volume 14 ; 14 >
+      au <exists ; 2001 ; International Journal of Global Energy Issues Volume 15 ; 15 >
+      au <exists ; 2002 ; International Journal of Global Energy Issues Volume 16 ; 16 >
+      au <manifest ; 2002 ; International Journal of Global Energy Issues Volume 17 ; 17 >
+      au <manifest ; 2002 ; International Journal of Global Energy Issues Volume 18 ; 18 >
+      au <manifest ; 2003 ; International Journal of Global Energy Issues Volume 19 ; 19 >
+      au <manifest ; 2003 ; International Journal of Global Energy Issues Volume 20 ; 20 >
+      au <manifest ; 2004 ; International Journal of Global Energy Issues Volume 21 ; 21 >
+      au <manifest ; 2004 ; International Journal of Global Energy Issues Volume 22 ; 22 >
+      au <manifest ; 2005 ; International Journal of Global Energy Issues Volume 23 ; 23 >
+      au <manifest ; 2005 ; International Journal of Global Energy Issues Volume 24 ; 24 >
+      au <manifest ; 2006 ; International Journal of Global Energy Issues Volume 25 ; 25 >
+      au <manifest ; 2006 ; International Journal of Global Energy Issues Volume 26 ; 26 >
+      au <manifest ; 2007 ; International Journal of Global Energy Issues Volume 27 ; 27 >
+      au <manifest ; 2007 ; International Journal of Global Energy Issues Volume 28 ; 28 >
+      au <manifest ; 2008 ; International Journal of Global Energy Issues Volume 29 ; 29 >
+      au <manifest ; 2008 ; International Journal of Global Energy Issues Volume 30 ; 30 >
+      au <manifest ; 2009 ; International Journal of Global Energy Issues Volume 31 ; 31 >
+      au <manifest ; 2009 ; International Journal of Global Energy Issues Volume 32 ; 32 >
+      au <manifest ; 2010 ; International Journal of Global Energy Issues Volume 33 ; 33 >
+      au <manifest ; 2010 ; International Journal of Global Energy Issues Volume 34 ; 34 >
+      au <manifest ; 2011 ; International Journal of Global Energy Issues Volume 35 ; 35 >
 
     }
 
@@ -2959,6 +2985,18 @@
       >
 
       param[journal_issn] = 1741-5136
+      
+      au < exists ; 2001 ; International Journal of Global Environmental Issues Volume 1 ; 1 >
+      au < exists ; 2002 ; International Journal of Global Environmental Issues Volume 2 ; 2 >
+      au < exists ; 2003 ; International Journal of Global Environmental Issues Volume 3 ; 3 >
+      au < exists ; 2004 ; International Journal of Global Environmental Issues Volume 4 ; 4 >
+      au < exists ; 2005 ; International Journal of Global Environmental Issues Volume 5 ; 5 >
+      au < exists ; 2006 ; International Journal of Global Environmental Issues Volume 6 ; 6 >
+      au < exists ; 2007 ; International Journal of Global Environmental Issues Volume 7 ; 7 >
+      au < exists ; 2008 ; International Journal of Global Environmental Issues Volume 8 ; 8 >
+      au < exists ; 2009 ; International Journal of Global Environmental Issues Volume 9 ; 9 >
+      au < exists ; 2010 ; International Journal of Global Environmental Issues Volume 10 ; 10 >
+      au < exists ; 2011 ; International Journal of Global Environmental Issues Volume 11 ; 11 >
 
     }
 
@@ -2972,6 +3010,10 @@
       >
 
       param[journal_issn] = 1758-2091
+      
+      au < exists ; 2009 ; International Journal of Global Warming Volume 1 ; 1 >
+      au < exists ; 2010 ; International Journal of Global Warming Volume 2 ; 2 >
+      au < exists ; 2011 ; International Journal of Global Warming Volume 3 ; 3 >
 
     }
 
@@ -2985,6 +3027,11 @@
       >
 
       param[journal_issn] = 1479-3067
+      
+      au < exists ; 2004-2006 ; International Journal of Globalisation and Small Business Volume 1 ; 1 >
+      au < exists ; 2007-2008 ; International Journal of Globalisation and Small Business Volume 2 ; 2 >
+      au < exists ; 2009 ; International Journal of Globalisation and Small Business Volume 3 ; 3 >
+      au < exists ; 2010-2011 ; International Journal of Globalisation and Small Business Volume 4 ; 4 >
 
     }
 
@@ -2998,6 +3045,9 @@
       >
 
       param[journal_issn] = 1757-2711
+      
+      au < exists ; 2009-2010 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 1 ; 1 >
+      au < exists ; 2011 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 2 ; 2 >
 
     }
 
@@ -3011,6 +3061,12 @@
       >
 
       param[journal_issn] = 1744-9936
+      
+      au < exists ; 2006-2007 ; International Journal of Green Economics Volume 1 ; 1 >
+      au < exists ; 2008 ; International Journal of Green Economics Volume 2 ; 2 >
+      au < exists ; 2009 ; International Journal of Green Economics Volume 3 ; 3 >
+      au < exists ; 2010 ; International Journal of Green Economics Volume 4 ; 4 >
+      au < exists ; 2011 ; International Journal of Green Economics Volume 5 ; 5 >
 
     }
 
@@ -3024,6 +3080,25 @@
       >
 
       param[journal_issn] = 1741-8488
+      
+      au < exists ; 2005-2009 ; International Journal of Grid and Utility Computing Volume 1 ; 1 >
+      au < exists ; 2011 ; International Journal of Grid and Utility Computing Volume 2 ; 2 >
+      au < exists ; 2012 ; International Journal of Grid and Utility Computing Volume 3 ; 3 >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Happiness and Development ;
+        issn = 2049-2790 ;
+        eissn = 2049-2804 ;
+        issnl = 2049-2790
+      >
+
+      param[journal_issn] = 2049-2804
+      
+      au < expected ; 2012 ; International Journal of Happiness and Development Volume 1 ; 1 >
 
     }
 
@@ -3037,6 +3112,19 @@
       >
 
       param[journal_issn] = 1741-5144
+      
+      au < exists ; 1999 ; International Journal of Healthcare Technology and Management Volume 1 ; 1 >
+      au < exists ; 2000 ; International Journal of Healthcare Technology and Management Volume 2 ; 2 >
+      au < exists ; 2001 ; International Journal of Healthcare Technology and Management Volume 3 ; 3 >
+      au < exists ; 2002 ; International Journal of Healthcare Technology and Management Volume 4 ; 4 >
+      au < exists ; 2003 ; International Journal of Healthcare Technology and Management Volume 5 ; 5 >
+      au < exists ; 2004-2005 ; International Journal of Healthcare Technology and Management Volume 6 ; 6 >
+      au < exists ; 2006 ; International Journal of Healthcare Technology and Management Volume 7 ; 7 >
+      au < exists ; 2007 ; International Journal of Healthcare Technology and Management Volume 8 ; 8 >
+      au < exists ; 2008 ; International Journal of Healthcare Technology and Management Volume 9 ; 9 >
+      au < exists ; 2009 ; International Journal of Healthcare Technology and Management Volume 10 ; 10 >
+      au < exists ; 2010 ; International Journal of Healthcare Technology and Management Volume 11 ; 11 >
+      au < exists ; 2011 ; International Journal of Healthcare Technology and Management Volume 12 ; 12 >
 
     }
 
@@ -3050,6 +3138,20 @@
       >
 
       param[journal_issn] = 1741-5152
+      
+      au < manifest ; 2000 ; International Journal of Heavy Vehicle Systems Volume 7 ; 7 >
+      au < manifest ; 2001 ; International Journal of Heavy Vehicle Systems Volume 8 ; 8 >
+      au < manifest ; 2002 ; International Journal of Heavy Vehicle Systems Volume 9 ; 9 >
+      au < manifest ; 2003 ; International Journal of Heavy Vehicle Systems Volume 10 ; 10 >
+      au < manifest ; 2004 ; International Journal of Heavy Vehicle Systems Volume 11 ; 11 >
+      au < manifest ; 2005 ; International Journal of Heavy Vehicle Systems Volume 12 ; 12 >
+      au < manifest ; 2006 ; International Journal of Heavy Vehicle Systems Volume 13 ; 13 >
+      au < manifest ; 2007 ; International Journal of Heavy Vehicle Systems Volume 14 ; 14 >
+      au < manifest ; 2008 ; International Journal of Heavy Vehicle Systems Volume 15 ; 15 >
+      au < manifest ; 2009 ; International Journal of Heavy Vehicle Systems Volume 16 ; 16 >
+      au < manifest ; 2010 ; International Journal of Heavy Vehicle Systems Volume 17 ; 17 >
+      au < manifest ; 2011 ; International Journal of Heavy Vehicle Systems Volume 18 ; 18 >
+      au < manifest ; 2012 ; International Journal of Heavy Vehicle Systems Volume 19 ; 19 >
 
     }
 
@@ -3063,6 +3165,14 @@
       >
 
       param[journal_issn] = 1740-0570
+      
+      au < exists ; 2004 ; International Journal of High Performance Computing and Networking Volume 1 ; 1 >
+      au < exists ; 2004 ; International Journal of High Performance Computing and Networking Volume 2 ; 2 >
+      au < exists ; 2005 ; International Journal of High Performance Computing and Networking Volume 3 ; 3 >
+      au < exists ; 2006 ; International Journal of High Performance Computing and Networking Volume 4 ; 4 >
+      au < exists ; 2007-2008 ; International Journal of High Performance Computing and Networking Volume 5 ; 5 >
+      au < exists ; 2009-2010 ; International Journal of High Performance Computing and Networking Volume 6 ; 6 >
+      au < exists ; 2011 ; International Journal of High Performance Computing and Networking Volume 7 ; 7 >
 
     }
 
@@ -3076,6 +3186,10 @@
       >
 
       param[journal_issn] = 1751-6536
+      
+      au < exists ; 2007-2008; International Journal of High Performance Systems Architecture Volume 1 ; 1 >
+      au < exists ; 2009-2010; International Journal of High Performance Systems Architecture Volume 2 ; 2 >
+      au < exists ; 2011; International Journal of High Performance Systems Architecture Volume 3 ; 3 >
 
     }
 
@@ -3089,6 +3203,8 @@
       >
 
       param[journal_issn] = 2045-7812
+      
+      au < exists ; 2012 ; International Journal of Human Factors and Ergonomics Volume 1 ; 1 >
 
     }
 
@@ -3102,6 +3218,9 @@
       >
 
       param[journal_issn] = 1742-5557
+      
+      au < exists ; 2006-2010 ; International Journal of Human Factors Modelling and Simulation Volume 1 ; 1 >
+      au < exists ; 2011 ; International Journal of Human Factors Modelling and Simulation Volume 2 ; 2 >
 
     }
 
@@ -3115,6 +3234,19 @@
       >
 
       param[journal_issn] = 1741-5160
+      
+      au < exists ; 2000-2001 ; International Journal of Human Resources Development and Management Volume 1 ; 1 >
+      au < exists ; 2002 ; International Journal of Human Resources Development and Management Volume 2 ; 2 >
+      au < exists ; 2003 ; International Journal of Human Resources Development and Management Volume 3 ; 3 >
+      au < exists ; 2004 ; International Journal of Human Resources Development and Management Volume 4 ; 4 >
+      au < exists ; 2005 ; International Journal of Human Resources Development and Management Volume 5 ; 5 >
+      au < exists ; 2006 ; International Journal of Human Resources Development and Management Volume 6 ; 6 >
+      au < exists ; 2007 ; International Journal of Human Resources Development and Management Volume 7 ; 7 >
+      au < exists ; 2008 ; International Journal of Human Resources Development and Management Volume 8 ; 8 >
+      au < exists ; 2009 ; International Journal of Human Resources Development and Management Volume 9 ; 9 >
+      au < exists ; 2010 ; International Journal of Human Resources Development and Management Volume 10 ; 10 >
+      au < exists ; 2011 ; International Journal of Human Resources Development and Management Volume 11 ; 11 >
+      au < exists ; 2012 ; International Journal of Human Resources Development and Management Volume 12 ; 12 >
 
     }
 
@@ -3128,6 +3260,9 @@
       >
 
       param[journal_issn] = 2042-7816
+      
+      au < exists ; 2011 ; International Journal of Hydrology Science and Technology Volume 1 ; 1 >
+      au < exists ; 2012 ; International Journal of Hydrology Science and Technology Volume 2 ; 2 >
 
     }
 
@@ -3141,6 +3276,8 @@
       >
 
       param[journal_issn] = 1754-145X
+      
+      au < exists ; 2009-2011 ; International Journal of Immunological Studies Volume 1 ; 1 >
 
     }
 
@@ -3154,6 +3291,12 @@
       >
 
       param[journal_issn] = 1753-0814
+      
+      au < exists ; 2007-2008 ; International Journal of Indian Culture and Business Management Volume 1 ; 1 >
+      au < exists ; 2009 ; International Journal of Indian Culture and Business Management Volume 2 ; 2 >
+      au < exists ; 2010 ; International Journal of Indian Culture and Business Management Volume 3 ; 3 >
+      au < exists ; 2011 ; International Journal of Indian Culture and Business Management Volume 4 ; 4 >
+      au < exists ; 2012 ; International Journal of Indian Culture and Business Management Volume 5 ; 5 >
 
     }
 
@@ -3167,6 +3310,17 @@
       >
 
       param[journal_issn] = 1748-5045
+      
+      au < exists ; 2006 ; International Journal of Industrial and Systems Engineering Volume 1 ; 1 >
+      au < exists ; 2007 ; International Journal of Industrial and Systems Engineering Volume 2 ; 2 >
+      au < exists ; 2008 ; International Journal of Industrial and Systems Engineering Volume 3 ; 3 >
+      au < exists ; 2009 ; International Journal of Industrial and Systems Engineering Volume 4 ; 4 >
+      au < exists ; 2010 ; International Journal of Industrial and Systems Engineering Volume 5 ; 5 >
+      au < exists ; 2010 ; International Journal of Industrial and Systems Engineering Volume 6 ; 6 >
+      au < exists ; 2011 ; International Journal of Industrial and Systems Engineering Volume 7 ; 7 >
+      au < exists ; 2011 ; International Journal of Industrial and Systems Engineering Volume 8 ; 8 >
+      au < exists ; 2011 ; International Journal of Industrial and Systems Engineering Volume 9 ; 9 >
+      au < exists ; 2012 ; International Journal of Industrial and Systems Engineering Volume 10 ; 10 >
 
     }
 
@@ -3180,6 +3334,8 @@
       >
 
       param[journal_issn] = 1757-3882
+      
+      au < exists ; 2009 ; International Journal of Industrial Electronics and Drives Volume 1 ; 1 >
 
     }
 
@@ -3193,6 +3349,9 @@
       >
 
       param[journal_issn] = 1753-7711
+      
+      au < exists ; 2009-2010 ; International Journal of Information and Coding Theory Volume 1 ; 1 >
+      au < exists ; 2011; International Journal of Information and Coding Theory Volume 2 ; 2 >
 
     }
 
@@ -3206,6 +3365,11 @@
       >
 
       param[journal_issn] = 1741-8070
+      
+      au < exists ; 2007-2008 ; International Journal of Information and Communication Technology Volume 1 ; 1 >
+      au < exists ; 2009-2010 ; International Journal of Information and Communication Technology Volume 2 ; 2 >
+      au < exists ; 2011 ; International Journal of Information and Communication Technology Volume 3 ; 3 >
+      au < exists ; 2012 ; International Journal of Information and Communication Technology Volume 4 ; 4 >
 
     }
 
@@ -3219,6 +3383,11 @@
       >
 
       param[journal_issn] = 1744-1773
+      
+      au < exists ; 2007 ; International Journal of Information and Computer Security Volume 1 ; 1 >
+      au < exists ; 2008 ; International Journal of Information and Computer Security Volume 2 ; 2 >
+      au < exists ; 2009 ; International Journal of Information and Computer Security Volume 3 ; 3 >
+      au < exists ; 2010-2011 ; International Journal of Information and Computer Security Volume 4 ; 4 >
 
     }
 
@@ -3232,6 +3401,11 @@
       >
 
       param[journal_issn] = 1756-7025
+      
+      au < exists ; 2008-2009 ; International Journal of Information and Decision Sciences Volume 1 ; 1 >
+      au < exists ; 2010 ; International Journal of Information and Decision Sciences Volume 2 ; 2 >
+      au < exists ; 2011 ; International Journal of Information and Decision Sciences Volume 3 ; 3 >
+      au < exists ; 2012 ; International Journal of Information and Decision Sciences Volume 4 ; 4 >
 
     }
 
@@ -3245,6 +3419,11 @@
       >
 
       param[journal_issn] = 1744-2311
+      
+      au < exists ; 2005-2006 ; International Journal of Information and Operations Management Education Volume 1 ; 1 >
+      au < exists ; 2007-2008 ; International Journal of Information and Operations Management Education Volume 2 ; 2 >
+      au < exists ; 2009-2010 ; International Journal of Information and Operations Management Education Volume 3 ; 3 >
+      au < exists ; 2011 ; International Journal of Information and Operations Management Education Volume 4 ; 4 >
 
     }
 
@@ -3258,6 +3437,8 @@
       >
 
       param[journal_issn] = 1741-850X
+      
+      au < exists ; 2011 ; International Journal of Information Privacy, Security and Integrity Volume 1 ; 1 >
 
     }
 
@@ -3271,6 +3452,9 @@
       >
 
       param[journal_issn] = 1751-0465
+      
+      au < exists ; 2007 ; International Journal of Information Quality Volume 1 ; 1 >
+      au < exists ; 2008-2011 ; International Journal of Information Quality Volume 2 ; 2 >
 
     }
 
@@ -3284,6 +3468,12 @@
       >
 
       param[journal_issn] = 1479-313X
+      
+      au < exists ; 2006 ; International Journal of Information Systems and Change Management Volume 1 ; 1 >
+      au < exists ; 2007 ; International Journal of Information Systems and Change Management Volume 2 ; 2 >
+      au < exists ; 2008 ; International Journal of Information Systems and Change Management Volume 3 ; 3 >
+      au < exists ; 2009-2010 ; International Journal of Information Systems and Change Management Volume 4 ; 4 >
+      au < exists ; 2011 ; International Journal of Information Systems and Change Management Volume 5 ; 5 >
 
     }
 
@@ -3297,6 +3487,8 @@
       >
 
       param[journal_issn] = 1751-3235
+      
+      au  < expected ; 2012 ; International Journal of Information Systems and Management Volume 1 ; 1 >
 
     }
 
@@ -3310,6 +3502,18 @@
       >
 
       param[journal_issn] = 1741-5179
+      
+      au < exists ; 2002 ; International Journal of Information Technology and Management Volume 1 ; 1 >
+      au < exists ; 2003 ; International Journal of Information Technology and Management Volume 2 ; 2 >
+      au < exists ; 2004 ; International Journal of Information Technology and Management Volume 3 ; 3 >
+      au < exists ; 2005 ; International Journal of Information Technology and Management Volume 4 ; 4 >
+      au < exists ; 2006 ; International Journal of Information Technology and Management Volume 5 ; 5 >
+      au < exists ; 2007 ; International Journal of Information Technology and Management Volume 6 ; 6 >
+      au < exists ; 2008 ; International Journal of Information Technology and Management Volume 7 ; 7 >
+      au < exists ; 2009 ; International Journal of Information Technology and Management Volume 8 ; 8 >
+      au < exists ; 2010 ; International Journal of Information Technology and Management Volume 9 ; 9 >
+      au < exists ; 2011 ; International Journal of Information Technology and Management Volume 10 ; 10 >
+      au < exists ; 2012 ; International Journal of Information Technology and Management Volume 11 ; 11 >
 
     }
 
@@ -3323,6 +3527,9 @@
       >
 
       param[journal_issn] = 2042-3225
+      
+      au < exists ; 2010-2011 ; International Journal of Information Technology, Communications and Convergence Volume 1 ; 1 >
+      au < exists ; 2012 ; International Journal of Information Technology, Communications and Convergence Volume 2 ; 2 >
 
     }
 
@@ -3336,6 +3543,18 @@
       >
 
       param[journal_issn] = 1741-8089
+      
+      au < exists ; 2003-2004 ; International Journal of Innovation and Learning Volume 1 ; 1 >
+      au < exists ; 2005 ; International Journal of Innovation and Learning Volume 2 ; 2 >
+      au < exists ; 2006 ; International Journal of Innovation and Learning Volume 3 ; 3 >
+      au < exists ; 2007 ; International Journal of Innovation and Learning Volume 4 ; 4 >
+      au < exists ; 2008 ; International Journal of Innovation and Learning Volume 5 ; 5 >
+      au < exists ; 2009 ; International Journal of Innovation and Learning Volume 6 ; 6 >
+      au < exists ; 2010 ; International Journal of Innovation and Learning Volume 7 ; 7 >
+      au < exists ; 2010 ; International Journal of Innovation and Learning Volume 8 ; 8 >
+      au < exists ; 2011 ; International Journal of Innovation and Learning Volume 9 ; 9 >
+      au < exists ; 2011 ; International Journal of Innovation and Learning Volume 10 ; 10 >
+      au < exists ; 2012 ; International Journal of Innovation and Learning Volume 11 ; 11 >
 
     }
 
@@ -3349,6 +3568,11 @@
       >
 
       param[journal_issn] = 1753-0679
+      
+      au < exists ; 2008-2009 ; International Journal of Innovation and Regional Development Volume 1 ; 1 >
+      au < exists ; 2010 ; International Journal of Innovation and Regional Development Volume 2 ; 2 >
+      au < exists ; 2011 ; International Journal of Innovation and Regional Development Volume 3 ; 3 >
+      au < exists ; 2012 ; International Journal of Innovation and Regional Development Volume 4 ; 4 >
 
     }
 
@@ -3362,6 +3586,12 @@
       >
 
       param[journal_issn] = 1740-8830
+      
+      au < exists ; 2005-2006 ; International Journal of Innovation and Sustainable Development Volume 1 ; 1 >
+      au < exists ; 2007 ; International Journal of Innovation and Sustainable Development Volume 2 ; 2 >
+      au < exists ; 2008 ; International Journal of Innovation and Sustainable Development Volume 3 ; 3 >
+      au < exists ; 2009 ; International Journal of Innovation and Sustainable Development Volume 4 ; 4 >
+      au < exists ; 2010-2011 ; International Journal of Innovation and Sustainable Development Volume 5 ; 5 >
 
     }
 
@@ -3375,6 +3605,8 @@
       >
 
       param[journal_issn] = 1755-1528
+      
+      au < exists ; 2009-2011 ; International Journal of Innovation in Education Volume 1 ; 1 >
 
     }
 
@@ -3388,6 +3620,11 @@
       >
 
       param[journal_issn] = 1751-6498
+      
+      au < exists ; 2007-2008 ;  International Journal of Innovative Computing and Applications Volume 1 ; 1 >
+      au < exists ; 2009-2010 ;  International Journal of Innovative Computing and Applications Volume 2 ; 2 >
+      au < exists ; 2011 ;  International Journal of Innovative Computing and Applications Volume 3 ; 3 >
+      au < exists ; 2012 ;  International Journal of Innovative Computing and Applications Volume 4 ; 4 >
 
     }
 
@@ -3401,6 +3638,8 @@
       >
 
       param[journal_issn] = 2043-7862
+      
+      au < exists ; 2011 ; International Journal of Instrumentation Technology Volume 1 ; 1 >
 
     }
 
@@ -3414,6 +3653,13 @@
       >
 
       param[journal_issn] = 1741-8097
+      
+      au < exists ; 2004-2005 ; International Journal of Integrated Supply Management Volume 1 ; 1 >
+      au < exists ; 2006 ; International Journal of Integrated Supply Management Volume 2 ; 2 >
+      au < exists ; 2007 ; International Journal of Integrated Supply Management Volume 3 ; 3 >
+      au < exists ; 2008 ; International Journal of Integrated Supply Management Volume 4 ; 4 >
+      au < exists ; 2009-2010 ; International Journal of Integrated Supply Management Volume 5 ; 5 >
+      au < exists ; 2011 ; International Journal of Integrated Supply Management Volume 6 ; 6 >
 
     }
 
@@ -3427,6 +3673,12 @@
       >
 
       param[journal_issn] = 1478–9655
+      
+      au < exists ; 2006-2007 ; International Journal of Intellectual Property Management Volume 1 ; 1 >
+      au < exists ; 2008 ; International Journal of Intellectual Property Management Volume 2 ; 2 >
+      au < exists ; 2009 ; International Journal of Intellectual Property Management Volume 3 ; 3 >
+      au < exists ; 2010-2011 ; International Journal of Intellectual Property Management Volume 4 ; 4 >
+      au < exists ; 2012 ; International Journal of Intellectual Property Management Volume 5 ; 5 >
 
     }
 
@@ -3440,6 +3692,11 @@
       >
 
       param[journal_issn] = 1755-1595
+      
+      au < exists ; 2008 ; International Journal of Intelligent Defence Support Systems Volume 1 ; 1 >
+      au < exists ; 2009 ; International Journal of Intelligent Defence Support Systems Volume 2 ; 2 >
+      au < exists ; 2010 ; International Journal of Intelligent Defence Support Systems Volume 3 ; 3 >
+      au < exists ; 2011 ; International Journal of Intelligent Defence Support Systems Volume 4 ; 4 >
 
     }
 
@@ -3453,6 +3710,8 @@
       >
 
       param[journal_issn] = 1758-8723
+      
+      au < exists ; 2010-2011 ; International Journal of Intelligent Engineering Informatics Volume 1 ; 1 >
 
     }
 
@@ -3466,6 +3725,8 @@
       >
 
       param[journal_issn] = 1745-3240
+      
+      au < exists ; 2007-2009 ; International Journal of Intelligent Enterprise Volume 1 ; 1 >
 
     }
 
@@ -3479,6 +3740,13 @@
       >
 
       param[journal_issn] = 1751-5866
+      
+      au < exists ; 2007 ; International Journal of Intelligent Information and Database Systems Volume 1 ; 1 >
+      au < exists ; 2008 ; International Journal of Intelligent Information and Database Systems Volume 2 ; 2 >
+      au < exists ; 2009 ; International Journal of Intelligent Information and Database Systems Volume 3 ; 3 >
+      au < exists ; 2010 ; International Journal of Intelligent Information and Database Systems Volume 4 ; 4 >
+      au < exists ; 2011 ; International Journal of Intelligent Information and Database Systems Volume 5 ; 5 >
+      au < exists ; 2012 ; International Journal of Intelligent Information and Database Systems Volume 6 ; 6 >
 
     }
 
@@ -3492,6 +3760,17 @@
       >
 
       param[journal_issn] = 1740-8873
+      
+      au < exists ; 2005-2006 ; International Journal of Intelligent Systems Technologies and Applications Volume 1 ; 1 >
+      au < exists ; 2007 ; International Journal of Intelligent Systems Technologies and Applications Volume 2 ; 2 >
+      au < exists ; 2007 ; International Journal of Intelligent Systems Technologies and Applications Volume 3 ; 3 >
+      au < exists ; 2008 ; International Journal of Intelligent Systems Technologies and Applications Volume 4 ; 4 >
+      au < exists ; 2008 ; International Journal of Intelligent Systems Technologies and Applications Volume 5 ; 5 >
+      au < exists ; 2009 ; International Journal of Intelligent Systems Technologies and Applications Volume 6 ; 6 >
+      au < exists ; 2009 ; International Journal of Intelligent Systems Technologies and Applications Volume 7 ; 7 >
+      au < exists ; 2010 ; International Journal of Intelligent Systems Technologies and Applications Volume 8 ; 8 >
+      au < exists ; 2010 ; International Journal of Intelligent Systems Technologies and Applications Volume 9 ; 9 >
+      au < exists ; 2011 ; International Journal of Intelligent Systems Technologies and Applications Volume 10 ; 10 >
 
     }
 
@@ -3505,6 +3784,10 @@
       >
 
       param[journal_issn] = 1750-0036
+      
+      au < exists ; 2007-2009 ; International Journal of Intercultural Information Management Volume 1 ; 1 >
+      au < exists ; 2010-2011 ; International Journal of Intercultural Information Management Volume 2 ; 2 >
+      au < exists ; 2012 ; International Journal of Intercultural Information Management Volume 3 ; 3 >
 
     }
 
@@ -3518,6 +3801,14 @@
       >
 
       param[journal_issn] = 1741-5330
+      
+      au < exists ; 2003 ; International Journal of Internet and Enterprise Management Volume 1 ; 1 >
+      au < exists ; 2004 ; International Journal of Internet and Enterprise Management Volume 2 ; 2 >
+      au < exists ; 2005 ; International Journal of Internet and Enterprise Management Volume 3 ; 3 >
+      au < exists ; 2006 ; International Journal of Internet and Enterprise Management Volume 4 ; 4 >
+      au < exists ; 2007-2008 ; International Journal of Internet and Enterprise Management Volume 5 ; 5 >
+      au < exists ; 2009-2010 ; International Journal of Internet and Enterprise Management Volume 6 ; 6 >
+      au < exists ; 2011 ; International Journal of Internet and Enterprise Management Volume 7 ; 7 >
 
     }
 
@@ -3531,6 +3822,10 @@
       >
 
       param[journal_issn] = 1751-6056
+      
+      au < exists ; 2007-2008 ; International Journal of Internet Manufacturing and Services Volume 1 ; 1 >
+      au < exists ; 2009-2010 ; International Journal of Internet Manufacturing and Services Volume 2 ; 2 >
+      au < exists ; 2011 ; International Journal of Internet Manufacturing and Services Volume 3 ; 3 >
 
     }
 
@@ -3544,6 +3839,14 @@
       >
 
       param[journal_issn] = 1741-8100
+      
+      au < exists ; 2004 ; International Journal of Internet Marketing and Advertising Volume 1 ; 1 >
+      au < exists ; 2005 ; International Journal of Internet Marketing and Advertising Volume 2 ; 2 >
+      au < exists ; 2006 ; International Journal of Internet Marketing and Advertising Volume 3 ; 3 >
+      au < exists ; 2007-2008 ; International Journal of Internet Marketing and Advertising Volume 4 ; 4 >
+      au < exists ; 2009 ; International Journal of Internet Marketing and Advertising Volume 5 ; 5 >
+      au < exists ; 2010-2011 ; International Journal of Internet Marketing and Advertising Volume 6 ; 6 >
+      au < exists ; 2012 ; International Journal of Internet Marketing and Advertising Volume 7 ; 7 >
 
     }
 
@@ -3557,6 +3860,13 @@
       >
 
       param[journal_issn] = 1743-8217
+      
+      au < exists ; 2005-2006 ; International Journal of Internet Protocol Technology Volume 1 ; 1 >
+      au < exists ; 2007 ; International Journal of Internet Protocol Technology Volume 2 ; 2 >
+      au < exists ; 2008 ; International Journal of Internet Protocol Technology Volume 3 ; 3 >
+      au < exists ; 2009 ; International Journal of Internet Protocol Technology Volume 4 ; 4 >
+      au < exists ; 2010 ; International Journal of Internet Protocol Technology Volume 5 ; 5 >
+      au < exists ; 2011 ; International Journal of Internet Protocol Technology Volume 6 ; 6 >
 
     }
 
@@ -3570,6 +3880,11 @@
       >
 
       param[journal_issn] = 1748-5703
+      
+      au < exists ; 2007-2009 ; International Journal of Internet Technology and Secured Transactions Volume 1 ; 1 >
+      au < exists ; 2010 ; International Journal of Internet Technology and Secured Transactions Volume 2 ; 2 >
+      au < exists ; 2011 ; International Journal of Internet Technology and Secured Transactions Volume 3 ; 3 >
+      au < exists ; 2012 ; International Journal of Internet Technology and Secured Transactions Volume 4 ; 4 >
 
     }
 
@@ -3583,6 +3898,8 @@
       >
 
       param[journal_issn] = 1746-6970
+      
+      au < exists ; 2008-2011 ; International Journal of Inventory Research Volume 1 ; 1 >
 
     }
 
