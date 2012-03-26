@@ -202,7 +202,7 @@ public class TestMassachusettsMedicalSocietyPlugin extends PluginTestCase {
 	  
 	  public void testGetName() throws Exception {
 	    ArchivalUnit au = createAu();
-	    assertEquals("Massachusetts Medical Society Plugin, Base URL " + BASE_URL + ", Journal ID " + JOURNAL_ID + ", Volume " + VOLUME_NAME, au.getName());
+	    assertEquals("Massachusetts Medical Society Plugin, Base URL " + BASE_URL + ", Base URL 2 " + BASE_URL2 + ", Journal ID " + JOURNAL_ID + ", Volume " + VOLUME_NAME, au.getName());
 	  }
 
 }
