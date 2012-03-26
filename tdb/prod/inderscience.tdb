@@ -3913,6 +3913,14 @@
       >
 
       param[journal_issn] = 1741-1017
+      
+      au < exists ; 2005 ; International Journal of Knowledge and Learning Volume 1 ; 1 >
+      au < exists ; 2006 ; International Journal of Knowledge and Learning Volume 2 ; 2 >
+      au < exists ; 2007 ; International Journal of Knowledge and Learning Volume 3 ; 3 >
+      au < exists ; 2008 ; International Journal of Knowledge and Learning Volume 4 ; 4 >
+      au < exists ; 2009 ; International Journal of Knowledge and Learning Volume 5 ; 5 >
+      au < exists ; 2010 ; International Journal of Knowledge and Learning Volume 6 ; 6 >
+      au < exists ; 2011 ; International Journal of Knowledge and Learning Volume 7 ; 7 >
 
     }
 
@@ -3926,58 +3934,9 @@
       >
 
       param[journal_issn] = 1755-8263
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Knowledge Engineering and Data Mining ;
-        issn = 1755-2087 ;
-        eissn = 1755-2095 ;
-        issnl = 1755-2087
-      >
-
-      param[journal_issn] = 1755-2095
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Knowledge Engineering and Soft Data Paradigms ;
-        issn = 1755-3210 ;
-        eissn = 1755-3229 ;
-        issnl = 1755-3210
-      >
-
-      param[journal_issn] = 1755-3229
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Knowledge Management in Tourism and Hospitality ;
-        issn = 1756-0322 ;
-        eissn = 1756-0330 ;
-        issnl = 1756-0322
-      >
-
-      param[journal_issn] = 1756-0330
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Knowledge Management Studies ;
-        issn = 1743-8268 ;
-        eissn = 1743-8276 ;
-        issnl = 1743-8268
-      >
-
-      param[journal_issn] = 1743-8276
+      
+      au < exists ; 2009-2010 ; International Journal of Knowledge and Web Intelligence Volume 1 ; 1 >
+      au < exists ; 2011 ; International Journal of Knowledge and Web Intelligence Volume 2 ; 2 >
 
     }
 
@@ -3991,6 +3950,76 @@
       >
 
       param[journal_issn] = 2040-4476
+      
+      au < exists ; 2010 ; International Journal of Knowledge-Based Development Volume 1 ; 1 >
+      au < exists ; 2011 ; International Journal of Knowledge-Based Development Volume 2 ; 2 >
+      au < exists ; 2012 ; International Journal of Knowledge-Based Development Volume 3 ; 3 >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Knowledge Engineering and Data Mining ;
+        issn = 1755-2087 ;
+        eissn = 1755-2095 ;
+        issnl = 1755-2087
+      >
+
+      param[journal_issn] = 1755-2095
+      
+      au < exists ; 2010-2011 ; International Journal of Knowledge Engineering and Data Mining Volume 1 ; 1 >
+      au < exists ; 2012 ; International Journal of Knowledge Engineering and Data Mining Volume 2 ; 2 >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Knowledge Engineering and Soft Data Paradigms ;
+        issn = 1755-3210 ;
+        eissn = 1755-3229 ;
+        issnl = 1755-3210
+      >
+
+      param[journal_issn] = 1755-3229
+      
+      au < exists ; 2009 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 1 ; 1 >
+      au < exists ; 2010 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 2 ; 2 >
+      au < exists ; 2011 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 3 ; 3 >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Knowledge Management in Tourism and Hospitality ;
+        issn = 1756-0322 ;
+        eissn = 1756-0330 ;
+        issnl = 1756-0322
+      >
+
+      param[journal_issn] = 1756-0330
+      
+      au < expected ; 2012 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Knowledge Management Studies ;
+        issn = 1743-8268 ;
+        eissn = 1743-8276 ;
+        issnl = 1743-8268
+      >
+
+      param[journal_issn] = 1743-8276
+      
+      au < exists ; 2006-2007 ; International Journal of Knowledge Management Studies Volume 1 ; 1 >
+      au < exists ; 2008 ; International Journal of Knowledge Management Studies Volume 2 ; 2 >
+      au < exists ; 2009 ; International Journal of Knowledge Management Studies Volume 3 ; 3 >
+      au < exists ; 2010 ; International Journal of Knowledge Management Studies Volume 4 ; 4 >
 
     }
 
@@ -4004,6 +4033,8 @@
       >
 
       param[journal_issn] = 1754-2308
+      
+      au < expected ; 2012 ; International Journal of Lean Enterprise Research Volume 1 ; 1 >
 
     }
 
@@ -4017,6 +4048,13 @@
       >
 
       param[journal_issn] = 1740-2883
+      
+      au < exists ; 2005-2006 ; International Journal of Learning and Change Volume 1 ; 1 >
+      au < exists ; 2007 ; International Journal of Learning and Change Volume 2 ; 2 >
+      au < exists ; 2008-2009 ; International Journal of Learning and Change Volume 3 ; 3 >
+      au < exists ; 2010 ; International Journal of Learning and Change Volume 4 ; 4 >
+      au < exists ; 2011 ; International Journal of Learning and Change Volume 5 ; 5 >
+      au < exists ; 2012 ; International Journal of Learning and Change Volume 6 ; 6 >
 
     }
 
@@ -4030,6 +4068,16 @@
       >
 
       param[journal_issn] = 1479-4861
+      
+      au < exists ; 2004 ; International Journal of Learning and Intellectual Capital Volume 1 ; 1 >
+      au < exists ; 2005 ; International Journal of Learning and Intellectual Capital Volume 2 ; 2 >
+      au < exists ; 2006 ; International Journal of Learning and Intellectual Capital Volume 3 ; 3 >
+      au < exists ; 2007 ; International Journal of Learning and Intellectual Capital Volume 4 ; 4 >
+      au < exists ; 2008 ; International Journal of Learning and Intellectual Capital Volume 5 ; 5 >
+      au < exists ; 2009 ; International Journal of Learning and Intellectual Capital Volume 6 ; 6 >
+      au < exists ; 2010 ; International Journal of Learning and Intellectual Capital Volume 7 ; 7 >
+      au < exists ; 2011 ; International Journal of Learning and Intellectual Capital Volume 8 ; 8 >
+      au < exists ; 2012 ; International Journal of Learning and Intellectual Capital Volume 9 ; 9 >
 
     }
 
@@ -4043,6 +4091,13 @@
       >
 
       param[journal_issn] = 1741-8119
+      
+      au < exists ; 2004-2005 ; International Journal of Learning Technology Volume 1 ; 1 >
+      au < exists ; 2006 ; International Journal of Learning Technology Volume 2 ; 2 >
+      au < exists ; 2007-2008 ; International Journal of Learning Technology Volume 3 ; 3 >
+      au < exists ; 2009 ; International Journal of Learning Technology Volume 4 ; 4 >
+      au < exists ; 2010 ; International Journal of Learning Technology Volume 5 ; 5 >
+      au < exists ; 2011 ; International Journal of Learning Technology Volume 6 ; 6 >
 
     }
 
@@ -4056,6 +4111,8 @@
       >
 
       param[journal_issn] = 1750-8150
+      
+      au < expected ; 2012 ; International Journal of Legal Information Design Volume 1 ; 1 >
 
     }
 
@@ -4069,6 +4126,9 @@
       >
 
       param[journal_issn] = 1757-5575
+      
+      au < exists ; 2009-2010 ; International Journal of Leisure and Tourism Marketing Volume 1 ; 1 >
+      au < exists ; 2011 ; International Journal of Leisure and Tourism Marketing Volume 2 ; 2 >
 
     }
 
@@ -4082,6 +4142,12 @@
       >
 
       param[journal_issn] = 1741-6434
+      
+      au < exists ; 2007-2008 ; International Journal of Liability and Scientific Enquiry Volume 1 ; 1 >
+      au < exists ; 2009 ; International Journal of Liability and Scientific Enquiry Volume 2 ; 2 >
+      au < exists ; 2010 ; International Journal of Liability and Scientific Enquiry Volume 3 ; 3 >
+      au < exists ; 2011 ; International Journal of Liability and Scientific Enquiry Volume 4 ; 4 >
+      au < exists ; 2012 ; International Journal of Liability and Scientific Enquiry Volume 5 ; 5 >
 
     }
 
@@ -4095,6 +4161,8 @@
       >
 
       param[journal_issn] = 2043-8656
+      
+      au < expected ; 2012 ; International Journal of Lifecycle Performance Engineering Volume 1 ; 1 >
 
     }
 
@@ -4108,6 +4176,10 @@
       >
 
       param[journal_issn] = 1741-5381
+      
+      au < exists ; 2007-2008 ; International Journal of Logistics Economics and Globalisation Volume 1 ; 1 >
+      au < exists ; 2009-2010 ; International Journal of Logistics Economics and Globalisation Volume 2 ; 2 >
+      au < exists ; 2011 ; International Journal of Logistics Economics and Globalisation Volume 3 ; 3 >
 
     }
 
@@ -4121,6 +4193,18 @@
       >
 
       param[journal_issn] = 1742-7975
+      
+      au < exists ; 2004-2005 ; International Journal of Logistics Systems and Management Volume 1 ; 1 >
+      au < exists ; 2006 ; International Journal of Logistics Systems and Management Volume 2 ; 2 >
+      au < exists ; 2007 ; International Journal of Logistics Systems and Management Volume 3 ; 3 >
+      au < exists ; 2008 ; International Journal of Logistics Systems and Management Volume 4 ; 4 >
+      au < exists ; 2009 ; International Journal of Logistics Systems and Management Volume 5 ; 5 >
+      au < exists ; 2010 ; International Journal of Logistics Systems and Management Volume 6 ; 6 >
+      au < exists ; 2010 ; International Journal of Logistics Systems and Management Volume 7 ; 7 >
+      au < exists ; 2011 ; International Journal of Logistics Systems and Management Volume 8 ; 8 >
+      au < exists ; 2011 ; International Journal of Logistics Systems and Management Volume 9 ; 9 >
+      au < exists ; 2011 ; International Journal of Logistics Systems and Management Volume 10 ; 10 >
+      au < exists ; 2012 ; International Journal of Logistics Systems and Management Volume 11 ; 11 >
 
     }
 
@@ -4134,6 +4218,31 @@
       >
 
       param[journal_issn] = 1741-9190
+      
+      au < exists ; 2003-2005 ; International Journal of Low Radiation Volume 1 ; 1 >
+      au < exists ; 2006 ; International Journal of Low Radiation Volume 2 ; 2 >
+      au < exists ; 2006 ; International Journal of Low Radiation Volume 3 ; 3 >
+      au < exists ; 2007 ; International Journal of Low Radiation Volume 4 ; 4 >
+      au < exists ; 2008 ; International Journal of Low Radiation Volume 5 ; 5 >
+      au < exists ; 2009 ; International Journal of Low Radiation Volume 6 ; 6 >
+      au < exists ; 2010 ; International Journal of Low Radiation Volume 7 ; 7 >
+      au < exists ; 2011 ; International Journal of Low Radiation Volume 8 ; 8 >
+
+    }
+
+
+    {
+
+      title <
+        name = International Journal of Machine Intelligence and Sensory Signal Processing ;
+        issn = 2048-9161 ;
+        eissn = 2048-917X ;
+        issnl = 2048-9161
+      >
+
+      param[journal_issn] = 2048-917X
+      
+      au < expected ; 2012 ; International Journal of Machine Intelligence and Sensory Signal Processing Volume 1 ; 1 >
 
     }
 
@@ -4147,6 +4256,18 @@
       >
 
       param[journal_issn] = 1748-572X
+      
+      au < exists ; 2006 ; International Journal of Machining and Machinability of Materials Volume 1 ; 1 >
+      au < exists ; 2007 ; International Journal of Machining and Machinability of Materials Volume 2 ; 2 >
+      au < exists ; 2008 ; International Journal of Machining and Machinability of Materials Volume 3 ; 3 >
+      au < exists ; 2008 ; International Journal of Machining and Machinability of Materials Volume 4 ; 4 >
+      au < exists ; 2009 ; International Journal of Machining and Machinability of Materials Volume 5 ; 5 >
+      au < exists ; 2009 ; International Journal of Machining and Machinability of Materials Volume 6 ; 6 >
+      au < exists ; 2010 ; International Journal of Machining and Machinability of Materials Volume 7 ; 7 >
+      au < exists ; 2010 ; International Journal of Machining and Machinability of Materials Volume 8 ; 8 >
+      au < exists ; 2011 ; International Journal of Machining and Machinability of Materials Volume 9 ; 9 >
+      au < exists ; 2011 ; International Journal of Machining and Machinability of Materials Volume 10 ; 10 >
+      au < exists ; 2012 ; International Journal of Machining and Machinability of Materials Volume 11 ; 11 >
 
     }
 
@@ -4160,6 +4281,18 @@
       >
 
       param[journal_issn] = 1741-5187
+      
+      au < exists ; 2000 ; International Journal of Management and Decision Making Volume 1 ; 1 >
+      au < exists ; 2001 ; International Journal of Management and Decision Making Volume 2 ; 2 >
+      au < exists ; 2002 ; International Journal of Management and Decision Making Volume 3 ; 3 >
+      au < exists ; 2003 ; International Journal of Management and Decision Making Volume 4 ; 4 >
+      au < exists ; 2004 ; International Journal of Management and Decision Making Volume 5 ; 5 >
+      au < exists ; 2005 ; International Journal of Management and Decision Making Volume 6 ; 6 >
+      au < exists ; 2006 ; International Journal of Management and Decision Making Volume 7 ; 7 >
+      au < exists ; 2007 ; International Journal of Management and Decision Making Volume 8 ; 8 >
+      au < exists ; 2008 ; International Journal of Management and Decision Making Volume 9 ; 9 >
+      au < exists ; 2009 ; International Journal of Management and Decision Making Volume 10 ; 10 >
+      au < exists ; 2010-2011 ; International Journal of Management and Decision Making Volume 11 ; 11 >
 
     }
 
@@ -4173,6 +4306,18 @@
       >
 
       param[journal_issn] = 1741-8127
+      
+      au < exists ; 2003-2004 ; International Journal of Management and Enterprise Development Volume 1 ; 1 >
+      au < exists ; 2005 ; International Journal of Management and Enterprise Development Volume 2 ; 2 >
+      au < exists ; 2006 ; International Journal of Management and Enterprise Development Volume 3 ; 3 >
+      au < exists ; 2007 ; International Journal of Management and Enterprise Development Volume 4 ; 4 >
+      au < exists ; 2008 ; International Journal of Management and Enterprise Development Volume 5 ; 5 >
+      au < exists ; 2009 ; International Journal of Management and Enterprise Development Volume 6 ; 6 >
+      au < exists ; 2009 ; International Journal of Management and Enterprise Development Volume 7 ; 7 >
+      au < exists ; 2010 ; International Journal of Management and Enterprise Development Volume 8 ; 8 >
+      au < exists ; 2010 ; International Journal of Management and Enterprise Development Volume 9 ; 9 >
+      au < exists ; 2011 ; International Journal of Management and Enterprise Development Volume 10 ; 10 >
+      au < exists ; 2011 ; International Journal of Management and Enterprise Development Volume 11 ; 11 >
 
     }
 
@@ -4186,6 +4331,9 @@
       >
 
       param[journal_issn] = 1754-2324
+      
+      au < exists ; 2008-2009 ; International Journal of Management and Network Economics Volume 1 ; 1 >
+      au < exists ; 2011 ; International Journal of Management and Network Economics Volume 2 ; 2 >
 
     }
 
@@ -4199,6 +4347,12 @@
       >
 
       param[journal_issn] = 1741-8135
+      
+      au < exists ; 2004-2005 ; International Journal of Management Concepts and Philosophy Volume 1 ; 1 >
+      au < exists ; 2006-2007 ; International Journal of Management Concepts and Philosophy Volume 2 ; 2 >
+      au < exists ; 2008-2009 ; International Journal of Management Concepts and Philosophy Volume 3 ; 3 >
+      au < exists ; 2010 ; International Journal of Management Concepts and Philosophy Volume 4 ; 4 >
+      au < exists ; 2011 ; International Journal of Management Concepts and Philosophy Volume 5 ; 5 >
 
     }
 
@@ -4212,6 +4366,8 @@
       >
 
       param[journal_issn] = 1752-850X
+      
+      au < exists ; 2011 ; International Journal of Management Development Volume 1 ; 1 >
 
     }
 
@@ -4225,6 +4381,13 @@
       >
 
       param[journal_issn] = 1750-3868
+      
+      au < exists ; 2007 ; International Journal of Management in Education Volume 1 ; 1 >
+      au < exists ; 2008 ; International Journal of Management in Education Volume 2 ; 2 >
+      au < exists ; 2009 ; International Journal of Management in Education Volume 3 ; 3 >
+      au < exists ; 2010 ; International Journal of Management in Education Volume 4 ; 4 >
+      au < exists ; 2011 ; International Journal of Management in Education Volume 5 ; 5 >
+      au < exists ; 2012 ; International Journal of Management in Education Volume 6 ; 6 >
 
     }
 
@@ -4238,6 +4401,12 @@
       >
 
       param[journal_issn] = 1741-8143
+      
+      au < exists ; 2004-2005 ; International Journal of Management Practice Volume 1 ; 1 >
+      au < exists ; 2006-2007 ; International Journal of Management Practice Volume 2 ; 2 >
+      au < exists ; 2008-2009 ; International Journal of Management Practice Volume 3 ; 3 >
+      au < exists ; 2010-2011 ; International Journal of Management Practice Volume 4 ; 4 >
+      au < exists ; 2012 ; International Journal of Management Practice Volume 5 ; 5 >
 
     }
 
@@ -4251,6 +4420,11 @@
       >
 
       param[journal_issn] = 1753-6723
+      
+      au < exists ; 2008-2009 ; International Journal of Managerial and Financial Accounting Volume 1 ; 1 >
+      au < exists ; 2010 ; International Journal of Managerial and Financial Accounting Volume 2 ; 2 >
+      au < exists ; 2011 ; International Journal of Managerial and Financial Accounting Volume 3 ; 3 >
+      au < exists ; 2012 ; International Journal of Managerial and Financial Accounting Volume 4 ; 4 >
 
     }
 
@@ -4264,6 +4438,14 @@
       >
 
       param[journal_issn] = 1750-0605
+      
+      au < exists ; 2006 ; International Journal of Manufacturing Research Volume 1 ; 1 >
+      au < exists ; 2007 ; International Journal of Manufacturing Research Volume 2 ; 2 >
+      au < exists ; 2008 ; International Journal of Manufacturing Research Volume 3 ; 3 >
+      au < exists ; 2009 ; International Journal of Manufacturing Research Volume 4 ; 4 >
+      au < exists ; 2010 ; International Journal of Manufacturing Research Volume 5 ; 5 >
+      au < exists ; 2011 ; International Journal of Manufacturing Research Volume 6 ; 6 >
+      au < exists ; 2012 ; International Journal of Manufacturing Research Volume 7 ; 7 >
 
     }
 
@@ -4277,6 +4459,30 @@
       >
 
       param[journal_issn] = 1741-5195
+      
+      au < exists ; 2000 ; International Journal of Manufacturing Technology and Management Volume 1 ; 1 >
+      au < exists ; 2000 ; International Journal of Manufacturing Technology and Management Volume 2 ; 2 >
+      au < exists ; 2001 ; International Journal of Manufacturing Technology and Management Volume 3 ; 3 >
+      au < exists ; 2002 ; International Journal of Manufacturing Technology and Management Volume 4 ; 4 >
+      au < exists ; 2003 ; International Journal of Manufacturing Technology and Management Volume 5 ; 5 >
+      au < exists ; 2004 ; International Journal of Manufacturing Technology and Management Volume 6 ; 6 >
+      au < exists ; 2005 ; International Journal of Manufacturing Technology and Management Volume 7 ; 7 >
+      au < exists ; 2006 ; International Journal of Manufacturing Technology and Management Volume 8 ; 8 >
+      au < exists ; 2006 ; International Journal of Manufacturing Technology and Management Volume 9 ; 9 >
+      au < exists ; 2007 ; International Journal of Manufacturing Technology and Management Volume 10 ; 10 >
+      au < exists ; 2007 ; International Journal of Manufacturing Technology and Management Volume 11 ; 11 >
+      au < exists ; 2007 ; International Journal of Manufacturing Technology and Management Volume 12 ; 12 >
+      au < exists ; 2008 ; International Journal of Manufacturing Technology and Management Volume 13 ; 13 >
+      au < exists ; 2008 ; International Journal of Manufacturing Technology and Management Volume 14 ; 14 >
+      au < exists ; 2008 ; International Journal of Manufacturing Technology and Management Volume 15 ; 15 >
+      au < exists ; 2009 ; International Journal of Manufacturing Technology and Management Volume 16 ; 16 >
+      au < exists ; 2009 ; International Journal of Manufacturing Technology and Management Volume 17 ; 17 >
+      au < exists ; 2009 ; International Journal of Manufacturing Technology and Management Volume 18 ; 18 >
+      au < exists ; 2010 ; International Journal of Manufacturing Technology and Management Volume 19 ; 19 >
+      au < exists ; 2010 ; International Journal of Manufacturing Technology and Management Volume 20 ; 20 >
+      au < exists ; 2010 ; International Journal of Manufacturing Technology and Management Volume 21 ; 21 >
+      au < exists ; 2011 ; International Journal of Manufacturing Technology and Management Volume 22 ; 22 >
+      au < exists ; 2011 ; International Journal of Manufacturing Technology and Management Volume 23 ; 23 >
 
     }
 
@@ -4290,6 +4496,11 @@
       >
 
       param[journal_issn] = 1742-4216
+      
+      au < exists ; 2005-2006 ; International Journal of Mass Customisation Volume 1 ; 1 >
+      au < exists ; 2007-2008 ; International Journal of Mass Customisation Volume 2 ; 2 >
+      au < exists ; 2009-2010 ; International Journal of Mass Customisation Volume 3 ; 3 >
+      au < exists ; 2011 ; International Journal of Mass Customisation Volume 4 ; 4 >
 
     }
 
@@ -4303,6 +4514,49 @@
       >
 
       param[journal_issn] = 1741-5209
+      
+      au < exists ; 1986 ; International Journal of Materials and Product Technology Volume 1 ; 1 >
+      au < exists ; 1987 ; International Journal of Materials and Product Technology Volume 2 ; 2 >
+      au < exists ; 1988 ; International Journal of Materials and Product Technology Volume 3 ; 3 >
+      au < exists ; 1989 ; International Journal of Materials and Product Technology Volume 4 ; 4 >
+      au < exists ; 1990 ; International Journal of Materials and Product Technology Volume 5 ; 5 >
+      au < exists ; 1991 ; International Journal of Materials and Product Technology Volume 6 ; 6 >
+      au < exists ; 1992 ; International Journal of Materials and Product Technology Volume 7 ; 7 >
+      au < exists ; 1993 ; International Journal of Materials and Product Technology Volume 8 ; 8 >
+      au < exists ; 1994 ; International Journal of Materials and Product Technology Volume 9 ;9 >
+      au < exists ; 1995 ; International Journal of Materials and Product Technology Volume 10 ; 10 >
+      au < exists ; 1996 ; International Journal of Materials and Product Technology Volume 11 ; 11 >
+      au < exists ; 1997 ; International Journal of Materials and Product Technology Volume 12 ; 12 >
+      au < exists ; 1998 ; International Journal of Materials and Product Technology Volume 13 ; 13 >
+      au < exists ; 1999 ; International Journal of Materials and Product Technology Volume 14 ; 14 >
+      au < exists ; 2000 ; International Journal of Materials and Product Technology Volume 15 ; 15 >
+      au < exists ; 2001 ; International Journal of Materials and Product Technology Volume 16 ; 16 >
+      au < exists ; 2002 ; International Journal of Materials and Product Technology Volume 17 ; 17 >
+      au < exists ; 2003 ; International Journal of Materials and Product Technology Volume 18 ; 18 >
+      au < exists ; 2003 ; International Journal of Materials and Product Technology Volume 19 ; 19 >
+      au < exists ; 2004 ; International Journal of Materials and Product Technology Volume 20 ; 20 >
+      au < exists ; 2004 ; International Journal of Materials and Product Technology Volume 21 ; 21 >
+      au < exists ; 2005 ; International Journal of Materials and Product Technology Volume 22 ; 22 >
+      au < exists ; 2005 ; International Journal of Materials and Product Technology Volume 23 ; 23 >
+      au < exists ; 2005 ; International Journal of Materials and Product Technology Volume 24 ; 24 >
+      au < exists ; 2006 ; International Journal of Materials and Product Technology Volume 25 ; 25 >
+      au < exists ; 2006 ; International Journal of Materials and Product Technology Volume 26 ; 26 >
+      au < exists ; 2006 ; International Journal of Materials and Product Technology Volume 27 ; 27 >
+      au < exists ; 2007 ; International Journal of Materials and Product Technology Volume 28 ; 28 >
+      au < exists ; 2007 ; International Journal of Materials and Product Technology Volume 29 ; 29 >
+      au < exists ; 2007 ; International Journal of Materials and Product Technology Volume 30 ; 30 >
+      au < exists ; 2008 ; International Journal of Materials and Product Technology Volume 31 ; 31 >
+      au < exists ; 2008 ; International Journal of Materials and Product Technology Volume 32 ; 32 >
+      au < exists ; 2008 ; International Journal of Materials and Product Technology Volume 33 ; 33 >
+      au < exists ; 2009 ; International Journal of Materials and Product Technology Volume 34 ; 34 >
+      au < exists ; 2009 ; International Journal of Materials and Product Technology Volume 35 ; 35 >
+      au < exists ; 2009 ; International Journal of Materials and Product Technology Volume 36 ; 36 >
+      au < exists ; 2010 ; International Journal of Materials and Product Technology Volume 37 ; 37 >
+      au < exists ; 2010 ; International Journal of Materials and Product Technology Volume 38 ; 38 >
+      au < exists ; 2010 ; International Journal of Materials and Product Technology Volume 39 ; 39 >
+      au < exists ; 2011 ; International Journal of Materials and Product Technology Volume 40 ; 40 >
+      au < exists ; 2011 ; International Journal of Materials and Product Technology Volume 41 ; 41 >
+      au < exists ; 2011 ; International Journal of Materials and Product Technology Volume 42 ; 42 >
 
     }
 
@@ -4316,6 +4570,12 @@
       >
 
       param[journal_issn] = 1745-0063
+      
+      au < exists ; 2007-2008 ; International Journal of Materials and Structural Integrity Volume 1 ; 1 >
+      au < exists ; 2008 ; International Journal of Materials and Structural Integrity Volume 2 ; 2 >
+      au < exists ; 2009 ; International Journal of Materials and Structural Integrity Volume 3 ; 3 >
+      au < exists ; 2010 ; International Journal of Materials and Structural Integrity Volume 4 ; 4 >
+      au < exists ; 2011 ; International Journal of Materials and Structural Integrity Volume 5 ; 5 >
 
     }
 
@@ -4329,6 +4589,10 @@
       >
 
       param[journal_issn] = 1757-2762
+      
+      au < exists ; 2009-2010 ; International Journal of Materials Engineering Innovation Volume 1 ; 1 >
+      au < exists ; 2011 ; International Journal of Materials Engineering Innovation Volume 2 ; 2 >
+      au < exists ; 2012 ; International Journal of Materials Engineering Innovation Volume 3 ; 3 > 
 
     }
 
