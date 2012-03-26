@@ -32,6 +32,7 @@
       au < released ; 2006 ; American Literary Scholarship 2006 ; 2006 >
       au < released ; 2007 ; American Literary Scholarship 2007 ; 2007 >
       au < ready ; 2008 ; American Literary Scholarship 2008 ; 2008 >
+      au < exists ; 2009 ; American Literary Scholarship 2009 ; 2009 >
         
     }
 
@@ -42,6 +43,7 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
       comment[years] = years in web addresses are two years behind the publishing year as of 20110912
+      comment[years1] = .long links still go to the year indicated (i.e. vol2009 manifest links to 2009, not 2011)
       
       au < HighWirePressH20Plugin ; released ; 2002 ; American Literary Scholarship 2002 ; 2000 >
       au < HighWirePressH20Plugin ; released ; 2003 ; American Literary Scholarship 2003 ; 2001 >
@@ -102,6 +104,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; American Literature Volume 81 ; 81 >
       au < HighWirePressH20Plugin ; released ; 2010 ; American Literature Volume 82 ; 82 >
       au < HighWirePressH20Plugin ; released ; 2011 ; American Literature Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; American Literature Volume 84 ; 84 >
     
     }
     
@@ -151,6 +154,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; American Speech Volume 84 ; 84 >
       au < HighWirePressH20Plugin ; released ; 2010 ; American Speech Volume 85 ; 85 >
       au < HighWirePressH20Plugin ; released ; 2011 ; American Speech Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; American Speech Volume 87 ; 87 >
     
     }
     
@@ -200,6 +204,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; boundary 2 Volume 36 ; 36 >
       au < HighWirePressH20Plugin ; released ; 2010 ; boundary 2 Volume 37 ; 37 >
       au < HighWirePressH20Plugin ; released ; 2011 ; boundary 2 Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; boundary 2 Volume 39 ; 39 >
       
     }
     
@@ -243,6 +248,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 27 ; 27 >
       
     }
     
@@ -293,6 +299,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 ; 32 >
       
     }
     
@@ -355,6 +362,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; released ; 2010 ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; differences: A Journal of Feminist Cultural Studies Volume 23 ; 23 >
       
     }
     
@@ -379,6 +387,7 @@
       au < HighWirePressH20Plugin ; manifest ; 2009 ; East Asian Science, Technology and Society: an International Journal Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; manifest ; 2010 ; East Asian Science, Technology and Society: an International Journal Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; manifest ; 2011 ; East Asian Science, Technology and Society: an International Journal Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; East Asian Science, Technology and Society: an International Journal Volume 6 ; 6 >
 
     }
     
@@ -417,6 +426,7 @@
       au < released ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
       au < released ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
       au < ready ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
+      au < exists ; 2012 ; Eighteenth-Century Life Volume 36 ; 36 >
 
     }
 
@@ -433,6 +443,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Eighteenth-Century Life Volume 36 ; 36 >
 
     }
     
@@ -476,6 +487,7 @@
      au < HighWirePressH20Plugin ; released ; 2009 ; Ethnohistory Volume 56 ; 56 >
      au < HighWirePressH20Plugin ; released ; 2010 ; Ethnohistory Volume 57 ; 57 >
      au < HighWirePressH20Plugin ; released ; 2011 ; Ethnohistory Volume 58 ; 58 >
+     au < HighWirePressH20Plugin ; manifest ; 2012 ; Ethnohistory Volume 59 ; 59 >
     
     }
     
@@ -518,6 +530,8 @@
      au < HighWirePressH20Plugin ; released ; 2008 ; French Historical Studies Volume 31 ; 31 >
      au < HighWirePressH20Plugin ; released ; 2009 ; French Historical Studies Volume 32 ; 32 >
      au < HighWirePressH20Plugin ; released ; 2010 ; French Historical Studies Volume 33 ; 33 >
+     au < HighWirePressH20Plugin ; manifest ; 2011 ; French Historical Studies Volume 34 ; 34 >
+     au < HighWirePressH20Plugin ; manifest ; 2012 ; French Historical Studies Volume 35 ; 35 >
     
     }
     
@@ -549,6 +563,7 @@
       au < ready ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 >
       au < ready ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 >
       au < ready ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 >
+      au < expected ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 >
       
     }
   }
@@ -583,6 +598,7 @@
       au < released ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
       au < released ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
       au < ready ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
+      au < exists ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 ; 18 >
       
     }
 
@@ -598,6 +614,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 ; 18 >
 
     }
     
@@ -641,6 +658,7 @@
      au < HighWirePressH20Plugin ; released ; 2009 ; Hispanic American Historical Review Volume 89 ; 89 >
      au < HighWirePressH20Plugin ; released ; 2010 ; Hispanic American Historical Review Volume 90 ; 90 >
      au < HighWirePressH20Plugin ; released ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 >
+     au < HighWirePressH20Plugin ; manifest ; 2012 ; Hispanic American Historical Review Volume 92 ; 92 >
     
     }
     
@@ -684,6 +702,7 @@
      au < HighWirePressH20Plugin ; released ; 2009 ; History of Political Economy Volume 41 ; 41 >
      au < HighWirePressH20Plugin ; released ; 2010 ; History of Political Economy Volume 42 ; 42 >
      au < HighWirePressH20Plugin ; released ; 2011 ; History of Political Economy Volume 43 ; 43 >
+     au < HighWirePressH20Plugin ; manifest ; 2012 ; History of Political Economy Volume 44 ; 44 >
     
     }
     
@@ -726,6 +745,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Health Politics, Policy and Law Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Health Politics, Policy and Law Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Health Politics, Policy and Law Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Health Politics, Policy and Law Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Health Politics, Policy and Law Volume 37 ; 37 >
     
     }
     
@@ -768,6 +789,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Medieval and Early Modern Studies Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medieval and Early Modern Studies Volume 42 ; 42 >
     
     }
     
@@ -793,6 +816,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Labor: Studies in Working-Class History of the Americas Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Labor: Studies in Working-Class History of the Americas Volume 9 ; 9 >
     
     }
     
@@ -828,6 +853,7 @@
       au < released ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
       au < ready ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
       au < ready ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
+      au < expected ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
 
     }
     
@@ -843,6 +869,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Mediterranean Quarterly Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
 
     }
     
@@ -869,6 +897,7 @@
       au < ready ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
       au < ready ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
       au < ready ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
+      au < expected ; 2012 ; The Minnesota Review Volume 2012 ; 2012 >
       
     }
     
@@ -912,6 +941,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; MLQ: Modern Language Quarterly Volume 70 ; 70 >
       au < HighWirePressH20Plugin ; released ; 2010 ; MLQ: Modern Language Quarterly Volume 71 ; 71 >
       au < HighWirePressH20Plugin ; released ; 2011 ; MLQ: Modern Language Quarterly Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; MLQ: Modern Language Quarterly Volume 73 ; 73 >
     
     }
     
@@ -955,6 +985,7 @@
       au < ready ; 2009 ; Nka: Journal of Contemporary African Art Number 25 ; 25 >
       au < ready ; 2010 ; Nka: Journal of Contemporary African Art Number 26 ; 26 >
       au < ready ; 2010 ; Nka: Journal of Contemporary African Art Number 27 ; 27 >
+      au < exists ; 2011 ; Nka: Journal of Contemporary African Art Number 28 ; 28 >
 
     }
     
@@ -997,6 +1028,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Poetics Today Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Poetics Today Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Poetics Today Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Poetics Today Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Poetics Today Volume 33 ; 33 >
     
     }
     
@@ -1047,6 +1080,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; positions: east asia cultures critique Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; positions: east asia cultures critique Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; positions: east asia cultures critique Volume 20 ; 20 >
 
     }
     
@@ -1078,6 +1113,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Publication of the American Dialect Society Volume 96 ; 96 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Publication of the American Dialect Society Volume 97 ; 97 >
 
     }
   
@@ -1121,6 +1158,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Public Culture Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Public Culture Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Public Culture Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Public Culture Volume 24 ; 24 >
     
     }
   
@@ -1170,6 +1208,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Radical History Review 2009 ; 2009 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Radical History Review 2010 ; 2010 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Radical History Review 2011 ; 2011 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Radical History Review 2012 ; 2012 >
     
     }
   
@@ -1221,6 +1260,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Social Science History Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Social Science History Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Social Science History Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Social Science History Volume 36 ; 36 >
     
     }
   
@@ -1263,6 +1303,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Social Text Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Social Text Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Social Text Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Social Text Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Social Text Volume 30 ; 30 >
     
     }
   
@@ -1310,6 +1352,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; The South Atlantic Quarterly Volume 108 ; 108 >
       au < HighWirePressH20Plugin ; released ; 2010 ; The South Atlantic Quarterly Volume 109 ; 109 >
       au < HighWirePressH20Plugin ; released ; 2011 ; The South Atlantic Quarterly Volume 110 ; 110 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; The South Atlantic Quarterly Volume 111 ; 111 >
     
     }
   
@@ -1353,6 +1396,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Theater Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Theater Volume 40 ; 40 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Theater Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Theater Volume 42 ; 42 >
     
     }
   
@@ -1396,6 +1440,7 @@
       au < released ; 2009 ; Common Knowledge Volume 15 ; 15 >
       au < released ; 2010 ; Common Knowledge Volume 16 ; 16 >
       au < ready ; 2011 ; Common Knowledge Volume 17 ; 17 >
+      au < exists ; 2012 ; Common Knowledge Volume 18 ; 18 >
 
     }
 
@@ -1455,6 +1500,7 @@
       au < released ; 2009 ; Pedagogy Volume 9 ; 9 >
       au < released ; 2010 ; Pedagogy Volume 10 ; 10 >
       au < ready ; 2011 ; Pedagogy Volume 11 ; 11 >
+      au < exists ; 2012 ; Pedagogy Volume 12 ; 12 >
 
     }
 
@@ -1480,6 +1526,7 @@
       au < released ; 2009 ; Small Axe Volume 13 ; 13 >
       au < ready ; 2010 ; Small Axe Volume 14 ; 14 >
       au < ready ; 2011 ; Small Axe Volume 15 ; 15 >
+      au < exists ; 2012 ; Small Axe Volume 16 ; 16 >
 
     }
 
