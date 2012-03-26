@@ -23,6 +23,7 @@
 
       au < released ; 2010 ; Cardiology Research Volume 1 ; 1 ; 2010 >
       au < released ; 2011 ; Cardiology Research Volume 2 ; 2 ; 2011 >
+      au < manifest ; 2012 ; Cardiology Research Volume 3 ; 3 ; 2012 >
 
     }
 
@@ -42,6 +43,7 @@
       au < notReady ; 2009 ; Gastroenterology Research Volume 2 ; 2 ; 2009 >
       au < notReady ; 2010 ; Gastroenterology Research Volume 3 ; 3 ; 2010 >
       au < notReady ; 2011 ; Gastroenterology Research Volume 4 ; 4 ; 2011 >
+      au < manifest ; 2012 ; Gastroenterology Research Volume 5 ; 5 ; 2012 >
 
     }
 
@@ -58,6 +60,8 @@
       param[journal_id] = ijcp
       comment[0] = no content published yet--Feb 2012 launch
 
+      au < manifest ; 2012 ; International Journal of Clinical Pediatrics Volume 1 ; 1 ; 2012 >
+      
     }
 
     {
@@ -73,6 +77,8 @@
       param[journal_id] = jcgo
       comment[0] = no content published yet--Feb 2012 launch
 
+      au < manifest ; 2012 ; Journal of Clinical Gynecology and Obstetrics Volume 1 ; 1 ; 2012 >
+      
     }
 
     {
@@ -106,6 +112,7 @@
       param[journal_id] = jcs
       
       au < notReady ; 2011 ; Journal of Current Surgery Volume 1 ; 1 ; 2011 >
+      au < manifest ; 2012 ; Journal of Current Surgery Volume 2 ; 2 ; 2012 >
 
     }
 
@@ -121,6 +128,7 @@
       param[journal_id] = jofem
 
       au < notReady ; 2011 ; Journal of Endocrinology and Metabolism Volume 1 ; 1 ; 2011 >
+      au < manifest ; 2012 ; Journal of Endocrinology and Metabolism Volume 2 ; 2 ; 2012 >
 
     }
 
@@ -168,6 +176,7 @@
       param[journal_id] = neurores
 
       au < notReady ; 2011 ; Journal of Medical Cases Volume 1 ; 1 ; 2011 >
+      au < manifest ; 2012 ; Journal of Medical Cases Volume 2 ; 2 ; 2012 >
 
     }
 
@@ -184,6 +193,7 @@
       param[journal_id] = wjnu
       comment[0] = no content published yet--Feb 2012 launch
       
+      au < manifest ; 2012 ; World Journal of Nephrology and Urology Volume 1 ; 1 ; 2012 >
     }
 
     {
@@ -199,6 +209,7 @@
 
       au < released ; 2010 ; World Journal of Oncology Volume 1 ; 1 ; 2010 >
       au < released ; 2011 ; World Journal of Oncology Volume 2 ; 2 ; 2011 >
+      au < manifest ; 2012 ; World Journal of Oncology Volume 3 ; 3 ; 2012 >
 
     }
     
