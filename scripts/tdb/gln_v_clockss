@@ -84,8 +84,8 @@ then
     maxnumAUs1=$numdiffAUs
     maxnumAUs2=$numdiffAUs
     echo "No title differences"
-    ./tdbout -c auid,name -i ../../tdb/prod/$file | grep -vf gvc_gln.txt | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/glnt.txt
-    ./tdbout -c auid,name -i ../../tdb/clockssingest/$file | grep -vf gvc_clockss.txt | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/clocksst.txt
+    ./tdbout -c auid,name,year -i ../../tdb/prod/$file | grep -vf gvc_gln.txt | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/glnt.txt
+    ./tdbout -c auid,name,year -i ../../tdb/clockssingest/$file | grep -vf gvc_clockss.txt | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/clocksst.txt
     if ! diff -i $tpath/glnt.txt $tpath/clocksst.txt > $tpath/diff.txt
     then
       echo "AU differences: GLN v CLOCKSSingest"
@@ -109,8 +109,10 @@ then
     else
       maxnumAUsA=$numdiffAUs
       echo "No AU differences"
-      ./tdbout -YRDS -a -i ../../tdb/prod/$file | grep -vf gvc_gln.txt | sort > $tpath/done_gln.txt
-      ./tdbout -R -a -i ../../tdb/clockssingest/$file | grep -vf gvc_clockss.txt | sed -e 's/Clockss//' | sort > $tpath/done_cks.txt
+      ./tdbout -YRDS -c auid,name -i ../../tdb/prod/$file | grep -vf gvc_gln.txt > $tpath/done_gln_yrds.txt
+      ./tdbout -c auid,name -Q 'status is "doNotProcess"' -i ../../tdb/prod/$file | grep -vf gvc_gln.txt > $tpath/done_gln_dnp.txt
+      cat $tpath/done_gln_yrds.txt $tpath/done_gln_dnp.txt | sort > $tpath/done_gln.txt
+      ./tdbout -R -c auid,name -i ../../tdb/clockssingest/$file | grep -vf gvc_clockss.txt | sed -e 's/Clockss//' | sort > $tpath/done_cks.txt
       if ! diff $tpath/done_cks.txt $tpath/done_gln.txt > $tpath/done_diff.txt
       then
         echo "***AU status diffs: mark ready in GLN***"
