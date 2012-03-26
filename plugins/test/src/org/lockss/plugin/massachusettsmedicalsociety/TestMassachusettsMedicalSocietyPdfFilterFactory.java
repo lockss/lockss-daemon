@@ -50,6 +50,7 @@ public class TestMassachusettsMedicalSocietyPdfFilterFactory extends LockssTestC
 	}
 	
 	public void testFilterPdf() throws Exception {
+		String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
 		File pdfFile = new File(TEST_FOLDER + "/nejmfiltertestin.pdf");
 		InputStream pdfIn = new FileInputStream(pdfFile);
 		InputStream filteredIn = fact.createFilteredInputStream(mau, pdfIn, Constants.DEFAULT_ENCODING);
@@ -57,7 +58,7 @@ public class TestMassachusettsMedicalSocietyPdfFilterFactory extends LockssTestC
 		//In order to get our expected and actual outputs to match up we have to save the
 		//actual stream to a temp file and read it in as a file input stream.
 		PdfDocument actPdf = new PdfDocument(filteredIn);
-		File actTemp = File.createTempFile("actout", null);
+		File actTemp = new File(tempDirPath + "actnejmfiltertestout.pdf");
 		FileOutputStream actOut = new FileOutputStream(actTemp);
 		actPdf.save(actOut);
 		FileInputStream actIn = new FileInputStream(actTemp);
