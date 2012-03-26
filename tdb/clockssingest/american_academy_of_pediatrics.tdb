@@ -149,9 +149,9 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
-      au < released ; crawling ; 2008 ; NeoReviews Volume 9 ; 9 >
-      au < released ; crawling ; 2009 ; NeoReviews Volume 10 ; 10 >
-      au < released ; crawling ; 2010 ; NeoReviews Volume 11 ; 11 >
+      au < down ; crawling ; 2008 ; NeoReviews Volume 9 ; 9 >
+      au < down ; crawling ; 2009 ; NeoReviews Volume 10 ; 10 >
+      au < down ; crawling ; 2010 ; NeoReviews Volume 11 ; 11 >
   
     }
     
