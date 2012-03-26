@@ -495,14 +495,14 @@
       param[journal_id] = inr
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2004 ; Innes Review Volume 55 ; 55 >
-      au < released ; 2005 ; Innes Review Volume 56 ; 56 >
-      au < released ; 2006 ; Innes Review Volume 57 ; 57 >
-      au < released ; 2007 ; Innes Review Volume 58 ; 58 >
-      au < released ; 2008 ; Innes Review Volume 59 ; 59 >
-      au < released ; 2009 ; Innes Review Volume 60 ; 60 >
-      au < released ; 2010 ; Innes Review Volume 61 ; 61 >
-      au < released ; 2011 ; Innes Review Volume 62 ; 62 >
+      au < released ; 2004 ; The Innes Review Volume 55 ; 55 >
+      au < released ; 2005 ; The Innes Review Volume 56 ; 56 >
+      au < released ; 2006 ; The Innes Review Volume 57 ; 57 >
+      au < released ; 2007 ; The Innes Review Volume 58 ; 58 >
+      au < released ; 2008 ; The Innes Review Volume 59 ; 59 >
+      au < released ; 2009 ; The Innes Review Volume 60 ; 60 >
+      au < released ; 2010 ; The Innes Review Volume 61 ; 61 >
+      au < released ; 2011 ; The Innes Review Volume 62 ; 62 >
       au < expected ; 2012 ; The Innes Review Volume 63 ; 63 >
     
     }
