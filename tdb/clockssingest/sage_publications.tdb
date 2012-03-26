@@ -359,7 +359,7 @@
       au < manifest ; exists ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 ; >
       au < manifest ; exists ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 ; >
       au < manifest ; exists ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 ; >
-      au < crawling ; exists ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 ; >
+      au < testing ; exists ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 ; >
       au < crawling ; exists ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 ; >
       au < expected ; exists ; 2012 ; Administrative Science Quarterly Volume 57 ; 57 ; >
 
@@ -664,7 +664,7 @@
       au < manifest ; exists ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 ; >
       au < manifest ; exists ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 ; >
       au < manifest ; exists ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 ; >
-      au < crawling ; exists ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 ; >
+      au < testing ; exists ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 ; >
       au < released ; crawling ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 ; >
       au < expected ; exists ; 2012 ; Alternatives: Global, Local, Political Volume 37 ; 37 ; >
 	
@@ -1154,7 +1154,7 @@
       au < manifest ; exists ; 2007 ; The American Journal of Sports Medicine Volume 35 ; 35 ; >
       au < manifest ; exists ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 ; >
       au < manifest ; exists ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 ; >
+      au < testing ; exists ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 ; >
       au < crawling ; exists ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 ; >
       au < crawling ; exists ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 ; >
 
@@ -2117,10 +2117,10 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 625 ; 625 ; >
       au < manifest ; exists ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 626 ; 626 ; >
-      au < crawling ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 627 ; 627 ; >
-      au < crawling ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 628 ; 628 ; >
-      au < crawling ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 629 ; 629 ; >
-      au < crawling ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 630 ; 630 ; >
+      au < testing ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 627 ; 627 ; >
+      au < testing ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 628 ; 628 ; >
+      au < testing ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 629 ; 629 ; >
+      au < testing ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 630 ; 630 ; >
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 631 ; 631 ; >
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 632 ; 632 ; >
       au < crawling ; exists ; 2011 ; The Annals of the American Academy of Political and Social Science Volume 633 ; 633 ; >
@@ -5820,7 +5820,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < crawling ; exists ; 2010 ; Counseling Outcome Research and Evaluation Volume 1 ; 1 ; >
+      au < testing ; exists ; 2010 ; Counseling Outcome Research and Evaluation Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Counseling Outcome Research and Evaluation Volume 2 ; 2 ; >
       au < expected ; exists ; 2012 ; Counseling Outcome Research and Evaluation Volume 3 ; 3 ; >
 
@@ -6802,7 +6802,7 @@
       au < manifest ; exists ; 2007 ; Current Directions in Psychological Science Volume 16 ; 16 ; >
       au < manifest ; exists ; 2008 ; Current Directions in Psychological Science Volume 17 ; 17 ; >
       au < manifest ; exists ; 2009 ; Current Directions in Psychological Science Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2010 ; Current Directions in Psychological Science Volume 19 ; 19 ; >
+      au < testing ; exists ; 2010 ; Current Directions in Psychological Science Volume 19 ; 19 ; >
       au < released ; crawling ; 2011 ; Current Directions in Psychological Science Volume 20 ; 20 ; >
       au < crawling ; exists ; 2012 ; Current Directions in Psychological Science Volume 21 ; 21 ; >
 
@@ -7181,7 +7181,7 @@
       au < manifest ; exists ; 2007 ; Diogenes Volume 54 ; 54 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Diogenes Volume 55 ; 55 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Diogenes Volume 56 ; 56 ; >
-      au < crawling ; exists ; 2010 ; Diogenes Volume 57 ; 57 ; >
+      au < testing ; exists ; 2010 ; Diogenes Volume 57 ; 57 ; >
 
     }
 
@@ -7892,7 +7892,7 @@
       au < manifest ; exists ; 2007 ; Educational Evaluation and Policy Analysis Volume 29 ; 29 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Educational Evaluation and Policy Analysis Volume 30 ; 30 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Educational Evaluation and Policy Analysis Volume 31 ; 31 ; >
-      au < crawling ; exists ; 2010 ; Educational Evaluation and Policy Analysis Volume 32 ; 32 ; >
+      au < testing ; exists ; 2010 ; Educational Evaluation and Policy Analysis Volume 32 ; 32 ; >
       au < released ; crawling ; 2011 ; Educational Evaluation and Policy Analysis Volume 33 ; 33 ; >
       au < crawling ; exists ; 2012 ; Educational Evaluation and Policy Analysis Volume 34 ; 34 ; >
 
@@ -8086,7 +8086,7 @@
       au < manifest ; exists ; 2007 ; Educational Researcher Volume 36 ; 36 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Educational Researcher Volume 37 ; 37 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Educational Researcher Volume 38 ; 38 ; >
-      au < crawling ; exists ; 2010 ; Educational Researcher Volume 39 ; 39 ; >
+      au < testing ; exists ; 2010 ; Educational Researcher Volume 39 ; 39 ; >
       au < released ; crawling ; 2011 ; Educational Researcher Volume 40 ; 40 ; >
       au < crawling ; exists ; 2012 ; Educational Researcher Volume 41 ; 41 ; >
 
@@ -8111,7 +8111,7 @@
       au < manifest ; exists ; 2007 ; Electronic News Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; Electronic News Volume 2 ; 2 ; >
       au < manifest ; exists ; 2009 ; Electronic News Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2010 ; Electronic News Volume 4 ; 4 ; >
+      au < testing ; exists ; 2010 ; Electronic News Volume 4 ; 4 ; >
       au < released ; crawling ; 2011 ; Electronic News Volume 5 ; 5 ; >
       au < expected ; exists ; 2012 ; Electronic News Volume 6 ; 6 ; >
 
