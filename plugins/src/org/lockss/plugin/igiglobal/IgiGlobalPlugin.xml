@@ -1,0 +1,114 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>IGI Global Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+		<string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+		<string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;IGI Global Plugin, Base URL %s, Journal ISSN %s, Volume %s&quot;, base_url, journal_issn, volume</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%slockss/journal-issues.aspx?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>2,&quot;^%smembership/login&quot;, base_url</string>
+      <string>2,&quot;(/App_Master){2}&quot;, base_url</string>
+      <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.+)?$&quot;, base_url</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%sgateway/contentowned/articles?\.aspx&quot;, base_url</string>
+      <string>1,&quot;^%sviewtitle&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_issn</key>
+        <displayName>Journal ISSN</displayName>
+        <description>International Standard Serial Number.</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume Number</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+  	 <string>au_substance_url_pattern</string>
+     <string>&quot;^%s(gateway/contentowned/article|viewtitle)\.aspx&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.igiglobal.IgiGlobalHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+</map>

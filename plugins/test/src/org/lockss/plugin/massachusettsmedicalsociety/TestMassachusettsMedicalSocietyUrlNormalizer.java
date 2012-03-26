@@ -1,8 +1,4 @@
 /*
- * $Id: MassachusettsMedicalSocietyHtmlLinkExtractorFactory.java,v 1.1 2010-11-17 00:14:44 pgust Exp $
- */
-
-/*
 
 Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -32,15 +28,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.massachusettsmedicalsociety;
 
-import org.lockss.daemon.PluginException;
-import org.lockss.extractor.*;
+import org.lockss.plugin.UrlNormalizer;
+import org.lockss.test.LockssTestCase;
+/*
+ * UrlNormalizer removes ?cookieSet=1 suffix
+ */
+public class TestMassachusettsMedicalSocietyUrlNormalizer extends LockssTestCase {
 
-public class MassachusettsMedicalSocietyHtmlLinkExtractorFactory
-    implements LinkExtractorFactory {
-
-  public LinkExtractor createLinkExtractor(String mimeType)
-      throws PluginException {
-    return new MassachusettsMedicalSocietyHtmlLinkExtractor();
+  public void testUrlNormalizer() throws Exception { 
+    UrlNormalizer normalizer = new MassachusettsMedicalSocietyUrlNormalizer();
+    assertEquals("http://www.nejm.org/doi/full/10.1056/NEJM191103091641004",
+    			 normalizer.normalizeUrl("http://www.nejm.org/doi/full/10.1056/NEJM191103091641004", null));
+    assertEquals("http://www.nejm.org/doi/full/10.1056/NEJM191103091641004",
+    			 normalizer.normalizeUrl("http://www.nejm.org/doi/full/10.1056/NEJM191103091641004?cookieSet=1", null));
   }
-
+  
 }
