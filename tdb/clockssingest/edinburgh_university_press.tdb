@@ -166,7 +166,7 @@
     au < released ; crawling ; 2009-2010 ; Britain and the World Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; Britain and the World Volume 3 ; 3 >
     au < released ; crawling ; 2011 ; Britain and the World Volume 4 ; 4 >
-    au < manifest ; exists ; 2012 ; Britain and the World Volume 5 ; 5 >
+    au < crawling ; exists ; 2012 ; Britain and the World Volume 5 ; 5 >
 
   }
 
@@ -586,7 +586,7 @@
     au < released ; crawling ; 2009 ; Journal of Scottish Philosophy Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; Journal of Scottish Philosophy Volume 8 ; 8 >
     au < released ; crawling ; 2011 ; Journal of Scottish Philosophy Volume 9 ; 9 >
-    au < manifest ; exists ; 2012 ; Journal of Scottish Philosophy Volume 10 ; 10 >
+    au < crawling ; exists ; 2012 ; Journal of Scottish Philosophy Volume 10 ; 10 >
 
   }
 
@@ -692,7 +692,7 @@
 
       param[journal_id] = nfs
       
-      au < manifest ; exists ; 2012 ; Nottingham French Studies Volume 50 ; 50 >
+      au < crawling ; exists ; 2012 ; Nottingham French Studies Volume 50 ; 50 >
   
     }
   
@@ -751,7 +751,7 @@
     au < released ; crawling ; 2009 ; Paragraph Volume 32 ; 32 >
     au < released ; crawling ; 2010 ; Paragraph Volume 33 ; 33 >
     au < released ; crawling ; 2011 ; Paragraph Volume 34 ; 34 >
-    au < manifest ; exists ; 2012 ; Paragraph Volume 35 ; 35 >
+    au < crawling ; exists ; 2012 ; Paragraph Volume 35 ; 35 >
 
   }
 
