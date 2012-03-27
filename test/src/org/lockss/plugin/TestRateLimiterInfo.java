@@ -1,10 +1,10 @@
 /*
- * $Id: TestRateLimiterInfo.java,v 1.1 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: TestRateLimiterInfo.java,v 1.2 2012-03-27 20:58:14 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,8 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
+import java.io.*;
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 import org.lockss.test.*;
 
 public class TestRateLimiterInfo extends LockssTestCase {
@@ -54,6 +56,7 @@ public class TestRateLimiterInfo extends LockssTestCase {
     assertEquals("bar", rli.getCrawlPoolKey());
     assertSame(map, rli.getMimeRates());
     assertNull(rli.getUrlRates());
+    assertNull(rli.getCond());
   }
 
   public void testUrl() {
@@ -64,5 +67,88 @@ public class TestRateLimiterInfo extends LockssTestCase {
     assertEquals("bar", rli.getCrawlPoolKey());
     assertSame(map, rli.getUrlRates());
     assertNull(rli.getMimeRates());
+    assertNull(rli.getCond());
+  }
+
+  public void testCond() {
+    RateLimiterInfo rli = new RateLimiterInfo("bar", 1, 13000);
+    CrawlWindow win1 = new CrawlWindows.Daily("1:00", "3:00", "GMT");
+    CrawlWindow win2 = new CrawlWindows.Daily("3:00", "1:00", "GMT");
+    RateLimiterInfo rli1 = new RateLimiterInfo("one", 2, 300);
+    RateLimiterInfo rli2 = new RateLimiterInfo("two", 4, 500);
+    LinkedHashMap map = new LinkedHashMap();
+    map.put(win1, rli1);
+    map.put(win2, rli2);
+    rli.setCond(map);
+    assertEquals("1/13000", rli.getDefaultRate());
+    assertEquals("bar", rli.getCrawlPoolKey());
+    assertNull(rli.getUrlRates());
+    assertNull(rli.getMimeRates());
+    Map cond = rli.getCond();
+    // the set views returned by LinkedHashMap don't appear to be ordered
+    // (as far as CollectionUtil.isOrdered() can tell); only the iterator
+    // is ordered.  Make a copy to invoke the iterator.
+    assertIsomorphic(ListUtil.list(win1, win2), new ArrayList(cond.keySet()));
+    assertIsomorphic(ListUtil.list(rli1, rli2), new ArrayList(cond.values()));
+  }
+
+  String condser = 
+    "<org.lockss.plugin.RateLimiterInfo>" +
+    "  <crawlPoolKey>poolKey</crawlPoolKey>" +
+    "  <cond>" +
+    "    <entry>" +
+    "      <org.lockss.daemon.CrawlWindows-Never/>" +
+    "      <org.lockss.plugin.RateLimiterInfo>" +
+    "        <rate>1/4s</rate>" +
+    "        <mimeRates>" +
+    "          <entry>" +
+    "            <string>text/html</string>" +
+    "            <string>10/1m</string>" +
+    "          </entry>" +
+    "          <entry>" +
+    "            <string>image/*</string>" +
+    "            <string>5/1s</string>" +
+    "          </entry>" +
+    "        </mimeRates>" +
+    "      </org.lockss.plugin.RateLimiterInfo>" +
+    "    </entry>" +
+    "    <entry>" +
+    "      <org.lockss.daemon.CrawlWindows-Daily>" +
+    "        <from>22:00</from>" +
+    "        <to>23:00</to>" +
+    "        <timeZoneId>America/Los Angeles</timeZoneId>" +
+    "      </org.lockss.daemon.CrawlWindows-Daily>" +
+    "      <org.lockss.plugin.RateLimiterInfo>" +
+    "        <rate>1/12s</rate>" +
+    "      </org.lockss.plugin.RateLimiterInfo>" +
+    "    </entry>" +
+    "  </cond>" +
+    "</org.lockss.plugin.RateLimiterInfo>";
+
+  public void testCondSer() throws Exception {
+    RateLimiterInfo rli = fromString(condser);
+    assertNull("1/13000", rli.getDefaultRate());
+    assertEquals("poolKey", rli.getCrawlPoolKey());
+    assertNull(rli.getUrlRates());
+    assertNull(rli.getMimeRates());
+    Map cond = rli.getCond();
+    List wins = new ArrayList(cond.keySet());
+    assertClass(CrawlWindows.Never.class, wins.get(0));
+    assertEquals(new CrawlWindows.Daily("22:00", "23:00",
+					"America/Los Angeles"),
+		 wins.get(1));
+    List<RateLimiterInfo> rlis = new ArrayList(cond.values());
+    RateLimiterInfo rli1 = rlis.get(0);
+    assertEquals("1/4s", rli1.getDefaultRate());
+    assertEquals(MapUtil.map("text/html", "10/1m", "image/*", "5/1s"),
+		 rli1.getMimeRates());
+    RateLimiterInfo rli2 = rlis.get(1);
+    assertEquals("1/12s", rli2.getDefaultRate());
+    assertNull(rli2.getMimeRates());
+  }
+
+  RateLimiterInfo fromString(String s) throws Exception {
+    InputStream in = new StringInputStream(s);
+    return (RateLimiterInfo)new XStreamSerializer().deserialize(in);
   }
 }

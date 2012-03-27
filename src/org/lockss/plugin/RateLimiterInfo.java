@@ -1,10 +1,10 @@
 /*
- * $Id: RateLimiterInfo.java,v 1.1 2011-09-25 04:20:40 tlipkis Exp $
+ * $Id: RateLimiterInfo.java,v 1.2 2012-03-27 20:58:14 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,10 @@ package org.lockss.plugin;
 
 import java.util.*;
 import java.util.regex.*;
+import org.apache.commons.lang.ObjectUtils;
+
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 
 /** Container to gather various pieces of plugin rate limiter info into one
  * place */
@@ -44,7 +47,7 @@ public class RateLimiterInfo {
   private String rate;
   private Map<String,String> urlRates;
   private Map<String,String> mimeRates;
-  private Map<String,String> limiterRates;
+  private LinkedHashMap<CrawlWindow,RateLimiterInfo> cond;
 
   public RateLimiterInfo(String crawlPoolKey, int events, long interval) {
     this.crawlPoolKey = crawlPoolKey;
@@ -66,8 +69,23 @@ public class RateLimiterInfo {
     return this;
   }
 
+  public RateLimiterInfo setCond(LinkedHashMap<CrawlWindow,RateLimiterInfo>
+				 cond) {
+    this.cond = cond;
+    return this;
+  }
+
+  public Map<CrawlWindow,RateLimiterInfo> getCond() {
+    return cond;
+  }
+
   public String getCrawlPoolKey() {
     return crawlPoolKey;
+  }
+
+  public RateLimiterInfo setCrawlPoolKey(String crawlPoolKey) {
+    this.crawlPoolKey = crawlPoolKey;
+    return this;
   }
 
   public String getDefaultRate() {
@@ -82,10 +100,39 @@ public class RateLimiterInfo {
     return mimeRates;
   }
 
-  public String toString(int indent) {
+  public int hashCode() {
+    throw new UnsupportedOperationException();
+  }
+
+  public boolean equals(Object obj) {
+    if (this == obj) {
+      return true;
+    }
+    if (obj instanceof RateLimiterInfo) {
+      RateLimiterInfo o = (RateLimiterInfo)obj;
+
+      return ObjectUtils.equals(crawlPoolKey, o.crawlPoolKey)
+	&& ObjectUtils.equals(rate, o.rate)
+	&& ObjectUtils.equals(urlRates, o.urlRates)
+	&& ObjectUtils.equals(mimeRates, o.mimeRates)
+	&& ObjectUtils.equals(cond, o.cond);
+    }
+    return false;
+  }
+
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("[rli: ");
-    sb.append(rate);
+    if (crawlPoolKey != null) {
+      sb.append("pool: ");
+      sb.append(crawlPoolKey);
+    }
+    if (rate != null) {
+      sb.append(rate);
+    }
+    if (cond != null) {
+      sb.append(cond.toString());
+    }
     if (urlRates != null) {
       sb.append(", U=");
       sb.append(urlRates.toString());
