@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRateLimiter.java,v 1.4 2012-03-27 20:57:29 tlipkis Exp $
+ * $Id: BaseCrawlRateLimiter.java,v 1.1 2012-03-27 20:57:29 tlipkis Exp $
  */
 
 /*
@@ -32,46 +32,37 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
-import java.util.*;
-
 import org.lockss.util.*;
-import org.lockss.plugin.*;
 
 /**
- * Manages the rate limiters in use by a crawl.  Implementations select
- * rate limiters based on URL or MIME type, or date/time, etc.
+ * Common functionality for CrawlRateLimiter implementations
  */
-public interface CrawlRateLimiter {
-  /** Return the RateLimiter on which to wait for the next fetch
-   * @param url the url about to be fetched
-   * @param previousContentType the MIME type or Content-Type of the
-   * previous file fetched
-   */
-  public RateLimiter getRateLimiterFor(String url, String previousContentType);
+public abstract class BaseCrawlRateLimiter implements CrawlRateLimiter {
+  static Logger log = Logger.getLogger("BaseCrawlRateLimiter");
+
+  protected int pauseCounter = 0;
+
+  public BaseCrawlRateLimiter() {
+  }
 
   /** Wait until it's time for the next fetch
    * @param url the url about to be fetched
    * @param previousContentType the MIME type or Content-Type of the
    * previous file fetched
    */
-  public void pauseBeforeFetch(String url, String  previousContentType);
-
-  /** Return the number of times this CrawlRateLimiter has been asked to
-   * pause.  Used to check that rate limiter is actually being invoked. */
-  public int getPauseCounter();
-
-  public static class Util {
-    public static CrawlRateLimiter forAu(ArchivalUnit au) {
-      return forRli(au.getRateLimiterInfo());
-    }
-
-    public static CrawlRateLimiter forRli(RateLimiterInfo rli) {
-      if (rli.getCond() != null) {
-	return new ConditionalCrawlRateLimiter(rli);
-      }
-      return new FileTypeCrawlRateLimiter(rli);
+  public void pauseBeforeFetch(String url, String  previousContentType) {
+    RateLimiter limiter = getRateLimiterFor(url, previousContentType);
+    try {
+      if (log.isDebug3()) log.debug3("Pausing: " + limiter.rateString());
+      pauseCounter++;
+      limiter.fifoWaitAndSignalEvent();
+    } catch (InterruptedException ignore) {
+      // no action
     }
   }
 
-
+  /** Used to check that rate limiter is actually being invoked, */
+  public int getPauseCounter() {
+    return pauseCounter;
+  }
 }

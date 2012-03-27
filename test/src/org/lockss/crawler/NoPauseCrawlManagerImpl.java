@@ -1,5 +1,5 @@
 /*
- * $Id: NoPauseCrawlManagerImpl.java,v 1.2 2012-01-18 03:40:42 tlipkis Exp $
+ * $Id: NoPauseCrawlManagerImpl.java,v 1.3 2012-03-27 20:57:29 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class NoPauseCrawlManagerImpl extends CrawlManagerImpl {
     new HashMap<ArchivalUnit,CrawlRateLimiter>();
 
   protected CrawlRateLimiter newCrawlRateLimiter(ArchivalUnit au) {
-    CrawlRateLimiter crl = new NoPauseCrawlRateLimiter(au);
+    CrawlRateLimiter crl = new NoPauseCrawlRateLimiter();
     limiterMap.put(au, crl);
     return crl;
   }
@@ -70,11 +70,11 @@ public class NoPauseCrawlManagerImpl extends CrawlManagerImpl {
   }
 
 
-  public static class NoPauseCrawlRateLimiter extends CrawlRateLimiter {
+  public static class NoPauseCrawlRateLimiter extends BaseCrawlRateLimiter {
     List pauseContentTypes = new ArrayList();
 
-    public NoPauseCrawlRateLimiter(ArchivalUnit au) {
-      super(au);
+    public NoPauseCrawlRateLimiter() {
+      super();
     }
 
     @Override
@@ -82,6 +82,12 @@ public class NoPauseCrawlManagerImpl extends CrawlManagerImpl {
       log.debug3("NoPausing: " + url + ", prev: " + previousContentType);
       pauseCounter++;
       pauseContentTypes.add(previousContentType);
+    }
+
+    @Override
+    public RateLimiter getRateLimiterFor(String url,
+					 String previousContentType) {
+      throw new UnsupportedOperationException("Shouldn't be called in NoPauseCrawlRateLimiter");
     }
 
     public List getPauseContentTypes() {

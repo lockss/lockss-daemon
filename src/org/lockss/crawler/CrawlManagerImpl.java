@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.141 2012-03-15 08:20:25 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.142 2012-03-27 20:57:29 tlipkis Exp $
  */
 
 /*
@@ -635,7 +635,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   protected CrawlRateLimiter newCrawlRateLimiter(ArchivalUnit au) {
-    return new CrawlRateLimiter(au);
+    return CrawlRateLimiter.Util.forAu(au);
   }
 
   private void addToRunningCrawls(ArchivalUnit au, Crawler crawler) {

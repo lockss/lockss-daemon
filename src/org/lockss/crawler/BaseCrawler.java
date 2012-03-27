@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.46 2012-03-15 08:20:25 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.47 2012-03-27 20:57:29 tlipkis Exp $
  */
 
 /*
@@ -326,7 +326,7 @@ public abstract class BaseCrawler
       if (crawlMgr != null) {
 	crl = crawlMgr.getCrawlRateLimiter(au);
       } else {
-	crl = new CrawlRateLimiter(au);
+	crl = CrawlRateLimiter.Util.forAu(au);
       }
     }
     return crl;
