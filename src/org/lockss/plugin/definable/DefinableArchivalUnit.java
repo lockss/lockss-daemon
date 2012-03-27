@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.90 2012-03-27 20:58:53 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.91 2012-03-27 21:00:57 tlipkis Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   @Override
   public RateLimiterInfo getRateLimiterInfo() {
-    if (definitionMap.containsKey(KEY_AU_RATE_LIMITER_INFO")) {
+    if (definitionMap.containsKey(KEY_AU_RATE_LIMITER_INFO)) {
       // If the plugin contains an explicit RateLimiterInfo, use it.  Add
       // the CrawlPoolKey if necessary..
       RateLimiterInfo rli =
