@@ -16,6 +16,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < released ; 2011 ; G3: Genes, Genomes, Genetics Volume 1 ; 1 >
+    au < manifest ; 2012 ; G3: Genes, Genomes, Genetics Volume 2 ; 2 >
     
   }
     
@@ -221,6 +222,7 @@
     au < released ; 2011 ; Genetics Volume 187 ; 187 >
     au < released ; 2011 ; Genetics Volume 188 ; 188 >
     au < released ; 2011 ; Genetics Volume 189 ; 189 >
+    au < manifest ; 2012 ; Genetics Volume 190 ; 190 >
 
   }
 
