@@ -289,7 +289,7 @@
     {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://www.perspectivesinmedicine.org/
+      param[base_url] = http://perspectivesinmedicine.cshlp.org/
       implicit < status ; year ; name ; param[volume_name] >
 
       au < testing ; 2011 ; Perspectives in Medicine Volume 1 ; 1 >
