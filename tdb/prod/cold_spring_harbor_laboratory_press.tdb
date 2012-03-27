@@ -292,8 +292,8 @@
       param[base_url] = http://perspectivesinmedicine.cshlp.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 2011 ; Perspectives in Medicine Volume 1 ; 1 >
-      au < testing ; 2012 ; Perspectives in Medicine Volume 2 ; 2 >
+      au < ready ; 2011 ; Perspectives in Medicine Volume 1 ; 1 >
+      au < ready ; 2012 ; Perspectives in Medicine Volume 2 ; 2 >
       
     }
     
