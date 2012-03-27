@@ -1,10 +1,10 @@
 /*
- * $Id: TimeBase.java,v 1.11 2005-10-11 05:48:29 tlipkis Exp $
+ * $Id: TimeBase.java,v 1.12 2012-03-27 20:55:51 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
+import java.text.*;
 
 /**
  * TimeBase allows use of a simulated time base for testing.
@@ -67,6 +68,18 @@ public class TimeBase {
   public static void setSimulated(long time) {
     isSimulated = true;
     simulatedTime = time;
+  }
+
+  /** Set TimeBase into simulated mode.
+   * @param time Date/time string to set as current time, in format
+   * <code>yyyy/MM/dd HH:mm:ss</code>
+   */
+  public static void setSimulated(String dateTime) throws ParseException {
+    DateFormat fmt = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+    fmt.setTimeZone(Constants.DEFAULT_TIMEZONE);
+    fmt.setLenient(true);
+    simulatedTime = fmt.parse(dateTime).getTime();
+    isSimulated = true;
   }
 
   /** Set TimeBase into simulated mode, at time 0 */

@@ -1,10 +1,10 @@
 /*
- * $Id: TestTimeBase.java,v 1.1 2003-12-08 06:58:02 tlipkis Exp $
+ * $Id: TestTimeBase.java,v 1.2 2012-03-27 20:55:51 tlipkis Exp $
  */
 
 /*
 n
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -66,7 +66,7 @@ public class TestTimeBase extends LockssTestCase {
     assertTrue(TimeBase.nowMs() > now);
   }
 
-  public void testSimulated() {
+  public void testSimulated() throws Exception {
     TimeBase.setSimulated();
     assertTrue(TimeBase.isSimulated());
     assertEquals(0, TimeBase.nowMs());
@@ -86,5 +86,17 @@ public class TestTimeBase extends LockssTestCase {
     assertFalse(TimeBase.isSimulated());
     TimeBase.setSimulated(100);
     assertTrue(TimeBase.isSimulated());
+
+    TimeBase.setReal();
+    assertFalse(TimeBase.isSimulated());
+    TimeBase.setSimulated("1970/1/1 0:00:00");
+    assertTrue(TimeBase.isSimulated());
+    assertEquals(0, TimeBase.nowMs());
+    TimeBase.setSimulated("1970/1/1 01:00:00");
+    assertTrue(TimeBase.isSimulated());
+    assertEquals(3600000, TimeBase.nowMs());
+    TimeBase.setSimulated("1970/1/2 01:00:00");
+    assertTrue(TimeBase.isSimulated());
+    assertEquals(90000000, TimeBase.nowMs());
   }
 }
