@@ -134,7 +134,6 @@
     >
   
     comment[1] = this title has no issues, just volumes check/test to see if it works with h20 plugin-- -SC
-    comment[2] = cannot add AUs to ingest machine. -Mep 2012/03/07
 
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://memoirs.gsapubs.org/
