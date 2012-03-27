@@ -950,17 +950,17 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       param[base_url] = http://injuryprevention.bmj.com/
 
       au < HighWirePressH20Plugin ; ready ; 1995 ; Injury Prevention Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 1996 ; Injury Prevention Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Injury Prevention Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; ready ; 1997 ; Injury Prevention Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; testing ; 1998 ; Injury Prevention Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Injury Prevention Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; ready ; 1999 ; Injury Prevention Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; testing ; 2000 ; Injury Prevention Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; testing ; 2001 ; Injury Prevention Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; testing ; 2002 ; Injury Prevention Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; testing ; 2003 ; Injury Prevention Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Injury Prevention Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Injury Prevention Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Injury Prevention Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Injury Prevention Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; ready ; 2004 ; Injury Prevention Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Injury Prevention Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; testing ; 2006 ; Injury Prevention Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 2006 ; Injury Prevention Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Injury Prevention Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Injury Prevention Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Injury Prevention Volume 15 ; 15 >
@@ -982,11 +982,11 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://jcp.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1947-1948 ; Journal of Clinical Pathology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; Journal of Clinical Pathology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; Journal of Clinical Pathology Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; Journal of Clinical Pathology Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1952 ; Journal of Clinical Pathology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1947-1948 ; Journal of Clinical Pathology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1949 ; Journal of Clinical Pathology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1950 ; Journal of Clinical Pathology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1951 ; Journal of Clinical Pathology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; testing ; 1952 ; Journal of Clinical Pathology Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 1953 ; Journal of Clinical Pathology Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 1954 ; Journal of Clinical Pathology Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 1955 ; Journal of Clinical Pathology Volume 8 ; 8 >
