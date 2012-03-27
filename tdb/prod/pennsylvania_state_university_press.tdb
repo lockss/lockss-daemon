@@ -83,6 +83,11 @@
       issnl = 1040-9483 
     >
     
+    param[journal_dir] = eugene_oneill_review
+    attr[journal_id] = eor
+    
+    au < exists ; 2012 ; The Eugene O'Neill Review Volume 33 ; 33 >
+
   }
 
   {

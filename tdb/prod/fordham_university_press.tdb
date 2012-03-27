@@ -46,8 +46,11 @@
       issnl = 0022-6864
     >
 
-    comment[ds] = coming 2012
     param[journal_dir] = traditio
+    attr[journal_id] = trd
+    
+    au < exists ; 2011 ; Traditio Volume 66 ; 66 >
+    
   }
 
 }
