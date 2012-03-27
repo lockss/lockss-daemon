@@ -1,10 +1,10 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.55 2012-03-19 17:54:24 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.56 2012-03-27 20:58:52 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1443,6 +1443,40 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(exp, rli.getUrlRates());
     assertEquals("1/43000", rli.getDefaultRate());
     assertEquals("pool1", rli.getCrawlPoolKey());
+  }
+
+  public void testConditionalRateLimiterInfo() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a complex plugin definition
+    String pname = "org.lockss.plugin.definable.ConditionalRateLimiterPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue(pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+    RateLimiterInfo rli = au.getRateLimiterInfo();
+    assertEquals("pool1", rli.getCrawlPoolKey());
+    assertClass(LinkedHashMap.class, rli.getCond());
+    Map<CrawlWindow,RateLimiterInfo> cond = rli.getCond();
+    LinkedHashMap<CrawlWindow,RateLimiterInfo> exp =
+      new LinkedHashMap<CrawlWindow,RateLimiterInfo>();
+    exp.put(new CrawlWindows.Daily("8:00", "22:00", "America/Los Angeles"),
+	    new RateLimiterInfo(null, "2/1s")
+	    .setMimeRates(MapUtil.map("text/html,application/pdf", "10/1m",
+				      "image/*", "5/1s")));
+    exp.put(new CrawlWindows.Daily("22:00", "8:00", "America/Los Angeles"),
+	    new RateLimiterInfo(null, "10/2s")
+	    .setMimeRates(MapUtil.map("text/html,application/pdf", "10/300ms",
+				      "image/*", "5/1s")));
+
+    // For some reason the entrySet()s themselves don't compare equal, but
+    // their elements do
+    assertEquals(new ArrayList(exp.entrySet()),
+		 new ArrayList(cond.entrySet()));
   }
 
   public static class PositiveCrawlRuleFactory

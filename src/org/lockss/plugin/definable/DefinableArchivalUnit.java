@@ -1,9 +1,9 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.89 2012-03-19 17:54:24 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.90 2012-03-27 20:58:53 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -103,6 +103,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     "au_url_rate_limiter_map";
   public static final String KEY_AU_MIME_RATE_LIMITER_MAP =
     "au_mime_rate_limiter_map";
+  public static final String KEY_AU_RATE_LIMITER_INFO =
+    "au_rate_limiter_info";
+
 
   /** Suffix for testing override submaps.  Values in a XXX_override map
    * will be copied to the main map when in testing mode XXX.  In the
@@ -207,6 +210,16 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   @Override
   public RateLimiterInfo getRateLimiterInfo() {
+    if (definitionMap.containsKey(KEY_AU_RATE_LIMITER_INFO")) {
+      // If the plugin contains an explicit RateLimiterInfo, use it.  Add
+      // the CrawlPoolKey if necessary..
+      RateLimiterInfo rli =
+	(RateLimiterInfo)definitionMap.getMapElement(KEY_AU_RATE_LIMITER_INFO);
+      if (rli.getCrawlPoolKey() == null) {
+	rli.setCrawlPoolKey(getFetchRateLimiterKey());
+      }
+      return rli;
+    }
     RateLimiterInfo rli = super.getRateLimiterInfo();
     Map<String,String> patterns =
       definitionMap.getMap(KEY_AU_URL_RATE_LIMITER_MAP, null);

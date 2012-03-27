@@ -1,0 +1,103 @@
+<map>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:pool1</string>
+  </entry>
+  <entry>
+    <string>au_rate_limiter_info</string>
+    <org.lockss.plugin.RateLimiterInfo>
+      <cond>
+	<entry>
+	  <org.lockss.daemon.CrawlWindows-Daily>
+	    <from>8:00</from>
+	    <to>22:00</to>
+	    <timeZoneId>America/Los Angeles</timeZoneId>
+	  </org.lockss.daemon.CrawlWindows-Daily>
+	  <org.lockss.plugin.RateLimiterInfo>
+	    <rate>2/1s</rate>
+	    <mimeRates>
+	      <entry>
+		<string>text/html,application/pdf</string>
+		<string>10/1m</string>
+	      </entry>
+	      <entry>
+		<string>image/*</string>
+		<string>5/1s</string>
+	      </entry>
+	    </mimeRates>
+	  </org.lockss.plugin.RateLimiterInfo>
+	</entry>
+
+	<entry>
+	  <org.lockss.daemon.CrawlWindows-Daily>
+	    <from>22:00</from>
+	    <to>8:00</to>
+	    <timeZoneId>America/Los Angeles</timeZoneId>
+	  </org.lockss.daemon.CrawlWindows-Daily>
+	  <org.lockss.plugin.RateLimiterInfo>
+	    <rate>10/2s</rate>
+	    <mimeRates>
+	      <entry>
+		<string>text/html,application/pdf</string>
+		<string>10/300ms</string>
+	      </entry>
+	      <entry>
+		<string>image/*</string>
+		<string>5/1s</string>
+	      </entry>
+	    </mimeRates>
+	  </org.lockss.plugin.RateLimiterInfo>
+	</entry>
+
+      </cond>
+    </org.lockss.plugin.RateLimiterInfo>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>34000</long>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.definable.ConditionalRateLimiterPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>ConditionalRateLimiterPlugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%sissue-%s&quot;, base_url, num_issue_range</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+     <string>&quot;%s&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>num_issue_range</key>
+        <displayName>Numeric Issue Range</displayName>
+        <description>A Range of issues in the form: min-max</description>
+        <type>8</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
