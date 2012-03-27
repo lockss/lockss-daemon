@@ -1,5 +1,5 @@
 /*
- * $Id: TestGPOFDSysHtmlFilterFactory.java,v 1.2 2012-03-23 05:46:10 thib_gc Exp $
+ * $Id: TestGPOFDSysHtmlFilterFactory.java,v 1.3 2012-03-27 18:46:41 davidecorcoran Exp $
  */
 
 /*
@@ -54,13 +54,33 @@ public class TestGPOFDSysHtmlFilterFactory extends LockssTestCase {
       "<a href=\"search/notificationPage.action?emailBody=" +
       "http%3A%2F%2Fwww.gpo.gov%3A80%2Ffdsys%2Fgranule%2" +
       "FWCPD-2005-01-03%2FWCPD-2005-01-03-Pg3017-2%2Fcontent-detail.html" +
-      "%3Fnull\">Email a link to this page</a>";
+      "%3Fnull\">Email a link to this page</a>" +
+      
+      "<script type=\"text/javascript\">" +
+	  "var WT_SERVER = '162.140.239.17';" +
+	  "var WT_DCS_ID = 'dcsjsw8h600000gotf0vyrmly_2j7v';" +
+	  "var WT_HOST_SERVER_NAME = 'http://www.gpo.gov/fdsys';" +
+	  "var BASE_PRESENTATION_PATH = 'http://www.gpo.gov/fdsys/';" +
+	  "var BASE_USER_HELP = 'http://www.gpo.gov/help/';" +
+	  "var SEARCHWEBAPP_BUILD = 'CM_INT_R2_20';" +
+	  "var coopValue='';" +
+	  "</script>";
   
   private static final String inst2 =
 	  "<a href=\"search/notificationPage.action?emailBody=" +
       "http%3A%2F%2Fwww.gpo.gov%3A80%2Ffdsys%2Fpkg%2" +
       "FERIC-ED465240%2Fcontent-detail.html%3Fnull\">" +
-      "Email a link to this page</a>";
+      "Email a link to this page</a>" +
+      
+      "<script type=\"text/javascript\">" +
+	  "var WT_SERVER = '162.140.239.17';" +
+	  "var WT_DCS_ID = 'dcsjsw8h600000gotf0vyrmly_2j7v';" +
+	  "var WT_HOST_SERVER_NAME = 'http://www.gpo.gov/fdsys';" +
+	  "var BASE_PRESENTATION_PATH = 'http://www.gpo.gov/fdsys/';" +
+	  "var BASE_USER_HELP = 'http://www.gpo.gov/help/';" +
+	  "var SEARCHWEBAPP_BUILD = 'CM_INT_R2_23';" +
+	  "var coopValue='';" +
+	  "</script>";	  
 
   public void testFiltering() throws PluginException, IOException {
     InputStream inA;
