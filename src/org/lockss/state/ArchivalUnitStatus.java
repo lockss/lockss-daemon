@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.106 2012-03-12 21:29:20 barry409 Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.107 2012-03-27 20:56:18 tlipkis Exp $
  */
 
 /*
@@ -673,7 +673,13 @@ public class ArchivalUnitStatus
 
 	CachedUrl cu = au.makeCachedUrl(url);
         try {
-	  Map row = makeRow(au, repo.getNode(url), cu,
+	  // XXX Remove this when we move to a repository that
+	  // distinguishes "foo/" from "foo".
+	  String normUrl = url;
+	  if (normUrl.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
+	    normUrl = normUrl.substring(0, normUrl.length() - 1);
+	  }
+	  Map row = makeRow(au, repo.getNode(normUrl), cu,
 			    startUrls.contains(url));
 	  row.put("sort", new Integer(curRow));
           rowL.add(row);
