@@ -359,7 +359,7 @@
       au < manifest ; exists ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 ; >
       au < manifest ; exists ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 ; >
       au < manifest ; exists ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 ; >
-      au < manifest ; exists ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 ; >
+      au < released ; manifest ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 ; >
       au < manifest ; exists ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 ; >
       au < expected ; exists ; 2012 ; Administrative Science Quarterly Volume 57 ; 57 ; >
 
@@ -372,7 +372,9 @@
     title <
       name = Adult Education Quarterly ;
       issn = 0741-7136 ;
-      eissn = 1552-3047
+      eissn = 1552-3047 ;
+      issnl = 0741-7136
+      
     >
 
     param[base_url] = http://aeq.sagepub.com/
@@ -664,7 +666,7 @@
       au < manifest ; exists ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 ;  >
       au < manifest ; exists ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 ;  >
       au < manifest ; exists ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 ;  >
-      au < manifest ; exists ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 ;  >
+      au < released ; manifest ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 ;  >
       au < released ; crawling ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 ;  >
       au < expected ; exists ; 2012 ; Alternatives: Global, Local, Political Volume 37 ; 37 ;  >
 	
@@ -1154,7 +1156,7 @@
       au < manifest ; exists ; 2007 ; The American Journal of Sports Medicine Volume 35 ; 35 ; >
       au < manifest ; exists ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 ; >
       au < manifest ; exists ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 ; >
-      au < manifest ; exists ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 ; >
+      au < released ; manifest ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 ; >
       au < manifest ; exists ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 ; >
       au < crawling ; exists ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 ; >
 
@@ -2117,10 +2119,10 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 624 ; 624 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 625 ; 625 ; >
       au < manifest ; exists ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 626 ; 626 ;  >
-      au < manifest ; exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 627 ; 627 ; >
-      au < manifest ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 628 ; 628 ;  >
-      au < manifest ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 629 ; 629 ;  >
-      au < manifest ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 630 ; 630 ;  >
+      au < released ; manifest ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 627 ; 627 ; >
+      au < released ; manifest ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 628 ; 628 ;  >
+      au < released ; manifest ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 629 ; 629 ;  >
+      au < released ; manifest ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 630 ; 630 ;  >
       au < released ; crawling ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 631 ; 631 ; >
       au < released ; crawling ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 632 ; 632 ; >
       au < manifest ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 633 ; 633 ; >
@@ -2416,16 +2418,16 @@
       au < manifest ; exists ; 1968 ; Asia Pacific Journal of Human Resources Volume 3 ; 3 ; >
       au < manifest ; exists ; 1969 ; Asia Pacific Journal of Human Resources Volume 4 ; 4 ; >
       au < manifest ; exists ; 1970 ; Asia Pacific Journal of Human Resources Volume 5 ; 5 ; >
-      au < doesNotExist ; exists ; 1970 ; Asia Pacific Journal of Human Resources Volume 6 ; 6 ; >
+      au < doesNotExist ; doesNotExist ; 1971 ; Asia Pacific Journal of Human Resources Volume 6 ; 6 ; >
       au < manifest ; exists ; 1972 ; Asia Pacific Journal of Human Resources Volume 7 ; 7 ; >
       au < manifest ; exists ; 1973 ; Asia Pacific Journal of Human Resources Volume 8 ; 8 ; >
       au < manifest ; exists ; 1974 ; Asia Pacific Journal of Human Resources Volume 9 ; 9 ; >
       au < manifest ; exists ; 1975 ; Asia Pacific Journal of Human Resources Volume 10 ; 10 ; >
       au < manifest ; exists ; 1976 ; Asia Pacific Journal of Human Resources Volume 11 ; 11 ; >
-      au < doesNotExist ; exists ; 1976 ; Asia Pacific Journal of Human Resources Volume 12 ; 12 ; >
-      au < doesNotExist ; exists ; 1977 ; Asia Pacific Journal of Human Resources Volume 13 ; 13 ; >
-      au < doesNotExist ; exists ; 1978 ; Asia Pacific Journal of Human Resources Volume 14 ; 14 ; >
-      au < doesNotExist ; exists ; 1979 ; Asia Pacific Journal of Human Resources Volume 15 ; 15 ; >
+      au < doesNotExist ; doesNotExist ; 1977 ; Asia Pacific Journal of Human Resources Volume 12 ; 12 ; >
+      au < doesNotExist ; doesNotExist ; 1977 ; Asia Pacific Journal of Human Resources Volume 13 ; 13 ; >
+      au < doesNotExist ; doesNotExist ; 1977 ; Asia Pacific Journal of Human Resources Volume 14 ; 14 ; >
+      au < doesNotExist ; doesNotExist ; 1977 ; Asia Pacific Journal of Human Resources Volume 15 ; 15 ; >
       au < manifest ; exists ; 1978 ; Asia Pacific Journal of Human Resources Volume 16 ; 16 ; >
       au < manifest ; exists ; 1979 ; Asia Pacific Journal of Human Resources Volume 17 ; 17 ; >
       au < manifest ; exists ; 1980 ; Asia Pacific Journal of Human Resources Volume 18 ; 18 ; >
@@ -2804,7 +2806,7 @@
       au < manifest ; exists ; 2006 ; Autism Volume 10 ; 10 ; >
       au < manifest ; exists ; 2007 ; Autism Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Autism Volume 12 ; 12 ; >
-      au < released ; crawling ; 2010 ; Autism Volume 13 ; 13 ;  >
+      au < released ; crawling ; 2009 ; Autism Volume 13 ; 13 ;  >
       au < released ; crawling ; 2010 ; Autism Volume 14 ; 14 ; >
       au < released ; crawling ; 2011 ; Autism Volume 15 ; 15 ; >
       au < crawling ; exists ; 2012 ; Autism Volume 16 ; 16 ; >
@@ -3584,27 +3586,27 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1960 ; Business & Society Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1960 ; Business & Society Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1962 ; Business & Society Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1963 ; Business & Society Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1964 ; Business & Society Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1965 ; Business & Society Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1966 ; Business & Society Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1967 ; Business & Society Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1968 ; Business & Society Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1969 ; Business & Society Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1970 ; Business & Society Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1971 ; Business & Society Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1972 ; Business & Society Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1973 ; Business & Society Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1974 ; Business & Society Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1975 ; Business & Society Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1976 ; Business & Society Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1977 ; Business & Society Volume 18 ; 18 ; >
-      au < manifest ; exists ; 1978 ; Business & Society Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1960-1961 ; Business & Society Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1962 ; Business & Society Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1962-1963 ; Business & Society Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1963-1964 ; Business & Society Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1964-1965 ; Business & Society Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1965-1966 ; Business & Society Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1966-1967 ; Business & Society Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1967-1968 ; Business & Society Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1968-1969 ; Business & Society Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1969-1970 ; Business & Society Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1970-1971 ; Business & Society Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1971-1972 ; Business & Society Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1972-1973 ; Business & Society Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1973-1974 ; Business & Society Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1974-1975 ; Business & Society Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1975-1976 ; Business & Society Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1976-1977 ; Business & Society Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1977-1978 ; Business & Society Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1978-1980 ; Business & Society Volume 19 ; 19 ; >
       au < manifest ; exists ; 1981 ; Business & Society Volume 20 ; 20 ; >
-      au < exists ; exists ; 1981 ; Business & Society Volume 21 ; 21 ; >
+      au < exists ; exists ; 1982 ; Business & Society Volume 21 ; 21 ; >
       au < manifest ; exists ; 1983 ; Business & Society Volume 22 ; 22 ; >
       au < manifest ; exists ; 1984 ; Business & Society Volume 23 ; 23 ; >
       au < manifest ; exists ; 1985 ; Business & Society Volume 24 ; 24 ; >
@@ -27333,7 +27335,7 @@
       au < manifest ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 222 ; 222 ; >
       au < manifest ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 223 ; 223 ; >
-      au < crawling ; exists ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 224 ; 224 ; >
+      au < released ; manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 224 ; 224 ; >
       au < released ; crawling ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 225 ; 225 ; >
       au < manifest ; exists ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 226 ; 226 ; >
 
@@ -27382,7 +27384,7 @@
       au < exists ; exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 221 ; 221 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 222 ; 222 ; >
       au < manifest ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 223 ; 223 ; >
-      au < crawling ; exists ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 224 ; 224 ; >
+      au < released ; manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 224 ; 224 ; >
       au < released ; crawling ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 225 ; 225 ; >
       au < manifest ; exists ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 226 ; 226 ; >
 
@@ -27432,7 +27434,7 @@
       au < exists ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 222 ; 222 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 222 ; 222 ; >
       au < manifest ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 223 ; 223 ; >
-      au < crawling ; exists ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 224 ; 224 ; >
+      au < released ; manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 224 ; 224 ; >
       au < released ; crawling ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 225 ; 225 ; >
       au < manifest ; exists ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 226 ; 226 ; >
 

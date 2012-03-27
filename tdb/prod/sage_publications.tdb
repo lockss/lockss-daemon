@@ -496,10 +496,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2004 ; Adult Education Quarterly Volume 55 ; 55 >
-        au < HighWireStrVolPlugin ; down ; 2006 ; Adult Education Quarterly Volume 57 ; 57 >
-        au < HighWireStrVolPlugin ; down ; 2007 ; Adult Education Quarterly Volume 58 ; 58 >
-        au < HighWirePressPlugin ; down ; 2008 ; Adult Education Quarterly Volume 59 ; 59 >
+        au < HighWireStrVolPlugin ; down ; 2004-2005 ; Adult Education Quarterly Volume 55 ; 55 >
+        au < HighWireStrVolPlugin ; down ; 2006-2007 ; Adult Education Quarterly Volume 57 ; 57 >
+        au < HighWireStrVolPlugin ; down ; 2007-2008 ; Adult Education Quarterly Volume 58 ; 58 >
+        au < HighWirePressPlugin ; down ; 2008-2009 ; Adult Education Quarterly Volume 59 ; 59 >
 
       }
 
@@ -2580,12 +2580,12 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2002 ; Armed Forces & Society Volume 29 ; 29 >
-        au < HighWireStrVolPlugin ; down ; 2004 ; Armed Forces & Society Volume 31 ; 31 >
-        au < HighWireStrVolPlugin ; down ; 2005 ; Armed Forces & Society Volume 32 ; 32 >
-        au < HighWireStrVolPlugin ; down ; 2006 ; Armed Forces & Society Volume 33 ; 33 >
-        au < HighWireStrVolPlugin ; down ; 2007 ; Armed Forces & Society Volume 34 ; 34 >
-        au < HighWirePressPlugin ; down ; 2008 ; Armed Forces & Society Volume 35 ; 35 >
+        au < HighWireStrVolPlugin ; down ; 2002-2003 ; Armed Forces & Society Volume 29 ; 29 >
+        au < HighWireStrVolPlugin ; down ; 2004-2005 ; Armed Forces & Society Volume 31 ; 31 >
+        au < HighWireStrVolPlugin ; down ; 2005-2006 ; Armed Forces & Society Volume 32 ; 32 >
+        au < HighWireStrVolPlugin ; down ; 2006-2007 ; Armed Forces & Society Volume 33 ; 33 >
+        au < HighWireStrVolPlugin ; down ; 2007-2008 ; Armed Forces & Society Volume 34 ; 34 >
+        au < HighWirePressPlugin ; down ; 2008-2009 ; Armed Forces & Society Volume 35 ; 35 >
 
       }
 
