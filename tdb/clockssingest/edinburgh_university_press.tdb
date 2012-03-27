@@ -91,7 +91,7 @@
       issnl = 1350-7524 
      >
 
-    comment[issue] = single issue per year, comes out in November . 2011 not yet released. 2012/01/09
+    comment[issue] = single issue per year, comes out in November . 
     param[journal_id] = arch
     comment[0] = Volumes 19 and 20 are currently represented as Arabic numerals on the website.
 
@@ -104,6 +104,7 @@
     au < released ; crawling ; 2009 ; Architectural Heritage Volume XX ; XX >
     au < released ; crawling ; 2010 ; Architectural Heritage Volume 21 ; 21 >
     au < expected ; exists ; 2011 ; Architectural Heritage Volume 22 ; 22 >
+    au < expected ; exists ; 2012 ; Architectural Heritage Volume 23 ; 23 >
 
   }
 

@@ -110,8 +110,8 @@
     param[base_url] = http://www.eurojnlofpsychotraumatol.net/
     param[journal_id] = ejpt
     
-    au < manifest ; 2010 ; European Journal of Psychotraumatology Volume 1 ; 1 ; 2010 >
-    au < manifest ; 2011 ; European Journal of Psychotraumatology Volume 2 ; 2 ; 2011 >
+    au < manifest ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
+    au < manifest ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
     au < expected ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
     
 
@@ -425,7 +425,7 @@
     au < manifest ; 1988 ; Polar Research Volume 6 ; 6 ; 1988 >
     au < manifest ; 1989 ; Polar Research Volume 7 ; 7 ; 1989 >
     au < manifest ; 1990 ; Polar Research Volume 8 ; 8 ; 1990 >
-    au < manifest ; 1991 ; Polar Research Volume 9-10 ; 9-10 ; 1991 >
+    au < manifest ; 1991 ; Polar Research Volumes 9-10 ; 9-10 ; 1991 >
     au < manifest ; 1992 ; Polar Research Volume 11 ; 11 ; 1992 >
     au < manifest ; 1993 ; Polar Research Volume 12 ; 12 ; 1993 >
     au < manifest ; 1994 ; Polar Research Volume 13 ; 13 ; 1994 >
@@ -541,8 +541,8 @@
       param[base_url] = http://www.socioaffectiveneuroscipsychol.net/
       param[journal_id] = snp
 
-      au < ready ; 2011 ; Socioaffective Neuroscience & Psychology Volume 1 ; 1 ; 2011 >
-      au < exists ; 2012 ; Socioaffective Neuroscience & Psychology Volume 2 ; 2 ; 2012 >
+      au < ready ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 >
+      au < exists ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 >
 
   }
   
