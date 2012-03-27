@@ -5820,7 +5820,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Counseling Outcome Research and Evaluation Volume 1 ; 1 ; >
+      au < released ; manifest ; 2010 ; Counseling Outcome Research and Evaluation Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Counseling Outcome Research and Evaluation Volume 2 ; 2 ; >
       au < expected ; exists ; 2012 ; Counseling Outcome Research and Evaluation Volume 3 ; 3 ; >
 
@@ -6802,7 +6802,7 @@
       au < manifest ; exists ; 2007 ; Current Directions in Psychological Science Volume 16 ; 16 ; >
       au < manifest ; exists ; 2008 ; Current Directions in Psychological Science Volume 17 ; 17 ; >
       au < manifest ; exists ; 2009 ; Current Directions in Psychological Science Volume 18 ; 18 ; >
-      au < testing ; exists ; 2010 ; Current Directions in Psychological Science Volume 19 ; 19 ; >
+      au < released ; manifest ; 2010 ; Current Directions in Psychological Science Volume 19 ; 19 ; >
       au < released ; crawling ; 2011 ; Current Directions in Psychological Science Volume 20 ; 20 ; >
       au < crawling ; exists ; 2012 ; Current Directions in Psychological Science Volume 21 ; 21 ; >
 
@@ -34943,7 +34943,7 @@
       au < manifest ; exists ; 2007 ; Young Volume 15 ; 15 ; >
       au < manifest ; exists ; 2008 ; Young Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Young Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2010 ; Young Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2010 ; Young Volume 18 ; 18 ; >
       au < released ; crawling ; 2011 ; Young Volume 19 ; 19 ; >
       au < manifest ; exists ; 2012 ; Young Volume 20 ; 20 ; >
 
@@ -35048,7 +35048,7 @@
       au < manifest ; exists ; 2007 ; Youth & Society Volume 39 ; 39 ; >
       au < manifest ; exists ; 2008 ; Youth & Society Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Youth & Society Volume 41 ; 41 ; >
-      au < manifest ; exists ; 2010 ; Youth & Society Volume 42 ; 42 ; >
+      au < crawling ; exists ; 2010 ; Youth & Society Volume 42 ; 42 ; >
       au < released ; crawling ; 2011 ; Youth & Society Volume 43 ; 43 ; >
       au < manifest ; exists ; 2012 ; Youth & Society Volume 44 ; 44 ; >
 
@@ -35088,7 +35088,7 @@
       au < manifest ; exists ; 2007 ; Youth Justice Volume 7 ; 7 ; >
       au < manifest ; exists ; 2008 ; Youth Justice Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Youth Justice Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2010 ; Youth Justice Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2010 ; Youth Justice Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; Youth Justice Volume 11 ; 11 ; >
       au < expected ; exists ; 2012 ; Youth Justice Volume 12 ; 12 ; >
 
@@ -35126,7 +35126,7 @@
       au < manifest ; exists ; 2007 ; Youth Violence and Juvenile Justice Volume 5 ; 5 ; >
       au < manifest ; exists ; 2008 ; Youth Violence and Juvenile Justice Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Youth Violence and Juvenile Justice Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2010 ; Youth Violence and Juvenile Justice Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2010 ; Youth Violence and Juvenile Justice Volume 8 ; 8 ; >
       au < released ; crawling ; 2011 ; Youth Violence and Juvenile Justice Volume 9 ; 9 ; >
       au < manifest ; exists ; 2012 ; Youth Violence and Juvenile Justice Volume 10 ; 10 ; >
 
