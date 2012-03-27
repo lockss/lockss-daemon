@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.65 2012-03-19 17:54:24 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.66 2012-03-27 20:56:30 tlipkis Exp $
  */
 
 /*
@@ -645,8 +645,6 @@ public class DefinablePlugin extends BasePlugin {
     if (definitionMap.containsKey(KEY_PLUGIN_ARCHIVE_FILE_TYPES)) {
       Object obj = 
 	definitionMap.getMapElement(KEY_PLUGIN_ARCHIVE_FILE_TYPES);
-      log.critical("obj: " + obj);
-
       if (obj instanceof ArchiveFileTypes) {
 	archiveFileSpec = (ArchiveFileTypes)obj;
 	log.debug2(getPluginName() + ": ArchiveFileTypes: "
