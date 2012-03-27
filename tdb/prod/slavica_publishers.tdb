@@ -72,6 +72,22 @@
   {
   
     title <
+      name = Region: Regional Studies of Russia, Eastern Europe, and Central Asia ;
+      issn = 2166-4307 ;
+      eissn = 2165-0659 ;
+      issnl = 2166-4307
+    >
+   
+    param[journal_dir] = region
+    attr[journal_id] = reg
+
+    au < exists ; 2012 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 1 ; 1 >
+
+  }
+
+  {
+  
+    title <
       name = Serbian Studies: Journal of the North American Society for Serbian Studies ;
       issn = 1941-9511 ;
       eissn = 0742-3330 ;
