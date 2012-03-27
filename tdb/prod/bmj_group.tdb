@@ -982,14 +982,14 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://jcp.bmj.com/
 
-    au < HighWirePressH20Plugin ; testing ; 1947-1948 ; Journal of Clinical Pathology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 1949 ; Journal of Clinical Pathology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 1950 ; Journal of Clinical Pathology Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; testing ; 1951 ; Journal of Clinical Pathology Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; testing ; 1952 ; Journal of Clinical Pathology Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; Journal of Clinical Pathology Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1954 ; Journal of Clinical Pathology Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1955 ; Journal of Clinical Pathology Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1947-1948 ; Journal of Clinical Pathology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1949 ; Journal of Clinical Pathology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1950 ; Journal of Clinical Pathology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1951 ; Journal of Clinical Pathology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1952 ; Journal of Clinical Pathology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1953 ; Journal of Clinical Pathology Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 1954 ; Journal of Clinical Pathology Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 1955 ; Journal of Clinical Pathology Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 1956 ; Journal of Clinical Pathology Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 1957 ; Journal of Clinical Pathology Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 1958 ; Journal of Clinical Pathology Volume 11 ; 11 >
