@@ -1,13 +1,20 @@
 package org.lockss.extractor;
 
 import java.io.IOException;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
+
+import org.apache.commons.collections.MultiHashMap;
+import org.apache.commons.collections.MultiMap;
+import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
@@ -27,21 +34,26 @@ import org.lockss.util.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
-import org.lockss.daemon.MetadataManager;
-import org.lockss.daemon.OpenUrlResolver;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.daemon.TitleConfig;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor.Emitter;
 import org.lockss.extractor.BaseArticleMetadataExtractor.MyEmitter;
+import org.apache.commons.collections.MultiHashMap;
+import java.util.Set;
+import java.util.Map;
+import java.util.Iterator;
+import java.util.List; 
 
-public class TestBaseArticleMetadataExtractor extends LockssTestCase {
+public class TestBaseArticleMetadataExtractor<Titleconfig> extends LockssTestCase {
   static Logger log = Logger.getLogger("TestBaseArticleMetadataExtractor");
   private static SimulatedArchivalUnit sau0,sau1;
   private MockLockssDaemon theDaemon;
   private PluginManager pluginManager;
   protected static String cuRole = null;
   private boolean disableMetadataManager = false;
+ // private final String PLUGIN_NAME = "org.lockss.plugin.metapress.ClockssMetaPressPlugin";
 
   public void setUp() throws Exception {
     super.setUp();
@@ -55,37 +67,60 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     theDaemon.getCrawlManager();
     Boolean.toString(!disableMetadataManager && true);
     Properties props = new Properties(); 
+    
+    String rootPath0 = tempDirPath + "/0";
+    String rootPath1 = tempDirPath + "/1";
+    
+    
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
     Configuration config = ConfigurationUtil.fromProps(props);
     Tdb tdb = new Tdb();
+    Tdb tdb1 = new Tdb();
     // create Tdb for testing purposes
     Properties tdbProps = new Properties();
     tdbProps = new Properties();
-    tdbProps.setProperty("title", "Title[10.0135/12345678]");
+    tdbProps.setProperty("title", "Air & Space Volume 1");
     tdbProps.setProperty("attributes.isbn", "976-1-58562-317-7");
-    tdbProps.setProperty("journalTitle", "Journal[10.0135/12345678]");
+    tdbProps.setProperty("journalTitle", "Air and Space");
+    tdbProps.setProperty("issn","0740-2783");
+    tdbProps.setProperty("eissn","0740-2783");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.0135/12345678]");
-    tdbProps.setProperty("plugin", "org.lockss.daemon.TestBaseArticleMetadataExtractor$MySimulatedPlugin0");
+    tdbProps.setProperty("plugin", "org.lockss.extractor.TestBaseArticleMetadataExtractor$MySimulatedPlugin0");
     tdbProps.setProperty("param.1.key", "base_url");
-    tdbProps.setProperty("param.1.value", "http://www.title3.org/");
+    tdbProps.setProperty("param.1.value", "http://www.title0.org/");
+    tdbProps.setProperty("param.2.key", "root");
+    tdbProps.setProperty("param.2.value", rootPath0);
     tdb.addTdbAuFromProperties(tdbProps);
-   
+    
+    
+    tdbProps = new Properties();
+    tdbProps.setProperty("title", "Air & Space Volume 2");
+    tdbProps.setProperty("attributes.isbn", "976-1-58562-317-8");
+    tdbProps.setProperty("journalTitle", "Air and Space2");
+    tdbProps.setProperty("issn","0740-2784");
+    tdbProps.setProperty("eissn","0740-2784");
+    tdbProps.setProperty("attributes.publisher", "Publisher[10.0135/12345678]");
+    tdbProps.setProperty("plugin", "org.lockss.extractor.TestBaseArticleMetadataExtractor$MySimulatedPlugin1");
+    tdbProps.setProperty("param.1.key", "base_url");
+    tdbProps.setProperty("param.1.value", "http://www.title1.org/");
+    tdbProps.setProperty("param.2.key", "root");
+    tdbProps.setProperty("param.2.value", rootPath1);
+    tdb.addTdbAuFromProperties(tdbProps);
+    
+        
     config.setTdb(tdb);
     ConfigurationUtil.installConfig(config);
-    
-    config = simAuConfig(tempDirPath + "/0");
+    config = simAuConfig(rootPath0);
     config.put("volume", "XI");
     config.put("base_url", "http://www.title0.org/");
     sau0 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class, config);
-    config = simAuConfig(tempDirPath + "/1");
+    config = simAuConfig(rootPath1);
     config.put("base_url", "http://www.title1.org/");
     sau1 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin1.class, config);
-    
-    ((MySimulatedPluginE) sau0.getPlugin()).notifyAusTitleDbChanged();
-    ((MySimulatedPluginE) sau1.getPlugin()).notifyAusTitleDbChanged();
-
- }
+  }
+  
+  
   Configuration simAuConfig(String rootPath) {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
@@ -103,14 +138,25 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     sau1.deleteContentTree();
     theDaemon.stopDaemon();
     super.tearDown();
+  }  
+  
+  protected CachedUrl getCuToExtract(ArticleFiles af) {
+    return cuRole != null ? af.getRoleCu(cuRole) : af.getFullTextCu();
   }
+  
   
   public void testEmitter() throws IOException, PluginException {
     Configuration config = ConfigManager.getCurrentConfig();
     assertNotNull(config);
-    
     Tdb tdb = config.getTdb();
     assertNotNull(tdb);
+    
+    TitleConfig tc = sau0.getTitleConfig();
+    assertNotNull(tc);
+    
+    TdbAu tdbau = tc.getTdbAu();
+    assertNotNull(tdbau);
+    
     
     Plugin plugin0 = sau0.getPlugin();
     ArticleMetadataExtractor metadataExtractor0 = 
@@ -118,20 +164,49 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
    
     Emitter myEmitter0 = new Emitter() {
       @Override
-      public void emitMetadata(ArticleFiles af, ArticleMetadata metadata) {
-        log.debug("hello from emitMetadata");
-      }
+      public void emitMetadata(ArticleFiles af, ArticleMetadata am) {
+     
+        assertNotNull(am); 
+        assertNotNull(am.get(MetadataField.FIELD_ISSN));
+        assertNotNull(am.get(MetadataField.FIELD_VOLUME));
+        
+       } 
+      
     };
+  
+    Plugin plugin1 = sau1.getPlugin();
+    ArticleMetadataExtractor metadataExtractor1 = 
+        plugin1.getArticleMetadataExtractor(MetadataTarget.OpenURL, sau1);
     
-    Iterator<ArticleFiles> articleItr = 
-        sau0.getArticleIterator(MetadataTarget.OpenURL);
-    while (articleItr.hasNext()) {
-      ArticleFiles af = articleItr.next();
-      metadataExtractor0.extract(MetadataTarget.Article, af, myEmitter0);
+    Emitter myEmitter1 = new Emitter() {
+      @Override
+      public void emitMetadata(ArticleFiles af, ArticleMetadata am) {
+     
+        assertNotNull(am);
+        assertNotNull(am.get(MetadataField.FIELD_ISSN));
+        assertNotNull(am.get(MetadataField.FIELD_VOLUME));
+        assertNotNull(am.get(MetadataField.FIELD_ACCESS_URL));
+        assertNotNull(am.get(MetadataField.FIELD_DOI));   
+       } 
+      
+    };
+     
+    try {
+      PluginTestUtil.crawlSimAu(sau0);
+      PluginTestUtil.crawlSimAu(sau1);
+      Iterator<ArticleFiles> ai = sau0.getArticleIterator();
+      Iterator<ArticleFiles> ai0 = sau1.getArticleIterator();
+      ArticleFiles af = ai.next();
+      ArticleFiles af0 = ai0.next();
+       metadataExtractor0.extract(MetadataTarget.OpenURL, af, myEmitter0);
+       metadataExtractor1.extract(MetadataTarget.OpenURL, af0, myEmitter1);
+    } catch (Exception e) {
+       e.printStackTrace();
     }
+         
  }
   
-  public static class MySubTreeArticleIteratorFactory
+    public static class MySubTreeArticleIteratorFactory
     implements ArticleIteratorFactory {
     String pat;
     public MySubTreeArticleIteratorFactory(String pat) {
@@ -167,8 +242,6 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
 
   
   public static class MySimulatedPluginE extends SimulatedPlugin {
-    ArticleMetadataExtractor simulatedArticleMetadataExtractor = null;
-   
      /**
      * Returns the article iterator factory for the mime type, if any
      * @param contentType the content type
@@ -183,7 +256,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     @Override
     public ArticleMetadataExtractor 
       getArticleMetadataExtractor(MetadataTarget target, ArchivalUnit au) {
-      return simulatedArticleMetadataExtractor;
+      return new BaseArticleMetadataExtractor();
     }
     
     @Override
@@ -194,108 +267,72 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
   
    
   public static class MySimulatedPlugin0 extends MySimulatedPluginE {
-    public MySimulatedPlugin0() {
-      simulatedArticleMetadataExtractor = new ArticleMetadataExtractor() {
-        int articleNumber = 0;
-        @Override
-        public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
-          throws IOException, PluginException {
-          ArticleMetadata md = new ArticleMetadata();
-          articleNumber++;
+    ArticleMetadata md = new ArticleMetadata();
+    
+    @Override
+    public FileMetadataExtractor
+    getFileMetadataExtractor(MetadataTarget target,
+           String contentType,
+           ArchivalUnit au) {
+      return  new  FileMetadataExtractor() {
+       @Override
+        public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
+            throws IOException, PluginException {
+       
           md.put(MetadataField.FIELD_ISSN,"0740-2783");
           md.put(MetadataField.FIELD_VOLUME,"XI");
-          if (articleNumber < 10) {
-            md.put(MetadataField.FIELD_ISSUE,"1st Quarter");
-            md.put(MetadataField.FIELD_DATE,"2010-Q1");
-            md.put(MetadataField.FIELD_START_PAGE,"" + articleNumber);
-          } else {
-            md.put(MetadataField.FIELD_ISSUE,"2nd Quarter");
-            md.put(MetadataField.FIELD_DATE,"2010-Q2");
-            md.put(MetadataField.FIELD_START_PAGE,"" + (articleNumber-9));
-          }
-          String doiPrefix = "10.1234/12345678";
-          String doi = doiPrefix + "."
-      + md.get(MetadataField.FIELD_DATE) + "."
-      + md.get(MetadataField.FIELD_START_PAGE); 
-          md.put(MetadataField.FIELD_DOI, doi);
-        //  md.put(MetadataField.FIELD_JOURNAL_TITLE,"Journal[" + doiPrefix + "]");
-          md.put(MetadataField.FIELD_ARTICLE_TITLE,"Title[" + doi + "]");
-          md.put(MetadataField.FIELD_AUTHOR,"Author[" + doi + "]");
           md.put(MetadataField.FIELD_ACCESS_URL, 
            "http://www.title0.org/plugin0/XI/"
              +  md.get(MetadataField.FIELD_ISSUE) 
              +"/p" + md.get(MetadataField.FIELD_START_PAGE));
-          BaseArticleMetadataExtractor bm = new BaseArticleMetadataExtractor(); 
-          MyEmitter myEmitter = bm.new MyEmitter(af, emitter);
-          CachedUrl cu = getCuToExtract(af);
-          myEmitter.emitMetadata(cu, md);
+          emitter.emitMetadata(cu,md);
+          
         }
       };
     }
-      protected CachedUrl getCuToExtract(ArticleFiles af) {
-        return cuRole != null ? af.getRoleCu(cuRole) : af.getFullTextCu();
-      }
-    
-    public ExternalizableMap getDefinitionMap() {
-      ExternalizableMap map = new ExternalizableMap();
-      map.putString("au_start_url", "\"%splugin0/%s\", base_url, volume");
-      map.putString("au_volume_url", "\"%splugin0/%s/toc\", base_url, volume");
-      map.putString("au_issue_url", "\"%splugin0/%s/%s/toc\", base_url, volume, issue");
-      map.putString("au_title_url", "\"%splugin0/toc\", base_url");
-      return map;
-    }
-  }
+   }
   
-    
-    
-  public static class MySimulatedPlugin1 extends MySimulatedPluginE {
-    public MySimulatedPlugin1() {
-      simulatedArticleMetadataExtractor = new ArticleMetadataExtractor() {
-        int articleNumber = 0;
-    public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
+  
+  
+public static class MySimulatedPlugin1 extends MySimulatedPluginE {
+  ArticleMetadata md = new ArticleMetadata();
+  public FileMetadataExtractor
+  getFileMetadataExtractor(MetadataTarget target,
+         String contentType,
+         ArchivalUnit au) {
+    return  new  FileMetadataExtractor() {
+      @Override
+      public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
           throws IOException, PluginException {
-          ArticleMetadata md = new ArticleMetadata();
-          articleNumber++;
-          md.put(MetadataField.FIELD_ACCESS_URL, 
-           "http://www.title0.org/plugin0/XI/"
-             +  md.get(MetadataField.FIELD_ISSUE) 
-             +"/p" + md.get(MetadataField.FIELD_START_PAGE));
-          emitter.emitMetadata(af, md);
-        }
-      };
-    }
-    public ExternalizableMap getDefinitionMap() {
-      ExternalizableMap map = new ExternalizableMap();
-      map.putString("au_start_url", "\"%splugin1/%s\", base_url, volume");
-      map.putString("au_volume_url", "\"%splugin1/%s/toc\", base_url, volume");
-      map.putString("au_issue_url", "\"%splugin1/%s/%s/toc\", base_url, volume, issue");
-      map.putString("au_title_url", "\"%splugin1/toc\", base_url");
-      return map;
-    }
- 
-  Configuration simAuConfig(String rootPath) {
-    Configuration conf = ConfigManager.newConfiguration();
-    conf.put("root", rootPath);
-    conf.put("depth", "2");
-    conf.put("branch", "1");
-    conf.put("numFiles", "3");
-    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
-        SimulatedContentGenerator.FILE_TYPE_HTML));
-    conf.put("binFileSize", "7");
-    return conf;
+       
+        md.put(MetadataField.FIELD_ISSN,"0740-2783");
+        md.put(MetadataField.FIELD_VOLUME,"XI");
+        md.put(MetadataField.FIELD_ACCESS_URL, 
+         "http://www.title0.org/plugin1/XI/"
+           +  md.get(MetadataField.FIELD_ISSUE) 
+           +"/p" + md.get(MetadataField.FIELD_START_PAGE));
+        String doiPrefix = "10.1234/12345678";
+        String doi = doiPrefix + "."
+        + md.get(MetadataField.FIELD_DATE) + "."
+        + md.get(MetadataField.FIELD_START_PAGE); 
+        md.put(MetadataField.FIELD_DOI, doi);
+        emitter.emitMetadata(cu, md);
+      }
+    };
   }
   
-  protected static void addAccessUrl(ArticleMetadata am, ArticleFiles af) {
-    if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL)) {
-      am.put(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
-    }
-  }
- 
-  protected CachedUrl getCuToExtract(ArticleFiles af) {
-    return cuRole != null ? af.getRoleCu(cuRole) : af.getFullTextCu();
-  }
   
- 
-  }
+} 
 }
+  
+
+    
+  
+
+  
+  
+  
+ 
+  
+
 
