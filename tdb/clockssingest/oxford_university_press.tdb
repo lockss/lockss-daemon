@@ -5547,7 +5547,7 @@
     au < wanted ; exists ; 2005 ; Forestry: An International Journal of Forest Research Volume 78 ; 78 ; >
     au < wanted ; exists ; 2006 ; Forestry: An International Journal of Forest Research Volume 79 ; 79 ; >
     au < wanted ; exists ; 2007 ; Forestry: An International Journal of Forest Research Volume 80 ; 80 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Forestry Volume 81 ; 81 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Forestry: An International Journal of Forest Research Volume 81 ; 81 ; >
     au < released ; crawling ; 2009 ; Forestry: An International Journal of Forest Research Volume 82 ; 82 ; >
     au < released ; crawling ; 2010 ; Forestry: An International Journal of Forest Research Volume 83 ; 83 ; >
     au < released ; crawling ; 2011 ; Forestry: An International Journal of Forest Research Volume 84 ; 84 ; >
@@ -5703,8 +5703,8 @@
     param[base_url] = http://fs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; French Studies Volume 62 ; 62 ; >
-    au < down ; crawling ; 2009 ; French Studies Volume 63 ; 63 ; reingest4.clockss.org:8082 >
+    au < down ; crawling ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 ; >
+    au < down ; crawling ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -5776,7 +5776,7 @@
     au < wanted ; exists ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 ; >
     au < released ; crawling ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 ; >
-    au < released ; crawling ; 2010 ; French Studies Volume 64 ; 64 ; >
+    au < released ; crawling ; 2010 ; FFrench Studies: A Quarterly Review Volume 64 ; 64 ; >
     au < released ; crawling ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 ; >
     au < crawling ; exists ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 ; >
 
