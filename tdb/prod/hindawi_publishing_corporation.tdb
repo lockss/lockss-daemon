@@ -218,16 +218,15 @@
     >
 
     param[journal_id] = ade
-    comment[1] = Doesn't seem to exist anymore?
 
-    au < released ; Advances in Difference Equations Volume 2004 ; 2004 ; 2004 ; 2004 >
-    au < released ; Advances in Difference Equations Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < released ; Advances in Difference Equations Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < released ; Advances in Difference Equations Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Advances in Difference Equations Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Advances in Difference Equations Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Advances in Difference Equations Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; Advances in Difference Equations Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; Advances in Difference Equations Volume 2004 ; 2004 ; 2004 ; 2004 >
+    au < down ; Advances in Difference Equations Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < down ; Advances in Difference Equations Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < down ; Advances in Difference Equations Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; Advances in Difference Equations Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; Advances in Difference Equations Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; Advances in Difference Equations Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; Advances in Difference Equations Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -916,15 +915,15 @@
     >
 
     param[journal_id] = bvp
-    comment[1] = Doesn't seem to exist?
+    comment[1] = Journal down
 
-    au < released ; Boundary Value Problems Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < released ; Boundary Value Problems Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < released ; Boundary Value Problems Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Boundary Value Problems Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Boundary Value Problems Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Boundary Value Problems Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; Boundary Value Problems Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; Boundary Value Problems Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < down ; Boundary Value Problems Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < down ; Boundary Value Problems Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; Boundary Value Problems Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; Boundary Value Problems Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; Boundary Value Problems Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; Boundary Value Problems Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -970,8 +969,9 @@
     >
 
     param[journal_id] = crial
+    comment[2] = redirects to /crim subdir
 
-    au < doesNotExist ; Case Reports in Allergy Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; Case Reports in Allergy Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -984,6 +984,7 @@
     >
 
     param[journal_id] = crian
+    comment[2] = www.hindawi.com/journals/crain/2012 redirects to www.hindawi.com/crim/anesthesiology/2012/
 
     au < doesNotExist ; Case Reports in Anesthesiology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -998,6 +999,7 @@
     >
 
     param[journal_id] = cric
+    comment[2] = redirects to hindawi.com/crim/ subdirectory
 
     au < doesNotExist ; Case Reports in Cardiology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1012,6 +1014,7 @@
     >
 
     param[journal_id] = cricc
+    comment[2] = redirects to /crim subdirectory
 
     au < notReady ; Case Reports in Critical Care Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1026,6 +1029,7 @@
     >
 
     param[journal_id] = crid
+    comment[2] = redirects to /crim subdirectory
 
     au < notReady ; Case Reports in Dentistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1040,6 +1044,7 @@
     >
 
     param[journal_id] = cridm
+    comment[2] = redirects to /crim subdir
 
     au < doesNotExist ; Case Reports in Dermatological Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1054,6 +1059,7 @@
     >
 
     param[journal_id] = criem
+    comment[2] = redirects to /crim subdir
 
     au < doesNotExist ; Case Reports in Emergency Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1068,6 +1074,7 @@
     >
 
     param[journal_id] = crie
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Endocrinology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1082,6 +1089,7 @@
     >
 
     param[journal_id] = crigm
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1096,6 +1104,7 @@
     >
 
     param[journal_id] = crig
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Genetics Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1110,6 +1119,7 @@
     >
 
     param[journal_id] = crihem
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1124,6 +1134,7 @@
     >
 
     param[journal_id] = crihep
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Hepatology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1138,6 +1149,7 @@
     >
 
     param[journal_id] = crii
+    comment[2] = redirects to /crim subdir
 
     au < doesNotExist ; Case Reports in Immunology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1152,6 +1164,7 @@
     >
 
     param[journal_id] = criid
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1183,6 +1196,7 @@
     >
 
     param[journal_id] = crin
+    comments[2] = redirects to /crim subdir
 
     au < ready ; Case Reports in Nephrology Volume 2011 ; 2011 ; 2011 ; 2011 >
     au < manifest ; Case Reports in Nephrology Volume 2012 ; 2012 ; 2012 ; 2012 >
@@ -1198,6 +1212,7 @@
     >
 
     param[journal_id] = crinm
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Neurological Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1212,6 +1227,7 @@
     >
 
     param[journal_id] = criog
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1226,6 +1242,7 @@
     >
 
     param[journal_id] = crionc
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Oncological Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1240,6 +1257,7 @@
     >
 
     param[journal_id] = criom
+    comment[2] = redirects to /crim subdir
 
     au < doesNotExist ; Case Reports in Ophthalmological Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1254,6 +1272,7 @@
     >
 
     param[journal_id] = crior
+    comment[2] = redirects to /crim subdir
 
     au < doesNotExist ; Case Reports in Orthopedics Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1268,6 +1287,7 @@
     >
 
     param[journal_id] = criot
+    comment[2] = redirects to /crim subdir
 
     au < doesNotExist ; Case Reports in Otolaryngology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1282,6 +1302,7 @@
     >
 
     param[journal_id] = cripa
+    comment[2] = redirects to /crim subdir
 
     au < doesNotExist ; Case Reports in Pathology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1296,6 +1317,7 @@
     >
 
     param[journal_id] = cripe
+    comment[2] = redirects to /crim subdir
 
     au < doesNotExist ; Case Reports in Pediatrics Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1310,6 +1332,7 @@
     >
 
     param[journal_id] = crip
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Psychiatry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1324,6 +1347,7 @@
     >
 
     param[journal_id] = cripul
+    comment[2] = redirects to /crim subdir
 
     au < doesNotExist ; Case Reports in Pulmonology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1338,6 +1362,7 @@
     >
 
     param[journal_id] = crirad
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Radiology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1352,6 +1377,7 @@
     >
 
     param[journal_id] = crirh
+    comment[2] = redirects to /crim subdir
 
     au < doesNotExist ; Case Reports in Rheumatology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1366,6 +1392,7 @@
     >
 
     param[journal_id] = cris
+    comment[2] = redirects to /crim subdir
 
     au < doesNotExist ; Case Reports in Surgery Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1380,6 +1407,7 @@
     >
 
     param[journal_id] = critox
+    comment[2] = redirects to /crim subdir (still DNE, though)
 
     au < doesNotExist ; Case Reports in Toxicology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1394,6 +1422,7 @@
     >
 
     param[journal_id] = critran
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Transplantation Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1408,6 +1437,7 @@
     >
 
     param[journal_id] = criu
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Urology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1422,6 +1452,7 @@
     >
 
     param[journal_id] = crivas
+    comment[2] = redirects to /crim subdir
 
     au < doesNotExist ; Case Reports in Vascular Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1436,6 +1467,7 @@
     >
 
     param[journal_id] = crivm
+    comment[2] = redirects to /crim subdir
 
     au < notReady ; Case Reports in Veterinary Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -1871,17 +1903,17 @@
     param[journal_id] = asp
     comment[1] = Doesn't seem to exist anymore?
 
-    au < released ; EURASIP Journal on Advances in Signal Processing Volume 2001 ; 2001 ; 2001 ; 2001 >
-    au < released ; EURASIP Journal on Advances in Signal Processing Volume 2002 ; 2002 ; 2002 ; 2002 >
-    au < released ; EURASIP Journal on Advances in Signal Processing Volume 2003 ; 2003 ; 2003 ; 2003 >
-    au < released ; EURASIP Journal on Advances in Signal Processing Volume 2004 ; 2004 ; 2004 ; 2004 >
-    au < released ; EURASIP Journal on Advances in Signal Processing Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < released ; EURASIP Journal on Advances in Signal Processing Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < released ; EURASIP Journal on Advances in Signal Processing Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; EURASIP Journal on Advances in Signal Processing Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; EURASIP Journal on Advances in Signal Processing Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; EURASIP Journal on Advances in Signal Processing Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; EURASIP Journal on Advances in Signal Processing Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; EURASIP Journal on Advances in Signal Processing Volume 2001 ; 2001 ; 2001 ; 2001 >
+    au < down ; EURASIP Journal on Advances in Signal Processing Volume 2002 ; 2002 ; 2002 ; 2002 >
+    au < down ; EURASIP Journal on Advances in Signal Processing Volume 2003 ; 2003 ; 2003 ; 2003 >
+    au < down ; EURASIP Journal on Advances in Signal Processing Volume 2004 ; 2004 ; 2004 ; 2004 >
+    au < down ; EURASIP Journal on Advances in Signal Processing Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < down ; EURASIP Journal on Advances in Signal Processing Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < down ; EURASIP Journal on Advances in Signal Processing Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; EURASIP Journal on Advances in Signal Processing Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; EURASIP Journal on Advances in Signal Processing Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; EURASIP Journal on Advances in Signal Processing Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; EURASIP Journal on Advances in Signal Processing Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1895,11 +1927,11 @@
 
     param[journal_id] = asmp
 
-    au < released ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1913,12 +1945,12 @@
 
     param[journal_id] = bsb
 
-    au < released ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < released ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < down ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1932,12 +1964,12 @@
 
     param[journal_id] = es
 
-    au < released ; EURASIP Journal on Embedded Systems Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < released ; EURASIP Journal on Embedded Systems Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; EURASIP Journal on Embedded Systems Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; EURASIP Journal on Embedded Systems Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; EURASIP Journal on Embedded Systems Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; EURASIP Journal on Embedded Systems Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; EURASIP Journal on Embedded Systems Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < down ; EURASIP Journal on Embedded Systems Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; EURASIP Journal on Embedded Systems Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; EURASIP Journal on Embedded Systems Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; EURASIP Journal on Embedded Systems Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; EURASIP Journal on Embedded Systems Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1951,11 +1983,11 @@
 
     param[journal_id] = ivp
 
-    au < released ; EURASIP Journal on Image and Video Processing Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; EURASIP Journal on Image and Video Processing Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; EURASIP Journal on Image and Video Processing Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; EURASIP Journal on Image and Video Processing Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; EURASIP Journal on Image and Video Processing Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; EURASIP Journal on Image and Video Processing Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; EURASIP Journal on Image and Video Processing Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; EURASIP Journal on Image and Video Processing Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; EURASIP Journal on Image and Video Processing Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; EURASIP Journal on Image and Video Processing Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1969,11 +2001,11 @@
 
     param[journal_id] = is
 
-    au < released ; EURASIP Journal on Information Security Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; EURASIP Journal on Information Security Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; EURASIP Journal on Information Security Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; EURASIP Journal on Information Security Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; EURASIP Journal on Information Security Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; EURASIP Journal on Information Security Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; EURASIP Journal on Information Security Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; EURASIP Journal on Information Security Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; EURASIP Journal on Information Security Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; EURASIP Journal on Information Security Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1987,14 +2019,14 @@
 
     param[journal_id] = wcn
 
-    au < released ; EURASIP Journal on Wireless Communications and Networking Volume 2004 ; 2004 ; 2004 ; 2004 >
-    au < released ; EURASIP Journal on Wireless Communications and Networking Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < released ; EURASIP Journal on Wireless Communications and Networking Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < released ; EURASIP Journal on Wireless Communications and Networking Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; EURASIP Journal on Wireless Communications and Networking Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; EURASIP Journal on Wireless Communications and Networking Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; EURASIP Journal on Wireless Communications and Networking Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; EURASIP Journal on Wireless Communications and Networking Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; EURASIP Journal on Wireless Communications and Networking Volume 2004 ; 2004 ; 2004 ; 2004 >
+    au < down ; EURASIP Journal on Wireless Communications and Networking Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < down ; EURASIP Journal on Wireless Communications and Networking Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < down ; EURASIP Journal on Wireless Communications and Networking Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; EURASIP Journal on Wireless Communications and Networking Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; EURASIP Journal on Wireless Communications and Networking Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; EURASIP Journal on Wireless Communications and Networking Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; EURASIP Journal on Wireless Communications and Networking Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2032,14 +2064,14 @@
 
     param[journal_id] = fpta
 
-    au < released ; Fixed Point Theory and Applications Volume 2004 ; 2004 ; 2004 ; 2004 >
-    au < released ; Fixed Point Theory and Applications Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < released ; Fixed Point Theory and Applications Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < released ; Fixed Point Theory and Applications Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Fixed Point Theory and Applications Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Fixed Point Theory and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Fixed Point Theory and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; Fixed Point Theory and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; Fixed Point Theory and Applications Volume 2004 ; 2004 ; 2004 ; 2004 >
+    au < down ; Fixed Point Theory and Applications Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < down ; Fixed Point Theory and Applications Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < down ; Fixed Point Theory and Applications Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; Fixed Point Theory and Applications Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; Fixed Point Theory and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; Fixed Point Theory and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; Fixed Point Theory and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2085,7 +2117,7 @@
 
     param[journal_id] = hrt
 
-    au < released ; Headache Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; Headache Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2923,10 +2955,10 @@
 	
     param[journal_id] = ijpe
 
-    au < doesNotExist ; International Journal of Pediatric Endocrinology Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; International Journal of Pediatric Endocrinology Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; International Journal of Pediatric Endocrinology Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; International Journal of Pediatric Endocrinology Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; International Journal of Pediatric Endocrinology Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; International Journal of Pediatric Endocrinology Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; International Journal of Pediatric Endocrinology Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; International Journal of Pediatric Endocrinology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3025,9 +3057,9 @@
     
     param[journal_id] = ijpse
 
-    au < released ; International Journal of Plasma Science and Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; International Journal of Plasma Science and Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < doesNotExist ; International Journal of Plasma Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; International Journal of Plasma Science and Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; International Journal of Plasma Science and Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; International Journal of Plasma Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
 
   }
 
@@ -3515,9 +3547,9 @@
     
     param[journal_id] = jaea
 
-    au < released ; Journal of Artificial Evolution and Applications Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Journal of Artificial Evolution and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Journal of Artificial Evolution and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; Journal of Artificial Evolution and Applications Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; Journal of Artificial Evolution and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; Journal of Artificial Evolution and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < doesNotExist ; Journal of Artificial Evolution and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
@@ -3548,6 +3580,8 @@
     >
 
     param[journal_id] = jammc
+    comment[jammc] = the url 'http://www.hindawi.com/journals/jmmc/' redirects to 'http://www.hindawi.com/journals/jamc/'
+    comment[jammc1] = all articles still available under jamc
 
     au < released ; Journal of Automated Methods and Management in Chemistry Volume 1 (1980) ; 1980 ; 1 ; 1980 >
     au < released ; Journal of Automated Methods and Management in Chemistry Volume 2 (1981) ; 1981 ; 2 ; 1981 >
@@ -3581,7 +3615,7 @@
     au < released ; Journal of Automated Methods and Management in Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Automated Methods and Management in Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Automated Methods and Management in Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Journal of Automated Methods and Management in Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3708,6 +3742,7 @@
     >
     
     comment[jcsnc] = the url "http://www.hindawi.com/journals/jcsnc/" redirects to "http://www.hindawi.com/journals/jcnc/"
+    comment[jcsnc1] = no longer redirects. Articles still available
 
     param[journal_id] = jcsnc
 
@@ -3815,20 +3850,20 @@
     param[journal_id] = jia
     comment[0] = Journal doesn't exist anymore?
 
-    au < released ; Journal of Inequalities and Applications Volume 1 (1998) ; 1998 ; 1 ; 1998 >
-    au < released ; Journal of Inequalities and Applications Volume 2 (1999) ; 1999 ; 2 ; 1999 >
-    au < released ; Journal of Inequalities and Applications Volume 3 (2000) ; 2000 ; 3 ; 2000 >
-    au < released ; Journal of Inequalities and Applications Volume 4 (2001) ; 2001 ; 4 ; 2001 >
-    au < released ; Journal of Inequalities and Applications Volume 5 (2002) ; 2002 ; 5 ; 2002 >
-    au < released ; Journal of Inequalities and Applications Volume 6 (2003) ; 2003 ; 6 ; 2003 >
-    au < released ; Journal of Inequalities and Applications Volume 7 (2004) ; 2004 ; 7 ; 2004 >
-    au < released ; Journal of Inequalities and Applications Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < released ; Journal of Inequalities and Applications Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < released ; Journal of Inequalities and Applications Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Journal of Inequalities and Applications Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Journal of Inequalities and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Journal of Inequalities and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; Journal of Inequalities and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; Journal of Inequalities and Applications Volume 1 (1998) ; 1998 ; 1 ; 1998 >
+    au < down ; Journal of Inequalities and Applications Volume 2 (1999) ; 1999 ; 2 ; 1999 >
+    au < down ; Journal of Inequalities and Applications Volume 3 (2000) ; 2000 ; 3 ; 2000 >
+    au < down ; Journal of Inequalities and Applications Volume 4 (2001) ; 2001 ; 4 ; 2001 >
+    au < down ; Journal of Inequalities and Applications Volume 5 (2002) ; 2002 ; 5 ; 2002 >
+    au < down ; Journal of Inequalities and Applications Volume 6 (2003) ; 2003 ; 6 ; 2003 >
+    au < down ; Journal of Inequalities and Applications Volume 7 (2004) ; 2004 ; 7 ; 2004 >
+    au < down ; Journal of Inequalities and Applications Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < down ; Journal of Inequalities and Applications Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < down ; Journal of Inequalities and Applications Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; Journal of Inequalities and Applications Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; Journal of Inequalities and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; Journal of Inequalities and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; Journal of Inequalities and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4221,7 +4256,7 @@
     >
 
     param[journal_id] = jtf
-    comment[0] = redirects to journal_id jbt
+    comment[blood] = redirects to journal_id jbt
 
     au < released ; Journal of Transfusion Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -4271,35 +4306,35 @@
 
     param[journal_id] = lc
 
-    au < released ; Laser Chemistry Volume 1 (1982) ; 1982 ; 1 ; 1982 >
-    au < released ; Laser Chemistry Volume 1-4 (1983) ; 1983 ; 1-4 ; 1983 >
-    au < released ; Laser Chemistry Volume 4-5 (1984) ; 1984 ; 4-5 ; 1984 >
-    au < released ; Laser Chemistry Volume 5 (1985) ; 1985 ; 5 ; 1985 >
-    au < released ; Laser Chemistry Volume 5-6 (1986) ; 1986 ; 5-6 ; 1986 >
-    au < released ; Laser Chemistry Volume 7 (1987) ; 1987 ; 7 ; 1987 >
-    au < released ; Laser Chemistry Volume 8-9 (1988) ; 1988 ; 8-9 ; 1988 >
-    au < released ; Laser Chemistry Volume 10 (1989) ; 1989 ; 10 ; 1989 >
-    au < released ; Laser Chemistry Volume 10 (1990) ; 1990 ; 10 ; 1990 >
-    au < released ; Laser Chemistry Volume 11 (1991) ; 1991 ; 11 ; 1991 >
-    au < released ; Laser Chemistry Volume 12 (1992) ; 1992 ; 12 ; 1992 >
-    au < released ; Laser Chemistry Volume 13 (1993) ; 1993 ; 13 ; 1993 >
-    au < released ; Laser Chemistry Volume 13-15 (1994) ; 1994 ; 13-15 ; 1994 >
-    au < released ; Laser Chemistry Volume 15-16 (1995) ; 1995 ; 15-16 ; 1995 >
-    au < released ; Laser Chemistry Volume 16 (1996) ; 1996 ; 16 ; 1996 >
-    au < released ; Laser Chemistry Volume 17 (1997) ; 1997 ; 17 ; 1997 >
-    au < released ; Laser Chemistry Volume 17-18 (1998) ; 1998 ; 17-18 ; 1998 >
-    au < released ; Laser Chemistry Volume 18-19 (1999) ; 1999 ; 18-19 ; 1999 >
-    au < released ; Laser Chemistry Volume 18 (2000) ; 2000 ; 18 ; 2000 >
+    au < down ; Laser Chemistry Volume 1 (1982) ; 1982 ; 1 ; 1982 >
+    au < down ; Laser Chemistry Volume 1-4 (1983) ; 1983 ; 1-4 ; 1983 >
+    au < down ; Laser Chemistry Volume 4-5 (1984) ; 1984 ; 4-5 ; 1984 >
+    au < down ; Laser Chemistry Volume 5 (1985) ; 1985 ; 5 ; 1985 >
+    au < down ; Laser Chemistry Volume 5-6 (1986) ; 1986 ; 5-6 ; 1986 >
+    au < down ; Laser Chemistry Volume 7 (1987) ; 1987 ; 7 ; 1987 >
+    au < down ; Laser Chemistry Volume 8-9 (1988) ; 1988 ; 8-9 ; 1988 >
+    au < down ; Laser Chemistry Volume 10 (1989) ; 1989 ; 10 ; 1989 >
+    au < down ; Laser Chemistry Volume 10 (1990) ; 1990 ; 10 ; 1990 >
+    au < down ; Laser Chemistry Volume 11 (1991) ; 1991 ; 11 ; 1991 >
+    au < down ; Laser Chemistry Volume 12 (1992) ; 1992 ; 12 ; 1992 >
+    au < down ; Laser Chemistry Volume 13 (1993) ; 1993 ; 13 ; 1993 >
+    au < down ; Laser Chemistry Volume 13-15 (1994) ; 1994 ; 13-15 ; 1994 >
+    au < down ; Laser Chemistry Volume 15-16 (1995) ; 1995 ; 15-16 ; 1995 >
+    au < down ; Laser Chemistry Volume 16 (1996) ; 1996 ; 16 ; 1996 >
+    au < down ; Laser Chemistry Volume 17 (1997) ; 1997 ; 17 ; 1997 >
+    au < down ; Laser Chemistry Volume 17-18 (1998) ; 1998 ; 17-18 ; 1998 >
+    au < down ; Laser Chemistry Volume 18-19 (1999) ; 1999 ; 18-19 ; 1999 >
+    au < down ; Laser Chemistry Volume 18 (2000) ; 2000 ; 18 ; 2000 >
     au < doesNotExist ; Laser Chemistry Volume 2001 ; 2001 ; 2001 ; 2001 >
-    au < released ; Laser Chemistry Volume 20 (2002) ; 2002 ; 20 ; 2002 >
+    au < down ; Laser Chemistry Volume 20 (2002) ; 2002 ; 20 ; 2002 >
     au < doesNotExist ; Laser Chemistry Volume 2003 ; 2003 ; 2003 ; 2003 >
     au < doesNotExist ; Laser Chemistry Volume 2004 ; 2004 ; 2004 ; 2004 >
     au < doesNotExist ; Laser Chemistry Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < released ; Laser Chemistry Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < released ; Laser Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Laser Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Laser Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Laser Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; Laser Chemistry Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < down ; Laser Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; Laser Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; Laser Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; Laser Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < doesNotExist ; Laser Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
@@ -4437,20 +4472,20 @@
     param[journal_id] = mbd
     comment[mbd] = No longer exists?
 
-    au < released ; Metal-Based Drugs Volume 1 (1998) ; 1998 ; 1 ; 1998 >
-    au < released ; Metal-Based Drugs Volume 2 (1999) ; 1999 ; 2 ; 1999 >
-    au < released ; Metal-Based Drugs Volume 3 (2000) ; 2000 ; 3 ; 2000 >
-    au < released ; Metal-Based Drugs Volume 4 (2001) ; 2001 ; 4 ; 2001 >
-    au < released ; Metal-Based Drugs Volume 5 (2002) ; 2002 ; 5 ; 2002 >
-    au < released ; Metal-Based Drugs Volume 6 (2003) ; 2003 ; 6 ; 2003 >
-    au < released ; Metal-Based Drugs Volume 7 (2004) ; 2004 ; 7 ; 2004 >
-    au < released ; Metal-Based Drugs Volume 8 (2005) ; 2005 ; 8 ; 2005 >
-    au < released ; Metal-Based Drugs Volume 9 (2006) ; 2006 ; 9 ; 2006 >
-    au < released ; Metal-Based Drugs Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Metal-Based Drugs Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Metal-Based Drugs Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Metal-Based Drugs Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; Metal-Based Drugs Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < down ; Metal-Based Drugs Volume 1 (1998) ; 1998 ; 1 ; 1998 >
+    au < down ; Metal-Based Drugs Volume 2 (1999) ; 1999 ; 2 ; 1999 >
+    au < down ; Metal-Based Drugs Volume 3 (2000) ; 2000 ; 3 ; 2000 >
+    au < down ; Metal-Based Drugs Volume 4 (2001) ; 2001 ; 4 ; 2001 >
+    au < down ; Metal-Based Drugs Volume 5 (2002) ; 2002 ; 5 ; 2002 >
+    au < down ; Metal-Based Drugs Volume 6 (2003) ; 2003 ; 6 ; 2003 >
+    au < down ; Metal-Based Drugs Volume 7 (2004) ; 2004 ; 7 ; 2004 >
+    au < down ; Metal-Based Drugs Volume 8 (2005) ; 2005 ; 8 ; 2005 >
+    au < down ; Metal-Based Drugs Volume 9 (2006) ; 2006 ; 9 ; 2006 >
+    au < down ; Metal-Based Drugs Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; Metal-Based Drugs Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; Metal-Based Drugs Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; Metal-Based Drugs Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; Metal-Based Drugs Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4729,23 +4764,23 @@
 	
     param[journal_id] = psse
 
-    au < released ; Physical Separation in Science and Engineering Volume 1 (1994) ; 1994 ; 1 ; 1994 >
-    au < released ; Physical Separation in Science and Engineering Volume 2 (1995) ; 1995 ; 2 ; 1995 >
-    au < released ; Physical Separation in Science and Engineering Volume 3 (1996) ; 1996 ; 3 ; 1996 >
-    au < released ; Physical Separation in Science and Engineering Volume 4 (1997) ; 1997 ; 4 ; 1997 >
-    au < released ; Physical Separation in Science and Engineering Volume 5 (1998) ; 1998 ; 5 ; 1998 >
-    au < released ; Physical Separation in Science and Engineering Volume 6 (1999) ; 1999 ; 6 ; 1999 >
-    au < released ; Physical Separation in Science and Engineering Volume 7 (2000) ; 2000 ; 7 ; 2000 >
-    au < released ; Physical Separation in Science and Engineering Volume 8 (2001) ; 2001 ; 8 ; 2001 >
-    au < released ; Physical Separation in Science and Engineering Volume 9 (2002) ; 2002 ; 9 ; 2002 >
-    au < released ; Physical Separation in Science and Engineering Volume 10 (2003) ; 2003 ; 10 ; 2003 >
-    au < released ; Physical Separation in Science and Engineering Volume 11 (2004) ; 2004 ; 11 ; 2004 >
-    au < released ; Physical Separation in Science and Engineering Volume 12 (2005) ; 2005 ; 12 ; 2005 >
-    au < released ; Physical Separation in Science and Engineering Volume 13 (2006) ; 2006 ; 13 ; 2006 >
-    au < released ; Physical Separation in Science and Engineering Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Physical Separation in Science and Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Physical Separation in Science and Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Physical Separation in Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; Physical Separation in Science and Engineering Volume 1 (1994) ; 1994 ; 1 ; 1994 >
+    au < down ; Physical Separation in Science and Engineering Volume 2 (1995) ; 1995 ; 2 ; 1995 >
+    au < down ; Physical Separation in Science and Engineering Volume 3 (1996) ; 1996 ; 3 ; 1996 >
+    au < down ; Physical Separation in Science and Engineering Volume 4 (1997) ; 1997 ; 4 ; 1997 >
+    au < down ; Physical Separation in Science and Engineering Volume 5 (1998) ; 1998 ; 5 ; 1998 >
+    au < down ; Physical Separation in Science and Engineering Volume 6 (1999) ; 1999 ; 6 ; 1999 >
+    au < down ; Physical Separation in Science and Engineering Volume 7 (2000) ; 2000 ; 7 ; 2000 >
+    au < down ; Physical Separation in Science and Engineering Volume 8 (2001) ; 2001 ; 8 ; 2001 >
+    au < down ; Physical Separation in Science and Engineering Volume 9 (2002) ; 2002 ; 9 ; 2002 >
+    au < down ; Physical Separation in Science and Engineering Volume 10 (2003) ; 2003 ; 10 ; 2003 >
+    au < down ; Physical Separation in Science and Engineering Volume 11 (2004) ; 2004 ; 11 ; 2004 >
+    au < down ; Physical Separation in Science and Engineering Volume 12 (2005) ; 2005 ; 12 ; 2005 >
+    au < down ; Physical Separation in Science and Engineering Volume 13 (2006) ; 2006 ; 13 ; 2006 >
+    au < down ; Physical Separation in Science and Engineering Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < down ; Physical Separation in Science and Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; Physical Separation in Science and Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; Physical Separation in Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < doesNotExist ; Physical Separation in Science and Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
@@ -5362,39 +5397,39 @@
 	
     param[journal_id] = tsm
 
-    au < released ; Texture, Stress, and Microstructure Volume 1 (1972) ; 1972 ; 1 ; 1972 >
-    au < released ; Texture, Stress, and Microstructure Volume 1 (1974) ; 1974 ; 1 ; 1974 >
-    au < released ; Texture, Stress, and Microstructure Volume 2 (1975) ; 1975 ; 2 ; 1975 >
-    au < released ; Texture, Stress, and Microstructure Volume 2 (1976) ; 1976 ; 2 ; 1976 >
-    au < released ; Texture, Stress, and Microstructure Volume 2 (1977) ; 1977 ; 2 ; 1977 >
-    au < released ; Texture, Stress, and Microstructure Volume 3 (1978) ; 1978 ; 3 ; 1978 >
-    au < released ; Texture, Stress, and Microstructure Volume 3 (1979) ; 1979 ; 3 ; 1979 >
-    au < released ; Texture, Stress, and Microstructure Volume 4 (1980) ; 1980 ; 4 ; 1980 >
-    au < released ; Texture, Stress, and Microstructure Volume 4 (1981) ; 1981 ; 4 ; 1981 >
-    au < released ; Texture, Stress, and Microstructure Volume 4-5 (1982) ; 1982 ; 4-5 ; 1982 >
-    au < released ; Texture, Stress, and Microstructure Volume 5-6 (1983) ; 1983 ; 5-6 ; 1983 >
-    au < released ; Texture, Stress, and Microstructure Volume 6 (1984) ; 1984 ; 6 ; 1984 >
-    au < released ; Texture, Stress, and Microstructure Volume 6 (1986) ; 1986 ; 6 ; 1986 >
-    au < released ; Texture, Stress, and Microstructure Volume 7 (1987) ; 1987 ; 7 ; 1987 >
-    au < released ; Texture, Stress, and Microstructure Volume 7-10 (1988) ; 1988 ; 7-10 ; 1988 >
-    au < released ; Texture, Stress, and Microstructure Volume 10-11 (1989) ; 1989 ; 10-11 ; 1989 >
-    au < released ; Texture, Stress, and Microstructure Volume 12-13 (1990) ; 1990 ; 12-13 ; 1990 >
-    au < released ; Texture, Stress, and Microstructure Volume 13-18 (1991) ; 1991 ; 13-18 ; 1991 >
-    au < released ; Texture, Stress, and Microstructure Volume 19 (1992) ; 1992 ; 19 ; 1992 >
-    au < released ; Texture, Stress, and Microstructure Volume 20-22 (1993) ; 1993 ; 20-22 ; 1993 >
-    au < released ; Texture, Stress, and Microstructure Volume 22 (1994) ; 1994 ; 22 ; 1994 >
-    au < released ; Texture, Stress, and Microstructure Volume 23-25 (1995) ; 1995 ; 23-25 ; 1995 >
-    au < released ; Texture, Stress, and Microstructure Volume 25-28 (1996) ; 1996 ; 25-28 ; 1996 >
-    au < released ; Texture, Stress, and Microstructure Volume 29 (1997) ; 1997 ; 29 ; 1997 >
-    au < released ; Texture, Stress, and Microstructure Volume 30 (1998) ; 1998 ; 30 ; 1998 >
-    au < released ; Texture, Stress, and Microstructure Volume 31 (1999) ; 1999 ; 31 ; 1999 >
-    au < released ; Texture, Stress, and Microstructure Volume 32 (2000) ; 2000 ; 32 ; 2000 >
-    au < released ; Texture, Stress, and Microstructure Volume 33 (2001) ; 2001 ; 33 ; 2001 >
-    au < released ; Texture, Stress, and Microstructure Volume 34 (2002) ; 2002 ; 34 ; 2002 >
-    au < released ; Texture, Stress, and Microstructure Volume 35 (2003) ; 2003 ; 35 ; 2003 >
-    au < released ; Texture, Stress, and Microstructure Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Texture, Stress, and Microstructure Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Texture, Stress, and Microstructure Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; Texture, Stress, and Microstructure Volume 1 (1972) ; 1972 ; 1 ; 1972 >
+    au < down ; Texture, Stress, and Microstructure Volume 1 (1974) ; 1974 ; 1 ; 1974 >
+    au < down ; Texture, Stress, and Microstructure Volume 2 (1975) ; 1975 ; 2 ; 1975 >
+    au < down ; Texture, Stress, and Microstructure Volume 2 (1976) ; 1976 ; 2 ; 1976 >
+    au < down ; Texture, Stress, and Microstructure Volume 2 (1977) ; 1977 ; 2 ; 1977 >
+    au < down ; Texture, Stress, and Microstructure Volume 3 (1978) ; 1978 ; 3 ; 1978 >
+    au < down ; Texture, Stress, and Microstructure Volume 3 (1979) ; 1979 ; 3 ; 1979 >
+    au < down ; Texture, Stress, and Microstructure Volume 4 (1980) ; 1980 ; 4 ; 1980 >
+    au < down ; Texture, Stress, and Microstructure Volume 4 (1981) ; 1981 ; 4 ; 1981 >
+    au < down ; Texture, Stress, and Microstructure Volume 4-5 (1982) ; 1982 ; 4-5 ; 1982 >
+    au < down ; Texture, Stress, and Microstructure Volume 5-6 (1983) ; 1983 ; 5-6 ; 1983 >
+    au < down ; Texture, Stress, and Microstructure Volume 6 (1984) ; 1984 ; 6 ; 1984 >
+    au < down ; Texture, Stress, and Microstructure Volume 6 (1986) ; 1986 ; 6 ; 1986 >
+    au < down ; Texture, Stress, and Microstructure Volume 7 (1987) ; 1987 ; 7 ; 1987 >
+    au < down ; Texture, Stress, and Microstructure Volume 7-10 (1988) ; 1988 ; 7-10 ; 1988 >
+    au < down ; Texture, Stress, and Microstructure Volume 10-11 (1989) ; 1989 ; 10-11 ; 1989 >
+    au < down ; Texture, Stress, and Microstructure Volume 12-13 (1990) ; 1990 ; 12-13 ; 1990 >
+    au < down ; Texture, Stress, and Microstructure Volume 13-18 (1991) ; 1991 ; 13-18 ; 1991 >
+    au < down ; Texture, Stress, and Microstructure Volume 19 (1992) ; 1992 ; 19 ; 1992 >
+    au < down ; Texture, Stress, and Microstructure Volume 20-22 (1993) ; 1993 ; 20-22 ; 1993 >
+    au < down ; Texture, Stress, and Microstructure Volume 22 (1994) ; 1994 ; 22 ; 1994 >
+    au < down ; Texture, Stress, and Microstructure Volume 23-25 (1995) ; 1995 ; 23-25 ; 1995 >
+    au < down ; Texture, Stress, and Microstructure Volume 25-28 (1996) ; 1996 ; 25-28 ; 1996 >
+    au < down ; Texture, Stress, and Microstructure Volume 29 (1997) ; 1997 ; 29 ; 1997 >
+    au < down ; Texture, Stress, and Microstructure Volume 30 (1998) ; 1998 ; 30 ; 1998 >
+    au < down ; Texture, Stress, and Microstructure Volume 31 (1999) ; 1999 ; 31 ; 1999 >
+    au < down ; Texture, Stress, and Microstructure Volume 32 (2000) ; 2000 ; 32 ; 2000 >
+    au < down ; Texture, Stress, and Microstructure Volume 33 (2001) ; 2001 ; 33 ; 2001 >
+    au < down ; Texture, Stress, and Microstructure Volume 34 (2002) ; 2002 ; 34 ; 2002 >
+    au < down ; Texture, Stress, and Microstructure Volume 35 (2003) ; 2003 ; 35 ; 2003 >
+    au < down ; Texture, Stress, and Microstructure Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; Texture, Stress, and Microstructure Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; Texture, Stress, and Microstructure Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < doesNotExist ; Texture, Stress, and Microstructure Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
@@ -5523,9 +5558,9 @@
 
     param[journal_id] = xroi
 
-    au < released ; X-Ray Optics and Instrumentation Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; X-Ray Optics and Instrumentation Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; X-Ray Optics and Instrumentation Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < down ; X-Ray Optics and Instrumentation Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < down ; X-Ray Optics and Instrumentation Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < down ; X-Ray Optics and Instrumentation Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < doesNotExist ; X-Ray Optics and Instrumentation Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
