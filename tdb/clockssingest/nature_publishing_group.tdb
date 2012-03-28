@@ -153,7 +153,7 @@
     au < released ; crawling ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
     au < released ; crawling ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 >
     au < superseded ; down ; 2010 ; Bone Marrow Transplantation Volume 46 [superseded] ; 2010 ; 46 >
-    au < crawling ; exists ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 >
+    au < testing ; exists ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 >
     au < crawling ; exists ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 >
 
   }
@@ -2233,9 +2233,9 @@
     au < released ; crawling ; 2011 ; Nature Volume 475 ; 2011 ; 475 >
     au < released ; crawling ; 2011 ; Nature Volume 476 ; 2011 ; 476 >
     au < released ; crawling ; 2011 ; Nature Volume 477 ; 2011 ; 477 >
-    au < crawling ; exists ; 2011 ; Nature Volume 478 ; 2011 ; 478 >
-    au < crawling ; exists ; 2011 ; Nature Volume 479 ; 2011 ; 479 >
-    au < crawling ; exists ; 2011 ; Nature Volume 480 ; 2011 ; 480 >
+    au < testing ; exists ; 2011 ; Nature Volume 478 ; 2011 ; 478 >
+    au < testing ; exists ; 2011 ; Nature Volume 479 ; 2011 ; 479 >
+    au < testing ; exists ; 2011 ; Nature Volume 480 ; 2011 ; 480 >
     au < crawling ; exists ; 2012 ; Nature Volume 481 ; 2012 ; 481 >
     au < crawling ; exists ; 2012 ; Nature Volume 482 ; 2012 ; 482 >
 
@@ -2308,7 +2308,7 @@
     au < released ; crawling ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
     au < released ; crawling ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
     au < released ; crawling ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 >
-    au < crawling ; exists ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 >
+    au < testing ; exists ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 >
     au < crawling ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 >
 
   }
@@ -2330,7 +2330,7 @@
     au < released ; crawling ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 >
-    au < crawling ; exists ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 >
+    au < testing ; exists ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 >
     au < crawling ; exists ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 >
 
   }
@@ -2348,7 +2348,7 @@
 
     au < released ; crawling ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
     au < released ; crawling ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 >
-    au < crawling ; exists ; 2011 ; Nature Chemistry Volume 3 ; 2011 ; 3 >
+    au < testing ; exists ; 2011 ; Nature Chemistry Volume 3 ; 2011 ; 3 >
     au < crawling ; exists ; 2012 ; Nature Chemistry Volume 4 ; 2012 ; 4 >
 
   }
@@ -2427,7 +2427,7 @@
     au < released ; crawling ; 2008 ; Nature Genetics Volume 40 ; 2008 ; 40 >
     au < released ; crawling ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 >
     au < released ; crawling ; 2010 ; Nature Genetics Volume 42 ; 2010 ; 42 >
-    au < crawling ; exists ; 2011 ; Nature Genetics Volume 43 ; 2011 ; 43 >
+    au < testing ; exists ; 2011 ; Nature Genetics Volume 43 ; 2011 ; 43 >
     au < crawling ; exists ; 2012 ; Nature Genetics Volume 44 ; 2012 ; 44 >
 
   }
