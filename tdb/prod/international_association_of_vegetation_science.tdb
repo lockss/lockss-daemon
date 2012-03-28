@@ -27,13 +27,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = apve
   	  comment[defunct] = Last issue published was Dec. 2008
-      au < manifest ; 2002 ; Applied Vegetation Science Volume 5 ; 5 >
-      au < manifest ; 2003 ; Applied Vegetation Science Volume 6 ; 6 >
-      au < doNotProcess ; 2004 ; Applied Vegetation Science Volume 7 ; 7 >
-      au < manifest ; 2005 ; Applied Vegetation Science Volume 8 ; 8 >
-      au < manifest ; 2006 ; Applied Vegetation Science Volume 9 ; 9 >
-      au < manifest ; 2007 ; Applied Vegetation Science Volume 10 ; 10 >
-      au < manifest ; 2008 ; Applied Vegetation Science Volume 11 ; 11 >
+  	  
+      au < testing ; 2002 ; Applied Vegetation Science Volume 5 ; 5 >
+      au < testing ; 2003 ; Applied Vegetation Science Volume 6 ; 6 >
+      au < testing ; 2004 ; Applied Vegetation Science Volume 7 ; 7 >
+      au < testing ; 2005 ; Applied Vegetation Science Volume 8 ; 8 >
+      au < testing ; 2006 ; Applied Vegetation Science Volume 9 ; 9 >
+      au < testing ; 2007 ; Applied Vegetation Science Volume 10 ; 10 >
+      au < testing ; 2008 ; Applied Vegetation Science Volume 11 ; 11 >
     }
   }
   
@@ -62,13 +63,14 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = vegs
       comment[defunct] = Last issue published was Dec. 2008
-      au < manifest ; 2002 ; Journal of Vegetation Science Volume 13 ; 13 >
-      au < manifest ; 2003 ; Journal of Vegetation Science Volume 14 ; 14 >
-      au < doNotProcess ; 2004 ; Journal of Vegetation Science Volume 15 ; 15 >
-      au < manifest ; 2005 ; Journal of Vegetation Science Volume 16 ; 16 >
-      au < manifest ; 2006 ; Journal of Vegetation Science Volume 17 ; 17 >
-      au < manifest ; 2007 ; Journal of Vegetation Science Volume 18 ; 18 >
-      au < manifest ; 2008 ; Journal of Vegetation Science Volume 19 ; 19 >
+      
+      au < testing ; 2002 ; Journal of Vegetation Science Volume 13 ; 13 >
+      au < testing ; 2003 ; Journal of Vegetation Science Volume 14 ; 14 >
+      au < testing ; 2004 ; Journal of Vegetation Science Volume 15 ; 15 >
+      au < testing ; 2005 ; Journal of Vegetation Science Volume 16 ; 16 >
+      au < testing ; 2006 ; Journal of Vegetation Science Volume 17 ; 17 >
+      au < testing ; 2007 ; Journal of Vegetation Science Volume 18 ; 18 >
+      au < testing ; 2008 ; Journal of Vegetation Science Volume 19 ; 19 >
 
     }
 
