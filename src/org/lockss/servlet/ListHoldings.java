@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.32 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: ListHoldings.java,v 1.33 2012-03-28 23:53:42 pgust Exp $
  */
 
 /*
@@ -99,6 +99,14 @@ public class ListHoldings extends LockssServlet {
   public static final String
     PARAM_ENABLE_PRESERVED_HOLDINGS = PREFIX + "enablePreserved";
   public static final boolean DEFAULT_ENABLE_PRESERVED_HOLDINGS = true;
+  
+  /** Enable "use metadata" option when "preserved" option is enabled.
+   */
+  public static final String
+    PARAM_USE_METATATA_FOR_PRESERVED_HOLDINGS = 
+      PREFIX + "useMetadataForPreserved";
+  public static final boolean 
+    DEFAULT_USE_METADATA_FOR_PRESERVED_HOLDINGS = false;
 
   /** Default output format is HTML. */
   static final OutputFormat OUTPUT_DEFAULT = OutputFormat.HTML;
@@ -434,7 +442,7 @@ public class ListHoldings extends LockssServlet {
       // ordering, then the default will be used, which will include range fields
       boolean rangeFieldsIncluded = KbartExportFilter.includesRangeFields(
           getSessionCustomOpts().getFieldOrdering().getOrdering());
-      if (scope == ContentScope.COLLECTED) {
+      if (scope == ContentScope.COLLECTED && useMetadataForPreserved()) {
         // try listing collected content from the metadata database first;
         // list of bibliographic items is assumed to be sorted by ISSN
         // TODO (PJG) note: should return AUs from DB and 
@@ -442,7 +450,7 @@ public class ListHoldings extends LockssServlet {
         List<? extends BibliographicItem> items = 
             MetadataDatabaseUtil.getBibliographicItems();
         if (items.size() > 0) {
-          log.debug3("Found bibliographic items: " + items.size());
+          log.debug2("Found bibliographic items: " + items.size());
           titles = new ArrayList<KbartTitle>();
           int i = 0;
           if (i < items.size()) {
@@ -569,6 +577,17 @@ public class ListHoldings extends LockssServlet {
   private boolean isEnablePreserved() {
     return CurrentConfig.getBooleanParam(PARAM_ENABLE_PRESERVED_HOLDINGS, 
 					 DEFAULT_ENABLE_PRESERVED_HOLDINGS);
+  }
+
+  /**
+   * Determine whether "metadata" option is enabled for preserved content.
+   * 
+   * @return <code>true</code> if use metadata option is enabled
+   */
+  private boolean useMetadataForPreserved() {
+    return CurrentConfig.getBooleanParam(
+        PARAM_USE_METATATA_FOR_PRESERVED_HOLDINGS, 
+        DEFAULT_USE_METADATA_FOR_PRESERVED_HOLDINGS);
   }
 
   /**
