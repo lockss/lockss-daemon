@@ -157,7 +157,7 @@
         au < released ; 1998 ; Acta Sociologica Volume 41 ; 41 >
         au < released ; 1999 ; Acta Sociologica Volume 42 ; 42 >
         au < released ; 2000 ; Acta Sociologica Volume 43 ; 43 >
-        au < doesNotExist ; 2001 ; Acta Sociologica Volume 44 ; 44 >
+        au < doesNotExist ; 0 ; Acta Sociologica Volume 44 ; 44 >
         au < manifest ; 2002 ; Acta Sociologica Volume 45 ; 45 >
         au < released ; 2003 ; Acta Sociologica Volume 46 ; 46 >
         au < released ; 2004 ; Acta Sociologica Volume 47 ; 47 >
@@ -2717,7 +2717,7 @@
         au < manifest ; 1968 ; Asia Pacific Journal of Human Resources Volume 3 ; 3 >
         au < manifest ; 1969 ; Asia Pacific Journal of Human Resources Volume 4 ; 4 >
         au < manifest ; 1970 ; Asia Pacific Journal of Human Resources Volume 5 ; 5 >
-        au < doesNotExist ; 1971 ; Asia Pacific Journal of Human Resources Volume 6 ; 6 >
+        au < doesNotExist ; 0 ; Asia Pacific Journal of Human Resources Volume 6 ; 6 >
         au < manifest ; 1972 ; Asia Pacific Journal of Human Resources Volume 7 ; 7 >
         au < manifest ; 1973 ; Asia Pacific Journal of Human Resources Volume 8 ; 8 >
         au < manifest ; 1974 ; Asia Pacific Journal of Human Resources Volume 9 ; 9 >
@@ -2949,22 +2949,22 @@
         au < manifest ; 1980-1981 ; Assessment for Effective Intervention Volume 6 ; 6 >
         au < manifest ; 1981-1982 ; Assessment for Effective Intervention Volume 7 ; 7 >
         au < manifest ; 1982-1983 ; Assessment for Effective Intervention Volume 8 ; 8 >
-        au < manifest ; 1983-1984 ; Assessment for Effective Intervention Volume 9 ; 9 >
-        au < doesNotExist ; 1984-1985 ; Assessment for Effective Intervention Volume 10 ; 10 >
+        au < manifest ; 19830ssessment for Effective Intervention Volume 9 ; 9 >
+        au < doesNotExist ; 0 ; Assessment for Effective Intervention Volume 10 ; 10 >
         au < manifest ; 1985-1986 ; Assessment for Effective Intervention Volume 11 ; 11 >
         au < manifest ; 1986-1987 ; Assessment for Effective Intervention Volume 12 ; 12 >
         au < manifest ; 1987-1988 ; Assessment for Effective Intervention Volume 13 ; 13 >
         au < manifest ; 1988-1989 ; Assessment for Effective Intervention Volume 14 ; 14 >
-        au < doesNotExist ; 1989-1990 ; Assessment for Effective Intervention Volume 15 ; 15 >
+        au < doesNotExist ; 0 ; Assessment for Effective Intervention Volume 15 ; 15 >
         au < manifest ; 1990-1991 ; Assessment for Effective Intervention Volume 16 ; 16 >
         au < manifest ; 1991-1992 ; Assessment for Effective Intervention Volume 17 ; 17 >
         au < manifest ; 1992-1993 ; Assessment for Effective Intervention Volume 18 ; 18 >
         au < manifest ; 1993-1994 ; Assessment for Effective Intervention Volume 19 ; 19 >
-        au < doesNotExist ; 1994-1995 ; Assessment for Effective Intervention Volume 20 ; 20 >
+        au < doesNotExist ; 0 ; Assessment for Effective Intervention Volume 20 ; 20 >
         au < manifest ; 1995-1996 ; Assessment for Effective Intervention Volume 21 ; 21 >
         au < manifest ; 1996-1997 ; Assessment for Effective Intervention Volume 22 ; 22 >
         au < manifest ; 1997-1998 ; Assessment for Effective Intervention Volume 23 ; 23 >
-        au < doesNotExist ; 1998-1999 ; Assessment for Effective Intervention Volume 24 ; 24 >
+        au < doesNotExist ; 0 ; Assessment for Effective Intervention Volume 24 ; 24 >
         au < manifest ; 1999-2000 ; Assessment for Effective Intervention Volume 25 ; 25 >
         au < manifest ; 2000-2001 ; Assessment for Effective Intervention Volume 26 ; 26 >
         au < manifest ; 2001-2002 ; Assessment for Effective Intervention Volume 27 ; 27 >
@@ -3362,10 +3362,10 @@
         param[base_url] = http://btb.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doesNotExist ; 1973 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 1 ; 1 >
-        au < doesNotExist ; 1973 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 2 ; 2 >
+        au < doesNotExist ; 0 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 1 ; 1 >
+        au < doesNotExist ; 0 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 2 ; 2 >
         au < manifest ; 1973 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 3 ; 3 >
-        au < doesNotExist ; 1973 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 4 ; 4 >
+        au < doesNotExist ; 0 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 4 ; 4 >
         au < manifest ; 1975 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 5 ; 5 >
         au < manifest ; 1976 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 6 ; 6 >
         au < manifest ; 1977 ; Biblical Theology Bulletin: Journal of Bible and Theology Volume 7 ; 7 >
@@ -4196,7 +4196,7 @@
         param[base_url] = http://bcq.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doesNotExist ; 1968 ; Business Communication Quarterly Volume 31 ; 31 >
+        au < doesNotExist ; 0 ; Business Communication Quarterly Volume 31 ; 31 >
         au < manifest ; 1969 ; Business Communication Quarterly Volume 32 ; 32 >
         au < manifest ; 1970 ; Business Communication Quarterly Volume 33 ; 33 >
         au < manifest ; 1971 ; Business Communication Quarterly Volume 34 ; 34 >
@@ -5054,7 +5054,7 @@
         au < manifest ; 1996 ; Clin-Alert Volume 34 ; 34 >
         au < manifest ; 1997 ; Clin-Alert Volume 35 ; 35 >
         au < manifest ; 1998 ; Clin-Alert Volume 36 ; 36 >
-        au < doesNotExist ; 1999 ; Clin-Alert Volume 37 ; 37 >
+        au < doesNotExist ; 0 ; Clin-Alert Volume 37 ; 37 >
         au < manifest ; 2000 ; Clin-Alert Volume 38 ; 38 >
         au < manifest ; 2001 ; Clin-Alert Volume 39 ; 39 >
         au < manifest ; 2002 ; Clin-Alert Volume 40 ; 40 >
@@ -9737,7 +9737,7 @@
         au < manifest ; 2009 ; European Journal of Cardiovascular Prevention & Rehabilitation 16 ; 16 >
         au < manifest ; 2010 ; European Journal of Cardiovascular Prevention & Rehabilitation 17 ; 17 >
         au < manifest ; 2011 ; European Journal of Cardiovascular Prevention & Rehabilitation 18 ; 18 >
-        au < doesNotExist ; 2012 ; European Journal of Cardiovascular Prevention & Rehabilitation 19 ; 19 >
+        au < doesNotExist ; 0 ; European Journal of Cardiovascular Prevention & Rehabilitation 19 ; 19 >
 
       }
 
@@ -9760,7 +9760,7 @@
         comment[continued_from] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
         comment[0] = Previous issues are at the same url.
         
-        au < doesNotExist ; 2011 ; European Journal of Preventive Cardiology 18 ; 18 >
+        au < doesNotExist ; 0 ; European Journal of Preventive Cardiology 18 ; 18 >
         au < manifest ; 2012 ; European Journal of Preventive Cardiology 19 ; 19 >
 
       }
@@ -13470,9 +13470,9 @@
         au < manifest ; 1971 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 13 ; 13 >
         au < manifest ; 1972 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 14 ; 14 >
         au < manifest ; 1973 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 15 ; 15 >
-        au < doesNotExist ; 1974 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 16 ; 16 >
+        au < doesNotExist ; 0 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 16 ; 16 >
         au < manifest ; 1975 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 17 ; 17 >
-        au < doesNotExist ; 1976 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 18 ; 18 >
+        au < doesNotExist ; 0 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 18 ; 18 >
         au < manifest ; 1977 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 19 ; 19 >
         au < manifest ; 1978 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 20 ; 20 >
         au < manifest ; 1979 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 21 ; 21 >
@@ -13831,7 +13831,7 @@
         au < manifest ; 2000 ; Improving Schools Volume 3 ; 3 >
         au < manifest ; 2001 ; Improving Schools Volume 4 ; 4 >
         au < manifest ; 2002 ; Improving Schools Volume 5 ; 5 >
-        au < doesNotExist ; 2003 ; Improving Schools Volume 6 ; 6 >
+        au < doesNotExist ; 0 ; Improving Schools Volume 6 ; 6 >
         au < manifest ; 2004 ; Improving Schools Volume 7 ; 7 >
         au < doNotProcess ; 2005 ; Improving Schools Volume 8 ; 8 >
         au < doNotProcess ; 2006 ; Improving Schools Volume 9 ; 9 >
@@ -14586,7 +14586,7 @@
         au < manifest ; 2001 ; International Criminal Justice Review Volume 11 ; 11 >
         au < manifest ; 2002 ; International Criminal Justice Review Volume 12 ; 12 >
         au < manifest ; 2003 ; International Criminal Justice Review Volume 13 ; 13 >
-        au < doesNotExist ; 2004 ; International Criminal Justice Review Volume 14 ; 14 >
+        au < doesNotExist ; 0 ; International Criminal Justice Review Volume 14 ; 14 >
         au < doNotProcess ; 2005 ; International Criminal Justice Review Volume 15 ; 15 >
         au < doNotProcess ; 2006 ; International Criminal Justice Review Volume 16 ; 16 >
         au < doNotProcess ; 2007 ; International Criminal Justice Review Volume 17 ; 17 >
@@ -15251,7 +15251,7 @@
         param[base_url] = http://ijo.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doesNotExist ; 1965 ; International Journal of Offender Therapy and Comparative Criminology Volume 9 ; 9 >
+        au < doesNotExist ; 0 ; International Journal of Offender Therapy and Comparative Criminology Volume 9 ; 9 >
         au < manifest ; 1966 ; International Journal of Offender Therapy and Comparative Criminology Volume 10 ; 10 >
         au < manifest ; 1967 ; International Journal of Offender Therapy and Comparative Criminology Volume 11 ; 11 >
         au < manifest ; 1968 ; International Journal of Offender Therapy and Comparative Criminology Volume 12 ; 12 >
@@ -15777,7 +15777,7 @@
         param[base_url] = http://ire.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doesNotExist ; 1959 ; International Relations Volume 1 ; 1 >
+        au < doesNotExist ; 0 ; International Relations Volume 1 ; 1 >
         au < manifest ; 1960 ; International Relations Volume 2 ; 2 >
         au < manifest ; 1967 ; International Relations Volume 3 ; 3 >
         au < manifest ; 1972 ; International Relations Volume 4 ; 4 >
@@ -16359,9 +16359,9 @@
         au < manifest ; 1966 ; Irish Theological Quarterly Volume 33 ; 33 >
         au < manifest ; 1967 ; Irish Theological Quarterly Volume 34 ; 34 >
         au < manifest ; 1968 ; Irish Theological Quarterly Volume 35 ; 35 >
-        au < doesNotExist ; 1969 ; Irish Theological Quarterly Volume 36 ; 36 >
-        au < doesNotExist ; 1970 ; Irish Theological Quarterly Volume 37 ; 37 >
-        au < doesNotExist ; 1971 ; Irish Theological Quarterly Volume 38 ; 38 >
+        au < doesNotExist ; 0 ; Irish Theological Quarterly Volume 36 ; 36 >
+        au < doesNotExist ; 0 ; Irish Theological Quarterly Volume 37 ; 37 >
+        au < doesNotExist ; 0 ; Irish Theological Quarterly Volume 38 ; 38 >
         au < manifest ; 1972 ; Irish Theological Quarterly Volume 39 ; 39 >
         au < manifest ; 1973 ; Irish Theological Quarterly Volume 40 ; 40 >
         au < manifest ; 1974 ; Irish Theological Quarterly Volume 41 ; 41 >
@@ -16548,8 +16548,8 @@
         au < manifest ; 1996 ; Journal for the Study of the Old Testament Volume 21 ; 21 >
         au < manifest ; 1997 ; Journal for the Study of the Old Testament Volume 22 ; 22 >
         au < manifest ; 1998 ; Journal for the Study of the Old Testament Volume 23 ; 23 >
-        au < doesNotExist ; 1999 ; Journal for the Study of the Old Testament Volume 24 ; 24 >
-        au < doesNotExist ; 2000 ; Journal for the Study of the Old Testament Volume 25 ; 25 >
+        au < doesNotExist ; 0 ; Journal for the Study of the Old Testament Volume 24 ; 24 >
+        au < doesNotExist ; 0 ; Journal for the Study of the Old Testament Volume 25 ; 25 >
         au < manifest ; 2001-2002 ; Journal for the Study of the Old Testament Volume 26 ; 26 >
         au < manifest ; 2002-2003 ; Journal for the Study of the Old Testament Volume 27 ; 27 >
         au < manifest ; 2003-2004 ; Journal for the Study of the Old Testament Volume 28 ; 28 >
@@ -18738,7 +18738,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1984 ; Journal of Communication Inquiry Volume 8 ; 8 >
         au < manifest ; 1985 ; Journal of Communication Inquiry Volume 9 ; 9 >
         au < manifest ; 1986 ; Journal of Communication Inquiry Volume 10 ; 10 >
-        au < doesNotExist ; 1987 ; Journal of Communication Inquiry Volume 11 ; 11 >
+        au < doesNotExist ; 0 ; Journal of Communication Inquiry Volume 11 ; 11 >
         au < manifest ; 1988 ; Journal of Communication Inquiry Volume 12 ; 12 >
         au < manifest ; 1989 ; Journal of Communication Inquiry Volume 13 ; 13 >
         au < manifest ; 1990 ; Journal of Communication Inquiry Volume 14 ; 14 >
@@ -19480,7 +19480,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         param[base_url] = http://jds.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doesNotExist ; 2001 ; Journal of Developing Societies Volume 17 ; 17 >
+        au < doesNotExist ; 0 ; Journal of Developing Societies Volume 17 ; 17 >
         au < manifest ; 2002 ; Journal of Developing Societies Volume 18 ; 18 >
         au < manifest ; 2003 ; Journal of Developing Societies Volume 19 ; 19 >
         au < manifest ; 2004 ; Journal of Developing Societies Volume 20 ; 20 >
@@ -19975,7 +19975,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1974 ; Journal of Elastomers and Plastics Volume 6 ; 6 >
         au < manifest ; 1975 ; Journal of Elastomers and Plastics Volume 7 ; 7 >
         au < manifest ; 1976 ; Journal of Elastomers and Plastics Volume 8 ; 8 >
-        au < doesNotExist ; 1976 ; Journal of Elastomers and Plastics Volume 9 ; 9 >
+        au < doesNotExist ; 0 ; Journal of Elastomers and Plastics Volume 9 ; 9 >
         au < manifest ; 1978 ; Journal of Elastomers and Plastics Volume 10 ; 10 >
         au < manifest ; 1979 ; Journal of Elastomers and Plastics Volume 11 ; 11 >
         au < manifest ; 1980 ; Journal of Elastomers and Plastics Volume 12 ; 12 >
@@ -20991,9 +20991,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1993 ; Journal of Geriatric Psychiatry and Neurology Volume 6 ; 6 >
         au < manifest ; 1994 ; Journal of Geriatric Psychiatry and Neurology Volume 7 ; 7 >
         au < manifest ; 1995 ; Journal of Geriatric Psychiatry and Neurology Volume 8 ; 8 >
-        au < doesNotExist ; 1996 ; Journal of Geriatric Psychiatry and Neurology Volume 9 ; 9 >
-        au < doesNotExist ; 1997 ; Journal of Geriatric Psychiatry and Neurology Volume 10 ; 10 >
-        au < doesNotExist ; 1998 ; Journal of Geriatric Psychiatry and Neurology Volume 11 ; 11 >
+        au < doesNotExist ; 0 ; Journal of Geriatric Psychiatry and Neurology Volume 9 ; 9 >
+        au < doesNotExist ; 0 ; Journal of Geriatric Psychiatry and Neurology Volume 10 ; 10 >
+        au < doesNotExist ; 0 ; Journal of Geriatric Psychiatry and Neurology Volume 11 ; 11 >
         au < manifest ; 1999 ; Journal of Geriatric Psychiatry and Neurology Volume 12 ; 12 >
         au < manifest ; 2000 ; Journal of Geriatric Psychiatry and Neurology Volume 13 ; 13 >
         au < manifest ; 2001 ; Journal of Geriatric Psychiatry and Neurology Volume 14 ; 14 >
@@ -21866,7 +21866,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1996-1997 ; Journal of Industrial Textiles Volume 26 ; 26 >
         au < manifest ; 1997-1998 ; Journal of Industrial Textiles Volume 27 ; 27 >
         au < manifest ; 1998 ; Journal of Industrial Textiles Volume 28 ; 28 >
-        au < doesNotExist ; 1999 ; Journal of Industrial Textiles Volume 29 ; 29 >
+        au < doesNotExist ; 0 ; Journal of Industrial Textiles Volume 29 ; 29 >
         au < manifest ; 2000-2001 ; Journal of Industrial Textiles Volume 30 ; 30 >
         au < manifest ; 2001-2002 ; Journal of Industrial Textiles Volume 31 ; 31 >
         au < manifest ; 2002-2003 ; Journal of Industrial Textiles Volume 32 ; 32 >
@@ -22132,17 +22132,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 1988 ; Journal of Intensive Care Medicine Volume 3 ; 3 >
         au < manifest ; 1989 ; Journal of Intensive Care Medicine Volume 4 ; 4 >
         au < manifest ; 1990 ; Journal of Intensive Care Medicine Volume 5 ; 5 >
-        au < doesNotExist ; 1991 ; Journal of Intensive Care Medicine Volume 6 ; 6 >
-        au < doesNotExist ; 1992 ; Journal of Intensive Care Medicine Volume 7 ; 7 >
-        au < doesNotExist ; 1993 ; Journal of Intensive Care Medicine Volume 8 ; 8 >
-        au < doesNotExist ; 1994 ; Journal of Intensive Care Medicine Volume 9 ; 9 >
-        au < doesNotExist ; 1995 ; Journal of Intensive Care Medicine Volume 10 ; 10 >
-        au < doesNotExist ; 1996 ; Journal of Intensive Care Medicine Volume 11 ; 11 >
-        au < doesNotExist ; 1997 ; Journal of Intensive Care Medicine Volume 12 ; 12 >
-        au < doesNotExist ; 1998 ; Journal of Intensive Care Medicine Volume 13 ; 13 >
+        au < doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 6 ; 6 >
+        au < doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 7 ; 7 >
+        au < doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 8 ; 8 >
+        au < doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 9 ; 9 >
+        au < doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 10 ; 10 >
+        au < doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 11 ; 11 >
+        au < doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 12 ; 12 >
+        au < doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 13 ; 13 >
         au < manifest ; 1999 ; Journal of Intensive Care Medicine Volume 14 ; 14 >
-        au < doesNotExist ; 2000 ; Journal of Intensive Care Medicine Volume 15 ; 15 >
-        au < doesNotExist ; 2001 ; Journal of Intensive Care Medicine Volume 16 ; 16 >
+        au < doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 15 ; 15 >
+        au < doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 16 ; 16 >
         au < manifest ; 2002 ; Journal of Intensive Care Medicine Volume 17 ; 17 >
         au < manifest ; 2003 ; Journal of Intensive Care Medicine Volume 18 ; 18 >
         au < manifest ; 2004 ; Journal of Intensive Care Medicine Volume 19 ; 19 >
@@ -23297,7 +23297,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jpo.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doesNotExist ; 1984 ; Journal of Pediatric Oncology Nursing Volume 1 ; 1 >
+        au < doesNotExist ; 0 ; Journal of Pediatric Oncology Nursing Volume 1 ; 1 >
         au < manifest ; 1985 ; Journal of Pediatric Oncology Nursing Volume 2 ; 2 >
         au < manifest ; 1986 ; Journal of Pediatric Oncology Nursing Volume 3 ; 3 >
         au < manifest ; 1987 ; Journal of Pediatric Oncology Nursing Volume 4 ; 4 >
@@ -23365,13 +23365,13 @@ comment[mpj] = now published by Brill
         au < manifest ; 1990 ; Journal of Pharmacy Practice Volume 3 ; 3 >
         au < manifest ; 1991 ; Journal of Pharmacy Practice Volume 4 ; 4 >
         au < manifest ; 1992 ; Journal of Pharmacy Practice Volume 5 ; 5 >
-        au < doesNotExist ; 1993 ; Journal of Pharmacy Practice Volume 6 ; 6 >
-        au < doesNotExist ; 1994 ; Journal of Pharmacy Practice Volume 7 ; 7 >
+        au < doesNotExist ; 0 ; Journal of Pharmacy Practice Volume 6 ; 6 >
+        au < doesNotExist ; 0 ; Journal of Pharmacy Practice Volume 7 ; 7 >
         au < manifest ; 1995 ; Journal of Pharmacy Practice Volume 8 ; 8 >
         au < manifest ; 1996 ; Journal of Pharmacy Practice Volume 9 ; 9 >
         au < manifest ; 1997 ; Journal of Pharmacy Practice Volume 10 ; 10 >
-        au < doesNotExist ; 1998 ; Journal of Pharmacy Practice Volume 11 ; 11 >
-        au < doesNotExist ; 1999 ; Journal of Pharmacy Practice Volume 12 ; 12 >
+        au < doesNotExist ; 0 ; Journal of Pharmacy Practice Volume 11 ; 11 >
+        au < doesNotExist ; 0 ; Journal of Pharmacy Practice Volume 12 ; 12 >
         au < manifest ; 2000 ; Journal of Pharmacy Practice Volume 13 ; 13 >
         au < manifest ; 2001 ; Journal of Pharmacy Practice Volume 14 ; 14 >
         au < manifest ; 2002 ; Journal of Pharmacy Practice Volume 15 ; 15 >
@@ -25105,7 +25105,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1989 ; Journal of the American Psychoanalytic Association Volume 37 ; 37 >
         au < manifest ; 1990 ; Journal of the American Psychoanalytic Association Volume 38 ; 38 >
         au < manifest ; 1991 ; Journal of the American Psychoanalytic Association Volume 39 ; 39 >
-        au < doesNotExist ; 1992 ; Journal of the American Psychoanalytic Association Volume 40 ; 40 >
+        au < doesNotExist ; 0 ; Journal of the American Psychoanalytic Association Volume 40 ; 40 >
         au < manifest ; 1993 ; Journal of the American Psychoanalytic Association Volume 41 ; 41 >
         au < manifest ; 1994 ; Journal of the American Psychoanalytic Association Volume 42 ; 42 >
         au < manifest ; 1995 ; Journal of the American Psychoanalytic Association Volume 43 ; 43 >
@@ -25187,7 +25187,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1950 ; Journal of the Institution of Locomotive Engineers Volume 40 ; 40 >
         au < manifest ; 1951 ; Journal of the Institution of Locomotive Engineers Volume 41 ; 41 >
         au < manifest ; 1952 ; Journal of the Institution of Locomotive Engineers Volume 42 ; 42 >
-        au < doesNotExist ; 1953 ; Journal of the Institution of Locomotive Engineers Volume 43 ; 43 >
+        au < doesNotExist ; 0 ; Journal of the Institution of Locomotive Engineers Volume 43 ; 43 >
         au < manifest ; 1954 ; Journal of the Institution of Locomotive Engineers Volume 44 ; 44 >
         au < manifest ; 1955 ; Journal of the Institution of Locomotive Engineers Volume 45 ; 45 >
         au < manifest ; 1956 ; Journal of the Institution of Locomotive Engineers Volume 46 ; 46 >
@@ -25819,7 +25819,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 1974-1975 ; Journal of Urban History Volume 1 ; 1 >
-        au < doesNotExist ; 1975-1976 ; Journal of Urban History Volume 2 ; 2 >
+        au < doesNotExist ; 0 ; Journal of Urban History Volume 2 ; 2 >
         au < manifest ; 1976-1977 ; Journal of Urban History Volume 3 ; 3 >
         au < manifest ; 1977-1978 ; Journal of Urban History Volume 4 ; 4 >
         au < manifest ; 1978-1979 ; Journal of Urban History Volume 5 ; 5 >
@@ -30293,7 +30293,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1988 ; The Prison Journal Volume 68 ; 68 >
         au < manifest ; 1989 ; The Prison Journal Volume 69 ; 69 >
         au < manifest ; 1990 ; The Prison Journal Volume 70 ; 70 >
-        au < doesNotExist ; 1991 ; The Prison Journal Volume 71 ; 71 >
+        au < doesNotExist ; 0 ; The Prison Journal Volume 71 ; 71 >
         au < manifest ; 1992 ; The Prison Journal Volume 72 ; 72 >
         au < manifest ; 1993 ; The Prison Journal Volume 73 ; 73 >
         au < manifest ; 1994 ; The Prison Journal Volume 74 ; 74 >
@@ -30998,7 +30998,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 222 ; 222 >
         au < manifest ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 223 ; 223 >
         au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 224 ; 224 >
-        au < doesNotExist ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 225 ; 225 >
+        au < doesNotExist ; 0 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 225 ; 225 >
         au < expected ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 226 ; 226 >
 
       }
@@ -31134,9 +31134,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 1981 ; Progress in Human Geography Volume 5 ; 5 >
         au < manifest ; 1982 ; Progress in Human Geography Volume 6 ; 6 >
         au < manifest ; 1983 ; Progress in Human Geography Volume 7 ; 7 >
-        au < doesNotExist ; 1984 ; Progress in Human Geography Volume 8 ; 8 >
-        au < doesNotExist ; 1985 ; Progress in Human Geography Volume 9 ; 9 >
-        au < doesNotExist ; 1986 ; Progress in Human Geography Volume 10 ; 10 >
+        au < doesNotExist ; 0 ; Progress in Human Geography Volume 8 ; 8 >
+        au < doesNotExist ; 0 ; Progress in Human Geography Volume 9 ; 9 >
+        au < doesNotExist ; 0 ; Progress in Human Geography Volume 10 ; 10 >
         au < manifest ; 1987 ; Progress in Human Geography Volume 11 ; 11 >
         au < manifest ; 1988 ; Progress in Human Geography Volume 12 ; 12 >
         au < manifest ; 1989 ; Progress in Human Geography Volume 13 ; 13 >
@@ -31576,7 +31576,7 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 1973 ; Public Finance Review Volume 1 ; 1 >
         au < manifest ; 1974 ; Public Finance Review Volume 2 ; 2 >
-        au < doesNotExist ; 1975 ; Public Finance Review Volume 3 ; 3 >
+        au < doesNotExist ; 0 ; Public Finance Review Volume 3 ; 3 >
         au < manifest ; 1976 ; Public Finance Review Volume 4 ; 4 >
         au < manifest ; 1977 ; Public Finance Review Volume 5 ; 5 >
         au < manifest ; 1978 ; Public Finance Review Volume 6 ; 6 >
@@ -31589,7 +31589,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1985 ; Public Finance Review Volume 13 ; 13 >
         au < manifest ; 1986 ; Public Finance Review Volume 14 ; 14 >
         au < manifest ; 1987 ; Public Finance Review Volume 15 ; 15 >
-        au < doesNotExist ; 1988 ; Public Finance Review Volume 16 ; 16 >
+        au < doesNotExist ; 0 ; Public Finance Review Volume 16 ; 16 >
         au < manifest ; 1989 ; Public Finance Review Volume 17 ; 17 >
         au < manifest ; 1990 ; Public Finance Review Volume 18 ; 18 >
         au < manifest ; 1991 ; Public Finance Review Volume 19 ; 19 >
@@ -32836,12 +32836,12 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 1980-1981 ; Review of Public Personnel Administration Volume 1 ; 1 >
         au < manifest ; 1981-1982 ; Review of Public Personnel Administration Volume 2 ; 2 >
-        au < doesNotExist ; 1982-1983 ; Review of Public Personnel Administration Volume 3 ; 3 >
+        au < doesNotExist ; 0 ; Review of Public Personnel Administration Volume 3 ; 3 >
         au < manifest ; 1983 ; Review of Public Personnel Administration Volume 4 ; 4 >
         au < manifest ; 1985 ; Review of Public Personnel Administration Volume 5 ; 5 >
         au < manifest ; 1985-1986 ; Review of Public Personnel Administration Volume 6 ; 6 >
         au < manifest ; 1986-1987 ; Review of Public Personnel Administration Volume 7 ; 7 >
-        au < doesNotExist ; 1986-1987 ; Review of Public Personnel Administration Volume 8 ; 8 >
+        au < doesNotExist ; 0 ; Review of Public Personnel Administration Volume 8 ; 8 >
         au < manifest ; 1989 ; Review of Public Personnel Administration Volume 9 ; 9 >
         au < manifest ; 1989-1990 ; Review of Public Personnel Administration Volume 10 ; 10 >
         au < manifest ; 1991 ; Review of Public Personnel Administration Volume 11 ; 11 >
@@ -33339,12 +33339,12 @@ comment[mpj] = now published by Brill
         au < manifest ; 1980 ; Science, Technology & Human Values Volume 5 ; 5 >
         au < manifest ; 1981 ; Science, Technology & Human Values Volume 6 ; 6 >
         au < manifest ; 1982 ; Science, Technology & Human Values Volume 7 ; 7 >
-        au < doesNotExist ; 1983 ; Science, Technology & Human Values Volume 8 ; 8 >
-        au < doesNotExist ; 1984 ; Science, Technology & Human Values Volume 9 ; 9 >
+        au < doesNotExist ; 0 ; Science, Technology & Human Values Volume 8 ; 8 >
+        au < doesNotExist ; 0 ; Science, Technology & Human Values Volume 9 ; 9 >
         au < manifest ; 1985 ; Science, Technology & Human Values Volume 10 ; 10 >
         au < manifest ; 1986 ; Science, Technology & Human Values Volume 11 ; 11 >
-        au < doesNotExist ; 1987 ; Science, Technology & Human Values Volume 12 ; 12 >
-        au < doesNotExist ; 1988 ; Science, Technology & Human Values Volume 13 ; 13 >
+        au < doesNotExist ; 0 ; Science, Technology & Human Values Volume 12 ; 12 >
+        au < doesNotExist ; 0 ; Science, Technology & Human Values Volume 13 ; 13 >
         au < manifest ; 1989 ; Science, Technology & Human Values Volume 14 ; 14 >
         au < manifest ; 1990 ; Science, Technology & Human Values Volume 15 ; 15 >
         au < manifest ; 1991 ; Science, Technology & Human Values Volume 16 ; 16 >
@@ -34720,7 +34720,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1997 ; Space and Culture Volume 1 ; 1 >
         au < manifest ; 1998 ; Space and Culture Volume 2 ; 2 >
         au < manifest ; 2000 ; Space and Culture Volume 3 ; 3 >
-        au < doesNotExist ; 2001 ; Space and Culture Volume 4 ; 4 >
+        au < doesNotExist ; 0 ; Space and Culture Volume 4 ; 4 >
         au < manifest ; 2002 ; Space and Culture Volume 5 ; 5 >
         au < manifest ; 2003 ; Space and Culture Volume 6 ; 6 >
         au < manifest ; 2004 ; Space and Culture Volume 7 ; 7 >
@@ -35482,21 +35482,21 @@ comment[mpj] = now published by Brill
         au < manifest ; 1960 ; Textile Research Journal Volume 30 ; 30 >
         au < manifest ; 1961 ; Textile Research Journal Volume 31 ; 31 >
         au < manifest ; 1962 ; Textile Research Journal Volume 32 ; 32 >
-        au < doesNotExist ; 1963 ; Textile Research Journal Volume 33 ; 33 >
+        au < doesNotExist ; 0 ; Textile Research Journal Volume 33 ; 33 >
         au < manifest ; 1964 ; Textile Research Journal Volume 34 ; 34 >
         au < manifest ; 1965 ; Textile Research Journal Volume 35 ; 35 >
         au < manifest ; 1966 ; Textile Research Journal Volume 36 ; 36 >
         au < manifest ; 1967 ; Textile Research Journal Volume 37 ; 37 >
         au < manifest ; 1968 ; Textile Research Journal Volume 38 ; 38 >
-        au < doesNotExist ; 1969 ; Textile Research Journal Volume 39 ; 39 >
+        au < doesNotExist ; 0 ; Textile Research Journal Volume 39 ; 39 >
         au < manifest ; 1970 ; Textile Research Journal Volume 40 ; 40 >
         au < manifest ; 1971 ; Textile Research Journal Volume 41 ; 41 >
         au < manifest ; 1972 ; Textile Research Journal Volume 42 ; 42 >
         au < manifest ; 1973 ; Textile Research Journal Volume 43 ; 43 >
         au < manifest ; 1974 ; Textile Research Journal Volume 44 ; 44 >
         au < manifest ; 1975 ; Textile Research Journal Volume 45 ; 45 >
-        au < doesNotExist ; 1976 ; Textile Research Journal Volume 46 ; 46 >
-        au < doesNotExist ; 1977 ; Textile Research Journal Volume 47 ; 47 >
+        au < doesNotExist ; 0 ; Textile Research Journal Volume 46 ; 46 >
+        au < doesNotExist ; 0 ; Textile Research Journal Volume 47 ; 47 >
         au < manifest ; 1978 ; Textile Research Journal Volume 48 ; 48 >
         au < manifest ; 1979 ; Textile Research Journal Volume 49 ; 49 >
         au < manifest ; 1980 ; Textile Research Journal Volume 50 ; 50 >
@@ -35507,16 +35507,16 @@ comment[mpj] = now published by Brill
         au < manifest ; 1985 ; Textile Research Journal Volume 55 ; 55 >
         au < manifest ; 1986 ; Textile Research Journal Volume 56 ; 56 >
         au < manifest ; 1987 ; Textile Research Journal Volume 57 ; 57 >
-        au < doesNotExist ; 1988 ; Textile Research Journal Volume 58 ; 58 >
+        au < doesNotExist ; 0 ; Textile Research Journal Volume 58 ; 58 >
         au < manifest ; 1989 ; Textile Research Journal Volume 59 ; 59 >
         au < manifest ; 1990 ; Textile Research Journal Volume 60 ; 60 >
         au < manifest ; 1991 ; Textile Research Journal Volume 61 ; 61 >
-        au < doesNotExist ; 1992 ; Textile Research Journal Volume 62 ; 62 >
+        au < doesNotExist ; 0 ; Textile Research Journal Volume 62 ; 62 >
         au < manifest ; 1993 ; Textile Research Journal Volume 63 ; 63 >
         au < manifest ; 1994 ; Textile Research Journal Volume 64 ; 64 >
         au < manifest ; 1995 ; Textile Research Journal Volume 65 ; 65 >
         au < manifest ; 1996 ; Textile Research Journal Volume 66 ; 66 >
-        au < doesNotExist ; 1997 ; Textile Research Journal Volume 67 ; 67 >
+        au < doesNotExist ; 0 ; Textile Research Journal Volume 67 ; 67 >
         au < manifest ; 1998 ; Textile Research Journal Volume 68 ; 68 >
         au < manifest ; 1999 ; Textile Research Journal Volume 69 ; 69 >
         au < manifest ; 2000 ; Textile Research Journal Volume 70 ; 70 >
@@ -36625,7 +36625,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1990 ; Toxicology and Industrial Health Volume 6 ; 6 >
         au < manifest ; 1991 ; Toxicology and Industrial Health Volume 7 ; 7 >
         au < manifest ; 1992 ; Toxicology and Industrial Health Volume 8 ; 8 >
-        au < doesNotExist ; 1993 ; Toxicology and Industrial Health Volume 9 ; 9 >
+        au < doesNotExist ; 0 ; Toxicology and Industrial Health Volume 9 ; 9 >
         au < manifest ; 1994 ; Toxicology and Industrial Health Volume 10 ; 10 >
         au < manifest ; 1995 ; Toxicology and Industrial Health Volume 11 ; 11 >
         au < manifest ; 1996 ; Toxicology and Industrial Health Volume 12 ; 12 >
@@ -37441,7 +37441,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1971 ; Vascular and Endovascular Surgery Volume 5 ; 5 >
         au < manifest ; 1972 ; Vascular and Endovascular Surgery Volume 6 ; 6 >
         au < manifest ; 1973 ; Vascular and Endovascular Surgery Volume 7 ; 7 >
-        au < doesNotExist ; 1974 ; Vascular and Endovascular Surgery Volume 8 ; 8 >
+        au < doesNotExist ; 0 ; Vascular and Endovascular Surgery Volume 8 ; 8 >
         au < manifest ; 1975 ; Vascular and Endovascular Surgery Volume 9 ; 9 >
         au < manifest ; 1976 ; Vascular and Endovascular Surgery Volume 10 ; 10 >
         au < manifest ; 1977 ; Vascular and Endovascular Surgery Volume 11 ; 11 >
@@ -38296,7 +38296,7 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 1969-1970 ; Youth & Society Volume 1 ; 1 >
         au < manifest ; 1970-1971 ; Youth & Society Volume 2 ; 2 >
-        au < doesNotExist ; 1970 ; Youth & Society Volume 3 ; 3 >
+        au < doesNotExist ; 0 ; Youth & Society Volume 3 ; 3 >
         au < manifest ; 1972-1973 ; Youth & Society Volume 4 ; 4 >
         au < manifest ; 1973-1974 ; Youth & Society Volume 5 ; 5 >
         au < manifest ; 1974-1975 ; Youth & Society Volume 6 ; 6 >
