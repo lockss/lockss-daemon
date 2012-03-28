@@ -1,55 +1,51 @@
 {
+
   publisher <
     name = American College of Cardiology
   >
 
   {
+
     title <
       name = JACC: Cardiovascular Imaging ;
       issn = 1936-878X ;
       issnl = 1876-7591
     >
 
-    {
-	
-	  comment[urgent] = urgent test
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-      param[base_url] = http://imaging.onlinejacc.org/
-      implicit < status ; year ; name ; param[volume_name] >
+    comment[urgent] = urgent test
+    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+    param[base_url] = http://imaging.onlinejacc.org/
+    implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2008 ; JACC: Cardiovascular Imaging Volume 1 ; 1 >
-      au < released ; 2009 ; JACC: Cardiovascular Imaging Volume 2 ; 2 >
-      au < manifest ; 2010 ; JACC: Cardiovascular Imaging Volume 3 ; 3 >
-      au < manifest ; 2011 ; JACC: Cardiovascular Imaging Volume 4 ; 4 >
-
-    }
+    au < released ; 2008 ; JACC: Cardiovascular Imaging Volume 1 ; 1 >
+    au < released ; 2009 ; JACC: Cardiovascular Imaging Volume 2 ; 2 >
+    au < manifest ; 2010 ; JACC: Cardiovascular Imaging Volume 3 ; 3 >
+    au < manifest ; 2011 ; JACC: Cardiovascular Imaging Volume 4 ; 4 >
 
   }
 
   {
+
     title <
       name = JACC: Cardiovascular Interventions ;
       issn = 1936-8798 ;
       issnl = 1876-7605
     >
 
-    {
+    comment[urgent] = urgent test
+    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+    param[base_url] = http://interventions.onlinejacc.org/
+    implicit < status ; year ; name ; param[volume_name] >
 
-	  comment[urgent] = urgent test
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-      param[base_url] = http://interventions.onlinejacc.org/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < released ; 2008 ; JACC: Cardiovascular Interventions Volume 1 ; 1 >
-      au < released ; 2009 ; JACC: Cardiovascular Interventions Volume 2 ; 2 >
-      au < testing ; 2010 ; JACC: Cardiovascular Interventions Volume 3 ; 3 >
-      au < testing ; 2011 ; JACC: Cardiovascular Interventions Volume 4 ; 4 >
-
-    }
+    au < released ; 2008 ; JACC: Cardiovascular Interventions Volume 1 ; 1 >
+    au < released ; 2009 ; JACC: Cardiovascular Interventions Volume 2 ; 2 >
+    au < testing ; 2010 ; JACC: Cardiovascular Interventions Volume 3 ; 3 >
+    au < testing ; 2011 ; JACC: Cardiovascular Interventions Volume 4 ; 4 >
 
   }
 
   {
+
     title <
       name = Journal of the American College of Cardiology ;
       issn = 0735-1097 ;
@@ -57,75 +53,70 @@
       issnl = 0735-1097
     >
 
-    {
+    comment[urgent] = urgent test
+    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+    param[base_url] = http://content.onlinejacc.org/
+    implicit < status ; year ; name ; param[volume_name] >
 
-	  comment[urgent] = urgent test
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-      param[base_url] = http://content.onlinejacc.org/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < released ; 1983 ; Journal of the American College of Cardiology Volume 1 ; 1 >
-      au < released ; 1983 ; Journal of the American College of Cardiology Volume 2 ; 2 >
-      au < released ; 1984 ; Journal of the American College of Cardiology Volume 3 ; 3 >
-      au < released ; 1984 ; Journal of the American College of Cardiology Volume 4 ; 4 >
-      au < released ; 1985 ; Journal of the American College of Cardiology Volume 5 ; 5 >
-      au < released ; 1985 ; Journal of the American College of Cardiology Volume 6 ; 6 >
-      au < released ; 1986 ; Journal of the American College of Cardiology Volume 7 ; 7 >
-      au < released ; 1986 ; Journal of the American College of Cardiology Volume 8 ; 8 >
-      au < released ; 1987 ; Journal of the American College of Cardiology Volume 9 ; 9 >
-      au < released ; 1987 ; Journal of the American College of Cardiology Volume 10 ; 10 >
-      au < released ; 1988 ; Journal of the American College of Cardiology Volume 11 ; 11 >
-      au < released ; 1988 ; Journal of the American College of Cardiology Volume 12 ; 12 >
-      au < released ; 1989 ; Journal of the American College of Cardiology Volume 13 ; 13 >
-      au < released ; 1989 ; Journal of the American College of Cardiology Volume 14 ; 14 >
-      au < released ; 1990 ; Journal of the American College of Cardiology Volume 15 ; 15 >
-      au < released ; 1990 ; Journal of the American College of Cardiology Volume 16 ; 16 >
-      au < released ; 1991 ; Journal of the American College of Cardiology Volume 17 ; 17 >
-      au < released ; 1991 ; Journal of the American College of Cardiology Volume 18 ; 18 >
-      au < released ; 1992 ; Journal of the American College of Cardiology Volume 19 ; 19 >
-      au < testing ; 1992 ; Journal of the American College of Cardiology Volume 20 ; 20 >
-      au < testing ; 1993 ; Journal of the American College of Cardiology Volume 21 ; 21 >
-      au < testing ; 1993 ; Journal of the American College of Cardiology Volume 22 ; 22 >
-      au < testing ; 1994 ; Journal of the American College of Cardiology Volume 23 ; 23 >
-      au < testing ; 1994 ; Journal of the American College of Cardiology Volume 24 ; 24 >
-      au < testing ; 1995 ; Journal of the American College of Cardiology Volume 25 ; 25 >
-      au < testing ; 1995 ; Journal of the American College of Cardiology Volume 26 ; 26 >
-      au < testing ; 1996 ; Journal of the American College of Cardiology Volume 27 ; 27 >
-      au < testing ; 1996 ; Journal of the American College of Cardiology Volume 28 ; 28 >
-      au < testing ; 1997 ; Journal of the American College of Cardiology Volume 29 ; 29 >
-      au < testing ; 1997 ; Journal of the American College of Cardiology Volume 30 ; 30 >
-      au < testing ; 1998 ; Journal of the American College of Cardiology Volume 31 ; 31 >
-      au < testing ; 1998 ; Journal of the American College of Cardiology Volume 32 ; 32 >
-      au < testing ; 1999 ; Journal of the American College of Cardiology Volume 33 ; 33 >
-      au < testing ; 1999 ; Journal of the American College of Cardiology Volume 34 ; 34 >
-      au < testing ; 2000 ; Journal of the American College of Cardiology Volume 35 ; 35 >
-      au < testing ; 2000 ; Journal of the American College of Cardiology Volume 36 ; 36 >
-      au < testing ; 2001 ; Journal of the American College of Cardiology Volume 37 ; 37 >
-      au < testing ; 2001 ; Journal of the American College of Cardiology Volume 38 ; 38 >
-      au < testing ; 2002 ; Journal of the American College of Cardiology Volume 39 ; 39 >
-      au < testing ; 2002 ; Journal of the American College of Cardiology Volume 40 ; 40 >
-      au < testing ; 2003 ; Journal of the American College of Cardiology Volume 41 ; 41 >
-      au < testing ; 2003 ; Journal of the American College of Cardiology Volume 42 ; 42 >
-      au < testing ; 2004 ; Journal of the American College of Cardiology Volume 43 ; 43 >
-      au < testing ; 2004 ; Journal of the American College of Cardiology Volume 44 ; 44 >
-      au < testing ; 2005 ; Journal of the American College of Cardiology Volume 45 ; 45 >
-      au < testing ; 2005 ; Journal of the American College of Cardiology Volume 46 ; 46 >
-      au < testing ; 2006 ; Journal of the American College of Cardiology Volume 47 ; 47 >
-      au < testing ; 2006 ; Journal of the American College of Cardiology Volume 48 ; 48 >
-      au < testing ; 2007 ; Journal of the American College of Cardiology Volume 49 ; 49 >
-      au < testing ; 2007 ; Journal of the American College of Cardiology Volume 50 ; 50 >
-      au < testing ; 2008 ; Journal of the American College of Cardiology Volume 51 ; 51 >
-      au < testing ; 2008 ; Journal of the American College of Cardiology Volume 52 ; 52 >
-      au < testing ; 2009 ; Journal of the American College of Cardiology Volume 53 ; 53 >
-      au < testing ; 2009 ; Journal of the American College of Cardiology Volume 54 ; 54 >
-      au < testing ; 2010 ; Journal of the American College of Cardiology Volume 55 ; 55 >
-      au < testing ; 2010 ; Journal of the American College of Cardiology Volume 56 ; 56 >
-      au < testing ; 2011 ; Journal of the American College of Cardiology Volume 57 ; 57 >
-      au < testing ; 2011 ; Journal of the American College of Cardiology Volume 58 ; 58 >
-
-    }
+    au < released ; 1983 ; Journal of the American College of Cardiology Volume 1 [abstracts only] ; 1 >
+    au < released ; 1983 ; Journal of the American College of Cardiology Volume 2 [abstracts only] ; 2 >
+    au < released ; 1984 ; Journal of the American College of Cardiology Volume 3 [abstracts only] ; 3 >
+    au < released ; 1984 ; Journal of the American College of Cardiology Volume 4 [abstracts only] ; 4 >
+    au < released ; 1985 ; Journal of the American College of Cardiology Volume 5 [abstracts only] ; 5 >
+    au < released ; 1985 ; Journal of the American College of Cardiology Volume 6 [abstracts only] ; 6 >
+    au < released ; 1986 ; Journal of the American College of Cardiology Volume 7 [abstracts only] ; 7 >
+    au < released ; 1986 ; Journal of the American College of Cardiology Volume 8 [abstracts only] ; 8 >
+    au < released ; 1987 ; Journal of the American College of Cardiology Volume 9 [abstracts only] ; 9 >
+    au < released ; 1987 ; Journal of the American College of Cardiology Volume 10 [abstracts only] ; 10 >
+    au < released ; 1988 ; Journal of the American College of Cardiology Volume 11 [abstracts only] ; 11 >
+    au < released ; 1988 ; Journal of the American College of Cardiology Volume 12 [abstracts only] ; 12 >
+    au < released ; 1989 ; Journal of the American College of Cardiology Volume 13 [abstracts only] ; 13 >
+    au < released ; 1989 ; Journal of the American College of Cardiology Volume 14 [abstracts only] ; 14 >
+    au < released ; 1990 ; Journal of the American College of Cardiology Volume 15 [abstracts only] ; 15 >
+    au < released ; 1990 ; Journal of the American College of Cardiology Volume 16 [abstracts only] ; 16 >
+    au < released ; 1991 ; Journal of the American College of Cardiology Volume 17 [abstracts only] ; 17 >
+    au < released ; 1991 ; Journal of the American College of Cardiology Volume 18 [abstracts only] ; 18 >
+    au < released ; 1992 ; Journal of the American College of Cardiology Volume 19 [abstracts only] ; 19 >
+    au < testing ; 1992 ; Journal of the American College of Cardiology Volume 20 [abstracts only] ; 20 >
+    au < testing ; 1993 ; Journal of the American College of Cardiology Volume 21 [abstracts only] ; 21 >
+    au < testing ; 1993 ; Journal of the American College of Cardiology Volume 22 [abstracts only] ; 22 >
+    au < testing ; 1994 ; Journal of the American College of Cardiology Volume 23 [abstracts only] ; 23 >
+    au < testing ; 1994 ; Journal of the American College of Cardiology Volume 24 [abstracts only] ; 24 >
+    au < testing ; 1995 ; Journal of the American College of Cardiology Volume 25 [abstracts only] ; 25 >
+    au < testing ; 1995 ; Journal of the American College of Cardiology Volume 26 [abstracts only] ; 26 >
+    au < testing ; 1996 ; Journal of the American College of Cardiology Volume 27 [abstracts only] ; 27 >
+    au < testing ; 1996 ; Journal of the American College of Cardiology Volume 28 [abstracts only] ; 28 >
+    au < testing ; 1997 ; Journal of the American College of Cardiology Volume 29 [abstracts only] ; 29 >
+    au < testing ; 1997 ; Journal of the American College of Cardiology Volume 30 [abstracts only] ; 30 >
+    au < testing ; 1998 ; Journal of the American College of Cardiology Volume 31 ; 31 >
+    au < testing ; 1998 ; Journal of the American College of Cardiology Volume 32 ; 32 >
+    au < testing ; 1999 ; Journal of the American College of Cardiology Volume 33 ; 33 >
+    au < testing ; 1999 ; Journal of the American College of Cardiology Volume 34 ; 34 >
+    au < testing ; 2000 ; Journal of the American College of Cardiology Volume 35 ; 35 >
+    au < testing ; 2000 ; Journal of the American College of Cardiology Volume 36 ; 36 >
+    au < testing ; 2001 ; Journal of the American College of Cardiology Volume 37 ; 37 >
+    au < testing ; 2001 ; Journal of the American College of Cardiology Volume 38 ; 38 >
+    au < testing ; 2002 ; Journal of the American College of Cardiology Volume 39 ; 39 >
+    au < testing ; 2002 ; Journal of the American College of Cardiology Volume 40 ; 40 >
+    au < testing ; 2003 ; Journal of the American College of Cardiology Volume 41 ; 41 >
+    au < testing ; 2003 ; Journal of the American College of Cardiology Volume 42 ; 42 >
+    au < testing ; 2004 ; Journal of the American College of Cardiology Volume 43 ; 43 >
+    au < testing ; 2004 ; Journal of the American College of Cardiology Volume 44 ; 44 >
+    au < testing ; 2005 ; Journal of the American College of Cardiology Volume 45 ; 45 >
+    au < testing ; 2005 ; Journal of the American College of Cardiology Volume 46 ; 46 >
+    au < testing ; 2006 ; Journal of the American College of Cardiology Volume 47 ; 47 >
+    au < testing ; 2006 ; Journal of the American College of Cardiology Volume 48 ; 48 >
+    au < testing ; 2007 ; Journal of the American College of Cardiology Volume 49 ; 49 >
+    au < testing ; 2007 ; Journal of the American College of Cardiology Volume 50 ; 50 >
+    au < testing ; 2008 ; Journal of the American College of Cardiology Volume 51 ; 51 >
+    au < testing ; 2008 ; Journal of the American College of Cardiology Volume 52 ; 52 >
+    au < testing ; 2009 ; Journal of the American College of Cardiology Volume 53 ; 53 >
+    au < testing ; 2009 ; Journal of the American College of Cardiology Volume 54 ; 54 >
+    au < testing ; 2010 ; Journal of the American College of Cardiology Volume 55 ; 55 >
+    au < testing ; 2010 ; Journal of the American College of Cardiology Volume 56 ; 56 >
+    au < testing ; 2011 ; Journal of the American College of Cardiology Volume 57 ; 57 >
+    au < testing ; 2011 ; Journal of the American College of Cardiology Volume 58 ; 58 >
 
   }
 
 }
-
