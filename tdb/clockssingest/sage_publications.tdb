@@ -2422,10 +2422,10 @@
       au < manifest ; exists ; 1974 ; Asia Pacific Journal of Human Resources Volume 9 ; 9 ; >
       au < manifest ; exists ; 1975 ; Asia Pacific Journal of Human Resources Volume 10 ; 10 ; >
       au < manifest ; exists ; 1976 ; Asia Pacific Journal of Human Resources Volume 11 ; 11 ; >
-      au < doesNotExist ; exists ; 1976 ; Asia Pacific Journal of Human Resources Volume 12 ; 12 ; >
-      au < doesNotExist ; exists ; 1977 ; Asia Pacific Journal of Human Resources Volume 13 ; 13 ; >
-      au < doesNotExist ; exists ; 1978 ; Asia Pacific Journal of Human Resources Volume 14 ; 14 ; >
-      au < doesNotExist ; exists ; 1979 ; Asia Pacific Journal of Human Resources Volume 15 ; 15 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Asia Pacific Journal of Human Resources Volume 12 ; 12 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Asia Pacific Journal of Human Resources Volume 13 ; 13 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Asia Pacific Journal of Human Resources Volume 14 ; 14 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Asia Pacific Journal of Human Resources Volume 15 ; 15 ; >
       au < manifest ; exists ; 1978 ; Asia Pacific Journal of Human Resources Volume 16 ; 16 ; >
       au < manifest ; exists ; 1979 ; Asia Pacific Journal of Human Resources Volume 17 ; 17 ; >
       au < manifest ; exists ; 1980 ; Asia Pacific Journal of Human Resources Volume 18 ; 18 ; >
@@ -2804,7 +2804,7 @@
       au < manifest ; exists ; 2006 ; Autism Volume 10 ; 10 ; >
       au < manifest ; exists ; 2007 ; Autism Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Autism Volume 12 ; 12 ; >
-      au < released ; crawling ; 2010 ; Autism Volume 13 ; 13 ; >
+      au < released ; crawling ; 2009 ; Autism Volume 13 ; 13 ; >
       au < released ; crawling ; 2010 ; Autism Volume 14 ; 14 ; >
       au < released ; crawling ; 2011 ; Autism Volume 15 ; 15 ; >
       au < crawling ; exists ; 2012 ; Autism Volume 16 ; 16 ; >
@@ -3584,27 +3584,27 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1960 ; Business & Society Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1960 ; Business & Society Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1962 ; Business & Society Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1963 ; Business & Society Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1964 ; Business & Society Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1965 ; Business & Society Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1966 ; Business & Society Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1967 ; Business & Society Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1968 ; Business & Society Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1969 ; Business & Society Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1970 ; Business & Society Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1971 ; Business & Society Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1972 ; Business & Society Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1973 ; Business & Society Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1974 ; Business & Society Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1975 ; Business & Society Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1976 ; Business & Society Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1977 ; Business & Society Volume 18 ; 18 ; >
-      au < manifest ; exists ; 1978 ; Business & Society Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1960-1961 ; Business & Society Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1962 ; Business & Society Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1962-1963 ; Business & Society Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1963-1964 ; Business & Society Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1964-1965 ; Business & Society Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1965-1966 ; Business & Society Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1966-1967 ; Business & Society Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1967-1968 ; Business & Society Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1968-1969 ; Business & Society Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1969-1970 ; Business & Society Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1970-1971 ; Business & Society Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1971-1972 ; Business & Society Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1972-1973 ; Business & Society Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1973-1974 ; Business & Society Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1974-1975 ; Business & Society Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1975-1976 ; Business & Society Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1976-1977 ; Business & Society Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1977-1978 ; Business & Society Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1978-1980 ; Business & Society Volume 19 ; 19 ; >
       au < manifest ; exists ; 1981 ; Business & Society Volume 20 ; 20 ; >
-      au < exists ; exists ; 1981 ; Business & Society Volume 21 ; 21 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Business & Society Volume 21 ; 21 ; >
       au < manifest ; exists ; 1983 ; Business & Society Volume 22 ; 22 ; >
       au < manifest ; exists ; 1984 ; Business & Society Volume 23 ; 23 ; >
       au < manifest ; exists ; 1985 ; Business & Society Volume 24 ; 24 ; >
