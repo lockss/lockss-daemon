@@ -6,7 +6,7 @@
   
   {
     
-    plugin = needs.plugin 
+    plugin = org.lockss.plugin.pion.PionPlugin 
     implicit < status ; year ; name ; param[volume_name] >
   
     {
