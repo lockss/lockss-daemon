@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseHtmlFilterFactory.java,v 1.4 2011-06-08 02:18:29 thib_gc Exp $*/
+ * $Id: ProjectMuseHtmlFilterFactory.java,v 1.5 2012-03-28 19:02:23 thib_gc Exp $*/
 
 /*
 
@@ -53,6 +53,7 @@ public class ProjectMuseHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar2"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "credits"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "citationsblock"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "main_footer"),
     };
     
     // First filter with HtmlParser
