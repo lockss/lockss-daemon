@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.11 2011-05-09 00:37:08 tlipkis Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.12 2012-03-28 20:25:43 wkwilson Exp $
  */
 
 /*
@@ -110,6 +110,7 @@ public class HtmlFilterInputStream extends InputStream {
   private String outCharset;
   private InputStream out = null;
   private HtmlTransform xform;
+  private int encodingMatchRange = 0;
 
   /**
    * Create an HtmlFilterInputStream that applies the given transform
@@ -193,7 +194,11 @@ public class HtmlFilterInputStream extends InputStream {
     if (marksize > 0) {
       in.mark(marksize);
     }
-    Page pg = new Page(new InputStreamSource(in, charset, rdrBufSize));
+    InputStreamSource is = new InputStreamSource(in, charset, rdrBufSize);
+    if(encodingMatchRange > 0) {
+    	is.setEncodingMatchRange(encodingMatchRange);
+    }
+    Page pg = new Page(is);
     setupHtmlParser();
 
     Lexer lx = new Lexer(pg);
@@ -227,6 +232,12 @@ public class HtmlFilterInputStream extends InputStream {
     return out;
   }
 
+  public int getEncodingMatchRange(){
+	  return encodingMatchRange;
+  }
+  public void setEncodingMatchRange(int encodingMatchRange){
+	  this.encodingMatchRange = encodingMatchRange;
+  }
   public int read() throws IOException {
     return getOut().read();
   }
