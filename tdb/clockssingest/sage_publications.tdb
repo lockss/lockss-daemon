@@ -121,7 +121,7 @@
       au < manifest ; exists ; 1998 ; Acta Sociologica Volume 41 ; 41 ; >
       au < manifest ; exists ; 1999 ; Acta Sociologica Volume 42 ; 42 ; >
       au < manifest ; exists ; 2000 ; Acta Sociologica Volume 43 ; 43 ; >
-      au < doesNotExist ; none ; 2001 ; Acta Sociologica Volume 44 ; 44 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Acta Sociologica Volume 44 ; 44 ; >
       au < manifest ; exists ; 2002 ; Acta Sociologica Volume 45 ; 45 ; >
       au < manifest ; exists ; 2003 ; Acta Sociologica Volume 46 ; 46 ; >
       au < manifest ; exists ; 2004 ; Acta Sociologica Volume 47 ; 47 ; >
@@ -2416,7 +2416,7 @@
       au < manifest ; exists ; 1968 ; Asia Pacific Journal of Human Resources Volume 3 ; 3 ; >
       au < manifest ; exists ; 1969 ; Asia Pacific Journal of Human Resources Volume 4 ; 4 ; >
       au < manifest ; exists ; 1970 ; Asia Pacific Journal of Human Resources Volume 5 ; 5 ; >
-      au < doesNotExist ; exists ; 1970 ; Asia Pacific Journal of Human Resources Volume 6 ; 6 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Asia Pacific Journal of Human Resources Volume 6 ; 6 ; >
       au < manifest ; exists ; 1972 ; Asia Pacific Journal of Human Resources Volume 7 ; 7 ; >
       au < manifest ; exists ; 1973 ; Asia Pacific Journal of Human Resources Volume 8 ; 8 ; >
       au < manifest ; exists ; 1974 ; Asia Pacific Journal of Human Resources Volume 9 ; 9 ; >
@@ -2622,6 +2622,7 @@
       au < released ; crawling ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 ; >
       au < released ; crawling ; 2010-2011 ; Assessment for Effective Intervention Volume 36 ; 36 ; >
       au < crawling ; exists ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 ; >
+      au < expected ; exists ; 2012-2013 ; Assessment for Effective Intervention Volume 38 ; 38 ; >
 
     }
 
@@ -8594,7 +8595,7 @@
       au < manifest ; exists ; 2009 ; European Journal of Cardiovascular Prevention & Rehabilitation 16 ; 16 ; >
       au < crawling ; exists ; 2010 ; European Journal of Cardiovascular Prevention & Rehabilitation 17 ; 17 ; >
       au < released ; crawling ; 2011 ; European Journal of Cardiovascular Prevention & Rehabilitation 18 ; 18 ; >
-      au < doesNotExist ; doesNotExist ; 2012 ; European Journal of Cardiovascular Prevention & Rehabilitation 19 ; 19 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; European Journal of Cardiovascular Prevention & Rehabilitation 19 ; 19 ; >
 
     }
 
@@ -8612,13 +8613,12 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://cpr.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
         
         comment[continued_from] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
         comment[0] = Previous issues are at the same url.
         
-        au < doesNotExist ; 2011 ; European Journal of Preventive Cardiology 18 ; 18 >
-        au < manifest ; 2012 ; European Journal of Preventive Cardiology 19 ; 19 >
+        au < doesNotExist ; doesNotExist ; 2011 ; European Journal of Preventive Cardiology 18 ; 18 ; >
+        au < manifest ; exists ; 2012 ; European Journal of Preventive Cardiology 19 ; 19 ; >
 
       }
 
