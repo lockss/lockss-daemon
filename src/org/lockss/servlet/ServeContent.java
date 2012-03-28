@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.45 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.46 2012-03-28 21:11:16 pgust Exp $
  */
 
 /*
@@ -54,6 +54,8 @@ import org.lockss.util.urlconn.LockssUrlConnectionPool;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
+import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo.ResolvedTo;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseUrlCacher;
 import org.lockss.proxy.ProxyManager;
@@ -114,16 +116,16 @@ public class ServeContent extends LockssServlet {
   public static enum MissingFileAction {
     /** Return a 404 */
     Error_404,
-      /** Generate an index of all AUs with content on the same host. */
-      HostAuIndex,
-      /** Generate an index of all AUs. */
-      AuIndex,
-      /** Respond with a redirect to the publisher iff it isn't known to be
-       * down, else same as HostAuIndex. */
-      Redirect,
-      /** Respond with a redirect to the publisher. */
-      AlwaysRedirect,
-      }
+    /** Generate an index of all AUs with content on the same host. */
+    HostAuIndex,
+    /** Generate an index of all AUs. */
+    AuIndex,
+    /** Respond with a redirect to the publisher iff it isn't known to be
+     * down, else same as HostAuIndex. */
+    Redirect,
+    /** Respond with a redirect to the publisher. */
+    AlwaysRedirect,
+  }
   
   /** If true, rewritten links will be absolute
    * (http://host:port/ServeContent?url=...).  If false, relative
@@ -291,12 +293,12 @@ public class ServeContent extends LockssServlet {
 	logAccess("URL: " + url, msg);
 	break;
       case Doi:
-	logAccess("DOI: " + accessLogInfo + " resolved to URL: " + url,
-		  msg);
+	logAccess("DOI: " + ((accessLogInfo==null) ? "" : accessLogInfo) 
+	          + " resolved to URL: " + url, msg);
 	break;
       case OpenUrl:
-	logAccess("OpenUrl: " + accessLogInfo + " resolved to URL: " + url,
-		  msg);
+	logAccess("OpenUrl: " + ((accessLogInfo==null) ? "" : accessLogInfo) 
+	          + " resolved to URL: " + url, msg);
 	break;
       }
     }
@@ -326,7 +328,7 @@ public class ServeContent extends LockssServlet {
     String auid = getParameter("auid");
     if (!StringUtil.isNullString(url)) {
       if (!StringUtil.isNullString(auid)) {
-	au = pluginMgr.getAuFromId(auid);
+        au = pluginMgr.getAuFromId(auid);
       }
       if (log.isDebug3()) log.debug3("Url req, raw: " + url);
       // handle html-encoded URLs with characters like &amp;
@@ -335,21 +337,21 @@ public class ServeContent extends LockssServlet {
       requestType = AccessLogType.Url;
       
       if (normalizeUrl) {
-	String normUrl;
-	if (au != null) {
-	  try {
-	    normUrl = UrlUtil.normalizeUrl(url, au);
-	  } catch (PluginBehaviorException e) {
-	    log.warning("Couldn't site-normalize URL: " + url, e);
-	    normUrl = UrlUtil.normalizeUrl(url);
-	  }
-	} else {
-	  normUrl = UrlUtil.normalizeUrl(url);
-	}
-	if (normUrl != url) {
-	  log.debug2(url + " normalized to " + normUrl);
-	  url = normUrl;
-	}
+      	String normUrl;
+      	if (au != null) {
+      	  try {
+      	    normUrl = UrlUtil.normalizeUrl(url, au);
+      	  } catch (PluginBehaviorException e) {
+      	    log.warning("Couldn't site-normalize URL: " + url, e);
+      	    normUrl = UrlUtil.normalizeUrl(url);
+      	  }
+      	} else {
+      	  normUrl = UrlUtil.normalizeUrl(url);
+      	}
+      	if (normUrl != url) {
+      	  log.debug2(url + " normalized to " + normUrl);
+      	  url = normUrl;
+      	}
       }
       handleUrlRequest();
       return;
@@ -357,27 +359,30 @@ public class ServeContent extends LockssServlet {
     
     // perform special handling for an OpenUrl
     try {
+      OpenUrlInfo resolved = OpenUrlResolver.noOpenUrlInfo;
       String doi = getParameter("doi");
       if (!StringUtil.isNullString(doi)) {
         // transform convenience representation of doi to OpenURL form
         // (ignore other parameters)
         if (log.isDebug3()) log.debug3("Resolving DOI: " + doi);
-          url = openUrlResolver.resolveFromDOI(doi);
-          requestType = AccessLogType.Doi;
-        } else {
-    	// If any params, pass them all to OpenUrl resolver
-    	Map<String,String> pmap = getParamsAsMap();
-    	if (!pmap.isEmpty()) {
-    	  if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
-    	  url = openUrlResolver.resolveOpenUrl(pmap);
-    	  requestType = AccessLogType.OpenUrl;
-    	}
+        resolved = openUrlResolver.resolveFromDOI(doi);
+        requestType = AccessLogType.Doi;
+      } else {
+      	// If any params, pass them all to OpenUrl resolver
+      	Map<String,String> pmap = getParamsAsMap();
+      	if (!pmap.isEmpty()) {
+      	  if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
+      	  resolved = openUrlResolver.resolveOpenUrl(pmap);
+      	  requestType = AccessLogType.OpenUrl;
+      	}
       }
-      if (!StringUtil.isNullString(url)) {
-        log.debug2("Resolved OpenUrl to: " + url);
-        handleUrlRequest();
+      
+      url = resolved.resolvedUrl;
+      if (resolved.resolvedTo != ResolvedTo.NONE) {
+        handleOpenUrlInfo(resolved);
         return;
-      }
+      } 
+
       log.debug3("Request is not an OpenUrl");
     } catch (RuntimeException ex) {
       log.warning("Couldn't handle OpenUrl", ex);
@@ -403,24 +408,24 @@ public class ServeContent extends LockssServlet {
     try {
       // Get the CachedUrl for the URL, only if it has content.
       if (au != null) {
-	cu = au.makeCachedUrl(url);
+      	cu = au.makeCachedUrl(url);
       } else {
-	// Find CU if belongs to any configured AU even if has no content,
-	// so can rewrite from publisher
-	cu = pluginMgr.findCachedUrl(url, false);
-	if (cu != null) {
-	  if (log.isDebug3()) log.debug3("cu: " + cu);
-	  au = cu.getArchivalUnit();
-	}
+      	// Find CU if belongs to any configured AU even if has no content,
+      	// so can rewrite from publisher
+      	cu = pluginMgr.findCachedUrl(url, false);
+      	if (cu != null) {
+      	  if (log.isDebug3()) log.debug3("cu: " + cu);
+      	  au = cu.getArchivalUnit();
+      	}
       }
       if (au != null) {
         handleAuRequest();
       } else if (!isNeverProxy()) {
         log.debug2("Content not cached: redirecting to " + url);
         resp.sendRedirect(url);
-	logAccess("not configured, 302 redirect to pub");
+        logAccess("not configured, 302 redirect to pub");
       } else {
-	handleMissingUrlRequest(url, PubState.Unknown);
+        handleMissingUrlRequest(url, PubState.Unknown);
       }
     } catch (IOException e) {
       log.warning("Handling " + url + " throws ", e);
@@ -429,7 +434,183 @@ public class ServeContent extends LockssServlet {
       AuUtil.safeRelease(cu);
     }
   }
+  
+  /**
+   * Handle request for the page specified OpenUrlInfo 
+   * that is returned from OpenUrlResolver. 
+   * 
+   * @throws IOException
+   */
+  protected void handleOpenUrlInfo(OpenUrlInfo info) throws IOException {
+    log.debug2("resolvedTo: " + info.resolvedTo + "url: " + url);
+    try {
+      // Get the CachedUrl for the URL, only if it has content.
+      if (au != null) {
+        cu = au.makeCachedUrl(url);
+      } else {
+        // Find CU if belongs to any configured AU even if has no content,
+        // so can rewrite from publisher
+        cu = pluginMgr.findCachedUrl(url, false);
+        if (cu != null) {
+          if (log.isDebug3()) log.debug3("cu: " + cu);
+          au = cu.getArchivalUnit();
+        }
+      }
+      
+      if (au != null) {
+        // display cached page if it has content
+        handleAuRequest();
+        return;
+      }
+      
+      if (isNeverProxy()) {
+        // do not offer publisher link if never proxying
+        handleMissingUrlRequest(url, PubState.Unknown);
+        return;
+      }
 
+      // handle non-cached url according to missingFileAction
+      switch (missingFileAction) {
+        case Error_404:
+          // return a 404
+          handleMissingUrlRequest(url, PubState.Unknown);
+          return;
+        case Redirect:
+        case AlwaysRedirect:
+          // respond with a redirect to the publisher url
+          resp.sendRedirect(url);
+          logAccess("not configured, 302 redirect to pub");
+          return;
+        case HostAuIndex:
+        case AuIndex:
+        default:
+          // fall through to offer link to publisher url
+          break;
+      }
+
+      if (info.resolvedTo == ResolvedTo.PUBLISHER) {
+        // display publisher page
+        Page page = newPage();
+        Block centeredBlock = new Block(Block.Center);
+        centeredBlock.add("<p>Found publisher page ");
+        centeredBlock.add("that is not preserved  on this LOCKSS box. ");
+        centeredBlock.add("Select link");
+        centeredBlock.add(
+            addFootnote("Selecting link takes you away from this LOCKSS box."));
+        centeredBlock.add(" to view it at the publisher:</p>");
+        centeredBlock.add("<a href=\"" + url + "\">" + url + "</a><br>");
+        page.add(centeredBlock);
+        endPage(page);
+        logAccess("200 to publisher page");
+        return;
+      }
+    
+      if (info.resolvedTo == ResolvedTo.TITLE) {
+        // display title page
+        Page page = newPage();
+        Block centeredBlock = new Block(Block.Center);
+        centeredBlock.add("<p>Found title page ");
+        centeredBlock.add("that is not preserved  on this LOCKSS box. ");
+        centeredBlock.add("Select link");
+        centeredBlock.add(
+            addFootnote("Selecting link takes you away from this LOCKSS box."));
+        centeredBlock.add(" to view it at the publisher:</p>");
+        centeredBlock.add("<a href=\"" + url + "\">" + url + "</a>");
+        page.add(centeredBlock);
+        endPage(page);
+        logAccess("200 title page");
+        return;
+      }
+      
+      if (info.resolvedTo == ResolvedTo.VOLUME) {
+        // display volume page
+        Page page = newPage();
+        Block centeredBlock = new Block(Block.Center);
+        centeredBlock.add("<p>Found volume page ");
+        centeredBlock.add("that is not preserved  on this LOCKSS box. ");
+        centeredBlock.add("Select link");
+        centeredBlock.add(
+            addFootnote("Selecting link takes you away from this LOCKSS box."));
+        centeredBlock.add(" to view it at the publisher:</p>");
+        centeredBlock.add("<a href=\"" + url + "\">" + url + "</a><br>");
+        page.add(centeredBlock);
+        endPage(page);
+        logAccess("200 volume page");
+        return;
+      }
+    
+      if (info.resolvedTo == ResolvedTo.ISSUE) {
+        // display issue page
+        Page page = newPage();
+        Block centeredBlock = new Block(Block.Center);
+        centeredBlock.add("<p>Found issue page ");
+        centeredBlock.add("that is not preserved  on this LOCKSS box. ");
+        centeredBlock.add("Select link");
+        centeredBlock.add(
+            addFootnote("Selecting link takes you away from this LOCKSS box."));
+        centeredBlock.add(" to view it at the publisher:</p>");
+        centeredBlock.add("<a href=\"" + url + "\">" + url + "</a><br>");
+        page.add(centeredBlock);
+        endPage(page);
+        logAccess("200 issue page");
+        return;
+      }
+    
+      if (info.resolvedTo == ResolvedTo.CHAPTER) {
+        // display publisher page with a list of titles
+        Page page = newPage();
+        Block centeredBlock = new Block(Block.Center);
+        centeredBlock.add("<p>Found chapter ");
+        centeredBlock.add("that is not preserved  on this LOCKSS box. ");
+        centeredBlock.add("Select link");
+        centeredBlock.add(
+            addFootnote("Selecting link takes you away from this LOCKSS box."));
+        centeredBlock.add(" to view it at the publisher:</p>");
+        centeredBlock.add("<a href=\"" + url + "\">" + url + "</a><br>");
+        page.add(centeredBlock);
+        endPage(page);
+        logAccess("200 chapter page");
+        return;
+      }
+    
+      if (info.resolvedTo == ResolvedTo.ARTICLE) {
+        // display publisher page with a list of titles
+        Page page = newPage();
+        Block centeredBlock = new Block(Block.Center);
+        centeredBlock.add("<p>Found article ");
+        centeredBlock.add("that is not preserved  on this LOCKSS box. ");
+        centeredBlock.add("Select link");
+        centeredBlock.add(
+            addFootnote("Selecting link takes you away from this LOCKSS box."));
+        centeredBlock.add(" to view it at the publisher:</p>");
+        centeredBlock.add("<a href=\"" + url + "\">" + url + "</a><br>");
+        page.add(centeredBlock);
+        endPage(page);
+        logAccess("200 article page");
+        return;
+      }
+    
+      // display other page for ResolvedTo.OTHER
+      Page page = newPage();
+      Block centeredBlock = new Block(Block.Center);
+      centeredBlock.add("<p>Found page ");
+      centeredBlock.add("that is not preserved  on this LOCKSS box. ");
+      centeredBlock.add("Select link to view it at the publisher:</p>");
+      addFootnote("Selecting link takes you away from this LOCKSS box.");
+      centeredBlock.add("<a href=\"" + url + "\">" + url + "</a><br>");
+      page.add(centeredBlock);
+      endPage(page);
+      logAccess("200 other page");
+      return;
+      
+    } catch (IOException e) {
+      log.warning("Handling " + url + " throws ", e);
+      throw e;
+    } finally {
+      AuUtil.safeRelease(cu);
+    }
+  }
+  
   /**
    * Handle request for content that belongs to one of our AUs, whether or
    * not we have content for that URL.  Serve content either from publisher
