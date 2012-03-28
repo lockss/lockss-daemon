@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.292 2012-03-27 23:03:25 wkwilson Exp $
+ $Id: build.xml,v 1.293 2012-03-28 02:31:45 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -744,7 +744,6 @@ The target you have selected requires compiling under JDK 1.7.
           <include name="**/*.html"/>   <!-- test files -->
           <include name="**/*.txt"/>   <!-- test files -->
           <include name="**/*.keystore"/> <!-- test keystores -->
-       	  <include name="**/*.pdf"/> <!-- test PDFs files -->
 	  <include name="**/*.jar"/> <!-- test jar files -->
 	  <include name="**/*.zip"/> <!-- test ZIP files -->
 	  <include name="**/*.tar"/> <!-- test TAR files -->
@@ -782,8 +781,9 @@ The target you have selected requires compiling under JDK 1.7.
     </dojavac>
     <copy todir="${plugins.test.classes}" >
        <fileset dir="${plugins.test.src}" >
-          <include name="**/*.xml"/>   <!-- test files -->
+          <include name="**/*.xml"/>	<!-- test files -->
           <include name="**/*.html"/>   <!-- test files -->
+       	  <include name="**/*.pdf"/>	<!-- test PDF files -->
        </fileset>
      </copy>
   </target>
