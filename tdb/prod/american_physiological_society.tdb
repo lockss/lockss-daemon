@@ -17,9 +17,9 @@
     >
 
     param[base_url] = http://advan.physiology.org/
-    
+
     {
-    
+
       pluginSuffix = HighWireStrVolPlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
@@ -85,30 +85,30 @@
     param[base_url] = http://ajplegacy.physiology.org/
     pluginSuffix = HighWirePressH20Plugin
 
-    au < manifest ; 1898 ; American Journal of Physiology Volume 1 ; 1 > 
+    au < manifest ; 1898 ; American Journal of Physiology Volume 1 ; 1 >
     au < manifest ; 1898-1899 ; American Journal of Physiology Volume 2 ; 2 >
     au < manifest ; 1899-1900 ; American Journal of Physiology Volume 3 ; 3 >
     au < manifest ; 1900-1901 ; American Journal of Physiology Volume 4 ; 4 >
-    au < manifest ; 1901 ; American Journal of Physiology Volume 5 ; 5 >     
+    au < manifest ; 1901 ; American Journal of Physiology Volume 5 ; 5 >
     au < manifest ; 1901-1902 ; American Journal of Physiology Volume 6 ; 6 >
-    au < manifest ; 1902 ; American Journal of Physiology Volume 7 ; 7 >     
+    au < manifest ; 1902 ; American Journal of Physiology Volume 7 ; 7 >
     au < manifest ; 1902-1903 ; American Journal of Physiology Volume 8 ; 8 >
-    au < manifest ; 1903 ; American Journal of Physiology Volume 9 ; 9 >     
+    au < manifest ; 1903 ; American Journal of Physiology Volume 9 ; 9 >
     au < manifest ; 1903-1904 ; American Journal of Physiology Volume 10 ; 10 >
-    au < manifest ; 1904 ; American Journal of Physiology Volume 11 ; 11 >   
+    au < manifest ; 1904 ; American Journal of Physiology Volume 11 ; 11 >
     au < manifest ; 1904-1905 ; American Journal of Physiology Volume 12 ; 12 >
-    au < manifest ; 1905 ; American Journal of Physiology Volume 13 ; 13 >   
-    au < manifest ; 1905 ; American Journal of Physiology Volume 14 ; 14 >   
+    au < manifest ; 1905 ; American Journal of Physiology Volume 13 ; 13 >
+    au < manifest ; 1905 ; American Journal of Physiology Volume 14 ; 14 >
     au < manifest ; 1905-1906 ; American Journal of Physiology Volume 15 ; 15 >
-    au < manifest ; 1906 ; American Journal of Physiology Volume 16 ; 16 >   
+    au < manifest ; 1906 ; American Journal of Physiology Volume 16 ; 16 >
     au < manifest ; 1906-1907 ; American Journal of Physiology Volume 17 ; 17 >
-    au < manifest ; 1907 ; American Journal of Physiology Volume 18 ; 18 >   
-    au < manifest ; 1907 ; American Journal of Physiology Volume 19 ; 19 >   
+    au < manifest ; 1907 ; American Journal of Physiology Volume 18 ; 18 >
+    au < manifest ; 1907 ; American Journal of Physiology Volume 19 ; 19 >
     au < manifest ; 1907-1908 ; American Journal of Physiology Volume 20 ; 20 >
-    au < manifest ; 1908 ; American Journal of Physiology Volume 21 ; 21 >   
-    au < manifest ; 1908 ; American Journal of Physiology Volume 22 ; 22 >   
+    au < manifest ; 1908 ; American Journal of Physiology Volume 21 ; 21 >
+    au < manifest ; 1908 ; American Journal of Physiology Volume 22 ; 22 >
     au < manifest ; 1908-1909 ; American Journal of Physiology Volume 23 ; 23 >
-    au < manifest ; 1909 ; American Journal of Physiology Volume 24 ; 24 >   
+    au < manifest ; 1909 ; American Journal of Physiology Volume 24 ; 24 >
     au < manifest ; 1909-1910 ; American Journal of Physiology Volume 25 ; 25 >
     au < manifest ; 1910 ; American Journal of Physiology Volume 26 ; 26 >
     au < manifest ; 1910-1911 ; American Journal of Physiology Volume 27 ; 27 >
@@ -124,79 +124,79 @@
     au < manifest ; 1915 ; American Journal of Physiology Volume 37 ; 37 >
     au < manifest ; 1915 ; American Journal of Physiology Volume 38 ; 38 >
     au < manifest ; 1915-1916 ; American Journal of Physiology Volume 39 ; 39 >
-    au < manifest ; 1916 ; American Journal of Physiology Volume 40 ; 40 >     
-    au < manifest ; 1916 ; American Journal of Physiology Volume 41 ; 41 >     
+    au < manifest ; 1916 ; American Journal of Physiology Volume 40 ; 40 >
+    au < manifest ; 1916 ; American Journal of Physiology Volume 41 ; 41 >
     au < manifest ; 1916-1917 ; American Journal of Physiology Volume 42 ; 42 >
-    au < manifest ; 1917 ; American Journal of Physiology Volume 43 ; 43 >     
-    au < manifest ; 1917 ; American Journal of Physiology Volume 44 ; 44 >     
+    au < manifest ; 1917 ; American Journal of Physiology Volume 43 ; 43 >
+    au < manifest ; 1917 ; American Journal of Physiology Volume 44 ; 44 >
     au < manifest ; 1917-1918 ; American Journal of Physiology Volume 45 ; 45 >
-    au < manifest ; 1918 ; American Journal of Physiology Volume 46 ; 46 >     
+    au < manifest ; 1918 ; American Journal of Physiology Volume 46 ; 46 >
     au < manifest ; 1918-1919 ; American Journal of Physiology Volume 47 ; 47 >
-    au < manifest ; 1919 ; American Journal of Physiology Volume 48 ; 48 >     
-    au < manifest ; 1919 ; American Journal of Physiology Volume 49 ; 49 >     
+    au < manifest ; 1919 ; American Journal of Physiology Volume 48 ; 48 >
+    au < manifest ; 1919 ; American Journal of Physiology Volume 49 ; 49 >
     au < manifest ; 1919-1920 ; American Journal of Physiology Volume 50 ; 50 >
-    au < manifest ; 1920 ; American Journal of Physiology Volume 51 ; 51 >     
-    au < manifest ; 1920 ; American Journal of Physiology Volume 52 ; 52 >     
-    au < manifest ; 1920 ; American Journal of Physiology Volume 53 ; 53 >     
+    au < manifest ; 1920 ; American Journal of Physiology Volume 51 ; 51 >
+    au < manifest ; 1920 ; American Journal of Physiology Volume 52 ; 52 >
+    au < manifest ; 1920 ; American Journal of Physiology Volume 53 ; 53 >
     au < manifest ; 1920-1921 ; American Journal of Physiology Volume 54 ; 54 >
-    au < manifest ; 1921 ; American Journal of Physiology Volume 55 ; 55 >     
-    au < manifest ; 1921 ; American Journal of Physiology Volume 56 ; 56 >     
-    au < manifest ; 1921 ; American Journal of Physiology Volume 57 ; 57 >     
+    au < manifest ; 1921 ; American Journal of Physiology Volume 55 ; 55 >
+    au < manifest ; 1921 ; American Journal of Physiology Volume 56 ; 56 >
+    au < manifest ; 1921 ; American Journal of Physiology Volume 57 ; 57 >
     au < manifest ; 1921-1922 ; American Journal of Physiology Volume 58 ; 58 >
-    au < manifest ; 1922 ; American Journal of Physiology Volume 59 ; 59 >     
-    au < manifest ; 1922 ; American Journal of Physiology Volume 60 ; 60 >     
-    au < manifest ; 1922 ; American Journal of Physiology Volume 61 ; 61 >     
-    au < manifest ; 1922 ; American Journal of Physiology Volume 62 ; 62 >     
+    au < manifest ; 1922 ; American Journal of Physiology Volume 59 ; 59 >
+    au < manifest ; 1922 ; American Journal of Physiology Volume 60 ; 60 >
+    au < manifest ; 1922 ; American Journal of Physiology Volume 61 ; 61 >
+    au < manifest ; 1922 ; American Journal of Physiology Volume 62 ; 62 >
     au < manifest ; 1922-1923 ; American Journal of Physiology Volume 63 ; 63 >
-    au < manifest ; 1923 ; American Journal of Physiology Volume 64 ; 64 >     
-    au < manifest ; 1923 ; American Journal of Physiology Volume 65 ; 65 >     
-    au < manifest ; 1923 ; American Journal of Physiology Volume 66 ; 66 >     
+    au < manifest ; 1923 ; American Journal of Physiology Volume 64 ; 64 >
+    au < manifest ; 1923 ; American Journal of Physiology Volume 65 ; 65 >
+    au < manifest ; 1923 ; American Journal of Physiology Volume 66 ; 66 >
     au < manifest ; 1923-1924 ; American Journal of Physiology Volume 67 ; 67 >
-    au < manifest ; 1924 ; American Journal of Physiology Volume 68 ; 68 >     
-    au < manifest ; 1924 ; American Journal of Physiology Volume 69 ; 69 >     
-    au < manifest ; 1924 ; American Journal of Physiology Volume 70 ; 70 >     
+    au < manifest ; 1924 ; American Journal of Physiology Volume 68 ; 68 >
+    au < manifest ; 1924 ; American Journal of Physiology Volume 69 ; 69 >
+    au < manifest ; 1924 ; American Journal of Physiology Volume 70 ; 70 >
     au < manifest ; 1924-1925 ; American Journal of Physiology Volume 71 ; 71 >
-    au < manifest ; 1925 ; American Journal of Physiology Volume 72 ; 72 >     
-    au < manifest ; 1925 ; American Journal of Physiology Volume 73 ; 73 >     
-    au < manifest ; 1925 ; American Journal of Physiology Volume 74 ; 74 >     
+    au < manifest ; 1925 ; American Journal of Physiology Volume 72 ; 72 >
+    au < manifest ; 1925 ; American Journal of Physiology Volume 73 ; 73 >
+    au < manifest ; 1925 ; American Journal of Physiology Volume 74 ; 74 >
     au < manifest ; 1925-1926 ; American Journal of Physiology Volume 75 ; 75 >
-    au < manifest ; 1926 ; American Journal of Physiology Volume 76 ; 76 >     
-    au < manifest ; 1926 ; American Journal of Physiology Volume 77 ; 77 >     
-    au < manifest ; 1926 ; American Journal of Physiology Volume 78 ; 78 >     
+    au < manifest ; 1926 ; American Journal of Physiology Volume 76 ; 76 >
+    au < manifest ; 1926 ; American Journal of Physiology Volume 77 ; 77 >
+    au < manifest ; 1926 ; American Journal of Physiology Volume 78 ; 78 >
     au < manifest ; 1926-1927 ; American Journal of Physiology Volume 79 ; 79 >
-    au < manifest ; 1927 ; American Journal of Physiology Volume 80 ; 80 >     
-    au < manifest ; 1927 ; American Journal of Physiology Volume 81 ; 81 >     
-    au < manifest ; 1927 ; American Journal of Physiology Volume 82 ; 82 >     
+    au < manifest ; 1927 ; American Journal of Physiology Volume 80 ; 80 >
+    au < manifest ; 1927 ; American Journal of Physiology Volume 81 ; 81 >
+    au < manifest ; 1927 ; American Journal of Physiology Volume 82 ; 82 >
     au < manifest ; 1927-1928 ; American Journal of Physiology Volume 83 ; 83 >
-    au < manifest ; 1928 ; American Journal of Physiology Volume 84 ; 84 >     
-    au < manifest ; 1928 ; American Journal of Physiology Volume 85 ; 85 >     
-    au < manifest ; 1928 ; American Journal of Physiology Volume 86 ; 86 >     
+    au < manifest ; 1928 ; American Journal of Physiology Volume 84 ; 84 >
+    au < manifest ; 1928 ; American Journal of Physiology Volume 85 ; 85 >
+    au < manifest ; 1928 ; American Journal of Physiology Volume 86 ; 86 >
     au < manifest ; 1928-1929 ; American Journal of Physiology Volume 87 ; 87 >
-    au < manifest ; 1929 ; American Journal of Physiology Volume 88 ; 88 >     
-    au < manifest ; 1929 ; American Journal of Physiology Volume 89 ; 89 >     
-    au < manifest ; 1929 ; American Journal of Physiology Volume 90 ; 90 >     
+    au < manifest ; 1929 ; American Journal of Physiology Volume 88 ; 88 >
+    au < manifest ; 1929 ; American Journal of Physiology Volume 89 ; 89 >
+    au < manifest ; 1929 ; American Journal of Physiology Volume 90 ; 90 >
     au < manifest ; 1929-1930 ; American Journal of Physiology Volume 91 ; 91 >
-    au < manifest ; 1930 ; American Journal of Physiology Volume 92 ; 92 >     
-    au < manifest ; 1930 ; American Journal of Physiology Volume 93 ; 93 >     
-    au < manifest ; 1930 ; American Journal of Physiology Volume 94 ; 94 >     
-    au < manifest ; 1930 ; American Journal of Physiology Volume 95 ; 95 >     
-    au < manifest ; 1931 ; American Journal of Physiology Volume 96 ; 96 >     
-    au < manifest ; 1931 ; American Journal of Physiology Volume 97 ; 97 >     
-    au < manifest ; 1931 ; American Journal of Physiology Volume 98 ; 98 >     
+    au < manifest ; 1930 ; American Journal of Physiology Volume 92 ; 92 >
+    au < manifest ; 1930 ; American Journal of Physiology Volume 93 ; 93 >
+    au < manifest ; 1930 ; American Journal of Physiology Volume 94 ; 94 >
+    au < manifest ; 1930 ; American Journal of Physiology Volume 95 ; 95 >
+    au < manifest ; 1931 ; American Journal of Physiology Volume 96 ; 96 >
+    au < manifest ; 1931 ; American Journal of Physiology Volume 97 ; 97 >
+    au < manifest ; 1931 ; American Journal of Physiology Volume 98 ; 98 >
     au < manifest ; 1931-1932 ; American Journal of Physiology Volume 99 ; 99 >
-    au < manifest ; 1932 ; American Journal of Physiology Volume 100 ; 100 >   
-    au < manifest ; 1932 ; American Journal of Physiology Volume 101 ; 101 >   
-    au < manifest ; 1932 ; American Journal of Physiology Volume 102 ; 102 >   
+    au < manifest ; 1932 ; American Journal of Physiology Volume 100 ; 100 >
+    au < manifest ; 1932 ; American Journal of Physiology Volume 101 ; 101 >
+    au < manifest ; 1932 ; American Journal of Physiology Volume 102 ; 102 >
     au < manifest ; 1932-1933 ; American Journal of Physiology Volume 103 ; 103 >
-    au < manifest ; 1933 ; American Journal of Physiology Volume 104 ; 104 >   
-    au < manifest ; 1933 ; American Journal of Physiology Volume 105 ; 105 >   
-    au < manifest ; 1933 ; American Journal of Physiology Volume 106 ; 106 >   
+    au < manifest ; 1933 ; American Journal of Physiology Volume 104 ; 104 >
+    au < manifest ; 1933 ; American Journal of Physiology Volume 105 ; 105 >
+    au < manifest ; 1933 ; American Journal of Physiology Volume 106 ; 106 >
     au < manifest ; 1933-1934 ; American Journal of Physiology Volume 107 ; 107 >
-    au < manifest ; 1934 ; American Journal of Physiology Volume 108 ; 108 >   
-    au < manifest ; 1934 ; American Journal of Physiology Volume 109 ; 109 >   
-    au < manifest ; 1934 ; American Journal of Physiology Volume 110 ; 110 >   
-    au < manifest ; 1935 ; American Journal of Physiology Volume 111 ; 111 >   
-    au < manifest ; 1935 ; American Journal of Physiology Volume 112 ; 112 >  
+    au < manifest ; 1934 ; American Journal of Physiology Volume 108 ; 108 >
+    au < manifest ; 1934 ; American Journal of Physiology Volume 109 ; 109 >
+    au < manifest ; 1934 ; American Journal of Physiology Volume 110 ; 110 >
+    au < manifest ; 1935 ; American Journal of Physiology Volume 111 ; 111 >
+    au < manifest ; 1935 ; American Journal of Physiology Volume 112 ; 112 >
     au < manifest ; 1935 ; American Journal of Physiology Volume 113 ; 113 >
     au < manifest ; 1935-1936 ; American Journal of Physiology Volume 114 ; 114 >
     au < manifest ; 1936 ; American Journal of Physiology Volume 115 ; 115 >
@@ -229,14 +229,14 @@
     au < manifest ; 1944 ; American Journal of Physiology Volume 142 ; 142 >
     au < manifest ; 1945 ; American Journal of Physiology Volume 143 ; 143 >
     au < manifest ; 1945 ; American Journal of Physiology Volume 144 ; 144 >
-    au < manifest ; 1946 ; American Journal of Physiology Volume 145 ; 145 >
+    au < manifest ; 1945-1946 ; American Journal of Physiology Volume 145 ; 145 >
     au < manifest ; 1946 ; American Journal of Physiology Volume 146 ; 146 >
     au < manifest ; 1946 ; American Journal of Physiology Volume 147 ; 147 >
     au < manifest ; 1947 ; American Journal of Physiology Volume 148 ; 148 >
     au < manifest ; 1947 ; American Journal of Physiology Volume 149 ; 149 >
     au < manifest ; 1947 ; American Journal of Physiology Volume 150 ; 150 >
     au < manifest ; 1947 ; American Journal of Physiology Volume 151 ; 151 >
-    au < manifest ; 1948 ; American Journal of Physiology Volume 152 ; 152 >
+    au < manifest ; 1947-1948 ; American Journal of Physiology Volume 152 ; 152 >
     au < manifest ; 1948 ; American Journal of Physiology Volume 153 ; 153 >
     au < manifest ; 1948 ; American Journal of Physiology Volume 154 ; 154 >
     au < manifest ; 1948 ; American Journal of Physiology Volume 155 ; 155 >
@@ -244,43 +244,43 @@
     au < manifest ; 1949 ; American Journal of Physiology Volume 157 ; 157 >
     au < manifest ; 1949 ; American Journal of Physiology Volume 158 ; 158 >
     au < manifest ; 1949 ; American Journal of Physiology Volume 159 ; 159 >
-    au < manifest ; 1950 ; American Journal of Physiology Volume 160 ; 160 >
+    au < manifest ; 1949-1950 ; American Journal of Physiology Volume 160 ; 160 >
     au < manifest ; 1950 ; American Journal of Physiology Volume 161 ; 161 >
     au < manifest ; 1950 ; American Journal of Physiology Volume 162 ; 162 >
     au < manifest ; 1950 ; American Journal of Physiology Volume 163 ; 163 >
-    au < manifest ; 1951 ; American Journal of Physiology Volume 164 ; 164 >
+    au < manifest ; 1950-1951 ; American Journal of Physiology Volume 164 ; 164 >
     au < manifest ; 1951 ; American Journal of Physiology Volume 165 ; 165 >
     au < manifest ; 1951 ; American Journal of Physiology Volume 166 ; 166 >
     au < manifest ; 1951 ; American Journal of Physiology Volume 167 ; 167 >
-    au < manifest ; 1952 ; American Journal of Physiology Volume 168 ; 168 >
+    au < manifest ; 1951-1952 ; American Journal of Physiology Volume 168 ; 168 >
     au < manifest ; 1952 ; American Journal of Physiology Volume 169 ; 169 >
     au < manifest ; 1952 ; American Journal of Physiology Volume 170 ; 170 >
     au < manifest ; 1952 ; American Journal of Physiology Volume 171 ; 171 >
-    au < manifest ; 1953 ; American Journal of Physiology Volume 172 ; 172 >
+    au < manifest ; 1952-1953 ; American Journal of Physiology Volume 172 ; 172 >
     au < manifest ; 1953 ; American Journal of Physiology Volume 173 ; 173 >
     au < manifest ; 1953 ; American Journal of Physiology Volume 174 ; 174 >
     au < manifest ; 1953 ; American Journal of Physiology Volume 175 ; 175 >
-    au < manifest ; 1954 ; American Journal of Physiology Volume 176 ; 176 >
+    au < manifest ; 1953-1954 ; American Journal of Physiology Volume 176 ; 176 >
     au < manifest ; 1954 ; American Journal of Physiology Volume 177 ; 177 >
     au < manifest ; 1954 ; American Journal of Physiology Volume 178 ; 178 >
     au < manifest ; 1954 ; American Journal of Physiology Volume 179 ; 179 >
-    au < manifest ; 1955 ; American Journal of Physiology Volume 180 ; 180 >
+    au < manifest ; 1954-1955 ; American Journal of Physiology Volume 180 ; 180 >
     au < manifest ; 1955 ; American Journal of Physiology Volume 181 ; 181 >
     au < manifest ; 1955 ; American Journal of Physiology Volume 182 ; 182 >
     au < manifest ; 1955 ; American Journal of Physiology Volume 183 ; 183 >
-    au < manifest ; 1956 ; American Journal of Physiology Volume 184 ; 184 >
+    au < manifest ; 1955-1956 ; American Journal of Physiology Volume 184 ; 184 >
     au < manifest ; 1956 ; American Journal of Physiology Volume 185 ; 185 >
     au < manifest ; 1956 ; American Journal of Physiology Volume 186 ; 186 >
     au < manifest ; 1956 ; American Journal of Physiology Volume 187 ; 187 >
-    au < manifest ; 1957 ; American Journal of Physiology Volume 188 ; 188 >
+    au < manifest ; 1956-1957 ; American Journal of Physiology Volume 188 ; 188 >
     au < manifest ; 1957 ; American Journal of Physiology Volume 189 ; 189 >
     au < manifest ; 1957 ; American Journal of Physiology Volume 190 ; 190 >
     au < manifest ; 1957 ; American Journal of Physiology Volume 191 ; 191 >
-    au < manifest ; 1958 ; American Journal of Physiology Volume 192 ; 192 >
+    au < manifest ; 1957-1958 ; American Journal of Physiology Volume 192 ; 192 >
     au < manifest ; 1958 ; American Journal of Physiology Volume 193 ; 193 >
     au < manifest ; 1958 ; American Journal of Physiology Volume 194 ; 194 >
     au < manifest ; 1958 ; American Journal of Physiology Volume 195 ; 195 >
-    au < manifest ; 1959 ; American Journal of Physiology Volume 196 ; 196 >
+    au < manifest ; 1958-1959 ; American Journal of Physiology Volume 196 ; 196 >
     au < manifest ; 1959 ; American Journal of Physiology Volume 197 ; 197 >
     au < manifest ; 1960 ; American Journal of Physiology Volume 198 ; 198 >
     au < manifest ; 1960 ; American Journal of Physiology Volume 199 ; 199 >
@@ -432,7 +432,7 @@
     {
 
       pluginSuffix = HighWirePressH20Plugin
-    
+
       au < manifest ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 232 ; 232 >
       au < manifest ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 233 ; 233 >
       au < manifest ; 1978 ; American Journal of Physiology - Endocrinology and Metabolism Volume 234 ; 234 >
@@ -521,7 +521,7 @@
     param[base_url] = http://ajpgi.physiology.org/
 
     {
-    
+
       pluginSuffix = HighWireStrVolPlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
@@ -535,7 +535,7 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin    
+      pluginSuffix = HighWirePressH20Plugin
       
       au < manifest ; 1977 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 232 ; 232 >
       au < manifest ; 1977 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 233 ; 233 >
@@ -625,7 +625,7 @@
     param[base_url] = http://ajpheart.physiology.org/
 
     {
-    
+
       pluginSuffix = HighWireStrVolPlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
@@ -640,7 +640,7 @@
     {
 
       pluginSuffix = HighWirePressH20Plugin
-      
+
       au < manifest ; 1977 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 232 ; 232 >
       au < manifest ; 1977 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 233 ; 233 >
       au < manifest ; 1978 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 234 ; 234 >
@@ -714,7 +714,7 @@
       au < manifest ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 302 ; 302 >
 
     }
-    
+
   }
 
   {
@@ -729,7 +729,7 @@
     param[base_url] = http://ajplung.physiology.org/
 
     {
-    
+
       pluginSuffix = HighWireStrVolPlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
@@ -744,7 +744,7 @@
     {
 
       pluginSuffix = HighWirePressH20Plugin
-    
+
       au < manifest ; 1989 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 257 ; 257 >
       au < manifest ; 1990 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 258 ; 258 >
       au < manifest ; 1990 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 259 ; 259 >
@@ -808,7 +808,7 @@
     param[base_url] = http://ajpregu.physiology.org/
 
     {
-    
+
       pluginSuffix = HighWireStrVolPlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
@@ -823,7 +823,7 @@
     {
 
       pluginSuffix = HighWirePressH20Plugin
-      
+
       au < manifest ; 1977 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 232 ; 232 >
       au < manifest ; 1977 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 233 ; 233 >
       au < manifest ; 1978 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 234 ; 234 >
@@ -912,7 +912,7 @@
     param[base_url] = http://ajprenal.physiology.org/
 
     {
-    
+
       pluginSuffix = HighWireStrVolPlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
@@ -1042,11 +1042,11 @@
       au < manifest ; 1954-1955 ; Journal of Applied Physiology Volume 7 ; 7 >
       au < manifest ; 1955-1956 ; Journal of Applied Physiology Volume 8 ; 8 >
       au < manifest ; 1956 ; Journal of Applied Physiology Volume 9 ; 9 >
-      au < manifest ; 1957 ; Journal of Applied Physiology Volume 10 ; 10 > 
-      au < manifest ; 1957 ; Journal of Applied Physiology Volume 11 ; 11 > 
-      au < manifest ; 1958 ; Journal of Applied Physiology Volume 12 ; 12 > 
-      au < manifest ; 1958 ; Journal of Applied Physiology Volume 13 ; 13 > 
-      au < manifest ; 1959 ; Journal of Applied Physiology Volume 14 ; 14 > 
+      au < manifest ; 1957 ; Journal of Applied Physiology Volume 10 ; 10 >
+      au < manifest ; 1957 ; Journal of Applied Physiology Volume 11 ; 11 >
+      au < manifest ; 1958 ; Journal of Applied Physiology Volume 12 ; 12 >
+      au < manifest ; 1958 ; Journal of Applied Physiology Volume 13 ; 13 >
+      au < manifest ; 1959 ; Journal of Applied Physiology Volume 14 ; 14 >
       au < manifest ; 1960 ; Journal of Applied Physiology Volume 15 ; 15 >
       au < manifest ; 1961 ; Journal of Applied Physiology Volume 16 ; 16 >
       au < manifest ; 1962 ; Journal of Applied Physiology Volume 17 ; 17 >
@@ -1145,7 +1145,7 @@
       au < released ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 >
       au < released ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 >
       au < manifest ; 2012 ; Journal of Applied Physiology Volume 112 ; 112 >
-      
+
     }
 
   }
@@ -1162,7 +1162,7 @@
     param[base_url] = http://jn.physiology.org/
 
     {
-    
+
       pluginSuffix = HighWireStrVolPlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
@@ -1302,7 +1302,7 @@
     param[base_url] = http://physiolgenomics.physiology.org/
 
     {
-    
+
       pluginSuffix = HighWireStrVolPlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
@@ -1316,7 +1316,7 @@
       au < down ; 2006 ; Physiological Genomics Volume 27 ; 27 >
       au < down ; 2007 ; Physiological Genomics Volume 28 ; 28 >
       au < down ; 2007 ; Physiological Genomics Volume 29 ; 29 >
-  
+
     }
 
     {
@@ -1385,7 +1385,7 @@
     param[base_url] = http://physrev.physiology.org/
 
     {
-    
+
       pluginSuffix = HighWireStrVolPlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
@@ -1493,7 +1493,7 @@
       au < manifest ; 2012 ; Physiological Reviews Volume 92 ; 92 >
 
     }
-    
+
   }
 
   {
@@ -1508,7 +1508,7 @@
     param[base_url] = http://physiologyonline.physiology.org/
 
     {
-    
+
       pluginSuffix = HighWireStrVolPlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
