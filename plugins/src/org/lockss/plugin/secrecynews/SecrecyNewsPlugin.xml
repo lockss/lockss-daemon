@@ -5,7 +5,16 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_name</string>
@@ -68,5 +77,9 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.secrecynews.SecrecyNewsHtmlFilterFactory</string>
   </entry>
 </map>
