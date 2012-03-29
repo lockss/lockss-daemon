@@ -6173,9 +6173,9 @@
     au < manifest ; exists ; 2002 ; Health Policy and Planning Volume 17 ; 17 ; >
     au < manifest ; exists ; 2003 ; Health Policy and Planning Volume 18 ; 18 ; >
     au < manifest ; exists ; 2004 ; Health Policy and Planning Volume 19 ; 19 ; >
-    au < wanted ; exists ; 2005 ; Health Policy and Planning Volume 20 ; 20 ; >
-    au < wanted ; exists ; 2006 ; Health Policy and Planning Volume 21 ; 21 ; >
-    au < wanted ; exists ; 2007 ; Health Policy and Planning Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2005 ; Health Policy and Planning Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2006 ; Health Policy and Planning Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2007 ; Health Policy and Planning Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Health Policy and Planning Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; Health Policy and Planning Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Health Policy and Planning Volume 25 ; 25 ; >
@@ -11549,7 +11549,7 @@
     au < manifest ; exists ; 2009-2010 ; Journal of Social History Volume 43 ; 43 ; >
     au < manifest ; exists ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ; >
     au < crawling ; exists ; 2011-2012 ; Journal of Social History Volume 45 ; 45 ; >
-    au < expected ; exists ; 2011-2012 ; Journal of Social History Volume 46 ; 46 ; >
+    au < expected ; exists ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ; >
 
     }
 
@@ -13983,7 +13983,7 @@
     au < manifest ; exists ; 2004 ; Oxford Art Journal Volume 27 ; 27 ; >
     au < manifest ; exists ; 2005 ; Oxford Art Journal Volume 28 ; 28 ; >
     au < manifest ; exists ; 2006 ; Oxford Art Journal Volume 29 ; 29 ; >
-    au < wanted ; exists ; 2007 ; Oxford Art Journal Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2007 ; Oxford Art Journal Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Oxford Art Journal Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Art Journal Volume 32 ; 32 ; >
     au < released ; crawling ; 2010 ; Oxford Art Journal Volume 33 ; 33 ; >
@@ -15040,7 +15040,7 @@
   {
 
     title <
-      name = Protein engineering, design & selection : PEDS ;
+      name = Protein Engineering, Design & Selection : PEDS ;
       issn = 1741-0126 ;
       eissn = 1741-0134 ;
       issnl = 1741-0126
@@ -15051,8 +15051,8 @@
     param[base_url] = http://peds.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Protein Engineering, Design and Selection Volume 21 ; 21 ; >
-    au < down ; crawling ; 2009 ; Protein Engineering, Design and Selection Volume 22 ; 22 ; >
+    au < down ; crawling ; 2008 ; Protein Engineering, Design & Selection : PEDS Volume 21 ; 21 ; >
+    au < down ; crawling ; 2009 ; Protein Engineering, Design & Selection : PEDS Volume 22 ; 22 ; >
 
     }
 
@@ -15061,31 +15061,31 @@
     param[base_url] = http://peds.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 1986-1987 ; Protein engineering, design & selection : PEDS Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1988-1989 ; Protein engineering, design & selection : PEDS Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1989-1990 ; Protein engineering, design & selection : PEDS Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1990-1991 ; Protein engineering, design & selection : PEDS Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1992 ; Protein engineering, design & selection : PEDS Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1993 ; Protein engineering, design & selection : PEDS Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1994 ; Protein engineering, design & selection : PEDS Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1995 ; Protein engineering, design & selection : PEDS Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1996 ; Protein engineering, design & selection : PEDS Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1997 ; Protein engineering, design & selection : PEDS Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1998 ; Protein engineering, design & selection : PEDS Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1999 ; Protein engineering, design & selection : PEDS Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2000 ; Protein engineering, design & selection : PEDS Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2001 ; Protein engineering, design & selection : PEDS Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2002 ; Protein engineering, design & selection : PEDS Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2003 ; Protein engineering, design & selection : PEDS Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2004 ; Protein engineering, design & selection : PEDS Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2005 ; Protein engineering, design & selection : PEDS Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2006 ; Protein engineering, design & selection : PEDS Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2007 ; Protein engineering, design & selection : PEDS Volume 20 ; 20 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Protein engineering, design & selection : PEDS Volume 21 ; 21 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Protein engineering, design & selection : PEDS Volume 22 ; 22 ; >
-    au < released ; crawling ; 2010 ; Protein Engineering, Design and Selection Volume 23 ; 23 ; >
-    au < released ; crawling ; 2011 ; Protein engineering, design & selection : PEDS Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2012 ; Protein engineering, design & selection : PEDS Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1986-1987 ; Protein Engineering, Design & Selection : PEDS Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1988-1989 ; Protein Engineering, Design & Selection : PEDS Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1989-1990 ; Protein Engineering, Design & Selection : PEDS Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1990-1991 ; Protein Engineering, Design & Selection : PEDS Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1992 ; Protein Engineering, Design & Selection : PEDS Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1993 ; Protein Engineering, Design & Selection : PEDS Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1994 ; Protein Engineering, Design & Selection : PEDS Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1995 ; Protein Engineering, Design & Selection : PEDS Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1996 ; Protein Engineering, Design & Selection : PEDS Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1997 ; Protein Engineering, Design & Selection : PEDS Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1998 ; Protein Engineering, Design & Selection : PEDS Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1999 ; Protein Engineering, Design & Selection : PEDS Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2000 ; Protein Engineering, Design & Selection : PEDS Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2001 ; Protein Engineering, Design & Selection : PEDS Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2002 ; Protein Engineering, Design & Selection : PEDS Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2003 ; Protein Engineering, Design & Selection : PEDS Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2004 ; Protein Engineering, Design & Selection : PEDS Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2005 ; Protein Engineering, Design & Selection : PEDS Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2006 ; Protein Engineering, Design & Selection : PEDS Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2007 ; Protein Engineering, Design & Selection : PEDS Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Protein Engineering, Design & Selection : PEDS Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Protein Engineering, Design & Selection : PEDS Volume 22 ; 22 ; >
+    au < released ; crawling ; 2010 ; Protein Engineering, Design & Selection : PEDS Volume 23 ; 23 ; >
+    au < released ; crawling ; 2011 ; Protein Engineering, Design & Selection : PEDS Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2012 ; Protein Engineering, Design & Selection : PEDS Volume 25 ; 25 ; >
 
     }
 
