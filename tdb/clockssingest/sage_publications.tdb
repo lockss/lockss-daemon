@@ -2608,7 +2608,7 @@
       au < manifest ; exists ; 1995-1996 ; Assessment for Effective Intervention Volume 21 ; 21 ; >
       au < manifest ; exists ; 1996-1997 ; Assessment for Effective Intervention Volume 22 ; 22 ; >
       au < manifest ; exists ; 1997-1998 ; Assessment for Effective Intervention Volume 23 ; 23 ; >
-      au < exists ; exists ; 1998-1999 ; Assessment for Effective Intervention Volume 24 ; 24 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Assessment for Effective Intervention Volume 24 ; 24 ; >
       au < manifest ; exists ; 1999-2000 ; Assessment for Effective Intervention Volume 25 ; 25 ; >
       au < manifest ; exists ; 2000-2001 ; Assessment for Effective Intervention Volume 26 ; 26 ; >
       au < manifest ; exists ; 2001-2002 ; Assessment for Effective Intervention Volume 27 ; 27 ; >
@@ -3980,7 +3980,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Cartilage Volume 1 ; 1 ; >
+      au < down ; crawling ; 2009-2010 ; Cartilage Volume 1 ; 1 ; >
 
     }
 
@@ -4451,7 +4451,7 @@
       au < manifest ; exists ; 1996 ; Clin-Alert Volume 34 ; 34 ; >
       au < manifest ; exists ; 1997 ; Clin-Alert Volume 35 ; 35 ; >
       au < manifest ; exists ; 1998 ; Clin-Alert Volume 36 ; 36 ; >
-      au < exists ; exists ; 1998 ; Clin-Alert Volume 37 ; 37 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Clin-Alert Volume 37 ; 37 ; >
       au < manifest ; exists ; 2000 ; Clin-Alert Volume 38 ; 38 ; >
       au < manifest ; exists ; 2001 ; Clin-Alert Volume 39 ; 39 ; >
       au < manifest ; exists ; 2002 ; Clin-Alert Volume 40 ; 40 ; >
@@ -5677,10 +5677,10 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1968 ; Cooperation and Conflict Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1965 ; Cooperation and Conflict Volume 1 ; 1 ; >
       au < manifest ; exists ; 1967 ; Cooperation and Conflict Volume 2 ; 2 ; >
       au < manifest ; exists ; 1968 ; Cooperation and Conflict Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1968 ; Cooperation and Conflict Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1969 ; Cooperation and Conflict Volume 4 ; 4 ; >
       au < manifest ; exists ; 1970 ; Cooperation and Conflict Volume 5 ; 5 ; >
       au < manifest ; exists ; 1971 ; Cooperation and Conflict Volume 6 ; 6 ; >
       au < manifest ; exists ; 1972 ; Cooperation and Conflict Volume 7 ; 7 ; >
@@ -8560,6 +8560,7 @@
       au < exists ; exists ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8 ; >
       au < exists ; exists ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9 ; >
       au < exists ; exists ; 2011 ; European Journal of Cardiovascular Nursing Volume 10 ; 10 ; >
+      au < expected ; exists ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 11 ; >
 
     }
 
