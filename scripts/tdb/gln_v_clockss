@@ -7,7 +7,7 @@ echo "-----------------------------"
 echo "-----------------------------"
 tpath="/home/$LOGNAME/tmp"
 mkdir -p $tpath
-numdiffAUs=8
+numdiffAUs=10
 
 for file in \
   american_academy_of_pediatrics.tdb \
@@ -71,27 +71,27 @@ then
     linenum=`cat $tpath/diff.txt | grep "<" | wc -l`
     echo "*** GLN Titles -- $linenum ***"
     cat $tpath/diff.txt | grep "<" | sed s/..// 
-    #cat $tpath/diff.txt | grep "<" | head -n8
+    #cat $tpath/diff.txt | grep "<" | head -n10
     #linenum=`cat $tpath/diff.txt | grep "<" | wc -l`
-    #echo "First 8 out of $linenum" 
+    #echo "First 10 out of $linenum" 
     linenum=`cat $tpath/diff.txt | grep ">" | wc -l`
     echo "*** CLOCKSS Titles -- $linenum ***"
     cat $tpath/diff.txt | grep ">" | sed s/..//
-    #cat $tpath/diff.txt | grep ">" | head -n8
+    #cat $tpath/diff.txt | grep ">" | head -n10
     #linenum=`cat $tpath/diff.txt | grep ">" | wc -l`
-    #echo "First 8 out of $linenum"
+    #echo "First 10 out of $linenum"
   else
     maxnumAUs1=$numdiffAUs
     maxnumAUs2=$numdiffAUs
     echo "No title differences"
-    ./tdbout -c auid,name,year -i ../../tdb/prod/$file | grep -vf gvc_gln.txt | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/glnt.txt
-    ./tdbout -c auid,name,year -i ../../tdb/clockssingest/$file | grep -vf gvc_clockss.txt | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/clocksst.txt
+    ./tdbout -c auid,name,year -i ../../tdb/prod/$file | grep -vf gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
+    ./tdbout -c auid,name,year -i ../../tdb/clockssingest/$file | grep -vf gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/clocksst.txt
     if ! diff -i $tpath/glnt.txt $tpath/clocksst.txt > $tpath/diff.txt
     then
       echo "AU differences: GLN v CLOCKSSingest"
       #cat $tpath/diff.txt
       echo "***GLN AUs***"
-      cat $tpath/diff.txt | grep "<" | sed s/..// | head -n8
+      cat $tpath/diff.txt | grep "<" | sed s/..// | head -n10
       linenum1=`cat $tpath/diff.txt | grep "<" | wc -l`
       if [ $linenum1 -lt $maxnumAUs1 ]
       then
@@ -99,7 +99,7 @@ then
       fi
       echo "First $maxnumAUs1 out of $linenum1" 
       echo "***CLOCKSS AUs***"
-      cat $tpath/diff.txt | grep ">" | sed s/..// | head -n8
+      cat $tpath/diff.txt | grep ">" | sed s/..// | head -n10
       linenum2=`cat $tpath/diff.txt | grep ">" | wc -l`
       if [ $linenum2 -lt $maxnumAUs2 ]
       then
@@ -117,7 +117,7 @@ then
       then
         echo "***AU status diffs: mark ready in GLN***"
         #cat $tpath/done_diff.txt
-        cat $tpath/done_diff.txt | grep "<" | head -n8
+        cat $tpath/done_diff.txt | grep "<" | head -n10
         linenumA=`cat $tpath/done_diff.txt | grep "<" | wc -l`
         if [ $linenumA -lt $maxnumAUsA ]
         then
