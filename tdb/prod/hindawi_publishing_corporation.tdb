@@ -212,6 +212,36 @@
 
   {
     title <
+      name = Advances in Decision Sciences ;
+      issn = 2090-3359 ;
+      eissn = 2090-3367 ;
+      issnl = 2090-3359
+    >
+
+    comment[supersedes] = see journal code 'jamds'
+    param[journal_id] = ads
+
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 1997 ; 1997 ; 1997 ; 1997 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 1998 ; 1998 ; 1998 ; 1998 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 1999 ; 1999 ; 1999 ; 1999 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2000 ; 2000 ; 2000 ; 2000 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2001 ; 2001 ; 2001 ; 2001 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2002 ; 2002 ; 2002 ; 2002 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2003 ; 2003 ; 2003 ; 2003 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2004 ; 2004 ; 2004 ; 2004 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < released ; Advances in Decision Sciences Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < released ; Advances in Decision Sciences Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < released ; Advances in Decision Sciences Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in Decision Sciences Volume 2012 ; 2012 ; 2012 ; 2012 >
+    
+  }
+
+  {
+    title <
       name = Advances in Difference Equations ;
       issn = 1687-1839 ;
       eissn = 1687-1847
@@ -310,7 +340,7 @@
       issnl = 1687-8434
     >
 
-    comment[superseded] = see journal code 'rlms', incongruent overlap
+    comment[supersedes] = see journal code 'rlms', incongruent overlap
     param[journal_id] = amse
 
     au < ready ; Research Letters in Materials Science Volume 2007 ; 2007 ; 2007 ; 2007 >
@@ -402,7 +432,7 @@
     >
 
     param[journal_id] = ano
-    comment = the url "http://www.hindawi.com/journals/ano/" redirects to "http://www.hindawi.com/journals/ijo/", only manifest pages found in the listed volumes
+    comment[superseded] = see journal id 'ijo'
 
     au < superseded ; Advances in Nonlinear Optics Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < superseded ; Advances in Nonlinear Optics Volume 2009 ; 2009 ; 2009 ; 2009 >
@@ -493,71 +523,7 @@
     au < manifest ; Advances in Orthopedics Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
-
-  {
-    title <
-      name = Advances in Decision Sciences ;
-      issn = 2090-3359 ;
-      eissn = 2090-3367 ;
-      issnl = 2090-3359
-    >
-
-    comment[superseded] = see journal code 'jamds'
-    param[journal_id] = ads
-
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 1997 ; 1997 ; 1997 ; 1997 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 1998 ; 1998 ; 1998 ; 1998 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 1999 ; 1999 ; 1999 ; 1999 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2000 ; 2000 ; 2000 ; 2000 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2001 ; 2001 ; 2001 ; 2001 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2002 ; 2002 ; 2002 ; 2002 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2003 ; 2003 ; 2003 ; 2003 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2004 ; 2004 ; 2004 ; 2004 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Advances in Decision Sciences Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Advances in Decision Sciences Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; Advances in Decision Sciences Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Advances in Decision Sciences Volume 2012 ; 2012 ; 2012 ; 2012 >
-    
-  }
  
-  {
-    title <
-      name = Advances in Preventive Medicine ;
-      issn = 2090-3499 ;
-      issnl = 2090-3499
-    >
-    
-    param[journal_id] = apm    
-
-    au < released ; Advances in Preventive Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Advances in Preventive Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
-    
-  }
-    
-  {
-    title <
-      name = Advances in Power Electronics ;
-      issn = 2090-181X ;
-      eissn = 2090-1828 ;
-      issnl = 2090-181X
-    >
-    
-    comment[superseded] = see journal code 'ijpme'
-    param[journal_id] = ape    
-    
-    au < released ; Advances in Power Electronics Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < doesNotExist ; Advances in Power Electronics Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < released ; Advances in Power Electronics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < released ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Advances in Power Electronics Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
-
-    
-  }
-  
   {
     title <
       name = Advances in Pharmacological Sciences ;
@@ -575,7 +541,7 @@
     au < manifest ; Advances in Pharmacological Sciences Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
-
+ 
   {
     title <
       name = Advances in Physical Chemistry ;
@@ -584,7 +550,7 @@
       issnl = 1687-7985
     >
 
-    comment[superseded] = see journal code 'rlpc', incongruent overlap
+    comment[supersedes] = see journal code 'rlpc', incongruent overlap
     param[journal_id] = apc
 
     au < ready ; Research Letters in Physical Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
@@ -595,7 +561,41 @@
     au < manifest ; Advances in Physical Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
+ 
+  {
+    title <
+      name = Advances in Power Electronics ;
+      issn = 2090-181X ;
+      eissn = 2090-1828 ;
+      issnl = 2090-181X
+    >
+    
+    comment[supersedes] = see journal code 'ijpme'
+    param[journal_id] = ape    
+    
+    au < released ; Advances in Power Electronics Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < doesNotExist ; Advances in Power Electronics Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < released ; Advances in Power Electronics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < released ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in Power Electronics Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
 
+    
+  }
+ 
+  {
+    title <
+      name = Advances in Preventive Medicine ;
+      issn = 2090-3499 ;
+      issnl = 2090-3499
+    >
+    
+    param[journal_id] = apm    
+
+    au < released ; Advances in Preventive Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in Preventive Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
+    
+  }
+ 
   {
     title <
       name = Advances in Software Engineering ;
@@ -843,7 +843,7 @@
       issnl = 2090-2247
     >
 
-    comment[superseded] = see journal code 'rlbc'
+    comment[supersedes] = see journal code 'rlbc'
     param[journal_id] = bcri
 
     au < ready ; Biochemistry Research International Volume 2008 ; 2008 ; 2008 ; 2008 >
@@ -1738,7 +1738,7 @@
       issnl = 1687-4099
     >
 
-    comment = the url "http://www.hindawi.com/journals/denm/" redirects to "http://www.hindawi.com/journals/ijde/", only manifest pages found in the listed volumes
+    comment[superseded] = see journal id 'ijde/', only manifest pages found in the listed volumes
 	
     param[journal_id] = denm
 
@@ -1806,6 +1806,28 @@
     au < released ; Education Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
     au < manifest ; Education Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
 
+  }
+
+  {
+    title <
+      name = E-Journal of Chemistry ;
+      issn = 0973-4945 ;
+      eissn = 2090-9810 ;
+      issnl = 0973-4945
+     >
+
+    param[journal_id] = chem
+
+    au < manifest ; E-Journal of Chemistry Volume 2004 ; 2004 ; 2004 ; 2004 >
+    au < manifest ; E-Journal of Chemistry Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < manifest ; E-Journal of Chemistry Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < manifest ; E-Journal of Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < manifest ; E-Journal of Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < manifest ; E-Journal of Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; E-Journal of Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; E-Journal of Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; E-Journal of Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
+    
   }
 
   {
@@ -2201,6 +2223,22 @@
 
   {
     title <
+      name = Influenza Research and Treatment ;
+      issn = 2090-1380 ;
+      eissn = 2090-1399 ;
+      issnl = 2090-1380
+    >
+
+    param[journal_id] = irt
+
+    au < released ; Influenza Research and Treatment Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < released ; Influenza Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < expected ; Influenza Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
+    
+  }
+
+  {
+    title <
       name = Interdisciplinary Perspectives on Infectious Diseases ;
       issn = 1687-708X ;
       eissn = 1687-7098 ;
@@ -2217,22 +2255,6 @@
 
   }
 
-  {
-    title <
-      name = Influenza Research and Treatment ;
-      issn = 2090-1380 ;
-      eissn = 2090-1399 ;
-      issnl = 2090-1380
-    >
-
-    param[journal_id] = irt
-
-    au < released ; Influenza Research and Treatment Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; Influenza Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < expected ; Influenza Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
-    
-  }
-  
   {
     title <
       name = International Journal of Aerospace Engineering ;
@@ -2323,20 +2345,6 @@
 
   {
     title <
-      name = International Journal of Breast Cancer ;
-      issn = 2090-3189 ;
-      issnl = 2090-3189
-    >
-
-    param[journal_id] = ijbc
-
-    au < released ; International Journal of Breast Cancer Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; International Journal of Breast Cancer Volume 2012 ; 2012 ; 2012 ; 2012 >
-
-  }
-
-  {
-    title <
       name = International Journal of Biomaterials ;
       issn = 1687-8787 ;
       eissn = 1687-8795 ;
@@ -2369,6 +2377,20 @@
     au < released ; International Journal of Biomedical Imaging Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Biomedical Imaging Volume 2011 ; 2011 ; 2011 ; 2011 >
     au < manifest ; International Journal of Biomedical Imaging Volume 2012 ; 2012 ; 2012 ; 2012 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Breast Cancer ;
+      issn = 2090-3189 ;
+      issnl = 2090-3189
+    >
+
+    param[journal_id] = ijbc
+
+    au < released ; International Journal of Breast Cancer Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Breast Cancer Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2560,7 +2582,7 @@
       issnl = 1687-9708
     >
 
-    comment[superseded] = see journal code 'rleco'
+    comment[supersedes] = see journal code 'rleco'
     param[journal_id] = ijeco
 
     au < ready ; Research Letters in Ecology Volume 2007 ; 2007 ; 2007 ; 2007 >
@@ -2655,6 +2677,23 @@
 
   {
     title <
+      name = International Journal of Geophysics ;
+      issn = 1687-885X ;
+      eissn = 1687-8868 ;
+      issnl = 1687-885X
+    >
+
+    param[journal_id] = ijgp
+
+    au < released ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < released ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < released ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 ; 2012 >
+
+  }
+
+  {
+    title <
       name = International Journal of Hepatology ;
       issn = 2090-3456 ;
       issnl = 2090-3456
@@ -2683,23 +2722,6 @@
 
   {
     title <
-      name = International Journal of Geophysics ;
-      issn = 1687-885X ;
-      eissn = 1687-8868 ;
-      issnl = 1687-885X
-    >
-
-    param[journal_id] = ijgp
-
-    au < released ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 ; 2012 >
-
-  }
-
-  {
-    title <
       name = International Journal of Inflammation ;
       issn = 2042-0099 ;
       issnl = 2042-0099
@@ -2721,30 +2743,15 @@
       issnl = 2090-2026
     >
 
-    comment[superseded] = see journal code 'rlic'
+    comment[supersedes] = see journal code 'rlic'
     param[journal_id] = ijic
 
     au < ready ; Research Letters in Inorganic Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < ready ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Research Letters in Inorganic Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Inorganic Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; International Journal of Inorganic chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Inorganic Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
     
-  }
-
-  {
-    title <
-      name = International Journal of Medicinal Chemistry ;
-      issn = 2090-2069 ;
-      eissn = 2090-2077 ;
-      issnl = 2090-2069
-    >
-
-    param[journal_id] = ijmc
-
-    au < released ; International Journal of Medicinal Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
-
   }
 
   {
@@ -2799,6 +2806,21 @@
     au < released ; International Journal of Mathematics and Mathematical Sciences Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Mathematics and Mathematical Sciences Volume 2011 ; 2011 ; 2011 ; 2011 >
     au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 2012 ; 2012 ; 2012 ; 2012 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Medicinal Chemistry ;
+      issn = 2090-2069 ;
+      eissn = 2090-2077 ;
+      issnl = 2090-2069
+    >
+
+    param[journal_id] = ijmc
+
+    au < released ; International Journal of Medicinal Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2912,7 +2934,7 @@
       issnl = 1687-9384
     >
 
-    comment[supserseded] = this journal's earlier volumes seem to be a mashup of older journals
+    comment[supsersedes] = this journal's earlier volumes seem to be a mashup of older journals
     param[journal_id] = ijo
 
     au < released ; International Journal of Optics Volume 2008 ; 2008 ; 2008 ; 2008 >
@@ -3426,6 +3448,52 @@
 
   {
     title <
+      name = Journal of Analytical Methods in Chemistry ;
+      issn = 2090-8865 ;
+      eissn = 2090-8873 ;
+      issnl = 2090-8873
+    >
+
+    param[journal_id] = jamc
+
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 1 (1980) ; 1980 ; 1 ; 1980 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2 (1981) ; 1981 ; 2 ; 1981 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 3 (1982) ; 1982 ; 3 ; 1982 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 4 (1983) ; 1983 ; 4 ; 1983 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 5 (1984) ; 1984 ; 5 ; 1984 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 6 (1985) ; 1985 ; 6 ; 1985 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 7 (1986) ; 1986 ; 7 ; 1986 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 8 (1987) ; 1987 ; 8 ; 1987 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 9 (1988) ; 1988 ; 9 ; 1988 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 10 (1989) ; 1989 ; 10 ; 1989 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 11 (1990) ; 1990 ; 11 ; 1990 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 12 (1991) ; 1991 ; 12 ; 1991 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 13 (1992) ; 1992 ; 13 ; 1992 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 14 (1993) ; 1993 ; 14 ; 1993 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 15 (1994) ; 1994 ; 15 ; 1994 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 16 (1995) ; 1995 ; 16 ; 1995 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 17 (1996) ; 1996 ; 17 ; 1996 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 18 (1997) ; 1997 ; 18 ; 1997 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 19 (1998) ; 1998 ; 19 ; 1998 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 20 (1999) ; 1999 ; 20 ; 1999 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 21 (2000) ; 2000 ; 21 ; 2000 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 22 (2001) ; 2001 ; 22 ; 2001 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 23 (2002) ; 2002 ; 23 ; 2002 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 24 (2003) ; 2003 ; 24 ; 2003 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 25 (2004) ; 2004 ; 25 ; 2004 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
+
+  }
+
+  {
+    title <
       name = Journal of Anthropology ;
       issn = 2090-4045 ;
       eissn = 2090-4053 ;
@@ -3578,42 +3646,40 @@
     >
 
     param[journal_id] = jammc
-    comment[jammc] = the url 'http://www.hindawi.com/journals/jmmc/' redirects to 'http://www.hindawi.com/journals/jamc/'
-    comment[jammc1] = all articles still available under jamc
+    comment[jammc] = see journal code 'jamc'
 
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 1 (1980) ; 1980 ; 1 ; 1980 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 2 (1981) ; 1981 ; 2 ; 1981 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 3 (1982) ; 1982 ; 3 ; 1982 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 4 (1983) ; 1983 ; 4 ; 1983 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 5 (1984) ; 1984 ; 5 ; 1984 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 6 (1985) ; 1985 ; 6 ; 1985 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 7 (1986) ; 1986 ; 7 ; 1986 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 8 (1987) ; 1987 ; 8 ; 1987 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 9 (1988) ; 1988 ; 9 ; 1988 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 10 (1989) ; 1989 ; 10 ; 1989 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 11 (1990) ; 1990 ; 11 ; 1990 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 12 (1991) ; 1991 ; 12 ; 1991 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 13 (1992) ; 1992 ; 13 ; 1992 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 14 (1993) ; 1993 ; 14 ; 1993 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 15 (1994) ; 1994 ; 15 ; 1994 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 16 (1995) ; 1995 ; 16 ; 1995 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 17 (1996) ; 1996 ; 17 ; 1996 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 18 (1997) ; 1997 ; 18 ; 1997 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 19 (1998) ; 1998 ; 19 ; 1998 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 20 (1999) ; 1999 ; 20 ; 1999 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 21 (2000) ; 2000 ; 21 ; 2000 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 22 (2001) ; 2001 ; 22 ; 2001 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 23 (2002) ; 2002 ; 23 ; 2002 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 24 (2003) ; 2003 ; 24 ; 2003 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 25 (2004) ; 2004 ; 25 ; 2004 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; Journal of Automated Methods and Management in Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 1 (1980) ; 1980 ; 1 ; 1980 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 2 (1981) ; 1981 ; 2 ; 1981 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 3 (1982) ; 1982 ; 3 ; 1982 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 4 (1983) ; 1983 ; 4 ; 1983 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 5 (1984) ; 1984 ; 5 ; 1984 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 6 (1985) ; 1985 ; 6 ; 1985 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 7 (1986) ; 1986 ; 7 ; 1986 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 8 (1987) ; 1987 ; 8 ; 1987 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 9 (1988) ; 1988 ; 9 ; 1988 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 10 (1989) ; 1989 ; 10 ; 1989 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 11 (1990) ; 1990 ; 11 ; 1990 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 12 (1991) ; 1991 ; 12 ; 1991 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 13 (1992) ; 1992 ; 13 ; 1992 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 14 (1993) ; 1993 ; 14 ; 1993 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 15 (1994) ; 1994 ; 15 ; 1994 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 16 (1995) ; 1995 ; 16 ; 1995 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 17 (1996) ; 1996 ; 17 ; 1996 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 18 (1997) ; 1997 ; 18 ; 1997 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 19 (1998) ; 1998 ; 19 ; 1998 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 20 (1999) ; 1999 ; 20 ; 1999 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 21 (2000) ; 2000 ; 21 ; 2000 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 22 (2001) ; 2001 ; 22 ; 2001 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 23 (2002) ; 2002 ; 23 ; 2002 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 24 (2003) ; 2003 ; 24 ; 2003 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 25 (2004) ; 2004 ; 25 ; 2004 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < superseded ; Journal of Automated Methods and Management in Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3656,6 +3722,21 @@
     au < released ; Journal of Biophysics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Biophysics Volume 2011 ; 2011 ; 2011 ; 2011 >
     au < expected ; Journal of Biophysics Volume 2012 ; 2012 ; 2012 ; 2012 >
+
+  }
+
+  {
+    title <
+      name = Journal of Blood Transfusion ;
+      issn = 2090-9187 ;
+      eissn = 2090-9195 ;
+      issnl = 2090-9187
+    >
+
+    param[journal_id] = jbt
+
+    au < manifest ; Journal of Blood Transfusion Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Journal of Blood Transfusion Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3739,14 +3820,13 @@
       issnl = 1687-7381
     >
     
-    comment[jcsnc] = the url "http://www.hindawi.com/journals/jcsnc/" redirects to "http://www.hindawi.com/journals/jcnc/"
-    comment[jcsnc1] = no longer redirects. Articles still available
+    comment[jcsnc] = see journal id 'jcnc'
 
     param[journal_id] = jcsnc
 
-    au < released ; Journal of Computer Systems, Networks, and Communications Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Journal of Computer Systems, Networks, and Communications Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Journal of Computer Systems, Networks, and Communications Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < superseded ; Journal of Computer Systems, Networks, and Communications Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Journal of Computer Systems, Networks, and Communications Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Journal of Computer Systems, Networks, and Communications Volume 2010 ; 2010 ; 2010 ; 2010 >
 
   }
 
@@ -3792,7 +3872,7 @@
       issnl = 2090-0147
     >
 
-    comment[supserseded] = this journal's earlier volumes seem to be a mashup of older journals
+    comment[supsersedes] = this journal's earlier volumes seem to be a mashup of older journals
     param[journal_id] = jece
 
     au < ready ; Journal of Electrical and Computer Engineering Volume 2007 ; 2007 ; 2007 ; 2007 >
@@ -3822,6 +3902,29 @@
 
   {
     title <
+      name = Journal of Function Spaces and Applications ;
+      issn = 0972-6802 ;
+      eissn = 1758-4965 ;
+      issnl = 0972-6802
+    >
+
+    param[journal_id] = jfsa
+
+    au < manifest ; Journal of Function Spaces and Applications Volume 2003 ; 2003 ; 2003 ; 2003 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2004 ; 2004 ; 2004 ; 2004 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2012 ; 2012 ; 2012 ; 2012 >
+
+  }
+
+  {
+    title <
       name = Journal of Geological Research ;
       issn = 1687-8833 ;
       eissn = 1687-8841 ;
@@ -3846,7 +3949,6 @@
     >
 
     param[journal_id] = jia
-    comment[0] = Journal doesn't exist anymore?
 
     au < down ; Journal of Inequalities and Applications Volume 1 (1998) ; 1998 ; 1 ; 1998 >
     au < down ; Journal of Inequalities and Applications Volume 2 (1999) ; 1999 ; 2 ; 1999 >
@@ -3961,7 +4063,7 @@
       issnl = 1687-9503
     >
 
-    comment[superseded] = see journal code 'rlnt', incongruent overlap
+    comment[supersedes] = see journal code 'rlnt', incongruent overlap
     param[journal_id] = jnt
 
     au < released ; Journal of Nanotechnology Volume 2008 ; 2008 ; 2008 ; 2008 >
@@ -4254,9 +4356,9 @@
     >
 
     param[journal_id] = jtf
-    comment[blood] = redirects to journal_id jbt
+    comment[jtf] = see journal id 'jbt'
 
-    au < released ; Journal of Transfusion Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Journal of Transfusion Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -4640,7 +4742,7 @@
       issnl = 2090-200X
     >
 
-    comment[superseded] = see journal code 'rloc'
+    comment[supersedes] = see journal code 'rloc'
     param[journal_id] = oci
 
     au < ready ; Research Letters in Organic Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
@@ -4723,7 +4825,7 @@
       issnl = 2090-2220
     >
 
-    comment[superseded] = see journal code 'rlp'
+    comment[supersedes] = see journal code 'rlp'
     param[journal_id] = phys
 
     au < ready ; Research Letters in Physics Volume 2008 ; 2008 ; 2008 ; 2008 >
@@ -4815,53 +4917,6 @@
 
     au < released ; Prostate Cancer Volume 2011 ; 2011 ; 2011 ; 2011 >
     au < released ; Prostate Cancer Volume 2012 ; 2012 ; 2012 ; 2012 >
-    
-  }
-
-  {
-    title <
-      name = Pulmonary Medicine ;
-      issn = 2090-1836 ;
-      eissn = 2090-1844 ;
-      issnl = 2090-1836
-    >
-
-    param[journal_id] = pm
-
-    au < released ; Pulmonary Medicine Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; Pulmonary Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Pulmonary Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
-    
-  }
-
-  {
-    title <
-      name = Radiology Research and Practice ;
-      issn = 2090-1941 ;
-      eissn = 2090-195X ;
-      issnl = 2090-1941
-    >
-
-    param[journal_id] = rrp
-
-    au < released ; Radiology Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Radiology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
-
-  }
-
-  {
-    title <
-      name = Rehabilitation Research and Practice ;
-      issn = 2090-2867 ;
-      eissn = 2090-2875 ;
-      issnl = 2090-2867
-    >
-
-    param[journal_id] = rerp
-
-    au < released ; Rehabilitation Research and Practice Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < released ; Rehabilitation Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Rehabilitation Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -5014,13 +5069,60 @@
 
   {
     title <
+      name = Pulmonary Medicine ;
+      issn = 2090-1836 ;
+      eissn = 2090-1844 ;
+      issnl = 2090-1836
+    >
+
+    param[journal_id] = pm
+
+    au < released ; Pulmonary Medicine Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < released ; Pulmonary Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Pulmonary Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
+    
+  }
+
+  {
+    title <
+      name = Radiology Research and Practice ;
+      issn = 2090-1941 ;
+      eissn = 2090-195X ;
+      issnl = 2090-1941
+    >
+
+    param[journal_id] = rrp
+
+    au < released ; Radiology Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Radiology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
+
+  }
+
+  {
+    title <
+      name = Rehabilitation Research and Practice ;
+      issn = 2090-2867 ;
+      eissn = 2090-2875 ;
+      issnl = 2090-2867
+    >
+
+    param[journal_id] = rerp
+
+    au < released ; Rehabilitation Research and Practice Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < released ; Rehabilitation Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Rehabilitation Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
+    
+  }
+
+  {
+    title <
       name = Research Letters in Biochemistry ;
       issn = 1687-6709 ;
       eissn = 1687-6717 ;
       issnl = 1687-6709
     >
 	
-	comment[rlbc] = this url http://www.hindawi.com/journals/rlbc/ redirects to http://www.hindawi.com/journals/bcri/
+	comment[superseded] = see journal id 'bcri'
 	
     param[journal_id] = rlbc
 
@@ -5039,7 +5141,8 @@
       issnl = 1687-6741
     >
 
-	comment[rlc] = this url http://www.hindawi.com/journals/rlc/ redirects to http://www.hindawi.com/journals/jece/
+	comment[superseded] = see journal id 'jece'
+	comment[down] = potentially down instead? No longer redirects, jece makes no sense.
 	
     param[journal_id] = rlc
 
@@ -5059,7 +5162,7 @@
       issnl = 1687-6768
     >
     
-    comment[rleco] =  this url http://www.hindawi.com/journals/rleco/ redirects to http://www.hindawi.com/journals/ijeco/
+    comment[superseded] =  see journal id 'ijeco'
 
     param[journal_id] = rleco
 
@@ -5079,7 +5182,7 @@
       issnl = 1687-6784
     >
     
-    comment[rle] = this url http://www.hindawi.com/journals/rle/ redirects to http://www.hindawi.com/journals/jece/
+    comment[superseded] = see journal id 'jece'
 
     param[journal_id] = rle
 
@@ -5097,7 +5200,7 @@
       issnl = 1687-6806
     >
     
-    comment[rlic] = this url http://www.hindawi.com/journals/rlic/ redicts to http://www.hindawi.com/journals/ijic/
+    comment[superseded] = see journal id 'ijic'
 
     param[journal_id] = rlic
 
@@ -5116,7 +5219,7 @@
       issnl = 1687-6822
     >
     
-    comment[rlms] = this url http://www.hindawi.com/journals/rlms/ redirects to http://www.hindawi.com/journals/amse/
+    comment[superseded] = see journal id 'amse'
     
     param[journal_id] = rlms
 
@@ -5136,7 +5239,7 @@
       issnl = 1687-6849
     >
     
-    comment[rlnt] = this url http://www.hindawi.com/journals/rlnt/ redirects to http://www.hindawi.com/journals/jnt/
+    comment[superseded] = see journal id 'jnt'
 
     param[journal_id] = rlnt
 
@@ -5155,7 +5258,7 @@
       issnl = 1687-8175
     >
     
-    comment[rlo] = this url http://www.hindawi.com/journals/rlo/ redirects to http://www.hindawi.com/journals/ijo/
+    comment[superseded] = see journal id 'ijo'
 
     param[journal_id] = rlo
 
@@ -5172,7 +5275,7 @@
       eissn = 1687-6938 ;
       issnl = 1687-6865
     >
-	comment[rloc] = this url http://www.hindawi.com/journals/rloc/ redirects to http://www.hindawi.com/journals/oci/
+	comment[superseded] = see journal id 'oci'
 	
     param[journal_id] = rloc
 
@@ -5191,7 +5294,7 @@
       issnl = 1687-6873
     >
     
-	comment[rlpc] = this url http://www.hindawi.com/journals/rlpc/ redirects to http://www.hindawi.com/journals/apc/
+	comment[superseded] = see journal id 'apc'
 
     param[journal_id] = rlpc
 
@@ -5211,7 +5314,7 @@
       issnl = 1687-689X
     >
     
-	comment[rlp] = this url http://www.hindawi.com/journals/rlp/ redirects to http://www.hindawi.com/journals/phys/
+	comment[superseded] = see journal id 'phys'
 	
     param[journal_id] = rlp
 
@@ -5230,7 +5333,7 @@
       issnl = 1687-6911
     >
 
-	comment[rlsp] = this url http://www.hindawi.com/journals/rlp/ redirects to http://www.hindawi.com/journals/jece/
+	comment[superseded] = see journal id 'jece'
     
     param[journal_id] = rlsp
 
