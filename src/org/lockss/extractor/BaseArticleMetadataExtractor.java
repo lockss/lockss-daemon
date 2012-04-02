@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.7 2012-02-09 23:16:44 pgust Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.8 2012-04-02 23:13:29 akanshab01 Exp $
  */
 
 /*
@@ -78,6 +78,46 @@ public class BaseArticleMetadataExtractor
     }
 
     public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
+      
+      TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
+      TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
+      String isbn = (tdbau == null) ? null : tdbau.getIsbn();
+      String issn = (tdbau == null) ? null : tdbau.getPrintIssn();
+      String eissn = (tdbau == null) ? null : tdbau.getEissn();
+      String year = (tdbau == null) ? null : tdbau.getStartYear();
+      String volume = (tdbau == null) ? null : tdbau.getStartVolume();
+      String issue = (tdbau == null) ? null : tdbau.getStartIssue();
+      String journalTitle = (tdbau == null) ? null : tdbau.getJournalTitle();
+      
+      if (am.get(MetadataField.FIELD_ISSN) == null
+          || am.hasInvalidValue(MetadataField.FIELD_ISSN)) {
+          am.put(MetadataField.FIELD_ISSN, issn);
+      }
+      if (am.get(MetadataField.FIELD_EISSN) == null
+          || am.hasInvalidValue(MetadataField.FIELD_EISSN)) {
+          am.put(MetadataField.FIELD_EISSN, eissn);
+      }
+      if (am.get(MetadataField.FIELD_VOLUME) == null
+          || am.hasInvalidValue(MetadataField.FIELD_VOLUME)) {
+          am.put(MetadataField.FIELD_VOLUME, volume);
+      }
+      if (am.get(MetadataField.FIELD_DATE) == null
+          || am.hasInvalidValue(MetadataField.FIELD_DATE)) {
+          am.put(MetadataField.FIELD_DATE, year);
+      }
+      if (am.get(MetadataField.FIELD_ISSUE) == null
+          || am.hasInvalidValue(MetadataField.FIELD_ISSUE)) {
+          am.put(MetadataField.FIELD_ISSUE, issue);
+      }
+      if (am.get(MetadataField.FIELD_ISBN) == null
+          || am.hasInvalidValue(MetadataField.FIELD_ISBN)) {
+          am.put(MetadataField.FIELD_ISBN, isbn);
+      }
+      if (am.get(MetadataField.FIELD_JOURNAL_TITLE) == null
+          || am.hasInvalidValue(MetadataField.FIELD_JOURNAL_TITLE)) {
+          am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
+      }
+      
       isEmpty = false;
       addAccessUrl(am, af);
       parent.emitMetadata(af, am);
@@ -101,30 +141,6 @@ public class BaseArticleMetadataExtractor
     }
   }
   
-  ArticleMetadata getDefaultArticleMetadata(CachedUrl cu) {
-    TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
-    TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
-    String isbn = (tdbau == null) ? null : tdbau.getIsbn();
-    String issn = (tdbau == null) ? null : tdbau.getPrintIssn();
-    String eissn = (tdbau == null) ? null : tdbau.getEissn();
-    String year = (tdbau == null) ? null : tdbau.getStartYear();
-    String volume = (tdbau == null) ? null : tdbau.getStartVolume();
-    String issue = (tdbau == null) ? null : tdbau.getStartIssue();
-    String journalTitle = (tdbau == null) ? null : tdbau.getJournalTitle();
-
-    ArticleMetadata md = new ArticleMetadata();
-    md.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
-    if (isbn != null)  md.put(MetadataField.FIELD_ISBN, isbn);
-    if (issn != null) md.put(MetadataField.FIELD_ISSN, issn);
-    if (eissn != null) md.put(MetadataField.FIELD_EISSN, eissn);
-    if (volume != null) md.put(MetadataField.FIELD_VOLUME, volume);
-    if (issue != null) md.put(MetadataField.FIELD_ISSUE, volume);
-    if (year != null) md.put(MetadataField.FIELD_DATE, year);
-    if (journalTitle != null) md.put(MetadataField.FIELD_JOURNAL_TITLE,
-                                       journalTitle);
-    return md;
-  }
-
   public void extract(MetadataTarget target,
 		      ArticleFiles af,
 		      ArticleMetadataExtractor.Emitter emitter)
@@ -137,20 +153,15 @@ public class BaseArticleMetadataExtractor
       FileMetadataExtractor me = null;
       try {
         me = cu.getFileMetadataExtractor(target);
-    	if (me != null) {
-    	  me.extract(target, cu, myEmitter);
-    	} else {
-    	  am = getDefaultArticleMetadata(cu);
-    	  myEmitter.emitMetadata(cu, am);
-    	}
+        me.extract(target, cu, myEmitter);
       } catch (RuntimeException ex) {
         log.debug("for af (" + af + ")", ex);
         if (me != null) {
           try {
             // PG: since this error is not rethrown, it seems 
             // better to try emitting default metadata than nothing
-            am = getDefaultArticleMetadata(cu);
-            myEmitter.emitMetadata(cu, am);
+            me = cu.getFileMetadataExtractor(target);
+            me.extract(target, cu, myEmitter);
           } catch (RuntimeException ex2) {
             // just move on because the problem may be in the emitter
             log.debug("retry with default metadata for af (" + af + ")", ex2);
