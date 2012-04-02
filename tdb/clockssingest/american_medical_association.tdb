@@ -1458,22 +1458,20 @@
     
       title <
         name = Disaster Medicine and Public Health Preparedness ;
-        issn = 1938-744X;
-        eissn = 1935-7893;
+        issn = 1938-744X ;
+        eissn = 1935-7893 ;
         issnl = 1938-744X
       >
       
+      pluginSuffix = ClockssHighWirePlugin
       param[base_url] = http://www.dmphp.org/
-      comment[coverage] = 1 Jul 2007 - 1 Dec 2011, abstracts only 2007-2009
       
-      {
-        pluginSuffix = ClockssHighWirePlugin
-        au < exists ; exists ; 2007 ; Disaster Medicine and Public Health Preparedness Volume 1 ; 1 ;  >                                                            
-        au < exists ; exists ; 2008 ; Disaster Medicine and Public Health Preparedness Volume 2 ; 2 ;  >                                                            
-        au < exists ; exists ; 2009 ; Disaster Medicine and Public Health Preparedness Volume 3 ; 3 ;  >                                                            
-        au < exists ; exists ; 2010 ; Disaster Medicine and Public Health Preparedness Volume 4 ; 4 ;  >                                                            
-        au < exists ; exists ; 2011 ; Disaster Medicine and Public Health Preparedness Volume 5 ; 5 ;  >                                                            
-      }
+      au < testing ; exists ; 2007 ; Disaster Medicine and Public Health Preparedness Volume 1 ; 1 ; >                                                            
+      au < testing ; exists ; 2008 ; Disaster Medicine and Public Health Preparedness Volume 2 ; 2 ; >                                                            
+      au < testing ; exists ; 2009 ; Disaster Medicine and Public Health Preparedness Volume 3 ; 3 ; >                                                            
+      au < testing ; exists ; 2010 ; Disaster Medicine and Public Health Preparedness Volume 4 ; 4 ; >                                                            
+      au < testing ; exists ; 2011 ; Disaster Medicine and Public Health Preparedness Volume 5 ; 5 ; >                                                            
+
     }
     
     {
