@@ -200,17 +200,35 @@
         issn = 1705-9100 ;
         issnl = 1705-9100
       >
-    
+      
+      {
+      
+      comment[url] = redirects to new url
       param[base_url] = http://journals.sfu.ca/pocol/
       param[journal_id] = pct
       
-      au < released ; 2005 ; Postcolonial Text Volume 1 ; 1 ; 2005 >
-      au < released ; 2006 ; Postcolonial Text Volume 2 ; 2 ; 2006 >
-      au < released ; 2007 ; Postcolonial Text Volume 3 ; 3 ; 2007 >
+      au < down ; 2005 ; Postcolonial Text Volume 1 ; 1 ; 2005 >
+      au < down ; 2006 ; Postcolonial Text Volume 2 ; 2 ; 2006 >
+      au < down ; 2007 ; Postcolonial Text Volume 3 ; 3 ; 2007 >
+      au < doNotProcess ; 2008 ; Postcolonial Text Volume 4 ; 4 ; 2008 >
+      au < down ; 2009 ; Postcolonial Text Volume 5 ; 5 ; 2009 >
+      au < down ; 2011 ; Postcolonial Text Volume 6 ; 6 ; 2011 >
+      
+      }
+      
+      {
+      
+      param[base_url] = http://postcolonial.org/
+      param[journal_id] = pct
+      
+      au < doNotProcess ; 2005 ; Postcolonial Text Volume 1 ; 1 ; 2005 >
+      au < doNotProcess ; 2006 ; Postcolonial Text Volume 2 ; 2 ; 2006 >
+      au < doNotProcess ; 2007 ; Postcolonial Text Volume 3 ; 3 ; 2007 >
       au < testing ; 2008 ; Postcolonial Text Volume 4 ; 4 ; 2008 >
-      au < released ; 2009 ; Postcolonial Text Volume 5 ; 5 ; 2009 >
-      au < released ; 2011 ; Postcolonial Text Volume 6 ; 6 ; 2011 >
-    
+      au < doNotProcess ; 2009 ; Postcolonial Text Volume 5 ; 5 ; 2009 >
+      au < doNotProcess ; 2011 ; Postcolonial Text Volume 6 ; 6 ; 2011 >
+      
+      }
     }
   
   }
