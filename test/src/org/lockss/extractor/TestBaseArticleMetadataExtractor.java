@@ -1,3 +1,30 @@
+/*
+
+ Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ all rights reserved.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of his software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ Except as contained in this notice, the name of Stanford University shall not
+ be used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from Stanford University.
+
+ */
 package org.lockss.extractor;
 
 import java.io.IOException;
@@ -53,7 +80,7 @@ public class TestBaseArticleMetadataExtractor<Titleconfig> extends LockssTestCas
   private PluginManager pluginManager;
   protected static String cuRole = null;
   private boolean disableMetadataManager = false;
- // private final String PLUGIN_NAME = "org.lockss.plugin.metapress.ClockssMetaPressPlugin";
+ 
 
   public void setUp() throws Exception {
     super.setUp();
@@ -167,7 +194,10 @@ public class TestBaseArticleMetadataExtractor<Titleconfig> extends LockssTestCas
       public void emitMetadata(ArticleFiles af, ArticleMetadata am) {
      
         assertNotNull(am); 
+        assertEquals("0740-2783",am.get(MetadataField.FIELD_ISSN));
         assertNotNull(am.get(MetadataField.FIELD_ISSN));
+        assertNotNull(am.get(MetadataField.FIELD_ISBN));
+        assertNotNull(am.get(MetadataField.FIELD_EISSN));
         assertNotNull(am.get(MetadataField.FIELD_VOLUME));
         
        } 
@@ -183,7 +213,9 @@ public class TestBaseArticleMetadataExtractor<Titleconfig> extends LockssTestCas
       public void emitMetadata(ArticleFiles af, ArticleMetadata am) {
      
         assertNotNull(am);
+        assertEquals("0740-2784",am.get(MetadataField.FIELD_ISSN));
         assertNotNull(am.get(MetadataField.FIELD_ISSN));
+        assertNotNull(am.get(MetadataField.FIELD_ISBN));
         assertNotNull(am.get(MetadataField.FIELD_VOLUME));
         assertNotNull(am.get(MetadataField.FIELD_ACCESS_URL));
         assertNotNull(am.get(MetadataField.FIELD_DOI));   
@@ -279,7 +311,7 @@ public class TestBaseArticleMetadataExtractor<Titleconfig> extends LockssTestCas
         public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
             throws IOException, PluginException {
        
-          md.put(MetadataField.FIELD_ISSN,"0740-2783");
+          md.put(MetadataField.FIELD_ISSN,"abc");
           md.put(MetadataField.FIELD_VOLUME,"XI");
           md.put(MetadataField.FIELD_ACCESS_URL, 
            "http://www.title0.org/plugin0/XI/"
@@ -305,7 +337,7 @@ public static class MySimulatedPlugin1 extends MySimulatedPluginE {
       public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
           throws IOException, PluginException {
        
-        md.put(MetadataField.FIELD_ISSN,"0740-2783");
+        md.put(MetadataField.FIELD_ISSN,"junkvalue");
         md.put(MetadataField.FIELD_VOLUME,"XI");
         md.put(MetadataField.FIELD_ACCESS_URL, 
          "http://www.title0.org/plugin1/XI/"
