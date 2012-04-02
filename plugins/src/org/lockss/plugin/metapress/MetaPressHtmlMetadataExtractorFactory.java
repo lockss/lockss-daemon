@@ -64,6 +64,7 @@ public class MetaPressHtmlMetadataExtractorFactory implements FileMetadataExtrac
     log.debug3("Inside Metadata extractor factory");
     
     RisMetadataExtractor ris = new RisMetadataExtractor();
+    ris.addRisTag("PY", MetadataField.FIELD_DATE);
   
      return ris;
     }
