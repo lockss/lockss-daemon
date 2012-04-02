@@ -465,8 +465,8 @@
 
     au < testing; 1996 ; Economic Report of the President 1996 ; 1996 >
     au < testing; 1997 ; Economic Report of the President 1997 ; 1997 >
-    au < testing; 1998 ; Economic Report of the President 1998 ; 1998 >
-    au < testing; 1999 ; Economic Report of the President 1999 ; 1999 >
+    au < ready; 1998 ; Economic Report of the President 1998 ; 1998 >
+    au < ready; 1999 ; Economic Report of the President 1999 ; 1999 >
     au < released ; 2000 ; Economic Report of the President 2000 ; 2000 >
     au < released ; 2001 ; Economic Report of the President 2001 ; 2001 >
     au < released ; 2002 ; Economic Report of the President 2002 ; 2002 >
@@ -556,7 +556,7 @@
     au < released ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; 2005 >
     au < testing ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; 2006 >
     au < testing ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; 2007 >
-    au < testing ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 >
+    au < ready ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 >
    
   }
 
@@ -596,7 +596,7 @@
     au < released ; 2008 ; History of Bills 2008 ; 2008 >
     au < released ; 2009 ; History of Bills 2009 ; 2009 >
     au < released ; 2010 ; History of Bills 2010 ; 2010 >
-    au < testing ; 2011 ; History of Bills 2011 ; 2011 >
+    au < ready ; 2011 ; History of Bills 2011 ; 2011 >
     au < manifest ; 2012 ; History of Bills 2012 ; 2012 >
       
   }
@@ -656,11 +656,11 @@
     au < released ; 2003 ; List of CFR Sections Affected 2003 ; 2003 >
     au < released ; 2004 ; List of CFR Sections Affected 2004 ; 2004 >
     au < released ; 2005 ; List of CFR Sections Affected 2005 ; 2005 >
-    au < manifest ; 2006 ; List of CFR Sections Affected 2006 ; 2006 >
-    au < manifest ; 2007 ; List of CFR Sections Affected 2007 ; 2007 >
-    au < manifest ; 2008 ; List of CFR Sections Affected 2008 ; 2008 >
-    au < manifest ; 2009 ; List of CFR Sections Affected 2009 ; 2009 >
-    au < testing; 2010 ; List of CFR Sections Affected 2010 ; 2010 >
+    au < ready ; 2006 ; List of CFR Sections Affected 2006 ; 2006 >
+    au < ready ; 2007 ; List of CFR Sections Affected 2007 ; 2007 >
+    au < ready ; 2008 ; List of CFR Sections Affected 2008 ; 2008 >
+    au < ready ; 2009 ; List of CFR Sections Affected 2009 ; 2009 >
+    au < ready; 2010 ; List of CFR Sections Affected 2010 ; 2010 >
     au < ready ; 2011 ; List of CFR Sections Affected 2011 ; 2011 >
     au < manifest; 2012 ; List of CFR Sections Affected 2012 ; 2012 >
       
@@ -707,7 +707,7 @@
     au < manifest ; 2008 ; Public and Private Laws 2008 ; 2008 >
     au < manifest ; 2009 ; Public and Private Laws 2009 ; 2009 >
     au < testing ; 2010 ; Public and Private Laws 2010 ; 2010 >
-    au < testing ; 2011 ; Public and Private Laws 2011 ; 2011>
+    au < ready ; 2011 ; Public and Private Laws 2011 ; 2011>
     au < manifest ; 2012 ; Public and Private Laws 2012 ; 2012 >
 
   }
@@ -720,9 +720,9 @@
 
     param[collection_id] = PPP
 
-    au < testing ; 1991 ; Public Papers of the Presidents of the United States 1991 ; 1991 >
+    au < ready ; 1991 ; Public Papers of the Presidents of the United States 1991 ; 1991 >
     au < testing ; 1992 ; Public Papers of the Presidents of the United States 1992 ; 1992 >
-    au < testing ; 1993 ; Public Papers of the Presidents of the United States 1993 ; 1993 >
+    au < ready ; 1993 ; Public Papers of the Presidents of the United States 1993 ; 1993 >
     au < testing ; 1994 ; Public Papers of the Presidents of the United States 1994 ; 1994 >
     au < released ; 1995 ; Public Papers of the Presidents of the United States 1995 ; 1995 >
     au < manifest ; 1996 ; Public Papers of the Presidents of the United States 1996 ; 1996 >
@@ -735,7 +735,7 @@
     au < manifest ; 2003 ; Public Papers of the Presidents of the United States 2003 ; 2003 >
     au < manifest ; 2004 ; Public Papers of the Presidents of the United States 2004 ; 2004 >
     au < released ; 2005 ; Public Papers of the Presidents of the United States 2005 ; 2005 >
-    au < testing ; 2006 ; Public Papers of the Presidents of the United States 2006 ; 2006 >
+    au < ready ; 2006 ; Public Papers of the Presidents of the United States 2006 ; 2006 >
 
   }
 
@@ -825,7 +825,7 @@
     au < manifest ; 2008 ; United States Government Manual 2008 ; 2008 >
     au < manifest ; 2009 ; United States Government Manual 2009 ; 2009 >
     au < doesNotExist ; 2010 ; United States Government Manual 2010 ; 2010 >
-    au < testing ; 2011 ; United States Government Manual 2011 ; 2011 >
+    au < ready ; 2011 ; United States Government Manual 2011 ; 2011 >
 
   }
 
@@ -839,8 +839,8 @@
 
     au < testing ; 1951 ; United States Statutes at Large 1951 ; 1951 >
     au < testing ; 1952 ; United States Statutes at Large 1952 ; 1952 >
-    au < testing ; 1953 ; United States Statutes at Large 1953 ; 1953 >
-    au < testing ; 1954 ; United States Statutes at Large 1954 ; 1954 >
+    au < ready ; 1953 ; United States Statutes at Large 1953 ; 1953 >
+    au < ready ; 1954 ; United States Statutes at Large 1954 ; 1954 >
     au < released ; 1955 ; United States Statutes at Large 1955 ; 1955 >
     au < released ; 1956 ; United States Statutes at Large 1956 ; 1956 >
     au < released ; 1957 ; United States Statutes at Large 1957 ; 1957 >
@@ -904,7 +904,7 @@
 
     param[collection_id] = WCPD
 
-    au < testing ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; 1993 >
+    au < ready ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; 1993 >
     au < testing ; 1994 ; Weekly Compilation of Presidential Documents 1994 ; 1994 >
     au < released ; 1995 ; Weekly Compilation of Presidential Documents 1995 ; 1995 >
     au < released ; 1996 ; Weekly Compilation of Presidential Documents 1996 ; 1996 >
