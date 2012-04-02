@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioOneAllenPressMetadataExtractor.java,v 1.2 2012-01-16 18:23:34 pgust Exp $
+ * $Id: TestBioOneAllenPressMetadataExtractor.java,v 1.3 2012-04-02 23:40:52 akanshab01 Exp $
  */
 
 /*
@@ -270,7 +270,7 @@ public class TestBioOneAllenPressMetadataExtractor extends LockssTestCase {
     assertNull(md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertNull(md.get(MetadataField.FIELD_DATE));
     assertNotNull(md.get(MetadataField.FIELD_ACCESS_URL));
-    assertEquals(2, md.size());
+    assertEquals(6, md.size());
   }
 
   /**
