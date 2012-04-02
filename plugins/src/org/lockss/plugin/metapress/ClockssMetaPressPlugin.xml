@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.51.0</string>
+    <string>1.54.0</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -130,6 +130,15 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.metapress.MetaPressArticleIteratorFactory</string>
   </entry>
+  <entry>
+  <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+  <map>
+    <entry>
+    <string>*;RIS</string>
+    <string>org.lockss.plugin.metapress.MetaPressHtmlMetadataExtractorFactory</string>
+   </entry>
+ </map>
+ </entry>
   <entry>
     <string>clockss_override</string>
     <map>
