@@ -232,14 +232,14 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < testing ; 1994 ; Learning & Memory Volume 1 ; 1 >
-      au < testing ; 1995 ; Learning & Memory Volume 2 ; 2 >
+      au < ready ; 1995 ; Learning & Memory Volume 2 ; 2 >
       au < testing ; 1996 ; Learning & Memory Volume 3 ; 3 >
       au < testing ; 1997 ; Learning & Memory Volume 4 ; 4 >
       au < testing ; 1998 ; Learning & Memory Volume 5 ; 5 >
       au < testing ; 1999 ; Learning & Memory Volume 6 ; 6 >
       au < testing ; 2000 ; Learning & Memory Volume 7 ; 7 >
       au < testing ; 2001 ; Learning & Memory Volume 8 ; 8 >
-      au < testing ; 2002 ; Learning & Memory Volume 9 ; 9 >
+      au < ready ; 2002 ; Learning & Memory Volume 9 ; 9 >
       au < testing ; 2003 ; Learning & Memory Volume 10 ; 10 >
       au < testing ; 2004 ; Learning & Memory Volume 11 ; 11 >
       au < released ; 2005 ; Learning & Memory Volume 12 ; 12 >
@@ -315,13 +315,13 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < testing ; 1995 ; RNA Volume 1 ; 1 >
-      au < testing ; 1996 ; RNA Volume 2 ; 2 >
+      au < ready ; 1996 ; RNA Volume 2 ; 2 >
       au < testing ; 1997 ; RNA Volume 3 ; 3 >
-      au < testing ; 1998 ; RNA Volume 4 ; 4 >
+      au < ready ; 1998 ; RNA Volume 4 ; 4 >
       au < testing ; 1999 ; RNA Volume 5 ; 5 >
       au < testing ; 2000 ; RNA Volume 6 ; 6 >
-      au < testing ; 2001 ; RNA Volume 7 ; 7 >
-      au < testing ; 2002 ; RNA Volume 8 ; 8 >
+      au < ready ; 2001 ; RNA Volume 7 ; 7 >
+      au < ready ; 2002 ; RNA Volume 8 ; 8 >
       au < testing ; 2003 ; RNA Volume 9 ; 9 >
       au < testing ; 2004 ; RNA Volume 10 ; 10 >
       au < released ; 2005 ; RNA Volume 11 ; 11 >
