@@ -80,7 +80,7 @@ public class TestMetapressMetadataExtractor extends LockssTestCase {
     theDaemon.getCrawlManager();
 
     sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,	simAuConfig(tempDirPath));
-    bau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, natureAuConfig());
+    bau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, metapressAuConfig());
   }
 
   public void tearDown() throws Exception {
@@ -105,7 +105,7 @@ public class TestMetapressMetadataExtractor extends LockssTestCase {
    * Configuration method. 
    * @return
    */
-  Configuration natureAuConfig() {
+  Configuration metapressAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
     conf.put("volume_name", "8");
@@ -131,11 +131,7 @@ public class TestMetapressMetadataExtractor extends LockssTestCase {
 		  sb.append("\nAU  - ");
 		  sb.append(auth);
 	  }
-	  sb.append("\nY1  - ");
-	  sb.append(goodDate);
 	  sb.append("\nPY  - ");
-	  sb.append(goodDate);
-	  sb.append("\nDA  - ");
 	  sb.append(goodDate);
 	  sb.append("\nT2  - ");
 	  sb.append(goodJournalTitle);
@@ -213,7 +209,8 @@ public class TestMetapressMetadataExtractor extends LockssTestCase {
    * Inner class to create a html source code simulated content
    *
    */
-  public static class MySimulatedContentGenerator extends	SimulatedContentGenerator {
+  public static class MySimulatedContentGenerator extends 
+    SimulatedContentGenerator {
     protected MySimulatedContentGenerator(String fileRoot) {
       super(fileRoot);
     }
