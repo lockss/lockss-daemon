@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.45 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.46 2012-04-03 01:38:51 thib_gc Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import java.util.List;
 import javax.servlet.*;
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.collections.OrderedMap;
 import org.apache.commons.collections.map.LinkedMap;
 import org.apache.commons.lang.mutable.*;
 import org.lockss.config.*;
@@ -320,7 +319,7 @@ public class BatchAuConfig extends LockssServlet {
 							KEY_TITLE_SET,
 							doGray,
 							isAnySelectable,
-							"Select Titles",
+							"Select AUs",
 							ACTION_SELECT_AUS,
 							buttonNumber, 10);
       submitButtonNumber = buttonNumber.intValue();
@@ -328,20 +327,15 @@ public class BatchAuConfig extends LockssServlet {
       if (isAnySelectable.booleanValue()) {
 	// Display set chooser
 	ServletUtil.layoutExplanationBlock(page,
-					   "Select one or more collections of titles to " + verb.word + ", then click \"Select Titles\".");
+					   "Select one or more collections of AUs to " + verb.word + ", then click \"Select AUs\".");
 	ServletUtil.layoutChooseSets(srvURL(myServletDescr()), page,
 				     chooseSets, ACTION_TAG, KEY_VERB, verb);
       } else {
 	// Set chooser not needed
-	String msg = "All titles in all predefined collections of titles " +
+	String msg = "All AUs in all predefined collections of AUs " +
 	  "already exist on this LOCKSS box.";
 	ServletUtil.layoutExplanationBlock(page, msg);
       }
-    }
-    // End page
-    if (action != null) {
-      ServletUtil.layoutBackLink(page,
-          srvLink(myServletDescr(), "Back to Journal Configuration"));
     }
     endPage(page);
   }
