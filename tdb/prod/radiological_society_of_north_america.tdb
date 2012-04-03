@@ -28,8 +28,8 @@
 
       param[base_url] = http://radiographics.rsna.org/
 
-      au < HighWirePressH20Plugin ; testing ; 1981 ; RadioGraphics Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 1982 ; RadioGraphics Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 1981 ; RadioGraphics Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; ready ; 1982 ; RadioGraphics Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; testing ; 1983 ; RadioGraphics Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; testing ; 1984 ; RadioGraphics Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; testing ; 1985 ; RadioGraphics Volume 5 ; 5 >
@@ -85,7 +85,7 @@
 
       param[base_url] = http://radiology.rsna.org/
 
-      au < HighWirePressH20Plugin ; testing ; 2004 ; Radiology Volume 230 ; 230 >
+      au < HighWirePressH20Plugin ; ready ; 2004 ; Radiology Volume 230 ; 230 >
       au < HighWirePressH20Plugin ; testing ; 2005 ; Radiology Volume 231 ; 231 >
       au < HighWirePressH20Plugin ; testing ; 2006 ; Radiology Volume 232 ; 232 >
       au < HighWirePressH20Plugin ; testing ; 2007 ; Radiology Volume 233 ; 233 >
