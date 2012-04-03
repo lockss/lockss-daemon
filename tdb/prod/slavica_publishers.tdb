@@ -23,7 +23,7 @@
     au < released ; 2008 ; Journal of Slavic Linguistics Volume 16 ; 16 >
     au < released ; 2009 ; Journal of Slavic Linguistics Volume 17 ; 17 >
     au < ready ; 2010 ; Journal of Slavic Linguistics Volume 18 ; 18 >
-    au < manifest ; 2011 ; Journal of Slavic Linguistics Volume 19 ; 19 >
+    au < testing ; 2011 ; Journal of Slavic Linguistics Volume 19 ; 19 >
 
   }
 
@@ -65,7 +65,7 @@
     param[journal_dir] = pushkin_review
     attr[journal_id] = pnr
     
-    au < manifest ; 2012 ; Pushkin Review Volume 14 ; 14 >
+    au < testing ; 2012 ; Pushkin Review Volume 14 ; 14 >
 
   }
   
@@ -81,7 +81,7 @@
     param[journal_dir] = region
     attr[journal_id] = reg
 
-    au < manifest ; 2012 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 1 ; 1 >
+    au < testing ; 2012 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 1 ; 1 >
 
   }
 
@@ -97,9 +97,9 @@
     param[journal_dir] = serbian_studies
     attr[journal_id] = ser
 
-    au < manifest ; 2006 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 20 ; 20 >
-    au < manifest ; 2007 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 21 ; 21 >
-    au < manifest ; 2008 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 22 ; 22 >
+    au < testing ; 2006 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 20 ; 20 >
+    au < testing ; 2007 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 21 ; 21 >
+    au < testing ; 2008 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 22 ; 22 >
 
 
   }
