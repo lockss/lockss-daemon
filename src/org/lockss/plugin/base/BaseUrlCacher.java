@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.89 2012-03-12 05:26:51 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.90 2012-04-03 18:54:54 akanshab01 Exp $
  */
 
 /*
@@ -557,7 +557,7 @@ public class BaseUrlCacher implements UrlCacher {
     } finally {
       if (conn != null && input == null) {
 	logger.debug3("Releasing connection");
-	conn.release();
+	IOUtil.safeRelease(conn);
       }
     }
     return input;
