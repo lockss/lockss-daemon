@@ -195,7 +195,7 @@
 
       au < ready ; 2010 ; Ecological Restoration Volume 28 ; 28 >
       au < ready ; 2011 ; Ecological Restoration Volume 29 ; 29 >
-      au < expected ; 2012 ; Ecological Restoration Volume 30 ; 30 >
+      au < manifest ; 2012 ; Ecological Restoration Volume 30 ; 30 >
 
     }
 
@@ -235,10 +235,8 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_human_resources
       implicit < status ; year ; name ; param[volume] >
-      
-      comment[missing_manifest] = can't check for manifest, because of new website pending? RT4256
-      
-      au < exists ; 2012 ; The Journal of Human Resources Volume 47 ; 47 >
+         
+      au < manifest ; 2012 ; The Journal of Human Resources Volume 47 ; 47 >
 
     }
 
@@ -498,7 +496,7 @@
       au < released ; 2009 ; Native Plants Journal Volume 10 ; 10 >
       au < released ; 2010 ; Native Plants Journal Volume 11 ; 11 >
       au < ready ; 2011 ; Native Plants Journal Volume 12 ; 12 >
-      au < expected ; 2012 ; Native Plants Journal Volume 13 ; 13 >
+      au < manifest ; 2012 ; Native Plants Journal Volume 13 ; 13 >
 
     }
 
@@ -528,7 +526,7 @@
       au < ready ; 2009 ; SubStance Volume 38 ; 38 >
       au < ready ; 2010 ; SubStance Volume 39 ; 39 >
       au < ready ; 2011 ; SubStance Volume 40 ; 40 >
-      au < expected ; 2012 ; SubStance Volume 41 ; 41 >
+      au < manifest ; 2012 ; SubStance Volume 41 ; 41 >
 
     }
 
