@@ -7128,6 +7128,7 @@
 
     {
 
+      comment[notReady] = low poll. See RU4121
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 1953 ; Diogenes Volume 1 ; 1 ; >
@@ -7186,7 +7187,7 @@
       au < manifest ; exists ; 2007 ; Diogenes Volume 54 ; 54 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Diogenes Volume 55 ; 55 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Diogenes Volume 56 ; 56 ; >
-      au < testing ; exists ; 2010 ; Diogenes Volume 57 ; 57 ; >
+      au < notReady ; exists ; 2010 ; Diogenes Volume 57 ; 57 ; >
 
     }
 
@@ -16202,7 +16203,7 @@
       au < manifest ; exists ; 2007 ; Journal of Cognitive Engineering and Decision Making Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; Journal of Cognitive Engineering and Decision Making Volume 2 ; 2 ; >
       au < manifest ; exists ; 2009 ; Journal of Cognitive Engineering and Decision Making Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2010 ; Journal of Cognitive Engineering and Decision Making Volume 4 ; 4 ; >
+      au < released ; manifest ; 2010 ; Journal of Cognitive Engineering and Decision Making Volume 4 ; 4 ; >
       au < released ; crawling ; 2011 ; Journal of Cognitive Engineering and Decision Making Volume 5 ; 5 ; >
       au < manifest ; exists ; 2012 ; Journal of Cognitive Engineering and Decision Making Volume 6 ; 6 ; >
 
