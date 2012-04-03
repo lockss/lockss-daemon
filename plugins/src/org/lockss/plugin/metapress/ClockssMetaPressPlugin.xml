@@ -135,7 +135,7 @@
   <map>
     <entry>
     <string>*;RIS</string>
-    <string>org.lockss.plugin.metapress.MetaPressHtmlMetadataExtractorFactory</string>
+    <string>org.lockss.plugin.metapress.MetaPressRisMetadataExtractorFactory</string>
    </entry>
  </map>
  </entry>
