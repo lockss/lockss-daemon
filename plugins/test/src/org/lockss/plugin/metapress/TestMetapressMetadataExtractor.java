@@ -156,7 +156,7 @@ public class TestMetapressMetadataExtractor extends LockssTestCase {
   /**
    * Method that creates a simulated Cached URL from the source code provided by 
    * the goodContent String. It then asserts that the metadata extracted, by using
-   * the MetaPressHtmlMetadataExtractorFactory, match the metadata in the source code. 
+   * the MetaPressRisMetadataExtractorFactory, match the metadata in the source code. 
    * @throws Exception
    */
   public void testExtractFromGoodContent() throws Exception {
@@ -167,7 +167,7 @@ public class TestMetapressMetadataExtractor extends LockssTestCase {
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, Constants.MIME_TYPE_RIS);
-    FileMetadataExtractor me = new MetaPressHtmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any, Constants.MIME_TYPE_RIS);
+    FileMetadataExtractor me = new MetaPressRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any, Constants.MIME_TYPE_RIS);
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
