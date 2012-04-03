@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -100,15 +100,6 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>short_journal_code</key>
         <displayName>Short Journal Code</displayName>
-        <description>Code letter for the journal (case-sensitive server-side)</description>
-        <type>1</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>short_journal_code_lc</key>
-        <displayName>Short Journal Code (lowercase)</displayName>
         <description>Code letter for the journal (case-sensitive server-side)</description>
         <type>1</type>
         <size>20</size>
