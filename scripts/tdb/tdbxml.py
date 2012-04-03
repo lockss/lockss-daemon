@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.23 2012-02-07 01:49:15 thib_gc Exp $
+# $Id: tdbxml.py,v 1.24 2012-04-03 01:37:45 thib_gc Exp $
 #
 # Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -27,7 +27,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '0.3.6'
+__version__ = '0.3.7'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -228,8 +228,8 @@ def __process(tdb, options):
             print '''\
  <property name="org.lockss.titleSet">
 
-  <property name="%(publisher)s">
-   <property name="name" value="All %(publisher)s Titles" />
+  <property name="%(publisher1)s">
+   <property name="name" value="All %(publisher)s AUs" />
    <property name="class" value="xpath" />
    <property name="xpath" value=%(outer)s[attributes/publisher=%(inner)s%(publisher2)s%(inner)s]%(outer)s />
   </property>
@@ -237,7 +237,8 @@ def __process(tdb, options):
  </property>
  
  <property name="org.lockss.title">
-''' % { 'publisher': __escape(current_pub.name().replace('.', '')),
+''' % { 'publisher': __escape(current_pub.name()),
+        'publisher1': __escape(current_pub.name().replace('.', '')),
         'publisher2': re.sub(r'\'', '&apos;', __escape(current_pub.name())),
         'outer': '"' if "'" not in current_pub.name() else "'",
         'inner': "'" if "'" not in current_pub.name() else '"' }
