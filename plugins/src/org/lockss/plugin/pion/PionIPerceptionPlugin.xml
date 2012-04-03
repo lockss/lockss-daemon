@@ -1,0 +1,133 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.pion.PionIPerceptionPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>&quot;%sjournal/%s&quot;, base_url, journal_code</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>&quot;%sjournal/%s/volume/%s&quot;, base_url, journal_code, volume_name</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>&quot;%sjournal/%s/volume/%s/issue/%s&quot;, base_url, journal_code, volume_name, issue</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Pion i-Perception Plugin, Base URL %s, Journal Code %s, Volume %s&quot;, base_url, journal_code, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Pion i-Perception Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^(%s|%s)&quot;, base_url, base_url2</string>
+      <string>1,&quot;^%sjournal/%s/volume/%s$&quot;, base_url, journal_code, volume_name</string>
+      <string>1,&quot;^%sjournal/%s/volume/%s/&quot;, base_url, journal_code, volume_name</string>
+      <string>1,&quot;^%sjournal/%s/article/%s&quot;, base_url, journal_code, journal_code</string>
+      <string>1,&quot;^%sfulltext/%s0?%s/%s.*\.pdf&quot;, base_url, journal_code, volume_name, journal_code</string>
+      <string>1,&quot;^%smisc/%s0?%s/%s.*(_s|-supp)&quot;, base_url, journal_code, volume_name, journal_code</string>
+      <string>1,&quot;^%sris\.cgi\?id=&quot;, base_url2</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+        <string>&quot;%sjournal/%s/volume/%s&quot;, base_url, journal_code, volume_name</string>
+        <string>&quot;%slockss.txt&quot;, base_url2</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url2</key>
+        <displayName>Secondary Base URL</displayName>
+        <description>Secondary host, usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_code</key>
+        <displayName>Journal Code</displayName>
+        <description>Code word for the journal</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.pion.PionHashHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.pion.PionIPerceptionArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.pion.PionIPerceptionArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.pion.PionHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+</map>

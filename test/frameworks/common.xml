@@ -216,6 +216,8 @@
 	<value>ca.sfu.lib.plugin.contentdm.ContentDmFrontEndPlugin</value>
     <value>org.lockss.plugin.iop.ClockssIOPSciencePlugin</value>
     <value>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin</value>
+    <value>org.lockss.plugin.pion.PionPlugin</value>
+    <value>org.lockss.plugin.pion.PionIPerceptionPlugin</value>
     <value>org.lockss.plugin.pion.ClockssPionPlugin</value>
     <value>org.lockss.plugin.pion.ClockssPionIPerceptionPlugin</value>
     <value>org.lockss.plugin.massachusettsmedicalsociety.MassachusettsMedicalSocietyPlugin</value>
