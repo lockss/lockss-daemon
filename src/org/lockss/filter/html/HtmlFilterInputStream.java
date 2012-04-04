@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.12 2012-03-28 20:25:43 wkwilson Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.13 2012-04-04 23:32:21 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,8 +40,7 @@ import org.htmlparser.util.*;
 
 import org.lockss.config.*;
 import org.lockss.util.*;
-
-import org.apache.commons.io.input.*;
+import org.lockss.util.ReaderInputStream;
 
 /**
  * InputStream that parses HTML input, applies a user-supplied
