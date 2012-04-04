@@ -1,10 +1,10 @@
 /*
- * $Id: ServeContent.java,v 1.46 2012-03-28 21:11:16 pgust Exp $
+ * $Id: ServeContent.java,v 1.47 2012-04-04 23:43:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,6 +48,7 @@ import org.apache.commons.lang.StringEscapeUtils;
 import org.mortbay.http.*;
 import org.mortbay.html.*;
 import org.lockss.util.*;
+import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.LockssUrlConnection;
 import org.lockss.util.urlconn.LockssUrlConnectionPool;
@@ -841,17 +842,9 @@ public class ServeContent extends LockssServlet {
         } else {
           // create an input stream whose underlying file is deleted
           // when the input stream closes.
-          File tempFile = null; 
+          File tempFile = dos.getFile(); 
           try {
-            tempFile = dos.getFile();
-            input = new CloseCallbackInputStream(
-                          new FileInputStream(tempFile),
-                          new CloseCallbackInputStream.Callback() {
-                            public void streamClosed(Object file) {
-                              FileUtils.deleteQuietly(((File)file));
-                            }
-                          },
-                          tempFile);
+            input = new DeleteFileOnCloseInputStream(tempFile);
           } catch (FileNotFoundException fnfe) {
             FileUtils.deleteQuietly(tempFile);
             throw fnfe;

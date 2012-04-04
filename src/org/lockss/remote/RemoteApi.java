@@ -1,10 +1,10 @@
 /*
- * $Id: RemoteApi.java,v 1.73 2011-10-03 05:55:10 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.74 2012-04-04 23:43:33 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,6 +48,7 @@ import org.lockss.state.*;
 import org.lockss.repository.*;
 import org.lockss.servlet.ServletManager;
 import org.lockss.util.*;
+import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
 import org.lockss.mail.*;
 import org.lockss.servlet.ServletUtil;
 import org.apache.commons.collections.map.ReferenceMap;
@@ -474,16 +475,7 @@ public class RemoteApi
   public InputStream getAuConfigBackupStreamV2(String machineName)
       throws IOException {
     File file = createConfigBackupFile(machineName);
-    InputStream fileStream =
-      new BufferedInputStream(new FileInputStream(file));
-//     return fileStream;
-    return
-      new CloseCallbackInputStream(fileStream,
-				   new CloseCallbackInputStream.Callback() {
-				     public void streamClosed(Object file) {
-				       ((File)file).delete();
-				     }},
-				   file);
+    return new BufferedInputStream(new DeleteFileOnCloseInputStream(file));
   }
 
   public File createConfigBackupFile(String machineName) throws IOException {

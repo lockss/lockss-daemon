@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.30 2012-02-16 19:56:52 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.31 2012-04-04 23:43:33 thib_gc Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.config.*;
 import org.lockss.filter.pdf.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
+import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
 import org.pdfbox.cos.*;
 import org.pdfbox.util.PDFOperator;
 
@@ -757,17 +758,8 @@ return success;
 	return new ByteArrayInputStream(outputStream.getData());
       }
       else {
-	// If temp file was created, arrange for it to be deleted when
-	// the input stream is closed.
 	File tempFile = outputStream.getFile();
-	InputStream fileStream =
-	  new BufferedInputStream(new FileInputStream(tempFile));
-	CloseCallbackInputStream.Callback cb =
-	  new CloseCallbackInputStream.Callback() {
-	    public void streamClosed(Object file) {
-	      ((File)file).delete();
-	    }};
-	return new CloseCallbackInputStream(fileStream, cb, tempFile);
+	return new BufferedInputStream(new DeleteFileOnCloseInputStream(tempFile));
       }
     }
     catch (OutOfMemoryError oome) {
