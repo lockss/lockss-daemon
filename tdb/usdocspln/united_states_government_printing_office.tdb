@@ -67,7 +67,7 @@
     
     param[collection_id] = CZIC
     
-    au < testing ; 1951 ; Coastal Zone Information Center 1951 ; 1951 >
+    au < ready ; 1951 ; Coastal Zone Information Center 1951 ; 1951 >
     au < manifest ; 1959 ; Coastal Zone Information Center 1959 ; 1959 > 
     au < manifest ; 1962 ; Coastal Zone Information Center 1962 ; 1962 > 
     au < manifest ; 1963 ; Coastal Zone Information Center 1963 ; 1963 > 
@@ -463,8 +463,8 @@
 
     param[collection_id] = ERP
 
-    au < testing; 1996 ; Economic Report of the President 1996 ; 1996 >
-    au < testing; 1997 ; Economic Report of the President 1997 ; 1997 >
+    au < ready; 1996 ; Economic Report of the President 1996 ; 1996 >
+    au < ready; 1997 ; Economic Report of the President 1997 ; 1997 >
     au < ready; 1998 ; Economic Report of the President 1998 ; 1998 >
     au < ready; 1999 ; Economic Report of the President 1999 ; 1999 >
     au < released ; 2000 ; Economic Report of the President 2000 ; 2000 >
@@ -555,7 +555,7 @@
     au < released ; 2004 ; Government Accountability Office Reports and Comptroller General Decisions 2004 ; 2004 >
     au < released ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; 2005 >
     au < testing ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; 2006 >
-    au < testing ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; 2007 >
+    au < ready ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; 2007 >
     au < ready ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 >
    
   }
@@ -721,7 +721,7 @@
     param[collection_id] = PPP
 
     au < ready ; 1991 ; Public Papers of the Presidents of the United States 1991 ; 1991 >
-    au < testing ; 1992 ; Public Papers of the Presidents of the United States 1992 ; 1992 >
+    au < readyg ; 1992 ; Public Papers of the Presidents of the United States 1992 ; 1992 >
     au < ready ; 1993 ; Public Papers of the Presidents of the United States 1993 ; 1993 >
     au < testing ; 1994 ; Public Papers of the Presidents of the United States 1994 ; 1994 >
     au < released ; 1995 ; Public Papers of the Presidents of the United States 1995 ; 1995 >
@@ -750,7 +750,7 @@
     au < manifest ; 1996 ; Senate Manual 1996 ; 1996 >
     au < released ; 2000 ; Senate Manual 2000 ; 2000 >
     au < manifest ; 2002 ; Senate Manual 2002 ; 2002 >
-    au < testing ; 2008 ; Senate Manual 2008 ; 2008 >
+    au < ready ; 2008 ; Senate Manual 2008 ; 2008 >
 
   }
 
@@ -838,7 +838,7 @@
     param[collection_id] = STATUTE
 
     au < testing ; 1951 ; United States Statutes at Large 1951 ; 1951 >
-    au < testing ; 1952 ; United States Statutes at Large 1952 ; 1952 >
+    au < ready ; 1952 ; United States Statutes at Large 1952 ; 1952 >
     au < ready ; 1953 ; United States Statutes at Large 1953 ; 1953 >
     au < ready ; 1954 ; United States Statutes at Large 1954 ; 1954 >
     au < released ; 1955 ; United States Statutes at Large 1955 ; 1955 >
