@@ -42,6 +42,7 @@
     au < released ; 2008 ; Additional Government Publications 2008 ; 2008 >
     au < released ; 2009 ; Additional Government Publications 2009 ; 2009 >
     au < released ; 2010 ; Additional Government Publications 2010 ; 2010 >
+    au < manifest ; 2011 ; Additional Government Publications 2011 ; 2011 >
 
   }
   
@@ -55,6 +56,7 @@
     
     au < released ; 2009 ; Budget of the United States Government 2009 ; 2009 >
     au < released ; 2010 ; Budget of the United States Government 2010 ; 2010 >
+    au < manifest ; 2011 ; Budget of the United States Government 2011 ; 2011 >
   
       
   }
@@ -134,6 +136,7 @@
     au < released ; 2009 ; Code of Federal Regulations 2009 ; 2009 >
     au < released ; 2010 ; Code of Federal Regulations 2010 ; 2010 >
     au < released ; 2011 ; Code of Federal Regulations 2011 ; 2011 >
+    au < manifest ; 2012 ; Code of Federal Regulations 2012 ; 2012 >
 
   }
 
@@ -163,6 +166,9 @@
     au < released ; 2008 ; Congressional Bills 2008 ; 2008 >
     au < released ; 2009 ; Congressional Bills 2009 ; 2009 >
     au < released ; 2010 ; Congressional Bills 2010 ; 2010 >
+    au < manifest ; 2011 ; Congressional Bills 2011 ; 2011 >
+    au < manifest ; 2012 ; Congressional Bills 2012 ; 2012 >
+
 
   }
 
@@ -185,6 +191,8 @@
     au < released ; 2008 ; Congressional Calendars 2008 ; 2008 >
     au < released ; 2009 ; Congressional Calendars 2009 ; 2009 >
     au < released ; 2010 ; Congressional Calendars 2010 ; 2010 >
+    au < manifest ; 2011 ; Congressional Calendars 2011 ; 2011 >
+    au < manifest ; 2012 ; Congressional Calendars 2012 ; 2012 >
       
   }
 
@@ -213,6 +221,8 @@
     au < released ; 2008 ; Congressional Committee Prints 2008 ; 2008 >
     au < released ; 2009 ; Congressional Committee Prints 2009 ; 2009 >
     au < released ; 2010 ; Congressional Committee Prints 2010 ; 2010 >
+    au < manifest ; 2011 ; Congressional Committee Prints 2011 ; 2011 >
+    au < manifest ; 2012 ; Congressional Committee Prints 2012 ; 2012 >
 
   }
   
@@ -236,6 +246,7 @@
     au < released ; 2007 ; Congressional Directory 2007 ; 2007 >
     au < released ; 2008 ; Congressional Directory 2008 ; 2008 >
     au < released ; 2009 ; Congressional Directory 2009 ; 2009 >
+    au < manifest ; 2011 ; Congressional Directory 2011 ; 2011 >
       
   }
 
@@ -269,6 +280,7 @@
     au < released ; 2009 ; Congressional Documents 2009 ; 2009 >
     au < released ; 2010 ; Congressional Documents 2010 ; 2010 >
     au < released ; 2011 ; Congressional Documents 2011 ; 2011 >
+    au < manifest ; 2012 ; Congressional Documents 2012 ; 2012 >
       
   }
 
@@ -296,6 +308,8 @@
     au < released ; 2008 ; Congressional Hearings 2008 ; 2008 >
     au < released ; 2009 ; Congressional Hearings 2009 ; 2009 >
     au < released ; 2010 ; Congressional Hearings 2010 ; 2010 >
+    au < manifest ; 2011 ; Congressional Hearings 2011 ; 2011 >
+    au < manifest ; 2012 ; Congressional Hearings 2012 ; 2012 >
 
   }
 
@@ -325,6 +339,7 @@
     au < released ; 2009 ; Congressional Record 2009 ; 2009 >
     au < released ; 2010 ; Congressional Record 2010 ; 2010 >
     au < released ; 2011 ; Congressional Record 2011 ; 2011 >
+    au < manifest ; 2012 ; Congressional Record 2012 ; 2012 >
 
   }
   
@@ -479,6 +494,7 @@
     au < released ; 2009 ; Economic Report of the President 2009 ; 2009 >
     au < released ; 2010 ; Economic Report of the President 2010 ; 2010 >
     au < released ; 2011 ; Economic Report of the President 2011 ; 2011 >
+    au < manifest ; 2012 ; Economic Report of the President 2012 ; 2012 >
       
   }
 
@@ -616,7 +632,7 @@
     au < released ; 2007 ; House Rules and Manual 2007 ; 2007 >
     au < released ; 2009 ; House Rules and Manual 2009 ; 2009 >
     au < released ; 2011 ; House Rules and Manual 2011 ; 2011 >
-      
+	      
   }
 
   { 
@@ -736,6 +752,7 @@
     au < manifest ; 2004 ; Public Papers of the Presidents of the United States 2004 ; 2004 >
     au < released ; 2005 ; Public Papers of the Presidents of the United States 2005 ; 2005 >
     au < ready ; 2006 ; Public Papers of the Presidents of the United States 2006 ; 2006 >
+    au < manifest ; 2009 ; Public Papers of the Presidents of the United States 2009 ; 2009 >
 
   }
 
@@ -751,6 +768,7 @@
     au < released ; 2000 ; Senate Manual 2000 ; 2000 >
     au < manifest ; 2002 ; Senate Manual 2002 ; 2002 >
     au < ready ; 2008 ; Senate Manual 2008 ; 2008 >
+    au < manifest ; 2012 ; Senate Manual 2012 ; 2012 >
 
   }
 
@@ -893,6 +911,7 @@
     au < released ; 2004 ; United States Statutes at Large 2004 ; 2004 >
     au < released ; 2005 ; United States Statutes at Large 2005 ; 2005 >
     au < testing ; 2006 ; United States Statutes at Large 2006 ; 2006 >
+    au < manifest ; 2007 ; United States Statutes at Large 2007 ; 2007 >
 
   }
 
