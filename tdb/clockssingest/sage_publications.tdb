@@ -10849,7 +10849,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1973 ; Health Education & Behavior Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1957-1966 ; Health Education & Behavior Volume 1 ; 1 ; >
       au < manifest ; exists ; 1974 ; Health Education & Behavior Volume 2 ; 2 ; >
       au < manifest ; exists ; 1975 ; Health Education & Behavior Volume 3 ; 3 ; >
       au < manifest ; exists ; 1976 ; Health Education & Behavior Volume 4 ; 4 ; >
@@ -11449,27 +11449,27 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 1988 ; Home Health Care Management & Practice Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1989 ; Home Health Care Management & Practice Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1989-1990 ; Home Health Care Management & Practice Volume 2 ; 2 ; >
       au < manifest ; exists ; 1991 ; Home Health Care Management & Practice Volume 3 ; 3 ; >
       au < manifest ; exists ; 1992 ; Home Health Care Management & Practice Volume 4 ; 4 ; >
       au < manifest ; exists ; 1993 ; Home Health Care Management & Practice Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1993 ; Home Health Care Management & Practice Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1994 ; Home Health Care Management & Practice Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1995 ; Home Health Care Management & Practice Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1996 ; Home Health Care Management & Practice Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1997 ; Home Health Care Management & Practice Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1998 ; Home Health Care Management & Practice Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1999 ; Home Health Care Management & Practice Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1993-1994 ; Home Health Care Management & Practice Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1994-1995 ; Home Health Care Management & Practice Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1995-1996 ; Home Health Care Management & Practice Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1996-1997 ; Home Health Care Management & Practice Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1997-1998 ; Home Health Care Management & Practice Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1998-1999 ; Home Health Care Management & Practice Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1999-2001 ; Home Health Care Management & Practice Volume 12 ; 12 ; >
       au < manifest ; exists ; 2001 ; Home Health Care Management & Practice Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2001 ; Home Health Care Management & Practice Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2002 ; Home Health Care Management & Practice Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2003 ; Home Health Care Management & Practice Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2004 ; Home Health Care Management & Practice Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2005 ; Home Health Care Management & Practice Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2006 ; Home Health Care Management & Practice Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2007 ; Home Health Care Management & Practice Volume 20 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Home Health Care Management & Practice Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2009 ; Home Health Care Management & Practice Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2001-2002 ; Home Health Care Management & Practice Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2002-2003 ; Home Health Care Management & Practice Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2003-2004 ; Home Health Care Management & Practice Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2004-2005 ; Home Health Care Management & Practice Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2005-2006 ; Home Health Care Management & Practice Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2006-2007 ; Home Health Care Management & Practice Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2007-2008 ; Home Health Care Management & Practice Volume 20 ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 2008-2009 ; Home Health Care Management & Practice Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2009-2010 ; Home Health Care Management & Practice Volume 22 ; 22 ; >
       au < released ; crawling ; 2011 ; Home Health Care Management & Practice Volume 23 ; 23 ; >
       au < crawling ; exists ; 2012 ; Home Health Care Management & Practice Volume 24 ; 24 ; >
 
@@ -11623,7 +11623,7 @@
       au < manifest ; exists ; 1973 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 15 ; 15 ; >
       au < manifest ; exists ; 1974 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 16 ; 16 ; >
       au < manifest ; exists ; 1975 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 17 ; 17 ; >
-      au < exists ; exists ; 1976 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 18 ; 18 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 18 ; 18 ; >
       au < manifest ; exists ; 1977 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 19 ; 19 ; >
       au < manifest ; exists ; 1978 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 20 ; 20 ; >
       au < manifest ; exists ; 1979 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 21 ; 21 ; >
@@ -11843,6 +11843,7 @@
       au < exists ; exists ; 2009 ; Humanity & Society Volume 33 ; 33 ; >
       au < exists ; exists ; 2010 ; Humanity & Society Volume 34 ; 34 ; >
       au < exists ; exists ; 2011 ; Humanity & Society Volume 35 ; 35 ; >
+      au < exists ; exists ; 2012 ; Humanity & Society Volume 36 ; 36 ; >
 
     }
     

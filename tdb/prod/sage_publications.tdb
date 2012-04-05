@@ -12121,9 +12121,9 @@
 
 
         au < HighWireStrVolPlugin ; down ; 2005 ; Group & Organization Management Volume 30 ; 30 >
-        au < HighWireStrVolPlugin ; down ; 2006 ; Group & Organization Management Volume 32 ; 32 >
-        au < HighWirePressPlugin ; down ; 2007 ; Group & Organization Management Volume 33 ; 33 >
-        au < HighWirePressPlugin ; down ; 2008 ; Group & Organization Management Volume 34 ; 34 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Group & Organization Management Volume 32 ; 32 >
+        au < HighWirePressPlugin ; down ; 2008 ; Group & Organization Management Volume 33 ; 33 >
+        au < HighWirePressPlugin ; down ; 2009 ; Group & Organization Management Volume 34 ; 34 >
 
       }
 
@@ -12565,7 +12565,7 @@
         param[base_url] = http://heb.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doesNotExist ; 0 ; Health Education & Behavior Volume 1 ; 1 >
+        au < exists ; 1957-1966 ; Health Education & Behavior Volume 1 ; 1 >
         au < manifest ; 1974 ; Health Education & Behavior Volume 2 ; 2 >
         au < manifest ; 1975 ; Health Education & Behavior Volume 3 ; 3 >
         au < manifest ; 1976 ; Health Education & Behavior Volume 4 ; 4 >
@@ -13470,7 +13470,7 @@
         au < manifest ; 1971 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 13 ; 13 >
         au < manifest ; 1972 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 14 ; 14 >
         au < manifest ; 1973 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 15 ; 15 >
-        au < doesNotExist ; 0 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 16 ; 16 >
+        au < exists ; 1974 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 16 ; 16 >
         au < manifest ; 1975 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 17 ; 17 >
         au < doesNotExist ; 0 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 18 ; 18 >
         au < manifest ; 1977 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 19 ; 19 >
