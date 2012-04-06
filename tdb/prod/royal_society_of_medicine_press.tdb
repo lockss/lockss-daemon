@@ -90,6 +90,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Clinical Ethics Volume 4 ; 4 >
       au < HighWirePressPlugin ; down ; 2010 ; Clinical Ethics Volume 5 ; 5 >
       au < HighWirePressPlugin ; down ; 2011 ; Clinical Ethics Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Clinical Ethics Volume 7 ; 7 >
 
     }
 
@@ -121,6 +122,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Clinical Risk Volume 15 ; 15 >
       au < HighWirePressPlugin ; down ; 2010 ; Clinical Risk Volume 16 ; 16 >
       au < HighWirePressPlugin ; down ; 2011 ; Clinical Risk Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Clinical Risk Volume 18 ; 18 >
 
     }
 
@@ -511,6 +513,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Health Services Management Research Volume 22 ; 22 >
       au < HighWirePressPlugin ; down ; 2010 ; Health Services Management Research Volume 23 ; 23 >
       au < HighWirePressPlugin ; down ; 2011 ; Health Services Management Research Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Health Services Management Research Volume 25 ; 25 >
 
     }
 
@@ -538,6 +541,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
       au < HighWirePressPlugin ; down ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
       au < HighWirePressPlugin ; down ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 >
 
     }
 
@@ -606,6 +610,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
       au < HighWirePressPlugin ; down ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
       au < HighWirePressPlugin ; down ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 >
 
     }
 
@@ -633,6 +638,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
       au < HighWirePressPlugin ; down ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
       au < HighWirePressPlugin ; down ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Medical Biography Volume 20 ; 20 >
 
     }
 
@@ -667,6 +673,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
       au < HighWirePressPlugin ; down ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
       au < HighWirePressPlugin ; down ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medical Screening Volume 19 ; 19 >
 
     }
 
@@ -703,6 +710,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
       au < HighWirePressPlugin ; down ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
       au < HighWirePressPlugin ; down ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 >
 
     }
 
@@ -770,6 +778,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; JRSM Volume 102 ; 102 >
       au < HighWirePressPlugin ; down ; 2010 ; JRSM Volume 103 ; 103 >
       au < HighWirePressPlugin ; down ; 2011 ; JRSM Volume 104 ; 104 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; JRSM Volume 105 ; 105 >
 
     }
 
@@ -788,6 +797,7 @@
 
     au < released ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
     au < released ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
+    au < manifest ; 2012 ; JRSM Short Reports Volume 3 ; 3 >
 
   }
 
@@ -851,6 +861,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Laboratory Animals Volume 43 ; 43 >
       au < HighWirePressPlugin ; down ; 2010 ; Laboratory Animals Volume 44 ; 44 >
       au < HighWirePressPlugin ; down ; 2011 ; Laboratory Animals Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Laboratory Animals Volume 46 ; 46 >
 
     }
 
@@ -945,6 +956,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Menopause International Volume 15 ; 15 >
       au < HighWirePressPlugin ; down ; 2010 ; Menopause International Volume 16 ; 16 >
       au < HighWirePressPlugin ; down ; 2011 ; Menopause International Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Menopause International Volume 18 ; 18 >
 
     }
 
@@ -969,6 +981,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Obstetric Medicine Volume 2 ; 2 >
       au < HighWirePressPlugin ; down ; 2010 ; Obstetric Medicine Volume 3 ; 3 >
       au < HighWirePressPlugin ; down ; 2011 ; Obstetric Medicine Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Obstetric Medicine Volume 5 ; 5 >
 
     }
 
@@ -998,6 +1011,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Phlebology Volume 24 ; 24 >
       au < HighWirePressPlugin ; down ; 2010 ; Phlebology Volume 25 ; 25 >
       au < HighWirePressPlugin ; down ; 2011 ; Phlebology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Phlebology Volume 27 ; 27 >
 
     }
 
@@ -1047,6 +1061,7 @@
       au < HighWirePressPlugin ; down ; 2009 ; Tropical Doctor Volume 39 ; 39 >
       au < HighWirePressPlugin ; down ; 2010 ; Tropical Doctor Volume 40 ; 40 >
       au < HighWirePressPlugin ; down ; 2011 ; Tropical Doctor Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Tropical Doctor Volume 42 ; 42 >
 
     }
 
