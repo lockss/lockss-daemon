@@ -84,8 +84,8 @@ public class AssociationForComputingMachineryArticleIteratorFactory implements A
       
       if(spec.getTarget() != MetadataTarget.Article)
       {
-		//af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
-		//guessMetadataFile(af, mat);
+		af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
+		guessMetadataFile(af, mat);
       }
       
       return af;

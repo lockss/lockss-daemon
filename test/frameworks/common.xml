@@ -195,33 +195,37 @@
         <value>org.lockss.plugin.topaz.TopazPlugin</value>
         <value>org.lockss.plugin.portlandpress.PortlandPressPlugin</value>
         <value>org.lockss.plugin.ingenta.IngentaJournalPlugin</value>
-        <value>org.lockss.plugin.drunkenboat.DrunkenBoatPlugin</value>
-        <value>org.lockss.plugin.medknow.MedknowPlugin</value>
-        <value>org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin</value>
-        <value>org.lockss.plugin.elsevier.ClockssElsevierSourcePlugin</value>
-        <value>org.lockss.plugin.springer.ClockssSpringerSourcePlugin</value>
-        <value>org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin</value>
-        <value>org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin</value>
-        <value>org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin</value>
-        <value>org.lockss.plugin.internationalunionofcrystallography.InternationalUnionOfCrystallographyPlugin</value>
-        <value>org.lockss.plugin.internationalunionofcrystallography.ClockssInternationalUnionOfCrystallographyPlugin</value>
-        <value>org.lockss.plugin.springer.SpringerLinkPlugin</value>
-        <value>org.lockss.plugin.emls.EmlsPlugin</value>
-        <value>org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin</value>
-        <value>org.lockss.plugin.americaninstituteofphysics.ClockssAmericanInstituteOfPhysicsSourcePlugin</value>
-        <value>org.lockss.plugin.casaeditriceclueb.ClockssCasaEditriceCluebSourcePlugin</value>
-        <value>org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin</value>
-        <value>org.lockss.plugin.americansocietyofcivilengineers.ClockssAmericanSocietyOfCivilEngineersSourcePlugin</value>
-        <value>edu.auburn.adpn.directory.AuburnDirectoryPlugin</value>
-        <value>ca.sfu.lib.plugin.contentdm.ContentDmFrontEndPlugin</value>
-        <value>org.lockss.plugin.iop.ClockssIOPSciencePlugin</value>
-        <value>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin</value>
-        <value>org.lockss.plugin.pion.PionPlugin</value>
-        <value>org.lockss.plugin.pion.PionIPerceptionPlugin</value>
-        <value>org.lockss.plugin.pion.ClockssPionPlugin</value>
-        <value>org.lockss.plugin.pion.ClockssPionIPerceptionPlugin</value>
-        <value>org.lockss.plugin.massachusettsmedicalsociety.MassachusettsMedicalSocietyPlugin</value>
-        <value>org.lockss.plugin.igiglobal.IgiGlobalPlugin</value>
+		<value>org.lockss.plugin.drunkenboat.DrunkenBoatPlugin</value>
+		<value>org.lockss.plugin.medknow.MedknowPlugin</value>
+		<value>org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin</value>
+		<value>org.lockss.plugin.elsevier.ClockssElsevierSourcePlugin</value>
+		<value>org.lockss.plugin.springer.ClockssSpringerSourcePlugin</value>
+		<value>org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin</value>
+		<value>org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin</value>
+		<value>org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin</value>
+		<value>org.lockss.plugin.internationalunionofcrystallography.InternationalUnionOfCrystallographyPlugin</value>
+		<value>org.lockss.plugin.internationalunionofcrystallography.ClockssInternationalUnionOfCrystallographyPlugin</value>
+		<value>org.lockss.plugin.springer.SpringerLinkPlugin</value>
+		<value>org.lockss.plugin.emls.EmlsPlugin</value>
+		<value>org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin</value>
+		<value>org.lockss.plugin.americaninstituteofphysics.ClockssAmericanInstituteOfPhysicsSourcePlugin</value>
+		<value>org.lockss.plugin.casaeditriceclueb.ClockssCasaEditriceCluebSourcePlugin</value>
+		<value>org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin</value>
+		<value>org.lockss.plugin.americansocietyofcivilengineers.ClockssAmericanSocietyOfCivilEngineersSourcePlugin</value>
+		<value>edu.auburn.adpn.directory.AuburnDirectoryPlugin</value>
+		<value>ca.sfu.lib.plugin.contentdm.ContentDmFrontEndPlugin</value>
+	    <value>org.lockss.plugin.iop.ClockssIOPSciencePlugin</value>
+	    <value>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin</value>
+	    <value>org.lockss.plugin.pion.ClockssPionPlugin</value>
+	    <value>org.lockss.plugin.pion.ClockssPionIPerceptionPlugin</value>
+		<value>org.lockss.plugin.elsevier.ElsevierFTPPlugin</value>
+		<value>org.lockss.plugin.americaninstituteofphysics.AmericanInstituteOfPhysicsFTPPlugin</value>
+		<value>org.lockss.plugin.americansocietyofcivilengineers.ClockssAmericanSocietyOfCivilEngineersSourcePlugin</value>
+		<value>org.lockss.plugin.springer.ClockssSpringerSourcePlugin</value>
+		<value>org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin</value>
+		<value>org.lockss.plugin.casaeditriceclueb.ClockssCasaEditriceCluebSourcePlugin</value>
+		<value>org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin</value>
+		<value>org.lockss.plugin.ammonsscientific.ClockssAmmonsScientificPlugin</value>
       </list>
     </property>
 

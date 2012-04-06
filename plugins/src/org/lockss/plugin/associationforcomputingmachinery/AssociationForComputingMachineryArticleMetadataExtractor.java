@@ -56,8 +56,8 @@ public class AssociationForComputingMachineryArticleMetadataExtractor implements
 	
 	 protected void addAccessUrl(ArticleMetadata am, CachedUrl cu) 
 	 {
-		    if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL)) 
-		      am.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+		if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL)) 
+		  am.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
 	 }
 	
 	@Override

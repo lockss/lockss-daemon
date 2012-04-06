@@ -1,5 +1,5 @@
 /*
- * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.6 2012-03-13 22:34:52 pgust Exp $
+ * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.7 2012-04-06 22:00:30 dylanrhodes Exp $
  */
 
 /*
@@ -165,6 +165,9 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
 			        		  } else {
 				        		  xpathValArr[i] = articleRecNode.getTextContent();
 			        		  }
+			        		  
+			        		  if(xpathValArr[i].contains("&amp;#"))
+			        			  xpathValArr[i] = fixUnicodeIn(xpathValArr[i]);
 			        	  }  
 			          }
 			        }
@@ -176,6 +179,20 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
 	        
 	        // return the file name
 	        return xpathValArr[FILE_NAME_INDEX];
+	      }
+	      
+	      private String fixUnicodeIn(String str) {
+	    	  String output = "";
+	    	  Matcher unicode = Pattern.compile("(&amp;#)(\\d+)(;)").matcher(str);
+	    	  	    	  
+	    	  while(unicode.find()) {
+	    		  output = unicode.replaceFirst(""+(char)Integer.parseInt(unicode.group(2)));
+	    		  
+	    		  unicode.reset(output);
+	    	  }
+	    	  
+	    	  log.debug3("UNICODE -> "+output);
+	    	  return output;
 	      }
 	    };
 	    
@@ -255,16 +272,20 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
       public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
           throws IOException, PluginException {
         log.debug3("Attempting to extract metadata from cu: "+cu);
-        CachedUrl metadataCu = cu.getArchivalUnit().makeCachedUrl(getMetadataFile(cu));
-          if(metadataCu == null || !metadataCu.hasContent())
-          {
-            log.debug("The metadata file does not exist or is not readable: "+metadataCu.getUrl());
-            return;
-          }
+        CachedUrl metadataCu = new AssociationForComputingMachineryCachedUrl(cu.getArchivalUnit(),getMetadataFile(cu));
+        
+        if(metadataCu.getUrl().contains("TEST00")) //TODO: make this check better
+        	metadataCu = cu;
+        
+        if(metadataCu == null || !metadataCu.hasContent())
+        {
+          log.debug3("The metadata file does not exist in the au: "+metadataCu.getUrl());
+          return;
+        }
+        
+        currCachedUrl = cu;
           
-          currCachedUrl = cu;
-          
-        ArticleMetadata am = do_extract(target, metadataCu, emitter);
+        do_extract(target, metadataCu, emitter);
         // need to release created CU
         AuUtil.safeRelease(metadataCu);
       }
@@ -305,7 +326,8 @@ public class AssociationForComputingMachineryXmlMetadataExtractorFactory
 	    		CachedUrl cu = cachedUrlList.get(i);
 	    			    		
 	    		for(int j = 0; j < journalMetadataFields.length; ++j) {
-	    			am.put(journalMetadataFields[j], journalMetadata.get(journalMetadataFields[j]));
+	    			if(journalMetadata.get(journalMetadataFields[j]) != null)
+	    				am.put(journalMetadataFields[j], journalMetadata.get(journalMetadataFields[j]));
 	    		}
 	    		
 	    		emit.emitMetadata(cu, am);
