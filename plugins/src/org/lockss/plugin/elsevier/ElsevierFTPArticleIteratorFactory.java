@@ -34,7 +34,6 @@ import java.util.regex.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
-import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -94,6 +93,7 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
     
     protected void guessXml(ArticleFiles af, Matcher mat) {
         CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1xml"));
+        
         if (xmlCu != null && xmlCu.hasContent()) {
           af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, xmlCu);
         }

@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.3 2012-03-13 23:28:09 pgust Exp $
+ * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.4 2012-04-06 23:13:57 dylanrhodes Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
 /**
- * Sanitized files from Elsevier archive used to write this class:
+ * Files from Elsevier archive used to write this class:
  * dataset.toc
  *
  */
@@ -71,6 +71,7 @@ public class ElsevierTocMetadataExtractorFactory
 	  private final int DOI_INDEX = 7;
     private final int AUTHOR_INDEX = 10;
 	  private final int PAGE_INDEX = 13;
+	  private final int KEYWORD_INDEX = 12;
 	  
 	  private final int INVALID_TAG = -1;
 	  private final int REPEATED_TAG = -3;
@@ -100,10 +101,10 @@ public class ElsevierTocMetadataExtractorFactory
 	  
 	  private MetadataField[] metadataFields = {
 	    MetadataField.FIELD_ISSN, 
-      MetadataField.FIELD_VOLUME, 
-      MetadataField.FIELD_DATE,
+        MetadataField.FIELD_VOLUME, 
+        MetadataField.FIELD_DATE,
   		MetadataField.FIELD_JOURNAL_TITLE, 
-  		MetadataField.DC_FIELD_RIGHTS, 
+  		MetadataField.DC_FIELD_RIGHTS,
   		MetadataField.FIELD_ISSUE,
   		MetadataField.FIELD_ACCESS_URL, 
   		MetadataField.FIELD_DOI, 
@@ -127,8 +128,11 @@ public class ElsevierTocMetadataExtractorFactory
 		public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
 				throws IOException {
 			CachedUrl metadata = cu.getArchivalUnit().makeCachedUrl(getToc(cu.getUrl()));
-
-			if (metadata == null) {
+			
+			if(metadata.getUrl().equals(cu.getUrl()))
+				metadata = cu;
+			
+			if (metadata == null || !metadata.hasContent()) {
 				log.error("The metadata file does not exist or is not readable.");
 				return;
 			}
@@ -248,14 +252,14 @@ public class ElsevierTocMetadataExtractorFactory
     	if(tag == ARTICLE_COMPLETE)
     		return true;
     	if(tag == REPEATED_TAG)
-    		articleValues[lastTag] += getMetadataFrom(line);
+    		articleValues[lastTag] += " "+line;
     	else 
     	{
-    		if(tag == AUTHOR_INDEX)
+    		if(tag == AUTHOR_INDEX || tag == KEYWORD_INDEX)
     			if(articleValues[tag] == null)
     				articleValues[tag] = getMetadataFrom(line);
     			else
-    				articleValues[tag] += getMetadataFrom(line);
+    				articleValues[tag] += "; "+getMetadataFrom(line);
     		else if(tag == DOI_INDEX)
     			articleValues[tag] = getDoiFrom(line);
         else if(tag == ISSN_INDEX)
@@ -280,8 +284,10 @@ public class ElsevierTocMetadataExtractorFactory
      */
     private void putMetadataIn(ArticleMetadata am)
     {   
-        for(int i = 0; i < articleTags.size(); ++i)
+        for(int i = 0; i < articleTags.size(); ++i) {
         	am.put(metadataFields[i],articleValues[i]);
+        	System.out.println(articleValues[i]);
+        }
     }
     
     /**
@@ -289,14 +295,14 @@ public class ElsevierTocMetadataExtractorFactory
      * @param url - address of an article file
      * @return the metadata file's pathname
      */
-    private String getToc(String url)
+    protected String getToc(String url)
     {
-        Pattern pattern = Pattern.compile("(http://clockss-ingest.lockss.org/sourcefiles/[^/]+/[\\d]+/[^/]+/)(.*)",Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile("(.*/[^/]+/)[\\d]+[^/]+/[\\d]+/[\\d]+/main.pdf$",Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(url);
         return matcher.replaceFirst("$1dataset.toc");
     }
     
-    private String getUrlFrom(String identifier)
+    protected String getUrlFrom(String identifier)
     {
     	Pattern pattern = Pattern.compile("([^/]+)( )([^/]+)( )([^/]+)( )([^/]+)");
         Matcher matcher = pattern.matcher(identifier);

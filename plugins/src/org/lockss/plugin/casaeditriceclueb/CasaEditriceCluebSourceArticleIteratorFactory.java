@@ -83,17 +83,22 @@ public class CasaEditriceCluebSourceArticleIteratorFactory implements ArticleIte
       log.warning("Mismatch between article iterator factory and article iterator: " + url);
       return null;
     }
-    //TODO: log.debug <--so i'll find - clean this up, remove pdfmef, and straighten out the plugin and you're done
+
     protected ArticleFiles processFullText(CachedUrl cu, Matcher mat) {
       ArticleFiles af = new ArticleFiles();
       af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
-      String pdfSequence = getPdfSequenceFrom(new BufferedReader(cu.openForReading()));
       
-      CachedUrl fullTextCu = au.makeCachedUrl(mat.replaceFirst("$1$3"+pdfSequence+".pdf"));
-      if(fullTextCu != null && fullTextCu.hasContent()) {
-    	  af.setFullTextCu(fullTextCu);
-    	  af.setRole(ArticleFiles.ROLE_FULL_TEXT_PDF, fullTextCu);
-    	  metadataMap.put(fullTextCu.getUrl(), cu.getUrl());
+      if(cu.hasContent()) {
+	      String pdfSequence = getPdfSequenceFrom(new BufferedReader(cu.openForReading()));
+	      
+	      CachedUrl fullTextCu = au.makeCachedUrl(mat.replaceFirst("$1$3"+pdfSequence+".pdf"));
+	      if(fullTextCu != null && fullTextCu.hasContent()) {
+	    	  af.setFullTextCu(fullTextCu);
+	    	  af.setRole(ArticleFiles.ROLE_FULL_TEXT_PDF, fullTextCu);
+	    	  metadataMap.put(fullTextCu.getUrl(), cu.getUrl());
+	      }
+      } else {
+    	  af.setFullTextCu(cu);
       }
       
       if(af.getFullTextCu() == null)
@@ -116,13 +121,6 @@ public class CasaEditriceCluebSourceArticleIteratorFactory implements ArticleIte
 		}
     	
     	return null;
-    }
-    
-    protected void guessMetadataFile(ArticleFiles af, Matcher mat)
-    {
-    	CachedUrl metadataCu = au.makeCachedUrl(mat.replaceFirst("$1$2/$2.xml"));
-    	if(metadataCu != null && metadataCu.hasContent())
-    		af.setRoleCu(ArticleFiles.ROLE_ISSUE_METADATA, metadataCu);
     }
   }
   

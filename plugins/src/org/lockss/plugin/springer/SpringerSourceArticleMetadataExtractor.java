@@ -65,7 +65,7 @@ public class SpringerSourceArticleMetadataExtractor implements ArticleMetadataEx
 		if(emit == null)
 			emit = new SpringerEmitter(af,emitter);
 		
-		CachedUrl cu = af.getFullTextCu();
+		CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
 		FileMetadataExtractor me = null;
 	    
 		if(cu != null)

@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerSourceMetadataExtractorFactory.java,v 1.4 2012-03-13 22:26:48 pgust Exp $
+ * $Id: SpringerSourceMetadataExtractorFactory.java,v 1.5 2012-04-06 23:13:57 dylanrhodes Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class SpringerSourceMetadataExtractorFactory
 	        for (int k = 0; k < nameNodes.getLength(); k++) {
 	          Node nameNode = nameNodes.item(k);
 	          if (nameNode.getNodeName().equals("GivenName")) {
-	            givenName += " "+nameNode.getTextContent();
+	            givenName += nameNode.getTextContent();
 	          } else if (nameNode.getNodeName().equals("FamilyName")) {
 	            familyName += nameNode.getTextContent();
 	          }
@@ -139,6 +139,8 @@ public class SpringerSourceMetadataExtractorFactory
 	      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleLastPage", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/AuthorGroup/Author/AuthorName", AUTHOR_VALUE);
 	      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/Abstract/Para", XmlDomMetadataExtractor.TEXT_VALUE);
+	      
+	      nodeMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/KeywordGroup/Keyword", XmlDomMetadataExtractor.TEXT_VALUE);
 	    }
 
 	    /** Map of raw xpath key to cooked MetadataField */
@@ -160,6 +162,8 @@ public class SpringerSourceMetadataExtractorFactory
 	      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleInfo/ArticleLastPage", MetadataField.FIELD_END_PAGE);
 	      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/AuthorGroup/Author/AuthorName", MetadataField.FIELD_AUTHOR);
 	      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/Abstract/Para", MetadataField.DC_FIELD_DESCRIPTION);
+	    
+	      xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/KeywordGroup/Keyword", MetadataField.FIELD_KEYWORDS);
 	    }
 
 	    /**
@@ -202,12 +206,11 @@ public class SpringerSourceMetadataExtractorFactory
 	      public ArticleMetadata do_extract(MetadataTarget target, CachedUrl cu, Emitter emit)
 	          throws IOException, PluginException {
 	        try {
-            CachedUrl metaCu = getMetadataOf(cu);
             ArticleMetadata am; 
             try {
-              am = new XmlDomMetadataExtractor(nodeMap).extract(target, metaCu);
+              am = new XmlDomMetadataExtractor(nodeMap).extract(target, cu);
             } finally {
-              AuUtil.safeRelease(metaCu);
+              AuUtil.safeRelease(cu);
             }
             am.cook(xpathMap);
             return am;

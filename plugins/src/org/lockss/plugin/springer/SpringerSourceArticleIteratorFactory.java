@@ -43,7 +43,7 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
   protected static Logger log = Logger.getLogger("SpringerSourceArticleIteratorFactory");
   
   protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
-  protected static final String PATTERN_TEMPLATE = "\"%s%d/[^/]+\\.zip!/JOU=[\\d]+/VOL=[\\d]+\\.[\\d]+/ISU=[\\d]+/ART=[^/]+/BodyRef/PDF/[^/]+\\.pdf$\",base_url,year";
+  protected static final String PATTERN_TEMPLATE = "\"%s%d/[^/]+\\.zip!/JOU=[\\d]+/VOL=[\\d]+\\.[\\d]+/ISU=[^/]+/ART=[^/]+/BodyRef/PDF/[^/]+\\.pdf$\",base_url,year";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -57,7 +57,7 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
   
   protected static class SpringerArticleIterator extends SubTreeArticleIterator {
 	 
-    protected static Pattern PATTERN = Pattern.compile("(/[^/]+\\.zip!/JOU=[\\d]+/VOL=[\\d]+\\.[\\d]+/ISU=[\\d]+/ART=[^/]+/)(BodyRef/PDF/)([^/]+)(\\.pdf)$", Pattern.CASE_INSENSITIVE);
+    protected static Pattern PATTERN = Pattern.compile("(/[^/]+\\.zip!/JOU=[\\d]+/VOL=[\\d]+\\.[\\d]+/ISU=[^/]+/ART=[^/]+/)(BodyRef/PDF/)([^/]+)(\\.pdf)$", Pattern.CASE_INSENSITIVE);
     
     protected SpringerArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
@@ -91,9 +91,12 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
     protected void guessAdditionalFiles(ArticleFiles af, Matcher mat) {
       CachedUrl metadataCu = au.makeCachedUrl(mat.replaceFirst("$1$3.xml.Meta"));
       CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1$3.xml"));
-      
-      if (metadataCu != null && metadataCu.hasContent()) 
+	  System.out.println(metadataCu.getUrl());
+
+      if (metadataCu != null && metadataCu.hasContent()) {
     	  af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, metadataCu);
+    	  System.out.println(metadataCu.getUrl());
+      }
       if (xmlCu != null && xmlCu.hasContent())
     	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, xmlCu);
     }
