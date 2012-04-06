@@ -15020,6 +15020,8 @@
         au < manifest ; 2008 ; International Journal of Engine Research Volume 9 ; 9 >
         au < manifest ; 2009 ; International Journal of Engine Research Volume 10 ; 10 >
         au < manifest ; 2010 ; International Journal of Engine Research Volume 11 ; 11 >
+        au < manifest ; 2011 ; International Journal of Engine Research Volume 12 ; 12 >
+        au < manifest ; 2012 ; International Journal of Engine Research Volume 13 ; 13 >
 
       }
 
@@ -16004,23 +16006,24 @@
         param[base_url] = http://irv.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < manifest ; 1990 ; International Review of Victimology Volume 1 ; 1 >
-        au < manifest ; 1991 ; International Review of Victimology Volume 2 ; 2 >
-        au < manifest ; 1992 ; International Review of Victimology Volume 3 ; 3 >
-        au < manifest ; 1993 ; International Review of Victimology Volume 4 ; 4 >
-        au < manifest ; 1994 ; International Review of Victimology Volume 5 ; 5 >
-        au < manifest ; 1995 ; International Review of Victimology Volume 6 ; 6 >
-        au < manifest ; 1996 ; International Review of Victimology Volume 7 ; 7 >
-        au < manifest ; 1997 ; International Review of Victimology Volume 8 ; 8 >
-        au < manifest ; 1998 ; International Review of Victimology Volume 9 ; 9 >
-        au < manifest ; 1999 ; International Review of Victimology Volume 10 ; 10 >
-        au < manifest ; 2000 ; International Review of Victimology Volume 11 ; 11 >
-        au < manifest ; 2001 ; International Review of Victimology Volume 12 ; 12 >
-        au < manifest ; 2002 ; International Review of Victimology Volume 13 ; 13 >
-        au < manifest ; 2003 ; International Review of Victimology Volume 14 ; 14 >
-        au < manifest ; 2004 ; International Review of Victimology Volume 15 ; 15 >
-        au < manifest ; 2005 ; International Review of Victimology Volume 16 ; 16 >
-        au < manifest ; 2006 ; International Review of Victimology Volume 17 ; 17 >
+        au < manifest ; 1990-1991 ; International Review of Victimology Volume 1 ; 1 >
+        au < manifest ; 1991-1993 ; International Review of Victimology Volume 2 ; 2 >
+        au < manifest ; 1994-1995 ; International Review of Victimology Volume 3 ; 3 >
+        au < manifest ; 1995-1997 ; International Review of Victimology Volume 4 ; 4 >
+        au < manifest ; 1997-1998 ; International Review of Victimology Volume 5 ; 5 >
+        au < manifest ; 1998-1999 ; International Review of Victimology Volume 6 ; 6 >
+        au < manifest ; 2000 ; International Review of Victimology Volume 7 ; 7 >
+        au < manifest ; 2001 ; International Review of Victimology Volume 8 ; 8 >
+        au < manifest ; 2002 ; International Review of Victimology Volume 9 ; 9 >
+        au < manifest ; 2003-2004 ; International Review of Victimology Volume 10 ; 10 >
+        au < manifest ; 2004 ; International Review of Victimology Volume 11 ; 11 >
+        au < manifest ; 2005 ; International Review of Victimology Volume 12 ; 12 >
+        au < manifest ; 2006 ; International Review of Victimology Volume 13 ; 13 >
+        au < manifest ; 2007 ; International Review of Victimology Volume 14 ; 14 >
+        au < manifest ; 2008-2009 ; International Review of Victimology Volume 15 ; 15 >
+        au < manifest ; 2009 ; International Review of Victimology Volume 16 ; 16 >
+        au < manifest ; 2010 ; International Review of Victimology Volume 17 ; 17 >
+        au < manifest ; 2012 ; International Review of Victimology Volume 18 ; 18 >
   
       }
   
@@ -28507,8 +28510,12 @@ comment[mpj] = now published by Brill
         au < manifest ; 2010 ; National Institute Economic Review Volume 214 ; 214 >
         au < manifest ; 2011 ; National Institute Economic Review Volume 215 ; 215 >
         au < manifest ; 2011 ; National Institute Economic Review Volume 216 ; 216 >
-        au < manifest ; 2012 ; National Institute Economic Review Volume 217 ; 217 >
-        au < manifest ; 2012 ; National Institute Economic Review Volume 218 ; 218 >
+        au < manifest ; 2011 ; National Institute Economic Review Volume 217 ; 217 >
+        au < manifest ; 2011 ; National Institute Economic Review Volume 218 ; 218 >
+        au < manifest ; 2012 ; National Institute Economic Review Volume 219 ; 219 >
+        au < expected ; 2012 ; National Institute Economic Review Volume 220 ; 220 >
+        au < expected ; 2012 ; National Institute Economic Review Volume 221 ; 221 >
+        au < expected ; 2012 ; National Institute Economic Review Volume 222 ; 222 >
 
       }
 
@@ -32242,6 +32249,8 @@ comment[mpj] = now published by Brill
         au < manifest ; 2008 ; Rehabilitation Counseling Bulletin Volume 52 ; 52 >
         au < manifest ; 2009 ; Rehabilitation Counseling Bulletin Volume 53 ; 53 >
         au < manifest ; 2010 ; Rehabilitation Counseling Bulletin Volume 54 ; 54 >
+        au < manifest ; 2011 ; Rehabilitation Counseling Bulletin Volume 55 ; 55 >
+        au < expected ; 2012 ; Rehabilitation Counseling Bulletin Volume 56 ; 56 >
 
       }
 
@@ -33611,37 +33620,52 @@ comment[mpj] = now published by Brill
 
       {
 
-        param[base_url] = http://sexualities.sagepub.com/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sex.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[base_url] = Use sexualities.sagepub.com.  Both sex.sagepub.com and sexualities.sagepub.com will work.
 
-
-        au < HighWireStrVolPlugin ; down ; 2006 ; Sexualities Volume 9 ; 9 >
-        au < HighWireStrVolPlugin ; down ; 2007 ; Sexualities Volume 10 ; 10 >
-        au < HighWirePressPlugin ; down ; 2008 ; Sexualities Volume 11 ; 11 >
+        au < doNotProcess ; 1998 ; Sexualities Volume 1 ; 1 >
+        au < doNotProcess ; 1999 ; Sexualities Volume 2 ; 2 >
+        au < doNotProcess ; 2000 ; Sexualities Volume 3 ; 3 >
+        au < doNotProcess ; 2001 ; Sexualities Volume 4 ; 4 >
+        au < doNotProcess ; 2002 ; Sexualities Volume 5 ; 5 >
+        au < doNotProcess ; 2003 ; Sexualities Volume 6 ; 6 >
+        au < doNotProcess ; 2004 ; Sexualities Volume 7 ; 7 >
+        au < doNotProcess ; 2005 ; Sexualities Volume 8 ; 8 >
+        au < doNotProcess ; 2006 ; Sexualities Volume 9 ; 9 >
+        au < doNotProcess ; 2007 ; Sexualities Volume 10 ; 10 >
+        au < doNotProcess ; 2008 ; Sexualities Volume 11 ; 11 >
+        au < doNotProcess ; 2009 ; Sexualities Volume 12 ; 12 >
+        au < doNotProcess ; 2010 ; Sexualities Volume 13 ; 13 >
+        au < released ; 2011 ; Sexualities Volume 14 ; 14 >
+        au < doNotProcess ; 2012 ; Sexualities Volume 15 ; 15 >
 
       }
 
       {
 
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://sex.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
+        param[base_url] = http://sexualities.sagepub.com/
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1998 ; Sexualities Volume 1 ; 1 >
-        au < manifest ; 1999 ; Sexualities Volume 2 ; 2 >
-        au < manifest ; 2000 ; Sexualities Volume 3 ; 3 >
-        au < manifest ; 2001 ; Sexualities Volume 4 ; 4 >
-        au < manifest ; 2002 ; Sexualities Volume 5 ; 5 >
-        au < manifest ; 2003 ; Sexualities Volume 6 ; 6 >
-        au < manifest ; 2004 ; Sexualities Volume 7 ; 7 >
-        au < manifest ; 2005 ; Sexualities Volume 8 ; 8 >
-        au < doNotProcess ; 2006 ; Sexualities Volume 9 ; 9 >
-        au < doNotProcess ; 2007 ; Sexualities Volume 10 ; 10 >
-        au < doNotProcess ; 2008 ; Sexualities Volume 11 ; 11 >
-        au < manifest ; 2009 ; Sexualities Volume 12 ; 12 >
-        au < manifest ; 2010 ; Sexualities Volume 13 ; 13 >
-        au < released ; 2011 ; Sexualities Volume 14 ; 14 >
-        au < manifest ; 2012 ; Sexualities Volume 15 ; 15 >
+        comment[base_url] = Use sexualities.sagepub.com.  Both sex.sagepub.com and sexualities.sagepub.com will work.
+
+        au < HighWirePressH20Plugin ; manifest ; 1998 ; Sexualities Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; manifest ; 1999 ; Sexualities Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; manifest ; 2000 ; Sexualities Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; manifest ; 2001 ; Sexualities Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; manifest ; 2002 ; Sexualities Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; manifest ; 2003 ; Sexualities Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; manifest ; 2004 ; Sexualities Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; manifest ; 2005 ; Sexualities Volume 8 ; 8 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Sexualities Volume 9 ; 9 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Sexualities Volume 10 ; 10 >
+        au < HighWirePressPlugin ; down ; 2008 ; Sexualities Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; manifest ; 2009 ; Sexualities Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; 2010 ; Sexualities Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; Sexualities Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; 2012 ; Sexualities Volume 15 ; 15 >
 
       }
 
@@ -35109,6 +35133,8 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Studies in History Volume 24 ; 24 >
         au < manifest ; 2009 ; Studies in History Volume 25 ; 25 >
         au < manifest ; 2010 ; Studies in History Volume 26 ; 26 >
+        au < manifest ; 2011 ; Studies in History Volume 27 ; 27 >
+        au < expected ; 2012 ; Studies in History Volume 28 ; 28 >
 
       }
 
@@ -36407,6 +36433,9 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Thesis Eleven Volume 105 ; 105 >
         au < released ; 2011 ; Thesis Eleven Volume 106 ; 106 >
         au < manifest ; 2012 ; Thesis Eleven Volume 107 ; 107 >
+        au < manifest ; 2012 ; Thesis Eleven Volume 108 ; 108 >
+        au < expected ; 2012 ; Thesis Eleven Volume 109 ; 109 >
+        au < expected ; 2012 ; Thesis Eleven Volume 110 ; 110 >
 
       }
 
@@ -37122,6 +37151,8 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Trends in Amplification Volume 12 ; 12 >
         au < manifest ; 2009 ; Trends in Amplification Volume 13 ; 13 >
         au < manifest ; 2010 ; Trends in Amplification Volume 14 ; 14 >
+        au < manifest ; 2011 ; Trends in Amplification Volume 15 ; 15 >
+        au < expected ; 2012 ; Trends in Amplification Volume 16 ; 16 >
 
       }
 
