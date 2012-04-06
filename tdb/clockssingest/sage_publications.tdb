@@ -12125,7 +12125,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 1964 ; Indian Economic & Social History Review Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1965 ; Indian Economic & Social History Review Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1964 ; Indian Economic & Social History Review Volume 2 ; 2 ; >
       au < manifest ; exists ; 1966 ; Indian Economic & Social History Review Volume 3 ; 3 ; >
       au < manifest ; exists ; 1967 ; Indian Economic & Social History Review Volume 4 ; 4 ; >
       au < manifest ; exists ; 1968 ; Indian Economic & Social History Review Volume 5 ; 5 ; >
@@ -12646,7 +12646,7 @@
       au < manifest ; exists ; 2001 ; International Criminal Justice Review Volume 11 ; 11 ; >
       au < manifest ; exists ; 2002 ; International Criminal Justice Review Volume 12 ; 12 ; >
       au < manifest ; exists ; 2003 ; International Criminal Justice Review Volume 13 ; 13 ; >
-      au < exists ; exists ; 2004 ; International Criminal Justice Review Volume 14 ; 14 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; International Criminal Justice Review Volume 14 ; 14 ; >
       au < manifest ; exists ; 2005 ; International Criminal Justice Review Volume 15 ; 15 ; >
       au < manifest ; exists ; 2006 ; International Criminal Justice Review Volume 16 ; 16 ; >
       au < manifest ; exists ; 2007 ; International Criminal Justice Review Volume 17 ; 17 ; >
@@ -13247,7 +13247,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < doesNotExist ; doesNotExist ; 1965 ; International Journal of Offender Therapy and Comparative Criminology Volume 9 ; 9 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; International Journal of Offender Therapy and Comparative Criminology Volume 9 ; 9 ; >
       au < manifest ; exists ; 1966 ; International Journal of Offender Therapy and Comparative Criminology Volume 10 ; 10 ; >
       au < manifest ; exists ; 1967 ; International Journal of Offender Therapy and Comparative Criminology Volume 11 ; 11 ; >
       au < manifest ; exists ; 1968 ; International Journal of Offender Therapy and Comparative Criminology Volume 12 ; 12 ; >
@@ -13542,10 +13542,10 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1993 ; International Journal of Surgical Pathology Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1994 ; International Journal of Surgical Pathology Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1995 ; International Journal of Surgical Pathology Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1996 ; International Journal of Surgical Pathology Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1993-1994 ; International Journal of Surgical Pathology Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1994-1995 ; International Journal of Surgical Pathology Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1995-1996 ; International Journal of Surgical Pathology Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1996-1997 ; International Journal of Surgical Pathology Volume 4 ; 4 ; >
       au < manifest ; exists ; 1997 ; International Journal of Surgical Pathology Volume 5 ; 5 ; >
       au < manifest ; exists ; 1998 ; International Journal of Surgical Pathology Volume 6 ; 6 ; >
       au < manifest ; exists ; 1999 ; International Journal of Surgical Pathology Volume 7 ; 7 ; >
@@ -14426,9 +14426,9 @@
       au < manifest ; exists ; 1966 ; Irish Theological Quarterly Volume 33 ; 33 ; >
       au < manifest ; exists ; 1967 ; Irish Theological Quarterly Volume 34 ; 34 ; >
       au < manifest ; exists ; 1968 ; Irish Theological Quarterly Volume 35 ; 35 ; >
-      au < doesNotExist ; doesNotExist ; 1969 ; Irish Theological Quarterly Volume 36 ; 36 ; >
-      au < doesNotExist ; doesNotExist ; 1970 ; Irish Theological Quarterly Volume 37 ; 37 ; >
-      au < doesNotExist ; doesNotExist ; 1971 ; Irish Theological Quarterly Volume 38 ; 38 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Irish Theological Quarterly Volume 36 ; 36 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Irish Theological Quarterly Volume 37 ; 37 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Irish Theological Quarterly Volume 38 ; 38 ; >
       au < manifest ; exists ; 1972 ; Irish Theological Quarterly Volume 39 ; 39 ; >
       au < manifest ; exists ; 1973 ; Irish Theological Quarterly Volume 40 ; 40 ; >
       au < manifest ; exists ; 1974 ; Irish Theological Quarterly Volume 41 ; 41 ; >
@@ -16811,8 +16811,8 @@
       au < manifest ; exists ; 2007 ; Journal of Creative Communications Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Creative Communications Volume 3 ; 3 ; >
       au < manifest ; exists ; 2009 ; Journal of Creative Communications Volume 4 ; 4 ; >
-      au < doesNotExist ; doesNotExist ; 2010 ; Journal of Creative Communications Volume 5 ; 5 ; >
-      au < doesNotExist ; doesNotExist ; 2011 ; Journal of Creative Communications Volume 6 ; 6 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Creative Communications Volume 5 ; 5 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Creative Communications Volume 6 ; 6 ; >
       au < expected ; exists ; 2012 ; Journal of Creative Communications Volume 7 ; 7 ; >
 
     }
@@ -17091,7 +17091,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < doesNotExist ; doesNotExist ; 2001 ; Journal of Developing Societies Volume 17 ; 17 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Developing Societies Volume 17 ; 17 ; >
       au < manifest ; exists ; 2002 ; Journal of Developing Societies Volume 18 ; 18 ; >
       au < manifest ; exists ; 2003 ; Journal of Developing Societies Volume 19 ; 19 ; >
       au < manifest ; exists ; 2004 ; Journal of Developing Societies Volume 20 ; 20 ; >
@@ -19122,7 +19122,7 @@
       au < manifest ; exists ; 1996 ; Journal of Industrial Textiles Volume 26 ; 26 ; >
       au < manifest ; exists ; 1997 ; Journal of Industrial Textiles Volume 27 ; 27 ; >
       au < manifest ; exists ; 1998 ; Journal of Industrial Textiles Volume 28 ; 28 ; >
-      au < doesNotExist ; doesNotExist ; 1999 ; Journal of Industrial Textiles Volume 29 ; 29 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Industrial Textiles Volume 29 ; 29 ; >
       au < manifest ; exists ; 2000-2001 ; Journal of Industrial Textiles Volume 30 ; 30 ; >
       au < manifest ; exists ; 2001-2002 ; Journal of Industrial Textiles Volume 31 ; 31 ; >
       au < manifest ; exists ; 2002-2003 ; Journal of Industrial Textiles Volume 32 ; 32 ; >
@@ -19408,17 +19408,17 @@
       au < manifest ; exists ; 1988 ; Journal of Intensive Care Medicine Volume 3 ; 3 ; >
       au < manifest ; exists ; 1989 ; Journal of Intensive Care Medicine Volume 4 ; 4 ; >
       au < manifest ; exists ; 1990 ; Journal of Intensive Care Medicine Volume 5 ; 5 ; >
-      au < doesNotExist ; doesNotExist ; 1991 ; Journal of Intensive Care Medicine Volume 6 ; 6 ; >
-      au < doesNotExist ; doesNotExist ; 1992 ; Journal of Intensive Care Medicine Volume 7 ; 7 ; >
-      au < doesNotExist ; doesNotExist ; 1993 ; Journal of Intensive Care Medicine Volume 8 ; 8 ; >
-      au < doesNotExist ; doesNotExist ; 1994 ; Journal of Intensive Care Medicine Volume 9 ; 9 ; >
-      au < doesNotExist ; doesNotExist ; 1995 ; Journal of Intensive Care Medicine Volume 10 ; 10 ; >
-      au < doesNotExist ; doesNotExist ; 1996 ; Journal of Intensive Care Medicine Volume 11 ; 11 ; >
-      au < doesNotExist ; doesNotExist ; 1997 ; Journal of Intensive Care Medicine Volume 12 ; 12 ; >
-      au < doesNotExist ; doesNotExist ; 1998 ; Journal of Intensive Care Medicine Volume 13 ; 13 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 6 ; 6 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 7 ; 7 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 8 ; 8 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 9 ; 9 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 10 ; 10 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 11 ; 11 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 12 ; 12 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 13 ; 13 ; >
       au < manifest ; exists ; 1999 ; Journal of Intensive Care Medicine Volume 14 ; 14 ; >
-      au < doesNotExist ; doesNotExist ; 2000 ; Journal of Intensive Care Medicine Volume 15 ; 15 ; >
-      au < doesNotExist ; doesNotExist ; 2001 ; Journal of Intensive Care Medicine Volume 16 ; 16 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 15 ; 15 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Intensive Care Medicine Volume 16 ; 16 ; >
       au < manifest ; exists ; 2002 ; Journal of Intensive Care Medicine Volume 17 ; 17 ; >
       au < manifest ; exists ; 2003 ; Journal of Intensive Care Medicine Volume 18 ; 18 ; >
       au < manifest ; exists ; 2004 ; Journal of Intensive Care Medicine Volume 19 ; 19 ; >
@@ -22616,7 +22616,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Transformative Education Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Transformative Education Volume 7 ; 7 ; >
       au < released ; manifest ; 2010 ; Journal of Transformative Education Volume 8 ; 8 ; >
-      au < doesNotExist ; doesNotExist ; 2011 ; Journal of Transformative Education Volume 9 ; 9 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Transformative Education Volume 9 ; 9 ; >
       au < expected ; exists ; 2012 ; Journal of Transformative Education Volume 10 ; 10 ; >
 
     }
@@ -22721,7 +22721,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 1974-1975 ; Journal of Urban History Volume 1 ; 1 ; >
-      au < doesNotExist ; doesNotExist ; 1975-1976 ; Journal of Urban History Volume 2 ; 2 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Urban History Volume 2 ; 2 ; >
       au < manifest ; exists ; 1976-1977 ; Journal of Urban History Volume 3 ; 3 ; >
       au < manifest ; exists ; 1977-1978 ; Journal of Urban History Volume 4 ; 4 ; >
       au < manifest ; exists ; 1978-1979 ; Journal of Urban History Volume 5 ; 5 ; >
@@ -27936,7 +27936,7 @@
       au < manifest ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 222 ; 222 ; >
       au < manifest ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 223 ; 223 ; >
       au < crawling ; exists ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 224 ; 224 ; >
-      au < doesNotExist ; doesNotExist ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 225 ; 225 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 225 ; 225 ; >
       au < expected ; exists ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 226 ; 226 ; >
 
     }
