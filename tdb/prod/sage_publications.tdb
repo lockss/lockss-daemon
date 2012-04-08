@@ -13831,7 +13831,7 @@
         au < manifest ; 2000 ; Improving Schools Volume 3 ; 3 >
         au < manifest ; 2001 ; Improving Schools Volume 4 ; 4 >
         au < manifest ; 2002 ; Improving Schools Volume 5 ; 5 >
-        au < doesNotExist ; 0 ; Improving Schools Volume 6 ; 6 >
+        au < manifest ; 2003 ; Improving Schools Volume 6 ; 6 >
         au < manifest ; 2004 ; Improving Schools Volume 7 ; 7 >
         au < doNotProcess ; 2005 ; Improving Schools Volume 8 ; 8 >
         au < doNotProcess ; 2006 ; Improving Schools Volume 9 ; 9 >
@@ -15779,21 +15779,21 @@
         param[base_url] = http://ire.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doesNotExist ; 0 ; International Relations Volume 1 ; 1 >
-        au < manifest ; 1960 ; International Relations Volume 2 ; 2 >
-        au < manifest ; 1967 ; International Relations Volume 3 ; 3 >
+        au < exists ; 1954-1956 ; International Relations Volume 1 ; 1 >
+        au < manifest ; 1960-1965 ; International Relations Volume 2 ; 2 >
+        au < manifest ; 1967-1971 ; International Relations Volume 3 ; 3 >
         au < manifest ; 1972 ; International Relations Volume 4 ; 4 >
-        au < manifest ; 1975 ; International Relations Volume 5 ; 5 >
-        au < manifest ; 1978 ; International Relations Volume 6 ; 6 >
-        au < manifest ; 1981 ; International Relations Volume 7 ; 7 >
-        au < manifest ; 1984 ; International Relations Volume 8 ; 8 >
-        au < manifest ; 1987 ; International Relations Volume 9 ; 9 >
-        au < manifest ; 1990 ; International Relations Volume 10 ; 10 >
-        au < manifest ; 1992 ; International Relations Volume 11 ; 11 >
-        au < manifest ; 1994 ; International Relations Volume 12 ; 12 >
-        au < manifest ; 1996 ; International Relations Volume 13 ; 13 >
-        au < manifest ; 1998 ; International Relations Volume 14 ; 14 >
-        au < manifest ; 2000 ; International Relations Volume 15 ; 15 >
+        au < manifest ; 1975-1977 ; International Relations Volume 5 ; 5 >
+        au < manifest ; 1978-1980 ; International Relations Volume 6 ; 6 >
+        au < manifest ; 1981-1983 ; International Relations Volume 7 ; 7 >
+        au < manifest ; 1984-1986 ; International Relations Volume 8 ; 8 >
+        au < manifest ; 1987-1989 ; International Relations Volume 9 ; 9 >
+        au < manifest ; 1990-1991 ; International Relations Volume 10 ; 10 >
+        au < manifest ; 1992-1993 ; International Relations Volume 11 ; 11 >
+        au < manifest ; 1994-1995 ; International Relations Volume 12 ; 12 >
+        au < manifest ; 1996-1997 ; International Relations Volume 13 ; 13 >
+        au < manifest ; 1998-1999 ; International Relations Volume 14 ; 14 >
+        au < manifest ; 2000-2001 ; International Relations Volume 15 ; 15 >
         au < manifest ; 2002 ; International Relations Volume 16 ; 16 >
         au < manifest ; 2003 ; International Relations Volume 17 ; 17 >
         au < manifest ; 2004 ; International Relations Volume 18 ; 18 >
@@ -19332,8 +19332,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2008 ; Journal of Creative Communications Volume 3 ; 3 >
         au < manifest ; 2009 ; Journal of Creative Communications Volume 4 ; 4 >
         au < manifest ; 2010 ; Journal of Creative Communications Volume 5 ; 5 >
-        au < exists ; 2011 ; Journal of Creative Communications Volume 6 ; 6 >
-        au < expected ; 2012 ; Journal of Creative Communications Volume 7 ; 7 >
 
       }
 
