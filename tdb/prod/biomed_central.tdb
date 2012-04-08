@@ -19,6 +19,7 @@
       >
 
       param[journal_issn] = 1471-2253
+      nondefparam[journal_code] = bmcanesthesiol
 
       au < released ; 2001 ; BMC Anesthesiology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Anesthesiology Volume 2 ; 2 >
@@ -43,6 +44,7 @@
       >
 
       param[journal_issn] = 1471-2091
+      nondefparam[journal_code] = bmcbiochem
 
       au < released ; 2000 ; BMC Biochemistry Volume 1 ; 1 >
       au < released ; 2001 ; BMC Biochemistry Volume 2 ; 2 >
@@ -68,6 +70,7 @@
       >
 
       param[journal_issn] = 1471-2105
+      nondefparam[journal_code] = bmcbioinformatics
 
       au < released ; 2000 ; BMC Bioinformatics Volume 1 ; 1 >
       au < released ; 2001 ; BMC Bioinformatics Volume 2 ; 2 >
@@ -93,6 +96,7 @@
       >
 
       param[journal_issn] = 1741-7007
+      nondefparam[journal_code] = bmcbiol
 
       au < released ; 2003 ; BMC Biology Volume 1 ; 1 >
       au < released ; 2004 ; BMC Biology Volume 2 ; 2 >
@@ -115,6 +119,7 @@
       >
 
       param[journal_issn] = 1472-6750
+      nondefparam[journal_code] = bmcbiotechnol
 
       au < released ; 2001 ; BMC Biotechnology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Biotechnology Volume 2 ; 2 >
@@ -139,7 +144,7 @@
       >
 
       param[journal_issn] = 1471-2326
-
+      nondefparam[journal_code] = bmcblooddisord
 
       au < released ; 2001 ; BMC Blood Disorders Volume 1 ; 1 >
       au < released ; 2002 ; BMC Blood Disorders Volume 2 ; 2 >
@@ -164,7 +169,7 @@
       >
 
       param[journal_issn] = 1471-2407
-
+      nondefparam[journal_code] = bmccancer
 
       au < released ; 2001 ; BMC Cancer Volume 1 ; 1 >
       au < released ; 2002 ; BMC Cancer Volume 2 ; 2 >
@@ -189,6 +194,8 @@
       >
 
       param[journal_issn] = 1471-2261
+      nondefparam[journal_code] = bmccardiovascdisord
+      
 
       au < released ; 2001 ; BMC Cardiovascular Disorders Volume 1 ; 1 >
       au < released ; 2002 ; BMC Cardiovascular Disorders Volume 2 ; 2 >
@@ -213,6 +220,7 @@
       >
 
       param[journal_issn] = 1471-2121
+      nondefparam[journal_code] = bmccellbiol
 
       au < released ; 2000 ; BMC Cell Biology Volume 1 ; 1 >
       au < released ; 2001 ; BMC Cell Biology Volume 2 ; 2 >
@@ -238,7 +246,8 @@
       >
 
       param[journal_issn] = 1472-6769
-
+      nondefparam[journal_code] = bmcchembiol
+      
       au < released ; 2001 ; BMC Chemical Biology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Chemical Biology Volume 2 ; 2 >
       au < released ; 2003 ; BMC Chemical Biology Volume 3 ; 3 >
@@ -261,7 +270,8 @@
         issnl = 1472-6890
       >
 
-      param[journal_issn] = 1472-6890
+      param[journal_issn] = 1472-6890 
+      nondefparam[journal_code] = bmcclinpathol
 
       au < released ; 2001 ; BMC Clinical Pathology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Clinical Pathology Volume 2 ; 2 >
@@ -286,6 +296,7 @@
       >
 
       param[journal_issn] = 1472-6904
+      nondefparam[journal_code] = bmcclinpharmacol
 
       au < released ; 2001 ; BMC Clinical Pharmacology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Clinical Pharmacology Volume 2 ; 2 >
@@ -310,6 +321,7 @@
       >
 
       param[journal_issn] = 1472-6882
+      nondefparam[journal_code] = bmccomplementalternmed
 
       au < released ; 2001 ; BMC Complementary and Alternative Medicine Volume 1 ; 1 >
       au < released ; 2002 ; BMC Complementary and Alternative Medicine Volume 2 ; 2 >
@@ -334,6 +346,7 @@
       >
 
       param[journal_issn] = 1471-5945
+      nondefparam[journal_code] = bmcdermatol
 
       au < released ; 2001 ; BMC Dermatology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Dermatology Volume 2 ; 2 >
@@ -358,7 +371,7 @@
       >
 
       param[journal_issn] = 1471-213X
-
+      nondefparam[journal_code] = bmcdevbiol
 
       au < released ; 2001 ; BMC Developmental Biology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Developmental Biology Volume 2 ; 2 >
@@ -383,6 +396,7 @@
       >
 
       param[journal_issn] = 1472-6815
+      nondefparam[journal_code] = bmcearnosethroatdisord
 
       au < released ; 2001 ; BMC Ear, Nose and Throat Disorders Volume 1 ; 1 >
       au < released ; 2002 ; BMC Ear, Nose and Throat Disorders Volume 2 ; 2 >
@@ -407,6 +421,7 @@
       >
 
       param[journal_issn] = 1472-6785
+      nondefparam[journal_code] = bmcecol
 
       au < released ; 2001 ; BMC Ecology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Ecology Volume 2 ; 2 >
@@ -431,6 +446,7 @@
       >
 
       param[journal_issn] = 1471-227X
+      nondefparam[journal_code] = bmcemergmed
 
       au < released ; 2001 ; BMC Emergency Medicine Volume 1 ; 1 >
       au < released ; 2002 ; BMC Emergency Medicine Volume 2 ; 2 >
@@ -455,6 +471,7 @@
       >
 
       param[journal_issn] = 1472-6823
+      nondefparam[journal_code] = bmcendocrdisord
 
       au < released ; 2001 ; BMC Endocrine Disorders Volume 1 ; 1 >
       au < released ; 2002 ; BMC Endocrine Disorders Volume 2 ; 2 >
@@ -479,6 +496,7 @@
       >
 
       param[journal_issn] = 1471-2148
+      nondefparam[journal_code] = bmcevolbiol
 
       au < released ; 2001 ; BMC Evolutionary Biology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Evolutionary Biology Volume 2 ; 2 >
@@ -503,6 +521,7 @@
       >
 
       param[journal_issn] = 1471-2296
+      nondefparam[journal_code] = bmcfampract
 
       au < released ; 2000 ; BMC Family Practice Volume 1 ; 1 >
       au < released ; 2001 ; BMC Family Practice Volume 2 ; 2 >
@@ -528,6 +547,7 @@
       >
 
       param[journal_issn] = 1471-230X
+      nondefparam[journal_code] = bmcgastroenterol
 
       au < released ; 2001 ; BMC Gastroenterology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Gastroenterology Volume 2 ; 2 >
@@ -552,6 +572,7 @@
       >
 
       param[journal_issn] = 1471-2156
+      nondefparam[journal_code] = bmcgenet
 
       au < released ; 2000 ; BMC Genetics Volume 1 ; 1 >
       au < released ; 2001 ; BMC Genetics Volume 2 ; 2 >
@@ -577,6 +598,7 @@
       >
 
       param[journal_issn] = 1471-2164
+      nondefparam[journal_code] = bmcgenomics
 
       au < released ; 2000 ; BMC Genomics Volume 1 ; 1 >
       au < released ; 2001 ; BMC Genomics Volume 2 ; 2 >
@@ -602,6 +624,7 @@
       >
 
       param[journal_issn] = 1471-2318
+      nondefparam[journal_code] = bmcgeriatr
 
       au < released ; 2001 ; BMC Geriatrics Volume 1 ; 1 >
       au < released ; 2002 ; BMC Geriatrics Volume 2 ; 2 >
@@ -626,6 +649,7 @@
       >
 
       param[journal_issn] = 1472-6963
+      nondefparam[journal_code] = bmchealthservres
 
       au < released ; 2001 ; BMC Health Services Research Volume 1 ; 1 >
       au < released ; 2002 ; BMC Health Services Research Volume 2 ; 2 >
@@ -650,6 +674,7 @@
       >
 
       param[journal_issn] = 1471-2172
+      nondefparam[journal_code] = bmcimmunol
 
       au < released ; 2000 ; BMC Immunology Volume 1 ; 1 >
       au < released ; 2001 ; BMC Immunology Volume 2 ; 2 >
@@ -675,6 +700,7 @@
       >
 
       param[journal_issn] = 1471-2334
+      nondefparam[journal_code] = bmcinfectdis
 
       au < released ; 2001 ; BMC Infectious Diseases Volume 1 ; 1 >
       au < released ; 2002 ; BMC Infectious Diseases Volume 2 ; 2 >
@@ -699,6 +725,7 @@
       >
 
       param[journal_issn] = 1472-698X
+      nondefparam[journal_code] = bmcinthealthhumrights
       comment[ihhr4] = was in props marked down, probably never released
       comment[ihhr4_2] = manifest exists as of 3/2012
 
@@ -725,6 +752,7 @@
       >
 
       param[journal_issn] = 1472-6920
+      nondefparam[journal_code] = bmcmededuc
 
       au < released ; 2001 ; BMC Medical Education Volume 1 ; 1 >
       au < released ; 2002 ; BMC Medical Education Volume 2 ; 2 >
@@ -749,6 +777,7 @@
       >
 
       param[journal_issn] = 1472-6939
+      nondefparam[journal_code] = bmcmedethics
 
       au < released ; 2000 ; BMC Medical Ethics Volume 1 ; 1 >
       au < released ; 2001 ; BMC Medical Ethics Volume 2 ; 2 >
@@ -774,6 +803,7 @@
       >
 
       param[journal_issn] = 1471-2350
+      nondefparam[journal_code] = bmcmedgenet
 
       au < released ; 2000 ; BMC Medical Genetics Volume 1 ; 1 >
       au < released ; 2001 ; BMC Medical Genetics Volume 2 ; 2 >
@@ -799,6 +829,7 @@
       >
 
       param[journal_issn] = 1471-2342
+      nondefparam[journal_code] = bmcmedimaging
 
       au < released ; 2001 ; BMC Medical Imaging Volume 1 ; 1 >
       au < released ; 2002 ; BMC Medical Imaging Volume 2 ; 2 >
@@ -823,6 +854,7 @@
       >
 
       param[journal_issn] = 1472-6947
+      nondefparam[journal_code] = bmcmedinformdecismak
 
       au < released ; 2001 ; BMC Medical Informatics and Decision Making Volume 1 ; 1 >
       au < released ; 2002 ; BMC Medical Informatics and Decision Making Volume 2 ; 2 >
@@ -847,6 +879,7 @@
       >
 
       param[journal_issn] = 1471-2288
+      nondefparam[journal_code] = bmcmedresmethodol
 
       au < released ; 2001 ; BMC Medical Research Methodology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Medical Research Methodology Volume 2 ; 2 >
@@ -871,6 +904,7 @@
       >
 
       param[journal_issn] = 1741-7015
+      nondefparam[journal_code] = bmcmed
 
       au < released ; 2003 ; BMC Medicine Volume 1 ; 1 >
       au < released ; 2004 ; BMC Medicine Volume 2 ; 2 >
@@ -893,6 +927,7 @@
       >
 
       param[journal_issn] = 1471-2180
+      nondefparam[journal_code] = bmcmicrobiol
 
       au < released ; 2001 ; BMC Microbiology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Microbiology Volume 2 ; 2 >
@@ -917,6 +952,7 @@
       >
 
       param[journal_issn] = 1471-2199
+      nondefparam[journal_code] = bmcmolbiol
 
       au < released ; 2000 ; BMC Molecular Biology Volume 1 ; 1 >
       au < released ; 2001 ; BMC Molecular Biology Volume 2 ; 2 >
@@ -942,6 +978,7 @@
       >
 
       param[journal_issn] = 1471-2474
+      nondefparam[journal_code] = bmcmusculoskeletdisord
 
       au < released ; 2000 ; BMC Musculoskeletal Disorders Volume 1 ; 1 >
       au < released ; 2001 ; BMC Musculoskeletal Disorders Volume 2 ; 2 >
@@ -967,6 +1004,7 @@
       >
 
       param[journal_issn] = 1471-2369
+      nondefparam[journal_code] = bmcnephrol
 
       au < released ; 2000 ; BMC Nephrology Volume 1 ; 1 >
       au < released ; 2001 ; BMC Nephrology Volume 2 ; 2 >
@@ -992,6 +1030,7 @@
       >
 
       param[journal_issn] = 1471-2377
+      nondefparam[journal_code] = bmcneurol
 
       au < released ; 2001 ; BMC Neurology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Neurology Volume 2 ; 2 >
@@ -1016,6 +1055,7 @@
       >
 
       param[journal_issn] = 1471-2202
+      nondefparam[journal_code] = bmcneurosci
 
       au < released ; 2000 ; BMC Neuroscience Volume 1 ; 1 >
       au < released ; 2001 ; BMC Neuroscience Volume 2 ; 2 >
@@ -1041,6 +1081,7 @@
       >
 
       param[journal_issn] = 1471-2385
+      nondefparam[journal_code] = bmcmedphys
 
       au < released ; 2001 ; BMC Nuclear Medicine Volume 1 ; 1 >
       au < released ; 2002 ; BMC Nuclear Medicine Volume 2 ; 2 >
@@ -1065,6 +1106,7 @@
       >
 
       param[journal_issn] = 1472-6955
+      nondefparam[journal_code] = bmcnurs
 
       au < released ; 2002 ; BMC Nursing Volume 1 ; 1 >
       au < released ; 2003 ; BMC Nursing Volume 2 ; 2 >
@@ -1088,6 +1130,7 @@
       >
 
       param[journal_issn] = 1471-2415
+      nondefparam[journal_code] = bmcophthalmol
 
       au < released ; 2001 ; BMC Ophthalmology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Ophthalmology Volume 2 ; 2 >
@@ -1112,6 +1155,7 @@
       >
 
       param[journal_issn] = 1472-6831
+      nondefparam[journal_code] = bmcoralhealth
 
       au < released ; 2001 ; BMC Oral Health Volume 1 ; 1 >
       au < released ; 2002 ; BMC Oral Health Volume 2 ; 2 >
@@ -1134,20 +1178,19 @@
         issn = 1472-684X ;
         issnl = 1472-684X
       >
-      comment[BMCPalCar] = journal years are off
-
       param[journal_issn] = 1472-684X
+      nondefparam[journal_code] = bmcpalliatcare
 
-      au < released ; 2001 ; BMC Palliative Care Volume 1 ; 1 >
-      au < released ; 2002 ; BMC Palliative Care Volume 2 ; 2 >
-      au < released ; 2003 ; BMC Palliative Care Volume 3 ; 3 >
-      au < released ; 2004 ; BMC Palliative Care Volume 4 ; 4 >
-      au < released ; 2005 ; BMC Palliative Care Volume 5 ; 5 >
-      au < released ; 2006 ; BMC Palliative Care Volume 6 ; 6 >
-      au < released ; 2007 ; BMC Palliative Care Volume 7 ; 7 >
-      au < released ; 2008 ; BMC Palliative Care Volume 8 ; 8 >
-      au < released ; 2009 ; BMC Palliative Care Volume 9 ; 9 >
-      au < ready ; 2010 ; BMC Palliative Care Volume 10 ; 10 >
+      au < released ; 2002 ; BMC Palliative Care Volume 1 ; 1 >
+      au < released ; 2003 ; BMC Palliative Care Volume 2 ; 2 >
+      au < released ; 2004 ; BMC Palliative Care Volume 3 ; 3 >
+      au < released ; 2005 ; BMC Palliative Care Volume 4 ; 4 >
+      au < released ; 2006 ; BMC Palliative Care Volume 5 ; 5 >
+      au < released ; 2007 ; BMC Palliative Care Volume 6 ; 6 >
+      au < released ; 2008 ; BMC Palliative Care Volume 7 ; 7 >
+      au < released ; 2009 ; BMC Palliative Care Volume 8 ; 8 >
+      au < released ; 2010 ; BMC Palliative Care Volume 9 ; 9 >
+      au < ready ; 2011 ; BMC Palliative Care Volume 10 ; 10 >
       au < ready ; 2012 ; BMC Palliative Care Volume 11 ; 11 >
 
     }
@@ -1160,6 +1203,7 @@
       >
 
       param[journal_issn] = 1471-2431
+      nondefparam[journal_code] = bmcpediatr
 
       au < released ; 2001 ; BMC Pediatrics Volume 1 ; 1 >
       au < released ; 2002 ; BMC Pediatrics Volume 2 ; 2 > 
@@ -1184,6 +1228,7 @@
       >
 
       param[journal_issn] = 1471-2210
+      nondefparam[journal_code] = bmcpharmacol
 
       au < released ; 2001 ; BMC Pharmacology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Pharmacology Volume 2 ; 2 >
@@ -1207,6 +1252,7 @@
       >
 
       param[journal_issn] = 1472-6793
+      nondefparam[journal_code] = bmcphysiol
 
       au < released ; 2001 ; BMC Physiology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Physiology Volume 2 ; 2 >
@@ -1231,6 +1277,7 @@
       >
 
       param[journal_issn] = 1471-2229
+      nondefparam[journal_code] = bmcplantbiol
 
       au < released ; 2001 ; BMC Plant Biology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Plant Biology Volume 2 ; 2 >
@@ -1255,6 +1302,7 @@
       >
 
       param[journal_issn] = 1471-2393
+      nondefparam[journal_code] = bmcpregnancychildbirth
 
       au < released ; 2001 ; BMC Pregnancy and Childbirth Volume 1 ; 1 >
       au < released ; 2002 ; BMC Pregnancy and Childbirth Volume 2 ; 2 >
@@ -1279,6 +1327,7 @@
       >
 
       param[journal_issn] = 1471-244X
+      nondefparam[journal_code] = bmcpsychiatry
 
       au < released ; 2001 ; BMC Psychiatry Volume 1 ; 1 >
       au < released ; 2002 ; BMC Psychiatry Volume 2 ; 2 >
@@ -1303,6 +1352,7 @@
       >
 
       param[journal_issn] = 1471-2458
+      nondefparam[journal_code] = bmcpublichealth
 
       au < released ; 2001 ; BMC Public Health Volume 1 ; 1 >
       au < released ; 2002 ; BMC Public Health Volume 2 ; 2 >
@@ -1327,6 +1377,7 @@
       >
 
       param[journal_issn] = 1471-2466
+      nondefparam[journal_code] = bmcpulmmed
 
       au < released ; 2001 ; BMC Pulmonary Medicine Volume 1 ; 1 >
       au < released ; 2002 ; BMC Pulmonary Medicine Volume 2 ; 2 >
@@ -1351,6 +1402,7 @@
       >
 
       param[journal_issn] = 1472-6807
+      nondefparam[journal_code] = bmcstructbiol
 
       au < released ; 2001 ; BMC Structural Biology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Structural Biology Volume 2 ; 2 >
@@ -1375,6 +1427,7 @@
       >
 
       param[journal_issn] = 1471-2482
+      nondefparam[journal_code] = bmcsurg
 
       au < released ; 2001 ; BMC Surgery Volume 1 ; 1 >
       au < released ; 2002 ; BMC Surgery Volume 2 ; 2 >
@@ -1399,6 +1452,7 @@
       >
 
       param[journal_issn] = 1752-0509
+      nondefparam[journal_code] = bmcsystbiol
 
       au < released ; 2007 ; BMC Systems Biology Volume 1 ; 1 >
       au < released ; 2008 ; BMC Systems Biology Volume 2 ; 2 >
@@ -1419,6 +1473,7 @@
       >
 
       param[journal_issn] = 1471-2490
+      nondefparam[journal_code] = bmcurol
 
       au < released ; 2001 ; BMC Urology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Urology Volume 2 ; 2 >
@@ -1443,6 +1498,7 @@
       >
 
       param[journal_issn] = 1746-6148
+      nondefparam[journal_code] = bmcvetres
 
       au < released ; 2005 ; BMC Veterinary Research Volume 1 ; 1 >
       au < released ; 2006 ; BMC Veterinary Research Volume 2 ; 2 >
@@ -1465,6 +1521,7 @@
       >
 
       param[journal_issn] = 1472-6874
+      nondefparam[journal_code] = bmcwomenshealth
 
       au < released ; 2001 ; BMC Women's Health Volume 1 ; 1 >
       au < released ; 2002 ; BMC Women's Health Volume 2 ; 2 >
