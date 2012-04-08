@@ -2763,7 +2763,7 @@
       au < manifest ; exists ; 2009 ; Australian Journal of Management Volume 34 ; 34 ; >
       au < released ; crawling ; 2010 ; Australian Journal of Management Volume 35 ; 35 ; >
       au < released ; crawling ; 2011 ; Australian Journal of Management Volume 36 ; 36 ; >
-      au < expected ; exists ; 2012 ; Australian Journal of Management Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2012 ; Australian Journal of Management Volume 37 ; 37 ; >
 
     }
 
@@ -9863,7 +9863,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; First Language Volume 29 ; 29 ; >
       au < released ; crawling ; 2010 ; First Language Volume 30 ; 30 ; >
       au < released ; crawling ; 2011 ; First Language Volume 31 ; 31 ; >
-      au < expected ; exists ; 2012 ; First Language Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2012 ; First Language Volume 32 ; 32 ; >
 
     }
 
@@ -10503,7 +10503,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Global Health Promotion Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; Global Health Promotion Volume 17 ; 17 ; >
       au < released ; crawling ; 2011 ; Global Health Promotion Volume 18 ; 18 ; >
-      au < expected ; exists ; 2012 ; Global Health Promotion Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2012 ; Global Health Promotion Volume 19 ; 19 ; >
 
     }
 
@@ -11174,7 +11174,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; High Performance Polymers Volume 21 ; 21 ; >
       au < released ; crawling ; 2010 ; High Performance Polymers Volume 22 ; 22 ; >
       au < released ; crawling ; 2011 ; High Performance Polymers Volume 23 ; 23 ; >
-      au < expected ; exists ; 2012 ; High Performance Polymers Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2012 ; High Performance Polymers Volume 24 ; 24 ; >
 
     }
 
@@ -12095,7 +12095,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; India Quarterly: A Journal of International Affairs Volume 65 ; 65 ; >
       au < released ; crawling ; 2010 ; India Quarterly: A Journal of International Affairs Volume 66 ; 66 ; >
       au < released ; crawling ; 2011 ; India Quarterly: A Journal of International Affairs Volume 67 ; 67 ; >
-      au < expected ; exists ; 2012 ; India Quarterly: A Journal of International Affairs Volume 68 ; 68 ; >
+      au < manifest ; exists ; 2012 ; India Quarterly: A Journal of International Affairs Volume 68 ; 68 ; >
 
     }
 
@@ -13812,21 +13812,21 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1959 ; International Relations Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1960 ; International Relations Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1967 ; International Relations Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1954-1956 ; International Relations Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1960-1965 ; International Relations Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1967-1971 ; International Relations Volume 3 ; 3 ; >
       au < manifest ; exists ; 1972 ; International Relations Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1975 ; International Relations Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1978 ; International Relations Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1981 ; International Relations Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1984 ; International Relations Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1987 ; International Relations Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1990 ; International Relations Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1992 ; International Relations Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1994 ; International Relations Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1996 ; International Relations Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1998 ; International Relations Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2000 ; International Relations Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1975-1977 ; International Relations Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1978-1980 ; International Relations Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1981-1983 ; International Relations Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1984-1986 ; International Relations Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1987-1989 ; International Relations Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1990-1991 ; International Relations Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1992-1993 ; International Relations Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1994-1995 ; International Relations Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1996-1997 ; International Relations Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1998-1999 ; International Relations Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2000-2001 ; International Relations Volume 15 ; 15 ; >
       au < manifest ; exists ; 2002 ; International Relations Volume 16 ; 16 ; >
       au < manifest ; exists ; 2003 ; International Relations Volume 17 ; 17 ; >
       au < manifest ; exists ; 2004 ; International Relations Volume 18 ; 18 ; >
@@ -14018,23 +14018,24 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
 
-        au < exists ; exists ; 1990 ; International Review of Victimology Volume 1 ; 1 ; >
-        au < exists ; exists ; 1991 ; International Review of Victimology Volume 2 ; 2 ; >
-        au < exists ; exists ; 1992 ; International Review of Victimology Volume 3 ; 3 ; >
-        au < exists ; exists ; 1993 ; International Review of Victimology Volume 4 ; 4 ; >
-        au < exists ; exists ; 1994 ; International Review of Victimology Volume 5 ; 5 ; >
-        au < exists ; exists ; 1995 ; International Review of Victimology Volume 6 ; 6 ; >
-        au < exists ; exists ; 1996 ; International Review of Victimology Volume 7 ; 7 ; >
-        au < exists ; exists ; 1997 ; International Review of Victimology Volume 8 ; 8 ; >
-        au < exists ; exists ; 1998 ; International Review of Victimology Volume 9 ; 9 ; >
-        au < exists ; exists ; 1999 ; International Review of Victimology Volume 10 ; 10 ; >
-        au < exists ; exists ; 2000 ; International Review of Victimology Volume 11 ; 11 ; >
-        au < exists ; exists ; 2001 ; International Review of Victimology Volume 12 ; 12 ; >
-        au < exists ; exists ; 2002 ; International Review of Victimology Volume 13 ; 13 ; >
-        au < exists ; exists ; 2003 ; International Review of Victimology Volume 14 ; 14 ; >
-        au < exists ; exists ; 2004 ; International Review of Victimology Volume 15 ; 15 ; >
-        au < exists ; exists ; 2005 ; International Review of Victimology Volume 16 ; 16 ; >
-        au < exists ; exists ; 2006 ; International Review of Victimology Volume 17 ; 17 ; >
+        au < exists ; exists ; 1990-1991 ; International Review of Victimology Volume 1 ; 1 ; >
+        au < exists ; exists ; 1991-1993 ; International Review of Victimology Volume 2 ; 2 ; >
+        au < exists ; exists ; 1994-1995 ; International Review of Victimology Volume 3 ; 3 ; >
+        au < exists ; exists ; 1995-1997 ; International Review of Victimology Volume 4 ; 4 ; >
+        au < exists ; exists ; 1997-1998 ; International Review of Victimology Volume 5 ; 5 ; >
+        au < exists ; exists ; 1998-1999 ; International Review of Victimology Volume 6 ; 6 ; >
+        au < exists ; exists ; 2000 ; International Review of Victimology Volume 7 ; 7 ; >
+        au < exists ; exists ; 2001 ; International Review of Victimology Volume 8 ; 8 ; >
+        au < exists ; exists ; 2002 ; International Review of Victimology Volume 9 ; 9 ; >
+        au < exists ; exists ; 2003-2004 ; International Review of Victimology Volume 10 ; 10 ; >
+        au < exists ; exists ; 2004 ; International Review of Victimology Volume 11 ; 11 ; >
+        au < exists ; exists ; 2005 ; International Review of Victimology Volume 12 ; 12 ; >
+        au < exists ; exists ; 2006 ; International Review of Victimology Volume 13 ; 13 ; >
+        au < exists ; exists ; 2007 ; International Review of Victimology Volume 14 ; 14 ; >
+        au < exists ; exists ; 2008-2009 ; International Review of Victimology Volume 15 ; 15 ; >
+        au < exists ; exists ; 2009 ; International Review of Victimology Volume 16 ; 16 ; >
+        au < exists ; exists ; 2010 ; International Review of Victimology Volume 17 ; 17 ; >
+        au < exists ; exists ; 2012 ; International Review of Victimology Volume 18 ; 18 ; >
   
       }
   
@@ -16486,7 +16487,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Conflict Resolution Volume 53 ; 53 ; >
       au < released ; crawling ; 2010 ; Journal of Conflict Resolution Volume 54 ; 54 ; >
       au < released ; crawling ; 2011 ; Journal of Conflict Resolution Volume 55 ; 55 ; >
-      au < expected ; exists ; 2012 ; Journal of Conflict Resolution Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2012 ; Journal of Conflict Resolution Volume 56 ; 56 ; >
 
     }
 
@@ -16811,9 +16812,7 @@
       au < manifest ; exists ; 2007 ; Journal of Creative Communications Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Creative Communications Volume 3 ; 3 ; >
       au < manifest ; exists ; 2009 ; Journal of Creative Communications Volume 4 ; 4 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Journal of Creative Communications Volume 5 ; 5 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Journal of Creative Communications Volume 6 ; 6 ; >
-      au < expected ; exists ; 2012 ; Journal of Creative Communications Volume 7 ; 7 ; >
+      au < exists ; exists ; 2010 ; Journal of Creative Communications Volume 5 ; 5 ; >
 
     }
 
@@ -20115,7 +20114,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Marketing Education Volume 31 ; 31 ; >
       au < released ; manifest ; 2010 ; Journal of Marketing Education Volume 32 ; 32 ; >
       au < released ; crawling ; 2011 ; Journal of Marketing Education Volume 33 ; 33 ; >
-      au < expected ; exists ; 2012 ; Journal of Marketing Education Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2012 ; Journal of Marketing Education Volume 34 ; 34 ; >
 
     }
 
@@ -20580,7 +20579,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Pharmacy Practice Volume 22 ; 22 ; >
       au < released ; manifest ; 2010 ; Journal of Pharmacy Practice Volume 23 ; 23 ; >
       au < released ; crawling ; 2011 ; Journal of Pharmacy Practice Volume 24 ; 24 ; >
-      au < expected ; exists ; 2012 ; Journal of Pharmacy Practice Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2012 ; Journal of Pharmacy Practice Volume 25 ; 25 ; >
 
     }
 
@@ -30143,7 +30142,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Science Technology & Society Volume 14 ; 14 ; >
       au < crawling ; exists ; 2010 ; Science Technology & Society Volume 15 ; 15 ; >
       au < released ; crawling ; 2011 ; Science Technology & Society Volume 16 ; 16 ; >
-      au < expected ; exists ; 2012 ; Science Technology & Society Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2012 ; Science Technology & Society Volume 17 ; 17 ; >
 
     }
 
@@ -31703,7 +31702,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Statistical Modelling Volume 9 ; 9 ; >
       au < manifest ; exists ; 2010 ; Statistical Modelling Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; Statistical Modelling Volume 11 ; 11 ; >
-      au < expected ; exists ; 2012 ; Statistical Modelling Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2012 ; Statistical Modelling Volume 12 ; 12 ; >
 
     }
 
