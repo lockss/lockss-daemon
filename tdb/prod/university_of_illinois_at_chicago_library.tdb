@@ -41,6 +41,7 @@
     au < released ; 2009 ; Behavior and Social Issues Volume 19 ; 19 ; 2009 >
     au < released ; 2010 ; Behavior and Social Issues Volume 20 ; 20 ; 2010 >
     au < released ; 2011 ; Behavior and Social Issues Volume 21 ; 21 ; 2011 >
+    au < manifest ; 2012 ; Behavior and Social Issues Volume 22 ; 22 ; 2012 >
 
   }
 
@@ -73,7 +74,9 @@
     au < testing ; 2007 ; First Monday Volume 12 ; 12 ; 2007 >
     au < testing ; 2008 ; First Monday Volume 13 ; 13 ; 2008 >
     au < testing ; 2009 ; First Monday Volume 14 ; 14 ; 2009 >
-    au < notReady ; 2010 ; First Monday Volume 15 ; 15 ; 2010 >
+    au < manifest ; 2010 ; First Monday Volume 15 ; 15 ; 2010 >
+    au < manifest ; 2011 ; First Monday Volume 16 ; 16 ; 2011 >
+    au < manifest ; 2012 ; First Monday Volume 17 ; 17 ; 2012 >
 
   }
 
@@ -94,6 +97,7 @@
     au < released ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 ; 2009 >
     au < notReady ; 2010 ; Journal of Biomedical Discovery and Collaboration Volume 5 ; 5 ; 2010 >
     au < released ; 2011 ; Journal of Biomedical Discovery and Collaboration Volume 6 ; 6 ; 2011 >
+    au < expected ; 2012 ; Journal of Biomedical Discovery and Collaboration Volume 7 ; 7 ; 2012 >
 
   }
 
@@ -112,7 +116,9 @@
     comment[2010] = repository error (malformed link?)
 
     au < released ; 2009 ; Online Journal of Public Health Informatics Volume 1 ; 1 ; 2009 >
-    au < notReady ; 2010 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2010 >
+    au < manifest ; 2010 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2010 >
+    au < manifest ; 2011 ; Online Journal of Public Health Informatics Volume 3 ; 3 ; 2011 >
+    au < expected ; 2012 ; Online Journal of Public Health Informatics Volume 4 ; 4 ; 2012 >
 
   }
 
@@ -132,6 +138,7 @@
 
     au < exists ; 2010 ; Online Journal of Public Health Informatics Volume 1 ; 1 ; 2010 >
     au < exists ; 2011 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2011 >
+    au < expected ; 2012 ; Online Journal of Public Health Informatics Volume 3 ; 3 ; 2012 >
 
   }
 
