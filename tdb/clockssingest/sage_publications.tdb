@@ -19097,33 +19097,33 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1971 ; Journal of Industrial Textiles Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1972 ; Journal of Industrial Textiles Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1973 ; Journal of Industrial Textiles Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1974 ; Journal of Industrial Textiles Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1975 ; Journal of Industrial Textiles Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1976 ; Journal of Industrial Textiles Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1977 ; Journal of Industrial Textiles Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1978 ; Journal of Industrial Textiles Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1979 ; Journal of Industrial Textiles Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1980 ; Journal of Industrial Textiles Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1981 ; Journal of Industrial Textiles Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1982 ; Journal of Industrial Textiles Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1983 ; Journal of Industrial Textiles Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1984 ; Journal of Industrial Textiles Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1985 ; Journal of Industrial Textiles Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1986 ; Journal of Industrial Textiles Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1987 ; Journal of Industrial Textiles Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1988 ; Journal of Industrial Textiles Volume 18 ; 18 ; >
-      au < manifest ; exists ; 1989 ; Journal of Industrial Textiles Volume 19 ; 19 ; >
-      au < manifest ; exists ; 1990 ; Journal of Industrial Textiles Volume 20 ; 20 ; >
-      au < manifest ; exists ; 1992 ; Journal of Industrial Textiles Volume 21 ; 21 ; >
-      au < manifest ; exists ; 1992 ; Journal of Industrial Textiles Volume 22 ; 22 ; >
-      au < manifest ; exists ; 1993 ; Journal of Industrial Textiles Volume 23 ; 23 ; >
-      au < manifest ; exists ; 1994 ; Journal of Industrial Textiles Volume 24 ; 24 ; >
-      au < manifest ; exists ; 1995 ; Journal of Industrial Textiles Volume 25 ; 25 ; >
-      au < manifest ; exists ; 1996 ; Journal of Industrial Textiles Volume 26 ; 26 ; >
-      au < manifest ; exists ; 1997 ; Journal of Industrial Textiles Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1971-1972 ; Journal of Industrial Textiles Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1972-1973 ; Journal of Industrial Textiles Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1973-1974 ; Journal of Industrial Textiles Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1974-1975 ; Journal of Industrial Textiles Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1975-1976 ; Journal of Industrial Textiles Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1976-1977 ; Journal of Industrial Textiles Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1977-1978 ; Journal of Industrial Textiles Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1978-1979 ; Journal of Industrial Textiles Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1979-1980 ; Journal of Industrial Textiles Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1980-1981 ; Journal of Industrial Textiles Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1981-1982 ; Journal of Industrial Textiles Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1982-1983 ; Journal of Industrial Textiles Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1983-1984 ; Journal of Industrial Textiles Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1984-1985 ; Journal of Industrial Textiles Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1985-1986 ; Journal of Industrial Textiles Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1986-1987 ; Journal of Industrial Textiles Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1987-1988 ; Journal of Industrial Textiles Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1988-1989 ; Journal of Industrial Textiles Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1989-1990 ; Journal of Industrial Textiles Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1990-1991 ; Journal of Industrial Textiles Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1992-1992 ; Journal of Industrial Textiles Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1992-1993 ; Journal of Industrial Textiles Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1993-1994 ; Journal of Industrial Textiles Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1994-1995 ; Journal of Industrial Textiles Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1995-1996 ; Journal of Industrial Textiles Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1996-1997 ; Journal of Industrial Textiles Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1997-1998 ; Journal of Industrial Textiles Volume 27 ; 27 ; >
       au < manifest ; exists ; 1998 ; Journal of Industrial Textiles Volume 28 ; 28 ; >
       au < doesNotExist ; doesNotExist ; 0 ; Journal of Industrial Textiles Volume 29 ; 29 ; >
       au < manifest ; exists ; 2000-2001 ; Journal of Industrial Textiles Volume 30 ; 30 ; >
@@ -22345,7 +22345,7 @@
         au < exists ; exists ; 1950 ; Journal of the Institution of Locomotive Engineers Volume 40 ; 40 ; >
         au < exists ; exists ; 1951 ; Journal of the Institution of Locomotive Engineers Volume 41 ; 41 ; >
         au < exists ; exists ; 1952 ; Journal of the Institution of Locomotive Engineers Volume 42 ; 42 ; >
-        au < exists ; exists ; 1953 ; Journal of the Institution of Locomotive Engineers Volume 43 ; 43 ; >
+        au < doesNotExist ; doesNotExist ; 0 ; Journal of the Institution of Locomotive Engineers Volume 43 ; 43 ; >
         au < exists ; exists ; 1954 ; Journal of the Institution of Locomotive Engineers Volume 44 ; 44 ; >
         au < exists ; exists ; 1955 ; Journal of the Institution of Locomotive Engineers Volume 45 ; 45 ; >
         au < exists ; exists ; 1956 ; Journal of the Institution of Locomotive Engineers Volume 46 ; 46 ; >
