@@ -82,8 +82,9 @@
    
     param[journal_dir] = region
     attr[journal_id] = reg
+    comment[notReady] = 4/9/2012sc no Roundup issue yet. plugin issue?
 
-    au < testing ; 2012 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 1 ; 1 >
+    au < notReady ; 2012 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 1 ; 1 >
 
   }
 
