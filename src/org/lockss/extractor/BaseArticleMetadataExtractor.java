@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.9 2012-04-07 01:49:43 davidecorcoran Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.10 2012-04-09 21:26:48 pgust Exp $
  */
 
 /*
@@ -146,7 +146,6 @@ public class BaseArticleMetadataExtractor
 		      ArticleMetadataExtractor.Emitter emitter)
       throws IOException, PluginException {
     MyEmitter myEmitter = new MyEmitter(af, emitter);
-    ArticleMetadata am = null;
     CachedUrl cu = getCuToExtract(af);
     log.debug3("extract(" + af + ")");
     if (cu != null) {
@@ -155,19 +154,16 @@ public class BaseArticleMetadataExtractor
         me = cu.getFileMetadataExtractor(target);
         me.extract(target, cu, myEmitter);
       } catch (RuntimeException ex) {
-        // If our plugin is missing a metadata extractor or the extractor
-        // specified is not of the appropriate type for our target,
+        // If our plugin is missing a file metadata extractor or 
+        // the extractor specified is not of the appropriate type,
         // emit default metadata from the TDB file 
-        log.debug2("for af (" + af + ")", ex);
+        log.debug3("retry with default metadata for (" + af + ")", ex);
         try {
-          log.debug2("Invalid metadata extractor or no metadata extractor " +
-            "specified for " + cu.getUrl());
-          log.debug2("Emitting default metadata from TDB file");
-          am = new ArticleMetadata();
+          ArticleMetadata am = new ArticleMetadata();
           myEmitter.emitMetadata(cu, am);
         } catch (RuntimeException ex2) {
           // just move on because the problem may be in the emitter
-          log.debug2("retry with default metadata for af (" + af + ")", ex2);
+          log.debug3("unable to emit metadata for af (" + af + ")", ex2);
         }
       } finally {
 	AuUtil.safeRelease(cu);
