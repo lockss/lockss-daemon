@@ -155,8 +155,9 @@ public class TestIgiGlobalMetadataExtractor extends LockssTestCase {
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals(goodEndPage, md.get(MetadataField.FIELD_END_PAGE));
+    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(goodISSN, md.get(MetadataField.FIELD_ISSN));
-
     assertEquals("[" + goodAuthors.replace(";",",") + "]", md.getList(MetadataField.FIELD_AUTHOR).toString());
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
