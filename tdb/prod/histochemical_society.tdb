@@ -29,6 +29,8 @@
 
       param[base_url] = http://www.jhc.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+      
+      comment[h20] = manifests exist with HighwireH20
 
       au < HighWirePressPlugin ; doNotProcess ; 2004 ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
