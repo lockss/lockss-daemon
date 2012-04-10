@@ -7,7 +7,7 @@
   attr[contract] = 2011
   plugin = org.lockss.plugin.igiglobal.ClockssIgiGlobalPlugin
   param[base_url] = http://www.igi-global.com/
-  implicit < status ; status2 ; year; name ; param[volume_name] >
+  implicit < status ; status2 ; year; name ; param[volume] >
   
   {
 
@@ -17,7 +17,8 @@
       eissn = 1533-7979 ;
       issnl = 1040-1628
     >
-
+	param[journal_eissn] = 1533-7979 
+	
     au < exists ; exists ; 1988 ; Information Resources Management Journal (IRMJ) Volume 1 ; 1 > 
     au < exists ; exists ; 1989 ; Information Resources Management Journal (IRMJ) Volume 2 ; 2 > 
     au < exists ; exists ; 1990 ; Information Resources Management Journal (IRMJ) Volume 3 ; 3 > 
@@ -54,7 +55,7 @@
       issnl = 1080-286X
     >
   
-    comment[0] = content not online yet
+    comment[0] = content not online yet 
 
     au < exists ; exists ; 1988 ; Information Technology Management Volume 1 ; 1 > 
     au < exists ; exists ; 1989 ; Information Technology Management Volume 2 ; 2 > 
@@ -92,6 +93,7 @@
       eissn = 2156-1702 ;
       issnl = 2156-1710
     >
+	param[journal_eissn] = 
 
     au < testing ; exists ; 2012 ; International Journal of 3-D Information Modeling (IJ3DIM) Volume 1 ; 1 > 
 
