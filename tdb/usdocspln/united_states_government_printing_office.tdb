@@ -570,7 +570,7 @@
     au < released ; 2003 ; Government Accountability Office Reports and Comptroller General Decisions 2003 ; 2003 >
     au < released ; 2004 ; Government Accountability Office Reports and Comptroller General Decisions 2004 ; 2004 >
     au < released ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; 2005 >
-    au < testing ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; 2006 >
+    au < ready ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; 2006 >
     au < ready ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; 2007 >
     au < ready ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 >
    
@@ -722,7 +722,7 @@
     au < manifest ; 2007 ; Public and Private Laws 2007 ; 2007 >
     au < manifest ; 2008 ; Public and Private Laws 2008 ; 2008 >
     au < manifest ; 2009 ; Public and Private Laws 2009 ; 2009 >
-    au < testing ; 2010 ; Public and Private Laws 2010 ; 2010 >
+    au < ready ; 2010 ; Public and Private Laws 2010 ; 2010 >
     au < ready ; 2011 ; Public and Private Laws 2011 ; 2011>
     au < testing ; 2012 ; Public and Private Laws 2012 ; 2012 >
 
@@ -737,14 +737,14 @@
     param[collection_id] = PPP
 
     au < ready ; 1991 ; Public Papers of the Presidents of the United States 1991 ; 1991 >
-    au < readyg ; 1992 ; Public Papers of the Presidents of the United States 1992 ; 1992 >
+    au < ready ; 1992 ; Public Papers of the Presidents of the United States 1992 ; 1992 >
     au < ready ; 1993 ; Public Papers of the Presidents of the United States 1993 ; 1993 >
-    au < testing ; 1994 ; Public Papers of the Presidents of the United States 1994 ; 1994 >
+    au < ready ; 1994 ; Public Papers of the Presidents of the United States 1994 ; 1994 >
     au < released ; 1995 ; Public Papers of the Presidents of the United States 1995 ; 1995 >
-    au < manifest ; 1996 ; Public Papers of the Presidents of the United States 1996 ; 1996 >
-    au < manifest ; 1997 ; Public Papers of the Presidents of the United States 1997 ; 1997 >
-    au < manifest ; 1998 ; Public Papers of the Presidents of the United States 1998 ; 1998 >
-    au < manifest ; 1999 ; Public Papers of the Presidents of the United States 1999 ; 1999 >
+    au < ready ; 1996 ; Public Papers of the Presidents of the United States 1996 ; 1996 >
+    au < ready ; 1997 ; Public Papers of the Presidents of the United States 1997 ; 1997 >
+    au < ready ; 1998 ; Public Papers of the Presidents of the United States 1998 ; 1998 >
+    au < ready ; 1999 ; Public Papers of the Presidents of the United States 1999 ; 1999 >
     au < ready ; 2000 ; Public Papers of the Presidents of the United States 2000 ; 2000 >
     au < ready ; 2001 ; Public Papers of the Presidents of the United States 2001 ; 2001 >
     au < ready ; 2002 ; Public Papers of the Presidents of the United States 2002 ; 2002 >
@@ -807,15 +807,15 @@
 
     param[collection_id] = USCOURTS
 
-    au < manifest ; 2004 ; United States Courts 2004 ; 2004 >
-    au < testing ; 2005 ; United States Courts 2005 ; 2005 >
-    au < manifest ; 2006 ; United States Courts 2006 ; 2006 >
-    au < manifest ; 2007 ; United States Courts 2007 ; 2007 >
-    au < manifest ; 2008 ; United States Courts 2008 ; 2008 >
-    au < manifest ; 2009 ; United States Courts 2009 ; 2009 >
-    au < testing ; 2010 ; United States Courts 2010 ; 2010 >
-    au < manifest ; 2011 ; United States Courts 2011 ; 2011 >
-    au < testing ; 2012 ; United States Courts 2012 ; 2012 >
+    au < ready ; 2004 ; United States Courts 2004 ; 2004 >
+    au < ready ; 2005 ; United States Courts 2005 ; 2005 >
+    au < ready ; 2006 ; United States Courts 2006 ; 2006 >
+    au < ready ; 2007 ; United States Courts 2007 ; 2007 >
+    au < ready ; 2008 ; United States Courts 2008 ; 2008 >
+    au < ready ; 2009 ; United States Courts 2009 ; 2009 >
+    au < ready ; 2010 ; United States Courts 2010 ; 2010 >
+    au < ready ; 2011 ; United States Courts 2011 ; 2011 >
+    au < ready ; 2012 ; United States Courts 2012 ; 2012 >
     
   }
 
@@ -910,7 +910,7 @@
     au < released ; 2003 ; United States Statutes at Large 2003 ; 2003 >
     au < released ; 2004 ; United States Statutes at Large 2004 ; 2004 >
     au < released ; 2005 ; United States Statutes at Large 2005 ; 2005 >
-    au < testing ; 2006 ; United States Statutes at Large 2006 ; 2006 >
+    au < ready ; 2006 ; United States Statutes at Large 2006 ; 2006 >
     au < testing ; 2007 ; United States Statutes at Large 2007 ; 2007 >
 
   }
