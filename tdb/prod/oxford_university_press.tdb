@@ -19,12 +19,12 @@
     param[base_url] = http://abbs.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Acta Biochimica et Biophysica Sinica Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; testing ; 2004 ; Acta Biochimica et Biophysica Sinica Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Acta Biochimica et Biophysica Sinica Volume 44 ; 44 >
@@ -645,7 +645,7 @@
     au < HighWirePressPlugin ; down ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 >
     au < HighWirePressPlugin ; down ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 >
     au < HighWirePressH20Plugin ; released ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 >
     au < HighWirePressH20Plugin ; released ; 2010 ; American Journal of Epidemiology Volume 171 ; 171 >
     au < HighWirePressH20Plugin ; released ; 2010 ; American Journal of Epidemiology Volume 172 ; 172 >
     au < HighWirePressH20Plugin ; released ; 2011 ; American Journal of Epidemiology Volume 173 ; 173 >
@@ -1299,9 +1299,9 @@
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Applied Linguistics Volume 25 ; 25 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Applied Linguistics Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Applied Linguistics Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Applied Linguistics Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Applied Linguistics Volume 28 ; 28 >
     au < HighWirePressPlugin ; down ; 2008 ; Applied Linguistics Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Applied Linguistics Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Applied Linguistics Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Applied Linguistics Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Applied Linguistics Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Applied Linguistics Volume 33 ; 33 >
@@ -1453,7 +1453,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Behavioral Ecology Volume 17 ; 17 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Behavioral Ecology Volume 18 ; 18 >
     au < HighWirePressPlugin ; down ; 2008 ; Behavioral Ecology Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Behavioral Ecology Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Behavioral Ecology Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Behavioral Ecology Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Behavioral Ecology Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Behavioral Ecology Volume 23 ; 23 >
@@ -1639,9 +1639,9 @@
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Biometrika Volume 91 ; 91 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Biometrika Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Biometrika Volume 93 ; 93 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Biometrika Volume 94 ; 94 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Biometrika Volume 94 ; 94 >
     au < HighWirePressPlugin ; down ; 2008 ; Biometrika Volume 95 ; 95 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Biometrika Volume 96 ; 96 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Biometrika Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Biometrika Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Biometrika Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Biometrika Volume 99 ; 99 >
@@ -1873,7 +1873,7 @@
     au < HighWireStrVolPlugin ; down ; 2006 ; Brain Volume 129 ; 129 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Brain Volume 130 ; 130 >
     au < HighWirePressPlugin ; down ; 2008 ; Brain Volume 131 ; 131 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Brain Volume 132 ; 132 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Brain Volume 132 ; 132 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Brain Volume 133 ; 133 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Brain Volume 134 ; 134 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Brain Volume 135 ; 135 >
@@ -3377,7 +3377,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWireStrVolPlugin ; down ; 2006-2007 ; The Chinese Journal of International Politics Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; The Chinese Journal of International Politics Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 >
@@ -5337,7 +5337,7 @@
     au < HighWirePressH20Plugin ; released ; 2006 ; European Review of Agricultural Economics Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 2007 ; European Review of Agricultural Economics Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; released ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Review of Agricultural Economics Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Review of Agricultural Economics Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; European Review of Agricultural Economics Volume 39 ; 39 >
@@ -6568,7 +6568,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Holocaust and Genocide Studies Volume 18 ; 18 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Holocaust and Genocide Studies Volume 19 ; 19 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Holocaust and Genocide Studies Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Holocaust and Genocide Studies Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Holocaust and Genocide Studies Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 >
@@ -7748,7 +7748,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2005 ; International Immunology Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; International Immunology Volume 18 ; 18 >
     au < HighWireStrVolPlugin ; down ; 2007 ; International Immunology Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; International Immunology Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; International Immunology Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; International Immunology Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2010 ; International Immunology Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2011 ; International Immunology Volume 23 ; 23 >
@@ -7971,7 +7971,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2004 ; International Journal of Law, Policy and the Family Volume 18 ; 18 >
     au < HighWireStrVolPlugin ; down ; 2005 ; International Journal of Law, Policy and the Family Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; International Journal of Law, Policy and the Family Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; International Journal of Law, Policy and the Family Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; International Journal of Law, Policy and the Family Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; International Journal of Law, Policy and the Family Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; International Journal of Law, Policy and the Family Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2010 ; International Journal of Law, Policy and the Family Volume 24 ; 24 >
@@ -9757,8 +9757,8 @@
     au < HighWireStrVolPlugin ; superseded ; 2007 ; Journal of Experimental Botany Volume 58 [superseded] ; 58 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Experimental Botany Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of Experimental Botany Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Experimental Botany Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Experimental Botany Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Experimental Botany Volume 63 ; 63 >
 
@@ -10505,7 +10505,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Infectious Diseases Volume 200 ; 200 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Infectious Diseases Volume 201 ; 201 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Infectious Diseases Volume 202 ; 202 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Infectious Diseases Volume 204 ; 204 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 >
 
@@ -10692,7 +10692,7 @@
     au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Islamic Studies Volume 18 ; 18 >
     au < HighWirePressPlugin ; down ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 >
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of Islamic Studies Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Islamic Studies Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Islamic Studies Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Islamic Studies Volume 23 ; 23 >
 
@@ -12089,7 +12089,7 @@
 
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Topology Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Topology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of Topology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Topology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Topology Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Topology Volume 5 ; 5 >
 
@@ -12602,7 +12602,7 @@
     au < HighWirePressH20Plugin ; released ; 2007 ; Literary Imagination Volume 9 ; 9 >
     au < HighWirePressPlugin ; down ; 2008 ; Literary Imagination Volume 10 ; 10 >
     au < HighWirePressPlugin ; down ; 2009 ;  Literary Imagination Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Literary Imagination Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Literary Imagination Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Literary Imagination Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Literary Imagination Volume 14 ; 14 >
 
@@ -13553,7 +13553,7 @@
     au < HighWireStrVolPlugin ; down ; 2007 ; Mutagenesis Volume 22 ; 22 >
     au < HighWirePressPlugin ; down ; 2008 ; Mutagenesis Volume 23 ; 23 >
     au < HighWirePressPlugin ; down ; 2009 ; Mutagenesis Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Mutagenesis Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Mutagenesis Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Mutagenesis Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Mutagenesis Volume 27 ; 27 >
 
@@ -13635,7 +13635,7 @@
     au < HighWireStrVolPlugin ; down ; 2007 ; Nephrology Dialysis Transplantation Volume 22 ; 22 >
     au < HighWirePressPlugin ; down ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 >
     au < HighWirePressPlugin ; down ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Nephrology Dialysis Transplantation Volume 27 ; 27 >
 
@@ -14063,7 +14063,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Nucleic Acids Research Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Nucleic Acids Research Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Nucleic Acids Research Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Nucleic Acids Research Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; Nucleic Acids Research Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Nucleic Acids Research Volume 35 ; 35 >
     au < HighWirePressPlugin ; down ; 2008 ; Nucleic Acids Research Volume 36 ; 36 >
     au < HighWirePressPlugin ; down ; 2009 ; Nucleic Acids Research Volume 37 ; 37 >
@@ -14251,7 +14251,7 @@
     au < HighWireStrVolPlugin ; down ; 2007 ; Occupational Medicine Volume 57 ; 57 >
     au < HighWirePressPlugin ; down ; 2008 ; Occupational Medicine Volume 58 ; 58 >
     au < HighWirePressPlugin ; down ; 2009 ; Occupational Medicine Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Occupational Medicine Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Occupational Medicine Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Occupational Medicine Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Occupational Medicine Volume 62 ; 62 >
 
@@ -15599,7 +15599,7 @@
 
     au < HighWirePressPlugin ; down ;2008 ;  Public Health Ethics Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 2009 ; Public Health Ethics Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Public Health Ethics Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Public Health Ethics Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Public Health Ethics Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Public Health Ethics Volume 5 ; 5 >
 
@@ -16629,7 +16629,7 @@
     au < HighWirePressH20Plugin ; released ; 2007 ; The Review of English Studies Volume 58 ; 58 >
     au < HighWirePressPlugin ; down ; 2008 ; The Review of English Studies Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; released ; 2009 ; The Review of English Studies Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; The Review of English Studies Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; The Review of English Studies Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Review of English Studies Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Review of English Studies Volume 63 ; 63 >
 
@@ -17798,8 +17798,8 @@
     au < HighWireStrVolPlugin ; down ; 2006 ; Toxicological Sciences Volume 94 ; 94 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Toxicological Sciences Volume 95 ; 95 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Toxicological Sciences Volume 96 ; 96 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Toxicological Sciences Volume 97 ; 97 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Toxicological Sciences Volume 98 ; 98 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Toxicological Sciences Volume 97 ; 97 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Toxicological Sciences Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Toxicological Sciences Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Toxicological Sciences Volume 100 ; 100 >
     au < HighWirePressPlugin ; down ; 2008 ; Toxicological Sciences Volume 101 ; 101 >
