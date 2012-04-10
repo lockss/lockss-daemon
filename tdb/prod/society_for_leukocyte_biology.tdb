@@ -20,47 +20,47 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; testing ; 1984 ; Journal of Leukocyte Biology [abstracts only] Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; ready ; 1984 ; Journal of Leukocyte Biology Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; ready ; 1985 ; Journal of Leukocyte Biology Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; ready ; 1985 ; Journal of Leukocyte Biology Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; ready ; 1986 ; Journal of Leukocyte Biology Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; ready ; 1986 ; Journal of Leukocyte Biology Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; ready ; 1987 ; Journal of Leukocyte Biology Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; ready ; 1987 ; Journal of Leukocyte Biology Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; ready ; 1988 ; Journal of Leukocyte Biology Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; ready ; 1988 ; Journal of Leukocyte Biology Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; ready ; 1989 ; Journal of Leukocyte Biology Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; ready ; 1989 ; Journal of Leukocyte Biology Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; ready ; 1990 ; Journal of Leukocyte Biology Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; ready ; 1990 ; Journal of Leukocyte Biology Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of Leukocyte Biology Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of Leukocyte Biology Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of Leukocyte Biology Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of Leukocyte Biology Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; ready ; 1993 ; Journal of Leukocyte Biology Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; ready ; 1993 ; Journal of Leukocyte Biology Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; ready ; 1994 ; Journal of Leukocyte Biology Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; ready ; 1994 ; Journal of Leukocyte Biology Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; ready ; 1995 ; Journal of Leukocyte Biology Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; ready ; 1995 ; Journal of Leukocyte Biology Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; ready ; 1996 ; Journal of Leukocyte Biology Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; ready ; 1996 ; Journal of Leukocyte Biology Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; ready ; 1997 ; Journal of Leukocyte Biology Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; ready ; 1997 ; Journal of Leukocyte Biology Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; ready ; 1998 ; Journal of Leukocyte Biology Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; ready ; 1998 ; Journal of Leukocyte Biology Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; ready ; 1999 ; Journal of Leukocyte Biology Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; ready ; 1999 ; Journal of Leukocyte Biology Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; ready ; 2000 ; Journal of Leukocyte Biology Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; ready ; 2000 ; Journal of Leukocyte Biology Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; ready ; 2001 ; Journal of Leukocyte Biology Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; ready ; 2001 ; Journal of Leukocyte Biology Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Leukocyte Biology Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; releasing ; 1984 ; Journal of Leukocyte Biology Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; releasing ; 1985 ; Journal of Leukocyte Biology Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; releasing ; 1985 ; Journal of Leukocyte Biology Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; releasing ; 1986 ; Journal of Leukocyte Biology Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; releasing ; 1986 ; Journal of Leukocyte Biology Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; releasing ; 1987 ; Journal of Leukocyte Biology Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; releasing ; 1987 ; Journal of Leukocyte Biology Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; releasing ; 1988 ; Journal of Leukocyte Biology Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; releasing ; 1988 ; Journal of Leukocyte Biology Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; releasing ; 1989 ; Journal of Leukocyte Biology Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; releasing ; 1989 ; Journal of Leukocyte Biology Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; releasing ; 1990 ; Journal of Leukocyte Biology Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; releasing ; 1990 ; Journal of Leukocyte Biology Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; releasing ; 1991 ; Journal of Leukocyte Biology Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; releasing ; 1991 ; Journal of Leukocyte Biology Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; releasing ; 1992 ; Journal of Leukocyte Biology Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; releasing ; 1992 ; Journal of Leukocyte Biology Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; releasing ; 1993 ; Journal of Leukocyte Biology Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; releasing ; 1993 ; Journal of Leukocyte Biology Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; releasing ; 1994 ; Journal of Leukocyte Biology Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; releasing ; 1994 ; Journal of Leukocyte Biology Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; releasing ; 1995 ; Journal of Leukocyte Biology Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; releasing ; 1995 ; Journal of Leukocyte Biology Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; releasing ; 1996 ; Journal of Leukocyte Biology Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; releasing ; 1996 ; Journal of Leukocyte Biology Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; releasing ; 1997 ; Journal of Leukocyte Biology Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; releasing ; 1997 ; Journal of Leukocyte Biology Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; releasing ; 1998 ; Journal of Leukocyte Biology Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; releasing ; 1998 ; Journal of Leukocyte Biology Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; releasing ; 1999 ; Journal of Leukocyte Biology Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; releasing ; 1999 ; Journal of Leukocyte Biology Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; releasing ; 2000 ; Journal of Leukocyte Biology Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; releasing ; 2000 ; Journal of Leukocyte Biology Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; releasing ; 2001 ; Journal of Leukocyte Biology Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; releasing ; 2001 ; Journal of Leukocyte Biology Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; releasing ; 2002 ; Journal of Leukocyte Biology Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; testing ; 2002 ; Journal of Leukocyte Biology Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Leukocyte Biology Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Leukocyte Biology Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; ready ; 2004 ; Journal of Leukocyte Biology Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; ready ; 2004 ; Journal of Leukocyte Biology Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; releasing ; 2003 ; Journal of Leukocyte Biology Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; releasing ; 2003 ; Journal of Leukocyte Biology Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; releasing ; 2004 ; Journal of Leukocyte Biology Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; releasing ; 2004 ; Journal of Leukocyte Biology Volume 76 ; 76 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Leukocyte Biology Volume 77 ; 77 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Leukocyte Biology Volume 78 ; 78 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Leukocyte Biology Volume 79 ; 79 >
