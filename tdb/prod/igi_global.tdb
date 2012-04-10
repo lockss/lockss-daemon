@@ -16,7 +16,8 @@
       eissn = 1533-7979 ;
       issnl = 1040-1628
     >
-
+	param[issn] = 1040-1658
+	
     au < exists ; 1988 ; Information Resources Management Journal (IRMJ) Volume 1 ; 1 > 
     au < exists ; 1989 ; Information Resources Management Journal (IRMJ) Volume 2 ; 2 > 
     au < exists ; 1990 ; Information Resources Management Journal (IRMJ) Volume 3 ; 3 > 
@@ -54,6 +55,7 @@
     >
   
     comment[0] = content not online yet
+    param[issn] = 1080-286x
     
     au < exists ; 1988 ; Information Technology Management Volume 1 ; 1 > 
     au < exists ; 1989 ; Information Technology Management Volume 2 ; 2 > 
@@ -92,6 +94,7 @@
       eissn = 2156-1702 ;
       issnl = 2156-1710
     >
+	param[issn] = 2156-1710
 
     au < exists ; 2012 ; International Journal of 3-D Information Modeling (IJ3DIM) Volume 1 ; 1 > 
 
@@ -105,7 +108,8 @@
       eissn = 1942-5368 ;
       issnl = 1942-535X
     >
-
+	param[issn] = 1942-535x
+	
     au < exists ; 2009 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 1 ; 1 > 
     au < exists ; 2010 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 2 ; 2 > 
     au < exists ; 2011 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 3 ; 3 > 
@@ -121,6 +125,7 @@
       eissn = 1947-9239 ;
       issnl = 1947-9220
     >
+	param[issn] = 1947-9220
 
     au < exists ; 2010 ; International Journal of Adaptive, Resilient and Autonomic Systems (IJARAS) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Adaptive, Resilient and Autonomic Systems (IJARAS) Volume 2 ; 2 > 
@@ -136,7 +141,8 @@
       eissn = 1947-878X ;
       issnl = 1947-8607
     >
-
+	param[issn] = 1947-8607
+	
     au < exists ; 2010 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 2 ; 2 > 
     au < expected ; 2012 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 3 ; 3 > 
@@ -151,7 +157,8 @@
       eissn = 1937-9668 ;
       issnl = 1937-965X
     >
-    
+	param[issn] = 1937-965x
+	    
     au < exists ; 2009 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 1 ; 1 > 
     au < exists ; 2010 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 2 ; 2 > 
     au < exists ; 2011 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 3 ; 3 > 
@@ -168,7 +175,8 @@
       eissn = 1943-0752 ;
       issnl = 1943-0744
     >
-
+	param[issn] = 1943-0744
+	
     au < exists ; 2009 ; International Journal of Agent Technologies and Systems (IJATS) Volume 1 ; 1 > 
     au < exists ; 2010 ; International Journal of Agent Technologies and Systems (IJATS) Volume 2 ; 2 > 
     au < exists ; 2011 ; International Journal of Agent Technologies and Systems (IJATS) Volume 3 ; 3 > 
@@ -184,6 +192,7 @@
       eissn = 1947-3206 ;
       issnl = 1947-3192
     >
+	param[issn] = 1947-3192
 
     au < exists ; 2010 ; International Journal of Agricultural and Environmental Information Systems (IJAEIS) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Agricultural and Environmental Information Systems (IJAEIS) Volume 2 ; 2 > 
@@ -199,7 +208,8 @@
       eissn = 1941-6245 ;
       issnl = 1941-6237
     >
-
+	param[issn] = 1941-6237
+	
     au < exists ; 2009 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 1 ; 1 > 
     au < exists ; 2010 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 2 ; 2 > 
     au < exists ; 2011 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 3 ; 3 > 
@@ -215,7 +225,8 @@
       eissn = 2160-9810 ;
       issnl = 2160-9802
     >
-
+	param[issn] = 2160-9802
+	
     au < exists ; 2012 ; International Journal of Applied Behavioral Economics (IJABE) Volume 1 ; 1 > 
 
   }
@@ -228,7 +239,8 @@
       eissn = 1942-3608 ;
       issnl = 1942-3594
     >
-
+	param[issn] = 1942-3594
+	
     au < exists ; 2010 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 2 ; 2 > 
     au < expected ; 2012 ; International Journal of Applied Evolutionary Computation (IJAEC) Volume 3 ; 3 > 
@@ -243,7 +255,8 @@
       eissn = 1947-9662 ;
       issnl = 1947-9654
     >
-
+	param[issn] = 1947-9654
+	
     au < exists ; 2010 ; International Journal of Applied Geospatial Research (IJAGR) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Applied Geospatial Research (IJAGR) Volume 2 ; 2 > 
     au < exists ; 2012 ; International Journal of Applied Geospatial Research (IJAGR) Volume 3 ; 3 > 
@@ -258,7 +271,8 @@
       eissn = 2155-4161 ;
       issnl = 2155-4153
     >
-
+	param[issn] = 2155-4153
+	
     au < exists ; 2012 ; International Journal of Applied Industrial Engineering (IJAIE) Volume 1 ; 1 > 
 
   }
@@ -271,7 +285,8 @@
       eissn = 1947-9581 ;
       issnl = 1947-9573
     >
-
+	param[issn] = 1947-9573
+	
     au < exists ; 2010 ; International Journal of Applied Logistics (IJAL) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Applied Logistics (IJAL) Volume 2 ; 2 > 
     au < exists ; 2012 ; International Journal of Applied Logistics (IJAL) Volume 3 ; 3 > 
@@ -286,7 +301,8 @@
       eissn = 1947-8291 ;
       issnl = 1947-8283
     >
-
+	param[issn] = 1947-8283
+	
     au < exists ; 2010 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 2 ; 2 > 
     au < expected ; 2012 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 3 ; 3 > 
@@ -301,6 +317,7 @@
       eissn = 2155-420X ;
       issnl = 2155-4196
     >
+	param[issn] = 2155-4196
     
     au < exists ; 2011 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 1 ; 1 > 
     au < expected ; 2012 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 2 ; 2 > 
@@ -316,7 +333,8 @@
       eissn = 1947-3079 ;
       issnl = 1947-3087
     >
-
+	param[issn] = 1947-3087
+	
     au < exists ; 2010 ; International Journal of Artificial Life Research (IJALR) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Artificial Life Research (IJALR) Volume 2 ; 2 > 
     au < expected ; 2012 ; International Journal of Artificial Life Research (IJALR) Volume 3 ; 3 > 
@@ -331,7 +349,8 @@
       eissn = 1947-9646 ;
       issnl = 1947-9638
     >
-
+	param[issn] = 1947-9638
+	
     au < exists ; 2010 ; International Journal of Asian Business and Information Management (IJABIM) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Asian Business and Information Management (IJABIM) Volume 2 ; 2 > 
     au < expected ; 2012 ; International Journal of Asian Business and Information Management (IJABIM) Volume 3 ; 3 > 
@@ -346,7 +365,8 @@
       eissn = 2155-6970 ;
       issnl = 2155-6962
     >
-    
+	param[issn] = 2155-6962
+	    
     au < exists ; 2011 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 1 ; 1 > 
     au < expected ; 2012 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 2 ; 2 > 
 
@@ -363,6 +383,7 @@
     >
 
     comment[0] = content not online yet
+	param[issn] = 1947-3575
     
     au < exists ; 2011 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 1 ; 1 > 
     au < exists ; 2012 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 2 ; 2 > 
@@ -379,7 +400,7 @@
     >
 
     comment[0] = forthcoming
-
+	param[issn] = 2161-1610
   }
 
   {
@@ -390,7 +411,8 @@
       eissn = 1548-064X ;
       issnl = 1548-0631
     >
-
+	param[issn] = 1548-0631
+	
     au < exists ; 2005 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 1 ; 1 > 
     au < exists ; 2006 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 2 ; 2 > 
     au < exists ; 2007 ; International Journal of Business Data Communications and Networking (IJBDCN) Volume 3 ; 3 > 
@@ -410,7 +432,8 @@
       eissn = 1947-3605 ;
       issnl = 1947-3591
     >
-
+	param[issn] = 1947-3591
+	
     au < exists ; 2010 ; International Journal of Business Intelligence Research (IJBIR) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Business Intelligence Research (IJBIR) Volume 2 ; 2 > 
     au < exists ; 2012 ; International Journal of Business Intelligence Research (IJBIR) Volume 3 ; 3 > 
@@ -424,7 +447,8 @@
       issn = 1548-0623 ;
       issnl = 1548-0623
     >
-
+	param[issn] = 1548-0623
+	
     au < exists ; 2005 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 1 ; 1 > 
     au < exists ; 2006 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 2 ; 2 > 
     au < exists ; 2007 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 3 ; 3 > 
@@ -439,7 +463,8 @@
       eissn = 2155-4129 ;
       issnl = 2155-4110
     >
-
+	param[issn] = 2155-4110
+	
     au < exists ; 2011 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 1 ; 1 > 
     au < exists ; 2012 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 2 ; 2 > 
 
@@ -453,7 +478,8 @@
       eissn = 2156-1826 ;
       issnl = 2156-1834
     >
-
+	param[issn] = 2156-1834
+	
     au < exists ; 2011 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 1 ; 1 > 
     au < exists ; 2012 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 2 ; 2 > 
 
