@@ -716,7 +716,7 @@
       eissn = 1947-9085 ;
       issnl = 1947-9077
     >
-	param[issn] = 1947-9077
+	param[journal_issn] = 1947-9077
 	
     au < exists ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 > 
@@ -732,7 +732,7 @@
       eissn = 1947-3508 ;
       issnl = 1947-3494
     >
-	param[issn] = 1947-3494
+	param[journal_issn] = 1947-3494
 	
     au < exists ; 2010 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 2 ; 2 > 
@@ -748,7 +748,7 @@
       eissn = 1539-3119 ;
       issnl = 1539-3100
     >
-	param[issn] = 1539-3100
+	param[journal_issn] = 1539-3100
 	
     au < exists ; 2003 ; International Journal of Distance Education Technologies (IJDET) Volume 1 ; 1 > 
     au < exists ; 2004 ; International Journal of Distance Education Technologies (IJDET) Volume 2 ; 2 > 
@@ -771,7 +771,7 @@
       eissn = 1947-3540 ;
       issnl = 1947-3532
     >
-	param[issn] = 1947-3532
+	param[journal_issn] = 1947-3532
 	    
     au < exists ; 2010 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 2 ; 2 > 
@@ -788,7 +788,7 @@
       eissn = 1937-9641 ;
       issnl = 1937-9633
     >
-	param[issn] = 1937-9633
+	param[journal_issn] = 1937-9633
 	
     au < exists ; 2009 ; International Journal of E-Adoption (IJEA) Volume 1 ; 1 > 
     au < exists ; 2010 ; International Journal of E-Adoption (IJEA) Volume 2 ; 2 > 
@@ -806,7 +806,7 @@
       eissn = 1548-114X ;
       issnl = 1548-1131
     >
-	param[issn] = 1548-1131
+	param[journal_issn] = 1548-1131
 	
     au < exists ; 2005 ; International Journal of E-Business Research (IJEBR) Volume 1 ; 1 > 
     au < exists ; 2006 ; International Journal of E-Business Research (IJEBR) Volume 2 ; 2 > 
@@ -828,7 +828,7 @@
       issnl = 1548-3673
     >
     
-     param[issn] = 1548-3673
+     param[journal_issn] = 1548-3673
      
      au < exists ; 2005 ; International Journal of e-Collaboration (IJeC) Volume 1 ; 1 > 
      au < exists ; 2006 ; International Journal of e-Collaboration (IJeC) Volume 2 ; 2 > 
@@ -849,7 +849,7 @@
       eissn = 1947-8593 ;
       issnl = 1947-8585
     >
-	param[issn] = 1947-8585
+	param[journal_issn] = 1947-8585
 	
     au < exists ; 2010 ; International Journal of E-Entrepreneurship and Innovation (IJEEI) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of E-Entrepreneurship and Innovation (IJEEI) Volume 2 ; 2 > 
@@ -866,7 +866,8 @@
       eissn = 1947-3168 ;
       issnl = 1947-315X
     >
-
+	param[journal_issn] = 1947-315x
+	
      au < exists ; 2010 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 1 ; 1 > 
      au < exists ; 2011 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 2 ; 2 > 
      au < exists ; 2012 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 3 ; 3 > 
@@ -881,7 +882,8 @@
       eissn = 1548-3894 ;
       issnl = 1548-3886
     >
-    
+	    param[journal_issn] = 1548-3886
+	    
         au < exists ; 2005 ; International Journal of Electronic Government Research (IJEGR) Volume 1 ; 1 > 
         au < exists ; 2006 ; International Journal of Electronic Government Research (IJEGR) Volume 2 ; 2 > 
         au < exists ; 2007 ; International Journal of Electronic Government Research (IJEGR) Volume 3 ; 3 > 
@@ -901,7 +903,8 @@
       eissn = 1947-3184 ;
       issnl = 1947-3176
     >
-
+	param[journal_issn] = 1947-3176
+		
     au < exists ; 2010 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 2 ; 2 > 
     au < exists ; 2012 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 3 ; 3 > 
@@ -917,7 +920,8 @@
       eissn = 2160-9543 ;
       issnl = 2160-9500
     >
-
+	param[journal_issn] = 2160-9500
+		
     au < exists ; 2012 ; International Journal of Energy Optimization and Engineering (IJEOE) Volume 1 ; 1 > 
 
 
@@ -931,7 +935,8 @@
       eissn = 1548-1123 ;
       issnl = 1548-1115
     >
-
+	param[journal_issn] = 1548-1115
+	
     au < exists ; 2005 ; International Journal of Enterprise Information Systems (IJEIS) Volume 1 ; 1 > 
     au < exists ; 2006 ; International Journal of Enterprise Information Systems (IJEIS) Volume 2 ; 2 > 
     au < exists ; 2007 ; International Journal of Enterprise Information Systems (IJEIS) Volume 3 ; 3 > 
@@ -951,7 +956,8 @@
       eissn = 2160-9926 ;
       issnl = 2160-9918
     >
-
+	param[journal_issn] = 2160-9918
+	
     au < exists ; 2012 ; International Journal of E-Planning Research (IJEPR) Volume 1 ; 1 > 
 
 
@@ -965,7 +971,8 @@
       eissn = 1947-914X ;
       issnl = 1947-9131
     >
-
+	param[journal_issn] = 1947-9131
+		
     au < exists ; 2010 ; International Journal of E-Politics (IJEP) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of E-Politics (IJEP) Volume 2 ; 2 > 
     au < exists ; 2012 ; International Journal of E-Politics (IJEP) Volume 3 ; 3 > 
@@ -981,7 +988,8 @@
       eissn = 1941-6288 ;
       issnl = 1941-627X
     >
-    
+	    param[journal_issn] = 1941-627x
+	      
         au < exists ; 2009 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 1 ; 1 > 
         au < exists ; 2010 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 2 ; 2 > 
         au < exists ; 2011 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 3 ; 3 > 
@@ -998,7 +1006,8 @@
       eissn = 2156-1761 ;
       issnl = 2156-177X
     >
-
+	param[journal_issn] = 2156-177X
+	
     au < exists ; 2011 ; International Journal of Fuzzy System Applications (IJFSA) Volume 1 ; 1 > 
     au < exists ; 2012 ; International Journal of Fuzzy System Applications (IJFSA) Volume 2 ; 2 > 
 
@@ -1013,7 +1022,8 @@
       eissn = 2155-6857 ;
       issnl = 2155-6849
     >
-
+	param[journal_issn] = 2155-6849
+		
     au < exists ; 2011 ; International Journal of Game-Based Learning (IJGBL) Volume 1 ; 1 > 
     au < exists ; 2012 ; International Journal of Game-Based Learning (IJGBL) Volume 2 ; 2 >   }
 
@@ -1025,7 +1035,8 @@
       eissn = 1942-3896 ;
       issnl = 1942-3888
     >
-
+	param[journal_issn] = 1942-3888
+		
     au < exists ; 2009 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 1 ; 1 > 
     au < exists ; 2010 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 2 ; 2 > 
     au < exists ; 2011 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 3 ; 3 > 
@@ -1041,7 +1052,8 @@
       eissn = 1947-8496 ;
       issnl = 1947-8488
     >
-
+	param[journal_issn] = 1947-8488
+		
     au < exists ; 2010 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 2 ; 2 > 
     au < exists ; 2012 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 3 ; 3 > 
@@ -1057,7 +1069,8 @@
       eissn = 1948-5026 ;
       issnl = 1948-5018
     >
-
+	param[journal_issn] = 1948-5018
+	
     au < exists ; 2010 ; International Journal of Green Computing (IJGC) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Green Computing (IJGC) Volume 2 ; 2 > 
     au < exists ; 2012 ; International Journal of Green Computing (IJGC) Volume 3 ; 3 > 
@@ -1072,7 +1085,8 @@
       eissn = 1938-0267 ;
       issnl = 1938-0259
     >
-    
+ 	param[journal_issn] = 1938-0259
+ 	   
     au < exists ; 2009 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 1 ; 1 > 
     au < exists ; 2010 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 2 ; 2 > 
     au < exists ; 2011 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 3 ; 3 > 
@@ -1088,7 +1102,8 @@
       eissn = 1947-9166 ;
       issnl = 1947-9158
     >
-
+	param[journal_issn] = 1947-9158
+	
     au < exists ; 2010 ; International Journal of Handheld Computing Research (IJHCR) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Handheld Computing Research (IJHCR) Volume 2 ; 2 > 
     au < exists ; 2012 ; International Journal of Handheld Computing Research (IJHCR) Volume 3 ; 3 > 
@@ -1104,7 +1119,8 @@
       eissn = 1938-0224 ;
       issnl = 1938-0216
     >
-
+	param[journal_issn] = 1938-0216
+	
     au < exists ; 2009 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 1 ; 1 > 
     au < exists ; 2010 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 2 ; 2 > 
     au < exists ; 2011 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 3 ; 3 > 
@@ -1120,7 +1136,8 @@
       eissn = 1555-340X ;
       issnl = 1555-3396
     >
-
+	param[journal_issn] = 1555-3396
+		
     au < exists ; 2006 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 1 ; 1 > 
     au < exists ; 2007 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 2 ; 2 > 
     au < exists ; 2008 ; International Journal of Healthcare Information Systems and Informatics (IJHISI) Volume 3 ; 3 > 
@@ -1139,7 +1156,8 @@
       eissn = 1947-3486 ;
       issnl = 1947-3478
     >
-
+	param[journal_issn] = 1947-3478
+	
     au < exists ; 2010 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 2 ; 2 > 
     au < exists ; 2012 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 3 ; 3 > 
@@ -1155,7 +1173,8 @@
       eissn = 1947-3427 ;
       issnl = 1947-3419
     >
-
+	param[journal_issn] = 1947-3419
+		
     au < exists ; 2010 ; International Journal of ICT Research and Development in Africa (IJICTRDA) Volume 1 ; 1 > 
     au < exists ; 2011 ; International Journal of ICT Research and Development in Africa (IJICTRDA) Volume 2 ; 2 > 
     au < expected ; 2012 ; International Journal of ICT Research and Development in Africa (IJICTRDA) Volume 3 ; 3 > 
@@ -1171,7 +1190,8 @@
       eissn = 1550-1337 ;
       issnl = 1550-1876
     >
-
+	param[journal_issn] = 1550-1876
+	
     au < exists ; 2005 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 1 ; 1 > 
     au < exists ; 2006 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 2 ; 2 > 
     au < exists ; 2007 ; International Journal of Information and Communication Technology Education (IJICTE) Volume 3 ; 3 > 
@@ -1192,7 +1212,8 @@
       eissn = 1935-567X ;
       issnl = 1935-5661
     >
-    
+	param[journal_issn] = 1935-5661
+	    
     au < exists ; 2009 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 1 ; 1 > 
     au < exists ; 2010 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 2 ; 2 > 
     au < exists ; 2011 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 3 ; 3 > 
@@ -1208,7 +1229,8 @@
       eissn = 2155-6385 ;
       issnl = 2155-6377
     >
-
+	param[journal_issn] = 2155-6377
+	
     au < exists ; 2011 ; International Journal of Information Retrieval Research (IJIRR) Volume 1 ; 1 > 
     au < expected ; 2012 ; International Journal of Information Retrieval Research (IJIRR) Volume 2 ; 2 > 
 

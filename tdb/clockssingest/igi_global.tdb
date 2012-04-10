@@ -479,7 +479,8 @@
       eissn = 2156-1826 ;
       issnl = 2156-1834
     >
-
+	param[journal_issn] = 2156-1934
+		
     au < testing ; exists ; 2011 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 1 ; 1 > 
     au < testing ; exists ; 2012 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 2 ; 2 > 
 
@@ -493,7 +494,8 @@
       eissn = 1557-3966 ;
       issnl = 1557-3958
     >
-
+	param[journal_issn] = 1557-3958
+	
     au < exists ; exists ; 2007 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 1 ; 1 > 
     au < exists ; exists ; 2008 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 2 ; 2 > 
     au < exists ; exists ; 2009 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 3 ; 3 > 
@@ -511,7 +513,8 @@
       eissn = 1947-3141 ;
       issnl = 1947-3133
     >
-
+	param[journal_issn] = 1947-3133
+		
     au < exists ; exists ; 2010 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 1 ; 1 > 
     au < testing ; exists ; 2011 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 2 ; 2 > 
     au < expected ; exists ; 2012 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 3 ; 3 > 
@@ -526,7 +529,8 @@
       eissn = 2155-6989 ;
       issnl = 2155-6997
     >
-
+	param[journal_issn] = 2155-6997
+		
     au < testing ; exists ; 2011 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 1 ; 1 > 
     au < expected ; exists ; 2012 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 2 ; 2 > 
 
@@ -540,7 +544,8 @@
       eissn = 2155-7101 ;
       issnl = 2155-7098
     >
-
+	param[journal_issn] = 2155-7098
+		
     au < testing ; exists ; 2011 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 1 ; 1 > 
     au < expected ; exists ; 2012 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 2 ; 2 > 
 
@@ -564,7 +569,8 @@
       eissn = 1947-3125 ;
       issnl = 1947-3117
     >
-
+	param[journal_issn] = 1947-3117
+		
     au < exists ; exists ; 2010 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 1 ; 1 > 
     au < testing ; exists ; 2011 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 2 ; 2 > 
     au < expected ; exists ; 2012 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 3 ; 3 > 
