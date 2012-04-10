@@ -16437,8 +16437,8 @@
 
 
         au < HighWireStrVolPlugin ; down ; 2004-2005 ; Journal for the Study of the New Testament Volume 27 ; 27 >
-        au < HighWireStrVolPlugin ; down ; 2005-2006 ; Journal for the Study of the New Testament Volume 29 ; 29 >
-        au < HighWireStrVolPlugin ; down ; 2006-2007 ; Journal for the Study of the New Testament Volume 30 ; 30 >
+        au < HighWireStrVolPlugin ; down ; 2006-2007 ; Journal for the Study of the New Testament Volume 29 ; 29 >
+        au < HighWireStrVolPlugin ; down ; 2007-2008 ; Journal for the Study of the New Testament Volume 30 ; 30 >
 
       }
 
@@ -16475,7 +16475,7 @@
         au < manifest ; 2002-2003 ; Journal for the Study of the New Testament Volume 25 ; 25 >
         au < manifest ; 2003-2004 ; Journal for the Study of the New Testament Volume 26 ; 26 >
         au < doNotProcess ; 2004-2005 ; Journal for the Study of the New Testament Volume 27 ; 27 >
-        au < doNotProcess ; 2005-2006 ; Journal for the Study of the New Testament Volume 28 ; 28 >
+        au < manifest ; 2005-2006 ; Journal for the Study of the New Testament Volume 28 ; 28 >
         au < doNotProcess ; 2006-2007 ; Journal for the Study of the New Testament Volume 29 ; 29 >
         au < doNotProcess ; 2007-2008 ; Journal for the Study of the New Testament Volume 30 ; 30 >
         au < manifest ; 2008-2009 ; Journal for the Study of the New Testament Volume 31 ; 31 >
@@ -22633,10 +22633,10 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
 
         au < HighWireStrVolPlugin ; down ; 2001 ; Journal of Management Volume 27 ; 27 >
-        au < HighWireStrVolPlugin ; down ; 2003 ; Journal of Management Volume 31 ; 31 >
-        au < HighWireStrVolPlugin ; down ; 2004 ; Journal of Management Volume 32 ; 32 >
-        au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Management Volume 33 ; 33 >
-        au < HighWirePressPlugin ; down ; 2006 ; Journal of Management Volume 34 ; 34 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Management Volume 31 ; 31 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Management Volume 32 ; 32 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Management Volume 33 ; 33 >
+        au < HighWirePressPlugin ; down ; 2008 ; Journal of Management Volume 34 ; 34 >
         au < HighWirePressPlugin ; down ; 2009 ; Journal of Management Volume 35 ; 35 >
 
       }
@@ -23299,7 +23299,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jpo.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doesNotExist ; 0 ; Journal of Pediatric Oncology Nursing Volume 1 ; 1 >
+        au < doesNotExist ; 1984 ; Journal of Pediatric Oncology Nursing Volume 1 ; 1 >
         au < manifest ; 1985 ; Journal of Pediatric Oncology Nursing Volume 2 ; 2 >
         au < manifest ; 1986 ; Journal of Pediatric Oncology Nursing Volume 3 ; 3 >
         au < manifest ; 1987 ; Journal of Pediatric Oncology Nursing Volume 4 ; 4 >
@@ -23367,13 +23367,13 @@ comment[mpj] = now published by Brill
         au < manifest ; 1990 ; Journal of Pharmacy Practice Volume 3 ; 3 >
         au < manifest ; 1991 ; Journal of Pharmacy Practice Volume 4 ; 4 >
         au < manifest ; 1992 ; Journal of Pharmacy Practice Volume 5 ; 5 >
-        au < doesNotExist ; 0 ; Journal of Pharmacy Practice Volume 6 ; 6 >
-        au < doesNotExist ; 0 ; Journal of Pharmacy Practice Volume 7 ; 7 >
+        au < doesNotExist ; 1993 ; Journal of Pharmacy Practice Volume 6 ; 6 >
+        au < doesNotExist ; 1994 ; Journal of Pharmacy Practice Volume 7 ; 7 >
         au < manifest ; 1995 ; Journal of Pharmacy Practice Volume 8 ; 8 >
         au < manifest ; 1996 ; Journal of Pharmacy Practice Volume 9 ; 9 >
         au < manifest ; 1997 ; Journal of Pharmacy Practice Volume 10 ; 10 >
-        au < doesNotExist ; 0 ; Journal of Pharmacy Practice Volume 11 ; 11 >
-        au < doesNotExist ; 0 ; Journal of Pharmacy Practice Volume 12 ; 12 >
+        au < doesNotExist ; 1998 ; Journal of Pharmacy Practice Volume 11 ; 11 >
+        au < doesNotExist ; 1999 ; Journal of Pharmacy Practice Volume 12 ; 12 >
         au < manifest ; 2000 ; Journal of Pharmacy Practice Volume 13 ; 13 >
         au < manifest ; 2001 ; Journal of Pharmacy Practice Volume 14 ; 14 >
         au < manifest ; 2002 ; Journal of Pharmacy Practice Volume 15 ; 15 >

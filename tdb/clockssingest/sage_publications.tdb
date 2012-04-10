@@ -19138,7 +19138,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Journal of Industrial Textiles Volume 39 ; 39 ; >
       au < released ; crawling ; 2010-2011 ; Journal of Industrial Textiles Volume 40 ; 40 ; >
       au < released ; crawling ; 2011-2012 ; Journal of Industrial Textiles Volume 41 ; 41 ; >
-      au < expected ; exists ; 2012 ; Journal of Industrial Textiles Volume 42 ; 42 ; >
+      au < expected ; exists ; 2012-2013 ; Journal of Industrial Textiles Volume 42 ; 42 ; >
 
     }
 
@@ -20501,7 +20501,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1984 ; Journal of Pediatric Oncology Nursing Volume 1 ; 1 ; >
+      au < doesNotExist ; doesNotExist ; 1984 ; Journal of Pediatric Oncology Nursing Volume 1 ; 1 ; >
       au < manifest ; exists ; 1985 ; Journal of Pediatric Oncology Nursing Volume 2 ; 2 ; >
       au < manifest ; exists ; 1986 ; Journal of Pediatric Oncology Nursing Volume 3 ; 3 ; >
       au < manifest ; exists ; 1987 ; Journal of Pediatric Oncology Nursing Volume 4 ; 4 ; >
@@ -20569,8 +20569,8 @@
       au < manifest ; exists ; 1995 ; Journal of Pharmacy Practice Volume 8 ; 8 ; >
       au < manifest ; exists ; 1996 ; Journal of Pharmacy Practice Volume 9 ; 9 ; >
       au < manifest ; exists ; 1997 ; Journal of Pharmacy Practice Volume 10 ; 10 ; >
-      au < exists ; exists ; 1998 ; Journal of Pharmacy Practice Volume 11 ; 11 ; >
-      au < exists ; exists ; 1999 ; Journal of Pharmacy Practice Volume 12 ; 12 ; >
+      au < doesNotExist ; doesNotExist ; 1998 ; Journal of Pharmacy Practice Volume 11 ; 11 ; >
+      au < doesNotExist ; doesNotExist ; 1999 ; Journal of Pharmacy Practice Volume 12 ; 12 ; >
       au < manifest ; exists ; 2000 ; Journal of Pharmacy Practice Volume 13 ; 13 ; >
       au < manifest ; exists ; 2001 ; Journal of Pharmacy Practice Volume 14 ; 14 ; >
       au < manifest ; exists ; 2002 ; Journal of Pharmacy Practice Volume 15 ; 15 ; >
@@ -22619,7 +22619,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Transformative Education Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Transformative Education Volume 7 ; 7 ; >
       au < released ; manifest ; 2010 ; Journal of Transformative Education Volume 8 ; 8 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; Journal of Transformative Education Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2011 ; Journal of Transformative Education Volume 9 ; 9 ; >
       au < expected ; exists ; 2012 ; Journal of Transformative Education Volume 10 ; 10 ; >
 
     }
@@ -22739,21 +22739,21 @@
       au < manifest ; exists ; 1987-1988 ; Journal of Urban History Volume 14 ; 14 ; >
       au < manifest ; exists ; 1988-1989 ; Journal of Urban History Volume 15 ; 15 ; >
       au < manifest ; exists ; 1989-1990 ; Journal of Urban History Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1989-1990 ; Journal of Urban History Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1990-1991 ; Journal of Urban History Volume 18 ; 18 ; >
-      au < manifest ; exists ; 1991-1992 ; Journal of Urban History Volume 19 ; 19 ; >
-      au < manifest ; exists ; 1992-1993 ; Journal of Urban History Volume 20 ; 20 ; >
-      au < manifest ; exists ; 1993-1994 ; Journal of Urban History Volume 21 ; 21 ; >
-      au < manifest ; exists ; 1994-1995 ; Journal of Urban History Volume 22 ; 22 ; >
-      au < manifest ; exists ; 1995-1996 ; Journal of Urban History Volume 23 ; 23 ; >
-      au < manifest ; exists ; 1996-1997 ; Journal of Urban History Volume 24 ; 24 ; >
-      au < manifest ; exists ; 1997-1998 ; Journal of Urban History Volume 25 ; 25 ; >
-      au < manifest ; exists ; 1998-1999 ; Journal of Urban History Volume 26 ; 26 ; >
-      au < manifest ; exists ; 1999-2000 ; Journal of Urban History Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2000-2001 ; Journal of Urban History Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2001-2002 ; Journal of Urban History Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2002-2003 ; Journal of Urban History Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2003-2004-2005 ; Journal of Urban History Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1990-1991 ; Journal of Urban History Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1991-1992 ; Journal of Urban History Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1992-1993 ; Journal of Urban History Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1993-1994 ; Journal of Urban History Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1994-1995 ; Journal of Urban History Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1995-1996 ; Journal of Urban History Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1996-1997 ; Journal of Urban History Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1997-1998 ; Journal of Urban History Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1998-1999 ; Journal of Urban History Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1999-2000 ; Journal of Urban History Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2000-2001 ; Journal of Urban History Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2001-2002 ; Journal of Urban History Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2002-2003 ; Journal of Urban History Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2003-2004 ; Journal of Urban History Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2004-2005 ; Journal of Urban History Volume 31 ; 31 ; >
       au < manifest ; exists ; 2005-2006 ; Journal of Urban History Volume 32 ; 32 ; >
       au < manifest ; exists ; 2006-2007 ; Journal of Urban History Volume 33 ; 33 ; >
       au < manifest ; exists ; 2007-2008 ; Journal of Urban History Volume 34 ; 34 ; >
