@@ -4217,6 +4217,8 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ehr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    
+    comment[v120] = Exists via H20
 
     au < HighWirePressH20Plugin ; manifest ; 1886 ; English Historical Review Volume I ; I >
     au < HighWirePressH20Plugin ; manifest ; 1887 ; English Historical Review Volume II ; II >
