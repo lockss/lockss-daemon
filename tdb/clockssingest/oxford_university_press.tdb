@@ -1056,8 +1056,9 @@
     au < released ; crawling ; 2010 ; Annals of Botany Volume 105 ; 105 ; >
     au < released ; crawling ; 2010 ; Annals of Botany Volume 106 ; 106 ; >
     au < released ; crawling ; 2011 ; Annals of Botany Volume 107 ; 107 ; >
-    au < crawling ; exists ; 2012 ; Annals of Botany Volume 108 ; 108 ; >
-
+    au < crawling ; exists ; 2011 ; Annals of Botany Volume 108 ; 108 ; >
+    au < manifest ; exists ; 2012 ; Annals of Botany Volume 109 ; 109 ; >
+    au < expected ; exists ; 2012 ; Annals of Botany Volume 110 ; 110 ; >
     }
 
   }
@@ -8060,7 +8061,8 @@
     au < manifest ; exists ; 2005 ; International Mathematics Research Surveys Volume 2005 ; 2005 ; >
     au < manifest ; exists ; 2006 ; International Mathematics Research Surveys Volume 2006 ; 2006 ; >
     au < manifest ; exists ; 2007 ; International Mathematics Research Surveys Volume 2007 ; 2007 ; >
-
+    au < doesNotExist ; doesNotExist ; 2008 ; International Mathematics Research Surveys Volume 2008 ; 2008 ; >
+    
   }
 
   {
@@ -8842,8 +8844,9 @@
     au < released ; crawling ; 2010 ; The Journal of Biochemistry Volume 147 ; 147 ; >
     au < released ; crawling ; 2010 ; The Journal of Biochemistry Volume 148 ; 148 ; >
     au < released ; crawling ; 2011 ; The Journal of Biochemistry Volume 149 ; 149 ; >
-    au < crawling ; exists ; 2012 ; The Journal of Biochemistry Volume 150 ; 150 ; >
-
+    au < crawling ; exists ; 2011 ; The Journal of Biochemistry Volume 150 ; 150 ; >
+    au < manifest ; exists ; 2012 ; The Journal of Biochemistry Volume 151 ; 151 ; >
+    au < exists ; exists ; 2012 ; The Journal of Biochemistry Volume 152 ; 152 ; >
     }
 
   }
@@ -10609,8 +10612,10 @@
     au < released ; crawling ; 2010 ; Journal of the London Mathematical Society Volume 81 ; 81 ; >
     au < wanted ; exists ; 2010 ; Journal of the London Mathematical Society Volume 82 ; 82 ; >
     au < released ; crawling ; 2011 ; Journal of the London Mathematical Society Volume 83 ; 83 ; >
-    au < crawling ; exists ; 2012 ; Journal of the London Mathematical Society Volume 84 ; 84 ; >
-
+    au < crawling ; exists ; 2011 ; Journal of the London Mathematical Society Volume 84 ; 84 ; >
+    au < manifest ; exists ; 2012 ; Journal of the London Mathematical Society Volume 85 ; 85 ; >
+    au < expected ; exists ; 2012 ; Journal of the London Mathematical Society Volume 86 ; 86 ; >
+    
     }
 
   }
