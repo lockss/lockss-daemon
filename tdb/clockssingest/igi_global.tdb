@@ -1200,7 +1200,8 @@
       eissn = 1935-567X ;
       issnl = 1935-5661
     >
-
+	param[journal_issn] = 1935-5661
+	
     au < exists ; exists ; 2009 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 1 ; 1 > 
     au < exists ; exists ; 2010 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 2 ; 2 > 
     au < testing ; exists ; 2011 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 3 ; 3 > 
@@ -1216,7 +1217,8 @@
       eissn = 2155-6385 ;
       issnl = 2155-6377
     >
-
+	param[journal_issn] = 2155-6377
+	
     au < testing ; exists ; 2011 ; International Journal of Information Retrieval Research (IJIRR) Volume 1 ; 1 > 
     au < expected ; exists ; 2012 ; International Journal of Information Retrieval Research (IJIRR) Volume 2 ; 2 > 
 
@@ -1230,7 +1232,8 @@
       eissn = 1930-1669 ;
       issnl = 1930-1650
     >
-
+	param[journal_issn] = 1930-1650
+	
     au < exists ; exists ; 2007 ; International Journal of Information Security and Privacy (IJISP) Volume 1 ; 1 > 
     au < exists ; exists ; 2008 ; International Journal of Information Security and Privacy (IJISP) Volume 2 ; 2 > 
     au < exists ; exists ; 2009 ; International Journal of Information Security and Privacy (IJISP) Volume 3 ; 3 > 
@@ -1248,7 +1251,8 @@
       eissn = 1947-8194 ;
       issnl = 1947-8186
     >
-
+	param[journal_issn] = 1947-8186
+	
     au < exists ; exists ; 2010 ; International Journal of Information System Modeling and Design (IJISMD) Volume 1 ; 1 > 
     au < testing ; exists ; 2011 ; International Journal of Information System Modeling and Design (IJISMD) Volume 2 ; 2 > 
     au < testing ; exists ; 2012 ; International Journal of Information System Modeling and Design (IJISMD) Volume 3 ; 3 > 
@@ -1263,7 +1267,8 @@
       eissn = 1941-8698 ;
       issnl = 1941-868X
     >
-
+	param[journal_issn] = 1941-868X
+	
     au < exists ; exists ; 2010 ; International Journal of Information Systems and Social Change (IJISSC) Volume 1 ; 1 > 
     au < testing ; exists ; 2011 ; International Journal of Information Systems and Social Change (IJISSC) Volume 2 ; 2 > 
     au < testing ; exists ; 2012 ; International Journal of Information Systems and Social Change (IJISSC) Volume 3 ; 3 > 
@@ -1278,7 +1283,8 @@
       eissn = 1935-5734 ;
       issnl = 1935-5726
     >
-
+	param[journal_issn] = 1935-5726
+	
     au < exists ; exists ; 2008 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 1 ; 1 > 
     au < exists ; exists ; 2009 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 2 ; 2 > 
     au < exists ; exists ; 2010 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 3 ; 3 > 
@@ -1295,7 +1301,8 @@
       eissn = 1937-9420 ;
       issnl = 1937-9390
     >
-
+	param[journal_issn] = 1937-9390
+	
     au < exists ; exists ; 2009 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 1 ; 1 > 
     au < exists ; exists ; 2010 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 2 ; 2 > 
     au < testing ; exists ; 2011 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 3 ; 3 > 
@@ -1311,7 +1318,8 @@
       eissn = 1935-5696 ;
       issnl = 1935-5688
     >
-
+	param[journal_issn] = 1935-5688
+	
     au < exists ; exists ; 2009 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 1 ; 1 > 
     au < exists ; exists ; 2010 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 2 ; 2 > 
     au < testing ; exists ; 2011 ; International Journal of Information Systems in the Service Sector (IJISSS) Volume 3 ; 3 > 
@@ -1327,7 +1335,8 @@
       eissn = 1935-5718 ;
       issnl = 1935-570X
     >
-
+	param[journal_issn] = 1935-570X
+	
     au < exists ; exists ; 2008 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 1 ; 1 > 
     au < exists ; exists ; 2009 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 2 ; 2 > 
     au < exists ; exists ; 2010 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 3 ; 3 > 
@@ -1344,7 +1353,8 @@
       eissn = 1554-1053 ;
       issnl = 1554-1045
     >
-
+	param[journal_issn] = 1554-1045
+	
     au < exists ; exists ; 2006 ; International Journal of Information Technology and Web Engineering (IJITWE) Volume 1 ; 1 > 
     au < exists ; exists ; 2007 ; International Journal of Information Technology and Web Engineering (IJITWE) Volume 2 ; 2 > 
     au < exists ; exists ; 2008 ; International Journal of Information Technology and Web Engineering (IJITWE) Volume 3 ; 3 > 
@@ -1363,7 +1373,8 @@
       eissn = 1938-0240 ;
       issnl = 1938-0232
     >
-
+	param[journal_issn] = 1938-0232
+	
     au < testing ; exists ; 2010 ; International Journal of Information Technology Project Management (IJITPM) Volume 1 ; 1 > 
     au < testing ; exists ; 2011 ; International Journal of Information Technology Project Management (IJITPM) Volume 2 ; 2 > 
     au < testing ; exists ; 2012 ; International Journal of Information Technology Project Management (IJITPM) Volume 3 ; 3 > 
@@ -1378,7 +1389,8 @@
       eissn = 1947-8313 ;
       issnl = 1947-8305
     >
-
+	param[journal_issn] = 1947-8305
+	
     au < testing ; exists ; 2010 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 1 ; 1 > 
     au < testing ; exists ; 2011 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 2 ; 2 > 
     au < testing ; exists ; 2012 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 3 ; 3 > 
@@ -1393,7 +1405,8 @@
       eissn = 1548-3665 ;
       issnl = 1548-3657
     >
-
+	param[journal_issn] = 1548-3657
+	
     au < exists ; exists ; 2005 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 1 ; 1 > 
     au < exists ; exists ; 2006 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 2 ; 2 > 
     au < exists ; exists ; 2007 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 3 ; 3 > 
@@ -1413,7 +1426,8 @@
       eissn = 2156-1656 ;
       issnl = 2156-1664
     >
-
+	param[journal_issn] = 2156-1664
+	
     au < testing ; exists ; 2011 ; International Journal of Intelligent Mechatronics and Robotics (IJIMR) Volume 1 ; 1 > 
     au < testing ; exists ; 2012 ; International Journal of Intelligent Mechatronics and Robotics (IJIMR) Volume 2 ; 2 > 
 
@@ -1427,7 +1441,8 @@
       eissn = 2155-4226 ;
       issnl = 2155-4218
     >
-
+	param[journal_issn] = 2155-4218
+	
     au < testing ; exists ; 2011 ; International Journal of Interactive Communication Systems and Technologies (IJICST) Volume 1 ; 1 > 
     au < expected ; exists ; 2012 ; International Journal of Interactive Communication Systems and Technologies (IJICST) Volume 2 ; 2 > 
 
@@ -1441,7 +1456,8 @@
       eissn = 1941-8671 ;
       issnl = 1941-8663
     >
-
+	param[journal_issn] = 1941-8663
+	
     au < testing ; exists ; 2009 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 1 ; 1 > 
     au < testing ; exists ; 2010 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 2 ; 2 > 
     au < testing ; exists ; 2011 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 3 ; 3 > 
@@ -1457,7 +1473,8 @@
       eissn = 1539-3054 ;
       issnl = 1539-3062
     >
-
+	param[journal_issn] = 1539-3062
+	
     au < exists ; exists ; 2003 ; International Journal of IT Standards and Standardization Research (IJITSR) Volume 1 ; 1 > 
     au < exists ; exists ; 2004 ; International Journal of IT Standards and Standardization Research (IJITSR) Volume 2 ; 2 > 
     au < exists ; exists ; 2005 ; International Journal of IT Standards and Standardization Research (IJITSR) Volume 3 ; 3 > 
@@ -1479,7 +1496,8 @@
       eissn = 1947-962X ;
       issnl = 1947-9611
     >
-
+	param[journal_issn] = 1947-9611
+	
     au < testing ; exists ; 2010 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 1 ; 1 > 
     au < testing ; exists ; 2011 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 2 ; 2 > 
     au < expected ; exists ; 2012 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 3 ; 3 > 
@@ -1494,7 +1512,8 @@
       eissn = 1947-8216 ;
       issnl = 1947-8208
     >
-
+	param[journal_issn] = 1947-8208
+	
     au < testing ; exists ; 2010 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 1 ; 1 > 
     au < testing ; exists ; 2011 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 2 ; 2 > 
     au < testing ; exists ; 2012 ; International Journal of Knowledge and Systems Science (IJKSS) Volume 3 ; 3 > 
@@ -1509,7 +1528,8 @@
       eissn = 1947-9123 ;
       issnl = 1947-9115
     >
-
+	param[journal_issn] = 1947-9115
+	
     au < testing ; exists ; 2010 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 1 ; 1 > 
     au < testing ; exists ; 2011 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 2 ; 2 > 
     au < expected ; exists ; 2012 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 3 ; 3 > 
@@ -1524,7 +1544,8 @@
       eissn = 1548-0658 ;
       issnl = 1548-0666
     >
-
+	param[journal_issn] = 1548-0666
+	
     au < exists ; exists ; 2005 ; International Journal of Knowledge Management (IJKM) Volume 1 ; 1 > 
     au < exists ; exists ; 2006 ; International Journal of Knowledge Management (IJKM) Volume 2 ; 2 > 
     au < exists ; exists ; 2007 ; International Journal of Knowledge Management (IJKM) Volume 3 ; 3 > 
@@ -1544,7 +1565,8 @@
       eissn = 1947-8437 ;
       issnl = 1947-8429
     >
-
+	param[journal_issn] = 1947-8429
+	
     au < testing ; exists ; 2010 ; International Journal of Knowledge Society Research (IJKSR) Volume 1 ; 1 > 
     au < testing ; exists ; 2011 ; International Journal of Knowledge Society Research (IJKSR) Volume 2 ; 2 > 
     au < testing ; exists ; 2012 ; International Journal of Knowledge Society Research (IJKSR) Volume 3 ; 3 > 
@@ -1559,7 +1581,8 @@
       eissn = 2155-6407 ;
       issnl = 2155-6393
     >
-
+	param[journal_issn] = 2155-6393
+	
     au < testing ; exists ; 2011 ; International Journal of Knowledge-Based Organizations (IJKBO) Volume 1 ; 1 > 
     au < testing ; exists ; 2012 ; International Journal of Knowledge-Based Organizations (IJKBO) Volume 2 ; 2 > 
 
@@ -1573,7 +1596,8 @@
       eissn = 2156-1672 ;
       issnl = 2156-1680
     >
-
+	param[journal_issn] = 2156-1680
+	
     au < testing ; exists ; 2011 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 1 ; 1 > 
     au < testing ; exists ; 2012 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 2 ; 2 > 
 
