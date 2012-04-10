@@ -245,8 +245,8 @@ titlesNew = isNotIn(titlesReleasing, titlesReleased)
 publishersReleasing = nonRepeated(map(lambda x: x[PUBLISHER], ausReleasing))
 publishersReleased = nonRepeated(map(lambda x: x[PUBLISHER], ausReleased))
 publishersNew = isNotIn(publishersReleasing, publishersReleased)
-publishersNonAlliance = nonRepeated(map(lambda x: x[PUBLISHER], filter(lambda x: x[PLUGIN] in NON_ALLIANCE, ausAll)))
-publishersAlliance = nonRepeated(map(lambda x: x[PUBLISHER], filter(lambda x: x[PLUGIN] not in NON_ALLIANCE, ausAll)))
+publishersNonAlliance = nonRepeated(map(lambda x: x[PUBLISHER], filter(lambda x: x[PLUGIN] in NON_ALLIANCE, ausReleasing)))
+publishersAlliance = nonRepeated(map(lambda x: x[PUBLISHER], filter(lambda x: x[PLUGIN] not in NON_ALLIANCE, ausReleasing)))
 
 # Build range structure
 lst = buildIntervals(ausReleasing)
