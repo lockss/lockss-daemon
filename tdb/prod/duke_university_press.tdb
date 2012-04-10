@@ -551,18 +551,18 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://genre.dukejournals.org/
 
-      au < releasing ; 2000 ; Genre: Forms of Discourse and Culture Volume 33 ; 33 >
-      au < releasing ; 2001 ; Genre: Forms of Discourse and Culture Volume 34 ; 34 >
-      au < releasing ; 2002 ; Genre: Forms of Discourse and Culture Volume 35 ; 35 >
-      au < releasing ; 2003 ; Genre: Forms of Discourse and Culture Volume 36 ; 36 >
-      au < releasing ; 2004 ; Genre: Forms of Discourse and Culture Volume 37 ; 37 >
-      au < releasing ; 2005 ; Genre: Forms of Discourse and Culture Volume 38 ; 38 >
-      au < releasing ; 2006 ; Genre: Forms of Discourse and Culture Volume 39 ; 39 >
-      au < releasing ; 2007 ; Genre: Forms of Discourse and Culture Volume 40 ; 40 >
-      au < releasing ; 2008 ; Genre: Forms of Discourse and Culture Volume 41 ; 41 >
-      au < releasing ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 >
-      au < releasing ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 >
-      au < releasing ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 >
+      au < released ; 2000 ; Genre: Forms of Discourse and Culture Volume 33 ; 33 >
+      au < released ; 2001 ; Genre: Forms of Discourse and Culture Volume 34 ; 34 >
+      au < released ; 2002 ; Genre: Forms of Discourse and Culture Volume 35 ; 35 >
+      au < released ; 2003 ; Genre: Forms of Discourse and Culture Volume 36 ; 36 >
+      au < released ; 2004 ; Genre: Forms of Discourse and Culture Volume 37 ; 37 >
+      au < released ; 2005 ; Genre: Forms of Discourse and Culture Volume 38 ; 38 >
+      au < released ; 2006 ; Genre: Forms of Discourse and Culture Volume 39 ; 39 >
+      au < released ; 2007 ; Genre: Forms of Discourse and Culture Volume 40 ; 40 >
+      au < released ; 2008 ; Genre: Forms of Discourse and Culture Volume 41 ; 41 >
+      au < released ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 >
+      au < released ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 >
+      au < released ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 >
       au < expected ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 >
       
     }
@@ -890,13 +890,13 @@
       param[base_url] = http://minnesotareview.dukejournals.org/
       implicit < status ; year ; name ; param[volume_name] >  
       
-      au < releasing ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
+      au < released ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
+      au < released ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
+      au < released ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
+      au < released ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
+      au < released ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
+      au < released ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
+      au < released ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
       au < expected ; 2012 ; The Minnesota Review Volume 2012 ; 2012 >
       
     }
