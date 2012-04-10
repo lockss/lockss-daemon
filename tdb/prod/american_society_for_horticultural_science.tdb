@@ -73,13 +73,13 @@
       au < testing ; 2003 ; HortTechnology Volume 13 ; 13 >
       au < testing ; 2004 ; HortTechnology Volume 14 ; 14 >
       au < testing ; 2005 ; HortTechnology Volume 15 ; 15 >
-      au < testing ; 2006 ; HortTechnology Volume 16 ; 16 >
-      au < testing ; 2007 ; HortTechnology Volume 17 ; 17 >
-      au < testing ; 2008 ; HortTechnology Volume 18 ; 18 >
-      au < testing ; 2009 ; HortTechnology Volume 19 ; 19 >
-      au < testing ; 2010 ; HortTechnology Volume 20 ; 20 >
-      au < testing ; 2011 ; HortTechnology Volume 21 ; 21 >
-      au < testing ; 2012 ; HortTechnology Volume 22 ; 22 >
+      au < manifest ; 2006 ; HortTechnology Volume 16 ; 16 >
+      au < manifest ; 2007 ; HortTechnology Volume 17 ; 17 >
+      au < manifest ; 2008 ; HortTechnology Volume 18 ; 18 >
+      au < manifest ; 2009 ; HortTechnology Volume 19 ; 19 >
+      au < manifest ; 2010 ; HortTechnology Volume 20 ; 20 >
+      au < manifest ; 2011 ; HortTechnology Volume 21 ; 21 >
+      au < manifest ; 2012 ; HortTechnology Volume 22 ; 22 >
 
     }
 
@@ -98,19 +98,19 @@
       param[base_url] = http://journal.ashspublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1990 ; Journal of the American Society for Horticultural Science Volume 115 ; 115 >
-      au < manifest ; 1991 ; Journal of the American Society for Horticultural Science Volume 116 ; 116 >
-      au < manifest ; 1992 ; Journal of the American Society for Horticultural Science Volume 117 ; 117 >
-      au < manifest ; 1993 ; Journal of the American Society for Horticultural Science Volume 118 ; 118 >
-      au < manifest ; 1994 ; Journal of the American Society for Horticultural Science Volume 119 ; 119 >
-      au < manifest ; 1995 ; Journal of the American Society for Horticultural Science Volume 120 ; 120 >
-      au < manifest ; 1996 ; Journal of the American Society for Horticultural Science Volume 121 ; 121 >
-      au < manifest ; 1997 ; Journal of the American Society for Horticultural Science Volume 122 ; 122 >
-      au < manifest ; 1998 ; Journal of the American Society for Horticultural Science Volume 123 ; 123 >
-      au < manifest ; 1999 ; Journal of the American Society for Horticultural Science Volume 124 ; 124 >
-      au < manifest ; 2000 ; Journal of the American Society for Horticultural Science Volume 125 ; 125 >
-      au < manifest ; 2001 ; Journal of the American Society for Horticultural Science Volume 126 ; 126 >
-      au < manifest ; 2002 ; Journal of the American Society for Horticultural Science Volume 127 ; 127 >
+      au < testing ; 1990 ; Journal of the American Society for Horticultural Science Volume 115 ; 115 >
+      au < testing ; 1991 ; Journal of the American Society for Horticultural Science Volume 116 ; 116 >
+      au < testing ; 1992 ; Journal of the American Society for Horticultural Science Volume 117 ; 117 >
+      au < testing ; 1993 ; Journal of the American Society for Horticultural Science Volume 118 ; 118 >
+      au < testing ; 1994 ; Journal of the American Society for Horticultural Science Volume 119 ; 119 >
+      au < testing ; 1995 ; Journal of the American Society for Horticultural Science Volume 120 ; 120 >
+      au < testing ; 1996 ; Journal of the American Society for Horticultural Science Volume 121 ; 121 >
+      au < testing ; 1997 ; Journal of the American Society for Horticultural Science Volume 122 ; 122 >
+      au < testing ; 1998 ; Journal of the American Society for Horticultural Science Volume 123 ; 123 >
+      au < testing ; 1999 ; Journal of the American Society for Horticultural Science Volume 124 ; 124 >
+      au < testing ; 2000 ; Journal of the American Society for Horticultural Science Volume 125 ; 125 >
+      au < testing ; 2001 ; Journal of the American Society for Horticultural Science Volume 126 ; 126 >
+      au < testing ; 2002 ; Journal of the American Society for Horticultural Science Volume 127 ; 127 >
       au < manifest ; 2003 ; Journal of the American Society for Horticultural Science Volume 128 ; 128 >
       au < manifest ; 2004 ; Journal of the American Society for Horticultural Science Volume 129 ; 129 >
       au < manifest ; 2005 ; Journal of the American Society for Horticultural Science Volume 130 ; 130 >
