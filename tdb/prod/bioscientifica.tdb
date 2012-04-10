@@ -18,6 +18,7 @@
       implicit < status ; year ; name ; param[volume_name] >
 
 comment[eje130_136] = manifest present, but AUs have login pages
+      comment[down] = not really down as of April 2012
 
       au < notReady ; 1977 ; European Journal of Endocrinology Volume 130 ; 130 >
       au < notReady ; 1978 ; European Journal of Endocrinology Volume 131 ; 131 >
@@ -53,6 +54,7 @@ comment[eje130_136] = manifest present, but AUs have login pages
       au < down ; 2008 ; European Journal of Endocrinology Volume 161 ; 161 >
       au < down ; 2009 ; European Journal of Endocrinology Volume 162 ; 162 >
       au < down ; 2010 ; European Journal of Endocrinology Volume 163 ; 163 >
+      au < manifest ; 2011 ; European Journal of Endocrinology Volume 164 ; 164 >
 
     }
 
