@@ -478,10 +478,10 @@
 
     param[collection_id] = ERP
 
-    au < ready; 1996 ; Economic Report of the President 1996 ; 1996 >
-    au < ready; 1997 ; Economic Report of the President 1997 ; 1997 >
-    au < ready; 1998 ; Economic Report of the President 1998 ; 1998 >
-    au < ready; 1999 ; Economic Report of the President 1999 ; 1999 >
+    au < released; 1996 ; Economic Report of the President 1996 ; 1996 >
+    au < released; 1997 ; Economic Report of the President 1997 ; 1997 >
+    au < released; 1998 ; Economic Report of the President 1998 ; 1998 >
+    au < released; 1999 ; Economic Report of the President 1999 ; 1999 >
     au < released ; 2000 ; Economic Report of the President 2000 ; 2000 >
     au < released ; 2001 ; Economic Report of the President 2001 ; 2001 >
     au < released ; 2002 ; Economic Report of the President 2002 ; 2002 >
@@ -570,9 +570,9 @@
     au < released ; 2003 ; Government Accountability Office Reports and Comptroller General Decisions 2003 ; 2003 >
     au < released ; 2004 ; Government Accountability Office Reports and Comptroller General Decisions 2004 ; 2004 >
     au < released ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; 2005 >
-    au < ready ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; 2006 >
-    au < ready ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; 2007 >
-    au < ready ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 >
+    au < released ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; 2006 >
+    au < released ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; 2007 >
+    au < released ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 >
    
   }
 
@@ -672,11 +672,11 @@
     au < released ; 2003 ; List of CFR Sections Affected 2003 ; 2003 >
     au < released ; 2004 ; List of CFR Sections Affected 2004 ; 2004 >
     au < released ; 2005 ; List of CFR Sections Affected 2005 ; 2005 >
-    au < ready ; 2006 ; List of CFR Sections Affected 2006 ; 2006 >
-    au < ready ; 2007 ; List of CFR Sections Affected 2007 ; 2007 >
-    au < ready ; 2008 ; List of CFR Sections Affected 2008 ; 2008 >
-    au < ready ; 2009 ; List of CFR Sections Affected 2009 ; 2009 >
-    au < ready; 2010 ; List of CFR Sections Affected 2010 ; 2010 >
+    au < released ; 2006 ; List of CFR Sections Affected 2006 ; 2006 >
+    au < released ; 2007 ; List of CFR Sections Affected 2007 ; 2007 >
+    au < released ; 2008 ; List of CFR Sections Affected 2008 ; 2008 >
+    au < released ; 2009 ; List of CFR Sections Affected 2009 ; 2009 >
+    au < released; 2010 ; List of CFR Sections Affected 2010 ; 2010 >
     au < ready ; 2011 ; List of CFR Sections Affected 2011 ; 2011 >
     au < ready; 2012 ; List of CFR Sections Affected 2012 ; 2012 >
       
@@ -718,11 +718,11 @@
     au < released ; 2003 ; Public and Private Laws 2003 ; 2003 >
     au < released ; 2004 ; Public and Private Laws 2004 ; 2004 >
     au < released ; 2005 ; Public and Private Laws 2005 ; 2005 >
-    au < manifest ; 2006 ; Public and Private Laws 2006 ; 2006 >
-    au < manifest ; 2007 ; Public and Private Laws 2007 ; 2007 >
-    au < manifest ; 2008 ; Public and Private Laws 2008 ; 2008 >
-    au < manifest ; 2009 ; Public and Private Laws 2009 ; 2009 >
-    au < ready ; 2010 ; Public and Private Laws 2010 ; 2010 >
+    au < released ; 2006 ; Public and Private Laws 2006 ; 2006 >
+    au < released ; 2007 ; Public and Private Laws 2007 ; 2007 >
+    au < released ; 2008 ; Public and Private Laws 2008 ; 2008 >
+    au < released ; 2009 ; Public and Private Laws 2009 ; 2009 >
+    au < released ; 2010 ; Public and Private Laws 2010 ; 2010 >
     au < ready ; 2011 ; Public and Private Laws 2011 ; 2011>
     au < testing ; 2012 ; Public and Private Laws 2012 ; 2012 >
 
