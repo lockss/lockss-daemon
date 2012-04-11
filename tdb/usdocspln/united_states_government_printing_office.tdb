@@ -911,7 +911,7 @@
     au < released ; 2003 ; United States Statutes at Large 2003 ; 2003 >
     au < released ; 2004 ; United States Statutes at Large 2004 ; 2004 >
     au < released ; 2005 ; United States Statutes at Large 2005 ; 2005 >
-    au < ready ; 2006 ; United States Statutes at Large 2006 ; 2006 >
+    au < released ; 2006 ; United States Statutes at Large 2006 ; 2006 >
     au < testing ; 2007 ; United States Statutes at Large 2007 ; 2007 >
 
   }
@@ -924,8 +924,8 @@
 
     param[collection_id] = WCPD
 
-    au < ready ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; 1993 >
-    au < testing ; 1994 ; Weekly Compilation of Presidential Documents 1994 ; 1994 >
+    au < released ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; 1993 >
+    au < released ; 1994 ; Weekly Compilation of Presidential Documents 1994 ; 1994 >
     au < released ; 1995 ; Weekly Compilation of Presidential Documents 1995 ; 1995 >
     au < released ; 1996 ; Weekly Compilation of Presidential Documents 1996 ; 1996 >
     au < released ; 1997 ; Weekly Compilation of Presidential Documents 1997 ; 1997 >
@@ -937,10 +937,10 @@
     au < released ; 2003 ; Weekly Compilation of Presidential Documents 2003 ; 2003 >
     au < released ; 2004 ; Weekly Compilation of Presidential Documents 2004 ; 2004 >
     au < released ; 2005 ; Weekly Compilation of Presidential Documents 2005 ; 2005 >
-    au < manifest ; 2006 ; Weekly Compilation of Presidential Documents 2006 ; 2006 >
-    au < manifest ; 2007 ; Weekly Compilation of Presidential Documents 2007 ; 2007 >
-    au < manifest ; 2008 ; Weekly Compilation of Presidential Documents 2008 ; 2008 >
-    au < testing ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; 2009 >
+    au < released ; 2006 ; Weekly Compilation of Presidential Documents 2006 ; 2006 >
+    au < released ; 2007 ; Weekly Compilation of Presidential Documents 2007 ; 2007 >
+    au < released ; 2008 ; Weekly Compilation of Presidential Documents 2008 ; 2008 >
+    au < released ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; 2009 >
       
   }
 
