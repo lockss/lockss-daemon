@@ -33,7 +33,7 @@
       au < released ; 2005 ; AAP Grand Rounds Volume 14 ; 14 >
       au < released ; 2006 ; AAP Grand Rounds Volume 15 ; 15 >
       au < testing ; 2006 ; AAP Grand Rounds Volume 16 ; 16 >
-      au < testing ; 2007 ; AAP Grand Rounds Volume 17 ; 17 >
+      au < released ; 2007 ; AAP Grand Rounds Volume 17 ; 17 >
       au < released ; 2007 ; AAP Grand Rounds Volume 18 ; 18 >
       au < released ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
       au < testing ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
@@ -282,10 +282,10 @@
       param[base_url] = http://pedsinreview.aappublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1980 ; Pediatrics in Review Volume 1 ; 1 >
+      au < ready ; 1980 ; Pediatrics in Review Volume 1 ; 1 >
       au < released ; 1981 ; Pediatrics in Review Volume 2 ; 2 >
-      au < testing ; 1982 ; Pediatrics in Review Volume 3 ; 3 >
-      au < testing ; 1983 ; Pediatrics in Review Volume 4 ; 4 >
+      au < ready ; 1982 ; Pediatrics in Review Volume 3 ; 3 >
+      au < ready ; 1983 ; Pediatrics in Review Volume 4 ; 4 >
       au < released ; 1984 ; Pediatrics in Review Volume 5 ; 5 >
       au < released ; 1985 ; Pediatrics in Review Volume 6 ; 6 >
       au < released ; 1986 ; Pediatrics in Review Volume 7 ; 7 >
@@ -295,8 +295,8 @@
       au < released ; 1990 ; Pediatrics in Review Volume 11 ; 11 >
       au < released ; 1991 ; Pediatrics in Review Volume 12 ; 12 >
       au < released ; 1992 ; Pediatrics in Review Volume 13 ; 13 >
-      au < testing ; 1993 ; Pediatrics in Review Volume 14 ; 14 >
-      au < testing ; 1994 ; Pediatrics in Review Volume 15 ; 15 >
+      au < ready ; 1993 ; Pediatrics in Review Volume 14 ; 14 >
+      au < ready ; 1994 ; Pediatrics in Review Volume 15 ; 15 >
       au < released ; 1995 ; Pediatrics in Review Volume 16 ; 16 >
       au < testing ; 1996 ; Pediatrics in Review Volume 17 ; 17 >
       au < released ; 1997 ; Pediatrics in Review Volume 18 ; 18 >
