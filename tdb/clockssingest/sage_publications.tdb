@@ -27295,9 +27295,9 @@
       au < manifest ; exists ; 1935 ; Probation Journal Volume 2 ; 2 ; >
       au < manifest ; exists ; 1938 ; Probation Journal Volume 3 ; 3 ; >
       au < manifest ; exists ; 1942 ; Probation Journal Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1946 ; Probation Journal Volume 5 ; 5 ; >
-      au < exists ; exists ; 1947 ; Probation Journal Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1948 ; Probation Journal Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1946-1949 ; Probation Journal Volume 5 ; 5 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Probation Journal Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1954 ; Probation Journal Volume 7 ; 7 ; >
       au < manifest ; exists ; 1956 ; Probation Journal Volume 8 ; 8 ; >
       au < manifest ; exists ; 1959 ; Probation Journal Volume 9 ; 9 ; >
       au < manifest ; exists ; 1962 ; Probation Journal Volume 10 ; 10 ; >
@@ -27370,7 +27370,6 @@
         au < exists ; exists ; 2009 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 53 ; 53 ; >
         au < exists ; exists ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 ; >
         au < exists ; exists ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 ; >
-      au < expected ; exists ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 ; >
         au < expected ; exists ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 56 ; 56 ; >
 
       }
@@ -29111,18 +29110,19 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1999 ; Rehabilitation Counseling Bulletin Volume 43 ; 43 ; >
-      au < manifest ; exists ; 2000 ; Rehabilitation Counseling Bulletin Volume 44 ; 44 ; >
-      au < manifest ; exists ; 2001 ; Rehabilitation Counseling Bulletin Volume 45 ; 45 ; >
-      au < manifest ; exists ; 2002 ; Rehabilitation Counseling Bulletin Volume 46 ; 46 ; >
-      au < manifest ; exists ; 2003 ; Rehabilitation Counseling Bulletin Volume 47 ; 47 ; >
-      au < manifest ; exists ; 2004 ; Rehabilitation Counseling Bulletin Volume 48 ; 48 ; >
-      au < manifest ; exists ; 2005 ; Rehabilitation Counseling Bulletin Volume 49 ; 49 ; >
-      au < manifest ; exists ; 2006 ; Rehabilitation Counseling Bulletin Volume 50 ; 50 ; >
-      au < manifest ; exists ; 2007 ; Rehabilitation Counseling Bulletin Volume 51 ; 51 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Rehabilitation Counseling Bulletin Volume 52 ; 52 ; >
-      au < manifest ; exists ; 2009 ; Rehabilitation Counseling Bulletin Volume 53 ; 53 ; >
-      au < crawling ; exists ; 2010 ; Rehabilitation Counseling Bulletin Volume 54 ; 54 ; >
+      au < manifest ; exists ; 1999-2000 ; Rehabilitation Counseling Bulletin Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2000-2001 ; Rehabilitation Counseling Bulletin Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2001-2002 ; Rehabilitation Counseling Bulletin Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2002-2003 ; Rehabilitation Counseling Bulletin Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2003-2004 ; Rehabilitation Counseling Bulletin Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2004-2005 ; Rehabilitation Counseling Bulletin Volume 48 ; 48 ; >
+      au < manifest ; exists ; 2005-2006 ; Rehabilitation Counseling Bulletin Volume 49 ; 49 ; >
+      au < manifest ; exists ; 2006-2007 ; Rehabilitation Counseling Bulletin Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2007-2008 ; Rehabilitation Counseling Bulletin Volume 51 ; 51 ; >
+      au < doNotProcess ; doNotProcess ; 2008-2009 ; Rehabilitation Counseling Bulletin Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2009-2010 ; Rehabilitation Counseling Bulletin Volume 53 ; 53 ; >
+      au < crawling ; exists ; 2010-2011 ; Rehabilitation Counseling Bulletin Volume 54 ; 54 ; >
+      au < manifest ; exists ; 2011-2012 ; Rehabilitation Counseling Bulletin Volume 55 ; 55 ; >
 
     }
 
@@ -29692,18 +29692,18 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1980 ; Review of Public Personnel Administration Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1981 ; Review of Public Personnel Administration Volume 2 ; 2 ; >
-      au < exists ; exists ; 1982 ; Review of Public Personnel Administration Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1980-1981 ; Review of Public Personnel Administration Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1981-1982 ; Review of Public Personnel Administration Volume 2 ; 2 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Review of Public Personnel Administration Volume 3 ; 3 ; >
       au < manifest ; exists ; 1983 ; Review of Public Personnel Administration Volume 4 ; 4 ; >
       au < manifest ; exists ; 1985 ; Review of Public Personnel Administration Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1985 ; Review of Public Personnel Administration Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1986 ; Review of Public Personnel Administration Volume 7 ; 7 ; >
-      au < exists ; exists ; 1987 ; Review of Public Personnel Administration Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1985-1986 ; Review of Public Personnel Administration Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1986-1987 ; Review of Public Personnel Administration Volume 7 ; 7 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Review of Public Personnel Administration Volume 8 ; 8 ; >
       au < manifest ; exists ; 1989 ; Review of Public Personnel Administration Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1989 ; Review of Public Personnel Administration Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1989-1990 ; Review of Public Personnel Administration Volume 10 ; 10 ; >
       au < manifest ; exists ; 1991 ; Review of Public Personnel Administration Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1991 ; Review of Public Personnel Administration Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1991-1992 ; Review of Public Personnel Administration Volume 12 ; 12 ; >
       au < manifest ; exists ; 1993 ; Review of Public Personnel Administration Volume 13 ; 13 ; >
       au < manifest ; exists ; 1994 ; Review of Public Personnel Administration Volume 14 ; 14 ; >
       au < manifest ; exists ; 1995 ; Review of Public Personnel Administration Volume 15 ; 15 ; >
