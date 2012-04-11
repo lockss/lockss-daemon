@@ -381,7 +381,7 @@
 
     comment[0] = content not online yet
 	
-	param[journal_issn] =     
+	param[journal_issn] = 1947-3575
 	
     au < testing ; exists ; 2011 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 1 ; 1 > 
     au < testing ; exists ; 2012 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 2 ; 2 > 
@@ -479,7 +479,7 @@
       eissn = 2156-1826 ;
       issnl = 2156-1834
     >
-	param[journal_issn] = 2156-1934
+	param[journal_issn] = 2156-1834
 		
     au < testing ; exists ; 2011 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 1 ; 1 > 
     au < testing ; exists ; 2012 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 2 ; 2 > 
