@@ -33375,11 +33375,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 1980 ; Science, Technology & Human Values Volume 5 ; 5 >
         au < manifest ; 1981 ; Science, Technology & Human Values Volume 6 ; 6 >
         au < manifest ; 1982 ; Science, Technology & Human Values Volume 7 ; 7 >
-        au < doesNotExist ; 0 ; Science, Technology & Human Values Volume 8 ; 8 >
-        au < doesNotExist ; 0 ; Science, Technology & Human Values Volume 9 ; 9 >
+        au < exists ; 1983 ; Science, Technology & Human Values Volume 8 ; 8 >
+        au < exists ; 1984 ; Science, Technology & Human Values Volume 9 ; 9 >
         au < manifest ; 1985 ; Science, Technology & Human Values Volume 10 ; 10 >
         au < manifest ; 1986 ; Science, Technology & Human Values Volume 11 ; 11 >
-        au < doesNotExist ; 0 ; Science, Technology & Human Values Volume 12 ; 12 >
+        au < exists ; 1987 ; Science, Technology & Human Values Volume 12 ; 12 >
         au < doesNotExist ; 0 ; Science, Technology & Human Values Volume 13 ; 13 >
         au < manifest ; 1989 ; Science, Technology & Human Values Volume 14 ; 14 >
         au < manifest ; 1990 ; Science, Technology & Human Values Volume 15 ; 15 >
@@ -35548,8 +35548,8 @@ comment[mpj] = now published by Brill
         au < manifest ; 1973 ; Textile Research Journal Volume 43 ; 43 >
         au < manifest ; 1974 ; Textile Research Journal Volume 44 ; 44 >
         au < manifest ; 1975 ; Textile Research Journal Volume 45 ; 45 >
-        au < doesNotExist ; 0 ; Textile Research Journal Volume 46 ; 46 >
-        au < doesNotExist ; 0 ; Textile Research Journal Volume 47 ; 47 >
+        au < exists ; 1976 ; Textile Research Journal Volume 46 ; 46 >
+        au < exists ; 1977 ; Textile Research Journal Volume 47 ; 47 >
         au < manifest ; 1978 ; Textile Research Journal Volume 48 ; 48 >
         au < manifest ; 1979 ; Textile Research Journal Volume 49 ; 49 >
         au < manifest ; 1980 ; Textile Research Journal Volume 50 ; 50 >
@@ -35560,7 +35560,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1985 ; Textile Research Journal Volume 55 ; 55 >
         au < manifest ; 1986 ; Textile Research Journal Volume 56 ; 56 >
         au < manifest ; 1987 ; Textile Research Journal Volume 57 ; 57 >
-        au < doesNotExist ; 0 ; Textile Research Journal Volume 58 ; 58 >
+        au < exists ; 1988 ; Textile Research Journal Volume 58 ; 58 >
         au < manifest ; 1989 ; Textile Research Journal Volume 59 ; 59 >
         au < manifest ; 1990 ; Textile Research Journal Volume 60 ; 60 >
         au < manifest ; 1991 ; Textile Research Journal Volume 61 ; 61 >
@@ -35706,7 +35706,7 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 1994-1995 ; Theology and Sexuality Volume 1 ; 1 >
         au < manifest ; 1995-1996 ; Theology and Sexuality Volume 2 ; 2 >
-        au < manifest ; 1996-1997 ; Theology and Sexuality Volume 3 ; 3 >
+        au < manifest ; 1995-1997 ; Theology and Sexuality Volume 3 ; 3 >
         au < manifest ; 1997-1998 ; Theology and Sexuality Volume 4 ; 4 >
         au < manifest ; 1998-1999 ; Theology and Sexuality Volume 5 ; 5 >
         au < manifest ; 1999-2000 ; Theology and Sexuality Volume 6 ; 6 >
@@ -37986,7 +37986,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2008-2009 ; Word of Mouth Volume 20 ; 20 >
         au < doNotProcess ; 2009-2010 ; Word of Mouth Volume 21 ; 21 >
         au < manifest ; 2010-2011 ; Word of Mouth Volume 22 ; 22 >
-        au < manifest ; 2012 ; Word of Mouth Volume 23 ; 23 >
+        au < manifest ; 2011-2012 ; Word of Mouth Volume 23 ; 23 >
         au < expected ; 2012 ; Word of Mouth Volume 24 ; 24 >
 
       }
