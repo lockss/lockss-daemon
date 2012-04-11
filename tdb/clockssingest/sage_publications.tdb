@@ -21334,7 +21334,30 @@
     }
 
   }
+  {
+    title <
+      name = Journal of Research on Leadership Education ;
+      issn = 1942-7751 ;
+      eissn = 1942-7751
+     >
 
+    param[base_url] = http://jrl.sagepub.com/
+
+    {
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2006 ; Journal of Research on Leadership Education Volume 1 ; 1 ; >
+    au < exists ; exists ; 2007 ; Journal of Research on Leadership Education Volume 2 ; 2 ; >
+    au < exists ; exists ; 2008 ; Journal of Research on Leadership Education Volume 3 ; 3 ; >
+    au < exists ; exists ; 2009 ; Journal of Research on Leadership Education Volume 4 ; 4 ; >
+    au < exists ; exists ; 2010 ; Journal of Research on Leadership Education Volume 5 ; 5 ; >
+    au < exists ; exists ; 2011 ; Journal of Research on Leadership Education Volume 6 ; 6 ; >
+    au < exists ; exists ; 2012 ; Journal of Research on Leadership Education Volume 7 ; 7 ; >
+
+    }
+
+  }
   {
   
     title <
