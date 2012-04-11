@@ -24717,8 +24717,8 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1995 ; Multiple Sclerosis Journal Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1996 ; Multiple Sclerosis Journal Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1995-1996 ; Multiple Sclerosis Journal Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1996-1997 ; Multiple Sclerosis Journal Volume 2 ; 2 ; >
       au < manifest ; exists ; 1997 ; Multiple Sclerosis Journal Volume 3 ; 3 ; >
       au < manifest ; exists ; 1998 ; Multiple Sclerosis Journal Volume 4 ; 4 ; >
       au < manifest ; exists ; 1999 ; Multiple Sclerosis Journal Volume 5 ; 5 ; >
@@ -25332,7 +25332,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; National Institute Economic Review Volume 207 ; 207 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; National Institute Economic Review Volume 208 ; 208 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; National Institute Economic Review Volume 209 ; 209 ; >
-      au < released ; manifest ; 2010 ; National Institute Economic Review Volume 210 ; 210 ; >
+      au < released ; manifest ; 2009 ; National Institute Economic Review Volume 210 ; 210 ; >
       au < released ; manifest ; 2010 ; National Institute Economic Review Volume 211 ; 211 ; >
       au < released ; manifest ; 2010 ; National Institute Economic Review Volume 212 ; 212 ; >
       au < released ; manifest ; 2010 ; National Institute Economic Review Volume 213 ; 213 ; >
@@ -25340,7 +25340,8 @@
       au < released ; crawling ; 2011 ; National Institute Economic Review Volume 215 ; 215 ; >
       au < released ; crawling ; 2011 ; National Institute Economic Review Volume 216 ; 216 ; >
       au < released ; crawling ; 2011 ; National Institute Economic Review Volume 217 ; 217 ; >
-      au < manifest ; exists ; 2012 ; National Institute Economic Review Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2011 ; National Institute Economic Review Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2012 ; National Institute Economic Review Volume 219 ; 219 ; >
 
     }
 
@@ -28068,9 +28069,9 @@
       au < manifest ; exists ; 1981 ; Progress in Human Geography Volume 5 ; 5 ; >
       au < manifest ; exists ; 1982 ; Progress in Human Geography Volume 6 ; 6 ; >
       au < manifest ; exists ; 1983 ; Progress in Human Geography Volume 7 ; 7 ; >
-      au < exists ; exists ; 1984 ; Progress in Human Geography Volume 8 ; 8 ; >
-      au < exists ; exists ; 1985 ; Progress in Human Geography Volume 9 ; 9 ; >
-      au < exists ; exists ; 1986 ; Progress in Human Geography Volume 10 ; 10 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Progress in Human Geography Volume 8 ; 8 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Progress in Human Geography Volume 9 ; 9 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Progress in Human Geography Volume 10 ; 10 ; >
       au < manifest ; exists ; 1987 ; Progress in Human Geography Volume 11 ; 11 ; >
       au < manifest ; exists ; 1988 ; Progress in Human Geography Volume 12 ; 12 ; >
       au < manifest ; exists ; 1989 ; Progress in Human Geography Volume 13 ; 13 ; >
@@ -28493,7 +28494,7 @@
 
       au < manifest ; exists ; 1973 ; Public Finance Review Volume 1 ; 1 ; >
       au < manifest ; exists ; 1974 ; Public Finance Review Volume 2 ; 2 ; >
-      au < exists ; exists ; 1975 ; Public Finance Review Volume 3 ; 3 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Public Finance Review Volume 3 ; 3 ; >
       au < manifest ; exists ; 1976 ; Public Finance Review Volume 4 ; 4 ; >
       au < manifest ; exists ; 1977 ; Public Finance Review Volume 5 ; 5 ; >
       au < manifest ; exists ; 1978 ; Public Finance Review Volume 6 ; 6 ; >
@@ -28506,7 +28507,7 @@
       au < manifest ; exists ; 1985 ; Public Finance Review Volume 13 ; 13 ; >
       au < manifest ; exists ; 1986 ; Public Finance Review Volume 14 ; 14 ; >
       au < manifest ; exists ; 1987 ; Public Finance Review Volume 15 ; 15 ; >
-      au < exists ; exists ; 1988 ; Public Finance Review Volume 16 ; 16 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Public Finance Review Volume 16 ; 16 ; >
       au < manifest ; exists ; 1989 ; Public Finance Review Volume 17 ; 17 ; >
       au < manifest ; exists ; 1990 ; Public Finance Review Volume 18 ; 18 ; >
       au < manifest ; exists ; 1991 ; Public Finance Review Volume 19 ; 19 ; >

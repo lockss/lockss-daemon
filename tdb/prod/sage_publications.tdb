@@ -23995,7 +23995,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Research in International Education Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Research in International Education Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; 2008 ; Journal of Research in International Education Volume 7 ; 7 >
-        au < HighWirePressPlugin ; down ; 2008 ; Journal of Research in International Education Volume 8 ; 8 >
+        au < HighWirePressPlugin ; down ; 2009 ; Journal of Research in International Education Volume 8 ; 8 >
 
       }
 
@@ -27638,7 +27638,7 @@ comment[mpj] = now published by Brill
 
         au < HighWireStrVolPlugin ; down ; 2005 ; The Medieval History Journal Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; down ; 2006 ; The Medieval History Journal Volume 9 ; 9 >
-        au < HighWireStrVolPlugin ; down ; 2007 ; The Medieval History Journal Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; The Medieval History Journal Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; 2008 ; The Medieval History Journal Volume 11 ; 11 >
 
       }
@@ -27902,8 +27902,8 @@ comment[mpj] = now published by Brill
         param[base_url] = http://msj.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1996-1997 ; Multiple Sclerosis Journal Volume 1 ; 1 >
-        au < manifest ; 1997-1998 ; Multiple Sclerosis Journal Volume 2 ; 2 >
+        au < manifest ; 1995-1996 ; Multiple Sclerosis Journal Volume 1 ; 1 >
+        au < manifest ; 1996-1997 ; Multiple Sclerosis Journal Volume 2 ; 2 >
         au < manifest ; 1997 ; Multiple Sclerosis Journal Volume 3 ; 3 >
         au < manifest ; 1998 ; Multiple Sclerosis Journal Volume 4 ; 4 >
         au < manifest ; 1999 ; Multiple Sclerosis Journal Volume 5 ; 5 >
