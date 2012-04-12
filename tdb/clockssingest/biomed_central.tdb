@@ -2349,7 +2349,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.fluidsbarrierscns.com/
       param[journal_issn] = 2045-8118
 
-      au < mamifest ; exists ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
+      au < manifest ; exists ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
       au < manifest ; exists ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
 
     }
