@@ -42,7 +42,8 @@
     au < released ; 2008 ; Additional Government Publications 2008 ; 2008 >
     au < released ; 2009 ; Additional Government Publications 2009 ; 2009 >
     au < released ; 2010 ; Additional Government Publications 2010 ; 2010 >
-    au < testing ; 2011 ; Additional Government Publications 2011 ; 2011 >
+    au < ready ; 2011 ; Additional Government Publications 2011 ; 2011 >
+    au < expected ; 2012 ; Additional Government Publications 2012 ; 2012 >
 
   }
   
@@ -56,7 +57,7 @@
     
     au < released ; 2009 ; Budget of the United States Government 2009 ; 2009 >
     au < released ; 2010 ; Budget of the United States Government 2010 ; 2010 >
-    au < testing ; 2011 ; Budget of the United States Government 2011 ; 2011 >
+    au < ready ; 2011 ; Budget of the United States Government 2011 ; 2011 >
     au < testing ; 2012 ; Budget of the United States Government 2012 ; 2012 >
   
       
@@ -67,7 +68,7 @@
     title <
       name =  Coastal Zone Information Center
     >
-    
+    comment[0] = ceased publication in 1999
     param[collection_id] = CZIC
     
     au < released ; 1951 ; Coastal Zone Information Center 1951 ; 1951 >
@@ -137,7 +138,7 @@
     au < released ; 2009 ; Code of Federal Regulations 2009 ; 2009 >
     au < released ; 2010 ; Code of Federal Regulations 2010 ; 2010 >
     au < released ; 2011 ; Code of Federal Regulations 2011 ; 2011 >
-    au < testing ; 2012 ; Code of Federal Regulations 2012 ; 2012 >
+    au < ready ; 2012 ; Code of Federal Regulations 2012 ; 2012 >
 
   }
 
@@ -167,7 +168,7 @@
     au < released ; 2008 ; Congressional Bills 2008 ; 2008 >
     au < released ; 2009 ; Congressional Bills 2009 ; 2009 >
     au < released ; 2010 ; Congressional Bills 2010 ; 2010 >
-    au < testing ; 2011 ; Congressional Bills 2011 ; 2011 >
+    au < ready ; 2011 ; Congressional Bills 2011 ; 2011 >
     au < testing ; 2012 ; Congressional Bills 2012 ; 2012 >
 
 
@@ -192,8 +193,8 @@
     au < released ; 2008 ; Congressional Calendars 2008 ; 2008 >
     au < released ; 2009 ; Congressional Calendars 2009 ; 2009 >
     au < released ; 2010 ; Congressional Calendars 2010 ; 2010 >
-    au < testing ; 2011 ; Congressional Calendars 2011 ; 2011 >
-    au < testing ; 2012 ; Congressional Calendars 2012 ; 2012 >
+    au < ready ; 2011 ; Congressional Calendars 2011 ; 2011 >
+    au < ready ; 2012 ; Congressional Calendars 2012 ; 2012 >
       
   }
 
@@ -222,8 +223,8 @@
     au < released ; 2008 ; Congressional Committee Prints 2008 ; 2008 >
     au < released ; 2009 ; Congressional Committee Prints 2009 ; 2009 >
     au < released ; 2010 ; Congressional Committee Prints 2010 ; 2010 >
-    au < testing ; 2011 ; Congressional Committee Prints 2011 ; 2011 >
-    au < testing ; 2012 ; Congressional Committee Prints 2012 ; 2012 >
+    au < ready ; 2011 ; Congressional Committee Prints 2011 ; 2011 >
+    au < ready ; 2012 ; Congressional Committee Prints 2012 ; 2012 >
 
   }
   
@@ -247,7 +248,8 @@
     au < released ; 2007 ; Congressional Directory 2007 ; 2007 >
     au < released ; 2008 ; Congressional Directory 2008 ; 2008 >
     au < released ; 2009 ; Congressional Directory 2009 ; 2009 >
-    au < testing ; 2011 ; Congressional Directory 2011 ; 2011 >
+    au < ready ; 2011 ; Congressional Directory 2011 ; 2011 >
+    au < expected ; 2012 ; Congressional Directory 2012 ; 2012 >
       
   }
 
@@ -281,7 +283,7 @@
     au < released ; 2009 ; Congressional Documents 2009 ; 2009 >
     au < released ; 2010 ; Congressional Documents 2010 ; 2010 >
     au < released ; 2011 ; Congressional Documents 2011 ; 2011 >
-    au < testing ; 2012 ; Congressional Documents 2012 ; 2012 >
+    au < ready ; 2012 ; Congressional Documents 2012 ; 2012 >
       
   }
 
@@ -309,8 +311,8 @@
     au < released ; 2008 ; Congressional Hearings 2008 ; 2008 >
     au < released ; 2009 ; Congressional Hearings 2009 ; 2009 >
     au < released ; 2010 ; Congressional Hearings 2010 ; 2010 >
-    au < testing ; 2011 ; Congressional Hearings 2011 ; 2011 >
-    au < testing ; 2012 ; Congressional Hearings 2012 ; 2012 >
+    au < ready ; 2011 ; Congressional Hearings 2011 ; 2011 >
+    au < ready ; 2012 ; Congressional Hearings 2012 ; 2012 >
 
   }
 
@@ -340,7 +342,7 @@
     au < released ; 2009 ; Congressional Record 2009 ; 2009 >
     au < released ; 2010 ; Congressional Record 2010 ; 2010 >
     au < released ; 2011 ; Congressional Record 2011 ; 2011 >
-    au < testing ; 2012 ; Congressional Record 2012 ; 2012 >
+    au < ready ; 2012 ; Congressional Record 2012 ; 2012 >
 
   }
   
@@ -349,7 +351,7 @@
     title <
       name = Congressional Record (Bound)
     >
-
+	comment[0] = published from 1999 to 2002
     param[collection_id] = CRECB
 
     au < released ; 1999 ; Congressional Record (Bound) 1999 ; 1999 >
@@ -435,10 +437,10 @@
 
     param[collection_id] = DCPD
 
-    au < testing ; 2009 ; Daily Compilation of Presidential Documents 2009 ; 2009 >
+    au < ready ; 2009 ; Daily Compilation of Presidential Documents 2009 ; 2009 >
     au < released ; 2010 ; Daily Compilation of Presidential Documents 2010 ; 2010 >
     au < released ; 2011 ; Daily Compilation of Presidential Documents 2011 ; 2011 >
-    au < testing ; 2012 ; Daily Compilation of Presidential Documents 2012 ; 2012 >
+    au < ready ; 2012 ; Daily Compilation of Presidential Documents 2012 ; 2012 >
       
   }
 
@@ -467,7 +469,7 @@
     au < released ; 2009 ; Economic Indicators 2009 ; 2009 >
     au < released ; 2010 ; Economic Indicators 2010 ; 2010 >
     au < released ; 2011 ; Economic Indicators 2011 ; 2011 >
-    au < testing ; 2012 ; Economic Indicators 2012 ; 2012 >
+    au < ready ; 2012 ; Economic Indicators 2012 ; 2012 >
       
   }
 
@@ -495,7 +497,7 @@
     au < released ; 2009 ; Economic Report of the President 2009 ; 2009 >
     au < released ; 2010 ; Economic Report of the President 2010 ; 2010 >
     au < released ; 2011 ; Economic Report of the President 2011 ; 2011 >
-    au < testing ; 2012 ; Economic Report of the President 2012 ; 2012 >
+    au < ready ; 2012 ; Economic Report of the President 2012 ; 2012 >
       
   }
 
@@ -504,7 +506,7 @@
     title <
       name = Education Report from ERIC
     >
-
+	comment[0] = published from 1995 to 2004
     param[collection_id] = ERIC
 
     au < released ; 1995 ; Education Report from ERIC 1995 ; 1995 >
@@ -555,7 +557,7 @@
     title <
       name = Government Accountability Office Reports and Comptroller General Decisions
     >
-
+    comment[0] = published from 1994 to 2008
     param[collection_id] = GAOREPORTS
 
     au < released ; 1993 ; Government Accountability Office Reports and Comptroller General Decisions 1993 ; 1993 >
@@ -614,7 +616,7 @@
     au < released ; 2009 ; History of Bills 2009 ; 2009 >
     au < released ; 2010 ; History of Bills 2010 ; 2010 >
     au < released ; 2011 ; History of Bills 2011 ; 2011 >
-    au < testing ; 2012 ; History of Bills 2012 ; 2012 >
+    au < ready ; 2012 ; History of Bills 2012 ; 2012 >
       
   }
 
@@ -641,7 +643,7 @@
     title <
       name = Journal of the House of Representatives
     >
-
+	comment[0] = published from 1992 to 1999
     param[collection_id] = HJOURNAL
 
     au < released ; 1992 ; Journal of the House of Representatives 1992 ; 1992 >
@@ -688,7 +690,7 @@
     title <
       name = Privacy Act Issuances
     >
-
+	comment[0] = published from 1995 to 2005
     param[collection_id] = PAI
 
     au < released ; 1995 ; Privacy Act Issuances 1995 ; 1995 >
@@ -725,7 +727,7 @@
     au < released ; 2009 ; Public and Private Laws 2009 ; 2009 >
     au < released ; 2010 ; Public and Private Laws 2010 ; 2010 >
     au < released ; 2011 ; Public and Private Laws 2011 ; 2011>
-    au < testing ; 2012 ; Public and Private Laws 2012 ; 2012 >
+    au < ready ; 2012 ; Public and Private Laws 2012 ; 2012 >
 
   }
   
@@ -734,7 +736,7 @@
     title <
       name = Public Papers of the Presidents of the United States
     >
-
+	comment[0] = published from 1991 to 2006 and 2009
     param[collection_id] = PPP
 
     au < released ; 1991 ; Public Papers of the Presidents of the United States 1991 ; 1991 >
@@ -753,7 +755,7 @@
     au < released ; 2004 ; Public Papers of the Presidents of the United States 2004 ; 2004 >
     au < released ; 2005 ; Public Papers of the Presidents of the United States 2005 ; 2005 >
     au < released ; 2006 ; Public Papers of the Presidents of the United States 2006 ; 2006 >
-    au < testing ; 2009 ; Public Papers of the Presidents of the United States 2009 ; 2009 >
+    au < ready ; 2009 ; Public Papers of the Presidents of the United States 2009 ; 2009 >
 
   }
 
@@ -769,7 +771,7 @@
     au < released ; 2000 ; Senate Manual 2000 ; 2000 >
     au < released ; 2002 ; Senate Manual 2002 ; 2002 >
     au < released ; 2008 ; Senate Manual 2008 ; 2008 >
-    au < testing ; 2012 ; Senate Manual 2012 ; 2012 >
+    au < ready ; 2012 ; Senate Manual 2012 ; 2012 >
 
   }
 
@@ -778,7 +780,7 @@
     title <
       name = United States Code
     >
-
+    
     param[collection_id] = USCODE
 
     au < released ; 1994 ; United States Code 1994 ; 1994 >
@@ -798,6 +800,8 @@
     au < released ; 2008 ; United States Code 2008 ; 2008 >
     au < released ; 2009 ; United States Code 2009 ; 2009 >
     au < released ; 2010 ; United States Code 2010 ; 2010 >
+    au < expected ; 2011 ; United States Code 2011 ; 2011 >
+    au < expected ; 2012 ; United States Code 2012 ; 2012 >
       
   }
 
@@ -845,6 +849,7 @@
     au < released ; 2009 ; United States Government Manual 2009 ; 2009 >
     au < doesNotExist ; 2010 ; United States Government Manual 2010 ; 2010 >
     au < released ; 2011 ; United States Government Manual 2011 ; 2011 >
+    au < expected ; 2012 ; United States Government Manual 2012 ; 2012 >
 
   }
 
@@ -853,7 +858,7 @@
     title <
       name = United States Statutes at Large
     >
-
+	comment[0] = published from 1951 to 2002 and 2003 to 2008
     param[collection_id] = STATUTE
 
     au < released ; 1951 ; United States Statutes at Large 1951 ; 1951 >
@@ -913,6 +918,7 @@
     au < released ; 2005 ; United States Statutes at Large 2005 ; 2005 >
     au < released ; 2006 ; United States Statutes at Large 2006 ; 2006 >
     au < testing ; 2007 ; United States Statutes at Large 2007 ; 2007 >
+    au < testing ; 2008 ; United States Statutes at Large 2008 ; 2008 >
 
   }
 
@@ -920,8 +926,8 @@
 
     title <
       name = Weekly Compilation of Presidential Documents
-    >
-
+ 	>
+ 	   
     param[collection_id] = WCPD
 
     au < released ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; 1993 >
