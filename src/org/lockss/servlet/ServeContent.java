@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.46 2012-03-28 21:11:16 pgust Exp $
+ * $Id: ServeContent.java,v 1.46.2.1 2012-04-12 20:35:16 pgust Exp $
  */
 
 /*
@@ -458,8 +458,25 @@ public class ServeContent extends LockssServlet {
       }
       
       if (au != null) {
-        // display cached page if it has content
-        handleAuRequest();
+        // redirect to cached page if it has content
+        // (must redirect because URL may include a reference: '#')
+        String ref = null;
+        try {
+          ref = new URL(url).getRef();
+        } catch (MalformedURLException ex) {
+        }
+        String auid = au.getAuId();
+        String cuUrl = cu.getUrl();
+        String suffix = "url=" + URLEncoder.encode(cuUrl, "UTF-8");
+        suffix += "&auid=" + auid;
+        if (ref != null) {
+          suffix += "#" + ref;
+        }
+        if (absoluteLinks) {
+          resp.sendRedirect(srvAbsURL(myServletDescr(), suffix));
+        } else {
+          resp.sendRedirect(srvURL(myServletDescr(), suffix));
+        }
         return;
       }
       
