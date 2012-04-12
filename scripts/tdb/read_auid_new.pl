@@ -408,6 +408,30 @@ while (my $line = <>) {
       $result = "--"
     }
     sleep(5);
+  } elsif ($plugin eq "MetaPressPlugin" || $plugin eq "ClockssMetaPressPlugin") {
+    $url = sprintf("%sopenurl.asp?genre=volume&eissn=%s&volume=%s", 
+      $param{base_url}, $param{journal_issn}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$clockss_tag/))) {
+        if ($man_contents =~ m/<td class=.labelName.>Journal<\/td><td class=.labelValue.><a href=\".*\">(.*)<\/a>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(5);
         
   } 
   if ($result eq "Plugin Unknown") {
@@ -417,7 +441,7 @@ while (my $line = <>) {
     printf("*MANIFEST* %s, %s, %s, %s\n",$result,$vol_title,$auid,$man_url);
     $total_manifests = $total_manifests + 1;
   } else {
-    printf("*NO MANIFEST* %s, %s \n",$auid,$man_url);
+    printf("*NO MANIFEST*(%s) %s, %s \n",$result, $auid,$man_url);
     $total_missing = $total_missing + 1;
   }
 }
