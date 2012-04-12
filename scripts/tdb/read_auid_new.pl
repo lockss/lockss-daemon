@@ -19,7 +19,7 @@ my $total_missing_plugin = 0;
 my $cjar = HTTP::Cookies->new();
 
 # Create user agent.
-my $ua = LWP::UserAgent->new( cookie_jar => $cjar );
+my $ua = LWP::UserAgent->new( cookie_jar => $cjar, agent => "LOCKSS cache" );
 
 while (my $line = <>) {
   chomp $line;
