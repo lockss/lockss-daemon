@@ -25365,9 +25365,9 @@
       au < released ; crawling ; 2011 ; National Institute Economic Review Volume 217 ; 217 ; >
       au < manifest ; exists ; 2011 ; National Institute Economic Review Volume 218 ; 218 ; >
       au < manifest ; exists ; 2012 ; National Institute Economic Review Volume 219 ; 219 ; >
-      au < expected ; expected ; 2012 ; National Institute Economic Review Volume 220 ; 220 ; >
-      au < expected ; expected ; 2012 ; National Institute Economic Review Volume 221 ; 221 ; >
-      au < expected ; expected ; 2012 ; National Institute Economic Review Volume 222 ; 222 ; >
+      au < expected ; exists ; 2012 ; National Institute Economic Review Volume 220 ; 220 ; >
+      au < expected ; exists ; 2012 ; National Institute Economic Review Volume 221 ; 221 ; >
+      au < expected ; exists ; 2012 ; National Institute Economic Review Volume 222 ; 222 ; >
 
     }
 
@@ -29149,7 +29149,7 @@
       au < manifest ; exists ; 2009-2010 ; Rehabilitation Counseling Bulletin Volume 53 ; 53 ; >
       au < crawling ; exists ; 2010-2011 ; Rehabilitation Counseling Bulletin Volume 54 ; 54 ; >
       au < manifest ; exists ; 2011-2012 ; Rehabilitation Counseling Bulletin Volume 55 ; 55 ; >
-      au < expected ; expected ; 2012 ; Rehabilitation Counseling Bulletin Volume 56 ; 56 ; >
+      au < expected ; exists ; 2012 ; Rehabilitation Counseling Bulletin Volume 56 ; 56 ; >
       
 
     }
@@ -31952,7 +31952,7 @@
       au < manifest ; exists ; 2009 ; Studies in History Volume 25 ; 25 ; >
       au < manifest ; exists ; 2010 ; Studies in History Volume 26 ; 26 ; >
       au < manifest ; exists ; 2011 ; Studies in History Volume 27 ; 27 ; >
-      au < expected ; expected ; 2012 ; Studies in History Volume 28 ; 28 ; >
+      au < expected ; exists ; 2012 ; Studies in History Volume 28 ; 28 ; >
       
     }
 
@@ -33244,8 +33244,8 @@
       au < released ; crawling ; 2011 ; Thesis Eleven Volume 106 ; 106 ; >
       au < manifest ; exists ; 2012 ; Thesis Eleven Volume 107 ; 107 ; >
       au < manifest ; exists ; 2012 ; Thesis Eleven Volume 108 ; 108 ; >
-      au < expected ; expected ; 2012 ; Thesis Eleven Volume 109 ; 109 ; >
-      au < expected ; expected ; 2012 ; Thesis Eleven Volume 110 ; 110 ; >
+      au < expected ; exists ; 2012 ; Thesis Eleven Volume 109 ; 109 ; >
+      au < expected ; exists ; 2012 ; Thesis Eleven Volume 110 ; 110 ; >
       
 
     }
@@ -33961,9 +33961,8 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Trends in Amplification Volume 13 ; 13 ; >
       au < manifest ; exists ; 2010 ; Trends in Amplification Volume 14 ; 14 ; >
       au < manifest ; exists ; 2011 ; Trends in Amplification Volume 15 ; 15 ; >
-      au < expected ; expected ; 2012 ; Trends in Amplification Volume 16 ; 16 ; >
-      
-
+      au < expected ; exists ; 2012 ; Trends in Amplification Volume 16 ; 16 ; >
+ 
     }
 
   }
