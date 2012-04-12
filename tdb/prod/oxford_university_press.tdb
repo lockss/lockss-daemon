@@ -9875,7 +9875,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 64B ; 64B >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 65B ; 65B >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 65B ; 65B >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 66B ; 66B >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67B ; 67B >
 
@@ -15048,8 +15048,8 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Past & Present Volume 209 ; 209 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Past & Present Volume 210 ; 210 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Past & Present Volume 211 ; 211 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Past & Present Volume 212 ; 212 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Past & Present Volume 213 ; 213 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Past & Present Volume 212 ; 212 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Past & Present Volume 213 ; 213 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Past & Present Volume 214 ; 214 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Past & Present Volume 215 ; 215 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Past & Present Volume 216 ; 216 >
@@ -15599,7 +15599,7 @@
 
     au < HighWirePressPlugin ; down ;2008 ;  Public Health Ethics Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 2009 ; Public Health Ethics Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Public Health Ethics Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Public Health Ethics Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Public Health Ethics Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Public Health Ethics Volume 5 ; 5 >
 
@@ -16472,7 +16472,7 @@
     param[base_url] = http://raps.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Review of Asset Pricing Studies Volume 2 ; 2 >
 
   }
@@ -16629,7 +16629,7 @@
     au < HighWirePressH20Plugin ; released ; 2007 ; The Review of English Studies Volume 58 ; 58 >
     au < HighWirePressPlugin ; down ; 2008 ; The Review of English Studies Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; released ; 2009 ; The Review of English Studies Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; The Review of English Studies Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; The Review of English Studies Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Review of English Studies Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Review of English Studies Volume 63 ; 63 >
 
