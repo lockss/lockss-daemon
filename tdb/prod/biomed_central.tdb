@@ -2125,6 +2125,23 @@ comment[bmr] = journal archive available, but no new volumes
 
     }
 
+
+    {
+      title <
+        name = Chiropractic & Manual Therapies ;
+        issn = 2045-709X ;
+        issnl = 2045-709X
+      >
+      
+      comment[continued_from] = 1746-1340
+      param[base_url] = http://chiromt.com/
+      param[journal_issn] = 2045-709X
+  
+      au < ready ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
+      au < manifest ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
+      
+    }
+    
     {
       title <
         name = Chiropractic & Osteopathy ;
@@ -2143,8 +2160,6 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
       au < released ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
       au < released ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
-      au < notReady ; 2011 ; Chiropractic & Osteopathy Volume 19 ; 19 >
-      au < manifest ; 2012 ; Chiropractic & Osteopathy Volume 20 ; 20 >
       
     }
 
