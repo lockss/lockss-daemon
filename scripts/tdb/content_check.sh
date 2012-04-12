@@ -1,6 +1,14 @@
 #!/bin/bash
 #
 # Script to provide alerts to problems in the title database
+
+# Find incorrect status
+echo "---------------------"
+echo "---------------------"
+echo "*Status typos gln: "
+cat ../../tdb/prod/*.tdb | tdbout -t status | grep -v manifest | grep -v released | grep -v expected | grep -v exists | grep -v testing | grep -v wanted | grep -v ready | grep -v down | grep -v superseded | grep -v doNotProcess | grep -v notReady | grep -v doesNotExist
+echo "*Status typos clockssingest: "
+cat ../../tdb/clockssingest/*.tdb | tdbout -t status | grep -v manifest | grep -v released | grep -v expected | grep -v exists | grep -v testing | grep -v wanted | grep -v down | grep -v superseded | grep -v doNotProcess | grep -v notReady | grep -v doesNotExist | grep -v crawling | grep -v zapped
 #
 # Find duplicates in the gln title database
 tpath="/home/$LOGNAME/tmp"
@@ -81,5 +89,7 @@ diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | wc -l
 echo "Not incl Springer SBM"
 diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | wc -l
 diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | head 
+echo "---------------------"
+echo "---------------------"
 
 
