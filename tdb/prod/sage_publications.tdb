@@ -38337,12 +38337,12 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2004 ; Youth & Society Volume 36 ; 36 >
-        au < HighWireStrVolPlugin ; down ; 2005 ; Youth & Society Volume 37 ; 37 >
-        au < HighWireStrVolPlugin ; down ; 2006 ; Youth & Society Volume 38 ; 38 >
-        au < HighWireStrVolPlugin ; down ; 2007 ; Youth & Society Volume 39 ; 39 >
-        au < HighWirePressPlugin ; down ; 2008 ; Youth & Society Volume 40 ; 40 >
-        au < HighWirePressPlugin ; down ; 2009 ; Youth & Society Volume 41 ; 41 >
+        au < HighWireStrVolPlugin ; down ; 2004-2005 ; Youth & Society Volume 36 ; 36 >
+        au < HighWireStrVolPlugin ; down ; 2005-2006 ; Youth & Society Volume 37 ; 37 >
+        au < HighWireStrVolPlugin ; down ; 2006-2007 ; Youth & Society Volume 38 ; 38 >
+        au < HighWireStrVolPlugin ; down ; 2007-2008 ; Youth & Society Volume 39 ; 39 >
+        au < HighWirePressPlugin ; down ; 2008-2009 ; Youth & Society Volume 40 ; 40 >
+        au < HighWirePressPlugin ; down ; 2009-2010 ; Youth & Society Volume 41 ; 41 >
 
       }
 
