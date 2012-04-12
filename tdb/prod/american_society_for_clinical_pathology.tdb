@@ -59,19 +59,19 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://labmed.ascpjournals.org/
     
-    au < testing ; 2000 ; LabMedicine Volume 31 ; 31 >
-    au < testing ; 2001 ; LabMedicine Volume 32 ; 32 >
-    au < testing ; 2002 ; LabMedicine Volume 33 ; 33 >
-    au < testing ; 2003 ; LabMedicine Volume 34 ; 34 >
-    au < testing ; 2004 ; LabMedicine Volume 35 ; 35 >
-    au < testing ; 2005 ; LabMedicine Volume 36 ; 36 >
-    au < testing ; 2006 ; LabMedicine Volume 37 ; 37 >
-    au < testing ; 2007 ; LabMedicine Volume 38 ; 38 >
-    au < testing ; 2008 ; LabMedicine Volume 39 ; 39 >
-    au < testing ; 2009 ; LabMedicine Volume 40 ; 40 >
-    au < testing ; 2010 ; LabMedicine Volume 41 ; 41 >
-    au < testing ; 2011 ; LabMedicine Volume 42 ; 42 >
-    au < testing ; 2012 ; LabMedicine Volume 43 ; 43 >
+    au < ready ; 2000 ; LabMedicine Volume 31 ; 31 >
+    au < ready ; 2001 ; LabMedicine Volume 32 ; 32 >
+    au < ready ; 2002 ; LabMedicine Volume 33 ; 33 >
+    au < ready ; 2003 ; LabMedicine Volume 34 ; 34 >
+    au < ready ; 2004 ; LabMedicine Volume 35 ; 35 >
+    au < ready ; 2005 ; LabMedicine Volume 36 ; 36 >
+    au < ready ; 2006 ; LabMedicine Volume 37 ; 37 >
+    au < ready ; 2007 ; LabMedicine Volume 38 ; 38 >
+    au < ready ; 2008 ; LabMedicine Volume 39 ; 39 >
+    au < ready ; 2009 ; LabMedicine Volume 40 ; 40 >
+    au < ready ; 2010 ; LabMedicine Volume 41 ; 41 >
+    au < ready ; 2011 ; LabMedicine Volume 42 ; 42 >
+    au < ready ; 2012 ; LabMedicine Volume 43 ; 43 >
 
   }
 
