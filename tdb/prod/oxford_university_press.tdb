@@ -8520,7 +8520,7 @@
 
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Jerusalem Review of Legal Studies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Jerusalem Review of Legal Studies Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 >
 
   }
@@ -10692,7 +10692,7 @@
     au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Islamic Studies Volume 18 ; 18 >
     au < HighWirePressPlugin ; down ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 >
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Islamic Studies Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Islamic Studies Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Islamic Studies Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Islamic Studies Volume 23 ; 23 >
 
@@ -10776,7 +10776,7 @@
 
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Legal Analysis Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Legal Analysis Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Legal Analysis Volume 4 ; 4 >
 
   	}
@@ -11471,8 +11471,8 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Plant Ecology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Plant Ecology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Plant Ecology Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Plant Ecology Volume 5 ; 5 >
 
@@ -12089,7 +12089,7 @@
 
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Topology Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Topology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Topology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Topology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Topology Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Topology Volume 5 ; 5 >
 
