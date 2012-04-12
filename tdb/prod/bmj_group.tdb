@@ -982,9 +982,9 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://jcp.bmj.com/
 
-    au < HighWirePressH20Plugin ; testing ; 1947-1948 ; Journal of Clinical Pathology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1947-1948 ; Journal of Clinical Pathology Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; ready ; 1949 ; Journal of Clinical Pathology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; Journal of Clinical Pathology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1950 ; Journal of Clinical Pathology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 1951 ; Journal of Clinical Pathology Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 1952 ; Journal of Clinical Pathology Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; ready ; 1953 ; Journal of Clinical Pathology Volume 6 ; 6 >
@@ -996,16 +996,16 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; ready ; 1959 ; Journal of Clinical Pathology Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; ready ; 1960 ; Journal of Clinical Pathology Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; ready ; 1961 ; Journal of Clinical Pathology Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; testing ; 1962 ; Journal of Clinical Pathology Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 1963 ; Journal of Clinical Pathology Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; testing ; 1964 ; Journal of Clinical Pathology Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; 1965 ; Journal of Clinical Pathology Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; 1966 ; Journal of Clinical Pathology Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of Clinical Pathology Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of Clinical Pathology Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of Clinical Pathology Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Journal of Clinical Pathology Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Journal of Clinical Pathology Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; 1962 ; Journal of Clinical Pathology Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1963 ; Journal of Clinical Pathology Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 1964 ; Journal of Clinical Pathology Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; Journal of Clinical Pathology Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; Journal of Clinical Pathology Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 1967 ; Journal of Clinical Pathology Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 1968 ; Journal of Clinical Pathology Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 1969 ; Journal of Clinical Pathology Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; testing ; 1970 ; Journal of Clinical Pathology Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of Clinical Pathology Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of Clinical Pathology Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Clinical Pathology Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Clinical Pathology Volume 27 ; 27 >
