@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.48 2012-04-12 20:35:33 pgust Exp $
+ * $Id: ServeContent.java,v 1.49 2012-04-14 04:13:43 pgust Exp $
  */
 
 /*
@@ -459,25 +459,35 @@ public class ServeContent extends LockssServlet {
       }
       
       if (au != null) {
-        // redirect to cached page if it has content
-        // (must redirect because URL may include a reference: '#')
+        // display cached page if it has content
         String ref = null;
         try {
           ref = new URL(url).getRef();
         } catch (MalformedURLException ex) {
         }
-        String auid = au.getAuId();
-        String cuUrl = cu.getUrl();
-        String suffix = "url=" + URLEncoder.encode(cuUrl, "UTF-8");
-        suffix += "&auid=" + auid;
+        
         if (ref != null) {
-          suffix += "#" + ref;
-        }
-        if (absoluteLinks) {
-          resp.sendRedirect(srvAbsURL(myServletDescr(), suffix));
+          // redirect because URL includes a reference: '#'
+          // that can only be interpreted by the browser
+          String auid = au.getAuId();
+          String cuUrl = cu.getUrl();
+          String suffix = 
+              "url=" + URLEncoder.encode(cuUrl, "UTF-8")
+            + "&auid=" + auid + "#" + ref;
+          
+          String srvUrl = absoluteLinks  
+              ? srvAbsURL(myServletDescr(), suffix) 
+              : srvURL(myServletDescr(), suffix);
+
+          Page p = new Page();
+          p.addHeader(  
+              "<meta HTTP-EQUIV=\"REFRESH\" content=\"0,url=" + srvUrl + "\">");
+          writePage(p); 
         } else {
-          resp.sendRedirect(srvURL(myServletDescr(), suffix));
+          // handle urls without a reference normally
+          handleAuRequest();
         }
+
         return;
       }
       
