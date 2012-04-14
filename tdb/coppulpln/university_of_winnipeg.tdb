@@ -13,35 +13,52 @@
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://jms.uwinnipeg.ca/
     param[journal_id] = jms
-    implicit < status ; year ; name ; param[year] >
+    implicit < status ; year ; name ; volume ; param[year] >
 
-    au < released ; 1983 ; Journal of Mennonite Studies Volume 1 ; 1983 >
-    au < released ; 1984 ; Journal of Mennonite Studies Volume 2 ; 1984 >
-    au < released ; 1985 ; Journal of Mennonite Studies Volume 3 ; 1985 >
-    au < released ; 1986 ; Journal of Mennonite Studies Volume 4 ; 1986 >
-    au < released ; 1987 ; Journal of Mennonite Studies Volume 5 ; 1987 >
-    au < released ; 1988 ; Journal of Mennonite Studies Volume 6 ; 1988 >
-    au < released ; 1989 ; Journal of Mennonite Studies Volume 7 ; 1989 >
-    au < released ; 1990 ; Journal of Mennonite Studies Volume 8 ; 1990 >
-    au < released ; 1991 ; Journal of Mennonite Studies Volume 9 ; 1991 >
-    au < released ; 1992 ; Journal of Mennonite Studies Volume 10 ; 1992 >
-    au < released ; 1993 ; Journal of Mennonite Studies Volume 11 ; 1993 >
-    au < released ; 1994 ; Journal of Mennonite Studies Volume 12 ; 1994 >
-    au < released ; 1995 ; Journal of Mennonite Studies Volume 13 ; 1995 >
-    au < released ; 1996 ; Journal of Mennonite Studies Volume 14 ; 1996 >
-    au < released ; 1997 ; Journal of Mennonite Studies Volume 15 ; 1997 >
-    au < released ; 1998 ; Journal of Mennonite Studies Volume 16 ; 1998 >
-    au < released ; 1999 ; Journal of Mennonite Studies Volume 17 ; 1999 >
-    au < released ; 2000 ; Journal of Mennonite Studies Volume 18 ; 2000 >
-    au < released ; 2001 ; Journal of Mennonite Studies Volume 19 ; 2001 >
-    au < released ; 2002 ; Journal of Mennonite Studies Volume 20 ; 2002 >
-    au < released ; 2003 ; Journal of Mennonite Studies Volume 21 ; 2003 >
-    au < released ; 2004 ; Journal of Mennonite Studies Volume 22 ; 2004 >
-    au < released ; 2005 ; Journal of Mennonite Studies Volume 23 ; 2005 >
-    au < released ; 2006 ; Journal of Mennonite Studies Volume 24 ; 2006 >
-    au < released ; 2007 ; Journal of Mennonite Studies Volume 25 ; 2007 >
-    au < released ; 2008 ; Journal of Mennonite Studies Volume 26 ; 2008 >
-    au < released ; 2009 ; Journal of Mennonite Studies Volume 27 ; 2009 >
+    au < released ; 1983 ; Journal of Mennonite Studies Volume 1 ; 1 ; 1983 >
+    au < released ; 1984 ; Journal of Mennonite Studies Volume 2 ; 2 ; 1984 >
+    au < released ; 1985 ; Journal of Mennonite Studies Volume 3 ; 3 ; 1985 >
+    au < released ; 1986 ; Journal of Mennonite Studies Volume 4 ; 4 ; 1986 >
+    au < released ; 1987 ; Journal of Mennonite Studies Volume 5 ; 5 ; 1987 >
+    au < released ; 1988 ; Journal of Mennonite Studies Volume 6 ; 6 ; 1988 >
+    au < released ; 1989 ; Journal of Mennonite Studies Volume 7 ; 7 ; 1989 >
+    au < released ; 1990 ; Journal of Mennonite Studies Volume 8 ; 8 ; 1990 >
+    au < released ; 1991 ; Journal of Mennonite Studies Volume 9 ; 9 ; 1991 >
+    au < released ; 1992 ; Journal of Mennonite Studies Volume 10 ; 10 ; 1992 >
+    au < released ; 1993 ; Journal of Mennonite Studies Volume 11 ; 11 ; 1993 >
+    au < released ; 1994 ; Journal of Mennonite Studies Volume 12 ; 12 ; 1994 >
+    au < released ; 1995 ; Journal of Mennonite Studies Volume 13 ; 13 ; 1995 >
+    au < released ; 1996 ; Journal of Mennonite Studies Volume 14 ; 14 ; 1996 >
+    au < released ; 1997 ; Journal of Mennonite Studies Volume 15 ; 15 ; 1997 >
+    au < released ; 1998 ; Journal of Mennonite Studies Volume 16 ; 16 ; 1998 >
+    au < released ; 1999 ; Journal of Mennonite Studies Volume 17 ; 17 ; 1999 >
+    au < released ; 2000 ; Journal of Mennonite Studies Volume 18 ; 18 ; 2000 >
+    au < released ; 2001 ; Journal of Mennonite Studies Volume 19 ; 19 ; 2001 >
+    au < released ; 2002 ; Journal of Mennonite Studies Volume 20 ; 20 ; 2002 >
+    au < released ; 2003 ; Journal of Mennonite Studies Volume 21 ; 21 ; 2003 >
+    au < released ; 2004 ; Journal of Mennonite Studies Volume 22 ; 22 ; 2004 >
+    au < released ; 2005 ; Journal of Mennonite Studies Volume 23 ; 23 ; 2005 >
+    au < released ; 2006 ; Journal of Mennonite Studies Volume 24 ; 24 ; 2006 >
+    au < released ; 2007 ; Journal of Mennonite Studies Volume 25 ; 25 ; 2007 >
+    au < released ; 2008 ; Journal of Mennonite Studies Volume 26 ; 26 ; 2008 >
+    au < released ; 2009 ; Journal of Mennonite Studies Volume 27 ; 27 ; 2009 >
+
+  }
+
+  {
+  
+    title <
+      name = Canadian Journal of Practice-based Research in Theatre
+    >
+    
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    param[base_url] = http://cjprt.uwinnipeg.ca/
+    param[journal_id] = cjprt
+    implicit < status ; year ; name ; volume ; param[year] >
+
+    au < testing ; 2009 ; Canadian Journal of Practice-based Research in Theatre Volume 1 ; 1 ; 2009 >
+    au < testing ; 2010 ; Canadian Journal of Practice-based Research in Theatre Volume 2 ; 2 ; 2010 >
+    au < testing ; 2011 ; Canadian Journal of Practice-based Research in Theatre Volume 3 ; 3 ; 2011 >
 
   }
 
