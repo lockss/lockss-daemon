@@ -97,6 +97,23 @@
     <string>org.lockss.plugin.springer.SpringerLinkHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.springer.SpringerLinkBookArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.springer.SpringerLinkBookArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.springer.SpringerLinkBookMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>plugin_cache_result_list</string>
     <list>
       <string>java.io.IOException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_3_30S</string>
