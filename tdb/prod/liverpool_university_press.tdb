@@ -77,11 +77,11 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = bulletin_of_hispanic_studies
       attr[journal_id] = bhs
+      
+      comment[0] = Only 2009 and 2010 are found on ProjectMuse web page. 
 
       au < released ; 2009 ; The Bulletin of Hispanic Studies Volume 86 ; 86 >
       au < released ; 2010 ; The Bulletin of Hispanic Studies Volume 87 ; 87 >
-      au < manifest ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
-      au < expected ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
     
     }
     
@@ -92,7 +92,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       
       param[journal_issn] = 1478-3398 
-      comment[0] = vols. 73-79 currently not available online
+      comment[0] = vols. 73-78 currently not available online
      
       au < manifest ; 1994 ; Bulletin of Hispanic Studies Volume 71 ; 71 >
       au < manifest ; 1995 ; Bulletin of Hispanic Studies Volume 72 ; 72 >
@@ -102,7 +102,7 @@
       au < doesNotExist ; 1999 ; Bulletin of Hispanic Studies Volume 76 ; 76 >
       au < doesNotExist ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 >
       au < doesNotExist ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 >
-      au < doesNotExist ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 >
+      au < manifest ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 >
       au < manifest ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 >
       au < manifest ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 >
       au < manifest ; 2005 ; Bulletin of Hispanic Studies Volume 82 ; 82 >
@@ -112,7 +112,7 @@
       au < manifest ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 >
       au < manifest ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
       au < released ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
-      au < expected ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
+      au < manifest ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
    
     }
 
@@ -242,7 +242,7 @@
     au < manifest ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 >
     au < manifest ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
     au < released ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
-    au < expected ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 >
+    au < exists ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 >
 
   }
 
@@ -272,7 +272,7 @@
       param[journal_issn] = 2047-7708 
     
       au < released ; 2011 ; Extrapolation Volume 52 ; 52 >
-      au < expected ; 2012 ; Extrapolation Volume 53 ; 53 >
+      au < manifest ; 2012 ; Extrapolation Volume 53 ; 53 >
 	
     }
 
@@ -302,7 +302,7 @@
     au < manifest ; 2009 ; International Development Planning Review Volume 31 ; 31 >
     au < manifest ; 2010 ; International Development Planning Review Volume 32 ; 32 >
     au < released ; 2011 ; International Development Planning Review Volume 33 ; 33 >
-    au < expected ; 2012 ; International Development Planning Review Volume 34 ; 34 >
+    au < exists ; 2012 ; International Development Planning Review Volume 34 ; 34 >
 
   }
     
@@ -342,7 +342,7 @@
       au < manifest ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
       au < manifest ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
       au < released ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
-      au < expected ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
+      au < exists ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
 
     }
 
@@ -362,7 +362,14 @@
     implicit < status ; year ; name ; param[volume_name] >      
     param[journal_issn] = 1745-8188     
 
-	comment[2012] = coming in 2012
+	au < exists ; 2005 ; Labour History Review Volume 70 ; 70 >
+	au < exists ; 2006 ; Labour History Review Volume 71 ; 71 >
+	au < exists ; 2007 ; Labour History Review Volume 72 ; 72 >
+	au < exists ; 2008 ; Labour History Review Volume 73 ; 73 >
+	au < exists ; 2009 ; Labour History Review Volume 74 ; 74 >
+	au < exists ; 2010 ; Labour History Review Volume 75 ; 75 >
+	au < exists ; 2011 ; Labour History Review Volume 76 ; 76 >
+	au < exists ; 2012 ; Labour History Review Volume 77 ; 77 >
 
   }
 
@@ -515,7 +522,7 @@
       au < manifest ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
       au < manifest ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
       au < released ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
-      au < expected ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
+      au < manifest ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
 
     }        
 
