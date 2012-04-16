@@ -17,8 +17,8 @@
       eissn = 1533-7979 ;
       issnl = 1040-1628
     >
-	param[journal_issn] = 1040-1628 
-	
+    param[journal_issn] = 1040-1628 
+
     au < exists ; exists ; 1988 ; Information Resources Management Journal (IRMJ) Volume 1 ; 1 > 
     au < exists ; exists ; 1989 ; Information Resources Management Journal (IRMJ) Volume 2 ; 2 > 
     au < exists ; exists ; 1990 ; Information Resources Management Journal (IRMJ) Volume 3 ; 3 > 
@@ -81,8 +81,8 @@
     au < exists ; exists ; 2008 ; Information Technology Management Volume 21 ; 21 > 
     au < exists ; exists ; 2009 ; Information Technology Management Volume 22 ; 22 > 
     au < exists ; exists ; 2010 ; Information Technology Management Volume 23 ; 23 > 
-    au < testing ; exists ; 2011 ; Information Technology Management Volume 24 ; 24 > 
-    au < manifest ; exists ; 2012 ; Information Technology Management Volume 25 ; 25 > 
+    au < exists ; exists ; 2011 ; Information Technology Management Volume 24 ; 24 > 
+    au < exists ; exists ; 2012 ; Information Technology Management Volume 25 ; 25 > 
 
   }
 
@@ -108,7 +108,7 @@
       eissn = 1942-5368 ;
       issnl = 1942-535X
     >
-	param[journal_issn] = 1942-535x
+	param[journal_issn] = 1942-535X
 
     au < exists ; exists ; 2009 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 1 ; 1 > 
     au < exists ; exists ; 2010 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 2 ; 2 > 
@@ -157,7 +157,7 @@
       eissn = 1937-9668 ;
       issnl = 1937-965X
     >
-	param[journal_issn] = 1937-965x
+	param[journal_issn] = 1937-965X
 	
     au < exists ; exists ; 2009 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 1 ; 1 > 
     au < exists ; exists ; 2010 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 2 ; 2 > 
