@@ -111,11 +111,25 @@
       issn = 1920-4175
     >
     
-    param[base_url] = http://m1.cust.educ.ubc.ca/journal/
-    param[journal_id] = criticaled
+    {
+    
+      param[base_url] = http://m1.cust.educ.ubc.ca/journal/
+      param[journal_id] = criticaled
 
-    au < released ; 2010 ; Critical Education Volume 1 ; 2010 >
-    au < released ; 2011 ; Critical Education Volume 2 ; 2011 >
+      au < superseded ; 2010 ; Critical Education Volume 1 [superseded] ; 2010 >
+      au < superseded ; 2011 ; Critical Education Volume 2 [superseded] ; 2011 >
+      
+    }
+    
+    {
+    
+      param[base_url] = http://ojs.library.ubc.ca/
+      param[journal_id] = criticaled
+
+      au < testing ; 2010 ; Critical Education Volume 1 ; 2010 >
+      au < testing ; 2011 ; Critical Education Volume 2 ; 2011 >
+      
+    }
 
   }
 
