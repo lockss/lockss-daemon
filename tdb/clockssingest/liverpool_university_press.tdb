@@ -67,7 +67,7 @@
     >
     
     param[journal_issn] = 1478-3398 
-    comment[0] = vols. 73-79 currently not available online
+    comment[0] = vols. 73-78 currently not available online
 
     au < manifest ; exists ; 1994 ; Bulletin of Hispanic Studies Volume 71 ; 71 >
     au < manifest ; exists ; 1995 ; Bulletin of Hispanic Studies Volume 72 ; 72 >
@@ -77,7 +77,7 @@
     au < doesNotExist ; doesNotExist ; 1999 ; Bulletin of Hispanic Studies Volume 76 ; 76 >
     au < doesNotExist ; doesNotExist ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 >
     au < doesNotExist ; doesNotExist ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 >
-    au < doesNotExist ; doesNotExist ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 >
+    au < manifest ; exists ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 >
     au < manifest ; exists ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 >
     au < manifest ; exists ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 >
     au < manifest ; exists ; 2005 ; Bulletin of Hispanic Studies Volume 82 ; 82 >
@@ -87,7 +87,7 @@
     au < crawling ; exists ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 >
     au < crawling ; exists ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
     au < released ; crawling ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
-    au < expected ; exists ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
+    au < manifest ; exists ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
 
   }
    
@@ -182,7 +182,7 @@
     au < crawling ; exists ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 >
     au < crawling ; exists ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
     au < released ; crawling ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
-    au < expected ; exists ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 >
+    au < manifest ; exists ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 >
 
   }
    
@@ -199,7 +199,7 @@
     param[journal_issn] = 2047-7708 
 
     au < released ; crawling ; 2011 ; Extrapolation Volume 52 ; 52 >
-    au < expected ; exists ; 2012 ; Extrapolation Volume 53 ; 53 >
+    au < manifest ; exists ; 2012 ; Extrapolation Volume 53 ; 53 >
 
   }
 
@@ -259,7 +259,14 @@
     
     param[journal_issn] = 1745-8188     
 
-	comment[2012] = coming in 2012
+	au < manifest ; exists ; 2005 ; Labour History Review Volume 70 ; 70 >
+	au < manifest ; exists ; 2006 ; Labour History Review Volume 71 ; 71 >
+	au < manifest ; exists ; 2007 ; Labour History Review Volume 72 ; 72 >
+	au < manifest ; exists ; 2008 ; Labour History Review Volume 73 ; 73 >
+	au < manifest ; exists ; 2009 ; Labour History Review Volume 74 ; 74 >
+	au < manifest ; exists ; 2010 ; Labour History Review Volume 75 ; 75 >
+	au < manifest ; exists ; 2011 ; Labour History Review Volume 76 ; 76 >
+	au < manifest ; exists ; 2012 ; Labour History Review Volume 77 ; 77 >
 
   }
    
@@ -346,7 +353,7 @@
     au < crawling ; exists ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
     au < crawling ; exists ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
     au < released ; crawling ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
-    au < expected ; exists ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
+    au < manifest ; exists ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
 
   }
    
