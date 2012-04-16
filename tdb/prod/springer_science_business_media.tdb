@@ -18,8 +18,8 @@
 
     param[journal_issn] = 2092-6731
 
-    au < testing ; 2010 ; 3D Research Volume 1 ; 1 >
-    au < testing ; 2011 ; 3D Research Volume 2 ; 2 >
+    au < manifest ; 2010 ; 3D Research Volume 1 ; 1 >
+    au < manifest ; 2011 ; 3D Research Volume 2 ; 2 >
     au < manifest ; 2012 ; 3D Research Volume 3 ; 3 >
 
   }
@@ -34,6 +34,17 @@
     >
 
     param[journal_issn] = 1619-4500
+
+    au < manifest ; 2003 ; 40R: A Quarterly Journal of Operations Research Volume 1 ; 1 >
+    au < manifest ; 2004 ; 40R: A Quarterly Journal of Operations Research Volume 2 ; 2 >
+    au < manifest ; 2005 ; 40R: A Quarterly Journal of Operations Research Volume 3 ; 3 >
+    au < manifest ; 2006 ; 40R: A Quarterly Journal of Operations Research Volume 4 ; 4 >
+    au < manifest ; 2007 ; 40R: A Quarterly Journal of Operations Research Volume 5 ; 5 >
+    au < manifest ; 2008 ; 40R: A Quarterly Journal of Operations Research Volume 6 ; 6 >
+    au < manifest ; 2009 ; 40R: A Quarterly Journal of Operations Research Volume 7 ; 7 >
+    au < manifest ; 2010 ; 40R: A Quarterly Journal of Operations Research Volume 8 ; 8 >
+    au < manifest ; 2011 ; 40R: A Quarterly Journal of Operations Research Volume 9 ; 9 >
+    au < manifest ; 2012 ; 40R: A Quarterly Journal of Operations Research Volume 10 ; 10 >
 
   }
 
@@ -59,6 +70,8 @@
     au < released ; 2008 ; The AAPS Journal Volume 10 ; 10 >
     au < released ; 2009 ; The AAPS Journal Volume 11 ; 11 >
     au < released ; 2010 ; The AAPS Journal Volume 12 ; 12 >
+    au < manifest ; 2011 ; The APPS Journal Volume 13 ; 13 >
+    au < manifest ; 2012 ; The APPS Journal Volume 14 ; 14 >
 
   }
 
@@ -71,6 +84,20 @@
     >
 
     param[journal_issn] = 1530-9932
+
+    au < manifest ; 2000 ; AAPS PharmSciTech Volume 1 ; 1 >
+    au < manifest ; 2001 ; AAPS PharmSciTech Volume 2 ; 2 >
+    au < manifest ; 2002 ; AAPS PharmSciTech Volume 3 ; 3 >
+    au < manifest ; 2003 ; AAPS PharmSciTech Volume 4 ; 4 >
+    au < manifest ; 2004 ; AAPS PharmSciTech Volume 5 ; 5 >
+    au < manifest ; 2005 ; AAPS PharmSciTech Volume 6 ; 6 >
+    au < manifest ; 2006 ; AAPS PharmSciTech Volume 7 ; 7 >
+    au < manifest ; 2007 ; AAPS PharmSciTech Volume 8 ; 8 >
+    au < manifest ; 2008 ; AAPS PharmSciTech Volume 9 ; 9 >
+    au < manifest ; 2009 ; AAPS PharmSciTech Volume 10 ; 10 >
+    au < manifest ; 2010 ; AAPS PharmSciTech Volume 11 ; 11 >
+    au < manifest ; 2011 ; AAPS PharmSciTech Volume 12 ; 12 >
+    au < manifest ; 2012 ; AAPS PharmSciTech Volume 13 ; 13 >
 
   }
 
@@ -85,6 +112,44 @@
 
     param[journal_issn] = 0942-8925
 
+    au < manifest ; 1976 ; Abdominal Imaging Volume 1 ; 1 >
+    au < manifest ; 1977 ; Abdominal Imaging Volume 2 ; 2 >
+    au < manifest ; 1978 ; Abdominal Imaging Volume 3 ; 3 >
+    au < manifest ; 1979 ; Abdominal Imaging Volume 4 ; 4 >
+    au < manifest ; 1980 ; Abdominal Imaging Volume 5 ; 5 >
+    au < manifest ; 1981 ; Abdominal Imaging Volume 6 ; 6 >
+    au < manifest ; 1982 ; Abdominal Imaging Volume 7 ; 7 >
+    au < manifest ; 1983 ; Abdominal Imaging Volume 8 ; 8 >
+    au < manifest ; 1984 ; Abdominal Imaging Volume 9 ; 9 >
+    au < manifest ; 1985 ; Abdominal Imaging Volume 10 ; 10 >
+    au < manifest ; 1986 ; Abdominal Imaging Volume 11 ; 11 >
+    au < manifest ; 1987 ; Abdominal Imaging Volume 12 ; 12 >
+    au < manifest ; 1988 ; Abdominal Imaging Volume 13 ; 13 >
+    au < manifest ; 1989 ; Abdominal Imaging Volume 14 ; 14 >
+    au < manifest ; 1990 ; Abdominal Imaging Volume 15 ; 15 >
+    au < manifest ; 1991 ; Abdominal Imaging Volume 16 ; 16 >
+    au < manifest ; 1992 ; Abdominal Imaging Volume 17 ; 17 >
+    au < manifest ; 1993 ; Abdominal Imaging Volume 18 ; 18 >
+    au < manifest ; 1994 ; Abdominal Imaging Volume 19 ; 19 >
+    au < manifest ; 1995 ; Abdominal Imaging Volume 20 ; 20 >
+    au < manifest ; 1996 ; Abdominal Imaging Volume 21 ; 21 >
+    au < manifest ; 1997 ; Abdominal Imaging Volume 22 ; 22 >
+    au < manifest ; 1998 ; Abdominal Imaging Volume 23 ; 23 >
+    au < manifest ; 1999 ; Abdominal Imaging Volume 24 ; 24 >
+    au < manifest ; 2000 ; Abdominal Imaging Volume 25 ; 25 >
+    au < manifest ; 2001 ; Abdominal Imaging Volume 26 ; 26 >
+    au < manifest ; 2002 ; Abdominal Imaging Volume 27 ; 27 >
+    au < manifest ; 2003 ; Abdominal Imaging Volume 28 ; 28 >
+    au < manifest ; 2004 ; Abdominal Imaging Volume 29 ; 29 >
+    au < manifest ; 2005 ; Abdominal Imaging Volume 30 ; 30 >
+    au < manifest ; 2006 ; Abdominal Imaging Volume 31 ; 31 >
+    au < manifest ; 2007 ; Abdominal Imaging Volume 32 ; 32 >
+    au < manifest ; 2008 ; Abdominal Imaging Volume 33 ; 33 >
+    au < manifest ; 2009 ; Abdominal Imaging Volume 34 ; 34 >
+    au < manifest ; 2010 ; Abdominal Imaging Volume 35 ; 35 >
+    au < manifest ; 2011 ; Abdominal Imaging Volume 36 ; 36 >
+    au < manifest ; 2012 ; Abdominal Imaging Volume 37 ; 37 >
+
   }
 
   {
@@ -97,6 +162,89 @@
     >
 
     param[journal_issn] = 0025-5858
+
+    au < manifest ; 1922 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 1 ; 1 >
+    au < manifest ; 1923 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 2 ; 2 >
+    au < manifest ; 1924 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 3 ; 3 >
+    au < manifest ; 1925 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 4 ; 4 >
+    au < manifest ; 1927 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 5 ; 5 >
+    au < manifest ; 1928 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 6 ; 6 >
+    au < manifest ; 1929 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 7 ; 7 >
+    au < manifest ; 1931 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 8 ; 8 >
+    au < manifest ; 1933 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 9 ; 9 >
+    au < manifest ; 1934 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 10 ; 10 >
+    au < manifest ; 1935 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 11 ; 11 >
+    au < manifest ; 1937 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 12 ; 12 >
+    au < manifest ; 1939 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 13 ; 13 >
+    au < manifest ; 1941 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 14 ; 14 >
+    au < manifest ; 1943 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 15 ; 15 >
+    au < manifest ; 1949 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 16 ; 16 >
+    au < manifest ; 1951 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 17 ; 17 >
+    au < manifest ; 1952 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 18 ; 18 >
+    au < manifest ; 1954-1955 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 19 ; 19 >
+    au < manifest ; 1955 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 20 ; 20 >
+    au < manifest ; 1957 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 21 ; 21 >
+    au < manifest ; 1958 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 22 ; 22 >
+    au < manifest ; 1959 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 23 ; 23 >
+    au < manifest ; 1960 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 24 ; 24 >
+    au < manifest ; 1961-1962 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 25 ; 25 >
+    au < manifest ; 1963-1964 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 26 ; 26 >
+    au < manifest ; 1964 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 27 ; 27 >
+    au < manifest ; 1965 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 28 ; 28 >
+    au < manifest ; 1965-1966 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 29 ; 29 >
+    au < manifest ; 1967 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 30 ; 30 >
+    au < manifest ; 1967 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 31 ; 31 >
+    au < manifest ; 1968 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 32 ; 32 >
+    au < manifest ; 1969 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 33 ; 33 >
+    au < manifest ; 1969-1970 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 34 ; 34 >
+    au < manifest ; 1970-1971 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 35 ; 35 >
+    au < manifest ; 1971 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 36 ; 36 >
+    au < manifest ; 1972 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 37 ; 37 >
+    au < manifest ; 1972 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 38 ; 38 >
+    au < manifest ; 1973 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 39 ; 39 >
+    au < manifest ; 1974 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 40 ; 40 >
+    au < manifest ; 1974 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 41 ; 41 >
+    au < manifest ; 1974 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 42 ; 42 >
+    au < manifest ; 1975 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 43 ; 43 >
+    au < manifest ; 1975 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 44 ; 44 >
+    au < manifest ; 1976 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 45 ; 45 >
+    au < manifest ; 1977 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 46 ; 46 >
+    au < manifest ; 1978 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 47 ; 47 >
+    au < manifest ; 1979 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 48 ; 48 >
+    au < manifest ; 1979 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 49 ; 49 >
+    au < manifest ; 1980 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 50 ; 50 >
+    au < manifest ; 1981 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 51 ; 51 >
+    au < manifest ; 1982 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 52 ; 52 >
+    au < manifest ; 1983 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 53 ; 53 >
+    au < manifest ; 1984 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 54 ; 54 >
+    au < manifest ; 1985 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 55 ; 55 >
+    au < manifest ; 1986 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 56 ; 56 >
+    au < manifest ; 1987 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 57 ; 57 >
+    au < manifest ; 1988 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 58 ; 58 >
+    au < manifest ; 1989 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 59 ; 59 >
+    au < manifest ; 1990 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 60 ; 60 >
+    au < manifest ; 1991 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 61 ; 61 >
+    au < manifest ; 1992 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 62 ; 62 >
+    au < manifest ; 1993 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 63 ; 63 >
+    au < manifest ; 1994 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 64 ; 64 >
+    au < manifest ; 1995 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 65 ; 65 >
+    au < manifest ; 1996 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 66 ; 66 >
+    au < manifest ; 1997 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 67 ; 67 >
+    au < manifest ; 1998 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 68 ; 68 >
+    au < manifest ; 1999 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 69 ; 69 >
+    au < manifest ; 2000 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 70 ; 70 >
+    au < manifest ; 2001 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 71 ; 71 >
+    au < manifest ; 2002 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 72 ; 72 >
+    au < manifest ; 2003 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 73 ; 73 >
+    au < manifest ; 2004 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 74 ; 74 >
+    au < manifest ; 2005 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 75 ; 75 >
+    au < manifest ; 2006 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 76 ; 76 >
+    au < manifest ; 2007 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 77 ; 77 >
+    au < manifest ; 2008 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 78 ; 78 >
+    au < manifest ; 2009 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 79 ; 79 >
+    au < manifest ; 2010 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 80 ; 80 >
+    au < manifest ; 2011 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 81 ; 81 >
+    au < expected ; 2012 ; Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg Volume 82 ; 82 >
 
   }
 
@@ -111,6 +259,32 @@
 
     param[journal_issn] = 0895-4852
 
+    au < manifest ; 1988 ; Academic Questions Volume 1 ; 1 >
+    au < manifest ; 1989 ; Academic Questions Volume 2 ; 2 >
+    au < manifest ; 1990 ; Academic Questions Volume 3 ; 3 >
+    au < manifest ; 1991 ; Academic Questions Volume 4 ; 4 >
+    au < manifest ; 1992 ; Academic Questions Volume 5 ; 5 >
+    au < manifest ; 1993 ; Academic Questions Volume 6 ; 6 >
+    au < manifest ; 1994 ; Academic Questions Volume 7 ; 7 >
+    au < manifest ; 1995 ; Academic Questions Volume 8 ; 8 >
+    au < manifest ; 1996 ; Academic Questions Volume 9 ; 9 >
+    au < manifest ; 1997 ; Academic Questions Volume 10 ; 10 >
+    au < manifest ; 1998 ; Academic Questions Volume 11 ; 11 >
+    au < manifest ; 1999 ; Academic Questions Volume 12 ; 12 >
+    au < manifest ; 2000 ; Academic Questions Volume 13 ; 13 >
+    au < manifest ; 2001 ; Academic Questions Volume 14 ; 14 >
+    au < manifest ; 2002 ; Academic Questions Volume 15 ; 15 >
+    au < manifest ; 2003 ; Academic Questions Volume 16 ; 16 >
+    au < manifest ; 2004 ; Academic Questions Volume 17 ; 17 >
+    au < manifest ; 2005 ; Academic Questions Volume 18 ; 18 >
+    au < manifest ; 2006 ; Academic Questions Volume 19 ; 19 >
+    au < manifest ; 2007 ; Academic Questions Volume 20 ; 20 >
+    au < manifest ; 2008 ; Academic Questions Volume 21 ; 21 >
+    au < manifest ; 2009 ; Academic Questions Volume 22 ; 22 >
+    au < manifest ; 2010 ; Academic Questions Volume 23 ; 23 >
+    au < manifest ; 2011 ; Academic Questions Volume 24 ; 24 >
+    au < manifest ; 2012 ; Academic Questions Volume 25 ; 25 >
+
   }
 
   {
@@ -123,6 +297,24 @@
     >
 
     param[journal_issn] = 0949-1775
+
+    au < manifest ; 1996 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 1 ; 1 >
+    au < manifest ; 1997 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 2 ; 2 >
+    au < manifest ; 1998 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 3 ; 3 >
+    au < manifest ; 1999 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 4 ; 4 >
+    au < manifest ; 2000 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 5 ; 5 >
+    au < manifest ; 2001 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 6 ; 6 >
+    au < manifest ; 2002 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 7 ; 7 >
+    au < manifest ; 2003 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 8 ; 8 >
+    au < manifest ; 2004 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 9 ; 9 >
+    au < manifest ; 2005 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 10 ; 10 >
+    au < manifest ; 2006 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 11 ; 11 >
+    au < manifest ; 2007 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 12 ; 12 >
+    au < manifest ; 2008 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 13 ; 13 >
+    au < manifest ; 2009 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 14 ; 14 >
+    au < manifest ; 2010 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 15 ; 15 >
+    au < manifest ; 2011 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 16 ; 16 >
+    au < manifest ; 2012 ; Accreditation and Quality Assurance: Journal for Quality, Comparability and Reliability in Chemical Measurement Volume 17 ; 17 >
 
   }
 
