@@ -86,7 +86,7 @@ cat ../../tdb/prod/*.tdb | ./tdbout -j | sort -u > $tpath/AllTitles.txt
 cat ../../tdb/prod/*.tdb | ./tdbout -c publisher,title,issn,eissn | sort -u > $tpath/TitlesWAUs.txt
 echo "All"
 diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | wc -l
-echo "Not incl Springer SBM"
+echo "Not incl Springer SBM, or AIAA"
 diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | wc -l
 diff $tpath/AllTitles.txt $tpath/TitlesWAUs.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | head 
 echo "---------------------"
