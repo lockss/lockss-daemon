@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.1 2012-03-26 18:27:33 wkwilson Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.2 2012-04-17 22:36:02 wkwilson Exp $
  */
 
 /*
@@ -42,8 +42,8 @@ import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 /*
- * PDF Full Text: http://www.igi-global.com/viewtitle.aspx?titleid=55656
- * HTML Abstract: http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55656
+ * PDF Full Text: http://www.igi-global.com/article/full-text-pdf/56564
+ * HTML Abstract: http://www.igi-global.com/article/56564
  */
 
 public class IgiGlobalArticleIteratorFactory
@@ -52,9 +52,9 @@ public class IgiGlobalArticleIteratorFactory
 
   protected static Logger log = Logger.getLogger("IgiArticleIteratorFactory");
   
-  protected static final String ROOT_TEMPLATE = "\"%s\", base_url"; // params from tdb file corresponding to AU
+  protected static final String ROOT_TEMPLATE = "\"%sgateway/article/\", base_url"; // params from tdb file corresponding to AU
   
-  protected static final String PATTERN_TEMPLATE = "\"^%sviewtitle\\.aspx\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"^%sgateway/article/full-text-pdf/\", base_url";
 
   
   @Override
@@ -70,9 +70,9 @@ public class IgiGlobalArticleIteratorFactory
 
   protected static class MassachusettsMedicalSocietyArticleIterator extends SubTreeArticleIterator {
 
-    protected Pattern ABSTRACT_PATTERN = Pattern.compile("gateway/contentowned/article\\.aspx(.*)$", Pattern.CASE_INSENSITIVE);
+    protected Pattern ABSTRACT_PATTERN = Pattern.compile("article/([0-9]+)$", Pattern.CASE_INSENSITIVE);
     
-    protected Pattern PDF_PATTERN = Pattern.compile("viewtitle\\.aspx(.*)$", Pattern.CASE_INSENSITIVE);
+    protected Pattern PDF_PATTERN = Pattern.compile("article/full-text-pdf/([0-9]+)$", Pattern.CASE_INSENSITIVE);
     
     public MassachusettsMedicalSocietyArticleIterator(ArchivalUnit au,
                                      SubTreeArticleIterator.Spec spec) {
@@ -104,7 +104,7 @@ public class IgiGlobalArticleIteratorFactory
     }
     
     protected void guessAbstract(ArticleFiles af, Matcher mat) {
-      String absUrlBase = mat.replaceFirst("gateway/contentowned/article\\.aspx$1");
+      String absUrlBase = mat.replaceFirst("article/$1");
       CachedUrl absCu = au.makeCachedUrl(absUrlBase);
       if (absCu != null && absCu.hasContent()) {
     	  af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);

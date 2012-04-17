@@ -102,7 +102,7 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
 
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals("Article file root URL pattern changed or incorrect" ,ListUtil.list( BASE_URL),
+    assertEquals("Article file root URL pattern changed or incorrect" ,ListUtil.list(BASE_URL + "gateway/article/"),
 		 getRootUrls(artIter));
   }
 
@@ -110,12 +110,12 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
     
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.wrong.com/viewtitle.aspx?titleid=55656");
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "viewtiitle.aspx?titleid=55656");
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "viewtitle.aspca?titleid=55656");
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "/viewtiitle.aspx?titleid=55656");
-    assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "viewtitle.aspx?titleid=55656");
-    assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "viewtitle.aspx?titleid=1");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://www.wrong.com/article/full-text-pdf/55656");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/articles/full-text-pdf/55656");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/article/full-text-pd");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "/gateway/article/full-text-pdf/55656");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/article/full-text-pdf/55656");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/article/full-text-pdf/1");
    }
 
   /*
@@ -125,16 +125,16 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
     String[] urls = {
-					    BASE_URL + "viewtitle.aspx?titleid=11111",
-					    BASE_URL + "viewtitle.aspx?titleid=2222",
-					    BASE_URL + "viewtitle.aspx?titleid=55656",
-					    BASE_URL + "viewtitle.aspx?titleid=12345",
-					    BASE_URL + "gateway/contentowned/article.aspx?titleid=11111",
-					    BASE_URL + "gateway/contentowned/article.aspx?titleid=55656",
-					    BASE_URL + "gateway/contentowned/article.aspx?titleid=54321",
-					    BASE_URL + "viewtitleb.aspx?titleid=12345",
-					    BASE_URL + "gateway/contentowned/articles.aspx?titleid=54321",
-					    BASE_URL + "gateway/contentowned/articles.aspx?titleid=12345",
+					    BASE_URL + "gateway/article/full-text-pdf/11111",
+					    BASE_URL + "gateway/article/full-text-pdf/2222",
+					    BASE_URL + "gateway/article/full-text-pdf/55656",
+					    BASE_URL + "gateway/article/full-text-pdf/12345",
+					    BASE_URL + "gateway/article/11111",
+					    BASE_URL + "gateway/article/55656",
+					    BASE_URL + "gateway/article/54321",
+					    BASE_URL + "gateway/articles/full-text-pdf/12345",
+					    BASE_URL + "gateway/issue/54321",
+					    BASE_URL + "gateway/issue/12345",
 					    BASE_URL,
 					    BASE_URL + "gateway"
     				};
@@ -174,19 +174,19 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
     
     Stack<String[]> expStack = new Stack<String[]>();
     String [] af1 = {
-    				BASE_URL + "viewtitle.aspx?titleid=11111",
-    				BASE_URL + "gateway/contentowned/article.aspx?titleid=11111"
+    				BASE_URL + "gateway/article/full-text-pdf/11111",
+    				BASE_URL + "gateway/article/11111"
 		    		};
     String [] af2 = {
-					BASE_URL + "viewtitle.aspx?titleid=2222",
+					BASE_URL + "gateway/article/full-text-pdf/2222",
     				null
 		    		};
     String [] af3 = {
-					BASE_URL + "viewtitle.aspx?titleid=55656",
-					BASE_URL + "gateway/contentowned/article.aspx?titleid=55656"
+					BASE_URL + "gateway/article/full-text-pdf/55656",
+					BASE_URL + "gateway/article/55656"
 		    		};
     String [] af4 = {
-					BASE_URL + "viewtitle.aspx?titleid=12345",
+					BASE_URL + "gateway/article/full-text-pdf/12345",
     				null
 		    		};
     expStack.push(af3);

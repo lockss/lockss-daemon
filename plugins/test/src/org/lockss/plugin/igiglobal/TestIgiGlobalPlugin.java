@@ -106,13 +106,17 @@ public class TestIgiGlobalPlugin extends PluginTestCase {
 	    assertShouldCache(BASE_URL + "lockss/journal-issues.aspx?issn=" + JOURNAL_ISSN + "&volume=", false, au, cus);
 	    
 	    // issue and article pages
-	    assertShouldCache(BASE_URL + "gateway/contentowned/article.aspx?titleid=55656&accesstype=infosci", true, au, cus);
 	    assertShouldCache(BASE_URL + "gateway/contentowned/articles.aspx?titleid=55656", true, au, cus);
-	    assertShouldCache(BASE_URL + "gateway/contentowned/articles.aspx?titleid=55656", true, au, cus);
+	    assertShouldCache(BASE_URL + "gateway/article/55656", true, au, cus);
+	    assertShouldCache(BASE_URL + "gateway/issue/55656", true, au, cus);
 	    
+	    
+	    assertShouldCache(BASE_URL + "gateway/contentowned/article.aspx?titleid=55656&accesstype=infosci", false, au, cus);
 	    assertShouldCache(BASE_URL + "gateway/contentowned/issues.aspx?titleid=55656", false, au, cus);
 	    // pdfs
-	    assertShouldCache(BASE_URL + "viewtitle.aspx?titleid=55663", true, au, cus);
+	    assertShouldCache(BASE_URL + "gateway/article/full-text-pdf/55656", true, au, cus);
+	    
+	    assertShouldCache(BASE_URL + "viewtitle.aspx?titleid=55663", false, au, cus);
 	    
 	    // images, css, js
 	    assertShouldCache(BASE_URL + "jQuery/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png", true, au, cus);

@@ -39,8 +39,8 @@
       <string>2,&quot;(/App_Master){2}&quot;, base_url</string>
       <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.+)?$&quot;, base_url</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sgateway/contentowned/articles?\.aspx&quot;, base_url</string>
-      <string>1,&quot;^%sviewtitle&quot;, base_url</string>
+      <string>1,&quot;^%sgateway/contentowned/articles\.aspx&quot;, base_url</string>
+      <string>1,&quot;^%sgateway/(article|issue)/([0-9]+|full-text-pdf/[0-9]+)$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
