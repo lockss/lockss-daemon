@@ -426,6 +426,7 @@
       eissn = 1543-2548 ;
       issnl = 1534-0384
     >
+    {
     comment[down] = ceased publication, offline as of 2011-08-15
     
     param[base_url] = http://molinterv.aspetjournals.org/
@@ -441,7 +442,29 @@
     au < HighWirePressH20Plugin ; down ; 2009 ; Molecular Interventions Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; down ; 2010 ; Molecular Interventions Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Molecular Interventions Volume 11 ; 11 >
+    }
 
+    {
+
+    plugin = org.lockss.plugin.clockss.clockssTriggeredPlugin
+    param[base_url] = http://triggered.clockss.org/
+    param[issn] = 1534-0384
+
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < ready ; 2001 ; Molecular Interventions Volume 1 ; 1 >
+    au < ready ; 2002 ; Molecular Interventions Volume 2 ; 2 >
+    au < ready ; 2003 ; Molecular Interventions Volume 3 ; 3 >
+    au < ready ; 2004 ; Molecular Interventions Volume 4 ; 4 >
+    au < ready ; 2005 ; Molecular Interventions Volume 5 ; 5 >
+    au < ready ; 2006 ; Molecular Interventions Volume 6 ; 6 >
+    au < ready ; 2007 ; Molecular Interventions Volume 7 ; 7 >
+    au < ready ; 2008 ; Molecular Interventions Volume 8 ; 8 >
+    au < ready ; 2009 ; Molecular Interventions Volume 9 ; 9 >
+    au < ready ; 2010 ; Molecular Interventions Volume 10 ; 10 >
+    au < ready ; 2011 ; Molecular Interventions Volume 11 ; 11 >
+
+    }
   }
 
   {
