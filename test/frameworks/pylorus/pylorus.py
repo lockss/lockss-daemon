@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''Pylorus content validation and ingestion gateway
 Michael R Bax, 2008-2009
-$Id: pylorus.py,v 2.19 2012-03-19 19:35:51 barry409 Exp $'''
+$Id: pylorus.py,v 2.20 2012-04-17 18:17:48 barry409 Exp $'''
 
 
 import ConfigParser
@@ -27,7 +27,7 @@ fix_auth_failure.fix_auth_failure()
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.19 $'.split()[ 1 ]
+REVISION = '$Revision: 2.20 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 SERVER_READY_TIMEOUT = 600
@@ -360,7 +360,7 @@ class Content:
                 del repairer_info[ repairer ]
         agreement_minimum = min( float( agreement ) for agreement in repairer_info.itervalues() )
         agreement_maximum = max( float( agreement ) for agreement in repairer_info.itervalues() )
-        logging.debug( 'Poll agreement range: %.02f% to %.02f%' % ( agreement_minimum, agreement_maximum ) )
+        logging.debug( 'Poll agreement range: %.02f%% to %.02f%%' % ( agreement_minimum, agreement_maximum ) )
         if agreement_maximum - agreement_minimum >= configuration.getint( PROGRAM, 'fix' ):
             self.poll_clients = [ V3_clients_lookup[ repairer ] for repairer, agreement in repairer_info.iteritems() if agreement == agreement_minimum ]
         else:
