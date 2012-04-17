@@ -1,10 +1,10 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.14 2011-12-19 08:33:17 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.15 2012-04-17 23:37:17 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,6 +38,7 @@ import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -133,9 +134,16 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
                                                            encoding,
                                                            HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
 
-    // Then apply WhitespaceFilter
+    // Then apply Reader-based transformations
     try {
-      return new ReaderInputStream(new WhiteSpaceFilter(new InputStreamReader(filteredStream, encoding)));
+      // Turn into a Reader (can throw)
+      Reader reader1 = new InputStreamReader(filteredStream, encoding);
+      // Inconsistent use of "'" and "&#39;"
+      Reader reader2 = new StringFilter(reader1, "&#39;", "'");
+      // Noisy whitespace
+      Reader reader3 = new WhiteSpaceFilter(reader2);
+      // Convert back into an InputStream
+      return new ReaderInputStream(reader3);
     }
     catch (UnsupportedEncodingException uee) {
       throw new FilteringException(uee);
