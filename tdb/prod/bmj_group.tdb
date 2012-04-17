@@ -1188,11 +1188,21 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       eissn = 2045-2098 
     >
 
-    {
+    param[base_url] = http://jfprhc.bmj.com/
+    
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Family Planning and Reproductive Health Care Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Family Planning and Reproductive Health Care Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Family Planning and Reproductive Health Care Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Family Planning and Reproductive Health Care Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Family Planning and Reproductive Health Care Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Family Planning and Reproductive Health Care Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Family Planning and Reproductive Health Care Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Family Planning and Reproductive Health Care Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Family Planning and Reproductive Health Care Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Family Planning and Reproductive Health Care Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Family Planning and Reproductive Health Care Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Family Planning and Reproductive Health Care Volume 37 ; 37 >
 
-      param[base_url] = http://jfprhc.bmj.com/
-
-    }
   }
 
   {
