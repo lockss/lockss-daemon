@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.1 2012-04-17 19:09:05 akanshab01 Exp $
+ * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.2 2012-04-17 20:18:02 akanshab01 Exp $
  */
 
 /*
@@ -75,8 +75,8 @@ public class IngentaHtmlMetadataExtractorFactory implements
           MetadataField.DC_FIELD_IDENTIFIER, MetadataField.
           splitAt("info:doi/")));
       // <meta name="DCTERMS.isPartOf" scheme="URI" content="urn:ISSN:0969-7950"/>
-      tagMap.put("DCTERMS.isPartOf",new MetadataField(
-          MetadataField.DC_FIELD_IDENTIFIER_EISSN, MetadataField.
+     tagMap.put("DCTERMS.isPartOf",new MetadataField(
+          MetadataField.DC_FIELD_IDENTIFIER_ISSNM, MetadataField.
           splitAt("urn:ISSN:")));
       tagMap.put("DCTERMS.bibliographicCitation",new MetadataField(
           MetadataField.FIELD_ARTICLE_TITLE,
@@ -101,8 +101,7 @@ public class IngentaHtmlMetadataExtractorFactory implements
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
       throws IOException {
-      log.debug3("Cached URL:::" +cu);
-      
+     
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
       return am;
