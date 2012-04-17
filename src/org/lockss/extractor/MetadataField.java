@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.9 2012-02-25 00:27:08 akanshab01 Exp $
+ * $Id: MetadataField.java,v 1.10 2012-04-17 20:23:11 akanshab01 Exp $
  */
 
 /*
@@ -305,6 +305,13 @@ public class MetadataField {
   public static final MetadataField DC_FIELD_IDENTIFIER_ISSNL = new 
       MetadataField(
       DC_KEY_IDENTIFIER_ISSNL, Cardinality.Single);
+  
+  public static final String DC_KEY_IDENTIFIER_ISSNM = "dc.identifier.issnm";
+  public static final MetadataField DC_FIELD_IDENTIFIER_ISSNM = new 
+      MetadataField(
+      DC_KEY_IDENTIFIER_ISSNM, Cardinality.Multi);
+  
+  
 
   /** The ISBN of the resource (dc qualified: non-standard NIH) */
   public static final String DC_KEY_IDENTIFIER_ISBN = "dc.identifier.isbn";
