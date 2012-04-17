@@ -172,7 +172,7 @@ public class TestIngentaHtmlMetadataExtractorFactory extends LockssTestCase {
     assertNotNull(md);
     assertEquals(goodTitle, md.get(MetadataField.DC_FIELD_TITLE));
     assertEquals(goodDoi, md.get(MetadataField.DC_FIELD_IDENTIFIER));
-    assertEquals(goodISSN, md.get(MetadataField.DC_FIELD_IDENTIFIER_EISSN));
+    assertEquals(goodISSN, md.get(MetadataField.DC_FIELD_IDENTIFIER_ISSNM));
     assertEquals(goodType, md.get(MetadataField.DC_FIELD_TYPE));
     assertEquals(goodAuthor, md.get(MetadataField.DC_FIELD_CREATOR));
     assertEquals(goodArticle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
