@@ -742,17 +742,6 @@
   {
 
     title <
-      name = Issues in Legal Scholarship ;
-      issn = 1539-8323
-    >
-    
-    comment[scope] = not included (symposia)
-
-  }
-
-  {
-
-    title <
       name = Journal des Economistes et des Etudes Humaines ;
       eissn = 1145-6396
     >
@@ -913,19 +902,6 @@
     au < down ; 2009 ; Journal of Drug Policy Analysis Volume 2 ; 2 >
     au < down ; 2010 ; Journal of Drug Policy Analysis Volume 3 ; 3 >
     au < down ; 2011 ; Journal of Drug Policy Analysis Volume 4 ; 4 >
-
-  }
-
-  {
-
-    title <
-      name = Journal of Econometric Methods ; 
-      issn = 2156-6674
-    >
-
-    pluginSuffix = BePressPlugin 
-    param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = jem
 
   }
 
