@@ -4860,14 +4860,11 @@
 
     comment[continued_from] = 1525-2167
     comment[title] = change in January 2012, url redirects
-    param[base_url] = http://ehjcimaging.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
 
     {
 
     param[base_url] = http://ehjcimaging.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[base_url] = title change in 2012 -- base url redirects to that of new title
 
     au < manifest ; exists ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 ; >
     au < manifest ; exists ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 ; >
@@ -4897,6 +4894,7 @@
     >
 
     comment[continued_by] = 2047-2404
+    comment[base_url] = http://ejechocard.oxfordjournals.org/, redirects to http://ehjcimaging.oxfordjournals.org/
 
     {
 
