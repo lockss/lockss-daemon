@@ -18,11 +18,11 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < ready ; 2006 ; Clinical Journal of the American Society of Nephrology Volume 1 ; 1 >
-      au < testing ; 2007 ; Clinical Journal of the American Society of Nephrology Volume 2 ; 2 >
-      au < testing ; 2008 ; Clinical Journal of the American Society of Nephrology Volume 3 ; 3 >
+      au < ready ; 2007 ; Clinical Journal of the American Society of Nephrology Volume 2 ; 2 >
+      au < ready ; 2008 ; Clinical Journal of the American Society of Nephrology Volume 3 ; 3 >
       au < ready ; 2009 ; Clinical Journal of the American Society of Nephrology Volume 4 ; 4 >
-      au < testing ; 2010 ; Clinical Journal of the American Society of Nephrology Volume 5 ; 5 >
-      au < testing ; 2011 ; Clinical Journal of the American Society of Nephrology Volume 6 ; 6 >
+      au < ready ; 2010 ; Clinical Journal of the American Society of Nephrology Volume 5 ; 5 >
+      au < ready ; 2011 ; Clinical Journal of the American Society of Nephrology Volume 6 ; 6 >
       au < ready ; 2012 ; Clinical Journal of the American Society of Nephrology Volume 7 ; 7 >
 
     }
@@ -43,13 +43,13 @@
       param[base_url] = http://jasn.asnjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1990 ; Journal of the American Society of Nephrology Volume 1 ; 1 >
-      au < testing ; 1991 ; Journal of the American Society of Nephrology Volume 2 ; 2 >
-      au < testing ; 1992 ; Journal of the American Society of Nephrology Volume 3 ; 3 >
-      au < testing ; 1993 ; Journal of the American Society of Nephrology Volume 4 ; 4 >
-      au < testing ; 1994 ; Journal of the American Society of Nephrology Volume 5 ; 5 >
-      au < testing ; 1995 ; Journal of the American Society of Nephrology Volume 6 ; 6 >
-      au < testing ; 1996 ; Journal of the American Society of Nephrology Volume 7 ; 7 >
+      au < ready ; 1990 ; Journal of the American Society of Nephrology Volume 1 ; 1 >
+      au < ready ; 1991 ; Journal of the American Society of Nephrology Volume 2 ; 2 >
+      au < ready ; 1992 ; Journal of the American Society of Nephrology Volume 3 ; 3 >
+      au < ready ; 1993 ; Journal of the American Society of Nephrology Volume 4 ; 4 >
+      au < ready ; 1994 ; Journal of the American Society of Nephrology Volume 5 ; 5 >
+      au < ready ; 1995 ; Journal of the American Society of Nephrology Volume 6 ; 6 >
+      au < ready ; 1996 ; Journal of the American Society of Nephrology Volume 7 ; 7 >
       au < testing ; 1997 ; Journal of the American Society of Nephrology Volume 8 ; 8 >
       au < testing ; 1998 ; Journal of the American Society of Nephrology Volume 9 ; 9 >
       au < testing ; 1999 ; Journal of the American Society of Nephrology Volume 10 ; 10 >
