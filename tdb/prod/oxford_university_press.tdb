@@ -19,15 +19,15 @@
     param[base_url] = http://abbs.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; testing ; 2004 ; Acta Biochimica et Biophysica Sinica Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Acta Biochimica et Biophysica Sinica Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Acta Biochimica et Biophysica Sinica Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Acta Biochimica et Biophysica Sinica Volume 44 ; 44 >
 
     }
 
@@ -48,11 +48,11 @@
     param[base_url] = http://adaptation.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; testing ; 2008 ; Adaptation Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Adaptation Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Adaptation Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Adaptation Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Adaptation Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Adaptation Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; Adaptation Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; readt ; 2012 ; Adaptation Volume 5 ; 5 >
 
     }
 
@@ -83,22 +83,22 @@
     param[base_url] = http://afraf.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; testing ; 1901-1902 ; African Affairs Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 1902-1903 ; African Affairs Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 1903-1904 ; African Affairs Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; testing ; 1904-1905 ; African Affairs Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; testing ; 1905-1906 ; African Affairs Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; testing ; 1906-1907 ; African Affairs Volume VI ; VI >
-    au < HighWirePressH20Plugin ; testing ; 1907-1908 ; African Affairs Volume VII ; VII >
-    au < HighWirePressH20Plugin ; testing ; 1908-1909 ; African Affairs Volume VIII ; VIII >
-    au < HighWirePressH20Plugin ; testing ; 1909-1910 ; African Affairs Volume IX ; IX >
-    au < HighWirePressH20Plugin ; testing ; 1910-1911 ; African Affairs Volume X ; X >
-    au < HighWirePressH20Plugin ; testing ; 1911-1912 ; African Affairs Volume XI ; XI >
-    au < HighWirePressH20Plugin ; testing ; 1912-1913 ; African Affairs Volume XII ; XII >
-    au < HighWirePressH20Plugin ; testing ; 1913-1914 ; African Affairs Volume XIII ; XIII >
-    au < HighWirePressH20Plugin ; testing ; 1914-1915 ; African Affairs Volume XIV ; XIV >
-    au < HighWirePressH20Plugin ; testing ; 1915-1916 ; African Affairs Volume XV ; XV >
-    au < HighWirePressH20Plugin ; testing ; 1916-1917 ; African Affairs Volume XVI ; XVI >
+    au < HighWirePressH20Plugin ; ready ; 1901-1902 ; African Affairs Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1902-1903 ; African Affairs Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1903-1904 ; African Affairs Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1904-1905 ; African Affairs Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 1905-1906 ; African Affairs Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 1906-1907 ; African Affairs Volume VI ; VI >
+    au < HighWirePressH20Plugin ; ready ; 1907-1908 ; African Affairs Volume VII ; VII >
+    au < HighWirePressH20Plugin ; ready ; 1908-1909 ; African Affairs Volume VIII ; VIII >
+    au < HighWirePressH20Plugin ; ready ; 1909-1910 ; African Affairs Volume IX ; IX >
+    au < HighWirePressH20Plugin ; ready ; 1910-1911 ; African Affairs Volume X ; X >
+    au < HighWirePressH20Plugin ; ready ; 1911-1912 ; African Affairs Volume XI ; XI >
+    au < HighWirePressH20Plugin ; ready ; 1912-1913 ; African Affairs Volume XII ; XII >
+    au < HighWirePressH20Plugin ; ready ; 1913-1914 ; African Affairs Volume XIII ; XIII >
+    au < HighWirePressH20Plugin ; ready ; 1914-1915 ; African Affairs Volume XIV ; XIV >
+    au < HighWirePressH20Plugin ; ready ; 1915-1916 ; African Affairs Volume XV ; XV >
+    au < HighWirePressH20Plugin ; ready ; 1916-1917 ; African Affairs Volume XVI ; XVI >
     au < HighWirePressH20Plugin ; testing ; 1917-1918 ; African Affairs Volume XVII ; XVII >
     au < HighWirePressH20Plugin ; testing ; 1918-1919 ; African Affairs Volume XVIII ; XVIII >
     au < HighWirePressH20Plugin ; testing ; 1919-1920 ; African Affairs Volume XIX ; XIX >
@@ -130,38 +130,38 @@
     au < HighWirePressH20Plugin ; testing ; 1946 ; African Affairs Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; testing ; 1947 ; African Affairs Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; testing ; 1948 ; African Affairs Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; testing ; 1949 ; African Affairs Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; testing ; 1950 ; African Affairs Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; testing ; 1951 ; African Affairs Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; testing ; 1952 ; African Affairs Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; testing ; 1953 ; African Affairs Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; testing ; 1954 ; African Affairs Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; testing ; 1955 ; African Affairs Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; testing ; 1956 ; African Affairs Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; testing ; 1957 ; African Affairs Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; testing ; 1958 ; African Affairs Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; testing ; 1959 ; African Affairs Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; testing ; 1960 ; African Affairs Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; testing ; 1961 ; African Affairs Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; testing ; 1962 ; African Affairs Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; testing ; 1963 ; African Affairs Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; testing ; 1964 ; African Affairs Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; testing ; 1965 ; African Affairs Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; testing ; 1966 ; African Affairs Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; testing ; 1967 ; African Affairs Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; testing ; 1968 ; African Affairs Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; testing ; 1969 ; African Affairs Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; testing ; 1970 ; African Affairs Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; testing ; 1971 ; African Affairs Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; testing ; 1972 ; African Affairs Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; testing ; 1973 ; African Affairs Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; testing ; 1974 ; African Affairs Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; testing ; 1975 ; African Affairs Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; testing ; 1976 ; African Affairs Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; testing ; 1977 ; African Affairs Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; testing ; 1978 ; African Affairs Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; testing ; 1979 ; African Affairs Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; testing ; 1980 ; African Affairs Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; ready ; 1949 ; African Affairs Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; ready ; 1950 ; African Affairs Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; ready ; 1951 ; African Affairs Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; ready ; 1952 ; African Affairs Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; ready ; 1953 ; African Affairs Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; ready ; 1954 ; African Affairs Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; ready ; 1955 ; African Affairs Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; ready ; 1956 ; African Affairs Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; ready ; 1957 ; African Affairs Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; ready ; 1958 ; African Affairs Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; ready ; 1959 ; African Affairs Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; ready ; 1960 ; African Affairs Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; ready ; 1961 ; African Affairs Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; ready ; 1962 ; African Affairs Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; ready ; 1963 ; African Affairs Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; ready ; 1964 ; African Affairs Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; ready ; 1965 ; African Affairs Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; ready ; 1966 ; African Affairs Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; ready ; 1967 ; African Affairs Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; ready ; 1968 ; African Affairs Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; ready ; 1969 ; African Affairs Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; ready ; 1970 ; African Affairs Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; ready ; 1971 ; African Affairs Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; ready ; 1972 ; African Affairs Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; ready ; 1973 ; African Affairs Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; ready ; 1974 ; African Affairs Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; ready ; 1975 ; African Affairs Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; ready ; 1976 ; African Affairs Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; ready ; 1977 ; African Affairs Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; ready ; 1978 ; African Affairs Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; ready ; 1979 ; African Affairs Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; ready ; 1980 ; African Affairs Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; testing ; 1981 ; African Affairs Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; testing ; 1982 ; African Affairs Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; testing ; 1983 ; African Affairs Volume 82 ; 82 >
@@ -182,18 +182,18 @@
     au < HighWirePressH20Plugin ; testing ; 1998 ; African Affairs Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; testing ; 1999 ; African Affairs Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; testing ; 2000 ; African Affairs Volume 99 ; 99 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; African Affairs Volume 100 ; 100 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; African Affairs Volume 101 ; 101 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; African Affairs Volume 102 ; 102 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; African Affairs Volume 103 ; 103 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; African Affairs Volume 104 ; 104 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; African Affairs Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; African Affairs Volume 101 ; 101 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; African Affairs Volume 102 ; 102 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; African Affairs Volume 103 ; 103 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; African Affairs Volume 104 ; 104 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; African Affairs Volume 105 ; 105 >
     au < HighWireStrVolPlugin ; down ; 2007 ; African Affairs Volume 106 ; 106 >
     au < HighWirePressH20Plugin ; released ; 2008 ; African Affairs Volume 107 ; 107 >
     au < HighWirePressH20Plugin ; released ; 2009 ; African Affairs Volume 108 ; 108 >
     au < HighWirePressH20Plugin ; released ; 2010 ; African Affairs Volume 109 ; 109 >
     au < HighWirePressH20Plugin ; released ; 2011 ; African Affairs Volume 110 ; 110 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; African Affairs Volume 111 ; 111 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; African Affairs Volume 111 ; 111 >
 
     }
 
