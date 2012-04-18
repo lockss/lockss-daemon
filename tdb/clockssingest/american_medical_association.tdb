@@ -1466,11 +1466,11 @@
       pluginSuffix = ClockssHighWirePlugin
       param[base_url] = http://www.dmphp.org/
       
-      au < testing ; exists ; 2007 ; Disaster Medicine and Public Health Preparedness Volume 1 ; 1 ; >                                                            
-      au < testing ; exists ; 2008 ; Disaster Medicine and Public Health Preparedness Volume 2 ; 2 ; >                                                            
-      au < testing ; exists ; 2009 ; Disaster Medicine and Public Health Preparedness Volume 3 ; 3 ; >                                                            
-      au < testing ; exists ; 2010 ; Disaster Medicine and Public Health Preparedness Volume 4 ; 4 ; >                                                            
-      au < testing ; exists ; 2011 ; Disaster Medicine and Public Health Preparedness Volume 5 ; 5 ; >                                                            
+      au < released ; manifest ; 2007 ; Disaster Medicine and Public Health Preparedness Volume 1 ; 1 ; >                                                            
+      au < released ; manifest ; 2008 ; Disaster Medicine and Public Health Preparedness Volume 2 ; 2 ; >                                                            
+      au < released ; manifest ; 2009 ; Disaster Medicine and Public Health Preparedness Volume 3 ; 3 ; >                                                            
+      au < released ; manifest ; 2010 ; Disaster Medicine and Public Health Preparedness Volume 4 ; 4 ; >                                                            
+      au < released ; manifest ; 2011 ; Disaster Medicine and Public Health Preparedness Volume 5 ; 5 ; >                                                            
 
     }
     
