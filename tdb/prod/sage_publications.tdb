@@ -4431,7 +4431,7 @@
         param[base_url] = http://ccl.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2011 ; Cardiac Cath Lab Director Volume 1 ; 1 >
+        au < ready ; 2011 ; Cardiac Cath Lab Director Volume 1 ; 1 >
         au < expected ; 2012 ; Cardiac Cath Lab Director Volume 2 ; 2 >
 
       }
@@ -4579,8 +4579,8 @@
         au < manifest ; 2007 ; Cephalalgia Volume 27 ; 27 >
         au < manifest ; 2008 ; Cephalalgia Volume 28 ; 28 >
         au < manifest ; 2009 ; Cephalalgia Volume 29 ; 29 >
-        au < manifest ; 2010 ; Cephalalgia Volume 30 ; 30 >
-        au < manifest ; 2011 ; Cephalalgia Volume 31 ; 31 >
+        au < ready ; 2010 ; Cephalalgia Volume 30 ; 30 >
+        au < ready ; 2011 ; Cephalalgia Volume 31 ; 31 >
         au < manifest ; 2012 ; Cephalalgia Volume 32 ; 32 >
 
       }
@@ -4939,7 +4939,7 @@
         au < manifest ; 2008 ; Chronic Illness Volume 4 ; 4 >
         au < doNotProcess ; 2009 ; Chronic Illness Volume 5 ; 5 >
         au < released ; 2010 ; Chronic Illness Volume 6 ; 6 >
-        au < manifest ; 2011 ; Chronic Illness Volume 7 ; 7 >
+        au < ready ; 2011 ; Chronic Illness Volume 7 ; 7 >
         au < manifest ; 2012 ; Chronic Illness Volume 8 ; 8 >
 
       }
@@ -5118,7 +5118,7 @@
         au < doNotProcess ; 2008 ; Clinical and Applied Thrombosis/Hemostasis Volume 14 ; 14 >
         au < doNotProcess ; 2009 ; Clinical and Applied Thrombosis/Hemostasis Volume 15 ; 15 >
         au < released ; 2010 ; Clinical and Applied Thrombosis/Hemostasis Volume 16 ; 16 >
-        au < manifest ; 2011 ; Clinical and Applied Thrombosis/Hemostasis Volume 17 ; 17 >
+        au < ready ; 2011 ; Clinical and Applied Thrombosis/Hemostasis Volume 17 ; 17 >
         au < manifest ; 2012 ; Clinical and Applied Thrombosis/Hemostasis Volume 18 ; 18 >
 
       }
@@ -5225,7 +5225,7 @@
         au < doNotProcess ; 2008 ; Clinical Child Psychology and Psychiatry Volume 13 ; 13 >
         au < doNotProcess ; 2009 ; Clinical Child Psychology and Psychiatry Volume 14 ; 14 >
         au < released ; 2010 ; Clinical Child Psychology and Psychiatry Volume 15 ; 15 >
-        au < manifest ; 2011 ; Clinical Child Psychology and Psychiatry Volume 16 ; 16 >
+        au < ready ; 2011 ; Clinical Child Psychology and Psychiatry Volume 16 ; 16 >
         au < manifest ; 2012 ; Clinical Child Psychology and Psychiatry Volume 17 ; 17 >
 
       }
@@ -5968,7 +5968,7 @@
         au < doNotProcess ; 2008 ; Compensation & Benefits Review Volume 40 ; 40 >
         au < doNotProcess ; 2009 ; Compensation & Benefits Review Volume 41 ; 41 >
         au < released ; 2010 ; Compensation & Benefits Review Volume 42 ; 42 >
-        au < manifest ; 2011 ; Compensation & Benefits Review Volume 43 ; 43 >
+        au < ready ; 2011 ; Compensation & Benefits Review Volume 43 ; 43 >
         au < expected ; 2012 ; Compensation & Benefits Review Volume 44 ; 44 >
 
       }
@@ -7388,7 +7388,7 @@
         au < doNotProcess ; 2008 ; Cross-Cultural Research Volume 42 ; 42 >
         au < doNotProcess ; 2009 ; Cross-Cultural Research Volume 43 ; 43 >
         au < released ; 2010 ; Cross-Cultural Research Volume 44 ; 44 >
-        au < manifest ; 2011 ; Cross-Cultural Research Volume 45 ; 45 >
+        au < ready ; 2011 ; Cross-Cultural Research Volume 45 ; 45 >
         au < manifest ; 2012 ; Cross-Cultural Research Volume 46 ; 46 >
 
       }
@@ -7498,7 +7498,7 @@
         au < doNotProcess ; 2008 ; Cultural Geographies Volume 15 ; 15 >
         au < doNotProcess ; 2009 ; Cultural Geographies Volume 16 ; 16 >
         au < released ; 2010 ; Cultural Geographies Volume 17 ; 17 >
-        au < manifest ; 2011 ; Cultural Geographies Volume 18 ; 18 >
+        au < ready ; 2011 ; Cultural Geographies Volume 18 ; 18 >
         au < manifest ; 2012 ; Cultural Geographies Volume 19 ; 19 >
 
       }
@@ -7684,8 +7684,8 @@
         au < manifest ; 2007 ; Current Directions in Psychological Science Volume 16 ; 16 >
         au < manifest ; 2008 ; Current Directions in Psychological Science Volume 17 ; 17 >
         au < manifest ; 2009 ; Current Directions in Psychological Science Volume 18 ; 18 >
-        au < manifest ; 2010 ; Current Directions in Psychological Science Volume 19 ; 19 >
-        au < manifest ; 2011 ; Current Directions in Psychological Science Volume 20 ; 20 >
+        au < ready ; 2010 ; Current Directions in Psychological Science Volume 19 ; 19 >
+        au < ready ; 2011 ; Current Directions in Psychological Science Volume 20 ; 20 >
         au < manifest ; 2012 ; Current Directions in Psychological Science Volume 21 ; 21 >
 
       }
@@ -14832,7 +14832,7 @@
         au < doNotProcess ; 2008 ; International Journal of Cross Cultural Management Volume 8 ; 8 >
         au < doNotProcess ; 2009 ; International Journal of Cross Cultural Management Volume 9 ; 9 >
         au < released ; 2010 ; International Journal of Cross Cultural Management Volume 10 ; 10 >
-        au < manifest ; 2011 ; International Journal of Cross Cultural Management Volume 11 ; 11 >
+        au < ready ; 2011 ; International Journal of Cross Cultural Management Volume 11 ; 11 >
         au < expected ; 2012 ; International Journal of Cross Cultural Management Volume 12 ; 12 >
 
       }
@@ -18317,7 +18317,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2008 ; Journal of Cellular Plastics Volume 44 ; 44 >
         au < doNotProcess ; 2009 ; Journal of Cellular Plastics Volume 45 ; 45 >
         au < released ; 2010 ; Journal of Cellular Plastics Volume 46 ; 46 >
-        au < manifest ; 2011 ; Journal of Cellular Plastics Volume 47 ; 47 >
+        au < ready ; 2011 ; Journal of Cellular Plastics Volume 47 ; 47 >
         au < manifest ; 2012 ; Journal of Cellular Plastics Volume 48 ; 48 >
 
       }
@@ -18379,7 +18379,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2008 ; Journal of Child Health Care Volume 12 ; 12 >
         au < doNotProcess ; 2009 ; Journal of Child Health Care Volume 13 ; 13 >
         au < released ; 2010 ; Journal of Child Health Care Volume 14 ; 14 >
-        au < manifest ; 2011 ; Journal of Child Health Care Volume 15 ; 15 >
+        au < ready ; 2011 ; Journal of Child Health Care Volume 15 ; 15 >
         au < manifest ; 2012 ; Journal of Child Health Care Volume 16 ; 16 >
 
       }
