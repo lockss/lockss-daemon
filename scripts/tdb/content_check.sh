@@ -6,9 +6,9 @@
 echo "---------------------"
 echo "---------------------"
 echo "*Status typos gln: "
-cat ../../tdb/prod/*.tdb | ./tdbout -t status | grep -v manifest | grep -v released | grep -v expected | grep -v exists | grep -v testing | grep -v wanted | grep -v ready | grep -v down | grep -v superseded | grep -v doNotProcess | grep -v notReady | grep -v doesNotExist
+cat ../../tdb/prod/*.tdb | ./tdbout -t status | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx ready | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist
 echo "*Status typos clockssingest: "
-cat ../../tdb/clockssingest/*.tdb | ./tdbout -t status | grep -v manifest | grep -v released | grep -v expected | grep -v exists | grep -v testing | grep -v wanted | grep -v down | grep -v superseded | grep -v doNotProcess | grep -v notReady | grep -v doesNotExist | grep -v crawling | grep -v zapped
+cat ../../tdb/clockssingest/*.tdb | ./tdbout -t status | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist | grep -vx crawling | grep -vx zapped
 #
 # Find duplicates in the gln title database
 tpath="/home/$LOGNAME/tmp"
