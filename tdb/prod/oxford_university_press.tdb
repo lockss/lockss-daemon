@@ -5010,26 +5010,13 @@
     >
 
     comment[continued_from] = 1525-2167
-    comment[title] = change in January 2012, old url redirects to this one
     {
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ehjcimaging.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; notReady ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; notReady ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; notReady ; 2002 ; European Journal of Echocardiography Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; notReady ; 2003 ; European Journal of Echocardiography Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; notReady ; 2004 ; European Journal of Echocardiography Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; notReady ; 2005 ; European Journal of Echocardiography Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; notReady ; 2006 ; European Journal of Echocardiography Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; notReady ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; notReady ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; notReady ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; notReady ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; notReady ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; notReady ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 >
 
     }
 
@@ -5045,9 +5032,22 @@
     >
 
     comment[continued_by] = 2047-2404
-    comment[base_url] = title change in 2012 -- base url redirects to that of new title
-    comment[notReady] = malformed manifest pages (links refer to old eje URLs)
-    comment[selena] = no AU content was collected so I moved the AU block to the new title -sc
+    param[base_url] = http://ehjcimaging.oxfordjournals.org/
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; exists ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; European Journal of Echocardiography Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; European Journal of Echocardiography Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; European Journal of Echocardiography Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; European Journal of Echocardiography Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; European Journal of Echocardiography Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 >
 
 
 
