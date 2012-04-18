@@ -20,6 +20,7 @@
     param[publisher_id] = paaf
     param[journal_id] = paaf
     param[journal_issn] = 0030-851X
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.UniversityOfBritishColumbiaPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2005-2006 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 78 ; 78 >
