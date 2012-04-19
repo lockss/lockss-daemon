@@ -59,7 +59,7 @@
       au < manifest ; exists ; 2008 ; BMC Biochemistry Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Biochemistry Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Biochemistry Volume 11 ; 11 >
-      au < testing ; exists ; 2011 ; BMC Biochemistry Volume 12 ; 12 >
+      au < released ; manifest ; 2011 ; BMC Biochemistry Volume 12 ; 12 >
       au < manifest ; exists ; 2012 ; BMC Biochemistry Volume 13 ; 13 >
 
     }
@@ -133,7 +133,7 @@
       au < manifest ; exists ; 2008 ; BMC Biotechnology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Biotechnology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Biotechnology Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Biotechnology Volume 11 ; 11 >
+      au < released ; manifest ; 2011 ; BMC Biotechnology Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Biotechnology Volume 12 ; 12 >
 
     }
@@ -158,7 +158,7 @@
       au < manifest ; exists ; 2008 ; BMC Blood Disorders Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Blood Disorders Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Blood Disorders Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Blood Disorders Volume 11 ; 11 >
+      au < released ; manifest ; 2011 ; BMC Blood Disorders Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Blood Disorders Volume 12 ; 12 >
 
     }
@@ -183,7 +183,7 @@
       au < manifest ; exists ; 2008 ; BMC Cancer Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Cancer Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Cancer Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Cancer Volume 11 ; 11 >
+      au < released ; manifest ; 2011 ; BMC Cancer Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Cancer Volume 12 ; 12 >
 
     }
@@ -209,7 +209,7 @@
       au < manifest ; exists ; 2008 ; BMC Cardiovascular Disorders Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Cardiovascular Disorders Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Cardiovascular Disorders Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Cardiovascular Disorders Volume 11 ; 11 >
+      au < released ; manifest ; 2011 ; BMC Cardiovascular Disorders Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Cardiovascular Disorders Volume 12 ; 12 >
 
     }
@@ -235,7 +235,7 @@
       au < manifest ; exists ; 2008 ; BMC Cell Biology Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Cell Biology Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Cell Biology Volume 11 ; 11 >
-      au < crawling ; exists ; 2011 ; BMC Cell Biology Volume 12 ; 12 >
+      au < released ; manifest ; 2011 ; BMC Cell Biology Volume 12 ; 12 >
       au < manifest ; exists ; 2012 ; BMC Cell Biology Volume 13 ; 13 >
 
     }
@@ -260,7 +260,7 @@
       au < manifest ; exists ; 2008 ; BMC Chemical Biology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Chemical Biology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Chemical Biology Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Chemical Biology Volume 11 ; 11 >
+      au < released ; manifest ; 2011 ; BMC Chemical Biology Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Chemical Biology Volume 12 ; 12 >
 
     }
@@ -285,7 +285,7 @@
       au < manifest ; exists ; 2008 ; BMC Clinical Pathology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Clinical Pathology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Clinical Pathology Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Clinical Pathology Volume 11 ; 11 >
+      au < released ; manifest ; 2011 ; BMC Clinical Pathology Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Clinical Pathology Volume 12 ; 12 >
 
     }
@@ -310,7 +310,7 @@
       au < manifest ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
+      au < released ; manifest ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
 
     }
@@ -335,7 +335,7 @@
       au < manifest ; exists ; 2008 ; BMC Complementary and Alternative Medicine Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Complementary and Alternative Medicine Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Complementary and Alternative Medicine Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Complementary and Alternative Medicine Volume 11 ; 11 >
+      au < released ; manifest ; 2011 ; BMC Complementary and Alternative Medicine Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Complementary and Alternative Medicine Volume 12 ; 12 >
 
     }
@@ -360,7 +360,7 @@
       au < manifest ; exists ; 2008 ; BMC Dermatology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Dermatology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Dermatology Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Dermatology Volume 11 ; 11 >
+      au < released ; manifest ; 2011 ; BMC Dermatology Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Dermatology Volume 12 ; 12 >
 
     }
@@ -385,7 +385,7 @@
       au < manifest ; exists ; 2008 ; BMC Developmental Biology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Developmental Biology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Developmental Biology Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Developmental Biology Volume 11 ; 11 >
+      au < released ; manifest ; 2011 ; BMC Developmental Biology Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Developmental Biology Volume 12 ; 12 >
       
     }
@@ -410,7 +410,7 @@
       au < manifest ; exists ; 2008 ; BMC Ear, Nose and Throat Disorders Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Ear, Nose and Throat Disorders Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Ear, Nose and Throat Disorders Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Ear, Nose and Throat Disorders Volume 11 ; 11 >
+      au < released ; manifest ; 2011 ; BMC Ear, Nose and Throat Disorders Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Ear, Nose and Throat Disorders Volume 12 ; 12 >
 
     }
@@ -435,7 +435,7 @@
       au < manifest ; exists ; 2008 ; BMC Ecology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Ecology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Ecology Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; BMC Ecology Volume 11 ; 11 >
+      au < released ; manifest ; 2011 ; BMC Ecology Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Ecology Volume 12 ; 12 >
 
     }
@@ -764,7 +764,7 @@
       au < manifest ; exists ; 2008 ; BMC Medical Education Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Medical Education Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Medical Education Volume 10 ; 10 >
-      au < testing ; exists ; 2011 ; BMC Medical Education Volume 11 ; 11 >
+      au < released ; manifest ; 2011 ; BMC Medical Education Volume 11 ; 11 >
       au < manifest ; exists ; 2012 ; BMC Medical Education Volume 12 ; 12 >
 
     }
