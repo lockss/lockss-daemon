@@ -136,7 +136,7 @@
     param[journal_id] = UC
     
     implicit < status ; year ; name ; volume ; param[year] >
-    comment[0] = no manifest pages for this journal yet
+    comment[RU4150] = no manifest pages for this journal yet
 
     au < exists ; 2010 ; Online Journal of Public Health Informatics Volume 1 ; 1 ; 2010 >
     au < exists ; 2011 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2011 >
