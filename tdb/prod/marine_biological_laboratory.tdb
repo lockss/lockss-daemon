@@ -19,6 +19,11 @@
       param[base_url] = http://www.biolbull.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+      au < HighWirePressH20Plugin ; exists ; 1897-1898 ; The Biological Bulletin Volume s1-1 ; s1-1 >
+      au < HighWirePressH20Plugin ; exists ; 1898-1899 ; The Biological Bulletin Volume s1-2 ; s1-2 >
+
+      au < HighWirePressH20Plugin ; exists ; 1949 ; The Biological Bulletin Volume 96 ; 96 >
+      au < HighWirePressH20Plugin ; manifest ; 1949 ; The Biological Bulletin Volume 97 ; 97 >
       au < HighWirePressH20Plugin ; released ; 1950 ; The Biological Bulletin Volume 98 ; 98 >
       au < HighWirePressH20Plugin ; released ; 1950 ; The Biological Bulletin Volume 99 ; 99 >
       au < HighWirePressH20Plugin ; released ; 1951 ; The Biological Bulletin Volume 100 ; 100 >
