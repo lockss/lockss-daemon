@@ -17,90 +17,90 @@
       param[base_url] = http://jsedres.sepmonline.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      comment[jsedres] = missing manifest pages
+      comment[jsedres] = missing testing pages
 
-      au < manifest ; 1931 ; Journal of Sedimentary Research Volume 1 ; 1 >
-      au < manifest ; 1932 ; Journal of Sedimentary Research Volume 2 ; 2 >
-      au < manifest ; 1933 ; Journal of Sedimentary Research Volume 3 ; 3 >
-      au < manifest ; 1934 ; Journal of Sedimentary Research Volume 4 ; 4 >
-      au < manifest ; 1935 ; Journal of Sedimentary Research Volume 5 ; 5 >
-      au < manifest ; 1936 ; Journal of Sedimentary Research Volume 6 ; 6 >
-      au < manifest ; 1937 ; Journal of Sedimentary Research Volume 7 ; 7 >
-      au < manifest ; 1938 ; Journal of Sedimentary Research Volume 8 ; 8 >
-      au < manifest ; 1939 ; Journal of Sedimentary Research Volume 9 ; 9 >
-      au < manifest ; 1940 ; Journal of Sedimentary Research Volume 10 ; 10 >
-      au < manifest ; 1941 ; Journal of Sedimentary Research Volume 11 ; 11 >
-      au < manifest ; 1942 ; Journal of Sedimentary Research Volume 12 ; 12 >
-      au < manifest ; 1943 ; Journal of Sedimentary Research Volume 13 ; 13 >
-      au < manifest ; 1944 ; Journal of Sedimentary Research Volume 14 ; 14 >
-      au < manifest ; 1945 ; Journal of Sedimentary Research Volume 15 ; 15 >
-      au < manifest ; 1946 ; Journal of Sedimentary Research Volume 16 ; 16 >
-      au < manifest ; 1947 ; Journal of Sedimentary Research Volume 17 ; 17 >
-      au < manifest ; 1948 ; Journal of Sedimentary Research Volume 18 ; 18 >
-      au < manifest ; 1949 ; Journal of Sedimentary Research Volume 19 ; 19 >
-      au < manifest ; 1950 ; Journal of Sedimentary Research Volume 20 ; 20 >
-      au < manifest ; 1951 ; Journal of Sedimentary Research Volume 21 ; 21 >
-      au < manifest ; 1952 ; Journal of Sedimentary Research Volume 22 ; 22 >
-      au < manifest ; 1953 ; Journal of Sedimentary Research Volume 23 ; 23 >
-      au < manifest ; 1954 ; Journal of Sedimentary Research Volume 24 ; 24 >
-      au < manifest ; 1955 ; Journal of Sedimentary Research Volume 25 ; 25 >
-      au < manifest ; 1956 ; Journal of Sedimentary Research Volume 26 ; 26 >
-      au < manifest ; 1957 ; Journal of Sedimentary Research Volume 27 ; 27 >
-      au < manifest ; 1958 ; Journal of Sedimentary Research Volume 28 ; 28 >
-      au < manifest ; 1959 ; Journal of Sedimentary Research Volume 29 ; 29 >
-      au < manifest ; 1960 ; Journal of Sedimentary Research Volume 30 ; 30 >
-      au < manifest ; 1961 ; Journal of Sedimentary Research Volume 31 ; 31 >
-      au < manifest ; 1962 ; Journal of Sedimentary Research Volume 32 ; 32 >
-      au < manifest ; 1963 ; Journal of Sedimentary Research Volume 33 ; 33 >
-      au < manifest ; 1964 ; Journal of Sedimentary Research Volume 34 ; 34 >
-      au < manifest ; 1965 ; Journal of Sedimentary Research Volume 35 ; 35 >
-      au < manifest ; 1966 ; Journal of Sedimentary Research Volume 36 ; 36 >
-      au < manifest ; 1967 ; Journal of Sedimentary Research Volume 37 ; 37 >
-      au < manifest ; 1968 ; Journal of Sedimentary Research Volume 38 ; 38 >
-      au < manifest ; 1969 ; Journal of Sedimentary Research Volume 39 ; 39 >
-      au < manifest ; 1970 ; Journal of Sedimentary Research Volume 40 ; 40 >
-      au < manifest ; 1971 ; Journal of Sedimentary Research Volume 41 ; 41 >
-      au < manifest ; 1972 ; Journal of Sedimentary Research Volume 42 ; 42 >
-      au < manifest ; 1973 ; Journal of Sedimentary Research Volume 43 ; 43 >
-      au < manifest ; 1974 ; Journal of Sedimentary Research Volume 44 ; 44 >
-      au < manifest ; 1975 ; Journal of Sedimentary Research Volume 45 ; 45 >
-      au < manifest ; 1976 ; Journal of Sedimentary Research Volume 46 ; 46 >
-      au < manifest ; 1977 ; Journal of Sedimentary Research Volume 47 ; 47 >
-      au < manifest ; 1978 ; Journal of Sedimentary Research Volume 48 ; 48 >
-      au < manifest ; 1979 ; Journal of Sedimentary Research Volume 49 ; 49 >
-      au < manifest ; 1980 ; Journal of Sedimentary Research Volume 50 ; 50 >
-      au < manifest ; 1981 ; Journal of Sedimentary Research Volume 51 ; 51 >
-      au < manifest ; 1982 ; Journal of Sedimentary Research Volume 52 ; 52 >
-      au < manifest ; 1983 ; Journal of Sedimentary Research Volume 53 ; 53 >
-      au < manifest ; 1984 ; Journal of Sedimentary Research Volume 54 ; 54 >
-      au < manifest ; 1985 ; Journal of Sedimentary Research Volume 55 ; 55 >
-      au < manifest ; 1986 ; Journal of Sedimentary Research Volume 56 ; 56 >
-      au < manifest ; 1987 ; Journal of Sedimentary Research Volume 57 ; 57 >
-      au < manifest ; 1988 ; Journal of Sedimentary Research Volume 58 ; 58 >
-      au < manifest ; 1989 ; Journal of Sedimentary Research Volume 59 ; 59 >
-      au < manifest ; 1990 ; Journal of Sedimentary Research Volume 60 ; 60 >
-      au < manifest ; 1991 ; Journal of Sedimentary Research Volume 61 ; 61 >
-      au < manifest ; 1992 ; Journal of Sedimentary Research Volume 62 ; 62 >
-      au < manifest ; 1993 ; Journal of Sedimentary Research Volume 63 ; 63 >
-      au < manifest ; 1994 ; Journal of Sedimentary Research Volume 64 ; 64 >
-      au < manifest ; 1995 ; Journal of Sedimentary Research Volume 65 ; 65 >
-      au < manifest ; 1996 ; Journal of Sedimentary Research Volume 66 ; 66 >
-      au < manifest ; 1997 ; Journal of Sedimentary Research Volume 67 ; 67 >
-      au < manifest ; 1998 ; Journal of Sedimentary Research Volume 68 ; 68 >
-      au < manifest ; 1999 ; Journal of Sedimentary Research Volume 69 ; 69 >
-      au < manifest ; 2000 ; Journal of Sedimentary Research Volume 70 ; 70 >
-      au < manifest ; 2001 ; Journal of Sedimentary Research Volume 71 ; 71 >
-      au < manifest ; 2002 ; Journal of Sedimentary Research Volume 72 ; 72 >
-      au < manifest ; 2003 ; Journal of Sedimentary Research Volume 73 ; 73 >
-      au < manifest ; 2004 ; Journal of Sedimentary Research Volume 74 ; 74 >
-      au < manifest ; 2005 ; Journal of Sedimentary Research Volume 75 ; 75 >
-      au < manifest ; 2006 ; Journal of Sedimentary Research Volume 76 ; 76 >
-      au < manifest ; 2007 ; Journal of Sedimentary Research Volume 77 ; 77 >
-      au < manifest ; 2008 ; Journal of Sedimentary Research Volume 78 ; 78 >
-      au < manifest ; 2009 ; Journal of Sedimentary Research Volume 79 ; 79 >
-      au < manifest ; 2010 ; Journal of Sedimentary Research Volume 80 ; 80 >
-      au < manifest ; 2011 ; Journal of Sedimentary Research Volume 81 ; 81 >
-      au < manifest ; 2012 ; Journal of Sedimentary Research Volume 82 ; 82 >
+      au < testing ; 1931 ; Journal of Sedimentary Research Volume 1 ; 1 >
+      au < testing ; 1932 ; Journal of Sedimentary Research Volume 2 ; 2 >
+      au < testing ; 1933 ; Journal of Sedimentary Research Volume 3 ; 3 >
+      au < testing ; 1934 ; Journal of Sedimentary Research Volume 4 ; 4 >
+      au < testing ; 1935 ; Journal of Sedimentary Research Volume 5 ; 5 >
+      au < testing ; 1936 ; Journal of Sedimentary Research Volume 6 ; 6 >
+      au < testing ; 1937 ; Journal of Sedimentary Research Volume 7 ; 7 >
+      au < testing ; 1938 ; Journal of Sedimentary Research Volume 8 ; 8 >
+      au < testing ; 1939 ; Journal of Sedimentary Research Volume 9 ; 9 >
+      au < testing ; 1940 ; Journal of Sedimentary Research Volume 10 ; 10 >
+      au < testing ; 1941 ; Journal of Sedimentary Research Volume 11 ; 11 >
+      au < testing ; 1942 ; Journal of Sedimentary Research Volume 12 ; 12 >
+      au < testing ; 1943 ; Journal of Sedimentary Research Volume 13 ; 13 >
+      au < testing ; 1944 ; Journal of Sedimentary Research Volume 14 ; 14 >
+      au < testing ; 1945 ; Journal of Sedimentary Research Volume 15 ; 15 >
+      au < testing ; 1946 ; Journal of Sedimentary Research Volume 16 ; 16 >
+      au < testing ; 1947 ; Journal of Sedimentary Research Volume 17 ; 17 >
+      au < testing ; 1948 ; Journal of Sedimentary Research Volume 18 ; 18 >
+      au < testing ; 1949 ; Journal of Sedimentary Research Volume 19 ; 19 >
+      au < testing ; 1950 ; Journal of Sedimentary Research Volume 20 ; 20 >
+      au < testing ; 1951 ; Journal of Sedimentary Research Volume 21 ; 21 >
+      au < testing ; 1952 ; Journal of Sedimentary Research Volume 22 ; 22 >
+      au < testing ; 1953 ; Journal of Sedimentary Research Volume 23 ; 23 >
+      au < testing ; 1954 ; Journal of Sedimentary Research Volume 24 ; 24 >
+      au < testing ; 1955 ; Journal of Sedimentary Research Volume 25 ; 25 >
+      au < testing ; 1956 ; Journal of Sedimentary Research Volume 26 ; 26 >
+      au < testing ; 1957 ; Journal of Sedimentary Research Volume 27 ; 27 >
+      au < testing ; 1958 ; Journal of Sedimentary Research Volume 28 ; 28 >
+      au < testing ; 1959 ; Journal of Sedimentary Research Volume 29 ; 29 >
+      au < testing ; 1960 ; Journal of Sedimentary Research Volume 30 ; 30 >
+      au < testing ; 1961 ; Journal of Sedimentary Research Volume 31 ; 31 >
+      au < testing ; 1962 ; Journal of Sedimentary Research Volume 32 ; 32 >
+      au < testing ; 1963 ; Journal of Sedimentary Research Volume 33 ; 33 >
+      au < testing ; 1964 ; Journal of Sedimentary Research Volume 34 ; 34 >
+      au < testing ; 1965 ; Journal of Sedimentary Research Volume 35 ; 35 >
+      au < testing ; 1966 ; Journal of Sedimentary Research Volume 36 ; 36 >
+      au < testing ; 1967 ; Journal of Sedimentary Research Volume 37 ; 37 >
+      au < testing ; 1968 ; Journal of Sedimentary Research Volume 38 ; 38 >
+      au < testing ; 1969 ; Journal of Sedimentary Research Volume 39 ; 39 >
+      au < testing ; 1970 ; Journal of Sedimentary Research Volume 40 ; 40 >
+      au < testing ; 1971 ; Journal of Sedimentary Research Volume 41 ; 41 >
+      au < testing ; 1972 ; Journal of Sedimentary Research Volume 42 ; 42 >
+      au < testing ; 1973 ; Journal of Sedimentary Research Volume 43 ; 43 >
+      au < testing ; 1974 ; Journal of Sedimentary Research Volume 44 ; 44 >
+      au < testing ; 1975 ; Journal of Sedimentary Research Volume 45 ; 45 >
+      au < testing ; 1976 ; Journal of Sedimentary Research Volume 46 ; 46 >
+      au < testing ; 1977 ; Journal of Sedimentary Research Volume 47 ; 47 >
+      au < testing ; 1978 ; Journal of Sedimentary Research Volume 48 ; 48 >
+      au < testing ; 1979 ; Journal of Sedimentary Research Volume 49 ; 49 >
+      au < testing ; 1980 ; Journal of Sedimentary Research Volume 50 ; 50 >
+      au < testing ; 1981 ; Journal of Sedimentary Research Volume 51 ; 51 >
+      au < testing ; 1982 ; Journal of Sedimentary Research Volume 52 ; 52 >
+      au < testing ; 1983 ; Journal of Sedimentary Research Volume 53 ; 53 >
+      au < testing ; 1984 ; Journal of Sedimentary Research Volume 54 ; 54 >
+      au < testing ; 1985 ; Journal of Sedimentary Research Volume 55 ; 55 >
+      au < testing ; 1986 ; Journal of Sedimentary Research Volume 56 ; 56 >
+      au < testing ; 1987 ; Journal of Sedimentary Research Volume 57 ; 57 >
+      au < testing ; 1988 ; Journal of Sedimentary Research Volume 58 ; 58 >
+      au < testing ; 1989 ; Journal of Sedimentary Research Volume 59 ; 59 >
+      au < testing ; 1990 ; Journal of Sedimentary Research Volume 60 ; 60 >
+      au < testing ; 1991 ; Journal of Sedimentary Research Volume 61 ; 61 >
+      au < testing ; 1992 ; Journal of Sedimentary Research Volume 62 ; 62 >
+      au < testing ; 1993 ; Journal of Sedimentary Research Volume 63 ; 63 >
+      au < testing ; 1994 ; Journal of Sedimentary Research Volume 64 ; 64 >
+      au < testing ; 1995 ; Journal of Sedimentary Research Volume 65 ; 65 >
+      au < testing ; 1996 ; Journal of Sedimentary Research Volume 66 ; 66 >
+      au < testing ; 1997 ; Journal of Sedimentary Research Volume 67 ; 67 >
+      au < testing ; 1998 ; Journal of Sedimentary Research Volume 68 ; 68 >
+      au < testing ; 1999 ; Journal of Sedimentary Research Volume 69 ; 69 >
+      au < testing ; 2000 ; Journal of Sedimentary Research Volume 70 ; 70 >
+      au < testing ; 2001 ; Journal of Sedimentary Research Volume 71 ; 71 >
+      au < testing ; 2002 ; Journal of Sedimentary Research Volume 72 ; 72 >
+      au < testing ; 2003 ; Journal of Sedimentary Research Volume 73 ; 73 >
+      au < testing ; 2004 ; Journal of Sedimentary Research Volume 74 ; 74 >
+      au < testing ; 2005 ; Journal of Sedimentary Research Volume 75 ; 75 >
+      au < testing ; 2006 ; Journal of Sedimentary Research Volume 76 ; 76 >
+      au < testing ; 2007 ; Journal of Sedimentary Research Volume 77 ; 77 >
+      au < testing ; 2008 ; Journal of Sedimentary Research Volume 78 ; 78 >
+      au < testing ; 2009 ; Journal of Sedimentary Research Volume 79 ; 79 >
+      au < testing ; 2010 ; Journal of Sedimentary Research Volume 80 ; 80 >
+      au < testing ; 2011 ; Journal of Sedimentary Research Volume 81 ; 81 >
+      au < testing ; 2012 ; Journal of Sedimentary Research Volume 82 ; 82 >
 
     }
 
@@ -119,35 +119,35 @@
       param[base_url] = http://palaios.sepmonline.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      comment[palaios] = missing manifest pages
+      comment[palaios] = missing testing pages
 
-      au < manifest ; 1986 ; PALAIOS Volume 1 ; 1 >
-      au < manifest ; 1987 ; PALAIOS Volume 2 ; 2 >
-      au < manifest ; 1988 ; PALAIOS Volume 3 ; 3 >
-      au < manifest ; 1989 ; PALAIOS Volume 4 ; 4 >
-      au < manifest ; 1990 ; PALAIOS Volume 5 ; 5 >
-      au < manifest ; 1991 ; PALAIOS Volume 6 ; 6 >
-      au < manifest ; 1992 ; PALAIOS Volume 7 ; 7 >
-      au < manifest ; 1993 ; PALAIOS Volume 8 ; 8 >
-      au < manifest ; 1994 ; PALAIOS Volume 9 ; 9 >
-      au < manifest ; 1995 ; PALAIOS Volume 10 ; 10 >
-      au < manifest ; 1996 ; PALAIOS Volume 11 ; 11 >
-      au < manifest ; 1997 ; PALAIOS Volume 12 ; 12 >
-      au < manifest ; 1998 ; PALAIOS Volume 13 ; 13 >
-      au < manifest ; 1999 ; PALAIOS Volume 14 ; 14 >
-      au < manifest ; 2000 ; PALAIOS Volume 15 ; 15 >
-      au < manifest ; 2001 ; PALAIOS Volume 16 ; 16 >
-      au < manifest ; 2002 ; PALAIOS Volume 17 ; 17 >
-      au < manifest ; 2003 ; PALAIOS Volume 18 ; 18 >
-      au < manifest ; 2004 ; PALAIOS Volume 19 ; 19 >
-      au < manifest ; 2005 ; PALAIOS Volume 20 ; 20 >
-      au < manifest ; 2006 ; PALAIOS Volume 21 ; 21 >
-      au < manifest ; 2007 ; PALAIOS Volume 22 ; 22 >
-      au < manifest ; 2008 ; PALAIOS Volume 23 ; 23 >
-      au < manifest ; 2009 ; PALAIOS Volume 24 ; 24 >
-      au < manifest ; 2010 ; PALAIOS Volume 25 ; 25 >
-      au < manifest ; 2011 ; PALAIOS Volume 26 ; 26 >
-      au < manifest ; 2012 ; PALAIOS Volume 27 ; 27 >
+      au < testing ; 1986 ; PALAIOS Volume 1 ; 1 >
+      au < testing ; 1987 ; PALAIOS Volume 2 ; 2 >
+      au < testing ; 1988 ; PALAIOS Volume 3 ; 3 >
+      au < testing ; 1989 ; PALAIOS Volume 4 ; 4 >
+      au < testing ; 1990 ; PALAIOS Volume 5 ; 5 >
+      au < testing ; 1991 ; PALAIOS Volume 6 ; 6 >
+      au < testing ; 1992 ; PALAIOS Volume 7 ; 7 >
+      au < testing ; 1993 ; PALAIOS Volume 8 ; 8 >
+      au < testing ; 1994 ; PALAIOS Volume 9 ; 9 >
+      au < testing ; 1995 ; PALAIOS Volume 10 ; 10 >
+      au < testing ; 1996 ; PALAIOS Volume 11 ; 11 >
+      au < testing ; 1997 ; PALAIOS Volume 12 ; 12 >
+      au < testing ; 1998 ; PALAIOS Volume 13 ; 13 >
+      au < testing ; 1999 ; PALAIOS Volume 14 ; 14 >
+      au < testing ; 2000 ; PALAIOS Volume 15 ; 15 >
+      au < testing ; 2001 ; PALAIOS Volume 16 ; 16 >
+      au < testing ; 2002 ; PALAIOS Volume 17 ; 17 >
+      au < testing ; 2003 ; PALAIOS Volume 18 ; 18 >
+      au < testing ; 2004 ; PALAIOS Volume 19 ; 19 >
+      au < testing ; 2005 ; PALAIOS Volume 20 ; 20 >
+      au < testing ; 2006 ; PALAIOS Volume 21 ; 21 >
+      au < testing ; 2007 ; PALAIOS Volume 22 ; 22 >
+      au < testing ; 2008 ; PALAIOS Volume 23 ; 23 >
+      au < testing ; 2009 ; PALAIOS Volume 24 ; 24 >
+      au < testing ; 2010 ; PALAIOS Volume 25 ; 25 >
+      au < testing ; 2011 ; PALAIOS Volume 26 ; 26 >
+      au < testing ; 2012 ; PALAIOS Volume 27 ; 27 >
 
     }
 
