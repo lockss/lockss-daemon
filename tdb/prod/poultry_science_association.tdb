@@ -17,6 +17,7 @@
     >
 
     param[base_url] = http://japr.fass.org/
+    comment[notReady] = articles available after 12 months. test later. for highwire check this link http://highwire.stanford.edu/lists/freeart.dtl
 
     au < HighWirePressPlugin ; down ; 1992 ; The Journal of Applied Poultry Research Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 1993 ; The Journal of Applied Poultry Research Volume 2 ; 2 >
@@ -38,7 +39,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; The Journal of Applied Poultry Research Volume 18 ; 18 >
     au < HighWirePressPlugin ; down ; 2010 ; The Journal of Applied Poultry Research Volume 19 ; 19 >
     au < HighWirePressPlugin ; down ; 2011 ; The Journal of Applied Poultry Research Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 2012 ; The Journal of Applied Poultry Research Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; notReady ; 2012 ; The Journal of Applied Poultry Research Volume 21 ; 21 >
 
   }
 
@@ -52,10 +53,11 @@
     >
 
     param[base_url] = http://ps.fass.org/
+    comment[notReady] = RU4145
 
     au < HighWirePressH20Plugin ; ready ; 1922 ; Poultry Science Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; ready ; 1923 ; Poultry Science Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 1924 ; Poultry Science Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; notReady ; 1924 ; Poultry Science Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; ready ; 1925 ; Poultry Science Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; ready ; 1926 ; Poultry Science Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; ready ; 1927 ; Poultry Science Volume 6 ; 6 >
@@ -63,18 +65,18 @@
     au < HighWirePressH20Plugin ; ready ; 1929 ; Poultry Science Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; ready ; 1930 ; Poultry Science Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; ready ; 1931 ; Poultry Science Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 1932 ; Poultry Science Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; notReady ; 1932 ; Poultry Science Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; ready ; 1933 ; Poultry Science Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; ready ; 1934 ; Poultry Science Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 1935 ; Poultry Science Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; notReady ; 1935 ; Poultry Science Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; ready ; 1936 ; Poultry Science Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; ready ; 1937 ; Poultry Science Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; ready ; 1938 ; Poultry Science Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; 1939 ; Poultry Science Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; 1940 ; Poultry Science Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; 1941 ; Poultry Science Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; notReady ; 1939 ; Poultry Science Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; notReady ; 1940 ; Poultry Science Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; notReady ; 1941 ; Poultry Science Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; ready ; 1942 ; Poultry Science Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; testing ; 1943 ; Poultry Science Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; notReady ; 1943 ; Poultry Science Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; testing ; 1944 ; Poultry Science Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; ready ; 1945 ; Poultry Science Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; ready ; 1946 ; Poultry Science Volume 25 ; 25 >
@@ -83,14 +85,14 @@
     au < HighWirePressH20Plugin ; ready ; 1949 ; Poultry Science Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; ready ; 1950 ; Poultry Science Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; testing ; 1951 ; Poultry Science Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; testing ; 1952 ; Poultry Science Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; notReady ; 1952 ; Poultry Science Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; ready ; 1953 ; Poultry Science Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; ready ; 1954 ; Poultry Science Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; ready ; 1955 ; Poultry Science Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; ready ; 1956 ; Poultry Science Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; ready ; 1957 ; Poultry Science Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; ready ; 1958 ; Poultry Science Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; testing ; 1959 ; Poultry Science Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; notReady ; 1959 ; Poultry Science Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; ready ; 1960 ; Poultry Science Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; ready ; 1961 ; Poultry Science Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; ready ; 1962 ; Poultry Science Volume 41 ; 41 >
@@ -98,8 +100,8 @@
     au < HighWirePressH20Plugin ; ready ; 1964 ; Poultry Science Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; ready ; 1965 ; Poultry Science Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; ready ; 1966 ; Poultry Science Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; testing ; 1967 ; Poultry Science Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; testing ; 1968 ; Poultry Science Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; notReady ; 1967 ; Poultry Science Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; notReady ; 1968 ; Poultry Science Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; ready ; 1969 ; Poultry Science Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; ready ; 1970 ; Poultry Science Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; ready ; 1971 ; Poultry Science Volume 50 ; 50 >
@@ -115,7 +117,7 @@
     au < HighWirePressH20Plugin ; ready ; 1981 ; Poultry Science Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; ready ; 1982 ; Poultry Science Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; ready ; 1983 ; Poultry Science Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; Poultry Science Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; notReady ; 1984 ; Poultry Science Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; ready ; 1985 ; Poultry Science Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; testing ; 1986 ; Poultry Science Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; ready ; 1987 ; Poultry Science Volume 66 ; 66 >
