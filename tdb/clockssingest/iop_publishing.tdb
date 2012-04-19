@@ -4,7 +4,7 @@
     name = IOP Publishing
   >
 
-    attr[contract] = 2008
+  attr[contract] = 2008
   plugin = org.lockss.plugin.iop.ClockssIOPSciencePlugin
   param[base_url] = http://iopscience.iop.org/
   implicit < status ; status2 ; year; name ; param[volume_name] >
@@ -113,7 +113,7 @@
     au < released ; crawling ; 2009 ; Bioinspiration & Biomimetics Volume 4 ; 4 > 
     au < released ; crawling ; 2010 ; Bioinspiration & Biomimetics Volume 5 ; 5 > 
     au < released ; crawling ; 2011 ; Bioinspiration & Biomimetics Volume 6 ; 6 > 
-    au < crawling  ; exists ; 2012 ; Bioinspiration & Biomimetics Volume 7 ; 7 > 
+    au < crawling ; exists ; 2012 ; Bioinspiration & Biomimetics Volume 7 ; 7 > 
 
   }
 
