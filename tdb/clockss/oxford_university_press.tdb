@@ -13597,7 +13597,6 @@
 
     param[base_url] = http://nar.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[nar39] = multiple poll mismatches -- retest later
 
     au < manifest ; exists ; 1974 ; Nucleic Acids Research Volume 1 ; 1 ; >
     au < manifest ; exists ; 1975 ; Nucleic Acids Research Volume 2 ; 2 ; >
@@ -13637,7 +13636,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Nucleic Acids Research Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Nucleic Acids Research Volume 37 ; 37 ; >
     au < released ; crawling ; 2010 ; Nucleic Acids Research Volume 38 ; 38 ; >
-    au < notReady ; exists ; 2011 ; Nucleic Acids Research Volume 39 ; 39 ; >
+    au < released ; manifest ; 2011 ; Nucleic Acids Research Volume 39 ; 39 ; >
     au < crawling ; exists ; 2012 ; Nucleic Acids Research Volume 40 ; 40 ; >
 
     }
