@@ -18,17 +18,18 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://aoj.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[notReady] = RT4567
 
-      au < testing ; 2001 ; American Orthoptic Journal Volume 51 ; 51 >
+      au < notReady ; 2001 ; American Orthoptic Journal Volume 51 ; 51 >
       au < released ; 2002 ; American Orthoptic Journal Volume 52 ; 52 >
-      au < testing ; 2003 ; American Orthoptic Journal Volume 53 ; 53 >
-      au < testing ; 2004 ; American Orthoptic Journal Volume 54 ; 54 >
-      au < testing ; 2005 ; American Orthoptic Journal Volume 55 ; 55 >
-      au < testing ; 2006 ; American Orthoptic Journal Volume 56 ; 56 >
+      au < notReady ; 2003 ; American Orthoptic Journal Volume 53 ; 53 >
+      au < notReady ; 2004 ; American Orthoptic Journal Volume 54 ; 54 >
+      au < notReady ; 2005 ; American Orthoptic Journal Volume 55 ; 55 >
+      au < notReady ; 2006 ; American Orthoptic Journal Volume 56 ; 56 >
       au < testing ; 2007 ; American Orthoptic Journal Volume 57 ; 57 >
-      au < testing ; 2008 ; American Orthoptic Journal Volume 58 ; 58 >
-      au < testing ; 2009 ; American Orthoptic Journal Volume 59 ; 59 >
-      au < testing ; 2010 ; American Orthoptic Journal Volume 60 ; 60 >
+      au < notReady ; 2008 ; American Orthoptic Journal Volume 58 ; 58 >
+      au < notReady ; 2009 ; American Orthoptic Journal Volume 59 ; 59 >
+      au < notReady ; 2010 ; American Orthoptic Journal Volume 60 ; 60 >
       au < testing ; 2011 ; American Orthoptic Journal Volume 61 ; 61 >
       au < manifest ; 2012 ; American Orthoptic Journal Volume 62 ; 62 >
 
@@ -363,17 +364,18 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://lbr.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[notReady] = RT4567
 
       au < released ; 2002 ; Luso-Brazilian Review Volume 39 ; 39 >
-      au < testing ; 2003 ; Luso-Brazilian Review Volume 40 ; 40 >
+      au < notReady ; 2003 ; Luso-Brazilian Review Volume 40 ; 40 >
       au < released ; 2004 ; Luso-Brazilian Review Volume 41 ; 41 >
-      au < testing ; 2005 ; Luso-Brazilian Review Volume 42 ; 42 >
-      au < testing ; 2006 ; Luso-Brazilian Review Volume 43 ; 43 >
+      au < notReady ; 2005 ; Luso-Brazilian Review Volume 42 ; 42 >
+      au < notReady ; 2006 ; Luso-Brazilian Review Volume 43 ; 43 >
       au < testing ; 2007 ; Luso-Brazilian Review Volume 44 ; 44 >
       au < released ; 2008 ; Luso-Brazilian Review Volume 45 ; 45 >
       au < released ; 2009 ; Luso-Brazilian Review Volume 46 ; 46 >
-      au < testing ; 2010 ; Luso-Brazilian Review Volume 47 ; 47 >
-      au < testing ; 2011 ; Luso-Brazilian Review Volume 48 ; 48 >
+      au < notReady ; 2010 ; Luso-Brazilian Review Volume 47 ; 47 >
+      au < notReady ; 2011 ; Luso-Brazilian Review Volume 48 ; 48 >
       au < expected ; 2012 ; Luso-Brazilian Review Volume 49 ; 49 >
 
     }
@@ -460,21 +462,20 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://npj.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[17] = found a login page
-      comment[18] = no permission
+      comment[notReady] = RT4567
 
       au < released ; 2000 ; Native Plants Journal Volume 1 ; 1 >
       au < testing ; 2001 ; Native Plants Journal Volume 2 ; 2 >
       au < testing ; 2002 ; Native Plants Journal Volume 3 ; 3 >
       au < released ; 2003 ; Native Plants Journal Volume 4 ; 4 >
       au < released ; 2004 ; Native Plants Journal Volume 5 ; 5 >
-      au < testing ; 2005 ; Native Plants Journal Volume 6 ; 6 >
+      au < notReady ; 2005 ; Native Plants Journal Volume 6 ; 6 >
       au < testing ; 2006 ; Native Plants Journal Volume 7 ; 7 >
-      au < testing ; 2007 ; Native Plants Journal Volume 8 ; 8 >
-      au < testing ; 2008 ; Native Plants Journal Volume 9 ; 9 >
-      au < testing ; 2009 ; Native Plants Journal Volume 10 ; 10 >
-      au < testing ; 2010 ; Native Plants Journal Volume 11 ; 11 >
-      au < testing ; 2011 ; Native Plants Journal Volume 12 ; 12 >
+      au < notReady ; 2007 ; Native Plants Journal Volume 8 ; 8 >
+      au < notReady ; 2008 ; Native Plants Journal Volume 9 ; 9 >
+      au < notReady ; 2009 ; Native Plants Journal Volume 10 ; 10 >
+      au < notReady ; 2010 ; Native Plants Journal Volume 11 ; 11 >
+      au < notReady ; 2011 ; Native Plants Journal Volume 12 ; 12 >
       au < manifest ; 2012 ; Native Plants Journal Volume 13 ; 13 >
     
     }
