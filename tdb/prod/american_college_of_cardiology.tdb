@@ -56,6 +56,7 @@
     >
 
     comment[urgent] = urgent test
+    comment[doNotProcess] = Error in sidebar URL in PDF frameset causes infinite looping & repository error -- contacting Highwire. Issue 3742
     plugin = org.lockss.plugin.highwire.HighWirePressPlugin
     param[base_url] = http://content.onlinejacc.org/
     implicit < status ; year ; name ; param[volume_name] >
@@ -90,35 +91,35 @@
     au < testing ; 1996 ; Journal of the American College of Cardiology Volume 28 [abstracts only] ; 28 >
     au < testing ; 1997 ; Journal of the American College of Cardiology Volume 29 [abstracts only] ; 29 >
     au < testing ; 1997 ; Journal of the American College of Cardiology Volume 30 [abstracts only] ; 30 >
-    au < testing ; 1998 ; Journal of the American College of Cardiology Volume 31 ; 31 >
-    au < testing ; 1998 ; Journal of the American College of Cardiology Volume 32 ; 32 >
-    au < testing ; 1999 ; Journal of the American College of Cardiology Volume 33 ; 33 >
-    au < testing ; 1999 ; Journal of the American College of Cardiology Volume 34 ; 34 >
-    au < testing ; 2000 ; Journal of the American College of Cardiology Volume 35 ; 35 >
-    au < testing ; 2000 ; Journal of the American College of Cardiology Volume 36 ; 36 >
-    au < testing ; 2001 ; Journal of the American College of Cardiology Volume 37 ; 37 >
-    au < testing ; 2001 ; Journal of the American College of Cardiology Volume 38 ; 38 >
-    au < testing ; 2002 ; Journal of the American College of Cardiology Volume 39 ; 39 >
-    au < testing ; 2002 ; Journal of the American College of Cardiology Volume 40 ; 40 >
-    au < testing ; 2003 ; Journal of the American College of Cardiology Volume 41 ; 41 >
-    au < testing ; 2003 ; Journal of the American College of Cardiology Volume 42 ; 42 >
-    au < testing ; 2004 ; Journal of the American College of Cardiology Volume 43 ; 43 >
-    au < testing ; 2004 ; Journal of the American College of Cardiology Volume 44 ; 44 >
-    au < testing ; 2005 ; Journal of the American College of Cardiology Volume 45 ; 45 >
-    au < testing ; 2005 ; Journal of the American College of Cardiology Volume 46 ; 46 >
-    au < testing ; 2006 ; Journal of the American College of Cardiology Volume 47 ; 47 >
-    au < testing ; 2006 ; Journal of the American College of Cardiology Volume 48 ; 48 >
-    au < testing ; 2007 ; Journal of the American College of Cardiology Volume 49 ; 49 >
-    au < testing ; 2007 ; Journal of the American College of Cardiology Volume 50 ; 50 >
-    au < testing ; 2008 ; Journal of the American College of Cardiology Volume 51 ; 51 >
-    au < testing ; 2008 ; Journal of the American College of Cardiology Volume 52 ; 52 >
-    au < testing ; 2009 ; Journal of the American College of Cardiology Volume 53 ; 53 >
-    au < testing ; 2009 ; Journal of the American College of Cardiology Volume 54 ; 54 >
-    au < testing ; 2010 ; Journal of the American College of Cardiology Volume 55 ; 55 >
-    au < testing ; 2010 ; Journal of the American College of Cardiology Volume 56 ; 56 >
-    au < testing ; 2011 ; Journal of the American College of Cardiology Volume 57 ; 57 >
-    au < testing ; 2011 ; Journal of the American College of Cardiology Volume 58 ; 58 >
-    au < testing ; 2012 ; Journal of the American College of Cardiology Volume 59 ; 59 >
+    au < doNotProcess ; 1998 ; Journal of the American College of Cardiology Volume 31 ; 31 >
+    au < doNotProcess ; 1998 ; Journal of the American College of Cardiology Volume 32 ; 32 >
+    au < doNotProcess ; 1999 ; Journal of the American College of Cardiology Volume 33 ; 33 >
+    au < doNotProcess ; 1999 ; Journal of the American College of Cardiology Volume 34 ; 34 >
+    au < doNotProcess ; 2000 ; Journal of the American College of Cardiology Volume 35 ; 35 >
+    au < doNotProcess ; 2000 ; Journal of the American College of Cardiology Volume 36 ; 36 >
+    au < doNotProcess ; 2001 ; Journal of the American College of Cardiology Volume 37 ; 37 >
+    au < doNotProcess ; 2001 ; Journal of the American College of Cardiology Volume 38 ; 38 >
+    au < doNotProcess ; 2002 ; Journal of the American College of Cardiology Volume 39 ; 39 >
+    au < doNotProcess ; 2002 ; Journal of the American College of Cardiology Volume 40 ; 40 >
+    au < doNotProcess ; 2003 ; Journal of the American College of Cardiology Volume 41 ; 41 >
+    au < doNotProcess ; 2003 ; Journal of the American College of Cardiology Volume 42 ; 42 >
+    au < doNotProcess ; 2004 ; Journal of the American College of Cardiology Volume 43 ; 43 >
+    au < doNotProcess ; 2004 ; Journal of the American College of Cardiology Volume 44 ; 44 >
+    au < doNotProcess ; 2005 ; Journal of the American College of Cardiology Volume 45 ; 45 >
+    au < doNotProcess ; 2005 ; Journal of the American College of Cardiology Volume 46 ; 46 >
+    au < doNotProcess ; 2006 ; Journal of the American College of Cardiology Volume 47 ; 47 >
+    au < doNotProcess ; 2006 ; Journal of the American College of Cardiology Volume 48 ; 48 >
+    au < doNotProcess ; 2007 ; Journal of the American College of Cardiology Volume 49 ; 49 >
+    au < doNotProcess ; 2007 ; Journal of the American College of Cardiology Volume 50 ; 50 >
+    au < doNotProcess ; 2008 ; Journal of the American College of Cardiology Volume 51 ; 51 >
+    au < doNotProcess ; 2008 ; Journal of the American College of Cardiology Volume 52 ; 52 >
+    au < doNotProcess ; 2009 ; Journal of the American College of Cardiology Volume 53 ; 53 >
+    au < doNotProcess ; 2009 ; Journal of the American College of Cardiology Volume 54 ; 54 >
+    au < doNotProcess ; 2010 ; Journal of the American College of Cardiology Volume 55 ; 55 >
+    au < doNotProcess ; 2010 ; Journal of the American College of Cardiology Volume 56 ; 56 >
+    au < doNotProcess ; 2011 ; Journal of the American College of Cardiology Volume 57 ; 57 >
+    au < doNotProcess ; 2011 ; Journal of the American College of Cardiology Volume 58 ; 58 >
+    au < doNotProcess ; 2012 ; Journal of the American College of Cardiology Volume 59 ; 59 >
 
   }
 
