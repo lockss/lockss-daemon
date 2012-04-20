@@ -45,6 +45,8 @@
       comment[years] = years in web addresses are two years behind the publishing year as of 20110912
       comment[years1] = .long links still go to the year indicated (i.e. vol2009 manifest links to 2009, not 2011)
       
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; American Literary Scholarship 2000 ; 1998 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; American Literary Scholarship 2001 ; 1999 >
       au < HighWirePressH20Plugin ; released ; 2002 ; American Literary Scholarship 2002 ; 2000 >
       au < HighWirePressH20Plugin ; released ; 2003 ; American Literary Scholarship 2003 ; 2001 >
       au < HighWirePressH20Plugin ; released ; 2004 ; American Literary Scholarship 2004 ; 2002 >
@@ -438,7 +440,7 @@
       
       au < HighWireStrVolPlugin ; down ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 >
-      au < HighWireStrVolPlugin ; down ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >      
+      au < HighWireStrVolPlugin ; down ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Eighteenth-Century Life Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
