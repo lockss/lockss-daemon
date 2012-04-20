@@ -21269,6 +21269,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jhc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[base_url] = journal moved from http://www.jhc.org/
 
         au < manifest ; 1953 ; Journal of Histochemistry and Cytochemistry Volume 1 ; 1 >
         au < manifest ; 1954 ; Journal of Histochemistry and Cytochemistry Volume 2 ; 2 >
@@ -21321,13 +21323,13 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2001 ; Journal of Histochemistry and Cytochemistry Volume 49 ; 49 >
         au < manifest ; 2002 ; Journal of Histochemistry and Cytochemistry Volume 50 ; 50 >
         au < manifest ; 2003 ; Journal of Histochemistry and Cytochemistry Volume 51 ; 51 >
-        au < manifest ; 2004 ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
-        au < manifest ; 2005 ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
-        au < manifest ; 2006 ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
-        au < manifest ; 2007 ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
-        au < manifest ; 2008 ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
-        au < manifest ; 2009 ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
-        au < manifest ; 2010 ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
+        au < doNotProcess ; 2004 ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
+        au < doNotProcess ; 2005 ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
+        au < doNotProcess ; 2006 ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
+        au < doNotProcess ; 2007 ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
+        au < doNotProcess ; 2008 ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
+        au < doNotProcess ; 2009 ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
+        au < doNotProcess ; 2010 ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
         au < released ; 2011 ; Journal of Histochemistry and Cytochemistry Volume 59 ; 59 >
         au < expected ; 2012 ; Journal of Histochemistry and Cytochemistry Volume 60 ; 60 >
 
