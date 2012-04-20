@@ -17,6 +17,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://www.kappanmagazine.org/
 
+    au < manifest ; 2000-2001 ; Phi Delta Kappan Volume 82 ; 82 >  
     au < testing ; 2001-2002 ; Phi Delta Kappan Volume 83 ; 83 >  
     au < testing ; 2002-2003 ; Phi Delta Kappan Volume 84 ; 84 >  
     au < testing ; 2003-2004 ; Phi Delta Kappan Volume 85 ; 85 >  
@@ -28,6 +29,7 @@
     au < released ; 2009-2010 ; Phi Delta Kappan Volume 91 ; 91 >
     au < released ; 2010-2011 ; Phi Delta Kappan Volume 92 ; 92 >
     au < testing ; 2011-2012 ; Phi Delta Kappan Volume 93 ; 93 >
+    au < expected ; 2012-2013 ; Phi Delta Kappan Volume 94 ; 94 >
     
   }
   
