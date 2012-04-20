@@ -1085,6 +1085,12 @@
     param[base_url] = http://annhyg.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    au < HighWirePressH20Plugin ; manifest ; 1958 ; The Annals of Occupational Hygiene Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1960 ; The Annals of Occupational Hygiene Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1961 ; The Annals of Occupational Hygiene Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1961 ; The Annals of Occupational Hygiene Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; The Annals of Occupational Hygiene Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; The Annals of Occupational Hygiene Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 1964 ; The Annals of Occupational Hygiene Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 1965 ; The Annals of Occupational Hygiene Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 1966 ; The Annals of Occupational Hygiene Volume 9 ; 9 >
