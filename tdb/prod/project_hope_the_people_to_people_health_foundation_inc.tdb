@@ -17,6 +17,22 @@
     param[base_url] = http://content.healthaffairs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < manifest ; 1981 ; Health Affairs Volume 1 ; 1 >
+    au < manifest ; 1983 ; Health Affairs Volume 2 ; 2 >
+    au < manifest ; 1984 ; Health Affairs Volume 3 ; 3 >
+    au < manifest ; 1985 ; Health Affairs Volume 4 ; 4 >
+    au < manifest ; 1986 ; Health Affairs Volume 5 ; 5 >
+    au < manifest ; 1987 ; Health Affairs Volume 6 ; 6 >
+    au < manifest ; 1988 ; Health Affairs Volume 7 ; 7 >
+    au < manifest ; 1989 ; Health Affairs Volume 8 ; 8 >
+    au < manifest ; 1990 ; Health Affairs Volume 9 ; 9 >
+    au < manifest ; 1991 ; Health Affairs Volume 10 ; 10 >
+    au < manifest ; 1992 ; Health Affairs Volume 11 ; 11 >
+    au < manifest ; 1993 ; Health Affairs Volume 12 ; 12 >
+    au < manifest ; 1994 ; Health Affairs Volume 13 ; 13 >
+    au < manifest ; 1995 ; Health Affairs Volume 14 ; 14 >
+    au < manifest ; 1996 ; Health Affairs Volume 15 ; 15 >
+    au < manifest ; 1997 ; Health Affairs Volume 16 ; 16 >
     au < testing ; 1998 ; Health Affairs Volume 17 ; 17 >
     au < testing ; 1999 ; Health Affairs Volume 18 ; 18 >
     au < testing ; 2000 ; Health Affairs Volume 19 ; 19 >
