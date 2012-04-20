@@ -5,5 +5,19 @@ has collected, inviting the other three instances to vote.
 To run:
   cd test/frameworks/run_multiple_daemons
   ./start
-  ...   (connect to daemon on port 8081, 8082, 8083, 8084)
+  ...   (connect to daemons on ports 8081, 8082, 8083, 8084
+         user=lockss-u, passwd=lockss-p)
   ./stop
+
+See ./testN/test.out for errors and other messages.
+
+UI access is initially allowed from localhost (127.0.0.1).  For access
+from other hosts either use a browser on localhost or add the line
+  org.lockss.ui.access.ip.include=<ip-address-or-subnet>
+to ./lockss.opt .  E.g.,
+  org.lockss.ui.access.ip.include=192.168.10.0/24
+
+To test a new plugin, put it in the appropriate package dir in the
+toplevel plugins/src/ tree, add its name to org.lockss.plugin.registry
+(in test/frameworks/common.xml), run "ant jar-plugins" then start the
+daemons.
