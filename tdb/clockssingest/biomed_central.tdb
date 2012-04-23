@@ -3,8 +3,7 @@
     name = BioMed Central
   >
   
-  comment[sc] = creating  new 4/10/12
-  attr[contract_year] = 2008
+  attr[contract] = 2008
   rights = openaccess
   implicit < status ; status2 ; year ; name ; param[volume_name] >
 
