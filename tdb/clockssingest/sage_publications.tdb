@@ -666,7 +666,7 @@
       au < manifest ; exists ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 ; >
       au < testing ; exists ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 ; >
       au < released ; crawling ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 ; >
-      au < expected ; exists ; 2012 ; Alternatives: Global, Local, Political Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2012 ; Alternatives: Global, Local, Political Volume 37 ; 37 ; >
 	
     }
 
@@ -3771,7 +3771,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Business Information Review Volume 26 ; 26 ; >
       au < released ; crawling ; 2010 ; Business Information Review Volume 27 ; 27 ; >
       au < released ; crawling ; 2011 ; Business Information Review Volume 28 ; 28 ; >
-      au < expected ; exists ; 2012 ; Business Information Review Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2012 ; Business Information Review Volume 29 ; 29 ; >
 
     }
 
@@ -4786,7 +4786,7 @@
     
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < expected ; exists ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 ; >
 
     }
     
@@ -10281,7 +10281,7 @@
 
       au < testing ; exists ; 2010 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 2 ; 2 ; >
-      au < expected ; exists ; 2012 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2012 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 3 ; 3 ; >
 
     }
 
@@ -12887,7 +12887,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Cross Cultural Management Volume 9 ; 9 ; >
       au < released ; crawling ; 2010 ; International Journal of Cross Cultural Management Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; International Journal of Cross Cultural Management Volume 11 ; 11 ; >
-      au < expected ; exists ; 2012 ; International Journal of Cross Cultural Management Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2012 ; International Journal of Cross Cultural Management Volume 12 ; 12 ; >
 
     }
 
@@ -21194,7 +21194,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Research in International Education Volume 8 ; 8 ; >
       au < released ; manifest ; 2010 ; Journal of Research in International Education Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; Journal of Research in International Education Volume 10 ; 10 ; >
-      au < expected ; exists ; 2012 ; Journal of Research in International Education Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2012 ; Journal of Research in International Education Volume 11 ; 11 ; >
 
     }
 
@@ -24450,7 +24450,7 @@
         au < exists ; exists ; 2008 ; Medical Law International Volume 9 ; 9 ; >
         au < exists ; exists ; 2009-2010 ; Medical Law International Volume 10 ; 10 ; >
         au < released ; crawling ; 2011 ; Medical Law International Volume 11 ; 11 ; >
-        au < expected ; exists ; 2012 ; Medical Law International Volume 12 ; 12 ; >
+        au < manifest ; exists ; 2012 ; Medical Law International Volume 12 ; 12 ; >
         
       }
       
@@ -29935,7 +29935,7 @@
           pluginSuffix = ClockssHighWirePressH20Plugin
 
           au < released ; crawling ; 2011 ; Sage Open Volume 1 ; 1 ; >
-          au < expected ; exists ; 2012 ; Sage Open Volume 2 ; 2 ; >
+          au < manifest ; exists ; 2012 ; Sage Open Volume 2 ; 2 ; >
         
         }
 
@@ -30849,7 +30849,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Social & Legal Studies Volume 18 ; 18 ; >
       au < crawling ; exists ; 2010 ; Social & Legal Studies Volume 19 ; 19 ; >
       au < released ; crawling ; 2011 ; Social & Legal Studies Volume 20 ; 20 ; >
-      au < expected ; exists ; 2012 ; Social & Legal Studies Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2012 ; Social & Legal Studies Volume 21 ; 21 ; >
 
     }
 
