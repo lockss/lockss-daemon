@@ -171,7 +171,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Action Research Volume 7 ; 7 ; >
       au < released ; crawling ; 2010 ; Action Research Volume 8 ; 8 ; >
       au < released ; crawling ; 2011 ; Action Research Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2012 ; Action Research Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2012 ; Action Research Volume 10 ; 10 ; >
 
     }
 
@@ -641,7 +641,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Affilia Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; Affilia Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; Affilia Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2012 ; Affilia Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2012 ; Affilia Volume 27 ; 27 ; >
 
     }
 
@@ -666,7 +666,7 @@
       au < manifest ; exists ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 ; >
       au < testing ; exists ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 ; >
       au < released ; crawling ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2012 ; Alternatives: Global, Local, Political Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2012 ; Alternatives: Global, Local, Political Volume 37 ; 37 ; >
 	
     }
 
@@ -883,7 +883,7 @@
       au < manifest ; exists ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; American Journal of Alzheimer's Disease and Other Dementias Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; American Journal of Alzheimer's Disease and Other Dementias Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2012 ; American Journal of Alzheimer's Disease and Other Dementias Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2012 ; American Journal of Alzheimer's Disease and Other Dementias Volume 27 ; 27 ; >
 
     }
 
@@ -2131,7 +2131,7 @@
       au < released ; crawling ; 2011 ; The Annals of the American Academy of Political and Social Science Volume 638 ; 638 ; >
       au < crawling ; exists ; 2012 ; The Annals of the American Academy of Political and Social Science Volume 639 ; 639 ; >
       au < crawling ; exists ; 2012 ; The Annals of the American Academy of Political and Social Science Volume 640 ; 640 ; >
-      au < manifest ; exists ; 2012 ; The Annals of the American Academy of Political and Social Science Volume 641 ; 641 ; >
+      au < crawling ; exists ; 2012 ; The Annals of the American Academy of Political and Social Science Volume 641 ; 641 ; >
  
     }
 
@@ -2763,7 +2763,7 @@
       au < manifest ; exists ; 2009 ; Australian Journal of Management Volume 34 ; 34 ; >
       au < released ; crawling ; 2010 ; Australian Journal of Management Volume 35 ; 35 ; >
       au < released ; crawling ; 2011 ; Australian Journal of Management Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2012 ; Australian Journal of Management Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2012 ; Australian Journal of Management Volume 37 ; 37 ; >
 
     }
 
@@ -3115,7 +3115,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Body & Society Volume 15 ; 15 ; >
       au < released ; crawling ; 2010 ; Body & Society Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; Body & Society Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2012 ; Body & Society Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2012 ; Body & Society Volume 18 ; 18 ; >
 
     }
 
@@ -3523,8 +3523,8 @@
       au < released ; crawling ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 110 ; 110 ; >
       au < released ; crawling ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 111 ; 111 ; >
       au < crawling ; exists ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 112 ; 112 ; >
-      au < manifest ; exists ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 113 ; 113 ; >
-      au < manifest ; exists ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 114 ; 114 ; >
+      au < crawling ; exists ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 113 ; 113 ; >
+      au < crawling ; exists ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 114 ; 114 ; >
       au < expected ; exists ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 115 ; 115 ; >
       au < expected ; exists ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 116 ; 116 ; >
 
@@ -3771,7 +3771,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Business Information Review Volume 26 ; 26 ; >
       au < released ; crawling ; 2010 ; Business Information Review Volume 27 ; 27 ; >
       au < released ; crawling ; 2011 ; Business Information Review Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2012 ; Business Information Review Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2012 ; Business Information Review Volume 29 ; 29 ; >
 
     }
 
@@ -4549,7 +4549,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Clinical Case Studies Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; Clinical Case Studies Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; Clinical Case Studies Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2012 ; Clinical Case Studies Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2012 ; Clinical Case Studies Volume 11 ; 11 ; >
 
     }
 
@@ -4786,7 +4786,7 @@
     
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2012 ; Clinical Pharmacology in Drug Development Volume 1 ; 1 ; >
 
     }
     
@@ -6722,7 +6722,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; "Cultural Studies <=> Critical Methodologies Volume 9" ; 9 ; >
       au < released ; crawling ; 2010 ; "Cultural Studies <=> Critical Methodologies Volume 10" ; 10 ; >
       au < released ; crawling ; 2011 ; "Cultural Studies <=> Critical Methodologies Volume 11" ; 11 ; >
-      au < manifest ; exists ; 2012 ; "Cultural Studies <=> Critical Methodologies Volume 12" ; 12 ; >
+      au < crawling ; exists ; 2012 ; "Cultural Studies <=> Critical Methodologies Volume 12" ; 12 ; >
 
     }
 
@@ -8119,7 +8119,7 @@
       au < manifest ; exists ; 2009 ; Electronic News Volume 3 ; 3 ; >
       au < testing ; exists ; 2010 ; Electronic News Volume 4 ; 4 ; >
       au < released ; crawling ; 2011 ; Electronic News Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2012 ; Electronic News Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2012 ; Electronic News Volume 6 ; 6 ; >
 
     }
 
@@ -8418,7 +8418,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Ethnography Volume 10 ; 10 ; >
       au < released ; crawling ; 2010 ; Ethnography Volume 11 ; 11 ; >
       au < released ; crawling ; 2011 ; Ethnography Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2012 ; Ethnography Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2012 ; Ethnography Volume 13 ; 13 ; >
 
     }
 
@@ -8561,7 +8561,7 @@
       au < exists ; exists ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8 ; >
       au < exists ; exists ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9 ; >
       au < exists ; exists ; 2011 ; European Journal of Cardiovascular Nursing Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 11 ; >
 
     }
 
@@ -8624,7 +8624,7 @@
         comment[0] = Previous issues are at the same url.
         
         au < doesNotExist ; doesNotExist ; 0 ; European Journal of Preventive Cardiology Volume 18 ; 18 ; >
-        au < manifest ; exists ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 ; >
+        au < crawling ; exists ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 ; >
 
       }
 
@@ -8680,7 +8680,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Communication Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; European Journal of Communication Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; European Journal of Communication Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2012 ; European Journal of Communication Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2012 ; European Journal of Communication Volume 27 ; 27 ; >
 
     }
 
@@ -9749,7 +9749,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Feminist Theory Volume 10 ; 10 ; >
       au < released ; crawling ; 2010 ; Feminist Theory Volume 11 ; 11 ; >
       au < released ; crawling ; 2011 ; Feminist Theory Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2012 ; Feminist Theory Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2012 ; Feminist Theory Volume 13 ; 13 ; >
 
     }
 
@@ -9863,7 +9863,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; First Language Volume 29 ; 29 ; >
       au < released ; crawling ; 2010 ; First Language Volume 30 ; 30 ; >
       au < released ; crawling ; 2011 ; First Language Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2012 ; First Language Volume 32 ; 32 ; >
+      au < crawling ; exists ; 2012 ; First Language Volume 32 ; 32 ; >
 
     }
 
@@ -10088,7 +10088,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Games and Culture Volume 4 ; 4 ; >
       au < released ; crawling ; 2010 ; Games and Culture Volume 5 ; 5 ; >
       au < released ; crawling ; 2011 ; Games and Culture Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2012 ; Games and Culture Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2012 ; Games and Culture Volume 7 ; 7 ; >
 
     }
 
@@ -10281,7 +10281,7 @@
 
       au < testing ; exists ; 2010 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2012 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2012 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 3 ; 3 ; >
 
     }
 
@@ -10503,7 +10503,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Global Health Promotion Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; Global Health Promotion Volume 17 ; 17 ; >
       au < released ; crawling ; 2011 ; Global Health Promotion Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2012 ; Global Health Promotion Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2012 ; Global Health Promotion Volume 19 ; 19 ; >
 
     }
 
@@ -11174,7 +11174,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; High Performance Polymers Volume 21 ; 21 ; >
       au < released ; crawling ; 2010 ; High Performance Polymers Volume 22 ; 22 ; >
       au < released ; crawling ; 2011 ; High Performance Polymers Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2012 ; High Performance Polymers Volume 24 ; 24 ; >
+      au < crawling ; exists ; 2012 ; High Performance Polymers Volume 24 ; 24 ; >
 
     }
 
@@ -12059,7 +12059,7 @@
       au < manifest ; exists ; 2009 ; Index on Censorship Volume 38 ; 38 ; >
       au < released ; manifest ; 2010 ; Index on Censorship Volume 39 ; 39 ; >
       au < released ; crawling ; 2011 ; Index on Censorship Volume 40 ; 40 ; >
-      au < manifest ; exists ; 2012 ; Index on Censorship Volume 41 ; 41 ; >
+      au < crawling ; exists ; 2012 ; Index on Censorship Volume 41 ; 41 ; >
 
     }
 
@@ -12095,7 +12095,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; India Quarterly: A Journal of International Affairs Volume 65 ; 65 ; >
       au < released ; crawling ; 2010 ; India Quarterly: A Journal of International Affairs Volume 66 ; 66 ; >
       au < released ; crawling ; 2011 ; India Quarterly: A Journal of International Affairs Volume 67 ; 67 ; >
-      au < manifest ; exists ; 2012 ; India Quarterly: A Journal of International Affairs Volume 68 ; 68 ; >
+      au < crawling ; exists ; 2012 ; India Quarterly: A Journal of International Affairs Volume 68 ; 68 ; >
 
     }
 
@@ -12172,7 +12172,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Indian Economic & Social History Review Volume 46 ; 46 ; >
       au < released ; crawling ; 2010 ; Indian Economic & Social History Review Volume 47 ; 47 ; >
       au < released ; crawling ; 2011 ; Indian Economic & Social History Review Volume 48 ; 48 ; >
-      au < manifest ; exists ; 2012 ; Indian Economic & Social History Review Volume 49 ; 49 ; >
+      au < crawling ; exists ; 2012 ; Indian Economic & Social History Review Volume 49 ; 49 ; >
 
     }
 
@@ -12603,7 +12603,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Communication Gazette Volume 71 ; 71 ; >
       au < released ; crawling ; 2010 ; International Communication Gazette Volume 72 ; 72 ; >
       au < released ; crawling ; 2011 ; International Communication Gazette Volume 73 ; 73 ; >
-      au < manifest ; exists ; 2012 ; International Communication Gazette Volume 74 ; 74 ; >
+      au < crawling ; exists ; 2012 ; International Communication Gazette Volume 74 ; 74 ; >
 
     }
 
@@ -12654,7 +12654,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Criminal Justice Review Volume 19 ; 19 ; >
       au < released ; crawling ; 2010 ; International Criminal Justice Review Volume 20 ; 20 ; >
       au < released ; crawling ; 2011 ; International Criminal Justice Review Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2012 ; International Criminal Justice Review Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2012 ; International Criminal Justice Review Volume 22 ; 22 ; >
 
     }
 
@@ -12719,7 +12719,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Behavioral Development Volume 33 ; 33 ; >
       au < released ; crawling ; 2010 ; International Journal of Behavioral Development Volume 34 ; 34 ; >
       au < released ; crawling ; 2011 ; International Journal of Behavioral Development Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Behavioral Development Volume 36 ; 36 ; >
+      au < crawling ; exists ; 2012 ; International Journal of Behavioral Development Volume 36 ; 36 ; >
 
     }
 
@@ -12764,7 +12764,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Bilingualism Volume 13 ; 13 ; >
       au < released ; crawling ; 2010 ; International Journal of Bilingualism Volume 14 ; 14 ; >
       au < released ; crawling ; 2011 ; International Journal of Bilingualism Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Bilingualism Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2012 ; International Journal of Bilingualism Volume 16 ; 16 ; >
 
     }
 
@@ -12887,7 +12887,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Cross Cultural Management Volume 9 ; 9 ; >
       au < released ; crawling ; 2010 ; International Journal of Cross Cultural Management Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; International Journal of Cross Cultural Management Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Cross Cultural Management Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2012 ; International Journal of Cross Cultural Management Volume 12 ; 12 ; >
 
     }
 
@@ -12931,7 +12931,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Cultural Studies Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; International Journal of Cultural Studies Volume 13 ; 13 ; >
       au < released ; crawling ; 2011 ; International Journal of Cultural Studies Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Cultural Studies Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2012 ; International Journal of Cultural Studies Volume 15 ; 15 ; >
 
     }
 
@@ -12981,7 +12981,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Damage Mechanics Volume 18 ; 18 ; >
       au < released ; crawling ; 2010 ; International Journal of Damage Mechanics Volume 19 ; 19 ; >
       au < released ; crawling ; 2011 ; International Journal of Damage Mechanics Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Damage Mechanics Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2012 ; International Journal of Damage Mechanics Volume 21 ; 21 ; >
 
     }
 
@@ -13042,7 +13042,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Engine Research Volume 10 ; 10 ; >
       au < released ; manifest ; 2010 ; International Journal of Engine Research Volume 11 ; 11 ; >
       au < manifest ; exists ; 2011 ; International Journal of Engine Research Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Engine Research Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2012 ; International Journal of Engine Research Volume 13 ; 13 ; >
 
     }
 
@@ -13097,7 +13097,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of High Performance Computing Applications Volume 23 ; 23 ; >
       au < released ; crawling ; 2010 ; International Journal of High Performance Computing Applications Volume 24 ; 24 ; >
       au < released ; crawling ; 2011 ; International Journal of High Performance Computing Applications Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2012 ; International Journal of High Performance Computing Applications Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2012 ; International Journal of High Performance Computing Applications Volume 26 ; 26 ; >
 
     }
 
@@ -13137,7 +13137,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The International Journal of Lower Extremity Wounds Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; The International Journal of Lower Extremity Wounds Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; The International Journal of Lower Extremity Wounds Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2012 ; The International Journal of Lower Extremity Wounds Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2012 ; The International Journal of Lower Extremity Wounds Volume 11 ; 11 ; >
 
     }
 
@@ -13219,7 +13219,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Music Education Volume 27 ; 27 ; >
       au < released ; crawling ; 2010 ; International Journal of Music Education Volume 28 ; 28 ; >
       au < released ; crawling ; 2011 ; International Journal of Music Education Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Music Education Volume 30 ; 30 ; >
+      au < crawling ; exists ; 2012 ; International Journal of Music Education Volume 30 ; 30 ; >
 
     }
 
@@ -13296,7 +13296,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 ; >
       au < released ; crawling ; 2010 ; International Journal of Offender Therapy and Comparative Criminology Volume 54 ; 54 ; >
       au < released ; crawling ; 2011 ; International Journal of Offender Therapy and Comparative Criminology Volume 55 ; 55 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Offender Therapy and Comparative Criminology Volume 56 ; 56 ; >
+      au < crawling ; exists ; 2012 ; International Journal of Offender Therapy and Comparative Criminology Volume 56 ; 56 ; >
 
     }
 
@@ -13342,7 +13342,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The International Journal of Press/Politics Volume 14 ; 14 ; >
       au < released ; crawling ; 2010 ; The International Journal of Press/Politics Volume 15 ; 15 ; >
       au < released ; crawling ; 2011 ; The International Journal of Press/Politics Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2012 ; The International Journal of Press/Politics Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2012 ; The International Journal of Press/Politics Volume 17 ; 17 ; >
 
     }
 
@@ -13402,7 +13402,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The International Journal of Robotics Research Volume 28 ; 28 ; >
       au < released ; crawling ; 2010 ; The International Journal of Robotics Research Volume 29 ; 29 ; >
       au < released ; crawling ; 2011 ; The International Journal of Robotics Research Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2012 ; The International Journal of Robotics Research Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2012 ; The International Journal of Robotics Research Volume 31 ; 31 ; >
 
     }
 
@@ -13514,7 +13514,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Social Psychiatry Volume 55 ; 55 ; >
       au < released ; crawling ; 2010 ; International Journal of Social Psychiatry Volume 56 ; 56 ; >
       au < released ; crawling ; 2011 ; International Journal of Social Psychiatry Volume 57 ; 57 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Social Psychiatry Volume 58 ; 58 ; >
+      au < crawling ; exists ; 2012 ; International Journal of Social Psychiatry Volume 58 ; 58 ; >
 
     }
 
@@ -13563,7 +13563,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Surgical Pathology Volume 17 ; 17 ; >
       au < released ; manifest ; 2010 ; International Journal of Surgical Pathology Volume 18 ; 18 ; >
       au < released ; crawling ; 2011 ; International Journal of Surgical Pathology Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Surgical Pathology Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2012 ; International Journal of Surgical Pathology Volume 20 ; 20 ; >
 
     }
 
@@ -13623,7 +13623,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Toxicology Volume 28 ; 28 ; >
       au < released ; crawling ; 2010 ; International Journal of Toxicology Volume 29 ; 29 ; >
       au < released ; crawling ; 2011 ; International Journal of Toxicology Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Toxicology Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2012 ; International Journal of Toxicology Volume 31 ; 31 ; >
 
     }
 
@@ -13658,7 +13658,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Political Science Abstracts Volume 59 ; 59 ; >
       au < released ; crawling ; 2010 ; International Political Science Abstracts Volume 60 ; 60 ; >
       au < released ; crawling ; 2011 ; International Political Science Abstracts Volume 61 ; 61 ; >
-      au < manifest ; exists ; 2012 ; International Political Science Abstracts Volume 62 ; 62 ; >
+      au < crawling ; exists ; 2012 ; International Political Science Abstracts Volume 62 ; 62 ; >
 
     }
 
@@ -13720,7 +13720,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Political Science Review Volume 30 ; 30 ; >
       au < released ; crawling ; 2010 ; International Political Science Review Volume 31 ; 31 ; >
       au < released ; crawling ; 2011 ; International Political Science Review Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2012 ; International Political Science Review Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2012 ; International Political Science Review Volume 33 ; 33 ; >
 
     }
 
@@ -13784,7 +13784,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Regional Science Review Volume 32 ; 32 ; >
       au < released ; crawling ; 2010 ; International Regional Science Review Volume 33 ; 33 ; >
       au < released ; crawling ; 2011 ; International Regional Science Review Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2012 ; International Regional Science Review Volume 35 ; 35 ; >
+      au < crawling ; exists ; 2012 ; International Regional Science Review Volume 35 ; 35 ; >
 
     }
 
@@ -13839,7 +13839,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Relations Volume 23 ; 23 ; >
       au < released ; crawling ; 2010 ; International Relations Volume 24 ; 24 ; >
       au < released ; crawling ; 2011 ; International Relations Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2012 ; International Relations Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2012 ; International Relations Volume 26 ; 26 ; >
 
     }
 
@@ -13915,7 +13915,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Review for the Sociology of Sport Volume 44 ; 44 ; >
       au < released ; crawling ; 2010 ; International Review for the Sociology of Sport Volume 45 ; 45 ; >
       au < released ; crawling ; 2011 ; International Review for the Sociology of Sport Volume 46 ; 46 ; >
-      au < manifest ; exists ; 2012 ; International Review for the Sociology of Sport Volume 47 ; 47 ; >
+      au < crawling ; exists ; 2012 ; International Review for the Sociology of Sport Volume 47 ; 47 ; >
 
     }
 
@@ -14001,7 +14001,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Review of Administrative Sciences Volume 75 ; 75 ; >
       au < released ; crawling ; 2010 ; International Review of Administrative Sciences Volume 76 ; 76 ; >
       au < released ; crawling ; 2011 ; International Review of Administrative Sciences Volume 77 ; 77 ; >
-      au < manifest ; exists ; 2012 ; International Review of Administrative Sciences Volume 78 ; 78 ; >
+      au < crawling ; exists ; 2012 ; International Review of Administrative Sciences Volume 78 ; 78 ; >
 
     }
 
