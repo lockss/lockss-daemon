@@ -346,7 +346,7 @@
     au < released ; crawling ; 2009 ; Holy Land Studies Volume 8 ; 8 >
     au < released ; crawling ; 2010 ; Holy Land Studies Volume 9 ; 9 >
     au < released ; crawling ; 2011 ; Holy Land Studies Volume 10 ; 10 >
-    au < expected ; exists ; 2012 ; Holy Land Studies Volume 11 ; 11 >
+    au < manifest ; exists ; 2012 ; Holy Land Studies Volume 11 ; 11 >
 
   }
 
@@ -449,7 +449,7 @@
 
       param[journal_id] = iur
       
-      au < exists ; exists ; 2012 ; Irish University Review Volume 42 ; 42 >
+      au < manifest ; exists ; 2012 ; Irish University Review Volume 42 ; 42 >
   
     }
   
@@ -563,7 +563,7 @@
     au < released ; crawling ; 2009 ; Journal of Scottish Historical Studies Volume 29 ; 29 >
     au < released ; crawling ; 2010 ; Journal of Scottish Historical Studies Volume 30 ; 30 >
     au < released ; crawling ; 2011 ; Journal of Scottish Historical Studies Volume 31 ; 31 >
-    au < expected ; exists ; 2012 ; Journal of Scottish Historical Studies Volume 32 ; 32 >
+    au < manifest ; exists ; 2012 ; Journal of Scottish Historical Studies Volume 32 ; 32 >
 
   }
 
@@ -675,7 +675,7 @@
 
     au < released ; crawling ; 2010 ; Northern Scotland Volume 1 ; 1 >
     au < released ; crawling ; 2011 ; Northern Scotland Volume 2 ; 2 >
-    au < expected ; exists ; 2012 ; Northern Scotland Volume 3 ; 3 >
+    au < manifest ; exists ; 2012 ; Northern Scotland Volume 3 ; 3 >
 
 
   }
