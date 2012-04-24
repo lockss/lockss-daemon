@@ -4249,6 +4249,7 @@
     au < manifest ; exists ; 1996 ; English Historical Review Volume CXI ; CXI ; >
     au < manifest ; exists ; 1997 ; English Historical Review Volume CXII ; CXII ; >
     au < manifest ; exists ; 1998 ; English Historical Review Volume CXIII ; CXIII ; >
+    au < manifest ; exists ; 1998 ; English Historical Review Volume 113 ; 113 ; >
     au < manifest ; exists ; 1999 ; English Historical Review Volume 114 ; 114 ; >
     au < manifest ; exists ; 2000 ; English Historical Review Volume 115 ; 115 ; >
     au < manifest ; exists ; 2001 ; English Historical Review Volume 116 ; 116 ; >
@@ -7271,8 +7272,22 @@
     param[base_url] = http://icvts.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
+    au < manifest ; exists ; 2002 ; Interactive CardioVascular and Thoracic Surgery Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2003 ; Interactive CardioVascular and Thoracic Surgery Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2004 ; Interactive CardioVascular and Thoracic Surgery Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2005 ; Interactive CardioVascular and Thoracic Surgery Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2006 ; Interactive CardioVascular and Thoracic Surgery Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2007 ; Interactive CardioVascular and Thoracic Surgery Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2008 ; Interactive CardioVascular and Thoracic Surgery Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 13 ; 13 ; >
     au < crawling ; exists ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 14 ; 14 ; >
-
+	au < expected ; exists ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 15 ; 15 ; >
+   
   }
 
   {
