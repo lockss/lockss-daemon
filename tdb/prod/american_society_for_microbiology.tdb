@@ -244,16 +244,16 @@
       >
       param[base_url] = http://ec.asm.org/
   
-      au < HighWirePressH20Plugin ; ready ; 2002 ; Eukaryotic Cell Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; ready ; 2003 ; Eukaryotic Cell Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; ready ; 2004 ; Eukaryotic Cell Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; releasing ; 2002 ; Eukaryotic Cell Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; releasing ; 2003 ; Eukaryotic Cell Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; releasing ; 2004 ; Eukaryotic Cell Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; down ; 2005 ; Eukaryotic Cell Volume 4 ; 4 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Eukaryotic Cell Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; down ; 2007 ; Eukaryotic Cell Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; down ; 2008 ; Eukaryotic Cell Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; down ; 2009 ; Eukaryotic Cell Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; down ; 2010 ; Eukaryotic Cell Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; ready ; 2011 ; Eukaryotic Cell Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; releasing ; 2011 ; Eukaryotic Cell Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; manifest ; 2012 ; Eukaryotic Cell Volume 11 ; 11 >
       
   
@@ -268,26 +268,26 @@
       >
       param[base_url] = http://iai.asm.org/
   
-      au < HighWirePressH20Plugin ; ready ; 1970 ; Infection and Immunity Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; ready ; 1970 ; Infection and Immunity Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; releasing ; 1970 ; Infection and Immunity Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; releasing ; 1970 ; Infection and Immunity Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; manifest ; 1971 ; Infection and Immunity Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; manifest ; 1971 ; Infection and Immunity Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; manifest ; 1972 ; Infection and Immunity Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; ready ; 1972 ; Infection and Immunity Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; releasing ; 1972 ; Infection and Immunity Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; manifest ; 1973 ; Infection and Immunity Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; manifest ; 1973 ; Infection and Immunity Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; ready ; 1974 ; Infection and Immunity Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; ready ; 1974 ; Infection and Immunity Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; releasing ; 1974 ; Infection and Immunity Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; releasing ; 1974 ; Infection and Immunity Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; manifest ; 1975 ; Infection and Immunity Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; ready ; 1975 ; Infection and Immunity Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; releasing ; 1975 ; Infection and Immunity Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; manifest ; 1976 ; Infection and Immunity Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; ready ; 1976 ; Infection and Immunity Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; ready ; 1977 ; Infection and Immunity Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; ready ; 1977 ; Infection and Immunity Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; ready ; 1977 ; Infection and Immunity Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; ready ; 1977 ; Infection and Immunity Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; ready ; 1978 ; Infection and Immunity Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; ready ; 1978 ; Infection and Immunity Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; releasing ; 1976 ; Infection and Immunity Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; releasing ; 1977 ; Infection and Immunity Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; releasing ; 1977 ; Infection and Immunity Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; releasing ; 1977 ; Infection and Immunity Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; releasing ; 1977 ; Infection and Immunity Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; releasing ; 1978 ; Infection and Immunity Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; releasing ; 1978 ; Infection and Immunity Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; testing ; 1978 ; Infection and Immunity Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; testing ; 1978 ; Infection and Immunity Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; testing ; 1979 ; Infection and Immunity Volume 23 ; 23 >

@@ -5,6 +5,8 @@
   >
   
   {
+  
+    comment[notReady] = no GLN permission statements on manifest page.
     
     plugin = org.lockss.plugin.pion.PionPlugin 
     implicit < status ; year ; name ; param[volume_name] >
@@ -63,8 +65,8 @@
       au < exists ; 2007 ; Environment and Planning A Volume 39 ; 39 >
       au < exists ; 2008 ; Environment and Planning A Volume 40 ; 40 >
       au < exists ; 2009 ; Environment and Planning A Volume 41 ; 41 >
-      au < ready ; 2010 ; Environment and Planning A Volume 42 ; 42 >
-      au < ready ; 2011 ; Environment and Planning A Volume 43 ; 43 >
+      au < notReady ; 2010 ; Environment and Planning A Volume 42 ; 42 >
+      au < notReady ; 2011 ; Environment and Planning A Volume 43 ; 43 >
       au < expected ; 2012 ; Environment and Planning A Volume 44 ; 44 >
     
     }
@@ -118,8 +120,8 @@
       au < exists ; 2007 ; Environment and Planning B: Planning and Design Volume 34 ; 34 >
       au < exists ; 2008 ; Environment and Planning B: Planning and Design Volume 35 ; 35 >
       au < exists ; 2009 ; Environment and Planning B: Planning and Design Volume 36 ; 36 >
-      au < ready ; 2010 ; Environment and Planning B: Planning and Design Volume 37 ; 37 >
-      au < ready ; 2011 ; Environment and Planning B: Planning and Design Volume 38 ; 38 >
+      au < notReady ; 2010 ; Environment and Planning B: Planning and Design Volume 37 ; 37 >
+      au < notReady ; 2011 ; Environment and Planning B: Planning and Design Volume 38 ; 38 >
       au < expected ; 2012 ; Environment and Planning B: Planning and Design Volume 39 ; 39 >
   
     }
@@ -164,8 +166,8 @@
       au < exists ; 2007 ; Environment and Planning C: Government and Policy Volume 25 ; 25 >
       au < exists ; 2008 ; Environment and Planning C: Government and Policy Volume 26 ; 26 >
       au < exists ; 2009 ; Environment and Planning C: Government and Policy Volume 27 ; 27 >
-      au < ready ; 2010 ; Environment and Planning C: Government and Policy Volume 28 ; 28 >
-      au < ready ; 2011 ; Environment and Planning C: Government and Policy Volume 29 ; 29 >
+      au < notReady ; 2010 ; Environment and Planning C: Government and Policy Volume 28 ; 28 >
+      au < notReady ; 2011 ; Environment and Planning C: Government and Policy Volume 29 ; 29 >
       au < expected ; 2012 ; Environment and Planning C: Government and Policy Volume 30 ; 30 >
   
     }
@@ -210,8 +212,8 @@
       au < exists ; 2007 ; Environment and Planning D: Society and Space Volume 25 ; 25 >
       au < exists ; 2008 ; Environment and Planning D: Society and Space Volume 26 ; 26 >
       au < exists ; 2009 ; Environment and Planning D: Society and Space Volume 27 ; 27 >
-      au < ready ; 2010 ; Environment and Planning D: Society and Space Volume 28 ; 28 >
-      au < ready ; 2011 ; Environment and Planning D: Society and Space Volume 29 ; 29 >
+      au < notReady ; 2010 ; Environment and Planning D: Society and Space Volume 28 ; 28 >
+      au < notReady ; 2011 ; Environment and Planning D: Society and Space Volume 29 ; 29 >
       au < expected ; 2012 ; Environment and Planning D: Society and Space Volume 30 ; 30 >
   
     }
@@ -296,8 +298,8 @@
       au < exists ; 2007 ; Perception Volume 36 ; 36 >
       au < exists ; 2008 ; Perception Volume 37 ; 37 >
       au < exists ; 2009 ; Perception Volume 38 ; 38 >
-      au < ready ; 2010 ; Perception Volume 39 ; 39 >
-      au < ready ; 2011 ; Perception Volume 40 ; 40 >
+      au < notReady ; 2010 ; Perception Volume 39 ; 39 >
+      au < notReady ; 2011 ; Perception Volume 40 ; 40 >
       au < expected ; 2012 ; Perception Volume 41 ; 41 >
   
     }
@@ -319,8 +321,8 @@
     
     implicit < status; year; name; param[volume_name] >
     
-    au < ready ; 2010; i-Perception Volume 1; 1 >
-    au < ready ; 2011; i-Perception Volume 2; 2 >
+    au < notReady ; 2010; i-Perception Volume 1; 1 >
+    au < notReady ; 2011; i-Perception Volume 2; 2 >
     au < exists ; 2012; i-Perception Volume 3; 3 >
   
   }
