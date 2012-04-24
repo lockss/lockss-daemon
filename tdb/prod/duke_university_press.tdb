@@ -320,8 +320,11 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = cultural_politics
+      attr[journal_id] = cup
 
-    
+    au < manifest ; 2012 ; Cultural Politics Volume 8 ; 8 >
+
     }
     
    }
