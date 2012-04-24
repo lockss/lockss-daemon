@@ -218,7 +218,7 @@ Access the Web user interface of your LOCKSS box, for instance http://lockssbox.
 
 STEP 2: SELECT GROUPS OF ARCHIVAL UNITS
 
-Select the groups of archival units you want to see in step 3, such as "All Oxford University Press Titles" or "All Titles", then click the "Select Titles" button.
+Select the groups of archival units you want to see in step 3, such as "All Oxford University Press AUs", then click the "Select Titles" button.
 
 STEP 3: SELECT ARCHIVAL UNITS
 
