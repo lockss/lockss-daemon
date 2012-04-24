@@ -4339,6 +4339,7 @@
     au < HighWirePressH20Plugin ; manifest ; 1996 ; English Historical Review Volume CXI ; CXI >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; English Historical Review Volume CXII ; CXII >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; English Historical Review Volume CXIII ; CXIII >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; English Historical Review Volume 113 ; 113 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; English Historical Review Volume 114 ; 114 >
     au < HighWirePressH20Plugin ; manifest ; 2000 ; English Historical Review Volume 115 ; 115 >
     au < HighWirePressH20Plugin ; manifest ; 2001 ; English Historical Review Volume 116 ; 116 >
@@ -7529,7 +7530,21 @@
     param[base_url] = http://icvts.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Interactive CardioVascular and Thoracic Surgery Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; Interactive CardioVascular and Thoracic Surgery Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Interactive CardioVascular and Thoracic Surgery Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; Interactive CardioVascular and Thoracic Surgery Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; Interactive CardioVascular and Thoracic Surgery Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Interactive CardioVascular and Thoracic Surgery Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; Interactive CardioVascular and Thoracic Surgery Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Interactive CardioVascular and Thoracic Surgery Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 15 ; 15 >
 
   }
 
@@ -16513,6 +16528,77 @@
     param[base_url] = http://restud.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    au < HighWirePressH20Plugin ; manifest ; 1933-1958 ; The Review of Economic Studies Index Volume 1-25 ; 1-25 >
+
+    au < HighWirePressH20Plugin ; manifest ; 1933 ; The Review of Economic Studies Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1934 ; The Review of Economic Studies Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1935 ; The Review of Economic Studies Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1936 ; The Review of Economic Studies Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1937 ; The Review of Economic Studies Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1938 ; The Review of Economic Studies Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1939 ; The Review of Economic Studies Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1940 ; The Review of Economic Studies Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1941 ; The Review of Economic Studies Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1942 ; The Review of Economic Studies Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1943 ; The Review of Economic Studies Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1944 ; The Review of Economic Studies Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1945 ; The Review of Economic Studies Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1946 ; The Review of Economic Studies Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 1947 ; The Review of Economic Studies Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1948 ; The Review of Economic Studies Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1949 ; The Review of Economic Studies Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 1950 ; The Review of Economic Studies Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1950 ; The Review of Economic Studies Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1952 ; The Review of Economic Studies Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 1953 ; The Review of Economic Studies Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 1954 ; The Review of Economic Studies Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 1955 ; The Review of Economic Studies Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 1956 ; The Review of Economic Studies Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; manifest ; 1957 ; The Review of Economic Studies Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 1958 ; The Review of Economic Studies Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 1959 ; The Review of Economic Studies Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 1960 ; The Review of Economic Studies Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 1961 ; The Review of Economic Studies Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; The Review of Economic Studies Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; The Review of Economic Studies Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; The Review of Economic Studies Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; The Review of Economic Studies Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 1967 ; The Review of Economic Studies Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; The Review of Economic Studies Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; The Review of Economic Studies Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; The Review of Economic Studies Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; The Review of Economic Studies Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; The Review of Economic Studies Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; manifest ; 1973 ; The Review of Economic Studies Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; manifest ; 1974 ; The Review of Economic Studies Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; manifest ; 1975 ; The Review of Economic Studies Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; The Review of Economic Studies Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; The Review of Economic Studies Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; The Review of Economic Studies Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; The Review of Economic Studies Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; The Review of Economic Studies Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; The Review of Economic Studies Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; The Review of Economic Studies Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; The Review of Economic Studies Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; The Review of Economic Studies Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; The Review of Economic Studies Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; The Review of Economic Studies Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; The Review of Economic Studies Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; The Review of Economic Studies Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; The Review of Economic Studies Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; The Review of Economic Studies Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; The Review of Economic Studies Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; The Review of Economic Studies Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; The Review of Economic Studies Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; The Review of Economic Studies Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; The Review of Economic Studies Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; The Review of Economic Studies Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; The Review of Economic Studies Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; The Review of Economic Studies Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; The Review of Economic Studies Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; The Review of Economic Studies Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; The Review of Economic Studies Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; The Review of Economic Studies Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; The Review of Economic Studies Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; The Review of Economic Studies Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; manifest ; 2005 ; The Review of Economic Studies Volume 72 ; 72 >
