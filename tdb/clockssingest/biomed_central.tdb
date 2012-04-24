@@ -1541,7 +1541,7 @@
   }
   
   {
-    plugin = org.lockss.plugin.bmc.Clockss.BioMedCentralPlugin
+    plugin = org.lockss.plugin.bmc.ClockssBioMedCentralPlugin
     
     {
       title <
