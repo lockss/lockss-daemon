@@ -379,8 +379,10 @@
     >
 
     param[journal_dir] = journal_of_religion_and_popular_culture
-    comment[0] = no content online yet
-    
+    attr[journal_id] = rpc
+
+    au < manifest ; 2012 ; Journal of Religion and Popular Culture Volume 24 ; 24>
+
   }
 
   {
