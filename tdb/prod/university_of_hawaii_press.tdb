@@ -303,8 +303,9 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_korean_religions
+      attr[journal_id] = jkr
  
-      comment[0] = no content online yet
+      au < manifest ; 2010 ; Journal of Korean Religions Volume 1 ; 1 >
  
     }  
   }
