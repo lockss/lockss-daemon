@@ -18,31 +18,31 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://ajcp.ascpjournals.org/
     
-    au < releasing ; 2000 ; American Journal of Clinical Pathology Volume 113 ; 113 >
-    au < releasing ; 2000 ; American Journal of Clinical Pathology Volume 114 ; 114 >
-    au < releasing ; 2001 ; American Journal of Clinical Pathology Volume 115 ; 115 >
-    au < releasing ; 2001 ; American Journal of Clinical Pathology Volume 116 ; 116 >
-    au < releasing ; 2002 ; American Journal of Clinical Pathology Volume 117 ; 117 >
-    au < releasing ; 2002 ; American Journal of Clinical Pathology Volume 118 ; 118 >
-    au < releasing ; 2003 ; American Journal of Clinical Pathology Volume 119 ; 119 >
-    au < releasing ; 2003 ; American Journal of Clinical Pathology Volume 120 ; 120 >
-    au < releasing ; 2004 ; American Journal of Clinical Pathology Volume 121 ; 121 >
-    au < releasing ; 2004 ; American Journal of Clinical Pathology Volume 122 ; 122 >
-    au < releasing ; 2005 ; American Journal of Clinical Pathology Volume 123 ; 123 >
-    au < releasing ; 2005 ; American Journal of Clinical Pathology Volume 124 ; 124 >
-    au < releasing ; 2006 ; American Journal of Clinical Pathology Volume 125 ; 125 >
-    au < releasing ; 2006 ; American Journal of Clinical Pathology Volume 126 ; 126 >
-    au < releasing ; 2007 ; American Journal of Clinical Pathology Volume 127 ; 127 >
-    au < releasing ; 2007 ; American Journal of Clinical Pathology Volume 128 ; 128 >
-    au < releasing ; 2008 ; American Journal of Clinical Pathology Volume 129 ; 129 >
-    au < releasing ; 2008 ; American Journal of Clinical Pathology Volume 130 ; 130 >
-    au < releasing ; 2009 ; American Journal of Clinical Pathology Volume 131 ; 131 >
-    au < releasing ; 2009 ; American Journal of Clinical Pathology Volume 132 ; 132 >
-    au < releasing ; 2010 ; American Journal of Clinical Pathology Volume 133 ; 133 >
-    au < releasing ; 2010 ; American Journal of Clinical Pathology Volume 134 ; 134 >
-    au < releasing ; 2011 ; American Journal of Clinical Pathology Volume 135 ; 135 >
-    au < releasing ; 2011 ; American Journal of Clinical Pathology Volume 136 ; 136 >
-    au < releasing ; 2012 ; American Journal of Clinical Pathology Volume 137 ; 137 >
+    au < released ; 2000 ; American Journal of Clinical Pathology Volume 113 ; 113 >
+    au < released ; 2000 ; American Journal of Clinical Pathology Volume 114 ; 114 >
+    au < released ; 2001 ; American Journal of Clinical Pathology Volume 115 ; 115 >
+    au < released ; 2001 ; American Journal of Clinical Pathology Volume 116 ; 116 >
+    au < released ; 2002 ; American Journal of Clinical Pathology Volume 117 ; 117 >
+    au < released ; 2002 ; American Journal of Clinical Pathology Volume 118 ; 118 >
+    au < released ; 2003 ; American Journal of Clinical Pathology Volume 119 ; 119 >
+    au < released ; 2003 ; American Journal of Clinical Pathology Volume 120 ; 120 >
+    au < released ; 2004 ; American Journal of Clinical Pathology Volume 121 ; 121 >
+    au < released ; 2004 ; American Journal of Clinical Pathology Volume 122 ; 122 >
+    au < released ; 2005 ; American Journal of Clinical Pathology Volume 123 ; 123 >
+    au < released ; 2005 ; American Journal of Clinical Pathology Volume 124 ; 124 >
+    au < released ; 2006 ; American Journal of Clinical Pathology Volume 125 ; 125 >
+    au < released ; 2006 ; American Journal of Clinical Pathology Volume 126 ; 126 >
+    au < released ; 2007 ; American Journal of Clinical Pathology Volume 127 ; 127 >
+    au < released ; 2007 ; American Journal of Clinical Pathology Volume 128 ; 128 >
+    au < released ; 2008 ; American Journal of Clinical Pathology Volume 129 ; 129 >
+    au < released ; 2008 ; American Journal of Clinical Pathology Volume 130 ; 130 >
+    au < released ; 2009 ; American Journal of Clinical Pathology Volume 131 ; 131 >
+    au < released ; 2009 ; American Journal of Clinical Pathology Volume 132 ; 132 >
+    au < released ; 2010 ; American Journal of Clinical Pathology Volume 133 ; 133 >
+    au < released ; 2010 ; American Journal of Clinical Pathology Volume 134 ; 134 >
+    au < released ; 2011 ; American Journal of Clinical Pathology Volume 135 ; 135 >
+    au < released ; 2011 ; American Journal of Clinical Pathology Volume 136 ; 136 >
+    au < released ; 2012 ; American Journal of Clinical Pathology Volume 137 ; 137 >
 
   }
 
@@ -59,19 +59,19 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://labmed.ascpjournals.org/
     
-    au < releasing ; 2000 ; LabMedicine Volume 31 ; 31 >
-    au < releasing ; 2001 ; LabMedicine Volume 32 ; 32 >
-    au < releasing ; 2002 ; LabMedicine Volume 33 ; 33 >
-    au < releasing ; 2003 ; LabMedicine Volume 34 ; 34 >
-    au < releasing ; 2004 ; LabMedicine Volume 35 ; 35 >
-    au < releasing ; 2005 ; LabMedicine Volume 36 ; 36 >
-    au < releasing ; 2006 ; LabMedicine Volume 37 ; 37 >
-    au < releasing ; 2007 ; LabMedicine Volume 38 ; 38 >
-    au < releasing ; 2008 ; LabMedicine Volume 39 ; 39 >
-    au < releasing ; 2009 ; LabMedicine Volume 40 ; 40 >
-    au < releasing ; 2010 ; LabMedicine Volume 41 ; 41 >
-    au < releasing ; 2011 ; LabMedicine Volume 42 ; 42 >
-    au < releasing ; 2012 ; LabMedicine Volume 43 ; 43 >
+    au < released ; 2000 ; LabMedicine Volume 31 ; 31 >
+    au < released ; 2001 ; LabMedicine Volume 32 ; 32 >
+    au < released ; 2002 ; LabMedicine Volume 33 ; 33 >
+    au < released ; 2003 ; LabMedicine Volume 34 ; 34 >
+    au < released ; 2004 ; LabMedicine Volume 35 ; 35 >
+    au < released ; 2005 ; LabMedicine Volume 36 ; 36 >
+    au < released ; 2006 ; LabMedicine Volume 37 ; 37 >
+    au < released ; 2007 ; LabMedicine Volume 38 ; 38 >
+    au < released ; 2008 ; LabMedicine Volume 39 ; 39 >
+    au < released ; 2009 ; LabMedicine Volume 40 ; 40 >
+    au < released ; 2010 ; LabMedicine Volume 41 ; 41 >
+    au < released ; 2011 ; LabMedicine Volume 42 ; 42 >
+    au < released ; 2012 ; LabMedicine Volume 43 ; 43 >
 
   }
 

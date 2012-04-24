@@ -18,8 +18,8 @@
     implicit < status ; year ; name ; param[volume_name] >
 
 
-    au < releasing ; 2011 ; Animal Frontiers Volume 1 ; 1 >
-    au < releasing ; 2012 ; Animal Frontiers Volume 2 ; 2 >
+    au < released ; 2011 ; Animal Frontiers Volume 1 ; 1 >
+    au < released ; 2012 ; Animal Frontiers Volume 2 ; 2 >
     
   }
   
@@ -124,9 +124,9 @@
     au < HighWirePressPlugin ; down ; 2007 ; Journal of Animal Science Volume 85 ; 85 >
     au < HighWirePressPlugin ; down ; 2008 ; Journal of Animal Science Volume 86 ; 86 >
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Animal Science Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Journal of Animal Science Volume 88 ; 88 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Journal of Animal Science Volume 89 ; 89 >
-    au < HighWirePressH20Plugin ; releasing ; 2012 ; Journal of Animal Science Volume 90 ; 90 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Animal Science Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Animal Science Volume 89 ; 89 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Animal Science Volume 90 ; 90 >
 
       
   }

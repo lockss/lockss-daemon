@@ -17,8 +17,8 @@
       param[base_url] = http://www.cfp.ca/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < releasing ; 2000 ; Canadian Family Physician Volume 46 ; 46 >
-      au < releasing ; 2001 ; Canadian Family Physician Volume 47 ; 47 >
+      au < released ; 2000 ; Canadian Family Physician Volume 46 ; 46 >
+      au < released ; 2001 ; Canadian Family Physician Volume 47 ; 47 >
       au < manifest ; 2002 ; Canadian Family Physician Volume 48 ; 48 >
       au < manifest ; 2003 ; Canadian Family Physician Volume 49 ; 49 >
       au < manifest ; 2004 ; Canadian Family Physician Volume 50 ; 50 >

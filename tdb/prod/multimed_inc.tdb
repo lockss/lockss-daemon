@@ -17,14 +17,14 @@
 
     implicit < status ; year ; name ; volume ; param[year] >
 
-    au < releasing ; 2005 ; Current Oncology Volume 12 ; 12 ; 2005 >
-    au < releasing ; 2006 ; Current Oncology Volume 13 ; 13 ; 2006 >
-    au < releasing ; 2007 ; Current Oncology Volume 14 ; 14 ; 2007 >
-    au < releasing ; 2008 ; Current Oncology Volume 15 ; 15 ; 2008 >
-    au < releasing ; 2009 ; Current Oncology Volume 16 ; 16 ; 2009 >
-    au < releasing ; 2010 ; Current Oncology Volume 17 ; 17 ; 2010 >
-    au < releasing ; 2011 ; Current Oncology Volume 18 ; 18 ; 2011 >
-    au < releasing ; 2012 ; Current Oncology Volume 19 ; 19 ; 2012 >
+    au < released ; 2005 ; Current Oncology Volume 12 ; 12 ; 2005 >
+    au < released ; 2006 ; Current Oncology Volume 13 ; 13 ; 2006 >
+    au < released ; 2007 ; Current Oncology Volume 14 ; 14 ; 2007 >
+    au < released ; 2008 ; Current Oncology Volume 15 ; 15 ; 2008 >
+    au < released ; 2009 ; Current Oncology Volume 16 ; 16 ; 2009 >
+    au < released ; 2010 ; Current Oncology Volume 17 ; 17 ; 2010 >
+    au < released ; 2011 ; Current Oncology Volume 18 ; 18 ; 2011 >
+    au < released ; 2012 ; Current Oncology Volume 19 ; 19 ; 2012 >
 
   }
 
@@ -41,14 +41,14 @@
 
     implicit < status ; year ; name ; volume ; param[year] >
 
-    au < releasing ; 2005 ; Journal of Applied Clinical Medical Physics Volume 6 ; 6 ; 2005 >
-    au < releasing ; 2006 ; Journal of Applied Clinical Medical Physics Volume 7 ; 7 ; 2006 >
-    au < releasing ; 2007 ; Journal of Applied Clinical Medical Physics Volume 8 ; 8 ; 2007 >
-    au < releasing ; 2008 ; Journal of Applied Clinical Medical Physics Volume 9 ; 9 ; 2008 >
-    au < releasing ; 2009 ; Journal of Applied Clinical Medical Physics Volume 10 ; 10 ; 2009 >
-    au < releasing ; 2010 ; Journal of Applied Clinical Medical Physics Volume 11 ; 11 ; 2010 >
-    au < releasing ; 2011 ; Journal of Applied Clinical Medical Physics Volume 12 ; 12 ; 2011 >
-    au < releasing ; 2012 ; Journal of Applied Clinical Medical Physics Volume 13 ; 13 ; 2012 >
+    au < released ; 2005 ; Journal of Applied Clinical Medical Physics Volume 6 ; 6 ; 2005 >
+    au < released ; 2006 ; Journal of Applied Clinical Medical Physics Volume 7 ; 7 ; 2006 >
+    au < released ; 2007 ; Journal of Applied Clinical Medical Physics Volume 8 ; 8 ; 2007 >
+    au < released ; 2008 ; Journal of Applied Clinical Medical Physics Volume 9 ; 9 ; 2008 >
+    au < released ; 2009 ; Journal of Applied Clinical Medical Physics Volume 10 ; 10 ; 2009 >
+    au < released ; 2010 ; Journal of Applied Clinical Medical Physics Volume 11 ; 11 ; 2010 >
+    au < released ; 2011 ; Journal of Applied Clinical Medical Physics Volume 12 ; 12 ; 2011 >
+    au < released ; 2012 ; Journal of Applied Clinical Medical Physics Volume 13 ; 13 ; 2012 >
 
   }
 
