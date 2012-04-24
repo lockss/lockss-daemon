@@ -2797,10 +2797,6 @@
         issnl = 2049-0909
       >
 
-      param[journal_issn] = 2049-0917
-      
-      au < expected ; 2012 ; International Journal of Financial Engineering and Risk Management Volume 1 ; 1 >
-
     }
 
     {
@@ -2865,10 +2861,6 @@
         issnl = 1744-9944
       >
 
-      param[journal_issn] = 1744-9952
-      
-      au < expected ; 2012 ; International Journal of Forensic Engineering Volume 1 ; 1 >
-
     }
 
     {
@@ -2880,10 +2872,6 @@
         issnl = 1478-1476
       >
 
-      param[journal_issn] = 1479-3091
-      
-      au < expected ; 2012 ; International Journal of Forensic Engineering and Management Volume 1 ; 1 >
-
     }
 
     {
@@ -2894,10 +2882,6 @@
         eissn = 1743-5102 ;
         issnl = 1743-5099
       >
-
-      param[journal_issn] = 1743-5102
-      
-      au < expected ; 2012 ; International Journal of Forensic Software Engineering Volume 1 ; 1 >
 
     }
 
