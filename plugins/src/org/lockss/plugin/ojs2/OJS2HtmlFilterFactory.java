@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.2 2011-08-02 00:13:22 thib_gc Exp $
+ * $Id: OJS2HtmlFilterFactory.java,v 1.3 2012-04-24 01:16:40 thib_gc Exp $
  */
 
 /*
@@ -47,6 +47,8 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
         NodeFilter[] filters = new NodeFilter[] {
             // Some OJS sites have a tag cloud
             HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarKeywordCloud"),
+            // Some OJS sites have a subscription status area
+            HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarSubscription"),
             // Popular location for sidebar customizations
             HtmlNodeFilters.tagWithAttribute("div", "id", "custom"),
         };
