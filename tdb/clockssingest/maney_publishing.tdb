@@ -120,7 +120,7 @@
     au < manifest ; exists ; 2009 ; Ambix Volume 56 ; 56 >
     au < manifest ; exists ; 2010 ; Ambix Volume 57 ; 57 >
     au < testing ; exists ; 2011 ; Ambix Volume 58 ; 58 >
-    au < manifest ; exists ; 2012 ; Ambix Volume 59 ; 59 >
+    au < crawling ; exists ; 2012 ; Ambix Volume 59 ; 59 >
 
   }
 
@@ -655,7 +655,7 @@
     au < doNotProcess ; exists ; 2009 ; The Cartographic Journal Volume 46 ; 46 > 
     au < doNotProcess ; exists ; 2010 ; The Cartographic Journal Volume 47 ; 47 > 
     au < doNotProcess ; exists ; 2011 ; The Cartographic Journal Volume 48 ; 48 > 
-    au < manifest ; exists ; 2012 ; The Cartographic Journal Volume 49 ; 49 > 
+    au < crawling ; exists ; 2012 ; The Cartographic Journal Volume 49 ; 49 > 
 
   }
 
@@ -778,7 +778,7 @@
     au < manifest ; exists ; 2009 ; Comparative American Studies Volume 7 ; 7 > 
     au < manifest ; exists ; 2010 ; Comparative American Studies Volume 8 ; 8 > 
     au < testing ; exists ; 2011 ; Comparative American Studies Volume 9 ; 9 > 
-    au < manifest ; exists ; 2012 ; Comparative American Studies Volume 10 ; 10 > 
+    au < crawling ; exists ; 2012 ; Comparative American Studies Volume 10 ; 10 > 
 
   }
 
@@ -811,7 +811,7 @@
     au < manifest ; exists ; 2009 ; Competition & Change Volume 13 ; 13 > 
     au < manifest ; exists ; 2010 ; Competition & Change Volume 14 ; 14 > 
     au < testing ; exists ; 2011 ; Competition & Change Volume 15 ; 15 > 
-    au < manifest ; exists ; 2012 ; Competition & Change Volume 16 ; 16 > 
+    au < crawling ; exists ; 2012 ; Competition & Change Volume 16 ; 16 > 
 
   }
 
@@ -985,7 +985,7 @@
     au < doNotProcess ; exists ; 2009 ; Deafness & Education International Volume 11 ; 11 > 
     au < doNotProcess ; exists ; 2010 ; Deafness & Education International Volume 12 ; 12 > 
     au < doNotProcess ; exists ; 2011 ; Deafness & Education International Volume 13 ; 13 >  
-    au < manifest ; exists ; 2012 ; Deafness & Education International Volume 14 ; 14 >
+    au < crawling ; exists ; 2012 ; Deafness & Education International Volume 14 ; 14 >
 
   }
 
@@ -1022,7 +1022,7 @@
     au < manifest ; exists ; 2009 ; Dix-Neuf Volume 13 ; 13 > 
     au < manifest ; exists ; 2010 ; Dix-Neuf Volume 14 ; 14 > 
     au < testing ; exists ; 2011 ; Dix-Neuf Volume 15 ; 15 > 
-    au < manifest ; exists ; 2012 ; Dix-Neuf Volume 16 ; 16 > 
+    au < crawling ; exists ; 2012 ; Dix-Neuf Volume 16 ; 16 > 
 
   }
 
@@ -1231,7 +1231,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < manifest ; exists ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
-    au < manifest ; exists ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
+    au < crawling ; exists ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
     
   }
 
@@ -1277,7 +1277,7 @@
     au < manifest ; exists ; 2009 ; Exemplaria Volume 21 ; 21 > 
     au < manifest ; exists ; 2010 ; Exemplaria Volume 22 ; 22 > 
     au < crawling ; exists ; 2011 ; Exemplaria Volume 23 ; 23 > 
-    au < manifest ; exists ; 2012 ; Exemplaria Volume 24 ; 24 > 
+    au < crawling ; exists ; 2012 ; Exemplaria Volume 24 ; 24 > 
 
   }
 
@@ -1306,7 +1306,7 @@
     au < manifest ; exists ; 2009 ; Family & Community History Volume 12 ; 12 > 
     au < manifest ; exists ; 2010 ; Family & Community History Volume 13 ; 13 >  
     au < crawling ; exists ; 2011 ; Family & Community History Volume 14 ; 14 > 
-    au < manifest ; exists ; 2012 ; Family & Community History Volume 15 ; 15 >
+    au < crawling ; exists ; 2012 ; Family & Community History Volume 15 ; 15 >
 
   }
 
@@ -1332,7 +1332,7 @@
     au < manifest ; exists ; 2009 ; Folk Life: Journal of Ethnological Studies Volume 47 ; 47 > 
     au < manifest ; exists ; 2010 ; Folk Life: Journal of Ethnological Studies Volume 48 ; 48 > 
     au < crawling ; exists ; 2011 ; Folk Life: Journal of Ethnological Studies Volume 49 ; 49 >  
-    au < manifest ; exists ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 >
+    au < crawling ; exists ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 >
 
   }
 
@@ -1394,7 +1394,7 @@
     au < doNotProcess ; exists ; 2009 ; Hematology Volume 14 ; 14 > 
     au < doNotProcess ; exists ; 2010 ; Hematology Volume 15 ; 15 > 
     au < doNotProcess ; exists ; 2011 ; Hematology Volume 16 ; 16 > 
-    au < manifest ; exists ; 2012 ; Hematology Volume 17 ; 17 > 
+    au < crawling ; exists ; 2012 ; Hematology Volume 17 ; 17 > 
 
   }
 
@@ -1454,7 +1454,7 @@
 
     au < manifest ; exists ; 2010 ; The Historic Environment: Policy & Practice Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; The Historic Environment: Policy & Practice Volume 2 ; 2 > 
-    au < manifest ; exists ; 2012 ; The Historic Environment: Policy & Practice Volume 3 ; 3 > 
+    au < crawling ; exists ; 2012 ; The Historic Environment: Policy & Practice Volume 3 ; 3 > 
 
   }
 
@@ -1856,7 +1856,7 @@
     au < doNotProcess ; exists ; 2009 ; International Musculoskeletal Medicine Volume 31 ; 31 > 
     au < doNotProcess ; exists ; 2010 ; International Musculoskeletal Medicine Volume 32 ; 32 > 
     au < doNotProcess ; exists ; 2011 ; International Musculoskeletal Medicine Volume 33 ; 33 > 
-    au < manifest ; exists ; 2012 ; International Musculoskeletal Medicine Volume 34 ; 34 > 
+    au < crawling ; exists ; 2012 ; International Musculoskeletal Medicine Volume 34 ; 34 > 
 
   }
 
@@ -1882,7 +1882,7 @@
     
     au < doNotProcess ; exists ; 2010 ; International Wood Products Journal Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 2011 ; International Wood Products Journal Volume 2 ; 2 > 
-    au < manifest ; exists ; 2012 ; International Wood Products Journal Volume 3 ; 3 > 
+    au < crawling ; exists ; 2012 ; International Wood Products Journal Volume 3 ; 3 > 
 
   }
 
@@ -2117,7 +2117,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Bryology Volume 31 ; 31 > 
     au < doNotProcess ; exists ; 2010 ; Journal of Bryology Volume 32 ; 32 > 
     au < doNotProcess ; exists ; 2011 ; Journal of Bryology Volume 33 ; 33 > 
-    au < manifest ; exists ; 2012 ; Journal of Bryology Volume 34 ; 34 > 
+    au < crawling ; exists ; 2012 ; Journal of Bryology Volume 34 ; 34 > 
 
   }
 
@@ -2451,7 +2451,7 @@
       au < manifest ; exists ; 2009 ; Journal of Orthodontics Volume 36 ; 36 > 
       au < released ; crawling ; 2010 ; Journal of Orthodontics Volume 37 ; 37 > 
       au < released ; crawling ; 2011 ; Journal of Orthodontics Volume 38 ; 38 > 
-      au < manifest ; exists ; 2012 ; Journal of Orthodontics Volume 39 ; 39 > 
+      au < crawling ; exists ; 2012 ; Journal of Orthodontics Volume 39 ; 39 > 
       
     }
 
@@ -3154,7 +3154,7 @@
     au < manifest ; exists ; 2009 ; Midland History Volume 34 ; 34 > 
     au < manifest ; exists ; 2010 ; Midland History Volume 35 ; 35 > 
     au < crawling ; exists ; 2011 ; Midland History Volume 36 ; 36 > 
-    au < manifest ; exists ; 2012 ; Midland History Volume 37 ; 37 > 
+    au < crawling ; exists ; 2012 ; Midland History Volume 37 ; 37 > 
 
   }
 
@@ -3286,7 +3286,7 @@
     au < doNotProcess ; exists ; 2009 ; Mining Technology Volume 118 ; 118 > 
     au < doNotProcess ; exists ; 2010 ; Mining Technology Volume 119 ; 119 > 
     au < doNotProcess ; exists ; 2011 ; Mining Technology Volume 120 ; 120 > 
-    au < manifest ; exists ; 2012 ; Mining Technology Volume 121 ; 121 > 
+    au < crawling ; exists ; 2012 ; Mining Technology Volume 121 ; 121 > 
 
   }
 
@@ -3538,7 +3538,7 @@
     au < manifest ; exists ; 2009 ; Oxford German Studies Volume 38 ; 38 > 
     au < manifest ; exists ; 2010 ; Oxford German Studies Volume 39 ; 39 > 
     au < crawling ; exists ; 2011 ; Oxford German Studies Volume 40 ; 40 > 
-    au < manifest ; exists ; 2012 ; Oxford German Studies Volume 41 ; 41 > 
+    au < crawling ; exists ; 2012 ; Oxford German Studies Volume 41 ; 41 > 
 
   }
 
@@ -3655,7 +3655,7 @@
     au < manifest ; exists ; 2009 ; Palestine Exploration Quarterly Volume 141 ; 141 > 
     au < manifest ; exists ; 2010 ; Palestine Exploration Quarterly Volume 142 ; 142 > 
     au < crawling ; exists ; 2011 ; Palestine Exploration Quarterly Volume 143 ; 143 > 
-    au < manifest ; exists ; 2012 ; Palestine Exploration Quarterly Volume 144 ; 144 > 
+    au < crawling ; exists ; 2012 ; Palestine Exploration Quarterly Volume 144 ; 144 > 
 
   }
 
@@ -3874,7 +3874,7 @@
     au < doNotProcess ; exists ; 2009 ; Powder Metallurgy Volume 52 ; 52 > 
     au < doNotProcess ; exists ; 2010 ; Powder Metallurgy Volume 53 ; 53 > 
     au < doNotProcess ; exists ; 2011 ; Powder Metallurgy Volume 54 ; 54 > 
-    au < manifest ; exists ; 2012 ; Powder Metallurgy Volume 55 ; 55 > 
+    au < crawling ; exists ; 2012 ; Powder Metallurgy Volume 55 ; 55 > 
 
   }
 
@@ -3907,7 +3907,7 @@
     au < doNotProcess ; exists ; 2009 ; Progress in Palliative Care Volume 17 ; 17 > 
     au < doNotProcess ; exists ; 2010 ; Progress in Palliative Care Volume 18 ; 18 > 
     au < doNotProcess ; exists ; 2011 ; Progress in Palliative Care Volume 19 ; 19 >  
-    au < manifest ; exists ; 2012 ; Progress in Palliative Care Volume 20 ; 20 >
+    au < crawling ; exists ; 2012 ; Progress in Palliative Care Volume 20 ; 20 >
 
   }
 
@@ -3969,7 +3969,7 @@
     au < manifest ; exists ; 2009 ; Publications of the English Goethe Society Volume 78 ; 78 > 
     au < manifest ; exists ; 2010 ; Publications of the English Goethe Society Volume 79 ; 79 > 
     au < crawling ; exists ; 2011 ; Publications of the English Goethe Society Volume 80 ; 80 > 
-    au < manifest ; exists ; 2012 ; Publications of the English Goethe Society Volume 81 ; 81 > 
+    au < crawling ; exists ; 2012 ; Publications of the English Goethe Society Volume 81 ; 81 > 
 
   }
 
@@ -4516,7 +4516,7 @@
     au < manifest ; exists ; 2009 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 41 ; 41 > 
     au < manifest ; exists ; 2010 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 42 ; 42 > 
     au < crawling ; exists ; 2011 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 43 ; 43 > 
-    au < manifest ; exists ; 2012 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 44 ; 44 > 
+    au < crawling ; exists ; 2012 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 44 ; 44 > 
 
   }
 
@@ -4667,7 +4667,7 @@
     au < doNotProcess ; exists ; 2009 ; Tribology - Materials, Surfaces & Interfaces Volume 3 ; 3 > 
     au < doNotProcess ; exists ; 2010 ; Tribology - Materials, Surfaces & Interfaces Volume 4 ; 4 > 
     au < doNotProcess ; exists ; 2011 ; Tribology - Materials, Surfaces & Interfaces Volume 5 ; 5 > 
-    au < manifest ; exists ; 2012 ; Tribology - Materials, Surfaces & Interfaces Volume 6 ; 6 > 
+    au < crawling ; exists ; 2012 ; Tribology - Materials, Surfaces & Interfaces Volume 6 ; 6 > 
 
   }
 
@@ -4705,7 +4705,7 @@
     au < manifest ; exists ; 2009 ; Twentieth-Century China Volume 34 ; 34 > 
     au < manifest ; exists ; 2010 ; Twentieth-Century China Volume 35 ; 35 > 
     au < crawling ; exists ; 2011 ; Twentieth-Century China Volume 36 ; 36 > 
-    au < manifest ; exists ; 2012 ; Twentieth-Century China Volume 37 ; 37 > 
+    au < crawling ; exists ; 2012 ; Twentieth-Century China Volume 37 ; 37 > 
 
   }
 
