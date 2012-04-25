@@ -16047,7 +16047,7 @@
     param[base_url] = http://rcfs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; exists ; 2012 ; The Review of Economic Studies Volume 1 ; 1 ; >
+    au < expected ; exists ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 ; >
 
   }
 
@@ -16063,6 +16063,77 @@
     param[base_url] = http://restud.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
+    au < exists ; exists ; 1933-1958 ; The Review of Economic Studies Index Volume 1-25 ; 1-25 ; >
+
+    au < exists ; exists ; 1933 ; The Review of Economic Studies Volume 1 ; 1 ; >
+    au < exists ; exists ; 1934 ; The Review of Economic Studies Volume 2 ; 2 ; >
+    au < exists ; exists ; 1935 ; The Review of Economic Studies Volume 3 ; 3 ; >
+    au < exists ; exists ; 1936 ; The Review of Economic Studies Volume 4 ; 4 ; >
+    au < exists ; exists ; 1937 ; The Review of Economic Studies Volume 5 ; 5 ; >
+    au < exists ; exists ; 1938 ; The Review of Economic Studies Volume 6 ; 6 ; >
+    au < exists ; exists ; 1939 ; The Review of Economic Studies Volume 7 ; 7 ; >
+    au < exists ; exists ; 1940 ; The Review of Economic Studies Volume 8 ; 8 ; >
+    au < exists ; exists ; 1941 ; The Review of Economic Studies Volume 9 ; 9 ; >
+    au < exists ; exists ; 1942 ; The Review of Economic Studies Volume 10 ; 10 ; >
+    au < exists ; exists ; 1943 ; The Review of Economic Studies Volume 11 ; 11 ; >
+    au < exists ; exists ; 1944 ; The Review of Economic Studies Volume 12 ; 12 ; >
+    au < exists ; exists ; 1945 ; The Review of Economic Studies Volume 13 ; 13 ; >
+    au < exists ; exists ; 1946 ; The Review of Economic Studies Volume 14 ; 14 ; >
+    au < exists ; exists ; 1947 ; The Review of Economic Studies Volume 15 ; 15 ; >
+    au < exists ; exists ; 1948 ; The Review of Economic Studies Volume 16 ; 16 ; >
+    au < exists ; exists ; 1949 ; The Review of Economic Studies Volume 17 ; 17 ; >
+    au < exists ; exists ; 1950 ; The Review of Economic Studies Volume 18 ; 18 ; >
+    au < exists ; exists ; 1950 ; The Review of Economic Studies Volume 19 ; 19 ; >
+    au < exists ; exists ; 1952 ; The Review of Economic Studies Volume 20 ; 20 ; >
+    au < exists ; exists ; 1953 ; The Review of Economic Studies Volume 21 ; 21 ; >
+    au < exists ; exists ; 1954 ; The Review of Economic Studies Volume 22 ; 22 ; >
+    au < exists ; exists ; 1955 ; The Review of Economic Studies Volume 23 ; 23 ; >
+    au < exists ; exists ; 1956 ; The Review of Economic Studies Volume 24 ; 24 ; >
+    au < exists ; exists ; 1957 ; The Review of Economic Studies Volume 25 ; 25 ; >
+    au < exists ; exists ; 1958 ; The Review of Economic Studies Volume 26 ; 26 ; >
+    au < exists ; exists ; 1959 ; The Review of Economic Studies Volume 27 ; 27 ; >
+    au < exists ; exists ; 1960 ; The Review of Economic Studies Volume 28 ; 28 ; >
+    au < exists ; exists ; 1961 ; The Review of Economic Studies Volume 29 ; 29 ; >
+    au < exists ; exists ; 1963 ; The Review of Economic Studies Volume 30 ; 30 ; >
+    au < exists ; exists ; 1964 ; The Review of Economic Studies Volume 31 ; 31 ; >
+    au < exists ; exists ; 1965 ; The Review of Economic Studies Volume 32 ; 32 ; >
+    au < exists ; exists ; 1966 ; The Review of Economic Studies Volume 33 ; 33 ; >
+    au < exists ; exists ; 1967 ; The Review of Economic Studies Volume 34 ; 34 ; >
+    au < exists ; exists ; 1968 ; The Review of Economic Studies Volume 35 ; 35 ; >
+    au < exists ; exists ; 1969 ; The Review of Economic Studies Volume 36 ; 36 ; >
+    au < exists ; exists ; 1970 ; The Review of Economic Studies Volume 37 ; 37 ; >
+    au < exists ; exists ; 1971 ; The Review of Economic Studies Volume 38 ; 38 ; >
+    au < exists ; exists ; 1972 ; The Review of Economic Studies Volume 39 ; 39 ; >
+    au < exists ; exists ; 1973 ; The Review of Economic Studies Volume 40 ; 40 ; >
+    au < exists ; exists ; 1974 ; The Review of Economic Studies Volume 41 ; 41 ; >
+    au < exists ; exists ; 1975 ; The Review of Economic Studies Volume 42 ; 42 ; >
+    au < exists ; exists ; 1976 ; The Review of Economic Studies Volume 43 ; 43 ; >
+    au < exists ; exists ; 1977 ; The Review of Economic Studies Volume 44 ; 44 ; >
+    au < exists ; exists ; 1978 ; The Review of Economic Studies Volume 45 ; 45 ; >
+    au < exists ; exists ; 1979 ; The Review of Economic Studies Volume 46 ; 46 ; >
+    au < exists ; exists ; 1980 ; The Review of Economic Studies Volume 47 ; 47 ; >
+    au < exists ; exists ; 1981 ; The Review of Economic Studies Volume 48 ; 48 ; >
+    au < exists ; exists ; 1982 ; The Review of Economic Studies Volume 49 ; 49 ; >
+    au < exists ; exists ; 1983 ; The Review of Economic Studies Volume 50 ; 50 ; >
+    au < exists ; exists ; 1984 ; The Review of Economic Studies Volume 51 ; 51 ; >
+    au < exists ; exists ; 1985 ; The Review of Economic Studies Volume 52 ; 52 ; >
+    au < exists ; exists ; 1986 ; The Review of Economic Studies Volume 53 ; 53 ; >
+    au < exists ; exists ; 1987 ; The Review of Economic Studies Volume 54 ; 54 ; >
+    au < exists ; exists ; 1988 ; The Review of Economic Studies Volume 55 ; 55 ; >
+    au < exists ; exists ; 1989 ; The Review of Economic Studies Volume 56 ; 56 ; >
+    au < exists ; exists ; 1990 ; The Review of Economic Studies Volume 57 ; 57 ; >
+    au < exists ; exists ; 1991 ; The Review of Economic Studies Volume 58 ; 58 ; >
+    au < exists ; exists ; 1992 ; The Review of Economic Studies Volume 59 ; 59 ; >
+    au < exists ; exists ; 1993 ; The Review of Economic Studies Volume 60 ; 60 ; >
+    au < exists ; exists ; 1994 ; The Review of Economic Studies Volume 61 ; 61 ; >
+    au < exists ; exists ; 1995 ; The Review of Economic Studies Volume 62 ; 62 ; >
+    au < exists ; exists ; 1996 ; The Review of Economic Studies Volume 63 ; 63 ; >
+    au < exists ; exists ; 1997 ; The Review of Economic Studies Volume 64 ; 64 ; >
+    au < exists ; exists ; 1998 ; The Review of Economic Studies Volume 65 ; 65 ; >
+    au < exists ; exists ; 1999 ; The Review of Economic Studies Volume 66 ; 66 ; >
+    au < exists ; exists ; 2000 ; The Review of Economic Studies Volume 67 ; 67 ; >
+    au < exists ; exists ; 2001 ; The Review of Economic Studies Volume 68 ; 68 ; >
+    au < exists ; exists ; 2002 ; The Review of Economic Studies Volume 69 ; 69 ; >
     au < manifest ; exists ; 2003 ; The Review of Economic Studies Volume 70 ; 70 ; >
     au < manifest ; exists ; 2004 ; The Review of Economic Studies Volume 71 ; 71 ; >
     au < manifest ; exists ; 2005 ; The Review of Economic Studies Volume 72 ; 72 ; >
