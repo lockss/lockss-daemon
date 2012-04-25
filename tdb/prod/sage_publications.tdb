@@ -13860,15 +13860,15 @@
         param[base_url] = http://ioc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1972 ; Index on Censorship Volume 1 ; 1 >
-        au < manifest ; 1973 ; Index on Censorship Volume 2 ; 2 >
-        au < manifest ; 1974 ; Index on Censorship Volume 3 ; 3 >
-        au < manifest ; 1975 ; Index on Censorship Volume 4 ; 4 >
-        au < manifest ; 1976 ; Index on Censorship Volume 5 ; 5 >
-        au < manifest ; 1977 ; Index on Censorship Volume 6 ; 6 >
-        au < manifest ; 1978 ; Index on Censorship Volume 7 ; 7 >
-        au < manifest ; 1979 ; Index on Censorship Volume 8 ; 8 >
-        au < manifest ; 1980 ; Index on Censorship Volume 9 ; 9 >
+      au < manifest ; 1972 ; Index on Censorship Volume 1 ; 1 >
+      au < manifest ; 1973 ; Index on Censorship Volume 2 ; 2 >
+      au < manifest ; 1974 ; Index on Censorship Volume 3 ; 3 >
+      au < manifest ; 1975 ; Index on Censorship Volume 4 ; 4 >
+      au < manifest ; 1976 ; Index on Censorship Volume 5 ; 5 >
+      au < manifest ; 1977 ; Index on Censorship Volume 6 ; 6 >
+      au < manifest ; 1978 ; Index on Censorship Volume 7 ; 7 >
+      au < manifest ; 1979 ; Index on Censorship Volume 8 ; 8 >
+      au < manifest ; 1980 ; Index on Censorship Volume 9 ; 9 >
       au < manifest ; 1981 ; Index on Censorship Volume 10 ; 10 >
       au < manifest ; 1982 ; Index on Censorship Volume 11 ; 11 >
       au < manifest ; 1983 ; Index on Censorship Volume 12 ; 12 >
@@ -30473,7 +30473,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1974 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 18 ; 18 >
         au < manifest ; 1975 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 19 ; 19 >
         au < manifest ; 1976 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 20 ; 20 >
-        au < doesNotExist ; 1977 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 21 ; 21 >
+        au < doesNotExist ; 0 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 21 ; 21 >
         au < exists ; 1978 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 22 ; 22 >
         au < exists ; 1979 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 23 ; 23 >
         au < exists ; 1980 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 24 ; 24 >
