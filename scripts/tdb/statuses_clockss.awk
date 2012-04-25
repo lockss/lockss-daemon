@@ -15,6 +15,8 @@ BEGIN {
   }
   b[$1,$2,$3]++
   c[$1,$2,$3,$4]++
+  x[$4]++
+  tt++
 }
 
 END {
@@ -43,4 +45,9 @@ END {
     }
     printf "\n"
   }
+    printf "Publisher\tContract\tYear\t%d", tt
+    for (j = 0 ; j < sn ; j++) {
+    	printf "\t%d", x[s[j]]
+    }
+
 }
