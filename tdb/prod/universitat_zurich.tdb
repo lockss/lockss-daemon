@@ -14,7 +14,7 @@
       param[base_url] = http://www.Zwingliana.ch/
       param[journal_id] = zwa
       implicit < status ; year ; name ; volume ; param[year] >
-      comment[zwa] = vol35-36 content exists but links aren't live yet
+      comment[notReady] = vol36-39 content exists but pdf links aren't available yet
 
       au < released ; 1974 ; Zwingliana Volume 14 (1974) ; 14 ; 1974 >
       au < released ; 1975 ; Zwingliana Volume 14 (1975) ; 14 ; 1975 >
@@ -49,11 +49,11 @@
       au < released ; 2005 ; Zwingliana Volume 32 ; 32 ; 2005 >
       au < released ; 2006 ; Zwingliana Volume 33 ; 33 ; 2006 >
       au < released ; 2007 ; Zwingliana Volume 34 ; 34 ; 2007 >
-      au < doesNotExist ; 2008 ; Zwingliana Volume 35 ; 35 ; 2008 >
-      au < doesNotExist ; 2009 ; Zwingliana Volume 36 ; 36 ; 2009 >
-      au < released ; 2010 ; Zwingliana Volume 37 ; 37 ; 2010 >
-      au < manifest ; 2011 ; Zwingliana Volume 38 ; 38 ; 2011 >
-      au < manifest ; 2012 ; Zwingliana Volume 39 ; 39 ; 2012 >
+      au < testing ; 2008 ; Zwingliana Volume 35 ; 35 ; 2008 >
+      au < notReady ; 2009 ; Zwingliana Volume 36 ; 36 ; 2009 >
+      au < notReady ; 2010 ; Zwingliana Volume 37 ; 37 ; 2010 >
+      au < notReady ; 2011 ; Zwingliana Volume 38 ; 38 ; 2011 >
+      au < notReady ; 2012 ; Zwingliana Volume 39 ; 39 ; 2012 >
 
     }
 
