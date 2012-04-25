@@ -330,7 +330,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[0] = changing name to International Journal of Developmental Disabilities (IJDD) in 2012
     
-    au < manifest ; exists ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
+    au < crawling ; exists ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
 
   }
 
@@ -902,6 +902,8 @@
     param[journal_issn] = 0590-8876
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
+    
+    comment[2011] = year 2011 has been used as volume #
 
     au < manifest ; exists ; 1965-1967 ; Costume Volume 1 ; 1 > 
     au < manifest ; exists ; 1968 ; Costume Volume 2 ; 2 > 
@@ -947,7 +949,7 @@
     au < manifest ; exists ; 2008 ; Costume Volume 42 ; 42 > 
     au < manifest ; exists ; 2009 ; Costume Volume 43 ; 43 > 
     au < manifest ; exists ; 2010 ; Costume Volume 44 ; 44 > 
-    au < exists ; exists ; 2011 ; Costume Volume 45 ; 45 > 
+    au < crawling ; exists ; 2011 ; Costume Volume 45 ; 2011 > 
     au < crawling ; exists ; 2012 ; Costume Volume 46 ; 46 > 
 
   }
@@ -1230,7 +1232,7 @@
     param[journal_issn] = 1461-9571
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < manifest ; exists ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
+    au < crawling ; exists ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
     au < crawling ; exists ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
     
   }
