@@ -5,14 +5,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -123,6 +123,16 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.iop.IOPScienceArticleIteratorFactory</string>
   </entry>
+   <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.iop.IOPScienceHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  
   <entry>
     <string>clockss_override</string>
     <map>
