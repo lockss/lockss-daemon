@@ -19,8 +19,8 @@
     param[base_url] = http://cancerdiscovery.aacrjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
     
-    au < manifest ; 2011 ; Cancer Discovery Volume 1 ; 1 >
-    au < manifest ; 2012 ; Cancer Discovery Volume 2 ; 2 >
+    au < testing ; 2011 ; Cancer Discovery Volume 1 ; 1 >
+    au < testing ; 2012 ; Cancer Discovery Volume 2 ; 2 >
 
 
   }
@@ -59,8 +59,8 @@
       au < released ; 2008 ; Cancer Epidemiology Biomarkers & Prevention Volume 17 ; 17 >
       au < released ; 2009 ; Cancer Epidemiology Biomarkers & Prevention Volume 18 ; 18 >
       au < released ; 2010 ; Cancer Epidemiology Biomarkers & Prevention Volume 19 ; 19 >
-      au < manifest ; 2011 ; Cancer Epidemiology Biomarkers & Prevention Volume 20 ; 20 >
-      au < manifest ; 2012 ; Cancer Epidemiology Biomarkers & Prevention Volume 21 ; 21 >
+      au < testing ; 2011 ; Cancer Epidemiology Biomarkers & Prevention Volume 20 ; 20 >
+      au < testing ; 2012 ; Cancer Epidemiology Biomarkers & Prevention Volume 21 ; 21 >
 
     }
 
@@ -83,8 +83,8 @@
       au < HighWirePressPlugin ; down ; 2008 ; Cancer Prevention Research Volume 1 ; 1 >
       au < HighWirePressPlugin ; down ; 2009 ; Cancer Prevention Research Volume 2 ; 2 >
       au < HighWirePressPlugin ; down ; 2010 ; Cancer Prevention Research Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Cancer Prevention Research Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; Cancer Prevention Research Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Cancer Prevention Research Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; testing ; 2012 ; Cancer Prevention Research Volume 5 ; 5 >
 
     }
 
@@ -174,8 +174,8 @@
       au < HighWirePressPlugin ; down ; 2008 ; Cancer Research Volume 68 ; 68 >
       au < HighWirePressPlugin ; down ; 2009 ; Cancer Research Volume 69 ; 69 >
       au < HighWirePressPlugin ; down ; 2010 ; Cancer Research Volume 70 ; 70 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Cancer Research Volume 71 ; 71 >
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; Cancer Research Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Cancer Research Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; testing ; 2012 ; Cancer Research Volume 72 ; 72 >
 
     }
 
