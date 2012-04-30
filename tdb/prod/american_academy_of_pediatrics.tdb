@@ -115,17 +115,17 @@
       param[base_url] = http://neoreviews.aappublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 2000 ; NeoReviews Volume 1 ; 1 >
-      au < testing ; 2001 ; NeoReviews Volume 2 ; 2 >
-      au < testing ; 2002 ; NeoReviews Volume 3 ; 3 >
-      au < testing ; 2003 ; NeoReviews Volume 4 ; 4 >
-      au < testing ; 2004 ; NeoReviews Volume 5 ; 5 >
-      au < testing ; 2005 ; NeoReviews Volume 6 ; 6 >
-      au < testing ; 2006 ; NeoReviews Volume 7 ; 7 >
-      au < testing ; 2007 ; NeoReviews Volume 8 ; 8 >
-      au < testing ; 2008 ; NeoReviews Volume 9 ; 9 >
-      au < testing ; 2009 ; NeoReviews Volume 10 ; 10 >
-      au < testing ; 2010 ; NeoReviews Volume 11 ; 11 >
+      au < ready ; 2000 ; NeoReviews Volume 1 ; 1 >
+      au < ready ; 2001 ; NeoReviews Volume 2 ; 2 >
+      au < ready ; 2002 ; NeoReviews Volume 3 ; 3 >
+      au < ready ; 2003 ; NeoReviews Volume 4 ; 4 >
+      au < ready ; 2004 ; NeoReviews Volume 5 ; 5 >
+      au < ready ; 2005 ; NeoReviews Volume 6 ; 6 >
+      au < ready ; 2006 ; NeoReviews Volume 7 ; 7 >
+      au < ready ; 2007 ; NeoReviews Volume 8 ; 8 >	
+      au < ready ; 2008 ; NeoReviews Volume 9 ; 9 >
+      au < ready ; 2009 ; NeoReviews Volume 10 ; 10 >
+      au < ready ; 2010 ; NeoReviews Volume 11 ; 11 >
       au < released ; 2011 ; NeoReviews Volume 12 ; 12 >
       au < testing ; 2012 ; NeoReviews Volume 13 ; 13 >
 
@@ -246,7 +246,7 @@
       au < testing ; 1996 ; Pediatrics Volume 97 ; 97 >
       au < testing ; 1996 ; Pediatrics Volume 98 ; 98 >
       au < testing ; 1997 ; Pediatrics Volume 99 ; 99 >
-      au < testing ; 1997 ; Pediatrics Volume 100 ; 100 >
+      au < ready ; 1997 ; Pediatrics Volume 100 ; 100 >
       au < released ; 1998 ; Pediatrics Volume 101 ; 101 >
       au < testing ; 1998 ; Pediatrics Volume 102 ; 102 >
       au < testing ; 1999 ; Pediatrics Volume 103 ; 103 >
@@ -269,7 +269,7 @@
       au < released ; 2007 ; Pediatrics Volume 120 ; 120 >
       au < released ; 2008 ; Pediatrics Volume 121 ; 121 >
       au < released ; 2008 ; Pediatrics Volume 122 ; 122 >
-      au < testing ; 2009 ; Pediatrics Volume 123 ; 123 >
+      au < ready ; 2009 ; Pediatrics Volume 123 ; 123 >
       au < released ; 2009 ; Pediatrics Volume 124 ; 124 >
       au < released ; 2010 ; Pediatrics Volume 125 ; 125 >
       au < released ; 2010 ; Pediatrics Volume 126 ; 126 >
