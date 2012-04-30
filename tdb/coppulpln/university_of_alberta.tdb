@@ -13,6 +13,19 @@
     {
     
       title <
+        name = The Agora: Political Science Undergraduate Journal
+      >
+
+      param[journal_id] = ps_sandbox
+
+      au < exists ; 2011 ; The Agora: Political Science Undergraduate Journal Volume 1 ; 2011 >
+      au < exists ; 2011 ; The Agora: Political Science Undergraduate Journal Volume 2 ; 2011 >
+
+    }
+
+    {
+    
+      title <
         name = aboriginal policy studies
       >
 
@@ -94,6 +107,67 @@
       au < released ; 2009 ; Canadian Journal of Sociology Volume 34 ; 2009 >
       au < released ; 2010 ; Canadian Journal of Sociology Volume 35 ; 2010 >
       au < released ; 2011 ; Canadian Journal of Sociology Volume 36 ; 2011 >
+      au < manifest ; 2012 ; Canadian Journal of Sociology Volume 37 ; 2012 >
+
+    }
+
+    {
+    
+      title <
+        name = Canadian Journal of University Continuing Education
+      >
+
+      param[journal_id] = cjuce-rcepu
+
+      au < exists ; 2009 ; Canadian Journal of University Continuing Education Volume 35 ; 2009 >
+      au < exists ; 2010 ; Canadian Journal of University Continuing Education Volume 36 ; 2010 >
+      au < exists ; 2011 ; Canadian Journal of University Continuing Education Volume 37 ; 2011 >
+
+    }
+
+    {
+    
+      title <
+        name = Canadian Review of Comparative Literature
+      >
+
+      param[journal_id] = crcl
+
+      au < manifest ; 1974 ; Canadian Review of Comparative Literature Volume 1 ; 1974 >
+      au < manifest ; 1975 ; Canadian Review of Comparative Literature Volume 2 ; 1975 >
+      au < manifest ; 1976 ; Canadian Review of Comparative Literature Volume 3 ; 1976 >
+      au < manifest ; 1977 ; Canadian Review of Comparative Literature Volume 4 ; 1977 >
+      au < manifest ; 1978 ; Canadian Review of Comparative Literature Volume 5 ; 1978 >
+      au < manifest ; 1979 ; Canadian Review of Comparative Literature Volume 6 ; 1979 >
+      au < manifest ; 1980 ; Canadian Review of Comparative Literature Volume 7 ; 1980 >
+      au < manifest ; 1981 ; Canadian Review of Comparative Literature Volume 8 ; 1981 >
+      au < manifest ; 1982 ; Canadian Review of Comparative Literature Volume 9 ; 1982 >
+      au < manifest ; 1983 ; Canadian Review of Comparative Literature Volume 10 ; 1983 >
+      au < manifest ; 1984 ; Canadian Review of Comparative Literature Volume 11 ; 1984 >
+      au < manifest ; 1985 ; Canadian Review of Comparative Literature Volume 12 ; 1985 >
+      au < manifest ; 1986 ; Canadian Review of Comparative Literature Volume 13 ; 1986 >
+      au < manifest ; 1987 ; Canadian Review of Comparative Literature Volume 14 ; 1987 >
+      au < manifest ; 1988 ; Canadian Review of Comparative Literature Volume 15 ; 1988 >
+      au < manifest ; 1989 ; Canadian Review of Comparative Literature Volume 16 ; 1989 >
+      au < manifest ; 1990 ; Canadian Review of Comparative Literature Volume 17 ; 1990 >
+      au < manifest ; 1991 ; Canadian Review of Comparative Literature Volume 18 ; 1991 >
+      au < manifest ; 1992 ; Canadian Review of Comparative Literature Volume 19 ; 1992 >
+      au < manifest ; 1993 ; Canadian Review of Comparative Literature Volume 20 ; 1993 >
+      au < manifest ; 1994 ; Canadian Review of Comparative Literature Volume 21 ; 1994 >
+      au < manifest ; 1995 ; Canadian Review of Comparative Literature Volume 22 ; 1995 >
+      au < manifest ; 1996 ; Canadian Review of Comparative Literature Volume 23 ; 1996 >
+      au < manifest ; 1997 ; Canadian Review of Comparative Literature Volume 24 ; 1997 >
+      au < manifest ; 1998 ; Canadian Review of Comparative Literature Volume 25 ; 1998 >
+      au < manifest ; 1999 ; Canadian Review of Comparative Literature Volume 26 ; 1999 >
+      au < manifest ; 2000 ; Canadian Review of Comparative Literature Volume 27 ; 2000 >
+      au < manifest ; 2001 ; Canadian Review of Comparative Literature Volume 28 ; 2001 >
+      au < manifest ; 2002 ; Canadian Review of Comparative Literature Volume 29 ; 2002 >
+      au < manifest ; 2003 ; Canadian Review of Comparative Literature Volume 30 ; 2003 >
+      au < manifest ; 2004 ; Canadian Review of Comparative Literature Volume 31 ; 2004 >
+      au < manifest ; 2005 ; Canadian Review of Comparative Literature Volume 32 ; 2005 >
+      au < manifest ; 2006 ; Canadian Review of Comparative Literature Volume 33 ; 2006 >
+      au < manifest ; 2007 ; Canadian Review of Comparative Literature Volume 34 ; 2007 >
+      au < manifest ; 2008 ; Canadian Review of Comparative Literature Volume 35 ; 2008 >
 
     }
 
@@ -114,6 +188,80 @@
       au < released ; 2010 ; Complicity: An International Journal of Complexity and Education Volume 7 ; 2010 >
       au < released ; 2011 ; Complicity: An International Journal of Complexity and Education Volume 8 ; 2011 >
       au < released ; 2012 ; Complicity: An International Journal of Complexity and Education Volume 9 ; 2012 >
+
+    }
+
+    {
+    
+      title <
+        name = Constellations
+      >
+
+      param[journal_id] = constellations
+
+      au < manifest ; 2009 ; Constellations Volume 1 ; 2009 >
+      au < manifest ; 2010 ; Constellations Volume 1 ; 2010 >
+      au < manifest ; 2010 ; Constellations Volume 2 ; 2010 >
+      au < manifest ; 2011 ; Constellations Volume 2 ; 2011 >
+      au < manifest ; 2011 ; Constellations Volume 3 ; 2011 >
+
+    }
+
+    {
+    
+      title <
+        name = Constitutional Forum / Forum constitutionnel
+      >
+
+      param[journal_id] = constitutional_forum
+
+      au < manifest ; 1989 ; Constitutional Forum / Forum constitutionnel Volume 1 ; 1989 >
+      au < manifest ; 1990 ; Constitutional Forum / Forum constitutionnel Volume 2 ; 1990 >
+      au < manifest ; 1991 ; Constitutional Forum / Forum constitutionnel Volume 3 ; 1991 >
+      au < manifest ; 1992 ; Constitutional Forum / Forum constitutionnel Volume 4 ; 1992 >
+      au < manifest ; 1994 ; Constitutional Forum / Forum constitutionnel Volume 5 ; 1994 >
+      au < manifest ; 1994 ; Constitutional Forum / Forum constitutionnel Volume 6 ; 1994 >
+      au < manifest ; 1995 ; Constitutional Forum / Forum constitutionnel Volume 7 ; 1995 >
+      au < manifest ; 1996 ; Constitutional Forum / Forum constitutionnel Volume 8 ; 1996 >
+      au < manifest ; 1997 ; Constitutional Forum / Forum constitutionnel Volume 9 ; 1997 >
+      au < manifest ; 1998 ; Constitutional Forum / Forum constitutionnel Volume 10 ; 1998 >
+      au < manifest ; 1999 ; Constitutional Forum / Forum constitutionnel Volume 11 ; 1999 >
+      au < manifest ; 2001 ; Constitutional Forum / Forum constitutionnel Volume 12 ; 2001 >
+      au < manifest ; 2003 ; Constitutional Forum / Forum constitutionnel Volume 13 ; 2003 >
+      au < manifest ; 2005 ; Constitutional Forum / Forum constitutionnel Volume 13 ; 2005 >
+      au < manifest ; 2005 ; Constitutional Forum / Forum constitutionnel Volume 14 ; 2005 >
+      au < manifest ; 2006 ; Constitutional Forum / Forum constitutionnel Volume 15 ; 2006 >
+      au < manifest ; 2007 ; Constitutional Forum / Forum constitutionnel Volume 16 ; 2007 >
+      au < manifest ; 2008 ; Constitutional Forum / Forum constitutionnel Volume 17 ; 2008 >
+      au < manifest ; 2009 ; Constitutional Forum / Forum constitutionnel Volume 18 ; 2009 >
+      au < manifest ; 2011 ; Constitutional Forum / Forum constitutionnel Volume 20 ; 2011 >
+
+    }
+
+    {
+    
+      title <
+        name = Cultural and Pedagogical Inquiry
+      >
+
+      param[journal_id] = cpi
+
+      au < exists ; 2009 ; Cultural and Pedagogical Inquiry Volume 1 ; 2009 >
+      au < exists ; 2010 ; Cultural and Pedagogical Inquiry Volume 2 ; 2010 >
+      au < exists ; 2011 ; Cultural and Pedagogical Inquiry Volume 3 ; 2011 >
+
+    }
+
+    {
+    
+      title <
+        name = The Deakin Review of Children's Literature
+      >
+
+      param[journal_id] = deakinreview
+
+      au < exists ; 2011 ; The Deakin Review of Children's Literature Volume 1 ; 2011 >
+      au < exists ; 2012 ; The Deakin Review of Children's Literature Volume 1 ; 2012 >
 
     }
 
@@ -146,6 +294,7 @@
 
       au < released ; 2010 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 1 ; 2010 >
       au < released ; 2011 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 2 ; 2011 >
+      au < manifest ; 2012 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 3 ; 2012 >
 
     }
 
@@ -163,6 +312,7 @@
       au < released ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 >
       au < released ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 >
       au < released ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 >
+      au < manifest ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 >
 
     }
 
@@ -176,7 +326,11 @@
 
       comment[eei1] = subscription title
 
+      au < manifest ; 2007 ; Exceptionality Education International Volume 17 ; 2007 >
       au < notReady ; 2008 ; Exceptionality Education International Volume 18 ; 2008 >
+      au < manifest ; 2009 ; Exceptionality Education International Volume 19 ; 2009 >
+      au < manifest ; 2010 ; Exceptionality Education International Volume 20 ; 2010 >
+      au < manifest ; 2011 ; Exceptionality Education International Volume 21 ; 2011 >
 
     }
 
@@ -189,6 +343,7 @@
       param[journal_id] = imaginations
 
       au < released ; 2010 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 1 ; 2010 >
+      au < manifest ; 2011 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 2 ; 2011 >
 
     }
 
@@ -208,6 +363,7 @@
       au < released ; 2009 ; International Journal of Qualitative Methods Volume 8 ; 2009 >
       au < released ; 2010 ; International Journal of Qualitative Methods Volume 9 ; 2010 >
       au < released ; 2011 ; International Journal of Qualitative Methods Volume 10 ; 2011 >
+      au < manifest ; 2012 ; International Journal of Qualitative Methods Volume 11 ; 2012 >
 
     }
 
@@ -225,6 +381,79 @@
       au < released ; 2009 ; Journal of Contemporary Issues in Education Volume 4 ; 2009 >
       au < released ; 2010 ; Journal of Contemporary Issues in Education Volume 5 ; 2010 >
       au < released ; 2011 ; Journal of Contemporary Issues in Education Volume 6 ; 2011 >
+
+    }
+
+    {
+    
+      title <
+        name = Journal of Curriculum and Pedagogy
+      >
+
+      param[journal_id] = jcp
+
+      au < expected ; 2012 ; Journal of Curriculum and Pedagogy Volume 1 ; 2012 >
+
+    }
+
+    {
+    
+      title <
+        name = Journal of Pharmacy & Pharmaceutical Sciences
+      >
+
+      param[journal_id] = jpps
+
+      au < manifest ; 2007 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 10 ; 2007 >
+      au < manifest ; 2008 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 11 ; 2008 >
+      au < manifest ; 2009 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 12 ; 2009 >
+      au < manifest ; 2010 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 13 ; 2010 >
+      au < manifest ; 2011 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 14 ; 2011 >
+      au < manifest ; 2012 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 15 ; 2012 >
+
+    }
+
+    {
+    
+      title <
+        name = Language and Literacy
+      >
+
+      param[journal_id] = langandlit
+
+      au < manifest ; 2004 ; Language and Literacy Volume 6 ; 2004 >
+      au < manifest ; 2005 ; Language and Literacy Volume 7 ; 2005 >
+      au < manifest ; 2006 ; Language and Literacy Volume 8 ; 2006 >
+      au < manifest ; 2007 ; Language and Literacy Volume 9 ; 2007 >
+      au < manifest ; 2008 ; Language and Literacy Volume 10 ; 2008 >
+      au < manifest ; 2009 ; Language and Literacy Volume 11 ; 2009 >
+      au < manifest ; 2010 ; Language and Literacy Volume 12 ; 2010 >
+      au < manifest ; 2011 ; Language and Literacy Volume 13 ; 2011 >
+      au < manifest ; 2012 ; Language and Literacy Volume 14 ; 2012 >
+
+    }
+
+    {
+    
+      title <
+        name = The Lyceum
+      >
+
+      param[journal_id] = eudaimons
+
+      au < manifest ; 2011 ; The Lyceum Volume 1 ; 2011 >
+
+    }
+
+    {
+    
+      title <
+        name = Multilingual Discourses
+      >
+
+      param[journal_id] = multilingualdiscourses
+
+      au < expected ; 2012 ; Multilingual Discourses Volume 1 ; 2012 >
 
     }
 
@@ -275,6 +504,18 @@
       au < released ; 2008 ; Past Imperfect Volume 14 ; 2008 >
       au < released ; 2009 ; Past Imperfect Volume 15 ; 2009 >
       au < released ; 2010 ; Past Imperfect Volume 16 ; 2010 >
+
+    }
+
+    {
+    
+      title <
+        name = Perspectives and Dialogues: From the Base of the Ivory Tower
+      >
+
+      param[journal_id] = pdit
+
+      au < expected ; 2012 ; Perspectives and Dialogues: From the Base of the Ivory Tower Volume 1 ; 2012 >
 
     }
 
