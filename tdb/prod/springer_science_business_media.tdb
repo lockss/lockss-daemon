@@ -2071,7 +2071,7 @@
 
     comment[continued_from] = 0231-4428
     param[journal_issn] = 1219-7580
-    comment[merged_into] = 1434-601X
+    comment[merged_with] = 1434-601X
 
     au < manifest ; 1995 ; Acta Physica Hungarica A) Heavy Ion Physics Volume 1 ; 1 >
     au < manifest ; 1995 ; Acta Physica Hungarica A) Heavy Ion Physics Volume 2 ; 2 >
@@ -2105,7 +2105,7 @@
 
     comment[continued_from] = 0231-4428
     param[journal_issn] = 1589-9535
-    comment[merged_into] = 1434-6079
+    comment[merged_with] = 1434-6079
 
     au < manifest ; 2004 ; Acta Physica Hungarica B) Quantum Electronics Volume 20 ; 20 >
     au < manifest ; 2005 ; Acta Physica Hungarica B) Quantum Electronics Volume 23 ; 23 >
@@ -7571,7 +7571,7 @@
       issnl = 0365-7140
     >
 
-    comment[merged_into] = 0365-7140
+    comment[merged_with] = 0365-7140
     param[journal_issn] = 0365-7140
     comment[continued_by] = 1386-6184
 
@@ -17988,7 +17988,7 @@
     >
 
     param[journal_issn] = 1385-2264
-    comment[merged_into] = 1383-875x
+    comment[merged_with] = 1383-875x
 
     au < manifest ; 1997 ; Cardiac Electrophysiology Review Volume 1 ; 1 >
     au < manifest ; 1998 ; Cardiac Electrophysiology Review Volume 2 ; 2 >
@@ -21232,7 +21232,7 @@
     >
 
     comment[merged_with] = 0940-5437
-    comment[merged_with] = 0300-9130
+    comment[merged_with_also] = 0300-9130
     param[journal_issn] = 1591-8890
 
     au < manifest ; 2001 ; Clinical and Experimental Medicine Volume 1 ; 1 >
@@ -24700,6 +24700,15 @@
 
     param[journal_issn] = 1574-4280
 
+    au < manifest ; 2006 ; Critical Care Volume 3 ; 3 >
+    au < manifest ; 2007 ; Critical Care Volume 4 ; 4 >
+    au < manifest ; 2008 ; Critical Care Volume 5 ; 5 >
+    au < manifest ; 2009 ; Critical Care Volume 6 ; 6 >
+    au < manifest ; 2010 ; Critical Care Volume 7 ; 7 >
+    au < manifest ; 2011 ; Critical Care Volume 8 ; 8 >
+    au < manifest ; 2012 ; Critical Care Volume 9 ; 9 >
+    au < manifest ; 2011 ; Critical Care Volume 2011 / 1-2011 (2 Issues) ; Issues) >
+
   }
 
   {
@@ -24712,6 +24721,27 @@
     >
 
     param[journal_issn] = 1205-8629
+
+    au < manifest ; 1989-1990 ; Critical Criminology Volume 1 ; 1 >
+    au < manifest ; 1990-1991 ; Critical Criminology Volume 2 ; 2 >
+    au < manifest ; 1991-1992 ; Critical Criminology Volume 3 ; 3 >
+    au < manifest ; 1992-1993 ; Critical Criminology Volume 4 ; 4 >
+    au < manifest ; 1994 ; Critical Criminology Volume 5 ; 5 >
+    au < manifest ; 1994-1995 ; Critical Criminology Volume 6 ; 6 >
+    au < manifest ; 1996 ; Critical Criminology Volume 7 ; 7 >
+    au < manifest ; 1997 ; Critical Criminology Volume 8 ; 8 >
+    au < manifest ; 2000 ; Critical Criminology Volume 9 ; 9 >
+    au < manifest ; 2001 ; Critical Criminology Volume 10 ; 10 >
+    au < manifest ; 2002 ; Critical Criminology Volume 11 ; 11 >
+    au < manifest ; 2004 ; Critical Criminology Volume 12 ; 12 >
+    au < manifest ; 2005 ; Critical Criminology Volume 13 ; 13 >
+    au < manifest ; 2006 ; Critical Criminology Volume 14 ; 14 >
+    au < manifest ; 2007 ; Critical Criminology Volume 15 ; 15 >
+    au < manifest ; 2008 ; Critical Criminology Volume 16 ; 16 >
+    au < manifest ; 2009 ; Critical Criminology Volume 17 ; 17 >
+    au < manifest ; 2010 ; Critical Criminology Volume 18 ; 18 >
+    au < manifest ; 2011 ; Critical Criminology Volume 19 ; 19 >
+    au < manifest ; 2012 ; Critical Criminology Volume 20 ; 20 >
 
   }
 
@@ -24726,6 +24756,10 @@
 
     param[journal_issn] = 0939-0146
 
+    au < manifest ; 1997 ; Critical Reviews in Neurosurgery Volume 7 ; 7 >
+    au < manifest ; 1998 ; Critical Reviews in Neurosurgery Volume 8 ; 8 >
+    au < manifest ; 1999 ; Critical Reviews in Neurosurgery Volume 9 ; 9 >
+
   }
 
   {
@@ -24738,6 +24772,11 @@
     >
 
     param[journal_issn] = 2036-3176
+
+    au < manifest ; 2009 ; Critical Ultrasound Journal Volume 1 ; 1 >
+    au < manifest ; 2010 ; Critical Ultrasound Journal Volume 2 ; 2 >
+    au < manifest ; 2011 ; Critical Ultrasound Journal Volume 3 ; 3 >
+    au < manifest ; 2012 ; Critical Ultrasound Journal Volume 4 ; 4 >
 
   }
 
@@ -24752,6 +24791,11 @@
 
     param[journal_issn] = 1936-2447
 
+    au < manifest ; 2009 ; Cryptography and Communications Volume 1 ; 1 >
+    au < manifest ; 2010 ; Cryptography and Communications Volume 2 ; 2 >
+    au < manifest ; 2011 ; Cryptography and Communications Volume 3 ; 3 >
+    au < manifest ; 2012 ; Cryptography and Communications Volume 4 ; 4 >
+
   }
 
   {
@@ -24764,6 +24808,20 @@
     >
 
     param[journal_issn] = 1063-7745
+
+    au < manifest ; 2000 ; Crystallography Reports Volume 45 ; 45 >
+    au < manifest ; 2001 ; Crystallography Reports Volume 46 ; 46 >
+    au < manifest ; 2002 ; Crystallography Reports Volume 47 ; 47 >
+    au < manifest ; 2003 ; Crystallography Reports Volume 48 ; 48 >
+    au < manifest ; 2004 ; Crystallography Reports Volume 49 ; 49 >
+    au < manifest ; 2005 ; Crystallography Reports Volume 50 ; 50 >
+    au < manifest ; 2006 ; Crystallography Reports Volume 51 ; 51 >
+    au < manifest ; 2007 ; Crystallography Reports Volume 52 ; 52 >
+    au < manifest ; 2008 ; Crystallography Reports Volume 53 ; 53 >
+    au < manifest ; 2009 ; Crystallography Reports Volume 54 ; 54 >
+    au < manifest ; 2010 ; Crystallography Reports Volume 55 ; 55 >
+    au < manifest ; 2011 ; Crystallography Reports Volume 56 ; 56 >
+    au < manifest ; 2012 ; Crystallography Reports Volume 57 ; 57 >
 
   }
 
@@ -24778,6 +24836,14 @@
 
     param[journal_issn] = 1871-1502
 
+    au < manifest ; 2006 ; Cultural Studies of Science Education Volume 1 ; 1 >
+    au < manifest ; 2007 ; Cultural Studies of Science Education Volume 2 ; 2 >
+    au < manifest ; 2008 ; Cultural Studies of Science Education Volume 3 ; 3 >
+    au < manifest ; 2009 ; Cultural Studies of Science Education Volume 4 ; 4 >
+    au < manifest ; 2010 ; Cultural Studies of Science Education Volume 5 ; 5 >
+    au < manifest ; 2011 ; Cultural Studies of Science Education Volume 6 ; 6 >
+    au < manifest ; 2012 ; Cultural Studies of Science Education Volume 7 ; 7 >
+
   }
 
   {
@@ -24790,6 +24856,43 @@
     >
 
     param[journal_issn] = 0165-005X
+
+    au < manifest ; 1977-1980 ; Culture, Medicine and Psychiatry Volume 1 ; 1 >
+    au < manifest ; 1978 ; Culture, Medicine and Psychiatry Volume 2 ; 2 >
+    au < manifest ; 1979 ; Culture, Medicine and Psychiatry Volume 3 ; 3 >
+    au < manifest ; 1980 ; Culture, Medicine and Psychiatry Volume 4 ; 4 >
+    au < manifest ; 1981 ; Culture, Medicine and Psychiatry Volume 5 ; 5 >
+    au < manifest ; 1982 ; Culture, Medicine and Psychiatry Volume 6 ; 6 >
+    au < manifest ; 1983 ; Culture, Medicine and Psychiatry Volume 7 ; 7 >
+    au < manifest ; 1984 ; Culture, Medicine and Psychiatry Volume 8 ; 8 >
+    au < manifest ; 1985 ; Culture, Medicine and Psychiatry Volume 9 ; 9 >
+    au < manifest ; 1986 ; Culture, Medicine and Psychiatry Volume 10 ; 10 >
+    au < manifest ; 1987 ; Culture, Medicine and Psychiatry Volume 11 ; 11 >
+    au < manifest ; 1988 ; Culture, Medicine and Psychiatry Volume 12 ; 12 >
+    au < manifest ; 1989 ; Culture, Medicine and Psychiatry Volume 13 ; 13 >
+    au < manifest ; 1990 ; Culture, Medicine and Psychiatry Volume 14 ; 14 >
+    au < manifest ; 1991 ; Culture, Medicine and Psychiatry Volume 15 ; 15 >
+    au < manifest ; 1992 ; Culture, Medicine and Psychiatry Volume 16 ; 16 >
+    au < manifest ; 1993 ; Culture, Medicine and Psychiatry Volume 17 ; 17 >
+    au < manifest ; 1994 ; Culture, Medicine and Psychiatry Volume 18 ; 18 >
+    au < manifest ; 1995 ; Culture, Medicine and Psychiatry Volume 19 ; 19 >
+    au < manifest ; 1996 ; Culture, Medicine and Psychiatry Volume 20 ; 20 >
+    au < manifest ; 1997 ; Culture, Medicine and Psychiatry Volume 21 ; 21 >
+    au < manifest ; 1998 ; Culture, Medicine and Psychiatry Volume 22 ; 22 >
+    au < manifest ; 1999 ; Culture, Medicine and Psychiatry Volume 23 ; 23 >
+    au < manifest ; 2000 ; Culture, Medicine and Psychiatry Volume 24 ; 24 >
+    au < manifest ; 2001 ; Culture, Medicine and Psychiatry Volume 25 ; 25 >
+    au < manifest ; 2002 ; Culture, Medicine and Psychiatry Volume 26 ; 26 >
+    au < manifest ; 2003 ; Culture, Medicine and Psychiatry Volume 27 ; 27 >
+    au < manifest ; 2004 ; Culture, Medicine and Psychiatry Volume 28 ; 28 >
+    au < manifest ; 2005 ; Culture, Medicine and Psychiatry Volume 29 ; 29 >
+    au < manifest ; 2006 ; Culture, Medicine and Psychiatry Volume 30 ; 30 >
+    au < manifest ; 2007 ; Culture, Medicine and Psychiatry Volume 31 ; 31 >
+    au < manifest ; 2008 ; Culture, Medicine and Psychiatry Volume 32 ; 32 >
+    au < manifest ; 2009 ; Culture, Medicine and Psychiatry Volume 33 ; 33 >
+    au < manifest ; 2010 ; Culture, Medicine and Psychiatry Volume 34 ; 34 >
+    au < manifest ; 2011 ; Culture, Medicine and Psychiatry Volume 35 ; 35 >
+    au < manifest ; 2012 ; Culture, Medicine and Psychiatry Volume 36 ; 36 >
 
   }
 
@@ -24804,6 +24907,19 @@
 
     param[journal_issn] = 1529-7322
 
+    au < manifest ; 2001 ; Current Allergy and Asthma Reports Volume 1 ; 1 >
+    au < manifest ; 2002 ; Current Allergy and Asthma Reports Volume 2 ; 2 >
+    au < manifest ; 2003 ; Current Allergy and Asthma Reports Volume 3 ; 3 >
+    au < manifest ; 2004 ; Current Allergy and Asthma Reports Volume 4 ; 4 >
+    au < manifest ; 2005 ; Current Allergy and Asthma Reports Volume 5 ; 5 >
+    au < manifest ; 2006 ; Current Allergy and Asthma Reports Volume 6 ; 6 >
+    au < manifest ; 2007 ; Current Allergy and Asthma Reports Volume 7 ; 7 >
+    au < manifest ; 2008 ; Current Allergy and Asthma Reports Volume 8 ; 8 >
+    au < manifest ; 2009 ; Current Allergy and Asthma Reports Volume 9 ; 9 >
+    au < manifest ; 2010 ; Current Allergy and Asthma Reports Volume 10 ; 10 >
+    au < manifest ; 2011 ; Current Allergy and Asthma Reports Volume 11 ; 11 >
+    au < manifest ; 2012 ; Current Allergy and Asthma Reports Volume 12 ; 12 >
+
   }
 
   {
@@ -24816,6 +24932,21 @@
     >
 
     param[journal_issn] = 1523-3804
+
+    au < manifest ; 1999 ; Current Atherosclerosis Reports Volume 1 ; 1 >
+    au < manifest ; 2000 ; Current Atherosclerosis Reports Volume 2 ; 2 >
+    au < manifest ; 2001 ; Current Atherosclerosis Reports Volume 3 ; 3 >
+    au < manifest ; 2002 ; Current Atherosclerosis Reports Volume 4 ; 4 >
+    au < manifest ; 2003 ; Current Atherosclerosis Reports Volume 5 ; 5 >
+    au < manifest ; 2004 ; Current Atherosclerosis Reports Volume 6 ; 6 >
+    au < manifest ; 2005 ; Current Atherosclerosis Reports Volume 7 ; 7 >
+    au < manifest ; 2006 ; Current Atherosclerosis Reports Volume 8 ; 8 >
+    au < manifest ; 2007 ; Current Atherosclerosis Reports Volume 9 ; 9 >
+    au < manifest ; 2008 ; Current Atherosclerosis Reports Volume 10 ; 10 >
+    au < manifest ; 2009 ; Current Atherosclerosis Reports Volume 11 ; 11 >
+    au < manifest ; 2010 ; Current Atherosclerosis Reports Volume 12 ; 12 >
+    au < manifest ; 2011 ; Current Atherosclerosis Reports Volume 13 ; 13 >
+    au < manifest ; 2012 ; Current Atherosclerosis Reports Volume 14 ; 14 >
 
   }
 
@@ -24830,6 +24961,8 @@
 
     param[journal_issn] = 1943-4561
 
+    au < manifest ; 2009 ; Current Attention Disorders Reports Volume 1 ; 1 >
+
   }
 
   {
@@ -24842,6 +24975,14 @@
     >
 
     param[journal_issn] = 1931-7212
+
+    au < manifest ; 2006 ; Current Bladder Dysfunction Reports Volume 1 ; 1 >
+    au < manifest ; 2007 ; Current Bladder Dysfunction Reports Volume 2 ; 2 >
+    au < manifest ; 2008 ; Current Bladder Dysfunction Reports Volume 3 ; 3 >
+    au < manifest ; 2009 ; Current Bladder Dysfunction Reports Volume 4 ; 4 >
+    au < manifest ; 2010 ; Current Bladder Dysfunction Reports Volume 5 ; 5 >
+    au < manifest ; 2011 ; Current Bladder Dysfunction Reports Volume 6 ; 6 >
+    au < manifest ; 2012 ; Current Bladder Dysfunction Reports Volume 7 ; 7 >
 
   }
 
@@ -24856,6 +24997,11 @@
 
     param[journal_issn] = 1943-4588
 
+    au < manifest ; 2009 ; Current Breast Cancer Reports Volume 1 ; 1 >
+    au < manifest ; 2010 ; Current Breast Cancer Reports Volume 2 ; 2 >
+    au < manifest ; 2011 ; Current Breast Cancer Reports Volume 3 ; 3 >
+    au < manifest ; 2012 ; Current Breast Cancer Reports Volume 4 ; 4 >
+
   }
 
   {
@@ -24868,6 +25014,21 @@
     >
 
     param[journal_issn] = 1523-3782
+
+    au < manifest ; 1999 ; Current Cardiology Reports Volume 1 ; 1 >
+    au < manifest ; 2000 ; Current Cardiology Reports Volume 2 ; 2 >
+    au < manifest ; 2001 ; Current Cardiology Reports Volume 3 ; 3 >
+    au < manifest ; 2002 ; Current Cardiology Reports Volume 4 ; 4 >
+    au < manifest ; 2003 ; Current Cardiology Reports Volume 5 ; 5 >
+    au < manifest ; 2004 ; Current Cardiology Reports Volume 6 ; 6 >
+    au < manifest ; 2005 ; Current Cardiology Reports Volume 7 ; 7 >
+    au < manifest ; 2006 ; Current Cardiology Reports Volume 8 ; 8 >
+    au < manifest ; 2007 ; Current Cardiology Reports Volume 9 ; 9 >
+    au < manifest ; 2008 ; Current Cardiology Reports Volume 10 ; 10 >
+    au < manifest ; 2009 ; Current Cardiology Reports Volume 11 ; 11 >
+    au < manifest ; 2010 ; Current Cardiology Reports Volume 12 ; 12 >
+    au < manifest ; 2011 ; Current Cardiology Reports Volume 13 ; 13 >
+    au < manifest ; 2012 ; Current Cardiology Reports Volume 14 ; 14 >
 
   }
 
@@ -24882,6 +25043,12 @@
 
     param[journal_issn] = 1941-9066
 
+    au < manifest ; 2008 ; Current Cardiovascular Imaging Reports Volume 1 ; 1 >
+    au < manifest ; 2009 ; Current Cardiovascular Imaging Reports Volume 2 ; 2 >
+    au < manifest ; 2010 ; Current Cardiovascular Imaging Reports Volume 3 ; 3 >
+    au < manifest ; 2011 ; Current Cardiovascular Imaging Reports Volume 4 ; 4 >
+    au < manifest ; 2012 ; Current Cardiovascular Imaging Reports Volume 5 ; 5 >
+
   }
 
   {
@@ -24894,6 +25061,13 @@
     >
 
     param[journal_issn] = 1932-9520
+
+    au < manifest ; 2007 ; Current Cardiovascular Risk Reports Volume 1 ; 1 >
+    au < manifest ; 2008 ; Current Cardiovascular Risk Reports Volume 2 ; 2 >
+    au < manifest ; 2009 ; Current Cardiovascular Risk Reports Volume 3 ; 3 >
+    au < manifest ; 2010 ; Current Cardiovascular Risk Reports Volume 4 ; 4 >
+    au < manifest ; 2011 ; Current Cardiovascular Risk Reports Volume 5 ; 5 >
+    au < manifest ; 2012 ; Current Cardiovascular Risk Reports Volume 6 ; 6 >
 
   }
 
@@ -24908,6 +25082,15 @@
 
     param[journal_issn] = 1556-3790
 
+    au < manifest ; 2005 ; Current Colorectal Cancer Reports Volume 1 ; 1 >
+    au < manifest ; 2006 ; Current Colorectal Cancer Reports Volume 2 ; 2 >
+    au < manifest ; 2007 ; Current Colorectal Cancer Reports Volume 3 ; 3 >
+    au < manifest ; 2008 ; Current Colorectal Cancer Reports Volume 4 ; 4 >
+    au < manifest ; 2009 ; Current Colorectal Cancer Reports Volume 5 ; 5 >
+    au < manifest ; 2010 ; Current Colorectal Cancer Reports Volume 6 ; 6 >
+    au < manifest ; 2011 ; Current Colorectal Cancer Reports Volume 7 ; 7 >
+    au < manifest ; 2012 ; Current Colorectal Cancer Reports Volume 8 ; 8 >
+
   }
 
   {
@@ -24920,6 +25103,19 @@
     >
 
     param[journal_issn] = 1534-4827
+
+    au < manifest ; 2001 ; Current Diabetes Reports Volume 1 ; 1 >
+    au < manifest ; 2002 ; Current Diabetes Reports Volume 2 ; 2 >
+    au < manifest ; 2003 ; Current Diabetes Reports Volume 3 ; 3 >
+    au < manifest ; 2004 ; Current Diabetes Reports Volume 4 ; 4 >
+    au < manifest ; 2005 ; Current Diabetes Reports Volume 5 ; 5 >
+    au < manifest ; 2006 ; Current Diabetes Reports Volume 6 ; 6 >
+    au < manifest ; 2007 ; Current Diabetes Reports Volume 7 ; 7 >
+    au < manifest ; 2008 ; Current Diabetes Reports Volume 8 ; 8 >
+    au < manifest ; 2009 ; Current Diabetes Reports Volume 9 ; 9 >
+    au < manifest ; 2010 ; Current Diabetes Reports Volume 10 ; 10 >
+    au < manifest ; 2011 ; Current Diabetes Reports Volume 11 ; 11 >
+    au < manifest ; 2012 ; Current Diabetes Reports Volume 12 ; 12 >
 
   }
 
@@ -24934,6 +25130,13 @@
 
     param[journal_issn] = 1936-3761
 
+    au < manifest ; 2007 ; Current Fungal Infection Reports Volume 1 ; 1 >
+    au < manifest ; 2008 ; Current Fungal Infection Reports Volume 2 ; 2 >
+    au < manifest ; 2009 ; Current Fungal Infection Reports Volume 3 ; 3 >
+    au < manifest ; 2010 ; Current Fungal Infection Reports Volume 4 ; 4 >
+    au < manifest ; 2011 ; Current Fungal Infection Reports Volume 5 ; 5 >
+    au < manifest ; 2012 ; Current Fungal Infection Reports Volume 6 ; 6 >
+
   }
 
   {
@@ -24946,6 +25149,21 @@
     >
 
     param[journal_issn] = 1522-8037
+
+    au < manifest ; 1999 ; Current Gastroenterology Reports Volume 1 ; 1 >
+    au < manifest ; 2000 ; Current Gastroenterology Reports Volume 2 ; 2 >
+    au < manifest ; 2001 ; Current Gastroenterology Reports Volume 3 ; 3 >
+    au < manifest ; 2002 ; Current Gastroenterology Reports Volume 4 ; 4 >
+    au < manifest ; 2003 ; Current Gastroenterology Reports Volume 5 ; 5 >
+    au < manifest ; 2004 ; Current Gastroenterology Reports Volume 6 ; 6 >
+    au < manifest ; 2005 ; Current Gastroenterology Reports Volume 7 ; 7 >
+    au < manifest ; 2006 ; Current Gastroenterology Reports Volume 8 ; 8 >
+    au < manifest ; 2007 ; Current Gastroenterology Reports Volume 9 ; 9 >
+    au < manifest ; 2008 ; Current Gastroenterology Reports Volume 10 ; 10 >
+    au < manifest ; 2009 ; Current Gastroenterology Reports Volume 11 ; 11 >
+    au < manifest ; 2010 ; Current Gastroenterology Reports Volume 12 ; 12 >
+    au < manifest ; 2011 ; Current Gastroenterology Reports Volume 13 ; 13 >
+    au < manifest ; 2012 ; Current Gastroenterology Reports Volume 14 ; 14 >
 
   }
 
@@ -24960,6 +25178,65 @@
 
     param[journal_issn] = 0172-8083
 
+    au < manifest ; 1979-1980 ; Current Genetics Volume 1 ; 1 >
+    au < manifest ; 1980 ; Current Genetics Volume 2 ; 2 >
+    au < manifest ; 1981 ; Current Genetics Volume 3 ; 3 >
+    au < manifest ; 1981 ; Current Genetics Volume 4 ; 4 >
+    au < manifest ; 1982 ; Current Genetics Volume 5 ; 5 >
+    au < manifest ; 1982 ; Current Genetics Volume 6 ; 6 >
+    au < manifest ; 1983 ; Current Genetics Volume 7 ; 7 >
+    au < manifest ; 1984 ; Current Genetics Volume 8 ; 8 >
+    au < manifest ; 1984-1985 ; Current Genetics Volume 9 ; 9 >
+    au < manifest ; 1985-1986 ; Current Genetics Volume 10 ; 10 >
+    au < manifest ; 1986-1987 ; Current Genetics Volume 11 ; 11 >
+    au < manifest ; 1987 ; Current Genetics Volume 12 ; 12 >
+    au < manifest ; 1988 ; Current Genetics Volume 13 ; 13 >
+    au < manifest ; 1988 ; Current Genetics Volume 14 ; 14 >
+    au < manifest ; 1989 ; Current Genetics Volume 15 ; 15 >
+    au < manifest ; 1989 ; Current Genetics Volume 16 ; 16 >
+    au < manifest ; 1990 ; Current Genetics Volume 17 ; 17 >
+    au < manifest ; 1990 ; Current Genetics Volume 18 ; 18 >
+    au < manifest ; 1991 ; Current Genetics Volume 19 ; 19 >
+    au < manifest ; 1991 ; Current Genetics Volume 20 ; 20 >
+    au < manifest ; 1992 ; Current Genetics Volume 21 ; 21 >
+    au < manifest ; 1992 ; Current Genetics Volume 22 ; 22 >
+    au < manifest ; 1993 ; Current Genetics Volume 23 ; 23 >
+    au < manifest ; 1993 ; Current Genetics Volume 24 ; 24 >
+    au < manifest ; 1994 ; Current Genetics Volume 25 ; 25 >
+    au < manifest ; 1994 ; Current Genetics Volume 26 ; 26 >
+    au < manifest ; 1994-1995 ; Current Genetics Volume 27 ; 27 >
+    au < manifest ; 1995 ; Current Genetics Volume 28 ; 28 >
+    au < manifest ; 1995-1996 ; Current Genetics Volume 29 ; 29 >
+    au < manifest ; 1996 ; Current Genetics Volume 30 ; 30 >
+    au < manifest ; 1997 ; Current Genetics Volume 31 ; 31 >
+    au < manifest ; 1997 ; Current Genetics Volume 32 ; 32 >
+    au < manifest ; 1998 ; Current Genetics Volume 33 ; 33 >
+    au < manifest ; 1998 ; Current Genetics Volume 34 ; 34 >
+    au < manifest ; 1999 ; Current Genetics Volume 35 ; 35 >
+    au < manifest ; 1999 ; Current Genetics Volume 36 ; 36 >
+    au < manifest ; 2000 ; Current Genetics Volume 37 ; 37 >
+    au < manifest ; 2000 ; Current Genetics Volume 38 ; 38 >
+    au < manifest ; 2001 ; Current Genetics Volume 39 ; 39 >
+    au < manifest ; 2001 ; Current Genetics Volume 40 ; 40 >
+    au < manifest ; 2002 ; Current Genetics Volume 41 ; 41 >
+    au < manifest ; 2002 ; Current Genetics Volume 42 ; 42 >
+    au < manifest ; 2003 ; Current Genetics Volume 43 ; 43 >
+    au < manifest ; 2003 ; Current Genetics Volume 44 ; 44 >
+    au < manifest ; 2004 ; Current Genetics Volume 45 ; 45 >
+    au < manifest ; 2004 ; Current Genetics Volume 46 ; 46 >
+    au < manifest ; 2005 ; Current Genetics Volume 47 ; 47 >
+    au < manifest ; 2005 ; Current Genetics Volume 48 ; 48 >
+    au < manifest ; 2006 ; Current Genetics Volume 49 ; 49 >
+    au < manifest ; 2006 ; Current Genetics Volume 50 ; 50 >
+    au < manifest ; 2007 ; Current Genetics Volume 51 ; 51 >
+    au < manifest ; 2007 ; Current Genetics Volume 52 ; 52 >
+    au < manifest ; 2008 ; Current Genetics Volume 53 ; 53 >
+    au < manifest ; 2008 ; Current Genetics Volume 54 ; 54 >
+    au < manifest ; 2009 ; Current Genetics Volume 55 ; 55 >
+    au < manifest ; 2010 ; Current Genetics Volume 56 ; 56 >
+    au < manifest ; 2011 ; Current Genetics Volume 57 ; 57 >
+    au < manifest ; 2012 ; Current Genetics Volume 58 ; 58 >
+
   }
 
   {
@@ -24972,6 +25249,8 @@
     >
 
     param[journal_issn] = 1934-967X
+
+    au < manifest ; 2007 ; Current GERD Reports Volume 1 ; 1 >
 
   }
 
@@ -24986,6 +25265,16 @@
 
     param[journal_issn] = 1546-9530
 
+    au < manifest ; 2004 ; Current Heart Failure Reports Volume 1 ; 1 >
+    au < manifest ; 2005 ; Current Heart Failure Reports Volume 2 ; 2 >
+    au < manifest ; 2006 ; Current Heart Failure Reports Volume 3 ; 3 >
+    au < manifest ; 2007 ; Current Heart Failure Reports Volume 4 ; 4 >
+    au < manifest ; 2008 ; Current Heart Failure Reports Volume 5 ; 5 >
+    au < manifest ; 2009 ; Current Heart Failure Reports Volume 6 ; 6 >
+    au < manifest ; 2010 ; Current Heart Failure Reports Volume 7 ; 7 >
+    au < manifest ; 2011 ; Current Heart Failure Reports Volume 8 ; 8 >
+    au < manifest ; 2012 ; Current Heart Failure Reports Volume 9 ; 9 >
+
   }
 
   {
@@ -24998,6 +25287,14 @@
     >
 
     param[journal_issn] = 1558-8211
+
+    au < manifest ; 2006 ; Current Hematologic Malignancy Reports Volume 1 ; 1 >
+    au < manifest ; 2007 ; Current Hematologic Malignancy Reports Volume 2 ; 2 >
+    au < manifest ; 2008 ; Current Hematologic Malignancy Reports Volume 3 ; 3 >
+    au < manifest ; 2009 ; Current Hematologic Malignancy Reports Volume 4 ; 4 >
+    au < manifest ; 2010 ; Current Hematologic Malignancy Reports Volume 5 ; 5 >
+    au < manifest ; 2011 ; Current Hematologic Malignancy Reports Volume 6 ; 6 >
+    au < manifest ; 2012 ; Current Hematologic Malignancy Reports Volume 7 ; 7 >
 
   }
 
@@ -25012,6 +25309,18 @@
 
     param[journal_issn] = 1540-3416
 
+    au < manifest ; 2002 ; Current Hepatitis Reports Volume 1 ; 1 >
+    au < manifest ; 2003 ; Current Hepatitis Reports Volume 2 ; 2 >
+    au < manifest ; 2004 ; Current Hepatitis Reports Volume 3 ; 3 >
+    au < manifest ; 2005 ; Current Hepatitis Reports Volume 4 ; 4 >
+    au < manifest ; 2006 ; Current Hepatitis Reports Volume 5 ; 5 >
+    au < manifest ; 2007 ; Current Hepatitis Reports Volume 6 ; 6 >
+    au < manifest ; 2008 ; Current Hepatitis Reports Volume 7 ; 7 >
+    au < manifest ; 2009 ; Current Hepatitis Reports Volume 8 ; 8 >
+    au < manifest ; 2010 ; Current Hepatitis Reports Volume 9 ; 9 >
+    au < manifest ; 2011 ; Current Hepatitis Reports Volume 10 ; 10 >
+    au < manifest ; 2012 ; Current Hepatitis Reports Volume 11 ; 11 >
+
   }
 
   {
@@ -25024,6 +25333,16 @@
     >
 
     param[journal_issn] = 1548-3568
+
+    au < manifest ; 2004 ; Current HIV/AIDS Reports Volume 1 ; 1 >
+    au < manifest ; 2005 ; Current HIV/AIDS Reports Volume 2 ; 2 >
+    au < manifest ; 2006 ; Current HIV/AIDS Reports Volume 3 ; 3 >
+    au < manifest ; 2007 ; Current HIV/AIDS Reports Volume 4 ; 4 >
+    au < manifest ; 2008 ; Current HIV/AIDS Reports Volume 5 ; 5 >
+    au < manifest ; 2009 ; Current HIV/AIDS Reports Volume 6 ; 6 >
+    au < manifest ; 2010 ; Current HIV/AIDS Reports Volume 7 ; 7 >
+    au < manifest ; 2011 ; Current HIV/AIDS Reports Volume 8 ; 8 >
+    au < manifest ; 2012 ; Current HIV/AIDS Reports Volume 9 ; 9 >
 
   }
 
@@ -25038,6 +25357,21 @@
 
     param[journal_issn] = 1522-6417
 
+    au < manifest ; 1999 ; Current Hypertension Reports Volume 1 ; 1 >
+    au < manifest ; 2000 ; Current Hypertension Reports Volume 2 ; 2 >
+    au < manifest ; 2001 ; Current Hypertension Reports Volume 3 ; 3 >
+    au < manifest ; 2002 ; Current Hypertension Reports Volume 4 ; 4 >
+    au < manifest ; 2003 ; Current Hypertension Reports Volume 5 ; 5 >
+    au < manifest ; 2004 ; Current Hypertension Reports Volume 6 ; 6 >
+    au < manifest ; 2005 ; Current Hypertension Reports Volume 7 ; 7 >
+    au < manifest ; 2006 ; Current Hypertension Reports Volume 8 ; 8 >
+    au < manifest ; 2007 ; Current Hypertension Reports Volume 9 ; 9 >
+    au < manifest ; 2008 ; Current Hypertension Reports Volume 10 ; 10 >
+    au < manifest ; 2009 ; Current Hypertension Reports Volume 11 ; 11 >
+    au < manifest ; 2010 ; Current Hypertension Reports Volume 12 ; 12 >
+    au < manifest ; 2011 ; Current Hypertension Reports Volume 13 ; 13 >
+    au < manifest ; 2012 ; Current Hypertension Reports Volume 14 ; 14 >
+
   }
 
   {
@@ -25050,6 +25384,21 @@
     >
 
     param[journal_issn] = 1523-3847
+
+    au < manifest ; 1999 ; Current Infectious Disease Reports Volume 1 ; 1 >
+    au < manifest ; 2000 ; Current Infectious Disease Reports Volume 2 ; 2 >
+    au < manifest ; 2001 ; Current Infectious Disease Reports Volume 3 ; 3 >
+    au < manifest ; 2002 ; Current Infectious Disease Reports Volume 4 ; 4 >
+    au < manifest ; 2003 ; Current Infectious Disease Reports Volume 5 ; 5 >
+    au < manifest ; 2004 ; Current Infectious Disease Reports Volume 6 ; 6 >
+    au < manifest ; 2005 ; Current Infectious Disease Reports Volume 7 ; 7 >
+    au < manifest ; 2006 ; Current Infectious Disease Reports Volume 8 ; 8 >
+    au < manifest ; 2007 ; Current Infectious Disease Reports Volume 9 ; 9 >
+    au < manifest ; 2008 ; Current Infectious Disease Reports Volume 10 ; 10 >
+    au < manifest ; 2009 ; Current Infectious Disease Reports Volume 11 ; 11 >
+    au < manifest ; 2010 ; Current Infectious Disease Reports Volume 12 ; 12 >
+    au < manifest ; 2011 ; Current Infectious Disease Reports Volume 13 ; 13 >
+    au < manifest ; 2012 ; Current Infectious Disease Reports Volume 14 ; 14 >
 
   }
 
@@ -25064,6 +25413,71 @@
 
     param[journal_issn] = 0343-8651
 
+    au < manifest ; 1978 ; Current Microbiology Volume 1 ; 1 >
+    au < manifest ; 1979 ; Current Microbiology Volume 2 ; 2 >
+    au < manifest ; 1979-1980 ; Current Microbiology Volume 3 ; 3 >
+    au < manifest ; 1980 ; Current Microbiology Volume 4 ; 4 >
+    au < manifest ; 1981 ; Current Microbiology Volume 5 ; 5 >
+    au < manifest ; 1981 ; Current Microbiology Volume 6 ; 6 >
+    au < manifest ; 1982 ; Current Microbiology Volume 7 ; 7 >
+    au < manifest ; 1983 ; Current Microbiology Volume 8 ; 8 >
+    au < manifest ; 1983 ; Current Microbiology Volume 9 ; 9 >
+    au < manifest ; 1984 ; Current Microbiology Volume 10 ; 10 >
+    au < manifest ; 1984 ; Current Microbiology Volume 11 ; 11 >
+    au < manifest ; 1985 ; Current Microbiology Volume 12 ; 12 >
+    au < manifest ; 1986 ; Current Microbiology Volume 13 ; 13 >
+    au < manifest ; 1986 ; Current Microbiology Volume 14 ; 14 >
+    au < manifest ; 1987 ; Current Microbiology Volume 15 ; 15 >
+    au < manifest ; 1987-1988 ; Current Microbiology Volume 16 ; 16 >
+    au < manifest ; 1988 ; Current Microbiology Volume 17 ; 17 >
+    au < manifest ; 1989 ; Current Microbiology Volume 18 ; 18 >
+    au < manifest ; 1989 ; Current Microbiology Volume 19 ; 19 >
+    au < manifest ; 1990 ; Current Microbiology Volume 20 ; 20 >
+    au < manifest ; 1990 ; Current Microbiology Volume 21 ; 21 >
+    au < manifest ; 1991 ; Current Microbiology Volume 22 ; 22 >
+    au < manifest ; 1991 ; Current Microbiology Volume 23 ; 23 >
+    au < manifest ; 1992 ; Current Microbiology Volume 24 ; 24 >
+    au < manifest ; 1992 ; Current Microbiology Volume 25 ; 25 >
+    au < manifest ; 1993 ; Current Microbiology Volume 26 ; 26 >
+    au < manifest ; 1993 ; Current Microbiology Volume 27 ; 27 >
+    au < manifest ; 1994 ; Current Microbiology Volume 28 ; 28 >
+    au < manifest ; 1994 ; Current Microbiology Volume 29 ; 29 >
+    au < manifest ; 1995 ; Current Microbiology Volume 30 ; 30 >
+    au < manifest ; 1995 ; Current Microbiology Volume 31 ; 31 >
+    au < manifest ; 1996 ; Current Microbiology Volume 32 ; 32 >
+    au < manifest ; 1996 ; Current Microbiology Volume 33 ; 33 >
+    au < manifest ; 1997 ; Current Microbiology Volume 34 ; 34 >
+    au < manifest ; 1997 ; Current Microbiology Volume 35 ; 35 >
+    au < manifest ; 1998 ; Current Microbiology Volume 36 ; 36 >
+    au < manifest ; 1998 ; Current Microbiology Volume 37 ; 37 >
+    au < manifest ; 1999 ; Current Microbiology Volume 38 ; 38 >
+    au < manifest ; 1999 ; Current Microbiology Volume 39 ; 39 >
+    au < manifest ; 2000 ; Current Microbiology Volume 40 ; 40 >
+    au < manifest ; 2000 ; Current Microbiology Volume 41 ; 41 >
+    au < manifest ; 2001 ; Current Microbiology Volume 42 ; 42 >
+    au < manifest ; 2001 ; Current Microbiology Volume 43 ; 43 >
+    au < manifest ; 2002 ; Current Microbiology Volume 44 ; 44 >
+    au < manifest ; 2002 ; Current Microbiology Volume 45 ; 45 >
+    au < manifest ; 2003 ; Current Microbiology Volume 46 ; 46 >
+    au < manifest ; 2003 ; Current Microbiology Volume 47 ; 47 >
+    au < manifest ; 2004 ; Current Microbiology Volume 48 ; 48 >
+    au < manifest ; 2004 ; Current Microbiology Volume 49 ; 49 >
+    au < manifest ; 2005 ; Current Microbiology Volume 50 ; 50 >
+    au < manifest ; 2005 ; Current Microbiology Volume 51 ; 51 >
+    au < manifest ; 2006 ; Current Microbiology Volume 52 ; 52 >
+    au < manifest ; 2006 ; Current Microbiology Volume 53 ; 53 >
+    au < manifest ; 2007 ; Current Microbiology Volume 54 ; 54 >
+    au < manifest ; 2007 ; Current Microbiology Volume 55 ; 55 >
+    au < manifest ; 2008 ; Current Microbiology Volume 56 ; 56 >
+    au < manifest ; 2008 ; Current Microbiology Volume 57 ; 57 >
+    au < manifest ; 2009 ; Current Microbiology Volume 58 ; 58 >
+    au < manifest ; 2009 ; Current Microbiology Volume 59 ; 59 >
+    au < manifest ; 2010 ; Current Microbiology Volume 60 ; 60 >
+    au < manifest ; 2010 ; Current Microbiology Volume 61 ; 61 >
+    au < manifest ; 2011 ; Current Microbiology Volume 62 ; 62 >
+    au < manifest ; 2011 ; Current Microbiology Volume 63 ; 63 >
+    au < manifest ; 2012 ; Current Microbiology Volume 64 ; 64 >
+
   }
 
   {
@@ -25076,6 +25490,19 @@
     >
 
     param[journal_issn] = 1528-4042
+
+    au < manifest ; 2001 ; Current Neurology and Neuroscience Reports Volume 1 ; 1 >
+    au < manifest ; 2002 ; Current Neurology and Neuroscience Reports Volume 2 ; 2 >
+    au < manifest ; 2003 ; Current Neurology and Neuroscience Reports Volume 3 ; 3 >
+    au < manifest ; 2004 ; Current Neurology and Neuroscience Reports Volume 4 ; 4 >
+    au < manifest ; 2005 ; Current Neurology and Neuroscience Reports Volume 5 ; 5 >
+    au < manifest ; 2006 ; Current Neurology and Neuroscience Reports Volume 6 ; 6 >
+    au < manifest ; 2007 ; Current Neurology and Neuroscience Reports Volume 7 ; 7 >
+    au < manifest ; 2008 ; Current Neurology and Neuroscience Reports Volume 8 ; 8 >
+    au < manifest ; 2009 ; Current Neurology and Neuroscience Reports Volume 9 ; 9 >
+    au < manifest ; 2010 ; Current Neurology and Neuroscience Reports Volume 10 ; 10 >
+    au < manifest ; 2011 ; Current Neurology and Neuroscience Reports Volume 11 ; 11 >
+    au < manifest ; 2012 ; Current Neurology and Neuroscience Reports Volume 12 ; 12 >
 
   }
 
@@ -25090,6 +25517,21 @@
 
     param[journal_issn] = 1523-3790
 
+    au < manifest ; 1999 ; Current Oncology Reports Volume 1 ; 1 >
+    au < manifest ; 2000 ; Current Oncology Reports Volume 2 ; 2 >
+    au < manifest ; 2001 ; Current Oncology Reports Volume 3 ; 3 >
+    au < manifest ; 2002 ; Current Oncology Reports Volume 4 ; 4 >
+    au < manifest ; 2003 ; Current Oncology Reports Volume 5 ; 5 >
+    au < manifest ; 2004 ; Current Oncology Reports Volume 6 ; 6 >
+    au < manifest ; 2005 ; Current Oncology Reports Volume 7 ; 7 >
+    au < manifest ; 2006 ; Current Oncology Reports Volume 8 ; 8 >
+    au < manifest ; 2007 ; Current Oncology Reports Volume 9 ; 9 >
+    au < manifest ; 2008 ; Current Oncology Reports Volume 10 ; 10 >
+    au < manifest ; 2009 ; Current Oncology Reports Volume 11 ; 11 >
+    au < manifest ; 2010 ; Current Oncology Reports Volume 12 ; 12 >
+    au < manifest ; 2011 ; Current Oncology Reports Volume 13 ; 13 >
+    au < manifest ; 2012 ; Current Oncology Reports Volume 14 ; 14 >
+
   }
 
   {
@@ -25103,6 +25545,17 @@
 
     param[journal_issn] = 1544-1873
 
+    au < manifest ; 2003 ; Current Osteoporosis Reports Volume 1 ; 1 >
+    au < manifest ; 2004 ; Current Osteoporosis Reports Volume 2 ; 2 >
+    au < manifest ; 2005 ; Current Osteoporosis Reports Volume 3 ; 3 >
+    au < manifest ; 2006 ; Current Osteoporosis Reports Volume 4 ; 4 >
+    au < manifest ; 2007 ; Current Osteoporosis Reports Volume 5 ; 5 >
+    au < manifest ; 2008 ; Current Osteoporosis Reports Volume 6 ; 6 >
+    au < manifest ; 2009 ; Current Osteoporosis Reports Volume 7 ; 7 >
+    au < manifest ; 2010 ; Current Osteoporosis Reports Volume 8 ; 8 >
+    au < manifest ; 2011 ; Current Osteoporosis Reports Volume 9 ; 9 >
+    au < manifest ; 2012 ; Current Osteoporosis Reports Volume 10 ; 10 >
+
   }
 
   {
@@ -25115,6 +25568,23 @@
 
     param[journal_issn] = 1531-3433
 
+    au < manifest ; 1997 ; Current Pain and Headache Reports Volume 1 ; 1 >
+    au < manifest ; 1998 ; Current Pain and Headache Reports Volume 2 ; 2 >
+    au < manifest ; 1999 ; Current Pain and Headache Reports Volume 3 ; 3 >
+    au < manifest ; 2000 ; Current Pain and Headache Reports Volume 4 ; 4 >
+    au < manifest ; 2001 ; Current Pain and Headache Reports Volume 5 ; 5 >
+    au < manifest ; 2002 ; Current Pain and Headache Reports Volume 6 ; 6 >
+    au < manifest ; 2003 ; Current Pain and Headache Reports Volume 7 ; 7 >
+    au < manifest ; 2004 ; Current Pain and Headache Reports Volume 8 ; 8 >
+    au < manifest ; 2005 ; Current Pain and Headache Reports Volume 9 ; 9 >
+    au < manifest ; 2006 ; Current Pain and Headache Reports Volume 10 ; 10 >
+    au < manifest ; 2007 ; Current Pain and Headache Reports Volume 11 ; 11 >
+    au < manifest ; 2008 ; Current Pain and Headache Reports Volume 12 ; 12 >
+    au < manifest ; 2009 ; Current Pain and Headache Reports Volume 13 ; 13 >
+    au < manifest ; 2010 ; Current Pain and Headache Reports Volume 14 ; 14 >
+    au < manifest ; 2011 ; Current Pain and Headache Reports Volume 15 ; 15 >
+    au < manifest ; 2012 ; Current Pain and Headache Reports Volume 16 ; 16 >
+
   }
 
   {
@@ -25126,6 +25596,14 @@
     >
 
     param[journal_issn] = 1544-225X
+
+    au < manifest ; 2003 ; Current Prostate Reports Volume 1 ; 1 >
+    au < manifest ; 2004 ; Current Prostate Reports Volume 2 ; 2 >
+    au < manifest ; 2005 ; Current Prostate Reports Volume 3 ; 3 >
+    au < manifest ; 2006 ; Current Prostate Reports Volume 4 ; 4 >
+    au < manifest ; 2007 ; Current Prostate Reports Volume 5 ; 5 >
+    au < manifest ; 2008 ; Current Prostate Reports Volume 6 ; 6 >
+    au < manifest ; 2009 ; Current Prostate Reports Volume 7 ; 7 >
 
   }
 
@@ -25140,6 +25618,21 @@
 
     param[journal_issn] = 1523-3812
 
+    au < manifest ; 1999 ; Current Psychiatry Reports Volume 1 ; 1 >
+    au < manifest ; 2000 ; Current Psychiatry Reports Volume 2 ; 2 >
+    au < manifest ; 2001 ; Current Psychiatry Reports Volume 3 ; 3 >
+    au < manifest ; 2002 ; Current Psychiatry Reports Volume 4 ; 4 >
+    au < manifest ; 2003 ; Current Psychiatry Reports Volume 5 ; 5 >
+    au < manifest ; 2004 ; Current Psychiatry Reports Volume 6 ; 6 >
+    au < manifest ; 2005 ; Current Psychiatry Reports Volume 7 ; 7 >
+    au < manifest ; 2006 ; Current Psychiatry Reports Volume 8 ; 8 >
+    au < manifest ; 2007 ; Current Psychiatry Reports Volume 9 ; 9 >
+    au < manifest ; 2008 ; Current Psychiatry Reports Volume 10 ; 10 >
+    au < manifest ; 2009 ; Current Psychiatry Reports Volume 11 ; 11 >
+    au < manifest ; 2010 ; Current Psychiatry Reports Volume 12 ; 12 >
+    au < manifest ; 2011 ; Current Psychiatry Reports Volume 13 ; 13 >
+    au < manifest ; 2012 ; Current Psychiatry Reports Volume 14 ; 14 >
+
   }
 
   {
@@ -25150,7 +25643,11 @@
       issnl = 0144-3895
     >
 
+    comment[merged_with] = 1046-1310
     param[journal_issn] = 0144-3895
+
+    au < manifest ; 1981 ; Current Psychological Reviews Volume 1 ; 1 >
+    au < manifest ; 1982 ; Current Psychological Reviews Volume 2 ; 2 >
 
   }
 
@@ -25163,7 +25660,40 @@
       issnl = 1046-1310
     >
 
+    comment[merged_with] = 0144-3895
     param[journal_issn] = 1046-1310
+
+    au < manifest ; 1981 ; Current Psychology Volume 1 ; 1 >
+    au < manifest ; 1982 ; Current Psychology Volume 2 ; 2 >
+    au < manifest ; 1984 ; Current Psychological Research & Reviews Volume 3 ; 3 >
+    au < manifest ; 1985 ; Current Psychological Research & Reviews Volume 4 ; 4 >
+    au < manifest ; 1986 ; Current Psychological Research & Reviews Volume 5 ; 5 >
+    au < manifest ; 1987 ; Current Psychological Research & Reviews Volume 6 ; 6 >
+    au < manifest ; 1988 ; Current Psychology Volume 7 ; 7 >
+    au < manifest ; 1989 ; Current Psychology Volume 8 ; 8 >
+    au < manifest ; 1990 ; Current Psychology Volume 9 ; 9 >
+    au < manifest ; 1991 ; Current Psychology Volume 10 ; 10 >
+    au < manifest ; 1992 ; Current Psychology Volume 11 ; 11 >
+    au < manifest ; 1993 ; Current Psychology Volume 12 ; 12 >
+    au < manifest ; 1994 ; Current Psychology Volume 13 ; 13 >
+    au < manifest ; 1995-1996 ; Current Psychology Volume 14 ; 14 >
+    au < manifest ; 1996-1997 ; Current Psychology Volume 15 ; 15 >
+    au < manifest ; 1997 ; Current Psychology Volume 16 ; 16 >
+    au < manifest ; 1998 ; Current Psychology Volume 17 ; 17 >
+    au < manifest ; 1999 ; Current Psychology Volume 18 ; 18 >
+    au < manifest ; 2000 ; Current Psychology Volume 19 ; 19 >
+    au < manifest ; 2001 ; Current Psychology Volume 20 ; 20 >
+    au < manifest ; 2002 ; Current Psychology Volume 21 ; 21 >
+    au < manifest ; 2003 ; Current Psychology Volume 22 ; 22 >
+    au < manifest ; 2004 ; Current Psychology Volume 23 ; 23 >
+    au < manifest ; 2005 ; Current Psychology Volume 24 ; 24 >
+    au < manifest ; 2006 ; Current Psychology Volume 25 ; 25 >
+    au < manifest ; 2007 ; Current Psychology Volume 26 ; 26 >
+    au < manifest ; 2008 ; Current Psychology Volume 27 ; 27 >
+    au < manifest ; 2009 ; Current Psychology Volume 28 ; 28 >
+    au < manifest ; 2010 ; Current Psychology Volume 29 ; 29 >
+    au < manifest ; 2011 ; Current Psychology Volume 30 ; 30 >
+    au < manifest ; 2012 ; Current Psychology Volume 31 ; 31 >
 
   }
 
@@ -25171,10 +25701,16 @@
 
     title <
       name = Current Psychosis and Therapeutics Reports ;
-      issn = 1545-8083
+      issn = 1545-8083 ;
+      eissn = 1545-8091
     >
 
     param[journal_issn] = 1545-8083
+
+    au < manifest ; 2003 ; Current Psychosis and Therapeutics Reports Volume 1 ; 1 >
+    au < manifest ; 2004 ; Current Psychosis and Therapeutics Reports Volume 2 ; 2 >
+    au < manifest ; 2005 ; Current Psychosis and Therapeutics Reports Volume 3 ; 3 >
+    au < manifest ; 2006 ; Current Psychosis and Therapeutics Reports Volume 4 ; 4 >
 
   }
 
@@ -25189,6 +25725,12 @@
 
     param[journal_issn] = 1935-973X
 
+    au < manifest ; 2008 ; Current Reviews in Musculoskeletal Medicine Volume 1 ; 1 >
+    au < manifest ; 2009 ; Current Reviews in Musculoskeletal Medicine Volume 2 ; 2 >
+    au < manifest ; 2010 ; Current Reviews in Musculoskeletal Medicine Volume 3 ; 3 >
+    au < manifest ; 2011 ; Current Reviews in Musculoskeletal Medicine Volume 4 ; 4 >
+    au < manifest ; 2012 ; Current Reviews in Musculoskeletal Medicine Volume 5 ; 5 >
+
   }
 
   {
@@ -25201,6 +25743,21 @@
     >
 
     param[journal_issn] = 1523-3774
+
+    au < manifest ; 1999 ; Current Rheumatology Reports Volume 1 ; 1 >
+    au < manifest ; 2000 ; Current Rheumatology Reports Volume 2 ; 2 >
+    au < manifest ; 2001 ; Current Rheumatology Reports Volume 3 ; 3 >
+    au < manifest ; 2002 ; Current Rheumatology Reports Volume 4 ; 4 >
+    au < manifest ; 2003 ; Current Rheumatology Reports Volume 5 ; 5 >
+    au < manifest ; 2004 ; Current Rheumatology Reports Volume 6 ; 6 >
+    au < manifest ; 2005 ; Current Rheumatology Reports Volume 7 ; 7 >
+    au < manifest ; 2006 ; Current Rheumatology Reports Volume 8 ; 8 >
+    au < manifest ; 2007 ; Current Rheumatology Reports Volume 9 ; 9 >
+    au < manifest ; 2008 ; Current Rheumatology Reports Volume 10 ; 10 >
+    au < manifest ; 2009 ; Current Rheumatology Reports Volume 11 ; 11 >
+    au < manifest ; 2010 ; Current Rheumatology Reports Volume 12 ; 12 >
+    au < manifest ; 2011 ; Current Rheumatology Reports Volume 13 ; 13 >
+    au < manifest ; 2012 ; Current Rheumatology Reports Volume 14 ; 14 >
 
   }
 
@@ -25215,6 +25772,12 @@
 
     param[journal_issn] = 1548-3584
 
+    au < manifest ; 2004 ; Current Sexual Health Reports Volume 1 ; 1 >
+    au < manifest ; 2005 ; Current Sexual Health Reports Volume 2 ; 2 >
+    au < manifest ; 2006 ; Current Sexual Health Reports Volume 3 ; 3 >
+    au < manifest ; 2007 ; Current Sexual Health Reports Volume 4 ; 4 >
+    au < manifest ; 2008 ; Current Sexual Health Reports Volume 5 ; 5 >
+
   }
 
   {
@@ -25227,6 +25790,21 @@
     >
 
     param[journal_issn] = 1092-8464
+
+    au < manifest ; 1999 ; Current Treatment Options in Cardiovascular Medicine Volume 1 ; 1 >
+    au < manifest ; 2000 ; Current Treatment Options in Cardiovascular Medicine Volume 2 ; 2 >
+    au < manifest ; 2001 ; Current Treatment Options in Cardiovascular Medicine Volume 3 ; 3 >
+    au < manifest ; 2002 ; Current Treatment Options in Cardiovascular Medicine Volume 4 ; 4 >
+    au < manifest ; 2003 ; Current Treatment Options in Cardiovascular Medicine Volume 5 ; 5 >
+    au < manifest ; 2004 ; Current Treatment Options in Cardiovascular Medicine Volume 6 ; 6 >
+    au < manifest ; 2005 ; Current Treatment Options in Cardiovascular Medicine Volume 7 ; 7 >
+    au < manifest ; 2006 ; Current Treatment Options in Cardiovascular Medicine Volume 8 ; 8 >
+    au < manifest ; 2007 ; Current Treatment Options in Cardiovascular Medicine Volume 9 ; 9 >
+    au < manifest ; 2008 ; Current Treatment Options in Cardiovascular Medicine Volume 10 ; 10 >
+    au < manifest ; 2009 ; Current Treatment Options in Cardiovascular Medicine Volume 11 ; 11 >
+    au < manifest ; 2010 ; Current Treatment Options in Cardiovascular Medicine Volume 12 ; 12 >
+    au < manifest ; 2011 ; Current Treatment Options in Cardiovascular Medicine Volume 13 ; 13 >
+    au < manifest ; 2012 ; Current Treatment Options in Cardiovascular Medicine Volume 14 ; 14 >
 
   }
 
@@ -25241,6 +25819,18 @@
 
     param[journal_issn] = 1092-8472
 
+    au < manifest ; 1998 ; Current Treatment Options in Gastroenterology Volume 1 ; 1 >
+    au < manifest ; 1999 ; Current Treatment Options in Gastroenterology Volume 2 ; 2 >
+    au < manifest ; 2000 ; Current Treatment Options in Gastroenterology Volume 3 ; 3 >
+    au < manifest ; 2001 ; Current Treatment Options in Gastroenterology Volume 4 ; 4 >
+    au < manifest ; 2002 ; Current Treatment Options in Gastroenterology Volume 5 ; 5 >
+    au < manifest ; 2003 ; Current Treatment Options in Gastroenterology Volume 6 ; 6 >
+    au < manifest ; 2004 ; Current Treatment Options in Gastroenterology Volume 7 ; 7 >
+    au < manifest ; 2005 ; Current Treatment Options in Gastroenterology Volume 8 ; 8 >
+    au < manifest ; 2006 ; Current Treatment Options in Gastroenterology Volume 9 ; 9 >
+    au < manifest ; 2007 ; Current Treatment Options in Gastroenterology Volume 10 ; 10 >
+    au < manifest ; 2008 ; Current Treatment Options in Gastroenterology Volume 11 ; 11 >
+
   }
 
   {
@@ -25254,6 +25844,21 @@
 
     param[journal_issn] = 1092-8480
 
+    au < manifest ; 1999 ; Current Treatment Options in Neurology Volume 1 ; 1 >
+    au < manifest ; 2000 ; Current Treatment Options in Neurology Volume 2 ; 2 >
+    au < manifest ; 2001 ; Current Treatment Options in Neurology Volume 3 ; 3 >
+    au < manifest ; 2002 ; Current Treatment Options in Neurology Volume 4 ; 4 >
+    au < manifest ; 2003 ; Current Treatment Options in Neurology Volume 5 ; 5 >
+    au < manifest ; 2004 ; Current Treatment Options in Neurology Volume 6 ; 6 >
+    au < manifest ; 2005 ; Current Treatment Options in Neurology Volume 7 ; 7 >
+    au < manifest ; 2006 ; Current Treatment Options in Neurology Volume 8 ; 8 >
+    au < manifest ; 2007 ; Current Treatment Options in Neurology Volume 9 ; 9 >
+    au < manifest ; 2008 ; Current Treatment Options in Neurology Volume 10 ; 10 >
+    au < manifest ; 2009 ; Current Treatment Options in Neurology Volume 11 ; 11 >
+    au < manifest ; 2010 ; Current Treatment Options in Neurology Volume 12 ; 12 >
+    au < manifest ; 2011 ; Current Treatment Options in Neurology Volume 13 ; 13 >
+    au < manifest ; 2012 ; Current Treatment Options in Neurology Volume 14 ; 14 >
+
   }
 
   {
@@ -25265,6 +25870,20 @@
     >
 
     param[journal_issn] = 1527-2729
+
+    au < manifest ; 2000 ; Current Treatment Options in Oncology Volume 1 ; 1 >
+    au < manifest ; 2001 ; Current Treatment Options in Oncology Volume 2 ; 2 >
+    au < manifest ; 2002 ; Current Treatment Options in Oncology Volume 3 ; 3 >
+    au < manifest ; 2003 ; Current Treatment Options in Oncology Volume 4 ; 4 >
+    au < manifest ; 2004 ; Current Treatment Options in Oncology Volume 5 ; 5 >
+    au < manifest ; 2005 ; Current Treatment Options in Oncology Volume 6 ; 6 >
+    au < manifest ; 2006 ; Current Treatment Options in Oncology Volume 7 ; 7 >
+    au < manifest ; 2007 ; Current Treatment Options in Oncology Volume 8 ; 8 >
+    au < manifest ; 2008 ; Current Treatment Options in Oncology Volume 9 ; 9 >
+    au < manifest ; 2009 ; Current Treatment Options in Oncology Volume 10 ; 10 >
+    au < manifest ; 2010 ; Current Treatment Options in Oncology Volume 11 ; 11 >
+    au < manifest ; 2011 ; Current Treatment Options in Oncology Volume 12 ; 12 >
+    au < manifest ; 2012 ; Current Treatment Options in Oncology Volume 13 ; 13 >
 
   }
 
@@ -25279,6 +25898,20 @@
 
     param[journal_issn] = 1527-2737
 
+    au < manifest ; 2000 ; Current Urology Reports Volume 1 ; 1 >
+    au < manifest ; 2001 ; Current Urology Reports Volume 2 ; 2 >
+    au < manifest ; 2002 ; Current Urology Reports Volume 3 ; 3 >
+    au < manifest ; 2003 ; Current Urology Reports Volume 4 ; 4 >
+    au < manifest ; 2004 ; Current Urology Reports Volume 5 ; 5 >
+    au < manifest ; 2005 ; Current Urology Reports Volume 6 ; 6 >
+    au < manifest ; 2006 ; Current Urology Reports Volume 7 ; 7 >
+    au < manifest ; 2007 ; Current Urology Reports Volume 8 ; 8 >
+    au < manifest ; 2008 ; Current Urology Reports Volume 9 ; 9 >
+    au < manifest ; 2009 ; Current Urology Reports Volume 10 ; 10 >
+    au < manifest ; 2010 ; Current Urology Reports Volume 11 ; 11 >
+    au < manifest ; 2011 ; Current Urology Reports Volume 12 ; 12 >
+    au < manifest ; 2012 ; Current Urology Reports Volume 13 ; 13 >
+
   }
 
   {
@@ -25291,6 +25924,55 @@
     >
 
     param[journal_issn] = 1060-0396
+
+    au < manifest ; 1965 ; Cybernetics and Systems Analysis Volume 1 ; 1 >
+    au < manifest ; 1966 ; Cybernetics and Systems Analysis Volume 2 ; 2 >
+    au < manifest ; 1967 ; Cybernetics and Systems Analysis Volume 3 ; 3 >
+    au < manifest ; 1968 ; Cybernetics and Systems Analysis Volume 4 ; 4 >
+    au < manifest ; 1969 ; Cybernetics and Systems Analysis Volume 5 ; 5 >
+    au < manifest ; 1972 ; Cybernetics and Systems Analysis Volume 6 ; 6 >
+    au < manifest ; 1971 ; Cybernetics and Systems Analysis Volume 7 ; 7 >
+    au < manifest ; 1972 ; Cybernetics and Systems Analysis Volume 8 ; 8 >
+    au < manifest ; 1973 ; Cybernetics and Systems Analysis Volume 9 ; 9 >
+    au < manifest ; 1974 ; Cybernetics and Systems Analysis Volume 10 ; 10 >
+    au < manifest ; 1975 ; Cybernetics and Systems Analysis Volume 11 ; 11 >
+    au < manifest ; 1976 ; Cybernetics and Systems Analysis Volume 12 ; 12 >
+    au < manifest ; 1977 ; Cybernetics and Systems Analysis Volume 13 ; 13 >
+    au < manifest ; 1978 ; Cybernetics and Systems Analysis Volume 14 ; 14 >
+    au < manifest ; 1979 ; Cybernetics and Systems Analysis Volume 15 ; 15 >
+    au < manifest ; 1980 ; Cybernetics and Systems Analysis Volume 16 ; 16 >
+    au < manifest ; 1981 ; Cybernetics and Systems Analysis Volume 17 ; 17 >
+    au < manifest ; 1982 ; Cybernetics and Systems Analysis Volume 18 ; 18 >
+    au < manifest ; 1983 ; Cybernetics and Systems Analysis Volume 19 ; 19 >
+    au < manifest ; 1984 ; Cybernetics and Systems Analysis Volume 20 ; 20 >
+    au < manifest ; 1985 ; Cybernetics and Systems Analysis Volume 21 ; 21 >
+    au < manifest ; 1986 ; Cybernetics and Systems Analysis Volume 22 ; 22 >
+    au < manifest ; 1987 ; Cybernetics and Systems Analysis Volume 23 ; 23 >
+    au < manifest ; 1988 ; Cybernetics and Systems Analysis Volume 24 ; 24 >
+    au < manifest ; 1989 ; Cybernetics and Systems Analysis Volume 25 ; 25 >
+    au < manifest ; 1990 ; Cybernetics and Systems Analysis Volume 26 ; 26 >
+    au < manifest ; 1991 ; Cybernetics and Systems Analysis Volume 27 ; 27 >
+    au < manifest ; 1992 ; Cybernetics and Systems Analysis Volume 28 ; 28 >
+    au < manifest ; 1993 ; Cybernetics and Systems Analysis Volume 29 ; 29 >
+    au < manifest ; 1994 ; Cybernetics and Systems Analysis Volume 30 ; 30 >
+    au < manifest ; 1995 ; Cybernetics and Systems Analysis Volume 31 ; 31 >
+    au < manifest ; 1996 ; Cybernetics and Systems Analysis Volume 32 ; 32 >
+    au < manifest ; 1997 ; Cybernetics and Systems Analysis Volume 33 ; 33 >
+    au < manifest ; 1998 ; Cybernetics and Systems Analysis Volume 34 ; 34 >
+    au < manifest ; 1999 ; Cybernetics and Systems Analysis Volume 35 ; 35 >
+    au < manifest ; 2000 ; Cybernetics and Systems Analysis Volume 36 ; 36 >
+    au < manifest ; 2001 ; Cybernetics and Systems Analysis Volume 37 ; 37 >
+    au < manifest ; 2002 ; Cybernetics and Systems Analysis Volume 38 ; 38 >
+    au < manifest ; 2003 ; Cybernetics and Systems Analysis Volume 39 ; 39 >
+    au < manifest ; 2004 ; Cybernetics and Systems Analysis Volume 40 ; 40 >
+    au < manifest ; 2005 ; Cybernetics and Systems Analysis Volume 41 ; 41 >
+    au < manifest ; 2006 ; Cybernetics and Systems Analysis Volume 42 ; 42 >
+    au < manifest ; 2007 ; Cybernetics and Systems Analysis Volume 43 ; 43 >
+    au < manifest ; 2008 ; Cybernetics and Systems Analysis Volume 44 ; 44 >
+    au < manifest ; 2009 ; Cybernetics and Systems Analysis Volume 45 ; 45 >
+    au < manifest ; 2010 ; Cybernetics and Systems Analysis Volume 46 ; 46 >
+    au < manifest ; 2011 ; Cybernetics and Systems Analysis Volume 47 ; 47 >
+    au < manifest ; 2012 ; Cybernetics and Systems Analysis Volume 48 ; 48 >
 
   }
 
@@ -25305,6 +25987,13 @@
 
     param[journal_issn] = 0095-4527
 
+    au < manifest ; 2007 ; Cytology and Genetics Volume 41 ; 41 >
+    au < manifest ; 2008 ; Cytology and Genetics Volume 42 ; 42 >
+    au < manifest ; 2009 ; Cytology and Genetics Volume 43 ; 43 >
+    au < manifest ; 2010 ; Cytology and Genetics Volume 44 ; 44 >
+    au < manifest ; 2011 ; Cytology and Genetics Volume 45 ; 45 >
+    au < manifest ; 2012 ; Cytology and Genetics Volume 46 ; 46 >
+
   }
 
   {
@@ -25316,7 +26005,73 @@
       issnl = 0920-9069
     >
 
+    comment[merged_with] = 1381-5741
     param[journal_issn] = 0920-9069
+
+    au < manifest ; 1987-1988 ; Cytotechnology Volume 1 ; 1 >
+    au < manifest ; 1989 ; Cytotechnology Volume 2 ; 2 >
+    au < manifest ; 1990 ; Cytotechnology Volume 3 ; 3 >
+    au < manifest ; 1990 ; Cytotechnology Volume 4 ; 4 >
+    au < manifest ; 1991 ; Cytotechnology Volume 5 ; 5 >
+    au < manifest ; 1991 ; Cytotechnology Volume 6 ; 6 >
+    au < manifest ; 1991 ; Cytotechnology Volume 7 ; 7 >
+    au < manifest ; 1992 ; Cytotechnology Volume 8 ; 8 >
+    au < manifest ; 1992 ; Cytotechnology Volume 9 ; 9 >
+    au < manifest ; 1992 ; Cytotechnology Volume 10 ; 10 >
+    au < manifest ; 1993 ; Cytotechnology Volume 11 ; 11 >
+    au < manifest ; 1993 ; Cytotechnology Volume 12 ; 12 >
+    au < manifest ; 1993 ; Cytotechnology Volume 13 ; 13 >
+    au < manifest ; 1994 ; Cytotechnology Volume 14 ; 14 >
+    au < manifest ; 1994 ; Cytotechnology Volume 15 ; 15 >
+    au < manifest ; 1994 ; Cytotechnology Volume 16 ; 16 >
+    au < manifest ; 1995 ; Cytotechnology Volume 17 ; 17 >
+    au < manifest ; 1995 ; Cytotechnology Volume 18 ; 18 >
+    au < manifest ; 1995-1996 ; Cytotechnology Volume 19 ; 19 >
+    au < manifest ; 1996 ; Cytotechnology Volume 20 ; 20 >
+    au < manifest ; 1996 ; Cytotechnology Volume 21 ; 21 >
+    au < manifest ; 1996 ; Cytotechnology Volume 22 ; 22 >
+    au < manifest ; 1997 ; Cytotechnology Volume 23 ; 23 >
+    au < manifest ; 1997 ; Cytotechnology Volume 24 ; 24 >
+    au < manifest ; 1997 ; Cytotechnology Volume 25 ; 25 >
+    au < manifest ; 1998 ; Cytotechnology Volume 26 ; 26 >
+    au < manifest ; 1998 ; Cytotechnology Volume 27 ; 27 >
+    au < manifest ; 1998 ; Cytotechnology Volume 28 ; 28 >
+    au < manifest ; 1999 ; Cytotechnology Volume 29 ; 29 >
+    au < manifest ; 1999 ; Cytotechnology Volume 30 ; 30 >
+    au < manifest ; 1999 ; Cytotechnology Volume 31 ; 31 >
+    au < manifest ; 2000 ; Cytotechnology Volume 32 ; 32 >
+    au < manifest ; 2000 ; Cytotechnology Volume 33 ; 33 >
+    au < manifest ; 2000 ; Cytotechnology Volume 34 ; 34 >
+    au < manifest ; 2001 ; Cytotechnology Volume 35 ; 35 >
+    au < manifest ; 2001 ; Cytotechnology Volume 36 ; 36 >
+    au < manifest ; 2001 ; Cytotechnology Volume 37 ; 37 >
+    au < manifest ; 2002 ; Cytotechnology Volume 38 ; 38 >
+    au < manifest ; 2002 ; Cytotechnology Volume 39 ; 39 >
+    au < manifest ; 2002 ; Cytotechnology Volume 40 ; 40 >
+    au < manifest ; 2003 ; Cytotechnology Volume 41 ; 41 >
+    au < manifest ; 2003 ; Cytotechnology Volume 42 ; 42 >
+    au < manifest ; 2003 ; Cytotechnology Volume 43 ; 43 >
+    au < manifest ; 2004 ; Cytotechnology Volume 44 ; 44 >
+    au < manifest ; 2004 ; Cytotechnology Volume 45 ; 45 >
+    au < manifest ; 2004 ; Cytotechnology Volume 46 ; 46 >
+    au < manifest ; 2005 ; Cytotechnology Volume 47 ; 47 >
+    au < manifest ; 2005 ; Cytotechnology Volume 48 ; 48 >
+    au < manifest ; 2005 ; Cytotechnology Volume 49 ; 49 >
+    au < manifest ; 2006 ; Cytotechnology Volume 50 ; 50 >
+    au < manifest ; 2006 ; Cytotechnology Volume 51 ; 51 >
+    au < manifest ; 2006 ; Cytotechnology Volume 52 ; 52 >
+    au < manifest ; 2007 ; Cytotechnology Volume 53 ; 53 >
+    au < manifest ; 2007 ; Cytotechnology Volume 54 ; 54 >
+    au < manifest ; 2007 ; Cytotechnology Volume 55 ; 55 >
+    au < manifest ; 2008 ; Cytotechnology Volume 56 ; 56 >
+    au < manifest ; 2008 ; Cytotechnology Volume 57 ; 57 >
+    au < manifest ; 2008 ; Cytotechnology Volume 58 ; 58 >
+    au < manifest ; 2009 ; Cytotechnology Volume 59 ; 59 >
+    au < manifest ; 2009 ; Cytotechnology Volume 60 ; 60 >
+    au < manifest ; 2009 ; Cytotechnology Volume 61 ; 61 >
+    au < manifest ; 2010 ; Cytotechnology Volume 62 ; 62 >
+    au < manifest ; 2011 ; Cytotechnology Volume 63 ; 63 >
+    au < manifest ; 2012 ; Cytotechnology Volume 64 ; 64 >
 
   }
 
@@ -25331,6 +26086,63 @@
 
     param[journal_issn] = 0011-4626
 
+    au < manifest ; 1952 ; Czechoslovak Journal of Physics Volume 1 ; 1 >
+    au < manifest ; 1953 ; Czechoslovak Journal of Physics Volume 2 ; 2 >
+    au < manifest ; 1953 ; Czechoslovak Journal of Physics Volume 3 ; 3 >
+    au < manifest ; 1954 ; Czechoslovak Journal of Physics Volume 4 ; 4 >
+    au < manifest ; 1955 ; Czechoslovak Journal of Physics Volume 5 ; 5 >
+    au < manifest ; 1956 ; Czechoslovak Journal of Physics Volume 6 ; 6 >
+    au < manifest ; 1957 ; Czechoslovak Journal of Physics Volume 7 ; 7 >
+    au < manifest ; 1958 ; Czechoslovak Journal of Physics Volume 8 ; 8 >
+    au < manifest ; 1959 ; Czechoslovak Journal of Physics Volume 9 ; 9 >
+    au < manifest ; 1960 ; Czechoslovak Journal of Physics Volume 10 ; 10 >
+    au < manifest ; 1961 ; Czechoslovak Journal of Physics Volume 11 ; 11 >
+    au < manifest ; 1962 ; Czechoslovak Journal of Physics Volume 12 ; 12 >
+    au < manifest ; 1963 ; Czechoslovak Journal of Physics Volume 13 ; 13 >
+    au < manifest ; 1964 ; Czechoslovak Journal of Physics Volume 14 ; 14 >
+    au < manifest ; 1965 ; Czechoslovak Journal of Physics Volume 15 ; 15 >
+    au < manifest ; 1966 ; Czechoslovak Journal of Physics Volume 16 ; 16 >
+    au < manifest ; 1967 ; Czechoslovak Journal of Physics Volume 17 ; 17 >
+    au < manifest ; 1968 ; Czechoslovak Journal of Physics Volume 18 ; 18 >
+    au < manifest ; 1969 ; Czechoslovak Journal of Physics Volume 19 ; 19 >
+    au < manifest ; 1970 ; Czechoslovak Journal of Physics Volume 20 ; 20 >
+    au < manifest ; 1971 ; Czechoslovak Journal of Physics Volume 21 ; 21 >
+    au < manifest ; 1972 ; Czechoslovak Journal of Physics Volume 22 ; 22 >
+    au < manifest ; 1973 ; Czechoslovak Journal of Physics Volume 23 ; 23 >
+    au < manifest ; 1974 ; Czechoslovak Journal of Physics Volume 24 ; 24 >
+    au < manifest ; 1975 ; Czechoslovak Journal of Physics Volume 25 ; 25 >
+    au < manifest ; 1976 ; Czechoslovak Journal of Physics Volume 26 ; 26 >
+    au < manifest ; 1977 ; Czechoslovak Journal of Physics Volume 27 ; 27 >
+    au < manifest ; 1978 ; Czechoslovak Journal of Physics Volume 28 ; 28 >
+    au < manifest ; 1979 ; Czechoslovak Journal of Physics Volume 29 ; 29 >
+    au < manifest ; 1980 ; Czechoslovak Journal of Physics Volume 30 ; 30 >
+    au < manifest ; 1981 ; Czechoslovak Journal of Physics Volume 31 ; 31 >
+    au < manifest ; 1982 ; Czechoslovak Journal of Physics Volume 32 ; 32 >
+    au < manifest ; 1983 ; Czechoslovak Journal of Physics Volume 33 ; 33 >
+    au < manifest ; 1984 ; Czechoslovak Journal of Physics Volume 34 ; 34 >
+    au < manifest ; 1985 ; Czechoslovak Journal of Physics Volume 35 ; 35 >
+    au < manifest ; 1986 ; Czechoslovak Journal of Physics Volume 36 ; 36 >
+    au < manifest ; 1987 ; Czechoslovak Journal of Physics Volume 37 ; 37 >
+    au < manifest ; 1988 ; Czechoslovak Journal of Physics Volume 38 ; 38 >
+    au < manifest ; 1989 ; Czechoslovak Journal of Physics Volume 39 ; 39 >
+    au < manifest ; 1990 ; Czechoslovak Journal of Physics Volume 40 ; 40 >
+    au < manifest ; 1991 ; Czechoslovak Journal of Physics Volume 41 ; 41 >
+    au < manifest ; 1992 ; Czechoslovak Journal of Physics Volume 42 ; 42 >
+    au < manifest ; 1993 ; Czechoslovak Journal of Physics Volume 43 ; 43 >
+    au < manifest ; 1994 ; Czechoslovak Journal of Physics Volume 44 ; 44 >
+    au < manifest ; 1995 ; Czechoslovak Journal of Physics Volume 45 ; 45 >
+    au < manifest ; 1996 ; Czechoslovak Journal of Physics Volume 46 ; 46 >
+    au < manifest ; 1997 ; Czechoslovak Journal of Physics Volume 47 ; 47 >
+    au < manifest ; 1998 ; Czechoslovak Journal of Physics Volume 48 ; 48 >
+    au < manifest ; 1999 ; Czechoslovak Journal of Physics Volume 49 ; 49 >
+    au < manifest ; 2000 ; Czechoslovak Journal of Physics Volume 50 ; 50 >
+    au < manifest ; 2001 ; Czechoslovak Journal of Physics Volume 51 ; 51 >
+    au < manifest ; 2002 ; Czechoslovak Journal of Physics Volume 52 ; 52 >
+    au < manifest ; 2003 ; Czechoslovak Journal of Physics Volume 53 ; 53 >
+    au < manifest ; 2004 ; Czechoslovak Journal of Physics Volume 54 ; 54 >
+    au < manifest ; 2005 ; Czechoslovak Journal of Physics Volume 55 ; 55 >
+    au < manifest ; 2006 ; Czechoslovak Journal of Physics Volume 56 ; 56 >
+
   }
 
   {
@@ -25343,6 +26155,23 @@
     >
 
     param[journal_issn] = 0011-4642
+
+    au < manifest ; 1997 ; Czechoslovak Mathematical Journal Volume 47 ; 47 >
+    au < manifest ; 1998 ; Czechoslovak Mathematical Journal Volume 48 ; 48 >
+    au < manifest ; 1999 ; Czechoslovak Mathematical Journal Volume 49 ; 49 >
+    au < manifest ; 2000 ; Czechoslovak Mathematical Journal Volume 50 ; 50 >
+    au < manifest ; 2001 ; Czechoslovak Mathematical Journal Volume 51 ; 51 >
+    au < manifest ; 2002 ; Czechoslovak Mathematical Journal Volume 52 ; 52 >
+    au < manifest ; 2003 ; Czechoslovak Mathematical Journal Volume 53 ; 53 >
+    au < manifest ; 2004 ; Czechoslovak Mathematical Journal Volume 54 ; 54 >
+    au < manifest ; 2005 ; Czechoslovak Mathematical Journal Volume 55 ; 55 >
+    au < manifest ; 2006 ; Czechoslovak Mathematical Journal Volume 56 ; 56 >
+    au < manifest ; 2007 ; Czechoslovak Mathematical Journal Volume 57 ; 57 >
+    au < manifest ; 2008 ; Czechoslovak Mathematical Journal Volume 58 ; 58 >
+    au < manifest ; 2009 ; Czechoslovak Mathematical Journal Volume 59 ; 59 >
+    au < manifest ; 2010 ; Czechoslovak Mathematical Journal Volume 60 ; 60 >
+    au < manifest ; 2011 ; Czechoslovak Mathematical Journal Volume 61 ; 61 >
+    au < manifest ; 2012 ; Czechoslovak Mathematical Journal Volume 62 ; 62 >
 
   }
 
@@ -25357,6 +26186,13 @@
 
     param[journal_issn] = 1951-6371
 
+    au < manifest ; 2007 ; Côlon & Rectum Volume 1 ; 1 >
+    au < manifest ; 2008 ; Côlon & Rectum Volume 2 ; 2 >
+    au < manifest ; 2009 ; Côlon & Rectum Volume 3 ; 3 >
+    au < manifest ; 2010 ; Côlon & Rectum Volume 4 ; 4 >
+    au < manifest ; 2011 ; Côlon & Rectum Volume 5 ; 5 >
+    au < manifest ; 2012 ; Côlon & Rectum Volume 6 ; 6 >
+
   }
 
   {
@@ -25366,7 +26202,15 @@
       issn = 1958-5586 ;
       eissn = 1958-5594
     >
-    
+
+    param[journal_issn] = 1958-5586
+
+    au < manifest ; 2008 ; Dairy Science & Technology Volume 88 ; 88 >
+    au < manifest ; 2009 ; Dairy Science & Technology Volume 89 ; 89 >
+    au < manifest ; 2010 ; Dairy Science & Technology Volume 90 ; 90 >
+    au < manifest ; 2011 ; Dairy Science & Technology Volume 91 ; 91 >
+    au < manifest ; 2012 ; Dairy Science & Technology Volume 92 ; 92 >
+
   }
   
   {
@@ -25379,6 +26223,18 @@
     >
 
     param[journal_issn] = 1540-3009
+
+    au < manifest ; 2001 ; Dao Volume 1 ; 1 >
+    au < manifest ; 2002 ; Dao Volume 2 ; 2 >
+    au < manifest ; 2003 ; Dao Volume 3 ; 3 >
+    au < manifest ; 2004 ; Dao Volume 4 ; 4 >
+    au < manifest ; 2005 ; Dao Volume 5 ; 5 >
+    au < manifest ; 2007 ; Dao Volume 6 ; 6 >
+    au < manifest ; 2008 ; Dao Volume 7 ; 7 >
+    au < manifest ; 2009 ; Dao Volume 8 ; 8 >
+    au < manifest ; 2010 ; Dao Volume 9 ; 9 >
+    au < manifest ; 2011 ; Dao Volume 10 ; 10 >
+    au < manifest ; 2012 ; Dao Volume 11 ; 11 >
 
   }
 
@@ -25429,16 +26285,29 @@
 
     param[journal_issn] = 1618-2162
 
+    au < manifest ; 2010 ; Datenbank-Spektrum Volume 10 ; 10 >
+    au < manifest ; 2011 ; Datenbank-Spektrum Volume 11 ; 11 >
+    au < manifest ; 2012 ; Datenbank-Spektrum Volume 12 ; 12 >
+
   }
 
   {
 
     title <
       name = Datenschutz und Datensicherheit - DuD ;
-      issn = 1614-0702
+      issn = 1614-0702 ;
+      eissn = 1862-2607
     >
 
     param[journal_issn] = 1614-0702
+
+    au < manifest ; 2006 ; Datenschutz und Datensicherheit - DuD Volume 30 ; 30 >
+    au < manifest ; 2007 ; Datenschutz und Datensicherheit - DuD Volume 31 ; 31 >
+    au < manifest ; 2008 ; Datenschutz und Datensicherheit - DuD Volume 32 ; 32 >
+    au < manifest ; 2009 ; Datenschutz und Datensicherheit - DuD Volume 33 ; 33 >
+    au < manifest ; 2010 ; Datenschutz und Datensicherheit - DuD Volume 34 ; 34 >
+    au < manifest ; 2011 ; Datenschutz und Datensicherheit - DuD Volume 35 ; 35 >
+    au < manifest ; 2012 ; Datenschutz und Datensicherheit - DuD Volume 36 ; 36 >
 
   }
 
@@ -25453,6 +26322,8 @@
 
     param[journal_issn] = 1559-8314
 
+    au < manifest ; 2007 ; Debates in Neuroscience Volume 1 ; 1 >
+
   }
 
   {
@@ -25466,6 +26337,42 @@
 
     param[journal_issn] = 1593-8883
 
+    au < manifest ; 1978 ; Decisions in Economics and Finance Volume 1 ; 1 >
+    au < manifest ; 1979 ; Decisions in Economics and Finance Volume 2 ; 2 >
+    au < manifest ; 1980 ; Decisions in Economics and Finance Volume 3 ; 3 >
+    au < manifest ; 1981 ; Decisions in Economics and Finance Volume 4 ; 4 >
+    au < manifest ; 1982 ; Decisions in Economics and Finance Volume 5 ; 5 >
+    au < manifest ; 1983 ; Decisions in Economics and Finance Volume 6 ; 6 >
+    au < manifest ; 1984 ; Decisions in Economics and Finance Volume 7 ; 7 >
+    au < manifest ; 1985 ; Decisions in Economics and Finance Volume 8 ; 8 >
+    au < manifest ; 1986 ; Decisions in Economics and Finance Volume 9 ; 9 >
+    au < manifest ; 1987 ; Decisions in Economics and Finance Volume 10 ; 10 >
+    au < manifest ; 1988 ; Decisions in Economics and Finance Volume 11 ; 11 >
+    au < manifest ; 1989 ; Decisions in Economics and Finance Volume 12 ; 12 >
+    au < manifest ; 1990 ; Decisions in Economics and Finance Volume 13 ; 13 >
+    au < manifest ; 1991 ; Decisions in Economics and Finance Volume 14 ; 14 >
+    au < manifest ; 1992 ; Decisions in Economics and Finance Volume 15 ; 15 >
+    au < manifest ; 1993 ; Decisions in Economics and Finance Volume 16 ; 16 >
+    au < manifest ; 1994 ; Decisions in Economics and Finance Volume 17 ; 17 >
+    au < manifest ; 1995 ; Decisions in Economics and Finance Volume 18 ; 18 >
+    au < manifest ; 1996 ; Decisions in Economics and Finance Volume 19 ; 19 >
+    au < manifest ; 1997 ; Decisions in Economics and Finance Volume 20 ; 20 >
+    au < manifest ; 1998 ; Decisions in Economics and Finance Volume 21 ; 21 >
+    au < manifest ; 1999 ; Decisions in Economics and Finance Volume 22 ; 22 >
+    au < manifest ; 2000 ; Decisions in Economics and Finance Volume 23 ; 23 >
+    au < manifest ; 2001 ; Decisions in Economics and Finance Volume 24 ; 24 >
+    au < manifest ; 2002 ; Decisions in Economics and Finance Volume 25 ; 25 >
+    au < manifest ; 2003 ; Decisions in Economics and Finance Volume 26 ; 26 >
+    au < manifest ; 2004 ; Decisions in Economics and Finance Volume 27 ; 27 >
+    au < manifest ; 2005 ; Decisions in Economics and Finance Volume 28 ; 28 >
+    au < manifest ; 2006 ; Decisions in Economics and Finance Volume 29 ; 29 >
+    au < manifest ; 2007 ; Decisions in Economics and Finance Volume 30 ; 30 >
+    au < manifest ; 2008 ; Decisions in Economics and Finance Volume 31 ; 31 >
+    au < manifest ; 2009 ; Decisions in Economics and Finance Volume 32 ; 32 >
+    au < manifest ; 2010 ; Decisions in Economics and Finance Volume 33 ; 33 >
+    au < manifest ; 2011 ; Decisions in Economics and Finance Volume 34 ; 34 >
+    au < manifest ; 2012 ; Decisions in Economics and Finance Volume 35 ; 35 >
+
   }
 
   {
@@ -25476,7 +26383,59 @@
       eissn = 1533-7790 ;
       issnl = 0070-3370
     >
-    
+
+    param[journal_issn] = 0070-3370
+
+    au < manifest ; 1964 ; Demography Volume 1 ; 1 >
+    au < manifest ; 1965 ; Demography Volume 2 ; 2 >
+    au < manifest ; 1966 ; Demography Volume 3 ; 3 >
+    au < manifest ; 1967 ; Demography Volume 4 ; 4 >
+    au < manifest ; 1968 ; Demography Volume 5 ; 5 >
+    au < manifest ; 1969 ; Demography Volume 6 ; 6 >
+    au < manifest ; 1970 ; Demography Volume 7 ; 7 >
+    au < manifest ; 1971 ; Demography Volume 8 ; 8 >
+    au < manifest ; 1972 ; Demography Volume 9 ; 9 >
+    au < manifest ; 1973 ; Demography Volume 10 ; 10 >
+    au < manifest ; 1974 ; Demography Volume 11 ; 11 >
+    au < manifest ; 1975 ; Demography Volume 12 ; 12 >
+    au < manifest ; 1976 ; Demography Volume 13 ; 13 >
+    au < manifest ; 1977 ; Demography Volume 14 ; 14 >
+    au < manifest ; 1978 ; Demography Volume 15 ; 15 >
+    au < manifest ; 1979 ; Demography Volume 16 ; 16 >
+    au < manifest ; 1980 ; Demography Volume 17 ; 17 >
+    au < manifest ; 1981 ; Demography Volume 18 ; 18 >
+    au < manifest ; 1982 ; Demography Volume 19 ; 19 >
+    au < manifest ; 1983 ; Demography Volume 20 ; 20 >
+    au < manifest ; 1984 ; Demography Volume 21 ; 21 >
+    au < manifest ; 1985 ; Demography Volume 22 ; 22 >
+    au < manifest ; 1986 ; Demography Volume 23 ; 23 >
+    au < manifest ; 1987 ; Demography Volume 24 ; 24 >
+    au < manifest ; 1988 ; Demography Volume 25 ; 25 >
+    au < manifest ; 1989 ; Demography Volume 26 ; 26 >
+    au < manifest ; 1990 ; Demography Volume 27 ; 27 >
+    au < manifest ; 1991 ; Demography Volume 28 ; 28 >
+    au < manifest ; 1992 ; Demography Volume 29 ; 29 >
+    au < manifest ; 1993 ; Demography Volume 30 ; 30 >
+    au < manifest ; 1994 ; Demography Volume 31 ; 31 >
+    au < manifest ; 1995 ; Demography Volume 32 ; 32 >
+    au < manifest ; 1996 ; Demography Volume 33 ; 33 >
+    au < manifest ; 1997 ; Demography Volume 34 ; 34 >
+    au < manifest ; 1998 ; Demography Volume 35 ; 35 >
+    au < manifest ; 1999 ; Demography Volume 36 ; 36 >
+    au < manifest ; 2000 ; Demography Volume 37 ; 37 >
+    au < manifest ; 2001 ; Demography Volume 38 ; 38 >
+    au < manifest ; 2002 ; Demography Volume 39 ; 39 >
+    au < manifest ; 2003 ; Demography Volume 40 ; 40 >
+    au < manifest ; 2004 ; Demography Volume 41 ; 41 >
+    au < manifest ; 2005 ; Demography Volume 42 ; 42 >
+    au < manifest ; 2006 ; Demography Volume 43 ; 43 >
+    au < manifest ; 2007 ; Demography Volume 44 ; 44 >
+    au < manifest ; 2008 ; Demography Volume 45 ; 45 >
+    au < manifest ; 2009 ; Demography Volume 46 ; 46 >
+    au < manifest ; 2010 ; Demography Volume 47 ; 47 >
+    au < manifest ; 2011 ; Demography Volume 48 ; 48 >
+    au < manifest ; 2012 ; Demography Volume 49 ; 49 >
+
   }
 
   {
@@ -25489,6 +26448,19 @@
     >
 
     param[journal_issn] = 0926-7182
+
+    au < manifest ; 2010 ; Denkbeeld Volume 3 ; 3 >
+    au < manifest ; 2010 ; Denkbeeld Volume 4 ; 4 >
+    au < manifest ; 2010 ; Denkbeeld Volume 9 ; 9 >
+    au < manifest ; 2011 ; Denkbeeld Volume 10 ; 10 >
+    au < manifest ; 2004 ; Denkbeeld Volume 16 ; 16 >
+    au < manifest ; 2005 ; Denkbeeld Volume 17 ; 17 >
+    au < manifest ; 2006 ; Denkbeeld Volume 18 ; 18 >
+    au < manifest ; 2007 ; Denkbeeld Volume 19 ; 19 >
+    au < manifest ; 2008 ; Denkbeeld Volume 20 ; 20 >
+    au < manifest ; 2009 ; Denkbeeld Volume 21 ; 21 >
+    au < manifest ; 2010 ; Denkbeeld Volume 22 ; 22 >
+    au < manifest ; 2010 ; Denkbeeld Volume 2010 ; 2010 >
 
   }
 
@@ -25503,6 +26475,15 @@
 
     param[journal_issn] = 1860-9716
 
+    au < manifest ; 2005 ; Der Diabetologe Volume 1 ; 1 >
+    au < manifest ; 2006 ; Der Diabetologe Volume 2 ; 2 >
+    au < manifest ; 2007 ; Der Diabetologe Volume 3 ; 3 >
+    au < manifest ; 2008 ; Der Diabetologe Volume 4 ; 4 >
+    au < manifest ; 2009 ; Der Diabetologe Volume 5 ; 5 >
+    au < manifest ; 2010 ; Der Diabetologe Volume 6 ; 6 >
+    au < manifest ; 2011 ; Der Diabetologe Volume 7 ; 7 >
+    au < manifest ; 2012 ; Der Diabetologe Volume 8 ; 8 >
+
   }
 
   {
@@ -25516,6 +26497,10 @@
 
     param[journal_issn] = 1869-5744
 
+    au < manifest ; 2010 ; der junge zahnarzt Volume 1 ; 1 >
+    au < manifest ; 2011 ; der junge zahnarzt Volume 2 ; 2 >
+    au < manifest ; 2012 ; der junge zahnarzt Volume 3 ; 3 >
+
   }
 
   {
@@ -25526,6 +26511,30 @@
     >
 
     param[journal_issn] = 0025-3863
+
+    au < manifest ; 1990 ; der markt Volume 29 ; 29 >
+    au < manifest ; 1991 ; der markt Volume 30 ; 30 >
+    au < manifest ; 1992 ; der markt Volume 31 ; 31 >
+    au < manifest ; 1993 ; der markt Volume 32 ; 32 >
+    au < manifest ; 1994 ; der markt Volume 33 ; 33 >
+    au < manifest ; 1995 ; der markt Volume 34 ; 34 >
+    au < manifest ; 1996 ; der markt Volume 35 ; 35 >
+    au < manifest ; 1997 ; der markt Volume 36 ; 36 >
+    au < manifest ; 1998 ; der markt Volume 37 ; 37 >
+    au < manifest ; 1999 ; der markt Volume 38 ; 38 >
+    au < manifest ; 2000 ; der markt Volume 39 ; 39 >
+    au < manifest ; 2001 ; der markt Volume 40 ; 40 >
+    au < manifest ; 2002 ; der markt Volume 41 ; 41 >
+    au < manifest ; 2003 ; der markt Volume 42 ; 42 >
+    au < manifest ; 2004 ; der markt Volume 43 ; 43 >
+    au < manifest ; 2005 ; der markt Volume 44 ; 44 >
+    au < manifest ; 2006 ; der markt Volume 45 ; 45 >
+    au < manifest ; 2007 ; der markt Volume 46 ; 46 >
+    au < manifest ; 2008 ; der markt Volume 47 ; 47 >
+    au < manifest ; 2009 ; der markt Volume 48 ; 48 >
+    au < manifest ; 2010 ; der markt Volume 49 ; 49 >
+    au < manifest ; 2011 ; der markt Volume 50 ; 50 >
+    au < manifest ; 2012 ; der markt Volume 51 ; 51 >
 
   }
 
@@ -25540,6 +26549,22 @@
 
     param[journal_issn] = 0929-5585
 
+    au < manifest ; 1996 ; Design Automation for Embedded Systems Volume 1 ; 1 >
+    au < manifest ; 1997 ; Design Automation for Embedded Systems Volume 2 ; 2 >
+    au < manifest ; 1998 ; Design Automation for Embedded Systems Volume 3 ; 3 >
+    au < manifest ; 1999 ; Design Automation for Embedded Systems Volume 4 ; 4 >
+    au < manifest ; 2000 ; Design Automation for Embedded Systems Volume 5 ; 5 >
+    au < manifest ; 2000 ; Design Automation for Embedded Systems Volume 6 ; 6 >
+    au < manifest ; 2002 ; Design Automation for Embedded Systems Volume 7 ; 7 >
+    au < manifest ; 2003 ; Design Automation for Embedded Systems Volume 8 ; 8 >
+    au < manifest ; 2004 ; Design Automation for Embedded Systems Volume 9 ; 9 >
+    au < manifest ; 2005 ; Design Automation for Embedded Systems Volume 10 ; 10 >
+    au < manifest ; 2007 ; Design Automation for Embedded Systems Volume 11 ; 11 >
+    au < manifest ; 2008 ; Design Automation for Embedded Systems Volume 12 ; 12 >
+    au < manifest ; 2009 ; Design Automation for Embedded Systems Volume 13 ; 13 >
+    au < manifest ; 2010 ; Design Automation for Embedded Systems Volume 14 ; 14 >
+    au < manifest ; 2011 ; Design Automation for Embedded Systems Volume 15 ; 15 >
+
   }
 
   {
@@ -25552,6 +26577,71 @@
     >
 
     param[journal_issn] = 0925-1022
+
+    au < manifest ; 1991 ; Designs, Codes and Cryptography Volume 1 ; 1 >
+    au < manifest ; 1992 ; Designs, Codes and Cryptography Volume 2 ; 2 >
+    au < manifest ; 1993 ; Designs, Codes and Cryptography Volume 3 ; 3 >
+    au < manifest ; 1994 ; Designs, Codes and Cryptography Volume 4 ; 4 >
+    au < manifest ; 1995 ; Designs, Codes and Cryptography Volume 5 ; 5 >
+    au < manifest ; 1995 ; Designs, Codes and Cryptography Volume 6 ; 6 >
+    au < manifest ; 1996 ; Designs, Codes and Cryptography Volume 7 ; 7 >
+    au < manifest ; 1996 ; Designs, Codes and Cryptography Volume 8 ; 8 >
+    au < manifest ; 1996 ; Designs, Codes and Cryptography Volume 9 ; 9 >
+    au < manifest ; 1997 ; Designs, Codes and Cryptography Volume 10 ; 10 >
+    au < manifest ; 1997 ; Designs, Codes and Cryptography Volume 11 ; 11 >
+    au < manifest ; 1997 ; Designs, Codes and Cryptography Volume 12 ; 12 >
+    au < manifest ; 1998 ; Designs, Codes and Cryptography Volume 13 ; 13 >
+    au < manifest ; 1998 ; Designs, Codes and Cryptography Volume 14 ; 14 >
+    au < manifest ; 1998 ; Designs, Codes and Cryptography Volume 15 ; 15 >
+    au < manifest ; 1999 ; Designs, Codes and Cryptography Volume 16 ; 16 >
+    au < manifest ; 1999 ; Designs, Codes and Cryptography Volume 17 ; 17 >
+    au < manifest ; 1999 ; Designs, Codes and Cryptography Volume 18 ; 18 >
+    au < manifest ; 2000 ; Designs, Codes and Cryptography Volume 19 ; 19 >
+    au < manifest ; 2000 ; Designs, Codes and Cryptography Volume 20 ; 20 >
+    au < manifest ; 2000 ; Designs, Codes and Cryptography Volume 21 ; 21 >
+    au < manifest ; 2001 ; Designs, Codes and Cryptography Volume 22 ; 22 >
+    au < manifest ; 2001 ; Designs, Codes and Cryptography Volume 23 ; 23 >
+    au < manifest ; 2001 ; Designs, Codes and Cryptography Volume 24 ; 24 >
+    au < manifest ; 2002 ; Designs, Codes and Cryptography Volume 25 ; 25 >
+    au < manifest ; 2002 ; Designs, Codes and Cryptography Volume 26 ; 26 >
+    au < manifest ; 2002 ; Designs, Codes and Cryptography Volume 27 ; 27 >
+    au < manifest ; 2003 ; Designs, Codes and Cryptography Volume 28 ; 28 >
+    au < manifest ; 2003 ; Designs, Codes and Cryptography Volume 29 ; 29 >
+    au < manifest ; 2003 ; Designs, Codes and Cryptography Volume 30 ; 30 >
+    au < manifest ; 2004 ; Designs, Codes and Cryptography Volume 31 ; 31 >
+    au < manifest ; 2004 ; Designs, Codes and Cryptography Volume 32 ; 32 >
+    au < manifest ; 2004 ; Designs, Codes and Cryptography Volume 33 ; 33 >
+    au < manifest ; 2005 ; Designs, Codes and Cryptography Volume 34 ; 34 >
+    au < manifest ; 2005 ; Designs, Codes and Cryptography Volume 35 ; 35 >
+    au < manifest ; 2005 ; Designs, Codes and Cryptography Volume 36 ; 36 >
+    au < manifest ; 2005 ; Designs, Codes and Cryptography Volume 37 ; 37 >
+    au < manifest ; 2006 ; Designs, Codes and Cryptography Volume 38 ; 38 >
+    au < manifest ; 2006 ; Designs, Codes and Cryptography Volume 39 ; 39 >
+    au < manifest ; 2006 ; Designs, Codes and Cryptography Volume 40 ; 40 >
+    au < manifest ; 2006 ; Designs, Codes and Cryptography Volume 41 ; 41 >
+    au < manifest ; 2007 ; Designs, Codes and Cryptography Volume 42 ; 42 >
+    au < manifest ; 2007 ; Designs, Codes and Cryptography Volume 43 ; 43 >
+    au < manifest ; 2007 ; Designs, Codes and Cryptography Volume 44 ; 44 >
+    au < manifest ; 2007 ; Designs, Codes and Cryptography Volume 45 ; 45 >
+    au < manifest ; 2008 ; Designs, Codes and Cryptography Volume 46 ; 46 >
+    au < manifest ; 2008 ; Designs, Codes and Cryptography Volume 47 ; 47 >
+    au < manifest ; 2008 ; Designs, Codes and Cryptography Volume 48 ; 48 >
+    au < manifest ; 2008 ; Designs, Codes and Cryptography Volume 49 ; 49 >
+    au < manifest ; 2009 ; Designs, Codes and Cryptography Volume 50 ; 50 >
+    au < manifest ; 2009 ; Designs, Codes and Cryptography Volume 51 ; 51 >
+    au < manifest ; 2009 ; Designs, Codes and Cryptography Volume 52 ; 52 >
+    au < manifest ; 2009 ; Designs, Codes and Cryptography Volume 53 ; 53 >
+    au < manifest ; 2010 ; Designs, Codes and Cryptography Volume 54 ; 54 >
+    au < manifest ; 2010 ; Designs, Codes and Cryptography Volume 55 ; 55 >
+    au < manifest ; 2010 ; Designs, Codes and Cryptography Volume 56 ; 56 >
+    au < manifest ; 2010 ; Designs, Codes and Cryptography Volume 57 ; 57 >
+    au < manifest ; 2011 ; Designs, Codes and Cryptography Volume 58 ; 58 >
+    au < manifest ; 2011 ; Designs, Codes and Cryptography Volume 59 ; 59 >
+    au < manifest ; 2011 ; Designs, Codes and Cryptography Volume 60 ; 60 >
+    au < manifest ; 2011 ; Designs, Codes and Cryptography Volume 61 ; 61 >
+    au < manifest ; 2012 ; Designs, Codes and Cryptography Volume 62 ; 62 >
+    au < manifest ; 2012 ; Designs, Codes and Cryptography Volume 63 ; 63 >
+    au < manifest ; 2012 ; Designs, Codes and Cryptography Volume 64 ; 64 >
 
   }
 
@@ -25566,6 +26656,9 @@
 
     param[journal_issn] = 1435-9499
 
+    au < manifest ; 1999 ; Deutsches und Europäisches Familienrecht Volume 1 ; 1 >
+    au < manifest ; 2000 ; Deutsches und Europäisches Familienrecht Volume 2 ; 2 >
+
   }
 
   {
@@ -25578,6 +26671,184 @@
     >
 
     param[journal_issn] = 0949-944X
+
+    au < manifest ; 1894-1895 ; Archiv für Entwicklungsmechanik der Organismen Volume 1 ; 1 >
+    au < manifest ; 1895-1896 ; Archiv für Entwicklungsmechanik der Organismen Volume 2 ; 2 >
+    au < manifest ; 1896 ; Archiv für Entwicklungsmechanik der Organismen Volume 3 ; 3 >
+    au < manifest ; 1896-1897 ; Archiv für Entwicklungsmechanik der Organismen Volume 4 ; 4 >
+    au < manifest ; 1897 ; Archiv für Entwicklungsmechanik der Organismen Volume 5 ; 5 >
+    au < manifest ; 1897-1898 ; Archiv für Entwicklungsmechanik der Organismen Volume 6 ; 6 >
+    au < manifest ; 1898 ; Archiv für Entwicklungsmechanik der Organismen Volume 7 ; 7 >
+    au < manifest ; 1899 ; Archiv für Entwicklungsmechanik der Organismen Volume 8 ; 8 >
+    au < manifest ; 1899-1900 ; Archiv für Entwicklungsmechanik der Organismen Volume 9 ; 9 >
+    au < manifest ; 1900 ; Archiv für Entwicklungsmechanik der Organismen Volume 10 ; 10 >
+    au < manifest ; 1901 ; Archiv für Entwicklungsmechanik der Organismen Volume 11 ; 11 >
+    au < manifest ; 1901 ; Archiv für Entwicklungsmechanik der Organismen Volume 12 ; 12 >
+    au < manifest ; 1901 ; Archiv für Entwicklungsmechanik der Organismen Volume 13 ; 13 >
+    au < manifest ; 1902 ; Archiv für Entwicklungsmechanik der Organismen Volume 14 ; 14 >
+    au < manifest ; 1902-1903 ; Archiv für Entwicklungsmechanik der Organismen Volume 15 ; 15 >
+    au < manifest ; 1903 ; Archiv für Entwicklungsmechanik der Organismen Volume 16 ; 16 >
+    au < manifest ; 1903-1904 ; Archiv für Entwicklungsmechanik der Organismen Volume 17 ; 17 >
+    au < manifest ; 1904 ; Archiv für Entwicklungsmechanik der Organismen Volume 18 ; 18 >
+    au < manifest ; 1905 ; Archiv für Entwicklungsmechanik der Organismen Volume 19 ; 19 >
+    au < manifest ; 1905-1906 ; Archiv für Entwicklungsmechanik der Organismen Volume 20 ; 20 >
+    au < manifest ; 1906 ; Archiv für Entwicklungsmechanik der Organismen Volume 21 ; 21 >
+    au < manifest ; 1906 ; Archiv für Entwicklungsmechanik der Organismen Volume 22 ; 22 >
+    au < manifest ; 1907 ; Archiv für Entwicklungsmechanik der Organismen Volume 23 ; 23 >
+    au < manifest ; 1907 ; Archiv für Entwicklungsmechanik der Organismen Volume 24 ; 24 >
+    au < manifest ; 1907-1908 ; Archiv für Entwicklungsmechanik der Organismen Volume 25 ; 25 >
+    au < manifest ; 1908 ; Archiv für Entwicklungsmechanik der Organismen Volume 26 ; 26 >
+    au < manifest ; 1909 ; Archiv für Entwicklungsmechanik der Organismen Volume 27 ; 27 >
+    au < manifest ; 1909 ; Archiv für Entwicklungsmechanik der Organismen Volume 28 ; 28 >
+    au < manifest ; 1910 ; Archiv für Entwicklungsmechanik der Organismen Volume 29 ; 29 >
+    au < manifest ; 1910 ; Archiv für Entwicklungsmechanik der Organismen Volume 30 ; 30 >
+    au < manifest ; 1910-1911 ; Archiv für Entwicklungsmechanik der Organismen Volume 31 ; 31 >
+    au < manifest ; 1911 ; Archiv für Entwicklungsmechanik der Organismen Volume 32 ; 32 >
+    au < manifest ; 1911-1912 ; Archiv für Entwicklungsmechanik der Organismen Volume 33 ; 33 >
+    au < manifest ; 1912 ; Archiv für Entwicklungsmechanik der Organismen Volume 34 ; 34 >
+    au < manifest ; 1912-1913 ; Archiv für Entwicklungsmechanik der Organismen Volume 35 ; 35 >
+    au < manifest ; 1913 ; Archiv für Entwicklungsmechanik der Organismen Volume 36 ; 36 >
+    au < manifest ; 1913 ; Archiv für Entwicklungsmechanik der Organismen Volume 37 ; 37 >
+    au < manifest ; 1913-1914 ; Archiv für Entwicklungsmechanik der Organismen Volume 38 ; 38 >
+    au < manifest ; 1914 ; Archiv für Entwicklungsmechanik der Organismen Volume 39 ; 39 >
+    au < manifest ; 1914 ; Archiv für Entwicklungsmechanik der Organismen Volume 40 ; 40 >
+    au < manifest ; 1915 ; Archiv für Entwicklungsmechanik der Organismen Volume 41 ; 41 >
+    au < manifest ; 1916-1917 ; Archiv für Entwicklungsmechanik der Organismen Volume 42 ; 42 >
+    au < manifest ; 1917-1918 ; Archiv für Entwicklungsmechanik der Organismen Volume 43 ; 43 >
+    au < manifest ; 1918 ; Archiv für Entwicklungsmechanik der Organismen Volume 44 ; 44 >
+    au < manifest ; 1919 ; Archiv für Entwicklungsmechanik der Organismen Volume 45 ; 45 >
+    au < manifest ; 1920 ; Archiv für Entwicklungsmechanik der Organismen Volume 46 ; 46 >
+    au < manifest ; 1920-1921 ; Archiv für Entwicklungsmechanik der Organismen Volume 47 ; 47 >
+    au < manifest ; 1921 ; Archiv für Entwicklungsmechanik der Organismen Volume 48 ; 48 >
+    au < manifest ; 1921 ; Archiv für Entwicklungsmechanik der Organismen Volume 49 ; 49 >
+    au < manifest ; 1922 ; Archiv für Entwicklungsmechanik der Organismen Volume 50 ; 50 >
+    au < manifest ; 1922 ; Archiv für Entwicklungsmechanik der Organismen Volume 51 ; 51 >
+    au < manifest ; 1922-1923 ; Archiv für Entwicklungsmechanik der Organismen Volume 52 ; 52 >
+    au < manifest ; 1923 ; Archiv für mikroskopische Anatomie und Entwicklungsmechanik Volume 98 ; 98 >
+    au < manifest ; 1923 ; Archiv für mikroskopische Anatomie und Entwicklungsmechanik Volume 99 ; 99 >
+    au < manifest ; 1923-1924 ; Archiv für mikroskopische Anatomie und Entwicklungsmechanik Volume 100 ; 100 >
+    au < manifest ; 1924 ; Archiv für mikroskopische Anatomie und Entwicklungsmechanik Volume 101 ; 101 >
+    au < manifest ; 1924 ; Archiv für mikroskopische Anatomie und Entwicklungsmechanik Volume 102 ; 102 >
+    au < manifest ; 1924 ; Archiv für mikroskopische Anatomie und Entwicklungsmechanik Volume 103 ; 103 >
+    au < manifest ; 1925 ; Archiv für mikroskopische Anatomie und Entwicklungsmechanik Volume 104 ; 104 >
+    au < manifest ; 1925 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 105 ; 105 >
+    au < manifest ; 1925 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 106 ; 106 >
+    au < manifest ; 1926 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 107 ; 107 >
+    au < manifest ; 1926 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 108 ; 108 >
+    au < manifest ; 1927 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 109 ; 109 >
+    au < manifest ; 1927 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 110 ; 110 >
+    au < manifest ; 1927 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 111 ; 111 >
+    au < manifest ; 1927 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 112 ; 112 >
+    au < manifest ; 1928 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 113 ; 113 >
+    au < manifest ; 1928-1929 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 114 ; 114 >
+    au < manifest ; 1929 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 115 ; 115 >
+    au < manifest ; 1929 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 116 ; 116 >
+    au < manifest ; 1929 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 117 ; 117 >
+    au < manifest ; 1929 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 118 ; 118 >
+    au < manifest ; 1929 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 119 ; 119 >
+    au < manifest ; 1929 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 120 ; 120 >
+    au < manifest ; 1930 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 121 ; 121 >
+    au < manifest ; 1930 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 122 ; 122 >
+    au < manifest ; 1930-1931 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 123 ; 123 >
+    au < manifest ; 1931 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 124 ; 124 >
+    au < manifest ; 1931-1932 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 125 ; 125 >
+    au < manifest ; 1932 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 126 ; 126 >
+    au < manifest ; 1933 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 127 ; 127 >
+    au < manifest ; 1933 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 128 ; 128 >
+    au < manifest ; 1933 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 129 ; 129 >
+    au < manifest ; 1933 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 130 ; 130 >
+    au < manifest ; 1934 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 131 ; 131 >
+    au < manifest ; 1934-1935 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 132 ; 132 >
+    au < manifest ; 1935 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 133 ; 133 >
+    au < manifest ; 1936 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 134 ; 134 >
+    au < manifest ; 1936-1937 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 135 ; 135 >
+    au < manifest ; 1937 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 136 ; 136 >
+    au < manifest ; 1937-1938 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 137 ; 137 >
+    au < manifest ; 1938 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 138 ; 138 >
+    au < manifest ; 1939 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 139 ; 139 >
+    au < manifest ; 1940 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 140 ; 140 >
+    au < manifest ; 1942 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 141 ; 141 >
+    au < manifest ; 1944 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 142 ; 142 >
+    au < manifest ; 1947-1949 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 143 ; 143 >
+    au < manifest ; 1949-1951 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 144 ; 144 >
+    au < manifest ; 1951-1952 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 145 ; 145 >
+    au < manifest ; 1952-1954 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 146 ; 146 >
+    au < manifest ; 1954-1955 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 147 ; 147 >
+    au < manifest ; 1955-1956 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 148 ; 148 >
+    au < manifest ; 1956-1957 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 149 ; 149 >
+    au < manifest ; 1957-1958 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 150 ; 150 >
+    au < manifest ; 1959-1960 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 151 ; 151 >
+    au < manifest ; 1960 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 152 ; 152 >
+    au < manifest ; 1961-1962 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 153 ; 153 >
+    au < manifest ; 1962-1963 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 154 ; 154 >
+    au < manifest ; 1964-1965 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 155 ; 155 >
+    au < manifest ; 1965 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 156 ; 156 >
+    au < manifest ; 1966 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 157 ; 157 >
+    au < manifest ; 1967 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 158 ; 158 >
+    au < manifest ; 1967 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 159 ; 159 >
+    au < manifest ; 1968 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 160 ; 160 >
+    au < manifest ; 1968 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 161 ; 161 >
+    au < manifest ; 1969 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 162 ; 162 >
+    au < manifest ; 1969 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 163 ; 163 >
+    au < manifest ; 1969-1970 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 164 ; 164 >
+    au < manifest ; 1970 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 165 ; 165 >
+    au < manifest ; 1970-1971 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 166 ; 166 >
+    au < manifest ; 1971 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 167 ; 167 >
+    au < manifest ; 1971 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 168 ; 168 >
+    au < manifest ; 1972 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 169 ; 169 >
+    au < manifest ; 1972 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 170 ; 170 >
+    au < manifest ; 1972-1973 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 171 ; 171 >
+    au < manifest ; 1973 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 172 ; 172 >
+    au < manifest ; 1973 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 173 ; 173 >
+    au < manifest ; 1974 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 174 ; 174 >
+    au < manifest ; 1974 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 175 ; 175 >
+    au < manifest ; 1974-1975 ; Wilhelm Roux Archiv für Entwicklungsmechanik der Organismen Volume 176 ; 176 >
+    au < manifest ; 1975 ; Wilhelm Rouxs archives of developmental biology Volume 177 ; 177 >
+    au < manifest ; 1975 ; Wilhelm Rouxs archives of developmental biology Volume 178 ; 178 >
+    au < manifest ; 1976 ; Wilhelm Rouxs archives of developmental biology Volume 179 ; 179 >
+    au < manifest ; 1976 ; Wilhelm Rouxs archives of developmental biology Volume 180 ; 180 >
+    au < manifest ; 1977 ; Wilhelm Rouxs archives of developmental biology Volume 181 ; 181 >
+    au < manifest ; 1977 ; Wilhelm Rouxs archives of developmental biology Volume 182 ; 182 >
+    au < manifest ; 1977 ; Wilhelm Rouxs archives of developmental biology Volume 183 ; 183 >
+    au < manifest ; 1978 ; Wilhelm Rouxs archives of developmental biology Volume 184 ; 184 >
+    au < manifest ; 1978-1979 ; Wilhelm Rouxs archives of developmental biology Volume 185 ; 185 >
+    au < manifest ; 1979 ; Wilhelm Rouxs archives of developmental biology Volume 186 ; 186 >
+    au < manifest ; 1979 ; Wilhelm Rouxs archives of developmental biology Volume 187 ; 187 >
+    au < manifest ; 1980 ; Wilhelm Rouxs archives of developmental biology Volume 188 ; 188 >
+    au < manifest ; 1980 ; Wilhelm Rouxs archives of developmental biology Volume 189 ; 189 >
+    au < manifest ; 1981 ; Wilhelm Rouxs archives of developmental biology Volume 190 ; 190 >
+    au < manifest ; 1982 ; Wilhelm Rouxs archives of developmental biology Volume 191 ; 191 >
+    au < manifest ; 1983 ; Wilhelm Rouxs archives of developmental biology Volume 192 ; 192 >
+    au < manifest ; 1984 ; Wilhelm Rouxs archives of developmental biology Volume 193 ; 193 >
+    au < manifest ; 1984-1985 ; Wilhelm Rouxs archives of developmental biology Volume 194 ; 194 >
+    au < manifest ; 1986 ; Rouxs archives of developmental biology Volume 195 ; 195 >
+    au < manifest ; 1987 ; Rouxs archives of developmental biology Volume 196 ; 196 >
+    au < manifest ; 1988 ; Rouxs archives of developmental biology Volume 197 ; 197 >
+    au < manifest ; 1989-1990 ; Rouxs archives of developmental biology Volume 198 ; 198 >
+    au < manifest ; 1990-1991 ; Rouxs archives of developmental biology Volume 199 ; 199 >
+    au < manifest ; 1991 ; Rouxs archives of developmental biology Volume 200 ; 200 >
+    au < manifest ; 1992 ; Rouxs archives of developmental biology Volume 201 ; 201 >
+    au < manifest ; 1992-1993 ; Rouxs archives of developmental biology Volume 202 ; 202 >
+    au < manifest ; 1993-1994 ; Rouxs archives of developmental biology Volume 203 ; 203 >
+    au < manifest ; 1994-1995 ; Rouxs archives of developmental biology Volume 204 ; 204 >
+    au < manifest ; 1995-1996 ; Rouxs archives of developmental biology Volume 205 ; 205 >
+    au < manifest ; 1996-1997 ; Development Genes and Evolution Volume 206 ; 206 >
+    au < manifest ; 1997 ; Development Genes and Evolution Volume 207 ; 207 >
+    au < manifest ; 1998 ; Development Genes and Evolution Volume 208 ; 208 >
+    au < manifest ; 1999 ; Development Genes and Evolution Volume 209 ; 209 >
+    au < manifest ; 2000 ; Development Genes and Evolution Volume 210 ; 210 >
+    au < manifest ; 2001 ; Development Genes and Evolution Volume 211 ; 211 >
+    au < manifest ; 2002 ; Development Genes and Evolution Volume 212 ; 212 >
+    au < manifest ; 2003 ; Development Genes and Evolution Volume 213 ; 213 >
+    au < manifest ; 2004 ; Development Genes and Evolution Volume 214 ; 214 >
+    au < manifest ; 2005 ; Development Genes and Evolution Volume 215 ; 215 >
+    au < manifest ; 2006 ; Development Genes and Evolution Volume 216 ; 216 >
+    au < manifest ; 2007 ; Development Genes and Evolution Volume 217 ; 217 >
+    au < manifest ; 2008 ; Development Genes and Evolution Volume 218 ; 218 >
+    au < manifest ; 2009 ; Development Genes and Evolution Volume 219 ; 219 >
+    au < manifest ; 2010 ; Development Genes and Evolution Volume 220 ; 220 >
+    au < manifest ; 2011 ; Development Genes and Evolution Volume 221 ; 221 >
+    au < manifest ; 2012 ; Development Genes and Evolution Volume 222 ; 222 >
 
   }
 
@@ -25592,16 +26863,25 @@
 
     param[journal_issn] = 0340-1766
 
+    au < manifest ; 2010 ; DFZ - Der Freie Zahnarzt Volume 54 ; 54 >
+    au < manifest ; 2011 ; DFZ - Der Freie Zahnarzt Volume 55 ; 55 >
+    au < manifest ; 2012 ; DFZ - Der Freie Zahnarzt Volume 56 ; 56 >
+
   }
 
   {
 
     title <
       name = Diabetes Therapy ;
-      issn = 1869-6953
+      issn = 1869-6953 ;
+      eissn = 1869-6961
     >
 
     param[journal_issn] = 1869-6953
+
+    au < manifest ; 2010 ; Diabetes Therapy Volume 1 ; 1 >
+    au < manifest ; 2011 ; Diabetes Therapy Volume 2 ; 2 >
+    au < manifest ; 2012 ; Diabetes Therapy Volume 3 ; 3 >
 
   }
 
@@ -25698,16 +26978,26 @@
 
     param[journal_issn] = 1758-5996
 
+    au < manifest ; 2009 ; Diabetology and Metabolic Syndrome Volume 1 ; 1 >
+    au < manifest ; 2010 ; Diabetology and Metabolic Syndrome Volume 2 ; 2 >
+    au < manifest ; 2011 ; Diabetology and Metabolic Syndrome Volume 3 ; 3 >
+    au < manifest ; 2012 ; Diabetology and Metabolic Syndrome Volume 4 ; 4 >
+
   }
 
   {
 
     title <
       name = Diabetology International ;
-      issn = 2190-1678
+      issn = 2190-1678 ;
+      eissn = 2190-1686 
     >
 
     param[journal_issn] = 2190-1678
+
+    au < manifest ; 2010 ; Diabetology International Volume 1 ; 1 >
+    au < manifest ; 2011 ; Diabetology International Volume 2 ; 2 >
+    au < manifest ; 2012 ; Diabetology International Volume 3 ; 3 >
 
   }
 
@@ -25722,6 +27012,42 @@
 
     param[journal_issn] = 0304-4092
 
+    au < manifest ; 1975 ; Dialectical Anthropology Volume 1 ; 1 >
+    au < manifest ; 1977 ; Dialectical Anthropology Volume 2 ; 2 >
+    au < manifest ; 1978 ; Dialectical Anthropology Volume 3 ; 3 >
+    au < manifest ; 1979 ; Dialectical Anthropology Volume 4 ; 4 >
+    au < manifest ; 1980-1981 ; Dialectical Anthropology Volume 5 ; 5 >
+    au < manifest ; 1981-1982 ; Dialectical Anthropology Volume 6 ; 6 >
+    au < manifest ; 1982-1983 ; Dialectical Anthropology Volume 7 ; 7 >
+    au < manifest ; 1983-1984 ; Dialectical Anthropology Volume 8 ; 8 >
+    au < manifest ; 1985 ; Dialectical Anthropology Volume 9 ; 9 >
+    au < manifest ; 1985-1986 ; Dialectical Anthropology Volume 10 ; 10 >
+    au < manifest ; 1986 ; Dialectical Anthropology Volume 11 ; 11 >
+    au < manifest ; 1987 ; Dialectical Anthropology Volume 12 ; 12 >
+    au < manifest ; 1988 ; Dialectical Anthropology Volume 13 ; 13 >
+    au < manifest ; 1989 ; Dialectical Anthropology Volume 14 ; 14 >
+    au < manifest ; 1990 ; Dialectical Anthropology Volume 15 ; 15 >
+    au < manifest ; 1991 ; Dialectical Anthropology Volume 16 ; 16 >
+    au < manifest ; 1992 ; Dialectical Anthropology Volume 17 ; 17 >
+    au < manifest ; 1993 ; Dialectical Anthropology Volume 18 ; 18 >
+    au < manifest ; 1994 ; Dialectical Anthropology Volume 19 ; 19 >
+    au < manifest ; 1995 ; Dialectical Anthropology Volume 20 ; 20 >
+    au < manifest ; 1996 ; Dialectical Anthropology Volume 21 ; 21 >
+    au < manifest ; 1997 ; Dialectical Anthropology Volume 22 ; 22 >
+    au < manifest ; 1997 ; Dialectical Anthropology Volume 23 ; 23 >
+    au < manifest ; 1999 ; Dialectical Anthropology Volume 24 ; 24 >
+    au < manifest ; 2000 ; Dialectical Anthropology Volume 25 ; 25 >
+    au < manifest ; 2001 ; Dialectical Anthropology Volume 26 ; 26 >
+    au < manifest ; 2003 ; Dialectical Anthropology Volume 27 ; 27 >
+    au < manifest ; 2004 ; Dialectical Anthropology Volume 28 ; 28 >
+    au < manifest ; 2005 ; Dialectical Anthropology Volume 29 ; 29 >
+    au < manifest ; 2006 ; Dialectical Anthropology Volume 30 ; 30 >
+    au < manifest ; 2007 ; Dialectical Anthropology Volume 31 ; 31 >
+    au < manifest ; 2008 ; Dialectical Anthropology Volume 32 ; 32 >
+    au < manifest ; 2009 ; Dialectical Anthropology Volume 33 ; 33 >
+    au < manifest ; 2010 ; Dialectical Anthropology Volume 34 ; 34 >
+    au < manifest ; 2011 ; Dialectical Anthropology Volume 35 ; 35 >
+
   }
 
   {
@@ -25734,6 +27060,8 @@
     >
 
     param[journal_issn] = 0043-2652
+
+    au < manifest ; 2005 ; Die Weltwirtschaft Volume 56 ; 56 >
 
   }
 
@@ -25748,6 +27076,20 @@
 
     param[journal_issn] = 0012-2661
 
+    au < manifest ; 2000 ; Differential Equations Volume 36 ; 36 >
+    au < manifest ; 2001 ; Differential Equations Volume 37 ; 37 >
+    au < manifest ; 2002 ; Differential Equations Volume 38 ; 38 >
+    au < manifest ; 2003 ; Differential Equations Volume 39 ; 39 >
+    au < manifest ; 2004 ; Differential Equations Volume 40 ; 40 >
+    au < manifest ; 2005 ; Differential Equations Volume 41 ; 41 >
+    au < manifest ; 2006 ; Differential Equations Volume 42 ; 42 >
+    au < manifest ; 2007 ; Differential Equations Volume 43 ; 43 >
+    au < manifest ; 2008 ; Differential Equations Volume 44 ; 44 >
+    au < manifest ; 2009 ; Differential Equations Volume 45 ; 45 >
+    au < manifest ; 2010 ; Differential Equations Volume 46 ; 46 >
+    au < manifest ; 2011 ; Differential Equations Volume 47 ; 47 >
+    au < manifest ; 2012 ; Differential Equations Volume 48 ; 48 >
+
   }
 
   {
@@ -25760,6 +27102,12 @@
     >
 
     param[journal_issn] = 0971-3514
+
+    au < manifest ; 2008 ; Differential Equations and Dynamical Systems Volume 16 ; 16 >
+    au < manifest ; 2009 ; Differential Equations and Dynamical Systems Volume 17 ; 17 >
+    au < manifest ; 2010 ; Differential Equations and Dynamical Systems Volume 18 ; 18 >
+    au < manifest ; 2011 ; Differential Equations and Dynamical Systems Volume 19 ; 19 >
+    au < manifest ; 2012 ; Differential Equations and Dynamical Systems Volume 20 ; 20 >
 
   }
 
@@ -25775,6 +27123,64 @@
     comment[continued_from] = 0002-9211
     param[journal_issn] = 0163-2116
 
+    au < manifest ; 1956 ; Digestive Diseases and Sciences Volume 1 ; 1 >
+    au < manifest ; 1957 ; Digestive Diseases and Sciences Volume 2 ; 2 >
+    au < manifest ; 1958 ; Digestive Diseases and Sciences Volume 3 ; 3 >
+    au < manifest ; 1959 ; Digestive Diseases and Sciences Volume 4 ; 4 >
+    au < manifest ; 1960 ; Digestive Diseases and Sciences Volume 5 ; 5 >
+    au < manifest ; 1961 ; Digestive Diseases and Sciences Volume 6 ; 6 >
+    au < manifest ; 1962 ; Digestive Diseases and Sciences Volume 7 ; 7 >
+    au < manifest ; 1963 ; Digestive Diseases and Sciences Volume 8 ; 8 >
+    au < manifest ; 1964 ; Digestive Diseases and Sciences Volume 9 ; 9 >
+    au < manifest ; 1965 ; Digestive Diseases and Sciences Volume 10 ; 10 >
+    au < manifest ; 1966 ; Digestive Diseases and Sciences Volume 11 ; 11 >
+    au < manifest ; 1967 ; Digestive Diseases and Sciences Volume 12 ; 12 >
+    au < manifest ; 1968 ; Digestive Diseases and Sciences Volume 13 ; 13 >
+    au < manifest ; 1969 ; Digestive Diseases and Sciences Volume 14 ; 14 >
+    au < manifest ; 1970 ; Digestive Diseases and Sciences Volume 15 ; 15 >
+    au < manifest ; 1971 ; Digestive Diseases and Sciences Volume 16 ; 16 >
+    au < manifest ; 1972 ; Digestive Diseases and Sciences Volume 17 ; 17 >
+    au < manifest ; 1973 ; Digestive Diseases and Sciences Volume 18 ; 18 >
+    au < manifest ; 1974 ; Digestive Diseases and Sciences Volume 19 ; 19 >
+    au < manifest ; 1975 ; Digestive Diseases and Sciences Volume 20 ; 20 >
+    au < manifest ; 1976 ; Digestive Diseases and Sciences Volume 21 ; 21 >
+    au < manifest ; 1977 ; Digestive Diseases and Sciences Volume 22 ; 22 >
+    au < manifest ; 1978 ; Digestive Diseases and Sciences Volume 23 ; 23 >
+    au < manifest ; 1979 ; Digestive Diseases and Sciences Volume 24 ; 24 >
+    au < manifest ; 1980 ; Digestive Diseases and Sciences Volume 25 ; 25 >
+    au < manifest ; 1981 ; Digestive Diseases and Sciences Volume 26 ; 26 >
+    au < manifest ; 1982 ; Digestive Diseases and Sciences Volume 27 ; 27 >
+    au < manifest ; 1983 ; Digestive Diseases and Sciences Volume 28 ; 28 >
+    au < manifest ; 1984 ; Digestive Diseases and Sciences Volume 29 ; 29 >
+    au < manifest ; 1985 ; Digestive Diseases and Sciences Volume 30 ; 30 >
+    au < manifest ; 1986 ; Digestive Diseases and Sciences Volume 31 ; 31 >
+    au < manifest ; 1987 ; Digestive Diseases and Sciences Volume 32 ; 32 >
+    au < manifest ; 1988 ; Digestive Diseases and Sciences Volume 33 ; 33 >
+    au < manifest ; 1989 ; Digestive Diseases and Sciences Volume 34 ; 34 >
+    au < manifest ; 1990 ; Digestive Diseases and Sciences Volume 35 ; 35 >
+    au < manifest ; 1991 ; Digestive Diseases and Sciences Volume 36 ; 36 >
+    au < manifest ; 1992 ; Digestive Diseases and Sciences Volume 37 ; 37 >
+    au < manifest ; 1993 ; Digestive Diseases and Sciences Volume 38 ; 38 >
+    au < manifest ; 1994 ; Digestive Diseases and Sciences Volume 39 ; 39 >
+    au < manifest ; 1995 ; Digestive Diseases and Sciences Volume 40 ; 40 >
+    au < manifest ; 1996 ; Digestive Diseases and Sciences Volume 41 ; 41 >
+    au < manifest ; 1997 ; Digestive Diseases and Sciences Volume 42 ; 42 >
+    au < manifest ; 1998 ; Digestive Diseases and Sciences Volume 43 ; 43 >
+    au < manifest ; 1999 ; Digestive Diseases and Sciences Volume 44 ; 44 >
+    au < manifest ; 2000 ; Digestive Diseases and Sciences Volume 45 ; 45 >
+    au < manifest ; 2001 ; Digestive Diseases and Sciences Volume 46 ; 46 >
+    au < manifest ; 2002 ; Digestive Diseases and Sciences Volume 47 ; 47 >
+    au < manifest ; 2003 ; Digestive Diseases and Sciences Volume 48 ; 48 >
+    au < manifest ; 2004 ; Digestive Diseases and Sciences Volume 49 ; 49 >
+    au < manifest ; 2005 ; Digestive Diseases and Sciences Volume 50 ; 50 >
+    au < manifest ; 2006 ; Digestive Diseases and Sciences Volume 51 ; 51 >
+    au < manifest ; 2007 ; Digestive Diseases and Sciences Volume 52 ; 52 >
+    au < manifest ; 2008 ; Digestive Diseases and Sciences Volume 53 ; 53 >
+    au < manifest ; 2009 ; Digestive Diseases and Sciences Volume 54 ; 54 >
+    au < manifest ; 2010 ; Digestive Diseases and Sciences Volume 55 ; 55 >
+    au < manifest ; 2011 ; Digestive Diseases and Sciences Volume 56 ; 56 >
+    au < manifest ; 2012 ; Digestive Diseases and Sciences Volume 57 ; 57 >
+
   }
 
   {
@@ -25787,6 +27193,29 @@
     >
 
     param[journal_issn] = 0167-238X
+
+    au < manifest ; 1992 ; Directieve Therapie Volume 12 ; 12 >
+    au < manifest ; 1993 ; Directieve Therapie Volume 13 ; 13 >
+    au < manifest ; 1994 ; Directieve Therapie Volume 14 ; 14 >
+    au < manifest ; 1995 ; Directieve Therapie Volume 15 ; 15 >
+    au < manifest ; 1996 ; Directieve Therapie Volume 16 ; 16 >
+    au < manifest ; 1997 ; Directieve Therapie Volume 17 ; 17 >
+    au < manifest ; 1998 ; Directieve Therapie Volume 18 ; 18 >
+    au < manifest ; 1999 ; Directieve Therapie Volume 19 ; 19 >
+    au < manifest ; 2000 ; Directieve Therapie Volume 20 ; 20 >
+    au < manifest ; 2001 ; Directieve Therapie Volume 21 ; 21 >
+    au < manifest ; 2002 ; Directieve Therapie Volume 22 ; 22 >
+    au < manifest ; 2003 ; Directieve Therapie Volume 23 ; 23 >
+    au < manifest ; 2004 ; Directieve Therapie Volume 24 ; 24 >
+    au < manifest ; 2005 ; Directieve Therapie Volume 25 ; 25 >
+    au < manifest ; 2006 ; Directieve Therapie Volume 26 ; 26 >
+    au < manifest ; 2007 ; Directieve Therapie Volume 27 ; 27 >
+    au < manifest ; 2008 ; Directieve Therapie Volume 28 ; 28 >
+    au < manifest ; 2009 ; Directieve Therapie Volume 29 ; 29 >
+    au < manifest ; 2010 ; Directieve Therapie Volume 30 ; 30 >
+    au < manifest ; 2011 ; Directieve Therapie Volume 31 ; 31 >
+    au < manifest ; 2010 ; Directieve Therapie Volume 2010 ; 2010 >
+    au < manifest ; 2011 ; Directieve Therapie Volume 2011 ; 2011 >
 
   }
 
@@ -30159,21 +31588,21 @@
 
     param[journal_issn] = 1436-3291
 
-    au < testing ; 1998 ; Gastric Cancer Volume 1 ; 1 >
-    au < testing ; 1999 ; Gastric Cancer Volume 2 ; 2 >
-    au < testing ; 2000 ; Gastric Cancer Volume 3 ; 3 >
-    au < testing ; 2001 ; Gastric Cancer Volume 4 ; 4 >
-    au < testing ; 2002 ; Gastric Cancer Volume 5 ; 5 >
-    au < testing ; 2003 ; Gastric Cancer Volume 6 ; 6 >
-    au < testing ; 2004 ; Gastric Cancer Volume 7 ; 7 >
-    au < testing ; 2005 ; Gastric Cancer Volume 8 ; 8 >
-    au < testing ; 2006 ; Gastric Cancer Volume 9 ; 9 >
-    au < testing ; 2007 ; Gastric Cancer Volume 10 ; 10 >
-    au < testing ; 2008 ; Gastric Cancer Volume 11 ; 11 >
-    au < testing ; 2009 ; Gastric Cancer Volume 12 ; 12 >
-    au < testing ; 2010 ; Gastric Cancer Volume 13 ; 13 >
-    au < testing ; 2011 ; Gastric Cancer Volume 14 ; 14 >
-    au < testing ; 2012 ; Gastric Cancer Volume 15 ; 15 >
+    au < ready ; 1998 ; Gastric Cancer Volume 1 ; 1 >
+    au < ready ; 1999 ; Gastric Cancer Volume 2 ; 2 >
+    au < ready ; 2000 ; Gastric Cancer Volume 3 ; 3 >
+    au < ready ; 2001 ; Gastric Cancer Volume 4 ; 4 >
+    au < ready ; 2002 ; Gastric Cancer Volume 5 ; 5 >
+    au < ready ; 2003 ; Gastric Cancer Volume 6 ; 6 >
+    au < ready ; 2004 ; Gastric Cancer Volume 7 ; 7 >
+    au < ready ; 2005 ; Gastric Cancer Volume 8 ; 8 >
+    au < ready ; 2006 ; Gastric Cancer Volume 9 ; 9 >
+    au < ready ; 2007 ; Gastric Cancer Volume 10 ; 10 >
+    au < ready ; 2008 ; Gastric Cancer Volume 11 ; 11 >
+    au < ready ; 2009 ; Gastric Cancer Volume 12 ; 12 >
+    au < ready ; 2010 ; Gastric Cancer Volume 13 ; 13 >
+    au < ready ; 2011 ; Gastric Cancer Volume 14 ; 14 >
+    au < ready ; 2012 ; Gastric Cancer Volume 15 ; 15 >
 
   }
 
@@ -31410,7 +32839,7 @@
       issnl = 1269-3286
     >
 
-    comment[merged_into] = 0939-5555
+    comment[merged_with] = 0939-5555
     param[journal_issn] = 1269-3286
 
     au < released ; 1997 ; Hematology and Cell Therapy Volume 38 ; 38 >
@@ -33098,7 +34527,7 @@
       issnl = 0175-3851
     >
 
-    comment[merged_into] = 0723-5003
+    comment[merged_with] = 0723-5003
     param[journal_issn] = 0175-3851
     attr[urgent] = end of 2011
 
@@ -40105,7 +41534,7 @@
     >
 
     param[journal_issn] = 0936-3076
-    comment[merged_into] = 0300-9564
+    comment[merged_with] = 0300-9564
 
     au < released ; 1989 ; Journal of Neural Transmission: Parkinson's Disease and Dementia Section Volume 1 ; 1 >
     au < released ; 1990 ; Journal of Neural Transmission: Parkinson's Disease and Dementia Section Volume 2 ; 2 >
@@ -41467,18 +42896,18 @@
 
     param[journal_issn] = 1439-0108
 
-    au < manifest ; 2001 ; Journal of Soils and Sediments Volume 1 ; 1 >
-    au < manifest ; 2002 ; Journal of Soils and Sediments Volume 2 ; 2 >
-    au < manifest ; 2003 ; Journal of Soils and Sediments Volume 3 ; 3 >
-    au < manifest ; 2004 ; Journal of Soils and Sediments Volume 4 ; 4 >
-    au < manifest ; 2005 ; Journal of Soils and Sediments Volume 5 ; 5 >
-    au < manifest ; 2006 ; Journal of Soils and Sediments Volume 6 ; 6 >
-    au < manifest ; 2007 ; Journal of Soils and Sediments Volume 7 ; 7 >
-    au < manifest ; 2008 ; Journal of Soils and Sediments Volume 8 ; 8 >
-    au < manifest ; 2009 ; Journal of Soils and Sediments Volume 9 ; 9 >
-    au < manifest ; 2010 ; Journal of Soils and Sediments Volume 10 ; 10 >
-    au < manifest ; 2011 ; Journal of Soils and Sediments Volume 11 ; 11 >
-    au < manifest ; 2012 ; Journal of Soils and Sediments Volume 12 ; 12 >
+    au < testing ; 2001 ; Journal of Soils and Sediments Volume 1 ; 1 >
+    au < testing ; 2002 ; Journal of Soils and Sediments Volume 2 ; 2 >
+    au < testing ; 2003 ; Journal of Soils and Sediments Volume 3 ; 3 >
+    au < testing ; 2004 ; Journal of Soils and Sediments Volume 4 ; 4 >
+    au < testing ; 2005 ; Journal of Soils and Sediments Volume 5 ; 5 >
+    au < testing ; 2006 ; Journal of Soils and Sediments Volume 6 ; 6 >
+    au < testing ; 2007 ; Journal of Soils and Sediments Volume 7 ; 7 >
+    au < testing ; 2008 ; Journal of Soils and Sediments Volume 8 ; 8 >
+    au < testing ; 2009 ; Journal of Soils and Sediments Volume 9 ; 9 >
+    au < testing ; 2010 ; Journal of Soils and Sediments Volume 10 ; 10 >
+    au < testing ; 2011 ; Journal of Soils and Sediments Volume 11 ; 11 >
+    au < testing ; 2012 ; Journal of Soils and Sediments Volume 12 ; 12 >
 
   }
 
@@ -44233,7 +45662,7 @@
     >
 
     param[journal_issn] = 1522-3434
-    comment[merged_into] = 0894-587X
+    comment[merged_with] = 0894-587X
 
   }
 
@@ -44754,7 +46183,7 @@
     >
 
     param[journal_issn] = 0369-0261
-    comment[merged_into] = 0026-3672
+    comment[merged_with] = 0026-3672
 
     au < ready ; 1923 ; Mikrochemie Volume 1 ; 1 >
     au < ready ; 1924 ; Mikrochemie Volume 2 ; 2 >
@@ -47053,7 +48482,7 @@
     au < ready ; 1977-1978 ; Neuroradiology Volume 14 ; 14 >
     au < ready ; 1978 ; Neuroradiology Volume 15 ; 15 >
     au < ready ; 1978 ; Neuroradiology Volume 16 ; 16 >
-    au < ready ; 1978-1979 ; Neuroradiology Volume 17 ; 17 >
+    au < testing ; 1978-1979 ; Neuroradiology Volume 17 ; 17 >
     au < ready ; 1979 ; Neuroradiology Volume 18 ; 18 >
     au < ready ; 1980 ; Neuroradiology Volume 19 ; 19 >
     au < ready ; 1980-1981 ; Neuroradiology Volume 20 ; 20 >
@@ -47276,7 +48705,7 @@
       issnl = 1536-0059
     >
 
-    comment[merged_into] = 1072-3374
+    comment[merged_with] = 1072-3374
     param[journal_issn] = 1536-0059
     attr[urgent] = end of 2011
 
@@ -48682,7 +50111,7 @@
     >
 
     param[journal_issn] = 0928-2866
-    comment[merged_into] = 0920-654X
+    comment[merged_with] = 0920-654X
 
     au < released ; 1993-1994 ; Perspectives in Drug Discovery and Design Volume 1 ; 1 >
     au < released ; 1994-1995 ; Perspectives in Drug Discovery and Design Volume 2 ; 2 >
@@ -58715,7 +60144,7 @@
     >
 
     param[journal_issn] = 0170-9739
-    comment[merged_into] = 1434-6044
+    comment[merged_with] = 1434-6044
 
     au < released ; 1979 ; Zeitschrift für Physik C Volume 2 ; 2 >
     au < released ; 1979-1980 ; Zeitschrift für Physik C Volume 3 ; 3 >
