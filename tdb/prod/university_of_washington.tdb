@@ -17,7 +17,7 @@
     param[base_url] = http://www.radiology.casereports.net/
     param[journal_id] = rcr
     implicit < status ; year ; name ; volume ; param[year] >
-    comment[notReady] = see RU3907
+    comment[notReady] = see RU3907. AUtest waiting to crawl
    
     au < ready ; 2006 ; Radiology Case Reports Volume 1 ; 1 ; 2006 >
     au < testing ; 2007 ; Radiology Case Reports Volume 2 ; 2 ; 2007 >
