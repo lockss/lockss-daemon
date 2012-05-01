@@ -5853,7 +5853,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < crawling ; exists ; 2009 ; Genome Biology and Evolution Volume 1 ; 1 ; >
-    au < testing ; exists ; 2010 ; Genome Biology and Evolution Volume 2 ; 2 ; >
+    au < released ; manifest ; 2010 ; Genome Biology and Evolution Volume 2 ; 2 ; >
     au < released ; manifest ; 2011 ; Genome Biology and Evolution Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 ; >
 
@@ -10145,8 +10145,8 @@
     au < manifest ; exists ; 2008 ; Journal of Infectious Diseases Volume 198 ; 198 ; >
     au < crawling ; exists ; 2009 ; Journal of Infectious Diseases Volume 199 ; 199 ; >
     au < crawling ; exists ; 2009 ; Journal of Infectious Diseases Volume 200 ; 200 ; >
-    au < testing ; exists ; 2010 ; Journal of Infectious Diseases Volume 201 ; 201 ; >
-    au < testing ; exists ; 2010 ; Journal of Infectious Diseases Volume 202 ; 202 ; >
+    au < released ; manifest ; 2010 ; Journal of Infectious Diseases Volume 201 ; 201 ; >
+    au < released ; manifest ; 2010 ; Journal of Infectious Diseases Volume 202 ; 202 ; >
     au < released ; manifest ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 ; >
     au < released ; crawling ; 2011 ; Journal of Infectious Diseases Volume 204 ; 204 ; >
     au < crawling ; exists ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 ; >
