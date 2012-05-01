@@ -19,7 +19,7 @@
     
     param[journal_dir] = ahcsps
  
-    au < ready ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
+    au < exists ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
     au < expected ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 >
   
   }
@@ -33,8 +33,8 @@
     
     param[journal_dir] = avi
 
-    au < ready ; 2010 ; Avicenna Volume 2010 ; 2010 >
-    au < ready ; 2011 ; Avicenna Volume 2011 ; 2011 >    
+    au < exists ; 2010 ; Avicenna Volume 2010 ; 2010 >
+    au < exists ; 2011 ; Avicenna Volume 2011 ; 2011 >    
     au < expected ; 2012 ; Avicenna Volume 2012 ; 2012 >    
     
   }
@@ -48,8 +48,8 @@
     
     param[journal_dir] = cis
 
-    au < ready ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 >
-    au < ready ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 >  
+    au < exists ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 >
+    au < exists ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 >  
     au < expected ; 2012 ; Contemporary Islamic Studies Volume 2012 ; 2012 >  
     
   }
@@ -63,10 +63,10 @@
     
     param[journal_dir] = nmejre
 
-    au < ready ; 2006 ; Near and Middle Eastern Journal of Research in Education Volume 1 (2006) ; 1 >
-    au < ready ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 > 
-    au < ready ; 2010 ; Near and Middle Eastern Journal of Research in Education Volume 2010 ; 2010 >
-    au < ready ; 2011 ; Near and Middle Eastern Journal of Research in Education Volume 2011 ; 2011 > 
+    au < exists ; 2006 ; Near and Middle Eastern Journal of Research in Education Volume 1 (2006) ; 1 >
+    au < exists ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 > 
+    au < exists ; 2010 ; Near and Middle Eastern Journal of Research in Education Volume 2010 ; 2010 >
+    au < exists ; 2011 ; Near and Middle Eastern Journal of Research in Education Volume 2011 ; 2011 > 
     au < expected ; 2012 ; Near and Middle Eastern Journal of Research in Education Volume 2012 ; 2012 > 
     
   }
@@ -80,8 +80,8 @@
     
     param[journal_dir] = pil
 
-    au < ready ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
-    au < ready ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >  
+    au < exists ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
+    au < exists ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >  
     au < expected ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 >  
     
   }
@@ -95,7 +95,7 @@
     
     param[journal_dir] = qfarf
 
-    au < ready ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 >
+    au < exists ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 >
     au < expected ; 2011 ; Qatar Foundation Annual Research Forum Proceedings Volume 2011 ; 2011 >
     au < expected ; 2012 ; Qatar Foundation Annual Research Forum Proceedings Volume 2012 ; 2012 >
     
@@ -122,8 +122,8 @@
     
     param[journal_dir] = stsp
 
-    au < ready ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 >
-    au < ready ; 2012 ; Sustainable Technologies, Systems and Policies Volume 2012 ; 2012 >
+    au < exists ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 >
+    au < exists ; 2012 ; Sustainable Technologies, Systems and Policies Volume 2012 ; 2012 >
      
   }
 
