@@ -1212,7 +1212,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2009 ; AoB PLANTS Volume 2009 ; 2009 ; >
-    au < testing ; exists ; 2010 ; AoB PLANTS Volume 2010 ; 2010 ; >
+    au < released ; manifest ; 2010 ; AoB PLANTS Volume 2010 ; 2010 ; >
     au < released ; crawling ; 2011 ; AoB PLANTS Volume 2011 ; 2011 ; >
     au < crawling ; exists ; 2012 ; AoB PLANTS Volume 2012 ; 2012 ; >
 
@@ -1254,7 +1254,7 @@
     au < manifest ; exists ; 2007 ; Applied Economic Perspectives and Policy Volume 29 ; 29 ; >
     au < manifest ; exists ; 2008 ; Applied Economic Perspectives and Policy Volume 30 ; 30 ; >
     au < manifest ; exists ; 2009 ; Applied Economic Perspectives and Policy Volume 31 ; 31 ; >
-    au < testing ; exists ; 2010 ; Applied Economic Perspectives and Policy Volume 32 ; 32 ; >
+    au < released ; manifest ; 2010 ; Applied Economic Perspectives and Policy Volume 32 ; 32 ; >
     au < released ; crawling ; 2011 ; Applied Economic Perspectives and Policy Volume 33 ; 33 ; >
     au < crawling ; exists ; 2012 ; Applied Economic Perspectives and Policy Volume 34 ; 34 ; >
 
@@ -1343,7 +1343,7 @@
     au < manifest ; exists ; 2007 ; Applied Mathematics Research eXpress (AMRX) Volume 2007 ; 2007 ; >
     au < manifest ; exists ; 2008 ; Applied Mathematics Research eXpress (AMRX) Volume 2008 ; 2008 ; >
     au < manifest ; exists ; 2009 ; Applied Mathematics Research eXpress (AMRX) Volume 2009 ; 2009 ; >
-    au < testing ; exists ; 2010 ; Applied Mathematics Research eXpress (AMRX) Volume 2010 ; 2010 ; >
+    au < released ; manifest ; 2010 ; Applied Mathematics Research eXpress (AMRX) Volume 2010 ; 2010 ; >
     au < released ; manifest ; 2011 ; Applied Mathematics Research eXpress (AMRX) Volume 2011 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Applied Mathematics Research eXpress (AMRX) Volume 2012 ; 2012 ; >
 
@@ -2042,7 +2042,7 @@
     param[base_url] = http://bfg.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < testing ; exists ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 ; >
+    au < released ; manifest ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 ; >
     au < released ; crawling ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 ; >
     au < crawling ; exists ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 ; >
 
@@ -2249,8 +2249,8 @@
     au < manifest ; exists ; 2008 ; British Journal of Anaesthesia Volume 101 ; 101 ; >
     au < released ; crawling ; 2009 ; British Journal of Anaesthesia Volume 102 ; 102 ; >
     au < released ; crawling ; 2009 ; British Journal of Anaesthesia Volume 103 ; 103 ; >
-    au < testing ; exists ; 2010 ; British Journal of Anaesthesia Volume 104 ; 104 ; >
-    au < testing ; exists ; 2010 ; British Journal of Anaesthesia Volume 105 ; 105 ; >
+    au < released ; manifest ; 2010 ; British Journal of Anaesthesia Volume 104 ; 104 ; >
+    au < released ; manifest ; 2010 ; British Journal of Anaesthesia Volume 105 ; 105 ; >
     au < released ; crawling ; 2011 ;  British Journal of Anaesthesia Volume 106 ; 106 ; >
     au < released ; manifest ; 2011 ;  British Journal of Anaesthesia Volume 107 ; 107 ; >
     au < crawling ; exists ; 2012 ;  British Journal of Anaesthesia Volume 108 ; 108 ; >
@@ -2620,9 +2620,9 @@
     au < released ; crawling ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; >
     au < released ; crawling ; 2009 ; British Medical Bulletin Volume 92 ; 92 ; >
-    au < testing ; exists ; 2010 ; British Medical Bulletin Volume 93 ; 93 ; >
-    au < testing ; exists ; 2010 ; British Medical Bulletin Volume 94 ; 94 ; >
-    au < testing ; exists ; 2010 ; British Medical Bulletin Volume 95 ; 95 ; >
+    au < released ; manifest ; 2010 ; British Medical Bulletin Volume 93 ; 93 ; >
+    au < released ; manifest ; 2010 ; British Medical Bulletin Volume 94 ; 94 ; >
+    au < released ; manifest ; 2010 ; British Medical Bulletin Volume 95 ; 95 ; >
     au < released ; crawling ; 2010 ; British Medical Bulletin Volume 96 ; 96 ; >
     au < released ; crawling ; 2011 ; British Medical Bulletin Volume 97 ; 97 ; >
     au < released ; manifest ; 2011 ; British Medical Bulletin Volume 98 ; 98 ; >
@@ -2683,7 +2683,7 @@
     au < manifest ; exists ; 2007 ; British Yearbook of International Law Volume 78 ; 78 ; >
     au < manifest ; exists ; 2008 ; British Yearbook of International Law Volume 79 ; 79 ; >
     au < manifest ; exists ; 2009 ; British Yearbook of International Law Volume 80 ; 80 ; >
-    au < testing ; exists ; 2010 ; British Yearbook of International Law Volume 81 ; 81 ; >
+    au < released ; manifest ; 2010 ; British Yearbook of International Law Volume 81 ; 81 ; >
 
   }
 
@@ -3339,7 +3339,7 @@
     au < manifest ; exists ; 2007 ; Children & Schools Volume 29 ; 29 ; >
     au < manifest ; exists ; 2008 ; Children & Schools Volume 30 ; 30 ; >
     au < manifest ; exists ; 2009 ; Children & Schools Volume 31 ; 31 ; >
-    au < testing ; exists ; 2010 ; Children & Schools Volume 32 ; 32 ; >
+    au < released ; manifest ; 2010 ; Children & Schools Volume 32 ; 32 ; >
     au < released ; crawling ; 2011 ; Children & Schools Volume 33 ; 33 ; >
     au < expected ; exists ; 2012 ; Children & Schools Volume 34 ; 34 ; >
 
@@ -3478,7 +3478,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2009 ; Classical Receptions Journal Volume 1 ; 1 ; >
-    au < testing ; exists ; 2010 ; Classical Receptions Journal Volume 2 ; 2 ; >
+    au < released ; manifest ; 2010 ; Classical Receptions Journal Volume 2 ; 2 ; >
     au < released ; crawling ; 2011 ; Classical Receptions Journal Volume 3 ; 3 ; >
     au < expected ; exists ; 2012 ; Classical Receptions Journal Volume 4 ; 4 ; >
 
@@ -3547,8 +3547,8 @@
     au < manifest ; exists ; 2008 ; Clinical Infectious Diseases Volume 47 ; 47 ; >
     au < manifest ; exists ; 2009 ; Clinical Infectious Diseases Volume 48 ; 48 ; >
     au < manifest ; exists ; 2009 ; Clinical Infectious Diseases Volume 49 ; 49 ; >
-    au < testing ; exists ; 2010 ; Clinical Infectious Diseases Volume 50 ; 50 ; >
-    au < testing ; exists ; 2010 ; Clinical Infectious Diseases Volume 51 ; 51 ; >
+    au < released ; manifest ; 2010 ; Clinical Infectious Diseases Volume 50 ; 50 ; >
+    au < released ; manifest ; 2010 ; Clinical Infectious Diseases Volume 51 ; 51 ; >
     au < released ; crawling ; 2011 ; Clinical Infectious Diseases Volume 52 ; 52 ; >
     au < released ; manifest ; 2011 ; Clinical Infectious Diseases Volume 53 ; 53 ; >
     au < crawling ; exists ; 2012 ; Clinical Infectious Diseases Volume 54 ; 54 ; >
@@ -3573,7 +3573,7 @@
 
     au < doNotProcess ; doNotProcess ; 2008 ; NDT Plus Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; NDT Plus Volume 2 ; 2 ; >
-    au < testing ; exists ; 2010 ; NDT Plus Volume 3 ; 3 ; >
+    au < released ; manifest ; 2010 ; NDT Plus Volume 3 ; 3 ; >
     au < manifest ; exists ; 2011 ; NDT Plus Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; Clinical Kidney Journal Volume 5 ; 5 ; >
 
@@ -3905,7 +3905,7 @@
     au < manifest ; exists ; 2007 ; Current Legal Problems Volume 60 ; 60 ; >
     au < manifest ; exists ; 2008 ; Current Legal Problems Volume 61 ; 61 ; >
     au < manifest ; exists ; 2009 ; Current Legal Problems Volume 62 ; 62 ; >
-    au < testing ; exists ; 2010 ; Current Legal Problems Volume 63 ; 63 ; >
+    au < released ; manifest ; 2010 ; Current Legal Problems Volume 63 ; 63 ; >
     au < released ; crawling ; 2011 ; Current Legal Problems Volume 64 ; 64 ; >
     au < expected ; exists ; 2012 ; Current Legal Problems Volume 65 ; 65 ; >
 
@@ -3923,7 +3923,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2009 ; Database: The Journal of Biological Databases and Curation Volume 2009 ; 2009 ; >
-    au < testing ; exists ; 2010 ; Database: The Journal of Biological Databases and Curation Volume 2010 ; 2010 ; >
+    au < released ; manifest ; 2010 ; Database: The Journal of Biological Databases and Curation Volume 2010 ; 2010 ; >
     au < released ; crawling ; 2011 ; Database: The Journal of Biological Databases and Curation Volume 2011 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Database: The Journal of Biological Databases and Curation Volume 2012 ; 2012 ; >
 
@@ -4116,7 +4116,7 @@
     au < manifest ; exists ; 2007 ; English: Journal of the English Association Volume 56 ; 56 ; >
     au < manifest ; exists ; 2008 ; English: Journal of the English Association Volume 57 ; 57 ; >
     au < manifest ; exists ; 2009 ; English: Journal of the English Association Volume 58 ; 58 ; >
-    au < testing ; exists ; 2010 ; English: Journal of the English Association Volume 59 ; 59 ; >
+    au < released ; manifest ; 2010 ; English: Journal of the English Association Volume 59 ; 59 ; >
     au < released ; manifest ; 2011 ; English: Journal of the English Association Volume 60 ; 60 ; >
     au < manifest ; exists ; 2012 ; English: Journal of the English Association Volume 61 ; 61 ; >
 
@@ -4432,7 +4432,7 @@
     au < manifest ; exists ; 2007 ; Environmental History Volume 12 ; 12 ; >
     au < manifest ; exists ; 2008 ; Environmental History Volume 13 ; 13 ; >
     au < manifest ; exists ; 2009 ; Environmental History Volume 14 ; 14 ; >
-    au < testing ; exists ; 2010 ; Environmental History Volume 15 ; 15 ; >
+    au < released ; manifest ; 2010 ; Environmental History Volume 15 ; 15 ; >
     au < released ; crawling ; 2011 ; Environmental History Volume 16 ; 16 ; >
     au < crawling ; exists ; 2012 ; Environmental History Volume 17 ; 17 ; >
 
@@ -4847,8 +4847,8 @@
     au < manifest ; exists ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 34 ; 34 ; >
     au < manifest ; exists ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 35 ; 35 ; >
     au < manifest ; exists ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 36 ; 36 ; >
-    au < testing ; exists ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37 ; 37 ; >
-    au < testing ; exists ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 38 ; 38 ; >
+    au < released ; manifest ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37 ; 37 ; >
+    au < released ; manifest ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 38 ; 38 ; >
     au < released ; manifest ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 ; >
     au < released ; manifest ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 ; >
     au < crawling ; exists ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 41 ; 41 ; >
@@ -4987,7 +4987,7 @@
     au < manifest ; exists ; 2007 ; European Journal of Heart Failure Supplements Volume 6 ; 6 ; >
     au < manifest ; exists ; 2008 ; European Journal of Heart Failure Supplements Volume 7 ; 7 ; >
     au < manifest ; exists ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 ; >
-    au < testing ; exists ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 ; >
+    au < released ; manifest ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 ; >
     au < released ; crawling ; 2011 ; European Journal of Heart Failure Supplements Volume 10 ; 10 ; >
     au < expected ; exists ; 2012 ; European Journal of Heart Failure Supplements Volume 11 ; 11 ; >
 
@@ -5252,7 +5252,7 @@
     au < manifest ; exists ; 2007 ; European Review of Economic History Volume 11 ; 11 ; >
     au < manifest ; exists ; 2008 ; European Review of Economic History Volume 12 ; 12 ; >
     au < manifest ; exists ; 2009 ; European Review of Economic History Volume 13 ; 13 ; >
-    au < testing ; exists ; 2010 ; European Review of Economic History Volume 14 ; 14 ; >
+    au < released ; manifest ; 2010 ; European Review of Economic History Volume 14 ; 14 ; >
     au < released ; crawling ; 2011 ; European Review of Economic History Volume 15 ; 15 ; >
     au < crawling ; exists ; 2012 ; European Review of Economic History Volume 16 ; 16 ; >
 
