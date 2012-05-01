@@ -9527,6 +9527,24 @@
       }
 
     }
+    
+{
+  
+    title <
+      name = European Heart Journal: Acute Cardiovasular Care ;
+      issn = 2048-8726 ;
+      eissn = 2048-8734 
+    >
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+        param[base_url] = http://acc.sagepub.com/
+    
+
+
+      au < exists ; 2012 ; European Heart Journal: Acute Cardiovascular Care Volume 1 ; 1 >
+
+    }
+
 
     {
 
@@ -9536,8 +9554,7 @@
         eissn = 1461-7110 ;
         issnl = 0265-6914
       >
-
-      {
+    {
 
         pluginSuffix = HighWirePlugin
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
