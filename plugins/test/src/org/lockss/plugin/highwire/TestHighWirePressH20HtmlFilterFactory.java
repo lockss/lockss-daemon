@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.1 2012-04-27 21:54:22 akanshab01 Exp $
+ * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.2 2012-05-01 19:49:17 akanshab01 Exp $
  */
 
 /*
@@ -50,10 +50,10 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     mau = new MockArchivalUnit();
   }
 
-  private static final String inst1 = "<div class=\"leaderboard-ads leaderboard-ads-two\">"
+  private static final String inst1 = "<div class=\"leaderboard-ads leaderboard-ads-two\"</div>"
       + "<ul>Fill in SOMETHING SOMETHING</ul>";
 
-  private static final String inst2 = "<div class=\"leaderboard-ads leaderboard-ads-two\">";
+  private static final String inst2 = "<ul>Fill in SOMETHING SOMETHING</ul>";
 
  
   public void testFiltering() throws IOException {
@@ -65,6 +65,8 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           ENC);
       inB = fact.createFilteredInputStream(mau, new StringInputStream(inst2),
           ENC);
+      
+           
       assertEquals(StringUtil.fromInputStream(inA),
           StringUtil.fromInputStream(inB));
 
