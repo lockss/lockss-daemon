@@ -46795,34 +46795,34 @@
 
     param[journal_issn] = 1380-3743
 
-    au < manifest ; 1995 ; Molecular Breeding Volume 1 ; 1 >
-    au < manifest ; 1996 ; Molecular Breeding Volume 2 ; 2 >
-    au < manifest ; 1997 ; Molecular Breeding Volume 3 ; 3 >
-    au < manifest ; 1998 ; Molecular Breeding Volume 4 ; 4 >
-    au < manifest ; 1999 ; Molecular Breeding Volume 5 ; 5 >
-    au < manifest ; 2000 ; Molecular Breeding Volume 6 ; 6 >
-    au < manifest ; 2001 ; Molecular Breeding Volume 7 ; 7 >
-    au < manifest ; 2001 ; Molecular Breeding Volume 8 ; 8 >
-    au < manifest ; 2002 ; Molecular Breeding Volume 9 ; 9 >
-    au < manifest ; 2002 ; Molecular Breeding Volume 10 ; 10 >
-    au < manifest ; 2003 ; Molecular Breeding Volume 11 ; 11 >
-    au < manifest ; 2003 ; Molecular Breeding Volume 12 ; 12 >
-    au < manifest ; 2004 ; Molecular Breeding Volume 13 ; 13 >
-    au < manifest ; 2004 ; Molecular Breeding Volume 14 ; 14 >
-    au < manifest ; 2005 ; Molecular Breeding Volume 15 ; 15 >
-    au < manifest ; 2005 ; Molecular Breeding Volume 16 ; 16 >
-    au < manifest ; 2006 ; Molecular Breeding Volume 17 ; 17 >
-    au < manifest ; 2006 ; Molecular Breeding Volume 18 ; 18 >
-    au < manifest ; 2007 ; Molecular Breeding Volume 19 ; 19 >
-    au < manifest ; 2007 ; Molecular Breeding Volume 20 ; 20 >
-    au < manifest ; 2008 ; Molecular Breeding Volume 21 ; 21 >
-    au < manifest ; 2008 ; Molecular Breeding Volume 22 ; 22 >
-    au < manifest ; 2009 ; Molecular Breeding Volume 23 ; 23 >
-    au < manifest ; 2009 ; Molecular Breeding Volume 24 ; 24 >
-    au < manifest ; 2010 ; Molecular Breeding Volume 25 ; 25 >
-    au < manifest ; 2010 ; Molecular Breeding Volume 26 ; 26 >
-    au < manifest ; 2011 ; Molecular Breeding Volume 27 ; 27 >
-    au < manifest ; 2011 ; Molecular Breeding Volume 28 ; 28 >
+    au < testing ; 1995 ; Molecular Breeding Volume 1 ; 1 >
+    au < testing ; 1996 ; Molecular Breeding Volume 2 ; 2 >
+    au < testing ; 1997 ; Molecular Breeding Volume 3 ; 3 >
+    au < testing ; 1998 ; Molecular Breeding Volume 4 ; 4 >
+    au < testing ; 1999 ; Molecular Breeding Volume 5 ; 5 >
+    au < testing ; 2000 ; Molecular Breeding Volume 6 ; 6 >
+    au < testing ; 2001 ; Molecular Breeding Volume 7 ; 7 >
+    au < testing ; 2001 ; Molecular Breeding Volume 8 ; 8 >
+    au < testing ; 2002 ; Molecular Breeding Volume 9 ; 9 >
+    au < testing ; 2002 ; Molecular Breeding Volume 10 ; 10 >
+    au < testing ; 2003 ; Molecular Breeding Volume 11 ; 11 >
+    au < testing ; 2003 ; Molecular Breeding Volume 12 ; 12 >
+    au < testing ; 2004 ; Molecular Breeding Volume 13 ; 13 >
+    au < testing ; 2004 ; Molecular Breeding Volume 14 ; 14 >
+    au < testing ; 2005 ; Molecular Breeding Volume 15 ; 15 >
+    au < testing ; 2005 ; Molecular Breeding Volume 16 ; 16 >
+    au < testing ; 2006 ; Molecular Breeding Volume 17 ; 17 >
+    au < testing ; 2006 ; Molecular Breeding Volume 18 ; 18 >
+    au < testing ; 2007 ; Molecular Breeding Volume 19 ; 19 >
+    au < testing ; 2007 ; Molecular Breeding Volume 20 ; 20 >
+    au < testing ; 2008 ; Molecular Breeding Volume 21 ; 21 >
+    au < testing ; 2008 ; Molecular Breeding Volume 22 ; 22 >
+    au < testing ; 2009 ; Molecular Breeding Volume 23 ; 23 >
+    au < testing ; 2009 ; Molecular Breeding Volume 24 ; 24 >
+    au < testing ; 2010 ; Molecular Breeding Volume 25 ; 25 >
+    au < testing ; 2010 ; Molecular Breeding Volume 26 ; 26 >
+    au < testing ; 2011 ; Molecular Breeding Volume 27 ; 27 >
+    au < testing ; 2011 ; Molecular Breeding Volume 28 ; 28 >
     au < manifest ; 2012 ; Molecular Breeding Volume 29 ; 29 >
 
   }
@@ -58258,7 +58258,7 @@
 
     param[journal_issn] = 0962-8819
 
-    au < testing ; 1991-1992 ; Transgenic Research Volume 1 ; 1 >
+    au < ready ; 1991-1992 ; Transgenic Research Volume 1 ; 1 >
     au < ready ; 1993 ; Transgenic Research Volume 2 ; 2 >
     au < ready ; 1994 ; Transgenic Research Volume 3 ; 3 >
     au < ready ; 1995 ; Transgenic Research Volume 4 ; 4 >
@@ -58278,7 +58278,7 @@
     au < ready ; 2009 ; Transgenic Research Volume 18 ; 18 >
     au < ready ; 2010 ; Transgenic Research Volume 19 ; 19 >
     au < ready ; 2011 ; Transgenic Research Volume 20 ; 20 >
-    au < testing ; 2012 ; Transgenic Research Volume 21 ; 21 >
+    au < ready ; 2012 ; Transgenic Research Volume 21 ; 21 >
 
   }
 
