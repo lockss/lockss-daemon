@@ -1,7 +1,7 @@
 <map>
   <entry>
-  	<string>plugin_status</string>
-    <string>down - wendell is working on crawl rules</string>
+    <string>plugin_status</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -52,7 +52,8 @@
       <string>1,&quot;^%sindex\.php/%s/gateway/lockss\?year=%d$&quot;, base_url, journal_id, year</string>
       <string>1,&quot;^%sindex\.php/%s/(article|issue)/(download|downloadSuppFile|view|viewArticle|viewDownloadInterstitial|viewFile|viewPDFInterstitial|viewRST)/&quot;, base_url, journal_id</string>
       <string>2,&quot;^%sindex\.php/%s/rt/(captureCite)/&quot;, base_url, journal_id</string>
-      <string>1,&quot;^%sindex\.php/%s/rt/(bio|metadata|printerFriendly|suppFileMetadata|suppFiles)/&quot;, base_url, journal_id</string>
+      <string>1,&quot;^%sindex\.php/%s/rt/bio(/[0-9]+)*$&quot;, base_url, journal_id</string>
+      <string>1,&quot;^%sindex\.php/%s/rt/(metadata|printerFriendly|suppFileMetadata|suppFiles)(/[0-9]+)*$&quot;, base_url, journal_id</string>
     </list>
   </entry>
   <entry>
