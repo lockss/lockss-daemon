@@ -3574,7 +3574,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; NDT Plus Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; NDT Plus Volume 2 ; 2 ; >
     au < released ; manifest ; 2010 ; NDT Plus Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2011 ; NDT Plus Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2011 ; NDT Plus Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; Clinical Kidney Journal Volume 5 ; 5 ; >
 
   }
@@ -7281,10 +7281,10 @@
     au < manifest ; exists ; 2008 ; Interactive CardioVascular and Thoracic Surgery Volume 7 ; 7 ; >
     au < manifest ; exists ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 8 ; 8 ; >
     au < manifest ; exists ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 13 ; 13 ; >
     au < crawling ; exists ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 14 ; 14 ; >
 	au < expected ; exists ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 15 ; 15 ; >
    
@@ -11993,7 +11993,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
     au < released ; crawling ; 2010 ; The Leo Baeck Institute Yearbook Volume 55 ; 55 ; >
-    au < manifest ; exists ; 2011 ; The Leo Baeck Institute Yearbook Volume 56 ; 56 ; >
+    au < crawling ; exists ; 2011 ; The Leo Baeck Institute Yearbook Volume 56 ; 56 ; >
     au < expected ; exists ; 2012 ; The Leo Baeck Institute Yearbook Volume 57 ; 57 ; >
 
     }
