@@ -255,7 +255,7 @@
     au < manifest ; exists ; 2009 ; Arms & Armour Volume 6 ; 6 > 
     au < manifest ; exists ; 2010 ; Arms & Armour Volume 7 ; 7 > 
     au < testing ; exists ; 2011 ; Arms & Armour Volume 8 ; 8 > 
-    au < expected ; exists ; 2012 ; Arms & Armour Volume 9 ; 9 > 
+    au < manifest ; exists ; 2012 ; Arms & Armour Volume 9 ; 9 > 
 
   }
 
@@ -2174,7 +2174,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Communication in Healthcare Volume 2 ; 2 > 
     au < doNotProcess ; exists ; 2010 ; Journal of Communication in Healthcare Volume 3 ; 3 > 
     au < doNotProcess ; exists ; 2011 ; Journal of Communication in Healthcare Volume 4 ; 4 > 
-    au < expected ; exists ; 2012 ; Journal of Communication in Healthcare Volume 5 ; 5 > 
+    au < manifest ; exists ; 2012 ; Journal of Communication in Healthcare Volume 5 ; 5 > 
 
   }
 
@@ -2614,7 +2614,7 @@
 
     au < manifest ; exists ; 2010 ; The Keats-Shelley Review Volume 24 ; 24 > 
     au < testing ; exists ; 2011 ; The Keats-Shelley Review Volume 25 ; 25 > 
-    au < expected ; exists ; 2012 ; The Keats-Shelley Review Volume 26 ; 26 > 
+    au < manifest ; exists ; 2012 ; The Keats-Shelley Review Volume 26 ; 26 > 
 
   }
 
