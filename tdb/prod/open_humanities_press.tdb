@@ -109,7 +109,7 @@
       au < released ; 2004 ; Film-Philosophy Volume 8 ; 8 ; 2004 >
       au < released ; 2005 ; Film-Philosophy Volume 9 ; 9 ; 2005 >
       au < released ; 2006 ; Film-Philosophy Volume 10 ; 10 ; 2006 >
-      au < notReady ; 2007 ; Film-Philosophy Volume 11 ; 11 ; 2007 >
+      au < testing ; 2007 ; Film-Philosophy Volume 11 ; 11 ; 2007 >
       au < released ; 2008 ; Film-Philosophy Volume 12 ; 12 ; 2008 >
       au < released ; 2009 ; Film-Philosophy Volume 13 ; 13 ; 2009 >
       au < released ; 2010 ; Film-Philosophy Volume 14 ; 14 ; 2010 >
@@ -149,9 +149,7 @@
 
       param[base_url] = http://www.imageandnarrative.be/
       param[journal_id] = imagenarrative
-      
-      comment[testings] = publisher has posted testings, but each is a copy of 2011. 20110914
-      
+   
       au < released ; 2000 ; Image and Narrative Volume 1 ; 1 ; 2000 >
       au < released ; 2001 ; Image and Narrative Volume 2 ; 2 ; 2001 >
       au < released ; 2002 ; Image and Narrative Volume 3 ; 3 ; 2002 >
