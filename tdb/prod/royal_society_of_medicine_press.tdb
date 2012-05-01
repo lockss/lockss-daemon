@@ -787,6 +787,21 @@
   {
   
     title <
+      name = JRSM Cardiovascular Disease ;
+      eissn = 2048-0040
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://cvd.rsmjournals.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2012 ; JRSM Cardiovascular Disease Volume 1 ; 1 >
+
+  }
+
+  {
+  
+    title <
       name = JRSM Short Reports ;
       eissn = 2042-5333
     >
