@@ -461,7 +461,7 @@
     au < manifest ; exists ; 2006 ; American Journal of Agricultural Economics Volume 88 ; 88 ; >
     au < manifest ; exists ; 2007 ; American Journal of Agricultural Economics Volume 89 ; 89 ; >
     au < manifest ; exists ; 2008 ; American Journal of Agricultural Economics Volume 90 ; 90 ; >
-    au < boost ; exists ; 2009 ; American Journal of Agricultural Economics Volume 91 ; 91 ; >
+    au < crawling ; exists ; 2009 ; American Journal of Agricultural Economics Volume 91 ; 91 ; >
     au < released ; manifest ; 2010 ; American Journal of Agricultural Economics Volume 92 ; 92 ; >
     au < released ; crawling ; 2011 ; American Journal of Agricultural Economics Volume 93 ; 93 ; >
     au < crawling ; exists ; 2012 ; American Journal of Agricultural Economics Volume 94 ; 94 ; >
@@ -1211,7 +1211,7 @@
     param[base_url] = http://aobpla.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < boost ; exists ; 2009 ; AoB PLANTS Volume 2009 ; 2009 ; >
+    au < crawling ; exists ; 2009 ; AoB PLANTS Volume 2009 ; 2009 ; >
     au < released ; manifest ; 2010 ; AoB PLANTS Volume 2010 ; 2010 ; >
     au < released ; crawling ; 2011 ; AoB PLANTS Volume 2011 ; 2011 ; >
     au < crawling ; exists ; 2012 ; AoB PLANTS Volume 2012 ; 2012 ; >
@@ -1253,7 +1253,7 @@
     au < manifest ; exists ; 2006 ; Applied Economic Perspectives and Policy Volume 28 ; 28 ; >
     au < manifest ; exists ; 2007 ; Applied Economic Perspectives and Policy Volume 29 ; 29 ; >
     au < manifest ; exists ; 2008 ; Applied Economic Perspectives and Policy Volume 30 ; 30 ; >
-    au < boost ; exists ; 2009 ; Applied Economic Perspectives and Policy Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2009 ; Applied Economic Perspectives and Policy Volume 31 ; 31 ; >
     au < released ; manifest ; 2010 ; Applied Economic Perspectives and Policy Volume 32 ; 32 ; >
     au < released ; crawling ; 2011 ; Applied Economic Perspectives and Policy Volume 33 ; 33 ; >
     au < crawling ; exists ; 2012 ; Applied Economic Perspectives and Policy Volume 34 ; 34 ; >
@@ -1342,7 +1342,7 @@
     au < manifest ; exists ; 2006 ; Applied Mathematics Research eXpress (AMRX) Volume 2006 ; 2006 ; >
     au < manifest ; exists ; 2007 ; Applied Mathematics Research eXpress (AMRX) Volume 2007 ; 2007 ; >
     au < manifest ; exists ; 2008 ; Applied Mathematics Research eXpress (AMRX) Volume 2008 ; 2008 ; >
-    au < boost ; exists ; 2009 ; Applied Mathematics Research eXpress (AMRX) Volume 2009 ; 2009 ; >
+    au < crawling ; exists ; 2009 ; Applied Mathematics Research eXpress (AMRX) Volume 2009 ; 2009 ; >
     au < released ; manifest ; 2010 ; Applied Mathematics Research eXpress (AMRX) Volume 2010 ; 2010 ; >
     au < released ; manifest ; 2011 ; Applied Mathematics Research eXpress (AMRX) Volume 2011 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Applied Mathematics Research eXpress (AMRX) Volume 2012 ; 2012 ; >
@@ -2682,7 +2682,7 @@
     au < manifest ; exists ; 2006 ; British Yearbook of International Law Volume 77 ; 77 ; >
     au < manifest ; exists ; 2007 ; British Yearbook of International Law Volume 78 ; 78 ; >
     au < manifest ; exists ; 2008 ; British Yearbook of International Law Volume 79 ; 79 ; >
-    au < boost ; exists ; 2009 ; British Yearbook of International Law Volume 80 ; 80 ; >
+    au < crawling ; exists ; 2009 ; British Yearbook of International Law Volume 80 ; 80 ; >
     au < released ; manifest ; 2010 ; British Yearbook of International Law Volume 81 ; 81 ; >
 
   }
@@ -3338,7 +3338,7 @@
     au < manifest ; exists ; 2006 ; Children & Schools Volume 28 ; 28 ; >
     au < manifest ; exists ; 2007 ; Children & Schools Volume 29 ; 29 ; >
     au < manifest ; exists ; 2008 ; Children & Schools Volume 30 ; 30 ; >
-    au < boost ; exists ; 2009 ; Children & Schools Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2009 ; Children & Schools Volume 31 ; 31 ; >
     au < released ; manifest ; 2010 ; Children & Schools Volume 32 ; 32 ; >
     au < released ; crawling ; 2011 ; Children & Schools Volume 33 ; 33 ; >
     au < expected ; exists ; 2012 ; Children & Schools Volume 34 ; 34 ; >
@@ -3477,7 +3477,7 @@
     param[base_url] = http://crj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < boost ; exists ; 2009 ; Classical Receptions Journal Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2009 ; Classical Receptions Journal Volume 1 ; 1 ; >
     au < released ; manifest ; 2010 ; Classical Receptions Journal Volume 2 ; 2 ; >
     au < released ; crawling ; 2011 ; Classical Receptions Journal Volume 3 ; 3 ; >
     au < expected ; exists ; 2012 ; Classical Receptions Journal Volume 4 ; 4 ; >
@@ -3545,8 +3545,8 @@
     au < manifest ; exists ; 2007 ; Clinical Infectious Diseases Volume 45 ; 45 ; >
     au < manifest ; exists ; 2008 ; Clinical Infectious Diseases Volume 46 ; 46 ; >
     au < manifest ; exists ; 2008 ; Clinical Infectious Diseases Volume 47 ; 47 ; >
-    au < boost ; exists ; 2009 ; Clinical Infectious Diseases Volume 48 ; 48 ; >
-    au < boost ; exists ; 2009 ; Clinical Infectious Diseases Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2009 ; Clinical Infectious Diseases Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2009 ; Clinical Infectious Diseases Volume 49 ; 49 ; >
     au < released ; manifest ; 2010 ; Clinical Infectious Diseases Volume 50 ; 50 ; >
     au < released ; manifest ; 2010 ; Clinical Infectious Diseases Volume 51 ; 51 ; >
     au < released ; crawling ; 2011 ; Clinical Infectious Diseases Volume 52 ; 52 ; >
@@ -3904,7 +3904,7 @@
     au < manifest ; exists ; 2006 ; Current Legal Problems Volume 59 ; 59 ; >
     au < manifest ; exists ; 2007 ; Current Legal Problems Volume 60 ; 60 ; >
     au < manifest ; exists ; 2008 ; Current Legal Problems Volume 61 ; 61 ; >
-    au < boost ; exists ; 2009 ; Current Legal Problems Volume 62 ; 62 ; >
+    au < crawling ; exists ; 2009 ; Current Legal Problems Volume 62 ; 62 ; >
     au < released ; manifest ; 2010 ; Current Legal Problems Volume 63 ; 63 ; >
     au < released ; crawling ; 2011 ; Current Legal Problems Volume 64 ; 64 ; >
     au < expected ; exists ; 2012 ; Current Legal Problems Volume 65 ; 65 ; >
@@ -3922,7 +3922,7 @@
     param[base_url] = http://database.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < boost ; exists ; 2009 ; Database: The Journal of Biological Databases and Curation Volume 2009 ; 2009 ; >
+    au < crawling ; exists ; 2009 ; Database: The Journal of Biological Databases and Curation Volume 2009 ; 2009 ; >
     au < released ; manifest ; 2010 ; Database: The Journal of Biological Databases and Curation Volume 2010 ; 2010 ; >
     au < released ; crawling ; 2011 ; Database: The Journal of Biological Databases and Curation Volume 2011 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Database: The Journal of Biological Databases and Curation Volume 2012 ; 2012 ; >
@@ -4115,7 +4115,7 @@
     au < manifest ; exists ; 2006 ; English: Journal of the English Association Volume 55 ; 55 ; >
     au < manifest ; exists ; 2007 ; English: Journal of the English Association Volume 56 ; 56 ; >
     au < manifest ; exists ; 2008 ; English: Journal of the English Association Volume 57 ; 57 ; >
-    au < boost ; exists ; 2009 ; English: Journal of the English Association Volume 58 ; 58 ; >
+    au < crawling ; exists ; 2009 ; English: Journal of the English Association Volume 58 ; 58 ; >
     au < released ; manifest ; 2010 ; English: Journal of the English Association Volume 59 ; 59 ; >
     au < released ; manifest ; 2011 ; English: Journal of the English Association Volume 60 ; 60 ; >
     au < manifest ; exists ; 2012 ; English: Journal of the English Association Volume 61 ; 61 ; >
@@ -4431,7 +4431,7 @@
     au < manifest ; exists ; 2006 ; Environmental History Volume 11 ; 11 ; >
     au < manifest ; exists ; 2007 ; Environmental History Volume 12 ; 12 ; >
     au < manifest ; exists ; 2008 ; Environmental History Volume 13 ; 13 ; >
-    au < boost ; exists ; 2009 ; Environmental History Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2009 ; Environmental History Volume 14 ; 14 ; >
     au < released ; manifest ; 2010 ; Environmental History Volume 15 ; 15 ; >
     au < released ; crawling ; 2011 ; Environmental History Volume 16 ; 16 ; >
     au < crawling ; exists ; 2012 ; Environmental History Volume 17 ; 17 ; >
@@ -4845,8 +4845,8 @@
     au < manifest ; exists ; 2007 ; European Journal of Cardio-Thoracic Surgery Volume 32 ; 32 ; >
     au < manifest ; exists ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 33 ; 33 ; >
     au < manifest ; exists ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 34 ; 34 ; >
-    au < boost ; exists ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 35 ; 35 ; >
-    au < boost ; exists ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 36 ; 36 ; >
     au < released ; manifest ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37 ; 37 ; >
     au < released ; manifest ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 38 ; 38 ; >
     au < released ; manifest ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 ; >
@@ -4986,7 +4986,7 @@
     au < manifest ; exists ; 2006 ; European Journal of Heart Failure Supplements Volume 5 ; 5 ; >
     au < manifest ; exists ; 2007 ; European Journal of Heart Failure Supplements Volume 6 ; 6 ; >
     au < manifest ; exists ; 2008 ; European Journal of Heart Failure Supplements Volume 7 ; 7 ; >
-    au < boost ; exists ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 ; >
     au < released ; manifest ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 ; >
     au < released ; crawling ; 2011 ; European Journal of Heart Failure Supplements Volume 10 ; 10 ; >
     au < expected ; exists ; 2012 ; European Journal of Heart Failure Supplements Volume 11 ; 11 ; >
@@ -5251,7 +5251,7 @@
     au < manifest ; exists ; 2006 ; European Review of Economic History Volume 10 ; 10 ; >
     au < manifest ; exists ; 2007 ; European Review of Economic History Volume 11 ; 11 ; >
     au < manifest ; exists ; 2008 ; European Review of Economic History Volume 12 ; 12 ; >
-    au < boost ; exists ; 2009 ; European Review of Economic History Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2009 ; European Review of Economic History Volume 13 ; 13 ; >
     au < released ; manifest ; 2010 ; European Review of Economic History Volume 14 ; 14 ; >
     au < released ; crawling ; 2011 ; European Review of Economic History Volume 15 ; 15 ; >
     au < crawling ; exists ; 2012 ; European Review of Economic History Volume 16 ; 16 ; >
@@ -5852,7 +5852,7 @@
     param[base_url] = http://gbe.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < boost ; exists ; 2009 ; Genome Biology and Evolution Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2009 ; Genome Biology and Evolution Volume 1 ; 1 ; >
     au < testing ; exists ; 2010 ; Genome Biology and Evolution Volume 2 ; 2 ; >
     au < released ; manifest ; 2011 ; Genome Biology and Evolution Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 ; >
@@ -6073,7 +6073,7 @@
     au < manifest ; exists ; 2006 ; Health & Social Work Volume 31 ; 31 ; >
     au < manifest ; exists ; 2007 ; Health & Social Work Volume 32 ; 32 ; >
     au < manifest ; exists ; 2008 ; Health & Social Work Volume 33 ; 33 ; >
-    au < boost ; exists ; 2009 ; Health & Social Work Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2009 ; Health & Social Work Volume 34 ; 34 ; >
     au < released ; manifest ; 2010 ; Health & Social Work Volume 35 ; 35 ; >
     au < released ; crawling ; 2011 ; Health & Social Work Volume 36 ; 36 ; >
     au < expected ; exists ; 2012 ; Health & Social Work Volume 37 ; 37 ; >
@@ -6721,7 +6721,7 @@
     au < manifest ; exists ; 2006 ; ICSID Review: Foreign Investment Law Journal Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; ICSID Review: Foreign Investment Law Journal Volume 22 ; 22 ; >
     au < manifest ; exists ; 2008 ; ICSID Review: Foreign Investment Law Journal Volume 23 ; 23 ; >
-    au < boost ; exists ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ; >
     au < released ; manifest ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 ; >
     au < released ; manifest ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 ; >
     au < expected ; exists ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ; >
@@ -7279,8 +7279,8 @@
     au < manifest ; exists ; 2006 ; Interactive CardioVascular and Thoracic Surgery Volume 5 ; 5 ; >
     au < manifest ; exists ; 2007 ; Interactive CardioVascular and Thoracic Surgery Volume 6 ; 6 ; >
     au < manifest ; exists ; 2008 ; Interactive CardioVascular and Thoracic Surgery Volume 7 ; 7 ; >
-    au < boost ; exists ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 8 ; 8 ; >
-    au < boost ; exists ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 9 ; 9 ; >
     au < crawling ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 10 ; 10 ; >
     au < crawling ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 11 ; 11 ; >
     au < crawling ; exists ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 12 ; 12 ; >
@@ -8285,7 +8285,7 @@
     au < manifest ; exists ; 2006 ; JNCI Monographs Volume 2006 ; 2006 ; >
     au < manifest ; exists ; 2007 ; JNCI Monographs Volume 2007 ; 2007 ; >
     au < manifest ; exists ; 2008 ; JNCI Monographs Volume 2008 ; 2008 ; >
-    au < boost ; exists ; 2009 ; JNCI Monographs Volume 2009 ; 2009 ; >
+    au < crawling ; exists ; 2009 ; JNCI Monographs Volume 2009 ; 2009 ; >
     au < released ; manifest ; 2010 ; JNCI Monographs Volume 2010 ; 2010 ; >
     au < released ; crawling ; 2011 ; JNCI Monographs Volume 2011 ; 2011 ; >
     au < expected ; exists ; 2012 ; JNCI Monographs Volume 2012 ; 2012 ; >
@@ -8562,7 +8562,7 @@
     au < manifest ; exists ; 2006 ; Journal of American History Volume 93 ; 93 ; >
     au < manifest ; exists ; 2007 ; Journal of American History Volume 94 ; 94 ; >
     au < manifest ; exists ; 2008 ; Journal of American History Volume 95 ; 95 ; >
-    au < boost ; exists ; 2009 ; Journal of American History Volume 96 ; 96 ; >
+    au < crawling ; exists ; 2009 ; Journal of American History Volume 96 ; 96 ; >
     au < testing ; exists ; 2010 ; Journal of American History Volume 97 ; 97 ; >
     au < released ; crawling ; 2011 ; Journal of American History Volume 98 ; 98 ; >
     au < expected ; exists ; 2012 ; Journal of American History Volume 99 ; 99 ; >
@@ -10143,8 +10143,8 @@
     au < manifest ; exists ; 2007 ; Journal of Infectious Diseases Volume 196 ; 196 ; >
     au < manifest ; exists ; 2008 ; Journal of Infectious Diseases Volume 197 ; 197 ; >
     au < manifest ; exists ; 2008 ; Journal of Infectious Diseases Volume 198 ; 198 ; >
-    au < boost ; exists ; 2009 ; Journal of Infectious Diseases Volume 199 ; 199 ; >
-    au < boost ; exists ; 2009 ; Journal of Infectious Diseases Volume 200 ; 200 ; >
+    au < crawling ; exists ; 2009 ; Journal of Infectious Diseases Volume 199 ; 199 ; >
+    au < crawling ; exists ; 2009 ; Journal of Infectious Diseases Volume 200 ; 200 ; >
     au < testing ; exists ; 2010 ; Journal of Infectious Diseases Volume 201 ; 201 ; >
     au < testing ; exists ; 2010 ; Journal of Infectious Diseases Volume 202 ; 202 ; >
     au < released ; manifest ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 ; >
@@ -10415,7 +10415,7 @@
     param[base_url] = http://jla.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < boost ; exists ; 2009 ; Journal of Legal Analysis Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2009 ; Journal of Legal Analysis Volume 1 ; 1 ; >
     au < released ; manifest ; 2010 ; Journal of Legal Analysis Volume 2 ; 2 ; >
     au < released ; manifest ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 ; >
     au < expected ; exists ; 2012 ; Journal of Legal Analysis Volume 4 ; 4 ; >
@@ -11568,7 +11568,7 @@
     au < manifest ; exists ; 2006-2007 ; Journal of Social History Volume 40 ; 40 ; >
     au < manifest ; exists ; 2007-2008 ; Journal of Social History Volume 41 ; 41 ; >
     au < manifest ; exists ; 2008-2009 ; Journal of Social History Volume 42 ; 42 ; >
-    au < boost ; exists ; 2009-2010 ; Journal of Social History Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2009-2010 ; Journal of Social History Volume 43 ; 43 ; >
     au < testing ; exists ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ; >
     au < crawling ; exists ; 2011-2012 ; Journal of Social History Volume 45 ; 45 ; >
     au < expected ; exists ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ; >
@@ -13242,7 +13242,7 @@
     au < manifest ; exists ; 2006 ; Neuro-Oncology Volume 8 ; 8 ; >
     au < manifest ; exists ; 2007 ; Neuro-Oncology Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; Neuro-Oncology Volume 10 ; 10 ; >
-    au < boost ; exists ; 2009 ; Neuro-Oncology Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2009 ; Neuro-Oncology Volume 11 ; 11 ; >
     au < testing ; exists ; 2010 ; Neuro-Oncology Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; Neuro-Oncology Volume 13 ; 13 ; >
     au < crawling ; exists ; 2012 ; Neuro-Oncology Volume 14 ; 14 ; >
@@ -13737,7 +13737,7 @@
     au < manifest ; exists ; 2006 ; OAH Magazine of History Volume 20 ; 20 ; >
     au < manifest ; exists ; 2007 ; OAH Magazine of History Volume 21 ; 21 ; >
     au < manifest ; exists ; 2008 ; OAH Magazine of History Volume 22 ; 22 ; >
-    au < boost ; exists ; 2009 ; OAH Magazine of History Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2009 ; OAH Magazine of History Volume 23 ; 23 ; >
     au < released ; manifest ; 2010 ; OAH Magazine of History Volume 24 ; 24 ; >
     au < released ; crawling ; 2011 ; OAH Magazine of History Volume 25 ; 25 ; >
     au < crawling ; exists ; 2012 ; OAH Magazine of History Volume 26 ; 26 ; >
@@ -16140,7 +16140,7 @@
     au < manifest ; exists ; 2006 ; The Review of Economic Studies Volume 73 ; 73 ; >
     au < manifest ; exists ; 2007 ; The Review of Economic Studies Volume 74 ; 74 ; >
     au < manifest ; exists ; 2008 ; The Review of Economic Studies Volume 75 ; 75 ; >
-    au < boost ; exists ; 2009 ; The Review of Economic Studies Volume 76 ; 76 ; >
+    au < crawling ; exists ; 2009 ; The Review of Economic Studies Volume 76 ; 76 ; >
     au < testing ; exists ; 2010 ; The Review of Economic Studies Volume 77 ; 77 ; >
     au < released ; crawling ; 2011 ; The Review of Economic Studies Volume 78 ; 78 ; >
     au < crawling ; exists ; 2012 ; The Review of Economic Studies Volume 79 ; 79 ; >
@@ -16766,7 +16766,7 @@
     au < manifest ; exists ; 2006 ; Social Forces Volume 85 ; 85 ; >
     au < manifest ; exists ; 2007 ; Social Forces Volume 86 ; 86 ; >
     au < manifest ; exists ; 2008 ; Social Forces Volume 87 ; 87 ; >
-    au < boost ; exists ; 2009 ; Social Forces Volume 88 ; 88 ; >
+    au < crawling ; exists ; 2009 ; Social Forces Volume 88 ; 88 ; >
     au < testing ; exists ; 2010 ; Social Forces Volume 89 ; 89 ; >
     au < released ; manifest ; 2011 ; Social Forces Volume 90 ; 90 ; >
     au < expected ; exists ; 2012 ; Social Forces Volume 91 ; 91 ; >
@@ -16944,7 +16944,7 @@
     au < manifest ; exists ; 2006 ; Social Work Volume 51 ; 51 ; >
     au < manifest ; exists ; 2007 ; Social Work Volume 52 ; 52 ; >
     au < manifest ; exists ; 2008 ; Social Work Volume 53 ; 53 ; >
-    au < boost ; exists ; 2009 ; Social Work Volume 54 ; 54 ; >
+    au < crawling ; exists ; 2009 ; Social Work Volume 54 ; 54 ; >
     au < released ; manifest ; 2010 ; Social Work Volume 55 ; 55 ; >
     au < released ; crawling ; 2011 ; Social Work Volume 56 ; 56 ; >
     au < expected ; exists ; 2012 ; Social Work Volume 57 ; 57 ; >
@@ -16976,7 +16976,7 @@
     au < manifest ; exists ; 2006 ; Social Work Research Volume 30 ; 30 ; >
     au < manifest ; exists ; 2007 ; Social Work Research Volume 31 ; 31 ; >
     au < manifest ; exists ; 2008 ; Social Work Research Volume 32 ; 32 ; >
-    au < boost ; exists ; 2009 ; Social Work Research Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2009 ; Social Work Research Volume 33 ; 33 ; >
     au < released ; manifest ; 2010 ; Social Work Research Volume 34 ; 34 ; >
     au < released ; crawling ; 2011 ; Social Work Research Volume 35 ; 35 ; >
     au < expected ; exists ; 2012 ; Social Work Research Volume 36 ; 36 ; >
@@ -17789,7 +17789,7 @@
     au < manifest ; exists ; 2006 ; Yearbook of European Law Volume 26 ; 26 ; >
     au < manifest ; exists ; 2007 ; Yearbook of European Law Volume 27 ; 27 ; >
     au < manifest ; exists ; 2008 ; Yearbook of European Law Volume 28 ; 28 ; >
-    au < boost ; exists ; 2009 ; Yearbook of European Law Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2009 ; Yearbook of European Law Volume 29 ; 29 ; >
     au < released ; manifest ; 2010 ; Yearbook of European Law Volume 30 ; 30 ; >
     au < expected ; exists ; 2011 ; Yearbook of European Law Volume 31 ; 31 ; >
     au < expected ; exists ; 2012 ; Yearbook of European Law Volume 32 ; 32 ; >
@@ -17826,7 +17826,7 @@
     au < manifest ; exists ; 2006 ; Yearbook of International Environmental Law Volume 16 ; 16 ; >
     au < manifest ; exists ; 2007 ; Yearbook of International Environmental Law Volume 17 ; 17 ; >
     au < manifest ; exists ; 2008 ; Yearbook of International Environmental Law Volume 18 ; 18 ; >
-    au < boost ; exists ; 2009 ; Yearbook of International Environmental Law Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2009 ; Yearbook of International Environmental Law Volume 19 ; 19 ; >
     au < released ; manifest ; 2010 ; Yearbook of International Environmental Law Volume 20 ; 20 ; >
     au < expected ; exists ; 2011 ; Yearbook of International Environmental Law Volume 21 ; 21 ; >
     au < expected ; exists ; 2012 ; Yearbook of International Environmental Law Volume 22 ; 22 ; >
