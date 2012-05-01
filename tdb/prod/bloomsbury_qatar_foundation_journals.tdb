@@ -5,8 +5,7 @@
   >
 
   rights = openaccess  
-  comment[platform] = Atypon -- RT ticket 3556
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.bloomsburyqatar.BloomsburyQatarPlugin
   param[base_url] = http://www.qscience.com/
   implicit < status ; year ; name ; param[volume_name] >
   
