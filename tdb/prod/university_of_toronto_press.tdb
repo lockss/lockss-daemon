@@ -502,10 +502,10 @@
     param[journal_dir] = university_of_toronto_law_journal
     attr[journal_id] = tlj
 
-    au < notReady ; 2004 ; University of Toronto Law Journal Volume 54 ; 54 >
-    au < notReady ; 2005 ; University of Toronto Law Journal Volume 55 ; 55 >
-    au < notReady ; 2006 ; University of Toronto Law Journal Volume 56 ; 56 >
-    au < notReady ; 2007 ; University of Toronto Law Journal Volume 57 ; 57 >
+    au < manifest ; 2004 ; University of Toronto Law Journal Volume 54 ; 54 >
+    au < manifest ; 2005 ; University of Toronto Law Journal Volume 55 ; 55 >
+    au < manifest ; 2006 ; University of Toronto Law Journal Volume 56 ; 56 >
+    au < manifest ; 2007 ; University of Toronto Law Journal Volume 57 ; 57 >
     au < released ; 2008 ; University of Toronto Law Journal Volume 58 ; 58 >
     au < released ; 2009 ; University of Toronto Law Journal Volume 59 ; 59 >
     au < released ; 2010 ; University of Toronto Law Journal Volume 60 ; 60 >
