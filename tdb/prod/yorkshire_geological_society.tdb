@@ -16,8 +16,6 @@
     param[base_url] = http://pygs.lyellcollection.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    comment[pygs1] = no manifest page roundup issue 3566
-
     au < manifest ; 1839 ; Proceedings of the Yorkshire Geological Society Volume 1 ; 1 >
     au < released ; 1842 ; Proceedings of the Yorkshire Geological Society Volume 2 ; 2 >
     au < released ; 1849 ; Proceedings of the Yorkshire Geological Society Volume 3 ; 3 >
