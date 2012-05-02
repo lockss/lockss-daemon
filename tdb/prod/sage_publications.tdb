@@ -1387,14 +1387,14 @@
         param[base_url] = http://ajs.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2005 ; The American Journal of Sports Medicine Volume 33 ; 33 >
+        au < testing ; 2005 ; The American Journal of Sports Medicine Volume 33 ; 33 >
         au < doNotProcess ; 2006 ; The American Journal of Sports Medicine Volume 34 ; 34 >
         au < doNotProcess ; 2007 ; The American Journal of Sports Medicine Volume 35 ; 35 >
-        au < manifest ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 >
-        au < manifest ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 >
-        au < manifest ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 >
-        au < manifest ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 >
-        au < manifest ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 >
+        au < testing ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 >
+        au < testing ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 >
+        au < testing ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 >
+        au < testing ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 >
+        au < testing ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 >
 
       }
 
@@ -4569,16 +4569,16 @@
         au < manifest ; 1997 ; Cephalalgia Volume 17 ; 17 >
         au < manifest ; 1998 ; Cephalalgia Volume 18 ; 18 >
         au < manifest ; 1999 ; Cephalalgia Volume 19 ; 19 >
-        au < manifest ; 2000 ; Cephalalgia Volume 20 ; 20 >
-        au < manifest ; 2001 ; Cephalalgia Volume 21 ; 21 >
-        au < manifest ; 2002 ; Cephalalgia Volume 22 ; 22 >
-        au < manifest ; 2003 ; Cephalalgia Volume 23 ; 23 >
-        au < manifest ; 2004 ; Cephalalgia Volume 24 ; 24 >
-        au < manifest ; 2005 ; Cephalalgia Volume 25 ; 25 >
-        au < manifest ; 2006 ; Cephalalgia Volume 26 ; 26 >
-        au < manifest ; 2007 ; Cephalalgia Volume 27 ; 27 >
-        au < manifest ; 2008 ; Cephalalgia Volume 28 ; 28 >
-        au < manifest ; 2009 ; Cephalalgia Volume 29 ; 29 >
+        au < testing ; 2000 ; Cephalalgia Volume 20 ; 20 >
+        au < testing ; 2001 ; Cephalalgia Volume 21 ; 21 >
+        au < testing ; 2002 ; Cephalalgia Volume 22 ; 22 >
+        au < testing ; 2003 ; Cephalalgia Volume 23 ; 23 >
+        au < testing ; 2004 ; Cephalalgia Volume 24 ; 24 >
+        au < testing ; 2005 ; Cephalalgia Volume 25 ; 25 >
+        au < testing ; 2006 ; Cephalalgia Volume 26 ; 26 >
+        au < testing ; 2007 ; Cephalalgia Volume 27 ; 27 >
+        au < testing ; 2008 ; Cephalalgia Volume 28 ; 28 >
+        au < testing ; 2009 ; Cephalalgia Volume 29 ; 29 >
         au < released ; 2010 ; Cephalalgia Volume 30 ; 30 >
         au < released ; 2011 ; Cephalalgia Volume 31 ; 31 >
         au < manifest ; 2012 ; Cephalalgia Volume 32 ; 32 >
@@ -28687,16 +28687,16 @@ comment[mpj] = now published by Brill
         param[base_url] = http://nro.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1995 ; The Neuroscientist Volume 1 ; 1 >
-        au < manifest ; 1996 ; The Neuroscientist Volume 2 ; 2 >
-        au < manifest ; 1997 ; The Neuroscientist Volume 3 ; 3 >
-        au < manifest ; 1998 ; The Neuroscientist Volume 4 ; 4 >
-        au < manifest ; 1999 ; The Neuroscientist Volume 5 ; 5 >
-        au < manifest ; 2000 ; The Neuroscientist Volume 6 ; 6 >
-        au < manifest ; 2001 ; The Neuroscientist Volume 7 ; 7 >
-        au < manifest ; 2002 ; The Neuroscientist Volume 8 ; 8 >
-        au < manifest ; 2003 ; The Neuroscientist Volume 9 ; 9 >
-        au < manifest ; 2004 ; The Neuroscientist Volume 10 ; 10 >
+        au < testing ; 1995 ; The Neuroscientist Volume 1 ; 1 >
+        au < testing ; 1996 ; The Neuroscientist Volume 2 ; 2 >
+        au < testing ; 1997 ; The Neuroscientist Volume 3 ; 3 >
+        au < testing ; 1998 ; The Neuroscientist Volume 4 ; 4 >
+        au < testing ; 1999 ; The Neuroscientist Volume 5 ; 5 >
+        au < testing ; 2000 ; The Neuroscientist Volume 6 ; 6 >
+        au < testing ; 2001 ; The Neuroscientist Volume 7 ; 7 >
+        au < testing ; 2002 ; The Neuroscientist Volume 8 ; 8 >
+        au < testing ; 2003 ; The Neuroscientist Volume 9 ; 9 >
+        au < testing ; 2004 ; The Neuroscientist Volume 10 ; 10 >
         au < doNotProcess ; 2005 ; The Neuroscientist Volume 11 ; 11 >
         au < doNotProcess ; 2006 ; The Neuroscientist Volume 12 ; 12 >
         au < doNotProcess ; 2007 ; The Neuroscientist Volume 13 ; 13 >
