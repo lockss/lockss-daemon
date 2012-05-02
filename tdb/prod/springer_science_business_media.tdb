@@ -21598,13 +21598,13 @@
       issnl = 1861-0684
     >
 
-    comment[oddness] = Keep an eye out for the oddness in 88/90
+    comment[oddness] = Keep an eye out for oddness in 88/90
     comment[continued_from] = 0300-5860
     param[journal_issn] = 1861-0684
 
-    au < manifest ; 1999 ; Clinical Research in Cardiology Volume 88 / 1-1999 (7 Issues) ; Issues) >
+    au < manifest ; 1999 ; Clinical Research in Cardiology Volume 88 ; 88 >
     au < manifest ; 2000 ; Clinical Research in Cardiology Volume 89 ; 89 >
-    au < manifest ; 2001 ; Clinical Research in Cardiology Volume 90 / 1 (10 Issues) ; Issues) >
+    au < manifest ; 2001 ; Clinical Research in Cardiology Volume 90 ; 90 >
     au < manifest ; 2006 ; Clinical Research in Cardiology Volume 95 ; 95 >
     au < manifest ; 2007 ; Clinical Research in Cardiology Volume 96 ; 96 >
     au < manifest ; 2008 ; Clinical Research in Cardiology Volume 97 ; 97 >
@@ -32224,6 +32224,209 @@
     >
 
     param[journal_issn] = 0940-1334
+    comment[includes] = 0303-4194
+
+    au < manifest ; 1868 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 1 ; 1 >
+    au < manifest ; 1870 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 2 ; 2 >
+    au < manifest ; 1872 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 3 ; 3 >
+    au < manifest ; 1874 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 4 ; 4 >
+    au < manifest ; 1875 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 5 ; 5 >
+    au < manifest ; 1876 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 6 ; 6 >
+    au < manifest ; 1877 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 7 ; 7 >
+    au < manifest ; 1878 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 8 ; 8 >
+    au < manifest ; 1879 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 9 ; 9 >
+    au < manifest ; 1880 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 10 ; 10 >
+    au < manifest ; 1881 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 11 ; 11 >
+    au < manifest ; 1882 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 12 ; 12 >
+    au < manifest ; 1882 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 13 ; 13 >
+    au < manifest ; 1883 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 14 ; 14 >
+    au < manifest ; 1884 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 15 ; 15 >
+    au < manifest ; 1885 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 16 ; 16 >
+    au < manifest ; 1886 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 17 ; 17 >
+    au < manifest ; 1887 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 18 ; 18 >
+    au < manifest ; 1888 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 19 ; 19 >
+    au < manifest ; 1889 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 20 ; 20 >
+    au < manifest ; 1890 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 21 ; 21 >
+    au < manifest ; 1891 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 22 ; 22 >
+    au < manifest ; 1892 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 23 ; 23 >
+    au < manifest ; 1892 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 24 ; 24 >
+    au < manifest ; 1893 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 25 ; 25 >
+    au < manifest ; 1894 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 26 ; 26 >
+    au < manifest ; 1895 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 27 ; 27 >
+    au < manifest ; 1895-1896 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 28 ; 28 >
+    au < manifest ; 1896-1897 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 29 ; 29 >
+    au < manifest ; 1897-1898 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 30 ; 30 >
+    au < manifest ; 1898-1899 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 31 ; 31 >
+    au < manifest ; 1899 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 32 ; 32 >
+    au < manifest ; 1900 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 33 ; 33 >
+    au < manifest ; 1901 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 34 ; 34 >
+    au < manifest ; 1901-1902 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 35 ; 35 >
+    au < manifest ; 1902-1903 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 36 ; 36 >
+    au < manifest ; 1903 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 37 ; 37 >
+    au < manifest ; 1903-1904 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 38 ; 38 >
+    au < manifest ; 1904-1905 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 39 ; 39 >
+    au < manifest ; 1905 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 40 ; 40 >
+    au < manifest ; 1906 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 41 ; 41 >
+    au < manifest ; 1906-1907 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 42 ; 42 >
+    au < manifest ; 1907-1908 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 43 ; 43 >
+    au < manifest ; 1908 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 44 ; 44 >
+    au < manifest ; 1908-1909 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 45 ; 45 >
+    au < manifest ; 1909-1910 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 46 ; 46 >
+    au < manifest ; 1910 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 47 ; 47 >
+    au < manifest ; 1911 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 48 ; 48 >
+    au < manifest ; 1911-1912 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 49 ; 49 >
+    au < manifest ; 1912-1913 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 50 ; 50 >
+    au < manifest ; 1913 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 51 ; 51 >
+    au < manifest ; 1913 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 52 ; 52 >
+    au < manifest ; 1913-1914 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 53 ; 53 >
+    au < manifest ; 1914 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 54 ; 54 >
+    au < manifest ; 1914-1915 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 55 ; 55 >
+    au < manifest ; 1915-1916 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 56 ; 56 >
+    au < manifest ; 1916-1917 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 57 ; 57 >
+    au < manifest ; 1917 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 58 ; 58 >
+    au < manifest ; 1918 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 59 ; 59 >
+    au < manifest ; 1919 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 60 ; 60 >
+    au < manifest ; 1919-1920 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 61 ; 61 >
+    au < manifest ; 1920-1921 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 62 ; 62 >
+    au < manifest ; 1921 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 63 ; 63 >
+    au < manifest ; 1922 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 64 ; 64 >
+    au < manifest ; 1922 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 65 ; 65 >
+    au < manifest ; 1922 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 66 ; 66 >
+    au < manifest ; 1923 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 67 ; 67 >
+    au < manifest ; 1923 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 68 ; 68 >
+    au < manifest ; 1923 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 69 ; 69 >
+    au < manifest ; 1924 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 70 ; 70 >
+    au < manifest ; 1924 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 71 ; 71 >
+    au < manifest ; 1925 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 72 ; 72 >
+    au < manifest ; 1925 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 73 ; 73 >
+    au < manifest ; 1925 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 74 ; 74 >
+    au < manifest ; 1925 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 75 ; 75 >
+    au < manifest ; 1926 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 76 ; 76 >
+    au < manifest ; 1926 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 77 ; 77 >
+    au < manifest ; 1926 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 78 ; 78 >
+    au < manifest ; 1927 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 79 ; 79 >
+    au < manifest ; 1927 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 80 ; 80 >
+    au < manifest ; 1927 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 81 ; 81 >
+    au < manifest ; 1928 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 82 ; 82 >
+    au < manifest ; 1928 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 83 ; 83 >
+    au < manifest ; 1928 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 84 ; 84 >
+    au < manifest ; 1928 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 85 ; 85 >
+    au < manifest ; 1929 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 86 ; 86 >
+    au < manifest ; 1929 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 87 ; 87 >
+    au < manifest ; 1929 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 88 ; 88 >
+    au < manifest ; 1930 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 89 ; 89 >
+    au < manifest ; 1930 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 90 ; 90 >
+    au < manifest ; 1930 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 91 ; 91 >
+    au < manifest ; 1930 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 92 ; 92 >
+    au < manifest ; 1931 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 93 ; 93 >
+    au < manifest ; 1931 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 94 ; 94 >
+    au < manifest ; 1931 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 95 ; 95 >
+    au < manifest ; 1932 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 96 ; 96 >
+    au < manifest ; 1932 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 97 ; 97 >
+    au < manifest ; 1933 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 98 ; 98 >
+    au < manifest ; 1933 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 99 ; 99 >
+    au < manifest ; 1933 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 100 ; 100 >
+    au < manifest ; 1934 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 101 ; 101 >
+    au < manifest ; 1934 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 102 ; 102 >
+    au < manifest ; 1935 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 103 ; 103 >
+    au < manifest ; 1936 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 104 ; 104 >
+    au < manifest ; 1936 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 105 ; 105 >
+    au < manifest ; 1937 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 106 ; 106 >
+    au < manifest ; 1938 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 107 ; 107 >
+    au < manifest ; 1938 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 108 ; 108 >
+    au < manifest ; 1938-1939 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 109 ; 109 >
+    au < manifest ; 1939 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 110 ; 110 >
+    au < manifest ; 1940 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 111 ; 111 >
+    au < manifest ; 1940-1941 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 112 ; 112 >
+    au < manifest ; 1941 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 113 ; 113 >
+    au < manifest ; 1941-1942 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 114 ; 114 >
+    au < manifest ; 1942-1943 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 115 ; 115 >
+    au < manifest ; 1943 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 116 ; 116 >
+    au < manifest ; 1944 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 117 ; 117 >
+    au < manifest ; 1947-1948 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 179 ; 179 >
+    au < manifest ; 1948 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 180 ; 180 >
+    au < manifest ; 1948-1949 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 181 ; 181 >
+    au < manifest ; 1949 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 182 ; 182 >
+    au < manifest ; 1949-1950 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 183 ; 183 >
+    au < manifest ; 1950 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 184 ; 184 >
+    au < manifest ; 1950 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 185 ; 185 >
+    au < manifest ; 1951 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 186 ; 186 >
+    au < manifest ; 1951-1952 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 187 ; 187 >
+    au < manifest ; 1952 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 188 ; 188 >
+    au < manifest ; 1952 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 189 ; 189 >
+    au < manifest ; 1953 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 190 ; 190 >
+    au < manifest ; 1953-1954 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 191 ; 191 >
+    au < manifest ; 1954 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 192 ; 192 >
+    au < manifest ; 1955 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 193 ; 193 >
+    au < manifest ; 1955-1956 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 194 ; 194 >
+    au < manifest ; 1956-1957 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 195 ; 195 >
+    au < manifest ; 1957-1958 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 196 ; 196 >
+    au < manifest ; 1958 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 197 ; 197 >
+    au < manifest ; 1958-1959 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 198 ; 198 >
+    au < manifest ; 1959 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 199 ; 199 >
+    au < manifest ; 1959-1960 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 200 ; 200 >
+    au < manifest ; 1960-1961 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 201 ; 201 >
+    au < manifest ; 1961 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 202 ; 202 >
+    au < manifest ; 1962 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 203 ; 203 >
+    au < manifest ; 1963 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 204 ; 204 >
+    au < manifest ; 1964 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 205 ; 205 >
+    au < manifest ; 1964-1965 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 206 ; 206 >
+    au < manifest ; 1965 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 207 ; 207 >
+    au < manifest ; 1966 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 208 ; 208 >
+    au < manifest ; 1966-1967 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 209 ; 209 >
+    au < manifest ; 1967-1968 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 210 ; 210 >
+    au < manifest ; 1968 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 211 ; 211 >
+    au < manifest ; 1968-1969 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 212 ; 212 >
+    au < manifest ; 1970 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 213 ; 213 >
+    au < manifest ; 1971 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 214 ; 214 >
+    au < manifest ; 1971-1972 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 215 ; 215 >
+    au < manifest ; 1972 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 216 ; 216 >
+    au < manifest ; 1973 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 217 ; 217 >
+    au < manifest ; 1973-1974 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 218 ; 218 >
+    au < manifest ; 1974 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 219 ; 219 >
+    au < manifest ; 1975 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 220 ; 220 >
+    au < manifest ; 1975-1976 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 221 ; 221 >
+    au < manifest ; 1976 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 222 ; 222 >
+    au < manifest ; 1976-1977 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 223 ; 223 >
+    au < manifest ; 1977 ; Archiv für Psychiatrie und NervenkrankheitenVolume 224 ; 224 >
+    au < manifest ; 1978 ; Archiv für Psychiatrie und NervenkrankheitenVolume 225 ; 225 >
+    au < manifest ; 1978-1979 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 226 ; 226 >
+    au < manifest ; 1979 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 227 ; 227 >
+    au < manifest ; 1980 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 228 ; 228 >
+    au < manifest ; 1980-1981 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 229 ; 229 >
+    au < manifest ; 1981 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 230 ; 230 >
+    au < manifest ; 1981-1982 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 231 ; 231 >
+    au < manifest ; 1982 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 232 ; 232 >
+    au < manifest ; 1983 ; Archiv für Psychiatrie und Nervenkrankheiten Volume 233 ; 233 >
+    au < manifest ; 1984-1985 ; European Archives of Psychiatry and Neurological Sciences Volume 234 ; 234 >
+    au < manifest ; 1985-1986 ; European Archives of Psychiatry and Neurological Sciences Volume 235 ; 235 >
+    au < manifest ; 1986-1987 ; European Archives of Psychiatry and Neurological Sciences Volume 236 ; 236 >
+    au < manifest ; 1987-1988 ; European Archives of Psychiatry and Neurological Sciences Volume 237 ; 237 >
+    au < manifest ; 1988-1989 ; European Archives of Psychiatry and Neurological Sciences Volume 238 ; 238 >
+    au < manifest ; 1989-1990 ; European Archives of Psychiatry and Neurological Sciences Volume 239 ; 239 >
+    au < manifest ; 1990-1991 ; European Archives of Psychiatry and Clinical Neuroscience Volume 240 ; 240 >
+    au < manifest ; 1991-1992 ; European Archives of Psychiatry and Clinical Neuroscience Volume 241 ; 241 >
+    au < manifest ; 1992-1993 ; European Archives of Psychiatry and Clinical Neuroscience Volume 242 ; 242 >
+    au < manifest ; 1993-1994 ; European Archives of Psychiatry and Clinical Neuroscience Volume 243 ; 243 >
+    au < manifest ; 1994-1995 ; European Archives of Psychiatry and Clinical Neuroscience Volume 244 ; 244 >
+    au < manifest ; 1995 ; European Archives of Psychiatry and Clinical Neuroscience Volume 245 ; 245 >
+    au < manifest ; 1995-1996 ; European Archives of Psychiatry and Clinical Neuroscience Volume 246 ; 246 >
+    au < manifest ; 1997 ; European Archives of Psychiatry and Clinical Neuroscience Volume 247 ; 247 >
+    au < manifest ; 1998 ; European Archives of Psychiatry and Clinical Neuroscience Volume 248 ; 248 >
+    au < manifest ; 1999 ; European Archives of Psychiatry and Clinical Neuroscience Volume 249 ; 249 >
+    au < manifest ; 2000 ; European Archives of Psychiatry and Clinical Neuroscience Volume 250 ; 250 >
+    au < manifest ; 2001 ; European Archives of Psychiatry and Clinical Neuroscience Volume 251 ; 251 >
+    au < manifest ; 2002 ; European Archives of Psychiatry and Clinical Neuroscience Volume 252 ; 252 >
+    au < manifest ; 2003 ; European Archives of Psychiatry and Clinical Neuroscience Volume 253 ; 253 >
+    au < manifest ; 2004 ; European Archives of Psychiatry and Clinical Neuroscience Volume 254 ; 254 >
+    au < manifest ; 2005 ; European Archives of Psychiatry and Clinical Neuroscience Volume 255 ; 255 >
+    au < manifest ; 2006 ; European Archives of Psychiatry and Clinical Neuroscience Volume 256 ; 256 >
+    au < manifest ; 2007 ; European Archives of Psychiatry and Clinical Neuroscience Volume 257 ; 257 >
+    au < manifest ; 2008 ; European Archives of Psychiatry and Clinical Neuroscience Volume 258 ; 258 >
+    au < manifest ; 2009 ; European Archives of Psychiatry and Clinical Neuroscience Volume 259 ; 259 >
+    au < manifest ; 2010 ; European Archives of Psychiatry and Clinical Neuroscience Volume 260 ; 260 >
+    au < manifest ; 2011 ; European Archives of Psychiatry and Clinical Neuroscience Volume 261 ; 261 >
+    au < manifest ; 2012 ; European Archives of Psychiatry and Clinical Neuroscience Volume 262 ; 262 >
 
   }
 
@@ -32328,6 +32531,10 @@
 
     param[journal_issn] = 1613-3412
 
+    au < manifest ; 2005 ; European Clinics in Obstetrics and Gynaecology Volume 1 ; 1 >
+    au < manifest ; 2006 ; European Clinics in Obstetrics and Gynaecology Volume 2 ; 2 >
+    au < manifest ; 2007 ; European Clinics in Obstetrics and Gynaecology Volume 3 ; 3 >
+
   }
 
   {
@@ -32339,6 +32546,22 @@
     >
 
     param[journal_issn] = 0046-2756
+    comment[continued_by] = 0168-6577
+
+    au < manifest ; 1970 ; European Demographic Information Bulletin Volume 1 ; 1 >
+    au < manifest ; 1971 ; European Demographic Information Bulletin Volume 2 ; 2 >
+    au < manifest ; 1972 ; European Demographic Information Bulletin Volume 3 ; 3 >
+    au < manifest ; 1973 ; European Demographic Information Bulletin Volume 4 ; 4 >
+    au < manifest ; 1975 ; European Demographic Information Bulletin Volume 5 ; 5 >
+    au < manifest ; 1975 ; European Demographic Information Bulletin Volume 6 ; 6 >
+    au < manifest ; 1976 ; European Demographic Information Bulletin Volume 7 ; 7 >
+    au < manifest ; 1977 ; European Demographic Information Bulletin Volume 8 ; 8 >
+    au < manifest ; 1978 ; European Demographic Information Bulletin Volume 9 ; 9 >
+    au < manifest ; 1979 ; European Demographic Information Bulletin Volume 10 ; 10 >
+    au < manifest ; 1980 ; European Demographic Information Bulletin Volume 11 ; 11 >
+    au < manifest ; 1981 ; European Demographic Information Bulletin Volume 12 ; 12 >
+    au < manifest ; 1982 ; European Demographic Information Bulletin Volume 13 ; 13 >
+    au < manifest ; 1983 ; European Demographic Information Bulletin Volume 14 ; 14 >
 
   }
 
@@ -32352,6 +32575,34 @@
     >
 
     param[journal_issn] = 1438-2377
+    comment[continued_from] = 1431-4630
+
+    au < manifest ; 1999 ; European Food Research and Technology Volume 209 ; 209 >
+    au < manifest ; 1999 ; European Food Research and Technology Volume 210 ; 210 >
+    au < manifest ; 2000 ; European Food Research and Technology Volume 211 ; 211 >
+    au < manifest ; 2000 ; European Food Research and Technology Volume 212 ; 212 >
+    au < manifest ; 2001 ; European Food Research and Technology Volume 213 ; 213 >
+    au < manifest ; 2002 ; European Food Research and Technology Volume 214 ; 214 >
+    au < manifest ; 2002 ; European Food Research and Technology Volume 215 ; 215 >
+    au < manifest ; 2003 ; European Food Research and Technology Volume 216 ; 216 >
+    au < manifest ; 2003 ; European Food Research and Technology Volume 217 ; 217 >
+    au < manifest ; 2003 ; European Food Research and Technology Volume 218 ; 218 >
+    au < manifest ; 2004 ; European Food Research and Technology Volume 219 ; 219 >
+    au < manifest ; 2005 ; European Food Research and Technology Volume 220 ; 220 >
+    au < manifest ; 2005 ; European Food Research and Technology Volume 221 ; 221 >
+    au < manifest ; 2006 ; European Food Research and Technology Volume 222 ; 222 >
+    au < manifest ; 2006 ; European Food Research and Technology Volume 223 ; 223 >
+    au < manifest ; 2006 ; European Food Research and Technology Volume 224 ; 224 >
+    au < manifest ; 2007 ; European Food Research and Technology Volume 225 ; 225 >
+    au < manifest ; 2007 ; European Food Research and Technology Volume 226 ; 226 >
+    au < manifest ; 2008 ; European Food Research and Technology Volume 227 ; 227 >
+    au < manifest ; 2008 ; European Food Research and Technology Volume 228 ; 228 >
+    au < manifest ; 2009 ; European Food Research and Technology Volume 229 ; 229 >
+    au < manifest ; 2009 ; European Food Research and Technology Volume 230 ; 230 >
+    au < manifest ; 2010 ; European Food Research and Technology Volume 231 ; 231 >
+    au < manifest ; 2011 ; European Food Research and Technology Volume 232 ; 232 >
+    au < manifest ; 2011 ; European Food Research and Technology Volume 233 ; 233 >
+    au < manifest ; 2012 ; European Food Research and Technology Volume 234 ; 234 >
 
   }
 
@@ -32366,6 +32617,12 @@
 
     param[journal_issn] = 1386-8349
 
+    au < manifest ; 1998 ; European Journal for Education Law and Policy Volume 2 ; 2 >
+    au < manifest ; 1999 ; European Journal for Education Law and Policy Volume 3 ; 3 >
+    au < manifest ; 2000 ; European Journal for Education Law and Policy Volume 4 ; 4 >
+    au < manifest ; 2001 ; European Journal for Education Law and Policy Volume 5 ; 5 >
+    au < manifest ; 2002 ; European Journal for Education Law and Policy Volume 6 ; 6 >
+
   }
 
   {
@@ -32379,6 +32636,15 @@
 
     param[journal_issn] = 1613-9372
 
+    au < manifest ; 2004 ; European Journal of Ageing Volume 1 ; 1 >
+    au < manifest ; 2005 ; European Journal of Ageing Volume 2 ; 2 >
+    au < manifest ; 2006 ; European Journal of Ageing Volume 3 ; 3 >
+    au < manifest ; 2007 ; European Journal of Ageing Volume 4 ; 4 >
+    au < manifest ; 2008 ; European Journal of Ageing Volume 5 ; 5 >
+    au < manifest ; 2009 ; European Journal of Ageing Volume 6 ; 6 >
+    au < manifest ; 2010 ; European Journal of Ageing Volume 7 ; 7 >
+    au < manifest ; 2011 ; European Journal of Ageing Volume 8 ; 8 >
+
   }
 
   {
@@ -32391,6 +32657,40 @@
     >
 
     param[journal_issn] = 1439-6319
+    comment[continued_from] = 0301-5548
+
+    au < manifest ; 2000 ; European Journal of Applied Physiology Volume 81 ; 81 >
+    au < manifest ; 2000 ; European Journal of Applied Physiology Volume 82 ; 82 >
+    au < manifest ; 2000 ; European Journal of Applied Physiology Volume 83 ; 83 >
+    au < manifest ; 2001 ; European Journal of Applied Physiology Volume 84 ; 84 >
+    au < manifest ; 2001 ; European Journal of Applied Physiology Volume 85 ; 85 >
+    au < manifest ; 2001 ; European Journal of Applied Physiology Volume 86 ; 86 >
+    au < manifest ; 2002 ; European Journal of Applied Physiology Volume 87 ; 87 >
+    au < manifest ; 2002 ; European Journal of Applied Physiology Volume 88 ; 88 >
+    au < manifest ; 2003 ; European Journal of Applied Physiology Volume 89 ; 89 >
+    au < manifest ; 2003 ; European Journal of Applied Physiology Volume 90 ; 90 >
+    au < manifest ; 2004 ; European Journal of Applied Physiology Volume 91 ; 91 >
+    au < manifest ; 2004 ; European Journal of Applied Physiology Volume 92 ; 92 >
+    au < manifest ; 2004 ; European Journal of Applied Physiology Volume 93 ; 93 >
+    au < manifest ; 2005 ; European Journal of Applied Physiology Volume 94 ; 94 >
+    au < manifest ; 2005 ; European Journal of Applied Physiology Volume 95 ; 95 >
+    au < manifest ; 2006 ; European Journal of Applied Physiology Volume 96 ; 96 >
+    au < manifest ; 2006 ; European Journal of Applied Physiology Volume 97 ; 97 >
+    au < manifest ; 2006 ; European Journal of Applied Physiology Volume 98 ; 98 >
+    au < manifest ; 2007 ; European Journal of Applied Physiology Volume 99 ; 99 >
+    au < manifest ; 2007 ; European Journal of Applied Physiology Volume 100 ; 100 >
+    au < manifest ; 2007 ; European Journal of Applied Physiology Volume 101 ; 101 >
+    au < manifest ; 2007 ; European Journal of Applied Physiology Volume 102 ; 102 >
+    au < manifest ; 2008 ; European Journal of Applied Physiology Volume 103 ; 103 >
+    au < manifest ; 2008 ; European Journal of Applied Physiology Volume 104 ; 104 >
+    au < manifest ; 2009 ; European Journal of Applied Physiology Volume 105 ; 105 >
+    au < manifest ; 2009 ; European Journal of Applied Physiology Volume 106 ; 106 >
+    au < manifest ; 2009 ; European Journal of Applied Physiology Volume 107 ; 107 >
+    au < manifest ; 2010 ; European Journal of Applied Physiology Volume 108 ; 108 >
+    au < manifest ; 2010 ; European Journal of Applied Physiology Volume 109 ; 109 >
+    au < manifest ; 2010 ; European Journal of Applied Physiology Volume 110 ; 110 >
+    au < manifest ; 2011 ; European Journal of Applied Physiology Volume 111 ; 111 >
+    au < manifest ; 2012 ; European Journal of Applied Physiology Volume 112 ; 112 >
 
   }
 
@@ -32404,6 +32704,88 @@
     >
 
     param[journal_issn] = 0301-5548
+    comment[continued_by] = 1439-6319
+
+    au < manifest ; 1928-1929 ; European Journal of Applied Physiology and Occupational Physiology Volume 1 ; 1 >
+    au < manifest ; 1929-1930 ; European Journal of Applied Physiology and Occupational Physiology Volume 2 ; 2 >
+    au < manifest ; 1930 ; European Journal of Applied Physiology and Occupational Physiology Volume 3 ; 3 >
+    au < manifest ; 1931 ; European Journal of Applied Physiology and Occupational Physiology Volume 4 ; 4 >
+    au < manifest ; 1931-1932 ; European Journal of Applied Physiology and Occupational Physiology Volume 5 ; 5 >
+    au < manifest ; 1932-1933 ; European Journal of Applied Physiology and Occupational Physiology Volume 6 ; 6 >
+    au < manifest ; 1933-1934 ; European Journal of Applied Physiology and Occupational Physiology Volume 7 ; 7 >
+    au < manifest ; 1934-1935 ; European Journal of Applied Physiology and Occupational Physiology Volume 8 ; 8 >
+    au < manifest ; 1935-1937 ; European Journal of Applied Physiology and Occupational Physiology Volume 9 ; 9 >
+    au < manifest ; 1938-1939 ; European Journal of Applied Physiology and Occupational Physiology Volume 10 ; 10 >
+    au < manifest ; 1940-1941 ; European Journal of Applied Physiology and Occupational Physiology Volume 11 ; 11 >
+    au < manifest ; 1942-1943 ; European Journal of Applied Physiology and Occupational Physiology Volume 12 ; 12 >
+    au < manifest ; 1943 ; European Journal of Applied Physiology and Occupational Physiology Volume 13 ; 13 >
+    au < manifest ; 1949-1952 ; European Journal of Applied Physiology and Occupational Physiology Volume 14 ; 14 >
+    au < manifest ; 1953-1954 ; European Journal of Applied Physiology and Occupational Physiology Volume 15 ; 15 >
+    au < manifest ; 1955-1957 ; European Journal of Applied Physiology and Occupational Physiology Volume 16 ; 16 >
+    au < manifest ; 1958-1959 ; European Journal of Applied Physiology and Occupational Physiology Volume 17 ; 17 >
+    au < manifest ; 1959-1961 ; European Journal of Applied Physiology and Occupational Physiology Volume 18 ; 18 >
+    au < manifest ; 1961-1963 ; European Journal of Applied Physiology and Occupational Physiology Volume 19 ; 19 >
+    au < manifest ; 1963-1965 ; European Journal of Applied Physiology and Occupational Physiology Volume 20 ; 20 >
+    au < manifest ; 1965 ; European Journal of Applied Physiology and Occupational Physiology Volume 21 ; 21 >
+    au < manifest ; 1966 ; European Journal of Applied Physiology and Occupational Physiology Volume 22 ; 22 >
+    au < manifest ; 1966-1967 ; European Journal of Applied Physiology and Occupational Physiology Volume 23 ; 23 >
+    au < manifest ; 1967 ; European Journal of Applied Physiology and Occupational Physiology Volume 24 ; 24 >
+    au < manifest ; 1968 ; European Journal of Applied Physiology and Occupational Physiology Volume 25 ; 25 >
+    au < manifest ; 1968 ; European Journal of Applied Physiology and Occupational Physiology Volume 26 ; 26 >
+    au < manifest ; 1969 ; European Journal of Applied Physiology and Occupational Physiology Volume 27 ; 27 >
+    au < manifest ; 1969-1970 ; European Journal of Applied Physiology and Occupational Physiology Volume 28 ; 28 >
+    au < manifest ; 1970-1971 ; European Journal of Applied Physiology and Occupational Physiology Volume 29 ; 29 >
+    au < manifest ; 1971-1972 ; European Journal of Applied Physiology and Occupational Physiology Volume 30 ; 30 >
+    au < manifest ; 1972-1973 ; European Journal of Applied Physiology and Occupational Physiology Volume 31 ; 31 >
+    au < manifest ; 1973-1974 ; European Journal of Applied Physiology and Occupational Physiology Volume 32 ; 32 >
+    au < manifest ; 1974 ; European Journal of Applied Physiology and Occupational Physiology Volume 33 ; 33 >
+    au < manifest ; 1975 ; European Journal of Applied Physiology and Occupational Physiology Volume 34 ; 34 >
+    au < manifest ; 1976 ; European Journal of Applied Physiology and Occupational Physiology Volume 35 ; 35 >
+    au < manifest ; 1976-1977 ; European Journal of Applied Physiology and Occupational Physiology Volume 36 ; 36 >
+    au < manifest ; 1977 ; European Journal of Applied Physiology and Occupational Physiology Volume 37 ; 37 >
+    au < manifest ; 1978 ; European Journal of Applied Physiology and Occupational Physiology Volume 38 ; 38 >
+    au < manifest ; 1978 ; European Journal of Applied Physiology and Occupational Physiology Volume 39 ; 39 >
+    au < manifest ; 1978-1979 ; European Journal of Applied Physiology and Occupational Physiology Volume 40 ; 40 >
+    au < manifest ; 1979 ; European Journal of Applied Physiology and Occupational Physiology Volume 41 ; 41 >
+    au < manifest ; 1979 ; European Journal of Applied Physiology and Occupational Physiology Volume 42 ; 42 >
+    au < manifest ; 1980 ; European Journal of Applied Physiology and Occupational Physiology Volume 43 ; 43 >
+    au < manifest ; 1980 ; European Journal of Applied Physiology and Occupational Physiology Volume 44 ; 44 >
+    au < manifest ; 1980 ; European Journal of Applied Physiology and Occupational Physiology Volume 45 ; 45 >
+    au < manifest ; 1981 ; European Journal of Applied Physiology and Occupational Physiology Volume 46 ; 46 >
+    au < manifest ; 1981 ; European Journal of Applied Physiology and Occupational Physiology Volume 47 ; 47 >
+    au < manifest ; 1982 ; European Journal of Applied Physiology and Occupational Physiology Volume 48 ; 48 >
+    au < manifest ; 1982 ; European Journal of Applied Physiology and Occupational Physiology Volume 49 ; 49 >
+    au < manifest ; 1982-1983 ; European Journal of Applied Physiology and Occupational Physiology Volume 50 ; 50 >
+    au < manifest ; 1983 ; European Journal of Applied Physiology and Occupational Physiology Volume 51 ; 51 >
+    au < manifest ; 1983-1984 ; European Journal of Applied Physiology and Occupational Physiology Volume 52 ; 52 >
+    au < manifest ; 1984-1985 ; European Journal of Applied Physiology and Occupational Physiology Volume 53 ; 53 >
+    au < manifest ; 1985-1986 ; European Journal of Applied Physiology and Occupational Physiology Volume 54 ; 54 >
+    au < manifest ; 1986 ; European Journal of Applied Physiology and Occupational Physiology Volume 55 ; 55 >
+    au < manifest ; 1987 ; European Journal of Applied Physiology and Occupational Physiology Volume 56 ; 56 >
+    au < manifest ; 1988 ; European Journal of Applied Physiology and Occupational Physiology Volume 57 ; 57 >
+    au < manifest ; 1988-1989 ; European Journal of Applied Physiology and Occupational Physiology Volume 58 ; 58 >
+    au < manifest ; 1989-1990 ; European Journal of Applied Physiology and Occupational Physiology Volume 59 ; 59 >
+    au < manifest ; 1990 ; European Journal of Applied Physiology and Occupational Physiology Volume 60 ; 60 >
+    au < manifest ; 1990 ; European Journal of Applied Physiology and Occupational Physiology Volume 61 ; 61 >
+    au < manifest ; 1991 ; European Journal of Applied Physiology and Occupational Physiology Volume 62 ; 62 >
+    au < manifest ; 1991 ; European Journal of Applied Physiology and Occupational Physiology Volume 63 ; 63 >
+    au < manifest ; 1992 ; European Journal of Applied Physiology and Occupational Physiology Volume 64 ; 64 >
+    au < manifest ; 1992 ; European Journal of Applied Physiology and Occupational Physiology Volume 65 ; 65 >
+    au < manifest ; 1993 ; European Journal of Applied Physiology and Occupational Physiology Volume 66 ; 66 >
+    au < manifest ; 1993 ; European Journal of Applied Physiology and Occupational Physiology Volume 67 ; 67 >
+    au < manifest ; 1994 ; European Journal of Applied Physiology and Occupational Physiology Volume 68 ; 68 >
+    au < manifest ; 1994 ; European Journal of Applied Physiology and Occupational Physiology Volume 69 ; 69 >
+    au < manifest ; 1995 ; European Journal of Applied Physiology and Occupational Physiology Volume 70 ; 70 >
+    au < manifest ; 1995 ; European Journal of Applied Physiology and Occupational Physiology Volume 71 ; 71 >
+    au < manifest ; 1995-1996 ; European Journal of Applied Physiology and Occupational Physiology Volume 72 ; 72 >
+    au < manifest ; 1996 ; European Journal of Applied Physiology and Occupational Physiology Volume 73 ; 73 >
+    au < manifest ; 1996 ; European Journal of Applied Physiology and Occupational Physiology Volume 74 ; 74 >
+    au < manifest ; 1996-1997 ; European Journal of Applied Physiology and Occupational Physiology Volume 75 ; 75 >
+    au < manifest ; 1997 ; European Journal of Applied Physiology and Occupational Physiology Volume 76 ; 76 >
+    au < manifest ; 1997 ; European Journal of Applied Physiology and Occupational Physiology Volume 77 ; 77 >
+    au < manifest ; 1998 ; European Journal of Applied Physiology and Occupational Physiology Volume 78 ; 78 >
+    au < manifest ; 1998 ; European Journal of Applied Physiology and Occupational Physiology Volume 79 ; 79 >
+    au < manifest ; 1999 ; European Journal of Applied Physiology and Occupational Physiology Volume 80 ; 80 >
 
   }
 
@@ -32545,6 +32927,44 @@
 
     param[journal_issn] = 0378-7966
 
+    au < manifest ; 1976 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 1 ; 1 >
+    au < manifest ; 1977 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 2 ; 2 >
+    au < manifest ; 1978 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 3 ; 3 >
+    au < manifest ; 1979 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 4 ; 4 >
+    au < manifest ; 1980 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 5 ; 5 >
+    au < manifest ; 1981 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 6 ; 6 >
+    au < manifest ; 1982 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 7 ; 7 >
+    au < manifest ; 1983 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 8 ; 8 >
+    au < manifest ; 1984 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 9 ; 9 >
+    au < manifest ; 1985 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 10 ; 10 >
+    au < manifest ; 1986 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 11 ; 11 >
+    au < manifest ; 1987 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 12 ; 12 >
+    au < manifest ; 1988 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 13 ; 13 >
+    au < manifest ; 1989 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 14 ; 14 >
+    au < manifest ; 1990 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 15 ; 15 >
+    au < manifest ; 1991 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 16 ; 16 >
+    au < manifest ; 1992 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 17 ; 17 >
+    au < manifest ; 1993 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 18 ; 18 >
+    au < manifest ; 1994 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 19 ; 19 >
+    au < manifest ; 1995 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 20 ; 20 >
+    au < manifest ; 1996 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 21 ; 21 >
+    au < manifest ; 1997 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 22 ; 22 >
+    au < manifest ; 1998 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 23 ; 23 >
+    au < manifest ; 1999 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 24 ; 24 >
+    au < manifest ; 2000 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 25 ; 25 >
+    au < manifest ; 2001 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 26 ; 26 >
+    au < manifest ; 2002 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 27 ; 27 >
+    au < manifest ; 2003 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 28 ; 28 >
+    au < manifest ; 2004 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 29 ; 29 >
+    au < manifest ; 2005 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 30 ; 30 >
+    au < manifest ; 2006 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 31 ; 31 >
+    au < manifest ; 2007 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 32 ; 32 >
+    au < manifest ; 2008 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 33 ; 33 >
+    au < manifest ; 2009 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 34 ; 34 >
+    au < manifest ; 2010 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 35 ; 35 >
+    au < manifest ; 2011 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 36 ; 36 >
+    au < manifest ; 2012 ; European Journal of Drug Metabolism and Pharmacokinetics Volume 37 ; 37 >
+
   }
 
   {
@@ -32596,6 +33016,17 @@
     >
 
     param[journal_issn] = 1612-4669
+    comment[continued_from] = 0015-8003
+
+    au < manifest ; 2004 ; European Journal of Forest Research Volume 123 ; 123 >
+    au < manifest ; 2005 ; European Journal of Forest Research Volume 124 ; 124 >
+    au < manifest ; 2006 ; European Journal of Forest Research Volume 125 ; 125 >
+    au < manifest ; 2007 ; European Journal of Forest Research Volume 126 ; 126 >
+    au < manifest ; 2008 ; European Journal of Forest Research Volume 127 ; 127 >
+    au < manifest ; 2009 ; European Journal of Forest Research Volume 128 ; 128 >
+    au < manifest ; 2010 ; European Journal of Forest Research Volume 129 ; 129 >
+    au < manifest ; 2011 ; European Journal of Forest Research Volume 130 ; 130 >
+    au < manifest ; 2012 ; European Journal of Forest Research Volume 131 ; 131 >
 
   }
 
@@ -32609,6 +33040,20 @@
     >
 
     param[journal_issn] = 1618-7598
+    comment[continued_from] = 1439-3972
+
+    au < manifest ; 2001 ; The European Journal of Health Economics Volume 2 ; 2 >
+    au < manifest ; 2002 ; The European Journal of Health Economics Volume 3 ; 3 >
+    au < manifest ; 2003 ; The European Journal of Health Economics Volume 4 ; 4 >
+    au < manifest ; 2004 ; The European Journal of Health Economics Volume 5 ; 5 >
+    au < manifest ; 2005 ; The European Journal of Health Economics Volume 6 ; 6 >
+    au < manifest ; 2006 ; The European Journal of Health Economics Volume 7 ; 7 >
+    au < manifest ; 2007 ; The European Journal of Health Economics Volume 8 ; 8 >
+    au < manifest ; 2008 ; The European Journal of Health Economics Volume 9 ; 9 >
+    au < manifest ; 2010 ; The European Journal of Health Economics Volume 10 ; 10 >
+    au < manifest ; 2010 ; The European Journal of Health Economics Volume 11 ; 11 >
+    au < manifest ; 2011 ; The European Journal of Health Economics Volume 12 ; 12 >
+    au < manifest ; 2012 ; The European Journal of Health Economics Volume 13 ; 13 >
 
   }
 
@@ -32622,6 +33067,40 @@
     >
 
     param[journal_issn] = 0929-1261
+
+    au < manifest ; 1994 ; European Journal of Law and Economics Volume 1 ; 1 >
+    au < manifest ; 1995 ; European Journal of Law and Economics Volume 2 ; 2 >
+    au < manifest ; 1996 ; European Journal of Law and Economics Volume 3 ; 3 >
+    au < manifest ; 1997 ; European Journal of Law and Economics Volume 4 ; 4 >
+    au < manifest ; 1998 ; European Journal of Law and Economics Volume 5 ; 5 >
+    au < manifest ; 1998 ; European Journal of Law and Economics Volume 6 ; 6 >
+    au < manifest ; 1999 ; European Journal of Law and Economics Volume 7 ; 7 >
+    au < manifest ; 1999 ; European Journal of Law and Economics Volume 8 ; 8 >
+    au < manifest ; 2000 ; European Journal of Law and Economics Volume 9 ; 9 >
+    au < manifest ; 2000 ; European Journal of Law and Economics Volume 10 ; 10 >
+    au < manifest ; 2001 ; European Journal of Law and Economics Volume 11 ; 11 >
+    au < manifest ; 2001 ; European Journal of Law and Economics Volume 12 ; 12 >
+    au < manifest ; 2002 ; European Journal of Law and Economics Volume 13 ; 13 >
+    au < manifest ; 2002 ; European Journal of Law and Economics Volume 14 ; 14 >
+    au < manifest ; 2003 ; European Journal of Law and Economics Volume 15 ; 15 >
+    au < manifest ; 2003 ; European Journal of Law and Economics Volume 16 ; 16 >
+    au < manifest ; 2004 ; European Journal of Law and Economics Volume 17 ; 17 >
+    au < manifest ; 2004 ; European Journal of Law and Economics Volume 18 ; 18 >
+    au < manifest ; 2005 ; European Journal of Law and Economics Volume 19 ; 19 >
+    au < manifest ; 2005 ; European Journal of Law and Economics Volume 20 ; 20 >
+    au < manifest ; 2006 ; European Journal of Law and Economics Volume 21 ; 21 >
+    au < manifest ; 2006 ; European Journal of Law and Economics Volume 22 ; 22 >
+    au < manifest ; 2007 ; European Journal of Law and Economics Volume 23 ; 23 >
+    au < manifest ; 2007 ; European Journal of Law and Economics Volume 24 ; 24 >
+    au < manifest ; 2008 ; European Journal of Law and Economics Volume 25 ; 25 >
+    au < manifest ; 2008 ; European Journal of Law and Economics Volume 26 ; 26 >
+    au < manifest ; 2009 ; European Journal of Law and Economics Volume 27 ; 27 >
+    au < manifest ; 2009 ; European Journal of Law and Economics Volume 28 ; 28 >
+    au < manifest ; 2010 ; European Journal of Law and Economics Volume 29 ; 29 >
+    au < manifest ; 2010 ; European Journal of Law and Economics Volume 30 ; 30 >
+    au < manifest ; 2011 ; European Journal of Law and Economics Volume 31 ; 31 >
+    au < manifest ; 2011 ; European Journal of Law and Economics Volume 32 ; 32 >
+    au < manifest ; 2012 ; European Journal of Law and Economics Volume 33 ; 33 >
 
   }
 
@@ -32686,6 +33165,22 @@
     >
 
     param[journal_issn] = 1436-6207
+    comment[continued_from] = 0044-264X
+
+    au < manifest ; 1999 ; European Journal of Nutrition Volume 38 ; 38 >
+    au < manifest ; 2000 ; European Journal of Nutrition Volume 39 ; 39 >
+    au < manifest ; 2001 ; European Journal of Nutrition Volume 40 ; 40 >
+    au < manifest ; 2002 ; European Journal of Nutrition Volume 41 ; 41 >
+    au < manifest ; 2003 ; European Journal of Nutrition Volume 42 ; 42 >
+    au < manifest ; 2004 ; European Journal of Nutrition Volume 43 ; 43 >
+    au < manifest ; 2005 ; European Journal of Nutrition Volume 44 ; 44 >
+    au < manifest ; 2006 ; European Journal of Nutrition Volume 45 ; 45 >
+    au < manifest ; 2007 ; European Journal of Nutrition Volume 46 ; 46 >
+    au < manifest ; 2008 ; European Journal of Nutrition Volume 47 ; 47 >
+    au < manifest ; 2009 ; European Journal of Nutrition Volume 48 ; 48 >
+    au < manifest ; 2010 ; European Journal of Nutrition Volume 49 ; 49 >
+    au < manifest ; 2011 ; European Journal of Nutrition Volume 50 ; 50 >
+    au < manifest ; 2012 ; European Journal of Nutrition Volume 51 ; 51 >
 
   }
 
@@ -32698,6 +33193,29 @@
     >
 
     param[journal_issn] = 1633-8065
+
+    au < manifest ; 1991 ; European Journal of Orthopaedic Surgery & Traumatology Volume 1 ; 1 >
+    au < manifest ; 1992 ; European Journal of Orthopaedic Surgery & Traumatology Volume 2 ; 2 >
+    au < manifest ; 1993 ; European Journal of Orthopaedic Surgery & Traumatology Volume 3 ; 3 >
+    au < manifest ; 1994 ; European Journal of Orthopaedic Surgery & Traumatology Volume 4 ; 4 >
+    au < manifest ; 1995 ; European Journal of Orthopaedic Surgery & Traumatology Volume 5 ; 5 >
+    au < manifest ; 1996 ; European Journal of Orthopaedic Surgery & Traumatology Volume 6 ; 6 >
+    au < manifest ; 1997 ; European Journal of Orthopaedic Surgery & Traumatology Volume 7 ; 7 >
+    au < manifest ; 1998 ; European Journal of Orthopaedic Surgery & Traumatology Volume 8 ; 8 >
+    au < manifest ; 1999 ; European Journal of Orthopaedic Surgery & Traumatology Volume 9 ; 9 >
+    au < manifest ; 2000 ; European Journal of Orthopaedic Surgery & Traumatology Volume 10 ; 10 >
+    au < manifest ; 2001 ; European Journal of Orthopaedic Surgery & Traumatology Volume 11 ; 11 >
+    au < manifest ; 2002 ; European Journal of Orthopaedic Surgery & Traumatology Volume 12 ; 12 >
+    au < manifest ; 2003 ; European Journal of Orthopaedic Surgery & Traumatology Volume 13 ; 13 >
+    au < manifest ; 2004 ; European Journal of Orthopaedic Surgery & Traumatology Volume 14 ; 14 >
+    au < manifest ; 2005 ; European Journal of Orthopaedic Surgery & Traumatology Volume 15 ; 15 >
+    au < manifest ; 2006 ; European Journal of Orthopaedic Surgery & Traumatology Volume 16 ; 16 >
+    au < manifest ; 2007 ; European Journal of Orthopaedic Surgery & Traumatology Volume 17 ; 17 >
+    au < manifest ; 2008 ; European Journal of Orthopaedic Surgery & Traumatology Volume 18 ; 18 >
+    au < manifest ; 2009 ; European Journal of Orthopaedic Surgery & Traumatology Volume 19 ; 19 >
+    au < manifest ; 2010 ; European Journal of Orthopaedic Surgery & Traumatology Volume 20 ; 20 >
+    au < manifest ; 2011 ; European Journal of Orthopaedic Surgery & Traumatology Volume 21 ; 21 >
+    au < manifest ; 2012 ; European Journal of Orthopaedic Surgery & Traumatology Volume 22 ; 22 >
 
   }
 
@@ -32712,6 +33230,177 @@
 
     param[journal_issn] = 0340-6199
 
+    au < manifest ; 1911 ; European Journal of Pediatrics Volume 1 ; 1 >
+    au < manifest ; 1911 ; European Journal of Pediatrics Volume 2 ; 2 >
+    au < manifest ; 1912 ; European Journal of Pediatrics Volume 3 ; 3 >
+    au < manifest ; 1912 ; European Journal of Pediatrics Volume 4 ; 4 >
+    au < manifest ; 1913 ; European Journal of Pediatrics Volume 5 ; 5 >
+    au < manifest ; 1913 ; European Journal of Pediatrics Volume 6 ; 6 >
+    au < manifest ; 1913 ; European Journal of Pediatrics Volume 7 ; 7 >
+    au < manifest ; 1913 ; European Journal of Pediatrics Volume 8 ; 8 >
+    au < manifest ; 1913 ; European Journal of Pediatrics Volume 9 ; 9 >
+    au < manifest ; 1914 ; European Journal of Pediatrics Volume 10 ; 10 >
+    au < manifest ; 1914 ; European Journal of Pediatrics Volume 11 ; 11 >
+    au < manifest ; 1914-1915 ; European Journal of Pediatrics Volume 12 ; 12 >
+    au < manifest ; 1915-1916 ; European Journal of Pediatrics Volume 13 ; 13 >
+    au < manifest ; 1916 ; European Journal of Pediatrics Volume 14 ; 14 >
+    au < manifest ; 1916-1917 ; European Journal of Pediatrics Volume 15 ; 15 >
+    au < manifest ; 1917 ; European Journal of Pediatrics Volume 16 ; 16 >
+    au < manifest ; 1917-1918 ; European Journal of Pediatrics Volume 17 ; 17 >
+    au < manifest ; 1918 ; European Journal of Pediatrics Volume 18 ; 18 >
+    au < manifest ; 1918-1919 ; European Journal of Pediatrics Volume 19 ; 19 >
+    au < manifest ; 1919 ; European Journal of Pediatrics Volume 20 ; 20 >
+    au < manifest ; 1919 ; European Journal of Pediatrics Volume 21 ; 21 >
+    au < manifest ; 1919 ; European Journal of Pediatrics Volume 22 ; 22 >
+    au < manifest ; 1919 ; European Journal of Pediatrics Volume 23 ; 23 >
+    au < manifest ; 1919-1920 ; European Journal of Pediatrics Volume 24 ; 24 >
+    au < manifest ; 1920 ; European Journal of Pediatrics Volume 25 ; 25 >
+    au < manifest ; 1920 ; European Journal of Pediatrics Volume 26 ; 26 >
+    au < manifest ; 1920-1921 ; European Journal of Pediatrics Volume 27 ; 27 >
+    au < manifest ; 1921 ; European Journal of Pediatrics Volume 28 ; 28 >
+    au < manifest ; 1921 ; European Journal of Pediatrics Volume 29 ; 29 >
+    au < manifest ; 1921 ; European Journal of Pediatrics Volume 30 ; 30 >
+    au < manifest ; 1921-1922 ; European Journal of Pediatrics Volume 31 ; 31 >
+    au < manifest ; 1922 ; European Journal of Pediatrics Volume 32 ; 32 >
+    au < manifest ; 1922 ; European Journal of Pediatrics Volume 33 ; 33 >
+    au < manifest ; 1922-1923 ; European Journal of Pediatrics Volume 34 ; 34 >
+    au < manifest ; 1923 ; European Journal of Pediatrics Volume 35 ; 35 >
+    au < manifest ; 1923 ; European Journal of Pediatrics Volume 36 ; 36 >
+    au < manifest ; 1924 ; European Journal of Pediatrics Volume 37 ; 37 >
+    au < manifest ; 1924 ; European Journal of Pediatrics Volume 38 ; 38 >
+    au < manifest ; 1925 ; European Journal of Pediatrics Volume 39 ; 39 >
+    au < manifest ; 1925-1926 ; European Journal of Pediatrics Volume 40 ; 40 >
+    au < manifest ; 1926 ; European Journal of Pediatrics Volume 41 ; 41 >
+    au < manifest ; 1926 ; European Journal of Pediatrics Volume 42 ; 42 >
+    au < manifest ; 1927 ; European Journal of Pediatrics Volume 43 ; 43 >
+    au < manifest ; 1927 ; European Journal of Pediatrics Volume 44 ; 44 >
+    au < manifest ; 1927-1928 ; European Journal of Pediatrics Volume 45 ; 45 >
+    au < manifest ; 1928 ; European Journal of Pediatrics Volume 46 ; 46 >
+    au < manifest ; 1929 ; European Journal of Pediatrics Volume 47 ; 47 >
+    au < manifest ; 1929-1930 ; European Journal of Pediatrics Volume 48 ; 48 >
+    au < manifest ; 1930 ; European Journal of Pediatrics Volume 49 ; 49 >
+    au < manifest ; 1930-1931 ; European Journal of Pediatrics Volume 50 ; 50 >
+    au < manifest ; 1931 ; European Journal of Pediatrics Volume 51 ; 51 >
+    au < manifest ; 1931-1932 ; European Journal of Pediatrics Volume 52 ; 52 >
+    au < manifest ; 1932 ; European Journal of Pediatrics Volume 53 ; 53 >
+    au < manifest ; 1932 ; European Journal of Pediatrics Volume 54 ; 54 >
+    au < manifest ; 1933 ; European Journal of Pediatrics Volume 55 ; 55 >
+    au < manifest ; 1934 ; European Journal of Pediatrics Volume 56 ; 56 >
+    au < manifest ; 1934-1935 ; European Journal of Pediatrics Volume 57 ; 57 >
+    au < manifest ; 1936-1937 ; European Journal of Pediatrics Volume 58 ; 58 >
+    au < manifest ; 1937-1938 ; European Journal of Pediatrics Volume 59 ; 59 >
+    au < manifest ; 1938-1939 ; European Journal of Pediatrics Volume 60 ; 60 >
+    au < manifest ; 1939-1940 ; European Journal of Pediatrics Volume 61 ; 61 >
+    au < manifest ; 1940-1941 ; European Journal of Pediatrics Volume 62 ; 62 >
+    au < manifest ; 1942-1943 ; European Journal of Pediatrics Volume 63 ; 63 >
+    au < manifest ; 1943-1944 ; European Journal of Pediatrics Volume 64 ; 64 >
+    au < manifest ; 1947-1948 ; European Journal of Pediatrics Volume 65 ; 65 >
+    au < manifest ; 1948-1949 ; European Journal of Pediatrics Volume 66 ; 66 >
+    au < manifest ; 1949-1950 ; European Journal of Pediatrics Volume 67 ; 67 >
+    au < manifest ; 1950 ; European Journal of Pediatrics Volume 68 ; 68 >
+    au < manifest ; 1950-1951 ; European Journal of Pediatrics Volume 69 ; 69 >
+    au < manifest ; 1951-1952 ; European Journal of Pediatrics Volume 70 ; 70 >
+    au < manifest ; 1952 ; European Journal of Pediatrics Volume 71 ; 71 >
+    au < manifest ; 1952-1953 ; European Journal of Pediatrics Volume 72 ; 72 >
+    au < manifest ; 1953 ; European Journal of Pediatrics Volume 73 ; 73 >
+    au < manifest ; 1953-1954 ; European Journal of Pediatrics Volume 74 ; 74 >
+    au < manifest ; 1954-1955 ; European Journal of Pediatrics Volume 75 ; 75 >
+    au < manifest ; 1955 ; European Journal of Pediatrics Volume 76 ; 76 >
+    au < manifest ; 1955-1956 ; European Journal of Pediatrics Volume 77 ; 77 >
+    au < manifest ; 1956 ; European Journal of Pediatrics Volume 78 ; 78 >
+    au < manifest ; 1956-1957 ; European Journal of Pediatrics Volume 79 ; 79 >
+    au < manifest ; 1957-1958 ; European Journal of Pediatrics Volume 80 ; 80 >
+    au < manifest ; 1958 ; European Journal of Pediatrics Volume 81 ; 81 >
+    au < manifest ; 1959 ; European Journal of Pediatrics Volume 82 ; 82 >
+    au < manifest ; 1959-1960 ; European Journal of Pediatrics Volume 83 ; 83 >
+    au < manifest ; 1960 ; European Journal of Pediatrics Volume 84 ; 84 >
+    au < manifest ; 1961 ; European Journal of Pediatrics Volume 85 ; 85 >
+    au < manifest ; 1961-1962 ; European Journal of Pediatrics Volume 86 ; 86 >
+    au < manifest ; 1962-1963 ; European Journal of Pediatrics Volume 87 ; 87 >
+    au < manifest ; 1963 ; European Journal of Pediatrics Volume 88 ; 88 >
+    au < manifest ; 1964 ; European Journal of Pediatrics Volume 89 ; 89 >
+    au < manifest ; 1964 ; European Journal of Pediatrics Volume 90 ; 90 >
+    au < manifest ; 1964 ; European Journal of Pediatrics Volume 91 ; 91 >
+    au < manifest ; 1965 ; European Journal of Pediatrics Volume 92 ; 92 >
+    au < manifest ; 1965 ; European Journal of Pediatrics Volume 93 ; 93 >
+    au < manifest ; 1965 ; European Journal of Pediatrics Volume 94 ; 94 >
+    au < manifest ; 1965-1966 ; European Journal of Pediatrics Volume 95 ; 95 >
+    au < manifest ; 1966 ; European Journal of Pediatrics Volume 96 ; 96 >
+    au < manifest ; 1966 ; European Journal of Pediatrics Volume 97 ; 97 >
+    au < manifest ; 1967 ; European Journal of Pediatrics Volume 98 ; 98 >
+    au < manifest ; 1967 ; European Journal of Pediatrics Volume 99 ; 99 >
+    au < manifest ; 1967 ; European Journal of Pediatrics Volume 100 ; 100 >
+    au < manifest ; 1967 ; European Journal of Pediatrics Volume 101 ; 101 >
+    au < manifest ; 1968 ; European Journal of Pediatrics Volume 102 ; 102 >
+    au < manifest ; 1968 ; European Journal of Pediatrics Volume 103 ; 103 >
+    au < manifest ; 1968 ; European Journal of Pediatrics Volume 104 ; 104 >
+    au < manifest ; 1969 ; European Journal of Pediatrics Volume 105 ; 105 >
+    au < manifest ; 1969 ; European Journal of Pediatrics Volume 106 ; 106 >
+    au < manifest ; 1969-1970 ; European Journal of Pediatrics Volume 107 ; 107 >
+    au < manifest ; 1970 ; European Journal of Pediatrics Volume 108 ; 108 >
+    au < manifest ; 1970-1971 ; European Journal of Pediatrics Volume 109 ; 109 >
+    au < manifest ; 1971 ; European Journal of Pediatrics Volume 110 ; 110 >
+    au < manifest ; 1971-1972 ; European Journal of Pediatrics Volume 111 ; 111 >
+    au < manifest ; 1972 ; European Journal of Pediatrics Volume 112 ; 112 >
+    au < manifest ; 1972 ; European Journal of Pediatrics Volume 113 ; 113 >
+    au < manifest ; 1973 ; European Journal of Pediatrics Volume 114 ; 114 >
+    au < manifest ; 1973 ; European Journal of Pediatrics Volume 115 ; 115 >
+    au < manifest ; 1973-1974 ; European Journal of Pediatrics Volume 116 ; 116 >
+    au < manifest ; 1974 ; European Journal of Pediatrics Volume 117 ; 117 >
+    au < manifest ; 1974-1975 ; European Journal of Pediatrics Volume 118 ; 118 >
+    au < manifest ; 1975 ; European Journal of Pediatrics Volume 119 ; 119 >
+    au < manifest ; 1975 ; European Journal of Pediatrics Volume 120 ; 120 >
+    au < manifest ; 1975-1976 ; European Journal of Pediatrics Volume 121 ; 121 >
+    au < manifest ; 1976 ; European Journal of Pediatrics Volume 122 ; 122 >
+    au < manifest ; 1976 ; European Journal of Pediatrics Volume 123 ; 123 >
+    au < manifest ; 1976-1977 ; European Journal of Pediatrics Volume 124 ; 124 >
+    au < manifest ; 1977 ; European Journal of Pediatrics Volume 125 ; 125 >
+    au < manifest ; 1977 ; European Journal of Pediatrics Volume 126 ; 126 >
+    au < manifest ; 1977-1978 ; European Journal of Pediatrics Volume 127 ; 127 >
+    au < manifest ; 1978 ; European Journal of Pediatrics Volume 128 ; 128 >
+    au < manifest ; 1978 ; European Journal of Pediatrics Volume 129 ; 129 >
+    au < manifest ; 1979 ; European Journal of Pediatrics Volume 130 ; 130 >
+    au < manifest ; 1979 ; European Journal of Pediatrics Volume 131 ; 131 >
+    au < manifest ; 1979 ; European Journal of Pediatrics Volume 132 ; 132 >
+    au < manifest ; 1980 ; European Journal of Pediatrics Volume 133 ; 133 >
+    au < manifest ; 1980 ; European Journal of Pediatrics Volume 134 ; 134 >
+    au < manifest ; 1980-1981 ; European Journal of Pediatrics Volume 135 ; 135 >
+    au < manifest ; 1981 ; European Journal of Pediatrics Volume 136 ; 136 >
+    au < manifest ; 1981 ; European Journal of Pediatrics Volume 137 ; 137 >
+    au < manifest ; 1982 ; European Journal of Pediatrics Volume 138 ; 138 >
+    au < manifest ; 1982 ; European Journal of Pediatrics Volume 139 ; 139 >
+    au < manifest ; 1983 ; European Journal of Pediatrics Volume 140 ; 140 >
+    au < manifest ; 1983-1984 ; European Journal of Pediatrics Volume 141 ; 141 >
+    au < manifest ; 1984 ; European Journal of Pediatrics Volume 142 ; 142 >
+    au < manifest ; 1984-1985 ; European Journal of Pediatrics Volume 143 ; 143 >
+    au < manifest ; 1985-1986 ; European Journal of Pediatrics Volume 144 ; 144 >
+    au < manifest ; 1986 ; European Journal of Pediatrics Volume 145 ; 145 >
+    au < manifest ; 1987 ; European Journal of Pediatrics Volume 146 ; 146 >
+    au < manifest ; 1988 ; European Journal of Pediatrics Volume 147 ; 147 >
+    au < manifest ; 1988-1989 ; European Journal of Pediatrics Volume 148 ; 148 >
+    au < manifest ; 1990 ; European Journal of Pediatrics Volume 149 ; 149 >
+    au < manifest ; 1990-1991 ; European Journal of Pediatrics Volume 150 ; 150 >
+    au < manifest ; 1992 ; European Journal of Pediatrics Volume 151 ; 151 >
+    au < manifest ; 1993 ; European Journal of Pediatrics Volume 152 ; 152 >
+    au < manifest ; 1994 ; European Journal of Pediatrics Volume 153 ; 153 >
+    au < manifest ; 1995 ; European Journal of Pediatrics Volume 154 ; 154 >
+    au < manifest ; 1996 ; European Journal of Pediatrics Volume 155 ; 155 >
+    au < manifest ; 1998 ; European Journal of Pediatrics Volume 157 ; 157 >
+    au < manifest ; 1999 ; European Journal of Pediatrics Volume 158 ; 158 >
+    au < manifest ; 2000 ; European Journal of Pediatrics Volume 159 ; 159 >
+    au < manifest ; 2001 ; European Journal of Pediatrics Volume 160 ; 160 >
+    au < manifest ; 2002 ; European Journal of Pediatrics Volume 161 ; 161 >
+    au < manifest ; 2003 ; European Journal of Pediatrics Volume 162 ; 162 >
+    au < manifest ; 2004 ; European Journal of Pediatrics Volume 163 ; 163 >
+    au < manifest ; 2005 ; European Journal of Pediatrics Volume 164 ; 164 >
+    au < manifest ; 2006 ; European Journal of Pediatrics Volume 165 ; 165 >
+    au < manifest ; 2007 ; European Journal of Pediatrics Volume 166 ; 166 >
+    au < manifest ; 2008 ; European Journal of Pediatrics Volume 167 ; 167 >
+    au < manifest ; 2009 ; European Journal of Pediatrics Volume 168 ; 168 >
+    au < manifest ; 2010 ; European Journal of Pediatrics Volume 169 ; 169 >
+    au < manifest ; 2011 ; European Journal of Pediatrics Volume 170 ; 170 >
+    au < manifest ; 2012 ; European Journal of Pediatrics Volume 171 ; 171 >
+
   }
 
   {
@@ -32724,6 +33413,140 @@
     >
 
     param[journal_issn] = 0929-1873
+
+    au < manifest ; 1895 ; European Journal of Plant Pathology Volume 1 ; 1 >
+    au < manifest ; 1896 ; European Journal of Plant Pathology Volume 2 ; 2 >
+    au < manifest ; 1897 ; European Journal of Plant Pathology Volume 3 ; 3 >
+    au < manifest ; 1898-1899 ; European Journal of Plant Pathology Volume 4 ; 4 >
+    au < manifest ; 1899 ; European Journal of Plant Pathology Volume 5 ; 5 >
+    au < manifest ; 1900 ; European Journal of Plant Pathology Volume 6 ; 6 >
+    au < manifest ; 1901 ; European Journal of Plant Pathology Volume 7 ; 7 >
+    au < manifest ; 1902-1903 ; European Journal of Plant Pathology Volume 8 ; 8 >
+    au < manifest ; 1903-1904 ; European Journal of Plant Pathology Volume 9 ; 9 >
+    au < manifest ; 1904 ; European Journal of Plant Pathology Volume 10 ; 10 >
+    au < manifest ; 1905 ; European Journal of Plant Pathology Volume 11 ; 11 >
+    au < manifest ; 1906 ; European Journal of Plant Pathology Volume 12 ; 12 >
+    au < manifest ; 1907 ; European Journal of Plant Pathology Volume 13 ; 13 >
+    au < manifest ; 1908 ; European Journal of Plant Pathology Volume 14 ; 14 >
+    au < manifest ; 1909 ; European Journal of Plant Pathology Volume 15 ; 15 >
+    au < manifest ; 1910-1911 ; European Journal of Plant Pathology Volume 16 ; 16 >
+    au < manifest ; 1911 ; European Journal of Plant Pathology Volume 17 ; 17 >
+    au < manifest ; 1912 ; European Journal of Plant Pathology Volume 18 ; 18 >
+    au < manifest ; 1913 ; European Journal of Plant Pathology Volume 19 ; 19 >
+    au < manifest ; 1914 ; European Journal of Plant Pathology Volume 20 ; 20 >
+    au < manifest ; 1915 ; European Journal of Plant Pathology Volume 21 ; 21 >
+    au < manifest ; 1916 ; European Journal of Plant Pathology Volume 22 ; 22 >
+    au < manifest ; 1917 ; European Journal of Plant Pathology Volume 23 ; 23 >
+    au < manifest ; 1918 ; European Journal of Plant Pathology Volume 24 ; 24 >
+    au < manifest ; 1919 ; European Journal of Plant Pathology Volume 25 ; 25 >
+    au < manifest ; 1920 ; European Journal of Plant Pathology Volume 26 ; 26 >
+    au < manifest ; 1921 ; European Journal of Plant Pathology Volume 27 ; 27 >
+    au < manifest ; 1922 ; European Journal of Plant Pathology Volume 28 ; 28 >
+    au < manifest ; 1923 ; European Journal of Plant Pathology Volume 29 ; 29 >
+    au < manifest ; 1924 ; European Journal of Plant Pathology Volume 30 ; 30 >
+    au < manifest ; 1925 ; European Journal of Plant Pathology Volume 31 ; 31 >
+    au < manifest ; 1926 ; European Journal of Plant Pathology Volume 32 ; 32 >
+    au < manifest ; 1927 ; European Journal of Plant Pathology Volume 33 ; 33 >
+    au < manifest ; 1928 ; European Journal of Plant Pathology Volume 34 ; 34 >
+    au < manifest ; 1929 ; European Journal of Plant Pathology Volume 35 ; 35 >
+    au < manifest ; 1930 ; European Journal of Plant Pathology Volume 36 ; 36 >
+    au < manifest ; 1931 ; European Journal of Plant Pathology Volume 37 ; 37 >
+    au < manifest ; 1932 ; European Journal of Plant Pathology Volume 38 ; 38 >
+    au < manifest ; 1933 ; European Journal of Plant Pathology Volume 39 ; 39 >
+    au < manifest ; 1934 ; European Journal of Plant Pathology Volume 40 ; 40 >
+    au < manifest ; 1935 ; European Journal of Plant Pathology Volume 41 ; 41 >
+    au < manifest ; 1936 ; European Journal of Plant Pathology Volume 42 ; 42 >
+    au < manifest ; 1937 ; European Journal of Plant Pathology Volume 43 ; 43 >
+    au < manifest ; 1938 ; European Journal of Plant Pathology Volume 44 ; 44 >
+    au < manifest ; 1939 ; European Journal of Plant Pathology Volume 45 ; 45 >
+    au < manifest ; 1940 ; European Journal of Plant Pathology Volume 46 ; 46 >
+    au < manifest ; 1941 ; European Journal of Plant Pathology Volume 47 ; 47 >
+    au < manifest ; 1942 ; European Journal of Plant Pathology Volume 48 ; 48 >
+    au < manifest ; 1943 ; European Journal of Plant Pathology Volume 49 ; 49 >
+    au < manifest ; 1944 ; European Journal of Plant Pathology Volume 50 ; 50 >
+    au < manifest ; 1945 ; European Journal of Plant Pathology Volume 51 ; 51 >
+    au < manifest ; 1946 ; European Journal of Plant Pathology Volume 52 ; 52 >
+    au < manifest ; 1947 ; European Journal of Plant Pathology Volume 53 ; 53 >
+    au < manifest ; 1948 ; European Journal of Plant Pathology Volume 54 ; 54 >
+    au < manifest ; 1949 ; European Journal of Plant Pathology Volume 55 ; 55 >
+    au < manifest ; 1950 ; European Journal of Plant Pathology Volume 56 ; 56 >
+    au < manifest ; 1951 ; European Journal of Plant Pathology Volume 57 ; 57 >
+    au < manifest ; 1952 ; European Journal of Plant Pathology Volume 58 ; 58 >
+    au < manifest ; 1953 ; European Journal of Plant Pathology Volume 59 ; 59 >
+    au < manifest ; 1954 ; European Journal of Plant Pathology Volume 60 ; 60 >
+    au < manifest ; 1955 ; European Journal of Plant Pathology Volume 61 ; 61 >
+    au < manifest ; 1956 ; European Journal of Plant Pathology Volume 62 ; 62 >
+    au < manifest ; 1957 ; European Journal of Plant Pathology Volume 63 ; 63 >
+    au < manifest ; 1958 ; European Journal of Plant Pathology Volume 64 ; 64 >
+    au < manifest ; 1959 ; European Journal of Plant Pathology Volume 65 ; 65 >
+    au < manifest ; 1960 ; European Journal of Plant Pathology Volume 66 ; 66 >
+    au < manifest ; 1961 ; European Journal of Plant Pathology Volume 67 ; 67 >
+    au < manifest ; 1962 ; European Journal of Plant Pathology Volume 68 ; 68 >
+    au < manifest ; 1963 ; European Journal of Plant Pathology Volume 69 ; 69 >
+    au < manifest ; 1964 ; European Journal of Plant Pathology Volume 70 ; 70 >
+    au < manifest ; 1965 ; European Journal of Plant Pathology Volume 71 ; 71 >
+    au < manifest ; 1966 ; European Journal of Plant Pathology Volume 72 ; 72 >
+    au < manifest ; 1967 ; European Journal of Plant Pathology Volume 73 ; 73 >
+    au < manifest ; 1968 ; European Journal of Plant Pathology Volume 74 ; 74 >
+    au < manifest ; 1969 ; European Journal of Plant Pathology Volume 75 ; 75 >
+    au < manifest ; 1970 ; European Journal of Plant Pathology Volume 76 ; 76 >
+    au < manifest ; 1971 ; European Journal of Plant Pathology Volume 77 ; 77 >
+    au < manifest ; 1972 ; European Journal of Plant Pathology Volume 78 ; 78 >
+    au < manifest ; 1973 ; European Journal of Plant Pathology Volume 79 ; 79 >
+    au < manifest ; 1974 ; European Journal of Plant Pathology Volume 80 ; 80 >
+    au < manifest ; 1975 ; European Journal of Plant Pathology Volume 81 ; 81 >
+    au < manifest ; 1976 ; European Journal of Plant Pathology Volume 82 ; 82 >
+    au < manifest ; 1977 ; European Journal of Plant Pathology Volume 83 ; 83 >
+    au < manifest ; 1978 ; European Journal of Plant Pathology Volume 84 ; 84 >
+    au < manifest ; 1979 ; European Journal of Plant Pathology Volume 85 ; 85 >
+    au < manifest ; 1980 ; European Journal of Plant Pathology Volume 86 ; 86 >
+    au < manifest ; 1981 ; European Journal of Plant Pathology Volume 87 ; 87 >
+    au < manifest ; 1982 ; European Journal of Plant Pathology Volume 88 ; 88 >
+    au < manifest ; 1983 ; European Journal of Plant Pathology Volume 89 ; 89 >
+    au < manifest ; 1984 ; European Journal of Plant Pathology Volume 90 ; 90 >
+    au < manifest ; 1985 ; European Journal of Plant Pathology Volume 91 ; 91 >
+    au < manifest ; 1986 ; European Journal of Plant Pathology Volume 92 ; 92 >
+    au < manifest ; 1987 ; European Journal of Plant Pathology Volume 93 ; 93 >
+    au < manifest ; 1988 ; European Journal of Plant Pathology Volume 94 ; 94 >
+    au < manifest ; 1989 ; European Journal of Plant Pathology Volume 95 ; 95 >
+    au < manifest ; 1990 ; European Journal of Plant Pathology Volume 96 ; 96 >
+    au < manifest ; 1991 ; European Journal of Plant Pathology Volume 97 ; 97 >
+    au < manifest ; 1992 ; European Journal of Plant Pathology Volume 98 ; 98 >
+    au < manifest ; 1993 ; European Journal of Plant Pathology Volume 99 ; 99 >
+    au < manifest ; 1994 ; European Journal of Plant Pathology Volume 100 ; 100 >
+    au < manifest ; 1995 ; European Journal of Plant Pathology Volume 101 ; 101 >
+    au < manifest ; 1996 ; European Journal of Plant Pathology Volume 102 ; 102 >
+    au < manifest ; 1997 ; European Journal of Plant Pathology Volume 103 ; 103 >
+    au < manifest ; 1998 ; European Journal of Plant Pathology Volume 104 ; 104 >
+    au < manifest ; 1999 ; European Journal of Plant Pathology Volume 105 ; 105 >
+    au < manifest ; 2000 ; European Journal of Plant Pathology Volume 106 ; 106 >
+    au < manifest ; 2001 ; European Journal of Plant Pathology Volume 107 ; 107 >
+    au < manifest ; 2002 ; European Journal of Plant Pathology Volume 108 ; 108 >
+    au < manifest ; 2003 ; European Journal of Plant Pathology Volume 109 ; 109 >
+    au < manifest ; 2004 ; European Journal of Plant Pathology Volume 110 ; 110 >
+    au < manifest ; 2005 ; European Journal of Plant Pathology Volume 111 ; 111 >
+    au < manifest ; 2005 ; European Journal of Plant Pathology Volume 112 ; 112 >
+    au < manifest ; 2005 ; European Journal of Plant Pathology Volume 113 ; 113 >
+    au < manifest ; 2006 ; European Journal of Plant Pathology Volume 114 ; 114 >
+    au < manifest ; 2006 ; European Journal of Plant Pathology Volume 115 ; 115 >
+    au < manifest ; 2006 ; European Journal of Plant Pathology Volume 116 ; 116 >
+    au < manifest ; 2007 ; European Journal of Plant Pathology Volume 117 ; 117 >
+    au < manifest ; 2007 ; European Journal of Plant Pathology Volume 118 ; 118 >
+    au < manifest ; 2007 ; European Journal of Plant Pathology Volume 119 ; 119 >
+    au < manifest ; 2008 ; European Journal of Plant Pathology Volume 120 ; 120 >
+    au < manifest ; 2008 ; European Journal of Plant Pathology Volume 121 ; 121 >
+    au < manifest ; 2008 ; European Journal of Plant Pathology Volume 122 ; 122 >
+    au < manifest ; 2009 ; European Journal of Plant Pathology Volume 123 ; 123 >
+    au < manifest ; 2009 ; European Journal of Plant Pathology Volume 124 ; 124 >
+    au < manifest ; 2009 ; European Journal of Plant Pathology Volume 125 ; 125 >
+    au < manifest ; 2010 ; European Journal of Plant Pathology Volume 126 ; 126 >
+    au < manifest ; 2010 ; European Journal of Plant Pathology Volume 127 ; 127 >
+    au < manifest ; 2010 ; European Journal of Plant Pathology Volume 128 ; 128 >
+    au < manifest ; 2011 ; European Journal of Plant Pathology Volume 129 ; 129 >
+    au < manifest ; 2011 ; European Journal of Plant Pathology Volume 130 ; 130 >
+    au < manifest ; 2011 ; European Journal of Plant Pathology Volume 131 ; 131 >
+    au < manifest ; 2012 ; European Journal of Plant Pathology Volume 132 ; 132 >
+    au < manifest ; 2012 ; European Journal of Plant Pathology Volume 133 ; 133 >
 
   }
 
@@ -32738,6 +33561,42 @@
 
     param[journal_issn] = 0930-343X
 
+    au < manifest ; 1971-1973 ; Chirurgia Plastica Volume 1 ; 1 >
+    au < manifest ; 1973-1974 ; Chirurgia Plastica Volume 2 ; 2 >
+    au < manifest ; 1975-1976 ; Chirurgia Plastica Volume 3 ; 3 >
+    au < manifest ; 1977 ; Chirurgia Plastica Volume 4 ; 4 >
+    au < manifest ; 1979-1980 ; Chirurgia Plastica Volume 5 ; 5 >
+    au < manifest ; 1981-1982 ; Chirurgia Plastica Volume 6 ; 6 >
+    au < manifest ; 1982-1984 ; Chirurgia Plastica Volume 7 ; 7 >
+    au < manifest ; 1984-1986 ; Chirurgia Plastica Volume 8 ; 8 >
+    au < manifest ; 1986-1987 ; European Journal of Plastic Surgery Volume 9 ; 9 >
+    au < manifest ; 1987 ; European Journal of Plastic Surgery Volume 10 ; 10 >
+    au < manifest ; 1988 ; European Journal of Plastic Surgery Volume 11 ; 11 >
+    au < manifest ; 1989 ; European Journal of Plastic Surgery Volume 12 ; 12 >
+    au < manifest ; 1990 ; European Journal of Plastic Surgery Volume 13 ; 13 >
+    au < manifest ; 1991 ; European Journal of Plastic Surgery Volume 14 ; 14 >
+    au < manifest ; 1992 ; European Journal of Plastic Surgery Volume 15 ; 15 >
+    au < manifest ; 1993 ; European Journal of Plastic Surgery Volume 16 ; 16 >
+    au < manifest ; 1994 ; European Journal of Plastic Surgery Volume 17 ; 17 >
+    au < manifest ; 1995 ; European Journal of Plastic Surgery Volume 18 ; 18 >
+    au < manifest ; 1996 ; European Journal of Plastic Surgery Volume 19 ; 19 >
+    au < manifest ; 1997 ; European Journal of Plastic Surgery Volume 20 ; 20 >
+    au < manifest ; 1998 ; European Journal of Plastic Surgery Volume 21 ; 21 >
+    au < manifest ; 1999 ; European Journal of Plastic Surgery Volume 22 ; 22 >
+    au < manifest ; 2000 ; European Journal of Plastic Surgery Volume 23 ; 23 >
+    au < manifest ; 2001 ; European Journal of Plastic Surgery Volume 24 ; 24 >
+    au < manifest ; 2002 ; European Journal of Plastic Surgery Volume 25 ; 25 >
+    au < manifest ; 2003 ; European Journal of Plastic Surgery Volume 26 ; 26 >
+    au < manifest ; 2004 ; European Journal of Plastic Surgery Volume 27 ; 27 >
+    au < manifest ; 2005 ; European Journal of Plastic Surgery Volume 28 ; 28 >
+    au < manifest ; 2006 ; European Journal of Plastic Surgery Volume 29 ; 29 >
+    au < manifest ; 2007 ; European Journal of Plastic Surgery Volume 30 ; 30 >
+    au < manifest ; 2008 ; European Journal of Plastic Surgery Volume 31 ; 31 >
+    au < manifest ; 2009 ; European Journal of Plastic Surgery Volume 32 ; 32 >
+    au < manifest ; 2010 ; European Journal of Plastic Surgery Volume 33 ; 33 >
+    au < manifest ; 2011 ; European Journal of Plastic Surgery Volume 34 ; 34 >
+    au < manifest ; 2012 ; European Journal of Plastic Surgery Volume 35 ; 35 >
+
   }
 
   {
@@ -32751,6 +33610,17 @@
 
     param[journal_issn] = 0304-4130
 
+    au < manifest ; 1997 ; European Journal of Political Research Volume 31 ; 31 >
+    au < manifest ; 1997 ; European Journal of Political Research Volume 32 ; 32 >
+    au < manifest ; 1998 ; European Journal of Political Research Volume 33 ; 33 >
+    au < manifest ; 1998 ; European Journal of Political Research Volume 34 ; 34 >
+    au < manifest ; 1999 ; European Journal of Political Research Volume 35 ; 35 >
+    au < manifest ; 1999 ; European Journal of Political Research Volume 36 ; 36 >
+    au < manifest ; 2000 ; European Journal of Political Research Volume 37 ; 37 >
+    au < manifest ; 2000 ; European Journal of Political Research Volume 38 ; 38 >
+    au < manifest ; 2001 ; European Journal of Political Research Volume 39 ; 39 >
+    au < manifest ; 2001 ; European Journal of Political Research Volume 40 ; 40 >
+
   }
 
   {
@@ -32763,6 +33633,36 @@
     >
 
     param[journal_issn] = 0168-6577
+    comment[continued_from] = 0046-2756
+
+    au < manifest ; 1985 ; European Journal of Population/Revue européenne de Démographie Volume 1 ; 1 >
+    au < manifest ; 1986-1987 ; European Journal of Population/Revue européenne de Démographie Volume 2 ; 2 >
+    au < manifest ; 1987-1988 ; European Journal of Population/Revue européenne de Démographie Volume 3 ; 3 >
+    au < manifest ; 1988 ; European Journal of Population/Revue européenne de Démographie Volume 4 ; 4 >
+    au < manifest ; 1989 ; European Journal of Population/Revue européenne de Démographie Volume 5 ; 5 >
+    au < manifest ; 1990 ; European Journal of Population/Revue européenne de Démographie Volume 6 ; 6 >
+    au < manifest ; 1991 ; European Journal of Population/Revue européenne de Démographie Volume 7 ; 7 >
+    au < manifest ; 1992 ; European Journal of Population/Revue européenne de Démographie Volume 8 ; 8 >
+    au < manifest ; 1993 ; European Journal of Population/Revue européenne de Démographie Volume 9 ; 9 >
+    au < manifest ; 1994 ; European Journal of Population/Revue européenne de Démographie Volume 10 ; 10 >
+    au < manifest ; 1995 ; European Journal of Population/Revue européenne de Démographie Volume 11 ; 11 >
+    au < manifest ; 1996 ; European Journal of Population/Revue européenne de Démographie Volume 12 ; 12 >
+    au < manifest ; 1997 ; European Journal of Population/Revue européenne de Démographie Volume 13 ; 13 >
+    au < manifest ; 1998 ; European Journal of Population/Revue européenne de Démographie Volume 14 ; 14 >
+    au < manifest ; 1999 ; European Journal of Population/Revue européenne de Démographie Volume 15 ; 15 >
+    au < manifest ; 2000 ; European Journal of Population/Revue européenne de Démographie Volume 16 ; 16 >
+    au < manifest ; 2001 ; European Journal of Population/Revue européenne de Démographie Volume 17 ; 17 >
+    au < manifest ; 2002 ; European Journal of Population/Revue européenne de Démographie Volume 18 ; 18 >
+    au < manifest ; 2003 ; European Journal of Population/Revue européenne de Démographie Volume 19 ; 19 >
+    au < manifest ; 2004 ; European Journal of Population/Revue européenne de Démographie Volume 20 ; 20 >
+    au < manifest ; 2005 ; European Journal of Population/Revue européenne de Démographie Volume 21 ; 21 >
+    au < manifest ; 2006 ; European Journal of Population/Revue européenne de Démographie Volume 22 ; 22 >
+    au < manifest ; 2007 ; European Journal of Population/Revue européenne de Démographie Volume 23 ; 23 >
+    au < manifest ; 2008 ; European Journal of Population/Revue européenne de Démographie Volume 24 ; 24 >
+    au < manifest ; 2009 ; European Journal of Population/Revue européenne de Démographie Volume 25 ; 25 >
+    au < manifest ; 2010 ; European Journal of Population/Revue européenne de Démographie Volume 26 ; 26 >
+    au < manifest ; 2011 ; European Journal of Population/Revue européenne de Démographie Volume 27 ; 27 >
+    au < manifest ; 2012 ; European Journal of Population/Revue européenne de Démographie Volume 28 ; 28 >
 
   }
 
@@ -32777,16 +33677,79 @@
 
     param[journal_issn] = 0256-2928
 
+    au < manifest ; 1986-1987 ; European Journal of Psychology of Education Volume 1 ; 1 >
+    au < manifest ; 1987 ; European Journal of Psychology of Education Volume 2 ; 2 >
+    au < manifest ; 1988 ; European Journal of Psychology of Education Volume 3 ; 3 >
+    au < manifest ; 1989 ; European Journal of Psychology of Education Volume 4 ; 4 >
+    au < manifest ; 1990 ; European Journal of Psychology of Education Volume 5 ; 5 >
+    au < manifest ; 1991 ; European Journal of Psychology of Education Volume 6 ; 6 >
+    au < manifest ; 1992 ; European Journal of Psychology of Education Volume 7 ; 7 >
+    au < manifest ; 1993 ; European Journal of Psychology of Education Volume 8 ; 8 >
+    au < manifest ; 1994 ; European Journal of Psychology of Education Volume 9 ; 9 >
+    au < manifest ; 1995 ; European Journal of Psychology of Education Volume 10 ; 10 >
+    au < manifest ; 1996 ; European Journal of Psychology of Education Volume 11 ; 11 >
+    au < manifest ; 1997 ; European Journal of Psychology of Education Volume 12 ; 12 >
+    au < manifest ; 1998 ; European Journal of Psychology of Education Volume 13 ; 13 >
+    au < manifest ; 1999 ; European Journal of Psychology of Education Volume 14 ; 14 >
+    au < manifest ; 2000 ; European Journal of Psychology of Education Volume 15 ; 15 >
+    au < manifest ; 2001 ; European Journal of Psychology of Education Volume 16 ; 16 >
+    au < manifest ; 2002 ; European Journal of Psychology of Education Volume 17 ; 17 >
+    au < manifest ; 2003 ; European Journal of Psychology of Education Volume 18 ; 18 >
+    au < manifest ; 2004 ; European Journal of Psychology of Education Volume 19 ; 19 >
+    au < manifest ; 2005 ; European Journal of Psychology of Education Volume 20 ; 20 >
+    au < manifest ; 2006 ; European Journal of Psychology of Education Volume 21 ; 21 >
+    au < manifest ; 2007 ; European Journal of Psychology of Education Volume 22 ; 22 >
+    au < manifest ; 2008 ; European Journal of Psychology of Education Volume 23 ; 23 >
+    au < manifest ; 2009 ; European Journal of Psychology of Education Volume 24 ; 24 >
+    au < manifest ; 2010 ; European Journal of Psychology of Education Volume 25 ; 25 >
+    au < manifest ; 2011 ; European Journal of Psychology of Education Volume 26 ; 26 >
+    au < manifest ; 2012 ; European Journal of Psychology of Education Volume 27 ; 27 >
+
   }
 
   {
 
     title <
       name = European Journal of Trauma  ;
-      issn = 1439-0590
+      issn = 1439-0590 ;
+      eissn = 1615-3146
     >
 
     param[journal_issn] = 1439-0590
+    comment[continued_by] = 1863-9933
+
+    au < manifest ; 1975 ; Unfallchirurgie Volume 1 ; 1 >
+    au < manifest ; 1976 ; Unfallchirurgie Volume 2 ; 2 >
+    au < manifest ; 1977 ; Unfallchirurgie Volume 3 ; 3 >
+    au < manifest ; 1978 ; Unfallchirurgie Volume 4 ; 4 >
+    au < manifest ; 1979 ; Unfallchirurgie Volume 5 ; 5 >
+    au < manifest ; 1980 ; Unfallchirurgie Volume 6 ; 6 >
+    au < manifest ; 1981 ; Unfallchirurgie Volume 7 ; 7 >
+    au < manifest ; 1982 ; Unfallchirurgie Volume 8 ; 8 >
+    au < manifest ; 1983 ; Unfallchirurgie Volume 9 ; 9 >
+    au < manifest ; 1984 ; Unfallchirurgie Volume 10 ; 10 >
+    au < manifest ; 1985 ; Unfallchirurgie Volume 11 ; 11 >
+    au < manifest ; 1986 ; Unfallchirurgie Volume 12 ; 12 >
+    au < manifest ; 1987 ; Unfallchirurgie Volume 13 ; 13 >
+    au < manifest ; 1988 ; Unfallchirurgie Volume 14 ; 14 >
+    au < manifest ; 1989 ; Unfallchirurgie Volume 15 ; 15 >
+    au < manifest ; 1990 ; Unfallchirurgie Volume 16 ; 16 >
+    au < manifest ; 1991 ; Unfallchirurgie Volume 17 ; 17 >
+    au < manifest ; 1992 ; Unfallchirurgie Volume 18 ; 18 >
+    au < manifest ; 1993 ; Unfallchirurgie Volume 19 ; 19 >
+    au < manifest ; 1994 ; Unfallchirurgie Volume 20 ; 20 >
+    au < manifest ; 1995 ; Unfallchirurgie Volume 21 ; 21 >
+    au < manifest ; 1996 ; Unfallchirurgie Volume 22 ; 22 >
+    au < manifest ; 1997 ; Unfallchirurgie Volume 23 ; 23 >
+    au < manifest ; 1998 ; Unfallchirurgie Volume 24 ; 24 >
+    au < manifest ; 1999 ; Unfallchirurgie Volume 25 ; 25 >
+    au < manifest ; 2000 ; European Journal of Trauma Volume 26 ; 26 >
+    au < manifest ; 2001 ; European Journal of Trauma Volume 27 ; 27 >
+    au < manifest ; 2002 ; European Journal of Trauma Volume 28 ; 28 >
+    au < manifest ; 2003 ; European Journal of Trauma Volume 29 ; 29 >
+    au < manifest ; 2004 ; European Journal of Trauma Volume 30 ; 30 >
+    au < manifest ; 2005 ; European Journal of Trauma Volume 31 ; 31 >
+    au < manifest ; 2006 ; European Journal of Trauma Volume 32 ; 32 >
 
   }
 
@@ -32799,7 +33762,15 @@
       issnl = 1863-9933
     >
 
+    comment[continued_from] = 1439-0590
     param[journal_issn] = 1863-9933
+
+    au < manifest ; 2007 ; European Journal of Trauma and Emergency Surgery Volume 33 ; 33 >
+    au < manifest ; 2010 ; European Journal of Trauma and Emergency Surgery Volume 34 ; 34 >
+    au < manifest ; 2009 ; European Journal of Trauma and Emergency Surgery Volume 35 ; 35 >
+    au < manifest ; 2010 ; European Journal of Trauma and Emergency Surgery Volume 36 ; 36 >
+    au < manifest ; 2011 ; European Journal of Trauma and Emergency Surgery Volume 37 ; 37 >
+    au < manifest ; 2012 ; European Journal of Trauma and Emergency Surgery Volume 38 ; 38 >
 
   }
 
@@ -32812,7 +33783,18 @@
       issnl = 1439-0574
     >
 
+    comment[continued_from] = 0044-2887
     param[journal_issn] = 1612-4642
+
+    au < manifest ; 2004 ; European Journal of Wildlife Research Volume 50 ; 50 >
+    au < manifest ; 2005 ; European Journal of Wildlife Research Volume 51 ; 51 >
+    au < manifest ; 2006 ; European Journal of Wildlife Research Volume 52 ; 52 >
+    au < manifest ; 2007 ; European Journal of Wildlife Research Volume 53 ; 53 >
+    au < manifest ; 2008 ; European Journal of Wildlife Research Volume 54 ; 54 >
+    au < manifest ; 2009 ; European Journal of Wildlife Research Volume 55 ; 55 >
+    au < manifest ; 2010 ; European Journal of Wildlife Research Volume 56 ; 56 >
+    au < manifest ; 2011 ; European Journal of Wildlife Research Volume 57 ; 57 >
+    au < manifest ; 2012 ; European Journal of Wildlife Research Volume 58 ; 58 >
 
   }
 
@@ -32827,6 +33809,76 @@
 
     param[journal_issn] = 0018-3768
 
+    au < manifest ; 1937-1938 ; Holz als Roh- und Werkstoff Volume 1 ; 1 >
+    au < manifest ; 1939 ; Holz als Roh- und Werkstoff Volume 2 ; 2 >
+    au < manifest ; 1940 ; Holz als Roh- und Werkstoff Volume 3 ; 3 >
+    au < manifest ; 1941 ; Holz als Roh- und Werkstoff Volume 4 ; 4 >
+    au < manifest ; 1942 ; Holz als Roh- und Werkstoff Volume 5 ; 5 >
+    au < manifest ; 1943 ; Holz als Roh- und Werkstoff Volume 6 ; 6 >
+    au < manifest ; 1944 ; Holz als Roh- und Werkstoff Volume 7 ; 7 >
+    au < manifest ; 1951 ; Holz als Roh- und Werkstoff Volume 9 ; 9 >
+    au < manifest ; 1952 ; Holz als Roh- und Werkstoff Volume 10 ; 10 >
+    au < manifest ; 1953 ; Holz als Roh- und Werkstoff Volume 11 ; 11 >
+    au < manifest ; 1954 ; Holz als Roh- und Werkstoff Volume 12 ; 12 >
+    au < manifest ; 1955 ; Holz als Roh- und Werkstoff Volume 13 ; 13 >
+    au < manifest ; 1956 ; Holz als Roh- und Werkstoff Volume 14 ; 14 >
+    au < manifest ; 1957 ; Holz als Roh- und Werkstoff Volume 15 ; 15 >
+    au < manifest ; 1958 ; Holz als Roh- und Werkstoff Volume 16 ; 16 >
+    au < manifest ; 1959 ; Holz als Roh- und Werkstoff Volume 17 ; 17 >
+    au < manifest ; 1960 ; Holz als Roh- und Werkstoff Volume 18 ; 18 >
+    au < manifest ; 1961 ; Holz als Roh- und Werkstoff Volume 19 ; 19 >
+    au < manifest ; 1962 ; Holz als Roh- und Werkstoff Volume 20 ; 20 >
+    au < manifest ; 1963 ; Holz als Roh- und Werkstoff Volume 21 ; 21 >
+    au < manifest ; 1964 ; Holz als Roh- und Werkstoff Volume 22 ; 22 >
+    au < manifest ; 1965 ; Holz als Roh- und Werkstoff Volume 23 ; 23 >
+    au < manifest ; 1966 ; Holz als Roh- und Werkstoff Volume 24 ; 24 >
+    au < manifest ; 1967 ; Holz als Roh- und Werkstoff Volume 25 ; 25 >
+    au < manifest ; 1968 ; Holz als Roh- und Werkstoff Volume 26 ; 26 >
+    au < manifest ; 1969 ; Holz als Roh- und Werkstoff Volume 27 ; 27 >
+    au < manifest ; 1970 ; Holz als Roh- und Werkstoff Volume 28 ; 28 >
+    au < manifest ; 1971 ; Holz als Roh- und Werkstoff Volume 29 ; 29 >
+    au < manifest ; 1972 ; Holz als Roh- und Werkstoff Volume 30 ; 30 >
+    au < manifest ; 1973 ; Holz als Roh- und Werkstoff Volume 31 ; 31 >
+    au < manifest ; 1974 ; Holz als Roh- und Werkstoff Volume 32 ; 32 >
+    au < manifest ; 1975 ; Holz als Roh- und Werkstoff Volume 33 ; 33 >
+    au < manifest ; 1976 ; Holz als Roh- und Werkstoff Volume 34 ; 34 >
+    au < manifest ; 1977 ; Holz als Roh- und Werkstoff Volume 35 ; 35 >
+    au < manifest ; 1978 ; Holz als Roh- und Werkstoff Volume 36 ; 36 >
+    au < manifest ; 1979 ; Holz als Roh- und Werkstoff Volume 37 ; 37 >
+    au < manifest ; 1980 ; Holz als Roh- und Werkstoff Volume 38 ; 38 >
+    au < manifest ; 1981 ; Holz als Roh- und Werkstoff Volume 39 ; 39 >
+    au < manifest ; 1982 ; Holz als Roh- und Werkstoff Volume 40 ; 40 >
+    au < manifest ; 1983 ; Holz als Roh- und Werkstoff Volume 41 ; 41 >
+    au < manifest ; 1984 ; Holz als Roh- und Werkstoff Volume 42 ; 42 >
+    au < manifest ; 1985 ; Holz als Roh- und Werkstoff Volume 43 ; 43 >
+    au < manifest ; 1986 ; Holz als Roh- und Werkstoff Volume 44 ; 44 >
+    au < manifest ; 1987 ; Holz als Roh- und Werkstoff Volume 45 ; 45 >
+    au < manifest ; 1988 ; Holz als Roh- und Werkstoff Volume 46 ; 46 >
+    au < manifest ; 1989 ; Holz als Roh- und Werkstoff Volume 47 ; 47 >
+    au < manifest ; 1990 ; Holz als Roh- und Werkstoff Volume 48 ; 48 >
+    au < manifest ; 1991 ; Holz als Roh- und Werkstoff Volume 49 ; 49 >
+    au < manifest ; 1992 ; Holz als Roh- und Werkstoff Volume 50 ; 50 >
+    au < manifest ; 1993 ; Holz als Roh- und Werkstoff Volume 51 ; 51 >
+    au < manifest ; 1994 ; Holz als Roh- und Werkstoff Volume 52 ; 52 >
+    au < manifest ; 1995 ; Holz als Roh- und Werkstoff Volume 53 ; 53 >
+    au < manifest ; 1996 ; Holz als Roh- und Werkstoff Volume 54 ; 54 >
+    au < manifest ; 1997 ; Holz als Roh- und Werkstoff Volume 55 ; 55 >
+    au < manifest ; 1998 ; Holz als Roh- und Werkstoff Volume 56 ; 56 >
+    au < manifest ; 1999 ; Holz als Roh- und Werkstoff Volume 57 ; 57 >
+    au < manifest ; 2000 ; Holz als Roh- und Werkstoff Volume 58 ; 58 >
+    au < manifest ; 2001 ; Holz als Roh- und Werkstoff Volume 59 ; 59 >
+    au < manifest ; 2002 ; Holz als Roh- und Werkstoff Volume 60 ; 60 >
+    au < manifest ; 2003 ; Holz als Roh- und Werkstoff Volume 61 ; 61 >
+    au < manifest ; 2004 ; Holz als Roh- und Werkstoff Volume 62 ; 62 >
+    au < manifest ; 2005 ; Holz als Roh- und Werkstoff Volume 63 ; 63 >
+    au < manifest ; 2006 ; Holz als Roh- und Werkstoff Volume 64 ; 64 >
+    au < manifest ; 2007 ; Holz als Roh- und Werkstoff Volume 65 ; 65 >
+    au < manifest ; 2008 ; Holz als Roh- und Werkstoff Volume 66 ; 66 >
+    au < manifest ; 2009 ; European Journal of Wood and Wood Products Volume 67 ; 67 >
+    au < manifest ; 2010 ; European Journal of Wood and Wood Products Volume 68 ; 68 >
+    au < manifest ; 2011 ; European Journal of Wood and Wood Products Volume 69 ; 69 >
+    au < manifest ; 2012 ; European Journal of Wood and Wood Products Volume 70 ; 70 >
+
   }
 
   {
@@ -32839,6 +33891,25 @@
     >
 
     param[journal_issn] = 0928-1371
+
+    au < manifest ; 1993 ; European Journal on Criminal Policy and Research Volume 1 ; 1 >
+    au < manifest ; 1994 ; European Journal on Criminal Policy and Research Volume 2 ; 2 >
+    au < manifest ; 1995 ; European Journal on Criminal Policy and Research Volume 3 ; 3 >
+    au < manifest ; 1996 ; European Journal on Criminal Policy and Research Volume 4 ; 4 >
+    au < manifest ; 1997 ; European Journal on Criminal Policy and Research Volume 5 ; 5 >
+    au < manifest ; 1998 ; European Journal on Criminal Policy and Research Volume 6 ; 6 >
+    au < manifest ; 1999 ; European Journal on Criminal Policy and Research Volume 7 ; 7 >
+    au < manifest ; 2000 ; European Journal on Criminal Policy and Research Volume 8 ; 8 >
+    au < manifest ; 2001 ; European Journal on Criminal Policy and Research Volume 9 ; 9 >
+    au < manifest ; 2004 ; European Journal on Criminal Policy and Research Volume 10 ; 10 >
+    au < manifest ; 2005 ; European Journal on Criminal Policy and Research Volume 11 ; 11 >
+    au < manifest ; 2006 ; European Journal on Criminal Policy and Research Volume 12 ; 12 >
+    au < manifest ; 2007 ; European Journal on Criminal Policy and Research Volume 13 ; 13 >
+    au < manifest ; 2008 ; European Journal on Criminal Policy and Research Volume 14 ; 14 >
+    au < manifest ; 2009 ; European Journal on Criminal Policy and Research Volume 15 ; 15 >
+    au < manifest ; 2010 ; European Journal on Criminal Policy and Research Volume 16 ; 16 >
+    au < manifest ; 2011 ; European Journal on Criminal Policy and Research Volume 17 ; 17 >
+    au < manifest ; 2012 ; European Journal on Criminal Policy and Research Volume 18 ; 18 >
 
   }
 
@@ -32853,6 +33924,10 @@
 
     param[journal_issn] = 1867-4569
 
+    au < manifest ; 2010 ; European Orthopaedics and Traumatology Volume 1 ; 1 >
+    au < manifest ; 2011 ; European Orthopaedics and Traumatology Volume 2 ; 2 >
+    au < manifest ; 2012 ; European Orthopaedics and Traumatology Volume 3 ; 3 >
+
   }
 
   {
@@ -32866,6 +33941,73 @@
 
     param[journal_issn] = 1951-6355
 
+    au < manifest ; 2007 ; The European Physical Journal - Special Topics Volume 140 ; 140 >
+    au < manifest ; 2007 ; The European Physical Journal - Special Topics Volume 141 ; 141 >
+    au < manifest ; 2007 ; The European Physical Journal - Special Topics Volume 142 ; 142 >
+    au < manifest ; 2007 ; The European Physical Journal - Special Topics Volume 143 ; 143 >
+    au < manifest ; 2007 ; The European Physical Journal - Special Topics Volume 144 ; 144 >
+    au < manifest ; 2007 ; The European Physical Journal - Special Topics Volume 145 ; 145 >
+    au < manifest ; 2007 ; The European Physical Journal - Special Topics Volume 146 ; 146 >
+    au < manifest ; 2007 ; The European Physical Journal - Special Topics Volume 147 ; 147 >
+    au < manifest ; 2007 ; The European Physical Journal - Special Topics Volume 148 ; 148 >
+    au < manifest ; 2007 ; The European Physical Journal - Special Topics Volume 149 ; 149 >
+    au < manifest ; 2007 ; The European Physical Journal - Special Topics Volume 150 ; 150 >
+    au < manifest ; 2007 ; The European Physical Journal - Special Topics Volume 151 ; 151 >
+    au < manifest ; 2007 ; The European Physical Journal - Special Topics Volume 152 ; 152 >
+    au < manifest ; 2008 ; The European Physical Journal - Special Topics Volume 153 ; 153 >
+    au < manifest ; 2008 ; The European Physical Journal - Special Topics Volume 154 ; 154 >
+    au < manifest ; 2008 ; The European Physical Journal - Special Topics Volume 155 ; 155 >
+    au < manifest ; 2008 ; The European Physical Journal - Special Topics Volume 156 ; 156 >
+    au < manifest ; 2008 ; The European Physical Journal - Special Topics Volume 157 ; 157 >
+    au < manifest ; 2008 ; The European Physical Journal - Special Topics Volume 158 ; 158 >
+    au < manifest ; 2008 ; The European Physical Journal - Special Topics Volume 159 ; 159 >
+    au < manifest ; 2008 ; The European Physical Journal - Special Topics Volume 160 ; 160 >
+    au < manifest ; 2008 ; The European Physical Journal - Special Topics Volume 161 ; 161 >
+    au < manifest ; 2008 ; The European Physical Journal - Special Topics Volume 162 ; 162 >
+    au < manifest ; 2008 ; The European Physical Journal - Special Topics Volume 163 ; 163 >
+    au < manifest ; 2008 ; The European Physical Journal - Special Topics Volume 164 ; 164 >
+    au < manifest ; 2008 ; The European Physical Journal - Special Topics Volume 165 ; 165 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 166 ; 166 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 167 ; 167 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 168 ; 168 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 169 ; 169 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 170 ; 170 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 171 ; 171 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 172 ; 172 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 173 ; 173 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 174 ; 174 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 175 ; 175 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 176 ; 176 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 177 ; 177 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 178 ; 178 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 179 ; 179 >
+    au < manifest ; 2009 ; The European Physical Journal - Special Topics Volume 180 ; 180 >
+    au < manifest ; 2010 ; The European Physical Journal - Special Topics Volume 181 ; 181 >
+    au < manifest ; 2010 ; The European Physical Journal - Special Topics Volume 182 ; 182 >
+    au < manifest ; 2010 ; The European Physical Journal - Special Topics Volume 183 ; 183 >
+    au < manifest ; 2010 ; The European Physical Journal - Special Topics Volume 184 ; 184 >
+    au < manifest ; 2010 ; The European Physical Journal - Special Topics Volume 185 ; 185 >
+    au < manifest ; 2010 ; The European Physical Journal - Special Topics Volume 186 ; 186 >
+    au < manifest ; 2010 ; The European Physical Journal - Special Topics Volume 187 ; 187 >
+    au < manifest ; 2010 ; The European Physical Journal - Special Topics Volume 188 ; 188 >
+    au < manifest ; 2010 ; The European Physical Journal - Special Topics Volume 189 ; 189 >
+    au < manifest ; 2010 ; The European Physical Journal - Special Topics Volume 190 ; 190 >
+    au < manifest ; 2010 ; The European Physical Journal - Special Topics Volume 191 ; 191 >
+    au < manifest ; 2011 ; The European Physical Journal - Special Topics Volume 192 ; 192 >
+    au < manifest ; 2011 ; The European Physical Journal - Special Topics Volume 193 ; 193 >
+    au < manifest ; 2011 ; The European Physical Journal - Special Topics Volume 194 ; 194 >
+    au < manifest ; 2011 ; The European Physical Journal - Special Topics Volume 195 ; 195 >
+    au < manifest ; 2011 ; The European Physical Journal - Special Topics Volume 196 ; 196 >
+    au < manifest ; 2011 ; The European Physical Journal - Special Topics Volume 197 ; 197 >
+    au < manifest ; 2011 ; The European Physical Journal - Special Topics Volume 198 ; 198 >
+    au < manifest ; 2011 ; The European Physical Journal - Special Topics Volume 199 ; 199 >
+    au < manifest ; 2011 ; The European Physical Journal - Special Topics Volume 200 ; 200 >
+    au < manifest ; 2012 ; The European Physical Journal - Special Topics Volume 201 ; 201 >
+    au < manifest ; 2012 ; The European Physical Journal - Special Topics Volume 202 ; 202 >
+    au < manifest ; 2012 ; The European Physical Journal - Special Topics Volume 203 ; 203 >
+    au < manifest ; 2012 ; The European Physical Journal - Special Topics Volume 204 ; 204 >
+    au < manifest ; 2012 ; The European Physical Journal - Special Topics Volume 205 ; 205 >
+
   }
 
   {
@@ -32878,6 +34020,56 @@
     >
 
     param[journal_issn] = 1434-6001
+    comment[continued_from] = 0939-7922
+
+    au < manifest ; 1998 ; The European Physical Journal A - Hadrons and Nuclei Volume 1 ; 1 >
+    au < manifest ; 1998 ; The European Physical Journal A - Hadrons and Nuclei Volume 2 ; 2 >
+    au < manifest ; 1998 ; The European Physical Journal A - Hadrons and Nuclei Volume 3 ; 3 >
+    au < manifest ; 1999 ; The European Physical Journal A - Hadrons and Nuclei Volume 4 ; 4 >
+    au < manifest ; 1999 ; The European Physical Journal A - Hadrons and Nuclei Volume 5 ; 5 >
+    au < manifest ; 1999 ; The European Physical Journal A - Hadrons and Nuclei Volume 6 ; 6 >
+    au < manifest ; 2000 ; The European Physical Journal A - Hadrons and Nuclei Volume 7 ; 7 >
+    au < manifest ; 2000 ; The European Physical Journal A - Hadrons and Nuclei Volume 8 ; 8 >
+    au < manifest ; 2000 ; The European Physical Journal A - Hadrons and Nuclei Volume 9 ; 9 >
+    au < manifest ; 2001 ; The European Physical Journal A - Hadrons and Nuclei Volume 10 ; 10 >
+    au < manifest ; 2001 ; The European Physical Journal A - Hadrons and Nuclei Volume 11 ; 11 >
+    au < manifest ; 2001 ; The European Physical Journal A - Hadrons and Nuclei Volume 12 ; 12 >
+    au < manifest ; 2002 ; The European Physical Journal A - Hadrons and Nuclei Volume 13 ; 13 >
+    au < manifest ; 2002 ; The European Physical Journal A - Hadrons and Nuclei Volume 14 ; 14 >
+    au < manifest ; 2002 ; The European Physical Journal A - Hadrons and Nuclei Volume 15 ; 15 >
+    au < manifest ; 2003 ; The European Physical Journal A - Hadrons and Nuclei Volume 16 ; 16 >
+    au < manifest ; 2003 ; The European Physical Journal A - Hadrons and Nuclei Volume 17 ; 17 >
+    au < manifest ; 2004 ; The European Physical Journal A - Hadrons and Nuclei Volume 18 ; 18 >
+    au < manifest ; 2004 ; The European Physical Journal A - Hadrons and Nuclei Volume 19 ; 19 >
+    au < manifest ; 2003 ; The European Physical Journal A - Hadrons and Nuclei Volume 20 ; 20 >
+    au < manifest ; 2004 ; The European Physical Journal A - Hadrons and Nuclei Volume 21 ; 21 >
+    au < manifest ; 2004 ; The European Physical Journal A - Hadrons and Nuclei Volume 22 ; 22 >
+    au < manifest ; 2005 ; The European Physical Journal A - Hadrons and Nuclei Volume 23 ; 23 >
+    au < manifest ; 2005 ; The European Physical Journal A - Hadrons and Nuclei Volume 24 ; 24 >
+    au < manifest ; 2005 ; The European Physical Journal A - Hadrons and Nuclei Volume 25 ; 25 >
+    au < manifest ; 2005 ; The European Physical Journal A - Hadrons and Nuclei Volume 26 ; 26 >
+    au < manifest ; 2006 ; The European Physical Journal A - Hadrons and Nuclei Volume 27 ; 27 >
+    au < manifest ; 2006 ; The European Physical Journal A - Hadrons and Nuclei Volume 28 ; 28 >
+    au < manifest ; 2006 ; The European Physical Journal A - Hadrons and Nuclei Volume 29 ; 29 >
+    au < manifest ; 2006 ; The European Physical Journal A - Hadrons and Nuclei Volume 30 ; 30 >
+    au < manifest ; 2007 ; The European Physical Journal A - Hadrons and Nuclei Volume 31 ; 31 >
+    au < manifest ; 2007 ; The European Physical Journal A - Hadrons and Nuclei Volume 32 ; 32 >
+    au < manifest ; 2007 ; The European Physical Journal A - Hadrons and Nuclei Volume 33 ; 33 >
+    au < manifest ; 2007 ; The European Physical Journal A - Hadrons and Nuclei Volume 34 ; 34 >
+    au < manifest ; 2008 ; The European Physical Journal A - Hadrons and Nuclei Volume 35 ; 35 >
+    au < manifest ; 2008 ; The European Physical Journal A - Hadrons and Nuclei Volume 36 ; 36 >
+    au < manifest ; 2008 ; The European Physical Journal A - Hadrons and Nuclei Volume 37 ; 37 >
+    au < manifest ; 2008 ; The European Physical Journal A - Hadrons and Nuclei Volume 38 ; 38 >
+    au < manifest ; 2009 ; The European Physical Journal A - Hadrons and Nuclei Volume 39 ; 39 >
+    au < manifest ; 2009 ; The European Physical Journal A - Hadrons and Nuclei Volume 40 ; 40 >
+    au < manifest ; 2009 ; The European Physical Journal A - Hadrons and Nuclei Volume 41 ; 41 >
+    au < manifest ; 2009 ; The European Physical Journal A - Hadrons and Nuclei Volume 42 ; 42 >
+    au < manifest ; 2010 ; The European Physical Journal A - Hadrons and Nuclei Volume 43 ; 43 >
+    au < manifest ; 2010 ; The European Physical Journal A - Hadrons and Nuclei Volume 44 ; 44 >
+    au < manifest ; 2010 ; The European Physical Journal A - Hadrons and Nuclei Volume 45 ; 45 >
+    au < manifest ; 2010 ; The European Physical Journal A - Hadrons and Nuclei Volume 46 ; 46 >
+    au < manifest ; 2011 ; The European Physical Journal A - Hadrons and Nuclei Volume 47 ; 47 >
+    au < manifest ; 2012 ; The European Physical Journal A - Hadrons and Nuclei Volume 48 ; 48 >
 
   }
 
@@ -32891,6 +34083,92 @@
     >
 
     param[journal_issn] = 1434-6028
+    comment[continued_from] = 0722-3277
+
+    au < manifest ; 1998 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 1 ; 1 >
+    au < manifest ; 1998 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 2 ; 2 >
+    au < manifest ; 1998 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 3 ; 3 >
+    au < manifest ; 1998 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 4 ; 4 >
+    au < manifest ; 1998 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 5 ; 5 >
+    au < manifest ; 1998 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 6 ; 6 >
+    au < manifest ; 1999 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 7 ; 7 >
+    au < manifest ; 1999 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 8 ; 8 >
+    au < manifest ; 1999 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 10 ; 10 >
+    au < manifest ; 1999 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 11 ; 11 >
+    au < manifest ; 1999 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 12 ; 12 >
+    au < manifest ; 2000 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 13 ; 13 >
+    au < manifest ; 2000 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 14 ; 14 >
+    au < manifest ; 2000 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 15 ; 15 >
+    au < manifest ; 2000 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 16 ; 16 >
+    au < manifest ; 2000 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 17 ; 17 >
+    au < manifest ; 2000 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 18 ; 18 >
+    au < manifest ; 2001 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 19 ; 19 >
+    au < manifest ; 2001 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 20 ; 20 >
+    au < manifest ; 2001 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 21 ; 21 >
+    au < manifest ; 2001 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 22 ; 22 >
+    au < manifest ; 2001 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 23 ; 23 >
+    au < manifest ; 2001 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 24 ; 24 >
+    au < manifest ; 2002 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 25 ; 25 >
+    au < manifest ; 2002 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 26 ; 26 >
+    au < manifest ; 2002 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 27 ; 27 >
+    au < manifest ; 2002 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 28 ; 28 >
+    au < manifest ; 2002 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 29 ; 29 >
+    au < manifest ; 2002 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 30 ; 30 >
+    au < manifest ; 2003 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 31 ; 31 >
+    au < manifest ; 2003 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 32 ; 32 >
+    au < manifest ; 2003 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 33 ; 33 >
+    au < manifest ; 2003 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 34 ; 34 >
+    au < manifest ; 2003 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 35 ; 35 >
+    au < manifest ; 2003 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 36 ; 36 >
+    au < manifest ; 2003 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 37 ; 37 >
+    au < manifest ; 2004 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 38 ; 38 >
+    au < manifest ; 2004 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 39 ; 39 >
+    au < manifest ; 2004 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 40 ; 40 >
+    au < manifest ; 2004 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 41 ; 41 >
+    au < manifest ; 2004 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 42 ; 42 >
+    au < manifest ; 2005 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 43 ; 43 >
+    au < manifest ; 2005 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 44 ; 44 >
+    au < manifest ; 2005 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 45 ; 45 >
+    au < manifest ; 2005 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 46 ; 46 >
+    au < manifest ; 2005 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 47 ; 47 >
+    au < manifest ; 2005 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 48 ; 48 >
+    au < manifest ; 2006 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 49 ; 49 >
+    au < manifest ; 2006 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 50 ; 50 >
+    au < manifest ; 2006 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 51 ; 51 >
+    au < manifest ; 2006 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 52 ; 52 >
+    au < manifest ; 2006 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 53 ; 53 >
+    au < manifest ; 2006 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 54 ; 54 >
+    au < manifest ; 2007 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 55 ; 55 >
+    au < manifest ; 2007 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 56 ; 56 >
+    au < manifest ; 2007 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 57 ; 57 >
+    au < manifest ; 2007 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 58 ; 58 >
+    au < manifest ; 2007 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 59 ; 59 >
+    au < manifest ; 2007 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 60 ; 60 >
+    au < manifest ; 2008 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 61 ; 61 >
+    au < manifest ; 2008 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 62 ; 62 >
+    au < manifest ; 2008 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 63 ; 63 >
+    au < manifest ; 2008 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 64 ; 64 >
+    au < manifest ; 2008 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 65 ; 65 >
+    au < manifest ; 2008 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 66 ; 66 >
+    au < manifest ; 2009 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 67 ; 67 >
+    au < manifest ; 2009 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 68 ; 68 >
+    au < manifest ; 2009 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 69 ; 69 >
+    au < manifest ; 2009 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 70 ; 70 >
+    au < manifest ; 2009 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 71 ; 71 >
+    au < manifest ; 2009 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 72 ; 72 >
+    au < manifest ; 2010 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 73 ; 73 >
+    au < manifest ; 2010 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 74 ; 74 >
+    au < manifest ; 2010 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 75 ; 75 >
+    au < manifest ; 2010 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 76 ; 76 >
+    au < manifest ; 2010 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 77 ; 77 >
+    au < manifest ; 2010 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 78 ; 78 >
+    au < manifest ; 2011 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 79 ; 79 >
+    au < manifest ; 2011 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 80 ; 80 >
+    au < manifest ; 2011 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 81 ; 81 >
+    au < manifest ; 2011 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 82 ; 82 >
+    au < manifest ; 2011 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 83 ; 83 >
+    au < manifest ; 2011 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 84 ; 84 >
+    au < manifest ; 2012 ; The European Physical Journal B - Condensed Matter and Complex Systems Volume 85 ; 85 >
 
   }
 
@@ -32991,6 +34269,74 @@
     >
 
     param[journal_issn] = 1434-6060
+    comment[continued_from] = 0178-7683
+
+    au < manifest ; 1998 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 1 ; 1 >
+    au < manifest ; 1998 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 2 ; 2 >
+    au < manifest ; 1998 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 3 ; 3 >
+    au < manifest ; 1998 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 4 ; 4 >
+    au < manifest ; 1999 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 5 ; 5 >
+    au < manifest ; 1999 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 6 ; 6 >
+    au < manifest ; 1999 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 7 ; 7 >
+    au < manifest ; 2000 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 8 ; 8 >
+    au < manifest ; 1999 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 9 ; 9 >
+    au < manifest ; 2000 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 10 ; 10 >
+    au < manifest ; 2000 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 11 ; 11 >
+    au < manifest ; 2000 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 12 ; 12 >
+    au < manifest ; 2001 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 13 ; 13 >
+    au < manifest ; 2001 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 14 ; 14 >
+    au < manifest ; 2001 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 15 ; 15 >
+    au < manifest ; 2001 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 16 ; 16 >
+    au < manifest ; 2001 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 17 ; 17 >
+    au < manifest ; 2002 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 18 ; 18 >
+    au < manifest ; 2002 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 19 ; 19 >
+    au < manifest ; 2002 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 20 ; 20 >
+    au < manifest ; 2002 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 21 ; 21 >
+    au < manifest ; 2003 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 22 ; 22 >
+    au < manifest ; 2003 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 23 ; 23 >
+    au < manifest ; 2003 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 24 ; 24 >
+    au < manifest ; 2003 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 25 ; 25 >
+    au < manifest ; 2003 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 26 ; 26 >
+    au < manifest ; 2003 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 27 ; 27 >
+    au < manifest ; 2004 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 28 ; 28 >
+    au < manifest ; 2004 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 29 ; 29 >
+    au < manifest ; 2004 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 30 ; 30 >
+    au < manifest ; 2004 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 31 ; 31 >
+    au < manifest ; 2005 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 32 ; 32 >
+    au < manifest ; 2005 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 33 ; 33 >
+    au < manifest ; 2005 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 34 ; 34 >
+    au < manifest ; 2005 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 35 ; 35 >
+    au < manifest ; 2005 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 36 ; 36 >
+    au < manifest ; 2006 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 37 ; 37 >
+    au < manifest ; 2006 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 38 ; 38 >
+    au < manifest ; 2006 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 39 ; 39 >
+    au < manifest ; 2006 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 40 ; 40 >
+    au < manifest ; 2007 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 41 ; 41 >
+    au < manifest ; 2007 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 42 ; 42 >
+    au < manifest ; 2007 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 43 ; 43 >
+    au < manifest ; 2007 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 44 ; 44 >
+    au < manifest ; 2007 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 45 ; 45 >
+    au < manifest ; 2008 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 46 ; 46 >
+    au < manifest ; 2008 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 47 ; 47 >
+    au < manifest ; 2008 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 48 ; 48 >
+    au < manifest ; 2008 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 49 ; 49 >
+    au < manifest ; 2008 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 50 ; 50 >
+    au < manifest ; 2009 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 51 ; 51 >
+    au < manifest ; 2009 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 52 ; 52 >
+    au < manifest ; 2009 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 53 ; 53 >
+    au < manifest ; 2009 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 54 ; 54 >
+    au < manifest ; 2009 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 55 ; 55 >
+    au < manifest ; 2010 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 56 ; 56 >
+    au < manifest ; 2010 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 57 ; 57 >
+    au < manifest ; 2010 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 58 ; 58 >
+    au < manifest ; 2010 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 59 ; 59 >
+    au < manifest ; 2010 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 60 ; 60 >
+    au < manifest ; 2011 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 61 ; 61 >
+    au < manifest ; 2011 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 62 ; 62 >
+    au < manifest ; 2011 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 63 ; 63 >
+    au < manifest ; 2011 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 64 ; 64 >
+    au < manifest ; 2011 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 65 ; 65 >
+    au < manifest ; 2012 ; The European Physical Journal D - Atomic, Molecular, Optical and Plasma Physics Volume 66 ; 66 >
 
   }
 
@@ -33004,6 +34350,42 @@
     >
 
     param[journal_issn] = 1292-8941
+
+    au < manifest ; 2000 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 1 ; 1 >
+    au < manifest ; 2000 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 2 ; 2 >
+    au < manifest ; 2000 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 3 ; 3 >
+    au < manifest ; 2001 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 4 ; 4 >
+    au < manifest ; 2001 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 5 ; 5 >
+    au < manifest ; 2001 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 6 ; 6 >
+    au < manifest ; 2002 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 7 ; 7 >
+    au < manifest ; 2002 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 8 ; 8 >
+    au < manifest ; 2002 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 9 ; 9 >
+    au < manifest ; 2003 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 10 ; 10 >
+    au < manifest ; 2003 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 11 ; 11 >
+    au < manifest ; 2003 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 12 ; 12 >
+    au < manifest ; 2004 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 13 ; 13 >
+    au < manifest ; 2004 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 14 ; 14 >
+    au < manifest ; 2004 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 15 ; 15 >
+    au < manifest ; 2005 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 16 ; 16 >
+    au < manifest ; 2005 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 17 ; 17 >
+    au < manifest ; 2005 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 18 ; 18 >
+    au < manifest ; 2006 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 19 ; 19 >
+    au < manifest ; 2006 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 20 ; 20 >
+    au < manifest ; 2006 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 21 ; 21 >
+    au < manifest ; 2007 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 22 ; 22 >
+    au < manifest ; 2007 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 23 ; 23 >
+    au < manifest ; 2007 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 24 ; 24 >
+    au < manifest ; 2008 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 25 ; 25 >
+    au < manifest ; 2008 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 26 ; 26 >
+    au < manifest ; 2008 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 27 ; 27 >
+    au < manifest ; 2009 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 28 ; 28 >
+    au < manifest ; 2009 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 29 ; 29 >
+    au < manifest ; 2009 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 30 ; 30 >
+    au < manifest ; 2010 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 31 ; 31 >
+    au < manifest ; 2010 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 32 ; 32 >
+    au < manifest ; 2010 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 33 ; 33 >
+    au < manifest ; 2011 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 34 ; 34 >
+    au < manifest ; 2012 ; The European Physical Journal E: Soft Matter and Biological Physics Volume 35 ; 35 >
 
   }
 
@@ -33053,6 +34435,12 @@
 
     param[journal_issn] = 1613-3749
 
+    au < manifest ; 2004 ; European Radiology Supplements Volume 14 ; 14 >
+    au < manifest ; 2005 ; European Radiology Supplements Volume 15 ; 15 >
+    au < manifest ; 2006 ; European Radiology Supplements Volume 16 ; 16 >
+    au < manifest ; 2007 ; European Radiology Supplements Volume 17 ; 17 >
+    au < manifest ; 2008 ; European Radiology Supplements Volume 18 ; 18 >
+
   }
 
   {
@@ -33064,6 +34452,13 @@
     >
 
     param[journal_issn] = 1813-7253
+
+    au < manifest ; 2006 ; European Review of Aging and Physical Activity Volume 3 ; 3 >
+    au < manifest ; 2007 ; European Review of Aging and Physical Activity Volume 4 ; 4 >
+    au < manifest ; 2008 ; European Review of Aging and Physical Activity Volume 5 ; 5 >
+    au < manifest ; 2009 ; European Review of Aging and Physical Activity Volume 6 ; 6 >
+    au < manifest ; 2010 ; European Review of Aging and Physical Activity Volume 7 ; 7 >
+    au < manifest ; 2011 ; European Review of Aging and Physical Activity Volume 8 ; 8 >
 
   }
 
@@ -33078,6 +34473,28 @@
 
     param[journal_issn] = 0940-6719
 
+    au < manifest ; 1992-1993 ; European Spine Journal Volume 1 ; 1 >
+    au < manifest ; 1993 ; European Spine Journal Volume 2 ; 2 >
+    au < manifest ; 1994 ; European Spine Journal Volume 3 ; 3 >
+    au < manifest ; 1995 ; European Spine Journal Volume 4 ; 4 >
+    au < manifest ; 1996 ; European Spine Journal Volume 5 ; 5 >
+    au < manifest ; 1997 ; European Spine Journal Volume 6 ; 6 >
+    au < manifest ; 1998 ; European Spine Journal Volume 7 ; 7 >
+    au < manifest ; 1999 ; European Spine Journal Volume 8 ; 8 >
+    au < manifest ; 2000 ; European Spine Journal Volume 9 ; 9 >
+    au < manifest ; 2001 ; European Spine Journal Volume 10 ; 10 >
+    au < manifest ; 2002 ; European Spine Journal Volume 11 ; 11 >
+    au < manifest ; 2003 ; European Spine Journal Volume 12 ; 12 >
+    au < manifest ; 2004 ; European Spine Journal Volume 13 ; 13 >
+    au < manifest ; 2005 ; European Spine Journal Volume 14 ; 14 >
+    au < manifest ; 2006 ; European Spine Journal Volume 15 ; 15 >
+    au < manifest ; 2007 ; European Spine Journal Volume 16 ; 16 >
+    au < manifest ; 2008 ; European Spine Journal Volume 17 ; 17 >
+    au < manifest ; 2009 ; European Spine Journal Volume 18 ; 18 >
+    au < manifest ; 2010 ; European Spine Journal Volume 19 ; 19 >
+    au < manifest ; 2011 ; European Spine Journal Volume 20 ; 20 >
+    au < manifest ; 2012 ; European Spine Journal Volume 21 ; 21 >
+
   }
 
   {
@@ -33090,6 +34507,51 @@
     >
 
     param[journal_issn] = 1682-8631
+
+    au < manifest ; 1969 ; Acta Chirurgica Austriaca Volume 1 ; 1 >
+    au < manifest ; 1989 ; Acta Chirurgica Austriaca Volume 2 ; 2 >
+    au < manifest ; 1971 ; Acta Chirurgica Austriaca Volume 3 ; 3 >
+    au < manifest ; 1972 ; Acta Chirurgica Austriaca Volume 4 ; 4 >
+    au < manifest ; 1973 ; Acta Chirurgica Austriaca Volume 5 ; 5 >
+    au < manifest ; 1974 ; Acta Chirurgica Austriaca Volume 6 ; 6 >
+    au < manifest ; 1975 ; Acta Chirurgica Austriaca Volume 7 ; 7 >
+    au < manifest ; 1976 ; Acta Chirurgica Austriaca Volume 8 ; 8 >
+    au < manifest ; 1977 ; Acta Chirurgica Austriaca Volume 9 ; 9 >
+    au < manifest ; 1978 ; Acta Chirurgica Austriaca Volume 10 ; 10 >
+    au < manifest ; 1979 ; Acta Chirurgica Austriaca Volume 11 ; 11 >
+    au < manifest ; 1980 ; Acta Chirurgica Austriaca Volume 12 ; 12 >
+    au < manifest ; 1981 ; Acta Chirurgica Austriaca Volume 13 ; 13 >
+    au < manifest ; 1982 ; Acta Chirurgica Austriaca Volume 14 ; 14 >
+    au < manifest ; 1983 ; Acta Chirurgica Austriaca Volume 15 ; 15 >
+    au < manifest ; 1984 ; Acta Chirurgica Austriaca Volume 16 ; 16 >
+    au < manifest ; 1985 ; Acta Chirurgica Austriaca Volume 17 ; 17 >
+    au < manifest ; 1986 ; Acta Chirurgica Austriaca Volume 18 ; 18 >
+    au < manifest ; 1987 ; Acta Chirurgica Austriaca Volume 19 ; 19 >
+    au < manifest ; 1988 ; Acta Chirurgica Austriaca Volume 20 ; 20 >
+    au < manifest ; 1989 ; Acta Chirurgica Austriaca Volume 21 ; 21 >
+    au < manifest ; 1990 ; Acta Chirurgica Austriaca Volume 22 ; 22 >
+    au < manifest ; 1991 ; Acta Chirurgica Austriaca Volume 23 ; 23 >
+    au < manifest ; 1992 ; Acta Chirurgica Austriaca Volume 24 ; 24 >
+    au < manifest ; 1993 ; Acta Chirurgica Austriaca Volume 25 ; 25 >
+    au < manifest ; 1994 ; Acta Chirurgica Austriaca Volume 26 ; 26 >
+    au < manifest ; 1995 ; Acta Chirurgica Austriaca Volume 27 ; 27 >
+    au < manifest ; 1996 ; Acta Chirurgica Austriaca Volume 28 ; 28 >
+    au < manifest ; 1997 ; Acta Chirurgica Austriaca Volume 29 ; 29 >
+    au < manifest ; 1998 ; Acta Chirurgica Austriaca Volume 30 ; 30 >
+    au < manifest ; 1999 ; Acta Chirurgica Austriaca Volume 31 ; 31 >
+    au < manifest ; 2000 ; Acta Chirurgica Austriaca Volume 32 ; 32 >
+    au < manifest ; 2001 ; Acta Chirurgica Austriaca Volume 33 ; 33 >
+    au < manifest ; 2002 ; European Surgery Volume 34 ; 34 >
+    au < manifest ; 2003 ; European Surgery Volume 35 ; 35 >
+    au < manifest ; 2004 ; European Surgery Volume 36 ; 36 >
+    au < manifest ; 2005 ; European Surgery Volume 37 ; 37 >
+    au < manifest ; 2006 ; European Surgery Volume 38 ; 38 >
+    au < manifest ; 2007 ; European Surgery Volume 39 ; 39 >
+    au < manifest ; 2008 ; European Surgery Volume 40 ; 40 >
+    au < manifest ; 2009 ; European Surgery Volume 41 ; 41 >
+    au < manifest ; 2010 ; European Surgery Volume 42 ; 42 >
+    au < manifest ; 2011 ; European Surgery Volume 43 ; 43 >
+    au < manifest ; 2012 ; European Surgery Volume 44 ; 44 >
 
   }
 
@@ -33104,6 +34566,11 @@
 
     param[journal_issn] = 1867-0717
 
+    au < manifest ; 2009 ; European Transport Research Review Volume 1 ; 1 >
+    au < manifest ; 2010 ; European Transport Research Review Volume 2 ; 2 >
+    au < manifest ; 2011 ; European Transport Research Review Volume 3 ; 3 >
+    au < manifest ; 2012 ; European Transport Research Review Volume 4 ; 4 >
+
   }
 
   {
@@ -33116,6 +34583,12 @@
     >
 
     param[journal_issn] = 1781-6858
+
+    au < manifest ; 2007 ; European View Volume 6 ; 6 >
+    au < manifest ; 2008 ; European View Volume 7 ; 7 >
+    au < manifest ; 2009 ; European View Volume 8 ; 8 >
+    au < manifest ; 2010 ; European View Volume 9 ; 9 >
+    au < manifest ; 2011 ; European View Volume 10 ; 10 >
 
   }
 
@@ -33130,6 +34603,10 @@
 
     param[journal_issn] = 0531-7479
 
+    au < manifest ; 1997 ; Europhysics News Volume 28 ; 28 >
+    au < manifest ; 1998 ; Europhysics News Volume 29 ; 29 >
+    au < manifest ; 1999 ; Europhysics News Volume 30 ; 30 >
+
   }
 
   {
@@ -33143,6 +34620,12 @@
 
     param[journal_issn] = 1865-1089
 
+    au < manifest ; 2008 ; Europäisches Journal für Minderheitenfragen Volume 1 ; 1 >
+    au < manifest ; 2009 ; Europäisches Journal für Minderheitenfragen Volume 2 ; 2 >
+    au < manifest ; 2010 ; Europäisches Journal für Minderheitenfragen Volume 3 ; 3 >
+    au < manifest ; 2011 ; Europäisches Journal für Minderheitenfragen Volume 4 ; 4 >
+    au < manifest ; 2012 ; Europäisches Journal für Minderheitenfragen Volume 5 ; 5 >
+
   }
 
   {
@@ -33154,6 +34637,10 @@
     >
 
     param[journal_issn] = 2041-9139
+
+    au < manifest ; 2010 ; EvoDevo Volume 1 ; 1 >
+    au < manifest ; 2011 ; EvoDevo Volume 2 ; 2 >
+    au < manifest ; 2012 ; EvoDevo Volume 3 ; 3 >
 
   }
 
@@ -33167,6 +34654,12 @@
     >
 
     param[journal_issn] = 1936-6426
+
+    au < manifest ; 2008 ; Evolution: Education and Outreach Volume 1 ; 1 >
+    au < manifest ; 2009 ; Evolution: Education and Outreach Volume 2 ; 2 >
+    au < manifest ; 2010 ; Evolution: Education and Outreach Volume 3 ; 3 >
+    au < manifest ; 2011 ; Evolution: Education and Outreach Volume 4 ; 4 >
+    au < manifest ; 2012 ; Evolution: Education and Outreach Volume 5 ; 5 >
 
   }
 
@@ -33231,13 +34724,19 @@
   {
 
     title <
-      name = Evolutionary Intelligence       ;
+      name = Evolutionary Intelligence ;
       issn = 1864-5909 ;
       eissn = 1864-5917 ;
       issnl = 1864-5909
     >
 
     param[journal_issn] = 1864-5909
+
+    au < manifest ; 2008 ; Evolutionary Intelligence Volume 1 ; 1 >
+    au < manifest ; 2009 ; Evolutionary Intelligence Volume 2 ; 2 >
+    au < manifest ; 2010 ; Evolutionary Intelligence Volume 3 ; 3 >
+    au < manifest ; 2011 ; Evolutionary Intelligence Volume 4 ; 4 >
+    au < manifest ; 2012 ; Evolutionary Intelligence Volume 5 ; 5 >
 
   }
 
@@ -33252,6 +34751,10 @@
 
     param[journal_issn] = 1868-6478
 
+    au < manifest ; 2010 ; Evolving Systems Volume 1 ; 1 >
+    au < manifest ; 2011 ; Evolving Systems Volume 2 ; 2 >
+    au < manifest ; 2012 ; Evolving Systems Volume 3 ; 3 >
+
   }
 
   {
@@ -33263,6 +34766,11 @@
     >
 
     param[journal_issn] = 2040-7378
+
+    au < manifest ; 2009 ; Experimental & Translational Stroke Medicine Volume 1 ; 1 >
+    au < manifest ; 2010 ; Experimental & Translational Stroke Medicine Volume 2 ; 2 >
+    au < manifest ; 2011 ; Experimental & Translational Stroke Medicine Volume 3 ; 3 >
+    au < manifest ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
 
   }
 
@@ -33276,6 +34784,64 @@
     >
 
     param[journal_issn] = 0168-8162
+
+    au < manifest ; 1985 ; Experimental and Applied Acarology Volume 1 ; 1 >
+    au < manifest ; 1986 ; Experimental and Applied Acarology Volume 2 ; 2 >
+    au < manifest ; 1987 ; Experimental and Applied Acarology Volume 3 ; 3 >
+    au < manifest ; 1988 ; Experimental and Applied Acarology Volume 4 ; 4 >
+    au < manifest ; 1988 ; Experimental and Applied Acarology Volume 5 ; 5 >
+    au < manifest ; 1989 ; Experimental and Applied Acarology Volume 6 ; 6 >
+    au < manifest ; 1989 ; Experimental and Applied Acarology Volume 7 ; 7 >
+    au < manifest ; 1990 ; Experimental and Applied Acarology Volume 8 ; 8 >
+    au < manifest ; 1990 ; Experimental and Applied Acarology Volume 9 ; 9 >
+    au < manifest ; 1990-1991 ; Experimental and Applied Acarology Volume 10 ; 10 >
+    au < manifest ; 1991 ; Experimental and Applied Acarology Volume 11 ; 11 >
+    au < manifest ; 1991 ; Experimental and Applied Acarology Volume 12 ; 12 >
+    au < manifest ; 1991-1992 ; Experimental and Applied Acarology Volume 13 ; 13 >
+    au < manifest ; 1992 ; Experimental and Applied Acarology Volume 14 ; 14 >
+    au < manifest ; 1992 ; Experimental and Applied Acarology Volume 15 ; 15 >
+    au < manifest ; 1992 ; Experimental and Applied Acarology Volume 16 ; 16 >
+    au < manifest ; 1993 ; Experimental and Applied Acarology Volume 17 ; 17 >
+    au < manifest ; 1994 ; Experimental and Applied Acarology Volume 18 ; 18 >
+    au < manifest ; 1995 ; Experimental and Applied Acarology Volume 19 ; 19 >
+    au < manifest ; 1996 ; Experimental and Applied Acarology Volume 20 ; 20 >
+    au < manifest ; 1997 ; Experimental and Applied Acarology Volume 21 ; 21 >
+    au < manifest ; 1998 ; Experimental and Applied Acarology Volume 22 ; 22 >
+    au < manifest ; 1999 ; Experimental and Applied Acarology Volume 23 ; 23 >
+    au < manifest ; 2000 ; Experimental and Applied Acarology Volume 24 ; 24 >
+    au < manifest ; 2001 ; Experimental and Applied Acarology Volume 25 ; 25 >
+    au < manifest ; 2002 ; Experimental and Applied Acarology Volume 26 ; 26 >
+    au < manifest ; 2002 ; Experimental and Applied Acarology Volume 27 ; 27 >
+    au < manifest ; 2002 ; Experimental and Applied Acarology Volume 28 ; 28 >
+    au < manifest ; 2003 ; Experimental and Applied Acarology Volume 29 ; 29 >
+    au < manifest ; 2003 ; Experimental and Applied Acarology Volume 30 ; 30 >
+    au < manifest ; 2003 ; Experimental and Applied Acarology Volume 31 ; 31 >
+    au < manifest ; 2004 ; Experimental and Applied Acarology Volume 32 ; 32 >
+    au < manifest ; 2004 ; Experimental and Applied Acarology Volume 33 ; 33 >
+    au < manifest ; 2002 ; Experimental and Applied Acarology Volume 34 ; 34 >
+    au < manifest ; 2005 ; Experimental and Applied Acarology Volume 35 ; 35 >
+    au < manifest ; 2005 ; Experimental and Applied Acarology Volume 36 ; 36 >
+    au < manifest ; 2005 ; Experimental and Applied Acarology Volume 37 ; 37 >
+    au < manifest ; 2006 ; Experimental and Applied Acarology Volume 38 ; 38 >
+    au < manifest ; 2006 ; Experimental and Applied Acarology Volume 39 ; 39 >
+    au < manifest ; 2006 ; Experimental and Applied Acarology Volume 40 ; 40 >
+    au < manifest ; 2007 ; Experimental and Applied Acarology Volume 41 ; 41 >
+    au < manifest ; 2007 ; Experimental and Applied Acarology Volume 42 ; 42 >
+    au < manifest ; 2007 ; Experimental and Applied Acarology Volume 43 ; 43 >
+    au < manifest ; 2008 ; Experimental and Applied Acarology Volume 44 ; 44 >
+    au < manifest ; 2008 ; Experimental and Applied Acarology Volume 45 ; 45 >
+    au < manifest ; 2008 ; Experimental and Applied Acarology Volume 46 ; 46 >
+    au < manifest ; 2009 ; Experimental and Applied Acarology Volume 47 ; 47 >
+    au < manifest ; 2009 ; Experimental and Applied Acarology Volume 48 ; 48 >
+    au < manifest ; 2009 ; Experimental and Applied Acarology Volume 49 ; 49 >
+    au < manifest ; 2010 ; Experimental and Applied Acarology Volume 50 ; 50 >
+    au < manifest ; 2010 ; Experimental and Applied Acarology Volume 51 ; 51 >
+    au < manifest ; 2010 ; Experimental and Applied Acarology Volume 52 ; 52 >
+    au < manifest ; 2011 ; Experimental and Applied Acarology Volume 53 ; 53 >
+    au < manifest ; 2011 ; Experimental and Applied Acarology Volume 54 ; 54 >
+    au < manifest ; 2011 ; Experimental and Applied Acarology Volume 55 ; 55 >
+    au < manifest ; 2012 ; Experimental and Applied Acarology Volume 56 ; 56 >
+    au < manifest ; 2012 ; Experimental and Applied Acarology Volume 57 ; 57 >
 
   }
 
@@ -33330,6 +34896,13 @@
     >
 
     param[journal_issn] = 1430-3418
+
+    au < manifest ; 1997 ; Experimental Biology Online Volume 1 ; 1 >
+    au < manifest ; 1997 ; Experimental Biology Online Volume 2 ; 2 >
+    au < manifest ; 1998 ; Experimental Biology Online Volume 3 ; 3 >
+    au < manifest ; 1999 ; Experimental Biology Online Volume 4 ; 4 >
+    au < manifest ; 2000 ; Experimental Biology Online Volume 5 ; 5 >
+    au < manifest ; 2001 ; Experimental Biology Online Volume 6 ; 6 >
 
   }
 
@@ -33603,6 +35176,59 @@
 
     param[journal_issn] = 0014-4851
 
+    au < manifest ; 1961 ; Experimental Mechanics Volume 1 ; 1 >
+    au < manifest ; 1962 ; Experimental Mechanics Volume 2 ; 2 >
+    au < manifest ; 1963 ; Experimental Mechanics Volume 3 ; 3 >
+    au < manifest ; 1964 ; Experimental Mechanics Volume 4 ; 4 >
+    au < manifest ; 1965 ; Experimental Mechanics Volume 5 ; 5 >
+    au < manifest ; 1966 ; Experimental Mechanics Volume 6 ; 6 >
+    au < manifest ; 1967 ; Experimental Mechanics Volume 7 ; 7 >
+    au < manifest ; 1968 ; Experimental Mechanics Volume 8 ; 8 >
+    au < manifest ; 1969 ; Experimental Mechanics Volume 9 ; 9 >
+    au < manifest ; 1970 ; Experimental Mechanics Volume 10 ; 10 >
+    au < manifest ; 1971 ; Experimental Mechanics Volume 11 ; 11 >
+    au < manifest ; 1972 ; Experimental Mechanics Volume 12 ; 12 >
+    au < manifest ; 1973 ; Experimental Mechanics Volume 13 ; 13 >
+    au < manifest ; 1974 ; Experimental Mechanics Volume 14 ; 14 >
+    au < manifest ; 1975 ; Experimental Mechanics Volume 15 ; 15 >
+    au < manifest ; 1976 ; Experimental Mechanics Volume 16 ; 16 >
+    au < manifest ; 1977 ; Experimental Mechanics Volume 17 ; 17 >
+    au < manifest ; 1978 ; Experimental Mechanics Volume 18 ; 18 >
+    au < manifest ; 1979 ; Experimental Mechanics Volume 19 ; 19 >
+    au < manifest ; 1980 ; Experimental Mechanics Volume 20 ; 20 >
+    au < manifest ; 1981 ; Experimental Mechanics Volume 21 ; 21 >
+    au < manifest ; 1982 ; Experimental Mechanics Volume 22 ; 22 >
+    au < manifest ; 1983 ; Experimental Mechanics Volume 23 ; 23 >
+    au < manifest ; 1984 ; Experimental Mechanics Volume 24 ; 24 >
+    au < manifest ; 1985 ; Experimental Mechanics Volume 25 ; 25 >
+    au < manifest ; 1986 ; Experimental Mechanics Volume 26 ; 26 >
+    au < manifest ; 1987 ; Experimental Mechanics Volume 27 ; 27 >
+    au < manifest ; 1988 ; Experimental Mechanics Volume 28 ; 28 >
+    au < manifest ; 1989 ; Experimental Mechanics Volume 29 ; 29 >
+    au < manifest ; 1990 ; Experimental Mechanics Volume 30 ; 30 >
+    au < manifest ; 1991 ; Experimental Mechanics Volume 31 ; 31 >
+    au < manifest ; 1992 ; Experimental Mechanics Volume 32 ; 32 >
+    au < manifest ; 1993 ; Experimental Mechanics Volume 33 ; 33 >
+    au < manifest ; 1994 ; Experimental Mechanics Volume 34 ; 34 >
+    au < manifest ; 1995 ; Experimental Mechanics Volume 35 ; 35 >
+    au < manifest ; 1996 ; Experimental Mechanics Volume 36 ; 36 >
+    au < manifest ; 1997 ; Experimental Mechanics Volume 37 ; 37 >
+    au < manifest ; 1998 ; Experimental Mechanics Volume 38 ; 38 >
+    au < manifest ; 1999 ; Experimental Mechanics Volume 39 ; 39 >
+    au < manifest ; 2000 ; Experimental Mechanics Volume 40 ; 40 >
+    au < manifest ; 2001 ; Experimental Mechanics Volume 41 ; 41 >
+    au < manifest ; 2002 ; Experimental Mechanics Volume 42 ; 42 >
+    au < manifest ; 2003 ; Experimental Mechanics Volume 43 ; 43 >
+    au < manifest ; 2004 ; Experimental Mechanics Volume 44 ; 44 >
+    au < manifest ; 2005 ; Experimental Mechanics Volume 45 ; 45 >
+    au < manifest ; 2006 ; Experimental Mechanics Volume 46 ; 46 >
+    au < manifest ; 2007 ; Experimental Mechanics Volume 47 ; 47 >
+    au < manifest ; 2008 ; Experimental Mechanics Volume 48 ; 48 >
+    au < manifest ; 2009 ; Experimental Mechanics Volume 49 ; 49 >
+    au < manifest ; 2010 ; Experimental Mechanics Volume 50 ; 50 >
+    au < manifest ; 2011 ; Experimental Mechanics Volume 51 ; 51 >
+    au < manifest ; 2012 ; Experimental Mechanics Volume 52 ; 52 >
+
   }
 
   {
@@ -33615,6 +35241,59 @@
     >
 
     param[journal_issn] = 0723-4864
+
+    au < manifest ; 1983 ; Experiments in Fluids Volume 1 ; 1 >
+    au < manifest ; 1984 ; Experiments in Fluids Volume 2 ; 2 >
+    au < manifest ; 1985 ; Experiments in Fluids Volume 3 ; 3 >
+    au < manifest ; 1986 ; Experiments in Fluids Volume 4 ; 4 >
+    au < manifest ; 1986-1987 ; Experiments in Fluids Volume 5 ; 5 >
+    au < manifest ; 1988 ; Experiments in Fluids Volume 6 ; 6 >
+    au < manifest ; 1989 ; Experiments in Fluids Volume 7 ; 7 >
+    au < manifest ; 1989-1990 ; Experiments in Fluids Volume 8 ; 8 >
+    au < manifest ; 1990 ; Experiments in Fluids Volume 9 ; 9 >
+    au < manifest ; 1990-1991 ; Experiments in Fluids Volume 10 ; 10 >
+    au < manifest ; 1991 ; Experiments in Fluids Volume 11 ; 11 >
+    au < manifest ; 1991-1992 ; Experiments in Fluids Volume 12 ; 12 >
+    au < manifest ; 1992 ; Experiments in Fluids Volume 13 ; 13 >
+    au < manifest ; 1993 ; Experiments in Fluids Volume 14 ; 14 >
+    au < manifest ; 1993 ; Experiments in Fluids Volume 15 ; 15 >
+    au < manifest ; 1993-1994 ; Experiments in Fluids Volume 16 ; 16 >
+    au < manifest ; 1994 ; Experiments in Fluids Volume 17 ; 17 >
+    au < manifest ; 1994-1995 ; Experiments in Fluids Volume 18 ; 18 >
+    au < manifest ; 1995 ; Experiments in Fluids Volume 19 ; 19 >
+    au < manifest ; 1995-1996 ; Experiments in Fluids Volume 20 ; 20 >
+    au < manifest ; 1996 ; Experiments in Fluids Volume 21 ; 21 >
+    au < manifest ; 1996-1997 ; Experiments in Fluids Volume 22 ; 22 >
+    au < manifest ; 1997 ; Experiments in Fluids Volume 23 ; 23 >
+    au < manifest ; 1998 ; Experiments in Fluids Volume 24 ; 24 >
+    au < manifest ; 1998 ; Experiments in Fluids Volume 25 ; 25 >
+    au < manifest ; 1999 ; Experiments in Fluids Volume 26 ; 26 >
+    au < manifest ; 1999 ; Experiments in Fluids Volume 27 ; 27 >
+    au < manifest ; 2000 ; Experiments in Fluids Volume 28 ; 28 >
+    au < manifest ; 2000 ; Experiments in Fluids Volume 29 ; 29 >
+    au < manifest ; 2001 ; Experiments in Fluids Volume 30 ; 30 >
+    au < manifest ; 2001 ; Experiments in Fluids Volume 31 ; 31 >
+    au < manifest ; 2002 ; Experiments in Fluids Volume 32 ; 32 >
+    au < manifest ; 2002 ; Experiments in Fluids Volume 33 ; 33 >
+    au < manifest ; 2003 ; Experiments in Fluids Volume 34 ; 34 >
+    au < manifest ; 2003 ; Experiments in Fluids Volume 35 ; 35 >
+    au < manifest ; 2004 ; Experiments in Fluids Volume 36 ; 36 >
+    au < manifest ; 2004 ; Experiments in Fluids Volume 37 ; 37 >
+    au < manifest ; 2005 ; Experiments in Fluids Volume 38 ; 38 >
+    au < manifest ; 2005 ; Experiments in Fluids Volume 39 ; 39 >
+    au < manifest ; 2006 ; Experiments in Fluids Volume 40 ; 40 >
+    au < manifest ; 2006 ; Experiments in Fluids Volume 41 ; 41 >
+    au < manifest ; 2007 ; Experiments in Fluids Volume 42 ; 42 >
+    au < manifest ; 2007 ; Experiments in Fluids Volume 43 ; 43 >
+    au < manifest ; 2008 ; Experiments in Fluids Volume 44 ; 44 >
+    au < manifest ; 2008 ; Experiments in Fluids Volume 45 ; 45 >
+    au < manifest ; 2009 ; Experiments in Fluids Volume 46 ; 46 >
+    au < manifest ; 2009 ; Experiments in Fluids Volume 47 ; 47 >
+    au < manifest ; 2010 ; Experiments in Fluids Volume 48 ; 48 >
+    au < manifest ; 2010 ; Experiments in Fluids Volume 49 ; 49 >
+    au < manifest ; 2011 ; Experiments in Fluids Volume 50 ; 50 >
+    au < manifest ; 2011 ; Experiments in Fluids Volume 51 ; 51 >
+    au < manifest ; 2012 ; Experiments in Fluids Volume 52 ; 52 >
 
   }
 
@@ -33629,6 +35308,11 @@
 
     param[journal_issn] = 0965-3643
 
+    au < manifest ; 1997 ; Expert Evidence Volume 5 ; 5 >
+    au < manifest ; 1998 ; Expert Evidence Volume 6 ; 6 >
+    au < manifest ; 1999 ; Expert Evidence Volume 7 ; 7 >
+    au < manifest ; 2001 ; Expert Evidence Volume 8 ; 8 >
+
   }
 
   {
@@ -33642,6 +35326,22 @@
 
     param[journal_issn] = 1386-1999
 
+    au < manifest ; 1998 ; Extremes Volume 1 ; 1 >
+    au < manifest ; 1999 ; Extremes Volume 2 ; 2 >
+    au < manifest ; 2000 ; Extremes Volume 3 ; 3 >
+    au < manifest ; 2001 ; Extremes Volume 4 ; 4 >
+    au < manifest ; 2002 ; Extremes Volume 5 ; 5 >
+    au < manifest ; 2003 ; Extremes Volume 6 ; 6 >
+    au < manifest ; 2004 ; Extremes Volume 7 ; 7 >
+    au < manifest ; 2005 ; Extremes Volume 8 ; 8 >
+    au < manifest ; 2006 ; Extremes Volume 9 ; 9 >
+    au < manifest ; 2007 ; Extremes Volume 10 ; 10 >
+    au < manifest ; 2008 ; Extremes Volume 11 ; 11 >
+    au < manifest ; 2009 ; Extremes Volume 12 ; 12 >
+    au < manifest ; 2010 ; Extremes Volume 13 ; 13 >
+    au < manifest ; 2011 ; Extremes Volume 14 ; 14 >
+    au < manifest ; 2012 ; Extremes Volume 15 ; 15 >
+
   }
 
   {
@@ -33653,6 +35353,23 @@
     >
 
     param[journal_issn] = 1431-0651
+
+    au < manifest ; 1997 ; Extremophiles Volume 1 ; 1 >
+    au < manifest ; 1998 ; Extremophiles Volume 2 ; 2 >
+    au < manifest ; 1999 ; Extremophiles Volume 3 ; 3 >
+    au < manifest ; 2000 ; Extremophiles Volume 4 ; 4 >
+    au < manifest ; 2001 ; Extremophiles Volume 5 ; 5 >
+    au < manifest ; 2002 ; Extremophiles Volume 6 ; 6 >
+    au < manifest ; 2003 ; Extremophiles Volume 7 ; 7 >
+    au < manifest ; 2004 ; Extremophiles Volume 8 ; 8 >
+    au < manifest ; 2005 ; Extremophiles Volume 9 ; 9 >
+    au < manifest ; 2006 ; Extremophiles Volume 10 ; 10 >
+    au < manifest ; 2007 ; Extremophiles Volume 11 ; 11 >
+    au < manifest ; 2008 ; Extremophiles Volume 12 ; 12 >
+    au < manifest ; 2009 ; Extremophiles Volume 13 ; 13 >
+    au < manifest ; 2010 ; Extremophiles Volume 14 ; 14 >
+    au < manifest ; 2011 ; Extremophiles Volume 15 ; 15 >
+    au < manifest ; 2012 ; Extremophiles Volume 16 ; 16 >
 
   }
 
@@ -33667,6 +35384,65 @@
 
     param[journal_issn] = 0172-9179
 
+    au < manifest ; 1979 ; Facies Volume 1 ; 1 >
+    au < manifest ; 1980 ; Facies Volume 2 ; 2 >
+    au < manifest ; 1980 ; Facies Volume 3 ; 3 >
+    au < manifest ; 1981 ; Facies Volume 4 ; 4 >
+    au < manifest ; 1981 ; Facies Volume 5 ; 5 >
+    au < manifest ; 1982 ; Facies Volume 6 ; 6 >
+    au < manifest ; 1982 ; Facies Volume 7 ; 7 >
+    au < manifest ; 1983 ; Facies Volume 8 ; 8 >
+    au < manifest ; 1983 ; Facies Volume 9 ; 9 >
+    au < manifest ; 1984 ; Facies Volume 10 ; 10 >
+    au < manifest ; 1984 ; Facies Volume 11 ; 11 >
+    au < manifest ; 1985 ; Facies Volume 12 ; 12 >
+    au < manifest ; 1985 ; Facies Volume 13 ; 13 >
+    au < manifest ; 1986 ; Facies Volume 14 ; 14 >
+    au < manifest ; 1986 ; Facies Volume 15 ; 15 >
+    au < manifest ; 1987 ; Facies Volume 16 ; 16 >
+    au < manifest ; 1987 ; Facies Volume 17 ; 17 >
+    au < manifest ; 1988 ; Facies Volume 18 ; 18 >
+    au < manifest ; 1988 ; Facies Volume 19 ; 19 >
+    au < manifest ; 1989 ; Facies Volume 20 ; 20 >
+    au < manifest ; 1989 ; Facies Volume 21 ; 21 >
+    au < manifest ; 1990 ; Facies Volume 22 ; 22 >
+    au < manifest ; 1990 ; Facies Volume 23 ; 23 >
+    au < manifest ; 1991 ; Facies Volume 24 ; 24 >
+    au < manifest ; 1991 ; Facies Volume 25 ; 25 >
+    au < manifest ; 1992 ; Facies Volume 26 ; 26 >
+    au < manifest ; 1992 ; Facies Volume 27 ; 27 >
+    au < manifest ; 1993 ; Facies Volume 28 ; 28 >
+    au < manifest ; 1993 ; Facies Volume 29 ; 29 >
+    au < manifest ; 1994 ; Facies Volume 30 ; 30 >
+    au < manifest ; 1994 ; Facies Volume 31 ; 31 >
+    au < manifest ; 1995 ; Facies Volume 32 ; 32 >
+    au < manifest ; 1995 ; Facies Volume 33 ; 33 >
+    au < manifest ; 1996 ; Facies Volume 34 ; 34 >
+    au < manifest ; 1996 ; Facies Volume 35 ; 35 >
+    au < manifest ; 1997 ; Facies Volume 36 ; 36 >
+    au < manifest ; 1997 ; Facies Volume 37 ; 37 >
+    au < manifest ; 1998 ; Facies Volume 38 ; 38 >
+    au < manifest ; 1998 ; Facies Volume 39 ; 39 >
+    au < manifest ; 1999 ; Facies Volume 40 ; 40 >
+    au < manifest ; 1999 ; Facies Volume 41 ; 41 >
+    au < manifest ; 2000 ; Facies Volume 42 ; 42 >
+    au < manifest ; 2000 ; Facies Volume 43 ; 43 >
+    au < manifest ; 2001 ; Facies Volume 44 ; 44 >
+    au < manifest ; 2001 ; Facies Volume 45 ; 45 >
+    au < manifest ; 2002 ; Facies Volume 46 ; 46 >
+    au < manifest ; 2002 ; Facies Volume 47 ; 47 >
+    au < manifest ; 2003 ; Facies Volume 48 ; 48 >
+    au < manifest ; 2003 ; Facies Volume 49 ; 49 >
+    au < manifest ; 2004 ; Facies Volume 50 ; 50 >
+    au < manifest ; 2005 ; Facies Volume 51 ; 51 >
+    au < manifest ; 2006 ; Facies Volume 52 ; 52 >
+    au < manifest ; 2007 ; Facies Volume 53 ; 53 >
+    au < manifest ; 2008 ; Facies Volume 54 ; 54 >
+    au < manifest ; 2009 ; Facies Volume 55 ; 55 >
+    au < manifest ; 2010 ; Facies Volume 56 ; 56 >
+    au < manifest ; 2011 ; Facies Volume 57 ; 57 >
+    au < manifest ; 2012 ; Facies Volume 58 ; 58 >
+
   }
 
   {
@@ -33679,6 +35455,18 @@
     >
 
     param[journal_issn] = 1389-9600
+
+    au < manifest ; 2001 ; Familial Cancer Volume 1 ; 1 >
+    au < manifest ; 2003 ; Familial Cancer Volume 2 ; 2 >
+    au < manifest ; 2004 ; Familial Cancer Volume 3 ; 3 >
+    au < manifest ; 2005 ; Familial Cancer Volume 4 ; 4 >
+    au < manifest ; 2006 ; Familial Cancer Volume 5 ; 5 >
+    au < manifest ; 2007 ; Familial Cancer Volume 6 ; 6 >
+    au < manifest ; 2008 ; Familial Cancer Volume 7 ; 7 >
+    au < manifest ; 2009 ; Familial Cancer Volume 8 ; 8 >
+    au < manifest ; 2010 ; Familial Cancer Volume 9 ; 9 >
+    au < manifest ; 2011 ; Familial Cancer Volume 10 ; 10 >
+    au < manifest ; 2012 ; Familial Cancer Volume 11 ; 11 >
 
   }
 
@@ -33693,6 +35481,26 @@
 
     param[journal_issn] = 0966-3622
 
+    au < manifest ; 1993 ; Feminist Legal Studies Volume 1 ; 1 >
+    au < manifest ; 1994 ; Feminist Legal Studies Volume 2 ; 2 >
+    au < manifest ; 1995 ; Feminist Legal Studies Volume 3 ; 3 >
+    au < manifest ; 1996 ; Feminist Legal Studies Volume 4 ; 4 >
+    au < manifest ; 1997 ; Feminist Legal Studies Volume 5 ; 5 >
+    au < manifest ; 1998 ; Feminist Legal Studies Volume 6 ; 6 >
+    au < manifest ; 1999 ; Feminist Legal Studies Volume 7 ; 7 >
+    au < manifest ; 2000 ; Feminist Legal Studies Volume 8 ; 8 >
+    au < manifest ; 2001 ; Feminist Legal Studies Volume 9 ; 9 >
+    au < manifest ; 2002 ; Feminist Legal Studies Volume 10 ; 10 >
+    au < manifest ; 2003 ; Feminist Legal Studies Volume 11 ; 11 >
+    au < manifest ; 2004 ; Feminist Legal Studies Volume 12 ; 12 >
+    au < manifest ; 2005 ; Feminist Legal Studies Volume 13 ; 13 >
+    au < manifest ; 2006 ; Feminist Legal Studies Volume 14 ; 14 >
+    au < manifest ; 2007 ; Feminist Legal Studies Volume 15 ; 15 >
+    au < manifest ; 2008 ; Feminist Legal Studies Volume 16 ; 16 >
+    au < manifest ; 2009 ; Feminist Legal Studies Volume 17 ; 17 >
+    au < manifest ; 2010 ; Feminist Legal Studies Volume 18 ; 18 >
+    au < manifest ; 2011 ; Feminist Legal Studies Volume 19 ; 19 >
+
   }
 
   {
@@ -33705,6 +35513,59 @@
     >
 
     param[journal_issn] = 0177-7963
+
+    au < manifest ; 1986 ; Few-Body Systems Volume 1 ; 1 >
+    au < manifest ; 1987 ; Few-Body Systems Volume 2 ; 2 >
+    au < manifest ; 1987-1988 ; Few-Body Systems Volume 3 ; 3 >
+    au < manifest ; 1988 ; Few-Body Systems Volume 4 ; 4 >
+    au < manifest ; 1988 ; Few-Body Systems Volume 5 ; 5 >
+    au < manifest ; 1989 ; Few-Body Systems Volume 6 ; 6 >
+    au < manifest ; 1989-1990 ; Few-Body Systems Volume 7 ; 7 >
+    au < manifest ; 1990 ; Few-Body Systems Volume 8 ; 8 >
+    au < manifest ; 1990 ; Few-Body Systems Volume 9 ; 9 >
+    au < manifest ; 1991 ; Few-Body Systems Volume 10 ; 10 >
+    au < manifest ; 1991-1992 ; Few-Body Systems Volume 11 ; 11 >
+    au < manifest ; 1992 ; Few-Body Systems Volume 12 ; 12 >
+    au < manifest ; 1992 ; Few-Body Systems Volume 13 ; 13 >
+    au < manifest ; 1993 ; Few-Body Systems Volume 14 ; 14 >
+    au < manifest ; 1993 ; Few-Body Systems Volume 15 ; 15 >
+    au < manifest ; 1994 ; Few-Body Systems Volume 16 ; 16 >
+    au < manifest ; 1994 ; Few-Body Systems Volume 17 ; 17 >
+    au < manifest ; 1995 ; Few-Body Systems Volume 18 ; 18 >
+    au < manifest ; 1995 ; Few-Body Systems Volume 19 ; 19 >
+    au < manifest ; 1996 ; Few-Body Systems Volume 20 ; 20 >
+    au < manifest ; 1996 ; Few-Body Systems Volume 21 ; 21 >
+    au < manifest ; 1997 ; Few-Body Systems Volume 22 ; 22 >
+    au < manifest ; 1998 ; Few-Body Systems Volume 23 ; 23 >
+    au < manifest ; 1998 ; Few-Body Systems Volume 24 ; 24 >
+    au < manifest ; 1998 ; Few-Body Systems Volume 25 ; 25 >
+    au < manifest ; 1999 ; Few-Body Systems Volume 26 ; 26 >
+    au < manifest ; 1999 ; Few-Body Systems Volume 27 ; 27 >
+    au < manifest ; 2000 ; Few-Body Systems Volume 28 ; 28 >
+    au < manifest ; 2000 ; Few-Body Systems Volume 29 ; 29 >
+    au < manifest ; 2001 ; Few-Body Systems Volume 30 ; 30 >
+    au < manifest ; 2001 ; Few-Body Systems Volume 31 ; 31 >
+    au < manifest ; 2002 ; Few-Body Systems Volume 32 ; 32 >
+    au < manifest ; 2003 ; Few-Body Systems Volume 33 ; 33 >
+    au < manifest ; 2004 ; Few-Body Systems Volume 34 ; 34 >
+    au < manifest ; 2004 ; Few-Body Systems Volume 35 ; 35 >
+    au < manifest ; 2005 ; Few-Body Systems Volume 36 ; 36 >
+    au < manifest ; 2005 ; Few-Body Systems Volume 37 ; 37 >
+    au < manifest ; 2006 ; Few-Body Systems Volume 38 ; 38 >
+    au < manifest ; 2006 ; Few-Body Systems Volume 39 ; 39 >
+    au < manifest ; 2006 ; Few-Body Systems Volume 40 ; 40 >
+    au < manifest ; 2007 ; Few-Body Systems Volume 41 ; 41 >
+    au < manifest ; 2008 ; Few-Body Systems Volume 42 ; 42 >
+    au < manifest ; 2008 ; Few-Body Systems Volume 43 ; 43 >
+    au < manifest ; 2008 ; Few-Body Systems Volume 44 ; 44 >
+    au < manifest ; 2009 ; Few-Body Systems Volume 45 ; 45 >
+    au < manifest ; 2009 ; Few-Body Systems Volume 46 ; 46 >
+    au < manifest ; 2010 ; Few-Body Systems Volume 47 ; 47 >
+    au < manifest ; 2010 ; Few-Body Systems Volume 48 ; 48 >
+    au < manifest ; 2011 ; Few-Body Systems Volume 49 ; 49 >
+    au < manifest ; 2011 ; Few-Body Systems Volume 50 ; 50 >
+    au < manifest ; 2011 ; Few-Body Systems Volume 51 ; 51 >
+    au < manifest ; 2012 ; Few-Body Systems Volume 52 ; 52 >
 
   }
 
@@ -33719,6 +35580,20 @@
 
     param[journal_issn] = 1229-9197
 
+    au < manifest ; 2000 ; Fibers and Polymers Volume 1 ; 1 >
+    au < manifest ; 2001 ; Fibers and Polymers Volume 2 ; 2 >
+    au < manifest ; 2002 ; Fibers and Polymers Volume 3 ; 3 >
+    au < manifest ; 2003 ; Fibers and Polymers Volume 4 ; 4 >
+    au < manifest ; 2004 ; Fibers and Polymers Volume 5 ; 5 >
+    au < manifest ; 2005 ; Fibers and Polymers Volume 6 ; 6 >
+    au < manifest ; 2006 ; Fibers and Polymers Volume 7 ; 7 >
+    au < manifest ; 2007 ; Fibers and Polymers Volume 8 ; 8 >
+    au < manifest ; 2008 ; Fibers and Polymers Volume 9 ; 9 >
+    au < manifest ; 2009 ; Fibers and Polymers Volume 10 ; 10 >
+    au < manifest ; 2010 ; Fibers and Polymers Volume 11 ; 11 >
+    au < manifest ; 2011 ; Fibers and Polymers Volume 12 ; 12 >
+    au < manifest ; 2012 ; Fibers and Polymers Volume 13 ; 13 >
+
   }
 
   {
@@ -33732,6 +35607,50 @@
 
     param[journal_issn] = 0015-0541
 
+    au < manifest ; 1969-1971 ; Fibre Chemistry Volume 1 ; 1 >
+    au < manifest ; 1971-1972 ; Fibre Chemistry Volume 2 ; 2 >
+    au < manifest ; 1972 ; Fibre Chemistry Volume 3 ; 3 >
+    au < manifest ; 1972-1973 ; Fibre Chemistry Volume 4 ; 4 >
+    au < manifest ; 1973-1974 ; Fibre Chemistry Volume 5 ; 5 >
+    au < manifest ; 1974-1975 ; Fibre Chemistry Volume 6 ; 6 >
+    au < manifest ; 1975-1976 ; Fibre Chemistry Volume 7 ; 7 >
+    au < manifest ; 1976-1977 ; Fibre Chemistry Volume 8 ; 8 >
+    au < manifest ; 1977 ; Fibre Chemistry Volume 9 ; 9 >
+    au < manifest ; 1978-1979 ; Fibre Chemistry Volume 10 ; 10 >
+    au < manifest ; 1979-1980 ; Fibre Chemistry Volume 11 ; 11 >
+    au < manifest ; 1980-1981 ; Fibre Chemistry Volume 12 ; 12 >
+    au < manifest ; 1981-1982 ; Fibre Chemistry Volume 13 ; 13 >
+    au < manifest ; 1982 ; Fibre Chemistry Volume 14 ; 14 >
+    au < manifest ; 1983-1984 ; Fibre Chemistry Volume 15 ; 15 >
+    au < manifest ; 1984-1985 ; Fibre Chemistry Volume 16 ; 16 >
+    au < manifest ; 1985-1986 ; Fibre Chemistry Volume 17 ; 17 >
+    au < manifest ; 1986-1987 ; Fibre Chemistry Volume 18 ; 18 >
+    au < manifest ; 1987-1988 ; Fibre Chemistry Volume 19 ; 19 >
+    au < manifest ; 1988-1989 ; Fibre Chemistry Volume 20 ; 20 >
+    au < manifest ; 1989-1990 ; Fibre Chemistry Volume 21 ; 21 >
+    au < manifest ; 1990 ; Fibre Chemistry Volume 22 ; 22 >
+    au < manifest ; 1991-1992 ; Fibre Chemistry Volume 23 ; 23 >
+    au < manifest ; 1992-1993 ; Fibre Chemistry Volume 24 ; 24 >
+    au < manifest ; 1993-1994 ; Fibre Chemistry Volume 25 ; 25 >
+    au < manifest ; 1994-1995 ; Fibre Chemistry Volume 26 ; 26 >
+    au < manifest ; 1995-1996 ; Fibre Chemistry Volume 27 ; 27 >
+    au < manifest ; 1996 ; Fibre Chemistry Volume 28 ; 28 >
+    au < manifest ; 1997 ; Fibre Chemistry Volume 29 ; 29 >
+    au < manifest ; 1998 ; Fibre Chemistry Volume 30 ; 30 >
+    au < manifest ; 1999 ; Fibre Chemistry Volume 31 ; 31 >
+    au < manifest ; 2000 ; Fibre Chemistry Volume 32 ; 32 >
+    au < manifest ; 2001 ; Fibre Chemistry Volume 33 ; 33 >
+    au < manifest ; 2002 ; Fibre Chemistry Volume 34 ; 34 >
+    au < manifest ; 2003 ; Fibre Chemistry Volume 35 ; 35 >
+    au < manifest ; 2004 ; Fibre Chemistry Volume 36 ; 36 >
+    au < manifest ; 2005 ; Fibre Chemistry Volume 37 ; 37 >
+    au < manifest ; 2006 ; Fibre Chemistry Volume 38 ; 38 >
+    au < manifest ; 2007 ; Fibre Chemistry Volume 39 ; 39 >
+    au < manifest ; 2008 ; Fibre Chemistry Volume 40 ; 40 >
+    au < manifest ; 2009 ; Fibre Chemistry Volume 41 ; 41 >
+    au < manifest ; 2010 ; Fibre Chemistry Volume 42 ; 42 >
+    au < manifest ; 2011 ; Fibre Chemistry Volume 43 ; 43 >
+
   }
 
   {
@@ -33744,6 +35663,12 @@
 
     param[journal_issn] = 1755-1536
 
+    au < manifest ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 >
+    au < manifest ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
+    au < manifest ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
+    au < manifest ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
+    au < manifest ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
+
   }
 
   {
@@ -33755,6 +35680,13 @@
     >
 
     param[journal_issn] = 1475-2883
+
+    au < manifest ; 2002 ; Filaria Journal Volume 1 ; 1 >
+    au < manifest ; 2003 ; Filaria Journal Volume 2 ; 2 >
+    au < manifest ; 2004 ; Filaria Journal Volume 3 ; 3 >
+    au < manifest ; 2005 ; Filaria Journal Volume 4 ; 4 >
+    au < manifest ; 2006 ; Filaria Journal Volume 5 ; 5 >
+    au < manifest ; 2007 ; Filaria Journal Volume 6 ; 6 >
 
   }
 
@@ -33769,6 +35701,23 @@
 
     param[journal_issn] = 0949-2984
 
+    au < manifest ; 1996-1997 ; Finance and Stochastics Volume 1 ; 1 >
+    au < manifest ; 1997 ; Finance and Stochastics Volume 2 ; 2 >
+    au < manifest ; 1999 ; Finance and Stochastics Volume 3 ; 3 >
+    au < manifest ; 2000 ; Finance and Stochastics Volume 4 ; 4 >
+    au < manifest ; 2001 ; Finance and Stochastics Volume 5 ; 5 >
+    au < manifest ; 2002 ; Finance and Stochastics Volume 6 ; 6 >
+    au < manifest ; 2003 ; Finance and Stochastics Volume 7 ; 7 >
+    au < manifest ; 2004 ; Finance and Stochastics Volume 8 ; 8 >
+    au < manifest ; 2005 ; Finance and Stochastics Volume 9 ; 9 >
+    au < manifest ; 2006 ; Finance and Stochastics Volume 10 ; 10 >
+    au < manifest ; 2007 ; Finance and Stochastics Volume 11 ; 11 >
+    au < manifest ; 2008 ; Finance and Stochastics Volume 12 ; 12 >
+    au < manifest ; 2009 ; Finance and Stochastics Volume 13 ; 13 >
+    au < manifest ; 2010 ; Finance and Stochastics Volume 14 ; 14 >
+    au < manifest ; 2011 ; Finance and Stochastics Volume 15 ; 15 >
+    au < manifest ; 2012 ; Finance and Stochastics Volume 16 ; 16 >
+
   }
 
   {
@@ -33780,6 +35729,19 @@
     >
 
     param[journal_issn] = 1555-4961
+
+    au < manifest ; 2001 ; Financial Markets and Portfolio Management Volume 15 ; 15 >
+    au < manifest ; 2002 ; Financial Markets and Portfolio Management Volume 16 ; 16 >
+    au < manifest ; 2003 ; Financial Markets and Portfolio Management Volume 17 ; 17 >
+    au < manifest ; 2004 ; Financial Markets and Portfolio Management Volume 18 ; 18 >
+    au < manifest ; 2005 ; Financial Markets and Portfolio Management Volume 19 ; 19 >
+    au < manifest ; 2006 ; Financial Markets and Portfolio Management Volume 20 ; 20 >
+    au < manifest ; 2007 ; Financial Markets and Portfolio Management Volume 21 ; 21 >
+    au < manifest ; 2008 ; Financial Markets and Portfolio Management Volume 22 ; 22 >
+    au < manifest ; 2009 ; Financial Markets and Portfolio Management Volume 23 ; 23 >
+    au < manifest ; 2010 ; Financial Markets and Portfolio Management Volume 24 ; 24 >
+    au < manifest ; 2011 ; Financial Markets and Portfolio Management Volume 25 ; 25 >
+    au < manifest ; 2012 ; Financial Markets and Portfolio Management Volume 26 ; 26 >
 
   }
 
@@ -33794,6 +35756,55 @@
 
     param[journal_issn] = 0015-2684
 
+    au < manifest ; 1965 ; Fire Technology Volume 1 ; 1 >
+    au < manifest ; 1966 ; Fire Technology Volume 2 ; 2 >
+    au < manifest ; 1967 ; Fire Technology Volume 3 ; 3 >
+    au < manifest ; 1968 ; Fire Technology Volume 4 ; 4 >
+    au < manifest ; 1969 ; Fire Technology Volume 5 ; 5 >
+    au < manifest ; 1970 ; Fire Technology Volume 6 ; 6 >
+    au < manifest ; 1971 ; Fire Technology Volume 7 ; 7 >
+    au < manifest ; 1972 ; Fire Technology Volume 8 ; 8 >
+    au < manifest ; 1973 ; Fire Technology Volume 9 ; 9 >
+    au < manifest ; 1974 ; Fire Technology Volume 10 ; 10 >
+    au < manifest ; 1975 ; Fire Technology Volume 11 ; 11 >
+    au < manifest ; 1976 ; Fire Technology Volume 12 ; 12 >
+    au < manifest ; 1977 ; Fire Technology Volume 13 ; 13 >
+    au < manifest ; 1978 ; Fire Technology Volume 14 ; 14 >
+    au < manifest ; 1979 ; Fire Technology Volume 15 ; 15 >
+    au < manifest ; 1980 ; Fire Technology Volume 16 ; 16 >
+    au < manifest ; 1981 ; Fire Technology Volume 17 ; 17 >
+    au < manifest ; 1982 ; Fire Technology Volume 18 ; 18 >
+    au < manifest ; 1983 ; Fire Technology Volume 19 ; 19 >
+    au < manifest ; 1984 ; Fire Technology Volume 20 ; 20 >
+    au < manifest ; 1985 ; Fire Technology Volume 21 ; 21 >
+    au < manifest ; 1986 ; Fire Technology Volume 22 ; 22 >
+    au < manifest ; 1987 ; Fire Technology Volume 23 ; 23 >
+    au < manifest ; 1988 ; Fire Technology Volume 24 ; 24 >
+    au < manifest ; 1989 ; Fire Technology Volume 25 ; 25 >
+    au < manifest ; 1990 ; Fire Technology Volume 26 ; 26 >
+    au < manifest ; 1991 ; Fire Technology Volume 27 ; 27 >
+    au < manifest ; 1992 ; Fire Technology Volume 28 ; 28 >
+    au < manifest ; 1993 ; Fire Technology Volume 29 ; 29 >
+    au < manifest ; 1994 ; Fire Technology Volume 30 ; 30 >
+    au < manifest ; 1995 ; Fire Technology Volume 31 ; 31 >
+    au < manifest ; 1996 ; Fire Technology Volume 32 ; 32 >
+    au < manifest ; 1997 ; Fire Technology Volume 33 ; 33 >
+    au < manifest ; 1998 ; Fire Technology Volume 34 ; 34 >
+    au < manifest ; 1999 ; Fire Technology Volume 35 ; 35 >
+    au < manifest ; 2000 ; Fire Technology Volume 36 ; 36 >
+    au < manifest ; 2001 ; Fire Technology Volume 37 ; 37 >
+    au < manifest ; 2002 ; Fire Technology Volume 38 ; 38 >
+    au < manifest ; 2003 ; Fire Technology Volume 39 ; 39 >
+    au < manifest ; 2004 ; Fire Technology Volume 40 ; 40 >
+    au < manifest ; 2005 ; Fire Technology Volume 41 ; 41 >
+    au < manifest ; 2006 ; Fire Technology Volume 42 ; 42 >
+    au < manifest ; 2007 ; Fire Technology Volume 43 ; 43 >
+    au < manifest ; 2008 ; Fire Technology Volume 44 ; 44 >
+    au < manifest ; 2009 ; Fire Technology Volume 45 ; 45 >
+    au < manifest ; 2010 ; Fire Technology Volume 46 ; 46 >
+    au < manifest ; 2011 ; Fire Technology Volume 47 ; 47 >
+    au < manifest ; 2012 ; Fire Technology Volume 48 ; 48 >
+
   }
 
   {
@@ -33806,6 +35817,45 @@
     >
 
     param[journal_issn] = 0920-1742
+
+    au < manifest ; 1986 ; Fish Physiology and Biochemistry Volume 1 ; 1 >
+    au < manifest ; 1986 ; Fish Physiology and Biochemistry Volume 2 ; 2 >
+    au < manifest ; 1987 ; Fish Physiology and Biochemistry Volume 3 ; 3 >
+    au < manifest ; 1987-1988 ; Fish Physiology and Biochemistry Volume 4 ; 4 >
+    au < manifest ; 1988 ; Fish Physiology and Biochemistry Volume 5 ; 5 >
+    au < manifest ; 1989 ; Fish Physiology and Biochemistry Volume 6 ; 6 >
+    au < manifest ; 1989 ; Fish Physiology and Biochemistry Volume 7 ; 7 >
+    au < manifest ; 1990 ; Fish Physiology and Biochemistry Volume 8 ; 8 >
+    au < manifest ; 1991-1992 ; Fish Physiology and Biochemistry Volume 9 ; 9 >
+    au < manifest ; 1992-1993 ; Fish Physiology and Biochemistry Volume 10 ; 10 >
+    au < manifest ; 1993 ; Fish Physiology and Biochemistry Volume 11 ; 11 >
+    au < manifest ; 1993-1994 ; Fish Physiology and Biochemistry Volume 12 ; 12 >
+    au < manifest ; 1994 ; Fish Physiology and Biochemistry Volume 13 ; 13 >
+    au < manifest ; 1995 ; Fish Physiology and Biochemistry Volume 14 ; 14 >
+    au < manifest ; 1996 ; Fish Physiology and Biochemistry Volume 15 ; 15 >
+    au < manifest ; 1997 ; Fish Physiology and Biochemistry Volume 16 ; 16 >
+    au < manifest ; 1997 ; Fish Physiology and Biochemistry Volume 17 ; 17 >
+    au < manifest ; 1998 ; Fish Physiology and Biochemistry Volume 18 ; 18 >
+    au < manifest ; 1998 ; Fish Physiology and Biochemistry Volume 19 ; 19 >
+    au < manifest ; 1999 ; Fish Physiology and Biochemistry Volume 20 ; 20 >
+    au < manifest ; 1999 ; Fish Physiology and Biochemistry Volume 21 ; 21 >
+    au < manifest ; 2000 ; Fish Physiology and Biochemistry Volume 22 ; 22 >
+    au < manifest ; 2000 ; Fish Physiology and Biochemistry Volume 23 ; 23 >
+    au < manifest ; 2001 ; Fish Physiology and Biochemistry Volume 24 ; 24 >
+    au < manifest ; 2001 ; Fish Physiology and Biochemistry Volume 25 ; 25 >
+    au < manifest ; 2002 ; Fish Physiology and Biochemistry Volume 26 ; 26 >
+    au < manifest ; 2002 ; Fish Physiology and Biochemistry Volume 27 ; 27 >
+    au < manifest ; 2003 ; Fish Physiology and Biochemistry Volume 28 ; 28 >
+    au < manifest ; 2003 ; Fish Physiology and Biochemistry Volume 29 ; 29 >
+    au < manifest ; 2004 ; Fish Physiology and Biochemistry Volume 30 ; 30 >
+    au < manifest ; 2005 ; Fish Physiology and Biochemistry Volume 31 ; 31 >
+    au < manifest ; 2006 ; Fish Physiology and Biochemistry Volume 32 ; 32 >
+    au < manifest ; 2007 ; Fish Physiology and Biochemistry Volume 33 ; 33 >
+    au < manifest ; 2008 ; Fish Physiology and Biochemistry Volume 34 ; 34 >
+    au < manifest ; 2009 ; Fish Physiology and Biochemistry Volume 35 ; 35 >
+    au < manifest ; 2010 ; Fish Physiology and Biochemistry Volume 36 ; 36 >
+    au < manifest ; 2011 ; Fish Physiology and Biochemistry Volume 37 ; 37 >
+    au < manifest ; 2012 ; Fish Physiology and Biochemistry Volume 38 ; 38 >
 
   }
 
@@ -33820,6 +35870,15 @@
 
     param[journal_issn] = 0919-9268
 
+    au < manifest ; 2005 ; Fisheries Science Volume 71 ; 71 >
+    au < manifest ; 2006 ; Fisheries Science Volume 72 ; 72 >
+    au < manifest ; 2007 ; Fisheries Science Volume 73 ; 73 >
+    au < manifest ; 2008 ; Fisheries Science Volume 74 ; 74 >
+    au < manifest ; 2009 ; Fisheries Science Volume 75 ; 75 >
+    au < manifest ; 2010 ; Fisheries Science Volume 76 ; 76 >
+    au < manifest ; 2011 ; Fisheries Science Volume 77 ; 77 >
+    au < manifest ; 2012 ; Fisheries Science Volume 78 ; 78 >
+
   }
 
   {
@@ -33831,6 +35890,8 @@
     >
 
     param[journal_issn] = 2044-7248
+
+    au < manifest ; 2012 ; Flavour Volume 1 ; 1 >
 
   }
 
@@ -33844,6 +35905,13 @@
     >
 
     param[journal_issn] = 1936-6582
+    comment[continued_from] = 0920-6299
+
+    au < manifest ; 2008 ; Flexible Services and Manufacturing Journal Volume 20 ; 20 >
+    au < manifest ; 2009 ; Flexible Services and Manufacturing Journal Volume 21 ; 21 >
+    au < manifest ; 2010 ; Flexible Services and Manufacturing Journal Volume 22 ; 22 >
+    au < manifest ; 2011 ; Flexible Services and Manufacturing Journal Volume 23 ; 23 >
+    au < manifest ; 2012 ; Flexible Services and Manufacturing Journal Volume 24 ; 24 >
 
   }
 
@@ -33859,6 +35927,36 @@
     comment[continued_from] = 0003-6994
     param[journal_issn] = 1386-6184
 
+    au < manifest ; 1998 ; Flow, Turbulence and Combustion Volume 60 ; 60 >
+    au < manifest ; 1998 ; Flow, Turbulence and Combustion Volume 61 ; 61 >
+    au < manifest ; 1999 ; Flow, Turbulence and Combustion Volume 62 ; 62 >
+    au < manifest ; 2000 ; Flow, Turbulence and Combustion Volume 63 ; 63 >
+    au < manifest ; 2000 ; Flow, Turbulence and Combustion Volume 64 ; 64 >
+    au < manifest ; 2000 ; Flow, Turbulence and Combustion Volume 65 ; 65 >
+    au < manifest ; 2001 ; Flow, Turbulence and Combustion Volume 66 ; 66 >
+    au < manifest ; 2001 ; Flow, Turbulence and Combustion Volume 67 ; 67 >
+    au < manifest ; 2002 ; Flow, Turbulence and Combustion Volume 68 ; 68 >
+    au < manifest ; 2002 ; Flow, Turbulence and Combustion Volume 69 ; 69 >
+    au < manifest ; 2003 ; Flow, Turbulence and Combustion Volume 70 ; 70 >
+    au < manifest ; 2003 ; Flow, Turbulence and Combustion Volume 71 ; 71 >
+    au < manifest ; 2004 ; Flow, Turbulence and Combustion Volume 72 ; 72 >
+    au < manifest ; 2004 ; Flow, Turbulence and Combustion Volume 73 ; 73 >
+    au < manifest ; 2005 ; Flow, Turbulence and Combustion Volume 74 ; 74 >
+    au < manifest ; 2005 ; Flow, Turbulence and Combustion Volume 75 ; 75 >
+    au < manifest ; 2006 ; Flow, Turbulence and Combustion Volume 76 ; 76 >
+    au < manifest ; 2006 ; Flow, Turbulence and Combustion Volume 77 ; 77 >
+    au < manifest ; 2007 ; Flow, Turbulence and Combustion Volume 78 ; 78 >
+    au < manifest ; 2007 ; Flow, Turbulence and Combustion Volume 79 ; 79 >
+    au < manifest ; 2008 ; Flow, Turbulence and Combustion Volume 80 ; 80 >
+    au < manifest ; 2008 ; Flow, Turbulence and Combustion Volume 81 ; 81 >
+    au < manifest ; 2009 ; Flow, Turbulence and Combustion Volume 82 ; 82 >
+    au < manifest ; 2009 ; Flow, Turbulence and Combustion Volume 83 ; 83 >
+    au < manifest ; 2010 ; Flow, Turbulence and Combustion Volume 84 ; 84 >
+    au < manifest ; 2010 ; Flow, Turbulence and Combustion Volume 85 ; 85 >
+    au < manifest ; 2011 ; Flow, Turbulence and Combustion Volume 86 ; 86 >
+    au < manifest ; 2011 ; Flow, Turbulence and Combustion Volume 87 ; 87 >
+    au < manifest ; 2012 ; Flow, Turbulence and Combustion Volume 88 ; 88 >
+
   }
 
   {
@@ -33871,6 +35969,54 @@
     >
 
     param[journal_issn] = 0015-4628
+
+    au < manifest ; 1966 ; Fluid Dynamics Volume 1 ; 1 >
+    au < manifest ; 1967 ; Fluid Dynamics Volume 2 ; 2 >
+    au < manifest ; 1968 ; Fluid Dynamics Volume 3 ; 3 >
+    au < manifest ; 1969 ; Fluid Dynamics Volume 4 ; 4 >
+    au < manifest ; 1970 ; Fluid Dynamics Volume 5 ; 5 >
+    au < manifest ; 1971 ; Fluid Dynamics Volume 6 ; 6 >
+    au < manifest ; 1972 ; Fluid Dynamics Volume 7 ; 7 >
+    au < manifest ; 1973 ; Fluid Dynamics Volume 8 ; 8 >
+    au < manifest ; 1974 ; Fluid Dynamics Volume 9 ; 9 >
+    au < manifest ; 1975 ; Fluid Dynamics Volume 10 ; 10 >
+    au < manifest ; 1976 ; Fluid Dynamics Volume 11 ; 11 >
+    au < manifest ; 1977 ; Fluid Dynamics Volume 12 ; 12 >
+    au < manifest ; 1978 ; Fluid Dynamics Volume 13 ; 13 >
+    au < manifest ; 1979 ; Fluid Dynamics Volume 14 ; 14 >
+    au < manifest ; 1980 ; Fluid Dynamics Volume 15 ; 15 >
+    au < manifest ; 1981 ; Fluid Dynamics Volume 16 ; 16 >
+    au < manifest ; 1982 ; Fluid Dynamics Volume 17 ; 17 >
+    au < manifest ; 1983 ; Fluid Dynamics Volume 18 ; 18 >
+    au < manifest ; 1984 ; Fluid Dynamics Volume 19 ; 19 >
+    au < manifest ; 1985 ; Fluid Dynamics Volume 20 ; 20 >
+    au < manifest ; 1986 ; Fluid Dynamics Volume 21 ; 21 >
+    au < manifest ; 1987 ; Fluid Dynamics Volume 22 ; 22 >
+    au < manifest ; 1988 ; Fluid Dynamics Volume 23 ; 23 >
+    au < manifest ; 1989 ; Fluid Dynamics Volume 24 ; 24 >
+    au < manifest ; 1990 ; Fluid Dynamics Volume 25 ; 25 >
+    au < manifest ; 1991 ; Fluid Dynamics Volume 26 ; 26 >
+    au < manifest ; 1992 ; Fluid Dynamics Volume 27 ; 27 >
+    au < manifest ; 1993 ; Fluid Dynamics Volume 28 ; 28 >
+    au < manifest ; 1994 ; Fluid Dynamics Volume 29 ; 29 >
+    au < manifest ; 1995 ; Fluid Dynamics Volume 30 ; 30 >
+    au < manifest ; 1996 ; Fluid Dynamics Volume 31 ; 31 >
+    au < manifest ; 1997 ; Fluid Dynamics Volume 32 ; 32 >
+    au < manifest ; 1998 ; Fluid Dynamics Volume 33 ; 33 >
+    au < manifest ; 1999 ; Fluid Dynamics Volume 34 ; 34 >
+    au < manifest ; 2000 ; Fluid Dynamics Volume 35 ; 35 >
+    au < manifest ; 2001 ; Fluid Dynamics Volume 36 ; 36 >
+    au < manifest ; 2002 ; Fluid Dynamics Volume 37 ; 37 >
+    au < manifest ; 2003 ; Fluid Dynamics Volume 38 ; 38 >
+    au < manifest ; 2004 ; Fluid Dynamics Volume 39 ; 39 >
+    au < manifest ; 2005 ; Fluid Dynamics Volume 40 ; 40 >
+    au < manifest ; 2006 ; Fluid Dynamics Volume 41 ; 41 >
+    au < manifest ; 2007 ; Fluid Dynamics Volume 42 ; 42 >
+    au < manifest ; 2008 ; Fluid Dynamics Volume 43 ; 43 >
+    au < manifest ; 2009 ; Fluid Dynamics Volume 44 ; 44 >
+    au < manifest ; 2010 ; Fluid Dynamics Volume 45 ; 45 >
+    au < manifest ; 2011 ; Fluid Dynamics Volume 46 ; 46 >
+    au < manifest ; 2012 ; Fluid Dynamics Volume 47 ; 47 >
 
   }
 
@@ -33885,6 +36031,10 @@
 
     param[journal_issn] = 1864-1954
 
+    au < manifest ; 2007 ; Focus NeuroGeriatrie Volume 1 ; 1 >
+    au < manifest ; 2008 ; Focus NeuroGeriatrie Volume 2 ; 2 >
+    au < manifest ; 2009 ; Focus NeuroGeriatrie Volume 3 ; 3 >
+
   }
 
   {
@@ -33897,6 +36047,54 @@
     >
 
     param[journal_issn] = 1211-9520
+
+    au < manifest ; 1966 ; Folia Geobotanica Volume 1 ; 1 >
+    au < manifest ; 1967 ; Folia Geobotanica Volume 2 ; 2 >
+    au < manifest ; 1968 ; Folia Geobotanica Volume 3 ; 3 >
+    au < manifest ; 1969 ; Folia Geobotanica Volume 4 ; 4 >
+    au < manifest ; 1970 ; Folia Geobotanica Volume 5 ; 5 >
+    au < manifest ; 1971 ; Folia Geobotanica Volume 6 ; 6 >
+    au < manifest ; 1972 ; Folia Geobotanica Volume 7 ; 7 >
+    au < manifest ; 1973 ; Folia Geobotanica Volume 8 ; 8 >
+    au < manifest ; 1974 ; Folia Geobotanica Volume 9 ; 9 >
+    au < manifest ; 1975 ; Folia Geobotanica Volume 10 ; 10 >
+    au < manifest ; 1976 ; Folia Geobotanica Volume 11 ; 11 >
+    au < manifest ; 1977 ; Folia Geobotanica Volume 12 ; 12 >
+    au < manifest ; 1978 ; Folia Geobotanica Volume 13 ; 13 >
+    au < manifest ; 1979 ; Folia Geobotanica Volume 14 ; 14 >
+    au < manifest ; 1980 ; Folia Geobotanica Volume 15 ; 15 >
+    au < manifest ; 1981 ; Folia Geobotanica Volume 16 ; 16 >
+    au < manifest ; 1982 ; Folia Geobotanica Volume 17 ; 17 >
+    au < manifest ; 1983 ; Folia Geobotanica Volume 18 ; 18 >
+    au < manifest ; 1984 ; Folia Geobotanica Volume 19 ; 19 >
+    au < manifest ; 1985 ; Folia Geobotanica Volume 20 ; 20 >
+    au < manifest ; 1986 ; Folia Geobotanica Volume 21 ; 21 >
+    au < manifest ; 1987 ; Folia Geobotanica Volume 22 ; 22 >
+    au < manifest ; 1988 ; Folia Geobotanica Volume 23 ; 23 >
+    au < manifest ; 1989 ; Folia Geobotanica Volume 24 ; 24 >
+    au < manifest ; 1990 ; Folia Geobotanica Volume 25 ; 25 >
+    au < manifest ; 1991 ; Folia Geobotanica Volume 26 ; 26 >
+    au < manifest ; 1992 ; Folia Geobotanica Volume 27 ; 27 >
+    au < manifest ; 1993 ; Folia Geobotanica Volume 28 ; 28 >
+    au < manifest ; 1994 ; Folia Geobotanica Volume 29 ; 29 >
+    au < manifest ; 1995 ; Folia Geobotanica Volume 30 ; 30 >
+    au < manifest ; 1996 ; Folia Geobotanica Volume 31 ; 31 >
+    au < manifest ; 1997 ; Folia Geobotanica Volume 32 ; 32 >
+    au < manifest ; 1998 ; Folia Geobotanica Volume 33 ; 33 >
+    au < manifest ; 1999 ; Folia Geobotanica Volume 34 ; 34 >
+    au < manifest ; 2000 ; Folia Geobotanica Volume 35 ; 35 >
+    au < manifest ; 2001 ; Folia Geobotanica Volume 36 ; 36 >
+    au < manifest ; 2002 ; Folia Geobotanica Volume 37 ; 37 >
+    au < manifest ; 2003 ; Folia Geobotanica Volume 38 ; 38 >
+    au < manifest ; 2004 ; Folia Geobotanica Volume 39 ; 39 >
+    au < manifest ; 2005 ; Folia Geobotanica Volume 40 ; 40 >
+    au < manifest ; 2006 ; Folia Geobotanica Volume 41 ; 41 >
+    au < manifest ; 2007 ; Folia Geobotanica Volume 42 ; 42 >
+    au < manifest ; 2008 ; Folia Geobotanica Volume 43 ; 43 >
+    au < manifest ; 2009 ; Folia Geobotanica Volume 44 ; 44 >
+    au < manifest ; 2010 ; Folia Geobotanica Volume 45 ; 45 >
+    au < manifest ; 2011 ; Folia Geobotanica Volume 46 ; 46 >
+    au < manifest ; 2012 ; Folia Geobotanica Volume 47 ; 47 >
 
   }
 
@@ -33911,6 +36109,64 @@
 
     param[journal_issn] = 0015-5632
 
+    au < manifest ; 1956 ; Folia Microbiologica Volume 1 ; 1 >
+    au < manifest ; 1957 ; Folia Microbiologica Volume 2 ; 2 >
+    au < manifest ; 1958 ; Folia Microbiologica Volume 3 ; 3 >
+    au < manifest ; 1959 ; Folia Microbiologica Volume 4 ; 4 >
+    au < manifest ; 1960 ; Folia Microbiologica Volume 5 ; 5 >
+    au < manifest ; 1961 ; Folia Microbiologica Volume 6 ; 6 >
+    au < manifest ; 1962 ; Folia Microbiologica Volume 7 ; 7 >
+    au < manifest ; 1963 ; Folia Microbiologica Volume 8 ; 8 >
+    au < manifest ; 1964 ; Folia Microbiologica Volume 9 ; 9 >
+    au < manifest ; 1965 ; Folia Microbiologica Volume 10 ; 10 >
+    au < manifest ; 1966 ; Folia Microbiologica Volume 11 ; 11 >
+    au < manifest ; 1967 ; Folia Microbiologica Volume 12 ; 12 >
+    au < manifest ; 1968 ; Folia Microbiologica Volume 13 ; 13 >
+    au < manifest ; 1969 ; Folia Microbiologica Volume 14 ; 14 >
+    au < manifest ; 1970 ; Folia Microbiologica Volume 15 ; 15 >
+    au < manifest ; 1971 ; Folia Microbiologica Volume 16 ; 16 >
+    au < manifest ; 1972 ; Folia Microbiologica Volume 17 ; 17 >
+    au < manifest ; 1973 ; Folia Microbiologica Volume 18 ; 18 >
+    au < manifest ; 1974 ; Folia Microbiologica Volume 19 ; 19 >
+    au < manifest ; 1975 ; Folia Microbiologica Volume 20 ; 20 >
+    au < manifest ; 1976 ; Folia Microbiologica Volume 21 ; 21 >
+    au < manifest ; 1977 ; Folia Microbiologica Volume 22 ; 22 >
+    au < manifest ; 1978 ; Folia Microbiologica Volume 23 ; 23 >
+    au < manifest ; 1979 ; Folia Microbiologica Volume 24 ; 24 >
+    au < manifest ; 1980 ; Folia Microbiologica Volume 25 ; 25 >
+    au < manifest ; 1981 ; Folia Microbiologica Volume 26 ; 26 >
+    au < manifest ; 1982 ; Folia Microbiologica Volume 27 ; 27 >
+    au < manifest ; 1983 ; Folia Microbiologica Volume 28 ; 28 >
+    au < manifest ; 1984 ; Folia Microbiologica Volume 29 ; 29 >
+    au < manifest ; 1985 ; Folia Microbiologica Volume 30 ; 30 >
+    au < manifest ; 1986 ; Folia Microbiologica Volume 31 ; 31 >
+    au < manifest ; 1987 ; Folia Microbiologica Volume 32 ; 32 >
+    au < manifest ; 1988 ; Folia Microbiologica Volume 33 ; 33 >
+    au < manifest ; 1989 ; Folia Microbiologica Volume 34 ; 34 >
+    au < manifest ; 1990 ; Folia Microbiologica Volume 35 ; 35 >
+    au < manifest ; 1991 ; Folia Microbiologica Volume 36 ; 36 >
+    au < manifest ; 1992 ; Folia Microbiologica Volume 37 ; 37 >
+    au < manifest ; 1993 ; Folia Microbiologica Volume 38 ; 38 >
+    au < manifest ; 1994 ; Folia Microbiologica Volume 39 ; 39 >
+    au < manifest ; 1995 ; Folia Microbiologica Volume 40 ; 40 >
+    au < manifest ; 1996 ; Folia Microbiologica Volume 41 ; 41 >
+    au < manifest ; 1997 ; Folia Microbiologica Volume 42 ; 42 >
+    au < manifest ; 1998 ; Folia Microbiologica Volume 43 ; 43 >
+    au < manifest ; 1999 ; Folia Microbiologica Volume 44 ; 44 >
+    au < manifest ; 2000 ; Folia Microbiologica Volume 45 ; 45 >
+    au < manifest ; 2001 ; Folia Microbiologica Volume 46 ; 46 >
+    au < manifest ; 2002 ; Folia Microbiologica Volume 47 ; 47 >
+    au < manifest ; 2003 ; Folia Microbiologica Volume 48 ; 48 >
+    au < manifest ; 2004 ; Folia Microbiologica Volume 49 ; 49 >
+    au < manifest ; 2005 ; Folia Microbiologica Volume 50 ; 50 >
+    au < manifest ; 2006 ; Folia Microbiologica Volume 51 ; 51 >
+    au < manifest ; 2007 ; Folia Microbiologica Volume 52 ; 52 >
+    au < manifest ; 2008 ; Folia Microbiologica Volume 53 ; 53 >
+    au < manifest ; 2009 ; Folia Microbiologica Volume 54 ; 54 >
+    au < manifest ; 2010 ; Folia Microbiologica Volume 55 ; 55 >
+    au < manifest ; 2011 ; Folia Microbiologica Volume 56 ; 56 >
+    au < manifest ; 2012 ; Folia Microbiologica Volume 57 ; 57 >
+
   }
 
   {
@@ -33923,6 +36179,12 @@
     >
 
     param[journal_issn] = 1936-9751
+
+    au < manifest ; 2008 ; Food Analytical Methods Volume 1 ; 1 >
+    au < manifest ; 2009 ; Food Analytical Methods Volume 2 ; 2 >
+    au < manifest ; 2010 ; Food Analytical Methods Volume 3 ; 3 >
+    au < manifest ; 2011 ; Food Analytical Methods Volume 4 ; 4 >
+    au < manifest ; 2012 ; Food Analytical Methods Volume 5 ; 5 >
 
   }
 
@@ -33937,6 +36199,12 @@
 
     param[journal_issn] = 1935-5130
 
+    au < manifest ; 2008 ; Food and Bioprocess Technology Volume 1 ; 1 >
+    au < manifest ; 2009 ; Food and Bioprocess Technology Volume 2 ; 2 >
+    au < manifest ; 2010 ; Food and Bioprocess Technology Volume 3 ; 3 >
+    au < manifest ; 2011 ; Food and Bioprocess Technology Volume 4 ; 4 >
+    au < manifest ; 2012 ; Food and Bioprocess Technology Volume 5 ; 5 >
+
   }
 
   {
@@ -33949,6 +36217,11 @@
     >
 
     param[journal_issn] = 1867-0334
+
+    au < manifest ; 2009 ; Food and Environmental Virology Volume 1 ; 1 >
+    au < manifest ; 2010 ; Food and Environmental Virology Volume 2 ; 2 >
+    au < manifest ; 2011 ; Food and Environmental Virology Volume 3 ; 3 >
+    au < manifest ; 2012 ; Food and Environmental Virology Volume 4 ; 4 >
 
   }
 
@@ -33963,6 +36236,14 @@
 
     param[journal_issn] = 1557-1858
 
+    au < manifest ; 2006 ; Food Biophysics Volume 1 ; 1 >
+    au < manifest ; 2007 ; Food Biophysics Volume 2 ; 2 >
+    au < manifest ; 2008 ; Food Biophysics Volume 3 ; 3 >
+    au < manifest ; 2009 ; Food Biophysics Volume 4 ; 4 >
+    au < manifest ; 2010 ; Food Biophysics Volume 5 ; 5 >
+    au < manifest ; 2011 ; Food Biophysics Volume 6 ; 6 >
+    au < manifest ; 2012 ; Food Biophysics Volume 7 ; 7 >
+
   }
 
   {
@@ -33973,6 +36254,9 @@
     >
 
     param[journal_issn] = 1869-1978
+
+    au < manifest ; 2010 ; Food Digestion Volume 1 ; 1 >
+    au < manifest ; 2011 ; Food Digestion Volume 2 ; 2 >
 
   }
 
@@ -33987,6 +36271,11 @@
 
     param[journal_issn] = 1866-7910
 
+    au < manifest ; 2009 ; Food Engineering Reviews Volume 1 ; 1 >
+    au < manifest ; 2010 ; Food Engineering Reviews Volume 2 ; 2 >
+    au < manifest ; 2011 ; Food Engineering Reviews Volume 3 ; 3 >
+    au < manifest ; 2012 ; Food Engineering Reviews Volume 4 ; 4 >
+
   }
 
   {
@@ -33998,6 +36287,10 @@
     >
 
     param[journal_issn] = 1226-7708
+
+    au < manifest ; 2010 ; Food Science and Biotechnology Volume 19 ; 19 >
+    au < manifest ; 2011 ; Food Science and Biotechnology Volume 20 ; 20 >
+    au < manifest ; 2012 ; Food Science and Biotechnology Volume 21 ; 21 >
 
   }
 
@@ -34012,6 +36305,11 @@
 
     param[journal_issn] = 1876-4517
 
+    au < manifest ; 2009 ; Food Security Volume 1 ; 1 >
+    au < manifest ; 2010 ; Food Security Volume 2 ; 2 >
+    au < manifest ; 2011 ; Food Security Volume 3 ; 3 >
+    au < manifest ; 2012 ; Food Security Volume 4 ; 4 >
+
   }
 
   {
@@ -34024,6 +36322,15 @@
     >
 
     param[journal_issn] = 1547-769X
+
+    au < manifest ; 2005 ; Forensic Science, Medicine, and Pathology Volume 1 ; 1 >
+    au < manifest ; 2006 ; Forensic Science, Medicine, and Pathology Volume 2 ; 2 >
+    au < manifest ; 2007 ; Forensic Science, Medicine, and Pathology Volume 3 ; 3 >
+    au < manifest ; 2008 ; Forensic Science, Medicine, and Pathology Volume 4 ; 4 >
+    au < manifest ; 2009 ; Forensic Science, Medicine, and Pathology Volume 5 ; 5 >
+    au < manifest ; 2010 ; Forensic Science, Medicine, and Pathology Volume 6 ; 6 >
+    au < manifest ; 2011 ; Forensic Science, Medicine, and Pathology Volume 7 ; 7 >
+    au < manifest ; 2012 ; Forensic Science, Medicine, and Pathology Volume 8 ; 8 >
 
   }
 
@@ -34038,6 +36345,14 @@
 
     param[journal_issn] = 1860-8965
 
+    au < manifest ; 2006 ; Forensic Toxicology Volume 24 ; 24 >
+    au < manifest ; 2007 ; Forensic Toxicology Volume 25 ; 25 >
+    au < manifest ; 2008 ; Forensic Toxicology Volume 26 ; 26 >
+    au < manifest ; 2009 ; Forensic Toxicology Volume 27 ; 27 >
+    au < manifest ; 2010 ; Forensic Toxicology Volume 28 ; 28 >
+    au < manifest ; 2011 ; Forensic Toxicology Volume 29 ; 29 >
+    au < manifest ; 2012 ; Forensic Toxicology Volume 30 ; 30 >
+
   }
 
   {
@@ -34050,6 +36365,13 @@
     >
 
     param[journal_issn] = 1862-7072
+
+    au < manifest ; 2007 ; Forensische Psychiatrie, Psychologie, Kriminologie Volume 1 ; 1 >
+    au < manifest ; 2008 ; Forensische Psychiatrie, Psychologie, Kriminologie Volume 2 ; 2 >
+    au < manifest ; 2009 ; Forensische Psychiatrie, Psychologie, Kriminologie Volume 3 ; 3 >
+    au < manifest ; 2010 ; Forensische Psychiatrie, Psychologie, Kriminologie Volume 4 ; 4 >
+    au < manifest ; 2011 ; Forensische Psychiatrie, Psychologie, Kriminologie Volume 5 ; 5 >
+    au < manifest ; 2012 ; Forensische Psychiatrie, Psychologie, Kriminologie Volume 6 ; 6 >
 
   }
 
@@ -34064,6 +36386,16 @@
 
     param[journal_issn] = 1008-1321
 
+    au < manifest ; 2004 ; Forestry Studies in China Volume 6 ; 6 >
+    au < manifest ; 2005 ; Forestry Studies in China Volume 7 ; 7 >
+    au < manifest ; 2006 ; Forestry Studies in China Volume 8 ; 8 >
+    au < manifest ; 2007 ; Forestry Studies in China Volume 9 ; 9 >
+    au < manifest ; 2008 ; Forestry Studies in China Volume 10 ; 10 >
+    au < manifest ; 2009 ; Forestry Studies in China Volume 11 ; 11 >
+    au < manifest ; 2010 ; Forestry Studies in China Volume 12 ; 12 >
+    au < manifest ; 2011 ; Forestry Studies in China Volume 13 ; 13 >
+    au < manifest ; 2012 ; Forestry Studies in China Volume 14 ; 14 >
+
   }
 
   {
@@ -34076,6 +36408,31 @@
     >
 
     param[journal_issn] = 0934-5043
+
+    au < manifest ; 1989 ; Formal Aspects of Computing Volume 1 ; 1 >
+    au < manifest ; 1990 ; Formal Aspects of Computing Volume 2 ; 2 >
+    au < manifest ; 1991 ; Formal Aspects of Computing Volume 3 ; 3 >
+    au < manifest ; 1992 ; Formal Aspects of Computing Volume 4 ; 4 >
+    au < manifest ; 1993 ; Formal Aspects of Computing Volume 5 ; 5 >
+    au < manifest ; 1994 ; Formal Aspects of Computing Volume 6 ; 6 >
+    au < manifest ; 1995 ; Formal Aspects of Computing Volume 7 ; 7 >
+    au < manifest ; 1996 ; Formal Aspects of Computing Volume 8 ; 8 >
+    au < manifest ; 1997 ; Formal Aspects of Computing Volume 9 ; 9 >
+    au < manifest ; 1998 ; Formal Aspects of Computing Volume 10 ; 10 >
+    au < manifest ; 1999 ; Formal Aspects of Computing Volume 11 ; 11 >
+    au < manifest ; 2000 ; Formal Aspects of Computing Volume 12 ; 12 >
+    au < manifest ; 2001 ; Formal Aspects of Computing Volume 13 ; 13 >
+    au < manifest ; 2002 ; Formal Aspects of Computing Volume 14 ; 14 >
+    au < manifest ; 2003 ; Formal Aspects of Computing Volume 15 ; 15 >
+    au < manifest ; 2004 ; Formal Aspects of Computing Volume 16 ; 16 >
+    au < manifest ; 2005 ; Formal Aspects of Computing Volume 17 ; 17 >
+    au < manifest ; 2006 ; Formal Aspects of Computing Volume 18 ; 18 >
+    au < manifest ; 2007 ; Formal Aspects of Computing Volume 19 ; 19 >
+    au < manifest ; 2008 ; Formal Aspects of Computing Volume 20 ; 20 >
+    au < manifest ; 2009 ; Formal Aspects of Computing Volume 21 ; 21 >
+    au < manifest ; 2010 ; Formal Aspects of Computing Volume 22 ; 22 >
+    au < manifest ; 2011 ; Formal Aspects of Computing Volume 23 ; 23 >
+    au < manifest ; 2012 ; Formal Aspects of Computing Volume 24 ; 24 >
 
   }
 
