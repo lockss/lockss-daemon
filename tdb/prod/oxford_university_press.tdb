@@ -1202,7 +1202,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2009 ; AoB PLANTS Volume 2009 ; 2009 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; AoB PLANTS Volume 2010 ; 2010 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; AoB PLANTS Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; AoB PLANTS Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; AoB PLANTS Volume 2012 ; 2012 >
 
@@ -1245,7 +1245,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Applied Economic Perspectives and Policy Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Applied Economic Perspectives and Policy Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Applied Economic Perspectives and Policy Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Applied Economic Perspectives and Policy Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Applied Economic Perspectives and Policy Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Applied Economic Perspectives and Policy Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Applied Economic Perspectives and Policy Volume 34 ; 34 >
 
@@ -1336,7 +1336,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Applied Mathematics Research eXpress (AMRX) Volume 2007 ; 2007 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Applied Mathematics Research eXpress (AMRX) Volume 2008 ; 2008 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Applied Mathematics Research eXpress (AMRX) Volume 2009 ; 2009 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Applied Mathematics Research eXpress (AMRX) Volume 2010 ; 2010 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Applied Mathematics Research eXpress (AMRX) Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Applied Mathematics Research eXpress (AMRX) Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Applied Mathematics Research eXpress (AMRX) Volume 2012 ; 2012 >
 
@@ -2040,7 +2040,7 @@
     param[base_url] = http://bfg.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 >
 
@@ -2620,9 +2620,9 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; British Medical Bulletin Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; British Medical Bulletin Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; released ; 2009 ; British Medical Bulletin Volume 92 ; 92 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; British Medical Bulletin Volume 93 ; 93 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; British Medical Bulletin Volume 94 ; 94 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; British Medical Bulletin Volume 95 ; 95 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; British Medical Bulletin Volume 93 ; 93 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; British Medical Bulletin Volume 94 ; 94 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; British Medical Bulletin Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Medical Bulletin Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; released ; 2011 ; British Medical Bulletin Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; British Medical Bulletin Volume 98 ; 98 >
@@ -2684,7 +2684,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; British Yearbook of International Law Volume 78 ; 78 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; British Yearbook of International Law Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; British Yearbook of International Law Volume 80 ; 80 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; British Yearbook of International Law Volume 81 ; 81 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; British Yearbook of International Law Volume 81 ; 81 >
 
   }
 
