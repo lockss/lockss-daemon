@@ -434,7 +434,7 @@ while (my $line = <>) {
       $result = "--"
     }
     sleep(5);
-  } elsif ($plugin eq "MetaPressPlugin" || $plugin eq "ClockssMetaPressPlugin") {
+  } elsif ($plugin eq "MetaPressPlugin") {
     $url = sprintf("%sopenurl.asp?genre=volume&eissn=%s&volume=%s", 
       $param{base_url}, $param{journal_issn}, $param{volume_name});
     $man_url = uri_unescape($url);
@@ -442,7 +442,79 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$clockss_tag/))) {
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+        if ($man_contents =~ m/<tr>\s*<td class=.labelName.>Journal<\/td><td class=.labelValue.><a href=\"\S*\">(.*)<\/a>\s*<\/td>\s*<\/tr>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(5);
+  } elsif ($plugin eq "ClockssMetaPressPlugin") {
+    $url = sprintf("%sopenurl.asp?genre=volume&eissn=%s&volume=%s", 
+      $param{base_url}, $param{journal_issn}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+        if ($man_contents =~ m/<tr>\s*<td class=.labelName.>Journal<\/td><td class=.labelValue.><a href=\"\S*\">(.*)<\/a>\s*<\/td>\s*<\/tr>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(5);
+  } elsif ($plugin eq "BloomsburyQatarPlugin") {
+    $url = sprintf("%slockss/%s/%s/index.html", 
+      $param{base_url}, $param{journal_dir}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if ($man_contents =~ m/<title>\s*(.*)\s*LOCKSS Manifest Page\s*<\/title>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(5);
+  } elsif ($plugin eq "ClockssBloomsburyQatarPlugin") {
+    $url = sprintf("%sclockss/%s/%s/index.html", 
+      $param{base_url}, $param{journal_dir}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if ($man_contents =~ m/<title>\s*(.*)\s*CLOCKSS Manifest Page\s*<\/title>/si) {
         if ($man_contents =~ m/<tr>\s*<td class=.labelName.>Journal<\/td><td class=.labelValue.><a href=\"\S*\">(.*)<\/a>\s*<\/td>\s*<\/tr>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -495,7 +567,7 @@ while (my $line = <>) {
     $total_missing = $total_missing + 1;
   }
 }
-printf("Total manifests found: %d\n", $total_manifests);
-printf("Total missing manifests: %d\n", $total_missing);
-printf("Total AUs with unknown plugin: %d\n", $total_missing_plugin);
+printf("*Total manifests found: %d\n", $total_manifests);
+printf("*Total missing manifests: %d\n", $total_missing);
+printf("*Total AUs with unknown plugin: %d\n", $total_missing_plugin);
 exit(0);
