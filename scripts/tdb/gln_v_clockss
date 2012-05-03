@@ -107,17 +107,17 @@ then
     # if the AUs are identical, then compare the statuses.
       maxnumAUsA=$numdiffAUs
       echo "No AU differences"
-      ./tdbout -YRS -c auid,name -i ../../tdb/prod/$file | grep -vf gvc_gln.txt > $tpath/done_gln_yrs.txt
-      ./tdbout -D -c auid,name -i ../../tdb/prod/$file | grep -vf gvc_gln.txt | sed -e 's/HighWirePressPlugin/HighWirePressH20Plugin/' > $tpath/done_gln_d.txt
+      ./tdbout -EXYRS -c auid,name -i ../../tdb/prod/$file | grep -vf gvc_gln.txt > $tpath/done_gln_exyrs.txt
+      ./tdbout -D -c auid,name -i ../../tdb/prod/$file | grep -vf gvc_gln.txt | sed -e 's/HighWirePressPlugin/HighWirePressH20Plugin/' | sed -e 's/HighWireStrVolPlugin/HighWirePressH20Plugin/' > $tpath/done_gln_d.txt
       ./tdbout -c auid,name -Q 'status is "doNotProcess"' -i ../../tdb/prod/$file | grep -vf gvc_gln.txt > $tpath/done_gln_dnp.txt
-      cat $tpath/done_gln_yrs.txt $tpath/done_gln_d.txt $tpath/done_gln_dnp.txt | sort > $tpath/done_gln.txt
+      cat $tpath/done_gln_exyrs.txt $tpath/done_gln_d.txt $tpath/done_gln_dnp.txt | sort > $tpath/done_gln.txt
       ./tdbout -R -c auid,name -i ../../tdb/clockssingest/$file | grep -vf gvc_clockss.txt | sed -e 's/Clockss//' | sort > $tpath/done_cks.txt
       if ! diff $tpath/done_cks.txt $tpath/done_gln.txt > $tpath/done_diff.txt
       then
         echo "***AU status diffs: mark ready in GLN***"
         #cat $tpath/done_diff.txt
-        cat $tpath/done_diff.txt | grep "<" | head -n20
-        linenumA=`cat $tpath/done_diff.txt | grep "<" | wc -l`
+        cat $tpath/done_diff.txt | grep "^< " | sed s/..// | head -n20
+        linenumA=`cat $tpath/done_diff.txt | grep "^< " | wc -l`
         if [ $linenumA -lt $maxnumAUsA ]
         then
            maxnumAUsA=$linenumA
