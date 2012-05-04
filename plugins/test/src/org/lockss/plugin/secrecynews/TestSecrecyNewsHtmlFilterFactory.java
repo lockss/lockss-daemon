@@ -1,5 +1,5 @@
 /*
- * $Id: TestSecrecyNewsHtmlFilterFactory.java,v 1.1 2012-03-29 00:59:01 davidecorcoran Exp $
+ * $Id: TestSecrecyNewsHtmlFilterFactory.java,v 1.2 2012-05-04 22:30:08 davidecorcoran Exp $
  */
 
 /*
@@ -57,8 +57,8 @@ public class TestSecrecyNewsHtmlFilterFactory extends LockssTestCase {
 	  "name=\"akismet_comment_nonce\" " +
 	  "value=\"abcde12345\" " +
 	  "/></p>" +
-      
-      "<!-- Advertising Manager v3.4.19 (0.123 seconds.) -->";
+    "<!-- Advertising Manager v3.4.19 (0.123 seconds.) -->" +
+	  "<!-- 40 queries. 0.595 seconds. -->";
   
   private static final String inst2 =
 	  "<p style=\"display: none;\"> " +
@@ -67,8 +67,8 @@ public class TestSecrecyNewsHtmlFilterFactory extends LockssTestCase {
 	  "name=\"akismet_comment_nonce\" " +
 	  "value=\"fghij67890\" " +
 	  "/></p>" +
-      
-      "<!-- Advertising Manager v3.4.19 (0.456 seconds.) -->";
+    "<!-- Advertising Manager v3.4.19 (0.456 seconds.) -->" +
+    "<!-- 40 queries. 0.648 seconds. -->";
 
   public void testFiltering() throws PluginException, IOException {
     InputStream inA;

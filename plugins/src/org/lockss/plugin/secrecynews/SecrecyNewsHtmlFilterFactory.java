@@ -1,5 +1,5 @@
 /*
- * $Id: SecrecyNewsHtmlFilterFactory.java,v 1.1 2012-03-29 00:59:01 davidecorcoran Exp $
+ * $Id: SecrecyNewsHtmlFilterFactory.java,v 1.2 2012-05-04 22:30:08 davidecorcoran Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.filters.TagNameFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
@@ -44,6 +45,8 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 public class SecrecyNewsHtmlFilterFactory implements FilterFactory {
+    
+static Logger log = Logger.getLogger("SecrecyNewsHtmlFilterFactory");
 
 public InputStream createFilteredInputStream(ArchivalUnit au,
 	                                          InputStream in,
@@ -55,6 +58,8 @@ public InputStream createFilteredInputStream(ArchivalUnit au,
   HtmlNodeFilters.tagWithAttribute("input", "id", "akismet_comment_nonce"),
   // Filters Advertising Manager load time
   HtmlNodeFilters.commentWithString("Advertising Manager"),
+  // Other filters
+  HtmlNodeFilters.commentWithRegex("[0-9]+ queries. [0-9.]+ seconds."),
   };
 
   OrFilter combinedFilter = new OrFilter(filters);
@@ -64,6 +69,7 @@ public InputStream createFilteredInputStream(ArchivalUnit au,
   try {
 	      
   Reader prefilteredReader = new InputStreamReader(prefilteredStream, encoding);
+  log.debug("Returning filteredReader from SecrecyNewsHtmlFilterFactory");
   return new ReaderInputStream(prefilteredReader);
   }
   
