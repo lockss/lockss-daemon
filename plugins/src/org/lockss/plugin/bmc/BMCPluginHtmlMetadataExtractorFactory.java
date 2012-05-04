@@ -1,5 +1,5 @@
 /*
- * $Id: BMCPluginHtmlMetadataExtractorFactory.java,v 1.1 2012-03-08 00:02:48 akanshab01 Exp $
+ * $Id: BMCPluginHtmlMetadataExtractorFactory.java,v 1.2 2012-05-04 20:08:41 akanshab01 Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class BMCPluginHtmlMetadataExtractorFactory implements
       // <meta name="citation_volume" content="19" />
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       // <meta name="citation_issue" content="2" />
-      tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
+      tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);    
       // <meta name="citation_firstpage" content="pp. 12-13|p24|13-14" />
       tagMap.put("citation_firstpage", new MetadataField(
                  MetadataField.FIELD_START_PAGE,
@@ -84,7 +84,7 @@ public class BMCPluginHtmlMetadataExtractorFactory implements
       // <meta name="prism.issn" content="0955-9930" />
       // tagMap.put("prism.issn", MetadataField.FIELD_ISSN);
       // <meta name="prism.eIssn" content="1476-5489" />
-      tagMap.put("citation_issn", MetadataField.FIELD_EISSN);
+      tagMap.put("prism.issn", MetadataField.FIELD_ISSN);
     }
 
     @Override
