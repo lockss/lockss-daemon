@@ -69,7 +69,7 @@
     <string>plugin_name</string>
     <string>BioMed Central Plugin (BMC Series, PhysMath Central) - (CLOCKSS)</string>
   </entry>
-  <<entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
