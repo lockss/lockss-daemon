@@ -338,6 +338,7 @@
 
     title <
       name = Red Book Online ;
+      type = book ;
       issn = 1080-0131 ;
       eissn = 1544-9300 ;
       issnl = 1080-0131
@@ -350,7 +351,7 @@
 
     {
     
-      plugin = org.lockss.plugin.highwire.HighWirePlugin
+      plugin = needs.plugin
     
       au < doNotProcess ; 2003 ; Red Book Online Volume 2003 ; 2003 >
       au < doNotProcess ; 2006 ; Red Book Online Volume 2006 ; 2006 >
