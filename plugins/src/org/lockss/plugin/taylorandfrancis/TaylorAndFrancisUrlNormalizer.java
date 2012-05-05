@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisUrlNormalizer.java,v 1.1 2011-09-02 22:15:55 thib_gc Exp $
+ * $Id: TaylorAndFrancisUrlNormalizer.java,v 1.2 2012-05-05 14:00:14 pgust Exp $
  */
 
 /*
@@ -41,6 +41,15 @@ public class TaylorAndFrancisUrlNormalizer implements UrlNormalizer {
   
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
+    // Normalize double-slash
+    int ind = url.indexOf("://");
+    if (ind >= 0) {
+      ind = url.indexOf("//", ind + 3);
+      if (ind >= 0) {
+        url = url.substring(0, ind) + url.substring(ind + 1);
+      }
+    }
+    
     return StringUtils.chomp(url, "?cookieSet=1");
   }
 
