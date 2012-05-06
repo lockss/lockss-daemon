@@ -407,6 +407,7 @@
 
     title <
       name = Red Book Online ;
+      type = book ;
       issn = 1080-0131 ;
       eissn = 1544-9300 ;
       issnl = 1080-0131
@@ -417,7 +418,7 @@
     {
 
       comment[0] = This is a serialized book that requires a slight change to the H10 plugin, do not process unless the change is ready
-      pluginSuffix = ClockssHighWirePlugin
+      pluginSuffix = needs.plugin
 
       au < doNotProcess ; doNotProcess ; 2003 ; Red Book Online Volume 2003 ; 2003 >
       au < doNotProcess ; doNotProcess ; 2006 ; Red Book Online Volume 2006 ; 2006 >
