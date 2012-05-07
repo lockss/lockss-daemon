@@ -16,7 +16,6 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://ijs.sgmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[ijs61] = no permission from publisher
 
       au < released ; 1951 ; International Journal of Systematic and Evolutionary Microbiology Volume 1 ; 1 >
       au < released ; 1952 ; International Journal of Systematic and Evolutionary Microbiology Volume 2 ; 2 >
@@ -78,7 +77,7 @@
       au < released ; 2008 ; International Journal of Systematic and Evolutionary Microbiology Volume 58 ; 58 >
       au < released ; 2009 ; International Journal of Systematic and Evolutionary Microbiology Volume 59 ; 59 >
       au < released ; 2010 ; International Journal of Systematic and Evolutionary Microbiology Volume 60 ; 60 >
-      au < notReady ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 >
+      au < manifest ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 >
       au < manifest ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 >
 
     }
