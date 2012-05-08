@@ -8606,7 +8606,7 @@
         au < doNotProcess ; 2007 ; Education and Urban Society Volume 40 ; 40 >
         au < doNotProcess ; 2008 ; Education and Urban Society Volume 41 ; 41 >
         au < manifest ; 2009 ; Education and Urban Society Volume 42 ; 42 >
-        au < manifest ; 2011 ; Education and Urban Society Volume 43 ; 43 >
+        au < ready ; 2011 ; Education and Urban Society Volume 43 ; 43 >
         au < manifest ; 2012 ; Education and Urban Society Volume 44 ; 44 >
 
       }
@@ -8646,7 +8646,7 @@
         au < doNotProcess ; 2008 ; Education, Citizenship and Social Justice Volume 3 ; 3 >
         au < doNotProcess ; 2009 ; Education, Citizenship and Social Justice Volume 4 ; 4 >
         au < released ; 2010 ; Education, Citizenship and Social Justice Volume 5 ; 5 >
-        au < manifest ; 2011 ; Education, Citizenship and Social Justice Volume 6 ; 6 >
+        au < ready ; 2011 ; Education, Citizenship and Social Justice Volume 6 ; 6 >
         au < manifest ; 2012 ; Education, Citizenship and Social Justice Volume 7 ; 7 >
 
       }
@@ -9379,8 +9379,8 @@
         param[base_url] = http://eua.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2010 ; Environment and Urbanization Asia Volume 1 ; 1 >
-        au < manifest ; 2011 ; Environment and Urbanization Asia Volume 2 ; 2 >
+        au < ready ; 2010 ; Environment and Urbanization Asia Volume 1 ; 1 >
+        au < ready ; 2011 ; Environment and Urbanization Asia Volume 2 ; 2 >
         au < expected ; 2012 ; Environment and Urbanization Asia Volume 3 ; 3 >
 
       }
@@ -9474,7 +9474,7 @@
         au < doNotProcess ; 2008 ; Ethnicities Volume 8 ; 8 >
         au < doNotProcess ; 2009 ; Ethnicities Volume 9 ; 9 >
         au < released ; 2010 ; Ethnicities Volume 10 ; 10 >
-        au < manifest ; 2011 ; Ethnicities Volume 11 ; 11 >
+        au < ready ; 2011 ; Ethnicities Volume 11 ; 11 >
         au < manifest ; 2012 ; Ethnicities Volume 12 ; 12 >
 
       }
@@ -9521,7 +9521,7 @@
         au < doNotProcess ; 2008 ; Ethnography Volume 9 ; 9 >
         au < doNotProcess ; 2009 ; Ethnography Volume 10 ; 10 >
         au < released ; 2010 ; Ethnography Volume 11 ; 11 >
-        au < manifest ; 2011 ; Ethnography Volume 12 ; 12 >
+        au < ready ; 2011 ; Ethnography Volume 12 ; 12 >
         au < manifest ; 2012 ; Ethnography Volume 13 ; 13 >
 
       }
@@ -9881,7 +9881,7 @@
         au < doNotProcess ; 2008 ; European Journal of Criminology Volume 5 ; 5 >
         au < doNotProcess ; 2009 ; European Journal of Criminology Volume 6 ; 6 >
         au < released ; 2010 ; European Journal of Criminology Volume 7 ; 7 >
-        au < manifest ; 2011 ; European Journal of Criminology Volume 8 ; 8 >
+        au < ready ; 2011 ; European Journal of Criminology Volume 8 ; 8 >
         au < manifest ; 2012 ; European Journal of Criminology Volume 9 ; 9 >
 
       }
@@ -10161,7 +10161,7 @@
         au < doNotProcess ; 2008 ; European Journal of Social Theory Volume 11 ; 11 >
         au < doNotProcess ; 2009 ; European Journal of Social Theory Volume 12 ; 12 >
         au < released ; 2010 ; European Journal of Social Theory Volume 13 ; 13 >
-        au < manifest ; 2011 ; European Journal of Social Theory Volume 14 ; 14 >
+        au < ready ; 2011 ; European Journal of Social Theory Volume 14 ; 14 >
         au < manifest ; 2012 ; European Journal of Social Theory Volume 15 ; 15 >
 
       }
@@ -10332,7 +10332,7 @@
         au < doNotProcess ; 2008 ; European Union Politics Volume 9 ; 9 >
         au < doNotProcess ; 2009 ; European Union Politics Volume 10 ; 10 >
         au < released ; 2010 ; European Union Politics Volume 11 ; 11 >
-        au < manifest ; 2011 ; European Union Politics Volume 12 ; 12 >
+        au < ready ; 2011 ; European Union Politics Volume 12 ; 12 >
         au < manifest ; 2012 ; European Union Politics Volume 13 ; 13 >
 
       }
@@ -10396,7 +10396,7 @@
         au < doNotProcess ; 2008 ; European Urban and Regional Studies Volume 15 ; 15 >
         au < doNotProcess ; 2009 ; European Urban and Regional Studies Volume 16 ; 16 >
         au < released ; 2010 ; European Urban and Regional Studies Volume 17 ; 17 >
-        au < manifest ; 2011 ; European Urban and Regional Studies Volume 18 ; 18 >
+        au < ready ; 2011 ; European Urban and Regional Studies Volume 18 ; 18 >
         au < manifest ; 2012 ; European Urban and Regional Studies Volume 19 ; 19 >
 
       }
@@ -10448,7 +10448,7 @@
         au < doNotProcess ; 2008 ; Evaluation Volume 14 ; 14 >
         au < doNotProcess ; 2009 ; Evaluation Volume 15 ; 15 >
         au < released ; 2010 ; Evaluation Volume 16 ; 16 >
-        au < manifest ; 2011 ; Evaluation Volume 17 ; 17 >
+        au < ready ; 2011 ; Evaluation Volume 17 ; 17 >
         au < manifest ; 2012 ; Evaluation Volume 18 ; 18 >
 
       }
@@ -10800,7 +10800,7 @@
         au < doNotProcess ; 2007-2008 ; The Expository Times Volume 119 ; 119 >
         au < doNotProcess ; 2008-2009 ; The Expository Times Volume 120 ; 120 >
         au < manifest ; 2009-2010 ; The Expository Times Volume 121 ; 121 >
-        au < manifest ; 2010-2011 ; The Expository Times Volume 122 ; 122 >
+        au < ready ; 2010-2011 ; The Expository Times Volume 122 ; 122 >
         au < released ; 2011-2012 ; The Expository Times Volume 123 ; 123 >
         au < expected ; 2012-2013 ; The Expository Times Volume 124 ; 124 >
 
@@ -10871,7 +10871,7 @@
         au < doNotProcess ; 2008 ; Family Business Review Volume 21 ; 21 >
         au < doNotProcess ; 2009 ; Family Business Review Volume 22 ; 22 >
         au < released ; 2010 ; Family Business Review Volume 23 ; 23 >
-        au < manifest ; 2011 ; Family Business Review Volume 24 ; 24 >
+        au < ready ; 2011 ; Family Business Review Volume 24 ; 24 >
         au < manifest ; 2012 ; Family Business Review Volume 25 ; 25 >
 
       }
@@ -10991,7 +10991,7 @@
         au < doNotProcess ; 2008 ; Feminism & Psychology Volume 18 ; 18 >
         au < manifest ; 2009 ; Feminism & Psychology Volume 19 ; 19 >
         au < released ; 2010 ; Feminism & Psychology Volume 20 ; 20 >
-        au < manifest ; 2011 ; Feminism & Psychology Volume 21 ; 21 >
+        au < ready ; 2011 ; Feminism & Psychology Volume 21 ; 21 >
         au < manifest ; 2012 ; Feminism & Psychology Volume 22 ; 22 >
 
       }
@@ -11031,7 +11031,7 @@
         au < doNotProcess ; 2008 ; Feminist Criminology Volume 3 ; 3 >
         au < doNotProcess ; 2009 ; Feminist Criminology Volume 4 ; 4 >
         au < released ; 2010 ; Feminist Criminology Volume 5 ; 5 >
-        au < manifest ; 2011 ; Feminist Criminology Volume 6 ; 6 >
+        au < ready ; 2011 ; Feminist Criminology Volume 6 ; 6 >
         au < manifest ; 2012 ; Feminist Criminology Volume 7 ; 7 >
 
       }
@@ -11191,7 +11191,7 @@
         au < doNotProcess ; 2008 ; Field Methods Volume 20 ; 20 >
         au < doNotProcess ; 2009 ; Field Methods Volume 21 ; 21 >
         au < released ; 2010 ; Field Methods Volume 22 ; 22 >
-        au < manifest ; 2011 ; Field Methods Volume 23 ; 23 >
+        au < ready ; 2011 ; Field Methods Volume 23 ; 23 >
         au < manifest ; 2012 ; Field Methods Volume 24 ; 24 >
 
       }
@@ -11268,7 +11268,7 @@
         au < doNotProcess ; 2008 ; First Language Volume 28 ; 28 >
         au < doNotProcess ; 2009 ; First Language Volume 29 ; 29 >
         au < released ; 2010 ; First Language Volume 30 ; 30 >
-        au < manifest ; 2011 ; First Language Volume 31 ; 31 >
+        au < ready ; 2011 ; First Language Volume 31 ; 31 >
         au < manifest ; 2012 ; First Language Volume 32 ; 32 >
 
       }
@@ -11412,7 +11412,7 @@
         au < manifest ; 2008 ; Foot & Ankle Specialist Volume 1 ; 1 >
         au < doNotProcess ; 2009 ; Foot & Ankle Specialist Volume 2 ; 2 >
         au < released ; 2010 ; Foot & Ankle Specialist Volume 3 ; 3 >
-        au < manifest ; 2011 ; Foot & Ankle Specialist Volume 4 ; 4 >
+        au < ready ; 2011 ; Foot & Ankle Specialist Volume 4 ; 4 >
         au < manifest ; 2012 ; Foot & Ankle Specialist Volume 5 ; 5 >
 
       }
@@ -20481,8 +20481,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < doNotProcess ; 2007 ; Journal of European Social Policy Volume 17 ; 17 >
         au < doNotProcess ; 2008 ; Journal of European Social Policy Volume 18 ; 18 >
         au < doNotProcess ; 2009 ; Journal of European Social Policy Volume 19 ; 19 >
-        au < manifest ; 2010 ; Journal of European Social Policy Volume 20 ; 20 >
-        au < manifest ; 2011 ; Journal of European Social Policy Volume 21 ; 21 >
+        au < ready ; 2010 ; Journal of European Social Policy Volume 20 ; 20 >
+        au < ready ; 2011 ; Journal of European Social Policy Volume 21 ; 21 >
         au < manifest ; 2012 ; Journal of European Social Policy Volume 22 ; 22 >
 
       }
