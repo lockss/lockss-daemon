@@ -3306,8 +3306,8 @@
 
     param[journal_issn] = 2047-0894
 
-    comment[0] = forthcoming
-    
+    au < exists ; 2012 ; International Journal of Emergency Services Volume 1 ; 1 >
+
   }
 
   {
@@ -5047,9 +5047,16 @@
     >
 
     param[journal_issn] = 1026-4116
-   
-    comment[0] = forthcoming
-     
+
+    au < exists ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 >
+    au < exists ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 >
+    au < exists ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 >
+    au < exists ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 >
+    au < exists ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 >
+    au < exists ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 >
+    au < exists ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 >
+    au < exists ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 >
+
   }
 
 
@@ -6618,11 +6625,19 @@
   {
     title <
       name = Journal of Technology Management and Strategy in China ;
-      issn = 1756 4425
+      issn = 1756-4425
     >
 
-    param[journal_issn] = 1756 4425
+    param[journal_issn] = 1756-4425
     comment[0] = translation or compilation from 1746-8779 described on china.emeraldinsight.com with no AUs 
+
+    au < exists ; 2006 ; Journal of Technology Management and Strategy in China Volume 1 ; 1 >
+    au < exists ; 2007 ; Journal of Technology Management and Strategy in China Volume 2 ; 2 >
+    au < exists ; 2008 ; Journal of Technology Management and Strategy in China Volume 3 ; 3 >
+    au < exists ; 2009 ; Journal of Technology Management and Strategy in China Volume 4 ; 4 >
+    au < exists ; 2010 ; Journal of Technology Management and Strategy in China Volume 5 ; 5 >
+    au < exists ; 2011 ; Journal of Technology Management and Strategy in China Volume 6 ; 6 >
+    au < exists ; 2012 ; Journal of Technology Management and Strategy in China Volume 7 ; 7 >
 
   }
 
@@ -9648,9 +9663,11 @@
     >
 
     param[journal_issn] = 2042-5961 
-   
-    comment[0] = forthcoming
-     
+
+    au < exists ; 2010 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 >
+    au < exists ; 2011 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 >
+    au < exists ; 2012 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 8 ; 8 >
+
   }
 
   {
@@ -9661,9 +9678,11 @@
     >
 
     param[journal_issn] = 2042-5945
-   
-    comment[0] = forthcoming
-     
+
+      au < exists ; 2010 ; World Journal of Science, Technology and Sustainable Development Volume 7 ; 7 >
+      au < exists ; 2011 ; World Journal of Science, Technology and Sustainable Development Volume 8 ; 8 >
+      au < exists ; 2012 ; World Journal of Science, Technology and Sustainable Development Volume 9 ; 9 >
+
   }
 
   {
