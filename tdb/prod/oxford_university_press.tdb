@@ -1052,7 +1052,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Annals of Botany Volume 105 ; 105 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Annals of Botany Volume 106 ; 106 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Annals of Botany Volume 107 ; 107 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Annals of Botany Volume 108 ; 108 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Annals of Botany Volume 108 ; 108 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Annals of Botany Volume 109 ; 109 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Annals of Botany Volume 110 ; 110 >
 
@@ -3320,7 +3320,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Children & Schools Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Children & Schools Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Children & Schools Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Children & Schools Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Children & Schools Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Children & Schools Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Children & Schools Volume 34 ; 34 >
 
@@ -3444,7 +3444,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Classical Receptions Journal Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Classical Receptions Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Classical Receptions Journal Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Classical Receptions Journal Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Classical Receptions Journal Volume 4 ; 4 >
 
@@ -3514,8 +3514,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Clinical Infectious Diseases Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Clinical Infectious Diseases Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Clinical Infectious Diseases Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Clinical Infectious Diseases Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Clinical Infectious Diseases Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Clinical Infectious Diseases Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Clinical Infectious Diseases Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Clinical Infectious Diseases Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Clinical Infectious Diseases Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Clinical Infectious Diseases Volume 54 ; 54 >
@@ -3543,7 +3543,7 @@
 
     au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; NDT Plus Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; NDT Plus Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; NDT Plus Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; NDT Plus Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; NDT Plus Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Clinical Kidney Journal Volume 5 ; 5 >
 
@@ -3938,7 +3938,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Current Legal Problems Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Current Legal Problems Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Current Legal Problems Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Current Legal Problems Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Current Legal Problems Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Current Legal Problems Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Current Legal Problems Volume 65 ; 65 >
 
@@ -3957,7 +3957,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Database: The Journal of Biological Databases and Curation Volume 2009 ; 2009 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Database: The Journal of Biological Databases and Curation Volume 2010 ; 2010 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Database: The Journal of Biological Databases and Curation Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Database: The Journal of Biological Databases and Curation Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Database: The Journal of Biological Databases and Curation Volume 2012 ; 2012 >
 
@@ -4203,7 +4203,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; English: Journal of the English Association Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; English: Journal of the English Association Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; English: Journal of the English Association Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; English: Journal of the English Association Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; English: Journal of the English Association Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; English: Journal of the English Association Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; English: Journal of the English Association Volume 61 ; 61 >
 
@@ -4552,7 +4552,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Environmental History Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Environmental History Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Environmental History Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Environmental History Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Environmental History Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Environmental History Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Environmental History Volume 17 ; 17 >
 
@@ -4998,8 +4998,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 41 ; 41 >
@@ -5115,7 +5115,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; European Journal of Heart Failure Supplements Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; European Journal of Heart Failure Supplements Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Heart Failure Supplements Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; European Journal of Heart Failure Supplements Volume 11 ; 11 >
 
@@ -5379,7 +5379,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; European Review of Economic History Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; European Review of Economic History Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; European Review of Economic History Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; European Review of Economic History Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; European Review of Economic History Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Review of Economic History Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; European Review of Economic History Volume 16 ; 16 >
 
@@ -6028,7 +6028,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Genome Biology and Evolution Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Genome Biology and Evolution Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Genome Biology and Evolution Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Genome Biology and Evolution Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 >
 
@@ -6234,7 +6234,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Health & Social Work Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Health & Social Work Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Health & Social Work Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Health & Social Work Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Health & Social Work Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Health & Social Work Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Health & Social Work Volume 37 ; 37 >
 
@@ -6961,7 +6961,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; ICSID Review: Foreign Investment Law Journal Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; ICSID Review: Foreign Investment Law Journal Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 >
 
@@ -7541,7 +7541,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Interactive CardioVascular and Thoracic Surgery Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 15 ; 15 >
@@ -9165,7 +9165,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; The Journal of Biochemistry Volume 147 ; 147 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Journal of Biochemistry Volume 148 ; 148 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journal of Biochemistry Volume 149 ; 149 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; The Journal of Biochemistry Volume 150 ; 150 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; The Journal of Biochemistry Volume 150 ; 150 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Journal of Biochemistry Volume 151 ; 151 >
     au < HighWirePressH20Plugin ; exists ; 2012 ; The Journal of Biochemistry Volume 152 ; 152 >
 
@@ -9186,7 +9186,7 @@
     param[base_url] = http://chromsci.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Chromatographic Science Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Chromatographic Science Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Chromatographic Science Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Chromatographic Science Volume 51 ; 51 >
 
