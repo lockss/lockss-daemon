@@ -34948,7 +34948,7 @@
 
       au < manifest ; exists ; 2010 ; World Journal for Pediatric and Congenital Heart Surgery Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; World Journal for Pediatric and Congenital Heart Surgery Volume 2 ; 2 ; >
-      au < boost ; exists ; 2012 ; World Journal for Pediatric and Congenital Heart Surgery Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2012 ; World Journal for Pediatric and Congenital Heart Surgery Volume 3 ; 3 ; >
 
     }
 
@@ -34974,7 +34974,7 @@
       au < manifest ; exists ; 2009 ; World Policy Journal Volume 26 ; 26 ; >
       au < manifest ; exists ; 2010 ; World Policy Journal Volume 27 ; 27 ; >
       au < released ; crawling ; 2011 ; World Policy Journal Volume 28 ; 28 ; >
-      au < boost ; exists ; 2012 ; World Policy Journal Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2012 ; World Policy Journal Volume 29 ; 29 ; >
 
     }
 
@@ -35031,7 +35031,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Written Communication Volume 26 ; 26 ; >
       au < manifest ; exists ; 2010 ; Written Communication Volume 27 ; 27 ; >
       au < released ; crawling ; 2011 ; Written Communication Volume 28 ; 28 ; >
-      au < boost ; exists ; 2012 ; Written Communication Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2012 ; Written Communication Volume 29 ; 29 ; >
 
     }
 
@@ -35079,7 +35079,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Young Volume 17 ; 17 ; >
       au < released ; manifest ; 2010 ; Young Volume 18 ; 18 ; >
       au < released ; crawling ; 2011 ; Young Volume 19 ; 19 ; >
-      au < boost ; exists ; 2012 ; Young Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2012 ; Young Volume 20 ; 20 ; >
 
     }
 
@@ -35111,8 +35111,8 @@
       au < manifest ; exists ; 2007-2008 ; Young Exceptional Children Volume 11 ; 11 ; >
       au < manifest ; exists ; 2008-2009 ; Young Exceptional Children Volume 12 ; 12 ; >
       au < manifest ; exists ; 2009-2010 ; Young Exceptional Children Volume 13 ; 13 ; >
-      au < boost ; exists ; 2011 ; Young Exceptional Children Volume 14 ; 14 ; >
-      au < boost ; exists ; 2012 ; Young Exceptional Children Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2011 ; Young Exceptional Children Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2012 ; Young Exceptional Children Volume 15 ; 15 ; >
 
     }
 
