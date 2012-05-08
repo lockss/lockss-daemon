@@ -143,7 +143,8 @@
 
       param[base_url] = http://jh.elmerpress.com/
       param[journal_id] = jh
-      comment[0] = no content published yet
+
+      au < manifest ; 2012 ; Journal of Hematology Volume 1 ; 1 >
 
     }
 
