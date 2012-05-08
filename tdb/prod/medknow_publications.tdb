@@ -5,10 +5,10 @@
   >
     
   rights = openaccess
-  plugin = org.lockss.plugin.medknow.MedknowPlugin
+  plugin = needs plugin
   implicit < status ; year ; name ; param[year] ; param[volume_name] >
   
-  comment[RU3757] = plugin isn't in CVS. approved yet?
+  comment[RU3757] = plugin isn't in CVS. waiting for some publisher work RT898
     
   {
     title <
