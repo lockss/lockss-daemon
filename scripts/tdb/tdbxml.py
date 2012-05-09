@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.24 2012-04-03 01:37:45 thib_gc Exp $
+# $Id: tdbxml.py,v 1.25 2012-05-09 22:18:54 thib_gc Exp $
 #
 # Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -83,6 +83,8 @@ def __short_au_name(au):
     str = re.sub(r'é|è|ê|ë|ē', 'e', str)
     str = re.sub(r'Í|Ì|Î|Ï|Ī', 'I', str)
     str = re.sub(r'í|ì|î|ï|ī', 'i', str)
+    str = re.sub(r'Ş', 'S', str)
+    str = re.sub(r'ş', 's', str)
     str = re.sub(r'Ž', 'Z', str)
     str = re.sub(r'ž', 'z', str)
     str = re.sub(r'\W+', '', str)
