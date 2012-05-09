@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = Federation of American Scientists
+  >
+  
+  {
+  
+    title <
+      name = Secrecy News ;
+      issn = 1939-1986 ;
+      issnl = 1939-1986
+    >
+    
+    rights = openaccess
+    plugin = org.lockss.plugin.secrecynews.SecrecyNewsPlugin
+    param[base_url] = http://www.fas.org/
+    implicit < status ; year ; name ; param[year] >
+
+    au < manifest ; 2000 ; Secrecy News 2000 ; 2000 >
+    au < manifest ; 2001 ; Secrecy News 2001 ; 2001 >
+    au < manifest ; 2002 ; Secrecy News 2002 ; 2002 >
+    au < manifest ; 2003 ; Secrecy News 2003 ; 2003 >
+    au < manifest ; 2004 ; Secrecy News 2004 ; 2004 >
+    au < manifest ; 2005 ; Secrecy News 2005 ; 2005 >
+    au < manifest ; 2006 ; Secrecy News 2006 ; 2006 >
+    au < manifest ; 2007 ; Secrecy News 2007 ; 2007 >
+    au < ready ; 2008 ; Secrecy News 2008 ; 2008 >
+    au < ready ; 2009 ; Secrecy News 2009 ; 2009 >
+    au < ready ; 2010 ; Secrecy News 2010 ; 2010 >
+    au < ready ; 2011 ; Secrecy News 2011 ; 2011 >
+    au < testing ; 2012 ; Secrecy News 2012 ; 2012 >
+  
+  }
+
+}
