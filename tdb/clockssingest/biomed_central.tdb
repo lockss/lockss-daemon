@@ -1759,6 +1759,14 @@
         issn = 1480-9222 ;
         issnl = 1480-9222
       >
+      
+      param[base_url] = http://www.biologicalproceduresonline.com/
+      param[journal_issn] = 1480-9222
+
+      au < manifest ; exists ; 2009 ; Biological Procedures Online Volume 11 ; 11 >
+      au < manifest ; exists ; 2009-2010 ; Biological Procedures Online Volume 12 ; 12 >
+      au < manifest ; exists ; 2010-2011 ; Biological Procedures Online Volume 13 ; 13 >
+      au < manifest ; exists ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
 
 
     }
