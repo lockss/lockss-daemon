@@ -2848,6 +2848,19 @@ comment[bmr] = journal archive available, but no new volumes
         issnl = 0368-0762
       >
 
+      param[base_url] = http://www.irishvetjournal.org/
+      param[journal_issn] = 0368-0762
+
+      au < manifest ; exists ; 2004 ; Irish Veterinary Journal Volume 57 ; 57 >
+      au < manifest ; exists ; 2005 ; Irish Veterinary Journal Volume 58 ; 58 >
+      au < manifest ; exists ; 2006 ; Irish Veterinary Journal Volume 59 ; 59 >
+      au < manifest ; exists ; 2007 ; Irish Veterinary Journal Volume 60 ; 60 >
+      au < manifest ; exists ; 2008 ; Irish Veterinary Journal Volume 61 ; 61 >
+      au < manifest ; exists ; 2009 ; Irish Veterinary Journal Volume 62 ; 62 >
+      au < manifest ; exists ; 2010 ; Irish Veterinary Journal Volume 63 ; 63 >
+      au < manifest ; exists ; 2011 ; Irish Veterinary Journal Volume 64 ; 64 >
+      au < manifest ; exists ; 2012 ; Irish Veterinary Journal Volume 65 ; 65 >
+
     }
 
     {
@@ -4108,6 +4121,12 @@ comment[bmr] = journal archive available, but no new volumes
         issn = 1297-9716 ;
         issnl = 1297-9716
       >
+
+      param[base_url] = http://www.veterinaryresearch.org/
+      param[journal_issn] = 1297-9716
+
+      au < manifest ; exists ; 2011 ; Veterinary Research Volume 42 ; 42 >
+      au < manifest ; exists ; 2012 ; Veterinary Research Volume 43 ; 43 >
 
     }
 
