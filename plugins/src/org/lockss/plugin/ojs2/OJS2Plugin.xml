@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -138,8 +138,8 @@
   <entry>
     <string>au_substance_url_pattern</string>
       <list>
-        <string>&quot;^%sindex\.php/%s/article/download/[0-9]{4}/[0-9]{4}$&quot;, base_url, journal_id</string>
-        <string>&quot;^%sindex\.php/%s/article/view/[0-9]{4}/$&quot;, base_url, journal_id</string>
+        <string>&quot;^%sindex\.php/%s/article/download/[0-9]+/[0-9]+$&quot;, base_url, journal_id</string>
+        <string>&quot;^%sindex\.php/%s/article/view/[0-9]+/$&quot;, base_url, journal_id</string>
       </list>
   </entry>
   <entry>
