@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Secrecy News %d&quot;, year</string>
+    <string>&quot;Secrecy News Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -27,10 +27,10 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%ssgp/news/secrecy/%d/index.html&quot;, base_url, year</string>
-      <string>1,&quot;%ssgp/news/secrecy/%d/.*&quot;, base_url, year</string>
-      <string>1,&quot;\.([Pp][Dd][Ff]|[Gg][Ii][Ff]|[Jj][Pp][Ee][Gg]|[Jj][Pp][Gg]|[Cc][Ss][Ss]|[Pp][Nn][Gg])$&quot;</string>
+      <string>1,&quot;%ssgp/news/secrecy/%d/index\.html&quot;, base_url, year</string>
+      <string>1,&quot;%ssgp/news/secrecy/%d/&quot;, base_url, year</string>
       <string>1,&quot;%d&quot;, year</string>
     </list>
   </entry>
