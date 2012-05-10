@@ -1759,11 +1759,14 @@
         issn = 1480-9222 ;
         issnl = 1480-9222
       >
+      
+      param[base_url] = http://www.biologicalproceduresonline.com/
+      param[journal_issn] = 1480-9222
 
-    au < manifest ; 2009 ; Biological Procedures Online Volume 11 ; 11 >
-    au < manifest ; 2010 ; Biological Procedures Online Volume 12 ; 12 >
-    au < manifest ; 2011 ; Biological Procedures Online Volume 13 ; 13 >
-    au < manifest ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
+      au < manifest ; 2009 ; Biological Procedures Online Volume 11 ; 11 >
+      au < manifest ; 2010 ; Biological Procedures Online Volume 12 ; 12 >
+      au < manifest ; 2011 ; Biological Procedures Online Volume 13 ; 13 >
+      au < manifest ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
 
     }
 
@@ -1774,7 +1777,7 @@
         issnl = 1745-6150
       >
 
-comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/supplementary/OST-HTH_Supp.html
+      comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/supplementary/OST-HTH_Supp.html
 
       param[base_url] = http://www.biology-direct.com/
       param[journal_issn] = 1745-6150
