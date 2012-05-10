@@ -19,12 +19,12 @@
       param[base_url] = http://edrv.endojournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; ready ; 1980 ; Endocrine Reviews Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; releasing ; 1980 ; Endocrine Reviews Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; testing ; 1981 ; Endocrine Reviews Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; testing ; 1982 ; Endocrine Reviews Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; ready ; 1983 ; Endocrine Reviews Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; ready ; 1984 ; Endocrine Reviews Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; ready ; 1985 ; Endocrine Reviews Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; releasing ; 1983 ; Endocrine Reviews Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; releasing ; 1984 ; Endocrine Reviews Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; releasing ; 1985 ; Endocrine Reviews Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; testing ; 1986 ; Endocrine Reviews Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; testing ; 1987 ; Endocrine Reviews Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; testing ; 1988 ; Endocrine Reviews Volume 9 ; 9 >
@@ -38,8 +38,8 @@
       au < HighWirePressH20Plugin ; ready ; 1996 ; Endocrine Reviews Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; testing ; 1997 ; Endocrine Reviews Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; testing ; 1998 ; Endocrine Reviews Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; ready ; 1999 ; Endocrine Reviews Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; ready ; 2000 ; Endocrine Reviews Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; releasing ; 1999 ; Endocrine Reviews Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; releasing ; 2000 ; Endocrine Reviews Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; testing ; 2001 ; Endocrine Reviews Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; ready ; 2002 ; Endocrine Reviews Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; testing ; 2003 ; Endocrine Reviews Volume 24 ; 24 >
@@ -120,20 +120,20 @@
       au < HighWirePressH20Plugin ; testing ; 1950 ; Endocrinology Volume 46 ; 46 >
       au < HighWirePressH20Plugin ; ready ; 1950 ; Endocrinology Volume 47 ; 47 >
       au < HighWirePressH20Plugin ; testing ; 1951 ; Endocrinology Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; ready ; 1951 ; Endocrinology Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; ready ; 1952 ; Endocrinology Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; releasing ; 1951 ; Endocrinology Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; releasing ; 1952 ; Endocrinology Volume 50 ; 50 >
       au < HighWirePressH20Plugin ; testing ; 1952 ; Endocrinology Volume 51 ; 51 >
       au < HighWirePressH20Plugin ; testing ; 1953 ; Endocrinology Volume 52 ; 52 >
       au < HighWirePressH20Plugin ; ready ; 1953 ; Endocrinology Volume 53 ; 53 >
       au < HighWirePressH20Plugin ; testing ; 1954 ; Endocrinology Volume 54 ; 54 >
       au < HighWirePressH20Plugin ; testing ; 1954 ; Endocrinology Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; ready ; 1955 ; Endocrinology Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; ready ; 1955 ; Endocrinology Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; ready ; 1956 ; Endocrinology Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; releasing ; 1955 ; Endocrinology Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; releasing ; 1955 ; Endocrinology Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; releasing ; 1956 ; Endocrinology Volume 58 ; 58 >
       au < HighWirePressH20Plugin ; testing ; 1956 ; Endocrinology Volume 59 ; 59 >
       au < HighWirePressH20Plugin ; testing ; 1957 ; Endocrinology Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; ready ; 1957 ; Endocrinology Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; ready ; 1958 ; Endocrinology Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; releasing ; 1957 ; Endocrinology Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; releasing ; 1958 ; Endocrinology Volume 62 ; 62 >
       au < HighWirePressH20Plugin ; testing ; 1958 ; Endocrinology Volume 63 ; 63 >
       au < HighWirePressH20Plugin ; ready ; 1959 ; Endocrinology Volume 64 ; 64 >
       au < HighWirePressH20Plugin ; testing ; 1959 ; Endocrinology Volume 65 ; 65 >
@@ -147,8 +147,8 @@
       au < HighWirePressH20Plugin ; testing ; 1963 ; Endocrinology Volume 73 ; 73 >
       au < HighWirePressH20Plugin ; testing ; 1964 ; Endocrinology Volume 74 ; 74 >
       au < HighWirePressH20Plugin ; testing ; 1964 ; Endocrinology Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; ready ; 1965 ; Endocrinology Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; ready ; 1965 ; Endocrinology Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; releasing ; 1965 ; Endocrinology Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; releasing ; 1965 ; Endocrinology Volume 77 ; 77 >
       au < HighWirePressH20Plugin ; testing ; 1966 ; Endocrinology Volume 78 ; 78 >
       au < HighWirePressH20Plugin ; testing ; 1966 ; Endocrinology Volume 79 ; 79 >
       au < HighWirePressH20Plugin ; testing ; 1967 ; Endocrinology Volume 80 ; 80 >
@@ -181,9 +181,9 @@
       au < HighWirePressH20Plugin ; testing ; 1980 ; Endocrinology Volume 107 ; 107 >
       au < HighWirePressH20Plugin ; ready ; 1981 ; Endocrinology Volume 108 ; 108 >
       au < HighWirePressH20Plugin ; testing ; 1981 ; Endocrinology Volume 109 ; 109 >
-      au < HighWirePressH20Plugin ; ready ; 1982 ; Endocrinology Volume 110 ; 110 >
-      au < HighWirePressH20Plugin ; ready ; 1982 ; Endocrinology Volume 111 ; 111 >
-      au < HighWirePressH20Plugin ; ready ; 1983 ; Endocrinology Volume 112 ; 112 >
+      au < HighWirePressH20Plugin ; releasing ; 1982 ; Endocrinology Volume 110 ; 110 >
+      au < HighWirePressH20Plugin ; releasing ; 1982 ; Endocrinology Volume 111 ; 111 >
+      au < HighWirePressH20Plugin ; releasing ; 1983 ; Endocrinology Volume 112 ; 112 >
       au < HighWirePressH20Plugin ; testing ; 1983 ; Endocrinology Volume 113 ; 113 >
       au < HighWirePressH20Plugin ; testing ; 1984 ; Endocrinology Volume 114 ; 114 >
       au < HighWirePressH20Plugin ; testing ; 1984 ; Endocrinology Volume 115 ; 115 >
@@ -204,8 +204,8 @@
       au < HighWirePressH20Plugin ; testing ; 1992 ; Endocrinology Volume 130 ; 130 >
       au < HighWirePressH20Plugin ; ready ; 1992 ; Endocrinology Volume 131 ; 131 >
       au < HighWirePressH20Plugin ; testing ; 1993 ; Endocrinology Volume 132 ; 132 >
-      au < HighWirePressH20Plugin ; ready ; 1993 ; Endocrinology Volume 133 ; 133 >
-      au < HighWirePressH20Plugin ; ready ; 1994 ; Endocrinology Volume 134 ; 134 >
+      au < HighWirePressH20Plugin ; releasing ; 1993 ; Endocrinology Volume 133 ; 133 >
+      au < HighWirePressH20Plugin ; releasing ; 1994 ; Endocrinology Volume 134 ; 134 >
       au < HighWirePressH20Plugin ; testing ; 1994 ; Endocrinology Volume 135 ; 135 >
       au < HighWirePressH20Plugin ; testing ; 1995 ; Endocrinology Volume 136 ; 136 >
       au < HighWirePressH20Plugin ; testing ; 1996 ; Endocrinology Volume 137 ; 137 >
@@ -222,7 +222,7 @@
       au < HighWirePressPlugin ; released ; 2007 ; Endocrinology Volume 148 ; 148 >
       au < HighWirePressPlugin ; released ; 2008 ; Endocrinology Volume 149 ; 149 >
       au < HighWirePressPlugin ; released ; 2009 ; Endocrinology Volume 150 ; 150 >
-      au < HighWirePressH20Plugin ; ready ; 2010 ; Endocrinology Volume 151 ; 151 >
+      au < HighWirePressH20Plugin ; releasing ; 2010 ; Endocrinology Volume 151 ; 151 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Endocrinology Volume 152 ; 152 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Endocrinology Volume 153 ; 153 >
 
