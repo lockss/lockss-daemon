@@ -8261,8 +8261,6 @@
         param[base_url] = http://dij.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[notReady] = manifest page has bad link http://dij.sagepub.com/cgi/content/46/1.long
-  
         au < exists ; 1970 ; Drug Information Journal Volume 4 ; 4 >
         au < exists ; 1971 ; Drug Information Journal Volume 5 ; 5 >
         au < exists ; 1972 ; Drug Information Journal Volume 6 ; 6 >
@@ -8305,7 +8303,7 @@
         au < exists ; 2009 ; Drug Information Journal Volume 43 ; 43 >
         au < exists ; 2010 ; Drug Information Journal Volume 44 ; 44 >
         au < exists ; 2011 ; Drug Information Journal Volume 45 ; 45 >
-        au < notReady ; 2012 ; Drug Information Journal Volume 46 ; 46 >
+        au < manifest ; 2012 ; Drug Information Journal Volume 46 ; 46 >
   
       }
   
