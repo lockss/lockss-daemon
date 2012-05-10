@@ -17,15 +17,15 @@
     param[base_url] = http://www.jaoa.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < releasing ; 1950-1951 ; JAOA: Journal of the American Osteopathic Association Volume 50 ; 50 >
-    au < releasing ; 1951-1952 ; JAOA: Journal of the American Osteopathic Association Volume 51 ; 51 >
+    au < released ; 1950-1951 ; JAOA: Journal of the American Osteopathic Association Volume 50 ; 50 >
+    au < released ; 1951-1952 ; JAOA: Journal of the American Osteopathic Association Volume 51 ; 51 >
     au < testing ; 1952-1953 ; JAOA: Journal of the American Osteopathic Association Volume 52 ; 52 >
-    au < releasing ; 1953-1954 ; JAOA: Journal of the American Osteopathic Association Volume 53 ; 53 >
+    au < released ; 1953-1954 ; JAOA: Journal of the American Osteopathic Association Volume 53 ; 53 >
     au < testing ; 1954-1955 ; JAOA: Journal of the American Osteopathic Association Volume 54 ; 54 >
-    au < releasing ; 1955-1956 ; JAOA: Journal of the American Osteopathic Association Volume 55 ; 55 >
-    au < releasing ; 1956-1957 ; JAOA: Journal of the American Osteopathic Association Volume 56 ; 56 >
-    au < releasing ; 1957-1958 ; JAOA: Journal of the American Osteopathic Association Volume 57 ; 57 >
-    au < releasing ; 1958 ; JAOA: Journal of the American Osteopathic Association Volume 58 ; 58 >
+    au < released ; 1955-1956 ; JAOA: Journal of the American Osteopathic Association Volume 55 ; 55 >
+    au < released ; 1956-1957 ; JAOA: Journal of the American Osteopathic Association Volume 56 ; 56 >
+    au < released ; 1957-1958 ; JAOA: Journal of the American Osteopathic Association Volume 57 ; 57 >
+    au < released ; 1958 ; JAOA: Journal of the American Osteopathic Association Volume 58 ; 58 >
     au < doesNotExist ; 1959 ; JAOA: Journal of the American Osteopathic Association Volume 59 ; 59 >
     au < doesNotExist ; 1960 ; JAOA: Journal of the American Osteopathic Association Volume 60 ; 60 >
     au < doesNotExist ; 1961 ; JAOA: Journal of the American Osteopathic Association Volume 61 ; 61 >
@@ -35,32 +35,32 @@
     au < testing ; 1965 ; JAOA: Journal of the American Osteopathic Association Volume 65 ; 65 >
     au < testing ; 1966 ; JAOA: Journal of the American Osteopathic Association Volume 66 ; 66 >
     au < testing ; 1967 ; JAOA: Journal of the American Osteopathic Association Volume 67 ; 67 >
-    au < releasing ; 1968 ; JAOA: Journal of the American Osteopathic Association Volume 68 ; 68 >
-    au < releasing ; 1969 ; JAOA: Journal of the American Osteopathic Association Volume 69 ; 69 >
-    au < releasing ; 1970 ; JAOA: Journal of the American Osteopathic Association Volume 70 ; 70 >
-    au < releasing ; 1971 ; JAOA: Journal of the American Osteopathic Association Volume 71 ; 71 >
-    au < releasing ; 1972 ; JAOA: Journal of the American Osteopathic Association Volume 72 ; 72 >
-    au < releasing ; 1973 ; JAOA: Journal of the American Osteopathic Association Volume 73 ; 73 >
-    au < releasing ; 1974 ; JAOA: Journal of the American Osteopathic Association Volume 74 ; 74 >
+    au < released ; 1968 ; JAOA: Journal of the American Osteopathic Association Volume 68 ; 68 >
+    au < released ; 1969 ; JAOA: Journal of the American Osteopathic Association Volume 69 ; 69 >
+    au < released ; 1970 ; JAOA: Journal of the American Osteopathic Association Volume 70 ; 70 >
+    au < released ; 1971 ; JAOA: Journal of the American Osteopathic Association Volume 71 ; 71 >
+    au < released ; 1972 ; JAOA: Journal of the American Osteopathic Association Volume 72 ; 72 >
+    au < released ; 1973 ; JAOA: Journal of the American Osteopathic Association Volume 73 ; 73 >
+    au < released ; 1974 ; JAOA: Journal of the American Osteopathic Association Volume 74 ; 74 >
     au < testing ; 1975 ; JAOA: Journal of the American Osteopathic Association Volume 75 ; 75 >
     au < testing ; 1976 ; JAOA: Journal of the American Osteopathic Association Volume 76 ; 76 >
-    au < releasing ; 1977 ; JAOA: Journal of the American Osteopathic Association Volume 77 ; 77 >
+    au < released ; 1977 ; JAOA: Journal of the American Osteopathic Association Volume 77 ; 77 >
     au < testing ; 1978 ; JAOA: Journal of the American Osteopathic Association Volume 78 ; 78 >
-    au < releasing ; 1979 ; JAOA: Journal of the American Osteopathic Association Volume 79 ; 79 >
-    au < releasing ; 1980 ; JAOA: Journal of the American Osteopathic Association Volume 80 ; 80 >
-    au < releasing ; 1981 ; JAOA: Journal of the American Osteopathic Association Volume 81 ; 81 >
-    au < releasing ; 1982 ; JAOA: Journal of the American Osteopathic Association Volume 82 ; 82 >
+    au < released ; 1979 ; JAOA: Journal of the American Osteopathic Association Volume 79 ; 79 >
+    au < released ; 1980 ; JAOA: Journal of the American Osteopathic Association Volume 80 ; 80 >
+    au < released ; 1981 ; JAOA: Journal of the American Osteopathic Association Volume 81 ; 81 >
+    au < released ; 1982 ; JAOA: Journal of the American Osteopathic Association Volume 82 ; 82 >
     au < testing ; 1983 ; JAOA: Journal of the American Osteopathic Association Volume 83 ; 83 >
     au < testing ; 1984 ; JAOA: Journal of the American Osteopathic Association Volume 84 ; 84 >
-    au < releasing ; 1985 ; JAOA: Journal of the American Osteopathic Association Volume 85 ; 85 >
-    au < releasing ; 1986 ; JAOA: Journal of the American Osteopathic Association Volume 86 ; 86 >
-    au < releasing ; 1987 ; JAOA: Journal of the American Osteopathic Association Volume 87 ; 87 >
-    au < releasing ; 1988 ; JAOA: Journal of the American Osteopathic Association Volume 88 ; 88 >
-    au < releasing ; 1989 ; JAOA: Journal of the American Osteopathic Association Volume 89 ; 89 >
-    au < releasing ; 1990 ; JAOA: Journal of the American Osteopathic Association Volume 90 ; 90 >
-    au < releasing ; 1991 ; JAOA: Journal of the American Osteopathic Association Volume 91 ; 91 >
-    au < releasing ; 1992 ; JAOA: Journal of the American Osteopathic Association Volume 92 ; 92 >
-    au < releasing ; 1993 ; JAOA: Journal of the American Osteopathic Association Volume 93 ; 93 >
+    au < released ; 1985 ; JAOA: Journal of the American Osteopathic Association Volume 85 ; 85 >
+    au < released ; 1986 ; JAOA: Journal of the American Osteopathic Association Volume 86 ; 86 >
+    au < released ; 1987 ; JAOA: Journal of the American Osteopathic Association Volume 87 ; 87 >
+    au < released ; 1988 ; JAOA: Journal of the American Osteopathic Association Volume 88 ; 88 >
+    au < released ; 1989 ; JAOA: Journal of the American Osteopathic Association Volume 89 ; 89 >
+    au < released ; 1990 ; JAOA: Journal of the American Osteopathic Association Volume 90 ; 90 >
+    au < released ; 1991 ; JAOA: Journal of the American Osteopathic Association Volume 91 ; 91 >
+    au < released ; 1992 ; JAOA: Journal of the American Osteopathic Association Volume 92 ; 92 >
+    au < released ; 1993 ; JAOA: Journal of the American Osteopathic Association Volume 93 ; 93 >
     au < testing ; 1994 ; JAOA: Journal of the American Osteopathic Association Volume 94 ; 94 >
     au < testing ; 1995 ; JAOA: Journal of the American Osteopathic Association Volume 95 ; 95 >
     au < testing ; 1996 ; JAOA: Journal of the American Osteopathic Association Volume 96 ; 96 >

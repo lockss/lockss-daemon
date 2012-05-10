@@ -21,63 +21,63 @@
       param[base_url] = http://www.biolreprod.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < releasing ; 1969 ; Biology of Reproduction Volume 1 ; 1 >
-      au < releasing ; 1970 ; Biology of Reproduction Volume 2 ; 2 >
+      au < released ; 1969 ; Biology of Reproduction Volume 1 ; 1 >
+      au < released ; 1970 ; Biology of Reproduction Volume 2 ; 2 >
       au < testing ; 1970 ; Biology of Reproduction Volume 3 ; 3 >
       au < testing ; 1971 ; Biology of Reproduction Volume 4 ; 4 >
       au < testing ; 1971 ; Biology of Reproduction Volume 5 ; 5 >
-      au < releasing ; 1972 ; Biology of Reproduction Volume 6 ; 6 >
-      au < releasing ; 1972 ; Biology of Reproduction Volume 7 ; 7 >
-      au < releasing ; 1973 ; Biology of Reproduction Volume 8 ; 8 >
-      au < releasing ; 1973 ; Biology of Reproduction Volume 9 ; 9 >
-      au < releasing ; 1974 ; Biology of Reproduction Volume 10 ; 10 >
-      au < releasing ; 1974 ; Biology of Reproduction Volume 11 ; 11 >
-      au < releasing ; 1975 ; Biology of Reproduction Volume 12 ; 12 >
+      au < released ; 1972 ; Biology of Reproduction Volume 6 ; 6 >
+      au < released ; 1972 ; Biology of Reproduction Volume 7 ; 7 >
+      au < released ; 1973 ; Biology of Reproduction Volume 8 ; 8 >
+      au < released ; 1973 ; Biology of Reproduction Volume 9 ; 9 >
+      au < released ; 1974 ; Biology of Reproduction Volume 10 ; 10 >
+      au < released ; 1974 ; Biology of Reproduction Volume 11 ; 11 >
+      au < released ; 1975 ; Biology of Reproduction Volume 12 ; 12 >
       au < testing ; 1975 ; Biology of Reproduction Volume 13 ; 13 >
-      au < releasing ; 1976 ; Biology of Reproduction Volume 14 ; 14 >
+      au < released ; 1976 ; Biology of Reproduction Volume 14 ; 14 >
       au < testing ; 1976 ; Biology of Reproduction Volume 15 ; 15 >
       au < testing ; 1977 ; Biology of Reproduction Volume 16 ; 16 >
-      au < releasing ; 1977 ; Biology of Reproduction Volume 17 ; 17 >
-      au < releasing ; 1978 ; Biology of Reproduction Volume 18 ; 18 >
-      au < releasing ; 1978 ; Biology of Reproduction Volume 19 ; 19 >
-      au < releasing ; 1979 ; Biology of Reproduction Volume 20 ; 20 >
+      au < released ; 1977 ; Biology of Reproduction Volume 17 ; 17 >
+      au < released ; 1978 ; Biology of Reproduction Volume 18 ; 18 >
+      au < released ; 1978 ; Biology of Reproduction Volume 19 ; 19 >
+      au < released ; 1979 ; Biology of Reproduction Volume 20 ; 20 >
       au < testing ; 1979 ; Biology of Reproduction Volume 21 ; 21 >
-      au < releasing ; 1980 ; Biology of Reproduction Volume 22 ; 22 >
+      au < released ; 1980 ; Biology of Reproduction Volume 22 ; 22 >
       au < testing ; 1980 ; Biology of Reproduction Volume 23 ; 23 >
-      au < releasing ; 1981 ; Biology of Reproduction Volume 24 ; 24 >
-      au < releasing ; 1981 ; Biology of Reproduction Volume 25 ; 25 >
+      au < released ; 1981 ; Biology of Reproduction Volume 24 ; 24 >
+      au < released ; 1981 ; Biology of Reproduction Volume 25 ; 25 >
       au < testing ; 1982 ; Biology of Reproduction Volume 26 ; 26 >
-      au < releasing ; 1982 ; Biology of Reproduction Volume 27 ; 27 >
+      au < released ; 1982 ; Biology of Reproduction Volume 27 ; 27 >
       au < testing ; 1983 ; Biology of Reproduction Volume 28 ; 28 >
-      au < releasing ; 1983 ; Biology of Reproduction Volume 29 ; 29 >
-      au < releasing ; 1984 ; Biology of Reproduction Volume 30 ; 30 >
-      au < releasing ; 1984 ; Biology of Reproduction Volume 31 ; 31 >
-      au < releasing ; 1985 ; Biology of Reproduction Volume 32 ; 32 >
-      au < releasing ; 1985 ; Biology of Reproduction Volume 33 ; 33 >
-      au < releasing ; 1986 ; Biology of Reproduction Volume 34 ; 34 >
-      au < releasing ; 1986 ; Biology of Reproduction Volume 35 ; 35 >
-      au < releasing ; 1987 ; Biology of Reproduction Volume 36 ; 36 >
-      au < releasing ; 1987 ; Biology of Reproduction Volume 37 ; 37 >
-      au < releasing ; 1988 ; Biology of Reproduction Volume 38 ; 38 >
-      au < releasing ; 1988 ; Biology of Reproduction Volume 39 ; 39 >
+      au < released ; 1983 ; Biology of Reproduction Volume 29 ; 29 >
+      au < released ; 1984 ; Biology of Reproduction Volume 30 ; 30 >
+      au < released ; 1984 ; Biology of Reproduction Volume 31 ; 31 >
+      au < released ; 1985 ; Biology of Reproduction Volume 32 ; 32 >
+      au < released ; 1985 ; Biology of Reproduction Volume 33 ; 33 >
+      au < released ; 1986 ; Biology of Reproduction Volume 34 ; 34 >
+      au < released ; 1986 ; Biology of Reproduction Volume 35 ; 35 >
+      au < released ; 1987 ; Biology of Reproduction Volume 36 ; 36 >
+      au < released ; 1987 ; Biology of Reproduction Volume 37 ; 37 >
+      au < released ; 1988 ; Biology of Reproduction Volume 38 ; 38 >
+      au < released ; 1988 ; Biology of Reproduction Volume 39 ; 39 >
       au < testing ; 1989 ; Biology of Reproduction Volume 40 ; 40 >
-      au < releasing ; 1989 ; Biology of Reproduction Volume 41 ; 41 >
+      au < released ; 1989 ; Biology of Reproduction Volume 41 ; 41 >
       au < testing ; 1990 ; Biology of Reproduction Volume 42 ; 42 >
       au < testing ; 1990 ; Biology of Reproduction Volume 43 ; 43 >
-      au < releasing ; 1991 ; Biology of Reproduction Volume 44 ; 44 >
-      au < releasing ; 1991 ; Biology of Reproduction Volume 45 ; 45 >
+      au < released ; 1991 ; Biology of Reproduction Volume 44 ; 44 >
+      au < released ; 1991 ; Biology of Reproduction Volume 45 ; 45 >
       au < testing ; 1992 ; Biology of Reproduction Volume 46 ; 46 >
-      au < releasing ; 1992 ; Biology of Reproduction Volume 47 ; 47 >
+      au < released ; 1992 ; Biology of Reproduction Volume 47 ; 47 >
       au < testing ; 1993 ; Biology of Reproduction Volume 48 ; 48 >
-      au < releasing ; 1993 ; Biology of Reproduction Volume 49 ; 49 >
-      au < releasing ; 1994 ; Biology of Reproduction Volume 50 ; 50 >
-      au < releasing ; 1994 ; Biology of Reproduction Volume 51 ; 51 >
-      au < releasing ; 1995 ; Biology of Reproduction Volume 52 ; 52 >
+      au < released ; 1993 ; Biology of Reproduction Volume 49 ; 49 >
+      au < released ; 1994 ; Biology of Reproduction Volume 50 ; 50 >
+      au < released ; 1994 ; Biology of Reproduction Volume 51 ; 51 >
+      au < released ; 1995 ; Biology of Reproduction Volume 52 ; 52 >
       au < testing ; 1995 ; Biology of Reproduction Volume 53 ; 53 >
-      au < releasing ; 1996 ; Biology of Reproduction Volume 54 ; 54 >
+      au < released ; 1996 ; Biology of Reproduction Volume 54 ; 54 >
       au < testing ; 1996 ; Biology of Reproduction Volume 55 ; 55 >
       au < testing ; 1997 ; Biology of Reproduction Volume 56 ; 56 >
-      au < releasing ; 1997 ; Biology of Reproduction Volume 57 ; 57 >
+      au < released ; 1997 ; Biology of Reproduction Volume 57 ; 57 >
       au < testing ; 1998 ; Biology of Reproduction Volume 58 ; 58 >
       au < testing ; 1998 ; Biology of Reproduction Volume 59 ; 59 >
       au < testing ; 1999 ; Biology of Reproduction Volume 60 ; 60 >
@@ -86,10 +86,10 @@
       au < testing ; 2000 ; Biology of Reproduction Volume 63 ; 63 >
       au < testing ; 2001 ; Biology of Reproduction Volume 64 ; 64 >
       au < testing ; 2001 ; Biology of Reproduction Volume 65 ; 65 >
-      au < releasing ; 2002 ; Biology of Reproduction Volume 66 ; 66 >
-      au < releasing ; 2002 ; Biology of Reproduction Volume 67 ; 67 >
+      au < released ; 2002 ; Biology of Reproduction Volume 66 ; 66 >
+      au < released ; 2002 ; Biology of Reproduction Volume 67 ; 67 >
       au < testing ; 2003 ; Biology of Reproduction Volume 68 ; 68 >
-      au < releasing ; 2003 ; Biology of Reproduction Volume 69 ; 69 >
+      au < released ; 2003 ; Biology of Reproduction Volume 69 ; 69 >
       au < testing ; 2004 ; Biology of Reproduction Volume 70 ; 70 >
       au < testing ; 2004 ; Biology of Reproduction Volume 71 ; 71 >
       au < released ; 2005 ; Biology of Reproduction Volume 72 ; 72 >
@@ -106,7 +106,7 @@
       au < released ; 2010 ; Biology of Reproduction Volume 83 ; 83 >
       au < released ; 2011 ; Biology of Reproduction Volume 84 ; 84 >
       au < released ; 2011 ; Biology of Reproduction Volume 85 ; 85 >
-      au < releasing ; 2012 ; Biology of Reproduction Volume 86 ; 86 >
+      au < released ; 2012 ; Biology of Reproduction Volume 86 ; 86 >
 
     }
 
@@ -132,20 +132,20 @@
       comment[bire63] = persistent 403 errors for URL redirection below
       comment[URL] = http://www.bioone.org/doi/abs/10.1043/0006-3363%282000%29063%3C1219%3AE%3E2.0.CO%3B2
       
-      au < releasing ; 2000 ; Biology of Reproduction Volume 62 ; 62 >
+      au < released ; 2000 ; Biology of Reproduction Volume 62 ; 62 >
       au < notReady ; 2000 ; Biology of Reproduction Volume 63 ; 63 >
-      au < releasing ; 2001 ; Biology of Reproduction Volume 64 ; 64 >
-      au < releasing ; 2001 ; Biology of Reproduction Volume 65 ; 65 >
-      au < releasing ; 2002 ; Biology of Reproduction Volume 66 ; 66 >
-      au < releasing ; 2002 ; Biology of Reproduction Volume 67 ; 67 >
-      au < releasing ; 2003 ; Biology of Reproduction Volume 68 ; 68 >
-      au < releasing ; 2003 ; Biology of Reproduction Volume 69 ; 69 >
-      au < releasing ; 2004 ; Biology of Reproduction Volume 70 ; 70 >
-      au < releasing ; 2004 ; Biology of Reproduction Volume 71 ; 71 >
+      au < released ; 2001 ; Biology of Reproduction Volume 64 ; 64 >
+      au < released ; 2001 ; Biology of Reproduction Volume 65 ; 65 >
+      au < released ; 2002 ; Biology of Reproduction Volume 66 ; 66 >
+      au < released ; 2002 ; Biology of Reproduction Volume 67 ; 67 >
+      au < released ; 2003 ; Biology of Reproduction Volume 68 ; 68 >
+      au < released ; 2003 ; Biology of Reproduction Volume 69 ; 69 >
+      au < released ; 2004 ; Biology of Reproduction Volume 70 ; 70 >
+      au < released ; 2004 ; Biology of Reproduction Volume 71 ; 71 >
       au < doNotProcess; 2005 ; Biology of Reproduction Volume 72 ; 72 >
-      au < releasing ; 2005 ; Biology of Reproduction Volume 73 ; 73 >
-      au < releasing ; 2006 ; Biology of Reproduction Volume 74 ; 74 >
-      au < releasing ; 2006 ; Biology of Reproduction Volume 75 ; 75 >
+      au < released ; 2005 ; Biology of Reproduction Volume 73 ; 73 >
+      au < released ; 2006 ; Biology of Reproduction Volume 74 ; 74 >
+      au < released ; 2006 ; Biology of Reproduction Volume 75 ; 75 >
 
     }
 

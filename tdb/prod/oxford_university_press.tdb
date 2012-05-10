@@ -19,15 +19,15 @@
     param[base_url] = http://abbs.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; releasing ; 2004 ; Acta Biochimica et Biophysica Sinica Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; releasing ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; releasing ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; releasing ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; releasing ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; releasing ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; released ; 2004 ; Acta Biochimica et Biophysica Sinica Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; released ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; released ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; releasing ; 2012 ; Acta Biochimica et Biophysica Sinica Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Acta Biochimica et Biophysica Sinica Volume 44 ; 44 >
 
     }
 
@@ -48,11 +48,11 @@
     param[base_url] = http://adaptation.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; releasing ; 2008 ; Adaptation Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; releasing ; 2009 ; Adaptation Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Adaptation Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Adaptation Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Adaptation Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Adaptation Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; releasing ; 2012 ; Adaptation Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Adaptation Volume 5 ; 5 >
 
     }
 
@@ -83,86 +83,86 @@
     param[base_url] = http://afraf.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; releasing ; 1901-1902 ; African Affairs Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; releasing ; 1902-1903 ; African Affairs Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; releasing ; 1903-1904 ; African Affairs Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; releasing ; 1904-1905 ; African Affairs Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; releasing ; 1905-1906 ; African Affairs Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; releasing ; 1906-1907 ; African Affairs Volume VI ; VI >
-    au < HighWirePressH20Plugin ; releasing ; 1907-1908 ; African Affairs Volume VII ; VII >
-    au < HighWirePressH20Plugin ; releasing ; 1908-1909 ; African Affairs Volume VIII ; VIII >
-    au < HighWirePressH20Plugin ; releasing ; 1909-1910 ; African Affairs Volume IX ; IX >
-    au < HighWirePressH20Plugin ; releasing ; 1910-1911 ; African Affairs Volume X ; X >
-    au < HighWirePressH20Plugin ; releasing ; 1911-1912 ; African Affairs Volume XI ; XI >
-    au < HighWirePressH20Plugin ; releasing ; 1912-1913 ; African Affairs Volume XII ; XII >
-    au < HighWirePressH20Plugin ; releasing ; 1913-1914 ; African Affairs Volume XIII ; XIII >
-    au < HighWirePressH20Plugin ; releasing ; 1914-1915 ; African Affairs Volume XIV ; XIV >
-    au < HighWirePressH20Plugin ; releasing ; 1915-1916 ; African Affairs Volume XV ; XV >
-    au < HighWirePressH20Plugin ; releasing ; 1916-1917 ; African Affairs Volume XVI ; XVI >
-    au < HighWirePressH20Plugin ; releasing ; 1917-1918 ; African Affairs Volume XVII ; XVII >
-    au < HighWirePressH20Plugin ; releasing ; 1918-1919 ; African Affairs Volume XVIII ; XVIII >
+    au < HighWirePressH20Plugin ; released ; 1901-1902 ; African Affairs Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 1902-1903 ; African Affairs Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 1903-1904 ; African Affairs Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 1904-1905 ; African Affairs Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; released ; 1905-1906 ; African Affairs Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; released ; 1906-1907 ; African Affairs Volume VI ; VI >
+    au < HighWirePressH20Plugin ; released ; 1907-1908 ; African Affairs Volume VII ; VII >
+    au < HighWirePressH20Plugin ; released ; 1908-1909 ; African Affairs Volume VIII ; VIII >
+    au < HighWirePressH20Plugin ; released ; 1909-1910 ; African Affairs Volume IX ; IX >
+    au < HighWirePressH20Plugin ; released ; 1910-1911 ; African Affairs Volume X ; X >
+    au < HighWirePressH20Plugin ; released ; 1911-1912 ; African Affairs Volume XI ; XI >
+    au < HighWirePressH20Plugin ; released ; 1912-1913 ; African Affairs Volume XII ; XII >
+    au < HighWirePressH20Plugin ; released ; 1913-1914 ; African Affairs Volume XIII ; XIII >
+    au < HighWirePressH20Plugin ; released ; 1914-1915 ; African Affairs Volume XIV ; XIV >
+    au < HighWirePressH20Plugin ; released ; 1915-1916 ; African Affairs Volume XV ; XV >
+    au < HighWirePressH20Plugin ; released ; 1916-1917 ; African Affairs Volume XVI ; XVI >
+    au < HighWirePressH20Plugin ; released ; 1917-1918 ; African Affairs Volume XVII ; XVII >
+    au < HighWirePressH20Plugin ; released ; 1918-1919 ; African Affairs Volume XVIII ; XVIII >
     au < HighWirePressH20Plugin ; testing ; 1919-1920 ; African Affairs Volume XIX ; XIX >
     au < HighWirePressH20Plugin ; testing ; 1920-1921 ; African Affairs Volume XX ; XX >
     au < HighWirePressH20Plugin ; testing ; 1921-1922 ; African Affairs Volume XXI ; XXI >
-    au < HighWirePressH20Plugin ; releasing ; 1922-1923 ; African Affairs Volume XXII ; XXII >
+    au < HighWirePressH20Plugin ; released ; 1922-1923 ; African Affairs Volume XXII ; XXII >
     au < HighWirePressH20Plugin ; testing ; 1923-1924 ; African Affairs Volume XXIII ; XXIII >
-    au < HighWirePressH20Plugin ; releasing ; 1924-1925 ; African Affairs Volume XXIV ; XXIV >
+    au < HighWirePressH20Plugin ; released ; 1924-1925 ; African Affairs Volume XXIV ; XXIV >
     au < HighWirePressH20Plugin ; testing ; 1925-1926 ; African Affairs Volume XXV ; XXV >
-    au < HighWirePressH20Plugin ; releasing ; 1926-1927 ; African Affairs Volume XXVI ; XXVI >
-    au < HighWirePressH20Plugin ; releasing ; 1927-1928 ; African Affairs Volume XXVII ; XXVII >
-    au < HighWirePressH20Plugin ; releasing ; 1928-1929 ; African Affairs Volume XXVIII ; XXVIII >
+    au < HighWirePressH20Plugin ; released ; 1926-1927 ; African Affairs Volume XXVI ; XXVI >
+    au < HighWirePressH20Plugin ; released ; 1927-1928 ; African Affairs Volume XXVII ; XXVII >
+    au < HighWirePressH20Plugin ; released ; 1928-1929 ; African Affairs Volume XXVIII ; XXVIII >
     au < HighWirePressH20Plugin ; testing ; 1929-1930 ; African Affairs Volume XXIX ; XXIX >
-    au < HighWirePressH20Plugin ; releasing ; 1931 ; African Affairs Volume XXX ; XXX >
+    au < HighWirePressH20Plugin ; released ; 1931 ; African Affairs Volume XXX ; XXX >
     au < HighWirePressH20Plugin ; testing ; 1932 ; African Affairs Volume XXXI ; XXXI >
     au < HighWirePressH20Plugin ; testing ; 1933 ; African Affairs Volume XXXII ; XXXII >
-    au < HighWirePressH20Plugin ; releasing ; 1934 ; African Affairs Volume XXXIII ; XXXIII >
+    au < HighWirePressH20Plugin ; released ; 1934 ; African Affairs Volume XXXIII ; XXXIII >
     au < HighWirePressH20Plugin ; testing ; 1935 ; African Affairs Volume XXXIV ; XXXIV >
     au < HighWirePressH20Plugin ; testing ; 1936 ; African Affairs Volume XXXV ; XXXV >
     au < HighWirePressH20Plugin ; testing ; 1937 ; African Affairs Volume XXXVI ; XXXVI >
-    au < HighWirePressH20Plugin ; releasing ; 1938 ; African Affairs Volume XXXVII ; XXXVII >
-    au < HighWirePressH20Plugin ; releasing ; 1939 ; African Affairs Volume XXXVIII ; XXXVIII >
-    au < HighWirePressH20Plugin ; releasing ; 1940 ; African Affairs Volume XXXIX ; XXXIX >
-    au < HighWirePressH20Plugin ; releasing ; 1941 ; African Affairs Volume XL ; XL >
+    au < HighWirePressH20Plugin ; released ; 1938 ; African Affairs Volume XXXVII ; XXXVII >
+    au < HighWirePressH20Plugin ; released ; 1939 ; African Affairs Volume XXXVIII ; XXXVIII >
+    au < HighWirePressH20Plugin ; released ; 1940 ; African Affairs Volume XXXIX ; XXXIX >
+    au < HighWirePressH20Plugin ; released ; 1941 ; African Affairs Volume XL ; XL >
     au < HighWirePressH20Plugin ; testing ; 1942 ; African Affairs Volume XLI ; XLI >
     au < HighWirePressH20Plugin ; testing ; 1943 ; African Affairs Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; testing ; 1944 ; African Affairs Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; testing ; 1945 ; African Affairs Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; releasing ; 1946 ; African Affairs Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; releasing ; 1947 ; African Affairs Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; released ; 1946 ; African Affairs Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; released ; 1947 ; African Affairs Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; testing ; 1948 ; African Affairs Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; releasing ; 1949 ; African Affairs Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; releasing ; 1950 ; African Affairs Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; releasing ; 1951 ; African Affairs Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; releasing ; 1952 ; African Affairs Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; releasing ; 1953 ; African Affairs Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; releasing ; 1954 ; African Affairs Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; releasing ; 1955 ; African Affairs Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; releasing ; 1956 ; African Affairs Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; releasing ; 1957 ; African Affairs Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; releasing ; 1958 ; African Affairs Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; releasing ; 1959 ; African Affairs Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; releasing ; 1960 ; African Affairs Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; releasing ; 1961 ; African Affairs Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; releasing ; 1962 ; African Affairs Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; releasing ; 1963 ; African Affairs Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; releasing ; 1964 ; African Affairs Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; releasing ; 1965 ; African Affairs Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; releasing ; 1966 ; African Affairs Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; releasing ; 1967 ; African Affairs Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; releasing ; 1968 ; African Affairs Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; releasing ; 1969 ; African Affairs Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; releasing ; 1970 ; African Affairs Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; releasing ; 1971 ; African Affairs Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; releasing ; 1972 ; African Affairs Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; releasing ; 1973 ; African Affairs Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; releasing ; 1974 ; African Affairs Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; releasing ; 1975 ; African Affairs Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; releasing ; 1976 ; African Affairs Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; releasing ; 1977 ; African Affairs Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; releasing ; 1978 ; African Affairs Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; releasing ; 1979 ; African Affairs Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; releasing ; 1980 ; African Affairs Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; releasing ; 1981 ; African Affairs Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; released ; 1949 ; African Affairs Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; released ; 1950 ; African Affairs Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; released ; 1951 ; African Affairs Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; released ; 1952 ; African Affairs Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; released ; 1953 ; African Affairs Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; released ; 1954 ; African Affairs Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; released ; 1955 ; African Affairs Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; released ; 1956 ; African Affairs Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; released ; 1957 ; African Affairs Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; released ; 1958 ; African Affairs Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; released ; 1959 ; African Affairs Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; released ; 1960 ; African Affairs Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; released ; 1961 ; African Affairs Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; released ; 1962 ; African Affairs Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; released ; 1963 ; African Affairs Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; released ; 1964 ; African Affairs Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; released ; 1965 ; African Affairs Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; released ; 1966 ; African Affairs Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; released ; 1967 ; African Affairs Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; released ; 1968 ; African Affairs Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; released ; 1969 ; African Affairs Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; released ; 1970 ; African Affairs Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; released ; 1971 ; African Affairs Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; released ; 1972 ; African Affairs Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; released ; 1973 ; African Affairs Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; released ; 1974 ; African Affairs Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; released ; 1975 ; African Affairs Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; released ; 1976 ; African Affairs Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; released ; 1977 ; African Affairs Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; released ; 1978 ; African Affairs Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; released ; 1979 ; African Affairs Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; released ; 1980 ; African Affairs Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; released ; 1981 ; African Affairs Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; testing ; 1982 ; African Affairs Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; testing ; 1983 ; African Affairs Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; testing ; 1984 ; African Affairs Volume 83 ; 83 >
@@ -170,7 +170,7 @@
     au < HighWirePressH20Plugin ; testing ; 1986 ; African Affairs Volume 85 ; 85 >
     au < HighWirePressH20Plugin ; testing ; 1987 ; African Affairs Volume 86 ; 86 >
     au < HighWirePressH20Plugin ; testing ; 1988 ; African Affairs Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; releasing ; 1989 ; African Affairs Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; released ; 1989 ; African Affairs Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; testing ; 1990 ; African Affairs Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; testing ; 1991 ; African Affairs Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; testing ; 1992 ; African Affairs Volume 91 ; 91 >
@@ -182,18 +182,18 @@
     au < HighWirePressH20Plugin ; testing ; 1998 ; African Affairs Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; testing ; 1999 ; African Affairs Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; testing ; 2000 ; African Affairs Volume 99 ; 99 >
-    au < HighWirePressH20Plugin ; releasing ; 2001 ; African Affairs Volume 100 ; 100 >
-    au < HighWirePressH20Plugin ; releasing ; 2002 ; African Affairs Volume 101 ; 101 >
-    au < HighWirePressH20Plugin ; releasing ; 2003 ; African Affairs Volume 102 ; 102 >
-    au < HighWirePressH20Plugin ; releasing ; 2004 ; African Affairs Volume 103 ; 103 >
-    au < HighWirePressH20Plugin ; releasing ; 2005 ; African Affairs Volume 104 ; 104 >
+    au < HighWirePressH20Plugin ; released ; 2001 ; African Affairs Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; released ; 2002 ; African Affairs Volume 101 ; 101 >
+    au < HighWirePressH20Plugin ; released ; 2003 ; African Affairs Volume 102 ; 102 >
+    au < HighWirePressH20Plugin ; released ; 2004 ; African Affairs Volume 103 ; 103 >
+    au < HighWirePressH20Plugin ; released ; 2005 ; African Affairs Volume 104 ; 104 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; African Affairs Volume 105 ; 105 >
     au < HighWireStrVolPlugin ; down ; 2007 ; African Affairs Volume 106 ; 106 >
     au < HighWirePressH20Plugin ; released ; 2008 ; African Affairs Volume 107 ; 107 >
     au < HighWirePressH20Plugin ; released ; 2009 ; African Affairs Volume 108 ; 108 >
     au < HighWirePressH20Plugin ; released ; 2010 ; African Affairs Volume 109 ; 109 >
     au < HighWirePressH20Plugin ; released ; 2011 ; African Affairs Volume 110 ; 110 >
-    au < HighWirePressH20Plugin ; releasing ; 2012 ; African Affairs Volume 111 ; 111 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; African Affairs Volume 111 ; 111 >
 
     }
 
@@ -443,7 +443,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; American Journal of Agricultural Economics Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; American Journal of Agricultural Economics Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; American Journal of Agricultural Economics Volume 91 ; 91 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; American Journal of Agricultural Economics Volume 92 ; 92 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; American Journal of Agricultural Economics Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; released ; 2011 ; American Journal of Agricultural Economics Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; American Journal of Agricultural Economics Volume 94 ; 94 >
 
@@ -641,7 +641,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; American Journal of Epidemiology Volume 163 ; 163 >
     au < HighWireStrVolPlugin ; down ; 2006 ; American Journal of Epidemiology Volume 164 ; 164 >
     au < HighWireStrVolPlugin ; down ; 2007 ; American Journal of Epidemiology Volume 165 ; 165 >
-    au < HighWirePressH20Plugin ; releasing ; 2007 ; American Journal of Epidemiology Volume 166 ; 166 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; American Journal of Epidemiology Volume 166 ; 166 >
     au < HighWirePressPlugin ; down ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 >
     au < HighWirePressPlugin ; down ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 >
     au < HighWirePressH20Plugin ; released ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 >
@@ -1052,7 +1052,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Annals of Botany Volume 105 ; 105 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Annals of Botany Volume 106 ; 106 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Annals of Botany Volume 107 ; 107 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Annals of Botany Volume 108 ; 108 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Annals of Botany Volume 108 ; 108 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Annals of Botany Volume 109 ; 109 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Annals of Botany Volume 110 ; 110 >
 
@@ -1202,7 +1202,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2009 ; AoB PLANTS Volume 2009 ; 2009 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; AoB PLANTS Volume 2010 ; 2010 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; AoB PLANTS Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; AoB PLANTS Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; AoB PLANTS Volume 2012 ; 2012 >
 
@@ -1245,7 +1245,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Applied Economic Perspectives and Policy Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Applied Economic Perspectives and Policy Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Applied Economic Perspectives and Policy Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Applied Economic Perspectives and Policy Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Applied Economic Perspectives and Policy Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Applied Economic Perspectives and Policy Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Applied Economic Perspectives and Policy Volume 34 ; 34 >
 
@@ -1336,8 +1336,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Applied Mathematics Research eXpress (AMRX) Volume 2007 ; 2007 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Applied Mathematics Research eXpress (AMRX) Volume 2008 ; 2008 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Applied Mathematics Research eXpress (AMRX) Volume 2009 ; 2009 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Applied Mathematics Research eXpress (AMRX) Volume 2010 ; 2010 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Applied Mathematics Research eXpress (AMRX) Volume 2011 ; 2011 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Applied Mathematics Research eXpress (AMRX) Volume 2010 ; 2010 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Applied Mathematics Research eXpress (AMRX) Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Applied Mathematics Research eXpress (AMRX) Volume 2012 ; 2012 >
 
   }
@@ -2018,7 +2018,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; releasing ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 >
 
     }
 
@@ -2040,7 +2040,7 @@
     param[base_url] = http://bfg.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Briefings in Functional Genomics Volume 11 ; 11 >
 
@@ -2262,7 +2262,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; British Journal of Anaesthesia Volume 104 ; 104 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Journal of Anaesthesia Volume 105 ; 105 >
     au < HighWirePressH20Plugin ; released ; 2011 ;  British Journal of Anaesthesia Volume 106 ; 106 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ;  British Journal of Anaesthesia Volume 107 ; 107 >
+    au < HighWirePressH20Plugin ; released ; 2011 ;  British Journal of Anaesthesia Volume 107 ; 107 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ;  British Journal of Anaesthesia Volume 108 ; 108 >
     au < HighWirePressH20Plugin ; expected ; 2012 ;  British Journal of Anaesthesia Volume 109 ; 109 >
 
@@ -2620,14 +2620,14 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; British Medical Bulletin Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; British Medical Bulletin Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; released ; 2009 ; British Medical Bulletin Volume 92 ; 92 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; British Medical Bulletin Volume 93 ; 93 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; British Medical Bulletin Volume 94 ; 94 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; British Medical Bulletin Volume 95 ; 95 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; British Medical Bulletin Volume 93 ; 93 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; British Medical Bulletin Volume 94 ; 94 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; British Medical Bulletin Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Medical Bulletin Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; released ; 2011 ; British Medical Bulletin Volume 97 ; 97 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; British Medical Bulletin Volume 98 ; 98 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; British Medical Bulletin Volume 99 ; 99 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; British Medical Bulletin Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; British Medical Bulletin Volume 98 ; 98 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; British Medical Bulletin Volume 99 ; 99 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; British Medical Bulletin Volume 100 ; 100 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; British Medical Bulletin Volume 101 ; 101 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; British Medical Bulletin Volume 102 ; 102 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; British Medical Bulletin Volume 103 ; 103 >
@@ -2684,7 +2684,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; British Yearbook of International Law Volume 78 ; 78 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; British Yearbook of International Law Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; British Yearbook of International Law Volume 80 ; 80 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; British Yearbook of International Law Volume 81 ; 81 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; British Yearbook of International Law Volume 81 ; 81 >
 
   }
 
@@ -3125,7 +3125,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Cardiovascular Research Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Cardiovascular Research Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Cardiovascular Research Volume 91 ; 91 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Cardiovascular Research Volume 92 ; 92 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Cardiovascular Research Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Cardiovascular Research Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Cardiovascular Research Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; exists ; 2012 ; Cardiovascular Research Volume 95 ; 95 >
@@ -3320,7 +3320,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Children & Schools Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Children & Schools Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Children & Schools Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Children & Schools Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Children & Schools Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Children & Schools Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Children & Schools Volume 34 ; 34 >
 
@@ -3385,7 +3385,7 @@
     au < HighWireStrVolPlugin ; down ; 2006-2007 ; The Chinese Journal of International Politics Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; The Chinese Journal of International Politics Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; The Chinese Journal of International Politics Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 >
 
     }
@@ -3444,7 +3444,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Classical Receptions Journal Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Classical Receptions Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Classical Receptions Journal Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Classical Receptions Journal Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Classical Receptions Journal Volume 4 ; 4 >
 
@@ -3514,10 +3514,10 @@
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Clinical Infectious Diseases Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Clinical Infectious Diseases Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Clinical Infectious Diseases Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Clinical Infectious Diseases Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Clinical Infectious Diseases Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Clinical Infectious Diseases Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Clinical Infectious Diseases Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Clinical Infectious Diseases Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Clinical Infectious Diseases Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Clinical Infectious Diseases Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Clinical Infectious Diseases Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Clinical Infectious Diseases Volume 55 ; 55 >
 
@@ -3543,7 +3543,7 @@
 
     au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; NDT Plus Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; NDT Plus Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; NDT Plus Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; NDT Plus Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; NDT Plus Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Clinical Kidney Journal Volume 5 ; 5 >
 
@@ -3938,7 +3938,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Current Legal Problems Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Current Legal Problems Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Current Legal Problems Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Current Legal Problems Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Current Legal Problems Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Current Legal Problems Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Current Legal Problems Volume 65 ; 65 >
 
@@ -3957,7 +3957,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Database: The Journal of Biological Databases and Curation Volume 2009 ; 2009 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Database: The Journal of Biological Databases and Curation Volume 2010 ; 2010 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Database: The Journal of Biological Databases and Curation Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Database: The Journal of Biological Databases and Curation Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Database: The Journal of Biological Databases and Curation Volume 2012 ; 2012 >
 
@@ -4203,8 +4203,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; English: Journal of the English Association Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; English: Journal of the English Association Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; English: Journal of the English Association Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; English: Journal of the English Association Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; English: Journal of the English Association Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; English: Journal of the English Association Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; English: Journal of the English Association Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; English: Journal of the English Association Volume 61 ; 61 >
 
   }
@@ -4552,7 +4552,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Environmental History Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Environmental History Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Environmental History Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Environmental History Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Environmental History Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Environmental History Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Environmental History Volume 17 ; 17 >
 
@@ -4941,7 +4941,7 @@
     au < HighWirePressH20Plugin ; released ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; European Heart Journal Supplements Volume 14 ; 14 >
 
@@ -4998,10 +4998,10 @@
     au < HighWirePressH20Plugin ; manifest ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 >
 
@@ -5115,7 +5115,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; European Journal of Heart Failure Supplements Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; European Journal of Heart Failure Supplements Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Heart Failure Supplements Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; European Journal of Heart Failure Supplements Volume 11 ; 11 >
 
@@ -5379,7 +5379,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; European Review of Economic History Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; European Review of Economic History Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; European Review of Economic History Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; European Review of Economic History Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; European Review of Economic History Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Review of Economic History Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; European Review of Economic History Volume 16 ; 16 >
 
@@ -6006,8 +6006,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; French Studies Bulletin Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; French Studies Bulletin Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; French Studies Bulletin Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; releasing ; 2009 ; French Studies Bulletin Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; French Studies Bulletin Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; French Studies Bulletin Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; French Studies Bulletin Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2011 ; French Studies Bulletin Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; French Studies Bulletin Volume 33 ; 33 >
 
@@ -6028,7 +6028,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Genome Biology and Evolution Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Genome Biology and Evolution Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Genome Biology and Evolution Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Genome Biology and Evolution Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 >
 
@@ -6234,7 +6234,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Health & Social Work Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Health & Social Work Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Health & Social Work Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Health & Social Work Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Health & Social Work Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Health & Social Work Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Health & Social Work Volume 37 ; 37 >
 
@@ -6506,7 +6506,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; History Workshop Journal Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; released ; 2010 ; History Workshop Journal Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; released ; 2011 ; History Workshop Journal Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; History Workshop Journal Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; History Workshop Journal Volume 72 ; 72 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; History Workshop Journal Volume 73 ; 73 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; History Workshop Journal Volume 74 ; 74 >
 
@@ -6961,8 +6961,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; ICSID Review: Foreign Investment Law Journal Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; ICSID Review: Foreign Investment Law Journal Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 >
 
   }
@@ -7541,7 +7541,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Interactive CardioVascular and Thoracic Surgery Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 15 ; 15 >
@@ -8541,7 +8541,7 @@
 
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Jerusalem Review of Legal Studies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Jerusalem Review of Legal Studies Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 >
 
   }
@@ -9165,7 +9165,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; The Journal of Biochemistry Volume 147 ; 147 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Journal of Biochemistry Volume 148 ; 148 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journal of Biochemistry Volume 149 ; 149 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; The Journal of Biochemistry Volume 150 ; 150 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; The Journal of Biochemistry Volume 150 ; 150 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Journal of Biochemistry Volume 151 ; 151 >
     au < HighWirePressH20Plugin ; exists ; 2012 ; The Journal of Biochemistry Volume 152 ; 152 >
 
@@ -9186,7 +9186,7 @@
     param[base_url] = http://chromsci.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Journal of Chromatographic Science Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Chromatographic Science Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Chromatographic Science Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Chromatographic Science Volume 51 ; 51 >
 
@@ -9257,8 +9257,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Journal of Church and State Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Journal of Church and State Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Church and State Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; releasing ; 2009 ; Journal of Church and State Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Journal of Church and State Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Church and State Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Church and State Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Church and State Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Church and State Volume 54 ; 54 >
 
@@ -9666,7 +9666,7 @@
     au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Environmental Law Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Environmental Law Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Environmental Law Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Journal of Environmental Law Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Environmental Law Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Environmental Law Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Environmental Law Volume 24 ; 24 >
 
@@ -9779,7 +9779,7 @@
     au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Experimental Botany Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Journal of Experimental Botany Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Experimental Botany Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Experimental Botany Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Experimental Botany Volume 63 ; 63 >
 
@@ -9820,7 +9820,7 @@
     au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Financial Econometrics Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Financial Econometrics Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Financial Econometrics Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Journal of Financial Econometrics Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Financial Econometrics Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Financial Econometrics Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Financial Econometrics Volume 10 ; 10 >
 
@@ -9858,7 +9858,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 65A ; 65A >
+    au < HighWirePressH20Plugin ; released ; 2010 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 65A ; 65A >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 66A ; 66A >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A >
 
@@ -9896,7 +9896,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 64B ; 64B >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 65B ; 65B >
+    au < HighWirePressH20Plugin ; released ; 2010 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 65B ; 65B >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 66B ; 66B >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67B ; 67B >
 
@@ -10037,7 +10037,7 @@
     au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Heredity Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Heredity Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Heredity Volume 100 ; 100 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Journal of Heredity Volume 101 ; 101 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Heredity Volume 101 ; 101 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Heredity Volume 102 ; 102 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Heredity Volume 103 ; 103 >
 
@@ -10062,7 +10062,7 @@
 
     au < HighWirePressH20Plugin ; manifest ; 2008 ; The Journal of Hindu Studies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Journal of Hindu Studies Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; The Journal of Hindu Studies Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; The Journal of Hindu Studies Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journal of Hindu Studies Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Journal of Hindu Studies Volume 5 ; 5 >
 
@@ -10526,7 +10526,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Infectious Diseases Volume 200 ; 200 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Infectious Diseases Volume 201 ; 201 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Infectious Diseases Volume 202 ; 202 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Infectious Diseases Volume 204 ; 204 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 >
 
@@ -10713,7 +10713,7 @@
     au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Islamic Studies Volume 18 ; 18 >
     au < HighWirePressPlugin ; down ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 >
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Journal of Islamic Studies Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Islamic Studies Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Islamic Studies Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Islamic Studies Volume 23 ; 23 >
 
@@ -10797,7 +10797,7 @@
 
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Legal Analysis Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Legal Analysis Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Legal Analysis Volume 4 ; 4 >
 
   	}
@@ -11492,8 +11492,8 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; releasing ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Journal of Plant Ecology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Plant Ecology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Plant Ecology Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Plant Ecology Volume 5 ; 5 >
 
@@ -12110,7 +12110,7 @@
 
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Topology Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Topology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Journal of Topology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Topology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Topology Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Topology Volume 5 ; 5 >
 
@@ -12223,7 +12223,7 @@
 
     au < HighWirePressH20Plugin ; manifest ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; The Journal of World Energy Law & Business Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; The Journal of World Energy Law & Business Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journal of World Energy Law & Business Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Journal of World Energy Law & Business Volume 5 ; 5 >
 
@@ -12341,7 +12341,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; The Leo Baeck Institute Yearbook Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; The Leo Baeck Institute Yearbook Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; The Leo Baeck Institute Yearbook Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; The Leo Baeck Institute Yearbook Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Leo Baeck Institute Yearbook Volume 57 ; 57 >
 
@@ -12623,7 +12623,7 @@
     au < HighWirePressH20Plugin ; released ; 2007 ; Literary Imagination Volume 9 ; 9 >
     au < HighWirePressPlugin ; down ; 2008 ; Literary Imagination Volume 10 ; 10 >
     au < HighWirePressPlugin ; down ; 2009 ;  Literary Imagination Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Literary Imagination Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Literary Imagination Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Literary Imagination Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Literary Imagination Volume 14 ; 14 >
 
@@ -13226,8 +13226,8 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Molecular Plant Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; releasing ; 2009 ; Molecular Plant Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Molecular Plant Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Molecular Plant Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Molecular Plant Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Molecular Plant Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Molecular Plant Volume 5 ; 5 >
 
@@ -13515,7 +13515,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; The Musical Quarterly Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; The Musical Quarterly Volume 90 ; 90 >
     au < HighWirePressPlugin ; down ; 2008 ; The Musical Quarterly Volume 91 ; 91 >
-    au < HighWirePressH20Plugin ; releasing ; 2009 ; The Musical Quarterly Volume 92 ; 92 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; The Musical Quarterly Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Musical Quarterly Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Musical Quarterly Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Musical Quarterly Volume 95 ; 95 >
@@ -13574,7 +13574,7 @@
     au < HighWireStrVolPlugin ; down ; 2007 ; Mutagenesis Volume 22 ; 22 >
     au < HighWirePressPlugin ; down ; 2008 ; Mutagenesis Volume 23 ; 23 >
     au < HighWirePressPlugin ; down ; 2009 ; Mutagenesis Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Mutagenesis Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Mutagenesis Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Mutagenesis Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Mutagenesis Volume 27 ; 27 >
 
@@ -13656,7 +13656,7 @@
     au < HighWireStrVolPlugin ; down ; 2007 ; Nephrology Dialysis Transplantation Volume 22 ; 22 >
     au < HighWirePressPlugin ; down ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 >
     au < HighWirePressPlugin ; down ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Nephrology Dialysis Transplantation Volume 27 ; 27 >
 
@@ -14088,7 +14088,7 @@
     au < HighWirePressH20Plugin ; released ; 2007 ; Nucleic Acids Research Volume 35 ; 35 >
     au < HighWirePressPlugin ; down ; 2008 ; Nucleic Acids Research Volume 36 ; 36 >
     au < HighWirePressPlugin ; down ; 2009 ; Nucleic Acids Research Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Nucleic Acids Research Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Nucleic Acids Research Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Nucleic Acids Research Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Nucleic Acids Research Volume 40 ; 40 >
 
@@ -14272,7 +14272,7 @@
     au < HighWireStrVolPlugin ; down ; 2007 ; Occupational Medicine Volume 57 ; 57 >
     au < HighWirePressPlugin ; down ; 2008 ; Occupational Medicine Volume 58 ; 58 >
     au < HighWirePressPlugin ; down ; 2009 ; Occupational Medicine Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Occupational Medicine Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Occupational Medicine Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Occupational Medicine Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Occupational Medicine Volume 62 ; 62 >
 
@@ -14731,7 +14731,7 @@
     au < HighWirePressPlugin ; down ; 2008 ; Oxford Review of Economic Policy Volume 24 ; 24 >
     au < HighWirePressPlugin ; down ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Oxford Review of Economic Policy Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Oxford Review of Economic Policy Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Oxford Review of Economic Policy Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 >
 
     }
@@ -15069,8 +15069,8 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Past & Present Volume 209 ; 209 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Past & Present Volume 210 ; 210 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Past & Present Volume 211 ; 211 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Past & Present Volume 212 ; 212 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Past & Present Volume 213 ; 213 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Past & Present Volume 212 ; 212 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Past & Present Volume 213 ; 213 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Past & Present Volume 214 ; 214 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Past & Present Volume 215 ; 215 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Past & Present Volume 216 ; 216 >
@@ -15620,7 +15620,7 @@
 
     au < HighWirePressPlugin ; down ;2008 ;  Public Health Ethics Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 2009 ; Public Health Ethics Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; Public Health Ethics Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Public Health Ethics Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Public Health Ethics Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Public Health Ethics Volume 5 ; 5 >
 
@@ -16333,8 +16333,8 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Radiation Protection Dosimetry Volume 143 ; 143 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Radiation Protection Dosimetry Volume 144 ; 144 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Radiation Protection Dosimetry Volume 145 ; 145 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Radiation Protection Dosimetry Volume 146 ; 146 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Radiation Protection Dosimetry Volume 147 ; 147 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Radiation Protection Dosimetry Volume 146 ; 146 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Radiation Protection Dosimetry Volume 147 ; 147 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Radiation Protection Dosimetry Volume 148 ; 148 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Radiation Protection Dosimetry Volume 149 ; 149 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Radiation Protection Dosimetry Volume 150 ; 150 >
@@ -16493,7 +16493,7 @@
     param[base_url] = http://raps.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; The Review of Asset Pricing Studies Volume 2 ; 2 >
 
   }
@@ -16721,7 +16721,7 @@
     au < HighWirePressH20Plugin ; released ; 2007 ; The Review of English Studies Volume 58 ; 58 >
     au < HighWirePressPlugin ; down ; 2008 ; The Review of English Studies Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; released ; 2009 ; The Review of English Studies Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; releasing ; 2010 ; The Review of English Studies Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; The Review of English Studies Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Review of English Studies Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; The Review of English Studies Volume 63 ; 63 >
 
@@ -17212,7 +17212,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Social Forces Volume 87 ; 87 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Social Forces Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Social Forces Volume 89 ; 89 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Social Forces Volume 90 ; 90 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Social Forces Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Social Forces Volume 91 ; 91 >
 
   }
@@ -17915,9 +17915,9 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Toxicological Sciences Volume 119 ; 119 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Toxicological Sciences Volume 120 ; 120 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Toxicological Sciences Volume 121 ; 121 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Toxicological Sciences Volume 122 ; 122 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Toxicological Sciences Volume 123 ; 123 >
-    au < HighWirePressH20Plugin ; releasing ; 2011 ; Toxicological Sciences Volume 124 ; 124 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Toxicological Sciences Volume 122 ; 122 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Toxicological Sciences Volume 123 ; 123 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Toxicological Sciences Volume 124 ; 124 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Toxicological Sciences Volume 125 ; 125 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Toxicological Sciences Volume 126 ; 126 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Toxicological Sciences Volume 127 ; 127 >

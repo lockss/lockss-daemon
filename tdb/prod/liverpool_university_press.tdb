@@ -21,15 +21,15 @@
     implicit < status ; year ; name ; param[volume_name] >    
     param[journal_issn] = 2046-2913
 
-    au < releasing ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 >
-    au < releasing ; 2005 ; Australian Journal of French Studies Volume 42 ; 42 >
-    au < releasing ; 2006 ; Australian Journal of French Studies Volume 43 ; 43 >
-    au < releasing ; 2007 ; Australian Journal of French Studies Volume 44 ; 44 >
-    au < releasing ; 2008 ; Australian Journal of French Studies Volume 45 ; 45 >
-    au < releasing ; 2009 ; Australian Journal of French Studies Volume 46 ; 46 >
-    au < releasing ; 2010 ; Australian Journal of French Studies Volume 47 ; 47 >    
+    au < released ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 >
+    au < released ; 2005 ; Australian Journal of French Studies Volume 42 ; 42 >
+    au < released ; 2006 ; Australian Journal of French Studies Volume 43 ; 43 >
+    au < released ; 2007 ; Australian Journal of French Studies Volume 44 ; 44 >
+    au < released ; 2008 ; Australian Journal of French Studies Volume 45 ; 45 >
+    au < released ; 2009 ; Australian Journal of French Studies Volume 46 ; 46 >
+    au < released ; 2010 ; Australian Journal of French Studies Volume 47 ; 47 >    
     au < released ; 2011 ; Australian Journal of French Studies Volume 48 ; 48 >
-    au < releasing ; 2012 ; Australian Journal of French Studies Volume 49 ; 49 >
+    au < released ; 2012 ; Australian Journal of French Studies Volume 49 ; 49 >
 
     
   }

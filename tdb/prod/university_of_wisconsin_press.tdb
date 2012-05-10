@@ -57,9 +57,9 @@
       au < released ; 2005 ; Arctic Anthropology Volume 42 ; 42 >
       au < testing ; 2006 ; Arctic Anthropology Volume 43 ; 43 >
       au < testing ; 2007 ; Arctic Anthropology Volume 44 ; 44 >
-      au < releasing ; 2008 ; Arctic Anthropology Volume 45 ; 45 >
+      au < released ; 2008 ; Arctic Anthropology Volume 45 ; 45 >
       au < released ; 2009 ; Arctic Anthropology Volume 46 ; 46 >
-      au < releasing ; 2010 ; Arctic Anthropology Volume 47 ; 47 >
+      au < released ; 2010 ; Arctic Anthropology Volume 47 ; 47 >
       au < released ; 2011 ; Arctic Anthropology Volume 48 ; 48 >
       au < expected ; 2012 ; Arctic Anthropology Volume 49 ; 49 >
 
@@ -104,12 +104,12 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < testing ; 2003 ; Contemporary Literature Volume 44 ; 44 >
-      au < releasing ; 2004 ; Contemporary Literature Volume 45 ; 45 >
+      au < released ; 2004 ; Contemporary Literature Volume 45 ; 45 >
       au < released ; 2005 ; Contemporary Literature Volume 46 ; 46 >
       au < released ; 2006 ; Contemporary Literature Volume 47 ; 47 >
       au < testing ; 2007 ; Contemporary Literature Volume 48 ; 48 >
       au < released ; 2008 ; Contemporary Literature Volume 49 ; 49 >
-      au < releasing ; 2009 ; Contemporary Literature Volume 50 ; 50 >
+      au < released ; 2009 ; Contemporary Literature Volume 50 ; 50 >
       au < released ; 2010 ; Contemporary Literature Volume 51 ; 51 >
       au < released ; 2011 ; Contemporary Literature Volume 52 ; 52 >
       au < expected ; 2012 ; Contemporary Literature Volume 53 ; 53 >
@@ -153,11 +153,11 @@
       param[base_url] = http://er.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < releasing ; 1981-1983 ; Ecological Restoration Volume 1 ; 1 >
+      au < released ; 1981-1983 ; Ecological Restoration Volume 1 ; 1 >
       au < testing ; 1984 ; Ecological Restoration Volume 2 ; 2 >
       au < testing ; 1985 ; Ecological Restoration Volume 3 ; 3 >
       au < released ; 1986 ; Ecological Restoration Volume 4 ; 4 >
-      au < releasing ; 1987 ; Ecological Restoration Volume 5 ; 5 >
+      au < released ; 1987 ; Ecological Restoration Volume 5 ; 5 >
       au < released ; 1988 ; Ecological Restoration Volume 6 ; 6 >
       au < released ; 1989 ; Ecological Restoration Volume 7 ; 7 >
       au < testing ; 1990 ; Ecological Restoration Volume 8 ; 8 >
@@ -176,10 +176,10 @@
       au < released ; 2003 ; Ecological Restoration Volume 21 ; 21 >
       au < released ; 2004 ; Ecological Restoration Volume 22 ; 22 >
       au < released ; 2005 ; Ecological Restoration Volume 23 ; 23 >
-      au < releasing ; 2006 ; Ecological Restoration Volume 24 ; 24 >
+      au < released ; 2006 ; Ecological Restoration Volume 24 ; 24 >
       au < testing ; 2007 ; Ecological Restoration Volume 25 ; 25 >
       au < released ; 2008 ; Ecological Restoration Volume 26 ; 26 >
-      au < releasing ; 2009 ; Ecological Restoration Volume 27 ; 27 >
+      au < released ; 2009 ; Ecological Restoration Volume 27 ; 27 >
       au < testing ; 2010 ; Ecological Restoration Volume 28 ; 28 >
       au < released ; 2011 ; Ecological Restoration Volume 29 ; 29 >
       au < manifest ; 2012 ; Ecological Restoration Volume 30 ; 30 >
@@ -218,8 +218,8 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2003 ; The Journal of Human Resources Volume XXXVIII ; XXXVIII >
-      au < releasing ; 2004 ; The Journal of Human Resources Volume XXXIX ; XXXIX >
-      au < releasing ; 2005 ; The Journal of Human Resources Volume XL ; XL >
+      au < released ; 2004 ; The Journal of Human Resources Volume XXXIX ; XXXIX >
+      au < released ; 2005 ; The Journal of Human Resources Volume XL ; XL >
       au < released ; 2006 ; The Journal of Human Resources Volume XLI ; XLI >
       au < testing ; 2007 ; The Journal of Human Resources Volume XLII ; XLII >
       au < released ; 2008 ; The Journal of Human Resources Volume 43 ; 43 >
@@ -303,19 +303,19 @@
 
       au < released ; 1982 ; Landscape Journal: Design, Planning and Management of the Land Volume 1 ; 1 >
       au < released ; 1983 ; Landscape Journal: Design, Planning and Management of the Land Volume 2 ; 2 >
-      au < releasing ; 1984 ; Landscape Journal: Design, Planning and Management of the Land Volume 3 ; 3 >
+      au < released ; 1984 ; Landscape Journal: Design, Planning and Management of the Land Volume 3 ; 3 >
       au < released ; 1985 ; Landscape Journal: Design, Planning and Management of the Land Volume 4 ; 4 >
       au < released ; 1986 ; Landscape Journal: Design, Planning and Management of the Land Volume 5 ; 5 >
       au < released ; 1987 ; Landscape Journal: Design, Planning and Management of the Land Volume 6 ; 6 >
       au < released ; 1988 ; Landscape Journal: Design, Planning and Management of the Land Volume 7 ; 7 >
       au < released ; 1989 ; Landscape Journal: Design, Planning and Management of the Land Volume 8 ; 8 >
       au < testing ; 1990 ; Landscape Journal: Design, Planning and Management of the Land Volume 9 ; 9 >
-      au < releasing ; 1991 ; Landscape Journal: Design, Planning and Management of the Land Volume 10 ; 10 >
+      au < released ; 1991 ; Landscape Journal: Design, Planning and Management of the Land Volume 10 ; 10 >
       au < testing ; 1992 ; Landscape Journal: Design, Planning and Management of the Land Volume 11 ; 11 >
       au < released ; 1993 ; Landscape Journal: Design, Planning and Management of the Land Volume 12 ; 12 >
       au < released ; 1994 ; Landscape Journal: Design, Planning and Management of the Land Volume 13 ; 13 >
       au < released ; 1995 ; Landscape Journal: Design, Planning and Management of the Land Volume 14 ; 14 >
-      au < releasing ; 1996 ; Landscape Journal: Design, Planning and Management of the Land Volume 15 ; 15 >
+      au < released ; 1996 ; Landscape Journal: Design, Planning and Management of the Land Volume 15 ; 15 >
       au < testing ; 1997 ; Landscape Journal: Design, Planning and Management of the Land Volume 16 ; 16 >
       au < released ; 1998 ; Landscape Journal: Design, Planning and Management of the Land Volume 17 ; 17 >
       au < released ; 1999 ; Landscape Journal: Design, Planning and Management of the Land Volume 18 ; 18 >
@@ -324,13 +324,13 @@
       au < released ; 2002 ; Landscape Journal: Design, Planning and Management of the Land Volume 21 ; 21 >
       au < released ; 2003 ; Landscape Journal: Design, Planning and Management of the Land Volume 22 ; 22 >
       au < released ; 2004 ; Landscape Journal: Design, Planning and Management of the Land Volume 23 ; 23 >
-      au < releasing ; 2005 ; Landscape Journal: Design, Planning and Management of the Land Volume 24 ; 24 >
+      au < released ; 2005 ; Landscape Journal: Design, Planning and Management of the Land Volume 24 ; 24 >
       au < testing ; 2006 ; Landscape Journal: Design, Planning and Management of the Land Volume 25 ; 25 >
-      au < releasing ; 2007 ; Landscape Journal: Design, Planning and Management of the Land Volume 26 ; 26 >
+      au < released ; 2007 ; Landscape Journal: Design, Planning and Management of the Land Volume 26 ; 26 >
       au < testing ; 2008 ; Landscape Journal: Design, Planning and Management of the Land Volume 27 ; 27 >
       au < released ; 2009 ; Landscape Journal: Design, Planning and Management of the Land Volume 28 ; 28 >
       au < released ; 2010 ; Landscape Journal: Design, Planning and Management of the Land Volume 29 ; 29 >
-      au < releasing ; 2011 ; Landscape Journal: Design, Planning and Management of the Land Volume 30 ; 30 >
+      au < released ; 2011 ; Landscape Journal: Design, Planning and Management of the Land Volume 30 ; 30 >
       au < expected ; 2012 ; Landscape Journal: Design, Planning and Management of the Land Volume 31 ; 31 >
 
     }
@@ -417,16 +417,16 @@
       param[base_url] = http://mon.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < releasing ; 2003 ; Monatshefte Volume XCV ; XCV >
+      au < released ; 2003 ; Monatshefte Volume XCV ; XCV >
       au < released ; 2004 ; Monatshefte Volume XCVI ; XCVI >
       au < released ; 2005 ; Monatshefte Volume XCVII ; XCVII >
-      au < releasing ; 2006 ; Monatshefte Volume XCVIII ; XCVIII >
-      au < releasing ; 2007 ; Monatshefte Volume XCIX ; XCIX >
+      au < released ; 2006 ; Monatshefte Volume XCVIII ; XCVIII >
+      au < released ; 2007 ; Monatshefte Volume XCIX ; XCIX >
       au < released ; 2008 ; Monatshefte Volume 100 ; 100 >
       au < released ; 2009 ; Monatshefte Volume 101 ; 101 >
       au < released ; 2010 ; Monatshefte Volume 102 ; 102 >
       au < testing ; 2011 ; Monatshefte Volume 103 ; 103 >
-      au < releasing ; 2012 ; Monatshefte Volume 104 ; 104 >
+      au < released ; 2012 ; Monatshefte Volume 104 ; 104 >
 
     }
 
@@ -519,11 +519,11 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2003 ; SubStance Volume 32 ; 32 >
-      au < releasing ; 2004 ; SubStance Volume 33 ; 33 >
+      au < released ; 2004 ; SubStance Volume 33 ; 33 >
       au < testing ; 2005 ; SubStance Volume 34 ; 34 >
       au < released ; 2006 ; SubStance Volume 35 ; 35 >
       au < testing ; 2007 ; SubStance Volume 36 ; 36 >
-      au < releasing ; 2008 ; SubStance Volume 37 ; 37 >
+      au < released ; 2008 ; SubStance Volume 37 ; 37 >
       au < released ; 2009 ; SubStance Volume 38 ; 38 >
       au < released ; 2010 ; SubStance Volume 39 ; 39 >
       au < released ; 2011 ; SubStance Volume 40 ; 40 >

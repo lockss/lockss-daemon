@@ -24,8 +24,8 @@
     param[journal_abbr] = ijs
     implicit < status ; year ; name ; param[volume] >
 
-    au < releasing ; 2011 ; International Journal of Speleology Volume 40 ; 40 >
-    au < releasing ; 2012 ; International Journal of Speleology Volume 41 ; 41 >
+    au < released ; 2011 ; International Journal of Speleology Volume 40 ; 40 >
+    au < released ; 2012 ; International Journal of Speleology Volume 41 ; 41 >
 
   }
 
