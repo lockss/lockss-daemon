@@ -8604,8 +8604,8 @@
       au < manifest ; exists ; 1996 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 3 ; 3 ; >
       au < manifest ; exists ; 1997 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 4 ; 4 ; >
       au < manifest ; exists ; 1998 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 5 ; 5 ; >
-      au < exists ; exists ; 1999 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 6 ; 6 ; >
-      au < exists ; exists ; 2000 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 7 ; 7 ; >
+      au < doesNotExist ; doesNotExist ; 1999 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 6 ; 6 ; >
+      au < doesNotExist ; doesNotExist ; 2000 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 7 ; 7 ; >
       au < manifest ; exists ; 2001 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 8 ; 8 ; >
       au < manifest ; exists ; 2002 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 9 ; 9 ; >
       au < manifest ; exists ; 2003 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 10 ; 10 ; >
@@ -10236,7 +10236,7 @@
       au < manifest ; exists ; 1992 ; General Music Today Volume 6 ; 6 ; >
       au < manifest ; exists ; 1993 ; General Music Today Volume 7 ; 7 ; >
       au < manifest ; exists ; 1994 ; General Music Today Volume 8 ; 8 ; >
-      au < exists ; exists ; 1995 ; General Music Today Volume 9 ; 9 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; General Music Today Volume 9 ; 9 ; >
       au < manifest ; exists ; 1996 ; General Music Today Volume 10 ; 10 ; >
       au < manifest ; exists ; 1997 ; General Music Today Volume 11 ; 11 ; >
       au < manifest ; exists ; 1998 ; General Music Today Volume 12 ; 12 ; >
@@ -11696,7 +11696,7 @@
 
         au < exists ; exists ; 2009 ; Human Genomics and Proteomics Volume 1 ; 1 ; >
         au < exists ; exists ; 2010 ; Human Genomics and Proteomics Volume 2 ; 2 ; >
-        au < exists ; exists ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 ; >
+        au < expected ; exists ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 ; >
         au < expected ; exists ; 2012 ; Human Genomics and Proteomics Volume 4 ; 4 ; >
 
       }
@@ -25770,7 +25770,8 @@
       au < exists ; exists ; 2003-2004 ; Nutrition and Health Volume 17 ; 17 ; >
       au < exists ; exists ; 2004-2007 ; Nutrition and Health Volume 18 ; 18 ; >
       au < exists ; exists ; 2007-2008 ; Nutrition and Health Volume 19 ; 19 ; >
-      au < exists ; exists ; 2009 ; Nutrition and Health Volume 20 ; 20 ; >
+      au < exists ; exists ; 2009-2011 ; Nutrition and Health Volume 20 ; 20 ; >
+      au < exists ; exists ; 2012 ; Nutrition and Health Volume 21 ; 21 ; >
 
     }
 
