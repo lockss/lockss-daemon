@@ -56,7 +56,7 @@
     >
 
     comment[urgent] = urgent test
-    comment[doNotProcess] = Error in sidebar URL in PDF frameset causes infinite looping & repository error -- contacting Highwire. Issue 3742
+    comment[doNotProcess] = Error in sidebar URL in PDF frameset causes infinite looping & repository error -- contacting Highwire. RU3742, RT3905
     plugin = org.lockss.plugin.highwire.HighWirePressPlugin
     param[base_url] = http://content.onlinejacc.org/
     implicit < status ; year ; name ; param[volume_name] >
