@@ -26,7 +26,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.springer;
+package org.lockss.plugin.minerva;
 
 import java.util.Iterator;
 import java.util.regex.*;
@@ -34,16 +34,17 @@ import java.util.regex.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class SpringerLinkBookArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class UpdatedMinervaArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("SpringerLinkBookArticleIteratorFactory");
+  protected static Logger log = Logger.getLogger("UpdatedMinervaArticleIteratorFactory");
   
   protected static final String ROOT_TEMPLATE = "\"%s\",base_url";
-  protected static final String PATTERN_TEMPLATE = "\"%scontent/[^/]+/[^\\.]+\\.pdf$\",base_url";
+  protected static final String PATTERN_TEMPLATE = "\"%s%s/[^/]+\\.pdf$\",base_url,volume_abbr";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -57,7 +58,7 @@ public class SpringerLinkBookArticleIteratorFactory implements ArticleIteratorFa
   
   protected static class SpringerLinkBookArticleIterator extends SubTreeArticleIterator {
 	 
-    protected static Pattern PATTERN = Pattern.compile("(.*/content)(/[^/]+)(/[^\\.]+\\.pdf$)", Pattern.CASE_INSENSITIVE);
+    protected static Pattern PATTERN = Pattern.compile("(.*/(v|V)ol(%20)?[\\d]+/[^/]+\\.)(pdf$)", Pattern.CASE_INSENSITIVE);
     
     protected SpringerLinkBookArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
@@ -81,23 +82,23 @@ public class SpringerLinkBookArticleIteratorFactory implements ArticleIteratorFa
       af.setFullTextCu(cu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
    
-      //if(spec.getTarget() != MetadataTarget.Article)
+      if(spec.getTarget() != MetadataTarget.Article)
 		guessMetadataFile(af, mat);
       
       return af;
     }
     
     protected void guessMetadataFile(ArticleFiles af, Matcher mat) {
-      CachedUrl metadataCu = au.makeCachedUrl(mat.replaceFirst("$1$2"));
+      CachedUrl metadataCu = au.makeCachedUrl(mat.replaceFirst("$1html"));
       
       if (metadataCu != null && metadataCu.hasContent()) {
-    	  af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, metadataCu);
+    	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, metadataCu);
       }
     }
   }
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
 	      throws PluginException {
-	    return new SpringerLinkBookArticleMetadataExtractor();
+	    return new BaseArticleMetadataExtractor();
   }
 }
