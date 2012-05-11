@@ -16,7 +16,7 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.mayoclinicproceedings.com/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[moved] = move to elsevier Jan 31, 2012
+    comment[moved] = moved to elsevier Jan 31, 2012
   
     au < down ; 1995 ; Mayo Clinic Proceedings Volume 70 ; 70 >
     au < down ; 1996 ; Mayo Clinic Proceedings Volume 71 ; 71 >
