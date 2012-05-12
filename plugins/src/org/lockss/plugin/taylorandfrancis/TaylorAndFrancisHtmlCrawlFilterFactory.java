@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.1 2011-10-05 00:55:55 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.2 2012-05-12 00:22:28 mellen22 Exp $
  */
 
 /*
@@ -53,6 +53,8 @@ public class TaylorAndFrancisHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "newsArticles"),
         // Related and most read articles
         HtmlNodeFilters.tagWithAttribute("div", "id", "relatedArticles"),
+        //Ads from the publisher
+        HtmlNodeFilters.tagWithAttribute("div", "class", "ad module"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

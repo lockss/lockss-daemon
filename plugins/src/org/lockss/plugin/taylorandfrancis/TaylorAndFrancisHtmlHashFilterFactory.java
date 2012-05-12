@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.2 2011-10-10 19:20:04 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.3 2012-05-12 00:22:28 mellen22 Exp $
  */
 
 /*
@@ -64,6 +64,8 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "newsArticles"),
         // Related and most read articles
         HtmlNodeFilters.tagWithAttribute("div", "id", "relatedArticles"),
+        //Ad module
+        HtmlNodeFilters.tagWithAttribute("div", "class", "ad module"),
         /*
          * Proper to the hash filter
          */
