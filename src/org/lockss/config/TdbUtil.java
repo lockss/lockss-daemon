@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.10 2012-01-12 00:49:40 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.11 2012-05-14 16:36:03 easyonthemayo Exp $
  */
 
 /*
@@ -415,7 +415,7 @@ public class TdbUtil {
   /**
    * An enum representing the various scopes which can be requested and 
    * returned for the contents of a LOCKSS box. ContentScope is only really
-   * relevant to TDB-based reports in a running daemon, but external data.
+   * relevant to TDB-based reports in a running daemon, not external data.
    */
   public static enum ContentScope {
     /** Everything available according to the TDB files. */
