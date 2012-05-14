@@ -18,35 +18,35 @@
       >
       param[base_url] = http://aac.asm.org/
   
-      au < HighWirePressH20Plugin ; exists ; 1972 ; Antimicrobial Agents and Chemotherapy Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; 1972 ; Antimicrobial Agents and Chemotherapy Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; 1973 ; Antimicrobial Agents and Chemotherapy Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; 1973 ; Antimicrobial Agents and Chemotherapy Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; 1974 ; Antimicrobial Agents and Chemotherapy Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; 1974 ; Antimicrobial Agents and Chemotherapy Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; 1975 ; Antimicrobial Agents and Chemotherapy Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; 1975 ; Antimicrobial Agents and Chemotherapy Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; exists ; 1976 ; Antimicrobial Agents and Chemotherapy Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; 1976 ; Antimicrobial Agents and Chemotherapy Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; exists ; 1977 ; Antimicrobial Agents and Chemotherapy Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; exists ; 1977 ; Antimicrobial Agents and Chemotherapy Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; exists ; 1978 ; Antimicrobial Agents and Chemotherapy Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; exists ; 1978 ; Antimicrobial Agents and Chemotherapy Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; exists ; 1979 ; Antimicrobial Agents and Chemotherapy Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; exists ; 1979 ; Antimicrobial Agents and Chemotherapy Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; exists ; 1980 ; Antimicrobial Agents and Chemotherapy Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; exists ; 1980 ; Antimicrobial Agents and Chemotherapy Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; exists ; 1981 ; Antimicrobial Agents and Chemotherapy Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; exists ; 1981 ; Antimicrobial Agents and Chemotherapy Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; exists ; 1982 ; Antimicrobial Agents and Chemotherapy Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; exists ; 1982 ; Antimicrobial Agents and Chemotherapy Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; exists ; 1983 ; Antimicrobial Agents and Chemotherapy Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; exists ; 1983 ; Antimicrobial Agents and Chemotherapy Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; exists ; 1984 ; Antimicrobial Agents and Chemotherapy Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; exists ; 1984 ; Antimicrobial Agents and Chemotherapy Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; exists ; 1985 ; Antimicrobial Agents and Chemotherapy Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; exists ; 1985 ; Antimicrobial Agents and Chemotherapy Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; exists ; 1986 ; Antimicrobial Agents and Chemotherapy Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 1972 ; Antimicrobial Agents and Chemotherapy Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1972 ; Antimicrobial Agents and Chemotherapy Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1973 ; Antimicrobial Agents and Chemotherapy Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1973 ; Antimicrobial Agents and Chemotherapy Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1974 ; Antimicrobial Agents and Chemotherapy Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1974 ; Antimicrobial Agents and Chemotherapy Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Antimicrobial Agents and Chemotherapy Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Antimicrobial Agents and Chemotherapy Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Antimicrobial Agents and Chemotherapy Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Antimicrobial Agents and Chemotherapy Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Antimicrobial Agents and Chemotherapy Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Antimicrobial Agents and Chemotherapy Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Antimicrobial Agents and Chemotherapy Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Antimicrobial Agents and Chemotherapy Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Antimicrobial Agents and Chemotherapy Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Antimicrobial Agents and Chemotherapy Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Antimicrobial Agents and Chemotherapy Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Antimicrobial Agents and Chemotherapy Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Antimicrobial Agents and Chemotherapy Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Antimicrobial Agents and Chemotherapy Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Antimicrobial Agents and Chemotherapy Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Antimicrobial Agents and Chemotherapy Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Antimicrobial Agents and Chemotherapy Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Antimicrobial Agents and Chemotherapy Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Antimicrobial Agents and Chemotherapy Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Antimicrobial Agents and Chemotherapy Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Antimicrobial Agents and Chemotherapy Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Antimicrobial Agents and Chemotherapy Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Antimicrobial Agents and Chemotherapy Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; manifest ; 1986 ; Antimicrobial Agents and Chemotherapy Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 1987 ; Antimicrobial Agents and Chemotherapy Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; released ; 1988 ; Antimicrobial Agents and Chemotherapy Volume 32 ; 32 >
