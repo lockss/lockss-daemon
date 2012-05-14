@@ -1588,7 +1588,7 @@
       au < released ; 2008 ; AIDS Research and Therapy Volume 5 ; 5 >
       au < released ; 2009 ; AIDS Research and Therapy Volume 6 ; 6 >
       au < released ; 2010 ; AIDS Research and Therapy Volume 7 ; 7 >
-      au < manifest ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 >
+      au < testing ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 >
       au < manifest ; 2012 ; AIDS Research and Therapy Volume 9 ; 9 >
 
     }
@@ -1763,9 +1763,12 @@
       param[base_url] = http://www.biologicalproceduresonline.com/
       param[journal_issn] = 1480-9222
 
-      au < manifest ; 2009 ; Biological Procedures Online Volume 11 ; 11 >
-      au < manifest ; 2010 ; Biological Procedures Online Volume 12 ; 12 >
-      au < manifest ; 2011 ; Biological Procedures Online Volume 13 ; 13 >
+      param[base_url] = http://www.biologicalproceduresonline.com/
+      param[journal_issn] = 1480-9222
+
+      au < testing ; 2009 ; Biological Procedures Online Volume 11 ; 11 >
+      au < testing ; 2010 ; Biological Procedures Online Volume 12 ; 12 >
+      au < testing ; 2011 ; Biological Procedures Online Volume 13 ; 13 >
       au < manifest ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
 
     }
@@ -2222,7 +2225,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Clinical and Molecular Allergy Volume 6 ; 6 >
       au < released ; 2009 ; Clinical and Molecular Allergy Volume 7 ; 7 >
       au < released ; 2010 ; Clinical and Molecular Allergy Volume 8 ; 8 >
-      au < manifest ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 >
+      au < testing ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 >
       au < manifest ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
       
     }
@@ -2238,7 +2241,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1542-6416
       comment[moved_from] = Springer Science+Business Media in 2011
       
-      au < manifest ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
+      au < testing ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
       au < manifest ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
 
     }
@@ -2259,7 +2262,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Cough Volume 4 ; 4 >
       au < released ; 2009 ; Cough Volume 5 ; 5 >
       au < released ; 2010 ; Cough Volume 6 ; 6 >
-      au < manifest ; 2011 ; Cough Volume 7 ; 7 >
+      au < testing ; 2011 ; Cough Volume 7 ; 7 >
       au < manifest ; 2012 ; Cough Volume 8 ; 8 >
 
     }
@@ -2288,7 +2291,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Critical Care Volume 12 ; 12 >
       au < released ; 2009 ; Critical Care Volume 13 ; 13 >
       au < released ; 2010 ; Critical Care Volume 14 ; 14 >
-      au < manifest ; 2011 ; Critical Care Volume 15 ; 15 >
+      au < testing ; 2011 ; Critical Care Volume 15 ; 15 >
       au < manifest ; 2012 ; Critical Care Volume 16 ; 16 >
 
     }
@@ -2308,7 +2311,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Diagnostic Pathology Volume 3 ; 3 >
       au < released ; 2009 ; Diagnostic Pathology Volume 4 ; 4 >
       au < released ; 2010 ; Diagnostic Pathology Volume 5 ; 5 >
-      au < manifest ; 2011 ; Diagnostic Pathology Volume 6 ; 6 >
+      au < testing ; 2011 ; Diagnostic Pathology Volume 6 ; 6 >
       au < manifest ; 2012 ; Diagnostic Pathology Volume 7 ; 7 >
 
     }
@@ -2353,7 +2356,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Emerging Themes in Epidemiology Volume 5 ; 5 >
       au < released ; 2009 ; Emerging Themes in Epidemiology Volume 6 ; 6 >
       au < released ; 2010 ; Emerging Themes in Epidemiology Volume 7 ; 7 >
-      au < manifest ; 2011 ; Emerging Themes in Epidemiology Volume 8 ; 8 >
+      au < testing ; 2011 ; Emerging Themes in Epidemiology Volume 8 ; 8 >
       au < manifest ; 2012 ; Emerging Themes in Epidemiology Volume 9 ; 9 >
 
     }
@@ -2377,7 +2380,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Environmental Health Volume 7 ; 7 >
       au < released ; 2009 ; Environmental Health Volume 8 ; 8 >
       au < released ; 2010 ; Environmental Health Volume 9 ; 9 >
-      au < manifest ; 2011 ; Environmental Health Volume 10 ; 10 >
+      au < testing ; 2011 ; Environmental Health Volume 10 ; 10 >
       au < manifest ; 2012 ; Environmental Health Volume 11 ; 11 >
 
     }
@@ -2397,9 +2400,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Epidemiologic Perspectives & Innovations Volume 3 ; 3 >
       au < released ; 2007 ; Epidemiologic Perspectives & Innovations Volume 4 ; 4 >
       au < released ; 2008 ; Epidemiologic Perspectives & Innovations Volume 5 ; 5 >
-      au < manifest ; 2009 ; Epidemiologic Perspectives & Innovations Volume 6 ; 6 >
-      au < manifest ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 >
-      au < manifest ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 ; 8 >
+      au < testing ; 2009 ; Epidemiologic Perspectives & Innovations Volume 6 ; 6 >
+      au < testing ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 >
+      au < testing ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 ; 8 >
       au < manifest ; 2012 ; Epidemiologic Perspectives & Innovations Volume 9 ; 9 >
 
     }
