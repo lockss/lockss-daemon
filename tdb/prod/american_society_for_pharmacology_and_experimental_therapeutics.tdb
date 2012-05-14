@@ -446,24 +446,23 @@
 
     {
 
-    plugin = org.lockss.plugin.clockss.triggered.MolecularInterventsionsTriggeredPlugin
-    param[base_url] = http://triggered.clockss.org/
-    param[issn] = 1534-0384
+    plugin = org.lockss.plugin.highwire.HighWirePressH20TriggeredPlugin
+    param[base_url] = http://molinterv.aspetjournals.org/
     comment[doNotProcess] = This section is under construction -- do not process
 
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] ; proxy >
 
-    au < manifest ; 2001 ; Molecular Interventions Volume 1 ; 1 >
-    au < manifest ; 2002 ; Molecular Interventions Volume 2 ; 2 >
-    au < manifest ; 2003 ; Molecular Interventions Volume 3 ; 3 >
-    au < manifest ; 2004 ; Molecular Interventions Volume 4 ; 4 >
-    au < manifest ; 2005 ; Molecular Interventions Volume 5 ; 5 >
-    au < manifest ; 2006 ; Molecular Interventions Volume 6 ; 6 >
-    au < manifest ; 2007 ; Molecular Interventions Volume 7 ; 7 >
-    au < manifest ; 2008 ; Molecular Interventions Volume 8 ; 8 >
-    au < manifest ; 2009 ; Molecular Interventions Volume 9 ; 9 >
-    au < manifest ; 2010 ; Molecular Interventions Volume 10 ; 10 >
-    au < manifest ; 2011 ; Molecular Interventions Volume 11 ; 11 >
+    au < manifest ; 2001 ; Molecular Interventions Volume 1 ; 1 ; reingest.lockss.org:80 >
+    au < manifest ; 2002 ; Molecular Interventions Volume 2 ; 2 ; reingest.lockss.org:80 >
+    au < manifest ; 2003 ; Molecular Interventions Volume 3 ; 3 ; reingest.lockss.org:80 >
+    au < manifest ; 2004 ; Molecular Interventions Volume 4 ; 4 ; reingest.lockss.org:80 >
+    au < manifest ; 2005 ; Molecular Interventions Volume 5 ; 5 ; reingest.lockss.org:80 >
+    au < manifest ; 2006 ; Molecular Interventions Volume 6 ; 6 ; reingest.lockss.org:80 >
+    au < manifest ; 2007 ; Molecular Interventions Volume 7 ; 7 ; reingest.lockss.org:80 >
+    au < manifest ; 2008 ; Molecular Interventions Volume 8 ; 8 ; reingest.lockss.org:80 >
+    au < manifest ; 2009 ; Molecular Interventions Volume 9 ; 9 ; reingest.lockss.org:80 >
+    au < manifest ; 2010 ; Molecular Interventions Volume 10 ; 10 ; reingest.lockss.org:80 >
+    au < manifest ; 2011 ; Molecular Interventions Volume 11 ; 11 ; reingest.lockss.org:80 >
 
     }
   }
