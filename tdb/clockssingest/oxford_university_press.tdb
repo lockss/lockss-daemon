@@ -3477,7 +3477,7 @@
     param[base_url] = http://crj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < testing ; exists ; 2009 ; Classical Receptions Journal Volume 1 ; 1 ; >
+    au < released ; manifest ; 2009 ; Classical Receptions Journal Volume 1 ; 1 ; >
     au < released ; manifest ; 2010 ; Classical Receptions Journal Volume 2 ; 2 ; >
     au < released ; crawling ; 2011 ; Classical Receptions Journal Volume 3 ; 3 ; >
     au < expected ; exists ; 2012 ; Classical Receptions Journal Volume 4 ; 4 ; >
@@ -3545,8 +3545,8 @@
     au < manifest ; exists ; 2007 ; Clinical Infectious Diseases Volume 45 ; 45 ; >
     au < manifest ; exists ; 2008 ; Clinical Infectious Diseases Volume 46 ; 46 ; >
     au < manifest ; exists ; 2008 ; Clinical Infectious Diseases Volume 47 ; 47 ; >
-    au < testing ; exists ; 2009 ; Clinical Infectious Diseases Volume 48 ; 48 ; >
-    au < testing ; exists ; 2009 ; Clinical Infectious Diseases Volume 49 ; 49 ; >
+    au < released ; manifest ; 2009 ; Clinical Infectious Diseases Volume 48 ; 48 ; >
+    au < released ; manifest ; 2009 ; Clinical Infectious Diseases Volume 49 ; 49 ; >
     au < released ; manifest ; 2010 ; Clinical Infectious Diseases Volume 50 ; 50 ; >
     au < released ; manifest ; 2010 ; Clinical Infectious Diseases Volume 51 ; 51 ; >
     au < released ; crawling ; 2011 ; Clinical Infectious Diseases Volume 52 ; 52 ; >
@@ -3904,7 +3904,7 @@
     au < manifest ; exists ; 2006 ; Current Legal Problems Volume 59 ; 59 ; >
     au < manifest ; exists ; 2007 ; Current Legal Problems Volume 60 ; 60 ; >
     au < manifest ; exists ; 2008 ; Current Legal Problems Volume 61 ; 61 ; >
-    au < testing ; exists ; 2009 ; Current Legal Problems Volume 62 ; 62 ; >
+    au < released ; manifest ; 2009 ; Current Legal Problems Volume 62 ; 62 ; >
     au < released ; manifest ; 2010 ; Current Legal Problems Volume 63 ; 63 ; >
     au < released ; crawling ; 2011 ; Current Legal Problems Volume 64 ; 64 ; >
     au < expected ; exists ; 2012 ; Current Legal Problems Volume 65 ; 65 ; >
@@ -3922,7 +3922,7 @@
     param[base_url] = http://database.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < testing ; exists ; 2009 ; Database: The Journal of Biological Databases and Curation Volume 2009 ; 2009 ; >
+    au < released ; manifest ; 2009 ; Database: The Journal of Biological Databases and Curation Volume 2009 ; 2009 ; >
     au < released ; manifest ; 2010 ; Database: The Journal of Biological Databases and Curation Volume 2010 ; 2010 ; >
     au < released ; crawling ; 2011 ; Database: The Journal of Biological Databases and Curation Volume 2011 ; 2011 ; >
     au < crawling ; exists ; 2012 ; Database: The Journal of Biological Databases and Curation Volume 2012 ; 2012 ; >
@@ -4115,7 +4115,7 @@
     au < manifest ; exists ; 2006 ; English: Journal of the English Association Volume 55 ; 55 ; >
     au < manifest ; exists ; 2007 ; English: Journal of the English Association Volume 56 ; 56 ; >
     au < manifest ; exists ; 2008 ; English: Journal of the English Association Volume 57 ; 57 ; >
-    au < testing ; exists ; 2009 ; English: Journal of the English Association Volume 58 ; 58 ; >
+    au < released ; manifest ; 2009 ; English: Journal of the English Association Volume 58 ; 58 ; >
     au < released ; manifest ; 2010 ; English: Journal of the English Association Volume 59 ; 59 ; >
     au < released ; manifest ; 2011 ; English: Journal of the English Association Volume 60 ; 60 ; >
     au < manifest ; exists ; 2012 ; English: Journal of the English Association Volume 61 ; 61 ; >
@@ -4431,7 +4431,7 @@
     au < manifest ; exists ; 2006 ; Environmental History Volume 11 ; 11 ; >
     au < manifest ; exists ; 2007 ; Environmental History Volume 12 ; 12 ; >
     au < manifest ; exists ; 2008 ; Environmental History Volume 13 ; 13 ; >
-    au < testing ; exists ; 2009 ; Environmental History Volume 14 ; 14 ; >
+    au < released ; manifest ; 2009 ; Environmental History Volume 14 ; 14 ; >
     au < released ; manifest ; 2010 ; Environmental History Volume 15 ; 15 ; >
     au < released ; crawling ; 2011 ; Environmental History Volume 16 ; 16 ; >
     au < crawling ; exists ; 2012 ; Environmental History Volume 17 ; 17 ; >
@@ -4845,8 +4845,8 @@
     au < manifest ; exists ; 2007 ; European Journal of Cardio-Thoracic Surgery Volume 32 ; 32 ; >
     au < manifest ; exists ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 33 ; 33 ; >
     au < manifest ; exists ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 34 ; 34 ; >
-    au < testing ; exists ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 35 ; 35 ; >
-    au < testing ; exists ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 36 ; 36 ; >
+    au < released ; manifest ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 35 ; 35 ; >
+    au < released ; manifest ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 36 ; 36 ; >
     au < released ; manifest ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37 ; 37 ; >
     au < released ; manifest ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 38 ; 38 ; >
     au < released ; manifest ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 ; >
@@ -4986,7 +4986,7 @@
     au < manifest ; exists ; 2006 ; European Journal of Heart Failure Supplements Volume 5 ; 5 ; >
     au < manifest ; exists ; 2007 ; European Journal of Heart Failure Supplements Volume 6 ; 6 ; >
     au < manifest ; exists ; 2008 ; European Journal of Heart Failure Supplements Volume 7 ; 7 ; >
-    au < testing ; exists ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 ; >
+    au < released ; manifest ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 ; >
     au < released ; manifest ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 ; >
     au < released ; crawling ; 2011 ; European Journal of Heart Failure Supplements Volume 10 ; 10 ; >
     au < expected ; exists ; 2012 ; European Journal of Heart Failure Supplements Volume 11 ; 11 ; >
@@ -5251,7 +5251,7 @@
     au < manifest ; exists ; 2006 ; European Review of Economic History Volume 10 ; 10 ; >
     au < manifest ; exists ; 2007 ; European Review of Economic History Volume 11 ; 11 ; >
     au < manifest ; exists ; 2008 ; European Review of Economic History Volume 12 ; 12 ; >
-    au < testing ; exists ; 2009 ; European Review of Economic History Volume 13 ; 13 ; >
+    au < released ; manifest ; 2009 ; European Review of Economic History Volume 13 ; 13 ; >
     au < released ; manifest ; 2010 ; European Review of Economic History Volume 14 ; 14 ; >
     au < released ; crawling ; 2011 ; European Review of Economic History Volume 15 ; 15 ; >
     au < crawling ; exists ; 2012 ; European Review of Economic History Volume 16 ; 16 ; >
@@ -5852,7 +5852,7 @@
     param[base_url] = http://gbe.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < testing ; exists ; 2009 ; Genome Biology and Evolution Volume 1 ; 1 ; >
+    au < released ; manifest ; 2009 ; Genome Biology and Evolution Volume 1 ; 1 ; >
     au < released ; manifest ; 2010 ; Genome Biology and Evolution Volume 2 ; 2 ; >
     au < released ; manifest ; 2011 ; Genome Biology and Evolution Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 ; >
@@ -6073,7 +6073,7 @@
     au < manifest ; exists ; 2006 ; Health & Social Work Volume 31 ; 31 ; >
     au < manifest ; exists ; 2007 ; Health & Social Work Volume 32 ; 32 ; >
     au < manifest ; exists ; 2008 ; Health & Social Work Volume 33 ; 33 ; >
-    au < testing ; exists ; 2009 ; Health & Social Work Volume 34 ; 34 ; >
+    au < released ; manifest ; 2009 ; Health & Social Work Volume 34 ; 34 ; >
     au < released ; manifest ; 2010 ; Health & Social Work Volume 35 ; 35 ; >
     au < released ; crawling ; 2011 ; Health & Social Work Volume 36 ; 36 ; >
     au < expected ; exists ; 2012 ; Health & Social Work Volume 37 ; 37 ; >
@@ -6721,7 +6721,7 @@
     au < manifest ; exists ; 2006 ; ICSID Review: Foreign Investment Law Journal Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; ICSID Review: Foreign Investment Law Journal Volume 22 ; 22 ; >
     au < manifest ; exists ; 2008 ; ICSID Review: Foreign Investment Law Journal Volume 23 ; 23 ; >
-    au < testing ; exists ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ; >
+    au < released ; manifest ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ; >
     au < released ; manifest ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 ; >
     au < released ; manifest ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 ; >
     au < expected ; exists ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ; >
@@ -7280,7 +7280,7 @@
     au < manifest ; exists ; 2006 ; Interactive CardioVascular and Thoracic Surgery Volume 5 ; 5 ; >
     au < manifest ; exists ; 2007 ; Interactive CardioVascular and Thoracic Surgery Volume 6 ; 6 ; >
     au < manifest ; exists ; 2008 ; Interactive CardioVascular and Thoracic Surgery Volume 7 ; 7 ; >
-    au < testing ; exists ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 8 ; 8 ; >
+    au < released ; manifest ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 8 ; 8 ; >
     au < crawling ; exists ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 9 ; 9 ; >
     au < notReady ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 10 ; 10 ; >
     au < notReady ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 11 ; 11 ; >
