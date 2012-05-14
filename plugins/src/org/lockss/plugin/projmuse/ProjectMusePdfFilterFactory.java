@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePdfFilterFactory.java,v 1.2 2010-06-11 23:38:34 thib_gc Exp $
+ * $Id: ProjectMusePdfFilterFactory.java,v 1.3 2012-05-14 22:46:16 wkwilson Exp $
  */
 
 /*
@@ -149,7 +149,8 @@ public class ProjectMusePdfFilterFactory implements FilterFactory {
         tokenWriter.writeTokens(tokens, 0, indexOfBt);
         tokenWriter.writeTokens(tokens, indexOfEt + 1, tokens.size());
         frontPage.setContents(resultStream);
-        
+        pdfDocument.removeCreationDate();
+        pdfDocument.removeModificationDate();
         // Normalize the trailer ID
         COSDictionary trailer = pdfDocument.getTrailer();
         if (trailer != null) {
