@@ -39,7 +39,7 @@
 
     au < released ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; 2010 >
     au < released ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 >
-    au < manifest ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; 2012 >
+    au < ready ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; 2012 >
 
   }
 
@@ -56,7 +56,7 @@
 
     au < released ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
     au < released ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
-    au < manifest ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+    au < ready ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
     
   }
 
@@ -73,9 +73,9 @@
 
     au < manifest ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
     au < manifest ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
-    au < manifest ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
+    au < ready ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
-    au < manifest ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
+    au < ready ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
     
   }
 
@@ -149,7 +149,7 @@
     au < released ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
     au < released ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 >
     au < released ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
-    au < manifest ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 >
+    au < ready ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 >
 
   }
 
@@ -169,7 +169,7 @@
     au < released ; 2009 ; Global Health Action [including Supplements] Volume 2 ; 2 ; 2009 >
     au < released ; 2010 ; Global Health Action [including Supplements] Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; Global Health Action [including Supplements] Volume 4 ; 4 ; 2011 >
-    au < manifest ; 2012 ; Global Health Action [including Supplements] Volume 5 ; 5 ; 2012 >
+    au < ready ; 2012 ; Global Health Action [including Supplements] Volume 5 ; 5 ; 2012 >
 
   }
 
@@ -184,7 +184,7 @@
     param[journal_id] = iee
 
     au < manifest ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
-    au < manifest ; 2012 ; Infection Ecology & Epidemiology [including Supplements] Volume 2 ; 2 ; 2012 >
+    au < ready ; 2012 ; Infection Ecology & Epidemiology [including Supplements] Volume 2 ; 2 ; 2012 >
 
   }
 
@@ -206,7 +206,7 @@
     au < manifest ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 >
     au < released ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 >
     au < released ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 ; 2012 >
+    au < ready ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 ; 2012 >
 
   }
 
@@ -240,7 +240,7 @@
     param[journal_id] = jchimp
 
     au < released ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; 2011 >
-    au < manifest ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; 2012 >
+    au < ready ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; 2012 >
 
   }
   
@@ -258,7 +258,7 @@
     au < released ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 >
-    au < manifest ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 >
+    au < ready ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 >
 
   }
 
@@ -444,7 +444,7 @@
     au < manifest ; 2007 ; Polar Research Volume 26 ; 26 ; 2007 >
     au < manifest ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
     au < manifest ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
-    au < manifest ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
+    au < ready ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
     au < manifest ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
     au < exists ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
 
@@ -715,7 +715,7 @@
       param[base_url] = http://www.vulnerablegroupsandinclusion.net/
       param[journal_id] = vgi
 
-      au < manifest ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
+      au < ready ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
       au < released ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
       au < exists ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 ; 2012 >
 
