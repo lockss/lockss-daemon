@@ -229,6 +229,39 @@
       }
 
     }
+    
+       {
+
+    title <
+      name = Graft: Organ and Cell Transplantation ;
+      issn = 1522-1628 
+    >
+    
+    plugin = org.lockss.plugin.highwire.TriggeredHighWirePressH20Plugin
+    param[base_url] = http://graft.stanford.clockss.org/
+    comment[doNotProcess] = This section is under construction -- do not process
+
+    implicit < status ; year ; name ; param[volume_name] ; proxy >
+    
+    comment[dcor] = This triggered title is being reingested, so there's no need for the PDF filter
+    
+    {
+            
+      au < manifest ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 ; reingest.lockss.org:80 >
+      au < manifest ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 ; reingest.lockss.org:80 >
+      au < manifest ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 ; reingest.lockss.org:80 >
+      
+    }
+    
+  }
+    
+    
+    
+    
+    
+    
+    
+    
 
     {
 
