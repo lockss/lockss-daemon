@@ -442,7 +442,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; American Journal of Agricultural Economics Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; American Journal of Agricultural Economics Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; American Journal of Agricultural Economics Volume 90 ; 90 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; American Journal of Agricultural Economics Volume 91 ; 91 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; American Journal of Agricultural Economics Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; released ; 2010 ; American Journal of Agricultural Economics Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; released ; 2011 ; American Journal of Agricultural Economics Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; American Journal of Agricultural Economics Volume 94 ; 94 >
@@ -1201,7 +1201,7 @@
     param[base_url] = http://aobpla.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; AoB PLANTS Volume 2009 ; 2009 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; AoB PLANTS Volume 2009 ; 2009 >
     au < HighWirePressH20Plugin ; released ; 2010 ; AoB PLANTS Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; AoB PLANTS Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; AoB PLANTS Volume 2012 ; 2012 >
@@ -1335,7 +1335,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Applied Mathematics Research eXpress (AMRX) Volume 2006 ; 2006 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Applied Mathematics Research eXpress (AMRX) Volume 2007 ; 2007 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Applied Mathematics Research eXpress (AMRX) Volume 2008 ; 2008 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Applied Mathematics Research eXpress (AMRX) Volume 2009 ; 2009 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Applied Mathematics Research eXpress (AMRX) Volume 2009 ; 2009 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Applied Mathematics Research eXpress (AMRX) Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Applied Mathematics Research eXpress (AMRX) Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Applied Mathematics Research eXpress (AMRX) Volume 2012 ; 2012 >
@@ -2711,7 +2711,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; British Yearbook of International Law Volume 77 ; 77 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; British Yearbook of International Law Volume 78 ; 78 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; British Yearbook of International Law Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; British Yearbook of International Law Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; British Yearbook of International Law Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Yearbook of International Law Volume 81 ; 81 >
 
   }
@@ -3347,7 +3347,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Children & Schools Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Children & Schools Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Children & Schools Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Children & Schools Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Children & Schools Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Children & Schools Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Children & Schools Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Children & Schools Volume 34 ; 34 >
@@ -3471,7 +3471,7 @@
     param[base_url] = http://crj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Classical Receptions Journal Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Classical Receptions Journal Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Classical Receptions Journal Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Classical Receptions Journal Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Classical Receptions Journal Volume 4 ; 4 >
@@ -3540,8 +3540,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Clinical Infectious Diseases Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Clinical Infectious Diseases Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Clinical Infectious Diseases Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Clinical Infectious Diseases Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Clinical Infectious Diseases Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Clinical Infectious Diseases Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Clinical Infectious Diseases Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Clinical Infectious Diseases Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Clinical Infectious Diseases Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Clinical Infectious Diseases Volume 52 ; 52 >
@@ -3965,7 +3965,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Current Legal Problems Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Current Legal Problems Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Current Legal Problems Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Current Legal Problems Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Current Legal Problems Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Current Legal Problems Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Current Legal Problems Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Current Legal Problems Volume 65 ; 65 >
@@ -3984,7 +3984,7 @@
     param[base_url] = http://database.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Database: The Journal of Biological Databases and Curation Volume 2009 ; 2009 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Database: The Journal of Biological Databases and Curation Volume 2009 ; 2009 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Database: The Journal of Biological Databases and Curation Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Database: The Journal of Biological Databases and Curation Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Database: The Journal of Biological Databases and Curation Volume 2012 ; 2012 >
@@ -4579,7 +4579,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Environmental History Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Environmental History Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Environmental History Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Environmental History Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Environmental History Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Environmental History Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Environmental History Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Environmental History Volume 17 ; 17 >
@@ -5024,8 +5024,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2007 ; European Journal of Cardio-Thoracic Surgery Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 >
@@ -5142,7 +5142,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; European Journal of Heart Failure Supplements Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; European Journal of Heart Failure Supplements Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; European Journal of Heart Failure Supplements Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Journal of Heart Failure Supplements Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; European Journal of Heart Failure Supplements Volume 11 ; 11 >
@@ -5406,7 +5406,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; European Review of Economic History Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; European Review of Economic History Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; European Review of Economic History Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; European Review of Economic History Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; European Review of Economic History Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2010 ; European Review of Economic History Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 2011 ; European Review of Economic History Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; European Review of Economic History Volume 16 ; 16 >
@@ -6055,7 +6055,7 @@
     param[base_url] = http://gbe.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Genome Biology and Evolution Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Genome Biology and Evolution Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Genome Biology and Evolution Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Genome Biology and Evolution Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 >
@@ -6261,7 +6261,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Health & Social Work Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Health & Social Work Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Health & Social Work Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Health & Social Work Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Health & Social Work Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Health & Social Work Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Health & Social Work Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Health & Social Work Volume 37 ; 37 >
@@ -6988,7 +6988,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; ICSID Review: Foreign Investment Law Journal Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; ICSID Review: Foreign Investment Law Journal Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; ICSID Review: Foreign Investment Law Journal Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 >
