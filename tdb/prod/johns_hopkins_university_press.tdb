@@ -1404,7 +1404,7 @@
     au < manifest ; 2009 ; Philosophy, Psychiatry, & Psychology Volume 16 ; 16 >
     au < manifest ; 2010 ; Philosophy, Psychiatry, & Psychology Volume 17 ; 17 >
     au < manifest ; 2011 ; Philosophy, Psychiatry, & Psychology Volume 18 ; 18 >
-    au < expected ; 2012 ; Philosophy, Psychiatry, & Psychology Volume 19 ; 19 >
+    au < manifest ; 2012 ; Philosophy, Psychiatry, & Psychology Volume 19 ; 19 >
 
   }
 
@@ -1547,7 +1547,7 @@
     au < manifest ; 2009 ; SAIS Review Volume 29 ; 29 >
     au < manifest ; 2010 ; SAIS Review Volume 30 ; 30 >
     au < manifest ; 2011 ; SAIS Review Volume 31 ; 31 >
-    au < expected ; 2012 ; SAIS Review Volume 32 ; 32 >
+    au < manifest ; 2012 ; SAIS Review Volume 32 ; 32 >
 
   }
 
@@ -1616,7 +1616,7 @@
     au < manifest ; 2009 ; Shakespeare Bulletin Volume 27 ; 27 >
     au < manifest ; 2010 ; Shakespeare Bulletin Volume 28 ; 28 >
     au < manifest ; 2011 ; Shakespeare Bulletin Volume 29 ; 29 >
-    au < expected ; 2012 ; Shakespeare Bulletin Volume 30 ; 30 >
+    au < manifest ; 2012 ; Shakespeare Bulletin Volume 30 ; 30 >
 
   }
 
@@ -1868,7 +1868,7 @@
     au < released ; 2009 ; The Lion and the Unicorn Volume 33 ; 33 >
     au < manifest ; 2010 ; The Lion and the Unicorn Volume 34 ; 34 >
     au < manifest ; 2011 ; The Lion and the Unicorn Volume 35 ; 35 >
-    au < expected ; 2012 ; The Lion and the Unicorn Volume 36 ; 36 >
+    au < manifest ; 2012 ; The Lion and the Unicorn Volume 36 ; 36 >
 
   }
 
@@ -2039,7 +2039,7 @@
     au < manifest ; 2009 ; Transactions of the American Philological Association Volume 139 ; 139 >
     au < manifest ; 2010 ; Transactions of the American Philological Association Volume 140 ; 140 >
     au < manifest ; 2011 ; Transactions of the American Philological Association Volume 141 ; 141 >
-    au < expected ; 2012 ; Transactions of the American Philological Association Volume 142 ; 142 >
+    au < manifest ; 2012 ; Transactions of the American Philological Association Volume 142 ; 142 >
 
   }
   
@@ -2077,7 +2077,7 @@
     attr[journal_id] = wsj
 
     au < ready ; 2011 ; Wallace Stevens Journal Volume 35 ; 35 >
-    au < expected ; 2012 ; Wallace Stevens Journal Volume 36 ; 36 >
+    au < manifest ; 2012 ; Wallace Stevens Journal Volume 36 ; 36 >
 
   }  
   
