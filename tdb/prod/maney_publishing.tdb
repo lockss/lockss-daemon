@@ -249,7 +249,7 @@
     au < manifest ; 2009 ; Arms & Armour Volume 6 ; 6 > 
     au < manifest ; 2010 ; Arms & Armour Volume 7 ; 7 > 
     au < manifest ; 2011 ; Arms & Armour Volume 8 ; 8 > 
-    au < expected ; 2012 ; Arms & Armour Volume 9 ; 9 > 
+    au < manifest ; 2012 ; Arms & Armour Volume 9 ; 9 > 
 
   }
 
@@ -698,7 +698,7 @@
     implicit < status ; year ; name ; param[volume_name] >
    
     au < manifest ; 2011 ; The Chinese Historical Review Volume 18 ; 18 >    
-    au < expected ; 2012 ; The Chinese Historical Review Volume 19 ; 19 >  
+    au < manifest ; 2012 ; The Chinese Historical Review Volume 19 ; 19 >  
     
   }
 
@@ -796,7 +796,7 @@
     au < manifest ; 2009 ; Competition & Change Volume 13 ; 13 > 
     au < manifest ; 2010 ; Competition & Change Volume 14 ; 14 > 
     au < manifest ; 2011 ; Competition & Change Volume 15 ; 15 > 
-    au < expected ; 2012 ; Competition & Change Volume 16 ; 16 > 
+    au < manifest ; 2012 ; Competition & Change Volume 16 ; 16 > 
 
   }
 
@@ -929,7 +929,7 @@
     au < manifest ; 2008 ; Costume Volume 42 ; 42 > 
     au < manifest ; 2009 ; Costume Volume 43 ; 43 > 
     au < manifest ; 2010 ; Costume Volume 44 ; 44 > 
-    au < exists ; 2011 ; Costume Volume 45 ; 2011 > 
+    au < manifest ; 2011 ; Costume Volume 45 ; 2011 > 
     au < manifest ; 2012 ; Costume Volume 46 ; 46 > 
 
   }
@@ -1050,7 +1050,7 @@
     au < manifest ; 2009 ; Dutch Crossing: Journal of Low Countries Studies Volume 33 ; 33 > 
     au < manifest ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 > 
     au < manifest ; 2011 ; Dutch Crossing: Journal of Low Countries Studies Volume 35 ; 35 > 
-    au < expected ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 > 
+    au < manifest ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 > 
 
   }
 
@@ -1204,7 +1204,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
-    au < expected ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
+    au < manifest ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
     
   }
 
@@ -1249,7 +1249,7 @@
     au < manifest ; 2009 ; Exemplaria Volume 21 ; 21 > 
     au < manifest ; 2010 ; Exemplaria Volume 22 ; 22 > 
     au < manifest ; 2011 ; Exemplaria Volume 23 ; 23 > 
-    au < expected ; 2012 ; Exemplaria Volume 24 ; 24 > 
+    au < manifest ; 2012 ; Exemplaria Volume 24 ; 24 > 
 
   }
 
@@ -1277,7 +1277,7 @@
     au < manifest ; 2009 ; Family & Community History Volume 12 ; 12 > 
     au < manifest ; 2010 ; Family & Community History Volume 13 ; 13 > 
     au < manifest ; 2011 ; Family & Community History Volume 14 ; 14 > 
-    au < expected ; 2012 ; Family & Community History Volume 15 ; 15 > 
+    au < manifest ; 2012 ; Family & Community History Volume 15 ; 15 > 
 
   }
 
@@ -1302,7 +1302,7 @@
     au < manifest ; 2009 ; Folk Life: Journal of Ethnological Studies Volume 47 ; 47 > 
     au < manifest ; 2010 ; Folk Life: Journal of Ethnological Studies Volume 48 ; 48 > 
     au < manifest ; 2011 ; Folk Life: Journal of Ethnological Studies Volume 49 ; 49 > 
-    au < expected ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 > 
+    au < manifest ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 > 
 
   }
 
@@ -1420,7 +1420,7 @@
 
     au < manifest ; 2010 ; The Historic Environment: Policy & Practice Volume 1 ; 1 > 
     au < manifest ; 2011 ; The Historic Environment: Policy & Practice Volume 2 ; 2 > 
-    au < expected ; 2012 ; The Historic Environment: Policy & Practice Volume 3 ; 3 > 
+    au < manifest ; 2012 ; The Historic Environment: Policy & Practice Volume 3 ; 3 > 
 
   }
 
@@ -2535,7 +2535,7 @@
 
     au < manifest ; 2010 ; The Keats-Shelley Review Volume 24 ; 24 > 
     au < manifest ; 2011 ; The Keats-Shelley Review Volume 25 ; 25 > 
-    au < expected ; 2012 ; The Keats-Shelley Review Volume 26 ; 26 > 
+    au < manifest ; 2012 ; The Keats-Shelley Review Volume 26 ; 26 > 
 
   }
 
@@ -2589,7 +2589,7 @@
     au < manifest ; 2009 ; Language & History Volume 52 ; 52 > 
     au < manifest ; 2010 ; Language & History Volume 53 ; 53 > 
     au < manifest ; 2011 ; Language & History Volume 54 ; 54 > 
-    au < expected ; 2012 ; Language & History Volume 55 ; 55 > 
+    au < manifest ; 2012 ; Language & History Volume 55 ; 55 > 
 
   }
 
@@ -3550,7 +3550,7 @@
     au < manifest ; 2009 ; Palestine Exploration Quarterly Volume 141 ; 141 > 
     au < manifest ; 2010 ; Palestine Exploration Quarterly Volume 142 ; 142 > 
     au < manifest ; 2011 ; Palestine Exploration Quarterly Volume 143 ; 143 > 
-    au < expected ; 2012 ; Palestine Exploration Quarterly Volume 144 ; 144 > 
+    au < manifest ; 2012 ; Palestine Exploration Quarterly Volume 144 ; 144 > 
 
   }
 
@@ -4326,7 +4326,7 @@
     au < manifest ; 2009 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2009 ; 2009 ; 36 > 
     au < manifest ; 2010 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 37 ; 37 ; 37 > 
     au < manifest ; 2011 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 38 ; 38 ; 38 > 
-	au < expected ; 2012 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 39 ; 39 ; 39 > 
+	au < manifest ; 2012 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 39 ; 39 ; 39 > 
 	
   }
 
