@@ -8558,6 +8558,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jncimono.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[doesNotExist] = no content published for 2009
 
     au < HighWirePressH20Plugin ; manifest ; 1997 ; JNCI Monographs Volume 1997 ; 1997 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; JNCI Monographs Volume 1998 ; 1998 >
@@ -8571,7 +8572,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; JNCI Monographs Volume 2006 ; 2006 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; JNCI Monographs Volume 2007 ; 2007 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; JNCI Monographs Volume 2008 ; 2008 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; JNCI Monographs Volume 2009 ; 2009 >
+    au < HighWirePressH20Plugin ; doesNotExist ; 2009 ; JNCI Monographs Volume 2009 ; 2009 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; JNCI Monographs Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; JNCI Monographs Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; JNCI Monographs Volume 2012 ; 2012 >
