@@ -1,0 +1,32 @@
+{
+  publisher <
+    name = Georgia State University Department of English
+  >
+
+  {
+    title <
+      name = Studies in Literary Imagination ;
+      issn = 0039-3819 ;
+      eissn = 2165-2678 ;
+      issnl = 0039-3819
+    >
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      implicit < status ; year; name ; param[volume] >
+      
+      param[journal_dir] = studies_in_the_literary_imagination
+      attr[journal_id] = sli
+      
+      au < manifest ; 2011 ; Studies in the Literary Imagination Volume 1 ; 1 >
+
+
+
+    }
+
+  }
+
+}
+
