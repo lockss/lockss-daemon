@@ -12420,7 +12420,42 @@
     }
 
   }
+  
+  {
+  
+    title <
+      name = International Area Studies Review ;
+      issn = 2233-8659 ;
+      eissn = 2049-1123
+    >
+    
+    param[base_url] = http://ias.sagepub.com/
 
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+      comment[notReady] = Invalid manifest link. Includes cgi.
+    
+      au < exists ; exists ; 1997-1998 ; International Area Studies Review Volume 1 ; 1 ; >
+      au < exists ; exists ; 1999 ; International Area Studies Review Volume 2 ; 2 ; >
+      au < exists ; exists ; 2000 ; International Area Studies Review Volume 3 ; 3 ; >
+      au < exists ; exists ; 2001 ; International Area Studies Review Volume 4 ; 4 ; >
+      au < exists ; exists ; 2002 ; International Area Studies Review Volume 5 ; 5 ; >
+      au < exists ; exists ; 2003 ; International Area Studies Review Volume 6 ; 6 ; >
+      au < exists ; exists ; 2004 ; International Area Studies Review Volume 7 ; 7 ; >
+      au < exists ; exists ; 2005 ; International Area Studies Review Volume 8 ; 8 ; >
+      au < exists ; exists ; 2006 ; International Area Studies Review Volume 9 ; 9 ; >
+      au < exists ; exists ; 2007 ; International Area Studies Review Volume 10 ; 10 ; >
+      au < exists ; exists ; 2008 ; International Area Studies Review Volume 11 ; 11 ; >
+      au < exists ; exists ; 2009 ; International Area Studies Review Volume 12 ; 12 ; >
+      au < exists ; exists ; 2010 ; International Area Studies Review Volume 13 ; 13 ; >
+      au < notReady ; exists ; 2011 ; International Area Studies Review Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2012 ; International Area Studies Review Volume 15 ; 15 ; >
+     
+    }
+    
+  }
   {
 
     title <
