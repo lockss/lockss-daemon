@@ -1163,7 +1163,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Public Culture Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Public Culture Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Public Culture Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; expected ; 2012 ; Public Culture Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Public Culture Volume 24 ; 24 >
     
     }
   
@@ -1346,7 +1346,7 @@
       param[base_url] = http://saq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 2000 ; The South Atlantic Quarterly Volume 99 ; 99 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; The South Atlantic Quarterly Volume 99 ; 99 >
       au < HighWirePressH20Plugin ; released ; 2001 ; The South Atlantic Quarterly Volume 100 ; 100 >
       au < HighWirePressH20Plugin ; released ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 >
       au < HighWirePressH20Plugin ; released ; 2003 ; The South Atlantic Quarterly Volume 102 ; 102 >
@@ -1402,7 +1402,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Theater Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Theater Volume 40 ; 40 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Theater Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; expected ; 2012 ; Theater Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Theater Volume 42 ; 42 >
     
     }
   
