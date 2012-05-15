@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;BioMed Central Plugin (BMC Journals, Chemistry Central) - (CLOCKSS), Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
+    <string>&quot;BioMed Central Plugin (BMC Journals, Chemistry Central, for CLOCKSS), Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>BioMed Central Plugin (BMC Journals, Chemistry Central) - (CLOCKSS)</string>
+    <string>BioMed Central Plugin (BMC Journals, Chemistry Central, for CLOCKSS)</string>
   </entry>
    <entry>
     <string>plugin_article_iterator_factory</string>

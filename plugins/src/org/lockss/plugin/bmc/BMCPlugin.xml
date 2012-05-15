@@ -9,11 +9,11 @@
   </entry>
   <entry>
    <string>plugin_notes</string>
-   <string>added a new non-definitional parameter journal code</string>
+   <string>added a new non-definitional parameter journal_code</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -26,7 +26,7 @@
         <string>Substance</string>
         <string>1</string>
       </entry>
-       <entry>
+      <entry>
         <string>Poll</string>
         <string>2</string>
       </entry>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;BioMed Central Plugin (BMC Series, PhysMath Central) - (LOCKSS), Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
+    <string>&quot;BioMed Central Plugin (BMC Series, PhysMath Central), Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -67,7 +67,7 @@
  </entry>
   <entry>
     <string>plugin_name</string>
-    <string>BioMed Central Plugin (BMC Series, PhysMath Central) - (LOCKSS)</string>
+    <string>BioMed Central Plugin (BMC Series, PhysMath Central)</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -80,7 +80,6 @@
       <string>1,&quot;^%s%s/content/%s/[^/]+/[^/]+&quot; ,base_url,journal_code,volume_name</string>
       <string>1,&quot;^%s[^/]+/%s\?page=[0-9]+$&quot; ,base_url,volume_name</string>
       <string>1,&quot;^%slockss/&quot;, base_url</string>
-      
     </list>
   </entry>
   <entry>
