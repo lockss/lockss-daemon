@@ -137,8 +137,8 @@
 
       param[journal_issn] = 1758-1516
       
-      au < exists ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 >
-      au < exists ; 2011 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 >
+      au < manifest ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 >
+      au < manifest ; 2011 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 >
 
     }
 
@@ -721,7 +721,7 @@
 
       param[journal_issn] = 1741-8577
       
-      au < exists ; 2009-2010 ; International Journal of Autonomic Computing Volume 1 ; 1 >
+      au < manifest ; 2009-2010 ; International Journal of Autonomic Computing Volume 1 ; 1 >
 
     }
 
@@ -1311,7 +1311,7 @@
 
       param[journal_issn] = 2042-647X
       
-      au < expected ; 2012 ; International Journal of Cognitive Biometrics Volume 1 ; 1 >
+      au < manifest ; 2012 ; International Journal of Cognitive Biometrics Volume 1 ; 1 >
 
     }
 
@@ -1341,7 +1341,7 @@
 
       param[journal_issn] = 1745-0047
       
-      au < exists ; 2009 ; International Journal of Collaborative Engineering Volume 1 ; 1 >
+      au < manifest ; 2009 ; International Journal of Collaborative Engineering Volume 1 ; 1 >
 
     }
 
@@ -6395,10 +6395,10 @@
 
       param[journal_issn] = 1756-5812
       
-      au < exists ; 2008-2009 ; International Journal of Sustainable Economy Volume 1 ; 1 >
-      au < exists ; 2010 ; International Journal of Sustainable Economy Volume 2 ; 2 >
-      au < exists ; 2011 ; International Journal of Sustainable Economy Volume 3 ; 3 >
-      au < exists ; 2012 ; International Journal of Sustainable Economy Volume 4 ; 4 >
+      au < manifest ; 2008-2009 ; International Journal of Sustainable Economy Volume 1 ; 1 >
+      au < manifest ; 2010 ; International Journal of Sustainable Economy Volume 2 ; 2 >
+      au < manifest ; 2011 ; International Journal of Sustainable Economy Volume 3 ; 3 >
+      au < manifest ; 2012 ; International Journal of Sustainable Economy Volume 4 ; 4 >
 
     }
 
