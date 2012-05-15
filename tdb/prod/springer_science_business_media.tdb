@@ -45655,7 +45655,6 @@
     title <
       name = Integrated Assessment ;
       issn = 1389-5176 ;
-      eissn = 1573-1545 ;
       issnl = 1389-5176
     >
 
@@ -48010,8 +48009,8 @@
 
     title <
       name = International Journal of Intelligent Transportation Systems Research ;
-      issn = 1868-8659 ;
-      eissn = 1868-8659
+      issn = 1348-8503 ;
+      eissn = 1868-8659 
     >
 
     param[journal_issn] = 1868-8659
@@ -49905,7 +49904,6 @@
     au < manifest ; 1937 ; Irish Journal of Medical Science (1926-1967) Volume 12 ; 12 >
     au < manifest ; 1938 ; Irish Journal of Medical Science (1926-1967) Volume 13 ; 13 >
     au < manifest ; 1939 ; Irish Journal of Medical Science (1926-1967) Volume 14 ; 14 >
-    au < manifest ; 1940 ; Irish Journal of Medical Science (1926-1967) Volume 15 ; 15 >
     au < manifest ; 1940 ; Irish Journal of Medical Science (1926-1967) Volume 15 ; 15 >
     au < manifest ; 1941 ; Irish Journal of Medical Science (1926-1967) Volume 16 ; 16 >
     au < manifest ; 1942 ; Irish Journal of Medical Science (1926-1967) Volume 17 ; 17 >
@@ -52630,7 +52628,7 @@
     title <
       name = Journal of Biomedical Science ;
       issn = 1423-0127 ;
-      issnl = 1021-7770
+      issnl = 1423-0127
     >
 
     comment[continued_from] = 1021-7770
@@ -54601,7 +54599,7 @@
   {
 
     title <
-      name = Journal of Comparative Policy Analysis ;
+      name = Journal of Comparative Policy Analysis: Research and Practice ;
       issn = 1387-6988 ;
       eissn = 1572-5448 ;
       issnl = 1387-6988
@@ -54609,11 +54607,11 @@
 
     param[journal_issn] = 1387-6988
 
-    au < manifest ; 1998 ; Journal of Comparative Policy Analysis Volume 1 ; 1 >
-    au < manifest ; 2000 ; Journal of Comparative Policy Analysis Volume 2 ; 2 >
-    au < manifest ; 2001 ; Journal of Comparative Policy Analysis Volume 3 ; 3 >
-    au < manifest ; 2002 ; Journal of Comparative Policy Analysis Volume 4 ; 4 >
-    au < manifest ; 2003 ; Journal of Comparative Policy Analysis Volume 5 ; 5 >
+    au < manifest ; 1998 ; Journal of Comparative Policy Analysis: Research and Practice Volume 1 ; 1 >
+    au < manifest ; 2000 ; Journal of Comparative Policy Analysis: Research and Practice Volume 2 ; 2 >
+    au < manifest ; 2001 ; Journal of Comparative Policy Analysis: Research and Practice Volume 3 ; 3 >
+    au < manifest ; 2002 ; Journal of Comparative Policy Analysis: Research and Practice Volume 4 ; 4 >
+    au < manifest ; 2003 ; Journal of Comparative Policy Analysis: Research and Practice Volume 5 ; 5 >
 
   }
 
@@ -57821,6 +57819,12 @@
 
     param[journal_issn] = 1868-9256
 
+    au < manifest ; 2008 ; Journal of Hematopathology Volume 1 ; 1 >
+    au < manifest ; 2009 ; Journal of Hematopathology Volume 2 ; 2 >
+    au < manifest ; 2010 ; Journal of Hematopathology Volume 3 ; 3 >
+    au < manifest ; 2011 ; Journal of Hematopathology Volume 4 ; 4 >
+    au < manifest ; 2012 ; Journal of Hematopathology Volume 5 ; 5 >
+
   }
 
   {
@@ -57830,7 +57834,12 @@
       issn = 1868-6974
     >
 
+    comment[continued_from] = 0944-1166 
     param[journal_issn] = 1868-6974
+
+    au < manifest ; 2010 ; Journal of Hepato-Biliary-Pancreatic Sciences Volume 17 ; 17 >
+    au < manifest ; 2011 ; Journal of Hepato-Biliary-Pancreatic Sciences Volume 18 ; 18 >
+    au < manifest ; 2012 ; Journal of Hepato-Biliary-Pancreatic Sciences Volume 19 ; 19 >
 
   }
 
