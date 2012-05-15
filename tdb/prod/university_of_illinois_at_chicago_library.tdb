@@ -61,22 +61,22 @@
     implicit < status ; year ; name ; volume ; param[year] >
     comment[notReady] = RU3806, RU4149 for vol2010-2011
     
-    au < notReady ; 1996 ; First Monday Volume 1 ; 1 ; 1996 >
-    au < notReady ; 1997 ; First Monday Volume 2 ; 2 ; 1997 >
-    au < notReady ; 1998 ; First Monday Volume 3 ; 3 ; 1998 >
-    au < notReady ; 1999 ; First Monday Volume 4 ; 4 ; 1999 >
-    au < notReady ; 2000 ; First Monday Volume 5 ; 5 ; 2000 >
-    au < notReady ; 2001 ; First Monday Volume 6 ; 6 ; 2001 >
-    au < notReady ; 2002 ; First Monday Volume 7 ; 7 ; 2002 >
-    au < notReady ; 2003 ; First Monday Volume 8 ; 8 ; 2003 >
-    au < notReady ; 2004 ; First Monday Volume 9 ; 9 ; 2004 >
-    au < notReady ; 2005 ; First Monday Volume 10 ; 10 ; 2005 >
-    au < notReady ; 2006 ; First Monday Volume 11 ; 11 ; 2006 >
-    au < notReady ; 2007 ; First Monday Volume 12 ; 12 ; 2007 >
-    au < notReady ; 2008 ; First Monday Volume 13 ; 13 ; 2008 >
-    au < notReady ; 2009 ; First Monday Volume 14 ; 14 ; 2009 >
-    au < notReady ; 2010 ; First Monday Volume 15 ; 15 ; 2010 >
-    au < notReady ; 2011 ; First Monday Volume 16 ; 16 ; 2011 >
+    au < testing ; 1996 ; First Monday Volume 1 ; 1 ; 1996 >
+    au < testing ; 1997 ; First Monday Volume 2 ; 2 ; 1997 >
+    au < testing ; 1998 ; First Monday Volume 3 ; 3 ; 1998 >
+    au < testing ; 1999 ; First Monday Volume 4 ; 4 ; 1999 >
+    au < testing ; 2000 ; First Monday Volume 5 ; 5 ; 2000 >
+    au < testing ; 2001 ; First Monday Volume 6 ; 6 ; 2001 >
+    au < testing ; 2002 ; First Monday Volume 7 ; 7 ; 2002 >
+    au < testing ; 2003 ; First Monday Volume 8 ; 8 ; 2003 >
+    au < testing ; 2004 ; First Monday Volume 9 ; 9 ; 2004 >
+    au < testing ; 2005 ; First Monday Volume 10 ; 10 ; 2005 >
+    au < testing ; 2006 ; First Monday Volume 11 ; 11 ; 2006 >
+    au < testing ; 2007 ; First Monday Volume 12 ; 12 ; 2007 >
+    au < testing ; 2008 ; First Monday Volume 13 ; 13 ; 2008 >
+    au < testing ; 2009 ; First Monday Volume 14 ; 14 ; 2009 >
+    au < testing ; 2010 ; First Monday Volume 15 ; 15 ; 2010 >
+    au < testing ; 2011 ; First Monday Volume 16 ; 16 ; 2011 >
     au < ready ; 2012 ; First Monday Volume 17 ; 17 ; 2012 >
 
   }
@@ -140,7 +140,7 @@
 
     au < notReady ; 2010 ; Online Journal of Public Health Informatics Volume 1 ; 1 ; 2010 >
     au < notReady ; 2011 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2011 >
-    au < notReady ; 2012 ; Online Journal of Public Health Informatics Volume 3 ; 3 ; 2012 >
+    au < expected ; 2012 ; Online Journal of Public Health Informatics Volume 3 ; 3 ; 2012 >
 
   }
 
