@@ -152,7 +152,7 @@
       au < released ; 2009 ; Ben Jonson Journal Volume 16 ; 16 >
       au < released ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
       au < released ; 2011 ; Ben Jonson Journal Volume 18 ; 18 >
-      au < expected ; 2012 ; Ben Jonson Journal Volume 19 ; 19 >
+      au < manifest ; 2012 ; Ben Jonson Journal Volume 19 ; 19 >
 	
     }
 	
@@ -251,7 +251,7 @@
       au < released ; 2009 ; Corpora Volume 4 ; 4 >
       au < released ; 2010 ; Corpora Volume 5 ; 5 >
       au < released ; 2011 ; Corpora Volume 6 ; 6 >
-      au < expected ; 2012 ; Corpora Volume 7 ; 7 >
+      au < manifest ; 2012 ; Corpora Volume 7 ; 7 >
 	
     }
 	
@@ -327,7 +327,7 @@
       au < released ; 2009 ; Deleuze Studies Volume 3 ; 3 >
       au < released ; 2010 ; Deleuze Studies Volume 4 ; 4 >
       au < released ; 2011 ; Deleuze Studies Volume 5 ; 5 >
-      au < expected ; 2012 ; Deleuze Studies Volume 6 ; 6 >
+      au < manifest ; 2012 ; Deleuze Studies Volume 6 ; 6 >
 	
     }
 	
@@ -353,7 +353,7 @@
       au < released ; 2009 ; Derrida Today Volume 2 ; 2 >
       au < released ; 2010 ; Derrida Today Volume 3 ; 3 >
       au < released ; 2011 ; Derrida Today Volume 4 ; 4 >
-      au < expected ; 2012 ; Derrida Today Volume 5 ; 5 >
+      au < manifest ; 2012 ; Derrida Today Volume 5 ; 5 >
 
     }
 	
@@ -458,7 +458,7 @@
       au < released ; 2009 ; Holy Land Studies Volume 8 ; 8 >
       au < released ; 2010 ; Holy Land Studies Volume 9 ; 9 >
       au < released ; 2011 ; Holy Land Studies Volume 10 ; 10 >
-      au < expected ; 2012 ; Holy Land Studies Volume 11 ; 11 >
+      au < manifest ; 2012 ; Holy Land Studies Volume 11 ; 11 >
 
     }
 
@@ -618,7 +618,7 @@
       param[journal_id] = iur
       implicit < status ; year ; name ; param[volume_name] >
       
-      au < exists ; 2012 ; Irish University Review Volume 42 ; 42 >
+      au < manifest ; 2012 ; Irish University Review Volume 42 ; 42 >
   
     }
   
@@ -644,7 +644,7 @@
       au < released ; 2009 ; Journal of Beckett Studies Volume 18 ; 18 >
       au < released ; 2010 ; Journal of Beckett Studies Volume 19 ; 19 >
       au < released ; 2011 ; Journal of Beckett Studies Volume 20 ; 20 >
-      au < expected ; 2012 ; Journal of Beckett Studies Volume 21 ; 21 >
+      au < manifest ; 2012 ; Journal of Beckett Studies Volume 21 ; 21 >
 	
     }
 	
@@ -765,7 +765,7 @@
       au < released ; 2009 ; Journal of Scottish Historical Studies Volume 29 ; 29 >
       au < released ; 2010 ; Journal of Scottish Historical Studies Volume 30 ; 30 >
       au < released ; 2011 ; Journal of Scottish Historical Studies Volume 31 ; 31 >
-      au < expected ; 2012 ; Journal of Scottish Historical Studies Volume 32 ; 32 >
+      au < manifest ; 2012 ; Journal of Scottish Historical Studies Volume 32 ; 32 >
 	
     }
 	
@@ -876,7 +876,7 @@
       au < released ; 2009 ; Modernist Cultures Volume 4 ; 4 >
       au < released ; 2010 ; Modernist Cultures Volume 5 ; 5 >
       au < released ; 2011 ; Modernist Cultures Volume 6 ; 6 >
-      au < expected ; 2012 ; Modernist Cultures Volume 7 ; 7 >
+      au < manifest ; 2012 ; Modernist Cultures Volume 7 ; 7 >
 	
     }
 
@@ -923,7 +923,7 @@
 
       au < released ; 2010 ; Northern Scotland Volume 1 ; 1 >
       au < released ; 2011 ; Northern Scotland Volume 2 ; 2 >
-      au < expected ; 2012 ; Northern Scotland Volume 3 ; 3 >
+      au < manifest ; 2012 ; Northern Scotland Volume 3 ; 3 >
 	
     }
 
@@ -1265,7 +1265,7 @@
       au < released ; 2009 ; Studies in World Christianity Volume 15 ; 15 >
       au < released ; 2010 ; Studies in World Christianity Volume 16 ; 16 >
       au < released ; 2011 ; Studies in World Christianity Volume 17 ; 17 >
-      au < expected ; 2012 ; Studies in World Christianity Volume 18 ; 18 >
+      au < manifest ; 2012 ; Studies in World Christianity Volume 18 ; 18 >
     
     }
 
