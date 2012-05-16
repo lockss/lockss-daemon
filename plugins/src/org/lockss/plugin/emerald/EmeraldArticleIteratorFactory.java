@@ -26,7 +26,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.minerva;
+package org.lockss.plugin.emerald;
 
 import java.util.Iterator;
 import java.util.regex.*;
@@ -39,12 +39,12 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class UpdatedMinervaArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class EmeraldArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("UpdatedMinervaArticleIteratorFactory");
+  protected static Logger log = Logger.getLogger("EmeraldArticleIteratorFactory");
   
   protected static final String ROOT_TEMPLATE = "\"%s\",base_url";
-  protected static final String PATTERN_TEMPLATE = "\"%s%s/[^/]+\\.pdf$\",base_url,volume_abbr";
+  protected static final String PATTERN_TEMPLATE = "\"%s(journals|books)\\.htm\\?issn=%s&volume=%s.*&(articleid|chapterid)=[^&]*&show=(html)\", base_url, journal_issn, volume_name";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -58,7 +58,7 @@ public class UpdatedMinervaArticleIteratorFactory implements ArticleIteratorFact
   
   protected static class UpdatedMinervaArticleIterator extends SubTreeArticleIterator {
 	 
-    protected static Pattern PATTERN = Pattern.compile("(.*/(v|V)ol(%20)?[\\d]+/[^/]+\\.)(pdf$)", Pattern.CASE_INSENSITIVE);
+    protected static Pattern PATTERN = Pattern.compile("((journals|books).htm\\?issn=[\\d]+-[\\d]+\\&volume=[\\d]+(\\&issue=[\\d]+)?\\&(articleid|chapterid)=[^\\&]+\\&show=)(html)", Pattern.CASE_INSENSITIVE);
     
     protected UpdatedMinervaArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
@@ -80,19 +80,19 @@ public class UpdatedMinervaArticleIteratorFactory implements ArticleIteratorFact
     protected ArticleFiles processFullText(CachedUrl cu, Matcher mat) {
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(cu);
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
+      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, cu);
    
       if(spec.getTarget() != MetadataTarget.Article)
-		guessMetadataFile(af, mat);
+		guessPdfFile(af, mat);
       
       return af;
     }
     
-    protected void guessMetadataFile(ArticleFiles af, Matcher mat) {
-      CachedUrl metadataCu = au.makeCachedUrl(mat.replaceFirst("$1html"));
+    protected void guessPdfFile(ArticleFiles af, Matcher mat) {
+      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("$1pdf"));
       
-      if (metadataCu != null && metadataCu.hasContent()) {
-    	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, metadataCu);
+      if (pdfCu != null && pdfCu.hasContent()) {
+    	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
       }
     }
   }

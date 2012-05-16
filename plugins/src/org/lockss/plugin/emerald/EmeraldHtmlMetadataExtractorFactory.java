@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldHtmlMetadataExtractorFactory.java,v 1.4 2011-06-28 21:19:39 pgust Exp $
+ * $Id: EmeraldHtmlMetadataExtractorFactory.java,v 1.5 2012-05-16 21:23:05 dylanrhodes Exp $
  */
 
 /*
@@ -61,19 +61,22 @@ public class EmeraldHtmlMetadataExtractorFactory implements FileMetadataExtracto
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_date", MetadataField.FIELD_DATE);
       tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
-      tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
+      //tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
       tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
+      tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
       tagMap.put("citation_authors",
                  new MetadataField(MetadataField.FIELD_AUTHOR,
                                    MetadataField.splitAt(";")));
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      //tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
     }
 
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
+    	log.debug3("extracting from: "+cu.getUrl());
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);

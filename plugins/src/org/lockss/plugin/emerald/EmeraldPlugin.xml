@@ -42,7 +42,7 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%scrawlers/lockss\.htm\?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
-      <string>1,&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
+      <string>1,&quot;^%s(journals|books)\.htm\?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -106,13 +106,30 @@
     <string>org.lockss.plugin.emerald.EmeraldHtmlFilterFactory</string>
   </entry>
   <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.emerald.EmeraldArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.emerald.EmeraldArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+     	<string>*</string>
+        <string>org.lockss.plugin.emerald.EmeraldHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.emerald.EmeraldLoginPageChecker</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s.*&amp;articleid=[^&amp;]*&amp;show=(html|pdf)&quot;, base_url, journal_issn, volume_name</string>
+      <string>&quot;^%s(journals|books)\.htm\?issn=%s&amp;volume=%s.*&amp;(articleid|chapterid)=[^&amp;]*&amp;show=(html|pdf)&quot;, base_url, journal_issn, volume_name</string>
     </list>
   </entry>
 </map>
