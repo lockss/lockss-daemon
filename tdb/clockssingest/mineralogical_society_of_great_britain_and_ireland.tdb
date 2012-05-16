@@ -4,15 +4,10 @@
     name = Mineralogical Society of Great Britain and Ireland
   >
 
-  plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-  param[base_url] = http://www.ingentaconnect.com/
-  param[api_url] = http://api.ingentaconnect.com/    
-  param[graphics_url] = http://graphics.ingentaconnect.com/    
-  param[publisher_id] = minsoc
-  comment[platform] = Ingenta
-  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.MineralogicalSocietyPdfTransform
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
   attr[contract] = 2011
+
+  plugin = org.lockss.plugin.highwire.ClockssHighWireH20Plugin
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
  
   {
   
@@ -23,8 +18,7 @@
       issnl = 0009-8558
     >
     
-    param[journal_id] = cm
-    param[journal_issn] = 0009-8558
+    param[base_url] = http://claymin.geoscienceworld.org/
  
     au < exists ; exists ; 1998 ; Clay Minerals Volume 33 ; 33 >
     au < exists ; exists ; 1999 ; Clay Minerals Volume 34 ; 34 >
@@ -52,9 +46,12 @@
       eissn = 1471-8022 ;
       issnl = 0026-461X
     >
-    param[journal_id] = mag
-    param[journal_issn] = 0026-461X
+    param[base_url] = http://minmag.geoscienceworld.org/
+    
+    comment[vol60] = Vol 60 has irregular contents. A few pdfs, some just tables of contents.
  
+    au < exists ; exists ; 1996 ; Mineralogical Magazine 60 [tables of contents only] ; 60 >
+    au < exists ; exists ; 1997 ; Mineralogical Magazine 61 ; 61 >
     au < exists ; exists ; 1998 ; Mineralogical Magazine 62 ; 62 >
     au < exists ; exists ; 1999 ; Mineralogical Magazine 63 ; 63 >
     au < exists ; exists ; 2000 ; Mineralogical Magazine 64 ; 64 >
