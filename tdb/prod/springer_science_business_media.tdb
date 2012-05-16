@@ -3546,9 +3546,9 @@
 
     param[journal_issn] = 0044-7447
 
-    au < testing ; 2010 ; AMBIO: A Journal of the Human Environment Volume 39 ; 39 >
-    au < testing ; 2011 ; AMBIO: A Journal of the Human Environment Volume 40 ; 40 >
-    au < testing ; 2012 ; AMBIO: A Journal of the Human Environment Volume 41 ; 41 >
+    au < ready ; 2010 ; AMBIO: A Journal of the Human Environment Volume 39 ; 39 >
+    au < ready ; 2011 ; AMBIO: A Journal of the Human Environment Volume 40 ; 40 >
+    au < ready ; 2012 ; AMBIO: A Journal of the Human Environment Volume 41 ; 41 >
 
 
   }
@@ -57854,6 +57854,23 @@
 
     param[journal_issn] = 0944-1166
 
+    au < manifest ; 1993-1994 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 1 ; 1 >
+    au < manifest ; 1995 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 2 ; 2 >
+    au < manifest ; 1996 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 3 ; 3 >
+    au < manifest ; 1997 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 4 ; 4 >
+    au < manifest ; 1998 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 5 ; 5 >
+    au < manifest ; 1999 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 6 ; 6 >
+    au < manifest ; 2000 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 7 ; 7 >
+    au < manifest ; 2001 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 8 ; 8 >
+    au < manifest ; 2002 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 9 ; 9 >
+    au < manifest ; 2003 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 10 ; 10 >
+    au < manifest ; 2004 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 11 ; 11 >
+    au < manifest ; 2005 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 12 ; 12 >
+    au < manifest ; 2006 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 13 ; 13 >
+    au < manifest ; 2007 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 14 ; 14 >
+    au < manifest ; 2008 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 15 ; 15 >
+    au < manifest ; 2009 ; Journal of Hepato-Biliary-Pancreatic Surgery Volume 16 ; 16 >
+
   }
 
   {
@@ -57866,6 +57883,25 @@
     >
 
     param[journal_issn] = 1381-1231
+
+    au < manifest ; 1995-1996 ; Journal of Heuristics Volume 1 ; 1 >
+    au < manifest ; 1996-1997 ; Journal of Heuristics Volume 2 ; 2 >
+    au < manifest ; 1997 ; Journal of Heuristics Volume 3 ; 3 >
+    au < manifest ; 1998 ; Journal of Heuristics Volume 4 ; 4 >
+    au < manifest ; 1999 ; Journal of Heuristics Volume 5 ; 5 >
+    au < manifest ; 2000 ; Journal of Heuristics Volume 6 ; 6 >
+    au < manifest ; 2001 ; Journal of Heuristics Volume 7 ; 7 >
+    au < manifest ; 2002 ; Journal of Heuristics Volume 8 ; 8 >
+    au < manifest ; 2003 ; Journal of Heuristics Volume 9 ; 9 >
+    au < manifest ; 2004 ; Journal of Heuristics Volume 10 ; 10 >
+    au < manifest ; 2005 ; Journal of Heuristics Volume 11 ; 11 >
+    au < manifest ; 2006 ; Journal of Heuristics Volume 12 ; 12 >
+    au < manifest ; 2007 ; Journal of Heuristics Volume 13 ; 13 >
+    au < manifest ; 2008 ; Journal of Heuristics Volume 14 ; 14 >
+    au < manifest ; 2009 ; Journal of Heuristics Volume 15 ; 15 >
+    au < manifest ; 2010 ; Journal of Heuristics Volume 16 ; 16 >
+    au < manifest ; 2011 ; Journal of Heuristics Volume 17 ; 17 >
+    au < manifest ; 2012 ; Journal of Heuristics Volume 18 ; 18 >
 
   }
 
@@ -57882,6 +57918,8 @@
     comment[journal_issn] = 1126-6708 does not respond on the site as of 2011-12-16
 
     au < released ; 2010 ; Journal of High Energy Physics Volume 2010 ; 2010 >
+    au < manifest ; 2011 ; Journal of High Energy Physics Volume 2011 ; 2011 >
+    au < manifest ; 2012 ; Journal of High Energy Physics Volume 2012 ; 2012 >
 
   }
 
@@ -57896,6 +57934,34 @@
 
     param[journal_issn] = 1566-4910
 
+    au < manifest ; 1986 ; Journal of Housing and the Built Environment Volume 1 ; 1 >
+    au < manifest ; 1987 ; Journal of Housing and the Built Environment Volume 2 ; 2 >
+    au < manifest ; 1988 ; Journal of Housing and the Built Environment Volume 3 ; 3 >
+    au < manifest ; 1989 ; Journal of Housing and the Built Environment Volume 4 ; 4 >
+    au < manifest ; 1990 ; Journal of Housing and the Built Environment Volume 5 ; 5 >
+    au < manifest ; 1991 ; Journal of Housing and the Built Environment Volume 6 ; 6 >
+    au < manifest ; 1992 ; Journal of Housing and the Built Environment Volume 7 ; 7 >
+    au < manifest ; 1993 ; Journal of Housing and the Built Environment Volume 8 ; 8 >
+    au < manifest ; 1994 ; Journal of Housing and the Built Environment Volume 9 ; 9 >
+    au < manifest ; 1995 ; Journal of Housing and the Built Environment Volume 10 ; 10 >
+    au < manifest ; 1996 ; Journal of Housing and the Built Environment Volume 11 ; 11 >
+    au < manifest ; 1997 ; Journal of Housing and the Built Environment Volume 12 ; 12 >
+    au < manifest ; 1998 ; Journal of Housing and the Built Environment Volume 13 ; 13 >
+    au < manifest ; 1999 ; Journal of Housing and the Built Environment Volume 14 ; 14 >
+    au < manifest ; 2000 ; Journal of Housing and the Built Environment Volume 15 ; 15 >
+    au < manifest ; 2001 ; Journal of Housing and the Built Environment Volume 16 ; 16 >
+    au < manifest ; 2002 ; Journal of Housing and the Built Environment Volume 17 ; 17 >
+    au < manifest ; 2003 ; Journal of Housing and the Built Environment Volume 18 ; 18 >
+    au < manifest ; 2004 ; Journal of Housing and the Built Environment Volume 19 ; 19 >
+    au < manifest ; 2005 ; Journal of Housing and the Built Environment Volume 20 ; 20 >
+    au < manifest ; 2006 ; Journal of Housing and the Built Environment Volume 21 ; 21 >
+    au < manifest ; 2007 ; Journal of Housing and the Built Environment Volume 22 ; 22 >
+    au < manifest ; 2008 ; Journal of Housing and the Built Environment Volume 23 ; 23 >
+    au < manifest ; 2009 ; Journal of Housing and the Built Environment Volume 24 ; 24 >
+    au < manifest ; 2010 ; Journal of Housing and the Built Environment Volume 25 ; 25 >
+    au < manifest ; 2011 ; Journal of Housing and the Built Environment Volume 26 ; 26 >
+    au < manifest ; 2012 ; Journal of Housing and the Built Environment Volume 27 ; 27 >
+
   }
 
   {
@@ -57908,6 +57974,39 @@
     >
 
     param[journal_issn] = 1672-0733
+
+    au < manifest ; 1981 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 1 ; 1 >
+    au < manifest ; 1982 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 2 ; 2 >
+    au < manifest ; 1983 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 3 ; 3 >
+    au < manifest ; 1984 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 4 ; 4 >
+    au < manifest ; 1985 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 5 ; 5 >
+    au < manifest ; 1986 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 6 ; 6 >
+    au < manifest ; 1987 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 7 ; 7 >
+    au < manifest ; 1988 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 8 ; 8 >
+    au < manifest ; 1989 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 9 ; 9 >
+    au < manifest ; 1990 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 10 ; 10 >
+    au < manifest ; 1991 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 11 ; 11 >
+    au < manifest ; 1992 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 12 ; 12 >
+    au < manifest ; 1993 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 13 ; 13 >
+    au < manifest ; 1994 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 14 ; 14 >
+    au < manifest ; 1995 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 15 ; 15 >
+    au < manifest ; 1996 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 16 ; 16 >
+    au < manifest ; 1997 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 17 ; 17 >
+    au < manifest ; 1998 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 18 ; 18 >
+    au < manifest ; 1999 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 19 ; 19 >
+    au < manifest ; 2000 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 20 ; 20 >
+    au < manifest ; 2001 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 21 ; 21 >
+    au < manifest ; 2002 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 22 ; 22 >
+    au < manifest ; 2003 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 23 ; 23 >
+    au < manifest ; 2004 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 24 ; 24 >
+    au < manifest ; 2005 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 25 ; 25 >
+    au < manifest ; 2006 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 26 ; 26 >
+    au < manifest ; 2007 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 27 ; 27 >
+    au < manifest ; 2008 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 28 ; 28 >
+    au < manifest ; 2009 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 29 ; 29 >
+    au < manifest ; 2010 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 30 ; 30 >
+    au < manifest ; 2011 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 31 ; 31 >
+    au < manifest ; 2012 ; Journal of Huazhong University of Science and Technology -- Medical Sciences -- Volume 32 ; 32 >
 
   }
 
@@ -57922,6 +58021,39 @@
 
     param[journal_issn] = 1434-5161
 
+    au < manifest ; 1977 ; Jinrui-idengaku-zasshi Volume 22 ; 22 >
+    au < manifest ; 1978 ; Jinrui-idengaku-zasshi Volume 23 ; 23 >
+    au < manifest ; 1979 ; Jinrui-idengaku-zasshi Volume 24 ; 24 >
+    au < manifest ; 1980 ; Jinrui-idengaku-zasshi Volume 25 ; 25 >
+    au < manifest ; 1981 ; Jinrui-idengaku-zasshi Volume 26 ; 26 >
+    au < manifest ; 1982 ; Jinrui-idengaku-zasshi Volume 27 ; 27 >
+    au < manifest ; 1983 ; Jinrui-idengaku-zasshi Volume 28 ; 28 >
+    au < manifest ; 1984 ; Jinrui-idengaku-zasshi Volume 29 ; 29 >
+    au < manifest ; 1985 ; Jinrui-idengaku-zasshi Volume 30 ; 30 >
+    au < manifest ; 1986 ; Jinrui-idengaku-zasshi Volume 31 ; 31 >
+    au < manifest ; 1987 ; Jinrui-idengaku-zasshi Volume 32 ; 32 >
+    au < manifest ; 1988 ; Jinrui-idengaku-zasshi Volume 33 ; 33 >
+    au < manifest ; 1989 ; Jinrui-idengaku-zasshi Volume 34 ; 34 >
+    au < manifest ; 1990 ; Jinrui-idengaku-zasshi Volume 35 ; 35 >
+    au < manifest ; 1991 ; Jinrui-idengaku-zasshi Volume 36 ; 36 >
+    au < manifest ; 1992 ; Jinrui-idengaku-zasshi Volume 37 ; 37 >
+    au < manifest ; 1993 ; Jinrui-idengaku-zasshi Volume 38 ; 38 >
+    au < manifest ; 1994 ; Jinrui-idengaku-zasshi Volume 39 ; 39 >
+    au < manifest ; 1995 ; Jinrui-idengaku-zasshi Volume 40 ; 40 >
+    au < manifest ; 1996 ; Jinrui-idengaku-zasshi Volume 41 ; 41 >
+    au < manifest ; 1997 ; Jinrui-idengaku-zasshi Volume 42 ; 42 >
+    au < manifest ; 1998 ; Journal of Human Genetics Volume 43 ; 43 >
+    au < manifest ; 1999 ; Journal of Human Genetics Volume 44 ; 44 >
+    au < manifest ; 2000 ; Journal of Human Genetics Volume 45 ; 45 >
+    au < manifest ; 2001 ; Journal of Human Genetics Volume 46 ; 46 >
+    au < manifest ; 2002 ; Journal of Human Genetics Volume 47 ; 47 >
+    au < manifest ; 2003 ; Journal of Human Genetics Volume 48 ; 48 >
+    au < manifest ; 2004 ; Journal of Human Genetics Volume 49 ; 49 >
+    au < manifest ; 2005 ; Journal of Human Genetics Volume 50 ; 50 >
+    au < manifest ; 2006 ; Journal of Human Genetics Volume 51 ; 51 >
+    au < manifest ; 2007 ; Journal of Human Genetics Volume 52 ; 52 >
+    au < manifest ; 2008 ; Journal of Human Genetics Volume 53 ; 53 >
+
   }
 
   {
@@ -57935,6 +58067,14 @@
 
     param[journal_issn] = 0032-9452
 
+    au < manifest ; 2006 ; Journal of Ichthyology Volume 46 ; 46 >
+    au < manifest ; 2007 ; Journal of Ichthyology Volume 47 ; 47 >
+    au < manifest ; 2008 ; Journal of Ichthyology Volume 48 ; 48 >
+    au < manifest ; 2009 ; Journal of Ichthyology Volume 49 ; 49 >
+    au < manifest ; 2010 ; Journal of Ichthyology Volume 50 ; 50 >
+    au < manifest ; 2011 ; Journal of Ichthyology Volume 51 ; 51 >
+    au < manifest ; 2012 ; Journal of Ichthyology Volume 52 ; 52 >
+
   }
 
   {
@@ -57946,7 +58086,16 @@
       issnl = 1557-1912
     >
 
+    comment[continued_from] = 1096-4045
     param[journal_issn] = 1557-1912
+
+    au < manifest ; 2006 ; Journal of Immigrant and Minority Health Volume 8 ; 8 >
+    au < manifest ; 2007 ; Journal of Immigrant and Minority Health Volume 9 ; 9 >
+    au < manifest ; 2008 ; Journal of Immigrant and Minority Health Volume 10 ; 10 >
+    au < manifest ; 2009 ; Journal of Immigrant and Minority Health Volume 11 ; 11 >
+    au < manifest ; 2010 ; Journal of Immigrant and Minority Health Volume 12 ; 12 >
+    au < manifest ; 2011 ; Journal of Immigrant and Minority Health Volume 13 ; 13 >
+    au < manifest ; 2012 ; Journal of Immigrant and Minority Health Volume 14 ; 14 >
 
   }
 
@@ -57960,6 +58109,15 @@
     >
 
     param[journal_issn] = 1096-4045
+    comment[continued_by] = 1557-1912
+
+    au < manifest ; 1999 ; Journal of Immigrant Health Volume 1 ; 1 >
+    au < manifest ; 2000 ; Journal of Immigrant Health Volume 2 ; 2 >
+    au < manifest ; 2001 ; Journal of Immigrant Health Volume 3 ; 3 >
+    au < manifest ; 2002 ; Journal of Immigrant Health Volume 4 ; 4 >
+    au < manifest ; 2003 ; Journal of Immigrant Health Volume 5 ; 5 >
+    au < manifest ; 2004 ; Journal of Immigrant Health Volume 6 ; 6 >
+    au < manifest ; 2005 ; Journal of Immigrant Health Volume 7 ; 7 >
 
   }
 
@@ -57972,6 +58130,79 @@
     >
 
     param[journal_issn] = 0923-0750
+
+    au < manifest ; 1983-1984 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 1 ; 1 >
+    au < manifest ; 1984 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 2 ; 2 >
+    au < manifest ; 1985 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 3 ; 3 >
+    au < manifest ; 1986 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 4 ; 4 >
+    au < manifest ; 1987 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 5 ; 5 >
+    au < manifest ; 1988 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 6 ; 6 >
+    au < manifest ; 1989 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 7 ; 7 >
+    au < manifest ; 1990 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 8 ; 8 >
+    au < manifest ; 1990 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 9 ; 9 >
+    au < manifest ; 1991 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 10 ; 10 >
+    au < manifest ; 1991 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 11 ; 11 >
+    au < manifest ; 1992 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 12 ; 12 >
+    au < manifest ; 1992 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 13 ; 13 >
+    au < manifest ; 1992 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 14 ; 14 >
+    au < manifest ; 1993 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 15 ; 15 >
+    au < manifest ; 1993 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 16 ; 16 >
+    au < manifest ; 1994 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 17 ; 17 >
+    au < manifest ; 1994 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 18 ; 18 >
+    au < manifest ; 1994 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 19 ; 19 >
+    au < manifest ; 1994 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 20 ; 20 >
+    au < manifest ; 1995 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 21 ; 21 >
+    au < manifest ; 1995 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 22 ; 22 >
+    au < manifest ; 1995 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 23 ; 23 >
+    au < manifest ; 1996 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 24 ; 24 >
+    au < manifest ; 1996 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 25 ; 25 >
+    au < manifest ; 1996 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 26 ; 26 >
+    au < manifest ; 1997 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 27 ; 27 >
+    au < manifest ; 1997 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 28 ; 28 >
+    au < manifest ; 1997 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 29 ; 29 >
+    au < manifest ; 1998 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 30 ; 30 >
+    au < manifest ; 1998 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 31 ; 31 >
+    au < manifest ; 1998 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 32 ; 32 >
+    au < manifest ; 1999 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 33 ; 33 >
+    au < manifest ; 1999 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 34 ; 34 >
+    au < manifest ; 1999 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 35 ; 35 >
+    au < manifest ; 2000 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 36 ; 36 >
+    au < manifest ; 2000 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 37 ; 37 >
+    au < manifest ; 2000 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 38 ; 38 >
+    au < manifest ; 2001 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 39 ; 39 >
+    au < manifest ; 2001 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 40 ; 40 >
+    au < manifest ; 2001 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 41 ; 41 >
+    au < manifest ; 2002 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 42 ; 42 >
+    au < manifest ; 2002 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 43 ; 43 >
+    au < manifest ; 2002 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 44 ; 44 >
+    au < manifest ; 2003 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 45 ; 45 >
+    au < manifest ; 2003 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 46 ; 46 >
+    au < manifest ; 2003 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 47 ; 47 >
+    au < manifest ; 2004 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 48 ; 48 >
+    au < manifest ; 2004 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 49 ; 49 >
+    au < manifest ; 2004 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 50 ; 50 >
+    au < manifest ; 2005 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 51 ; 51 >
+    au < manifest ; 2005 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 52 ; 52 >
+    au < manifest ; 2005 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 53 ; 53 >
+    au < manifest ; 2006 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 54 ; 54 >
+    au < manifest ; 2006 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 55 ; 55 >
+    au < manifest ; 2006 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 56 ; 56 >
+    au < manifest ; 2007 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 57 ; 57 >
+    au < manifest ; 2007 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 58 ; 58 >
+    au < manifest ; 2007 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 59 ; 59 >
+    au < manifest ; 2008 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 60 ; 60 >
+    au < manifest ; 2008 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 61 ; 61 >
+    au < manifest ; 2008 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 62 ; 62 >
+    au < manifest ; 2009 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 63 ; 63 >
+    au < manifest ; 2009 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 64 ; 64 >
+    au < manifest ; 2009 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 65 ; 65 >
+    au < manifest ; 2010 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 66 ; 66 >
+    au < manifest ; 2010 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 67 ; 67 >
+    au < manifest ; 2010 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 68 ; 68 >
+    au < manifest ; 2011 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 69 ; 69 >
+    au < manifest ; 2011 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 70 ; 70 >
+    au < manifest ; 2011 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 71 ; 71 >
+    au < manifest ; 2012 ; Journal of Inclusion Phenomena and Macrocyclic Chemistry Volume 72 ; 72 >
 
   }
 
@@ -57986,6 +58217,47 @@
 
     param[journal_issn] = 0022-1791
 
+    au < manifest ; 1970-1972 ; Journal of Indian Philosophy Volume 1 ; 1 >
+    au < manifest ; 1972-1974 ; Journal of Indian Philosophy Volume 2 ; 2 >
+    au < manifest ; 1975 ; Journal of Indian Philosophy Volume 3 ; 3 >
+    au < manifest ; 1976-1977 ; Journal of Indian Philosophy Volume 4 ; 4 >
+    au < manifest ; 1977-1978 ; Journal of Indian Philosophy Volume 5 ; 5 >
+    au < manifest ; 1978 ; Journal of Indian Philosophy Volume 6 ; 6 >
+    au < manifest ; 1979 ; Journal of Indian Philosophy Volume 7 ; 7 >
+    au < manifest ; 1980 ; Journal of Indian Philosophy Volume 8 ; 8 >
+    au < manifest ; 1981 ; Journal of Indian Philosophy Volume 9 ; 9 >
+    au < manifest ; 1982 ; Journal of Indian Philosophy Volume 10 ; 10 >
+    au < manifest ; 1983 ; Journal of Indian Philosophy Volume 11 ; 11 >
+    au < manifest ; 1984 ; Journal of Indian Philosophy Volume 12 ; 12 >
+    au < manifest ; 1985 ; Journal of Indian Philosophy Volume 13 ; 13 >
+    au < manifest ; 1986 ; Journal of Indian Philosophy Volume 14 ; 14 >
+    au < manifest ; 1987 ; Journal of Indian Philosophy Volume 15 ; 15 >
+    au < manifest ; 1988 ; Journal of Indian Philosophy Volume 16 ; 16 >
+    au < manifest ; 1989 ; Journal of Indian Philosophy Volume 17 ; 17 >
+    au < manifest ; 1990 ; Journal of Indian Philosophy Volume 18 ; 18 >
+    au < manifest ; 1991 ; Journal of Indian Philosophy Volume 19 ; 19 >
+    au < manifest ; 1992 ; Journal of Indian Philosophy Volume 20 ; 20 >
+    au < manifest ; 1993 ; Journal of Indian Philosophy Volume 21 ; 21 >
+    au < manifest ; 1994 ; Journal of Indian Philosophy Volume 22 ; 22 >
+    au < manifest ; 1995 ; Journal of Indian Philosophy Volume 23 ; 23 >
+    au < manifest ; 1996 ; Journal of Indian Philosophy Volume 24 ; 24 >
+    au < manifest ; 1997 ; Journal of Indian Philosophy Volume 25 ; 25 >
+    au < manifest ; 1998 ; Journal of Indian Philosophy Volume 26 ; 26 >
+    au < manifest ; 1999 ; Journal of Indian Philosophy Volume 27 ; 27 >
+    au < manifest ; 2000 ; Journal of Indian Philosophy Volume 28 ; 28 >
+    au < manifest ; 2001 ; Journal of Indian Philosophy Volume 29 ; 29 >
+    au < manifest ; 2002 ; Journal of Indian Philosophy Volume 30 ; 30 >
+    au < manifest ; 2003 ; Journal of Indian Philosophy Volume 31 ; 31 >
+    au < manifest ; 2004 ; Journal of Indian Philosophy Volume 32 ; 32 >
+    au < manifest ; 2005 ; Journal of Indian Philosophy Volume 33 ; 33 >
+    au < manifest ; 2006 ; Journal of Indian Philosophy Volume 34 ; 34 >
+    au < manifest ; 2007 ; Journal of Indian Philosophy Volume 35 ; 35 >
+    au < manifest ; 2008 ; Journal of Indian Philosophy Volume 36 ; 36 >
+    au < manifest ; 2009 ; Journal of Indian Philosophy Volume 37 ; 37 >
+    au < manifest ; 2010 ; Journal of Indian Philosophy Volume 38 ; 38 >
+    au < manifest ; 2011 ; Journal of Indian Philosophy Volume 39 ; 39 >
+    au < manifest ; 2012 ; Journal of Indian Philosophy Volume 40 ; 40 >
+
   }
 
   {
@@ -57998,6 +58270,46 @@
     >
 
     param[journal_issn] = 1367-5435
+
+    au < manifest ; 1986-1987 ; Journal of Industrial Microbiology & Biotechnology Volume 1 ; 1 >
+    au < manifest ; 1987-1988 ; Journal of Industrial Microbiology & Biotechnology Volume 2 ; 2 >
+    au < manifest ; 1988 ; Journal of Industrial Microbiology & Biotechnology Volume 3 ; 3 >
+    au < manifest ; 1989 ; Journal of Industrial Microbiology & Biotechnology Volume 4 ; 4 >
+    au < manifest ; 1990 ; Journal of Industrial Microbiology & Biotechnology Volume 5 ; 5 >
+    au < manifest ; 1990 ; Journal of Industrial Microbiology & Biotechnology Volume 6 ; 6 >
+    au < manifest ; 1991 ; Journal of Industrial Microbiology & Biotechnology Volume 7 ; 7 >
+    au < manifest ; 1991 ; Journal of Industrial Microbiology & Biotechnology Volume 8 ; 8 >
+    au < manifest ; 1992 ; Journal of Industrial Microbiology & Biotechnology Volume 9 ; 9 >
+    au < manifest ; 1992 ; Journal of Industrial Microbiology & Biotechnology Volume 10 ; 10 >
+    au < manifest ; 1992-1993 ; Journal of Industrial Microbiology & Biotechnology Volume 11 ; 11 >
+    au < manifest ; 1993 ; Journal of Industrial Microbiology & Biotechnology Volume 12 ; 12 >
+    au < manifest ; 1994 ; Journal of Industrial Microbiology & Biotechnology Volume 13 ; 13 >
+    au < manifest ; 1995 ; Journal of Industrial Microbiology & Biotechnology Volume 14 ; 14 >
+    au < manifest ; 1995 ; Journal of Industrial Microbiology & Biotechnology Volume 15 ; 15 >
+    au < manifest ; 1996 ; Journal of Industrial Microbiology & Biotechnology Volume 16 ; 16 >
+    au < manifest ; 1996 ; Journal of Industrial Microbiology & Biotechnology Volume 17 ; 17 >
+    au < manifest ; 1997 ; Journal of Industrial Microbiology & Biotechnology Volume 18 ; 18 >
+    au < manifest ; 1997 ; Journal of Industrial Microbiology & Biotechnology Volume 19 ; 19 >
+    au < manifest ; 1998 ; Journal of Industrial Microbiology & Biotechnology Volume 20 ; 20 >
+    au < manifest ; 1998 ; Journal of Industrial Microbiology & Biotechnology Volume 21 ; 21 >
+    au < manifest ; 1999 ; Journal of Industrial Microbiology & Biotechnology Volume 22 ; 22 >
+    au < manifest ; 1999 ; Journal of Industrial Microbiology & Biotechnology Volume 23 ; 23 >
+    au < manifest ; 2000 ; Journal of Industrial Microbiology & Biotechnology Volume 24 ; 24 >
+    au < manifest ; 2000 ; Journal of Industrial Microbiology & Biotechnology Volume 25 ; 25 >
+    au < manifest ; 2001 ; Journal of Industrial Microbiology & Biotechnology Volume 26 ; 26 >
+    au < manifest ; 2001 ; Journal of Industrial Microbiology & Biotechnology Volume 27 ; 27 >
+    au < manifest ; 2002 ; Journal of Industrial Microbiology & Biotechnology Volume 28 ; 28 >
+    au < manifest ; 2002 ; Journal of Industrial Microbiology & Biotechnology Volume 29 ; 29 >
+    au < manifest ; 2003 ; Journal of Industrial Microbiology & Biotechnology Volume 30 ; 30 >
+    au < manifest ; 2004 ; Journal of Industrial Microbiology & Biotechnology Volume 31 ; 31 >
+    au < manifest ; 2005 ; Journal of Industrial Microbiology & Biotechnology Volume 32 ; 32 >
+    au < manifest ; 2006 ; Journal of Industrial Microbiology & Biotechnology Volume 33 ; 33 >
+    au < manifest ; 2007 ; Journal of Industrial Microbiology & Biotechnology Volume 34 ; 34 >
+    au < manifest ; 2008 ; Journal of Industrial Microbiology & Biotechnology Volume 35 ; 35 >
+    au < manifest ; 2009 ; Journal of Industrial Microbiology & Biotechnology Volume 36 ; 36 >
+    au < manifest ; 2010 ; Journal of Industrial Microbiology & Biotechnology Volume 37 ; 37 >
+    au < manifest ; 2011 ; Journal of Industrial Microbiology & Biotechnology Volume 38 ; 38 >
+    au < manifest ; 2012 ; Journal of Industrial Microbiology & Biotechnology Volume 39 ; 39 >
 
   }
 
@@ -58012,6 +58324,19 @@
 
     param[journal_issn] = 1566-1679
 
+    au < manifest ; 2001 ; Journal of Industry, Competition and Trade Volume 1 ; 1 >
+    au < manifest ; 2002 ; Journal of Industry, Competition and Trade Volume 2 ; 2 >
+    au < manifest ; 2003 ; Journal of Industry, Competition and Trade Volume 3 ; 3 >
+    au < manifest ; 2004 ; Journal of Industry, Competition and Trade Volume 4 ; 4 >
+    au < manifest ; 2005 ; Journal of Industry, Competition and Trade Volume 5 ; 5 >
+    au < manifest ; 2006 ; Journal of Industry, Competition and Trade Volume 6 ; 6 >
+    au < manifest ; 2007 ; Journal of Industry, Competition and Trade Volume 7 ; 7 >
+    au < manifest ; 2008 ; Journal of Industry, Competition and Trade Volume 8 ; 8 >
+    au < manifest ; 2009 ; Journal of Industry, Competition and Trade Volume 9 ; 9 >
+    au < manifest ; 2010 ; Journal of Industry, Competition and Trade Volume 10 ; 10 >
+    au < manifest ; 2011 ; Journal of Industry, Competition and Trade Volume 11 ; 11 >
+    au < manifest ; 2012 ; Journal of Industry, Competition and Trade Volume 12 ; 12 >
+
   }
 
   {
@@ -58023,6 +58348,25 @@
     >
 
     param[journal_issn] = 1341-321X
+
+    au < manifest ; 1995-1996 ; Journal of Infection and Chemotherapy Volume 1 ; 1 >
+    au < manifest ; 1996 ; Journal of Infection and Chemotherapy Volume 2 ; 2 >
+    au < manifest ; 1997 ; Journal of Infection and Chemotherapy Volume 3 ; 3 >
+    au < manifest ; 1998 ; Journal of Infection and Chemotherapy Volume 4 ; 4 >
+    au < manifest ; 1999 ; Journal of Infection and Chemotherapy Volume 5 ; 5 >
+    au < manifest ; 2000 ; Journal of Infection and Chemotherapy Volume 6 ; 6 >
+    au < manifest ; 2001 ; Journal of Infection and Chemotherapy Volume 7 ; 7 >
+    au < manifest ; 2002 ; Journal of Infection and Chemotherapy Volume 8 ; 8 >
+    au < manifest ; 2003 ; Journal of Infection and Chemotherapy Volume 9 ; 9 >
+    au < manifest ; 2004 ; Journal of Infection and Chemotherapy Volume 10 ; 10 >
+    au < manifest ; 2005 ; Journal of Infection and Chemotherapy Volume 11 ; 11 >
+    au < manifest ; 2006 ; Journal of Infection and Chemotherapy Volume 12 ; 12 >
+    au < manifest ; 2007 ; Journal of Infection and Chemotherapy Volume 13 ; 13 >
+    au < manifest ; 2008 ; Journal of Infection and Chemotherapy Volume 14 ; 14 >
+    au < manifest ; 2009 ; Journal of Infection and Chemotherapy Volume 15 ; 15 >
+    au < manifest ; 2010 ; Journal of Infection and Chemotherapy Volume 16 ; 16 >
+    au < manifest ; 2011 ; Journal of Infection and Chemotherapy Volume 17 ; 17 >
+    au < manifest ; 2012 ; Journal of Infection and Chemotherapy Volume 18 ; 18 >
 
   }
 
@@ -58036,6 +58380,16 @@
 
     param[journal_issn] = 1476-9255
 
+    au < manifest ; 2004 ; Journal of Inflammation Volume 1 ; 1 >
+    au < manifest ; 2005 ; Journal of Inflammation Volume 2 ; 2 >
+    au < manifest ; 2006 ; Journal of Inflammation Volume 3 ; 3 >
+    au < manifest ; 2007 ; Journal of Inflammation Volume 4 ; 4 >
+    au < manifest ; 2008 ; Journal of Inflammation Volume 5 ; 5 >
+    au < manifest ; 2009 ; Journal of Inflammation Volume 6 ; 6 >
+    au < manifest ; 2010 ; Journal of Inflammation Volume 7 ; 7 >
+    au < manifest ; 2011 ; Journal of Inflammation Volume 8 ; 8 >
+    au < manifest ; 2012 ; Journal of Inflammation Volume 9 ; 9 >
+
   }
 
   {
@@ -58047,7 +58401,13 @@
       issnl = 1866-6892
     >
 
+    comment[continued_from] = 0195-9271
     param[journal_issn] = 1866-6892
+
+    au < manifest ; 2009 ; Journal of Infrared, Millimeter and Terahertz Waves Volume 30 ; 30 >
+    au < manifest ; 2010 ; Journal of Infrared, Millimeter and Terahertz Waves Volume 31 ; 31 >
+    au < manifest ; 2011 ; Journal of Infrared, Millimeter and Terahertz Waves Volume 32 ; 32 >
+    au < manifest ; 2012 ; Journal of Infrared, Millimeter and Terahertz Waves Volume 33 ; 33 >
 
   }
 
@@ -58108,6 +58468,22 @@
     >
 
     param[journal_issn] = 1053-0495
+    comment[continued_by] = 1574-1443
+
+    au < manifest ; 1991 ; Journal of Inorganic and Organometallic Polymers Volume 1 ; 1 >
+    au < manifest ; 1992 ; Journal of Inorganic and Organometallic Polymers Volume 2 ; 2 >
+    au < manifest ; 1993 ; Journal of Inorganic and Organometallic Polymers Volume 3 ; 3 >
+    au < manifest ; 1994 ; Journal of Inorganic and Organometallic Polymers Volume 4 ; 4 >
+    au < manifest ; 1995 ; Journal of Inorganic and Organometallic Polymers Volume 5 ; 5 >
+    au < manifest ; 1996 ; Journal of Inorganic and Organometallic Polymers Volume 6 ; 6 >
+    au < manifest ; 1997 ; Journal of Inorganic and Organometallic Polymers Volume 7 ; 7 >
+    au < manifest ; 1998 ; Journal of Inorganic and Organometallic Polymers Volume 8 ; 8 >
+    au < manifest ; 1999 ; Journal of Inorganic and Organometallic Polymers Volume 9 ; 9 >
+    au < manifest ; 2000 ; Journal of Inorganic and Organometallic Polymers Volume 10 ; 10 >
+    au < manifest ; 2001 ; Journal of Inorganic and Organometallic Polymers Volume 11 ; 11 >
+    au < manifest ; 2002 ; Journal of Inorganic and Organometallic Polymers Volume 12 ; 12 >
+    au < manifest ; 2003 ; Journal of Inorganic and Organometallic Polymers Volume 13 ; 13 >
+    au < manifest ; 2004 ; Journal of Inorganic and Organometallic Polymers Volume 14 ; 14 >
 
   }
 
@@ -58120,7 +58496,17 @@
       issnl = 1574-1443
     >
 
+    comment[continued_from] = 1053-0495
     param[journal_issn] = 1574-1443
+
+    au < manifest ; 2005 ; Journal of Inorganic and Organometallic Polymers and Materials Volume 15 ; 15 >
+    au < manifest ; 2006 ; Journal of Inorganic and Organometallic Polymers and Materials Volume 16 ; 16 >
+    au < manifest ; 2007 ; Journal of Inorganic and Organometallic Polymers and Materials Volume 17 ; 17 >
+    au < manifest ; 2008 ; Journal of Inorganic and Organometallic Polymers and Materials Volume 18 ; 18 >
+    au < manifest ; 2009 ; Journal of Inorganic and Organometallic Polymers and Materials Volume 19 ; 19 >
+    au < manifest ; 2010 ; Journal of Inorganic and Organometallic Polymers and Materials Volume 20 ; 20 >
+    au < manifest ; 2011 ; Journal of Inorganic and Organometallic Polymers and Materials Volume 21 ; 21 >
+    au < manifest ; 2012 ; Journal of Inorganic and Organometallic Polymers and Materials Volume 22 ; 22 >
 
   }
 
@@ -58135,6 +58521,32 @@
 
     param[journal_issn] = 0892-7553
 
+    au < manifest ; 1988 ; Journal of Insect Behavior Volume 1 ; 1 >
+    au < manifest ; 1989 ; Journal of Insect Behavior Volume 2 ; 2 >
+    au < manifest ; 1990 ; Journal of Insect Behavior Volume 3 ; 3 >
+    au < manifest ; 1991 ; Journal of Insect Behavior Volume 4 ; 4 >
+    au < manifest ; 1992 ; Journal of Insect Behavior Volume 5 ; 5 >
+    au < manifest ; 1993 ; Journal of Insect Behavior Volume 6 ; 6 >
+    au < manifest ; 1994 ; Journal of Insect Behavior Volume 7 ; 7 >
+    au < manifest ; 1995 ; Journal of Insect Behavior Volume 8 ; 8 >
+    au < manifest ; 1996 ; Journal of Insect Behavior Volume 9 ; 9 >
+    au < manifest ; 1997 ; Journal of Insect Behavior Volume 10 ; 10 >
+    au < manifest ; 1998 ; Journal of Insect Behavior Volume 11 ; 11 >
+    au < manifest ; 1999 ; Journal of Insect Behavior Volume 12 ; 12 >
+    au < manifest ; 2000 ; Journal of Insect Behavior Volume 13 ; 13 >
+    au < manifest ; 2001 ; Journal of Insect Behavior Volume 14 ; 14 >
+    au < manifest ; 2002 ; Journal of Insect Behavior Volume 15 ; 15 >
+    au < manifest ; 2003 ; Journal of Insect Behavior Volume 16 ; 16 >
+    au < manifest ; 2004 ; Journal of Insect Behavior Volume 17 ; 17 >
+    au < manifest ; 2005 ; Journal of Insect Behavior Volume 18 ; 18 >
+    au < manifest ; 2006 ; Journal of Insect Behavior Volume 19 ; 19 >
+    au < manifest ; 2007 ; Journal of Insect Behavior Volume 20 ; 20 >
+    au < manifest ; 2008 ; Journal of Insect Behavior Volume 21 ; 21 >
+    au < manifest ; 2009 ; Journal of Insect Behavior Volume 22 ; 22 >
+    au < manifest ; 2010 ; Journal of Insect Behavior Volume 23 ; 23 >
+    au < manifest ; 2011 ; Journal of Insect Behavior Volume 24 ; 24 >
+    au < manifest ; 2012 ; Journal of Insect Behavior Volume 25 ; 25 >
+
   }
 
   {
@@ -58148,6 +58560,23 @@
 
     param[journal_issn] = 1366-638X
 
+    au < manifest ; 1997 ; Journal of Insect Conservation Volume 1 ; 1 >
+    au < manifest ; 1998 ; Journal of Insect Conservation Volume 2 ; 2 >
+    au < manifest ; 1999 ; Journal of Insect Conservation Volume 3 ; 3 >
+    au < manifest ; 2000 ; Journal of Insect Conservation Volume 4 ; 4 >
+    au < manifest ; 2001 ; Journal of Insect Conservation Volume 5 ; 5 >
+    au < manifest ; 2002 ; Journal of Insect Conservation Volume 6 ; 6 >
+    au < manifest ; 2003 ; Journal of Insect Conservation Volume 7 ; 7 >
+    au < manifest ; 2004 ; Journal of Insect Conservation Volume 8 ; 8 >
+    au < manifest ; 2005 ; Journal of Insect Conservation Volume 9 ; 9 >
+    au < manifest ; 2006 ; Journal of Insect Conservation Volume 10 ; 10 >
+    au < manifest ; 2007 ; Journal of Insect Conservation Volume 11 ; 11 >
+    au < manifest ; 2008 ; Journal of Insect Conservation Volume 12 ; 12 >
+    au < manifest ; 2009 ; Journal of Insect Conservation Volume 13 ; 13 >
+    au < manifest ; 2010 ; Journal of Insect Conservation Volume 14 ; 14 >
+    au < manifest ; 2011 ; Journal of Insect Conservation Volume 15 ; 15 >
+    au < manifest ; 2012 ; Journal of Insect Conservation Volume 16 ; 16 >
+
   }
 
   {
@@ -58159,6 +58588,19 @@
     >
 
     param[journal_issn] = 0162-2641
+    comment[merged_into] = 1042-1629
+
+    au < manifest ; 1977-1978 ; Journal of Instructional Development Volume 1 ; 1 >
+    au < manifest ; 1978-1979 ; Journal of Instructional Development Volume 2 ; 2 >
+    au < manifest ; 1979-1980 ; Journal of Instructional Development Volume 3 ; 3 >
+    au < manifest ; 1980-1981 ; Journal of Instructional Development Volume 4 ; 4 >
+    au < manifest ; 1981-1982 ; Journal of Instructional Development Volume 5 ; 5 >
+    au < manifest ; 1982-1983 ; Journal of Instructional Development Volume 6 ; 6 >
+    au < manifest ; 1984 ; Journal of Instructional Development Volume 7 ; 7 >
+    au < manifest ; 1985 ; Journal of Instructional Development Volume 8 ; 8 >
+    au < manifest ; 1986 ; Journal of Instructional Development Volume 9 ; 9 >
+    au < manifest ; 1987 ; Journal of Instructional Development Volume 10 ; 10 >
+    au < manifest ; 1988 ; Journal of Instructional Development Volume 11 ; 11 >
 
   }
 
@@ -58173,6 +58615,73 @@
 
     param[journal_issn] = 0921-0296
 
+    au < manifest ; 1988-1989 ; Journal of Intelligent & Robotic Systems Volume 1 ; 1 >
+    au < manifest ; 1989 ; Journal of Intelligent & Robotic Systems Volume 2 ; 2 >
+    au < manifest ; 1990 ; Journal of Intelligent & Robotic Systems Volume 3 ; 3 >
+    au < manifest ; 1991 ; Journal of Intelligent & Robotic Systems Volume 4 ; 4 >
+    au < manifest ; 1992 ; Journal of Intelligent & Robotic Systems Volume 5 ; 5 >
+    au < manifest ; 1992 ; Journal of Intelligent & Robotic Systems Volume 6 ; 6 >
+    au < manifest ; 1993 ; Journal of Intelligent & Robotic Systems Volume 7 ; 7 >
+    au < manifest ; 1993 ; Journal of Intelligent & Robotic Systems Volume 8 ; 8 >
+    au < manifest ; 1994 ; Journal of Intelligent & Robotic Systems Volume 9 ; 9 >
+    au < manifest ; 1994 ; Journal of Intelligent & Robotic Systems Volume 10 ; 10 >
+    au < manifest ; 1994 ; Journal of Intelligent & Robotic Systems Volume 11 ; 11 >
+    au < manifest ; 1995 ; Journal of Intelligent & Robotic Systems Volume 12 ; 12 >
+    au < manifest ; 1995 ; Journal of Intelligent & Robotic Systems Volume 13 ; 13 >
+    au < manifest ; 1995 ; Journal of Intelligent & Robotic Systems Volume 14 ; 14 >
+    au < manifest ; 1996 ; Journal of Intelligent & Robotic Systems Volume 15 ; 15 >
+    au < manifest ; 1996 ; Journal of Intelligent & Robotic Systems Volume 16 ; 16 >
+    au < manifest ; 1996 ; Journal of Intelligent & Robotic Systems Volume 17 ; 17 >
+    au < manifest ; 1997 ; Journal of Intelligent & Robotic Systems Volume 18 ; 18 >
+    au < manifest ; 1997 ; Journal of Intelligent & Robotic Systems Volume 19 ; 19 >
+    au < manifest ; 1997 ; Journal of Intelligent & Robotic Systems Volume 20 ; 20 >
+    au < manifest ; 1998 ; Journal of Intelligent & Robotic Systems Volume 21 ; 21 >
+    au < manifest ; 1998 ; Journal of Intelligent & Robotic Systems Volume 22 ; 22 >
+    au < manifest ; 1998 ; Journal of Intelligent & Robotic Systems Volume 23 ; 23 >
+    au < manifest ; 1999 ; Journal of Intelligent & Robotic Systems Volume 24 ; 24 >
+    au < manifest ; 1999 ; Journal of Intelligent & Robotic Systems Volume 25 ; 25 >
+    au < manifest ; 1999 ; Journal of Intelligent & Robotic Systems Volume 26 ; 26 >
+    au < manifest ; 2000 ; Journal of Intelligent & Robotic Systems Volume 27 ; 27 >
+    au < manifest ; 2000 ; Journal of Intelligent & Robotic Systems Volume 28 ; 28 >
+    au < manifest ; 2000 ; Journal of Intelligent & Robotic Systems Volume 29 ; 29 >
+    au < manifest ; 2001 ; Journal of Intelligent & Robotic Systems Volume 30 ; 30 >
+    au < manifest ; 2001 ; Journal of Intelligent & Robotic Systems Volume 31 ; 31 >
+    au < manifest ; 2001 ; Journal of Intelligent & Robotic Systems Volume 32 ; 32 >
+    au < manifest ; 2002 ; Journal of Intelligent & Robotic Systems Volume 33 ; 33 >
+    au < manifest ; 2002 ; Journal of Intelligent & Robotic Systems Volume 34 ; 34 >
+    au < manifest ; 2002 ; Journal of Intelligent & Robotic Systems Volume 35 ; 35 >
+    au < manifest ; 2003 ; Journal of Intelligent & Robotic Systems Volume 36 ; 36 >
+    au < manifest ; 2003 ; Journal of Intelligent & Robotic Systems Volume 37 ; 37 >
+    au < manifest ; 2003 ; Journal of Intelligent & Robotic Systems Volume 38 ; 38 >
+    au < manifest ; 2004 ; Journal of Intelligent & Robotic Systems Volume 39 ; 39 >
+    au < manifest ; 2004 ; Journal of Intelligent & Robotic Systems Volume 40 ; 40 >
+    au < manifest ; 2004 ; Journal of Intelligent & Robotic Systems Volume 41 ; 41 >
+    au < manifest ; 2005 ; Journal of Intelligent & Robotic Systems Volume 42 ; 42 >
+    au < manifest ; 2005 ; Journal of Intelligent & Robotic Systems Volume 43 ; 43 >
+    au < manifest ; 2005 ; Journal of Intelligent & Robotic Systems Volume 44 ; 44 >
+    au < manifest ; 2006 ; Journal of Intelligent & Robotic Systems Volume 45 ; 45 >
+    au < manifest ; 2006 ; Journal of Intelligent & Robotic Systems Volume 46 ; 46 >
+    au < manifest ; 2006 ; Journal of Intelligent & Robotic Systems Volume 47 ; 47 >
+    au < manifest ; 2007 ; Journal of Intelligent & Robotic Systems Volume 48 ; 48 >
+    au < manifest ; 2007 ; Journal of Intelligent & Robotic Systems Volume 49 ; 49 >
+    au < manifest ; 2007 ; Journal of Intelligent & Robotic Systems Volume 50 ; 50 >
+    au < manifest ; 2008 ; Journal of Intelligent & Robotic Systems Volume 51 ; 51 >
+    au < manifest ; 2008 ; Journal of Intelligent & Robotic Systems Volume 52 ; 52 >
+    au < manifest ; 2008 ; Journal of Intelligent & Robotic Systems Volume 53 ; 53 >
+    au < manifest ; 2009 ; Journal of Intelligent & Robotic Systems Volume 54 ; 54 >
+    au < manifest ; 2009 ; Journal of Intelligent & Robotic Systems Volume 55 ; 55 >
+    au < manifest ; 2009 ; Journal of Intelligent & Robotic Systems Volume 56 ; 56 >
+    au < manifest ; 2010 ; Journal of Intelligent & Robotic Systems Volume 57 ; 57 >
+    au < manifest ; 2010 ; Journal of Intelligent & Robotic Systems Volume 58 ; 58 >
+    au < manifest ; 2010 ; Journal of Intelligent & Robotic Systems Volume 59 ; 59 >
+    au < manifest ; 2010 ; Journal of Intelligent & Robotic Systems Volume 60 ; 60 >
+    au < manifest ; 2011 ; Journal of Intelligent & Robotic Systems Volume 61 ; 61 >
+    au < manifest ; 2011 ; Journal of Intelligent & Robotic Systems Volume 62 ; 62 >
+    au < manifest ; 2011 ; Journal of Intelligent & Robotic Systems Volume 63 ; 63 >
+    au < manifest ; 2011 ; Journal of Intelligent & Robotic Systems Volume 64 ; 64 >
+    au < manifest ; 2012 ; Journal of Intelligent & Robotic Systems Volume 65 ; 65 >
+    au < manifest ; 2012 ; Journal of Intelligent & Robotic Systems Volume 66 ; 66 >
+
   }
 
   {
@@ -58185,6 +58694,45 @@
     >
 
     param[journal_issn] = 0925-9902
+
+    au < manifest ; 1992 ; Journal of Intelligent Information Systems Volume 1 ; 1 >
+    au < manifest ; 1993 ; Journal of Intelligent Information Systems Volume 2 ; 2 >
+    au < manifest ; 1994 ; Journal of Intelligent Information Systems Volume 3 ; 3 >
+    au < manifest ; 1995 ; Journal of Intelligent Information Systems Volume 4 ; 4 >
+    au < manifest ; 1995 ; Journal of Intelligent Information Systems Volume 5 ; 5 >
+    au < manifest ; 1996 ; Journal of Intelligent Information Systems Volume 6 ; 6 >
+    au < manifest ; 1996 ; Journal of Intelligent Information Systems Volume 7 ; 7 >
+    au < manifest ; 1997 ; Journal of Intelligent Information Systems Volume 8 ; 8 >
+    au < manifest ; 1997 ; Journal of Intelligent Information Systems Volume 9 ; 9 >
+    au < manifest ; 1998 ; Journal of Intelligent Information Systems Volume 10 ; 10 >
+    au < manifest ; 1998 ; Journal of Intelligent Information Systems Volume 11 ; 11 >
+    au < manifest ; 1999 ; Journal of Intelligent Information Systems Volume 12 ; 12 >
+    au < manifest ; 1999 ; Journal of Intelligent Information Systems Volume 13 ; 13 >
+    au < manifest ; 2000 ; Journal of Intelligent Information Systems Volume 14 ; 14 >
+    au < manifest ; 2000 ; Journal of Intelligent Information Systems Volume 15 ; 15 >
+    au < manifest ; 2001 ; Journal of Intelligent Information Systems Volume 16 ; 16 >
+    au < manifest ; 2001 ; Journal of Intelligent Information Systems Volume 17 ; 17 >
+    au < manifest ; 2002 ; Journal of Intelligent Information Systems Volume 18 ; 18 >
+    au < manifest ; 2002 ; Journal of Intelligent Information Systems Volume 19 ; 19 >
+    au < manifest ; 2003 ; Journal of Intelligent Information Systems Volume 20 ; 20 >
+    au < manifest ; 2003 ; Journal of Intelligent Information Systems Volume 21 ; 21 >
+    au < manifest ; 2004 ; Journal of Intelligent Information Systems Volume 22 ; 22 >
+    au < manifest ; 2004 ; Journal of Intelligent Information Systems Volume 23 ; 23 >
+    au < manifest ; 2005 ; Journal of Intelligent Information Systems Volume 24 ; 24 >
+    au < manifest ; 2005 ; Journal of Intelligent Information Systems Volume 25 ; 25 >
+    au < manifest ; 2006 ; Journal of Intelligent Information Systems Volume 26 ; 26 >
+    au < manifest ; 2006 ; Journal of Intelligent Information Systems Volume 27 ; 27 >
+    au < manifest ; 2007 ; Journal of Intelligent Information Systems Volume 28 ; 28 >
+    au < manifest ; 2007 ; Journal of Intelligent Information Systems Volume 29 ; 29 >
+    au < manifest ; 2008 ; Journal of Intelligent Information Systems Volume 30 ; 30 >
+    au < manifest ; 2008 ; Journal of Intelligent Information Systems Volume 31 ; 31 >
+    au < manifest ; 2009 ; Journal of Intelligent Information Systems Volume 32 ; 32 >
+    au < manifest ; 2009 ; Journal of Intelligent Information Systems Volume 33 ; 33 >
+    au < manifest ; 2010 ; Journal of Intelligent Information Systems Volume 34 ; 34 >
+    au < manifest ; 2010 ; Journal of Intelligent Information Systems Volume 35 ; 35 >
+    au < manifest ; 2011 ; Journal of Intelligent Information Systems Volume 36 ; 36 >
+    au < manifest ; 2011 ; Journal of Intelligent Information Systems Volume 37 ; 37 >
+    au < manifest ; 2012 ; Journal of Intelligent Information Systems Volume 38 ; 38 >
 
   }
 
@@ -58199,6 +58747,30 @@
 
     param[journal_issn] = 0956-5515
 
+    au < manifest ; 1990 ; Journal of Intelligent Manufacturing Volume 1 ; 1 >
+    au < manifest ; 1991 ; Journal of Intelligent Manufacturing Volume 2 ; 2 >
+    au < manifest ; 1992 ; Journal of Intelligent Manufacturing Volume 3 ; 3 >
+    au < manifest ; 1993 ; Journal of Intelligent Manufacturing Volume 4 ; 4 >
+    au < manifest ; 1994 ; Journal of Intelligent Manufacturing Volume 5 ; 5 >
+    au < manifest ; 1995 ; Journal of Intelligent Manufacturing Volume 6 ; 6 >
+    au < manifest ; 1996 ; Journal of Intelligent Manufacturing Volume 7 ; 7 >
+    au < manifest ; 1997 ; Journal of Intelligent Manufacturing Volume 8 ; 8 >
+    au < manifest ; 1998 ; Journal of Intelligent Manufacturing Volume 9 ; 9 >
+    au < manifest ; 1999 ; Journal of Intelligent Manufacturing Volume 10 ; 10 >
+    au < manifest ; 2000 ; Journal of Intelligent Manufacturing Volume 11 ; 11 >
+    au < manifest ; 2001 ; Journal of Intelligent Manufacturing Volume 12 ; 12 >
+    au < manifest ; 2002 ; Journal of Intelligent Manufacturing Volume 13 ; 13 >
+    au < manifest ; 2003 ; Journal of Intelligent Manufacturing Volume 14 ; 14 >
+    au < manifest ; 2004 ; Journal of Intelligent Manufacturing Volume 15 ; 15 >
+    au < manifest ; 2005 ; Journal of Intelligent Manufacturing Volume 16 ; 16 >
+    au < manifest ; 2006 ; Journal of Intelligent Manufacturing Volume 17 ; 17 >
+    au < manifest ; 2007 ; Journal of Intelligent Manufacturing Volume 18 ; 18 >
+    au < manifest ; 2008 ; Journal of Intelligent Manufacturing Volume 19 ; 19 >
+    au < manifest ; 2009 ; Journal of Intelligent Manufacturing Volume 20 ; 20 >
+    au < manifest ; 2010 ; Journal of Intelligent Manufacturing Volume 21 ; 21 >
+    au < manifest ; 2011 ; Journal of Intelligent Manufacturing Volume 22 ; 22 >
+    au < manifest ; 2012 ; Journal of Intelligent Manufacturing Volume 23 ; 23 >
+
   }
 
   {
@@ -58211,6 +58783,17 @@
     >
 
     param[journal_issn] = 1570-7385
+
+    au < manifest ; 2003 ; Journal of International Entrepreneurship Volume 1 ; 1 >
+    au < manifest ; 2004 ; Journal of International Entrepreneurship Volume 2 ; 2 >
+    au < manifest ; 2005 ; Journal of International Entrepreneurship Volume 3 ; 3 >
+    au < manifest ; 2006 ; Journal of International Entrepreneurship Volume 4 ; 4 >
+    au < manifest ; 2007 ; Journal of International Entrepreneurship Volume 5 ; 5 >
+    au < manifest ; 2008 ; Journal of International Entrepreneurship Volume 6 ; 6 >
+    au < manifest ; 2009 ; Journal of International Entrepreneurship Volume 7 ; 7 >
+    au < manifest ; 2010 ; Journal of International Entrepreneurship Volume 8 ; 8 >
+    au < manifest ; 2011 ; Journal of International Entrepreneurship Volume 9 ; 9 >
+    au < manifest ; 2012 ; Journal of International Entrepreneurship Volume 10 ; 10 >
 
   }
 
@@ -58225,6 +58808,20 @@
 
     param[journal_issn] = 1488-3473
 
+    au < manifest ; 2000 ; Journal of International Migration and Integration Volume 1 ; 1 >
+    au < manifest ; 2001 ; Journal of International Migration and Integration Volume 2 ; 2 >
+    au < manifest ; 2002 ; Journal of International Migration and Integration Volume 3 ; 3 >
+    au < manifest ; 2003 ; Journal of International Migration and Integration Volume 4 ; 4 >
+    au < manifest ; 2004 ; Journal of International Migration and Integration Volume 5 ; 5 >
+    au < manifest ; 2005 ; Journal of International Migration and Integration Volume 6 ; 6 >
+    au < manifest ; 2006 ; Journal of International Migration and Integration Volume 7 ; 7 >
+    au < manifest ; 2007 ; Journal of International Migration and Integration Volume 8 ; 8 >
+    au < manifest ; 2008 ; Journal of International Migration and Integration Volume 9 ; 9 >
+    au < manifest ; 2009 ; Journal of International Migration and Integration Volume 10 ; 10 >
+    au < manifest ; 2010 ; Journal of International Migration and Integration Volume 11 ; 11 >
+    au < manifest ; 2011 ; Journal of International Migration and Integration Volume 12 ; 12 >
+    au < manifest ; 2012 ; Journal of International Migration and Integration Volume 13 ; 13 >
+
   }
 
   {
@@ -58238,6 +58835,10 @@
 
     param[journal_issn] = 1867-4828
 
+    au < manifest ; 2010 ; Journal of Internet Services and Applications Volume 1 ; 1 >
+    au < manifest ; 2011 ; Journal of Internet Services and Applications Volume 2 ; 2 >
+    au < manifest ; 2012 ; Journal of Internet Services and Applications Volume 3 ; 3 >
+
   }
 
   {
@@ -58250,6 +58851,42 @@
     >
 
     param[journal_issn] = 1383-875X
+    comment[merged_with] = 1385-2264
+
+    au < manifest ; 1997 ; Journal of Interventional Cardiac Electrophysiology Volume 1 ; 1 >
+    au < manifest ; 1997 ; Journal of Interventional Cardiac Electrophysiology Volume 2 ; 2 >
+    au < manifest ; 1999 ; Journal of Interventional Cardiac Electrophysiology Volume 3 ; 3 >
+    au < manifest ; 2000 ; Journal of Interventional Cardiac Electrophysiology Volume 4 ; 4 >
+    au < manifest ; 2001 ; Journal of Interventional Cardiac Electrophysiology Volume 5 ; 5 >
+    au < manifest ; 2002 ; Journal of Interventional Cardiac Electrophysiology Volume 6 ; 6 >
+    au < manifest ; 2002 ; Journal of Interventional Cardiac Electrophysiology Volume 7 ; 7 >
+    au < manifest ; 2003 ; Journal of Interventional Cardiac Electrophysiology Volume 8 ; 8 >
+    au < manifest ; 2003 ; Journal of Interventional Cardiac Electrophysiology Volume 9 ; 9 >
+    au < manifest ; 2004 ; Journal of Interventional Cardiac Electrophysiology Volume 10 ; 10 >
+    au < manifest ; 2004 ; Journal of Interventional Cardiac Electrophysiology Volume 11 ; 11 >
+    au < manifest ; 2005 ; Journal of Interventional Cardiac Electrophysiology Volume 12 ; 12 >
+    au < manifest ; 2005 ; Journal of Interventional Cardiac Electrophysiology Volume 13 ; 13 >
+    au < manifest ; 2005 ; Journal of Interventional Cardiac Electrophysiology Volume 14 ; 14 >
+    au < manifest ; 2006 ; Journal of Interventional Cardiac Electrophysiology Volume 15 ; 15 >
+    au < manifest ; 2006 ; Journal of Interventional Cardiac Electrophysiology Volume 16 ; 16 >
+    au < manifest ; 2006 ; Journal of Interventional Cardiac Electrophysiology Volume 17 ; 17 >
+    au < manifest ; 2007 ; Journal of Interventional Cardiac Electrophysiology Volume 18 ; 18 >
+    au < manifest ; 2007 ; Journal of Interventional Cardiac Electrophysiology Volume 19 ; 19 >
+    au < manifest ; 2007 ; Journal of Interventional Cardiac Electrophysiology Volume 20 ; 20 >
+    au < manifest ; 2008 ; Journal of Interventional Cardiac Electrophysiology Volume 21 ; 21 >
+    au < manifest ; 2008 ; Journal of Interventional Cardiac Electrophysiology Volume 22 ; 22 >
+    au < manifest ; 2008 ; Journal of Interventional Cardiac Electrophysiology Volume 23 ; 23 >
+    au < manifest ; 2009 ; Journal of Interventional Cardiac Electrophysiology Volume 24 ; 24 >
+    au < manifest ; 2009 ; Journal of Interventional Cardiac Electrophysiology Volume 25 ; 25 >
+    au < manifest ; 2009 ; Journal of Interventional Cardiac Electrophysiology Volume 26 ; 26 >
+    au < manifest ; 2010 ; Journal of Interventional Cardiac Electrophysiology Volume 27 ; 27 >
+    au < manifest ; 2010 ; Journal of Interventional Cardiac Electrophysiology Volume 28 ; 28 >
+    au < manifest ; 2010 ; Journal of Interventional Cardiac Electrophysiology Volume 29 ; 29 >
+    au < manifest ; 2011 ; Journal of Interventional Cardiac Electrophysiology Volume 30 ; 30 >
+    au < manifest ; 2011 ; Journal of Interventional Cardiac Electrophysiology Volume 31 ; 31 >
+    au < manifest ; 2011 ; Journal of Interventional Cardiac Electrophysiology Volume 32 ; 32 >
+    au < manifest ; 2012 ; Journal of Interventional Cardiac Electrophysiology Volume 33 ; 33 >
+    au < manifest ; 2012 ; Journal of Interventional Cardiac Electrophysiology Volume 34 ; 34 >
 
   }
 
@@ -58264,6 +58901,40 @@
 
     param[journal_issn] = 0195-3613
 
+    au < manifest ; 1980 ; Journal of Labor Research Volume 1 ; 1 >
+    au < manifest ; 1981 ; Journal of Labor Research Volume 2 ; 2 >
+    au < manifest ; 1982 ; Journal of Labor Research Volume 3 ; 3 >
+    au < manifest ; 1983 ; Journal of Labor Research Volume 4 ; 4 >
+    au < manifest ; 1984 ; Journal of Labor Research Volume 5 ; 5 >
+    au < manifest ; 1985 ; Journal of Labor Research Volume 6 ; 6 >
+    au < manifest ; 1986 ; Journal of Labor Research Volume 7 ; 7 >
+    au < manifest ; 1987 ; Journal of Labor Research Volume 8 ; 8 >
+    au < manifest ; 1988 ; Journal of Labor Research Volume 9 ; 9 >
+    au < manifest ; 1989 ; Journal of Labor Research Volume 10 ; 10 >
+    au < manifest ; 1990 ; Journal of Labor Research Volume 11 ; 11 >
+    au < manifest ; 1991 ; Journal of Labor Research Volume 12 ; 12 >
+    au < manifest ; 1992 ; Journal of Labor Research Volume 13 ; 13 >
+    au < manifest ; 1993 ; Journal of Labor Research Volume 14 ; 14 >
+    au < manifest ; 1994 ; Journal of Labor Research Volume 15 ; 15 >
+    au < manifest ; 1995 ; Journal of Labor Research Volume 16 ; 16 >
+    au < manifest ; 1996 ; Journal of Labor Research Volume 17 ; 17 >
+    au < manifest ; 1997 ; Journal of Labor Research Volume 18 ; 18 >
+    au < manifest ; 1998 ; Journal of Labor Research Volume 19 ; 19 >
+    au < manifest ; 1999 ; Journal of Labor Research Volume 20 ; 20 >
+    au < manifest ; 2000 ; Journal of Labor Research Volume 21 ; 21 >
+    au < manifest ; 2001 ; Journal of Labor Research Volume 22 ; 22 >
+    au < manifest ; 2002 ; Journal of Labor Research Volume 23 ; 23 >
+    au < manifest ; 2003 ; Journal of Labor Research Volume 24 ; 24 >
+    au < manifest ; 2004 ; Journal of Labor Research Volume 25 ; 25 >
+    au < manifest ; 2005 ; Journal of Labor Research Volume 26 ; 26 >
+    au < manifest ; 2006 ; Journal of Labor Research Volume 27 ; 27 >
+    au < manifest ; 2007 ; Journal of Labor Research Volume 28 ; 28 >
+    au < manifest ; 2008 ; Journal of Labor Research Volume 29 ; 29 >
+    au < manifest ; 2009 ; Journal of Labor Research Volume 30 ; 30 >
+    au < manifest ; 2010 ; Journal of Labor Research Volume 31 ; 31 >
+    au < manifest ; 2011 ; Journal of Labor Research Volume 32 ; 32 >
+    au < manifest ; 2012 ; Journal of Labor Research Volume 33 ; 33 >
+
   }
 
   {
@@ -58276,6 +58947,28 @@
     >
 
     param[journal_issn] = 0925-8531
+
+    au < manifest ; 1992 ; Journal of Logic, Language and Information Volume 1 ; 1 >
+    au < manifest ; 1993 ; Journal of Logic, Language and Information Volume 2 ; 2 >
+    au < manifest ; 1994 ; Journal of Logic, Language and Information Volume 3 ; 3 >
+    au < manifest ; 1995 ; Journal of Logic, Language and Information Volume 4 ; 4 >
+    au < manifest ; 1996 ; Journal of Logic, Language and Information Volume 5 ; 5 >
+    au < manifest ; 1997 ; Journal of Logic, Language and Information Volume 6 ; 6 >
+    au < manifest ; 1998 ; Journal of Logic, Language and Information Volume 7 ; 7 >
+    au < manifest ; 1999 ; Journal of Logic, Language and Information Volume 8 ; 8 >
+    au < manifest ; 2000 ; Journal of Logic, Language and Information Volume 9 ; 9 >
+    au < manifest ; 2001 ; Journal of Logic, Language and Information Volume 10 ; 10 >
+    au < manifest ; 2002 ; Journal of Logic, Language and Information Volume 11 ; 11 >
+    au < manifest ; 2003 ; Journal of Logic, Language and Information Volume 12 ; 12 >
+    au < manifest ; 2004 ; Journal of Logic, Language and Information Volume 13 ; 13 >
+    au < manifest ; 2005 ; Journal of Logic, Language and Information Volume 14 ; 14 >
+    au < manifest ; 2006 ; Journal of Logic, Language and Information Volume 15 ; 15 >
+    au < manifest ; 2007 ; Journal of Logic, Language and Information Volume 16 ; 16 >
+    au < manifest ; 2008 ; Journal of Logic, Language and Information Volume 17 ; 17 >
+    au < manifest ; 2009 ; Journal of Logic, Language and Information Volume 18 ; 18 >
+    au < manifest ; 2010 ; Journal of Logic, Language and Information Volume 19 ; 19 >
+    au < manifest ; 2011 ; Journal of Logic, Language and Information Volume 20 ; 20 >
+    au < manifest ; 2012 ; Journal of Logic, Language and Information Volume 21 ; 21 >
 
   }
 
@@ -58290,6 +58983,174 @@
 
     param[journal_issn] = 0022-2291
 
+    au < manifest ; 1969 ; Journal of Low Temperature Physics Volume 1 ; 1 >
+    au < manifest ; 1970 ; Journal of Low Temperature Physics Volume 2 ; 2 >
+    au < manifest ; 1970 ; Journal of Low Temperature Physics Volume 3 ; 3 >
+    au < manifest ; 1971 ; Journal of Low Temperature Physics Volume 4 ; 4 >
+    au < manifest ; 1971 ; Journal of Low Temperature Physics Volume 5 ; 5 >
+    au < manifest ; 1972 ; Journal of Low Temperature Physics Volume 6 ; 6 >
+    au < manifest ; 1972 ; Journal of Low Temperature Physics Volume 7 ; 7 >
+    au < manifest ; 1972 ; Journal of Low Temperature Physics Volume 8 ; 8 >
+    au < manifest ; 1972 ; Journal of Low Temperature Physics Volume 9 ; 9 >
+    au < manifest ; 1973 ; Journal of Low Temperature Physics Volume 10 ; 10 >
+    au < manifest ; 1973 ; Journal of Low Temperature Physics Volume 11 ; 11 >
+    au < manifest ; 1973 ; Journal of Low Temperature Physics Volume 12 ; 12 >
+    au < manifest ; 1973 ; Journal of Low Temperature Physics Volume 13 ; 13 >
+    au < manifest ; 1974 ; Journal of Low Temperature Physics Volume 14 ; 14 >
+    au < manifest ; 1974 ; Journal of Low Temperature Physics Volume 15 ; 15 >
+    au < manifest ; 1974 ; Journal of Low Temperature Physics Volume 16 ; 16 >
+    au < manifest ; 1974 ; Journal of Low Temperature Physics Volume 17 ; 17 >
+    au < manifest ; 1975 ; Journal of Low Temperature Physics Volume 18 ; 18 >
+    au < manifest ; 1975 ; Journal of Low Temperature Physics Volume 19 ; 19 >
+    au < manifest ; 1975 ; Journal of Low Temperature Physics Volume 20 ; 20 >
+    au < manifest ; 1975 ; Journal of Low Temperature Physics Volume 21 ; 21 >
+    au < manifest ; 1976 ; Journal of Low Temperature Physics Volume 22 ; 22 >
+    au < manifest ; 1976 ; Journal of Low Temperature Physics Volume 23 ; 23 >
+    au < manifest ; 1976 ; Journal of Low Temperature Physics Volume 24 ; 24 >
+    au < manifest ; 1976 ; Journal of Low Temperature Physics Volume 25 ; 25 >
+    au < manifest ; 1977 ; Journal of Low Temperature Physics Volume 26 ; 26 >
+    au < manifest ; 1977 ; Journal of Low Temperature Physics Volume 27 ; 27 >
+    au < manifest ; 1977 ; Journal of Low Temperature Physics Volume 28 ; 28 >
+    au < manifest ; 1977 ; Journal of Low Temperature Physics Volume 29 ; 29 >
+    au < manifest ; 1978 ; Journal of Low Temperature Physics Volume 30 ; 30 >
+    au < manifest ; 1978 ; Journal of Low Temperature Physics Volume 31 ; 31 >
+    au < manifest ; 1978 ; Journal of Low Temperature Physics Volume 32 ; 32 >
+    au < manifest ; 1978 ; Journal of Low Temperature Physics Volume 33 ; 33 >
+    au < manifest ; 1979 ; Journal of Low Temperature Physics Volume 34 ; 34 >
+    au < manifest ; 1979 ; Journal of Low Temperature Physics Volume 35 ; 35 >
+    au < manifest ; 1979 ; Journal of Low Temperature Physics Volume 36 ; 36 >
+    au < manifest ; 1979 ; Journal of Low Temperature Physics Volume 37 ; 37 >
+    au < manifest ; 1980 ; Journal of Low Temperature Physics Volume 38 ; 38 >
+    au < manifest ; 1980 ; Journal of Low Temperature Physics Volume 39 ; 39 >
+    au < manifest ; 1980 ; Journal of Low Temperature Physics Volume 40 ; 40 >
+    au < manifest ; 1980 ; Journal of Low Temperature Physics Volume 41 ; 41 >
+    au < manifest ; 1981 ; Journal of Low Temperature Physics Volume 42 ; 42 >
+    au < manifest ; 1981 ; Journal of Low Temperature Physics Volume 43 ; 43 >
+    au < manifest ; 1981 ; Journal of Low Temperature Physics Volume 44 ; 44 >
+    au < manifest ; 1981 ; Journal of Low Temperature Physics Volume 45 ; 45 >
+    au < manifest ; 1982 ; Journal of Low Temperature Physics Volume 46 ; 46 >
+    au < manifest ; 1982 ; Journal of Low Temperature Physics Volume 47 ; 47 >
+    au < manifest ; 1982 ; Journal of Low Temperature Physics Volume 48 ; 48 >
+    au < manifest ; 1982 ; Journal of Low Temperature Physics Volume 49 ; 49 >
+    au < manifest ; 1983 ; Journal of Low Temperature Physics Volume 50 ; 50 >
+    au < manifest ; 1983 ; Journal of Low Temperature Physics Volume 51 ; 51 >
+    au < manifest ; 1983 ; Journal of Low Temperature Physics Volume 52 ; 52 >
+    au < manifest ; 1983 ; Journal of Low Temperature Physics Volume 53 ; 53 >
+    au < manifest ; 1984 ; Journal of Low Temperature Physics Volume 54 ; 54 >
+    au < manifest ; 1984 ; Journal of Low Temperature Physics Volume 55 ; 55 >
+    au < manifest ; 1984 ; Journal of Low Temperature Physics Volume 56 ; 56 >
+    au < manifest ; 1984 ; Journal of Low Temperature Physics Volume 57 ; 57 >
+    au < manifest ; 1985 ; Journal of Low Temperature Physics Volume 58 ; 58 >
+    au < manifest ; 1985 ; Journal of Low Temperature Physics Volume 59 ; 59 >
+    au < manifest ; 1985 ; Journal of Low Temperature Physics Volume 60 ; 60 >
+    au < manifest ; 1985 ; Journal of Low Temperature Physics Volume 61 ; 61 >
+    au < manifest ; 1986 ; Journal of Low Temperature Physics Volume 62 ; 62 >
+    au < manifest ; 1986 ; Journal of Low Temperature Physics Volume 63 ; 63 >
+    au < manifest ; 1986 ; Journal of Low Temperature Physics Volume 64 ; 64 >
+    au < manifest ; 1986 ; Journal of Low Temperature Physics Volume 65 ; 65 >
+    au < manifest ; 1987 ; Journal of Low Temperature Physics Volume 66 ; 66 >
+    au < manifest ; 1987 ; Journal of Low Temperature Physics Volume 67 ; 67 >
+    au < manifest ; 1987 ; Journal of Low Temperature Physics Volume 68 ; 68 >
+    au < manifest ; 1987 ; Journal of Low Temperature Physics Volume 69 ; 69 >
+    au < manifest ; 1988 ; Journal of Low Temperature Physics Volume 70 ; 70 >
+    au < manifest ; 1988 ; Journal of Low Temperature Physics Volume 71 ; 71 >
+    au < manifest ; 1988 ; Journal of Low Temperature Physics Volume 72 ; 72 >
+    au < manifest ; 1988 ; Journal of Low Temperature Physics Volume 73 ; 73 >
+    au < manifest ; 1989 ; Journal of Low Temperature Physics Volume 74 ; 74 >
+    au < manifest ; 1989 ; Journal of Low Temperature Physics Volume 75 ; 75 >
+    au < manifest ; 1989 ; Journal of Low Temperature Physics Volume 76 ; 76 >
+    au < manifest ; 1989 ; Journal of Low Temperature Physics Volume 77 ; 77 >
+    au < manifest ; 1990 ; Journal of Low Temperature Physics Volume 78 ; 78 >
+    au < manifest ; 1990 ; Journal of Low Temperature Physics Volume 79 ; 79 >
+    au < manifest ; 1990 ; Journal of Low Temperature Physics Volume 80 ; 80 >
+    au < manifest ; 1990 ; Journal of Low Temperature Physics Volume 81 ; 81 >
+    au < manifest ; 1991 ; Journal of Low Temperature Physics Volume 82 ; 82 >
+    au < manifest ; 1991 ; Journal of Low Temperature Physics Volume 83 ; 83 >
+    au < manifest ; 1991 ; Journal of Low Temperature Physics Volume 84 ; 84 >
+    au < manifest ; 1991 ; Journal of Low Temperature Physics Volume 85 ; 85 >
+    au < manifest ; 1992 ; Journal of Low Temperature Physics Volume 86 ; 86 >
+    au < manifest ; 1992 ; Journal of Low Temperature Physics Volume 87 ; 87 >
+    au < manifest ; 1992 ; Journal of Low Temperature Physics Volume 88 ; 88 >
+    au < manifest ; 1992 ; Journal of Low Temperature Physics Volume 89 ; 89 >
+    au < manifest ; 1993 ; Journal of Low Temperature Physics Volume 90 ; 90 >
+    au < manifest ; 1993 ; Journal of Low Temperature Physics Volume 91 ; 91 >
+    au < manifest ; 1993 ; Journal of Low Temperature Physics Volume 92 ; 92 >
+    au < manifest ; 1993 ; Journal of Low Temperature Physics Volume 93 ; 93 >
+    au < manifest ; 1994 ; Journal of Low Temperature Physics Volume 94 ; 94 >
+    au < manifest ; 1994 ; Journal of Low Temperature Physics Volume 95 ; 95 >
+    au < manifest ; 1994 ; Journal of Low Temperature Physics Volume 96 ; 96 >
+    au < manifest ; 1994 ; Journal of Low Temperature Physics Volume 97 ; 97 >
+    au < manifest ; 1995 ; Journal of Low Temperature Physics Volume 98 ; 98 >
+    au < manifest ; 1995 ; Journal of Low Temperature Physics Volume 99 ; 99 >
+    au < manifest ; 1995 ; Journal of Low Temperature Physics Volume 100 ; 100 >
+    au < manifest ; 1995 ; Journal of Low Temperature Physics Volume 101 ; 101 >
+    au < manifest ; 1996 ; Journal of Low Temperature Physics Volume 102 ; 102 >
+    au < manifest ; 1996 ; Journal of Low Temperature Physics Volume 103 ; 103 >
+    au < manifest ; 1996 ; Journal of Low Temperature Physics Volume 104 ; 104 >
+    au < manifest ; 1996 ; Journal of Low Temperature Physics Volume 105 ; 105 >
+    au < manifest ; 1997 ; Journal of Low Temperature Physics Volume 106 ; 106 >
+    au < manifest ; 1997 ; Journal of Low Temperature Physics Volume 107 ; 107 >
+    au < manifest ; 1997 ; Journal of Low Temperature Physics Volume 108 ; 108 >
+    au < manifest ; 1997 ; Journal of Low Temperature Physics Volume 109 ; 109 >
+    au < manifest ; 1998 ; Journal of Low Temperature Physics Volume 110 ; 110 >
+    au < manifest ; 1998 ; Journal of Low Temperature Physics Volume 111 ; 111 >
+    au < manifest ; 1998 ; Journal of Low Temperature Physics Volume 112 ; 112 >
+    au < manifest ; 1998 ; Journal of Low Temperature Physics Volume 113 ; 113 >
+    au < manifest ; 1999 ; Journal of Low Temperature Physics Volume 114 ; 114 >
+    au < manifest ; 1999 ; Journal of Low Temperature Physics Volume 115 ; 115 >
+    au < manifest ; 1999 ; Journal of Low Temperature Physics Volume 116 ; 116 >
+    au < manifest ; 1999 ; Journal of Low Temperature Physics Volume 117 ; 117 >
+    au < manifest ; 2000 ; Journal of Low Temperature Physics Volume 118 ; 118 >
+    au < manifest ; 2000 ; Journal of Low Temperature Physics Volume 119 ; 119 >
+    au < manifest ; 2000 ; Journal of Low Temperature Physics Volume 120 ; 120 >
+    au < manifest ; 2000 ; Journal of Low Temperature Physics Volume 121 ; 121 >
+    au < manifest ; 2001 ; Journal of Low Temperature Physics Volume 122 ; 122 >
+    au < manifest ; 2001 ; Journal of Low Temperature Physics Volume 123 ; 123 >
+    au < manifest ; 2001 ; Journal of Low Temperature Physics Volume 124 ; 124 >
+    au < manifest ; 2001 ; Journal of Low Temperature Physics Volume 125 ; 125 >
+    au < manifest ; 2002 ; Journal of Low Temperature Physics Volume 126 ; 126 >
+    au < manifest ; 2002 ; Journal of Low Temperature Physics Volume 127 ; 127 >
+    au < manifest ; 2002 ; Journal of Low Temperature Physics Volume 128 ; 128 >
+    au < manifest ; 2002 ; Journal of Low Temperature Physics Volume 129 ; 129 >
+    au < manifest ; 2003 ; Journal of Low Temperature Physics Volume 130 ; 130 >
+    au < manifest ; 2003 ; Journal of Low Temperature Physics Volume 131 ; 131 >
+    au < manifest ; 2003 ; Journal of Low Temperature Physics Volume 132 ; 132 >
+    au < manifest ; 2003 ; Journal of Low Temperature Physics Volume 133 ; 133 >
+    au < manifest ; 2004 ; Journal of Low Temperature Physics Volume 134 ; 134 >
+    au < manifest ; 2004 ; Journal of Low Temperature Physics Volume 135 ; 135 >
+    au < manifest ; 2004 ; Journal of Low Temperature Physics Volume 136 ; 136 >
+    au < manifest ; 2004 ; Journal of Low Temperature Physics Volume 137 ; 137 >
+    au < manifest ; 2005 ; Journal of Low Temperature Physics Volume 138 ; 138 >
+    au < manifest ; 2005 ; Journal of Low Temperature Physics Volume 139 ; 139 >
+    au < manifest ; 2005 ; Journal of Low Temperature Physics Volume 140 ; 140 >
+    au < manifest ; 2005 ; Journal of Low Temperature Physics Volume 141 ; 141 >
+    au < manifest ; 2006 ; Journal of Low Temperature Physics Volume 142 ; 142 >
+    au < manifest ; 2006 ; Journal of Low Temperature Physics Volume 143 ; 143 >
+    au < manifest ; 2006 ; Journal of Low Temperature Physics Volume 144 ; 144 >
+    au < manifest ; 2006 ; Journal of Low Temperature Physics Volume 145 ; 145 >
+    au < manifest ; 2007 ; Journal of Low Temperature Physics Volume 146 ; 146 >
+    au < manifest ; 2007 ; Journal of Low Temperature Physics Volume 147 ; 147 >
+    au < manifest ; 2007 ; Journal of Low Temperature Physics Volume 148 ; 148 >
+    au < manifest ; 2007 ; Journal of Low Temperature Physics Volume 149 ; 149 >
+    au < manifest ; 2008 ; Journal of Low Temperature Physics Volume 150 ; 150 >
+    au < manifest ; 2008 ; Journal of Low Temperature Physics Volume 151 ; 151 >
+    au < manifest ; 2008 ; Journal of Low Temperature Physics Volume 152 ; 152 >
+    au < manifest ; 2008 ; Journal of Low Temperature Physics Volume 153 ; 153 >
+    au < manifest ; 2009 ; Journal of Low Temperature Physics Volume 154 ; 154 >
+    au < manifest ; 2009 ; Journal of Low Temperature Physics Volume 155 ; 155 >
+    au < manifest ; 2009 ; Journal of Low Temperature Physics Volume 156 ; 156 >
+    au < manifest ; 2009 ; Journal of Low Temperature Physics Volume 157 ; 157 >
+    au < manifest ; 2010 ; Journal of Low Temperature Physics Volume 158 ; 158 >
+    au < manifest ; 2010 ; Journal of Low Temperature Physics Volume 159 ; 159 >
+    au < manifest ; 2010 ; Journal of Low Temperature Physics Volume 160 ; 160 >
+    au < manifest ; 2010 ; Journal of Low Temperature Physics Volume 161 ; 161 >
+    au < manifest ; 2011 ; Journal of Low Temperature Physics Volume 162 ; 162 >
+    au < manifest ; 2011 ; Journal of Low Temperature Physics Volume 163 ; 163 >
+    au < manifest ; 2011 ; Journal of Low Temperature Physics Volume 164 ; 164 >
+    au < manifest ; 2011 ; Journal of Low Temperature Physics Volume 165 ; 165 >
+    au < manifest ; 2012 ; Journal of Low Temperature Physics Volume 166 ; 166 >
+    au < manifest ; 2012 ; Journal of Low Temperature Physics Volume 167 ; 167 >
+
   }
 
   {
@@ -58303,6 +59164,13 @@
 
     param[journal_issn] = 1052-6188
 
+    au < manifest ; 2007 ; Journal of Machinery Manufacture and Reliability Volume 36 ; 36 >
+    au < manifest ; 2008 ; Journal of Machinery Manufacture and Reliability Volume 37 ; 37 >
+    au < manifest ; 2009 ; Journal of Machinery Manufacture and Reliability Volume 38 ; 38 >
+    au < manifest ; 2010 ; Journal of Machinery Manufacture and Reliability Volume 39 ; 39 >
+    au < manifest ; 2011 ; Journal of Machinery Manufacture and Reliability Volume 40 ; 40 >
+    au < manifest ; 2012 ; Journal of Machinery Manufacture and Reliability Volume 41 ; 41 >
+
   }
 
   {
@@ -58315,6 +59183,26 @@
     >
 
     param[journal_issn] = 1064-7554
+
+    au < manifest ; 1993 ; Journal of Mammalian Evolution Volume 1 ; 1 >
+    au < manifest ; 1994 ; Journal of Mammalian Evolution Volume 2 ; 2 >
+    au < manifest ; 1996 ; Journal of Mammalian Evolution Volume 3 ; 3 >
+    au < manifest ; 1997 ; Journal of Mammalian Evolution Volume 4 ; 4 >
+    au < manifest ; 1998 ; Journal of Mammalian Evolution Volume 5 ; 5 >
+    au < manifest ; 1999 ; Journal of Mammalian Evolution Volume 6 ; 6 >
+    au < manifest ; 2000 ; Journal of Mammalian Evolution Volume 7 ; 7 >
+    au < manifest ; 2001 ; Journal of Mammalian Evolution Volume 8 ; 8 >
+    au < manifest ; 2002 ; Journal of Mammalian Evolution Volume 9 ; 9 >
+    au < manifest ; 2003 ; Journal of Mammalian Evolution Volume 10 ; 10 >
+    au < manifest ; 2004 ; Journal of Mammalian Evolution Volume 11 ; 11 >
+    au < manifest ; 2005 ; Journal of Mammalian Evolution Volume 12 ; 12 >
+    au < manifest ; 2006 ; Journal of Mammalian Evolution Volume 13 ; 13 >
+    au < manifest ; 2007 ; Journal of Mammalian Evolution Volume 14 ; 14 >
+    au < manifest ; 2008 ; Journal of Mammalian Evolution Volume 15 ; 15 >
+    au < manifest ; 2009 ; Journal of Mammalian Evolution Volume 16 ; 16 >
+    au < manifest ; 2010 ; Journal of Mammalian Evolution Volume 17 ; 17 >
+    au < manifest ; 2011 ; Journal of Mammalian Evolution Volume 18 ; 18 >
+    au < manifest ; 2012 ; Journal of Mammalian Evolution Volume 19 ; 19 >
 
   }
 
@@ -58358,6 +59246,23 @@
 
     param[journal_issn] = 1385-3457
 
+    au < manifest ; 1997 ; Journal of Management and Governance Volume 1 ; 1 >
+    au < manifest ; 1998 ; Journal of Management and Governance Volume 2 ; 2 >
+    au < manifest ; 1999 ; Journal of Management and Governance Volume 3 ; 3 >
+    au < manifest ; 2000 ; Journal of Management and Governance Volume 4 ; 4 >
+    au < manifest ; 2001 ; Journal of Management and Governance Volume 5 ; 5 >
+    au < manifest ; 2002 ; Journal of Management and Governance Volume 6 ; 6 >
+    au < manifest ; 2003 ; Journal of Management and Governance Volume 7 ; 7 >
+    au < manifest ; 2004 ; Journal of Management and Governance Volume 8 ; 8 >
+    au < manifest ; 2005 ; Journal of Management and Governance Volume 9 ; 9 >
+    au < manifest ; 2006 ; Journal of Management and Governance Volume 10 ; 10 >
+    au < manifest ; 2007 ; Journal of Management and Governance Volume 11 ; 11 >
+    au < manifest ; 2008 ; Journal of Management and Governance Volume 12 ; 12 >
+    au < manifest ; 2009 ; Journal of Management and Governance Volume 13 ; 13 >
+    au < manifest ; 2010 ; Journal of Management and Governance Volume 14 ; 14 >
+    au < manifest ; 2011 ; Journal of Management and Governance Volume 15 ; 15 >
+    au < manifest ; 2012 ; Journal of Management and Governance Volume 16 ; 16 >
+
   }
 
   {
@@ -58388,6 +59293,18 @@
 
     param[journal_issn] = 1671-9433
 
+    au < manifest ; 2002 ; Journal of Marine Science and Application Volume 1 ; 1 >
+    au < manifest ; 2003 ; Journal of Marine Science and Application Volume 2 ; 2 >
+    au < manifest ; 2004 ; Journal of Marine Science and Application Volume 3 ; 3 >
+    au < manifest ; 2005 ; Journal of Marine Science and Application Volume 4 ; 4 >
+    au < manifest ; 2006 ; Journal of Marine Science and Application Volume 5 ; 5 >
+    au < manifest ; 2007 ; Journal of Marine Science and Application Volume 6 ; 6 >
+    au < manifest ; 2008 ; Journal of Marine Science and Application Volume 7 ; 7 >
+    au < manifest ; 2009 ; Journal of Marine Science and Application Volume 8 ; 8 >
+    au < manifest ; 2010 ; Journal of Marine Science and Application Volume 9 ; 9 >
+    au < manifest ; 2011 ; Journal of Marine Science and Application Volume 10 ; 10 >
+    au < manifest ; 2012 ; Journal of Marine Science and Application Volume 11 ; 11 >
+
   }
 
   {
@@ -58401,6 +59318,24 @@
 
     param[journal_issn] = 0948-4280
 
+    au < manifest ; 1995-1996 ; Journal of Marine Science and Technology Volume 1 ; 1 >
+    au < manifest ; 1997 ; Journal of Marine Science and Technology Volume 2 ; 2 >
+    au < manifest ; 1998 ; Journal of Marine Science and Technology Volume 3 ; 3 >
+    au < manifest ; 1999 ; Journal of Marine Science and Technology Volume 4 ; 4 >
+    au < manifest ; 2000 ; Journal of Marine Science and Technology Volume 5 ; 5 >
+    au < manifest ; 2001 ; Journal of Marine Science and Technology Volume 6 ; 6 >
+    au < manifest ; 2002 ; Journal of Marine Science and Technology Volume 7 ; 7 >
+    au < manifest ; 2003 ; Journal of Marine Science and Technology Volume 8 ; 8 >
+    au < manifest ; 2004 ; Journal of Marine Science and Technology Volume 9 ; 9 >
+    au < manifest ; 2005 ; Journal of Marine Science and Technology Volume 10 ; 10 >
+    au < manifest ; 2006 ; Journal of Marine Science and Technology Volume 11 ; 11 >
+    au < manifest ; 2007 ; Journal of Marine Science and Technology Volume 12 ; 12 >
+    au < manifest ; 2008 ; Journal of Marine Science and Technology Volume 13 ; 13 >
+    au < manifest ; 2009 ; Journal of Marine Science and Technology Volume 14 ; 14 >
+    au < manifest ; 2010 ; Journal of Marine Science and Technology Volume 15 ; 15 >
+    au < manifest ; 2011 ; Journal of Marine Science and Technology Volume 16 ; 16 >
+    au < manifest ; 2012 ; Journal of Marine Science and Technology Volume 17 ; 17 >
+
   }
 
   {
@@ -58413,6 +59348,13 @@
 
     param[journal_issn] = 1557-2285
 
+    au < manifest ; 2006 ; Journal of Maritime Archaeology Volume 1 ; 1 >
+    au < manifest ; 2007 ; Journal of Maritime Archaeology Volume 2 ; 2 >
+    au < manifest ; 2008 ; Journal of Maritime Archaeology Volume 3 ; 3 >
+    au < manifest ; 2009 ; Journal of Maritime Archaeology Volume 4 ; 4 >
+    au < manifest ; 2010 ; Journal of Maritime Archaeology Volume 5 ; 5 >
+    au < manifest ; 2011 ; Journal of Maritime Archaeology Volume 6 ; 6 >
+
   }
 
   {
@@ -58424,6 +59366,12 @@
     >
 
     param[journal_issn] = 1382-3019
+
+    au < manifest ; 1996 ; Journal of Market-Focused Management Volume 1 ; 1 >
+    au < manifest ; 1997 ; Journal of Market-Focused Management Volume 2 ; 2 >
+    au < manifest ; 1998 ; Journal of Market-Focused Management Volume 3 ; 3 >
+    au < manifest ; 1999 ; Journal of Market-Focused Management Volume 4 ; 4 >
+    au < manifest ; 2002 ; Journal of Market-Focused Management Volume 5 ; 5 >
 
   }
 
@@ -58438,6 +59386,21 @@
 
     param[journal_issn] = 1438-4957
 
+    au < manifest ; 1999 ; Journal of Material Cycles and Waste Management Volume 1 ; 1 >
+    au < manifest ; 2000 ; Journal of Material Cycles and Waste Management Volume 2 ; 2 >
+    au < manifest ; 2001 ; Journal of Material Cycles and Waste Management Volume 3 ; 3 >
+    au < manifest ; 2002 ; Journal of Material Cycles and Waste Management Volume 4 ; 4 >
+    au < manifest ; 2003 ; Journal of Material Cycles and Waste Management Volume 5 ; 5 >
+    au < manifest ; 2004 ; Journal of Material Cycles and Waste Management Volume 6 ; 6 >
+    au < manifest ; 2005 ; Journal of Material Cycles and Waste Management Volume 7 ; 7 >
+    au < manifest ; 2006 ; Journal of Material Cycles and Waste Management Volume 8 ; 8 >
+    au < manifest ; 2007 ; Journal of Material Cycles and Waste Management Volume 9 ; 9 >
+    au < manifest ; 2008 ; Journal of Material Cycles and Waste Management Volume 10 ; 10 >
+    au < manifest ; 2009 ; Journal of Material Cycles and Waste Management Volume 11 ; 11 >
+    au < manifest ; 2010 ; Journal of Material Cycles and Waste Management Volume 12 ; 12 >
+    au < manifest ; 2011 ; Journal of Material Cycles and Waste Management Volume 13 ; 13 >
+    au < manifest ; 2012 ; Journal of Material Cycles and Waste Management Volume 14 ; 14 >
+
   }
 
   {
@@ -58450,6 +59413,12 @@
 
     param[journal_issn] = 0931-7058
 
+    au < manifest ; 1987-1988 ; Journal of Materials for Energy Systems Volume 9 ; 9 >
+    au < manifest ; 1988 ; Journal of Materials Engineering Volume 10 ; 10 >
+    au < manifest ; 1989 ; Journal of Materials Engineering Volume 11 ; 11 >
+    au < manifest ; 1990 ; Journal of Materials Engineering Volume 12 ; 12 >
+    au < manifest ; 1991 ; Journal of Materials Engineering Volume 13 ; 13 >
+
   }
 
   {
@@ -58461,7 +59430,30 @@
       issnl = 1059-9495
     >
 
+    comment[merged_with] = 0190-9177
     param[journal_issn] = 1059-9495
+
+    au < manifest ; 1992 ; Journal of Materials Engineering and Performance Volume 1 ; 1 >
+    au < manifest ; 1993 ; Journal of Materials Engineering and Performance Volume 2 ; 2 >
+    au < manifest ; 1994 ; Journal of Materials Engineering and Performance Volume 3 ; 3 >
+    au < manifest ; 1995 ; Journal of Materials Engineering and Performance Volume 4 ; 4 >
+    au < manifest ; 1996 ; Journal of Materials Engineering and Performance Volume 5 ; 5 >
+    au < manifest ; 1997 ; Journal of Materials Engineering and Performance Volume 6 ; 6 >
+    au < manifest ; 1998 ; Journal of Materials Engineering and Performance Volume 7 ; 7 >
+    au < manifest ; 1999 ; Journal of Materials Engineering and Performance Volume 8 ; 8 >
+    au < manifest ; 2000 ; Journal of Materials Engineering and Performance Volume 9 ; 9 >
+    au < manifest ; 2001 ; Journal of Materials Engineering and Performance Volume 10 ; 10 >
+    au < manifest ; 2002 ; Journal of Materials Engineering and Performance Volume 11 ; 11 >
+    au < manifest ; 2003 ; Journal of Materials Engineering and Performance Volume 12 ; 12 >
+    au < manifest ; 2004 ; Journal of Materials Engineering and Performance Volume 13 ; 13 >
+    au < manifest ; 2005 ; Journal of Materials Engineering and Performance Volume 14 ; 14 >
+    au < manifest ; 2006 ; Journal of Materials Engineering and Performance Volume 15 ; 15 >
+    au < manifest ; 2007 ; Journal of Materials Engineering and Performance Volume 16 ; 16 >
+    au < manifest ; 2008 ; Journal of Materials Engineering and Performance Volume 17 ; 17 >
+    au < manifest ; 2009 ; Journal of Materials Engineering and Performance Volume 18 ; 18 >
+    au < manifest ; 2010 ; Journal of Materials Engineering and Performance Volume 19 ; 19 >
+    au < manifest ; 2011 ; Journal of Materials Engineering and Performance Volume 20 ; 20 >
+    au < manifest ; 2012 ; Journal of Materials Engineering and Performance Volume 21 ; 21 >
 
   }
 
@@ -58475,6 +59467,15 @@
 
     param[journal_issn] = 0162-9719
 
+    au < manifest ; 1979-1980 ; Journal of Materials for Energy Systems Volume 1 ; 1 >
+    au < manifest ; 1980-1981 ; Journal of Materials for Energy Systems Volume 2 ; 2 >
+    au < manifest ; 1981-1982 ; Journal of Materials for Energy Systems Volume 3 ; 3 >
+    au < manifest ; 1982-1983 ; Journal of Materials for Energy Systems Volume 4 ; 4 >
+    au < manifest ; 1983-1984 ; Journal of Materials for Energy Systems Volume 5 ; 5 >
+    au < manifest ; 1984-1985 ; Journal of Materials for Energy Systems Volume 6 ; 6 >
+    au < manifest ; 1985-1986 ; Journal of Materials for Energy Systems Volume 7 ; 7 >
+    au < manifest ; 1986-1987 ; Journal of Materials for Energy Systems Volume 8 ; 8 >
+
   }
 
   {
@@ -58486,7 +59487,57 @@
       issnl = 0022-2461
     >
 
+    comment[merged_with1] = 0261-8028
+    comment[merged_with2] = 0927-7056
     param[journal_issn] = 0022-2461
+
+    au < manifest ; 1966 ; Journal of Materials Science Volume 1 ; 1 >
+    au < manifest ; 1967 ; Journal of Materials Science Volume 2 ; 2 >
+    au < manifest ; 1968 ; Journal of Materials Science Volume 3 ; 3 >
+    au < manifest ; 1969 ; Journal of Materials Science Volume 4 ; 4 >
+    au < manifest ; 1970 ; Journal of Materials Science Volume 5 ; 5 >
+    au < manifest ; 1971 ; Journal of Materials Science Volume 6 ; 6 >
+    au < manifest ; 1972 ; Journal of Materials Science Volume 7 ; 7 >
+    au < manifest ; 1973 ; Journal of Materials Science Volume 8 ; 8 >
+    au < manifest ; 1974 ; Journal of Materials Science Volume 9 ; 9 >
+    au < manifest ; 1975 ; Journal of Materials Science Volume 10 ; 10 >
+    au < manifest ; 1976 ; Journal of Materials Science Volume 11 ; 11 >
+    au < manifest ; 1977 ; Journal of Materials Science Volume 12 ; 12 >
+    au < manifest ; 1978 ; Journal of Materials Science Volume 13 ; 13 >
+    au < manifest ; 1979 ; Journal of Materials Science Volume 14 ; 14 >
+    au < manifest ; 1980 ; Journal of Materials Science Volume 15 ; 15 >
+    au < manifest ; 1981 ; Journal of Materials Science Volume 16 ; 16 >
+    au < manifest ; 1982 ; Journal of Materials Science Volume 17 ; 17 >
+    au < manifest ; 1983 ; Journal of Materials Science Volume 18 ; 18 >
+    au < manifest ; 1984 ; Journal of Materials Science Volume 19 ; 19 >
+    au < manifest ; 1985 ; Journal of Materials Science Volume 20 ; 20 >
+    au < manifest ; 1986 ; Journal of Materials Science Volume 21 ; 21 >
+    au < manifest ; 1987 ; Journal of Materials Science Volume 22 ; 22 >
+    au < manifest ; 1988 ; Journal of Materials Science Volume 23 ; 23 >
+    au < manifest ; 1989 ; Journal of Materials Science Volume 24 ; 24 >
+    au < manifest ; 1990 ; Journal of Materials Science Volume 25 ; 25 >
+    au < manifest ; 1991 ; Journal of Materials Science Volume 26 ; 26 >
+    au < manifest ; 1992 ; Journal of Materials Science Volume 27 ; 27 >
+    au < manifest ; 1993 ; Journal of Materials Science Volume 28 ; 28 >
+    au < manifest ; 1994 ; Journal of Materials Science Volume 29 ; 29 >
+    au < manifest ; 1995 ; Journal of Materials Science Volume 30 ; 30 >
+    au < manifest ; 1996 ; Journal of Materials Science Volume 31 ; 31 >
+    au < manifest ; 1997 ; Journal of Materials Science Volume 32 ; 32 >
+    au < manifest ; 1998 ; Journal of Materials Science Volume 33 ; 33 >
+    au < manifest ; 1999 ; Journal of Materials Science Volume 34 ; 34 >
+    au < manifest ; 2000 ; Journal of Materials Science Volume 35 ; 35 >
+    au < manifest ; 2001 ; Journal of Materials Science Volume 36 ; 36 >
+    au < manifest ; 2002 ; Journal of Materials Science Volume 37 ; 37 >
+    au < manifest ; 2003 ; Journal of Materials Science Volume 38 ; 38 >
+    au < manifest ; 2004 ; Journal of Materials Science Volume 39 ; 39 >
+    au < manifest ; 2005 ; Journal of Materials Science Volume 40 ; 40 >
+    au < manifest ; 2006 ; Journal of Materials Science Volume 41 ; 41 >
+    au < manifest ; 2007 ; Journal of Materials Science Volume 42 ; 42 >
+    au < manifest ; 2008 ; Journal of Materials Science Volume 43 ; 43 >
+    au < manifest ; 2009 ; Journal of Materials Science Volume 44 ; 44 >
+    au < manifest ; 2010 ; Journal of Materials Science Volume 45 ; 45 >
+    au < manifest ; 2011 ; Journal of Materials Science Volume 46 ; 46 >
+    au < manifest ; 2012 ; Journal of Materials Science Volume 47 ; 47 >
 
   }
 
@@ -58501,6 +59552,30 @@
 
     param[journal_issn] = 0957-4522
 
+    au < manifest ; 1990 ; Journal of Materials Science: Materials in Electronics Volume 1 ; 1 >
+    au < manifest ; 1991 ; Journal of Materials Science: Materials in Electronics Volume 2 ; 2 >
+    au < manifest ; 1992 ; Journal of Materials Science: Materials in Electronics Volume 3 ; 3 >
+    au < manifest ; 1993 ; Journal of Materials Science: Materials in Electronics Volume 4 ; 4 >
+    au < manifest ; 1994 ; Journal of Materials Science: Materials in Electronics Volume 5 ; 5 >
+    au < manifest ; 1995 ; Journal of Materials Science: Materials in Electronics Volume 6 ; 6 >
+    au < manifest ; 1996 ; Journal of Materials Science: Materials in Electronics Volume 7 ; 7 >
+    au < manifest ; 1997 ; Journal of Materials Science: Materials in Electronics Volume 8 ; 8 >
+    au < manifest ; 1998 ; Journal of Materials Science: Materials in Electronics Volume 9 ; 9 >
+    au < manifest ; 1999 ; Journal of Materials Science: Materials in Electronics Volume 10 ; 10 >
+    au < manifest ; 2000 ; Journal of Materials Science: Materials in Electronics Volume 11 ; 11 >
+    au < manifest ; 2001 ; Journal of Materials Science: Materials in Electronics Volume 12 ; 12 >
+    au < manifest ; 2002 ; Journal of Materials Science: Materials in Electronics Volume 13 ; 13 >
+    au < manifest ; 2003 ; Journal of Materials Science: Materials in Electronics Volume 14 ; 14 >
+    au < manifest ; 2004 ; Journal of Materials Science: Materials in Electronics Volume 15 ; 15 >
+    au < manifest ; 2005 ; Journal of Materials Science: Materials in Electronics Volume 16 ; 16 >
+    au < manifest ; 2006 ; Journal of Materials Science: Materials in Electronics Volume 17 ; 17 >
+    au < manifest ; 2007 ; Journal of Materials Science: Materials in Electronics Volume 18 ; 18 >
+    au < manifest ; 2008 ; Journal of Materials Science: Materials in Electronics Volume 19 ; 19 >
+    au < manifest ; 2009 ; Journal of Materials Science: Materials in Electronics Volume 20 ; 20 >
+    au < manifest ; 2010 ; Journal of Materials Science: Materials in Electronics Volume 21 ; 21 >
+    au < manifest ; 2011 ; Journal of Materials Science: Materials in Electronics Volume 22 ; 22 >
+    au < manifest ; 2012 ; Journal of Materials Science: Materials in Electronics Volume 23 ; 23 >
+
   }
 
   {
@@ -58514,6 +59589,30 @@
 
     param[journal_issn] = 0957-4530
 
+    au < manifest ; 1990 ; Journal of Materials Science: Materials in Medicine Volume 1 ; 1 >
+    au < manifest ; 1991 ; Journal of Materials Science: Materials in Medicine Volume 2 ; 2 >
+    au < manifest ; 1992 ; Journal of Materials Science: Materials in Medicine Volume 3 ; 3 >
+    au < manifest ; 1993 ; Journal of Materials Science: Materials in Medicine Volume 4 ; 4 >
+    au < manifest ; 1994 ; Journal of Materials Science: Materials in Medicine Volume 5 ; 5 >
+    au < manifest ; 1995 ; Journal of Materials Science: Materials in Medicine Volume 6 ; 6 >
+    au < manifest ; 1996 ; Journal of Materials Science: Materials in Medicine Volume 7 ; 7 >
+    au < manifest ; 1997 ; Journal of Materials Science: Materials in Medicine Volume 8 ; 8 >
+    au < manifest ; 1998 ; Journal of Materials Science: Materials in Medicine Volume 9 ; 9 >
+    au < manifest ; 1999 ; Journal of Materials Science: Materials in Medicine Volume 10 ; 10 >
+    au < manifest ; 2000 ; Journal of Materials Science: Materials in Medicine Volume 11 ; 11 >
+    au < manifest ; 2001 ; Journal of Materials Science: Materials in Medicine Volume 12 ; 12 >
+    au < manifest ; 2002 ; Journal of Materials Science: Materials in Medicine Volume 13 ; 13 >
+    au < manifest ; 2003 ; Journal of Materials Science: Materials in Medicine Volume 14 ; 14 >
+    au < manifest ; 2004 ; Journal of Materials Science: Materials in Medicine Volume 15 ; 15 >
+    au < manifest ; 2005 ; Journal of Materials Science: Materials in Medicine Volume 16 ; 16 >
+    au < manifest ; 2006 ; Journal of Materials Science: Materials in Medicine Volume 17 ; 17 >
+    au < manifest ; 2007 ; Journal of Materials Science: Materials in Medicine Volume 18 ; 18 >
+    au < manifest ; 2008 ; Journal of Materials Science: Materials in Medicine Volume 19 ; 19 >
+    au < manifest ; 2009 ; Journal of Materials Science: Materials in Medicine Volume 20 ; 20 >
+    au < manifest ; 2010 ; Journal of Materials Science: Materials in Medicine Volume 21 ; 21 >
+    au < manifest ; 2011 ; Journal of Materials Science: Materials in Medicine Volume 22 ; 22 >
+    au < manifest ; 2012 ; Journal of Materials Science: Materials in Medicine Volume 23 ; 23 >
+
   }
 
   {
@@ -58526,6 +59625,30 @@
     >
 
     param[journal_issn] = 0261-8028
+    comment[merged_into] = 0022-2461
+
+    au < manifest ; 1982 ; Journal of Materials Science Letters Volume 1 ; 1 >
+    au < manifest ; 1983 ; Journal of Materials Science Letters Volume 2 ; 2 >
+    au < manifest ; 1984 ; Journal of Materials Science Letters Volume 3 ; 3 >
+    au < manifest ; 1985 ; Journal of Materials Science Letters Volume 4 ; 4 >
+    au < manifest ; 1986 ; Journal of Materials Science Letters Volume 5 ; 5 >
+    au < manifest ; 1987 ; Journal of Materials Science Letters Volume 6 ; 6 >
+    au < manifest ; 1988 ; Journal of Materials Science Letters Volume 7 ; 7 >
+    au < manifest ; 1989 ; Journal of Materials Science Letters Volume 8 ; 8 >
+    au < manifest ; 1990 ; Journal of Materials Science Letters Volume 9 ; 9 >
+    au < manifest ; 1991 ; Journal of Materials Science Letters Volume 10 ; 10 >
+    au < manifest ; 1992 ; Journal of Materials Science Letters Volume 11 ; 11 >
+    au < manifest ; 1993 ; Journal of Materials Science Letters Volume 12 ; 12 >
+    au < manifest ; 1994 ; Journal of Materials Science Letters Volume 13 ; 13 >
+    au < manifest ; 1995 ; Journal of Materials Science Letters Volume 14 ; 14 >
+    au < manifest ; 1996 ; Journal of Materials Science Letters Volume 15 ; 15 >
+    au < manifest ; 1997 ; Journal of Materials Science Letters Volume 16 ; 16 >
+    au < manifest ; 1998 ; Journal of Materials Science Letters Volume 17 ; 17 >
+    au < manifest ; 1999 ; Journal of Materials Science Letters Volume 18 ; 18 >
+    au < manifest ; 2000 ; Journal of Materials Science Letters Volume 19 ; 19 >
+    au < manifest ; 2001 ; Journal of Materials Science Letters Volume 20 ; 20 >
+    au < manifest ; 2002 ; Journal of Materials Science Letters Volume 21 ; 21 >
+    au < manifest ; 2003 ; Journal of Materials Science Letters Volume 22 ; 22 >
 
   }
 
@@ -58538,6 +59661,12 @@
     >
 
     param[journal_issn] = 0931-704X
+
+    au < manifest ; 1987-1988 ; Journal of Materials Shaping Technology Volume 5 ; 5 >
+    au < manifest ; 1988 ; Journal of Materials Shaping Technology Volume 6 ; 6 >
+    au < manifest ; 1989 ; Journal of Materials Shaping Technology Volume 7 ; 7 >
+    au < manifest ; 1990 ; Journal of Materials Shaping Technology Volume 8 ; 8 >
+    au < manifest ; 1991 ; Journal of Materials Shaping Technology Volume 9 ; 9 >
 
   }
 
@@ -58552,6 +59681,12 @@
 
     param[journal_issn] = 1064-7562
 
+    au < manifest ; 1998 ; Journal of Materials Synthesis and Processing Volume 6 ; 6 >
+    au < manifest ; 1999 ; Journal of Materials Synthesis and Processing Volume 7 ; 7 >
+    au < manifest ; 2000 ; Journal of Materials Synthesis and Processing Volume 8 ; 8 >
+    au < manifest ; 2001 ; Journal of Materials Synthesis and Processing Volume 9 ; 9 >
+    au < manifest ; 2002 ; Journal of Materials Synthesis and Processing Volume 10 ; 10 >
+
   }
 
   {
@@ -58563,6 +59698,9 @@
     >
 
     param[journal_issn] = 0939-6322
+
+    au < manifest ; 1997 ; Journal of Maternal-Fetal Investigation Volume 7 ; 7 >
+    au < manifest ; 1998 ; Journal of Maternal-Fetal Investigation Volume 8 ; 8 >
 
   }
 
@@ -58577,6 +59715,72 @@
 
     param[journal_issn] = 0303-6812
 
+    au < manifest ; 1974-1975 ; Journal of Mathematical Biology Volume 1 ; 1 >
+    au < manifest ; 1975 ; Journal of Mathematical Biology Volume 2 ; 2 >
+    au < manifest ; 1976 ; Journal of Mathematical Biology Volume 3 ; 3 >
+    au < manifest ; 1977 ; Journal of Mathematical Biology Volume 4 ; 4 >
+    au < manifest ; 1977 ; Journal of Mathematical Biology Volume 5 ; 5 >
+    au < manifest ; 1978 ; Journal of Mathematical Biology Volume 6 ; 6 >
+    au < manifest ; 1979 ; Journal of Mathematical Biology Volume 7 ; 7 >
+    au < manifest ; 1979 ; Journal of Mathematical Biology Volume 8 ; 8 >
+    au < manifest ; 1980 ; Journal of Mathematical Biology Volume 9 ; 9 >
+    au < manifest ; 1980 ; Journal of Mathematical Biology Volume 10 ; 10 >
+    au < manifest ; 1981 ; Journal of Mathematical Biology Volume 11 ; 11 >
+    au < manifest ; 1982 ; Journal of Mathematical Biology Volume 12 ; 12 >
+    au < manifest ; 1981-1982 ; Journal of Mathematical Biology Volume 13 ; 13 >
+    au < manifest ; 1982 ; Journal of Mathematical Biology Volume 14 ; 14 >
+    au < manifest ; 1982 ; Journal of Mathematical Biology Volume 15 ; 15 >
+    au < manifest ; 1982-1983 ; Journal of Mathematical Biology Volume 16 ; 16 >
+    au < manifest ; 1983 ; Journal of Mathematical Biology Volume 17 ; 17 >
+    au < manifest ; 1983 ; Journal of Mathematical Biology Volume 18 ; 18 >
+    au < manifest ; 1984 ; Journal of Mathematical Biology Volume 19 ; 19 >
+    au < manifest ; 1984 ; Journal of Mathematical Biology Volume 20 ; 20 >
+    au < manifest ; 1984-1985 ; Journal of Mathematical Biology Volume 21 ; 21 >
+    au < manifest ; 1985 ; Journal of Mathematical Biology Volume 22 ; 22 >
+    au < manifest ; 1985-1986 ; Journal of Mathematical Biology Volume 23 ; 23 >
+    au < manifest ; 1986-1987 ; Journal of Mathematical Biology Volume 24 ; 24 >
+    au < manifest ; 1987 ; Journal of Mathematical Biology Volume 25 ; 25 >
+    au < manifest ; 1988 ; Journal of Mathematical Biology Volume 26 ; 26 >
+    au < manifest ; 1989 ; Journal of Mathematical Biology Volume 27 ; 27 >
+    au < manifest ; 1990 ; Journal of Mathematical Biology Volume 28 ; 28 >
+    au < manifest ; 1990-1991 ; Journal of Mathematical Biology Volume 29 ; 29 >
+    au < manifest ; 1991-1992 ; Journal of Mathematical Biology Volume 30 ; 30 >
+    au < manifest ; 1992-1993 ; Journal of Mathematical Biology Volume 31 ; 31 >
+    au < manifest ; 1993-1994 ; Journal of Mathematical Biology Volume 32 ; 32 >
+    au < manifest ; 1994-1995 ; Journal of Mathematical Biology Volume 33 ; 33 >
+    au < manifest ; 1995-1996 ; Journal of Mathematical Biology Volume 34 ; 34 >
+    au < manifest ; 1996-1997 ; Journal of Mathematical Biology Volume 35 ; 35 >
+    au < manifest ; 1997 ; Journal of Mathematical Biology Volume 36 ; 36 >
+    au < manifest ; 1998 ; Journal of Mathematical Biology Volume 37 ; 37 >
+    au < manifest ; 1999 ; Journal of Mathematical Biology Volume 38 ; 38 >
+    au < manifest ; 1999 ; Journal of Mathematical Biology Volume 39 ; 39 >
+    au < manifest ; 2000 ; Journal of Mathematical Biology Volume 40 ; 40 >
+    au < manifest ; 2000 ; Journal of Mathematical Biology Volume 41 ; 41 >
+    au < manifest ; 2001 ; Journal of Mathematical Biology Volume 42 ; 42 >
+    au < manifest ; 2001 ; Journal of Mathematical Biology Volume 43 ; 43 >
+    au < manifest ; 2002 ; Journal of Mathematical Biology Volume 44 ; 44 >
+    au < manifest ; 2002 ; Journal of Mathematical Biology Volume 45 ; 45 >
+    au < manifest ; 2003 ; Journal of Mathematical Biology Volume 46 ; 46 >
+    au < manifest ; 2003 ; Journal of Mathematical Biology Volume 47 ; 47 >
+    au < manifest ; 2004 ; Journal of Mathematical Biology Volume 48 ; 48 >
+    au < manifest ; 2004 ; Journal of Mathematical Biology Volume 49 ; 49 >
+    au < manifest ; 2005 ; Journal of Mathematical Biology Volume 50 ; 50 >
+    au < manifest ; 2005 ; Journal of Mathematical Biology Volume 51 ; 51 >
+    au < manifest ; 2006 ; Journal of Mathematical Biology Volume 52 ; 52 >
+    au < manifest ; 2006 ; Journal of Mathematical Biology Volume 53 ; 53 >
+    au < manifest ; 2007 ; Journal of Mathematical Biology Volume 54 ; 54 >
+    au < manifest ; 2007 ; Journal of Mathematical Biology Volume 55 ; 55 >
+    au < manifest ; 2008 ; Journal of Mathematical Biology Volume 56 ; 56 >
+    au < manifest ; 2008 ; Journal of Mathematical Biology Volume 57 ; 57 >
+    au < manifest ; 2009 ; Journal of Mathematical Biology Volume 58 ; 58 >
+    au < manifest ; 2009 ; Journal of Mathematical Biology Volume 59 ; 59 >
+    au < manifest ; 2010 ; Journal of Mathematical Biology Volume 60 ; 60 >
+    au < manifest ; 2010 ; Journal of Mathematical Biology Volume 61 ; 61 >
+    au < manifest ; 2011 ; Journal of Mathematical Biology Volume 62 ; 62 >
+    au < manifest ; 2011 ; Journal of Mathematical Biology Volume 63 ; 63 >
+    au < manifest ; 2012 ; Journal of Mathematical Biology Volume 64 ; 64 >
+    au < manifest ; 2012 ; Journal of Mathematical Biology Volume 65 ; 65 >
+
   }
 
   {
@@ -58589,6 +59793,57 @@
     >
 
     param[journal_issn] = 0259-9791
+
+    au < manifest ; 1987 ; Journal of Mathematical Chemistry Volume 1 ; 1 >
+    au < manifest ; 1988 ; Journal of Mathematical Chemistry Volume 2 ; 2 >
+    au < manifest ; 1989 ; Journal of Mathematical Chemistry Volume 3 ; 3 >
+    au < manifest ; 1990 ; Journal of Mathematical Chemistry Volume 4 ; 4 >
+    au < manifest ; 1990 ; Journal of Mathematical Chemistry Volume 5 ; 5 >
+    au < manifest ; 1991 ; Journal of Mathematical Chemistry Volume 6 ; 6 >
+    au < manifest ; 1991 ; Journal of Mathematical Chemistry Volume 7 ; 7 >
+    au < manifest ; 1991 ; Journal of Mathematical Chemistry Volume 8 ; 8 >
+    au < manifest ; 1992 ; Journal of Mathematical Chemistry Volume 9 ; 9 >
+    au < manifest ; 1992 ; Journal of Mathematical Chemistry Volume 10 ; 10 >
+    au < manifest ; 1992 ; Journal of Mathematical Chemistry Volume 11 ; 11 >
+    au < manifest ; 1993 ; Journal of Mathematical Chemistry Volume 12 ; 12 >
+    au < manifest ; 1993 ; Journal of Mathematical Chemistry Volume 13 ; 13 >
+    au < manifest ; 1993 ; Journal of Mathematical Chemistry Volume 14 ; 14 >
+    au < manifest ; 1994 ; Journal of Mathematical Chemistry Volume 15 ; 15 >
+    au < manifest ; 1994 ; Journal of Mathematical Chemistry Volume 16 ; 16 >
+    au < manifest ; 1995 ; Journal of Mathematical Chemistry Volume 17 ; 17 >
+    au < manifest ; 1995 ; Journal of Mathematical Chemistry Volume 18 ; 18 >
+    au < manifest ; 1996 ; Journal of Mathematical Chemistry Volume 19 ; 19 >
+    au < manifest ; 1996 ; Journal of Mathematical Chemistry Volume 20 ; 20 >
+    au < manifest ; 1997 ; Journal of Mathematical Chemistry Volume 21 ; 21 >
+    au < manifest ; 1997 ; Journal of Mathematical Chemistry Volume 22 ; 22 >
+    au < manifest ; 1998 ; Journal of Mathematical Chemistry Volume 23 ; 23 >
+    au < manifest ; 1998 ; Journal of Mathematical Chemistry Volume 24 ; 24 >
+    au < manifest ; 1999 ; Journal of Mathematical Chemistry Volume 25 ; 25 >
+    au < manifest ; 1999 ; Journal of Mathematical Chemistry Volume 26 ; 26 >
+    au < manifest ; 2000 ; Journal of Mathematical Chemistry Volume 27 ; 27 >
+    au < manifest ; 2000 ; Journal of Mathematical Chemistry Volume 28 ; 28 >
+    au < manifest ; 2001 ; Journal of Mathematical Chemistry Volume 29 ; 29 >
+    au < manifest ; 2001 ; Journal of Mathematical Chemistry Volume 30 ; 30 >
+    au < manifest ; 2002 ; Journal of Mathematical Chemistry Volume 31 ; 31 >
+    au < manifest ; 2002 ; Journal of Mathematical Chemistry Volume 32 ; 32 >
+    au < manifest ; 2003 ; Journal of Mathematical Chemistry Volume 33 ; 33 >
+    au < manifest ; 2003 ; Journal of Mathematical Chemistry Volume 34 ; 34 >
+    au < manifest ; 2004 ; Journal of Mathematical Chemistry Volume 35 ; 35 >
+    au < manifest ; 2004 ; Journal of Mathematical Chemistry Volume 36 ; 36 >
+    au < manifest ; 2005 ; Journal of Mathematical Chemistry Volume 37 ; 37 >
+    au < manifest ; 2005 ; Journal of Mathematical Chemistry Volume 38 ; 38 >
+    au < manifest ; 2006 ; Journal of Mathematical Chemistry Volume 39 ; 39 >
+    au < manifest ; 2006 ; Journal of Mathematical Chemistry Volume 40 ; 40 >
+    au < manifest ; 2007 ; Journal of Mathematical Chemistry Volume 41 ; 41 >
+    au < manifest ; 2007 ; Journal of Mathematical Chemistry Volume 42 ; 42 >
+    au < manifest ; 2008 ; Journal of Mathematical Chemistry Volume 43 ; 43 >
+    au < manifest ; 2008 ; Journal of Mathematical Chemistry Volume 44 ; 44 >
+    au < manifest ; 2009 ; Journal of Mathematical Chemistry Volume 45 ; 45 >
+    au < manifest ; 2009 ; Journal of Mathematical Chemistry Volume 46 ; 46 >
+    au < manifest ; 2010 ; Journal of Mathematical Chemistry Volume 47 ; 47 >
+    au < manifest ; 2010 ; Journal of Mathematical Chemistry Volume 48 ; 48 >
+    au < manifest ; 2011 ; Journal of Mathematical Chemistry Volume 49 ; 49 >
+    au < manifest ; 2012 ; Journal of Mathematical Chemistry Volume 50 ; 50 >
 
   }
 
@@ -58603,6 +59858,21 @@
 
     param[journal_issn] = 1422-6928
 
+    au < manifest ; 1999 ; Journal of Mathematical Fluid Mechanics Volume 1 ; 1 >
+    au < manifest ; 2000 ; Journal of Mathematical Fluid Mechanics Volume 2 ; 2 >
+    au < manifest ; 2001 ; Journal of Mathematical Fluid Mechanics Volume 3 ; 3 >
+    au < manifest ; 2002 ; Journal of Mathematical Fluid Mechanics Volume 4 ; 4 >
+    au < manifest ; 2003 ; Journal of Mathematical Fluid Mechanics Volume 5 ; 5 >
+    au < manifest ; 2004 ; Journal of Mathematical Fluid Mechanics Volume 6 ; 6 >
+    au < manifest ; 2005 ; Journal of Mathematical Fluid Mechanics Volume 7 ; 7 >
+    au < manifest ; 2006 ; Journal of Mathematical Fluid Mechanics Volume 8 ; 8 >
+    au < manifest ; 2007 ; Journal of Mathematical Fluid Mechanics Volume 9 ; 9 >
+    au < manifest ; 2008 ; Journal of Mathematical Fluid Mechanics Volume 10 ; 10 >
+    au < manifest ; 2009 ; Journal of Mathematical Fluid Mechanics Volume 11 ; 11 >
+    au < manifest ; 2010 ; Journal of Mathematical Fluid Mechanics Volume 12 ; 12 >
+    au < manifest ; 2011 ; Journal of Mathematical Fluid Mechanics Volume 13 ; 13 >
+    au < manifest ; 2012 ; Journal of Mathematical Fluid Mechanics Volume 14 ; 14 >
+
   }
 
   {
@@ -58615,6 +59885,50 @@
     >
 
     param[journal_issn] = 0924-9907
+
+    au < manifest ; 1992 ; Journal of Mathematical Imaging and Vision Volume 1 ; 1 >
+    au < manifest ; 1992 ; Journal of Mathematical Imaging and Vision Volume 2 ; 2 >
+    au < manifest ; 1993 ; Journal of Mathematical Imaging and Vision Volume 3 ; 3 >
+    au < manifest ; 1994 ; Journal of Mathematical Imaging and Vision Volume 4 ; 4 >
+    au < manifest ; 1995 ; Journal of Mathematical Imaging and Vision Volume 5 ; 5 >
+    au < manifest ; 1996 ; Journal of Mathematical Imaging and Vision Volume 6 ; 6 >
+    au < manifest ; 1997 ; Journal of Mathematical Imaging and Vision Volume 7 ; 7 >
+    au < manifest ; 1998 ; Journal of Mathematical Imaging and Vision Volume 8 ; 8 >
+    au < manifest ; 1998 ; Journal of Mathematical Imaging and Vision Volume 9 ; 9 >
+    au < manifest ; 1999 ; Journal of Mathematical Imaging and Vision Volume 10 ; 10 >
+    au < manifest ; 1999 ; Journal of Mathematical Imaging and Vision Volume 11 ; 11 >
+    au < manifest ; 2000 ; Journal of Mathematical Imaging and Vision Volume 12 ; 12 >
+    au < manifest ; 2000 ; Journal of Mathematical Imaging and Vision Volume 13 ; 13 >
+    au < manifest ; 2001 ; Journal of Mathematical Imaging and Vision Volume 14 ; 14 >
+    au < manifest ; 2001 ; Journal of Mathematical Imaging and Vision Volume 15 ; 15 >
+    au < manifest ; 2002 ; Journal of Mathematical Imaging and Vision Volume 16 ; 16 >
+    au < manifest ; 2002 ; Journal of Mathematical Imaging and Vision Volume 17 ; 17 >
+    au < manifest ; 2003 ; Journal of Mathematical Imaging and Vision Volume 18 ; 18 >
+    au < manifest ; 2003 ; Journal of Mathematical Imaging and Vision Volume 19 ; 19 >
+    au < manifest ; 2004 ; Journal of Mathematical Imaging and Vision Volume 20 ; 20 >
+    au < manifest ; 2004 ; Journal of Mathematical Imaging and Vision Volume 21 ; 21 >
+    au < manifest ; 2005 ; Journal of Mathematical Imaging and Vision Volume 22 ; 22 >
+    au < manifest ; 2005 ; Journal of Mathematical Imaging and Vision Volume 23 ; 23 >
+    au < manifest ; 2006 ; Journal of Mathematical Imaging and Vision Volume 24 ; 24 >
+    au < manifest ; 2006 ; Journal of Mathematical Imaging and Vision Volume 25 ; 25 >
+    au < manifest ; 2006 ; Journal of Mathematical Imaging and Vision Volume 26 ; 26 >
+    au < manifest ; 2007 ; Journal of Mathematical Imaging and Vision Volume 27 ; 27 >
+    au < manifest ; 2007 ; Journal of Mathematical Imaging and Vision Volume 28 ; 28 >
+    au < manifest ; 2007 ; Journal of Mathematical Imaging and Vision Volume 29 ; 29 >
+    au < manifest ; 2008 ; Journal of Mathematical Imaging and Vision Volume 30 ; 30 >
+    au < manifest ; 2008 ; Journal of Mathematical Imaging and Vision Volume 31 ; 31 >
+    au < manifest ; 2008 ; Journal of Mathematical Imaging and Vision Volume 32 ; 32 >
+    au < manifest ; 2009 ; Journal of Mathematical Imaging and Vision Volume 33 ; 33 >
+    au < manifest ; 2009 ; Journal of Mathematical Imaging and Vision Volume 34 ; 34 >
+    au < manifest ; 2009 ; Journal of Mathematical Imaging and Vision Volume 35 ; 35 >
+    au < manifest ; 2010 ; Journal of Mathematical Imaging and Vision Volume 36 ; 36 >
+    au < manifest ; 2010 ; Journal of Mathematical Imaging and Vision Volume 37 ; 37 >
+    au < manifest ; 2010 ; Journal of Mathematical Imaging and Vision Volume 38 ; 38 >
+    au < manifest ; 2011 ; Journal of Mathematical Imaging and Vision Volume 39 ; 39 >
+    au < manifest ; 2011 ; Journal of Mathematical Imaging and Vision Volume 40 ; 40 >
+    au < manifest ; 2011 ; Journal of Mathematical Imaging and Vision Volume 41 ; 41 >
+    au < manifest ; 2012 ; Journal of Mathematical Imaging and Vision Volume 42 ; 42 >
+    au < manifest ; 2012 ; Journal of Mathematical Imaging and Vision Volume 43 ; 43 >
 
   }
 
@@ -62104,32 +63418,32 @@
 
     param[journal_issn] = 0268-8921
 
-    au < manifest ; 1986 ; Lasers in Medical Science Volume 1 ; 1 >
-    au < manifest ; 1987 ; Lasers in Medical Science Volume 2 ; 2 >
-    au < manifest ; 1988 ; Lasers in Medical Science Volume 3 ; 3 >
-    au < manifest ; 1989 ; Lasers in Medical Science Volume 4 ; 4 >
-    au < manifest ; 1990 ; Lasers in Medical Science Volume 5 ; 5 >
-    au < manifest ; 1991 ; Lasers in Medical Science Volume 6 ; 6 >
-    au < manifest ; 1992 ; Lasers in Medical Science Volume 7 ; 7 >
-    au < manifest ; 1993 ; Lasers in Medical Science Volume 8 ; 8 >
-    au < manifest ; 1994 ; Lasers in Medical Science Volume 9 ; 9 >
-    au < manifest ; 1995 ; Lasers in Medical Science Volume 10 ; 10 >
-    au < manifest ; 1996 ; Lasers in Medical Science Volume 11 ; 11 >
-    au < manifest ; 1997 ; Lasers in Medical Science Volume 12 ; 12 >
-    au < manifest ; 1998 ; Lasers in Medical Science Volume 13 ; 13 >
-    au < manifest ; 1999 ; Lasers in Medical Science Volume 14 ; 14 >
-    au < manifest ; 2000 ; Lasers in Medical Science Volume 15 ; 15 >
-    au < manifest ; 2001 ; Lasers in Medical Science Volume 16 ; 16 >
-    au < manifest ; 2002 ; Lasers in Medical Science Volume 17 ; 17 >
-    au < manifest ; 2003 ; Lasers in Medical Science Volume 18 ; 18 >
-    au < manifest ; 2004 ; Lasers in Medical Science Volume 19 ; 19 >
-    au < manifest ; 2005 ; Lasers in Medical Science Volume 20 ; 20 >
-    au < manifest ; 2006 ; Lasers in Medical Science Volume 21 ; 21 >
-    au < manifest ; 2007 ; Lasers in Medical Science Volume 22 ; 22 >
-    au < manifest ; 2008 ; Lasers in Medical Science Volume 23 ; 23 >
-    au < manifest ; 2009 ; Lasers in Medical Science Volume 24 ; 24 >
-    au < manifest ; 2010 ; Lasers in Medical Science Volume 25 ; 25 >
-    au < manifest ; 2011 ; Lasers in Medical Science Volume 26 ; 26 >
+    au < testing ; 1986 ; Lasers in Medical Science Volume 1 ; 1 >
+    au < testing ; 1987 ; Lasers in Medical Science Volume 2 ; 2 >
+    au < testing ; 1988 ; Lasers in Medical Science Volume 3 ; 3 >
+    au < testing ; 1989 ; Lasers in Medical Science Volume 4 ; 4 >
+    au < testing ; 1990 ; Lasers in Medical Science Volume 5 ; 5 >
+    au < testing ; 1991 ; Lasers in Medical Science Volume 6 ; 6 >
+    au < testing ; 1992 ; Lasers in Medical Science Volume 7 ; 7 >
+    au < testing ; 1993 ; Lasers in Medical Science Volume 8 ; 8 >
+    au < testing ; 1994 ; Lasers in Medical Science Volume 9 ; 9 >
+    au < testing ; 1995 ; Lasers in Medical Science Volume 10 ; 10 >
+    au < testing ; 1996 ; Lasers in Medical Science Volume 11 ; 11 >
+    au < testing ; 1997 ; Lasers in Medical Science Volume 12 ; 12 >
+    au < testing ; 1998 ; Lasers in Medical Science Volume 13 ; 13 >
+    au < testing ; 1999 ; Lasers in Medical Science Volume 14 ; 14 >
+    au < testing ; 2000 ; Lasers in Medical Science Volume 15 ; 15 >
+    au < testing ; 2001 ; Lasers in Medical Science Volume 16 ; 16 >
+    au < testing ; 2002 ; Lasers in Medical Science Volume 17 ; 17 >
+    au < testing ; 2003 ; Lasers in Medical Science Volume 18 ; 18 >
+    au < testing ; 2004 ; Lasers in Medical Science Volume 19 ; 19 >
+    au < testing ; 2005 ; Lasers in Medical Science Volume 20 ; 20 >
+    au < testing ; 2006 ; Lasers in Medical Science Volume 21 ; 21 >
+    au < testing ; 2007 ; Lasers in Medical Science Volume 22 ; 22 >
+    au < testing ; 2008 ; Lasers in Medical Science Volume 23 ; 23 >
+    au < testing ; 2009 ; Lasers in Medical Science Volume 24 ; 24 >
+    au < testing ; 2010 ; Lasers in Medical Science Volume 25 ; 25 >
+    au < testing ; 2011 ; Lasers in Medical Science Volume 26 ; 26 >
     au < manifest ; 2012 ; Lasers in Medical Science Volume 27 ; 27 >
 
   }
