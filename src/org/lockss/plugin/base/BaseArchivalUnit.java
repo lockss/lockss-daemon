@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.155 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.156 2012-05-17 17:58:06 tlipkis Exp $
  */
 
 /*
@@ -533,7 +533,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public RateLimiterInfo getRateLimiterInfo() {
     long interval = paramMap.getLong(KEY_AU_FETCH_DELAY, defaultFetchDelay);
-    return new RateLimiterInfo(getFetchRateLimiterKey(), 1, interval);
+    return new RateLimiterInfo(getFetchRateLimiterKey(), interval);
   }
 
   public String toString() {

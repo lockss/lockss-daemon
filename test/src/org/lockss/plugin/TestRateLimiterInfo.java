@@ -1,5 +1,5 @@
 /*
- * $Id: TestRateLimiterInfo.java,v 1.2 2012-03-27 20:58:14 tlipkis Exp $
+ * $Id: TestRateLimiterInfo.java,v 1.3 2012-05-17 17:58:06 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.test.*;
 public class TestRateLimiterInfo extends LockssTestCase {
 
   public void testDefault() {
-    RateLimiterInfo rli = new RateLimiterInfo("foo", 1, 12000);
+    RateLimiterInfo rli = new RateLimiterInfo("foo", 12000);
     assertEquals("1/12000", rli.getDefaultRate());
     assertEquals("foo", rli.getCrawlPoolKey());
     assertNull(rli.getMimeRates());
@@ -49,7 +49,7 @@ public class TestRateLimiterInfo extends LockssTestCase {
   }
 
   public void testMime() {
-    RateLimiterInfo rli = new RateLimiterInfo("bar", 1, 13000);
+    RateLimiterInfo rli = new RateLimiterInfo("bar", 13000);
     Map map = MapUtil.map("text/html", "1/2s", "image/*", "1/1");
     rli.setMimeRates(map);
     assertEquals("1/13000", rli.getDefaultRate());
@@ -60,7 +60,7 @@ public class TestRateLimiterInfo extends LockssTestCase {
   }
 
   public void testUrl() {
-    RateLimiterInfo rli = new RateLimiterInfo("bar", 1, 13000);
+    RateLimiterInfo rli = new RateLimiterInfo("bar", 13000);
     Map map = MapUtil.map(".*\\.pdf", "1/2s", ".*/images/.*", "1/1");
     rli.setUrlRates(map);
     assertEquals("1/13000", rli.getDefaultRate());
@@ -71,11 +71,11 @@ public class TestRateLimiterInfo extends LockssTestCase {
   }
 
   public void testCond() {
-    RateLimiterInfo rli = new RateLimiterInfo("bar", 1, 13000);
+    RateLimiterInfo rli = new RateLimiterInfo("bar", 13000);
     CrawlWindow win1 = new CrawlWindows.Daily("1:00", "3:00", "GMT");
     CrawlWindow win2 = new CrawlWindows.Daily("3:00", "1:00", "GMT");
-    RateLimiterInfo rli1 = new RateLimiterInfo("one", 2, 300);
-    RateLimiterInfo rli2 = new RateLimiterInfo("two", 4, 500);
+    RateLimiterInfo rli1 = new RateLimiterInfo("one", "2/300");
+    RateLimiterInfo rli2 = new RateLimiterInfo("two", "4/500");
     LinkedHashMap map = new LinkedHashMap();
     map.put(win1, rli1);
     map.put(win2, rli2);

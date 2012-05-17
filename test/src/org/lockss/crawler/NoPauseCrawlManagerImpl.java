@@ -1,5 +1,5 @@
 /*
- * $Id: NoPauseCrawlManagerImpl.java,v 1.3 2012-03-27 20:57:29 tlipkis Exp $
+ * $Id: NoPauseCrawlManagerImpl.java,v 1.4 2012-05-17 17:58:06 tlipkis Exp $
  */
 
 /*
@@ -51,22 +51,25 @@ public class NoPauseCrawlManagerImpl extends CrawlManagerImpl {
   private Map<ArchivalUnit,CrawlRateLimiter> limiterMap =
     new HashMap<ArchivalUnit,CrawlRateLimiter>();
 
+  @Override
   protected CrawlRateLimiter newCrawlRateLimiter(ArchivalUnit au) {
     CrawlRateLimiter crl = new NoPauseCrawlRateLimiter();
     limiterMap.put(au, crl);
     return crl;
   }
 
-  public CrawlRateLimiter getCrawlRateLimiter(ArchivalUnit au) {
+  @Override
+  public CrawlRateLimiter getCrawlRateLimiter(Crawler crawler) {
+    ArchivalUnit au = crawler.getAu();
     CrawlRateLimiter crl = limiterMap.get(au);
     if (crl == null) {
-      crl = super.getCrawlRateLimiter(au);
+      crl = super.getCrawlRateLimiter(crawler);
     }
     return crl;
   }
 
-  public List getPauseContentTypes(ArchivalUnit au) {
-    return ((NoPauseCrawlRateLimiter)getCrawlRateLimiter(au)).getPauseContentTypes();
+  public List getPauseContentTypes(Crawler crawler) {
+    return ((NoPauseCrawlRateLimiter)getCrawlRateLimiter(crawler)).getPauseContentTypes();
   }
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalCrawlRateLimiter.java,v 1.1 2012-03-27 20:57:29 tlipkis Exp $
+ * $Id: ConditionalCrawlRateLimiter.java,v 1.2 2012-05-17 17:58:06 tlipkis Exp $
  */
 
 /*
@@ -40,12 +40,13 @@ import org.lockss.plugin.*;
 
 /**
  * A set of time-specific CrawlRateLimiters.
+ * @ThreadSafe
  */
 public class ConditionalCrawlRateLimiter extends BaseCrawlRateLimiter {
 
   static Logger log = Logger.getLogger("ConditionalCrawlRateLimiter");
 
-  List<Clause> clauses;
+  List<Clause> clauses = new ArrayList<Clause>(4);
   boolean didChangeWindow = false;
   CrawlWindow lastWindow;
   CrawlRateLimiter lastWindowCrl;
@@ -61,9 +62,10 @@ public class ConditionalCrawlRateLimiter extends BaseCrawlRateLimiter {
   }
 
   public ConditionalCrawlRateLimiter(RateLimiterInfo rli) {
-    for (Map.Entry ent : rli.getCond().entrySet()) {
-      addClause((CrawlWindow)ent.getKey(),
-		CrawlRateLimiter.Util.forRli((RateLimiterInfo)ent.getValue()));
+    for (Map.Entry<CrawlWindow,RateLimiterInfo> ent :
+ 	   rli.getCond().entrySet()) {
+      clauses.add(new Clause(ent.getKey(),
+ 			     CrawlRateLimiter.Util.forRli(ent.getValue())));
     }
   }
 
@@ -73,53 +75,38 @@ public class ConditionalCrawlRateLimiter extends BaseCrawlRateLimiter {
    * previous file fetched
    * @throws RuntimeException if no window is currently open
    */
-  public RateLimiter getRateLimiterFor(String url, String previousContentType) {
+  public synchronized RateLimiter getRateLimiterFor(String url,
+						    String previousContentType) {
     // fetch date once to ensure test same value against all windows
     Date now = TimeBase.nowDate();
-    CrawlRateLimiter crl = null;
-    if (lastWindow != null && lastWindow.canCrawl(now)) {
-      // Keep using current CrawlRateLimiter until its window closes, to
-      // minimize switching between rate limiters.
-      crl = lastWindowCrl;
-    } else {
-      for (Clause cl : clauses) {
-	if (cl.window.canCrawl(now)) {
-	  crl = cl.crl;
+    for (Clause cl : clauses) {
+      if (cl.window.canCrawl(now)) {
+	CrawlRateLimiter crl = cl.crl;
+	if (crl != lastWindowCrl) {
+	  if (lastWindowCrl != null) {
+	    log.debug3("Window changed");
+	    didChangeWindow = true;
+	  }
+	  lastWindowCrl = crl;
 	}
+	return crl.getRateLimiterFor(url, previousContentType);
       }
     }
-    if (crl == null) {
-      throw new RuntimeException("No rate limiter windows are open");
-    }
-    if (crl != lastWindowCrl) {
-      if (lastWindowCrl != null) {
-	didChangeWindow = true;
-      }
-      lastWindowCrl = crl;
-    }
-    return crl.getRateLimiterFor(url, previousContentType);
+    log.debug2("No rate limiter windows are open");
+    throw new RuntimeException("No rate limiter windows are open");
   }
 
   /** Pause using the the rate limiter appropriate for the current time
    * window.  If the window closed and we switched to a different window's
    * limiters, pause twice to compensate for the fact that the new rate
    * limiters haven't seen any events recently */
-  public void pauseBeforeFetch(String url, String  previousContentType) {
+  public synchronized void pauseBeforeFetch(String url,
+					    String previousContentType) {
     super.pauseBeforeFetch(url, previousContentType);
     if (didChangeWindow) {
+      log.debug2("Pausing twice due to window change");
       super.pauseBeforeFetch(url, previousContentType);
     }
     didChangeWindow = false;
   }
-
-  /** Add a conditional clause. */
-  private ConditionalCrawlRateLimiter addClause(CrawlWindow window,
-						CrawlRateLimiter crl) {
-    if (clauses == null) {
-      clauses = new ArrayList<Clause>(4);
-    }
-    clauses.add(new Clause(window, crl));
-    return this;
-  }
-
 }

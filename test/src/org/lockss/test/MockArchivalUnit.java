@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.98 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.99 2012-05-17 17:58:05 tlipkis Exp $
  */
 
 /*
@@ -85,7 +85,8 @@ public class MockArchivalUnit implements ArchivalUnit {
   private List urlStems = Collections.EMPTY_LIST;
   private Collection loginUrls;
   private String fetchRateLimiterKey;
-  private RateLimiterInfo rateInfo;
+  private RateLimiterInfo rateInfo = new RateLimiterInfo("foo", "unlimited");
+
   private String perHostPermissionPath;
   private Comparator<CrawlUrl> crawlUrlCmp;
 

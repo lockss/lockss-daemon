@@ -1,5 +1,5 @@
 /*
- * $Id: NullCrawler.java,v 1.10 2012-03-15 08:20:25 tlipkis Exp $
+ * $Id: NullCrawler.java,v 1.11 2012-05-17 17:58:05 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,9 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Deadline;
 
 public class NullCrawler implements Crawler {
+
+  String crawlPool;
+
   public boolean doCrawl() {
     throw new UnsupportedOperationException("Not implemented");
   }
@@ -84,4 +87,13 @@ public class NullCrawler implements Crawler {
 
   public void setWatchdog(LockssWatchdog wdog) {
   }
+
+  public void setCrawlPool(String key) {
+    crawlPool = key;
+  }
+
+  public String getCrawlPool() {
+    return crawlPool;
+  }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRateLimiter.java,v 1.4 2012-03-27 20:57:29 tlipkis Exp $
+ * $Id: CrawlRateLimiter.java,v 1.5 2012-05-17 17:58:06 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.crawler;
 import java.util.*;
 
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
 /**
@@ -42,6 +43,23 @@ import org.lockss.plugin.*;
  * rate limiters based on URL or MIME type, or date/time, etc.
  */
 public interface CrawlRateLimiter {
+  /** Add a crawler to the list of those using this CrawlRateLimiter */
+  public void addCrawler(Crawler c);
+
+  /** Remove a crawler from the list of those using this CrawlRateLimiter */
+  public void removeCrawler(Crawler c);
+
+  /** Return the number of crawlers using this crawl rate limiter. */
+  public int getCrawlerCount();
+
+  /** Return the number of repair crawlers using this crawl rate
+   * limiter. */
+  public int getRepairCount();
+
+  /** Return the number of new content crawlers using this crawl rate
+   * limiter. */
+  public int getNewContentCount();
+
   /** Return the RateLimiter on which to wait for the next fetch
    * @param url the url about to be fetched
    * @param previousContentType the MIME type or Content-Type of the
@@ -54,7 +72,7 @@ public interface CrawlRateLimiter {
    * @param previousContentType the MIME type or Content-Type of the
    * previous file fetched
    */
-  public void pauseBeforeFetch(String url, String  previousContentType);
+  public void pauseBeforeFetch(String url, String previousContentType);
 
   /** Return the number of times this CrawlRateLimiter has been asked to
    * pause.  Used to check that rate limiter is actually being invoked. */

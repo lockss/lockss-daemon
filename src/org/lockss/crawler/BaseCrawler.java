@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.47 2012-03-27 20:57:29 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.48 2012-05-17 17:58:06 tlipkis Exp $
  */
 
 /*
@@ -217,6 +217,7 @@ public abstract class BaseCrawler
   protected CrawlRateLimiter crl;
   protected String previousContentType;
   protected int pauseCounter = 0;
+  protected String crawlPoolKey;
 
   protected BaseCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
     if (au == null) {
@@ -324,10 +325,11 @@ public abstract class BaseCrawler
   protected CrawlRateLimiter getCrawlRateLimiter() {
     if (crl == null) {
       if (crawlMgr != null) {
-	crl = crawlMgr.getCrawlRateLimiter(au);
-      } else {
-	crl = CrawlRateLimiter.Util.forAu(au);
+	crl = crawlMgr.getCrawlRateLimiter(this);
       }
+    }
+    if (crl == null) {
+      crl = CrawlRateLimiter.Util.forAu(au);
     }
     return crl;
   }
@@ -609,6 +611,14 @@ public abstract class BaseCrawler
 
   public CrawlerStatus getCrawlerStatus() {
     return crawlStatus;
+  }
+
+  public void setCrawlPool(String key) {
+    crawlPoolKey = key;
+  }
+
+  public String getCrawlPool() {
+    return crawlPoolKey;
   }
 
   protected void cacheWithRetries(UrlCacher uc) throws IOException {

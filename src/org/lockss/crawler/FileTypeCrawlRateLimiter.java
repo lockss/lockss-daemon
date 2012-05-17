@@ -1,5 +1,5 @@
 /*
- * $Id: FileTypeCrawlRateLimiter.java,v 1.1 2012-03-27 20:57:29 tlipkis Exp $
+ * $Id: FileTypeCrawlRateLimiter.java,v 1.2 2012-05-17 17:58:06 tlipkis Exp $
  */
 
 /*
@@ -33,8 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 import java.util.*;
-import java.io.*;
-import java.text.*;
 import java.util.regex.*;
 
 import org.lockss.util.*;
@@ -45,6 +43,7 @@ import org.lockss.plugin.base.*;
 /**
  * Manages the rate limiters in use by a crawl: default limiter plus
  * optional MIME-type or URL dependent limiters.
+ * @ThreadSafe
  */
 public class FileTypeCrawlRateLimiter extends BaseCrawlRateLimiter {
   static Logger log = Logger.getLogger("FileTypeCrawlRateLimiter");
@@ -126,7 +125,7 @@ public class FileTypeCrawlRateLimiter extends BaseCrawlRateLimiter {
    * previous file fetched
    */
   public RateLimiter getRateLimiterFor(String url, String previousContentType) {
-    if (urlLimiters != null) {
+    if (urlLimiters != null && !StringUtil.isNullString(url)) {
       for (PatElem pe : urlLimiters) {
 	if (pe.pat.matcher(url).find()) {
 	  return pe.limiter;
@@ -134,7 +133,8 @@ public class FileTypeCrawlRateLimiter extends BaseCrawlRateLimiter {
       }
       return defaultLimiter;
     }
-    if (mimeLimiterMap != null) {
+    if (mimeLimiterMap != null &&
+	!StringUtil.isNullString(previousContentType)) {
       String mime = HeaderUtil.getMimeTypeFromContentType(previousContentType);
       RateLimiter res = mimeLimiterMap.get(mime);
       if (res == null) {

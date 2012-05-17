@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.26 2012-03-27 20:57:29 tlipkis Exp $
+ * $Id: MockCrawlManager.java,v 1.27 2012-05-17 17:58:05 tlipkis Exp $
  */
 
 /*
@@ -98,11 +98,11 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
     scheduleNewContentCrawl(au, cb, cookie);
   }
 
-  public CrawlRateLimiter getCrawlRateLimiter(ArchivalUnit au) {
+  public CrawlRateLimiter getCrawlRateLimiter(Crawler crawler) {
     if (crl != null) {
       return crl;
     }
-    return CrawlRateLimiter.Util.forAu(au);
+    return CrawlRateLimiter.Util.forAu(crawler.getAu());
   }
 
   public void setCrawlRateLimiter(CrawlRateLimiter crl) {

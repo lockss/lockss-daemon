@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlRateLimiter.java,v 1.3 2012-03-27 20:57:29 tlipkis Exp $
+ * $Id: TestCrawlRateLimiter.java,v 1.4 2012-05-17 17:58:06 tlipkis Exp $
  */
 
 /*
@@ -40,8 +40,57 @@ import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 
 public class TestCrawlRateLimiter extends LockssTestCase {
+
+  public void testAccessors() {
+    RateLimiterInfo rli = new RateLimiterInfo("key1", 50000);
+    CrawlRateLimiter crl = CrawlRateLimiter.Util.forRli(rli);
+    assertEquals(0, crl.getCrawlerCount());
+    assertEquals(0, crl.getNewContentCount());
+    assertEquals(0, crl.getRepairCount());
+    MockCrawler mc1 = new MockCrawler();
+    mc1.setIsWholeAU(false);
+    crl.addCrawler(mc1);
+    assertEquals(1, crl.getCrawlerCount());
+    assertEquals(0, crl.getNewContentCount());
+    assertEquals(1, crl.getRepairCount());
+
+    MockCrawler mc2 = new MockCrawler();
+    mc2.setIsWholeAU(true);
+    crl.addCrawler(mc2);
+    assertEquals(2, crl.getCrawlerCount());
+    assertEquals(1, crl.getNewContentCount());
+    assertEquals(1, crl.getRepairCount());
+
+    MockCrawler mc3 = new MockCrawler();
+    mc3.setIsWholeAU(false);
+    crl.addCrawler(mc3);
+    assertEquals(3, crl.getCrawlerCount());
+    assertEquals(1, crl.getNewContentCount());
+    assertEquals(2, crl.getRepairCount());
+
+    crl.removeCrawler(mc2);
+    assertEquals(2, crl.getCrawlerCount());
+    assertEquals(0, crl.getNewContentCount());
+    assertEquals(2, crl.getRepairCount());
+
+    crl.removeCrawler(mc2);
+    assertEquals(2, crl.getCrawlerCount());
+    assertEquals(0, crl.getNewContentCount());
+    assertEquals(2, crl.getRepairCount());
+
+    crl.removeCrawler(mc1);
+    assertEquals(1, crl.getCrawlerCount());
+    assertEquals(0, crl.getNewContentCount());
+    assertEquals(1, crl.getRepairCount());
+
+    crl.removeCrawler(mc3);
+    assertEquals(0, crl.getCrawlerCount());
+    assertEquals(0, crl.getNewContentCount());
+    assertEquals(0, crl.getRepairCount());
+  }
+
   public void testMime() {
-    RateLimiterInfo rli = new RateLimiterInfo("key1", 1, 50000);
+    RateLimiterInfo rli = new RateLimiterInfo("key1", 50000);
     Map<String,String> mimes =
       MapUtil.map("text/html,text/x-html,application/pdf", "10/1m",
 		  "image/*", "5/1s");
@@ -49,7 +98,6 @@ public class TestCrawlRateLimiter extends LockssTestCase {
     CrawlRateLimiter crl = CrawlRateLimiter.Util.forRli(rli);
     RateLimiter limiter = crl.getRateLimiterFor("url", "text/html");
     assertEquals("10/1m", limiter.getRate());
-    assertSame(limiter, crl.getRateLimiterFor("url", "text/html"));
     assertSame(limiter, crl.getRateLimiterFor("url",
 					      "text/html; charset=utf-8"));
     assertSame(limiter, crl.getRateLimiterFor("url", "text/x-html"));
@@ -66,10 +114,11 @@ public class TestCrawlRateLimiter extends LockssTestCase {
     limiter = crl.getRateLimiterFor("url", "noimage/gif");
     assertEquals("1/50000", limiter.getRate());
     assertSame(limiter, crl.getRateLimiterFor("url", "application/*"));
+    assertSame(limiter, crl.getRateLimiterFor("url", null));
   }
 
   public void testMimeWithDefault() {
-    RateLimiterInfo rli = new RateLimiterInfo("key1", 1, 50000);
+    RateLimiterInfo rli = new RateLimiterInfo("key1", 50000);
     Map<String,String> mimes =
       MapUtil.map("text/html,text/x-html,application/pdf", "10/1m",
 		  "text/*", "31/4159",
@@ -97,10 +146,10 @@ public class TestCrawlRateLimiter extends LockssTestCase {
   }
 
   public void testUrl() {
-    RateLimiterInfo rli = new RateLimiterInfo("key1", 1, 50000);
+    RateLimiterInfo rli = new RateLimiterInfo("key1", 50000);
     Map<String,String> urlPats =
-      MapUtil.map("(\\.gif)|(\\.jpeg)|(\\.png)", "5/1s",
-			  "(\\.html)|(\\.pdf)", "10/1m");
+      MapUtil.map("(\\.gif$)|(\\.jpeg$)|(\\.png$)", "5/1s",
+		  "(\\.html$)|(\\.pdf$)", "10/1m");
     rli.setUrlRates(urlPats);
     CrawlRateLimiter crl = CrawlRateLimiter.Util.forRli(rli);
     RateLimiter limiter = crl.getRateLimiterFor("http://foo.bar/x.png",
@@ -116,14 +165,16 @@ public class TestCrawlRateLimiter extends LockssTestCase {
     assertSame(defLimiter, crl.getRateLimiterFor("http://foo.bar/y.toc",
 						 "foo/bar"));
     assertSame(defLimiter, crl.getRateLimiterFor("url", null));
+    // null URL shouldn't happen, but ensure it doesn't throw
+    assertSame(defLimiter, crl.getRateLimiterFor(null, null));
   }
 
   public void testPause() {
     TimeBase.setSimulated(1000);
-    RateLimiterInfo rli = new RateLimiterInfo("key1", 1, 50000);
+    RateLimiterInfo rli = new RateLimiterInfo("key1", 50000);
     Map<String,String> urlPats =
-      MapUtil.map("(\\.gif)|(\\.jpeg)|(\\.png)", "5/1s",
-			  "(\\.html)|(\\.pdf)", "10/1m");
+      MapUtil.map("\\.(gif)|(jpeg)|(png)$", "5/1s",
+		  "\\.(html)|(pdf)$", "10/1m");
     rli.setUrlRates(urlPats);
     CrawlRateLimiter crl = new MyCrawlRateLimiter(rli);
     MockRateLimiter defLimiter =
@@ -168,39 +219,61 @@ public class TestCrawlRateLimiter extends LockssTestCase {
     // Large numerators prevent pauseBeforeFetch() from sleeping, allowing
     // use of simulated time
     RateLimiterInfo rli = new RateLimiterInfo("bar", "5/13000");
-    CrawlWindow win1 = new CrawlWindows.Daily("1:00", "3:00", "GMT");
-    CrawlWindow win2 = new CrawlWindows.Daily("3:00", "1:00", "GMT");
+    CrawlWindow win1 = new CrawlWindows.Daily("8:00", "19:00", "GMT");
+    CrawlWindow win2 = new CrawlWindows.Daily("19:00", "2:00", "GMT");
+    CrawlWindow win3 = new CrawlWindows.Always();
     RateLimiterInfo rli1 = new RateLimiterInfo("one", "3/300");
-    RateLimiterInfo rli2 = new RateLimiterInfo("two", "4/500");
-    rli2.setUrlRates(MapUtil.map(".*\\.pdf", "10/2s", ".*/images/.*", "20/1"));
+    RateLimiterInfo rli2 = new RateLimiterInfo("two", "4/500")
+      .setUrlRates(MapUtil.map(".*\\.pdf", "10/2s", ".*/images/.*", "20/1"));
+    RateLimiterInfo rli3 = new RateLimiterInfo("three", "5/600");
     LinkedHashMap map = new LinkedHashMap();
     map.put(win1, rli1);
     map.put(win2, rli2);
+    map.put(win3, rli3);
     rli.setCond(map);
-
     CrawlRateLimiter crl = CrawlRateLimiter.Util.forRli(rli);
-    TimeBase.setSimulated("1970/1/1 1:30:0");
+
+    // win1
+    TimeBase.setSimulated("1970/1/1 13:00:00");
     assertEquals("3/300", crl.getRateLimiterFor("foo.pdf", null).getRate());
     assertEquals("3/300", crl.getRateLimiterFor("foo.bar", null).getRate());
     crl.pauseBeforeFetch("foo.pdf", null);
     assertEquals(1, crl.getPauseCounter());
     crl.pauseBeforeFetch("foo.pdf", null);
     assertEquals(2, crl.getPauseCounter());
-    TimeBase.setSimulated("1970/1/1 3:30:0");
+
+    // Change to win2
+    TimeBase.setSimulated("1970/1/1 22:00:00");
     assertEquals("10/2s", crl.getRateLimiterFor("foo.pdf", null).getRate());
     assertEquals("4/500", crl.getRateLimiterFor("foo.bar", null).getRate());
     crl.pauseBeforeFetch("foo.pdf", null);
     // window change should cause two pauses
     assertEquals(4, crl.getPauseCounter());
-    TimeBase.setSimulated("1970/1/1 3:45:0");
+    assertEquals("10/2s", crl.getRateLimiterFor("foo.pdf", null).getRate());
+    assertEquals("4/500", crl.getRateLimiterFor("foo.bar", null).getRate());
+    // Stay in win2
+    TimeBase.setSimulated("1970/1/1 22:30:00");
     crl.pauseBeforeFetch("foo.pdf", null);
     assertEquals(5, crl.getPauseCounter());
-    TimeBase.setSimulated("1970/1/1 3:45:0");
+    assertEquals("10/2s", crl.getRateLimiterFor("foo.pdf", null).getRate());
+    // Stay in win2
+    TimeBase.setSimulated("1970/1/1 1:45:0");
     crl.pauseBeforeFetch("foo.pdf", null);
     assertEquals(6, crl.getPauseCounter());
+    assertEquals("10/2s", crl.getRateLimiterFor("foo.pdf", null).getRate());
+
+    // Change to Always window
     TimeBase.setSimulated("1970/1/1 4:30:0");
     crl.pauseBeforeFetch("foo.pdf", null);
-    assertEquals(7, crl.getPauseCounter());
+    assertEquals(8, crl.getPauseCounter());
+    assertEquals("5/600", crl.getRateLimiterFor("foo.pdf", null).getRate());
+    assertEquals("5/600", crl.getRateLimiterFor("foo.bar", null).getRate());
+
+    // Back to win2
+    TimeBase.setSimulated("1970/1/2 1:45:0");
+    crl.pauseBeforeFetch("foo.pdf", null);
+    assertEquals(10, crl.getPauseCounter());
+    assertEquals("10/2s", crl.getRateLimiterFor("foo.pdf", null).getRate());
   }
 
   static class MyCrawlRateLimiter extends FileTypeCrawlRateLimiter {

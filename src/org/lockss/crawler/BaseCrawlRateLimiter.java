@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawlRateLimiter.java,v 1.1 2012-03-27 20:57:29 tlipkis Exp $
+ * $Id: BaseCrawlRateLimiter.java,v 1.2 2012-05-17 17:58:06 tlipkis Exp $
  */
 
 /*
@@ -32,17 +32,63 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
+import java.util.*;
+
+import org.lockss.daemon.*;
 import org.lockss.util.*;
 
 /**
- * Common functionality for CrawlRateLimiter implementations
+ * Common functionality for CrawlRateLimiter implementations.
+ * This and subclasses are required to be thread safe
+ * @ThreadSafe
  */
 public abstract class BaseCrawlRateLimiter implements CrawlRateLimiter {
   static Logger log = Logger.getLogger("BaseCrawlRateLimiter");
 
+  protected Set<Crawler> crawlers = new HashSet<Crawler>();
   protected int pauseCounter = 0;
 
   public BaseCrawlRateLimiter() {
+  }
+
+  /** Add a crawler to the list of those using this CrawlRateLimiter */
+  public void addCrawler(Crawler c) {
+    crawlers.add(c);
+  }
+
+  /** Remove a crawler from the list of those using this CrawlRateLimiter */
+  public void removeCrawler(Crawler c) {
+    crawlers.remove(c);
+  }
+
+  /** Return the number of crawlers actively using this crawl rate
+   * limiter. */
+  public int getCrawlerCount() {
+    return crawlers.size();
+  }
+
+  /** Return the number of repair crawlers actively using this crawl rate
+   * limiter. */
+  public int getRepairCount() {
+    int res = 0;
+    for (Crawler c : crawlers) {
+      if (!c.isWholeAU()) {
+	res++;
+      }
+    }
+    return res;
+  }
+
+  /** Return the number of new content crawlers actively using this crawl
+   * rate limiter. */
+  public int getNewContentCount() {
+    int res = 0;
+    for (Crawler c : crawlers) {
+      if (c.isWholeAU()) {
+	res++;
+      }
+    }
+    return res;
   }
 
   /** Wait until it's time for the next fetch

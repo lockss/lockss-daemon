@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.90 2012-03-15 08:20:25 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.91 2012-05-17 17:58:06 tlipkis Exp $
 */
 
 /*
@@ -1231,6 +1231,10 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       }
     }    
 
+    CrawlRateLimiter getCrl(Crawler c) {
+      return crawlManager.getCrawlRateLimiter(c);
+    }
+
     public void testOdcQueue() throws Exception {
       Properties p = new Properties();
       p.put(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "-1");
@@ -1259,21 +1263,41 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       setAu(aus[5], Crawler.STATUS_WINDOW_CLOSED, -1, 2001, "foo");
       setAu(aus[6], Crawler.STATUS_WINDOW_CLOSED, 1001, 1001, "foo");
       setAu(aus[7], 0, -1, 1001, "foo");
-      setAu(aus[8], 0, 124, -1, "foo");
-      setAu(aus[9], 0, 124, 457, "foo");
+      setAu(aus[8], 0, 124, -1, "foo");		// repair
+      setAu(aus[9], 0, 124, 457, "foo");	// repair
 
       setAu(aus[10], Crawler.STATUS_WINDOW_CLOSED, -1, 2002, "bar");
       setAu(aus[11], Crawler.STATUS_WINDOW_CLOSED, 1002, 1002, "bar");
       setAu(aus[12], 0, -1, 1002, "bar");
       setAu(aus[13], 0, 125, -1, "bar");
-      setAu(aus[14], 0, 125, 458, "bar");
+      setAu(aus[14], 0, 125, 458, "bar");	// repair
 
       assertEquals(0, crawlManager.rebuildCount);
       assertEquals(aus[5], crawlManager.nextReq().au);
       assertEquals(1, crawlManager.rebuildCount);
-      crawlManager.addToRunningRateKeys(aus[5]);
+      MockCrawler cr5 = crawlManager.addToRunningRateKeys(aus[5]);
+
+      // Should fail to assign a crl to another nc crawl in pool foo
+      try {
+	crawlManager.addToRunningRateKeys(aus[8]);
+	fail("Attempt to add new content crawler in full pool should throw");
+      } catch (IllegalStateException e) {
+      }
+      // Repair crawl in pool foo should get same crl as nc crawl
+      MockCrawler cr8 = crawlManager.addToRunningRateKeys(aus[8], false);
+      CrawlRateLimiter crl = getCrl(cr8);
+      assertNotNull(crl);
+      assertSame(crl, getCrl(cr5));
+      crawlManager.delFromRunningRateKeys(aus[8]);
+      
+      // Add a repair in pool bar
+      MockCrawler cr14 = crawlManager.addToRunningRateKeys(aus[14], false);
+
       assertEquals(aus[10], crawlManager.nextReq().au);
-      crawlManager.addToRunningRateKeys(aus[10]);
+      MockCrawler cr10 = crawlManager.addToRunningRateKeys(aus[10]);
+      assertNotNull(getCrl(cr10));
+      assertSame(getCrl(cr10), getCrl(cr14));
+
       assertEquals(aus[0], crawlManager.nextReq().au);
       assertEquals(aus[1], crawlManager.nextReq().au);
       crawlManager.delFromRunningRateKeys(aus[10]);
@@ -1352,28 +1376,38 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       setAu(aus[5], 0, 0, 2002, "foo");
       setAu(aus[6], 0, 0, 2004, "foo");
       setAu(aus[7], 0, 0, 2006, "foo");
-      setAu(aus[8], 0, 0, 4002, "foo");
-      setAu(aus[9], 0, 0, 4004, "foo");
+      setAu(aus[8], 0, 0, 4002, "foo");	// repair
+      setAu(aus[9], 0, 0, 4004, "foo");	// repair
 
       setAu(aus[10], 0, 0, 2001, "bar");
       setAu(aus[11], 0, 0, 2003, "bar");
       setAu(aus[12], 0, 0, 2005, "bar");
       setAu(aus[13], 0, 0, 4001, "bar");
-      setAu(aus[14], 0, 0, 4003, "bar");
+      setAu(aus[14], 0, 0, 4003, "bar"); // repair
 
       assertEquals(aus[10], crawlManager.nextReq().au);
       crawlManager.addToRunningRateKeys(aus[10]);
       aus[10].setShouldCrawlForNewContent(false);
       assertEquals(aus[5], crawlManager.nextReq().au);
-      crawlManager.addToRunningRateKeys(aus[5]);
+      MockCrawler cr5 = crawlManager.addToRunningRateKeys(aus[5]);
+
       assertEquals(aus[0], crawlManager.nextReq().au);
       aus[0].setShouldCrawlForNewContent(false);
       assertEquals(aus[11], crawlManager.nextReq().au);
-      crawlManager.addToRunningRateKeys(aus[11]);
+      MockCrawler cr11 = crawlManager.addToRunningRateKeys(aus[11]);
       aus[11].setShouldCrawlForNewContent(false);
+      assertNotSame(getCrl(cr5), getCrl(cr11));
+
+      // Repair crawl in foo should get different crl
+      MockCrawler cr8 = crawlManager.addToRunningRateKeys(aus[8], false);
+      assertNotSame(getCrl(cr5), getCrl(cr8));
+
+      // Next nc in foo should get same crl as repair
       assertEquals(aus[6], crawlManager.nextReq().au);
-      crawlManager.addToRunningRateKeys(aus[6]);
+      MockCrawler cr6 = crawlManager.addToRunningRateKeys(aus[6]);
       aus[6].setShouldCrawlForNewContent(false);
+      assertSame(getCrl(cr8), getCrl(cr6));
+
       assertEquals(aus[12], crawlManager.nextReq().au);
       crawlManager.addToRunningRateKeys(aus[12]);
       aus[12].setShouldCrawlForNewContent(false);
@@ -1665,6 +1699,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     private SimpleBinarySemaphore executedSem = new SimpleBinarySemaphore();
     private OneShotSemaphore ausStartedSem;
     private boolean isInternalAu = false;
+    private Map<ArchivalUnit,Crawler> auCrawlerMap =
+      new HashMap<ArchivalUnit,Crawler>();
 
     protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
       MockCrawler crawler = getCrawler(au);
@@ -1715,14 +1751,31 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       }
     }
 
-    void addToRunningRateKeys(ArchivalUnit au) {
-      if (au.getFetchRateLimiterKey() != null) {
-	runningRateKeys.add(au.getFetchRateLimiterKey());
-      }
-      highPriorityCrawlRequests.remove(au);
+    MockCrawler addToRunningRateKeys(ArchivalUnit au) {
+      return addToRunningRateKeys(au, true);
     }
+
+    MockCrawler addToRunningRateKeys(ArchivalUnit au, boolean isWholeAU) {
+      MockCrawler mc = new MockCrawler();
+      mc.setAu(au);
+      mc.setIsWholeAU(isWholeAU);
+      addToRunningCrawls(au, mc);
+      auCrawlerMap.put(au, mc);
+      highPriorityCrawlRequests.remove(au);
+      return mc;
+    }
+
     void delFromRunningRateKeys(ArchivalUnit au) {
-      runningRateKeys.remove(au.getFetchRateLimiterKey(), 1);
+      Crawler crawler = auCrawlerMap.get(au);
+      if (crawler != null) {
+	removeFromRunningCrawls(crawler);
+	auCrawlerMap.remove(au);
+      }
+    }
+
+    // Suppress this mechinism - just testing pool queues
+    protected boolean isRunningNCCrawl(ArchivalUnit au) {
+      return false;
     }
 
     int rebuildCount = 0;

@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.56 2012-03-15 08:20:25 tlipkis Exp $
+ * $Id: Crawler.java,v 1.57 2012-05-17 17:58:06 tlipkis Exp $
  */
 
 /*
@@ -121,6 +121,13 @@ public interface Crawler {
    * Returns an int representing the status of this crawler
    */
   public CrawlerStatus getStatus();
+
+  /** Store the crawl pool key */
+  public void setCrawlPool(String key);
+
+  /** Return the previously stored crawl pool key */
+  public String getCrawlPool();
+
 
   /**
    * Encapsulation for the methods that the PermissionMap needs from a

@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiterInfo.java,v 1.2 2012-03-27 20:58:14 tlipkis Exp $
+ * $Id: RateLimiterInfo.java,v 1.3 2012-05-17 17:58:06 tlipkis Exp $
  */
 
 /*
@@ -33,10 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
-import java.util.regex.*;
 import org.apache.commons.lang.ObjectUtils;
 
-import org.lockss.util.*;
 import org.lockss.daemon.*;
 
 /** Container to gather various pieces of plugin rate limiter info into one
@@ -44,58 +42,85 @@ import org.lockss.daemon.*;
 public class RateLimiterInfo {
 
   private String crawlPoolKey;
+  // Default rate
   private String rate;
+
+  // Rates that apply to different file types or at different times of day.
+  // It is expected that only one of these will be specified in any
+  // RateLimiterInfo instance.
+
+  // Map URL regexp to rate string
   private Map<String,String> urlRates;
+
+  // Map MIME-type (or comma-separated list of MIME-types) to rate string
   private Map<String,String> mimeRates;
+
+  // Rates (or URL- or MIME-dependent rates) that apply at specific times
+  // of day.  LinkedHashMap is used to represent ordered list of
+  // <CrawlWindow,RateLimiterInfo> pairs, concisely representable as
+  // XStream serialized text.
   private LinkedHashMap<CrawlWindow,RateLimiterInfo> cond;
 
-  public RateLimiterInfo(String crawlPoolKey, int events, long interval) {
+  /** Create a RateLimiterInfo with a crawl pool identifier and a rate.
+   * Legacy rate specification is an interval with an implied numerator
+   * (number of events) of 1. */
+  public RateLimiterInfo(String crawlPoolKey, long interval) {
     this.crawlPoolKey = crawlPoolKey;
     this.rate = "1/" + interval;
   }
 
+  /** Create a RateLimiterInfo with a crawl pool identifier and a rate. */
   public RateLimiterInfo(String crawlPoolKey, String rate) {
     this.crawlPoolKey = crawlPoolKey;
     this.rate = rate;
   }
 
+  /** Set the URL regexp -> rate map.  */
   public RateLimiterInfo setUrlRates(Map<String,String> urlRates) {
     this.urlRates = urlRates;
     return this;
   }
 
+  /** Set the MIME-type -> rate map.  */
   public RateLimiterInfo setMimeRates(Map<String,String> mimeRates) {
     this.mimeRates = mimeRates;
     return this;
   }
 
+  /** Set the CrawlWindow -> RateLimiterInfo map.  */
   public RateLimiterInfo setCond(LinkedHashMap<CrawlWindow,RateLimiterInfo>
 				 cond) {
     this.cond = cond;
     return this;
   }
 
-  public Map<CrawlWindow,RateLimiterInfo> getCond() {
+  /** Return the CrawlWindow -> RateLimiterInfo map.  */
+  public LinkedHashMap<CrawlWindow,RateLimiterInfo> getCond() {
     return cond;
   }
 
+  /** Return the crawl pool identifier  */
   public String getCrawlPoolKey() {
     return crawlPoolKey;
   }
 
+  /** Set the crawl pool identifier  */
   public RateLimiterInfo setCrawlPoolKey(String crawlPoolKey) {
     this.crawlPoolKey = crawlPoolKey;
     return this;
   }
 
+  /** Return the default rate string  */
   public String getDefaultRate() {
     return rate;
   }
 
+  /** Return the URL regexp -> rate map.  */
   public Map<String,String> getUrlRates() {
     return urlRates;
   }
 
+  /** Return the MIME-type -> rate map.  */
   public Map<String,String> getMimeRates() {
     return mimeRates;
   }

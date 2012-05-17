@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.26 2012-01-18 03:40:42 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.27 2012-05-17 17:58:06 tlipkis Exp $
  */
 
 /*
@@ -83,6 +83,9 @@ public class FuncNewContentCrawler extends LockssTestCase {
     props.setProperty(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
     maxDepth=max;
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    // crawlMgr.startService(); below is needed so init happens, this
+    // prevents crawl starter thread from doing anything.
+    props.setProperty(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "-1");
 
     props.setProperty("org.lockss.au." + auId + "." +
                       SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
@@ -110,6 +113,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
     crawlMgr = new NoPauseCrawlManagerImpl();
     theDaemon.setCrawlManager(crawlMgr);
     crawlMgr.initService(theDaemon);
+    crawlMgr.startService();
 
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
@@ -169,8 +173,8 @@ public class FuncNewContentCrawler extends LockssTestCase {
     String tp = "text/plain";
     String[] ct = {null, th, th, tp, tp, th, th, tp, tp, th, tp};
     Bag ctb = new HashBag(ListUtil.fromArray(ct));
-    CrawlRateLimiter crl = crawlMgr.getCrawlRateLimiter(sau);
-    assertEquals(ctb, new HashBag(crawlMgr.getPauseContentTypes(sau)));
+    CrawlRateLimiter crl = crawlMgr.getCrawlRateLimiter(crawler);
+    assertEquals(ctb, new HashBag(crawlMgr.getPauseContentTypes(crawler)));
   }
 
   //recursive caller to check through the whole file tree
@@ -213,7 +217,9 @@ public class FuncNewContentCrawler extends LockssTestCase {
     NoCrawlEndActionsNewContentCrawler crawler =
       new NoCrawlEndActionsNewContentCrawler(sau, spec, new MockAuState());
     crawler.setCrawlManager(crawlMgr);
+    crawlMgr.addToRunningCrawls(crawler.getAu(), crawler);
     crawler.doCrawl();
+    crawlMgr.removeFromRunningCrawls(crawler);
     return crawler;
   }
 
