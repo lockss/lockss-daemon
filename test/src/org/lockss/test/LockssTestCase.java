@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.105 2012-02-16 10:41:21 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.106 2012-05-17 18:04:35 tlipkis Exp $
  */
 
 /*
@@ -149,9 +149,13 @@ public class LockssTestCase extends TestCase {
     javaIoTmpdir = System.getProperty("java.io.tmpdir");
     ConfigManager.makeConfigManager();
     Logger.resetLogs();
-    mockDaemon = new MockLockssDaemon();
+    mockDaemon = newMockLockssDaemon();
     super.setUp();
     disableThreadWatchdog();
+  }
+
+  protected MockLockssDaemon newMockLockssDaemon() {
+    return new MockLockssDaemon();
   }
 
   /**
