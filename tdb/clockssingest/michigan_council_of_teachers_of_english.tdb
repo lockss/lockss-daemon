@@ -1,0 +1,51 @@
+{
+
+  publisher <
+    name = Michigan Council of Teachers of English
+  >
+
+  {
+  
+    title < 
+      name = Language Arts Journal of Michigan ;
+      issn = 1044-6702 ;
+      eissn =  
+    >
+    
+    plugin = org.lockss.plugin.ClockssBerkeleyElectionPressPlugin 
+    param[base_url] = http://scholarworks.gvsu.edu/
+    param[journal_abbr] = lajm
+    implicit < status ; year ; name ; param[volume] >
+
+    au < manifest ; exists ; 1985 ; Langugae Arts Journal of Michigan Volume 1 >
+    au < manifest ; exists ; 1986 ; Language Arts Journal of Michigan Volume 2 >
+    au < manifest ; exists ; 1987 ; Language Arts Journal of Michigan Volume 3 >
+    au < manifest ; exists ; 1988 ; Language Arts Journal of Michigan Volume 4 >
+    au < manifest ; exists ; 1989 ; Language Arts Journal of Michigan Volume 5 >
+    au < manifest ; exists ; 1990 ; Language Arts Journal of Michigan Volume 6 >
+    au < manifest ; exists ; 1991 ; Language Arts Journal of Michigan Volume 7 >
+    au < manifest ; exists ; 1992 ; Language Arts Journal of Michigan Volume 8 >
+    au < manifest ; exists ; 1993 ; Language Arts Journal of Michigan Volume 9 >
+    au < manifest ; exists ; 1994 ; Language Arts Journal of Michigan Volume 10 >
+    au < manifest ; exists ; 1995 ; Language Arts Journal of Michigan Volume 11 >
+    au < manifest ; exists ; 1996 ; Language Arts Journal of Michigan Volume 12 >
+    au < manifest ; exists ; 1997 ; Language Arts Journal of Michigan Volume 13 >
+    au < manifest ; exists ; 1998 ; Language Arts Journal of Michigan Volume 14 >
+    au < manifest ; exists ; 1999 ; Language Arts Journal of Michigan Volume 15 >
+    au < manifest ; exists ; 2000 ; Language Arts Journal of Michigan Volume 16 >
+    au < manifest ; exists ; 2001 ; Language Arts Journal of Michigan Volume 17 >
+    au < manifest ; exists ; 2002 ; Language Arts Journal of Michigan Volume 18 >
+    au < manifest ; exists ; 2003 ; Language Arts Journal of Michigan Volume 19 >
+    au < manifest ; exists ; 2004 ; Language Arts Journal of Michigan Volume 20 >
+    au < manifest ; exists ; 2005 ; Language Arts Journal of Michigan Volume 21 >
+    au < manifest ; exists ; 2006 ; Language Arts Journal of Michigan Volume 22 >
+    au < manifest ; exists ; 2007 ; Language Arts Journal of Michigan Volume 23 >
+    au < manifest ; exists ; 2008 ; Language Arts Journal of Michigan Volume 24 >
+    au < manifest ; exists ; 2009 ; Language Arts Journal of Michigan Volume 25 >
+    au < manifest ; exists ; 2010 ; Language Arts Journal of Michigan Volume 26 >
+    au < manifest ; exists ; 2011 ; Language Arts Journal of Michigan Volume 27 >
+   
+
+  }
+
+}
