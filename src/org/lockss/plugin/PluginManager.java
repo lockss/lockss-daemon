@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.222 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.223 2012-05-17 17:59:31 tlipkis Exp $
  */
 
 /*
@@ -362,7 +362,7 @@ public class PluginManager
     log.debug("Initializing loadable plugin registries before starting AUs");
     initLoadablePluginRegistries(getPluginRegistryUrls(config));
     synchStaticPluginList(config);
-    configureAllPlugins(config);
+    configureAllPlugins();
     // Start watching for changes to plugin registry AUs
     registerAuEventHandler(regAuEventHandler);
     loadablePluginsReady = true;
@@ -456,20 +456,26 @@ public class PluginManager
 
       // Process any changed AU config
       if (changedKeys.contains(PARAM_AU_TREE)) {
-	configureAllPlugins(config);
+	configureAllPlugins();
       }
     }
   }
 
   private enum SkipConfigCondition {ConfigUnchanged, AuRunning};
 
-  private void configureAllPlugins(Configuration config) {
-    Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
-    if (!allPlugs.equals(currentAllPlugs)) {
-      List<String> plugKeys = ListUtil.fromIterator(allPlugs.nodeIterator());
-      List<String> randKeys = CollectionUtil.randomPermutation(plugKeys);
-      configurePlugins(randKeys, allPlugs, SkipConfigCondition.ConfigUnchanged);
-      currentAllPlugs = allPlugs;
+  private void configureAllPlugins() {
+    synchronized (auAddDelLock) {
+      // Refetch current config while holding lock to ensure see any
+      // updates made while config reload already in progress.
+      Configuration config = CurrentConfig.getCurrentConfig();
+      Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
+      if (!allPlugs.equals(currentAllPlugs)) {
+	List<String> plugKeys = ListUtil.fromIterator(allPlugs.nodeIterator());
+	List<String> randKeys = CollectionUtil.randomPermutation(plugKeys);
+	configurePlugins(randKeys, allPlugs,
+			 SkipConfigCondition.ConfigUnchanged);
+	currentAllPlugs = allPlugs;
+      }
     }
   }
 
@@ -1220,37 +1226,39 @@ public class PluginManager
   // Stops and restarts a set of AUs so that they start using the current
   // version of their plugin.  Waits a little while between stopping and
   // starting to allow existing processes to exit.  It's expected that this
-  // will cause lots of errors to be logger
+  // will cause lots of errors to be logged
   void restartAus(Collection<ArchivalUnit> aus) {
     if (paramRestartAus) {
       log.info("Restarting " + aus.size() + " AUs to use updated plugins.  Exiting processes may log errors; they should be harmless");
-      Map<String, Configuration> configMap = new HashMap();
-      for (ArchivalUnit au : aus) {
-	String auid = au.getAuId();
-	Configuration auConf = au.getConfiguration();
-	configMap.put(auid, auConf);
-	numAusRestarting++;
-	stopAu(au, AuEvent.RestartDelete);
-      }
-      try {
-	Deadline.in(auRestartSleep(aus.size())).sleep();
-      } catch (InterruptedException ex) {
-      }
-    
-      for (Map.Entry<String,Configuration> ent : configMap.entrySet()) {
-	String auid = ent.getKey();
-	Configuration auConf = ent.getValue();
-	String pkey = pluginKeyFromId(pluginIdFromAuId(auid));
-	Plugin plug = getPlugin(pkey);
-	try {
-	  ArchivalUnit newAu = createAu(plug, auConf, AuEvent.RestartCreate);
-	  numAusRestarting--;
-	} catch (ArchivalUnit.ConfigurationException e) {
-	  log.error("Failed to restart: " + auid);
+      synchronized (auAddDelLock) {
+	Map<String, Configuration> configMap = new HashMap();
+	for (ArchivalUnit au : aus) {
+	  String auid = au.getAuId();
+	  Configuration auConf = au.getConfiguration();
+	  configMap.put(auid, auConf);
+	  numAusRestarting++;
+	  stopAu(au, AuEvent.RestartDelete);
 	}
+	try {
+	  Deadline.in(auRestartSleep(aus.size())).sleep();
+	} catch (InterruptedException ex) {
+	}
+    
+	for (Map.Entry<String,Configuration> ent : configMap.entrySet()) {
+	  String auid = ent.getKey();
+	  Configuration auConf = ent.getValue();
+	  String pkey = pluginKeyFromId(pluginIdFromAuId(auid));
+	  Plugin plug = getPlugin(pkey);
+	  try {
+	    ArchivalUnit newAu = createAu(plug, auConf, AuEvent.RestartCreate);
+	    numAusRestarting--;
+	  } catch (ArchivalUnit.ConfigurationException e) {
+	    log.error("Failed to restart: " + auid);
+	  }
+	}
+	numFailedAuRestarts += numAusRestarting;
+	numAusRestarting = 0;
       }
-      numFailedAuRestarts += numAusRestarting;
-      numAusRestarting = 0;
     }
   }
 
@@ -2412,10 +2420,10 @@ public class PluginManager
 
   protected void processOneRegistryJar(CachedUrl cu, String url,
 				       ArchivalUnit au, Map tmpMap) {
-    Integer curVersion = new Integer(cu.getVersion());
+    Integer curVersion = Integer.valueOf(cu.getVersion());
 
     if (cuNodeVersionMap.get(url) == null) {
-      cuNodeVersionMap.put(url, new Integer(-1));
+      cuNodeVersionMap.put(url, Integer.valueOf(-1));
     }
 
     // If we've already visited this CU, skip it unless the current
@@ -2498,7 +2506,7 @@ public class PluginManager
 	  info.setCuUrl(url);
 	  info.setRegistryAu(au);
 	  List urls = info.getResourceUrls();
-	  if (urls != null & !urls.isEmpty()) {
+	  if (urls != null && !urls.isEmpty()) {
 	    String jar = urls.get(0).toString();
 	    if (jar != null) {
 	      // If the blessed jar path is a substring of the jar:
