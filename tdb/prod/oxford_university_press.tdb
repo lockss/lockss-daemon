@@ -1939,9 +1939,10 @@
   
   {
 
-    plugin = org.lockss.plugin.highwire.TriggeredHighWirePressH20Plugin
-     param[base_url] = http://brief-treatment.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20TriggeredPlugin
+    param[base_url] = http://brief-treatment.oxfordjournals.org/
     comment[doNotProcess] = This section is under construction -- do not process
+    attr[title_url] = http://www.clockss.org/clockss/Brief_Treatment_and_Crisis_Intervention
 
     implicit < status ; year ; name ; param[volume_name] ; proxy >
 
