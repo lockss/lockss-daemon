@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.68 2012-02-16 10:31:08 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.69 2012-05-17 18:04:54 tlipkis Exp $
  */
 
 /*
@@ -784,6 +784,14 @@ public class MockLockssDaemon extends LockssDaemon {
   public void startOrReconfigureAuManagers(ArchivalUnit au,
 					   Configuration auConfig)
       throws Exception {
+  }
+
+  /** For tests that override startOrReconfigureAuManagers and want to
+   * conditionally start them. */
+  public void reallyStartOrReconfigureAuManagers(ArchivalUnit au,
+						 Configuration auConfig)
+      throws Exception {
+    super.startOrReconfigureAuManagers(au, auConfig);
   }
 
   /** Return ActivityRegulator for AU */
