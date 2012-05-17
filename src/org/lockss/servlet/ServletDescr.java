@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.16 2012-01-18 03:37:52 tlipkis Exp $
+ * $Id: ServletDescr.java,v 1.17 2012-05-17 18:03:42 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,8 @@ public class ServletDescr {
   public int flags = 0;
 
   static Class UNAVAILABLE_SERVLET_MARKER = UnavailableServletMarker.class;
+
+  static Class UNCONFIGURED_SERVLET_CLASS = DisabledServlet.class;
 
   // flags
   /** Include link in nav table */

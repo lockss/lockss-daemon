@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.34 2011-06-20 07:05:59 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.35 2012-05-17 18:03:42 tlipkis Exp $
  */
 
 /*
@@ -369,6 +369,19 @@ public abstract class BaseServletManager
 				// XXX do something better here
   }
 
+  public ServletDescr findServletDescrFromPath(String path) {
+    if (path.startsWith("/")) {
+      path = path.substring(1);
+    }
+    for (ServletDescr d : getServletDescrs()) {
+      if (d.getPath().equals(path)) {
+	return d;
+      }
+    }
+    return null;		// shouldn't happen
+				// XXX do something better here
+  }
+
   public void startServlets() {
     if (isRunningOnPort(port)) {
       return;
@@ -686,9 +699,11 @@ public abstract class BaseServletManager
       Class cls = d.getServletClass();
       if (cls != null
 	  && cls != ServletDescr.UNAVAILABLE_SERVLET_MARKER
-	  && !d.isPathIsUrl()
-	  && d.isEnabled(getDaemon())) {
+	  && !d.isPathIsUrl()) {
 	String path = "/" + d.getPath();
+	if (!d.isEnabled(getDaemon())) {
+	  cls = ServletDescr.UNCONFIGURED_SERVLET_CLASS;
+	}
 	log.debug2("addServlet("+d.getServletName()+", "+path+
 		   ", "+cls.getName()+")");
 	handler.addServlet(d.getServletName(), path, cls.getName());

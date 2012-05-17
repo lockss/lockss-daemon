@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.122 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.123 2012-05-17 18:03:42 tlipkis Exp $
  */
 
 /*
@@ -510,6 +510,11 @@ public abstract class LockssServlet extends HttpServlet
 			     || roles.contains(ROLE_USER_ADMIN));
   }
 
+
+  protected boolean isServletRunnable(ServletDescr d) {
+    return isServletAllowed(d) && isServletEnabled(d);
+  }
+
   protected boolean isServletAllowed(ServletDescr d) {
     if (d.needsUserAdminRole() && !doesUserHaveRole(ROLE_USER_ADMIN))
       return false;
@@ -519,12 +524,15 @@ public abstract class LockssServlet extends HttpServlet
       return false;
     if (d.needsContentAccessRole() && !doesUserHaveRole(ROLE_CONTENT_ACCESS))
       return false;
-    
+    return true;
+  }
+
+  protected boolean isServletEnabled(ServletDescr d) {
     return d.isEnabled(getLockssDaemon());
   }
 
   protected boolean isServletDisplayed(ServletDescr d) {
-    if (!isServletAllowed(d)) return false;
+    if (!isServletRunnable(d)) return false;
     if (d.needsDebugRole() && !doesUserHaveRole(ROLE_DEBUG))
       return false;
     return true;

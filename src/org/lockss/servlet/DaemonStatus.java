@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.86 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.87 2012-05-17 18:03:42 tlipkis Exp $
  */
 
 /*
@@ -760,7 +760,7 @@ public class DaemonStatus extends LockssServlet {
     } else if (val instanceof StatusTable.SrvLink) {
       // Display as link iff user is allowed access to the target servlet
       StatusTable.SrvLink slink = (StatusTable.SrvLink)val;
-      if (isServletAllowed(slink.getServletDescr())) {
+      if (isServletRunnable(slink.getServletDescr())) {
 	return getSrvLinkString(slink, type);
       } else {
 	return getDisplayString1(StatusTable.getActualValue(val), type);
