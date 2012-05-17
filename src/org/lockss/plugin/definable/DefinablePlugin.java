@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.66 2012-03-27 20:56:30 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.67 2012-05-17 18:00:40 tlipkis Exp $
  */
 
 /*
@@ -198,8 +198,25 @@ public class DefinablePlugin extends BasePlugin {
 	next = null;
       }
     }
+    processDefault(res);
     loadedFromUrls = urls;
     return res;
+  }
+
+  void processDefault(TypedEntryMap map) {
+    List<String> delKeys = new ArrayList<String>(4);;
+    for (Map.Entry ent : map.entrySet()) {
+      Object val = ent.getValue();
+      if (val instanceof org.lockss.util.Default) {
+	String key = (String)ent.getKey();
+	log.debug(getDefaultPluginName() + ": Resetting "
+		  + key + " to default value");
+	delKeys.add(key);
+      }
+    }
+    for (String key : delKeys) {
+      map.removeMapElement(key);
+    }
   }
 
   // Move any values from obsolescent keys to their official key
@@ -228,15 +245,17 @@ public class DefinablePlugin extends BasePlugin {
       for (Map.Entry entry : (Set<Map.Entry>)overrideMap.entrySet()) {
 	String key = (String)entry.getKey();
 	Object val = entry.getValue();
-	if (val instanceof org.lockss.util.Default) {
-	  log.debug(getDefaultPluginName() + ": Overriding "
-		    + key + " with default value");
-	  map.removeMapElement(key);
-	} else {
+
+	// If we add org.lockss.util.Parent it will do something like this
+// 	if (val instanceof org.lockss.util.Default) {
+// 	  log.debug(getDefaultPluginName() + ": Overriding "
+// 		    + key + " with default value");
+// 	  map.removeMapElement(key);
+// 	} else {
 	  log.debug(getDefaultPluginName() + ": Overriding "
 		    + key + " with " + val);
 	  map.setMapElement(key, val);
-	}
+// 	}
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.44 2012-02-16 10:37:40 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.45 2012-05-17 18:00:40 tlipkis Exp $
  */
 
 /*
@@ -322,9 +322,10 @@ public class TestDefinablePlugin extends LockssTestCase {
 
     ArchiveFileTypes aft = definablePlugin.getArchiveFileTypes();
     assertSame(aft,ArchiveFileTypes.DEFAULT);
+    assertEquals("val_17", map.getString("child_cancel"));
   }
 
-  public void testGoodPluginWithOverrise() throws Exception {
+  public void testGoodPluginWithOverride() throws Exception {
     ConfigurationUtil.addFromArgs("org.lockss.daemon.testingMode",
 				  "content-testing");
     String prefix = "org.lockss.plugin.definable.";
@@ -372,6 +373,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertFalse(map.containsKey("parent_only"));
     assertEquals("child_val", map.getString("parent_cancel"));
     assertEquals("bar", map.getString("foo"));
+    assertFalse(map.containsKey("child_cancel"));
   }
 
   public void testInheritWithOverride() throws Exception {
