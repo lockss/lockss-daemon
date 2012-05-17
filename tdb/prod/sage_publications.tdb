@@ -238,10 +238,11 @@
         issn = 1522-1628 
       >
     
-      plugin = org.lockss.plugin.highwire.TriggeredHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20TriggeredPlugin
       param[base_url] = http://graft.stanford.clockss.org/
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
       comment[access] = open access triggered CLOCKSS content
+      attr[title_url] = http://www.clockss.org/clockss/Graft
 
       implicit < status ; year ; name ; param[volume_name] ; proxy >
      
