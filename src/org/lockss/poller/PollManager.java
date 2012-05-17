@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.217 2011-11-08 20:22:04 tlipkis Exp $
+ * $Id: PollManager.java,v 1.218 2012-05-17 18:01:16 tlipkis Exp $
  */
 
 /*
@@ -204,8 +204,8 @@ public class PollManager
     V3PREFIX + "toplevelPollInterval";
   public static final long DEFAULT_TOPLEVEL_POLL_INTERVAL = 10 * WEEK;
 
-  public class AuPeersMap extends HashMap<String,Set<PeerIdentity>> {}
-  public class Peer2PeerMap extends HashMap<PeerIdentity,PeerIdentity> {}
+  public static class AuPeersMap extends HashMap<String,Set<PeerIdentity>> {}
+  public static class Peer2PeerMap extends HashMap<PeerIdentity,PeerIdentity> {}
 
   // Items are moved between thePolls and theRecentPolls, so it's simplest
   // to synchronize all accesses on a single object, pollMapLock.
@@ -301,7 +301,7 @@ public class PollManager
 					// pollQueue
   protected List pollQueue = new ArrayList();
 
-  public class PollReq {
+  public static class PollReq {
     ArchivalUnit au;
     AuState aus = null;
     int priority = 0;
@@ -2036,7 +2036,7 @@ public class PollManager
    * Just a struct to hold status information per-au
    */
   // CR: Seth thinks this is redundant
-  private class V3PollStatusAccessorEntry {
+  private static class V3PollStatusAccessorEntry {
     public long lastPollTime = -1;
     public int numPolls = 0;
     public float agreement = 0.0f;
@@ -2087,6 +2087,15 @@ public class PollManager
 	} catch (RuntimeException e) {
 	  // Can happen if AU deactivated recently
 	  log.debug2("Error starting poll", e);
+	  // Avoid tight loop if startOnePoll() throws.  Just being extra
+	  // cautious in case another bug similar to Roundup 4091 arises.
+	  try {
+	    Deadline errorWait = Deadline.in(Constants.MINUTE);
+	    errorWait.sleep();
+	  } catch (InterruptedException ign) {
+	    // ignore
+	  }
+	  
 	} catch (InterruptedException e) {
 	  // check goOn
 	}
@@ -2187,8 +2196,8 @@ public class PollManager
     synchronized (queueLock) {
       pollQueue.clear();
       for (ArchivalUnit au : pluginMgr.getAllAus()) {
-	AuState auState = AuUtil.getAuState(au);
 	try {
+	  AuState auState = AuUtil.getAuState(au);
 	  if (isEligibleForPoll(au, auState)) {
 	    PollReq req = highPriorityPollRequests.get(au);
 	    if (req != null) {
