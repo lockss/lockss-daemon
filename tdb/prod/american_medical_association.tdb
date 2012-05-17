@@ -16,8 +16,9 @@
 
       {
   
-        plugin = org.lockss.plugin.highwire.TriggeredHighWirePressH20Plugin
+        plugin = org.lockss.plugin.highwire.HighWirePressH20TriggeredPlugin
         comment[access] = open access triggered CLOCKSS content
+        attr[title_url] = http://www.clockss.org/clockss/Archives_of_Family_Medicine
 
         implicit < status ;  year ; name ; param[volume_name] ; proxy >
 
