@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = Pacific University
+  >
+
+  {
+  
+    title < 
+      name = Health and Interprofessional Practice ;
+      eissn = 2159-1253 
+    >
+    
+    plugin = org.lockss.plugin.ClockssBerkeleyElectionPressPlugin 
+    param[base_url] = http://commons.pacificu.edu/
+    param[journal_abbr] = hip
+    implicit < status ; year ; name ; param[volume] >
+
+    au < manifest ; exists ; 2011-2012 ; Health and Interprofessional Practice Volume 1 >
+    
+  }
+
+}
