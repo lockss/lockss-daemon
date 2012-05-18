@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Purdue University Press
+  >
+
+  {
+  
+    title < 
+      name = Interdisciplinary Journal of Problem-Based Learning ;
+      issn = ;
+      eissn = 1541-5015 
+    >
+    
+    plugin = org.lockss.plugin.ClockssBerkeleyElectionPressPlugin 
+    param[base_url] = http://docs.lib.purdue.edu/
+    param[journal_abbr] = ijpbl
+    implicit < status ; year ; name ; param[volume] >
+
+    au < exists ; exists ; 2006 ; Interdisciplinary Journal of Problem-Based Learning Volume 1 >
+    au < exists ; exists ; 2008 ; Interdisciplinary Journal of Problem-Based Learning volume 2 >
+    au < exists ; exists ; 2009 ; Interdisciplinary Journal of Problem-Based Learning Volume 3 >
+    au < exists ; exists ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 4 >
+    au < exists ; exists ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 5 >
+    au < exists ; exists ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 6 >
+
+  }
+}

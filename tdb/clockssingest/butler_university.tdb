@@ -1,0 +1,47 @@
+{
+
+  publisher <
+    name = Butler University
+  >
+
+  {
+  
+    title < 
+      name = Journal of Hindu-Christian Studies ;
+      issn = 2164-6260;
+      eissn = 2164-6279 
+    >
+    
+    plugin = org.lockss.plugin.ClockssBerkeleyElectionPressPlugin 
+    param[base_url] = http://digitalcommons.butler.edu/
+    param[journal_abbr] = jhcs
+    implicit < status ; year ; name ; param[volume] >
+
+    au < manifest ; exists ; 1988 ; Journal of Hindu-Christian Studies Volume 1 >
+    au < manifest ; exists ; 1989 ; Journal of Hindu-Christian Studies volume 2 >
+    au < manifest ; exists ; 1990 ; Journal of Hindu-Christian Studies Volume 3 >
+    au < manifest ; exists ; 1991 ; Journal of Hindu-Christian Studies Volume 4 >
+    au < manifest ; exists ; 1992 ; Journal of Hindu-Christian Studies Volume 5 >
+    au < manifest ; exists ; 1993 ; Journal of Hindu-Christian Studies Volume 6 >
+    au < manifest ; exists ; 1994 ; Journal of Hindu-Christian Studies Volume 7 >
+    au < manifest ; exists ; 1995 ; Journal of Hindu-Christian Studies Volume 8 >
+    au < manifest ; exists ; 1996 ; Journal of Hindu-Christian Studies Volume 9 >
+    au < manifest ; exists ; 1997 ; Journal of Hindu-Christian Studies Volume 10 >
+    au < manifest ; exists ; 1998 ; Journal of Hindu-Christian Studies Volume 11 >
+    au < manifest ; exists ; 1999 ; Journal of Hindu-Christian Studies Volume 12 >
+    au < manifest ; exists ; 2000 ; Journal of Hindu-Christian Studies Volume 13 >
+    au < manifest ; exists ; 2001 ; Journal of Hindu-Christian Studies Volume 14 >
+    au < manifest ; exists ; 2002 ; Journal of Hindu-Christian Studies Volume 15 >
+    au < manifest ; exists ; 2003 ; Journal of Hindu-Christian Studies Volume 16 >
+    au < manifest ; exists ; 2004 ; Journal of Hindu-Christian Studies Volume 17 >
+    au < manifest ; exists ; 2005 ; Journal of Hindu-Christian Studies Volume 18 >
+    au < manifest ; exists ; 2006 ; Journal of Hindu-Christian Studies Volume 19 >
+    au < manifest ; exists ; 2007 ; Journal of Hindu-Christian Studies Volume 20 >
+    au < manifest ; exists ; 2008 ; Journal of Hindu-Christian Studies Volume 21 >
+    au < manifest ; exists ; 2009 ; Journal of Hindu-Christian Studies Volume 22 >
+    au < manifest ; exists ; 2010 ; Journal of Hindu-Christian Studies Volume 23 >
+    au < manifest ; exists ; 2011 ; Journal of Hindu-Christian Studies Volume 24 >
+    
+  }
+
+}
