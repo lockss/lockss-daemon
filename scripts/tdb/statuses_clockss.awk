@@ -8,7 +8,8 @@ BEGIN {
 }
 
 {
-  if (substr($3,0,4) >= $2) {
+if ((substr($3,0,4) >= $2) || ((length($3) == 9) && (substr($3,6,4) >= $2))) {
+# if (substr($3,0,4) >= $2) {
   if (!(($1,$2,$3) in b)) {
     p[pn] = $1
     t[pn] = $2
@@ -53,5 +54,6 @@ END {
     	printf "\t%d", x[s[j]]
     }
 
+  printf "\n"
 }
 
