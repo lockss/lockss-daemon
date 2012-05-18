@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = Aerospace Medical Association
+  >
+
+  {
+    title <
+      name = Aviation, Space, and Environmental Medicine ;
+      issn = 0095-6562
+    >
+
+    {
+    plugin = needs.plugin
+    param[base_url] = http://www.ingentaconnect.com/
+    implicit < status ; year ; name ; param[volume_name] >
+  
+      au < exists ; 2003 ; Aviation, Space, and Environmental Medicine Volume 74 ; 74 >
+      au < exists ; 2004 ; Aviation, Space, and Environmental Medicine Volume 75 ; 75 >
+      au < exists ; 2005 ; Aviation, Space, and Environmental Medicine Volume 76 ; 76 >
+      au < exists ; 2006 ; Aviation, Space, and Environmental Medicine Volume 77 ; 77 >
+      au < exists ; 2007 ; Aviation, Space, and Environmental Medicine Volume 78 ; 78 >
+      au < exists ; 2008 ; Aviation, Space, and Environmental Medicine Volume 79 ; 79 >
+      au < exists ; 2009 ; Aviation, Space, and Environmental Medicine Volume 80 ; 80 >
+      au < exists ; 2010 ; Aviation, Space, and Environmental Medicine Volume 81 ; 81 >
+      au < exists ; 2011 ; Aviation, Space, and Environmental Medicine Volume 82 ; 82 >
+      au < exists ; 2012 ; Aviation, Space, and Environmental Medicine Volume 83 ; 83 >
+      
+    }
+
+  }
+
+}
+
