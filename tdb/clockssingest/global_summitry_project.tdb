@@ -13,9 +13,9 @@
     plugin = org.lockss.plugin.ClockssBerkeleyElectionPressPlugin 
     param[base_url] = http://globalsummitryproject.net/
     param[journal_abbr] = global-summitry-series
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2011-2012 ; Global Summitry Series Volume 1 >
+    au < exists ; exists ; 2011-2012 ; Global Summitry Series Volume 1 ; 1 >
     
   }
 
