@@ -14,11 +14,11 @@
     plugin = org.lockss.plugin.ClockssBerkeleyElectionPressPlugin 
     param[base_url] = http://digitalcommons.kennesaw.edu/
     param[journal_abbr] = jekem
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2009 ; Journal of Emerging Knowledge on Emerging Markets Volume 1 >
-    au < exists ; exists ; 2010 ; Journal of Emerging Knowledge on Emerging Markets volume 2 >
-    au < exists ; exists ; 2011 ; Journal of Emerging Knowledge on Emerging Markets Volume 3 >
+    au < exists ; exists ; 2009 ; Journal of Emerging Knowledge on Emerging Markets Volume 1 ; 1 >
+    au < exists ; exists ; 2010 ; Journal of Emerging Knowledge on Emerging Markets Volume 2 ; 2 >
+    au < exists ; exists ; 2011 ; Journal of Emerging Knowledge on Emerging Markets Volume 3 ; 3 >
 
   }
 
