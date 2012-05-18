@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = University of Massachusetts Amherst
+  >
+
+  {
+  
+    title < 
+      name = Rasenna: Journal of the Center for Etruscan Studies ;
+      issn = 1040-073X ;
+      eissn =  
+    >
+    
+    plugin = org.lockss.plugin.ClockssBerkeleyElectionPressPlugin 
+    param[base_url] = http://scholarworks.umass.edu/
+    param[journal_abbr] = rasenna
+    implicit < status ; year ; name ; param[volume] >
+
+    au < exists ; exists ; 2007 ; Rasenna: Journal of the Center for Etruscan Studies Volume 1 >
+    au < exists ; exists ; 2009 ; Rasenna: Journal of the Center for Etruscan Studies volume 2 >
+    au < exists ; exists ; 2011 ; Rasenna: Journal of the Center for Etruscan Studies Volume 3 >
+
+  }
+
+}
