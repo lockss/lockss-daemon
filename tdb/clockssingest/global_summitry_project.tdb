@@ -1,0 +1,22 @@
+{
+
+  publisher <
+    name = The Global Summitry Project
+  >
+
+  {
+  
+    title < 
+      name = Global Summitry Series 
+    >
+    
+    plugin = org.lockss.plugin.ClockssBerkeleyElectionPressPlugin 
+    param[base_url] = http://globalsummitryproject.net/
+    param[journal_abbr] = global-summitry-series
+    implicit < status ; year ; name ; param[volume] >
+
+    au < exists ; exists ; 2011-2012 ; Global Summitry Series Volume 1 >
+    
+  }
+
+}
