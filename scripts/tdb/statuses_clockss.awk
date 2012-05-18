@@ -1,5 +1,6 @@
 #!/usr/bin/awk -f
 # input: publisher\tcontract_year\tyear\tstatus
+# add a loop to add line only if first 4 char or last 4 char of year are gt or eq to contract
 
 BEGIN {
   FS="\t"
@@ -7,6 +8,7 @@ BEGIN {
 }
 
 {
+  if (substr($3,0,4) >= $2) {
   if (!(($1,$2,$3) in b)) {
     p[pn] = $1
     t[pn] = $2
@@ -17,6 +19,7 @@ BEGIN {
   c[$1,$2,$3,$4]++
   x[$4]++
   tt++
+}
 }
 
 END {
@@ -51,3 +54,4 @@ END {
     }
 
 }
+
