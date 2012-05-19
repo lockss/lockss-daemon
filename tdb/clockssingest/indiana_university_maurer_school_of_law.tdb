@@ -4,7 +4,7 @@
     name = Indiana University Maurer School of Law
   >
   
-  attr[contract] = 2011
+  attr[contract] = 2012
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
   implicit < status ; status2 ; year ; name ; param[volume] >
   param[base_url] = http://www.repository.law.indiana.edu/
