@@ -255,7 +255,7 @@
     au < manifest ; exists ; 2009 ; Arms & Armour Volume 6 ; 6 > 
     au < crawling ; exists ; 2010 ; Arms & Armour Volume 7 ; 7 > 
     au < testing ; exists ; 2011 ; Arms & Armour Volume 8 ; 8 > 
-    au < manifest ; exists ; 2012 ; Arms & Armour Volume 9 ; 9 > 
+    au < crawling ; exists ; 2012 ; Arms & Armour Volume 9 ; 9 > 
 
   }
 
@@ -687,7 +687,7 @@
     au < manifest ; exists ; 2009 ; Central Europe Volume 7 ; 7 > 
     au < crawling ; exists ; 2010 ; Central Europe Volume 8 ; 8 > 
     au < testing ; exists ; 2011 ; Central Europe Volume 9 ; 9 > 
-    au < manifest ; exists ; 2012 ; Central Europe Volume 10 ; 10 > 
+    au < crawling ; exists ; 2012 ; Central Europe Volume 10 ; 10 > 
 
   }
 
@@ -711,7 +711,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
    
     au < testing ; exists ; 2011 ; The Chinese Historical Review Volume 18 ; 18 >  
-    au < manifest ; exists ; 2012 ; The Chinese Historical Review Volume 19 ; 19 >   
+    au < crawling ; exists ; 2012 ; The Chinese Historical Review Volume 19 ; 19 >   
     
   }
 
@@ -1604,7 +1604,7 @@
     au < doNotProcess ; exists ; 2009 ; Interdisciplinary Science Reviews Volume 34 ; 34 > 
     au < doNotProcess ; exists ; 2010 ; Interdisciplinary Science Reviews Volume 35 ; 35 > 
     au < doNotProcess ; exists ; 2011 ; Interdisciplinary Science Reviews Volume 36 ; 36 > 
-    au < manifest ; exists ; 2012 ; Interdisciplinary Science Reviews Volume 37 ; 37 > 
+    au < crawling ; exists ; 2012 ; Interdisciplinary Science Reviews Volume 37 ; 37 > 
 
   }
 
@@ -2174,7 +2174,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Communication in Healthcare Volume 2 ; 2 > 
     au < doNotProcess ; exists ; 2010 ; Journal of Communication in Healthcare Volume 3 ; 3 > 
     au < doNotProcess ; exists ; 2011 ; Journal of Communication in Healthcare Volume 4 ; 4 > 
-    au < manifest ; exists ; 2012 ; Journal of Communication in Healthcare Volume 5 ; 5 > 
+    au < crawling ; exists ; 2012 ; Journal of Communication in Healthcare Volume 5 ; 5 > 
 
   }
 
@@ -2614,7 +2614,7 @@
 
     au < crawling ; exists ; 2010 ; The Keats-Shelley Review Volume 24 ; 24 > 
     au < testing ; exists ; 2011 ; The Keats-Shelley Review Volume 25 ; 25 > 
-    au < manifest ; exists ; 2012 ; The Keats-Shelley Review Volume 26 ; 26 > 
+    au < crawling ; exists ; 2012 ; The Keats-Shelley Review Volume 26 ; 26 > 
 
   }
 
@@ -2670,7 +2670,7 @@
     au < manifest ; exists ; 2009 ; Language & History Volume 52 ; 52 > 
     au < crawling ; exists ; 2010 ; Language & History Volume 53 ; 53 > 
     au < testing ; exists ; 2011 ; Language & History Volume 54 ; 54 > 
-    au < manifest ; exists ; 2012 ; Language & History Volume 55 ; 55 >
+    au < crawling ; exists ; 2012 ; Language & History Volume 55 ; 55 >
 
   }
 
@@ -4452,7 +4452,7 @@
     au < manifest ; exists ; 2009 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2009 ; 2009 ; 36 > 
     au < crawling ; exists ; 2010 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 37 ; 37 ; 37 > 
     au < testing ; exists ; 2011 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 38 ; 38 ; 38 > 
-    au < manifest ; exists ; 2012 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 39 ; 39 ; 39 > 
+    au < crawling ; exists ; 2012 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 39 ; 39 ; 39 > 
 
   }
 
