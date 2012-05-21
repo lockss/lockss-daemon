@@ -3,49 +3,55 @@
   publisher <
     name = University of Alabama
   >
-  
+
   {
   
-    title <
-      name = University of Alabama Cunningham Photos
-    >
+    attr[approvedForRemoval] = True
+  
+    {
     
-    plugin = edu.ua.adpn.cunningham.CunninghamPlugin
-    param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
-    implicit < status ; name >
+        title <
+            name = University of Alabama: Cunningham Photos and Journal
+        >
+        
+        plugin = edu.ua.adpn.cunningham.CunninghamPlugin
+        param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/     
+        implicit < status ; name >
 
-    au < down ; University of Alabama Cunningham Photos >
+        au < superseded ; University of Alabama: Cunningham Photos and Journal [superseded] >
+
+    }
+    
+    {
+
+        title <
+            name = University of Alabama: Emphasis, 1967-1971: Symposium on Contemporary Issues
+        >
+        
+        plugin = edu.ua.adpn.emphasis68.Emphasis68RecordingsPlugin
+        param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/     
+        implicit < status ; name >
+        
+        au < superseded ; University of Alabama: Emphasis, 1967-1971: Symposium on Contemporary Issues [superseded] >
+
+    }
+    
+    {
+    
+        title <
+            name = University of Alabama: Publishers Bindings Online
+        >
+        
+        plugin = edu.ua.adpn.pboconfederate.PboConfederateImprintsPlugin
+        param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/     
+        implicit < status ; name >
+
+        au < superseded ; University of Alabama: Publishers Bindings Online [superseded] >
+
+    }
 
   }
-  
-  {
-
-    title <
-      name = University of Alabama Emphasis 1968 Recordings 
-    >
     
-    plugin = edu.ua.adpn.emphasis68.Emphasis68RecordingsPlugin
-    param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
-    implicit < status ; name >
-    
-    au < down ; University of Alabama Emphasis 1968 Recordings >
-
-  }
-  
-  {
-  
-    title <
-      name = University of Alabama Publisher Bindings Online: Confederate Imprints 
-    >
-    
-    plugin = edu.ua.adpn.pboconfederate.PboConfederateImprintsPlugin
-    param[base_url] = http://libapp.lib.ua-net.ua.edu/lockss/   
-    implicit < status ; name >
-
-    au < down ; University of Alabama Publisher Bindings Online: Confederate Imprints >
-
-  }
-  
   {
   
     plugin = edu.ua.adpn.contentdm.UAContentDmPlugin
@@ -55,7 +61,39 @@
     {
 
       title <
-        name = University of Alabama Hoole Special Collections: Image Collections
+        name = University of Alabama Collections: Libraries Research Collections (u0015)
+      >
+
+      au < manifest ; University of Alabama: The University of Alabama Electronic Theses and Dissertations (u0015/0000001) ; u0015/0000001 >
+
+    }
+
+    {
+
+      title <
+        name = University of Alabama Hoole Special Collections: Audio Collections (u0008)
+      >
+
+      au < ready ; University of Alabama: Emphasis, 1967-1971: Symposium on Contemporary Issues (u0008/0000001) ; u0008/0000001 >
+      au < doNotProcess ; University of Alabama: Harald Rohlig Organ Music (u0008/0000002) ; u0008/0000002 >
+      au < doNotProcess ; University of Alabama: Working Lives Oral History Project (u0008/0000003) ; u0008/0000003 >
+
+    }
+
+    {
+
+      title <
+        name = University of Alabama Hoole Special Collections: Graphics Collections (u0011)
+      >
+
+      au < ready ; University of Alabama: Publishers Bindings Online (u0011/0000011) ; u0011/0000011 >
+
+    }
+
+    {
+
+      title <
+        name = University of Alabama Hoole Special Collections: Image Collections (u0001)
       >
 
       au < released ; University of Alabama: The University of Alabama Encyclopedia (u0001/1831001) ; u0001/1831001 >
@@ -73,6 +111,7 @@
       au < released ; University of Alabama: Sesquicentennial Ball Photographs (u0001/2008023) ; u0001/2008023 >
       au < released ; University of Alabama: Album of Friendship Collection (u0001/2008028) ; u0001/2008028 >
       au < released ; University of Alabama: Roland McMillan Harper photo collection (u0001/2008032) ; u0001/2008032 >
+      au < manifest ; University of Alabama: The George Nichols Photographic Collection (u0001/2008035) ; u0001/2008035 >
       au < released ; University of Alabama: Wade Hall Photograph Collection 1 (u0001/2009001) ; u0001/2009001 >
       au < released ; University of Alabama: Wade Hall Photograph Collection 2 (u0001/2009002) ; u0001/2009002 >
       au < released ; University of Alabama: Wade Hall Photograph Collection 3 (u0001/2009003) ; u0001/2009003 >
@@ -117,25 +156,7 @@
     {
 
       title <
-        name = University of Alabama Hoole Special Collection: Text Collections
-      >
-
-      au < released ; University of Alabama: Rammer Jammer (u0002/0000001) ; u0002/0000001 >
-      au < released ; University of Alabama: The Corolla (u0002/0000002) ; u0002/0000002 >
-      au < released ; University of Alabama: Voyages dans l'Amérique Septentrionale (u0002/0000003/0000001) ; u0002/0000003/0000001 >
-      au < released ; University of Alabama: Claudii Ptholemaei Alexandrini Liber Geographiae (u0002/0000003/0000002) ; u0002/0000003/0000002 >
-      au < released ; University of Alabama: Life Studies of the Great Army (u0002/0000003/0000003) ; u0002/0000003/0000003 >
-      au < released ; University of Alabama: French Revolutionary Pamphlets (u0002/0000006) ; u0002/0000006 >
-      au < released ; University of Alabama: Crimson White (u0002/0000007) ; u0002/0000007 >
-      au < released ; University of Alabama: The Mahout (u0002/0000008) ; u0002/0000008 >
-      au < released ; University of Alabama: A Register of the Officers and Students of the University of Alabama 1831-1901 (u0002/0000010) ; u0002/0000010 >
-
-    }
-
-    {
-
-      title <
-        name = University of Alabama Hoole Special Collections: Manuscript Collections
+        name = University of Alabama Hoole Special Collections: Manuscript Collections (u0003)
       >
 
       comment[u_3_252] = size approx 2.1TB
@@ -145,13 +166,23 @@
       comment[u_3_328] = size approx 350GB
 
       au < released ; University of Alabama: Edwin A. Abbott papers (u0003/0000001) ; u0003/0000001 >
+      au < manifest ; University of Alabama: Lecture Notes on John W. Abercrombie (u0003/0000002) ; u0003/0000002 >
       au < released ; University of Alabama: Macon Abernathy papers (u0003/0000003) ; u0003/0000003 >
+      au < manifest ; University of Alabama: William P. Abrams diaries (u0003/0000005) ; u0003/0000005 >
+      au < manifest ; University of Alabama: Adams family papers (u0003/0000006) ; u0003/0000006 >
+      au < manifest ; University of Alabama: Charles E. Adams papers (u0003/0000007) ; u0003/0000007 >
       au < released ; University of Alabama: Roland Lee Adams papers (u0003/0000011) ; u0003/0000011 >
+      au < manifest ; University of Alabama: Alabama Air National Guard letter of authorization (u0003/0000014) ; u0003/0000014 >
+      au < manifest ; University of Alabama: Al Andrews Amateur Journalism Collection (u0003/0000016) ; u0003/0000016 >
       au < released ; University of Alabama: Alabama Warriors speech text (u0003/0000053) ; u0003/0000053 >
       au < released ; University of Alabama: Askew family papers (u0003/0000091) ; u0003/0000091 >
       au < released ; University of Alabama: William K. Bachman ordnance return and muster roll (u0003/0000101) ; u0003/0000101 >
+      au < manifest ; "University of Alabama: \"From Mills Point to the Big Sandy\" newspaper column scrapbook (u0003/0000103)" ; u0003/0000103 >
+      au < manifest ; University of Alabama: Ku Klux Klan songbook (u0003/0000122) ; u0003/0000122 >
+      au < manifest ; University of Alabama: Boyd Winchester literary addresses scrapbook (u0003/0000123) ; u0003/0000123 >
       au < released ; University of Alabama: Tom S. Birdsong paper (u0003/0000159) ; u0003/0000159 >
       au < released ; University of Alabama: James M. Boling papers (u0003/0000181) ; u0003/0000181 >
+      au < manifest ; University of Alabama: Autograph Album (u0003/0000182) ; u0003/0000182 >
       au < released ; University of Alabama: Broadnax, Cleavland, and McKerrill account ledger (u0003/0000213) ; u0003/0000213 >
       au < released ; University of Alabama: Joseph Emerson Brown letters (u0003/0000219) ; u0003/0000219 >
       au < released ; University of Alabama: Francis Bugbee papers (u0003/0000228) ; u0003/0000228 >
@@ -159,19 +190,26 @@
       au < down ; University of Alabama: Septimus D. Cabaniss Papers (u0003/0000252) ; u0003/0000252 >
       au < released ; University of Alabama: A. and R. Cain Tannery and General Store Records (u0003/0000254) ; u0003/0000254 >
       au < released ; University of Alabama: Theron Cannon Records (u0003/0000270) ; u0003/0000270 >
+      au < manifest ; University of Alabama: Cemeteries and Local Histories Collection (u0003/0000289) ; u0003/0000289 >
       au < released ; University of Alabama: Notes on Choctaw Indians, Their Language, etc. (u0003/0000298) ; u0003/0000298 >
+      au < manifest ; University of Alabama: The Papers of General Henry De Lamar Clayton (u0003/0000313) ; u0003/0000313 >
       au < doNotProcess ; University of Alabama: John Cocke Papers (u0003/0000328) ; u0003/0000328 >
       au < released ; University of Alabama: Monroe F. Cockrell research notes (u0003/0000330) ; u0003/0000330 >
       au < released ; University of Alabama: Sarah Ann (Gayle) and Williama B. Crawford Papers, 1833 - 1889 (u0003/0000369) ; u0003/0000369 >
       au < released ; University of Alabama: Creek Indian Land Sales Collection (u0003/0000371) ; u0003/0000371 >
       au < released ; University of Alabama: Daphne Cunningham Diaries (u0003/0000385) ; u0003/0000385 >
+      au < manifest ; University of Alabama: John Horry Dent Papers (u0003/0000430) ; u0003/0000430 >
       au < released ; University of Alabama: Durst Family Papers (u0003/0000461) ; u0003/0000461 >
+      au < manifest ; University of Alabama: Camille Maxwell Elebash Papers (u0003/0000478) ; u0003/0000478 >
+      au < manifest ; University of Alabama: William H. Ely Letters (u0003/0000484) ; u0003/0000484 >
       au < released ; University of Alabama: Jacob Faser (u0003/0000506) ; u0003/0000506 >
       au < released ; University of Alabama: Julia Neely Finch Papers (u0003/0000515) ; u0003/0000515 >
       au < released ; University of Alabama: Alston Fitts Letters (u0003/0000520) ; u0003/0000520 >
       au < released ; University of Alabama: Joshua Hill Foster Papers (u0003/0000535) ; u0003/0000535 >
       au < released ; University of Alabama: John Collier Foster papers (u0003/0000536) ; u0003/0000536 >
       au < released ; University of Alabama: Four Minute Men, Women's Division, Birmingham, Alabama, scrapbook (u0003/0000539) ; u0003/0000539 >
+      au < manifest ; University of Alabama: Richard Furman Papers (u0003/0000549) ; u0003/0000549 >
+      au < manifest ; University of Alabama: Alice and Algernon Sydney Garnett letters (u0003/0000561) ; u0003/0000561 >
       au < released ; University of Alabama: Morgan S. Gilmer (u0003/0000571) ; u0003/0000571 >
       au < released ; University of Alabama: Josiah and Amelia Gorgas Family Papers (u0003/0000580) ; u0003/0000580 >
       au < released ; University of Alabama: William Crawford Gorgas papers (u0003/0000581) ; u0003/0000581 >
@@ -180,12 +218,14 @@
       au < released ; University of Alabama: H.C. Harris (u0003/0000639) ; u0003/0000639 >
       au < released ; University of Alabama: Thomas Haughey (u0003/0000648) ; u0003/0000648 >
       au < released ; University of Alabama: Henry Washington Hilliard Correspondence (u0003/0000674) ; u0003/0000674 >
+      au < manifest ; University of Alabama: Samuel Francis Hobbs Papers (u0003/0000682) ; u0003/0000682 >
       au < released ; University of Alabama: William R. Hughes (u0003/0000714) ; u0003/0000714 >
       au < released ; University of Alabama: Huston Family Papers (u0003/0000724) ; u0003/0000724 >
       au < doNotProcess ; University of Alabama: Robert Jemison, Jr. Papers (u0003/0000753) ; u0003/0000753 >
       au < released ; University of Alabama: E.W. Johns (u0003/0000757) ; u0003/0000757 >
       au < released ; University of Alabama: Joseph Zeb Hearst and Company Daybook (u0003/0000792) ; u0003/0000792 >
       au < released ; University of Alabama: I.A. King (u0003/0000819) ; u0003/0000819 >
+      au < manifest ; University of Alabama: Alto Vela Lee Papers (u0003/0000851) ; u0003/0000851 >
       au < doNotProcess ; University of Alabama: Manly Family Papers (u0003/0000900) ; u0003/0000900 >
       au < released ; University of Alabama: Maysville, Alabama, General Store Purchase Records (u0003/0000937) ; u0003/0000937 >
       au < released ; University of Alabama: Emmett N. McCall Papers (u0003/0000943) ; u0003/0000943 >
@@ -197,20 +237,29 @@
       au < released ; University of Alabama: William D. Nixon business records (u0003/0001049) ; u0003/0001049 >
       au < released ; University of Alabama: S. R. Norton letters (u0003/0001059) ; u0003/0001059 >
       au < released ; University of Alabama: J.R. Odom Store Ledger (u0003/0001066) ; u0003/0001066 >
+      au < manifest ; University of Alabama: Valentine J. Oldshue papers (u0003/0001072) ; u0003/0001072 >
       au < released ; University of Alabama: Elisha Wolsey Peck papers (u0003/0001120) ; u0003/0001120 >
       au < released ; University of Alabama: Perkins Family papers (u0003/0001127) ; u0003/0001127 >
       au < released ; University of Alabama: William Quayle correspondence (u0003/0001176) ; u0003/0001176 >
+      au < manifest ; University of Alabama: Helen Reid Roberts Papers (u0003/0001197) ; u0003/0001197 >
       au < released ; University of Alabama: Vocabulaire Choctaw (lac Pontchartrain) Louisiane: Adrien Rouquette Papers (u0003/0001212) ; u0003/0001212 >
       au < released ; University of Alabama: A.C. Roycroft (u0003/0001213) ; u0003/0001213 >
+      au < manifest ; University of Alabama: T.B. Rush Account Book (u0003/0001215) ; u0003/0001215 >
       au < released ; University of Alabama: A. Y. Sharpe and Son, Demopolis, Alabama, records (u0003/0001260) ; u0003/0001260 >
       au < released ; University of Alabama: Shelby Iron Company Records (u0003/0001261) ; u0003/0001261 >
+      au < manifest ; University of Alabama: Asa Shelton and J.R. Love General Store Daybook (u0003/0001262) ; u0003/0001262 >
+      au < manifest ; University of Alabama: Paoli Ashe Smith Papers  u0003_0001294 Manifest  Page (u0003/0001294) ; u0003/0001294 >
+      au < manifest ; University of Alabama: Soldier Land Grants (u0003/0001306) ; u0003/0001306 >
       au < released ; University of Alabama: Notes on Choctaw Indians, Their Language, etc. (u0003/0001328) ; u0003/0001328 >
       au < released ; University of Alabama: Bert Neville collection of steamboat documents (u0003/0001342) ; u0003/0001342 >
       au < released ; University of Alabama: E.W. Tarrant (u0003/0001383) ; u0003/0001383 >
       au < released ; University of Alabama: Thomas Jones Taylor (u0003/0001389) ; u0003/0001389 >
       au < released ; University of Alabama: Henry Timrod Papers (u0003/0001411) ; u0003/0001411 >
       au < released ; University of Alabama: James H. Tombs Letter (u0003/0001413) ; u0003/0001413 >
+      au < manifest ; University of Alabama: Tuskegee Airmen Collection (u0003/0001446) ; u0003/0001446 >
+      au < manifest ; University of Alabama: Vernon Keith Davisson Diary (u0003/0001467) ; u0003/0001467 >
       au < released ; University of Alabama: University of Alabama Women's Club Records (u0003/0001491) ; u0003/0001491 >
+      au < manifest ; University of Alabama: Up-To-Date Club, Tuscaloosa, Alabama Records (u0003/0001492) ; u0003/0001492 >
       au < released ; University of Alabama: John A. Vaughn Diary (u0003/0001495) ; u0003/0001495 >
       au < released ; University of Alabama: Frank Walter Letter (u0003/0001522) ; u0003/0001522 >
       au < released ; University of Alabama: Walter and Calhoun Families papers (u0003/0001523) ; u0003/0001523 >
@@ -219,6 +268,9 @@
       au < released ; University of Alabama: Woods-Young Collection (u0003/0001576) ; u0003/0001576 >
       au < doNotProcess ; University of Alabama: Woodward Family Papers (u0003/0001577) ; u0003/0001577 >
       au < released ; University of Alabama: Wright, Cotton, and Douglass Family Papers (u0003/0001583) ; u0003/0001583 >
+      au < manifest ; University of Alabama: Joseph Wilbourn Young Letters (u0003/0001596) ; u0003/0001596 >
+      au < manifest ; University of Alabama: Martha Young Papers (u0003/0001597) ; u0003/0001597 >
+      au < manifest ; University of Alabama: B. P. Vosbury Papers (u0003/0001598) ; u0003/0001598 >
       au < released ; University of Alabama: Young-White Mercantile Company Records (u0003/0001600) ; u0003/0001600 >
       au < released ; University of Alabama: Yuille Family Papers (u0003/0001601) ; u0003/0001601 >
       au < released ; University of Alabama: Nehemiah Denton papers (u0003/0001602) ; u0003/0001602 >
@@ -229,10 +281,14 @@
       au < released ; University of Alabama: Hugh Davis farm journals (u0003/0001611) ; u0003/0001611 >
       au < released ; University of Alabama: F. H. Petrie letters (u0003/0001620) ; u0003/0001620 >
       au < released ; University of Alabama: William Jesse Robinette (u0003/0001624) ; u0003/0001624 >
+      au < manifest ; University of Alabama: Andrew Dawson Papers (u0003/0001626) ; u0003/0001626 >
       au < released ; University of Alabama: Gauis Whitfield Papers (u0003/0001628) ; u0003/0001628 >
+      au < manifest ; University of Alabama: Lorraine Standish papers (u0003/0001636) ; u0003/0001636 >
       au < released ; University of Alabama: Jeremiah Hall letter (u0003/0001644) ; u0003/0001644 >
       au < released ; University of Alabama: John L. Boatwright letters (u0003/0001645) ; u0003/0001645 >
       au < released ; University of Alabama: C. W. Hale letter (u0003/0001646) ; u0003/0001646 >
+      au < manifest ; University of Alabama: Letter from Edward to Sister (u0003/0001647) ; u0003/0001647 >
+      au < manifest ; University of Alabama: Letter from Daniel to Sister (u0003/0001650) ; u0003/0001650 >
       au < released ; University of Alabama: R. Taylor letter (u0003/0001651) ; u0003/0001651 >
       au < released ; University of Alabama: W. W. Duffield letter (u0003/0001652) ; u0003/0001652 >
       au < released ; University of Alabama: William S. Mortimer letter (u0003/0001653) ; u0003/0001653 >
@@ -256,7 +312,24 @@
       au < released ; University of Alabama: Sanford M. Curlis Letter (u0003/0001674) ; u0003/0001674 >
       au < released ; University of Alabama: Charles A. Watson letter (u0003/0001677) ; u0003/0001677 >
       au < released ; University of Alabama: James S. Fruit , L.R. Burk, and John L. Blangy deposition (u0003/0001678) ; u0003/0001678 >
+      au < manifest ; University of Alabama: Sarah G. Williams and M. Stanly Papers (u0003/0001683) ; u0003/0001683 >
+      au < manifest ; University of Alabama: Samuel Steele Letter (u0003/0001685) ; u0003/0001685 >
       au < released ; University of Alabama: Joseph Daugherty receipts (u0003/0001686) ; u0003/0001686 >
+      au < manifest ; University of Alabama: W. G. Hann Letter (u0003/0001690) ; u0003/0001690 >
+      au < manifest ; University of Alabama: Richard Dennis Letter (u0003/0001691) ; u0003/0001691 >
+      au < manifest ; University of Alabama: Loring Lyman Letter (u0003/0001694) ; u0003/0001694 >
+      au < manifest ; University of Alabama: Jacob Ramser Receipt (u0003/0001695) ; u0003/0001695 >
+      au < manifest ; University of Alabama: S. Y. Thomas Letter (u0003/0001704) ; u0003/0001704 >
+      au < manifest ; University of Alabama: John Watson Letter (u0003/0001705) ; u0003/0001705 >
+      au < manifest ; University of Alabama: Margaret Pearson Sharecropping Agreement (u0003/0001706) ; u0003/0001706 >
+      au < manifest ; University of Alabama: William H. Seward Letter  u0003_0001710 Manifest  Page (u0003/0001710) ; u0003/0001710 >
+      au < manifest ; University of Alabama: J. W. Scott Letter (u0003/0001712) ; u0003/0001712 >
+      au < manifest ; University of Alabama: Samuel J. Hays Letter (u0003/0001713) ; u0003/0001713 >
+      au < manifest ; University of Alabama: V. Ormond Beatty Letter (u0003/0001716) ; u0003/0001716 >
+      au < manifest ; University of Alabama: John D. Clap Letter (u0003/0001719) ; u0003/0001719 >
+      au < manifest ; University of Alabama: Hi Allman Letter (u0003/0001732) ; u0003/0001732 >
+      au < manifest ; University of Alabama: John H. Bankhead Letter (u0003/0001734) ; u0003/0001734 >
+      au < manifest ; University of Alabama: William B. Bankhead Letter (u0003/0001735) ; u0003/0001735 >
       au < released ; University of Alabama: State of Georgia bond (u0003/0001764) ; u0003/0001764 >
       au < released ; University of Alabama: C. A. Carson letters (u0003/0001767) ; u0003/0001767 >
       au < released ; University of Alabama: Luther K. Casey letter (u0003/0001768) ; u0003/0001768 >
@@ -270,7 +343,16 @@
       au < released ; University of Alabama: Jameson J. Berkey discharge (u0003/0001822) ; u0003/0001822 >
       au < released ; University of Alabama: Mary Lee Hosbrook diary (u0003/0001832) ; u0003/0001832 >
       au < released ; University of Alabama: Asher M. Talcott Letters (u0003/0001841) ; u0003/0001841 >
+      au < manifest ; University of Alabama: Allie Mae Edmonson letters (u0003/0001844) ; u0003/0001844 >
       au < released ; University of Alabama: L.M. Denman Letter (u0003/0001845) ; u0003/0001845 >
+      au < manifest ; University of Alabama: Coyner family letters (u0003/0001847) ; u0003/0001847 >
+      au < manifest ; University of Alabama: Letters to Ora Ferguson (u0003/0001861) ; u0003/0001861 >
+      au < manifest ; University of Alabama: R. E. McMurray Letters (u0003/0001862) ; u0003/0001862 >
+      au < manifest ; University of Alabama: Abigail Dodge Letter (u0003/0001895) ; u0003/0001895 >
+      au < manifest ; University of Alabama: Evelina Barolivell Letters (u0003/0001896) ; u0003/0001896 >
+      au < manifest ; University of Alabama: Ruth Richardson Letter (u0003/0001897) ; u0003/0001897 >
+      au < manifest ; University of Alabama: M. H. Hazeltrine Letter (u0003/0001898) ; u0003/0001898 >
+      au < manifest ; University of Alabama: James Gayton Letter (u0003/0001899) ; u0003/0001899 >
       au < released ; University of Alabama: John B. Tomilson card (u0003/0001922) ; u0003/0001922 >
       au < released ; University of Alabama: A.S. Dickey Letter (u0003/0001938) ; u0003/0001938 >
       au < released ; University of Alabama: Benjamin Hurd Letters (u0003/0001939) ; u0003/0001939 >
@@ -295,12 +377,17 @@
       au < released ; University of Alabama: Isaac Milner Civil War Pass from British Government (u0003/0001958) ; u0003/0001958 >
       au < released ; University of Alabama: A.T. Goodloe Postcard (u0003/0001962) ; u0003/0001962 >
       au < released ; University of Alabama: A.W. Dwight Letter (u0003/0001964) ; u0003/0001964 >
+      au < manifest ; University of Alabama: Robert K. Webb Letter (u0003/0001967) ; u0003/0001967 >
       au < released ; University of Alabama: Alban W. Storehalder Postcard (u0003/0001970) ; u0003/0001970 >
       au < released ; University of Alabama: Walter R. Way Letter (u0003/0001977) ; u0003/0001977 >
       au < released ; University of Alabama: Jones Family Letters (u0003/0001980) ; u0003/0001980 >
       au < released ; University of Alabama: Guide to the Weir _____ Letters (u0003/0001981) ; u0003/0001981 >
       au < released ; University of Alabama: A.T. Baumgarten Letters (u0003/0001982) ; u0003/0001982 >
       au < released ; University of Alabama: Porter B. Rudolf, Jr. and Roy P. Rudolf Letters (u0003/0001983) ; u0003/0001983 >
+      au < manifest ; University of Alabama: Walter M. Voll Letter (u0003/0001987) ; u0003/0001987 >
+      au < manifest ; University of Alabama: Richard Young Letters (u0003/0001988) ; u0003/0001988 >
+      au < manifest ; University of Alabama: Earl Elmer Stewart Letters (u0003/0001989) ; u0003/0001989 >
+      au < manifest ; University of Alabama: Jolley Family Letters (u0003/0001990) ; u0003/0001990 >
       au < released ; University of Alabama: Joseph Forney Johnston Letters (u0003/0002015) ; u0003/0002015 >
       au < released ; University of Alabama: Maclin R. Milner Letter (u0003/0002016) ; u0003/0002016 >
       au < released ; University of Alabama: Adam M. Mummey Letters (u0003/0002017) ; u0003/0002017 >
@@ -333,6 +420,7 @@
       au < released ; University of Alabama: Francis S. Lyon Letter (u0003/0002051) ; u0003/0002051 >
       au < released ; University of Alabama: Andrew B. Moore Letter and Clipping (u0003/0002055) ; u0003/0002055 >
       au < released ; University of Alabama: Nathaniel H. Hood Letter (u0003/0002061) ; u0003/0002061 >
+      au < manifest ; University of Alabama: Henry T. Stoner Letters (u0003/0002068) ; u0003/0002068 >
       au < released ; University of Alabama: E.J. Clarke Letter (u0003/0002091) ; u0003/0002091 >
       au < released ; University of Alabama: James Harry Deems Letter (u0003/0002092) ; u0003/0002092 >
       au < released ; University of Alabama: Joel Maxon Letter (u0003/0002095) ; u0003/0002095 >
@@ -354,12 +442,59 @@
       au < released ; University of Alabama: Letter from Caroline to her cousin Glenn (u0003/0002131) ; u0003/0002131 >
       au < released ; University of Alabama: Kolb Family Papers (u0003/0002132) ; u0003/0002132 >
       au < released ; University of Alabama: Nathan Crosby Letters (u0003/0002133) ; u0003/0002133 >
+      au < manifest ; University of Alabama: J. C. Faulkner Family Papers (u0003/0002134) ; u0003/0002134 >
+      au < manifest ; University of Alabama: A. T. Patrick Letters (u0003/0002136) ; u0003/0002136 >
+      au < manifest ; University of Alabama: Alfred H. Johnson Letters (u0003/0002151) ; u0003/0002151 >
+      au < manifest ; University of Alabama: Alfred H. Johnson Letters (u0003/0002152) ; u0003/0002152 >
+      au < manifest ; University of Alabama: Michel Family Papers (u0003/0002159) ; u0003/0002159 >
+      au < manifest ; University of Alabama: Letters from Lolie to a Union Soldier (u0003/0002161) ; u0003/0002161 >
       au < released ; University of Alabama: letter from Ken to his mother, Mrs. W.C. Caufield (u0003/0002184) ; u0003/0002184 >
+      au < manifest ; University of Alabama: Helen Cline Papers (u0003/0002190) ; u0003/0002190 >
       au < released ; University of Alabama: Sperry and Willard Family Papers (u0003/0002191) ; u0003/0002191 >
       au < released ; University of Alabama: Letters to Alice Comstock (u0003/0002192) ; u0003/0002192 >
       au < released ; University of Alabama: Meriwether Family Papers (u0003/0002217) ; u0003/0002217 >
+      au < manifest ; University of Alabama: Freddie Lindsay, Jr., Letters (u0003/0002256) ; u0003/0002256 >
+      au < manifest ; University of Alabama: Letters to Edith E. Schuetze (u0003/0002258) ; u0003/0002258 >
+      au < manifest ; University of Alabama: Letters to Celestia Bussell (u0003/0002259) ; u0003/0002259 >
+      au < manifest ; University of Alabama: Letters to D. P. and Hattie Seaman (u0003/0002261) ; u0003/0002261 >
+      au < manifest ; University of Alabama: Letter from Mother to Ingeborg Johnson (u0003/0002262) ; u0003/0002262 >
+      au < manifest ; University of Alabama: Letter from Harry to A.C. Dolsey (u0003/0002263) ; u0003/0002263 >
+      au < manifest ; University of Alabama: R. D. Steele Letter (u0003/0002264) ; u0003/0002264 >
+      au < manifest ; University of Alabama: Marcus White Letter (u0003/0002265) ; u0003/0002265 >
+      au < manifest ; University of Alabama: Letter from Eva to Mrs. Myron Davis (u0003/0002266) ; u0003/0002266 >
+      au < manifest ; University of Alabama: Letter from Gertrude to Sara Noll (u0003/0002267) ; u0003/0002267 >
+      au < manifest ; University of Alabama: Letter from the Dexter family to Merrill Taylor (u0003/0002268) ; u0003/0002268 >
+      au < manifest ; University of Alabama: Jennie Sheldon Bowden letters (u0003/0002269) ; u0003/0002269 >
+      au < manifest ; University of Alabama: Elbert Nixdorf Letters (u0003/0002271) ; u0003/0002271 >
+      au < manifest ; University of Alabama: Constance B. Wood Letter (u0003/0002272) ; u0003/0002272 >
+      au < manifest ; University of Alabama: D. Spreacher Letter (u0003/0002273) ; u0003/0002273 >
+      au < manifest ; University of Alabama: W. Divine and T. G. Ferrclo Letter (u0003/0002274) ; u0003/0002274 >
+      au < manifest ; University of Alabama: Postcards to Mamie Stein (u0003/0002275) ; u0003/0002275 >
+      au < manifest ; University of Alabama: Marcus Nelson Letter (u0003/0002276) ; u0003/0002276 >
+      au < manifest ; University of Alabama: Mrs. G. Armil Letter (u0003/0002277) ; u0003/0002277 >
+      au < manifest ; University of Alabama: Bessie and Tara Pyle Letters (u0003/0002279) ; u0003/0002279 >
+      au < manifest ; University of Alabama: Mollie Taylor letter (u0003/0002281) ; u0003/0002281 >
       au < released ; University of Alabama: Cahill Family Papers (u0003/0002282) ; u0003/0002282 >
       au < released ; University of Alabama: Berman Family Papers (u0003/0002329) ; u0003/0002329 >
+      au < manifest ; University of Alabama: Edith Towne Letter (u0003/0002330) ; u0003/0002330 >
+      au < manifest ; University of Alabama: Leonard Burkins, Jr., Letter (u0003/0002331) ; u0003/0002331 >
+      au < manifest ; University of Alabama: Bianca Rothschild Letter (u0003/0002332) ; u0003/0002332 >
+      au < manifest ; University of Alabama: Maria Kruper Letters (u0003/0002333) ; u0003/0002333 >
+      au < manifest ; University of Alabama: E. F. Nickerson Letter (u0003/0002334) ; u0003/0002334 >
+      au < manifest ; University of Alabama: Embroidered Remembrance Card (u0003/0002335) ; u0003/0002335 >
+      au < manifest ; University of Alabama: Walter H. Dearth Papers (u0003/0002336) ; u0003/0002336 >
+      au < manifest ; University of Alabama: Christian L. Gruen Letter (u0003/0002337) ; u0003/0002337 >
+      au < manifest ; University of Alabama: Sam Groff Letter and Sketch (u0003/0002338) ; u0003/0002338 >
+      au < manifest ; University of Alabama: Letter from Roland to his mother (u0003/0002339) ; u0003/0002339 >
+      au < manifest ; University of Alabama: Breeden and Harwicke Famililes Papers (u0003/0002340) ; u0003/0002340 >
+      au < manifest ; University of Alabama: Ely Naparstek Papers (u0003/0002341) ; u0003/0002341 >
+      au < manifest ; University of Alabama: Jay E. Allen Letters (u0003/0002342) ; u0003/0002342 >
+      au < manifest ; University of Alabama: Will R. Thorpe Letters (u0003/0002344) ; u0003/0002344 >
+      au < manifest ; University of Alabama: Joe R. P. S. Sprigg Letters (u0003/0002345) ; u0003/0002345 >
+      au < manifest ; University of Alabama: Genevieve Peyton Letters (u0003/0002347) ; u0003/0002347 >
+      au < manifest ; University of Alabama: Marion Beale Letters (u0003/0002348) ; u0003/0002348 >
+      au < manifest ; University of Alabama: Andrew William Johnson, Jr. Papers (u0003/0002356) ; u0003/0002356 >
+      au < manifest ; University of Alabama: Mrs. Martin Bartlett Letter (u0003/0002360) ; u0003/0002360 >
       au < released ; University of Alabama: Letter from Cora M. to her brother Frank (u0003/0002495) ; u0003/0002495 >
       au < released ; University of Alabama: Sherman Family Letters (u0003/0002503) ; u0003/0002503 >
       au < released ; University of Alabama: Julia Hansicker Letters (u0003/0002504) ; u0003/0002504 >
@@ -418,7 +553,11 @@
       au < released ; University of Alabama: L.O. Dawson Papers (u0003/0002563) ; u0003/0002563 >
       au < released ; University of Alabama: Percy C. Miller Letter (u0003/0002564) ; u0003/0002564 >
       au < released ; University of Alabama: Collection on Phi Alpha Theta's Commemoration of the Anniversary of the Burning of the University of Alabama (u0003/0002565) ; u0003/0002565 >
+      au < manifest ; University of Alabama: William R. Cole Letter (u0003/0002566) ; u0003/0002566 >
       au < released ; University of Alabama: Jesse C. Hearne, Jr. Scrapbook of Y.M.C.A. and Y.W.C.A. on the University of Alabama Campus, 1936 (u0003/0002567) ; u0003/0002567 >
+      au < manifest ; University of Alabama: Ellen G. McClaire Letter (u0003/0002568) ; u0003/0002568 >
+      au < manifest ; University of Alabama: M.E. Stapleton Letter (u0003/0002569) ; u0003/0002569 >
+      au < manifest ; University of Alabama: J.H. Clark Letter (u0003/0002570) ; u0003/0002570 >
       au < released ; University of Alabama: Minnie Arthur Letters (u0003/0002571) ; u0003/0002571 >
       au < released ; University of Alabama: Elmer J. Countryman Letters (u0003/0002572) ; u0003/0002572 >
       au < released ; University of Alabama: J.E. Burnham Letters (u0003/0002573) ; u0003/0002573 >
@@ -433,8 +572,39 @@
       au < released ; University of Alabama: Kevin McElvaney Yearbook (u0003/0002582) ; u0003/0002582 >
       au < released ; University of Alabama: Alabama Scenes (u0003/0002583) ; u0003/0002583 >
       au < released ; University of Alabama: L.W. Goodman Farm Ledger (u0003/0002587) ; u0003/0002587 >
+      au < manifest ; University of Alabama: Hotel and Motel Keys Collection (u0003/0002588) ; u0003/0002588 >
       au < released ; University of Alabama: Bullock County Historical Society Papers (u0003/0002589) ; u0003/0002589 >
       au < released ; University of Alabama: Jane Kent College Notebook (u0003/0002590) ; u0003/0002590 >
+      au < manifest ; University of Alabama: Letter from Emily to Catherine Newton (u0003/0002591) ; u0003/0002591 >
+      au < manifest ; University of Alabama: C. and Louisa Van Duren Letter (u0003/0002592) ; u0003/0002592 >
+      au < manifest ; University of Alabama: Letter from Rosa to Ella R. Crews (u0003/0002593) ; u0003/0002593 >
+      au < manifest ; University of Alabama: H. Snow Letter (u0003/0002594) ; u0003/0002594 >
+      au < manifest ; University of Alabama: letter from daughter to Samuel P. Hadley (u0003/0002595) ; u0003/0002595 >
+      au < manifest ; University of Alabama: letter from Mary to Elisha Conklin (u0003/0002596) ; u0003/0002596 >
+      au < manifest ; University of Alabama: John L. Kent Letter (u0003/0002597) ; u0003/0002597 >
+      au < manifest ; University of Alabama: letter from Edith to Carrie C. Williamson (u0003/0002598) ; u0003/0002598 >
+      au < manifest ; University of Alabama: Smith Letter (u0003/0002606) ; u0003/0002606 >
+      au < manifest ; University of Alabama: Marcia Rice Letter (u0003/0002607) ; u0003/0002607 >
+      au < manifest ; University of Alabama: James E. Misslay Letter (u0003/0002608) ; u0003/0002608 >
+      au < manifest ; University of Alabama: James R. McConochin Letter (u0003/0002609) ; u0003/0002609 >
+      au < manifest ; University of Alabama: Ann Tyler Letter (u0003/0002610) ; u0003/0002610 >
+      au < manifest ; University of Alabama: Whiteman, Crew &amp; Co. Shipping Bill (u0003/0002614) ; u0003/0002614 >
+      au < manifest ; University of Alabama: Bettie Fort Letter (u0003/0002615) ; u0003/0002615 >
+      au < manifest ; University of Alabama: Mrs. T.R. Jack Letter (u0003/0002616) ; u0003/0002616 >
+      au < manifest ; University of Alabama: J. Wheaton Smith Letter (u0003/0002617) ; u0003/0002617 >
+      au < manifest ; University of Alabama: Merle R. Letter (u0003/0002618) ; u0003/0002618 >
+      au < manifest ; University of Alabama: Clinton/Gore Campaign materials (u0003/0002619) ; u0003/0002619 >
+      au < manifest ; University of Alabama: M. Levy Letter (u0003/0002621) ; u0003/0002621 >
+      au < manifest ; University of Alabama: J.C. James Letter (u0003/0002622) ; u0003/0002622 >
+      au < manifest ; University of Alabama: Max Schloss Letters (u0003/0002623) ; u0003/0002623 >
+      au < manifest ; University of Alabama: Letter from Allie to Eugenie Starbuck (u0003/0002624) ; u0003/0002624 >
+      au < manifest ; University of Alabama: Ernest Crawford Letter (u0003/0002628) ; u0003/0002628 >
+      au < manifest ; University of Alabama: Elizabeth P. Everbeck Letter (u0003/0002629) ; u0003/0002629 >
+      au < manifest ; University of Alabama: Charles Reese Letter (u0003/0002637) ; u0003/0002637 >
+      au < manifest ; University of Alabama: Reverend Father Aurelius Maschio Letter Aurelius Maschio Letter (u0003/0002641) ; u0003/0002641 >
+      au < manifest ; University of Alabama: Reverend Seraphim Letter (u0003/0002642) ; u0003/0002642 >
+      au < manifest ; University of Alabama: Wool Dyeing Instructions (u0003/0002643) ; u0003/0002643 >
+      au < manifest ; University of Alabama: Marcia Cassady Letters (u0003/0002644) ; u0003/0002644 >
       au < released ; University of Alabama: Diary of an Alabama Presbyterian Minister, 1832 (u0003/0002646) ; u0003/0002646 >
       au < released ; University of Alabama: J.W. Clapp Letter (u0003/0002647) ; u0003/0002647 >
       au < released ; University of Alabama: Judge Horace C. Wilkerson Speech (u0003/0002648) ; u0003/0002648 >
@@ -445,6 +615,14 @@
       au < released ; University of Alabama: Brookwood Silver Liners Records (u0003/0002653) ; u0003/0002653 >
       au < released ; University of Alabama: Daughters of the American Colonists, Colonel George Reade Chapter (Tuscaloosa, Alabama) Scrapbooks (u0003/0002654) ; u0003/0002654 >
       au < released ; University of Alabama: William B. Van Valin Papers (u0003/0002655) ; u0003/0002655 >
+      au < manifest ; "University of Alabama: \"In The Tropics\" Promotional Pamphlet for the Bradford Hotel, Fort Meyers, Florida (u0003/0002656)" ; u0003/0002656 >
+      au < manifest ; University of Alabama: Alston, Finlay and Co. letter (u0003/0002658) ; u0003/0002658 >
+      au < manifest ; University of Alabama: O.E. Bruce Letters (u0003/0002659) ; u0003/0002659 >
+      au < manifest ; University of Alabama: S.B. Russy Letter (u0003/0002660) ; u0003/0002660 >
+      au < manifest ; University of Alabama: Jonathan Jewett Letter (u0003/0002661) ; u0003/0002661 >
+      au < manifest ; University of Alabama: Letters from Momma to Virginia Parrott (u0003/0002662) ; u0003/0002662 >
+      au < manifest ; University of Alabama: Phyllis Cleveland Letters (u0003/0002663) ; u0003/0002663 >
+      au < manifest ; University of Alabama: Harry G. and Nellie W. Stevenson Correspondence (u0003/0002664) ; u0003/0002664 >
       au < released ; University of Alabama: Amelia Bean Letter (u0003/0002665) ; u0003/0002665 >
       au < released ; University of Alabama: Mrs. Charles Beach Letter (u0003/0002666) ; u0003/0002666 >
       au < released ; University of Alabama: Elias Zeller Envelope (u0003/0002667) ; u0003/0002667 >
@@ -471,12 +649,16 @@
       au < ready ; University of Alabama: George Buckner Deposition (u0003/0002688) ; u0003/0002688 >
       au < ready ; University of Alabama: Shanam Lwaminether Letter (u0003/0002689) ; u0003/0002689 >
       au < ready ; University of Alabama: F.A. Davis Letter (u0003/0002690) ; u0003/0002690 >
+      au < manifest ; University of Alabama: Lillian Cunningham Letters (u0003/0002691) ; u0003/0002691 >
+      au < manifest ; University of Alabama: A. M. Ahmed Letters (u0003/0002692) ; u0003/0002692 >
       au < ready ; University of Alabama: Mrs. Lewis C. Paine Letter (u0003/0002693) ; u0003/0002693 >
       au < ready ; University of Alabama: Emily _____ Letter (u0003/0002694) ; u0003/0002694 >
       au < ready ; University of Alabama: Polly Wilson Letter (u0003/0002695) ; u0003/0002695 >
       au < ready ; University of Alabama: Dr. Robert Lane Letter (u0003/0002696) ; u0003/0002696 >
       au < ready ; University of Alabama: Marilyn Berry Letter (u0003/0002697) ; u0003/0002697 >
+      au < manifest ; University of Alabama: Twentieth Century Postcard and Travel Book Collection (u0003/0002698) ; u0003/0002698 >
       au < ready ; University of Alabama: First United Methodist Church, Prattville, Alabama, Membership Directory (u0003/0002699) ; u0003/0002699 >
+      au < manifest ; University of Alabama: Husted Family Papers (u0003/0002700) ; u0003/0002700 >
       au < ready ; University of Alabama: Eleanor L. Eckland Letter (u0003/0002701) ; u0003/0002701 >
       au < ready ; University of Alabama: Irving Levine Envelope (u0003/0002702) ; u0003/0002702 >
       au < ready ; University of Alabama: Li _____ Letter (u0003/0002703) ; u0003/0002703 >
@@ -489,6 +671,7 @@
       au < ready ; University of Alabama: Tom _____ Letter (u0003/0002710) ; u0003/0002710 >
       au < ready ; University of Alabama: Claes-Elof Sundstrom Papers (u0003/0002711) ; u0003/0002711 >
       au < ready ; University of Alabama: Dr. John Harthan Letters (u0003/0002712) ; u0003/0002712 >
+      au < manifest ; University of Alabama: Haydn Neal Thompson Letters (u0003/0002713) ; u0003/0002713 >
       au < ready ; University of Alabama: M. Moll, Jr. Document (u0003/0002714) ; u0003/0002714 >
       au < ready ; University of Alabama: Richard Delafilo Letter (u0003/0002715) ; u0003/0002715 >
 
@@ -497,7 +680,7 @@
     {
 
       title <
-        name = University of Alabama Hoole Special Collections: Sheet Music Collections
+        name = University of Alabama Hoole Special Collections: Sheet Music Collections (u0004)
       >
 
       comment[u_4_2] = size approx 1.8TB
@@ -511,29 +694,26 @@
     {
 
       title <
-        name = University of Alabama Hoole Special Collections: Audio Collections
+        name = University of Alabama Hoole Special Collections: Text Collections (u0002)
       >
 
-      au < manifest ; University of Alabama: Emphasis, 1967-1971: Symposium on Contemporary Issues (u0008/0000001) ; u0008/0000001 >
-      au < doNotProcess ; University of Alabama: Harald Rohlig Organ Music (u0008/0000002) ; u0008/0000002 >
-      au < doNotProcess ; University of Alabama: Working Lives Oral History Project (u0008/0000003) ; u0008/0000003 >
+      au < released ; University of Alabama: Rammer Jammer (u0002/0000001) ; u0002/0000001 >
+      au < released ; University of Alabama: The Corolla (u0002/0000002) ; u0002/0000002 >
+      au < released ; University of Alabama: Voyages dans l'Amérique Septentrionale (u0002/0000003/0000001) ; u0002/0000003/0000001 >
+      au < released ; University of Alabama: Claudii Ptholemaei Alexandrini Liber Geographiae (u0002/0000003/0000002) ; u0002/0000003/0000002 >
+      au < released ; University of Alabama: Life Studies of the Great Army (u0002/0000003/0000003) ; u0002/0000003/0000003 >
+      au < released ; University of Alabama: French Revolutionary Pamphlets (u0002/0000006) ; u0002/0000006 >
+      au < released ; University of Alabama: Crimson White (u0002/0000007) ; u0002/0000007 >
+      au < released ; University of Alabama: The Mahout (u0002/0000008) ; u0002/0000008 >
+      au < manifest ; University of Alabama: Farrago (u0002/0000009) ; u0002/0000009 >
+      au < released ; University of Alabama: A Register of the Officers and Students of the University of Alabama 1831-1901 (u0002/0000010) ; u0002/0000010 >
 
     }
 
     {
 
       title <
-        name = University of Alabama Libraries Research Collections
-      >
-
-      au < manifest ; University of Alabama: The University of Alabama Electronic Theses and Dissertations (u0015/0000001) ; u0015/0000001 >
-
-    }
-
-    {
-
-      title <
-        name = University of Alabama Nonprofit Organizations Manuscripts
+        name = University of Alabama Nonprofit Organizations Collections: Manuscripts (n0003)
       >
 
       au < manifest ; University of Alabama: St. John's Church Parish Registers (n0003/0000001) ; n0003/0000001 >
@@ -543,17 +723,17 @@
     {
 
       title <
-        name = University of Alabama Patron Images
+        name = University of Alabama Patron Holdings: Images (p0001)
       >
 
-      au < manifest ; University of Alabama: Cunningham Photos and Journal (p0001/0000001) ; p0001/0000001 >
+      au < ready ; University of Alabama: Cunningham Photos and Journal (p0001/0000001) ; p0001/0000001 >
 
     }
 
     {
 
       title <
-        name = University of Alabama Patron Text
+        name = University of Alabama Patron Holdings: Text (p0002)
       >
 
       au < manifest ; University of Alabama: Joe Wheeler Letter (p0002/0000001) ; p0002/0000001 >
