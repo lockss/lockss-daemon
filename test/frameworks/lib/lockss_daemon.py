@@ -973,7 +973,7 @@ class Client:
         if columns:
             form_data[ 'columns' ] = columns
         if noRows:
-            form_data[ 'norows' ] = 1
+            form_data[ 'options' ] = 'norows'
         XML = self.__execute_post( 'DaemonStatus', form_data ).read()
         log.debug3( 'Received XML response:\n' + XML )
         doc = xml.dom.minidom.parseString( XML )
