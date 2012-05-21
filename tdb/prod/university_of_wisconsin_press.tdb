@@ -51,6 +51,7 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://aa.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[RU4143] = minor differences, unknown if they are ok to pass
 
       au < released ; 2003 ; Arctic Anthropology Volume 40 ; 40 >
       au < released ; 2004 ; Arctic Anthropology Volume 41 ; 41 >
