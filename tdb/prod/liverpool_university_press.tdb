@@ -174,7 +174,8 @@
     param[base_url] = http://liverpool.metapress.com/
     implicit < status ; year ; name ; param[volume_name] >     
     param[journal_issn] = 1680-1865
-    comment[0] = no content online yet
+    
+    au < manifest ; 2010 ; Comma Volume 1 ; 1 >
     
   }
   
