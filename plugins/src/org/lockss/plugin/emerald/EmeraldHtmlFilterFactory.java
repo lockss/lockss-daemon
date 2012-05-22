@@ -1,5 +1,5 @@
 /*
- *  * $Id: EmeraldHtmlFilterFactory.java,v 1.3 2010-10-07 09:28:27 arusbridge Exp $ 
+ *  * $Id: EmeraldHtmlFilterFactory.java,v 1.4 2012-05-22 23:30:46 wkwilson Exp $ 
  *   */
 
 /*
@@ -35,7 +35,12 @@ package org.lockss.plugin.emerald;
 import java.io.*;
 import java.util.List;
 
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
 import org.lockss.filter.*;
+import org.lockss.filter.html.HtmlFilterInputStream;
+import org.lockss.filter.html.HtmlNodeFilterTransform;
+import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
@@ -44,7 +49,17 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
   public InputStream createFilteredInputStream(ArchivalUnit au,
 					       InputStream in,
 					       String encoding) {
-    Reader reader = FilterUtil.getReader(in, encoding);
+	  NodeFilter[] filters = new NodeFilter[] {
+			  	//Has number of article download in row
+		        HtmlNodeFilters.tagWithAttribute("td", "headers", "tocopy")
+		    };
+		    
+		    // First filter with HtmlParser
+	InputStream filteredStream = new HtmlFilterInputStream(in,
+		                                                           encoding,
+		                                                           HtmlNodeFilterTransform.exclude(new OrFilter(filters)));  
+	
+    Reader reader = FilterUtil.getReader(filteredStream, encoding);
     Reader filtReader = makeFilteredReader(reader);
     return new ReaderInputStream(filtReader);
   }
@@ -52,6 +67,7 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
   static Reader makeFilteredReader(Reader reader) {
     List tagList = ListUtil.list(
         new HtmlTagFilter.TagPair("<p>Printed from:", "Emerald Group Publishing Limited</p>", false, false)
+        
         );
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
     return new WhiteSpaceFilter(tagFilter);

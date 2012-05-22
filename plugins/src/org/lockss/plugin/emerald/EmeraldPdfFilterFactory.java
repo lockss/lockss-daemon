@@ -1,8 +1,4 @@
 /*
- * $Id: EmeraldUrlNormalizer.java,v 1.2 2012-05-22 23:30:46 wkwilson Exp $
- */
-
-/*
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -32,17 +28,33 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.emerald;
 
+import java.io.InputStream;
+
 import org.lockss.daemon.PluginException;
-import org.lockss.plugin.*;
+import org.lockss.filter.pdf.OutputDocumentTransform;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.FilterFactory;
+import org.lockss.util.Logger;
+import org.lockss.util.PdfUtil;
 
-public class EmeraldUrlNormalizer implements UrlNormalizer {
-
-  public String normalizeUrl(String url,
-                             ArchivalUnit au)
-      throws PluginException {
-	  url = url.replaceFirst(";jsessionid=[0-9A-F]{32}", "");
-	  url = url.replaceFirst("&PHPSESSID=[0-9a-z]+", "");
-    return url;
-  }
-
+//Applies {@link EmeraldPdfTransform}
+public class EmeraldPdfFilterFactory implements FilterFactory {
+	static Logger log = Logger.getLogger("EmeraldPdfFilterFactory");
+	
+	public InputStream createFilteredInputStream(ArchivalUnit au,
+									             InputStream in,
+									             String encoding)
+									            		 throws PluginException {
+	    try {
+	      log.debug2("PDF filter factory for: " + au.getName());
+	      OutputDocumentTransform documentTransform = new EmeraldPdfTransform(au);
+	      in = PdfUtil.applyFromInputStream(new NormalizeMetadata(), in);
+	      return PdfUtil.applyFromInputStream(documentTransform, in);
+	    }
+	    catch (Exception exc) {
+	      log.error("Exception in PDF transform; unfiltered", exc);
+	      return in;
+	    }
+	}
+  
 }

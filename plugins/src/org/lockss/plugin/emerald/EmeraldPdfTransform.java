@@ -1,10 +1,6 @@
 /*
- * $Id: EmeraldUrlNormalizer.java,v 1.2 2012-05-22 23:30:46 wkwilson Exp $
- */
 
-/*
-
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,17 +28,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.emerald;
 
-import org.lockss.daemon.PluginException;
-import org.lockss.plugin.*;
+import java.io.*;
 
-public class EmeraldUrlNormalizer implements UrlNormalizer {
+import org.lockss.filter.pdf.*;
+import org.lockss.plugin.ArchivalUnit;
 
-  public String normalizeUrl(String url,
-                             ArchivalUnit au)
-      throws PluginException {
-	  url = url.replaceFirst(";jsessionid=[0-9A-F]{32}", "");
-	  url = url.replaceFirst("&PHPSESSID=[0-9a-z]+", "");
-    return url;
-  }
+/*
+ * 
+ */
+public class EmeraldPdfTransform extends SimpleOutputDocumentTransform {
 
+	  public EmeraldPdfTransform(ArchivalUnit au) throws IOException {
+		    super(new ConditionalDocumentTransform(new TransformFirstPage(new NormalizeXObjects(au)),
+		                                           new TransformEachPageExceptFirst(new NormalizeXObjects(au))));
+	  }
 }

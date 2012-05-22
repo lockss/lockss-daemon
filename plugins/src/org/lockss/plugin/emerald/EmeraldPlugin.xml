@@ -42,7 +42,7 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%scrawlers/lockss\.htm\?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
-      <string>1,&quot;^%s(journals|books)\.htm\?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
+      <string>1,&quot;^%s(journals|books)\.htm\?issn=%s&amp;volume=%s&amp;issue=[0-9]+&amp;articleid=&quot;, base_url, journal_issn, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -108,6 +108,10 @@
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.emerald.EmeraldArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.emerald.EmeraldPdfFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
