@@ -46,7 +46,7 @@ cat $tpath/HW_g_all | wc -l
 cat $tpath/HW_g_dedupe | wc -l
 diff $tpath/HW_g_all $tpath/HW_g_dedupe
 diff $tpath/HW_g_all $tpath/HW_g_dedupe | grep "< " | wc -l
-echo "expect 1"
+echo "expect 19"
 echo " "
 echo "---------------------"
 echo "---------------------"
