@@ -12,15 +12,16 @@
         issnl = 1063-3987
       >
       
-      param[base_url] = http://archfami.ama-assn.org/
+     
 
       {
   
-        plugin = org.lockss.plugin.highwire.HighWirePressH20TriggeredPlugin
+        plugin = org.lockss.plugin.highwire.HighWireTriggeredPlugin
         comment[access] = open access triggered CLOCKSS content
         attr[title_url] = http://www.clockss.org/clockss/Archives_of_Family_Medicine
+        param[base_url] = http://archfami.ama-assn.org/
 
-        implicit < status ;  year ; name ; param[volume_name] ; proxy >
+        implicit < status ;  year ; name ; param[volume] ; proxy >
 
         au < manifest ; 1992 ; Archives of Family Medicine Volume 1 ; 1 ;  reingest.lockss.org:80 >
         au < manifest ; 1993 ; Archives of Family Medicine Volume 2 ; 2 ;  reingest.lockss.org:80 >
@@ -48,11 +49,11 @@
       
       {
 
-        plugin = org.lockss.plugin.highwire.HighWirePressH20TriggeredPlugin
+        plugin = org.lockss.plugin.highwire.HighWireTriggeredPlugin
         comment[access] = open access triggered CLOCKSS content
         attr[title_url] = http://clockss.org/clockss/JAMA_Francais
 
-        implicit < status ; year ; name ; param[volume_name] ; proxy >
+        implicit < status ; year ; name ; param[volume] ; proxy >
 
         au < manifest ; 2003 ; JAMA Français Volume 289 ; 289 ; reingest.lockss.org:80 >
         au < manifest ; 2003 ; JAMA Français Volume 290 ; 290 ; reingest.lockss.org:80 >
