@@ -84,8 +84,8 @@
     au < manifest ; exists ; 2006 ; Bulletin of Hispanic Studies Volume 83 ; 83 >
     au < manifest ; exists ; 2007 ; Bulletin of Hispanic Studies Volume 84 ; 84 >
     au < manifest ; exists ; 2008 ; Bulletin of Hispanic Studies Volume 85 ; 85 >
-    au < testing ; exists ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 >
-    au < testing ; exists ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
+    au < released ; manifest ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 >
+    au < released ; manifest ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
     au < released ; crawling ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
     au < crawling ; exists ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
 
@@ -107,8 +107,8 @@
     au < manifest ; exists ; 2006 ; The Byron Journal Volume 34 ; 34 >
     au < manifest ; exists ; 2007 ; The Byron Journal Volume 35 ; 35 >
     au < manifest ; exists ; 2008 ; The Byron Journal Volume 36 ; 36 >
-    au < testing ; exists ; 2009 ; The Byron Journal Volume 37 ; 37 >
-    au < testing ; exists ; 2010 ; The Byron Journal Volume 38 ; 38 >    
+    au < released ; manifest ; 2009 ; The Byron Journal Volume 37 ; 37 >
+    au < released ; manifest ; 2010 ; The Byron Journal Volume 38 ; 38 >    
     au < released ; crawling ; 2011 ; The Byron Journal Volume 39 ; 39 >
     au < expected ; exists ; 2012 ; The Byron Journal Volume 40 ; 40 >
 
@@ -141,8 +141,8 @@
     au < manifest ; exists ; 2006 ; Contemporary French Civilization Volume 30 ; 30 >
     au < manifest ; exists ; 2007 ; Contemporary French Civilization Volume 31 ; 31 >
     au < manifest ; exists ; 2008 ; Contemporary French Civilization Volume 32 ; 32 >
-    au < crawling ; exists ; 2009 ; Contemporary French Civilization Volume 33 ; 33 >
-    au < crawling ; exists ; 2010 ; Contemporary French Civilization Volume 34 ; 34 >
+    au < testing ; exists ; 2009 ; Contemporary French Civilization Volume 33 ; 33 >
+    au < testing ; exists ; 2010 ; Contemporary French Civilization Volume 34 ; 34 >
     au < released ; crawling ; 2011 ; Contemporary French Civilization Volume 35 ; 35 >    
     au < released ; crawling ; 2011 ; Contemporary French Civilization Volume 36 ; 36 >
     au < expected ; exists ; 2012 ; Contemporary French Civilization Volume 37 ; 37 >
@@ -161,8 +161,8 @@
     param[journal_issn] = 1754-3800 
 
     au < manifest ; exists ; 2008 ; European Comic Art Volume 1 ; 1 >
-    au < crawling ; exists ; 2009 ; European Comic Art Volume 2 ; 2 >
-    au < crawling ; exists ; 2010 ; European Comic Art Volume 3 ; 3 >    
+    au < testing ; exists ; 2009 ; European Comic Art Volume 2 ; 2 >
+    au < testing ; exists ; 2010 ; European Comic Art Volume 3 ; 3 >    
     au < released ; crawling ; 2011 ; European Comic Art Volume 4 ; 4 >
     au < expected ; exists ; 2012 ; European Comic Art Volume 5 ; 5 >
 
