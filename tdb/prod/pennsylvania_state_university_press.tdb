@@ -216,6 +216,11 @@
     >
     
     param[journal_dir] = journal_of_moravian_history
+    attr[journal_id] = moh
+    comment[jstor] = previous volumes on jstor years 2006-2012.
+    comment[continued_from] = issn0886-1730, years 1857-2000 on jstor
+
+    au < manifest ; 2012 ; The Journal of Moravian History Volume 12 ; 12 >
   }
 
   {
