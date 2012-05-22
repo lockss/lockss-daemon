@@ -11,16 +11,6 @@
   {
   
     title <
-      name = 14th Century English Mystics Newsletter ;
-      issn = 0737-5840 ;
-      issnl = 0737-5840
-    >
-    
-  }
-
-  {
-  
-    title <
       name = The Chaucer Review ;
       issn = 0009-2002 ;
       eissn = 1528-4204 ;
@@ -187,6 +177,8 @@
       issnl = 1947-6566
     >
 
+    comment[title_history] = issn1974-1983 (years 1974-1983), issn0742-5503 (years 1984-2009), issn1947-6566 (years 2010-2012). only issn1947-6566 archived in Muse.
+    comment[continued_from] = 0742-5503
     param[journal_dir] = journal_of_medieval_religious_cultures
     attr[journal_id] = mrc
 
@@ -303,16 +295,6 @@
     >
     
     param[journal_dir] = mediterranean_studies
-  }
-
-  {
-  
-    title <
-      name = Mystics Quarterly ;
-      issn = 0742-5503 ;
-      issnl = 0742-5503
-    >
-    
   }
 
   {
