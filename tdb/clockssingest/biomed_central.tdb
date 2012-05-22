@@ -3584,6 +3584,22 @@ comment[bmr] = journal archive available, but no new volumes
     }
 
     {
+      title < 
+      name = Multidisciplinary Respiratory Medicine ;
+      issn = 2049-6958 ;
+      issnl = 2049-6958
+    >
+
+      param[base_url] = http://http://www.mrmjournal.com/
+      param[journal_issn] = 2049-6958
+
+      au < expected ; exists ; 2010 ; Multidisciplinary Respiratory Medicine Volume 5 ; 5 >
+      au < expected ; exists ; 2011 ; Multidisciplinary Respiratory Medicine Volume 6 ; 6 >
+      au < expected ; exists ; 2012 ; Multidisciplinary Respiratory Medicine Volume 7 ; 7 >
+
+    }
+
+    {
       title <
         name = Neural Development ;
         issn = 1749-8104 ;

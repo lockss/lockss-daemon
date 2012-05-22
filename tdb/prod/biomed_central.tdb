@@ -1686,6 +1686,7 @@
       title <
         name = Arthritis Research & Therapy ;
         issn = 1478-6354 ;
+        eissn = 1478-6362 ;
         issnl = 1478-6354
       >
       
@@ -2230,7 +2231,8 @@ comment[bmr] = journal archive available, but no new volumes
     {
       title <
         name = Clinical Proteomics ;
-        issn = 1559-0275 ;
+        issn = 1542-6416 ;
+        eissn = 1559-0275 ;
         issnl = 1559-0275
       >
 
@@ -3634,6 +3636,22 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2010 ; Molecular Pain Volume 6 ; 6 >
       au < manifest ; 2011 ; Molecular Pain Volume 7 ; 7 >
       au < manifest ; 2012 ; Molecular Pain Volume 8 ; 8 >
+
+    }
+
+    {
+      title < 
+      name = Multidisciplinary Respiratory Medicine ;
+      issn = 2049-6958 ;
+      issnl = 2049-6958
+    >
+
+      param[base_url] = http://http://www.mrmjournal.com/
+      param[journal_issn] = 2049-6958
+
+      au < expected ; 2010 ; Multidisciplinary Respiratory Medicine Volume 5 ; 5 >
+      au < expected ; 2011 ; Multidisciplinary Respiratory Medicine Volume 6 ; 6 >
+      au < expected ; 2012 ; Multidisciplinary Respiratory Medicine Volume 7 ; 7 >
 
     }
 
