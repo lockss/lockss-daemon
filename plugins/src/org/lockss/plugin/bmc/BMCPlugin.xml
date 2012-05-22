@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -84,10 +84,7 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-      <list>
-       <string>&quot;%s%s/content/%s&quot;, base_url, journal_code, volume_name</string>
-       <string>&quot;%s%s/%s&quot; ,base_url,journal_issn,volume_name</string>
-       </list>
+    <string>&quot;%s%s/%s&quot; ,base_url,journal_issn,volume_name</string>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
@@ -98,20 +95,20 @@
 	  </entry>
 	  <entry>
 	    <string>au_volume</string>
-	    <string>&quot;%s%scontent/%s&quot;, base_url,journal_code, volume_name</string>
+            <string>&quot;%s%s/%s&quot; ,base_url,journal_issn,volume_name</string>
 	  </entry>
 	    <entry>
 	    <string>au_issue</string>
 	    <string>&quot;%s%scontent/%s/%s/%s&quot;, base_url, journal_code, volume_name, issue, year</string>
 	  </entry>
 	  <entry>
-	  	<string>au_article</string>
-	  	<string>&quot;%s%s/%s/%s&quot;, base_url, journal_issn, volume_name, spage</string>
+	    <string>au_article</string>
+	    <string>&quot;%s%s/%s/%s&quot;, base_url, journal_issn, volume_name, spage</string>
 	  </entry>
   	</map>
   </entry>
   <entry>
-    <string>au_permission_url</string>
+    <string>au_manifest</string>
     <string>&quot;%slockss/&quot;, base_url</string>
   </entry>
   <entry>
