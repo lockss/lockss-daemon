@@ -7,6 +7,22 @@
   {
   
     title <
+      name = 14th Century English Mystics Newsletter ;
+      issn = 0737-5840 ;
+      issnl = 0737-5840
+    >
+    
+    {
+      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      comment[needs_plugin] = years 1974-1983 on JSTOR/PSU Press
+      comment[continued_by] = 0742-5503
+    }
+    
+  }
+  
+  {
+  
+    title <
       name = The Chaucer Review ;
       issn = 0009-2002 ;
       eissn = 1528-4204 ;
@@ -217,6 +233,14 @@
     >
     
     {
+    
+      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      comment[needs_plugin] = years 2010-2012 on JSTOR/PSU Press
+      comment[continued_from] = 0742-5503
+    
+    }
+    
+    {
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
@@ -267,14 +291,21 @@
     >
     
     {
+    
+      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      comment[needs_plugin] = years 2006-2012 on JSTOR/PSU Press.
+      comment[continued_from] = 0886-1730 JSTOR/Moravian Historical Society? years 1857-2000
+      
+    }
+    
+    {
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
           
       param[journal_dir] = journal_of_moravian_history
       attr[journal_id] = moh
-      comment[jstor] = previous volumes on jstor years 2006-2012.
-      comment[continued_from] = issn0886-1730, years 1857-2000 on jstor
+      comment[continued_from] = 0886-1730 JSTOR/Moravian Historical Society? years 1857-2000
 
       au < manifest ; 2012 ; The Journal of Moravian History Volume 12 ; 12 >
       
@@ -369,10 +400,30 @@
     >
     
     {
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; year ; name ; param[volume] >
-      param[base_url] = http://muse.jhu.edu/    
-      param[journal_dir] = mediterranean_studies
+      
+      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      comment[needs_plugin] = years 1989-2012 on JSTOR/PSU Press. full run, vols 1-12
+      comment[continued_from] = 0742-5503
+      comment[overlap] = years 2005-2010 on Manchester Univ. Press/Ingenta
+      
+    }
+    
+  }
+
+  {
+  
+    title <
+      name = Mystics Quarterly ;
+      issn = 0742-5503 ;
+      issnl = 0742-5503
+    >
+    
+    {
+      
+      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      comment[needs_plugin] = years 1984-2009 on JSTOR/PSU Press
+      comment[continued_by] = 1947-6566
+      comment[continued_from] = 0737-5840
       
     }
     
