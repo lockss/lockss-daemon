@@ -483,10 +483,12 @@
   {
     title <
       name = Digital Philology: A Journal of Medieval Cultures ;
-      issn =  ;
-      eissn = ;
-      issnl = 
+      issn = 2162-9544 ;
+      eissn = 2162-9552 ;
+      issnl = 2162-9544
     >
+    
+    param[journal_dir] = digital_philology
 
 	comment[upcoming] = this journal is upcoming in projectmuse
     
