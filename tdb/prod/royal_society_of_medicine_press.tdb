@@ -417,8 +417,15 @@
     title <
       name = Handbook of Practice Management ;
       type = book ;
-      isbn = 0-443-04576-3
+      isbn = 0-443-04576-3 ; 
+      issn = 0962-144X
     >
+    
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://http://hpm.rsmjournals.com/
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < manifest ; 2009 ; Handbook of Practice Management Volume 71 ; 71 >
 
   }
 
