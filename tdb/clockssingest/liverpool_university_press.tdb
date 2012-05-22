@@ -141,8 +141,8 @@
     au < manifest ; exists ; 2006 ; Contemporary French Civilization Volume 30 ; 30 >
     au < manifest ; exists ; 2007 ; Contemporary French Civilization Volume 31 ; 31 >
     au < manifest ; exists ; 2008 ; Contemporary French Civilization Volume 32 ; 32 >
-    au < testing ; exists ; 2009 ; Contemporary French Civilization Volume 33 ; 33 >
-    au < testing ; exists ; 2010 ; Contemporary French Civilization Volume 34 ; 34 >
+    au < released ; manifest ; 2009 ; Contemporary French Civilization Volume 33 ; 33 >
+    au < released ; manifest ; 2010 ; Contemporary French Civilization Volume 34 ; 34 >
     au < released ; crawling ; 2011 ; Contemporary French Civilization Volume 35 ; 35 >    
     au < released ; crawling ; 2011 ; Contemporary French Civilization Volume 36 ; 36 >
     au < expected ; exists ; 2012 ; Contemporary French Civilization Volume 37 ; 37 >
@@ -161,8 +161,8 @@
     param[journal_issn] = 1754-3800 
 
     au < manifest ; exists ; 2008 ; European Comic Art Volume 1 ; 1 >
-    au < testing ; exists ; 2009 ; European Comic Art Volume 2 ; 2 >
-    au < testing ; exists ; 2010 ; European Comic Art Volume 3 ; 3 >    
+    au < released ; manifest ; 2009 ; European Comic Art Volume 2 ; 2 >
+    au < released ; manifest ; 2010 ; European Comic Art Volume 3 ; 3 >    
     au < released ; crawling ; 2011 ; European Comic Art Volume 4 ; 4 >
     au < expected ; exists ; 2012 ; European Comic Art Volume 5 ; 5 >
 
@@ -179,8 +179,8 @@
     
     param[journal_issn] = 1757-6830     
 
-    au < crawling ; exists ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 >
-    au < crawling ; exists ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
+    au < released ; manifest ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 >
+    au < released ; manifest ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
     au < released ; crawling ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
     au < crawling ; exists ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 >
 
@@ -221,8 +221,8 @@
     au < manifest ; exists ; 2006 ; International Development Planning Review Volume 28 ; 28 >
     au < manifest ; exists ; 2007 ; International Development Planning Review Volume 29 ; 29 >
     au < manifest ; exists ; 2008 ; International Development Planning Review Volume 30 ; 30 >
-    au < crawling ; exists ; 2009 ; International Development Planning Review Volume 31 ; 31 >
-    au < crawling ; exists ; 2010 ; International Development Planning Review Volume 32 ; 32 >
+    au < released ; manifest ; 2009 ; International Development Planning Review Volume 31 ; 31 >
+    au < released ; manifest ; 2010 ; International Development Planning Review Volume 32 ; 32 >
     au < released ; crawling ; 2011 ; International Development Planning Review Volume 33 ; 33 >
     au < crawling ; exists ; 2012 ; International Development Planning Review Volume 34 ; 34 >
 
@@ -241,8 +241,8 @@
 
     au < manifest ; exists ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
     au < manifest ; exists ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
-    au < crawling ; exists ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
-    au < crawling ; exists ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
+    au < testing ; exists ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
+    au < testing ; exists ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
     au < released ; crawling ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
     au < crawling ; exists ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
 
