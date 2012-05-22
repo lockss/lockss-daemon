@@ -14,16 +14,26 @@
       type = book ;
       isbn = 0-9552448-0-3 
     >
-
+    
+    param[journal_issn] = 
+    implicit < status ; year ; isbn ; name ; param[chapter_name]>
+    
+    comment[0] = This is a book with multiple chapters. May need different plugin? 
+    
   }
   
   {
 
     title <
       name = Insights: the UKSG journal ;
-      issn = 2048-7754
+      eissn = 2048-7754
     >
-    comment[0] = new title December 2011, volumes forthcoming. need eissn to determine manifest page
+    
+    param[journal_issn] = 2048-7754
+    implicit < status ; year ; name ; param[volume_name]>
+    
+    au < manifest ; 2012 ; Insights: the UKSG journal Volume 25 ; 25 >
+    
   }
   
   {
