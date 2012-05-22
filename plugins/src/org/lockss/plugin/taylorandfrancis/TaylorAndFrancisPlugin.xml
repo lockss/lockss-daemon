@@ -1,15 +1,15 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
     <string>Taylor &amp; Francis Plugin</string>
-  </entry>
-  <entry>
-    <string>plugin_status</string>
-    <string>released</string>
   </entry>
   <entry>
     <string>plugin_version</string>

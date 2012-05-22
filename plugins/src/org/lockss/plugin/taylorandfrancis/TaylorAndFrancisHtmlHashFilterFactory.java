@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.3 2012-05-12 00:22:28 mellen22 Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.4 2012-05-22 19:35:22 wkwilson Exp $
  */
 
 /*
@@ -73,8 +73,6 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         new TagNameFilter("script"),
         // Contains site-specific SFX markup
         HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
-        // Counterpart of the previous clause when there is no integrated SFX
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout\\?"),
         // Contains institution-specific markup
         HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
         // Contains a cookie or session ID
@@ -85,6 +83,8 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "&feed=rss"),
         // Contains a variant phrase "Full access" or "Free access"
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessIconWrapper"),
+        // Counterpart of the previous clause when there is no integrated SFX
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout\\?"),
     };
     
     HtmlTransform xform = new HtmlTransform() {
