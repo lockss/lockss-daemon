@@ -22256,9 +22256,10 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       {
 
+        param[base_url] = http://www.jie.org.uk/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
         
-        comment[pending] = Starting publishing in 2012 
+        comment[pending] = still expecting Feb 2012 expected date. http://highwire.stanford.edu/lists/future.dtl?journalcode=spjie
         
       }
       
