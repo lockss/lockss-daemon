@@ -7507,7 +7507,11 @@
     param[base_url] = http://imaiai.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    comment[0] = forthcoming
+    {
+    
+    au < HighWirePressH20Plugin ; exists ; 2012 ; Information and Inference: A Journal of the IMA Volume 1 ; 1 >
+    
+    }
 
   }
 
@@ -11278,7 +11282,11 @@
     param[base_url] = http://jpids.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    comment[0] = forthcoming in 2012
+    {
+    
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of the Pediatric Infectious Diseases Society Volume 1 ; 1 >
+    
+    }
 
   }
 
@@ -11650,7 +11658,7 @@
     param[base_url] = http://jrr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    comment[0] = forthcoming in 2012
+    comment[0] = forthcoming July 2012 url redirects to another, check again in July
 
   }
 
@@ -14633,7 +14641,11 @@
     param[base_url] = http://ojlr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    comment[0] = forthcoming in 2012
+    {
+    
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Oxford Journal of Law and Religion Volume 1 ; 1 >
+    
+    }
 
   }
 

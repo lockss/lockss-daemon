@@ -7222,7 +7222,11 @@
     param[base_url] = http://imaiai.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    comment[0] = forthcoming
+    {
+    
+    au < exists ; exists ; 2012 ; Information and Inference: A Journal of the IMA Volume 1 ; 1 ; >
+    
+    }
 
   }
 
@@ -10951,7 +10955,11 @@
     param[base_url] = http://jpids.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    comment[0] = forthcoming in 2012
+    {
+    
+    au < manifest ; exists ; 2012 ; Journal of the Pediatric Infectious Diseases Society Volume 1 ; 1 ; >
+    
+    }
 
   }
 
@@ -14135,7 +14143,11 @@
     param[base_url] = http://ojlr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    comment[0] = forthcoming in 2012
+    {
+    
+    au < exists ; exists ; 2012 ; Oxford Journal of Law and Religion Volume 1 ; 1 ; >
+    
+    }
 
   }
 
