@@ -1899,11 +1899,8 @@
 
     comment[bt] = this journal has ceased publication
 
-  
     {
 
-
-    plugin = org.lockss.plugin.highwire.HighWireTriggeredPlugi
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://brief-treatment.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
@@ -1932,9 +1929,8 @@
   
   {
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20TriggeredPlugin
->>>>>>> 1.268
-    param[base_url] = http://brief-treatment.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWireTriggeredPlugin
+    param[base_url] = http://btci.stanford.clockss.org/
     comment[doNotProcess] = This section is under construction -- do not process
     attr[title_url] = http://www.clockss.org/clockss/Brief_Treatment_and_Crisis_Intervention
 
@@ -1948,8 +1944,6 @@
     au < manifest ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 ; reingest.lockss.org:80 >
     au < manifest ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 ; reingest.lockss.org:80 >
     au < manifest ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 ; reingest.lockss.org:80 >
-    
-    
     }
   }
   
