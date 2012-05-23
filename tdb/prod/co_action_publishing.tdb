@@ -109,23 +109,16 @@
     param[base_url] = http://www.eurojnlofpsychotraumatol.net/
     param[journal_id] = ejpt
     
+    comment[0] = European Journal of Psychotraumatology [Supplements] are all in this title. 
+    comment[supplement_issn_and_eissn] = issn = 2000-8198 eissn = 2000-818X
+     
+     
+    au < manifest ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
+    au < manifest ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
     au < testing ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
     au < testing ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
     au < expected ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
     
-
-  }
-
-  {
-
-    title <
-      name = European Journal of Psychotraumatology [Supplements] ;
-      issn = 2000-8198 ;
-      eissn = 2000-818X ;
-      issnl = 2000-8198
-    >
-
-   comment[0] = These are included with the main title EJPT.
 
   }
 
