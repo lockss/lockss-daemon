@@ -241,8 +241,8 @@
 
     au < manifest ; exists ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 >
     au < manifest ; exists ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 >
-    au < testing ; exists ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
-    au < testing ; exists ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
+    au < released ; manifest ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
+    au < released ; manifest ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 >
     au < released ; crawling ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
     au < crawling ; exists ; 2012 ; Journal of Literary & Cultural Disability Studies Volume 6 ; 6 >
 
@@ -283,8 +283,8 @@
 
     au < manifest ; exists ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 >
     au < manifest ; exists ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
-    au < crawling ; exists ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
-    au < crawling ; exists ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
+    au < released ; manifest ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
+    au < released ; manifest ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
     au < released ; crawling ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
     au < expected ; exists ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
 
@@ -304,7 +304,7 @@
     comment[ceased_publication]=after 2009
 
     au < manifest ; exists ; 2008 ; Popular Narrative Media Volume 1 ; 1 >
-    au < crawling ; exists ; 2009 ; Popular Narrative Media Volume 2 ; 2 >
+    au < notReady ; exists ; 2009 ; Popular Narrative Media Volume 2 ; 2 >
 
 
  
@@ -331,8 +331,8 @@
     au < manifest ; exists ; 2006 ; Romani Studies Volume 16 ; 16 >
     au < manifest ; exists ; 2007 ; Romani Studies Volume 17 ; 17 >
     au < manifest ; exists ; 2008 ; Romani Studies Volume 18 ; 18 >
-    au < crawling ; exists ; 2009 ; Romani Studies Volume 19 ; 19 >
-    au < crawling ; exists ; 2010 ; Romani Studies Volume 20 ; 20 >
+    au < released ; manifest ; 2009 ; Romani Studies Volume 19 ; 19 >
+    au < released ; manifest ; 2010 ; Romani Studies Volume 20 ; 20 >
     au < released ; crawling ; 2011 ; Romani Studies Volume 21 ; 21 >
     au < crawling ; exists ; 2012 ; Romani Studies Volume 22 ; 22 >
 
@@ -350,8 +350,8 @@
     param[journal_issn] = 1754-3789 
 
     au < manifest ; exists ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
-    au < crawling ; exists ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
-    au < crawling ; exists ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
+    au < released ; manifest ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
+    au < released ; manifest ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
     au < released ; crawling ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
     au < crawling ; exists ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
 
@@ -373,8 +373,8 @@
     au < manifest ; exists ; 2006 ; Sculpture Journal Volume 15 ; 15 >
     au < manifest ; exists ; 2007 ; Sculpture Journal Volume 16 ; 16 >
     au < manifest ; exists ; 2008 ; Sculpture Journal Volume 17 ; 17 >
-    au < crawling ; exists ; 2009 ; Sculpture Journal Volume 18 ; 18 >
-    au < crawling ; exists ; 2010 ; Sculpture Journal Volume 19 ; 19 > 
+    au < released ; manifest ; 2009 ; Sculpture Journal Volume 18 ; 18 >
+    au < released ; manifest ; 2010 ; Sculpture Journal Volume 19 ; 19 > 
     au < released ; crawling ; 2011 ; Sculpture Journal Volume 20 ; 20 >
     au < expected ; exists ; 2012 ; Sculpture Journal Volume 21 ; 21 >
 
@@ -423,8 +423,8 @@
     au < manifest ; exists ; 2006 ; Town Planning Review Volume 77 ; 77 >
     au < manifest ; exists ; 2007 ; Town Planning Review Volume 78 ; 78 >
     au < manifest ; exists ; 2008 ; Town Planning Review Volume 79 ; 79 >
-    au < crawling ; exists ; 2009 ; Town Planning Review Volume 80 ; 80 >
-    au < crawling ; exists ; 2010 ; Town Planning Review Volume 81 ; 81 >
+    au < released ; manifest ; 2009 ; Town Planning Review Volume 80 ; 80 >
+    au < released ; manifest ; 2010 ; Town Planning Review Volume 81 ; 81 >
     au < released ; crawling ; 2011 ; Town Planning Review Volume 82 ; 82 >
     au < crawling ; exists ; 2012 ; Town Planning Review Volume 83 ; 83 >
 
