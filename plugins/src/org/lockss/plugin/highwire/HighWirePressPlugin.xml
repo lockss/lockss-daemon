@@ -143,10 +143,10 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressArticleIteratorFactory</string>
   </entry>
+  <entry>
     <string>text/html_filter_factory</string>
   	<string>org.lockss.plugin.highwire.HighWirePressFilterFactory</string>
   </entry>
-  <entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
