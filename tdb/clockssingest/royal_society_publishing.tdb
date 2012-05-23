@@ -101,7 +101,7 @@
     au < released ; crawling ; 2009 ; Biology Letters Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; Biology Letters Volume 6 ; 6 >
     au < released ; crawling ; 2011 ; Biology Letters Volume 7 ; 7 >
-    au < crawling ; manifest ; 2012 ; Biology Letters Volume 8 ; 8 >
+    au < testing ; manifest ; 2012 ; Biology Letters Volume 8 ; 8 >
 
   }
 
@@ -121,7 +121,7 @@
     comment[rsfs] = Do not add earlier issues - From 2008 to 2010 Interface Focus was published as a supplement to J R Soc Interface 
 
     au < released ; crawling ; 2011 ; Interface Focus Volume 1 ; 1 >
-    au < crawling ; exists ; 2012 ; Interface Focus Volume 2 ; 2 >
+    au < testing ; exists ; 2012 ; Interface Focus Volume 2 ; 2 >
     
   }
   
@@ -145,7 +145,7 @@
     au < released ; crawling ; 2009 ; Journal of the Royal Society Interface Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Journal of the Royal Society Interface Volume 7 ; 7 >
     au < released ; crawling ; 2011 ; Journal of the Royal Society Interface Volume 8 ; 8 >
-    au < crawling ; exists ; 2012 ; Journal of the Royal Society Interface Volume 9 ; 9 >
+    au < testing ; exists ; 2012 ; Journal of the Royal Society Interface Volume 9 ; 9 >
 
   }
 
@@ -226,7 +226,7 @@
     au < released ; crawling ; 2009 ; Notes and Records of the Royal Society Volume 63 ; 63 >
     au < released ; crawling ; 2010 ; Notes and Records of the Royal Society Volume 64 ; 64 >
     au < released ; crawling ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 >
-    au < crawling ; exists ; 2012 ; Notes and Records of the Royal Society Volume 66 ; 66 >
+    au < testing ; exists ; 2012 ; Notes and Records of the Royal Society Volume 66 ; 66 >
 
   }
 
@@ -244,7 +244,7 @@
     comment = Open Biology will begin receiving submissions of research articles starting in July 2011
     
     au < released ; crawling ; 2011 ; Open Biology Volume 1 ; 1 >
-    au < crawling ; exists ; 2012 ; Open Biology Volume 2 ; 2 >
+    au < testing ; exists ; 2012 ; Open Biology Volume 2 ; 2 >
     
 
   }
@@ -454,7 +454,7 @@
     au < released ; crawling ; 2009 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 367 ; 367 >
     au < released ; crawling ; 2010 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 368 ; 368 >
     au < released ; manifest; 2011 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 369 ; 369 >
-    au < crawling ; exists ; 2012 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 370 ; 370 >
+    au < testing ; exists ; 2012 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 370 ; 370 >
 
   }
 
@@ -659,7 +659,7 @@
     au < released ; crawling ; 2009 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 364 ; 364 >
     au < released ; crawling ; 2010 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 365 ; 365 >
     au < testing ; exists ; 2011 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 366 ; 366 >
-    au < crawling ; exists ; 2012 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 367 ; 367 >
+    au < testing ; exists ; 2012 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 367 ; 367 >
 
   }
 
@@ -1260,7 +1260,7 @@
     au < released ; crawling ; 2009 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 465 ; 465 >
     au < released ; crawling ; 2010 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 466 ; 466 >
     au < released ; crawling ; 2011 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 467 ; 467 >
-    au < crawling ; exists ; 2012 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 468 ; 468 >
+    au < testing ; exists ; 2012 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 468 ; 468 >
 
   }
 
@@ -1480,7 +1480,7 @@
     au < released ; crawling ; 2009 ; Proceedings of the Royal Society B: Biological Sciences Volume 276 ; 276 >
     au < released ; crawling ; 2010 ; Proceedings of the Royal Society B: Biological Sciences Volume 277 ; 277 >
     au < released ; crawling ; 2011 ; Proceedings of the Royal Society B: Biological Sciences Volume 278 ; 278 >
-    au < crawling ; exists ; 2012 ; Proceedings of the Royal Society B: Biological Sciences Volume 279 ; 279 >
+    au < testing ; exists ; 2012 ; Proceedings of the Royal Society B: Biological Sciences Volume 279 ; 279 >
 
   }
 
@@ -1569,7 +1569,7 @@
     au < wanted ; exists ; 1903 ; Proceedings of the Royal Society of London Volume 72 ; 72 >
     au < wanted ; exists ; 1904 ; Proceedings of the Royal Society of London Volume 73 ; 73 >
     au < wanted ; exists ; 1904 ; Proceedings of the Royal Society of London Volume 74 ; 74 >
-    au < crawling ; exists ; 1904 ; Proceedings of the Royal Society of London Volume 75 ; 75 >
+    au < testing ; exists ; 1904 ; Proceedings of the Royal Society of London Volume 75 ; 75 >
 
   }
 
