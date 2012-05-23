@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: clean_cache.py,v 1.10 2011-04-22 02:07:59 thib_gc Exp $
+# $Id: clean_cache.py,v 1.11 2012-05-23 02:58:46 thib_gc Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -110,14 +110,16 @@ def main():
     options = _process_args()
     src = options.directory
     local_txt = os.path.join(src, 'local.txt')
-    if (not os.path.isdir(os.path.join(src, 'cache'))
-        or not os.path.isfile(local_txt)):
+    if (not os.path.isdir(os.path.join(src, 'cache')): 
         raise Exception('%s doesn\'t look like a daemon directory. '
                         'Try --directory.' % src)
 
     if 'LOCKSS_UI_PORT' in os.environ:
         port = os.environ['LOCKSS_UI_PORT']
     else:
+        if not os.path.isfile(local_txt)):
+          raise Exception('LOCKSS_UI_PORT is not set but there is no'
+                          '%s' % (local_txt,))
         config = ConfigParser.ConfigParser()
         local_config = open(local_txt)
         try:
