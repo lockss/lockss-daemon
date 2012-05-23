@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $Id: clean_cache_cron,v 1.4 2012-05-23 02:58:46 thib_gc Exp $
+# $Id: clean_cache_cron,v 1.5 2012-05-23 22:35:39 thib_gc Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -95,7 +95,7 @@ for U in $LOCKSS_USER ; do
       # chgrp content $DEST
       touch "${DEST}/#deletion_timestamp"
       # May require an update later
-      $LOCKSS_CLEANUPCACHE --user="lockss-u" --password="lockss-p" --dest="${DEST}"
+      $LOCKSS_CLEANUPCACHE --user="lockss-u" --password="lockss-p" --directory="${LOCKSS_DISK_PATHS}" --dest="${DEST}"
       for D in `find $LOCKSS_DELETED -mindepth 2 -maxdepth 2 -type f -name "#deletion_timestamp" -mtime +$LOCKSS_DAYS`; do
         nice rm -rf `dirname $D`
       done
