@@ -39,10 +39,23 @@ END {
   s[9] = "superseded"
   s[10] = "zapped"
   sn = 11
+  
+  sc[0] = "expe"
+  sc[1] = "exis"
+  sc[2] = "mani"
+  sc[3] = "want"
+  sc[4] = "craw"
+  sc[5] = "test"
+  sc[6] = "notR"
+  sc[7] = "rele"
+  sc[8] = "down"
+  sc[9] = "supe"
+  sc[10] = "zapp"
+  scn = 11
 
-  printf "Publisher\tPlugin\tContract\tYear\tTotal"
-  for (j = 0 ; j < sn ; j++) {
-    printf "\t%s", s[j]
+  printf "Publisher\tPlugin\tContr\tYear\tTotal"
+  for (j = 0 ; j < scn ; j++) {
+    printf "\t%s", sc[j]
   }
   printf "\n"
 
