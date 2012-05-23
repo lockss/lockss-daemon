@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.9 2011-12-20 21:17:54 davidecorcoran Exp $
+ * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.10 2012-05-23 11:46:53 pgust Exp $
  */
 
 /*
@@ -103,7 +103,7 @@ public class HighWirePressH20ArticleIteratorFactory
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, htmlCu);
-//      guessFullTextPdf(af, htmlMat);
+      guessFullTextPdf(af, htmlMat);
 //      guessOtherParts(af, htmlMat);
       return af;
     }
@@ -135,16 +135,16 @@ public class HighWirePressH20ArticleIteratorFactory
 //      guessSupplementaryMaterials(af, mat);
 //    }
 //    
-//    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
-//      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/$1.pdf"));
-//      if (pdfCu != null && pdfCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-//        CachedUrl pdfLandCu = au.makeCachedUrl(mat.replaceFirst("/$1.full.pdf+html"));
-//        if (pdfLandCu != null && pdfLandCu.hasContent()) {
-//          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
-//        }
-//      }
-//    }
+    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
+      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/$1.pdf"));
+      if (pdfCu != null && pdfCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+        CachedUrl pdfLandCu = au.makeCachedUrl(mat.replaceFirst("/$1.full.pdf+html"));
+        if (pdfLandCu != null && pdfLandCu.hasContent()) {
+          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
+        }
+      }
+    }
 //
 //    protected void guessAbstract(ArticleFiles af, Matcher mat) {
 //      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1.abstract"));
