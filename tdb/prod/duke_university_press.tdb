@@ -387,11 +387,11 @@
       param[base_url] = http://easts.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; ready ; 2007 ; East Asian Science, Technology and Society: an International Journal Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; ready ; 2008 ; East Asian Science, Technology and Society: an International Journal Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; ready ; 2009 ; East Asian Science, Technology and Society: an International Journal Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; ready ; 2010 ; East Asian Science, Technology and Society: an International Journal Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; ready ; 2011 ; East Asian Science, Technology and Society: an International Journal Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; releasing ; 2007 ; East Asian Science, Technology and Society: an International Journal Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; releasing ; 2008 ; East Asian Science, Technology and Society: an International Journal Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; releasing ; 2009 ; East Asian Science, Technology and Society: an International Journal Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; releasing ; 2010 ; East Asian Science, Technology and Society: an International Journal Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; releasing ; 2011 ; East Asian Science, Technology and Society: an International Journal Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; manifest ; 2012 ; East Asian Science, Technology and Society: an International Journal Volume 6 ; 6 >
 
     }
@@ -750,7 +750,7 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Health Politics, Policy and Law Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Health Politics, Policy and Law Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Health Politics, Policy and Law Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Health Politics, Policy and Law Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; releasing ; 2011 ; Journal of Health Politics, Policy and Law Volume 36 ; 36 >
       au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Health Politics, Policy and Law Volume 37 ; 37 >
     
     }
@@ -794,7 +794,7 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Medieval and Early Modern Studies Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; releasing ; 2011 ; Journal of Medieval and Early Modern Studies Volume 41 ; 41 >
       au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medieval and Early Modern Studies Volume 42 ; 42 >
     
     }
