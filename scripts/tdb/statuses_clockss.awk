@@ -66,7 +66,7 @@ END {
     }
     printf "\n"
   }
-    printf "Publisher\tPlugin\tContract\tYear\t%d", tt
+    printf "Publisher\tPlugin\tContr\tYear\t%d", tt
     for (j = 0 ; j < sn ; j++) {
     	printf "\t%d", x[s[j]]
     }
