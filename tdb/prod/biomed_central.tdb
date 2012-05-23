@@ -32,7 +32,7 @@
       au < released ; 2009 ; BMC Anesthesiology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Anesthesiology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Anesthesiology Volume 11 ; 11 >
-      au < testing ; 2012 ; BMC Anesthesiology Volume 12 ; 12 >
+      au < ready ; 2012 ; BMC Anesthesiology Volume 12 ; 12 >
       
     }
 
@@ -58,7 +58,7 @@
       au < released ; 2009 ; BMC Biochemistry Volume 10 ; 10 >
       au < released ; 2010 ; BMC Biochemistry Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Biochemistry Volume 12 ; 12 >
-      au < testing ; 2012 ; BMC Biochemistry Volume 13 ; 13 >
+      au < ready ; 2012 ; BMC Biochemistry Volume 13 ; 13 >
 
     }
 
@@ -1565,7 +1565,7 @@
       au < released ; 2009 ; Acta Veterinaria Scandinavica Volume 51 ; 51 >
       au < released ; 2010 ; Acta Veterinaria Scandinavica Volume 52 ; 52 >
       au < ready ; 2011 ; Acta Veterinaria Scandinavica Volume 53 ; 53 >
-      au < testing ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 >
+      au < ready ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 >
       
     }
 
@@ -1707,7 +1707,7 @@
       au < released ; 2008 ; Arthritis Research & Therapy Volume 10 ; 10 >
       au < released ; 2009 ; Arthritis Research & Therapy Volume 11 ; 11 >
       au < released ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
-      au < testing ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
+      au < ready ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
       au < manifest ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
 
     }
@@ -1764,9 +1764,9 @@
       param[base_url] = http://www.biologicalproceduresonline.com/
       param[journal_issn] = 1480-9222
 
-      au < testing ; 2009 ; Biological Procedures Online Volume 11 ; 11 >
-      au < testing ; 2009-2010 ; Biological Procedures Online Volume 12 ; 12 >
-      au < testing ; 2010-2011 ; Biological Procedures Online Volume 13 ; 13 >
+      au < ready ; 2009 ; Biological Procedures Online Volume 11 ; 11 >
+      au < ready ; 2009-2010 ; Biological Procedures Online Volume 12 ; 12 >
+      au < ready ; 2010-2011 ; Biological Procedures Online Volume 13 ; 13 >
       au < manifest ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
 
     }
@@ -1855,7 +1855,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; BioPsychoSocial Medicine Volume 2 ; 2 >
       au < released ; 2009 ; BioPsychoSocial Medicine Volume 3 ; 3 >
       au < released ; 2010 ; BioPsychoSocial Medicine Volume 4 ; 4 >
-      au < testing ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
+      au < ready ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
       au < manifest ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
       
     }
@@ -1875,7 +1875,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Biotechnology for Biofuels Volume 1 ; 1 >
       au < released ; 2009 ; Biotechnology for Biofuels Volume 2 ; 2 >
       au < released ; 2010 ; Biotechnology for Biofuels Volume 3 ; 3 >
-      au < testing ; 2011 ; Biotechnology for Biofuels Volume 4 ; 4 >
+      au < ready ; 2011 ; Biotechnology for Biofuels Volume 4 ; 4 >
       au < manifest ; 2012 ; Biotechnology for Biofuels Volume 5 ; 5 >
       
     }
@@ -2240,8 +2240,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1542-6416
       comment[moved_from] = Springer Science+Business Media in 2011
       
-      au < testing ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
-      au < manifest ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
+      au < expected ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
+      au < expected ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
 
     }
 
@@ -2334,7 +2334,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Dynamic Medicine Volume 7 ; 7 >
       au < released ; 2009 ; Dynamic Medicine Volume 8 ; 8 >
       au < released ; 2010 ; Dynamic Medicine Volume 9 ; 9 >
-      au < manifest ; 2011 ; Dynamic Medicine Volume 10 ; 10 >
+      au < testing ; 2011 ; Dynamic Medicine Volume 10 ; 10 >
 
     }
 
@@ -2417,7 +2417,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.fluidsbarrierscns.com/
       param[journal_issn] = 2045-8118
 
-      au < testing ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
+      au < ready ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
       au < manifest ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
 
     }
@@ -2437,9 +2437,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Frontiers in Zoology Volume 3 ; 3 >
       au < released ; 2007 ; Frontiers in Zoology Volume 4 ; 4 >
       au < released ; 2008 ; Frontiers in Zoology Volume 5 ; 5 >
-      au < testing ; 2009 ; Frontiers in Zoology Volume 6 ; 6 >
-      au < testing ; 2010 ; Frontiers in Zoology Volume 7 ; 7 >
-      au < testing ; 2011 ; Frontiers in Zoology Volume 8 ; 8 >
+      au < ready ; 2009 ; Frontiers in Zoology Volume 6 ; 6 >
+      au < ready ; 2010 ; Frontiers in Zoology Volume 7 ; 7 >
+      au < ready ; 2011 ; Frontiers in Zoology Volume 8 ; 8 >
       au < manifest ; 2012 ; Frontiers in Zoology Volume 9 ; 9 >
       
     }
@@ -2460,9 +2460,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Genetic Vaccines and Therapy Volume 4 ; 4 >
       au < released ; 2007 ; Genetic Vaccines and Therapy Volume 5 ; 5 >
       au < released ; 2008 ; Genetic Vaccines and Therapy Volume 6 ; 6 >
-      au < testing ; 2009 ; Genetic Vaccines and Therapy Volume 7 ; 7 >
-      au < testing ; 2010 ; Genetic Vaccines and Therapy Volume 8 ; 8 >
-      au < testing ; 2011 ; Genetic Vaccines and Therapy Volume 9 ; 9 >
+      au < ready ; 2009 ; Genetic Vaccines and Therapy Volume 7 ; 7 >
+      au < ready ; 2010 ; Genetic Vaccines and Therapy Volume 8 ; 8 >
+      au < ready ; 2011 ; Genetic Vaccines and Therapy Volume 9 ; 9 >
       au < manifest ; 2012 ; Genetic Vaccines and Therapy Volume 10 ; 10 >
 
     }
@@ -2486,9 +2486,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Genome Biology Volume 7 ; 7 >
       au < released ; 2007 ; Genome Biology Volume 8 ; 8 >
       au < released ; 2008 ; Genome Biology Volume 9 ; 9 >
-      au < testing ; 2009 ; Genome Biology Volume 10 ; 10 >
-      au < testing ; 2010 ; Genome Biology Volume 11 ; 11 >
-      au < testing ; 2011 ; Genome Biology Volume 12 ; 12 >
+      au < ready ; 2009 ; Genome Biology Volume 10 ; 10 >
+      au < ready ; 2010 ; Genome Biology Volume 11 ; 11 >
+      au < ready ; 2011 ; Genome Biology Volume 12 ; 12 >
       au < manifest ; 2012 ; Genome Biology Volume 13 ; 13 >
       
     }
@@ -2504,7 +2504,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2041-9414
 
       au < released ; 2010 ; Genome Integrity Volume 1 ; 1 >
-      au < testing ; 2011 ; Genome Integrity Volume 2 ; 2 >
+      au < ready ; 2011 ; Genome Integrity Volume 2 ; 2 >
       au < manifest ; 2012 ; Genome Integrity Volume 3 ; 3 >
       
     }
@@ -2592,9 +2592,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Head & Face Medicine Volume 2 ; 2 >
       au < released ; 2007 ; Head & Face Medicine Volume 3 ; 3 >
       au < released ; 2008 ; Head & Face Medicine Volume 4 ; 4 >
-      au < manifest ; 2009 ; Head & Face Medicine Volume 5 ; 5 >
-      au < manifest ; 2010 ; Head & Face Medicine Volume 6 ; 6 >
-      au < manifest ; 2011 ; Head & Face Medicine Volume 7 ; 7 >
+      au < testing ; 2009 ; Head & Face Medicine Volume 5 ; 5 >
+      au < testing ; 2010 ; Head & Face Medicine Volume 6 ; 6 >
+      au < testing ; 2011 ; Head & Face Medicine Volume 7 ; 7 >
       au < manifest ; 2012 ; Head & Face Medicine Volume 8 ; 8 >
 
     }
@@ -2615,9 +2615,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Health and Quality of Life Outcomes Volume 4 ; 4 >
       au < released ; 2007 ; Health and Quality of Life Outcomes Volume 5 ; 5 >
       au < released ; 2008 ; Health and Quality of Life Outcomes Volume 6 ; 6 >
-      au < manifest ; 2009 ; Health and Quality of Life Outcomes Volume 7 ; 7 >
-      au < manifest ; 2010 ; Health and Quality of Life Outcomes Volume 8 ; 8 >
-      au < manifest ; 2011 ; Health and Quality of Life Outcomes Volume 9 ; 9 >
+      au < testing ; 2009 ; Health and Quality of Life Outcomes Volume 7 ; 7 >
+      au < testing ; 2010 ; Health and Quality of Life Outcomes Volume 8 ; 8 >
+      au < testing ; 2011 ; Health and Quality of Life Outcomes Volume 9 ; 9 >
       au < manifest ; 2012 ; Health and Quality of Life Outcomes Volume 10 ; 10 >
 
     }
@@ -2635,14 +2635,14 @@ comment[bmr] = journal archive available, but no new volumes
       comment[HRPS] = Volume 1 is from 2003 
 
       au < released ; 2002 ; Health Research Policy and Systems Volume 1 ; 1 >
-      au < manifest ; 2004 ; Health Research Policy and Systems Volume 2 ; 2 >
-      au < manifest ; 2005 ; Health Research Policy and Systems Volume 3 ; 3 >
-      au < manifest ; 2006 ; Health Research Policy and Systems Volume 4 ; 4 >
-      au < manifest ; 2007 ; Health Research Policy and Systems Volume 5 ; 5 >
-      au < manifest ; 2008 ; Health Research Policy and Systems Volume 6 ; 6 >
-      au < manifest ; 2009 ; Health Research Policy and Systems Volume 7 ; 7 >
-      au < manifest ; 2010 ; Health Research Policy and Systems Volume 8 ; 8 >
-      au < manifest ; 2011 ; Health Research Policy and Systems Volume 9 ; 9 >
+      au < testing ; 2004 ; Health Research Policy and Systems Volume 2 ; 2 >
+      au < testing ; 2005 ; Health Research Policy and Systems Volume 3 ; 3 >
+      au < testing ; 2006 ; Health Research Policy and Systems Volume 4 ; 4 >
+      au < testing ; 2007 ; Health Research Policy and Systems Volume 5 ; 5 >
+      au < testing ; 2008 ; Health Research Policy and Systems Volume 6 ; 6 >
+      au < testing ; 2009 ; Health Research Policy and Systems Volume 7 ; 7 >
+      au < testing ; 2010 ; Health Research Policy and Systems Volume 8 ; 8 >
+      au < testing ; 2011 ; Health Research Policy and Systems Volume 9 ; 9 >
       au < manifest ; 2012 ; Health Research Policy and Systems Volume 10 ; 10 >
 
     }
@@ -2663,9 +2663,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Human Resources for Health Volume 4 ; 4 >
       au < released ; 2007 ; Human Resources for Health Volume 5 ; 5 >
       au < released ; 2008 ; Human Resources for Health Volume 6 ; 6 >
-      au < manifest ; 2009 ; Human Resources for Health Volume 7 ; 7 >
-      au < manifest ; 2010 ; Human Resources for Health Volume 8 ; 8 >
-      au < manifest ; 2011 ; Human Resources for Health Volume 9 ; 9 >
+      au < testing ; 2009 ; Human Resources for Health Volume 7 ; 7 >
+      au < testing ; 2010 ; Human Resources for Health Volume 8 ; 8 >
+      au < testing ; 2011 ; Human Resources for Health Volume 9 ; 9 >
       au < manifest ; 2012 ; Human Resources for Health Volume 10 ; 10 >
 
     }
