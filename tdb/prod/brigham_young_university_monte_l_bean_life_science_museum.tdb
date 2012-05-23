@@ -3,9 +3,9 @@
   publisher <
     name = Brigham Young University Monte L. Bean Life Science Museum
   >
-
-comment[plugin] = this is pubilshed by BioOne, should have the new plugin when it's written
-comment[base_url] = http://www.bioone.org/loi/mwna
+  
+  plugin = org.lockss.plugin.bioone.BioOnePlugin
+  param[base_url] = http://www.bioone.org/
 
   {
 
@@ -13,6 +13,16 @@ comment[base_url] = http://www.bioone.org/loi/mwna
       name = Monographs of the Western North American Naturalist ;
       issn = 1545-0228
     >
+    
+    param[journal_id] = mwna
+    implicit < status ; year ; name ; param[volume] >
+    
+    au < manifest ; 2002 ; Monographs of the Western North American Naturalist Volume 1 ; 1 >
+    au < manifest ; 2004 ; Monographs of the Western North American Naturalist Volume 2 ; 2 >
+    au < manifest ; 2007 ; Monographs of the Western North American Naturalist Volume 3 ; 3 >
+    au < manifest ; 2008 ; Monographs of the Western North American Naturalist Volume 4 ; 4 >
+    au < manifest ; 2011 ; Monographs of the Western North American Naturalist Volume 5 ; 5 > 
+    
     
   }
   
