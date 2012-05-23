@@ -4,7 +4,6 @@
     name = Co-Action Publishing
   >
 
-  comment[0] = needs clone of CLOCKSS plugin
 
   plugin = org.lockss.plugin.coactionpublishing.CoActionPublishingPlugin
   implicit < status ; year ; name ; volume ;  param[year] >
