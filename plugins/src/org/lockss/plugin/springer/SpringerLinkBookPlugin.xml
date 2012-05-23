@@ -5,14 +5,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-	<string>2</string>
+	<string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -65,7 +65,7 @@
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>2,&quot;^%sfulltext-image\.asp\?&quot;, base_url</string>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>2,&quot;^%s.*\?target=(export|print|save)$&quot;, base_url</string>
+      <string>2,&quot;^%s.*\?(target=(export|print|save)|MUD=MP)$&quot;, base_url</string>
       <string>2,&quot;^%scontent/%s(/mycopy)?/?$&quot;, base_url, book_isbn</string>
       <string>1,&quot;^%scontent/%s/&quot;, base_url, book_isbn</string>
       <string>2,&quot;^%scontent/[A-Za-z0-9]{16}/(export-citation|referrers)/&quot;, base_url</string>
