@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>78</string>
+    <string>79</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -143,6 +143,10 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressArticleIteratorFactory</string>
   </entry>
+    <string>text/html_filter_factory</string>
+  	<string>org.lockss.plugin.highwire.HighWirePressFilterFactory</string>
+  </entry>
+  <entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>

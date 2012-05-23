@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldHtmlMetadataExtractorFactory.java,v 1.5 2012-05-16 21:23:05 dylanrhodes Exp $
+ * $Id: EmeraldHtmlMetadataExtractorFactory.java,v 1.6 2012-05-23 21:42:21 dylanrhodes Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
-
 public class EmeraldHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("EmeraldHtmlMetadataExtractorFactory");
 
@@ -55,31 +54,52 @@ public class EmeraldHtmlMetadataExtractorFactory implements FileMetadataExtracto
   public static class EmeraldHtmlMetadataExtractor 
     implements FileMetadataExtractor {
 
-    // Map Emerald's Google Scholar HTML meta tag names to cooked metadata fields
-    private static MultiMap tagMap = new MultiValueMap();
+    // Map Emerald's Google Scholar HTML meta tag names for journals to cooked metadata fields
+    private static MultiMap journalTagMap = new MultiValueMap();
     static {
-      tagMap.put("citation_doi", MetadataField.FIELD_DOI);
-      tagMap.put("citation_date", MetadataField.FIELD_DATE);
-      tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
-      //tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
-      tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
-      tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
-      tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
-      tagMap.put("citation_authors",
+      journalTagMap.put("citation_doi", MetadataField.FIELD_DOI);
+      journalTagMap.put("citation_date", MetadataField.FIELD_DATE);
+      journalTagMap.put("citation_issn", MetadataField.FIELD_ISSN);
+      journalTagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
+      journalTagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
+      journalTagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
+      journalTagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
+      journalTagMap.put("citation_authors",
                  new MetadataField(MetadataField.FIELD_AUTHOR,
                                    MetadataField.splitAt(";")));
-      tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
-      //tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
-      tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
+      journalTagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
+      journalTagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      journalTagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
+    }
+    
+    // Map Emerald's Google Scholar HTML meta tag names for books to cooked metadata fields
+    private static MultiMap bookTagMap = new MultiValueMap();
+    static {
+      bookTagMap.put("citation_doi", MetadataField.FIELD_DOI);
+      bookTagMap.put("citation_date", MetadataField.FIELD_DATE);
+      bookTagMap.put("citation_volume", MetadataField.FIELD_JOURNAL_TITLE);
+      bookTagMap.put("citation_issue", MetadataField.FIELD_VOLUME);
+      bookTagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
+      bookTagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
+      bookTagMap.put("citation_authors",
+                 new MetadataField(MetadataField.FIELD_AUTHOR,
+                                   MetadataField.splitAt(";")));
+      bookTagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
+      bookTagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
     }
 
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
-    	log.debug3("extracting from: "+cu.getUrl());
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
-      am.cook(tagMap);
+      
+  	  String type = cu.getArchivalUnit().getTitleConfig().getProperties().get("type");
+      if(type != null)
+    	  am.cook(bookTagMap);
+      else
+    	  am.cook(journalTagMap);
+      
       emitter.emitMetadata(cu, am);
     }
   }
