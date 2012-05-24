@@ -31,6 +31,7 @@
     >
 
     param[journal_dir] = theatre_history_studies
+    attr[journal_id] = ths
     implicit < status ; year ; name ; param[volume] >
     
     au < manifest ; 2007 ; Theatre History Studies Volume 27 ; 27 >
@@ -50,6 +51,7 @@
     >
 
     param[journal_dir] = theatre_symposium
+    attr[journal_id] = ts
     implicit < status ; year ; name ; param[volume] >
     
     au < manifest ; 2007 ; Theatre Symposium Volume 15 ; 15 >
