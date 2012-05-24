@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $Id: clean_cache_cron,v 1.5 2012-05-23 22:35:39 thib_gc Exp $
+# $Id: clean_cache_cron,v 1.6 2012-05-24 00:37:27 thib_gc Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -85,6 +85,7 @@ for U in $LOCKSS_USER ; do
     export LOCKSS_DAYS
     export LOCKSS_DELETED
     export LOCKSS_DISK_PATHS
+    export LOCKSS_IPADDR
     export LOCKSS_UI_PORT
     su $U -- -c '
       umask 002

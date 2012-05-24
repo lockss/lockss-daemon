@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: clean_cache.py,v 1.12 2012-05-23 03:02:03 thib_gc Exp $
+# $Id: clean_cache.py,v 1.13 2012-05-24 00:37:27 thib_gc Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -114,6 +114,9 @@ def main():
         raise Exception('%s doesn\'t look like a daemon directory. '
                         'Try --directory.' % src)
 
+    if 'LOCKSS_IPADDR' in os.environ: ipAddr = os.environ['LOCKSS_IPADDR']
+    else: ipAddr = '127.0.0.1'
+
     if 'LOCKSS_UI_PORT' in os.environ:
         port = os.environ['LOCKSS_UI_PORT']
     else:
@@ -129,7 +132,7 @@ def main():
             local_config.close()
 
     fix_auth_failure.fix_auth_failure()
-    client = lockss_daemon.Client('127.0.0.1', port,
+    client = lockss_daemon.Client(ipAddr, port,
                                   options.user, options.password)
     repos = client._getStatusTable( 'RepositoryTable' )[ 1 ]
 
@@ -164,7 +167,10 @@ def main():
                 verify_each and \
                 raw_input('move %s [n]? ' % r['auid']).startswith('y'):
             src_r = os.path.join(src, dir)
-            dst_r = os.path.join(dst, dir)
+            if os.path.isabs(dir):
+              if not dir.startswith(options.directory): print 'Absolute/relative path mismatch: %s' % (dir,)
+              dst_r = os.path.join(dst, dir[len(options.directory)+1:])
+            else: dst_r = os.path.join(dst, dir)
             if options.commands:
                 print "mv %s %s # %s" % (src_r, dst_r, r['auid'])
             else:
