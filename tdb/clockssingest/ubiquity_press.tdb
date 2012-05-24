@@ -4,7 +4,7 @@
     name = Ubiquity Press
   >
 
-  attr[contract] = 
+  attr[contract] = 2011
 
   {
   
@@ -75,7 +75,7 @@
     au < manifest ; exists ; 2008 ; The Bulletin of the History of Archaeology Volume 18 ; 18 >
     au < manifest ; exists ; 2009 ; The Bulletin of the History of Archaeology Volume 19 ; 19 >
     au < manifest ; exists ; 2010 ; The Bulletin of the History of Archaeology Volume 20 ; 20 >
-    au < manifest ; exists ; 2011 ; The Bulletin of the History of Archaeology Volume 21 ; 21 >
+    au < crawling ; exists ; 2011 ; The Bulletin of the History of Archaeology Volume 21 ; 21 >
     
   }
   
@@ -99,7 +99,7 @@
     au < manifest ; exists ; 1999 ; The Journal of Conservation and Museum Studies Volume 6 ; 6 >
     au < manifest ; exists ; 2001 ; The Journal of Conservation and Museum Studies Volume 7 ; 7 >
     au < manifest ; exists ; 2002 ; The Journal of Conservation and Museum Studies Volume 8 ; 8 >
-    au < manifest ; exists ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 ; 9 >
+    au < crawling ; exists ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 ; 9 >
     au < manifest ; exists ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 ; 10 >
     
   }
@@ -153,8 +153,8 @@
     au < manifest ; exists ; 2009 ; Opticon1826 Volume 7 ; 7 >
     au < manifest ; exists ; 2010 ; Opticon1826 Volume 8 ; 8 >
     au < manifest ; exists ; 2010 ; Opticon1826 Volume 9 ; 9 >
-    au < manifest ; exists ; 2011 ; Opticon1826 Volume 10 ; 10 >
-    au < manifest ; exists ; 2011 ; Opticon1826 Volume 11 ; 11 >
+    au < crawling ; exists ; 2011 ; Opticon1826 Volume 10 ; 10 >
+    au < crawling ; exists ; 2011 ; Opticon1826 Volume 11 ; 11 >
     au < manifest ; exists ; 2012 ; Opticon1826 Volume 12 ; 12 > 
     
   }
@@ -191,7 +191,7 @@
     au < manifest ; exists ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 >
     au < manifest ; exists ; 2009 ; Papers from the Institute of Archaeology Volume 19 ; 19 >
     au < manifest ; exists ; 2010 ; Papers from the Institute of Archaeology Volume 20 ; 20 >
-    au < manifest ; exists ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 >
+    au < crawling ; exists ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 >
     
   }
   
@@ -209,7 +209,7 @@
 
     au < manifest ; exists ; 2009 ; Present Pasts Volume 1 ; 1 >
     au < manifest ; exists ; 2010 ; Present Pasts Volume 2 ; 2 >
-    au < manifest ; exists ; 2011 ; Present Pasts Volume 3 ; 3 >
+    au < crawling ; exists ; 2011 ; Present Pasts Volume 3 ; 3 >
     
   }
 
