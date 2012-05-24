@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -110,6 +110,12 @@
   <entry>
     <string>au_manifest</string>
     <string>&quot;%slockss/&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%s%s/%s/[0-9]+$&quot;, base_url, journal_issn, volume_name</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
