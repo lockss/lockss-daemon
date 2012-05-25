@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.2 2012-05-01 19:49:17 akanshab01 Exp $
+ * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.3 2012-05-25 22:23:15 dylanrhodes Exp $
  */
 
 /*
@@ -39,42 +39,111 @@ import org.lockss.daemon.PluginException;
 import org.lockss.test.*;
 
 public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
-  static String ENC = Constants.DEFAULT_ENCODING;
+	static String ENC = Constants.DEFAULT_ENCODING;
 
-  private HighWirePressH20HtmlFilterFactory fact;
-  private MockArchivalUnit mau;
+	private HighWirePressH20HtmlFilterFactory fact;
+	private MockArchivalUnit mau;
 
-  public void setUp() throws Exception {
-    super.setUp();
-    fact = new HighWirePressH20HtmlFilterFactory();
-    mau = new MockArchivalUnit();
-  }
+	public void setUp() throws Exception {
+		super.setUp();
+		fact = new HighWirePressH20HtmlFilterFactory();
+		mau = new MockArchivalUnit();
+	}
 
-  private static final String inst1 = "<div class=\"leaderboard-ads leaderboard-ads-two\"</div>"
-      + "<ul>Fill in SOMETHING SOMETHING</ul>";
+	private static final String inst1 = "<div class=\"leaderboard-ads leaderboard-ads-two\"</div>"
+			+ "<ul>Fill in SOMETHING SOMETHING</ul>";
 
-  private static final String inst2 = "<ul>Fill in SOMETHING SOMETHING</ul>";
+	private static final String inst2 = "<ul>Fill in SOMETHING SOMETHING</ul>";
 
- 
-  public void testFiltering() throws IOException {
-    InputStream inA;
-    InputStream inB;
+	private static final String withAds = "<div id=\"footer\">"
+			+ "<div class=\"block-1\">"
+			+ "<div class=\"leaderboard-ads-ft\">"
+			+ "<ul>"
+			+ "<li><a href=\"com%2FAbout.html\"><img title=\"Advertiser\""
+			+ "src=\"http:/adview=true\""
+			+ "alt=\"Advertiser\" /></a></li>"
+			+ "</ul>"
+			+ "</div>"
+			+ "<p class=\"disclaimer\">The content of this site is intended for health care professionals</p>"
+			+ "<p class=\"copyright\">Copyright © 2012 by "
+			+ "The Journal of Rheumatology" + "</p>" + "<ul class=\"issns\">"
+			+ "<li><span>Print ISSN: </span>"
+			+ "<span class=\"issn\">0315-162X</span></li>"
+			+ "<li><span>Online ISSN: </span>"
+			+ "<span class=\"issn\">1499-2752</span></li>" + "</ul>" + "</div>"
+			+ "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
 
-    try {
-      inA = fact.createFilteredInputStream(mau, new StringInputStream(inst1),
-          ENC);
-      inB = fact.createFilteredInputStream(mau, new StringInputStream(inst2),
-          ENC);
-      
-           
-      assertEquals(StringUtil.fromInputStream(inA),
-          StringUtil.fromInputStream(inB));
+	private static final String withoutAds = "<div id=\"footer\">"
+			+ "<div class=\"block-1\">"
+			+ "<p class=\"disclaimer\">The content of this site is intended for health care professionals</p>"
+			+ "<p class=\"copyright\">Copyright © 2012 by "
+			+ "The Journal of Rheumatology" + "</p>" + "<ul class=\"issns\">"
+			+ "<li><span>Print ISSN: </span>"
+			+ "<span class=\"issn\">0315-162X</span></li>"
+			+ "<li><span>Online ISSN: </span>"
+			+ "<span class=\"issn\">1499-2752</span></li>" + "</ul>" + "</div>"
+			+ "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
 
-    } catch (PluginException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
+	private static final String withCopyright = "<div id=\"footer\">"
+			+ "<div class=\"block-1\">"
+			+ "<p class=\"disclaimer\">The content of this site is intended for health care professionals</p>"
+			+ "<p class=\"copyright\">Copyright © 2012 by "
+			+ "The Journal of Rheumatology" + "</p>" + "<ul class=\"issns\">"
+			+ "<li><span>Print ISSN: </span>"
+			+ "<span class=\"issn\">0315-162X</span></li>"
+			+ "<li><span>Online ISSN: </span>"
+			+ "<span class=\"issn\">1499-2752</span></li>" + "</ul>" + "</div>"
+			+ "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
 
-  }
+	private static final String withoutCopyright = "<div id=\"footer\">"
+			+ "<div class=\"block-1\">"
+			+ "<p class=\"disclaimer\">The content of this site is intended for health care professionals</p>"
+			+ "<ul class=\"issns\">" + "<li><span>Print ISSN: </span>"
+			+ "<span class=\"issn\">0315-162X</span></li>"
+			+ "<li><span>Online ISSN: </span>"
+			+ "<span class=\"issn\">1499-2752</span></li>" + "</ul>" + "</div>"
+			+ "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
+
+	private static final String withCurrentIssue = "<div class=\"col-3-top sb-div\"></div>"
+			+ "<div class=\"content-box\" id=\"sidebar-current-issue\">"
+			+ "<div class=\"cb-contents\">"
+			+ "<h3 class=\"cb-contents-header\"><span>Current Issue</span></h3>"
+			+ "<div class=\"cb-section\">"
+			+ "<ol>"
+			+ "<li><span><a href=\"/content/current\" rel=\"current-issue\">May 2012, 39 (5)</a></span></li>"
+			+ "</ol>"
+			+ "</div>"
+			+ "<div class=\"cb-section\">"
+			+ "<ol>"
+			+ "<div class=\"current-issue\"><a href=\"/content/current\" rel=\"current-issue\"><img src=\"/local/img/sample_cover.gif\" width=\"67\" height=\"89\" alt=\"Current Issue\" /></a></div>"
+			+ "</ol>"
+			+ "</div>"
+			+ "<div class=\"cb-section sidebar-etoc-link\">"
+			+ "<ol>"
+			+ "<li><a href=\"/cgi/alerts/etoc\">Alert me to new issues of The Journal"
+			+ "</a></li>" + "</ol>" + "</div>" + "</div>" + "</div>";
+
+	private static final String withoutCurrentIssue = "<div class=\"col-3-top sb-div\"></div>";
+
+	public void testFiltering() throws IOException, PluginException {
+		assertFilterToSame(inst1, inst2);
+		assertFilterToSame(withAds, withoutAds);
+	    assertFilterToSame(withCopyright, withoutCopyright);
+	    assertFilterToSame(withCurrentIssue, withoutCurrentIssue);
+	}
+	
+	private void assertFilterToSame(String str1, String Str2) throws IOException, PluginException {
+		try {
+		    InputStream inA = fact.createFilteredInputStream(mau, new StringInputStream(str1),
+							 Constants.DEFAULT_ENCODING);
+		    InputStream inB = fact.createFilteredInputStream(mau, new StringInputStream(Str2),
+							 Constants.DEFAULT_ENCODING);
+		    assertEquals(StringUtil.fromInputStream(inA),
+		                 StringUtil.fromInputStream(inB));
+		} catch (PluginException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }
