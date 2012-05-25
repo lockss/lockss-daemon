@@ -485,7 +485,7 @@
         au < manifest ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 >
         au < released ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 >
         au < released ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 >
-        au < expected ; 2012 ; Administrative Science Quarterly Volume 57 ; 57 >
+        au < manifest ; 2012 ; Administrative Science Quarterly Volume 57 ; 57 >
 
       }
 
@@ -3071,25 +3071,25 @@
         param[base_url] = http://apy.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1993 ; Australasian Psychiatry Volume 1 ; 1 >
-        au < exists ; 1994 ; Australasian Psychiatry Volume 2 ; 2 >
-        au < exists ; 1995 ; Australasian Psychiatry Volume 3 ; 3 >
-        au < exists ; 1996 ; Australasian Psychiatry Volume 4 ; 4 >
-        au < exists ; 1997 ; Australasian Psychiatry Volume 5 ; 5 >
-        au < exists ; 1998 ; Australasian Psychiatry Volume 6 ; 6 >
-        au < exists ; 1999 ; Australasian Psychiatry Volume 7 ; 7 >
-        au < exists ; 2000 ; Australasian Psychiatry Volume 8 ; 8 >
-        au < exists ; 2001 ; Australasian Psychiatry Volume 9 ; 9 >
-        au < exists ; 2002 ; Australasian Psychiatry Volume 10 ; 10 >
-        au < exists ; 2003 ; Australasian Psychiatry Volume 11 ; 11 >
-        au < exists ; 2004 ; Australasian Psychiatry Volume 12 ; 12 >
-        au < exists ; 2005 ; Australasian Psychiatry Volume 13 ; 13 >
-        au < exists ; 2006 ; Australasian Psychiatry Volume 14 ; 14 >
-        au < exists ; 2007 ; Australasian Psychiatry Volume 15 ; 15 >
-        au < exists ; 2008 ; Australasian Psychiatry Volume 16 ; 16 >
-        au < exists ; 2009 ; Australasian Psychiatry Volume 17 ; 17 >
-        au < exists ; 2010 ; Australasian Psychiatry Volume 18 ; 18 >
-        au < exists ; 2011 ; Australasian Psychiatry Volume 19 ; 19 >
+        au < manifest ; 1993 ; Australasian Psychiatry Volume 1 ; 1 >
+        au < manifest ; 1994 ; Australasian Psychiatry Volume 2 ; 2 >
+        au < manifest ; 1995 ; Australasian Psychiatry Volume 3 ; 3 >
+        au < manifest ; 1996 ; Australasian Psychiatry Volume 4 ; 4 >
+        au < manifest ; 1997 ; Australasian Psychiatry Volume 5 ; 5 >
+        au < manifest ; 1998 ; Australasian Psychiatry Volume 6 ; 6 >
+        au < manifest ; 1999 ; Australasian Psychiatry Volume 7 ; 7 >
+        au < manifest ; 2000 ; Australasian Psychiatry Volume 8 ; 8 >
+        au < manifest ; 2001 ; Australasian Psychiatry Volume 9 ; 9 >
+        au < manifest ; 2002 ; Australasian Psychiatry Volume 10 ; 10 >
+        au < manifest ; 2003 ; Australasian Psychiatry Volume 11 ; 11 >
+        au < manifest ; 2004 ; Australasian Psychiatry Volume 12 ; 12 >
+        au < manifest ; 2005 ; Australasian Psychiatry Volume 13 ; 13 >
+        au < manifest ; 2006 ; Australasian Psychiatry Volume 14 ; 14 >
+        au < manifest ; 2007 ; Australasian Psychiatry Volume 15 ; 15 >
+        au < manifest ; 2008 ; Australasian Psychiatry Volume 16 ; 16 >
+        au < manifest ; 2009 ; Australasian Psychiatry Volume 17 ; 17 >
+        au < manifest ; 2010 ; Australasian Psychiatry Volume 18 ; 18 >
+        au < manifest ; 2011 ; Australasian Psychiatry Volume 19 ; 19 >
         au < manifest ; 2012 ; Australasian Psychiatry Volume 20 ; 20 >
       }
       
@@ -3132,51 +3132,51 @@
         param[base_url] = http://anp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1967 ; Australian & New Zealand Journal of Psychiatry Volume 1 ; 1 >
-        au < exists ; 1968 ; Australian & New Zealand Journal of Psychiatry Volume 2 ; 2 >
-        au < exists ; 1969 ; Australian & New Zealand Journal of Psychiatry Volume 3 ; 3 >
-        au < exists ; 1970 ; Australian & New Zealand Journal of Psychiatry Volume 4 ; 4 >
-        au < exists ; 1971 ; Australian & New Zealand Journal of Psychiatry Volume 5 ; 5 >
-        au < exists ; 1972 ; Australian & New Zealand Journal of Psychiatry Volume 6 ; 6 >
-        au < exists ; 1973 ; Australian & New Zealand Journal of Psychiatry Volume 7 ; 7 >
-        au < exists ; 1974 ; Australian & New Zealand Journal of Psychiatry Volume 8 ; 8 >
-        au < exists ; 1975 ; Australian & New Zealand Journal of Psychiatry Volume 9 ; 9 >
-        au < exists ; 1976 ; Australian & New Zealand Journal of Psychiatry Volume 10 ; 10 >
-        au < exists ; 1977 ; Australian & New Zealand Journal of Psychiatry Volume 11 ; 11 >
-        au < exists ; 1978 ; Australian & New Zealand Journal of Psychiatry Volume 12 ; 12 >
-        au < exists ; 1979 ; Australian & New Zealand Journal of Psychiatry Volume 13 ; 13 >
-        au < exists ; 1980 ; Australian & New Zealand Journal of Psychiatry Volume 14 ; 14 >
-        au < exists ; 1981 ; Australian & New Zealand Journal of Psychiatry Volume 15 ; 15 >
-        au < exists ; 1982 ; Australian & New Zealand Journal of Psychiatry Volume 16 ; 16 >
-        au < exists ; 1983 ; Australian & New Zealand Journal of Psychiatry Volume 17 ; 17 >
-        au < exists ; 1984 ; Australian & New Zealand Journal of Psychiatry Volume 18 ; 18 >
-        au < exists ; 1985 ; Australian & New Zealand Journal of Psychiatry Volume 19 ; 19 >
-        au < exists ; 1986 ; Australian & New Zealand Journal of Psychiatry Volume 20 ; 20 >
-        au < exists ; 1987 ; Australian & New Zealand Journal of Psychiatry Volume 21 ; 21 >
-        au < exists ; 1988 ; Australian & New Zealand Journal of Psychiatry Volume 22 ; 22 >
-        au < exists ; 1989 ; Australian & New Zealand Journal of Psychiatry Volume 23 ; 23 >
-        au < exists ; 1990 ; Australian & New Zealand Journal of Psychiatry Volume 24 ; 24 >
-        au < exists ; 1991 ; Australian & New Zealand Journal of Psychiatry Volume 25 ; 25 >
-        au < exists ; 1992 ; Australian & New Zealand Journal of Psychiatry Volume 26 ; 26 >
-        au < exists ; 1993 ; Australian & New Zealand Journal of Psychiatry Volume 27 ; 27 >
-        au < exists ; 1994 ; Australian & New Zealand Journal of Psychiatry Volume 28 ; 28 >
-        au < exists ; 1995 ; Australian & New Zealand Journal of Psychiatry Volume 29 ; 29 >
-        au < exists ; 1996 ; Australian & New Zealand Journal of Psychiatry Volume 30 ; 30 >
-        au < exists ; 1997 ; Australian & New Zealand Journal of Psychiatry Volume 31 ; 31 >
-        au < exists ; 1998 ; Australian & New Zealand Journal of Psychiatry Volume 32 ; 32 >
-        au < exists ; 1999 ; Australian & New Zealand Journal of Psychiatry Volume 33 ; 33 >
-        au < exists ; 2000 ; Australian & New Zealand Journal of Psychiatry Volume 34 ; 34 >
-        au < exists ; 2001 ; Australian & New Zealand Journal of Psychiatry Volume 35 ; 35 >
-        au < exists ; 2002 ; Australian & New Zealand Journal of Psychiatry Volume 36 ; 36 >
-        au < exists ; 2003 ; Australian & New Zealand Journal of Psychiatry Volume 37 ; 37 >
-        au < exists ; 2004 ; Australian & New Zealand Journal of Psychiatry Volume 38 ; 38 >
-        au < exists ; 2005 ; Australian & New Zealand Journal of Psychiatry Volume 39 ; 39 >
-        au < exists ; 2006 ; Australian & New Zealand Journal of Psychiatry Volume 40 ; 40 >
-        au < exists ; 2007 ; Australian & New Zealand Journal of Psychiatry Volume 41 ; 41 >
-        au < exists ; 2008 ; Australian & New Zealand Journal of Psychiatry Volume 42 ; 42 >
-        au < exists ; 2009 ; Australian & New Zealand Journal of Psychiatry Volume 43 ; 43 >
-        au < exists ; 2010 ; Australian & New Zealand Journal of Psychiatry Volume 44 ; 44 >
-        au < exists ; 2011 ; Australian & New Zealand Journal of Psychiatry Volume 45 ; 45 >
+        au < manifest ; 1967 ; Australian & New Zealand Journal of Psychiatry Volume 1 ; 1 >
+        au < manifest ; 1968 ; Australian & New Zealand Journal of Psychiatry Volume 2 ; 2 >
+        au < manifest ; 1969 ; Australian & New Zealand Journal of Psychiatry Volume 3 ; 3 >
+        au < manifest ; 1970 ; Australian & New Zealand Journal of Psychiatry Volume 4 ; 4 >
+        au < manifest ; 1971 ; Australian & New Zealand Journal of Psychiatry Volume 5 ; 5 >
+        au < manifest ; 1972 ; Australian & New Zealand Journal of Psychiatry Volume 6 ; 6 >
+        au < manifest ; 1973 ; Australian & New Zealand Journal of Psychiatry Volume 7 ; 7 >
+        au < manifest ; 1974 ; Australian & New Zealand Journal of Psychiatry Volume 8 ; 8 >
+        au < manifest ; 1975 ; Australian & New Zealand Journal of Psychiatry Volume 9 ; 9 >
+        au < manifest ; 1976 ; Australian & New Zealand Journal of Psychiatry Volume 10 ; 10 >
+        au < manifest ; 1977 ; Australian & New Zealand Journal of Psychiatry Volume 11 ; 11 >
+        au < manifest ; 1978 ; Australian & New Zealand Journal of Psychiatry Volume 12 ; 12 >
+        au < manifest ; 1979 ; Australian & New Zealand Journal of Psychiatry Volume 13 ; 13 >
+        au < manifest ; 1980 ; Australian & New Zealand Journal of Psychiatry Volume 14 ; 14 >
+        au < manifest ; 1981 ; Australian & New Zealand Journal of Psychiatry Volume 15 ; 15 >
+        au < manifest ; 1982 ; Australian & New Zealand Journal of Psychiatry Volume 16 ; 16 >
+        au < manifest ; 1983 ; Australian & New Zealand Journal of Psychiatry Volume 17 ; 17 >
+        au < manifest ; 1984 ; Australian & New Zealand Journal of Psychiatry Volume 18 ; 18 >
+        au < manifest ; 1985 ; Australian & New Zealand Journal of Psychiatry Volume 19 ; 19 >
+        au < manifest ; 1986 ; Australian & New Zealand Journal of Psychiatry Volume 20 ; 20 >
+        au < manifest ; 1987 ; Australian & New Zealand Journal of Psychiatry Volume 21 ; 21 >
+        au < manifest ; 1988 ; Australian & New Zealand Journal of Psychiatry Volume 22 ; 22 >
+        au < manifest ; 1989 ; Australian & New Zealand Journal of Psychiatry Volume 23 ; 23 >
+        au < manifest ; 1990 ; Australian & New Zealand Journal of Psychiatry Volume 24 ; 24 >
+        au < manifest ; 1991 ; Australian & New Zealand Journal of Psychiatry Volume 25 ; 25 >
+        au < manifest ; 1992 ; Australian & New Zealand Journal of Psychiatry Volume 26 ; 26 >
+        au < manifest ; 1993 ; Australian & New Zealand Journal of Psychiatry Volume 27 ; 27 >
+        au < manifest ; 1994 ; Australian & New Zealand Journal of Psychiatry Volume 28 ; 28 >
+        au < manifest ; 1995 ; Australian & New Zealand Journal of Psychiatry Volume 29 ; 29 >
+        au < manifest ; 1996 ; Australian & New Zealand Journal of Psychiatry Volume 30 ; 30 >
+        au < manifest ; 1997 ; Australian & New Zealand Journal of Psychiatry Volume 31 ; 31 >
+        au < manifest ; 1998 ; Australian & New Zealand Journal of Psychiatry Volume 32 ; 32 >
+        au < manifest ; 1999 ; Australian & New Zealand Journal of Psychiatry Volume 33 ; 33 >
+        au < manifest ; 2000 ; Australian & New Zealand Journal of Psychiatry Volume 34 ; 34 >
+        au < manifest ; 2001 ; Australian & New Zealand Journal of Psychiatry Volume 35 ; 35 >
+        au < manifest ; 2002 ; Australian & New Zealand Journal of Psychiatry Volume 36 ; 36 >
+        au < manifest ; 2003 ; Australian & New Zealand Journal of Psychiatry Volume 37 ; 37 >
+        au < manifest ; 2004 ; Australian & New Zealand Journal of Psychiatry Volume 38 ; 38 >
+        au < manifest ; 2005 ; Australian & New Zealand Journal of Psychiatry Volume 39 ; 39 >
+        au < manifest ; 2006 ; Australian & New Zealand Journal of Psychiatry Volume 40 ; 40 >
+        au < manifest ; 2007 ; Australian & New Zealand Journal of Psychiatry Volume 41 ; 41 >
+        au < manifest ; 2008 ; Australian & New Zealand Journal of Psychiatry Volume 42 ; 42 >
+        au < manifest ; 2009 ; Australian & New Zealand Journal of Psychiatry Volume 43 ; 43 >
+        au < manifest ; 2010 ; Australian & New Zealand Journal of Psychiatry Volume 44 ; 44 >
+        au < manifest ; 2011 ; Australian & New Zealand Journal of Psychiatry Volume 45 ; 45 >
         au < manifest ; 2012 ; Australian & New Zealand Journal of Psychiatry Volume 46 ; 46 >
       
       }
@@ -5267,30 +5267,30 @@
         implicit < status ; year ; name ; param[volume_name] >
 
 
-        au < exists ; 1988 ; Clinical EEG and Neuroscience Volume 19 ; 19 >
-        au < exists ; 1989 ; Clinical EEG and Neuroscience Volume 20 ; 20 >
-        au < exists ; 1990 ; Clinical EEG and Neuroscience Volume 21 ; 21 >
-        au < exists ; 1991 ; Clinical EEG and Neuroscience Volume 22 ; 22 >
-        au < exists ; 1992 ; Clinical EEG and Neuroscience Volume 23 ; 23 >
-        au < exists ; 1993 ; Clinical EEG and Neuroscience Volume 24 ; 24 >
-        au < exists ; 1994 ; Clinical EEG and Neuroscience Volume 25 ; 25 >
-        au < exists ; 1995 ; Clinical EEG and Neuroscience Volume 26 ; 26 >
-        au < exists ; 1996 ; Clinical EEG and Neuroscience Volume 27 ; 27 >
-        au < exists ; 1997 ; Clinical EEG and Neuroscience Volume 28 ; 28 >
-        au < exists ; 1998 ; Clinical EEG and Neuroscience Volume 29 ; 29 >
-        au < exists ; 1999 ; Clinical EEG and Neuroscience Volume 30 ; 30 >
-        au < exists ; 2000 ; Clinical EEG and Neuroscience Volume 31 ; 31 >
-        au < exists ; 2001 ; Clinical EEG and Neuroscience Volume 32 ; 32 >
-        au < exists ; 2002 ; Clinical EEG and Neuroscience Volume 33 ; 33 >
-        au < exists ; 2003 ; Clinical EEG and Neuroscience Volume 34 ; 34 >
-        au < exists ; 2004 ; Clinical EEG and Neuroscience Volume 35 ; 35 >
-        au < exists ; 2005 ; Clinical EEG and Neuroscience Volume 36 ; 36 >
-        au < exists ; 2006 ; Clinical EEG and Neuroscience Volume 37 ; 37 >
-        au < exists ; 2007 ; Clinical EEG and Neuroscience Volume 38 ; 38 >
-        au < exists ; 2008 ; Clinical EEG and Neuroscience Volume 39 ; 39 >
-        au < exists ; 2009 ; Clinical EEG and Neuroscience Volume 40 ; 40 >
-        au < exists ; 2010 ; Clinical EEG and Neuroscience Volume 41 ; 41 >
-        au < exists ; 2011 ; Clinical EEG and Neuroscience Volume 42 ; 42 >
+        au < manifest ; 1988 ; Clinical EEG and Neuroscience Volume 19 ; 19 >
+        au < manifest ; 1989 ; Clinical EEG and Neuroscience Volume 20 ; 20 >
+        au < manifest ; 1990 ; Clinical EEG and Neuroscience Volume 21 ; 21 >
+        au < manifest ; 1991 ; Clinical EEG and Neuroscience Volume 22 ; 22 >
+        au < manifest ; 1992 ; Clinical EEG and Neuroscience Volume 23 ; 23 >
+        au < manifest ; 1993 ; Clinical EEG and Neuroscience Volume 24 ; 24 >
+        au < manifest ; 1994 ; Clinical EEG and Neuroscience Volume 25 ; 25 >
+        au < manifest ; 1995 ; Clinical EEG and Neuroscience Volume 26 ; 26 >
+        au < manifest ; 1996 ; Clinical EEG and Neuroscience Volume 27 ; 27 >
+        au < manifest ; 1997 ; Clinical EEG and Neuroscience Volume 28 ; 28 >
+        au < manifest ; 1998 ; Clinical EEG and Neuroscience Volume 29 ; 29 >
+        au < manifest ; 1999 ; Clinical EEG and Neuroscience Volume 30 ; 30 >
+        au < manifest ; 2000 ; Clinical EEG and Neuroscience Volume 31 ; 31 >
+        au < doesNotExist ; 0 ; Clinical EEG and Neuroscience Volume 32 ; 32 >
+        au < manifest ; 2002 ; Clinical EEG and Neuroscience Volume 33 ; 33 >
+        au < doesNotExist ; 0 ; Clinical EEG and Neuroscience Volume 34 ; 34 >
+        au < doesNotExist ; 0 ; Clinical EEG and Neuroscience Volume 35 ; 35 >
+        au < manifest ; 2005 ; Clinical EEG and Neuroscience Volume 36 ; 36 >
+        au < manifest ; 2006 ; Clinical EEG and Neuroscience Volume 37 ; 37 >
+        au < manifest ; 2007 ; Clinical EEG and Neuroscience Volume 38 ; 38 >
+        au < manifest ; 2008 ; Clinical EEG and Neuroscience Volume 39 ; 39 >
+        au < manifest ; 2009 ; Clinical EEG and Neuroscience Volume 40 ; 40 >
+        au < manifest ; 2010 ; Clinical EEG and Neuroscience Volume 41 ; 41 >
+        au < manifest ; 2011 ; Clinical EEG and Neuroscience Volume 42 ; 42 >
         au < manifest ; 2012 ; Clinical EEG and Neuroscience Volume 43 ; 43 >
       
     }
@@ -5625,7 +5625,7 @@
         au < doNotProcess ; 2009 ; Clothing and Textiles Research Journal Volume 27 ; 27 >
         au < released ; 2010 ; Clothing and Textiles Research Journal Volume 28 ; 28 >
         au < released ; 2011 ; Clothing and Textiles Research Journal Volume 29 ; 29 >
-        au < expected ; 2012 ; Clothing and Textiles Research Journal Volume 30 ; 30 >
+        au < manifest ; 2012 ; Clothing and Textiles Research Journal Volume 30 ; 30 >
 
       }
 
@@ -8283,48 +8283,48 @@
         param[base_url] = http://dij.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        au < exists ; 1970 ; Drug Information Journal Volume 4 ; 4 >
-        au < exists ; 1971 ; Drug Information Journal Volume 5 ; 5 >
-        au < exists ; 1972 ; Drug Information Journal Volume 6 ; 6 >
-        au < exists ; 1973 ; Drug Information Journal Volume 7 ; 7 >
-        au < exists ; 1974 ; Drug Information Journal Volume 8 ; 8 >
-        au < exists ; 1975 ; Drug Information Journal Volume 9 ; 9 >
-        au < exists ; 1976 ; Drug Information Journal Volume 10 ; 10 >
-        au < exists ; 1977 ; Drug Information Journal Volume 11 ; 11 >
-        au < exists ; 1978 ; Drug Information Journal Volume 12 ; 12 >
-        au < exists ; 1979 ; Drug Information Journal Volume 13 ; 13 >
-        au < exists ; 1980 ; Drug Information Journal Volume 14 ; 14 >
-        au < exists ; 1981 ; Drug Information Journal Volume 15 ; 15 >
-        au < exists ; 1982 ; Drug Information Journal Volume 16 ; 16 >
-        au < exists ; 1983 ; Drug Information Journal Volume 17 ; 17 >
-        au < exists ; 1984 ; Drug Information Journal Volume 18 ; 18 >
-        au < exists ; 1985 ; Drug Information Journal Volume 19 ; 19 >
-        au < exists ; 1986 ; Drug Information Journal Volume 20 ; 20 >
-        au < exists ; 1987 ; Drug Information Journal Volume 21 ; 21 >
-        au < exists ; 1988 ; Drug Information Journal Volume 22 ; 22 >
-        au < exists ; 1989 ; Drug Information Journal Volume 23 ; 23 >
-        au < exists ; 1990 ; Drug Information Journal Volume 24 ; 24 >
-        au < exists ; 1991 ; Drug Information Journal Volume 25 ; 25 >
-        au < exists ; 1992 ; Drug Information Journal Volume 26 ; 26 >
-        au < exists ; 1993 ; Drug Information Journal Volume 27 ; 27 >
-        au < exists ; 1994 ; Drug Information Journal Volume 28 ; 28 >
-        au < exists ; 1995 ; Drug Information Journal Volume 29 ; 29 >
-        au < exists ; 1996 ; Drug Information Journal Volume 30 ; 30 >
-        au < exists ; 1997 ; Drug Information Journal Volume 31 ; 31 >
-        au < exists ; 1998 ; Drug Information Journal Volume 32 ; 32 >
-        au < exists ; 1999 ; Drug Information Journal Volume 33 ; 33 >
-        au < exists ; 2000 ; Drug Information Journal Volume 34 ; 34 >
-        au < exists ; 2001 ; Drug Information Journal Volume 35 ; 35 >
-        au < exists ; 2002 ; Drug Information Journal Volume 36 ; 36 >
-        au < exists ; 2003 ; Drug Information Journal Volume 37 ; 37 >
-        au < exists ; 2004 ; Drug Information Journal Volume 38 ; 38 >
-        au < exists ; 2005 ; Drug Information Journal Volume 39 ; 39 >
-        au < exists ; 2006 ; Drug Information Journal Volume 40 ; 40 >
-        au < exists ; 2007 ; Drug Information Journal Volume 41 ; 41 >
-        au < exists ; 2008 ; Drug Information Journal Volume 42 ; 42 >
-        au < exists ; 2009 ; Drug Information Journal Volume 43 ; 43 >
-        au < exists ; 2010 ; Drug Information Journal Volume 44 ; 44 >
-        au < exists ; 2011 ; Drug Information Journal Volume 45 ; 45 >
+        au < manifest ; 1970 ; Drug Information Journal Volume 4 ; 4 >
+        au < doesNotExist ; 0 ; Drug Information Journal Volume 5 ; 5 >
+        au < manifest ; 1972 ; Drug Information Journal Volume 6 ; 6 >
+        au < doesNotExist ; 0 ; Drug Information Journal Volume 7 ; 7 >
+        au < manifest ; 1974 ; Drug Information Journal Volume 8 ; 8 >
+        au < manifest ; 1975 ; Drug Information Journal Volume 9 ; 9 >
+        au < manifest ; 1976 ; Drug Information Journal Volume 10 ; 10 >
+        au < manifest ; 1977 ; Drug Information Journal Volume 11 ; 11 >
+        au < manifest ; 1978 ; Drug Information Journal Volume 12 ; 12 >
+        au < manifest ; 1979 ; Drug Information Journal Volume 13 ; 13 >
+        au < manifest ; 1980 ; Drug Information Journal Volume 14 ; 14 >
+        au < manifest ; 1981 ; Drug Information Journal Volume 15 ; 15 >
+        au < manifest ; 1982 ; Drug Information Journal Volume 16 ; 16 >
+        au < manifest ; 1983 ; Drug Information Journal Volume 17 ; 17 >
+        au < manifest ; 1984 ; Drug Information Journal Volume 18 ; 18 >
+        au < manifest ; 1985 ; Drug Information Journal Volume 19 ; 19 >
+        au < manifest ; 1986 ; Drug Information Journal Volume 20 ; 20 >
+        au < manifest ; 1987 ; Drug Information Journal Volume 21 ; 21 >
+        au < manifest ; 1988 ; Drug Information Journal Volume 22 ; 22 >
+        au < manifest ; 1989 ; Drug Information Journal Volume 23 ; 23 >
+        au < manifest ; 1990 ; Drug Information Journal Volume 24 ; 24 >
+        au < manifest ; 1991 ; Drug Information Journal Volume 25 ; 25 >
+        au < manifest ; 1992 ; Drug Information Journal Volume 26 ; 26 >
+        au < manifest ; 1993 ; Drug Information Journal Volume 27 ; 27 >
+        au < manifest ; 1994 ; Drug Information Journal Volume 28 ; 28 >
+        au < manifest ; 1995 ; Drug Information Journal Volume 29 ; 29 >
+        au < manifest ; 1996 ; Drug Information Journal Volume 30 ; 30 >
+        au < manifest ; 1997 ; Drug Information Journal Volume 31 ; 31 >
+        au < manifest ; 1998 ; Drug Information Journal Volume 32 ; 32 >
+        au < manifest ; 1999 ; Drug Information Journal Volume 33 ; 33 >
+        au < manifest ; 2000 ; Drug Information Journal Volume 34 ; 34 >
+        au < manifest ; 2001 ; Drug Information Journal Volume 35 ; 35 >
+        au < manifest ; 2002 ; Drug Information Journal Volume 36 ; 36 >
+        au < manifest ; 2003 ; Drug Information Journal Volume 37 ; 37 >
+        au < manifest ; 2004 ; Drug Information Journal Volume 38 ; 38 >
+        au < manifest ; 2005 ; Drug Information Journal Volume 39 ; 39 >
+        au < manifest ; 2006 ; Drug Information Journal Volume 40 ; 40 >
+        au < manifest ; 2007 ; Drug Information Journal Volume 41 ; 41 >
+        au < manifest ; 2008 ; Drug Information Journal Volume 42 ; 42 >
+        au < manifest ; 2009 ; Drug Information Journal Volume 43 ; 43 >
+        au < manifest ; 2010 ; Drug Information Journal Volume 44 ; 44 >
+        au < manifest ; 2011 ; Drug Information Journal Volume 45 ; 45 >
         au < manifest ; 2012 ; Drug Information Journal Volume 46 ; 46 >
   
       }
@@ -9561,7 +9561,7 @@
     
 
 
-      au < exists ; 2012 ; European Heart Journal: Acute Cardiovascular Care Volume 1 ; 1 >
+      au < manifest ; 2012 ; European Heart Journal: Acute Cardiovascular Care Volume 1 ; 1 >
 
     }
 
@@ -10629,7 +10629,7 @@
         au < doNotProcess ; 2009 ; Evaluation Review Volume 33 ; 33 >
         au < released ; 2010 ; Evaluation Review Volume 34 ; 34 >
         au < released ; 2011 ; Evaluation Review Volume 35 ; 35 >
-        au < expected ; 2012 ; Evaluation Review Volume 36 ; 36 >
+        au < manifest ; 2012 ; Evaluation Review Volume 36 ; 36 >
 
       }
 
@@ -11879,32 +11879,32 @@
         param[base_url] = http://gei.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < exists ; 1982-1983 ; Gifted Education International Volume 1 ; 1 >
-        au < exists ; 1983-1984 ; Gifted Education International Volume 2 ; 2 >
-        au < exists ; 1985 ; Gifted Education International Volume 3 ; 3 >
-        au < exists ; 1986-1987 ; Gifted Education International Volume 4 ; 4 >
-        au < exists ; 1987-1988 ; Gifted Education International Volume 5 ; 5 >
-        au < exists ; 1989-1990 ; Gifted Education International Volume 6 ; 6 >
-        au < exists ; 1990-1991 ; Gifted Education International Volume 7 ; 7 >
-        au < exists ; 1992 ; Gifted Education International Volume 8 ; 8 >
-        au < exists ; 1993-1994 ; Gifted Education International Volume 9 ; 9 >
-        au < exists ; 1994-1995 ; Gifted Education International Volume 10 ; 10 >
-        au < exists ; 1996 ; Gifted Education International Volume 11 ; 11 >
-        au < exists ; 1997-1998 ; Gifted Education International Volume 12 ; 12 >
-        au < exists ; 1998 ; Gifted Education International Volume 13 ; 13 >
-        au < exists ; 1999-2000 ; Gifted Education International Volume 14 ; 14 >
-        au < exists ; 2000-2001 ; Gifted Education International Volume 15 ; 15 >
-        au < exists ; 2001-2002 ; Gifted Education International Volume 16 ; 16 >
-        au < exists ; 2003 ; Gifted Education International Volume 17 ; 17 >
-        au < exists ; 2003-2004 ; Gifted Education International Volume 18 ; 18 >
-        au < exists ; 2004-2005 ; Gifted Education International Volume 19 ; 19 >
-        au < exists ; 2005 ; Gifted Education International Volume 20 ; 20 >
-        au < exists ; 2006 ; Gifted Education International Volume 21 ; 21 >
-        au < exists ; 2006-2007 ; Gifted Education International Volume 22 ; 22 >
-        au < exists ; 2007 ; Gifted Education International Volume 23 ; 23 >
-        au < exists ; 2008 ; Gifted Education International Volume 24 ; 24 >
-        au < exists ; 2009 ; Gifted Education International Volume 25 ; 25 >
-        au < exists ; 2010 ; Gifted Education International Volume 26 ; 26 >
+        au < manifest ; 1982-1983 ; Gifted Education International Volume 1 ; 1 >
+        au < manifest ; 1983-1984 ; Gifted Education International Volume 2 ; 2 >
+        au < manifest ; 1985 ; Gifted Education International Volume 3 ; 3 >
+        au < manifest ; 1986-1987 ; Gifted Education International Volume 4 ; 4 >
+        au < manifest ; 1987-1988 ; Gifted Education International Volume 5 ; 5 >
+        au < manifest ; 1989-1990 ; Gifted Education International Volume 6 ; 6 >
+        au < manifest ; 1990-1991 ; Gifted Education International Volume 7 ; 7 >
+        au < manifest ; 1992 ; Gifted Education International Volume 8 ; 8 >
+        au < manifest ; 1993-1994 ; Gifted Education International Volume 9 ; 9 >
+        au < manifest ; 1994-1995 ; Gifted Education International Volume 10 ; 10 >
+        au < manifest ; 1996 ; Gifted Education International Volume 11 ; 11 >
+        au < manifest ; 1997-1998 ; Gifted Education International Volume 12 ; 12 >
+        au < manifest ; 1998 ; Gifted Education International Volume 13 ; 13 >
+        au < manifest ; 1999-2000 ; Gifted Education International Volume 14 ; 14 >
+        au < manifest ; 2000-2001 ; Gifted Education International Volume 15 ; 15 >
+        au < manifest ; 2001-2002 ; Gifted Education International Volume 16 ; 16 >
+        au < manifest ; 2003 ; Gifted Education International Volume 17 ; 17 >
+        au < manifest ; 2003-2004 ; Gifted Education International Volume 18 ; 18 >
+        au < manifest ; 2004-2005 ; Gifted Education International Volume 19 ; 19 >
+        au < manifest ; 2005 ; Gifted Education International Volume 20 ; 20 >
+        au < manifest ; 2006 ; Gifted Education International Volume 21 ; 21 >
+        au < manifest ; 2006-2007 ; Gifted Education International Volume 22 ; 22 >
+        au < manifest ; 2007 ; Gifted Education International Volume 23 ; 23 >
+        au < manifest ; 2008 ; Gifted Education International Volume 24 ; 24 >
+        au < manifest ; 2009 ; Gifted Education International Volume 25 ; 25 >
+        au < manifest ; 2010 ; Gifted Education International Volume 26 ; 26 >
         au < manifest ; 2010-2011 ; Gifted Education International Volume 27 ; 27 >
         au < manifest ; 2012 ; Gifted Education International Volume 28 ; 28 >
   
@@ -14239,17 +14239,15 @@
         param[base_url] = http://has.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[notReady] = manifest page has links with cgi (incorrect).
-
-        au < exists ; 2003 ; Humanity & Society Volume 27 ; 27 >
-        au < exists ; 2004 ; Humanity & Society Volume 28 ; 28 >
-        au < exists ; 2005 ; Humanity & Society Volume 29 ; 29 >
-        au < exists ; 2006 ; Humanity & Society Volume 30 ; 30 >
-        au < exists ; 2007 ; Humanity & Society Volume 31 ; 31 >
-        au < exists ; 2008 ; Humanity & Society Volume 32 ; 32 >
-        au < exists ; 2009 ; Humanity & Society Volume 33 ; 33 >
-        au < exists ; 2010 ; Humanity & Society Volume 34 ; 34 >
-        au < notReady ; 2011 ; Humanity & Society Volume 35 ; 35 >
+        au < manifest ; 2003 ; Humanity & Society Volume 27 ; 27 >
+        au < manifest ; 2004 ; Humanity & Society Volume 28 ; 28 >
+        au < manifest ; 2005 ; Humanity & Society Volume 29 ; 29 >
+        au < manifest ; 2006 ; Humanity & Society Volume 30 ; 30 >
+        au < manifest ; 2007 ; Humanity & Society Volume 31 ; 31 >
+        au < manifest ; 2008 ; Humanity & Society Volume 32 ; 32 >
+        au < manifest ; 2009 ; Humanity & Society Volume 33 ; 33 >
+        au < manifest ; 2010 ; Humanity & Society Volume 34 ; 34 >
+        au < manifest ; 2011 ; Humanity & Society Volume 35 ; 35 >
         au < manifest ; 2012 ; Humanity & Society Volume 36 ; 36 >
   
       }
@@ -27778,7 +27776,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; The Medieval History Journal Volume 12 ; 12 >
         au < released ; 2010 ; The Medieval History Journal Volume 13 ; 13 >
         au < released ; 2011 ; The Medieval History Journal Volume 14 ; 14 >
-        au < expected ; 2012 ; The Medieval History Journal Volume 15 ; 15 >
+        au < manifest ; 2012 ; The Medieval History Journal Volume 15 ; 15 >
 
       }
 
@@ -31154,7 +31152,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 223 ; 223 >
         au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 224 ; 224 >
         au < doesNotExist ; 0 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 225 ; 225 >
-        au < expected ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 226 ; 226 >
+        au < manifest ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 226 ; 226 >
 
       }
 
@@ -36633,7 +36631,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Thesis Eleven Volume 106 ; 106 >
         au < manifest ; 2012 ; Thesis Eleven Volume 107 ; 107 >
         au < manifest ; 2012 ; Thesis Eleven Volume 108 ; 108 >
-        au < expected ; 2012 ; Thesis Eleven Volume 109 ; 109 >
+        au < manifest ; 2012 ; Thesis Eleven Volume 109 ; 109 >
         au < expected ; 2012 ; Thesis Eleven Volume 110 ; 110 >
 
       }
