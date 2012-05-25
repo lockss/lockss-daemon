@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldHtmlMetadataExtractorFactory.java,v 1.6 2012-05-23 21:42:21 dylanrhodes Exp $
+ * $Id: EmeraldHtmlMetadataExtractorFactory.java,v 1.7 2012-05-25 20:08:05 dylanrhodes Exp $
  */
 
 /*
@@ -94,11 +94,18 @@ public class EmeraldHtmlMetadataExtractorFactory implements FileMetadataExtracto
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       
-  	  String type = cu.getArchivalUnit().getTitleConfig().getProperties().get("type");
-      if(type != null)
-    	  am.cook(bookTagMap);
-      else
+      ArchivalUnit au = cu.getArchivalUnit();
+      
+      if(au.getTitleConfig() == null)
     	  am.cook(journalTagMap);
+      else {
+      	  String type = cu.getArchivalUnit().getTitleConfig().getProperties().get("type");
+      	  
+	  	  if(type != null)
+	    	  am.cook(bookTagMap);
+	      else
+	    	  am.cook(journalTagMap);
+      }
       
       emitter.emitMetadata(cu, am);
     }
