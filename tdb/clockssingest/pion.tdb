@@ -323,9 +323,9 @@
     
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     
-    au < manifest ; exists ; 2010; i-Perception Volume 1 ; 1 >
-    au < crawling ; exists ; 2011; i-Perception Volume 2 ; 2 >
-    au < exists ; exists ; 2012; i-Perception Volume 3; 3 >
+    au < manifest ; exists ; 2010 ; i-Perception Volume 1 ; 1 >
+    au < crawling ; exists ; 2011 ; i-Perception Volume 2 ; 2 >
+    au < exists ; exists ; 2012 ; i-Perception Volume 3 ; 3 >
   
   }
         
