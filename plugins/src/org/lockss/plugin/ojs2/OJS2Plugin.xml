@@ -138,8 +138,8 @@
   <entry>
     <string>au_substance_url_pattern</string>
       <list>
+        <string>&quot;^%sindex\.php/%s/article/view/[0-9]+/[0-9]+$&quot;, base_url, journal_id</string>
         <string>&quot;^%sindex\.php/%s/article/download/[0-9]+/[0-9]+$&quot;, base_url, journal_id</string>
-        <string>&quot;^%sindex\.php/%s/article/view/[0-9]+/$&quot;, base_url, journal_id</string>
       </list>
   </entry>
   <entry>
