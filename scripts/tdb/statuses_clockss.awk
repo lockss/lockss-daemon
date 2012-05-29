@@ -8,7 +8,7 @@ BEGIN {
 
 {
 # add a loop to add line only if first 4 char or last 4 char of year are gt or eq to contract
-if ((substr($4,0,4) >= $3) || ((length($4) == 9) && (substr($4,6,4) >= $3))) {
+if ((substr($4,1,4) >= $3) || ((length($4) == 9) && (substr($4,6,4) >= $3))) {
     nn = split($2,na,/\./)
     lp2 = na[nn]
   if (!(($1,lp2,$3,$4) in b)) {
