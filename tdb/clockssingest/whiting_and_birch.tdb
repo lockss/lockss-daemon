@@ -2,7 +2,10 @@
 
   publisher <
     name = Whiting and Birch
+    
   >
+  
+  attr[contract] = 2012
 
     plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
