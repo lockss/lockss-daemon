@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.9 2012-02-09 20:58:03 pgust Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.10 2012-05-29 20:31:58 akanshab01 Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.IOException;
 import java.util.*;
 import java.util.regex.*;
 
@@ -64,7 +63,7 @@ public class HighWirePressArticleIteratorFactory
     "\"^%scgi/(content/full/([^/]+;)?%s/[^/]+/[^/]+|reprint/([^/]+;)?%s/[^/]+/[^/]+\\.pdf)$\", base_url, volume_name, volume_name";
 
   protected static final String OLD_PATTERN_TEMPLATE =
-    "\"^%scgi/(content/full/([^/]+;)?%d/[^/]+/[^/]+|reprint/([^/]+;)?%d/[^/]+/[^/]+\\.pdf)$\", base_url, volume, volume";
+    "\"^%scgi/(content/full/([^/]+;)?%d/[^/]+/[^/]+|reprint/([^/]+;)?%s/[^/]+/[^/]+(\\.pdf)?)$\", base_url, volume_name, volume_name";
 
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
@@ -93,18 +92,17 @@ public class HighWirePressArticleIteratorFactory
   public ArticleMetadataExtractor
     createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
-//     return new HighWirePressArticleMetadataExtractor();
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
   
   protected static class HighWirePressArticleIterator
     extends SubTreeArticleIterator {
     
     protected static Pattern HTML_PATTERN =
-      Pattern.compile("/cgi/content/full/([^/]+;)?([^/]+/[^/]+/[^/]+)$", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("/cgi/content/full/([^/]+;)?([^/]+/[^/]+/[^/]+)$",Pattern.CASE_INSENSITIVE);
     
     protected static Pattern PDF_PATTERN =
-      Pattern.compile("/cgi/reprint/([^/]+;)?([^/]+/[^/]+/[^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("/cgi/reprint/([^/]+;)?([^/]+/[^/]+/[^/]+)\\.pdf$",Pattern.CASE_INSENSITIVE);
     
     public HighWirePressArticleIterator(ArchivalUnit au,
                                         SubTreeArticleIterator.Spec spec) {
@@ -118,16 +116,16 @@ public class HighWirePressArticleIteratorFactory
       
       mat = HTML_PATTERN.matcher(url);
       if (mat.find()) {
-        if (log.isDebug2()) {
-          log.debug2("HTML match: " + url);
-        }
+        if (log.isDebug3()) {
+          log.debug3("HTML match: " + url);
+        }    
         return processFullTextHtml(cu, mat);
       }
         
       mat = PDF_PATTERN.matcher(url);
       if (mat.find()) {
-        if (log.isDebug2()) {
-          log.debug2("PDF match: " + url);
+        if (log.isDebug3()) {
+          log.debug3("PDF match: " + url);
         }
         return processFullTextPdf(cu, mat);
       }
@@ -142,7 +140,7 @@ public class HighWirePressArticleIteratorFactory
                                            "/cgi/content/full/$2");
 
       if (altCu != null) {
-        if (log.isDebug2()) {
+        if (log.isDebug3()) {
           log.debug2("Skipping " + htmlCu.getUrl()
 		     + " because of " + altCu.getUrl());
         }
@@ -153,8 +151,6 @@ public class HighWirePressArticleIteratorFactory
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, htmlCu);
-//      guessFullTextPdf(af, htmlMat);
-//      guessOtherParts(af, htmlMat);
       return af;
     }
     
@@ -164,8 +160,8 @@ public class HighWirePressArticleIteratorFactory
                                            "/cgi/content/full/$1$2",
                                            "/cgi/content/full/$2");
       if (altCu != null) {
-        if (log.isDebug2()) {
-          log.debug2("Skipping " + pdfCu.getUrl()
+        if (log.isDebug3()) {
+          log.debug3("Skipping " + pdfCu.getUrl()
 		     + " because of " + altCu.getUrl());
         }
         return null;
@@ -177,26 +173,12 @@ public class HighWirePressArticleIteratorFactory
       af.setFullTextCu(af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE) != null
                        ? af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE)
                        : pdfCu);
+      guessAbstract(af, pdfMat);
 //      guessOtherParts(af, pdfMat);
       return af;
     }
     
-//    protected void guessOtherParts(ArticleFiles af, Matcher mat) {
-//      guessAbstract(af, mat);
-//      guessReferences(af, mat);
-//      guessSupplementaryMaterials(af, mat);
-//    }
-//    
-//    protected void guessFullTextPdf(ArticleFiles af, Matcher htmlMat) {
-//      CachedUrl cu = guess(htmlMat,
-//                           "/cgi/reprint/$1$2.pdf",
-//                           "/cgi/reprint/$2.pdf");
-//      if (cu != null) {
-//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
-//        guessPdfLandingPage(af, htmlMat);
-//      }
-//    }
-//    
+
     protected void guessPdfLandingPage(ArticleFiles af, Matcher mat) {
       CachedUrl pdfLandCu = guess(mat,
                                   "/cgi/reprint/$1$2",
@@ -209,37 +191,20 @@ public class HighWirePressArticleIteratorFactory
         af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
       }
     }
-//
-//    protected void guessAbstract(ArticleFiles af, Matcher mat) {
-//      CachedUrl absCu = guess(mat,
-//                              "/cgi/content/abstract/$1$2",
-//                              "/cgi/content/abstract/$2");
-//      if (absCu != null) {
-//        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-//        if (af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
-//          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
-//        }
-//      }
-//    }
-//    
-//    protected void guessReferences(ArticleFiles af, Matcher mat) {
-//      CachedUrl refsCu = guess(mat,
-//                               "/cgi/content/refs/$1$2",
-//                               "/cgi/content/refs/$2");
-//      if (refsCu != null) {
-//        af.setRoleCu(ArticleFiles.ROLE_REFERENCES, refsCu);
-//      }
-//    }
-//    
-//    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
-//      CachedUrl suppCu = guess(mat,
-//                               "/cgi/content/full/$1$2/DC1",
-//                               "/cgi/content/full/$2/DC1");
-//      if (suppCu != null) {
-//        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppCu);
-//      }
-//    }
-//    
+    
+    protected void guessAbstract(ArticleFiles af, Matcher mat) {
+    CachedUrl absCu = guess(mat,
+                            "/cgi/content/abstract/$1$2",
+                            "/cgi/content/abstract/$2");
+    if (absCu != null) {
+      af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+      if (af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
+        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
+        }
+      }
+    }
+    
+  
     /**
      * <p>Tries various URLs in this AU similar to the one in the
      * given matcher, using each one of the given matcher replacement
@@ -303,28 +268,4 @@ public class HighWirePressArticleIteratorFactory
     }
    
   }
-
-  protected static class HighWirePressArticleMetadataExtractor
-    extends SingleArticleMetadataExtractor {
-
-    @Override
-    public ArticleMetadata extract(MetadataTarget target, ArticleFiles af)
-	throws IOException, PluginException {
-      String url = af.getFullTextUrl();
-      ArticleMetadata am = new ArticleMetadata();
-      am.put(MetadataField.FIELD_ACCESS_URL, url);
-      return am;
-    }
-
-  }
-
-  public static void main(String[] args) {
-    String input =
-      "http://pediatrics.aappublications.org/cgi/reprint/foo;125/Supplement_3/S69.pdf";
-    Matcher mat = HighWirePressArticleIterator.PDF_PATTERN.matcher(input);
-    System.out.println(mat.find());
-    System.out.println(mat.replaceFirst("/cgi/content/full/$1$2"));
-    System.out.println(mat.reset().group());
-  }
-  
 }
