@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.10 2012-05-29 20:31:58 akanshab01 Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.11 2012-05-29 22:25:10 akanshab01 Exp $
  */
 
 /*
@@ -60,10 +60,10 @@ public class HighWirePressArticleIteratorFactory
     "\"%scgi/reprint/%d/\", base_url, volume";
   
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scgi/(content/full/([^/]+;)?%s/[^/]+/[^/]+|reprint/([^/]+;)?%s/[^/]+/[^/]+\\.pdf)$\", base_url, volume_name, volume_name";
+    "\"^%scgi/(content/full/([^/]+;)?%s/[^/]+/[^/]+|reprint/([^/]+;)?%s/[^/]+/[^/]+(\\.pdf)?)$\", base_url, volume_name, volume_name";
 
   protected static final String OLD_PATTERN_TEMPLATE =
-    "\"^%scgi/(content/full/([^/]+;)?%d/[^/]+/[^/]+|reprint/([^/]+;)?%s/[^/]+/[^/]+(\\.pdf)?)$\", base_url, volume_name, volume_name";
+    "\"^%scgi/(content/full/([^/]+;)?%d/[^/]+/[^/]+|reprint/([^/]+;)?%d/[^/]+/[^/]+(\\.pdf)?)$\", base_url, volume, volume";
 
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
