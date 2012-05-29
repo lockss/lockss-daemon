@@ -109,8 +109,8 @@
       au < manifest ; 2006 ; Bulletin of Hispanic Studies Volume 83 ; 83 >
       au < manifest ; 2007 ; Bulletin of Hispanic Studies Volume 84 ; 84 >
       au < manifest ; 2008 ; Bulletin of Hispanic Studies Volume 85 ; 85 >
-      au < manifest ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 >
-      au < manifest ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
+      au < ready ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 >
+      au < ready ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
       au < released ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
       au < manifest ; 2012 ; Bulletin of Hispanic Studies Volume 89 ; 89 >
    
@@ -153,8 +153,8 @@
       au < manifest ; 2006 ; The Byron Journal Volume 34 ; 34 >
       au < manifest ; 2007 ; The Byron Journal Volume 35 ; 35 >
       au < manifest ; 2008 ; The Byron Journal Volume 36 ; 36 >
-      au < manifest ; 2009 ; The Byron Journal Volume 37 ; 37 >
-      au < manifest ; 2010 ; The Byron Journal Volume 38 ; 38 >    
+      au < ready ; 2009 ; The Byron Journal Volume 37 ; 37 >
+      au < ready ; 2010 ; The Byron Journal Volume 38 ; 38 >
       au < released ; 2011 ; The Byron Journal Volume 39 ; 39 >
       au < expected ; 2012 ; The Byron Journal Volume 40 ; 40 >
 
@@ -196,8 +196,8 @@
     au < manifest ; 2006 ; Contemporary French Civilization Volume 30 ; 30 >
     au < manifest ; 2007 ; Contemporary French Civilization Volume 31 ; 31 >
     au < manifest ; 2008 ; Contemporary French Civilization Volume 32 ; 32 >
-    au < manifest ; 2009 ; Contemporary French Civilization Volume 33 ; 33 >
-    au < manifest ; 2010 ; Contemporary French Civilization Volume 34 ; 34 >
+    au < ready ; 2009 ; Contemporary French Civilization Volume 33 ; 33 >
+    au < ready ; 2010 ; Contemporary French Civilization Volume 34 ; 34 >
     au < released ; 2011 ; Contemporary French Civilization Volume 35 ; 35 >    
     au < released ; 2011 ; Contemporary French Civilization Volume 36 ; 36 >
     au < expected ; 2012 ; Contemporary French Civilization Volume 37 ; 37 >
@@ -219,8 +219,8 @@
     implicit < status ; year ; name ; param[volume_name] > 
 
     au < manifest ; 2008 ; European Comic Art Volume 1 ; 1 >
-    au < manifest ; 2009 ; European Comic Art Volume 2 ; 2 >
-    au < manifest ; 2010 ; European Comic Art Volume 3 ; 3 >    
+    au < ready ; 2009 ; European Comic Art Volume 2 ; 2 >
+    au < ready ; 2010 ; European Comic Art Volume 3 ; 3 >    
     au < released ; 2011 ; European Comic Art Volume 4 ; 4 >
     au < expected ; 2012 ; European Comic Art Volume 5 ; 5 >
 
@@ -300,8 +300,8 @@
     au < manifest ; 2006 ; International Development Planning Review Volume 28 ; 28 >
     au < manifest ; 2007 ; International Development Planning Review Volume 29 ; 29 >
     au < manifest ; 2008 ; International Development Planning Review Volume 30 ; 30 >
-    au < manifest ; 2009 ; International Development Planning Review Volume 31 ; 31 >
-    au < manifest ; 2010 ; International Development Planning Review Volume 32 ; 32 >
+    au < ready ; 2009 ; International Development Planning Review Volume 31 ; 31 >
+    au < ready ; 2010 ; International Development Planning Review Volume 32 ; 32 >
     au < released ; 2011 ; International Development Planning Review Volume 33 ; 33 >
     au < manifest ; 2012 ; International Development Planning Review Volume 34 ; 34 >
 
@@ -409,8 +409,8 @@
 
       au < manifest ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 >
       au < manifest ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
-      au < manifest ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
-      au < manifest ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
+      au < ready ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
+      au < ready ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
       au < released ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
       au < expected ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
 
@@ -478,8 +478,8 @@
       au < manifest ; 2006 ; Romani Studies Volume 16 ; 16 >
       au < manifest ; 2007 ; Romani Studies Volume 17 ; 17 >
       au < manifest ; 2008 ; Romani Studies Volume 18 ; 18 >
-      au < manifest ; 2009 ; Romani Studies Volume 19 ; 19 >
-      au < manifest ; 2010 ; Romani Studies Volume 20 ; 20 >
+      au < ready ; 2009 ; Romani Studies Volume 19 ; 19 >
+      au < ready ; 2010 ; Romani Studies Volume 20 ; 20 >
       au < released ; 2011 ; Romani Studies Volume 21 ; 21 >
       au < manifest ; 2012 ; Romani Studies Volume 22 ; 22 >
 
@@ -520,8 +520,8 @@
       param[journal_issn] = 1754-3789 
 
       au < manifest ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
-      au < manifest ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
-      au < manifest ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
+      au < ready ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
+      au < ready ; 2010 ; Science Fiction Film and Television Volume 3 ; 3 >
       au < released ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
       au < manifest ; 2012 ; Science Fiction Film and Television Volume 5 ; 5 >
 
@@ -548,8 +548,8 @@
     au < manifest ; 2006 ; Sculpture Journal Volume 15 ; 15 >
     au < manifest ; 2007 ; Sculpture Journal Volume 16 ; 16 >
     au < manifest ; 2008 ; Sculpture Journal Volume 17 ; 17 >
-    au < manifest ; 2009 ; Sculpture Journal Volume 18 ; 18 >
-    au < manifest ; 2010 ; Sculpture Journal Volume 19 ; 19 > 
+    au < ready ; 2009 ; Sculpture Journal Volume 18 ; 18 >
+    au < ready ; 2010 ; Sculpture Journal Volume 19 ; 19 > 
     au < released ; 2011 ; Sculpture Journal Volume 20 ; 20 >
     au < expected ; 2012 ; Sculpture Journal Volume 21 ; 21 >
 
@@ -603,8 +603,8 @@
     au < manifest ; 2006 ; Town Planning Review Volume 77 ; 77 >
     au < manifest ; 2007 ; Town Planning Review Volume 78 ; 78 >
     au < manifest ; 2008 ; Town Planning Review Volume 79 ; 79 >
-    au < manifest ; 2009 ; Town Planning Review Volume 80 ; 80 >
-    au < manifest ; 2010 ; Town Planning Review Volume 81 ; 81 >
+    au < ready ; 2009 ; Town Planning Review Volume 80 ; 80 >
+    au < ready ; 2010 ; Town Planning Review Volume 81 ; 81 >
     au < released ; 2011 ; Town Planning Review Volume 82 ; 82 >
     au < manifest ; 2012 ; Town Planning Review Volume 83 ; 83 >
 
