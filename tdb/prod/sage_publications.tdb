@@ -597,6 +597,39 @@
       }
 
     }
+    
+    {
+    
+      title <
+        name = Adult Learning ;
+        issn = 1045-1595 ;
+        issnl = 1045-1595
+      >
+      
+      {
+      
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://alx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        au < exists ; 1998-1999 ; Adult Learning Volume 10 ; 10 >
+        au < exists ; 1999-2000 ; Adult Learning Volume 11 ; 11 >
+        au < exists ; 2001 ; Adult Learning Volume 12 ; 12 >
+        au < exists ; 2001-2002 ; Adult Learning Volume 13 ; 13 >
+        au < exists ; 2003 ; Adult Learning Volume 14 ; 14 >
+        au < exists ; 2004 ; Adult Learning Volume 15 ; 15 >
+        au < exists ; 2005 ; Adult Learning Volume 16 ; 16 >
+        au < exists ; 2006 ; Adult Learning Volume 17 ; 17 >
+        au < exists ; 2007 ; Adult Learning Volume 18 ; 18 >
+        au < exists ; 2008 ; Adult Learning Volume 19 ; 19 >
+        au < exists ; 2009 ; Adult Learning Volume 20 ; 20 >
+        au < exists ; 2010 ; Adult Learning Volume 21 ; 21 >
+        au < exists ; 2011-2012 ; Adult Learning Volume 22 ; 22 >
+        au < exists ; 2012 ; Adult Learning Volume 23 ; 23 >
+      
+      }
+      
+    }  
 
     {
 
@@ -2446,7 +2479,7 @@
         au < released ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 630 ; 630 >
         au < released ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 631 ; 631 >
         au < released ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 632 ; 632 >
-        au < manifest ; 2011 ; The Annals of the American Academy of Political and Social Science Volume 633 ; 633 >
+        au < ready ; 2011 ; The Annals of the American Academy of Political and Social Science Volume 633 ; 633 >
         au < released ; 2011 ; The Annals of the American Academy of Political and Social Science Volume 634 ; 634 >
         au < released ; 2011 ; The Annals of the American Academy of Political and Social Science Volume 635 ; 635 >
         au < released ; 2011 ; The Annals of the American Academy of Political and Social Science Volume 636 ; 636 >
@@ -2958,6 +2991,7 @@
         au < HighWirePressPlugin ; down ; 2007-2008 ; Assessment for Effective Intervention Volume 33 ; 33 >
         au < HighWirePressPlugin ; down ; 2008-2009 ; Assessment for Effective Intervention Volume 34 ; 34 >
         au < HighWirePressPlugin ; down ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 >
+        
 
       }
      
@@ -2999,7 +3033,7 @@
         au < doNotProcess ; 2008-2009 ; Assessment for Effective Intervention Volume 34 ; 34 >
         au < doNotProcess ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 >
         au < released ; 2010-2011 ; Assessment for Effective Intervention Volume 36 ; 36 >
-        au < manifest ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 >
+        au < ready ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 >
         au < expected ; 2012-2013 ; Assessment for Effective Intervention Volume 38 ; 38 >
 
      }
@@ -4051,7 +4085,7 @@
         au < released ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 109 ; 109 >
         au < released ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 110 ; 110 >
         au < released ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 111 ; 111 >
-        au < manifest ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 112 ; 112 >
+        au < ready ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 112 ; 112 >
         au < manifest ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 113 ; 113 >
         au < manifest ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 114 ; 114 >
         au < expected ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 115 ; 115 >
@@ -4378,7 +4412,7 @@
         au < doNotProcess ; 2008 ; Canadian Journal of School Psychology Volume 23 ; 23 >
         au < doNotProcess ; 2009 ; Canadian Journal of School Psychology Volume 24 ; 24 >
         au < released ; 2010 ; Canadian Journal of School Psychology Volume 25 ; 25 >
-        au < manifest ; 2011 ; Canadian Journal of School Psychology Volume 26 ; 26 >
+        au < ready ; 2011 ; Canadian Journal of School Psychology Volume 26 ; 26 >
         au < manifest ; 2012 ; Canadian Journal of School Psychology Volume 27 ; 27 >
 
       }
@@ -5677,7 +5711,7 @@
         au < manifest ; 2008-2009 ; Communication Disorders Quarterly Volume 30 ; 30 >
         au < released ; 2009-2010 ; Communication Disorders Quarterly Volume 31 ; 31 >
         au < released ; 2010-2011 ; Communication Disorders Quarterly Volume 32 ; 32 >
-        au < manifest ; 2011-2012 ; Communication Disorders Quarterly Volume 33 ; 33 >
+        au < ready ; 2011-2012 ; Communication Disorders Quarterly Volume 33 ; 33 >
 
       }
       
@@ -7857,7 +7891,7 @@
         au < doNotProcess ; 2008-2009 ; Currents in Biblical Research Volume 7 ; 7 >
         au < manifest ; 2009-2010 ; Currents in Biblical Research Volume 8 ; 8 >
         au < released ; 2010-2011 ; Currents in Biblical Research Volume 9 ; 9 >
-        au < manifest ; 2011-2012 ; Currents in Biblical Research Volume 10 ; 10 >
+        au < ready ; 2011-2012 ; Currents in Biblical Research Volume 10 ; 10 >
 
       }
 
@@ -8930,7 +8964,7 @@
         au < doNotProcess ; 2007 ; Educational Evaluation and Policy Analysis Volume 29 ; 29 >
         au < doNotProcess ; 2008 ; Educational Evaluation and Policy Analysis Volume 30 ; 30 >
         au < doNotProcess ; 2009 ; Educational Evaluation and Policy Analysis Volume 31 ; 31 >
-        au < manifest ; 2010 ; Educational Evaluation and Policy Analysis Volume 32 ; 32 >
+        au < ready ; 2010 ; Educational Evaluation and Policy Analysis Volume 32 ; 32 >
         au < released ; 2011 ; Educational Evaluation and Policy Analysis Volume 33 ; 33 >
         au < manifest ; 2012 ; Educational Evaluation and Policy Analysis Volume 34 ; 34 >
 
@@ -9148,7 +9182,7 @@
         au < doNotProcess ; 2007 ; Educational Researcher Volume 36 ; 36 >
         au < manifest ; 2008 ; Educational Researcher Volume 37 ; 37 >
         au < manifest ; 2009 ; Educational Researcher Volume 38 ; 38 >
-        au < manifest ; 2010 ; Educational Researcher Volume 39 ; 39 >
+        au < ready ; 2010 ; Educational Researcher Volume 39 ; 39 >
         au < released ; 2011 ; Educational Researcher Volume 40 ; 40 >
         au < manifest ; 2012 ; Educational Researcher Volume 41 ; 41 >
 
@@ -9173,7 +9207,7 @@
         au < manifest ; 2007 ; Electronic News Volume 1 ; 1 >
         au < manifest ; 2008 ; Electronic News Volume 2 ; 2 >
         au < manifest ; 2009 ; Electronic News Volume 3 ; 3 >
-        au < manifest ; 2010 ; Electronic News Volume 4 ; 4 >
+        au < ready ; 2010 ; Electronic News Volume 4 ; 4 >
         au < released ; 2011 ; Electronic News Volume 5 ; 5 >
         au < manifest ; 2012 ; Electronic News Volume 6 ; 6 >
 
@@ -11660,7 +11694,7 @@
         au < doNotProcess ; 2008 ; Gender, Technology and Development Volume 12 ; 12 >
         au < released ; 2009 ; Gender, Technology and Development Volume 13 ; 13 >
         au < manifest ; 2010 ; Gender, Technology and Development Volume 14 ; 14 >
-        au < manifest ; 2011 ; Gender, Technology and Development Volume 15 ; 15 >
+        au < ready ; 2011 ; Gender, Technology and Development Volume 15 ; 15 >
         au < manifest ; 2012 ; Gender, Technology and Development Volume 16 ; 16 >
 
       }
@@ -12123,7 +12157,7 @@
         au < doNotProcess ; 2008 ; Global Social Policy Volume 8 ; 8 >
         au < doNotProcess ; 2009 ; Global Social Policy Volume 9 ; 9 >
         au < released ; 2010 ; Global Social Policy Volume 10 ; 10 >
-        au < manifest ; 2011 ; Global Social Policy Volume 11 ; 11 >
+        au < ready ; 2011 ; Global Social Policy Volume 11 ; 11 >
         au < manifest ; 2012 ; Global Social Policy Volume 12 ; 12 >
 
       }
@@ -12344,7 +12378,7 @@
         au < doNotProcess ; 2008 ; Group Processes & Intergroup Relations Volume 11 ; 11 >
         au < doNotProcess ; 2009 ; Group Processes & Intergroup Relations Volume 12 ; 12 >
         au < released ; 2010 ; Group Processes & Intergroup Relations Volume 13 ; 13 >
-        au < manifest ; 2011 ; Group Processes & Intergroup Relations Volume 14 ; 14 >
+        au < ready ; 2011 ; Group Processes & Intergroup Relations Volume 14 ; 14 >
         au < manifest ; 2012 ; Group Processes & Intergroup Relations Volume 15 ; 15 >
 
       }
@@ -12440,7 +12474,7 @@
         au < doNotProcess ; 2008 ; The International Journal of Press/Politics Volume 13 ; 13 >
         au < doNotProcess ; 2009 ; The International Journal of Press/Politics Volume 14 ; 14 >
         au < released ; 2010 ; The International Journal of Press/Politics Volume 15 ; 15 >
-        au < manifest ; 2011 ; The International Journal of Press/Politics Volume 16 ; 16 >
+        au < ready ; 2011 ; The International Journal of Press/Politics Volume 16 ; 16 >
         au < manifest ; 2012 ; The International Journal of Press/Politics Volume 17 ; 17 >
 
       }
@@ -12639,7 +12673,7 @@
         au < doNotProcess ; 2008 ; Health Education & Behavior Volume 35 ; 35 >
         au < doNotProcess ; 2009 ; Health Education & Behavior Volume 36 ; 36 >
         au < released ; 2010 ; Health Education & Behavior Volume 37 ; 37 >
-        au < manifest ; 2011 ; Health Education & Behavior Volume 38 ; 38 >
+        au < ready ; 2011 ; Health Education & Behavior Volume 38 ; 38 >
         au < manifest ; 2012 ; Health Education & Behavior Volume 39 ; 39 >
 
       }
@@ -12743,7 +12777,7 @@
         au < doNotProcess ; 2008 ; Health Education Journal Volume 67 ; 67 >
         au < doNotProcess ; 2009 ; Health Education Journal Volume 68 ; 68 >
         au < released ; 2010 ; Health Education Journal Volume 69 ; 69 >
-        au < manifest ; 2011 ; Health Education Journal Volume 70 ; 70 >
+        au < ready ; 2011 ; Health Education Journal Volume 70 ; 70 >
         au < manifest ; 2012 ; Health Education Journal Volume 71 ; 71 >
 
       }
@@ -12925,7 +12959,7 @@
         au < doNotProcess ; 2008 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 12 ; 12 >
         au < doNotProcess ; 2009 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 13 ; 13 >
         au < released ; 2010 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 14 ; 14 >
-        au < manifest ; 2011 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 15 ; 15 >
+        au < ready ; 2011 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 15 ; 15 >
         au < manifest ; 2012 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 16 ; 16 >
 
       }
@@ -13232,7 +13266,7 @@
         au < doNotProcess ; 2008 ; History of the Human Sciences Volume 21 ; 21 >
         au < doNotProcess ; 2009 ; History of the Human Sciences Volume 22 ; 22 >
         au < released ; 2010 ; History of the Human Sciences Volume 23 ; 23 >
-        au < manifest ; 2011 ; History of the Human Sciences Volume 24 ; 24 >
+        au < ready ; 2011 ; History of the Human Sciences Volume 24 ; 24 >
         au < manifest ; 2012 ; History of the Human Sciences Volume 25 ; 25 >
 
       }
@@ -13345,7 +13379,7 @@
         au < doNotProcess ; 2007-2008 ; Home Health Care Management & Practice Volume 20 ; 20 >
         au < doNotProcess ; 2008-2009 ; Home Health Care Management & Practice Volume 21 ; 21 >
         au < manifest ; 2009-2010 ; Home Health Care Management & Practice Volume 22 ; 22 >
-        au < manifest ; 2011 ; Home Health Care Management & Practice Volume 23 ; 23 >
+        au < ready ; 2011 ; Home Health Care Management & Practice Volume 23 ; 23 >
         au < manifest ; 2012 ; Home Health Care Management & Practice Volume 24 ; 24 >
 
       }
@@ -13471,7 +13505,7 @@
         au < doNotProcess ; 2008 ; Human & Experimental Toxicology Volume 27 ; 27 >
         au < doNotProcess ; 2009 ; Human & Experimental Toxicology Volume 28 ; 28 >
         au < released ; 2010 ; Human & Experimental Toxicology Volume 29 ; 29 >
-        au < manifest ; 2011 ; Human & Experimental Toxicology Volume 30 ; 30 >
+        au < ready ; 2011 ; Human & Experimental Toxicology Volume 30 ; 30 >
         au < manifest ; 2012 ; Human & Experimental Toxicology Volume 31 ; 31 >
 
       }
@@ -19413,7 +19447,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2007 ; Journal of Creative Communications Volume 2 ; 2 >
         au < doNotProcess ; 2008 ; Journal of Creative Communications Volume 3 ; 3 >
         au < manifest ; 2009 ; Journal of Creative Communications Volume 4 ; 4 >
-        au < manifest ; 2010 ; Journal of Creative Communications Volume 5 ; 5 >
+        au < ready ; 2010 ; Journal of Creative Communications Volume 5 ; 5 >
 
       }
 
@@ -19693,6 +19727,37 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
+    
+      {
+    
+     title <
+      name = Journal of Drug Issues;
+      issn = 0022-0426
+      
+    >
+    
+    {
+    
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://jod.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      au < exists ; 2001 ; Journal of Drug Issues Volume 31 ; 31 >
+      au < exists ; 2002 ; Journal of Drug Issues Volume 32 ; 32 >
+      au < exists ; 2003 ; Journal of Drug Issues Volume 33 ; 33 >
+      au < exists ; 2004 ; Journal of Drug Issues Volume 34 ; 34 >
+      au < exists ; 2005 ; Journal of Drug Issues Volume 35 ; 35 >
+      au < exists ; 2006 ; Journal of Drug Issues Volume 36 ; 36 >
+      au < exists ; 2007 ; Journal of Drug Issues Volume 37 ; 37 >
+      au < exists ; 2008 ; Journal of Drug Issues Volume 38 ; 38 >
+      au < exists ; 2009 ; Journal of Drug Issues Volume 39 ; 39 >
+      au < exists ; 2010 ; Journal of Drug Issues Volume 40 ; 40 >
+      au < exists ; 2011 ; Journal of Drug Issues Volume 41 ; 41 >
+      au < exists ; 2012 ; Journal of Drug Issues Volume 42 ; 42 > 
+    
+    }
+    
+  }
   
     {
 
