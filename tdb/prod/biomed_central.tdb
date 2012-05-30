@@ -3250,7 +3250,7 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
-        name = Journal of Negative Results in Biomedicine ;
+        name = Journal of Negative Results in BioMedicine ;
         issn = 1477-5751 ;
         issnl = 1477-5751
       >
@@ -3258,17 +3258,17 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jnrbm.com/
       param[journal_issn] = 1477-5751
 
-      au < released ; 2002 ; Journal of Negative Results in Biomedicine Volume 1 ; 1 >
-      au < released ; 2003 ; Journal of Negative Results in Biomedicine Volume 2 ; 2 >
-      au < released ; 2004 ; Journal of Negative Results in Biomedicine Volume 3 ; 3 >
-      au < released ; 2005 ; Journal of Negative Results in Biomedicine Volume 4 ; 4 >
-      au < released ; 2006 ; Journal of Negative Results in Biomedicine Volume 5 ; 5 >
-      au < released ; 2007 ; Journal of Negative Results in Biomedicine Volume 6 ; 6 >
-      au < released ; 2008 ; Journal of Negative Results in Biomedicine Volume 7 ; 7 >
-      au < released ; 2009 ; Journal of Negative Results in Biomedicine Volume 8 ; 8 >
-      au < released ; 2010 ; Journal of Negative Results in Biomedicine Volume 9 ; 9 >
-      au < manifest ; 2011 ; Journal of Negative Results in Biomedicine Volume 10 ; 10 >
-      au < manifest ; 2012 ; Journal of Negative Results in Biomedicine Volume 11 ; 11 >
+      au < released ; 2002 ; Journal of Negative Results in BioMedicine Volume 1 ; 1 >
+      au < released ; 2003 ; Journal of Negative Results in BioMedicine Volume 2 ; 2 >
+      au < released ; 2004 ; Journal of Negative Results in BioMedicine Volume 3 ; 3 >
+      au < released ; 2005 ; Journal of Negative Results in BioMedicine Volume 4 ; 4 >
+      au < released ; 2006 ; Journal of Negative Results in BioMedicine Volume 5 ; 5 >
+      au < released ; 2007 ; Journal of Negative Results in BioMedicine Volume 6 ; 6 >
+      au < released ; 2008 ; Journal of Negative Results in BioMedicine Volume 7 ; 7 >
+      au < released ; 2009 ; Journal of Negative Results in BioMedicine Volume 8 ; 8 >
+      au < released ; 2010 ; Journal of Negative Results in BioMedicine Volume 9 ; 9 >
+      au < manifest ; 2011 ; Journal of Negative Results in BioMedicine Volume 10 ; 10 >
+      au < manifest ; 2012 ; Journal of Negative Results in BioMedicine Volume 11 ; 11 >
 
     }
 
