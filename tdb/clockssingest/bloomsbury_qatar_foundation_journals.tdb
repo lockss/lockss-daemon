@@ -108,10 +108,11 @@
       eissn = 2223-506X
     >
     
-    param[journal_dir] = ji_connect
-    comment[0] = no content yet
-    comment[journal_dir] = ? from http://www.qscience.com/page/ji_connect
-     
+    param[journal_dir] = connect
+
+    au < manifest ; exists ; 2011 ; QScience Connect Volume 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; QScience Connect Volume 2012 ; 2012 >
+
   }
   
   {
