@@ -1723,7 +1723,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 > 
     au < crawling ; exists ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 3 ; 3 > 
-    au < manifest ; exists ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
+    au < expected ; exists ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
 
   }
 
@@ -1770,7 +1770,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 2 ; 2 > 
     au < crawling ; exists ; 2011 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 3 ; 3 > 
-    au < expected ; exists ; 2012 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2012 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 4 ; 4 > 
 
   }
 
@@ -1802,7 +1802,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 2 ; 2 > 
-    au < expected ; exists ; 2012 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2012 ; International Journal of Organizational and Collective Intelligence (IJOCI) Volume 3 ; 3 > 
 
   }
 
@@ -1817,7 +1817,7 @@
 	param[journal_issn] = 2156-1796
 	
     au < crawling ; exists ; 2011 ; International Journal of People-Oriented Programming (IJPOP) Volume 1 ; 1 > 
-    au < expected ; exists ; 2012 ; International Journal of People-Oriented Programming (IJPOP) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2012 ; International Journal of People-Oriented Programming (IJPOP) Volume 2 ; 2 > 
 
   }
 
@@ -1868,7 +1868,7 @@
 	param[journal_issn] = 2155-6423
 	
     au < crawling ; exists ; 2011 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 1 ; 1 > 
-    au < expected ; exists ; 2012 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2012 ; International Journal of Public and Private Healthcare Management and Economics (IJPPHME) Volume 2 ; 2 > 
 
   }
 
@@ -1953,7 +1953,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 2 ; 2 > 
-    au < expected ; exists ; 2012 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2012 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 3 ; 3 > 
 
   }
 
@@ -2033,7 +2033,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 2 ; 2 > 
     au < crawling ; exists ; 2011 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 3 ; 3 > 
-    au < expected ; exists ; 2012 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2012 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 4 ; 4 > 
 
   }
 
@@ -2048,7 +2048,7 @@
 	param[journal_issn] = 2155-6350
 	
     au < crawling ; exists ; 2011 ; International Journal of Space Technology Management and Innovation (IJSTMI) Volume 1 ; 1 > 
-    au < expected ; exists ; 2012 ; International Journal of Space Technology Management and Innovation (IJSTMI) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2012 ; International Journal of Space Technology Management and Innovation (IJSTMI) Volume 2 ; 2 > 
 
   }
 
@@ -2250,7 +2250,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of Technology Diffusion (IJTD) Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; International Journal of Technology Diffusion (IJTD) Volume 2 ; 2 > 
-    au < expected ; exists ; 2012 ; International Journal of Technology Diffusion (IJTD) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2012 ; International Journal of Technology Diffusion (IJTD) Volume 3 ; 3 > 
 
   }
 
@@ -2311,7 +2311,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 2 ; 2 > 
     au < crawling ; exists ; 2011 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 3 ; 3 > 
-    au < expected ; exists ; 2012 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2012 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 4 ; 4 > 
 
   }
 
@@ -2328,7 +2328,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Web Portals (IJWP) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Web Portals (IJWP) Volume 2 ; 2 > 
     au < crawling ; exists ; 2011 ; International Journal of Web Portals (IJWP) Volume 3 ; 3 > 
-    au < expected ; exists ; 2012 ; International Journal of Web Portals (IJWP) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2012 ; International Journal of Web Portals (IJWP) Volume 4 ; 4 > 
 
   }
 
@@ -2385,7 +2385,7 @@
 	param[journal_issn] = 2155-6261
 	
     au < crawling ; exists ; 2011 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 1 ; 1 > 
-    au < expected ; exists ; 2012 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2012 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 2 ; 2 > 
 
   }
 
@@ -2406,7 +2406,7 @@
     au < manifest ; exists ; 2009 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 5 ; 5 > 
     au < manifest ; exists ; 2010 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 6 ; 6 > 
     au < crawling ; exists ; 2011 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 7 ; 7 > 
-    au < expected ; exists ; 2012 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 8 ; 8 > 
+    au < manifest ; exists ; 2012 ; International Journal on Semantic Web and Information Systems (IJSWIS) Volume 8 ; 8 > 
 
   }
 
@@ -2492,7 +2492,7 @@
     au < manifest ; exists ; 2009 ; Journal of Electronic Commerce in Organizations (JECO) Volume 7 ; 7 > 
     au < manifest ; exists ; 2010 ; Journal of Electronic Commerce in Organizations (JECO) Volume 8 ; 8 > 
     au < crawling ; exists ; 2011 ; Journal of Electronic Commerce in Organizations (JECO) Volume 9 ; 9 > 
-    au < expected ; exists ; 2012 ; Journal of Electronic Commerce in Organizations (JECO) Volume 10 ; 10 > 
+    au < manifest ; exists ; 2012 ; Journal of Electronic Commerce in Organizations (JECO) Volume 10 ; 10 > 
 
   }
 
@@ -2543,7 +2543,7 @@
     au < manifest ; exists ; 2009 ; Journal of Information Technology Research (JITR) Volume 2 ; 2 > 
     au < manifest ; exists ; 2010 ; Journal of Information Technology Research (JITR) Volume 3 ; 3 > 
     au < crawling ; exists ; 2011 ; Journal of Information Technology Research (JITR) Volume 4 ; 4 > 
-    au < expected ; exists ; 2012 ; Journal of Information Technology Research (JITR) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2012 ; Journal of Information Technology Research (JITR) Volume 5 ; 5 > 
 
   }
 
