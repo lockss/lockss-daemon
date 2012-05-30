@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.25 2012-05-17 18:03:08 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.26 2012-05-30 21:34:26 tlipkis Exp $
  */
 
 /*
@@ -320,7 +320,6 @@ public class AdminServletManager extends BaseServletManager {
     new ServletDescr("ServeContent",
 		     ServeContent.class,
                      "Serve Content",
-		     "ServeContent/*",
 		     ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   public static final ServletDescr SERVLET_EXPORT_CONTENT =
     new ServletDescr("ExportContent",
