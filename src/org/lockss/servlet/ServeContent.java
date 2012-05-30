@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.49 2012-04-14 04:13:43 pgust Exp $
+ * $Id: ServeContent.java,v 1.49.2.1 2012-05-30 21:06:13 pgust Exp $
  */
 
 /*
@@ -423,7 +423,7 @@ public class ServeContent extends LockssServlet {
         handleAuRequest();
       } else if (!isNeverProxy()) {
         log.debug2("Content not cached: redirecting to " + url);
-        resp.sendRedirect(url);
+        redirectToUrl();
         logAccess("not configured, 302 redirect to pub");
       } else {
         handleMissingUrlRequest(url, PubState.Unknown);
@@ -437,13 +437,55 @@ public class ServeContent extends LockssServlet {
   }
   
   /**
+   * Redirect to the current URL. Uses response redirection
+   * unless the URL has a reference, in which case it does
+   * client side redirection.
+   * 
+   * @throws IOException if "UTF-8" encoding is not supported
+   */
+  protected void redirectToUrl() throws IOException {
+    // display cached page if it has content
+    String ref = null;
+    try {
+      ref = new URL(url).getRef();
+    } catch (MalformedURLException ex) {
+    }
+    
+    if (ref == null) {
+      resp.sendRedirect(url);
+    } else {
+      // redirect because URL includes a reference: '#'
+      // that can only be interpreted by the browser
+      String plainUrl = url.substring(0, url.length()-ref.length()-1);
+      StringBuffer sb = new StringBuffer();
+      sb.append("url=");
+      sb.append(URLEncoder.encode(plainUrl, "UTF-8"));
+      if (au != null) {
+        sb.append("&auid=" + au.getAuId());
+      }
+      sb.append("#" + ref);
+      String suffix = sb.toString();
+      
+      String srvUrl = absoluteLinks  
+          ? srvAbsURL(myServletDescr(), suffix) 
+          : srvURL(myServletDescr(), suffix);
+
+      Page p = new Page();
+      p.addHeader(  
+          "<meta HTTP-EQUIV=\"REFRESH\" content=\"0,url=" + srvUrl + "\">");
+      writePage(p); 
+    }
+  }
+  
+  /**
    * Handle request for the page specified OpenUrlInfo 
    * that is returned from OpenUrlResolver. 
    * 
-   * @throws IOException
+   * @param info the OpenUrlInfo from the OpenUrl resolver
+   * @throws IOException if an IO error happens
    */
   protected void handleOpenUrlInfo(OpenUrlInfo info) throws IOException {
-    log.debug2("resolvedTo: " + info.resolvedTo + "url: " + url);
+    log.debug2("resolvedTo: " + info.resolvedTo + " url: " + url);
     try {
       // Get the CachedUrl for the URL, only if it has content.
       if (au != null) {
@@ -467,22 +509,7 @@ public class ServeContent extends LockssServlet {
         }
         
         if (ref != null) {
-          // redirect because URL includes a reference: '#'
-          // that can only be interpreted by the browser
-          String auid = au.getAuId();
-          String cuUrl = cu.getUrl();
-          String suffix = 
-              "url=" + URLEncoder.encode(cuUrl, "UTF-8")
-            + "&auid=" + auid + "#" + ref;
-          
-          String srvUrl = absoluteLinks  
-              ? srvAbsURL(myServletDescr(), suffix) 
-              : srvURL(myServletDescr(), suffix);
-
-          Page p = new Page();
-          p.addHeader(  
-              "<meta HTTP-EQUIV=\"REFRESH\" content=\"0,url=" + srvUrl + "\">");
-          writePage(p); 
+          redirectToUrl();
         } else {
           // handle urls without a reference normally
           handleAuRequest();
@@ -497,140 +524,8 @@ public class ServeContent extends LockssServlet {
         return;
       }
 
-      // handle non-cached url according to missingFileAction
-      switch (missingFileAction) {
-        case Error_404:
-          // return a 404
-          handleMissingUrlRequest(url, PubState.Unknown);
-          return;
-        case Redirect:
-        case AlwaysRedirect:
-          // respond with a redirect to the publisher url
-          resp.sendRedirect(url);
-          logAccess("not configured, 302 redirect to pub");
-          return;
-        case HostAuIndex:
-        case AuIndex:
-        default:
-          // fall through to offer link to publisher url
-          break;
-      }
-
-      if (info.resolvedTo == ResolvedTo.PUBLISHER) {
-        // display publisher page
-        Page page = newPage();
-        Block centeredBlock = new Block(Block.Center);
-        centeredBlock.add("<p>Found publisher page ");
-        centeredBlock.add("that is not preserved  on this LOCKSS box. ");
-        centeredBlock.add("Select link");
-        centeredBlock.add(
-            addFootnote("Selecting link takes you away from this LOCKSS box."));
-        centeredBlock.add(" to view it at the publisher:</p>");
-        centeredBlock.add("<a href=\"" + url + "\">" + url + "</a><br>");
-        page.add(centeredBlock);
-        endPage(page);
-        logAccess("200 to publisher page");
-        return;
-      }
-    
-      if (info.resolvedTo == ResolvedTo.TITLE) {
-        // display title page
-        Page page = newPage();
-        Block centeredBlock = new Block(Block.Center);
-        centeredBlock.add("<p>Found title page ");
-        centeredBlock.add("that is not preserved  on this LOCKSS box. ");
-        centeredBlock.add("Select link");
-        centeredBlock.add(
-            addFootnote("Selecting link takes you away from this LOCKSS box."));
-        centeredBlock.add(" to view it at the publisher:</p>");
-        centeredBlock.add("<a href=\"" + url + "\">" + url + "</a>");
-        page.add(centeredBlock);
-        endPage(page);
-        logAccess("200 title page");
-        return;
-      }
-      
-      if (info.resolvedTo == ResolvedTo.VOLUME) {
-        // display volume page
-        Page page = newPage();
-        Block centeredBlock = new Block(Block.Center);
-        centeredBlock.add("<p>Found volume page ");
-        centeredBlock.add("that is not preserved  on this LOCKSS box. ");
-        centeredBlock.add("Select link");
-        centeredBlock.add(
-            addFootnote("Selecting link takes you away from this LOCKSS box."));
-        centeredBlock.add(" to view it at the publisher:</p>");
-        centeredBlock.add("<a href=\"" + url + "\">" + url + "</a><br>");
-        page.add(centeredBlock);
-        endPage(page);
-        logAccess("200 volume page");
-        return;
-      }
-    
-      if (info.resolvedTo == ResolvedTo.ISSUE) {
-        // display issue page
-        Page page = newPage();
-        Block centeredBlock = new Block(Block.Center);
-        centeredBlock.add("<p>Found issue page ");
-        centeredBlock.add("that is not preserved  on this LOCKSS box. ");
-        centeredBlock.add("Select link");
-        centeredBlock.add(
-            addFootnote("Selecting link takes you away from this LOCKSS box."));
-        centeredBlock.add(" to view it at the publisher:</p>");
-        centeredBlock.add("<a href=\"" + url + "\">" + url + "</a><br>");
-        page.add(centeredBlock);
-        endPage(page);
-        logAccess("200 issue page");
-        return;
-      }
-    
-      if (info.resolvedTo == ResolvedTo.CHAPTER) {
-        // display publisher page with a list of titles
-        Page page = newPage();
-        Block centeredBlock = new Block(Block.Center);
-        centeredBlock.add("<p>Found chapter ");
-        centeredBlock.add("that is not preserved  on this LOCKSS box. ");
-        centeredBlock.add("Select link");
-        centeredBlock.add(
-            addFootnote("Selecting link takes you away from this LOCKSS box."));
-        centeredBlock.add(" to view it at the publisher:</p>");
-        centeredBlock.add("<a href=\"" + url + "\">" + url + "</a><br>");
-        page.add(centeredBlock);
-        endPage(page);
-        logAccess("200 chapter page");
-        return;
-      }
-    
-      if (info.resolvedTo == ResolvedTo.ARTICLE) {
-        // display publisher page with a list of titles
-        Page page = newPage();
-        Block centeredBlock = new Block(Block.Center);
-        centeredBlock.add("<p>Found article ");
-        centeredBlock.add("that is not preserved  on this LOCKSS box. ");
-        centeredBlock.add("Select link");
-        centeredBlock.add(
-            addFootnote("Selecting link takes you away from this LOCKSS box."));
-        centeredBlock.add(" to view it at the publisher:</p>");
-        centeredBlock.add("<a href=\"" + url + "\">" + url + "</a><br>");
-        page.add(centeredBlock);
-        endPage(page);
-        logAccess("200 article page");
-        return;
-      }
-    
-      // display other page for ResolvedTo.OTHER
-      Page page = newPage();
-      Block centeredBlock = new Block(Block.Center);
-      centeredBlock.add("<p>Found page ");
-      centeredBlock.add("that is not preserved  on this LOCKSS box. ");
-      centeredBlock.add("Select link to view it at the publisher:</p>");
-      addFootnote("Selecting link takes you away from this LOCKSS box.");
-      centeredBlock.add("<a href=\"" + url + "\">" + url + "</a><br>");
-      page.add(centeredBlock);
-      endPage(page);
-      logAccess("200 other page");
-      return;
-      
+      handleMissingOpenUrlRequest(info, PubState.Unknown)
+      ;
     } catch (IOException e) {
       log.warning("Handling " + url + " throws ", e);
       throw e;
@@ -1188,6 +1083,108 @@ public class ServeContent extends LockssServlet {
     }
   }
 
+  /**
+   * Handler for missing OpenURL requests displays synthetic TOC
+   * for level returned by OpenURL resolver and offers a link to
+   * the URL at the publisher site.
+   * 
+   * @param info the OpenUrlInfo from the OpenUrl resolver
+   * @param pstate the pub state
+   * @throws IOException if an IO error occurs
+   */
+  protected void handleMissingOpenUrlRequest(OpenUrlInfo info, PubState pstate)
+      throws IOException {
+    
+    // handle non-cached url according to missingFileAction
+    MissingFileAction missingFileAction = getMissingFileAction(pstate);
+    switch (missingFileAction) {
+      case Error_404:
+        resp.sendError(HttpServletResponse.SC_NOT_FOUND,
+                     info.resolvedUrl + " is not preserved on this LOCKSS box");
+        logAccess("not present, 404");
+        return;
+      case Redirect:
+      case AlwaysRedirect:
+        redirectToUrl();
+        logAccess("not configured, 302 redirect to pub");
+        return;
+      case HostAuIndex:
+      case AuIndex:
+      default:
+        // fall through to offer link to publisher url
+        break;
+    }
+    
+    // build block with message specific to resolved-to level
+    Block block = new Block(Block.Center);
+    if (info.resolvedTo == ResolvedTo.PUBLISHER) {
+      // display publisher page
+      block.add("<p>Found publisher page ");
+      block.add("that is not preserved  on this LOCKSS box. ");
+      logAccess("404 to publisher page");
+    } else if (info.resolvedTo == ResolvedTo.TITLE) {
+      // display title page
+      block.add("<p>Found title page ");
+      block.add("that is not preserved  on this LOCKSS box. ");
+      logAccess("404 title page");
+    } else if (info.resolvedTo == ResolvedTo.VOLUME) {
+      // display volume page
+      block.add("<p>Found volume page ");
+      block.add("that is not preserved  on this LOCKSS box. ");
+      logAccess("404 volume page");
+    } else if (info.resolvedTo == ResolvedTo.ISSUE) {
+      // display issue page
+      block.add("<p>Found issue page ");
+      block.add("that is not preserved  on this LOCKSS box. ");
+      logAccess("404 issue page");
+    } else if (info.resolvedTo == ResolvedTo.CHAPTER) {
+      // display chapter page
+      block.add("<p>Found chapter ");
+      block.add("that is not preserved  on this LOCKSS box. ");
+      logAccess("404 chapter page");
+    } else if (info.resolvedTo == ResolvedTo.ARTICLE) {
+      // display article page
+      block.add("<p>Found article ");
+      block.add("that is not preserved  on this LOCKSS box. ");
+      logAccess("404 article page");
+    } else {
+      // display other page for ResolvedTo.OTHER
+      block.add("<p>Found page ");
+      block.add("that is not preserved  on this LOCKSS box. ");
+      logAccess("404 other page");
+    }
+    
+    // add detail message
+    block.add("Select link");
+    block.add(addFootnote(
+        "Selecting publisher link takes you away from this LOCKSS box."));
+    block.add(" to view it at the publisher:</p>");
+    block.add("<a href=\"" + url + "\">" + url + "</a><br/><br/>");
+
+    switch (missingFileAction) {
+    case HostAuIndex:
+      Collection candidateAus = pluginMgr.getCandidateAus(info.resolvedUrl);
+      if (candidateAus != null && !candidateAus.isEmpty()) {
+        displayIndexPage(candidateAus,
+                         HttpResponse.__404_Not_Found,
+                         block,
+                         "Possibly related content may be found "
+                         + "in the following Archival Units");
+      } else {
+        resp.sendError(HttpResponse.__404_Not_Found,
+                     info.resolvedUrl + " is not preserved on this LOCKSS box");
+        logAccess("not present, 404");
+      }
+      break;
+    case AuIndex:
+      displayIndexPage(pluginMgr.getAllAus(),
+                       HttpResponse.__404_Not_Found,
+                       block, null);
+      logAccess("not present, 404 with index");
+      break;
+    }
+  }
+
   protected void handleMissingUrlRequest(String missingUrl, PubState pstate)
       throws IOException {
     String missing =
@@ -1200,7 +1197,7 @@ public class ServeContent extends LockssServlet {
       break;
     case Redirect:
     case AlwaysRedirect:
-      resp.sendRedirect(url);
+      redirectToUrl();
       break;
     case HostAuIndex:
       Collection candidateAus = pluginMgr.getCandidateAus(missingUrl);
@@ -1239,12 +1236,20 @@ public class ServeContent extends LockssServlet {
   }
 
   void displayIndexPage() throws IOException {
-    displayIndexPage(pluginMgr.getAllAus(), -1, null);
+    displayIndexPage(pluginMgr.getAllAus(), -1, (Element)null, (String)null);
   }
 
   void displayIndexPage(Collection<ArchivalUnit> auList,
+                        int result,
+                        String headerText) 
+    throws IOException {
+    displayIndexPage(auList, result, (Element)null, headerText);
+  }
+  
+  void displayIndexPage(Collection<ArchivalUnit> auList,
 			int result,
-			String header)
+                        Element headerElement,
+			String headerText)
     throws IOException {
     Predicate pred;
     boolean offerUnfilteredList = false;
@@ -1260,12 +1265,16 @@ public class ServeContent extends LockssServlet {
       ServletUtil.layoutExplanationBlock(page,
 					 "No content has been preserved on this LOCKSS box");
     } else {
+      if (headerElement != null) {
+        page.add(headerElement);
+      }
+      
       // Layout manifest index w/ URLs pointing to this servlet
       Element ele =
 	ServletUtil.manifestIndex(pluginMgr,
 				  auList,
 				  pred,
-				  header,
+				  headerText,
 				  new ServletUtil.ManifestUrlTransform() {
 				    public Object transformUrl(String url,
 							       ArchivalUnit au){
