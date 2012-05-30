@@ -1,10 +1,10 @@
 /*
- * $Id: FuncWarcRoundtrip.java,v 1.3 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: FuncWarcRoundtrip.java,v 1.3.12.1 2012-05-30 08:24:13 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -125,19 +125,9 @@ public class FuncWarcRoundtrip extends LockssTestCase {
     daemon = getMockLockssDaemon();
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
-      PropKeyEncoder.encode(tempDirPath);
-    String pref = "org.lockss.au." + auId + ".";
-
     Properties props = new Properties();
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props.setProperty(pref + SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
-    props.setProperty(pref + SimulatedPlugin.AU_PARAM_DEPTH, "2");
-    props.setProperty(pref + SimulatedPlugin.AU_PARAM_BRANCH, "2");
-    props.setProperty(pref + SimulatedPlugin.AU_PARAM_NUM_FILES, "3");
-    props.setProperty(pref + SimulatedPlugin.AU_PARAM_FILE_TYPES,
-                      ""+SimulatedContentGenerator.FILE_TYPE_BIN);
     props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
@@ -146,16 +136,22 @@ public class FuncWarcRoundtrip extends LockssTestCase {
     daemon.getPluginManager().startService();
     daemon.getPluginManager().startLoadablePlugins();
 
-    sau =
-        (SimulatedArchivalUnit)daemon.getPluginManager().getAllAus().get(0);
-    daemon.getLockssRepository(sau).startService();
-    daemon.setNodeManager(new MockNodeManager(), sau);
-
+    sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
   }
 
   public void tearDown() throws Exception {
     daemon.stopDaemon();
     super.tearDown();
+  }
+
+  Configuration simAuConfig(String rootPath) {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put("depth", "2");
+    conf.put("branch", "2");
+    conf.put("numFiles", "3");
+    conf.put("fileTypes", "" + SimulatedContentGenerator.FILE_TYPE_BIN);
+    return conf;
   }
 
   public void testOriginalUrls() throws Exception {

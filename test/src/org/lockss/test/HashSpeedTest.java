@@ -1,10 +1,10 @@
 /*
- * $Id: HashSpeedTest.java,v 1.33 2010-02-04 06:53:56 tlipkis Exp $
+ * $Id: HashSpeedTest.java,v 1.33.32.1 2012-05-30 08:24:13 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,7 @@ package org.lockss.test;
 
 import java.io.File;
 import java.security.MessageDigest;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -80,25 +81,10 @@ public class HashSpeedTest extends LockssTestCase {
 
   public void setUp(int duration, int byteStep) throws Exception {
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
-      PropKeyEncoder.encode(tempDirPath);
     Properties props = new Properties();
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_DURATION, ""+duration);
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_BYTE_STEP, ""+byteStep);
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_DEPTH, "3");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_BRANCH, "5");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_NUM_FILES, "5");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_FILE_TYPES,
-                      ""+SimulatedContentGenerator.FILE_TYPE_BIN);
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon.getPluginManager();
@@ -110,15 +96,23 @@ public class HashSpeedTest extends LockssTestCase {
     theDaemon.getHashService().startService();
     theDaemon.getPluginManager().startLoadablePlugins();
 
-    sau =
-        (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
-    theDaemon.getLockssRepository(sau).startService();
-    theDaemon.setNodeManager(new MockNodeManager(), sau);
+    sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
   }
 
   public void tearDown() throws Exception {
     theDaemon.stopDaemon();
     super.tearDown();
+  }
+
+  Configuration simAuConfig(String rootPath) {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put("depth", "3");
+    conf.put("branch", "5");
+    conf.put("numFiles", "5");
+    conf.put("fileTypes", "" + SimulatedContentGenerator.FILE_TYPE_BIN);
+    conf.put("binFileSize", ""+fileSize);
+    return conf;
   }
 
   public void testRunSelf() throws Exception {
