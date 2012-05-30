@@ -1,10 +1,10 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.19 2012-01-16 17:49:25 pgust Exp $
+ * $Id: FuncTarExploder2.java,v 1.20 2012-05-30 08:31:29 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2007-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -143,31 +143,11 @@ public class FuncTarExploder2 extends LockssTestCase {
   public void setUp(int max) throws Exception {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-//     String auId = "org|lockss|crawler|FuncTarExploder2$MySimulatedPlugin.root~" +
-    String auId = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
-      PropKeyEncoder.encode(tempDirPath);
     Properties props = new Properties();
     props.setProperty(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
     maxDepth=max;
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
 
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
-    // the simulated Content's depth will be (AU_PARAM_DEPTH + 1)
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_DEPTH, "3");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_BRANCH, "1");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_NUM_FILES, "2");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_FILE_TYPES,
-                      ""+SimulatedContentGenerator.FILE_TYPE_BIN);
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_DEFAULT_ARTICLE_MIME_TYPE,
-		      "application/pdf");
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doTarFile", "true");
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.actualTarFile", "true");
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.actualTarFileName", issn + ".tar");
@@ -175,8 +155,6 @@ public class FuncTarExploder2 extends LockssTestCase {
     props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
     props.setProperty(FollowLinkCrawler.PARAM_STORE_ARCHIVES, "true");
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
     String explodedPluginName =
       "org.lockss.plugin.elsevier.ClockssElsevierExplodedPlugin";
     props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME, explodedPluginName);
@@ -200,10 +178,7 @@ public class FuncTarExploder2 extends LockssTestCase {
 
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    sau =
-      (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
-    theDaemon.getLockssRepository(sau).startService();
-    theDaemon.setNodeManager(new MockNodeManager(), sau);
+    sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
     ArticleIteratorFactory aif = new ElsevierArticleIteratorFactory();
     sau.setArticleIteratorFactory(aif);
   }
@@ -211,6 +186,19 @@ public class FuncTarExploder2 extends LockssTestCase {
   public void tearDown() throws Exception {
     theDaemon.stopDaemon();
     super.tearDown();
+  }
+
+  Configuration simAuConfig(String rootPath) {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put("depth", "3");
+    conf.put("branch", "1");
+    conf.put("numFiles", "2");
+    conf.put("fileTypes", "" + SimulatedContentGenerator.FILE_TYPE_BIN);
+    conf.put("binFileSize", ""+fileSize);
+    conf.put(SimulatedPlugin.AU_PARAM_DEFAULT_ARTICLE_MIME_TYPE,
+	     "application/pdf");
+    return conf;
   }
 
   public void testRunSelf() throws Exception {
