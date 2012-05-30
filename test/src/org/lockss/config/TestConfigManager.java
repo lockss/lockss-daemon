@@ -1,10 +1,10 @@
 /*
- * $Id: TestConfigManager.java,v 1.42 2011-08-09 03:59:00 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.43 2012-05-30 08:28:13 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -940,6 +940,36 @@ public class TestConfigManager extends LockssTestCase {
     allConfig.put("org.lockss.config.fileVersion.au", "1");
     assertEquals(2, mymgr.writeArgs.size());
     assertWriteArgs(allConfig, "au.txt", null, true, mymgr.writeArgs.get(1));
+  }
+
+  public void testGetLocalFileDescrx() throws Exception {
+    List<String> expNames =
+      ListUtil.list(CONFIG_FILE_UI_IP_ACCESS,
+		    CONFIG_FILE_PROXY_IP_ACCESS,
+		    CONFIG_FILE_PLUGIN_CONFIG,
+		    CONFIG_FILE_AU_CONFIG,
+		    CONFIG_FILE_ICP_SERVER,
+		    CONFIG_FILE_AUDIT_PROXY,
+		    CONFIG_FILE_CONTENT_SERVERS,
+		    CONFIG_FILE_ACCESS_GROUPS,
+		    CONFIG_FILE_CRAWL_PROXY,
+		    CONFIG_FILE_EXPERT);
+
+    List<String> names = new ArrayList<String>();
+    for (LocalFileDescr descr : mgr.getLocalFileDescrs()) {
+      names.add(descr.getName());
+    }
+    assertEquals(expNames, names);
+  }
+
+  public void testGetLocalFileDescr() throws Exception {
+    LocalFileDescr descr = mgr.getLocalFileDescr(CONFIG_FILE_EXPERT);
+    assertEquals(CONFIG_FILE_EXPERT, descr.getName());
+    assertTrue(descr.isNeedReloadAfterWrite());
+
+    descr = mgr.getLocalFileDescr(CONFIG_FILE_AU_CONFIG);
+    assertEquals(CONFIG_FILE_AU_CONFIG, descr.getName());
+    assertFalse(descr.isNeedReloadAfterWrite());
   }
 
   void updateAuLastModified(long time) {
