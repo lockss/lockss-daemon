@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.29 2012-03-28 21:05:31 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.29.4.1 2012-05-30 21:08:40 pgust Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Tdb;
@@ -135,7 +136,8 @@ public class OpenUrlResolver {
     final String auFeatureKey;
     final OpenUrlInfo.ResolvedTo resolvedTo;
     
-    public FeatureEntry(String auFeatureKey, OpenUrlInfo.ResolvedTo resolvedTo) {
+    public FeatureEntry(String auFeatureKey, 
+                        OpenUrlInfo.ResolvedTo resolvedTo) {
       this.auFeatureKey = auFeatureKey;
       this.resolvedTo = resolvedTo;
     }
@@ -1196,40 +1198,39 @@ public class OpenUrlResolver {
           // found the URL if in cache
           if  (pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
             resolved = aResolved;
-            break;
+            return resolved;
           }
           // not a viable URL if the AU is down
           // note: even though getJournalUrl() checks that page exists,
           // we can't rely on it being usable if TdbAu is down
           if (!tdbau.isDown()) {
             resolved = aResolved;
-          } else {
-            log.debug2(  "discarding URL " + aResolved.resolvedUrl 
-                       + " because tdbau is down: " + tdbau.getName());
+            return resolved;
           }
+          log.debug2(  "discarding URL " + aResolved.resolvedUrl 
+                     + " because tdbau is down: " + tdbau.getName());
         }
       }
-    } else {
-      // look for URL that is cached from list of non-matching AUs
-      for (TdbAu tdbau : notFoundTdbAuList) {
-        OpenUrlInfo aResolved = 
-            getJournalUrl(tdbau, year, volume, issue, spage);
-        if (aResolved != null) {
-          // found the URL if in cache
-          if  (pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
-            resolved = aResolved;
-            break;
-          }
-          // not a viable URL if the AU is down
-          // note: even though getJournalUrl() checks that page exists,
-          // we can't rely on it being usable if TdbAu is down
-          if (!tdbau.isDown()) {
-            resolved = aResolved;
-          } else {
-            log.debug2(  "discarding URL " + aResolved.resolvedUrl 
-                       + " because tdbau is down: " + tdbau.getName());
-          }
+    }
+    // look for URL that is cached from list of non-matching AUs
+    for (TdbAu tdbau : notFoundTdbAuList) {
+      OpenUrlInfo aResolved = 
+          getJournalUrl(tdbau, year, volume, issue, spage);
+      if (aResolved != null) {
+        // found the URL if in cache
+        if  (pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
+          resolved = aResolved;
+          return resolved;
         }
+        // not a viable URL if the AU is down
+        // note: even though getJournalUrl() checks that page exists,
+        // we can't rely on it being usable if TdbAu is down
+        if (!tdbau.isDown()) {
+          resolved = aResolved;
+          return resolved;
+        }
+        log.debug2(  "discarding URL " + aResolved.resolvedUrl 
+                   + " because tdbau is down: " + tdbau.getName());
       }
     }
 
@@ -1579,6 +1580,7 @@ public class OpenUrlResolver {
       
       for (String s : printfStrings) {
         String url = null;
+        s = StringEscapeUtils.unescapeHtml(s);
         try {
           List<String> urls = converter.getUrlList(s);
           if ((urls != null) && !urls.isEmpty()) {
