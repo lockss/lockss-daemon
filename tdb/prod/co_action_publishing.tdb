@@ -178,6 +178,33 @@
 
   }
 
+
+  {
+    title <
+      name = International Journal of Circumpolar Health ;
+      eissn = 2242-3982 ;
+      issnl = 1797-2361
+
+    >
+
+    param[base_url] = http://www.circumpolarhealthjournal.net/
+    param[journal_id] = ijch
+    
+    au < exists ; 2001 ; International Journal of Circumpolar Health [including Supplements] Volume 60 ; 60 ; 2001 >
+    au < exists ; 2002 ; International Journal of Circumpolar Health [including Supplements] Volume 61 ; 61 ; 2002 >
+    au < exists ; 2003 ; International Journal of Circumpolar Health [including Supplements] Volume 62 ; 62 ; 2003 >
+    au < exists ; 2004 ; International Journal of Circumpolar Health [including Supplements] Volume 63 ; 63 ; 2004 >
+    au < exists ; 2005 ; International Journal of Circumpolar Health [including Supplements] Volume 64 ; 64 ; 2005 >
+    au < exists ; 2006 ; International Journal of Circumpolar Health [including Supplements] Volume 65 ; 65 ; 2006 >
+    au < exists ; 2007 ; International Journal of Circumpolar Health [including Supplements] Volume 66 ; 66 ; 2007 >
+    au < exists ; 2008 ; International Journal of Circumpolar Health [including Supplements] Volume 67 ; 67 ; 2008 >
+    au < exists ; 2009 ; International Journal of Circumpolar Health [including Supplements] Volume 68 ; 68 ; 2009 >
+    au < exists ; 2010 ; International Journal of Circumpolar Health [including Supplements] Volume 69 ; 69 ; 2010 >
+    au < exists ; 2011 ; International Journal of Circumpolar Health [including Supplements] Volume 70 ; 70 ; 2011 >
+    au < expected ; 2012 ; International Journal of Circumpolar Health [including Supplements] Volume 71 ; 71 ; 2012 >
+
+  }
+
   {
 
     title <
