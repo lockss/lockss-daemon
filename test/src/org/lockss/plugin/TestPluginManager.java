@@ -1,10 +1,10 @@
 /*
- * $Id: TestPluginManager.java,v 1.93 2012-05-17 17:59:31 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.93.2.1 2012-05-30 08:21:01 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -811,6 +811,13 @@ public class TestPluginManager extends LockssTestCase {
 
     void suppressEnxurePluginLoaded(List<String> pluginKeys) {
       suppressEnxurePluginLoaded = pluginKeys;
+    }
+
+    // Make it look like any AU's config came from au.txt, to simplify
+    // config in these tests.
+    @Override
+    boolean isAuConfInAuTxt(String auId) {
+      return true;
     }
 
     @Override

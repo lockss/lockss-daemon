@@ -1,10 +1,10 @@
 /*
- * $Id: PluginManager.java,v 1.223 2012-05-17 17:59:31 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.223.2.1 2012-05-30 08:21:01 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -156,6 +156,13 @@ public class PluginManager
     PREFIX + "disableURLConnectionCache";
   public static final boolean DEFAULT_DISABLE_URL_CONNECTION_CACHE = false;
 
+  /** If true, AU configurations may appear in any config file.  This was
+   * always the case prior to 1.55, setting this true restores that
+   * behavior. */
+  public static final String PARAM_ALLOW_GLOBAL_AU_CONFIG =
+    PREFIX + "allowGlobalAuConfig";
+  public static final boolean DEFAULT_ALLOW_GLOBAL_AU_CONFIG = false;
+
   /** If true, when a new version of an existing plugin is loaded, all its
    * AUs will be restarted. */
   public static final String PARAM_RESTART_AUS_WITH_NEW_PLUGIN =
@@ -272,6 +279,7 @@ public class PluginManager
   private boolean preferLoadablePlugin = DEFAULT_PREFER_LOADABLE_PLUGIN;
   private long registryTimeout = DEFAULT_PLUGIN_LOAD_TIMEOUT;
   private boolean paramRestartAus = DEFAULT_RESTART_AUS_WITH_NEW_PLUGIN;
+  private boolean paramAllowGlobalAuConfig = DEFAULT_ALLOW_GLOBAL_AU_CONFIG;
   private long paramAuRestartMaxSleep = DEFAULT_AU_RESTART_MAX_SLEEP;
   private long paramPerAuRestartSleep = DEFAULT_PER_AU_RESTART_SLEEP;
   private boolean paramDisableURLConnectionCache =
@@ -362,7 +370,7 @@ public class PluginManager
     log.debug("Initializing loadable plugin registries before starting AUs");
     initLoadablePluginRegistries(getPluginRegistryUrls(config));
     synchStaticPluginList(config);
-    configureAllPlugins();
+    configureAllPlugins(config);
     // Start watching for changes to plugin registry AUs
     registerAuEventHandler(regAuEventHandler);
     loadablePluginsReady = true;
@@ -394,6 +402,9 @@ public class PluginManager
       registryTimeout = config.getTimeInterval(PARAM_PLUGIN_LOAD_TIMEOUT,
 					       DEFAULT_PLUGIN_LOAD_TIMEOUT);
 
+      paramAllowGlobalAuConfig =
+	config.getBoolean(PARAM_ALLOW_GLOBAL_AU_CONFIG,
+			  DEFAULT_ALLOW_GLOBAL_AU_CONFIG);
       paramRestartAus =
 	config.getBoolean(PARAM_RESTART_AUS_WITH_NEW_PLUGIN,
 			  DEFAULT_RESTART_AUS_WITH_NEW_PLUGIN);
@@ -456,26 +467,21 @@ public class PluginManager
 
       // Process any changed AU config
       if (changedKeys.contains(PARAM_AU_TREE)) {
-	configureAllPlugins();
+	configureAllPlugins(config);
       }
     }
   }
 
   private enum SkipConfigCondition {ConfigUnchanged, AuRunning};
 
-  private void configureAllPlugins() {
-    synchronized (auAddDelLock) {
-      // Refetch current config while holding lock to ensure see any
-      // updates made while config reload already in progress.
-      Configuration config = CurrentConfig.getCurrentConfig();
-      Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
-      if (!allPlugs.equals(currentAllPlugs)) {
-	List<String> plugKeys = ListUtil.fromIterator(allPlugs.nodeIterator());
-	List<String> randKeys = CollectionUtil.randomPermutation(plugKeys);
-	configurePlugins(randKeys, allPlugs,
-			 SkipConfigCondition.ConfigUnchanged);
-	currentAllPlugs = allPlugs;
-      }
+  private void configureAllPlugins(Configuration config) {
+    Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
+    if (!allPlugs.equals(currentAllPlugs)) {
+      List<String> plugKeys = ListUtil.fromIterator(allPlugs.nodeIterator());
+      List<String> randKeys = CollectionUtil.randomPermutation(plugKeys);
+      configurePlugins(randKeys, allPlugs,
+		       SkipConfigCondition.ConfigUnchanged);
+      currentAllPlugs = allPlugs;
     }
   }
 
@@ -500,8 +506,9 @@ public class PluginManager
 	prevPluginConf = currentAllPlugs.getConfigTree(pluginKey);
 	break;
       }
-
-      configurePlugin(pluginKey, pluginConf, prevPluginConf, scc);
+      synchronized (auAddDelLock) {
+	configurePlugin(pluginKey, pluginConf, prevPluginConf, scc);
+      }
     }
   }
 
@@ -710,10 +717,24 @@ public class PluginManager
 	  break;
 	case AuRunning:
 	  if (auMap.containsKey(auId)) {
+	    if (log.isDebug3())
+	      log.debug3("AU already running, not reconfiguring: "
+			 + auKey);
 	    continue nextAU;
 	  }
 	  log.debug2("Retrying previously unstarted AU id: " + auId);
 	  break;
+	}
+	// If this AU has no config tree in au.txt, ignore it.  Prevents
+	// race caused by config reload asynchronous to quick AU
+	// create/delete.  Because config reload never deletes AUs, this
+	// would lead to a just-deleted AU being recreated and not
+	// deleted until daemon restart.  Set
+	// org.lockss.plugin.allowGlobalAuConfig true to suppress this
+	// check, allowing AUs to be configured in any config file.
+	if (! (paramAllowGlobalAuConfig || isAuConfInAuTxt(auId))) {
+	  log.debug("Not configuring now-disappeared AU id: " + auKey);
+	  continue nextAU;
 	}
 	if (log.isDebug2()) log.debug2("Configuring AU id: " + auKey);
 	Plugin plugin = getPlugin(pluginKey);
@@ -737,6 +758,13 @@ public class PluginManager
 	log.error("Unexpected exception configuring AU " + auKey, e);
       }
     }
+  }
+
+  /** Return true if the AU is configured in au.txt.
+   * @see PARAM_ALLOW_GLOBAL_AU_CONFIG
+   */
+  boolean isAuConfInAuTxt(String auId) {
+    return ! getStoredAuConfiguration(auId).isEmpty();
   }
 
   void configureAu(Plugin plugin, Configuration auConf, String auId)
