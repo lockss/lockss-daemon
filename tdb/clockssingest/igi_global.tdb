@@ -58,28 +58,28 @@
     comment[0] = manifest page does not have links
     param[journal_issn] = 1080-286X 
 
-    au < expected ; exists ; 1988 ; Information Technology Management Volume 1 ; 1 > 
-    au < expected ; exists ; 1989 ; Information Technology Management Volume 2 ; 2 > 
-    au < expected ; exists ; 1990 ; Information Technology Management Volume 3 ; 3 > 
-    au < expected ; exists ; 1991 ; Information Technology Management Volume 4 ; 4 > 
-    au < expected ; exists ; 1992 ; Information Technology Management Volume 5 ; 5 > 
-    au < expected ; exists ; 1993 ; Information Technology Management Volume 6 ; 6 > 
-    au < expected ; exists ; 1994 ; Information Technology Management Volume 7 ; 7 > 
-    au < expected ; exists ; 1995 ; Information Technology Management Volume 8 ; 8 > 
-    au < expected ; exists ; 1996 ; Information Technology Management Volume 9 ; 9 > 
-    au < expected ; exists ; 1997 ; Information Technology Management Volume 10 ; 10 > 
-    au < expected ; exists ; 1998 ; Information Technology Management Volume 11 ; 11 > 
-    au < expected ; exists ; 1999 ; Information Technology Management Volume 12 ; 12 > 
-    au < expected ; exists ; 2000 ; Information Technology Management Volume 13 ; 13 > 
-    au < expected ; exists ; 2001 ; Information Technology Management Volume 14 ; 14 > 
-    au < expected ; exists ; 2002 ; Information Technology Management Volume 15 ; 15 > 
-    au < expected ; exists ; 2003 ; Information Technology Management Volume 16 ; 16 > 
-    au < expected ; exists ; 2004 ; Information Technology Management Volume 17 ; 17 > 
-    au < expected ; exists ; 2005 ; Information Technology Management Volume 18 ; 18 > 
-    au < expected ; exists ; 2006 ; Information Technology Management Volume 19 ; 19 > 
-    au < expected ; exists ; 2007 ; Information Technology Management Volume 20 ; 20 > 
-    au < expected ; exists ; 2008 ; Information Technology Management Volume 21 ; 21 > 
-    au < expected ; exists ; 2009 ; Information Technology Management Volume 22 ; 22 > 
+    au < manifest ; exists ; 1988 ; Information Technology Management Volume 1 ; 1 > 
+    au < manifest ; exists ; 1989 ; Information Technology Management Volume 2 ; 2 > 
+    au < manifest ; exists ; 1990 ; Information Technology Management Volume 3 ; 3 > 
+    au < manifest ; exists ; 1991 ; Information Technology Management Volume 4 ; 4 > 
+    au < manifest ; exists ; 1992 ; Information Technology Management Volume 5 ; 5 > 
+    au < manifest ; exists ; 1993 ; Information Technology Management Volume 6 ; 6 > 
+    au < manifest ; exists ; 1994 ; Information Technology Management Volume 7 ; 7 > 
+    au < manifest ; exists ; 1995 ; Information Technology Management Volume 8 ; 8 > 
+    au < manifest ; exists ; 1996 ; Information Technology Management Volume 9 ; 9 > 
+    au < manifest ; exists ; 1997 ; Information Technology Management Volume 10 ; 10 > 
+    au < manifest ; exists ; 1998 ; Information Technology Management Volume 11 ; 11 > 
+    au < manifest ; exists ; 1999 ; Information Technology Management Volume 12 ; 12 > 
+    au < manifest ; exists ; 2000 ; Information Technology Management Volume 13 ; 13 > 
+    au < manifest ; exists ; 2001 ; Information Technology Management Volume 14 ; 14 > 
+    au < manifest ; exists ; 2002 ; Information Technology Management Volume 15 ; 15 > 
+    au < manifest ; exists ; 2003 ; Information Technology Management Volume 16 ; 16 > 
+    au < manifest ; exists ; 2004 ; Information Technology Management Volume 17 ; 17 > 
+    au < manifest ; exists ; 2005 ; Information Technology Management Volume 18 ; 18 > 
+    au < manifest ; exists ; 2006 ; Information Technology Management Volume 19 ; 19 > 
+    au < manifest ; exists ; 2007 ; Information Technology Management Volume 20 ; 20 > 
+    au < manifest ; exists ; 2008 ; Information Technology Management Volume 21 ; 21 > 
+    au < manifest ; exists ; 2009 ; Information Technology Management Volume 22 ; 22 > 
     au < expected ; exists ; 2010 ; Information Technology Management Volume 23 ; 23 > 
     au < expected ; exists ; 2011 ; Information Technology Management Volume 24 ; 24 > 
     au < expected ; exists ; 2012 ; Information Technology Management Volume 25 ; 25 > 
@@ -162,7 +162,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 2 ; 2 > 
     au < crawling ; exists ; 2011 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 3 ; 3 > 
-    au < expected ; exists ; 2012 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2012 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 4 ; 4 > 
 
   }
 
@@ -319,7 +319,7 @@
 	param[journal_issn] = 2155-4196
 	
     au < crawling ; exists ; 2011 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 1 ; 1 > 
-    au < expected ; exists ; 2012 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2012 ; International Journal of Art, Culture and Design Technologies (IJACDT) Volume 2 ; 2 > 
 
   }
 
@@ -366,7 +366,7 @@
 	param[journal_issn] = 2155-6962
 	
     au < crawling ; exists ; 2011 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 1 ; 1 > 
-    au < expected ; exists ; 2012 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2012 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 2 ; 2 > 
 
   }
 
@@ -515,7 +515,7 @@
 		
     au < manifest ; exists ; 2010 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 2 ; 2 > 
-    au < expected ; exists ; 2012 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2012 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 3 ; 3 > 
 
   }
 
@@ -530,7 +530,7 @@
 	param[journal_issn] = 2155-6997
 		
     au < crawling ; exists ; 2011 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 1 ; 1 > 
-    au < expected ; exists ; 2012 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2012 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 2 ; 2 > 
 
   }
 
@@ -617,7 +617,7 @@
 	param[journal_issn] = 2155-6903
 	
     au < crawling ; exists ; 2011 ; International Journal of Cyber Ethics in Education (IJCEE) Volume 1 ; 1 > 
-    au < expected ; exists ; 2012 ; International Journal of Cyber Ethics in Education (IJCEE) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2012 ; International Journal of Cyber Ethics in Education (IJCEE) Volume 2 ; 2 > 
 
   }
 
@@ -632,7 +632,7 @@
 	param[journal_issn] = 1947-3435
 	
     au < crawling ; exists ; 2011 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 1 ; 1 > 
-    au < expected ; exists ; 2012 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2012 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 2 ; 2 > 
 
   }
 
@@ -686,7 +686,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 2 ; 2 > 
-    au < expected ; exists ; 2012 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2012 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 3 ; 3 > 
 
   }
 
@@ -716,10 +716,11 @@
       issnl = 1947-9077
     >
 	param[journal_issn] = 1947-9077
+	comment[0] = no links on manifest page
 	
     au < manifest ; exists ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 > 
-    au < expected ; exists ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 2 > 
+    au < notReady ; exists ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 > 
 
   }
 
@@ -879,12 +880,12 @@
     >
 	param[journal_issn] = 1548-3886
 	
-    au < exists ; manifest ; 2005 ; International Journal of Electronic Government Research (IJEGR) Volume 1 ; 1 > 
-    au < exists ; manifest ; 2006 ; International Journal of Electronic Government Research (IJEGR) Volume 2 ; 2 > 
-    au < exists ; manifest ; 2007 ; International Journal of Electronic Government Research (IJEGR) Volume 3 ; 3 > 
-    au < exists ; manifest ; 2008 ; International Journal of Electronic Government Research (IJEGR) Volume 4 ; 4 > 
-    au < exists ; manifest ; 2009 ; International Journal of Electronic Government Research (IJEGR) Volume 5 ; 5 > 
-    au < exists ; manifest ; 2010 ; International Journal of Electronic Government Research (IJEGR) Volume 6 ; 6 > 
+    au < manifest ; exists ; 2005 ; International Journal of Electronic Government Research (IJEGR) Volume 1 ; 1 > 
+    au < manifest ; exists ; 2006 ; International Journal of Electronic Government Research (IJEGR) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2007 ; International Journal of Electronic Government Research (IJEGR) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2008 ; International Journal of Electronic Government Research (IJEGR) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2009 ; International Journal of Electronic Government Research (IJEGR) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2010 ; International Journal of Electronic Government Research (IJEGR) Volume 6 ; 6 > 
     au < crawling ; exists ; 2011 ; International Journal of Electronic Government Research (IJEGR) Volume 7 ; 7 > 
     au < crawling ; exists ; 2012 ; International Journal of Electronic Government Research (IJEGR) Volume 8 ; 8 > 
 
@@ -1113,7 +1114,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 2 ; 2 > 
     au < crawling ; exists ; 2011 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 3 ; 3 > 
-    au < expected ; exists ; 2012 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2012 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 4 ; 4 > 
 
   }
 
@@ -1165,7 +1166,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of ICT Research and Development in Africa (IJICTRDA) Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; International Journal of ICT Research and Development in Africa (IJICTRDA) Volume 2 ; 2 > 
-    au < expected ; exists ; 2012 ; International Journal of ICT Research and Development in Africa (IJICTRDA) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2012 ; International Journal of ICT Research and Development in Africa (IJICTRDA) Volume 3 ; 3 > 
 
   }
 
@@ -1359,7 +1360,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Information Technology and Web Engineering (IJITWE) Volume 4 ; 4 > 
     au < manifest ; exists ; 2010 ; International Journal of Information Technology and Web Engineering (IJITWE) Volume 5 ; 5 > 
     au < crawling ; exists ; 2011 ; International Journal of Information Technology and Web Engineering (IJITWE) Volume 6 ; 6 > 
-    au < expected ; exists ; 2012 ; International Journal of Information Technology and Web Engineering (IJITWE) Volume 7 ; 7 > 
+    au < manifest ; exists ; 2012 ; International Journal of Information Technology and Web Engineering (IJITWE) Volume 7 ; 7 > 
 
   }
 
@@ -1442,7 +1443,7 @@
 	param[journal_issn] = 2155-4218
 	
     au < crawling ; exists ; 2011 ; International Journal of Interactive Communication Systems and Technologies (IJICST) Volume 1 ; 1 > 
-    au < expected ; exists ; 2012 ; International Journal of Interactive Communication Systems and Technologies (IJICST) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2012 ; International Journal of Interactive Communication Systems and Technologies (IJICST) Volume 2 ; 2 > 
 
   }
 
@@ -1498,7 +1499,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 2 ; 2 > 
-    au < expected ; exists ; 2012 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2012 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 3 ; 3 > 
 
   }
 
@@ -1530,7 +1531,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 2 ; 2 > 
-    au < expected ; exists ; 2012 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2012 ; International Journal of Knowledge Discovery in Bioinformatics (IJKDB) Volume 3 ; 3 > 
 
   }
 
@@ -1705,7 +1706,7 @@
 	
     au < manifest ; exists ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 > 
-    au < expected ; exists ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 > 
 
   }
 
@@ -1722,7 +1723,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 > 
     au < crawling ; exists ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 3 ; 3 > 
-    au < expected ; exists ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
+    au < manifest ; exists ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
 
   }
 
