@@ -1,10 +1,10 @@
 /*
- * $Id: Tdb.java,v 1.18 2012-01-16 17:46:10 pgust Exp $
+ * $Id: Tdb.java,v 1.19 2012-05-30 08:29:03 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,7 +43,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.18 2012-01-16 17:46:10 pgust Exp $
+ * @version $Id: Tdb.java,v 1.19 2012-05-30 08:29:03 tlipkis Exp $
  */
 public class Tdb {
   /**
@@ -94,7 +94,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.18 2012-01-16 17:46:10 pgust Exp $
+   * @version $Id: Tdb.java,v 1.19 2012-05-30 08:29:03 tlipkis Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -855,7 +855,7 @@ public class Tdb {
       logger.warning("Title missing for au \"" + au.getName() + "\" -- using \"" + titleNameFromProps + "\"");
     }
     if (titleIdFromProps == null) {
-      logger.debug("Title ID missing for au \"" + au.getName() + "\" -- using " + titleId);
+      logger.debug2("Title ID missing for au \"" + au.getName() + "\" -- using " + titleId);
     }
 
     
