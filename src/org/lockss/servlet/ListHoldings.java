@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.33 2012-03-28 23:53:42 pgust Exp $
+ * $Id: ListHoldings.java,v 1.34 2012-05-30 00:31:56 easyonthemayo Exp $
  */
 
 /*
@@ -124,7 +124,8 @@ public class ListHoldings extends LockssServlet {
 //  private static final String LIST_COMMA = ", "; 
   
   // Form parameters and options
-  public static final String ACTION_EXPORT = "List Titles";
+  public static final String ACTION_EXPORT = "List Titles (KBART)";
+  public static final String ACTION_ONE_PER_LINE_EXPORT = "List Titles (1 per line)";
   public static final String ACTION_CUSTOM_EXPORT = "Customise List";
   public static final String ACTION_HIDE_CUSTOM_EXPORT = "Hide Customise List";
   /** Apply the current customisation. */
@@ -141,7 +142,8 @@ public class ListHoldings extends LockssServlet {
   public static final String KEY_CUSTOM_ORDERING = "ordering";
   public static final String KEY_CUSTOM_ORDERING_LIST = "ordering_list";
   public static final String KEY_CUSTOM_ORDERING_PREVIOUS_MANUAL = "ordering_list_previous_manual";
-  
+  public static final String KEY_REPORT_FORMAT = "report_format";
+
   static final String SESSION_KEY_CUSTOM_OPTS = "org.lockss.servlet.ListHoldings.customOpts";
   static final String SESSION_KEY_OUTPUT_FORMAT = "org.lockss.servlet.ListHoldings.outputFormat";
 
@@ -237,9 +239,16 @@ public class ListHoldings extends LockssServlet {
     // ---------- Interpret parameters ----------
     // Is this a custom output? The custom action is not null and is not a plain export.
     boolean isCustom = !StringUtil.isNullString(customAction) &&
-        !customAction.equals(ACTION_EXPORT);
+      !customAction.equals(ACTION_EXPORT) && 
+      !customAction.equals(ACTION_ONE_PER_LINE_EXPORT);
+    // Is this a one-per-line output?
+    boolean isOnePerLine = !StringUtil.isNullString(customAction) &&
+        customAction.equals(ACTION_ONE_PER_LINE_EXPORT);
+    // TODOCoverage format for one-per-line output
+    //ReportFormat reportFormat = ReportFormat.byName(params.getProperty(KEY_REPORT_FORMAT));
+    
     // Are we exporting? OutputFormat specified, and custom ok/cancel if specified
-    this.doExport = outputFormat!=null && (!isCustom ||
+    this.doExport = outputFormat!=null && (!isCustom || isOnePerLine ||
         (customAction.equals(ACTION_CUSTOM_OK) ||
             customAction.equals(ACTION_CUSTOM_CANCEL)
         )
@@ -255,17 +264,17 @@ public class ListHoldings extends LockssServlet {
         // hide custom form
         isCustom = false;
       } else if (customAction.equals(ACTION_CUSTOM_EXPORT) || 
-                customAction.equals(ACTION_CUSTOM_OK)) {
-	// Try and parse the manual ordering into a list of valid field names
-	setCustomFieldOrdering(manualOrdering);
-	if (doExport) lastManualOrdering = manualOrdering;
+                 customAction.equals(ACTION_CUSTOM_OK)) {
+        // Try and parse the manual ordering into a list of valid field names
+        setCustomFieldOrdering(manualOrdering);
+        if (doExport) lastManualOrdering = manualOrdering;
       }
       // Cancel the customisation and set the ordering to the previously
       // applied value (from the session)
       else if (customAction.equals(ACTION_CUSTOM_CANCEL)) {
-	setCustomFieldOrdering(manualOrdering);
-	if (doExport) manualOrdering = lastManualOrdering;
-	omitEmptyColumns = customOpts.isOmitEmptyColumns();
+        setCustomFieldOrdering(manualOrdering);
+        if (doExport) manualOrdering = lastManualOrdering;
+        omitEmptyColumns = customOpts.isOmitEmptyColumns();
       }
       // Reset the ordering customisation to the default
       else if (customAction.equals(ACTION_CUSTOM_RESET)) {
@@ -276,21 +285,40 @@ public class ListHoldings extends LockssServlet {
       // Create an object encapsulating the custom HTML options, and store it
       // in the session.
       customOpts = new KbartCustomOptions(omitEmptyColumns, showHealthRatings,
-          customFieldOrdering);
+                                          customFieldOrdering);
       putSessionCustomOpts(customOpts);
-    
-    } else {
-      // If this is not a custom output, reset the session customisation
+      
+    } else if (isOnePerLine/*TODO: for customisation && customAction.equals(ACTION_CUSTOM_OK)*/) {
+      // If one-per-line, set the field ordering appropriately
       resetSessionOptions();
+      putSessionCustomOpts(new KbartCustomOptions(
+          KbartExporter.omitEmptyFieldsByDefault,
+          KbartExporter.showHealthRatingsByDefault,
+          true,
+          KbartExportFilter.CustomFieldOrdering.getDefaultOrdering()
+      ));
+      // TODO Set the coverage_notes format
+
     }
-    
+    // If this is not a valid custom or one-per-line output, reset the
+    // session customisation
+    else resetSessionOptions();
+
+    // XXX temporarily set the onePerLine option, bypassing custom screen
+    //getSessionCustomOpts().setOneTitlePerLine(true);
+
+
     // Just display the page if there is no export happening
     if (!doExport) {
       log.debug("No export requested; showing "+(isCustom?"custom":"main")+" options");
       // Show the appropriate half of the page depending on whether we are customising
-      displayPage(isCustom);
+      displayPage(isCustom, isOnePerLine);
       return;
     }
+
+
+    // TODO Get ReportFormat from UI custom screen
+    //ReportFormat reportFormat = new KbartReport();
 
     // Now we are doing an export - create the exporter
     KbartExporter kexp = createExporter(outputFormat, selectedScope);
@@ -332,10 +360,11 @@ public class ListHoldings extends LockssServlet {
    * 
    * @param outputFormat the output format for the exporter
    * @param scope the scope of titles to export
+   * @param reportFormat the format of the report
    * @return a usable exporter, or null if one could not be created
    */
   private KbartExporter createExporter(OutputFormat outputFormat, 
-      ContentScope scope) {
+      ContentScope scope/*, ReportFormat reportFormat*/) {
     
     // The following counts the number of TdbTitles informing the export, by 
     // processing the list of AUs in the given scope. It is provided as 
@@ -355,12 +384,16 @@ public class ListHoldings extends LockssServlet {
     log.info(String.format("Creating exporter for titles in scope %s\n", scope));
     
     // Return if there are no titles
-    //if (!titles.hasNext()) {
     if (titles.isEmpty()) {
       errMsg = "No "+scope.label+" titles for export.";
       return null;
     }
-    
+
+    // TODO Process one title per line if requested, using requested coverage format
+    if (opts.isOneTitlePerLine()) {
+      titles = ReportFormat.process(titles);
+    }
+
     // Create a filter
     KbartExportFilter filter;
 
@@ -371,9 +404,10 @@ public class ListHoldings extends LockssServlet {
     } else {
       filter = new KbartExportFilter(titles);
     }
-    
+
     // Create and configure an exporter
     KbartExporter kexp = outputFormat.makeExporter(titles, filter);
+    //kexp.setReportFormat(reportFormat);
     kexp.setTdbTitleTotal(numTdbTitles);
     kexp.setContentScope(scope);
     
@@ -550,7 +584,8 @@ public class ListHoldings extends LockssServlet {
     // Export to the response OutputStream
     doExport(kexp, resp.getOutputStream());
     
-    // Check errors (Note: the response has already been written by here, so there is no point setting the err/status msgs)
+    // Check errors (Note: the response has already been written by here, so
+    // there is no point setting the err/status msgs)
     List<String> errs = kexp.getErrors();
     log.debug("errs: " + errs);
     if (!errs.isEmpty()) {
@@ -592,11 +627,12 @@ public class ListHoldings extends LockssServlet {
 
   /**
    * Generate a table with the page components and options. 
-   * 
+   *
    * @param custom whether to show the customisation options
+   * @param onePerLine whether to show the one-per-line customisation options
    * @return a Jetty table with all the page's options
    */
-  protected Table layoutTableOfOptions(boolean custom) {
+  protected Table layoutTableOfOptions(boolean custom, boolean onePerLine) {
     // Get the path to this servlet so we can postfix output format path
 //    String thisPath = myServletDescr().path;
     Table tab = new Table(0, "align=\"center\" width=\"80%\"");
@@ -664,10 +700,16 @@ public class ListHoldings extends LockssServlet {
       layoutFormCustomOpts(subTab);
       subTab.add(BREAK);
       layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_HIDE_CUSTOM_EXPORT);
+    } else if (onePerLine) {
+      // Add one-per-line customisation opts
+      subTab.add(new Heading(3, "Customise Title-Per-Line"));
+      subTab.add("Choose how to display ranges in the coverage field");
+      layoutFormCustomOnePerLine(subTab);
+      subTab.add(BREAK);
+      layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_ONE_PER_LINE_EXPORT);
     } else {
       layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_EXPORT);
-
-      //layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_CUSTOM_EXPORT);
+      layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_ONE_PER_LINE_EXPORT);
       if (isEnablePreserved()) {
         subTab.add(BREAK+"By default, list is in the industry-standard KBART " +
       		"format. Alternatively you can customise the list to define " +
@@ -778,18 +820,19 @@ public class ListHoldings extends LockssServlet {
    * @throws IOException
    */
   private void displayPage() throws IOException {
-    displayPage(false);
+    displayPage(false, false);
   }
   
   /**
    * Display top level export options.
    * @param custom whether to show the HTML customisation options
+   * @param onePerLine whether to show the one-per-line customisation options
    * @throws IOException
    */
-  private void displayPage(boolean custom) throws IOException {
+  private void displayPage(boolean custom, boolean onePerLine) throws IOException {
     Page page = newPage();
     layoutErrorBlock(page);
-    page.add(layoutTableOfOptions(custom));
+    page.add(layoutTableOfOptions(custom, onePerLine));
     // Finish page
     endPage(page);
   }
@@ -870,9 +913,39 @@ public class ListHoldings extends LockssServlet {
     tab.add("<br/>"+getKbartFieldLegend());
     
     comp.add(tab);
-
-    //return form;
   }
+
+
+  private void layoutFormCustomOnePerLine(Composite comp) {
+    Table tab = new Table();
+    tab.newRow();
+    tab.newCell("align=\"center\" valign=\"middle\"");
+
+
+    // Add a text area of an appropriate size
+    //int taCols = 25; // this should be the longest field width
+    //int taLines = Field.values().length+1;
+    //tab.add("Field ordering<br/>");
+    // Omit empty columns option
+    //tab.add("<br/>");
+
+    // TODO
+
+    // Add buttons
+    //tab.add("<br/><br/><center>");
+    layoutSubmitButton(this, tab, ACTION_TAG, ACTION_CUSTOM_OK);
+    //tab.add("</center>");
+
+    // Add a legend for the fields
+    //tab.newCell("align=\"left\" padding=\"10\" valign=\"middle\"");
+    //tab.add("<br/>"+getKbartFieldLegend());
+
+    comp.add(tab);
+
+    //tab2.add(ServletUtil.radioButton(this, KEY_FORMAT,
+      //  fmt.name(), fmt.getLabel(), selected));
+  }
+
 
   /**
    * Turn the selected ordering into a string containing a separated list of fields. 

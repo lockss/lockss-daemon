@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.19 2012-03-22 16:16:37 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.20 2012-05-30 00:31:56 easyonthemayo Exp $
  */
 
 /*
@@ -122,10 +122,10 @@ public abstract class KbartExporter {
   
   /** Whether to compress the output. */
   private boolean compress = false;
-  
+
   /** The OutputFormat of this exporter. */
   protected OutputFormat outputFormat;
-  
+
   /** A PrintWriter which will be used to emit formatted output. */
   protected PrintWriter printWriter;
 
@@ -423,7 +423,7 @@ public abstract class KbartExporter {
   public void setContentScope(ContentScope scope) {
     this.scope = scope;
   }
- 
+
   /**
    * Return the name of the collection; this uses the scope label if a scope is
    * available.
@@ -628,6 +628,7 @@ public abstract class KbartExporter {
      * KbartTitles.
      * 
      * @param titles a list of <code>KbartTitle</code> objects
+     * @param filter the filter to be used in the export
      */
     public abstract KbartExporter makeExporter(List<KbartTitle> titles, 
                                                KbartExportFilter filter);
