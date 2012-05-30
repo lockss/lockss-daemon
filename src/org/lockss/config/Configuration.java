@@ -1,10 +1,10 @@
 /*
- * $Id: Configuration.java,v 1.34 2011-10-26 17:11:51 pgust Exp $
+ * $Id: Configuration.java,v 1.34.10.1 2012-05-30 08:20:11 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2001-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2001-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -817,7 +817,7 @@ public abstract class Configuration {
   public abstract boolean isSealed();
 
   /** Returns a Configuration instance containing all the keys at or
-   * below <code>key</code>
+   * below <code>key</code>.  If none, returns an empty Configuration.
    */
   public abstract Configuration getConfigTree(String key);
 

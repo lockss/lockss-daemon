@@ -1,10 +1,10 @@
 /*
- * $Id: TestConfiguration.java,v 1.17 2011-08-09 03:59:00 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.17.14.1 2012-05-30 08:20:11 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -512,6 +512,10 @@ public class TestConfiguration extends LockssTestCase {
     sub.put("a", "xx");
     assertEquals("xx", sub.get("a"));
     assertEquals("1a", config.get("p1.a"));
+
+    // Ensure nonexistent subtree returns empty config, not null
+    Configuration emptysub = config.getConfigTree("not.a.root");
+    assertTrue(emptysub.isEmpty());
   }
 
 
