@@ -47,7 +47,7 @@
     >
     
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    param[base_url] = http://web.jbjs.org.uk/
+    param[base_url] = http://www.bjj.boneandjoint.org.uk/
     implicit < status ; year ; name ; param[volume_name] >
     
     comment[manifests] = all links go to base_url http://web.jbjs.org.uk/. journal home page is at http://www.jbjs.boneandjoint.org.uk 
