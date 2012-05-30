@@ -248,7 +248,7 @@
     au < released ; 2011 ; Canadian Theatre Review Issue 145 ; 145 >
     au < released ; 2011 ; Canadian Theatre Review Issue 146 ; 146 >
     au < released ; 2011 ; Canadian Theatre Review Issue 147 ; 147 >
-    au < testing ; 2011 ; Canadian Theatre Review Issue 148 ; 148 >
+    au < ready ; 2011 ; Canadian Theatre Review Issue 148 ; 148 >
     au < manifest ; 2012 ; Canadian Theatre Review Issue 149 ; 149 >
 
   }
@@ -343,7 +343,7 @@
     au < released ; 2008 ; Histoire sociale / Social History Volume 41 ; 41 >
     au < released ; 2009 ; Histoire sociale / Social History Volume 42 ; 42 >
     au < released ; 2010 ; Histoire sociale / Social History Volume 43 ; 43 >
-    au < testing ; 2011 ; Histoire sociale / Social History Volume 44 ; 44 >
+    au < ready ; 2011 ; Histoire sociale / Social History Volume 44 ; 44 >
     au < expected ; 2012 ; Historie sociale / Social History Volume 45 ; 45 >
 
   }
@@ -502,10 +502,10 @@
     param[journal_dir] = university_of_toronto_law_journal
     attr[journal_id] = tlj
 
-    au < testing ; 2004 ; University of Toronto Law Journal Volume 54 ; 54 >
-    au < testing ; 2005 ; University of Toronto Law Journal Volume 55 ; 55 >
-    au < testing ; 2006 ; University of Toronto Law Journal Volume 56 ; 56 >
-    au < testing ; 2007 ; University of Toronto Law Journal Volume 57 ; 57 >
+    au < ready ; 2004 ; University of Toronto Law Journal Volume 54 ; 54 >
+    au < ready ; 2005 ; University of Toronto Law Journal Volume 55 ; 55 >
+    au < ready ; 2006 ; University of Toronto Law Journal Volume 56 ; 56 >
+    au < ready ; 2007 ; University of Toronto Law Journal Volume 57 ; 57 >
     au < released ; 2008 ; University of Toronto Law Journal Volume 58 ; 58 >
     au < released ; 2009 ; University of Toronto Law Journal Volume 59 ; 59 >
     au < released ; 2010 ; University of Toronto Law Journal Volume 60 ; 60 >
