@@ -1,10 +1,10 @@
 /*
- * $Id: PluginStatus.java,v 1.17 2012-05-17 17:59:49 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.17.2.1 2012-05-30 08:21:24 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -102,10 +102,10 @@ class Plugins extends PluginStatus implements StatusAccessor {
     ListUtil.list(
 		  new ColumnDescriptor("plugin", "Name",
 				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("aus", "# AUs",
-				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor("version", "Version",
 				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("aus", "# AUs",
+				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor("type", "Type",
 				       ColumnDescriptor.TYPE_STRING),
 // 		  new ColumnDescriptor("id", "Plugin ID",
