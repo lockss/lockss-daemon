@@ -457,6 +457,39 @@
     }
 
   }
+  
+  {
+    
+      title <
+        name = Adult Learning ;
+        issn = 1045-1595 ;
+        issnl = 1045-1595
+      >
+      
+      param[base_url] = http://alx.sagepub.com/
+      
+      {
+      
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        
+        au < exists ; exists ; 1998-1999 ; Adult Learning Volume 10 ; 10 ; >
+        au < exists ; exists ; 1999-2000 ; Adult Learning Volume 11 ; 11 ; >
+        au < exists ; exists ; 2001 ; Adult Learning Volume 12 ; 12 ; >
+        au < exists ; exists ; 2001-2002 ; Adult Learning Volume 13 ; 13 ; >
+        au < exists ; exists ; 2003 ; Adult Learning Volume 14 ; 14 ; >
+        au < exists ; exists ; 2004 ; Adult Learning Volume 15 ; 15 ; >
+        au < exists ; exists ; 2005 ; Adult Learning Volume 16 ; 16 ; >
+        au < exists ; exists ; 2006 ; Adult Learning Volume 17 ; 17 ; >
+        au < exists ; exists ; 2007 ; Adult Learning Volume 18 ; 18 ; >
+        au < exists ; exists ; 2008 ; Adult Learning Volume 19 ; 19 ; >
+        au < exists ; exists ; 2009 ; Adult Learning Volume 20 ; 20 ; >
+        au < exists ; exists ; 2010 ; Adult Learning Volume 21 ; 21 ; >
+        au < exists ; exists ; 2011-2012 ; Adult Learning Volume 22 ; 22 ; >
+        au < exists ; exists ; 2012 ; Adult Learning Volume 23 ; 23 ; >
+      
+      }
+      
+    }
 
   {
   
@@ -17281,6 +17314,37 @@
     }
 
   }
+  
+  {
+    
+     title <
+      name = Journal of Drug Issues;
+      issn = 0022-0426
+      
+    >
+    
+    param[base_url] = http://jod.sagepub.com/
+    
+    {
+    
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+      au < exists ; exists ; 2001 ; Journal of Drug Issues Volume 31 ; 31 ; >
+      au < exists ; exists ; 2002 ; Journal of Drug Issues Volume 32 ; 32 ; >
+      au < exists ; exists ; 2003 ; Journal of Drug Issues Volume 33 ; 33 ; >
+      au < exists ; exists ; 2004 ; Journal of Drug Issues Volume 34 ; 34 ; >
+      au < exists ; exists ; 2005 ; Journal of Drug Issues Volume 35 ; 35 ; >
+      au < exists ; exists ; 2006 ; Journal of Drug Issues Volume 36 ; 36 ; >
+      au < exists ; exists ; 2007 ; Journal of Drug Issues Volume 37 ; 37 ; >
+      au < exists ; exists ; 2008 ; Journal of Drug Issues Volume 38 ; 38 ; >
+      au < exists ; exists ; 2009 ; Journal of Drug Issues Volume 39 ; 39 ; >
+      au < exists ; exists ; 2010 ; Journal of Drug Issues Volume 40 ; 40 ; >
+      au < exists ; exists ; 2011 ; Journal of Drug Issues Volume 41 ; 41 ; >
+      au < exists ; exists ; 2012 ; Journal of Drug Issues Volume 42 ; 42 ; > 
+    
+    }
+    
+  }  
 
   {
   
