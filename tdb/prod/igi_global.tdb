@@ -57,28 +57,28 @@
     comment[0] = content not online yet
     param[journal_issn] = 1080-286x
     
-    au < exists ; 1988 ; Information Technology Management Volume 1 ; 1 > 
-    au < exists ; 1989 ; Information Technology Management Volume 2 ; 2 > 
-    au < exists ; 1990 ; Information Technology Management Volume 3 ; 3 > 
-    au < exists ; 1991 ; Information Technology Management Volume 4 ; 4 > 
-    au < exists ; 1992 ; Information Technology Management Volume 5 ; 5 > 
-    au < exists ; 1993 ; Information Technology Management Volume 6 ; 6 > 
-    au < exists ; 1994 ; Information Technology Management Volume 7 ; 7 > 
-    au < exists ; 1995 ; Information Technology Management Volume 8 ; 8 > 
-    au < exists ; 1996 ; Information Technology Management Volume 9 ; 9 > 
-    au < exists ; 1997 ; Information Technology Management Volume 10 ; 10 > 
-    au < exists ; 1998 ; Information Technology Management Volume 11 ; 11 > 
-    au < exists ; 1999 ; Information Technology Management Volume 12 ; 12 > 
-    au < exists ; 2000 ; Information Technology Management Volume 13 ; 13 > 
-    au < exists ; 2001 ; Information Technology Management Volume 14 ; 14 > 
-    au < exists ; 2002 ; Information Technology Management Volume 15 ; 15 > 
-    au < exists ; 2003 ; Information Technology Management Volume 16 ; 16 > 
-    au < exists ; 2004 ; Information Technology Management Volume 17 ; 17 > 
-    au < exists ; 2005 ; Information Technology Management Volume 18 ; 18 > 
-    au < exists ; 2006 ; Information Technology Management Volume 19 ; 19 > 
-    au < exists ; 2007 ; Information Technology Management Volume 20 ; 20 > 
-    au < exists ; 2008 ; Information Technology Management Volume 21 ; 21 > 
-    au < exists ; 2009 ; Information Technology Management Volume 22 ; 22 > 
+    au < manifest ; 1988 ; Information Technology Management Volume 1 ; 1 > 
+    au < manifest ; 1989 ; Information Technology Management Volume 2 ; 2 > 
+    au < manifest ; 1990 ; Information Technology Management Volume 3 ; 3 > 
+    au < manifest ; 1991 ; Information Technology Management Volume 4 ; 4 > 
+    au < manifest ; 1992 ; Information Technology Management Volume 5 ; 5 > 
+    au < manifest ; 1993 ; Information Technology Management Volume 6 ; 6 > 
+    au < manifest ; 1994 ; Information Technology Management Volume 7 ; 7 > 
+    au < manifest ; 1995 ; Information Technology Management Volume 8 ; 8 > 
+    au < manifest ; 1996 ; Information Technology Management Volume 9 ; 9 > 
+    au < manifest ; 1997 ; Information Technology Management Volume 10 ; 10 > 
+    au < manifest ; 1998 ; Information Technology Management Volume 11 ; 11 > 
+    au < manifest ; 1999 ; Information Technology Management Volume 12 ; 12 > 
+    au < manifest ; 2000 ; Information Technology Management Volume 13 ; 13 > 
+    au < manifest ; 2001 ; Information Technology Management Volume 14 ; 14 > 
+    au < manifest ; 2002 ; Information Technology Management Volume 15 ; 15 > 
+    au < manifest ; 2003 ; Information Technology Management Volume 16 ; 16 > 
+    au < manifest ; 2004 ; Information Technology Management Volume 17 ; 17 > 
+    au < manifest ; 2005 ; Information Technology Management Volume 18 ; 18 > 
+    au < manifest ; 2006 ; Information Technology Management Volume 19 ; 19 > 
+    au < manifest ; 2007 ; Information Technology Management Volume 20 ; 20 > 
+    au < manifest ; 2008 ; Information Technology Management Volume 21 ; 21 > 
+    au < manifest ; 2009 ; Information Technology Management Volume 22 ; 22 > 
     au < exists ; 2010 ; Information Technology Management Volume 23 ; 23 > 
     au < exists ; 2011 ; Information Technology Management Volume 24 ; 24 > 
     au < exists ; 2012 ; Information Technology Management Volume 25 ; 25 > 
@@ -433,9 +433,9 @@
     >
 	param[journal_issn] = 1947-3591
 	
-    au < exists ; 2010 ; International Journal of Business Intelligence Research (IJBIR) Volume 1 ; 1 > 
-    au < exists ; 2011 ; International Journal of Business Intelligence Research (IJBIR) Volume 2 ; 2 > 
-    au < exists ; 2012 ; International Journal of Business Intelligence Research (IJBIR) Volume 3 ; 3 > 
+    au < manifest ; 2010 ; International Journal of Business Intelligence Research (IJBIR) Volume 1 ; 1 > 
+    au < manifest ; 2011 ; International Journal of Business Intelligence Research (IJBIR) Volume 2 ; 2 > 
+    au < manifest ; 2012 ; International Journal of Business Intelligence Research (IJBIR) Volume 3 ; 3 > 
 
   }
 
@@ -448,9 +448,9 @@
     >
 	param[journal_issn] = 1548-0623
 	
-    au < exists ; 2005 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 1 ; 1 > 
-    au < exists ; 2006 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 2 ; 2 > 
-    au < exists ; 2007 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 3 ; 3 > 
+    au < manifest ; 2005 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 1 ; 1 > 
+    au < manifest ; 2006 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 2 ; 2 > 
+    au < manifest ; 2007 ; International Journal of Cases on Electronic Commerce (IJCEC) Volume 3 ; 3 > 
 
   }
 
@@ -464,8 +464,8 @@
     >
 	param[journal_issn] = 2155-4110
 	
-    au < exists ; 2011 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 1 ; 1 > 
-    au < exists ; 2012 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 2 ; 2 > 
+    au < manifest ; 2011 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 1 ; 1 > 
+    au < manifest ; 2012 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 2 ; 2 > 
 
   }
 
@@ -479,8 +479,8 @@
     >
 	param[journal_issn] = 2156-1834
 	
-    au < exists ; 2011 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 1 ; 1 > 
-    au < exists ; 2012 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 2 ; 2 > 
+    au < manifest ; 2011 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 1 ; 1 > 
+    au < manifest ; 2012 ; International Journal of Cloud Applications and Computing (IJCAC) Volume 2 ; 2 > 
 
   }
 
@@ -494,12 +494,12 @@
     >
 	param[journal_issn] = 1557-3958
 	
-    au < exists ; 2007 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 1 ; 1 > 
-    au < exists ; 2008 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 2 ; 2 > 
-    au < exists ; 2009 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 3 ; 3 > 
-    au < exists ; 2010 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 4 ; 4 > 
-    au < exists ; 2011 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 5 ; 5 > 
-    au < expected ; 2012 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 6 ; 6 > 
+    au < manifest ; 2007 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 1 ; 1 > 
+    au < manifest ; 2008 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 2 ; 2 > 
+    au < manifest ; 2009 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 3 ; 3 > 
+    au < manifest ; 2010 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 4 ; 4 > 
+    au < manifest ; 2011 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 5 ; 5 > 
+    au < manifest ; 2012 ; International Journal of Cognitive Informatics and Natural Intelligence (IJCINI) Volume 6 ; 6 > 
 
   }
 
@@ -513,9 +513,9 @@
     >
 	param[journal_issn] = 1947-3133
 	
-    au < exists ; 2010 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 1 ; 1 > 
-    au < exists ; 2011 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 2 ; 2 > 
-    au < expected ; 2012 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 3 ; 3 > 
+    au < manifest ; 2010 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 1 ; 1 > 
+    au < manifest ; 2011 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 2 ; 2 > 
+    au < manifest ; 2012 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 3 ; 3 > 
 
   }
 
@@ -529,8 +529,8 @@
     >
 	param[journal_issn] = 2155-6997
 	
-    au < exists ; 2011 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 1 ; 1 > 
-    au < expected ; 2012 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 2 ; 2 > 
+    au < manifest ; 2011 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 1 ; 1 > 
+    au < manifest ; 2012 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 2 ; 2 > 
 
   }
 
@@ -544,8 +544,8 @@
     >
 	param[journal_issn] = 2155-7098
 	
-    au < exists ; 2011 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 1 ; 1 > 
-    au < expected ; 2012 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 2 ; 2 > 
+    au < manifest ; 2011 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 1 ; 1 > 
+    au < manifest ; 2012 ; International Journal of Computer-Assisted Language Learning and Teaching (IJCALLT) Volume 2 ; 2 > 
 
   }
 
@@ -569,9 +569,9 @@
     >
 	param[journal_issn] = 1947-3117
 	
-    au < exists ; 2010 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 1 ; 1 > 
-    au < exists ; 2011 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 2 ; 2 > 
-    au < expected ; 2012 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 3 ; 3 > 
+    au < manifest ; 2010 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 1 ; 1 > 
+    au < manifest ; 2011 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 2 ; 2 > 
+    au < manifest ; 2012 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 3 ; 3 > 
 
   }
 
@@ -585,9 +585,9 @@
     >
 	param[journal_issn] = 1947-9247
 	
-    au < exists ; 2010 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 1 ; 1 > 
-    au < exists ; 2011 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 2 ; 2 > 
-    au < exists ; 2012 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 3 ; 3 > 
+    au < manifest ; 2010 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 1 ; 1 > 
+    au < manifest ; 2011 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 2 ; 2 > 
+    au < manifest ; 2012 ; International Journal of Customer Relationship Marketing and Management (IJCRMM) Volume 3 ; 3 > 
 
   }
 
@@ -601,8 +601,8 @@
     >
 	param[journal_issn] = 2155-7136
 	
-    au < exists ; 2011 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 1 ; 1 > 
-    au < expected ; 2012 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 2 ; 2 > 
+    au < manifest ; 2011 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 1 ; 1 > 
+    au < manifest ; 2012 ; International Journal of Cyber Behavior, Psychology and Learning (IJCBPL) Volume 2 ; 2 > 
 
   }
 
@@ -616,8 +616,8 @@
     >
 	param[journal_issn] = 2155-6903
 	
-    au < exists ; 2011 ; International Journal of Cyber Ethics in Education (IJCEE) Volume 1 ; 1 > 
-    au < expected ; 2012 ; International Journal of Cyber Ethics in Education (IJCEE) Volume 2 ; 2 > 
+    au < manifest ; 2011 ; International Journal of Cyber Ethics in Education (IJCEE) Volume 1 ; 1 > 
+    au < manifest ; 2012 ; International Journal of Cyber Ethics in Education (IJCEE) Volume 2 ; 2 > 
 
   }
 
@@ -631,8 +631,8 @@
     >
 	param[journal_issn] = 1947-3435
 	
-    au < exists ; 2011 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 1 ; 1 > 
-    au < expected ; 2012 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 2 ; 2 > 
+    au < manifest ; 2011 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 1 ; 1 > 
+    au < manifest ; 2012 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 2 ; 2 > 
 
   }
 
@@ -646,14 +646,14 @@
     >
 	param[journal_issn] = 1548-3924
 
-    au < exists ; 2005 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 1 ; 1 > 
-    au < exists ; 2006 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 2 ; 2 > 
-    au < exists ; 2007 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 3 ; 3 > 
-    au < exists ; 2008 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 4 ; 4 > 
-    au < exists ; 2009 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 5 ; 5 > 
-    au < exists ; 2010 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 6 ; 6 > 
-    au < exists ; 2011 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 7 ; 7 > 
-    au < exists ; 2012 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 8 ; 8 > 
+    au < manifest ; 2005 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 1 ; 1 > 
+    au < manifest ; 2006 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 2 ; 2 > 
+    au < manifest ; 2007 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 3 ; 3 > 
+    au < manifest ; 2008 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 4 ; 4 > 
+    au < manifest ; 2009 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 5 ; 5 > 
+    au < manifest ; 2010 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 6 ; 6 > 
+    au < manifest ; 2011 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 7 ; 7 > 
+    au < manifest ; 2012 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 8 ; 8 > 
 
   }
 
@@ -667,10 +667,10 @@
     >
 	param[journal_issn] = 1941-6296
 	
-    au < exists ; 2009 ; International Journal of Decision Support System Technology (IJDSST) Volume 1 ; 1 > 
-    au < exists ; 2010 ; International Journal of Decision Support System Technology (IJDSST) Volume 2 ; 2 > 
-    au < exists ; 2011 ; International Journal of Decision Support System Technology (IJDSST) Volume 3 ; 3 > 
-    au < expected ; 2012 ; International Journal of Decision Support System Technology (IJDSST) Volume 4 ; 4 > 
+    au < manifest ; 2009 ; International Journal of Decision Support System Technology (IJDSST) Volume 1 ; 1 > 
+    au < manifest ; 2010 ; International Journal of Decision Support System Technology (IJDSST) Volume 2 ; 2 > 
+    au < manifest ; 2011 ; International Journal of Decision Support System Technology (IJDSST) Volume 3 ; 3 > 
+    au < manifest ; 2012 ; International Journal of Decision Support System Technology (IJDSST) Volume 4 ; 4 > 
 
   }
 
@@ -684,9 +684,9 @@
     >
 	param[journal_issn] = 1947-9050
 	
-    au < exists ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 > 
-    au < exists ; 2011 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 2 ; 2 > 
-    au < expected ; 2012 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 3 ; 3 > 
+    au < manifest ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 > 
+    au < manifest ; 2011 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 2 ; 2 > 
+    au < manifest ; 2012 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 3 ; 3 > 
 
   }
 
@@ -700,10 +700,10 @@
     >
 	param[journal_issn] = 1941-6210
 	
-    au < exists ; 2009 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 1 ; 1 > 
-    au < exists ; 2010 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 2 ; 2 > 
-    au < exists ; 2011 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 3 ; 3 > 
-    au < expected ; 2012 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 4 ; 4 > 
+    au < manifest ; 2009 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 1 ; 1 > 
+    au < manifest ; 2010 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 2 ; 2 > 
+    au < manifest ; 2011 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 3 ; 3 > 
+    au < manifest ; 2012 ; International Journal of Digital Crime and Forensics (IJDCF) Volume 4 ; 4 > 
 
   }
 
@@ -716,10 +716,11 @@
       issnl = 1947-9077
     >
 	param[journal_issn] = 1947-9077
+	comment[0] = no links on manifest page
 	
-    au < exists ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 > 
-    au < exists ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 > 
-    au < expected ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 2 > 
+    au < manifest ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 > 
+    au < manifest ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 > 
+    au < notReady ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 > 
 
   }
 
@@ -733,9 +734,9 @@
     >
 	param[journal_issn] = 1947-3494
 	
-    au < exists ; 2010 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 1 ; 1 > 
-    au < exists ; 2011 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 2 ; 2 > 
-    au < expected ; 2012 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 3 ; 3 > 
+    au < manifest ; 2010 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 1 ; 1 > 
+    au < manifest ; 2011 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 2 ; 2 > 
+    au < manifest ; 2012 ; International Journal of Digital Literacy and Digital Competence (IJDLDC) Volume 3 ; 3 > 
 
   }
 
@@ -749,16 +750,16 @@
     >
 	param[journal_issn] = 1539-3100
 	
-    au < exists ; 2003 ; International Journal of Distance Education Technologies (IJDET) Volume 1 ; 1 > 
-    au < exists ; 2004 ; International Journal of Distance Education Technologies (IJDET) Volume 2 ; 2 > 
-    au < exists ; 2005 ; International Journal of Distance Education Technologies (IJDET) Volume 3 ; 3 > 
-    au < exists ; 2006 ; International Journal of Distance Education Technologies (IJDET) Volume 4 ; 4 > 
-    au < exists ; 2007 ; International Journal of Distance Education Technologies (IJDET) Volume 5 ; 5 > 
-    au < exists ; 2008 ; International Journal of Distance Education Technologies (IJDET) Volume 6 ; 6 > 
-    au < exists ; 2009 ; International Journal of Distance Education Technologies (IJDET) Volume 7 ; 7 > 
-    au < exists ; 2010 ; International Journal of Distance Education Technologies (IJDET) Volume 8 ; 8 > 
-    au < exists ; 2011 ; International Journal of Distance Education Technologies (IJDET) Volume 9 ; 9 > 
-    au < exists ; 2012 ; International Journal of Distance Education Technologies (IJDET) Volume 10 ; 10 > 
+    au < manifest ; 2003 ; International Journal of Distance Education Technologies (IJDET) Volume 1 ; 1 > 
+    au < manifest ; 2004 ; International Journal of Distance Education Technologies (IJDET) Volume 2 ; 2 > 
+    au < manifest ; 2005 ; International Journal of Distance Education Technologies (IJDET) Volume 3 ; 3 > 
+    au < manifest ; 2006 ; International Journal of Distance Education Technologies (IJDET) Volume 4 ; 4 > 
+    au < manifest ; 2007 ; International Journal of Distance Education Technologies (IJDET) Volume 5 ; 5 > 
+    au < manifest ; 2008 ; International Journal of Distance Education Technologies (IJDET) Volume 6 ; 6 > 
+    au < manifest ; 2009 ; International Journal of Distance Education Technologies (IJDET) Volume 7 ; 7 > 
+    au < manifest ; 2010 ; International Journal of Distance Education Technologies (IJDET) Volume 8 ; 8 > 
+    au < manifest ; 2011 ; International Journal of Distance Education Technologies (IJDET) Volume 9 ; 9 > 
+    au < manifest ; 2012 ; International Journal of Distance Education Technologies (IJDET) Volume 10 ; 10 > 
 
   }
 
