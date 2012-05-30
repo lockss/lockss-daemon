@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigManager.java,v 1.88 2012-03-15 08:19:01 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.88.4.1 2012-05-30 08:19:25 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -251,6 +251,7 @@ public class ConfigManager implements LockssManager {
     File file;
     KeyPredicate keyPred;
     Predicate includePred;
+    boolean needReloadAfterWrite = true;
 
     LocalFileDescr(String name) {
       this.name = name;
@@ -283,6 +284,15 @@ public class ConfigManager implements LockssManager {
 
     LocalFileDescr setIncludePredicate(Predicate pred) {
       this.includePred = pred;
+      return this;
+    }
+
+    boolean isNeedReloadAfterWrite() {
+      return needReloadAfterWrite;
+    }
+
+    LocalFileDescr setNeedReloadAfterWrite(boolean val) {
+      this.needReloadAfterWrite = val;
       return this;
     }
   }
@@ -380,12 +390,17 @@ public class ConfigManager implements LockssManager {
     return true;
   }
 
-  /** array of local cache config file names */
+  /** Array of local cache config file names.  Do not use this directly,
+   * call {@link #getLocalFileDescrs()} or {@link
+   * #getLocalFileDescrMap()}. */
   LocalFileDescr cacheConfigFiles[] = {
     new LocalFileDescr(CONFIG_FILE_UI_IP_ACCESS),
     new LocalFileDescr(CONFIG_FILE_PROXY_IP_ACCESS),
     new LocalFileDescr(CONFIG_FILE_PLUGIN_CONFIG),
-    new LocalFileDescr(CONFIG_FILE_AU_CONFIG),
+    // au.txt updates correspond to changes already made to running
+    // structures, so needn't cause a config reload.
+    new LocalFileDescr(CONFIG_FILE_AU_CONFIG)
+    .setNeedReloadAfterWrite(false),
     new LocalFileDescr(CONFIG_FILE_ICP_SERVER), // obsolescent
     new LocalFileDescr(CONFIG_FILE_AUDIT_PROXY),	// obsolescent
     // must follow obsolescent icp server and audit proxy files
@@ -413,7 +428,7 @@ public class ConfigManager implements LockssManager {
 
   private List configChangedCallbacks = new ArrayList();
 
-  private List<LocalFileDescr> cacheConfigFileList = null;
+  private LinkedHashMap<String,LocalFileDescr> cacheConfigFileMap = null;
 
   private List configUrlList;		// list of config file urls
   // XXX needs synchronization
@@ -1505,8 +1520,12 @@ public class ConfigManager implements LockssManager {
   }
 
   public void requestReload() {
+    requestReloadIn(0);
+  }
+
+  public void requestReloadIn(long millis) {
     if (handlerThread != null) {
-      handlerThread.forceReload();
+      handlerThread.forceReloadIn(millis);
     }
   }
 
@@ -1681,17 +1700,31 @@ public class ConfigManager implements LockssManager {
     return dir;
   }
 
-  /** Return the list of cache config file names */
-  public List<LocalFileDescr> getLocalFileDescrs() {
-    if (cacheConfigFileList == null) {
-      List<LocalFileDescr> res = new ArrayList<LocalFileDescr>();
+  /** Return a map from local config file name (sans dir) to its
+   * descriptor. */
+  public LinkedHashMap<String,LocalFileDescr> getLocalFileDescrMap() {
+    if (cacheConfigFileMap == null) {
+      LinkedHashMap<String,LocalFileDescr> res =
+	new LinkedHashMap<String,LocalFileDescr>();
       for (LocalFileDescr ccf: cacheConfigFiles) {
  	ccf.setFile(new File(cacheConfigDir, ccf.getName()));
-	res.add(ccf);
+	res.put(ccf.getName(), ccf);
       }
-      cacheConfigFileList = res;
+      cacheConfigFileMap = res;
     }
-    return cacheConfigFileList;
+    return cacheConfigFileMap;
+  }
+
+  /** Return the list of cache config file decrs, in same order in which
+   * they were declared. */
+  public Collection<LocalFileDescr> getLocalFileDescrs() {
+    return getLocalFileDescrMap().values();
+  }
+
+  /** Return the LocalFileDescr the named cache config file, or null if
+   * none. */
+  public LocalFileDescr getLocalFileDescr(String cacheConfigFileName) {
+    return getLocalFileDescrMap().get(cacheConfigFileName);
   }
 
   /** Return a File for the named cache config file */
@@ -1738,7 +1771,7 @@ public class ConfigManager implements LockssManager {
     if (cacheConfigDir == null) {
       log.warning("Attempting to read cache config file: " +
 		  cacheConfigFileName + ", but no cache config dir exists");
-      throw new RuntimeException("No cache config dir");
+      throw new IOException("No cache config dir");
     }
 
     String cfile = new File(cacheConfigDir, cacheConfigFileName).toString();
@@ -1830,8 +1863,11 @@ public class ConfigManager implements LockssManager {
     } else {
       log.warning("Not a FileConfigFile: " + cf);
     }
+    LocalFileDescr descr = getLocalFileDescr(cacheConfigFileName);
     if (!suppressReload) {
-      requestReload();
+      if (descr == null || descr.isNeedReloadAfterWrite()) {
+	requestReload();
+      }
     }
   }
 
@@ -2073,7 +2109,6 @@ public class ConfigManager implements LockssManager {
    * @throws IllegalArgumentException if a key appears both in
    *                                  <code>updateConfig</code> and
    *                                  in <code>deleteSet</code>.
-   * @see #cacheConfigFiles
    */
   public synchronized void modifyCacheConfigFile(Configuration updateConfig,
                                                  Set deleteSet,
@@ -2242,14 +2277,14 @@ public class ConfigManager implements LockssManager {
       this.interrupt();
     }
 
-    void forceReload() {
+    void forceReloadIn(long millis) {
       if (running) {
 	// can be called from reload thread, in which case an immediate
 	// repeat is necessary
 	goAgain = true;
       }
       if (nextReload != null) {
-	nextReload.expire();
+	nextReload.expireIn(millis);
       }
     }
   }
