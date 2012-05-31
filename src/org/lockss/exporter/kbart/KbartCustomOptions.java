@@ -1,5 +1,5 @@
 /*
- * $Id: KbartCustomOptions.java,v 1.2 2012-05-30 00:31:56 easyonthemayo Exp $
+ * $Id: KbartCustomOptions.java,v 1.3 2012-05-31 16:53:18 easyonthemayo Exp $
  */
 
 /*
@@ -43,20 +43,22 @@ public class KbartCustomOptions implements Serializable {
 
   private boolean omitEmptyColumns;
   private boolean showHealthRatings;
-  private boolean oneTitlePerLine;
+  //private boolean oneTitlePerLine;
   private KbartExportFilter.FieldOrdering fieldOrdering;
-  private static boolean DEFAULT_oneTitlePerLine = false; // title-per-line is not KBART
+  //private static boolean DEFAULT_oneTitlePerLine = false; // title-per-line is not KBART
 
-  public KbartCustomOptions(boolean omit, boolean health,
-                            KbartExportFilter.FieldOrdering ord) {
-    this(omit, health, DEFAULT_oneTitlePerLine, ord);
-  }
-
-  public KbartCustomOptions(boolean omit, boolean health, boolean titlePerLine,
+  /*public KbartCustomOptions(boolean omit, boolean health, boolean titlePerLine,
                             KbartExportFilter.FieldOrdering ord) {
     this.omitEmptyColumns = omit;
     this.showHealthRatings = health;
     this.oneTitlePerLine = titlePerLine;
+    this.fieldOrdering = ord;
+  }*/
+
+  public KbartCustomOptions(boolean omit, boolean health,
+                            KbartExportFilter.FieldOrdering ord) {
+    this.omitEmptyColumns = omit;
+    this.showHealthRatings = health;
     this.fieldOrdering = ord;
   }
 
@@ -64,7 +66,7 @@ public class KbartCustomOptions implements Serializable {
     return new KbartCustomOptions(
         KbartExporter.omitEmptyFieldsByDefault,
         KbartExporter.showHealthRatingsByDefault,
-        DEFAULT_oneTitlePerLine,
+        //DEFAULT_oneTitlePerLine,
         KbartExportFilter.CustomFieldOrdering.getDefaultOrdering()
     );
   }
@@ -85,13 +87,13 @@ public class KbartCustomOptions implements Serializable {
     this.showHealthRatings = showHealthRatings;
   }
 
-  public boolean isOneTitlePerLine() {
+  /*public boolean isOneTitlePerLine() {
     return oneTitlePerLine;
-  }
+  }*/
 
-  public void setOneTitlePerLine(boolean titlePerLine) {
+  /*public void setOneTitlePerLine(boolean titlePerLine) {
     this.oneTitlePerLine= titlePerLine;
-  }
+  }*/
 
   public KbartExportFilter.FieldOrdering getFieldOrdering() {
     return fieldOrdering;

@@ -1,5 +1,5 @@
 /*
- * $Id: ReportFormat.java,v 1.1 2012-05-30 00:31:56 easyonthemayo Exp $
+ * $Id: ReportFormat.java,v 1.2 2012-05-31 16:53:18 easyonthemayo Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.exporter.kbart;
 
 import org.lockss.exporter.biblio.BibliographicUtil;
-import org.lockss.util.StringUtil;
 import static org.lockss.exporter.kbart.KbartTitle.Field.*;
 
 import java.util.*;
@@ -56,7 +55,7 @@ public class ReportFormat {
   //public static final String DEFAULT_ENCODING = "UTF-8";
 
   /** A description of the report format, for display to user. */
-  protected String description;
+  //protected String description;
 
   /** A default field ordering for the report. */
   protected KbartExportFilter.FieldOrdering defaultFieldOrdering;
@@ -85,10 +84,18 @@ public class ReportFormat {
 
 
   /**
-   * Temporary method using a default year volume format for processing.
+   * Process without amalgamating into title per line;
+   * just add coverage notes fields
    */
-  public static List<KbartTitle> process(List<KbartTitle> titles) {
-    return process(titles, CoverageNotesFormat.YEAR_VOLUME);
+  private static List<KbartTitle> processKbart(List<KbartTitle> titles,
+                                         CoverageNotesFormat coverageNotesFormat) {
+    TitleCoverageRanges titleCoverageRanges = new TitleCoverageRanges(coverageNotesFormat);
+    // Add a coverage notes field to each title
+    for (KbartTitle kbt : titles) {
+      titleCoverageRanges.reset(kbt);
+      kbt.setField(COVERAGE_NOTES, titleCoverageRanges.constructCoverageNotes());
+    }
+    return titles;
   }
 
   /**
@@ -98,11 +105,17 @@ public class ReportFormat {
    * @return
    */
   public static List<KbartTitle> process(List<KbartTitle> titles,
-                                         CoverageNotesFormat coverageNotesFormat) {
+                                         CoverageNotesFormat coverageNotesFormat,
+                                         ReportDataFormat reportDataFormat) {
     // KBART info should be ordered alphabetically by title by default
     Collections.sort(titles,
         KbartTitleComparatorFactory.getComparator(PUBLICATION_TITLE)
     );
+    // XXX Set coverage note format to SFX if SFX output chosen
+    if (reportDataFormat == ReportDataFormat.SFX) coverageNotesFormat = CoverageNotesFormat.SFX;
+    // Process std KBART is not one line per title
+    if (!reportDataFormat.isOneLinePerTitle()) return processKbart(titles, coverageNotesFormat);
+
     TitleCoverageRanges titleCoverageRanges = new TitleCoverageRanges(coverageNotesFormat);
     KbartTitle lastTitle = null;
     List<KbartTitle> newList = new ArrayList<KbartTitle>();
@@ -133,12 +146,28 @@ public class ReportFormat {
   }
 
   /**
+   * Update the target title with range end values from the source title.
+   * @param source title containing the end values
+   * @param target title which will receive the end values
+   */
+  public static void updateEndValues(KbartTitle source, KbartTitle target) {
+    String de = source.getField(DATE_LAST_ISSUE_ONLINE);
+    String ve = source.getField(NUM_LAST_VOL_ONLINE);
+    String ie = source.getField(NUM_LAST_ISSUE_ONLINE);
+    // Extend range end values
+    target.setField(DATE_LAST_ISSUE_ONLINE, de);
+    target.setField(NUM_LAST_ISSUE_ONLINE, ie);
+    target.setField(NUM_LAST_VOL_ONLINE, ve);
+  }
+
+
+  /**
    * A class that records KbartTitles contributing to a set of coverage ranges,
    * and uses a CoverageNotesFormat to produce an amalgamated coverage note
    * string. It is assumed that KbartTitles are added to this set in
    * chronological order.
    */
-  private static class TitleCoverageRanges {
+  public static class TitleCoverageRanges {
 
     /** The format to adhere to in coverge range declarations. */
     private CoverageNotesFormat format;
@@ -168,16 +197,7 @@ public class ReportFormat {
      */
     public void add(KbartTitle kbt) {
       if (combinedTitle == null) this.combinedTitle = new KbartTitle(kbt);
-      //String ds = kbt.getField(DATE_FIRST_ISSUE_ONLINE);
-      String de = kbt.getField(DATE_LAST_ISSUE_ONLINE);
-      //String vs = kbt.getField(NUM_FIRST_VOL_ONLINE);
-      String ve = kbt.getField(NUM_LAST_VOL_ONLINE);
-      //String is = kbt.getField(NUM_FIRST_ISSUE_ONLINE);
-      String ie = kbt.getField(NUM_LAST_ISSUE_ONLINE);
-      // Extend range end values
-      combinedTitle.setField(DATE_LAST_ISSUE_ONLINE, de);
-      combinedTitle.setField(NUM_LAST_ISSUE_ONLINE, ie);
-      combinedTitle.setField(NUM_LAST_VOL_ONLINE, ve);
+      updateEndValues(kbt, combinedTitle);
       // Add the title to the list (or start the coverage notes string
       // according to the format)
       kbTitles.add(kbt);
@@ -207,7 +227,7 @@ public class ReportFormat {
       StringBuilder coverageNotes = new StringBuilder();
       if (format.isSummary) {
         // Create coverage notes from start of first and end of last
-        // TODO coverageNotes.append(kbTitles.get(0));
+        format.addSummaryCoverage(kbTitles, coverageNotes);
       }
       else
         for (KbartTitle kbt : kbTitles) {
@@ -229,246 +249,62 @@ public class ReportFormat {
 
 
   /**
-   * Enumeration of formats for the data in coverage notes field.
+   * Format of the report produced; that is, the combination of title
+   * amalgamation, visible fields etc.
    */
-  public static enum CoverageNotesFormat {
-
-    SFX_DATALOADER("SFX DataLoader", " && ", " || ", "undef", true, false) {
-      @Override
-      public void appendStart(StringBuilder sb, KbartTitle kbt) {
-        appendPoint(sb, kbt, ">=");
-      }
-
-      @Override
-      public void appendEnd(StringBuilder sb, KbartTitle kbt) {
-        appendPoint(sb, kbt, "<=");
-      }
-      @Override
-      public void appendEqualRange(StringBuilder sb, KbartTitle kbt) {
-        appendPoint(sb, kbt, "=");
-      }
-      /**
-       * Generic method to add a point (start, end, etc) representing a range
-       * endpoint. The operator represents the type of the point, as in
-       * SFX General User’s Guide, Table 16.
-       * @param sb
-       * @param kbt
-       * @param operator
-       */
-      public void appendPoint(StringBuilder sb, KbartTitle kbt, String operator) {
-        String ys = kbt.getField(DATE_FIRST_ISSUE_ONLINE);
-        String vs = kbt.hasFieldValue(NUM_FIRST_VOL_ONLINE) ?
-            kbt.getField(NUM_FIRST_VOL_ONLINE) : this.noValStr;
-        String is = kbt.hasFieldValue(NUM_FIRST_ISSUE_ONLINE) ?
-            kbt.getField(NUM_FIRST_ISSUE_ONLINE) : this.noValStr;
-        sb.append("$obj->parsedDate(\"").append(operator).append("\",")
-            .append(ys)
-            .append(",")
-            .append(vs)
-            .append(",")
-            .append(is)
-            .append(")")
-        ;
-      }
-    },
-    YEAR_RANGES("Year Ranges", false, false),
-    YEAR_VOLUME("Year(Volume) Ranges", true, false),
-    YEAR_SUMMARY("Year Summary", false, true),
-    YEAR_VOLUME_SUMMARY("Year(Volume) Summary", true, true)
+  public static enum ReportDataFormat {
+    // KBART is the default format, with an entry per complete range
+    KBART("Title Ranges", "KBART standard format; each line is a complete title " +
+        "range. Coverage gaps will results in multiple ranges for a single title.", false),
+    // The KBART format but with an entry per title
+    TITLES("Titles", "Like KBART, but each title has only one line, with " +
+        "amalgamated ranges; precise coverage is indicated in the " +
+        "coverage_notes field.", true),
+    // SFX is a special variation on the one_per_line, with a specific coverage_notes format
+    SFX("SFX DataLoader", "Suitable for import into ExLibris SFX.", true)
     ;
-
-    /** A description of the coverage notes format, for display to user. */
-    public String description;
-    /** String used to separate ranges; comma space by default. */
-    protected String rngSep = ", ";
-    /** String used to separate endpoints of ranges; hyphen by default. */
-    private String rngJoin = "-";
-    /** String to use if there is no value for volume; empty string by default. */
-    protected String noValStr = "";
-    /** Whether this format provides a summary, that is, only endpoints across
-     * the set of ranges. This implies that the rngSep is not used. */
-    protected boolean isSummary = false;
-    /** Whether to show volume info; false by default. */
-    protected boolean showVol = false;
-
-    /** Construct a non-summary enum with default values for strings. */
-    CoverageNotesFormat(String description) {
-      this.description = description;
-    }
-    /**
-     * Construct an enum with the given description and values for note strings.
-     * The description is required; if any other string is null, the default
-     * will be used. Also allows switches to be specified indicating whether to
-     * show volumes, and whether the format is a summary one (only showing
-     * endpoints).
-     */
-    CoverageNotesFormat(String description, String rngJoin, String rngSep,
-                        String noValStr, boolean showVol, boolean summary) {
-      this.description = description;
-      if (rngJoin!=null) this.rngJoin = rngJoin;
-      if (rngSep!=null) this.rngSep = rngSep;
-      if (noValStr !=null) this.noValStr = noValStr;
-      this.showVol = showVol;
-      this.isSummary = summary;
-    }
-    /**
-     * Construct an enum with the given summary switch, and default values for
-     * note strings.
-     */
-    CoverageNotesFormat(String description, boolean showVol, boolean summary) {
-      this(description, null, null, null, showVol, summary);
+    
+    private ReportDataFormat(String label, String footnote, boolean oneLinePerTitle) {
+      this.label = label;
+      this.footnote = footnote;
+      this.oneLinePerTitle = oneLinePerTitle;
     }
 
+    /** The displayed label for the output. */
+    private final String label;
+    /** An optional footnote elaborating the export format. */
+    private final String footnote;
+    /** Whether this format should amalgamate titles to produce one record per title. */
+    private final boolean oneLinePerTitle;
+
+    public String getLabel() { return label; }
+    public String getFootnote() { return footnote; }
+    protected boolean isOneLinePerTitle() { return oneLinePerTitle;} 
+
     /**
-     * Append start data to the given StringBuilder. This method provides a
-     * default implementation which includes a bracketed volume identifier if
-     * available and wanted. It may be overridden by subclasses.
-     * @param sb a StringBuilder
-     * @param kbt a KbartTitle with the data
+     * Get a ReportDataFormat by name. Upper cases the name so lower case values
+     * can be passed in URLs.
+     *
+     * @param name a string representing the name of the format
+     * @return a ReportDataFormat with the specified name, or null if none was found
      */
-    public void appendStart(StringBuilder sb, KbartTitle kbt) {
-      String ys = kbt.getField(DATE_FIRST_ISSUE_ONLINE);
-      sb.append(ys);
-      if (showVol && kbt.hasFieldValue(NUM_FIRST_VOL_ONLINE))
-        sb.append("(")
-            .append(kbt.getField(NUM_FIRST_VOL_ONLINE))
-            .append(")");
+    public static ReportDataFormat byName(String name) {
+      return byName(name,  null);
     }
     /**
-     * Append end data to the given StringBuilder. This method provides a
-     * default implementation which includes a bracketed volume identifier if
-     * available and wanted. It may be overridden by subclasses.
-     * @param sb a StringBuilder
-     * @param kbt a KbartTitle with the data
+     * Get an ReportDataFormat by name, or the default if the name cannot be parsed.
+     *
+     * @param name a string representing the name of the format
+     * @param def the default to return if the name is invalid
+     * @return an ReportDataFormat with the specified name, or the default
      */
-    public void appendEnd(StringBuilder sb, KbartTitle kbt) {
-      String ye = kbt.getField(DATE_LAST_ISSUE_ONLINE);
-      sb.append(ye);
-      if (showVol && kbt.hasFieldValue(NUM_LAST_VOL_ONLINE))
-        sb.append("(")
-            .append(kbt.getField(NUM_LAST_VOL_ONLINE))
-            .append(")");
-    }
-    /**
-     * Append start data to the given StringBuilder. This method provides a
-     * default implementation which includes a bracketed volume identifier if
-     * available and wanted. It may be overridden by subclasses.
-     * @param sb a StringBuilder
-     * @param kbt a KbartTitle with the data
-     */
-    public void appendEqualRange(StringBuilder sb, KbartTitle kbt) {
-      appendStart(sb, kbt);
-    }
-
-    /**
-     * Append a range join string to the given StringBuilder. This method
-     * provides a default implementation using the rngJoin parameter, but may be
-     * overridden by subclasses.
-     * @param sb a StringBuilder
-     */
-    public void appendRangeJoin(StringBuilder sb) { sb.append(rngJoin); }
-    /**
-     * Append a range separator string to the given StringBuilder. This method
-     * provides a default implementation using the rngSep parameter, but may be
-     * overridden by subclasses.
-     * @param sb a StringBuilder
-     */
-    public void appendRangeSep(StringBuilder sb) { sb.append(rngSep); }
-
-
-
-    /**
-     * Append a coverage note for the range represented in a KbartTitle to a
-     * StringBuilder representing amalgamated coverage notes.
-     * @param kbt a KbartTitle representing a range
-     * @param sb the StringBuilder to append to
-     */
-    protected void addTitleCoverage(KbartTitle kbt, StringBuilder sb) {
-      String cn = constructCoverageNote(kbt);
-      if (!StringUtil.isNullString(cn)) {
-        if (sb.length()!=0) sb.append(rngSep);
-        sb.append(cn);
+    public static ReportDataFormat byName(String name, ReportDataFormat def) {
+      try {
+        return valueOf(name.toUpperCase());
+      } catch (Exception e) {
+        return def;
       }
     }
-
-    /**
-     * Construct the coverage note info for the given KbartTitle; that is, the
-     * range represented by the title. This is presented in the format:
-     * <br/>
-     *  <i></i>1991(36), 1995(39)-2005(49), 2010(54)-</i>
-     * <br/>
-     * The last range here extends to the present.
-     * If volumes are not available, the '(volume)' part is omitted.
-     * It is assumed that if a start value is missing, there is no range data for
-     * that field; if there is a start value with no end value, this is a range
-     * extending to the present. KbartTitles ought to provide a minimum of start
-     * date or volume; usually if one date is available, they should both be.
-     * We then have to do some interpretation.
-     * @param kbt a KbartTitle
-     * @return a string representing the coverage range of the title
-     */
-    public String constructCoverageNote(KbartTitle kbt) {
-      // Get the start and end dates and volumes
-      // Note: use kbt.getFieldValue() to retrieve the actual end values
-      // regardless of whethere they represent to the present.
-      String ds = kbt.getField(KbartTitle.Field.DATE_FIRST_ISSUE_ONLINE);
-      String de = kbt.getField(KbartTitle.Field.DATE_LAST_ISSUE_ONLINE);
-      String vs = kbt.getField(KbartTitle.Field.NUM_FIRST_VOL_ONLINE);
-      String ve = kbt.getField(KbartTitle.Field.NUM_LAST_VOL_ONLINE);
-
-      StringBuilder range = new StringBuilder();
-
-      // Are there dates and/or vols
-      //boolean vols = !StringUtil.isNullString(vs);
-      //boolean dates = !StringUtil.isNullString(ds);
-      // Return empty string if no vals
-      //if (!vols && !dates) return "";
-
-
-      // Check first for empty strings
-      if (StringUtil.isNullString(ds) && StringUtil.isNullString(vs)) return "";
-
-      // Is there a non-empty end value
-      boolean end = !StringUtil.isNullString(de) || !StringUtil.isNullString(ve);
-      // Only show a range if the start and end of an available field are different
-      //boolean rng = (vols && !vs.equals(ve)) || (dates && !ds.equals(de));
-      boolean rng = !vs.equals(ve) || !ds.equals(de);
-
-      appendStart(range, kbt);
-      if (rng) {
-        appendRangeJoin(range);
-        if (end) appendEnd(range, kbt);
-      }
-
-      // Construct ranges
-      /*if (dates && !vols) {
-        appendStart(range, kbt);
-        if (rng) {
-          appendRangeJoin(range);
-          if (end) appendEnd(range, kbt);
-        }
-      }
-      else if (!dates && vols) {
-        appendStart(range, kbt);
-        if (rng) {
-          appendRangeJoin(range);
-          if (end) appendEnd(range, kbt);
-        }
-      }
-      else if (dates && vols) {
-        appendStart(range, kbt);
-        if (rng) {
-          appendRangeJoin(range);
-          if (end) appendEnd(range, kbt);
-        }
-      }*/
-       // else neither dates nor vols = empty string
-
-
-      //System.err.println("coverage notes "+range);
-      return range.toString();
-    }
-
 
   }
 
