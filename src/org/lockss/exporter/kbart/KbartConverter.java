@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.29 2012-03-15 08:52:25 tlipkis Exp $
+ * $Id: KbartConverter.java,v 1.29.4.1 2012-05-31 17:07:52 easyonthemayo Exp $
  */
 
 /*
@@ -104,7 +104,7 @@ import static org.lockss.exporter.kbart.KbartTitle.Field.*;
  * return a list, and these could be adapted to omit sorting and return
  * iterators. Ultimately these methods inform
  * ListHoldings.getKbartTitlesForExport and are used in creating a filter, so
- * if the filter is updated to ue iterators, we should use the
+ * if the filter is updated to use iterators, we should use the
  * KbartTitleIterator classes instead of the list-returning methods.
  *
  * @author Neil Mayo
@@ -656,11 +656,13 @@ public class KbartConverter {
           Integer.toString(range.getLastYear()));
       // If the final year in the range is this year or later,
       // leave empty the last issue/volume/date fields
-      if (range.getLastYear() >= getThisYear()) {
+      // NB: We now record the value and handle the blank requirements within
+      // the KbartTitle's getters
+      /*if (range.getLastYear() >= getThisYear()) {
         kbt.setField(DATE_LAST_ISSUE_ONLINE, "");
         kbt.setField(NUM_LAST_ISSUE_ONLINE, "");
         kbt.setField(NUM_LAST_VOL_ONLINE, "");
-      }
+      }*/
     }
   }
 

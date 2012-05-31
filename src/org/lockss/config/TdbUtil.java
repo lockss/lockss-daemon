@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.11 2012-05-14 16:36:03 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.11.2.1 2012-05-31 17:07:52 easyonthemayo Exp $
  */
 
 /*
@@ -451,20 +451,31 @@ public class TdbUtil {
       this.label = label;
       this.areAusAvailable = hasAus;
     }
-    
+
     /**
-     * Get a ContentScope by name.
-     * 
-     * @param name a string representing the name of the enum
-     * @return a ContentScope with the specified name, or the default if none was found
+     * Get a ContentScope by name. Upper cases the name so lower case values
+     * can be passed in URLs.
+     *
+     * @param name a string representing the name of the format
+     * @return a ContentScope with the specified name, or null if none was found
      */
     public static ContentScope byName(String name) {
+      return byName(name, DEFAULT_SCOPE);
+    }
+    /**
+     * Get an ContentScope by name, or the default if the name cannot be parsed.
+     *
+     * @param name a string representing the name of the format
+     * @param def the default to return if the name is invalid
+     * @return an ContentScope with the specified name, or the default
+     */
+    public static ContentScope byName(String name, ContentScope def) {
       try {
-	return valueOf(name);
+        return valueOf(name.toUpperCase());
       } catch (Exception e) {
-	return DEFAULT_SCOPE;
+        return def;
       }
-    } 
+    }
 
     public String toString() {
       return label; 

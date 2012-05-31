@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.19 2012-03-22 16:16:37 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.19.4.1 2012-05-31 17:07:52 easyonthemayo Exp $
  */
 
 /*
@@ -85,8 +85,10 @@ public abstract class KbartExporter {
   private static Logger log = Logger.getLogger("KbartExporter");
 
   // Footnotes for the interface options
-  private static final String CSV_NOTE = "CSV files can be imported into spreadsheet programs.";
-  private static final String TSV_NOTE = "TSV files can be imported into spreadsheet programs.";
+  private static final String CSV_NOTE = "CSV (comma-separated values) files " +
+      "can be imported into spreadsheet programs.";
+  private static final String TSV_NOTE = "TSV (tab-separated values) files " +
+      "can be imported into spreadsheet programs.";
 
   //private static final String TSV_NOTE = "The TSV export values are quoted "+
   //"where necessary, and quotes within values are escaped.";
@@ -122,10 +124,10 @@ public abstract class KbartExporter {
   
   /** Whether to compress the output. */
   private boolean compress = false;
-  
+
   /** The OutputFormat of this exporter. */
   protected OutputFormat outputFormat;
-  
+
   /** A PrintWriter which will be used to emit formatted output. */
   protected PrintWriter printWriter;
 
@@ -423,7 +425,7 @@ public abstract class KbartExporter {
   public void setContentScope(ContentScope scope) {
     this.scope = scope;
   }
- 
+
   /**
    * Return the name of the collection; this uses the scope label if a scope is
    * available.
@@ -536,7 +538,7 @@ public abstract class KbartExporter {
    */
   public static enum OutputFormat {
         
-    TSV("Export TSV (tab-separated values)",
+    TSV("TSV",
      "text/tab-separated-values", "tsv", 
      true, false, false,
         TSV_NOTE) {
@@ -551,7 +553,7 @@ public abstract class KbartExporter {
     },
     
     CSV(
-        "Export CSV (comma-separated values)", 
+        "CSV",
         "text/plain", "csv", 
         true, false, false, 
         CSV_NOTE) {
@@ -566,7 +568,7 @@ public abstract class KbartExporter {
     },
     
     HTML(
-        "View on-screen", 
+        "On-screen",
         "text/html", "html",
         false, false, true, 
         HTML_NOTE) {
@@ -628,6 +630,7 @@ public abstract class KbartExporter {
      * KbartTitles.
      * 
      * @param titles a list of <code>KbartTitle</code> objects
+     * @param filter the filter to be used in the export
      */
     public abstract KbartExporter makeExporter(List<KbartTitle> titles, 
                                                KbartExportFilter filter);
@@ -687,17 +690,27 @@ public abstract class KbartExporter {
     /**
      * Get an OutputFormat by name. Upper cases the name so lower case values
      * can be passed in URLs.
-     * 
+     *
      * @param name a string representing the name of the format
      * @return an OutputFormat with the specified name, or null if none was found
      */
     public static OutputFormat byName(String name) {
+      return byName(name, null);
+    }
+    /**
+     * Get an OutputFormat by name, or the default if the name cannot be parsed.
+     *
+     * @param name a string representing the name of the format
+     * @param def the default to return if the name is invalid
+     * @return an OutputFormat with the specified name, or the default
+     */
+    public static OutputFormat byName(String name, OutputFormat def) {
       try {
         return valueOf(name.toUpperCase());
       } catch (Exception e) {
-        return null;
+        return def;
       }
-    } 
+    }
 
   };
   

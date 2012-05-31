@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicUtil.java,v 1.3 2012-02-24 15:39:57 easyonthemayo Exp $
+ * $Id: BibliographicUtil.java,v 1.3.6.1 2012-05-31 17:07:52 easyonthemayo Exp $
  */
 
 /*
@@ -146,12 +146,37 @@ public class BibliographicUtil {
       return false; 
     }
   }
-  
+
+  /**
+   * Compares two <code>BibliographicItem</code>s to see if they appear to come
+   * from the same title, by comparing their identifying fields. If the ISSNs
+   * are both non-empty, returns whether they match; otherwise returns
+   * <code>true</code> if the publication titles are equal and non-empty.
+   * <p>
+   * If either argument is null, an exception will be thrown.
+   *
+   * @param au1 a BibliographicItem
+   * @param au2 another BibliographicItem
+   * @return <code>true</code> if they have the same issn, or no issn and same title
+   */
+  public static boolean areFromSameTitle(BibliographicItem au1, BibliographicItem au2) {
+    String au1issn = au1.getIssn();
+    String au2issn = au2.getIssn();
+    String au1title = au1.getJournalTitle();
+    String au2title = au2.getJournalTitle();
+    if (!StringUtil.isNullString(au1issn) && !StringUtil.isNullString(au2issn))
+      return au1issn.equals(au2issn);
+    else
+      return !StringUtil.isNullString(au1title) &&
+          !StringUtil.isNullString(au2title) && au1title.equals(au2title);
+  }
+
   /**
    * Compares two <code>BibliographicItem</code>s to see if they appear to have
    * the same identity, by comparing their identifying fields. If the ISSNs are
    * both non-empty, returns whether they match; otherwise returns
-   * <code>true</code> if the names are equal and non-empty.
+   * <code>true</code> if the names are equal and non-empty. Note that the names
+   * often include a reference to the volume.
    * <p>
    * If either argument is null, an exception will be thrown.
    *
