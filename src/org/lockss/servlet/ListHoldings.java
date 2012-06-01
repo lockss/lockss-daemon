@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.33.4.1 2012-05-31 17:07:52 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.33.4.2 2012-06-01 16:11:14 easyonthemayo Exp $
  */
 
 /*
@@ -311,10 +311,13 @@ public class ListHoldings extends LockssServlet {
         (!StringUtil.isNullString(action) && action.equals(ACTION_CUSTOM))
             || Boolean.valueOf(params.getProperty(KEY_CUSTOM, "false"));
 
-    // Are we exporting? Export button pressed, or custom output and OK/cancel
-    this.doExport = action.equals(ACTION_EXPORT) || (isCustom &&
-        (action.equals(ACTION_CUSTOM_OK) || action.equals(ACTION_CUSTOM_CANCEL))
-    );
+    // Are we exporting? Export button pressed, or custom output and OK/cancel.
+    // OR Minimal args (outputFormat) configured and no action.
+    this.doExport = (outputFormat!=null && StringUtil.isNullString(action)) ||
+        action.equals(ACTION_EXPORT) ||
+        (isCustom &&
+            (action.equals(ACTION_CUSTOM_OK) || action.equals(ACTION_CUSTOM_CANCEL))
+        );
 
     // ---------- Process parameters and show page ----------
     // If custom output, set the field ordering and omit flag

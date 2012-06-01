@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.19 2012-03-22 16:16:37 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.19.4.1 2012-06-01 16:11:14 easyonthemayo Exp $
  */
 
 /*
@@ -85,12 +85,17 @@ public class HtmlKbartExporter extends KbartExporter {
    * table cells to stop it wrapping. 
    */
   private int eissnFieldIndex;
-  /** 
-   * The index of the issnl field. Will have the td.issn style applied to its 
-   * table cells to stop it wrapping. 
+  /**
+   * The index of the issnl field. Will have the td.issn style applied to its
+   * table cells to stop it wrapping.
    */
   private int issnlFieldIndex;
-  /** 
+  /**
+   * The index of the coverage_notes field. Will have the td.coverage_notes
+   * style applied to its table cells to stop it wrapping.
+   */
+  private int covNotesFieldIndex;
+  /**
    * The index of the optional health field. Will have an appropriate style 
    * applied to its table cells to show tortoises and stop it wrapping. 
    */
@@ -154,6 +159,16 @@ public class HtmlKbartExporter extends KbartExporter {
       if (i==issnFieldIndex || i==eissnFieldIndex || i==issnlFieldIndex) {
         cssClass = "issn";
       }
+      if (i==covNotesFieldIndex) {
+        cssClass = "coverage_notes";
+        // Process val to add line breaks after the rngSep of the
+        // CoverageNotesFormat. We try to match all possibilities by replacing
+        // "||" in SFX expressions, and ")," otherwise. However, we could
+        // instead pass the CoverageNotesFormat into OutputFormat.makeExporter().
+        if (val.startsWith("$obj")) // SFX format
+          val = val.replaceAll("(\\|\\|)", "$1<br/>");
+        else val = val.replaceAll(",", ",<br/>");
+      }
       // Add different type of entry for health ratings if required
       if (i==healthFieldIndex) {
         int rating = scaleHealth(val);
@@ -208,6 +223,7 @@ public class HtmlKbartExporter extends KbartExporter {
     this.issnFieldIndex = findFieldIndex(Field.PRINT_IDENTIFIER);
     this.eissnFieldIndex = findFieldIndex(Field.ONLINE_IDENTIFIER);
     this.issnlFieldIndex = findFieldIndex(Field.TITLE_ID);
+    this.covNotesFieldIndex = findFieldIndex(Field.COVERAGE_NOTES);
     // The health field index will be one bigger than the last field index
     this.healthFieldIndex = getFieldLabels().size();
     // Write html and head tags, including a metatag declaring the content type UTF-8
@@ -270,6 +286,7 @@ public class HtmlKbartExporter extends KbartExporter {
     sb.append("tr.odd { background-color: #cce; }");
     sb.append("tr.even { background-color: #aac; }");
     sb.append("td.issn { white-space: nowrap; }");
+    sb.append("td.coverage_notes { white-space: nowrap; }");
     // General health style
     sb.append("td.health1, td.health2, td.health3, td.health4, td.health5 { font-weight: bold; text-align: center; }");
     sb.append("td.health1 { background-color: #cc0000; }"); // red
