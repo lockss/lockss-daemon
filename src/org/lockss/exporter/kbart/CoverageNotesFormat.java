@@ -1,5 +1,5 @@
 /*
- * $Id: CoverageNotesFormat.java,v 1.1 2012-05-31 16:53:18 easyonthemayo Exp $
+ * $Id: CoverageNotesFormat.java,v 1.2 2012-06-01 16:10:22 easyonthemayo Exp $
  */
 
 /*
@@ -83,15 +83,6 @@ public enum CoverageNotesFormat {
     /** Override the join sep; don't add if there is nothing following. */
     public void appendRangeJoin(StringBuilder sb, boolean hasRangeEnd) {
       if (hasRangeEnd) this.appendRangeJoin(sb);
-    }
-
-    @Override
-    /** Override the coverage note to remove trailing && (the extends to
-     * present is implicit in the >= range declaration). */
-    public String constructCoverageNote(KbartTitle kbt) {
-      String cn = super.constructCoverageNote(kbt);
-      if (cn.endsWith(rngJoin)) return cn.substring(0, cn.length() - rngJoin.length());
-      return cn;
     }
 
     @Override
@@ -315,11 +306,11 @@ public enum CoverageNotesFormat {
     // Only show a range if the start and end of an available field are different
     boolean rng = !vs.equals(ve) || !ds.equals(de);
 
-    appendStart(range, kbt);
     if (rng) {
+      appendStart(range, kbt);
       appendRangeJoin(range, end);
       if (end) appendEnd(range, kbt);
-    }
+    } else appendEqualRange(range, kbt);
     return range.toString();
   }
 
