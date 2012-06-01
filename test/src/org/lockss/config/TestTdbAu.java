@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.12 2012-02-24 15:39:57 easyonthemayo Exp $
+ * $Id: TestTdbAu.java,v 1.13 2012-06-01 23:34:08 pgust Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.12 2012-02-24 15:39:57 easyonthemayo Exp $
+ * @version $Id: TestTdbAu.java,v 1.13 2012-06-01 23:34:08 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -477,7 +477,10 @@ public class TestTdbAu extends LockssTestCase {
     assertEquals("Test Title", au.getJournalTitle()); 
     assertEquals(32500000, au.getEstimatedSize());
     Properties props = au.toProperties();
-    assertEquals("v1", props.getProperty("param.1.value"));
+    assertTrue(props.containsKey("param.1.value"));
+    assertTrue(props.containsValue("v1"));
+    assertTrue(props.containsKey("param.2.value"));
+    assertTrue(props.containsValue("v2"));
     /*
     assertEquals("32.5MB", props.getProperty("estSize"));
     */
