@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.16 2012-02-24 18:56:44 pgust Exp $
+ * $Id: TdbAu.java,v 1.17 2012-06-01 23:34:49 pgust Exp $
  */
 
 /*
@@ -73,7 +73,6 @@ public class TdbAu implements BibliographicItem {
    */
   private Map<String, String> params;
  
-
   /**
    * The plugin attrs for this AU
    */
@@ -151,8 +150,8 @@ public class TdbAu implements BibliographicItem {
       return PluginManager.generateAuId(TdbAu.this.getPluginId(), props);
     }
   }
-
-    /**
+  
+  /**
    * Create a new instance of an au.
    * 
    * @param name the name of the au
@@ -170,13 +169,7 @@ public class TdbAu implements BibliographicItem {
     
     this.name = name;
     this.pluginId = pluginId;
-
-    if (System.getProperty("org.lockss.unitTesting", "false").equals("true")) {
-      // use LinkedHashMap to preserve param order for testing
-      params = new LinkedHashMap<String,String>();
-    } else {
-      params = new HashMap<String,String>();
-    }
+    params = new HashMap<String,String>();
   }
 
   /**
