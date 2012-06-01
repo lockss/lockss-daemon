@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.50 2012-05-30 21:06:19 pgust Exp $
+ * $Id: ServeContent.java,v 1.51 2012-06-01 17:44:36 pgust Exp $
  */
 
 /*
@@ -1171,15 +1171,18 @@ public class ServeContent extends LockssServlet {
                          "Possibly related content may be found "
                          + "in the following Archival Units");
       } else {
-        resp.sendError(HttpResponse.__404_Not_Found,
-                     info.resolvedUrl + " is not preserved on this LOCKSS box");
+        displayIndexPage(Collections.EMPTY_LIST,
+            HttpResponse.__404_Not_Found,
+            block,
+            null);
         logAccess("not present, 404");
       }
       break;
     case AuIndex:
       displayIndexPage(pluginMgr.getAllAus(),
                        HttpResponse.__404_Not_Found,
-                       block, null);
+                       block, 
+                       "The LOCKSS box has the folling Archival Units");
       logAccess("not present, 404 with index");
       break;
     }
@@ -1261,14 +1264,14 @@ public class ServeContent extends LockssServlet {
     }
     Page page = newPage();
 
+    if (headerElement != null) {
+      page.add(headerElement);
+    }
+    
     if (areAllExcluded(auList, pred) && !offerUnfilteredList) {
       ServletUtil.layoutExplanationBlock(page,
-					 "No content has been preserved on this LOCKSS box");
+          "No matching content has been preserved on this LOCKSS box");
     } else {
-      if (headerElement != null) {
-        page.add(headerElement);
-      }
-      
       // Layout manifest index w/ URLs pointing to this servlet
       Element ele =
 	ServletUtil.manifestIndex(pluginMgr,
