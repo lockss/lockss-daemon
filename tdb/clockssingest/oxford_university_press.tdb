@@ -12507,7 +12507,7 @@
 
     param[base_url] = http://mind.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[mind1889] = see RU3577
+    comment[mind1889] = notReady. see RU3577. volumes are named XIV, but manifest page is os-XIV.
 
     au < manifest ; exists ; 1876 ; Mind Volume os-1 ; os-1 ; >
     au < manifest ; exists ; 1877 ; Mind Volume os-2 ; os-2 ; >
@@ -12522,7 +12522,7 @@
     au < manifest ; exists ; 1886 ; Mind Volume os-XI ; os-XI ; >
     au < manifest ; exists ; 1887 ; Mind Volume os-12 ; os-12 ; >
     au < manifest ; exists ; 1888 ; Mind Volume os-XIII ; os-XIII ; >
-    au < manifest ; exists ; 1889 ; Mind Volume os-XIV ; os-XIV ; >
+    au < notReady ; exists ; 1889 ; Mind Volume os-XIV ; os-XIV ; >
     au < manifest ; exists ; 1890 ; Mind Volume os-XV ; os-XV ; >
     au < manifest ; exists ; 1891 ; Mind Volume os-XVI ; os-XVI ; >
     au < manifest ; exists ; 1892 ; Mind Volume 1 ; 1 ; >
