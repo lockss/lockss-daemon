@@ -2739,7 +2739,7 @@
         au < manifest ; exists ; 2007 ; Australian & New Zealand Journal of Psychiatry Volume 41 ; 41 ; >
         au < manifest ; exists ; 2008 ; Australian & New Zealand Journal of Psychiatry Volume 42 ; 42 ; >
         au < manifest ; exists ; 2009 ; Australian & New Zealand Journal of Psychiatry Volume 43 ; 43 ; >
-        au < testing ; exists ; 2010 ; Australian & New Zealand Journal of Psychiatry Volume 44 ; 44 ; >
+        au < manifest ; exists ; 2010 ; Australian & New Zealand Journal of Psychiatry Volume 44 ; 44 ; >
         au < crawling ; exists ; 2011 ; Australian & New Zealand Journal of Psychiatry Volume 45 ; 45 ; >
         au < crawling ; exists ; 2012 ; Australian & New Zealand Journal of Psychiatry Volume 46 ; 46 ; >
 
@@ -2878,7 +2878,7 @@
       au < manifest ; exists ; 2007 ; Australasian Psychiatry Volume 15 ; 15 ; >
       au < manifest ; exists ; 2008 ; Australasian Psychiatry Volume 16 ; 16 ; >
       au < manifest ; exists ; 2009 ; Australasian Psychiatry Volume 17 ; 17 ; >
-      au < testing ; exists ; 2010 ; Australasian Psychiatry Volume 18 ; 18 ; >
+      au < released ; manifest ; 2010 ; Australasian Psychiatry Volume 18 ; 18 ; >
       au < crawling ; exists ; 2011 ; Australasian Psychiatry Volume 19 ; 19 ; >
       au < crawling ; exists ; 2012 ; Australasian Psychiatry Volume 20 ; 20 ; >
 
@@ -4667,7 +4667,7 @@
         au < manifest ; exists ; 2007 ; Clinical EEG and Neuroscience Volume 38 ; 38 ; >
         au < manifest ; exists ; 2008 ; Clinical EEG and Neuroscience Volume 39 ; 39 ; >
         au < manifest ; exists ; 2009 ; Clinical EEG and Neuroscience Volume 40 ; 40 ; >
-        au < testing ; exists ; 2010 ; Clinical EEG and Neuroscience Volume 41 ; 41 ; >
+        au < released ; manifest ; 2010 ; Clinical EEG and Neuroscience Volume 41 ; 41 ; >
         au < crawling ; exists ; 2011 ; Clinical EEG and Neuroscience Volume 42 ; 42 ; >
         au < crawling ; exists ; 2012 ; Clinical EEG and Neuroscience Volume 43 ; 43 ; >
       
@@ -7409,7 +7409,7 @@
       au < manifest ; exists ; 2007 ; Drug Information Journal Volume 41 ; 41 ; >
       au < manifest ; exists ; 2008 ; Drug Information Journal Volume 42 ; 42 ; >
       au < manifest ; exists ; 2009 ; Drug Information Journal Volume 43 ; 43 ; >
-      au < testing ; exists ; 2010 ; Drug Information Journal Volume 44 ; 44 ; >
+      au < released ; manifest ; 2010 ; Drug Information Journal Volume 44 ; 44 ; >
       au < crawling ; exists ; 2011 ; Drug Information Journal Volume 45 ; 45 ; >
       au < crawling ; exists ; 2012 ; Drug Information Journal Volume 46 ; 46 ; >
 
@@ -8608,7 +8608,7 @@
       au < manifest ; exists ; 2007 ; European Journal of Cardiovascular Nursing Volume 6 ; 6 ; >
       au < manifest ; exists ; 2008 ; European Journal of Cardiovascular Nursing Volume 7 ; 7 ; >
       au < manifest ; exists ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8 ; >
-      au < testing ; exists ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9 ; >
+      au < released ; manifest ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9 ; >
       au < crawling ; exists ; 2011 ; European Journal of Cardiovascular Nursing Volume 10 ; 10 ; >
       au < crawling ; exists ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 11 ; >
 
@@ -10234,7 +10234,7 @@
       au < manifest ; exists ; 2007 ; Gender, Technology and Development Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Gender, Technology and Development Volume 12 ; 12 ; >
       au < released ; crawling ; 2009 ; Gender, Technology and Development Volume 13 ; 13 ; >
-      au < crawling ; exists ; 2010 ; Gender, Technology and Development Volume 14 ; 14 ; >
+      au < testing ; exists ; 2010 ; Gender, Technology and Development Volume 14 ; 14 ; >
       au < released ; crawling ; 2011 ; Gender, Technology and Development Volume 15 ; 15 ; >
       au < crawling ; exists ; 2012 ; Gender, Technology and Development Volume 16 ; 16 ; >
 
@@ -10462,8 +10462,8 @@
       au < manifest ; exists ; 2007 ; Gifted Education International Volume 23 ; 23 ; >
       au < manifest ; exists ; 2008 ; Gifted Education International Volume 24 ; 24 ; >
       au < manifest ; exists ; 2009 ; Gifted Education International Volume 25 ; 25 ; >
-      au < testing ; exists ; 2010 ; Gifted Education International Volume 26 ; 26 ; >
-      au < testing ; exists ; 2010-2011 ; Gifted Education International Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2010 ; Gifted Education International Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2010-2011 ; Gifted Education International Volume 27 ; 27 ; >
       au < crawling ; exists ; 2012 ; Gifted Education International Volume 28 ; 28 ; >
 
     }
@@ -11730,7 +11730,7 @@
         rights = openaccess
 
         au < manifest ; exists ; 2009 ; Human Genomics and Proteomics Volume 1 ; 1 ; >
-        au < testing ; exists ; 2010 ; Human Genomics and Proteomics Volume 2 ; 2 ; >
+        au < released ; manifest ; 2010 ; Human Genomics and Proteomics Volume 2 ; 2 ; >
         au < expected ; exists ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 ; >
         au < expected ; exists ; 2012 ; Human Genomics and Proteomics Volume 4 ; 4 ; >
 
@@ -11892,7 +11892,7 @@
       au < manifest ; exists ; 2007 ; Humanity & Society Volume 31 ; 31 ; >
       au < manifest ; exists ; 2008 ; Humanity & Society Volume 32 ; 32 ; >
       au < manifest ; exists ; 2009 ; Humanity & Society Volume 33 ; 33 ; >
-      au < testing ; exists ; 2010 ; Humanity & Society Volume 34 ; 34 ; >
+      au < released ; manifest ; 2010 ; Humanity & Society Volume 34 ; 34 ; >
       au < crawling ; exists ; 2011 ; Humanity & Society Volume 35 ; 35 ; >
       au < crawling ; exists ; 2012 ; Humanity & Society Volume 36 ; 36 ; >
 
@@ -21604,7 +21604,7 @@
       au < manifest ; exists ; 2007 ; Journal of Service Research Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Service Research Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Service Research Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2010 ; Journal of Service Research Volume 13 ; 13 ; >
+      au < testing ; exists ; 2010 ; Journal of Service Research Volume 13 ; 13 ; >
       au < released ; crawling ; 2011 ; Journal of Service Research Volume 14 ; 14 ; >
       au < crawling ; exists ; 2012 ; Journal of Service Research Volume 15 ; 15 ; >
 
@@ -33449,9 +33449,9 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Thesis Eleven Volume 97 ; 97 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Thesis Eleven Volume 98 ; 98 ; >
       au < manifest ; exists ; 2009 ; Thesis Eleven Volume 99 ; 99 ; >
-      au < crawling ; exists ; 2010 ; Thesis Eleven Volume 100 ; 100 ; >
-      au < crawling ; exists ; 2010 ; Thesis Eleven Volume 101 ; 101 ; >
-      au < crawling ; exists ; 2010 ; Thesis Eleven Volume 102 ; 102 ; >
+      au < testing ; exists ; 2010 ; Thesis Eleven Volume 100 ; 100 ; >
+      au < testing ; exists ; 2010 ; Thesis Eleven Volume 101 ; 101 ; >
+      au < testing ; exists ; 2010 ; Thesis Eleven Volume 102 ; 102 ; >
       au < crawling ; exists ; 2010 ; Thesis Eleven Volume 103 ; 103 ; >
       au < released ; crawling ; 2011 ; Thesis Eleven Volume 104 ; 104 ; >
       au < released ; crawling ; 2011 ; Thesis Eleven Volume 105 ; 105 ; >
@@ -33508,7 +33508,7 @@
       au < manifest ; exists ; 2007 ; Time & Society Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Time & Society Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Time & Society Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2010 ; Time & Society Volume 19 ; 19 ; >
+      au < testing ; exists ; 2010 ; Time & Society Volume 19 ; 19 ; >
       au < released ; crawling ; 2011 ; Time & Society Volume 20 ; 20 ; >
       au < crawling ; exists ; 2012 ; Time & Society Volume 21 ; 21 ; >
 
@@ -33569,7 +33569,7 @@
       au < manifest ; exists ; 2007 ; Topics in Early Childhood Special Education Volume 27 ; 27 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Topics in Early Childhood Special Education Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Topics in Early Childhood Special Education Volume 29 ; 29 ; >
-      au < crawling ; exists ; 2010 ; Topics in Early Childhood Special Education Volume 30 ; 30 ; >
+      au < testing ; exists ; 2010 ; Topics in Early Childhood Special Education Volume 30 ; 30 ; >
       au < released ; crawling ; 2011 ; Topics in Early Childhood Special Education Volume 31 ; 31 ; >
       au < crawling ; exists ; 2012 ; Topics in Early Childhood Special Education Volume 32 ; 32 ; >
 
@@ -33596,7 +33596,7 @@
       au < manifest ; exists ; 2006-2007 ; Tourism and Hospitality Research Volume 7 ; 7 ; >
       au < manifest ; exists ; 2008 ; Tourism and Hospitality Research Volume 8 ; 8 ; >
       au < manifest ; exists ; 2009 ; Tourism and Hospitality Research Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2010 ; Tourism and Hospitality Research Volume 10 ; 10 ; >
+      au < testing ; exists ; 2010 ; Tourism and Hospitality Research Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; Tourism and Hospitality Research Volume 11 ; 11 ; >
       au < crawling ; exists ; 2012 ; Tourism and Hospitality Research Volume 12 ; 12 ; >
 
@@ -33636,7 +33636,7 @@
       au < manifest ; exists ; 2007 ; Tourist Studies Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Tourist Studies Volume 8 ; 8 ; >
       au < manifest ; exists ; 2009 ; Tourist Studies Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2010 ; Tourist Studies Volume 10 ; 10 ; >
+      au < testing ; exists ; 2010 ; Tourist Studies Volume 10 ; 10 ; >
       au < released ; crawling ; 2011 ; Tourist Studies Volume 11 ; 11 ; >
       au < crawling ; exists ; 2012 ; Tourist Studies Volume 12 ; 12 ; >
 
@@ -33704,7 +33704,7 @@
       au < manifest ; exists ; 2007 ; Toxicologic Pathology Volume 35 ; 35 ; >
       au < manifest ; exists ; 2008 ; Toxicologic Pathology Volume 36 ; 36 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Toxicologic Pathology Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2010 ; Toxicologic Pathology Volume 38 ; 38 ; >
+      au < testing ; exists ; 2010 ; Toxicologic Pathology Volume 38 ; 38 ; >
       au < released ; crawling ; 2011 ; Toxicologic Pathology Volume 39 ; 39 ; >
       au < crawling ; exists ; 2012 ; Toxicologic Pathology Volume 40 ; 40 ; >
 
@@ -33761,7 +33761,7 @@
       au < manifest ; exists ; 2007 ; Toxicology and Industrial Health Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Toxicology and Industrial Health Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Toxicology and Industrial Health Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2010 ; Toxicology and Industrial Health Volume 26 ; 26 ; >
+      au < testing ; exists ; 2010 ; Toxicology and Industrial Health Volume 26 ; 26 ; >
       au < released ; crawling ; 2011 ; Toxicology and Industrial Health Volume 27 ; 27 ; >
       au < crawling ; exists ; 2012 ; Toxicology and Industrial Health Volume 28 ; 28 ; >
 
@@ -33824,7 +33824,7 @@
       au < manifest ; exists ; 2007 ; Transactions of the Institute of Measurement and Control Volume 29 ; 29 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Transactions of the Institute of Measurement and Control Volume 30 ; 30 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Transactions of the Institute of Measurement and Control Volume 31 ; 31 ; >
-      au < crawling ; exists ; 2010 ; Transactions of the Institute of Measurement and Control Volume 32 ; 32 ; >
+      au < testing ; exists ; 2010 ; Transactions of the Institute of Measurement and Control Volume 32 ; 32 ; >
       au < released ; crawling ; 2011 ; Transactions of the Institute of Measurement and Control Volume 33 ; 33 ; >
       au < crawling ; exists ; 2012 ; Transactions of the Institute of Measurement and Control Volume 34 ; 34 ; >
 
@@ -33902,7 +33902,7 @@
       au < manifest ; exists ; 2007 ; Transcultural Psychiatry Volume 44 ; 44 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Transcultural Psychiatry Volume 45 ; 45 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Transcultural Psychiatry Volume 46 ; 46 ; >
-      au < crawling ; exists ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 ; >
+      au < testing ; exists ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 ; >
       au < released ; crawling ; 2011 ; Transcultural Psychiatry Volume 48 ; 48 ; >
       au < crawling ; exists ; 2012 ; Transcultural Psychiatry Volume 49 ; 49 ; >
 
@@ -33939,7 +33939,7 @@
       au < manifest ; exists ; 2007 ; Transfer: European Review of Labour and Research Volume 13 ; 13 ; >
       au < manifest ; exists ; 2008 ; Transfer: European Review of Labour and Research Volume 14 ; 14 ; >
       au < manifest ; exists ; 2009 ; Transfer: European Review of Labour and Research Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2010 ; Transfer: European Review of Labour and Research Volume 16 ; 16 ; >
+      au < testing ; exists ; 2010 ; Transfer: European Review of Labour and Research Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; Transfer: European Review of Labour and Research Volume 17 ; 17 ; >
       au < crawling ; exists ; 2012 ; Transfer: European Review of Labour and Research Volume 18 ; 18 ; >
 
@@ -33995,7 +33995,7 @@
       au < manifest ; exists ; 2007 ; Transformation: An International Journal of Holistic Mission Studies Volume 24 ; 24 ; >
       au < manifest ; exists ; 2008 ; Transformation: An International Journal of Holistic Mission Studies Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Transformation: An International Journal of Holistic Mission Studies Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2010 ; Transformation: An International Journal of Holistic Mission Studies Volume 27 ; 27 ; >
+      au < testing ; exists ; 2010 ; Transformation: An International Journal of Holistic Mission Studies Volume 27 ; 27 ; >
       au < released ; crawling ; 2011 ; Transformation: An International Journal of Holistic Mission Studies Volume 28 ; 28 ; >
       au < crawling ; exists ; 2012 ; Transformation: An International Journal of Holistic Mission Studies Volume 29 ; 29 ; >
 
@@ -34038,7 +34038,7 @@
       au < manifest ; exists ; 2007 ; Trauma Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Trauma Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Trauma Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2010 ; Trauma Volume 12 ; 12 ; >
+      au < testing ; exists ; 2010 ; Trauma Volume 12 ; 12 ; >
       au < released ; crawling ; 2011 ; Trauma Volume 13 ; 13 ; >
       au < crawling ; exists ; 2012 ; Trauma Volume 14 ; 14 ; >
 
@@ -34080,7 +34080,7 @@
       au < manifest ; exists ; 2007 ; Trauma, Violence, & Abuse Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Trauma, Violence, & Abuse Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Trauma, Violence, & Abuse Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2010 ; Trauma, Violence, & Abuse Volume 11 ; 11 ; >
+      au < testing ; exists ; 2010 ; Trauma, Violence, & Abuse Volume 11 ; 11 ; >
       au < released ; crawling ; 2011 ; Trauma, Violence, & Abuse Volume 12 ; 12 ; >
       au < crawling ; exists ; 2012 ; Trauma, Violence, & Abuse Volume 13 ; 13 ; >
 
@@ -34127,7 +34127,7 @@
       au < manifest ; exists ; 2007 ; Traumatology Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Traumatology Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Traumatology Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2010 ; Traumatology Volume 16 ; 16 ; >
+      au < testing ; exists ; 2010 ; Traumatology Volume 16 ; 16 ; >
       au < released ; crawling ; 2011 ; Traumatology Volume 17 ; 17 ; >
       au < crawling ; exists ; 2012 ; Traumatology Volume 18 ; 18 ; >
 
@@ -34173,7 +34173,7 @@
       au < manifest ; exists ; 2007 ; Trends in Amplification Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Trends in Amplification Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Trends in Amplification Volume 13 ; 13 ; >
-      au < crawling ; exists ; 2010 ; Trends in Amplification Volume 14 ; 14 ; >
+      au < testing ; exists ; 2010 ; Trends in Amplification Volume 14 ; 14 ; >
       au < crawling ; exists ; 2011 ; Trends in Amplification Volume 15 ; 15 ; >
       au < manifest ; exists ; 2012 ; Trends in Amplification Volume 16 ; 16 ; >
  
@@ -34230,7 +34230,7 @@
       au < manifest ; exists ; 2007-2008 ; Update: Applications of Research in Music Education Volume 26 ; 26 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Update: Applications of Research in Music Education Volume 27 ; 27 ; >
       au < manifest ; exists ; 2009-2010 ; Update: Applications of Research in Music Education Volume 28 ; 28 ; >
-      au < crawling ; exists ; 2010-2011 ; Update: Applications of Research in Music Education Volume 29 ; 29 ; >
+      au < testing ; exists ; 2010-2011 ; Update: Applications of Research in Music Education Volume 29 ; 29 ; >
       au < released ; crawling ; 2011 ; Update: Applications of Research in Music Education Volume 30 ; 30 ; >
       au < expected ; exists ; 2012 ; Update: Applications of Research in Music Education Volume 31 ; 31 ; >
 
@@ -34307,7 +34307,7 @@
       au < manifest ; exists ; 2007 ; Urban Affairs Review Volume 43 ; 43 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Urban Affairs Review Volume 44 ; 44 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Urban Affairs Review Volume 45 ; 45 ; >
-      au < crawling ; exists ; 2010 ; Urban Affairs Review Volume 46 ; 46 ; >
+      au < testing ; exists ; 2010 ; Urban Affairs Review Volume 46 ; 46 ; >
       au < released ; crawling ; 2011 ; Urban Affairs Review Volume 47 ; 47 ; >
       au < crawling ; exists ; 2012 ; Urban Affairs Review Volume 48 ; 48 ; >
 
@@ -34383,7 +34383,7 @@
       au < manifest ; exists ; 2007 ; Urban Education Volume 42 ; 42 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Urban Education Volume 43 ; 43 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Urban Education Volume 44 ; 44 ; >
-      au < crawling ; exists ; 2010 ; Urban Education Volume 45 ; 45 ; >
+      au < testing ; exists ; 2010 ; Urban Education Volume 45 ; 45 ; >
       au < released ; crawling ; 2011 ; Urban Education Volume 46 ; 46 ; >
       au < crawling ; exists ; 2012 ; Urban Education Volume 47 ; 47 ; >
 
@@ -34461,7 +34461,7 @@
       au < manifest ; exists ; 2007 ; Urban Studies Volume 44 ; 44 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Urban Studies Volume 45 ; 45 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Urban Studies Volume 46 ; 46 ; >
-      au < crawling ; exists ; 2010 ; Urban Studies Volume 47 ; 47 ; >
+      au < testing ; exists ; 2010 ; Urban Studies Volume 47 ; 47 ; >
       au < released ; crawling ; 2011 ; Urban Studies Volume 48 ; 48 ; >
       au < crawling ; exists ; 2012 ; Urban Studies Volume 49 ; 49 ; >
 
@@ -34536,7 +34536,7 @@
       au < manifest ; exists ; 2007 ; Vascular and Endovascular Surgery Volume 41 ; 41 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Vascular and Endovascular Surgery Volume 42 ; 42 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Vascular and Endovascular Surgery Volume 43 ; 43 ; >
-      au < crawling ; exists ; 2010 ; Vascular and Endovascular Surgery Volume 44 ; 44 ; >
+      au < testing ; exists ; 2010 ; Vascular and Endovascular Surgery Volume 44 ; 44 ; >
       au < released ; crawling ; 2011 ; Vascular and Endovascular Surgery Volume 45 ; 45 ; >
       au < crawling ; exists ; 2012 ; Vascular and Endovascular Surgery Volume 46 ; 46 ; >
 
