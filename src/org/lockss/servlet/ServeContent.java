@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.49.2.1 2012-05-30 21:06:13 pgust Exp $
+ * $Id: ServeContent.java,v 1.49.2.2 2012-06-02 05:42:16 pgust Exp $
  */
 
 /*
@@ -421,10 +421,6 @@ public class ServeContent extends LockssServlet {
       }
       if (au != null) {
         handleAuRequest();
-      } else if (!isNeverProxy()) {
-        log.debug2("Content not cached: redirecting to " + url);
-        redirectToUrl();
-        logAccess("not configured, 302 redirect to pub");
       } else {
         handleMissingUrlRequest(url, PubState.Unknown);
       }
@@ -1171,15 +1167,18 @@ public class ServeContent extends LockssServlet {
                          "Possibly related content may be found "
                          + "in the following Archival Units");
       } else {
-        resp.sendError(HttpResponse.__404_Not_Found,
-                     info.resolvedUrl + " is not preserved on this LOCKSS box");
+        displayIndexPage(Collections.EMPTY_LIST,
+            HttpResponse.__404_Not_Found,
+            block,
+            null);
         logAccess("not present, 404");
       }
       break;
     case AuIndex:
       displayIndexPage(pluginMgr.getAllAus(),
                        HttpResponse.__404_Not_Found,
-                       block, null);
+                       block, 
+                       "The LOCKSS box has the followinging Archival Units");
       logAccess("not present, 404 with index");
       break;
     }
@@ -1189,6 +1188,16 @@ public class ServeContent extends LockssServlet {
       throws IOException {
     String missing =
       missingUrl + ((au != null) ? " in AU: " + au.getName() : "");
+    
+    Block block = new Block(Block.Center);
+    // display publisher page
+    block.add("<p>The requested URL is not preserved  on this LOCKSS box. ");
+    block.add("Select link");
+    block.add(addFootnote(
+        "Selecting publisher link takes you away from this LOCKSS box."));
+    block.add(" to view it at the publisher:</p>");
+    block.add("<a href=\"" + missingUrl + "\">" + missingUrl + "</a><br/><br/>");
+
     switch (getMissingFileAction(pstate)) {
     case Error_404:
       resp.sendError(HttpServletResponse.SC_NOT_FOUND,
@@ -1204,22 +1213,23 @@ public class ServeContent extends LockssServlet {
       if (candidateAus != null && !candidateAus.isEmpty()) {
 	displayIndexPage(candidateAus,
 			 HttpResponse.__404_Not_Found,
-			 "Requested URL ( " + missing
-			 + " ) is not preserved on this LOCKSS box.  "
-			 + "Possibly related content may be found "
+			 block,
+			 "Possibly related content may be found "
 			 + "in the following Archival Units");
 	logAccess("not present, 404 with index");
       } else {
-	resp.sendError(HttpResponse.__404_Not_Found,
-		       missing + " is not preserved on this LOCKSS box");
-	logAccess("not present, 404");
+        displayIndexPage(Collections.EMPTY_LIST,
+            HttpResponse.__404_Not_Found,
+            block,
+            null);
+        logAccess("not present, 404");
       }
       break;
     case AuIndex:
       displayIndexPage(pluginMgr.getAllAus(),
 		       HttpResponse.__404_Not_Found,
-		       "Requested URL ( " + missing
-		       + " ) is not preserved on this LOCKSS box.");
+		       block,
+		       null);
       logAccess("not present, 404 with index");
       break;
     }
@@ -1261,14 +1271,14 @@ public class ServeContent extends LockssServlet {
     }
     Page page = newPage();
 
+    if (headerElement != null) {
+      page.add(headerElement);
+    }
+    
     if (areAllExcluded(auList, pred) && !offerUnfilteredList) {
       ServletUtil.layoutExplanationBlock(page,
-					 "No content has been preserved on this LOCKSS box");
+          "No matching content has been preserved on this LOCKSS box");
     } else {
-      if (headerElement != null) {
-        page.add(headerElement);
-      }
-      
       // Layout manifest index w/ URLs pointing to this servlet
       Element ele =
 	ServletUtil.manifestIndex(pluginMgr,
