@@ -6,15 +6,24 @@
 
   comment[base_url] = http://www.ashdin.com/
   comment[0] = none of these have any content published yet 12-15-2011
+  implicit < status ; year ; name ; param[volume_name] >
 
+    {
+     plugin = org.lockss.plugin.ashdin.AshdinPlugin
+     param[base_url] = http://www.ashdin.com/ 
+    
     {
       title <
         name = Automatic Control of Physiological State and Function ;
         issn = 2090-5084 ;
         eissn = 2090-5092
       >
-
+     
+      nondefparam[journal_code] = acpsf
       comment[platform] = open access
+      
+       au < manifest; 2012 ;Automatic Control of Physiological State and Function Volume 1 ; 1 >
+      
 
     }
 
@@ -161,4 +170,5 @@
 
     }
 
+}
 }
