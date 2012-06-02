@@ -1,5 +1,5 @@
 /*
- * $Id: TestRunKbartReport.java,v 1.2 2012-02-26 08:20:25 pgust Exp $
+ * $Id: TestRunKbartReport.java,v 1.2.6.1 2012-06-02 05:30:03 pgust Exp $
  */
 
 /*
@@ -190,7 +190,7 @@ public class TestRunKbartReport extends LockssTestCase {
     }
     // Split the line into trimmed tokens
     List<String> expectedProps = getExpectedProps(line);
-    // The BibItem will return null for empty fields.
+    // The BibItem will return null for empty or invalid fields.
     assertEquals(expectedProps.get(0), item.getPublisherName());
     assertEquals(expectedProps.get(1), item.getName());
     assertEquals(asIssn(expectedProps.get(2)), item.getPrintIssn());
