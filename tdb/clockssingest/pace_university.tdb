@@ -96,7 +96,7 @@
     au < released ; crawling ; 2009 ; Pace International Law Review Volume 21 ; 21 >
     au < released ; crawling ; 2010 ; Pace International Law Review Volume 22 ; 22 >
     au < released ; crawling ; 2011 ; Pace International Law Review Volume 23 ; 23 >
-    au < manifest ; exists ; 2012 ; Pace International Law Review Volume 24 ; 24 >
+    au < crawling ; exists ; 2012 ; Pace International Law Review Volume 24 ; 24 >
 
   }
 
@@ -165,7 +165,7 @@
     param[journal_abbr] = pipself
 
     au < released ; crawling ; 2011 ; Pace I.P., Sports & Entertainment Law Forum Volume 1 ; 1 >
-    au < manifest ; exists ; 2012 ; Pace I.P., Sports & Entertainment Law Forum Volume 2 ; 2 >
+    au < crawling ; exists ; 2012 ; Pace I.P., Sports & Entertainment Law Forum Volume 2 ; 2 >
 
   }
 
