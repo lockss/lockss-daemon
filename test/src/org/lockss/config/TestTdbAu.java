@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.13 2012-06-01 23:34:08 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.14 2012-06-04 21:57:15 pgust Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.config;
 
-import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.util.*;
 import org.lockss.config.Tdb.TdbException;
 import org.lockss.test.*;
@@ -43,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.13 2012-06-01 23:34:08 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.14 2012-06-04 21:57:15 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
