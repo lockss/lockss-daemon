@@ -16,7 +16,8 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.jbc.org/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = this journal is huge; do not process until further notice.
+    
+    comment[doNotProcess] = this journal is huge. Do not process until further notice.
 
     au < doNotProcess ; 1965 ; Journal of Biological Chemistry Volume 240 ; 240 >
     au < doNotProcess ; 1966 ; Journal of Biological Chemistry Volume 241 ; 241 >
