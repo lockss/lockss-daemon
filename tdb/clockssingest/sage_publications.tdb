@@ -361,7 +361,7 @@
       au < manifest ; exists ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 ; >
       au < released ; manifest ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 ; >
       au < released ; manifest ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 ; >
-      au < manifest ; exists ; 2012 ; Administrative Science Quarterly Volume 57 ; 57 ; >
+      au < crawling ; exists ; 2012 ; Administrative Science Quarterly Volume 57 ; 57 ; >
 
     }
 
@@ -4971,7 +4971,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Clothing and Textiles Research Journal Volume 27 ; 27 ; >
       au < released ; crawling ; 2010 ; Clothing and Textiles Research Journal Volume 28 ; 28 ; >
       au < released ; crawling ; 2011 ; Clothing and Textiles Research Journal Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2012 ; Clothing and Textiles Research Journal Volume 30 ; 30 ; >
+      au < crawling ; exists ; 2012 ; Clothing and Textiles Research Journal Volume 30 ; 30 ; >
 
     }
 
@@ -6053,7 +6053,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Crime, Media, Culture Volume 5 ; 5 ; >
       au < released ; crawling ; 2010 ; Crime, Media, Culture Volume 6 ; 6 ; >
       au < released ; crawling ; 2011 ; Crime, Media, Culture Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2012 ; Crime, Media, Culture Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2012 ; Crime, Media, Culture Volume 8 ; 8 ; >
 
     }
 
@@ -8468,7 +8468,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://acc.sagepub.com/
 
-      au < manifest ; exists ; 2012 ; European Heart Journal: Acute Cardiovascular Care Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2012 ; European Heart Journal: Acute Cardiovascular Care Volume 1 ; 1 ; >
 
   }
 
@@ -9350,7 +9350,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Evaluation Review Volume 33 ; 33 ; >
       au < released ; crawling ; 2010 ; Evaluation Review Volume 34 ; 34 ; >
       au < released ; crawling ; 2011 ; Evaluation Review Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2012 ; Evaluation Review Volume 36 ; 36 ; >
+      au < crawling ; exists ; 2012 ; Evaluation Review Volume 36 ; 36 ; >
 
     }
 
@@ -12486,7 +12486,7 @@
       au < exists ; exists ; 2009 ; International Area Studies Review Volume 12 ; 12 ; >
       au < exists ; exists ; 2010 ; International Area Studies Review Volume 13 ; 13 ; >
       au < notReady ; exists ; 2011 ; International Area Studies Review Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2012 ; International Area Studies Review Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2012 ; International Area Studies Review Volume 15 ; 15 ; >
      
     }
     
@@ -24623,7 +24623,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The Medieval History Journal Volume 12 ; 12 ; >
       au < released ; manifest ; 2010 ; The Medieval History Journal Volume 13 ; 13 ; >
       au < released ; crawling ; 2011 ; The Medieval History Journal Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2012 ; The Medieval History Journal Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2012 ; The Medieval History Journal Volume 15 ; 15 ; >
 
     }
 
@@ -32225,7 +32225,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Surgical Innovation Volume 16 ; 16 ; >
       au < released ; manifest ; 2010 ; Surgical Innovation Volume 17 ; 17 ; >
       au < released ; crawling ; 2011 ; Surgical Innovation Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2012 ; Surgical Innovation Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2012 ; Surgical Innovation Volume 19 ; 19 ; >
 
     }
 
@@ -33458,7 +33458,7 @@
       au < released ; crawling ; 2011 ; Thesis Eleven Volume 106 ; 106 ; >
       au < crawling ; exists ; 2012 ; Thesis Eleven Volume 107 ; 107 ; >
       au < crawling ; exists ; 2012 ; Thesis Eleven Volume 108 ; 108 ; >
-      au < manifest ; exists ; 2012 ; Thesis Eleven Volume 109 ; 109 ; >
+      au < crawling ; exists ; 2012 ; Thesis Eleven Volume 109 ; 109 ; >
       au < expected ; exists ; 2012 ; Thesis Eleven Volume 110 ; 110 ; >
       
 
@@ -34175,7 +34175,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Trends in Amplification Volume 13 ; 13 ; >
       au < testing ; exists ; 2010 ; Trends in Amplification Volume 14 ; 14 ; >
       au < crawling ; exists ; 2011 ; Trends in Amplification Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2012 ; Trends in Amplification Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2012 ; Trends in Amplification Volume 16 ; 16 ; >
  
     }
 
