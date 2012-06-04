@@ -76,7 +76,7 @@
 
     au < manifest ; exists ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
-    au < manifest ; exists ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
+    au < crawling ; exists ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
     au < released ; crawling ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
     au < manifest ; exists ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
 
@@ -454,7 +454,7 @@
     au < manifest ; exists ; 2007 ; Polar Research Volume 26 ; 26 ; 2007 >
     au < manifest ; exists ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
     au < manifest ; exists ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
-    au < manifest ; exists ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
+    au < crawling ; exists ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
     au < testing ; exists ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
     au < exists ; exists ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
 
@@ -490,7 +490,7 @@
     au < manifest ; exists ; 2007 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 15 ; 15 ; 2007 >
     au < manifest ; exists ; 2008 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 16 ; 16 ; 2008 >
     au < manifest ; exists ; 2009 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 17 ; 17 ; 2009 >
-    au < manifest ; exists ; 2010 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 18 ; 18 ; 2010 >
+    au < crawling ; exists ; 2010 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 18 ; 18 ; 2010 >
     au < crawling ; exists ; 2011 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 19 ; 19 ; 2011 >
     au < exists ; exists ; 2012 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 20 ; 20 ; 2012 >
 
@@ -630,7 +630,7 @@
     au < manifest ; exists ; 2007 ; Tellus A: Dynamic Meteorology and Oceanography Volume 59 ; 59 ; 2007 >
     au < manifest ; exists ; 2008 ; Tellus A: Dynamic Meteorology and Oceanography Volume 60 ; 60 ; 2008 >
     au < manifest ; exists ; 2009 ; Tellus A: Dynamic Meteorology and Oceanography Volume 61 ; 61 ; 2009 >
-    au < manifest ; exists ; 2010 ; Tellus A: Dynamic Meteorology and Oceanography Volume 62 ; 62 ; 2010 >
+    au < crawling ; exists ; 2010 ; Tellus A: Dynamic Meteorology and Oceanography Volume 62 ; 62 ; 2010 >
     au < crawling ; exists ; 2011 ; Tellus A: Dynamic Meteorology and Oceanography Volume 63 ; 63 ; 2011 >
     au < manifest ; exists ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 ; 2012 >
 
@@ -709,7 +709,7 @@
     au < manifest ; exists ; 2007 ; Tellus B: Chemical and Physical Meteorology Volume 59 ; 59 ; 2007 >
     au < manifest ; exists ; 2008 ; Tellus B: Chemical and Physical Meteorology Volume 60 ; 60 ; 2008 >
     au < manifest ; exists ; 2009 ; Tellus B: Chemical and Physical Meteorology Volume 61 ; 61 ; 2009 >
-    au < manifest ; exists ; 2010 ; Tellus B: Chemical and Physical Meteorology Volume 62 ; 62 ; 2010 >
+    au < crawling ; exists ; 2010 ; Tellus B: Chemical and Physical Meteorology Volume 62 ; 62 ; 2010 >
     au < crawling ; exists ; 2011 ; Tellus B: Chemical and Physical Meteorology Volume 63 ; 63 ; 2011 >
     au < manifest ; exists ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 64 ; 64 ; 2012 >
 
@@ -726,7 +726,7 @@
     param[base_url] = http://www.vulnerablegroupsandinclusion.net/
     param[journal_id] = vgi
 
-    au < manifest ; exists ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
+    au < crawling ; exists ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
     au < released ; crawling ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
     au < exists ; exists ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 ; 2012 >
 
