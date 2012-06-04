@@ -614,12 +614,12 @@ class Client:
     def getV3PollKey( self, AU, excluded_poll_keys = [] ):
         """Return the key of a poll on the AU, excluding poll keys in excluded_poll_keys."""
         for row in self.getAuV3Pollers():
-            if row[ 'pollId' ][ 'key' ] not in excluded_poll_keys and self.isAuIdOrRef( row[ 'auId' ], AU ):
+            if 'pollId' in row and row[ 'pollId' ][ 'key' ] not in excluded_poll_keys and self.isAuIdOrRef( row[ 'auId' ], AU ):
                 return row[ 'pollId' ][ 'key' ]
 
     def getV3PollKeys( self, AU ):
         """Return the keys of all polls on the AU."""
-        return [ row[ 'pollId' ][ 'key' ] for row in self.getAuV3Pollers() ]
+        return [ row[ 'pollId' ][ 'key' ] for row in self.getAuV3Pollers() if 'pollId' in row ]
 
     def getV3PollInvitedPeers( self, poll_key ):
         return [ self.valueOfRef( row[ 'identity' ] ) for row in self.getV3PollerDetail( poll_key )[ 1 ] ]
@@ -805,6 +805,7 @@ class Client:
         if key:
             summary = self.getV3PollerDetail( key )[ 0 ]
             return summary and summary[ 'Status' ] in ( 'No Time Available', 'Complete', 'No Quorum', 'Error', 'Expired' )
+        else: return False
 
     ###
     ### Methods that block while waiting for various events
