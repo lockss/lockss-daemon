@@ -5,7 +5,7 @@
   >
 
   attr[contract] = 2011
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.igiglobal.ClockssIgiGlobalPlugin
   param[base_url] = http://www.igi-global.com/
   implicit < status1 ; status ; year; name ; param[volume_name] >
   
