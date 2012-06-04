@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.52 2012-06-02 05:42:13 pgust Exp $
+ * $Id: ServeContent.java,v 1.53 2012-06-04 19:21:53 pgust Exp $
  */
 
 /*
@@ -1178,7 +1178,7 @@ public class ServeContent extends LockssServlet {
       displayIndexPage(pluginMgr.getAllAus(),
                        HttpResponse.__404_Not_Found,
                        block, 
-                       "The LOCKSS box has the followinging Archival Units");
+                       "The LOCKSS box has the following Archival Units");
       logAccess("not present, 404 with index");
       break;
     }
