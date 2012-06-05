@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseHtmlFilterFactory.java,v 1.6 2012-05-22 19:36:08 wkwilson Exp $*/
+ * $Id: ProjectMuseHtmlFilterFactory.java,v 1.7 2012-06-05 18:00:21 cgkmccarthy1 Exp $*/
 
 /*
 
@@ -51,6 +51,7 @@ public class ProjectMuseHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "access_statement"),
         //frequently downlaoded articles sidebar
         HtmlNodeFilters.tagWithAttribute("div", "id", "freq_downloaded-box"),
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "freq_downloaded-box"),
         //related articles sidebar
         HtmlNodeFilters.tagWithAttribute("div", "id", "related-box"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar2"),
