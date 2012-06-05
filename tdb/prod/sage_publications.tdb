@@ -3122,7 +3122,7 @@
         au < manifest ; 2007 ; Australasian Psychiatry Volume 15 ; 15 >
         au < manifest ; 2008 ; Australasian Psychiatry Volume 16 ; 16 >
         au < manifest ; 2009 ; Australasian Psychiatry Volume 17 ; 17 >
-        au < manifest ; 2010 ; Australasian Psychiatry Volume 18 ; 18 >
+        au < ready ; 2010 ; Australasian Psychiatry Volume 18 ; 18 >
         au < manifest ; 2011 ; Australasian Psychiatry Volume 19 ; 19 >
         au < manifest ; 2012 ; Australasian Psychiatry Volume 20 ; 20 >
       }
@@ -5323,7 +5323,7 @@
         au < manifest ; 2007 ; Clinical EEG and Neuroscience Volume 38 ; 38 >
         au < manifest ; 2008 ; Clinical EEG and Neuroscience Volume 39 ; 39 >
         au < manifest ; 2009 ; Clinical EEG and Neuroscience Volume 40 ; 40 >
-        au < manifest ; 2010 ; Clinical EEG and Neuroscience Volume 41 ; 41 >
+        au < ready ; 2010 ; Clinical EEG and Neuroscience Volume 41 ; 41 >
         au < manifest ; 2011 ; Clinical EEG and Neuroscience Volume 42 ; 42 >
         au < manifest ; 2012 ; Clinical EEG and Neuroscience Volume 43 ; 43 >
       
@@ -8357,7 +8357,7 @@
         au < manifest ; 2007 ; Drug Information Journal Volume 41 ; 41 >
         au < manifest ; 2008 ; Drug Information Journal Volume 42 ; 42 >
         au < manifest ; 2009 ; Drug Information Journal Volume 43 ; 43 >
-        au < manifest ; 2010 ; Drug Information Journal Volume 44 ; 44 >
+        au < ready ; 2010 ; Drug Information Journal Volume 44 ; 44 >
         au < manifest ; 2011 ; Drug Information Journal Volume 45 ; 45 >
         au < manifest ; 2012 ; Drug Information Journal Volume 46 ; 46 >
   
@@ -11693,7 +11693,7 @@
         au < doNotProcess ; 2007 ; Gender, Technology and Development Volume 11 ; 11 >
         au < doNotProcess ; 2008 ; Gender, Technology and Development Volume 12 ; 12 >
         au < released ; 2009 ; Gender, Technology and Development Volume 13 ; 13 >
-        au < manifest ; 2010 ; Gender, Technology and Development Volume 14 ; 14 >
+        au < ready ; 2010 ; Gender, Technology and Development Volume 14 ; 14 >
         au < ready ; 2011 ; Gender, Technology and Development Volume 15 ; 15 >
         au < manifest ; 2012 ; Gender, Technology and Development Volume 16 ; 16 >
 
@@ -12412,7 +12412,7 @@
         au < manifest ; 2008 ; International Journal of Bilingualism Volume 12 ; 12 >
         au < manifest ; 2009 ; International Journal of Bilingualism Volume 13 ; 13 >
         au < released ; 2010 ; International Journal of Bilingualism Volume 14 ; 14 >
-        au < manifest ; 2011 ; International Journal of Bilingualism Volume 15 ; 15 >
+        au < ready ; 2011 ; International Journal of Bilingualism Volume 15 ; 15 >
         au < manifest ; 2012 ; International Journal of Bilingualism Volume 16 ; 16 >
 
       }
@@ -13600,7 +13600,7 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2009 ; Human Genomics and Proteomics Volume 1 ; 1 >
-        au < manifest ; 2010 ; Human Genomics and Proteomics Volume 2 ; 2 >
+        au < ready ; 2010 ; Human Genomics and Proteomics Volume 2 ; 2 >
         au < expected ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 >
         au < expected ; 2012 ; Human Genomics and Proteomics Volume 4 ; 4 >
 
@@ -13850,7 +13850,7 @@
         au < doNotProcess ; 2008 ; IFLA Journal Volume 34 ; 34 >
         au < doNotProcess ; 2009 ; IFLA Journal Volume 35 ; 35 >
         au < released ; 2010 ; IFLA Journal Volume 36 ; 36 >
-        au < manifest ; 2011 ; IFLA Journal Volume 37 ; 37 >
+        au < ready ; 2011 ; IFLA Journal Volume 37 ; 37 >
         au < manifest ; 2012 ; IFLA Journal Volume 38 ; 38 >
 
       }
@@ -14090,7 +14090,7 @@
         au < doNotProcess ; 2008 ; Indian Economic & Social History Review Volume 45 ; 45 >
         au < doNotProcess ; 2009 ; Indian Economic & Social History Review Volume 46 ; 46 >
         au < released ; 2010 ; Indian Economic & Social History Review Volume 47 ; 47 >
-        au < manifest ; 2011 ; Indian Economic & Social History Review Volume 48 ; 48 >
+        au < ready ; 2011 ; Indian Economic & Social History Review Volume 48 ; 48 >
         au < manifest ; 2012 ; Indian Economic & Social History Review Volume 49 ; 49 >
 
       }
@@ -14122,8 +14122,8 @@
         au < manifest ; 2007 ; Indian Historical Review Volume 34 ; 34 >
         au < manifest ; 2008 ; Indian Historical Review Volume 35 ; 35 >
         au < manifest ; 2009 ; Indian Historical Review Volume 36 ; 36 >
-        au < manifest ; 2010 ; Indian Historical Review Volume 37 ; 37 >
-        au < manifest ; 2011 ; Indian Historical Review Volume 38 ; 38 >
+        au < ready ; 2010 ; Indian Historical Review Volume 37 ; 37 >
+        au < ready ; 2011 ; Indian Historical Review Volume 38 ; 38 >
         au < expected ; 2012 ; Indian Historical Review Volume 39 ; 39 >
 
       }
@@ -14187,7 +14187,7 @@
         au < doNotProcess ; 2008 ; Indian Journal of Gender Studies Volume 15 ; 15 >
         au < doNotProcess ; 2009 ; Indian Journal of Gender Studies Volume 16 ; 16 >
         au < released ; 2010 ; Indian Journal of Gender Studies Volume 17 ; 17 >
-        au < manifest ; 2011 ; Indian Journal of Gender Studies Volume 18 ; 18 >
+        au < ready ; 2011 ; Indian Journal of Gender Studies Volume 18 ; 18 >
         au < manifest ; 2012 ; Indian Journal of Gender Studies Volume 19 ; 19 >
 
       }
@@ -14280,7 +14280,7 @@
         au < manifest ; 2007 ; Humanity & Society Volume 31 ; 31 >
         au < manifest ; 2008 ; Humanity & Society Volume 32 ; 32 >
         au < manifest ; 2009 ; Humanity & Society Volume 33 ; 33 >
-        au < manifest ; 2010 ; Humanity & Society Volume 34 ; 34 >
+        au < ready ; 2010 ; Humanity & Society Volume 34 ; 34 >
         au < manifest ; 2011 ; Humanity & Society Volume 35 ; 35 >
         au < manifest ; 2012 ; Humanity & Society Volume 36 ; 36 >
   
@@ -14325,8 +14325,8 @@
         param[base_url] = http://icu.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2010 ; ICU Director Volume 1 ; 1 >
-        au < manifest ; 2011 ; ICU Director Volume 2 ; 2 >
+        au < ready ; 2010 ; ICU Director Volume 1 ; 1 >
+        au < ready ; 2011 ; ICU Director Volume 2 ; 2 >
         au < manifest ; 2012 ; ICU Director Volume 3 ; 3 >
 
       }
@@ -14399,7 +14399,7 @@
         au < doNotProcess ; 2008 ; Information Development Volume 24 ; 24 >
         au < doNotProcess ; 2009 ; Information Development Volume 25 ; 25 >
         au < manifest ; 2010 ; Information Development Volume 26 ; 26 >
-        au < manifest ; 2011 ; Information Development Volume 27 ; 27 >
+        au < ready ; 2011 ; Information Development Volume 27 ; 27 >
         au < manifest ; 2012 ; Information Development Volume 28 ; 28 >
 
       }
@@ -15073,7 +15073,7 @@
         au < doNotProcess ; 2008 ; International Journal of Damage Mechanics Volume 17 ; 17 >
         au < doNotProcess ; 2009 ; International Journal of Damage Mechanics Volume 18 ; 18 >
         au < released ; 2010 ; International Journal of Damage Mechanics Volume 19 ; 19 >
-        au < manifest ; 2011 ; International Journal of Damage Mechanics Volume 20 ; 20 >
+        au < ready ; 2011 ; International Journal of Damage Mechanics Volume 20 ; 20 >
         au < manifest ; 2012 ; International Journal of Damage Mechanics Volume 21 ; 21 >
 
       }
@@ -15251,7 +15251,7 @@
         au < doNotProcess ; 2008 ; The International Journal of Lower Extremity Wounds Volume 7 ; 7 >
         au < doNotProcess ; 2009 ; The International Journal of Lower Extremity Wounds Volume 8 ; 8 >
         au < released ; 2010 ; The International Journal of Lower Extremity Wounds Volume 9 ; 9 >
-        au < manifest ; 2011 ; The International Journal of Lower Extremity Wounds Volume 10 ; 10 >
+        au < ready ; 2011 ; The International Journal of Lower Extremity Wounds Volume 10 ; 10 >
         au < manifest ; 2012 ; The International Journal of Lower Extremity Wounds Volume 11 ; 11 >
 
       }
@@ -15320,8 +15320,8 @@
         au < HighWireStrVolPlugin ; down ; 2007 ; International Journal of Music Education Volume 25 ; 25 >
         au < HighWirePressPlugin ; down ; 2008 ; International Journal of Music Education Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; down ; 2009 ; International Journal of Music Education Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; manifest ; 2010 ; International Journal of Music Education Volume 28 ; 28 >
-        au < HighWirePressH20Plugin ; manifest ; 2011 ; International Journal of Music Education Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; ready ; 2010 ; International Journal of Music Education Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; ready ; 2011 ; International Journal of Music Education Volume 29 ; 29 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; International Journal of Music Education Volume 30 ; 30 >
 
       }
@@ -15414,7 +15414,7 @@
         au < doNotProcess ; 2008 ; International Journal of Offender Therapy and Comparative Criminology Volume 52 ; 52 >
         au < doNotProcess ; 2009 ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 >
         au < released ; 2010 ; International Journal of Offender Therapy and Comparative Criminology Volume 54 ; 54 >
-        au < manifest ; 2011 ; International Journal of Offender Therapy and Comparative Criminology Volume 55 ; 55 >
+        au < ready ; 2011 ; International Journal of Offender Therapy and Comparative Criminology Volume 55 ; 55 >
         au < manifest ; 2012 ; International Journal of Offender Therapy and Comparative Criminology Volume 56 ; 56 >
         
       }
