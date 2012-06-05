@@ -250,7 +250,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; expected ; 2012 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 27 ; 27 >
       
     }
     
@@ -568,7 +568,7 @@
       au < released ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 >
       au < released ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 >
       au < released ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 >
-      au < expected ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 >
+      au < manifest ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 >
       
     }
   }
@@ -1034,7 +1034,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Poetics Today Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Poetics Today Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; manifest ; 2011 ; Poetics Today Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; expected ; 2012 ; Poetics Today Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Poetics Today Volume 33 ; 33 >
     
     }
     
@@ -1078,6 +1078,7 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://positions.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      comment[title] = title changed since 2012 in Duke only
       
       au < HighWireStrVolPlugin ; down ; 2005 ; positions: east asia cultures critique Volume 13 ; 13 >
       au < HighWireStrVolPlugin ; down ; 2006 ; positions: east asia cultures critique Volume 14 ; 14 >
@@ -1086,7 +1087,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; manifest ; 2011 ; positions: east asia cultures critique Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; expected ; 2012 ; positions: east asia cultures critique Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; positions: asia critique Volume 20 ; 20 >
 
     }
     
