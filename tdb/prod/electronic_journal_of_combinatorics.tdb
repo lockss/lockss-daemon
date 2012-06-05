@@ -8,30 +8,30 @@
       name = The Electronic Journal of Combinatorics ;
       issn = 1077-8926
     >
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      implicit < status ; year ; name ; volume ; param[year] >
       
       param[base_url] = http://www.combinatorics.org/
-      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 1994 ; The Electronic Journal of Combinatorics Volume 1 ; 1 >
-      au < exists ; 1995 ; The Electronic Journal of Combinatorics Volume 2 ; 2 >
-      au < exists ; 1996 ; The Electronic Journal of Combinatorics Volume 3 ; 3 >
-      au < exists ; 1997 ; The Electronic Journal of Combinatorics Volume 4 ; 4 >
-      au < exists ; 1998 ; The Electronic Journal of Combinatorics Volume 5 ; 5 >
-      au < exists ; 1999 ; The Electronic Journal of Combinatorics Volume 6 ; 6 >
-      au < exists ; 2000 ; The Electronic Journal of Combinatorics Volume 7 ; 7 >
-      au < exists ; 2001 ; The Electronic Journal of Combinatorics Volume 8 ; 8 >
-      au < exists ; 2002 ; The Electronic Journal of Combinatorics Volume 9 ; 9 >
-      au < exists ; 2003 ; The Electronic Journal of Combinatorics Volume 10 ; 10 >
-      au < exists ; 2004 ; The Electronic Journal of Combinatorics Volume 11 ; 11 >
-      au < exists ; 2005 ; The Electronic Journal of Combinatorics Volume 12 ; 12 >
-      au < exists ; 2006 ; The Electronic Journal of Combinatorics Volume 13 ; 13 >
-      au < exists ; 2007 ; The Electronic Journal of Combinatorics Volume 14 ; 14 >
-      au < exists ; 2008 ; The Electronic Journal of Combinatorics Volume 15 ; 15 >
-      au < exists ; 2009 ; The Electronic Journal of Combinatorics Volume 16 ; 16 >
-      au < exists ; 2010 ; The Electronic Journal of Combinatorics Volume 17 ; 17 >
-      au < exists ; 2011 ; The Electronic Journal of Combinatorics Volume 18 ; 18 >
-      au < exists ; 2012 ; The Electronic Journal of Combinatorics Volume 19 ; 19 >
+      au < exists ; 1994 ; The Electronic Journal of Combinatorics Volume 1 ; 1 ; 1994 >
+      au < exists ; 1995 ; The Electronic Journal of Combinatorics Volume 2 ; 2 ; 1995 >
+      au < exists ; 1996 ; The Electronic Journal of Combinatorics Volume 3 ; 3 ; 1996 >
+      au < exists ; 1997 ; The Electronic Journal of Combinatorics Volume 4 ; 4 ; 1997 >
+      au < exists ; 1998 ; The Electronic Journal of Combinatorics Volume 5 ; 5 ; 1998 >
+      au < exists ; 1999 ; The Electronic Journal of Combinatorics Volume 6 ; 6 ; 1999 >
+      au < exists ; 2000 ; The Electronic Journal of Combinatorics Volume 7 ; 7 ; 2000 >
+      au < exists ; 2001 ; The Electronic Journal of Combinatorics Volume 8 ; 8 ; 2001 >
+      au < exists ; 2002 ; The Electronic Journal of Combinatorics Volume 9 ; 9 ; 2002 >
+      au < exists ; 2003 ; The Electronic Journal of Combinatorics Volume 10 ; 10 ; 2003 >
+      au < exists ; 2004 ; The Electronic Journal of Combinatorics Volume 11 ; 11 ; 2004 >
+      au < exists ; 2005 ; The Electronic Journal of Combinatorics Volume 12 ; 12 ; 2005 >
+      au < exists ; 2006 ; The Electronic Journal of Combinatorics Volume 13 ; 13 ; 2006 >
+      au < exists ; 2007 ; The Electronic Journal of Combinatorics Volume 14 ; 14 ; 2007 >
+      au < exists ; 2008 ; The Electronic Journal of Combinatorics Volume 15 ; 15 ; 2008 >
+      au < exists ; 2009 ; The Electronic Journal of Combinatorics Volume 16 ; 16 ; 2009 >
+      au < exists ; 2010 ; The Electronic Journal of Combinatorics Volume 17 ; 17 ; 2010 >
+      au < exists ; 2011 ; The Electronic Journal of Combinatorics Volume 18 ; 18 ; 2011 >
+      au < exists ; 2012 ; The Electronic Journal of Combinatorics Volume 19 ; 19 ; 2012 >
 
   }
 
