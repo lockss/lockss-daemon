@@ -8,12 +8,6 @@
   
   {
   
-   comment[0] = RT3894 GLN only for now (manifest pages have both LOCKSS and CLOCKSS permission statements)
-
-  }
-
-  {
-  
     title <
       name = Studia Universitatis Babeş-Bolyai, Geologia ;
       issn = 1221-0803 ;
@@ -21,7 +15,7 @@
       issnl = 1221-0803
     >
     
-    plugin = org.lockss.plugin.ClockssBerkeleyElectionPressPlugin 
+    plugin = org.lockss.plugin.ClockssBerkeleyElectronicPressPlugin 
     param[base_url] = http://scholarcommons.usf.edu/
     param[journal_abbr] = geologia
     implicit < status ; status2; year ; name ; param[volume] >
