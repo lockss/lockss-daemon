@@ -72,11 +72,10 @@
     >
 
     param[journal_abbr] = ipbrief
-    comment[vol3] = vol 3 not published yet as of 2012-01-18
 
     au < released ; crawling ; 2010 ; American University Intellectual Property Brief Issue 1 ; 1 >
     au < released ; crawling ; 2010 ; American University Intellectual Property Brief Issue 2 ; 2 >
-    au < crawling ; exists ; 2010 ; American University Intellectual Property Brief Issue 3 ; 3 >
+    au < testing ; exists ; 2010 ; American University Intellectual Property Brief Issue 3 ; 3 >
 
   }
 
