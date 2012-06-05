@@ -13,7 +13,7 @@
       eissn = 1541-5015 
     >
     
-    plugin = org.lockss.plugin.ClockssBerkeleyElectionPressPlugin 
+    plugin = org.lockss.plugin.ClockssBerkeleyElectronicPressPlugin 
     param[base_url] = http://docs.lib.purdue.edu/
     param[journal_abbr] = ijpbl
     implicit < status ; status2 ; year ; name ; param[volume] >
