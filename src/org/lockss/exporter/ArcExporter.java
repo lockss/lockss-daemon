@@ -1,5 +1,5 @@
 /*
- * $Id: ArcExporter.java,v 1.4 2011-03-15 20:07:33 tlipkis Exp $
+ * $Id: ArcExporter.java,v 1.5 2012-06-06 17:33:58 fergaloy-sf Exp $
  */
 
 /*
@@ -72,11 +72,22 @@ public class ArcExporter extends Exporter {
   }
 
   private ARCWriter makeARCWriter() {
-    return new ARCWriter(serialNo,
-			 ListUtil.list(dir),
-			 prefix,
-			 compress,
-			 maxSize >= 0 ? maxSize : Long.MAX_VALUE);
+
+    String template = "${prefix}-${timestamp17}-${serialno}";
+    List<String> metadata = new ArrayList<String>();
+
+    log.debug("maxSize = " + maxSize);
+
+    WriterPoolSettingsData settings = new WriterPoolSettingsData(prefix,
+	template, maxSize >= 0 ? maxSize : Long.MAX_VALUE, compress,
+	(List<File>) ListUtil.list(dir), metadata);
+
+    log.debug("settings.getMaxFileSizeBytes() = "
+	+ settings.getMaxFileSizeBytes());
+    log.debug("settings.getPrefix() = '" + settings.getPrefix() + "'");
+    log.debug("settings.getTemplate() = '" + settings.getTemplate() + "'");
+    return new ARCWriter(serialNo, settings);
+
   }
 
   protected void writeCu(CachedUrl cu) throws IOException {

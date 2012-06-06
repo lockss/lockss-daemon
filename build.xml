@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.294 2012-04-04 23:32:21 thib_gc Exp $
+ $Id: build.xml,v 1.295 2012-06-06 17:33:58 fergaloy-sf Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -275,8 +275,9 @@ Args:
   <!-- Needed by PDFBox: -->
   <property name="bouncycastle.mail.jar" value="${lib}/bcmail-jdk14-132.jar" />
   <!-- Needed by ArcExploder, exporters, jcr repo: -->
-  <property name="heritrix.jar" value="${lib}/heritrix-1.14.3-p2.jar" />
-  <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.3-heritrix-subset-1.0.jar" />
+  <property name="heritrix.jar" value="${lib}/heritrix-commons-3.1.0-p1.jar" />
+  <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.7.jar" />
+  <property name="heritrix-guava.jar" value="${lib}/guava-r08.jar" />
 
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
@@ -367,6 +368,7 @@ Args:
     <!-- jars needed by the ArcCrawler -->
     <pathelement path="${heritrix.jar}" />
     <pathelement path="${heritrix-fastutil.jar}" />
+    <pathelement path="${heritrix-guava.jar}" />
   </path>
 
   <path id="run.classpath">

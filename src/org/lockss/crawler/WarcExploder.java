@@ -1,5 +1,5 @@
 /*
- * $Id: WarcExploder.java,v 1.3 2011-06-20 06:59:15 tlipkis Exp $
+ * $Id: WarcExploder.java,v 1.4 2012-06-06 17:33:58 fergaloy-sf Exp $
  */
 
 /*
@@ -227,9 +227,17 @@ public class WarcExploder extends Exploder {
       for (Iterator i = elementHeaderFieldKeys.iterator(); i.hasNext(); ) {
         String key = (String) i.next();
         try {
-          String value = (String) elementHeader.getHeaderValue(key).toString();
-          logger.debug3(key + ": " + value);
-          ret.put(key, value);
+
+          Object valueObject = elementHeader.getHeaderValue(key);
+
+          if (valueObject == null) {
+            logger.warning("Ignoring null value for key '" + key + "'.");
+          } else {
+            String value = valueObject.toString();
+            logger.debug3(key + ": " + value);
+            ret.put(key, value);
+          }
+
         } catch (ClassCastException ex) {
           logger.error("makeCIProperties: " + key + " threw ", ex);
           throw new CacheException.ExploderException(ex);
