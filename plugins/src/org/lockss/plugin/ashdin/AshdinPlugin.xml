@@ -7,9 +7,9 @@
   	<string>plugin_version</string>
   	<string>1</string>
   </entry>
-   <entry>
-   <string>plugin_status</string>
-   <string>development</string>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -17,24 +17,29 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Ashdin Plugin (LOCKSS), Base URL %s, Journal Code %s, Volume %s&quot;, base_url, journal_code, volume_name</string>
+    <string>&quot;Ashdin Plugin (LOCKSS), Base URL %s, Journal Code %s, Year %d&quot;, base_url, journal_code, year</string>
   </entry>
   <entry>
-   <string>au_start_url</string>
-   <string>&quot;%slockss.aspx&quot;,base_url</string>
+    <string>au_start_url</string>
+    <string>&quot;%sjournals/publishedByYear.aspx?jid=%s&amp;y=%d&quot;,base_url,journal_code,year</string>
+  </entry>
+  <entry>
+  	<string>au_manifest</string>
+    <string>&quot;%slockss.aspx&quot;,base_url</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,&quot;^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
-      <string>1,&quot;%sjournals/published\.aspx\?jid=%s&quot;, base_url,journal_code</string>
+      <string>1,&quot;%sjournals/publishedByYear.aspx?jid=%s&amp;y=%d&quot;,base_url,journal_code,year</string>
+      <string>2,&quot;%sjournals/published\.aspx\?jid=%s&quot;, base_url,journal_code</string>
       <string>2,&quot;%sjournals/%s/submit\.aspx&quot; ,base_url,journal_code</string>
-      <string>1,&quot;%sjournals/%s/[^/]+\.aspx&quot;, base_url,journal_code</string> 
       <string>2,&quot;%scontact\.aspx&quot; ,base_url</string>
-      <string>1,&quot;%s\.aspx&quot;,base_url</string>
+      <string>1,&quot;%sjournals/%s/[^/]+\.aspx&quot;,base_url,journal_code</string>
+      <string>1,&quot;%sjournals/%s/[^/]+\.pdf&quot;,base_url,journal_code</string>
    </list>
   </entry>
-   <entry>
+  <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.ashdin.AshdinArticleIteratorFactory</string>
   </entry>
@@ -43,20 +48,30 @@
     <string>org.lockss.plugin.ashdin.AshdinArticleIteratorFactory</string>
   </entry>
   <entry>
-      <string>au_substance_url_pattern</string>
-      <string>&quot;^%sjournals/%s/[^/]+\.pdf&quot;, base_url, journal_code</string>
-   </entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+     	<string>*</string>
+        <string>org.lockss.plugin.ashdin.AshdinMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <string>&quot;^%sjournals/%s/[^/]+\.(pdf|aspx)&quot;, base_url, journal_code</string>
+  </entry>
   <entry>
     <string>plugin_config_props</string>
     <list>
-        <org.lockss.daemon.ConfigParamDescr>
-        <key>volume_name</key>
-        <displayName>Volume Name</displayName>
-        <type>1</type>
-        <size>20</size>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
-       </org.lockss.daemon.ConfigParamDescr>
+      </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>journal_code</key>
         <displayName>Journal Code</displayName>

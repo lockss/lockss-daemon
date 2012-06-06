@@ -1,5 +1,5 @@
 /*
- * $Id: AshdinMetadataExtractorFactory.java,v 1.1 2012-06-02 00:22:20 akanshab01 Exp $
+ * $Id: AshdinMetadataExtractorFactory.java,v 1.2 2012-06-06 23:04:32 dylanrhodes Exp $
  */
 
 /*
@@ -33,13 +33,12 @@
 package org.lockss.plugin.ashdin;
 
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.apache.commons.collections.MultiMap;
-import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.extractor.FileMetadataExtractor.Emitter;
 import org.lockss.plugin.*;
 
 public class AshdinMetadataExtractorFactory implements
@@ -53,37 +52,31 @@ public class AshdinMetadataExtractorFactory implements
 
   public static class AshdinHtmlMetadataExtractor implements
       FileMetadataExtractor {
-
-    // Map BePress-specific HTML meta tag names to cooked metadata fields
-    private static MultiMap tagMap = new MultiValueMap();
-    static {
-     
-    }
-
+	
+	private static final int READ_AHEAD_LIMIT_CHARS = 2000; //characters
+	private static final int READ_AHEAD_LIMIT_LINES = 5; //lines
+	
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
       ArticleMetadata am = new SimpleHtmlMetaTagMetadataExtractor().extract(
           target, cu);
-      am.cook(tagMap);
-
+ 
       BufferedReader bReader = new BufferedReader(cu.openForReading());
       try {
-        for (String line = bReader.readLine();
-
-        line != null; line = bReader.readLine()) {
+        for (String line = bReader.readLine(); line != null; line = bReader.readLine()) {
           line = line.trim();
-          log.debug3("Line: " + line);
-          if (StringUtil.startsWithIgnoreCase(line,
-              "<pre xmlns =\"http://www.w3.org/1999/xhtml\">")) {
-            log.debug3("Line: " + line);
-            addDoi(line, am);
-
-          } else if (StringUtil.startsWithIgnoreCase(line, "<h3 xmlns")) {
-
-            log.debug3("Line: " + line);
-            addAuthors(line, am);
-
+          if (line.contains("doi:")) {
+            addDoi(line,am);
+          } if (line.contains("class=\"absauthor\"")) {
+            addAuthors(line, am, bReader);
+            log.debug3("extracting authors");
+          } if (line.contains("class=\"abstitle\"")) {
+        	addTitle(line, am, bReader);
+        	log.debug3("extracting title");
+          } if (line.contains("Vol.")) {
+        	addVolumeAndDate(line,am);
+        	addJournalTitle(line,am);
           }
         }
       } finally {
@@ -91,48 +84,134 @@ public class AshdinMetadataExtractorFactory implements
       }
       emitter.emitMetadata(cu, am);
     }
+    
+    //The end tag for volume number doubles as the beginning tag for the date
+    private void addVolumeAndDate(String line, ArticleMetadata ret) {
+        String beginVolume = "Vol.", endVolume = " (", endDate = ")";
+        int volumeBegin = StringUtil.indexOfIgnoreCase(line, beginVolume);
+        if(volumeBegin < 0)
+        	return;
+        volumeBegin += beginVolume.length();
+        
+        int volumeEnd = StringUtil.indexOfIgnoreCase(line, endVolume, volumeBegin);
+        if(volumeEnd < 0)
+        	return;
+                
+        int dateEnd = StringUtil.indexOfIgnoreCase(line, endDate, volumeEnd);
+        if(dateEnd < 0)
+      	  return;
+                
+        ret.put(MetadataField.FIELD_VOLUME,line.substring(volumeBegin, volumeEnd));
+        ret.put(MetadataField.FIELD_DATE, line.substring(volumeEnd+endVolume.length(),dateEnd));
+    }
+    
+    private void addJournalTitle(String line, ArticleMetadata am) {
+    	Matcher beginTitle = Pattern.compile("<pre( )?>").matcher(line);
+    	if(!beginTitle.find())
+    		return;
+    	int titleBegin = beginTitle.end();
 
-    protected void addAuthors(String line, ArticleMetadata ret) {
-      String authorBFlag = "absauthor";
-      String authorEFlag = "</h3>";
-      String auth = "";
-      String compAuthStr = "";
-      int authorEnd = StringUtil.indexOfIgnoreCase(line, authorEFlag);
-      int authorBegin = StringUtil.indexOfIgnoreCase(line, authorBFlag);
-      authorBegin += authorBFlag.length();
-      authorEnd += authorEFlag.length();
-      auth = line.substring(authorBegin + 1, authorEnd);
-     if (auth.matches("<sup>")|| auth.matches("</sup>")){
-        log.warning("inside the loop");
-         auth.replaceAll("<sup>","");
-         auth.replaceAll("</sup>", "");
-      }
-      String[] authArr = auth.split(",");
-      for (int i = 0; i < authArr.length; i++) {
-        compAuthStr = compAuthStr + authArr[i];
-      }
-      ret.put(MetadataField.FIELD_AUTHOR, compAuthStr);
+    	String endTitle = "<";
+    	int titleEnd = StringUtil.indexOfIgnoreCase(line, endTitle, titleBegin);
+    	
+    	if(titleEnd < 0)
+    		return;
+    	
+    	am.put(MetadataField.FIELD_JOURNAL_TITLE, line.substring(titleBegin,titleEnd));
     }
 
-    protected void addDoi(String line, ArticleMetadata ret) {
-      String doiFlag = "doi: ";
-      String artFlag = "ID";
-      int doiBegin = StringUtil.indexOfIgnoreCase(line, doiFlag);
-      int artBegin = StringUtil.indexOfIgnoreCase(line, artFlag);
-      if (doiBegin <= 0) {
-        log.debug3(line + " : no " + doiFlag);
-        return;
+    private void addAuthors(String line, ArticleMetadata ret, BufferedReader reader) {
+      String beginAuthor = "absauthor\">", endAuthor = "</h3>", auth = line;
+      int authorBegin = StringUtil.indexOfIgnoreCase(line, beginAuthor);
+      if(authorBegin < 0)
+    	  return;
+      authorBegin += beginAuthor.length();
+
+      int authorEnd = StringUtil.indexOfIgnoreCase(line, endAuthor, authorBegin);
+
+      while(authorEnd < 0) {
+    	  try {
+				reader.mark(READ_AHEAD_LIMIT_CHARS);
+				int additionalLines = 0;
+				
+				while(line != null && authorEnd < 0 && additionalLines < READ_AHEAD_LIMIT_LINES) {
+				  line = reader.readLine();
+				  additionalLines++;
+				  auth += line;
+				  authorEnd = StringUtil.indexOfIgnoreCase(auth, endAuthor, authorBegin);
+				  
+				  log.debug3("authorBegin: "+authorBegin+", authorEnd: "+authorEnd+", auth: "+auth);
+				}
+				
+				if(authorEnd < 0)
+					return;
+			} catch (IOException e) {
+				e.printStackTrace();
+			} finally {
+				try {
+				reader.reset();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
       }
-      doiBegin += doiFlag.length();
-      artBegin += artFlag.length();
-      String art = line.substring(artBegin, artBegin + 7);
-      String doi = line.substring(doiBegin, doiBegin + 20);
-      if (doi.length() < 20) {
-        log.debug3(line + " : too short");
-        return;
+      
+      auth = auth.substring(authorBegin, authorEnd);
+      auth = auth.replaceAll("<sup>[^<]+</sup>", "");
+      
+      ret.put(MetadataField.FIELD_AUTHOR,auth);
+    }
+    
+    private void addTitle(String line, ArticleMetadata ret, BufferedReader reader) throws IOException {
+        String beginTitle = "abstitle\">", endTitle = "</h2>", title = line;
+        int titleBegin = StringUtil.indexOfIgnoreCase(line, beginTitle);
+        if(titleBegin < 0)
+        	return;
+        titleBegin += beginTitle.length();
+
+        int titleEnd = StringUtil.indexOfIgnoreCase(line, endTitle, titleBegin);
+        
+        while(titleEnd < 0) {
+        	try {
+				reader.mark(READ_AHEAD_LIMIT_CHARS);
+				int additionalLines = 0;
+				
+				while(line != null && titleEnd < 0 && additionalLines < READ_AHEAD_LIMIT_LINES) {
+				  line = reader.readLine();
+				  additionalLines++;
+				  title += line;
+				  titleEnd = StringUtil.indexOfIgnoreCase(title, endTitle, titleBegin);
+				}
+				
+				if(titleEnd < 0)
+					return;
+			} catch (IOException e) {
+				e.printStackTrace();
+			} finally {
+				try {
+				reader.reset();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+        }
+        
+        ret.put(MetadataField.FIELD_ARTICLE_TITLE,title.substring(titleBegin, titleEnd));
       }
-      ret.put(MetadataField.FIELD_DOI, doi);
-      ret.put(MetadataField.FIELD_ARTICLE_TITLE, art);
+
+    private void addDoi(String line, ArticleMetadata ret) {
+      String beginDoi = "doi:";
+      String endDoi = "<";
+      int doiBegin = StringUtil.indexOfIgnoreCase(line, beginDoi);
+      if(doiBegin < 0)
+    	  return;
+      doiBegin += beginDoi.length();
+
+      int doiEnd = StringUtil.indexOfIgnoreCase(line, endDoi, doiBegin);
+      if(doiEnd < 0)
+    	  return;
+      
+      ret.put(MetadataField.FIELD_DOI, line.substring(doiBegin,doiEnd));
     }
   }
 }

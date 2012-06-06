@@ -38,7 +38,7 @@ import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.repository.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.ashdin.TestAshdinHtmlMetadataExtractorFactory.MySimulatedContentGenerator;
+import org.lockss.plugin.ashdin.TestAshdinMetadataExtractorFactory.MySimulatedContentGenerator;
 import org.lockss.plugin.simulated.*;
 
 
@@ -62,7 +62,6 @@ public class TestAshdinArticleIteratorFactory extends ArticleIteratorTestCase {
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
                                   tempDirPath);
-  //  http://inderscience.metapress.com/
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
   }
 
@@ -106,7 +105,7 @@ public class TestAshdinArticleIteratorFactory extends ArticleIteratorTestCase {
   Configuration ashdinAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", "http://www.ashdin.com/");
-    conf.put("volume_name", "1");
+    conf.put("year", "2010");
     conf.put("journal_code", "acpsf");
     return conf;
   }
@@ -145,7 +144,6 @@ public class TestAshdinArticleIteratorFactory extends ArticleIteratorTestCase {
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertNotNull(artIter);
     ArticleFiles af = createArticleFiles(artIter, cu);
-    System.out.println("article files::" +af);
     assertEquals(cu, af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF));
         
   }

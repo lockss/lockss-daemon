@@ -1,5 +1,5 @@
 /*
- * $Id: TestAshdinPlugin.java,v 1.1 2012-06-02 00:24:07 akanshab01 Exp $
+ * $Id: TestAshdinPlugin.java,v 1.2 2012-06-06 23:04:32 dylanrhodes Exp $
  */
 
 /*
@@ -49,11 +49,8 @@ import org.lockss.plugin.definable.*;
 public class TestAshdinPlugin extends LockssTestCase {
   private DefinablePlugin plugin;
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
-  // static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
-  static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
   
- //static final String JOURNAL_CODE_KEY = ConfigParamDescr.j
-
   public void setUp() throws Exception {
     super.setUp();
     plugin = new DefinablePlugin();
@@ -64,9 +61,7 @@ public class TestAshdinPlugin extends LockssTestCase {
   public void testCreateAu() {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "www.ashdin.com/");
-    props.setProperty(VOLUME_NAME_KEY, "1");
-    // props.setProperty(YEAR_KEY, "2012");
-  //  props.setProperty(JOURNAL_CODE_KEY, "acpsf");
+    props.setProperty(YEAR_KEY, "2012");
 
     DefinableArchivalUnit au = null;
     try {
@@ -89,35 +84,16 @@ public class TestAshdinPlugin extends LockssTestCase {
     return (DefinableArchivalUnit) plugin.configureAu(config, null);
   }
 
- /* public void testGetAuHandlesBadUrl()
-      throws ArchivalUnit.ConfigurationException, MalformedURLException {
-    Properties props = new Properties();
-    props.setProperty(BASE_URL_KEY, "ashdin");
-    props.setProperty(VOLUME_NAME_KEY, "1");
-    // props.setProperty(YEAR_KEY, "2012");
-  //  props.setProperty(JOURNAL_CODE_KEY, "acpsf");
-
-    try {
-      DefinableArchivalUnit au = makeAuFromProps(props);
-      fail("Didn't throw InstantiationException when given a bad url");
-    } catch (ArchivalUnit.ConfigurationException auie) {
-      ConfigParamDescr.InvalidFormatException murle = (ConfigParamDescr.InvalidFormatException) auie
-          .getCause();
-      assertNotNull(auie.getCause());
-    }
-  }*/
-
   public void testGetAuConstructsProperAu()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.ashdin.com/");
-    props.setProperty(VOLUME_NAME_KEY, "1");
-    // props.setProperty(YEAR_KEY, "2012");
-   props.setProperty("journal_code", "acpsf");
+    props.setProperty(YEAR_KEY, "2012");
+    props.setProperty("journal_code", "acpsf");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals(
-        "Ashdin Plugin (LOCKSS), Base URL http://www.ashdin.com/, Journal Code acpsf, Volume 1",
+        "Ashdin Plugin (LOCKSS), Base URL http://www.ashdin.com/, Journal Code acpsf, Year 2012",
         au.getName());
   }
 
@@ -129,28 +105,8 @@ public class TestAshdinPlugin extends LockssTestCase {
 
     assertEquals(plugin.findAuConfigDescr(BASE_URL_KEY),
         ConfigParamDescr.BASE_URL);
-    assertEquals(plugin.findAuConfigDescr(VOLUME_NAME_KEY),
-        ConfigParamDescr.VOLUME_NAME);
+    assertEquals(plugin.findAuConfigDescr(YEAR_KEY),
+        ConfigParamDescr.YEAR);
  
   }
-
-/*  public void testGetArticleMetadataExtractor() {
-    Properties props = new Properties();
-    props.setProperty(BASE_URL_KEY, "http://www.ashdin.com/");
-    props.setProperty(VOLUME_NAME_KEY, "1");
-    // props.setProperty(YEAR_KEY, "2012");
-   props.setProperty("journal_code", "acpsf");
-    // props.setProperty(YEAR_KEY, "2004");
-    DefinableArchivalUnit au = null;
-    try {
-      au = makeAuFromProps(props);
-    } catch (ConfigurationException ex) {
-    }
-
-    assertTrue(
-        "" + plugin.getArticleMetadataExtractor(MetadataTarget.Any, au),
-        plugin.getArticleMetadataExtractor(MetadataTarget.Any, au) instanceof ArticleMetadataExtractor);
-
-  }*/
-
 }

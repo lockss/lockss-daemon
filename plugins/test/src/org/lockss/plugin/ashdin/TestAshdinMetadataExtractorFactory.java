@@ -43,8 +43,8 @@ import org.lockss.plugin.simulated.*;
  * One of the articles used to get the html source for this plugin is:
  * http://www.ingentaconnect.com/content/maney/bjdd/2011/00000057/00000113/art00004
  */
-public class TestAshdinHtmlMetadataExtractorFactory extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestAshdinHtmlMetadataExtractor");
+public class TestAshdinMetadataExtractorFactory extends LockssTestCase {
+  static Logger log = Logger.getLogger("TestAshdinMetadataExtractorFactory");
   
   //Simulated AU to generate content
   private SimulatedArchivalUnit sau; 
@@ -55,7 +55,6 @@ public class TestAshdinHtmlMetadataExtractorFactory extends LockssTestCase {
   private static String PLUGIN_NAME = "org.lockss.plugin.ashdin.AshdinPlugin";
 
   private static String BASE_URL = "http://www.ashdin.com/";
-  private static String SIM_ROOT = BASE_URL;
   private static final int DEFAULT_FILESIZE = 3000;
 
   public void setUp() throws Exception {
@@ -96,80 +95,56 @@ public class TestAshdinHtmlMetadataExtractorFactory extends LockssTestCase {
   Configuration ashdinAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", "http://www.ashdin.com/");
-    conf.put("volume_name", "1");
+    conf.put("year", "2010");
     conf.put("journal_code", "acpsf");
     return conf;
   }
 
   String goodDate = "Date";
-  String goodTitle = "Title";
-  String goodPublisher = "Publisher";
-  String goodSubject = "Subject";
-  String goodDescription = "Description";
-  String goodType = "Type";
-  String goodArticle = "2354657";
-  String goodFormat = "Format";
-  String goodAuthor = " Hirotaka Aoki,<sup>1</sup> Yasunari Fujimoto,<sup>1</sup> Satoshi Suzuki,<sup>2</sup> Eri Sato-Shimokawara,<sup>1</sup> and Toru Yamaguchi<sup>3</sup></h3>";
-  String goodDoi = "10.4303/acpsf/235465";
-  String goodLanguage = "Language";
-  String goodCoverage = "Coverage";
-  String goodSource = "Source";
-  String goodISSN = "0007-0599";
-  String goodVolume = "37";
-  String goodIssue = "4";
-  String goodStartPage = "267";
-  String goodEndPage = "275";
-
-   
-  /*
-  
-  <pre xmlns="http://www.w3.org/1999/xhtml">Automatic Control of
-   Physiological State and Function<br/>Vol. 1 (2012), Article ID 235465,
-    7 pages  [<a href="235465.pdf" class="hrefcont">Full-Text PDF</a>]
-      doi:10.4303/acpsf/235465</pre>*/
-  /*
-  <h3 xmlns="http://www.w3.org/1999/xhtml" 
-  class="absauthor" style="line-height: 120%;">Hirotaka Aoki,<sup>1</sup> Yasunari Fujimoto,<sup>1</sup> Satoshi Suzuki,<sup>2</sup>
-   Eri Sato-Shimokawara,<sup>1</sup> and Toru Yamaguchi<sup>3</sup></h3>
-  */
-  
+  String goodJournal = "Journal of Testing";
+  String goodArticle = "Article Title";
+  String goodAuthor = "John A. Author; John B. Author";
+  String goodDoi = "10.5555/TEST_DOI";
+  String goodVolume = "Volume";
   
   String goodContent =
-
-     " <HTML><BODY>\n"
-         
-          +"<pre xmlns =\"http://www.w3.org/1999/xhtml\"> Automatic Control of Physiological State and Function<br/>Vol. 1 (2012),Article ID"+ goodArticle+"7 pages"+
-          "doi: "+goodDoi+"\n" +
-          "</pre>" +"\n"+
-          "<h3 xmlns=\"http://www.w3.org/1999/xhtml\" >class=\"absauthor\" "+
-          "Hirotaka Aoki,<sup>1</sup> Yasunari Fujimoto,<sup>1</sup> Satoshi Suzuki,<sup>2</sup>"+
-          " Eri Sato-Shimokawara,<sup>1</sup> and Toru Yamaguchi<sup>3</sup></h3>";
+      "<HTML><BODY>\n"+  
+	  "<div class=\"abs\" xmlns=\"http://www.w3.org/1999/xhtml\">\n"+
+	  "<pre>Journal of Testing<br />Vol.Volume (Date), Article ID F0A0K0E, 12 pages &nbsp;[<a class=\"hrefcont\" href=\"TESTING.pdf\">Full-Text PDF</a>]<br/>doi:10.5555/TEST_DOI</pre>\n"+
+	  "<h2 class=\"abstitle\">Article Title</h2>\n"+
+	  "<h3 class=\"absauthor\">John A. Author<sup>1</sup>; John B. Author<sup>2</sup></h3>\n"+
+	  "<p class=\"absaddr\"><sup>1</sup>Department of Testing, USA<br/>\n"+
+	  "<sup>2</sup>Department of Computer Science, Brazil<br/>\n"+ 
+	  "<br/>";
   
    
-   public void testExtractFromGoodContent() throws Exception {
-    String url = "http://www.ashdin.com/journals/ACPSF/235465.aspx";
-    MockCachedUrl cu = new MockCachedUrl(url, hau);
-    cu.setContent(goodContent);
-    cu.setContentSize(goodContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    FileMetadataExtractor me = new AshdinMetadataExtractorFactory.AshdinHtmlMetadataExtractor();
-    assertNotNull(me);
-    
-    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-    assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
-    assertEquals(goodArticle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-  //  assertEquals(goodAuthor, md.get(MetadataField.FIELD_AUTHOR));
-    }
+	public void testExtractFromGoodContent() throws Exception {
+		String url = "http://www.ashdin.com/journals/ACPSF/235465.aspx";
+		MockCachedUrl cu = new MockCachedUrl(url, hau);
+		cu.setContent(goodContent);
+		cu.setContentSize(goodContent.length());
+		cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+		FileMetadataExtractor me = new AshdinMetadataExtractorFactory.AshdinHtmlMetadataExtractor();
+		assertNotNull(me);
 
-   String badContent = "<HTML><HEAD><TITLE>" + goodTitle
+		FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
+		List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+		assertNotEmpty(mdlist);
+		ArticleMetadata md = mdlist.get(0);
+		assertNotNull(md);
+		assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
+		assertEquals(goodArticle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+		assertEquals(goodAuthor, md.get(MetadataField.FIELD_AUTHOR));
+		assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
+		assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
+		assertEquals(goodJournal, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+	}
+
+   String badContent = "<HTML><HEAD><TITLE>" + goodArticle
       + "</TITLE></HEAD><BODY>\n" + "<meta name=\"foo\""
       + " content=\"bar\">\n" + "  <pre xmlns=\"issn\">"
       + "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: "
-      + goodDescription + " </div>\n";
+      + goodJournal + " </div>\n";
 
   public void testExtractFromBadContent() throws Exception {
     String url = "http://www.example.com/vol1/issue2/art3/";

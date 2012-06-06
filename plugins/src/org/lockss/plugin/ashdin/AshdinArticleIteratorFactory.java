@@ -34,7 +34,6 @@ import java.util.regex.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 public class AshdinArticleIteratorFactory implements ArticleIteratorFactory, 
@@ -59,20 +58,16 @@ public class AshdinArticleIteratorFactory implements ArticleIteratorFactory,
                     }
   
   protected static class AshdinArticleIterator extends SubTreeArticleIterator {
-    //http://www.ashdin.com/journals/ACPSF/K110601.aspx
-    protected static Pattern PATTERN = Pattern.compile("/journals/([^/]+)/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
-    
-
-    
-    public AshdinArticleIterator(ArchivalUnit au,
-                                    SubTreeArticleIterator.Spec spec
-                                  ) {
+    protected static Pattern PATTERN = Pattern.compile("(/journals/[^/]+/[^/]+\\.)(pdf)$", Pattern.CASE_INSENSITIVE);
+   
+    public AshdinArticleIterator(ArchivalUnit au, SubTreeArticleIterator.Spec spec) {
       super(au, spec);
-      
     }
+    
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
+      log.debug3("iterating url: "+url);
       Matcher mat = PATTERN.matcher(url);
       if (mat.find()) {
         return processFullTextPdf(cu, mat);
@@ -83,17 +78,25 @@ public class AshdinArticleIteratorFactory implements ArticleIteratorFactory,
 
     protected ArticleFiles processFullTextPdf(CachedUrl cu, Matcher mat) {
       ArticleFiles af = new ArticleFiles();
-      af.setFullTextCu(cu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
+      
+      String abstractUrl = mat.replaceAll("$1aspx");
+      CachedUrl abstractCu = cu.getArchivalUnit().makeCachedUrl(abstractUrl);
+      
+      if(abstractCu.hasContent())
+    	  af.setFullTextCu(abstractCu);
+      else
+    	  af.setFullTextCu(cu);
+      
+      log.debug3("returning full text: "+af.getFullTextUrl());
+      
       return af;
     }
- 
 }
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-   // return new MetaPressArticleMetadataExtractor();
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_FULL_TEXT_PDF);
+    return new BaseArticleMetadataExtractor(null);
   }
   
 }
