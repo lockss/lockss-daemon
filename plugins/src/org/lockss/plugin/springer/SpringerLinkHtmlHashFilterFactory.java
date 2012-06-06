@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.15 2012-04-17 23:37:17 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.16 2012-06-06 02:18:58 thib_gc Exp $
  */
 
 /*
@@ -106,12 +106,6 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         // changes over time
         new TagNameFilter("head"),
         
-        // The following two are no longer needed because of the latter
-        // Sadly, the "copyright" <meta> tag isn't the publication year
-        // HtmlNodeFilters.tagWithAttribute("meta", "name", "copyright"),
-        // Static, but was added after thousands of AUs had crawled already
-        // HtmlNodeFilters.tagWithAttribute("meta", "name", "robots"),
-        
         // Eventually changed from <h1 lang="en" class="title"> to <h1>
         new TagNameFilter("h1"),
         
@@ -127,7 +121,17 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
             }
             return false;
           }
-        }
+        },
+        
+        // The back link to the issue TOC contained in this <div>
+        // now has the year parenthesized after the back link
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ContentHeading"),
+        
+        // The inline styling of this <div> has changed from
+        // <div class="coverImage" title="Cover Image" style="background-image: url(...)">
+        // to
+        // <div class="coverImage" title="Cover Image" style="background-image: url(...); background-size: contain;">
+        HtmlNodeFilters.tagWithAttribute("div", "class", "coverImage"),
         
     };
     InputStream filteredStream = new HtmlFilterInputStream(in,
