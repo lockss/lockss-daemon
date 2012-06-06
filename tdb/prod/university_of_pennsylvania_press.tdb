@@ -19,7 +19,7 @@
     attr[journal_id] = cot
 
     au < ready ; 2011 ; Change Over Time Volume 1 ; 1 >
-    au < expected ; 2012 ; Change Over Time Volume 2 ; 2 >
+    au < manifest ; 2012 ; Change Over Time Volume 2 ; 2 >
 
   }
 
