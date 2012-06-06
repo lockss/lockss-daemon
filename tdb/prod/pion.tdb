@@ -22,8 +22,8 @@
     
     implicit < status; year; name; param[volume_name] >
     
-    au < notReady ; 2010; i-Perception Volume 1; 1 >
-    au < notReady ; 2011; i-Perception Volume 2; 2 >
+    au < ready ; 2010; i-Perception Volume 1; 1 >
+    au < ready ; 2011; i-Perception Volume 2; 2 >
     au < exists ; 2012; i-Perception Volume 3; 3 >
   
   }
