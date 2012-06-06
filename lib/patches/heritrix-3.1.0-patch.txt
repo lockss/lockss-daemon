@@ -1,0 +1,91 @@
+Index: src/main/java/org/archive/io/WriterPoolMember.java
+===================================================================
+--- src/main/java/org/archive/io/WriterPoolMember.java	2012-05-15 17:35:48.000000000 -0700
++++ src/main/java/org/archive/io/WriterPoolMember.java	2012-06-05 08:44:40.485847478 -0700
+@@ -45,7 +45,7 @@
+  * uniqueness, and position in file. Subclass to pick up functionality for a
+  * particular Writer type.
+  * @author stack
+- * @version $Date: 2012-06-06 17:29:11 $ $Revision: 1.1 $
++ * @version $Date: 2012-06-06 17:29:11 $ $Revision: 1.1 $
+  */
+ public abstract class WriterPoolMember implements ArchiveFileConstants {
+     private final Logger logger = Logger.getLogger(this.getClass().getName());
+@@ -77,6 +77,13 @@
+ 
+     /**  Output stream for file. */
+     protected OutputStream out = null;
++    
++    /**
++     * File output stream.
++     * This is needed so can get at channel to find current position in file.
++     */
++    private FileOutputStream fos;
++
+     /** Counting stream for metering */
+     protected MiserOutputStream countOut = null; 
+     
+@@ -208,7 +215,7 @@
+     protected String createFile(final File file) throws IOException {
+     	close();
+         this.f = file;
+-        FileOutputStream fos = new FileOutputStream(this.f);
++        fos = new FileOutputStream(this.f);
+         if(rebuf==null) {
+             rebuf = new byte[settings.getWriteBufferSize()]; 
+         }
+@@ -332,9 +339,10 @@
+      */
+     protected void preWriteRecordTasks()
+     throws IOException {
+-        if (this.out == null) {
+-            createFile();
+-        }
++        checkSize();
++        //if (this.out == null) {
++        //    createFile();
++        //}
+         if (settings.getCompress()) {
+             // Wrap stream in GZIP Writer.
+             // The below construction immediately writes the GZIP 'default'
+@@ -430,7 +438,21 @@
+         if (this.out == null) {
+             return;
+         }
+-        this.out.close();
++        try {
++          this.out.close();
++        } catch (IOException e) {
++          // If out.close() throws it may not have closed the underlying
++          // FileOutputStream (e.g., after a disk full error, closing a
++          // CompressedStream will also get a disk full error attempting to
++          // flush buffers).  Be sure not to leave the file open.
++          logger.warning("Exception caught closing out: " + e);
++          try {
++            this.fos.close();
++          } catch (IOException ignore) {
++            logger.warning("Exception caught closing fos: " + ignore);
++           }
++          throw e;
++        }
+         this.out = null;
+         if (this.f != null && this.f.exists()) {
+             String path = this.f.getAbsolutePath();
+Index: src/main/java/org/archive/net/UURI.java
+===================================================================
+--- src/main/java/org/archive/net/UURI.java	2012-05-15 17:35:48.000000000 -0700
++++ src/main/java/org/archive/net/UURI.java	2012-06-01 11:06:14.165832778 -0700
+@@ -460,11 +460,11 @@
+         }
+     }
+ 
+-    private void writeObject(ObjectOutputStream stream) throws IOException {
++    protected void writeObject(ObjectOutputStream stream) throws IOException {
+         stream.writeUTF(toCustomString());
+       }
+     
+-    private void readObject(ObjectInputStream stream) throws IOException,
++    protected void readObject(ObjectInputStream stream) throws IOException,
+     ClassNotFoundException {
+         parseUriReference(stream.readUTF(),true);
+     }
