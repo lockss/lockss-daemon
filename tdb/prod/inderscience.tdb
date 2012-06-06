@@ -48,8 +48,8 @@
       param[journal_issn] = 1751-6455
 
 
-      au < manifest ; 2008-2009 ; Afro-Asian Journal of Finance and Accounting Volume 1 ; 1 >
-      au < manifest ; 2010-2011 ; Afro-Asian Journal of Finance and Accounting Volume 2 ; 2 >
+      au < testing ; 2008-2009 ; Afro-Asian Journal of Finance and Accounting Volume 1 ; 1 >
+      au < testing ; 2010-2011 ; Afro-Asian Journal of Finance and Accounting Volume 2 ; 2 >
       au < manifest ; 2012 ; Afro-Asian Journal of Finance and Accounting Volume 3 ; 3 >
 
     }
@@ -65,7 +65,7 @@
 
       param[journal_issn] = 1752-7775
       
-      au < manifest ; 2008-2009 ; American Journal of Finance and Accounting Volume 1 ; 1 >
+      au < testing ; 2008-2009 ; American Journal of Finance and Accounting Volume 1 ; 1 >
       au < manifest ; 2010-2011 ; American Journal of Finance and Accounting Volume 2 ; 2 >
 
     }
@@ -81,8 +81,8 @@
 
       param[journal_issn] = 1741-6418
       
-      au < manifest ; 2005-2007 ; Atoms for Peace: an International Journal Volume 1 ; 1 >
-      au < manifest ; 2008-2009 ; Atoms for Peace: an International Journal Volume 2 ; 2 >
+      au < testing ; 2005-2007 ; Atoms for Peace: an International Journal Volume 1 ; 1 >
+      au < testing ; 2008-2009 ; Atoms for Peace: an International Journal Volume 2 ; 2 >
       au < manifest ; 2010 ; Atoms for Peace: an International Journal Volume 3 ; 3 >      
 
     }
@@ -98,7 +98,7 @@
 
       param[journal_issn] = 1754-7326
 
-      au < manifest ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
+      au < testing ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
       au < testing ; 2011 ; The Botulinum Journal Volume 2 ; 2 >
 
     }
@@ -120,8 +120,8 @@
       au < testing ; 2007 ; Electronic Government, an International Journal Volume 4 ; 4 >
       au < testing ; 2008 ; Electronic Government, an International Journal Volume 5 ; 5 >
       au < testing ; 2009 ; Electronic Government, an International Journal Volume 6 ; 6 >
-      au < manifest ; 2010 ; Electronic Government, an International Journal Volume 7 ; 7 >
-      au < manifest ; 2011 ; Electronic Government, an International Journal Volume 8 ; 8 >
+      au < testing ; 2010 ; Electronic Government, an International Journal Volume 7 ; 7 >
+      au < testing ; 2011 ; Electronic Government, an International Journal Volume 8 ; 8 >
       au < manifest ; 2012 ; Electronic Government, an International Journal Volume 9 ; 9 >
 
     }
@@ -137,7 +137,7 @@
 
       param[journal_issn] = 1758-1516
       
-      au < manifest ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 >
+      au < testing ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 >
       au < manifest ; 2011 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 >
 
     }
@@ -153,11 +153,11 @@
 
       param[journal_issn] = 1751-5262
       
-      au < manifest ; 2007; European Journal of Industrial Engineering Volume 1 ; 1 >
-      au < manifest ; 2008; European Journal of Industrial Engineering Volume 2 ; 2 >
-      au < manifest ; 2009; European Journal of Industrial Engineering Volume 3 ; 3 >
-      au < manifest ; 2010; European Journal of Industrial Engineering Volume 4 ; 4 >
-      au < manifest ; 2011; European Journal of Industrial Engineering Volume 5 ; 5 >
+      au < testing ; 2007; European Journal of Industrial Engineering Volume 1 ; 1 >
+      au < testing ; 2008; European Journal of Industrial Engineering Volume 2 ; 2 >
+      au < testing ; 2009; European Journal of Industrial Engineering Volume 3 ; 3 >
+      au < testing ; 2010; European Journal of Industrial Engineering Volume 4 ; 4 >
+      au < testing ; 2011; European Journal of Industrial Engineering Volume 5 ; 5 >
       au < manifest ; 2012; European Journal of Industrial Engineering Volume 6 ; 6 >
 
     }
@@ -173,11 +173,11 @@
 
       param[journal_issn] = 1751-6765
       
-      au < manifest ; 2007 ; European Journal of International Management Volume 1 ; 1 >
-      au < manifest ; 2008 ; European Journal of International Management Volume 2 ; 2 >
-      au < manifest ; 2009 ; European Journal of International Management Volume 3 ; 3 >
-      au < manifest ; 2010 ; European Journal of International Management Volume 4 ; 4 >
-      au < manifest ; 2011 ; European Journal of International Management Volume 5 ; 5 >
+      au < testing ; 2007 ; European Journal of International Management Volume 1 ; 1 >
+      au < testing ; 2008 ; European Journal of International Management Volume 2 ; 2 >
+      au < testing ; 2009 ; European Journal of International Management Volume 3 ; 3 >
+      au < testing ; 2010 ; European Journal of International Management Volume 4 ; 4 >
+      au < testing ; 2011 ; European Journal of International Management Volume 5 ; 5 >
       au < manifest ; 2012 ; European Journal of International Management Volume 6 ; 6 >
 
     }
