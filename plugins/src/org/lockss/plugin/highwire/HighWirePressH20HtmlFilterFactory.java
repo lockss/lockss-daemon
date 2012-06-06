@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.36 2012-05-25 22:23:16 dylanrhodes Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.37 2012-06-06 02:27:03 kendrayee Exp $
  */
 
 /*
@@ -47,6 +47,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+    	// Publisher adding meta tags often
+        new TagNameFilter("head"),
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "header-ac-elements"),
