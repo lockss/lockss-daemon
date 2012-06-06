@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin</string>
   </entry>
@@ -9,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>65</string>
+    <string>66</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-	    <string>3</string>
+	    <string>4</string>
       </entry>
       <entry>
         <string>Metadata</string>
