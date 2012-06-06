@@ -986,8 +986,10 @@ class Client:
                 # See if this is a reference, or CDATA
                 if summary.getElementsByTagName( 'st:reference' ):
                     summaries[ summary.getElementsByTagName( 'st:title' )[ 0 ].firstChild.data ] = dict( ( key, summary.getElementsByTagName( 'st:reference' )[ 0 ].getElementsByTagName( 'st:' + key )[ 0 ].firstChild.data ) for key in ( 'name', 'key', 'value' ) )
-                elif summary.getElementsByTagName( 'st:value' )[ 0 ] and summary.getElementsByTagName( 'st:value' )[ 0 ].firstChild is not None:
-                    summaries[ summary.getElementsByTagName( 'st:title' )[ 0 ].firstChild.data ] = summary.getElementsByTagName( 'st:value' )[ 0 ].firstChild.data
+                else:
+                    stvalue = summary.getElementsByTagName( 'st:value' )
+                    if stvalue and stvalue[0] and stvalue[0].firstChild:
+                        summaries[ summary.getElementsByTagName( 'st:title' )[ 0 ].firstChild.data ] = stvalue[0].firstChild.data
         data = []
         for row in doc.getElementsByTagName( 'st:row' ):
             cells = {}
