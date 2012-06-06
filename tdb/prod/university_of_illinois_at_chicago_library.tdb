@@ -98,7 +98,7 @@
     au < released ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 ; 2009 >
     au < notReady ; 2010 ; Journal of Biomedical Discovery and Collaboration Volume 5 ; 5 ; 2010 >
     au < released ; 2011 ; Journal of Biomedical Discovery and Collaboration Volume 6 ; 6 ; 2011 >
-    au < expected ; 2012 ; Journal of Biomedical Discovery and Collaboration Volume 7 ; 7 ; 2012 >
+    au < manifest ; 2012 ; Journal of Biomedical Discovery and Collaboration Volume 7 ; 7 ; 2012 >
 
   }
 
@@ -114,12 +114,12 @@
     param[journal_id] = ojphi
     
     implicit < status ; year ; name ; volume ; param[year] >
-    comment[notReady] = RU3806
+    comment[0] = RU3806
 
     au < released ; 2009 ; Online Journal of Public Health Informatics Volume 1 ; 1 ; 2009 >
-    au < notReady ; 2010 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2010 >
-    au < notReady ; 2011 ; Online Journal of Public Health Informatics Volume 3 ; 3 ; 2011 >
-    au < expected ; 2012 ; Online Journal of Public Health Informatics Volume 4 ; 4 ; 2012 >
+    au < manifest ; 2010 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2010 >
+    au < manifest ; 2011 ; Online Journal of Public Health Informatics Volume 3 ; 3 ; 2011 >
+    au < manifest ; 2012 ; Online Journal of Public Health Informatics Volume 4 ; 4 ; 2012 >
 
   }
 
