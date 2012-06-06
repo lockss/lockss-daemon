@@ -178,7 +178,7 @@
     param[journal_dir] = journal_of_literature_and_trauma_studies
     attr[journal_id] = jlts
 
-    au < expected ; 2012 ; Journal of Literature and Trauma Studies Volume 1 ; 1 >
+    au < manifest ; 2012 ; Journal of Literature and Trauma Studies Volume 1 ; 1 >
     
   }
 
