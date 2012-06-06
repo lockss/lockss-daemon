@@ -113,7 +113,7 @@
       au < released ; 2008 ; Azalea: Journal of Korean Literature & Culture Volume 2 ; 2 >
       au < released ; 2010 ; Azalea: Journal of Korean Literature & Culture Volume 3 ; 3 >
       au < released ; 2011 ; Azalea: Journal of Korean Literature & Culture Volume 4 ; 4 >
-      au < expected ; 2012 ; Azalea: Journal of Korean Literature & Culture Volume 5 ; 5 >
+      au < manifest ; 2012 ; Azalea: Journal of Korean Literature & Culture Volume 5 ; 5 >
 
     }
 
@@ -477,7 +477,7 @@ comment[mn20] = URL with 403 Forbidden error
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = oceanic_linguistics
       attr[journal_id] = ol
-
+      
       au < released ; 1999 ; Oceanic Linguistics Volume 38 ; 38 >
       au < released ; 2000 ; Oceanic Linguistics Volume 39 ; 39 >
       au < released ; 2001 ; Oceanic Linguistics Volume 40 ; 40 >
