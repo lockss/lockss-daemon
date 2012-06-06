@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.3 2012-05-25 22:23:15 dylanrhodes Exp $
+ * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.4 2012-06-06 02:30:23 kendrayee Exp $
  */
 
 /*
@@ -123,6 +123,12 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
 			+ "<li><a href=\"/cgi/alerts/etoc\">Alert me to new issues of The Journal"
 			+ "</a></li>" + "</ol>" + "</div>" + "</div>" + "</div>";
 
+	  private static final String headHtml =
+				"<html><head>Title</head></HTML>";
+	  
+	  private static final String headHtmlFiltered =
+				  "<html></HTML>";
+	
 	private static final String withoutCurrentIssue = "<div class=\"col-3-top sb-div\"></div>";
 
 	public void testFiltering() throws IOException, PluginException {
@@ -145,5 +151,13 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
 			e.printStackTrace();
 		}
 	}
+	
+	  public void testHeadFiltering() throws Exception {
+		    InputStream actIn = fact.createFilteredInputStream(mau,
+		    												   new StringInputStream(headHtml),
+		    												   Constants.DEFAULT_ENCODING);
+		    
+		    assertEquals(headHtmlFiltered, StringUtil.fromInputStream(actIn));
+	  }
 
 }
