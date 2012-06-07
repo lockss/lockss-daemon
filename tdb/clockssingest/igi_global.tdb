@@ -212,7 +212,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 2 ; 2 > 
     au < crawling ; exists ; 2011 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 3 ; 3 > 
-    au < expected ; exists ; 2012 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 4 ;  > 
+    au < expected ; exists ; 2012 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 4 ; 4 > 
 
   }
 
@@ -1698,11 +1698,11 @@
 
     title <
       name = International Journal of Nanotechnology and Molecular Computation (IJNMC);
-      issn = 1947-928X ;
-      eissn = 1947-9298 ;
-      issnl = 1947-928X
+      issn = 1941-6318 ;
+      eissn = 1941-6326 ;
+      issnl = 1941-6318
     >
-	param[journal_issn] = 1947-928X
+	param[journal_issn] = 1941-6318
 	
     au < manifest ; exists ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 > 
@@ -1711,14 +1711,13 @@
   }
 
   {
-
     title <
       name = International Journal of Natural Computing Research (IJNCR);
-      issn = 1941-6318 ;
-      eissn = 1941-6326 ;
-      issnl = 1941-6318
+      issn = 1947-928X ;
+      eissn = 1947-9298 ;
+      issnl = 1947-928X
     >
-	param[journal_issn] = 1941-6318
+	param[journal_issn] = 1947-928X
 	
     au < manifest ; exists ; 2009 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 > 

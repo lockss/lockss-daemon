@@ -1723,15 +1723,16 @@
 
     title <
       name = International Journal of Nanotechnology and Molecular Computation (IJNMC) ;
-      issn = 1947-928X ;
-      eissn = 1947-9298 ;
-      issnl = 1947-928X
+      issn = 1941-6318 ;
+      eissn = 1941-6318 ;
+      issnl = 1941-6318
     >
-	param[journal_issn] = 1947-928X
+	param[journal_issn] = 1941-6318
 	
     au < manifest ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 > 
     au < manifest ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 > 
     au < manifest ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 > 
+
 
   }
 
@@ -1739,11 +1740,11 @@
 
     title <
       name = International Journal of Natural Computing Research (IJNCR) ;
-      issn = 1941-6318 ;
-      eissn = 1941-6326 ;
-      issnl = 1941-6318
+      issn = 1947-928X ;
+      eissn = 1947-928X ;
+      issnl = 1947-928X
     >
-	param[journal_issn] = 1941-6318
+	param[journal_issn] = 1947-928X
 	
     au < manifest ; 2009 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 > 
     au < manifest ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 > 
