@@ -13,7 +13,7 @@
       eissn = 1948-5123 
     >
     
-    plugin = org.lockss.plugin.ClockssBerkeleyElectronicPressPlugin 
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
     param[base_url] = http://digitalcommons.wku.edu/
     param[journal_abbr] = jorel
     implicit < status ; status2; year ; name ; param[volume] >
