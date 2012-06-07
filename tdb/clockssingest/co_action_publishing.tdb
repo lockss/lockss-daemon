@@ -5,7 +5,7 @@
   >
 
   attr[contract] = 2010
-  comment[notReady] = RU issue 3836
+  comment[notReady] = RU issue 3836, RT 976
   plugin = org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin
   implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
