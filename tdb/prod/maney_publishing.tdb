@@ -27,7 +27,7 @@
     param[journal_issn] = 1743-6753
     implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 0967-9782
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 2005 ; Advances in Applied Ceramics Volume 104 ; 104 > 
     au < doNotProcess ; 2006 ; Advances in Applied Ceramics Volume 105 ; 105 > 
@@ -407,7 +407,7 @@
     param[journal_id] = bub 
     param[journal_issn] = 1758-8960
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
     au < doNotProcess ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
@@ -519,7 +519,7 @@
     param[journal_id] = cmq  
     param[journal_issn] = 0008-4433
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 1962 ; Canadian Metallurgical Quarterly Volume 1 ; 1 >
     au < doNotProcess ; 1963 ; Canadian Metallurgical Quarterly Volume 2 ; 2 >
@@ -592,7 +592,7 @@
     param[journal_id] = caj 
     param[journal_issn] = 0008-7041
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 1964 ; The Cartographic Journal Volume 1 ; 1 > 
     au < doNotProcess ; 1965 ; The Cartographic Journal Volume 2 ; 2 > 
@@ -718,7 +718,7 @@
     param[journal_id] = cii 
     param[journal_issn] = 1467-0100
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 2000 ; Cochlear Implants International Volume 1 ; 1 > 
     au < doNotProcess ; 2001 ; Cochlear Implants International Volume 2 ; 2 > 
@@ -951,7 +951,7 @@
     param[journal_id] = dei 
     param[journal_issn] = 1464-3154
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 1999 ; Deafness & Education International Volume 1 ; 1 > 
     au < doNotProcess ; 2000 ; Deafness & Education International Volume 2 ; 2 > 
@@ -1350,7 +1350,7 @@
     param[journal_id] = hem 
     param[journal_issn] = 1024-5332
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 2002 ; Hematology Volume 7 ; 7 > 
     au < doNotProcess ; 2003 ; Hematology Volume 8 ; 8 > 
@@ -1441,7 +1441,7 @@
     param[journal_id] = isj 
     param[journal_issn] = 1368-2199
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 2004 ; The Imaging Science Journal Volume 52 ; 52 > 
     au < doNotProcess ; 2005 ; The Imaging Science Journal Volume 53 ; 53 > 
@@ -1527,7 +1527,7 @@
     param[journal_id] = isr 
     param[journal_issn] = 0308-0188
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 1976 ; Interdisciplinary Science Reviews Volume 1 ; 1 > 
     au < doNotProcess ; 1977 ; Interdisciplinary Science Reviews Volume 2 ; 2 > 
@@ -1586,7 +1586,7 @@
     param[journal_id] = iht 
     param[journal_issn] = 1749-5148
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 2007 ; International Heat Treatment & Surface Engineering Volume 1 ; 1 > 
     au < doNotProcess ; 2008 ; International Heat Treatment & Surface Engineering Volume 2 ; 2 > 
@@ -1640,7 +1640,7 @@
     param[journal_id] = ijcmr 
     param[journal_issn] = 1364-0461
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 2004 ; International Journal of Cast Metals Research Volume 17 ; 17 > 
     au < doNotProcess ; 2005 ; International Journal of Cast Metals Research Volume 18 ; 18 > 
@@ -1694,7 +1694,7 @@
     param[journal_id] = imr 
     param[journal_issn] = 0950-6608
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     comment[continued_by] = 0308-4590
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
     
@@ -1805,7 +1805,7 @@
     param[journal_id] = imm 
     param[journal_issn] = 1753-6146
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 2008 ; International Musculoskeletal Medicine Volume 30 ; 30 > 
     au < doNotProcess ; 2009 ; International Musculoskeletal Medicine Volume 31 ; 31 > 
@@ -1832,7 +1832,7 @@
     param[journal_issn] = 2042-6445
     implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 0020-3203
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2010 ; International Wood Products Journal Volume 1 ; 1 > 
     au < doNotProcess ; 2011 ; International Wood Products Journal Volume 2 ; 2 > 
@@ -1856,7 +1856,7 @@
     param[journal_id] = ias 
     param[journal_issn] = 0301-9233
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 1999 ; Ironmaking & Steelmaking Volume 26 ; 26 > 
     au < doNotProcess ; 2000 ; Ironmaking & Steelmaking Volume 27 ; 27 > 
@@ -2054,7 +2054,7 @@
     param[journal_id] = jbr 
     param[journal_issn] = 0373-6687
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2002 ; Journal of Bryology Volume 24 ; 24 > 
     au < doNotProcess ; 2003 ; Journal of Bryology Volume 25 ; 25 > 
@@ -2086,7 +2086,7 @@
     param[journal_id] = csm 
     param[journal_issn] = 1750-1679
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2006-2007 ; Journal of Care Services Management Volume 1 ; 1 > 
     au < doNotProcess ; 2007-2008 ; Journal of Care Services Management Volume 2 ; 2 > 
@@ -2113,7 +2113,7 @@
     param[journal_id] = cih 
     param[journal_issn] = 1753-8068
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2008 ; Journal of Communication in Healthcare Volume 1 ; 1 > 
     au < doNotProcess ; 2009 ; Journal of Communication in Healthcare Volume 2 ; 2 > 
@@ -2223,7 +2223,7 @@
     param[journal_id] = his 
     param[journal_issn] = 0147-8885
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 1977-1978 ; Journal of Histotechnology Volume 1 ; 1 > 
     au < doNotProcess ; 1979 ; Journal of Histotechnology Volume 2 ; 2 > 
@@ -2279,7 +2279,7 @@
     param[journal_id] = mmh 
     param[journal_issn] = 1753-3031
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2007-2008 ; Journal of Management & Marketing in Healthcare Volume 1 ; 1 > 
     au < doNotProcess ; 2009 ; Journal of Management & Marketing in Healthcare Volume 2 ; 2 > 
@@ -2305,7 +2305,7 @@
     param[journal_id] = jmt 
     param[journal_issn] = 1066-9817
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 1993 ; Journal of Manual & Manipulative Therapy Volume 1 ; 1 > 
     au < doNotProcess ; 1994 ; Journal of Manual & Manipulative Therapy Volume 2 ; 2 > 
@@ -2477,7 +2477,7 @@
     param[journal_id] = eni 
     param[journal_issn] = 0144-2600
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2005 ; Journal of the Energy Institute Volume 78 ; 78 > 
     au < doNotProcess ; 2006 ; Journal of the Energy Institute Volume 79 ; 79 > 
@@ -2783,7 +2783,7 @@
     param[journal_id] = mri 
     param[journal_issn] = 1432-8917
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2006 ; Materials Research Innovations Volume 10 ; 10 > 
     au < doNotProcess ; 2007 ; Materials Research Innovations Volume 11 ; 11 > 
@@ -2813,7 +2813,7 @@
     param[journal_issn] = 0267-0836
     implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 0306-3453
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 1985 ; Materials Science and Technology Volume 1 ; 1 > 
     au < doNotProcess ; 1986 ; Materials Science and Technology Volume 2 ; 2 > 
@@ -2863,7 +2863,7 @@
     param[journal_id] = mte 
     param[journal_issn] = 1066-7857
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 2006 ; Materials Technology: Advanced Performance Materials Volume 21 ; 21 > 
     au < doNotProcess ; 2007 ; Materials Technology: Advanced Performance Materials Volume 22 ; 22 > 
@@ -3083,7 +3083,7 @@
     param[journal_id] = mpem 
     param[journal_issn] = 0371-9553
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2000 ; Mineral Processing and Extractive Metallurgy Volume 109 ; 109 > 
     au < doNotProcess ; 2001 ; Mineral Processing and Extractive Metallurgy Volume 110 ; 110 > 
@@ -3177,7 +3177,7 @@
     param[journal_id] = mint 
     param[journal_issn] = 1474-9009
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2000 ; Mining Technology Volume 109 ; 109 > 
     au < doNotProcess ; 2001 ; Mining Technology Volume 110 ; 110 > 
@@ -3238,7 +3238,7 @@
     param[journal_id] = nres 
     param[journal_issn] = 0161-6412
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2001 ; Neurological Research Volume 23 ; 23 > 
     au < doNotProcess ; 2002 ; Neurological Research Volume 24 ; 24 > 
@@ -3270,7 +3270,7 @@
     param[journal_id] = njb 
     param[journal_issn] = 2042-3489
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 2011 ; New Journal of Botany Volume 1 ; 1 > 
     au < doNotProcess ; 2012 ; New Journal of Botany Volume 2 ; 2 > 
@@ -3363,7 +3363,7 @@
     param[journal_id] = nns 
     param[journal_issn] = 1028-415X
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2002 ; Nutritional Neuroscience Volume 5 ; 5 > 
     au < doNotProcess ; 2003 ; Nutritional Neuroscience Volume 6 ; 6 > 
@@ -3458,7 +3458,7 @@
     param[journal_id] = prm 
     param[journal_issn] = 1746-5095
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2004 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 15 ; 15 > 
     au < doNotProcess ; 2005 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 16 ; 16 > 
@@ -3644,7 +3644,7 @@
     param[journal_id] = ptr 
     param[journal_issn] = 1083-3196
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 1996 ; Physical Therapy Reviews Volume 1 ; 1 > 
     au < doNotProcess ; 1997 ; Physical Therapy Reviews Volume 2 ; 2 > 
@@ -3683,7 +3683,7 @@
     param[journal_id] = prc 
     param[journal_issn] = 1465-8011
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 1999 ; Plastics, Rubber and Composites Volume 28 ; 28 > 
     au < doNotProcess ; 2000 ; Plastics, Rubber and Composites Volume 29 ; 29 > 
@@ -3748,7 +3748,7 @@
     param[journal_id] = pm 
     param[journal_issn] = 0032-5899
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 1999 ; Powder Metallurgy Volume 42 ; 42 > 
     au < doNotProcess ; 2000 ; Powder Metallurgy Volume 43 ; 43 > 
@@ -3784,7 +3784,7 @@
     param[journal_id] = ppc 
     param[journal_issn] = 0969-9260
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2003 ; Progress in Palliative Care Volume 11 ; 11 > 
     au < doNotProcess ; 2004 ; Progress in Palliative Care Volume 12 ; 12 > 
@@ -3876,7 +3876,7 @@
     param[journal_id] = rer 
     param[journal_issn] = 1351-0002
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 1999 ; Redox Report Volume 4 ; 4 > 
     au < doNotProcess ; 2000 ; Redox Report Volume 5 ; 5 > 
@@ -3986,7 +3986,7 @@
     param[journal_id] = stwj 
     param[journal_issn] = 1362-1718
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 1996 ; Science and Technology of Welding & Joining Volume 1 ; 1 > 
     au < doNotProcess ; 1997 ; Science and Technology of Welding & Joining Volume 2 ; 2 > 
@@ -4142,7 +4142,7 @@
     param[journal_id] = se 
     param[journal_issn] = 0267-0844
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; 1999 ; Surface Engineering Volume 15 ; 15 > 
     au < doNotProcess ; 2000 ; Surface Engineering Volume 16 ; 16 > 
@@ -4476,7 +4476,7 @@
     param[journal_id] = imf 
     param[journal_issn] = 0020-2967
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2005 ; Transactions of the Institute of Metal Finishing Volume 83 ; 83 > 
     au < doNotProcess ; 2006 ; Transactions of the Institute of Metal Finishing Volume 84 ; 84 > 
@@ -4530,7 +4530,7 @@
     param[journal_id] = trb 
     param[journal_issn] = 1751-5831
     implicit < status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2007 ; Tribology - Materials, Surfaces & Interfaces Volume 1 ; 1 > 
     au < doNotProcess ; 2008 ; Tribology - Materials, Surfaces & Interfaces Volume 2 ; 2 > 
@@ -4595,7 +4595,7 @@
     param[journal_issn] = 1742-271X
     implicit < status ; year ; name ; param[volume_name] >
     comment[moved] = to RSMP in 2010
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2004 ; Ultrasound Volume 12 ; 12 > 
     au < doNotProcess ; 2005 ; Ultrasound Volume 13 ; 13 > 
