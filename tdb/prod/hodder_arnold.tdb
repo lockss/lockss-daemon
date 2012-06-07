@@ -12,7 +12,8 @@
       eissn = 1477-0318 ;
       issnl = 0968-1302
     >
-    
+
+    comment[ceased] = This title has ceased and is no longer available online.    
     rights = openaccess
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
