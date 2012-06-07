@@ -2740,7 +2740,7 @@
         au < manifest ; exists ; 2008 ; Australian & New Zealand Journal of Psychiatry Volume 42 ; 42 ; >
         au < manifest ; exists ; 2009 ; Australian & New Zealand Journal of Psychiatry Volume 43 ; 43 ; >
         au < released ; manifest ; 2010 ; Australian & New Zealand Journal of Psychiatry Volume 44 ; 44 ; >
-        au < testing ; exists ; 2011 ; Australian & New Zealand Journal of Psychiatry Volume 45 ; 45 ; >
+        au < released ; manifest ;2011 ; Australian & New Zealand Journal of Psychiatry Volume 45 ; 45 ; >
         au < crawling ; exists ; 2012 ; Australian & New Zealand Journal of Psychiatry Volume 46 ; 46 ; >
 
     }
@@ -2879,7 +2879,7 @@
       au < manifest ; exists ; 2008 ; Australasian Psychiatry Volume 16 ; 16 ; >
       au < manifest ; exists ; 2009 ; Australasian Psychiatry Volume 17 ; 17 ; >
       au < released ; manifest ; 2010 ; Australasian Psychiatry Volume 18 ; 18 ; >
-      au < testing ; exists ; 2011 ; Australasian Psychiatry Volume 19 ; 19 ; >
+      au < released ; manifest ; 2011 ; Australasian Psychiatry Volume 19 ; 19 ; >
       au < crawling ; exists ; 2012 ; Australasian Psychiatry Volume 20 ; 20 ; >
 
     }
@@ -4668,7 +4668,7 @@
         au < manifest ; exists ; 2008 ; Clinical EEG and Neuroscience Volume 39 ; 39 ; >
         au < manifest ; exists ; 2009 ; Clinical EEG and Neuroscience Volume 40 ; 40 ; >
         au < released ; manifest ; 2010 ; Clinical EEG and Neuroscience Volume 41 ; 41 ; >
-        au < testing ; exists ; 2011 ; Clinical EEG and Neuroscience Volume 42 ; 42 ; >
+        au < released ; manifest ; 2011 ; Clinical EEG and Neuroscience Volume 42 ; 42 ; >
         au < crawling ; exists ; 2012 ; Clinical EEG and Neuroscience Volume 43 ; 43 ; >
       
     }
@@ -7410,7 +7410,7 @@
       au < manifest ; exists ; 2008 ; Drug Information Journal Volume 42 ; 42 ; >
       au < manifest ; exists ; 2009 ; Drug Information Journal Volume 43 ; 43 ; >
       au < released ; manifest ; 2010 ; Drug Information Journal Volume 44 ; 44 ; >
-      au < testing ; exists ; 2011 ; Drug Information Journal Volume 45 ; 45 ; >
+      au < released ; manifest ; 2011 ; Drug Information Journal Volume 45 ; 45 ; >
       au < crawling ; exists ; 2012 ; Drug Information Journal Volume 46 ; 46 ; >
 
     }
@@ -8609,7 +8609,7 @@
       au < manifest ; exists ; 2008 ; European Journal of Cardiovascular Nursing Volume 7 ; 7 ; >
       au < manifest ; exists ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8 ; >
       au < released ; manifest ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9 ; >
-      au < testing ; exists ; 2011 ; European Journal of Cardiovascular Nursing Volume 10 ; 10 ; >
+      au < released ; manifest ; 2011 ; European Journal of Cardiovascular Nursing Volume 10 ; 10 ; >
       au < crawling ; exists ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 11 ; >
 
     }
@@ -11893,7 +11893,7 @@
       au < manifest ; exists ; 2008 ; Humanity & Society Volume 32 ; 32 ; >
       au < manifest ; exists ; 2009 ; Humanity & Society Volume 33 ; 33 ; >
       au < released ; manifest ; 2010 ; Humanity & Society Volume 34 ; 34 ; >
-      au < testing ; exists ; 2011 ; Humanity & Society Volume 35 ; 35 ; >
+      au < released ; manifest ; 2011 ; Humanity & Society Volume 35 ; 35 ; >
       au < crawling ; exists ; 2012 ; Humanity & Society Volume 36 ; 36 ; >
 
     }
@@ -13104,7 +13104,7 @@
         au < exists ; exists ; 2005-2007 ; International Journal of Discrimination and the Law Volume 8 ; 8 ; >
         au < exists ; exists ; 2007-2008 ; International Journal of Discrimination and the Law Volume 9 ; 9 ; >
         au < exists ; exists ; 2009 ; International Journal of Discrimination and the Law Volume 10 ; 10 ; >
-        au < testing ; exists ; 2011 ; International Journal of Discrimination and the Law Volume 11 ; 11 ; >
+        au < released ; manifest ; 2011 ; International Journal of Discrimination and the Law Volume 11 ; 11 ; >
         au < expected ; exists ; 2012 ; International Journal of Discrimination and the Law Volume 12 ; 12 ; >
 
       }
@@ -13136,7 +13136,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Engine Research Volume 9 ; 9 ; >
       au < manifest ; exists ; 2009 ; International Journal of Engine Research Volume 10 ; 10 ; >
       au < released ; manifest ; 2010 ; International Journal of Engine Research Volume 11 ; 11 ; >
-      au < testing ; exists ; 2011 ; International Journal of Engine Research Volume 12 ; 12 ; >
+      au < released ; manifest ; 2011 ; International Journal of Engine Research Volume 12 ; 12 ; >
       au < crawling ; exists ; 2012 ; International Journal of Engine Research Volume 13 ; 13 ; >
 
     }
@@ -18445,7 +18445,7 @@
       au < manifest ; exists ; 2008-2009 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 6 ; 6 ; >
       au < manifest ; exists ; 2009-2010 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 7 ; 7 ; >
       au < released ; crawling ; 2010-2011 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 8 ; 8 ; >
-      au < testing ; exists ; 2011-2012 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 9 ; 9 ; >
+      au < released ; manifest ; 2011-2012 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 9 ; 9 ; >
       au < expected ; exists ; 2012-2013 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 10 ; 10 ; >
 
     }
@@ -22678,7 +22678,7 @@
       comment[tej1] = missing manifest. need to contact publisher
 
       au < notReady ; exists ; 2010 ; Journal of Tissue Engineering Volume 1 ; 1 ; >
-      au < testing ; exists ; 2011 ; Journal of Tissue Engineering Volume 2 ; 2 ; >
+      au < released ; manifest ; 2011 ; Journal of Tissue Engineering Volume 2 ; 2 ; >
       au < expected ; exists ; 2012 ; Journal of Tissue Engineering Volume 3 ; 3 ; >
 
     }
@@ -22770,7 +22770,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Transformative Education Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Transformative Education Volume 7 ; 7 ; >
       au < released ; manifest ; 2010 ; Journal of Transformative Education Volume 8 ; 8 ; >
-      au < testing ; exists ; 2011 ; Journal of Transformative Education Volume 9 ; 9 ; >
+      au < released ; manifest ; 2011 ; Journal of Transformative Education Volume 9 ; 9 ; >
       au < expected ; exists ; 2012 ; Journal of Transformative Education Volume 10 ; 10 ; >
 
     }
@@ -25491,7 +25491,7 @@
       au < released ; crawling ; 2011 ; National Institute Economic Review Volume 215 ; 215 ; >
       au < released ; crawling ; 2011 ; National Institute Economic Review Volume 216 ; 216 ; >
       au < released ; crawling ; 2011 ; National Institute Economic Review Volume 217 ; 217 ; >
-      au < testing ; exists ; 2011 ; National Institute Economic Review Volume 218 ; 218 ; >
+      au < released ; manifest ; 2011 ; National Institute Economic Review Volume 218 ; 218 ; >
       au < crawling ; exists ; 2012 ; National Institute Economic Review Volume 219 ; 219 ; >
       au < crawling ; exists ; 2012 ; National Institute Economic Review Volume 220 ; 220 ; >
       au < expected ; exists ; 2012 ; National Institute Economic Review Volume 221 ; 221 ; >
@@ -29312,7 +29312,7 @@
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Rehabilitation Counseling Bulletin Volume 52 ; 52 ; >
       au < manifest ; exists ; 2009-2010 ; Rehabilitation Counseling Bulletin Volume 53 ; 53 ; >
       au < released ; manifest ; 2010-2011 ; Rehabilitation Counseling Bulletin Volume 54 ; 54 ; >
-      au < testing ; exists ; 2011-2012 ; Rehabilitation Counseling Bulletin Volume 55 ; 55 ; >
+      au < released ; manifest ; 2011-2012 ; Rehabilitation Counseling Bulletin Volume 55 ; 55 ; >
       au < expected ; exists ; 2012 ; Rehabilitation Counseling Bulletin Volume 56 ; 56 ; >
       
 
@@ -32116,7 +32116,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Studies in History Volume 24 ; 24 ; >
       au < manifest ; exists ; 2009 ; Studies in History Volume 25 ; 25 ; >
       au < released ; manifest ; 2010 ; Studies in History Volume 26 ; 26 ; >
-      au < testing ; exists ; 2011 ; Studies in History Volume 27 ; 27 ; >
+      au < released ; manifest ; 2011 ; Studies in History Volume 27 ; 27 ; >
       au < expected ; exists ; 2012 ; Studies in History Volume 28 ; 28 ; >
       
     }
@@ -34174,7 +34174,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Trends in Amplification Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Trends in Amplification Volume 13 ; 13 ; >
       au < released ; manifest ; 2010 ; Trends in Amplification Volume 14 ; 14 ; >
-      au < testing ; exists ; 2011 ; Trends in Amplification Volume 15 ; 15 ; >
+      au < released ; manifest ; 2011 ; Trends in Amplification Volume 15 ; 15 ; >
       au < crawling ; exists ; 2012 ; Trends in Amplification Volume 16 ; 16 ; >
  
     }
