@@ -15,7 +15,7 @@
     
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
     param[base_url] = http://www.ancient-asia-journal.com/
-    param[journal_abbr] = aa
+    param[journal_id] = aa
     implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
     au < manifest ; exists ; 2006 ; Ancient Asia Volume 1 ; 1 ; 2006 >
@@ -32,7 +32,7 @@
     
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
     param[base_url] = http://www.ai-journal.com/
-    param[journal_abbr] = ai
+    param[journal_id] = ai
     implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
     au < manifest ; exists ; 2006-2007 ; Archaeology International Volume 10 ; 10 ; 2006-2007 >
@@ -52,7 +52,7 @@
     
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
     param[base_url] = http://www.archaeologybulletin.org/
-    param[journal_abbr] = bha
+    param[journal_id] = bha
     implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
     au < manifest ; exists ; 1991 ; The Bulletin of the History of Archaeology Volume 1 ; 1 ; 1991 >
@@ -88,7 +88,7 @@
     
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
     param[base_url] = http://www.jcms-journal.com/
-    param[journal_abbr] = jcms
+    param[journal_id] = jcms
     implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
     au < manifest ; exists ; 1996 ; The Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
@@ -110,7 +110,7 @@
     >
     
     param[base_url] = http://openarchaeologydata.metajnl.com/
-    param[journal_abbr] = joad
+    param[journal_id] = joad
     
     comment[0] = Doesn't have volumes or manifest pages. Doesn't seem to be OJS2. 
 
@@ -124,7 +124,7 @@
     >
     
     param[base_url] = http://openresearchsoftware.metajnl.com/
-    param[journal_abbr] = jors
+    param[journal_id] = jors
 
     comment[0] = forthcoming, no articles online yet. Doesn't seem to be OJS2.
     
@@ -139,7 +139,7 @@
     
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
     param[base_url] = http://www.opticon1826.com/
-    param[journal_abbr] = opt
+    param[journal_id] = opt
     implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
     au < manifest ; exists ; 2006 ; Opticon1826 Volume 1 ; 1 ; 2006 >
@@ -161,7 +161,7 @@
     
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
     param[base_url] = http://pia-journal.co.uk/
-    param[journal_abbr] = pia
+    param[journal_id] = pia
     implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
     au < manifest ; exists ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
@@ -197,7 +197,7 @@
     
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
     param[base_url] = http://presentpasts.info/
-    param[journal_abbr] = pp
+    param[journal_id] = pp
     implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
     au < manifest ; exists ; 2009 ; Present Pasts Volume 1 ; 1 ; 2009 >
