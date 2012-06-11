@@ -11672,7 +11672,9 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     comment[0] = forthcoming July 2012 url redirects to another, check again in July
-
+    
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Radiation Research Volume 53 ; 53 >
+    
   }
 
   {
