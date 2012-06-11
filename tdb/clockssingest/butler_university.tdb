@@ -14,7 +14,7 @@
       eissn = 2164-6279 
     >
     
-    plugin = org.lockss.plugin.ClockssBerkeleyElectionPressPlugin 
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://digitalcommons.butler.edu/
     param[journal_abbr] = jhcs
     implicit < status ; status2 ; year ; name ; param[volume] >
