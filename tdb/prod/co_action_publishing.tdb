@@ -113,8 +113,8 @@
     comment[supplement_issn_and_eissn] = issn = 2000-8198 eissn = 2000-818X
      
      
-    au < testing ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
-    au < testing ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
+    au < ready ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
+    au < ready ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
     au < expected ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
     
 
@@ -188,7 +188,7 @@
     param[base_url] = http://www.infectionecologyandepidemiology.net/
     param[journal_id] = iee
 
-    au < testing ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
+    au < ready ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
     au < ready ; 2012 ; Infection Ecology & Epidemiology [including Supplements] Volume 2 ; 2 ; 2012 >
 
   }
@@ -254,7 +254,7 @@
     param[base_url] = http://www.aestheticsandculture.net/
     param[journal_id] = jac
 
-    au < testing ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; 2009 >
+    au < ready ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; 2009 >
     au < ready ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; 2010 >
     au < testing ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
     au < testing ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 ; 2012 >
