@@ -48,8 +48,8 @@
       param[journal_issn] = 1751-6455
 
 
-      au < testing ; 2008-2009 ; Afro-Asian Journal of Finance and Accounting Volume 1 ; 1 >
-      au < testing ; 2010-2011 ; Afro-Asian Journal of Finance and Accounting Volume 2 ; 2 >
+      au < ready ; 2008-2009 ; Afro-Asian Journal of Finance and Accounting Volume 1 ; 1 >
+      au < ready ; 2010-2011 ; Afro-Asian Journal of Finance and Accounting Volume 2 ; 2 >
       au < manifest ; 2012 ; Afro-Asian Journal of Finance and Accounting Volume 3 ; 3 >
 
     }
@@ -65,7 +65,7 @@
 
       param[journal_issn] = 1752-7775
       
-      au < testing ; 2008-2009 ; American Journal of Finance and Accounting Volume 1 ; 1 >
+      au < ready ; 2008-2009 ; American Journal of Finance and Accounting Volume 1 ; 1 >
       au < manifest ; 2010-2011 ; American Journal of Finance and Accounting Volume 2 ; 2 >
 
     }
@@ -81,8 +81,8 @@
 
       param[journal_issn] = 1741-6418
       
-      au < testing ; 2005-2007 ; Atoms for Peace: an International Journal Volume 1 ; 1 >
-      au < testing ; 2008-2009 ; Atoms for Peace: an International Journal Volume 2 ; 2 >
+      au < ready ; 2005-2007 ; Atoms for Peace: an International Journal Volume 1 ; 1 >
+      au < ready ; 2008-2009 ; Atoms for Peace: an International Journal Volume 2 ; 2 >
       au < manifest ; 2010 ; Atoms for Peace: an International Journal Volume 3 ; 3 >      
 
     }
@@ -98,8 +98,8 @@
 
       param[journal_issn] = 1754-7326
 
-      au < testing ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
-      au < testing ; 2011 ; The Botulinum Journal Volume 2 ; 2 >
+      au < ready ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
+      au < ready ; 2011 ; The Botulinum Journal Volume 2 ; 2 >
 
     }
 
@@ -118,10 +118,10 @@
       au < released ; 2005 ; Electronic Government, an International Journal Volume 2 ; 2 >
       au < released ; 2006 ; Electronic Government, an International Journal Volume 3 ; 3 >
       au < testing ; 2007 ; Electronic Government, an International Journal Volume 4 ; 4 >
-      au < testing ; 2008 ; Electronic Government, an International Journal Volume 5 ; 5 >
-      au < testing ; 2009 ; Electronic Government, an International Journal Volume 6 ; 6 >
-      au < testing ; 2010 ; Electronic Government, an International Journal Volume 7 ; 7 >
-      au < testing ; 2011 ; Electronic Government, an International Journal Volume 8 ; 8 >
+      au < ready ; 2008 ; Electronic Government, an International Journal Volume 5 ; 5 >
+      au < ready ; 2009 ; Electronic Government, an International Journal Volume 6 ; 6 >
+      au < ready ; 2010 ; Electronic Government, an International Journal Volume 7 ; 7 >
+      au < ready ; 2011 ; Electronic Government, an International Journal Volume 8 ; 8 >
       au < manifest ; 2012 ; Electronic Government, an International Journal Volume 9 ; 9 >
 
     }
@@ -198,14 +198,14 @@
       au < exists ; 2001 ; Global Business and Economics Review Volume 3 ; 3 >
       au < exists ; 2002 ; Global Business and Economics Review Volume 4 ; 4 >
       au < exists ; 2003 ; Global Business and Economics Review Volume 5 ; 5 >
-      au < testing ; 2004 ; Global Business and Economics Review Volume 6 ; 6 >
-      au < testing ; 2005 ; Global Business and Economics Review Volume 7 ; 7 >
-      au < testing ; 2006 ; Global Business and Economics Review Volume 8 ; 8 >
-      au < testing ; 2007 ; Global Business and Economics Review Volume 9 ; 9 >
-      au < testing ; 2008 ; Global Business and Economics Review Volume 10 ; 10 >
-      au < testing ; 2009 ; Global Business and Economics Review Volume 11 ; 11 >
-      au < testing ; 2010 ; Global Business and Economics Review Volume 12 ; 12 >
-      au < testing ; 2011 ; Global Business and Economics Review Volume 13 ; 13 >
+      au < ready ; 2004 ; Global Business and Economics Review Volume 6 ; 6 >
+      au < ready ; 2005 ; Global Business and Economics Review Volume 7 ; 7 >
+      au < ready ; 2006 ; Global Business and Economics Review Volume 8 ; 8 >
+      au < ready ; 2007 ; Global Business and Economics Review Volume 9 ; 9 >
+      au < ready ; 2008 ; Global Business and Economics Review Volume 10 ; 10 >
+      au < ready ; 2009 ; Global Business and Economics Review Volume 11 ; 11 >
+      au < ready ; 2010 ; Global Business and Economics Review Volume 12 ; 12 >
+      au < ready ; 2011 ; Global Business and Economics Review Volume 13 ; 13 >
       au < manifest ; 2012 ; Global Business and Economics Review Volume 14 ; 14 >
 
     }
@@ -221,9 +221,9 @@
 
       param[journal_issn] = 1752-265X
       
-      au < testing ; 2007-2008 ; International Journal of Abrasive Technology Volume 1 ; 1 >
-      au < testing ; 2009 ; International Journal of Abrasive Technology Volume 2 ; 2 >
-      au < testing ; 2010 ; International Journal of Abrasive Technology Volume 3 ; 3 >
+      au < ready ; 2007-2008 ; International Journal of Abrasive Technology Volume 1 ; 1 >
+      au < ready ; 2009 ; International Journal of Abrasive Technology Volume 2 ; 2 >
+      au < ready ; 2010 ; International Journal of Abrasive Technology Volume 3 ; 3 >
       au < manifest ; 2011 ; International Journal of Abrasive Technology Volume 4 ; 4 >
 
     }
@@ -239,8 +239,8 @@
 
       param[journal_issn] = 1752-8232
       
-      au < testing ; 2008-2009 ; International Journal of Accounting and Finance Volume 1 ; 1 >
-      au < testing ; 2010 ; International Journal of Accounting and Finance Volume 2 ; 2 >
+      au < ready ; 2008-2009 ; International Journal of Accounting and Finance Volume 1 ; 1 >
+      au < ready ; 2010 ; International Journal of Accounting and Finance Volume 2 ; 2 >
       au < manifest ; 2011 ; International Journal of Accounting and Finance Volume 3 ; 3 >
 
     }
@@ -256,13 +256,13 @@
 
       param[journal_issn] = 1740-8016
       
-      au < testing ; 2004 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 1 ; 1 >
-      au < testing ; 2005 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 2 ; 2 >
-      au < testing ; 2006 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 3 ; 3 >
-      au < testing ; 2007 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 4 ; 4 >
-      au < testing ; 2008-2009 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 5 ; 5 >
-      au < testing ; 2010 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 6 ; 6 >
-      au < testing ; 2011 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 7 ; 7 >
+      au < ready ; 2004 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 1 ; 1 >
+      au < ready ; 2005 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 2 ; 2 >
+      au < ready ; 2006 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 3 ; 3 >
+      au < ready ; 2007 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 4 ; 4 >
+      au < ready ; 2008-2009 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 5 ; 5 >
+      au < ready ; 2010 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 6 ; 6 >
+      au < ready ; 2011 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 7 ; 7 >
       au < manifest ; 2012 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 8 ; 8 >
 
     }
@@ -278,14 +278,14 @@
 
       param[journal_issn] = 1743-8233
       
-      au < testing ; 2005-2006 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 1 ; 1 >
-      au < testing ; 2007 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 2 ; 2 >
-      au < testing ; 2008 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 3 ; 3 >
-      au < testing ; 2009 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 4 ; 4 >
-      au < testing ; 2010 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 5 ; 5 >
-      au < testing ; 2010 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 6 ; 6 >
-      au < testing ; 2011 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 7 ; 7 >
-      au < testing ; 2011 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 8 ; 8 >
+      au < ready ; 2005-2006 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 1 ; 1 >
+      au < ready ; 2007 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 2 ; 2 >
+      au < ready ; 2008 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 3 ; 3 >
+      au < ready ; 2009 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 4 ; 4 >
+      au < ready ; 2010 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 5 ; 5 >
+      au < ready ; 2010 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 6 ; 6 >
+      au < ready ; 2011 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 7 ; 7 >
+      au < ready ; 2011 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 8 ; 8 >
       au < manifest ; 2012 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 9 ; 9 > 
 
     }
@@ -316,8 +316,8 @@
 
       param[journal_issn] = 1755-0394
       
-      au < testing ; 2008-2009 ; International Journal of Advanced Intelligence Paradigms Volume 1 ; 1 >
-      au < testing ; 2010 ; International Journal of Advanced Intelligence Paradigms Volume 2 ; 2 >
+      au < ready ; 2008-2009 ; International Journal of Advanced Intelligence Paradigms Volume 1 ; 1 >
+      au < ready ; 2010 ; International Journal of Advanced Intelligence Paradigms Volume 2 ; 2 >
       au < manifest ; 2011 ; International Journal of Advanced Intelligence Paradigms Volume 3 ; 3 >
 
     }
@@ -333,9 +333,9 @@
 
       param[journal_issn] = 1756-8420
       
-      au < testing ; 2008-2009 ; International Journal of Advanced Mechatronic Systems Volume 1 ; 1 > 
-      au < testing ; 2010 ; International Journal of Advanced Mechatronic Systems Volume 2 ; 2 > 
-      au < testing ; 2011 ; International Journal of Advanced Mechatronic Systems Volume 3 ; 3 > 
+      au < ready ; 2008-2009 ; International Journal of Advanced Mechatronic Systems Volume 1 ; 1 > 
+      au < ready ; 2010 ; International Journal of Advanced Mechatronic Systems Volume 2 ; 2 > 
+      au < ready ; 2011 ; International Journal of Advanced Mechatronic Systems Volume 3 ; 3 > 
       au < manifest ; 2012 ; International Journal of Advanced Mechatronic Systems Volume 4 ; 4 > 
 
     }
@@ -351,9 +351,9 @@
 
       param[journal_issn] = 1741-8003
       
-      au < testing ; 2005-2007 ; International Journal of Advanced Media and Communication Volume 1 ; 1 >
-      au < testing ; 2008 ; International Journal of Advanced Media and Communication Volume 2 ; 2 >
-      au < testing ; 2009 ; International Journal of Advanced Media and Communication Volume 3 ; 3 >
+      au < ready ; 2005-2007 ; International Journal of Advanced Media and Communication Volume 1 ; 1 >
+      au < ready ; 2008 ; International Journal of Advanced Media and Communication Volume 2 ; 2 >
+      au < ready ; 2009 ; International Journal of Advanced Media and Communication Volume 3 ; 3 >
       au < manifest ; 2010 ; International Journal of Advanced Media and Communication Volume 4 ; 4 >
 
     }
@@ -369,9 +369,9 @@
 
       param[journal_issn] = 1758-9398
       
-      au < testing ; 2009 ; International Journal of Advanced Operations Management Volume 1 ; 1 >
-      au < testing ; 2010 ; International Journal of Advanced Operations Management Volume 2 ; 2 >
-      au < testing ; 2011 ; International Journal of Advanced Operations Management Volume 3 ; 3 >
+      au < ready ; 2009 ; International Journal of Advanced Operations Management Volume 1 ; 1 >
+      au < ready ; 2010 ; International Journal of Advanced Operations Management Volume 2 ; 2 >
+      au < ready ; 2011 ; International Journal of Advanced Operations Management Volume 3 ; 3 >
       au < manifest ; 2012 ; International Journal of Advanced Operations Management Volume 4 ; 4 >
 
     }
@@ -402,9 +402,9 @@
 
       param[journal_issn] = 1746-1383
       
-      au < testing ; 2007 ; International Journal of Agent-Oriented Software Engineering Volume 1 ; 1 >
-      au < testing ; 2008 ; International Journal of Agent-Oriented Software Engineering Volume 2 ; 2 >
-      au < testing ; 2009 ; International Journal of Agent-Oriented Software Engineering Volume 3 ; 3 >
+      au < ready ; 2007 ; International Journal of Agent-Oriented Software Engineering Volume 1 ; 1 >
+      au < ready ; 2008 ; International Journal of Agent-Oriented Software Engineering Volume 2 ; 2 >
+      au < ready ; 2009 ; International Journal of Agent-Oriented Software Engineering Volume 3 ; 3 >
       au < manifest ; 2010-2011 ; International Journal of Agent-Oriented Software Engineering Volume 4 ; 4 >
 
     }
@@ -435,10 +435,10 @@
 
       param[journal_issn] = 1741-9182
       
-      au < testing ; 2006 ; International Journal of Agile Systems and Management Volume 1 ; 1 >
-      au < testing ; 2007 ; International Journal of Agile Systems and Management Volume 2 ; 2 >
-      au < testing ; 2008 ; International Journal of Agile Systems and Management Volume 3 ; 3 >
-      au < testing ; 2009-2011 ; International Journal of Agile Systems and Management Volume 4 ; 4 >
+      au < ready ; 2006 ; International Journal of Agile Systems and Management Volume 1 ; 1 >
+      au < ready ; 2007 ; International Journal of Agile Systems and Management Volume 2 ; 2 >
+      au < ready ; 2008 ; International Journal of Agile Systems and Management Volume 3 ; 3 >
+      au < ready ; 2009-2011 ; International Journal of Agile Systems and Management Volume 4 ; 4 >
       au < manifest ; 2012 ; International Journal of Agile Systems and Management Volume 5 ; 5 >
 
     }
@@ -454,14 +454,14 @@
 
       param[journal_issn] = 1741-5004
       
-      au < testing ; 2000-2001 ; International Journal of Agricultural Resources, Governance and Ecology Volume 1 ; 1 >
-      au < testing ; 2002-2003 ; International Journal of Agricultural Resources, Governance and Ecology Volume 2 ; 2 >
-      au < testing ; 2004 ; International Journal of Agricultural Resources, Governance and Ecology Volume 3 ; 3 >
-      au < testing ; 2005 ; International Journal of Agricultural Resources, Governance and Ecology Volume 4 ; 4 >
-      au < testing ; 2006 ; International Journal of Agricultural Resources, Governance and Ecology Volume 5 ; 5 >
-      au < testing ; 2007 ; International Journal of Agricultural Resources, Governance and Ecology Volume 6 ; 6 >
-      au < testing ; 2008 ; International Journal of Agricultural Resources, Governance and Ecology Volume 7 ; 7 >
-      au < testing ; 2009 ; International Journal of Agricultural Resources, Governance and Ecology Volume 8 ; 8 >
+      au < ready ; 2000-2001 ; International Journal of Agricultural Resources, Governance and Ecology Volume 1 ; 1 >
+      au < ready ; 2002-2003 ; International Journal of Agricultural Resources, Governance and Ecology Volume 2 ; 2 >
+      au < ready ; 2004 ; International Journal of Agricultural Resources, Governance and Ecology Volume 3 ; 3 >
+      au < ready ; 2005 ; International Journal of Agricultural Resources, Governance and Ecology Volume 4 ; 4 >
+      au < ready ; 2006 ; International Journal of Agricultural Resources, Governance and Ecology Volume 5 ; 5 >
+      au < ready ; 2007 ; International Journal of Agricultural Resources, Governance and Ecology Volume 6 ; 6 >
+      au < ready ; 2008 ; International Journal of Agricultural Resources, Governance and Ecology Volume 7 ; 7 >
+      au < ready ; 2009 ; International Journal of Agricultural Resources, Governance and Ecology Volume 8 ; 8 >
       au < manifest ; 2011 ; International Journal of Agricultural Resources, Governance and Ecology Volume 9 ; 9 >
       
     }
