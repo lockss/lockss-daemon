@@ -5,8 +5,8 @@
 {
     title <
       name = Endocrine Connections ;
-      issn = 2049-3614 ;
-      comment[eissn] = no eissn MD 2012-06-11
+      issn = 2049-3614 
+      
     >
 
     {
@@ -15,7 +15,8 @@
       param[base_url] = http://www.endocrineconnections.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; expected ; 2012 ; Endocrine Connections Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; exists ; 2012 ; Endocrine Connections Volume 1 ; 1 >
+
     }
 
   }
