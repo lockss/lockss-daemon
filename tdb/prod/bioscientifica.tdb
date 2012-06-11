@@ -2,7 +2,24 @@
   publisher <
     name = BioScientifica
   >
+{
+    title <
+      name = Endocrine Connections ;
+      issn = 2049-3614 ;
+      comment[eissn] = no eissn MD 2012-06-11
+    >
 
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://www.endocrineconnections.com/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Endocrine Connections Volume 1 ; 1 >
+    }
+
+  }
+  
   {
     title <
       name = European Journal of Endocrinology ;
