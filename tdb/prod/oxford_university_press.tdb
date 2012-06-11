@@ -11671,7 +11671,7 @@
     param[base_url] = http://jrr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    comment[0] = forthcoming July 2012 url redirects to another, check again in July
+    comment[0] = forthcoming July 2012
     
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Radiation Research Volume 53 ; 53 >
     
