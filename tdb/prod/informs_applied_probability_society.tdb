@@ -13,11 +13,11 @@
       issn = 1946-5238
     >
 
-    comment[plugin] = The plugin below is not valid
-    plugin = org.lockss.plugin.ojs.OJSPlugin
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://www.i-journals.org/ssy/
 
-    au < notReady ; 2011 ; Stochastic Systems Volume 1 ; 1 ; 2011 >
+    au < exists ; 2011 ; Stochastic Systems Volume 1 ; 1 ; 2011 >
+    au < exists ; 2012 ; Stochastic Systems Volume 2 ; 2 ; 2012 >
 
   }
 
