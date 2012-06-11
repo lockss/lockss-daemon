@@ -16,6 +16,7 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.theannals.com/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[notReady] = needs a plugin filter for div id="googlebot". re-test later. 5-21-12 jc.
 
       au < ready ; 1967 ; The Annals of Pharmacotherapy Volume 1 ; 1 >
       au < ready ; 1968 ; The Annals of Pharmacotherapy Volume 2 ; 2 >
@@ -46,20 +47,20 @@
       au < ready ; 1993 ; The Annals of Pharmacotherapy Volume 27 ; 27 >
       au < ready ; 1994 ; The Annals of Pharmacotherapy Volume 28 ; 28 >
       au < ready ; 1995 ; The Annals of Pharmacotherapy Volume 29 ; 29 >
-      au < testing ; 1996 ; The Annals of Pharmacotherapy Volume 30 ; 30 >
+      au < ready ; 1996 ; The Annals of Pharmacotherapy Volume 30 ; 30 >
       au < ready ; 1997 ; The Annals of Pharmacotherapy Volume 31 ; 31 >
       au < ready ; 1998 ; The Annals of Pharmacotherapy Volume 32 ; 32 >
       au < ready ; 1999 ; The Annals of Pharmacotherapy Volume 33 ; 33 >
       au < ready ; 2000 ; The Annals of Pharmacotherapy Volume 34 ; 34 >
       au < ready ; 2001 ; The Annals of Pharmacotherapy Volume 35 ; 35 >
-      au < testing ; 2002 ; The Annals of Pharmacotherapy Volume 36 ; 36 >
+      au < notReady ; 2002 ; The Annals of Pharmacotherapy Volume 36 ; 36 >
       au < ready ; 2003 ; The Annals of Pharmacotherapy Volume 37 ; 37 >
       au < testing ; 2004 ; The Annals of Pharmacotherapy Volume 38 ; 38 >
-      au < testing ; 2005 ; The Annals of Pharmacotherapy Volume 39 ; 39 >
+      au < noReady ; 2005 ; The Annals of Pharmacotherapy Volume 39 ; 39 >
       au < ready ; 2006 ; The Annals of Pharmacotherapy Volume 40 ; 40 >
       au < ready ; 2007 ; The Annals of Pharmacotherapy Volume 41 ; 41 >
-      au < testing ; 2008 ; The Annals of Pharmacotherapy Volume 42 ; 42 >
-      au < testing ; 2009 ; The Annals of Pharmacotherapy Volume 43 ; 43 >
+      au < notReady ; 2008 ; The Annals of Pharmacotherapy Volume 42 ; 42 >
+      au < notReady ; 2009 ; The Annals of Pharmacotherapy Volume 43 ; 43 >
       au < ready ; 2010 ; The Annals of Pharmacotherapy Volume 44 ; 44 >
       au < ready ; 2011 ; The Annals of Pharmacotherapy Volume 45 ; 45 >
       au < manifest ; 2012 ; The Annals of Pharmacotherapy Volume 46 ; 46 >
