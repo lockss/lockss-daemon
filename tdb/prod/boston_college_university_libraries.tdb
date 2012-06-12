@@ -22,21 +22,21 @@
       param[base_url] = http://ejournals.bc.edu/ojs/
       param[journal_id] = catholic
 
-      au < releasing ; 1997 ; Catholic Education Volume 1 (1997) ; 1 ; 1997 >   
-      au < releasing ; 1998 ; Catholic Education Volume 1-2 (1998) ; 1-2 ; 1998 > 
-      au < releasing ; 1999 ; Catholic Education Volume 2-3 (1999) ; 2-3 ; 1999 > 
-      au < releasing ; 2000 ; Catholic Education Volume 3-4 (2000) ; 3-4 ; 2000 > 
-      au < releasing ; 2001 ; Catholic Education Volume 4-5 (2001) ; 4-5 ; 2001 > 
-      au < releasing ; 2002 ; Catholic Education Volume 5-6 (2002) ; 5-6 ; 2002 > 
-      au < releasing ; 2003 ; Catholic Education Volume 6-7 (2003) ; 6-7 ; 2003 > 
-      au < releasing ; 2004 ; Catholic Education Volume 7-8 (2004) ; 7-8 ; 2004 > 
-      au < releasing ; 2005 ; Catholic Education Volume 8-9 (2005) ; 8-9 ; 2005 > 
-      au < releasing ; 2006 ; Catholic Education Volume 9-10 (2006) ; 9-10 ; 2006 > 
-      au < releasing ; 2007 ; Catholic Education Volume 10-11 (2007) ; 10-11 ; 2007 > 
-      au < releasing ; 2008 ; Catholic Education Volume 11-12 (2008) ; 11-12 ; 2008 > 
-      au < releasing ; 2009 ; Catholic Education Volume 12-13 (2009) ; 12-13 ; 2009 > 
-      au < releasing ; 2010 ; Catholic Education Volume 13-14 (2010) ; 13-14 ; 2010 >
-      au < releasing ; 2011 ; Catholic Education Volume 14-15 (2011) ; 14-15 ; 2011 >
+      au < released ; 1997 ; Catholic Education Volume 1 (1997) ; 1 ; 1997 >   
+      au < released ; 1998 ; Catholic Education Volume 1-2 (1998) ; 1-2 ; 1998 > 
+      au < released ; 1999 ; Catholic Education Volume 2-3 (1999) ; 2-3 ; 1999 > 
+      au < released ; 2000 ; Catholic Education Volume 3-4 (2000) ; 3-4 ; 2000 > 
+      au < released ; 2001 ; Catholic Education Volume 4-5 (2001) ; 4-5 ; 2001 > 
+      au < released ; 2002 ; Catholic Education Volume 5-6 (2002) ; 5-6 ; 2002 > 
+      au < released ; 2003 ; Catholic Education Volume 6-7 (2003) ; 6-7 ; 2003 > 
+      au < released ; 2004 ; Catholic Education Volume 7-8 (2004) ; 7-8 ; 2004 > 
+      au < released ; 2005 ; Catholic Education Volume 8-9 (2005) ; 8-9 ; 2005 > 
+      au < released ; 2006 ; Catholic Education Volume 9-10 (2006) ; 9-10 ; 2006 > 
+      au < released ; 2007 ; Catholic Education Volume 10-11 (2007) ; 10-11 ; 2007 > 
+      au < released ; 2008 ; Catholic Education Volume 11-12 (2008) ; 11-12 ; 2008 > 
+      au < released ; 2009 ; Catholic Education Volume 12-13 (2009) ; 12-13 ; 2009 > 
+      au < released ; 2010 ; Catholic Education Volume 13-14 (2010) ; 13-14 ; 2010 >
+      au < released ; 2011 ; Catholic Education Volume 14-15 (2011) ; 14-15 ; 2011 >
       au < manifest ; 2012 ; Catholic Education Volume 15-16 (2012) ; 15-16 ; 2012 >
     
     }
@@ -51,15 +51,15 @@
       param[base_url] = http://ejournals.bc.edu/ojs/
       param[journal_id] = jtla
       
-      au < releasing ; 2002 ; The Journal of Technology, Learning and Assessment Volume 1 (2002) ; 1 ; 2002 >
-      au < releasing ; 2003 ; The Journal of Technology, Learning and Assessment Volume 2 (2003) ; 2 ; 2003 >
-      au < releasing ; 2004 ; The Journal of Technology, Learning and Assessment Volume 2-3 (2004) ; 2-3 ; 2004 >
-      au < releasing ; 2005 ; The Journal of Technology, Learning and Assessment Volume 3-4 (2005) ; 3-4 ; 2005 >
-      au < releasing ; 2006 ; The Journal of Technology, Learning and Assessment Volume 4-5 (2006) ; 4-5 ; 2006 >
-      au < releasing ; 2007 ; The Journal of Technology, Learning and Assessment Volume 5-6 (2007) ; 5-6 ; 2007 >
-      au < releasing ; 2008 ; The Journal of Technology, Learning and Assessment Volume 6-7 (2008) ; 6-7 ; 2008 >
-      au < releasing ; 2009 ; The Journal of Technology, Learning and Assessment Volume 8 (2009) ; 8 ; 2009 >
-      au < releasing ; 2010 ; The Journal of Technology, Learning and Assessment Volume 8-10 (2010) ; 8-10 ; 2010 >
+      au < released ; 2002 ; The Journal of Technology, Learning and Assessment Volume 1 (2002) ; 1 ; 2002 >
+      au < released ; 2003 ; The Journal of Technology, Learning and Assessment Volume 2 (2003) ; 2 ; 2003 >
+      au < released ; 2004 ; The Journal of Technology, Learning and Assessment Volume 2-3 (2004) ; 2-3 ; 2004 >
+      au < released ; 2005 ; The Journal of Technology, Learning and Assessment Volume 3-4 (2005) ; 3-4 ; 2005 >
+      au < released ; 2006 ; The Journal of Technology, Learning and Assessment Volume 4-5 (2006) ; 4-5 ; 2006 >
+      au < released ; 2007 ; The Journal of Technology, Learning and Assessment Volume 5-6 (2007) ; 5-6 ; 2007 >
+      au < released ; 2008 ; The Journal of Technology, Learning and Assessment Volume 6-7 (2008) ; 6-7 ; 2008 >
+      au < released ; 2009 ; The Journal of Technology, Learning and Assessment Volume 8 (2009) ; 8 ; 2009 >
+      au < released ; 2010 ; The Journal of Technology, Learning and Assessment Volume 8-10 (2010) ; 8-10 ; 2010 >
     
     }
   
@@ -73,13 +73,13 @@
       param[journal_id] = scjr
       comment[2006] = no content exists for 2006
 
-      au < releasing ; 2005 ; Studies in Christian-Jewish Relations Volume 1 (2005) ; 1 ; 2005 >
-      au < releasing ; 2007 ; Studies in Christian-Jewish Relations Volume 2 (2007) ; 2 ; 2007 >
-      au < releasing ; 2008 ; Studies in Christian-Jewish Relations Volume 2-3 (2008) ; 2-3 ; 2008 >
-      au < releasing ; 2009 ; Studies in Christian-Jewish Relations Volume 4 (2009) ; 4 ; 2009 >
-      au < releasing ; 2010 ; Studies in Christian-Jewish Relations Volume 5 (2010) ; 5 ; 2010 >
-      au < releasing ; 2011 ; Studies in Christian-Jewish Relations Volume 6 (2011) ; 6 ; 2011 >
-      au < releasing ; 2012 ; Studies in Christian-Jewish Relations Volume 7 (2012) ; 7 ; 2012 >
+      au < released ; 2005 ; Studies in Christian-Jewish Relations Volume 1 (2005) ; 1 ; 2005 >
+      au < released ; 2007 ; Studies in Christian-Jewish Relations Volume 2 (2007) ; 2 ; 2007 >
+      au < released ; 2008 ; Studies in Christian-Jewish Relations Volume 2-3 (2008) ; 2-3 ; 2008 >
+      au < released ; 2009 ; Studies in Christian-Jewish Relations Volume 4 (2009) ; 4 ; 2009 >
+      au < released ; 2010 ; Studies in Christian-Jewish Relations Volume 5 (2010) ; 5 ; 2010 >
+      au < released ; 2011 ; Studies in Christian-Jewish Relations Volume 6 (2011) ; 6 ; 2011 >
+      au < released ; 2012 ; Studies in Christian-Jewish Relations Volume 7 (2012) ; 7 ; 2012 >
 
     }
 
