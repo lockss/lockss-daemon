@@ -38,7 +38,7 @@
 
     au < released ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; 2010 >
     au < released ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 >
-    au < ready ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; 2012 >
+    au < releasing ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; 2012 >
 
   }
 
@@ -55,7 +55,7 @@
 
     au < released ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
     au < released ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
-    au < ready ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+    au < releasing ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
     
   }
 
@@ -72,9 +72,9 @@
 
     au < testing ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
     au < testing ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
-    au < ready ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
+    au < releasing ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
-    au < ready ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
+    au < releasing ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
     
   }
 
@@ -113,8 +113,8 @@
     comment[supplement_issn_and_eissn] = issn = 2000-8198 eissn = 2000-818X
      
      
-    au < ready ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
-    au < ready ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
+    au < releasing ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
+    au < releasing ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
     au < expected ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
     
 
@@ -154,7 +154,7 @@
     au < released ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
     au < released ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 >
     au < released ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
-    au < ready ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 >
+    au < releasing ; 2012 ; Food & Nutrition Research [including Supplements] Volume 56 ; 56 ; 2012 >
 
   }
 
@@ -174,7 +174,7 @@
     au < released ; 2009 ; Global Health Action [including Supplements] Volume 2 ; 2 ; 2009 >
     au < released ; 2010 ; Global Health Action [including Supplements] Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; Global Health Action [including Supplements] Volume 4 ; 4 ; 2011 >
-    au < ready ; 2012 ; Global Health Action [including Supplements] Volume 5 ; 5 ; 2012 >
+    au < releasing ; 2012 ; Global Health Action [including Supplements] Volume 5 ; 5 ; 2012 >
 
   }
 
@@ -188,8 +188,8 @@
     param[base_url] = http://www.infectionecologyandepidemiology.net/
     param[journal_id] = iee
 
-    au < ready ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
-    au < ready ; 2012 ; Infection Ecology & Epidemiology [including Supplements] Volume 2 ; 2 ; 2012 >
+    au < releasing ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
+    au < releasing ; 2012 ; Infection Ecology & Epidemiology [including Supplements] Volume 2 ; 2 ; 2012 >
 
   }
 
@@ -273,7 +273,7 @@
     param[journal_id] = jchimp
 
     au < released ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; 2011 >
-    au < ready ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; 2012 >
+    au < releasing ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; 2012 >
 
   }
   
@@ -291,7 +291,7 @@
     au < released ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 >
-    au < ready ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 >
+    au < releasing ; 2012 ; Journal of Oral Microbiology Volume 4 ; 4 ; 2012 >
 
   }
 
@@ -386,18 +386,18 @@
     au < exists ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 ; 1994 >
     au < exists ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 ; 1995 >
     au < exists ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 ; 1996 >
-    au < ready ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 ; 1998 >
-    au < ready ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; 1999 >
-    au < ready ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
-    au < ready ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; 2001 >
+    au < releasing ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 ; 1998 >
+    au < releasing ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; 1999 >
+    au < releasing ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
+    au < releasing ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; 2001 >
     au < testing ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 ; 2002 >
-    au < ready ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 >
-    au < ready ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; 2004 >
-    au < ready ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 ; 2005 >
-    au < ready ; 2006 ; Microbial Ecology in Health and Disease Volume 18 ; 18 ; 2006 >
-    au < ready ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 ; 2007 >
-    au < ready ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 >
-    au < ready ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 >
+    au < releasing ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 >
+    au < releasing ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; 2004 >
+    au < releasing ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 ; 2005 >
+    au < releasing ; 2006 ; Microbial Ecology in Health and Disease Volume 18 ; 18 ; 2006 >
+    au < releasing ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 ; 2007 >
+    au < releasing ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 >
+    au < releasing ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 >
     au < testing ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
     au < exists ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 >
     
@@ -467,17 +467,17 @@
     au < manifest ; 1997 ; Polar Research Volume 16 ; 16 ; 1997 >
     au < manifest ; 1998 ; Polar Research Volume 17 ; 17 ; 1998 >
     au < manifest ; 1999 ; Polar Research Volume 18 ; 18 ; 1999 >
-    au < ready ; 2000 ; Polar Research Volume 19 ; 19 ; 2000 >
-    au < ready ; 2001 ; Polar Research Volume 20 ; 20 ; 2001 >
-    au < ready ; 2002 ; Polar Research Volume 21 ; 21 ; 2002 >
-    au < ready ; 2003 ; Polar Research Volume 22 ; 22 ; 2003 >
-    au < ready ; 2004 ; Polar Research Volume 23 ; 23 ; 2004 >
-    au < ready ; 2005 ; Polar Research Volume 24 ; 24 ; 2005 >
-    au < ready ; 2006 ; Polar Research Volume 25 ; 25 ; 2006 >
-    au < ready ; 2007 ; Polar Research Volume 26 ; 26 ; 2007 >
-    au < ready ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
-    au < ready ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
-    au < ready ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
+    au < releasing ; 2000 ; Polar Research Volume 19 ; 19 ; 2000 >
+    au < releasing ; 2001 ; Polar Research Volume 20 ; 20 ; 2001 >
+    au < releasing ; 2002 ; Polar Research Volume 21 ; 21 ; 2002 >
+    au < releasing ; 2003 ; Polar Research Volume 22 ; 22 ; 2003 >
+    au < releasing ; 2004 ; Polar Research Volume 23 ; 23 ; 2004 >
+    au < releasing ; 2005 ; Polar Research Volume 24 ; 24 ; 2005 >
+    au < releasing ; 2006 ; Polar Research Volume 25 ; 25 ; 2006 >
+    au < releasing ; 2007 ; Polar Research Volume 26 ; 26 ; 2007 >
+    au < releasing ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
+    au < releasing ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
+    au < releasing ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
     au < testing ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
     au < exists ; 2012 ; Polar Research [including Supplements] Volume 31 ; 31 ; 2012 >
 
@@ -748,7 +748,7 @@
       param[base_url] = http://www.vulnerablegroupsandinclusion.net/
       param[journal_id] = vgi
 
-      au < ready ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
+      au < releasing ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
       au < released ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
       au < exists ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 ; 2012 >
 
