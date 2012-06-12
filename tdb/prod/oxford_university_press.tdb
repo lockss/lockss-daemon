@@ -11670,8 +11670,6 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jrr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    comment[0] = forthcoming July 2012
     
     au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Radiation Research Volume 53 ; 53 >
     
