@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -16,6 +16,9 @@
     <map>
       <entry>
         <string>Substance</string>
+	<string>2</string>
+      </entry>
+      <string>Poll</string>
 	<string>2</string>
       </entry>
     </map>
