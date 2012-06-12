@@ -119,6 +119,10 @@
     <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationHtmlFilterFactory</string>
   </entry>
   <entry>
+    <string>application/xhtml+xml_filter_factory</string>
+    <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationHtmlFilterFactory</string>
+  </entry>
+  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationUrlNormalizer</string>
   </entry>

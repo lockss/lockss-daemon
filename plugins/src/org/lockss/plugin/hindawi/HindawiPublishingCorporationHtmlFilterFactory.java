@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.8 2010-11-17 20:10:33 thib_gc Exp $
+ * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.9 2012-06-12 00:11:13 kendrayee Exp $
  */
 
 /*
@@ -50,6 +50,8 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
                                                
       throws PluginException {
         NodeFilter[] filters = new NodeFilter[] {
+        // Filter out <script> tags that seem to be edited often
+	    new TagNameFilter("script"),
         // Filter out <div id="left_column">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "left_column"),
         // ASP cookies; once without '__', now with  
