@@ -1418,6 +1418,8 @@
 
     >
     
+    {
+    
 	plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://muse.jhu.edu/
@@ -1427,8 +1429,21 @@
     
     au < manifest ; 2012 ; Tikkun Volume 27 ; 27 >
     
-  }
+    }
+   
+    {
     
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://tikkun.dukejournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      
+
+      au < HighWirePressH20Plugin ; exists ; 2012 ; Tikkun Volume 27 ; 27 >
+    
+     }
+    
+    }
+     
   {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
