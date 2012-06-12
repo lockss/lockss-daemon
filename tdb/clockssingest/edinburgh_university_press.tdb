@@ -103,7 +103,7 @@
     au < released ; crawling ; 2008 ; Architectural Heritage Volume XIX ; XIX >
     au < released ; crawling ; 2009 ; Architectural Heritage Volume XX ; XX >
     au < released ; crawling ; 2010 ; Architectural Heritage Volume 21 ; 21 >
-    au < crawling ; exists ; 2011 ; Architectural Heritage Volume 22 ; 22 >
+    au < testing ; exists ; 2011 ; Architectural Heritage Volume 22 ; 22 >
     au < expected ; exists ; 2012 ; Architectural Heritage Volume 23 ; 23 >
 
   }
@@ -727,7 +727,7 @@
       eissn = 1750-0206 ;
       issnl = 0264-2824
     >
-      comment[ph] = not AUs collected in clockss
+      comment[ph] = no AUs collected in clockss
   }
 
   {
@@ -852,7 +852,7 @@
     au < released ; crawling ; 2007 ; Scottish Archaeological Journal Volume 29 ; 29 >
     au < released ; crawling ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
     au < released ; crawling ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
-    au < crawling ; exists ; 2010 ; Scottish Archaeological Journal Volume 32 ; 32 >
+    au < testing ; exists ; 2010 ; Scottish Archaeological Journal Volume 32 ; 32 >
 
   }
 
