@@ -110,4 +110,29 @@
   
   }
   
+  {
+  
+    title <
+      name = Probability Surveys ;
+      issn = 1549-5787
+      
+    >  
+    
+    {
+    
+      plugin = org.lockss.plugin.ojs.OJSPlugin
+      param[base_url] = http://www.i-journals.org/ps/
+      
+      au < exists ; 2004 ; Probability Surveys Volume 1 ; 1 ; 2004 >
+      au < exists ; 2005 ; Probability Surveys Volume 2 ; 2 ; 2005 >
+      au < exists ; 2006 ; Probability Surveys Volume 3 ; 3 ; 2006 >
+      au < exists ; 2007 ; Probability Surveys Volume 4 ; 4 ; 2007 >
+      au < exists ; 2008 ; Probability Surveys Volume 5 ; 5 ; 2008 >
+      au < exists ; 2009 ; Probability Surveys Volume 6 ; 6 ; 2009 >
+      au < exists ; 2010 ; Probability Surveys Volume 7 ; 7 ; 2010 >
+      au < exists ; 2011 ; Probability Surveys Volume 8 ; 8 ; 2011 >
+      au < exists ; 2012 ; Probability Surveys Volume 9 ; 9 ; 2012 >
+    
+    }
+    
 }
