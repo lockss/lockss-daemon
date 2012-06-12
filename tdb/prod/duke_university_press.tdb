@@ -32,7 +32,7 @@
       au < released ; 2006 ; American Literary Scholarship 2006 ; 2006 >
       au < released ; 2007 ; American Literary Scholarship 2007 ; 2007 >
       au < releasing ; 2008 ; American Literary Scholarship 2008 ; 2008 >
-      au < manifest ; 2009 ; American Literary Scholarship 2009 ; 2009 >
+      au < testing ; 2009 ; American Literary Scholarship 2009 ; 2009 >
         
     }
 
@@ -535,7 +535,7 @@
      au < HighWirePressH20Plugin ; released ; 2008 ; French Historical Studies Volume 31 ; 31 >
      au < HighWirePressH20Plugin ; released ; 2009 ; French Historical Studies Volume 32 ; 32 >
      au < HighWirePressH20Plugin ; released ; 2010 ; French Historical Studies Volume 33 ; 33 >
-     au < HighWirePressH20Plugin ; manifest ; 2011 ; French Historical Studies Volume 34 ; 34 >
+     au < HighWirePressH20Plugin ; testing ; 2011 ; French Historical Studies Volume 34 ; 34 >
      au < HighWirePressH20Plugin ; manifest ; 2012 ; French Historical Studies Volume 35 ; 35 >
     
     }
@@ -821,7 +821,7 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Labor: Studies in Working-Class History of the Americas Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Labor: Studies in Working-Class History of the Americas Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; manifest ; 2012 ; Labor: Studies in Working-Class History of the Americas Volume 9 ; 9 >
     
     }
@@ -874,7 +874,7 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Mediterranean Quarterly Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; manifest ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
 
     }
@@ -990,7 +990,7 @@
       au < releasing ; 2009 ; Nka: Journal of Contemporary African Art Number 25 ; 25 >
       au < releasing ; 2010 ; Nka: Journal of Contemporary African Art Number 26 ; 26 >
       au < releasing ; 2010 ; Nka: Journal of Contemporary African Art Number 27 ; 27 >
-      au < manifest ; 2011 ; Nka: Journal of Contemporary African Art Number 28 ; 28 >
+      au < testing ; 2011 ; Nka: Journal of Contemporary African Art Number 28 ; 28 >
 
     }
     
@@ -1033,7 +1033,7 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Poetics Today Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Poetics Today Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Poetics Today Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Poetics Today Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Poetics Today Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; manifest ; 2012 ; Poetics Today Volume 33 ; 33 >
     
     }
@@ -1086,7 +1086,7 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; positions: east asia cultures critique Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; positions: east asia cultures critique Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; positions: east asia cultures critique Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; manifest ; 2012 ; positions: asia critique Volume 20 ; 20 >
 
     }
@@ -1119,7 +1119,7 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Publication of the American Dialect Society Volume 96 ; 96 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Publication of the American Dialect Society Volume 96 ; 96 >
       au < HighWirePressH20Plugin ; expected ; 2012 ; Publication of the American Dialect Society Volume 97 ; 97 >
 
     }
@@ -1309,7 +1309,7 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Social Text Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Social Text Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Social Text Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; Social Text Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Social Text Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; manifest ; 2012 ; Social Text Volume 30 ; 30 >
     
     }
@@ -1347,7 +1347,7 @@
       param[base_url] = http://saq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; The South Atlantic Quarterly Volume 99 ; 99 >
+      au < HighWirePressH20Plugin ; testing ; 2000 ; The South Atlantic Quarterly Volume 99 ; 99 >
       au < HighWirePressH20Plugin ; released ; 2001 ; The South Atlantic Quarterly Volume 100 ; 100 >
       au < HighWirePressH20Plugin ; released ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 >
       au < HighWirePressH20Plugin ; released ; 2003 ; The South Atlantic Quarterly Volume 102 ; 102 >
