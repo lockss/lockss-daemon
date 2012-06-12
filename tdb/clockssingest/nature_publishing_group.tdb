@@ -54,7 +54,7 @@
     au < exists ; exists ; 2007 ; American Journal of Gastroenterology Volume 102 ; 2007 ; 102 >
     au < exists ; exists ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
     au < exists ; exists ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
-    au < crawling ; exists ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
+    au < testing ; exists ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
     au < released ; crawling ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 >
     au < crawling ; exists ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 >
 
@@ -153,7 +153,7 @@
     au < released ; crawling ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
     au < released ; crawling ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 >
     au < superseded ; down ; 2010 ; Bone Marrow Transplantation Volume 46 [superseded] ; 2010 ; 46 >
-    au < testing ; exists ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 >
+    au < released ; manifest ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 >
     au < crawling ; exists ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 >
 
   }
@@ -2473,7 +2473,7 @@
     au < released ; crawling ; 2008 ; Nature Immunology Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Immunology Volume 11 ; 2010 ; 11 >
-    au < crawling ; exists ; 2011 ; Nature Immunology Volume 12 ; 2011 ; 12 >
+    au < testing ; exists ; 2011 ; Nature Immunology Volume 12 ; 2011 ; 12 >
     au < crawling ; exists ; 2012 ; Nature Immunology Volume 13 ; 2012 ; 13 >
 
   }
@@ -2498,7 +2498,7 @@
     au < released ; crawling ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
     au < released ; crawling ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
     au < released ; crawling ; 2010 ; Nature Materials Volume 9 ; 2010 ; 9 >
-    au < crawling ; exists ; 2011 ; Nature Materials Volume 10 ; 2011 ; 10 >
+    au < testing ; exists ; 2011 ; Nature Materials Volume 10 ; 2011 ; 10 >
     au < crawling ; exists ; 2012 ; Nature Materials Volume 11 ; 2012 ; 11 >
 
   }
@@ -2530,7 +2530,7 @@
     au < released ; crawling ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 >
     au < released ; crawling ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 >
     au < released ; crawling ; 2010 ; Nature Medicine Volume 16 ; 2010 ; 16 >
-    au < crawling ; exists ; 2011 ; Nature Medicine Volume 17 ; 2011 ; 17 >
+    au < testing ; exists ; 2011 ; Nature Medicine Volume 17 ; 2011 ; 17 >
     au < crawling ; exists ; 2012 ; Nature Medicine Volume 18 ; 2012 ; 18 >
 
   }
@@ -2553,7 +2553,7 @@
     au < released ; crawling ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 >
-    au < crawling ; exists ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 >
+    au < testing ; exists ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 >
     au < crawling ; exists ; 2012 ; Nature Methods Volume 9 ; 2012 ; 9 >
 
   }
@@ -2603,7 +2603,7 @@
     au < released ; crawling ; 2008 ; Nature Neuroscience Volume 11 ; 2008 ; 11 >
     au < released ; crawling ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
     au < released ; crawling ; 2010 ; Nature Neuroscience Volume 13 ; 2010 ; 13 >
-    au < crawling ; exists ; 2011 ; Nature Neuroscience Volume 14 ; 2011 ; 14 >
+    au < testing ; exists ; 2011 ; Nature Neuroscience Volume 14 ; 2011 ; 14 >
     au < crawling ; exists ; 2012 ; Nature Neuroscience Volume 15 ; 2012 ; 15 >
 
   }
@@ -2646,7 +2646,7 @@
     au < released ; crawling ; 2008 ; Nature Physics Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Physics Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Physics Volume 6 ; 2010 ; 6 >
-    au < crawling ; exists ; 2011 ; Nature Physics Volume 7 ; 2011 ; 7 >
+    au < testing ; exists ; 2011 ; Nature Physics Volume 7 ; 2011 ; 7 >
     au < crawling ; exists ; 2012 ; Nature Physics Volume 8 ; 2012 ; 8 >
 
   }
