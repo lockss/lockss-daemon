@@ -683,7 +683,7 @@
     au < released ; crawling ; 2010 ; American Journal of Epidemiology Volume 171 ; 171 ; >
     au < released ; manifest ; 2010 ; American Journal of Epidemiology Volume 172 ; 172 ; >
     au < released ; crawling ; 2011 ; American Journal of Epidemiology Volume 173 ; 173 ; >
-    au < crawling ; exists ; 2011 ; American Journal of Epidemiology Volume 174 ; 174 ; >
+    au < testing ; exists ; 2011 ; American Journal of Epidemiology Volume 174 ; 174 ; >
     au < crawling ; exists ; 2012 ; American Journal of Epidemiology Volume 175 ; 175 ; >
 
     }
@@ -6348,7 +6348,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; History Workshop Journal Volume 66 ; 66 ; >
     au < released ; manifest ; 2009 ; History Workshop Journal Volume 67 ; 67 ; >
     au < released ; crawling ; 2009 ; History Workshop Journal Volume 68 ; 68 ; >
-    au < crawling ; exists ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
+    au < testing ; exists ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
     au < released ; crawling ; 2010 ; History Workshop Journal Volume 70 ; 70 ; >
     au < released ; crawling ; 2011 ; History Workshop Journal Volume 71 ; 71 ; >
     au < released ; manifest ; 2011 ; History Workshop Journal Volume 72 ; 72 ; >
@@ -6514,7 +6514,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; Human Reproduction Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Human Reproduction Volume 25 ; 25 ; >
-    au < notReady ; exists ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
+    au < testing ; exists ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
     au < crawling ; exists ; 2012 ; Human Reproduction Volume 27 ; 27 ; >
 
     }
@@ -7298,8 +7298,8 @@
     au < manifest ; exists ; 2008 ; Interactive CardioVascular and Thoracic Surgery Volume 7 ; 7 ; >
     au < released ; manifest ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 8 ; 8 ; >
     au < released ; manifest ; 2009 ; Interactive CardioVascular and Thoracic Surgery Volume 9 ; 9 ; >
-    au < notReady ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 10 ; 10 ; >
-    au < notReady ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 11 ; 11 ; >
+    au < testing ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 10 ; 10 ; >
+    au < testing ; exists ; 2010 ; Interactive CardioVascular and Thoracic Surgery Volume 11 ; 11 ; >
     au < released ; manifest ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 12 ; 12 ; >
     au < released ; manifest ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 13 ; 13 ; >
     au < crawling ; exists ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 14 ; 14 ; >
@@ -7666,7 +7666,7 @@
     au < manifest ; exists ; 2007 ; International Journal of Law and Information Technology Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Law and Information Technology Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Law and Information Technology Volume 17 ; 17 ; >
-    au < notReady ; exists ; 2010 ; International Journal of Law and Information Technology Volume 18 ; 18 ; >
+    au < testing ; exists ; 2010 ; International Journal of Law and Information Technology Volume 18 ; 18 ; >
     au < released ; crawling ; 2011 ; International Journal of Law and Information Technology Volume 19 ; 19 ; >
     au < crawling ; exists ; 2012 ; International Journal of Law and Information Technology Volume 20 ; 20 ; >
 
@@ -9294,7 +9294,7 @@
     au < wanted ; exists ; 2007 ; Journal of Electron Microscopy Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
-    au < notReady ; exists ; 2010 ; Journal of Electron Microscopy Volume 59 ; 59 ; >
+    au < testing ; exists ; 2010 ; Journal of Electron Microscopy Volume 59 ; 59 ; >
     au < released ; crawling ; 2011 ; Journal of Electron Microscopy Volume 60 ; 60 ; >
     au < crawling ; exists ; 2012 ; Journal of Electron Microscopy Volume 61 ; 61 ; >
 
@@ -10648,7 +10648,7 @@
     au < released ; crawling ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
     au < released ; crawling ; 2010 ; Journal of the London Mathematical Society Volume 81 ; 81 ; >
-    au < crawling ; exists ; 2010 ; Journal of the London Mathematical Society Volume 82 ; 82 ; >
+    au < testing ; exists ; 2010 ; Journal of the London Mathematical Society Volume 82 ; 82 ; >
     au < released ; crawling ; 2011 ; Journal of the London Mathematical Society Volume 83 ; 83 ; >
     au < released ; manifest ; 2011 ; Journal of the London Mathematical Society Volume 84 ; 84 ; >
     au < crawling ; exists ; 2012 ; Journal of the London Mathematical Society Volume 85 ; 85 ; >
@@ -13238,7 +13238,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 ; >
-    au < notReady ; exists; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 ; >
+    au < testing ; exists; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 ; >
     au < crawling ; exists; 2012 ; Nephrology Dialysis Transplantation Volume 27 ; 27 ; >
 
     }
@@ -16171,7 +16171,7 @@
     au < manifest ; exists ; 2007 ; The Review of Economic Studies Volume 74 ; 74 ; >
     au < manifest ; exists ; 2008 ; The Review of Economic Studies Volume 75 ; 75 ; >
     au < released ; manifest ; 2009 ; The Review of Economic Studies Volume 76 ; 76 ; >
-    au < notReady ; exists ; 2010 ; The Review of Economic Studies Volume 77 ; 77 ; >
+    au < testing ; exists ; 2010 ; The Review of Economic Studies Volume 77 ; 77 ; >
     au < released ; crawling ; 2011 ; The Review of Economic Studies Volume 78 ; 78 ; >
     au < crawling ; exists ; 2012 ; The Review of Economic Studies Volume 79 ; 79 ; >
 
