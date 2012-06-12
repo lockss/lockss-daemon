@@ -26,7 +26,7 @@
       au < notReady ; 2004 ; American Orthoptic Journal Volume 54 ; 54 >
       au < notReady ; 2005 ; American Orthoptic Journal Volume 55 ; 55 >
       au < notReady ; 2006 ; American Orthoptic Journal Volume 56 ; 56 >
-      au < manifest ; 2007 ; American Orthoptic Journal Volume 57 ; 57 >
+      au < testing ; 2007 ; American Orthoptic Journal Volume 57 ; 57 >
       au < notReady ; 2008 ; American Orthoptic Journal Volume 58 ; 58 >
       au < notReady ; 2009 ; American Orthoptic Journal Volume 59 ; 59 >
       au < notReady ; 2010 ; American Orthoptic Journal Volume 60 ; 60 >
@@ -104,7 +104,7 @@
       param[base_url] = http://cl.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2003 ; Contemporary Literature Volume 44 ; 44 >
+      au < testing ; 2003 ; Contemporary Literature Volume 44 ; 44 >
       au < released ; 2004 ; Contemporary Literature Volume 45 ; 45 >
       au < released ; 2005 ; Contemporary Literature Volume 46 ; 46 >
       au < released ; 2006 ; Contemporary Literature Volume 47 ; 47 >
@@ -169,7 +169,7 @@
       au < released ; 1995 ; Ecological Restoration Volume 13 ; 13 >
       au < released ; 1996 ; Ecological Restoration Volume 14 ; 14 >
       au < released ; 1997 ; Ecological Restoration Volume 15 ; 15 >
-      au < manifest ; 1998 ; Ecological Restoration Volume 16 ; 16 >
+      au < testing ; 1998 ; Ecological Restoration Volume 16 ; 16 >
       au < released ; 1999 ; Ecological Restoration Volume 17 ; 17 >
       au < released ; 2000 ; Ecological Restoration Volume 18 ; 18 >
       au < released ; 2001 ; Ecological Restoration Volume 19 ; 19 >
@@ -427,7 +427,7 @@
       au < released ; 2008 ; Monatshefte Volume 100 ; 100 >
       au < released ; 2009 ; Monatshefte Volume 101 ; 101 >
       au < released ; 2010 ; Monatshefte Volume 102 ; 102 >
-      au < manifest ; 2011 ; Monatshefte Volume 103 ; 103 >
+      au < testing ; 2011 ; Monatshefte Volume 103 ; 103 >
       au < released ; 2012 ; Monatshefte Volume 104 ; 104 >
 
     }
