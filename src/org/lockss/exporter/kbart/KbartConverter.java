@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.31 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.32 2012-06-13 14:15:12 easyonthemayo Exp $
  */
 
 /*
@@ -91,8 +91,7 @@ import static org.lockss.exporter.kbart.KbartTitle.Field.*;
  * iteration the resulting output is undefined.
  * <p>
  * <emph>Note that the <code>title_id</code> field is now filled with the 
- * ISSN-L code, as these have now been incorporated for all titles, and are 
- * used for linking.</emph>
+ * results of getIssn(), which gives a preferred ISSN for linking.</emph>
  *
  * <h3>Note: Iteration</h3>
  * The converter can accept an iterator instead of a list, as it deals with a
@@ -608,13 +607,13 @@ public class KbartConverter {
     baseKbt.setField(PUBLICATION_TITLE, au.getJournalTitle());
 
     // Now add information that can be retrieved from the AUs.
-    // Add ISSN, EISSN and ISSN-L if available.
+    // Add ISSN, EISSN and a preferred ISSN.
     baseKbt.setField(PRINT_IDENTIFIER,
         MetadataUtil.validateIssn(au.getPrintIssn()));
     baseKbt.setField(ONLINE_IDENTIFIER,
         MetadataUtil.validateIssn(au.getEissn()));
     baseKbt.setField(TITLE_ID,
-        MetadataUtil.validateIssn(au.getIssnL()));
+        MetadataUtil.validateIssn(au.getIssn()));
 
     // Title URL
     // Set using a substitution parameter 
