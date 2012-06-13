@@ -1,0 +1,85 @@
+{
+
+  publisher <
+    name = Libertas Academica
+  >
+
+  plugin = org.lockss.plugin.libertasacademica.LibertasAcademicaPlugin
+  param[base_url] = http://www.la-press.com/
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+
+    title <
+      name = Advances in Tumor Virology ;
+      issn = 1179-5654
+      
+    >
+
+    param[journal_dir] = advances-tumor-virology-journal
+    attr[journal_id] = j132
+
+    au < expected ; 2009 ; Advances in Tumor Virology Volume 1 ; 1 >
+    au < expected ; 2011 ; Advances in Tumor Virology Volume 2 ; 2 >
+
+  }
+  
+  {
+
+    title <
+      name = Air, Soil & Water Research ;
+      issn = 1178-6221
+      
+    >
+
+    param[journal_dir] = air-soil-and-water-research-journal
+    attr[journal_id] = j99
+
+    au < expected ; 2008 ; Air, Soil & Water Research Volume 1 ; 1 >
+    au < expected ; 2009 ; Air, Soil & Water Research Volume 2 ; 2 >
+    au < expected ; 2010 ; Air, Soil & Water Research Volume 3 ; 3 >
+    au < expected ; 2011 ; Air, Soil & Water Research Volume 4 ; 4 >
+    au < expected ; 2012 ; Air, Soil & Water Research Volume 5 ; 5 >
+
+  }
+  
+  {
+
+    title <
+      name = Analytical Chemistry Insights ;
+      issn = 1177-3901
+      
+    >
+
+    param[journal_dir] = analytical-chemistry-insights-journal
+    attr[journal_id] = j1
+
+    au < expected ; 2007 ; Analytical Chemistry Insights Volume 1 ; 1 >
+    au < doesNotExists ; 0 ; Analytical Chemistry Insights Volume 2 ; 2 >
+    au < expected ; 2008 ; Analytical Chemistry Insights Volume 3 ; 3 >
+    au < expected ; 2009 ; Analytical Chemistry Insights Volume 4 ; 4 >
+    au < expected ; 2010 ; Analytical Chemistry Insights Volume 5 ; 5 >
+    au < expected ; 2011 ; Analytical Chemistry Insights Volume 6 ; 6 >
+    au < expected ; 2012 ; Analytical Chemistry Insights Volume 7 ; 7 >
+
+  }
+  
+  {
+
+    title <
+      name = Autism Insights ;
+      issn = 1179-5964
+      
+    >
+
+    param[journal_dir] = autism-insights-journal
+    attr[journal_id] = j155
+
+    au < expected ; 2009 ; Autism Insights Volume 1 ; 1 >
+    au < expected ; 2010 ; Autism Insights Volume 2 ; 2 >
+    au < expected ; 2011 ; Autism Insights Volume 3 ; 3 >
+    au < expected ; 2012 ; Autism Insights Volume 4 ; 4 >
+
+  }
+
+}
