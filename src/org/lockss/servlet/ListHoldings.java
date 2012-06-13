@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.37 2012-06-13 10:10:34 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.38 2012-06-13 16:40:57 easyonthemayo Exp $
  */
 
 /*
@@ -979,7 +979,7 @@ public class ListHoldings extends LockssServlet {
 	"<br/>Use the box below to provide a custom ordering for the fields - one field per line."+
 	"<br/>Omit any fields you don't want, but include an identifying field for sensible results."+
 	//"<br/>(" + StringUtils.join(Field.getLabels(Field.idFields), LIST_COMMA) + ")"+
-	"<br/>There is a description of the KBART fields below the box; identifying fields are shown in bold."+
+	"<br/>There is a description of the KBART fields next to the box; identifying fields are shown in bold."+
 	"<br/><br/>"
 	);
 
