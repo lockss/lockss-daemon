@@ -70,6 +70,21 @@ public class TdbTestUtil {
 
 
   /**
+   * Set up the configuration to have some TDB structure. This is useful to
+   * other tests so is made public. It uses makeTestTdb() to construct the test
+   * TDB structure.
+   * @throws Exception
+   */
+  public static final void setUpConfig() throws Exception {
+    // Create a new ConfigManager and set the current configuration
+    ConfigManager mgr = ConfigManager.makeConfigManager();
+    mgr.setCurrentConfig(ConfigManager.newConfiguration());
+    // Create a test tdb and set it in the current config
+    ConfigManager.getCurrentConfig().setTdb(TdbTestUtil.makeTestTdb());
+    //CurrentConfig.getCurrentConfig().setTdb(TdbTestUtil.makeTestTdb());
+  }
+
+  /**
    * Make a mock Tdb with some publisher/title/au structure, for testing
    * by other packages. The Tdb constructors are protected so cannot be
    * used outside the package.

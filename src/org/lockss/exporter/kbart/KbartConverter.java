@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.30 2012-05-30 00:31:56 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.31 2012-06-13 10:10:35 easyonthemayo Exp $
  */
 
 /*
@@ -1049,10 +1049,17 @@ public class KbartConverter {
     String lastVol = range.last.getEndVolume();
     // If either of the volumes is null, we can't verify; return true
     if (firstVol==null || lastVol==null) return true;
-    // Check if the first vol is greater than last
+    // Check if the first vol is greater than last (integer)
     if (NumberUtil.isInteger(firstVol) && NumberUtil.isInteger(lastVol)) {
       return Integer.parseInt(firstVol) <= Integer.parseInt(lastVol);
-    } else {
+
+    }
+    // Check if the first vol is greater than last (normalised Roman)
+    else if (NumberUtil.isRomanNumber(firstVol) && NumberUtil.isRomanNumber(lastVol)) {
+      return NumberUtil.parseRomanNumber(firstVol, true) <= NumberUtil.parseRomanNumber(lastVol, true);
+    }
+    // Otherwise compare first and last vol alphabetically
+    else {
       return firstVol.compareTo(lastVol) <= 0;
     }
   }

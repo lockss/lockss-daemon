@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicUtil.java,v 1.4 2012-05-30 00:31:56 easyonthemayo Exp $
+ * $Id: BibliographicUtil.java,v 1.5 2012-06-13 10:10:35 easyonthemayo Exp $
  */
 
 /*
@@ -85,6 +85,20 @@ public class BibliographicUtil {
    */
   private static final Pattern numAtStart = RegexpUtil.uncheckedCompile("^\\d+");
 
+  /** Pattern for characters considered to delimit tokens in a volume string.
+   * Matches whitespace surrounding the delimiters. Includes the transition between cases. */
+  private static final Pattern VOL_TOK_DELIM_PTN =
+      RegexpUtil.uncheckedCompile("\\s*[.,-:;\"\'/?()\\[\\]{}<>!#]\\s*");
+  /*private static final Pattern VOL_TOK_DELIM_PTN =
+      RegexpUtil.uncheckedCompile(
+          "\\s*(?:[.,-:;\"\'/?()\\[\\]{}<>!#]|(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[a-z]))\\s*"
+      );*/
+
+
+  /** A thread-local perl matcher. */
+  private static Perl5Matcher volTokenMatcher = RegexpUtil.getMatcher();
+
+
 
   /**
    * Sort a set of {@link BibliographicItem} objects for a single title by
@@ -141,7 +155,10 @@ public class BibliographicUtil {
       item1.getIssn().equals(item2.getIssn()) &&
       item1.getYear().equals(item2.getYear()) &&
       item1.getName().equals(item2.getName()) &&
-      item1.getVolume().equals(item2.getVolume());
+      BibliographicUtil.normaliseIdentifier(item1.getVolume()).equals(
+          BibliographicUtil.normaliseIdentifier(item2.getVolume())
+      ); // Normalise the volumes
+
     } catch (NullPointerException e) {
       return false; 
     }
@@ -187,8 +204,8 @@ public class BibliographicUtil {
   public static boolean haveSameIdentity(BibliographicItem au1, BibliographicItem au2) {
     String au1issn = au1.getIssn();
     String au2issn = au2.getIssn();
-    String au1name = au1.getName();
-    String au2name = au2.getName();
+    String au1name = au1.getName(); //au1.getJournalTitle();
+    String au2name = au2.getName(); //au2.getJournalTitle();
     /*boolean issn = !StringUtil.isNullString(au1issn) &&
         !StringUtil.isNullString(au2issn) && au1issn.equals(au2issn);
     boolean name = !StringUtil.isNullString(au1name) &&
@@ -214,8 +231,10 @@ public class BibliographicUtil {
   public static boolean haveSameIndex(BibliographicItem au1, BibliographicItem au2) {
     String au1year = au1.getYear();
     String au2year = au2.getYear();
-    String au1vol  = au1.getVolume();
-    String au2vol  = au2.getVolume();
+    // Volumes are normalised for Roman numerals
+    String au1vol  = BibliographicUtil.normaliseIdentifier(au1.getVolume());
+    String au2vol  = BibliographicUtil.normaliseIdentifier(au2.getVolume());
+
     // Null if either year is null, otherwise whether they match
     Boolean year = au1year!=null && au2year!=null ? au1year.equals(au2year) : null;
     // Null if either volume is null, otherwise whether they or their values match
@@ -339,10 +358,11 @@ public class BibliographicUtil {
    * number of hyphens, the input string is assumed not to represent a parsable
    * range.
    * <p>
-   * It might also be useful to enforce further restrictions upon non-numerical
-   * strings that are considered valid endpoints of a range - for example, that
-   * when tokenised, each pair of non-numerical tokens are equivalent, or the
-   * same length, or lexically either equal or increasing.
+   * Further restrictions are enforced upon non-numerical strings that may be
+   * considered valid endpoints of a range; if one side of a possible range can
+   * be parsed as a normalised Roman number, the string will be considered a
+   * range <i>only if</i> the tokens either side of the hyphen are the same
+   * length and case, <i>and</i> they are lexically either equal or increasing.
    * <p>
    * Note that the motive for this method was to identify volume ranges, but
    * it should work just as well for other ranges that have the same kind of
@@ -353,22 +373,79 @@ public class BibliographicUtil {
    */
   public static boolean isRange(String range) {
     if (range == null) return false;
-    // Check first if it is a numerical range
+    // Check if it is a numerical range
     if (NumberUtil.isNumericalRange(range)) return true;
     // We are now dealing with either a non-range, or at least one non-numerical
     // endpoint. Find the range-separating hyphen.
     int hyphenPos = NumberUtil.findRangeHyphen(range);
     if (hyphenPos < 0) return false;
-    // Zero-padding up to 4 positions should be ample for volumes
-    int pad = 4;
-    // Split string at middlemost hyphen, and pad numerical tokens with 0
-    String s1 = NumberUtil.padNumbers(range.substring(0, hyphenPos).trim(), pad);
-    String s2 = NumberUtil.padNumbers(range.substring(hyphenPos+1).trim(),  pad);
+    // Split string at middlemost hyphen
+    String s1 = range.substring(0, hyphenPos).trim();
+    String s2 = range.substring(hyphenPos + 1).trim();
     // Check format of strings
     if (changeOfFormats(s1, s2)) return false;
-    // TODO further check tokens if required
-    // Check lexical order
-    return s2.compareToIgnoreCase(s1) >= 0;
+    // Check if one side of the hyphen can be interpreted as a Roman number;
+    // we already know that it is not a numerical range (both sides numerical).
+    // If one side only might be Roman numerical, and is either a different size
+    // or case to the other side, or suggests a descending alphabetical range,
+    // return false (not a range)
+    if ((NumberUtil.isNumber(s1) || NumberUtil.isNumber(s2)) &&
+        (s1.length()!=s2.length() || !areSameCasing(s1, s2) || s1.compareTo(s2) > 0)
+        ) return false;
+
+    // Normalise the Roman tokens and test lexically
+    if (normaliseIdentifier(s2).compareToIgnoreCase(normaliseIdentifier(s1)) >= 0)
+      return true;
+    // Check lexical order as a last resort
+    return (s2.compareToIgnoreCase(s1) >= 0);
+  }
+
+  /**
+   * Check whether the strings consist of characters of the same case at every
+   * point. If the strings differ in length, false is returned.
+   * @param s1
+   * @param s2
+   * @return false if the strings are different lengths or vary in case at any character
+   */
+  private static boolean areSameCasing(String s1, String s2) {
+    if (s1.length()!=s2.length()) return false;
+    char c1, c2;
+    char[] s1arr = s1.toCharArray();
+    char[] s2arr = s2.toCharArray();
+    for (int i=0; i<s1arr.length; i++) {
+      if (Character.isUpperCase(s1arr[i]) != Character.isUpperCase(s2arr[i]) )
+        return false;
+    }
+    return true;
+  }
+
+  /**
+   *
+   * @param s
+   * @return
+   */
+  private static boolean containsUpperCaseChars(String s) {
+    for (char c : s.toCharArray()) if (Character.isUpperCase(c)) return true;
+    return false;
+  }
+
+
+  /**
+   * Normalise an identifier by tokenising it and converting Roman numerical
+   * tokens into numbers, and then padding all numbers. The normalised string
+   * can then be compared to other normalised strings based on a lexical
+   * comparison.
+   * @param s an identifier
+   * @return a normalised identifier, or null
+   */
+  public static String normaliseIdentifier(String s) {
+    if (s==null) return null;
+    s = translateRomanTokens(s);
+    // Zero-padding up to 4 positions should be ample for volumes
+    int pad = 4;
+    // Zero-pad numerical tokens
+    s = NumberUtil.padNumbers(s.trim(), pad);
+    return s;
   }
 
   /**
@@ -705,6 +782,47 @@ public class BibliographicUtil {
       for (String s : tokSeq) seq.add(pre + s);
     }
     return seq;
+  }
+
+
+  /**
+   * Get the current year from a calendar.
+   * @return an integer representing the current year
+   */
+  public static final int getThisYear() {
+    return Calendar.getInstance().get(Calendar.YEAR);
+  }
+
+  /**
+   * Translate Roman number tokens in a string to Arabic numbers. This method
+   * may recognise false positives when looking for Roman numbers. It would do
+   * better if it had an idea of the nature of all the tokens in the same
+   * position within the whole range of strings being manipulated.
+   * @param s
+   * @return
+   */
+  public static String translateRomanTokens(String s) {
+    if (s==null) return null;
+    // NOTE: Consider using BibliographicUtil.commonTokenBasedPrefix() instead
+    // Tokenise the string on punctuation
+    StringBuilder sb = new StringBuilder();
+    PatternMatcherInput input = new PatternMatcherInput(s);
+    while (volTokenMatcher.contains(input, VOL_TOK_DELIM_PTN)) {
+      // Check if the string is normalised Roman when it is upper cased;
+      // if so it is converted to Arabic to normalise the string
+      String pre = input.preMatch();
+      if (NumberUtil.isNormalisedRomanNumber(pre.toUpperCase())) {
+        sb.append(NumberUtil.toArabicNumber(pre));
+      } else sb.append(pre);
+      sb.append(input.match());
+      // Set input to the remainder of the input
+      input.setInput(input.postMatch());
+    }
+    // Finally, try and convert the end of the string
+    if (NumberUtil.isNormalisedRomanNumber(input.toString().toUpperCase())) {
+      sb.append(NumberUtil.toArabicNumber(input.toString()));
+    } else sb.append(input);
+    return sb.toString();
   }
 
 

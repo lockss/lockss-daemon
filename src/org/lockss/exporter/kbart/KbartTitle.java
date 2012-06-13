@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitle.java,v 1.13 2012-05-30 00:31:56 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.14 2012-06-13 10:10:35 easyonthemayo Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.exporter.kbart;
 import java.util.*;
 
 import org.apache.commons.lang.builder.HashCodeBuilder;
+import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
@@ -127,27 +128,21 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
    * 
    * @param field the Field to set
    * @param value the string value to give the field
+   * @return the KbartTitle so setField calls can be chained
    */
-  public void setField(Field field, String value) {
-    if (field==null) return;
+  public KbartTitle setField(Field field, String value) {
+    if (field==null) return this;
     if (value==null) value = "";
     fields.put(field, normalise(value));
+    return this;
   }
 
 
-  private static EnumSet<Field> blankIfCoverageToPresent = EnumSet.of(
+  protected static EnumSet<Field> blankIfCoverageToPresent = EnumSet.of(
       Field.DATE_LAST_ISSUE_ONLINE,
       Field.NUM_LAST_ISSUE_ONLINE,
       Field.NUM_LAST_VOL_ONLINE
   );
-
-  /**
-   * Get the current year from a calendar.
-   * @return an integer representing the current year
-   */
-  private static int getThisYear() {
-    return Calendar.getInstance().get(Calendar.YEAR);
-  }
 
   /**
    * Get the display value of the field. If the field or the value is null,
@@ -162,7 +157,8 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
       try {
         String lastYear = getFieldValue(Field.DATE_LAST_ISSUE_ONLINE);
         // Return blank if the year is empty or current
-        if (StringUtil.isNullString(lastYear) || Integer.parseInt(lastYear) >= getThisYear()) {
+        if (StringUtil.isNullString(lastYear) ||
+            Integer.parseInt(lastYear) >= BibliographicUtil.getThisYear()) {
           return "";
         }
       } catch (NumberFormatException e) {/* Ignore and return actual value */}
