@@ -119,11 +119,9 @@
 
       param[base_url] = http://emaj.pitt.edu/ojs/
       param[journal_id] = emaj
-
-      comment[notATypo] = Volume 1 is split over 2011 and 2012
       
-      au < released ; 2011 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 ; 1 ; 2011 >
-      au < released ; 2012 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 ; 1 ; 2012 >
+      au < released ; 2011 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 (2011) ; 1 ; 2011 >
+      au < released ; 2012 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 (2012) ; 1 ; 2012 >
 
     }
 
