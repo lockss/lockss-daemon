@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.295 2012-06-06 17:33:58 fergaloy-sf Exp $
+ $Id: build.xml,v 1.296 2012-06-13 13:15:05 pgust Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -981,6 +981,7 @@ The target you have selected requires compiling under JDK 1.7.
 
     <for list="${plnnames}" delimiter=":" param="plnname">
       <sequential>
+        <echo message="calling tdb-pln -Dplnname=@{plnname}" />
 	<antcall target="tdb-pln">
 	  <param name="plnname" value="@{plnname}"/>
 	</antcall>
@@ -2131,6 +2132,7 @@ Test results in ${test.results}
 	<classpath refid="test.run.classpath" />
         <sysproperty key="org.lockss.defaultLogLevel" value="${tdbloglevel}"/>
 	<arg line="-v -g prod -h host.foo ${xml.files}" />
+	<jvmarg value="-Xmx1024m" />
       </java>
      </then>
      <else>
