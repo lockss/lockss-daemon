@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.108 2012-03-15 08:19:01 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.108.4.1 2012-06-13 10:20:02 easyonthemayo Exp $
  */
 
 /*
@@ -48,6 +48,39 @@ public class StringUtil {
 
   static Logger log = Logger.getLogger("StringUtil");
 
+  /**
+   * Find the longest common prefix of a pair of strings. Case sensitive.
+   * @param s1 a string
+   * @param s2 another string
+   * @return the longest common prefix, which may be the emopty string
+   */
+  public static String commonPrefix(String s1, String s2) {
+    char[] c1 = s1.toCharArray();
+    char[] c2 = s2.toCharArray();
+    StringBuilder sb = new StringBuilder();
+    for (int i=0; i<Math.min(c1.length, c2.length); i++) {
+      if (c1[i]==c2[i]) sb.append(c1[i]);
+      else break;
+    }
+    return sb.toString();
+  }
+
+  /**
+   * Find the longest common suffix of a pair of strings. Case sensitive.
+   * @param s1 a string
+   * @param s2 another string
+   * @return the longest common suffix, which may be the emopty string
+   */
+  public static String commonSuffix(String s1, String s2) {
+    char[] c1 = s1.toCharArray();
+    char[] c2 = s2.toCharArray();
+    StringBuilder sb = new StringBuilder();
+    for (int i=1; i<=Math.min(c1.length, c2.length); i++) {
+      if (c1[c1.length-i]==c2[c2.length-i]) sb.append(c1[c1.length-i]);
+      else break;
+    }
+    return sb.reverse().toString();
+  }
 
   /**
    * Replace all occurrences of oldstr in source with newstr

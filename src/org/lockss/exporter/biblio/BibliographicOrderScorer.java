@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicOrderScorer.java,v 1.3 2012-02-24 15:39:57 easyonthemayo Exp $
+ * $Id: BibliographicOrderScorer.java,v 1.3.6.1 2012-06-13 10:20:02 easyonthemayo Exp $
  */
 
 /*
@@ -153,14 +153,16 @@ public final class BibliographicOrderScorer {
   /**
    * A pattern to find the last Roman numerical token in a volume string.
    * This is defined as a collection of Roman numeral characters preceded by a
-   * word boundary and followed by the end of the string. Two matches are
-   * produced - the string before the matched token, and the Roman numerical
-   * token, at the end of the string. Note that this is slightly more
+   * word boundary and followed by the end of the string. Three matches are
+   * produced - the string before the matched token, the Roman numerical
+   * token, at the end of the string, and a dummy empty string at the end so
+   * that match groups are mutually comparable with the
+   * finalNumericalTokenPattern. Note that this is slightly more
    * restrictive than the pattern for matching numerical tokens; additionally
    * we don't know if the string represents a numeral until we try to parse it.
    */
-  private static final Pattern finalRomanNumericalTokenPattern =
-      RegexpUtil.uncheckedCompile("^(.*?)([MmDdCcLlXxVvIi]+)$");
+  /*private static final Pattern finalRomanNumericalTokenPattern =
+      RegexpUtil.uncheckedCompile("^(.*?)([MmDdCcLlXxVvIi]+)()$");*/
 
   /**
    * An enum to allow the primary sort field to be specified when passing in a
@@ -450,12 +452,33 @@ public final class BibliographicOrderScorer {
    * in value while the rest of the string remains the same as in the first,
    * we consider them consecutive. For example, "s1-4" and "s1-5" are
    * considered consecutive (examples taken from Journal of Orthopaedic Surgery).
+   * Before comparison, the identifiers are normalised using BibliographicUtil,
+   * so that Roman numbers are converted to zero-padded Arabic equivalents.
    * <p>
    * This is a simplistic test but anything more complicated would likely
    * result in false positives. It also is not clever enough to recognise that,
    * for example, "s1-12" and "s2-1" might reasonably be construed as
    * consecutive, especially if they occur in the same or adjacent years.
    * <p>
+   * First the strings are compared as numbers; if this doesn't work they
+   * are compared alphabetically. If this also fails, the strings are analysed
+   * to see if they are equal except for their final numerical tokens, which 
+   * should be consecutive. If this yields false, the identifiers are normalised
+   * (which converts any Roman numbers to Arabic) and compared again.
+   * Finally false is returned if none of these tests yields true.
+   * <p>
+   * Normalising the identifiers allows us to catch identifier sequences like
+   * os-4 and os-V, as seen in OUP.
+   * <p>
+   * Note that checking haveConsecutiveFinalNumericalTokens on <i>unnormalised 
+   * strings</i> is only performed in order to catch identifiers which have an
+   * incrementing number somewhere in the middle of a larger string, and which 
+   * can also contain tokens that look like Roman numerals. Specifically this 
+   * solves an issue with OUP's IEICE Transactions series which contains 
+   * consecutive volume identifiers like E89-C and E90-C. 
+   * However this is currently the only known case and the test 
+   * may add significantly to the processing time.
+   * <!--
    * It is also possible to encounter a volume string like "s6-IV". It is
    * harder to establish consecutivity here, as it is necessary to recognise a
    * token that looks like a Roman numeral, and then to see if it parses.
@@ -468,6 +491,7 @@ public final class BibliographicOrderScorer {
    * consider the final numerical token of the string. If the string does end
    * with what appears to be a Roman numeral, but that does not change between
    * the two strings, we fall through to numerical token comparison instead.
+   * -->
    * <p>
    * Note that {@link NumberUtil.areConsecutive(String, String)} will accept
    * Roman numerals.
@@ -477,7 +501,7 @@ public final class BibliographicOrderScorer {
    * @return whether the volumes appear to be consecutive
    */
   public static final boolean areVolumesConsecutive(String first, String second) {
-    // First try and compare as numbers
+    // First try and compare as numbers (including Roman)
     try {
       return NumberUtil.areConsecutive(first, second);
     } catch (NumberFormatException e) {
@@ -490,44 +514,48 @@ public final class BibliographicOrderScorer {
     } catch (NumberFormatException e) {
       // fall through to the string-based comparison
     }
+    
+    // See if the final numerical tokens are consecutive while the outer tokens are equal.
+    if (haveConsecutiveFinalNumericalTokens(first, second)) return true;
+    
+    // Try again with normalised identifiers (Roman to Arabic)
+    if (haveConsecutiveFinalNumericalTokens(
+          BibliographicUtil.normaliseIdentifier(first), 
+          BibliographicUtil.normaliseIdentifier(second)
+    )) return true;
 
+    // At least one string doesn't match
+    return false;
+  }
+
+  /**
+   * Tests if each volume identifier is equal except for the final number 
+   * token, which should be consecutive. The strings are tokenised and
+   * the last numerical token of each is compared for consecutivity, while
+   * the outer strings are compared for equality.
+   * 
+   * @param first a String representing the first volume
+   * @param second a String representing the subsequent volume
+   * @return whether the volumes appear to have consecutive final numerical tokens
+   */  
+  protected static boolean haveConsecutiveFinalNumericalTokens(String first, String second) {
     Perl5Matcher matcher = RegexpUtil.getMatcher();
     MatchResult mr1, mr2;
-
-    // See if there is a Roman token match at the end of the string, which can
-    // be parsed as a Roman number.
-    if (matcher.contains(first, finalRomanNumericalTokenPattern) &&
-        NumberUtil.isRomanNumber(matcher.getMatch().group(2)) ) {
-      mr1 = matcher.getMatch();
-      // Does the second vol string match
-      if (matcher.contains(second, finalRomanNumericalTokenPattern) &&
-        NumberUtil.isRomanNumber(matcher.getMatch().group(2)) ) {
-        mr2 = matcher.getMatch();
-        // If the start tokens match, test the consecutivity of the number
-        // tokens; return true if they are consecutive, or fall through to
-        // comparison of numerical tokens.
-        if (mr1.group(1).equals(mr2.group(1)) &&
-            NumberUtil.areConsecutive(mr1.group(2), mr2.group(2))) return true;
-      }
-    }
-
-    // If there is no parsable Roman number at the end of the string, try
-    // finding the last numerical token.
-    // Does the first vol string match
+    // If there are numerical tokens at the end of the strings, check if they are consecutive
     if (matcher.contains(first, finalNumericalTokenPattern)) {
       mr1 = matcher.getMatch();
       // Does the second vol string match
       if (matcher.contains(second, finalNumericalTokenPattern)) {
         mr2 = matcher.getMatch();
-        // If the outer tokens match, test the consecutivity of the number tokens
-        return mr1.group(1).equals(mr2.group(1)) &&
+        // If the outer token matches are equal, test the consecutivity of the number tokens
+        return (mr1.group(1).equals(mr2.group(1)) &&
             mr1.group(3).equals(mr2.group(3)) &&
-            NumberUtil.areConsecutive(mr1.group(2), mr2.group(2));
+                NumberUtil.areConsecutive(mr1.group(2), mr2.group(2)));
       }
     }
-    // At least one string doesn't match
     return false;
   }
+
 
   /**
    * Two <code>BibliographicItem</code>s may be considered consecutive even if
@@ -606,11 +634,7 @@ public final class BibliographicOrderScorer {
    * numerical token, and that token in the second string represents a greater
    * or equal value than that in the first, we consider them to be increasing.
    * For example, "s1-4" and "s1-15" are considered to be generally increasing.
-   * <p>
-   * We assume arabic numbered suffixes only. Philip reports that Latin texts
-   * that include Roman numbers in line tend to either parenthesize the number
-   * or draw a bar over it. However if the match pattern is adapted to
-   * recognise Roman numeral tokens, it should work the same because we use
+   * The final token can be Roman or Arabic as we use
    * {@link NumberUtil.areIntegersConsecutive}.
    *
    * @param first a String representing the first volume
@@ -625,17 +649,21 @@ public final class BibliographicOrderScorer {
     Perl5Matcher matcher = RegexpUtil.getMatcher();
     MatchResult mr1, mr2;
     // Does the first vol string match
-    if (matcher.contains(first, finalNumericalTokenPattern)) {
+    if (matcher.contains(BibliographicUtil.normaliseIdentifier(first),
+                         finalNumericalTokenPattern)) {
       mr1 = matcher.getMatch();
       // Does the second vol string match
-      if (matcher.contains(second, finalNumericalTokenPattern)) {
+      if (matcher.contains(BibliographicUtil.normaliseIdentifier(second),
+                           finalNumericalTokenPattern)) {
         mr2 = matcher.getMatch();
+
         // If the outer tokens match, test the consecutivity of the number tokens
         return mr1.group(1).equals(mr2.group(1)) &&
             mr1.group(3).equals(mr2.group(3)) &&
             areValuesIncreasing(mr1.group(2), mr2.group(2));
       }
     }
+
     // At least one string doesn't match
     return false;
   }

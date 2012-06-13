@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicComparator.java,v 1.1 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: TestBibliographicComparator.java,v 1.1.10.1 2012-06-13 10:20:02 easyonthemayo Exp $
  */
 
 /*
@@ -42,6 +42,8 @@ public class TestBibliographicComparator extends LockssTestCase {
 
   private final List<BibliographicItem> itemsWithYearsReverseOrder = new Vector<BibliographicItem>();
   private final List<BibliographicItem> itemsWithNames = new Vector<BibliographicItem>();
+  private final List<BibliographicItem> itemsWithRomanMixedVolumes = new Vector<BibliographicItem>();
+  private final List<BibliographicItem> itemsWithRomanVolumes = new Vector<BibliographicItem>();
 
   private final String TITLE_ORDERED_1 = "A Journal Volume 5 with spurious extra text";
   private final String TITLE_ORDERED_2 = "A Journal Volume 6";
@@ -59,7 +61,32 @@ public class TestBibliographicComparator extends LockssTestCase {
     TITLE_ORDERED_6,
     TITLE_ORDERED_7
   };
-  
+
+  // Volumes with mixed format incorporating Roman tokens
+  private final String ROMAN_MIXED_VOL_ORDERED_1 = "os-1";
+  private final String ROMAN_MIXED_VOL_ORDERED_2 = "os-2";
+  private final String ROMAN_MIXED_VOL_ORDERED_3 = "os-III";
+  private final String ROMAN_MIXED_VOL_ORDERED_4 = "os-IV";
+  private final String ROMAN_MIXED_VOL_ORDERED_5 = "os-V";
+  private final String ROMAN_MIXED_VOL_ORDERED_6 = "os-Xylophone";
+  private final String[] orderedRomanMixedVols = new String[] {
+      ROMAN_MIXED_VOL_ORDERED_1, ROMAN_MIXED_VOL_ORDERED_2, ROMAN_MIXED_VOL_ORDERED_3,
+      ROMAN_MIXED_VOL_ORDERED_4, ROMAN_MIXED_VOL_ORDERED_5, ROMAN_MIXED_VOL_ORDERED_6
+  };
+
+  // Volumes with plain format Roman tokens
+  private final String ROMAN_VOL_ORDERED_1 = "1";
+  private final String ROMAN_VOL_ORDERED_2 = "2";
+  private final String ROMAN_VOL_ORDERED_3 = "III";
+  private final String ROMAN_VOL_ORDERED_4 = "IV";
+  private final String ROMAN_VOL_ORDERED_5 = "V";
+  private final String ROMAN_VOL_ORDERED_6 = "Xylophone";
+  private final String[] orderedRomanVols = new String[] {
+      ROMAN_VOL_ORDERED_1, ROMAN_VOL_ORDERED_2, ROMAN_VOL_ORDERED_3,
+      ROMAN_VOL_ORDERED_4, ROMAN_VOL_ORDERED_5, ROMAN_VOL_ORDERED_6
+  };
+
+
   protected void setUp() throws Exception {
     super.setUp();
 
@@ -81,6 +108,24 @@ public class TestBibliographicComparator extends LockssTestCase {
     itemsWithYearsReverseOrder.add( new BibliographicItemImpl().setName(TITLE_ORDERED_2).setYear("2006") );
     itemsWithYearsReverseOrder.add( new BibliographicItemImpl().setName(TITLE_ORDERED_1).setYear("2007") );
 
+    // These should be ordered by volume
+    itemsWithRomanMixedVolumes.add( new BibliographicItemImpl().setVolume(ROMAN_MIXED_VOL_ORDERED_1) );
+    itemsWithRomanMixedVolumes.add( new BibliographicItemImpl().setVolume(ROMAN_MIXED_VOL_ORDERED_2) );
+    itemsWithRomanMixedVolumes.add( new BibliographicItemImpl().setVolume(ROMAN_MIXED_VOL_ORDERED_3) );
+    itemsWithRomanMixedVolumes.add( new BibliographicItemImpl().setVolume(ROMAN_MIXED_VOL_ORDERED_4) );
+    itemsWithRomanMixedVolumes.add( new BibliographicItemImpl().setVolume(ROMAN_MIXED_VOL_ORDERED_5) );
+    // This one cannot be processed as a number and should come last
+    itemsWithRomanMixedVolumes.add( new BibliographicItemImpl().setVolume(ROMAN_MIXED_VOL_ORDERED_6) );
+
+    // These should be ordered by volume
+    itemsWithRomanVolumes.add( new BibliographicItemImpl().setVolume(ROMAN_VOL_ORDERED_1) );
+    itemsWithRomanVolumes.add( new BibliographicItemImpl().setVolume(ROMAN_VOL_ORDERED_2) );
+    itemsWithRomanVolumes.add( new BibliographicItemImpl().setVolume(ROMAN_VOL_ORDERED_3) );
+    itemsWithRomanVolumes.add( new BibliographicItemImpl().setVolume(ROMAN_VOL_ORDERED_4) );
+    itemsWithRomanVolumes.add( new BibliographicItemImpl().setVolume(ROMAN_VOL_ORDERED_5) );
+    // This one cannot be processed as a number and should come last
+    itemsWithRomanVolumes.add( new BibliographicItemImpl().setVolume(ROMAN_VOL_ORDERED_6) );
+
   }
 
   protected void tearDown() throws Exception {
@@ -88,15 +133,15 @@ public class TestBibliographicComparator extends LockssTestCase {
   }
 
   /**
-   * The alphanumeric comparator orders purely on names.
+   * Try out some sorting using bibliographic comparisons.
    */
-  public final void testCompare() {
+  public final void testNameComparator() {
     Comparator<BibliographicItem> comp = BibliographicComparatorFactory.getNameComparator();
 
     // Shuffle and sort names
     Collections.shuffle(itemsWithNames);
     Collections.sort(itemsWithNames, comp);
-    // Check the titles one by one 
+    // Check the titles one by one
     for (int i = 0; i < itemsWithNames.size(); i++) {
       assertEquals(orderedTitles[i], itemsWithNames.get(i).getName());
     }
@@ -105,6 +150,29 @@ public class TestBibliographicComparator extends LockssTestCase {
     Collections.sort(itemsWithYearsReverseOrder, comp);
     for (int i = 0; i < itemsWithYearsReverseOrder.size(); i++) {
       assertEquals(orderedTitles[i], itemsWithYearsReverseOrder.get(i).getName());
+    }
+  }
+
+  /**
+   * Try out some sorting using bibliographic comparisons.
+   */
+  public final void testVolumeComparator() {
+    Comparator<BibliographicItem> comp = BibliographicComparatorFactory.getVolumeComparator();
+
+    // Shuffle and sort names
+    Collections.shuffle(itemsWithRomanVolumes);
+    Collections.sort(itemsWithRomanVolumes, comp);
+    // Check the volumes one by one
+    for (int i = 0; i < itemsWithRomanVolumes.size(); i++) {
+      assertEquals(orderedRomanVols[i], itemsWithRomanVolumes.get(i).getVolume());
+    }
+
+    // Shuffle and sort names
+    Collections.shuffle(itemsWithRomanMixedVolumes);
+    Collections.sort(itemsWithRomanMixedVolumes, comp);
+    // Check the volumes one by one
+    for (int i = 0; i < itemsWithRomanMixedVolumes.size(); i++) {
+      assertEquals(orderedRomanMixedVols[i], itemsWithRomanMixedVolumes.get(i).getVolume());
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartTitle.java,v 1.7 2011-09-23 13:23:15 easyonthemayo Exp $
+ * $Id: TestKbartTitle.java,v 1.7.12.1 2012-06-13 10:20:02 easyonthemayo Exp $
  */
 
 /*
@@ -31,17 +31,12 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.exporter.kbart;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.EnumSet;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Vector;
+import java.util.*;
 
 import org.lockss.config.TdbTestUtil;
 import static org.lockss.exporter.kbart.KbartTitle.Field;
+
+import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.test.LockssTestCase;
 
 public class TestKbartTitle extends LockssTestCase {
@@ -120,9 +115,41 @@ public class TestKbartTitle extends LockssTestCase {
     // Test that empty strings are returned where necessary
     assertNotNull(testTitle.getField(null));
     assertEquals(testTitle.getField(null), "");
+
+    // Test that end fields return empty string if set to current year or higher
+    String thisYear = ""+BibliographicUtil.getThisYear();
+    String laterYear = ""+(BibliographicUtil.getThisYear()+10);
+    for (Field f : KbartTitle.blankIfCoverageToPresent) {
+      for (String yr : new String[]{thisYear, laterYear}) {
+        testTitle.setField(f, yr);
+        s = testTitle.getField(f);
+        assertNotNull(s);
+        assertNotEquals(s, yr);
+        assertEquals(s, "");
+      }
+    }
   }
 
-  
+
+  /**
+   * Try getting a field value, and passing null values.
+   * Make sure that values for this year are still returned.
+   */
+  public final void testGetFieldValue() {
+    String thisYear = ""+ BibliographicUtil.getThisYear();
+    // Set each field value to this year
+    for (Field f : Field.values()) {
+      testTitle.setField(f, thisYear);
+      String s = testTitle.getFieldValue(f);
+      assertNotNull(s);
+      assertEquals(s, thisYear);
+      // Test that empty strings are returned where necessary
+      assertNotNull(testTitle.getFieldValue(null));
+      assertEquals(testTitle.getFieldValue(null), "");
+    }
+  }
+
+
   /**
    * Check the field values.
    */

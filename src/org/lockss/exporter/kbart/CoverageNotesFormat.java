@@ -1,5 +1,5 @@
 /*
- * $Id: CoverageNotesFormat.java,v 1.1.2.3 2012-06-01 16:11:14 easyonthemayo Exp $
+ * $Id: CoverageNotesFormat.java,v 1.1.2.4 2012-06-13 10:20:02 easyonthemayo Exp $
  */
 
 /*
@@ -284,7 +284,7 @@ public enum CoverageNotesFormat {
    * that field; if there is a start value with no end value, this is a range
    * extending to the present. If the start and end values are equal, it is a
    * single title. KbartTitles ought to provide a minimum of start
-   * date or volume; usually if one date is available, they should both be.
+   * date or volume; usually if one date/vol is available, they should both be.
    *
    * @param kbt a KbartTitle
    * @return a string representing the coverage range of the title

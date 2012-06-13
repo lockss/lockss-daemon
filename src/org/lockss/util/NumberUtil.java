@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.14 2012-02-24 15:39:57 easyonthemayo Exp $
+ * $Id: NumberUtil.java,v 1.14.6.1 2012-06-13 10:20:02 easyonthemayo Exp $
  */
 
 /*
@@ -464,11 +464,8 @@ public class NumberUtil {
         thisStart = range;
         thisEnd = range;
       }
-      //System.out.format("Testing %s and %s\n", lastEnd, thisStart);
-      if (!BibliographicOrderScorer.areVolumesConsecutive(
-          lastEnd, thisStart
-      )) return false;
-      //System.out.format(" are consecutive %s and %s\n", lastEnd, thisStart);
+      if (!BibliographicOrderScorer.areVolumesConsecutive(lastEnd, thisStart))
+        return false;
       lastEnd = thisEnd;
     }
     return true;
@@ -1285,4 +1282,5 @@ public class NumberUtil {
       e.printStackTrace();
     }
   }
+
 }

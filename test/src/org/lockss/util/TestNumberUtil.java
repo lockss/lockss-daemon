@@ -1,5 +1,5 @@
 /*
- * $Id: TestNumberUtil.java,v 1.10 2011-12-19 11:14:27 easyonthemayo Exp $
+ * $Id: TestNumberUtil.java,v 1.10.8.1 2012-06-13 10:20:03 easyonthemayo Exp $
  */
 
 /*
@@ -830,7 +830,9 @@ public class TestNumberUtil extends LockssTestCase {
     assertTrue(NumberUtil.isContiguousRange("10-14, 15-20"));
     assertTrue(NumberUtil.isContiguousRange("s1-s4; s5"));
     // Ranges with Roman tokens and hyphens in range identifiers
-    assertTrue(NumberUtil.isContiguousRange("s1-I-s1-IIII; s1-V"));
+    assertFalse(NumberUtil.isContiguousRange("s1-I-s1-IIII; s1-V")); // IIII is not normalised form
+    assertTrue(NumberUtil.isContiguousRange("s1-I-s1-IV; s1-V"));
+    assertTrue(NumberUtil.isContiguousRange("s1-II - s1-4; s1-V"));
     // Alphabetic ranges, mixed delimiters
     assertTrue(NumberUtil.isContiguousRange("aa,ab,ac-ay;az-bz;ca-no"));
     assertTrue(NumberUtil.isContiguousRange("a1-2,a1-3,a1-4-a1-10"));
@@ -840,8 +842,9 @@ public class TestNumberUtil extends LockssTestCase {
     // Not consecutive ranges
     assertFalse(NumberUtil.isContiguousRange("10-14, 16-20"));
     assertFalse(NumberUtil.isContiguousRange("10-14, 14-20"));
-    assertFalse(NumberUtil.isContiguousRange("I, III"));
     // Test on Romans
+    assertFalse(NumberUtil.isContiguousRange("I, III"));
+
   }
 
 }

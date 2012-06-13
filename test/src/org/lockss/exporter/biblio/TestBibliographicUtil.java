@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicUtil.java,v 1.3 2012-02-24 15:39:57 easyonthemayo Exp $
+ * $Id: TestBibliographicUtil.java,v 1.3.6.1 2012-06-13 10:20:02 easyonthemayo Exp $
  */
 
 /*
@@ -75,7 +75,20 @@ public class TestBibliographicUtil extends LockssTestCase {
   private List<BibliographicItem> afrTodAus = Arrays.asList(afrTod, afrTodEquiv,
       afrTodDiffVol, afrTodDiffYear, afrTodDiffName, afrTodDiffUrl,
       afrTodNullYear);
-  
+
+  // OUP's "The Library..." has consecutive volumes with different identifier formats
+  private BibliographicItem theLib1 = new BibliographicItemImpl()
+      .setPrintIssn(TdbTestUtil.DEFAULT_ISSN_1)
+      .setName("The Library")
+      .setYear("1981")
+      .setVolume("s6-3");
+  private BibliographicItem theLib2 = new BibliographicItemImpl()
+      .setPrintIssn(TdbTestUtil.DEFAULT_ISSN_1)
+      .setName("The Library")
+      .setYear("1981")
+      .setVolume("s6-III");
+
+
   /**
    * Create a test Tdb structure.
    */
@@ -144,6 +157,8 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertTrue(BibliographicUtil.areEquivalent(afrTod, afrTodEquiv));
     assertTrue(BibliographicUtil.areEquivalent(afrTod, afrTodDiffUrl));
     assertTrue(BibliographicUtil.areEquivalent(afrTodDiffUrl, afrTod));
+    assertTrue(BibliographicUtil.areEquivalent(theLib1, theLib2));
+
     // Should return false if any field or arg is null
     assertFalse(BibliographicUtil.areEquivalent(null, null));
     assertFalse(BibliographicUtil.areEquivalent(afrTod, afrTodNullYear));
@@ -154,6 +169,34 @@ public class TestBibliographicUtil extends LockssTestCase {
 
     assertFalse(BibliographicUtil.areEquivalent(afrTod, afrTodDiffName));
   }
+
+  /**
+   * BibliographicItems come from the same title if they have same identifying
+   * fields. If either argument is null, an exception should be thrown.
+   */
+  public void testAreFromSameTitle() throws Exception {
+    // All Africa Today example titles should be from same title except afrTodDiffName
+    List<BibliographicItem> sameTitleAfrTodAus = Arrays.asList(afrTod,
+        afrTodEquiv, afrTodDiffVol, afrTodDiffYear, afrTodDiffUrl, afrTodNullYear);
+
+    for (BibliographicItem bi1 : sameTitleAfrTodAus) {
+      // Should differ from item with diff name
+      assertTrue(BibliographicUtil.areFromSameTitle(bi1, afrTodDiffName));
+      // Should match all other items
+      for (BibliographicItem bi2 : sameTitleAfrTodAus) {
+        assertTrue(BibliographicUtil.areFromSameTitle(bi1, bi2));
+      }
+    }
+
+    // Should return false if any arg is null
+    try {
+      BibliographicUtil.areFromSameTitle(null, null);
+      fail("Should throw exception with null BibliographicItems.");
+    } catch (NullPointerException e) {
+      // expected
+    }
+  }
+
 
   /**
    * Either the ISSNs or the names are the same. In this case all the ISSNs
@@ -218,6 +261,7 @@ public class TestBibliographicUtil extends LockssTestCase {
    * available (non-null) must match.
    */
   public void testAreApparentlyEquivalent() {
+    assertTrue(BibliographicUtil.areEquivalent(theLib1, theLib2));
     assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTod));
     assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodEquiv));
     assertTrue(BibliographicUtil.areApparentlyEquivalent(afrTod, afrTodDiffUrl));
@@ -377,6 +421,9 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertFalse(isRange(null));
     assertFalse(isRange(""));
 
+    // -------------------------------------------------------------------------
+    // A variety of strings not valid as ranges
+    // -------------------------------------------------------------------------
     // Invalid ranges
     assertFalse(isRange("s1-4"));
     assertFalse(isRange("1-s4"));
@@ -391,8 +438,45 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertFalse(isRange("II-I"));
     assertFalse(isRange("2-1"));
     assertFalse(isRange("bb-aa"));
+    // Mixed-format string not representing range
+    assertFalse(isRange("os-1"));
+    assertFalse(isRange("os-I"));
+    assertFalse(isRange("os-V"));
 
-    // Valid ranges
+    // -------------------------------------------------------------------------
+    // Examples where one side of the hyphen can be interpreted as a Roman
+    // number, and we already know that it is not a numerical range where both
+    // sides are numerical.
+    //
+    // These are considered non-ranges where the tokens either side of the
+    // hyphen are different lengths, or they suggest a descending alphabetical
+    // range.
+    // -------------------------------------------------------------------------
+    // Topical range, as the tokens are the same length and alphabetically increasing
+    assertTrue(isRange("va-vi"));
+    assertTrue(isRange("il-iv"));
+    // This is not a topical range as it decreases; it is a single id
+    assertFalse(isRange("vi-va"));
+    // This is a single id; it is not a topic range because of the case difference
+    assertFalse(isRange("os-VI"));
+    // These are considered to be non-ranges (single ids) with numerical and
+    // non-numerical parts of different lengths
+    assertFalse(isRange("i-ion"));
+    assertFalse(isRange("i-ixi"));
+    // Non-normalised Roman numerical parts are not considered numbers
+    // so this is interpreted as a topical range
+    assertTrue(isRange("vin-viv"));
+    // This is a range as the vii can represent a normalised Roman number,
+    // and the tokens are the same length and alphabetically increasing
+    assertTrue(isRange("vii-vin"));
+    // This is not a range; the vii can represent a normalised Roman number,
+    // but the range would be descending
+    assertFalse(isRange("vin-vii"));
+
+    // -------------------------------------------------------------------------
+    // A variety of valid ranges
+    // -------------------------------------------------------------------------
+    assertTrue(isRange("i-iv"));
     assertTrue(isRange("I-II"));
     assertTrue(isRange("a-aa"));
     assertTrue(isRange("a-b"));
@@ -403,17 +487,25 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertTrue(isRange("1-2-3 - 2-3-4"));
     // Individual non-numerical tokens are not compared
     assertTrue(isRange("s1-t4"));
-
     // Valid mixed-format ranges
     assertTrue(isRange("I-4"));
     assertTrue(isRange("1-IV"));
-
-    // Currently we allow non-increasing ranges
+    assertTrue(isRange("os-1 - os-V"));
+    // Currently we allow non-increasing ranges (but not descedning ones)
     assertTrue(isRange("I-I"));
     assertTrue(isRange("a-a"));
     assertTrue(isRange("hello-hello"));
     assertTrue(isRange("1-1"));
     assertTrue(isRange("1-a -1-a"));
+    assertTrue(isRange("s1-I-s1-IIII"));
+    assertTrue(isRange("s1-I-s1-4"));
+    assertTrue(isRange("s1-II-s1-4"));
+    assertTrue(isRange("s1-II - s1-4"));
+    // The following will not work because the boundary between the s/v prefix
+    // and the Roman number is a boundary btw lower/upper case.
+    // TODO It would be good to incorporate this in the regexp
+    assertFalse(isRange("sII-s4"));
+    assertFalse(isRange("vII-v4"));
   }
 
   /**
@@ -600,7 +692,15 @@ public class TestBibliographicUtil extends LockssTestCase {
         BibliographicUtil.commonTokenBasedPrefix("a123", "b123")
     );
 
-    // TODO add Roman numeral token examples?
+    // Roman numeral token examples
+    // Full string in common
+    assertEquals("sI-",
+        BibliographicUtil.commonTokenBasedPrefix("sI-2", "sI-II")
+    );
+    assertEquals("sI-",
+        BibliographicUtil.commonTokenBasedPrefix("sI-2", "sI-24")
+    );
+
   }
 
 
@@ -623,6 +723,30 @@ public class TestBibliographicUtil extends LockssTestCase {
     assertFalse( changeOfFormats("s1-1", "volume 8") );
     assertFalse( changeOfFormats("99", "ill") );
   }
+
+
+  /**
+   *
+   */
+  public final void testTranslateRomanTokens() {
+    assertEquals("s1-2", BibliographicUtil.translateRomanTokens("s1-II"));
+    assertEquals("sI-2", BibliographicUtil.translateRomanTokens("sI-II"));
+    assertEquals("os:2-8", BibliographicUtil.translateRomanTokens("os:2-VIII"));
+    assertEquals("os:2-8", BibliographicUtil.translateRomanTokens("os:2-Viii"));
+    assertEquals("os:2-8", BibliographicUtil.translateRomanTokens("os:II-viii"));
+    assertEquals("6", BibliographicUtil.translateRomanTokens("VI"));
+    // Check start and end tokens
+    assertEquals("5-vol", BibliographicUtil.translateRomanTokens("V-vol"));
+    assertEquals("vol;5", BibliographicUtil.translateRomanTokens("vol;V"));
+    // Roman tokens must be normalised to get translated
+    assertEquals("viv", BibliographicUtil.translateRomanTokens("viv"));
+    // Check non-Roman tokens remain unchanged, including null
+    assertEquals(null, BibliographicUtil.translateRomanTokens(null));
+    assertEquals("", BibliographicUtil.translateRomanTokens(""));
+    assertEquals("6", BibliographicUtil.translateRomanTokens("6"));
+    assertEquals("-", BibliographicUtil.translateRomanTokens("-"));
+  }
+
 
   /**
    * Test the construction of string sequences.
