@@ -53,7 +53,7 @@
     param[journal_id] = 1
 
     au < manifest ; 2007 ; Analytical Chemistry Insights Volume 1 ; 2007 >
-    au < doesNotExists ; 0 ; Analytical Chemistry Insights Volume 2 ; 0 >
+    au < doesNotExist ; 0 ; Analytical Chemistry Insights Volume 2 ; 0 >
     au < manifest ; 2008 ; Analytical Chemistry Insights Volume 3 ; 2008 >
     au < manifest ; 2009 ; Analytical Chemistry Insights Volume 4 ; 2009 >
     au < manifest ; 2010 ; Analytical Chemistry Insights Volume 5 ; 2010 >
