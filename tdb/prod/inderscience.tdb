@@ -1195,12 +1195,12 @@
 
       param[journal_issn] = 1743-8195
       
-      au < manifest ; 2005-2006 ; International Journal of Business Intelligence and Data Mining Volume 1 ; 1 >
-      au < manifest ; 2007 ; International Journal of Business Intelligence and Data Mining Volume 2 ; 2 >
-      au < manifest ; 2008 ; International Journal of Business Intelligence and Data Mining Volume 3 ; 3 >
-      au < manifest ; 2009 ; International Journal of Business Intelligence and Data Mining Volume 4 ; 4 >
-      au < manifest ; 2010 ; International Journal of Business Intelligence and Data Mining Volume 5 ; 5 >
-      au < manifest ; 2011 ; International Journal of Business Intelligence and Data Mining Volume 6 ; 6 >
+      au < testing ; 2005-2006 ; International Journal of Business Intelligence and Data Mining Volume 1 ; 1 >
+      au < testing ; 2007 ; International Journal of Business Intelligence and Data Mining Volume 2 ; 2 >
+      au < testing ; 2008 ; International Journal of Business Intelligence and Data Mining Volume 3 ; 3 >
+      au < testing ; 2009 ; International Journal of Business Intelligence and Data Mining Volume 4 ; 4 >
+      au < testing ; 2010 ; International Journal of Business Intelligence and Data Mining Volume 5 ; 5 >
+      au < testing ; 2011 ; International Journal of Business Intelligence and Data Mining Volume 6 ; 6 >
 
     }
 
@@ -1215,9 +1215,9 @@
 
       param[journal_issn] = 1758-941X
       
-      au < manifest ; 2009 ; International Journal of Business Performance and Supply Chain Modelling Volume 1 ; 1 >
-      au < manifest ; 2010 ; International Journal of Business Performance and Supply Chain Modelling Volume 2 ; 2 >
-      au < manifest ; 2011 ; International Journal of Business Performance and Supply Chain Modelling Volume 3 ; 3 >
+      au < testing ; 2009 ; International Journal of Business Performance and Supply Chain Modelling Volume 1 ; 1 >
+      au < testing ; 2010 ; International Journal of Business Performance and Supply Chain Modelling Volume 2 ; 2 >
+      au < testing ; 2011 ; International Journal of Business Performance and Supply Chain Modelling Volume 3 ; 3 >
       au < manifest ; 2012 ; International Journal of Business Performance and Supply Chain Modelling Volume 4 ; 4 >
 
     }
@@ -1233,18 +1233,18 @@
 
       param[journal_issn] = 1741-5039
       
-      au < manifest ; 1998-1999 ; International Journal of Business Performance Management Volume 1 ; 1 >
-      au < manifest ; 2000 ; International Journal of Business Performance Management Volume 2 ; 2 >
-      au < manifest ; 2001 ; International Journal of Business Performance Management Volume 3 ; 3 >
-      au < manifest ; 2002 ; International Journal of Business Performance Management Volume 4 ; 4 >
-      au < manifest ; 2003 ; International Journal of Business Performance Management Volume 5 ; 5 >
-      au < manifest ; 2004 ; International Journal of Business Performance Management Volume 6 ; 6 >
-      au < manifest ; 2005 ; International Journal of Business Performance Management Volume 7 ; 7 >
-      au < manifest ; 2006 ; International Journal of Business Performance Management Volume 8 ; 8 >
-      au < manifest ; 2007 ; International Journal of Business Performance Management Volume 9 ; 9 >
-      au < manifest ; 2008 ; International Journal of Business Performance Management Volume 10 ; 10 >
-      au < manifest ; 2009 ; International Journal of Business Performance Management Volume 11 ; 11 >
-      au < manifest ; 2010-2011 ; International Journal of Business Performance Management Volume 12 ; 12 >
+      au < testing ; 1998-1999 ; International Journal of Business Performance Management Volume 1 ; 1 >
+      au < testing ; 2000 ; International Journal of Business Performance Management Volume 2 ; 2 >
+      au < testing ; 2001 ; International Journal of Business Performance Management Volume 3 ; 3 >
+      au < testing ; 2002 ; International Journal of Business Performance Management Volume 4 ; 4 >
+      au < testing ; 2003 ; International Journal of Business Performance Management Volume 5 ; 5 >
+      au < testing ; 2004 ; International Journal of Business Performance Management Volume 6 ; 6 >
+      au < testing ; 2005 ; International Journal of Business Performance Management Volume 7 ; 7 >
+      au < testing ; 2006 ; International Journal of Business Performance Management Volume 8 ; 8 >
+      au < testing ; 2007 ; International Journal of Business Performance Management Volume 9 ; 9 >
+      au < testing ; 2008 ; International Journal of Business Performance Management Volume 10 ; 10 >
+      au < testing ; 2009 ; International Journal of Business Performance Management Volume 11 ; 11 >
+      au < testing ; 2010-2011 ; International Journal of Business Performance Management Volume 12 ; 12 >
       au < manifest ; 2012 ; International Journal of Business Performance Management Volume 13 ; 13 >
 
     }
@@ -1260,10 +1260,10 @@
 
       param[journal_issn] = 1741-8771
       
-      au < manifest ; 2005-2006 ; International Journal of Business Process Integration and Management Volume 1 ; 1 >
-      au < manifest ; 2007 ; International Journal of Business Process Integration and Management Volume 2 ; 2 >
-      au < manifest ; 2008 ; International Journal of Business Process Integration and Management Volume 3 ; 3 >
-      au < manifest ; 2009 ; International Journal of Business Process Integration and Management Volume 4 ; 4 >
+      au < testing ; 2005-2006 ; International Journal of Business Process Integration and Management Volume 1 ; 1 >
+      au < testing ; 2007 ; International Journal of Business Process Integration and Management Volume 2 ; 2 >
+      au < testing ; 2008 ; International Journal of Business Process Integration and Management Volume 3 ; 3 >
+      au < testing ; 2009 ; International Journal of Business Process Integration and Management Volume 4 ; 4 >
       au < manifest ; 2010-2011 ; International Journal of Business Process Integration and Management Volume 5 ; 5 >
 
     }
@@ -1279,8 +1279,8 @@
 
       param[journal_issn] = 1752-1289
       
-      au < manifest ; 2007-2008 ; International Journal of Chinese Culture and Management Volume 1 ; 1 >
-      au < manifest ; 2009 ; International Journal of Chinese Culture and Management Volume 2 ; 2 >
+      au < testing ; 2007-2008 ; International Journal of Chinese Culture and Management Volume 1 ; 1 >
+      au < testing ; 2009 ; International Journal of Chinese Culture and Management Volume 2 ; 2 >
       au < manifest ; 2010-2012 ; International Journal of Chinese Culture and Management Volume 3 ; 3 >
 
     }
@@ -1356,7 +1356,7 @@
 
       param[journal_issn] = 1740-2093
       
-      au < manifest ; 2009-2010 ; International Journal of Collaborative Enterprise Volume 1 ; 1 >
+      au < testing ; 2009-2010 ; International Journal of Collaborative Enterprise Volume 1 ; 1 >
       au < manifest ; 2011 ; International Journal of Collaborative Enterprise Volume 2 ; 2 >
 
     }
@@ -1372,13 +1372,13 @@
 
       param[journal_issn] = 1754-3924
       
-      au < manifest ; 2008 ; International Journal of Communication Networks and Distributed Systems Volume 1 ; 1 >
-      au < manifest ; 2009 ; International Journal of Communication Networks and Distributed Systems Volume 2 ; 2 >
-      au < manifest ; 2009 ; International Journal of Communication Networks and Distributed Systems Volume 3 ; 3 >
-      au < manifest ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 4 ; 4 >
-      au < manifest ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 5 ; 5 >
-      au < manifest ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 6 ; 6 >
-      au < manifest ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 7 ; 7 >
+      au < testing ; 2008 ; International Journal of Communication Networks and Distributed Systems Volume 1 ; 1 >
+      au < testing ; 2009 ; International Journal of Communication Networks and Distributed Systems Volume 2 ; 2 >
+      au < testing ; 2009 ; International Journal of Communication Networks and Distributed Systems Volume 3 ; 3 >
+      au < testing ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 4 ; 4 >
+      au < testing ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 5 ; 5 >
+      au < testing ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 6 ; 6 >
+      au < testing ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 7 ; 7 >
       au < manifest ; 2012 ; International Journal of Communication Networks and Distributed Systems Volume 8 ; 8 >
 
     }
@@ -1424,10 +1424,10 @@
 
       param[journal_issn] = 1756-0764
       
-      au < manifest ; 2008 ; International Journal of Computational Biology and Drug Design Volume 1 ; 1 >
-      au < manifest ; 2009 ; International Journal of Computational Biology and Drug Design Volume 2 ; 2 >
-      au < manifest ; 2010 ; International Journal of Computational Biology and Drug Design Volume 3 ; 3 >
-      au < manifest ; 2011 ; International Journal of Computational Biology and Drug Design Volume 4 ; 4 >
+      au < testing ; 2008 ; International Journal of Computational Biology and Drug Design Volume 1 ; 1 >
+      au < testing ; 2009 ; International Journal of Computational Biology and Drug Design Volume 2 ; 2 >
+      au < testing ; 2010 ; International Journal of Computational Biology and Drug Design Volume 3 ; 3 >
+      au < testing ; 2011 ; International Journal of Computational Biology and Drug Design Volume 4 ; 4 >
       au < manifest ; 2012 ; International Journal of Computational Biology and Drug Design Volume 5 ; 5 >
 
     }
@@ -1458,7 +1458,7 @@
 
       param[journal_issn] = 1757-1189
       
-      au < manifest ; 2009-2010 ; International Journal of Computational Economics and Econometrics Volume 1 ; 1 >
+      au < testing ; 2009-2010 ; International Journal of Computational Economics and Econometrics Volume 1 ; 1 >
       au < manifest ; 2011 ; International Journal of Computational Economics and Econometrics Volume 2 ; 2 >
 
     }
@@ -1504,9 +1504,9 @@
 
       param[journal_issn] = 1753-3473
       
-      au < manifest ; 2007 ; International Journal of Computational Materials Science and Surface Engineering Volume 1 ; 1 >
-      au < manifest ; 2009 ; International Journal of Computational Materials Science and Surface Engineering Volume 2 ; 2 >
-      au < manifest ; 2010 ; International Journal of Computational Materials Science and Surface Engineering Volume 3 ; 3 >
+      au < testing ; 2007 ; International Journal of Computational Materials Science and Surface Engineering Volume 1 ; 1 >
+      au < testing ; 2009 ; International Journal of Computational Materials Science and Surface Engineering Volume 2 ; 2 >
+      au < testing ; 2010 ; International Journal of Computational Materials Science and Surface Engineering Volume 3 ; 3 >
       au < manifest ; 2011 ; International Journal of Computational Materials Science and Surface Engineering Volume 4 ; 4 >
 
     }
