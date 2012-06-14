@@ -1,0 +1,113 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.msue.MichiganStateUniversityExtensionPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Michigan State University Extension Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.53.0</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Michigan State University Extension Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%shistoricalpubs/MSUELOCKSS/LOCKSS%%20%d.html&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>&quot;http://msue.anr.msu.edu/&quot;</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>&quot;%shistoricalpubs/MSUELOCKSS/LOCKSS%%20%d.html&quot;, base_url, year</string>
+    </entry>
+    </map>
+  </entry>  
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^%s[^.]+\.(html|pdf|gif)$&quot;, base_url</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%sBulletins/Bulletin/PDF/Historical/finished_pubs/e[0-9]+/e[a-zA-Z0-9]+\.pdf$&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.msue.MichiganStateUniversityExtensionHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.msue.MichiganStateUniversityExtensionArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.msue.MichiganStateUniversityExtensionArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+</map>
