@@ -811,12 +811,10 @@
 
     param[journal_id] = 137
 
-    au < manifest ; 2007 ; Gene Expression to Genetical Genomics Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Gene Expression to Genetical Genomics Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Gene Expression to Genetical Genomics Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Gene Expression to Genetical Genomics Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Gene Expression to Genetical Genomics Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Gene Expression to Genetical Genomics Volume 6 ; 2012 >
+    au < manifest ; 2008 ; Gene Expression to Genetical Genomics Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Gene Expression to Genetical Genomics Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Gene Expression to Genetical Genomics Volume 3 ; 2010 >
+
     
 
   }
@@ -831,10 +829,12 @@
 
     param[journal_id] = 26
 
-    au < manifest ; 2009 ; Gene Regulation and Systems Biology Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Gene Regulation and Systems Biology Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Gene Regulation and Systems Biology Volume 3 ; 2011 >
-    au < manifest ; 2012 ; Gene Regulation and Systems Biology Volume 4 ; 2012 >
+    au < manifest ; 2007 ; Gene Regulation and Systems Biology Volume 1 ; 2007 >
+    au < manifest ; 2008 ; Gene Regulation and Systems Biology Volume 2 ; 2008 >
+    au < manifest ; 2009 ; Gene Regulation and Systems Biology Volume 3 ; 2009 >
+    au < manifest ; 2010 ; Gene Regulation and Systems Biology Volume 4 ; 2010 >
+    au < manifest ; 2011 ; Gene Regulation and Systems Biology Volume 5 ; 2011 >
+    au < manifest ; 2012 ; Gene Regulation and Systems Biology Volume 6 ; 2012 >
 
   }
   
@@ -847,6 +847,10 @@
     >
 
     param[journal_id] = 127
+    
+    au < manifest ; 2008 ; Genetics & Epigenetics Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Genetics & Epigenetics Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Genetics & Epigenetics Volume 3 ; 2010 >
 
 
 
@@ -861,6 +865,12 @@
     >
 
     param[journal_id] = 103
+    
+    au < manifest ; 2008 ; Genomics Insights Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Genomics Insights Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Genomics Insights Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Genomics Insights Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Genomics Insights Volume 5 ; 2012 >
 
 
 
@@ -875,6 +885,10 @@
     >
 
     param[journal_id] = 153
+    
+    au < manifest ; 2009 ; Glycobiology Insights Volume 1 ; 2009 >
+    au < manifest ; 2010 ; Glycobiology Insights Volume 2 ; 2010 >
+    au < manifest ; 2012 ; Glycobiology Insights Volume 3 ; 2012 >
 
   }
   
@@ -887,6 +901,12 @@
     >
 
     param[journal_id] = 117
+    
+    au < manifest ; 2008 ; Health Services Insights Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Health Services Insights Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Health Services Insights Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Health Services Insights Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Health Services Insights Volume 5 ; 2012 >
 
 
   }
@@ -900,6 +920,11 @@
     >
 
     param[journal_id] = 119
+    
+    au < manifest ; 2008 ; Healthy Aging & Clinical Care in the Elderly Volume 1 ; 2008 >
+    au < manifest ; 2010 ; Healthy Aging & Clinical Care in the Elderly Volume 2 ; 2010 >
+    au < manifest ; 2011 ; Healthy Aging & Clinical Care in the Elderly Volume 3 ; 2011 >
+    au < manifest ; 2012 ; Healthy Aging & Clinical Care in the Elderly Volume 4 ; 2012 >
 
 
   }
@@ -913,6 +938,10 @@
     >
 
     param[journal_id] = 142
+    
+    au < manifest ; 2009 ; Human Parasitic Diseases Volume 1 ; 2009 >
+    au < manifest ; 2010 ; Human Parasitic Diseases Volume 2 ; 2010 >
+    au < manifest ; 2011 ; Human Parasitic Diseases Volume 3 ; 2011 >
 
 
   }
@@ -926,6 +955,10 @@
     >
 
     param[journal_id] = 100
+    
+    au < manifest ; 2009 ; Immunology and Immunogenetics Insights Volume 1 ; 2009 >
+    au < manifest ; 2010 ; Immunology and Immunogenetics Insights Volume 2 ; 2010 >
+    au < manifest ; 2011 ; Immunology and Immunogenetics Insights Volume 3 ; 2011 >
 
 
   }
@@ -939,6 +972,9 @@
     >
 
     param[journal_id] = 150
+    
+    au < manifest ; 2009 ; Immunotherapy Insights Volume 1 ; 2009 >
+    au < manifest ; 2011 ; Immunotherapy Insights Volume 1 ; 2011 >
 
 
   }
@@ -952,6 +988,10 @@
     >
 
     param[journal_id] = 171
+    
+    au < manifest ; 2010 ; Indian Journal of Clinical Medicine Volume 1 ; 2010 >
+    au < manifest ; 2011 ; Indian Journal of Clinical Medicine Volume 1 ; 2011 >
+    au < manifest ; 2012 ; Indian Journal of Clinical Medicine Volume 1 ; 2012 >
 
 
   }
@@ -965,6 +1005,12 @@
     >
 
     param[journal_id] = 112
+    
+    au < manifest ; 2008 ; Infectious Diseases: Research and Treatment Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Infectious Diseases: Research and Treatment Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Infectious Diseases: Research and Treatment Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Infectious Diseases: Research and Treatment Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Infectious Diseases: Research and Treatment Volume 5 ; 2012 >
 
 
   }
@@ -978,6 +1024,16 @@
     >
 
     param[journal_id] = 21
+    
+    au < manifest ; 2006 ; Integrative Medicine Insights Volume 1 ; 2006 >
+    au < manifest ; 2007 ; Integrative Medicine Insights Volume 2 ; 2007 >
+    au < manifest ; 2008 ; Integrative Medicine Insights Volume 3 ; 2008 >
+    au < manifest ; 2009 ; Integrative Medicine Insights Volume 4 ; 2009 >
+    au < manifest ; 2010 ; Integrative Medicine Insights Volume 5 ; 2010 >
+    au < manifest ; 2011 ; Integrative Medicine Insights Volume 6 ; 2011 >
+    au < manifest ; 2012 ; Integrative Medicine Insights Volume 7 ; 2012 >
+    
+    
 
 
   }
@@ -991,6 +1047,11 @@
     >
 
     param[journal_id] = 129
+    
+    au < manifest ; 2009 ; International Journal of Insect Science Volume 1 ; 2009 >
+    au < manifest ; 2010 ; International Journal of Insect Science Volume 2 ; 2010 >
+    au < manifest ; 2011 ; International Journal of Insect Science Volume 3 ; 2011 >
+    au < manifest ; 2012 ; International Journal of Insect Science Volume 4 ; 2012 >
 
 
   }
@@ -1004,6 +1065,12 @@
     >
 
     param[journal_id] = 97
+    
+    au < manifest ; 2008 ; International Journal of Tryptophan Research Volume 1 ; 2008 >
+    au < manifest ; 2009 ; International Journal of Tryptophan Research Volume 2 ; 2009 >
+    au < manifest ; 2010 ; International Journal of Tryptophan Research Volume 3 ; 2010 >
+    au < manifest ; 2011 ; International Journal of Tryptophan Research Volume 4 ; 2011 >
+    au < manifest ; 2012 ; International Journal of Tryptophan Research Volume 5 ; 2012 >
 
 
   }
@@ -1017,6 +1084,10 @@
     >
 
     param[journal_id] = 172
+    
+    au < manifest ; 2010 ; Japanese Clinical Medicine Volume 1 ; 2010 >
+    au < manifest ; 2011 ; Japanese Clinical Medicine Volume 2 ; 2011 >
+    au < manifest ; 2012 ; Japanese Clinical Medicine Volume 3 ; 2012 >
 
 
   }
@@ -1030,6 +1101,12 @@
     >
 
     param[journal_id] = 124
+    
+    au < manifest ; 2008 ; Journal of Cell Death Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Journal of Cell Death Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Journal of Cell Death Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Journal of Cell Death Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Journal of Cell Death Volume 5 ; 2012 >
 
 
   }
@@ -1043,6 +1120,11 @@
     >
 
     param[journal_id] = 121
+    
+    au < manifest ; 2009 ; Journal of Central Nervous System Disease Volume 1 ; 2009 >
+    au < manifest ; 2010 ; Journal of Central Nervous System Disease Volume 2 ; 2010 >
+    au < manifest ; 2011 ; Journal of Central Nervous System Disease Volume 3 ; 2011 >
+    au < manifest ; 2012 ; Journal of Central Nervous System Disease Volume 4 ; 2012 >
 
 
   }
@@ -1056,6 +1138,12 @@
     >
 
     param[journal_id] = 131
+    
+    au < manifest ; 2008 ; Journal of Experimental Neuroscience Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Journal of Experimental Neuroscience Volume 2-3 ; 2009 >
+    au < manifest ; 2010 ; Journal of Experimental Neuroscience Volume 4 ; 2010 >
+    au < manifest ; 2011 ; Journal of Experimental Neuroscience Volume 5 ; 2011 >
+    au < manifest ; 2012 ; Journal of Experimental Neuroscience Volume 6 ; 2012 >
 
 
   }
@@ -1069,6 +1157,10 @@
     >
 
     param[journal_id] = 171
+    
+    au < manifest ; 2010 ; Journal of Genomics and Exomics Volume 1 ; 2010 >
+    au < manifest ; 2011 ; Journal of Genomics and Exomics Volume 2 ; 2011 >
+    au < manifest ; 2012 ; Journal of Genomics and Exomics Volume 3 ; 2012 >
 
 
   }
@@ -1082,7 +1174,11 @@
     >
 
     param[journal_id] = 109
-
+    
+    au < manifest ; 2008 ; Journal of Experimental Neuroscience Volume 1-2 ; 2008 >
+    au < manifest ; 2010 ; Journal of Experimental Neuroscience Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Journal of Experimental Neuroscience Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Journal of Experimental Neuroscience Volume 5 ; 2012 >
 
 
   }
