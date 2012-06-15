@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.296 2012-06-13 13:15:05 pgust Exp $
+ $Id: build.xml,v 1.297 2012-06-15 02:32:13 pgust Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -2132,7 +2132,6 @@ Test results in ${test.results}
 	<classpath refid="test.run.classpath" />
         <sysproperty key="org.lockss.defaultLogLevel" value="${tdbloglevel}"/>
 	<arg line="-v -g prod -h host.foo ${xml.files}" />
-	<jvmarg value="-Xmx1024m" />
       </java>
      </then>
      <else>
