@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitle.java,v 1.14 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.15 2012-06-15 16:55:35 easyonthemayo Exp $
  */
 
 /*
@@ -438,7 +438,8 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     public static final EnumSet<Field> idFields = EnumSet.of(
         Field.PUBLICATION_TITLE,
         Field.PRINT_IDENTIFIER,
-        Field.ONLINE_IDENTIFIER
+        Field.ONLINE_IDENTIFIER,
+        Field.TITLE_ID
     ); 
     
 

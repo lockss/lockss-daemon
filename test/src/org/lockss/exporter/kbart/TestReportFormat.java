@@ -105,8 +105,9 @@ public class TestReportFormat extends LockssTestCase {
 
     // Titles processes should yield 1 less title
     for (ReportFormat.ReportDataFormat rdf : EnumSet.of(
-        ReportFormat.ReportDataFormat.TITLES,
-        ReportFormat.ReportDataFormat.SFX
+        ReportFormat.ReportDataFormat.TITLES/*,
+        ReportFormat.ReportDataFormat.SFX*/
+        // XXX Temp disabled SFX
     )) {
       for (CoverageNotesFormat cnf : CoverageNotesFormat.values()) {
         processed = ReportFormat.process(titles, cnf, rdf);

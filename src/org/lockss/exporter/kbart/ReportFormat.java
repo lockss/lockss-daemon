@@ -1,5 +1,5 @@
 /*
- * $Id: ReportFormat.java,v 1.3 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id: ReportFormat.java,v 1.4 2012-06-15 16:55:35 easyonthemayo Exp $
  */
 
 /*
@@ -238,7 +238,7 @@ public class ReportFormat {
         "amalgamated ranges; precise coverage is indicated in the " +
         "coverage_notes field.", true),
     // SFX is a special variation on the one_per_line, with a specific coverage_notes format
-    SFX("SFX DataLoader", "Suitable for import into ExLibris SFX.", true)
+    //SFX("SFX DataLoader", "Suitable for import into ExLibris SFX.", true)
     ;
     
     private ReportDataFormat(String label, String footnote, boolean oneLinePerTitle) {

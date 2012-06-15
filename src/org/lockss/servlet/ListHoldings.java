@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.38 2012-06-13 16:40:57 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.39 2012-06-15 16:55:35 easyonthemayo Exp $
  */
 
 /*
@@ -449,9 +449,11 @@ public class ListHoldings extends LockssServlet {
     // Process the titles using a report format, to add supplementary data or
     // amalgamate records as required; submit the SFX covnotes format if SFX
     // data format chosen.
-    titles = ReportFormat.process(titles,
+    /*titles = ReportFormat.process(titles,
         reportDataFormat == ReportDataFormat.SFX ? CoverageNotesFormat.SFX : coverageNotesFormat,
-        reportDataFormat);
+        reportDataFormat);*/
+
+    titles = ReportFormat.process(titles, coverageNotesFormat, reportDataFormat);
 
     // Create a filter
     KbartExportFilter filter;

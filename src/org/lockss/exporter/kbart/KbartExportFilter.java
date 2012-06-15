@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExportFilter.java,v 1.9 2012-03-22 16:27:23 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.10 2012-06-15 16:55:35 easyonthemayo Exp $
  */
 
 /*
@@ -676,10 +676,20 @@ public class KbartExportFilter {
             PUBLICATION_TITLE
         }
     ),
-    
+
     // ISSN only (will have duplicates)
     ISSN_ONLY("ISSN only", "Produce a list of ISSNs",
-        new Field[] {PRINT_IDENTIFIER});
+        new Field[] {PRINT_IDENTIFIER}
+    ),
+
+    // SFX DataLoader format only requires title_id and coverage_notes
+    /*SFX_DATALOADER("SFX DataLoader", "SFX DataLoader (title_id and coverage_notes)",
+        new Field[] {
+            TITLE_ID,
+            COVERAGE_NOTES
+        }
+    )*/
+    ;
 
     // These are used in an interface to describe the ordering. */
     /** A name to identify the ordering. */
