@@ -525,6 +525,7 @@
 
     param[journal_dir] = university_of_toronto_quarterly
     attr[journal_id] = utq
+    comment[au_81]= hash compare failure, to be fixed. (as of 06/13/2012)
 
     au < released ; 2005 ; University of Toronto Quarterly Volume 74 ; 74 >
     au < released ; 2006 ; University of Toronto Quarterly Volume 75 ; 75 >
