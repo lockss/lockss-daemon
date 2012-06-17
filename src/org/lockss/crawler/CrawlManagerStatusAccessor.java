@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.24 2012-02-16 10:41:41 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.25 2012-06-17 23:06:00 tlipkis Exp $
  */
 
 /*
@@ -71,14 +71,18 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 //   private static final String START_URLS = "start_urls";
   private static final String CRAWL_STATUS = "crawl_status";
 //   private static final String SOURCES = "sources";
-  // Sort key, not a visible column
-  private static final String SORT_KEY = "sort";
+  // Sort keys, not visible columns
+  private static final String SORT_KEY1 = "sort1";
+  private static final String SORT_KEY2 = "sort2";
 
   private static int SORT_BASE_ACTIVE = 0;
   private static int SORT_BASE_WAITING = 1000000;
   private static int SORT_BASE_DONE = 2000000;
 
-  private List sortRules = null;
+  // ascending by category, descending start or end time
+  private final List sortRules =
+    ListUtil.list(new StatusTable.SortRule(SORT_KEY1, true),
+		  new StatusTable.SortRule(SORT_KEY2, false));
 
   private List<ColumnDescriptor> colDescs =
     ListUtil.fromArray(new ColumnDescriptor[] {
@@ -161,7 +165,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
     boolean includeInternalAus =
       table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
     table.setRows(getRows(cms, key, includeInternalAus, ct));
-    table.setDefaultSortRules(makeSortRules());
+    table.setDefaultSortRules(sortRules);
     table.setColumnDescriptors(getColDescs(cms, ct));
     table.setSummaryInfo(getSummaryInfo(cms, ct));
   }
@@ -234,7 +238,8 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 				      au.getAuId()));
     row.put(CRAWL_TYPE, "New Content");
     row.put(CRAWL_STATUS, "Pending");
-    row.put(SORT_KEY, new Integer(rowNum + SORT_BASE_WAITING));
+    row.put(SORT_KEY1, SORT_BASE_WAITING);
+    row.put(SORT_KEY2, Integer.MAX_VALUE - rowNum);
     ct.waiting++;
     return row;
   }
@@ -272,7 +277,8 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       if (status.getEndTime() > 0) {
 	row.put(DURATION_COL_NAME, new Long(status.getEndTime() -
 					    status.getStartTime()));
-	row.put(SORT_KEY, new Integer(SORT_BASE_DONE));
+	row.put(SORT_KEY1, SORT_BASE_DONE);
+	row.put(SORT_KEY2, status.getEndTime());
 	if (status.getErrorCtr().getCount() > 0) {
 	  switch (status.getCrawlStatus()) {
 	  case Crawler.STATUS_ERROR:
@@ -289,12 +295,14 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       } else {
 	row.put(DURATION_COL_NAME, new Long(TimeBase.nowMs() -
 					    status.getStartTime()));
-	row.put(SORT_KEY, new Integer(SORT_BASE_ACTIVE));
+	row.put(SORT_KEY1, SORT_BASE_ACTIVE);
+	row.put(SORT_KEY2, status.getStartTime());
 	ct.active++;
       }
     } else {
       ct.waiting++;
-      row.put(SORT_KEY, new Integer(rowNum + SORT_BASE_WAITING));
+      row.put(SORT_KEY1, SORT_BASE_WAITING);
+      row.put(SORT_KEY2, rowNum);
     }
 
 //     row.put(START_URLS,
@@ -393,15 +401,10 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
     }
   }
 
-  private List makeSortRules() {
-    if (sortRules == null) {
-      sortRules = new ArrayList(3);
-      sortRules.add(new StatusTable.SortRule(SORT_KEY, true));
-      sortRules.add(new StatusTable.SortRule(START_TIME_COL_NAME, false));
-      sortRules.add(new StatusTable.SortRule(DURATION_COL_NAME, false));
-    }
-    return sortRules;
-  }
+  // Sort into three groups:
+  // 1: Active, by descending start time
+  // 2: Pending, in queue order
+  // 3: Done, by descending end time
 
   static class CrawlOverview implements OverviewAccessor {
 

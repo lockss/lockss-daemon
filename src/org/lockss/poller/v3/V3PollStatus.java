@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.38 2012-03-19 21:16:13 barry409 Exp $
+* $Id: V3PollStatus.java,v 1.39 2012-06-17 23:06:00 tlipkis Exp $
  */
 
 /*
@@ -105,6 +105,15 @@ public class V3PollStatus {
 				     pollKey);
   }
 
+  // Sort keys, not visible
+  private static final String SORT_KEY1 = "sort1";
+  private static final String SORT_KEY2 = "sort2";
+
+  private static int SORT_BASE_ACTIVE = 0;
+  private static int SORT_BASE_PENDING = 1;
+  private static int SORT_BASE_DONE = 2;
+
+
   /**
    * <p>Overview status table for all V3 polls in which we are acting as
    * the caller of the poll.</p>
@@ -114,9 +123,15 @@ public class V3PollStatus {
 
     static final String TABLE_TITLE = "Polls";
 
-    // Sort by deadline, descending
+    // Sort by (status, suborder):
+    // (active, descending start time)
+    // (pending, queue order)
+    // (done, descending end time)
+
     private final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("deadline", false));
+      ListUtil.list(new StatusTable.SortRule(SORT_KEY1, true),
+		    new StatusTable.SortRule(SORT_KEY2, false));
+
     private final List colDescs =
       ListUtil.list(new ColumnDescriptor("auId", "Volume",
                                          ColumnDescriptor.TYPE_STRING),
@@ -208,16 +223,16 @@ public class V3PollStatus {
                                     ColumnDescriptor.TYPE_TIME_INTERVAL,
 				    val));
       }
-      List<PollManager.PollReq> queue = pollManager.getPendingQueue();
-      if (!queue.isEmpty()) {
-        summary.add(new SummaryInfo("Queued",
-                                    ColumnDescriptor.TYPE_INT,
-                                    queue.size()));
-	ArchivalUnit au = queue.get(0).getAu();
-        summary.add(new SummaryInfo("Next",
-                                    ColumnDescriptor.TYPE_STRING,
-				    au.getName()));
-      }
+//       List<PollManager.PollReq> queue = pollManager.getPendingQueue();
+//       if (!queue.isEmpty()) {
+//         summary.add(new SummaryInfo("Queued",
+//                                     ColumnDescriptor.TYPE_INT,
+//                                     queue.size()));
+// 	ArchivalUnit au = queue.get(0).getAu();
+//         summary.add(new SummaryInfo("Next",
+//                                     ColumnDescriptor.TYPE_STRING,
+// 				    au.getName()));
+//       }
       return summary;
     }
 
@@ -245,6 +260,13 @@ public class V3PollStatus {
           rows.add(makeRow(poller));
         }
       }
+      List<PollManager.PollReq> queue = pollManager.getPendingQueue();
+      int rowNum = 0;
+      for (PollManager.PollReq req : pollManager.getPendingQueue()) {
+	rows.add(makePendingRow(req, rowNum++));
+
+      }
+
       return rows;
     }
 
@@ -267,13 +289,28 @@ public class V3PollStatus {
       row.put("agreement", agmt);
       row.put("start", new Long(poller.getCreateTime()));
       row.put("deadline", poller.getDeadline());
-      if (!poller.isPollActive()) {
+      if (poller.isPollActive()) {
+	row.put(SORT_KEY1, SORT_BASE_ACTIVE);
+	row.put(SORT_KEY2, row.get("start"));
+      } else {
 	row.put("end", poller.getEndTime());
+	row.put(SORT_KEY1, SORT_BASE_DONE);
+	row.put(SORT_KEY2, row.get("end"));
       }
       String skey = PollUtil.makeShortPollKey(poller.getKey());
       row.put("pollId", new StatusTable.Reference(skey,
 						  "V3PollerDetailTable",
 						  poller.getKey()));
+      return row;
+    }
+
+    private Map makePendingRow(PollManager.PollReq req, int rowNum) {
+      Map row = new HashMap();
+      ArchivalUnit au = req.getAu();
+      row.put("auId", makeAuRef(au, ArchivalUnitStatus.AU_STATUS_TABLE_NAME));
+      row.put("status", "Pending");
+      row.put(SORT_KEY1, SORT_BASE_PENDING);
+      row.put(SORT_KEY2, Integer.MAX_VALUE - rowNum);
       return row;
     }
   }
@@ -287,9 +324,14 @@ public class V3PollStatus {
 
     static final String TABLE_TITLE = "Votes";
 
-    // Sort by deadline, descending
+  // Sort by (status, suborder):
+  // (active, descending start time)
+  // (done, descending end time)
+
     private final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("deadline", false));
+      ListUtil.list(new StatusTable.SortRule(SORT_KEY1, true),
+		    new StatusTable.SortRule(SORT_KEY2, false));
+
     private final List colDescs =
       ListUtil.list(new ColumnDescriptor("auId", "Volume",
                                          ColumnDescriptor.TYPE_STRING),
@@ -342,12 +384,19 @@ public class V3PollStatus {
       row.put("auId", makeAuRef(au, ArchivalUnitStatus.AU_STATUS_TABLE_NAME));
       row.put("caller", voter.getPollerId().getIdString());
       row.put("status", voter.getStatusString());
-      row.put("start", new Long(voter.getCreateTime()));
+      row.put("start", voter.getCreateTime());
       row.put("deadline", voter.getDeadline());
       String skey = PollUtil.makeShortPollKey(voter.getKey());
       row.put("pollId", new StatusTable.Reference(skey,
 						  "V3VoterDetailTable",
 						  voter.getKey()));
+      if (voter.isPollActive()) {
+	row.put(SORT_KEY1, SORT_BASE_ACTIVE);
+	row.put(SORT_KEY2, voter.getCreateTime());
+      } else {
+	row.put(SORT_KEY1, SORT_BASE_DONE);
+	row.put(SORT_KEY2, voter.getDeadline());
+      }
       return row;
     }
 
@@ -522,7 +571,7 @@ public class V3PollStatus {
 
   /**
    * <p>The full status of an individual V3 Poll in which we are acting as a
-   * participant.  Requires the PollID as a key.</p>
+   * poller.  Requires the PollID as a key.</p>
    *
    */
   public static class V3PollerStatusDetail
