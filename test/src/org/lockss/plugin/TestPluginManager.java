@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.94 2012-05-30 08:29:27 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.95 2012-06-17 23:06:44 tlipkis Exp $
  */
 
 /*
@@ -1026,10 +1026,10 @@ public class TestPluginManager extends LockssTestCase {
     MockArchivalUnit au2 = (MockArchivalUnit)mgr.getAuFromId(mauauid2);
     assertNull(mgr.findCachedUrl(url1));
     assertNull(mgr.findCachedUrl(url2));
-    au1.addUrl(url1, true, true, null);
-    au2.addUrl(url2, true, true, null);
-    au1.addUrl(url3, true, true, null);
-    au2.addUrl(url3, true, true, null);
+    CachedUrl cu1 = au1.addUrl(url1, true, true, null);
+    CachedUrl cu2 = au2.addUrl(url2, true, true, null);
+    CachedUrl cu31 = au1.addUrl(url3, true, true, null);
+    CachedUrl cu32 = au2.addUrl(url3, true, true, null);
     CachedUrl cu = mgr.findCachedUrl(url1);
     assertEquals(url1, cu.getUrl());
     assertSame(au1, cu.getArchivalUnit());
@@ -1046,6 +1046,11 @@ public class TestPluginManager extends LockssTestCase {
 
     cu = mgr.findCachedUrl(url3);
     assertEquals(url3, cu.getUrl());
+
+    // Test version that returns all matches
+    assertEquals(ListUtil.list(cu1), mgr.findCachedUrls(url1));
+    assertEquals(ListUtil.list(cu2), mgr.findCachedUrls(url2));
+    assertSameElements(ListUtil.list(cu31, cu32), mgr.findCachedUrls(url3));
   }
 
   AuState setUpAuState(MockArchivalUnit mau) {

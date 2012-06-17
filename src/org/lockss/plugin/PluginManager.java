@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.224 2012-05-30 08:29:27 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.225 2012-06-17 23:06:44 tlipkis Exp $
  */
 
 /*
@@ -1758,6 +1758,29 @@ public class PluginManager
   }
 
   private CachedUrl findTheCachedUrl0(String url, boolean withContent) {
+    List<CachedUrl> lst = findCachedUrls0(url, withContent, true);    
+    if (!lst.isEmpty()) {
+      return lst.get(0);
+    } else {
+      return null;
+    }
+  }
+
+  public List<CachedUrl> findCachedUrls(String url) {
+    return findCachedUrls0(url, true, false);
+  }
+
+  public List<CachedUrl> findCachedUrls(String url, boolean withContent) {
+    return findCachedUrls0(url, withContent, false);
+  }
+
+  /* Return either a list of all CUs with the given URL, or the best choice
+   * is bestOnly is true.
+   */
+  // XXX refactor into CU generator & two consumers.
+
+  private List<CachedUrl> findCachedUrls0(String url, boolean withContent,
+					  boolean bestOnly) {
     // We don't know what AU it might be in, so can't do plugin-dependent
     // normalization yet.  But only need to do generic normalization once.
     // XXX This is wrong, as plugin-specific normalization is normally done
@@ -1775,18 +1798,19 @@ public class PluginManager
     String normUrl;
     String normStem;
     boolean isTrace = log.isDebug3();
+    List<CachedUrl> res = new ArrayList<CachedUrl>(bestOnly ? 1 : 15);
     try {
       normUrl = UrlUtil.normalizeUrl(url);
       normStem = UrlUtil.getUrlPrefix(normUrl);
     } catch (MalformedURLException e) {
-      log.warning("findTheCachedUrl(" + url + ")", e);
-      return null;
+      log.warning("findCachedUrls(" + url + ")", e);
+      return Collections.EMPTY_LIST;
     }
     synchronized (hostAus) {
       ArrayList candidateAus = (ArrayList)hostAus.get(normStem);
       if (candidateAus == null) {
-	log.debug3("findTheCachedUrl: No AUs for " + normStem);
-	return null;
+	log.debug3("findCachedUrls: No AUs for " + normStem);
+	return Collections.EMPTY_LIST;
       }
       CachedUrl bestCu = null;
       int bestAuIx = -1;
@@ -1795,7 +1819,7 @@ public class PluginManager
       for (Iterator iter = candidateAus.iterator(); iter.hasNext(); auIx++) {
 	ArchivalUnit au = (ArchivalUnit)iter.next();
 	if (isTrace) {
-	  log.debug3("findTheCachedUrl: " + normUrl + " check "
+	  log.debug3("findCachedUrls: " + normUrl + " check "
 		     + au.toString());
 	}
 	ArchiveMemberSpec ams = ArchiveMemberSpec.fromUrl(au, normUrl);
@@ -1805,7 +1829,7 @@ public class PluginManager
 	}
 	if (au.shouldBeCached(normUrl)) {
 	  if (isTrace) {
-	    log.debug3("findTheCachedUrl: " + normUrl + " should be in "
+	    log.debug3("findCachedUrls: " + normUrl + " should be in "
 		       + au.getAuId());
 	  }
 	  try {
@@ -1815,22 +1839,27 @@ public class PluginManager
 	      cu = cu.getArchiveMemberCu(ams);
 	    }
 	    if (isTrace) {
-	      log.debug3("findTheCachedUrl(" + siteUrl + ") = " + cu);
+	      log.debug3("findCachedUrls(" + siteUrl + ") = " + cu);
 	    }
 	    if (cu != null && (!withContent || cu.hasContent())) {
-	      int score = score(au, cu);
-	      if (score == 0) {
-		makeFirstCandidate(candidateAus, auIx);
-		if (isTrace) log.debug3("findTheCachedUrl: ret: " + siteUrl);
-		return cu;
-	      }
-	      if (score < bestScore) {
-		AuUtil.safeRelease(bestCu);
-		bestCu = cu;
-		bestAuIx = auIx;
-		bestScore = score;
+	      if (bestOnly) {
+		int score = score(au, cu);
+		if (score == 0) {
+		  makeFirstCandidate(candidateAus, auIx);
+		  if (isTrace) log.debug3("findCachedUrls: ret: " + siteUrl);
+		  res.add(cu);
+		  return res;
+		}
+		if (score < bestScore) {
+		  AuUtil.safeRelease(bestCu);
+		  bestCu = cu;
+		  bestAuIx = auIx;
+		  bestScore = score;
+		} else {
+		  cu.release();
+		}
 	      } else {
-		cu.release();
+		res.add(cu);
 	      }
 	    }
 	  } catch (MalformedURLException ignore) {
@@ -1840,12 +1869,14 @@ public class PluginManager
 	  }
 	}
       }
-      makeFirstCandidate(candidateAus, bestAuIx);
-      if (isTrace) {
-	log.debug3("bestCu was " +
-		   (bestCu == null ? "null" : bestCu.toString()));
+      if (bestOnly) {
+	makeFirstCandidate(candidateAus, bestAuIx);
+	if (isTrace) {
+	  log.debug3("bestCu was " +
+		     (bestCu == null ? "null" : bestCu.toString()));
+	}
       }
-      return bestCu;
+      return res;
     }
   }
 
