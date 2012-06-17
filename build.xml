@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.297 2012-06-15 02:32:13 pgust Exp $
+ $Id: build.xml,v 1.298 2012-06-17 23:05:15 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -38,6 +38,7 @@ in this Software without prior written authorization from Stanford University.
 <description>
 Args:
   -Dargs="args ..."        Supply cmd line args to run-class
+  -Djvmargs="args ..."     Supply cmd line args to java (e.g., -Xmx1000m)
   -Dclass=pack.age.Class   Specify class for test-one, test-class, run-class
   -Dcvstag=tag             Cvs tag to checkout for post-commit-test
   -Dexclude=path           Exclude matching tests.
@@ -89,14 +90,17 @@ Args:
                               generate-unsupported-mock
 </description>
 
-   <!-- User defaults -->
+   <!-- User defaults (old name) -->
   <property file="${user.home}/lockss.properties"/>
+   <!-- User defaults -->
+  <property file="${user.home}/.lockssprops"/>
 
   <!-- Defaults -->
   <property name="loglevel" value="" />
   <property name="showoutput" value="no" />
   <property name="filtertrace" value="yes" />
   <property name="timeout" value="" />
+  <property name="jvmargs" value="" />
   <property name="keeptempfiles" value="" />
   <property name="idtempfiles" value="" />
   <property name="nonetwork" value="" />
@@ -111,6 +115,9 @@ Args:
   <property name="noqualifier" value="java.*" />
 <!--   <property name="noqualifier" -->
 <!-- 	    value="java.lang:java.io:java.net:java.util:java.text" /> -->
+
+  <!-- Default heap for junit if none specified in jvmargs -->
+  <property name="junit.default.args" value="-Xmx256m" />
 
   <property environment="env"/>
   <!--  Ignore system classpath, to ensure consistent builds -->
@@ -517,10 +524,12 @@ Test results in ${test.results}
       </then>
      </if>
     <junit1 fork="${fork}" printsummary="yes"
-         maxmemory="256m" haltonfailure="${halt}" failureproperty="failed"
+         haltonfailure="${halt}" failureproperty="failed"
          filtertrace="${filtertrace}" showoutput="${showoutput}">
       <junitelem/>
       <jvmarg value="-server"/>
+      <jvmarg line="${junit.default.args}"/>
+      <jvmarg line="${jvmargs}"/>
       <formatter type="plain" usefile="@{usefile}" />
       <classpath refid="@{cpid}" />
       <sysproperty key="java.library.path" value="${test.native}"/>
@@ -630,13 +639,17 @@ The target you have selected requires compiling under JDK 1.7.
   <!-- ==================================================================== -->
   <!--  Public tasks -->
   <!-- ==================================================================== -->
-  <target name="clean"
-     depends="clean0"
+  <target name="clean-all"
+     depends="clean"
    description="Delete all generated files and dirs" >
     <delete dir="${tdb.xml.dir}" quiet="true"/>
   </target>
 
-  <target name="clean0"
+  <!-- Old target.  Remove  -->
+  <target name="clean0" depends="clean"
+	  description="Deprecated synonym for clean." />
+
+  <target name="clean"
      depends="clean-tempbuild,clean-tools,clean-results,clean-rpm"
    description="Delete all generated files and dirs except tdbxml" >
     <delete dir="${classes}" quiet="true"/>
@@ -1187,6 +1200,15 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <property name="protorpm.rpms" value="${protorpm.top}/RPMS" />
     <property name="rpm.rpms" value="${rpm.top}/RPMS" />
 
+    <propertyregex property="rpmreleasename"
+		   input="${releasename}"
+		   regexp="-[^.]*"
+		   global="true"
+		   replace=""
+		   defaultValue="${releasename}" />
+
+
+
     <!-- make classpath to substitute into start script -->
     <pathconvert refid="prod.run.classpath" property="rpm.clspth"
        targetos="unix">
@@ -1199,7 +1221,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
       </fileset>
       <filterset>
        <filter token="CLASSPATH" value="${rpm.clspth}"/>
-       <filter token="RELEASENAME" value="${releasename}"/>
+       <filter token="RELEASENAME" value="${rpmreleasename}"/>
        <filter token="RPMRELEASE" value="${rpmrelease}"/>
        <filter token="PLATFORM_VERSION" value="Linux RPM-${rpmrelease}"/>
       </filterset>
@@ -1877,6 +1899,7 @@ published on the Web. http://www.lockss.org
     <java classname="${class}" fork="true" failonerror="true">
        <classpath refid="test.run.classpath" />
        <arg line="${args}" />
+       <jvmarg line="${jvmargs}"/>
        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
        <sysproperty key="java.library.path" value="${test.native}"/>
     </java>
@@ -1890,6 +1913,7 @@ published on the Web. http://www.lockss.org
     <java classname="${class}" fork="true" failonerror="yes">
        <classpath refid="tools.test.run.classpath" />
        <arg line="${args}" />
+       <jvmarg line="${jvmargs}"/>
        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
     </java>
   </target>
@@ -2132,6 +2156,8 @@ Test results in ${test.results}
 	<classpath refid="test.run.classpath" />
         <sysproperty key="org.lockss.defaultLogLevel" value="${tdbloglevel}"/>
 	<arg line="-v -g prod -h host.foo ${xml.files}" />
+	<jvmarg line="${junit.default.args}"/>
+	<jvmarg line="${jvmargs}"/>
       </java>
      </then>
      <else>
@@ -2161,13 +2187,15 @@ Test results in ${test.results}
      <not> <equals arg1="${plugin.names}" arg2="" /> </not>
      <then>
       <echo message="Validating plugin xml files"/>
-      <junit1 fork="${fork}" printsummary="yes" maxmemory="256m"
+      <junit1 fork="${fork}" printsummary="yes"
 	      haltonfailure="${halt}" failureproperty="failed"
 	      filtertrace="${filtertrace}" showoutput="${showoutput}">
         <test fork="${fork}" name="org.lockss.test.PluginTestCase" />
 		    <jvmarg value="-server"/>
 	<formatter type="plain" usefile="@{usefile}" />
 	<classpath refid="test.run.classpath" />
+	<jvmarg line="${junit.default.args}"/>
+	<jvmarg line="${jvmargs}"/>
         <sysproperty key="org.lockss.test.TestPluginNames"
 		     value="${plugin.names}"/>
         <sysproperty key="org.lockss.manager.PluginManager"
