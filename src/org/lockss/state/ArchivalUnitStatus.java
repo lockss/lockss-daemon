@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.107 2012-03-27 20:56:18 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.108 2012-06-17 23:08:03 tlipkis Exp $
  */
 
 /*
@@ -42,8 +42,7 @@ import org.lockss.poller.*;
 import org.lockss.poller.v3.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
-import org.lockss.servlet.AdminServletManager;
-import org.lockss.servlet.ListObjects;
+import org.lockss.servlet.*;
 
 /**
  * Collect and report the status of the ArchivalUnits
@@ -82,6 +81,7 @@ public class ArchivalUnitStatus
   public static final String PEERS_REPAIR_TABLE_NAME = "PeerRepair";
   public static final String FILE_VERSIONS_TABLE_NAME = "FileVersions";
   public static final String AU_DEFINITION_TABLE_NAME = "AuConfiguration";
+  public static final String AUS_WITH_URL_TABLE_NAME = "AusWithUtl";
 
 
   private static Logger logger = Logger.getLogger("AuStatus");
@@ -127,6 +127,8 @@ public class ArchivalUnitStatus
                                       new FileVersions(theDaemon));
     statusServ.registerStatusAccessor(AU_DEFINITION_TABLE_NAME,
                                       new AuConfiguration(theDaemon));
+    statusServ.registerStatusAccessor(AUS_WITH_URL_TABLE_NAME,
+                                      new AusWithUrl(theDaemon));
     logger.debug2("Status accessors registered.");
   }
 
@@ -536,6 +538,114 @@ public class ArchivalUnitStatus
     }
   }
 
+  static class AusWithUrl implements StatusAccessor {
+    static final String TABLE_TITLE = "AUs containing URL";
+
+    private static final List columnDescriptors = ListUtil.list(
+      new ColumnDescriptor("AuName", "AU", ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("Size", "Size", ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor("CollectedDate", "Date Collected",
+			   ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor("Versions", "Versions", ColumnDescriptor.TYPE_INT)
+      );
+
+    private static final List sortRules =
+      ListUtil.list(new
+		    StatusTable.SortRule("AuName",
+					 CatalogueOrderComparator.SINGLETON));
+
+    private LockssDaemon theDaemon;
+
+    AusWithUrl(LockssDaemon theDaemon) {
+      this.theDaemon = theDaemon;
+    }
+
+    public String getDisplayName() {
+      throw new UnsupportedOperationException("Au table has no generic title");
+    }
+
+    public boolean requiresKey() {
+      return true;
+    }
+
+    public void populateTable(StatusTable table)
+        throws StatusService.NoSuchTableException {
+      table.setColumnDescriptors(columnDescriptors);
+      table.setDefaultSortRules(sortRules);
+      String url = table.getKey();
+      table.setTitle("AUs containing URL: " + url);
+      try {
+	List<CachedUrl> cuLst =
+	  theDaemon.getPluginManager().findCachedUrls(url);
+	if (cuLst.isEmpty()) {
+	  throw new StatusService.NoSuchTableException("Unknown URL: " + url);
+	}
+	table.setRows(getRows(table, cuLst));
+      } catch (StatusService.NoSuchTableException e) {
+	throw e;
+      } catch (Exception e) {
+	logger.warning("Error building table", e);
+	throw new StatusService.
+	  NoSuchTableException("Error building table for URL: " + url, e);
+      }
+//       table.setSummaryInfo(getSummaryInfo(stats));
+    }
+
+    private List getRows(StatusTable table,
+			 List<CachedUrl> cuLst) {
+      PluginManager pluginMgr = theDaemon.getPluginManager();
+
+      List rowL = new ArrayList();
+      for (CachedUrl cu : cuLst) {
+	try {
+	  rowL.add(makeRow(table, cu));
+	} catch (Exception e) {
+	  logger.warning("Unexpected expection building row", e);
+	}
+      }
+      return rowL;
+    }
+
+    private Map makeRow(StatusTable table, CachedUrl cu) {
+      HashMap rowMap = new HashMap();
+      ArchivalUnit au = cu.getArchivalUnit();
+      rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
+
+
+      long size = cu.getContentSize();
+      Object val =
+	new StatusTable.SrvLink(cu.getContentSize(),
+				AdminServletManager.SERVLET_DISPLAY_CONTENT,
+				PropUtil.fromArgs("auid", au.getAuId(),
+						  "url", cu.getUrl()));
+      rowMap.put("Size", val);
+
+      int version = cu.getVersion();
+      Object versionObj = new Long(version);
+      if (version > 1) {
+	CachedUrl[] cuVersions = cu.getCuVersions(2);
+	if (cuVersions.length > 1) {
+	  StatusTable.Reference verLink =
+	    new StatusTable.Reference(versionObj,
+				      FILE_VERSIONS_TABLE_NAME, au.getAuId());
+	  verLink.setProperty("url", cu.getUrl());
+	  versionObj = verLink;
+	}
+      }
+      rowMap.put("Versions", versionObj);
+      Properties props = cu.getProperties();
+      try {
+	long cdate =
+	  Long.parseLong(props.getProperty(CachedUrl.PROPERTY_FETCH_TIME));
+	rowMap.put("CollectedDate",
+		   ServletUtil.headerDf.format(new Date(cdate)));
+      } catch (NumberFormatException ignore) {
+      }
+      return rowMap;
+    }
+
+  }
+
   static final StatusTable.DisplayedValue DAMAGE_STATE_OK =
     new StatusTable.DisplayedValue("Ok");
   static final StatusTable.DisplayedValue DAMAGE_STATE_DAMAGED =
@@ -637,7 +747,7 @@ public class ArchivalUnitStatus
       }
 
       CrawlSpec spec = au.getCrawlSpec();
-      List startUrls;
+      List<String> startUrls;
       if (spec instanceof SpiderCrawlSpec) {
 	startUrls = ((SpiderCrawlSpec)spec).getStartingUrls();
       } else {
@@ -679,11 +789,13 @@ public class ArchivalUnitStatus
 	  if (normUrl.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
 	    normUrl = normUrl.substring(0, normUrl.length() - 1);
 	  }
-	  Map row = makeRow(au, repo.getNode(normUrl), cu,
-			    startUrls.contains(url));
+	  Map row = makeRow(au, repo.getNode(normUrl), cu, startUrls);
 	  row.put("sort", new Integer(curRow));
           rowL.add(row);
-        } catch (MalformedURLException ignore) { }
+        } catch (MalformedURLException ignore) {
+	} finally {
+	  AuUtil.safeRelease(cu);
+	}
       }
 
       if (cusIter.hasNext()) {
@@ -694,9 +806,22 @@ public class ArchivalUnitStatus
     }
 
     private Map makeRow(ArchivalUnit au, RepositoryNode node,
-			CachedUrl cu, boolean isStartUrl) {
-      String url = node.getNodeUrl();
+			CachedUrl cu, List<String> startUrls) {
       boolean hasContent = node.hasContent();
+      String url = null;
+      boolean isStartUrl = false;
+      if (false && hasContent) {
+	// Repository v1 may return a name that omits the trailing slash
+	// (even without removing it above).  Use the name explicitly
+	// stored with the CU if any.
+	Properties cuProps = cu.getProperties();
+	url = cuProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
+	isStartUrl = startUrls.contains(url);
+      }
+      if (url == null) {
+	url = node.getNodeUrl();
+	isStartUrl |= startUrls.contains(url);
+      }
       Object val = url;
       if (isStartUrl) {
 	val = new StatusTable.DisplayedValue(val).setBold(true);
@@ -916,6 +1041,15 @@ public class ArchivalUnitStatus
 	res.add(new StatusTable.SummaryInfo("Crawl Window",
 					    ColumnDescriptor.TYPE_STRING,
 					    wmsg));
+      }
+      if (debug) {
+	String crawlPool = au.getFetchRateLimiterKey();
+	if (crawlPool == null) {
+	  crawlPool = "(none)";
+	}
+	res.add(new StatusTable.SummaryInfo("Crawl Pool",
+					    ColumnDescriptor.TYPE_STRING,
+					    crawlPool));
       }
       long lastCrawlAttempt = state.getLastCrawlAttempt();
       res.add(new StatusTable.SummaryInfo("Last Completed Crawl",
@@ -1214,38 +1348,42 @@ public class ArchivalUnitStatus
 						     " not found in AU: " +
 						     au.getName());
       }
-      // Get array of versions.  One more than we need just to determine
-      // whether to add a Next link
-      CachedUrl[] cuVersions = curCu.getCuVersions(startRow + numRows + 1);
+      try {
+	// Get array of versions.  One more than we need just to determine
+	// whether to add a Next link
+	CachedUrl[] cuVersions = curCu.getCuVersions(startRow + numRows + 1);
 
-      List rowL = new ArrayList();
-      if (startRow > 0) {
-        // add 'previous'
-        int start = startRow - defaultNumRows;
-        if (start < 0) {
-          start = 0;
-        }
-        rowL.add(makeOtherRowsLink(false, start, au.getAuId(), url));
-      }
-      int endRow1 = startRow + numRows; // end row + 1
-      int curRow = -1;
-      int curVer = curCu.getVersion() + 1;
-      for (CachedUrl cu : cuVersions) {
-	curRow++;
-	curVer--;
-        if (curRow < startRow) {
-          continue;
-        }
-	if (curRow >= numRows) {
-	  // add 'next'
-	  rowL.add(makeOtherRowsLink(true, endRow1, au.getAuId(), url));
-	  break;
+	List rowL = new ArrayList();
+	if (startRow > 0) {
+	  // add 'previous'
+	  int start = startRow - defaultNumRows;
+	  if (start < 0) {
+	    start = 0;
+	  }
+	  rowL.add(makeOtherRowsLink(false, start, au.getAuId(), url));
 	}
-	Map row = makeRow(au, cu, curVer);
-	row.put("sort", curRow);
-	rowL.add(row);
+	int endRow1 = startRow + numRows; // end row + 1
+	int curRow = -1;
+	int curVer = curCu.getVersion() + 1;
+	for (CachedUrl cu : cuVersions) {
+	  curRow++;
+	  curVer--;
+	  if (curRow < startRow) {
+	    continue;
+	  }
+	  if (curRow >= numRows) {
+	    // add 'next'
+	    rowL.add(makeOtherRowsLink(true, endRow1, au.getAuId(), url));
+	    break;
+	  }
+	  Map row = makeRow(au, cu, curVer);
+	  row.put("sort", curRow);
+	  rowL.add(row);
+	}
+	return rowL;
+      } finally {
+	AuUtil.safeRelease(curCu);
       }
-      return rowL;
     }
 
     private Map makeRow(ArchivalUnit au, CachedUrl cu, int ver) {
