@@ -1,10 +1,10 @@
 /*
- * $Id: PollManager.java,v 1.218 2012-05-17 18:01:16 tlipkis Exp $
+ * $Id: PollManager.java,v 1.219 2012-06-17 23:07:11 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -107,6 +107,19 @@ public class PollManager
   public static final boolean DEFAULT_ENABLE_V3_VOTER =
     org.lockss.poller.v3.V3PollFactory.DEFAULT_ENABLE_V3_VOTER;
   
+  /** The classes of AUs for which polls should be run.  May be a singleton
+   * or list of:
+   * <dl>
+   * <dt>All<dd> All AUs
+   * <dt>Internal<dd> Internal AUs (plugin registries)
+   * <dt>Priority<dd> Poll that have been requested from DebugPanel
+   * </dl>
+   */
+  public static final String PARAM_AUTO_POLL_AUS =
+    PREFIX + "autoPollAuClassess";
+  public static final List<String> DEFAULT_AUTO_POLL_AUS =
+    ListUtil.list("All");
+
   // Poll starter
 
   public static final String PARAM_START_POLLS_INITIAL_DELAY = 
@@ -283,6 +296,8 @@ public class PollManager
   private boolean enablePollers = DEFAULT_ENABLE_V3_POLLER;
   // If true, restore V3 Voters
   private boolean enableVoters = DEFAULT_ENABLE_V3_VOTER;
+
+  private List<String> autoPollAuClassess = DEFAULT_AUTO_POLL_AUS;
   
   // Executor used to carry out serialized poll operations. 
   // Implementations include a queued poll executor and a pooled poll executor.
@@ -294,19 +309,20 @@ public class PollManager
 
   Deadline timeToRebuildPollQueue = Deadline.in(0);
   Deadline startOneWait = Deadline.in(0);
-  Map<ArchivalUnit,PollReq> highPriorityPollRequests =
-    Collections.synchronizedMap(new ListOrderedMap());
 
   Object queueLock = new Object();	// lock for sharedRateReqs and
 					// pollQueue
-  protected List pollQueue = new ArrayList();
+  protected List<PollReq> pollQueue = new ArrayList<PollReq>();
+  Map<ArchivalUnit,PollReq> highPriorityPollRequests =
+    Collections.synchronizedMap(new ListOrderedMap());
 
   public static class PollReq {
     ArchivalUnit au;
     AuState aus = null;
     int priority = 0;
+    PollSpec spec;
 
-    PollReq(ArchivalUnit au) {
+    public PollReq(ArchivalUnit au) {
       this(au, AuUtil.getAuState(au));
     }
 
@@ -315,8 +331,14 @@ public class PollManager
       this.aus = aus;
     }
 
-    public void setPriority(int val) {
+    public PollReq setPriority(int val) {
       priority = val;
+      return this;
+    }
+
+    public PollReq setPollSpec(PollSpec spec) {
+      this.spec = spec;
+      return this;
     }
 
     public ArchivalUnit getAu() {
@@ -329,10 +351,6 @@ public class PollManager
 
     public int getPriority() {
       return priority;
-    }
-
-    public boolean isHiPri() {
-      return priority > 0;
     }
 
     public String toString() {
@@ -513,7 +531,10 @@ public class PollManager
    * @param au the AU
    */
   void cancelAuPolls(ArchivalUnit au) {
-    // first collect polls to cancel
+    // first remove from queues
+    highPriorityPollRequests.remove(au);
+
+    // collect polls to cancel
     Set<PollManagerEntry> toCancel = new HashSet();
     synchronized (pollMapLock) {
       for (PollManagerEntry pme : thePolls.values()) {
@@ -1044,6 +1065,13 @@ public class PollManager
       enableVoters =
         newConfig.getBoolean(PARAM_ENABLE_V3_VOTER, DEFAULT_ENABLE_V3_VOTER);
       
+      autoPollAuClassess = newConfig.getList(PARAM_AUTO_POLL_AUS,
+					     DEFAULT_AUTO_POLL_AUS);
+      for (ListIterator<String> iter = autoPollAuClassess.listIterator();
+	   iter.hasNext(); ) {
+	iter.set(iter.next().toLowerCase());
+      }
+
       deleteInvalidPollStateDirs =
         newConfig.getBoolean(PARAM_DELETE_INVALID_POLL_STATE_DIRS,
                              DEFAULT_DELETE_INVALID_POLL_STATE_DIRS);
@@ -1209,9 +1237,7 @@ public class PollManager
 			     DEFAULT_VOTE_RETRY_INTERVAL_DURATION_CURVE);
       }
 
-      if (enableV3Poller && !oldEnable) {
-	startOneWait.expireIn(10 * SECOND);
-      }      
+      needRebuildPollQueue();
     }
     long scommTimeout =
       newConfig.getTimeInterval(BlockingStreamComm.PARAM_CONNECT_TIMEOUT,
@@ -1254,7 +1280,7 @@ public class PollManager
 	  theLog.warning("Bad peer id in peer2peer map", e);
 	}
       } else {
-	log.warning("Malformed reputation mapping: " + onePair);
+	theLog.warning("Malformed reputation mapping: " + onePair);
       }
     }
     return res;
@@ -1299,7 +1325,7 @@ public class PollManager
       sb.append("\t");
       sb.append(ent.getValue());
     }
-    log.debug(sb.toString());
+    theLog.debug(sb.toString());
     return res;
   }
 
@@ -2086,7 +2112,7 @@ public class PollManager
 	  startOnePoll();
 	} catch (RuntimeException e) {
 	  // Can happen if AU deactivated recently
-	  log.debug2("Error starting poll", e);
+	  theLog.debug2("Error starting poll", e);
 	  // Avoid tight loop if startOnePoll() throws.  Just being extra
 	  // cautious in case another bug similar to Roundup 4091 arises.
 	  try {
@@ -2120,6 +2146,7 @@ public class PollManager
 	PollReq req = nextReq();
 	if (req != null) {
 	  startPoll(req);
+	  highPriorityPollRequests.remove(req.au);
 	  return true;
 	} else {
 	  startOneWait.expireIn(paramQueueEmptySleep);
@@ -2137,13 +2164,19 @@ public class PollManager
     return false;
   }
 
-  PollReq nextReq() throws InterruptedException {
-    boolean rebuilt = false;
-
-    if (timeToRebuildPollQueue.expired()) {
-      rebuildPollQueue();
-      rebuilt = true;
+  boolean rebuildPollQueueIfNeeded() {
+    synchronized (queueLock) {
+      if (timeToRebuildPollQueue.expired()) {
+	rebuildPollQueue();
+	return true;
+      }
+      return false;
     }
+  }
+
+
+  PollReq nextReq() throws InterruptedException {
+    boolean rebuilt = rebuildPollQueueIfNeeded();
     PollReq res = nextReqFromBuiltQueue();
     if (res != null) {
       return res;
@@ -2160,24 +2193,45 @@ public class PollManager
 	theLog.debug3("nextReqFromBuiltQueue(), " +
 		      pollQueue.size() + " in queue");
       }
-      if (pollQueue.isEmpty()) {
-	if (theLog.isDebug3()) {
-	  theLog.debug3("nextReqFromBuiltQueue(): null");
+      while (!pollQueue.isEmpty()) {
+	PollReq req = pollQueue.remove(0);
+	// ignore deleted AUs
+	if (pluginMgr.isActiveAu(req.getAu())) {
+	  return req;
 	}
-	return null;
       }
-      PollReq bestReq = (PollReq)pollQueue.remove(0);
-      return bestReq;
+      if (theLog.isDebug3()) {
+	theLog.debug3("nextReqFromBuiltQueue(): null");
+      }
+      return null;
     }
   }
 
-  public List<PollReq> getPendingQueue() {
-    return new ArrayList(pollQueue);
+  public List<String> getAutoPollAuClasses() {
+    return autoPollAuClassess;
   }
 
-  void enqueueHighPriorityPoll(PollReq req) {
-    theLog.debug("enqueueHighPriorityPoll(" + req.au + ")");
-    highPriorityPollRequests.put(req.au, req);
+  public List<PollReq> getPendingQueue() {
+    rebuildPollQueueIfNeeded();
+    synchronized (queueLock) {
+      return new ArrayList(pollQueue);
+    }
+  }
+
+  public void enqueuePoll(PollReq req) throws IllegalStateException {
+    theLog.debug2("enqueuePoll(" + req + ")");
+    if (isEligibleForPoll(req)) {
+      highPriorityPollRequests.put(req.au, req);
+      needRebuildPollQueue();
+    } else {
+      throw new IllegalStateException("AU is already running a poll");
+    }
+  }
+
+  void needRebuildPollQueue() {
+    // Expiration of these timers causes nextReq() to rebuild the poll
+    // queue the next time it's called.  As it doesn't trigger an immediate
+    // event, there's no need for a short delay.
     timeToRebuildPollQueue.expire();
     startOneWait.expire();
   }
@@ -2195,34 +2249,52 @@ public class PollManager
     Map weightMap = new HashMap();
     synchronized (queueLock) {
       pollQueue.clear();
-      for (ArchivalUnit au : pluginMgr.getAllAus()) {
-	try {
-	  AuState auState = AuUtil.getAuState(au);
-	  if (isEligibleForPoll(au, auState)) {
-	    PollReq req = highPriorityPollRequests.get(au);
-	    if (req != null) {
-	      pollQueue.add(req);
-	    } else {
-	      double weight = pollWeight(au, auState);
-	      if (weight > 0.0) {
-		req = new PollReq(au, auState);
-		weightMap.put(req, weight);
-	      }
-	    }
-	  }
-	} catch (RuntimeException e) {
-	  theLog.warning("Checking for pollworthiness: " + au.getName(), e);
-	  // ignore AU if it caused an error
+      // XXX Until have real sort, just add these in the order they were
+      // created.
+      for (PollReq req : highPriorityPollRequests.values()) {
+	AuState auState = AuUtil.getAuState(req.au);
+	if (isEligibleForPoll(req, auState) && req.getPriority() > 0) {
+	  pollQueue.add(req);
 	}
       }
-      int n = paramPollQueueMax - pollQueue.size();
-      if (n > 0 && !weightMap.isEmpty()) {
-	pollQueue.addAll(weightedRandomSelection(weightMap,
-						 Math.min(weightMap.size(),
-							  n)));
+      if (pollQueue.size() < paramPollQueueMax) {
+	for (ArchivalUnit au : pluginMgr.getAllAus()) {
+	  try {
+	    PollReq req = highPriorityPollRequests.get(au);
+	    if (req != null && req.getPriority() > 0) {
+	      // already added above.
+	      continue;
+	    }
+	    AuState auState = AuUtil.getAuState(au);
+	    if (req == null) {
+	      req = new PollReq(au, auState);
+	    }
+	    if (isEligibleForPoll(req, auState)) {
+	      if (req.getPriority() > 0) {
+		pollQueue.add(req);
+	      } else {
+		double weight = pollWeight(au, auState);
+		if (weight > 0.0) {
+		  weightMap.put(req, weight);
+		}
+	      }
+	    } else if (theLog.isDebug3()) {
+	      theLog.debug3("Not eligible for poll: " + au);
+	    }
+	  } catch (RuntimeException e) {
+	    theLog.warning("Checking for pollworthiness: " + au.getName(), e);
+	    // ignore AU if it caused an error
+	  }
+	}
+	int n = paramPollQueueMax - pollQueue.size();
+	if (n > 0 && !weightMap.isEmpty()) {
+	  pollQueue.addAll(weightedRandomSelection(weightMap,
+						   Math.min(weightMap.size(),
+							    n)));
+	}
       }
-      if (log.isDebug()) {
-	log.debug("Poll queue: " + pollQueue);
+      if (theLog.isDebug()) {
+	theLog.debug("Poll queue: " + pollQueue);
       }
     }
   }
@@ -2231,31 +2303,90 @@ public class PollManager
     return CollectionUtil.weightedRandomSelection(weightMap, n);
   }
 
-  boolean isEligibleForPoll(ArchivalUnit au, AuState auState) {
-    if (!au.shouldCallTopLevelPoll(auState)) {
+  /** Used to convey reason an AU is ineligible to be polled to clients for
+   * logging/display */
+  public class NotEligibleException extends Exception {
+    public NotEligibleException(String msg) {
+      super(msg);
+    }
+  }
+
+  boolean isEligibleForPoll(PollReq req) {
+    return isEligibleForPoll(req, AuUtil.getAuState(req.au));
+  }
+
+  boolean isEligibleForPoll(PollReq req, AuState auState) {
+    try {
+      checkEligibleForPoll(req, auState);
+      return true;
+    } catch (NotEligibleException e) {
       return false;
     }
+  }
+
+  public void checkEligibleForPoll(PollReq req)
+      throws NotEligibleException {
+    checkEligibleForPoll(req, AuUtil.getAuState(req.au));
+  }
+
+  public void checkEligibleForPoll(PollReq req, AuState auState)
+      throws NotEligibleException {
+    ArchivalUnit au = req.au;
+
+    // If a poll is already running, don't start another one.
+    if (isPollRunning(au)) {
+      throw new NotEligibleException("AU is already running a poll.");
+    }
+
+    checkAuClassAllowed(req);
+
+    if (req.getPriority() > 0) {
+      return;
+    }
+
+    // Following tests suppressed for high priority (manually enqueued)
+    // polls
+
+    // Does AU want to be polled?
+    if (!au.shouldCallTopLevelPoll(auState)) {
+      throw new NotEligibleException("AU does not want to be polled.");
+    }
+
     // Do not call polls on AUs that have not crawled, UNLESS that AU
     // is marked pubdown.
     if (!auState.hasCrawled() && !AuUtil.isPubDown(au)) {
       theLog.debug3("Not crawled or down, not calling a poll on " + au);
-      return false;
+      throw new NotEligibleException("AU has not crawled and is not marked down.");
     }
 
     long sinceLast = TimeBase.msSince(auState.getLastPollAttempt());
     if (sinceLast < paramMinPollAttemptInterval) {
-      theLog.debug3("Poll attempted too recently (" +
-		    StringUtil.timeIntervalToString(sinceLast) +
-		    " < " + StringUtil.timeIntervalToString(paramMinPollAttemptInterval) +
-		    ") " + au);
-      return false;
+      String msg = "Poll attempted too recently (" +
+	StringUtil.timeIntervalToString(sinceLast) + " < " +
+	StringUtil.timeIntervalToString(paramMinPollAttemptInterval) + ").";
+      theLog.debug3(msg + " " + au);
+      throw new NotEligibleException(msg);
     }
+  }
 
-    // If a poll is already running, don't start another one.
-    if (isPollRunning(au)) {
-      return false;
+  void checkAuClassAllowed(PollReq req) throws NotEligibleException {
+    if (autoPollAuClassess.contains("all")) {
+      return;
     }
-    return true;
+    ArchivalUnit au = req.au;
+    if (pluginMgr.isInternalAu(au) && autoPollAuClassess.contains("internal")) {
+      return;
+    }
+    if (req != null &&
+	req.getPriority() > 0 &&
+	autoPollAuClassess.contains("priority")) {
+      return;
+    }
+    throw
+      new NotEligibleException("Only AU classes {" +
+			       StringUtil.separatedString(autoPollAuClassess,
+							  ", ") +
+			       "} are allowed to poll.");
   }
 
   /** Return a number proportional to the desirability of calling a poll on
