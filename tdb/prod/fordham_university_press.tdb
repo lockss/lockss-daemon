@@ -25,7 +25,7 @@
     au < released ; 2008 ; Joyce Studies Annual Volume 2008 ; 2008 >
     au < released ; 2009 ; Joyce Studies Annual Volume 2009 ; 2009 >
     au < testing ; 2010 ; Joyce Studies Annual Volume 2010 ; 2010 >
-    au < testing ; 2011 ; Joyce Studies Annual Volume 2011 ; 2011 >
+    au < ready ; 2011 ; Joyce Studies Annual Volume 2011 ; 2011 >
 
   }
 
@@ -49,7 +49,7 @@
     param[journal_dir] = traditio
     attr[journal_id] = trd
     
-    au < testing ; 2011 ; Traditio Volume 66 ; 66 >
+    au < ready ; 2011 ; Traditio Volume 66 ; 66 >
     
   }
 
