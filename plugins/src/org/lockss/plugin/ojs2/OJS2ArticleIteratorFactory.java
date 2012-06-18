@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.1 2011-10-11 20:47:47 thib_gc Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.2 2012-06-18 22:43:11 thib_gc Exp $
  */
 
 /*
@@ -153,7 +153,7 @@ public class OJS2ArticleIteratorFactory
       SimpleNodeIterator iter = links.elements();
       while (iter.hasMoreNodes()) {
         LinkTag link = (LinkTag)iter.nextNode();
-        CachedUrl linkCu = au.makeCachedUrl(link.extractLink());
+        CachedUrl linkCu = au.makeCachedUrl(au.siteNormalizeUrl(link.extractLink()));
         if (linkCu != null) {
           if (linkCu.hasContent()) {
             String linkUrl = linkCu.getUrl();
@@ -161,7 +161,7 @@ public class OJS2ArticleIteratorFactory
               AuUtil.safeRelease(linkCu);
               continue; // Ignore (dupe)
             }
-            String label = link.getStringText().trim().toLowerCase();
+            String label = link.toPlainTextString().trim().toLowerCase();
             if (label == null || label.length() == 0) {
               label = link.getText().trim().toLowerCase();
             }
