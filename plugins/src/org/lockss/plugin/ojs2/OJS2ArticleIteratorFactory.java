@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.2 2012-06-18 22:43:11 thib_gc Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.3 2012-06-18 23:20:38 thib_gc Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.ojs2;
 
 import java.io.*;
+import java.net.MalformedURLException;
 import java.util.*;
 import java.util.regex.*;
 
@@ -153,7 +154,18 @@ public class OJS2ArticleIteratorFactory
       SimpleNodeIterator iter = links.elements();
       while (iter.hasMoreNodes()) {
         LinkTag link = (LinkTag)iter.nextNode();
-        CachedUrl linkCu = au.makeCachedUrl(au.siteNormalizeUrl(link.extractLink()));
+        CachedUrl linkCu = null;
+        try {
+          linkCu = au.makeCachedUrl(UrlUtil.normalizeUrl(link.extractLink(), au));
+        }
+        catch (PluginBehaviorException pbe) {
+          log.debug3("Plugin behavior exception", pbe);
+          continue; // Ignore
+        }
+        catch (MalformedURLException mue) {
+          log.debug3("Malformed URL exception", mue);
+          continue; // Ignore
+        }
         if (linkCu != null) {
           if (linkCu.hasContent()) {
             String linkUrl = linkCu.getUrl();
