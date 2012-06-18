@@ -1,5 +1,5 @@
 /*
- * $Id: TestSecrecyNewsHtmlFilterFactory.java,v 1.2 2012-05-04 22:30:08 davidecorcoran Exp $
+ * $Id: TestSecrecyNewsHtmlFilterFactory.java,v 1.3 2012-06-18 21:43:16 davidecorcoran Exp $
  */
 
 /*
@@ -58,7 +58,10 @@ public class TestSecrecyNewsHtmlFilterFactory extends LockssTestCase {
 	  "value=\"abcde12345\" " +
 	  "/></p>" +
     "<!-- Advertising Manager v3.4.19 (0.123 seconds.) -->" +
-	  "<!-- 40 queries. 0.595 seconds. -->";
+	  "<!-- 40 queries. 0.595 seconds. -->" +
+    "<!-- All in One SEO Pack 1.6.14.3 by Michael Torbert of Semper Fi Web Design[307,357] -->" +
+    "<li><h2>Archives</h2><ul><li><a href='http://www.fas.org/blog/secrecy/2012/06' title='June 2012'>June 2012</a></li></ul></li>" +
+    "<li class=\"categories\"><h2><Categories</h2><ul><li class=\"cat-item cat-item-3\"><a href=\"http://www.fas.org/blog/secrecy/category/crs\" title=\"View all posts filed under CRS\">CRS</a> (126)</li></ul>";
   
   private static final String inst2 =
 	  "<p style=\"display: none;\"> " +
@@ -68,7 +71,10 @@ public class TestSecrecyNewsHtmlFilterFactory extends LockssTestCase {
 	  "value=\"fghij67890\" " +
 	  "/></p>" +
     "<!-- Advertising Manager v3.4.19 (0.456 seconds.) -->" +
-    "<!-- 40 queries. 0.648 seconds. -->";
+    "<!-- 40 queries. 0.648 seconds. -->" +
+    "<!-- All in One SEO Pack 1.6.14.2 by Michael Torbert of Semper Fi Web Design[307,357] -->" +
+    "<li><h2>Archives</h2><ul><li><a href='http://www.fas.org/blog/secrecy/2012/05' title='May 2012'>May 2012</a></li></ul></li>" +
+    "<li class=\"categories\"><h2><Categories</h2><ul><li class=\"cat-item cat-item-3\"><a href=\"http://www.fas.org/blog/secrecy/category/crs\" title=\"View all posts filed under CRS\">CRS</a> 117)</li></ul>";
 
   public void testFiltering() throws PluginException, IOException {
     InputStream inA;

@@ -1,5 +1,5 @@
 /*
- * $Id: SecrecyNewsHtmlFilterFactory.java,v 1.2 2012-05-04 22:30:08 davidecorcoran Exp $
+ * $Id: SecrecyNewsHtmlFilterFactory.java,v 1.3 2012-06-18 21:43:16 davidecorcoran Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.io.*;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
-import org.htmlparser.filters.TagNameFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
@@ -58,8 +57,15 @@ public InputStream createFilteredInputStream(ArchivalUnit au,
   HtmlNodeFilters.tagWithAttribute("input", "id", "akismet_comment_nonce"),
   // Filters Advertising Manager load time
   HtmlNodeFilters.commentWithString("Advertising Manager"),
+  // Filters All in One SEO Pack
+  HtmlNodeFilters.commentWithRegex("All in One SEO Pack"),
+  // Filters Archives menu
+  HtmlNodeFilters.tagWithText("li", "Archives"),
+  // Filters category count
+  HtmlNodeFilters.tagWithAttribute("li", "class", "categories"),
   // Other filters
   HtmlNodeFilters.commentWithRegex("[0-9]+ queries. [0-9.]+ seconds."),
+  
   };
 
   OrFilter combinedFilter = new OrFilter(filters);
