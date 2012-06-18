@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -23,6 +23,8 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%sclockss/%s/%s/index.html&quot;, base_url, journal_dir, volume_name</string>
       <string>2,&quot;^%spage&quot;,base_url</string>
       <string>1,&quot;^%stoc/%s/%s(/|$)&quot;, base_url, journal_dir, volume_name</string>
       <string>1,&quot;^%sdoi/(pdf|pdfplus|abs|full|suppl)/10\.5339/%s\.(.*\.)?%s\.&quot;, base_url, journal_dir, volume_name</string>
