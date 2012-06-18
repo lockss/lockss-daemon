@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.4 2010-11-17 19:59:27 thib_gc Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.5 2012-06-18 23:39:12 davidecorcoran Exp $
  */
 
 /*
@@ -70,6 +70,8 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("table", "class", "footer2t"),
         // Institution-dependent link resolvers
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp"),
+        // Institution-dependent greeting
+        HtmlNodeFilters.tagWithAttribute("span", "id", "username")
     };
     return new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
