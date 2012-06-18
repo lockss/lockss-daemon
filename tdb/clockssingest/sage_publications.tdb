@@ -14863,17 +14863,17 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
 
-        au < exists ; exists ; 1999-2000 ; Journal of Advanced Academics Volume 11 ; 11 ; >
-        au < exists ; exists ; 2000-2001 ; Journal of Advanced Academics Volume 12 ; 12 ; >
-        au < exists ; exists ; 2001-2002 ; Journal of Advanced Academics Volume 13 ; 13 ; >
-        au < exists ; exists ; 2002-2003 ; Journal of Advanced Academics Volume 14 ; 14 ; >
-        au < exists ; exists ; 2003-2004 ; Journal of Advanced Academics Volume 15 ; 15 ; >
-        au < exists ; exists ; 2004-2005 ; Journal of Advanced Academics Volume 16 ; 16 ; >
-        au < exists ; exists ; 2005-2006 ; Journal of Advanced Academics Volume 17 ; 17 ; >
-        au < exists ; exists ; 2006-2007 ; Journal of Advanced Academics Volume 18 ; 18 ; >
-        au < exists ; exists ; 2007-2008 ; Journal of Advanced Academics Volume 19 ; 19 ; >
-        au < exists ; exists ; 2008-2009 ; Journal of Advanced Academics Volume 20 ; 20 ; >
-        au < exists ; exists ; 2009-2010 ; Journal of Advanced Academics Volume 21 ; 21 ; >
+        au < manifest ; exists ; 1999-2000 ; Journal of Advanced Academics Volume 11 ; 11 ; >
+        au < manifest ; exists ; 2000-2001 ; Journal of Advanced Academics Volume 12 ; 12 ; >
+        au < manifest ; exists ; 2001-2002 ; Journal of Advanced Academics Volume 13 ; 13 ; >
+        au < manifest ; exists ; 2002-2003 ; Journal of Advanced Academics Volume 14 ; 14 ; >
+        au < manifest ; exists ; 2003-2004 ; Journal of Advanced Academics Volume 15 ; 15 ; >
+        au < manifest ; exists ; 2004-2005 ; Journal of Advanced Academics Volume 16 ; 16 ; >
+        au < manifest ; exists ; 2005-2006 ; Journal of Advanced Academics Volume 17 ; 17 ; >
+        au < manifest ; exists ; 2006-2007 ; Journal of Advanced Academics Volume 18 ; 18 ; >
+        au < manifest ; exists ; 2007-2008 ; Journal of Advanced Academics Volume 19 ; 19 ; >
+        au < manifest ; exists ; 2008-2009 ; Journal of Advanced Academics Volume 20 ; 20 ; >
+        au < testing ; exists ; 2009-2010 ; Journal of Advanced Academics Volume 21 ; 21 ; >
         au < released ; crawling ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 ; >
         au < released ; crawling ; 2011-2012 ; Journal of Advanced Academics Volume 23 ; 23 ; >
         au < expected ; exists ; 2012-2013 ; Journal of Advanced Academics Volume 24 ; 24 ; >
