@@ -4,7 +4,7 @@
     name = Libertas Academica
   >
 
-  plugin = org.lockss.plugin.libertasacademica.LibertasAcademicaPlugin
+  plugin = org.clockss.plugin.libertasacademica.LibertasAcademicaPlugin
   param[base_url] = http://www.la-press.com/
   implicit < status ; status2 ; year ; name ; param[year] >
 
@@ -16,7 +16,6 @@
       
     >
    
-
     param[journal_id] = 132
 
     au < manifest ; exists ; 2009 ; Advances in Tumor Virology Volume 1 ; 2009 >
@@ -52,8 +51,7 @@
 
     param[journal_id] = 1
 
-    au < manifest ; exists ; 2007 ; Analytical Chemistry Insights Volume 1 ; 2007 >
-    au < doesNotExist ; doesNotExist ; 0 ; Analytical Chemistry Insights Volume 2 ; 0 >
+    au < manifest ; exists ; 2007 ; Analytical Chemistry Insights Volume 1-2 ; 2007 >
     au < manifest ; exists ; 2008 ; Analytical Chemistry Insights Volume 3 ; 2008 >
     au < manifest ; exists ; 2009 ; Analytical Chemistry Insights Volume 4 ; 2009 >
     au < manifest ; exists ; 2010 ; Analytical Chemistry Insights Volume 5 ; 2010 >
@@ -120,19 +118,19 @@
 
     title <
       name = Biomarker Insights ;
-      issn = 1177-9322
+      issn = 1177-6264
       
     >
 
     param[journal_id] = 4
 
-    au < expected ; exists ; 2006 ; Biomarker Insights Volume 1 ; 2006 >
-    au < expected ; exists ; 2007 ; Biomarker Insights Volume 2 ; 2007 >
-    au < expected ; exists ; 2008 ; Biomarker Insights Volume 3 ; 2008 >
-    au < expected ; exists ; 2009 ; Biomarker Insights Volume 4 ; 2009 >
-    au < expected ; exists ; 2010 ; Biomarker Insights Volume 5 ; 2010 >
-    au < expected ; exists ; 2011 ; Biomarker Insights Volume 6 ; 2011 >
-    au < expected ; exists ; 2012 ; Biomarker Insights Volume 7 ; 2012 >
+    au < manifest ; exists ; 2006 ; Biomarker Insights Volume 1 ; 2006 >
+    au < manifest ; exists ; 2007 ; Biomarker Insights Volume 2 ; 2007 >
+    au < manifest ; exists ; 2008 ; Biomarker Insights Volume 3 ; 2008 >
+    au < manifest ; exists ; 2009 ; Biomarker Insights Volume 4 ; 2009 >
+    au < manifest ; exists ; 2010 ; Biomarker Insights Volume 5 ; 2010 >
+    au < manifest ; exists ; 2011 ; Biomarker Insights Volume 6 ; 2011 >
+    au < manifest ; exists ; 2012 ; Biomarker Insights Volume 7 ; 2012 >
 
   }
   
@@ -183,7 +181,7 @@
     au < manifest ; exists ; 2009 ; Biomedical Informatics Insights Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Biomedical Informatics Insights Volume 3 ; 2010 >
     au < manifest ; exists ; 2011 ; Biomedical Informatics Insights Volume 4 ; 2011 >
-    au < manifest ; exists ; 2012 ; Biomedical Informatics Insights Volume 5 ; 2012 >
+    au < manifest ; exists ; 2012 ; Biomedical Informatics Insights Volume 5 (Suppl. 1) ; 2012 >
 
   }
   
@@ -318,11 +316,11 @@
 
     param[journal_id] = 46
 
-    au < manifest ; exists ; 2008 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 1 ; 2008 >
-    au < manifest ; exists ; 2009 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 2 ; 2009 >
-    au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 3 ; 2010 >
-    au < manifest ; exists ; 2011 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 4 ; 2011 >
-    au < manifest ; exists ; 2012 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 5 ; 2012 >
+    au <manifest ; exists ; 2008 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 1 ; 2008 >
+    au <manifest ; exists ; 2009 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 2 ; 2009 >
+    au <manifest ; exists ; 2010 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 3 ; 2010 >
+    au <manifest ; exists ; 2011 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 4 ; 2011 >
+    au <manifest ; exists ; 2012 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 5 ; 2012 >
 
   }
   
@@ -482,7 +480,7 @@
     param[journal_id] = 73
 
     au < manifest ; exists ; 2008 ; Clinical Medicine Insights: Geriatrics Volume 1-2 ; 2008 >
-    au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Geriatrics Volume 3 ; 2009 >
+    au < manifest ; exists ; 2009 ; Clinical Medicine Insights: Geriatrics Volume 3 ; 2009 >
     au < manifest ; exists ; 2011 ; Clinical Medicine Insights: Geriatrics Volume 4 ; 2011 >
 
   }
@@ -653,10 +651,12 @@
       
     >
 
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
+    
     param[journal_id] = 164
 
-    au < exists ; exists ; 2009 ; Clinical Medicine Reviews in Cardiology Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2010 >
+    au < notReady ; exists ; 2009 ; Clinical Medicine Reviews in Cardiology Volume 1 ; 2009 >
+    au < notReady ; exists ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2010 >
 
   }
   
@@ -667,13 +667,15 @@
       issn = 1179-2531
       
     >
+    
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
 
     param[journal_id] = 163
 
-    au < exists ; exists ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 2012 >
+    au < notReady ; exists ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 2009 >
+    au < notReady ; exists ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2010 >
+    au < notReady ; exists ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 2011 >
+    au < notReady ; exists ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 2012 >
 
   }
   
@@ -685,10 +687,12 @@
       
     >
 
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
+
     param[journal_id] = 167
 
-    au < exists ; exists ; 2009 ; Clinical Medicine Reviews in Patient Care Volume 1 ; 2009 >
-    au < exists ; exists ; 2011 ; Clinical Medicine Reviews in Patient Care Volume 2 ; 2011 >
+    au < notReady ; exists ; 2009 ; Clinical Medicine Reviews in Patient Care Volume 1 ; 2009 >
+    au < notReady ; exists ; 2011 ; Clinical Medicine Reviews in Patient Care Volume 2 ; 2011 >
 
   }
   
@@ -699,13 +703,14 @@
       issn = 1179-2558
       
     >
-
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12    
+    
     param[journal_id] = 166
 
-    au < exists ; exists ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 2012 >
+    au < notReady ; exists ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 2009 >
+    au < notReady ; exists ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2010 >
+    au < notReady ; exists ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 2011 >
+    au < notReady ; exists ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 2012 >
 
   }
   
@@ -717,12 +722,14 @@
       
     >
 
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
+    
     param[journal_id] = 165
 
-    au < exists ; exists ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2010 >
-    au < exists ; exists ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 2011 >
-    au < exists ; exists ; 2012 ; Clinical Medicine Reviews in Vascular Health Volume 4 ; 2012 >
+    au < notReady ; exists ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 2009 >
+    au < notReady ; exists ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2010 >
+    au < notReady ; exists ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 2011 >
+    au < notReady ; exists ; 2012 ; Clinical Medicine Reviews in Vascular Health Volume 4 ; 2012 >
 
   }
   
@@ -736,10 +743,12 @@
 
     param[journal_id] = 162
 
-    au < manifest ; exists ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 2009 >
-    au < manifest ; exists ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2010 >
-    au < manifest ; exists ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 2011 >
-    au < manifest ; exists ; 2012 ; Clinical Medicine Reviews in Women's Health Volume 4 ; 2012 >
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
+    
+    au < notReady ; exists ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 2009 >
+    au < notReady ; exists ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2010 >
+    au < notReady ; exists ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 2011 >
+    au < notReady ; exists ; 2012 ; Clinical Medicine Reviews in Women's Health Volume 4 ; 2012 >
 
   }
   
@@ -814,8 +823,6 @@
     au < manifest ; exists ; 2008 ; Gene Expression to Genetical Genomics Volume 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Gene Expression to Genetical Genomics Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Gene Expression to Genetical Genomics Volume 3 ; 2010 >
-
-    
 
   }
   
@@ -915,7 +922,7 @@
 
     title <
       name = Healthy Aging & Clinical Care in the Elderly ;
-      issn = 1178-6329
+      issn = 1179-0601
       
     >
 
@@ -960,7 +967,6 @@
     au < manifest ; exists ; 2010 ; Immunology and Immunogenetics Insights Volume 2 ; 2010 >
     au < manifest ; exists ; 2011 ; Immunology and Immunogenetics Insights Volume 3 ; 2011 >
 
-
   }
   
   {
@@ -975,7 +981,6 @@
     
     au < manifest ; exists ; 2009 ; Immunotherapy Insights Volume 1 ; 2009 >
     au < manifest ; exists ; 2011 ; Immunotherapy Insights Volume 1 ; 2011 >
-
 
   }
   
@@ -1012,7 +1017,6 @@
     au < manifest ; exists ; 2011 ; Infectious Diseases: Research and Treatment Volume 4 ; 2011 >
     au < manifest ; exists ; 2012 ; Infectious Diseases: Research and Treatment Volume 5 ; 2012 >
 
-
   }
   
   {
@@ -1032,9 +1036,6 @@
     au < manifest ; exists ; 2010 ; Integrative Medicine Insights Volume 5 ; 2010 >
     au < manifest ; exists ; 2011 ; Integrative Medicine Insights Volume 6 ; 2011 >
     au < manifest ; exists ; 2012 ; Integrative Medicine Insights Volume 7 ; 2012 >
-    
-    
-
 
   }
   
@@ -1052,7 +1053,6 @@
     au < manifest ; exists ; 2010 ; International Journal of Insect Science Volume 2 ; 2010 >
     au < manifest ; exists ; 2011 ; International Journal of Insect Science Volume 3 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Insect Science Volume 4 ; 2012 >
-
 
   }
   
@@ -1072,7 +1072,6 @@
     au < manifest ; exists ; 2011 ; International Journal of Tryptophan Research Volume 4 ; 2011 >
     au < manifest ; exists ; 2012 ; International Journal of Tryptophan Research Volume 5 ; 2012 >
 
-
   }
   
   {
@@ -1088,7 +1087,6 @@
     au < manifest ; exists ; 2010 ; Japanese Clinical Medicine Volume 1 ; 2010 >
     au < manifest ; exists ; 2011 ; Japanese Clinical Medicine Volume 2 ; 2011 >
     au < manifest ; exists ; 2012 ; Japanese Clinical Medicine Volume 3 ; 2012 >
-
 
   }
   
@@ -1108,7 +1106,6 @@
     au < manifest ; exists ; 2011 ; Journal of Cell Death Volume 4 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Cell Death Volume 5 ; 2012 >
 
-
   }
   
   {
@@ -1125,7 +1122,6 @@
     au < manifest ; exists ; 2010 ; Journal of Central Nervous System Disease Volume 2 ; 2010 >
     au < manifest ; exists ; 2011 ; Journal of Central Nervous System Disease Volume 3 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Central Nervous System Disease Volume 4 ; 2012 >
-
 
   }
   
@@ -1145,7 +1141,6 @@
     au < manifest ; exists ; 2011 ; Journal of Experimental Neuroscience Volume 5 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Experimental Neuroscience Volume 6 ; 2012 >
 
-
   }
   
   {
@@ -1158,10 +1153,11 @@
 
     param[journal_id] = 173
     
-    au < manifest ; exists ; 2010 ; Journal of Genomics and Exomics Volume 1 ; 2010 >
-    au < manifest ; exists ; 2011 ; Journal of Genomics and Exomics Volume 2 ; 2011 >
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site -MD 06/18/12
+    
+    au < notReady ; exists ; 2010 ; Journal of Genomics and Exomics Volume 1 ; 2010 >
+    au < notReady ; exists ; 2011 ; Journal of Genomics and Exomics Volume 2 ; 2011 >
     au < manifest ; exists ; 2012 ; Journal of Genomics and Exomics Volume 3 ; 2012 >
-
 
   }
   
@@ -1175,11 +1171,10 @@
 
     param[journal_id] = 109
     
-    au < manifest ; exists ; 2008 ; Journal of Experimental Neuroscience Volume 1-2 ; 2008 >
-    au < manifest ; exists ; 2010 ; Journal of Experimental Neuroscience Volume 3 ; 2010 >
-    au < manifest ; exists ; 2011 ; Journal of Experimental Neuroscience Volume 4 ; 2011 >
-    au < manifest ; exists ; 2012 ; Journal of Experimental Neuroscience Volume 5 ; 2012 >
-
+    au < manifest ; exists ; 2008 ; Lipid Insights Volume 1-2 ; 2008 >
+    au < manifest ; exists ; 2010 ; Lipid Insights Volume 3 ; 2010 >
+    au < manifest ; exists ; 2011 ; Lipid Insights Volume 4 ; 2011 >
+    au < manifest ; exists ; 2012 ; Lipid Insights Volume 5 ; 2012 >
 
   }
   
@@ -1190,9 +1185,11 @@
       issn = 1179-2361
       
     >
-
+    
     param[journal_id] = 147
 
+    au < manifest ; exists ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 2009 >
+    au < manifest ; exists ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2010 >
 
   }
   
@@ -1206,8 +1203,11 @@
 
     param[journal_id] = 115
 
-
-
+    au < manifest ; exists ; 2008 ; Magnetic Resonance Insights Volume 1-2 ; 2008 >
+    au < manifest ; exists ; 2009 ; Magnetic Resonance Insights Volume 3 ; 2009 >
+    au < manifest ; exists ; 2010 ; Magnetic Resonance Insights Volume 4 ; 2010 >
+    au < manifest ; exists ; 2012 ; Magnetic Resonance Insights Volume 5 ; 2012 >
+    
   }
   
   {
@@ -1220,21 +1220,28 @@
 
     param[journal_id] = 98
 
-
+    au < manifest ; exists ; 2008 ; Medical Equipment Insights Volume 1 ; 2008 >
+    au < manifest ; exists ; 2009 ; Medical Equipment Insights Volume 2 ; 2009 >
+    au < manifest ; exists ; 2010 ; Medical Equipment Insights Volume 3 ; 2010 >
+    au < manifest ; exists ; 2012 ; Medical Equipment Insights Volume 4 ; 2012 >
+    
   }
   
   {
 
     title <
       name = Microbiology Insights ;
-      issn = 1178-637X
+      issn = 1178-6361
       
     >
 
     param[journal_id] = 108
 
-
-  }
+    au < manifest ; exists ; 2008 ; Microbiology Insights Volume 1 ; 2008 >
+    au < manifest ; exists ; 2009 ; Microbiology Insights Volume 2 ; 2009 >
+    au < manifest ; exists ; 2010 ; Microbiology Insights Volume 3 ; 2010 >
+    au < manifest ; exists ; 2012 ; Microbiology Insights Volume 4 ; 2012 >
+  }     
   
   {
 
@@ -1246,7 +1253,10 @@
 
     param[journal_id] = 101
 
-
+    au < manifest ; exists ; 2008 ; Nutrition and Metabolic Insights Volume 1 ; 2008 >
+    au < manifest ; exists ; 2009 ; Nutrition and Metabolic Insights Volume 2 ; 2009 >
+    au < manifest ; exists ; 2010 ; Nutrition and Metabolic Insights Volume 3 ; 2010 >
+    au < manifest ; exists ; 2012 ; Nutrition and Metabolic Insights Volume 4 ; 2012 >
   }
   
   {
@@ -1259,7 +1269,11 @@
 
     param[journal_id] = 123
 
-
+    au < manifest ; exists ; 2008 ; Open Journal of Cardiovascular Surgery Volume 1 ; 2008 >
+    au < manifest ; exists ; 2009 ; Open Journal of Cardiovascular Surgery Volume 2 ; 2009 >
+    au < manifest ; exists ; 2010 ; Open Journal of Cardiovascular Surgery Volume 3 ; 2010 >
+    au < manifest ; exists ; 2011 ; Open Journal of Cardiovascular Surgery Volume 4 ; 2011 >
+    au < manifest ; exists ; 2012 ; Open Journal of Cardiovascular Surgery Volume 5 ; 2012 >
 
   }
   
@@ -1273,7 +1287,10 @@
 
     param[journal_id] = 146
 
-
+    au < manifest ; exists ; 2009 ; Ophthalmology and Eye Diseases Volume 1 ; 2009 >
+    au < manifest ; exists ; 2010 ; Ophthalmology and Eye Diseases Volume 2 ; 2010 >
+    au < manifest ; exists ; 2011 ; Ophthalmology and Eye Diseases Volume 3 ; 2011 >
+    au < manifest ; exists ; 2012 ; Ophthalmology and Eye Diseases Volume 4 ; 2012 >
   }
   
   {
@@ -1286,8 +1303,10 @@
 
     param[journal_id] = 104
 
-
-
+    au < manifest ; exists ; 2008 ; Organic Chemistry Insights Volume 1 ; 2008 >
+    au < manifest ; exists ; 2009 ; Organic Chemistry Insights Volume 2 ; 2009 >
+    au < manifest ; exists ; 2010 ; Organic Chemistry Insights Volume 3 ; 2010 >
+    au < manifest ; exists ; 2012 ; Organic Chemistry Insights Volume 4 ; 2012 >
   }
   
   {
@@ -1300,7 +1319,11 @@
 
     param[journal_id] = 86
 
-
+    au < manifest ; exists ; 2008 ; Palliative Care: Research and Treatment Volume 1-2 ; 2008 >
+    au < manifest ; exists ; 2009 ; Palliative Care: Research and Treatment Volume 3 ; 2009 >
+    au < manifest ; exists ; 2010 ; Palliative Care: Research and Treatment Volume 4 ; 2010 >
+    au < manifest ; exists ; 2011 ; Palliative Care: Research and Treatment Volume 5 ; 2011 >
+    au < manifest ; exists ; 2012 ; Palliative Care: Research and Treatment Volume 6 ; 2012 >
 
   }
   
@@ -1314,7 +1337,10 @@
 
     param[journal_id] = 105
 
-
+    au < manifest ; exists ; 2008 ; Particle Physics Insights Volume 1 ; 2008 >
+    au < manifest ; exists ; 2009 ; Particle Physics Insights Volume 2 ; 2009 >
+    au < manifest ; exists ; 2010 ; Particle Physics Insights Volume 3 ; 2010 >
+    au < manifest ; exists ; 2011 ; Particle Physics Insights Volume 4 ; 2011 >
 
   }
   
@@ -1327,8 +1353,13 @@
     >
 
     param[journal_id] = 25
-
-
+    
+    au < manifest ; exists ; 2007 ; Perspectives in Medicinal Chemistry Volume 1 ; 2007 >
+    au < manifest ; exists ; 2008 ; Perspectives in Medicinal Chemistry Volume 2 ; 2008 >
+    au < manifest ; exists ; 2009 ; Perspectives in Medicinal Chemistry Volume 3 ; 2009 >
+    au < manifest ; exists ; 2010 ; Perspectives in Medicinal Chemistry Volume 4 ; 2010 >
+    au < manifest ; exists ; 2011 ; Perspectives in Medicinal Chemistry Volume 5 ; 2011 >
+    
   }
   
   {
@@ -1341,7 +1372,9 @@
 
     param[journal_id] = 135
 
-
+    au < manifest ; exists ; 2009 ; Primary Prevention Insights Volume 1 ; 2009 >
+    au < manifest ; exists ; 2010 ; Primary Prevention Insights Volume 2 ; 2010 >
+    
   }
   
   {
@@ -1354,7 +1387,12 @@
 
     param[journal_id] = 106
 
-
+    au < manifest ; exists ; 2008 ; Proteomics Insights Volume 1 ; 2008 >
+    au < manifest ; exists ; 2009 ; Proteomics Insights Volume 2 ; 2009 >
+    au < manifest ; exists ; 2010 ; Proteomics Insights Volume 3 ; 2010 >
+    au < manifest ; exists ; 2011 ; Proteomics Insights Volume 4 ; 2011 >
+    au < manifest ; exists ; 2012 ; Proteomics Insights Volume 5 ; 2012 >
+    
   }
   
   {
@@ -1367,7 +1405,9 @@
 
     param[journal_id] = 134
 
-
+    au < manifest ; exists ; 2008 ; Rehabilitation Process and Outcome Volume 1 ; 2008 >
+    au < manifest ; exists ; 2010 ; Rehabilitation Process and Outcome Volume 3 ; 2010 >
+    
   }
   
   {
@@ -1380,7 +1420,11 @@
 
     param[journal_id] = 111
 
-
+    au < manifest ; exists ; 2008 ; Reproductive Biology Insights Volume 1 ; 2008 >
+    au < manifest ; exists ; 2009 ; Reproductive Biology Insights Volume 2 ; 2009 >
+    au < manifest ; exists ; 2010 ; Reproductive Biology Insights Volume 3 ; 2010 >
+    au < manifest ; exists ; 2011 ; Reproductive Biology Insights Volume 4 ; 2011 >
+    
   }
   
   {
@@ -1393,7 +1437,9 @@
 
     param[journal_id] = 52
 
-
+    au < manifest ; exists ; 2008 ; Retrovirology: Research and Treatment Volume 1-2 ; 2008 >
+    au < manifest ; exists ; 2010 ; Retrovirology: Research and Treatment Volume 3 ; 2010 >
+    
   }
   
   {
@@ -1406,19 +1452,27 @@
 
     param[journal_id] = 102
 
-
+    au < manifest ; exists ; 2008 ; Signal Transduction Insights Volume 1 ; 2008 >
+    au < manifest ; exists ; 2010 ; Signal Transduction Insights Volume 2 ; 2010 >
+    
   }
   
   {
 
     title <
-      name = Substance Abuse: Research and Treatment  ;
+      name = Substance Abuse: Research and Treatment ;
       issn = 1178-2218
       
     >
 
     param[journal_id] = 80
 
+    au < manifest ; exists ; 2008 ; Substance Abuse: Research and Treatment Volume 1-2 ; 2008 >
+    au < manifest ; exists ; 2009 ; Substance Abuse: Research and Treatment Volume 3 ; 2009 >
+    au < manifest ; exists ; 2010 ; Substance Abuse: Research and Treatment Volume 4 ; 2010 >
+    au < manifest ; exists ; 2011 ; Substance Abuse: Research and Treatment Volume 5 ; 2011 >
+    au < manifest ; exists ; 2012 ; Substance Abuse: Research and Treatment Volume 5 ; 2012 >
+    
   }
   
   {
@@ -1431,7 +1485,12 @@
 
     param[journal_id] = 139
 
-
+    au < manifest ; exists ; 2008 ; Tobacco Use Insights Volume 1 ; 2008 >
+    au < manifest ; exists ; 2009 ; Tobacco Use Insights Volume 2 ; 2009 >
+    au < manifest ; exists ; 2010 ; Tobacco Use Insights Volume 3 ; 2010 >
+    au < manifest ; exists ; 2011 ; Tobacco Use Insights Volume 4 ; 2011 >
+    au < manifest ; exists ; 2012 ; Tobacco Use Insights Volume 5 ; 2012 >
+    
   }
   
   {
@@ -1444,6 +1503,12 @@
 
     param[journal_id] = 19
 
+    au < manifest ; exists ; 2006 ; Translational Oncogenomics Volume 1 ; 2006 >
+    au < manifest ; exists ; 2007 ; Translational Oncogenomics Volume 2 ; 2007 >
+    au < manifest ; exists ; 2008 ; Translational Oncogenomics Volume 3 ; 2008 >
+    au < manifest ; exists ; 2010 ; Translational Oncogenomics Volume 4 ; 2010 >
+    au < manifest ; exists ; 2012 ; Translational Oncogenomics Volume 5 ; 2012 >
+    
   }
   
   {
@@ -1456,7 +1521,9 @@
 
     param[journal_id] = 50
 
-
+    au < manifest ; exists ; 2008 ; Virology: Research and Treatment Volume 1 ; 2008 >
+    au < manifest ; exists ; 2010 ; Virology: Research and Treatment Volume 2 ; 2010 >
+    
   }
 
 }
