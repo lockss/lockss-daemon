@@ -119,7 +119,7 @@
 
     title <
       name = Biomarker Insights ;
-      issn = 1177-9322
+      issn = 1177-6264
       
     >
 
@@ -925,7 +925,7 @@
 
     title <
       name = Healthy Aging & Clinical Care in the Elderly ;
-      issn = 1178-6329
+      issn = 1179-0601
       
     >
 
@@ -1189,8 +1189,6 @@
     
     au < manifest ; 2008 ; Lipid Insights Volume 1-2 ; 2008 >
     au < manifest ; 2010 ; Lipid Insights Volume 3 ; 2010 >
-    au < manifest ; 2008 ; Lipid Insights Volume 1-2 ; 2008 >
-    au < manifest ; 2010 ; Lipid Insights Volume 3 ; 2010 >
     au < manifest ; 2011 ; Lipid Insights Volume 4 ; 2011 >
     au < manifest ; 2012 ; Lipid Insights Volume 5 ; 2012 >
 
@@ -1251,7 +1249,7 @@
 
     title <
       name = Microbiology Insights ;
-      issn = 1178-637X
+      issn = 1178-6361
       
     >
 
@@ -1339,7 +1337,11 @@
 
     param[journal_id] = 86
 
-
+    au < manifest ; 2008 ; Palliative Care: Research and Treatment Volume 1-2 ; 2008 >
+    au < manifest ; 2009 ; Palliative Care: Research and Treatment Volume 3 ; 2009 >
+    au < manifest ; 2010 ; Palliative Care: Research and Treatment Volume 4 ; 2010 >
+    au < manifest ; 2011 ; Palliative Care: Research and Treatment Volume 5 ; 2011 >
+    au < manifest ; 2012 ; Palliative Care: Research and Treatment Volume 6 ; 2012 >
 
   }
   
@@ -1353,7 +1355,10 @@
 
     param[journal_id] = 105
 
-
+    au < manifest ; 2008 ; Particle Physics Insights Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Particle Physics Insights Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Particle Physics Insights Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Particle Physics Insights Volume 4 ; 2011 >
 
   }
   
@@ -1366,8 +1371,13 @@
     >
 
     param[journal_id] = 25
-
-
+    
+    au < manifest ; 2007 ; Perspectives in Medicinal Chemistry Volume 1 ; 2007 >
+    au < manifest ; 2008 ; Perspectives in Medicinal Chemistry Volume 2 ; 2008 >
+    au < manifest ; 2009 ; Perspectives in Medicinal Chemistry Volume 3 ; 2009 >
+    au < manifest ; 2010 ; Perspectives in Medicinal Chemistry Volume 4 ; 2010 >
+    au < manifest ; 2011 ; Perspectives in Medicinal Chemistry Volume 5 ; 2011 >
+    
   }
   
   {
@@ -1380,7 +1390,9 @@
 
     param[journal_id] = 135
 
-
+    au < manifest ; 2009 ; Primary Prevention Insights Volume 1 ; 2009 >
+    au < manifest ; 2010 ; Primary Prevention Insights Volume 2 ; 2010 >
+    
   }
   
   {
@@ -1393,7 +1405,13 @@
 
     param[journal_id] = 106
 
-
+    au < manifest ; 2008 ; Proteomics Insights Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Proteomics Insights Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Proteomics Insights Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Proteomics Insights Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Proteomics Insights Volume 5 ; 2012 >
+    
+    
   }
   
   {
@@ -1406,7 +1424,9 @@
 
     param[journal_id] = 134
 
-
+    au < manifest ; 2008 ; Rehabilitation Process and Outcome Volume 1 ; 2008 >
+    au < manifest ; 2010 ; Rehabilitation Process and Outcome Volume 3 ; 2010 >
+    
   }
   
   {
@@ -1419,7 +1439,11 @@
 
     param[journal_id] = 111
 
-
+    au < manifest ; 2008 ; Reproductive Biology Insights Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Reproductive Biology Insights Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Reproductive Biology Insights Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Reproductive Biology Insights Volume 4 ; 2011 >
+    
   }
   
   {
@@ -1432,7 +1456,10 @@
 
     param[journal_id] = 52
 
+    au < manifest ; 2008 ; Retrovirology: Research and Treatment Volume 1-2 ; 2008 >
+    au < manifest ; 2010 ; Retrovirology: Research and Treatment Volume 3 ; 2010 >
 
+    
   }
   
   {
@@ -1445,19 +1472,29 @@
 
     param[journal_id] = 102
 
+    au < manifest ; 2008 ; Signal Transduction Insights Volume 1 ; 2008 >
+    au < manifest ; 2010 ; Signal Transduction Insights Volume 2 ; 2010 >
 
+    
   }
   
   {
 
     title <
-      name = Substance Abuse: Research and Treatment  ;
+      name = Substance Abuse: Research and Treatment ;
       issn = 1178-2218
       
     >
 
     param[journal_id] = 80
 
+    au < manifest ; 2008 ; Substance Abuse: Research and Treatment Volume 1-2 ; 2008 >
+    au < manifest ; 2009 ; Substance Abuse: Research and Treatment Volume 3 ; 2009 >
+    au < manifest ; 2010 ; Substance Abuse: Research and Treatment Volume 4 ; 2010 >
+    au < manifest ; 2011 ; Substance Abuse: Research and Treatment Volume 5 ; 2011 >
+    au < manifest ; 2012 ; Substance Abuse: Research and Treatment Volume 5 ; 2012 >
+    
+    
   }
   
   {
@@ -1470,7 +1507,12 @@
 
     param[journal_id] = 139
 
-
+    au < manifest ; 2008 ; Tobacco Use Insights Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Tobacco Use Insights Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Tobacco Use Insights Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Tobacco Use Insights Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Tobacco Use Insights Volume 5 ; 2012 >
+    
   }
   
   {
@@ -1483,6 +1525,13 @@
 
     param[journal_id] = 19
 
+    au < manifest ; 2006 ; Translational Oncogenomics Volume 1 ; 2006 >
+    au < manifest ; 2007 ; Translational Oncogenomics Volume 2 ; 2007 >
+    au < manifest ; 2008 ; Translational Oncogenomics Volume 3 ; 2008 >
+    au < manifest ; 2010 ; Translational Oncogenomics Volume 4 ; 2010 >
+    au < manifest ; 2012 ; Translational Oncogenomics Volume 5 ; 2012 >
+    
+    
   }
   
   {
@@ -1495,7 +1544,10 @@
 
     param[journal_id] = 50
 
+    au < manifest ; 2008 ; Virology: Research and Treatment Volume 1 ; 2008 >
+    au < manifest ; 2010 ; Virology: Research and Treatment Volume 2 ; 2010 >
 
+    
   }
 
 }
