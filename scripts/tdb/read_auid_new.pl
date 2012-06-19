@@ -26,7 +26,8 @@ $ua->no_proxy('localhost', '127.0.0.1');
 while (my $line = <>) {
   chomp $line;
   my @input_rec = split(/\|/, $line);
-  my $auid = $input_rec[4];
+  my $num_elements = int(@input_rec);
+  my $auid = $input_rec[$num_elements-1];
   my @auid_rec = split(/\&/, $auid);
   my $plugin = shift(@auid_rec);
   my %param = ();
@@ -580,7 +581,7 @@ while (my $line = <>) {
       $result = "--REQ_FAIL--"
     }
     sleep(5);
-        
+                
   } 
   if ($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN* %s, %s, %s, %s\n",$result,$vol_title,$auid,$man_url);
