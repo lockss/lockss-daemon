@@ -61,7 +61,7 @@
     implicit < status ; year ; name ; volume ; param[year] >
     comment[notReady] = RU3806, RU4149 for vol2010-2011
     
-    au < testing ; 1996 ; First Monday Volume 1 ; 1 ; 1996 >
+    au < ready ; 1996 ; First Monday Volume 1 ; 1 ; 1996 >
     au < testing ; 1997 ; First Monday Volume 2 ; 2 ; 1997 >
     au < testing ; 1998 ; First Monday Volume 3 ; 3 ; 1998 >
     au < testing ; 1999 ; First Monday Volume 4 ; 4 ; 1999 >
@@ -73,10 +73,10 @@
     au < testing ; 2005 ; First Monday Volume 10 ; 10 ; 2005 >
     au < testing ; 2006 ; First Monday Volume 11 ; 11 ; 2006 >
     au < testing ; 2007 ; First Monday Volume 12 ; 12 ; 2007 >
-    au < testing ; 2008 ; First Monday Volume 13 ; 13 ; 2008 >
-    au < testing ; 2009 ; First Monday Volume 14 ; 14 ; 2009 >
+    au < ready ; 2008 ; First Monday Volume 13 ; 13 ; 2008 >
+    au < ready ; 2009 ; First Monday Volume 14 ; 14 ; 2009 >
     au < testing ; 2010 ; First Monday Volume 15 ; 15 ; 2010 >
-    au < testing ; 2011 ; First Monday Volume 16 ; 16 ; 2011 >
+    au < ready ; 2011 ; First Monday Volume 16 ; 16 ; 2011 >
     au < ready ; 2012 ; First Monday Volume 17 ; 17 ; 2012 >
 
   }
