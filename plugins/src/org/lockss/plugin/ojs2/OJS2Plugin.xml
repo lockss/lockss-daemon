@@ -1,4 +1,8 @@
 <map>
+  <!-- NOTE: if you update this plugin, you must also update 
+       the parent plugin version in any other plugin for which 
+       this is a parent, and re-relase that plugin as well.
+  -->  
   <entry>
     <string>plugin_status</string>
     <string>testing</string>
