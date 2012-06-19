@@ -45,6 +45,8 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://symposium.cshlp.org/
       implicit < status ; year ; name ; param[volume_name] >
+      
+      comment[publishing_date] = This journal is published in June of the following year.
 
       au < manifest ; 1933 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 1 ; 1 >
       au < manifest ; 1934 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 2 ; 2 >
@@ -121,6 +123,8 @@
       au < manifest ; 2008 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 73 ; 73 >
       au < manifest ; 2009 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 74 ; 74 >
       au < manifest ; 2010 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 75 ; 75 >
+      au < manifest ; 2011 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 76 ; 76 >
+      au < expected ; 2012 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 77 ; 77 >
 
     }
 
