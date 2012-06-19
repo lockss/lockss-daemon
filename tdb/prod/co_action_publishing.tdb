@@ -377,15 +377,15 @@
     param[base_url] = http://www.microbecolhealthdis.net/
     param[journal_id] = mehd
 
-    au < exists ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; 1988 >
-    au < exists ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; 1989 >
-    au < exists ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 ; 1990 >
-    au < exists ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 ; 1991 >
-    au < exists ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 ; 1992 >
-    au < exists ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; 1993 >
-    au < exists ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 ; 1994 >
-    au < exists ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 ; 1995 >
-    au < exists ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 ; 1996 >
+    au < testing ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; 1988 >
+    au < testing ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; 1989 >
+    au < testing ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 ; 1990 >
+    au < testing ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 ; 1991 >
+    au < testing ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 ; 1992 >
+    au < testing ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; 1993 >
+    au < testing ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 ; 1994 >
+    au < testing ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 ; 1995 >
+    au < testing ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 ; 1996 >
     au < released ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 ; 1998 >
     au < released ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; 1999 >
     au < released ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
@@ -449,24 +449,24 @@
     param[base_url] = http://www.polarresearch.net/
     param[journal_id] = polar
 
-    au < manifest ; 1982 ; Polar Research Volume 1982 ; 1982 ; 1982 >
-    au < manifest ; 1983 ; Polar Research Volume 1 ; 1 ; 1983 >
-    au < manifest ; 1984 ; Polar Research Volume 2 ; 2 ; 1984 >
-    au < manifest ; 1985 ; Polar Research Volume 3 ; 3 ; 1985 >
-    au < manifest ; 1986 ; Polar Research Volume 4 ; 4 ; 1986 >
-    au < manifest ; 1987 ; Polar Research Volume 5 ; 5 ; 1987 >
-    au < manifest ; 1988 ; Polar Research Volume 6 ; 6 ; 1988 >
-    au < manifest ; 1989 ; Polar Research Volume 7 ; 7 ; 1989 >
-    au < manifest ; 1990 ; Polar Research Volume 8 ; 8 ; 1990 >
-    au < manifest ; 1991 ; Polar Research Volumes 9-10 ; 9-10 ; 1991 >
-    au < manifest ; 1992 ; Polar Research Volume 11 ; 11 ; 1992 >
-    au < manifest ; 1993 ; Polar Research Volume 12 ; 12 ; 1993 >
-    au < manifest ; 1994 ; Polar Research Volume 13 ; 13 ; 1994 >
-    au < manifest ; 1995 ; Polar Research Volume 14 ; 14 ; 1995 >
-    au < manifest ; 1996 ; Polar Research Volume 15 ; 15 ; 1996 >
-    au < manifest ; 1997 ; Polar Research Volume 16 ; 16 ; 1997 >
-    au < manifest ; 1998 ; Polar Research Volume 17 ; 17 ; 1998 >
-    au < manifest ; 1999 ; Polar Research Volume 18 ; 18 ; 1999 >
+    au < testing ; 1982 ; Polar Research Volume 1982 ; 1982 ; 1982 >
+    au < testing ; 1983 ; Polar Research Volume 1 ; 1 ; 1983 >
+    au < testing ; 1984 ; Polar Research Volume 2 ; 2 ; 1984 >
+    au < testing ; 1985 ; Polar Research Volume 3 ; 3 ; 1985 >
+    au < testing ; 1986 ; Polar Research Volume 4 ; 4 ; 1986 >
+    au < testing ; 1987 ; Polar Research Volume 5 ; 5 ; 1987 >
+    au < testing ; 1988 ; Polar Research Volume 6 ; 6 ; 1988 >
+    au < testing ; 1989 ; Polar Research Volume 7 ; 7 ; 1989 >
+    au < testing ; 1990 ; Polar Research Volume 8 ; 8 ; 1990 >
+    au < testing ; 1991 ; Polar Research Volumes 9-10 ; 9-10 ; 1991 >
+    au < testing ; 1992 ; Polar Research Volume 11 ; 11 ; 1992 >
+    au < testing ; 1993 ; Polar Research Volume 12 ; 12 ; 1993 >
+    au < testing ; 1994 ; Polar Research Volume 13 ; 13 ; 1994 >
+    au < testing ; 1995 ; Polar Research Volume 14 ; 14 ; 1995 >
+    au < testing ; 1996 ; Polar Research Volume 15 ; 15 ; 1996 >
+    au < testing ; 1997 ; Polar Research Volume 16 ; 16 ; 1997 >
+    au < testing ; 1998 ; Polar Research Volume 17 ; 17 ; 1998 >
+    au < testing ; 1999 ; Polar Research Volume 18 ; 18 ; 1999 >
     au < released ; 2000 ; Polar Research Volume 19 ; 19 ; 2000 >
     au < released ; 2001 ; Polar Research Volume 20 ; 20 ; 2001 >
     au < released ; 2002 ; Polar Research Volume 21 ; 21 ; 2002 >
@@ -495,13 +495,13 @@
     param[base_url] = http://www.researchinlearningtechnology.net/
     param[journal_id] = rlt
 
-    au < manifest ; 1993 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 1 ; 1 ; 1993 >
-    au < manifest ; 1994 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 2 ; 2 ; 1994 >
-    au < manifest ; 1995 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 3 ; 3 ; 1995 >
-    au < manifest ; 1996 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 4 ; 4 ; 1996 >
-    au < manifest ; 1997 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 5 ; 5 ; 1997 >
-    au < manifest ; 1998 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 6 ; 6 ; 1998 >
-    au < manifest ; 1999 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 7 ; 7 ; 1999 >
+    au < testing ; 1993 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 1 ; 1 ; 1993 >
+    au < testing ; 1994 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 2 ; 2 ; 1994 >
+    au < testing ; 1995 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 3 ; 3 ; 1995 >
+    au < testing ; 1996 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 4 ; 4 ; 1996 >
+    au < testing ; 1997 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 5 ; 5 ; 1997 >
+    au < testing ; 1998 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 6 ; 6 ; 1998 >
+    au < testing ; 1999 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 7 ; 7 ; 1999 >
     au < testing ; 2000 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 8 ; 8 ; 2000 >
     au < testing ; 2001 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 9 ; 9 ; 2001 >
     au < testing ; 2002 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 10 ; 10 ; 2002 >
@@ -550,12 +550,12 @@
     param[base_url] = http://www.foodandnutritionresearch.net/
     param[journal_id] = fnr
     
-    au < manifest ; 1996 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 40 ; 40 ; 1996 >
-    au < manifest ; 1997 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 41 ; 41 ; 1997 >
-    au < manifest ; 1998 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 42 ; 42 ; 1998 >
-    au < manifest ; 1999 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 43 ; 43 ; 1999 >
-    au < manifest ; 2000 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 44 ; 44 ; 2000 >
-    au < manifest ; 2001 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 45 ; 45 ; 2001 >    
+    au < testing ; 1996 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 40 ; 40 ; 1996 >
+    au < testing ; 1997 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 41 ; 41 ; 1997 >
+    au < testing ; 1998 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 42 ; 42 ; 1998 >
+    au < testing ; 1999 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 43 ; 43 ; 1999 >
+    au < testing ; 2000 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 44 ; 44 ; 2000 >
+    au < testing ; 2001 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 45 ; 45 ; 2001 >    
     au < released ; 2002 ; Scandinavian Journal of Nutrition Volume 46 ; 46 ; 2002 >
     au < released ; 2003 ; Scandinavian Journal of Nutrition Volume 47 ; 47 ; 2003 >
     au < released ; 2004 ; Scandinavian Journal of Nutrition Volume 48 ; 48 ; 2004 >
