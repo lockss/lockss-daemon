@@ -1,5 +1,5 @@
 /*
- * $Id: TestMultipleAUs.java,v 1.1.2.2 2012-02-15 17:51:34 nchondros Exp $
+ * $Id: TestMultipleAUs.java,v 1.1.2.3 2012-06-19 22:17:52 tlipkis Exp $
  */
 
 /*
@@ -33,19 +33,17 @@
 package org.lockss.plugin.catalog;
 
 import java.util.*;
-import java.io.File;
-import java.io.OutputStreamWriter;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.security.*;
 
 import org.lockss.app.LockssDaemon;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
+import org.lockss.plugin.simulated.*;
 import org.lockss.protocol.MockIdentityManager;
-import org.lockss.repository.LockssRepository;
-import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.repository.RepositoryManager;
-import org.lockss.repository.WritableLockssRepositoryImpl;
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.lockss.test.*;
 
 public class TestMultipleAUs extends LockssTestCase {
@@ -53,9 +51,9 @@ public class TestMultipleAUs extends LockssTestCase {
 
   static String mockPlugKey = PluginManager.pluginKeyFromName(MockPlugin.class.getName());
   private MockLockssDaemon theDaemon;
-  private ArchivalUnit testau[], catalogAU;
+  private SimulatedArchivalUnit testau[];
+  private MockArchivalUnit catalogAU;
   private MessageDigest checksumProducer = null;
-  private WritableLockssRepositoryImpl repo;
   private String tempDirPath;
   Properties props;
   private MockIdentityManager idmgr;
@@ -63,18 +61,12 @@ public class TestMultipleAUs extends LockssTestCase {
   private static final String[] BASE_URL = { "http://www.test0.org/",
       "http://www.test1.org/", "http://www.test2.org/" };
 
-  // BASE_URL
-  private static String[] urls = { "lockssau:", "%s", "%sindex.html",
-      "%sfile1.html", "%sfile2.html", "%sbranch1/", "%sbranch1/index.html",
-      "%sbranch1/file1.html", "%sbranch1/file2.html", "%sbranch2/",
-      "%sbranch2/index.html", "%sbranch2/file1.html", "%sbranch2/file2.html", };
-
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props.put("org.lockss.platform.diskSpacePaths", tempDirPath);
+    props.put(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM, "SHA-1");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     checksumProducer = MessageDigest.getInstance(checksumAlgorithm);
@@ -87,17 +79,36 @@ public class TestMultipleAUs extends LockssTestCase {
     theDaemon.setDaemonInited(true);
 
     TimeBase.setSimulated();
-    testau = new ArchivalUnit[BASE_URL.length];
+    
+    testau = new SimulatedArchivalUnit[BASE_URL.length];
+
     for (int i = 0; i < BASE_URL.length; i++) {
-      testau[i] = setupAu(String.format("mock%d", i),
-          String.format("MockAU%d", i), BASE_URL[i]);
-      setupRepo(testau[i], i, BASE_URL[i]);
+      testau[i] = PluginTestUtil.createAndStartSimAu(simAuConfig(BASE_URL[i]));
+      PluginTestUtil.crawlSimAu(testau[i]);
     }
-    catalogAU = setupAu(RootPageProducer.CATALOG_AU_ID, "Catalog", "");
-    setupRepo(catalogAU, BASE_URL.length, "");
+
+    catalogAU = setupCatalogAu(RootPageProducer.CATALOG_AU_ID, "Catalog", "");
   }
 
-  private MockArchivalUnit setupAu(String id, String name, String base_url) {
+  public void tearDown() throws Exception {
+    theDaemon.stopDaemon();
+    super.tearDown();
+  }
+
+  Configuration simAuConfig(String base) throws IOException {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", getTempDir("simau").toString());
+    conf.put("base_url", base);
+    conf.put("depth", "1");
+    conf.put("branch", "2");
+    conf.put("numFiles", "3");
+    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_HTML +
+				SimulatedContentGenerator.FILE_TYPE_XML));
+    return conf;
+  }
+
+  private MockArchivalUnit setupCatalogAu(String id, String name,
+					  String base_url) {
     MockArchivalUnit mau = new MockArchivalUnit();
     mau.setAuId(id);
     mau.setName(name);
@@ -105,51 +116,11 @@ public class TestMultipleAUs extends LockssTestCase {
 
     MockCachedUrlSet cus = (MockCachedUrlSet) mau.getAuCachedUrlSet();
     cus.setEstimatedHashDuration(1000);
-    List<CachedUrl> files = new ArrayList<CachedUrl>();
-    if (!base_url.isEmpty()) {
-      for (int ix = 0; ix < urls.length; ix++) {
-        String url = String.format(urls[ix], base_url);
-        MockCachedUrl cu = (MockCachedUrl) mau.addUrl(url,
-            "This is content for CUS file " + url);
-        cu.getProperties().put(CachedUrl.PROPERTY_CHECKSUM, checksum(url));
-        files.add(cu);
-      }
-    }
-    cus.setHashItSource(files);
     return mau;
   }
 
-  private void setupRepo(ArchivalUnit au, int i, String base_url)
-      throws Exception {
-    WritableLockssRepositoryImpl repo = (WritableLockssRepositoryImpl) WritableLockssRepositoryImpl.createNewLockssRepository(
-        String.format("%sfoo/%d", tempDirPath, i), au);
-    if (!base_url.isEmpty()) {
-      for (int ix = 0; ix < urls.length; ix++) {
-        String url = String.format(urls[ix], base_url);
-        repo.createNewNode(url);
-      }
-    }
-    ((MockLockssDaemon) theDaemon).setLockssRepository(repo, au);
-    repo.initService(theDaemon);
-    repo.startService();
-  }
-
-  public void tearDown() throws Exception {
-    for (ArchivalUnit au : testau)
-      theDaemon.getLockssRepository(au).stopService();
-    TimeBase.setReal();
-    super.tearDown();
-  }
-
   public void testProducer() throws Exception {
-    RootPageProducer.produce(theDaemon, catalogAU, null);
-    Runtime runtime = Runtime.getRuntime();
-    // capture on disk contents in a tar file
-    Process pr = runtime.exec(String.format(
-        "tar -C /tmp -cf /tmp/locksstestlatest.tar %s",
-        (tempDirPath.startsWith("/tmp/") ? tempDirPath.substring(5)
-            : tempDirPath)));
-    int exitVal = pr.waitFor();
+    RootPageProducer.produce(catalogAU);
   }
 
   public void xtestDumpAll() throws Exception {
