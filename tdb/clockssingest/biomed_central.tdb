@@ -2363,7 +2363,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.fluidsbarrierscns.com/
       param[journal_issn] = 2045-8118
 
-      au < manifest ; exists ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
+      au < crawling ; exists ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
 
     }
@@ -2860,7 +2860,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Irish Veterinary Journal Volume 61 ; 61 >
       au < manifest ; exists ; 2009 ; Irish Veterinary Journal Volume 62 ; 62 >
       au < manifest ; exists ; 2010 ; Irish Veterinary Journal Volume 63 ; 63 >
-      au < manifest ; exists ; 2011 ; Irish Veterinary Journal Volume 64 ; 64 >
+      au < crawling ; exists ; 2011 ; Irish Veterinary Journal Volume 64 ; 64 >
       au < crawling ; exists ; 2012 ; Irish Veterinary Journal Volume 65 ; 65 >
 
     }
@@ -4143,7 +4143,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.veterinaryresearch.org/
       param[journal_issn] = 1297-9716
 
-      au < manifest ; exists ; 2011 ; Veterinary Research Volume 42 ; 42 >
+      au < crawling ; exists ; 2011 ; Veterinary Research Volume 42 ; 42 >
       au < crawling ; exists ; 2012 ; Veterinary Research Volume 43 ; 43 >
 
     }
