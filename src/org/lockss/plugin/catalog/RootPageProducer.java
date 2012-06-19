@@ -31,10 +31,8 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 
 import org.lockss.app.LockssDaemon;
-import org.lockss.daemon.LockssWatchdog;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.Plugin;
 import org.lockss.repository.LockssRepository;
 import org.lockss.repository.RepositoryNode;
 import org.lockss.util.CIProperties;
@@ -64,12 +62,15 @@ public class RootPageProducer {
    * root page of the CatalogAU while also updating its contents with URLs
    * pointing to each cataloged AU
    */
-  public static void produce(LockssDaemon daemon, ArchivalUnit catalogAU,
-      LockssWatchdog wdog) throws Exception {
+  public static void produce(ArchivalUnit catalogAU) throws Exception {
     // begin generating the root page, complete it on the fly as we enumerate
     // AUs
+    LockssDaemon daemon = LockssDaemon.getLockssDaemon();
+    if (daemon == null) {
+      throw new IllegalStateException("no LOCKSS daemon");
+    }
 
-    Plugin plugin = catalogAU.getPlugin();
+    //Plugin plugin = catalogAU.getPlugin();
     String rootUrl = String.format(AU_FQDN_MASK, CATALOG_AU_ROOT_PAGE);
     LockssRepository catalogRepository = daemon.getLockssRepository(catalogAU);
     RepositoryNode rootNode = catalogRepository.createNewNode(rootUrl);
@@ -103,7 +104,7 @@ public class RootPageProducer {
     UrlToChecksumMapper mapper = new UrlToChecksumMapperDirect();
     hd.startElement("", "", "body", null);
     for (ArchivalUnit au : daemon.getPluginManager().getAllAus()) {
-      if (!au.getAuId().equals(CATALOG_AU_ID)) {
+      if (!au.getAuId().equals(CATALOG_AU_ID)) { //*this can be improved
         String url = String.format(AU_FQDN_MASK, au.getAuId());
         RepositoryNode leafNode = catalogRepository.createNewNode(url);
         leafNode.makeNewVersion();
