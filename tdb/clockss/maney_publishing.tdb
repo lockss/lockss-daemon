@@ -30,7 +30,7 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
     comment[continued_from] = 0967-9782
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 2005 ; Advances in Applied Ceramics Volume 104 ; 104 > 
     au < doNotProcess ; exists ; 2006 ; Advances in Applied Ceramics Volume 105 ; 105 > 
@@ -118,9 +118,9 @@
     au < manifest ; exists ; 2007 ; Ambix Volume 54 ; 54 >
     au < manifest ; exists ; 2008 ; Ambix Volume 55 ; 55 >
     au < manifest ; exists ; 2009 ; Ambix Volume 56 ; 56 >
-    au < manifest ; exists ; 2010 ; Ambix Volume 57 ; 57 >
-    au < testing ; exists ; 2011 ; Ambix Volume 58 ; 58 >
-    au < manifest ; exists ; 2012 ; Ambix Volume 59 ; 59 >
+    au < crawling ; exists ; 2010 ; Ambix Volume 57 ; 57 >
+    au < crawling ; exists ; 2011 ; Ambix Volume 58 ; 58 >
+    au < crawling ; exists ; 2012 ; Ambix Volume 59 ; 59 >
 
   }
 
@@ -155,6 +155,7 @@
     au < doNotProcess ; exists ; 2009 ; Annals of Tropical Medicine and Parasitology Volume 103 ; 103 > 
     au < doNotProcess ; exists ; 2010 ; Annals of Tropical Medicine and Parasitology Volume 104 ; 104 > 
     au < doNotProcess ; exists ; 2011 ; Annals of Tropical Medicine and Parasitology Volume 105 ; 105 > 
+    au < doNotProcess ; exists ; 2012 ; Annals of Tropical Medicine and Parasitology Volume 106 ; 106 > 
 
   }
 
@@ -189,6 +190,7 @@
     au < doNotProcess ; exists ; 2009 ; Annals of Tropical Paediatrics: International Child Health Volume 29 ; 29 > 
     au < doNotProcess ; exists ; 2010 ; Annals of Tropical Paediatrics: International Child Health Volume 30 ; 30 > 
     au < doNotProcess ; exists ; 2011 ; Annals of Tropical Paediatrics: International Child Health Volume 31 ; 31 > 
+    au < doNotProcess ; exists ; 2012 ; Annals of Tropical Paediatrics: International Child Health Volume 32 ; 32 > 
 
   }
 
@@ -221,7 +223,7 @@
     au < manifest ; exists ; 2007 ; Applied Earth Science: IMM Transactions section B Volume 116 ; 116 > 
     au < manifest ; exists ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
     au < manifest ; exists ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
-    au < manifest ; exists ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
+    au < crawling ; exists ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
     au < crawling ; exists ; 2012 ; Applied Earth Science: IMM Transactions section B Volume 120 ; 120 > 
 
   }
@@ -251,9 +253,9 @@
     au < manifest ; exists ; 2007 ; Arms & Armour Volume 4 ; 4 > 
     au < manifest ; exists ; 2008 ; Arms & Armour Volume 5 ; 5 > 
     au < manifest ; exists ; 2009 ; Arms & Armour Volume 6 ; 6 > 
-    au < manifest ; exists ; 2010 ; Arms & Armour Volume 7 ; 7 > 
-    au < testing ; exists ; 2011 ; Arms & Armour Volume 8 ; 8 > 
-    au < expected ; exists ; 2012 ; Arms & Armour Volume 9 ; 9 > 
+    au < crawling ; exists ; 2010 ; Arms & Armour Volume 7 ; 7 > 
+    au < crawling ; exists ; 2011 ; Arms & Armour Volume 8 ; 8 > 
+    au < crawling ; exists ; 2012 ; Arms & Armour Volume 9 ; 9 > 
 
   }
 
@@ -318,7 +320,7 @@
       issn = 0969-7950
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -328,7 +330,7 @@
     implicit < status1 ; status ; year ; name ; param[volume_name] >
     comment[0] = changing name to International Journal of Developmental Disabilities (IJDD) in 2012
     
-    au < testing ; exists ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
+    au < crawling ; exists ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
 
   }
 
@@ -391,8 +393,8 @@
     au < manifest ; exists ; 2007 ; Bronte Studies Volume 32 ; 32 > 
     au < manifest ; exists ; 2008 ; Bronte Studies Volume 33 ; 33 > 
     au < manifest ; exists ; 2009 ; Bronte Studies Volume 34 ; 34 > 
-    au < manifest ; exists ; 2010 ; Bronte Studies Volume 35 ; 35 > 
-    au < testing ; exists ; 2011 ; Bronte Studies Volume 36 ; 36 > 
+    au < crawling ; exists ; 2010 ; Bronte Studies Volume 35 ; 35 > 
+    au < crawling ; exists ; 2011 ; Bronte Studies Volume 36 ; 36 > 
     au < crawling ; exists ; 2012 ; Bronte Studies Volume 37 ; 37 > 
 
   }
@@ -415,7 +417,7 @@
     param[journal_issn] = 1758-8960
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
@@ -447,8 +449,8 @@
     au < manifest ; exists ; 2007 ; Bulletin of the Council for British Research in the Levant Volume 2 ; 2 > 
     au < manifest ; exists ; 2008 ; Bulletin of the Council for British Research in the Levant Volume 3 ; 3 > 
     au < manifest ; exists ; 2009 ; Bulletin of the Council for British Research in the Levant Volume 4 ; 4 > 
-    au < manifest ; exists ; 2010 ; Bulletin of the Council for British Research in the Levant Volume 5 ; 5 > 
-    au < manifest ; exists ; 2011 ; Bulletin of the Council for British Research in the Levant Volume 6 ; 6 > 
+    au < crawling ; exists ; 2010 ; Bulletin of the Council for British Research in the Levant Volume 5 ; 5 > 
+    au < crawling ; exists ; 2011 ; Bulletin of the Council for British Research in the Levant Volume 6 ; 6 > 
     au < expected ; exists ; 2012 ; Bulletin of the Council for British Research in the Levant Volume 7 ; 7 > 
 
   }
@@ -505,9 +507,9 @@
     au < manifest ; exists ; 2007 ; Byzantine and Modern Greek Studies Volume 31 ; 31 >
     au < manifest ; exists ; 2008 ; Byzantine and Modern Greek Studies Volume 32 ; 32 >
     au < manifest ; exists ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 >
-    au < manifest ; exists ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
-    au < testing ; exists ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
-    au < manifest ; exists ; 2012 ; Byzantine and Modern Greek Studies Volume 36 ; 36 >
+    au < crawling ; exists ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
+    au < crawling ; exists ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
+    au < crawling ; exists ; 2012 ; Byzantine and Modern Greek Studies Volume 36 ; 36 >
 
   }
 
@@ -529,7 +531,7 @@
     param[journal_issn] = 0008-4433
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 1962 ; Canadian Metallurgical Quarterly Volume 1 ; 1 >
     au < doNotProcess ; exists ; 1963 ; Canadian Metallurgical Quarterly Volume 2 ; 2 >
@@ -603,7 +605,7 @@
     param[journal_issn] = 0008-7041
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 1964 ; The Cartographic Journal Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 1965 ; The Cartographic Journal Volume 2 ; 2 > 
@@ -653,7 +655,7 @@
     au < doNotProcess ; exists ; 2009 ; The Cartographic Journal Volume 46 ; 46 > 
     au < doNotProcess ; exists ; 2010 ; The Cartographic Journal Volume 47 ; 47 > 
     au < doNotProcess ; exists ; 2011 ; The Cartographic Journal Volume 48 ; 48 > 
-    au < expected ; exists ; 2012 ; The Cartographic Journal Volume 49 ; 49 > 
+    au < crawling ; exists ; 2012 ; The Cartographic Journal Volume 49 ; 49 > 
 
   }
 
@@ -683,9 +685,9 @@
     au < manifest ; exists ; 2007 ; Central Europe Volume 5 ; 5 > 
     au < manifest ; exists ; 2008 ; Central Europe Volume 6 ; 6 > 
     au < manifest ; exists ; 2009 ; Central Europe Volume 7 ; 7 > 
-    au < manifest ; exists ; 2010 ; Central Europe Volume 8 ; 8 > 
-    au < testing ; exists ; 2011 ; Central Europe Volume 9 ; 9 > 
-    au < expected ; exists ; 2012 ; Central Europe Volume 10 ; 10 > 
+    au < crawling ; exists ; 2010 ; Central Europe Volume 8 ; 8 > 
+    au < crawling ; exists ; 2011 ; Central Europe Volume 9 ; 9 > 
+    au < crawling ; exists ; 2012 ; Central Europe Volume 10 ; 10 > 
 
   }
 
@@ -708,8 +710,8 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
    
-    au < testing ; exists ; 2011 ; The Chinese Historical Review Volume 18 ; 18 >  
-    au < expected ; exists ; 2012 ; The Chinese Historical Review Volume 19 ; 19 >   
+    au < crawling ; exists ; 2011 ; The Chinese Historical Review Volume 18 ; 18 >  
+    au < crawling ; exists ; 2012 ; The Chinese Historical Review Volume 19 ; 19 >   
     
   }
 
@@ -730,7 +732,7 @@
     param[journal_issn] = 1467-0100
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 2000 ; Cochlear Implants International Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 2001 ; Cochlear Implants International Volume 2 ; 2 > 
@@ -774,9 +776,9 @@
     au < manifest ; exists ; 2007 ; Comparative American Studies Volume 5 ; 5 > 
     au < manifest ; exists ; 2008 ; Comparative American Studies Volume 6 ; 6 > 
     au < manifest ; exists ; 2009 ; Comparative American Studies Volume 7 ; 7 > 
-    au < manifest ; exists ; 2010 ; Comparative American Studies Volume 8 ; 8 > 
-    au < testing ; exists ; 2011 ; Comparative American Studies Volume 9 ; 9 > 
-    au < manifest ; exists ; 2012 ; Comparative American Studies Volume 10 ; 10 > 
+    au < crawling ; exists ; 2010 ; Comparative American Studies Volume 8 ; 8 > 
+    au < crawling ; exists ; 2011 ; Comparative American Studies Volume 9 ; 9 > 
+    au < crawling ; exists ; 2012 ; Comparative American Studies Volume 10 ; 10 > 
 
   }
 
@@ -807,9 +809,9 @@
     au < manifest ; exists ; 2007 ; Competition & Change Volume 11 ; 11 > 
     au < manifest ; exists ; 2008 ; Competition & Change Volume 12 ; 12 > 
     au < manifest ; exists ; 2009 ; Competition & Change Volume 13 ; 13 > 
-    au < manifest ; exists ; 2010 ; Competition & Change Volume 14 ; 14 > 
-    au < testing ; exists ; 2011 ; Competition & Change Volume 15 ; 15 > 
-    au < expected ; exists ; 2012 ; Competition & Change Volume 16 ; 16 > 
+    au < crawling ; exists ; 2010 ; Competition & Change Volume 14 ; 14 > 
+    au < crawling ; exists ; 2011 ; Competition & Change Volume 15 ; 15 > 
+    au < crawling ; exists ; 2012 ; Competition & Change Volume 16 ; 16 > 
 
   }
 
@@ -843,8 +845,8 @@
     au < manifest ; exists ; 2007 ; Conservation and Management of Archaeological Sites Volume 9 ; 9 > 
     au < manifest ; exists ; 2008 ; Conservation and Management of Archaeological Sites Volume 10 ; 10 > 
     au < manifest ; exists ; 2009 ; Conservation and Management of Archaeological Sites Volume 11 ; 11 > 
-    au < manifest ; exists ; 2010 ; Conservation and Management of Archaeological Sites Volume 12 ; 12 > 
-    au < manifest ; exists ; 2011 ; Conservation and Management of Archaeological Sites Volume 13 ; 13 > 
+    au < crawling ; exists ; 2010 ; Conservation and Management of Archaeological Sites Volume 12 ; 12 > 
+    au < crawling ; exists ; 2011 ; Conservation and Management of Archaeological Sites Volume 13 ; 13 > 
     au < expected ; exists ; 2012 ; Conservation and Management of Archaeological Sites Volume 14 ; 14 > 
 
   }
@@ -876,8 +878,8 @@
     au < manifest ; exists ; 2007 ; Corrosion Engineering, Science and Technology Volume 42 ; 42 > 
     au < manifest ; exists ; 2008 ; Corrosion Engineering, Science and Technology Volume 43 ; 43 > 
     au < manifest ; exists ; 2009 ; Corrosion Engineering, Science and Technology Volume 44 ; 44 > 
-    au < manifest ; exists ; 2010 ; Corrosion Engineering, Science and Technology Volume 45 ; 45 > 
-    au < testing ; exists ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 ; 46 > 
+    au < crawling ; exists ; 2010 ; Corrosion Engineering, Science and Technology Volume 45 ; 45 > 
+    au < crawling ; exists ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 ; 46 > 
     au < crawling ; exists ; 2012 ; Corrosion Engineering, Science and Technology Volume 47 ; 47 > 
 
   }
@@ -900,6 +902,8 @@
     param[journal_issn] = 0590-8876
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
+    
+    comment[2011] = year 2011 has been used as volume #
 
     au < manifest ; exists ; 1965-1967 ; Costume Volume 1 ; 1 > 
     au < manifest ; exists ; 1968 ; Costume Volume 2 ; 2 > 
@@ -944,8 +948,8 @@
     au < manifest ; exists ; 2007 ; Costume Volume 41 ; 41 > 
     au < manifest ; exists ; 2008 ; Costume Volume 42 ; 42 > 
     au < manifest ; exists ; 2009 ; Costume Volume 43 ; 43 > 
-    au < manifest ; exists ; 2010 ; Costume Volume 44 ; 44 > 
-    au < exists ; exists ; 2011 ; Costume Volume 45 ; 45 > 
+    au < crawling ; exists ; 2010 ; Costume Volume 44 ; 44 > 
+    au < crawling ; exists ; 2011 ; Costume Volume 45 ; 2011 > 
     au < crawling ; exists ; 2012 ; Costume Volume 46 ; 46 > 
 
   }
@@ -968,7 +972,7 @@
     param[journal_issn] = 1464-3154
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 1999 ; Deafness & Education International Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 2000 ; Deafness & Education International Volume 2 ; 2 > 
@@ -983,7 +987,7 @@
     au < doNotProcess ; exists ; 2009 ; Deafness & Education International Volume 11 ; 11 > 
     au < doNotProcess ; exists ; 2010 ; Deafness & Education International Volume 12 ; 12 > 
     au < doNotProcess ; exists ; 2011 ; Deafness & Education International Volume 13 ; 13 >  
-    au < expected ; exists ; 2012 ; Deafness & Education International Volume 14 ; 14 >
+    au < crawling ; exists ; 2012 ; Deafness & Education International Volume 14 ; 14 >
 
   }
 
@@ -1018,9 +1022,9 @@
     au < manifest ; exists ; 2008 ; Dix-Neuf Volume 11 ; 11 > 
     au < manifest ; exists ; 2009 ; Dix-Neuf Volume 12 ; 12 > 
     au < manifest ; exists ; 2009 ; Dix-Neuf Volume 13 ; 13 > 
-    au < manifest ; exists ; 2010 ; Dix-Neuf Volume 14 ; 14 > 
-    au < testing ; exists ; 2011 ; Dix-Neuf Volume 15 ; 15 > 
-    au < manifest ; exists ; 2012 ; Dix-Neuf Volume 16 ; 16 > 
+    au < crawling ; exists ; 2010 ; Dix-Neuf Volume 14 ; 14 > 
+    au < crawling ; exists ; 2011 ; Dix-Neuf Volume 15 ; 15 > 
+    au < crawling ; exists ; 2012 ; Dix-Neuf Volume 16 ; 16 > 
 
   }
 
@@ -1043,8 +1047,8 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
-    au < manifest ; exists ; 2010 ; Dress Volume 36 ; 36 > 
-    au < manifest ; exists ; 2011 ; Dress Volume 37 ; 37 > 
+    au < crawling ; exists ; 2010 ; Dress Volume 36 ; 36 > 
+    au < crawling ; exists ; 2011 ; Dress Volume 37 ; 37 > 
     au < expected ; exists ; 2012 ; Dress Volume 38 ; 38 > 
 
   }
@@ -1069,7 +1073,7 @@
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
     au < manifest ; exists ; 2009 ; Dutch Crossing: Journal of Low Countries Studies Volume 33 ; 33 > 
-    au < manifest ; exists ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 > 
+    au < crawling ; exists ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 > 
     au < crawling ; exists ; 2011 ; Dutch Crossing: Journal of Low Countries Studies Volume 35 ; 35 > 
     au < crawling ; exists ; 2012 ; Dutch Crossing: Journal of Low Countries Studies Volume 36 ; 36 > 
 
@@ -1110,8 +1114,8 @@
     au < manifest ; exists ; 2007 ; Early Medieval China Volume 2007 ; 2007 > 
     au < manifest ; exists ; 2008 ; Early Medieval China Volume 2008 ; 2008 > 
     au < manifest ; exists ; 2009 ; Early Medieval China Volume 2009 ; 2009 > 
-    au < manifest ; exists ; 2010 ; Early Medieval China Volume 2010 ; 2010 > 
-    au < manifest ; exists ; 2011 ; Early Medieval China Volume 2011 ; 2011 > 
+    au < crawling ; exists ; 2010 ; Early Medieval China Volume 2010 ; 2010 > 
+    au < crawling ; exists ; 2011 ; Early Medieval China Volume 2011 ; 2011 > 
     au < expected ; exists ; 2012 ; Early Medieval China Volume 2012 ; 2012 > 
 
   }
@@ -1152,7 +1156,7 @@
       issn = 1752-0169
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1165,7 +1169,7 @@
     au < manifest ; exists ; 2007 ;  English Heritage Historical Review Volume 2 ; 2 >
     au < manifest ; exists ; 2008 ;  English Heritage Historical Review Volume 3 ; 3 >     
     au < manifest ; exists ; 2009 ;  English Heritage Historical Review Volume 4 ; 4 >   
-    au < manifest ; exists ; 2010 ;  English Heritage Historical Review Volume 5 ; 5 >  
+    au < crawling ; exists ; 2010 ;  English Heritage Historical Review Volume 5 ; 5 >  
     au < expected ; exists ; 2011 ;  English Heritage Historical Review Volume 6 ; 6 >
     au < expected ; exists ; 2012 ;  English Heritage Historical Review Volume 7 ; 7 >
    
@@ -1204,9 +1208,9 @@
     au < manifest ; exists ; 2007 ; Environmental Archaeology Volume 12 ; 12 > 
     au < manifest ; exists ; 2008 ; Environmental Archaeology Volume 13 ; 13 > 
     au < manifest ; exists ; 2009 ; Environmental Archaeology Volume 14 ; 14 > 
-    au < manifest ; exists ; 2010 ; Environmental Archaeology Volume 15 ; 15 > 
-    au < manifest ; exists ; 2011 ; Environmental Archaeology Volume 16 ; 16 > 
-    au < expected ; exists ; 2012 ; Environmental Archaeology Volume 17 ; 17 > 
+    au < crawling ; exists ; 2010 ; Environmental Archaeology Volume 15 ; 15 > 
+    au < crawling ; exists ; 2011 ; Environmental Archaeology Volume 16 ; 16 > 
+    au < manifest ; exists ; 2012 ; Environmental Archaeology Volume 17 ; 17 > 
 
   }
 
@@ -1219,7 +1223,7 @@
       issnl = 1461-9571
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1229,7 +1233,7 @@
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
     au < crawling ; exists ; 2011 ; European Journal of Archaeology Volume 14 ; 14 > 
-    au < expected ; exists ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
+    au < crawling ; exists ; 2012 ; European Journal of Archaeology Volume 15 ; 15 > 
     
   }
 
@@ -1273,9 +1277,9 @@
     au < manifest ; exists ; 2007 ; Exemplaria Volume 19 ; 19 > 
     au < manifest ; exists ; 2008 ; Exemplaria Volume 20 ; 20 > 
     au < manifest ; exists ; 2009 ; Exemplaria Volume 21 ; 21 > 
-    au < manifest ; exists ; 2010 ; Exemplaria Volume 22 ; 22 > 
+    au < crawling ; exists ; 2010 ; Exemplaria Volume 22 ; 22 > 
     au < crawling ; exists ; 2011 ; Exemplaria Volume 23 ; 23 > 
-    au < expected ; exists ; 2012 ; Exemplaria Volume 24 ; 24 > 
+    au < crawling ; exists ; 2012 ; Exemplaria Volume 24 ; 24 > 
 
   }
 
@@ -1302,9 +1306,9 @@
     au < manifest ; exists ; 2007 ; Family & Community History Volume 10 ; 10 > 
     au < manifest ; exists ; 2008 ; Family & Community History Volume 11 ; 11 > 
     au < manifest ; exists ; 2009 ; Family & Community History Volume 12 ; 12 > 
-    au < manifest ; exists ; 2010 ; Family & Community History Volume 13 ; 13 >  
-    au < manifest ; exists ; 2011 ; Family & Community History Volume 14 ; 14 > 
-    au < expected ; exists ; 2012 ; Family & Community History Volume 15 ; 15 >
+    au < crawling ; exists ; 2010 ; Family & Community History Volume 13 ; 13 >  
+    au < crawling ; exists ; 2011 ; Family & Community History Volume 14 ; 14 > 
+    au < crawling ; exists ; 2012 ; Family & Community History Volume 15 ; 15 >
 
   }
 
@@ -1328,9 +1332,9 @@
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
     au < manifest ; exists ; 2009 ; Folk Life: Journal of Ethnological Studies Volume 47 ; 47 > 
-    au < manifest ; exists ; 2010 ; Folk Life: Journal of Ethnological Studies Volume 48 ; 48 > 
+    au < crawling ; exists ; 2010 ; Folk Life: Journal of Ethnological Studies Volume 48 ; 48 > 
     au < crawling ; exists ; 2011 ; Folk Life: Journal of Ethnological Studies Volume 49 ; 49 >  
-    au < expected ; exists ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 >
+    au < crawling ; exists ; 2012 ; Folk Life: Journal of Ethnological Studies Volume 50 ; 50 >
 
   }
 
@@ -1356,7 +1360,7 @@
     au < manifest ; exists ; 2007 ; The Hardy Review Volume 9 ; 9 > 
     au < manifest ; exists ; 2008 ; The Hardy Review Volume 10 ; 10 > 
     au < manifest ; exists ; 2009 ; The Hardy Review Volume 11 ; 11 > 
-    au < manifest ; exists ; 2010 ; The Hardy Review Volume 12 ; 12 > 
+    au < crawling ; exists ; 2010 ; The Hardy Review Volume 12 ; 12 > 
     au < crawling ; exists ; 2011 ; The Hardy Review Volume 13 ; 13 >  
     au < expected ; exists ; 2012 ; The Hardy Review Volume 14 ; 14 >
 
@@ -1380,7 +1384,7 @@
     param[journal_issn] = 1024-5332
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 2002 ; Hematology Volume 7 ; 7 > 
     au < doNotProcess ; exists ; 2003 ; Hematology Volume 8 ; 8 > 
@@ -1392,7 +1396,7 @@
     au < doNotProcess ; exists ; 2009 ; Hematology Volume 14 ; 14 > 
     au < doNotProcess ; exists ; 2010 ; Hematology Volume 15 ; 15 > 
     au < doNotProcess ; exists ; 2011 ; Hematology Volume 16 ; 16 > 
-    au < expected ; exists ; 2012 ; Hematology Volume 17 ; 17 > 
+    au < crawling ; exists ; 2012 ; Hematology Volume 17 ; 17 > 
 
   }
 
@@ -1425,7 +1429,7 @@
     au < manifest ; exists ; 2007 ; Hispanic Research Journal Volume 8 ; 8 > 
     au < manifest ; exists ; 2008 ; Hispanic Research Journal Volume 9 ; 9 > 
     au < manifest ; exists ; 2009 ; Hispanic Research Journal Volume 10 ; 10 > 
-    au < manifest ; exists ; 2010 ; Hispanic Research Journal Volume 11 ; 11 > 
+    au < crawling ; exists ; 2010 ; Hispanic Research Journal Volume 11 ; 11 > 
     au < crawling ; exists ; 2011 ; Hispanic Research Journal Volume 12 ; 12 > 
     au < crawling ; exists ; 2012 ; Hispanic Research Journal Volume 13 ; 13 > 
 
@@ -1450,9 +1454,9 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
-    au < manifest ; exists ; 2010 ; The Historic Environment: Policy & Practice Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; The Historic Environment: Policy & Practice Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; The Historic Environment: Policy & Practice Volume 2 ; 2 > 
-    au < expected ; exists ; 2012 ; The Historic Environment: Policy & Practice Volume 3 ; 3 > 
+    au < crawling ; exists ; 2012 ; The Historic Environment: Policy & Practice Volume 3 ; 3 > 
 
   }
 
@@ -1474,7 +1478,7 @@
     param[journal_issn] = 1368-2199
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 2004 ; The Imaging Science Journal Volume 52 ; 52 > 
     au < doNotProcess ; exists ; 2005 ; The Imaging Science Journal Volume 53 ; 53 > 
@@ -1538,8 +1542,8 @@
     au < manifest ; exists ; 2007 ; Industrial Archaeology Review Volume 29 ; 29 > 
     au < manifest ; exists ; 2008 ; Industrial Archaeology Review Volume 30 ; 30 > 
     au < manifest ; exists ; 2009 ; Industrial Archaeology Review Volume 31 ; 31 > 
-    au < manifest ; exists ; 2010 ; Industrial Archaeology Review Volume 32 ; 32 >  
-    au < manifest ; exists ; 2011 ; Industrial Archaeology Review Volume 33 ; 33 > 
+    au < crawling ; exists ; 2010 ; Industrial Archaeology Review Volume 32 ; 32 >  
+    au < crawling ; exists ; 2011 ; Industrial Archaeology Review Volume 33 ; 33 > 
     au < expected ; exists ; 2012 ; Industrial Archaeology Review Volume 34 ; 34 >
 
   }
@@ -1562,7 +1566,7 @@
     param[journal_issn] = 0308-0188
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 1976 ; Interdisciplinary Science Reviews Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 1977 ; Interdisciplinary Science Reviews Volume 2 ; 2 > 
@@ -1600,7 +1604,7 @@
     au < doNotProcess ; exists ; 2009 ; Interdisciplinary Science Reviews Volume 34 ; 34 > 
     au < doNotProcess ; exists ; 2010 ; Interdisciplinary Science Reviews Volume 35 ; 35 > 
     au < doNotProcess ; exists ; 2011 ; Interdisciplinary Science Reviews Volume 36 ; 36 > 
-    au < expected ; exists ; 2012 ; Interdisciplinary Science Reviews Volume 37 ; 37 > 
+    au < crawling ; exists ; 2012 ; Interdisciplinary Science Reviews Volume 37 ; 37 > 
 
   }
 
@@ -1622,14 +1626,14 @@
     param[journal_issn] = 1749-5148
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 2007 ; International Heat Treatment & Surface Engineering Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 2008 ; International Heat Treatment & Surface Engineering Volume 2 ; 2 > 
     au < doNotProcess ; exists ; 2009 ; International Heat Treatment & Surface Engineering Volume 3 ; 3 > 
     au < doNotProcess ; exists ; 2010 ; International Heat Treatment & Surface Engineering Volume 4 ; 4 > 
     au < doNotProcess ; exists ; 2011 ; International Heat Treatment & Surface Engineering Volume 5 ; 5 > 
-    au < expected ; exists ; 2012 ; International Heat Treatment & Surface Engineering Volume 6 ; 6 > 
+    au < manifest ; exists ; 2012 ; International Heat Treatment & Surface Engineering Volume 6 ; 6 > 
 
   }
 
@@ -1654,7 +1658,7 @@
     comment[continues] = 0372-0187
 
     au < manifest ; exists ; 2009 ; International Journal for the History of Engineering & Technology Volume 79 ; 79 > 
-    au < manifest ; exists ; 2010 ; International Journal for the History of Engineering & Technology Volume 80 ; 80 > 
+    au < crawling ; exists ; 2010 ; International Journal for the History of Engineering & Technology Volume 80 ; 80 > 
     au < crawling ; exists ; 2011 ; International Journal for the History of Engineering & Technology Volume 81 ; 81 > 
     au < crawling ; exists ; 2012 ; International Journal for the History of Engineering & Technology Volume 82 ; 82 > 
 
@@ -1678,7 +1682,7 @@
     param[journal_issn] = 1364-0461
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 2004 ; International Journal of Cast Metals Research Volume 17 ; 17 > 
     au < doNotProcess ; exists ; 2005 ; International Journal of Cast Metals Research Volume 18 ; 18 > 
@@ -1735,7 +1739,7 @@
     param[journal_issn] = 0950-6608
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     comment[continued_by] = 0308-4590
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
     
@@ -1848,13 +1852,13 @@
     param[journal_issn] = 1753-6146
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 2008 ; International Musculoskeletal Medicine Volume 30 ; 30 > 
     au < doNotProcess ; exists ; 2009 ; International Musculoskeletal Medicine Volume 31 ; 31 > 
     au < doNotProcess ; exists ; 2010 ; International Musculoskeletal Medicine Volume 32 ; 32 > 
     au < doNotProcess ; exists ; 2011 ; International Musculoskeletal Medicine Volume 33 ; 33 > 
-    au < expected ; exists ; 2012 ; International Musculoskeletal Medicine Volume 34 ; 34 > 
+    au < crawling ; exists ; 2012 ; International Musculoskeletal Medicine Volume 34 ; 34 > 
 
   }
 
@@ -1876,11 +1880,11 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
     comment[continues] = 0020-3203
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2010 ; International Wood Products Journal Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 2011 ; International Wood Products Journal Volume 2 ; 2 > 
-    au < expected ; exists ; 2012 ; International Wood Products Journal Volume 3 ; 3 > 
+    au < crawling ; exists ; 2012 ; International Wood Products Journal Volume 3 ; 3 > 
 
   }
 
@@ -1901,7 +1905,7 @@
     param[journal_issn] = 0301-9233
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 1999 ; Ironmaking & Steelmaking Volume 26 ; 26 > 
     au < doNotProcess ; exists ; 2000 ; Ironmaking & Steelmaking Volume 27 ; 27 > 
@@ -1939,7 +1943,7 @@
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
     au < manifest ; exists ; 2009 ; Italian Culture Volume 27 ; 27 > 
-    au < manifest ; exists ; 2010 ; Italian Culture Volume 28 ; 28 > 
+    au < crawling ; exists ; 2010 ; Italian Culture Volume 28 ; 28 > 
     au < crawling ; exists ; 2011 ; Italian Culture Volume 29 ; 29 > 
     au < crawling ; exists ; 2012 ; Italian Culture Volume 30 ; 30 > 
 
@@ -2027,9 +2031,9 @@
     au < manifest ; exists ; 2007 ; Italian Studies Volume 62 ; 62 > 
     au < manifest ; exists ; 2008 ; Italian Studies Volume 63 ; 63 > 
     au < manifest ; exists ; 2009 ; Italian Studies Volume 64 ; 64 > 
-    au < manifest ; exists ; 2010 ; Italian Studies Volume 65 ; 65 > 
+    au < crawling ; exists ; 2010 ; Italian Studies Volume 65 ; 65 > 
     au < crawling ; exists ; 2011 ; Italian Studies Volume 66 ; 66 > 
-    au < expected ; exists ; 2012 ; Italian Studies Volume 67 ; 67 > 
+    au < crawling ; exists ; 2012 ; Italian Studies Volume 67 ; 67 > 
 
   }
 
@@ -2080,9 +2084,9 @@
     au < manifest ; exists ; 2007 ; The Italianist Volume 27 ; 27 > 
     au < manifest ; exists ; 2008 ; The Italianist Volume 28 ; 28 > 
     au < manifest ; exists ; 2009 ; The Italianist Volume 29 ; 29 > 
-    au < manifest ; exists ; 2010 ; The Italianist Volume 30 ; 30 > 
+    au < crawling ; exists ; 2010 ; The Italianist Volume 30 ; 30 > 
     au < crawling ; exists ; 2011 ; The Italianist Volume 31 ; 31 > 
-    au < expected ; exists ; 2012 ; The Italianist Volume 32 ; 32 > 
+    au < manifest ; exists ; 2012 ; The Italianist Volume 32 ; 32 > 
 
   }
 
@@ -2103,7 +2107,7 @@
     param[journal_issn] = 0373-6687
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2002 ; Journal of Bryology Volume 24 ; 24 > 
     au < doNotProcess ; exists ; 2003 ; Journal of Bryology Volume 25 ; 25 > 
@@ -2115,7 +2119,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Bryology Volume 31 ; 31 > 
     au < doNotProcess ; exists ; 2010 ; Journal of Bryology Volume 32 ; 32 > 
     au < doNotProcess ; exists ; 2011 ; Journal of Bryology Volume 33 ; 33 > 
-    au < expected ; exists ; 2012 ; Journal of Bryology Volume 34 ; 34 > 
+    au < crawling ; exists ; 2012 ; Journal of Bryology Volume 34 ; 34 > 
 
   }
 
@@ -2136,7 +2140,7 @@
     param[journal_issn] = 1750-1679
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2006-2007 ; Journal of Care Services Management Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 2007-2008 ; Journal of Care Services Management Volume 2 ; 2 > 
@@ -2164,13 +2168,13 @@
     param[journal_issn] = 1753-8068
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2008 ; Journal of Communication in Healthcare Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 2009 ; Journal of Communication in Healthcare Volume 2 ; 2 > 
     au < doNotProcess ; exists ; 2010 ; Journal of Communication in Healthcare Volume 3 ; 3 > 
     au < doNotProcess ; exists ; 2011 ; Journal of Communication in Healthcare Volume 4 ; 4 > 
-    au < expected ; exists ; 2012 ; Journal of Communication in Healthcare Volume 5 ; 5 > 
+    au < crawling ; exists ; 2012 ; Journal of Communication in Healthcare Volume 5 ; 5 > 
 
   }
 
@@ -2254,9 +2258,9 @@
     au < manifest ; exists ; 2007 ; Journal of Field Archaeology Volume 32 ; 32 > 
     au < manifest ; exists ; 2008 ; Journal of Field Archaeology Volume 33 ; 33 > 
     au < manifest ; exists ; 2009 ; Journal of Field Archaeology Volume 34 ; 34 > 
-    au < manifest ; exists ; 2010 ; Journal of Field Archaeology Volume 35 ; 35 > 
+    au < crawling ; exists ; 2010 ; Journal of Field Archaeology Volume 35 ; 35 > 
     au < crawling ; exists ; 2011 ; Journal of Field Archaeology Volume 36 ; 36 > 
-    au < manifest ; exists ; 2012 ; Journal of Field Archaeology Volume 37 ; 37 > 
+    au < crawling ; exists ; 2012 ; Journal of Field Archaeology Volume 37 ; 37 > 
 
   }
 
@@ -2277,7 +2281,7 @@
     param[journal_issn] = 0147-8885
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 1977-1978 ; Journal of Histotechnology Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 1979 ; Journal of Histotechnology Volume 2 ; 2 > 
@@ -2313,7 +2317,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Histotechnology Volume 32 ; 32 > 
     au < doNotProcess ; exists ; 2010 ; Journal of Histotechnology Volume 33 ; 33 > 
     au < doNotProcess ; exists ; 2011 ; Journal of Histotechnology Volume 34 ; 34 > 
-    au < expected ; exists ; 2012 ; Journal of Histotechnology Volume 35 ; 35 > 
+    au < doNotProcess ; exists ; 2012 ; Journal of Histotechnology Volume 35 ; 35 > 
 
   }
 
@@ -2334,7 +2338,7 @@
     param[journal_issn] = 1753-3031
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2007-2008 ; Journal of Management & Marketing in Healthcare Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 2009 ; Journal of Management & Marketing in Healthcare Volume 2 ; 2 > 
@@ -2361,7 +2365,7 @@
     param[journal_issn] = 1066-9817
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 1993 ; Journal of Manual & Manipulative Therapy Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 1994 ; Journal of Manual & Manipulative Therapy Volume 2 ; 2 > 
@@ -2449,7 +2453,7 @@
       au < manifest ; exists ; 2009 ; Journal of Orthodontics Volume 36 ; 36 > 
       au < released ; crawling ; 2010 ; Journal of Orthodontics Volume 37 ; 37 > 
       au < released ; crawling ; 2011 ; Journal of Orthodontics Volume 38 ; 38 > 
-      au < expected ; exists ; 2012 ; Journal of Orthodontics Volume 39 ; 39 > 
+      au < crawling ; exists ; 2012 ; Journal of Orthodontics Volume 39 ; 39 > 
       
     }
 
@@ -2526,8 +2530,8 @@
     au < manifest ; exists ; 2007 ; Journal of the British Archaeological Association Volume 160 ; 160 > 
     au < manifest ; exists ; 2008 ; Journal of the British Archaeological Association Volume 161 ; 161 > 
     au < manifest ; exists ; 2009 ; Journal of the British Archaeological Association Volume 162 ; 162 > 
-    au < manifest ; exists ; 2010 ; Journal of the British Archaeological Association Volume 163 ; 163 >  
-    au < manifest ; exists ; 2011 ; Journal of the British Archaeological Association Volume 164 ; 164 >  
+    au < crawling ; exists ; 2010 ; Journal of the British Archaeological Association Volume 163 ; 163 >  
+    au < crawling ; exists ; 2011 ; Journal of the British Archaeological Association Volume 164 ; 164 >  
     au < expected ; exists ; 2012 ; Journal of the British Archaeological Association Volume 165 ; 165 > 
 
   }
@@ -2550,7 +2554,7 @@
     param[journal_issn] = 0144-2600
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2005 ; Journal of the Energy Institute Volume 78 ; 78 > 
     au < doNotProcess ; exists ; 2006 ; Journal of the Energy Institute Volume 79 ; 79 > 
@@ -2608,9 +2612,9 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
-    au < manifest ; exists ; 2010 ; The Keats-Shelley Review Volume 24 ; 24 > 
+    au < crawling ; exists ; 2010 ; The Keats-Shelley Review Volume 24 ; 24 > 
     au < crawling ; exists ; 2011 ; The Keats-Shelley Review Volume 25 ; 25 > 
-    au < expected ; exists ; 2012 ; The Keats-Shelley Review Volume 26 ; 26 > 
+    au < crawling ; exists ; 2012 ; The Keats-Shelley Review Volume 26 ; 26 > 
 
   }
 
@@ -2638,7 +2642,7 @@
     au < manifest ; exists ; 2007 ; Labour History Review Volume 72 ; 72 > 
     au < manifest ; exists ; 2008 ; Labour History Review Volume 73 ; 73 > 
     au < manifest ; exists ; 2009 ; Labour History Review Volume 74 ; 74 > 
-    au < manifest ; exists ; 2010 ; Labour History Review Volume 75 ; 75 > 
+    au < crawling ; exists ; 2010 ; Labour History Review Volume 75 ; 75 > 
     au < crawling ; exists ; 2011 ; Labour History Review Volume 76 ; 76 > 
     au < expected ; exists ; 2012 ; Labour History Review Volume 77 ; 77 > 
 
@@ -2664,9 +2668,9 @@
     implicit < status1 ; status ; year ; name ; param[volume_name] >
  
     au < manifest ; exists ; 2009 ; Language & History Volume 52 ; 52 > 
-    au < manifest ; exists ; 2010 ; Language & History Volume 53 ; 53 > 
+    au < crawling ; exists ; 2010 ; Language & History Volume 53 ; 53 > 
     au < crawling ; exists ; 2011 ; Language & History Volume 54 ; 54 > 
-    au < expected ; exists ; 2012 ; Language & History Volume 55 ; 55 >
+    au < crawling ; exists ; 2012 ; Language & History Volume 55 ; 55 >
 
   }
 
@@ -2730,9 +2734,9 @@
     au < manifest ; exists ; 2007 ; Levant Volume 39 ; 39 > 
     au < manifest ; exists ; 2008 ; Levant Volume 40 ; 40 > 
     au < manifest ; exists ; 2009 ; Levant Volume 41 ; 41 > 
-    au < manifest ; exists ; 2010 ; Levant Volume 42 ; 42 > 
+    au < crawling ; exists ; 2010 ; Levant Volume 42 ; 42 > 
     au < crawling ; exists ; 2011 ; Levant Volume 43 ; 43 > 
-    au < expected ; exists ; 2012 ; Levant Volume 44 ; 44 > 
+    au < manifest ; exists ; 2012 ; Levant Volume 44 ; 44 > 
 
   }
 
@@ -2782,7 +2786,7 @@
     comment[continues] = 0024-2306
 
     au < manifest ; exists ; 2009 ; Library & Information History Volume 25 ; 25 > 
-    au < manifest ; exists ; 2010 ; Library & Information History Volume 26 ; 26 > 
+    au < crawling ; exists ; 2010 ; Library & Information History Volume 26 ; 26 > 
     au < crawling ; exists ; 2011 ; Library & Information History Volume 27 ; 27 > 
     au < crawling ; exists ; 2012 ; Library & Information History Volume 28 ; 28 > 
 
@@ -2841,9 +2845,9 @@
     au < manifest ; exists ; 2007 ; The London Journal Volume 32 ; 32 > 
     au < manifest ; exists ; 2008 ; The London Journal Volume 33 ; 33 > 
     au < manifest ; exists ; 2009 ; The London Journal Volume 34 ; 34 > 
-    au < manifest ; exists ; 2010 ; The London Journal Volume 35 ; 35 > 
+    au < crawling ; exists ; 2010 ; The London Journal Volume 35 ; 35 > 
     au < crawling ; exists ; 2011 ; The London Journal Volume 36 ; 36 > 
-    au < manifest ; exists ; 2012 ; The London Journal Volume 37 ; 37 > 
+    au < crawling ; exists ; 2012 ; The London Journal Volume 37 ; 37 > 
 
   }
 
@@ -2865,7 +2869,7 @@
     param[journal_issn] = 1432-8917
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2006 ; Materials Research Innovations Volume 10 ; 10 > 
     au < doNotProcess ; exists ; 2007 ; Materials Research Innovations Volume 11 ; 11 > 
@@ -2896,7 +2900,7 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
     comment[continues] = 0306-3453
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 1985 ; Materials Science and Technology Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 1986 ; Materials Science and Technology Volume 2 ; 2 > 
@@ -2925,7 +2929,7 @@
     au < doNotProcess ; exists ; 2009 ; Materials Science and Technology Volume 25 ; 25 > 
     au < doNotProcess ; exists ; 2010 ; Materials Science and Technology Volume 26 ; 26 > 
     au < doNotProcess ; exists ; 2011 ; Materials Science and Technology Volume 27 ; 27 > 
-    au < manifest ; exists ; 2012 ; Materials Science and Technology Volume 28 ; 28 > 
+    au < crawling ; exists ; 2012 ; Materials Science and Technology Volume 28 ; 28 > 
 
   }
 
@@ -2947,7 +2951,7 @@
     param[journal_issn] = 1066-7857
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 2006 ; Materials Technology: Advanced Performance Materials Volume 21 ; 21 > 
     au < doNotProcess ; exists ; 2007 ; Materials Technology: Advanced Performance Materials Volume 22 ; 22 > 
@@ -2988,7 +2992,7 @@
     au < manifest ; exists ; 2007 ; Medieval Archaeology Volume 51 ; 51 > 
     au < manifest ; exists ; 2008 ; Medieval Archaeology Volume 52 ; 52 > 
     au < manifest ; exists ; 2009 ; Medieval Archaeology Volume 53 ; 53 > 
-    au < manifest ; exists ; 2010 ; Medieval Archaeology Volume 54 ; 54 > 
+    au < crawling ; exists ; 2010 ; Medieval Archaeology Volume 54 ; 54 > 
 
   }
 
@@ -3015,7 +3019,7 @@
     au < manifest ; exists ; 2007 ; Medieval Sermon Studies Volume 51 ; 51 > 
     au < manifest ; exists ; 2008 ; Medieval Sermon Studies Volume 52 ; 52 > 
     au < manifest ; exists ; 2009 ; Medieval Sermon Studies Volume 53 ; 53 > 
-    au < manifest ; exists ; 2010 ; Medieval Sermon Studies Volume 54 ; 54 > 
+    au < crawling ; exists ; 2010 ; Medieval Sermon Studies Volume 54 ; 54 > 
 
   }
 
@@ -3150,9 +3154,9 @@
     au < manifest ; exists ; 2007 ; Midland History Volume 32 ; 32 > 
     au < manifest ; exists ; 2008 ; Midland History Volume 33 ; 33 > 
     au < manifest ; exists ; 2009 ; Midland History Volume 34 ; 34 > 
-    au < manifest ; exists ; 2010 ; Midland History Volume 35 ; 35 > 
+    au < crawling ; exists ; 2010 ; Midland History Volume 35 ; 35 > 
     au < crawling ; exists ; 2011 ; Midland History Volume 36 ; 36 > 
-    au < expected ; exists ; 2012 ; Midland History Volume 37 ; 37 > 
+    au < crawling ; exists ; 2012 ; Midland History Volume 37 ; 37 > 
 
   }
 
@@ -3174,7 +3178,7 @@
     param[journal_issn] = 0371-9553
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2000 ; Mineral Processing and Extractive Metallurgy Volume 109 ; 109 > 
     au < doNotProcess ; exists ; 2001 ; Mineral Processing and Extractive Metallurgy Volume 110 ; 110 > 
@@ -3237,7 +3241,7 @@
     au < manifest ; exists ; 1998 ; Ming Studies Volume 1998 ; 1998 > 
     au < manifest ; exists ; 1999 ; Ming Studies Volume 1999 ; 1999 > 
     au < manifest ; exists ; 2000 ; Ming Studies Volume 2000 ; 2000 > 
-    au < manifest ; exists ; 2001 ; Ming Studies Volume 2002 ; 2001 > 
+    au < manifest ; exists ; 2001 ; Ming Studies Volume 2001 ; 2001 > 
     au < doesNotExist ; exists ; 2002 ; Ming Studies Volume 2002 ; 2002 >
     au < manifest ; exists ; 2003 ; Ming Studies Volume 2003 ; 2003 > 
     au < manifest ; exists ; 2004 ; Ming Studies Volume 2004 ; 2004 > 
@@ -3246,8 +3250,8 @@
     au < manifest ; exists ; 2007 ; Ming Studies Volume 2007 ; 2007 > 
     au < manifest ; exists ; 2008 ; Ming Studies Volume 2008 ; 2008 > 
     au < manifest ; exists ; 2009 ; Ming Studies Volume 2009 ; 2009 > 
-    au < manifest ; exists ; 2010 ; Ming Studies Volume 2010 ; 2010 > 
-    au < manifest ; exists ; 2011 ; Ming Studies Volume 2011 ; 2011 > 
+    au < crawling ; exists ; 2010 ; Ming Studies Volume 2010 ; 2010 > 
+    au < crawling ; exists ; 2011 ; Ming Studies Volume 2011 ; 2011 > 
     au < expected ; exists ; 2012 ; Ming Studies Volume 2012 ; 2012 > 
 
   }
@@ -3270,7 +3274,7 @@
     param[journal_issn] = 1474-9009
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2000 ; Mining Technology Volume 109 ; 109 > 
     au < doNotProcess ; exists ; 2001 ; Mining Technology Volume 110 ; 110 > 
@@ -3284,7 +3288,7 @@
     au < doNotProcess ; exists ; 2009 ; Mining Technology Volume 118 ; 118 > 
     au < doNotProcess ; exists ; 2010 ; Mining Technology Volume 119 ; 119 > 
     au < doNotProcess ; exists ; 2011 ; Mining Technology Volume 120 ; 120 > 
-    au < expected ; exists ; 2012 ; Mining Technology Volume 121 ; 121 > 
+    au < crawling ; exists ; 2012 ; Mining Technology Volume 121 ; 121 > 
 
   }
 
@@ -3309,7 +3313,7 @@
 
     au < manifest ; exists ; 2008 ; Names: A Journal of Onomastics Volume 56 ; 56 > 
     au < manifest ; exists ; 2009 ; Names: A Journal of Onomastics Volume 57 ; 57 > 
-    au < manifest ; exists ; 2010 ; Names: A Journal of Onomastics Volume 58 ; 58 > 
+    au < crawling ; exists ; 2010 ; Names: A Journal of Onomastics Volume 58 ; 58 > 
     au < crawling ; exists ; 2011 ; Names: A Journal of Onomastics Volume 59 ; 59 > 
     au < crawling ; exists ; 2012 ; Names: A Journal of Onomastics Volume 60 ; 60 > 
 
@@ -3333,7 +3337,7 @@
     param[journal_issn] = 0161-6412
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2001 ; Neurological Research Volume 23 ; 23 > 
     au < doNotProcess ; exists ; 2002 ; Neurological Research Volume 24 ; 24 > 
@@ -3357,7 +3361,7 @@
       issn = 2042-3489
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3365,10 +3369,10 @@
     param[journal_id] = njb
     param[journal_issn] = 2042-3489
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 2011 ; New Journal of Botany Volume 1 ; 1 > 
-    au < expected ; exists ; 2012 ; New Journal of Botany Volume 2 ; 2 > 
+    au < manifest ; exists ; 2012 ; New Journal of Botany Volume 2 ; 2 > 
 
   }
 
@@ -3437,7 +3441,7 @@
     au < manifest ; exists ; 2007 ; Northern History Volume 44 ; 44 > 
     au < manifest ; exists ; 2008 ; Northern History Volume 45 ; 45 > 
     au < manifest ; exists ; 2009 ; Northern History Volume 46 ; 46 > 
-    au < manifest ; exists ; 2010 ; Northern History Volume 47 ; 47 > 
+    au < crawling ; exists ; 2010 ; Northern History Volume 47 ; 47 > 
     au < crawling ; exists ; 2011 ; Northern History Volume 48 ; 48 >  
     au < crawling ; exists ; 2012 ; Northern History Volume 49 ; 49 > 
 
@@ -3461,7 +3465,7 @@
     param[journal_issn] = 1028-415X
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2002 ; Nutritional Neuroscience Volume 5 ; 5 > 
     au < doNotProcess ; exists ; 2003 ; Nutritional Neuroscience Volume 6 ; 6 > 
@@ -3534,9 +3538,9 @@
     au < manifest ; exists ; 2007 ; Oxford German Studies Volume 36 ; 36 > 
     au < manifest ; exists ; 2008 ; Oxford German Studies Volume 37 ; 37 > 
     au < manifest ; exists ; 2009 ; Oxford German Studies Volume 38 ; 38 > 
-    au < manifest ; exists ; 2010 ; Oxford German Studies Volume 39 ; 39 > 
+    au < crawling ; exists ; 2010 ; Oxford German Studies Volume 39 ; 39 > 
     au < crawling ; exists ; 2011 ; Oxford German Studies Volume 40 ; 40 > 
-    au < expected ; exists ; 2012 ; Oxford German Studies Volume 41 ; 41 > 
+    au < crawling ; exists ; 2012 ; Oxford German Studies Volume 41 ; 41 > 
 
   }
 
@@ -3558,7 +3562,7 @@
     param[journal_issn] = 1746-5095
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2004 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 15 ; 15 > 
     au < doNotProcess ; exists ; 2005 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 16 ; 16 > 
@@ -3579,7 +3583,7 @@
       issn = 2046-9047 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3651,9 +3655,9 @@
     au < manifest ; exists ; 2007 ; Palestine Exploration Quarterly Volume 139 ; 139 > 
     au < manifest ; exists ; 2008 ; Palestine Exploration Quarterly Volume 140 ; 140 > 
     au < manifest ; exists ; 2009 ; Palestine Exploration Quarterly Volume 141 ; 141 > 
-    au < manifest ; exists ; 2010 ; Palestine Exploration Quarterly Volume 142 ; 142 > 
+    au < crawling ; exists ; 2010 ; Palestine Exploration Quarterly Volume 142 ; 142 > 
     au < crawling ; exists ; 2011 ; Palestine Exploration Quarterly Volume 143 ; 143 > 
-    au < expected ; exists ; 2014 ; Palestine Exploration Quarterly Volume 144 ; 144 > 
+    au < crawling ; exists ; 2012 ; Palestine Exploration Quarterly Volume 144 ; 144 > 
 
   }
 
@@ -3690,7 +3694,7 @@
       issn = 2047-7724
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3726,8 +3730,8 @@
 
     au < manifest ; exists ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 > 
     au < manifest ; exists ; 2009 ; Pharmaceutical Programming Volume 2 ; 2 > 
-    au < manifest ; exists ; 2010 ; Pharmaceutical Programming Volume 3 ; 3 >  
-    au < manifest ; exists ; 2011 ; Pharmaceutical Programming Volume 4 ; 4 > 
+    au < crawling ; exists ; 2010 ; Pharmaceutical Programming Volume 3 ; 3 >  
+    au < crawling ; exists ; 2011 ; Pharmaceutical Programming Volume 4 ; 4 > 
     au < expected ; exists ; 2012 ; Pharmaceutical Programming Volume 5 ; 5 >
 
   }
@@ -3750,7 +3754,7 @@
     param[journal_issn] = 1083-3196
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 1996 ; Physical Therapy Reviews Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 1997 ; Physical Therapy Reviews Volume 2 ; 2 > 
@@ -3790,7 +3794,7 @@
     param[journal_issn] = 1465-8011
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 1999 ; Plastics, Rubber and Composites Volume 28 ; 28 > 
     au < doNotProcess ; exists ; 2000 ; Plastics, Rubber and Composites Volume 29 ; 29 > 
@@ -3833,9 +3837,9 @@
     au < manifest ; exists ; 2007 ; Post-Medieval Archaeology Volume 41 ; 41 > 
     au < manifest ; exists ; 2008 ; Post-Medieval Archaeology Volume 42 ; 42 > 
     au < manifest ; exists ; 2009 ; Post-Medieval Archaeology Volume 43 ; 43 > 
-    au < manifest ; exists ; 2010 ; Post-Medieval Archaeology Volume 44 ; 44 > 
+    au < crawling ; exists ; 2010 ; Post-Medieval Archaeology Volume 44 ; 44 > 
     au < crawling ; exists ; 2011 ; Post-Medieval Archaeology Volume 45 ; 45 > 
-    au < expected ; exists ; 2012 ; Post-Medieval Archaeology Volume 46 ; 46 > 
+    au < manifest ; exists ; 2012 ; Post-Medieval Archaeology Volume 46 ; 46 > 
 
   }
 
@@ -3857,7 +3861,7 @@
     param[journal_issn] = 0032-5899
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 1999 ; Powder Metallurgy Volume 42 ; 42 > 
     au < doNotProcess ; exists ; 2000 ; Powder Metallurgy Volume 43 ; 43 > 
@@ -3872,7 +3876,7 @@
     au < doNotProcess ; exists ; 2009 ; Powder Metallurgy Volume 52 ; 52 > 
     au < doNotProcess ; exists ; 2010 ; Powder Metallurgy Volume 53 ; 53 > 
     au < doNotProcess ; exists ; 2011 ; Powder Metallurgy Volume 54 ; 54 > 
-    au < expected ; exists ; 2012 ; Powder Metallurgy Volume 55 ; 55 > 
+    au < crawling ; exists ; 2012 ; Powder Metallurgy Volume 55 ; 55 > 
 
   }
 
@@ -3894,7 +3898,7 @@
     param[journal_issn] = 0969-9260
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2003 ; Progress in Palliative Care Volume 11 ; 11 > 
     au < doNotProcess ; exists ; 2004 ; Progress in Palliative Care Volume 12 ; 12 > 
@@ -3905,7 +3909,7 @@
     au < doNotProcess ; exists ; 2009 ; Progress in Palliative Care Volume 17 ; 17 > 
     au < doNotProcess ; exists ; 2010 ; Progress in Palliative Care Volume 18 ; 18 > 
     au < doNotProcess ; exists ; 2011 ; Progress in Palliative Care Volume 19 ; 19 >  
-    au < expected ; exists ; 2012 ; Progress in Palliative Care Volume 20 ; 20 >
+    au < crawling ; exists ; 2012 ; Progress in Palliative Care Volume 20 ; 20 >
 
   }
 
@@ -3936,9 +3940,9 @@
     au < manifest ; exists ; 2007 ; Public Archaeology Volume 6 ; 6 > 
     au < manifest ; exists ; 2008 ; Public Archaeology Volume 7 ; 7 > 
     au < manifest ; exists ; 2009 ; Public Archaeology Volume 8 ; 8 > 
-    au < manifest ; exists ; 2010 ; Public Archaeology Volume 9 ; 9 > 
+    au < crawling ; exists ; 2010 ; Public Archaeology Volume 9 ; 9 > 
     au < crawling ; exists ; 2011 ; Public Archaeology Volume 10 ; 10 > 
-    au < expected ; exists ; 2012 ; Public Archaeology Volume 11 ; 11 > 
+    au < manifest ; exists ; 2012 ; Public Archaeology Volume 11 ; 11 > 
 
   }
 
@@ -3965,9 +3969,9 @@
     au < manifest ; exists ; 2007 ; Publications of the English Goethe Society Volume 76 ; 76 > 
     au < manifest ; exists ; 2008 ; Publications of the English Goethe Society Volume 77 ; 77 > 
     au < manifest ; exists ; 2009 ; Publications of the English Goethe Society Volume 78 ; 78 > 
-    au < manifest ; exists ; 2010 ; Publications of the English Goethe Society Volume 79 ; 79 > 
+    au < crawling ; exists ; 2010 ; Publications of the English Goethe Society Volume 79 ; 79 > 
     au < crawling ; exists ; 2011 ; Publications of the English Goethe Society Volume 80 ; 80 > 
-    au < expected ; exists ; 2012 ; Publications of the English Goethe Society Volume 81 ; 81 > 
+    au < crawling ; exists ; 2012 ; Publications of the English Goethe Society Volume 81 ; 81 > 
 
   }
 
@@ -3989,7 +3993,7 @@
     param[journal_issn] = 1351-0002
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 1999 ; Redox Report Volume 4 ; 4 > 
     au < doNotProcess ; exists ; 2000 ; Redox Report Volume 5 ; 5 > 
@@ -4078,9 +4082,9 @@
     au < manifest ; exists ; 2007 ; Romance Studies Volume 25 ; 25 > 
     au < manifest ; exists ; 2008 ; Romance Studies Volume 26 ; 26 > 
     au < manifest ; exists ; 2009 ; Romance Studies Volume 27 ; 27 > 
-    au < manifest ; exists ; 2010 ; Romance Studies Volume 28 ; 28 > 
+    au < crawling ; exists ; 2010 ; Romance Studies Volume 28 ; 28 > 
     au < crawling ; exists ; 2011 ; Romance Studies Volume 29 ; 29 > 
-    au < expected ; exists ; 2012 ; Romance Studies Volume 30 ; 30 > 
+    au < crawling ; exists ; 2012 ; Romance Studies Volume 30 ; 30 > 
 
   }
 
@@ -4102,7 +4106,7 @@
     param[journal_issn] = 1362-1718
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 1996 ; Science and Technology of Welding & Joining Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 1997 ; Science and Technology of Welding & Joining Volume 2 ; 2 > 
@@ -4174,9 +4178,9 @@
     au < manifest ; exists ; 2007 ; Seventeenth-Century French Studies Volume 29 ; 29 > 
     au < manifest ; exists ; 2008 ; Seventeenth-Century French Studies Volume 30 ; 30 > 
     au < manifest ; exists ; 2009 ; Seventeenth-Century French Studies Volume 31 ; 31 > 
-    au < manifest ; exists ; 2010 ; Seventeenth-Century French Studies Volume 32 ; 32 > 
+    au < crawling ; exists ; 2010 ; Seventeenth-Century French Studies Volume 32 ; 32 > 
     au < crawling ; exists ; 2011 ; Seventeenth-Century French Studies Volume 33 ; 33 > 
-    au < expected ; exists ; 2012 ; Seventeenth-Century French Studies Volume 34 ; 34 > 
+    au < manifest ; exists ; 2012 ; Seventeenth-Century French Studies Volume 34 ; 34 > 
 
   }
 
@@ -4214,7 +4218,7 @@
     au < manifest ; exists ; 2007 ; Slavonica Volume 13 ; 13 > 
     au < manifest ; exists ; 2008 ; Slavonica Volume 14 ; 14 > 
     au < manifest ; exists ; 2009 ; Slavonica Volume 15 ; 15 > 
-    au < manifest ; exists ; 2010 ; Slavonica Volume 16 ; 16 > 
+    au < crawling ; exists ; 2010 ; Slavonica Volume 16 ; 16 > 
     au < crawling ; exists ; 2011 ; Slavonica Volume 17 ; 17 > 
     au < expected ; exists ; 2012 ; Slavonica Volume 18 ; 18 > 
 
@@ -4261,7 +4265,7 @@
     param[journal_issn] = 0267-0844
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
 
     au < doNotProcess ; exists ; 1999 ; Surface Engineering Volume 15 ; 15 > 
     au < doNotProcess ; exists ; 2000 ; Surface Engineering Volume 16 ; 16 > 
@@ -4340,7 +4344,7 @@
     au < manifest ; exists ; 2007 ; Survey Review Volume 39 ; 39 > 
     au < manifest ; exists ; 2008 ; Survey Review Volume 40 ; 40 > 
     au < manifest ; exists ; 2009 ; Survey Review Volume 41 ; 41 > 
-    au < manifest ; exists ; 2010 ; Survey Review Volume 42 ; 42 > 
+    au < crawling ; exists ; 2010 ; Survey Review Volume 42 ; 42 > 
     au < crawling ; exists ; 2011 ; Survey Review Volume 43 ; 43 >  
     au < crawling ; exists ; 2012 ; Survey Review Volume 44 ; 44 > 
 
@@ -4386,8 +4390,8 @@
     au < manifest ; exists ; 2007 ; T'ang Studies Volume 2007 ; 2007 > 
     au < manifest ; exists ; 2008 ; T'ang Studies Volume 2008 ; 2008 > 
     au < manifest ; exists ; 2009 ; T'ang Studies Volume 27 ; 27 > 
-    au < manifest ; exists ; 2010 ; T'ang Studies Volume 2010 ; 2010 > 
-    au < manifest ; exists ; 2011 ; T'ang Studies Volume 2011 ; 2011 > 
+    au < crawling ; exists ; 2010 ; T'ang Studies Volume 2010 ; 2010 > 
+    au < crawling ; exists ; 2011 ; T'ang Studies Volume 2011 ; 2011 > 
     au < crawling ; exists ; 2012 ; T'ang Studies Volume 2012 ; 2012 > 
 
   }
@@ -4446,9 +4450,9 @@
     au < manifest ; exists ; 2007 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2007 ; 2007 ; 34 > 
     au < manifest ; exists ; 2008 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2008 ; 2008 ; 35 > 
     au < manifest ; exists ; 2009 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2009 ; 2009 ; 36 > 
-    au < manifest ; exists ; 2010 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 37 ; 37 ; 37 > 
+    au < crawling ; exists ; 2010 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 37 ; 37 ; 37 > 
     au < crawling ; exists ; 2011 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 38 ; 38 ; 38 > 
-    au < expected ; exists ; 2012 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 39 ; 39 ; 39 > 
+    au < crawling ; exists ; 2012 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 39 ; 39 ; 39 > 
 
   }
 
@@ -4512,9 +4516,9 @@
     au < manifest ; exists ; 2007 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 39 ; 39 > 
     au < manifest ; exists ; 2008 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 40 ; 40 > 
     au < manifest ; exists ; 2009 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 41 ; 41 > 
-    au < manifest ; exists ; 2010 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 42 ; 42 > 
+    au < crawling ; exists ; 2010 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 42 ; 42 > 
     au < crawling ; exists ; 2011 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 43 ; 43 > 
-    au < expected ; exists ; 2012 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 44 ; 44 > 
+    au < crawling ; exists ; 2012 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 44 ; 44 > 
 
   }
 
@@ -4577,9 +4581,9 @@
     au < manifest ; exists ; 2007 ; Textile History Volume 38 ; 38 > 
     au < manifest ; exists ; 2008 ; Textile History Volume 39 ; 39 > 
     au < manifest ; exists ; 2009 ; Textile History Volume 40 ; 40 > 
-    au < manifest ; exists ; 2010 ; Textile History Volume 41 ; 41 > 
+    au < crawling ; exists ; 2010 ; Textile History Volume 41 ; 41 > 
     au < crawling ; exists ; 2011 ; Textile History Volume 42 ; 42 > 
-    au < expected ; exists ; 2012 ; Textile History Volume 43 ; 43 > 
+    au < manifest ; exists ; 2012 ; Textile History Volume 43 ; 43 > 
 
   }
 
@@ -4601,7 +4605,7 @@
     param[journal_issn] = 0020-2967
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2005 ; Transactions of the Institute of Metal Finishing Volume 83 ; 83 > 
     au < doNotProcess ; exists ; 2006 ; Transactions of the Institute of Metal Finishing Volume 84 ; 84 > 
@@ -4658,14 +4662,14 @@
     param[journal_issn] = 1751-5831
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2007 ; Tribology - Materials, Surfaces & Interfaces Volume 1 ; 1 > 
     au < doNotProcess ; exists ; 2008 ; Tribology - Materials, Surfaces & Interfaces Volume 2 ; 2 > 
     au < doNotProcess ; exists ; 2009 ; Tribology - Materials, Surfaces & Interfaces Volume 3 ; 3 > 
     au < doNotProcess ; exists ; 2010 ; Tribology - Materials, Surfaces & Interfaces Volume 4 ; 4 > 
     au < doNotProcess ; exists ; 2011 ; Tribology - Materials, Surfaces & Interfaces Volume 5 ; 5 > 
-    au < expected ; exists ; 2012 ; Tribology - Materials, Surfaces & Interfaces Volume 6 ; 6 > 
+    au < crawling ; exists ; 2012 ; Tribology - Materials, Surfaces & Interfaces Volume 6 ; 6 > 
 
   }
 
@@ -4701,9 +4705,9 @@
     au < manifest ; exists ; 2007 ; Twentieth-Century China Volume 32 ; 32 > 
     au < manifest ; exists ; 2008 ; Twentieth-Century China Volume 33 ; 33 > 
     au < manifest ; exists ; 2009 ; Twentieth-Century China Volume 34 ; 34 > 
-    au < manifest ; exists ; 2010 ; Twentieth-Century China Volume 35 ; 35 > 
+    au < crawling ; exists ; 2010 ; Twentieth-Century China Volume 35 ; 35 > 
     au < crawling ; exists ; 2011 ; Twentieth-Century China Volume 36 ; 36 > 
-    au < manifest ; exists ; 2012 ; Twentieth-Century China Volume 37 ; 37 > 
+    au < crawling ; exists ; 2012 ; Twentieth-Century China Volume 37 ; 37 > 
 
   }
 
@@ -4726,7 +4730,7 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
     comment[moved] = published by Royal Society of Medicine Press from 2010
-    comment[dnp] = manifest pages but html pending plugin workaround or publisher fix
+    comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; exists ; 2004 ; Ultrasound Volume 12 ; 12 > 
     au < doNotProcess ; exists ; 2005 ; Ultrasound Volume 13 ; 13 > 
@@ -4756,7 +4760,7 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
-    au < manifest ; exists ; 2010 ; Usus Antiquior Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; Usus Antiquior Volume 1 ; 1 > 
     au < crawling ; exists ; 2011 ; Usus Antiquior Volume 2 ; 2 >  
     au < crawling ; exists ; 2012 ; Usus Antiquior Volume 3 ; 3 >
 
@@ -4821,8 +4825,8 @@
     au < manifest ; exists ; 2007 ; Vernacular Architecture Volume 38 ; 38 > 
     au < manifest ; exists ; 2008 ; Vernacular Architecture Volume 39 ; 39 > 
     au < manifest ; exists ; 2009 ; Vernacular Architecture Volume 40 ; 40 > 
-    au < manifest ; exists ; 2010 ; Vernacular Architecture Volume 41 ; 41 > 
-    au < manifest ; exists ; 2011 ; Vernacular Architecture Volume 42 ; 42 > 
+    au < crawling ; exists ; 2010 ; Vernacular Architecture Volume 41 ; 41 > 
+    au < crawling ; exists ; 2011 ; Vernacular Architecture Volume 42 ; 42 > 
     au < expected ; exists ; 2012 ; Vernacular Architecture Volume 43 ; 43 > 
 
   }
@@ -4874,9 +4878,9 @@
     au < manifest ; exists ; 2007 ; War & Society Volume 26 ; 26 > 
     au < manifest ; exists ; 2008 ; War & Society Volume 27 ; 27 > 
     au < manifest ; exists ; 2009 ; War & Society Volume 28 ; 28 > 
-    au < manifest ; exists ; 2010 ; War & Society Volume 29 ; 29 > 
+    au < crawling ; exists ; 2010 ; War & Society Volume 29 ; 29 > 
     au < crawling ; exists ; 2011 ; War & Society Volume 30 ; 30 > 
-    au < manifest ; exists ; 2012 ; War & Society Volume 31 ; 31 > 
+    au < crawling ; exists ; 2012 ; War & Society Volume 31 ; 31 > 
 
   }
 
@@ -4898,8 +4902,8 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
-    au < manifest ; exists ; 2010 ; Yorkshire Archaeological Journal Volume 82 ; 82 >
-    au < manifest ; exists ; 2011 ; Yorkshire Archaeological Journal Volume 83 ; 83 >
+    au < crawling ; exists ; 2010 ; Yorkshire Archaeological Journal Volume 82 ; 82 >
+    au < crawling ; exists ; 2011 ; Yorkshire Archaeological Journal Volume 83 ; 83 >
     au < expected ; exists ; 2012 ; Yorkshire Archaeological Journal Volume 84 ; 84 >
 
   }

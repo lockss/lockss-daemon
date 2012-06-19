@@ -457,11 +457,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = forum
 
-    au < down ; crawling ; 2002 ; The Forum Volume 1 ; 1 >
+    au < down ; crawling ; 2002-2003 ; The Forum Volume 1 ; 1 >
     au < down ; crawling ; 2004 ; The Forum Volume 2 ; 2 >
-    au < down ; crawling ; 2005 ; The Forum Volume 3 ; 3 >
+    au < down ; crawling ; 2005-2006 ; The Forum Volume 3 ; 3 >
     au < down ; crawling ; 2006 ; The Forum Volume 4 ; 4 >
-    au < down ; crawling ; 2007 ; The Forum Volume 5 ; 5 >
+    au < down ; crawling ; 2007-2008 ; The Forum Volume 5 ; 5 >
     au < down ; crawling ; 2008 ; The Forum Volume 6 ; 6 >
     au < down ; crawling ; 2009 ; The Forum Volume 7 ; 7 >
     au < down ; crawling ; 2010 ; The Forum Volume 8 ; 8 >
@@ -739,17 +739,6 @@
   {
 
     title <
-      name = Issues in Legal Scholarship ;
-      issn = 1539-8323
-    >
-    
-    comment[scope] = not included (symposia)
-
-  }
-
-  {
-
-    title <
       name = Journal des Economistes et des Etudes Humaines ;
       eissn = 1145-6396
     >
@@ -914,19 +903,6 @@
 
   }
 
-  {
-
-    title <
-      name = Journal of Econometric Methods ; 
-      issn = 2156-6674
-    >
-
-    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
-    param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = jem
-
-  }
-  
   {
 
     title <

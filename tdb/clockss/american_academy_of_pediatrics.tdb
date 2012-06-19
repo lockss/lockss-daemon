@@ -129,7 +129,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; AAP News Volume 30 ; 30 >
       au < doNotProcess ; doNotProcess ; 2010 ; AAP News Volume 31 ; 31 >
       au < released ; crawling ; 2011 ; AAP News Volume 32 ; 32 >
-      au < crawling ; manifest ; 2012 ; AAP News Volume 33 ; 33 >
+      au < crawling ; crawling ; 2012 ; AAP News Volume 33 ; 33 >
 
     }
   
@@ -149,9 +149,9 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
-      au < released ; crawling ; 2008 ; NeoReviews Volume 9 ; 9 >
-      au < released ; crawling ; 2009 ; NeoReviews Volume 10 ; 10 >
-      au < released ; crawling ; 2010 ; NeoReviews Volume 11 ; 11 >
+      au < down ; crawling ; 2008 ; NeoReviews Volume 9 ; 9 >
+      au < down ; crawling ; 2009 ; NeoReviews Volume 10 ; 10 >
+      au < down ; crawling ; 2010 ; NeoReviews Volume 11 ; 11 >
   
     }
     
@@ -205,6 +205,20 @@
     
       pluginSuffix = ClockssHighWirePressH20Plugin
     
+      au < manifest ; exists ; 1948 ; Pediatrics Volume 1 ; 1 >
+      au < manifest ; exists ; 1948 ; Pediatrics Volume 2 ; 2 >
+      au < manifest ; exists ; 1949 ; Pediatrics Volume 3 ; 3 >
+      au < manifest ; exists ; 1949 ; Pediatrics Volume 4 ; 4 >
+      au < manifest ; exists ; 1950 ; Pediatrics Volume 5 ; 5 >
+      au < manifest ; exists ; 1950 ; Pediatrics Volume 6 ; 6 >
+      au < manifest ; exists ; 1951 ; Pediatrics Volume 7 ; 7 >
+      au < manifest ; exists ; 1951 ; Pediatrics Volume 8 ; 8 >
+      au < manifest ; exists ; 1952 ; Pediatrics Volume 9 ; 9 >
+      au < manifest ; exists ; 1952 ; Pediatrics Volume 10 ; 10 >
+      au < manifest ; exists ; 1953 ; Pediatrics Volume 11 ; 11 >
+      au < manifest ; exists ; 1953 ; Pediatrics Volume 12 ; 12 >
+      au < manifest ; exists ; 1954 ; Pediatrics Volume 13 ; 13 >
+      au < manifest ; exists ; 1954 ; Pediatrics Volume 14 ; 14 >
       au < manifest ; exists ; 1955 ; Pediatrics Volume 15 ; 15 >
       au < manifest ; exists ; 1955 ; Pediatrics Volume 16 ; 16 >
       au < manifest ; exists ; 1956 ; Pediatrics Volume 17 ; 17 >
@@ -393,6 +407,7 @@
 
     title <
       name = Red Book Online ;
+      type = book ;
       issn = 1080-0131 ;
       eissn = 1544-9300 ;
       issnl = 1080-0131
@@ -403,7 +418,7 @@
     {
 
       comment[0] = This is a serialized book that requires a slight change to the H10 plugin, do not process unless the change is ready
-      pluginSuffix = ClockssHighWirePlugin
+      pluginSuffix = needs.plugin
 
       au < doNotProcess ; doNotProcess ; 2003 ; Red Book Online Volume 2003 ; 2003 >
       au < doNotProcess ; doNotProcess ; 2006 ; Red Book Online Volume 2006 ; 2006 >

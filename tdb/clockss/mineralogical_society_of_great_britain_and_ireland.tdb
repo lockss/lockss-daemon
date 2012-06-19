@@ -1,0 +1,72 @@
+{
+
+  publisher <
+    name = Mineralogical Society of Great Britain and Ireland
+  >
+
+  attr[contract] = 2011
+
+  plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+  implicit < status1 ; status ; year ; name ; param[volume_name] >
+ 
+  {
+  
+    title <
+      name = Clay Minerals ;
+      issn = 0009-8558 ;
+      eissn = 1471-8030 ;
+      issnl = 0009-8558
+    >
+    
+    param[base_url] = http://claymin.geoscienceworld.org/
+ 
+    au < exists ; exists ; 1998 ; Clay Minerals Volume 33 ; 33 >
+    au < exists ; exists ; 1999 ; Clay Minerals Volume 34 ; 34 >
+    au < exists ; exists ; 2000 ; Clay Minerals Volume 35 ; 35 >
+    au < exists ; exists ; 2001 ; Clay Minerals Volume 36 ; 36 >
+    au < exists ; exists ; 2002 ; Clay Minerals Volume 37 ; 37 >
+    au < exists ; exists ; 2003 ; Clay Minerals Volume 38 ; 38 >
+    au < exists ; exists ; 2004 ; Clay Minerals Volume 39 ; 39 >
+    au < exists ; exists ; 2005 ; Clay Minerals Volume 40 ; 40 >
+    au < exists ; exists ; 2006 ; Clay Minerals Volume 41 ; 41 >
+    au < exists ; exists ; 2007 ; Clay Minerals Volume 42 ; 42 >
+    au < exists ; exists ; 2008 ; Clay Minerals Volume 43 ; 43 >
+    au < exists ; exists ; 2009 ; Clay Minerals Volume 44 ; 44 >
+    au < exists ; exists ; 2010 ; Clay Minerals Volume 45 ; 45 >
+    au < exists ; exists ; 2011 ; Clay Minerals Volume 46 ; 46 >
+    au < exists ; exists ; 2012 ; Clay Minerals Volume 47 ; 47 >
+    
+  }
+
+  {
+  
+    title <
+      name = Mineralogical Magazine ;
+      issn = 0026-461X ;
+      eissn = 1471-8022 ;
+      issnl = 0026-461X
+    >
+    param[base_url] = http://minmag.geoscienceworld.org/
+    
+    comment[vol60] = Vol 60 has irregular contents. A few pdfs, some just tables of contents.
+ 
+    au < exists ; exists ; 1996 ; Mineralogical Magazine 60 [tables of contents only] ; 60 >
+    au < exists ; exists ; 1997 ; Mineralogical Magazine 61 ; 61 >
+    au < exists ; exists ; 1998 ; Mineralogical Magazine 62 ; 62 >
+    au < exists ; exists ; 1999 ; Mineralogical Magazine 63 ; 63 >
+    au < exists ; exists ; 2000 ; Mineralogical Magazine 64 ; 64 >
+    au < exists ; exists ; 2001 ; Mineralogical Magazine 65 ; 65 >
+    au < exists ; exists ; 2002 ; Mineralogical Magazine 66 ; 66 >
+    au < exists ; exists ; 2003 ; Mineralogical Magazine 67 ; 67 >
+    au < exists ; exists ; 2004 ; Mineralogical Magazine 68 ; 68 >
+    au < exists ; exists ; 2005 ; Mineralogical Magazine 69 ; 69 >
+    au < exists ; exists ; 2006 ; Mineralogical Magazine 70 ; 70 >
+    au < exists ; exists ; 2007 ; Mineralogical Magazine 71 ; 71 >
+    au < exists ; exists ; 2008 ; Mineralogical Magazine 72 ; 72 >
+    au < exists ; exists ; 2009 ; Mineralogical Magazine 73 ; 73 >
+    au < exists ; exists ; 2010 ; Mineralogical Magazine 74 ; 74 >
+    au < exists ; exists ; 2011 ; Mineralogical Magazine 75 ; 75 >
+    au < exists ; exists ; 2012 ; Mineralogical Magazine 76 ; 76 >
+  }
+
+}

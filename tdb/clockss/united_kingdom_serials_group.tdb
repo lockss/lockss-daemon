@@ -22,9 +22,14 @@
 
     title <
       name = Insights: the UKSG journal ;
-      issn = 2048-7754
+      eissn = 2048-7754
     >
-    comment[0] = new title December 2011, volumes forthcoming. need eissn to determine manifest page
+    
+    param[journal_issn] = 2048-7754
+    implicit < status1 ; status ; year ; name ; param[volume_name]>
+    
+    au < manifest ; exists ; 2012 ; Insights: the UKSG journal Volume 25 ; 25 >
+    
   }
 
   {

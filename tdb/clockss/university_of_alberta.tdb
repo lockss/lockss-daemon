@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = University of Alberta
+  >
+
+  {
+
+    attr[contract] = 2011
+    comment[eblip] = Only this one title - "Evidence Based Library and Information Practice" is participating in CLOCKSS. No other titles are forthcoming.
+    plugin = org.lockss.plugin.universityofalberta.ClockssUniversityOfAlbertaPlugin 
+    param[base_url] = http://ejournals.library.ualberta.ca/
+    implicit < status1 ; status ; year ; name ; param[year] ; volume >
+
+    {
+    
+      title <
+        name = Evidence Based Library and Information Practice
+      >
+
+      param[journal_id] = eblip
+
+      au < released ; crawling ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 >
+      au < released ; crawling ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 >
+      au < released ; crawling ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 >
+      au < released ; crawling ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 >
+      au < released ; crawling ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 ; 5 >
+      au < released ; crawling ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 ; 6 >
+      au < crawling ; exists ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 ; 7 >
+
+    }
+
+  }
+
+}

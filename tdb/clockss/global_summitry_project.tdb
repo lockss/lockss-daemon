@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = The Global Summitry Project
+  >
+  
+    attr[contract] = 2012
+
+  {
+  
+    title < 
+      name = Global Summitry Series 
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://globalsummitryproject.net/
+    param[journal_abbr] = global-summitry-series
+    implicit < status1 ; status ; year ; name ; param[volume] >
+
+    au < exists ; exists ; 2011-2012 ; Global Summitry Series Volume 1 ; 1 >
+    
+  }
+
+}
