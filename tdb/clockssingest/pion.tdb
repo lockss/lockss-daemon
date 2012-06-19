@@ -33,28 +33,28 @@
       au < crawling ; exists ; 1975 ; Environment and Planning A Volume 7 ; 7 >
       au < crawling ; exists ; 1976 ; Environment and Planning A Volume 8 ; 8 >
       au < crawling ; exists ; 1977 ; Environment and Planning A Volume 9 ; 9 >
-      au < released ; manifest ; 1978 ; Environment and Planning A Volume 10 ; 10 >
-      au < released ; manifest ; 1979 ; Environment and Planning A Volume 11 ; 11 >
-      au < released ; manifest ; 1980 ; Environment and Planning A Volume 12 ; 12 >
-      au < released ; manifest ; 1981 ; Environment and Planning A Volume 13 ; 13 >
-      au < released ; manifest ; 1982 ; Environment and Planning A Volume 14 ; 14 >
-      au < released ; manifest ; 1983 ; Environment and Planning A Volume 15 ; 15 >
-      au < released ; manifest ; 1984 ; Environment and Planning A Volume 16 ; 16 >
-      au < released ; manifest ; 1985 ; Environment and Planning A Volume 17 ; 17 >
-      au < released ; manifest ; 1986 ; Environment and Planning A Volume 18 ; 18 >
-      au < released ; manifest ; 1987 ; Environment and Planning A Volume 19 ; 19 >
-      au < released ; manifest ; 1988 ; Environment and Planning A Volume 20 ; 20 >
-      au < released ; manifest ; 1989 ; Environment and Planning A Volume 21 ; 21 >
-      au < released ; manifest ; 1990 ; Environment and Planning A Volume 22 ; 22 >
-      au < released ; manifest ; 1991 ; Environment and Planning A Volume 23 ; 23 >
-      au < released ; manifest ; 1992 ; Environment and Planning A Volume 24 ; 24 >
+      au < released ; crawling ; 1978 ; Environment and Planning A Volume 10 ; 10 >
+      au < released ; crawling ; 1979 ; Environment and Planning A Volume 11 ; 11 >
+      au < released ; crawling ; 1980 ; Environment and Planning A Volume 12 ; 12 >
+      au < released ; crawling ; 1981 ; Environment and Planning A Volume 13 ; 13 >
+      au < released ; crawling ; 1982 ; Environment and Planning A Volume 14 ; 14 >
+      au < released ; crawling ; 1983 ; Environment and Planning A Volume 15 ; 15 >
+      au < released ; crawling ; 1984 ; Environment and Planning A Volume 16 ; 16 >
+      au < released ; crawling ; 1985 ; Environment and Planning A Volume 17 ; 17 >
+      au < released ; crawling ; 1986 ; Environment and Planning A Volume 18 ; 18 >
+      au < released ; crawling ; 1987 ; Environment and Planning A Volume 19 ; 19 >
+      au < released ; crawling ; 1988 ; Environment and Planning A Volume 20 ; 20 >
+      au < released ; crawling ; 1989 ; Environment and Planning A Volume 21 ; 21 >
+      au < released ; crawling ; 1990 ; Environment and Planning A Volume 22 ; 22 >
+      au < released ; crawling ; 1991 ; Environment and Planning A Volume 23 ; 23 >
+      au < released ; crawling ; 1992 ; Environment and Planning A Volume 24 ; 24 >
       au < crawling ; exists ; 1993 ; Environment and Planning A Volume 25 ; 25 >
-      au < released ; manifest ; 1994 ; Environment and Planning A Volume 26 ; 26 >
-      au < released ; manifest ; 1995 ; Environment and Planning A Volume 27 ; 27 >
-      au < released ; manifest ; 1996 ; Environment and Planning A Volume 28 ; 28 >
-      au < released ; manifest ; 1997 ; Environment and Planning A Volume 29 ; 29 >
-      au < released ; manifest ; 1998 ; Environment and Planning A Volume 30 ; 30 >
-      au < released ; manifest ; 1999 ; Environment and Planning A Volume 31 ; 31 >
+      au < released ; crawling ; 1994 ; Environment and Planning A Volume 26 ; 26 >
+      au < released ; crawling ; 1995 ; Environment and Planning A Volume 27 ; 27 >
+      au < released ; crawling ; 1996 ; Environment and Planning A Volume 28 ; 28 >
+      au < released ; crawling ; 1997 ; Environment and Planning A Volume 29 ; 29 >
+      au < released ; crawling ; 1998 ; Environment and Planning A Volume 30 ; 30 >
+      au < released ; crawling ; 1999 ; Environment and Planning A Volume 31 ; 31 >
       au < crawling ; exists ; 2000 ; Environment and Planning A Volume 32 ; 32 >
       au < crawling ; exists ; 2001 ; Environment and Planning A Volume 33 ; 33 >
       au < crawling ; exists ; 2002 ; Environment and Planning A Volume 34 ; 34 >
@@ -63,7 +63,7 @@
       au < crawling ; exists ; 2005 ; Environment and Planning A Volume 37 ; 37 >
       au < crawling ; exists ; 2006 ; Environment and Planning A Volume 38 ; 38 >
       au < crawling ; exists ; 2007 ; Environment and Planning A Volume 39 ; 39 >
-      au < released ; manifest ; 2008 ; Environment and Planning A Volume 40 ; 40 >
+      au < released ; crawling ; 2008 ; Environment and Planning A Volume 40 ; 40 >
       au < crawling ; exists ; 2009 ; Environment and Planning A Volume 41 ; 41 >
       au < released ; crawling ; 2010 ; Environment and Planning A Volume 42 ; 42 >
       au < released ; crawling ; 2011 ; Environment and Planning A Volume 43 ; 43 >
@@ -84,7 +84,7 @@
       param[journal_code] = epb
       param[short_journal_code] = B
       
-      au < released ; manifest ; 1974 ; Environment and Planning B: Planning and Design Volume 1 ; 1 >
+      au < released ; crawling ; 1974 ; Environment and Planning B: Planning and Design Volume 1 ; 1 >
       au < crawling ; exists ; 1975 ; Environment and Planning B: Planning and Design Volume 2 ; 2 >
       au < crawling ; exists ; 1976 ; Environment and Planning B: Planning and Design Volume 3 ; 3 >
       au < crawling ; exists ; 1977 ; Environment and Planning B: Planning and Design Volume 4 ; 4 >
@@ -243,8 +243,8 @@
       au < crawling ; exists ; 2003-2007 ; High Temperatures - High Pressures Volume 35/36 ; 35-36 ; 35 >
       au < crawling ; exists ; 2008 ; High Temperatures - High Pressures Volume 37 ; 37 ; 37 >
       au < crawling ; exists ; 2009 ; High Temperatures - High Pressures Volume 38 ; 38 ; 38 >
-      au < released ; manifest ; 2010 ; High Temperatures - High Pressures Volume 39 ; 39 ; 39 >
-      au < released ; manifest ; 2011 ; High Temperatures - High Pressures Volume 40 ; 40 ; 40 >
+      au < released ; crawling ; 2010 ; High Temperatures - High Pressures Volume 39 ; 39 ; 39 >
+      au < released ; crawling ; 2011 ; High Temperatures - High Pressures Volume 40 ; 40 ; 40 >
       au < crawling ; exists ; 2012 ; High Temperatures - High Pressures Volume 41 ; 41 ; 41 >
   
     }
@@ -323,8 +323,8 @@
     
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     
-    au < released ; manifest ; 2010 ; i-Perception Volume 1 ; 1 >
-    au < released ; manifest ; 2011 ; i-Perception Volume 2 ; 2 >
+    au < released ; crawling ; 2010 ; i-Perception Volume 1 ; 1 >
+    au < released ; crawling ; 2011 ; i-Perception Volume 2 ; 2 >
     au < crawling ; exists ; 2012 ; i-Perception Volume 3 ; 3 >
   
   }

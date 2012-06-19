@@ -31,8 +31,8 @@
       au < manifest ; exists ; 2007 ; BMC Anesthesiology Volume 7 ; 7 >
       au < manifest ; exists ; 2008 ; BMC Anesthesiology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Anesthesiology Volume 9 ; 9 >
-      au < released ; manifest ; 2010 ; BMC Anesthesiology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Anesthesiology Volume 11 ; 11 >
+      au < released ; crawling ; 2010 ; BMC Anesthesiology Volume 10 ; 10 >
+      au < released ; crawling ; 2011 ; BMC Anesthesiology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Anesthesiology Volume 12 ; 12 >
       
     }
@@ -57,8 +57,8 @@
       au < manifest ; exists ; 2007 ; BMC Biochemistry Volume 8 ; 8 >
       au < manifest ; exists ; 2008 ; BMC Biochemistry Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Biochemistry Volume 10 ; 10 >
-      au < released ; manifest ; 2010 ; BMC Biochemistry Volume 11 ; 11 >
-      au < released ; manifest ; 2011 ; BMC Biochemistry Volume 12 ; 12 >
+      au < released ; crawling ; 2010 ; BMC Biochemistry Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Biochemistry Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Biochemistry Volume 13 ; 13 >
 
     }
@@ -107,7 +107,7 @@
       au < manifest ; exists ; 2008 ; BMC Biology Volume 6 ; 6 >
       au < manifest ; exists ; 2009 ; BMC Biology Volume 7 ; 7 >
       au < manifest ; exists ; 2010 ; BMC Biology Volume 8 ; 8 >
-      au < released ; manifest ; 2011 ; BMC Biology Volume 9 ; 9 >
+      au < released ; crawling ; 2011 ; BMC Biology Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; BMC Biology Volume 10 ; 10 >
 
     }
@@ -131,8 +131,8 @@
       au < manifest ; exists ; 2007 ; BMC Biotechnology Volume 7 ; 7 >
       au < manifest ; exists ; 2008 ; BMC Biotechnology Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Biotechnology Volume 9 ; 9 >
-      au < released ; manifest ; 2010 ; BMC Biotechnology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Biotechnology Volume 11 ; 11 >
+      au < released ; crawling ; 2010 ; BMC Biotechnology Volume 10 ; 10 >
+      au < released ; crawling ; 2011 ; BMC Biotechnology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Biotechnology Volume 12 ; 12 >
 
     }
@@ -157,7 +157,7 @@
       au < manifest ; exists ; 2008 ; BMC Blood Disorders Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Blood Disorders Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Blood Disorders Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Blood Disorders Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Blood Disorders Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Blood Disorders Volume 12 ; 12 >
 
     }
@@ -182,7 +182,7 @@
       au < manifest ; exists ; 2008 ; BMC Cancer Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Cancer Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Cancer Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Cancer Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Cancer Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Cancer Volume 12 ; 12 >
 
     }
@@ -208,7 +208,7 @@
       au < manifest ; exists ; 2008 ; BMC Cardiovascular Disorders Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Cardiovascular Disorders Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Cardiovascular Disorders Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Cardiovascular Disorders Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Cardiovascular Disorders Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Cardiovascular Disorders Volume 12 ; 12 >
 
     }
@@ -234,7 +234,7 @@
       au < manifest ; exists ; 2008 ; BMC Cell Biology Volume 9 ; 9 >
       au < crawling ; exists ; 2009 ; BMC Cell Biology Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Cell Biology Volume 11 ; 11 >
-      au < released ; manifest ; 2011 ; BMC Cell Biology Volume 12 ; 12 >
+      au < released ; crawling ; 2011 ; BMC Cell Biology Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Cell Biology Volume 13 ; 13 >
 
     }
@@ -259,7 +259,7 @@
       au < manifest ; exists ; 2008 ; BMC Chemical Biology Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Chemical Biology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Chemical Biology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Chemical Biology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Chemical Biology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Chemical Biology Volume 12 ; 12 >
 
     }
@@ -284,7 +284,7 @@
       au < manifest ; exists ; 2008 ; BMC Clinical Pathology Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Clinical Pathology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Clinical Pathology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Clinical Pathology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Clinical Pathology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Clinical Pathology Volume 12 ; 12 >
 
     }
@@ -309,7 +309,7 @@
       au < manifest ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
 
     }
@@ -334,7 +334,7 @@
       au < manifest ; exists ; 2008 ; BMC Complementary and Alternative Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Complementary and Alternative Medicine Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Complementary and Alternative Medicine Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Complementary and Alternative Medicine Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Complementary and Alternative Medicine Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Complementary and Alternative Medicine Volume 12 ; 12 >
 
     }
@@ -359,7 +359,7 @@
       au < manifest ; exists ; 2008 ; BMC Dermatology Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Dermatology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Dermatology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Dermatology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Dermatology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Dermatology Volume 12 ; 12 >
 
     }
@@ -384,7 +384,7 @@
       au < manifest ; exists ; 2008 ; BMC Developmental Biology Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Developmental Biology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Developmental Biology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Developmental Biology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Developmental Biology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Developmental Biology Volume 12 ; 12 >
       
     }
@@ -409,7 +409,7 @@
       au < manifest ; exists ; 2008 ; BMC Ear, Nose and Throat Disorders Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Ear, Nose and Throat Disorders Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Ear, Nose and Throat Disorders Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Ear, Nose and Throat Disorders Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Ear, Nose and Throat Disorders Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Ear, Nose and Throat Disorders Volume 12 ; 12 >
 
     }
@@ -434,7 +434,7 @@
       au < manifest ; exists ; 2008 ; BMC Ecology Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Ecology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Ecology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Ecology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Ecology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Ecology Volume 12 ; 12 >
 
     }
@@ -459,7 +459,7 @@
       au < manifest ; exists ; 2008 ; BMC Emergency Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Emergency Medicine Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Emergency Medicine Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Emergency Medicine Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Emergency Medicine Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Emergency Medicine Volume 12 ; 12 >
 
     }
@@ -484,7 +484,7 @@
       au < manifest ; exists ; 2008 ; BMC Endocrine Disorders Volume 8 ; 8 >
       au < crawling ; exists ; 2009 ; BMC Endocrine Disorders Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Endocrine Disorders Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Endocrine Disorders Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Endocrine Disorders Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Endocrine Disorders Volume 12 ; 12 >
 
     }
@@ -535,7 +535,7 @@
       au < manifest ; exists ; 2008 ; BMC Family Practice Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Family Practice Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Family Practice Volume 11 ; 11 >
-      au < released ; manifest ; 2011 ; BMC Family Practice Volume 12 ; 12 >
+      au < released ; crawling ; 2011 ; BMC Family Practice Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Family Practice Volume 13 ; 13 >
 
     }
@@ -560,7 +560,7 @@
       au < manifest ; exists ; 2008 ; BMC Gastroenterology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Gastroenterology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Gastroenterology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Gastroenterology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Gastroenterology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Gastroenterology Volume 12 ; 12 >
 
     }
@@ -612,7 +612,7 @@
       au < manifest ; exists ; 2008 ; BMC Genomics Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Genomics Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Genomics Volume 11 ; 11 >
-      au < released ; manifest ; 2011 ; BMC Genomics Volume 12 ; 12 >
+      au < released ; crawling ; 2011 ; BMC Genomics Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Genomics Volume 13; 13 >
 
     }
@@ -637,7 +637,7 @@
       au < manifest ; exists ; 2008 ; BMC Geriatrics Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Geriatrics Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Geriatrics Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Geriatrics Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Geriatrics Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Geriatrics Volume 12 ; 12 >
 
     }
@@ -662,7 +662,7 @@
       au < manifest ; exists ; 2008 ; BMC Health Services Research Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Health Services Research Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Health Services Research Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Health Services Research Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Health Services Research Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Health Services Research Volume 12 ; 12 >
 
     }
@@ -688,7 +688,7 @@
       au < manifest ; exists ; 2008 ; BMC Immunology Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Immunology Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Immunology Volume 11 ; 11 >
-      au < released ; manifest ; 2011 ; BMC Immunology Volume 12 ; 12 >
+      au < released ; crawling ; 2011 ; BMC Immunology Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Immunology Volume 13 ; 13 >
 
     }
@@ -713,7 +713,7 @@
       au < manifest ; exists ; 2008 ; BMC Infectious Diseases Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Infectious Diseases Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Infectious Diseases Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Infectious Diseases Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Infectious Diseases Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Infectious Diseases Volume 12 ; 12 >
 
     }
@@ -738,7 +738,7 @@
       au < manifest ; exists ; 2008 ; BMC International Health and Human Rights Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC International Health and Human Rights Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC International Health and Human Rights Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC International Health and Human Rights Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC International Health and Human Rights Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC International Health and Human Rights Volume 12 ; 12 >
 
     }
@@ -763,7 +763,7 @@
       au < manifest ; exists ; 2008 ; BMC Medical Education Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Medical Education Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Medical Education Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Medical Education Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Medical Education Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Medical Education Volume 12 ; 12 >
 
     }
@@ -789,7 +789,7 @@
       au < manifest ; exists ; 2008 ; BMC Medical Ethics Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Medical Ethics Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Medical Ethics Volume 11 ; 11 >
-      au < released ; manifest ; 2011 ; BMC Medical Ethics Volume 12 ; 12 >
+      au < released ; crawling ; 2011 ; BMC Medical Ethics Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Medical Ethics Volume 13 ; 13 >
 
     }
@@ -815,7 +815,7 @@
       au < manifest ; exists ; 2008 ; BMC Medical Genetics Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Medical Genetics Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Medical Genetics Volume 11 ; 11 >
-      au < released ; manifest ; 2011 ; BMC Medical Genetics Volume 12 ; 12 >
+      au < released ; crawling ; 2011 ; BMC Medical Genetics Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Medical Genetics Volume 13 ; 13 >
 
     }
@@ -840,7 +840,7 @@
       au < manifest ; exists ; 2008 ; BMC Medical Imaging Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Medical Imaging Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Medical Imaging Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Medical Imaging Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Medical Imaging Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Medical Imaging Volume 12 ; 12 >
 
     }
@@ -865,7 +865,7 @@
       au < manifest ; exists ; 2008 ; BMC Medical Informatics and Decision Making Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Medical Informatics and Decision Making Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Medical Informatics and Decision Making Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Medical Informatics and Decision Making Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Medical Informatics and Decision Making Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Medical Informatics and Decision Making Volume 12 ; 12 >
 
     }
@@ -890,7 +890,7 @@
       au < manifest ; exists ; 2008 ; BMC Medical Research Methodology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Medical Research Methodology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Medical Research Methodology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Medical Research Methodology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Medical Research Methodology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Medical Research Methodology Volume 12 ; 12 >
 
     }
@@ -913,7 +913,7 @@
       au < manifest ; exists ; 2008 ; BMC Medicine Volume 6 ; 6 >
       au < manifest ; exists ; 2009 ; BMC Medicine Volume 7 ; 7 >
       au < manifest ; exists ; 2010 ; BMC Medicine Volume 8 ; 8 >
-      au < released ; manifest ; 2011 ; BMC Medicine Volume 9 ; 9 >
+      au < released ; crawling ; 2011 ; BMC Medicine Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; BMC Medicine Volume 10 ; 10 >
 
     }
@@ -938,7 +938,7 @@
       au < manifest ; exists ; 2008 ; BMC Microbiology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Microbiology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Microbiology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Microbiology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Microbiology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Microbiology Volume 12 ; 12 >
 
     }
@@ -964,7 +964,7 @@
       au < manifest ; exists ; 2008 ; BMC Molecular Biology Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Molecular Biology Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Molecular Biology Volume 11 ; 11 >
-      au < released ; manifest ; 2011 ; BMC Molecular Biology Volume 12 ; 12 >
+      au < released ; crawling ; 2011 ; BMC Molecular Biology Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Molecular Biology Volume 13 ; 13 >
 
     }
@@ -990,7 +990,7 @@
       au < manifest ; exists ; 2008 ; BMC Musculoskeletal Disorders Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Musculoskeletal Disorders Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Musculoskeletal Disorders Volume 11 ; 11 >
-      au < released ; manifest ; 2011 ; BMC Musculoskeletal Disorders Volume 12 ; 12 >
+      au < released ; crawling ; 2011 ; BMC Musculoskeletal Disorders Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Musculoskeletal Disorders Volume 13 ; 13 >
 
     }
@@ -1016,7 +1016,7 @@
       au < manifest ; exists ; 2008 ; BMC Nephrology Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Nephrology Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Nephrology Volume 11 ; 11 >
-      au < released ; manifest ; 2011 ; BMC Nephrology Volume 12 ; 12 >
+      au < released ; crawling ; 2011 ; BMC Nephrology Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Nephrology Volume 13 ; 13 >
 
     }
@@ -1041,7 +1041,7 @@
       au < manifest ; exists ; 2008 ; BMC Neurology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Neurology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Neurology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Neurology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Neurology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Neurology Volume 12 ; 12 >
 
     }
@@ -1067,7 +1067,7 @@
       au < manifest ; exists ; 2008 ; BMC Neuroscience Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; BMC Neuroscience Volume 10 ; 10 >
       au < manifest ; exists ; 2010 ; BMC Neuroscience Volume 11 ; 11 >
-      au < released ; manifest ; 2011 ; BMC Neuroscience Volume 12 ; 12 >
+      au < released ; crawling ; 2011 ; BMC Neuroscience Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Neuroscience Volume 13 ; 13 >
 
     }
@@ -1092,7 +1092,7 @@
       au < manifest ; exists ; 2008 ; BMC Nuclear Medicine Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Nuclear Medicine Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Nuclear Medicine Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Nuclear Medicine Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Nuclear Medicine Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Nuclear Medicine Volume 12 ; 12 >
 
     }
@@ -1116,7 +1116,7 @@
       au < manifest ; exists ; 2008 ; BMC Nursing Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; BMC Nursing Volume 8 ; 8 >
       au < manifest ; exists ; 2010 ; BMC Nursing Volume 9 ; 9 >
-      au < released ; manifest ; 2011 ; BMC Nursing Volume 10 ; 10 >
+      au < released ; crawling ; 2011 ; BMC Nursing Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; BMC Nursing Volume 11 ; 11 >
 
     }
@@ -1141,7 +1141,7 @@
       au < manifest ; exists ; 2008 ; BMC Ophthalmology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Ophthalmology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Ophthalmology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Ophthalmology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Ophthalmology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Ophthalmology Volume 12 ; 12 >
 
     }
@@ -1166,7 +1166,7 @@
       au < manifest ; exists ; 2008 ; BMC Oral Health Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Oral Health Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Oral Health Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Oral Health Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Oral Health Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Oral Health Volume 12 ; 12 >
 
     }
@@ -1189,7 +1189,7 @@
       au < manifest ; exists ; 2008 ; BMC Palliative Care Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; BMC Palliative Care Volume 8 ; 8 >
       au < manifest ; exists ; 2010 ; BMC Palliative Care Volume 9 ; 9 >
-      au < released ; manifest ; 2011 ; BMC Palliative Care Volume 10 ; 10 >
+      au < released ; crawling ; 2011 ; BMC Palliative Care Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; BMC Palliative Care Volume 11 ; 11 >
 
     }
@@ -1214,7 +1214,7 @@
       au < manifest ; exists ; 2008 ; BMC Pediatrics Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Pediatrics Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Pediatrics Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Pediatrics Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Pediatrics Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Pediatrics Volume 12 ; 12 >
 
     }
@@ -1238,8 +1238,8 @@
       au < manifest ; exists ; 2007 ; BMC Pharmacology Volume 7 ; 7 >
       au < manifest ; exists ; 2008 ; BMC Pharmacology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Pharmacology Volume 9 ; 9 >
-      au < released ; manifest ; 2010 ; BMC Pharmacology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Pharmacology Volume 11 ; 11 >
+      au < released ; crawling ; 2010 ; BMC Pharmacology Volume 10 ; 10 >
+      au < released ; crawling ; 2011 ; BMC Pharmacology Volume 11 ; 11 >
 
     }
 
@@ -1263,7 +1263,7 @@
       au < manifest ; exists ; 2008 ; BMC Physiology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Physiology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Physiology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Physiology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Physiology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Physiology Volume 12 ; 12 >
 
     }
@@ -1288,7 +1288,7 @@
       au < manifest ; exists ; 2008 ; BMC Plant Biology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Plant Biology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Plant Biology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Plant Biology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Plant Biology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Plant Biology Volume 12 ; 12 >
 
     }
@@ -1313,7 +1313,7 @@
       au < manifest ; exists ; 2008 ; BMC Pregnancy and Childbirth Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Pregnancy and Childbirth Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Pregnancy and Childbirth Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Pregnancy and Childbirth Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Pregnancy and Childbirth Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Pregnancy and Childbirth Volume 12 ; 12 >
 
     }
@@ -1338,7 +1338,7 @@
       au < manifest ; exists ; 2008 ; BMC Psychiatry Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Psychiatry Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Psychiatry Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Psychiatry Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Psychiatry Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Psychiatry Volume 12 ; 12 >
 
     }
@@ -1363,7 +1363,7 @@
       au < manifest ; exists ; 2008 ; BMC Public Health Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Public Health Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Public Health Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Public Health Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Public Health Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Public Health Volume 12 ; 12 >
 
     }
@@ -1388,7 +1388,7 @@
       au < manifest ; exists ; 2008 ; BMC Pulmonary Medicine Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Pulmonary Medicine Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Pulmonary Medicine Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Pulmonary Medicine Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Pulmonary Medicine Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Pulmonary Medicine Volume 12 ; 12 >
 
     }
@@ -1413,7 +1413,7 @@
       au < manifest ; exists ; 2008 ; BMC Structural Biology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Structural Biology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Structural Biology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Structural Biology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Structural Biology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Structural Biology Volume 12 ; 12 >
 
     }
@@ -1438,7 +1438,7 @@
       au < manifest ; exists ; 2008 ; BMC Surgery Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Surgery Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Surgery Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Surgery Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Surgery Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Surgery Volume 12 ; 12 >
 
     }
@@ -1457,7 +1457,7 @@
       au < manifest ; exists ; 2008 ; BMC Systems Biology Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; BMC Systems Biology Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; BMC Systems Biology Volume 4 ; 4 >
-      au < released ; manifest ; 2011 ; BMC Systems Biology Volume 5 ; 5 >
+      au < released ; crawling ; 2011 ; BMC Systems Biology Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; BMC Systems Biology Volume 6 ; 6 >
       au < expected ; exists ; 2013 ; BMC Systems Biology Volume 7 ; 7 >
       au < expected ; exists ; 2014 ; BMC Systems Biology Volume 8 ; 8 >
@@ -1485,7 +1485,7 @@
       au < manifest ; exists ; 2008 ; BMC Urology Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Urology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Urology Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Urology Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Urology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Urology Volume 12 ; 12 >
 
     }
@@ -1506,7 +1506,7 @@
       au < manifest ; exists ; 2008 ; BMC Veterinary Research Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; BMC Veterinary Research Volume 5 ; 5 >
       au < manifest ; exists ; 2010 ; BMC Veterinary Research Volume 6 ; 6 >
-      au < released ; manifest ; 2011 ; BMC Veterinary Research Volume 7 ; 7 >
+      au < released ; crawling ; 2011 ; BMC Veterinary Research Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; BMC Veterinary Research Volume 8 ; 8 >
       au < expected ; exists ; 2013 ; BMC Veterinary Research Volume 9 ; 9 >
       au < expected ; exists ; 2014 ; BMC Veterinary Research Volume 10 ; 10 >
@@ -1533,7 +1533,7 @@
       au < manifest ; exists ; 2008 ; BMC Women's Health Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; BMC Women's Health Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; BMC Women's Health Volume 10 ; 10 >
-      au < released ; manifest ; 2011 ; BMC Women's Health Volume 11 ; 11 >
+      au < released ; crawling ; 2011 ; BMC Women's Health Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Women's Health Volume 12 ; 12 >
 
     }
@@ -1587,7 +1587,7 @@
       au < manifest ; exists ; 2007 ; AIDS Research and Therapy Volume 4 ; 4 >
       au < manifest ; exists ; 2008 ; AIDS Research and Therapy Volume 5 ; 5 >
       au < manifest ; exists ; 2009 ; AIDS Research and Therapy Volume 6 ; 6 >
-      au < released ; manifest ; 2010 ; AIDS Research and Therapy Volume 7 ; 7 >
+      au < released ; crawling ; 2010 ; AIDS Research and Therapy Volume 7 ; 7 >
       au < crawling ; exists ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; AIDS Research and Therapy Volume 9 ; 9 >
 
@@ -1607,7 +1607,7 @@
       au < manifest ; exists ; 2007 ; Algorithms for Molecular Biology Volume 2 ; 2 >
       au < manifest ; exists ; 2008 ; Algorithms for Molecular Biology Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; Algorithms for Molecular Biology Volume 4 ; 4 >
-      au < released ; manifest ; 2010 ; Algorithms for Molecular Biology Volume 5 ; 5 >
+      au < released ; crawling ; 2010 ; Algorithms for Molecular Biology Volume 5 ; 5 >
       au < crawling ; exists ; 2011 ; Algorithms for Molecular Biology Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Algorithms for Molecular Biology Volume 7 ; 7 >
 
@@ -1633,7 +1633,7 @@
       au < manifest ; exists ; 2007 ; Annals of Clinical Microbiology and Antimicrobials Volume 6 ; 6 >
       au < manifest ; exists ; 2008 ; Annals of Clinical Microbiology and Antimicrobials Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 >
-      au < released ; manifest ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
+      au < released ; crawling ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
       au < crawling ; exists ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
 
@@ -1657,7 +1657,7 @@
       au < manifest ; exists ; 2007 ; Annals of General Psychiatry Volume 6 ; 6 >
       au < manifest ; exists ; 2008 ; Annals of General Psychiatry Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; Annals of General Psychiatry Volume 8 ; 8 >
-      au < released ; manifest ; 2010 ; Annals of General Psychiatry Volume 9 ; 9 >
+      au < released ; crawling ; 2010 ; Annals of General Psychiatry Volume 9 ; 9 >
       au < crawling ; exists ; 2011 ; Annals of General Psychiatry Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Annals of General Psychiatry Volume 11 ; 11 >
 
@@ -1676,7 +1676,7 @@
       au < manifest ; exists ; 2007 ; Annals of Surgical Innovation and Research Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; Annals of Surgical Innovation and Research Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; Annals of Surgical Innovation and Research Volume 3 ; 3 >
-      au < released ; manifest ; 2010 ; Annals of Surgical Innovation and Research Volume 4 ; 4 >
+      au < released ; crawling ; 2010 ; Annals of Surgical Innovation and Research Volume 4 ; 4 >
       au < crawling ; exists ; 2011 ; Annals of Surgical Innovation and Research Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Annals of Surgical Innovation and Research Volume 6 ; 6 >
 
@@ -1706,7 +1706,7 @@
       au < manifest ; exists ; 2007 ; Arthritis Research & Therapy Volume 9 ; 9 >
       au < manifest ; exists ; 2008 ; Arthritis Research & Therapy Volume 10 ; 10 >
       au < manifest ; exists ; 2009 ; Arthritis Research & Therapy Volume 11 ; 11 >
-      au < released ; manifest ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
+      au < released ; crawling ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
       au < crawling ; exists ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
       au < crawling ; exists ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
 
@@ -1748,7 +1748,7 @@
       au < manifest ; exists ; 2007 ; Behavioral and Brain Functions Volume 3 ; 3 >
       au < manifest ; exists ; 2008 ; Behavioral and Brain Functions Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; Behavioral and Brain Functions Volume 5 ; 5 >
-      au < released ; manifest ; 2010 ; Behavioral and Brain Functions Volume 6 ; 6 >
+      au < released ; crawling ; 2010 ; Behavioral and Brain Functions Volume 6 ; 6 >
       au < crawling ; exists ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 >
 
@@ -1834,7 +1834,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2007 ; BioMedical Engineering OnLine Volume 6 ; 6 >
       au < manifest ; exists ; 2008 ; BioMedical Engineering OnLine Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; BioMedical Engineering OnLine Volume 8 ; 8 >
-      au < released ; manifest ; 2010 ; BioMedical Engineering OnLine Volume 9 ; 9 >
+      au < released ; crawling ; 2010 ; BioMedical Engineering OnLine Volume 9 ; 9 >
       au < crawling ; exists ; 2011 ; BioMedical Engineering OnLine Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; BioMedical Engineering OnLine Volume 11 ; 11 >
 
