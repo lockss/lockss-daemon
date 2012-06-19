@@ -52,8 +52,7 @@
 
     param[journal_id] = 1
 
-    au < manifest ; 2007 ; Analytical Chemistry Insights Volume 1 ; 2007 >
-    au < doesNotExist ; 0 ; Analytical Chemistry Insights Volume 2 ; 0 >
+    au < manifest ; 2007 ; Analytical Chemistry Insights Volume 1-2 ; 2007 >
     au < manifest ; 2008 ; Analytical Chemistry Insights Volume 3 ; 2008 >
     au < manifest ; 2009 ; Analytical Chemistry Insights Volume 4 ; 2009 >
     au < manifest ; 2010 ; Analytical Chemistry Insights Volume 5 ; 2010 >
@@ -126,13 +125,13 @@
 
     param[journal_id] = 4
 
-    au < expected ; 2006 ; Biomarker Insights Volume 1 ; 2006 >
-    au < expected ; 2007 ; Biomarker Insights Volume 2 ; 2007 >
-    au < expected ; 2008 ; Biomarker Insights Volume 3 ; 2008 >
-    au < expected ; 2009 ; Biomarker Insights Volume 4 ; 2009 >
-    au < expected ; 2010 ; Biomarker Insights Volume 5 ; 2010 >
-    au < expected ; 2011 ; Biomarker Insights Volume 6 ; 2011 >
-    au < expected ; 2012 ; Biomarker Insights Volume 7 ; 2012 >
+    au < manifest ; 2006 ; Biomarker Insights Volume 1 ; 2006 >
+    au < manifest ; 2007 ; Biomarker Insights Volume 2 ; 2007 >
+    au < manifest ; 2008 ; Biomarker Insights Volume 3 ; 2008 >
+    au < manifest ; 2009 ; Biomarker Insights Volume 4 ; 2009 >
+    au < manifest ; 2010 ; Biomarker Insights Volume 5 ; 2010 >
+    au < manifest ; 2011 ; Biomarker Insights Volume 6 ; 2011 >
+    au < manifest ; 2012 ; Biomarker Insights Volume 7 ; 2012 >
 
   }
   
@@ -183,7 +182,7 @@
     au < manifest ; 2009 ; Biomedical Informatics Insights Volume 2 ; 2009 >
     au < manifest ; 2010 ; Biomedical Informatics Insights Volume 3 ; 2010 >
     au < manifest ; 2011 ; Biomedical Informatics Insights Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Biomedical Informatics Insights Volume 5 ; 2012 >
+    au < manifest ; 2012 ; Biomedical Informatics Insights Volume 5 (Suppl. 1) ; 2012 >
 
   }
   
@@ -653,10 +652,12 @@
       
     >
 
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
+    
     param[journal_id] = 164
 
-    au < exists ; 2009 ; Clinical Medicine Reviews in Cardiology Volume 1 ; 2009 >
-    au < exists ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2010 >
+    au < notReady ; 2009 ; Clinical Medicine Reviews in Cardiology Volume 1 ; 2009 >
+    au < notReady ; 2010 ; Clinical Medicine Reviews in Cardiology Volume 2 ; 2010 >
 
   }
   
@@ -667,13 +668,15 @@
       issn = 1179-2531
       
     >
+    
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
 
     param[journal_id] = 163
 
-    au < exists ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 2009 >
-    au < exists ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2010 >
-    au < exists ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 2011 >
-    au < exists ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 2012 >
+    au < notReady ; 2009 ; Clinical Medicine Reviews in Oncology Volume 1 ; 2009 >
+    au < notReady ; 2010 ; Clinical Medicine Reviews in Oncology Volume 2 ; 2010 >
+    au < notReady ; 2011 ; Clinical Medicine Reviews in Oncology Volume 3 ; 2011 >
+    au < notReady ; 2012 ; Clinical Medicine Reviews in Oncology Volume 4 ; 2012 >
 
   }
   
@@ -685,10 +688,12 @@
       
     >
 
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
+
     param[journal_id] = 167
 
-    au < exists ; 2009 ; Clinical Medicine Reviews in Patient Care Volume 1 ; 2009 >
-    au < exists ; 2011 ; Clinical Medicine Reviews in Patient Care Volume 2 ; 2011 >
+    au < notReady ; 2009 ; Clinical Medicine Reviews in Patient Care Volume 1 ; 2009 >
+    au < notReady ; 2011 ; Clinical Medicine Reviews in Patient Care Volume 2 ; 2011 >
 
   }
   
@@ -699,13 +704,14 @@
       issn = 1179-2558
       
     >
-
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12    
+    
     param[journal_id] = 166
 
-    au < exists ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 2009 >
-    au < exists ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2010 >
-    au < exists ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 2011 >
-    au < exists ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 2012 >
+    au < notReady ; 2009 ; Clinical Medicine Reviews in Therapeutics Volume 1 ; 2009 >
+    au < notReady ; 2010 ; Clinical Medicine Reviews in Therapeutics Volume 2 ; 2010 >
+    au < notReady ; 2011 ; Clinical Medicine Reviews in Therapeutics Volume 3 ; 2011 >
+    au < notReady ; 2012 ; Clinical Medicine Reviews in Therapeutics Volume 4 ; 2012 >
 
   }
   
@@ -717,12 +723,14 @@
       
     >
 
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
+    
     param[journal_id] = 165
 
-    au < exists ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 2009 >
-    au < exists ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2010 >
-    au < exists ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 2011 >
-    au < exists ; 2012 ; Clinical Medicine Reviews in Vascular Health Volume 4 ; 2012 >
+    au < notReady ; 2009 ; Clinical Medicine Reviews in Vascular Health Volume 1 ; 2009 >
+    au < notReady ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2010 >
+    au < notReady ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 2011 >
+    au < notReady ; 2012 ; Clinical Medicine Reviews in Vascular Health Volume 4 ; 2012 >
 
   }
   
@@ -736,10 +744,12 @@
 
     param[journal_id] = 162
 
-    au < manifest ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 2011 >
-    au < manifest ; 2012 ; Clinical Medicine Reviews in Women's Health Volume 4 ; 2012 >
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site - MD 06/18/12
+    
+    au < notReady ; 2009 ; Clinical Medicine Reviews in Women's Health Volume 1 ; 2009 >
+    au < notReady ; 2010 ; Clinical Medicine Reviews in Women's Health Volume 2 ; 2010 >
+    au < notReady ; 2011 ; Clinical Medicine Reviews in Women's Health Volume 3 ; 2011 >
+    au < notReady ; 2012 ; Clinical Medicine Reviews in Women's Health Volume 4 ; 2012 >
 
   }
   
@@ -1158,8 +1168,10 @@
 
     param[journal_id] = 173
     
-    au < manifest ; 2010 ; Journal of Genomics and Exomics Volume 1 ; 2010 >
-    au < manifest ; 2011 ; Journal of Genomics and Exomics Volume 2 ; 2011 >
+    comment[notReady] = no link or journal title on manifest page to existing content on publisher site -MD 06/18/12
+    
+    au < notReady ; 2010 ; Journal of Genomics and Exomics Volume 1 ; 2010 >
+    au < notReady ; 2011 ; Journal of Genomics and Exomics Volume 2 ; 2011 >
     au < manifest ; 2012 ; Journal of Genomics and Exomics Volume 3 ; 2012 >
 
 
@@ -1175,10 +1187,12 @@
 
     param[journal_id] = 109
     
-    au < manifest ; 2008 ; Journal of Experimental Neuroscience Volume 1-2 ; 2008 >
-    au < manifest ; 2010 ; Journal of Experimental Neuroscience Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Journal of Experimental Neuroscience Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Journal of Experimental Neuroscience Volume 5 ; 2012 >
+    au < manifest ; 2008 ; Lipid Insights Volume 1-2 ; 2008 >
+    au < manifest ; 2010 ; Lipid Insights Volume 3 ; 2010 >
+    au < manifest ; 2008 ; Lipid Insights Volume 1-2 ; 2008 >
+    au < manifest ; 2010 ; Lipid Insights Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Lipid Insights Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Lipid Insights Volume 5 ; 2012 >
 
 
   }
@@ -1190,9 +1204,11 @@
       issn = 1179-2361
       
     >
-
+    
     param[journal_id] = 147
 
+    au < manifest ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 2009 >
+    au < manifest ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2010 >
 
   }
   
@@ -1206,7 +1222,11 @@
 
     param[journal_id] = 115
 
-
+    au < manifest ; 2008 ; Magnetic Resonance Insights Volume 1-2 ; 2008 >
+    au < manifest ; 2009 ; Magnetic Resonance Insights Volume 3 ; 2009 >
+    au < manifest ; 2010 ; Magnetic Resonance Insights Volume 4 ; 2010 >
+    au < manifest ; 2012 ; Magnetic Resonance Insights Volume 5 ; 2012 >
+    
 
   }
   
@@ -1220,7 +1240,11 @@
 
     param[journal_id] = 98
 
-
+    au < manifest ; 2008 ; Medical Equipment Insights Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Magnetic Resonance Insights Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Magnetic Resonance Insights Volume 3 ; 2010 >
+    au < manifest ; 2012 ; Magnetic Resonance Insights Volume 4 ; 2012 >
+    
   }
   
   {
@@ -1233,8 +1257,11 @@
 
     param[journal_id] = 108
 
-
-  }
+    au < manifest ; 2008 ; Microbiology Insights Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Microbiology Insights Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Microbiology Insights Volume 3 ; 2010 >
+    au < manifest ; 2012 ; Microbiology Insights Volume 4 ; 2012 >
+  }     
   
   {
 
@@ -1246,7 +1273,10 @@
 
     param[journal_id] = 101
 
-
+    au < manifest ; 2008 ; Nutrition and Metabolic Insights Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Nutrition and Metabolic Insights Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Nutrition and Metabolic Insights Volume 3 ; 2010 >
+    au < manifest ; 2012 ; Nutrition and Metabolic Insights Volume 4 ; 2012 >
   }
   
   {
@@ -1259,7 +1289,11 @@
 
     param[journal_id] = 123
 
-
+    au < manifest ; 2008 ; Open Journal of Cardiovascular Surgery Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Open Journal of Cardiovascular Surgery Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Open Journal of Cardiovascular Surgery Volume 3 ; 2010 >
+    au < manifest ; 2011 ; Open Journal of Cardiovascular Surgery Volume 4 ; 2011 >
+    au < manifest ; 2012 ; Open Journal of Cardiovascular Surgery Volume 5 ; 2012 >
 
   }
   
@@ -1273,7 +1307,10 @@
 
     param[journal_id] = 146
 
-
+    au < manifest ; 2009 ; Open Journal of Cardiovascular Surgery Volume 1 ; 2009 >
+    au < manifest ; 2010 ; Open Journal of Cardiovascular Surgery Volume 2 ; 2010 >
+    au < manifest ; 2011 ; Open Journal of Cardiovascular Surgery Volume 3 ; 2011 >
+    au < manifest ; 2012 ; Open Journal of Cardiovascular Surgery Volume 4 ; 2012 >
   }
   
   {
@@ -1286,8 +1323,10 @@
 
     param[journal_id] = 104
 
-
-
+    au < manifest ; 2008 ; Open Journal of Cardiovascular Surgery Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Open Journal of Cardiovascular Surgery Volume 2 ; 2009 >
+    au < manifest ; 2010 ; Open Journal of Cardiovascular Surgery Volume 3 ; 2010 >
+    au < manifest ; 2012 ; Open Journal of Cardiovascular Surgery Volume 4 ; 2012 >
   }
   
   {
