@@ -214,7 +214,7 @@
     au < testing ; 2006 ; International Journal of Circumpolar Health Volume 65 ; 65 ; 2006 >
     au < testing ; 2007 ; International Journal of Circumpolar Health Volume 66 ; 66 ; 2007 >
     au < testing ; 2008 ; International Journal of Circumpolar Health Volume 67 ; 67 ; 2008 >
-    au < testing ; 2009 ; International Journal of Circumpolar Health Volume 68 ; 68 ; 2009 >
+    au < ready ; 2009 ; International Journal of Circumpolar Health Volume 68 ; 68 ; 2009 >
     au < testing ; 2010 ; International Journal of Circumpolar Health Volume 69 ; 69 ; 2010 >
     au < testing ; 2011 ; International Journal of Circumpolar Health Volume 70 ; 70 ; 2011 >
     au < testing ; 2012 ; International Journal of Circumpolar Health Volume 71 ; 71 ; 2012 >
@@ -465,7 +465,7 @@
     au < testing ; 1995 ; Polar Research Volume 14 ; 14 ; 1995 >
     au < testing ; 1996 ; Polar Research Volume 15 ; 15 ; 1996 >
     au < testing ; 1997 ; Polar Research Volume 16 ; 16 ; 1997 >
-    au < testing ; 1998 ; Polar Research Volume 17 ; 17 ; 1998 >
+    au < ready ; 1998 ; Polar Research Volume 17 ; 17 ; 1998 >
     au < testing ; 1999 ; Polar Research Volume 18 ; 18 ; 1999 >
     au < released ; 2000 ; Polar Research Volume 19 ; 19 ; 2000 >
     au < released ; 2001 ; Polar Research Volume 20 ; 20 ; 2001 >
@@ -505,7 +505,7 @@
     au < testing ; 2000 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 8 ; 8 ; 2000 >
     au < ready ; 2001 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 9 ; 9 ; 2001 >
     au < testing ; 2002 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 10 ; 10 ; 2002 >
-    au < testing ; 2003 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 11 ; 11 ; 2003 >
+    au < ready ; 2003 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 11 ; 11 ; 2003 >
     au < ready ; 2004 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 12 ; 12 ; 2004 >
     au < testing ; 2005 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 13 ; 13 ; 2005 >
     au < testing ; 2006 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 14 ; 14 ; 2006 >
@@ -550,11 +550,11 @@
     param[base_url] = http://www.foodandnutritionresearch.net/
     param[journal_id] = fnr
     
-    au < testing ; 1996 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 40 ; 40 ; 1996 >
+    au < ready ; 1996 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 40 ; 40 ; 1996 >
     au < testing ; 1997 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 41 ; 41 ; 1997 >
     au < testing ; 1998 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 42 ; 42 ; 1998 >
     au < testing ; 1999 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 43 ; 43 ; 1999 >
-    au < testing ; 2000 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 44 ; 44 ; 2000 >
+    au < ready ; 2000 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 44 ; 44 ; 2000 >
     au < testing ; 2001 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 45 ; 45 ; 2001 >    
     au < released ; 2002 ; Scandinavian Journal of Nutrition Volume 46 ; 46 ; 2002 >
     au < released ; 2003 ; Scandinavian Journal of Nutrition Volume 47 ; 47 ; 2003 >
@@ -628,7 +628,7 @@
     au < testing ; 1983 ; Tellus A: Dynamic Meteorology and Oceanography Volume 35 ; 35 ; 1983 >
     au < testing ; 1984 ; Tellus A: Dynamic Meteorology and Oceanography Volume 36 ; 36 ; 1984 >
     au < testing ; 1985 ; Tellus A: Dynamic Meteorology and Oceanography Volume 37 ; 37 ; 1985 >
-    au < testing ; 1986 ; Tellus A: Dynamic Meteorology and Oceanography Volume 38 ; 38 ; 1986 >
+    au < ready ; 1986 ; Tellus A: Dynamic Meteorology and Oceanography Volume 38 ; 38 ; 1986 >
     au < testing ; 1987 ; Tellus A: Dynamic Meteorology and Oceanography Volume 39 ; 39 ; 1987 >
     au < testing ; 1988 ; Tellus A: Dynamic Meteorology and Oceanography Volume 40 ; 40 ; 1988 >
     au < testing ; 1989 ; Tellus A: Dynamic Meteorology and Oceanography Volume 41 ; 41 ; 1989 >
@@ -637,7 +637,7 @@
     au < testing ; 1992 ; Tellus A: Dynamic Meteorology and Oceanography Volume 44 ; 44 ; 1992 >
     au < testing ; 1993 ; Tellus A: Dynamic Meteorology and Oceanography Volume 45 ; 45 ; 1993 >
     au < ready ; 1994 ; Tellus A: Dynamic Meteorology and Oceanography Volume 46 ; 46 ; 1994 >
-    au < testing ; 1995 ; Tellus A: Dynamic Meteorology and Oceanography Volume 47 ; 47 ; 1995 >
+    au < ready ; 1995 ; Tellus A: Dynamic Meteorology and Oceanography Volume 47 ; 47 ; 1995 >
     au < testing ; 1996 ; Tellus A: Dynamic Meteorology and Oceanography Volume 48 ; 48 ; 1996 >
     au < testing ; 1997 ; Tellus A: Dynamic Meteorology and Oceanography Volume 49 ; 49 ; 1997 >
     au < testing ; 1998 ; Tellus A: Dynamic Meteorology and Oceanography Volume 50 ; 50 ; 1998 >
@@ -694,7 +694,7 @@
     au < testing ; 1970 ; Tellus B: Chemical and Physical Meteorology Volume 22 ; 22 ; 1970 >
     au < testing ; 1971 ; Tellus B: Chemical and Physical Meteorology Volume 23 ; 23 ; 1971 >
     au < testing ; 1972 ; Tellus B: Chemical and Physical Meteorology Volume 24 ; 24 ; 1972 >
-    au < testing ; 1973 ; Tellus B: Chemical and Physical Meteorology Volume 25 ; 25 ; 1973 >
+    au < ready ; 1973 ; Tellus B: Chemical and Physical Meteorology Volume 25 ; 25 ; 1973 >
     au < testing ; 1974 ; Tellus B: Chemical and Physical Meteorology Volume 26 ; 26 ; 1974 >
     au < testing ; 1975 ; Tellus B: Chemical and Physical Meteorology Volume 27 ; 27 ; 1975 >
     au < testing ; 1976 ; Tellus B: Chemical and Physical Meteorology Volume 28 ; 28 ; 1976 >
@@ -720,7 +720,7 @@
     au < testing ; 1996 ; Tellus B: Chemical and Physical Meteorology Volume 48 ; 48 ; 1996 >
     au < ready ; 1997 ; Tellus B: Chemical and Physical Meteorology Volume 49 ; 49 ; 1997 >
     au < testing ; 1998 ; Tellus B: Chemical and Physical Meteorology Volume 50 ; 50 ; 1998 >
-    au < testing ; 1999 ; Tellus B: Chemical and Physical Meteorology Volume 51 ; 51 ; 1999 >
+    au < ready ; 1999 ; Tellus B: Chemical and Physical Meteorology Volume 51 ; 51 ; 1999 >
     au < testing ; 2000 ; Tellus B: Chemical and Physical Meteorology Volume 52 ; 52 ; 2000 >
     au < testing ; 2001 ; Tellus B: Chemical and Physical Meteorology Volume 53 ; 53 ; 2001 >
     au < testing ; 2002 ; Tellus B: Chemical and Physical Meteorology Volume 54 ; 54 ; 2002 >
