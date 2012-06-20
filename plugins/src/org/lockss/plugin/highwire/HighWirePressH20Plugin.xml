@@ -20,11 +20,11 @@
     <map>
       <entry>
         <string>Substance</string>
-	    <string>3</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
-	    <string>4</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -67,38 +67,38 @@
     <string>&quot;%slockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
   </entry>
   <entry>
-  	<string>au_feature_urls</string>
-  	<map>
-	  <entry>
-	    <string>au_title</string>
-	    <string>&quot;%s&quot;, base_url</string>
-	  </entry>
-	  <entry>
-	    <string>au_volume</string>
-	    <string>&quot;%slockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
-	  </entry>
-	  <entry>
-	    <string>au_issue</string>
-	    <string>&quot;%scontent/%s/%s.toc&quot;, base_url, volume_name, issue</string>
-	  </entry>
-	  <entry>
-	  	<string>au_article</string>
-	  	<map>
-	  		<entry>
-	  			<string>pdf+html;*</string>
-			    <string>&quot;%scontent/%s/%s/%s.full.pdf+html&quot;, base_url, volume_name, issue, article</string>
-	  		</entry>
-	  		<entry>
-	  			<string>pdf</string>
-			    <string>&quot;%scontent/%s/%s/%s.full.pdf&quot;, base_url, volume_name, issue, article</string>
-	  		</entry>
-	  		<entry>
-	  			<string>html</string>
-			    <string>&quot;%scontent/%s/%s/%s.full&quot;, base_url, volume_name, issue, article</string>
-	  		</entry>
-	  	</map>
-	  </entry>
-  	</map>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>&quot;%s&quot;, base_url</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>&quot;%slockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>&quot;%scontent/%s/%s.toc&quot;, base_url, volume_name, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <map>
+          <entry>
+            <string>pdf+html;*</string>
+            <string>&quot;%scontent/%s/%s/%s.full.pdf+html&quot;, base_url, volume_name, issue, article</string>
+          </entry>
+          <entry>
+            <string>pdf</string>
+            <string>&quot;%scontent/%s/%s/%s.full.pdf&quot;, base_url, volume_name, issue, article</string>
+          </entry>
+          <entry>
+            <string>html</string>
+            <string>&quot;%scontent/%s/%s/%s.full&quot;, base_url, volume_name, issue, article</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
   </entry>  
   <entry>
     <string>au_permission_checker_factory</string>
@@ -182,8 +182,8 @@
     <string>au_mime_rate_limiter_map</string>
     <map>
       <entry>
-	<string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-	<string>1/5000</string>
+        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+        <string>1/5000</string>
       </entry>
     </map>
   </entry>
