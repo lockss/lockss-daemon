@@ -101,7 +101,7 @@
       param[journal_issn] = 1754-7326
 
       au < manifest ; exists ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
-      au < testing ; exists ; 2011 ; The Botulinum Journal Volume 2 ; 2 >
+      au < released ; manifest ; 2011 ; The Botulinum Journal Volume 2 ; 2 >
 
     }
 
@@ -123,7 +123,7 @@
       au < manifest ; exists ; 2008 ; Electronic Government, an International Journal Volume 5 ; 5 >
       au < manifest ; exists ; 2009 ; Electronic Government, an International Journal Volume 6 ; 6 >
       au < manifest ; exists ; 2010 ; Electronic Government, an International Journal Volume 7 ; 7 >
-      au < testing ; exists ; 2011 ; Electronic Government, an International Journal Volume 8 ; 8 >
+      au < released ; exists ; 2011 ; Electronic Government, an International Journal Volume 8 ; 8 >
       au < manifest ; exists ; 2012 ; Electronic Government, an International Journal Volume 9 ; 9 >
 
     }
@@ -140,7 +140,7 @@
       param[journal_issn] = 1758-1516
       
       au < manifest ; exists ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 >
-      au < testing ; exists ; 2011 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 >
+      au < released ; manifest ; 2011 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 >
 
     }
 
@@ -159,7 +159,7 @@
       au < manifest ; exists ; 2008; European Journal of Industrial Engineering Volume 2 ; 2 >
       au < manifest ; exists ; 2009; European Journal of Industrial Engineering Volume 3 ; 3 >
       au < manifest ; exists ; 2010; European Journal of Industrial Engineering Volume 4 ; 4 >
-      au < testing ; exists ; 2011; European Journal of Industrial Engineering Volume 5 ; 5 >
+      au < released ; manifest ; 2011; European Journal of Industrial Engineering Volume 5 ; 5 >
       au < manifest ; exists ; 2012; European Journal of Industrial Engineering Volume 6 ; 6 >
 
     }
@@ -930,7 +930,7 @@
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Biometrics Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Biometrics Volume 2 ; 2 >
-      au < testing ; exists ; 2011 ; International Journal of Biometrics Volume 3 ; 3 >
+      au < released ; manifest ; 2011 ; International Journal of Biometrics Volume 3 ; 3 >
       au < manifest ; exists ; 2012 ; International Journal of Biometrics Volume 4 ; 4 >
 
     }
@@ -957,7 +957,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Biotechnology Volume 9 ; 9 >
       au < manifest ; exists ; 2008 ; International Journal of Biotechnology Volume 10 ; 10 >
       au < manifest ; exists ; 2009-2010 ; International Journal of Biotechnology Volume 11 ; 11 >
-      au < testing ; exists ; 2011 ; International Journal of Biotechnology Volume 12 ; 12 >
+      au < released ; manifest ; 2011 ; International Journal of Biotechnology Volume 12 ; 12 >
 
     }
 
@@ -989,7 +989,7 @@
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Business and Emerging Markets Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Business and Emerging Markets Volume 2 ; 2 >
-      au < testing ; exists ; 2011 ; International Journal of Business and Emerging Markets Volume 3 ; 3 >
+      au < released ; manifest ; 2011 ; International Journal of Business and Emerging Markets Volume 3 ; 3 >
       au < manifest ; exists ; 2012 ; International Journal of Business and Emerging Markets Volume 4 ; 4 >
 
     }
@@ -1010,8 +1010,8 @@
       au < manifest ; exists ; 2009 ; International Journal of Business and Globalisation Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; International Journal of Business and Globalisation Volume 4 ; 4 >
       au < manifest ; exists ; 2010 ; International Journal of Business and Globalisation Volume 5 ; 5 >
-      au < testing ; exists ; 2011 ; International Journal of Business and Globalisation Volume 6 ; 6 >
-      au < testing ; exists ; 2011 ; International Journal of Business and Globalisation Volume 7 ; 7 >
+      au < released ; manifest ; 2011 ; International Journal of Business and Globalisation Volume 6 ; 6 >
+      au < released ; manifest ; 2011 ; International Journal of Business and Globalisation Volume 7 ; 7 >
       au < manifest ; exists ; 2012 ; International Journal of Business and Globalisation Volume 8 ; 8 > 
 
     }
@@ -1031,7 +1031,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Business and Systems Research Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Business and Systems Research Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; International Journal of Business and Systems Research Volume 4 ; 4 >
-      au < testing ; exists ; 2011 ; International Journal of Business and Systems Research Volume 5 ; 5 >
+      au < released ; manifest ; 2011 ; International Journal of Business and Systems Research Volume 5 ; 5 >
       au < manifest ; exists ; 2012 ; International Journal of Business and Systems Research Volume 6 ; 6 >
 
     }
