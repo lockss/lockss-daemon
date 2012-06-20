@@ -2295,7 +2295,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ;  British Journal of Anaesthesia Volume 106 ; 106 >
     au < HighWirePressH20Plugin ; released ; 2011 ;  British Journal of Anaesthesia Volume 107 ; 107 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ;  British Journal of Anaesthesia Volume 108 ; 108 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ;  British Journal of Anaesthesia Volume 109 ; 109 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ;  British Journal of Anaesthesia Volume 109 ; 109 >
 
     }
 
@@ -16539,7 +16539,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; released ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; The Review of Asset Pricing Studies Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; The Review of Asset Pricing Studies Volume 2 ; 2 >
 
   }
 
