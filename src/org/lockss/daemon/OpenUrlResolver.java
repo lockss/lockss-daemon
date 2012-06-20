@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.24 2011-11-16 18:37:56 easyonthemayo Exp $
+ * $Id: OpenUrlResolver.java,v 1.24.2.1 2012-06-20 00:02:58 nchondros Exp $
  */
 
 /*
@@ -43,11 +43,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Tdb;
@@ -132,39 +132,91 @@ public class OpenUrlResolver {
   /** maximum redirects for looking up DOI url */
   private static final int MAX_REDIRECTS = 10;
   
+  private static final class FeatureEntry {
+    final String auFeatureKey;
+    final OpenUrlInfo.ResolvedTo resolvedTo;
+    
+    public FeatureEntry(String auFeatureKey, 
+                        OpenUrlInfo.ResolvedTo resolvedTo) {
+      this.auFeatureKey = auFeatureKey;
+      this.resolvedTo = resolvedTo;
+    }
+  }
+  
   /**
    * Keys to search for a matching journal feature. The order of the keys 
    * is the order they will be tried, from article, to issue, to volume, 
    * to title TOC.
    */
-  private static final String[] auJournalauFeatures = {
+  private static final FeatureEntry[] auJournalauFeatures = {
 //    "au_feature_urls/au_abstract",
-    "au_feature_urls/au_article",
-    "au_feature_urls/au_issue",
-    "au_issue_url",
-    "au_feature_urls/au_volume",
-    "au_volume_url",
-    "au_start_url",
-    "au_feature_urls/au_title",
-    "au_title_url"
+    new FeatureEntry("au_feature_urls/au_article",OpenUrlInfo.ResolvedTo.ARTICLE),
+    new FeatureEntry("au_feature_urls/au_issue", OpenUrlInfo.ResolvedTo.ISSUE),
+    new FeatureEntry("au_issue_url", OpenUrlInfo.ResolvedTo.ISSUE),
+    new FeatureEntry("au_feature_urls/au_volume", OpenUrlInfo.ResolvedTo.VOLUME),
+    new FeatureEntry("au_volume_url", OpenUrlInfo.ResolvedTo.VOLUME),
+    new FeatureEntry("au_start_url", OpenUrlInfo.ResolvedTo.VOLUME),
+    new FeatureEntry("au_feature_urls/au_title", OpenUrlInfo.ResolvedTo.TITLE),
+    new FeatureEntry("au_title_url", OpenUrlInfo.ResolvedTo.TITLE)
   };
   
   /**
    * Keys to search for a matching book feature. The order of the keys is the
    * the order they will be tried, from chapter, to volume, to title TOC.
    */
-  private static final String[] auBookauFeatures = {
-    "au_feature_urls/au_chapter",
-    "au_chapter_url",
-    "au_features_urls/au_volume",
-    "au_volume_url",
-    "au_start_url",
-    "au_feature_urls/au_title",
-    "au_title_url"
+  private static final FeatureEntry[] auBookauFeatures = {
+    new FeatureEntry("au_feature_urls/au_chapter", OpenUrlInfo.ResolvedTo.CHAPTER),
+    new FeatureEntry("au_chapter_url", OpenUrlInfo.ResolvedTo.CHAPTER),
+    new FeatureEntry("au_feature_urls/au_volume", OpenUrlInfo.ResolvedTo.VOLUME),
+    new FeatureEntry("au_volume_url", OpenUrlInfo.ResolvedTo.VOLUME),
+    new FeatureEntry("au_start_url", OpenUrlInfo.ResolvedTo.VOLUME),
+    new FeatureEntry("au_feature_urls/au_title", OpenUrlInfo.ResolvedTo.TITLE),
+    new FeatureEntry("au_title_url", OpenUrlInfo.ResolvedTo.TITLE),
   };
   
   /** The name of the TDB au_feature key selector */
   static final String AU_FEATURE_KEY = "au_feature_key";
+  
+  // pre-defined OpenUrlInfo for no url
+  public static final OpenUrlInfo noOpenUrlInfo = 
+      new OpenUrlInfo(null, OpenUrlInfo.ResolvedTo.NONE);
+
+  /**
+   * Information returned by OpenUrlResolver includes the resolvedUrl
+   * and the resolvedTo enumeration.
+   */
+  public static class OpenUrlInfo {
+    static public enum ResolvedTo {
+      PUBLISHER,
+      TITLE,
+      VOLUME,
+      ISSUE,
+      CHAPTER,
+      ARTICLE,
+      OTHER,
+      NONE,
+    };
+    
+    public final String resolvedUrl;
+    public final ResolvedTo resolvedTo;
+    
+    private OpenUrlInfo(String resolvedUrl, ResolvedTo resolvedTo) {
+      this.resolvedUrl = resolvedUrl;
+      this.resolvedTo = resolvedTo;
+    }
+
+    public static OpenUrlInfo newInstance(
+        String resolvedUrl, ResolvedTo resolvedTo) {
+      return ((resolvedTo == ResolvedTo.NONE) || (resolvedUrl == null)) 
+          ? OpenUrlResolver.noOpenUrlInfo
+          : new OpenUrlInfo(resolvedUrl, resolvedTo);
+    }
+    public static OpenUrlInfo newInstance(String resolvedUrl) {
+      return (resolvedUrl == null) 
+          ? noOpenUrlInfo 
+          : new OpenUrlInfo(resolvedUrl, OpenUrlInfo.ResolvedTo.OTHER);
+    }
+  }
 
   /**
    * Create a resolver for the specified metadata manager.
@@ -253,30 +305,126 @@ public class OpenUrlResolver {
   }
   
   /**
+   * Returns the TdbTitle corresponding to the specified OpenUrl params.
+   * 
+   * @param params the OpenURL parameters
+   * @return a TdbTitle or <code>null</code> if not found
+   */
+  public TdbTitle resolveTdbTitleForOpenUrl(Map<String,String> params) {
+    Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
+    if (tdb != null) {
+      // get TdbTitle for ISBN
+      String isbn = getRftParam(params, "isbn");
+      if (isbn != null) {
+        Collection<TdbAu> tdbAus = tdb.getTdbAusByIsbn(isbn);
+        return tdbAus.isEmpty() ? null : tdbAus.iterator().next().getTdbTitle();
+      }
+      
+      // get TdbTitle for ISSN
+      String issn = getRftParam(params, "issn");
+      if (issn != null) {
+        return tdb.getTdbTitleByIssn(issn);
+      }
+      
+      
+      // get TdbTitle for BICI
+      String bici = getRftParam(params, "bici");
+      if (bici != null) {
+        int i = bici.indexOf('(');
+        if (i > 0) {
+          isbn = bici.substring(0,i);
+          Collection<TdbAu> tdbAus = tdb.getTdbAusByIsbn(isbn);
+          return tdbAus.isEmpty() ? null : tdbAus.iterator().next().getTdbTitle();
+        }
+      }
+
+      // get TdbTitle for SICI
+      String sici = getRftParam(params, "sici");
+      if (sici != null) {
+        int i = sici.indexOf('(');
+        if (i > 0) {
+          issn = sici.substring(0,i);
+          return tdb.getTdbTitleByIssn(issn);
+        }
+      }
+
+      // get TdbTitle for journal pubisher and title
+      String publisher = getRftParam(params, "publisher");
+      String title = getRftParam(params, "jtitle");
+      if (title == null) {
+        title = getRftParam(params, "title");
+      }
+      if (title != null) {
+        Collection<TdbTitle> tdbTitles;
+        if (publisher != null) {
+          TdbPublisher tdbPublisher = tdb.getTdbPublisher(publisher);
+          tdbTitles = (tdbPublisher == null) 
+              ? Collections.<TdbTitle>emptyList() 
+              :tdbPublisher.getTdbTitlesLikeName(title);
+        } else {
+          tdbTitles = tdb.getTdbTitlesByName(title);
+        }
+        return tdbTitles.isEmpty() ? null : tdbTitles.iterator().next();
+      }
+      
+      // get TdbTitle for book pubisher and title
+      String btitle = getRftParam(params, "btitle");
+      if (btitle != null) {
+        Collection<TdbAu> tdbAus;
+        if (publisher != null) {
+          TdbPublisher tdbPublisher = tdb.getTdbPublisher(publisher);
+          tdbAus = (tdbPublisher == null) 
+              ? Collections.<TdbAu>emptyList() 
+              :tdbPublisher.getTdbAusLikeName(title);
+        } else {
+          tdbAus = tdb.getTdbAusByName(title);
+        }
+        return tdbAus.isEmpty() ? null : tdbAus.iterator().next().getTdbTitle();
+      }
+    }
+
+    return null;
+  }
+
+  /**
    * Resolve an OpenURL from a set of parameter keys and values.
    * 
    * @param params the OpenURL parameters
    * @return a url or <code>null</code> if not found
    */
-  public String resolveOpenUrl(Map<String,String> params) {
+  public OpenUrlInfo resolveOpenUrl(Map<String,String> params) {
     if (params.containsKey("rft_id")) {
       String rft_id = params.get("rft_id");
       // handle rft_id that is an HTTP or HTTPS URL
       if (UrlUtil.isHttpUrl(rft_id)) {
-        String url = resolveFromUrl(rft_id);
-        if (url != null) {
-          return url;
+        OpenUrlInfo resolved = resolveFromUrl(rft_id);
+        if (resolved.resolvedUrl != null) {
+          return resolved;
         }
         log.debug3("Failed to resolve from URL: " + rft_id);
       } else if (rft_id.startsWith("info:doi/")) {
         String doi = rft_id.substring("info:doi/".length());
-        String url = resolveFromDOI(doi); 
-        if (url != null) {
-          return url;
+        OpenUrlInfo resolved = resolveFromDOI(doi); 
+        if (resolved.resolvedUrl != null) {
+          return resolved;
         }
         log.debug3("Failed to resolve from DOI: " + doi);
       }
     }
+    
+    if (params.containsKey("id")) {
+      // handle OpenURL 0.1 DOI specification
+      String id = params.get("id");
+      if (id.startsWith("doi:")) {
+        String doi = id.substring("doi:".length());
+        OpenUrlInfo resolved = resolveFromDOI(doi);
+        if (resolved.resolvedUrl != null) {
+          return resolved;
+        }
+        log.debug3("Failed to resolve from DOI: " + doi);
+      }
+    }
+
     String spage = getRftStartPage(params);
     String author = getRftParam(params, "au");
     String atitle = getRftParam(params, "atitle");
@@ -287,11 +435,12 @@ public class OpenUrlResolver {
 
     if (isbn != null) {
       // process a book or monographic series based on ISBN
-      String url = resolveFromIsbn(
+      OpenUrlInfo resolved = resolveFromIsbn(
     	  isbn, date, volume, edition, spage, author, atitle);
-      if (url != null) {
-        log.debug3("Located url " + url + " for book ISBN " + isbn); 
-        return url;
+      if (resolved.resolvedUrl != null) {
+        log.debug3(
+            "Located url " + resolved.resolvedUrl + " for book ISBN " + isbn); 
+        return resolved;
       }
       log.debug3("Failed to resolve from ISBN: " + isbn);
     }
@@ -305,116 +454,35 @@ public class OpenUrlResolver {
     if (anyIssn != null) {
 
       // resolve from its eISSN
-      String url = 
+      OpenUrlInfo resolved = 
         resolveFromIssn(anyIssn, date, volume, issue, spage, author, atitle);
-      if (url != null) {
+      if (resolved.resolvedUrl != null) {
         if (log.isDebug3()) {
           String title = getRftParam(params, "jtitle");
           if (title == null) {
             title = getRftParam(params, "title");
           }
-          log.debug3("Located url " + url +
+          log.debug3("Located url " + resolved.resolvedUrl +
                     " for article \"" + atitle + "\"" +
                     ", ISSN " + anyIssn +
                     ", title \"" + title + "\"");
         }
-        return url;
+        return resolved;
       }
       log.debug3("Failed to resolve from ISSN: " + anyIssn);
     }
     
-    // process a journal or book based on its title
-    String title = getRftParam(params, "title");
-    boolean isbook = false;
-    boolean isjournal = false;
-    if (title == null) {
-      title = params.get("rft.jtitle");
-      isjournal = title != null;
-    }
-    if (title == null) {
-      title = params.get("rft.btitle");
-      isbook = title != null;
-    }
-    if (title != null) {
-      Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
-      if (tdb != null) {
-        Collection<TdbTitle> titles = Collections.emptySet();
-        String pub = getRftParam(params, "pub");
-        // limit search to publisher if specified, 
-        // otherwise search all matching titles
-        if (pub != null) {
-          TdbPublisher tdbPub = tdb.getTdbPublisher(pub);
-          if (tdbPub != null) {
-            titles = tdbPub.getTdbTitlesByName(title);
-          }
-        } else {
-          titles = tdb.getTdbTitlesByName(title);
-        }
-
-        // search all titles with either ISBN or ISSN first, because they
-        // can be resolved to a specific article in the metadata database
-        Collection <TdbTitle> notitles = new ArrayList<TdbTitle>();
-        for (TdbTitle tdbTitle : titles) {
-          // search for book through its ISBN
-          // PJG: monographic serials can have ISBNs too; not sure
-          // whether OpenURL treats these as journals or books.
-          String id = (!isjournal) ? tdbTitle.getIsbn() : null;
-          if (id != null) {
-            // try resolving from ISBN
-            String url = resolveFromIsbn(
-            	id, date, volume, edition, spage, author, atitle);
-            if (url != null) {
-              log.debug3("Located url " + url + " for book ISBN " + id); 
-              return url;
-            }
-          }
-          
-          // search for journal through its ISSN
-          id = (!isbook) ? tdbTitle.getIssn() : null;
-          if (id != null) {
-            // try resolving from ISSN
-            String url = 
-              resolveFromIssn(id, date, volume, issue, spage, author, atitle);
-            if (url != null) {
-              if (log.isDebug3()) log.debug3("Located url " + url +
-                        " for article \"" + atitle + "\"" +
-                        ", ISSN " + issn +
-                        ", title \"" + title + "\"" +
-                        ", publisher \""  + 
-                        tdbTitle.getTdbPublisher().getName() + "\"");
-              return url;
-            }
-          }
-          
-          // add to list of titles with no ISBN or ISSN
-          notitles.add(tdbTitle);
-        }
-
-        // search titles with no ISBN or ISSN identifier 
-        for (TdbTitle tdbTitle : notitles) {
-          String url = 
-            resolveJournalFromTdbTitle(tdbTitle,date,volume,issue, spage);
-          if (url != null) {
-            if (log.isDebug3()) log.debug3("Located url " + url +
-                      ", title \"" + tdbTitle.getName() + "\"" +
-                      ", publisher \""  + 
-                      tdbTitle.getTdbPublisher().getName() + "\"");
-            return url;
-          }            
-        }
-      }
-      log.debug3("Failed to resolve from title: \"" + title + "\"");
-    }
     
     String bici = params.get("rft.bici");
     if (bici != null) {
       // get cached URL from book book ICI code
-      String url = null;
+      OpenUrlInfo resolved = null;
       try {
-        url = resolveFromBici(bici);
-        if (url != null) {
-          log.debug3("Located url " + url + "for bici " + bici);
-          return url;
+        resolved = resolveFromBici(bici);
+        if (resolved.resolvedUrl != null) {
+          log.debug3(
+              "Located url " + resolved.resolvedUrl + "for bici " + bici);
+          return resolved;
         }
       } catch (ParseException ex) {
         log.warning(ex.getMessage());
@@ -425,12 +493,13 @@ public class OpenUrlResolver {
     String sici = params.get("rft.sici");
     // get cached URL from serial ICI code
     if (sici != null) {
-      String url = null;
+      OpenUrlInfo resolved = null;
       try {
-        url = resolveFromSici(sici);
-        if (url != null) {
-          log.debug3("Located url " + url + "for sici " + sici);
-          return url;
+        resolved = resolveFromSici(sici);
+        if (resolved.resolvedUrl != null) {
+          log.debug3(
+              "Located url " + resolved.resolvedUrl + "for sici " + sici);
+          return resolved;
         }
       } catch (ParseException ex) {
         log.warning(ex.getMessage());
@@ -438,7 +507,123 @@ public class OpenUrlResolver {
       log.debug3("Failed to resolve from SICI: " + sici);
     }
 
-    return null;
+    // process a journal or book based on its title
+    String title = getRftParam(params, "title");
+    boolean isbook = false;
+    boolean isjournal = false;
+    if (title == null) {
+      title = params.get("rft.btitle");
+      isbook = title != null;
+    }
+    if (title == null) {
+      title = params.get("rft.jtitle");
+      isjournal = title != null;
+    }
+    if (title != null) {
+      Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
+      if (tdb != null) {
+        Collection<TdbTitle> titles = Collections.emptySet();
+        String pub = getRftParam(params, "pub");
+        // only search the named publisher
+        TdbPublisher tdbPub = (pub == null) ? null : tdb.getTdbPublisher(pub);
+        
+        if (isbook) {
+          // search as though it is a book title
+          Collection<TdbAu> tdbAus;
+          if (tdbPub != null) {
+            tdbAus = tdbPub.getTdbAusLikeName(title);
+          } else {
+            tdbAus = tdb.getTdbAusLikeName(title);
+          }
+          
+          Collection<TdbAu> noTdbAus = new ArrayList<TdbAu>();
+          for (TdbAu tdbAu : tdbAus) {
+            // search for journal through its ISBN
+            String id = tdbAu.getIsbn();
+            if (id != null) {
+              // try resolving from ISBN
+              OpenUrlInfo resolved = 
+                resolveFromIsbn(id, date, volume, issue, spage, author, atitle);
+              if (resolved.resolvedUrl != null) {
+                if (log.isDebug3()) {
+                  log.debug3("Located url " + resolved.resolvedUrl +
+                             " for article \"" + atitle + "\"" +
+                             ", ISBN " + id +
+                             ", title \"" + title + "\"" +
+                             ", publisher \""  + 
+                             tdbAu.getTdbPublisher().getName() + "\"");
+                }
+                return resolved;
+              }
+            } else {
+              // add to list of titles with no ISBN
+              noTdbAus.add(tdbAu);
+            }
+          }
+        
+          // search matching titles without ISBNs
+          OpenUrlInfo resolved = 
+            resolveBookFromTdbAus(noTdbAus, date, volume, edition, spage);
+          if (resolved != null) {
+            if (log.isDebug3()) {
+              log.debug3(  "Located url " + resolved.resolvedUrl 
+                         + ", title \"" + title + "\"");
+            }
+            return resolved;
+          }       
+        } else {
+          // search as though it is a journal title
+          Collection<TdbTitle> tdbTitles;
+          if (tdbPub != null) {
+            tdbTitles = tdbPub.getTdbTitlesLikeName(title);
+          } else {
+            tdbTitles = tdb.getTdbTitlesLikeName(title);
+          }
+          
+          Collection<TdbTitle> noTdbTitles = new ArrayList<TdbTitle>();
+          for (TdbTitle tdbTitle : tdbTitles) {
+            // search for journal through its ISSN
+            String id = tdbTitle.getIssn();
+            if (id != null) {
+              // try resolving from ISSN
+              OpenUrlInfo resolved = 
+                resolveFromIssn(id, date, volume, issue, spage, author, atitle);
+              if (resolved.resolvedUrl != null) {
+                if (log.isDebug3()) {
+                  log.debug3("Located url " + resolved.resolvedUrl +
+                             " for article \"" + atitle + "\"" +
+                             ", ISSN " + id +
+                             ", title \"" + title + "\"" +
+                             ", publisher \""  + 
+                             tdbTitle.getTdbPublisher().getName() + "\"");
+                }
+                return resolved;
+              }
+            } else {
+              // add to list of titles with no ISBN or ISSN
+              noTdbTitles.add(tdbTitle);
+            }
+          }
+
+          // search matching titles without ISSNs
+          for (TdbTitle noTdbTitle : noTdbTitles) {
+            Collection<TdbAu> tdbAus =  noTdbTitle.getTdbAus();
+            OpenUrlInfo resolved = 
+              resolveJournalFromTdbAus(tdbAus,date,volume,issue, spage);
+            if (resolved.resolvedUrl != null) {
+              if (log.isDebug3()) {
+                log.debug3(  "Located url " + resolved.resolvedUrl 
+                           + ", title \"" + title + "\"");
+              }
+              return resolved;
+            }            
+          }
+        }
+      }
+      log.debug3("Failed to resolve from title: \"" + title + "\"");
+    }
+
+    return noOpenUrlInfo;
   }
 
   /**
@@ -451,7 +636,7 @@ public class OpenUrlResolver {
    * @return the article url or <code>null</code> if not resolved
    * @throws ParseException if error parsing SICI
    */
-  public String resolveFromSici(String sici) throws ParseException {
+  public OpenUrlInfo resolveFromSici(String sici) throws ParseException {
     int i = sici.indexOf('(');
     if (i < 0) {
       // did not find end of date section
@@ -460,7 +645,7 @@ public class OpenUrlResolver {
 
     // validate ISSN after normalizing to remove punctuation
     String issn = sici.substring(0,i).replaceFirst("-", "");
-    if (!MetadataUtil.isISSN(issn)) {
+    if (!MetadataUtil.isIssn(issn)) {
       // ISSN is 8 characters
       throw new ParseException("Malformed ISSN", 0);
     }
@@ -503,19 +688,20 @@ public class OpenUrlResolver {
     String spage = sici.substring(i,j);
     
     // get the cached URL from the parsed paramaters
-    String url = resolveFromIssn(issn, null, volume, issue, spage, null, null);
-    if ((url != null) && log.isDebug()) {
+    OpenUrlInfo resolved = 
+        resolveFromIssn(issn, null, volume, issue, spage, null, null);
+    if ((resolved.resolvedUrl != null) && log.isDebug()) {
       // report on the found article
       Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
       String jTitle = null;
       if (tdb != null) {
-        TdbTitle title = tdb.getTdbTitleByIsbn(issn);
+        TdbTitle title = tdb.getTdbTitleByIssn(issn);
         if (title != null) {
           jTitle = title.getName();
         }
       }
       if (log.isDebug3())  {
-        String s = "Located cachedURL " + url
+        String s = "Located cachedURL " + resolved.resolvedUrl
                    + " for ISSN " + issn
                    + ", volume: " + volume
                    + ", issue: " + issue 
@@ -527,7 +713,7 @@ public class OpenUrlResolver {
       }
     }
     
-    return url;
+    return noOpenUrlInfo;
   }
 
   /**
@@ -540,7 +726,7 @@ public class OpenUrlResolver {
    * @return the article url or <code>null</code> if not resolved
    * @throws ParseException if error parsing BICI
    */
-  public String resolveFromBici(String bici) throws ParseException {
+  public OpenUrlInfo resolveFromBici(String bici) throws ParseException {
     int i = bici.indexOf('(');
     if (i < 0) {
       // did not find end of date section
@@ -549,7 +735,7 @@ public class OpenUrlResolver {
     String isbn = bici.substring(0,i).replaceAll("-", "");
 
     // match ISBN-10 or ISBN-13 with 0-9 or X checksum character
-    if (!MetadataUtil.isISBN(isbn, false)) {
+    if (!MetadataUtil.isIsbn(isbn, false)) {
       // ISSB is 10 or 13 characters
       throw new ParseException("Malformed ISBN", 0);
     }
@@ -600,18 +786,19 @@ public class OpenUrlResolver {
     
     // PJG: what about chapter number?
     // (isbn, date, volume, edition, spage, author, title) 
-    String url = resolveFromIsbn(isbn, date, null, null, spage, null, null);
-    if ((url != null) && log.isDebug()) {
+    OpenUrlInfo resolved = 
+        resolveFromIsbn(isbn, date, null, null, spage, null, null);
+    if ((resolved.resolvedUrl != null) && log.isDebug()) {
       Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
       String bTitle = null;
       if (tdb != null) {
-        TdbTitle title = tdb.getTdbTitleByIsbn(isbn);
-        if (title != null) {
-          bTitle = title.getName();
+        Collection<TdbAu> tdbAus = tdb.getTdbAusByIsbn(isbn);
+        if (!tdbAus.isEmpty()) {
+          bTitle = tdbAus.iterator().next().getJournalTitle();
         }
       }
       if (log.isDebug3())  {
-        String s = "Located cachedURL " + url +
+        String s = "Located cachedURL " + resolved.resolvedUrl +
         " for ISBN " + isbn +
         ", year: " + date + 
         ", chapter: " + chapter +
@@ -623,10 +810,21 @@ public class OpenUrlResolver {
       }
     }
     
-    return url;
+    return noOpenUrlInfo;
     
   }
 
+  /**
+   * Resolves from a url.
+   *  
+   * @param aUrl the URL
+   * @return a resolved URL
+   */
+  public OpenUrlInfo resolveFromUrl(String aUrl) {
+    String url = resolveUrl(aUrl);
+    return OpenUrlInfo.newInstance(url);
+  }
+  
   /**
    * Validates a URL and resolve it by following indirects, and stopping
    * early if a URL that is in the LOCKSS cache is found.
@@ -634,13 +832,12 @@ public class OpenUrlResolver {
    * @param aUrl the URL
    * @return a resolved URL
    */
-  public String resolveFromUrl(String aUrl) {
+  public String resolveUrl(String aUrl) {
+    String url = aUrl;
     try {
       final PluginManager pluginMgr = daemon.getPluginManager();
       final LockssUrlConnectionPool connectionPool =
         daemon.getProxyManager().getQuickConnectionPool();
-
-      String url = aUrl;
       for (int i = 0; i < MAX_REDIRECTS; i++) {
         // no need to look further if content already cached
         if (pluginMgr.findCachedUrl(url,true) != null) {
@@ -659,7 +856,11 @@ public class OpenUrlResolver {
           String url2 = conn.getResponseHeaderValue("Location");
           if (url2 == null) {
             int response = conn.getResponseCode();
-            return (response == HttpURLConnection.HTTP_OK) ? url : null;
+            log.debug3(i + " response code: " + response);
+            if (response == HttpURLConnection.HTTP_OK) {
+              return url;
+            }
+            return null;
           }
           
           // resolve redirected URL and try again
@@ -670,7 +871,7 @@ public class OpenUrlResolver {
         }
       }
     } catch (IOException ex) {
-      log.error("resolving from URL:" + aUrl, ex);
+      log.error("resolving from URL:" + aUrl + " with URL: " + url, ex);
     }
     return null;
   }
@@ -680,32 +881,32 @@ public class OpenUrlResolver {
    * @param doi the DOI
    * @return the article url
    */
-  public String resolveFromDOI(String doi) {
-    if (!MetadataUtil.isDOI(doi)) {
+  public OpenUrlInfo resolveFromDOI(String doi) {
+    if (!MetadataUtil.isDoi(doi)) {
       return null;
     }
-    String url = null;
+    OpenUrlInfo resolved = noOpenUrlInfo;
     try {
       // resolve from metadata manager
       MetadataManager metadataMgr = daemon.getMetadataManager();
-      url = resolveFromDoi(metadataMgr, doi);
+      resolved = resolveFromDoi(metadataMgr, doi);
     } catch (IllegalArgumentException ex) {
     }
     
-    if (url == null) {
+    if (resolved.resolvedUrl == null) {
       // use DOI International resolver for DOI
-      url = resolveFromUrl("http://dx.doi.org/" + doi);
+      resolved = resolveFromUrl("http://dx.doi.org/" + doi);
     }
-    return url;
+    return resolved;
   }    
 
   /**
    * Return the article URL from a DOI using the MDB.
    * @param metadataMgr the metadata manager
    * @param doi the DOI
-   * @return the article url
+   * @return the OpenUrlInfo
    */
-  private String resolveFromDoi(MetadataManager metadataMgr, String doi) {
+  private OpenUrlInfo resolveFromDoi(MetadataManager metadataMgr, String doi) {
     String url = null;
     Connection conn = null;
     try {
@@ -731,7 +932,7 @@ public class OpenUrlResolver {
     } finally {
       MetadataManager.safeClose(conn);
     }
-    return url;
+    return new OpenUrlInfo(url, OpenUrlInfo.ResolvedTo.ARTICLE);
   }
 
   /**
@@ -747,10 +948,10 @@ public class OpenUrlResolver {
    * @param atitle the article title 
    * @return the article URL
    */
-  public String resolveFromIssn(
+  public OpenUrlInfo resolveFromIssn(
     String issn, String date, String volume, String issue, 
     String spage, String author, String atitle) {
-    String url = null;
+    OpenUrlInfo resolved = noOpenUrlInfo;
 
     Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
     TdbTitle title = (tdb == null) ? null : tdb.getTdbTitleByIssn(issn);
@@ -761,20 +962,21 @@ public class OpenUrlResolver {
       String[] issns = (title == null) ? 
         new String[] { issn } : title.getIssns();
       MetadataManager metadataMgr = daemon.getMetadataManager();
-      url = resolveFromIssn(metadataMgr, issns, date, 
-                            volume, issue, spage, author, atitle);
+      resolved = resolveFromIssn(metadataMgr, issns, date, 
+                                volume, issue, spage, author, atitle);
     } catch (IllegalArgumentException ex) {
       // intentionally ignore input error
     }
-    if (url == null) {
+    if (resolved.resolvedUrl == null) {
       // resolve title, volume, AU, or issue TOC from TDB
       if (title == null) {
         log.debug3("No TdbTitle for issn " + issn);
       } else {
-    	url = resolveJournalFromTdbTitle(title, date, volume, issue, spage);
+    	resolved = resolveJournalFromTdbAus(
+    	    title.getTdbAus(), date, volume, issue, spage);
       }
     }
-    return url;
+    return resolved;
   }
   
   /**
@@ -791,13 +993,13 @@ public class OpenUrlResolver {
    * @param atitle the article title 
    * @return the article URL
    */
-  private String resolveFromIssn(
+  private OpenUrlInfo resolveFromIssn(
       MetadataManager metadataMgr,
       String[] issns, String date, String volume, String issue, 
       String spage, String author, String atitle) {
           
     Connection conn = null;
-    String url = null;
+    OpenUrlInfo resolved = noOpenUrlInfo;
     try {
       conn = metadataMgr.newConnection();
       StringBuilder query = new StringBuilder();
@@ -876,7 +1078,8 @@ public class OpenUrlResolver {
         query.append(" )");
       }
       
-      url = resolveFromQuery(conn, query.toString(), args);
+      String url = resolveFromQuery(conn, query.toString(), args);
+      return OpenUrlInfo.newInstance(url, OpenUrlInfo.ResolvedTo.ARTICLE);
 
     } catch (SQLException ex) {
       log.error("Getting ISSNs:" + Arrays.toString(issns), ex);
@@ -884,7 +1087,7 @@ public class OpenUrlResolver {
     } finally {
       MetadataManager.safeClose(conn);
     }
-    return url;
+    return resolved;
   }
 
   /** 
@@ -928,10 +1131,9 @@ public class OpenUrlResolver {
    * @param spage the start page or article number
    * @return the article URL
    */
-  private String resolveJournalFromTdbTitle(
-    TdbTitle tdbTitle, String date, String volume, String issue, String spage) {
-    TdbAu tdbau = null;
-    boolean found = false;
+  private OpenUrlInfo resolveJournalFromTdbAus(
+    Collection<TdbAu> tdbAus, 
+    String date, String volume, String issue, String spage) {
     
     // get the year from the date
     String year = null;
@@ -940,50 +1142,99 @@ public class OpenUrlResolver {
       year = (y == 0) ? null : Integer.toString(y);
     }
 
+    // list of AUs that match volume and year specified
+    ArrayList<TdbAu> foundTdbAuList = new ArrayList<TdbAu>();
+    
+    // list of AUs that do not match volume and year specified
+    ArrayList<TdbAu> notFoundTdbAuList = new ArrayList<TdbAu>();
+    
     // find a TdbAu that matches the date, and volume
-    for (Iterator<TdbAu> itr = tdbTitle.getTdbAus().iterator(); 
-         !found && itr.hasNext(); ) {
-      tdbau = itr.next();
+    for (TdbAu tdbAu : tdbAus) {
 
       // if neither year or volume specified, pick any TdbAu
       if ((volume == null) && (year == null)) {
-    	break;
+        notFoundTdbAuList.add(tdbAu);
+        continue;
       }
       
       // if volume specified, see if this TdbAu matches
       if (volume != null) {
-        found = tdbau.includesVolume(volume);
-        if (!found) {
+        if (!tdbAu.includesVolume(volume)) {
+          notFoundTdbAuList.add(tdbAu);
           continue;
         }
       }
 
       // if year specified, see if this TdbAu matches
       if (year != null) {
-        found = tdbau.includesYear(year);
+        if (!tdbAu.includesYear(year)) {
+          notFoundTdbAuList.add(tdbAu);
+          continue;
+        }
+      }
+      
+      foundTdbAuList.add(tdbAu);
+    }
+
+    final PluginManager pluginMgr = daemon.getPluginManager();
+    OpenUrlInfo resolved = noOpenUrlInfo;
+    if (!foundTdbAuList.isEmpty()) {
+      // look for URL that is cached from list of matching AUs
+      for (TdbAu tdbau : foundTdbAuList) {
+        String aYear = year;
+        if (aYear == null) {
+          aYear = tdbau.getStartYear();
+        }
+        String aVolume = volume;
+        if (aVolume == null) {
+          aVolume = tdbau.getStartVolume();
+        }
+        String anIssue = issue;
+        if (anIssue == null) {
+          anIssue  = tdbau.getStartIssue();
+        }
+        OpenUrlInfo aResolved = getJournalUrl(tdbau, aYear, aVolume, anIssue, spage);
+        if (aResolved.resolvedUrl != null) {
+          // found the URL if in cache
+          if  (pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
+            resolved = aResolved;
+            return resolved;
+          }
+          // not a viable URL if the AU is down
+          // note: even though getJournalUrl() checks that page exists,
+          // we can't rely on it being usable if TdbAu is down
+          if (!tdbau.isDown()) {
+            resolved = aResolved;
+            return resolved;
+          }
+          log.debug2(  "discarding URL " + aResolved.resolvedUrl 
+                     + " because tdbau is down: " + tdbau.getName());
+        }
+      }
+    }
+    // look for URL that is cached from list of non-matching AUs
+    for (TdbAu tdbau : notFoundTdbAuList) {
+      OpenUrlInfo aResolved = 
+          getJournalUrl(tdbau, year, volume, issue, spage);
+      if (aResolved != null) {
+        // found the URL if in cache
+        if  (pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
+          resolved = aResolved;
+          return resolved;
+        }
+        // not a viable URL if the AU is down
+        // note: even though getJournalUrl() checks that page exists,
+        // we can't rely on it being usable if TdbAu is down
+        if (!tdbau.isDown()) {
+          resolved = aResolved;
+          return resolved;
+        }
+        log.debug2(  "discarding URL " + aResolved.resolvedUrl 
+                   + " because tdbau is down: " + tdbau.getName());
       }
     }
 
-    if (log.isDebug3()) { 
-      log.debug3(  "tdbau = " + ((tdbau == null) ? null : tdbau.getId()) 
-                + " found = " + found);
-    }
-    String url = null;  // should be the title URL
-    if (tdbau != null) {
-      if (found) {
-    	if (year == null) {
-    	  year = tdbau.getStartYear();
-    	}
-    	if (volume == null) {
-    	  volume = tdbau.getStartVolume();
-    	}
-    	if (issue == null) {
-    	  issue  = tdbau.getStartIssue();
-    	}
-      }
-  	  url = getJournalUrl(tdbau, year, volume, issue, spage);
-    }
-    return url;
+    return resolved;
   }
   
   /**
@@ -993,8 +1244,9 @@ public class OpenUrlResolver {
    * @return the parameter map
    */
   private static TypedEntryMap getParamMap(Plugin plugin, TdbAu tdbau) {
-	TypedEntryMap paramMap = new TypedEntryMap();
-    for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
+    TypedEntryMap paramMap = new TypedEntryMap();
+    List<ConfigParamDescr> descrs = plugin.getAuConfigDescrs();
+    for (ConfigParamDescr descr : descrs) {
       String key = descr.getKey();
       String sval = tdbau.getParam(key);
       if (sval == null) {
@@ -1012,6 +1264,14 @@ public class OpenUrlResolver {
         }
       }
     }
+    
+    // add entries for attributes that do not correspond to AU params
+    for (Map.Entry<String,String> entry : tdbau.getAttrs().entrySet()) {
+      if (!paramMap.containsKey(entry.getKey())) {
+        paramMap.setMapElement(entry.getKey(), entry.getValue());
+      }
+    }
+    
 	return paramMap;
   }
   
@@ -1069,15 +1329,16 @@ public class OpenUrlResolver {
    * @param year the year
    * @param volumeName the volume name
    * @param edition the edition
+   * @param spage the start page
    * @return the starting URL
    */
-  private String getBookUrl(
-	  TdbAu tdbau, String year, String volumeName, String edition) {
+  private OpenUrlInfo getBookUrl(
+	  TdbAu tdbau, String year, String volumeName, String edition, String spage) {
     PluginManager pluginMgr = daemon.getPluginManager();
     String pluginKey = PluginManager.pluginKeyFromId(tdbau.getPluginId());
     Plugin plugin = pluginMgr.getPlugin(pluginKey);
 
-    String url = null;
+    OpenUrlInfo resolved = null;
     if (plugin != null) {
       log.debug3(  "getting issue url for plugin: " 
                  + plugin.getClass().getName());
@@ -1099,16 +1360,26 @@ public class OpenUrlResolver {
         }
       }
   	  paramMap.setMapElement("edition", edition);
+      paramMap.setMapElement("chapter", spage);
   	  // auFeatureKey selects feature from a map of values
   	  // for the same feature (e.g. au_feature_urls/au_year)
       paramMap.setMapElement("auFeatureKey", tdbau.getAttr(AU_FEATURE_KEY));
-
-      url = getBookUrl(plugin, paramMap);
-      log.debug3("Found starting url from definable plugin: " + url);
+      String isbn = tdbau.getAttr("isbn");
+      if (isbn != null) {
+        paramMap.setMapElement("isbn", isbn);
+      }
+      String eisbn = tdbau.getAttr("eisbn");
+      if (eisbn != null) {
+        paramMap.setMapElement("eisbn", eisbn);
+      }
+      
+      resolved = getBookUrl(plugin, paramMap);
+      log.debug3(  "Found starting url from definable plugin: " 
+                 + resolved.resolvedUrl);
     } else {
       log.debug3("No plugin found for key: " + pluginKey); 
     }
-    return url;
+    return resolved;
   }
     
 
@@ -1118,12 +1389,13 @@ public class OpenUrlResolver {
    * @param paramMap the param map
    * @return the issue URL
    */
-  private String getBookUrl(Plugin plugin, TypedEntryMap paramMap) {
-    String url = getPluginUrl(plugin, auBookauFeatures, paramMap);
-    if (url == null) {
-      url = paramMap.getString("base_url");
+  private OpenUrlInfo getBookUrl(Plugin plugin, TypedEntryMap paramMap) {
+    OpenUrlInfo resolved = getPluginUrl(plugin, auBookauFeatures, paramMap);
+    if (resolved.resolvedUrl == null) {
+      resolved = OpenUrlInfo.newInstance(
+          paramMap.getString("base_url"), OpenUrlInfo.ResolvedTo.PUBLISHER);
     }
-    return url;
+    return resolved;
   }
 
   /**
@@ -1155,13 +1427,13 @@ public class OpenUrlResolver {
    * @param spage the start page or article number
    * @return the starting URL
    */
-  private String getJournalUrl(
+  private OpenUrlInfo getJournalUrl(
 	  TdbAu tdbau, String year, String volumeName, String issue, String spage) {
     PluginManager pluginMgr = daemon.getPluginManager();
     String pluginKey = PluginManager.pluginKeyFromId(tdbau.getPluginId());
     Plugin plugin = pluginMgr.getPlugin(pluginKey);
 
-    String url = null;
+    OpenUrlInfo resolved = noOpenUrlInfo;
     if (plugin != null) {
       log.debug3(  "getting issue url for plugin: " 
                  + plugin.getClass().getName());
@@ -1172,6 +1444,14 @@ public class OpenUrlResolver {
       paramMap.setMapElement("volume_str", volumeName);
       paramMap.setMapElement("volume_name", volumeName);
       paramMap.setMapElement("year", year);
+      String issn = tdbau.getPrintIssn();
+      if (issn != null) {
+        paramMap.setMapElement("issn", issn);
+      }
+      String eissn = tdbau.getEissn();
+      if (eissn != null) {
+        paramMap.setMapElement("eissn", eissn);
+      }
       if (!StringUtil.isNullString(year)) {
         try {
           paramMap.setMapElement("au_short_year",
@@ -1186,12 +1466,13 @@ public class OpenUrlResolver {
       // AU_FEATURE_KEY selects feature from a map of values
       // for the same feature (e.g. au_feature_urls/au_year)
       paramMap.setMapElement(AU_FEATURE_KEY, tdbau.getAttr(AU_FEATURE_KEY));
-      url = getJournalUrl(plugin, paramMap);
-      log.debug3("Found starting url from definable plugin: " + url);
+      resolved = getJournalUrl(plugin, paramMap);
+      log.debug3(  "Found starting url from definable plugin: " 
+                 + resolved.resolvedUrl);
     } else {
       log.debug3("No plugin found for key: " + pluginKey); 
     }
-    return url;
+    return resolved;
   }
     
   /**
@@ -1200,12 +1481,13 @@ public class OpenUrlResolver {
    * @param paramMap the param map
    * @return the issue URL
    */
-  private String getJournalUrl(Plugin plugin, TypedEntryMap paramMap) { 
-    String url = getPluginUrl(plugin, auJournalauFeatures, paramMap);
-    if (url == null) {
-      url = paramMap.getString("base_url");
+  private OpenUrlInfo getJournalUrl(Plugin plugin, TypedEntryMap paramMap) { 
+    OpenUrlInfo resolved = getPluginUrl(plugin, auJournalauFeatures, paramMap);
+    if (resolved.resolvedUrl == null) {
+      resolved = OpenUrlInfo.newInstance(paramMap.getString("base_url"), 
+                                         OpenUrlInfo.ResolvedTo.PUBLISHER);
     }
-    return url;
+    return resolved;
   }
   
   /**
@@ -1215,8 +1497,8 @@ public class OpenUrlResolver {
    * @param paramMap the param map
    * @return the URL for the specified key
    */
-  private String
-  	getPluginUrl(Plugin plugin, String[] pluginKeys, TypedEntryMap paramMap) {
+  private OpenUrlInfo
+  	getPluginUrl(Plugin plugin, FeatureEntry[] pluginEntries, TypedEntryMap paramMap) {
     ExternalizableMap map;
 
     // get printf pattern for pluginKey property
@@ -1225,16 +1507,17 @@ public class OpenUrlResolver {
         plugin.getClass().getMethod("getDefinitionMap", (new Class[0]));
       Object obj = method.invoke(plugin);
       if (!(obj instanceof ExternalizableMap)) {
-       return null;
+       return noOpenUrlInfo;
       }
       map = (ExternalizableMap)obj;
     } catch (Exception ex) {
       log.error("getDefinitionMap", ex);
-      return null;
+      return noOpenUrlInfo;
     }
 
-    for (String pluginKey : pluginKeys) {
+    for (FeatureEntry pluginEntry : pluginEntries) {
       // locate object value for plugin key path
+      String pluginKey = pluginEntry.auFeatureKey;
       String[] pluginKeyPath = pluginKey.split("/");
       Object obj = map.getMapElement(pluginKeyPath[0]);
       for (int i = 1; (i < pluginKeyPath.length); i++) {
@@ -1287,47 +1570,55 @@ public class OpenUrlResolver {
         continue;
       }
       
+      log.debug3(  "Trying plugin key: " + pluginKey 
+                 + " for plugin: " + plugin.getPluginId()
+                 + " with " + printfStrings.size() + " printf strings");
+
       // set up converter for use with feature URL printf strings
       UrlListConverter converter = 
         PrintfConverter.newUrlListConverter(plugin, paramMap);
       
       for (String s : printfStrings) {
         String url = null;
+        s = StringEscapeUtils.unescapeHtml(s);
         try {
           List<String> urls = converter.getUrlList(s);
-          if (!urls.isEmpty()) {
+          if ((urls != null) && !urls.isEmpty()) {
             // if multiple urls match, the first one will do
             url = urls.get(0);
           } 
         } catch (Throwable ex) {
-          log.debug("invalid  conversion: " + ex.getMessage());
+          log.debug("invalid  conversion for " + s, ex);
           continue;
         }
             
         // validate URL: either it's cached, or it can be reached
-        url = resolveFromUrl(url);
-        if (url != null) {
-          return url;
+        if (!StringUtil.isNullString(url)) {
+          log.debug3("Resolving from url: " + url);
+          url = resolveUrl(url);
+          if (url != null) {
+            return OpenUrlInfo.newInstance(url, pluginEntry.resolvedTo);
+          }
         }
       }
     }
       
-    return null;
+    return noOpenUrlInfo;
   }
   
   /**
    * Return the book URL from TdbTitle and edition.
    * 
-   * @param title the TdbTitle
+   * @param tdbAus a collection of TdbAus that match an ISBN
    * @param date the publication date
    * @param volume the volume
    * @param edition the edition
+   * @param spage the start page
    * @return the book URL
    */
-  private String resolveBookFromTdbTitle(
-	  TdbTitle title, String date, String volume, String edition) {
-    TdbAu tdbau = null;
-    boolean found = false;
+  private OpenUrlInfo resolveBookFromTdbAus(
+	  Collection<TdbAu> tdbAus, String date, 
+	  String volume, String edition, String spage) {
 
     // get the year from the date
     String year = null;
@@ -1336,49 +1627,105 @@ public class OpenUrlResolver {
       year = (y == 0) ? null : Integer.toString(y);
     }
 
-    for (Iterator<TdbAu> itr = title.getTdbAus().iterator(); 
-         !found && itr.hasNext(); ) {
-      tdbau = itr.next();
+    // list of AUs that match volume and year specified
+    ArrayList<TdbAu> foundTdbAuList = new ArrayList<TdbAu>();
+    
+    // list of AUs that do not match volume, edition, and year specified
+    ArrayList<TdbAu> notFoundTdbAuList = new ArrayList<TdbAu>();
+    
+    for (TdbAu tdbAu : tdbAus) {
       
-      // if neither year, volume, or edition specified, pick any TdbAu
+      // if none of year, volume, or edition specified, pick any TdbAu
       if ((volume == null) && (year == null) && (edition == null)) {
-    	break;
+        notFoundTdbAuList.add(tdbAu);
+        continue;
       }
       
       // if volume specified, see if this TdbAu matches
       if (volume != null) {
-        found = tdbau.includesVolume(volume);
-        if (!found) {
+        if (!tdbAu.includesVolume(volume)) {
+          notFoundTdbAuList.add(tdbAu);
           continue;
         }
       }
       // if year specified, see if this TdbAu matches
       if (year != null) {
-        found = tdbau.includesYear(year);
-        if (!found) {
+        if (!tdbAu.includesYear(year)) {
+          notFoundTdbAuList.add(tdbAu);
           continue;
         }
       }
       
       // get the plugin id for the TdbAu that matches the specified edition
       if (edition != null) {
-        String auEdition = tdbau.getEdition();
+        String auEdition = tdbAu.getEdition();
         if ((auEdition != null) && !edition.equals(auEdition)) {
+          notFoundTdbAuList.add(tdbAu);
           continue;
         }
       }
-      found = true;
+      foundTdbAuList.add(tdbAu);
     }
     
-    if (log.isDebug3()) { 
-      log.debug3(  "tdbau = " + ((tdbau == null) ? null : tdbau.getId()) 
-                + " found = " + found);
+    final PluginManager pluginMgr = daemon.getPluginManager();
+    OpenUrlInfo resolved = noOpenUrlInfo;
+    if (!foundTdbAuList.isEmpty()) {
+      // look for URL that is cached from list of matching AUs
+      for (TdbAu tdbau : foundTdbAuList) {
+        String aYear = year;
+        if (aYear == null) {
+          aYear = tdbau.getStartYear();
+        }
+        String aVolume = volume;
+        if (aVolume == null) {
+          aVolume = tdbau.getStartVolume();
+        }
+        String anEdition = edition;
+        if (edition == null) {
+          anEdition  = tdbau.getEdition();
+        }
+        OpenUrlInfo aResolved = getBookUrl(tdbau, year, aVolume, anEdition, spage);
+        if (aResolved != null) {
+          // found the URL if in cache
+          if  (pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
+            resolved = aResolved;
+            break;
+          }
+          // not a viable URL if the AU is down
+          // note: even though getBookUrl() checks that page exists,
+          // we can't rely on it being usable if TdbAu is down
+          if (!tdbau.isDown()) {
+            resolved = aResolved;
+          } else {
+            log.debug2(  "discarding URL " + aResolved.resolvedUrl 
+                       + " because tdbau is down: " + tdbau.getName());
+          }
+        }
+      }
+    } else {
+      // look for URL that is cached from list of non-matching AUs
+      for (TdbAu tdbau : notFoundTdbAuList) {
+        OpenUrlInfo aResolved = getBookUrl(tdbau, year, volume, edition, spage);
+        if (aResolved.resolvedUrl != null) {
+          // found the URL if in cache
+          if  (pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
+            resolved = aResolved;
+            break;
+          }
+          // not a viable URL if the AU is down
+          // note: even though getBookUrl() checks that page exists,
+          // we can't rely on it being usable if TdbAu is down
+          if (!tdbau.isDown()) {
+            resolved = aResolved;
+          } else {
+            log.debug2(  "discarding URL " + aResolved.resolvedUrl 
+                       + " because tdbau is down: " + tdbau.getName());
+          }
+        }
+      }
     }
-    String url = null;  // should be the title URL
-    if (tdbau != null) {
-  	  url = getBookUrl(tdbau, year, volume, edition);
-    }
-    return url;
+
+    return resolved;
   }
   
   /**
@@ -1396,29 +1743,31 @@ public class OpenUrlResolver {
    * @param atitle the chapter title
    * @return the article URL
    */
-  public String resolveFromIsbn(
+  public OpenUrlInfo resolveFromIsbn(
     String isbn, String date, String volume, String edition, 
     String spage, String author, String atitle) {
-    String url = null;
+    OpenUrlInfo resolved = noOpenUrlInfo;
     // only go to metadata manager if requesting individual article/chapter
     try {
       // resolve from metadata manager
       MetadataManager metadataMgr = daemon.getMetadataManager();
-      url = resolveFromIsbn(metadataMgr, isbn, date, volume, edition, spage, author, atitle);
+      resolved = resolveFromIsbn(
+          metadataMgr, isbn, date, volume, edition, spage, author, atitle);
     } catch (IllegalArgumentException ex) {
     }
 
-    if (url == null) {
+    if (resolved.resolvedUrl == null) {
       // resolve from TDB
       Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
-      TdbTitle title = (tdb == null) ? null : tdb.getTdbTitleByIsbn(isbn);
-      if (title == null) {
-        log.debug3("No TdbTitle for isbn " + isbn);
+      Collection<TdbAu> tdbAus = (tdb == null)
+        ? Collections.<TdbAu>emptySet() : tdb.getTdbAusByIsbn(isbn); 
+      if (tdbAus.isEmpty()) {
+        log.debug3("No TdbAus for isbn " + isbn);
         return null;
       }
-      return resolveBookFromTdbTitle(title, date, volume, edition);
+      resolved = resolveBookFromTdbAus(tdbAus, date, volume, edition, spage);
     }
-    return url;
+    return resolved;
   }
 
   /**
@@ -1443,11 +1792,11 @@ public class OpenUrlResolver {
    * @param atitle the chapter title
    * @return the url
    */
-  private String resolveFromIsbn(
-        MetadataManager metadataMgr, String isbn, 
-        String date, String volume, String edition, 
-        String spage, String author, String atitle) {
-        String url = null;
+  private OpenUrlInfo resolveFromIsbn(
+      MetadataManager metadataMgr, String isbn, 
+      String date, String volume, String edition, 
+      String spage, String author, String atitle) {
+      OpenUrlInfo resolved = noOpenUrlInfo;
     Connection conn = null;
     try {
       conn = metadataMgr.newConnection();
@@ -1528,7 +1877,8 @@ public class OpenUrlResolver {
 
       }
       
-      url = resolveFromQuery(conn, query.toString(), args);
+      String url = resolveFromQuery(conn, query.toString(), args);
+      resolved = OpenUrlInfo.newInstance(url, OpenUrlInfo.ResolvedTo.CHAPTER);
       
     } catch (SQLException ex) {
       log.error("Getting ISBN:" + isbn, ex);
@@ -1536,7 +1886,7 @@ public class OpenUrlResolver {
     } finally {
       MetadataManager.safeClose(conn);
     }
-    return url;
+    return resolved;
   }
   
   /**

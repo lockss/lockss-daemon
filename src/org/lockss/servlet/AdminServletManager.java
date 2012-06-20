@@ -1,10 +1,10 @@
 /*
- * $Id: AdminServletManager.java,v 1.22 2011-09-15 18:51:04 pgust Exp $
+ * $Id: AdminServletManager.java,v 1.22.4.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -314,16 +314,18 @@ public class AdminServletManager extends BaseServletManager {
   public static final ServletDescr SERVLET_DISPLAY_CONTENT =
     new ServletDescr("ViewContent",
 		     ViewContent.class,
-                     "View Content");
+                     "View Content",
+		     ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   public static final ServletDescr SERVLET_SERVE_CONTENT =
     new ServletDescr("ServeContent",
 		     ServeContent.class,
-                     "Serve Content");
+                     "Serve Content",
+		     ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   public static final ServletDescr SERVLET_EXPORT_CONTENT =
     new ServletDescr("ExportContent",
 		     ExportContent.class,
                      "Export Content",
-		     (ServletDescr.NEED_ROLE_CONTENT_ADMIN),
+		     (ServletDescr.NEED_ROLE_CONTENT_ACCESS),
 		     "Export preserved content as Zip, WARC, etc.") {
       public boolean isEnabled(LockssDaemon daemon) {
 	return CurrentConfig.getBooleanParam(ExportContent.PARAM_ENABLE_EXPORT,
@@ -337,7 +339,8 @@ public class AdminServletManager extends BaseServletManager {
     new ServletDescr("HashCUS",
 		     HashCUS.class,
                      "Hash CUS",
-                     ServletDescr.NEED_ROLE_DEBUG);
+                     ServletDescr.NEED_ROLE_DEBUG
+		     | ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   
   protected static final ServletDescr SERVLET_LIST_HOLDINGS =
     new ServletDescr("TitleList",
@@ -356,13 +359,15 @@ public class AdminServletManager extends BaseServletManager {
 		     null,
                      "Logs",
                      "log",
-                     ServletDescr.IN_NAV | ServletDescr.NEED_ROLE_DEBUG);
+                     ServletDescr.IN_NAV
+		     | ServletDescr.NEED_ROLE_DEBUG
+		     | ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   protected static final ServletDescr LINK_EXPORTS =
     new ServletDescr(null,
 		     null,
                      "Exports",
                      "export",
-		     ServletDescr.NEED_ROLE_CONTENT_ADMIN);
+		     ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   // Link to ISOs only appears if there are actually any ISOs
   protected static final ServletDescr LINK_ISOS =
     new ServletDescr(null,

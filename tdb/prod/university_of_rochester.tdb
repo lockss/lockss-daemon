@@ -16,7 +16,7 @@
     plugin = org.lockss.plugin.invisibleculture.InvisibleCulturePlugin
     param[base_url] = http://www.rochester.edu/
     implicit < status ; year ; name ; param[year] ; param[num_issue_range] >
-    comment[0] = missing manifest pages for 2007, 2009, 2011
+    comment[0] = num_issue_range must be a range and not a number, else add failure
 
     au < released ; 1998 ; Invisible Culture 1998 ; 1998 ; 1-1 >    
     au < released ; 1999 ; Invisible Culture 1999 ; 1999 ; 2-2 >    
@@ -27,11 +27,12 @@
     au < released ; 2004 ; Invisible Culture 2004 ; 2004 ; 7-8 >    
     au < released ; 2005 ; Invisible Culture 2005 ; 2005 ; 9-9 >    
     au < released ; 2006 ; Invisible Culture 2006 ; 2006 ; 10-10 >    
-    au < exists ; 2007 ; Invisible Culture 2007 ; 2007 ; 11-11 >    
-    au < ready ; 2008 ; Invisible Culture 2008 ; 2008 ; 12-12 >    
-    au < exists ; 2009 ; Invisible Culture 2009 ; 2009 ; 13-13 >    
-    au < ready ; 2010 ; Invisible Culture 2010 ; 2010 ; 14-15 > 
-    au < exists ; 2011 ; Invisible Culture 2011 ; 2011 ; 16 > 
+    au < released ; 2007 ; Invisible Culture 2007 ; 2007 ; 11-11 >    
+    au < released ; 2008 ; Invisible Culture 2008 ; 2008 ; 12-12 >    
+    au < released ; 2009 ; Invisible Culture 2009 ; 2009 ; 13-13 >    
+    au < released ; 2010 ; Invisible Culture 2010 ; 2010 ; 14-15 > 
+    au < released ; 2011 ; Invisible Culture 2011 ; 2011 ; 16-16 > 
+    au < expected ; 2012 ; Invisible Culture 2012 ; 2012 ; 17-17 >
 
   }
 

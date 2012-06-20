@@ -16,11 +16,13 @@
     >
 
     param[journal_dir] = james_joyce_quarterly
+    attr[journal_id] = jjq
 
     au < ready ; 2006-2007 ; James Joyce Quarterly Volume 44 ; 44 >
     au < ready ; 2007-2008 ; James Joyce Quarterly Volume 45 ; 45 >
     au < ready ; 2008-2009 ; James Joyce Quarterly Volume 46 ; 46 >
     au < ready ; 2009-2010 ; James Joyce Quarterly Volume 47 ; 47 >
+    au < manifest ; 2010 ; James Joyce Quarterly Volume 48 ; 48 >
 
   }
 
@@ -33,6 +35,7 @@
     >
 
     param[journal_dir] = tulsa_studies_in_womens_literature
+    attr[journal_id] = tsw
 
     au < ready ; 2007 ; Tulsa Studies in Women's Literature Volume 26 ; 26 >
     au < ready ; 2008 ; Tulsa Studies in Women's Literature Volume 27 ; 27 >

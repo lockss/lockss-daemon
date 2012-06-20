@@ -1,5 +1,5 @@
 /*
- * $Id: ActualZipContentGenerator.java,v 1.2 2007-09-24 18:37:13 dshr Exp $
+ * $Id: ActualZipContentGenerator.java,v 1.2.60.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -117,19 +117,19 @@ public class ActualZipContentGenerator extends SimulatedContentGenerator {
     if (dir.isDirectory()) {
       File index = new File(dir, INDEX_NAME);
       if (index.exists() && index.isFile()) try {
-	FileOutputStream fos = new FileOutputStream(index);
-	PrintWriter pw = new PrintWriter(fos);
-	logger.debug3("Re-creating index file at " + index.getAbsolutePath());
-	String file_content =
-	  getIndexContent(dir, INDEX_NAME, LockssPermission.LOCKSS_PERMISSION_STRING);
-	pw.print(file_content);
-	pw.flush();
-	pw.close();
-	fos.close();
+    FileOutputStream fos = new FileOutputStream(index);
+    PrintWriter pw = new PrintWriter(fos);
+    logger.debug3("Re-creating index file at " + index.getAbsolutePath());
+    String file_content =
+      getIndexContent(dir, INDEX_NAME, LockssPermission.LOCKSS_PERMISSION_STRING);
+    pw.print(file_content);
+    pw.flush();
+    pw.close();
+    fos.close();
       } catch (IOException ex) {
-	logger.error("linkToZipFiles() threw " + ex);
+    logger.error("linkToZipFiles() threw " + ex);
       } else {
-	logger.error("index.html missing");
+    logger.error("index.html missing");
       }
     } else {
       logger.error("Directory " + contentRoot + " missing");

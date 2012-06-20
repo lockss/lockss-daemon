@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = joyce_studies_annual
+    attr[journal_id] = joy
 
     au < released ; 2001 ; Joyce Studies Annual Volume 12 ; 12 >
     au < released ; 2002 ; Joyce Studies Annual Volume 13 ; 13 >
@@ -23,7 +24,8 @@
     au < released ; 2007 ; Joyce Studies Annual Volume 2007 ; 2007 >
     au < released ; 2008 ; Joyce Studies Annual Volume 2008 ; 2008 >
     au < released ; 2009 ; Joyce Studies Annual Volume 2009 ; 2009 >
-    au < manifest ; 2010 ; Joyce Studies Annual Volume 2010 ; 2010 >
+    au < testing ; 2010 ; Joyce Studies Annual Volume 2010 ; 2010 >
+    au < ready ; 2011 ; Joyce Studies Annual Volume 2011 ; 2011 >
 
   }
 
@@ -34,19 +36,21 @@
       issnl = 0070-2862
     >
 
-	comment[ds] = coming 2012
+    comment[ds] = coming 2012
     param[journal_dir] = dante_studies
   }
 
   {
     title <
       name = Traditio ;
-      issn = 0022-6864 ;
-      issnl = 0022-6864
+      issn = 0362-1529 
     >
 
-	comment[ds] = coming 2012
     param[journal_dir] = traditio
+    attr[journal_id] = trd
+    
+    au < ready ; 2011 ; Traditio Volume 66 ; 66 >
+    
   }
 
 }

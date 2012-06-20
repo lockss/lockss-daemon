@@ -20,6 +20,7 @@
       >
 
       param[journal_dir] = future_of_children
+      attr[journal_id] = foc
 
       au < released ; 2005 ; The Future of Children Volume 15 ; 15 >
       au < released ; 2006 ; The Future of Children Volume 16 ; 16 >
@@ -28,6 +29,7 @@
       au < released ; 2009 ; The Future of Children Volume 19 ; 19 >
       au < ready ; 2010 ; The Future of Children Volume 20 ; 20 >
       au < ready ; 2011 ; The Future of Children Volume 21 ; 21 >
+      au < manifest ; 2012 ; The Future of Children Volume 22 ; 22 >
 
     }
   

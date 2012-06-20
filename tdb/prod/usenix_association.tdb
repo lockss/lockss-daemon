@@ -17,33 +17,25 @@
     implicit < status ; year ; name ; volume ; param[year] ; nondefparam[optional_standards] >
 
     comment[access] = content becomes open access after a year
-    comment[2011] = missing manifest
+    comment[2011] = missing manifest see RU3571/RT1617
     
-    au < released ; 1997 ; ";login: 1997" ; ; 1997 ; stndrdswrthit,1,2,3,4,5,6,7,9,10,11 >
-    au < released ; 1998 ; ";login: 1998" ; ; 1998 ; 12,13,14,15,16.posix,17,16.editorial,18,19,20,21,22 >
-    au < released ; 1999 ; ";login: 1999" ; 24 ; 1999 ; 23,24,25,26,27,28,29,30 >
-    au < released ; 2000 ; ";login: 2000" ; 25 ; 2000 ; 31,32,33,34,35,36,37,38,39,42,43,44,45,46,47,48,49 >
-    au < released ; 2001 ; ";login: 2001" ; 26 ; 2001 ; 40,41,simonsen,hedquist,51 >
-    au < released ; 2002 ; ";login: 2002" ; 27 ; 2002 ; 52,53,54 >
-    au < released ; 2003 ; ";login: 2003" ; 28 ; 2003 ; >
-    au < released ; 2004 ; ";login: 2004" ; 29 ; 2004 ; >
-    au < released ; 2005 ; ";login: 2005" ; 30 ; 2005 ; >
-    au < released ; 2006 ; ";login: 2006" ; 31 ; 2006 ; >
-    au < released ; 2007 ; ";login: 2007" ; 32 ; 2007 ; >
-    au < released ; 2008 ; ";login: 2008" ; 33 ; 2008 ; >
-    au < manifest ; 2009 ; ";login: 2009" ; 34 ; 2009 ; >
-    au < manifest ; 2010 ; ";login: 2010" ; 35 ; 2010 ; >
-    au < exists ; 2011 ; ";login: 2011" ; 36 ; 2011 ; >
+    au < down ; 1997 ; ";login: 1997" ; ; 1997 ; stndrdswrthit,1,2,3,4,5,6,7,9,10,11 >
+    au < down ; 1998 ; ";login: 1998" ; ; 1998 ; 12,13,14,15,16.posix,17,16.editorial,18,19,20,21,22 >
+    au < down ; 1999 ; ";login: 1999" ; 24 ; 1999 ; 23,24,25,26,27,28,29,30 >
+    au < down ; 2000 ; ";login: 2000" ; 25 ; 2000 ; 31,32,33,34,35,36,37,38,39,42,43,44,45,46,47,48,49 >
+    au < down ; 2001 ; ";login: 2001" ; 26 ; 2001 ; 40,41,simonsen,hedquist,51 >
+    au < down ; 2002 ; ";login: 2002" ; 27 ; 2002 ; 52,53,54 >
+    au < down ; 2003 ; ";login: 2003" ; 28 ; 2003 ; >
+    au < down ; 2004 ; ";login: 2004" ; 29 ; 2004 ; >
+    au < down ; 2005 ; ";login: 2005" ; 30 ; 2005 ; >
+    au < down ; 2006 ; ";login: 2006" ; 31 ; 2006 ; >
+    au < down ; 2007 ; ";login: 2007" ; 32 ; 2007 ; >
+    au < down ; 2008 ; ";login: 2008" ; 33 ; 2008 ; >
+    au < doNotProcess ; 2009 ; ";login: 2009" ; 34 ; 2009 ; >
+    au < doNotProcess ; 2010 ; ";login: 2010" ; 35 ; 2010 ; >
+    au < doNotProcess ; 2011 ; ";login: 2011" ; 36 ; 2011 ; >
+    au < doNotProcess ; 2012 ; ";login: 2012" ; 37 ; 2012 ; >
 
-  }
-
-  {
-  
-    title <
-      name = All USENIX Association proceedings (coming soon) ;
-      placeholder = True
-    >
-  
   }
 
 }

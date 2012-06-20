@@ -3,6 +3,19 @@
     <string>plugin_identifier</string>
     <string>edu.nyu.plugin.ejcjs.EJCJSPlugin</string>
   </entry>
+    <entry>
+    <string>plugin_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>2</string>
+      </entry>
+    </map>
+  </entry>
   <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
@@ -18,14 +31,29 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>4,&quot;%s&quot;, base_url</string>
+      <string>1,&quot;%scontents/&quot;, base_url</string>
       <string>1,&quot;%sLOCKSS_Manifests/manifest%d.html&quot;, base_url, year</string>
-      <string>1,&quot;^%s.*$&quot;, base_url</string>
+      <string>1,&quot;%s.*/%d/&quot;, base_url, year</string>
+      <string>4,&quot;%s.*/%d/&quot;, base_url, year</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>&quot;%sLOCKSS_Manifests/manifest%d.html&quot;, base_url, year</string>
+  </entry>
+  <entry>
+        <string>au_feature_urls</string>
+        <map>
+          <entry>
+            <string>au_title</string>
+            <string>&quot;%scontents/contents_year.html&quot;, base_url</string>
+          </entry>
+          <entry>
+            <string>au_volume</string>
+            <string>&quot;%scontents/contents_year.html#%d&quot;, base_url, year</string>
+          </entry>
+        </map>
   </entry>
   <entry>
     <string>plugin_config_props</string>

@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformConfigStatus.java,v 1.5 2008-10-02 06:44:28 tlipkis Exp $
+ * $Id: PlatformConfigStatus.java,v 1.5.46.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
@@ -121,6 +121,21 @@ public class PlatformConfigStatus extends BaseLockssDaemonManager {
       addSum(res, "Admin Email", config.get(PARAM_PLATFORM_ADMIN_EMAIL));
       addSum(res, "Disks",
 	     seplist(config.getList(PARAM_PLATFORM_DISK_SPACE_LIST)));
+
+      res.add(new StatusTable.SummaryInfo("Current Time", 
+					  ColumnDescriptor.TYPE_DATE, TimeBase.nowMs()));
+      res.add(new StatusTable.SummaryInfo("Uptime", 
+					  ColumnDescriptor.TYPE_TIME_INTERVAL, 
+					  TimeBase.msSince(daemon.getStartDate().getTime())));
+      addSum(res, "Daemon Version", 
+	     ConfigManager.getDaemonVersion().displayString());
+
+      // The configuration may not be set in development environments
+      PlatformVersion version = Configuration.getPlatformVersion();
+      if (version != null) {
+	addSum(res, "Platform", version.getName());
+      }
+      
       addSum(res, "Cwd",
 	     PlatformUtil.getInstance().getCwd());
       List propsUrls = ConfigManager.getConfigManager().getConfigUrlList();

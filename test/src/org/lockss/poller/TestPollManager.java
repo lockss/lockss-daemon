@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.101 2010-08-12 07:30:16 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.101.14.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -107,6 +107,14 @@ public class TestPollManager extends LockssTestCase {
     theDaemon.getDatagramRouterManager().stopService();
     theDaemon.getRouterManager().stopService();
     super.tearDown();
+  }
+
+  public void testConfig() throws Exception {
+    assertEquals(ListUtil.list("all"), pollmanager.getAutoPollAuClasses());
+    ConfigurationUtil.addFromArgs(PollManager.PARAM_AUTO_POLL_AUS,
+				  "Internal;Priority");
+    assertEquals(ListUtil.list("internal", "priority"),
+		 pollmanager.getAutoPollAuClasses());
   }
 
   public void testGetPollFactoryByVersion() throws Exception {
@@ -476,6 +484,12 @@ public class TestPollManager extends LockssTestCase {
 			      aus[13], aus[15], aus[11], aus[9],
 			      aus[1], aus[3], aus[5]);
     assertEquals(exp3, weightOrder());
+
+    // enqueue a high priority poll, esure it's now first
+    PollManager.PollReq req = new PollManager.PollReq(aus[2]).setPriority(2);
+    pollmanager.enqueuePoll(req);
+    pollmanager.rebuildPollQueue();
+    assertEquals(aus[2], pollmanager.pollQueue.get(0).getAu());
   }
 
   List weightOrder() {

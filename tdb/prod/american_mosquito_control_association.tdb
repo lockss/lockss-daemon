@@ -18,14 +18,26 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 8756-971X
   
-      au < superseded ; 2005 ; Journal of the American Mosquito Control Association Volume 21 ; 21 >
-      au < superseded ; 2006 ; Journal of the American Mosquito Control Association Volume 22 ; 22 >
-      au < superseded ; 2007 ; Journal of the American Mosquito Control Association Volume 23 ; 23 >
+      au < down ; 2005 ; Journal of the American Mosquito Control Association Volume 21 ; 21 >
+      au < down ; 2006 ; Journal of the American Mosquito Control Association Volume 22 ; 22 >
+      au < down ; 2007 ; Journal of the American Mosquito Control Association Volume 23 ; 23 >
     }
 
     {
 
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = moco
+
+      au < doNotProcess ; 2005 ; Journal of the American Mosquito Control Association Volume 21 ; 21 >
+      au < doNotProcess ; 2006 ; Journal of the American Mosquito Control Association Volume 22 ; 22 >
+      au < doNotProcess ; 2007 ; Journal of the American Mosquito Control Association Volume 23 ; 23 >
+      au < ready ; 2008 ; Journal of the American Mosquito Control Association Volume 24 ; 24 >
+      au < ready ; 2009 ; Journal of the American Mosquito Control Association Volume 25 ; 25 >
+      au < ready ; 2010 ; Journal of the American Mosquito Control Association Volume 26 ; 26 >
+      au < ready ; 2011 ; Journal of the American Mosquito Control Association Volume 27 ; 27 >
+      au < ready ; 2012 ; Journal of the American Mosquito Control Association Volume 28 ; 28 >
 
     }
 

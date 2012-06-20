@@ -5,27 +5,36 @@
   >
 
   {
+  
     title <
       name = Journal of Coastal Conservation ;
       issn = 1400-0350 ;
+      eissn = 1874-7841 ;
       issnl = 1400-0350
     >
 
     {
-      implicit < status ; year ; name ; param[volume] >
+    
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1400-0350
+      implicit < status ; year ; name ; param[volume] >
   
-      au < doNotProcess ; 2002 ; Journal of Coastal Conservation Volume 8 ; 8 >
-      au < superseded ; 2003 ; Journal of Coastal Conservation Volume 9 ; 009 >
-      au < doNotProcess ; 2004 ; Journal of Coastal Conservation Volume 10 ; 10 >
+      au < down ; 2003 ; Journal of Coastal Conservation Volume 9 ; 009 >
+
     }
 
     {
 
-comment[0] = Atypon AUs
-
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = coac
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      au < manifest ; 2002 ; Journal of Coastal Conservation Volume 8 ; 8 >
+      au < doNotProcess ; 2003 ; Journal of Coastal Conservation Volume 9 ; 9 >
+      au < manifest ; 2004 ; Journal of Coastal Conservation Volume 10 ; 10 >
+      
     }
 
   }

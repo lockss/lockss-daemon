@@ -4,16 +4,12 @@
     name = Universitatea Babeş-Bolyai, Cluj-Napoca
   >
   
-  {
-  
-   comment[0] = RT3894 GLN only for now (manifest pages have both LOCKSS and CLOCKSS permission statements)
-
-  }
+    comment[0] = RT3894 
 
   {
   
     title <
-      name = Studia Universitatis Babes-Bolyai, Geologia (Studia UBB Geologia) ;
+      name = Studia Universitatis Babeş-Bolyai, Geologia ;
       issn = 1221-0803 ;
       eissn = 1937-8602 ;
       issnl = 1221-0803
@@ -24,11 +20,12 @@
     param[journal_abbr] = geologia
     implicit < status ; year ; name ; param[volume] >
 
-    au < ready ; 2007 ; Studia Universitatis Babes-Bolyai, Geologia (Studia UBB Geologia) Volume 52 ; 52 >
-    au < ready ; 2008 ; Studia Universitatis Babes-Bolyai, Geologia (Studia UBB Geologia) Volume 53 ; 53 >
-    au < ready ; 2009 ; Studia Universitatis Babes-Bolyai, Geologia (Studia UBB Geologia) Volume 54 ; 54 >
-    au < ready ; 2010 ; Studia Universitatis Babes-Bolyai, Geologia (Studia UBB Geologia) Volume 55 ; 55 >
-    au < ready ; 2011 ; Studia Universitatis Babes-Bolyai, Geologia (Studia UBB Geologia) Volume 56 ; 56 >
+    au < released ; 2007 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 52 ; 52 >
+    au < released ; 2008 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 53 ; 53 >
+    au < released ; 2009 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 54 ; 54 >
+    au < released ; 2010 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 55 ; 55 >
+    au < released ; 2011 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 56 ; 56 >
+    au < released ; 2012 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 57 ; 57 >
 
   }
 

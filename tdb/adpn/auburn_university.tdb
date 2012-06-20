@@ -28,7 +28,7 @@
     param[base_url] = http://digdata1.lib.auburn.edu/
     implicit < status ; name ; param[directory] >
   
-    au < ready ; Auburn University Alabama Cooperative Extension Service Photographs, Archival Images ; ACES_images >
+    au < released ; Auburn University Alabama Cooperative Extension Service Photographs, Archival Images ; ACES_images >
 
   }
   
@@ -143,7 +143,7 @@
     au < released ; 2007 ; Auburn University Discover Auburn Lecture Series 2007 ; 2007 >
     au < released ; 2008 ; Auburn University Discover Auburn Lecture Series 2008 ; 2008 >
     au < released ; 2009 ; Auburn University Discover Auburn Lecture Series 2009 ; 2009 >
-    au < ready ; 2010 ; Auburn University Discover Auburn Lecture Series 2010 ; 2010 >
+    au < released ; 2010 ; Auburn University Discover Auburn Lecture Series 2010 ; 2010 >
    
   }
   
@@ -199,9 +199,9 @@
     param[base_url] = http://digdata1.lib.auburn.edu/glomeratas/
     implicit < status ; name ; param[directory] >
   
-    au < ready ; Auburn University Glomeratas, 1897-1932, Archival Images: 1922 ; 1922_tifs_600dpi >
-    au < ready ; Auburn University Glomeratas, 1897-1932, Archival Images: 1923 ; 1923_tifs_600dpi >
-    au < ready ; Auburn University Glomeratas, 1897-1932, Archival Images: 1924 ; 1924_tifs_600dpi >
+    au < released ; Auburn University Glomeratas, 1897-1932, Archival Images: 1922 ; 1922_tifs_600dpi >
+    au < released ; Auburn University Glomeratas, 1897-1932, Archival Images: 1923 ; 1923_tifs_600dpi >
+    au < released ; Auburn University Glomeratas, 1897-1932, Archival Images: 1924 ; 1924_tifs_600dpi >
  
   }
   
@@ -243,7 +243,7 @@
     param[base_url] = http://digdata1.lib.auburn.edu/
     implicit < status ; name ; param[directory] >
   
-    au < ready ; Auburn University Historical Photographs, Archival Images ; AUHistoricalPhotos >
+    au < released ; Auburn University Historical Photographs, Archival Images ; AUHistoricalPhotos >
 
   }  
  

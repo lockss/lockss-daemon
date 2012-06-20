@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.9 2011-11-16 18:37:56 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.9.2.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
@@ -38,8 +38,8 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.TitleConfig;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.daemon.AuHealthMetric;
-import org.lockss.daemon.AuHealthMetric.HealthUnavailableException;
 import org.lockss.plugin.AuOrderComparator;
+import org.lockss.state.SubstanceChecker;
 import org.lockss.util.Logger;
 
 /**
@@ -147,7 +147,7 @@ public class TdbUtil {
     switch(scope) {
     case CONFIGURED: 
       return getConfiguredTdbTitles();
-    case PRESERVED: 
+    case COLLECTED:
       return getPreservedTdbTitles();
     case ALL: 
     default: 
@@ -169,7 +169,7 @@ public class TdbUtil {
     switch(scope) {
     case CONFIGURED: 
       return getConfiguredAus();
-    case PRESERVED: 
+    case COLLECTED:
       return getPreservedAus();
     case ALL: 
     default: 
@@ -242,20 +242,54 @@ public class TdbUtil {
     List<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
     double inclusionThreshold = AuHealthMetric.getInclusionThreshold();
     for (ArchivalUnit au : candidateAus) {
-      //long s = System.currentTimeMillis();
+      // XXX Preservation measure based on substance for now
+      if (isAuPreserved(au)) aus.add(au);
+      // TODO re-enable use of getHealth
+      /*
+      long s = System.currentTimeMillis();
       try {
-        if (AuHealthMetric.getHealth(au) >= inclusionThreshold) 
+        if (AuHealthMetric.isHealthy(au))
           aus.add(au);
-        /*logger.debug(String.format("Preserved AU %s checked in %sms",
-            au.getName(), (System.currentTimeMillis()-s)
-        ));*/
+        //logger.debug(String.format("Preserved AU %s checked in %sms",
+        //    au.getName(), (System.currentTimeMillis()-s)
+        //));
       } catch (HealthUnavailableException e) {
         // Do not add AUs whose health is unknown
         logger.warning("ArchivalUnit omitted from list of preserved AUs.", e);
-      }
+      }*/
     }
     return aus;
   }
+
+
+  /**
+   * Make a decision on whether an AU should be considered to be preserved
+   * (collected) based on a hard coded algorithm using data collected in
+   * the AuHealthMetric. If there is a substance checker, return whether the AU
+   * has substance; otherwise return true if the AU has completed at least one
+   * successful crawl. Eventually all plugins will have substance checkers.
+   * Don't penalize AUs whose plugins don't yet have a substance checker.
+   *
+   * @param au an ArchivalUnit
+   * @return whether it should be considered to be preserved
+   */
+  private static boolean isAuPreserved(ArchivalUnit au) {
+    AuHealthMetric metric = AuHealthMetric.getAuHealthMetric(au);
+    SubstanceChecker.State state = metric.getSubstanceState();
+    switch (state) {
+      // If there is a substance checker, return whether the AU has substance
+      case Yes:
+        return true;
+      case No:
+        return false;
+      // If there is no substance checker, return true if the AU has
+      // completed at least one successful crawl
+      case Unknown:
+      default:
+        return metric.hasCrawled();
+    }
+  }
+
 
   /**
    * Get records for all the TdbAus configured for collection in this box.
@@ -377,18 +411,19 @@ public class TdbUtil {
     return map; 
   }
 
-  
-  /** 
+
+  /**
    * An enum representing the various scopes which can be requested and 
-   * returned for the contents of a LOCKSS box. 
+   * returned for the contents of a LOCKSS box. ContentScope is only really
+   * relevant to TDB-based reports in a running daemon, not external data.
    */
   public static enum ContentScope {
     /** Everything available according to the TDB files. */
     ALL ("Available", false),
     /** Everything configured for collection. */
     CONFIGURED ("Configured", true),
-    /** Everything preserved/collected and available in the LOCKSS box. */
-    PRESERVED ("Preserved", true)
+    /** Everything collected and available in the LOCKSS box. */
+    COLLECTED("Collected", true)
     ;
     
     /** The default fallback scope. */
@@ -416,20 +451,31 @@ public class TdbUtil {
       this.label = label;
       this.areAusAvailable = hasAus;
     }
-    
+
     /**
-     * Get a ContentScope by name.
-     * 
-     * @param name a string representing the name of the enum
-     * @return a ContentScope with the specified name, or the default if none was found
+     * Get a ContentScope by name. Upper cases the name so lower case values
+     * can be passed in URLs.
+     *
+     * @param name a string representing the name of the format
+     * @return a ContentScope with the specified name, or null if none was found
      */
     public static ContentScope byName(String name) {
+      return byName(name, DEFAULT_SCOPE);
+    }
+    /**
+     * Get an ContentScope by name, or the default if the name cannot be parsed.
+     *
+     * @param name a string representing the name of the format
+     * @param def the default to return if the name is invalid
+     * @return an ContentScope with the specified name, or the default
+     */
+    public static ContentScope byName(String name, ContentScope def) {
       try {
-	return valueOf(name);
+        return valueOf(name.toUpperCase());
       } catch (Exception e) {
-	return DEFAULT_SCOPE;
+        return def;
       }
-    } 
+    }
 
     public String toString() {
       return label; 

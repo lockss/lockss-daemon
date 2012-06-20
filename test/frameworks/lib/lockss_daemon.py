@@ -614,12 +614,12 @@ class Client:
     def getV3PollKey( self, AU, excluded_poll_keys = [] ):
         """Return the key of a poll on the AU, excluding poll keys in excluded_poll_keys."""
         for row in self.getAuV3Pollers():
-            if row[ 'pollId' ][ 'key' ] not in excluded_poll_keys and self.isAuIdOrRef( row[ 'auId' ], AU ):
+            if 'pollId' in row and row[ 'pollId' ][ 'key' ] not in excluded_poll_keys and self.isAuIdOrRef( row[ 'auId' ], AU ):
                 return row[ 'pollId' ][ 'key' ]
 
     def getV3PollKeys( self, AU ):
         """Return the keys of all polls on the AU."""
-        return [ row[ 'pollId' ][ 'key' ] for row in self.getAuV3Pollers() ]
+        return [ row[ 'pollId' ][ 'key' ] for row in self.getAuV3Pollers() if 'pollId' in row ]
 
     def getV3PollInvitedPeers( self, poll_key ):
         return [ self.valueOfRef( row[ 'identity' ] ) for row in self.getV3PollerDetail( poll_key )[ 1 ] ]
@@ -698,13 +698,25 @@ class Client:
         """Returns both the summary and table."""
         return self._getStatusTable( 'V3PollerDetailTable', key )
 
+    def getV3PollVotersCounts( self, key ):
+        """Returns the count detail columns for each voter, as a
+        dictionary keyed by peerId string of dictionaries keyed by
+        string of column name."""
+        columns = "identity;numagree;numdisagree;numpolleronly;numvoteronly"
+        d = dict()
+        for row in self._getStatusTable( 'V3PollerDetailTable', key, columns = columns )[ 1 ]:
+            identity = self.valueOfRef( row[ 'identity' ] )
+            del row[ 'identity' ]
+            d[ identity ] = row
+        return d
+
     def getV3CompletedRepairsTable( self, key ):
         """Returns the V3 completed repairs status table."""
         return self._getStatusTable( 'V3CompletedRepairsTable', key )
 
     def getAuRepairerInfo( self, AU, key ):
         """Returns a mapping of peers to poll agreement data."""
-        return dict( ( row[ 'Box' ], int( row.get( key, '0' ).split( '%', 1 )[ 0 ] ) ) for row in self._getStatusTable( 'PeerRepair', AU.auId )[ 1 ] )
+        return dict( ( row[ 'Box' ], row.get( key, '0' ).split( '%', 1 )[ 0 ] ) for row in self._getStatusTable( 'PeerRepair', AU.auId )[ 1 ] )
 
     def getNoAuPeers( self, AU ):
         """Return list of peers who have said they don't have the AU."""
@@ -793,6 +805,7 @@ class Client:
         if key:
             summary = self.getV3PollerDetail( key )[ 0 ]
             return summary and summary[ 'Status' ] in ( 'No Time Available', 'Complete', 'No Quorum', 'Error', 'Expired' )
+        else: return False
 
     ###
     ### Methods that block while waiting for various events
@@ -961,7 +974,7 @@ class Client:
         if columns:
             form_data[ 'columns' ] = columns
         if noRows:
-            form_data[ 'norows' ] = 1
+            form_data[ 'options' ] = 'norows'
         XML = self.__execute_post( 'DaemonStatus', form_data ).read()
         log.debug3( 'Received XML response:\n' + XML )
         doc = xml.dom.minidom.parseString( XML )
@@ -973,8 +986,10 @@ class Client:
                 # See if this is a reference, or CDATA
                 if summary.getElementsByTagName( 'st:reference' ):
                     summaries[ summary.getElementsByTagName( 'st:title' )[ 0 ].firstChild.data ] = dict( ( key, summary.getElementsByTagName( 'st:reference' )[ 0 ].getElementsByTagName( 'st:' + key )[ 0 ].firstChild.data ) for key in ( 'name', 'key', 'value' ) )
-                elif summary.getElementsByTagName( 'st:value' )[ 0 ] and summary.getElementsByTagName( 'st:value' )[ 0 ].firstChild is not None:
-                    summaries[ summary.getElementsByTagName( 'st:title' )[ 0 ].firstChild.data ] = summary.getElementsByTagName( 'st:value' )[ 0 ].firstChild.data
+                else:
+                    stvalue = summary.getElementsByTagName( 'st:value' )
+                    if stvalue and stvalue[0] and stvalue[0].firstChild:
+                        summaries[ summary.getElementsByTagName( 'st:title' )[ 0 ].firstChild.data ] = stvalue[0].firstChild.data
         data = []
         for row in doc.getElementsByTagName( 'st:row' ):
             cells = {}
@@ -1171,22 +1186,79 @@ class Local_Client( Client ):
 
 
 class AU:
-    """General-purpose Archival Unit"""
+    """General-purpose Archival Unit.
+
+    >>> AU("foo")
+    Traceback (most recent call last):
+      ...
+    LockssError: Could not find a & character in AU ID "foo"
+
+    >>> AU("foo&bar")
+    Traceback (most recent call last):
+      ...
+    LockssError: Plugin id "foo" should have | as separators in AU ID "foo&bar"
+
+    >>> AU("org.foo|baz&bar")
+    Traceback (most recent call last):
+      ...
+    LockssError: Plugin id "org.foo|baz" should have no . characters in AU ID "org.foo|baz&bar"
+
+    >>> AU("org|foo|baz&bar")
+    Traceback (most recent call last):
+      ...
+    LockssError: Expected to find a ~ character in property "bar" in AU ID "org|foo|baz&bar"
+
+    >>> AU("org|foo|baz&bar~42")
+    Traceback (most recent call last):
+      ...
+    LockssError: Failed to find required key "base_url" in AU ID "org|foo|baz&bar~42"
+
+    >>> AU("org|foo|baz&bar~42&base_url~http:yab") #doctest: +ELLIPSIS
+    <__main__.AU instance at 0x...>
+
+    """
 
     def __init__( self, auId ):
         self.auId = auId.strip()
         try:
-            self.pluginId, AU_key = self.auId.split( '&', 1 )
-            if '|' not in self.pluginId or '.' in self.pluginId:
-                raise ValueError
+            self.pluginId, properties = self.auId.split( '&', 1 )
         except ValueError:
-            raise LockssError( 'Invalid AU ID "%s"' % self.auId )
+            raise LockssError( 'Could not find a & character in'
+                               ' AU ID "%s"' % self.auId )
+        if '|' not in self.pluginId:
+            raise LockssError( 'Plugin id "%s" should have | as separators in'
+                               ' AU ID "%s"' % ( self.pluginId, self.auId ) )
+        if '.' in self.pluginId:
+            raise LockssError( 'Plugin id "%s" should have no . characters in'
+                               ' AU ID "%s"' % ( self.pluginId, self.auId ) )
         self.pluginId = self.pluginId.replace( '|', '.' )
-        self.title = urllib.unquote_plus( AU_key )
-        for property in AU_key.split( '&' ):
-            key, value = ( urllib.unquote_plus( encoded ) for encoded in property.split( '~' ) )
-            assert not hasattr( self, key )
-            setattr( self, urllib.unquote_plus( key ), urllib.unquote_plus( value ) )
+        self.title = urllib.unquote_plus( properties )
+        for property in properties.split( '&' ):
+            try:
+                key, value = property.split( '~', 1 )
+            except ValueError:
+                raise LockssError( 'Expected to find a ~ character in'
+                                   ' property "%s" in AU ID "%s"' %
+                                   ( property, self.auId ) )
+            # unquote_plus doesn't raise any exceptions.
+            key = urllib.unquote_plus( key )
+            value = urllib.unquote_plus( value )
+
+            if hasattr( self, key ):
+                # This could be a dup or something we use in class AU,
+                # like 'title'.
+
+                # todo: Make properties a dict, not attributes, or
+                # make the internal attribues less likely to collide
+                # with AU properties.
+                raise LockssError( 'Duplicate or illegal key "%s" in' 
+                                   ' property "%s" in AU ID "%s"' %
+                                   ( key, property, self.auId ) )
+            setattr( self, key, value )
+        if self.pluginId != Simulated_AU.SIMULATED_PLUGIN \
+          and not hasattr( self, "base_url" ):
+            raise LockssError( 'Failed to find required key "base_url" in'
+                               ' AU ID "%s"' % self.auId )
 
     def __str__( self ):
         return self.title
@@ -1194,6 +1266,7 @@ class AU:
 
 class Simulated_AU( AU ):
     """SimulatedPlugin Archival Unit."""
+    SIMULATED_PLUGIN = 'org.lockss.plugin.simulated.SimulatedPlugin'
 
     def __init__( self, root = 'simContent', depth = 0, branch = 0, numFiles = 10,
                   binFileSize = 1024, binRandomSeed = None, fileTypes = FILE_TYPE_TEXT | FILE_TYPE_BIN ):
@@ -1204,7 +1277,7 @@ class Simulated_AU( AU ):
         self.binFileSize = binFileSize
         self.binRandomSeed = int( time.time() ) if binRandomSeed is None else binRandomSeed
         self.fileTypes = fileTypes
-        self.pluginId = 'org.lockss.plugin.simulated.SimulatedPlugin'
+        self.pluginId = Simulated_AU.SIMULATED_PLUGIN
         self.auId = "%s&root~%s" % ( self.pluginId.replace( '.', '|' ), self.root )
         self.title = "Simulated Content: " + root
         self.baseUrl = 'http://www.example.com'
@@ -1223,3 +1296,8 @@ class Simulated_AU( AU ):
 
 hash_locks = {}
 frameworkCount = 0
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()

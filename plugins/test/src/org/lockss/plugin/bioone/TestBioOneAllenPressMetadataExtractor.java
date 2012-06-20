@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioOneAllenPressMetadataExtractor.java,v 1.1 2011-09-02 00:07:11 thib_gc Exp $
+ * $Id: TestBioOneAllenPressMetadataExtractor.java,v 1.1.4.1 2012-06-20 00:02:58 nchondros Exp $
  */
 
 /*
@@ -211,16 +211,14 @@ public class TestBioOneAllenPressMetadataExtractor extends LockssTestCase {
   public void testExtractFromGoodContent() throws Exception {
     ArticleMetadata md = extractFromTestContent(goodContent);
 
-    assertTrue(MetadataUtil.isDOI(md.get(MetadataField.FIELD_DOI)));
+    assertTrue(MetadataUtil.isDoi(md.get(MetadataField.FIELD_DOI)));
     assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));				
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
     //assertEquals(goodEndPage, md.getEndPage());
-    assertTrue(MetadataUtil.isISSN(md.get(MetadataField.FIELD_ISSN)));
+    assertTrue(MetadataUtil.isIssn(md.get(MetadataField.FIELD_ISSN)));
     assertEquals(goodOnlineISSN, md.get(MetadataField.FIELD_ISSN));
-System.err.println(md.get(MetadataField.FIELD_AUTHOR));
-System.err.println(md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodAuthors[0], md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
@@ -272,7 +270,7 @@ System.err.println(md.getList(MetadataField.FIELD_AUTHOR));
     assertNull(md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertNull(md.get(MetadataField.FIELD_DATE));
     assertNotNull(md.get(MetadataField.FIELD_ACCESS_URL));
-    assertEquals(2, md.size());
+    assertEquals(9, md.size());
   }
 
   /**

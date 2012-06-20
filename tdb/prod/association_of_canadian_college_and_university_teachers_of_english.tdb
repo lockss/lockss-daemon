@@ -16,11 +16,14 @@
     >
 
     param[journal_dir] = esc_english_studies_in_canada
+    attr[journal_id] = esc
 
     au < released ; 2005 ; ESC: English Studies in Canada Volume 31 ; 31 >
     au < released ; 2006 ; ESC: English Studies in Canada Volume 32 ; 32 >
     au < released ; 2007 ; ESC: English Studies in Canada Volume 33 ; 33 >
     au < released ; 2008 ; ESC: English Studies in Canada Volume 34 ; 34 >
+    au < manifest ; 2009 ; ESC: English Studies in Canada Volume 35 ; 35 >
+    au < manifest ; 2010 ; ESC: English Studies in Canada Volume 36 ; 36 >
 
   }
 

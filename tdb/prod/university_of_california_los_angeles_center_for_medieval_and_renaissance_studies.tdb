@@ -13,11 +13,14 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = xxx
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < exists ; 0 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 1 ; 1 >
+      plugin = plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      attr[journal_id] = comitatus
+      implicit < status ; year ; name ; param[volume] >
+      
+      comment[0] = content not online yet
+      
+      au < expected ; 2012 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 43 ; 43 >
 
     }
 

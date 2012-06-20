@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseHtmlFilterFactory.java,v 1.4 2011-06-08 02:18:29 thib_gc Exp $*/
+ * $Id: ProjectMuseHtmlFilterFactory.java,v 1.4.8.1 2012-06-20 00:03:03 nchondros Exp $*/
 
 /*
 
@@ -49,10 +49,15 @@ public class ProjectMuseHtmlFilterFactory implements FilterFactory {
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
         HtmlNodeFilters.tagWithAttribute("div", "id", "access_statement"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "access-statement"),
+        //frequently downlaoded articles sidebar
+        HtmlNodeFilters.tagWithAttribute("div", "id", "freq_downloaded-box"),
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "freq_downloaded-box"),
+        //related articles sidebar
+        HtmlNodeFilters.tagWithAttribute("div", "id", "related-box"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar2"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "credits"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "citationsblock"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "main_footer"),
     };
     
     // First filter with HtmlParser

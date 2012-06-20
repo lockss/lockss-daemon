@@ -1,10 +1,10 @@
 /*
- * $Id: PdfUtil.java,v 1.29 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: PdfUtil.java,v 1.29.28.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
 
- Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,12 +36,11 @@ import java.io.*;
 import java.util.*;
 
 import org.apache.commons.collections.iterators.*;
-import org.apache.commons.io.output.*;
-import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.lockss.config.*;
 import org.lockss.filter.pdf.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
+import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
 import org.pdfbox.cos.*;
 import org.pdfbox.util.PDFOperator;
 
@@ -420,7 +419,9 @@ return success;
   /**
    * <p>The PDF MIME type, <code>{@value}</code>.</p>
    * @see <a href="http://www.rfc-editor.org/rfc/rfc3778.txt">RFC3778</a>
+   * @deprecated Use {@link org.lockss.util.Constants#MIME_TYPE_PDF}
    */
+  @Deprecated
   public static final String PDF_MIME_TYPE = "application/pdf";
 
   /**
@@ -757,17 +758,8 @@ return success;
 	return new ByteArrayInputStream(outputStream.getData());
       }
       else {
-	// If temp file was created, arrange for it to be deleted when
-	// the input stream is closed.
 	File tempFile = outputStream.getFile();
-	InputStream fileStream =
-	  new BufferedInputStream(new FileInputStream(tempFile));
-	CloseCallbackInputStream.Callback cb =
-	  new CloseCallbackInputStream.Callback() {
-	    public void streamClosed(Object file) {
-	      ((File)file).delete();
-	    }};
-	return new CloseCallbackInputStream(fileStream, cb, tempFile);
+	return new BufferedInputStream(new DeleteFileOnCloseInputStream(tempFile));
       }
     }
     catch (OutOfMemoryError oome) {
@@ -795,7 +787,7 @@ return success;
   }
 
   public static OutputDocumentTransform getOutputDocumentTransform(ArchivalUnit au) {
-    String key = PREFIX_PDF_FILTER_FACTORY_HINT + PDF_MIME_TYPE + DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY;
+    String key = PREFIX_PDF_FILTER_FACTORY_HINT + Constants.MIME_TYPE_PDF + DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY;
     String className = AuUtil.getTitleAttribute(au, key);
     if (className == null) {
       logger.debug2("No PDF filter factory hint");

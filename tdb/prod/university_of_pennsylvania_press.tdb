@@ -16,8 +16,10 @@
     >
 
     param[journal_dir] = change_over_time
+    attr[journal_id] = cot
 
     au < ready ; 2011 ; Change Over Time Volume 1 ; 1 >
+    au < manifest ; 2012 ; Change Over Time Volume 2 ; 2 >
 
   }
 
@@ -30,10 +32,12 @@
     >
 
     param[journal_dir] = dissent
+    attr[journal_id] = dss
 
     au < released ; 2009 ; Dissent Volume 56 ; 56 >
     au < released ; 2010 ; Dissent Volume 57 ; 57 >
     au < ready ; 2011 ; Dissent Volume 58 ; 58 >
+    au < manifest ; 2012 ; Dissent Volume 59 ; 59 >
 
   }
 
@@ -46,6 +50,7 @@
     >
 
     param[journal_dir] = early_american_studies_an_interdisciplinary_journal
+    attr[journal_id] = eam
 
     au < released ; 2003 ; Early American Studies: An Interdisciplinary Journal Volume 1 ; 1 >
     au < released ; 2004 ; Early American Studies: An Interdisciplinary Journal Volume 2 ; 2 >
@@ -56,6 +61,7 @@
     au < released ; 2009 ; Early American Studies: An Interdisciplinary Journal Volume 7 ; 7 >
     au < released ; 2010 ; Early American Studies: An Interdisciplinary Journal Volume 8 ; 8 >
     au < ready ; 2011 ; Early American Studies: An Interdisciplinary Journal Volume 9 ; 9 >
+    au < manifest ; 2012 ; Early American Studies: An Interdisciplinary Journal Volume 10 ; 10 >
 
   }
 
@@ -68,6 +74,7 @@
     >
 
     param[journal_dir] = the_eighteenth_century
+    attr[journal_id] = ecy
 
     au < released ; 2006 ; The Eighteenth Century Volume 47 ; 47 >
     au < released ; 2007 ; The Eighteenth Century Volume 48 ; 48 >
@@ -75,6 +82,7 @@
     au < released ; 2009 ; The Eighteenth Century Volume 50 ; 50 >
     au < ready ; 2010 ; The Eighteenth Century Volume 51 ; 51 >
     au < ready ; 2011 ; The Eighteenth Century Volume 52 ; 52 >
+    au < manifest ; 2012 ; The Eighteenth Century Volume 53 ; 53 >
 
   }
 
@@ -87,6 +95,7 @@
     >
 
     param[journal_dir] = hispanic_review
+    attr[journal_id] = hir
 
     au < released ; 2005 ; Hispanic Review Volume 73 ; 73 >
     au < released ; 2006 ; Hispanic Review Volume 74 ; 74 >
@@ -95,6 +104,7 @@
     au < released ; 2009 ; Hispanic Review Volume 77 ; 77 >
     au < released ; 2010 ; Hispanic Review Volume 78 ; 78 >
     au < ready ; 2011 ; Hispanic Review Volume 79 ; 79 >
+    au < manifest ; 2012 ; Hispanic Review Volume 80 ; 80 >
 
   }
 
@@ -107,9 +117,11 @@
     >
 
     param[journal_dir] = humanity
+    attr[journal_id] = hum
 
     au < ready ; 2010 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 1 ; 1 >
     au < ready ; 2011 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 2 ; 2 >
+    au < manifest ; 2012 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 3 ; 3 >
 
   }
 
@@ -123,6 +135,7 @@
     >
 
     param[journal_dir] = jewish_quarterly_review
+    attr[journal_id] = jqr
 
     au < released ; 2005 ; Jewish Quarterly Review Volume 95 ; 95 >
     au < released ; 2006 ; Jewish Quarterly Review Volume 96 ; 96 >
@@ -131,6 +144,7 @@
     au < released ; 2009 ; Jewish Quarterly Review Volume 99 ; 99 >
     au < released ; 2010 ; Jewish Quarterly Review Volume 100 ; 100 >
     au < ready ; 2011 ; Jewish Quarterly Review Volume 101 ; 101 >
+    au < manifest ; 2012 ; Jewish Quarterly Review Volume 102 ; 102 >
 
   }
 
@@ -143,6 +157,7 @@
     >
 
     param[journal_dir] = journal_for_early_modern_cultural_studies
+    attr[journal_id] = jem
 
     au < released ; 2004 ; Journal for Early Modern Cultural Studies Volume 4 ; 4 >
     au < released ; 2005 ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
@@ -152,6 +167,7 @@
     au < released ; 2009 ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
     au < released ; 2010 ; Journal for Early Modern Cultural Studies Volume 10 ; 10 >
     au < manifest ; 2011 ; Journal for Early Modern Cultural Studies Volume 11 ; 11 >
+    au < manifest ; 2012 ; Journal for Early Modern Cultural Studies Volume 12 ; 12 >
 
   }
 
@@ -164,6 +180,7 @@
     >
 
     param[journal_dir] = journal_of_the_early_republic
+    attr[journal_id] = jer
 
     au < released ; 2005 ; Journal of the Early Republic Volume 25 ; 25 >
     au < released ; 2006 ; Journal of the Early Republic Volume 26 ; 26 >
@@ -172,6 +189,7 @@
     au < released ; 2009 ; Journal of the Early Republic Volume 29 ; 29 >
     au < released ; 2010 ; Journal of the Early Republic Volume 30 ; 30 >
     au < ready ; 2011 ; Journal of the Early Republic Volume 31 ; 31 >
+    au < manifest ; 2012 ; Journal of the Early Republic Volume 32 ; 32 >
 
   }
 
@@ -184,6 +202,7 @@
     >
 
     param[journal_dir] = journal_of_the_history_of_ideas
+    attr[journal_id] = jhi
 
     au < released ; 1996 ; Journal of the History of Ideas Volume 57 ; 57 >
     au < released ; 1997 ; Journal of the History of Ideas Volume 58 ; 58 >
@@ -201,6 +220,7 @@
     au < released ; 2009 ; Journal of the History of Ideas Volume 70 ; 70 >
     au < released ; 2010 ; Journal of the History of Ideas Volume 71 ; 71 >
     au < ready ; 2011 ; Journal of the History of Ideas Volume 72 ; 72 >
+    au < manifest ; 2012 ; Journal of the History of Ideas Volume 73 ; 73 >
 
   }
 
@@ -213,6 +233,7 @@
     >
 
     param[journal_dir] = magic_ritual_and_witchcraft
+    attr[journal_id] = mrw
 
     au < released ; 2006 ; Magic, Ritual, and Witchcraft Volume 1 ; 1 >
     au < released ; 2007 ; Magic, Ritual, and Witchcraft Volume 2 ; 2 >
@@ -220,6 +241,7 @@
     au < released ; 2009 ; Magic, Ritual, and Witchcraft Volume 4 ; 4 >
     au < ready ; 2010 ; Magic, Ritual, and Witchcraft Volume 5 ; 5 >
     au < ready ; 2011 ; Magic, Ritual, and Witchcraft Volume 6 ; 6 >
+    au < manifest ; 2012 ; Magic, Ritual, and Witchcraft Volume 7 ; 7 >
 
   }
 
@@ -232,10 +254,12 @@
     >
 
     param[journal_dir] = revista_hispanica_moderna
+    attr[journal_id]= rhm
 
     au < released ; 2009 ; Revista Hispánica Moderna Volume 62 ; 62 >
     au < ready ; 2010 ; Revista Hispánica Moderna Volume 63 ; 63 >
-    au < ready ; 2011 ; Revista Hispánica Moderna Volume 64 ; 64 >    
+    au < ready ; 2011 ; Revista Hispánica Moderna Volume 64 ; 64 >
+    au < manifest ; 2012 ; Revista Hispánica Moderna Volume 65 ; 65 >
 
   }
 

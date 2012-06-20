@@ -4,8 +4,33 @@
     <string>org.lockss.plugin.bmc.BMCPlugin</string>
   </entry>
   <entry>
+   <string>plugin_status</string>
+   <string>testing</string>
+  </entry>
+  <entry>
+   <string>plugin_notes</string>
+   <string>added a new non-definitional parameter journal_code</string>
+  </entry>
+  <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>18</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+       <entry>
+        <string>Metadata</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -21,8 +46,25 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.bmc.BMCHtmlFilterFactory</string>
+    <string>org.lockss.plugin.bmc.BMCPluginHtmlFilterFactory</string>
   </entry>
+   <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.bmc.BMCPluginArticleIteratorFactory</string>
+  </entry>
+   <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.bmc.BMCPluginArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.bmc.BMCPluginHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+ </entry>
   <entry>
     <string>plugin_name</string>
     <string>BioMed Central Plugin (BMC Series, PhysMath Central)</string>
@@ -31,38 +73,49 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s.{0,150}&quot;, base_url</string>
+      <string>2,&quot;^%s%s/%s/[^/]+/(comments|email|postcomment)$&quot; ,base_url,journal_issn,volume_name</string>
+      <string>1,&quot;^%s%s/%s/.*&quot; ,base_url,journal_issn,volume_name</string>
+      <string>1,&quot;^%scontent/(download/figures/?|download/xml|files/pdf|pdf|xml|supplementary)/&quot; ,base_url</string>
+      <string>1,&quot;^%scontent/[^/]+/%s-%s-[^/]+\.[^/]+$&quot; ,base_url,journal_issn,volume_name</string>
+      <string>1,&quot;^%s%s/content/%s/[^/]+/[^/]+&quot; ,base_url,journal_code,volume_name</string>
+      <string>1,&quot;^%s[^/]+/%s\?page=[0-9]+$&quot; ,base_url,volume_name</string>
       <string>1,&quot;^%slockss/&quot;, base_url</string>
-      <string>2,&quot;^%s.*/(email|postcomment)$&quot;, base_url</string>
-      <string>1,&quot;^%s%s/%s&quot;, base_url, journal_issn, volume_name</string>
-      <string>1,&quot;^%s/[^/]+/%s\?page=[0-9]+$&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%scontent/.*/%s-%s[^/]+\.[^/]+&quot;, base_url, journal_issn, volume_name</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%s/%s&quot;, base_url, journal_issn, volume_name</string>
+    <string>&quot;%s%s/content/%s&quot;, base_url, journal_code, volume_name</string>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
   	<map>
 	  <entry>
 	    <string>au_title</string>
-	    <string>&quot;%s%s&quot;, base_url, journal_issn</string>
+	    <string>&quot;%s%s&quot;, base_url,journal_code</string>
 	  </entry>
 	  <entry>
 	    <string>au_volume</string>
-	    <string>&quot;%s%s/%s&quot;, base_url, journal_issn, volume_name</string>
+      <string>&quot;%s%s/content/%s&quot;, base_url, journal_code, volume_name</string>
+	  </entry>
+	  <entry>
+	    <string>au_issue</string>
+	    <string>&quot;%s%scontent/%s/%s/%s&quot;, base_url, journal_code, volume_name, issue, year</string>
 	  </entry>
 	  <entry>
 	    <string>au_article</string>
-	    <string>&quot;%s%s/%s/%s&quot;, base_url, journal_issn, volume_name, article</string>
+	    <string>&quot;%s%s/%s/%s&quot;, base_url, journal_issn, volume_name, spage</string>
 	  </entry>
   	</map>
   </entry>
   <entry>
     <string>au_manifest</string>
     <string>&quot;%slockss/&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%s%s/%s/[0-9]+$&quot;, base_url, journal_issn, volume_name</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -82,6 +135,14 @@
         <type>1</type>
         <size>20</size>
         <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_code</key>
+        <displayName>Journal Code</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>false</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>

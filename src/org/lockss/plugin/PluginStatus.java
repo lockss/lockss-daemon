@@ -1,10 +1,10 @@
 /*
- * $Id: PluginStatus.java,v 1.16 2011-04-26 23:53:07 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.16.10.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -104,6 +104,8 @@ class Plugins extends PluginStatus implements StatusAccessor {
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("version", "Version",
 				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("aus", "# AUs",
+				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor("type", "Type",
 				       ColumnDescriptor.TYPE_STRING),
 // 		  new ColumnDescriptor("id", "Plugin ID",
@@ -144,6 +146,15 @@ class Plugins extends PluginStatus implements StatusAccessor {
 	}
 	Map row = new HashMap();
 	row.put("plugin", makePlugRef(plugin.getPluginName(), plugin));
+
+	int numaus = plugin.getAllAus().size();
+	if (numaus > 0) {
+	  StatusTable.Reference auslink = 
+	    new StatusTable.Reference(numaus,
+				      ArchivalUnitStatus.SERVICE_STATUS_TABLE_NAME,
+				      "plugin:" + plugin.getPluginId());
+	  row.put("aus", auslink);
+	}
 	row.put("version", plugin.getVersion());
 	row.put("id", plugin.getPluginId());
 	row.put("type", mgr.getPluginType(plugin));

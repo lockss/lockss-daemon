@@ -1,10 +1,10 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.20 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.20.100.1 2012-06-20 00:02:58 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 
 /**
  * A CachedUrlSetSpec that specifies all or part of a subtree, rooted at
@@ -92,6 +93,9 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
    * that node.
    */
   public boolean matches(String url) {
+    if (prefix.equals(AuCachedUrlSetSpec.URL)) {
+      return inRange(url);
+    }
     if (!url.startsWith(prefix)) {
       // Our prefix isn't an initial substring of url
       return false;
@@ -104,16 +108,24 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     }
     // url is longer than prefix.  The suffix must be separated from the
     // prefix by a path separator character
-    if ((prefix.charAt(plen-1) != UrlUtil.URL_PATH_SEPARATOR_CHAR) &&
-	(url.charAt(plen) != UrlUtil.URL_PATH_SEPARATOR_CHAR)) {
+    boolean pathSep =
+      prefix.charAt(plen-1) == UrlUtil.URL_PATH_SEPARATOR_CHAR
+      || prefix.endsWith(ArchiveMemberSpec.URL_SEPARATOR)
+      || url.charAt(plen) == UrlUtil.URL_PATH_SEPARATOR_CHAR
+      || (url.length() > plen
+	  && url.regionMatches(plen, ArchiveMemberSpec.URL_SEPARATOR, 0, 2));
+    if (!pathSep) {
       return false;
     }
     // and it must be within our range, if any.
     return inRange(url);
   }
 
-  /** @return false */
+  /** @return true iff prefix is lockssau: */
   public boolean isAu() {
+    if (prefix.equals(AuCachedUrlSetSpec.URL)) {
+      return true;
+    }
     return false;
   }
 
@@ -162,6 +174,9 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
    * @return true if spec is entirely contained in this one
    */
   public boolean subsumes(CachedUrlSetSpec spec) {
+    if (isAu()) {
+      return true;
+    }
     if (spec.isSingleNode()) {
       return matches(spec.getUrl());
     }
@@ -213,12 +228,16 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   public String toString() {
-    StringBuffer sb = new StringBuffer("[CUSS: ");
-    sb.append(prefix);
+    StringBuilder sb = new StringBuilder("[CUSS: ");
+    appendPrefRange(sb);
+    sb.append("]");
+    return sb.toString();
+  }
 
+  protected void appendPrefRange(StringBuilder sb) {
+    sb.append(prefix);
     if (lowerBound != null || upperBound != null) {
       sb.append(" [");
-
       if (lowerBound != null) {
 	sb.append(lowerBound);
       }
@@ -228,8 +247,6 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
       }
       sb.append("]");
     }
-    sb.append("]");
-    return sb.toString();
   }
 
   /**

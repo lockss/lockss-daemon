@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.46 2011-11-08 20:21:50 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.46.2.1 2012-06-20 00:02:58 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -278,6 +278,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   public static final ConfigParamDescr CRAWL_INTERVAL =
     new ConfigParamDescr()
     .setDefinitional(false)
+    .setDefaultOnly(true)
     .setKey("nc_interval")
     .setDisplayName("Crawl Interval")
     .setType(TYPE_TIME_INTERVAL)
@@ -550,17 +551,18 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
         }
         break;
       case TYPE_YEAR:
-        if (val.length() == 4) {
+        if (val.length() == 4 || "0".equals(val)) {
           try {
             int i_val = Integer.parseInt(val);
-            if (i_val > 0) {
+            if (i_val >= 0) {
               ret_val = new Integer(val);
             }
           }
           catch (NumberFormatException fe) {
+            // Defer to the throw statement below
           }
         }
-        if(ret_val == null) {
+        if (ret_val == null) {
           throw new InvalidFormatException("Invalid Year: " + val);
         }
         break;

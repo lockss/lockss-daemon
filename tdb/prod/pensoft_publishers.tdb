@@ -36,6 +36,7 @@
     implicit < status ; year ; name ; param[year] >
     
     au < exists ; 2011 ; Comparative Cytogenetics 2011 ; 2011 >
+    au < exists ; 2012 ; Comparative Cytogenetics 2011 ; 2011 >
   
   }
   
@@ -68,6 +69,7 @@
     implicit < status ; year ; name ; param[year] >
     
     au < exists ; 2011 ; Journal of Hymenoptera Research 2011 ; 2011 >
+    au < exists ; 2012 ; Journal of Hymenoptera Research 2012 ; 2012 >
   
   }
   
@@ -84,6 +86,7 @@
     implicit < status ; year ; name ; param[year] >
     
     au < exists ; 2011 ; MycoKeys 2011 ; 2011 >
+    au < exists ; 2012 ; MycoKeys 2012 ; 2012 >
   
   }
   
@@ -91,14 +94,14 @@
 
     title <
       name =  Nature Conservation ;
-      eissn = 1313-2652 ;
-      issnl = 1313-2652
+      eissn = 1314-3301
     >
     
     param[base_url] = http://www.pensoft.net/journals/natureconservation/
     implicit < status ; year ; name ; param[year] >
     
     au < exists ; 2011 ;  Nature Conservation 2011 ; 2011 >
+    au < exists ; 2012 ; Nature Conservation 2012 ; 2012 >
   
   }
   
@@ -115,6 +118,7 @@
     implicit < status ; year ; name ; param[year] >
     
     au < exists ; 2011 ; NeoBiota 2011 ; 2011 >
+    au < exists ; 2012 ; NeoBiota 2012 ; 2012 >
   
   }
   
@@ -131,6 +135,7 @@
     implicit < status ; year ; name ; param[year] >
     
     au < exists ; 2011 ; PhytoKeys 2011 ; 2011 >
+    au < exists ; 2012 ; PhytoKeys 2012 ; 2012 >
   
   }
   
@@ -147,6 +152,7 @@
     implicit < status ; year ; name ; param[year] >
     
     au < exists ; 2011 ; Subterranean Biology 2011 ; 2011 >
+    au < expected ; 2012 ; Subterranean Biology 2012 ; 2012 >
   
   }
   
@@ -163,6 +169,7 @@
     implicit < status ; year ; name ; param[year] >
     
     au < exists ; 2011 ; ZooKeys 2011 ; 2011 >
+    au < exists ; 2012 ; ZooKeys 2012 ; 2012 >
   
   }
   

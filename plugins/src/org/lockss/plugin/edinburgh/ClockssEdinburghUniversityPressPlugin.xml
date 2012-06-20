@@ -9,7 +9,24 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>22</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_name</string>
@@ -80,6 +97,12 @@
     <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressArticleIteratorFactory</string>
   </entry>
   <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%sdoi/(full|pdf|pdfplus)/&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
@@ -118,5 +141,14 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
   </entry>
 </map>    

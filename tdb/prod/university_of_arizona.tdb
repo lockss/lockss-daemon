@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = arizona_journal_of_hispanic_cultural_studies
+    attr[journal_id] = hcs
 
     au < released ; 2006 ; Arizona Journal of Hispanic Cultural Studies Volume 10 ; 10 >
     au < ready ; 2007 ; Arizona Journal of Hispanic Cultural Studies Volume 11 ; 11 >
@@ -34,6 +35,7 @@
     >
 
     param[journal_dir] = arizona_quarterly_a_journal_of_american_literature_culture_and_theory
+    attr[journal_id] = arq
 
     au < released ; 2006 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 62 ; 62 >
     au < released ; 2007 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 63 ; 63 >
@@ -41,6 +43,7 @@
     au < ready ; 2009 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 65 ; 65 >
     au < ready ; 2010 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 66 ; 66 >
     au < ready ; 2011 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 67 ; 67 >
+    au < manifest ; 2012 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 68 ; 68 >
 
   }
 
@@ -53,8 +56,10 @@
     >
 
     param[journal_dir] = journal_of_the_southwest
+    attr[journal_id] = jsw
 
     au < ready ; 2011 ; Journal of the Southwest Volume 53 ; 53 >
+    au < expected ; 2012 ; Journal of the Southwest Volume 54 ; 54 >
 
   }
 

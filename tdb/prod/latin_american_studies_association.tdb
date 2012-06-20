@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = latin_american_research_review
+    attr[journal_id] = lar
 
     au < released ; 2003 ; Latin American Research Review Volume 38 ; 38 >
     au < released ; 2004 ; Latin American Research Review Volume 39 ; 39 >
@@ -25,6 +26,8 @@
     au < released ; 2008 ; Latin American Research Review Volume 43 ; 43 >
     au < released ; 2009 ; Latin American Research Review Volume 44 ; 44 >
     au < released ; 2010 ; Latin American Research Review Volume 45 ; 45 >
+    au < manifest ; 2011 ; Latin American Research Review Volume 46 ; 46 >
+    au < expected ; 2012 ; Latin American Research Review Volume 47 ; 47 >
 
   }
 

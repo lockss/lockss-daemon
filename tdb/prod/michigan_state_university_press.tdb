@@ -10,12 +10,13 @@
   {
     title <
       name = CR: The New Centennial Review ;
-      issn = 1528-4204 ;
-      eissn = 0009-2002 ;
-      issnl = 0009-2002
+      issn = 1532-687X ;
+      eissn = 1539-6630 ;
+      issnl = 1532-687X
     >
 
     param[journal_dir] = new_centennial_review
+    attr[journal_id] = ncr
 
     au < released ; 2001 ; CR: The New Centennial Review Volume 1 ; 1 ; 1 >
     au < released ; 2002 ; CR: The New Centennial Review Volume 2 ; 2 ; 2 >
@@ -26,6 +27,9 @@
     au < released ; 2007 ; CR: The New Centennial Review Volume 7 ; 7 ; 7 >
     au < released ; 2008 ; CR: The New Centennial Review Volume 8 ; 8 ; 8 >
     au < released ; 2009 ; CR: The New Centennial Review Volume 9 ; 9 ; 9 >
+    au < manifest ; 2010 ; CR: The New Centennial Review Volume 10 ; 10 ; 10 >
+    au < manifest ; 2011 ; CR: The New Centennial Review Volume 11 ; 11 ; 11 >
+    au < expected ; 2012 ; CR: The New Centennial Review Volume 12 ; 12 ; 12 >
 
   }
 
@@ -38,10 +42,15 @@
     >
 
     param[journal_dir] = contagion
+    attr[journal_id] = ctn
 
     au < released ; 2005-2006 ; Contagion: Journal of Violence, Mimesis, and Culture Issue 12-13 ; 12 ; 12-13 >
     au < released ; 2007 ; Contagion: Journal of Violence, Mimesis, and Culture Issue 14 ; 14 ; 14 >
     au < released ; 2008-2009 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 15/16 ; 15 ; 15 >
+
+    au < manifest ; 2010 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 17 ; 17 ; 17 >
+    au < manifest ; 2011 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 18 ; 18 ; 18 >
+    au < manifest ; 2012 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 19 ; 19 ; 19 >
 
   }
 
@@ -54,15 +63,23 @@
     >
 
     param[journal_dir] = fourth_genre_explorations_in_nonfiction
+    attr[journal_id] = fge
 
-    au < released ; 1999 ; Fourth Genre: Explorations in Nonfiction Volume 5 ; 5 ; 5 >
-    au < released ; 2000 ; Fourth Genre: Explorations in Nonfiction Volume 6 ; 6 ; 6 >
-    au < released ; 2001 ; Fourth Genre: Explorations in Nonfiction Volume 7 ; 7 ; 7 >
-    au < released ; 2002 ; Fourth Genre: Explorations in Nonfiction Volume 8 ; 8 ; 8 >
-    au < released ; 2003 ; Fourth Genre: Explorations in Nonfiction Volume 9 ; 9 ; 9 >
-    au < released ; 2004 ; Fourth Genre: Explorations in Nonfiction Volume 10 ; 10 ; 10 >
-    au < released ; 2005 ; Fourth Genre: Explorations in Nonfiction Volume 11 ; 11 ; 11 >
-    au < released ; 2006 ; Fourth Genre: Explorations in Nonfiction Volume 12 ; 12 ; 12 >
+    au < manifest ; 1999 ; Fourth Genre: Explorations in Nonfiction Volume 1 ; 1 ; 1 >
+    au < manifest ; 2000 ; Fourth Genre: Explorations in Nonfiction Volume 2 ; 2 ; 2 >
+    au < manifest ; 2001 ; Fourth Genre: Explorations in Nonfiction Volume 3 ; 3 ; 3 >
+    au < manifest ; 2002 ; Fourth Genre: Explorations in Nonfiction Volume 4 ; 4 ; 4 >
+    au < released ; 2003 ; Fourth Genre: Explorations in Nonfiction Volume 5 ; 5 ; 5 >
+    au < released ; 2004 ; Fourth Genre: Explorations in Nonfiction Volume 6 ; 6 ; 6 >
+    au < released ; 2005 ; Fourth Genre: Explorations in Nonfiction Volume 7 ; 7 ; 7 >
+    au < released ; 2006 ; Fourth Genre: Explorations in Nonfiction Volume 8 ; 8 ; 8 >
+    au < released ; 2007 ; Fourth Genre: Explorations in Nonfiction Volume 9 ; 9 ; 9 >
+    au < released ; 2008 ; Fourth Genre: Explorations in Nonfiction Volume 10 ; 10 ; 10 >
+    au < released ; 2009 ; Fourth Genre: Explorations in Nonfiction Volume 11 ; 11 ; 11 >
+    au < released ; 2010 ; Fourth Genre: Explorations in Nonfiction Volume 12 ; 12 ; 12 >
+    au < manifest ; 2011 ; Fourth Genre: Explorations in Nonfiction Volume 13 ; 13 ; 13 >
+    au < manifest ; 2012 ; Fourth Genre: Explorations in Nonfiction Volume 14 ; 14 ; 14 >
+
 
   }
 
@@ -75,6 +92,7 @@
     >
 
     param[journal_dir] = french_colonial_history
+    attr[journal_id] = fch
 
     au < released ; 2002 ; French Colonial History Volume 3 ; 3 ; 3 >
     au < released ; 2003 ; French Colonial History Volume 4 ; 4 ; 4 >
@@ -84,6 +102,9 @@
     au < released ; 2007 ; French Colonial History Volume 8 ; 8 ; 8 >
     au < released ; 2008 ; French Colonial History Volume 9 ; 9 ; 9 >
     au < released ; 2009 ; French Colonial History Volume 10 ; 10 ; 10 >
+    au < manifest ; 2010 ; French Colonial History Volume 11 ; 11 ; 11 >
+    au < manifest ; 2011 ; French Colonial History Volume 12 ; 12 ; 12 >
+    au < manifest ; 2012 ; French Colonial History Volume 13 ; 13 ; 13 >
 
   }
 
@@ -96,10 +117,12 @@
     >
 
     param[journal_dir] = italian_culture
+    attr[journal_id] = itc
 
     au < released ; 2005 ; Italian Culture Volume 23 ; 23 ; 23 >
     au < released ; 2006-2007 ; Italian Culture Volume 24-25 ; 24 ; 24-25 >
-    au < released ; 2006 ; Italian Culture Volume 26 ; 26 ; 26 >
+    au < released ; 2008 ; Italian Culture Volume 26 ; 26 ; 26 >
+
 
   }
 
@@ -112,10 +135,15 @@
     >
 
     param[journal_dir] = journal_for_the_study_of_radicalism
+    attr[journal_id] = jsr
 
     au < released ; 2007-2008 ; Journal for the Study of Radicalism Volume 1 ; 1 ; 1 >
     au < released ; 2008-2009 ; Journal for the Study of Radicalism Volume 2 ; 2 ; 2 >
     au < released ; 2009-2010 ; Journal for the Study of Radicalism Volume 3 ; 3 ; 3 >
+ 
+    au < manifest ; 2010-2011 ; Journal for the Study of Radicalism Volume 4 ; 4 ; 4 >
+    au < manifest ; 2011-2012 ; Journal for the Study of Radicalism Volume 5 ; 5 ; 5 >
+    au < manifest ; 2012 ; Journal for the Study of Radicalism Volume 6 ; 6 ; 6 >
 
   }
 
@@ -128,12 +156,15 @@
     >
 
     param[journal_dir] = northeast_african_studies
+    attr[journal_id] = nas
 
     au < released ; 1999 ; Northeast African Studies Volume 6 ; 6 ; 6 >
     au < released ; 2000 ; Northeast African Studies Volume 7 ; 7 ; 7 >
     au < released ; 2001 ; Northeast African Studies Volume 8 ; 8 ; 8 >
     au < released ; 2002 ; Northeast African Studies Volume 9 ; 9 ; 9 >
     au < released ; 2003 ; Northeast African Studies Volume 10 ; 10 ; 10 >
+    au < manifest ; 2004-2011 ; Northeast African Studies Volume 11 ; 11 ; 11 >
+    au < manifest ; 2012 ; Northeast African Studies Volume 12 ; 12 ; 12 >
 
   }
 
@@ -146,12 +177,17 @@
     >
 
     param[journal_dir] = red_cedar_review
+    attr[journal_id] = rcr
 
     au < released ; 2005 ; Red Cedar Review Volume 40 ; 40 ; 40 >
     au < released ; 2006 ; Red Cedar Review Volume 41 ; 41 ; 41 >
     au < released ; 2007 ; Red Cedar Review Volume 42 ; 42 ; 42 >
     au < released ; 2008 ; Red Cedar Review Volume 43 ; 43 ; 43 >
     au < released ; 2009 ; Red Cedar Review Volume 44 ; 44 ; 44 >
+    au < manifest ; 2010 ; Red Cedar Review Volume 45 ; 45 ; 45 >
+    au < manifest ; 2011 ; Red Cedar Review Volume 46 ; 46 ; 46 >
+    au < manifest ; 2012 ; Red Cedar Review volume 47 ; 47 ; 47 >
+
 
   }
 
@@ -164,18 +200,23 @@
     >
 
     param[journal_dir] = rhetoric_and_public_affairs
+    attr[journal_id] = rap
 
-    au < released ; 1998 ; Rhetoric & Public Affairs Volume 3 ; 3 ; 3 >
-    au < released ; 1999 ; Rhetoric & Public Affairs Volume 4 ; 4 ; 4 >
-    au < released ; 2000 ; Rhetoric & Public Affairs Volume 5 ; 5 ; 5 >
-    au < released ; 2001 ; Rhetoric & Public Affairs Volume 6 ; 6 ; 6 >
-    au < released ; 2002 ; Rhetoric & Public Affairs Volume 7 ; 7 ; 7 >
-    au < released ; 2003 ; Rhetoric & Public Affairs Volume 8 ; 8 ; 8 >
-    au < released ; 2004 ; Rhetoric & Public Affairs Volume 9 ; 9 ; 9 >
-    au < released ; 2005 ; Rhetoric & Public Affairs Volume 10 ; 10 ; 10 >
-    au < released ; 2006 ; Rhetoric & Public Affairs Volume 11 ; 11 ; 11 >
-    au < released ; 2007 ; Rhetoric & Public Affairs Volume 12 ; 12 ; 12 >
-    au < released ; 2008 ; Rhetoric & Public Affairs Volume 13 ; 13 ; 13 >
+    au < manifest ; 1998 ; Rhetoric & Public Affairs Volume 1 ; 1 ; 1 >
+    au < manifest ; 1999 ; Rhetoric & Public Affairs Volume 2 ; 2 ; 2 >
+    au < released ; 2000 ; Rhetoric & Public Affairs Volume 3 ; 3 ; 3 >
+    au < released ; 2001 ; Rhetoric & Public Affairs Volume 4 ; 4 ; 4 >
+    au < released ; 2002 ; Rhetoric & Public Affairs Volume 5 ; 5 ; 5 >
+    au < released ; 2003 ; Rhetoric & Public Affairs Volume 6 ; 6 ; 6 >
+    au < released ; 2004 ; Rhetoric & Public Affairs Volume 7 ; 7 ; 7 >
+    au < released ; 2005 ; Rhetoric & Public Affairs Volume 8 ; 8 ; 8 >
+    au < released ; 2006 ; Rhetoric & Public Affairs Volume 9 ; 9 ; 9 >
+    au < released ; 2007 ; Rhetoric & Public Affairs Volume 10 ; 10 ; 10 >
+    au < released ; 2008 ; Rhetoric & Public Affairs Volume 11 ; 11 ; 11 >
+    au < released ; 2009 ; Rhetoric & Public Affairs Volume 12 ; 12 ; 12 >
+    au < released ; 2010 ; Rhetoric & Public Affairs Volume 13 ; 13 ; 13 >
+    au < manifest ; 2011 ; Rhetoric & Public Affairs Volume 14 ; 14 ; 14 >
+    au < manifest ; 2012 ; Rhetoric & Public Affairs Volume 15 ; 15 ; 15 >
 
   }
 

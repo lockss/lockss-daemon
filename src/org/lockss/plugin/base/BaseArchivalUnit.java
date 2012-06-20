@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.152 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.152.4.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
@@ -111,7 +111,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected TitleConfig titleConfig;   // matching entry from titledb, if any
   protected String auTitle;   // the title of the AU (from titledb, if any)
   protected Configuration auConfig;
-  private String auId = null;
+  protected String auId = null;
 
   protected TypedEntryMap paramMap;
 
@@ -165,11 +165,23 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return new BaseCachedUrlSet(this, cuss);
   }
 
+  /** Return a CachedUrl for the specified url in this AU.  If the url
+   * specifies an archive member (<tt><i>URL</i>!/<i>member</i></tt>), the
+   * returned CU accesses the contents of the named archive member. */
   public CachedUrl makeCachedUrl(String url) {
+    ArchiveMemberSpec ams = ArchiveMemberSpec.fromUrl(this, url);
+    if (ams != null) {
+      CachedUrl cu = new BaseCachedUrl(this, ams.getUrl());
+      return cu.getArchiveMemberCu(ams);
+    }
     return new BaseCachedUrl(this, url);
   }
 
   public UrlCacher makeUrlCacher(String url) {
+    ArchiveMemberSpec ams = ArchiveMemberSpec.fromUrl(url);
+    if (ams != null) {
+      throw new IllegalArgumentException("Cannot make a UrlCacher for an archive member: " + url);
+    }
     return new BaseUrlCacher(this, url);
   }
 
@@ -396,9 +408,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     try {
       List<String> perms = getPermissionPages();
       Set<String> set = new HashSet<String>();
-      for (String url : perms) {
-	String stem = UrlUtil.getUrlPrefix(url);
-	set.add(stem);
+      if (perms != null) {
+	for (String url : perms) {
+	  String stem = UrlUtil.getUrlPrefix(url);
+	  set.add(stem);
+	}
       }
       ArrayList<String> res = new ArrayList<String>(set);
 //       res.trimToSize();
@@ -519,7 +533,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public RateLimiterInfo getRateLimiterInfo() {
     long interval = paramMap.getLong(KEY_AU_FETCH_DELAY, defaultFetchDelay);
-    return new RateLimiterInfo(getFetchRateLimiterKey(), 1, interval);
+    return new RateLimiterInfo(getFetchRateLimiterKey(), interval);
   }
 
   public String toString() {
@@ -701,6 +715,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public LinkRewriterFactory getLinkRewriterFactory(String contentType) {
     return plugin.getLinkRewriterFactory(contentType);
+  }
+
+  public ArchiveFileTypes getArchiveFileTypes() {
+    return plugin.getArchiveFileTypes();
   }
 
   /**

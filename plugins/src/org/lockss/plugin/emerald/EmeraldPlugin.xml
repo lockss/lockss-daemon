@@ -1,18 +1,26 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.emerald.EmeraldPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-	<string>2</string>
+		<string>2</string>
+      </entry>
+      <entry>
+      	<string>Poll</string>
+		<string>2</string>
       </entry>
     </map>
   </entry>
@@ -38,7 +46,7 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%scrawlers/lockss\.htm\?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
-      <string>1,&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
+      <string>1,&quot;^%s(journals|books)\.htm\?issn=%s&amp;volume=%s&amp;issue=[0-9]+&amp;articleid=&quot;, base_url, journal_issn, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -49,17 +57,17 @@
     <string>au_feature_urls</string>
     <map>
       <entry>
-        <string>au_issue</string>
-        <string>&quot;%sjournals.htm?issn=%s&amp;volume=%s&amp;issue=%s&quot;, base_url, journal_issn, volume_name, issue</string>
+        <string>au_title</string>
+        <string>&quot;%sjournals.htm?issn=%s&quot;, base_url, journal_issn</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>&quot;%sjournals.htm?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
+        <string>&quot;%scrawlers/lockss.htm?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
       </entry>
       <entry>
-        <string>au_title</string>
-        <string>&quot;%sjournals.htm?issn=%s&quot;, base_url, journal_issn</string>
-      </entry> 
+        <string>au_issue</string>
+        <string>&quot;%scrawlers/lockss.htm?issn=%s&amp;volume=%s&amp;issue=%s&quot;, base_url, journal_issn, volume_name, issue</string>
+      </entry>
     </map>
   </entry>
   <entry>
@@ -98,13 +106,34 @@
     <string>org.lockss.plugin.emerald.EmeraldHtmlFilterFactory</string>
   </entry>
   <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.emerald.EmeraldArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.emerald.EmeraldPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.emerald.EmeraldArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+     	<string>*</string>
+        <string>org.lockss.plugin.emerald.EmeraldHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.emerald.EmeraldLoginPageChecker</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s.*&amp;articleid=[^&amp;]*&amp;show=(html|pdf)&quot;, base_url, journal_issn, volume_name</string>
+      <string>&quot;^%s(journals|books)\.htm\?issn=%s&amp;volume=%s.*&amp;(articleid|chapterid)=[^&amp;]*&amp;show=(html|pdf)&quot;, base_url, journal_issn, volume_name</string>
     </list>
   </entry>
 </map>

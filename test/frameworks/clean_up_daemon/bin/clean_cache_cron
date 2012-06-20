@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $Id: clean_cache_cron,v 1.3 2011-06-14 18:40:59 thib_gc Exp $
+# $Id: clean_cache_cron,v 1.3.8.1 2012-06-20 00:03:03 nchondros Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -85,17 +85,18 @@ for U in $LOCKSS_USER ; do
     export LOCKSS_DAYS
     export LOCKSS_DELETED
     export LOCKSS_DISK_PATHS
+    export LOCKSS_IPADDR
     export LOCKSS_UI_PORT
     su $U -- -c '
       umask 002
       cd $LOCKSS_DISK_PATHS
       DEST=`mktemp -d -p $LOCKSS_DELETED XXXXXXXX`
       chmod g+u $DEST
-      # Change the following from content to $LOCKSS_USER later
-      chgrp content $DEST
+      # Old-style content machines with a shared 'content' group require the following line 
+      # chgrp content $DEST
       touch "${DEST}/#deletion_timestamp"
       # May require an update later
-      $LOCKSS_CLEANUPCACHE --user="lockss-u" --password="lockss-p" --dest="${DEST}"
+      $LOCKSS_CLEANUPCACHE --user="lockss-u" --password="lockss-p" --directory="${LOCKSS_DISK_PATHS}" --dest="${DEST}"
       for D in `find $LOCKSS_DELETED -mindepth 2 -maxdepth 2 -type f -name "#deletion_timestamp" -mtime +$LOCKSS_DAYS`; do
         nice rm -rf `dirname $D`
       done

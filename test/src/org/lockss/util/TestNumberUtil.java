@@ -1,5 +1,5 @@
 /*
- * $Id: TestNumberUtil.java,v 1.9 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: TestNumberUtil.java,v 1.9.2.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -110,6 +110,121 @@ public class TestNumberUtil extends LockssTestCase {
     }
   }
 
+  public final void testConstructPaddedIntSequence() {
+    assertIsomorphic(
+        Arrays.asList(new String[]{"001", "002", "003"}),
+        NumberUtil.constructPaddedIntSequence("001", "003", 1)
+    );
+    assertIsomorphic(
+        Arrays.asList(new String[]{"001", "003"}),
+        NumberUtil.constructPaddedIntSequence("001", "003", 2)
+    );
+    assertIsomorphic(
+        Arrays.asList(new String[]{"1", "2", "3"}),
+        NumberUtil.constructPaddedIntSequence("1", "3", 1)
+    );
+    assertIsomorphic(
+        Arrays.asList(new String[]{"9", "10", "11"}),
+        NumberUtil.constructPaddedIntSequence("9", "11", 1)
+    );
+    assertIsomorphic(
+        Arrays.asList(new String[]{"09", "10", "11"}),
+        NumberUtil.constructPaddedIntSequence("09", "11", 1)
+    );
+
+    // Should throw exception on inconsistent args
+    try {
+      NumberUtil.constructPaddedIntSequence("001", "003", 3);
+      fail("Should throw exception");
+    } catch (IllegalArgumentException e) {
+      /*Expected*/
+    }
+    try {
+      NumberUtil.constructPaddedIntSequence("001", "006", 2);
+      fail("Should throw exception");
+    } catch (IllegalArgumentException e) {
+      /*Expected*/
+    }
+    // Zero-padded and not
+    try {
+      NumberUtil.constructPaddedIntSequence("1", "003", 1);
+      fail("Should throw exception");
+    } catch (IllegalArgumentException e) {
+      /*Expected*/
+    }
+  }
+
+  public final void testConstructRomanSequence() {
+    assertEquals(Arrays.asList(new String[]{"I", "II", "III", "IV", "V"}),
+        NumberUtil.constructRomanSequence("I","V",1));
+    // Lower case
+    assertEquals(Arrays.asList(new String[]{"i", "ii", "iii", "iv", "v"}),
+        NumberUtil.constructRomanSequence("i","v",1));
+    // Unnormalised 5 - 11 // TODO Should iiix be seen as 7?
+    assertEquals(Arrays.asList(new String[]{"iv", "v", "vi", "vii", "viii", "ix", "x", "xi"}),
+        NumberUtil.constructRomanSequence("iiii","iiix",1));
+    // Unnormalised 5 - 7
+    assertEquals(Arrays.asList(new String[]{"iv", "v", "vi", "vii"}),
+        NumberUtil.constructRomanSequence("iiii","iiiiiii",1));
+    // Decrementing sequence
+    assertEquals(Arrays.asList(new String[]{"V", "IV", "III", "II", "I"}),
+        NumberUtil.constructRomanSequence("V","I",1));
+    // Incrementing by 3
+    assertEquals(Arrays.asList(new String[]{"II", "V", "VIII", "XI"}),
+        NumberUtil.constructRomanSequence("II","XI",3));
+    // Mixed Roman and Arabic args; roman output
+    /*assertEquals(Arrays.asList(new String[]{"I", "II", "III"}),
+        NumberUtil.constructRomanSequence("1","III",1));*/
+    // Try and construct a sequence with args that don't add up
+    try {
+      NumberUtil.constructRomanSequence("II","X",3);
+      fail("Exception expected");
+    } catch (Exception e) {
+      // Expected exception
+    }
+    // Mixed Roman and Arabic are not allowed
+    try {
+      NumberUtil.constructRomanSequence("1","III",1);
+      fail("Exception expected");
+    } catch (Exception e) {
+      // Expected exception
+    }
+  }
+
+  public final void testConstructAlphabeticSequence() {
+
+    assertIsomorphic(
+        Arrays.asList(new String[]{"a", "b", "c"}),
+        NumberUtil.constructAlphabeticSequence("a", "c", 1)
+    );
+    assertIsomorphic(
+        Arrays.asList(new String[]{"aaa", "ana", "baa"}),
+        NumberUtil.constructAlphabeticSequence("aaa", "baa", 26*13)
+    );
+
+
+    // Try strings of different lengths
+    try {
+      NumberUtil.constructAlphabeticSequence("a", "aa", 1);
+      fail("Should throw exception for different length strings");
+    } catch (IllegalArgumentException e) {
+      /*Expected exception*/
+    }
+
+    // Should throw exception on inconsistent args - diff not divisible by delta
+    try {
+      NumberUtil.constructAlphabeticSequence("001", "003", 3);
+      fail("Should throw exception for inconsistent args");
+    } catch (IllegalArgumentException e) {
+      /*Expected*/
+    }
+    try {
+      NumberUtil.constructAlphabeticSequence("001", "006", 2);
+      fail("Should throw exception for inconsistent args");
+    } catch (IllegalArgumentException e) {
+      /*Expected*/
+    }
+  }
 
   /**
    * Test whether strings parse as integers.
@@ -191,10 +306,14 @@ public class TestNumberUtil extends LockssTestCase {
    */
   public final void testIsRomanNumber() {
     assertTrue(NumberUtil.isRomanNumber("C"));
-    assertTrue(NumberUtil.isRomanNumber("c"));
     assertTrue(NumberUtil.isRomanNumber("XVII"));
     assertTrue(NumberUtil.isRomanNumber("N"));
 
+    // Try lower and mixed case
+    assertTrue(NumberUtil.isRomanNumber("c"));
+    assertTrue(NumberUtil.isRomanNumber("xvII"));
+    assertTrue(NumberUtil.isRomanNumber("n"));
+    
     // Unnormalized Roman strings
     assertTrue(NumberUtil.isRomanNumber("XVIIIII"));
     assertFalse(NumberUtil.isNumber("XVIIIII"));
@@ -203,18 +322,28 @@ public class TestNumberUtil extends LockssTestCase {
 
     // Strings not intended to represent Roman numerals can be taken so
     // when normalisation is not enforced:
-    assertTrue(NumberUtil.isRomanNumber("Viv"));
-    assertTrue(NumberUtil.isRomanNumber("Vic"));
-    assertTrue(NumberUtil.isRomanNumber("Vid"));
-    assertTrue(NumberUtil.isRomanNumber("Civic"));
-    assertTrue(NumberUtil.isRomanNumber("Livid"));
-    assertTrue(NumberUtil.isRomanNumber("Mivvi"));
-    assertTrue(NumberUtil.isRomanNumber("Mill"));
+    checkUnnormalisedRomanNumber("Viv");
+    checkUnnormalisedRomanNumber("Vic");
+    checkUnnormalisedRomanNumber("Vid");
+    checkUnnormalisedRomanNumber("Civic");
+    checkUnnormalisedRomanNumber("Livid");
+    checkUnnormalisedRomanNumber("Mivvi");
+    checkUnnormalisedRomanNumber("Mill");
     // TODO Is this really what we want by default?
 
     // Non-Roman strings
     assertFalse(NumberUtil.isRomanNumber("clinic"));
     assertFalse(NumberUtil.isNumber("clinic"));
+  }
+
+
+  /**
+   * Test whether unnormalised strings parse as Roman numbers in general, and
+   * fail when parsing with normalisation..
+   */
+  protected final void checkUnnormalisedRomanNumber(String s) {
+    assertTrue(NumberUtil.isRomanNumber(s));
+    assertFalse(NumberUtil.isNormalisedRomanNumber(s));
   }
 
   public final void testIsNumericalRange() {
@@ -248,6 +377,28 @@ public class TestNumberUtil extends LockssTestCase {
     assertFalse(NumberUtil.isNumericalRange("1-2-3"));
     // Valid string ranges are not numerical ranges
     assertFalse(NumberUtil.isNumericalRange("s1-s2"));
+  }
+
+
+  public final void testPadNumbers() {
+    assertEquals("001", NumberUtil.padNumbers("1", 3));
+    assertEquals("001", NumberUtil.padNumbers("01", 3));
+    assertEquals("001", NumberUtil.padNumbers("001", 3));
+    assertEquals("1000", NumberUtil.padNumbers("1000", 3));
+
+    // Padding to <1 does nothing to the input string
+    assertEquals("1", NumberUtil.padNumbers("1", 0));
+    assertEquals("001", NumberUtil.padNumbers("001", 0));
+    assertEquals("001", NumberUtil.padNumbers("001", 1));
+    assertEquals("001", NumberUtil.padNumbers("001", -1));
+    assertEquals("1", NumberUtil.padNumbers("1", 1));
+    assertEquals("1", NumberUtil.padNumbers("1", -1));
+
+    // Pad numbers
+    assertEquals("001", NumberUtil.padNumbers(1, 3));
+    assertEquals("1000", NumberUtil.padNumbers(1000, 3));
+    assertEquals("1", NumberUtil.padNumbers(1, 0));
+
   }
 
   /**
@@ -300,6 +451,37 @@ public class TestNumberUtil extends LockssTestCase {
     assertFalse( NumberUtil.areConsecutive("0", "-1") );
     assertFalse( NumberUtil.areConsecutive("2", "1")  );
     assertFalse( NumberUtil.areConsecutive("1", "-2") );
+  }
+
+  public final void testAreAlphabeticallyConsecutive() {
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("z", "ba"));
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("aa", "ab"));
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("ab", "ac"));
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("ay", "az"));
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("bz", "ca"));
+
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("aaa", "aab"));
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("aaz", "aba"));
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("azz", "baa"));
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("zzy", "zzz"));
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("zyz", "zza"));
+
+    // Try mixed case - should be preserved
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("AAA", "AAB"));
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("aaZ", "abA"));
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("aZz", "bAa"));
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("Zzy", "Zzz"));
+    assertTrue(NumberUtil.areAlphabeticallyConsecutive("ZyZ", "ZzA"));
+
+    // Not consecutive
+    assertFalse(NumberUtil.areAlphabeticallyConsecutive("a", "c"));
+    assertFalse(NumberUtil.areAlphabeticallyConsecutive("a", "z"));
+    assertFalse(NumberUtil.areAlphabeticallyConsecutive("b", "a"));
+
+    // Changing case means the strings are not alphabetically consecutive
+    assertFalse(NumberUtil.areAlphabeticallyConsecutive("AAA", "AAb"));
+    assertFalse(NumberUtil.areAlphabeticallyConsecutive("a", "B"));
+    assertFalse(NumberUtil.areAlphabeticallyConsecutive("A", "b"));
   }
 
   public final void testAreEqualValue() {
@@ -498,7 +680,31 @@ public class TestNumberUtil extends LockssTestCase {
     assertTrue(NumberUtil.rangeIncludes("abc-def", "def"));
     assertTrue(NumberUtil.rangeIncludes("abc-def", "bcdefg"));
     assertTrue(NumberUtil.rangeIncludes("abc", "abc"));
-    
+
+    // Test if rangeIncludes() can be used to establish whether a<=b
+    // 0-b is range, a is search term
+    assertTrue( NumberUtil.rangeIncludes("0-abc", "abc"));
+    assertTrue( NumberUtil.rangeIncludes("0-abc", "ab"));
+    assertFalse(NumberUtil.rangeIncludes("0-abc", "abd"));
+    assertTrue( NumberUtil.rangeIncludes("0-abc", "0"));
+    assertTrue( NumberUtil.rangeIncludes("0-abc", "01"));
+    assertTrue( NumberUtil.rangeIncludes("0-abc", "1"));
+
+    // Use compareTo
+    assertEquals("abc".compareTo("abc")<=0,
+        NumberUtil.rangeIncludes("0-abc", "abc"));
+    assertEquals("ab".compareTo("abc")<0,
+        NumberUtil.rangeIncludes("0-abc", "ab"));
+    assertEquals("abd".compareTo("abc")<0,
+        NumberUtil.rangeIncludes("0-abc", "abd"));
+    assertEquals("0".compareTo("abc")<0,
+        NumberUtil.rangeIncludes("0-abc", "0"));
+    assertEquals("01".compareTo("abc")<0,
+        NumberUtil.rangeIncludes("0-abc", "01"));
+    assertEquals("1".compareTo("abc")<0,
+        NumberUtil.rangeIncludes("0-abc", "1"));
+
+
     // Test with whitespace
     assertEquals("123", NumberUtil.getRangeStart(" 123 -456"));
     assertEquals("123", NumberUtil.getRangeStart(" 123"));
@@ -522,4 +728,123 @@ public class TestNumberUtil extends LockssTestCase {
     assertEquals(-1, NumberUtil.findRangeHyphen("merry-go-round"));
     assertEquals(-1, NumberUtil.findRangeHyphen("----------"));
   }
+
+ 
+  public final void testIncrementAlphabeticalString() {
+    assertEquals("aab", NumberUtil.incrementBase26String("aaa"));
+    assertEquals("aba", NumberUtil.incrementBase26String("aaz"));
+    assertEquals("baa", NumberUtil.incrementBase26String("azz"));
+    assertEquals("zzz", NumberUtil.incrementBase26String("zzy"));
+    assertEquals("zza", NumberUtil.incrementBase26String("zyz"));
+
+    // Try mixed case - should be preserved
+    assertEquals("AAB", NumberUtil.incrementBase26String("AAA"));
+    assertEquals("abA", NumberUtil.incrementBase26String("aaZ"));
+    assertEquals("bAa", NumberUtil.incrementBase26String("aZz"));
+    assertEquals("Zzz", NumberUtil.incrementBase26String("Zzy"));
+    assertEquals("ZzA", NumberUtil.incrementBase26String("ZyZ"));
+
+    // Try incrementing by different amounts
+    assertEquals("aac", NumberUtil.incrementBase26String("aaa", 2));
+    assertEquals("abc", NumberUtil.incrementBase26String("aaz", 3));
+    assertEquals("baz", NumberUtil.incrementBase26String("azz", 26));
+    assertEquals("zzz", NumberUtil.incrementBase26String("zzy", 1));
+    assertEquals("zzz", NumberUtil.incrementBase26String("zyz", 26));
+    assertEquals("baa", NumberUtil.incrementBase26String("a", 26 * 26));
+
+    // Try decrementing
+    assertEquals("aaa", NumberUtil.incrementBase26String("aab", -1));
+    assertEquals("aax", NumberUtil.incrementBase26String("aaz", -2));
+    assertEquals("axz", NumberUtil.incrementBase26String("azz", -52));
+    assertEquals("aza", NumberUtil.incrementBase26String("azz", -25));
+    assertEquals("abc", NumberUtil.incrementBase26String("abc", 0));
+    assertEquals("yzz", NumberUtil.incrementBase26String("zzz", -(26 * 26)));
+
+    // Try strings at the limit for their length
+    assertEquals("ba", NumberUtil.incrementBase26String("z"));
+    assertEquals("baa", NumberUtil.incrementBase26String("zz"));
+    assertEquals("baaa", NumberUtil.incrementBase26String("zzz"));
+
+    // Try decrementing to negative number
+    try {
+      NumberUtil.incrementBase26String("a", -1);
+      fail("Should throw exception when trying to decrement below 0");
+    } catch (NumberFormatException e) {
+      /*Expected exception.*/
+    }
+
+    // Non-alphabetic chars should cause exception
+    for (String s : new String[]{"abc1", "ABC1","£AbC"}) {
+      try {
+        NumberUtil.incrementBase26String(s);
+        fail("Should throw exception with non-alphabetic chars");
+      } catch (NumberFormatException e) {
+        /*Expected exception.*/
+      } 
+    }
+  }
+
+  public final void testBase26() {
+    assertEquals("a", NumberUtil.toBase26(0));
+    assertEquals("b", NumberUtil.toBase26(1));
+    assertEquals("ba", NumberUtil.toBase26(26));
+    assertEquals("cb", NumberUtil.toBase26(53));
+    assertEquals("baa", NumberUtil.toBase26(26*26));
+
+    assertEquals(0, NumberUtil.fromBase26("a"));
+    assertEquals(1, NumberUtil.fromBase26("b"));
+    assertEquals(26, NumberUtil.fromBase26("ba"));
+    assertEquals(53, NumberUtil.fromBase26("cb"));
+    assertEquals(26*26, NumberUtil.fromBase26("baa"));
+
+    // Try converting negative number
+    try {
+      NumberUtil.toBase26(-1);
+      fail("Should throw exception when trying to convert negative number to base-26");
+    } catch (NumberFormatException e) {
+      /*Expected exception.*/
+    }
+
+    // Try converting non-alphabetical number
+    try {
+      NumberUtil.fromBase26("-abc");
+      fail("Should throw exception for non-base-26 string input.");
+    } catch (Exception e) {
+      /*Expected*/
+    }
+
+  }
+
+
+  public final void testIsContiguousRange() {
+    // Empty string does not represent a contiguous range
+    assertFalse(NumberUtil.isContiguousRange(""));
+
+    // Single ranges
+    assertTrue(NumberUtil.isContiguousRange("1"));
+    assertTrue(NumberUtil.isContiguousRange("1-3"));
+    assertTrue(NumberUtil.isContiguousRange("I - III"));
+
+    // Consecutive ranges
+    assertTrue(NumberUtil.isContiguousRange("1, 2-4, 5-6, 7"));
+    assertTrue(NumberUtil.isContiguousRange("10-14, 15-20"));
+    assertTrue(NumberUtil.isContiguousRange("s1-s4; s5"));
+    // Ranges with Roman tokens and hyphens in range identifiers
+    assertFalse(NumberUtil.isContiguousRange("s1-I-s1-IIII; s1-V")); // IIII is not normalised form
+    assertTrue(NumberUtil.isContiguousRange("s1-I-s1-IV; s1-V"));
+    assertTrue(NumberUtil.isContiguousRange("s1-II - s1-4; s1-V"));
+    // Alphabetic ranges, mixed delimiters
+    assertTrue(NumberUtil.isContiguousRange("aa,ab,ac-ay;az-bz;ca-no"));
+    assertTrue(NumberUtil.isContiguousRange("a1-2,a1-3,a1-4-a1-10"));
+    assertTrue(NumberUtil.isContiguousRange("a1-02 , a1-03 ; a1-04  -  a1-10"));
+
+
+    // Not consecutive ranges
+    assertFalse(NumberUtil.isContiguousRange("10-14, 16-20"));
+    assertFalse(NumberUtil.isContiguousRange("10-14, 14-20"));
+    // Test on Romans
+    assertFalse(NumberUtil.isContiguousRange("I, III"));
+
+  }
+
 }

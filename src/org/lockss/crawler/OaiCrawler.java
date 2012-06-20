@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.23 2011-05-11 03:31:16 tlipkis Exp $
+ * $Id: OaiCrawler.java,v 1.23.10.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -73,12 +73,8 @@ public class OaiCrawler extends FollowLinkCrawler {
                     DEFAULT_OAI_REQUEST_RETRY_TIMES);
   }
 
-  public int getType() {
-    return Crawler.OAI;
-  }
-
-  public String getTypeString() {
-    return "OAI";
+  public Crawler.Type getType() {
+    return Crawler.Type.OAI;
   }
 
   public boolean isWholeAU() {

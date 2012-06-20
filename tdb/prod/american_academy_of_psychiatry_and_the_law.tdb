@@ -17,45 +17,46 @@
       param[base_url] = http://www.jaapl.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1973 ; Journal of the American Academy of Psychiatry and the Law Online Volume 1 ; 1 >
-      au < manifest ; 1974 ; Journal of the American Academy of Psychiatry and the Law Online Volume 2 ; 2 >
-      au < manifest ; 1976 ; Journal of the American Academy of Psychiatry and the Law Online Volume 3 ; 3 >
-      au < manifest ; 1976 ; Journal of the American Academy of Psychiatry and the Law Online Volume 4 ; 4 >
-      au < manifest ; 1977 ; Journal of the American Academy of Psychiatry and the Law Online Volume 5 ; 5 >
-      au < manifest ; 1978 ; Journal of the American Academy of Psychiatry and the Law Online Volume 6 ; 6 >
-      au < manifest ; 1979 ; Journal of the American Academy of Psychiatry and the Law Online Volume 7 ; 7 >
-      au < manifest ; 1980 ; Journal of the American Academy of Psychiatry and the Law Online Volume 8 ; 8 >
-      au < manifest ; 1981 ; Journal of the American Academy of Psychiatry and the Law Online Volume 9 ; 9 >
-      au < manifest ; 1982 ; Journal of the American Academy of Psychiatry and the Law Online Volume 10 ; 10 >
-      au < manifest ; 1983 ; Journal of the American Academy of Psychiatry and the Law Online Volume 11 ; 11 >
-      au < manifest ; 1984 ; Journal of the American Academy of Psychiatry and the Law Online Volume 12 ; 12 >
-      au < manifest ; 1985 ; Journal of the American Academy of Psychiatry and the Law Online Volume 13 ; 13 >
-      au < manifest ; 1986 ; Journal of the American Academy of Psychiatry and the Law Online Volume 14 ; 14 >
-      au < manifest ; 1987 ; Journal of the American Academy of Psychiatry and the Law Online Volume 15 ; 15 >
-      au < manifest ; 1988 ; Journal of the American Academy of Psychiatry and the Law Online Volume 16 ; 16 >
-      au < manifest ; 1989 ; Journal of the American Academy of Psychiatry and the Law Online Volume 17 ; 17 >
-      au < manifest ; 1990 ; Journal of the American Academy of Psychiatry and the Law Online Volume 18 ; 18 >
-      au < manifest ; 1991 ; Journal of the American Academy of Psychiatry and the Law Online Volume 19 ; 19 >
-      au < manifest ; 1992 ; Journal of the American Academy of Psychiatry and the Law Online Volume 20 ; 20 >
-      au < manifest ; 1993 ; Journal of the American Academy of Psychiatry and the Law Online Volume 21 ; 21 >
-      au < manifest ; 1994 ; Journal of the American Academy of Psychiatry and the Law Online Volume 22 ; 22 >
-      au < manifest ; 1995 ; Journal of the American Academy of Psychiatry and the Law Online Volume 23 ; 23 >
-      au < manifest ; 1996 ; Journal of the American Academy of Psychiatry and the Law Online Volume 24 ; 24 >
-      au < manifest ; 1997 ; Journal of the American Academy of Psychiatry and the Law Online Volume 25 [abstracts only] ; 25 >
-      au < manifest ; 1998 ; Journal of the American Academy of Psychiatry and the Law Online Volume 26 [abstracts only] ; 26 >
-      au < manifest ; 1999 ; Journal of the American Academy of Psychiatry and the Law Online Volume 27 [abstracts only] ; 27 >
-      au < manifest ; 2000 ; Journal of the American Academy of Psychiatry and the Law Online Volume 28 [abstracts only] ; 28 >
-      au < manifest ; 2001 ; Journal of the American Academy of Psychiatry and the Law Online Volume 29 [abstracts only] ; 29 >
-      au < manifest ; 2002 ; Journal of the American Academy of Psychiatry and the Law Online Volume 30 ; 30 >
-      au < manifest ; 2003 ; Journal of the American Academy of Psychiatry and the Law Online Volume 31 ; 31 >
-      au < manifest ; 2004 ; Journal of the American Academy of Psychiatry and the Law Online Volume 32 ; 32 >
-      au < manifest ; 2005 ; Journal of the American Academy of Psychiatry and the Law Online Volume 33 ; 33 >
-      au < manifest ; 2006 ; Journal of the American Academy of Psychiatry and the Law Online Volume 34 ; 34 >
-      au < manifest ; 2007 ; Journal of the American Academy of Psychiatry and the Law Online Volume 35 ; 35 >
-      au < manifest ; 2008 ; Journal of the American Academy of Psychiatry and the Law Online Volume 36 ; 36 >
-      au < manifest ; 2009 ; Journal of the American Academy of Psychiatry and the Law Online Volume 37 ; 37 >
-      au < manifest ; 2010 ; Journal of the American Academy of Psychiatry and the Law Online Volume 38 ; 38 >
-      au < manifest ; 2011 ; Journal of the American Academy of Psychiatry and the Law Online Volume 39 ; 39 >
+      au < released ; 1973 ; Journal of the American Academy of Psychiatry and the Law Online Volume 1 ; 1 >
+      au < released ; 1974 ; Journal of the American Academy of Psychiatry and the Law Online Volume 2 ; 2 >
+      au < released ; 1976 ; Journal of the American Academy of Psychiatry and the Law Online Volume 3 ; 3 >
+      au < released ; 1976 ; Journal of the American Academy of Psychiatry and the Law Online Volume 4 ; 4 >
+      au < released ; 1977 ; Journal of the American Academy of Psychiatry and the Law Online Volume 5 ; 5 >
+      au < released ; 1978 ; Journal of the American Academy of Psychiatry and the Law Online Volume 6 ; 6 >
+      au < released ; 1979 ; Journal of the American Academy of Psychiatry and the Law Online Volume 7 ; 7 >
+      au < released ; 1980 ; Journal of the American Academy of Psychiatry and the Law Online Volume 8 ; 8 >
+      au < released ; 1981 ; Journal of the American Academy of Psychiatry and the Law Online Volume 9 ; 9 >
+      au < released ; 1982 ; Journal of the American Academy of Psychiatry and the Law Online Volume 10 ; 10 >
+      au < released ; 1983 ; Journal of the American Academy of Psychiatry and the Law Online Volume 11 ; 11 >
+      au < released ; 1984 ; Journal of the American Academy of Psychiatry and the Law Online Volume 12 ; 12 >
+      au < released ; 1985 ; Journal of the American Academy of Psychiatry and the Law Online Volume 13 ; 13 >
+      au < released ; 1986 ; Journal of the American Academy of Psychiatry and the Law Online Volume 14 ; 14 >
+      au < released ; 1987 ; Journal of the American Academy of Psychiatry and the Law Online Volume 15 ; 15 >
+      au < released ; 1988 ; Journal of the American Academy of Psychiatry and the Law Online Volume 16 ; 16 >
+      au < released ; 1989 ; Journal of the American Academy of Psychiatry and the Law Online Volume 17 ; 17 >
+      au < released ; 1990 ; Journal of the American Academy of Psychiatry and the Law Online Volume 18 ; 18 >
+      au < released ; 1991 ; Journal of the American Academy of Psychiatry and the Law Online Volume 19 ; 19 >
+      au < released ; 1992 ; Journal of the American Academy of Psychiatry and the Law Online Volume 20 ; 20 >
+      au < released ; 1993 ; Journal of the American Academy of Psychiatry and the Law Online Volume 21 ; 21 >
+      au < released ; 1994 ; Journal of the American Academy of Psychiatry and the Law Online Volume 22 ; 22 >
+      au < released ; 1995 ; Journal of the American Academy of Psychiatry and the Law Online Volume 23 ; 23 >
+      au < released ; 1996 ; Journal of the American Academy of Psychiatry and the Law Online Volume 24 ; 24 >
+      au < released ; 1997 ; Journal of the American Academy of Psychiatry and the Law Online Volume 25 [abstracts only] ; 25 >
+      au < released ; 1998 ; Journal of the American Academy of Psychiatry and the Law Online Volume 26 [abstracts only] ; 26 >
+      au < released ; 1999 ; Journal of the American Academy of Psychiatry and the Law Online Volume 27 [abstracts only] ; 27 >
+      au < released ; 2000 ; Journal of the American Academy of Psychiatry and the Law Online Volume 28 [abstracts only] ; 28 >
+      au < released ; 2001 ; Journal of the American Academy of Psychiatry and the Law Online Volume 29 [abstracts only] ; 29 >
+      au < released ; 2002 ; Journal of the American Academy of Psychiatry and the Law Online Volume 30 ; 30 >
+      au < released ; 2003 ; Journal of the American Academy of Psychiatry and the Law Online Volume 31 ; 31 >
+      au < released ; 2004 ; Journal of the American Academy of Psychiatry and the Law Online Volume 32 ; 32 >
+      au < released ; 2005 ; Journal of the American Academy of Psychiatry and the Law Online Volume 33 ; 33 >
+      au < released ; 2006 ; Journal of the American Academy of Psychiatry and the Law Online Volume 34 ; 34 >
+      au < released ; 2007 ; Journal of the American Academy of Psychiatry and the Law Online Volume 35 ; 35 >
+      au < released ; 2008 ; Journal of the American Academy of Psychiatry and the Law Online Volume 36 ; 36 >
+      au < released ; 2009 ; Journal of the American Academy of Psychiatry and the Law Online Volume 37 ; 37 >
+      au < released ; 2010 ; Journal of the American Academy of Psychiatry and the Law Online Volume 38 ; 38 >
+      au < released ; 2011 ; Journal of the American Academy of Psychiatry and the Law Online Volume 39 ; 39 >
+      au < released ; 2012 ; Journal of the American Academy of Psychiatry and the Law Online Volume 40 ; 40 >
 
     }
 

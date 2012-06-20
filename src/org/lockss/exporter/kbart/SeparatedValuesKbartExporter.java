@@ -1,5 +1,5 @@
 /*
- * $Id: SeparatedValuesKbartExporter.java,v 1.7 2011-08-19 10:36:18 easyonthemayo Exp $
+ * $Id: SeparatedValuesKbartExporter.java,v 1.7.6.1 2012-06-20 00:02:56 nchondros Exp $
  */
 
 /*
@@ -123,6 +123,7 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
 
   /**
    * Write a byte-order mark (BOM) for excel, helping it to recognise UTF-8.
+   * Works and is necessary for Excel in Windows, not recognised in Excel on Mac.
    * @param os the output stream to write to
    * @throws IOException
    */

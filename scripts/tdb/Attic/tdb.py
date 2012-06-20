@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.10 2011-08-25 23:40:49 thib_gc Exp $
+# $Id: tdb.py,v 1.10.6.1 2012-06-20 00:02:55 nchondros Exp $
 
-# Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.3'''
+__version__ = '''0.3.4'''
 
 import re
 
@@ -157,6 +157,7 @@ class Publisher(_Map):
 class Title(_Map):
     '''A tdb Title object.'''
     NAME = 'name'
+    TYPE = 'type'
     EISBN = 'eisbn'
     EISSN = 'eissn'
     ISBN = 'isbn'
@@ -176,6 +177,7 @@ class Title(_Map):
     def set_publisher(self, publisher): self.set(Title.PUBLISHER, publisher)
 
     def name(self): return self.get(Title.NAME)
+    def type(self): return self.get(Title.TYPE)
     def eisbn(self): return self.get(Title.EISBN)
     def eissn(self): return self.get(Title.EISSN)
     def isbn(self): return self.get(Title.ISBN)
@@ -188,8 +190,9 @@ class AU(_ChainedMap):
     '''Adds convenience getters to a _ChainedMap.'''
     class Status:
         DOES_NOT_EXIST = 'doesNotExist'
-        EXISTS = 'exists'
         DO_NOT_PROCESS = 'doNotProcess'
+        EXISTS = 'exists'
+        EXPECTED = 'expected'
         MANIFEST = 'manifest'
         WANTED = 'wanted'
         CRAWLING = 'crawling'
@@ -202,9 +205,12 @@ class AU(_ChainedMap):
         RELEASED = 'released'
         DOWN = 'down'
         SUPERSEDED = 'superseded'
-        EXPUNGED = 'expunged'
+        ZAPPED = 'zapped'
 
     ATTR = 'attr'
+    EDITION = 'edition'
+    EISBN = 'eisbn'
+    ISBN = 'isbn'
     NAME = 'name'
     NONDEFPARAM = 'nondefparam'
     PARAM = 'param'
@@ -227,6 +233,9 @@ class AU(_ChainedMap):
     def attr(self, attr): return self.get( (AU.ATTR, attr) )
     def attrs(self): return self.get(AU.ATTR) or {}
     def auid(self): return AU.computeAuid(self.plugin(), self.params())
+    def edition(self): return self.get(AU.EDITION)
+    def eisbn(self): return self.get(AU.EISBN)
+    def isbn(self): return self.get(AU.ISBN)
     def name(self): return self.get(AU.NAME)
     def nondefparam(self, nondefparam):
         val = self.get( (AU.NONDEFPARAM, nondefparam) )

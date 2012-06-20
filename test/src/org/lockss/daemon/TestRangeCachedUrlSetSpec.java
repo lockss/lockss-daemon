@@ -1,10 +1,10 @@
 /*
- * $Id: TestRangeCachedUrlSetSpec.java,v 1.14 2004-07-23 16:44:09 tlipkis Exp $
+ * $Id: TestRangeCachedUrlSetSpec.java,v 1.14.118.1 2012-06-20 00:02:42 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -142,6 +142,9 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertTrue(cuss1.matches("foo"));// not ranged, should match prefix
     assertFalse(cuss1.matches("foobar")); // no path separator
     assertTrue(cuss1.matches("foo/bar"));
+    assertTrue(cuss1.matches("foo!/bar"));
+    assertTrue(cuss1.matches("foo/"));
+    assertTrue(cuss1.matches("foo!/"));
     assertFalse(cuss1.matches("fo"));
     assertFalse(cuss1.matches("1foo"));
 

@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.43 2011-06-29 16:39:36 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.43.6.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
@@ -206,8 +206,7 @@ public abstract class IpAccessControl extends LockssServlet {
     page.add(form);
 
     // Finish laying out page
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   protected void additionalFormLayout(Composite composite) {

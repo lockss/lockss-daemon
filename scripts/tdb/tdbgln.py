@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-# $Id: tdbgln.py,v 1.4 2011-05-20 19:52:25 barry409 Exp $
+# $Id: tdbgln.py,v 1.4.8.1 2012-06-20 00:02:55 nchondros Exp $
 
-# Copyright (c) 2000-2011 Bsoard of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2012 Bsoard of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,7 @@ import sys
 class TdbglnConstants:
     '''Constants associated with the tdbgln module.'''
     
-    VERSION = '''0.1.2'''
+    VERSION = '''0.1.3'''
     
     DESCRIPTION = '''Invokes the tdbout or tdbxml module with
 extensions and functionality specific to the Global LOCKSS Network
@@ -153,7 +153,6 @@ def __alliance__(is_alliance):
                             'org.nypl.plugin.shampoo.ShampooPlugin',
                             'org.nypl.plugin.WordsWithoutBordersPlugin',
                             'za.ac.nlsa.lockss.plugin.WaterSAPlugin']
-    ret = ' or '.join(['plugin is "%s"' % (str,) for str in non_alliance_plugins])
     if is_alliance: return ' and '.join(['plugin is not "%s"' % (str,) for str in non_alliance_plugins])
     else: return ' or '.join(['plugin is "%s"' % (str,) for str in non_alliance_plugins])
 

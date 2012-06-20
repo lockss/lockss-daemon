@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -26,5 +26,14 @@
   <entry>
     <string>au_name</string>
     <string>&quot;International Union of Crystallography Plugin (CLOCKSS), Base URL %s, Scripts URL %s, Journal ID %s, Year %d, Issue %s&quot;, base_url, scripts_url, journal_id, year, issue</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
   </entry>
 </map>

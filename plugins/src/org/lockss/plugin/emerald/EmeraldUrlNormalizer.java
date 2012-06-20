@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldUrlNormalizer.java,v 1.1 2007-10-26 22:25:12 thib_gc Exp $
+ * $Id: EmeraldUrlNormalizer.java,v 1.1.58.1 2012-06-20 00:03:07 nchondros Exp $
  */
 
 /*
@@ -40,7 +40,9 @@ public class EmeraldUrlNormalizer implements UrlNormalizer {
   public String normalizeUrl(String url,
                              ArchivalUnit au)
       throws PluginException {
-    return url.replaceFirst(";jsessionid=[0-9A-F]{32}", "");
+	  url = url.replaceFirst(";jsessionid=[0-9A-F]{32}", "");
+	  url = url.replaceFirst("&PHPSESSID=[0-9a-z]+", "");
+    return url;
   }
 
 }

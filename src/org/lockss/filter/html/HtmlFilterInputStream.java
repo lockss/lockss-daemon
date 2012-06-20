@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.11 2011-05-09 00:37:08 tlipkis Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.11.10.1 2012-06-20 00:03:08 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,8 +40,7 @@ import org.htmlparser.util.*;
 
 import org.lockss.config.*;
 import org.lockss.util.*;
-
-import org.apache.commons.io.input.*;
+import org.lockss.util.ReaderInputStream;
 
 /**
  * InputStream that parses HTML input, applies a user-supplied
@@ -97,6 +96,19 @@ public class HtmlFilterInputStream extends InputStream {
     Configuration.PREFIX + "filter.html.readerBufSize";
   public static final int DEFAULT_RDR_BUF_SIZE = 8 * 1024;
 
+  /** Determines the behavior when a charset change occurs because of a
+   * &lt;meta http-equiv ...&gt; tag, and the chars read under the new
+   * encoding don't match those from the old encoding. <br>If nonzero,
+   * limits the range within which the InputStreamSource will search to
+   * establish a match and determine the correct current position.  I.e.,
+   * the maximum allowable difference in number of bytes consumed reading
+   * to the same character position in the stream, using the two different
+   * character encodings. <br>If zero, any character mismatch causes an
+   * error, and the stream fails to parse. */
+  public static final String PARAM_ENCODING_MATCH_RANGE =
+    Configuration.PREFIX + "filter.html.encodingMatchRange";
+  public static final int DEFAULT_ENCODING_MATCH_RANGE = 100;
+
   /** If true, html output will be as close as possible to the input.  If
    * false, missing end tags will be inserted.  */
   public static final String PARAM_VERBATIM =
@@ -110,6 +122,11 @@ public class HtmlFilterInputStream extends InputStream {
   private String outCharset;
   private InputStream out = null;
   private HtmlTransform xform;
+  // config params
+  private int encodingMatchRange = DEFAULT_ENCODING_MATCH_RANGE;
+  private int markSize;
+  private int rdrBufSize;
+  private boolean verbatim;
 
   /**
    * Create an HtmlFilterInputStream that applies the given transform
@@ -128,12 +145,7 @@ public class HtmlFilterInputStream extends InputStream {
    */
   public HtmlFilterInputStream(InputStream in, String charset,
 			       HtmlTransform xform) {
-    if (in == null || xform == null) {
-      throw new IllegalArgumentException("Called with a null argument");
-    }
-    this.in = in;
-    this.charset = charset;
-    this.xform = xform;
+    this(in, charset, null, xform);
   }
 
   /**
@@ -147,18 +159,31 @@ public class HtmlFilterInputStream extends InputStream {
   public HtmlFilterInputStream(InputStream in,
 			       String inCharset, String outCharset,
 			       HtmlTransform xform) {
-    this(in, inCharset, xform);
+    if (in == null || xform == null) {
+      throw new IllegalArgumentException("Called with a null argument");
+    }
+    this.in = in;
+    this.charset = inCharset;
+    this.xform = xform;
     this.outCharset = outCharset;
+    setConfig();
+  }
+
+  // Called by constructor so setters (called before parse()) can override
+  // these settings
+  void setConfig() {
+    Configuration config = ConfigManager.getCurrentConfig();
+    markSize = config.getInt(PARAM_MARK_SIZE, DEFAULT_MARK_SIZE);
+    rdrBufSize = config.getInt(PARAM_RDR_BUF_SIZE, DEFAULT_RDR_BUF_SIZE);
+    setEncodingMatchRange(config.getInt(PARAM_ENCODING_MATCH_RANGE,
+					DEFAULT_ENCODING_MATCH_RANGE));
+    verbatim = config.getBoolean(PARAM_VERBATIM, DEFAULT_VERBATIM);
   }
 
   /** Parse the input, apply the transform, generate output string and
    * InputStream */
   void parse() throws IOException {
     try {
-      Configuration config = ConfigManager.getCurrentConfig();
-      int markSize = config.getInt(PARAM_MARK_SIZE, DEFAULT_MARK_SIZE);
-      int rdrBufSize = config.getInt(PARAM_RDR_BUF_SIZE, DEFAULT_RDR_BUF_SIZE);
-      boolean verbatim = config.getBoolean(PARAM_VERBATIM, DEFAULT_VERBATIM);
 
       Parser parser = makeParser(markSize, rdrBufSize);
       NodeList nl = parser.parse(null);
@@ -179,7 +204,7 @@ public class HtmlFilterInputStream extends InputStream {
 	out = new ReaderInputStream(new StringReader(h));
       }
     } catch (ParserException e) {
-      IOException ioe = new IOException();
+      IOException ioe = new IOException(e.toString());
       ioe.initCause(e);
       throw ioe;
     }
@@ -193,7 +218,11 @@ public class HtmlFilterInputStream extends InputStream {
     if (marksize > 0) {
       in.mark(marksize);
     }
-    Page pg = new Page(new InputStreamSource(in, charset, rdrBufSize));
+    InputStreamSource is = new InputStreamSource(in, charset, rdrBufSize);
+    if(encodingMatchRange > 0) {
+    	is.setEncodingMatchRange(encodingMatchRange);
+    }
+    Page pg = new Page(is);
     setupHtmlParser();
 
     Lexer lx = new Lexer(pg);
@@ -227,6 +256,15 @@ public class HtmlFilterInputStream extends InputStream {
     return out;
   }
 
+  public int getEncodingMatchRange(){
+    return encodingMatchRange;
+  }
+  /** Override the default max encoding match range.  See {@link
+   * #PARAM_ENCODING_MATCH_RANGE}
+   */
+  public void setEncodingMatchRange(int encodingMatchRange){
+    this.encodingMatchRange = encodingMatchRange;
+  }
   public int read() throws IOException {
     return getOut().read();
   }

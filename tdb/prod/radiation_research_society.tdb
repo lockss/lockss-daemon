@@ -18,28 +18,57 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0033-7587
   
-      au < superseded ; 2000 ; Radiation Research Volume 153 ; 153 >
-      au < superseded ; 2000 ; Radiation Research Volume 154 ; 154 >
-      au < superseded ; 2001 ; Radiation Research Volume 155 ; 155 >
-      au < superseded ; 2001 ; Radiation Research Volume 156 ; 156 >
-      au < superseded ; 2002 ; Radiation Research Volume 157 ; 157 >
-      au < superseded ; 2002 ; Radiation Research Volume 158 ; 158 >
-      au < superseded ; 2003 ; Radiation Research Volume 159 ; 159 >
-      au < superseded ; 2003 ; Radiation Research Volume 160 ; 160 >
-      au < superseded ; 2004 ; Radiation Research Volume 161 ; 161 >
-      au < superseded ; 2004 ; Radiation Research Volume 162 ; 162 >
-      au < superseded ; 2005 ; Radiation Research Volume 163 ; 163 >
-      au < superseded ; 2005 ; Radiation Research Volume 164 ; 164 >
-      au < superseded ; 2006 ; Radiation Research Volume 165 ; 165 >
-      au < superseded ; 2006 ; Radiation Research Volume 166 ; 166 >
-      au < superseded ; 2007 ; Radiation Research Volume 167 ; 167 >
-      au < superseded ; 2007 ; Radiation Research Volume 168 ; 168 >
+      au < down ; 2000 ; Radiation Research Volume 153 ; 153 >
+      au < down ; 2000 ; Radiation Research Volume 154 ; 154 >
+      au < down ; 2001 ; Radiation Research Volume 155 ; 155 >
+      au < down ; 2001 ; Radiation Research Volume 156 ; 156 >
+      au < down ; 2002 ; Radiation Research Volume 157 ; 157 >
+      au < down ; 2002 ; Radiation Research Volume 158 ; 158 >
+      au < down ; 2003 ; Radiation Research Volume 159 ; 159 >
+      au < down ; 2003 ; Radiation Research Volume 160 ; 160 >
+      au < down ; 2004 ; Radiation Research Volume 161 ; 161 >
+      au < down ; 2004 ; Radiation Research Volume 162 ; 162 >
+      au < down ; 2005 ; Radiation Research Volume 163 ; 163 >
+      au < down ; 2005 ; Radiation Research Volume 164 ; 164 >
+      au < down ; 2006 ; Radiation Research Volume 165 ; 165 >
+      au < down ; 2006 ; Radiation Research Volume 166 ; 166 >
+      au < down ; 2007 ; Radiation Research Volume 167 ; 167 >
+      au < down ; 2007 ; Radiation Research Volume 168 ; 168 >
     }
 
     {
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = rare
 
-comment[0] = Atypon AUs
-
+      attr[where] = AUtest
+  
+      au < doNotProcess ; 2000 ; Radiation Research Volume 153 ; 153 >
+      au < doNotProcess ; 2000 ; Radiation Research Volume 154 ; 154 >
+      au < doNotProcess ; 2001 ; Radiation Research Volume 155 ; 155 >
+      au < doNotProcess ; 2001 ; Radiation Research Volume 156 ; 156 >
+      au < doNotProcess ; 2002 ; Radiation Research Volume 157 ; 157 >
+      au < doNotProcess ; 2002 ; Radiation Research Volume 158 ; 158 >
+      au < doNotProcess ; 2003 ; Radiation Research Volume 159 ; 159 >
+      au < doNotProcess ; 2003 ; Radiation Research Volume 160 ; 160 >
+      au < doNotProcess ; 2004 ; Radiation Research Volume 161 ; 161 >
+      au < doNotProcess ; 2004 ; Radiation Research Volume 162 ; 162 >
+      au < doNotProcess ; 2005 ; Radiation Research Volume 163 ; 163 >
+      au < doNotProcess ; 2005 ; Radiation Research Volume 164 ; 164 >
+      au < doNotProcess ; 2006 ; Radiation Research Volume 165 ; 165 >
+      au < doNotProcess ; 2006 ; Radiation Research Volume 166 ; 166 >
+      au < doNotProcess ; 2007 ; Radiation Research Volume 167 ; 167 >
+      au < doNotProcess ; 2007 ; Radiation Research Volume 168 ; 168 >
+      au < ready ; 2008 ; Radiation Research Volume 169 ; 169 >
+      au < ready ; 2008 ; Radiation Research Volume 170 ; 170 >
+      au < ready ; 2009 ; Radiation Research Volume 171 ; 171 >
+      au < ready ; 2009 ; Radiation Research Volume 172 ; 172 >
+      au < ready ; 2010 ; Radiation Research Volume 173 ; 173 >
+      au < ready ; 2010 ; Radiation Research Volume 174 ; 174 >
+      au < ready ; 2011 ; Radiation Research Volume 175 ; 175 >
+      au < ready ; 2011 ; Radiation Research Volume 176 ; 176 >
+      au < ready ; 2012 ; Radiation Research Volume 177 ; 177 >
     }
 
   }

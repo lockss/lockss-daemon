@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = hemingway_review
+    attr[journal_id] = hem
 
     au < released ; 2003-2004 ; The Hemingway Review Volume 23 ; 23 >
     au < released ; 2004-2005 ; The Hemingway Review Volume 24 ; 24 >
@@ -25,6 +26,7 @@
     au < ready ; 2008-2009 ; The Hemingway Review Volume 28 ; 28 >
     au < ready ; 2009-2010 ; The Hemingway Review Volume 29 ; 29 >
     au < ready ; 2010-2011 ; The Hemingway Review Volume 30 ; 30 >
+    au < manifest ; 2011-2012 ; The Hemingway Review Volume 31 ; 31 >
 
   }
 

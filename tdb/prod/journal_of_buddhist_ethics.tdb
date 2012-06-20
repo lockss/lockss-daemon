@@ -12,30 +12,33 @@
       issnl = 1076-9005
     >  
 
-    rights = openaccess      
-    plugin = edu.cornell.library.jbe.JBEPlugin
-    implicit < status ; year ; name ; param[volume] ; param[year] >
+    rights = openaccess
 
     {
         
+      plugin = edu.cornell.library.jbe.JBEPlugin
+      implicit < status ; year ; name ; param[volume] ; param[year] >
       param[base_url] = http://jbe.gold.ac.uk/  
         
-      au < superseded ; 1994 ; Journal of Buddhist Ethics Volume 1 ; 1 ; 1994 >
-      au < superseded ; 1995 ; Journal of Buddhist Ethics Volume 2 ; 2 ; 1995 >
-      au < superseded ; 1996 ; Journal of Buddhist Ethics Volume 3 ; 3 ; 1996 >
-      au < superseded ; 1997 ; Journal of Buddhist Ethics Volume 4 ; 4 ; 1997 >
-      au < superseded ; 1998 ; Journal of Buddhist Ethics Volume 5 ; 5 ; 1998 >
-      au < superseded ; 1999 ; Journal of Buddhist Ethics Volume 6 ; 6 ; 1999 >
-      au < superseded ; 2000 ; Journal of Buddhist Ethics Volume 7 ; 7 ; 2000 >
-      au < superseded ; 2001 ; Journal of Buddhist Ethics Volume 8 ; 8 ; 2001 >
-      au < superseded ; 2002 ; Journal of Buddhist Ethics Volume 9 ; 9 ; 2002 >
-      au < superseded ; 2003 ; Journal of Buddhist Ethics Volume 10 ; 10 ; 2003 >
+      au < down ; 1994 ; Journal of Buddhist Ethics Volume 1 ; 1 ; 1994 >
+      au < down ; 1995 ; Journal of Buddhist Ethics Volume 2 ; 2 ; 1995 >
+      au < down ; 1996 ; Journal of Buddhist Ethics Volume 3 ; 3 ; 1996 >
+      au < down ; 1997 ; Journal of Buddhist Ethics Volume 4 ; 4 ; 1997 >
+      au < down ; 1998 ; Journal of Buddhist Ethics Volume 5 ; 5 ; 1998 >
+      au < down ; 1999 ; Journal of Buddhist Ethics Volume 6 ; 6 ; 1999 >
+      au < down ; 2000 ; Journal of Buddhist Ethics Volume 7 ; 7 ; 2000 >
+      au < down ; 2001 ; Journal of Buddhist Ethics Volume 8 ; 8 ; 2001 >
+      au < down ; 2002 ; Journal of Buddhist Ethics Volume 9 ; 9 ; 2002 >
+      au < down ; 2003 ; Journal of Buddhist Ethics Volume 10 ; 10 ; 2003 >
 
      }
        
      {
 
-       param[base_url] = http://www.buddhistethics.org/
+       plugin = needs.plugin
+       implicit < status ; year ; name ; param[volume] ; param[year] >
+       param[base_url] = http://blogs.dickinson.edu/buddhistethics/
+       comment[platform] = platform is a wordpress blog.
        
        au < exists ; 1994 ; Journal of Buddhist Ethics Volume 1 ; 1 ; 1994 >
        au < exists ; 1995 ; Journal of Buddhist Ethics Volume 2 ; 2 ; 1995 >
@@ -52,6 +55,10 @@
        au < exists ; 2006 ; Journal of Buddhist Ethics Volume 13 ; 13 ; 2006 >
        au < exists ; 2007 ; Journal of Buddhist Ethics Volume 14 ; 14 ; 2007 >
        au < exists ; 2008 ; Journal of Buddhist Ethics Volume 15 ; 15 ; 2008 >
+       au < exists ; 2009 ; Journal of Buddhist Ethics Volume 16 ; 16 ; 2009 >
+       au < exists ; 2010 ; Journal of Buddhist Ethics Volume 17 ; 17 ; 2010 >
+       au < exists ; 2011 ; Journal of Buddhist Ethics Volume 18 ; 18 ; 2011 >
+       au < exists ; 2012 ; Journal of Buddhist Ethics Volume 19 ; 19 ; 2012 >
       
     }
    

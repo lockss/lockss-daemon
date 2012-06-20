@@ -1,10 +1,10 @@
 /*
- * $Id: NoPauseCrawlManagerImpl.java,v 1.1 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: NoPauseCrawlManagerImpl.java,v 1.1.4.1 2012-06-20 00:02:51 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,35 +46,51 @@ import org.lockss.plugin.base.*;
  * For testing, uses a CrawlRateLimiter that records args and doesn't pause
  */
 public class NoPauseCrawlManagerImpl extends CrawlManagerImpl {
+  static Logger log = Logger.getLogger("NoPauseCrawlManagerImpl");
 
   private Map<ArchivalUnit,CrawlRateLimiter> limiterMap =
     new HashMap<ArchivalUnit,CrawlRateLimiter>();
 
+  @Override
   protected CrawlRateLimiter newCrawlRateLimiter(ArchivalUnit au) {
-    CrawlRateLimiter crl = new NoPauseCrawlRateLimiter(au);
+    CrawlRateLimiter crl = new NoPauseCrawlRateLimiter();
     limiterMap.put(au, crl);
     return crl;
   }
 
-  public CrawlRateLimiter getCrawlRateLimiter(ArchivalUnit au) {
+  @Override
+  public CrawlRateLimiter getCrawlRateLimiter(Crawler crawler) {
+    ArchivalUnit au = crawler.getAu();
     CrawlRateLimiter crl = limiterMap.get(au);
-    if (crl != null) {
-      return crl;
-    } else {
-      return super.getCrawlRateLimiter(au);
+    if (crl == null) {
+      crl = super.getCrawlRateLimiter(crawler);
     }
+    return crl;
   }
 
-  public static class NoPauseCrawlRateLimiter extends CrawlRateLimiter {
+  public List getPauseContentTypes(Crawler crawler) {
+    return ((NoPauseCrawlRateLimiter)getCrawlRateLimiter(crawler)).getPauseContentTypes();
+  }
+
+
+  public static class NoPauseCrawlRateLimiter extends BaseCrawlRateLimiter {
     List pauseContentTypes = new ArrayList();
 
-    public NoPauseCrawlRateLimiter(ArchivalUnit au) {
-      super(au);
+    public NoPauseCrawlRateLimiter() {
+      super();
     }
 
     @Override
     public void pauseBeforeFetch(String url, String previousContentType) {
+      log.debug3("NoPausing: " + url + ", prev: " + previousContentType);
+      pauseCounter++;
       pauseContentTypes.add(previousContentType);
+    }
+
+    @Override
+    public RateLimiter getRateLimiterFor(String url,
+					 String previousContentType) {
+      throw new UnsupportedOperationException("Shouldn't be called in NoPauseCrawlRateLimiter");
     }
 
     public List getPauseContentTypes() {

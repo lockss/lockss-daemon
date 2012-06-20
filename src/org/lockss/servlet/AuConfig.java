@@ -1,10 +1,10 @@
 /*
- * $Id: AuConfig.java,v 1.69 2011-03-20 21:52:13 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.69.10.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -580,15 +580,6 @@ public class AuConfig extends LockssServlet {
       displayAddAu();
       return;
     }
-    String repo = getParameter(REPO_TAG);
-    if (!StringUtil.isNullString(repo)) {
-      java.util.List repos = remoteApi.getRepositoryList();
-      if (!repos.contains(repo)) {
-	errMsg = "Nonexistent repository: " + repo;
-	displayAddAu();
-	return;
-      }
-    }
     createAuFromPlugin("Created", true);
   }
 
@@ -613,13 +604,17 @@ public class AuConfig extends LockssServlet {
     formConfig = getAuConfigFromForm(isNew);
     if (isNew) {
       String repo = getParameter(REPO_TAG);
-      if (!StringUtil.isNullString(repo)) {
-	if (!remoteApi.getRepositoryList().contains(repo)) {
+      if (StringUtil.isNullString(repo)) {
+	Map repoMap = remoteApi.getRepositoryMap();
+	repo = remoteApi.findLeastFullRepository(repoMap);
+	formConfig.put(PluginManager.AU_PARAM_REPOSITORY, repo);
+      } else {
+	java.util.List repos = remoteApi.getRepositoryList();
+	if (!repos.contains(repo)) {
 	  errMsg = "Nonexistent repository: " + repo;
-	  displayEditNew();
+	  displayAddAu();
 	  return;
 	}
-	formConfig.put(PluginManager.AU_PARAM_REPOSITORY, repo);
       }
     }
     try {
@@ -890,8 +885,7 @@ public class AuConfig extends LockssServlet {
       page.add(srvLink(myServletDescr(), "Back to Journal Configuration"));
       page.add("</center>");
     }
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    super.endPage(page);
   }
 
   /** Return AU name, encoded for html text */

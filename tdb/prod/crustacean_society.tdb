@@ -18,39 +18,75 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0278-0372
   
-      au < superseded ; 1981 ; Journal of Crustacean Biology Volume 1 ; 1 >
-      au < superseded ; 1982 ; Journal of Crustacean Biology Volume 2 ; 2 >
-      au < superseded ; 1983 ; Journal of Crustacean Biology Volume 3 ; 3 >
-      au < superseded ; 1984 ; Journal of Crustacean Biology Volume 4 ; 4 >
-      au < superseded ; 1985 ; Journal of Crustacean Biology Volume 5 ; 5 >
-      au < superseded ; 1986 ; Journal of Crustacean Biology Volume 6 ; 6 >
-      au < superseded ; 1987 ; Journal of Crustacean Biology Volume 7 ; 7 >
-      au < superseded ; 1988 ; Journal of Crustacean Biology Volume 8 ; 8 >
-      au < superseded ; 1989 ; Journal of Crustacean Biology Volume 9 ; 9 >
-      au < superseded ; 1990 ; Journal of Crustacean Biology Volume 10 ; 10 >
-      au < superseded ; 1991 ; Journal of Crustacean Biology Volume 11 ; 11 >
-      au < superseded ; 1992 ; Journal of Crustacean Biology Volume 12 ; 12 >
-      au < superseded ; 1993 ; Journal of Crustacean Biology Volume 13 ; 13 >
-      au < superseded ; 1994 ; Journal of Crustacean Biology Volume 14 ; 14 >
-      au < superseded ; 1995 ; Journal of Crustacean Biology Volume 15 ; 15 >
-      au < superseded ; 1996 ; Journal of Crustacean Biology Volume 16 ; 16 >
-      au < superseded ; 1997 ; Journal of Crustacean Biology Volume 17 ; 17 >
-      au < superseded ; 1998 ; Journal of Crustacean Biology Volume 18 ; 18 >
-      au < superseded ; 1999 ; Journal of Crustacean Biology Volume 19 ; 19 >
-      au < superseded ; 2000 ; Journal of Crustacean Biology Volume 20 ; 20 >
-      au < superseded ; 2001 ; Journal of Crustacean Biology Volume 21 ; 21 >
-      au < superseded ; 2002 ; Journal of Crustacean Biology Volume 22 ; 22 >
-      au < superseded ; 2003 ; Journal of Crustacean Biology Volume 23 ; 23 >
-      au < doNotProcess ; 2004 ; Journal of Crustacean Biology Volume 24 ; 24 >
-      au < superseded ; 2004 ; Journal of Crustacean Biology Volume 24 ; 024 >
-      au < superseded ; 2005 ; Journal of Crustacean Biology Volume 25 ; 25 >
-      au < superseded ; 2006 ; Journal of Crustacean Biology Volume 26 ; 26 >
-      au < superseded ; 2007 ; Journal of Crustacean Biology Volume 27 ; 27 >
+      au < down ; 1981 ; Journal of Crustacean Biology Volume 1 ; 1 >
+      au < down ; 1982 ; Journal of Crustacean Biology Volume 2 ; 2 >
+      au < down ; 1983 ; Journal of Crustacean Biology Volume 3 ; 3 >
+      au < down ; 1984 ; Journal of Crustacean Biology Volume 4 ; 4 >
+      au < down ; 1985 ; Journal of Crustacean Biology Volume 5 ; 5 >
+      au < down ; 1986 ; Journal of Crustacean Biology Volume 6 ; 6 >
+      au < down ; 1987 ; Journal of Crustacean Biology Volume 7 ; 7 >
+      au < down ; 1988 ; Journal of Crustacean Biology Volume 8 ; 8 >
+      au < down ; 1989 ; Journal of Crustacean Biology Volume 9 ; 9 >
+      au < down ; 1990 ; Journal of Crustacean Biology Volume 10 ; 10 >
+      au < down ; 1991 ; Journal of Crustacean Biology Volume 11 ; 11 >
+      au < down ; 1992 ; Journal of Crustacean Biology Volume 12 ; 12 >
+      au < down ; 1993 ; Journal of Crustacean Biology Volume 13 ; 13 >
+      au < down ; 1994 ; Journal of Crustacean Biology Volume 14 ; 14 >
+      au < down ; 1995 ; Journal of Crustacean Biology Volume 15 ; 15 >
+      au < down ; 1996 ; Journal of Crustacean Biology Volume 16 ; 16 >
+      au < down ; 1997 ; Journal of Crustacean Biology Volume 17 ; 17 >
+      au < down ; 1998 ; Journal of Crustacean Biology Volume 18 ; 18 >
+      au < down ; 1999 ; Journal of Crustacean Biology Volume 19 ; 19 >
+      au < down ; 2000 ; Journal of Crustacean Biology Volume 20 ; 20 >
+      au < down ; 2001 ; Journal of Crustacean Biology Volume 21 ; 21 >
+      au < down ; 2002 ; Journal of Crustacean Biology Volume 22 ; 22 >
+      au < down ; 2003 ; Journal of Crustacean Biology Volume 23 ; 23 >
+      au < down ; 2004 ; Journal of Crustacean Biology Volume 24 ; 024 >
+      au < down ; 2005 ; Journal of Crustacean Biology Volume 25 ; 25 >
+      au < down ; 2006 ; Journal of Crustacean Biology Volume 26 ; 26 >
+      au < down ; 2007 ; Journal of Crustacean Biology Volume 27 ; 27 >
     }
 
     {
 
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = crus
+      
+      au < doNotProcess ; 1981 ; Journal of Crustacean Biology Volume 1 ; 1 >
+      au < doNotProcess ; 1982 ; Journal of Crustacean Biology Volume 2 ; 2 >
+      au < doNotProcess ; 1983 ; Journal of Crustacean Biology Volume 3 ; 3 >
+      au < doNotProcess ; 1984 ; Journal of Crustacean Biology Volume 4 ; 4 >
+      au < doNotProcess ; 1985 ; Journal of Crustacean Biology Volume 5 ; 5 >
+      au < doNotProcess ; 1986 ; Journal of Crustacean Biology Volume 6 ; 6 >
+      au < doNotProcess ; 1987 ; Journal of Crustacean Biology Volume 7 ; 7 >
+      au < doNotProcess ; 1988 ; Journal of Crustacean Biology Volume 8 ; 8 >
+      au < doNotProcess ; 1989 ; Journal of Crustacean Biology Volume 9 ; 9 >
+      au < doNotProcess ; 1990 ; Journal of Crustacean Biology Volume 10 ; 10 >
+      au < doNotProcess ; 1991 ; Journal of Crustacean Biology Volume 11 ; 11 >
+      au < doNotProcess ; 1992 ; Journal of Crustacean Biology Volume 12 ; 12 >
+      au < doNotProcess ; 1993 ; Journal of Crustacean Biology Volume 13 ; 13 >
+      au < doNotProcess ; 1994 ; Journal of Crustacean Biology Volume 14 ; 14 >
+      au < doNotProcess ; 1995 ; Journal of Crustacean Biology Volume 15 ; 15 >
+      au < doNotProcess ; 1996 ; Journal of Crustacean Biology Volume 16 ; 16 >
+      au < doNotProcess ; 1997 ; Journal of Crustacean Biology Volume 17 ; 17 >
+      au < doNotProcess ; 1998 ; Journal of Crustacean Biology Volume 18 ; 18 >
+      au < doNotProcess ; 1999 ; Journal of Crustacean Biology Volume 19 ; 19 >
+      au < doNotProcess ; 2000 ; Journal of Crustacean Biology Volume 20 ; 20 >
+      au < doNotProcess ; 2001 ; Journal of Crustacean Biology Volume 21 ; 21 >
+      au < doNotProcess ; 2002 ; Journal of Crustacean Biology Volume 22 ; 22 >
+      au < doNotProcess ; 2003 ; Journal of Crustacean Biology Volume 23 ; 23 >
+      au < doNotProcess ; 2004 ; Journal of Crustacean Biology Volume 24 ; 24 >
+      au < doNotProcess ; 2005 ; Journal of Crustacean Biology Volume 25 ; 25 >
+      au < doNotProcess ; 2006 ; Journal of Crustacean Biology Volume 26 ; 26 >
+      au < doNotProcess ; 2007 ; Journal of Crustacean Biology Volume 27 ; 27 >
+      au < ready ; 2008 ; Journal of Crustacean Biology Volume 28 ; 28 >
+      au < ready ; 2009 ; Journal of Crustacean Biology Volume 29 ; 29 >
+      au < ready ; 2010 ; Journal of Crustacean Biology Volume 30 ; 30 >
+      au < ready ; 2011 ; Journal of Crustacean Biology Volume 31 ; 31 >
+      au < manifest ; 2012 ; Journal of Crustacean Biology Volume 32 ; 32 >
+
 
     }
 

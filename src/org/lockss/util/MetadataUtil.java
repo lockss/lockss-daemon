@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.13 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: MetadataUtil.java,v 1.13.2.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -60,6 +60,10 @@ public class MetadataUtil {
 
   private static Pattern ISSN_PAT =
     Pattern.compile("\\d{4}-\\d{3}[\\d{1}|x{1}|X{1}]");
+  
+  private static Pattern AUTHOR_PAT =
+   // pattern to check whether it has atleast one letter.   
+    Pattern.compile(".*\\p{L}.*");
 
   /**
    * Check that ISSN is valid. If it is, return the ISSN, otherwise return
@@ -68,8 +72,8 @@ public class MetadataUtil {
    * @param issn the issn string
    * @return the issn if it is valid, <tt>null</tt> otherwise
    */
-  public static String validateISSN(String issn) {
-    return validateISSN(issn, false);
+  public static String validateIssn(String issn) {
+    return validateIssn(issn, false);
   }
 
   /**
@@ -80,8 +84,8 @@ public class MetadataUtil {
    * @param strict if true, also verify checksum, otherwise just check form
    * @return the issn if it is valid, <tt>null</tt> otherwise
    */
-  public static String validateISSN(String issn, boolean strict) {
-    return isISSN(issn, strict) ? issn : null;
+  public static String validateIssn(String issn, boolean strict) {
+    return isIssn(issn, strict) ? issn : null;
   }
 
   /**
@@ -93,8 +97,8 @@ public class MetadataUtil {
    * @param strict if true, also verify checksum, otherwise just check form
    * @return true if issn is valid, false otherwise
    */
-  public static boolean isISSN(String issn) {
-    return isISSN(issn, false);
+  public static boolean isIssn(String issn) {
+    return isIssn(issn, false);
   }
   
   /**
@@ -110,7 +114,7 @@ public class MetadataUtil {
    * @param strict if true, also verify checksum, otherwise just check form
    * @return true if issn is valid, false otherwise
    */
-  public static boolean isISSN(String issn, boolean strict) {
+  public static boolean isIssn(String issn, boolean strict) {
 
     if (issn == null) {
       return false;
@@ -121,7 +125,7 @@ public class MetadataUtil {
       return false;
     }
     
-    // matches form of an ISSN if not doing strict checking
+    // matches form of an ISSN if not doing stricvalidateIssnt checking
     if (!strict) {
       return true;
     }
@@ -131,7 +135,7 @@ public class MetadataUtil {
 
     char issnChars[] = issnStr.toCharArray();
     int checkSum = 0;
-
+    
     // calculate what the check digit should be
     for (int i = 0; i < issnChars.length - 1; i++) {
       checkSum += Integer.parseInt(String.valueOf(issnChars[i])) * (issnChars.length - i);
@@ -162,70 +166,222 @@ public class MetadataUtil {
   }
   
   /**
+   * Return formatted form of ISSN with hyphens. This method
+   * does not check for the vaildity of the input ISSN.
+   * 
+   * @param isbn an ISBN
+   * @return a formatted ISBN
+   */
+  public static String formatIssn(String issn) {
+    if (issn != null) {
+      String fmtIssn = issn.replaceAll("-", "");
+      if (fmtIssn.length() == 8) {
+        return  fmtIssn.substring(0,4) + "-" + fmtIssn.substring(4);
+      }
+    }
+    
+    return issn;
+  }  
+
+  /**
    * Check that the ISBN is a valid. The method validates both ISBN-10 and ISBN-13,
    * with or without punctuation. Checksum is not verified.
    * @param isbn the ISBN string
    * @return true if ISBN is valid, false otherwise
    */
-  public static boolean isISBN(String isbn) {
-	  return isISBN(isbn, false);
+  public static boolean isIsbn(String isbn) {
+	  return isIsbn(isbn, false);
   }
 
   /**
-   * Check that the ISBN is a valid. The method validates both ISBN-10 and ISBN-13,
-   * with or without punctuation. Uses techniques described in ISBN Wikipedia article.
+   * Returns the ISBN-13 checksum between 1 and 10 of the first 12
+   * characters of the iput, or -1 if input is not a valid unpunctuated 
+   * ISBN-13 string.
+   * 
+   * @param isbn13 unpunctuated ISBN-13 string
+   * @return ISBN-13 checksum digit between 0 and 9, or -1 if input not valid
+   */
+  static private int isbn13CheckSum(String isbn13) {
+    // see http://en.wikipedia.org/wiki/Isbn
+    int a = 0, b = 1;
+    for (int i = 0; i < 12; i++, b = 4-b) {
+      int digit = "0123456789".indexOf(isbn13.charAt(i));
+      if (digit < 0) {
+        return -1;
+      }
+      a += digit * b;
+    }
+    
+    // checksum + remainder == 10
+    return 10 - a % 10;
+
+  }
+  
+  
+  /**
+   * Returns the ISBN-10 checksum between 0 and 10 of the first 9
+   * characters of the input, or -1 if input is not a valid unpunctuated 
+   * ISBN-10 string.
+   * 
+   * @param isbn10 unpunctuated ISBN-10 string
+   * @return ISBN-10 checksum digit between 0 and 11, or -1 if input not valid
+   */
+  static private int isbn10Checksum(String isbn10) {
+    // see http://en.wikipedia.org/wiki/Isbn
+    int a = 0, i = 0;
+    while (i < 9) {
+      int digit = "0123456789".indexOf(isbn10.charAt(i));
+      if (digit < 0) {
+        return -1;
+      }
+      a += ++i * digit;
+    }
+    
+    // checksum + remainder == 11
+    return a % 11;
+  }
+
+  /**
+   * Check that the ISBN is a valid.The method validates both ISBN-10 and 
+   * ISBN-13, with or without punctuation. Uses techniques described in the 
+   * ISBN Wikipedia article
    * <p>
-   * <strong>Note:</strong> Due to errors at a publishing house that go undetected,
-   * books have been issued with invalid ISBNs. (e.g. 0-85883-554-4). If the strict
-   * flag is true, verifies checksum, otherwise just verifies form.
+   * <strong>Note:</strong> Due to errors at a publishing house that go 
+   * undetected, books have been issued with invalid ISBNs (e.g. 0-85883-554-4).
+   * If strict flag is true, verifies checksum, otherwise just verifies form.
+   * 
    * @param isbn the ISBN string
    * @param strict if true, also verify checksum, otherwise just check form
    * @return true if ISBN is valid, false otherwise
    */
-  public static boolean isISBN(String isbn, boolean strict) {
+  public static boolean isIsbn(String isbn, boolean strict) {
     if (isbn == null) {
       return false;
     }
     
     String checkISBN = isbn.replaceAll("-", "");
     if (checkISBN.length() == 10) {
-      int a = 0, b=0;
-      for (int i = 0; i < 10; i++) {
-        // ISBN-10 uses modulus 11 arithmetic for check digit, 
-        // with 'X' representing 10
-        int digit = ((i < 9) ? "0123456789" : "0123456789X").indexOf(checkISBN.charAt(i));
-        if (digit < 0) {
-          return false;
-        }
-        a += digit;
-        b += a;
+      int checksum = isbn10Checksum(checkISBN); // 0..10
+      if (checksum >= 0) {
+        int cksum = "0123456789X".indexOf(checkISBN.charAt(9));
+        return (cksum >= 0) && (strict ? (checksum == cksum) : true); 
       }
-      return strict ? (b % 11 == 0) : true;
-
     } else if (checkISBN.length() == 13) {
-      int a = 0, b = 1;
-      for (int i = 0; i < 13; i++, b = 4-b) {
-        // ISBN-13 uses modulus 10 arithmetic for check digit
-        int digit = "0123456789".indexOf(checkISBN.charAt(i));
-        if (digit < 0) {
-          return false;
-        }
-        a += digit * b;
+      int checksum = isbn13CheckSum(checkISBN); // 1..10
+      if (checksum >= 0) {
+        int cksum = "1234567890".indexOf(checkISBN.charAt(12)) + 1; // 1..10
+        return (cksum > 0) && (strict ? (checksum == cksum) : true); 
       }
-      return strict ? (a % 10) == 0 : true;
     }
     
     return false;
   }
 
+  /**
+   * Returns the ISBN-13 version of the input ISBN-10 or ISBN-13
+   * string. The returned ISBN-13 string has no punctuation and a
+   * valid check digit. Assumes ISBN-10 is a book and adds "978" 
+   * EAN to create the ISBN-13 string.
+   *  
+   * @param isbn punctuated or unpunctuated ISBN-10 or ISBN13 string
+   * @return unpunctuated ISBN-13 string with proper checksum, or 
+   *   <code>null</code> if input string (ignoring checksum) is not a 
+   *   possible ISBN-10 or ISBN-13 string
+   */
+  public static String toIsbn13(String isbn) {
+    String isbn13 = isbn.replaceAll("-", "");
+    if (isIsbn(isbn13, false)) {
+      if (isbn13.length() == 10) {
+        // add GS1 book EAN
+        isbn13 = "978" + isbn13;
+      }
+  
+      if (isbn13.length() == 13) {
+        int checksum = isbn13CheckSum(isbn13); // 1..10
+        return (checksum < 0) ? null 
+                 : isbn13.substring(0,12) + "1234567890".charAt(checksum-1);
+      }
+    }
+    return null;
+  }
+  
+  /**
+   * Returns the ISBN-10 version of the input ISBN-10 or ISBN-13 
+   * string. The returned ISBN-10 string has no punctuation and a
+   * valid check digit. Recognizes both "978" and "979" ISSN-13 EANs
+   *  
+   * @param isbn punctuated or unpunctuated ISBN-10 or ISBN13 string
+   * @return unpunctuated ISBN-13 string with proper checksum, or 
+   *   <code>null</code> if input string (ignoring checksum) is not a 
+   *   possible ISBN-10 or ISBN-13 string
+   */
+  public static String toIsbn10(String isbn) {
+    String isbn10 = isbn.replaceAll("-", "");
+    if (isIsbn(isbn10, false)) {
+      if (isbn10.length() == 13) {
+        if (   isbn10.startsWith("978")
+            || isbn10.startsWith("979")) {
+          // remove GS1 book prefix;
+          isbn10 = isbn10.substring(3);
+        }
+      }
+  
+      if (isbn10.length() == 10) {
+        int checksum = isbn10Checksum(isbn10);
+        return (checksum < 0) ? null 
+               : isbn10.substring(0,9) + "0123456789X".charAt(checksum);
+      }
+    }
+    return null;
+  }
+  
+  /**
+   * Return formatted form if ISBN with hyphens. This method
+   * does not check for the vaildity of the input ISBN.
+   * 
+   * @param isbn an ISBN
+   * @return a formatted ISBN
+   */
+  public static String formatIsbn(String isbn) {
+    if (isbn != null) {
+      String fmtIsbn = isbn.replaceAll("-", "");
+      if (fmtIsbn.length() == 10) {
+        return    fmtIsbn.substring(0,1) + "-"
+                + fmtIsbn.substring(1,4) + "-"
+                + fmtIsbn.substring(4,9) + "-"
+                + fmtIsbn.substring(9);
+        
+      } else if (fmtIsbn.length() == 13) {
+        return   fmtIsbn.substring(0,3) + "-" 
+               + fmtIsbn.substring(3,4) + "-"
+               + fmtIsbn.substring(4,7) + "-"
+               + fmtIsbn.substring(7,12) + "-"
+               + fmtIsbn.substring(12);
+      }
+    }
+
+    return isbn;
+  }
+  
   private static Pattern DOI_PAT = Pattern.compile("10\\.\\d{4}/.*");
 
   /**
    * Check that DOI number is a valid DOI string. 
    * @param doi the DOI string
    * @return true if DOI is a valid string, false otherwise
+   * @deprecated renamed to {@link #isDoi(String doi)}
    */
-  public static boolean isDOI(String doi) {    
+  @Deprecated
+  public static boolean isDOI(String doi) {
+    return isDoi(doi);
+  }
+  
+  /**
+   * Check that DOI number is a valid DOI string. 
+   * @param doi the DOI string
+   * @return true if DOI is a valid string, false otherwise
+   */
+  public static boolean isDoi(String doi) {    
 
     if (doi == null) {
       return false;
@@ -660,7 +816,16 @@ public class MetadataUtil {
     log.debug2("proxyResolver returns " + ret);
     return ret;
   }
-
-
-
+  /**
+   * Check that the author field is valid or at least has a letter.
+   * @param keyAuthor the author string
+   * @return true if author has a letter at least, false otherwise
+   */
+  public static boolean isAuthor(String author) {
+    if (author == null) {
+      return false;
+    }
+    Matcher m = AUTHOR_PAT.matcher(author);
+    return (m.matches());
+  }
 }

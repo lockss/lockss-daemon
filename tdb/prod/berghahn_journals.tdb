@@ -3,7 +3,15 @@
   publisher <
     name = Berghahn Journals
   >
-  comment[urgent] = library requested French Pol, German Pol, and Regions and Co.
+
+  plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+  param[base_url] = http://www.ingentaconnect.com/
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
+  param[publisher_id] = berghahn
+  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.BerghahnPdfTransform
+  
+  implicit < status ; year ; name ; param[volume_name] >
 
   {
   
@@ -13,6 +21,15 @@
       eissn = 1755-2931 ;
       issnl = 1755-2923
     >    
+
+    param[journal_id] = ajec
+    param[journal_issn] = 1755-2923
+    
+    au < manifest ; 2008 ; Anthropological Journal of European Cultures Volume 17 ; 17 >
+    au < manifest ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 >
+    au < manifest ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 >
+    au < manifest ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 >
+    au < expected ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 >
     
   }
 
@@ -23,7 +40,19 @@
       issn = 0967-201X ;
       eissn = 1752-2285 ;
       issnl = 0967-201X
-    >    
+    >   
+    
+    param[journal_id] = antiac
+    param[journal_issn] = 0967-201X
+     
+    au < manifest ; 2005 ; Anthropology in Action Volume 12 ; 12 >
+    au < manifest ; 2006 ; Anthropology in Action Volume 13 ; 13 >
+    au < manifest ; 2007 ; Anthropology in Action Volume 14 ; 14 >
+    au < manifest ; 2008 ; Anthropology in Action Volume 15 ; 15 >
+    au < manifest ; 2009 ; Anthropology in Action Volume 16 ; 16 >
+    au < manifest ; 2010 ; Anthropology in Action Volume 17 ; 17 >
+    au < manifest ; 2011 ; Anthropology in Action Volume 18 ; 18 >
+    au < manifest ; 2012 ; Anthropology in Action Volume 19 ; 19 >
     
   }
 
@@ -36,6 +65,17 @@
       issnl = 1746-0719
     >    
     
+    param[journal_id] = antmid
+    param[journal_issn] = 1746-0719
+    
+    au < manifest ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 >
+    au < manifest ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 >
+    au < manifest ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 >
+    au < manifest ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 >
+    au < manifest ; 2010 ; Anthropology of the Middle East Volume 5 ; 5 >
+    au < manifest ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 >
+    au < expected ; 2012 ; Anthropology of the Middle East Volume 7 ; 7 >
+    
   }
 
   {
@@ -45,7 +85,14 @@
       issn = 2042-6143 ;
       eissn = 2042-6151 ;
       issnl = 2042-6143
-    >    
+    > 
+    
+    param[journal_id] = apw
+    param[journal_issn] = 2042-6143
+           
+    au < manifest ; 2010 ; Asia Pacific World Volume 1 ; 1 >
+    au < manifest ; 2011 ; Asia Pacific World Volume 2 ; 2 >
+    au < expected ; 2012 ; Asia Pacific World Volume 3 ; 3 >
     
   }
 
@@ -56,7 +103,16 @@
       issn = 1933-2882 ;
       eissn = 1933-2890 ;
       issnl = 1933-2882
-    >    
+    > 
+    param[journal_id] = aspa
+    param[journal_issn] = 1933-2882   
+       
+    au < manifest ; 2007 ; Aspasia Volume 1 ; 1 >
+    au < manifest ; 2008 ; Aspasia Volume 2 ; 2 >
+    au < manifest ; 2009 ; Aspasia Volume 3 ; 3 >
+    au < manifest ; 2010 ; Aspasia Volume 4 ; 4 >
+    au < manifest ; 2011 ; Aspasia Volume 5 ; 5 >
+    au < manifest ; 2012 ; Aspasia Volume 6 ; 6 >
     
   }
 
@@ -67,7 +123,27 @@
       issn = 0011-1570 ;
       eissn = 1752-2293 ;
       issnl = 0011-1570
-    >    
+    >  
+         
+    param[journal_id] = csurv
+    param[journal_issn] = 0011-1570
+          
+    au < manifest ; 1997 ; Critical Survey Volume 9 ; 9 >
+    au < manifest ; 1998 ; Critical Survey Volume 10 ; 10 >
+    au < manifest ; 1999 ; Critical Survey Volume 11 ; 11 >
+    au < manifest ; 2000 ; Critical Survey Volume 12 ; 12 >
+    au < manifest ; 2001 ; Critical Survey Volume 13 ; 13 >
+    au < manifest ; 2002 ; Critical Survey Volume 14 ; 14 >
+    au < manifest ; 2003 ; Critical Survey Volume 15 ; 15 >
+    au < manifest ; 2004 ; Critical Survey Volume 16 ; 16 >
+    au < manifest ; 2005 ; Critical Survey Volume 17 ; 17 >
+    au < manifest ; 2006 ; Critical Survey Volume 18 ; 18 >
+    au < manifest ; 2007 ; Critical Survey Volume 19 ; 19 >
+    au < manifest ; 2008 ; Critical Survey Volume 20 ; 20 >
+    au < manifest ; 2009 ; Critical Survey Volume 21 ; 21 >
+    au < manifest ; 2010 ; Critical Survey Volume 22 ; 22 >
+    au < manifest ; 2011 ; Critical Survey Volume 23 ; 23 >
+    au < expected ; 2012 ; Critical Survey Volume 24 ; 24 >
     
   }
 
@@ -78,7 +154,22 @@
       issn = 1362-024X ;
       eissn = 1752-2307 ;
       issnl = 1362-024X
-    >    
+ > 
+ 
+    param[journal_id] = durk
+    param[journal_issn] = 1362-024X
+    
+      
+    au < manifest ; 2003 ; Durkheimian Studies Volume 9 ; 9 >
+    au < manifest ; 2004 ; Durkheimian Studies Volume 10 ; 10 >
+    au < manifest ; 2005 ; Durkheimian Studies Volume 11 ; 11 >
+    au < manifest ; 2006 ; Durkheimian Studies Volume 12 ; 12 >
+    au < manifest ; 2007 ; Durkheimian Studies Volume 13 ; 13 >
+    au < manifest ; 2008 ; Durkheimian Studies Volume 14 ; 14 >
+    au < manifest ; 2009 ; Durkheimian Studies Volume 15 ; 15 >
+    au < manifest ; 2010 ; Durkheimian Studies Volume 16 ; 16 >
+    au < manifest ; 2011 ; Durkheimian Studies Volume 17 ; 17 >
+    au < expected ; 2012 ; Durkheimian Studies Volume 18 ; 18 >
     
   }
 
@@ -88,7 +179,14 @@
       name = Environment and Society ;
       issn = 2150-6779 ;
       eissn = 2150-6787
-    >    
+    >
+    
+    param[journal_id] = ares
+    param[journal_issn] = 2150-6779
+     
+    au < manifest ; 2010 ; Environment and Society Volume 1 ; 1 >
+    au < manifest ; 2011 ; Environment and Society Volume 2 ; 2 >
+    au < expected ; 2012 ; Environment and Society Volume 3 ; 3 >
     
   }
 
@@ -99,8 +197,25 @@
       issn = 0014-3006 ;
       eissn = 1752-2323 ;
       issnl = 0014-3006
-    >    
+    >
     
+    param[journal_id] = ejud
+    param[journal_issn] = 0014-3006
+   
+    au < manifest ; 1999 ; European Judaism Volume 32 ; 32 >
+    au < manifest ; 2001 ; European Judaism Volume 34 ; 34 >
+    au < manifest ; 2002 ; European Judaism Volume 35 ; 35 >
+    au < manifest ; 2003 ; European Judaism Volume 36 ; 36 >
+    au < manifest ; 2004 ; European Judaism Volume 37 ; 37 >
+    au < manifest ; 2005 ; European Judaism Volume 38 ; 38 >
+    au < manifest ; 2006 ; European Judaism Volume 39 ; 39 >
+    au < manifest ; 2007 ; European Judaism Volume 40 ; 40 >
+    au < manifest ; 2008 ; European Judaism Volume 41 ; 41 >
+    au < manifest ; 2009 ; European Judaism Volume 42 ; 42 >
+    au < manifest ; 2010 ; European Judaism Volume 43 ; 43 >
+    au < manifest ; 2011 ; European Judaism Volume 44 ; 44 >
+    au < manifest ; 2012 ; European Judaism Volume 45 ; 45 >
+  
   }
 
   {
@@ -110,29 +225,79 @@
       issn = 0920-1297 ;
       eissn = 1558-5263 ;
       issnl = 0920-1297
-    >    
+    >
+    
+    param[journal_id] = focaal
+    param[journal_issn] = 0920-1297
+   
+    au < manifest ; 2004 ; Focaal Volume 2004 ; 2004 >
+    au < manifest ; 2005 ; Focaal Volume 2005 ; 2005 >
+    au < manifest ; 2006 ; Focaal Volume 2006 ; 2006 >
+    au < manifest ; 2007 ; Focaal Volume 2007 ; 2007 >
+    au < manifest ; 2008 ; Focaal Volume 2008 ; 2008 >
+    au < manifest ; 2009 ; Focaal Volume 2009 ; 2009 >
+    au < manifest ; 2010 ; Focaal Volume 2010 ; 2010 >
+    au < manifest ; 2011 ; Focaal Volume 2011 ; 2011 >
+    au < manifest ; 2012 ; Focaal Volume 2012 ; 2012 >
     
   }
 
   {
   
     title <
-      name = "French Politics, Culture, & Society" ;
+      name = French Politics, Culture & Society ;
       issn = 1537-6370 ;
       eissn = 1558-5271 ;
       issnl = 1537-6370
     >    
+
+    param[journal_id] = fpcs
+    param[journal_issn] = 1537-6370
+
+    au < ready ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 >
+    au < ready ; 2000 ; French Politics, Culture & Society Volume 18 ; 18 >
+    au < ready ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 >
+    au < ready ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 >
+    au < ready ; 2003 ; French Politics, Culture & Society Volume 21 ; 21 >
+    au < ready ; 2004 ; French Politics, Culture & Society Volume 22 ; 22 >
+    au < ready ; 2005 ; French Politics, Culture & Society Volume 23 ; 23 >
+    au < ready ; 2006 ; French Politics, Culture & Society Volume 24 ; 24 >
+    au < ready ; 2007 ; French Politics, Culture & Society Volume 25 ; 25 >
+    au < ready ; 2008 ; French Politics, Culture & Society Volume 26 ; 26 >
+    au < ready ; 2009 ; French Politics, Culture & Society Volume 27 ; 27 >
+    au < ready ; 2010 ; French Politics, Culture & Society Volume 28 ; 28 >
+    au < ready ; 2011 ; French Politics, Culture & Society Volume 29 ; 29 >
+    au < manifest ; 2012 ; French Politics, Culture & Society Volume 30 ; 30 >
     
   }
 
   {
   
     title <
-      name = German Politics & Society ;
+      name = German Politics and Society ;
       issn = 1045-0300 ;
       eissn = 1558-5441 ;
       issnl = 1045-0300
     >    
+
+    param[journal_id] = gerpol
+    param[journal_issn] = 1045-0300
+
+    au < ready ; 1998 ; German Politics and Society Volume 16 ; 16 >
+    au < ready ; 1999 ; German Politics and Society Volume 17 ; 17 >
+    au < ready ; 2000 ; German Politics and Society Volume 18 ; 18 >
+    au < ready ; 2001 ; German Politics and Society Volume 19 ; 19 >
+    au < ready ; 2002 ; German Politics and Society Volume 20 ; 20 >
+    au < ready ; 2003 ; German Politics and Society Volume 21 ; 21 >
+    au < ready ; 2004 ; German Politics and Society Volume 22 ; 22 >
+    au < ready ; 2005 ; German Politics and Society Volume 23 ; 23 >
+    au < ready ; 2006 ; German Politics and Society Volume 24 ; 24 >
+    au < ready ; 2007 ; German Politics and Society Volume 25 ; 25 >
+    au < ready ; 2008 ; German Politics and Society Volume 26 ; 26 >
+    au < ready ; 2009 ; German Politics and Society Volume 27 ; 27 >
+    au < ready ; 2010 ; German Politics and Society Volume 28 ; 28 >
+    au < ready ; 2011 ; German Politics and Society Volume 29 ; 29 >
+    au < manifest ; 2012 ; German Politics and Society Volume 30 ; 30 >
     
   }
 
@@ -143,7 +308,16 @@
       issn = 1938-8209 ;
       eissn = 1938-8322 ;
       issnl = 1938-8209
-    >    
+    >
+    
+    param[journal_id] = gs
+    param[journal_issn] = 1938-8209
+
+    au < manifest ; 2008 ; Girlhood Studies Volume 1 ; 1 >
+    au < manifest ; 2009 ; Girlhood Studies Volume 2 ; 2 >
+    au < manifest ; 2010 ; Girlhood Studies Volume 3 ; 3 >
+    au < manifest ; 2011 ; Girlhood Studies Volume 4 ; 4 >
+    au < expected ; 2012 ; Girlhood Studies Volume 5 ; 5 >
     
   }
 
@@ -154,29 +328,52 @@
       issn = 0315-7997 ;
       eissn = 1939-2419 ;
       issnl = 0315-7997
-    >    
+    >
+    
+    param[journal_id] = hisref
+    param[journal_issn] = 0315-7997
+      
+    au < manifest ; 2008 ; Historical Reflections/Reflexions Historiques Volume 34 ; 34 >
+    au < manifest ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 >
+    au < manifest ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 >
+    au < manifest ; 2011 ; Historical Reflections/Reflexions Historiques Volume 37 ; 37 >
+    au < manifest ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 >
     
   }
 
   {
   
     title <
-      name = Isreal Studies Forum ;
-      issn = 1557-2455 ;
+      name = Israel Studies Review ;
+      issn = 2159-0389  ;
       eissn = 1558-545X ;
       issnl = 1557-2455
-    >    
+    >
+    
+    param[journal_id] = isr
+    param[journal_issn] = 2159-0389  
+    
+    au < manifest ; 2011 ; Israel Studies Review Volume 26 ; 26 >
+    au < manifest ; 2012 ; Israel Studies Review Volume 27 ; 27 >
     
   }
 
   {
   
     title <
-      name = "Journal of Educational Memory, Media, and Society" ;
+      name = Journal of Educational Memory, Media, and Society ;
       issn = 2041-6938 ;
       eissn = 2041-6946 ;
       issnl = 2041-6938
-    >    
+    >
+    
+    param[journal_id] = emms
+    param[journal_issn] = 2041-6938
+       
+    au < manifest ; 2009 ; Journal of Educational Memory, Media, and Society Volume 1 ; 1 >
+    au < manifest ; 2010 ; Journal of Educational Memory, Media, and Society Volume 2 ; 2 >
+    au < manifest ; 2011 ; Journal of Educational Memory, Media, and Society Volume 3 ; 3 >
+    au < expected ; 2012 ; Journal of Educational Memory, Media, and Society Volume 4 ; 4 >
     
   }
 
@@ -187,7 +384,24 @@
       issn = 1473-3536 ;
       eissn = 1752-2331 ;
       issnl = 1473-3536
-    >    
+      
+    > 
+    
+    param[journal_id] = romance
+    param[journal_issn] = 1473-3536
+       
+    au < manifest ; 2001 ; Journal of Romance Studies Volume 1 ; 1 >
+    au < manifest ; 2002 ; Journal of Romance Studies Volume 2 ; 2 >
+    au < manifest ; 2003 ; Journal of Romance Studies Volume 3 ; 3 >
+    au < manifest ; 2004 ; Journal of Romance Studies Volume 4 ; 4 >
+    au < manifest ; 2005 ; Journal of Romance Studies Volume 5 ; 5 >
+    au < manifest ; 2006 ; Journal of Romance Studies Volume 6 ; 6 >
+    au < manifest ; 2007 ; Journal of Romance Studies Volume 7 ; 7 >
+    au < manifest ; 2008 ; Journal of Romance Studies Volume 8 ; 8 >
+    au < manifest ; 2009 ; Journal of Romance Studies Volume 9 ; 91 >
+    au < manifest ; 2010 ; Journal of Romance Studies Volume 10 ; 10 >
+    au < manifest ; 2011 ; Journal of Romance Studies Volume 11 ; 11 >
+    au < manifest ; 2012 ; Journal of Romance Studies Volume 12 ; 12 >
     
   }
 
@@ -198,7 +412,24 @@
       issn = 1465-2609 ;
       eissn = 1752-2358 ;
       issnl = 1465-2609
-    >    
+    > 
+    
+    param[journal_id] = journ
+    param[journal_issn] = 1465-2609
+       
+    au < manifest ; 2000 ; Journeys Volume 1 ; 1 >
+    au < manifest ; 2001 ; Journeys Volume 2 ; 2 >
+    au < manifest ; 2002 ; Journeys Volume 3 ; 3 >
+    au < manifest ; 2003 ; Journeys Volume 4 ; 4 >
+    au < manifest ; 2004 ; Journeys Volume 5 ; 5 >
+    au < manifest ; 2005 ; Journeys Volume 6 ; 6 >
+    au < manifest ; 2006 ; Journeys Volume 7 ; 7 >
+    au < manifest ; 2007 ; Journeys Volume 8 ; 8 >
+    au < manifest ; 2008 ; Journeys Volume 9 ; 9 >
+    au < manifest ; 2009 ; Journeys Volume 10 ; 10 >
+    au < manifest ; 2010 ; Journeys Volume 11 ; 11 >
+    au < manifest ; 2011 ; Journeys Volume 12 ; 12 >
+    au < expected ; 2012 ; Journeys Volume 13 ; 13 >
     
   }
 
@@ -209,7 +440,15 @@
       issn = 1755-2273 ;
       eissn = 1755-2281 ;
       issnl = 1755-2273
-    >    
+    > 
+    param[journal_id] = latiss
+    param[journal_issn] = 1755-2273
+       
+    au < manifest ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 >
+    au < manifest ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 >
+    au < manifest ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 >
+    au < manifest ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 >
+    au < expected ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 >
     
   }
 
@@ -220,7 +459,17 @@
       issn = 1558-6073 ;
       eissn = 1558-5468 ;
       issnl = 1558-6073
-    >    
+    >
+    param[journal_id] = natcult
+    param[journal_issn] = 1558-6073
+        
+    au < manifest ; 2006 ; Nature and Culture Volume 1 ; 1 >
+    au < manifest ; 2007 ; Nature and Culture Volume 2 ; 2 >
+    au < manifest ; 2008 ; Nature and Culture Volume 3 ; 3 >
+    au < manifest ; 2009 ; Nature and Culture Volume 4 ; 4 >
+    au < manifest ; 2010 ; Nature and Culture Volume 5 ; 5 >
+    au < manifest ; 2011 ; Nature and Culture Volume 6 ; 6 >
+    au < manifest ; 2012 ; Nature and Culture Volume 7 ; 7 >
     
   }
 
@@ -231,7 +480,26 @@
       issn = 0822-7942 ;
       eissn = 1752-2366 ;
       issnl = 0822-7942
-    >    
+    >
+    param[journal_id] = nomp
+    param[journal_issn] = 0822-7942
+        
+    au < manifest ; 1997 ; Nomadic Peoples Volume 1 ; 1 >
+    au < manifest ; 1998 ; Nomadic Peoples Volume 2 ; 2 >
+    au < manifest ; 1999 ; Nomadic Peoples Volume 3 ; 3 >
+    au < manifest ; 2000 ; Nomadic Peoples Volume 4 ; 4 >
+    au < manifest ; 2001 ; Nomadic Peoples Volume 5 ; 5 >
+    au < manifest ; 2002 ; Nomadic Peoples Volume 6 ; 6 >
+    au < manifest ; 2003 ; Nomadic Peoples Volume 7 ; 7 >
+    au < manifest ; 2004 ; Nomadic Peoples Volume 8 ; 8 >
+    au < manifest ; 2005 ; Nomadic Peoples Volume 9 ; 9 >
+    au < manifest ; 2006 ; Nomadic Peoples Volume 10 ; 10 >
+    au < manifest ; 2007 ; Nomadic Peoples Volume 11 ; 11>
+    au < manifest ; 2008 ; Nomadic Peoples Volume 12 ; 12 >
+    au < manifest ; 2009 ; Nomadic Peoples Volume 13 ; 13 >
+    au < manifest ; 2010 ; Nomadic Peoples Volume 14 ; 14 >
+    au < manifest ; 2011 ; Nomadic Peoples Volume 15 ; 15 >
+    au < expected ; 2012 ; Nomadic Peoples Volume 16 ; 16 >
     
   }
 
@@ -242,17 +510,34 @@
       issn = 1934-9688 ;
       eissn = 1934-9696 ;
       issnl = 1934-9688
-    >    
+    >
+    
+    param[journal_id] = proj
+    param[journal_issn] = 1934-9688
+        
+    au < manifest ; 2007 ; Projections Volume 1 ; 1 >
+    au < manifest ; 2008 ; Projections Volume 2 ; 2 >
+    au < manifest ; 2009 ; Projections Volume 3 ; 3 >
+    au < manifest ; 2010 ; Projections Volume 4 ; 4 >
+    au < manifest ; 2011 ; Projections Volume 5 ; 5 >
+    au < manifest ; 2012 ; Projections Volume 6 ; 6 >
     
   }
 
   {
   
     title <
-      name = Regions and Cohesion ;
+      name = Regions & Cohesion ;
       issn = 2152-906X ;
-      eissn = 2152-9078
+      eissn = 2152-9078 ;
+      issnl = 2152-906X 
     >    
+
+    param[journal_id] = reco
+    param[journal_issn] = 2152-906X
+
+    au < ready ; 2011 ; Regions & Cohesion Volume 1 ; 1 >
+    au < expected ; 2012 ; Regions & Cohesion Volume 2 ; 2 >
     
   }
 
@@ -261,9 +546,15 @@
     title <
       name = Religion and Society ;
       issn = 2150-9298 ;
-      eissn = 2150-9301
+      eissn = 2150-9301 ;
+      issnl = 2150-9298
     >    
-    
+
+    param[journal_id] = arrs
+    param[journal_issn] = 2150-9298
+
+    au < manifest ; 2010 ; Religion and Society Volume 1 ; 1 >
+   
   }
 
   {
@@ -274,17 +565,49 @@
       eissn = 1558-5476 ;
       issnl = 1357-1559
     >    
+    param[journal_id] = sartre
+    param[journal_issn] = 1357-1559
+
+    au < manifest ; 1997 ; Sartre Studies International Volume 3 ; 3 >
+    au < manifest ; 1998 ; Sartre Studies International Volume 4 ; 4 >
+    au < manifest ; 1999 ; Sartre Studies International Volume 5 ; 5 >
+    au < manifest ; 2000 ; Sartre Studies International Volume 6 ; 6 >
+    au < manifest ; 2001 ; Sartre Studies International Volume 7 ; 7 >
+    au < manifest ; 2002 ; Sartre Studies International Volume 8 ; 8 >
+    au < manifest ; 2003 ; Sartre Studies International Volume 9 ; 9 >
+    au < manifest ; 2004 ; Sartre Studies International Volume 10 ; 10 >
+    au < manifest ; 2005 ; Sartre Studies International Volume 11 ; 11 >
+    au < manifest ; 2006 ; Sartre Studies International Volume 12 ; 12 >
+    au < manifest ; 2007 ; Sartre Studies International Volume 13 ; 13 >
+    au < manifest ; 2008 ; Sartre Studies International Volume 14 ; 14 >
+    au < manifest ; 2009 ; Sartre Studies International Volume 15 ; 15 >
+    au < manifest ; 2010 ; Sartre Studies International Volume 16 ; 16 >
+    au < manifest ; 2011 ; Sartre Studies International Volume 17 ; 17 >
+    au < manifest ; 2012 ; Sartre Studies International Volume 18 ; 18 >
     
   }
 
   {
   
     title <
-      name = Sibirica ;
+      name = Sibirica: Journal of Siberian Studies  ;
       issn = 1361-7362 ;
       eissn = 1476-6787 ;
       issnl = 1361-7362
-    >    
+    > 
+    param[journal_id] = sibiric
+    param[journal_issn] = 1361-7362
+       
+    au < manifest ; 2002 ; Sibirica Volume 2 ; 2 >
+    au < manifest ; 2003 ; Sibirica Volume 3 ; 3 >
+    au < manifest ; 2004 ; Sibirica Volume 4 ; 4 >
+    au < manifest ; 2006 ; Sibirica Volume 5 ; 5 >
+    au < manifest ; 2007 ; Sibirica Volume 6 ; 6 >
+    au < manifest ; 2008 ; Sibirica Volume 7 ; 7 >
+    au < manifest ; 2009 ; Sibirica Volume 8 ; 8 >
+    au < manifest ; 2010 ; Sibirica Volume 9 ; 9 >
+    au < manifest ; 2011 ; Sibirica Volume 10 ; 10 >
+    au < manifest ; 2012 ; Sibirica Volume 11 ; 11 >
     
   }
 
@@ -295,7 +618,21 @@
       issn = 0155-977X ;
       eissn = 1558-5727 ;
       issnl = 0155-977X
-    >    
+    >
+    param[journal_id] = socan
+    param[journal_issn] = 0155-977X
+        
+    au < manifest ; 2002 ; Social Analsysis Volume 46 ; 46 >
+    au < manifest ; 2003 ; Social Analsysis Volume 47 ; 47 >
+    au < manifest ; 2004 ; Social Analsysis Volume 48 ; 48 >
+    au < manifest ; 2005 ; Social Analsysis Volume 49 ; 49 >
+    au < manifest ; 2006 ; Social Analsysis Volume 50 ; 50 >
+    au < manifest ; 2007 ; Social Analsysis Volume 51 ; 51 >
+    au < manifest ; 2008 ; Social Analsysis Volume 52 ; 52 >
+    au < manifest ; 2009 ; Social Analsysis Volume 53 ; 53 >
+    au < manifest ; 2010 ; Social Analsysis Volume 54 ; 54 >
+    au < manifest ; 2011 ; Social Analsysis Volume 55 ; 55 >
+    au < expected ; 2012 ; Social Analsysis Volume 56 ; 56 >
     
   }
 
@@ -307,6 +644,26 @@
       eissn = 1558-5816 ;
       issnl = 0040-5817
     >    
+    param[journal_id] = theoria
+    param[journal_issn] = 0040-5817
+
+
+    au < manifest ; 1997 ; Theoria Volume 44 ; 44 >
+    au < manifest ; 1998 ; Theoria Volume 45 ; 45 >
+    au < manifest ; 1999 ; Theoria Volume 46 ; 46 >
+    au < manifest ; 2000 ; Theoria Volume 47 ; 47 >
+    au < manifest ; 2001 ; Theoria Volume 48 ; 48 >
+    au < manifest ; 2002 ; Theoria Volume 49 ; 49 >
+    au < manifest ; 2003 ; Theoria Volume 50 ; 50 >
+    au < manifest ; 2004 ; Theoria Volume 51 ; 51 >
+    au < manifest ; 2005 ; Theoria Volume 52 ; 52 >
+    au < manifest ; 2006 ; Theoria Volume 53 ; 53 >
+    au < manifest ; 2007 ; Theoria Volume 54 ; 54 >
+    au < manifest ; 2008 ; Theoria Volume 55 ; 55 >
+    au < manifest ; 2009 ; Theoria Volume 56 ; 56 >
+    au < manifest ; 2010 ; Theoria Volume 57 ; 57 >
+    au < manifest ; 2011 ; Theoria Volume 58 ; 58 >
+    au < manifest ; 2012 ; Theoria Volume 59 ; 59 >
     
   }
 
@@ -318,6 +675,12 @@
       eissn = 2045-4821 ;
       issnl = 2045-4813
     >    
+    param[journal_id] = trans
+    param[journal_issn] = 2045-4813
+
+
+    au < manifest ; 2011 ; Transfers Volume 1 ; 1 >
+    au < expected ; 2012 ; Transfers Volume 2 ; 2 >
     
   }
 }

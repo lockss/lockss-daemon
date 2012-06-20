@@ -1,10 +1,10 @@
 /*
- * $Id: NoCrawlEndActionsNewContentCrawler.java,v 1.2 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: NoCrawlEndActionsNewContentCrawler.java,v 1.2.4.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,7 +39,7 @@ import org.lockss.state.*;
 import org.lockss.plugin.*;
 
 public class NoCrawlEndActionsNewContentCrawler extends NewContentCrawler {
-  List pauseContentTypes = new ArrayList();
+//   List pauseContentTypes = new ArrayList();
 
   public NoCrawlEndActionsNewContentCrawler(ArchivalUnit au,
 					    CrawlSpec crawlSpec,
@@ -49,14 +49,5 @@ public class NoCrawlEndActionsNewContentCrawler extends NewContentCrawler {
 
   @Override
   protected void doCrawlEndActions() {
-  }
-
-  @Override
-  protected void pauseBeforeFetch(String url) {
-    pauseContentTypes.add(previousContentType);
-  }
-
-  public List getPauseContentTypes() {
-    return pauseContentTypes;
   }
 }

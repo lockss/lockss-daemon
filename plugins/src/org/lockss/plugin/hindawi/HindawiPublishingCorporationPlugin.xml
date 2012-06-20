@@ -1,11 +1,15 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -16,7 +20,11 @@
     <map>
       <entry>
         <string>Substance</string>
-	<string>2</string>
+		<string>2</string>
+      </entry>
+      <entry>
+     	<string>Poll</string>
+		<string>2</string>
       </entry>
     </map>
   </entry>
@@ -116,6 +124,10 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/xhtml+xml_filter_factory</string>
     <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationHtmlFilterFactory</string>
   </entry>
   <entry>

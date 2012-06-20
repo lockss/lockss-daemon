@@ -36,6 +36,20 @@
   {
 
     title <
+      name = Alabama Department of Archives and History Legislative Files Special Proceedings Collection
+    >
+
+    plugin = gov.alabama.archives.adpn.directory.AlabamaDepartmentOfArchivesAndHistoryDirectoryPlugin
+    param[base_url] = http://www.archives.alabama.gov/lockss/
+    implicit < status ; name ; param[subdirectory] >
+  
+    au < released ; Alabama Department of Archives and History Legislative Files Special Proceedings Collection ; legislativefilesspecialproceedings >
+  
+  }
+
+  {
+
+    title <
       name = Alabama Department of Archives and History World War I Gold Star Database 
     >
 

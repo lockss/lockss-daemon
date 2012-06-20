@@ -1,10 +1,10 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.18 2011-11-08 20:21:17 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.18.2.1 2012-06-20 00:02:51 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,6 +46,7 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.clockss.*;
 import org.lockss.test.*;
+import org.lockss.crawler.BaseCrawler.StorePermissionScheme;
 
 /**
  * This is the test class for org.lockss.crawler.BaseCrawler
@@ -55,6 +56,10 @@ import org.lockss.test.*;
  */
 public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
 //   private PermissionChecker checker;
+
+  private MockLockssDaemon theDaemon;
+  private CrawlManagerImpl crawlMgr;
+
   private MockArchivalUnit mau = null;
   private List startUrls = null;
 
@@ -89,6 +94,13 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     super.setUp();
     TimeBase.setSimulated(10);
 
+    theDaemon = getMockLockssDaemon();
+    crawlMgr = new NoPauseCrawlManagerImpl();
+    theDaemon.setCrawlManager(crawlMgr);
+    crawlMgr.initService(theDaemon);
+
+    theDaemon.getAlertManager();
+
     mau = new MockArchivalUnit();
     mau.setPlugin(new MockPlugin(getMockLockssDaemon()));
 
@@ -103,7 +115,6 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
 			       crawlRule, 1);
     mau.setCrawlSpec(spec);
 
-    getMockLockssDaemon().getAlertManager();
     crawler = new TestableBaseCrawler(mau, spec, aus);
     List checkers = ListUtil.list(new MyMockPermissionChecker(true));
     setDaemonPermissionCheckers(checkers);
@@ -285,6 +296,46 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     MockUrlCacher muc = (MockUrlCacher)uc;
     assertSame(crawler, muc.getPermissionMapSource());
     assertNull(muc.getLocalAddress());
+    assertNotNull(muc.getCrawlRateLimiter());
+  }
+
+  StorePermissionScheme getConfigPermissionScheme() {
+    Configuration config = ConfigManager.getCurrentConfig();
+    return (StorePermissionScheme)
+      config.getEnum(StorePermissionScheme.class,
+		     BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
+		     BaseCrawler.DEFAULT_STORE_PERMISSION_SCHEME);
+  }
+
+  public void testMakePermissionUrlCacherLegacy() {
+    assertEquals(StorePermissionScheme.Legacy, getConfigPermissionScheme());
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    UrlCacher uc = crawler.makePermissionUrlCacher(startUrl);
+    assertNotNull(uc);
+    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
+		uc instanceof ClockssUrlCacher);
+    MockUrlCacher muc = (MockUrlCacher)uc;
+    assertSame(crawler, muc.getPermissionMapSource());
+    assertNull(muc.getLocalAddress());
+    assertNotNull(muc.getCrawlRateLimiter());
+    assertEquals(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST,
+		 muc.getRedirectScheme());
+  }
+
+  public void testMakePermissionUrlCacherStoreAllInSpec() {
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_STORE_PERMISSION_SCHEME,
+				  StorePermissionScheme.StoreAllInSpec.toString());
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    UrlCacher uc = crawler.makePermissionUrlCacher(startUrl);
+    assertNotNull(uc);
+    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
+		uc instanceof ClockssUrlCacher);
+    MockUrlCacher muc = (MockUrlCacher)uc;
+    assertSame(crawler, muc.getPermissionMapSource());
+    assertNull(muc.getLocalAddress());
+    assertNotNull(muc.getCrawlRateLimiter());
+    assertEquals(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC,
+		 muc.getRedirectScheme());
   }
 
   public void testMakeUrlCacherCrawlFromAddr() {
@@ -331,6 +382,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
 		uc instanceof ClockssUrlCacher);
     MockUrlCacher muc = (MockUrlCacher)uc;
     assertSame(crawler, muc.getPermissionMapSource());
+    assertNull(muc.getPreviousContentType());
     assertEquals("127.3.1.4", muc.getLocalAddress().getHostAddress());
   }
 
@@ -342,6 +394,20 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     assertNotNull(uc);
     assertTrue("UrlCacher should be a ClockssUrlCacher",
 	       uc instanceof ClockssUrlCacher);
+  }
+
+  public void testMakeUrlCacherWithMimeType() {
+    crawler.previousContentType = "app/foo";
+    UrlCacher uc = crawler.makeUrlCacher(startUrl);
+    assertNotNull(uc);
+    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
+		uc instanceof ClockssUrlCacher);
+    MockUrlCacher muc = (MockUrlCacher)uc;
+    assertSame(crawler, muc.getPermissionMapSource());
+    assertEquals("app/foo", muc.getPreviousContentType());
+
+    UrlCacher uc2 = crawler.makeUrlCacher(permissionPage);
+    assertEquals("app/foo", ((MockUrlCacher)uc2).getPreviousContentType());
   }
 
   public void testGetPermissionMap() throws MalformedURLException {
@@ -757,7 +823,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     }
   }
 
-  private static class TestableBaseCrawler extends BaseCrawler {
+  private class TestableBaseCrawler extends BaseCrawler {
     RuntimeException crawlExceptionToThrow = null;
     boolean isWholeAU = false;
     boolean result = true;
@@ -766,9 +832,10 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
 				  CrawlSpec spec, AuState aus) {
       super(au, spec, aus);
       crawlStatus = new MockCrawlStatus();
+      setCrawlManager(TestBaseCrawler.this.crawlMgr);
     }
 
-    public int getType() {
+    public Crawler.Type getType() {
       throw new UnsupportedOperationException("not implemented");
     }
 

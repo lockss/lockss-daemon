@@ -1,0 +1,20 @@
+<html>
+<script language="JavaScript"><!--
+  function loadPDF() {
+    window.location = "/cgi/reprint/13/1/5.pdf";
+  }
+
+  function handleOnLoad() {
+    loadPDF();
+    return true;
+  }
+
+  function addLoadEvent(func) {
+    window.onLoad = func
+  }
+
+  window.onload = handleOnLoad;
+  addLoadEvent(handlOnLoad);
+// --></script>
+
+</html>

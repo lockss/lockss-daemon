@@ -16,8 +16,12 @@
     >
 
     param[journal_dir] = harvard_journal_of_asiatic_studies
+    attr[journal_id] = jas
 
     au < released ; 2009 ; Harvard Journal of Asiatic Studies Volume 69 ; 69 >
+    au < manifest ; 2010 ; Harvard Journal of Asiatic Studies Volume 70 ; 70 >
+    au < manifest ; 2011 ; Harvard Journal of Asiatic Studies Volume 71 ; 71 >
+    au < manifest ; 2012 ; Harvard Journal of Asiatic Studies Volume 72 ; 72 >
 
   }
 

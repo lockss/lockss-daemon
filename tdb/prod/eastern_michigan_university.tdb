@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = journal_of_narrative_theory
+    attr[journal_id] = jnt
 
     au < released ; 2004 ; Journal of Narrative Theory Volume 34 ; 34 >
     au < released ; 2005 ; Journal of Narrative Theory Volume 35 ; 35 >
@@ -23,6 +24,9 @@
     au < released ; 2007 ; Journal of Narrative Theory Volume 37 ; 37 >
     au < released ; 2008 ; Journal of Narrative Theory Volume 38 ; 38 >
     au < released ; 2009 ; Journal of Narrative Theory Volume 39 ; 39 >
+    au < testing ; 2010 ; Journal of Narrative Theory Volume 40 ; 40 >
+    au < ready ; 2011 ; Journal of Narrative Theory Volume 41 ; 41 >
+    au < expected ; 2012 ; Journal of Narrative Theory Volume 42 ; 42 >
 
   }
 

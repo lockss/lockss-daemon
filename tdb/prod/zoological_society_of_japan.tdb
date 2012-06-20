@@ -33,22 +33,23 @@
       param[journal_id] = jzoo
       
       au < ready ; 1995 ; Zoological Science Volume 12 ; 12 >
-      au < testing ; 1996 ; Zoological Science Volume 13 ; 13 >
-      au < testing ; 1997 ; Zoological Science Volume 14 ; 14 >
-      au < testing ; 1998 ; Zoological Science Volume 15 ; 15 >
-      au < testing ; 1999 ; Zoological Science Volume 16 ; 16 >
-      au < testing ; 2000 ; Zoological Science Volume 17 ; 17 >
-      au < testing ; 2001 ; Zoological Science Volume 18 ; 18 >
-      au < testing ; 2002 ; Zoological Science Volume 19 ; 19 >
-      au < testing ; 2003 ; Zoological Science Volume 20 ; 20 >
-      au < manifest ; 2004 ; Zoological Science Volume 21 ; 21 >
-      au < manifest ; 2005 ; Zoological Science Volume 22 ; 22 >
-      au < manifest ; 2006 ; Zoological Science Volume 23 ; 23 >
-      au < manifest ; 2007 ; Zoological Science Volume 24 ; 24 >
-      au < manifest ; 2008 ; Zoological Science Volume 25 ; 25 >
-      au < manifest ; 2009 ; Zoological Science Volume 26 ; 26 >
-      au < manifest ; 2010 ; Zoological Science Volume 27 ; 27 >
-      au < testing ; 2011 ; Zoological Science Volume 28 ; 28 >
+      au < ready ; 1996 ; Zoological Science Volume 13 ; 13 >
+      au < ready ; 1997 ; Zoological Science Volume 14 ; 14 >
+      au < ready ; 1998 ; Zoological Science Volume 15 ; 15 >
+      au < ready ; 1999 ; Zoological Science Volume 16 ; 16 >
+      au < ready ; 2000 ; Zoological Science Volume 17 ; 17 >
+      au < ready ; 2001 ; Zoological Science Volume 18 ; 18 >
+      au < ready ; 2002 ; Zoological Science Volume 19 ; 19 >
+      au < ready ; 2003 ; Zoological Science Volume 20 ; 20 >
+      au < ready ; 2004 ; Zoological Science Volume 21 ; 21 >
+      au < doNotProcess ; 2005 ; Zoological Science Volume 22 ; 22 >
+      au < doNotProcess ; 2006 ; Zoological Science Volume 23 ; 23 >
+      au < doNotProcess ; 2007 ; Zoological Science Volume 24 ; 24 >
+      au < ready ; 2008 ; Zoological Science Volume 25 ; 25 >
+      au < ready ; 2009 ; Zoological Science Volume 26 ; 26 >
+      au < ready ; 2010 ; Zoological Science Volume 27 ; 27 >
+      au < ready ; 2011 ; Zoological Science Volume 28 ; 28 >
+      au < manifest ; 2012 ; Zoological Science Volume 29 ; 29 >
 
     }
 

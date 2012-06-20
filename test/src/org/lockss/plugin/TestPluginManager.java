@@ -1,10 +1,10 @@
 /*
- * $Id: TestPluginManager.java,v 1.92 2011-06-30 19:06:00 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.92.6.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -102,8 +102,9 @@ public class TestPluginManager extends LockssTestCase {
     super.setUp();
 
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    theDaemon = new MyMockLockssDaemon();
     mgr = new MyPluginManager();
+    theDaemon = (MyMockLockssDaemon)getMockLockssDaemon();
+
     theDaemon.setPluginManager(mgr);
     theDaemon.setDaemonInited(true);
 
@@ -114,6 +115,9 @@ public class TestPluginManager extends LockssTestCase {
     p.setProperty(PluginManager.PARAM_PLUGIN_LOCATION, "plugins");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
+    RepositoryManager repoMgr = theDaemon.getRepositoryManager();
+    repoMgr.startService();
+
     mgr.setLoadablePluginsReady(true);
     mgr.initService(theDaemon);
   }
@@ -123,6 +127,11 @@ public class TestPluginManager extends LockssTestCase {
     theDaemon.stopDaemon();
     super.tearDown();
   }
+
+  protected MockLockssDaemon newMockLockssDaemon() {
+    return new MyMockLockssDaemon();
+  }
+
 
   private void doConfig() throws Exception {
     doConfig(new Properties());
@@ -136,12 +145,12 @@ public class TestPluginManager extends LockssTestCase {
     p.setProperty(p1a2param+MockPlugin.CONFIG_PROP_2, "va.l3");
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromProps(p);
   }
 
   private void minimalConfig() throws Exception {
     // String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+    ConfigurationUtil.addFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
 				  tempDirPath,
 				  HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
 				  tempDirPath);
@@ -176,25 +185,25 @@ public class TestPluginManager extends LockssTestCase {
   public void testGetPreferredPluginType() throws Exception {
     mgr.startService();
     // Prefer XML plugins.
-    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PREFERRED_PLUGIN_TYPE,
+    ConfigurationUtil.addFromArgs(PluginManager.PARAM_PREFERRED_PLUGIN_TYPE,
 				  "xml");
     assertEquals(PluginManager.PREFER_XML_PLUGIN,
 		 mgr.getPreferredPluginType());
 
     // Prefer CLASS plugins.
-    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PREFERRED_PLUGIN_TYPE,
+    ConfigurationUtil.addFromArgs(PluginManager.PARAM_PREFERRED_PLUGIN_TYPE,
 				  "class");
     assertEquals(PluginManager.PREFER_CLASS_PLUGIN,
 		 mgr.getPreferredPluginType());
 
     // Illegal type.
-    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PREFERRED_PLUGIN_TYPE,
+    ConfigurationUtil.addFromArgs(PluginManager.PARAM_PREFERRED_PLUGIN_TYPE,
 				  "foo");
     assertEquals(PluginManager.PREFER_XML_PLUGIN,
 		 mgr.getPreferredPluginType());
 
     // No type specified.
-    ConfigurationUtil.setFromArgs("foo", "bar");
+    ConfigurationUtil.addFromArgs("foo", "bar");
     assertEquals(PluginManager.PREFER_XML_PLUGIN,
 		 mgr.getPreferredPluginType());
   }
@@ -271,7 +280,7 @@ public class TestPluginManager extends LockssTestCase {
     assertEmpty(mgr.getRegisteredPlugins());
     Properties p = new Properties();
     p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRY, n1 + ";" + n2);
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromProps(p);
     Plugin p1 = mgr.getPlugin(PluginManager.pluginKeyFromName(n1));
     assertNotNull(p1);
     assertTrue(p1.toString(), p1 instanceof MockPlugin);
@@ -281,23 +290,23 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(SetUtil.set(p1, p2),
 		 SetUtil.theSet(mgr.getRegisteredPlugins()));
     p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRY, n1);
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromProps(p);
     assertEquals(SetUtil.set(p1, p2),
 		 SetUtil.theSet(mgr.getRegisteredPlugins()));
     p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRY, n1 + ";" + n2);
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromProps(p);
     assertEquals(SetUtil.set(p1, p2),
 		 SetUtil.theSet(mgr.getRegisteredPlugins()));
     p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRY, n1 + ";" + n2);
     p.setProperty(PluginManager.PARAM_PLUGIN_RETRACT, n2);
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromProps(p);
     assertEquals(SetUtil.set(p1),
 		 SetUtil.theSet(mgr.getRegisteredPlugins()));
     assertNull(mgr.getPlugin(PluginManager.pluginKeyFromName(n2)));
     assertSame(p1, mgr.getPlugin(PluginManager.pluginKeyFromName(n1)));
     p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRY, n1 + ";" + n2);
     p.setProperty(PluginManager.PARAM_PLUGIN_RETRACT, "");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromProps(p);
     p2 = mgr.getPlugin(PluginManager.pluginKeyFromName(n2));
     assertNotNull(p2);
     assertTrue(p2.toString(), p2 instanceof ThrowingMockPlugin);
@@ -685,7 +694,7 @@ public class TestPluginManager extends LockssTestCase {
     p.setProperty(ts2p+"class", "xpath");
     p.setProperty(ts2p+"name", title2);
     p.setProperty(ts2p+"xpath", path2);
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromProps(p);
     Map map = mgr.getTitleSetMap();
     assertEquals(2, map.size());
     assertEquals(TitleSetXpath.create(theDaemon, title1, path1),
@@ -713,7 +722,7 @@ public class TestPluginManager extends LockssTestCase {
     p.setProperty(ts3p+"class", "xpath");
     p.setProperty(ts3p+"name", title3);
     p.setProperty(ts3p+"xpath", path1);
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromProps(p);
     List<TitleSet> tsets = new ArrayList<TitleSet>(mgr.getTitleSets());
     assertEquals(3, tsets.size());
     assertEquals(title3, tsets.get(0).getName());
@@ -737,7 +746,7 @@ public class TestPluginManager extends LockssTestCase {
     p.setProperty(ts2p+"class", "xpath");
     p.setProperty(ts2p+"name", title2);
     p.setProperty(ts2p+"xpath", path2);
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromProps(p);
     Map map = mgr.getTitleSetMap();
     assertEquals(1, map.size());
     assertEquals(TitleSetXpath.create(theDaemon, title2, path2),
@@ -747,19 +756,29 @@ public class TestPluginManager extends LockssTestCase {
   static class MyMockLockssDaemon extends MockLockssDaemon {
     List auMgrsStarted = new ArrayList();
 
+    boolean isStartAuManagers = false;
+
+    public void setStartAuManagers(boolean val) {
+      isStartAuManagers = true;
+    }
+
     public void startOrReconfigureAuManagers(ArchivalUnit au,
 					     Configuration auConfig)
 	throws Exception {
+      if (isStartAuManagers) {
+	reallyStartOrReconfigureAuManagers(au, auConfig);
+      }
       auMgrsStarted.add(au);
     }
+
     List getAuMgrsStarted() {
       return auMgrsStarted;
     }
 
-    // For testLoadLoadablePlugins -- need a mock repository
-    public LockssRepository getLockssRepository(ArchivalUnit au) {
-      return new MyMockLockssRepository();
-    }
+//     // For testLoadLoadablePlugins -- need a mock repository
+//     public LockssRepository getLockssRepository(ArchivalUnit au) {
+//       return new MyMockLockssRepository();
+//     }
   }
 
   static class MyMockLockssRepository extends MockLockssRepository {
@@ -792,6 +811,13 @@ public class TestPluginManager extends LockssTestCase {
 
     void suppressEnxurePluginLoaded(List<String> pluginKeys) {
       suppressEnxurePluginLoaded = pluginKeys;
+    }
+
+    // Make it look like any AU's config came from au.txt, to simplify
+    // config in these tests.
+    @Override
+    boolean isAuConfInAuTxt(String auId) {
+      return true;
     }
 
     @Override
@@ -1000,10 +1026,10 @@ public class TestPluginManager extends LockssTestCase {
     MockArchivalUnit au2 = (MockArchivalUnit)mgr.getAuFromId(mauauid2);
     assertNull(mgr.findCachedUrl(url1));
     assertNull(mgr.findCachedUrl(url2));
-    au1.addUrl(url1, true, true, null);
-    au2.addUrl(url2, true, true, null);
-    au1.addUrl(url3, true, true, null);
-    au2.addUrl(url3, true, true, null);
+    CachedUrl cu1 = au1.addUrl(url1, true, true, null);
+    CachedUrl cu2 = au2.addUrl(url2, true, true, null);
+    CachedUrl cu31 = au1.addUrl(url3, true, true, null);
+    CachedUrl cu32 = au2.addUrl(url3, true, true, null);
     CachedUrl cu = mgr.findCachedUrl(url1);
     assertEquals(url1, cu.getUrl());
     assertSame(au1, cu.getArchivalUnit());
@@ -1020,6 +1046,11 @@ public class TestPluginManager extends LockssTestCase {
 
     cu = mgr.findCachedUrl(url3);
     assertEquals(url3, cu.getUrl());
+
+    // Test version that returns all matches
+    assertEquals(ListUtil.list(cu1), mgr.findCachedUrls(url1));
+    assertEquals(ListUtil.list(cu2), mgr.findCachedUrls(url2));
+    assertSameElements(ListUtil.list(cu31, cu32), mgr.findCachedUrls(url3));
   }
 
   AuState setUpAuState(MockArchivalUnit mau) {
@@ -1296,7 +1327,7 @@ public class TestPluginManager extends LockssTestCase {
 		  password);
     p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRIES,
 		  "");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromProps(p);
   }
 
 
@@ -1420,6 +1451,7 @@ public class TestPluginManager extends LockssTestCase {
     Configuration config = ConfigurationUtil.fromArgs("base_url",
 						      "http://example.com/a/"
 						      ,"year", "1942");
+//     theDaemon.setStartAuManagers(true);
     ArchivalUnit au1 = mgr.createAu(plugin1, config,
 				    PluginManager.AuEvent.Create);
     String auid = au1.getAuId();

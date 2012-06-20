@@ -17,6 +17,7 @@
     >
 
     param[journal_dir] = canadian_journal_of_philosophy
+    attr[journal_id] = cjp
 
     au < released ; 2006 ; Canadian Journal of Philosophy Volume 36 ; 36 >
     au < released ; 2007 ; Canadian Journal of Philosophy Volume 37 ; 37 >
@@ -24,6 +25,7 @@
     au < released ; 2009 ; Canadian Journal of Philosophy Volume 39 ; 39 >
     au < manifest ; 2010 ; Canadian Journal of Philosophy Volume 40 ; 40 >
     au < manifest ; 2011 ; Canadian Journal of Philosophy Volume 41 ; 41 >
+    au < expected ; 2012 ; Canadian Journal of Philosophy Volume 42 ; 42 >
  
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: CloseCallbackInputStream.java,v 1.2 2005-10-10 23:24:02 tlipkis Exp $
+ * $Id: CloseCallbackInputStream.java,v 1.2.102.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.util;
 
 import java.io.*;
 import java.util.*;
+
+import org.apache.commons.io.FileUtils;
 
 /**
  * Wrapper InputStream that calls a user-supplied callback when closed.
@@ -91,4 +93,36 @@ public class CloseCallbackInputStream extends InputStream {
   public interface Callback {
     void streamClosed(Object cookie);
   }
+  
+  /**
+   * <p>The most common use for {@link CloseCallbackInputStream} is
+   * to read a temporary file once and delete it when the stream is
+   * closed. This class implements this behavior.</p>
+   */
+  public static class DeleteFileOnCloseInputStream extends CloseCallbackInputStream {
+
+    /**
+     * <p>Creates a new {@link InputStream} that reads from the
+     * specified file, and deletes that file when {@link #close()}
+     * is called.</p>
+     * <p>Uses {@link FileInputStream} (not buffered) and
+     * {@link FileUtils#deleteQuietly(File)}.</p>
+     * @param file An underlying file, that will get deleted when
+     *             {@link #close()} is called.
+     * @throws FileNotFoundException if the underlying file cannot be
+     *                               found.
+     */
+    public DeleteFileOnCloseInputStream(File file) throws FileNotFoundException {
+      super(new FileInputStream(file),
+            new Callback() {
+              @Override
+              public void streamClosed(Object cookie) {
+                FileUtils.deleteQuietly(((File)cookie));
+              }        
+            },
+            file);
+    }
+    
+  }
+  
 }

@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = University of North Carolina, Wilmington
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Ecotone ;
+      issn = 1553-1775 ;
+      eissn = 2165-2651 ;
+      issnl = 1553-1775
+    >
+
+    param[journal_dir] = ecotone
+    attr[journal_id] = ect
+
+    au < ready ; 2011 ; Ecotone Volume 7 ; 7 >
+    au < expected ; 2012 ; Ecotone Volume 8 ; 8 >
+
+  }
+
+}

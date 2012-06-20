@@ -4,7 +4,8 @@
     name = British Institute of Radiology
   >
 
-  plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+  attr[contract] = 2011
+  plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin 
   implicit < status1 ; status ; year ; name ; param[volume_name] >
   
   {
@@ -101,8 +102,9 @@
     au < manifest ; exists ; 2008 ; British Journal of Radiology Volume 81 ; 81 >
     au < manifest ; exists ; 2009 ; British Journal of Radiology Volume 82 ; 82 >
     au < manifest ; exists ; 2010 ; British Journal of Radiology Volume 83 ; 83 >
-    au < manifest ; exists ; 2011 ; British Journal of Radiology Volume 84 ; 84 >
-    
+    au < released ; crawling ; 2011 ; British Journal of Radiology Volume 84 ; 84 >
+    au < crawling ; exists ; 2012 ; British Journal of Radiology Volume 85 ; 85 >
+     
   }
   
   {
@@ -115,30 +117,31 @@
     >
 
     param[base_url] = http://dmfr.birjournals.org/
-    
-    au < manifest ; exists ; 1989 ; Dentomaxillofacial Radiology Volume 18 ; 1989 >
-    au < manifest ; exists ; 1990 ; Dentomaxillofacial Radiology Volume 19 ; 1990 >
-    au < manifest ; exists ; 1991 ; Dentomaxillofacial Radiology Volume 20 ; 1991 >
-    au < manifest ; exists ; 1992 ; Dentomaxillofacial Radiology Volume 21 ; 1992 >
-    au < manifest ; exists ; 1993 ; Dentomaxillofacial Radiology Volume 22 ; 1993 >
-    au < manifest ; exists ; 1994 ; Dentomaxillofacial Radiology Volume 23 ; 1994 >
-    au < manifest ; exists ; 1995 ; Dentomaxillofacial Radiology Volume 24 ; 1995 >
-    au < manifest ; exists ; 1996 ; Dentomaxillofacial Radiology Volume 25 ; 1996 >
-    au < manifest ; exists ; 1997 ; Dentomaxillofacial Radiology Volume 26 ; 1997 >
-    au < manifest ; exists ; 1998 ; Dentomaxillofacial Radiology Volume 27 ; 1998 >
-    au < manifest ; exists ; 1999 ; Dentomaxillofacial Radiology Volume 28 ; 1999 >
-    au < manifest ; exists ; 2000 ; Dentomaxillofacial Radiology Volume 29 ; 2000 >
-    au < manifest ; exists ; 2001 ; Dentomaxillofacial Radiology Volume 30 ; 2001 >
-    au < manifest ; exists ; 2002 ; Dentomaxillofacial Radiology Volume 31 ; 2002 >
-    au < manifest ; exists ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 2003 >
-    au < manifest ; exists ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 2004 >
-    au < manifest ; exists ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 2005 >
-    au < manifest ; exists ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 2006 >
-    au < manifest ; exists ; 2007 ; Dentomaxillofacial Radiology Volume 36 ; 2007 >
-    au < manifest ; exists ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 2008 >
-    au < manifest ; exists ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 2009 >
-    au < manifest ; exists ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 2010 >
-    au < manifest ; exists ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 2011 >
+        
+    au < manifest ; exists ; 1989 ; Dentomaxillofacial Radiology Volume 18 ; 18 >
+    au < manifest ; exists ; 1990 ; Dentomaxillofacial Radiology Volume 19 ; 19 >
+    au < manifest ; exists ; 1991 ; Dentomaxillofacial Radiology Volume 20 ; 20 >
+    au < manifest ; exists ; 1992 ; Dentomaxillofacial Radiology Volume 21 ; 21 >
+    au < manifest ; exists ; 1993 ; Dentomaxillofacial Radiology Volume 22 ; 22 >
+    au < manifest ; exists ; 1994 ; Dentomaxillofacial Radiology Volume 23 ; 23 >
+    au < manifest ; exists ; 1995 ; Dentomaxillofacial Radiology Volume 24 ; 24 >
+    au < manifest ; exists ; 1996 ; Dentomaxillofacial Radiology Volume 25 ; 25 >
+    au < manifest ; exists ; 1997 ; Dentomaxillofacial Radiology Volume 26 ; 26 >
+    au < manifest ; exists ; 1998 ; Dentomaxillofacial Radiology Volume 27 ; 27 >
+    au < manifest ; exists ; 1999 ; Dentomaxillofacial Radiology Volume 28 ; 28 >
+    au < manifest ; exists ; 2000 ; Dentomaxillofacial Radiology Volume 29 ; 29 >
+    au < manifest ; exists ; 2001 ; Dentomaxillofacial Radiology Volume 30 ; 30 >
+    au < manifest ; exists ; 2002 ; Dentomaxillofacial Radiology Volume 31 ; 31 >
+    au < manifest ; exists ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 32 >
+    au < manifest ; exists ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 33 >
+    au < manifest ; exists ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 34 >
+    au < manifest ; exists ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 35 >
+    au < manifest ; exists ; 2007 ; Dentomaxillofacial Radiology Volume 36 ; 36 >
+    au < manifest ; exists ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 >
+    au < manifest ; exists ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 >
+    au < manifest ; exists ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 >
+    au < released ; crawling ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 > 
+    au < crawling ; exists ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 >
 
   }
   
@@ -154,18 +157,17 @@
     param[base_url] = http://imaging.birjournals.org/
     comment[0] = last published volume in 2009  
     
-    au < manifest ; exists ; 1999 ; Imaging Volume 11 ; 11 >
-    au < manifest ; exists ; 2000 ; Imaging Volume 12 ; 12 >
-    au < manifest ; exists ; 2001 ; Imaging Volume 13 ; 13 >
-    au < manifest ; exists ; 2002 ; Imaging Volume 14 ; 14 >
-    au < manifest ; exists ; 2003 ; Imaging Volume 15 ; 15 >
-    au < manifest ; exists ; 2004 ; Imaging Volume 16 ; 16 >
-    au < manifest ; exists ; 2005 ; Imaging Volume 17 ; 17 >
-    au < manifest ; exists ; 2006 ; Imaging Volume 18 ; 18 >
-    au < manifest ; exists ; 2007 ; Imaging Volume 19 ; 19 >
-    au < manifest ; exists ; 2008 ; Imaging Volume 20 ; 20 >
-    au < manifest ; exists ; 2009 ; Imaging Volume 21 ; 21 >
-    au < doesNotExist ; doesNotExist ; 2010 ; Imaging Volume 22 ; 22 >
+    au < released ; crawling ; 1999 ; Imaging Volume 11 ; 11 >
+    au < released ; crawling ; 2000 ; Imaging Volume 12 ; 12 >
+    au < released ; crawling ; 2001 ; Imaging Volume 13 ; 13 >
+    au < released ; crawling ; 2002 ; Imaging Volume 14 ; 14 >
+    au < released ; crawling ; 2003 ; Imaging Volume 15 ; 15 >
+    au < released ; crawling ; 2004 ; Imaging Volume 16 ; 16 >
+    au < released ; crawling ; 2005 ; Imaging Volume 17 ; 17 >
+    au < released ; crawling ; 2006 ; Imaging Volume 18 ; 18 >
+    au < released ; crawling ; 2007 ; Imaging Volume 19 ; 19 >
+    au < released ; crawling ; 2008 ; Imaging Volume 20 ; 20 >
+    au < released ; crawling ; 2009 ; Imaging Volume 21 ; 21 >
 
   }
 

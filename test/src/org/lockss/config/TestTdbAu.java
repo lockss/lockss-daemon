@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.9 2011-12-01 17:39:31 easyonthemayo Exp $
+ * $Id: TestTdbAu.java,v 1.9.2.1 2012-06-20 00:03:02 nchondros Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.9 2011-12-01 17:39:31 easyonthemayo Exp $
+ * @version $Id: TestTdbAu.java,v 1.9.2.1 2012-06-20 00:03:02 nchondros Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -83,6 +83,20 @@ public class TestTdbAu extends LockssTestCase {
       
     }
     assertNull(publisher);
+  }
+  
+  /**
+   * Test equals() method
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testIsDown() throws TdbException{
+    TdbAu au1 = new TdbAu("Test AU", "pluginA");
+    assertFalse(au1.isDown());
+    
+    // same as title1
+    TdbAu au2 = new TdbAu("Test AU", "pluginA");
+    au2.setParam("pub_down", "true");
+    assertTrue(au2.isDown());
   }
   
   /**
@@ -182,6 +196,30 @@ public class TestTdbAu extends LockssTestCase {
     assertTrue(au.includesYear("MCMLXXV"));
     assertFalse(au.includesYear("MCMLXX"));
     assertFalse(au.includesYear("1979"));
+
+    // test year range as range list
+    au = new TdbAu("TestAU", "pluginA");
+    String issStr = "1960-1969, 1970, MCMLXXI-1977";
+    au.setAttr("year", issStr);
+    assertEquals(issStr, au.getYear());
+    assertTrue(NumberUtil.isContiguousRange(au.getYear()));
+    assertEquals("1960", au.getStartYear());
+    assertEquals("1977", au.getEndYear());
+    assertTrue(au.includesYear("MCMLXXVII"));
+    assertTrue(au.includesYear("1972"));
+    assertTrue(au.includesYear("1968"));
+    assertTrue(au.includesYear("1970"));
+
+    au = new TdbAu("TestAU", "pluginA");
+    au.setAttr("year", "1971,1973,1975-1977");
+    assertEquals("1971,1973,1975-1977", au.getYear());
+    assertEquals("1971", au.getStartYear());
+    assertEquals("1977", au.getEndYear());
+    assertTrue(au.includesYear("1971")); 
+    assertTrue(au.includesYear("1975"));
+    assertFalse(au.includesYear("1970"));
+    assertFalse(au.includesYear("1974"));
+    assertFalse(au.includesYear("1979"));
   }
   
   /**
@@ -238,6 +276,46 @@ public class TestTdbAu extends LockssTestCase {
     assertTrue(au.includesVolume("Mathematics"));
     assertFalse(au.includesVolume("G"));
     assertFalse(au.includesVolume("Mbone"));
+
+    // test volume range as range list
+    au = new TdbAu("TestAU", "pluginA");
+    String volStr = "Ge-Ma;MCMLXXI-1977;1960-1969";
+    au.setAttr("volume", volStr);
+    assertEquals(volStr, au.getVolume());
+    assertFalse(NumberUtil.isContiguousRange(au.getVolume()));
+    assertEquals("Ge", au.getStartVolume());
+    assertEquals("1969", au.getEndVolume());
+    assertTrue(au.includesVolume("Ge"));
+    assertTrue(au.includesVolume("MCMLXXVII"));
+    assertTrue(au.includesVolume("1972"));
+    assertTrue(au.includesVolume("1968"));
+    assertFalse(au.includesVolume("1970"));
+
+    // Test that Roman tokens get interpreted as Roman tokens
+    au = new TdbAu("TestAU", "pluginA");
+    volStr = "s1v-s1x; s1i, s1ii";
+    au.setAttr("volume", volStr);
+    assertEquals(volStr, au.getVolume());
+    // Include values from an alphabetic interpretation (topic ranges)
+    // s1v-s1x to include s1ix and also s1w and
+    assertTrue(au.includesVolume("s1vi"));
+    assertTrue(au.includesVolume("s1ix"));
+    assertTrue(au.includesVolume("s1w"));
+    assertTrue(au.includesVolume("s1word"));
+    // s1ii to not include s1iii
+    assertFalse(au.includesVolume("s1iii"));
+
+    au = new TdbAu("TestAU", "pluginA");
+    volStr = "1971,1973,1975-1977";
+    au.setAttr("volume", volStr);
+    assertEquals(volStr, au.getVolume());
+    assertEquals("1971", au.getStartVolume());
+    assertEquals("1977", au.getEndVolume());
+    assertTrue(au.includesVolume("1971")); 
+    assertTrue(au.includesVolume("1975"));
+    assertFalse(au.includesVolume("1970"));
+    assertFalse(au.includesVolume("1974"));
+    assertFalse(au.includesVolume("1979"));
   }
   
   /**
@@ -281,7 +359,7 @@ public class TestTdbAu extends LockssTestCase {
     assertFalse(au.includesIssue("MCMLXX"));
     assertFalse(au.includesIssue("1979"));
 
-    // test volume ranges as "topic ranges"
+    // test issue ranges as "topic ranges"
     au = new TdbAu("TestAU", "pluginA");
     au.setAttr("issue", "Ge-Ma");
     assertEquals("Ge-Ma", au.getIssue());
@@ -294,6 +372,32 @@ public class TestTdbAu extends LockssTestCase {
     assertTrue(au.includesIssue("Mathematics"));
     assertFalse(au.includesIssue("G"));
     assertFalse(au.includesIssue("Mbone"));
+
+    // test issue range as range list
+    au = new TdbAu("TestAU", "pluginA");
+    String issStr = "Ge-Ma;MCMLXXI-1977;1960-1969";
+    au.setAttr("issue", issStr);
+    assertEquals(issStr, au.getIssue());
+    assertFalse(NumberUtil.isContiguousRange(au.getIssue()));
+    assertEquals("Ge", au.getStartIssue());
+    assertEquals("1969", au.getEndIssue());
+    assertTrue(au.includesIssue("Ge"));
+    assertTrue(au.includesIssue("MCMLXXVII"));
+    assertTrue(au.includesIssue("1972"));
+    assertTrue(au.includesIssue("1968"));
+    assertFalse(au.includesIssue("1970"));
+
+    au = new TdbAu("TestAU", "pluginA");
+    issStr = "1971,1973,1975-1977";
+    au.setAttr("issue", issStr);
+    assertEquals(issStr, au.getIssue());
+    assertEquals("1971", au.getStartIssue());
+    assertEquals("1977", au.getEndIssue());
+    assertTrue(au.includesIssue("1971")); 
+    assertTrue(au.includesIssue("1975"));
+    assertFalse(au.includesIssue("1970"));
+    assertFalse(au.includesIssue("1974"));
+    assertFalse(au.includesIssue("1979"));
   }
   
   /**
@@ -305,12 +409,14 @@ public class TestTdbAu extends LockssTestCase {
     au.setPropertyByName("issn", "1234-5678");
     au.setPropertyByName("eissn", "2468-1357");
     au.setPropertyByName("issnl", "8765-4321");
-    au.setPropertyByName("isbn", "1234567890");
+    au.setAttr("isbn", "1234567890");
     assertEquals("1234-5678", au.getPrintIssn());
     assertEquals("2468-1357", au.getEissn());
     assertEquals("8765-4321", au.getIssnL());
     assertNotNull(au.getIssn());
     assertEquals("1234567890", au.getIsbn());
+    assertEquals("1234567890", au.getPrintIsbn());
+    assertNull(au.getEisbn());
 
     // Test behaviour with ill-formed ISSNs
     au.setPropertyByName("issn", "1234-5");
@@ -370,7 +476,10 @@ public class TestTdbAu extends LockssTestCase {
     assertEquals("Test Title", au.getJournalTitle()); 
     assertEquals(32500000, au.getEstimatedSize());
     Properties props = au.toProperties();
-    assertEquals("v1", props.getProperty("param.1.value"));
+    assertTrue(props.containsKey("param.1.value"));
+    assertTrue(props.containsValue("v1"));
+    assertTrue(props.containsKey("param.2.value"));
+    assertTrue(props.containsValue("v2"));
     /*
     assertEquals("32.5MB", props.getProperty("estSize"));
     */

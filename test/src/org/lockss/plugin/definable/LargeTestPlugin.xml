@@ -120,7 +120,7 @@
     </list>
   </entry>
   <entry>
-    <string>au_manifest</string>
+    <string>au_permission_url</string>
     <list>
       <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;year=%d&quot;, base_url, journal_code, year</string>
       <string>&quot;%slockss.htm&quot;, resolver_url</string>
@@ -171,6 +171,21 @@
       <fieldMask>3</fieldMask>
       <timeZoneId>US/Eastern</timeZoneId>
     </org.lockss.daemon.CrawlWindows-Interval>
+  </entry>
+  <entry>
+    <string>plugin_archive_file_types</string>
+    <org.lockss.plugin.ArchiveFileTypes>
+      <extMimeMap>
+	<entry>
+          <string>.zip</string>
+	  <string>.zip</string>
+	</entry>
+	<entry>
+          <string>application/x-tar</string>
+	  <string>.tar</string>
+	</entry>
+      </extMimeMap>
+    </org.lockss.plugin.ArchiveFileTypes>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>

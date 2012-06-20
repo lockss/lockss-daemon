@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.1 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.1.2.1 2012-06-20 00:03:07 nchondros Exp $
  */
 
 /*
@@ -52,6 +52,8 @@ import org.lockss.util.NumberUtil;
  * In order to maintain consistency between full volume/year/issue strings and
  * start and end values, the start and end values are set within the setter of
  * each full string. This means the getter can just return the internal value.
+ * Volume, year and issue strings can include comma/semicolon-separated lists
+ * of ranges.
  *
  * @author Neil Mayo
  */
@@ -160,17 +162,17 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
 
   // Setters (chainable)
   public BibliographicItemAdapter setPrintIssn(String printIssn) {
-    if (MetadataUtil.isISSN(printIssn)) this.printIssn = printIssn;
+    if (MetadataUtil.isIssn(printIssn)) this.printIssn = printIssn;
     return this;
   }
 
   public BibliographicItemAdapter setEissn(String eIssn) {
-    if (MetadataUtil.isISSN(eIssn)) this.eIssn = eIssn;
+    if (MetadataUtil.isIssn(eIssn)) this.eIssn = eIssn;
     return this;
   }
 
   public BibliographicItemAdapter setIssnL(String issnL) {
-    if (MetadataUtil.isISSN(issnL)) this.issnL = issnL;
+    if (MetadataUtil.isIssn(issnL)) this.issnL = issnL;
     return this;
   }
 
@@ -192,12 +194,9 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   public BibliographicItemAdapter setVolume(String volume) {
     this.volume = volume;
     // Set the start and end volumes from this string to maintain internal consistency
-    if (BibliographicUtil.isVolumeRange(volume)) {
-      this.startVolume = NumberUtil.getRangeStart(volume);
-      this.endVolume = NumberUtil.getRangeEnd(volume);
-    } else {
-      this.startVolume = volume;
-      this.endVolume = volume;
+    if (volume!=null) {
+      this.setStartVolume(BibliographicUtil.getRangeSetStart(volume));
+      this.setEndVolume(BibliographicUtil.getRangeSetEnd(volume));
     }
     return this;
   }
@@ -205,18 +204,20 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   public BibliographicItemAdapter setYear(String year) {
     this.year = year;
     // Set the start and end years from this string to maintain internal consistency
-    //if (NumberUtil.isNumericalRange(year)) {
-      this.startYear = NumberUtil.getRangeStart(year);
-      this.endYear = NumberUtil.getRangeEnd(year);
-    //}
+    if (year!=null) {
+      this.setStartYear(BibliographicUtil.getRangeSetStart(year));
+      this.setEndYear(BibliographicUtil.getRangeSetEnd(year));
+    }
     return this;
   }
 
   public BibliographicItemAdapter setIssue(String issue) {
     this.issue = issue;
     // Set the start and end issues from this string to maintain internal consistency
-    this.startIssue = NumberUtil.getRangeStart(issue);
-    this.endIssue = NumberUtil.getRangeEnd(issue);
+    if (issue!=null) {
+      this.setStartIssue(BibliographicUtil.getRangeSetStart(issue));
+      this.setEndIssue(BibliographicUtil.getRangeSetEnd(issue));
+    }
     return this;
   }
 

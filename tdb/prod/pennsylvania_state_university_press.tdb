@@ -3,10 +3,6 @@
   publisher <
     name = Pennsylvania State University Press
   >
-
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
   
   {
   
@@ -16,8 +12,14 @@
       issnl = 0737-5840
     >
     
+    {
+      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      comment[needs_plugin] = years 1974-1983 on JSTOR/PSU Press
+      comment[continued_by] = 0742-5503
+    }
+    
   }
-
+  
   {
   
     title <
@@ -26,22 +28,30 @@
       eissn = 1528-4204 ;
       issnl = 0009-2002
     >
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = chaucer_review
+      attr[journal_id] = cr
 
-    param[journal_dir] = chaucer_review
-
-    au < released ; 2000 ; The Chaucer Review Volume 34 ; 34 >
-    au < released ; 2001 ; The Chaucer Review Volume 35 ; 35 >
-    au < released ; 2002 ; The Chaucer Review Volume 36 ; 36 >
-    au < released ; 2003 ; The Chaucer Review Volume 37 ; 37 >
-    au < released ; 2004 ; The Chaucer Review Volume 38 ; 38 >
-    au < released ; 2005 ; The Chaucer Review Volume 39 ; 39 >
-    au < released ; 2006 ; The Chaucer Review Volume 40 ; 40 >
-    au < released ; 2007 ; The Chaucer Review Volume 41 ; 41 >
-    au < ready ; 2008 ; The Chaucer Review Volume 42 ; 42 >
-    au < ready ; 2009 ; The Chaucer Review Volume 43 ; 43 >
-    au < ready ; 2010 ; The Chaucer Review Volume 44 ; 44 >
-    au < ready ; 2011 ; The Chaucer Review Volume 45 ; 45 >
-    au < manifest ; 2011 ; The Chaucer Review Volume 46 ; 46 >
+      au < released ; 2000 ; The Chaucer Review Volume 34 ; 34 >
+      au < released ; 2001 ; The Chaucer Review Volume 35 ; 35 >
+      au < released ; 2002 ; The Chaucer Review Volume 36 ; 36 >
+      au < released ; 2003 ; The Chaucer Review Volume 37 ; 37 >
+      au < released ; 2004 ; The Chaucer Review Volume 38 ; 38 >
+      au < released ; 2005 ; The Chaucer Review Volume 39 ; 39 >
+      au < released ; 2006 ; The Chaucer Review Volume 40 ; 40 >
+      au < released ; 2007 ; The Chaucer Review Volume 41 ; 41 >
+      au < ready ; 2008 ; The Chaucer Review Volume 42 ; 42 >
+      au < ready ; 2009 ; The Chaucer Review Volume 43 ; 43 >
+      au < ready ; 2010 ; The Chaucer Review Volume 44 ; 44 >
+      au < ready ; 2011 ; The Chaucer Review Volume 45 ; 45 >
+      au < ready ; 2011 ; The Chaucer Review Volume 46 ; 46 >
+      au < expected ; 2012 ; The Chaucer Review Volume 47 ; 47 >
+    
+    }
 
   }
 
@@ -53,22 +63,30 @@
       eissn = 1528-4212 ;
       issnl = 0010-4132
     >
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = comparative_literature_studies
+      attr[journal_id] = cls
 
-    param[journal_dir] = comparative_literature_studies
-
-    au < released ; 1999 ; Comparative Literature Studies Volume 36 ; 36 >
-    au < released ; 2000 ; Comparative Literature Studies Volume 37 ; 37 >
-    au < released ; 2001 ; Comparative Literature Studies Volume 38 ; 38 >
-    au < released ; 2002 ; Comparative Literature Studies Volume 39 ; 39 >
-    au < released ; 2003 ; Comparative Literature Studies Volume 40 ; 40 >
-    au < released ; 2004 ; Comparative Literature Studies Volume 41 ; 41 >
-    au < released ; 2005 ; Comparative Literature Studies Volume 42 ; 42 >
-    au < released ; 2006 ; Comparative Literature Studies Volume 43 ; 43 >
-    au < released ; 2007 ; Comparative Literature Studies Volume 44 ; 44 >
-    au < released ; 2008 ; Comparative Literature Studies Volume 45 ; 45 >
-    au < released ; 2009 ; Comparative Literature Studies Volume 46 ; 46 >
-    au < released ; 2010 ; Comparative Literature Studies Volume 47 ; 47 >
-    au < released ; 2011 ; Comparative Literature Studies Volume 48 ; 48 >
+      au < released ; 1999 ; Comparative Literature Studies Volume 36 ; 36 >
+      au < released ; 2000 ; Comparative Literature Studies Volume 37 ; 37 >
+      au < released ; 2001 ; Comparative Literature Studies Volume 38 ; 38 >
+      au < released ; 2002 ; Comparative Literature Studies Volume 39 ; 39 >
+      au < released ; 2003 ; Comparative Literature Studies Volume 40 ; 40 >
+      au < released ; 2004 ; Comparative Literature Studies Volume 41 ; 41 >
+      au < released ; 2005 ; Comparative Literature Studies Volume 42 ; 42 >
+      au < released ; 2006 ; Comparative Literature Studies Volume 43 ; 43 >
+      au < released ; 2007 ; Comparative Literature Studies Volume 44 ; 44 >
+      au < released ; 2008 ; Comparative Literature Studies Volume 45 ; 45 >
+      au < released ; 2009 ; Comparative Literature Studies Volume 46 ; 46 >
+      au < released ; 2010 ; Comparative Literature Studies Volume 47 ; 47 >
+      au < released ; 2011 ; Comparative Literature Studies Volume 48 ; 48 >
+      au < manifest ; 2012 ; Comparative Literature Studies Volume 49 ; 49 >
+     
+    }
 
   }
 
@@ -80,7 +98,18 @@
       eissn = 2161-4318 ;
       issnl = 1040-9483 
     >
+  
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/    
+      param[journal_dir] = eugene_oneill_review
+      attr[journal_id] = eor
     
+      au < manifest ; 2012 ; The Eugene O'Neill Review Volume 33 ; 33 >
+      
+    }
+
   }
 
   {
@@ -91,19 +120,27 @@
       eissn = 1538-9731 ;
       issnl = 1089-0017
     >
+ 
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = good_society
+      attr[journal_id] = gso
 
-    param[journal_dir] = good_society
-
-    au < released ; 2002 ; The Good Society Volume 11 ; 11 >
-    au < released ; 2003 ; The Good Society Volume 12 ; 12 >
-    au < released ; 2004 ; The Good Society Volume 13 ; 13 >
-    au < released ; 2005 ; The Good Society Volume 14 ; 14 >
-    au < released ; 2006 ; The Good Society Volume 15 ; 15 >
-    au < released ; 2007 ; The Good Society Volume 16 ; 16 >
-    au < released ; 2008 ; The Good Society Volume 17 ; 17 >
-    au < released ; 2009 ; The Good Society Volume 18 ; 18 >
-    au < ready ; 2010 ; The Good Society Volume 19 ; 19 >
-    au < manifest ; 2011 ; The Good Society Volume 20 ; 20 >
+      au < released ; 2002 ; The Good Society Volume 11 ; 11 >
+      au < released ; 2003 ; The Good Society Volume 12 ; 12 >
+      au < released ; 2004 ; The Good Society Volume 13 ; 13 >
+      au < released ; 2005 ; The Good Society Volume 14 ; 14 >
+      au < released ; 2006 ; The Good Society Volume 15 ; 15 >
+      au < released ; 2007 ; The Good Society Volume 16 ; 16 >
+      au < released ; 2008 ; The Good Society Volume 17 ; 17 >
+      au < released ; 2009 ; The Good Society Volume 18 ; 18 >
+      au < ready ; 2010 ; The Good Society Volume 19 ; 19 >
+      au < ready ; 2011 ; The Good Society Volume 20 ; 20 >
+      au < expected ; 2012 ; The Good Society Volume 21 ; 21 >
+      
+    }
 
   }
   
@@ -116,8 +153,17 @@
       issnl = 1524-8429
     >
     
-    param[journal_dir] = interdisciplinary_literary_studies
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/    
+      param[journal_dir] = interdisciplinary_literary_studies
+      attr[journal_id] = ids
     
+      au < ready ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 14 >
+      
+    }
+
   }
   
   {
@@ -129,6 +175,17 @@
       issnl = 2160-6757 
     >
     
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = the_journal_of_assessment_and_institutional_effectiveness
+      attr[journal_id] = aie
+    
+      au < manifest ; 2012 ; Journal of Assessment & Institutional Effectiveness Volume 2 ; 2 >
+      
+    }
+    
   }
 
   {
@@ -139,22 +196,30 @@
       eissn = 1527-2060 ;
       issnl = 0021-3667
     >
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_general_education
+      attr[journal_id] = jge
 
-    param[journal_dir] = journal_of_general_education
-
-    au < released ; 1999 ; The Journal of General Education Volume 48 ; 48 >
-    au < released ; 2000 ; The Journal of General Education Volume 49 ; 49 >
-    au < released ; 2001 ; The Journal of General Education Volume 50 ; 50 >
-    au < released ; 2002 ; The Journal of General Education Volume 51 ; 51 >
-    au < released ; 2003 ; The Journal of General Education Volume 52 ; 52 >
-    au < released ; 2004 ; The Journal of General Education Volume 53 ; 53 >
-    au < released ; 2005-2006 ; The Journal of General Education Volume 54 ; 54 >
-    au < released ; 2006 ; The Journal of General Education Volume 55 ; 55 >
-    au < released ; 2007 ; The Journal of General Education Volume 56 ; 56 >
-    au < released ; 2008 ; The Journal of General Education Volume 57 ; 57 >
-    au < released ; 2009 ; The Journal of General Education Volume 58 ; 58 >
-    au < ready ; 2010 ; The Journal of General Education Volume 59 ; 59 >
-    au < manifest ; 2011 ; The Journal of General Education Volume 60 ; 60 >
+      au < released ; 1999 ; The Journal of General Education Volume 48 ; 48 >
+      au < released ; 2000 ; The Journal of General Education Volume 49 ; 49 >
+      au < released ; 2001 ; The Journal of General Education Volume 50 ; 50 >
+      au < released ; 2002 ; The Journal of General Education Volume 51 ; 51 >
+      au < released ; 2003 ; The Journal of General Education Volume 52 ; 52 >
+      au < released ; 2004 ; The Journal of General Education Volume 53 ; 53 >
+      au < released ; 2005-2006 ; The Journal of General Education Volume 54 ; 54 >
+      au < released ; 2006 ; The Journal of General Education Volume 55 ; 55 >
+      au < released ; 2007 ; The Journal of General Education Volume 56 ; 56 >
+      au < released ; 2008 ; The Journal of General Education Volume 57 ; 57 >
+      au < released ; 2009 ; The Journal of General Education Volume 58 ; 58 >
+      au < ready ; 2010 ; The Journal of General Education Volume 59 ; 59 >
+      au < ready ; 2011 ; The Journal of General Education Volume 60 ; 60 >
+      au < manifest ; 2012 ; The Journal of General Education Volume 61 ; 61 >
+      
+    }
 
   }
 
@@ -166,11 +231,29 @@
       eissn = 2153-9650 ;
       issnl = 1947-6566
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      comment[needs_plugin] = years 2010-2012 on JSTOR/PSU Press
+      comment[continued_from] = 0742-5503
+    
+    }
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      comment[title_history] = issn1974-1983 (years 1974-1983), issn0742-5503 (years 1984-2009), issn1947-6566 (years 2010-2012). only issn1947-6566 archived in Muse.
+      comment[continued_from] = 0742-5503
+      param[journal_dir] = journal_of_medieval_religious_cultures
+      attr[journal_id] = mrc
 
-    param[journal_dir] = journal_of_medieval_religious_cultures
-
-    au < manifest ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 36 >
-    au < manifest ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 37 >
+      au < ready ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 36 >
+      au < ready ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 37 >
+      au < manifest ; 2012 ; Journal of Medieval Religious Cultures Volume 38 ; 38 >
+      
+    }
     
   }
 
@@ -179,14 +262,22 @@
     title <
       name = Journal of Modern Periodical Studies ;
       issn = 1947-6574 ;
-      eissn = 2152-2972 ;
+      eissn = 2152-9272 ;
       issnl = 1947-6574
     >
-
-    param[journal_dir] = journal_of_modern_periodical_studies
     
-    au < manifest ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 1 >
-    au < manifest ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2 >
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_modern_periodical_studies
+      attr[journal_id] = jmp
+    
+      au < ready ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 1 >
+      au < ready ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2 >
+      au < expected ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 3 >
+      
+    }
     
   }
 
@@ -199,7 +290,26 @@
       issnl = 1933-6632
     >
     
-    param[journal_dir] = journal_of_moravian_history
+    {
+    
+      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      comment[needs_plugin] = years 2006-2012 on JSTOR/PSU Press.
+      comment[continued_from] = 0886-1730 JSTOR/Moravian Historical Society? years 1857-2000
+      
+    }
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+          
+      param[journal_dir] = journal_of_moravian_history
+      attr[journal_id] = moh
+      comment[continued_from] = 0886-1730 JSTOR/Moravian Historical Society? years 1857-2000
+
+      au < manifest ; 2012 ; The Journal of Moravian History Volume 12 ; 12 >
+      
+    }
     
   }
 
@@ -211,29 +321,37 @@
       eissn = 0968-8005 ;
       issnl = 0968-8005
     >
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] ; volume >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_nietzsche_studies
+      attr[journal_id] = nie
 
-    param[journal_dir] = journal_of_nietzsche_studies
-	implicit < status ; year ; name ; param[volume] ; volume >
-
-    au < released ; 2002 ; The Journal of Nietzsche Studies Issue 23 ; 23 ; 23 >
-    au < released ; 2002 ; The Journal of Nietzsche Studies Issue 24 ; 24 ; 24 >
-    au < released ; 2003 ; The Journal of Nietzsche Studies Issue 25 ; 25 ; 25 >
-    au < released ; 2003 ; The Journal of Nietzsche Studies Issue 26 ; 26 ; 26 >
-    au < released ; 2004 ; The Journal of Nietzsche Studies Issue 27 ; 27 ; 27 >
-    au < released ; 2004 ; The Journal of Nietzsche Studies Issue 28 ; 28 ; 28 >
-    au < released ; 2005 ; The Journal of Nietzsche Studies Issue 29 ; 29 ; 29 >
-    au < released ; 2005 ; The Journal of Nietzsche Studies Issue 30 ; 30 ; 30 >
-    au < released ; 2006 ; The Journal of Nietzsche Studies Issue 31 ; 31 ; 31 >
-    au < released ; 2006 ; The Journal of Nietzsche Studies Issue 32 ; 32 ; 32 >
-    au < released ; 2007 ; The Journal of Nietzsche Studies Issue 33 ; 33 ; 33 >
-    au < released ; 2007 ; The Journal of Nietzsche Studies Issue 34 ; 34 ; 34 >
-    au < released ; 2008 ; The Journal of Nietzsche Studies Issue 35/36 ; 35 ; 35-36 >
-    au < released ; 2009 ; The Journal of Nietzsche Studies Issue 37 ; 37 ; 37 >
-    au < released ; 2009 ; The Journal of Nietzsche Studies Issue 38 ; 38 ; 38 >
-    au < ready ; 2010 ; The Journal of Nietzsche Studies Issue 39 ; 39 ; 39 >
-    au < ready ; 2010 ; The Journal of Nietzsche Studies Issue 40 ; 40 ; 40 >
-    au < ready ; 2011 ; The Journal of Nietzsche Studies Issue 41 ; 41 ; 41 >
-    au < manifest ; 2011 ; The Journal of Nietzsche Studies Issue 42 ; 42 ; 42 >
+      au < released ; 2002 ; The Journal of Nietzsche Studies Issue 23 ; 23 ; 23 >
+      au < released ; 2002 ; The Journal of Nietzsche Studies Issue 24 ; 24 ; 24 >
+      au < released ; 2003 ; The Journal of Nietzsche Studies Issue 25 ; 25 ; 25 >
+      au < released ; 2003 ; The Journal of Nietzsche Studies Issue 26 ; 26 ; 26 >
+      au < released ; 2004 ; The Journal of Nietzsche Studies Issue 27 ; 27 ; 27 >
+      au < released ; 2004 ; The Journal of Nietzsche Studies Issue 28 ; 28 ; 28 >
+      au < released ; 2005 ; The Journal of Nietzsche Studies Issue 29 ; 29 ; 29 >
+      au < released ; 2005 ; The Journal of Nietzsche Studies Issue 30 ; 30 ; 30 >
+      au < released ; 2006 ; The Journal of Nietzsche Studies Issue 31 ; 31 ; 31 >
+      au < released ; 2006 ; The Journal of Nietzsche Studies Issue 32 ; 32 ; 32 >
+      au < released ; 2007 ; The Journal of Nietzsche Studies Issue 33 ; 33 ; 33 >
+      au < released ; 2007 ; The Journal of Nietzsche Studies Issue 34 ; 34 ; 34 >
+      au < released ; 2008 ; The Journal of Nietzsche Studies Issue 35/36 ; 35 ; 35-36 >
+      au < released ; 2009 ; The Journal of Nietzsche Studies Issue 37 ; 37 ; 37 >
+      au < released ; 2009 ; The Journal of Nietzsche Studies Issue 38 ; 38 ; 38 >
+      au < ready ; 2010 ; The Journal of Nietzsche Studies Issue 39 ; 39 ; 39 >
+      au < ready ; 2010 ; The Journal of Nietzsche Studies Issue 40 ; 40 ; 40 >
+      au < ready ; 2011 ; The Journal of Nietzsche Studies Issue 41 ; 41 ; 41 >
+      au < ready ; 2011 ; The Journal of Nietzsche Studies Issue 42 ; 42 ; 42 >
+      au < manifest ; 2012 ; The Journal of Nietzsche Studies Issue 43 ; 43 ; 43 >
+      au < expected ; 2012 ; The Journal of Nietzsche Studies Issue 44 ; 44 ; 44 >
+      
+    }
     
   }
 
@@ -245,22 +363,30 @@
       eissn = 1527-9383 ;
       issnl = 0891-625X
     >
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_speculative_philosophy
+      attr[journal_id] = jsp
 
-    param[journal_dir] = journal_of_speculative_philosophy
-
-    au < released ; 1999 ; The Journal of Speculative Philosophy Volume 13 ; 13 >
-    au < released ; 2000 ; The Journal of Speculative Philosophy Volume 14 ; 14 >
-    au < released ; 2001 ; The Journal of Speculative Philosophy Volume 15 ; 15 >
-    au < released ; 2002 ; The Journal of Speculative Philosophy Volume 16 ; 16 >
-    au < released ; 2003 ; The Journal of Speculative Philosophy Volume 17 ; 17 >
-    au < released ; 2004 ; The Journal of Speculative Philosophy Volume 18 ; 18 >
-    au < released ; 2005 ; The Journal of Speculative Philosophy Volume 19 ; 19 >
-    au < released ; 2006 ; The Journal of Speculative Philosophy Volume 20 ; 20 >
-    au < released ; 2007 ; The Journal of Speculative Philosophy Volume 21 ; 21 >
-    au < released ; 2008 ; The Journal of Speculative Philosophy Volume 22 ; 22 >
-    au < released ; 2009 ; The Journal of Speculative Philosophy Volume 23 ; 23 >
-    au < ready ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 >
-    au < ready ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 >
+      au < released ; 1999 ; The Journal of Speculative Philosophy Volume 13 ; 13 >
+      au < released ; 2000 ; The Journal of Speculative Philosophy Volume 14 ; 14 >
+      au < released ; 2001 ; The Journal of Speculative Philosophy Volume 15 ; 15 >
+      au < released ; 2002 ; The Journal of Speculative Philosophy Volume 16 ; 16 >
+      au < released ; 2003 ; The Journal of Speculative Philosophy Volume 17 ; 17 >
+      au < released ; 2004 ; The Journal of Speculative Philosophy Volume 18 ; 18 >
+      au < released ; 2005 ; The Journal of Speculative Philosophy Volume 19 ; 19 >
+      au < released ; 2006 ; The Journal of Speculative Philosophy Volume 20 ; 20 >
+      au < released ; 2007 ; The Journal of Speculative Philosophy Volume 21 ; 21 >
+      au < released ; 2008 ; The Journal of Speculative Philosophy Volume 22 ; 22 >
+      au < released ; 2009 ; The Journal of Speculative Philosophy Volume 23 ; 23 >
+      au < ready ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 >
+      au < ready ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 >
+      au < expected ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 26 >
+      
+    }
 
   }
 
@@ -273,7 +399,22 @@
       issnl = 1074-164X
     >
     
-    param[journal_dir] = mediterranean_studies
+    {
+      
+      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      comment[needs_plugin] = years 1989-2012 on JSTOR/PSU Press. full run, vols 1-12
+      comment[continued_from] = 0742-5503
+      comment[overlap] = years 2005-2010 on Manchester Univ. Press/Ingenta
+    }
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = mediterranean_studies
+      attr[journal_id] = mds
+    
+      au < manifest ; 2012 ; Mediterranean Studies Volume 20 ; 20 >
+    }
     
   }
 
@@ -285,6 +426,15 @@
       issnl = 0742-5503
     >
     
+    {
+      
+      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      comment[needs_plugin] = years 1984-2009 on JSTOR/PSU Press
+      comment[continued_by] = 1947-6566
+      comment[continued_from] = 0737-5840
+      
+    }
+    
   }
 
   {
@@ -294,11 +444,19 @@
       eissn = 2153-2109 ;
       issnl = 0031-4528
     >
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = pennsylvania_history
+      attr[journal_id] = pnh
 
-    param[journal_dir] = pennsylvania_history
-
-    au < released ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
-    au < ready ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
+      au < released ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
+      au < ready ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
+      au < manifest ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 79 >
+      
+    }
 
   }
 
@@ -310,22 +468,30 @@
       eissn = 0031-8213 ;
       issnl = 0031-8213
     >
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = philosophy_and_rhetoric
+      attr[journal_id] = par
 
-    param[journal_dir] = philosophy_and_rhetoric
-
-    au < released ; 1999 ; Philosophy and Rhetoric Volume 32 ; 32 >
-    au < released ; 2000 ; Philosophy and Rhetoric Volume 33 ; 33 >
-    au < released ; 2001 ; Philosophy and Rhetoric Volume 34 ; 34 >
-    au < released ; 2002 ; Philosophy and Rhetoric Volume 35 ; 35 >
-    au < released ; 2003 ; Philosophy and Rhetoric Volume 36 ; 36 >
-    au < released ; 2004 ; Philosophy and Rhetoric Volume 37 ; 37 >
-    au < released ; 2005 ; Philosophy and Rhetoric Volume 38 ; 38 >
-    au < released ; 2006 ; Philosophy and Rhetoric Volume 39 ; 39 >
-    au < released ; 2007 ; Philosophy and Rhetoric Volume 40 ; 40 >
-    au < released ; 2008 ; Philosophy and Rhetoric Volume 41 ; 41 >
-    au < released ; 2009 ; Philosophy and Rhetoric Volume 42 ; 42 >
-    au < ready ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 >
-    au < ready ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 >
+      au < released ; 1999 ; Philosophy and Rhetoric Volume 32 ; 32 >
+      au < released ; 2000 ; Philosophy and Rhetoric Volume 33 ; 33 >
+      au < released ; 2001 ; Philosophy and Rhetoric Volume 34 ; 34 >
+      au < released ; 2002 ; Philosophy and Rhetoric Volume 35 ; 35 >
+      au < released ; 2003 ; Philosophy and Rhetoric Volume 36 ; 36 >
+      au < released ; 2004 ; Philosophy and Rhetoric Volume 37 ; 37 >
+      au < released ; 2005 ; Philosophy and Rhetoric Volume 38 ; 38 >
+      au < released ; 2006 ; Philosophy and Rhetoric Volume 39 ; 39 >
+      au < released ; 2007 ; Philosophy and Rhetoric Volume 40 ; 40 >
+      au < released ; 2008 ; Philosophy and Rhetoric Volume 41 ; 41 >
+      au < released ; 2009 ; Philosophy and Rhetoric Volume 42 ; 42 >
+      au < ready ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 >
+      au < ready ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 >
+      au < manifest ; 2012 ; Philosophy and Rhetoric Volume 45 ; 45 >
+      
+    }
 
   }
 
@@ -337,8 +503,17 @@
       eissn = 2161-2188 ;
       issnl = 2161-2188 
     >
-
-    param[journal_dir] = preternature
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = preternature
+      attr[journal_id] = prn
+    
+      au < manifest ; 2012 ; Preternature: Critical and Historical Studies on the Preternatural Volume 1 ; 1 >
+      
+    }
     
   }
 
@@ -350,12 +525,19 @@
       eissn = 0048-7384 ;
       issnl = 0048-7384
     >
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = resources_for_american_literary_study
+      attr[journal_id] = rals
 
-    param[journal_dir] = resources_for_american_literary_study
-
-    au < released ; 1999 ; Resources for American Literary Study Volume 25 ; 25 >
-    au < released ; 2000 ; Resources for American Literary Study Volume 26 ; 26 >
-    au < released ; 2001 ; Resources for American Literary Study Volume 27 ; 27 >
+      au < released ; 1999 ; Resources for American Literary Study Volume 25 ; 25 >
+      au < released ; 2000 ; Resources for American Literary Study Volume 26 ; 26 >
+      au < released ; 2001 ; Resources for American Literary Study Volume 27 ; 27 >
+      
+    }
 
   }
 
@@ -367,22 +549,29 @@
       eissn = 1529-1480 ;
       issnl = 0741-5842
     >
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = annual_of_bernard_shaw_studies
+      attr[journal_id] = shaw
 
-    param[journal_dir] = annual_of_bernard_shaw_studies
-
-    au < released ; 2000 ; SHAW The Annual of Bernard Shaw Studies Volume 20 ; 20 >
-    au < released ; 2001 ; SHAW The Annual of Bernard Shaw Studies Volume 21 ; 21 >
-    au < released ; 2002 ; SHAW The Annual of Bernard Shaw Studies Volume 22 ; 22 >
-    au < released ; 2003 ; SHAW The Annual of Bernard Shaw Studies Volume 23 ; 23 >
-    au < released ; 2004 ; SHAW The Annual of Bernard Shaw Studies Volume 24 ; 24 >
-    au < released ; 2005 ; SHAW The Annual of Bernard Shaw Studies Volume 25 ; 25 >
-    au < released ; 2006 ; SHAW The Annual of Bernard Shaw Studies Volume 26 ; 26 >
-    au < released ; 2007 ; SHAW The Annual of Bernard Shaw Studies Volume 27 ; 27 >
-    au < released ; 2008 ; SHAW The Annual of Bernard Shaw Studies Volume 28 ; 28 >
-    au < released ; 2009 ; SHAW The Annual of Bernard Shaw Studies Volume 29 ; 29 >
-    au < ready ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 >
-    au < manifest ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 31 >
-
+      au < released ; 2000 ; SHAW The Annual of Bernard Shaw Studies Volume 20 ; 20 >
+      au < released ; 2001 ; SHAW The Annual of Bernard Shaw Studies Volume 21 ; 21 >
+      au < released ; 2002 ; SHAW The Annual of Bernard Shaw Studies Volume 22 ; 22 >
+      au < released ; 2003 ; SHAW The Annual of Bernard Shaw Studies Volume 23 ; 23 >
+      au < released ; 2004 ; SHAW The Annual of Bernard Shaw Studies Volume 24 ; 24 >
+      au < released ; 2005 ; SHAW The Annual of Bernard Shaw Studies Volume 25 ; 25 >
+      au < released ; 2006 ; SHAW The Annual of Bernard Shaw Studies Volume 26 ; 26 >
+      au < released ; 2007 ; SHAW The Annual of Bernard Shaw Studies Volume 27 ; 27 >
+      au < released ; 2008 ; SHAW The Annual of Bernard Shaw Studies Volume 28 ; 28 >
+      au < released ; 2009 ; SHAW The Annual of Bernard Shaw Studies Volume 29 ; 29 >
+      au < ready ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 >
+      au < ready ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 31 >
+      au < expected ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 ; 32 >
+      
+    }
 
   }
 
@@ -395,7 +584,16 @@
       issnl = 0038-1861 
     >
     
-    param[journal_dir] = soundings
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/    
+      param[journal_dir] = soundings
+      attr[journal_id] = sij
+      
+      au < manifest ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 ; 95 >
+      
+    }
 
   }
 
@@ -407,12 +605,21 @@
       eissn = 1948-5077 ;
       issnl = 0271-9274 
     >
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = studies_in_american_jewish_literature
+      attr[journal_id] = ajl
 
-    param[journal_dir] = studies_in_american_jewish_literature
-
-    au < released ; 2008 ; Studies in American Jewish Literature Volume 27 ; 27 >
-    au < released ; 2009 ; Studies in American Jewish Literature Volume 28 ; 28 >
-    au < ready ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 >
+      au < released ; 2008 ; Studies in American Jewish Literature Volume 27 ; 27 >
+      au < released ; 2009 ; Studies in American Jewish Literature Volume 28 ; 28 >
+      au < ready ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 >
+      au < ready ; 2011 ; Studies in American Jewish Literature Volume 30 ; 30 >
+      au < manifest ; 2012 ; Studies in American Jewish Literature Volume 31 ; 31 >
+      
+    }
 
   }
 
@@ -424,9 +631,18 @@
       eissn = 2157-328X ;
       issnl = 0041-1612 
     >
-
-    param[journal_dir] = transportation_journal
     
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = transportation_journal
+      attr[journal_id] = tnp
+    
+      au < exists ; 2012 ; Transportation Journal Volume 1 ; 1 >
+      
+    }  
+
   }
 
   {
@@ -437,12 +653,19 @@
       eissn = 2154-9648 ;
       issnl = 1045-991X 
     >
+    
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = utopian_studies
+      attr[journal_id] = utp
 
-    param[journal_dir] = utopian_studies
-
-    au < ready ; 2010 ; Utopian Studies Volume 21 ; 21 >
-    au < ready ; 2011 ; Utopian Studies Volume 22 ; 22 >
-        
+      au < ready ; 2010 ; Utopian Studies Volume 21 ; 21 >
+      au < ready ; 2011 ; Utopian Studies Volume 22 ; 22 >
+      au < manifest ; 2012 ; Utopian Studies Volume 23 ; 23 >
+    }
+    
   }
 
 }

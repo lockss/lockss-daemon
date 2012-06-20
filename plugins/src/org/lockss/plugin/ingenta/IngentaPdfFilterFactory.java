@@ -1,10 +1,10 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.2 2009-10-28 00:24:50 thib_gc Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.2.30.1 2012-06-20 00:02:56 nchondros Exp $
  */ 
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,6 +37,7 @@ import java.io.InputStream;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.pdf.OutputDocumentTransform;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ingenta.IngentaPdfUtil.NeedsArchivalUnit;
 import org.lockss.util.*;
 
 public class IngentaPdfFilterFactory implements FilterFactory {
@@ -53,6 +54,9 @@ public class IngentaPdfFilterFactory implements FilterFactory {
     }
     else {
       logger.debug2("Filtered with " + documentTransform.getClass().getName());
+      if (documentTransform instanceof NeedsArchivalUnit) {
+        ((NeedsArchivalUnit)documentTransform).setArchivalUnit(au);
+      }
       return PdfUtil.applyFromInputStream(documentTransform, in);
     }
   }

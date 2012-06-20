@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.14 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.14.14.1 2012-06-20 00:02:51 nchondros Exp $
  */
 
 /*
@@ -355,10 +355,10 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     assertEquals(expectedElements, rows.size());
 
     Map map = (Map)rows.get(0);
-    assertEquals(NC_TYPE, map.get(CRAWL_TYPE));
+    assertEquals(REPAIR_TYPE, map.get(CRAWL_TYPE));
 
     map = (Map)rows.get(1);
-    assertEquals(REPAIR_TYPE, map.get(CRAWL_TYPE));
+    assertEquals(NC_TYPE, map.get(CRAWL_TYPE));
   }
 
   public void testCrawlStatus() {
@@ -382,7 +382,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     assertEquals(expectedElements, rows.size());
 
     Map map = (Map)rows.get(0);
-    assertEquals(STATUS_INCOMPLETE,
+    assertEquals(STATUS_ERROR,
  		 StatusTable.getActualValue(map.get(CRAWL_STATUS)));
 
     map = (Map)rows.get(1);
@@ -390,7 +390,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 		 StatusTable.getActualValue(map.get(CRAWL_STATUS)));
 
     map = (Map)rows.get(2);
-    assertEquals(STATUS_ERROR,
+    assertEquals(STATUS_INCOMPLETE,
 		 StatusTable.getActualValue(map.get(CRAWL_STATUS)));
   }
 
@@ -418,14 +418,14 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     assertEquals(new Long(2), map.get(DURATION_COL_NAME));
 
     map = (Map)rows.get(1);
-    assertEquals(new Long(2), map.get(START_TIME_COL_NAME));
-//     assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
-    assertEquals(new Long(0), map.get(DURATION_COL_NAME));
-
-    map = (Map)rows.get(2);
     assertEquals(new Long(1), map.get(START_TIME_COL_NAME));
 //     assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
     assertEquals(new Long(1), map.get(DURATION_COL_NAME));
+
+    map = (Map)rows.get(2);
+    assertEquals(new Long(2), map.get(START_TIME_COL_NAME));
+//     assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
+    assertEquals(new Long(0), map.get(DURATION_COL_NAME));
   }
 
 

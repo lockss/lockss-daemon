@@ -1,10 +1,10 @@
 /*
- * $Id: TestCreativeCommonsV3PermissionChecker.java,v 1.2 2007-10-04 09:43:40 tlipkis Exp $
+ * $Id: TestCreativeCommonsV3PermissionChecker.java,v 1.2.60.1 2012-06-20 00:02:42 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,264 +46,91 @@ import org.lockss.filter.*;
 public class TestCreativeCommonsV3PermissionChecker
   extends LockssPermissionCheckerTestCase {
 
-  private CreativeCommonsV3PermissionChecker checker = null;
-  private String LEAD_IN = "<html>/n<head>/n<title>FOO</title>\n</head>"+
-    "laa-dee-dah-LOCK-KCOL\n\n";
-  private String RUN_OUT = "\n\nTheEnd!\n" + "</body>\n</html>\n";
-  private String BEGIN_STRING = "<a ";
-  private String END_STRING = " >";
-  private String HREF_STEM = "href=\"http://creativecommons.org/licenses/";
-  private String REL_STRING = "rel=\"license\"";
-  private String VERSION_STRING = "3.0";
-  private String[] TYPE_STRINGS = {
-    "by/", "by-sa/", "by-nc/", "by-nd/", "by-nc-sa/", "by-nc-nd/",
+  String template = "<html>/n<head>/n<title>FOO</title>\n</head>" +
+    "some text%smore text\n" +
+    "</body>\n</html>\n";
+
+  private String VALID_URL_STEM = "http://creativecommons.org/licenses";
+
+  private String[] VALID_TAGS = {"a", "link"};
+  private String[] VALID_LICENSES = {
+    "by", "by-sa", "by-nc", "by-nd", "by-nc-sa", "by-nc-nd",
+    "BY", "BY-SA", "BY-nc", "by-ND", "by-NC-sa", "by-NC-ND",
   };
-  private String[] WHITE_SPACE = {
-    " ", "\n", " \n", "\t\n ", "   ", "\n\n\t",
-  };
-  StringBuffer sb;
+  private String[] VALID_VERSIONS = {"1.0", "2.0", "2.5", "3.0"};
   private String TEST_URL = "http://www.example.com/";
 
   public void setUp() throws Exception {
     super.setUp();
   }
 
+  // return a CC license URL for the specified license terms and version
+  private String lu(String lic, String ver) {
+    return VALID_URL_STEM + "/" + lic + "/" + ver + "/";
+  }
+
+  // return a CC license tag element
+  private String htext(String tag) {
+    return String.format(template, tag);
+  }
+
+  private void assertPerm(String tag) {
+    String text = htext(tag);
+    CreativeCommonsV3PermissionChecker checker =
+      new CreativeCommonsV3PermissionChecker();
+    assertTrue(tag + " expected permission, wasn't",
+	       checker.checkPermission(pHelper,
+				       new StringReader(text), TEST_URL));
+    assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
+  }
+
+  private void assertNoPerm(String tag) {
+    String text = htext(tag);
+    CreativeCommonsV3PermissionChecker checker =
+      new CreativeCommonsV3PermissionChecker();
+    assertFalse(tag + " expected no permission, but was",
+	       checker.checkPermission(pHelper,
+				       new StringReader(text), TEST_URL));
+  }
+
+
   public void testValidPermissions() {
-    for (int i = 0; i < TYPE_STRINGS.length; i++) {
-      // <a href="foo" rel="license">
-      sb = new StringBuffer(LEAD_IN);
-      sb.append(BEGIN_STRING);
-      sb.append(HREF_STEM);
-      sb.append(TYPE_STRINGS[i]);
-      sb.append(VERSION_STRING);
-      sb.append("/\" ");
-      sb.append(REL_STRING);
-      sb.append(END_STRING);
-      sb.append(RUN_OUT);
-      String s_ok = sb.toString();
-
-      checker = new CreativeCommonsV3PermissionChecker();
-      // check the correct string
-      Reader reader = new StringReader(s_ok);
-      assertTrue(checker.checkPermission(pHelper, reader, TEST_URL));
-      assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
-    }
-    for (int i = 0; i < TYPE_STRINGS.length; i++) {
-      // <a rel="license" href="foo">
-      sb = new StringBuffer(LEAD_IN);
-      sb.append(BEGIN_STRING);
-      sb.append(REL_STRING);
-      sb.append(" ");
-      sb.append(HREF_STEM);
-      sb.append(TYPE_STRINGS[i]);
-      sb.append(VERSION_STRING);
-      sb.append("/\" ");
-      sb.append(END_STRING);
-      sb.append(RUN_OUT);
-      String s_ok = sb.toString();
-
-      checker = new CreativeCommonsV3PermissionChecker();
-      // check the correct string
-      Reader reader = new StringReader(s_ok);
-      assertTrue(checker.checkPermission(pHelper, reader, TEST_URL));
-      assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
+    for (String lic : VALID_LICENSES) {
+      for (String ver : VALID_VERSIONS) {
+	assertPerm("<a href=\"" + lu(lic, ver) + "\" rel=\"license\" />");
+	assertPerm("<link href=\"" + lu(lic, ver) + "\" rel=\"license\" />");
+	assertPerm("<a rel=\"license\" href=\"" + lu(lic, ver) + "\" />");
+	assertPerm("<link class=\"bar\" rel=\"license\" href=\"" +
+		   lu(lic, ver) + "\" />");
+      }
     }
   }
 
-  public void testIgnoreCasePermissions() {
-    StringBuffer sb = null;
-    for (int i = 0; i < TYPE_STRINGS.length; i++) {
-      // <a href="foo" rel="license">
-      sb = new StringBuffer(LEAD_IN);
-      sb.append(BEGIN_STRING);
-      sb.append(HREF_STEM);
-      sb.append(TYPE_STRINGS[i]);
-      sb.append(VERSION_STRING);
-      sb.append("/\" ");
-      sb.append(REL_STRING);
-      sb.append(END_STRING);
-      sb.append(RUN_OUT);
-      String s_ok = sb.toString().toLowerCase();
-
-      checker = new CreativeCommonsV3PermissionChecker();
-      // check the correct string
-      Reader reader = new StringReader(s_ok);
-      assertTrue(checker.checkPermission(pHelper, reader, TEST_URL));
-      assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
-    }
-    for (int i = 0; i < TYPE_STRINGS.length; i++) {
-      // <a rel="license" href="foo">
-      sb = new StringBuffer(LEAD_IN);
-      sb.append(BEGIN_STRING);
-      sb.append(REL_STRING);
-      sb.append(" ");
-      sb.append(HREF_STEM);
-      sb.append(TYPE_STRINGS[i]);
-      sb.append(VERSION_STRING);
-      sb.append("/\" ");
-      sb.append(END_STRING);
-      sb.append(RUN_OUT);
-      String s_ok = sb.toString().toUpperCase();
-
-      checker = new CreativeCommonsV3PermissionChecker();
-      // check the correct string
-      Reader reader = new StringReader(s_ok);
-      assertTrue(checker.checkPermission(pHelper, reader, TEST_URL));
-      assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
-    }
+  public void testCase() {
+    assertPerm("<a href=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
+    assertPerm("<a href=\"" + lu("by", "3.0") + "\" rel=\"license\" />".toUpperCase());
   }
 
-  public void testWhiteSpacePermissions() {
-    StringBuffer sb = null;
-    for (int i = 0; i < WHITE_SPACE.length; i++) {
-      // <a href="foo" rel="license">
-      sb = new StringBuffer(LEAD_IN);
-      sb.append(BEGIN_STRING);
-      sb.append(WHITE_SPACE[i]);
-      sb.append(HREF_STEM);
-      sb.append(TYPE_STRINGS[i]);
-      sb.append(VERSION_STRING);
-      sb.append("/\" ");
-      sb.append(WHITE_SPACE[i]);
-      sb.append(REL_STRING);
-      sb.append(WHITE_SPACE[i]);
-      sb.append(END_STRING);
-      sb.append(RUN_OUT);
-      String s_ok = sb.toString();
-
-      checker = new CreativeCommonsV3PermissionChecker();
-      // check the correct string
-      Reader reader = new StringReader(s_ok);
-      assertTrue(checker.checkPermission(pHelper, reader, TEST_URL));
-      assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
-    }
+  public void testWhitespace() {
+    assertPerm("<a href=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
+    assertPerm("<a\nhref=\"" + lu("by", "3.0") + "\"\nrel=\"license\"\n/>");
+    assertPerm("<a\thref=\"" + lu("by", "3.0") + "\"\trel=\"license\"\t/>");
+    assertPerm("<a\rhref=\"" + lu("by", "3.0") + "\"\rrel=\"license\"\r/>");
+    assertPerm("<a\r\nhref=\"" + lu("by", "3.0") + "\"\r\nrel=\"license\"\r\n/>");
   }
 
-  public void testNoURL() {
-    for (int i = 0; i < TYPE_STRINGS.length; i++) {
-      // <a rel="license" href="foo">
-      sb = new StringBuffer(LEAD_IN);
-      sb.append(BEGIN_STRING);
-      sb.append(HREF_STEM);
-      sb.append(TYPE_STRINGS[i]);
-      sb.append(VERSION_STRING);
-      sb.append("/\" ");
-      sb.append(REL_STRING);
-      sb.append(END_STRING);
-      sb.append(RUN_OUT);
-      String s_ok = sb.toString();
-
-      checker = new CreativeCommonsV3PermissionChecker();
-      // check the correct string
-      Reader reader = new StringReader(s_ok);
-      assertFalse(checker.checkPermission(pHelper, reader, null));
-      assertNotEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
-    }
+  public void testInValidPermissions() {
+    assertPerm("<a href=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
+    assertNoPerm("<img href=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
+    assertNoPerm("<a nohref=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
+    assertNoPerm("<a href=\"" + lu("not", "3.0") + "\" rel=\"license\" />");
+    assertNoPerm("<a href=\"" + lu("by", "4.0") + "\" rel=\"license\" />");
+    assertNoPerm("<a href=\"" + lu("by", "3.0") + "\" norel=\"license\" />");
+    assertNoPerm("<a href=\"" + lu("by", "3.0") + "\" rel=\"uncle\" />");
+    assertNoPerm("<a href=\"" + lu("by", "3.0") + "\" />");
+    assertNoPerm("<a href=\"http://example.com\" rel=\"license\" />");
+    assertNoPerm("<a href=\"" + lu("", "3.0") + "\" rel=\"license\" />");
+    assertNoPerm("<a href=\"" + lu("by", "") + "\" rel=\"license\" />");
   }
 
-  public void testNoLink() {
-    for (int i = 0; i < TYPE_STRINGS.length; i++) {
-      // <a rel="license" href="foo">
-      sb = new StringBuffer(LEAD_IN);
-      sb.append(BEGIN_STRING);
-      sb.append(REL_STRING);
-      sb.append(END_STRING);
-      sb.append(RUN_OUT);
-      String s_ok = sb.toString();
-
-      checker = new CreativeCommonsV3PermissionChecker();
-      // check the correct string
-      Reader reader = new StringReader(s_ok);
-      assertFalse(checker.checkPermission(pHelper, reader, TEST_URL));
-      assertNotEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
-    }
-  }
-
-  public void testNoLicense() {
-    for (int i = 0; i < TYPE_STRINGS.length; i++) {
-      // <a rel="license" href="foo">
-      sb = new StringBuffer(LEAD_IN);
-      sb.append(BEGIN_STRING);
-      sb.append(HREF_STEM);
-      sb.append(TYPE_STRINGS[i]);
-      sb.append(VERSION_STRING);
-      sb.append("/\" ");
-      sb.append(END_STRING);
-      sb.append(RUN_OUT);
-      String s_ok = sb.toString();
-
-      checker = new CreativeCommonsV3PermissionChecker();
-      // check the correct string
-      Reader reader = new StringReader(s_ok);
-      assertFalse(checker.checkPermission(pHelper, reader, TEST_URL));
-      assertNotEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
-    }
-  }
-
-  public void testNoLicenseType() {
-    for (int i = 0; i < TYPE_STRINGS.length; i++) {
-      // <a rel="license" href="foo">
-      sb = new StringBuffer(LEAD_IN);
-      sb.append(BEGIN_STRING);
-      sb.append(REL_STRING);
-      sb.append(" ");
-      sb.append(HREF_STEM);
-      sb.append(VERSION_STRING);
-      sb.append("/\" ");
-      sb.append(END_STRING);
-      sb.append(RUN_OUT);
-      String s_ok = sb.toString();
-
-      checker = new CreativeCommonsV3PermissionChecker();
-      // check the correct string
-      Reader reader = new StringReader(s_ok);
-      assertFalse(checker.checkPermission(pHelper, reader, TEST_URL));
-      assertNotEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
-    }
-  }
-
-  public void testNoLicenseVersion() {
-    for (int i = 0; i < TYPE_STRINGS.length; i++) {
-      // <a rel="license" href="foo">
-      sb = new StringBuffer(LEAD_IN);
-      sb.append(BEGIN_STRING);
-      sb.append(REL_STRING);
-      sb.append(" ");
-      sb.append(HREF_STEM);
-      sb.append(TYPE_STRINGS[i]);
-      sb.append("/\" ");
-      sb.append(END_STRING);
-      sb.append(RUN_OUT);
-      String s_ok = sb.toString();
-
-      checker = new CreativeCommonsV3PermissionChecker();
-      // check the correct string
-      Reader reader = new StringReader(s_ok);
-      assertFalse(checker.checkPermission(pHelper, reader, TEST_URL));
-      assertNotEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
-    }
-  }
-
-  public void testBadLicenseVersion() {
-    for (int i = 0; i < TYPE_STRINGS.length; i++) {
-      // <a rel="license" href="foo">
-      sb = new StringBuffer(LEAD_IN);
-      sb.append(BEGIN_STRING);
-      sb.append(REL_STRING);
-      sb.append(" ");
-      sb.append(HREF_STEM);
-      sb.append(TYPE_STRINGS[i]);
-      sb.append("2.7");
-      sb.append("/\" ");
-      sb.append(END_STRING);
-      sb.append(RUN_OUT);
-      String s_ok = sb.toString();
-
-      checker = new CreativeCommonsV3PermissionChecker();
-      // check the correct string
-      Reader reader = new StringReader(s_ok);
-      assertFalse(checker.checkPermission(pHelper, reader, TEST_URL));
-      assertNotEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
-    }
-  }
 }

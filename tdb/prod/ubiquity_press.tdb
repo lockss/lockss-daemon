@@ -1,0 +1,198 @@
+{
+
+  publisher <
+    name = Ubiquity Press
+  >
+
+  plugin = org.lockss.plugin.ubiquitypress.UbiquityPressPlugin  
+  implicit < status ; year ; name ; volume ; param[year] >
+  comment[year] = even though bibliographic year is e.g. 2006-2007, the manifest year is 2006.
+
+  {
+  
+    title < 
+      name = Ancient Asia;
+      eissn = 2042-5937 
+    >
+    
+    param[base_url] = http://www.ancient-asia-journal.com/
+    param[journal_id] = aa
+
+    au < manifest ; 2006 ; Ancient Asia Volume 1 ; 1 ; 2006 >
+    au < manifest ; 2010 ; Ancient Asia Volume 2 ; 2 ; 2010 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Archaeology International;
+      eissn = 2048-4194 
+    >
+    
+    param[base_url] = http://www.ai-journal.com/
+    param[journal_id] = ai
+
+    au < manifest ; 2006-2007 ; Archaeology International Volume 10 ; 10 ; 2006 >
+    au < manifest ; 2007-2008 ; Archaeology International Volume 11 ; 11 ; 2007 >
+    au < manifest ; 2008-2009 ; Archaeology International Volume 12 ; 12 ; 2008 >
+    au < manifest ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = The Bulletin of the History of Archaeology;
+      issn = 1062-4740 ;
+      eissn = 2047-6930 
+    >
+    
+    param[base_url] = http://www.archaeologybulletin.org/
+    param[journal_id] = bha
+
+    au < manifest ; 1991 ; The Bulletin of the History of Archaeology Volume 1 ; 1 ; 1991 >
+    au < manifest ; 1992 ; The Bulletin of the History of Archaeology Volume 2 ; 2 ; 1992 >
+    au < manifest ; 1993 ; The Bulletin of the History of Archaeology Volume 3 ; 3 ; 1993 >
+    au < manifest ; 1994 ; The Bulletin of the History of Archaeology Volume 4 ; 4 ; 1994 >
+    au < manifest ; 1995 ; The Bulletin of the History of Archaeology Volume 5 ; 5 ; 1995 >
+    au < manifest ; 1996 ; The Bulletin of the History of Archaeology Volume 6 ; 6 ; 1996 >
+    au < manifest ; 1997 ; The Bulletin of the History of Archaeology Volume 7 ; 7 ; 1997 >
+    au < manifest ; 1998 ; The Bulletin of the History of Archaeology Volume 8 ; 8 ; 1998 >
+    au < manifest ; 1999 ; The Bulletin of the History of Archaeology Volume 9 ; 9 ; 1999 >
+    au < manifest ; 2000 ; The Bulletin of the History of Archaeology Volume 10 ; 10 ; 2000 >
+    au < manifest ; 2001 ; The Bulletin of the History of Archaeology Volume 11 ; 11 ; 2001 >
+    au < manifest ; 2002 ; The Bulletin of the History of Archaeology Volume 12 ; 12 ; 2002 >
+    au < manifest ; 2003 ; The Bulletin of the History of Archaeology Volume 13 ; 13 ; 2003 >
+    au < manifest ; 2004 ; The Bulletin of the History of Archaeology Volume 14 ; 14 ; 2004 >
+    au < manifest ; 2005 ; The Bulletin of the History of Archaeology Volume 15 ; 15 ; 2005 >
+    au < manifest ; 2006 ; The Bulletin of the History of Archaeology Volume 16 ; 16 ; 2006 >
+    au < manifest ; 2007 ; The Bulletin of the History of Archaeology Volume 17 ; 17 ; 2007 >
+    au < manifest ; 2008 ; The Bulletin of the History of Archaeology Volume 18 ; 18 ; 2008 >
+    au < manifest ; 2009 ; The Bulletin of the History of Archaeology Volume 19 ; 19 ; 2009 >
+    au < manifest ; 2010 ; The Bulletin of the History of Archaeology Volume 20 ; 20 ; 2010 >
+    au < manifest ; 2011 ; The Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = The Journal of Conservation and Museum Studies;
+      eissn = 1364-0429 
+    >
+    
+    param[base_url] = http://www.jcms-journal.com/
+    param[journal_id] = jcms
+
+    au < manifest ; 1996 ; The Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
+    au < manifest ; 1997 ; The Journal of Conservation and Museum Studies Volume 2-3 ; 2-3 ; 1997 >
+    au < manifest ; 1998 ; The Journal of Conservation and Museum Studies Volume 4-5 ; 4-5 ; 1998 >
+    au < manifest ; 1999 ; The Journal of Conservation and Museum Studies Volume 6 ; 6 ; 1999 >
+    au < manifest ; 2001 ; The Journal of Conservation and Museum Studies Volume 7 ; 7 ; 2001 >
+    au < manifest ; 2002 ; The Journal of Conservation and Museum Studies Volume 8 ; 8 ; 2002 >
+    au < manifest ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
+    au < manifest ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = The Journal of Open Archaeology Data;
+      eissn = 2049-1565 
+    >
+    
+    param[base_url] = http://openarchaeologydata.metajnl.com/
+    param[journal_id] = joad
+    
+    comment[0] = Doesn't have volumes or manifest pages. Doesn't seem to be OJS2. 
+
+  }
+  
+  {
+  
+    title < 
+      name = The Journal of Open Research Software;
+      eissn = 2049-9647 
+    >
+    
+    param[base_url] = http://openresearchsoftware.metajnl.com/
+    param[journal_id] = jors
+
+    comment[0] = forthcoming, no articles online yet. Doesn't seem to be OJS2.
+    
+  }
+  
+  {
+  
+    title < 
+      name = Opticon1826;
+      eissn = 2049-8128 
+    >
+    
+    param[base_url] = http://www.opticon1826.com/
+    param[journal_id] = opt
+
+    au < manifest ; 2006 ; Opticon1826 Volume 1 ; 1 ; 2006 >
+    au < manifest ; 2007 ; Opticon1826 Volume 2-3 ; 2-3 ; 2007 >
+    au < manifest ; 2008 ; Opticon1826 Volume 4-5 ; 4-5 ; 2008 >
+    au < manifest ; 2009 ; Opticon1826 Volume 6-7 ; 6-7 ; 2009 >
+    au < manifest ; 2010 ; Opticon1826 Volume 8-9 ; 8-9 ; 2010 >
+    au < manifest ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 >
+    au < manifest ; 2012 ; Opticon1826 Volume 12 ; 12 ; 2012 > 
+    
+  }
+  
+  {
+  
+    title < 
+      name = Papers from the Institute of Archaeology;
+      eissn = 2041-9015 
+    >
+    
+    param[base_url] = http://pia-journal.co.uk/
+    param[journal_id] = pia
+
+    au < manifest ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
+    au < manifest ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
+    au < manifest ; 1992 ; Papers from the Institute of Archaeology Volume 3 ; 3 ; 1992 >
+    au < manifest ; 1993 ; Papers from the Institute of Archaeology Volume 4 ; 4 ; 1993 >
+    au < manifest ; 1994 ; Papers from the Institute of Archaeology Volume 5 ; 5 ; 1994 >
+    au < manifest ; 1995 ; Papers from the Institute of Archaeology Volume 6 ; 6 ; 1995 >
+    au < manifest ; 1996 ; Papers from the Institute of Archaeology Volume 7 ; 7 ; 1996 >
+    au < manifest ; 1997 ; Papers from the Institute of Archaeology Volume 8 ; 8 ; 1997 >
+    au < manifest ; 1998 ; Papers from the Institute of Archaeology Volume 9 ; 9 ; 1998 >
+    au < manifest ; 1999 ; Papers from the Institute of Archaeology Volume 10 ; 10 ; 1999 >
+    au < manifest ; 2000 ; Papers from the Institute of Archaeology Volume 11 ; 11 ; 2000 >
+    au < manifest ; 2001 ; Papers from the Institute of Archaeology Volume 12 ; 12 ; 2001 >
+    au < manifest ; 2002 ; Papers from the Institute of Archaeology Volume 13 ; 13 ; 2002 >
+    au < manifest ; 2003 ; Papers from the Institute of Archaeology Volume 14 ; 14 ; 2003 >
+    au < manifest ; 2004 ; Papers from the Institute of Archaeology Volume 15 ; 15 ; 2004 >
+    au < manifest ; 2005 ; Papers from the Institute of Archaeology Volume 16 ; 16 ; 2005 >
+    au < manifest ; 2006 ; Papers from the Institute of Archaeology Volume 17 ; 17 ; 2006 >
+    au < manifest ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 ; 2007 >
+    au < manifest ; 2009 ; Papers from the Institute of Archaeology Volume 19 ; 19 ; 2009 >
+    au < manifest ; 2010 ; Papers from the Institute of Archaeology Volume 20 ; 20 ; 2010 >
+    au < manifest ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Present Pasts;
+      eissn = 1759-2941
+    >
+    
+    param[base_url] = http://presentpasts.info/
+    param[journal_id] = pp
+
+    au < manifest ; 2009 ; Present Pasts Volume 1 ; 1 ; 2009 >
+    au < manifest ; 2010 ; Present Pasts Volume 2 ; 2 ; 2010 >
+    au < manifest ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
+    
+  }
+
+}
+

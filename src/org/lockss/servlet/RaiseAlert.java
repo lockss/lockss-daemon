@@ -1,5 +1,5 @@
 /*
- * $Id: RaiseAlert.java,v 1.14 2010-05-04 03:37:28 tlipkis Exp $
+ * $Id: RaiseAlert.java,v 1.14.20.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
@@ -136,8 +136,7 @@ public class RaiseAlert extends LockssServlet {
     ServletUtil.layoutExplanationBlock(page, "Raise an Alert");
     page.add(makeForm());
     page.add("<br>");
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   void addResultRow(Table tbl, String head, Object value) {

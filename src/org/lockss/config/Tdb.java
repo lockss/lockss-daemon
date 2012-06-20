@@ -1,10 +1,10 @@
 /*
- * $Id: Tdb.java,v 1.17 2011-10-26 17:11:29 pgust Exp $
+ * $Id: Tdb.java,v 1.17.2.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,7 +43,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.17 2011-10-26 17:11:29 pgust Exp $
+ * @version $Id: Tdb.java,v 1.17.2.1 2012-06-20 00:02:55 nchondros Exp $
  */
 public class Tdb {
   /**
@@ -94,7 +94,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.17 2011-10-26 17:11:29 pgust Exp $
+   * @version $Id: Tdb.java,v 1.17.2.1 2012-06-20 00:02:55 nchondros Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -855,7 +855,7 @@ public class Tdb {
       logger.warning("Title missing for au \"" + au.getName() + "\" -- using \"" + titleNameFromProps + "\"");
     }
     if (titleIdFromProps == null) {
-      logger.warning("Title ID missing for au \"" + au.getName() + "\" -- using " + titleId);
+      logger.debug2("Title ID missing for au \"" + au.getName() + "\" -- using " + titleId);
     }
 
     
@@ -953,7 +953,8 @@ public class Tdb {
    * @param title the TdbTitle with links
    * @return a collection of linked titles for the specified type 
    */
-  public Collection<TdbTitle> getLinkedTdbTitlesForType(TdbTitle.LinkType linkType, TdbTitle title) {
+  public Collection<TdbTitle> getLinkedTdbTitlesForType(
+      TdbTitle.LinkType linkType, TdbTitle title) {
     if (linkType == null) {
       throw new IllegalArgumentException("linkType cannot be null");
     }
@@ -983,14 +984,12 @@ public class Tdb {
    */
   public TdbTitle getTdbTitleById(String titleId)
   {
-    if (titleId == null) {
-      throw new IllegalArgumentException("titleId cannot be null");
-    }
-
-    for (TdbPublisher publisher : tdbPublisherMap.values()) {
-      TdbTitle title = publisher.getTdbTitleById(titleId);
-      if (title != null) {
-        return title;
+    if (titleId != null) {
+      for (TdbPublisher publisher : tdbPublisherMap.values()) {
+        TdbTitle title = publisher.getTdbTitleById(titleId);
+        if (title != null) {
+          return title;
+        }
       }
     }
     return null;
@@ -1004,39 +1003,40 @@ public class Tdb {
    */
   public TdbTitle getTdbTitleByIssn(String issn)
   {
-    if (issn == null) {
-      throw new IllegalArgumentException("issn cannot be null");
-    }
-
-    for (TdbPublisher publisher : tdbPublisherMap.values()) {
-      TdbTitle title = publisher.getTdbTitleByIssn(issn);
-      if (title != null) {
-        return title;
+    if (issn != null) {
+      for (TdbPublisher publisher : tdbPublisherMap.values()) {
+        TdbTitle title = publisher.getTdbTitleByIssn(issn);
+        if (title != null) {
+          return title;
+        }
       }
     }
     return null;
   }
   
   /**
-   * Get a title for the specified isbn.
-   *  
-   * @param isbn the isbn
-   * @return the title for the isbn or <code>null</code. if not found
+   * Return a collection of TdbAus for this TDB that match the ISBN.
+   * 
+   * @return a colleciton of TdbAus for this publisher that match the ISBN
    */
-  public TdbTitle getTdbTitleByIsbn(String isbn)
-  {
-    if (isbn == null) {
-      throw new IllegalArgumentException("isbn cannot be null");
-    }
-
-    TdbTitle title = null;
-    for (TdbPublisher publisher : tdbPublisherMap.values()) {
-      title = publisher.getTdbTitleByIsbn(isbn);
-      if (title != null) {
-        break;
+  public Collection<TdbAu> getTdbAusByIsbn(String isbn) {
+    Collection<TdbAu> tdbAus = new ArrayList<TdbAu>();
+    getTdbAusByIsbn(isbn, tdbAus);
+    return tdbAus;
+  }
+  
+  /**
+   * Add to a collection of TdbAus for this TDB that match the ISBN.
+   */
+  public boolean getTdbAusByIsbn(String isbn, 
+                                 Collection<TdbAu> matchingTdbAus) {
+    boolean added = false;
+    if (isbn != null) {
+      for (TdbPublisher tdbPublisher : tdbPublisherMap.values()) {
+        added |= tdbPublisher.getTdbAusByIsbn(matchingTdbAus, isbn);
       }
     }
-    return title;
+    return added;
   }
   
   /**
@@ -1048,16 +1048,117 @@ public class Tdb {
    */
   public Collection<TdbTitle> getTdbTitlesByName(String titleName)
   {
-    if (titleName == null) {
-      return Collections.emptyList();
-    }
-    
     ArrayList<TdbTitle> titles = new ArrayList<TdbTitle>();
-    for (TdbPublisher publisher : tdbPublisherMap.values()) {
-      titles.addAll(publisher.getTdbTitlesByName(titleName));
-    }
+    getTdbTitlesByName(titleName, titles);
     titles.trimToSize();
     return titles;
+  }
+  
+  /**
+   * Adds to a collection of TdbTitles for the specified title name
+   * across all publishers.
+   *  
+   * @param titleName the title name
+   * @param titles the collection of TdbTitles to add to
+   * @return <code>true</code> if TdbTitles were adddthe titles collection
+   */
+  public boolean getTdbTitlesByName(String titleName, 
+                                    Collection<TdbTitle> titles) {
+    boolean added = false;
+    if (titleName != null) {
+      for (TdbPublisher publisher : tdbPublisherMap.values()) {
+        added |= publisher.getTdbTitlesByName(titleName, titles);
+      }
+    }
+    return added;
+  }
+  
+  /**
+   * Returns a collection of TdbTitles like (starts with) the 
+   * specified title name across all publishers.
+   *  
+   * @param titleName the title name
+   * @return a collection of TdbTitles that match the title name
+   */
+  public Collection<TdbTitle> getTdbTitlesLikeName(String titleName)
+  {
+    ArrayList<TdbTitle> titles = new ArrayList<TdbTitle>();
+    getTdbTitlesLikeName(titleName, titles);
+    titles.trimToSize();
+    return titles;
+  }
+  
+  /**
+   * Adds to a collection of TdbTitles like (starts with) the 
+   * specified title name across all publishers.
+   *  
+   * @param titleName the title name
+   * @param titles a collection of matching titles
+   * @return a collection of TdbTitles that match the title name
+   */
+  public boolean getTdbTitlesLikeName(String titleName,
+                                      Collection<TdbTitle> titles) {
+    boolean added = false;
+    if (titleName != null) {
+      for (TdbPublisher publisher : tdbPublisherMap.values()) {
+        added |= publisher.getTdbTitlesLikeName(titleName, titles); 
+      }
+    }
+    return added;
+  }
+  
+  /**
+   * Return the TdbAus like the specified TdbAu volume.
+   * 
+   * @param tdbAuName the name of the AU to select
+   * @return the TdbAu like the specified name
+   */
+  public Collection<TdbAu> getTdbAusByName(String tdbAuName) {
+    ArrayList<TdbAu> aus = new ArrayList<TdbAu>();
+    getTdbAusByName(tdbAuName, aus);
+    return aus;
+  }
+  
+  /**
+   * Add TdbAus with the specified TdbAu name.
+   * 
+   * @param tdbAuName the name of the AU to select
+   * @param tdbAus the collection to add to
+   * @return <code>true</code> if TdbAus were added to the collection
+   */
+  public boolean getTdbAusByName(String tdbAuName, Collection<TdbAu> aus) {
+    boolean added = false;
+    for (TdbPublisher publisher : tdbPublisherMap.values()) {
+      added |= publisher.getTdbAusByName(tdbAuName, aus);
+    }
+    return added;
+  }
+  
+  /**
+   * Return the TdbAus like (starts with) the specified TdbAu volume.
+   * 
+   * @param tdbAuName the name of the AU to select
+   * @return the TdbAu like the specified name
+   */
+  public Collection<TdbAu> getTdbAusLikeName(String tdbAuName) {
+    ArrayList<TdbAu> aus = new ArrayList<TdbAu>();
+    getTdbAusLikeName(tdbAuName, aus);
+    return aus;
+  }
+  
+  /**
+   * Add TdbAus for like (starts with) the specified TdbAu name.
+   * 
+   * @param tdbAuName the name of the AU to select
+   * @param tdbAus the collection to add to
+   * @return <code>true</code> if TdbAus were added to the collection
+   */
+  public boolean getTdbAusLikeName(String tdbAuName, Collection<TdbAu> aus) {
+    boolean added = false;
+    for (TdbPublisher publisher : tdbPublisherMap.values()) {
+      added |= publisher.getTdbAusLikeName(tdbAuName, aus);
+    }
+    return added;
   }
   
   /**
@@ -1078,7 +1179,8 @@ public class Tdb {
    * @return a map of publisher names to publishers
    */
   public Map<String, TdbPublisher> getAllTdbPublishers() {
-    return (tdbPublisherMap != null) ? tdbPublisherMap : Collections.<String,TdbPublisher>emptyMap();
+    return (tdbPublisherMap != null) 
+      ? tdbPublisherMap : Collections.<String,TdbPublisher>emptyMap();
   }
 
   /** Print a full description of all elements in the Tdb */

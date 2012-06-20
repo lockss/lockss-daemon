@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.19 2011-04-28 02:23:39 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.19.10.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
@@ -95,8 +95,12 @@ public class ListObjects extends LockssServlet {
       }
       if (type.equalsIgnoreCase("urls")) {
 	new UrlList(au).execute();
+      } else if (type.equalsIgnoreCase("urlsm")) {
+	new UrlMemberList(au).execute();
       } else if (type.equalsIgnoreCase("files")) {
 	new FileList(au).execute();
+      } else if (type.equalsIgnoreCase("filesm")) {
+	new FileMemberList(au).execute();
       } else if (type.equalsIgnoreCase("articles")) {
 	boolean isDoi = !StringUtil.isNullString(getParameter("doi"));
 	if (isDoi) {
@@ -116,8 +120,9 @@ public class ListObjects extends LockssServlet {
     }
   }
 
-  // Used by status table(s) to determine whether to display link to DOIs
-  public static boolean hasDoiList(ArchivalUnit au) {
+  // Used by status table(s) to determine whether to display links to
+  // Metadata and DOIs
+  public static boolean hasArticleMetadata(ArchivalUnit au) {
     return null !=
       au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au);
 
@@ -128,7 +133,7 @@ public class ListObjects extends LockssServlet {
 
   // Used by status table(s) to determine whether to display link to articles
   public static boolean hasArticleList(ArchivalUnit au) {
-    return hasDoiList(au);
+    return null != au.getPlugin().getArticleIteratorFactory();
   }
 
   void displayError(String error) throws IOException {
@@ -138,8 +143,7 @@ public class ListObjects extends LockssServlet {
     comp.add(error);
     comp.add("</font></center><br>");
     page.add(comp);
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   /** Base for classes that print lists of objexts */
@@ -185,7 +189,7 @@ public class ListObjects extends LockssServlet {
     abstract void processContentCu(CachedUrl cu);
 
     void doBody() {
-      for (Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
+      for (Iterator iter = getIterator();
 	   iter.hasNext(); ) {
 	CachedUrlSetNode cusn = (CachedUrlSetNode)iter.next();
 	CachedUrl cu = AuUtil.getCu(cusn);
@@ -197,6 +201,10 @@ public class ListObjects extends LockssServlet {
 	  AuUtil.safeRelease(cu);
 	}
       }
+    }
+
+    Iterator getIterator() {
+      return au.getAuCachedUrlSet().contentHashIterator();
     }
 
     void processCu(CachedUrl cu) {
@@ -222,8 +230,23 @@ public class ListObjects extends LockssServlet {
     }
   }
 
+  /** List URLs in AU, including archive file members */
+  class UrlMemberList extends UrlList {
+    UrlMemberList(ArchivalUnit au) {
+      super(au);
+    }
+
+    void printHeader() {
+      wrtr.println("# URLs* in " + au.getName());
+      wrtr.println();
+    }
+
+    Iterator getIterator() {
+      return au.getAuCachedUrlSet().archiveMemberIterator();
+    }
+  }
+
   /** List URLs, content type and length. */
-  // MetaArchive experiment 2010ish.  Still in use?
   class FileList extends BaseNodeList {
     FileList(ArchivalUnit au) {
       super(au);
@@ -243,6 +266,24 @@ public class ListObjects extends LockssServlet {
 	contentType = "unknown";
       }
       wrtr.println(url + "\t" + contentType + "\t" + bytes);
+    }
+  }
+
+  /** List URLs, content type and length, including archive file members. */
+  // MetaArchive experiment 2010ish.  Still in use?
+  class FileMemberList extends FileList {
+    FileMemberList(ArchivalUnit au) {
+      super(au);
+    }
+
+    void printHeader() {
+      wrtr.println("# Files* in " + au.getName());
+      wrtr.println("# URL\tContentType\tsize");
+      wrtr.println();
+    }
+
+    Iterator getIterator() {
+      return au.getAuCachedUrlSet().archiveMemberIterator();
     }
   }
 

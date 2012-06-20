@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = Western Kentucky University Research Foundation
+  >
+  
+  attr[contract] = 2012
+
+  {
+  
+    title < 
+      name = Journal of Outdoor Recreation, Education, and Leadership ;
+      eissn = 1948-5123 
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = http://digitalcommons.wku.edu/
+    param[journal_abbr] = jorel
+    implicit < status ; status2; year ; name ; param[volume] >
+    comment[notReady] = we don't have permission for subscription-based journals, see RT4593
+
+    au < manifest ; exists ; 2009 ; Journal of Outdoor Recreation, Education, and Leadership Volume 1 ; 1 >
+    au < manifest ; exists ; 2010 ; Journal of Outdoor Recreation, Education, and Leadership volume 2 ; 2 >
+    au < manifest ; exists ; 2011 ; Journal of Outdoor Recreation, Education, and Leadership Volume 3 ; 3 >
+    au < crawling ; exists ; 2012 ; Journal of Outdoor Recreation, Education, and Leadership Volume 4 ; 4>
+    
+  }
+
+}

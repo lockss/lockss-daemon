@@ -4,7 +4,8 @@
     name = Pennsylvania State University Press
   >
 
-  plugin = needs.plugin
+  attr[contract] = 2011
+  plugin = org.lockss.plugin.jstor.JSTORPlugin
   
   {
   
@@ -109,7 +110,7 @@
     title <
       name = Journal of Modern Periodical Studies ;
       issn = 1947-6574 ;
-      eissn = 2152-2972 ;
+      eissn = 2152-9272 ;
       issnl = 1947-6574
     >
     
@@ -172,8 +173,8 @@
   {
     title <
       name = Pennsylvania History: A Journal of Mid-Atlantic Studies ;
-      issn = 2153-2109 ;
-      eissn = 0031-4528 ;
+      issn = 0031-4528 ;
+      eissn = 2153-2109 ;
       issnl = 0031-4528
     >
 
@@ -227,8 +228,9 @@
   
     title <
       name = Soundings: An Interdisciplinary Journal ;
-      issn = 1362-6620 ;
-      issnl = 1362-6620 
+      issn = 0038-1861 ;
+      eissn = 2161-6302 ;
+      issnl = 0038-1861 
     >
     
   }

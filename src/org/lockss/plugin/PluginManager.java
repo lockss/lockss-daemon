@@ -1,10 +1,10 @@
 /*
- * $Id: PluginManager.java,v 1.220 2011-08-21 23:22:49 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.220.6.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -156,6 +156,13 @@ public class PluginManager
     PREFIX + "disableURLConnectionCache";
   public static final boolean DEFAULT_DISABLE_URL_CONNECTION_CACHE = false;
 
+  /** If true, AU configurations may appear in any config file.  This was
+   * always the case prior to 1.55, setting this true restores that
+   * behavior. */
+  public static final String PARAM_ALLOW_GLOBAL_AU_CONFIG =
+    PREFIX + "allowGlobalAuConfig";
+  public static final boolean DEFAULT_ALLOW_GLOBAL_AU_CONFIG = false;
+
   /** If true, when a new version of an existing plugin is loaded, all its
    * AUs will be restarted. */
   public static final String PARAM_RESTART_AUS_WITH_NEW_PLUGIN =
@@ -232,7 +239,7 @@ public class PluginManager
   // maps auid to AU
   private Map auMap = Collections.synchronizedMap(new HashMap());
   // A set of all aus sorted by title.  The UI relies on this behavior.
-  private Set auSet = new TreeSet(auComparator);
+  private Set<ArchivalUnit> auSet = new TreeSet<ArchivalUnit>(auComparator);
   private List<ArchivalUnit> auList = null;
 
   // maps host to collections of AUs.  Used to quickly locate candidate AUs
@@ -272,6 +279,7 @@ public class PluginManager
   private boolean preferLoadablePlugin = DEFAULT_PREFER_LOADABLE_PLUGIN;
   private long registryTimeout = DEFAULT_PLUGIN_LOAD_TIMEOUT;
   private boolean paramRestartAus = DEFAULT_RESTART_AUS_WITH_NEW_PLUGIN;
+  private boolean paramAllowGlobalAuConfig = DEFAULT_ALLOW_GLOBAL_AU_CONFIG;
   private long paramAuRestartMaxSleep = DEFAULT_AU_RESTART_MAX_SLEEP;
   private long paramPerAuRestartSleep = DEFAULT_PER_AU_RESTART_SLEEP;
   private boolean paramDisableURLConnectionCache =
@@ -394,6 +402,9 @@ public class PluginManager
       registryTimeout = config.getTimeInterval(PARAM_PLUGIN_LOAD_TIMEOUT,
 					       DEFAULT_PLUGIN_LOAD_TIMEOUT);
 
+      paramAllowGlobalAuConfig =
+	config.getBoolean(PARAM_ALLOW_GLOBAL_AU_CONFIG,
+			  DEFAULT_ALLOW_GLOBAL_AU_CONFIG);
       paramRestartAus =
 	config.getBoolean(PARAM_RESTART_AUS_WITH_NEW_PLUGIN,
 			  DEFAULT_RESTART_AUS_WITH_NEW_PLUGIN);
@@ -468,7 +479,8 @@ public class PluginManager
     if (!allPlugs.equals(currentAllPlugs)) {
       List<String> plugKeys = ListUtil.fromIterator(allPlugs.nodeIterator());
       List<String> randKeys = CollectionUtil.randomPermutation(plugKeys);
-      configurePlugins(randKeys, allPlugs, SkipConfigCondition.ConfigUnchanged);
+      configurePlugins(randKeys, allPlugs,
+		       SkipConfigCondition.ConfigUnchanged);
       currentAllPlugs = allPlugs;
     }
   }
@@ -494,8 +506,9 @@ public class PluginManager
 	prevPluginConf = currentAllPlugs.getConfigTree(pluginKey);
 	break;
       }
-
-      configurePlugin(pluginKey, pluginConf, prevPluginConf, scc);
+      synchronized (auAddDelLock) {
+	configurePlugin(pluginKey, pluginConf, prevPluginConf, scc);
+      }
     }
   }
 
@@ -704,10 +717,24 @@ public class PluginManager
 	  break;
 	case AuRunning:
 	  if (auMap.containsKey(auId)) {
+	    if (log.isDebug3())
+	      log.debug3("AU already running, not reconfiguring: "
+			 + auKey);
 	    continue nextAU;
 	  }
 	  log.debug2("Retrying previously unstarted AU id: " + auId);
 	  break;
+	}
+	// If this AU has no config tree in au.txt, ignore it.  Prevents
+	// race caused by config reload asynchronous to quick AU
+	// create/delete.  Because config reload never deletes AUs, this
+	// would lead to a just-deleted AU being recreated and not
+	// deleted until daemon restart.  Set
+	// org.lockss.plugin.allowGlobalAuConfig true to suppress this
+	// check, allowing AUs to be configured in any config file.
+	if (! (paramAllowGlobalAuConfig || isAuConfInAuTxt(auId))) {
+	  log.debug("Not configuring now-disappeared AU id: " + auKey);
+	  continue nextAU;
 	}
 	if (log.isDebug2()) log.debug2("Configuring AU id: " + auKey);
 	Plugin plugin = getPlugin(pluginKey);
@@ -731,6 +758,13 @@ public class PluginManager
 	log.error("Unexpected exception configuring AU " + auKey, e);
       }
     }
+  }
+
+  /** Return true if the AU is configured in au.txt.
+   * @see PARAM_ALLOW_GLOBAL_AU_CONFIG
+   */
+  boolean isAuConfInAuTxt(String auId) {
+    return ! getStoredAuConfiguration(auId).isEmpty();
   }
 
   void configureAu(Plugin plugin, Configuration auConf, String auId)
@@ -1220,37 +1254,39 @@ public class PluginManager
   // Stops and restarts a set of AUs so that they start using the current
   // version of their plugin.  Waits a little while between stopping and
   // starting to allow existing processes to exit.  It's expected that this
-  // will cause lots of errors to be logger
+  // will cause lots of errors to be logged
   void restartAus(Collection<ArchivalUnit> aus) {
     if (paramRestartAus) {
       log.info("Restarting " + aus.size() + " AUs to use updated plugins.  Exiting processes may log errors; they should be harmless");
-      Map<String, Configuration> configMap = new HashMap();
-      for (ArchivalUnit au : aus) {
-	String auid = au.getAuId();
-	Configuration auConf = au.getConfiguration();
-	configMap.put(auid, auConf);
-	numAusRestarting++;
-	stopAu(au, AuEvent.RestartDelete);
-      }
-      try {
-	Deadline.in(auRestartSleep(aus.size())).sleep();
-      } catch (InterruptedException ex) {
-      }
-    
-      for (Map.Entry<String,Configuration> ent : configMap.entrySet()) {
-	String auid = ent.getKey();
-	Configuration auConf = ent.getValue();
-	String pkey = pluginKeyFromId(pluginIdFromAuId(auid));
-	Plugin plug = getPlugin(pkey);
-	try {
-	  ArchivalUnit newAu = createAu(plug, auConf, AuEvent.RestartCreate);
-	  numAusRestarting--;
-	} catch (ArchivalUnit.ConfigurationException e) {
-	  log.error("Failed to restart: " + auid);
+      synchronized (auAddDelLock) {
+	Map<String, Configuration> configMap = new HashMap();
+	for (ArchivalUnit au : aus) {
+	  String auid = au.getAuId();
+	  Configuration auConf = au.getConfiguration();
+	  configMap.put(auid, auConf);
+	  numAusRestarting++;
+	  stopAu(au, AuEvent.RestartDelete);
 	}
+	try {
+	  Deadline.in(auRestartSleep(aus.size())).sleep();
+	} catch (InterruptedException ex) {
+	}
+    
+	for (Map.Entry<String,Configuration> ent : configMap.entrySet()) {
+	  String auid = ent.getKey();
+	  Configuration auConf = ent.getValue();
+	  String pkey = pluginKeyFromId(pluginIdFromAuId(auid));
+	  Plugin plug = getPlugin(pkey);
+	  try {
+	    ArchivalUnit newAu = createAu(plug, auConf, AuEvent.RestartCreate);
+	    numAusRestarting--;
+	  } catch (ArchivalUnit.ConfigurationException e) {
+	    log.error("Failed to restart: " + auid);
+	  }
+	}
+	numFailedAuRestarts += numAusRestarting;
+	numAusRestarting = 0;
       }
-      numFailedAuRestarts += numAusRestarting;
-      numAusRestarting = 0;
     }
   }
 
@@ -1697,7 +1733,6 @@ public class PluginManager
 
   private Map recentCuMap = Collections.synchronizedMap(new LRUMap(20));
 
-
   /** Find a CachedUrl for the URL.  
    */
   private CachedUrl findTheCachedUrl(String url, boolean withContent) {
@@ -1723,6 +1758,29 @@ public class PluginManager
   }
 
   private CachedUrl findTheCachedUrl0(String url, boolean withContent) {
+    List<CachedUrl> lst = findCachedUrls0(url, withContent, true);    
+    if (!lst.isEmpty()) {
+      return lst.get(0);
+    } else {
+      return null;
+    }
+  }
+
+  public List<CachedUrl> findCachedUrls(String url) {
+    return findCachedUrls0(url, true, false);
+  }
+
+  public List<CachedUrl> findCachedUrls(String url, boolean withContent) {
+    return findCachedUrls0(url, withContent, false);
+  }
+
+  /* Return either a list of all CUs with the given URL, or the best choice
+   * is bestOnly is true.
+   */
+  // XXX refactor into CU generator & two consumers.
+
+  private List<CachedUrl> findCachedUrls0(String url, boolean withContent,
+					  boolean bestOnly) {
     // We don't know what AU it might be in, so can't do plugin-dependent
     // normalization yet.  But only need to do generic normalization once.
     // XXX This is wrong, as plugin-specific normalization is normally done
@@ -1739,18 +1797,20 @@ public class PluginManager
     // is known unique.
     String normUrl;
     String normStem;
+    boolean isTrace = log.isDebug3();
+    List<CachedUrl> res = new ArrayList<CachedUrl>(bestOnly ? 1 : 15);
     try {
       normUrl = UrlUtil.normalizeUrl(url);
       normStem = UrlUtil.getUrlPrefix(normUrl);
     } catch (MalformedURLException e) {
-      log.warning("findTheCachedUrl(" + url + ")", e);
-      return null;
+      log.warning("findCachedUrls(" + url + ")", e);
+      return Collections.EMPTY_LIST;
     }
     synchronized (hostAus) {
       ArrayList candidateAus = (ArrayList)hostAus.get(normStem);
       if (candidateAus == null) {
-	log.debug3("findTheCachedUrl: No AUs for " + normStem);
-	return null;
+	log.debug3("findCachedUrls: No AUs for " + normStem);
+	return Collections.EMPTY_LIST;
       }
       CachedUrl bestCu = null;
       int bestAuIx = -1;
@@ -1758,29 +1818,48 @@ public class PluginManager
       int auIx = 0;
       for (Iterator iter = candidateAus.iterator(); iter.hasNext(); auIx++) {
 	ArchivalUnit au = (ArchivalUnit)iter.next();
-	log.debug3("findTheCachedUrl: " + normUrl + " check " + au.toString());
+	if (isTrace) {
+	  log.debug3("findCachedUrls: " + normUrl + " check "
+		     + au.toString());
+	}
+	ArchiveMemberSpec ams = ArchiveMemberSpec.fromUrl(au, normUrl);
+	if (ams != null) {
+	  if (isTrace) log.debug3("Recognized archive member: " + ams);
+	  normUrl = ams.getUrl();
+	}
 	if (au.shouldBeCached(normUrl)) {
-	  log.debug3("findTheCachedUrl: " + normUrl + " should be in "
-		     + au.getAuId());
+	  if (isTrace) {
+	    log.debug3("findCachedUrls: " + normUrl + " should be in "
+		       + au.getAuId());
+	  }
 	  try {
 	    String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
 	    CachedUrl cu = au.makeCachedUrl(siteUrl);
-	    log.debug3("findTheCachedUrl: " + siteUrl + " got " +
-		       (cu == null ? "no cu" : cu.toString()));
+	    if (ams != null) {
+	      cu = cu.getArchiveMemberCu(ams);
+	    }
+	    if (isTrace) {
+	      log.debug3("findCachedUrls(" + siteUrl + ") = " + cu);
+	    }
 	    if (cu != null && (!withContent || cu.hasContent())) {
-	      int score = score(au, cu);
-	      if (score == 0) {
-		makeFirstCandidate(candidateAus, auIx);
-		log.debug3("findTheCachedUrl: " + siteUrl + " is it");
-		return cu;
-	      }
-	      if (score < bestScore) {
-		AuUtil.safeRelease(bestCu);
-		bestCu = cu;
-		bestAuIx = auIx;
-		bestScore = score;
+	      if (bestOnly) {
+		int score = score(au, cu);
+		if (score == 0) {
+		  makeFirstCandidate(candidateAus, auIx);
+		  if (isTrace) log.debug3("findCachedUrls: ret: " + siteUrl);
+		  res.add(cu);
+		  return res;
+		}
+		if (score < bestScore) {
+		  AuUtil.safeRelease(bestCu);
+		  bestCu = cu;
+		  bestAuIx = auIx;
+		  bestScore = score;
+		} else {
+		  cu.release();
+		}
 	      } else {
-		cu.release();
+		res.add(cu);
 	      }
 	    }
 	  } catch (MalformedURLException ignore) {
@@ -1790,9 +1869,14 @@ public class PluginManager
 	  }
 	}
       }
-      makeFirstCandidate(candidateAus, bestAuIx);
-      log.debug3("bestCu was " + (bestCu == null ? "null" : bestCu.toString()));
-      return bestCu;
+      if (bestOnly) {
+	makeFirstCandidate(candidateAus, bestAuIx);
+	if (isTrace) {
+	  log.debug3("bestCu was " +
+		     (bestCu == null ? "null" : bestCu.toString()));
+	}
+      }
+      return res;
     }
   }
 
@@ -1847,7 +1931,8 @@ public class PluginManager
   public List<ArchivalUnit> getAllAus() {
     synchronized (auSet) {
       if (auList == null) {
-	auList = new ArrayList<ArchivalUnit>(auSet);
+	auList =
+	  Collections.unmodifiableList(new ArrayList<ArchivalUnit>(auSet));
       }
       return auList;
     }
@@ -1858,7 +1943,7 @@ public class PluginManager
    */
   // putting this here in PluginManager saves having to make an extra copy
   // of auSet
-  public List getRandomizedAus() {
+  public List<ArchivalUnit> getRandomizedAus() {
     synchronized (auSet) {
       return CollectionUtil.randomPermutation(auSet);
     }
@@ -2394,10 +2479,10 @@ public class PluginManager
 
   protected void processOneRegistryJar(CachedUrl cu, String url,
 				       ArchivalUnit au, Map tmpMap) {
-    Integer curVersion = new Integer(cu.getVersion());
+    Integer curVersion = Integer.valueOf(cu.getVersion());
 
     if (cuNodeVersionMap.get(url) == null) {
-      cuNodeVersionMap.put(url, new Integer(-1));
+      cuNodeVersionMap.put(url, Integer.valueOf(-1));
     }
 
     // If we've already visited this CU, skip it unless the current
@@ -2480,7 +2565,7 @@ public class PluginManager
 	  info.setCuUrl(url);
 	  info.setRegistryAu(au);
 	  List urls = info.getResourceUrls();
-	  if (urls != null & !urls.isEmpty()) {
+	  if (urls != null && !urls.isEmpty()) {
 	    String jar = urls.get(0).toString();
 	    if (jar != null) {
 	      // If the blessed jar path is a substring of the jar:

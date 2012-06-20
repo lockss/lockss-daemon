@@ -15,8 +15,8 @@
     param[journal_id] = prairie_fire
     implicit < status ; year ; name ; param[year] >
 
-    au < ready ; 2010 ; Prairie Fire Review of Books Volume 10 ; 2010 >
-    au < ready ; 2011 ; Prairie Fire Review of Books Volume 11 ; 2011 >
+    au < released ; 2010 ; Prairie Fire Review of Books Volume 10 ; 2010 >
+    au < released ; 2011 ; Prairie Fire Review of Books Volume 11 ; 2011 >
 
   }
   

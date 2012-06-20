@@ -17,20 +17,32 @@
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0010-065X
+      
+     au < down ; 2004 ; The Coleopterists Bulletin Volume 58 ; 058 >
   
-      au < doNotProcess ; 2000 ; The Coleopterists Bulletin Volume 54 ; 54 >
-      au < doNotProcess ; 2001 ; The Coleopterists Bulletin Volume 55 ; 55 >
-      au < doNotProcess ; 2002 ; The Coleopterists Bulletin Volume 56 ; 56 >
-      au < doNotProcess ; 2003 ; The Coleopterists Bulletin Volume 57 ; 57 >
-      au < superseded ; 2004 ; The Coleopterists Bulletin Volume 58 ; 058 >
-      au < doNotProcess ; 2005 ; The Coleopterists Bulletin Volume 59 ; 59 >
-      au < doNotProcess ; 2006 ; The Coleopterists Bulletin Volume 60 ; 60 >
     }
 
     {
 
-comment[0] = Atypon AUs
-
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = cole
+      
+      au < doNotProcess ; 2000 ; The Coleopterists Bulletin Volume 54 ; 54 >
+      au < doNotProcess ; 2001 ; The Coleopterists Bulletin Volume 55 ; 55 >
+      au < doNotProcess ; 2002 ; The Coleopterists Bulletin Volume 56 ; 56 >
+      au < doNotProcess ; 2003 ; The Coleopterists Bulletin Volume 57 ; 57 >
+      au < doNotProcess ; 2004 ; The Coleopterists Bulletin Volume 58 ; 58 >
+      au < doNotProcess ; 2005 ; The Coleopterists Bulletin Volume 59 ; 59 >
+      au < doNotProcess ; 2006 ; The Coleopterists Bulletin Volume 60 ; 60 >      
+      au < ready ; 2007 ; The Coleopterists Bulletin Volume 61 ; 61 >
+      au < ready ; 2008 ; The Coleopterists Bulletin Volume 62 ; 62 >
+      au < ready ; 2009 ; The Coleopterists Bulletin Volume 63 ; 63 >
+      au < ready ; 2010 ; The Coleopterists Bulletin Volume 64 ; 64 >
+      au < ready ; 2011 ; The Coleopterists Bulletin Volume 65 ; 65 >
+      au < manifest ; 2012 ; The Coleopterists Bulletin Volume 66 ; 66 >
+      
     }
 
   }

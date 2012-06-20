@@ -1,9 +1,9 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.101 2011-08-09 03:59:38 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.101.6.1 2012-06-20 00:02:51 nchondros Exp $
  */
 
 /*
- Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -42,8 +42,7 @@ import org.lockss.poller.*;
 import org.lockss.poller.v3.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
-import org.lockss.servlet.AdminServletManager;
-import org.lockss.servlet.ListObjects;
+import org.lockss.servlet.*;
 
 /**
  * Collect and report the status of the ArchivalUnits
@@ -82,6 +81,7 @@ public class ArchivalUnitStatus
   public static final String PEERS_REPAIR_TABLE_NAME = "PeerRepair";
   public static final String FILE_VERSIONS_TABLE_NAME = "FileVersions";
   public static final String AU_DEFINITION_TABLE_NAME = "AuConfiguration";
+  public static final String AUS_WITH_URL_TABLE_NAME = "AusWithUtl";
 
 
   private static Logger logger = Logger.getLogger("AuStatus");
@@ -92,9 +92,13 @@ public class ArchivalUnitStatus
   private static final DecimalFormat agreementFormat =
     new DecimalFormat("0.00");
 
-  /* DecimalFormat automatically applies half-even rounding to
-   * values being formatted under Java < 1.6.  This is a workaround. */ 
-  private static String doubleToPercent(double d) {
+  /**
+   * Format 100 times a double to print as a percentage. An input
+   * value of 1.0 will produce "100.00".
+   * @param a value to convert.
+   * @return a String representing the double. 
+   */
+  static String doubleToPercent(double d) {
     int i = (int)(d * 10000);
     double pc = i / 100.0;
     return agreementFormat.format(pc);
@@ -123,6 +127,8 @@ public class ArchivalUnitStatus
                                       new FileVersions(theDaemon));
     statusServ.registerStatusAccessor(AU_DEFINITION_TABLE_NAME,
                                       new AuConfiguration(theDaemon));
+    statusServ.registerStatusAccessor(AUS_WITH_URL_TABLE_NAME,
+                                      new AusWithUrl(theDaemon));
     logger.debug2("Status accessors registered.");
   }
 
@@ -231,24 +237,29 @@ public class ArchivalUnitStatus
       PluginManager pluginMgr = theDaemon.getPluginManager();
 
       String key = table.getKey();
-      String plugidfilt = null;
+      Plugin onlyPlug = null;
       if (key != null && key.startsWith("plugin:")) {
 	String[] foo = org.apache.commons.lang.StringUtils.split(key, ":", 2);
-	plugidfilt = foo[1];
-	table.setTitle(TABLE_TITLE + " for plugin " +
-		       StringUtil.shortName(plugidfilt));
+	String plugid = foo[1];
+	if (!StringUtil.isNullString(plugid)) {
+	  onlyPlug = pluginMgr.getPlugin(PluginManager.pluginKeyFromId(plugid));
+	  if (onlyPlug != null) {
+	    table.setTitle(TABLE_TITLE + " for plugin " +
+			   StringUtil.shortName(onlyPlug.getPluginName()));
+	  }
+	}
       }	
       boolean includeInternalAus =
 	table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       List rowL = new ArrayList();
-      for (Iterator iter = pluginMgr.getAllAus().iterator();
-	   iter.hasNext(); ) {
-        ArchivalUnit au = (ArchivalUnit)iter.next();
+      Collection<ArchivalUnit> aus;
+      if (onlyPlug != null) {
+	aus = onlyPlug.getAllAus();
+      } else {
+	aus = pluginMgr.getAllAus();
+      }
+      for (ArchivalUnit au : aus) {
 	if (!includeInternalAus && pluginMgr.isInternalAu(au)) {
-	  continue;
-	}
-	if (plugidfilt != null &&
-	    !au.getPlugin().getPluginId().equals(plugidfilt)) {
 	  continue;
 	}
 	try {
@@ -527,6 +538,114 @@ public class ArchivalUnitStatus
     }
   }
 
+  static class AusWithUrl implements StatusAccessor {
+    static final String TABLE_TITLE = "AUs containing URL";
+
+    private static final List columnDescriptors = ListUtil.list(
+      new ColumnDescriptor("AuName", "AU", ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("Size", "Size", ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor("CollectedDate", "Date Collected",
+			   ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor("Versions", "Versions", ColumnDescriptor.TYPE_INT)
+      );
+
+    private static final List sortRules =
+      ListUtil.list(new
+		    StatusTable.SortRule("AuName",
+					 CatalogueOrderComparator.SINGLETON));
+
+    private LockssDaemon theDaemon;
+
+    AusWithUrl(LockssDaemon theDaemon) {
+      this.theDaemon = theDaemon;
+    }
+
+    public String getDisplayName() {
+      throw new UnsupportedOperationException("Au table has no generic title");
+    }
+
+    public boolean requiresKey() {
+      return true;
+    }
+
+    public void populateTable(StatusTable table)
+        throws StatusService.NoSuchTableException {
+      table.setColumnDescriptors(columnDescriptors);
+      table.setDefaultSortRules(sortRules);
+      String url = table.getKey();
+      table.setTitle("AUs containing URL: " + url);
+      try {
+	List<CachedUrl> cuLst =
+	  theDaemon.getPluginManager().findCachedUrls(url);
+	if (cuLst.isEmpty()) {
+	  throw new StatusService.NoSuchTableException("Unknown URL: " + url);
+	}
+	table.setRows(getRows(table, cuLst));
+      } catch (StatusService.NoSuchTableException e) {
+	throw e;
+      } catch (Exception e) {
+	logger.warning("Error building table", e);
+	throw new StatusService.
+	  NoSuchTableException("Error building table for URL: " + url, e);
+      }
+//       table.setSummaryInfo(getSummaryInfo(stats));
+    }
+
+    private List getRows(StatusTable table,
+			 List<CachedUrl> cuLst) {
+      PluginManager pluginMgr = theDaemon.getPluginManager();
+
+      List rowL = new ArrayList();
+      for (CachedUrl cu : cuLst) {
+	try {
+	  rowL.add(makeRow(table, cu));
+	} catch (Exception e) {
+	  logger.warning("Unexpected expection building row", e);
+	}
+      }
+      return rowL;
+    }
+
+    private Map makeRow(StatusTable table, CachedUrl cu) {
+      HashMap rowMap = new HashMap();
+      ArchivalUnit au = cu.getArchivalUnit();
+      rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
+
+
+      long size = cu.getContentSize();
+      Object val =
+	new StatusTable.SrvLink(cu.getContentSize(),
+				AdminServletManager.SERVLET_DISPLAY_CONTENT,
+				PropUtil.fromArgs("auid", au.getAuId(),
+						  "url", cu.getUrl()));
+      rowMap.put("Size", val);
+
+      int version = cu.getVersion();
+      Object versionObj = new Long(version);
+      if (version > 1) {
+	CachedUrl[] cuVersions = cu.getCuVersions(2);
+	if (cuVersions.length > 1) {
+	  StatusTable.Reference verLink =
+	    new StatusTable.Reference(versionObj,
+				      FILE_VERSIONS_TABLE_NAME, au.getAuId());
+	  verLink.setProperty("url", cu.getUrl());
+	  versionObj = verLink;
+	}
+      }
+      rowMap.put("Versions", versionObj);
+      Properties props = cu.getProperties();
+      try {
+	long cdate =
+	  Long.parseLong(props.getProperty(CachedUrl.PROPERTY_FETCH_TIME));
+	rowMap.put("CollectedDate",
+		   ServletUtil.headerDf.format(new Date(cdate)));
+      } catch (NumberFormatException ignore) {
+      }
+      return rowMap;
+    }
+
+  }
+
   static final StatusTable.DisplayedValue DAMAGE_STATE_OK =
     new StatusTable.DisplayedValue("Ok");
   static final StatusTable.DisplayedValue DAMAGE_STATE_DAMAGED =
@@ -628,7 +747,7 @@ public class ArchivalUnitStatus
       }
 
       CrawlSpec spec = au.getCrawlSpec();
-      List startUrls;
+      List<String> startUrls;
       if (spec instanceof SpiderCrawlSpec) {
 	startUrls = ((SpiderCrawlSpec)spec).getStartingUrls();
       } else {
@@ -664,11 +783,19 @@ public class ArchivalUnitStatus
 
 	CachedUrl cu = au.makeCachedUrl(url);
         try {
-	  Map row = makeRow(au, repo.getNode(url), cu,
-			    startUrls.contains(url));
+	  // XXX Remove this when we move to a repository that
+	  // distinguishes "foo/" from "foo".
+	  String normUrl = url;
+	  if (normUrl.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
+	    normUrl = normUrl.substring(0, normUrl.length() - 1);
+	  }
+	  Map row = makeRow(au, repo.getNode(normUrl), cu, startUrls);
 	  row.put("sort", new Integer(curRow));
           rowL.add(row);
-        } catch (MalformedURLException ignore) { }
+        } catch (MalformedURLException ignore) {
+	} finally {
+	  AuUtil.safeRelease(cu);
+	}
       }
 
       if (cusIter.hasNext()) {
@@ -679,9 +806,22 @@ public class ArchivalUnitStatus
     }
 
     private Map makeRow(ArchivalUnit au, RepositoryNode node,
-			CachedUrl cu, boolean isStartUrl) {
-      String url = node.getNodeUrl();
+			CachedUrl cu, List<String> startUrls) {
       boolean hasContent = node.hasContent();
+      String url = null;
+      boolean isStartUrl = false;
+      if (false && hasContent) {
+	// Repository v1 may return a name that omits the trailing slash
+	// (even without removing it above).  Use the name explicitly
+	// stored with the CU if any.
+	Properties cuProps = cu.getProperties();
+	url = cuProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
+	isStartUrl = startUrls.contains(url);
+      }
+      if (url == null) {
+	url = node.getNodeUrl();
+	isStartUrl |= startUrls.contains(url);
+      }
       Object val = url;
       if (isStartUrl) {
 	val = new StatusTable.DisplayedValue(val).setBold(true);
@@ -902,6 +1042,15 @@ public class ArchivalUnitStatus
 					    ColumnDescriptor.TYPE_STRING,
 					    wmsg));
       }
+      if (debug) {
+	String crawlPool = au.getFetchRateLimiterKey();
+	if (crawlPool == null) {
+	  crawlPool = "(none)";
+	}
+	res.add(new StatusTable.SummaryInfo("Crawl Pool",
+					    ColumnDescriptor.TYPE_STRING,
+					    crawlPool));
+      }
       long lastCrawlAttempt = state.getLastCrawlAttempt();
       res.add(new StatusTable.SummaryInfo("Last Completed Crawl",
 					  ColumnDescriptor.TYPE_DATE,
@@ -966,52 +1115,79 @@ public class ArchivalUnitStatus
 					  ColumnDescriptor.TYPE_STRING,
 					  peers));
 
+      List urlLinks = new ArrayList();
 
 
-      StatusTable.SrvLink urlListLink =
-	new StatusTable.SrvLink("URLs",
-				AdminServletManager.SERVLET_LIST_OBJECTS,
-				PropUtil.fromArgs("type", "urls",
-						  "auid", au.getAuId()));
+      addLink(urlLinks,
+	      new StatusTable
+	      .SrvLink("URLs",
+		       AdminServletManager.SERVLET_LIST_OBJECTS,
+		       PropUtil.fromArgs("type", "urls",
+					 "auid", au.getAuId())));
 
-      StatusTable.SrvLink fileListLink =
-	new StatusTable.SrvLink("Files",
-				AdminServletManager.SERVLET_LIST_OBJECTS,
-				PropUtil.fromArgs("type", "files",
-						  "auid", au.getAuId()));
+      addLink(urlLinks,
+	      new StatusTable
+	      .SrvLink("Files",
+		       AdminServletManager.SERVLET_LIST_OBJECTS,
+		       PropUtil.fromArgs("type", "files",
+					 "auid", au.getAuId())));
+      if (au.getArchiveFileTypes() != null) {
+	addLink(urlLinks,
+		new StatusTable
+		.SrvLink("URLs*",
+			 AdminServletManager.SERVLET_LIST_OBJECTS,
+			 PropUtil.fromArgs("type", "urlsm",
+					   "auid", au.getAuId())));
+
+	addLink(urlLinks,
+		new StatusTable
+		.SrvLink("Files*",
+			 AdminServletManager.SERVLET_LIST_OBJECTS,
+			 PropUtil.fromArgs("type", "filesm",
+					   "auid", au.getAuId())));
+      }
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
-					  ListUtil.list("List: ",
-							urlListLink,
-							", ",
-							fileListLink)));
+					  urlLinks));
 
+      List artLinks = new ArrayList();
       if (ListObjects.hasArticleList(au)) {
-	StatusTable.SrvLink doiListLink =
-	  new StatusTable.SrvLink("DOIs",
-				  AdminServletManager.SERVLET_LIST_OBJECTS,
-				  PropUtil.fromArgs("type", "dois",
-						    "auid", au.getAuId()));
-	StatusTable.SrvLink articleListLink =
-	  new StatusTable.SrvLink("Articles",
-				  AdminServletManager.SERVLET_LIST_OBJECTS,
-				  PropUtil.fromArgs("type", "articles",
-						    "auid", au.getAuId()));
-	StatusTable.SrvLink metadataListLink =
-	  new StatusTable.SrvLink("Metadata",
-				  AdminServletManager.SERVLET_LIST_OBJECTS,
-				  PropUtil.fromArgs("type", "metadata",
-						    "auid", au.getAuId()));
+	addLink(artLinks,
+		new StatusTable
+		.SrvLink("Articles",
+			 AdminServletManager.SERVLET_LIST_OBJECTS,
+			 PropUtil.fromArgs("type", "articles",
+					   "auid", au.getAuId())));
+      }
+      if (ListObjects.hasArticleMetadata(au)) {
+	addLink(artLinks,
+		new StatusTable
+		.SrvLink("DOIs",
+			 AdminServletManager.SERVLET_LIST_OBJECTS,
+			 PropUtil.fromArgs("type", "dois",
+					   "auid", au.getAuId())));
+	addLink(artLinks,
+		new StatusTable
+		.SrvLink("Metadata",
+			 AdminServletManager.SERVLET_LIST_OBJECTS,
+			 PropUtil.fromArgs("type", "metadata",
+					   "auid", au.getAuId())));
+      }
+      if (!artLinks.isEmpty()) {
         res.add(new StatusTable.SummaryInfo(null,
 					    ColumnDescriptor.TYPE_STRING,
-					    ListUtil.list("List: ",
-							  articleListLink,
-							  ", ",
-							  doiListLink,
-							  ", ",
-							  metadataListLink)));
+					    artLinks));
       }
       return res;
+    }
+
+    void addLink(List links, StatusTable.SrvLink link) {
+      if (links.isEmpty()) {
+	links.add("List: ");
+      } else {
+	links.add(", ");
+      }
+      links.add(link);
     }
 
     void addStringIfNotNull(List lst, String val, String heading) {
@@ -1172,38 +1348,42 @@ public class ArchivalUnitStatus
 						     " not found in AU: " +
 						     au.getName());
       }
-      // Get array of versions.  One more than we need just to determine
-      // whether to add a Next link
-      CachedUrl[] cuVersions = curCu.getCuVersions(startRow + numRows + 1);
+      try {
+	// Get array of versions.  One more than we need just to determine
+	// whether to add a Next link
+	CachedUrl[] cuVersions = curCu.getCuVersions(startRow + numRows + 1);
 
-      List rowL = new ArrayList();
-      if (startRow > 0) {
-        // add 'previous'
-        int start = startRow - defaultNumRows;
-        if (start < 0) {
-          start = 0;
-        }
-        rowL.add(makeOtherRowsLink(false, start, au.getAuId(), url));
-      }
-      int endRow1 = startRow + numRows; // end row + 1
-      int curRow = -1;
-      int curVer = curCu.getVersion() + 1;
-      for (CachedUrl cu : cuVersions) {
-	curRow++;
-	curVer--;
-        if (curRow < startRow) {
-          continue;
-        }
-	if (curRow >= numRows) {
-	  // add 'next'
-	  rowL.add(makeOtherRowsLink(true, endRow1, au.getAuId(), url));
-	  break;
+	List rowL = new ArrayList();
+	if (startRow > 0) {
+	  // add 'previous'
+	  int start = startRow - defaultNumRows;
+	  if (start < 0) {
+	    start = 0;
+	  }
+	  rowL.add(makeOtherRowsLink(false, start, au.getAuId(), url));
 	}
-	Map row = makeRow(au, cu, curVer);
-	row.put("sort", curRow);
-	rowL.add(row);
+	int endRow1 = startRow + numRows; // end row + 1
+	int curRow = -1;
+	int curVer = curCu.getVersion() + 1;
+	for (CachedUrl cu : cuVersions) {
+	  curRow++;
+	  curVer--;
+	  if (curRow < startRow) {
+	    continue;
+	  }
+	  if (curRow >= numRows) {
+	    // add 'next'
+	    rowL.add(makeOtherRowsLink(true, endRow1, au.getAuId(), url));
+	    break;
+	  }
+	  Map row = makeRow(au, cu, curVer);
+	  row.put("sort", curRow);
+	  rowL.add(row);
+	}
+	return rowL;
+      } finally {
+	AuUtil.safeRelease(curCu);
       }
-      return rowL;
     }
 
     private Map makeRow(ArchivalUnit au, CachedUrl cu, int ver) {
@@ -1484,14 +1664,14 @@ public class ArchivalUnitStatus
       new ColumnDescriptor("Last", "Consensus",
                            ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor("HighestPercentAgreement", "Highest Agreement",
-                           ColumnDescriptor.TYPE_PERCENT),
+                           ColumnDescriptor.TYPE_AGREEMENT),
       new ColumnDescriptor("LastPercentAgreement", "Last Agreement",
-                           ColumnDescriptor.TYPE_PERCENT),
+                           ColumnDescriptor.TYPE_AGREEMENT),
       new ColumnDescriptor("HighestPercentAgreementHint",
 			   "Highest Agreement Hint",
-                           ColumnDescriptor.TYPE_PERCENT),
+                           ColumnDescriptor.TYPE_AGREEMENT),
       new ColumnDescriptor("LastPercentAgreementHint", "Last Agreement Hint",
-                           ColumnDescriptor.TYPE_PERCENT),
+                           ColumnDescriptor.TYPE_AGREEMENT),
       new ColumnDescriptor("LastAgree",
 			   "Last Consensus",
                            ColumnDescriptor.TYPE_DATE)

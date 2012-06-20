@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.84 2011-08-30 04:42:11 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.84.6.1 2012-06-20 00:03:09 nchondros Exp $
  */
 
 /*
@@ -60,6 +60,12 @@ public class LockssRepositoryImpl
    */
   public static final String PARAM_CACHE_LOCATION =
     Configuration.PREFIX + "cache.location";
+
+  /** Restores pre repo rescanning bugfix behavior (4050) */
+  public static final String PARAM_CLEAR_DIR_MAP =
+    RepositoryManager.PREFIX + "clearDirMapOnAuStop";
+  public static final boolean DEFAULT_CLEAR_DIR_MAP = false;
+
   /**
    * Name of top directory in which the urls are cached.
    */
@@ -127,7 +133,11 @@ public class LockssRepositoryImpl
   public void stopService() {
     // mainly important in testing to blank this
     lastPluginDir = INITIAL_PLUGIN_DIR;
-    localRepositories = new HashMap();
+    if (CurrentConfig.getBooleanParam(PARAM_CLEAR_DIR_MAP,
+				      DEFAULT_CLEAR_DIR_MAP)) {
+      // This should be in RepositoryManager.stopService()
+      localRepositories = new HashMap();
+    }
     super.stopService();
   }
 

@@ -11,13 +11,16 @@
   {
     title <
       name = The Scriblerian and the Kit-Cats ;
-      issn = 0022-6862 ;
-      issnl = 0022-6862
+      issn = 0190-731X ;
+      eissn = 2165-0624 
     >
 
-	comment[upcoming] = this journal is upcoming in projectmuse
-
     param[journal_dir] = the_scriblerian_and_the_kit-cats
+    attr[journal_id] = scb
+    
+    au < manifest ; 2011 ; The Scriblerian and the Kit-Cats Volume 44 ; 44 >
+    au < expected ; 2012 ; The Scriblerian and the Kit-Cats Volume 45 ; 45 >
+
 
   }
     

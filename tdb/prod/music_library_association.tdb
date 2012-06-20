@@ -20,6 +20,7 @@
 	comment[n59] = http://muse.jhu.edu/journals/notes/v059/www.b�rben.it/	java.net.MalformedURLException
 
     param[journal_dir] = notes
+    attr[journal_id] = not
 
     au < released ; 2000-2001 ; Notes Volume 57 ; 57 >
     au < released ; 2001-2002 ; Notes Volume 58 ; 58 >
@@ -31,6 +32,8 @@
     au < released ; 2007-2008 ; Notes Volume 64 ; 64 >
     au < released ; 2008-2009 ; Notes Volume 65 ; 65 >
     au < released ; 2009-2010 ; Notes Volume 66 ; 66 >
+    au < testing ; 2010-2011 ; Notes Volume 67 ; 67 >
+    au < testing ; 2011-2012 ; Notes Volume 68 ; 68 >
 
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: IndianaUniversityPressLoginPageChecker.java,v 1.1 2010-12-01 11:31:12 thib_gc Exp $
+ * $Id: IndianaUniversityPressLoginPageChecker.java,v 1.1.12.1 2012-06-20 00:03:08 nchondros Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.*;
 import java.util.Properties;
 
 import org.lockss.daemon.*;
-import org.lockss.util.StringUtil;
+import org.lockss.util.*;
 
 public class IndianaUniversityPressLoginPageChecker implements LoginPageChecker {
 
@@ -50,7 +50,10 @@ public class IndianaUniversityPressLoginPageChecker implements LoginPageChecker 
                              Reader reader)
       throws IOException,
              PluginException {
-    return StringUtil.containsString(reader, LOGIN_STRING);
+    if ("text/html".equalsIgnoreCase(HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type")))) {
+      return StringUtil.containsString(reader, LOGIN_STRING);
+    }
+    return false;
   }
 
 }

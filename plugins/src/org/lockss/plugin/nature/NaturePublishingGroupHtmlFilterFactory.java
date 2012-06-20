@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.12 2011-04-19 20:34:24 thib_gc Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.12.10.1 2012-06-20 00:03:08 nchondros Exp $
  */
 
 /*
@@ -62,9 +62,11 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         // Contains the institution name
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "login-nav"),
         // User-submitted comments
-        HtmlNodeFilters.tagWithText("p", "There are currently no comments."),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "comments "),
         // User-submitted comments
         HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "^comments "),
+        // User-submitted comments
+        HtmlNodeFilters.tagWithText("p", "There are currently no comments."),
         // Liable to change (navigational elements, links to other journals, etc.)
         HtmlNodeFilters.tagWithAttribute("div", "id", "journalnav"),
         // Advertising, jobs ticker, news ticker, etc.
@@ -73,6 +75,10 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer-copyright"),
         // Suggested similar pages
         HtmlNodeFilters.tagWithAttribute("div", "id", "more-like-this"),
+        // Suggested other articles
+        HtmlNodeFilters.tagWithAttribute("div", "id", "related-links"),
+        // Suggested other articles
+        HtmlNodeFilters.tagWithAttribute("div", "id", "news-carousel"),
         // Older table layout: contains the institution name
         HtmlNodeFilters.tagWithAttribute("div", "class", "logon"),
         // Older table layout: jobs ticket

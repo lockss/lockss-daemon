@@ -1,10 +1,10 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.66.2.1 2011-12-13 16:50:35 nchondros Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.66.2.2 2012-06-20 00:03:10 nchondros Exp $
  */
 
 /*
 
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -69,6 +69,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
   private MyMockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
   private LockssRepository repo;
+  private int pauseBeforeFetchCounter;
 
   private MockNodeManager nodeMgr = new MockNodeManager();
 
@@ -117,14 +118,18 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testCache() throws IOException {
+    pauseBeforeFetchCounter = 0;
+
     cacher._input = new StringInputStream("test stream");
     cacher._headers = new CIProperties();
     // should cache
     assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
     assertTrue(cacher.wasStored);
+    assertEquals(1, pauseBeforeFetchCounter);
   }
 
   public void testReCacheWCookie() throws IOException {
+    pauseBeforeFetchCounter = 0;
 
     cacher._input = new StringInputStream("test stream");
     CIProperties headers = new CIProperties();
@@ -136,12 +141,14 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertEquals(2, cacher.getUncachedInputStreamCount);
     // getUncachedProperties() called twice each time due to login page check
     assertEquals(4, cacher.getUncachedPropertiesCount);
+    assertEquals(2, pauseBeforeFetchCounter);
   }
 
   public void testReCacheWCookieOverride() throws IOException {
     BaseArchivalUnit.ParamHandlerMap pMap = new BaseArchivalUnit.ParamHandlerMap();
     pMap.putBoolean("refetch_on_set_cookie", false);
     cacher.setParamMap(pMap);
+    pauseBeforeFetchCounter = 0;
 
     cacher._input = new StringInputStream("test stream");
     CIProperties headers = new CIProperties();
@@ -152,6 +159,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertTrue(cacher.wasStored);
     assertEquals(1, cacher.getUncachedInputStreamCount);
     assertEquals(2, cacher.getUncachedPropertiesCount);
+    assertEquals(1, pauseBeforeFetchCounter);
   }
 
   public void testLastModifiedCache() throws IOException {
@@ -170,6 +178,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertFalse(cacher.wasStored);
 
     TimeBase.step(5000);
+    cacher.reset();
     cacher._input = new StringInputStream("test stream");
     cacher._headers = new CIProperties();
     // should cache now
@@ -269,12 +278,14 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertFalse(cacher.wasStored);
 
     // no exceptions from null inputstream
+    cacher.reset();
     cacher._input = null;
     cacher._headers = new CIProperties();
     cacher.cache();
     // should simply skip
     assertFalse(cacher.wasStored);
 
+    cacher.reset();
     cacher._input = new StringInputStream("test stream");
     cacher._headers = new CIProperties();
     cacher.cache();
@@ -1368,6 +1379,10 @@ public class TestBaseUrlCacher extends LockssTestCase {
       }
     }
 
+    @Override
+    protected void pauseBeforeFetch() {
+      pauseBeforeFetchCounter++;
+    }
   }
 
   // Mock BaseUrlCacher that fakes the connection
@@ -1398,45 +1413,78 @@ public class TestBaseUrlCacher extends LockssTestCase {
       this.pMap = pMap;
     }
 
-    public InputStream getUncachedInputStreamOnly(String lastModified) {
+    @Override
+    public InputStream getUncachedInputStreamOnly(String lastModified)
+	throws IOException {
       // simple version which returns null if shouldn't fetch
       // if (lastCached < TimeBase.nowMs()) {
       getUncachedInputStreamCount++;
+      return super.getUncachedInputStreamOnly(lastModified);
+    }
 
+    @Override
+    protected LockssUrlConnection makeConnection0(String url,
+						  LockssUrlConnectionPool pool)
+	throws IOException {
+      MockLockssUrlConnection conn;
       if (inputList == null) {
         logger.debug3("Using old method for getUncachedInputStream");
         // this is way too much smarts for mock code, but is left here for
         // legacy support. It should be cleaned up
-        long last = -1;
-        if (lastModified != null) {
-          try {
-            last = BaseUrlCacher.GMT_DATE_FORMAT.parse(lastModified).getTime();
-          } catch (ParseException e) {
-          }
-        }
-        if (last < TimeBase.nowMs()) {
-          return _input;
-        } else {
-          return null;
-        }
+	conn = new MockLockssUrlConnection() {
+	    String ifMod;
+	    public void setRequestProperty(String key, String value) {
+	      super.setRequestProperty(key, value);
+	      if ("If-Modified-Since".equals(key)) {
+		ifMod = value;
+	      }
+	    }
+	    public void execute() throws IOException {
+	      super.execute();
+	      long last = -1;
+	      if (ifMod != null) {
+		try {
+		  last = BaseUrlCacher.GMT_DATE_FORMAT.parse(ifMod).getTime();
+		} catch (ParseException e) {
+		}
+	      }
+	      if (last < TimeBase.nowMs()) {
+	      } else {
+		setResponseCode(304);
+		setResponseInputStream(null);
+	      }
+	    }
+	  };
+	conn.setResponseInputStream(_input);
+	conn.setResponseCode(200);
+      } else {
+	logger.debug3("Using new method for getUncachedInputStream");
+	conn = new MockLockssUrlConnection();
+	InputStream is = (InputStream) inputList.remove(0);
+	conn.setResponseInputStream(is);
+	conn.setResponseCode(200);
+	logger.debug3("Returning " + is);
       }
-      logger.debug3("Using new method for getUncachedInputStream");
-      InputStream is = (InputStream) inputList.remove(0);
-      logger.debug3("Returning " + is);
-      return is;
+      return conn;
     }
 
+    @Override
     public CIProperties getUncachedProperties() {
       getUncachedPropertiesCount++;
       return _headers;
     }
 
+    @Override
     public void storeContent(InputStream input, CIProperties headers)
         throws IOException {
       super.storeContent(input, headers);
       wasStored = true;
     }
 
+    @Override
+    protected void pauseBeforeFetch() {
+      pauseBeforeFetchCounter++;
+    }
   }
 
   private class MyMockArchivalUnit extends MockArchivalUnit {
@@ -1453,7 +1501,6 @@ public class TestBaseUrlCacher extends LockssTestCase {
         return super.makeCachedUrl(url);
       }
     }
-
   }
 
   private class MyMockLockssUrlConnection extends MockLockssUrlConnection {

@@ -18,18 +18,34 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0002-8444
   
-      au < superseded ; 2001 ; American Fern Journal Volume 91 ; 91 >
-      au < superseded ; 2002 ; American Fern Journal Volume 92 ; 92 >
-      au < superseded ; 2003 ; American Fern Journal Volume 93 ; 93 >
-      au < superseded ; 2004 ; American Fern Journal Volume 94 ; 94 >
-      au < superseded ; 2005 ; American Fern Journal Volume 95 ; 95 >
-      au < superseded ; 2006 ; American Fern Journal Volume 96 ; 96 >
-      au < superseded ; 2007 ; American Fern Journal Volume 97 ; 97 >
+      au < down ; 2001 ; American Fern Journal Volume 91 ; 91 >
+      au < down ; 2002 ; American Fern Journal Volume 92 ; 92 >
+      au < down ; 2003 ; American Fern Journal Volume 93 ; 93 >
+      au < down ; 2004 ; American Fern Journal Volume 94 ; 94 >
+      au < down ; 2005 ; American Fern Journal Volume 95 ; 95 >
+      au < down ; 2006 ; American Fern Journal Volume 96 ; 96 >
+      au < down ; 2007 ; American Fern Journal Volume 97 ; 97 >
     }
 
     {
 
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = amfj
+      
+      au < doNotProcess ; 2001 ; American Fern Journal Volume 91 ; 91 >
+      au < doNotProcess ; 2002 ; American Fern Journal Volume 92 ; 92 >
+      au < doNotProcess ; 2003 ; American Fern Journal Volume 93 ; 93 >
+      au < doNotProcess ; 2004 ; American Fern Journal Volume 94 ; 94 >
+      au < doNotProcess ; 2005 ; American Fern Journal Volume 95 ; 95 >
+      au < doNotProcess ; 2006 ; American Fern Journal Volume 96 ; 96 >
+      au < doNotProcess ; 2007 ; American Fern Journal Volume 97 ; 97 >
+      au < ready ; 2008 ; American Fern Journal Volume 98 ; 98 >
+      au < ready ; 2009 ; American Fern Journal Volume 99 ; 99 >
+      au < ready ; 2010 ; American Fern Journal Volume 100 ; 100 >
+      au < ready ; 2011 ; American Fern Journal Volume 101 ; 101 >
+
 
     }
 

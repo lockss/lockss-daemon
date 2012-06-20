@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.23 2011-10-05 05:58:19 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.23.4.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
@@ -271,7 +271,7 @@ public class ViewContent extends LockssServlet {
     }
     page.add(comp);
 //     page.add(getFooter());
-    ServletUtil.writePage(resp, page);
+    endPageNoFooter(page);
   }
 
   void addPropRow(Table tbl, String prop, long val) {
@@ -345,12 +345,6 @@ public class ViewContent extends LockssServlet {
     comp.add(error);
     comp.add("</font></center><br>");
     page.add(comp);
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
-    if (result > 0) {
-      resp.setStatus(result);
-    }
+    endPage(page);
   }
-
-
 }

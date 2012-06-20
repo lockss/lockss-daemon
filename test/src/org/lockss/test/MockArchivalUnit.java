@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.97 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.97.4.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -85,7 +85,8 @@ public class MockArchivalUnit implements ArchivalUnit {
   private List urlStems = Collections.EMPTY_LIST;
   private Collection loginUrls;
   private String fetchRateLimiterKey;
-  private RateLimiterInfo rateInfo;
+  private RateLimiterInfo rateInfo = new RateLimiterInfo("foo", "unlimited");
+
   private String perHostPermissionPath;
   private Comparator<CrawlUrl> crawlUrlCmp;
 
@@ -584,6 +585,16 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public List<String> getAuFeatureUrls(String auFeature) {
     return null;
+  }
+
+  public ArchiveFileTypes getArchiveFileTypes() {
+    return aft;
+  }
+
+  ArchiveFileTypes aft = null;
+
+  public void setArchiveFileTypes(ArchiveFileTypes aft) {
+    this.aft = aft;
   }
 
   public String toString() {

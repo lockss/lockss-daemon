@@ -1,5 +1,5 @@
 /*
- * $Id: SaxMetadataExtractor.java,v 1.2 2011-06-14 09:28:35 tlipkis Exp $
+ * $Id: SaxMetadataExtractor.java,v 1.2.8.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -87,6 +87,8 @@ public class SaxMetadataExtractor extends SimpleFileMetadataExtractor {
       // XXX Should this terminate the extraction?
       // SimpleXmlMetadataExtractor simply skips malformed constructs
       //       throw new IOException(e);
+    } finally {
+      IOUtil.safeClose(bReader.getCharacterStream());
     }
     return am;
   }

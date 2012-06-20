@@ -18,6 +18,7 @@
     >
 
     param[journal_dir] = monumenta_nipponica
+    attr[journal_id] = mni
 
     au < released ; 2005 ; Monumenta Nipponica Volume 60 ; 60 >
     au < released ; 2006 ; Monumenta Nipponica Volume 61 ; 61 >
@@ -25,6 +26,8 @@
     au < released ; 2008 ; Monumenta Nipponica Volume 63 ; 63 >
     au < released ; 2009 ; Monumenta Nipponica Volume 64 ; 64 >
     au < ready ; 2010 ; Monumenta Nipponica Volume 65 ; 65 >
+    au < manifest ; 2011 ; Monumenta Nipponica Volume 66 ; 66 >
+    au < expected ; 2012 ; Monumenta Nipponica Volume 67 ; 67 >
 
   }
 

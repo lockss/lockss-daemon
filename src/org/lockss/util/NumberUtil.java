@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.12 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: NumberUtil.java,v 1.12.2.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -31,11 +31,11 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import org.apache.commons.lang.StringUtils;
+import org.lockss.exporter.biblio.BibliographicOrderScorer;
+import org.lockss.exporter.biblio.BibliographicUtil;
+
+import java.util.*;
 
 
 /**
@@ -81,9 +81,9 @@ public class NumberUtil {
    * end numbers. If the supplied delta is negative, it will be negated.
    * <p>
    * If the start and end numbers are equal, an array containing the single
-   * value is returned A <code>NumberFormatException</code> is thrown if the
+   * value is returned. A <code>NumberFormatException</code> is thrown if the
    * parameters are inconsistent, that is, the difference between start and end
-   * is not divisible by the delta,
+   * is not divisible by the delta.
    *
    * @param start start number
    * @param end end number, which may be less than the start number
@@ -98,6 +98,7 @@ public class NumberUtil {
     // Is the sequence descending
     boolean descending = start>end;
     // Ensure the delta is positive
+    if (delta==0) throw new IllegalArgumentException("Delta cannot be 0.");
     delta = Math.abs(delta);
     // Check the delta divides into the gap
     if (Math.abs(end-start) % delta > 0) {
@@ -115,7 +116,7 @@ public class NumberUtil {
   }
 
   /**
-   * Generate a series of numbers incrementing or decrementing by 1,
+   * Generate a series of numbers incrementing or decrementing by 1.
    * @param start the start number
    * @param end the end number, which may be less than the start number
    * @return a range of numbers, incrementing or decrementing by 1
@@ -125,9 +126,213 @@ public class NumberUtil {
     return constructSequence(start, end, 1);
   }
 
+
   /**
-   * Get the range start. Whitespace is trimmed.
-   * @param  range a start/stop range separated by a dash, optionally with whitesapce
+   * Generate a series of strings representing integers, covering the range from
+   * the start string to the end string inclusive, and with zero-padding
+   * matching the inputs. The start and end strings should be parseable as
+   * integers, and if they contain zero padding should be of the same length.
+   * The length of every string in the sequence will be maintained with
+   * zero-padding if the start and end contain it.
+   *
+   * @param start
+   * @param end
+   * @param delta the magnitude of the increment or decrement, expressed as a positive integer
+   * @param pad
+   * @return
+   * @throws NumberFormatException if the start or end display zero-padding but are of different lengths
+   */
+  protected static List<String> constructPaddedIntSequence(String start,
+                                                           String end,
+                                                           int delta)
+      throws NumberFormatException {
+    List<String> seq = new ArrayList<String>();
+    int s = parseInt(start);
+    int e = parseInt(end);
+    int[] intSeq = constructSequence(s, e, delta);
+    int padlen = 0;
+    // If a number starts with a zero, maintain zero-padded length
+    // in generated tokens.
+    if (start.startsWith("0") || end.startsWith("0")) {
+      padlen = start.length();
+      // Check if the zero-padded numbers are the same length
+      if (end.length() != padlen)
+        throw new NumberFormatException(String.format(
+            "Can't generate sequence with different length " +
+                "zero-padded numbers %s and %s.",
+            start, end
+        ));
+    }
+    // Zero-pad the numbers as necessary and add to result list
+    for (int i : intSeq) seq.add(padNumbers(i, padlen));
+    return seq;
+  }
+
+  /**
+   * Construct a sequence of Roman numerals. If both start and end are lower
+   * case, the resulting sequence is lower case.
+   * @param start a String representing a Roman numeral
+   * @param end a String representing a Roman numeral
+   * @param delta the magnitude of the increment or decrement, expressed as a positive integer
+   * @return
+   * @throws NumberFormatException if the start or end argument cannot be parsed as a Roman numeral
+   */
+  public static List<String> constructRomanSequence(String start, String end, int delta)
+      throws NumberFormatException {
+    List<String> seq = new ArrayList<String>();
+    // Try and maintain the case - if it is mixed we use the default upper
+    // case as we cannot decide what is appropriate
+    boolean lower = StringUtils.isAllLowerCase(start) &&
+        StringUtils.isAllLowerCase(end);
+    int s = parseRomanNumber(start);
+    int e = parseRomanNumber(end);
+    // Construct an int sequence
+    int[] intSeq = constructSequence(s, e, delta);
+    // Convert the numbers back to appropriately-cased Roman, and add to result list
+    for (int i : intSeq) {
+      String rn = toRomanNumber(i);
+      seq.add(lower ? StringUtils.lowerCase(rn) : rn);
+    }
+    return seq;
+  }
+
+  /**
+   * Construct an alphabetical (base-26) sequence by incrementing the first
+   * string alphabetically until it reaches the second string. The start string
+   * is incremented by the given delta; if the delta does not divide into the
+   * Levenstein distance between the start and end strings, an exception is
+   * thrown. The strings must also be the same length.
+   * <p>
+   * The string is lower cased before the increment is applied, and then each
+   * character position that was upper case in the original string is upper
+   * cased in the resulting string. It is assumed that the two strings are
+   * capitalised in the same pattern. An exception will be thrown if any
+   * character is outside of a-z after lower casing.
+   *
+   * @param start an alphabetical string (case-insensitive)
+   * @param end an alphabetical string (case-insensitive)
+   * @param delta the increment between strings in the sequence; can be negative
+   * @return a list of strings representing a sequence from <tt>start</tt> to <tt>end</tt>
+   * @throws IllegalArgumentException if the delta does not divide into the gap or the strings are different lengths
+   */
+  public static List<String> constructAlphabeticSequence(final String start,
+                                                         final String end,
+                                                         int delta)
+      throws IllegalArgumentException {
+
+    // Ensure the delta is positive
+    if (delta==0) throw new IllegalArgumentException("Delta cannot be 0.");
+
+    // If the strings are equal, the sequence will be the single string
+    if (start.equals(end)) return new ArrayList<String>() {{
+      add(start);
+    }};
+
+    // Check the string lengths are the same
+    if (start.length()!=end.length())
+      throw new IllegalArgumentException(String.format(
+          "Start and end strings are different lengths: %s %s.", start, end
+      ));
+
+    // Find the integer distance
+    int distance = Math.abs(fromBase26(start) - fromBase26(end));
+    //int distance = StringUtils.getLevenshteinDistance(start, end);
+    // Check the delta divides into the gap
+    if (distance % delta != 0) {
+      throw new IllegalArgumentException(String.format(
+          "The distance %s between start and end must be " +
+              "divisible by delta %s.", distance, delta
+      ));
+    }
+
+    // Track the case of each character, so we can reset them before returning
+    BitSet cases = new BitSet(start.length());
+    for (int i=0; i<start.length(); i++) {
+      cases.set(i, Character.isUpperCase(start.charAt(i)));
+    }
+
+    // Increment alphabetically
+    List<String> seq = new ArrayList<String>();
+    int[] nums = constructSequence(fromBase26(start), fromBase26(end), delta);
+    for (int i=0; i< nums.length; i++) {
+      String s = toBase26(nums[i]);
+      // Pad the string to the correct length with 'a'
+      s = StringUtils.leftPad(s, start.length(), 'a');
+      // Re-case the chars
+      char[] carr = s.toCharArray();
+      for (int pos=0; pos<cases.length(); pos++) {
+        if (cases.get(pos)) carr[pos] = Character.toUpperCase(carr[pos]);
+      }
+      seq.add(new String(carr));
+    }
+    return seq;
+  }
+
+  /**
+   * Increment an alphabetical string by the given delta, considering the string
+   * to represent a value in base-26 using the characters a-z or A-Z - the
+   * string is treated case-insensitively. For example, with a delta of 1:
+   * <ul>
+   *   <li>aaa to aab</li>
+   *   <li>aaz to aba</li>
+   *   <li>zzy to zzz</li>
+   *   <li>zyz to zza</li>
+   * </ul>
+   * <p>
+   * Note that after 'z' comes 'ba', because 'a' corresponds to 0 and is so
+   * every number is implicitly preceded by 'a'. This may not be what is desired
+   * for some sequences, in which case this may need to be adapted.
+   * <p>
+   * The string is lower cased before the increment is applied, and then each
+   * character position that was upper case in the original string is upper
+   * cased before returning. An exception will be thrown if any character is
+   * outside of a-z after lower casing. If the value limit for the string length
+   * is reached, the returned string will be longer; the extra characters will
+   * be lower cased, which may be unwanted.
+   *
+   * @param s a purely alphabetical string
+   * @return a string incremented according to base-26
+   * @throws NumberFormatException if the string contains inappropriate characters or cannot be incremented
+   */
+  public static String incrementBase26String(String s, int delta)
+      throws NumberFormatException {
+    // Track the case of each character, so we can reset them before returning
+    BitSet cases = new BitSet();
+    for (int i=0; i<s.length(); i++) {
+      cases.set(i, Character.isUpperCase(s.charAt(i)));
+    }
+    // Convert, increment, convert back
+    String res = toBase26(fromBase26(s.toLowerCase()) + delta);
+    // Pad the string to the correct length with 'a'
+    res = StringUtils.leftPad(res, s.length(), 'a');
+    // Re-case the chars - using an offset in case the new string is longer
+    char[] carr = res.toCharArray();
+    int offset = carr.length - s.length();
+    for (int pos=0; pos<s.length(); pos++) {
+      if (cases.get(pos)) carr[offset+pos] = Character.toUpperCase(carr[offset+pos]);
+    }
+    return new String(carr);
+  }
+
+  /**
+   * Increment an alphabetical string by 1.
+   * @param s
+   * @return
+   * @throws NumberFormatException
+   */
+  public static String incrementBase26String(String s)
+      throws NumberFormatException {
+    return incrementBase26String(s, 1);
+  }
+
+  /**
+   * Get the range start. Whitespace is trimmed. This method will split any
+   * string with a central hyphen into two parts. This may not be appropriate
+   * if the string does not actually represent a range. The method
+   * {@link BibliographicUtil.isRange) can be used to get an indication of
+   * whether the string appears to represent a range or not.
+   *
+   * @param  range a start/stop range separated by a dash, optionally with whitespace
    * @return the range start <code>null</code> if not specified
    */
   static public String getRangeStart(String range) {
@@ -140,7 +345,7 @@ public class NumberUtil {
 
   /**
    * Get the range end. Whitespace is trimmed.
-   * @param range a start/stop range separated by a dash, optionally with whitesapce
+   * @param range a start/stop range separated by a dash, optionally with whitespace
    * @return the range end or <code>null</code> if not specified
    */
   static public String getRangeEnd(String range) {
@@ -153,21 +358,10 @@ public class NumberUtil {
 
   /**
    * Determine whether a range includes a given value. The range can be a
-   * single value  or a start/stop range separated by a dash. If the range
+   * single value or a start/stop range separated by a dash. If the range
    * is a single value, it will be used as both the start and stop values.
-   * <p>
-   * If the range and value can be interpreted as numbers (Arabic or Roman),
-   * the value is compared numerically with the range. Otherwise, the value 
-   * is compared to the range start and stop values as a topic range. That 
-   * is, "Georgia", "Kansas", and "Massachusetts" are topics within the
-   * volume "Ge-Ma.
-   * <p>
-   * The range string can also include whitespace, which is trimmed from the 
-   * resulting year. Java's <code>String.trim()</code> method trims blanks and 
-   * also control characters, but doesn't trim all the forms of blank 
-   * specified in the Unicode character set. The value to search for is 
-   * <i>not</i> trimmed.
-   *
+   * Convenience method which calculates the endpoints for 
+   * {@link #rangeIncludes(String, String, String)}.
    * @param range a single value or a start/stop range separated by a dash, optionally with whitespace
    * @param value the value
    * @return <code>true</code> if this range includes the value
@@ -179,6 +373,38 @@ public class NumberUtil {
     int i = findRangeHyphen(range);
     String startRange = (i > 0) ? range.substring(0,i).trim() : range.trim();
     String endRange = (i > 0) ? range.substring(i+1).trim() : range.trim();
+    return rangeIncludes(startRange, endRange, value);
+  }
+
+  /**
+   * Determine whether a range includes a given value. Note that the range "v-x"
+   * includes "vi", "w" and "word" - it is interpreted as a Roman sequence or a
+   * letter/topic range depending on the context implied by the search value.
+   * <p>
+   * If the range and value can be interpreted as numbers (Arabic or Roman),
+   * the value is compared numerically with the range. Otherwise, the value
+   * is compared to the range start and stop values as a topic range. That 
+   * is, "Georgia", "Kansas", and "Massachusetts" are topics within the
+   * volume "Ge-Ma.
+   * <p>
+   * The range string can also include whitespace, which is trimmed from the 
+   * resulting year. Java's <code>String.trim()</code> method trims blanks and 
+   * also control characters, but doesn't trim all the forms of blank 
+   * specified in the Unicode character set. The value to search for is 
+   * <i>not</i> trimmed.
+   * <p>
+   * Note that this method does not throw any exceptions. If the range is
+   * inconsistent or decreasing, the return value will be false; if it has
+   * endpoints which are of different formats, the return value will be the
+   * result of comparing them as topic ranges. For an alternative which enforces
+   * certain restrictions commonly required in bibliographic volume strings, see
+   * {@link BibliographicUtil.rangeIncludes}.
+   * @param startRange a single value representing the start of the range
+   * @param endRange a single value representing the end of the range
+   * @param value the value
+   * @return <code>true</code> if this range includes the value
+   */
+  static public boolean rangeIncludes(String startRange, String endRange, String value) {
     try {
       // see if value is within range
       int srange = NumberUtil.parseInt(startRange);
@@ -210,6 +436,41 @@ public class NumberUtil {
     for (int i=0; i<=n/2; i++) hyphenPos = range.indexOf('-', hyphenPos+1);
     return hyphenPos;
   }
+
+  /**
+   * Does a set of ranges represent a single contiguous range? A contiguous
+   * range must have no gaps or overlaps. If the string contains no ranges
+   * but is non-empty, it is still considered contiguous. An empty string does
+   * not represent a contiguous range.
+   *
+   * @param rangeStr a list of ranges separated by comma or semicolon
+   * @return <tt>true</tt> if the ranges parsed from the string have no intervening gaps
+   */
+  public static boolean isContiguousRange(String rangeStr) {
+    if (rangeStr.isEmpty()) return false;
+    BibliographicUtil.RangeIterator ranges = new BibliographicUtil.RangeIterator(rangeStr);
+    if (!ranges.hasNext()) return false;
+    // Get the end of the first range
+    String range = ranges.next();
+    String lastEnd = BibliographicUtil.isRange(range) ? getRangeEnd(range) : range;
+    while (ranges.hasNext()) {
+      range = ranges.next();
+      String thisStart, thisEnd;
+      // Make sure the token appears to be a range before splitting it
+      if (BibliographicUtil.isRange(range)) {
+        thisStart = getRangeStart(range);
+        thisEnd = getRangeEnd(range);
+      } else {
+        thisStart = range;
+        thisEnd = range;
+      }
+      if (!BibliographicOrderScorer.areVolumesConsecutive(lastEnd, thisStart))
+        return false;
+      lastEnd = thisEnd;
+    }
+    return true;
+  }
+
 
   /**
    * Determines the value of the system property with the specified name.
@@ -252,14 +513,31 @@ public class NumberUtil {
   }
   
   /**
-   * Determines whether the input string represents a Roman number.
-   * 
+   * Determines whether the input string represents a Roman number, allowing
+   * for unnormalised Roman number formats like "viiii".
+   *
    * @param s the input String
    * @return <tt>true</tt> if the input string represents a Roman number
    */
   public static boolean isRomanNumber(String s) {
+    return isRomanNumber(s, false);
+  }
+
+  /**
+   * Determines whether the input string represents a Roman number, using the
+   * given validation. If the validation is false, non-standard Roman number
+   * formats will be accepted. It is useful to set the validation to true if
+   * there is a chance the string could be intended as alphabetic rather than
+   * Roman, for example "civic" or "mill".
+   *
+   * @param s the input String
+   * @param validate <code>true</code> if String representation is required
+   *     to be in normalized form
+   * @return <tt>true</tt> if the input string represents a Roman number
+   */
+  protected static boolean isRomanNumber(String s, boolean validate) {
     try {
-      NumberUtil.parseRomanNumber(s, false);
+      NumberUtil.parseRomanNumber(s, validate);
       return true;
     } catch (NumberFormatException ex) {
       return false;
@@ -267,10 +545,22 @@ public class NumberUtil {
   }
 
   /**
+   * Determines whether the input string represents a Roman number in normalised
+   * form. This is the method to use if there is a chance the string could be
+   * intended as alphabetic rather than Roman, for example "CIVIC" or "MILL".
+   *
+   * @param s the input String
+   * @return <tt>true</tt> if the input string represents a Roman number in normalised form
+   */
+  public static boolean isNormalisedRomanNumber(String s) {
+   return isRomanNumber(s, true);
+  }
+
+  /**
    * Determines whether the input string represents an integer, that is,
    * can be parsed directly as an integer. Note that a Roman numeral does not
    * count as an integer. As an alternative that also checks if the string can
-   * be parsed as a Roman numeral, use {@link isNumber()}.
+   * be parsed as a Roman numeral, use {@link #isNumber}.
    * 
    * @param s the input String
    * @return <tt>true</tt> if the input string represents an integer
@@ -287,8 +577,10 @@ public class NumberUtil {
   /**
    * Determines whether the input string represents a number, that is,
    * can be parsed to an integer by treating it as an integer representation,
-   * or as a normalised Roman numeral. This requires Roman numerals to be
-   * normalised if they are to be recognised and parsed.
+   * or as a normalised Roman numeral. This therefore requires Roman numerals 
+   * to be in a normalised form if they are to be recognised and parsed. 
+   * However they can be in lower case as the string is upper cased before
+   * parsing.
    * <p>
    * This is useful for example when the string to be parsed may well
    * represent a legitimate non-numerical string which happens to contain only
@@ -298,11 +590,12 @@ public class NumberUtil {
    * @return <tt>true</tt> if the input string represents an integer
    */
   public static boolean isNumber(String s) {
+    if (StringUtil.isNullString(s)) return false;
     // First try as an integer
     if (isInteger(s)) return true;
     // Secondly try as a Roman numeral, requiring normalisation
     try {
-      NumberUtil.parseRomanNumber(s, true);
+      NumberUtil.parseRomanNumber(s.toUpperCase(), true);
       return true;
     } catch (NumberFormatException ex) {
       return false;
@@ -312,7 +605,7 @@ public class NumberUtil {
   /**
    * Determines whether the input string contains any digits and can therefore
    * can be considered to include at least one number. Note that this is
-   * different to both {@link isInteger} and {@link isNumber}. A return value
+   * different to both {@link #isInteger} and {@link #isNumber}. A return value
    * of <tt>true</tt> does not indicate that the string can be parsed as a
    * number (though that may be true), but that it contains numbers. The method
    * works by looking at each character in turn, in the anticipation that it
@@ -381,16 +674,18 @@ public class NumberUtil {
 
   /**
    * Pad all the numbers in the string with zeros so that a lexicographical
-   * comparison treats numbers by magnitude.
+   * comparison treats numbers by magnitude. If the padLen is less than 1, the
+   * original string is returned.
    * <p>
    * This method has been copied verbatim from
-   * {@link org.lockss.util.CachingComparator()}.
+   * {@link org.lockss.util.CachingComparator}.
    *
    * @param s the input String
    * @param padLen the length of padding to impose
    * @return the string with numerical tokens zero-padded
    */
   public static String padNumbers(String s, int padLen) {
+    if (padLen<1) return s;
     int len = s.length();
     StringBuilder sb = new StringBuilder(len + padLen - 1);
     int ix = 0;
@@ -419,6 +714,17 @@ public class NumberUtil {
   }
 
   /**
+   * Pad an integer with zeros and return it as a string.
+   *
+   * @param i the input integer
+   * @param padLen the length of padding to impose
+   * @return a string with the zero-padded number
+   */
+  public static String padNumbers(int i, int padLen) {
+    return padNumbers("" + i, padLen);
+  }
+
+  /**
    * Determines whether the two integers are are strictly consecutive, that is,
    * whether the second integer comes directly after the first.
    * @param first the first integer
@@ -443,6 +749,20 @@ public class NumberUtil {
   public static boolean areConsecutive(String first, String second)
       throws NumberFormatException {
     return areConsecutive(parseInt(first), parseInt(second));
+  }
+
+  /**
+   * Whether two strings are alphabetically consecutive in the order given.
+   * That is, the second string is alphabetically a single increment from the
+   * first. The comparison is case-sensitive.
+   * @param first
+   * @param second
+   * @return
+   * @throws NumberFormatException
+   */
+  public static boolean areAlphabeticallyConsecutive(String first, String second)
+      throws NumberFormatException {
+    return second.equals(incrementBase26String(first));
   }
 
   /**
@@ -685,7 +1005,7 @@ public class NumberUtil {
    * @return roman array of numbers corresponding to the input number
    * @throws NumberFormatException if the input is not a valid Roman number
    */
-  private static int parseRomanNumber(String roman, List<String> tokens) 
+  private static int  parseRomanNumber(String roman, List<String> tokens)
     throws NumberFormatException {
     String notRomanNumber = "Not a roman number: " + roman;
     if (StringUtil.isNullString(roman)) {
@@ -870,8 +1190,58 @@ public class NumberUtil {
     }
     return result.toString();
   }
-  
-  
+
+  /**
+   * Convert a number into base-26 using lower case letters. Negative numbers
+   * are not supported; only the magnitude in base-26 will be returned.
+   * Adapted from http://en.wikipedia.org/wiki/Hexavigesimal.
+   *
+   * @param number a non-negative number
+   * @return a string representing the number in base 26 using lower case
+   * @throws NumberFormatException if the number is negative
+   */
+  public static String toBase26(int number) throws NumberFormatException {
+    if (number < 0) throw new NumberFormatException("Negative number");
+    number = Math.abs(number);
+    String converted = "";
+    // Repeatedly divide the number by 26 and convert the
+    // remainder into the appropriate letter.
+    do {
+      int remainder = number % 26;
+      converted = (char)(remainder + 'a') + converted;
+      number = (number - remainder) / 26;
+    } while (number > 0);
+    return converted;
+  }
+
+  /**
+   * Convert a base-26 representation into a number, considering it to represent
+   * a value in base-26 using the characters a-z or A-Z - the string is treated
+   * case-insensitively. The string is lower cased before the increment is
+   * applied. An exception will be thrown if any character is outside of a-z
+   * after lower casing.
+   * <p>
+   * Adapted from http://en.wikipedia.org/wiki/Hexavigesimal.
+   * @param number a string representing a base-26 number
+   * @return the number represented
+   * @throws NumberFormatException if the string does not represent an alphabetical base-26 number
+   */
+  public static int fromBase26(String number) throws NumberFormatException {
+    if (!number.matches("^[a-zA-Z]*$"))
+      throw new NumberFormatException("Non-alphabetic characters in string.");
+
+    int s = 0;
+    if (number != null && number.length() > 0) {
+      number = number.toLowerCase();
+      s = (number.charAt(0) - 'a');
+      for (int i = 1; i < number.length(); i++) {
+        s *= 26;
+        s += (number.charAt(i) - 'a');
+      }
+    }
+    return s;
+  }
+
   /**
    * Show usage message and exit.
    */
@@ -912,4 +1282,5 @@ public class NumberUtil {
       e.printStackTrace();
     }
   }
+
 }

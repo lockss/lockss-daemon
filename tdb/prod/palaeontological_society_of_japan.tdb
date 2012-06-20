@@ -13,20 +13,21 @@
     >
 
     {
-      implicit < status ; year ; name ; param[volume] >
-      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
-      param[journal_id] = 1342-8144
+      param[journal_id] = jpal
   
-      au < doNotProcess ; 2005 ; Paleontological Research Volume 9 ; 9 >
-      au < doNotProcess ; 2006 ; Paleontological Research Volume 10 ; 10 >
-      au < doNotProcess ; 2007 ;  Paleontological Research Volume 11 ; 11 >
-    }
-
-    {
-
-comment[0] = Atypon AUs
-
+      au < manifest ; 2003 ; Paleontological Research Volume 7 ; 7 >
+      au < manifest ; 2004 ; Paleontological Research Volume 8 ; 8 >
+      au < manifest ; 2005 ; Paleontological Research Volume 9 ; 9 >
+      au < manifest ; 2006 ; Paleontological Research Volume 10 ; 10 >
+      au < manifest ; 2007 ; Paleontological Research Volume 11 ; 11 >
+      au < manifest ; 2008 ; Paleontological Research Volume 12 ; 12 >
+      au < manifest ; 2009 ; Paleontological Research Volume 13 ; 13 >
+      au < manifest ; 2010 ; Paleontological Research Volume 14 ; 14 >
+      au < manifest ; 2011 ; Paleontological Research Volume 15 ; 15 >
+      au < manifest ; 2012 ; Paleontological Research Volume 16 ; 16 >
     }
 
   }

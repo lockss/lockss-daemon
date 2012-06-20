@@ -1,10 +1,10 @@
 /*
- * $Id: Alert.java,v 1.15 2011-01-25 07:14:00 tlipkis Exp $
+ * $Id: Alert.java,v 1.15.12.1 2012-06-20 00:03:05 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -81,6 +81,11 @@ public class Alert {
 
 
   // Predefined Alert templates
+  public static final Alert DAEMON_STARTED =
+    new Alert("DaemonStarted").
+    setAttribute(ATTR_SEVERITY, SEVERITY_INFO).
+    setAttribute(ATTR_IS_TIME_CRITICAL, true);
+
   public static final Alert AU_CREATED =
     cAlert("AuCreated").
     setAttribute(ATTR_SEVERITY, SEVERITY_INFO);

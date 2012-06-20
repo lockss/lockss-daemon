@@ -1,10 +1,10 @@
 /*
- * $Id: NullPlugin.java,v 1.108 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.108.4.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -245,6 +245,10 @@ public class NullPlugin {
 
     public void release() {
     }
+
+    public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
+      return null;
+    }
   }
 
   /**
@@ -297,6 +301,12 @@ public class NullPlugin {
     }
 
     public void setWatchdog(LockssWatchdog wdog) {
+    }
+
+    public void setPreviousContentType(String previousContentType) {
+    }
+
+    public void setCrawlRateLimiter(CrawlRateLimiter crl) {
     }
 
     public int cache() throws IOException {
@@ -366,6 +376,10 @@ public class NullPlugin {
     }
 
     public Iterator contentHashIterator() {
+      return null;
+    }
+
+    public Iterator<org.lockss.plugin.CachedUrl> archiveMemberIterator() {
       return null;
     }
 
@@ -491,6 +505,9 @@ public class NullPlugin {
       return null;
     }
 
+    public void pauseBeforeFetch(String previousContentType) {
+    }
+
     public RateLimiter findFetchRateLimiter() {
       return RateLimiter.UNLIMITED;
     }
@@ -561,6 +578,10 @@ public class NullPlugin {
     }
 
     public List<String> getAuFeatureUrls(String auFeature) {
+      return null;
+    }
+
+    public ArchiveFileTypes getArchiveFileTypes() {
       return null;
     }
   }

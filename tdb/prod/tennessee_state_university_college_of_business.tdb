@@ -18,6 +18,7 @@
     >
 
     param[journal_dir] = journal_of_developing_areas
+    attr[journal_id] = jda
 
     au < released ; 2003 ; The Journal of Developing Areas Volume 37 ; 37 >
     au < released ; 2004 ; The Journal of Developing Areas Volume 38 ; 38 >
@@ -28,6 +29,7 @@
     au < released ; 2009 ; The Journal of Developing Areas Volume 43 ; 43 >
     au < ready ; 2010 ; The Journal of Developing Areas Volume 44 ; 44 >
     au < ready ; 2011 ; The Journal of Developing Areas Volume 45 ; 45 >
+    au < manifest ; 2012 ; The Journal of Developing Areas volume 46 ; 46 >
 
   }
 

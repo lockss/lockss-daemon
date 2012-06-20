@@ -14,7 +14,6 @@
     
     rights = openaccess
     plugin = org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin
-    comment[urgent] = website to be deleted. Needs release. (As of 7/2011)
     implicit < status ; year ; name ; volume ; param[year] >
 
     {
@@ -37,9 +36,9 @@
     
       param[base_url] = http://www.sfpoetry.org/
     
-      au < ready ; 2007 ; Santa Fe Poetry Broadside 2007 ; 5 ; 2007 >
-      au < ready ; 2008 ; Santa Fe Poetry Broadside 2008 ; 5 ; 2008 >
-      au < ready ; 2009 ; Santa Fe Poetry Broadside 2009 ; 5 ; 2009 >
+      au < released ; 2007 ; Santa Fe Poetry Broadside 2007 ; 5 ; 2007 >
+      au < released ; 2008 ; Santa Fe Poetry Broadside 2008 ; 5 ; 2008 >
+      au < released ; 2009 ; Santa Fe Poetry Broadside 2009 ; 5 ; 2009 >
 
     }
   

@@ -37,12 +37,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = wils
   
-      au < manifest ; 2000 ; The Wilson Bulletin Volume 112 ; 112 >
-      au < manifest ; 2001 ; The Wilson Bulletin Volume 113 ; 113 >
-      au < manifest ; 2002 ; The Wilson Bulletin Volume 114 ; 114 >
-      au < manifest ; 2003 ; The Wilson Bulletin Volume 115 ; 115 >
-      au < manifest ; 2004 ; The Wilson Bulletin Volume 116 ; 116 >
-      au < manifest ; 2005 ; The Wilson Bulletin Volume 117 ; 117 >
+      au < doNotProcess ; 2000 ; The Wilson Bulletin Volume 112 ; 112 >
+      au < doNotProcess ; 2001 ; The Wilson Bulletin Volume 113 ; 113 >
+      au < doNotProcess ; 2002 ; The Wilson Bulletin Volume 114 ; 114 >
+      au < doNotProcess ; 2003 ; The Wilson Bulletin Volume 115 ; 115 >
+      au < doNotProcess ; 2004 ; The Wilson Bulletin Volume 116 ; 116 >
+      au < doNotProcess ; 2005 ; The Wilson Bulletin Volume 117 ; 117 >
       
     }
 
@@ -78,12 +78,13 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = wils
 
-      au < manifest ; 2006 ; The Wilson Bulletin Volume 118 ; 118 >
-      au < manifest ; 2007 ; The Wilson Bulletin Volume 119 ; 119 >      
-      au < manifest ; 2008 ; The Wilson Bulletin Volume 120 ; 120 >
-      au < manifest ; 2009 ; The Wilson Bulletin Volume 121 ; 121 >
-      au < manifest ; 2010 ; The Wilson Bulletin Volume 122 ; 122 >
-      au < manifest ; 2011 ; The Wilson Bulletin Volume 123 ; 123 >
+      au < doNotProcess ; 2006 ; The Wilson Journal of Ornithology Volume 118 ; 118 >
+      au < doNotProcess ; 2007 ; The Wilson Journal of Ornithology Volume 119 ; 119 >      
+      au < ready ; 2008 ; The Wilson Journal of Ornithology Volume 120 ; 120 >
+      au < ready ; 2009 ; The Wilson Journal of Ornithology Volume 121 ; 121 >
+      au < ready ; 2010 ; The Wilson Journal of Ornithology Volume 122 ; 122 >
+      au < ready ; 2011 ; The Wilson Journal of Ornithology Volume 123 ; 123 >
+      au < manifest ; 2012 ; The Wilson Journal of Ornithology Volume 124 ; 124 >
 
     }
 

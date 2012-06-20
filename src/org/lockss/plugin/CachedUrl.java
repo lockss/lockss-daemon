@@ -1,10 +1,10 @@
 /*
- * $Id: CachedUrl.java,v 1.27 2011-11-29 06:50:50 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.27.2.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -200,5 +200,14 @@ public interface CachedUrl extends CachedUrlSetNode {
    * @param target the purpose for which metadata is being extracted
    */
   public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target);
+
+  /**
+   * If the CachedUrl is an archive file, return a CachedUrl that
+   * references the specified member of the archive instead of the whole
+   * archive.  Behavior is undefined if applied to a CU that isn't an
+   * archive file.
+   * @param ams describes the archive member.
+   */
+  public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams);
 
 }

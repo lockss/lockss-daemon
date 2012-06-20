@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.34 2011-10-03 05:54:34 tlipkis Exp $
+ * $Id: PollerStateBean.java,v 1.34.4.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -65,6 +65,7 @@ public class PollerStateBean implements LockssSerializable {
   private String hashAlgorithm;
   private long createTime;
   private int quorum;
+  private int voteMargin;
   private boolean activePoll;
   private int outerCircleTarget;
   private String statusString;
@@ -114,7 +115,8 @@ public class PollerStateBean implements LockssSerializable {
 
   public PollerStateBean(PollSpec spec, PeerIdentity orig, String pollKey,
                          long duration, long pollDeadline,
-			 int outerCircleTarget, int quorum, String hashAlg) {
+			 int outerCircleTarget, int quorum, int voteMargin,
+			 String hashAlg) {
     this.pollerId = orig;
     this.pollKey = pollKey;
     this.duration = duration;
@@ -129,6 +131,7 @@ public class PollerStateBean implements LockssSerializable {
     this.hashAlgorithm = hashAlg;
     this.createTime = TimeBase.nowMs();
     this.quorum = quorum;
+    this.voteMargin = voteMargin;
     this.statusString = "Initializing";
     this.repairQueue = new RepairQueue();
     this.votedPeers = new ArrayList();
@@ -267,6 +270,14 @@ public class PollerStateBean implements LockssSerializable {
 
   public void setQuorum(int quorum) {
     this.quorum = quorum;
+  }
+
+  public int getVoteMargin() {
+    return voteMargin;
+  }
+
+  public void setVoteMargin(int voteMargin) {
+    this.voteMargin = voteMargin;
   }
 
   public boolean hashStarted() {

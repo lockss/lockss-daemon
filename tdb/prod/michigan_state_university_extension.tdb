@@ -1,0 +1,30 @@
+
+
+{
+  publisher <
+    name = Michigan State University Extension
+  >
+
+  plugin = org.lockss.plugin.michganstate.MichiganStateUExtPlugin
+  param[base_url] = http://web2.msue.msu.edu/
+  implicit < status ; year; name ; param[year] >
+
+
+  {
+    title <
+      name = Michigan State University Extension Bulletins
+    >
+  
+    au < testing ; 1917 ; Michigan State University Extension Bulletins 1917 ; 1917 >
+    au < testing ; 1918 ; Michigan State University Extension Bulletins 1918 ; 1918 >
+    au < testing ; 1919 ; Michigan State University Extension Bulletins 1919 ; 1919 >
+    au < testing ; 1920 ; Michigan State University Extension Bulletins 1920 ; 1920 >
+    au < testing ; 1924 ; Michigan State University Extension Bulletins 1924 ; 1924 >
+    au < testing ; 1925 ; Michigan State University Extension Bulletins 1925 ; 1925 >
+    au < testing ; 1927 ; Michigan State University Extension Bulletins 1927 ; 1927 >
+    au < testing ; 1928 ; Michigan State University Extension Bulletins 1928 ; 1928 >
+    au < testing ; 1929 ; Michigan State University Extension Bulletins 1929 ; 1929 >
+
+  }
+
+}

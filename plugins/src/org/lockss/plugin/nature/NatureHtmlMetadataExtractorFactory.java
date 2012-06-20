@@ -1,5 +1,5 @@
 /*
- * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.6 2011-03-25 17:58:39 pgust Exp $
+ * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.6.10.1 2012-06-20 00:03:08 nchondros Exp $
  */
 
 /*
@@ -57,11 +57,9 @@ public class NatureHtmlMetadataExtractorFactory
     // Map BePress-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("dc.creator", MetadataField.DC_FIELD_CONTRIBUTOR);
-      // <meta name="citation_authors" content="G Poelmans, J K Buitelaar, D L Pauls, B Franke" />
-      tagMap.put("citation_authors", 
-                 new MetadataField(MetadataField.FIELD_AUTHOR,
-                                   MetadataField.splitAt(",")));
+      tagMap.put("dc.creator", MetadataField.DC_FIELD_CREATOR);
+      // use DC.CREATOR because separator for citation_author varies
+      tagMap.put("dc.creator", MetadataField.FIELD_AUTHOR);
       // <meta name="citation_date" content="2009-12-29" />
       tagMap.put("citation_date", MetadataField.FIELD_DATE);
       // <meta name="citation_title" content="Altered arachidonic acid cascade enzymes in postmortem brain from bipolar disorder patients" />

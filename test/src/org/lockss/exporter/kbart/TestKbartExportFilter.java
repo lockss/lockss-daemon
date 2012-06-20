@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartExportFilter.java,v 1.3 2011-08-19 10:36:18 easyonthemayo Exp $
+ * $Id: TestKbartExportFilter.java,v 1.3.6.1 2012-06-20 00:02:56 nchondros Exp $
  */
 
 /*
@@ -101,9 +101,9 @@ public class TestKbartExportFilter extends LockssTestCase {
     
     // Create the titles - title2 is created with the same fields, but different range values
     this.title1 = TestKbartTitle.createKbartTitle(title1props);
-    this.title2 = title1.clone();
-    title2.setField(Field.DATE_FIRST_ISSUE_ONLINE, FIRST_DATE_2);
-    title2.setField(Field.DATE_LAST_ISSUE_ONLINE, LAST_DATE_2);
+    this.title2 = title1.clone()
+        .setField(Field.DATE_FIRST_ISSUE_ONLINE, FIRST_DATE_2)
+        .setField(Field.DATE_LAST_ISSUE_ONLINE, LAST_DATE_2);
     
     this.titles = new ArrayList<KbartTitle>() {{
       add(title1);

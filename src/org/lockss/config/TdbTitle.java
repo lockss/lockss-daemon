@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.10 2011-10-26 17:11:29 pgust Exp $
+ * $Id: TdbTitle.java,v 1.10.2.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.10 2011-10-26 17:11:29 pgust Exp $
+ * @version $Id: TdbTitle.java,v 1.10.2.1 2012-06-20 00:02:55 nchondros Exp $
  */
 public class TdbTitle {
   /**
@@ -285,19 +285,40 @@ public class TdbTitle {
   }
   
   /**
-   * Return ISBN for this title.
+   * Return a collection of TdbAus for this title that match the ISBN.
    * 
-   * @return the ISBN for this title or <code>null</code> if not specified
+   * @return a colleciton of TdbAus for this title that match the ISBN
    */
-  public String getIsbn() {
-    String value = null;
+  public Collection<TdbAu> getTdbAusByIsbn(String isbn) {
+    Collection<TdbAu> tdbAus = new ArrayList<TdbAu>();
+    getTdbAusByIsbn(tdbAus, isbn);
+    return tdbAus;
+  }
+  
+  /**
+   * Add to a collection of TdbAus for this title that match the ISBN.
+   * 
+   * @return <code>true</code> if TdbAus were added to the collectiion
+   */
+  public boolean getTdbAusByIsbn(Collection<TdbAu> matchingTdbAus, String isbn) {
+    boolean added = false;
+    isbn = isbn.replaceAll("-", "");
     for (TdbAu tdbau : tdbAus.values()) {
-      value = tdbau.getIsbn();
-      if (value != null) {
-        break;
+      String anIsbn = tdbau.getPrintIsbn();
+      if (anIsbn != null) {
+        if (anIsbn.replaceAll("-", "").equals(isbn)) {
+          added |= matchingTdbAus.add(tdbau);
+          continue;
+        }
+      }
+      anIsbn = tdbau.getEisbn();
+      if (anIsbn != null) {
+        if (anIsbn.replaceAll("-", "").equals(isbn)) {
+          added |= matchingTdbAus.add(tdbau);
+        }
       }
     }
-    return value;
+    return added;
   }
 
   /**
@@ -593,25 +614,7 @@ public class TdbTitle {
   }
 
   /**
-   * Return the TdbAu for with the specified TdbAu name.
-   * 
-   * @param tdbAuName the name of the AU to select
-   * @return the TdbAu for the specified name
-   */
-  public Collection<TdbAu> getTdbAusByName(String tdbAuName)
-  {
-    ArrayList<TdbAu> aus = new ArrayList<TdbAu>();
-    for (TdbAu tdbAu : tdbAus.values()) {
-      if (tdbAu.getName().equals(tdbAuName)) {
-        aus.add(tdbAu);
-      }
-    }
-    aus.trimToSize();
-    return aus;
-  }
-  
-  /**
-   * Return the TdbAu for with the specified TdbAu volume.
+   * Return the TdbAus for with the specified TdbAu volume.
    * 
    * @param tdbAuVolume the volume of the AU to select
    * @return the TdbAu for the specified name
@@ -626,6 +629,68 @@ public class TdbTitle {
     }
     aus.trimToSize();
     return aus;
+  }
+  
+  /**
+   * Return the TdbAus like the specified TdbAu volume.
+   * 
+   * @param tdbAuName the name of the AU to select
+   * @return the TdbAu like the specified name
+   */
+  public Collection<TdbAu> getTdbAusByName(String tdbAuName)
+  {
+    ArrayList<TdbAu> aus = new ArrayList<TdbAu>();
+    getTdbAusByName(tdbAuName, aus);
+    return aus;
+  }
+  
+  /**
+   * Add TdbAus with the specified TdbAu name.
+   * 
+   * @param tdbAuName the name of the AU to select
+   * @param tdbAus the collection to add to
+   * @return <code>true</code> if TdbAus were added to the collection
+   */
+  public boolean getTdbAusByName(String tdbAuName, Collection<TdbAu> aus)
+  {
+    boolean added = false;
+    for (TdbAu tdbAu : tdbAus.values()) {
+      if (StringUtil.equalStringsIgnoreCase(tdbAu.getName(), tdbAuName)) {
+        added |= aus.add(tdbAu);
+      }
+    }
+    return added;
+  }
+  
+  /**
+   * Return the TdbAus like the specified TdbAu volume.
+   * 
+   * @param tdbAuName the name of the AU to select
+   * @return the TdbAu like the specified name
+   */
+  public Collection<TdbAu> getTdbAusLikeName(String tdbAuName)
+  {
+    ArrayList<TdbAu> aus = new ArrayList<TdbAu>();
+    getTdbAusLikeName(tdbAuName, aus);
+    return aus;
+  }
+  
+  /**
+   * Add TdbAus for like the specified TdbAu name.
+   * 
+   * @param tdbAuName the name of the AU to select
+   * @param tdbAus the collection to add to
+   * @return <code>true</code> if TdbAus were added to the collection
+   */
+  public boolean getTdbAusLikeName(String tdbAuName, Collection<TdbAu> aus)
+  {
+    boolean added = false;
+    for (TdbAu tdbAu : tdbAus.values()) {
+      if (StringUtil.startsWithIgnoreCase(tdbAu.getName(), tdbAuName)) {
+        added |= aus.add(tdbAu);
+      }
+    }
+    return added;
   }
   
   /**

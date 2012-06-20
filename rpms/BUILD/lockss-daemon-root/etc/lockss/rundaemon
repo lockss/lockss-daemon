@@ -56,9 +56,10 @@ else
     exit 1
 fi
 
-# Default is to use  2/3 of physical memory for all daemons combined.
-# Set LOCKSS_JAVA_HEAP to override.
-set_java_heap
+# Set LOCKSS_JAVA_HEAP iff it wasn't set in config.dat
+if [ "${LOCKSS_JAVA_HEAP}X" = X ] ; then
+    set_java_heap
+fi
 
 JAVA_VERSION=`${LOCKSS_JAVA_CMD} -version 2>&1 | head -1 | sed -e 's/.* "\(.*\)"/\1/'`
 case "X${JAVA_VERSION}" in

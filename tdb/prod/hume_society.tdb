@@ -16,6 +16,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = hume_studies
+    attr[journal_id] = hms
     implicit < status ; year ; name ; param[volume] >
 
     au < manifest ; 1975 ; Hume Studies Volume 1  ; 1  >

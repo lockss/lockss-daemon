@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -18,8 +18,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^https?://%s/&quot;, base_url_host</string>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^https?://%s/&quot;, base_url_host</string>
       <string>1,&quot;^%s$&quot;, base_url</string>
       <string>1,&quot;^%sv1no1\.html$&quot;, base_url</string>
       <string>1,&quot;^%sv%dno[^/]+\.html$&quot;, base_url, volume</string>
@@ -51,7 +51,7 @@
 	  </entry>
 	  <entry>
 	    <string>au_issue</string>
-	    <string>&quot;%sv%sno%s.html&quot;, base_url, volume_name, issue</string>
+	    <string>&quot;%sv%sno%s.html&quot;, base_url, volume, issue</string>
 	  </entry>
 	</map>
   </entry>

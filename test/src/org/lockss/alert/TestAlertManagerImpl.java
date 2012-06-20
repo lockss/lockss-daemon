@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.15 2010-05-04 03:36:36 tlipkis Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.15.20.1 2012-06-20 00:03:08 nchondros Exp $
  */
 
 /*
@@ -204,6 +204,30 @@ public class TestAlertManagerImpl extends LockssTestCase {
 
     ConfigurationUtil.addFromArgs(AlertManagerImpl.PARAM_IGNORED_ALERTS,
 				  "InconclusivePoll;NotBoxNotDownNot");
+    mgr.raiseAlert(a1);
+    recs = action.getAlerts();
+    assertEquals(ListUtil.list(a1), recs);
+  }
+
+  public void testRaiseEnabledAlert() throws Exception {
+    config(true);
+    ConfigurationUtil.addFromArgs(AlertManagerImpl.PARAM_ENABLED_ALERTS,
+				  "InconclusivePoll;NotBoxNotDown");
+    Alert a1 = Alert.cacheAlert(Alert.CACHE_DOWN);
+    a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, true);
+    MyMockAlertAction action = new MyMockAlertAction();
+    action.setGroupable(true);
+    AlertConfig conf =
+      new AlertConfig(ListUtil.list(new AlertFilter(AlertPatterns.True(),
+						    action)));
+    mgr.suppressStore(true);
+    mgr.updateConfig(conf);
+    mgr.raiseAlert(a1);
+    List recs = action.getAlerts();
+    assertEmpty(recs);
+
+    ConfigurationUtil.addFromArgs(AlertManagerImpl.PARAM_ENABLED_ALERTS,
+				  "InconclusivePoll;BoxDown");
     mgr.raiseAlert(a1);
     recs = action.getAlerts();
     assertEquals(ListUtil.list(a1), recs);

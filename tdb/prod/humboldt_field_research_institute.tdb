@@ -18,14 +18,26 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1092-6194
   
-      au < doNotProcess ; 2000 ; Northeastern Naturalist Volume 7 ; 7 >
-      au < doNotProcess ; 2001 ; Northeastern Naturalist Volume 8 ; 8 >
-      au < doNotProcess ; 2002 ; Northeastern Naturalist Volume 9 ; 9 >
-      au < doNotProcess ; 2003 ; Northeastern Naturalist Volume 10 ; 10 >
-      au < superseded ; 2004 ; Northeastern Naturalist Volume 11 ; 011 >
-      au < doNotProcess ; 2005 ; Northeastern Naturalist Volume 12 ; 12 >
-      au < doNotProcess ; 2006 ; Northeastern Naturalist Volume 13 ; 13 >
-      au < doNotProcess ; 2007 ; Northeastern Naturalist Volume 14 ; 14 >
+      au < down ; 2004 ; Northeastern Naturalist Volume 11 ; 011 >
+    }
+    {
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = nena
+  
+      au < manifest ; 2000 ; Northeastern Naturalist Volume 7 ; 7 >
+      au < manifest ; 2001 ; Northeastern Naturalist Volume 8 ; 8 >
+      au < manifest ; 2002 ; Northeastern Naturalist Volume 9 ; 9 >
+      au < manifest ; 2003 ; Northeastern Naturalist Volume 10 ; 10 >
+      au < doNotProcess ; 2004 ; Northeastern Naturalist Volume 11 ; 11 >
+      au < manifest ; 2005 ; Northeastern Naturalist Volume 12 ; 12 >
+      au < manifest ; 2006 ; Northeastern Naturalist Volume 13 ; 13 >
+      au < manifest ; 2007 ; Northeastern Naturalist Volume 14 ; 14 >
+      au < manifest ; 2008 ; Northeastern Naturalist Volume 15 ; 15 >
+      au < manifest ; 2009 ; Northeastern Naturalist Volume 16 ; 16 >
+      au < manifest ; 2010 ; Northeastern Naturalist Volume 17 ; 17 >
+      au < manifest ; 2011 ; Northeastern Naturalist Volume 18 ; 18 >
     }
 
   }
@@ -45,18 +57,25 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1528-7092
   
-      au < doNotProcess ; 2002 ; Southeastern Naturalist Volume 1 ; 1 >
-      au < doNotProcess ; 2003 ; Southeastern Naturalist Volume 2 ; 2 >
-      au < superseded ; 2004 ; Southeastern Naturalist Volume 3 ; 003 >
-      au < doNotProcess ; 2005 ; Southeastern Naturalist Volume 4 ; 4 >
-      au < doNotProcess ; 2006 ; Southeastern Naturalist Volume 5 ; 5 >
-      au < doNotProcess ; 2007 ; Southeastern Naturalist Volume 6 ; 6 >
+      au < down ; 2004 ; Southeastern Naturalist Volume 3 ; 003 >
     }
 
     {
-
-comment[0] = Atypon AUs
-
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = sena
+  
+      au < manifest ; 2002 ; Southeastern Naturalist Volume 1 ; 1 >
+      au < manifest ; 2003 ; Southeastern Naturalist Volume 2 ; 2 >
+      au < doNotProcess ; 2004 ; Southeastern Naturalist Volume 3 ; 3 >
+      au < manifest ; 2005 ; Southeastern Naturalist Volume 4 ; 4 >
+      au < manifest ; 2006 ; Southeastern Naturalist Volume 5 ; 5 >
+      au < manifest ; 2007 ; Southeastern Naturalist Volume 6 ; 6 >
+      au < manifest ; 2008 ; Southeastern Naturalist Volume 7 ; 7 >
+      au < manifest ; 2009 ; Southeastern Naturalist Volume 8 ; 8 >
+      au < manifest ; 2010 ; Southeastern Naturalist Volume 9 ; 9 >
+      au < manifest ; 2011 ; Southeastern Naturalist Volume 10 ; 10 >
     }
 
   }

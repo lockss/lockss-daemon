@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = logos
+    attr[journal_id] = log
 
     au < ready ; 2000 ; Logos: A Journal of Catholic Thought and Culture Volume 3 ; 3 >
     au < ready ; 2001 ; Logos: A Journal of Catholic Thought and Culture Volume 4 ; 4 >
@@ -29,6 +30,7 @@
     au < ready ; 2009 ; Logos: A Journal of Catholic Thought and Culture Volume 12 ; 12 >
     au < ready ; 2010 ; Logos: A Journal of Catholic Thought and Culture Volume 13 ; 13 >
     au < ready ; 2011 ; Logos: A Journal of Catholic Thought and Culture Volume 14 ; 14 >
+    au < manifest ; 2012 ; Logos: A Journal of Catholic Thought and Culture Volume 15 ; 15 >
     
   }
 

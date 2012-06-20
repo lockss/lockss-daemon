@@ -9,7 +9,20 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>17</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+       <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_name</string>
@@ -23,9 +36,22 @@
     <string>plugin_name</string>
     <string>BioMed Central Plugin (BMC Journals, Chemistry Central)</string>
   </entry>
+   <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.bmc.BioMedCentralPluginArticleIteratorFactory</string>
+  </entry>
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.bmc.BioMedCentralHtmlFilterFactory</string>
+  </entry>
+   <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.bmc.BioMedCentralPluginHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -33,28 +59,28 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s.{0,150}&quot;, base_url</string>
       <string>2,&quot;^%sregistration&quot;, base_url</string>
-      <string>1,&quot;^%sarticles/browse\.asp\?(date=&amp;)?volume=%s&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%s(articles/browse\.asp|content)?(date=&amp;)/%s&quot;, base_url, volume_name</string>
       <string>1,&quot;%slockss/&quot;, base_url</string>
       <string>1,&quot;^%scontent/%s/[^/]+/[^/]+(/(abstract/?|additional/?|citation|comments|ref|figure/.*|suppl/.*|table/.*))?$&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%scontent/(download/figures|download/xml|files/pdf|pdf|xml|supplementary)/&quot;, base_url</string>
+      <string>1,&quot;^%scontent/(download/figures|download/xml|files/pdf|pdf|xml|supplementary|html)/&quot;, base_url</string>
       <string>1,&quot;^%ssupplements/(%s|notes)/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%srender/render.asp\?&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sarticles/browse.asp?volume=%s&quot;, base_url, volume_name</string>
+    <string>&quot;%scontent/%s&quot;, base_url, volume_name</string>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
   	<map>
 	  <entry>
 	    <string>au_title</string>
-	    <string>&quot;%sarticles/browse.asp&quot;, base_url</string>
+	    <string>&quot;%scontent&quot;, base_url</string>
 	  </entry>
 	  <entry>
 	    <string>au_volume</string>
-	    <string>&quot;%sarticles/browse.asp?volume=%s&quot;, base_url, volume_name</string>
+	    <string>&quot;%scontent/%s&quot;, base_url, volume_name</string>
 	  </entry>
   	</map>
   </entry>

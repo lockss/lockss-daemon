@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressArticleIteratorFactory.java,v 1.1 2011-10-04 10:43:59 thib_gc Exp $
+ * $Id: MetaPressArticleIteratorFactory.java,v 1.1.4.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.regex.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 
@@ -86,10 +87,12 @@ public class MetaPressArticleIteratorFactory
         return processFullTextPdf(cu, mat);
       }
 
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
+  log.warning("Mismatch between article iterator factory and article iterator: "+ url);
       return null;
     }
-    
+    //http://inderscience.metapress.com/content/kv824m8x38336011/fulltext.pdfmap={FullTextPdfLanding=[BCU: http://inderscience.metapress.com/content/p20687286306321u], FullTextPdfFile=[BCU: http://inderscience.metapress.com/content/p20687286306321u/fulltext.pdf], IssueMetadata=[BCU: http://inderscience.metapress.com/content/p20687286306321u], Citation=[BCU: http://inderscience.metapress.com/export.mpx?code=P20687286306321U&mode=ris], Abstract=[BCU: http://inderscience.metapress.com/content/p20687286306321u]}])
+
+    //http://inderscience.metapress.com/export.mpx?code=KV824M8X38336011&mode=ris
     protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(pdfCu);
@@ -97,18 +100,34 @@ public class MetaPressArticleIteratorFactory
       if (target != MetadataTarget.Article) {
         guessAbstract(af, pdfMat);
         guessReferences(af, pdfMat);
-      }
+        guessCitations(af,pdfMat);
+       }
       return af;
     }
-    
+          
     protected void guessAbstract(ArticleFiles af, Matcher mat) {
       CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/content/$1"));
       if (absCu != null && absCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
         af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, absCu);
+        af.setRoleCu(ArticleFiles.ROLE_ISSUE_METADATA, absCu);
       }
     }
-
+    
+    
+    protected void guessCitations(ArticleFiles af, Matcher mat) {
+      String uppercaseStr = mat.replaceFirst("/export.mpx?code=$1&mode=ris").toUpperCase();
+      String endStrUrl = uppercaseStr.substring(uppercaseStr.length()-9,uppercaseStr.length()).toLowerCase();
+      String startStrUrl = uppercaseStr.substring(0, 50).toLowerCase();
+      String midStrUrl = uppercaseStr.substring(50,uppercaseStr.length()-9);
+      String wantedUrl = startStrUrl+midStrUrl+endStrUrl;
+      CachedUrl citCu = au.makeCachedUrl(wantedUrl);
+      if (citCu != null && citCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_CITATION, citCu);
+        log.debug3("citcu :" + citCu);
+      }
+     }
+        
     protected void guessReferences(ArticleFiles af, Matcher mat) {
       CachedUrl refCu = au.makeCachedUrl(mat.replaceFirst("/content/$1/?referencesMode=Show"));
       if (refCu != null && refCu.hasContent()) {
@@ -118,10 +137,12 @@ public class MetaPressArticleIteratorFactory
 
   }
   
+  
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
+   // return new MetaPressArticleMetadataExtractor();
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_CITATION);
   }
 
 }

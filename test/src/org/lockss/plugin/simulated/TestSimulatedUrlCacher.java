@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.28 2010-06-22 09:01:43 tlipkis Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.28.18.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.config.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.*;
-import org.lockss.util.StreamUtil;
+import org.lockss.util.*;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.SimulatedUrlCacher
@@ -118,6 +118,23 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     SimulatedUrlCacher suc = new SimulatedUrlCacher(sau, testStr, tempDirPath);
     assertNull(suc.getUncachedInputStream());
   }
+
+  public void testNoBranchContentWithRedirToAutoIndex() throws Exception {
+    Configuration auConfig = sau.getConfiguration();
+    auConfig.put("redirectDirToIndex", "true");
+    auConfig.put("autoGenIndexHtml", "true");
+    sau.setConfiguration(auConfig);
+
+    File branchFile = new File(tempDirPath, "simcontent/branch1");
+    branchFile.mkdirs();
+
+    String testStr = "http://www.example.com/branch1";
+    SimulatedUrlCacher suc = new SimulatedUrlCacher(sau, testStr, tempDirPath);
+    String cont = StringUtil.fromInputStream(suc.getUncachedInputStream());
+    assertMatchesRE("<A HREF=\"branch1/index.html\">", cont);
+  }
+
+
 
   public void testBranchContent() throws Exception {
     File branchFile = new File(tempDirPath,

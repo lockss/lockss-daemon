@@ -17,53 +17,54 @@
     param[base_url] = http://www.ajhp.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 1965 ; American Journal of Health-System Pharmacy Volume 22 (tables of contents only) ; 22 >
-    au < manifest ; 1966 ; American Journal of Health-System Pharmacy Volume 23 (tables of contents only) ; 23 >
-    au < manifest ; 1967 ; American Journal of Health-System Pharmacy Volume 24 (tables of contents only) ; 24 >
-    au < manifest ; 1968 ; American Journal of Health-System Pharmacy Volume 25 (tables of contents only) ; 25 >
-    au < manifest ; 1969 ; American Journal of Health-System Pharmacy Volume 26 (tables of contents only) ; 26 >
-    au < manifest ; 1970 ; American Journal of Health-System Pharmacy Volume 27 (tables of contents only) ; 27 >
-    au < manifest ; 1971 ; American Journal of Health-System Pharmacy Volume 28 (tables of contents only) ; 28 >
-    au < manifest ; 1972 ; American Journal of Health-System Pharmacy Volume 29 (tables of contents only) ; 29 >
-    au < manifest ; 1973 ; American Journal of Health-System Pharmacy Volume 30 (tables of contents only) ; 30 >
-    au < manifest ; 1974 ; American Journal of Health-System Pharmacy Volume 31 (tables of contents only) ; 31 >
-    au < manifest ; 1975 ; American Journal of Health-System Pharmacy Volume 32 (abstracts only) ; 32 >
-    au < manifest ; 1976 ; American Journal of Health-System Pharmacy Volume 33 (abstracts only) ; 33 >
-    au < manifest ; 1977 ; American Journal of Health-System Pharmacy Volume 34 (abstracts only) ; 34 >
-    au < manifest ; 1978 ; American Journal of Health-System Pharmacy Volume 35 (abstracts only) ; 35 >
-    au < manifest ; 1979 ; American Journal of Health-System Pharmacy Volume 36 (abstracts only) ; 36 >
-    au < manifest ; 1980 ; American Journal of Health-System Pharmacy Volume 37 (abstracts only) ; 37 >
-    au < manifest ; 1981 ; American Journal of Health-System Pharmacy Volume 38 (abstracts only) ; 38 >
-    au < manifest ; 1982 ; American Journal of Health-System Pharmacy Volume 39 (abstracts only) ; 39 >
-    au < manifest ; 1983 ; American Journal of Health-System Pharmacy Volume 40 (abstracts only) ; 40 >
-    au < manifest ; 1984 ; American Journal of Health-System Pharmacy Volume 41 (abstracts only) ; 41 >
-    au < manifest ; 1985 ; American Journal of Health-System Pharmacy Volume 42 (abstracts only) ; 42 >
-    au < manifest ; 1986 ; American Journal of Health-System Pharmacy Volume 43 (abstracts only) ; 43 >
-    au < manifest ; 1987 ; American Journal of Health-System Pharmacy Volume 44 (abstracts only) ; 44 >
-    au < manifest ; 1988 ; American Journal of Health-System Pharmacy Volume 45 (abstracts only) ; 45 >
-    au < manifest ; 1989 ; American Journal of Health-System Pharmacy Volume 46 (abstracts only) ; 46 >
-    au < manifest ; 1990 ; American Journal of Health-System Pharmacy Volume 47 (abstracts only) ; 47 >
-    au < manifest ; 1991 ; American Journal of Health-System Pharmacy Volume 48 (abstracts only) ; 48 >
-    au < manifest ; 1992 ; American Journal of Health-System Pharmacy Volume 49 (abstracts only) ; 49 >
-    au < manifest ; 1993 ; American Journal of Health-System Pharmacy Volume 50 (abstracts only) ; 50 >
-    au < manifest ; 1994 ; American Journal of Health-System Pharmacy Volume 51 (abstracts only) ; 51 >
-    au < manifest ; 1995 ; American Journal of Health-System Pharmacy Volume 52 (abstracts only) ; 52 >
-    au < manifest ; 1996 ; American Journal of Health-System Pharmacy Volume 53 ; 53 >
-    au < manifest ; 1997 ; American Journal of Health-System Pharmacy Volume 54 ; 54 >
-    au < manifest ; 1998 ; American Journal of Health-System Pharmacy Volume 55 ; 55 >
-    au < manifest ; 1999 ; American Journal of Health-System Pharmacy Volume 56 ; 56 >
-    au < manifest ; 2000 ; American Journal of Health-System Pharmacy Volume 57 ; 57 >
-    au < manifest ; 2001 ; American Journal of Health-System Pharmacy Volume 58 ; 58 >
-    au < manifest ; 2002 ; American Journal of Health-System Pharmacy Volume 59 ; 59 >
-    au < manifest ; 2003 ; American Journal of Health-System Pharmacy Volume 60 ; 60 >
-    au < manifest ; 2004 ; American Journal of Health-System Pharmacy Volume 61 ; 61 >
-    au < manifest ; 2005 ; American Journal of Health-System Pharmacy Volume 62 ; 62 >
-    au < manifest ; 2006 ; American Journal of Health-System Pharmacy Volume 63 ; 63 >
-    au < manifest ; 2007 ; American Journal of Health-System Pharmacy Volume 64 ; 64 >
-    au < manifest ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 >
-    au < manifest ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 >
-    au < manifest ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 >
-    au < manifest ; 2011 ; American Journal of Health-System Pharmacy Volume 68 ; 68 >
+    au < testing ; 1965 ; American Journal of Health-System Pharmacy Volume 22 (tables of contents only) ; 22 >
+    au < testing ; 1966 ; American Journal of Health-System Pharmacy Volume 23 (tables of contents only) ; 23 >
+    au < testing ; 1967 ; American Journal of Health-System Pharmacy Volume 24 (tables of contents only) ; 24 >
+    au < testing ; 1968 ; American Journal of Health-System Pharmacy Volume 25 (tables of contents only) ; 25 >
+    au < testing ; 1969 ; American Journal of Health-System Pharmacy Volume 26 (tables of contents only) ; 26 >
+    au < testing ; 1970 ; American Journal of Health-System Pharmacy Volume 27 (tables of contents only) ; 27 >
+    au < testing ; 1971 ; American Journal of Health-System Pharmacy Volume 28 (tables of contents only) ; 28 >
+    au < testing ; 1972 ; American Journal of Health-System Pharmacy Volume 29 (tables of contents only) ; 29 >
+    au < testing ; 1973 ; American Journal of Health-System Pharmacy Volume 30 (tables of contents only) ; 30 >
+    au < testing ; 1974 ; American Journal of Health-System Pharmacy Volume 31 (tables of contents only) ; 31 >
+    au < testing ; 1975 ; American Journal of Health-System Pharmacy Volume 32 (abstracts only) ; 32 >
+    au < testing ; 1976 ; American Journal of Health-System Pharmacy Volume 33 (abstracts only) ; 33 >
+    au < testing ; 1977 ; American Journal of Health-System Pharmacy Volume 34 (abstracts only) ; 34 >
+    au < testing ; 1978 ; American Journal of Health-System Pharmacy Volume 35 (abstracts only) ; 35 >
+    au < testing ; 1979 ; American Journal of Health-System Pharmacy Volume 36 (abstracts only) ; 36 >
+    au < testing ; 1980 ; American Journal of Health-System Pharmacy Volume 37 (abstracts only) ; 37 >
+    au < testing ; 1981 ; American Journal of Health-System Pharmacy Volume 38 (abstracts only) ; 38 >
+    au < testing ; 1982 ; American Journal of Health-System Pharmacy Volume 39 (abstracts only) ; 39 >
+    au < testing ; 1983 ; American Journal of Health-System Pharmacy Volume 40 (abstracts only) ; 40 >
+    au < testing ; 1984 ; American Journal of Health-System Pharmacy Volume 41 (abstracts only) ; 41 >
+    au < testing ; 1985 ; American Journal of Health-System Pharmacy Volume 42 (abstracts only) ; 42 >
+    au < testing ; 1986 ; American Journal of Health-System Pharmacy Volume 43 (abstracts only) ; 43 >
+    au < testing ; 1987 ; American Journal of Health-System Pharmacy Volume 44 (abstracts only) ; 44 >
+    au < testing ; 1988 ; American Journal of Health-System Pharmacy Volume 45 (abstracts only) ; 45 >
+    au < testing ; 1989 ; American Journal of Health-System Pharmacy Volume 46 (abstracts only) ; 46 >
+    au < testing ; 1990 ; American Journal of Health-System Pharmacy Volume 47 (abstracts only) ; 47 >
+    au < testing ; 1991 ; American Journal of Health-System Pharmacy Volume 48 (abstracts only) ; 48 >
+    au < testing ; 1992 ; American Journal of Health-System Pharmacy Volume 49 (abstracts only) ; 49 >
+    au < testing ; 1993 ; American Journal of Health-System Pharmacy Volume 50 (abstracts only) ; 50 >
+    au < testing ; 1994 ; American Journal of Health-System Pharmacy Volume 51 (abstracts only) ; 51 >
+    au < testing ; 1995 ; American Journal of Health-System Pharmacy Volume 52 (abstracts only) ; 52 >
+    au < testing ; 1996 ; American Journal of Health-System Pharmacy Volume 53 ; 53 >
+    au < released ; 1997 ; American Journal of Health-System Pharmacy Volume 54 ; 54 >
+    au < released ; 1998 ; American Journal of Health-System Pharmacy Volume 55 ; 55 >
+    au < released ; 1999 ; American Journal of Health-System Pharmacy Volume 56 ; 56 >
+    au < released ; 2000 ; American Journal of Health-System Pharmacy Volume 57 ; 57 >
+    au < released ; 2001 ; American Journal of Health-System Pharmacy Volume 58 ; 58 >
+    au < released ; 2002 ; American Journal of Health-System Pharmacy Volume 59 ; 59 >
+    au < ready ; 2003 ; American Journal of Health-System Pharmacy Volume 60 ; 60 >
+    au < ready ; 2004 ; American Journal of Health-System Pharmacy Volume 61 ; 61 >
+    au < testing ; 2005 ; American Journal of Health-System Pharmacy Volume 62 ; 62 >
+    au < testing ; 2006 ; American Journal of Health-System Pharmacy Volume 63 ; 63 >
+    au < testing ; 2007 ; American Journal of Health-System Pharmacy Volume 64 ; 64 >
+    au < ready ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 >
+    au < ready ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 >
+    au < testing ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 >
+    au < ready ; 2011 ; American Journal of Health-System Pharmacy Volume 68 ; 68 >
+    au < ready ; 2012 ; American Journal of Health-System Pharmacy Volume 69 ; 69 >
 
   }
 

@@ -19,18 +19,43 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0078-6594
   
-      au < superseded ; 2009 ; Ornithological Monographs Volume 60 ; 60 >
-      au < superseded ; 2009 ; Ornithological Monographs Volume 61 ; 61 >
-      au < superseded ; 2009 ; Ornithological Monographs Volume 62 ; 62 >
-      au < superseded ; 2009 ; Ornithological Monographs Volume 63 ; 63 >
+      au < down ; 2006 ; Ornithological Monographs Volume 60 ; 60 >
+      au < down ; 2006 ; Ornithological Monographs Volume 61 ; 61 >
+      au < down ; 2007 ; Ornithological Monographs Volume 62 ; 62 >
+      au < down ; 2007 ; Ornithological Monographs Volume 63 ; 63 >
+      
     }
 
+    {
+ 
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = aoum  
+      
+      au < doNotProcess ; 2006 ; Ornithological Monographs Volume 60 ; 60 >
+      au < doNotProcess ; 2006 ; Ornithological Monographs Volume 61 ; 61 >
+      au < doNotProcess ; 2007 ; Ornithological Monographs Volume 62 ; 62 >
+      au < doNotProcess ; 2007 ; Ornithological Monographs Volume 63 ; 63 >
+      au < manifest ; 2007 ; Ornithological Monographs Volume 64 ; 64 >
+      au < manifest ; 2008 ; Ornithological Monographs Volume 65 ; 65 >
+      au < manifest ; 2009 ; Ornithological Monographs Volume 66 ; 66 >
+      au < manifest ; 2010 ; Ornithological Monographs Volume 67 ; 67 >
+      au < manifest ; 2010 ; Ornithological Monographs Volume 68 ; 68 >
+      au < manifest ; 2010 ; Ornithological Monographs Volume 69 ; 69 >
+      au < manifest ; 2011 ; Ornithological Monographs Volume 70 ; 70 >
+      au < manifest ; 2011 ; Ornithological Monographs Volume 71 ; 71 >
+      au < manifest ; 2011 ; Ornithological Monographs Volume 72 ; 72 >
+      au < manifest ; 2012 ; Ornithological Monographs Volume 73 ; 73 >
+ 
+     }
+      
   }
   
   {
-
+  
     title <
-      name = The Auk ;
+      name = The Auk: A Quarterly Journal of Ornithology ;
       issn = 0004-8038 ;
       eissn = 1938-4254 ;
       issnl = 0003-0031
@@ -42,19 +67,36 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0004-8038
   
-      au < superseded ; 2000 ; The Auk Volume 117 ; 117 >
-      au < superseded ; 2001 ; The Auk Volume 118 ; 118 >
-      au < superseded ; 2002 ; The Auk Volume 119 ; 119 >
-      au < superseded ; 2003 ; The Auk Volume 120 ; 120 >
-      au < superseded ; 2004 ; The Auk Volume 121 ; 121 >
-      au < superseded ; 2005 ; The Auk Volume 122 ; 122 >
-      au < superseded ; 2006 ; The Auk Volume 123 ; 123 >
-      au < superseded ; 2007 ; The Auk Volume 124 ; 124 >
+      au < down ; 2000 ; The Auk: A Quarterly Journal of Ornithology Volume 117 ; 117 >
+      au < down ; 2001 ; The Auk: A Quarterly Journal of Ornithology Volume 118 ; 118 >
+      au < down ; 2002 ; The Auk: A Quarterly Journal of Ornithology Volume 119 ; 119 >
+      au < down ; 2003 ; The Auk: A Quarterly Journal of Ornithology Volume 120 ; 120 >
+      au < down ; 2004 ; The Auk: A Quarterly Journal of Ornithology Volume 121 ; 121 >
+      au < down ; 2005 ; The Auk: A Quarterly Journal of Ornithology Volume 122 ; 122 >
+      au < down ; 2006 ; The Auk: A Quarterly Journal of Ornithology Volume 123 ; 123 >
+      au < down ; 2007 ; The Auk: A Quarterly Journal of Ornithology Volume 124 ; 124 >
     }
 
     {
 
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = tauk
+      
+      au < doNotProcess ; 2000 ; The Auk: A Quarterly Journal of Ornithology Volume 117 ; 117 >
+      au < doNotProcess ; 2001 ; The Auk: A Quarterly Journal of Ornithology Volume 118 ; 118 >
+      au < doNotProcess ; 2002 ; The Auk: A Quarterly Journal of Ornithology Volume 119 ; 119 >
+      au < doNotProcess ; 2003 ; The Auk: A Quarterly Journal of Ornithology Volume 120 ; 120 >
+      au < doNotProcess ; 2004 ; The Auk: A Quarterly Journal of Ornithology Volume 121 ; 121 >
+      au < doNotProcess ; 2005 ; The Auk: A Quarterly Journal of Ornithology Volume 122 ; 122 >
+      au < doNotProcess ; 2006 ; The Auk: A Quarterly Journal of Ornithology Volume 123 ; 123 >
+      au < doNotProcess ; 2007 ; The Auk: A Quarterly Journal of Ornithology Volume 124 ; 124 > 
+      au < manifest ; 2008 ; The Auk: A Quarterly Journal of Ornithology Volume 125 ; 125 >
+      au < manifest ; 2009 ; The Auk: A Quarterly Journal of Ornithology Volume 126 ; 126 >
+      au < manifest ; 2010 ; The Auk: A Quarterly Journal of Ornithology Volume 127 ; 127 >
+      au < manifest ; 2011 ; The Auk: A Quarterly Journal of Ornithology Volume 128 ; 128 >
+      au < manifest ; 2012 ; The Auk: A Quarterly Journal of Ornithology Volume 129 ; 129 >
 
     }
 

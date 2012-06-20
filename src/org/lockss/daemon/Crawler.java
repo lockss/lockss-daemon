@@ -1,10 +1,10 @@
 /*
- * $Id: Crawler.java,v 1.53 2008-09-09 07:52:07 tlipkis Exp $
+ * $Id: Crawler.java,v 1.53.44.1 2012-06-20 00:02:58 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,11 +52,21 @@ import org.lockss.crawler.*;
  */
 public interface Crawler {
 
-  public static final int NEW_CONTENT = 0;
-  public static final int REPAIR = 1;
-  public static final int BACKGROUND = 2;
-  public static final int OAI = 3;
-  public static final int ARC = 4;
+  public enum Type {
+    NEW_CONTENT("New Content"),
+    REPAIR("Repair"),
+    BACKGROUND("Background"),		// not used
+    OAI("OAI");
+
+    final String printString;
+    Type(String printString) {
+      this.printString = printString;
+    }
+
+    public String toString() {
+      return printString;
+    }
+  }
 
   public static final int STATUS_UNKNOWN = 0;
   public static final int STATUS_QUEUED = 1;
@@ -88,7 +98,7 @@ public interface Crawler {
    * Returns the type of crawl
    * @return crawl type
    */
-  public int getType();
+  public Type getType();
 
   /**
    * Return true iff the crawl tries to collect the entire AU content.
@@ -112,6 +122,13 @@ public interface Crawler {
    */
   public CrawlerStatus getStatus();
 
+  /** Store the crawl pool key */
+  public void setCrawlPool(String key);
+
+  /** Return the previously stored crawl pool key */
+  public String getCrawlPool();
+
+
   /**
    * Encapsulation for the methods that the PermissionMap needs from a
    * crawler
@@ -124,17 +141,22 @@ public interface Crawler {
     public ArchivalUnit getAu();
 
     /**
-     * Generate a URL cacher  for the given URL
+     * Generate a URL cacher for the given URL, suitable for fetching and
+     * possibly storing a permission page.  See {@link
+     * BaseCrawler.PARAM_STORE_PERMISSION_SCHEME}.
      * @param url
      * @return UrlCacher for the given URL
      */
-    public UrlCacher makeUrlCacher(String url);
+    public UrlCacher makePermissionUrlCacher(String url);
 
     public BufferedInputStream resetInputStream(BufferedInputStream is,
 						String url)
 	throws IOException;
 
-    public void refetchPermissionPage(String url) throws IOException;
+    public void storePermissionPage(UrlCacher uc, BufferedInputStream is)
+	throws IOException;
+
+    public void setPreviousContentType(String previousContentType);
 
     public CrawlerStatus getCrawlerStatus();
 

@@ -1,10 +1,10 @@
 /*
- * $Id: TestAccountManager.java,v 1.5 2009-06-19 08:27:25 tlipkis Exp $
+ * $Id: TestAccountManager.java,v 1.5.34.1 2012-06-20 00:03:08 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -225,17 +225,13 @@ public class TestAccountManager extends LockssTestCase {
     return acct;
   }
 
-  public void testSanitizeName() {
-    assertEquals("foobar123", acctMgr.sanitizeName("foobar123"));
-    assertEquals("foobar", acctMgr.sanitizeName("foo.bar"));
-    assertEquals("foobar_", acctMgr.sanitizeName(" +.!|,foo.bar?<>_"));
-  }
-
   public void testGenerateFilename() {
     assertEquals("john_smith",
 		 acctMgr.generateFilename(makeUser("John_Smith")));
     assertEquals("foo",
 		 acctMgr.generateFilename(makeUser("foo!")));
+    assertEquals("foobar_",
+		 acctMgr.generateFilename(makeUser(" +.!|,foo.bar?<>_")));
   }
 
   static String PWD1 = "123Sb!@#";
@@ -311,6 +307,22 @@ public class TestAccountManager extends LockssTestCase {
     } catch (IllegalArgumentException e) {
     }
   }
+
+  public void testUpdateV0Acct() throws Exception {
+    File acctfile = new File(acctMgr.getAcctDir(), "v0acct");
+    InputStream is = this.getClass().getResourceAsStream("v0acct.xml");
+    String orig = StringUtil.fromInputStream(is);
+    FileTestUtil.writeFile(acctfile, orig);
+    UserAccount acct = acctMgr.loadUser(acctfile);
+    assertTrue(acct.isUserInRole(LockssServlet.ROLE_CONTENT_ACCESS));
+    String updated = StringUtil.fromFile(acctfile);
+    assertNotEquals(orig, updated);
+    assertNotMatchesRE("version", orig);
+    assertMatchesRE("version", updated);
+    assertNotMatchesRE("accessContentRole", orig);
+    assertMatchesRE("accessContentRole", updated);
+  }
+
 
   public void testDeleteUser() throws Exception {
     String name = "lu@ser";

@@ -4,6 +4,7 @@
     name = European Respiratory Society
   >
 
+  attr[contract] = 2011
   plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
   implicit < status1 ; status ; year ; name ; param[volume_name] >
 
@@ -18,7 +19,7 @@
 
     param[base_url] = http://erj.ersjournals.com/
 
-    comment[0] = missing manifests for volumes 1 thru 36
+    comment[erj38] = found a login page
   
     au < manifest ; exists ; 1988 ; European Respiratory Journal Volume 1 [abstracts only] ; 1 >
     au < manifest ; exists ; 1989 ; European Respiratory Journal Volume 2 [abstracts only] ; 2 >
@@ -56,7 +57,9 @@
     au < manifest ; exists ; 2009 ; European Respiratory Journal Volume 34 ; 34 >
     au < manifest ; exists ; 2010 ; European Respiratory Journal Volume 35 ; 35 >
     au < manifest ; exists ; 2010 ; European Respiratory Journal Volume 36 ; 36 >
-    au < crawling ; exists ; 2011 ; European Respiratory Journal Volume 37 ; 37 >
+    au < released ; crawling ; 2011 ; European Respiratory Journal Volume 37 ; 37 >
+    au < notReady ; exists ; 2011 ; European Respiratory Journal Volume 38 ; 38 >
+    au < crawling ; exists ; 2012 ; European Respiratory Journal Volume 39 ; 39 >
 
   }
 
@@ -70,8 +73,6 @@
     >
 
     param[base_url] = http://err.ersjournals.com/
- 
-    comment[0] = missing manifests for volumes 14 thru 19
   
     au < manifest ; exists ; 2005 ; European Respiratory Review Volume 14 ; 14 >
     au < manifest ; exists ; 2006 ; European Respiratory Review Volume 15 ; 15 >
@@ -79,7 +80,8 @@
     au < manifest ; exists ; 2008 ; European Respiratory Review Volume 17 ; 17 >
     au < manifest ; exists ; 2009 ; European Respiratory Review Volume 18 ; 18 >
     au < manifest ; exists ; 2010 ; European Respiratory Review Volume 19 ; 19 >
-    au < crawling ; exists ; 2011 ; European Respiratory Review Volume 20 ; 20 >
+    au < released ; crawling ; 2011 ; European Respiratory Review Volume 20 ; 20 >
+    au < manifest ; exists ; 2012 ; European Respiratory Review Volume 21 ; 21 >
 
   }
 

@@ -32,11 +32,11 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = weme
       
-      au < testing ; 2005 ; Wilderness & Environmental Medicine Volume 16 ; 16 >
-      au < testing ; 2006 ; Wilderness & Environmental Medicine Volume 17 ; 17 >
-      au < testing ; 2007 ; Wilderness & Environmental Medicine Volume 18 ; 18 >      
-      au < testing ; 2008 ; Wilderness & Environmental Medicine Volume 19 ; 19 > 
-      au < testing ; 2009 ; Wilderness & Environmental Medicine Volume 20 ; 20 >       
+      au < doNotProcess ; 2005 ; Wilderness & Environmental Medicine Volume 16 ; 16 >
+      au < doNotProcess ; 2006 ; Wilderness & Environmental Medicine Volume 17 ; 17 >
+      au < doNotProcess ; 2007 ; Wilderness & Environmental Medicine Volume 18 ; 18 >      
+      au < ready ; 2008 ; Wilderness & Environmental Medicine Volume 19 ; 19 > 
+      au < ready ; 2009 ; Wilderness & Environmental Medicine Volume 20 ; 20 >       
 
     }
 

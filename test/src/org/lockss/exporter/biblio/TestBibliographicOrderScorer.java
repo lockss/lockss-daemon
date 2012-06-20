@@ -48,6 +48,24 @@ public class TestBibliographicOrderScorer extends TestCase {
     identifier formats.
 
     ---------------------------------------------------------------------------
+    au < HighWirePressH20Plugin ; manifest ; 1876 ; Mind Volume os-1 ; os-1 >
+    au < HighWirePressH20Plugin ; manifest ; 1877 ; Mind Volume os-2 ; os-2 >
+    au < HighWirePressH20Plugin ; manifest ; 1878 ; Mind Volume os-3 ; os-3 >
+    au < HighWirePressH20Plugin ; manifest ; 1879 ; Mind Volume os-4 ; os-4 >
+    au < HighWirePressH20Plugin ; manifest ; 1880 ; Mind Volume os-V ; os-V >
+    au < HighWirePressH20Plugin ; manifest ; 1881 ; Mind Volume os-VI ; os-VI >
+    au < HighWirePressH20Plugin ; manifest ; 1882 ; Mind Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1883 ; Mind Volume II ; II >
+    au < HighWirePressH20Plugin ; manifest ; 1884 ; Mind Volume III ; III >
+
+    Ordering by year would provide consistent ordering but we need to recognise
+    the change in volume identifier schemas while ignoring the changes in number
+    formats. There should be 2 ranges os-1 to os-VI, and 1 to III.
+    (This is a reduced instance of real examples in OUP. The years have been
+    adjusted to make a consistent run, to test the expected impact of the
+    volume ordering on the ranges.)
+
+    ---------------------------------------------------------------------------
     (2) Volume numbers that reset or change (e.g. btw year and sequence number) 
         - must consider the year to be more authoritative.
 
@@ -209,6 +227,7 @@ public class TestBibliographicOrderScorer extends TestCase {
   // Example titles
   List<BibliographicItem> tang;
   List<BibliographicItem> oxEcPap;            // Could be ordered by volume
+  List<BibliographicItem> mind;               // Should be ordered by volume
   List<BibliographicItem> euroBusRev;
   List<BibliographicItem> nutFoodSci;
   List<BibliographicItem> intlJournHumArtsComp;
@@ -238,6 +257,7 @@ public class TestBibliographicOrderScorer extends TestCase {
   // Expected result of ordering/splitting by volume
   List<TitleRange> tangVolRanges;
   List<TitleRange> oxEcPapVolRanges;
+  List<TitleRange> mindVolRanges;
   List<TitleRange> euroBusRevVolRanges;
   List<TitleRange> nutFoodSciVolRanges;
   List<TitleRange> intlJournHumArtsCompVolRanges;
@@ -255,6 +275,7 @@ public class TestBibliographicOrderScorer extends TestCase {
   // Expected result of ordering/splitting by year
   List<TitleRange> tangYearRanges;
   List<TitleRange> oxEcPapYearRanges;
+  List<TitleRange> mindYearRanges;
   List<TitleRange> euroBusRevYearRanges;
   List<TitleRange> nutFoodSciYearRanges;
   List<TitleRange> intlJournHumArtsCompYearRanges;
@@ -381,6 +402,61 @@ public class TestBibliographicOrderScorer extends TestCase {
     // Note that OEP can be ordered on either column, as long as we end up
     // with 2 ranges, but we expect volume to be preferred
     //registerOrderByVolume();
+
+    // ----------------------------------------------------------------------
+    BibliographicItem mind1 = new BibliographicItemImpl()
+        .setName("Mind Volume os-1")
+        .setYear("1876")
+        .setVolume("os-1");
+    BibliographicItem mind2 = new BibliographicItemImpl()
+        .setName("Mind Volume os-2")
+        .setYear("1877")
+        .setVolume("os-2");
+    BibliographicItem mind3 = new BibliographicItemImpl()
+        .setName("Mind Volume os-3")
+        .setYear("1878")
+        .setVolume("os-3");
+    BibliographicItem mind4 = new BibliographicItemImpl()
+        .setName("Mind Volume os-4")
+        .setYear("1879")
+        .setVolume("os-4");
+    BibliographicItem mind5 = new BibliographicItemImpl()
+        .setName("Mind Volume os-V")
+        .setYear("1880")
+        .setVolume("os-V");
+    BibliographicItem mind6 = new BibliographicItemImpl()
+        .setName("Mind Volume os-VI")
+        .setYear("1881")
+        .setVolume("os-VI");
+    BibliographicItem mind7 = new BibliographicItemImpl()
+        .setName("Mind Volume 1")
+        .setYear("1882")
+        .setVolume("1");
+    BibliographicItem mind8 = new BibliographicItemImpl()
+        .setName("Mind Volume II")
+        .setYear("1883")
+        .setVolume("II");
+    BibliographicItem mind9 = new BibliographicItemImpl()
+        .setName("Mind Volume III")
+        .setYear("1884")
+        .setVolume("III");
+    mind = Arrays.asList(mind1, mind2, mind3, mind4, mind5, mind6, mind7, mind8,
+        mind9);
+    problemTitles.add(mind);
+    allCanonicalLists.add(Collections.unmodifiableList(mind));
+    mindYearRanges = Arrays.asList(
+        new TitleRange(Arrays.asList(mind1, mind2, mind3, mind4, mind5, mind6, mind7, mind8, mind9))
+    );
+    mindVolRanges = Arrays.asList(
+        new TitleRange(Arrays.asList(mind1, mind2, mind3, mind4, mind5, mind6)),
+        new TitleRange(Arrays.asList(mind7, mind8, mind9))
+    );
+    allYearRanges.add(mindYearRanges);
+    allVolRanges.add(mindVolRanges);
+    // Note that Mind can be ordered on either column, as long as we end up
+    // with 2 ranges, but we expect year to be preferred
+    //registerOrderByYear();
+    // NOTE Volume ordering must account for Roman numbers in any token
 
     // ----------------------------------------------------------------------
     BibliographicItem euroBusRev1 = new BibliographicItemImpl()
@@ -971,48 +1047,59 @@ public class TestBibliographicOrderScorer extends TestCase {
    * number of hyphens, the input string is assumed not to represent a parseable
    * range.
    */
-  public final void testIsVolumeRange() {
+  public final void testIsRange() {
     // Invalid input
-    assertFalse(isVolumeRange(null));
-    assertFalse(isVolumeRange(""));
+    assertFalse(isRange(null));
+    assertFalse(isRange(""));
 
     // Invalid ranges
-    assertFalse(isVolumeRange("s1-4"));
-    assertFalse(isVolumeRange("1-s4"));
-    assertFalse(isVolumeRange("s1-s2-s3"));
-    assertFalse(isVolumeRange("s1-2-3"));
-    assertFalse(isVolumeRange("s123"));
-    assertFalse(isVolumeRange("1-2-3"));
-    assertFalse(isVolumeRange("123"));
-    assertFalse(isVolumeRange("a-1"));
-    assertFalse(isVolumeRange("1-two"));
+    assertFalse(isRange("s1-4"));
+    assertFalse(isRange("1-s4"));
+    assertFalse(isRange("s1-s2-s3"));
+    assertFalse(isRange("s1-2-3"));
+    assertFalse(isRange("s123"));
+    assertFalse(isRange("1-2-3"));
+    assertFalse(isRange("123"));
+    assertFalse(isRange("a-1"));
+    assertFalse(isRange("1-two"));
     // Invalid downward ranges
-    assertFalse(isVolumeRange("II-I"));
-    assertFalse(isVolumeRange("2-1"));
-    assertFalse(isVolumeRange("bb-aa"));
+    assertFalse(isRange("II-I"));
+    assertFalse(isRange("2-1"));
+    assertFalse(isRange("bb-aa"));
 
     // Valid ranges
-    assertTrue(isVolumeRange("I-II"));
-    assertTrue(isVolumeRange("a-aa"));
-    assertTrue(isVolumeRange("a-b"));
-    assertTrue(isVolumeRange("a-baa"));
-    assertTrue(isVolumeRange("aardvark - bat"));
-    assertTrue(isVolumeRange("s2 - s10"));
-    assertTrue(isVolumeRange("a-1 - b-1"));
-    assertTrue(isVolumeRange("1-2-3 - 2-3-4"));
+    assertTrue(isRange("I-II"));
+    assertTrue(isRange("a-aa"));
+    assertTrue(isRange("a-b"));
+    assertTrue(isRange("a-baa"));
+    assertTrue(isRange("aardvark - bat"));
+    assertTrue(isRange("s2 - s10"));
+    assertTrue(isRange("a-1 - b-1"));
+    assertTrue(isRange("1-2-3 - 2-3-4"));
     // Individual non-numerical tokens are not compared
-    assertTrue(isVolumeRange("s1-t4"));
+    assertTrue(isRange("s1-t4"));
 
     // Valid mixed-format ranges
-    assertTrue(isVolumeRange("I-4"));
-    assertTrue(isVolumeRange("1-IV"));
+    assertTrue(isRange("I-4"));
+    assertTrue(isRange("1-IV"));
+
+    // Identifiers with same casing and same length tokens either side of hyphen
+    // will be considered topic ranges if possible, unless the token can be
+    // taken as a Roman number. Note the following could make valid increasing
+    // topic ranges (ignoring case).
+    assertFalse(isRange("os-X"));
+    assertFalse(isRange("OS-x"));
+    assertFalse(isRange("os-x"));
+    assertFalse(isRange("os-VI"));
+    assertFalse(isRange("Os-vI"));
+    assertTrue(isRange("os-vi"));
 
     // Currently we allow non-increasing ranges
-    assertTrue(isVolumeRange("I-I"));
-    assertTrue(isVolumeRange("a-a"));
-    assertTrue(isVolumeRange("hello-hello"));
-    assertTrue(isVolumeRange("1-1"));
-    assertTrue(isVolumeRange("1-a -1-a"));
+    assertTrue(isRange("I-I"));
+    assertTrue(isRange("a-a"));
+    assertTrue(isRange("hello-hello"));
+    assertTrue(isRange("1-1"));
+    assertTrue(isRange("1-a -1-a"));
   }
 
 
@@ -1171,6 +1258,7 @@ public class TestBibliographicOrderScorer extends TestCase {
   /**
    * Consecutive string volumes must be equal, except that the final numerical
    * token of each string must represent consecutive integers.
+   * The method tests for strict consecutivity; no overlap or gaps.
    */
   public final void testAreVolumesConsecutiveStringString() {
     assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("Top 100 volumes, no 81!", "Top 100 volumes, no 82!") );
@@ -1178,6 +1266,18 @@ public class TestBibliographicOrderScorer extends TestCase {
     assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("2001", "2002") );
     assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("2 men in a boat", "3 men in a boat") );
     assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("The 10 commandments", "The 11 commandments") );
+    assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("a", "b") );
+    assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("aa", "ab") );
+    assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("az", "ba") );
+    assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("LIV", "LV") );
+    assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("os-LIV", "os-LV") );
+    assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("os-liv", "os-lv") );
+    assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("os-IV", "os-V") );
+    assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("os-iv", "os-v") );
+    assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("os-4", "os-V") );
+
+    // OUP's IEICE Transactions series
+    assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("E89-C", "E90-C") );
 
     // The non-numerical string tokens are different
     assertFalse( BibliographicOrderScorer.areVolumesConsecutive("1st volume", "2nd volume") );
@@ -1205,6 +1305,18 @@ public class TestBibliographicOrderScorer extends TestCase {
       BibliographicItem afrTod2 = afrTod.get(i+1);
       assertTrue( BibliographicOrderScorer.areVolumesConsecutiveDuplicates(afrTod1, afrTod2) );
     }
+    // OUP's "The Library..." has consecutive volumes with different formats
+    assertTrue( BibliographicOrderScorer.areVolumesConsecutiveDuplicates(
+        new BibliographicItemImpl()
+            .setName("The Library")
+            .setYear("1981")
+            .setVolume("s6-3")
+        ,
+        new BibliographicItemImpl()
+            .setName("The Library")
+            .setYear("1981")
+            .setVolume("s6-III")
+    ));
   }
 
   /**
@@ -1293,6 +1405,8 @@ public class TestBibliographicOrderScorer extends TestCase {
   public final void testAreVolumesIncreasingStringString() {
     assertTrue(  BibliographicOrderScorer.areVolumesIncreasing("Top 100 volumes, no 81!", "Top 100 volumes, no 84!") );
     assertTrue(  BibliographicOrderScorer.areVolumesIncreasing("1", "2") );
+    assertTrue(  BibliographicOrderScorer.areVolumesIncreasing("1", "II") );
+    assertTrue(  BibliographicOrderScorer.areVolumesIncreasing("I", "2") );
     assertTrue(  BibliographicOrderScorer.areVolumesIncreasing("2001", "2002") );
     assertTrue(  BibliographicOrderScorer.areVolumesIncreasing("2001", "2001") );
     assertTrue(  BibliographicOrderScorer.areVolumesIncreasing("3 men in a boat", "8 men in a boat") );
@@ -1532,6 +1646,10 @@ public class TestBibliographicOrderScorer extends TestCase {
     checkCountProportionOfBreaksInRange(VOL, oxEcPap, 1, 3);
     checkCountProportionOfBreaksInRange(YR,  oxEcPap, 1, 2);
 
+    // mind
+    checkCountProportionOfBreaksInRange(VOL, mind, 1 , 1);
+    checkCountProportionOfBreaksInRange(YR,  mind, 1, 0);
+
     // euroBusRev
     checkCountProportionOfBreaksInRange(VOL, euroBusRev, 1, 1);
     checkCountProportionOfBreaksInRange(YR,  euroBusRev, 1, 0);
@@ -1586,6 +1704,7 @@ public class TestBibliographicOrderScorer extends TestCase {
   public final void testCountProportionOfUniquelyYearBreaks() {
     checkCountProportionOfUniquelyYearBreaks(tang, 0);
     checkCountProportionOfUniquelyYearBreaks(oxEcPap, 2);
+    checkCountProportionOfUniquelyYearBreaks(mind, 0);
     checkCountProportionOfUniquelyYearBreaks(euroBusRev, 0);
     checkCountProportionOfUniquelyYearBreaks(nutFoodSci, 0);
     checkCountProportionOfUniquelyYearBreaks(intlJournHumArtsComp, 0);
@@ -1612,6 +1731,11 @@ public class TestBibliographicOrderScorer extends TestCase {
     // oxEcPap
     checkCountProportionOfNegativeBreaksInRange(VOL, oxEcPap, 1);
     checkCountProportionOfNegativeBreaksInRange(YR,  oxEcPap, 0);
+
+    // mind
+    // 1 negative break due to the vol id changing os-N -> N
+    checkCountProportionOfNegativeBreaksInRange(VOL, mind, 1);
+    checkCountProportionOfNegativeBreaksInRange(YR,  mind, 0);
 
     // euroBusRev
     checkCountProportionOfNegativeBreaksInRange(VOL, euroBusRev, 1);
@@ -1672,6 +1796,10 @@ public class TestBibliographicOrderScorer extends TestCase {
     // oxEcPap
     checkCountProportionOfRedundancyInRange(VOL, oxEcPap, 0, 0);
     checkCountProportionOfRedundancyInRange(YR,  oxEcPap, 0, 0);
+
+    // mind
+    checkCountProportionOfRedundancyInRange(VOL, mind, 0, 0);
+    checkCountProportionOfRedundancyInRange(YR,  mind, 0, 0);
 
     // euroBusRev
     checkCountProportionOfRedundancyInRange(VOL, euroBusRev, 0, 0);
@@ -1736,16 +1864,10 @@ public class TestBibliographicOrderScorer extends TestCase {
    * parseable as a number.
    */
   public final void testChangeOfFormats() {
-    assertTrue(  changeOfFormats("string", "1") );
-    assertTrue(  changeOfFormats("1", "string") );
-    assertFalse( changeOfFormats("1", "1") );
-    assertFalse( changeOfFormats("string", "string") );
-    // No change of formats when either string can be parsed as a Roman number
-    assertFalse( changeOfFormats("1", "II") );
-    assertFalse( changeOfFormats("II", "3") );
     // The consistent list should not display any format changes
     assertFalse( containsChangeOfFormats(fullyConsistentAus, VOL) );
     assertFalse( containsChangeOfFormats(fullyConsistentAus, YR) );
+
     // The following are currently false but we might want to do some proper
     // regular expression work to find and rate string commonalities, or
     // use something like Levenstein distance.
@@ -2070,7 +2192,7 @@ public class TestBibliographicOrderScorer extends TestCase {
                                                          int expYrBreaks) {
     // Shuffle and sort
     if (sortField == VOL) orderVolYear(aus); else orderYearVol(aus);
-    // Get the denominator for calculating proportions. Equal to 1 less than the 
+    // Get the denominator for calculating proportions. Equal to 1 less than the
     // number of aus.
     float denom = (float)(aus.size() - 1);
     // Check the results
@@ -2123,7 +2245,8 @@ public class TestBibliographicOrderScorer extends TestCase {
                                                          int expBreaks) {
     // Shuffle and sort
     if (sortField == VOL) orderVolYear(aus); else orderYearVol(aus);
-    // Get the denominator for calculating proportions. Equal to 1 less than the 
+    //printVolsYears(aus);
+    // Get the denominator for calculating proportions. Equal to 1 less than the
     // number of aus.
     float denom = (float)(aus.size() - 1);
     // Check the results
@@ -2224,7 +2347,7 @@ public class TestBibliographicOrderScorer extends TestCase {
   /**
    * Check whether the given list of BibliographicItems contains any changes in format
    * on the specified field; if it doesn't, we expect the values not to be 
-   * monotonically increasing. 
+   * monotonically increasing. This uses BibliographicItem method.
    * @param aus
    */
   private final boolean containsChangeOfFormats(List<BibliographicItem> aus, SORT_FIELD field) {
@@ -2262,6 +2385,13 @@ public class TestBibliographicOrderScorer extends TestCase {
    */
   private final void registerOrderByYear() {
     titlesToOrderByYear.add(problemTitles.size()-1);
+  }
+
+  // Debugging method
+  private void printVolsYears(List<BibliographicItem> aus) {
+    System.out.format("---\n");
+    for (BibliographicItem bi : aus)
+      System.out.format("%s (%s)\n", bi.getVolume(), bi.getYear());
   }
 
 }

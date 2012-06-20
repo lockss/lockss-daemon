@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartConverter.java,v 1.15 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: TestKbartConverter.java,v 1.15.2.1 2012-06-20 00:02:56 nchondros Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.lockss.util.StringUtil;
  * Try some conversions from TdbTitles to KbartTitles. This is done using a
  * single TdbTitle via <code>TdbTestUtil.makeRangeTestTitle()</code>.
  * The <code>extractAllTitles()</code> method is not exercised; instead we just
- * run <code>createKbartTitles()</code> once per TdbTitle.
+ * run <code>convertTitleToKbartTitles()</code> once per TdbTitle.
  * <p>
  * Note that a lot of code in the converter class makes use of
  * {@link TdbAuOrderScorer}, which gets a good exercising in
@@ -76,7 +76,7 @@ public class TestKbartConverter extends LockssTestCase {
 
   /**
    * Check that the result of the wrapper method is the same as calling
-   * createKbartTitles on a single title.
+   * convertTitleToKbartTitles on a single title.
    */
   public final void testConvertTitles() {
     List<TdbTitle> l = Collections.emptyList();
@@ -84,7 +84,7 @@ public class TestKbartConverter extends LockssTestCase {
     assertEmpty(KbartConverter.convertTitles(l));
     try {
       final TdbTitle title = TdbTestUtil.makeRangeTestTitle(false);
-      assertIsomorphic(KbartConverter.createKbartTitles(title), 
+      assertIsomorphic(KbartConverter.convertTitleToKbartTitles(title),
           KbartConverter.convertTitles(new Vector(){{ add(title); }})
       );
     } catch (TdbException e) {
@@ -93,33 +93,30 @@ public class TestKbartConverter extends LockssTestCase {
   }
 
   /**
-   * Compare results of convertAus and createKbartTitles.
+   * Compare results of convertTitleAus and convertTitleToKbartTitles.
    */
   public final void testConvertAus() {
     boolean showHealth = true;
     boolean rangeFieldsIncluded = true;
-    
-    Map<TdbTitle, List<ArchivalUnit>> emptyMap = Collections.emptyMap();
-    assertEmpty(KbartConverter.convertAus(null, showHealth, rangeFieldsIncluded));
-    assertEmpty(KbartConverter.convertAus(emptyMap, showHealth, rangeFieldsIncluded));
 
     final List<ArchivalUnit> ausNull = null;
     final List<ArchivalUnit> ausEmpty = Collections.emptyList();
     final List<ArchivalUnit> ausMock = makeMockAuList();
     
     // Test null
-    assertIsomorphic(
-        KbartConverter.createKbartTitles(ausNull, showHealth, rangeFieldsIncluded),
-        KbartConverter.convertAus(null, showHealth, rangeFieldsIncluded)
-    );
+    assertEmpty(KbartConverter.convertTitleToKbartTitles(
+        ausNull, showHealth, rangeFieldsIncluded
+    ));
     // Test null list, empty list, list of mock AUs
-    for (List<ArchivalUnit> lau : Arrays.asList(ausNull, ausEmpty, ausMock)) {
+    //for (List<ArchivalUnit> lau : Arrays.asList(ausNull, ausEmpty, ausMock)) {
+    for (List<ArchivalUnit> lau : Arrays.asList(ausMock)) {
+      List<KbartTitle> result = KbartConverter.convertTitleToKbartTitles(
+          lau, showHealth, rangeFieldsIncluded
+      );
       assertIsomorphic(
-          KbartConverter.createKbartTitles(
-              lau, showHealth, rangeFieldsIncluded
-          ),
-          KbartConverter.convertAus(
-              TdbUtil.mapTitlesToAus(lau), showHealth, rangeFieldsIncluded
+          result,
+          KbartConverter.convertTitleAus(
+              TdbUtil.mapTitlesToAus(lau).values(), showHealth, rangeFieldsIncluded
           )
       );
     }
@@ -130,8 +127,9 @@ public class TestKbartConverter extends LockssTestCase {
         put(TdbTestUtil.makeRangeTestTitle(false), ausEmpty);
         put(TdbTestUtil.makeRangeTestTitle(false), ausEmpty);
       }};
-      assertIsomorphic(KbartConverter.createKbartTitles(ausEmpty, showHealth, rangeFieldsIncluded), 
-          KbartConverter.convertAus(emptyAusMap, showHealth, rangeFieldsIncluded)
+      assertIsomorphic(
+          KbartConverter.convertTitleToKbartTitles(ausEmpty, showHealth, rangeFieldsIncluded),
+          KbartConverter.convertTitleAus(emptyAusMap.values(), showHealth, rangeFieldsIncluded)
       );
     } catch (TdbException e) {
       fail("Exception while making range test title: "+e);
@@ -280,17 +278,17 @@ public class TestKbartConverter extends LockssTestCase {
   /**
    *
    */
-  public final void testCreateKbartTitlesCollectionOfArchivalUnitBooleanBoolean() {
+  public final void testConvertTitleToKbartTitlesCollectionOfArchivalUnitBooleanBoolean() {
     //fail("Not yet implemented");
-    System.out.println("testCreateKbartTitlesCollectionOfArchivalUnitBooleanBoolean() not implemented.");
+    System.out.println("testConvertTitleToKbartTitlesCollectionOfArchivalUnitBooleanBoolean() not implemented.");
   }
 
   /**
    *
    */
-  public final void testCreateKbartTitlesListOfTdbAu() {
+  public final void testConvertTitleToKbartTitlesListOfTdbAu() {
     //fail("Not yet implemented");
-    System.out.println("testCreateKbartTitlesListOfTdbAu() not implemented.");
+    System.out.println("testConvertTitleToKbartTitlesListOfTdbAu() not implemented.");
   }
 
   /**
@@ -370,15 +368,15 @@ public class TestKbartConverter extends LockssTestCase {
 
   /**
    * Test the thin wrapper method which converts a Collection of AUs to a
-   * List of TdbAus before passing to the main createKbartTitles()
+   * List of TdbAus before passing to the main convertTitleToKbartTitles()
    */
-  public final void testCreateKbartTitlesCollectionAus() {
+  public final void testConvertTitleToKbartTitlesCollectionAus() {
     // If there are no AUs, an empty list should be returned
     Collection<ArchivalUnit> aus = Collections.emptyList();
-    assertEmpty(KbartConverter.createKbartTitles(aus, true, true));
+    assertEmpty(KbartConverter.convertTitleToKbartTitles(aus, true, true));
     aus = makeMockAuList();
     boolean showHealth = true;
-    List<KbartTitle> titles = KbartConverter.createKbartTitles(aus, showHealth, true);
+    List<KbartTitle> titles = KbartConverter.convertTitleToKbartTitles(aus, showHealth, true);
     // The result should be at most the size of the AU list 
     assertNotNull(titles);
     //assertNotEmpty(titles); // the result may be empty
@@ -392,25 +390,25 @@ public class TestKbartConverter extends LockssTestCase {
 
   /**
    * Test the thin wrapper method which gets a List of TdbAus from a TdbTitle
-   * before passing to the main createKbartTitles()
+   * before passing to the main convertTitleToKbartTitles()
    */
-  public final void testCreateKbartTitlesListTdbAus() {
+  public final void testConvertTitleToKbartTitlesListTdbAus() {
     // If there are no TdbAus, an empty list should be returned
     List<TdbAu> noTdbAus = Collections.emptyList();
-    assertEmpty(KbartConverter.createKbartTitles(noTdbAus));
+    assertEmpty(KbartConverter.convertTitleToKbartTitles(noTdbAus));
     // NOTE Testing with dummy TdbAus is handled by testCreateKbartTitlesTdbTitle() 
     // createKbartTitlesTdbTitle() merely extracts TdbAus from a dummy title 
   }
 
   /**
-   * The createKbartTitlesWithRanges() method is called by other createKbartTitles() 
+   * The convertTitleToKbartTitlesWithRanges() method is called by other convertTitleToKbartTitles()
    * methods and gets exercised by the tests for those methods. This test performs
    * some generic tests to ensure that the TitleRanges mapped to by the KbartTitles
    * have sensible parameters. 
    */
-  public final void testCreateKbartTitlesWithRanges() {
+  public final void testConvertTitleToKbartTitlesWithRanges() {
     List<TdbAu> noAus = Collections.emptyList();
-    assertEmpty(KbartConverter.createKbartTitlesWithRanges(noAus));
+    assertEmpty(KbartConverter.convertTitleToKbartTitlesWithRanges(noAus));
     
     TdbTitle rangeTitle;
     TdbTitle rangeToNowTitle;
@@ -419,7 +417,7 @@ public class TestKbartConverter extends LockssTestCase {
       rangeToNowTitle = TdbTestUtil.makeRangeToNowTestTitle();
       for (TdbTitle title : Arrays.asList(rangeTitle, rangeToNowTitle)) {
         List<TdbAu> aus = new ArrayList<TdbAu>(title.getTdbAus());
-        Map<KbartTitle, TitleRange> map = KbartConverter.createKbartTitlesWithRanges(aus);
+        Map<KbartTitle, TitleRange> map = KbartConverter.convertTitleToKbartTitlesWithRanges(aus);
         // The map should have at least one title
         assertTrue(map.size()>=1);
         // Put the titles in order
@@ -458,18 +456,18 @@ public class TestKbartConverter extends LockssTestCase {
   }
 
   /**
-   * Test the main createKbartTitles() method
+   * Test the main convertTitleToKbartTitles() method
    */
-  public final void testCreateKbartTitlesTdbTitle() {
+  public final void testConvertTitleToKbartTitlesTdbTitle() {
     try {
       // If there is no TdbTitle, or no TdbAus in the title, an empty list should be returned
       TdbTitle nullTitle = null;
-      assertEmpty(KbartConverter.createKbartTitles(nullTitle));
-      assertEmpty(KbartConverter.createKbartTitles(TdbTestUtil.makeTitleWithNoAus("test title!")));
+      assertEmpty(KbartConverter.convertTitleToKbartTitles(nullTitle));
+      assertEmpty(KbartConverter.convertTitleToKbartTitles(TdbTestUtil.makeTitleWithNoAus("test title!")));
 
       // Title without volume info; just year ranges leading to a coverage gap
       TdbTitle title = TdbTestUtil.makeRangeTestTitle(false);
-      List<KbartTitle> titles = KbartConverter.createKbartTitles(title);
+      List<KbartTitle> titles = KbartConverter.convertTitleToKbartTitles(title);
       // There should be two ranges based only on the dates
       assertEquals(2, titles.size());
 
@@ -498,7 +496,7 @@ public class TestKbartConverter extends LockssTestCase {
       
       // Test the method again with a range which goes to the present - end values should be empty
       title = TdbTestUtil.makeRangeToNowTestTitle();
-      titles = KbartConverter.createKbartTitles(title);
+      titles = KbartConverter.convertTitleToKbartTitles(title);
       assertEquals("Range to now yields too many KBART titles", 1, titles.size());
       // Title with a range to now
       t = titles.get(0);
@@ -511,7 +509,7 @@ public class TestKbartConverter extends LockssTestCase {
       
       // Test with a title which has volume info as well as year ranges; no coverage gap by volume
       title = TdbTestUtil.makeRangeTestTitle(true);
-      titles = KbartConverter.createKbartTitles(title);
+      titles = KbartConverter.convertTitleToKbartTitles(title);
       assertEquals("Coverage gap found when none exists in volume field; only years.", 1, titles.size());
       t = titles.get(0);
       assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_1_START), 

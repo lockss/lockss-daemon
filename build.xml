@@ -2,11 +2,11 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.287 2011-09-02 13:03:08 pgust Exp $
+ $Id: build.xml,v 1.287.4.1 2012-06-20 00:03:08 nchondros Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,6 +38,7 @@ in this Software without prior written authorization from Stanford University.
 <description>
 Args:
   -Dargs="args ..."        Supply cmd line args to run-class
+  -Djvmargs="args ..."     Supply cmd line args to java (e.g., -Xmx1000m)
   -Dclass=pack.age.Class   Specify class for test-one, test-class, run-class
   -Dcvstag=tag             Cvs tag to checkout for post-commit-test
   -Dexclude=path           Exclude matching tests.
@@ -89,14 +90,17 @@ Args:
                               generate-unsupported-mock
 </description>
 
-   <!-- User defaults -->
+   <!-- User defaults (old name) -->
   <property file="${user.home}/lockss.properties"/>
+   <!-- User defaults -->
+  <property file="${user.home}/.lockssprops"/>
 
   <!-- Defaults -->
   <property name="loglevel" value="" />
   <property name="showoutput" value="no" />
   <property name="filtertrace" value="yes" />
   <property name="timeout" value="" />
+  <property name="jvmargs" value="" />
   <property name="keeptempfiles" value="" />
   <property name="idtempfiles" value="" />
   <property name="nonetwork" value="" />
@@ -111,6 +115,9 @@ Args:
   <property name="noqualifier" value="java.*" />
 <!--   <property name="noqualifier" -->
 <!-- 	    value="java.lang:java.io:java.net:java.util:java.text" /> -->
+
+  <!-- Default heap for junit if none specified in jvmargs -->
+  <property name="junit.default.args" value="-Xmx256m" />
 
   <property environment="env"/>
   <!--  Ignore system classpath, to ensure consistent builds -->
@@ -209,7 +216,7 @@ Args:
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
   <property name="log4j.jar" value="${lib}/log4j-1.2.13.jar"/>
   <property name="commons.lang.jar"
-				  value="${lib}/commons-lang-2.5.jar"/>
+				  value="${lib}/commons-lang-2.6.jar"/>
   <property name="commons.cli.jar"
   				  value="${lib}/commons-cli-1.2.jar"/>
   <property name="commons.collections.jar"
@@ -217,14 +224,33 @@ Args:
   <property name="commons.logging.jar"
   				  value="${lib}/commons-logging-1.1.1.jar"/>
   <property name="commons.codec.jar"
-  				  value="${lib}/commons-codec-1.4.jar"/>
+  				  value="${lib}/commons-codec-1.6.jar"/>
   <property name="commons.httpclient.jar"
   			value="${lib}/commons-httpclient-3.0-rc4.jar"/>
   <property name="commons.io.jar"
-	        value="${lib}/commons-io-1.4.jar" />
+	        value="${lib}/commons-io-2.2.jar" />
   <property name="commons.jxpath.jar"
 				  value="${lib}/commons-jxpath-1.3.jar"/>
-  <property name="javatar.jar"    value="${lib}/tar-2.3.jar"/>
+  <property name="commons.compress.jar"
+				  value="${lib}/commons-compress-1.3.jar"/>
+
+
+
+<!--   <property name="truezip-archetype-file.jar" -->
+<!-- 	    value="${lib}/truezip-archetype-file-7.4.3.jar" /> -->
+  <property name="truezip-driver-file.jar"
+	    value="${lib}/truezip-driver-file-7.4.3.jar" />
+  <property name="truezip-driver-tar.jar"
+	    value="${lib}/truezip-driver-tar-7.4.3.jar" />
+  <property name="truezip-driver-zip.jar"
+	    value="${lib}/truezip-driver-zip-7.4.3.jar" />
+<!--   <property name="truezip-driver-tzp.jar" -->
+<!-- 	    value="${lib}/truezip-driver-tzp-7.4.3.jar" /> -->
+  <property name="truezip-file.jar" value="${lib}/truezip-file-7.4.3.jar" />
+  <property name="truezip-kernel.jar" value="${lib}/truezip-kernel-7.4.3.jar" />
+  <property name="truezip-swing.jar" value="${lib}/truezip-swing-7.4.3.jar" />
+
+  <property name="javatar.jar" value="${lib}/javagnutar.jar" />
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
   <property name="apiviz.jar"     value="${lib}/apiviz-1.3.1.jar"/>
@@ -246,6 +272,7 @@ Args:
   <property name="bcel.jar"  value="${test.lib}/bcel.jar"/>
   <property name="oro.jar"  value="${test.lib}/jakarta-oro-2.0.8.jar"/>
   <property name="getopt.jar"  value="${test.lib}/gnu-getopt-1.0.13.jar"/>
+  <property name="javacsv.jar"  value="${test.lib}/javacsv.jar"/>
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
   <property name="pdfbox.jar" value="${lib}/PDFBox-0.7.3.jar" />
   <!-- Needed by PDFBox: -->
@@ -255,8 +282,9 @@ Args:
   <!-- Needed by PDFBox: -->
   <property name="bouncycastle.mail.jar" value="${lib}/bcmail-jdk14-132.jar" />
   <!-- Needed by ArcExploder, exporters, jcr repo: -->
-  <property name="heritrix.jar" value="${lib}/heritrix-1.14.3-p2.jar" />
-  <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.3-heritrix-subset-1.0.jar" />
+  <property name="heritrix.jar" value="${lib}/heritrix-commons-3.1.0-p1.jar" />
+  <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.7.jar" />
+  <property name="heritrix-guava.jar" value="${lib}/guava-r08.jar" />
 
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
@@ -304,6 +332,14 @@ Args:
     <pathelement path="${commons.httpclient.jar}" />
     <pathelement path="${commons.io.jar}" />
     <pathelement path="${commons.jxpath.jar}" />
+    <pathelement path="${commons.compress.jar}" />
+    <pathelement path="${truezip-kernel.jar}" />
+    <pathelement path="${truezip-file.jar}" />
+    <pathelement path="${truezip-driver-file.jar}" />
+    <pathelement path="${truezip-driver-zip.jar}" />
+    <pathelement path="${truezip-driver-tar.jar}" />
+<!-- XXX Shouldn't need this - figure out how to avoid dependency -->
+    <pathelement path="${truezip-swing.jar}" />
     <pathelement path="${javatar.jar}" />
     <pathelement path="${log4j.jar}" />
     <pathelement path="${concurrent.jar}" />
@@ -339,6 +375,7 @@ Args:
     <!-- jars needed by the ArcCrawler -->
     <pathelement path="${heritrix.jar}" />
     <pathelement path="${heritrix-fastutil.jar}" />
+    <pathelement path="${heritrix-guava.jar}" />
   </path>
 
   <path id="run.classpath">
@@ -400,6 +437,7 @@ Args:
     <path refid="compile.classpath" />
     <pathelement path="${jdk.tools.jar}" />
     <pathelement path="${commons.cli.jar}" />
+    <pathelement path="${javacsv.jar}" />
   </path>
 
   <path id="tools.run.classpath">
@@ -486,10 +524,12 @@ Test results in ${test.results}
       </then>
      </if>
     <junit1 fork="${fork}" printsummary="yes"
-         maxmemory="256m" haltonfailure="${halt}" failureproperty="failed"
+         haltonfailure="${halt}" failureproperty="failed"
          filtertrace="${filtertrace}" showoutput="${showoutput}">
       <junitelem/>
       <jvmarg value="-server"/>
+      <jvmarg line="${junit.default.args}"/>
+      <jvmarg line="${jvmargs}"/>
       <formatter type="plain" usefile="@{usefile}" />
       <classpath refid="@{cpid}" />
       <sysproperty key="java.library.path" value="${test.native}"/>
@@ -599,13 +639,17 @@ The target you have selected requires compiling under JDK 1.7.
   <!-- ==================================================================== -->
   <!--  Public tasks -->
   <!-- ==================================================================== -->
-  <target name="clean"
-     depends="clean0"
+  <target name="clean-all"
+     depends="clean"
    description="Delete all generated files and dirs" >
     <delete dir="${tdb.xml.dir}" quiet="true"/>
   </target>
 
-  <target name="clean0"
+  <!-- Old target.  Remove  -->
+  <target name="clean0" depends="clean"
+	  description="Deprecated synonym for clean." />
+
+  <target name="clean"
      depends="clean-tempbuild,clean-tools,clean-results,clean-rpm"
    description="Delete all generated files and dirs except tdbxml" >
     <delete dir="${classes}" quiet="true"/>
@@ -752,8 +796,9 @@ The target you have selected requires compiling under JDK 1.7.
     </dojavac>
     <copy todir="${plugins.test.classes}" >
        <fileset dir="${plugins.test.src}" >
-          <include name="**/*.xml"/>   <!-- test files -->
+          <include name="**/*.xml"/>	<!-- test files -->
           <include name="**/*.html"/>   <!-- test files -->
+       	  <include name="**/*.pdf"/>	<!-- test PDF files -->
        </fileset>
      </copy>
   </target>
@@ -949,6 +994,7 @@ The target you have selected requires compiling under JDK 1.7.
 
     <for list="${plnnames}" delimiter=":" param="plnname">
       <sequential>
+        <echo message="calling tdb-pln -Dplnname=@{plnname}" />
 	<antcall target="tdb-pln">
 	  <param name="plnname" value="@{plnname}"/>
 	</antcall>
@@ -969,13 +1015,13 @@ Must specify pln with -Dplnname=name
     <mkdir dir="${outdir}" />
 
     <apply executable="scripts/tdb/tdbxml" dir="${basedir}"
-	   addsourcefile="true"
-	   dest="${outdir}"
+           addsourcefile="true"
+           dest="${outdir}"
            failonerror="true"
            failifexecutionfails="true"
            relative="false"
            parallel="false">
-
+      
       <fileset dir="${indir}" includes="**/*.tdb"/>
       <mapper type="glob" from="*.tdb" to="*.xml"/>
       <arg value="-A"/>
@@ -1154,6 +1200,15 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <property name="protorpm.rpms" value="${protorpm.top}/RPMS" />
     <property name="rpm.rpms" value="${rpm.top}/RPMS" />
 
+    <propertyregex property="rpmreleasename"
+		   input="${releasename}"
+		   regexp="-[^.]*"
+		   global="true"
+		   replace=""
+		   defaultValue="${releasename}" />
+
+
+
     <!-- make classpath to substitute into start script -->
     <pathconvert refid="prod.run.classpath" property="rpm.clspth"
        targetos="unix">
@@ -1166,7 +1221,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
       </fileset>
       <filterset>
        <filter token="CLASSPATH" value="${rpm.clspth}"/>
-       <filter token="RELEASENAME" value="${releasename}"/>
+       <filter token="RELEASENAME" value="${rpmreleasename}"/>
        <filter token="RPMRELEASE" value="${rpmrelease}"/>
        <filter token="PLATFORM_VERSION" value="Linux RPM-${rpmrelease}"/>
       </filterset>
@@ -1844,6 +1899,7 @@ published on the Web. http://www.lockss.org
     <java classname="${class}" fork="true" failonerror="true">
        <classpath refid="test.run.classpath" />
        <arg line="${args}" />
+       <jvmarg line="${jvmargs}"/>
        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
        <sysproperty key="java.library.path" value="${test.native}"/>
     </java>
@@ -1857,6 +1913,7 @@ published on the Web. http://www.lockss.org
     <java classname="${class}" fork="true" failonerror="yes">
        <classpath refid="tools.test.run.classpath" />
        <arg line="${args}" />
+       <jvmarg line="${jvmargs}"/>
        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
     </java>
   </target>
@@ -1913,7 +1970,7 @@ published on the Web. http://www.lockss.org
 
   <!-- ==================================================================== -->
   <target name="test-plugins"
-   depends="prepare.run.test,jar-plugins-tests,load-plugins"
+   depends="prepare.run.test,jar-plugins-tests,xmllint-plugins,load-plugins"
    description="Run all plugin unit tests (plugins/test/src/**/Test*.class)" >
     <condition property="plug.include" value="${include}" else="**/Test*.java">
       <isset property="include" />
@@ -2099,6 +2156,8 @@ Test results in ${test.results}
 	<classpath refid="test.run.classpath" />
         <sysproperty key="org.lockss.defaultLogLevel" value="${tdbloglevel}"/>
 	<arg line="-v -g prod -h host.foo ${xml.files}" />
+	<jvmarg line="${junit.default.args}"/>
+	<jvmarg line="${jvmargs}"/>
       </java>
      </then>
      <else>
@@ -2128,13 +2187,15 @@ Test results in ${test.results}
      <not> <equals arg1="${plugin.names}" arg2="" /> </not>
      <then>
       <echo message="Validating plugin xml files"/>
-      <junit1 fork="${fork}" printsummary="yes" maxmemory="256m"
+      <junit1 fork="${fork}" printsummary="yes"
 	      haltonfailure="${halt}" failureproperty="failed"
 	      filtertrace="${filtertrace}" showoutput="${showoutput}">
         <test fork="${fork}" name="org.lockss.test.PluginTestCase" />
 		    <jvmarg value="-server"/>
 	<formatter type="plain" usefile="@{usefile}" />
 	<classpath refid="test.run.classpath" />
+	<jvmarg line="${junit.default.args}"/>
+	<jvmarg line="${jvmargs}"/>
         <sysproperty key="org.lockss.test.TestPluginNames"
 		     value="${plugin.names}"/>
         <sysproperty key="org.lockss.manager.PluginManager"
@@ -2190,6 +2251,7 @@ Test results in ${test.results}
   </target>
 
   <target name="xmllint"
+   depends="xmllint-plugins"
    description="Run xmllint on xml files" >
     <echo message="Checking .xml files"/>
     <apply executable="xmllint" dir="${basedir}"
@@ -2202,7 +2264,22 @@ Test results in ${test.results}
       <fileset dir="${basedir}" includes="test/frameworks/*.xml"/>
       <fileset dir="${basedir}" includes="src/**/*.xml"/>
       <fileset dir="${basedir}" includes="*/src/**/*.xml"/>
-      <fileset dir="${basedir}" includes="*/*/src/**/*.xml"/>
+      <fileset dir="${basedir}" includes="*/*/src/**/*.xml"
+	       excludes="plugins/**/*.xml"/>
+    </apply>
+  </target>
+
+  <target name="xmllint-plugins"
+   description="Run xmllint on plugin xml files" >
+    <echo message="Checking plugin .xml files"/>
+    <apply executable="xmllint" dir="${basedir}"
+           failonerror="true"
+           failifexecutionfails="false"
+           resultproperty="xmllint.result"
+           relative="true"
+           parallel="true">
+      <arg value="--noout"/>
+      <fileset dir="${basedir}" includes="plugins/**/*.xml"/>
     </apply>
   </target>
 

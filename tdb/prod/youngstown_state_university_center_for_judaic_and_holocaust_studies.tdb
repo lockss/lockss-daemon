@@ -16,11 +16,13 @@
     >
 
     param[journal_dir] = journal_of_jewish_identities
+    attr[journal_id] = jji
 
     au < ready ; 2008 ; Journal of Jewish Identities Issue 1 ; 1 >
     au < ready ; 2009 ; Journal of Jewish Identities Issue 2 ; 2 >
     au < ready ; 2010 ; Journal of Jewish Identities Issue 3 ; 3 >
     au < ready ; 2011 ; Journal of Jewish Identities Issue 4 ; 4 >
+    au < manifest ; 2012 ; Journal of Jewish Identities Issue 5 ; 5 >
 
   }
 

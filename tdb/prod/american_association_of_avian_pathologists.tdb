@@ -13,17 +13,40 @@
     >
 
     {
-      implicit < status ; year ; name ; param[volume] >
+    
       plugin = org.lockss.plugin.bioone.BioOnePlugin
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0005-2086
   
-      au < superseded ; 2002 ; Avian Diseases Volume 46 ; 46 >
-      au < superseded ; 2003 ; Avian Diseases Volume 47 ; 47 >
-      au < superseded ; 2004 ; Avian Diseases Volume 48 ; 48 >
-      au < superseded ; 2005 ; Avian Diseases Volume 49 ; 49 >
-      au < superseded ; 2006 ; Avian Diseases Volume 50 ; 50 >
-      au < superseded ; 2007 ; Avian Diseases Volume 51 ; 51 >
+      au < down ; 2002 ; Avian Diseases Volume 46 ; 46 >
+      au < down ; 2003 ; Avian Diseases Volume 47 ; 47 >
+      au < down ; 2004 ; Avian Diseases Volume 48 ; 48 >
+      au < down ; 2005 ; Avian Diseases Volume 49 ; 49 >
+      au < down ; 2006 ; Avian Diseases Volume 50 ; 50 >
+      au < down ; 2007 ; Avian Diseases Volume 51 ; 51 >
+      
+    }
+
+    {
+    
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = avdi
+  
+      au < doNotProcess ; 2002 ; Avian Diseases Volume 46 ; 46 >
+      au < doNotProcess ; 2003 ; Avian Diseases Volume 47 ; 47 >
+      au < doNotProcess ; 2004 ; Avian Diseases Volume 48 ; 48 >
+      au < doNotProcess ; 2005 ; Avian Diseases Volume 49 ; 49 >
+      au < doNotProcess ; 2006 ; Avian Diseases Volume 50 ; 50 >
+      au < doNotProcess ; 2007 ; Avian Diseases Volume 51 ; 51 >
+      au < testing ; 2008 ; Avian Diseases Volume 52 ; 52 >
+      au < testing ; 2009 ; Avian Diseases Volume 53 ; 53 >
+      au < testing ; 2010 ; Avian Diseases Volume 54 ; 54 >
+      au < testing ; 2011 ; Avian Diseases Volume 55 ; 55 >
+      au < testing ; 2012 ; Avian Diseases Volume 56 ; 56 >
+
     }
 
   }
@@ -36,19 +59,32 @@
     >
 
     {
+    
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1933-5334
   
-      au < superseded ; 2006 ; Avian Diseases Digest Volume 1 ; 1 >
-      au < superseded ; 2007 ; Avian Diseases Digest Volume 2 ; 2 >
+      au < down ; 2006 ; Avian Diseases Digest Volume 1 ; 1 >
+      au < down ; 2007 ; Avian Diseases Digest Volume 2 ; 2 >
+      
     }
 
     {
-
-comment[0] = Atypon AUs
-
+    
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = addi
+  
+      au < doNotProcess ; 2006 ; Avian Diseases Digest Volume 1 ; 1 >
+      au < doNotProcess ; 2007 ; Avian Diseases Digest Volume 2 ; 2 >
+      au < testing ; 2008 ; Avian Diseases Digest Volume 3 ; 3 >
+      au < testing ; 2009 ; Avian Diseases Digest Volume 4 ; 4 >
+      au < testing ; 2010 ; Avian Diseases Digest Volume 5 ; 5 >
+      au < testing ; 2011 ; Avian Diseases Digest Volume 6 ; 6 >
+      au < testing ; 2012 ; Avian Diseases Digest Volume 7 ; 7 >
+      
     }
 
   }

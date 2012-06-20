@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin</string>
   </entry>
@@ -9,28 +13,28 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>56</string>
+    <string>66</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-	<string>3</string>
+	    <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
-	<string>2</string>
+	    <string>4</string>
       </entry>
       <entry>
         <string>Metadata</string>
-  <string>2</string>
+        <string>5</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.48.0</string>
+    <string>1.52.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -81,7 +85,7 @@
 	  	<string>au_article</string>
 	  	<map>
 	  		<entry>
-	  			<string>pdf+html</string>
+	  			<string>pdf+html;*</string>
 			    <string>&quot;%scontent/%s/%s/%s.full.pdf+html&quot;, base_url, volume_name, issue, article</string>
 	  		</entry>
 	  		<entry>
@@ -89,7 +93,7 @@
 			    <string>&quot;%scontent/%s/%s/%s.full.pdf&quot;, base_url, volume_name, issue, article</string>
 	  		</entry>
 	  		<entry>
-	  			<string>html;*</string>
+	  			<string>html</string>
 			    <string>&quot;%scontent/%s/%s/%s.full&quot;, base_url, volume_name, issue, article</string>
 	  		</entry>
 	  	</map>
@@ -106,17 +110,24 @@
       <string>1,&quot;^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%sclockss-manifest/vol_%s_manifest\.dtl$&quot;, base_url, volume_name</string>
+      <string>2,&quot;^%s.*\?tab=(metrics|related|responses)&quot;, base_url</string>
       <string>2,&quot;^%s(content|lookup/volpage)/%s/.*(cited-by|patientinform-links|related-urls)=yes&quot;, base_url, volume_name</string>
       <string>2,&quot;^%scontent/%s/.*/href/?$&quot;, base_url, volume_name</string>
       <string>2,&quot;^%slookup/volpage/%s(/[^/]+)?$&quot;, base_url, volume_name</string>
       <string>1,&quot;^%s(content|lookup/volpage)/%s(/|\.)&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scontent/vol%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%s[^?]*DC(Supplemental|[0-9])&quot;, base_url</string>
+      <string>2,&quot;^%shighwire/filestream/powerpoint/&quot;, base_url</string>
+      <string>1,&quot;^%shighwire/filestream/&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlwindow</string>
+    <string>org.lockss.plugin.highwire.HighWirePressContentTestingCrawlWindow</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -146,7 +157,7 @@
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.highwire.HighWirePressH20MetadataExtractorFactory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20ArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
@@ -165,29 +176,33 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>200</long>
+    <long>800</long>
   </entry>
   <entry>
     <string>au_mime_rate_limiter_map</string>
     <map>
       <entry>
 	<string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-	<string>1/2000</string>
+	<string>1/6000</string>
       </entry>
     </map>
   </entry>
-<!--
   <entry>
-    <string>application/pdf_fetch_rate_limit</string>
-    <string>1/2000</string>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+      <entry>
+        <string>au_mime_rate_limiter_map</string>
+        <map>
+          <entry>
+            <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+            <string>1/100</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
   </entry>
-  <entry>
-    <string>application/vnd.ms-powerpoint_fetch_rate_limit</string>
-    <string>1/2000</string>
-  </entry>
-  <entry>
-    <string>text/html_fetch_rate_limit</string>
-    <string>1/2000</string>
-  </entry>
--->
 </map>

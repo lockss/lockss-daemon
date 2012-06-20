@@ -1,5 +1,5 @@
 /*
- * $Id: HashBlock.java,v 1.8 2007-05-09 10:34:16 smorabito Exp $
+ * $Id: HashBlock.java,v 1.8.68.1 2012-06-20 00:03:10 nchondros Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.util.LockssSerializable;
  * iterated over or returned as an array.  This array is sorted and iterated
  * in the order <i>newest</i> to <i>oldest</i> version. */
 public class HashBlock implements LockssSerializable {
+
   String url;
   TreeSet versions;
   long totalFilteredBytes = 0;
@@ -75,6 +76,36 @@ public class HashBlock implements LockssSerializable {
   
   public int size() {
     return versions.size();
+  }
+
+  /**
+   * @return the versions, sorted by the comparator.
+   */
+  Version[] sortedVersions(Comparator<HashBlock.Version> comparator) {
+    HashBlock.Version[] versions = getVersions();
+    Arrays.sort(versions, comparator);
+    return versions;
+  }
+
+  /**
+   * Count the partitions of the versions, relative to the comparator.
+   *
+   * @param The comparator used to partition the versions.
+   * @return the number of unique values represented among the
+   * versions, as determined by the comparator.
+   */
+  public int countUniqueVersions(Comparator<HashBlock.Version> comparator) {
+    HashBlock.Version[] versions = sortedVersions(comparator);
+    int count = 0;
+    if (versions.length > 0) {
+      count = 1;
+      for (int idx = 1; idx < versions.length; idx++) {
+	if (comparator.compare(versions[idx-1], versions[idx]) != 0) {
+	  count++;
+	}
+      }
+    }
+    return count;
   }
   
   public long getTotalFilteredBytes() {

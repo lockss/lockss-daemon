@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.33 2011-08-17 21:04:13 mellen22 Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.33.6.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -47,6 +47,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+    	// Publisher adding meta tags often
+        new TagNameFilter("head"),
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "header-ac-elements"),
@@ -54,6 +56,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("ul", "class", "banner-ads"),
         HtmlNodeFilters.tagWithAttribute("ul", "class", "tower-ads"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ads"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ads-ft"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-current-issue"),
         HtmlNodeFilters.tagWithAttribute("p", "class", "copyright"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "copyright"),
@@ -123,7 +126,12 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "rel-relevant-article"), 
         // For BMJ variable poll 
         HtmlNodeFilters.tagWithAttribute("div", "id", "polldaddy-bottom"),
-        
+        // For adclicks leaderboard-ads leaderboard-ads-two
+        HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ads leaderboard-ads-two"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-article-page-promo-column"),
+        HtmlNodeFilters.tagWithAttribute("form", "id", "bmj-advanced-search-channel-form"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "status"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "AdSkyscraper"),
     };
     
     return new HtmlFilterInputStream(in,

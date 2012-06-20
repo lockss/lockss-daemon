@@ -9,9 +9,10 @@ $(dirname "$0")/pylorus.py $*
 #sleep 5
 
 # Use mailx to send a notification.
+folder=`echo $PWD | sed 's/.*\///'`
 if [ "x$PYLORUS_MAIL" != "x" ]
 then 
-echo "$USER: Job: $* on $HOSTNAME at $PWD" | mailx -s "Job Complete" ${PYLORUS_MAIL}
+echo "$USER: Job: $* on $HOSTNAME at $PWD" | mailx -s "Job Complete $folder" ${PYLORUS_MAIL}
 fi
 exit 0
 

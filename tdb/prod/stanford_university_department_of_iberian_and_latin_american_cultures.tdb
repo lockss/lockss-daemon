@@ -18,6 +18,7 @@
     >
 
     param[journal_dir] = nuevo_texto_critico
+    attr[journal_id] = ntc
 
     au < ready ; 2008 ; Nuevo Texto Crítico Volume 21 ; 21 >
     au < ready ; 2009 ; Nuevo Texto Crítico Volume 22 ; 22 >

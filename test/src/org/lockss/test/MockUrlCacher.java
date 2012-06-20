@@ -1,10 +1,10 @@
 /*
- * $Id: MockUrlCacher.java,v 1.38 2011-11-08 20:22:26 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.38.2.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +38,7 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.crawler.PermissionMap;
+import org.lockss.crawler.*;
 
 /**
  * This is a mock version of <code>UrlCacher</code> used for testing
@@ -61,6 +61,10 @@ public class MockUrlCacher implements UrlCacher {
   private IPAddr localAddr = null;
   private BitSet fetchFlags = new BitSet();
   private PermissionMapSource permissionMapSource;
+  private String previousContentType;
+  private byte[] storedContent;
+  private CrawlRateLimiter crl;
+  private RedirectScheme redirScheme;
 
   public MockUrlCacher(String url, MockArchivalUnit au){
     this.url = url;
@@ -123,10 +127,31 @@ public class MockUrlCacher implements UrlCacher {
     return this.fetchFlags;
   }
 
+  public void setPreviousContentType(String previousContentType) {
+    this.previousContentType = previousContentType;
+  }
+
+  public String getPreviousContentType() {
+    return previousContentType;
+  }
+
+  public void setCrawlRateLimiter(CrawlRateLimiter crl) {
+    this.crl = crl;
+  }
+
+  public CrawlRateLimiter getCrawlRateLimiter() {
+    return crl;
+  }
+
   public void setRequestProperty(String key, String value) {
   }
 
   public void setRedirectScheme(RedirectScheme scheme) {
+    redirScheme = scheme;
+  }
+
+  public RedirectScheme getRedirectScheme() {
+    return redirScheme;
   }
 
   public void setWatchdog(LockssWatchdog wdog) {
@@ -156,6 +181,11 @@ public class MockUrlCacher implements UrlCacher {
 	cus.addCachedUrl(url);
       }
     }
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//     logger.critical("Storing from " + input);
+//     long bytes = StreamUtil.copy(input, baos);
+//     logger.debug3("Stored " + bytes + " bytes");
+//     storedContent = baos.toByteArray();
   }
 
   public void setCachingException(IOException e, int numTimesToThrow) {
@@ -230,6 +260,7 @@ public class MockUrlCacher implements UrlCacher {
     if (executed) {
       throw new IllegalStateException("getUncachedInputStream() called twice");
     }
+    pauseBeforeFetch();
     executed = true;
     throwExceptionIfSet();
     if (uncachedIS == null && cu != null) {
@@ -240,6 +271,12 @@ public class MockUrlCacher implements UrlCacher {
 
   public CIProperties getUncachedProperties() {
     return uncachedProp;
+  }
+
+  private void pauseBeforeFetch() {
+    if (crl != null) {
+      crl.pauseBeforeFetch(url, previousContentType);
+    }
   }
 
   public void reset() {

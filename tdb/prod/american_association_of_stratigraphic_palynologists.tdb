@@ -18,14 +18,27 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0191-6122
   
-      au < superseded ; 2004 ; Palynology Volume 28 ; 28 >
-      au < superseded ; 2005 ; Palynology Volume 29 ; 29 >
-      au < superseded ; 2006 ; Palynology Volume 30 ; 30 >
+      au < down ; 2004 ; Palynology Volume 28 ; 28 >
+      au < down ; 2005 ; Palynology Volume 29 ; 29 >
+      au < down ; 2006 ; Palynology Volume 30 ; 30 >
     }
 
     {
 
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = paly
+
+      au < doNotProcess ; 2004 ; Palynology Volume 28 ; 28 >
+      au < doNotProcess ; 2005 ; Palynology Volume 29 ; 29 >
+      au < doNotProcess ; 2006 ; Palynology Volume 30 ; 30 >
+      au < testing; 2007 ; Palynology Volume 31 ; 31 >
+      au < testing; 2008 ; Palynology Volume 32 ; 32 >
+      au < testing; 2009 ; Palynology Volume 33 ; 33 >
+      au < testing; 2010 ; Palynology Volume 34 ; 34 >
+      au < testing; 2011 ; Palynology Volume 35 ; 35 >
+      au < expected; 2012 ; Palynology Volume 36 ; 36 >
 
     }
 

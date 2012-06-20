@@ -9,11 +9,20 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>69</string>
+    <string>79</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>6</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.48.0</string>
+    <string>1.52.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -58,8 +67,21 @@
 	  </entry>
 	  <entry>
 	    <string>au_issue</string>
-	    <string>&quot;%scontent/vol%s/issue%s/&quot;, base_url, volume_name, issue</string>
+	    <string>&quot;%scontent/vol%s/issue%s&quot;, base_url, volume_name, issue</string>
 	  </entry>
+	  <entry>
+      <string>au_article</string>
+      <map>
+        <entry>
+          <string>pdf</string>
+          <string>&quot;%scgi/reprint/%s/%s/%s&quot;, base_url, volume_name, issue, article</string>
+        </entry>
+        <entry>
+          <string>html;*</string>
+          <string>&quot;%s/cgi/content/full/%s/%s/%s&quot;, base_url, volume_name, issue, article</string>
+        </entry>
+      </map>
+    </entry>
   	</map>
   </entry>    
   <entry>
@@ -79,6 +101,7 @@
       <string>1,&quot;^%s(this_week)/([^/]+;)?%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scgi/(content/full|data)/[^/]+/DC[0-9]*&quot;, base_url</string>
       <string>1,&quot;^%scontent/vol[^/]+/issue[^/]+/images/data/([^/]+/)?DC[0-9]*&quot;, base_url</string>
+      <string>1,&quot;^%sarticletopbar\.dtl&quot;, base_url</string>
     </list>
   </entry>
   <entry>
@@ -87,7 +110,7 @@
   </entry>
   <entry>
     <string>au_crawlwindow</string>
-    <string>org.lockss.plugin.highwire.HighWireCrawlWindow</string>
+    <string>org.lockss.plugin.highwire.HighWirePressCrawlWindow</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
@@ -107,6 +130,10 @@
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/javascript_link_rewriter_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireJavaScriptLinkRewriterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -130,10 +157,6 @@
     <string>key:HighWire</string>
   </entry>
   <entry>
-    <string>plugin_default_article_mime_type</string>
-    <string>text/html</string>
-  </entry>
-  <entry>
     <string>au_substance_url_pattern</string>
     <list>
       <string>&quot;^%scgi/content/full/([^/]+;)?%s/&quot;, base_url, volume_name</string>
@@ -142,29 +165,24 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>4000</long>
+    <long>6000</long>
   </entry>
   <entry>
     <string>au_mime_rate_limiter_map</string>
     <map>
       <entry>
-	<string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-	<string>1/3000</string>
+        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+        <string>1/6000</string>
       </entry>
     </map>
   </entry>
-<!--
   <entry>
-    <string>application/pdf_fetch_rate_limit</string>
-    <string>1/3000</string>
+    <string>content-testing_override</string>
+    <map>
+      <entry>
+        <string>au_crawlwindow</string>
+        <string>org.lockss.plugin.highwire.HighWirePressContentTestingCrawlWindow</string>
+      </entry>
+    </map>
   </entry>
-  <entry>
-    <string>application/vnd.ms-powerpoint_fetch_rate_limit</string>
-    <string>1/3000</string>
-  </entry>
-  <entry>
-    <string>text/html_fetch_rate_limit</string>
-    <string>1/3000</string>
-  </entry>
--->
 </map>

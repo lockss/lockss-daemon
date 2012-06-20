@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataUtil.java,v 1.10 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: TestMetadataUtil.java,v 1.10.2.1 2012-06-20 00:02:56 nchondros Exp $
  */
 
 /*
@@ -64,16 +64,17 @@ public class TestMetadataUtil extends LockssTestCase {
   }
 
   static Set<Locale> testLocales =
-    SetUtil.set(new Locale("aa"),
-		new Locale("bb"),
-		new Locale("bb", "XX"),
-		new Locale("cc"),
-		new Locale("cc", "XX"),
-		new Locale("cc", "YY"),
-		new Locale("cc", "XX", "V1"),
-
-		new Locale("dd", "WW"),
-		new Locale("ee", "WW", "V3")
+    SetUtil.set(
+      new Locale("aa"),
+  		new Locale("bb"),
+  		new Locale("bb", "XX"),
+  		new Locale("cc"),
+  		new Locale("cc", "XX"),
+  		new Locale("cc", "YY"),
+  		new Locale("cc", "XX", "V1"),
+  
+  		new Locale("dd", "WW"),
+  		new Locale("ee", "WW", "V3")
 		);
 		  
 
@@ -250,76 +251,134 @@ public class TestMetadataUtil extends LockssTestCase {
 
   public void testISBN() {
     // valid with checksum calculations
-    for(int i=0; i<validISBN10s.length;i++){
-      assertTrue(MetadataUtil.isISBN(validISBN10s[i], true));
+    for(int i=0; i<validISBN10s.length;i++) {
+      assertTrue(MetadataUtil.isIsbn(validISBN10s[i], true));
     }
 
     // malformed ISBN
     for(int i=0; i<malformedISBNs.length;i++){
-      assertFalse(MetadataUtil.isISBN(malformedISBNs[i], false));
+      assertFalse(MetadataUtil.isIsbn(malformedISBNs[i], false));
     }
 
     // invalid with checksum calculations
     for(int i=0; i<invalidISBN10s.length;i++){
-      assertFalse(MetadataUtil.isISBN(invalidISBN10s[i], true));
+      assertFalse(MetadataUtil.isIsbn(invalidISBN10s[i], true));
     }
 
     // valid ignoring checksum calculations
     for(int i=0; i<invalidISBN10s.length;i++){
-      assertTrue(MetadataUtil.isISBN(invalidISBN10s[i], false));
+      assertTrue(MetadataUtil.isIsbn(invalidISBN10s[i], false));
     }
 
     // valid with checksum calculations
     for(int i=0; i<validISBN13s.length;i++){
-      assertTrue(MetadataUtil.isISBN(validISBN13s[i], true));
+      assertTrue(MetadataUtil.isIsbn(validISBN13s[i], true));
     }
 
     // invalid with checksum calculations
     for(int i=0; i<invalidISBN13s.length;i++){
-      assertFalse(MetadataUtil.isISBN(invalidISBN13s[i], true));
+      assertFalse(MetadataUtil.isIsbn(invalidISBN13s[i], true));
     }
 
     // valid ignoring checksum calculation
     for(int i=0; i<invalidISBN13s.length;i++){
-      assertTrue(MetadataUtil.isISBN(invalidISBN13s[i], false));
+      assertTrue(MetadataUtil.isIsbn(invalidISBN13s[i], false));
     }
+    
+    // Knuth vol 4A 1st edition
+    
+    // test ISBN conversions with correct check digit
+    assertEquals("0201038048", MetadataUtil.toIsbn10("978-0-201-03804-0"));
+    assertEquals("0201038048", MetadataUtil.toIsbn10("9780201038040"));
+    assertEquals("0201038048", MetadataUtil.toIsbn10("0-201-03804-8"));
+    assertEquals("0201038048", MetadataUtil.toIsbn10("0201038048"));
+
+    assertEquals("9780201038040", MetadataUtil.toIsbn13("978-0-201-03804-0"));
+    assertEquals("9780201038040", MetadataUtil.toIsbn13("9780201038040"));
+    assertEquals("9780201038040", MetadataUtil.toIsbn13("0-201-03804-8"));
+    assertEquals("9780201038040", MetadataUtil.toIsbn13("0201038048"));
+
+    
+    // test ISBN conversions with incorrect check digit
+    assertEquals("0201038048", MetadataUtil.toIsbn10("978-0-201-03804-7"));
+    assertEquals("0201038048", MetadataUtil.toIsbn10("9780201038047"));
+    assertEquals("0201038048", MetadataUtil.toIsbn10("0-201-03804-X"));
+    assertEquals("0201038048", MetadataUtil.toIsbn10("020103804X"));
+    
+    assertEquals("9780201038040", MetadataUtil.toIsbn13("978-0-201-03804-7"));
+    assertEquals("9780201038040", MetadataUtil.toIsbn13("9780201038047"));
+    assertEquals("9780201038040", MetadataUtil.toIsbn13("0-201-03804-X"));
+    assertEquals("9780201038040", MetadataUtil.toIsbn13("020103804X"));
+    
+    // test ISBN conversions with invalid check digit
+    assertNull(MetadataUtil.toIsbn10("978-0-201-03804-X"));
+    assertNull(MetadataUtil.toIsbn10("978020103804X"));
+    assertNull(MetadataUtil.toIsbn10("0-201-03804-Z"));
+    assertNull(MetadataUtil.toIsbn10("020103804Z"));
+  
+    assertNull(MetadataUtil.toIsbn13("978-0-201-03804-X"));
+    assertNull(MetadataUtil.toIsbn13("978020103804X"));
+    assertNull(MetadataUtil.toIsbn13("0-201-03804-Z"));
+    assertNull(MetadataUtil.toIsbn13("020103804Z"));
+  
+    // test ISBN conversions with invalid input issn
+    assertNull(MetadataUtil.toIsbn10("978-X-201-03804-0"));
+    assertNull(MetadataUtil.toIsbn10("9780X01038040"));
+    assertNull(MetadataUtil.toIsbn10("0-2X1-03804-8"));
+    assertNull(MetadataUtil.toIsbn10("02X1038048"));
+    assertNull(MetadataUtil.toIsbn10("xyzzy"));
+
+    assertNull(MetadataUtil.toIsbn13("978-X-201-03804-0"));
+    assertNull(MetadataUtil.toIsbn13("9780X01038040"));
+    assertNull(MetadataUtil.toIsbn13("0-2X1-03804-8"));
+    assertNull(MetadataUtil.toIsbn13("02X1038048"));
+    assertNull(MetadataUtil.toIsbn13("xyzzy"));
+    
+    // test ISBN formatting
+    assertEquals("978-0-201-03804-0", MetadataUtil.formatIsbn("9780201038040"));
+    assertEquals("0-201-03804-8", MetadataUtil.formatIsbn("0201038048"));
+    assertEquals("xyzzy", MetadataUtil.formatIsbn("xyzzy"));
   }
 
   public void testISSN() {
     for(int i=0; i<validISSNS.length;i++){
       String validIssn = validISSNS[i];
-      assertTrue(MetadataUtil.isISSN(validIssn));
-      assertEquals(validIssn, MetadataUtil.validateISSN(validIssn));
+      assertTrue(MetadataUtil.isIssn(validIssn));
+      assertEquals(validIssn, MetadataUtil.validateIssn(validIssn));
     }
 
     for(int j=0; j<malformedISSNS.length;j++){
       String malformedIssn = malformedISSNS[j];
-      assertFalse(MetadataUtil.isISSN(malformedIssn));
-      assertEquals(null, MetadataUtil.validateISSN(malformedIssn));
+      assertFalse(MetadataUtil.isIssn(malformedIssn));
+      assertEquals(null, MetadataUtil.validateIssn(malformedIssn));
     }
 
     // invalid with checksum calculations
     for(int j=0; j<invalidISSNS.length;j++){
       String invalidIssn = invalidISSNS[j];
-      assertFalse(MetadataUtil.isISSN(invalidISSNS[j], true));
-      assertEquals(null, MetadataUtil.validateISSN(invalidIssn, true));
+      assertFalse(MetadataUtil.isIssn(invalidISSNS[j], true));
+      assertEquals(null, MetadataUtil.validateIssn(invalidIssn, true));
     }
 
     // valid ignoring checksum calculations
     for(int j=0; j<invalidISSNS.length;j++){
       String invalidIssn = invalidISSNS[j];
-      assertTrue(MetadataUtil.isISSN(invalidIssn, false));
-      assertEquals(invalidIssn, MetadataUtil.validateISSN(invalidIssn, false));
+      assertTrue(MetadataUtil.isIssn(invalidIssn, false));
+      assertEquals(invalidIssn, MetadataUtil.validateIssn(invalidIssn, false));
     }
+    
+    // test ISSN formatting functions
+    assertEquals("1234-5678", MetadataUtil.formatIssn("12345678"));
+    assertEquals("xyzzy", MetadataUtil.formatIssn("xyzzy"));
   }
 
   public void testDOI() {
     for(int i=0; i<validDOIS.length;i++){
-      assertTrue(MetadataUtil.isDOI(URLDecoder.decode(validDOIS[i])));
+      assertTrue(MetadataUtil.isDoi(URLDecoder.decode(validDOIS[i])));
     }
 
     for(int j=0; j<invalidDOIS.length;j++){
-      assertFalse(MetadataUtil.isDOI(invalidDOIS[j]));
+      assertFalse(MetadataUtil.isDoi(invalidDOIS[j]));
     }
   }
 }

@@ -11,23 +11,31 @@
       eissn = 1937-2795 ;
       issnl = 0026-2803
     >
-
+    comment[defunct] = last published in 2005
     {
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0026-2803
+      
+      comment[AUs048] = 048 was tested and released normally, accidentally deleted and reinstated.
+      comment[AUs48] = 48 was accidentally created on 7/8/2011.
   
-      au < superseded ; 2002 ; Micropaleontology Volume 48 ; 48 >
-      au < doNotProcess ; 2003 ; Micropaleontology Volume 49 ; 49 >
-      au < doNotProcess ; 2004 ; Micropaleontology Volume 50 ; 50 >
-      au < doNotProcess ; 2005 ; Micropaleontology Volume 51 ; 51 >
+      au < down ; 2002 ; Micropaleontology Volume 048 ; 048 >
+      au < down ; 2002 ; Micropaleontology Volume 48 ; 48 >
+
     }
 
     {
-
-	  comment[0] = Atypon AUs
-
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = mipa
+  
+      au < doNotProcess ; 2002 ; Micropaleontology Volume 48 ; 48 >
+      au < testing ; 2003 ; Micropaleontology Volume 49 ; 49 >
+      au < testing ; 2004 ; Micropaleontology Volume 50 ; 50 >
+      au < testing ; 2005 ; Micropaleontology Volume 51 ; 51 >
     }
 
   }

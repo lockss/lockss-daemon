@@ -1,5 +1,5 @@
 /*
- * $Id: LoginForm.java,v 1.2 2009-06-13 09:10:57 tlipkis Exp $
+ * $Id: LoginForm.java,v 1.2.34.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
@@ -121,8 +121,7 @@ public class LoginForm extends LockssServlet {
     }
     page.add(makeForm());
     page.add("<br>");
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   private Element makeForm() {

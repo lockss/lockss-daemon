@@ -18,19 +18,28 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1082-6467
   
-      au < doNotProcess ; 2001 ; Journal of Orthoptera Research Volume 10 ; 10 >
-      au < doNotProcess ; 2002 ; Journal of Orthoptera Research Volume 11 ; 11 >
-      au < superseded ; 2003 ; Journal of Orthoptera Research Volume 12 ; 012 >
-      au < doNotProcess ; 2004 ; Journal of Orthoptera Research Volume 13 ; 13 >
-      au < doNotProcess ; 2005 ; Journal of Orthoptera Research Volume 14 ; 14 >
-      au < doNotProcess ; 2006 ; Journal of Orthoptera Research Volume 15 ; 15 >
-      au < doNotProcess ; 2007 ; Journal of Orthoptera Research Volume 16 ; 16 >
+      au < down ; 2003 ; Journal of Orthoptera Research Volume 12 ; 012 >
+      
     }
 
     {
-
-	  comment[0] = Atypon AUs
-
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = orth
+  
+      au < manifest ; 2001 ; Journal of Orthoptera Research Volume 10 ; 10 >
+      au < manifest ; 2002 ; Journal of Orthoptera Research Volume 11 ; 11 >
+      au < doNotProcess ; 2003 ; Journal of Orthoptera Research Volume 12 ; 12 >
+      au < manifest ; 2004 ; Journal of Orthoptera Research Volume 13 ; 13 >
+      au < manifest ; 2005 ; Journal of Orthoptera Research Volume 14 ; 14 >
+      au < manifest ; 2006 ; Journal of Orthoptera Research Volume 15 ; 15 >
+      au < manifest ; 2007 ; Journal of Orthoptera Research Volume 16 ; 16 >
+      au < manifest ; 2008 ; Journal of Orthoptera Research Volume 17 ; 17 >
+      au < manifest ; 2009 ; Journal of Orthoptera Research Volume 18 ; 18 >
+      au < manifest ; 2010 ; Journal of Orthoptera Research Volume 19 ; 19 >
+      au < manifest ; 2011 ; Journal of Orthoptera Research Volume 20 ; 20 >
+      au < manifest ; 2012 ; Journal of Orthoptera Research Volume 21 ; 21 >
     }
 
   }

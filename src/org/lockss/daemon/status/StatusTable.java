@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.57 2011-09-25 04:16:13 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.57.4.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -361,7 +361,7 @@ public class StatusTable {
   }
 
   public String toString() {
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     sb.append("[StatusTable:");
     sb.append(name);
     sb.append(", ");
@@ -395,14 +395,27 @@ public class StatusTable {
     private String color = null;
     private String footnote = null;
     private boolean bold = false;
+    private String displayStr;  // if present, human-friendly display string
 
     /** Create a DisplayedValue with the specified value.  Any
-     * non-EmbeddedValue value is legal. */
+     * non-EmbeddedValue value is legal.
+     * @param value the wrapped value
+     */
     public DisplayedValue(Object value) {
       if (value instanceof EmbeddedValue) {
 	throw new IllegalArgumentException("Value of a DisplayedValue can't be an EmbeddedValue");
       }
       this.value = value;
+    }
+
+    /** Create a DisplayedValue with the specified value and display value.
+     * Any non-EmbeddedValue value is legal. 
+     * @param value the wrapped value
+     * @param displayString human-friendly display value
+     */
+    public DisplayedValue(Object value, String displayString) {
+      this(value);
+      this.displayStr = displayString;
     }
 
     /** Get the value */
@@ -421,6 +434,24 @@ public class StatusTable {
     /** Get the color */
     public String getColor() {
       return color;
+    }
+
+    /** Set the human-friendly display string.
+     * @param displayString human-friendly display string
+     */
+    public DisplayedValue setDisplayString(String displayString) {
+      this.displayStr = displayString;
+      return this;
+    }
+
+    /** Get the human-friendly display string, if any */
+    public String getDisplayString() {
+      return displayStr;
+    }
+
+    /** Return true if a human-friendly display string has been supplied */
+    public boolean hasDisplayString() {
+      return displayStr != null;
     }
 
     /** Set bold.
@@ -449,7 +480,30 @@ public class StatusTable {
       return footnote;
     }
 
+    public String toString() {
+      StringBuilder sb = new StringBuilder();
+      sb.append("[StatusTable.DisplayedValue: ");
+      sb.append(value);
+      if (hasDisplayString()) {
+	sb.append(", dv: ");
+	sb.append(getDisplayString());
+      }
+      if (getColor() != null) {
+	sb.append(", color: ");
+	sb.append(getColor());
+      }	
+      if (getBold()) {
+	sb.append(", bold");
+      }	
+      if (getFootnote() != null) {
+	sb.append(", foot: ");
+	sb.append(getFootnote());
+      }	
+      return sb.toString();
+    }
+
   }
+
   /**
    * Object which refers to another table
    */
@@ -548,8 +602,8 @@ public class StatusTable {
     }
 
     public String toString() {
-      StringBuffer sb = new StringBuffer();
-      sb.append("[StatusTable.Reference:");
+      StringBuilder sb = new StringBuilder();
+      sb.append("[StatusTable.Reference: ");
       sb.append(value);
       sb.append(", ");
       if (peerId != null) {
@@ -624,8 +678,8 @@ public class StatusTable {
     }
 
     public String toString() {
-      StringBuffer sb = new StringBuffer();
-      sb.append("[StatusTable.SrvLink:");
+      StringBuilder sb = new StringBuilder();
+      sb.append("[StatusTable.SrvLink: ");
       sb.append(value);
       sb.append(", ");
       sb.append(srvDescr.getPath());
@@ -883,9 +937,9 @@ public class StatusTable {
     static int compareHandlingNulls(Comparable val1,
 					    Comparable val2) {
       int returnVal = 0;
-      if (val1 == null) {
-	returnVal = val2 == null ? 0 : -1;
-      } else if (val2 == null) {
+      if (isNull(val1)) {
+	returnVal = isNull(val2) ? 0 : -1;
+      } else if (isNull(val2)) {
 	returnVal = 1;
       } else {
 	returnVal = val1.compareTo(val2);
@@ -893,8 +947,12 @@ public class StatusTable {
       return returnVal;
     }
 
+    static boolean isNull(Object obj) {
+      return obj == null || obj == NO_VALUE;
+    }
+
     public String toString() {
-      StringBuffer sb = new StringBuffer();
+      StringBuilder sb = new StringBuilder();
       sb.append("[SortRule: ");
       sb.append(columnName);
       sb.append(sortAscending ? ":A" : "D:");

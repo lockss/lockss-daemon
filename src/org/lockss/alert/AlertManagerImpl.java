@@ -1,8 +1,8 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.19 2010-05-04 03:36:36 tlipkis Exp $
+ * $Id: AlertManagerImpl.java,v 1.19.20.1 2012-06-20 00:03:05 nchondros Exp $
  *
 
- Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,6 +56,9 @@ public class AlertManagerImpl
   /** List of names of alerts that should be ignored if raised */
   static final String PARAM_IGNORED_ALERTS = PREFIX + "ignoredAlerts";
 
+  /** List of names of alerts that should take effect if raised */
+  static final String PARAM_ENABLED_ALERTS = PREFIX + "enabledAlerts";
+
   static final String DELAY_PREFIX = PREFIX + "notify.delay";
 
   static final String PARAM_DELAY_INITIAL = DELAY_PREFIX + "initial";
@@ -80,6 +83,7 @@ public class AlertManagerImpl
   private AlertConfig alertConfig;
   private boolean alertsEnabled = DEFAULT_ALERTS_ENABLED;
   private Set ignoredAlerts;
+  private Set enabledAlerts;
 
   private long initialDelay = DEFAULT_DELAY_INITIAL;
   private long incrDelay = DEFAULT_DELAY_INCR;
@@ -119,7 +123,8 @@ public class AlertManagerImpl
 					 DEFAULT_DELAY_INCR);
       maxDelay = config.getTimeInterval(PARAM_DELAY_MAX,
 					DEFAULT_DELAY_MAX);
-      ignoredAlerts = SetUtil.theSet(config.getList(PARAM_IGNORED_ALERTS));
+      ignoredAlerts = setOrNull(config.getList(PARAM_IGNORED_ALERTS));
+      enabledAlerts = setOrNull(config.getList(PARAM_ENABLED_ALERTS));
 
       if (changedKeys.contains(PARAM_ALERT_ALL_EMAIL)
 	  || changedKeys.contains(PARAM_CONFIG)) {
@@ -135,6 +140,13 @@ public class AlertManagerImpl
 	}
       }
     }
+  }
+
+  Set setOrNull(Collection coll) {
+    if (coll == null || coll.isEmpty()) {
+      return null;
+    }
+    return SetUtil.theSet(coll);
   }
 
   void loadConfig(Configuration config) {
@@ -291,7 +303,14 @@ public class AlertManagerImpl
       log.debug3("alerts disabled");
       return;
     }
-    if (ignoredAlerts != null && ignoredAlerts.contains(alert.getName())) {
+    boolean doRaise = false;
+    if (enabledAlerts != null) {
+      doRaise = enabledAlerts.contains(alert.getName());
+    } else {
+      doRaise =
+	(ignoredAlerts == null) || !ignoredAlerts.contains(alert.getName());
+    }
+    if (!doRaise) {
       if (log.isDebug3()) log.debug3("Raised but ignored: " + alert);
     } else {
       if (log.isDebug3()) log.debug3("Raised " + alert);

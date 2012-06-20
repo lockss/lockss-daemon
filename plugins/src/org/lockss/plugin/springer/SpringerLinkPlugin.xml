@@ -5,18 +5,22 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-	<string>5</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Substance</string>
-	<string>2</string>
+        <string>3</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -65,7 +69,7 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%scontent/%s/%s/&quot;, base_url, journal_issn, volume_name</string>
+    <string>&quot;%scontent/%s/%s&quot;, base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -76,7 +80,7 @@
     </entry>
     <entry>
       <string>au_volume</string>
-	  <string>&quot;%scontent/%s/%s/&quot;, base_url, journal_issn, volume_name</string>
+	  <string>&quot;%scontent/%s/%s&quot;, base_url, journal_issn, volume_name</string>
     </entry>
     <entry>
       <string>au_issue</string>
@@ -87,9 +91,11 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>2,&quot;^%s.*\?target=save$&quot;, base_url</string>
+      <string>2,&quot;^%sfulltext-image\.asp\?&quot;, base_url</string>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>2,&quot;^%s.*\?(target=(export|print|save)|MUD=MP)&quot;, base_url</string>
+      <string>1,&quot;^%scontent/%s/%s$&quot;, base_url, journal_issn, volume_name</string>
       <string>1,&quot;^%scontent/%s/%s/&quot;, base_url, journal_issn, volume_name</string>
       <string>2,&quot;^%scontent/[A-Za-z0-9]{16}/(export-citation|referrers)/&quot;, base_url</string>
       <string>1,&quot;^%scontent/[A-Za-z0-9]{16}/&quot;, base_url</string>
@@ -102,6 +108,10 @@
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:Springer</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -124,7 +134,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%scontent/[A-Za-z0-9]{16}/fulltext\.(html|pdf)$&quot;, base_url, volume_name</string>
+      <string>&quot;^%scontent/[A-Za-z0-9]{16}/fulltext\.(html|pdf)$&quot;, base_url</string>
     </list>
   </entry>
 </map>

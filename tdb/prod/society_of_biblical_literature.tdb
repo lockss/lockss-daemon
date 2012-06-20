@@ -18,8 +18,10 @@
       >
 
       param[journal_dir] = journal_of_biblical_literature
+      attr[journal_id] = jbl
 
       au < ready ; 2011 ; Journal of Biblical Literature Volume 130 ; 130 >
+      au < manifest ; 2012 ; Journal of Biblical Literature Volume 131 ; 131 >
 
     }
     

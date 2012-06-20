@@ -10,19 +10,32 @@
       issn = 0007-196X ;
       issnl = 0007-196X
     >
-
+    comment[defunct] = Last issue published was 2007
     {
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0007-196X
+      
+      au < down ; 2002 ; Brittonia Volume 54 ; 54 >
+      au < down ; 2003 ; Brittonia Volume 55 ; 55 >
+      au < down ; 2004 ; Brittonia Volume 56 ; 056 >
+      au < down ; 2005 ; Brittonia Volume 57 ; 57 >
+      au < down ; 2006 ; Brittonia Volume 58 ; 58 >
+      au < down ; 2007 ; Brittonia Volume 59 ; 59 >
+    }
+    {
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = brit
   
-      au < superseded ; 2002 ; Brittonia Volume 54 ; 54 >
-      au < superseded ; 2003 ; Brittonia Volume 55 ; 55 >
-      au < superseded ; 2004 ; Brittonia Volume 56 ; 056 >
-      au < superseded ; 2005 ; Brittonia Volume 57 ; 57 >
-      au < superseded ; 2006 ; Brittonia Volume 58 ; 58 >
-      au < superseded ; 2007 ; Brittonia Volume 59 ; 59 >
+      au < doNotProcess ; 2002 ; Brittonia Volume 54 ; 54 >
+      au < doNotProcess ; 2003 ; Brittonia Volume 55 ; 55 >
+      au < doNotProcess ; 2004 ; Brittonia Volume 56 ; 56 >
+      au < doNotProcess ; 2005 ; Brittonia Volume 57 ; 57 >
+      au < doNotProcess ; 2006 ; Brittonia Volume 58 ; 58 >
+      au < doNotProcess ; 2007 ; Brittonia Volume 59 ; 59 >
     }
 
   }
@@ -34,19 +47,32 @@
       issn = 0013-0001 ;
       issnl = 0013-0001
     >
-
+    comment[defunct] = Last issue published was 2007
     {
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0013-0001
   
-      au < superseded ; 2002 ; Economic Botany Volume 56 ; 56 >
-      au < superseded ; 2003 ; Economic Botany Volume 57 ; 57 >
-      au < superseded ; 2004 ; Economic Botany Volume 58 ; 058 >
-      au < superseded ; 2005 ; Economic Botany Volume 59 ; 59 >
-      au < superseded ; 2006 ; Economic Botany Volume 60 ; 60 >
-      au < superseded ; 2007 ; Economic Botany Volume 61 ; 61 >
+      au < down ; 2002 ; Economic Botany Volume 56 ; 56 >
+      au < down ; 2003 ; Economic Botany Volume 57 ; 57 >
+      au < down ; 2004 ; Economic Botany Volume 58 ; 058 >
+      au < down ; 2005 ; Economic Botany Volume 59 ; 59 >
+      au < down ; 2006 ; Economic Botany Volume 60 ; 60 >
+      au < down ; 2007 ; Economic Botany Volume 61 ; 61 >
+    }
+    {
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = ebot
+  
+      au < doNotProcess ; 2002 ; Economic Botany Volume 56 ; 56 >
+      au < doNotProcess ; 2003 ; Economic Botany Volume 57 ; 57 >
+      au < doNotProcess ; 2004 ; Economic Botany Volume 58 ; 58 >
+      au < doNotProcess ; 2005 ; Economic Botany Volume 59 ; 59 >
+      au < doNotProcess ; 2006 ; Economic Botany Volume 60 ; 60 >
+      au < doNotProcess ; 2007 ; Economic Botany Volume 61 ; 61 >
     }
 
   }
@@ -56,28 +82,37 @@
     title <
       name = The Botanical Review ;
       issn = 0006-8101 ;
+      eissn = 1874-9372 ;
       issnl = 0006-8101
     >
-
+    comment[defunct] = Last issue published was 2007
     {
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0006-8101
   
-      au < superseded ; 2002 ; The Botanical Review Volume 68 ; 68 >
-      au < superseded ; 2003 ; The Botanical Review Volume 69 ; 69 >
-      au < superseded ; 2004 ; The Botanical Review Volume 70 ; 070 >
-      au < superseded ; 2005 ; The Botanical Review Volume 71 ; 71 >
-      au < superseded ; 2006 ; The Botanical Review Volume 72 ; 72 >
-      au < superseded ; 2007 ; The Botanical Review Volume 73 ; 73 >
+      au < down ; 2002 ; The Botanical Review Volume 68 ; 68 >
+      au < down ; 2003 ; The Botanical Review Volume 69 ; 69 >
+      au < down ; 2004 ; The Botanical Review Volume 70 ; 070 >
+      au < down ; 2005 ; The Botanical Review Volume 71 ; 71 >
+      au < down ; 2006 ; The Botanical Review Volume 72 ; 72 >
+      au < down ; 2007 ; The Botanical Review Volume 73 ; 73 >
     }
-
     {
-
-	  comment[0] = Atypon AUs
-
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = brev
+  
+      au < doNotProcess ; 2002 ; The Botanical Review Volume 68 ; 68 >
+      au < doNotProcess ; 2003 ; The Botanical Review Volume 69 ; 69 >
+      au < doNotProcess ; 2004 ; The Botanical Review Volume 70 ; 70 >
+      au < doNotProcess ; 2005 ; The Botanical Review Volume 71 ; 71 >
+      au < doNotProcess ; 2006 ; The Botanical Review Volume 72 ; 72 >
+      au < doNotProcess ; 2007 ; The Botanical Review Volume 73 ; 73 >
     }
+
 
   }
 

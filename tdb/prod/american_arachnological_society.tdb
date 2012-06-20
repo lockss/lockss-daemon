@@ -18,20 +18,38 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0161-8202
   
-      au < superseded ; 2000 ; Journal of Arachnology Volume 28 ; 28 >
-      au < superseded ; 2001 ; Journal of Arachnology Volume 29 ; 29 >
-      au < superseded ; 2002 ; Journal of Arachnology Volume 30 ; 30 >
-      au < superseded ; 2003 ; Journal of Arachnology Volume 31 ; 31 >
-      au < doNotProcess ; 2004 ; Journal of Arachnology Volume 32 ; 32 >
-      au < superseded ; 2004 ; Journal of Arachnology Volume 32 ; 032 >
-      au < superseded ; 2005 ; Journal of Arachnology Volume 33 ; 33 >
-      au < superseded ; 2006 ; Journal of Arachnology Volume 34 ; 34 >
-      au < superseded ; 2007 ; Journal of Arachnology Volume 35 ; 35 >
+      au < down ; 2000 ; Journal of Arachnology Volume 28 ; 28 >
+      au < down ; 2001 ; Journal of Arachnology Volume 29 ; 29 >
+      au < down ; 2002 ; Journal of Arachnology Volume 30 ; 30 >
+      au < down ; 2003 ; Journal of Arachnology Volume 31 ; 31 >
+      au < down ; 2004 ; Journal of Arachnology Volume 32 ; 032 >
+      au < down ; 2005 ; Journal of Arachnology Volume 33 ; 33 >
+      au < down ; 2006 ; Journal of Arachnology Volume 34 ; 34 >
+      au < down ; 2007 ; Journal of Arachnology Volume 35 ; 35 >
+      
     }
 
     {
 
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = arac
+      
+      au < doNotProcess ; 2000 ; Journal of Arachnology Volume 28 ; 28 >
+      au < doNotProcess ; 2001 ; Journal of Arachnology Volume 29 ; 29 >
+      au < doNotProcess ; 2002 ; Journal of Arachnology Volume 30 ; 30 >
+      au < doNotProcess ; 2003 ; Journal of Arachnology Volume 31 ; 31 >
+      au < doNotProcess ; 2004 ; Journal of Arachnology Volume 32 ; 32 >
+      au < doNotProcess ; 2005 ; Journal of Arachnology Volume 33 ; 33 >
+      au < doNotProcess ; 2006 ; Journal of Arachnology Volume 34 ; 34 >
+      au < doNotProcess ; 2007 ; Journal of Arachnology Volume 35 ; 35 >
+      au < ready ; 2008 ; Journal of Arachnology Volume 36 ; 36 >
+      au < ready ; 2009 ; Journal of Arachnology Volume 37 ; 37 >
+      au < ready ; 2010 ; Journal of Arachnology Volume 38 ; 38 >
+      au < ready ; 2011 ; Journal of Arachnology Volume 39 ; 39 >
+      au < manifest ; 2012 ; Journal of Arachnology Volume 40 ; 40 >
+
 
     }
 

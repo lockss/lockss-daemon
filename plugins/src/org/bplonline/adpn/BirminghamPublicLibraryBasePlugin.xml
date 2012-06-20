@@ -1,0 +1,92 @@
+<map>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>group</key>
+        <displayName>Group</displayName>
+        <description>Top directory, generalized collection.
+e.g. Cartography/Maps - Cartography is group
+e.g. Newspapers/BIA - Newspapers is group</description>
+        <type>1</type>
+        <size>25</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection</key>
+        <displayName>Collection</displayName>
+        <description>Sub-directory, collection specific.
+e.g. Cartography/Maps - Maps is Collection</description>
+        <type>1</type>
+        <size>25</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Birmingham Public Library Base Plugin, Base URL %s, Group %s, Collection %s&quot;, base_url, group, collection</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%s%s/%s/manifest.html&quot;, base_url, group, collection</string>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>99</int>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Birmingham Public Library Base Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>Structure expected is URL/Group/Collection. 
+Each directory (collection) should allow Indexes in HTTP conf. 
+Example:
+Cartography/Maps
+Cartography/Maps/manifest.html
+Cartography/Maps/000005/
+Cartography/Maps/000006/</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.bplonline.adpn.BirminghamPublicLibraryBasePlugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>2,&quot;^%s.*\?.*(;O=[AD]|Thumbs\.db)$&quot;, base_url</string>
+      <string>1,&quot;^%s%s/%s(/?$|/)&quot;, base_url, group, collection</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_crawl_type</string>
+    <string>HTML Links</string>
+  </entry>
+</map>

@@ -3,7 +3,7 @@
   publisher <
     name = University of Wisconsin Press
   >
-
+ 
   {
 
     title <
@@ -18,17 +18,20 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://aoj.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[notReady] = RT4567
 
-      au < exists ; 2001 ; American Orthoptic Journal Volume 51 ; 51 >
-      au < exists ; 2002 ; American Orthoptic Journal Volume 52 ; 52 >
-      au < exists ; 2003 ; American Orthoptic Journal Volume 53 ; 53 >
-      au < exists ; 2004 ; American Orthoptic Journal Volume 54 ; 54 >
-      au < exists ; 2005 ; American Orthoptic Journal Volume 55 ; 55 >
-      au < exists ; 2006 ; American Orthoptic Journal Volume 56 ; 56 >
-      au < exists ; 2007 ; American Orthoptic Journal Volume 57 ; 57 >
-      au < exists ; 2008 ; American Orthoptic Journal Volume 58 ; 58 >
-      au < exists ; 2009 ; American Orthoptic Journal Volume 59 ; 59 >
-      au < exists ; 2010 ; American Orthoptic Journal Volume 60 ; 60 >
+      au < notReady ; 2001 ; American Orthoptic Journal Volume 51 ; 51 >
+      au < released ; 2002 ; American Orthoptic Journal Volume 52 ; 52 >
+      au < notReady ; 2003 ; American Orthoptic Journal Volume 53 ; 53 >
+      au < notReady ; 2004 ; American Orthoptic Journal Volume 54 ; 54 >
+      au < notReady ; 2005 ; American Orthoptic Journal Volume 55 ; 55 >
+      au < notReady ; 2006 ; American Orthoptic Journal Volume 56 ; 56 >
+      au < testing ; 2007 ; American Orthoptic Journal Volume 57 ; 57 >
+      au < notReady ; 2008 ; American Orthoptic Journal Volume 58 ; 58 >
+      au < notReady ; 2009 ; American Orthoptic Journal Volume 59 ; 59 >
+      au < notReady ; 2010 ; American Orthoptic Journal Volume 60 ; 60 >
+      au < manifest ; 2011 ; American Orthoptic Journal Volume 61 ; 61 >
+      au < manifest ; 2012 ; American Orthoptic Journal Volume 62 ; 62 >
 
     }
 
@@ -48,15 +51,18 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://aa.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[RU4143] = minor differences, unknown if they are ok to pass
 
-      au < exists ; 2003 ; Arctic Anthropology Volume 40 ; 40 >
-      au < exists ; 2004 ; Arctic Anthropology Volume 41 ; 41 >
-      au < exists ; 2005 ; Arctic Anthropology Volume 42 ; 42 >
-      au < exists ; 2006 ; Arctic Anthropology Volume 43 ; 43 >
-      au < exists ; 2007 ; Arctic Anthropology Volume 44 ; 44 >
-      au < exists ; 2008 ; Arctic Anthropology Volume 45 ; 45 >
-      au < exists ; 2009 ; Arctic Anthropology Volume 46 ; 46 >
-      au < exists ; 2010 ; Arctic Anthropology Volume 47 ; 47 >
+      au < released ; 2003 ; Arctic Anthropology Volume 40 ; 40 >
+      au < released ; 2004 ; Arctic Anthropology Volume 41 ; 41 >
+      au < released ; 2005 ; Arctic Anthropology Volume 42 ; 42 >
+      au < ready ; 2006 ; Arctic Anthropology Volume 43 ; 43 >
+      au < ready ; 2007 ; Arctic Anthropology Volume 44 ; 44 >
+      au < released ; 2008 ; Arctic Anthropology Volume 45 ; 45 >
+      au < released ; 2009 ; Arctic Anthropology Volume 46 ; 46 >
+      au < released ; 2010 ; Arctic Anthropology Volume 47 ; 47 >
+      au < released ; 2011 ; Arctic Anthropology Volume 48 ; 48 >
+      au < expected ; 2012 ; Arctic Anthropology Volume 49 ; 49 >
 
     }
 
@@ -65,16 +71,19 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = arctic_anthropology
+      attr[journal_id] = arc
       implicit < status ; year ; name ; param[volume] >
 
-      au < ready ; 2003 ; Arctic Anthropology Volume 40 ; 40 >
-      au < ready ; 2004 ; Arctic Anthropology Volume 41 ; 41 >
-      au < ready ; 2005 ; Arctic Anthropology Volume 42 ; 42 >
-      au < ready ; 2006 ; Arctic Anthropology Volume 43 ; 43 >
-      au < ready ; 2007 ; Arctic Anthropology Volume 44 ; 44 >
+      au < testing ; 2003 ; Arctic Anthropology Volume 40 ; 40 >
+      au < testing ; 2004 ; Arctic Anthropology Volume 41 ; 41 >
+      au < testing ; 2005 ; Arctic Anthropology Volume 42 ; 42 >
+      au < testing ; 2006 ; Arctic Anthropology Volume 43 ; 43 >
+      au < testing ; 2007 ; Arctic Anthropology Volume 44 ; 44 >
       au < released ; 2008 ; Arctic Anthropology Volume 45 ; 45 >
       au < released ; 2009 ; Arctic Anthropology Volume 46 ; 46 >
-      au < ready ; 2010 ; Arctic Anthropology Volume 47 ; 47 >
+      au < testing ; 2010 ; Arctic Anthropology Volume 47 ; 47 >
+      au < testing ; 2011 ; Arctic Anthropology Volume 48 ; 48 >
+      au < expected ; 2012 ; Arctic Anthropology Volume 49 ; 49 >
 
     }
     
@@ -95,15 +104,16 @@
       param[base_url] = http://cl.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2003 ; Contemporary Literature Volume 44 ; 44 >
-      au < exists ; 2004 ; Contemporary Literature Volume 45 ; 45 >
-      au < exists ; 2005 ; Contemporary Literature Volume 46 ; 46 >
-      au < exists ; 2006 ; Contemporary Literature Volume 47 ; 47 >
-      au < exists ; 2007 ; Contemporary Literature Volume 48 ; 48 >
-      au < exists ; 2008 ; Contemporary Literature Volume 49 ; 49 >
-      au < exists ; 2009 ; Contemporary Literature Volume 50 ; 50 >
-      au < exists ; 2010 ; Contemporary Literature Volume 51 ; 51 >
-      au < exists ; 2011 ; Contemporary Literature Volume 52 ; 52 >
+      au < testing ; 2003 ; Contemporary Literature Volume 44 ; 44 >
+      au < released ; 2004 ; Contemporary Literature Volume 45 ; 45 >
+      au < released ; 2005 ; Contemporary Literature Volume 46 ; 46 >
+      au < released ; 2006 ; Contemporary Literature Volume 47 ; 47 >
+      au < ready ; 2007 ; Contemporary Literature Volume 48 ; 48 >
+      au < released ; 2008 ; Contemporary Literature Volume 49 ; 49 >
+      au < released ; 2009 ; Contemporary Literature Volume 50 ; 50 >
+      au < released ; 2010 ; Contemporary Literature Volume 51 ; 51 >
+      au < released ; 2011 ; Contemporary Literature Volume 52 ; 52 >
+      au < manifest ; 2012 ; Contemporary Literature Volume 53 ; 53 >
 
     }
 
@@ -112,6 +122,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = contemporary_literature
+      attr[journal_id] = cli
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2004 ; Contemporary Literature Volume 45 ; 45 >
@@ -122,6 +133,7 @@
       au < released ; 2009 ; Contemporary Literature Volume 50 ; 50 >
       au < ready ; 2010 ; Contemporary Literature Volume 51 ; 51 >
       au < ready ; 2011 ; Contemporary Literature Volume 52 ; 52 >
+      au < manifest ; 2012 ; Contemporary Literature Volume 53 ; 53 >
 
     }
 
@@ -142,35 +154,36 @@
       param[base_url] = http://er.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 1981-1983 ; Ecological Restoration Volume 1 ; 1 >
-      au < exists ; 1984 ; Ecological Restoration Volume 2 ; 2 >
-      au < exists ; 1985 ; Ecological Restoration Volume 3 ; 3 >
-      au < exists ; 1986 ; Ecological Restoration Volume 4 ; 4 >
-      au < exists ; 1987 ; Ecological Restoration Volume 5 ; 5 >
-      au < exists ; 1988 ; Ecological Restoration Volume 6 ; 6 >
-      au < exists ; 1989 ; Ecological Restoration Volume 7 ; 7 >
-      au < exists ; 1990 ; Ecological Restoration Volume 8 ; 8 >
-      au < exists ; 1991 ; Ecological Restoration Volume 9 ; 9 >
-      au < exists ; 1992 ; Ecological Restoration Volume 10 ; 10 >
-      au < exists ; 1993 ; Ecological Restoration Volume 11 ; 11 >
-      au < exists ; 1994 ; Ecological Restoration Volume 12 ; 12 >
-      au < exists ; 1995 ; Ecological Restoration Volume 13 ; 13 >
-      au < exists ; 1996 ; Ecological Restoration Volume 14 ; 14 >
-      au < exists ; 1997 ; Ecological Restoration Volume 15 ; 15 >
-      au < exists ; 1998 ; Ecological Restoration Volume 16 ; 16 >
-      au < exists ; 1999 ; Ecological Restoration Volume 17 ; 17 >
-      au < exists ; 2000 ; Ecological Restoration Volume 18 ; 18 >
-      au < exists ; 2001 ; Ecological Restoration Volume 19 ; 19 >
-      au < exists ; 2002 ; Ecological Restoration Volume 20 ; 20 >
-      au < exists ; 2003 ; Ecological Restoration Volume 21 ; 21 >
-      au < exists ; 2004 ; Ecological Restoration Volume 22 ; 22 >
-      au < exists ; 2005 ; Ecological Restoration Volume 23 ; 23 >
-      au < exists ; 2006 ; Ecological Restoration Volume 24 ; 24 >
-      au < exists ; 2007 ; Ecological Restoration Volume 25 ; 25 >
-      au < exists ; 2008 ; Ecological Restoration Volume 26 ; 26 >
-      au < exists ; 2009 ; Ecological Restoration Volume 27 ; 27 >
-      au < exists ; 2010 ; Ecological Restoration Volume 28 ; 28 >
-      au < exists ; 2011 ; Ecological Restoration Volume 29 ; 29 >
+      au < released ; 1981-1983 ; Ecological Restoration Volume 1 ; 1 >
+      au < manifest ; 1984 ; Ecological Restoration Volume 2 ; 2 >
+      au < manifest ; 1985 ; Ecological Restoration Volume 3 ; 3 >
+      au < released ; 1986 ; Ecological Restoration Volume 4 ; 4 >
+      au < released ; 1987 ; Ecological Restoration Volume 5 ; 5 >
+      au < released ; 1988 ; Ecological Restoration Volume 6 ; 6 >
+      au < released ; 1989 ; Ecological Restoration Volume 7 ; 7 >
+      au < manifest ; 1990 ; Ecological Restoration Volume 8 ; 8 >
+      au < released ; 1991 ; Ecological Restoration Volume 9 ; 9 >
+      au < released ; 1992 ; Ecological Restoration Volume 10 ; 10 >
+      au < manifest ; 1993 ; Ecological Restoration Volume 11 ; 11 >
+      au < released ; 1994 ; Ecological Restoration Volume 12 ; 12 >
+      au < released ; 1995 ; Ecological Restoration Volume 13 ; 13 >
+      au < released ; 1996 ; Ecological Restoration Volume 14 ; 14 >
+      au < released ; 1997 ; Ecological Restoration Volume 15 ; 15 >
+      au < testing ; 1998 ; Ecological Restoration Volume 16 ; 16 >
+      au < released ; 1999 ; Ecological Restoration Volume 17 ; 17 >
+      au < released ; 2000 ; Ecological Restoration Volume 18 ; 18 >
+      au < released ; 2001 ; Ecological Restoration Volume 19 ; 19 >
+      au < released ; 2002 ; Ecological Restoration Volume 20 ; 20 >
+      au < released ; 2003 ; Ecological Restoration Volume 21 ; 21 >
+      au < released ; 2004 ; Ecological Restoration Volume 22 ; 22 >
+      au < released ; 2005 ; Ecological Restoration Volume 23 ; 23 >
+      au < released ; 2006 ; Ecological Restoration Volume 24 ; 24 >
+      au < manifest ; 2007 ; Ecological Restoration Volume 25 ; 25 >
+      au < released ; 2008 ; Ecological Restoration Volume 26 ; 26 >
+      au < released ; 2009 ; Ecological Restoration Volume 27 ; 27 >
+      au < manifest ; 2010 ; Ecological Restoration Volume 28 ; 28 >
+      au < released ; 2011 ; Ecological Restoration Volume 29 ; 29 >
+      au < manifest ; 2012 ; Ecological Restoration Volume 30 ; 30 >
 
     }
 
@@ -179,10 +192,12 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = ecological_restoration
+      attr[journal_id] = ecr
       implicit < status ; year ; name ; param[volume] >
 
       au < ready ; 2010 ; Ecological Restoration Volume 28 ; 28 >
       au < ready ; 2011 ; Ecological Restoration Volume 29 ; 29 >
+      au < manifest ; 2012 ; Ecological Restoration Volume 30 ; 30 >
 
     }
 
@@ -203,15 +218,16 @@
       param[base_url] = http://jhr.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2003 ; The Journal of Human Resources Volume XXXVIII ; XXXVIII >
-      au < exists ; 2004 ; The Journal of Human Resources Volume XXXVIX ; XXXVIX >
-      au < exists ; 2005 ; The Journal of Human Resources Volume XL ; XL >
-      au < exists ; 2006 ; The Journal of Human Resources Volume XLI ; XLI >
-      au < exists ; 2007 ; The Journal of Human Resources Volume XLII ; XLII >
-      au < exists ; 2008 ; The Journal of Human Resources Volume 43 ; 43 >
-      au < exists ; 2009 ; The Journal of Human Resources Volume 44 ; 44 >
-      au < exists ; 2010 ; The Journal of Human Resources Volume 45 ; 45 >
-      au < exists ; 2011 ; The Journal of Human Resources Volume 46 ; 46 >
+      au < released ; 2003 ; The Journal of Human Resources Volume XXXVIII ; XXXVIII >
+      au < released ; 2004 ; The Journal of Human Resources Volume XXXIX ; XXXIX >
+      au < released ; 2005 ; The Journal of Human Resources Volume XL ; XL >
+      au < released ; 2006 ; The Journal of Human Resources Volume XLI ; XLI >
+      au < manifest ; 2007 ; The Journal of Human Resources Volume XLII ; XLII >
+      au < released ; 2008 ; The Journal of Human Resources Volume 43 ; 43 >
+      au < released ; 2009 ; The Journal of Human Resources Volume 44 ; 44 >
+      au < released ; 2010 ; The Journal of Human Resources Volume 45 ; 45 >
+      au < manifest ; 2011 ; The Journal of Human Resources Volume 46 ; 46 >
+      au < released ; 2012 ; The Journal of Human Resources Volume 47 ; 47 >
 
     }
 
@@ -220,9 +236,10 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_human_resources
+      attr[journal_id] = jhr
       implicit < status ; year ; name ; param[volume] >
-      
-      comment[0] = no content online yet
+         
+      au < manifest ; 2012 ; The Journal of Human Resources Volume 47 ; 47 >
 
     }
 
@@ -243,17 +260,18 @@
       param[base_url] = http://le.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2001 ; Land Economics Volume 77 ; 77 >
-      au < exists ; 2002 ; Land Economics Volume 78 ; 78 >
-      au < exists ; 2003 ; Land Economics Volume 79 ; 79 >
-      au < exists ; 2004 ; Land Economics Volume 80 ; 80 >
-      au < exists ; 2005 ; Land Economics Volume 81 ; 81 >
-      au < exists ; 2006 ; Land Economics Volume 82 ; 82 >
-      au < exists ; 2007 ; Land Economics Volume 83 ; 83 >
-      au < exists ; 2008 ; Land Economics Volume 84 ; 84 >
-      au < exists ; 2009 ; Land Economics Volume 85 ; 85 >
-      au < exists ; 2010 ; Land Economics Volume 86 ; 86 >
-      au < exists ; 2011 ; Land Economics Volume 87 ; 87 >
+      au < released ; 2001 ; Land Economics Volume 77 ; 77 >
+      au < manifest ; 2002 ; Land Economics Volume 78 ; 78 >
+      au < released ; 2003 ; Land Economics Volume 79 ; 79 >
+      au < released ; 2004 ; Land Economics Volume 80 ; 80 >
+      au < released ; 2005 ; Land Economics Volume 81 ; 81 >
+      au < released ; 2006 ; Land Economics Volume 82 ; 82 >
+      au < released ; 2007 ; Land Economics Volume 83 ; 83 >
+      au < released ; 2008 ; Land Economics Volume 84 ; 84 >
+      au < released ; 2009 ; Land Economics Volume 85 ; 85 >
+      au < released ; 2010 ; Land Economics Volume 86 ; 86 >
+      au < released ; 2011 ; Land Economics Volume 87 ; 87 >
+      au < released ; 2012 ; Land Economics Volume 88 ; 88 >
 
     }
 
@@ -285,36 +303,37 @@
       param[base_url] = http://lj.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 1982 ; Landscape Journal: Design, Planning and Management of the Land Volume 1 ; 1 >
-      au < exists ; 1983 ; Landscape Journal: Design, Planning and Management of the Land Volume 2 ; 2 >
-      au < exists ; 1984 ; Landscape Journal: Design, Planning and Management of the Land Volume 3 ; 3 >
-      au < exists ; 1985 ; Landscape Journal: Design, Planning and Management of the Land Volume 4 ; 4 >
-      au < exists ; 1986 ; Landscape Journal: Design, Planning and Management of the Land Volume 5 ; 5 >
-      au < exists ; 1987 ; Landscape Journal: Design, Planning and Management of the Land Volume 6 ; 6 >
-      au < exists ; 1988 ; Landscape Journal: Design, Planning and Management of the Land Volume 7 ; 7 >
-      au < exists ; 1989 ; Landscape Journal: Design, Planning and Management of the Land Volume 8 ; 8 >
-      au < exists ; 1990 ; Landscape Journal: Design, Planning and Management of the Land Volume 9 ; 9 >
-      au < exists ; 1991 ; Landscape Journal: Design, Planning and Management of the Land Volume 10 ; 10 >      
-      au < exists ; 1992 ; Landscape Journal: Design, Planning and Management of the Land Volume 11 ; 11 >  
-      au < exists ; 1993 ; Landscape Journal: Design, Planning and Management of the Land Volume 12 ; 12 >      
-      au < exists ; 1994 ; Landscape Journal: Design, Planning and Management of the Land Volume 13 ; 13 > 
-      au < exists ; 1995 ; Landscape Journal: Design, Planning and Management of the Land Volume 14 ; 14 >      
-      au < exists ; 1996 ; Landscape Journal: Design, Planning and Management of the Land Volume 15 ; 15 >
-      au < exists ; 1997 ; Landscape Journal: Design, Planning and Management of the Land Volume 16 ; 16 >      
-      au < exists ; 1998 ; Landscape Journal: Design, Planning and Management of the Land Volume 17 ; 17 >
-      au < exists ; 1999 ; Landscape Journal: Design, Planning and Management of the Land Volume 18 ; 18 >      
-      au < exists ; 2000 ; Landscape Journal: Design, Planning and Management of the Land Volume 19 ; 19 >   
-      au < exists ; 2001 ; Landscape Journal: Design, Planning and Management of the Land Volume 20 ; 20 >  
-      au < exists ; 2002 ; Landscape Journal: Design, Planning and Management of the Land Volume 21 ; 21 >
-      au < exists ; 2003 ; Landscape Journal: Design, Planning and Management of the Land Volume 22 ; 22 >
-      au < exists ; 2004 ; Landscape Journal: Design, Planning and Management of the Land Volume 23 ; 23 >
-      au < exists ; 2005 ; Landscape Journal: Design, Planning and Management of the Land Volume 24 ; 24 >
-      au < exists ; 2006 ; Landscape Journal: Design, Planning and Management of the Land Volume 25 ; 25 >
-      au < exists ; 2007 ; Landscape Journal: Design, Planning and Management of the Land Volume 26 ; 26 >
-      au < exists ; 2008 ; Landscape Journal: Design, Planning and Management of the Land Volume 27 ; 27 >
-      au < exists ; 2009 ; Landscape Journal: Design, Planning and Management of the Land Volume 28 ; 28 >
-      au < exists ; 2010 ; Landscape Journal: Design, Planning and Management of the Land Volume 29 ; 29 >
-      au < exists ; 2011 ; Landscape Journal: Design, Planning and Management of the Land Volume 30 ; 30 >
+      au < released ; 1982 ; Landscape Journal: Design, Planning and Management of the Land Volume 1 ; 1 >
+      au < released ; 1983 ; Landscape Journal: Design, Planning and Management of the Land Volume 2 ; 2 >
+      au < released ; 1984 ; Landscape Journal: Design, Planning and Management of the Land Volume 3 ; 3 >
+      au < released ; 1985 ; Landscape Journal: Design, Planning and Management of the Land Volume 4 ; 4 >
+      au < released ; 1986 ; Landscape Journal: Design, Planning and Management of the Land Volume 5 ; 5 >
+      au < released ; 1987 ; Landscape Journal: Design, Planning and Management of the Land Volume 6 ; 6 >
+      au < released ; 1988 ; Landscape Journal: Design, Planning and Management of the Land Volume 7 ; 7 >
+      au < released ; 1989 ; Landscape Journal: Design, Planning and Management of the Land Volume 8 ; 8 >
+      au < manifest ; 1990 ; Landscape Journal: Design, Planning and Management of the Land Volume 9 ; 9 >
+      au < released ; 1991 ; Landscape Journal: Design, Planning and Management of the Land Volume 10 ; 10 >
+      au < manifest ; 1992 ; Landscape Journal: Design, Planning and Management of the Land Volume 11 ; 11 >
+      au < released ; 1993 ; Landscape Journal: Design, Planning and Management of the Land Volume 12 ; 12 >
+      au < released ; 1994 ; Landscape Journal: Design, Planning and Management of the Land Volume 13 ; 13 >
+      au < released ; 1995 ; Landscape Journal: Design, Planning and Management of the Land Volume 14 ; 14 >
+      au < released ; 1996 ; Landscape Journal: Design, Planning and Management of the Land Volume 15 ; 15 >
+      au < manifest ; 1997 ; Landscape Journal: Design, Planning and Management of the Land Volume 16 ; 16 >
+      au < released ; 1998 ; Landscape Journal: Design, Planning and Management of the Land Volume 17 ; 17 >
+      au < released ; 1999 ; Landscape Journal: Design, Planning and Management of the Land Volume 18 ; 18 >
+      au < released ; 2000 ; Landscape Journal: Design, Planning and Management of the Land Volume 19 ; 19 >
+      au < released ; 2001 ; Landscape Journal: Design, Planning and Management of the Land Volume 20 ; 20 >
+      au < released ; 2002 ; Landscape Journal: Design, Planning and Management of the Land Volume 21 ; 21 >
+      au < released ; 2003 ; Landscape Journal: Design, Planning and Management of the Land Volume 22 ; 22 >
+      au < released ; 2004 ; Landscape Journal: Design, Planning and Management of the Land Volume 23 ; 23 >
+      au < released ; 2005 ; Landscape Journal: Design, Planning and Management of the Land Volume 24 ; 24 >
+      au < manifest ; 2006 ; Landscape Journal: Design, Planning and Management of the Land Volume 25 ; 25 >
+      au < released ; 2007 ; Landscape Journal: Design, Planning and Management of the Land Volume 26 ; 26 >
+      au < manifest ; 2008 ; Landscape Journal: Design, Planning and Management of the Land Volume 27 ; 27 >
+      au < released ; 2009 ; Landscape Journal: Design, Planning and Management of the Land Volume 28 ; 28 >
+      au < released ; 2010 ; Landscape Journal: Design, Planning and Management of the Land Volume 29 ; 29 >
+      au < released ; 2011 ; Landscape Journal: Design, Planning and Management of the Land Volume 30 ; 30 >
+      au < expected ; 2012 ; Landscape Journal: Design, Planning and Management of the Land Volume 31 ; 31 >
 
     }
 
@@ -323,9 +342,11 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = landscape_journal
+      attr[journal_id] = lnd
       implicit < status ; year ; name ; param[volume] >
 
       au < ready ; 2011 ; Landscape Journal: Design, Planning and Management of the Land Volume 30 ; 30 >
+      au < expected ; 2012 ; Landscape Journal: Design, Planning and Management of the Land Volume 31 ; 31 >
 
     }
 
@@ -345,16 +366,19 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://lbr.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[notReady] = RT4567
 
-      au < exists ; 2002 ; Luso-Brazilian Review Volume 39 ; 39 >
-      au < exists ; 2003 ; Luso-Brazilian Review Volume 40 ; 40 >
-      au < exists ; 2004 ; Luso-Brazilian Review Volume 41 ; 41 >
-      au < exists ; 2005 ; Luso-Brazilian Review Volume 42 ; 42 >
-      au < exists ; 2006 ; Luso-Brazilian Review Volume 43 ; 43 >
-      au < exists ; 2007 ; Luso-Brazilian Review Volume 44 ; 44 >
-      au < exists ; 2008 ; Luso-Brazilian Review Volume 45 ; 45 >
-      au < exists ; 2009 ; Luso-Brazilian Review Volume 46 ; 46 >
-      au < exists ; 2010 ; Luso-Brazilian Review Volume 47 ; 47 >      
+      au < released ; 2002 ; Luso-Brazilian Review Volume 39 ; 39 >
+      au < notReady ; 2003 ; Luso-Brazilian Review Volume 40 ; 40 >
+      au < released ; 2004 ; Luso-Brazilian Review Volume 41 ; 41 >
+      au < notReady ; 2005 ; Luso-Brazilian Review Volume 42 ; 42 >
+      au < notReady ; 2006 ; Luso-Brazilian Review Volume 43 ; 43 >
+      au < manifest ; 2007 ; Luso-Brazilian Review Volume 44 ; 44 >
+      au < released ; 2008 ; Luso-Brazilian Review Volume 45 ; 45 >
+      au < released ; 2009 ; Luso-Brazilian Review Volume 46 ; 46 >
+      au < notReady ; 2010 ; Luso-Brazilian Review Volume 47 ; 47 >
+      au < notReady ; 2011 ; Luso-Brazilian Review Volume 48 ; 48 >
+      au < expected ; 2012 ; Luso-Brazilian Review Volume 49 ; 49 >
 
     }
 
@@ -363,6 +387,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = luso-brazilian_review
+      attr[journal_id] = lbr
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2004 ; Luso-Brazilian Review Volume 41 ; 41 >
@@ -373,6 +398,7 @@
       au < released ; 2009 ; Luso-Brazilian Review Volume 46 ; 46 >
       au < ready ; 2010 ; Luso-Brazilian Review Volume 47 ; 47 >
       au < ready ; 2011 ; Luso-Brazilian Review Volume 48 ; 48 >
+      au < expected ; 2012 ; Luso-Brazilian Review Volume 49 ; 49 >
 
     }
 
@@ -393,15 +419,16 @@
       param[base_url] = http://mon.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2003 ; Monatshefte Volume XCV ; XCV >
-      au < exists ; 2004 ; Monatshefte Volume XCVI ; XCVI >
-      au < exists ; 2005 ; Monatshefte Volume XCVII ; XCVII >
-      au < exists ; 2006 ; Monatshefte Volume XCVIII ; XCVIII >
-      au < exists ; 2007 ; Monatshefte Volume XCVIX ; XCVIX >
-      au < exists ; 2008 ; Monatshefte Volume 100 ; 100 >
-      au < exists ; 2009 ; Monatshefte Volume 101 ; 101 >
-      au < exists ; 2010 ; Monatshefte Volume 102 ; 102 >
-      au < exists ; 2011 ; Monatshefte Volume 103 ; 103 >
+      au < released ; 2003 ; Monatshefte Volume XCV ; XCV >
+      au < released ; 2004 ; Monatshefte Volume XCVI ; XCVI >
+      au < released ; 2005 ; Monatshefte Volume XCVII ; XCVII >
+      au < released ; 2006 ; Monatshefte Volume XCVIII ; XCVIII >
+      au < released ; 2007 ; Monatshefte Volume XCIX ; XCIX >
+      au < released ; 2008 ; Monatshefte Volume 100 ; 100 >
+      au < released ; 2009 ; Monatshefte Volume 101 ; 101 >
+      au < released ; 2010 ; Monatshefte Volume 102 ; 102 >
+      au < testing ; 2011 ; Monatshefte Volume 103 ; 103 >
+      au < released ; 2012 ; Monatshefte Volume 104 ; 104 >
 
     }
 
@@ -410,6 +437,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = monatshefte
+      attr[journal_id] = mon
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2007 ; Monatshefte Volume 99 ; 99 >
@@ -417,6 +445,7 @@
       au < released ; 2009 ; Monatshefte Volume 101 ; 101 >
       au < released ; 2010 ; Monatshefte Volume 102 ; 102 >
       au < ready ; 2011 ; Monatshefte Volume 103 ; 103 >
+      au < manifest ; 2012 ; Monatshefte Volume 104 ; 104 >
 
     }
 
@@ -435,21 +464,21 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://npj.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[17] = found a login page
-      comment[18] = no permission
+      comment[notReady] = RT4567
 
-      au < exists ; 2000 ; Native Plants Journal Volume 1 ; 1 >
-      au < exists ; 2001 ; Native Plants Journal Volume 2 ; 2 >
-      au < exists ; 2002 ; Native Plants Journal Volume 3 ; 3 >
-      au < exists ; 2003 ; Native Plants Journal Volume 4 ; 4 >
-      au < exists ; 2004 ; Native Plants Journal Volume 5 ; 5 >
-      au < exists ; 2005 ; Native Plants Journal Volume 6 ; 6 >
-      au < exists ; 2006 ; Native Plants Journal Volume 7 ; 7 >
-      au < exists ; 2007 ; Native Plants Journal Volume 8 ; 8 >
-      au < exists ; 2008 ; Native Plants Journal Volume 9 ; 9 >
-      au < exists ; 2009 ; Native Plants Journal Volume 10 ; 10 >
+      au < released ; 2000 ; Native Plants Journal Volume 1 ; 1 >
+      au < manifest ; 2001 ; Native Plants Journal Volume 2 ; 2 >
+      au < manifest ; 2002 ; Native Plants Journal Volume 3 ; 3 >
+      au < released ; 2003 ; Native Plants Journal Volume 4 ; 4 >
+      au < released ; 2004 ; Native Plants Journal Volume 5 ; 5 >
+      au < notReady ; 2005 ; Native Plants Journal Volume 6 ; 6 >
+      au < manifest ; 2006 ; Native Plants Journal Volume 7 ; 7 >
+      au < notReady ; 2007 ; Native Plants Journal Volume 8 ; 8 >
+      au < notReady ; 2008 ; Native Plants Journal Volume 9 ; 9 >
+      au < notReady ; 2009 ; Native Plants Journal Volume 10 ; 10 >
       au < notReady ; 2010 ; Native Plants Journal Volume 11 ; 11 >
       au < notReady ; 2011 ; Native Plants Journal Volume 12 ; 12 >
+      au < manifest ; 2012 ; Native Plants Journal Volume 13 ; 13 >
     
     }
     
@@ -458,6 +487,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = native_plants_journal
+      attr[journal_id] = npj
       implicit < status ; year ; name ; param[volume] >
       comment[0] = vols. 5-11 released under U of Illinois Press (also Project Muse)
 
@@ -469,6 +499,7 @@
       au < released ; 2009 ; Native Plants Journal Volume 10 ; 10 >
       au < released ; 2010 ; Native Plants Journal Volume 11 ; 11 >
       au < ready ; 2011 ; Native Plants Journal Volume 12 ; 12 >
+      au < manifest ; 2012 ; Native Plants Journal Volume 13 ; 13 >
 
     }
 
@@ -489,15 +520,16 @@
       param[base_url] = http://sub.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2003 ; SubStance Volume 32 ; 32 >
-      au < exists ; 2004 ; SubStance Volume 33 ; 33 >
-      au < exists ; 2005 ; SubStance Volume 34 ; 34 >
-      au < exists ; 2006 ; SubStance Volume 35 ; 35 >
-      au < exists ; 2007 ; SubStance Volume 36 ; 36 >
-      au < exists ; 2008 ; SubStance Volume 37 ; 37 >
-      au < exists ; 2009 ; SubStance Volume 38 ; 38 >
-      au < exists ; 2010 ; SubStance Volume 39 ; 39 >
-      au < exists ; 2011 ; SubStance Volume 40 ; 40 >
+      au < released ; 2003 ; SubStance Volume 32 ; 32 >
+      au < released ; 2004 ; SubStance Volume 33 ; 33 >
+      au < manifest ; 2005 ; SubStance Volume 34 ; 34 >
+      au < released ; 2006 ; SubStance Volume 35 ; 35 >
+      au < manifest ; 2007 ; SubStance Volume 36 ; 36 >
+      au < released ; 2008 ; SubStance Volume 37 ; 37 >
+      au < released ; 2009 ; SubStance Volume 38 ; 38 >
+      au < released ; 2010 ; SubStance Volume 39 ; 39 >
+      au < released ; 2011 ; SubStance Volume 40 ; 40 >
+      au < manifest ; 2012 ; SubStance Volume 41 ; 41 >
 
     }
 
@@ -506,6 +538,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = substance
+      attr[journal_id] = sub
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; SubStance Volume 28 ; 28 >
@@ -521,6 +554,7 @@
       au < released ; 2009 ; SubStance Volume 38 ; 38 >
       au < ready ; 2010 ; SubStance Volume 39 ; 39 >
       au < ready ; 2011 ; SubStance Volume 40 ; 40 >
+      au < manifest ; 2012 ; SubStance Volume 41 ; 41 >
 
     }
 

@@ -1,3 +1,9 @@
+function submitForm(name) {
+ var form = document.getElementById(name);
+ if(form && form.onsubmit && !form.onsubmit()) return;
+ form.submit();
+}
+
 function lockssSetElem(form, name, value) {
  var elem = findNamedElem(form, name);
  if (elem != null) elem.value = value;

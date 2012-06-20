@@ -1,10 +1,10 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.25 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.25.4.1 2012-06-20 00:02:51 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,9 +48,9 @@ import org.lockss.util.*;
 public class FuncNewContentCrawler extends LockssTestCase {
   static Logger log = Logger.getLogger("FuncNewContentCrawler");
 
-  private SimulatedArchivalUnit sau;
+  private MySimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
-  private CrawlManagerImpl crawlMgr;
+  private NoPauseCrawlManagerImpl crawlMgr;
   private static final int DEFAULT_MAX_DEPTH = 1000;
   private static final int DEFAULT_FILESIZE = 3000;
   private static int fileSize = DEFAULT_FILESIZE;
@@ -77,27 +77,14 @@ public class FuncNewContentCrawler extends LockssTestCase {
   public void setUp(int max) throws Exception {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|crawler|FuncNewContentCrawler$MySimulatedPlugin.root~" +
-      PropKeyEncoder.encode(tempDirPath);
     Properties props = new Properties();
     props.setProperty(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
     maxDepth=max;
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    // crawlMgr.startService(); below is needed so init happens, this
+    // prevents crawl starter thread from doing anything.
+    props.setProperty(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "-1");
 
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
-    // the simulated Content's depth will be (AU_PARAM_DEPTH + 1)
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_DEPTH, "3");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_BRANCH, "1");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_NUM_FILES, "2");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_FILE_TYPES,
-                      ""+SimulatedContentGenerator.FILE_TYPE_BIN);
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
     //test that we don't cache a file that is globally excluded
     props.setProperty(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
 		      ".*(branch1/.*){3,}");
@@ -110,18 +97,32 @@ public class FuncNewContentCrawler extends LockssTestCase {
     crawlMgr = new NoPauseCrawlManagerImpl();
     theDaemon.setCrawlManager(crawlMgr);
     crawlMgr.initService(theDaemon);
+    crawlMgr.startService();
 
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     sau =
-        (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
-    theDaemon.getLockssRepository(sau).startService();
-    theDaemon.setNodeManager(new MockNodeManager(), sau);
+      (MySimulatedArchivalUnit)
+      PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
+					 simAuConfig(tempDirPath));
   }
 
   public void tearDown() throws Exception {
     theDaemon.stopDaemon();
     super.tearDown();
+  }
+
+
+  Configuration simAuConfig(String rootPath) {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put("depth", "3");
+    conf.put("branch", "1");
+    conf.put("numFiles", "2");
+    conf.put("fileTypes",
+	     "" + SimulatedContentGenerator.FILE_TYPE_BIN);
+    conf.put("binFileSize", ""+fileSize);
+    return conf;
   }
 
   public void testRunSelf() throws Exception {
@@ -167,10 +168,10 @@ public class FuncNewContentCrawler extends LockssTestCase {
 
     String th = "text/html";
     String tp = "text/plain";
-    String[] ct = {null, null, tp, tp, th, th, tp, tp, th, tp};
+    String[] ct = {null, th, th, tp, tp, th, th, tp, tp, th, tp};
     Bag ctb = new HashBag(ListUtil.fromArray(ct));
-    CrawlRateLimiter crl = crawlMgr.getCrawlRateLimiter(sau);
-    assertEquals(ctb, new HashBag(crawler.getPauseContentTypes()));
+    CrawlRateLimiter crl = crawlMgr.getCrawlRateLimiter(crawler);
+    assertEquals(ctb, new HashBag(crawlMgr.getPauseContentTypes(crawler)));
   }
 
   //recursive caller to check through the whole file tree
@@ -213,7 +214,9 @@ public class FuncNewContentCrawler extends LockssTestCase {
     NoCrawlEndActionsNewContentCrawler crawler =
       new NoCrawlEndActionsNewContentCrawler(sau, spec, new MockAuState());
     crawler.setCrawlManager(crawlMgr);
+    crawlMgr.addToRunningCrawls(crawler.getAu(), crawler);
     crawler.doCrawl();
+    crawlMgr.removeFromRunningCrawls(crawler);
     return crawler;
   }
 

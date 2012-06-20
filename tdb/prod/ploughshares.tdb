@@ -17,8 +17,10 @@
     >
 
     param[journal_dir] = ploughshares
+    attr[journal_id] = plo
    
     au < ready ; 2011 ; Ploughshares Volume 37 ; 37 >
+    au < manifest ; 2012 ; Ploughshares Volume 38 ; 38 >
     
   }
   

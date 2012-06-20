@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.55 2010-08-11 03:06:50 tlipkis Exp $
+ * $Id: MockCachedUrlSet.java,v 1.55.14.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -177,6 +177,10 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   public void setHashItSource(Collection col) {
     hashSource = col;
+  }
+
+  public Iterator<CachedUrl> archiveMemberIterator() {
+    return contentHashIterator();
   }
 
   // Methods used by the poller

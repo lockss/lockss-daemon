@@ -17,6 +17,7 @@
     >
 
     param[journal_dir] = journal_of_american_folklore
+    attr[journal_id] = jaf
 
     au < released ; 2001 ; Journal of American Folklore Volume 114 ; 114 >
     au < released ; 2002 ; Journal of American Folklore Volume 115 ; 115 >
@@ -27,6 +28,9 @@
     au < released ; 2007 ; Journal of American Folklore Volume 120 ; 120 >
     au < released ; 2008 ; Journal of American Folklore Volume 121 ; 121 >
     au < released ; 2009 ; Journal of American Folklore Volume 122 ; 122 >
+    au < ready ; 2010 ; Journal of American Folklore Volume 123 ; 123 >
+    au < ready ; 2011 ; Journal of American Folklore Volume 124 ; 124 >
+    au < ready ; 2012 ; Journal of American Folklore Volume 125 ; 125 >
 
   }
 

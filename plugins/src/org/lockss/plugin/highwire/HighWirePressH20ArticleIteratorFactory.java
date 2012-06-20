@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.7 2011-06-14 09:26:33 tlipkis Exp $
+ * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.7.8.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.IOException;
 import java.util.Iterator;
 import java.util.regex.*;
 
@@ -65,12 +64,6 @@ public class HighWirePressH20ArticleIteratorFactory
 				      .setPatternTemplate(PATTERN_TEMPLATE));
   }
 
-  public ArticleMetadataExtractor
-    createArticleMetadataExtractor(MetadataTarget target)
-      throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
-  }
-  
   protected static class HighWirePressH20ArticleIterator
     extends SubTreeArticleIterator {
     
@@ -109,6 +102,7 @@ public class HighWirePressH20ArticleIteratorFactory
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
+      af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, htmlCu);
 //      guessFullTextPdf(af, htmlMat);
 //      guessOtherParts(af, htmlMat);
       return af;
@@ -122,14 +116,15 @@ public class HighWirePressH20ArticleIteratorFactory
       ArticleFiles af = new ArticleFiles();
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
 
-//      CachedUrl pdfLandCu = au.makeCachedUrl(pdfMat.replaceFirst("/$1.full.pdf+html"));
-//      if (pdfLandCu != null && pdfLandCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
-//        af.setFullTextCu(pdfLandCu);
-//      }
-//      else {
+      CachedUrl pdfLandCu = au.makeCachedUrl(pdfMat.replaceFirst("/$1.full.pdf+html"));
+      if (pdfLandCu != null && pdfLandCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
+        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, pdfLandCu);
+        af.setFullTextCu(pdfLandCu);
+      }
+      else {
         af.setFullTextCu(pdfCu);
-//      }
+      }
 //      guessOtherParts(af, pdfMat);
       return af;
     }
@@ -174,4 +169,9 @@ public class HighWirePressH20ArticleIteratorFactory
 //    
   }
   
+  public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
+      throws PluginException {
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+  }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArticleIteratorFactory.java,v 1.7 2010-07-07 23:22:10 thib_gc Exp $
+ * $Id: TestHighWireArticleIteratorFactory.java,v 1.7.16.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -45,8 +45,8 @@ import org.lockss.repository.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 
-public class TestHighWireArticleIteratorFactory extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestHighWireArticleIteratorFactory");
+public class TestHighWireArticleIteratorFactory extends ArticleIteratorTestCase {
+  static Logger log = Logger.getLogger("TestHighWirPressArticleIteratorFactory");
 
   private static final int DEFAULT_FILESIZE = 3000;
 
@@ -56,32 +56,27 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
   private static int fileSize = DEFAULT_FILESIZE;
 
   private static String PLUGIN_NAME =
-    "org.lockss.plugin.highwire.ClockssHighWirePlugin";
+    "org.lockss.plugin.highwire.HighWirePressPlugin";
 
-  private static String BASE_URL = "http://www.jhc.org/";
+  private static String BASE_URL = "http://pediatrics.aappublications.org/";
   private static String SIM_ROOT = BASE_URL + "cgi/reprint/";
 
   public void setUp() throws Exception {
     super.setUp();
+    au = createAu();
+    
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  tempDirPath);
-    theDaemon = getMockLockssDaemon();
-    theDaemon.getAlertManager();
-    theDaemon.getPluginManager().setLoadablePluginsReady(true);
-    theDaemon.setDaemonInited(true);
-    theDaemon.getPluginManager().startService();
-    theDaemon.getCrawlManager();
-
+                                  tempDirPath);
+  //  http://inderscience.metapress.com/
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
-    hau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, highWireAuConfig());
   }
 
-  public void tearDown() throws Exception {
+  /*public void tearDown() throws Exception {
     sau.deleteContentTree();
     theDaemon.stopDaemon();
     super.tearDown();
-  }
+  }*/
 
   Configuration simAuConfig(String rootPath) {
     Configuration conf = ConfigManager.newConfiguration();
@@ -99,55 +94,55 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
   Configuration highWireAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
-    conf.put("volume_name", "52");
+    conf.put("volume", "52");
     return conf;
   }
 
-  public void testArticleCountAndType(String articleMimeType,
-				      boolean isDefaultTarget,
-				      int expCount)
-      throws Exception {
+
+protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
+    return PluginTestUtil.createAndStartAu(PLUGIN_NAME, ConfigurationUtil
+        .fromArgs("base_url", "http://pediatrics.aappublications.org/",
+            "volume_name", "52", "journal_issn", "1098-4275"));
+  }
+
+ 
+
+  public void testRoots() throws Exception {
+    SubTreeArticleIterator artIter = createSubTreeIter();
+    System.out.println("Root Urls::" + getRootUrls(artIter));
+    assertEquals(ListUtil.list( "http://pediatrics.aappublications.org/cgi/content/full/52/"
+        ,"http://pediatrics.aappublications.org/cgi/reprint/52/"),
+        getRootUrls(artIter));
+  }
+
+  public void testUrlsWithPrefixes() throws Exception {
+    SubTreeArticleIterator artIter = createSubTreeIter();
+    Pattern pat = getPattern(artIter);
+    assertMatchesRE(pat,
+        "http://pediatrics.aappublications.org/cgi/reprint/foo;52/Supplement_3/S69.pdf");
+    assertMatchesRE(pat,
+        "http://pediatrics.aappublications.org/cgi/reprint/52/supplement_3/S69.pdf");
+   assertNotMatchesRE(pat,
+        "http://pediatrics.aappublications.org/cgi/reprin/1014174823t49006/j0143.pdfwrong");
+    assertNotMatchesRE(pat,
+        "http://pediatrics.aappublications.org/cgi/reprintt/1014174823t49006/j0143.pdfwrong");
+    assertNotMatchesRE(pat, "http://www.example.com/content/");
+    assertNotMatchesRE(pat, "http://www.example.com/content/j");
+    assertNotMatchesRE(pat,
+        "http://www.example.com/content/j0123/j383.pdfwrong");
+  }
+  
+
+  public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
-    PluginTestUtil.copyAu(sau, hau);
-    PluginTestUtil.copyAu(sau, hau, ".*\\.html",
-			  "cgi/reprint/", "cgi/reprintframed/");
+    String url = "http://pediatrics.aappublications.org/cgi/reprint/foo;125/Supplement_3/S69.pdf";
+    CachedUrl cu = au.makeCachedUrl(url);
+    assertNotNull(cu);
+    SubTreeArticleIterator artIter = createSubTreeIter();
+    assertNotNull(artIter);
+    ArticleFiles af = createArticleFiles(artIter, cu);
+    System.out.println("article files::" + af);
+    assertEquals(cu, af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF));
 
-    Plugin plugin = hau.getPlugin();
-    Iterator<ArticleFiles> it =
-      isDefaultTarget
-      ? hau.getArticleIterator()
-      : hau.getArticleIterator(new MetadataTarget().setFormat(articleMimeType));
-    int count = 0;
-    while (it.hasNext()) {
-      ArticleFiles af = it.next();
-      assertNotNull(af);
-      CachedUrl cu = af.getFullTextCu();
-      assertNotNull(cu);
-      String contentType = cu.getContentType();
-      assertTrue(contentType,
-		 contentType.toLowerCase().startsWith(articleMimeType));
-      CachedUrl reprintFramedCu = af.getRoleCu("reprintFramed");
-      if (isDefaultTarget) {
-	assertNotNull("reprintFramed role is null", reprintFramedCu);
-	String reprintFramedUrl = reprintFramedCu.getUrl();
-	assertEquals("html", FileUtil.getExtension(reprintFramedUrl));
-	assertEquals(reprintFramedUrl, cu.getUrl().replace("/reprint/",
-							   "/reprintframed/"));
-      } else {	
-	assertNull("reprintFramed role is not null", reprintFramedCu);
-      }
-      log.debug("count " + count + " url " + cu.getUrl() + " " + contentType);
-      count++;
-    }
-    log.debug("Article count is " + count);
-    assertEquals(expCount, count);
-  }
-
-  public void testArticleCountAndDefaultType() throws Exception {
-//    testArticleCountAndType("text/html", true, 35);
-  }
-
-  public void testArticleCountAndPdfType() throws Exception {
-//    testArticleCountAndType("application/pdf", false, 28);
   }
 }

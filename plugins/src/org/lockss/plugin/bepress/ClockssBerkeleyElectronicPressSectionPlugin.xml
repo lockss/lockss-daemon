@@ -1,0 +1,171 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressSectionPlugin</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.48.0</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>29</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Berkeley Electronic Press Section Plugin (CLOCKSS), Base URL %s, Journal Code %s, Journal Section %s, Volume %d&quot;, base_url, journal_abbr, journal_section, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Berkeley Electronic Press Section Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:BePress</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%s%s/(%s/)?lockss-volume%d.html$&quot;, base_url, journal_abbr, journal_section, volume</string>
+      <string>1,&quot;^%s%s/%s/([^/]+/)?vol%d&quot;, base_url, journal_abbr, journal_section, volume</string>
+      <string>1,&quot;^%s%s/%s/%d/&quot;, base_url, journal_abbr, journal_section, volume</string>
+      <string>1,&quot;^%scgi/viewcontent\.cgi\?.*context=%s&quot;, base_url, journal_abbr</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%s%s/%s/lockss-volume%d.html&quot;, base_url, journal_abbr, journal_section, volume</string>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <string>&quot;%s%s/lockss-volume%d.html&quot;, base_url, journal_abbr, volume</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>&quot;%s%s/%s&quot;, base_url, journal_abbr, journal_section</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>&quot;%s%s/%s/vol%d&quot;, base_url, journal_abbr, journal_section, volume</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>&quot;%s%s/%s/vol%d/iss%s&quot;, base_url, journal_abbr, journal_section, volume, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <string>&quot;%s%s/%s/vol%d/iss%s/art%s&quot;, base_url, journal_abbr, journal_section, volume, issue, article</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_abbr</key>
+        <displayName>Journal Abbreviation</displayName>
+        <description>Abbreviation for journal (often used as part of file names).</description>
+        <type>1</type>
+        <size>10</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_section</key>
+        <displayName>Journal Section</displayName>
+        <description>A section within the journal, e.g. &quot;topics&quot; or &quot;advances&quot;.</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>&quot;%scgi/login\.cgi&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.bepress.BePressHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_permission_checker_factory</string>
+    <string>org.lockss.plugin.bepress.BePressPermissionCheckerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.bepress.BePressArticleIteratorFactory$Section</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.bepress.BePressArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.bepress.BePressHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%scgi/viewcontent\.cgi\?.*context=%s&quot;, base_url, journal_abbr</string>
+    </list>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+</map>

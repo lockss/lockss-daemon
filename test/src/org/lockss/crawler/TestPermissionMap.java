@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionMap.java,v 1.14 2011-06-20 07:09:44 tlipkis Exp $
+ * $Id: TestPermissionMap.java,v 1.14.8.1 2012-06-20 00:02:51 nchondros Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class TestPermissionMap extends LockssTestCase {
     helper = new MyMockPermissionHelper();
 
     pMap = new PermissionMap(new MockArchivalUnit(),
-                             new MockPermissionHelper(),
+                             new MyMockPermissionHelper(),
 			     new ArrayList(), null);
     putStatus(pMap, permissionUrl1, PermissionRecord.PERMISSION_OK);
 
@@ -83,7 +83,7 @@ public class TestPermissionMap extends LockssTestCase {
 
   public void testConstructorNullAu() {
     try {
-      new PermissionMap(null, new MockPermissionHelper(), null, null);
+      new PermissionMap(null, new MyMockPermissionHelper(), null, null);
       fail("Should have thrown an IllegalArgumentException");
     } catch (IllegalArgumentException ex) {
       //expected
@@ -228,20 +228,22 @@ public class TestPermissionMap extends LockssTestCase {
     CrawlerStatus cStatus = new CrawlerStatus(MockArchivalUnit.newInited(),
 					      null, null);
 
-    public UrlCacher makeUrlCacher(String url) {
+    @Override
+    public UrlCacher makePermissionUrlCacher(String url) {
       MockUrlCacher muc =  new MockUrlCacher(url, new MockArchivalUnit());
       muc.setUncachedInputStream(new StringInputStream("Blah"));
       return muc;
     }
 
+    @Override
     public BufferedInputStream resetInputStream(BufferedInputStream is,
 						String url) throws IOException {
       is.reset();
       return is;
     }
 
-    public void refetchPermissionPage(String url) {
-      throw new UnsupportedOperationException("not implemented");
+    @Override
+    public void storePermissionPage(UrlCacher uc, BufferedInputStream is) {
     }
 
     public CrawlerStatus getCrawlerStatus() {

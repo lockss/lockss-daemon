@@ -16,6 +16,7 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = college_literature
+    attr[journal_id] = lit
     implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2003 ; College Literature Volume 30 ; 30 >
@@ -27,6 +28,7 @@
     au < released ; 2009 ; College Literature Volume 36 ; 36 >
     au < released ; 2010 ; College Literature Volume 37 ; 37 >
     au < ready ; 2011 ; College Literature Volume 38 ; 38 >
+    au < manifest ; 2012 ; College Literature Volume 39 ; 39 >
 
   }
 

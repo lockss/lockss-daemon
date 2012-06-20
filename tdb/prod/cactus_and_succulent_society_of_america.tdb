@@ -21,12 +21,30 @@
       au < down ; 2005 ; Cactus and Succulent Journal Volume 77 ; 77 >
       au < down ; 2006 ; Cactus and Succulent Journal Volume 78 ; 78 >
       au < down ; 2007 ; Cactus and Succulent Journal Volume 79 ; 79 >
+      
+    }
+{
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = casu
+      
+      au < doNotProcess ; 2005 ; Cactus and Succulent Journal Volume 77 ; 77 >
+      au < doNotProcess ; 2006 ; Cactus and Succulent Journal Volume 78 ; 78 >
+      au < doNotProcess ; 2007 ; Cactus and Succulent Journal Volume 79 ; 79 >
+      au < manifest ; 2008 ; Cactus and Succulent Journal Volume 80 ; 80 >
+      au < manifest ; 2009 ; Cactus and Succulent Journal Volume 81 ; 81 >
+      au < manifest ; 2010 ; Cactus and Succulent Journal Volume 82 ; 82 >
+      au < manifest ; 2011 ; Cactus and Succulent Journal Volume 83 ; 83 >
+      au < manifest ; 2012 ; Cactus and Succulent Journal Volume 84 ; 84 >
+      
+     
     }
 
   }
   
   {
-
+    
     title <
       name = Haseltonia ;
       issn = 1070-0048 ;
@@ -46,8 +64,19 @@
 
     {
 
-comment[0] = Atypon AUs
-
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = hase
+      
+      au < doNotProcess ; 2005 ; Haseltonia Volume 11 ; 11 >
+      au < doNotProcess ; 2006 ; Haseltonia Volume 12 ; 12 >
+      au < manifest ; 2007 ; Haseltonia Volume 13 ; 13 >
+      au < manifest ; 2008 ; Haseltonia Volume 14 ; 14 >
+      au < manifest ; 2009 ; Haseltonia Volume 15 ; 15 >
+      au < manifest ; 2010 ; Haseltonia Volume 16 ; 16 >
+      au < manifest ; 2011 ; Haseltonia Volume 17 ; 17 >
+      
     }
 
   }

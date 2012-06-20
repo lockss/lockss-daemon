@@ -1,5 +1,5 @@
 /*
- * $Id: PionArticleIteratorFactory.java,v 1.2 2010-12-11 00:59:14 thib_gc Exp $
+ * $Id: PionArticleIteratorFactory.java,v 1.2.12.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
@@ -82,40 +82,44 @@ public class PionArticleIteratorFactory implements ArticleIteratorFactory {
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(pdfCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-//      guessAbstract(af, pdfMat);
-//      guessReferences(af, pdfMat);
-//      guessRisCitation(af, pdfMat);
-//      guessSupplementaryMaterials(af, pdfMat);
+      
+      if(spec.getTarget() != MetadataTarget.Article)
+      {
+		guessAbstract(af, pdfMat);
+		guessReferences(af, pdfMat);
+		guessRisCitation(af, pdfMat);
+		guessSupplementaryMaterials(af, pdfMat);
+      }
       return af;
     }
     
-//    protected void guessAbstract(ArticleFiles af, Matcher mat) {
-//      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/abstract.cgi?id=$3"));
-//      if (absCu != null && absCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-//      }
-//    }
-//    
-//    protected void guessReferences(ArticleFiles af, Matcher mat) {
-//      CachedUrl refCu = au.makeCachedUrl(mat.replaceFirst("/ref.cgi?id=$3"));
-//      if (refCu != null && refCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_REFERENCES, refCu);
-//      }
-//    }
-//    
-//    protected void guessRisCitation(ArticleFiles af, Matcher mat) {
-//      CachedUrl risCu = au.makeCachedUrl(mat.replaceFirst("/ris.cgi?id=$3"));
-//      if (risCu != null && risCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_CITATION + "_" + "application/x-research-info-systems", risCu);
-//      }
-//    }
-//    
-//    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
-//      CachedUrl suppCu = au.makeCachedUrl(mat.replaceFirst("/misc.cgi?id=$3"));
-//      if (suppCu != null && suppCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppCu);
-//      }
-//    }
+    protected void guessAbstract(ArticleFiles af, Matcher mat) {
+      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/abstract.cgi?id=$3"));
+      if (absCu != null && absCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+      }
+    }
+    
+    protected void guessReferences(ArticleFiles af, Matcher mat) {
+      CachedUrl refCu = au.makeCachedUrl(mat.replaceFirst("/ref.cgi?id=$3"));
+      if (refCu != null && refCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_REFERENCES, refCu);
+      }
+    }
+    
+    protected void guessRisCitation(ArticleFiles af, Matcher mat) {
+      CachedUrl risCu = au.makeCachedUrl(mat.replaceFirst("/ris.cgi?id=$3"));
+      if (risCu != null && risCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_CITATION + "_" + "application/x-research-info-systems", risCu);
+      }
+    }
+    
+    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
+      CachedUrl suppCu = au.makeCachedUrl(mat.replaceFirst("/misc.cgi?id=$3"));
+      if (suppCu != null && suppCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppCu);
+      }
+    }
     
   }
 

@@ -18,10 +18,13 @@
     >
 
     param[journal_dir] = journal_of_slavic_linguistics
+    attr[journal_id] = jsl
 
     au < released ; 2008 ; Journal of Slavic Linguistics Volume 16 ; 16 >
     au < released ; 2009 ; Journal of Slavic Linguistics Volume 17 ; 17 >
     au < ready ; 2010 ; Journal of Slavic Linguistics Volume 18 ; 18 >
+    au < ready ; 2011 ; Journal of Slavic Linguistics Volume 19 ; 19 >
+    au < expected ; 2012 ; Journa of Slavic Linguistics Volume 20 ; 20 >
 
   }
 
@@ -35,6 +38,7 @@
     >
 
     param[journal_dir] = kritika
+    attr[journal_id] = kri
 
     au < released ; 2000 ; Kritika: Explorations in Russian and Eurasian History Volume 1 ; 1 >
     au < released ; 2001 ; Kritika: Explorations in Russian and Eurasian History Volume 2 ; 2 >
@@ -48,6 +52,7 @@
     au < released ; 2009 ; Kritika: Explorations in Russian and Eurasian History Volume 10 ; 10 >
     au < released ; 2010 ; Kritika: Explorations in Russian and Eurasian History Volume 11 ; 11 >
     au < ready ; 2011 ; Kritika: Explorations in Russian and Eurasian History Volume 12 ; 12 >
+    au < manifest ; 2012 ; Kritika: Explorations in Russian and Eurasian History Volume 13 ; 13 >
 
   }
 
@@ -59,11 +64,30 @@
       issnl = 1526-1476
     >
 
-    param[journal_dir] = 
-    comment[upcoming] = the journal is upcoming in muse
+    param[journal_dir] = pushkin_review
+    attr[journal_id] = pnr
+    
+    au < ready ; 2012 ; Pushkin Review Volume 14 ; 14 >
 
   }
   
+  {
+  
+    title <
+      name = Region: Regional Studies of Russia, Eastern Europe, and Central Asia ;
+      issn = 2166-4307 ;
+      eissn = 2165-0659 ;
+      issnl = 2166-4307
+    >
+   
+    param[journal_dir] = region
+    attr[journal_id] = reg
+    comment[notReady] = 4/9/2012sc no Roundup issue yet. plugin issue?
+
+    au < notReady ; 2012 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 1 ; 1 >
+
+  }
+
   {
   
     title <
@@ -74,10 +98,13 @@
     >
    
     param[journal_dir] = serbian_studies
+    attr[journal_id] = ser
 
-    au < manifest ; 2006 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 20 ; 20 >
-    au < manifest ; 2007 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 21 ; 21 >
-    au < manifest ; 2008 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 22 ; 22 >
+    au < ready ; 2006 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 20 ; 20 >
+    au < ready ; 2007 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 21 ; 21 >
+    au < ready ; 2008 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 22 ; 22 >
+    au < manifest ; 2009 ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 23 ; 23 >
+
 
   }
 

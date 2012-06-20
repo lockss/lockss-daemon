@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.35 2011-11-15 01:30:34 barry409 Exp $
+ * $Id: TestV3Poller.java,v 1.35.2.1 2012-06-20 00:03:08 nchondros Exp $
  */
 
 /*
@@ -264,7 +264,7 @@ public class TestV3Poller extends LockssTestCase {
   double invitationWeight(long lastInvite, long lastMsg)
       throws Exception {
     String id = "tcp:[1.2.3.4]:4321";
-    V3Poller poller = makeV3Poller("key");
+    V3Poller poller = makeV3Poller("testing poll key");
     PeerIdentity pid = findPeerIdentity(id);
     idMgr.findLcapIdentity(pid, id);
     PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
@@ -314,7 +314,7 @@ public class TestV3Poller extends LockssTestCase {
 				  V3Poller.PARAM_INVITATION_WEIGHT_AT_RISK,
 				  "3.0");
 
-    V3Poller poller = makeV3Poller("key");
+    V3Poller poller = makeV3Poller("testing poll key");
     PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
     status.setLastMessageTime(lastMsg);
     status.setLastPollInvitationTime(lastInvite);
@@ -383,8 +383,9 @@ public class TestV3Poller extends LockssTestCase {
       (byte[][])PrivilegedAccessor.invokeMethod(v3Poller, "initHasherByteArrays");
     assertEquals(initBytes.length, innerCircle.size() + 1); // one for plain hash
     byte[][] compareBytes = new byte[innerCircle.size() + 1][];
-    compareBytes[0] = new byte[0]; // Plain hash
-    int ix = 1;
+    compareBytes[innerCircle.size()] =
+      new byte[0]; // Plain hash last
+    int ix = 0;
     for (Iterator it = innerCircle.values().iterator(); it.hasNext();) {
       ParticipantUserData proxy = (ParticipantUserData)it.next();
       compareBytes[ix++] =
@@ -424,8 +425,8 @@ public class TestV3Poller extends LockssTestCase {
 
   private static int hbVersionNum = 1;
   private void addVersion(HashBlock block, String content) throws Exception {
-    MessageDigest[] digests = new MessageDigest[5];  // 1 plain hash, plus 4 voters
-    // fake "Plain Hash"
+    MessageDigest[] digests = new MessageDigest[5];  // 4 voters plus plain hash
+    // fake "Nonced Hash" for voter 0
     digests[0] = MessageDigest.getInstance("SHA1");
     digests[0].update(content.getBytes());
     // fake "Nonced Hash" for voter 1
@@ -437,7 +438,7 @@ public class TestV3Poller extends LockssTestCase {
     // fake "Nonced Hash" for voter 3
     digests[3] = MessageDigest.getInstance("SHA1");
     digests[3].update(content.getBytes());
-    // fake "Nonced Hash" for voter 4
+    // fake "Plain Hash" last
     digests[4] = MessageDigest.getInstance("SHA1");
     digests[4].update(content.getBytes());
     
@@ -483,7 +484,7 @@ public class TestV3Poller extends LockssTestCase {
   }
   
   public void testIsPeerEligible() throws Exception {
-    V3Poller v3Poller = makeV3Poller("key");
+    V3Poller v3Poller = makeV3Poller("testing poll key");
     assertFalse(v3Poller.isPeerEligible(pollerId));
     PeerIdentity p1 = findPeerIdentity("TCP:[127.0.0.1]:5009");
     PeerIdentity p2 = findPeerIdentity("TCP:[1.2.3.4]:5009");
@@ -511,7 +512,7 @@ public class TestV3Poller extends LockssTestCase {
     return v3Poller.getAvailablePeers().keySet();
   }
 
-  public void testgetAvailablePeers() throws Exception {
+  public void testGetAvailablePeers() throws Exception {
     PeerIdentity p1 = findPeerIdentity("TCP:[10.1.0.100]:9729");
     PeerIdentity p2 = findPeerIdentity("TCP:[10.1.0.101]:9729");
 
@@ -521,7 +522,7 @@ public class TestV3Poller extends LockssTestCase {
     }	
     assertTrue(noAuSet.contains(p2));
 
-    V3Poller v3Poller = makeV3Poller("key");
+    V3Poller v3Poller = makeV3Poller("testing poll key");
     Collection avail = getAvailablePeers(v3Poller);
     log.info("avail: " + avail);
 	     
@@ -536,16 +537,16 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(exp, avail);
   }
   
-  public void testgetAvailablePeersInitialPeersOnly() throws Exception {
+  public void testGetAvailablePeersInitialPeersOnly() throws Exception {
     ConfigurationUtil.addFromArgs(V3Poller.PARAM_ENABLE_DISCOVERY, "false");
     findPeerIdentity("TCP:[10.1.0.100]:9729");
     findPeerIdentity("TCP:[10.1.0.101]:9729");
-    V3Poller v3Poller = makeV3Poller("key");
+    V3Poller v3Poller = makeV3Poller("testing poll key");
     assertNotNull(getAvailablePeers(v3Poller));
     assertEquals(6, getAvailablePeers(v3Poller).size());
   }
   
-  public void testgetAvailablePeersDoesNotIncludeLocalIdentity() throws Exception {
+  public void testGetAvailablePeersDoesNotIncludeLocalIdentity() throws Exception {
     ConfigurationUtil.addFromArgs(V3Poller.PARAM_ENABLE_DISCOVERY, "false");
     // append our local config to the initial Peer List
     List initialPeersCopy = new ArrayList(initialPeers);
@@ -554,7 +555,7 @@ public class TestV3Poller extends LockssTestCase {
     ConfigurationUtil.addFromArgs(IdentityManagerImpl.PARAM_INITIAL_PEERS,
                                   StringUtil.separatedString(initialPeersCopy, ";"));
     
-    V3Poller v3Poller = makeV3Poller("key");
+    V3Poller v3Poller = makeV3Poller("testing poll key");
     assertNotNull(getAvailablePeers(v3Poller));
     // Sanity check
     assertTrue(findPeerIdentity(localPeerKey).isLocalIdentity());
@@ -580,7 +581,7 @@ public class TestV3Poller extends LockssTestCase {
   }
 
   public void testCountParticipatingPeers() throws Exception {
-    MyV3Poller poller = makeV3Poller("testkey");
+    MyV3Poller poller = makeV3Poller("testing poll key");
     List<String> somePeers =
       ListUtil.list(initialPeers.get(0),
 		    initialPeers.get(1),
@@ -605,7 +606,7 @@ public class TestV3Poller extends LockssTestCase {
 		  ""+invitationMult);
     ConfigurationUtil.addFromProps(p);
 
-    MyV3Poller poller = makeV3Poller("testkey");
+    MyV3Poller poller = makeV3Poller("testing poll key");
     
     List<String> somePeers =
       ListUtil.list(initialPeers.get(0),
@@ -657,7 +658,7 @@ public class TestV3Poller extends LockssTestCase {
 
   public void testTallyBlocksSucceedsOnExtraFileEdgeCase() throws Exception {
 
-    V3Poller v3Poller = makeV3Poller("key");
+    V3Poller v3Poller = makeV3Poller("testing poll key");
     
     PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
     PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
@@ -703,139 +704,98 @@ public class TestV3Poller extends LockssTestCase {
                                                       voter2_voteblocks));
     v3Poller.theParticipants.put(id3, makeParticipant(id3, v3Poller,
                                                       voter3_voteblocks));
-    
+    v3Poller.lockParticipants();
     // Finally, let's test.
     
-    BlockTally tally;
+    BlockTally<ParticipantUserData> tally;
     
-    tally = new BlockTally(2); // Quorum = 3
-    v3Poller.tallyBlock(hashblocks[0], tally);
-    assertEquals(BlockTally.RESULT_WON, tally.result);
+    // The results expected are based on a quorum of 3.
+    assertEquals(3, v3Poller.getQuorum());
+    assertEquals(75, v3Poller.getVoteMargin());
+
+    tally = v3Poller.tallyBlock(hashblocks[0]);
+    assertEquals(BlockTally.Result.WON, tally.getTallyResult(3, 75));
+    assertContains(tally.getAgreeVoters(), v3Poller.theParticipants.get(id1));
+    assertContains(tally.getAgreeVoters(), v3Poller.theParticipants.get(id2));
+    assertContains(tally.getAgreeVoters(), v3Poller.theParticipants.get(id3));
     
-    tally = new BlockTally(2); // Quorum = 3
-    v3Poller.tallyBlock(hashblocks[1], tally);
-    assertEquals(BlockTally.RESULT_LOST_POLLER_ONLY_BLOCK, tally.result);
+    tally = v3Poller.tallyBlock(hashblocks[1]);
+    assertEquals(BlockTally.Result.LOST_POLLER_ONLY_BLOCK,
+		 tally.getTallyResult(3, 75));
+    assertContains(tally.getPollerOnlyBlockVoters(),
+		   v3Poller.theParticipants.get(id1));
+    assertContains(tally.getPollerOnlyBlockVoters(),
+		   v3Poller.theParticipants.get(id2));
+    assertContains(tally.getPollerOnlyBlockVoters(),
+		   v3Poller.theParticipants.get(id3));
     
-    tally = new BlockTally(2); // Quorum = 3
-    v3Poller.tallyBlock(hashblocks[2], tally);
-    assertEquals(BlockTally.RESULT_WON, tally.result);
+    tally = v3Poller.tallyBlock(hashblocks[2]);
+    assertEquals(BlockTally.Result.WON, tally.getTallyResult(3, 75));
+    assertContains(tally.getAgreeVoters(), v3Poller.theParticipants.get(id1));
+    assertContains(tally.getAgreeVoters(), v3Poller.theParticipants.get(id2));
+    assertContains(tally.getAgreeVoters(), v3Poller.theParticipants.get(id3));
+
+    assertEquals("2/0/1/1/0/0",
+		 v3Poller.theParticipants.get(id1).getVoteCounts().votes());
+    assertEquals("2/0/1/1/0/0",
+		 v3Poller.theParticipants.get(id2).getVoteCounts().votes());
+    // This voter sees a "neither" URL, since neither it nor the
+    // poller has foo2a.
+    assertEquals("2/0/1/0/1/0",
+		 v3Poller.theParticipants.get(id3).getVoteCounts().votes());
   }
   
-  public void testCheckBlockWin() throws Exception {
-
-    V3Poller v3Poller = makeV3Poller("key");
-    
-    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
-    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
-    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
-    PeerIdentity id4 = findPeerIdentity("TCP:[127.0.0.1]:8993");
-    
-    
-    String url = "http://www.test.com/example.txt";
-    
-    String n1v1 = "This is node 1, version 1.  It's the oldest.";
-    String n1v2 = "This is node 2, version 2.  It's slightly older.";
-    String n1v3 = "This is node 1, version 3.  This is the current version!";
-
-    // Our hash block only has v1 and v3
-    HashBlock hb1 = makeHashBlock(url);
-    addVersion(hb1, n1v1);
-    addVersion(hb1, n1v3);
-
-    BlockTally blockTally = new BlockTally(3);  // quorum of 3
-
-    // Should agree on n1v1.
-    VoteBlock vb1 = makeVoteBlock(url);
-    addVersion(vb1, n1v1);
-    assertDoesNotContain(blockTally.getAgreeVoters(), id1);
-    v3Poller.compareBlocks(id1, 1, vb1, hb1, blockTally);
-    assertContains(blockTally.getAgreeVoters(), id1);
-
-    // Should agree on n1v3.
-    VoteBlock vb2 = makeVoteBlock(url);
-    addVersion(vb2, n1v1);
-    addVersion(vb2, n1v3);
-    assertDoesNotContain(blockTally.getAgreeVoters(), id3);
-    v3Poller.compareBlocks(id2, 2, vb2, hb1, blockTally);
-    assertContains(blockTally.getAgreeVoters(), id2);
-    
-    // Should agree on n1v3.
-    VoteBlock vb3 = makeVoteBlock(url);
-    addVersion(vb3, n1v2);
-    addVersion(vb3, n1v3);
-    assertDoesNotContain(blockTally.getAgreeVoters(), id3);
-    v3Poller.compareBlocks(id3, 3, vb3, hb1, blockTally);
-    assertContains(blockTally.getAgreeVoters(), id3);
-    
-    // Should not agree on any version.
-    VoteBlock vb4 = makeVoteBlock(url);
-    addVersion(vb4, n1v2);
-    assertDoesNotContain(blockTally.getAgreeVoters(), id4);
-    v3Poller.compareBlocks(id4, 4, vb4, hb1, blockTally);
-    assertDoesNotContain(blockTally.getAgreeVoters(), id4);
-    
-    blockTally.tallyVotes();
-    
-    assertEquals(blockTally.getTallyResult(), BlockTally.RESULT_WON);
-  }
-  
-  public void testCheckBlockLose() throws Exception {
-    V3Poller v3Poller = makeV3Poller("key");
-    
-    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
-    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
-    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
-    PeerIdentity id4 = findPeerIdentity("TCP:[127.0.0.1]:8993");
-    
-    
-    String url = "http://www.test.com/example.txt";
-    
-    String n1v1 = "This is node 1, version 1.  It's the oldest.";
-    String n1v2 = "This is node 2, version 2.  It's slightly older.";
-    String n1v3 = "This is node 1, version 3.  This is the current version!";
-
-    // Our hash block only has v1 and v3
-    HashBlock hb1 = makeHashBlock(url);
-    addVersion(hb1, n1v1);
-    addVersion(hb1, n1v3);
-
-    BlockTally blockTally = new BlockTally(3);  // quorum of 3
-
-    // Should agree on n1v1.
-    VoteBlock vb1 = makeVoteBlock(url);
-    addVersion(vb1, n1v1);
-    assertDoesNotContain(blockTally.getAgreeVoters(), id1);
-    v3Poller.compareBlocks(id1, 1, vb1, hb1, blockTally);
-    assertContains(blockTally.getAgreeVoters(), id1);
-
-    // Should not agree on any version.
-    VoteBlock vb2 = makeVoteBlock(url);
-    addVersion(vb2, n1v2);
-    assertDoesNotContain(blockTally.getAgreeVoters(), id3);
-    v3Poller.compareBlocks(id2, 2, vb2, hb1, blockTally);
-    assertDoesNotContain(blockTally.getAgreeVoters(), id2);
-    
-    // Should not agree on any version.
-    VoteBlock vb3 = makeVoteBlock(url);
-    addVersion(vb3, n1v2);
-    assertDoesNotContain(blockTally.getAgreeVoters(), id3);
-    v3Poller.compareBlocks(id3, 3, vb3, hb1, blockTally);
-    assertDoesNotContain(blockTally.getAgreeVoters(), id3);
-    
-    // Should not agree on any version.
-    VoteBlock vb4 = makeVoteBlock(url);
-    addVersion(vb4, n1v2);
-    assertDoesNotContain(blockTally.getAgreeVoters(), id4);
-    v3Poller.compareBlocks(id4, 4, vb4, hb1, blockTally);
-    assertDoesNotContain(blockTally.getAgreeVoters(), id4);
-    
-    blockTally.tallyVotes();
-    
-    assertEquals(BlockTally.RESULT_LOST, blockTally.getTallyResult());
+  public void testBlockCompare() throws Exception {
+//
+//    V3Poller v3Poller = makeV3Poller("testing poll key");
+//    
+//    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+//    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+//    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
+//    PeerIdentity id4 = findPeerIdentity("TCP:[127.0.0.1]:8993");
+//    
+//    String url = "http://www.test.com/example.txt";
+//    
+//    String n1v1 = "This is node 1, version 1.  It's the oldest.";
+//    String n1v2 = "This is node 1, version 2.  It's slightly older.";
+//    String n1v3 = "This is node 1, version 3.  This is the current version!";
+//
+//    // Our hash block only has v1 and v3, not v2
+//    HashBlock hb1 = makeHashBlock(url);
+//    addVersion(hb1, n1v1);
+//    addVersion(hb1, n1v3);
+//    UrlTallier.HashBlockComparer comparer = 
+//      new UrlTallier.HashBlockComparer(hb1);
+//
+//    // Should agree on n1v1.
+//    VoteBlock vb1 = makeVoteBlock(url);
+//    addVersion(vb1, n1v1);
+//    // NOTE: The participantIndex passed to compare is not relevent:
+//    // All the nonces in the HashBlock are the same, so the expected
+//    // hashes are the same for each participant.
+//    assertTrue(comparer.compare(vb1, 0));
+//
+//    // Should agree on n1v1 and n1v3.
+//    VoteBlock vb2 = makeVoteBlock(url);
+//    addVersion(vb2, n1v1);
+//    addVersion(vb2, n1v3);
+//    assertTrue(comparer.compare(vb2, 1));
+//    
+//    // Should agree on n1v3.
+//    VoteBlock vb3 = makeVoteBlock(url);
+//    addVersion(vb3, n1v2);
+//    addVersion(vb3, n1v3);
+//    assertTrue(comparer.compare(vb3, 2));
+//    
+//    // Should not agree on any version, since the HashBlock doesn't
+//    // have n1v2.
+//    VoteBlock vb4 = makeVoteBlock(url);
+//    addVersion(vb4, n1v2);
+//    assertFalse(comparer.compare(vb4, 3));
   }
   
   public void testSignalAuEvent() throws Exception {
-    MyV3Poller poller = makeV3Poller("testkey");
+    MyV3Poller poller = makeV3Poller("testing poll key");
     pluginMgr.registerAuEventHandler(new MyAuEventHandler());
     List<String> urls = ListUtil.list("url1", "foo2");
     List<PollerStateBean.Repair> rep = new ArrayList<PollerStateBean.Repair>();

@@ -1,10 +1,10 @@
 /*
- * $Id: BatchAuConfig.java,v 1.43 2011-10-03 05:55:10 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.43.4.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,7 +39,6 @@ import java.util.List;
 import javax.servlet.*;
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.collections.OrderedMap;
 import org.apache.commons.collections.map.LinkedMap;
 import org.apache.commons.lang.mutable.*;
 import org.lockss.config.*;
@@ -320,7 +319,7 @@ public class BatchAuConfig extends LockssServlet {
 							KEY_TITLE_SET,
 							doGray,
 							isAnySelectable,
-							"Select Titles",
+							"Select AUs",
 							ACTION_SELECT_AUS,
 							buttonNumber, 10);
       submitButtonNumber = buttonNumber.intValue();
@@ -328,23 +327,17 @@ public class BatchAuConfig extends LockssServlet {
       if (isAnySelectable.booleanValue()) {
 	// Display set chooser
 	ServletUtil.layoutExplanationBlock(page,
-					   "Select one or more collections of titles to " + verb.word + ", then click \"Select Titles\".");
+					   "Select one or more collections of AUs to " + verb.word + ", then click \"Select AUs\".");
 	ServletUtil.layoutChooseSets(srvURL(myServletDescr()), page,
 				     chooseSets, ACTION_TAG, KEY_VERB, verb);
       } else {
 	// Set chooser not needed
-	String msg = "All titles in all predefined collections of titles " +
+	String msg = "All AUs in all predefined collections of AUs " +
 	  "already exist on this LOCKSS box.";
 	ServletUtil.layoutExplanationBlock(page, msg);
       }
     }
-    // End page
-    if (action != null) {
-      ServletUtil.layoutBackLink(page,
-          srvLink(myServletDescr(), "Back to Journal Configuration"));
-    }
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   private void chooseAus() throws IOException {
@@ -475,7 +468,10 @@ public class BatchAuConfig extends LockssServlet {
     String[] auids = req.getParameterValues(KEY_AUID);
     String defaultRepo = null;
     String defRepoId = getParameter(KEY_DEFAULT_REPO);
-    if (!StringUtil.isNullString(defRepoId) && repoMap != null) {
+    if (StringUtil.isNullString(defRepoId)) {
+      defaultRepo =
+	remoteApi.findLeastFullRepository(remoteApi.getRepositoryMap());
+    } else if (repoMap != null) {
       try {
 	int n = Integer.parseInt(defRepoId);
 	defaultRepo = (String)repoMap.get(n - 1);
@@ -637,8 +633,7 @@ public class BatchAuConfig extends LockssServlet {
       ServletUtil.layoutBackLink(page,
           srvLink(myServletDescr(), "Back to Journal Configuration"));
     }
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    super.endPage(page);
   }
 
   // make me a link in nav table if not on initial journal config page

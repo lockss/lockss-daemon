@@ -9,7 +9,24 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>33</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>3</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -91,7 +108,13 @@
 	    <string>&quot;%s%s/journal/v%s/n%s/full/%s.%d.%s.html&quot;, base_url, journal_id, volume_name, issue, journal_id, year, article</string>
 	  </entry>
   	</map>
-  </entry>    
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%s%s/journal/v%s/[^/]+/(full|pdf)/[^/]+\.(html|pdf)$&quot;, base_url, journal_id, volume_name</string>
+    </list>
+  </entry>
   <entry>
     <string>plugin_config_props</string>
     <list>
@@ -135,5 +158,14 @@
   <entry>
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.nature.NaturePublishingGroupLoginPageChecker</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
   </entry>
 </map>

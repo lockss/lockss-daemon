@@ -18,25 +18,41 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0031-8655
   
-      au < superseded ; 2000 ; Photochemistry and Photobiology Volume 71 ; 71 >
+      au < down ; 2000 ; Photochemistry and Photobiology Volume 71 ; 71 >
       au < doNotProcess ; 2000 ; Photochemistry and Photobiology Volume 72 ; 72 >
-      au < superseded ; 2001 ; Photochemistry and Photobiology Volume 73 ; 73 >
-      au < superseded ; 2001 ; Photochemistry and Photobiology Volume 74 ; 74 >
-      au < superseded ; 2002 ; Photochemistry and Photobiology Volume 75 ; 75 >
+      au < down ; 2001 ; Photochemistry and Photobiology Volume 73 ; 73 >
+      au < down ; 2001 ; Photochemistry and Photobiology Volume 74 ; 74 >
+      au < down ; 2002 ; Photochemistry and Photobiology Volume 75 ; 75 >
       au < doNotProcess ; 2002 ; Photochemistry and Photobiology Volume 76 ; 76 >
-      au < superseded ; 2003 ; Photochemistry and Photobiology Volume 77 ; 77 >
-      au < superseded ; 2003 ; Photochemistry and Photobiology Volume 78 ; 78 >
-      au < superseded ; 2004 ; Photochemistry and Photobiology Volume 79 ; 79 >
-      au < superseded ; 2004 ; Photochemistry and Photobiology Volume 80 ; 080 >
+      au < down ; 2003 ; Photochemistry and Photobiology Volume 77 ; 77 >
+      au < down ; 2003 ; Photochemistry and Photobiology Volume 78 ; 78 >
+      au < down ; 2004 ; Photochemistry and Photobiology Volume 79 ; 79 >
+      au < down ; 2004 ; Photochemistry and Photobiology Volume 80 ; 080 >
       au < doNotProcess ; 2004 ; Photochemistry and Photobiology Volume 80 ; 80 >
-      au < superseded ; 2005 ; Photochemistry and Photobiology Volume 81 ; 81 >
-      au < superseded ; 2006 ; Photochemistry and Photobiology Volume 82 ; 82 >
+      au < down ; 2005 ; Photochemistry and Photobiology Volume 81 ; 81 >
+      au < down ; 2006 ; Photochemistry and Photobiology Volume 82 ; 82 >
     }
 
     {
 
-comment[0] = Atypon AUs
-
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = phot
+      
+      au < doNotProcess ; 2000 ; Photochemistry and Photobiology Volume 71 ; 71 >
+      au < doNotProcess ; 2000 ; Photochemistry and Photobiology Volume 72 ; 72 >
+      au < doNotProcess ; 2001 ; Photochemistry and Photobiology Volume 73 ; 73 >
+      au < doNotProcess ; 2001 ; Photochemistry and Photobiology Volume 74 ; 74 >
+      au < doNotProcess ; 2002 ; Photochemistry and Photobiology Volume 75 ; 75 >
+      au < doNotProcess ; 2002 ; Photochemistry and Photobiology Volume 76 ; 76 >
+      au < doNotProcess ; 2003 ; Photochemistry and Photobiology Volume 77 ; 77 >
+      au < doNotProcess ; 2003 ; Photochemistry and Photobiology Volume 78 ; 78 >
+      au < doNotProcess ; 2004 ; Photochemistry and Photobiology Volume 79 ; 79 >
+      au < doNotProcess ; 2004 ; Photochemistry and Photobiology Volume 80 ; 80 >
+      au < doNotProcess ; 2005 ; Photochemistry and Photobiology Volume 81 ; 81 >
+      au < doNotProcess ; 2006 ; Photochemistry and Photobiology Volume 82 ; 82 >
+ 
     }
 
   }

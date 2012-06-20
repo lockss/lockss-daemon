@@ -11,6 +11,31 @@
   {
   
     title <
+      name = Arctic (Disaster Recovery Test) ;
+      issn = 0004-0843
+    >
+    
+    param[base_url] = http://136.159.25.41/ojstest/
+    param[journal_id] = arctic
+
+    au < released ; 1948 ; Arctic (Disaster Recovery Test) Volume 1 ; 1948 >
+    au < released ; 1949 ; Arctic (Disaster Recovery Test) Volume 2 ; 1949 >
+    au < released ; 1950 ; Arctic (Disaster Recovery Test) Volume 3 ; 1950 >
+    
+    au < released ; 1954 ; Arctic (Disaster Recovery Test) Volume 7 ; 1954 >
+    
+    au < released ; 1958 ; Arctic (Disaster Recovery Test) Volume 11 ; 1958 >
+    
+    au < released ; 1989 ; Arctic (Disaster Recovery Test) Volume 42 ; 1989 >
+    
+    au < released ; 2003 ; Arctic (Disaster Recovery Test) Volume 56 ; 2003 >
+    au < released ; 2004 ; Arctic (Disaster Recovery Test) Volume 57 ; 2004 >
+
+  }
+  
+  {
+  
+    title <
       name = ARIEL: A Review of International English Literature ;
       issn = 1920-1222
     >

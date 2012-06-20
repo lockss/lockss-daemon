@@ -1,5 +1,5 @@
 /*
- * $Id: AuHealthMetric.java,v 1.5 2011-09-01 06:09:25 tlipkis Exp $
+ * $Id: AuHealthMetric.java,v 1.5.4.1 2012-06-20 00:02:58 nchondros Exp $
  */
 
 /*
@@ -129,11 +129,86 @@ public class AuHealthMetric {
   private static String healthExpr = DEFAULT_HEALTH_EXPR;
   private static double inclusionThreshold = DEFAULT_INCLUSION_THRESHOLD;
   private static ScriptEngineManager sem;
-  private static boolean outOfRangeValueSeen = false;
+  // This flag is made volatile so changes to its value can be seen instantly
+  // in other threads.
+  private static volatile boolean outOfRangeValueSeen = false;
 
   private Bindings bindings;
   private ArchivalUnit au;
   private AuState aus;
+
+  /** Whether the health metric's engine can compile the script for efficiency. */
+  static boolean isCompilable;
+  /** Whether the health metric's engine can be used thread-safely. */
+  static boolean isThreadSafe;
+  /**
+   * A statically cached ScriptEngine. Will hold an engine if the engine
+   * implementation as reported by the factory is thread-safe; otherwise the
+   * variable will be null.
+   */
+  private static ScriptEngine theOneTrueEngine = null;
+  /**
+   * A statically cached, compiled version of the script. If the engine is not
+   * thread-safe, or is incapable of compiling the script, this will be null.
+   */
+  private static CompiledScript compiledScript = null;
+  /**
+   * Set flags describing the capabilities of the script engine, and compile
+   * the script if possible.
+   */
+  static {
+    if (!isSupported() || !setEngineProperties()) {
+      // Reset everything if scripting is not supported
+      isCompilable = false;
+      isThreadSafe = false;
+      theOneTrueEngine = null;
+      compiledScript = null;
+    }
+  }
+
+  /**
+   * Set the static engine, and if it is thread safe and supports compilation,
+   * use it to compile the script. If the engine is null or is not thread safe,
+   * the method returns <tt>false</tt> as the engine cannot be used safely.
+   * 
+   * @return <tt>true</tt> if a thread safe engine was set up successfully;
+   */
+  private static synchronized boolean setEngineProperties() {
+    // Set a single static engine and establish whether it is thread-safe,
+    // and whether scripts can be compiled.
+    ScriptEngineManager sem = new ScriptEngineManager();
+    theOneTrueEngine = sem.getEngineByName(scriptLanguage);
+    // Return false if an engine could not be retrieved
+    if (theOneTrueEngine==null) return false;;
+    Object threading = theOneTrueEngine.getFactory().getParameter("THREADING");
+    // The engine is thread-safe if the threading parameter is non-null.
+    // Note however that if there is any state in the script, then we require
+    // at least "THREAD-ISOLATED". See
+    // http://download.oracle.com/javase/6/docs/api/javax/script/ScriptEngineFactory.html#getParameter(java.lang.String)
+    isThreadSafe = threading != null;
+    // The script can be compiled if scripting is supported and the engine
+    // implements Compilable.
+    isCompilable = isThreadSafe && theOneTrueEngine instanceof Compilable;
+
+    // If the engine is not thread safe, we can't use a statically cached
+    // instance, nor can we cache a compile script which uses the engine.
+    if (!isThreadSafe) return false;
+    // Compile the script if this engine supports it
+    if (isCompilable) compileScript();
+    return true;
+  }
+
+  /**
+   * Compile the script using the engine, if possible. If there is an exception,
+   * the compiledScript variable is set to null.
+   */
+  private static synchronized void compileScript() {
+    try {
+      compiledScript = ((Compilable) theOneTrueEngine).compile(healthExpr);
+    } catch (Exception e) {
+      compiledScript = null;
+    }
+  }
 
   
   /** Create and return an AuHealthMetric for the given AU */
@@ -154,6 +229,17 @@ public class AuHealthMetric {
   }
   
   /**
+   * Whether an ArchivalUnit's health is above the inclusion threshold.
+   * @param au an ArchivalUnit
+   * @return <tt>true</tt> if the AU's health is above or equal to the threshold
+   * @throws HealthUnavailableException if there was an error
+   */
+  public static boolean isHealthy(ArchivalUnit au)
+      throws HealthUnavailableException {
+    return getHealth(au) >= inclusionThreshold;
+  }
+
+  /**
    * Get the health of an ArchivalUnit.
    * @return the calculated health of the AU
    * @throws HealthUnavailableException if there was an error
@@ -163,8 +249,12 @@ public class AuHealthMetric {
       throw new HealthValueException("Health evaluation script disabled " +
 				     "because it previously returned " +
 				     "out-of-range value");
-    }      
+    }
+    long s = System.currentTimeMillis();
     double res = eval();
+    log.debug(String.format("Preserved AU %s health metric eval took %sms",
+        au.getName(), (System.currentTimeMillis()-s)
+    ));
     if (res >= 0.0 && res <= 1.0) {
       return res;
     } else {
@@ -210,7 +300,7 @@ public class AuHealthMetric {
   public static boolean isSupported() {
     return PlatformUtil.getInstance().hasScriptingSupport();
   }
-  
+
   /** Called by org.lockss.config.MiscConfig
    */
   public static void setConfig(Configuration config,
@@ -229,6 +319,9 @@ public class AuHealthMetric {
 	healthExpr = newExpr;
 	outOfRangeValueSeen = false;
       }
+      // TODO: I'm not clear whether this is the right place to run this? (NM)
+      // Note that it is run in a static initialiser too
+      setEngineProperties();
     }
   }
 
@@ -318,28 +411,47 @@ public class AuHealthMetric {
     if (StringUtil.isNullString(healthExpr)) {
       throw new HealthScriptException("No health metric script is defined");
     }
-    ScriptEngine engine = getEngine();
-    if (engine == null) {
-      throw new HealthScriptException("No script engine available for " +
-				      scriptLanguage);
-    }
     Object val = null;
     try {
-      val = engine.eval(healthExpr, getBindings());
+      val = evalExpression();
       log.debug3("val: " + val);
       if (val == null) {
 	log.warning("Script returned null");
 	throw new HealthValueException("Script returned null");
       }
       return ((Number)val).doubleValue();
-    } catch (ScriptException e) {
-      log.warning("Script error", e);
-      throw new HealthScriptException(e);
     } catch (ClassCastException e) {
       String msg ="Script returned wrong type ("
 	+ val.getClass().getName() + "): " + val;
       log.warning(msg, e);
       throw new HealthValueException(msg, e);
+    }
+  }
+
+  /**
+   * Evaluate the script expression using the available method, that is, by
+   * retrieving a new engine instance or by using the compiled script.
+   * @return the result of the expression evaluation
+   * @throws HealthScriptException
+   */
+  Object evalExpression() throws HealthScriptException {
+    try {
+      // Retrieve a new engine, or use the statically cached instance
+      ScriptEngine engine = theOneTrueEngine==null ? getEngine() : theOneTrueEngine;
+      if (engine == null) {
+        throw new HealthScriptException("No script engine available for " +
+            scriptLanguage);
+      }
+
+      // eval using the compiled script if possible
+      if (isCompilable) {
+        return compiledScript.eval(getBindings());
+      } else {
+        return engine.eval(healthExpr, getBindings());
+      }
+    } catch (ScriptException e) {
+      log.warning("Script error", e);
+      throw new HealthScriptException(e);
     }
   }
 
@@ -360,7 +472,7 @@ public class AuHealthMetric {
     }
   }
 
-  /** The health metric evaliation script got an error. */
+  /** The health metric evaluation script got an error. */
   public static class HealthScriptException extends HealthUnavailableException {
     HealthScriptException() {
       super();
@@ -376,7 +488,7 @@ public class AuHealthMetric {
     }
   }
 
-  /** The health metric evaliation script returned an illegal value. */
+  /** The health metric evaluation script returned an illegal value. */
   public static class HealthValueException extends HealthUnavailableException {
     HealthValueException() {
       super();
@@ -405,8 +517,15 @@ public class AuHealthMetric {
 	log.info(" nms: " + fact.getNames());
 	log.info(" lng: " + fact.getLanguageName());
 	log.info(" ext: " + fact.getExtensions());
+        log.info(" thr: " + fact.getParameter("THREADING"));
+        log.info(" its: " + (isThreadSafe ? "" : "not ") + "thread safe");
 // 	log.info(" mth: " + fact.getMethodCallSyntax("obj", "mth", "arg1", "arg2"));
 // 	log.info(" out: " + fact.getOutputStatement("to display"));
+        ScriptEngine eng = fact.getScriptEngine();
+        //log.info("eng:  " + eng.getClass());
+        log.info(" cmp: " + (isCompilable ? "" : "not ") + "compilable");
+        log.info(" ivk: " +
+            (eng instanceof Invocable ? "" : "not ") + "invocable");
       }
     }
   }

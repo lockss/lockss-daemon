@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonStatus.java,v 1.9 2007-08-23 07:03:16 tlipkis Exp $
+ * $Id: TestDaemonStatus.java,v 1.9.58.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
@@ -95,6 +95,12 @@ public class TestDaemonStatus extends LockssServletTestCase {
     testObj = new Double(.453);
     assertEquals("45%", format(testObj, ColumnDescriptor.TYPE_PERCENT));
 
+    // test agreement
+    testObj = new Double(.453);
+    assertEquals("45.30%", format(testObj, ColumnDescriptor.TYPE_AGREEMENT));
+    testObj = new Double(.999999);
+    assertEquals("99.99%", format(testObj, ColumnDescriptor.TYPE_AGREEMENT));
+
     // test date
     Calendar cal = Calendar.getInstance();
     cal.set(Calendar.YEAR, 2004);
@@ -103,7 +109,7 @@ public class TestDaemonStatus extends LockssServletTestCase {
     cal.set(Calendar.HOUR_OF_DAY, 15);
     cal.set(Calendar.MINUTE, 15);
     testObj = cal.getTime();
-    assertEquals(DaemonStatus.tableDf.format(testObj),
+    assertEquals(DaemonStatus.getTableDateFormat().format(testObj),
                  format(testObj, ColumnDescriptor.TYPE_DATE));
 
     // test IPAddr

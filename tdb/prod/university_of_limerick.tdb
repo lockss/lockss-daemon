@@ -13,13 +13,13 @@
     >
     
       rights = openaccess
-      plugin = org.lockss.plugin.minerva.MinervaPlugin
 
     {
     
+      plugin = org.lockss.plugin.minerva.MinervaPlugin
+      implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.ul.ie/
       param[base_url2] = http://www.mic.ul.ie/
-      implicit < status ; year ; name ; param[volume_name] >
   
       au < down ; 1997 ; Minerva: An Internet Journal of Philosophy Volume 1 ; 1 >
       au < down ; 1998 ; Minerva: An Internet Journal of Philosophy Volume 2 ; 2 >
@@ -36,11 +36,11 @@
     
     {
     
-      param[base_url] = http://www.ul.ie/
-      param[base_url2] = http://www.minerva.mic.ul.ie/
+      plugin = org.lockss.plugin.minerva.MinervaPlugin
       implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.minerva.mic.ul.ie/
       
-      comment[domain] = base_url2 has changed as of 2011-11-28
+      comment[domain] = needs new plugin as of 2011-11-28
   
       au < doNotProcess ; 1997 ; Minerva: An Internet Journal of Philosophy Volume 1 ; 1 >
       au < doNotProcess ; 1998 ; Minerva: An Internet Journal of Philosophy Volume 2 ; 2 >

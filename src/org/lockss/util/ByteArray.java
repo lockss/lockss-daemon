@@ -1,5 +1,5 @@
 /*
- * $Id: ByteArray.java,v 1.12 2008-11-02 21:15:00 tlipkis Exp $
+ * $Id: ByteArray.java,v 1.12.42.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -188,5 +188,26 @@ public class ByteArray {
       retVal[i] = (byte)rand.nextInt(0x100);
     }
     return retVal;
+  }
+
+  /**
+   * Compare the two byte arrays lexicographically.
+   *
+   * @param left The "left" array.
+   * @param right The "right" array.
+   * @return a negative integer, zero, or a positive integer as the
+   * first argument is less than, equal to, or greater than the
+   * second.
+   */
+  public static int lexicographicalCompare(byte[] left, byte[] right) {
+    for (int i = 0; i < left.length && i < right.length; i++) {
+      // byte is signed; force each array entry to be a small int.
+      int leftByte = (left[i] & 0xff);
+      int rightByte = (right[i] & 0xff);
+      if (leftByte != rightByte) {
+	return leftByte-rightByte;
+      }
+    }
+    return left.length - right.length;
   }
 }

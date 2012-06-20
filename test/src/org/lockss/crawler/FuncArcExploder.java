@@ -1,10 +1,10 @@
 /*
- * $Id: FuncArcExploder.java,v 1.10 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: FuncArcExploder.java,v 1.10.4.1 2012-06-20 00:02:51 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2007-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -156,27 +156,11 @@ public class FuncArcExploder extends LockssTestCase {
   public void setUp(int max) throws Exception {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|crawler|FuncArcExploder$MySimulatedPlugin.root~" +
-      PropKeyEncoder.encode(tempDirPath);
     Properties props = new Properties();
     props.setProperty(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
     maxDepth=max;
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
 
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
-    // the simulated Content's depth will be (AU_PARAM_DEPTH + 1)
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_DEPTH, "3");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_BRANCH, "1");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_NUM_FILES, "2");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_FILE_TYPES,
-                      ""+SimulatedContentGenerator.FILE_TYPE_BIN);
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doArcFile", "true");
 
     props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
@@ -209,10 +193,8 @@ public class FuncArcExploder extends LockssTestCase {
 
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    sau =
-      (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
-    theDaemon.getLockssRepository(sau).startService();
-    theDaemon.setNodeManager(new MockNodeManager(), sau);
+    sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
+					     simAuConfig(tempDirPath));
   }
 
   public void tearDown() throws Exception {
@@ -220,6 +202,17 @@ public class FuncArcExploder extends LockssTestCase {
       theDaemon.stopDaemon();
     }
     super.tearDown();
+  }
+
+  Configuration simAuConfig(String rootPath) {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put("depth", "3");
+    conf.put("branch", "1");
+    conf.put("numFiles", "2");
+    conf.put("fileTypes", "" + SimulatedContentGenerator.FILE_TYPE_BIN);
+    conf.put("binFileSize", ""+fileSize);
+    return conf;
   }
 
   public void testBadContentMultipleAU() throws Exception {

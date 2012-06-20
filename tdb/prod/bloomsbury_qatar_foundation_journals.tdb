@@ -5,8 +5,7 @@
   >
 
   rights = openaccess  
-  comment[platform] = Atypon -- RT ticket 3556
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.bloomsburyqatar.BloomsburyQatarPlugin
   param[base_url] = http://www.qscience.com/
   implicit < status ; year ; name ; param[volume_name] >
   
@@ -19,7 +18,8 @@
     
     param[journal_dir] = ahcsps
  
-    au < manifest ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
+    au < ready ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
+    au < expected ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 >
   
   }
 
@@ -32,8 +32,9 @@
     
     param[journal_dir] = avi
 
-    au < manifest ; 2010 ; Avicenna Volume 2010 ; 2010 >
-    au < manifest ; 2011 ; Avicenna Volume 2011 ; 2011 >    
+    au < ready ; 2010 ; Avicenna Volume 2010 ; 2010 >
+    au < ready ; 2011 ; Avicenna Volume 2011 ; 2011 >    
+    au < manifest ; 2012 ; Avicenna Volume 2012 ; 2012 >    
     
   }
 
@@ -46,8 +47,9 @@
     
     param[journal_dir] = cis
 
-    au < manifest ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 >
-    au < manifest ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 >  
+    au < ready ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 >
+    au < ready ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 >  
+    au < ready ; 2012 ; Contemporary Islamic Studies Volume 2012 ; 2012 >  
     
   }
 
@@ -60,10 +62,11 @@
     
     param[journal_dir] = nmejre
 
-    au < manifest ; 2006 ; Near and Middle Eastern Journal of Research in Education Volume 1 (2006) ; 1 >
-    au < manifest ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 > 
-    au < manifest ; 2010 ; Near and Middle Eastern Journal of Research in Education Volume 2010 ; 2010 >
-    au < manifest ; 2011 ; Near and Middle Eastern Journal of Research in Education Volume 2011 ; 2011 > 
+    au < ready ; 2006 ; Near and Middle Eastern Journal of Research in Education Volume 1 (2006) ; 1 >
+    au < ready ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 > 
+    au < ready ; 2010 ; Near and Middle Eastern Journal of Research in Education Volume 2010 ; 2010 >
+    au < ready ; 2011 ; Near and Middle Eastern Journal of Research in Education Volume 2011 ; 2011 > 
+    au < ready ; 2012 ; Near and Middle Eastern Journal of Research in Education Volume 2012 ; 2012 > 
     
   }
 
@@ -76,8 +79,9 @@
     
     param[journal_dir] = pil
 
-    au < manifest ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
-    au < manifest ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >  
+    au < ready ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
+    au < ready ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >  
+    au < manifest ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 >  
     
   }
 
@@ -90,7 +94,9 @@
     
     param[journal_dir] = qfarf
 
-    au < manifest ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 >
+    au < ready ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 >
+    au < ready ; 2011 ; Qatar Foundation Annual Research Forum Proceedings Volume 2011 ; 2011 >
+    au < expected ; 2012 ; Qatar Foundation Annual Research Forum Proceedings Volume 2012 ; 2012 >
     
   }
 
@@ -100,9 +106,10 @@
       eissn = 2223-506X
     >
     
-    param[journal_dir] = ji_connect
-    comment[0] = no content yet
-    comment[journal_dir] = ? from http://www.qscience.com/page/ji_connect
+    param[journal_dir] = connect
+    
+    au < ready ; 2011 ; QScience Connect Volume 2011 ; 2011 >
+    au < manifest ; 2012 ; QScience Connect Volume 2012 ; 2012 >
      
   }
   
@@ -115,8 +122,9 @@
     
     param[journal_dir] = stsp
 
-    au < manifest ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 >
-    
+    au < ready ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 >
+    au < ready ; 2012 ; Sustainable Technologies, Systems and Policies Volume 2012 ; 2012 >
+     
   }
 
 }

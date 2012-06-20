@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -30,6 +30,19 @@
     <string>au_start_url</string>
     <string>&quot;%sMadHattersReview%d.html&quot;, base_url, year</string>
   </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>&quot;%s&quot;, base_url</string>
+    </entry>
+    <entry>
+      <string>au_issue</string>
+      <string>&quot;%sissue%s.shtml&quot;, base_url, issue</string>
+    </entry>
+    </map>
+  </entry> 
   <entry>
     <string>plugin_config_props</string>
     <list>

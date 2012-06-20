@@ -18,11 +18,14 @@
     >
 
     param[journal_dir] = english_literature_in_transition
+    attr[journal_id] = elt
 
     au < released ; 2007 ; English Literature in Transition, 1880-1920 Volume 50 ; 50 >
     au < released ; 2008 ; English Literature in Transition, 1880-1920 Volume 51 ; 51 >
     au < released ; 2009 ; English Literature in Transition, 1880-1920 Volume 52 ; 52 >
     au < released ; 2010 ; English Literature in Transition, 1880-1920 Volume 53 ; 53 >
+    au < testing ; 2011 ; English Literature in Transition, 1880-1920 Volume 54 ; 54 >
+    au < manifest ; 2012 ; English Literature in Transition, 1880-1920 Volume 55 ; 55 >
 
   }
 

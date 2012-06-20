@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin</string>
   </entry>
@@ -9,18 +13,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-	<string>2</string>
+	<string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
-	<string>7</string>
+	<string>8</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -141,6 +145,15 @@
       <string>au_issue</string>
       <string>&quot;%stoc/%s/%s/%s&quot;, base_url, journal_id, volume_name, issue</string>
     </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
     </map>
   </entry>
 </map>

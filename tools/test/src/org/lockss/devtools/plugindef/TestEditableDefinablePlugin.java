@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.37 2011-11-08 20:21:50 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.37.2.1 2012-06-20 00:03:09 nchondros Exp $
  */
 
 /*
@@ -482,22 +482,22 @@ public class TestEditableDefinablePlugin
     assertEmpty(edPlugin.getCrawlFilterFactories());
   }
 
-  public void testSetAndRemoveAuManifestPage() {
+  public void testSetAndRemoveAuPermissionUrl() {
     String defManifest = null;
     String expManifest = "http://www.example.com/manifest.html";
     String actManifest = null;
 
-    actManifest = edPlugin.getMap().getString(KEY_AU_MANIFEST,
+    actManifest = edPlugin.getMap().getString(KEY_AU_PERMISSION_URL,
                                               defManifest);
     assertEquals("default manifest", defManifest, actManifest);
 
-    edPlugin.setAuManifestPage(expManifest);
-    actManifest = edPlugin.getMap().getString(KEY_AU_MANIFEST,
+    edPlugin.setAuPermissionUrl(expManifest);
+    actManifest = edPlugin.getMap().getString(KEY_AU_PERMISSION_URL,
                                               defManifest);
     assertEquals("manifest", expManifest, actManifest);
 
-    edPlugin.removeAuManifestPage();
-    actManifest = edPlugin.getMap().getString(KEY_AU_MANIFEST,
+    edPlugin.removeAuPermissionUrl();
+    actManifest = edPlugin.getMap().getString(KEY_AU_PERMISSION_URL,
                                               defManifest);
     assertEquals("default manifest", defManifest, actManifest);
 

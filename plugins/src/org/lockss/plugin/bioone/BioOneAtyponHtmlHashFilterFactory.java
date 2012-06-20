@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneAtyponHtmlHashFilterFactory.java,v 1.2 2011-09-19 19:58:14 thib_gc Exp $
+ * $Id: BioOneAtyponHtmlHashFilterFactory.java,v 1.2.4.1 2012-06-20 00:03:05 nchondros Exp $
  */
 
 /*
@@ -32,13 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.bioone;
 
-import java.io.InputStream;
+import java.io.*;
 
-import org.htmlparser.NodeFilter;
+import org.htmlparser.*;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.Span;
+import org.htmlparser.util.*;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.*;
 
 
 public class BioOneAtyponHtmlHashFilterFactory implements FilterFactory {
@@ -72,9 +77,45 @@ public class BioOneAtyponHtmlHashFilterFactory implements FilterFactory {
         // Contains institution-specific markup
         HtmlNodeFilters.tagWithAttribute("div", "id", "headerLogo"),
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    HtmlTransform xf1 = HtmlNodeFilterTransform.exclude(new OrFilter(filters));
+    
+    //; The "id" attribute of <span> tags can have a gensym
+    HtmlTransform xf2 = new HtmlTransform() {
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              if (tag instanceof Span && tag.getAttribute("id") != null) {
+                tag.removeAttribute("id");
+              }
+            }
+          });
+        } catch (ParserException pe) {
+          IOException ioe = new IOException();
+          ioe.initCause(pe);
+          throw ioe;
+        }
+        return nodeList;
+      }
+    };
+    
+    InputStream is1 = new HtmlFilterInputStream(in,
+                                                encoding,
+                                                new HtmlCompoundTransform(xf1, xf2));
+    
+    Reader read1 = FilterUtil.getReader(is1, encoding);
+    Reader read2 = HtmlTagFilter.makeNestedFilter(read1,
+                                                  ListUtil.list(// Debug output (or similar)
+                                                                new HtmlTagFilter.TagPair("<!--totalCount",
+                                                                                          "-->",
+                                                                                          true),
+                                                                // Time stamp (or similar)
+                                                                new HtmlTagFilter.TagPair("<!--modified:",
+                                                                                          "-->",
+                                                                                          true)));
+    return new ReaderInputStream(read2);
   }
 
 }

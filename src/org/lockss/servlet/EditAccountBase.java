@@ -1,10 +1,10 @@
 /*
- * $Id: EditAccountBase.java,v 1.3 2009-06-15 07:52:44 tlipkis Exp $
+ * $Id: EditAccountBase.java,v 1.3.34.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -110,6 +110,8 @@ public abstract class EditAccountBase extends LockssServlet {
 		 "Control who is allowed access to content"),
     new RoleDesc(ROLE_AU_ADMIN, "Collection Admin",
 		 "Select content (AUs) to be collected and preserved"),
+    new RoleDesc(ROLE_CONTENT_ACCESS, "Content Access",
+		 "Access preserved content"),
     new RoleDesc(ROLE_DEBUG, "Debug",
 		 "View debug info"),
   };
@@ -123,11 +125,6 @@ public abstract class EditAccountBase extends LockssServlet {
     setTabOrder(in);
     tbl.add(in);
     return in;
-  }
-
-  protected void endPage(Page page) throws IOException {
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
   }
 
 }

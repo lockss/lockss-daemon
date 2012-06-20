@@ -1,5 +1,5 @@
 /*
- * $Id: ActualTarContentGenerator.java,v 1.3 2009-08-20 23:11:09 dshr Exp $
+ * $Id: ActualTarContentGenerator.java,v 1.3.30.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -153,14 +153,14 @@ public class ActualTarContentGenerator extends SimulatedContentGenerator {
 		    
 	  File aFile = new File(dir, fileNames[i]);
 	  TarInputStream tis = new TarInputStream(new FileInputStream(aFile));
-	  for (Enumeration e = new TarEntryEnumerator(tis);
-	       e.hasMoreElements(); ) {
-	    TarEntry ze = (TarEntry)e.nextElement();
+	  TarEntry ze = tis.getNextEntry();
+	  while (ze != null) {
 	    if (ze.isDirectory()) {
 	      logger.debug3("Dir: " + ze.getName());
 	    } else {
 	      logger.debug3("File: " + ze.getName() + " size " + ze.getSize());
 	    }
+	    ze = tis.getNextEntry();
 	  }
 	}
       }

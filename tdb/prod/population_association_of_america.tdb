@@ -17,6 +17,7 @@
     >
 
     param[journal_dir] = demography
+    attr[journal_id] = dem
 
     au < released ; 2000 ; Demography Volume 37 ; 37 >
     au < released ; 2001 ; Demography Volume 38 ; 38 >

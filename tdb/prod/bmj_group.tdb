@@ -48,6 +48,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Acupuncture in Medicine Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Acupuncture in Medicine Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Acupuncture in Medicine Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Acupuncture in Medicine Volume 30 ; 30 >
 
   }
 
@@ -62,23 +63,23 @@
 
     param[base_url] = http://ard.bmj.com/
 
-    au < HighWirePressH20Plugin ; ready ; 1939 ; Annals of the Rheumatic Diseases Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; ready ; 1940-1941 ; Annals of the Rheumatic Diseases Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; ready ; 1942-1943 ; Annals of the Rheumatic Diseases Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; ready ; 1944-1945 ; Annals of the Rheumatic Diseases Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; ready ; 1945-1946 ; Annals of the Rheumatic Diseases Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; ready ; 1947 ; Annals of the Rheumatic Diseases Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; ready ; 1948 ; Annals of the Rheumatic Diseases Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; ready ; 1949 ; Annals of the Rheumatic Diseases Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; ready ; 1950 ; Annals of the Rheumatic Diseases Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; ready ; 1951 ; Annals of the Rheumatic Diseases Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; ready ; 1952 ; Annals of the Rheumatic Diseases Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; ready ; 1953 ; Annals of the Rheumatic Diseases Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; ready ; 1954 ; Annals of the Rheumatic Diseases Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; ready ; 1955 ; Annals of the Rheumatic Diseases Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; ready ; 1956 ; Annals of the Rheumatic Diseases Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; ready ; 1957 ; Annals of the Rheumatic Diseases Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; ready ; 1958 ; Annals of the Rheumatic Diseases Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; released ; 1939 ; Annals of the Rheumatic Diseases Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 1940-1941 ; Annals of the Rheumatic Diseases Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 1942-1943 ; Annals of the Rheumatic Diseases Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 1944-1945 ; Annals of the Rheumatic Diseases Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; released ; 1945-1946 ; Annals of the Rheumatic Diseases Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; released ; 1947 ; Annals of the Rheumatic Diseases Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; released ; 1948 ; Annals of the Rheumatic Diseases Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; released ; 1949 ; Annals of the Rheumatic Diseases Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; released ; 1950 ; Annals of the Rheumatic Diseases Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 1951 ; Annals of the Rheumatic Diseases Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; released ; 1952 ; Annals of the Rheumatic Diseases Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; released ; 1953 ; Annals of the Rheumatic Diseases Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; released ; 1954 ; Annals of the Rheumatic Diseases Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; released ; 1955 ; Annals of the Rheumatic Diseases Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; released ; 1956 ; Annals of the Rheumatic Diseases Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; released ; 1957 ; Annals of the Rheumatic Diseases Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; released ; 1958 ; Annals of the Rheumatic Diseases Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 1959 ; Annals of the Rheumatic Diseases Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 1960 ; Annals of the Rheumatic Diseases Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 1961 ; Annals of the Rheumatic Diseases Volume 20 ; 20 >
@@ -131,7 +132,8 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Annals of the Rheumatic Diseases Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Annals of the Rheumatic Diseases Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Annals of the Rheumatic Diseases Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; Annals of the Rheumatic Diseases Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Annals of the Rheumatic Diseases Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; Annals of the Rheumatic Diseases Volume 72 ; 72 >
 
   }
 
@@ -146,39 +148,88 @@
 
     param[base_url] = http://adc.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Archives of Disease in Childhood Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Archives of Disease in Childhood Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Archives of Disease in Childhood Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Archives of Disease in Childhood Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Archives of Disease in Childhood Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Archives of Disease in Childhood Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Archives of Disease in Childhood Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Archives of Disease in Childhood Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Archives of Disease in Childhood Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Archives of Disease in Childhood Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Archives of Disease in Childhood Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Archives of Disease in Childhood Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Archives of Disease in Childhood Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Archives of Disease in Childhood Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Archives of Disease in Childhood Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Archives of Disease in Childhood Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Archives of Disease in Childhood Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Archives of Disease in Childhood Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Archives of Disease in Childhood Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Archives of Disease in Childhood Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Archives of Disease in Childhood Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Archives of Disease in Childhood Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Archives of Disease in Childhood Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Archives of Disease in Childhood Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Archives of Disease in Childhood Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Archives of Disease in Childhood Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Archives of Disease in Childhood Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Archives of Disease in Childhood Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Archives of Disease in Childhood Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Archives of Disease in Childhood Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Archives of Disease in Childhood Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Archives of Disease in Childhood Volume 80 ; 80 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Archives of Disease in Childhood Volume 81 ; 81 >
+    au < HighWirePressH20Plugin ; exists ; 1926 ; Archives of Disease in Childhood Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1927 ; Archives of Disease in Childhood Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1928 ; Archives of Disease in Childhood Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1929 ; Archives of Disease in Childhood Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1930 ; Archives of Disease in Childhood Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1931 ; Archives of Disease in Childhood Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1932 ; Archives of Disease in Childhood Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1933 ; Archives of Disease in Childhood Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1934 ; Archives of Disease in Childhood Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1935 ; Archives of Disease in Childhood Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1936 ; Archives of Disease in Childhood Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1937 ; Archives of Disease in Childhood Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1938 ; Archives of Disease in Childhood Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1939 ; Archives of Disease in Childhood Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 1940 ; Archives of Disease in Childhood Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1941 ; Archives of Disease in Childhood Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1942 ; Archives of Disease in Childhood Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 1943 ; Archives of Disease in Childhood Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1944 ; Archives of Disease in Childhood Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1945 ; Archives of Disease in Childhood Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 1946 ; Archives of Disease in Childhood Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 1947 ; Archives of Disease in Childhood Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 1948 ; Archives of Disease in Childhood Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 1949 ; Archives of Disease in Childhood Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; manifest ; 1950 ; Archives of Disease in Childhood Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 1951 ; Archives of Disease in Childhood Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 1952 ; Archives of Disease in Childhood Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 1953 ; Archives of Disease in Childhood Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 1954 ; Archives of Disease in Childhood Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 1955 ; Archives of Disease in Childhood Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 1956 ; Archives of Disease in Childhood Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 1957 ; Archives of Disease in Childhood Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 1958 ; Archives of Disease in Childhood Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 1959 ; Archives of Disease in Childhood Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 1960 ; Archives of Disease in Childhood Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; manifest ; 1961 ; Archives of Disease in Childhood Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; Archives of Disease in Childhood Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; Archives of Disease in Childhood Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; Archives of Disease in Childhood Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; Archives of Disease in Childhood Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; Archives of Disease in Childhood Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; manifest ; 1967 ; Archives of Disease in Childhood Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; Archives of Disease in Childhood Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; Archives of Disease in Childhood Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; Archives of Disease in Childhood Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; Archives of Disease in Childhood Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; Archives of Disease in Childhood Volume 47 ; 47 >
+
+    au < HighWirePressH20Plugin ; released ; 1973 ; Archives of Disease in Childhood Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; released ; 1974 ; Archives of Disease in Childhood Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; released ; 1975 ; Archives of Disease in Childhood Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; released ; 1976 ; Archives of Disease in Childhood Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; released ; 1977 ; Archives of Disease in Childhood Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; released ; 1978 ; Archives of Disease in Childhood Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; released ; 1979 ; Archives of Disease in Childhood Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; released ; 1980 ; Archives of Disease in Childhood Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; released ; 1981 ; Archives of Disease in Childhood Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; released ; 1981 ; Archives of Disease in Childhood Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; released ; 1983 ; Archives of Disease in Childhood Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; released ; 1984 ; Archives of Disease in Childhood Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; released ; 1985 ; Archives of Disease in Childhood Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; released ; 1986 ; Archives of Disease in Childhood Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; released ; 1987 ; Archives of Disease in Childhood Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; released ; 1988 ; Archives of Disease in Childhood Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; released ; 1989 ; Archives of Disease in Childhood Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; released ; 1990 ; Archives of Disease in Childhood Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; released ; 1991 ; Archives of Disease in Childhood Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; released ; 1992 ; Archives of Disease in Childhood Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; released ; 1993 ; Archives of Disease in Childhood Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; released ; 1993 ; Archives of Disease in Childhood Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; released ; 1994 ; Archives of Disease in Childhood Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; released ; 1994 ; Archives of Disease in Childhood Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; released ; 1995 ; Archives of Disease in Childhood Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; released ; 1995 ; Archives of Disease in Childhood Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; released ; 1996 ; Archives of Disease in Childhood Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; released ; 1996 ; Archives of Disease in Childhood Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; released ; 1997 ; Archives of Disease in Childhood Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; released ; 1997 ; Archives of Disease in Childhood Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; released ; 1998 ; Archives of Disease in Childhood Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; released ; 1998 ; Archives of Disease in Childhood Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; released ; 1999 ; Archives of Disease in Childhood Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; released ; 1999 ; Archives of Disease in Childhood Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; released ; 2000 ; Archives of Disease in Childhood Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; released ; 2000 ; Archives of Disease in Childhood Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; released ; 2001 ; Archives of Disease in Childhood Volume 84 ; 84 >
@@ -194,6 +245,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Archives of Disease in Childhood Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Archives of Disease in Childhood Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Archives of Disease in Childhood Volume 96 ; 96 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Archives of Disease in Childhood Volume 97 ; 97 >
 
   }
 
@@ -216,6 +268,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Archives of Disease in Childhood - Education and Practice Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Archives of Disease in Childhood - Education and Practice Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Archives of Disease in Childhood - Education and Practice Volume 96 ; 96 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Archives of Disease in Childhood - Education and Practice Volume 97 ; 97 >
 
   }
 
@@ -230,18 +283,18 @@
 
     param[base_url] = http://fn.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 80 ; 80 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 81 ; 81 >
+    au < HighWirePressH20Plugin ; released ; 1994 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; released ; 1994 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; released ; 1995 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; released ; 1995 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; released ; 1996 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; released ; 1996 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; released ; 1997 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; released ; 1997 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; released ; 1998 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; released ; 1998 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; released ; 1999 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; released ; 1999 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; released ; 2000 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; released ; 2000 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; released ; 2001 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 84 ; 84 >
@@ -257,6 +310,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 96 ; 96 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 97 ; 97 >
 
   }
 
@@ -268,7 +322,7 @@
       issnl = 0959-535X
     >
     
-    comment[urgent] = possibly leaving highwire. Needs to be tested. As of 7/2011.
+    comment[bmj_down] = The BMJ site is brand-new and requires changes to the HighWire plugin. Suspending these AUs for now.
 
     param[base_url] = http://www.bmj.com/
 
@@ -362,6 +416,9 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; BMJ Volume 340 ; 340 >
     au < HighWirePressH20Plugin ; down ; 2010 ; BMJ Volume 341 ; 341 >
     au < HighWirePressH20Plugin ; down ; 2011 ; BMJ Volume 342 ; 342 >
+    au < HighWirePressH20Plugin ; expected ; 2011 ; BMJ Volume 343 ; 343 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; BMJ Volume 344 ; 344 >
+    au < HighWirePressH20Plugin ; expected ; 2012 ; BMJ Volume 345 ; 345 >
 
   }
 
@@ -373,7 +430,8 @@
 
     param[base_url] = http://bmjopen.bmj.com/
 
-    au < HighWirePressH20Plugin ; exists ; 2011 ; BMJ Open Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; BMJ Open Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; BMJ Open Volume 2 ; 2 >
 
   }
 
@@ -385,8 +443,11 @@
     >
 
     param[base_url] = http://spcare.bmj.com/
+    
+    comment[notReady] = Found a logon page for V1.
 
-    au < HighWirePressH20Plugin ; exists ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; notReady ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 >
 
   }
 
@@ -400,31 +461,31 @@
 
     param[base_url] = http://bjo.bmj.com/
     
-    comment[bjo_v95] = very large volume. Problems with recursive generated links.
+    comment[bjo_v95] = V84-88 very large volume. Problems with recursive generated links.
 
-    au < HighWirePressH20Plugin ; manifest ; 1917 ; British Journal of Ophthalmology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1918 ; British Journal of Ophthalmology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1919 ; British Journal of Ophthalmology Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1920 ; British Journal of Ophthalmology Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1921 ; British Journal of Ophthalmology Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1922 ; British Journal of Ophthalmology Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1923 ; British Journal of Ophthalmology Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1924 ; British Journal of Ophthalmology Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1925 ; British Journal of Ophthalmology Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1926 ; British Journal of Ophthalmology Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1927 ; British Journal of Ophthalmology Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1928 ; British Journal of Ophthalmology Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1929 ; British Journal of Ophthalmology Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1930 ; British Journal of Ophthalmology Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1931 ; British Journal of Ophthalmology Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1932 ; British Journal of Ophthalmology Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1933 ; British Journal of Ophthalmology Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1934 ; British Journal of Ophthalmology Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1935 ; British Journal of Ophthalmology Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1936 ; British Journal of Ophthalmology Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1937 ; British Journal of Ophthalmology Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1938 ; British Journal of Ophthalmology Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1939 ; British Journal of Ophthalmology Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; released ; 1917 ; British Journal of Ophthalmology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 1918 ; British Journal of Ophthalmology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 1919 ; British Journal of Ophthalmology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 1920 ; British Journal of Ophthalmology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; released ; 1921 ; British Journal of Ophthalmology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; released ; 1922 ; British Journal of Ophthalmology Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; released ; 1923 ; British Journal of Ophthalmology Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; released ; 1924 ; British Journal of Ophthalmology Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; released ; 1925 ; British Journal of Ophthalmology Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 1926 ; British Journal of Ophthalmology Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; released ; 1927 ; British Journal of Ophthalmology Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; released ; 1928 ; British Journal of Ophthalmology Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; released ; 1929 ; British Journal of Ophthalmology Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; released ; 1930 ; British Journal of Ophthalmology Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; released ; 1931 ; British Journal of Ophthalmology Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; released ; 1932 ; British Journal of Ophthalmology Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; released ; 1933 ; British Journal of Ophthalmology Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; released ; 1934 ; British Journal of Ophthalmology Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; released ; 1935 ; British Journal of Ophthalmology Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; released ; 1936 ; British Journal of Ophthalmology Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; released ; 1937 ; British Journal of Ophthalmology Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; released ; 1938 ; British Journal of Ophthalmology Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; released ; 1939 ; British Journal of Ophthalmology Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; manifest ; 1940 ; British Journal of Ophthalmology Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 1941 ; British Journal of Ophthalmology Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 1942 ; British Journal of Ophthalmology Volume 26 ; 26 >
@@ -485,11 +546,11 @@
     au < HighWirePressH20Plugin ; manifest ; 1997 ; British Journal of Ophthalmology Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; British Journal of Ophthalmology Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; British Journal of Ophthalmology Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; British Journal of Ophthalmology Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; British Journal of Ophthalmology Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; British Journal of Ophthalmology Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; British Journal of Ophthalmology Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; British Journal of Ophthalmology Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; notReady ; 2000 ; British Journal of Ophthalmology Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; notReady ; 2001 ; British Journal of Ophthalmology Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; notReady ; 2002 ; British Journal of Ophthalmology Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; notReady ; 2003 ; British Journal of Ophthalmology Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; notReady ; 2004 ; British Journal of Ophthalmology Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; released ; 2005 ; British Journal of Ophthalmology Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; released ; 2006 ; British Journal of Ophthalmology Volume 90 ; 90 >
     au < HighWirePressH20Plugin ; released ; 2007 ; British Journal of Ophthalmology Volume 91 ; 91 >
@@ -497,6 +558,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; British Journal of Ophthalmology Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Journal of Ophthalmology Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; notReady ; 2011 ; British Journal of Ophthalmology Volume 95 ; 95 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; British Journal of Ophthalmology Volume 96 ; 96 >
 
   }
 
@@ -510,39 +572,39 @@
 
     param[base_url] = http://bjsm.bmj.com/
 
-    au < HighWirePressH20Plugin ; exists ; 1964 ; British Journal of Sports Medicine Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; British Journal of Sports Medicine Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1967-1968 ; British Journal of Sports Medicine Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 1964 ; British Journal of Sports Medicine Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 1965 ; British Journal of Sports Medicine Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 1967-1968 ; British Journal of Sports Medicine Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; doesNotExist ; 1969 ; British Journal of Sports Medicine Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1970-1971 ; British Journal of Sports Medicine Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1971-1972 ; British Journal of Sports Medicine Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; British Journal of Sports Medicine Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; British Journal of Sports Medicine Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; British Journal of Sports Medicine Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; British Journal of Sports Medicine Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; British Journal of Sports Medicine Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; British Journal of Sports Medicine Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; British Journal of Sports Medicine Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; British Journal of Sports Medicine Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; British Journal of Sports Medicine Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; British Journal of Sports Medicine Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; British Journal of Sports Medicine Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; British Journal of Sports Medicine Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; British Journal of Sports Medicine Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; British Journal of Sports Medicine Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; British Journal of Sports Medicine Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; British Journal of Sports Medicine Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; British Journal of Sports Medicine Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; British Journal of Sports Medicine Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; British Journal of Sports Medicine Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; British Journal of Sports Medicine Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; British Journal of Sports Medicine Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; British Journal of Sports Medicine Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; British Journal of Sports Medicine Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; British Journal of Sports Medicine Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; British Journal of Sports Medicine Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; British Journal of Sports Medicine Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; British Journal of Sports Medicine Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; released ; 1970-1971 ; British Journal of Sports Medicine Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; released ; 1971-1972 ; British Journal of Sports Medicine Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; released ; 1973 ; British Journal of Sports Medicine Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; released ; 1974 ; British Journal of Sports Medicine Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; released ; 1975 ; British Journal of Sports Medicine Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 1976 ; British Journal of Sports Medicine Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; released ; 1977 ; British Journal of Sports Medicine Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; released ; 1978 ; British Journal of Sports Medicine Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; released ; 1979 ; British Journal of Sports Medicine Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; released ; 1980 ; British Journal of Sports Medicine Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; released ; 1981 ; British Journal of Sports Medicine Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; released ; 1982 ; British Journal of Sports Medicine Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; released ; 1983 ; British Journal of Sports Medicine Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; released ; 1984 ; British Journal of Sports Medicine Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; released ; 1985 ; British Journal of Sports Medicine Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; released ; 1986 ; British Journal of Sports Medicine Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; released ; 1987 ; British Journal of Sports Medicine Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; released ; 1988 ; British Journal of Sports Medicine Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; released ; 1989 ; British Journal of Sports Medicine Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; released ; 1990 ; British Journal of Sports Medicine Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; released ; 1991 ; British Journal of Sports Medicine Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; released ; 1992 ; British Journal of Sports Medicine Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; released ; 1993 ; British Journal of Sports Medicine Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; released ; 1994 ; British Journal of Sports Medicine Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; released ; 1995 ; British Journal of Sports Medicine Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; released ; 1996 ; British Journal of Sports Medicine Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; released ; 1997 ; British Journal of Sports Medicine Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; released ; 1998 ; British Journal of Sports Medicine Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; released ; 1999 ; British Journal of Sports Medicine Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 2000 ; British Journal of Sports Medicine Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; released ; 2001 ; British Journal of Sports Medicine Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2002 ; British Journal of Sports Medicine Volume 36 ; 36 >
@@ -555,6 +617,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; British Journal of Sports Medicine Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Journal of Sports Medicine Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; released ; 2011 ; British Journal of Sports Medicine Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; British Journal of Sports Medicine Volume 46 ; 46 >
 
   }
 
@@ -568,24 +631,59 @@
 
     param[base_url] = http://dtb.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; DTB - Drug and Therapeutics Bulletin Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; DTB - Drug and Therapeutics Bulletin Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; DTB - Drug and Therapeutics Bulletin Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; DTB - Drug and Therapeutics Bulletin Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; DTB - Drug and Therapeutics Bulletin Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; DTB - Drug and Therapeutics Bulletin Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; DTB - Drug and Therapeutics Bulletin Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; DTB - Drug and Therapeutics Bulletin Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; DTB - Drug and Therapeutics Bulletin Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; DTB - Drug and Therapeutics Bulletin Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; DTB - Drug and Therapeutics Bulletin Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; released ; 2005 ; DTB - Drug and Therapeutics Bulletin Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; released ; 2006 ; DTB - Drug and Therapeutics Bulletin Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; released ; 2007 ; DTB - Drug and Therapeutics Bulletin Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; released ; 2008 ; DTB - Drug and Therapeutics Bulletin Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; DTB - Drug and Therapeutics Bulletin Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; DTB - Drug and Therapeutics Bulletin Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; DTB - Drug and Therapeutics Bulletin Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; DTB - Drug and Therapeutics Bulletin Volume s1-1 ; s1-1 >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; DTB - Drug and Therapeutics Bulletin Volume s1-2 ; s1-2 >
+
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; Drug and Therapeutics Bulletin Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; Drug and Therapeutics Bulletin Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; Drug and Therapeutics Bulletin Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; Drug and Therapeutics Bulletin Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1967 ; Drug and Therapeutics Bulletin Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; Drug and Therapeutics Bulletin Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; Drug and Therapeutics Bulletin Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; Drug and Therapeutics Bulletin Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; Drug and Therapeutics Bulletin Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; Drug and Therapeutics Bulletin Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; Drug and Therapeutics Bulletin Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; Drug and Therapeutics Bulletin Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1975 ; Drug and Therapeutics Bulletin Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; Drug and Therapeutics Bulletin Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; Drug and Therapeutics Bulletin Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; Drug and Therapeutics Bulletin Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; Drug and Therapeutics Bulletin Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; Drug and Therapeutics Bulletin Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; Drug and Therapeutics Bulletin Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; Drug and Therapeutics Bulletin Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; Drug and Therapeutics Bulletin Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; Drug and Therapeutics Bulletin Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; Drug and Therapeutics Bulletin Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; Drug and Therapeutics Bulletin Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; Drug and Therapeutics Bulletin Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; Drug and Therapeutics Bulletin Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; Drug and Therapeutics Bulletin Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; Drug and Therapeutics Bulletin Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; Drug and Therapeutics Bulletin Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; Drug and Therapeutics Bulletin Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; Drug and Therapeutics Bulletin Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; released ; 1994 ; Drug and Therapeutics Bulletin Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; released ; 1995 ; Drug and Therapeutics Bulletin Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; released ; 1996 ; Drug and Therapeutics Bulletin Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; released ; 1997 ; Drug and Therapeutics Bulletin Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; released ; 1998 ; Drug and Therapeutics Bulletin Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; released ; 1999 ; Drug and Therapeutics Bulletin Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; released ; 2000 ; Drug and Therapeutics Bulletin Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; released ; 2001 ; Drug and Therapeutics Bulletin Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; released ; 2002 ; Drug and Therapeutics Bulletin Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; released ; 2003 ; Drug and Therapeutics Bulletin Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; released ; 2004 ; Drug and Therapeutics Bulletin Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; released ; 2005 ; Drug and Therapeutics Bulletin Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; released ; 2006 ; Drug and Therapeutics Bulletin Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; Drug and Therapeutics Bulletin Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Drug and Therapeutics Bulletin Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Drug and Therapeutics Bulletin Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Drug and Therapeutics Bulletin Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Drug and Therapeutics Bulletin Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Drug and Therapeutics Bulletin Volume 50 ; 50 >
 
   }
 
@@ -598,23 +696,25 @@
     >
 
     param[base_url] = http://emj.bmj.com/
+    
+    comment[notReady] = tested multiple times to low agreement.
 
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Emergency Medicine Journal Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Emergency Medicine Journal Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Emergency Medicine Journal Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Emergency Medicine Journal Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Emergency Medicine Journal Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Emergency Medicine Journal Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Emergency Medicine Journal Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Emergency Medicine Journal Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Emergency Medicine Journal Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Emergency Medicine Journal Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Emergency Medicine Journal Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Emergency Medicine Journal Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Emergency Medicine Journal Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Emergency Medicine Journal Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Emergency Medicine Journal Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Emergency Medicine Journal Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; released ; 1984 ; Emergency Medicine Journal Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 1985 ; Emergency Medicine Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 1986 ; Emergency Medicine Journal Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 1987 ; Emergency Medicine Journal Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; released ; 1988 ; Emergency Medicine Journal Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; notReady ; 1989 ; Emergency Medicine Journal Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; released ; 1990 ; Emergency Medicine Journal Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; released ; 1991 ; Emergency Medicine Journal Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; notReady ; 1992 ; Emergency Medicine Journal Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 1993 ; Emergency Medicine Journal Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; released ; 1994 ; Emergency Medicine Journal Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; released ; 1995 ; Emergency Medicine Journal Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; released ; 1996 ; Emergency Medicine Journal Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; released ; 1997 ; Emergency Medicine Journal Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; released ; 1998 ; Emergency Medicine Journal Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; released ; 1999 ; Emergency Medicine Journal Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2000 ; Emergency Medicine Journal Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 2001 ; Emergency Medicine Journal Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2002 ; Emergency Medicine Journal Volume 19 ; 19 >
@@ -627,6 +727,20 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Emergency Medicine Journal Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Emergency Medicine Journal Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Emergency Medicine Journal Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Emergency Medicine Journal Volume 29 ; 29 >
+
+  }
+
+  {
+    title <
+      name = European Journal of Hospital Pharmacy: Science and Practice ;
+      issn = 2047-9956 ;
+      eissn = 2047-9964
+      >
+
+    param[base_url] = http://ejhp.bmj.com/
+
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; European Journal of Hospital Pharmacy: Science and Practice Volume 19 ; 19 >
 
   }
 
@@ -642,11 +756,11 @@
 
 comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Evidence-Based Medicine Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Evidence-Based Medicine Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Evidence-Based Medicine Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Evidence-Based Medicine Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Evidence-Based Medicine Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Evidence-Based Medicine Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Evidence-Based Medicine Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Evidence-Based Medicine Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Evidence-Based Medicine Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Evidence-Based Medicine Volume 9 ; 9 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Evidence-Based Medicine Volume 10 ; 10 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Evidence-Based Medicine Volume 11 ; 11 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Evidence-Based Medicine Volume 12 ; 12 >
@@ -654,6 +768,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Evidence-Based Medicine Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Evidence-Based Medicine Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Evidence-Based Medicine Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Evidence-Based Medicine Volume 17 ; 17 >
 
   }
 
@@ -667,13 +782,13 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://ebmh.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Evidence-Based Mental Health Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Evidence-Based Mental Health Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Evidence-Based Mental Health Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Evidence-Based Mental Health Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Evidence-Based Mental Health Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Evidence-Based Mental Health Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Evidence-Based Mental Health Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1998 ; Evidence-Based Mental Health Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1999 ; Evidence-Based Mental Health Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Evidence-Based Mental Health Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Evidence-Based Mental Health Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Evidence-Based Mental Health Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Evidence-Based Mental Health Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Evidence-Based Mental Health Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 2005 ; Evidence-Based Mental Health Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 2006 ; Evidence-Based Mental Health Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Evidence-Based Mental Health Volume 10 ; 10 >
@@ -681,6 +796,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Evidence-Based Mental Health Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Evidence-Based Mental Health Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Evidence-Based Mental Health Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Evidence-Based Mental Health Volume 15 ; 15 >
 
   }
 
@@ -694,13 +810,13 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://ebn.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Evidence-Based Nursing Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Evidence-Based Nursing Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Evidence-Based Nursing Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Evidence-Based Nursing Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Evidence-Based Nursing Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Evidence-Based Nursing Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Evidence-Based Nursing Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1998 ; Evidence-Based Nursing Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1999 ; Evidence-Based Nursing Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Evidence-Based Nursing Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Evidence-Based Nursing Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Evidence-Based Nursing Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Evidence-Based Nursing Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Evidence-Based Nursing Volume 7 ; 7 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Evidence-Based Nursing Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 2006 ; Evidence-Based Nursing Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Evidence-Based Nursing Volume 10 ; 10 >
@@ -708,6 +824,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Evidence-Based Nursing Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Evidence-Based Nursing Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Evidence-Based Nursing Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Evidence-Based Nursing Volume 15 ; 15 >
 
   }
 
@@ -721,59 +838,59 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://gut.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1960 ; Gut Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; Gut Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; Gut Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; Gut Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; Gut Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Gut Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Gut Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Gut Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Gut Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Gut Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Gut Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Gut Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Gut Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Gut Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Gut Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Gut Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Gut Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Gut Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Gut Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Gut Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Gut Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Gut Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Gut Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Gut Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Gut Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Gut Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Gut Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Gut Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Gut Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Gut Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Gut Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Gut Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Gut Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Gut Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Gut Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Gut Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Gut Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Gut Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Gut Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Gut Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Gut Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Gut Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Gut Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; testing ; 1999 ; Gut Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; testing ; 1999 ; Gut Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; testing ; 2000 ; Gut Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; testing ; 2000 ; Gut Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Gut Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Gut Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Gut Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Gut Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Gut Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; Gut Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; released ; 1960 ; Gut Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 1961 ; Gut Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 1962 ; Gut Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 1963 ; Gut Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; released ; 1964 ; Gut Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; released ; 1965 ; Gut Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; released ; 1966 ; Gut Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; released ; 1967 ; Gut Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; released ; 1968 ; Gut Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 1969 ; Gut Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; released ; 1970 ; Gut Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; released ; 1971 ; Gut Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; released ; 1972 ; Gut Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; released ; 1973 ; Gut Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; released ; 1974 ; Gut Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; released ; 1975 ; Gut Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; released ; 1976 ; Gut Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; released ; 1977 ; Gut Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; released ; 1978 ; Gut Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; released ; 1979 ; Gut Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; released ; 1980 ; Gut Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; released ; 1981 ; Gut Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; released ; 1982 ; Gut Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; released ; 1983 ; Gut Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; released ; 1984 ; Gut Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; released ; 1985 ; Gut Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; released ; 1986 ; Gut Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; released ; 1987 ; Gut Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; released ; 1988 ; Gut Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; released ; 1989 ; Gut Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; ready ; 1990 ; Gut Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; released ; 1991 ; Gut Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; released ; 1992 ; Gut Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; released ; 1993 ; Gut Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; released ; 1994 ; Gut Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; released ; 1995 ; Gut Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; released ; 1995 ; Gut Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; released ; 1996 ; Gut Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; released ; 1996 ; Gut Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; released ; 1997 ; Gut Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; released ; 1997 ; Gut Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; released ; 1998 ; Gut Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; released ; 1998 ; Gut Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; ready ; 1999 ; Gut Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; released ; 1999 ; Gut Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; released ; 2000 ; Gut Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; released ; 2000 ; Gut Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; released ; 2001 ; Gut Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; released ; 2001 ; Gut Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Gut Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; released ; 2002 ; Gut Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; released ; 2003 ; Gut Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; released ; 2004 ; Gut Volume 53 ; 53 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Gut Volume 54 ; 54 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Gut Volume 55 ; 55 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Gut Volume 56 ; 56 >
@@ -781,6 +898,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Gut Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Gut Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Gut Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Gut Volume 61 ; 61 >
 
   }
 
@@ -795,29 +913,30 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     param[base_url] = http://heart.bmj.com/
 
     au < HighWirePressH20Plugin ; manifest ; 1939 ; Heart Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1940 ; Heart Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1941 ; Heart Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1940 ; Heart Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1941 ; Heart Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1942 ; Heart Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 1943 ; Heart Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1944 ; Heart Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1945 ; Heart Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1946 ; Heart Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1947 ; Heart Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; Heart Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; Heart Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; Heart Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; Heart Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1952 ; Heart Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; Heart Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1944 ; Heart Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 1945 ; Heart Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1946 ; Heart Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 1947 ; Heart Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 1948 ; Heart Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1949 ; Heart Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 1950 ; Heart Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 1951 ; Heart Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 1952 ; Heart Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1953 ; Heart Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 1954 ; Heart Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1955 ; Heart Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 1955 ; Heart Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; manifest ; 1956 ; Heart Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; manifest ; 1957 ; Heart Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1958 ; Heart Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1959 ; Heart Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1960 ; Heart Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; Heart Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; Heart Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; Heart Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; 1958 ; Heart Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; ready ; 1959 ; Heart Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 1960 ; Heart Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 1961 ; Heart Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 1962 ; Heart Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; 1963 ; Heart Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 1964 ; Heart Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 1965 ; Heart Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; manifest ; 1966 ; Heart Volume 28 ; 28 >
@@ -889,6 +1008,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Heart Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Heart Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Heart Volume 97 ; 97 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Heart Volume 98 ; 98 >
 
   }
 
@@ -912,23 +1032,24 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
       param[base_url] = http://injuryprevention.bmj.com/
 
-      au < HighWirePressH20Plugin ; manifest ; 1995 ; Injury Prevention Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; ready ; 1995 ; Injury Prevention Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; manifest ; 1996 ; Injury Prevention Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; manifest ; 1997 ; Injury Prevention Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; ready ; 1997 ; Injury Prevention Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; manifest ; 1998 ; Injury Prevention Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 1999 ; Injury Prevention Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; ready ; 1999 ; Injury Prevention Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; manifest ; 2000 ; Injury Prevention Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; manifest ; 2001 ; Injury Prevention Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; manifest ; 2002 ; Injury Prevention Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; manifest ; 2003 ; Injury Prevention Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Injury Prevention Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; ready ; 2004 ; Injury Prevention Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Injury Prevention Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; released ; 2006 ; Injury Prevention Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 2006 ; Injury Prevention Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Injury Prevention Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Injury Prevention Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Injury Prevention Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Injury Prevention Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Injury Prevention Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Injury Prevention Volume 18 ; 18 >
       
     }
 
@@ -944,30 +1065,30 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://jcp.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1947-1948 ; Journal of Clinical Pathology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; Journal of Clinical Pathology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; Journal of Clinical Pathology Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; Journal of Clinical Pathology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 1947-1948 ; Journal of Clinical Pathology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1949 ; Journal of Clinical Pathology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1950 ; Journal of Clinical Pathology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1951 ; Journal of Clinical Pathology Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 1952 ; Journal of Clinical Pathology Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; Journal of Clinical Pathology Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1954 ; Journal of Clinical Pathology Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1955 ; Journal of Clinical Pathology Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 1953 ; Journal of Clinical Pathology Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 1954 ; Journal of Clinical Pathology Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1955 ; Journal of Clinical Pathology Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 1956 ; Journal of Clinical Pathology Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1957 ; Journal of Clinical Pathology Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1958 ; Journal of Clinical Pathology Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1959 ; Journal of Clinical Pathology Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1960 ; Journal of Clinical Pathology Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; Journal of Clinical Pathology Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; Journal of Clinical Pathology Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; Journal of Clinical Pathology Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; Journal of Clinical Pathology Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 1957 ; Journal of Clinical Pathology Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1958 ; Journal of Clinical Pathology Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 1959 ; Journal of Clinical Pathology Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 1960 ; Journal of Clinical Pathology Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 1961 ; Journal of Clinical Pathology Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1962 ; Journal of Clinical Pathology Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1963 ; Journal of Clinical Pathology Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 1964 ; Journal of Clinical Pathology Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; manifest ; 1965 ; Journal of Clinical Pathology Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; manifest ; 1966 ; Journal of Clinical Pathology Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of Clinical Pathology Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of Clinical Pathology Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of Clinical Pathology Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Journal of Clinical Pathology Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Journal of Clinical Pathology Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 1967 ; Journal of Clinical Pathology Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 1968 ; Journal of Clinical Pathology Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 1969 ; Journal of Clinical Pathology Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; testing ; 1970 ; Journal of Clinical Pathology Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of Clinical Pathology Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of Clinical Pathology Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Clinical Pathology Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Clinical Pathology Volume 27 ; 27 >
@@ -1008,6 +1129,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Clinical Pathology Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Clinical Pathology Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Clinical Pathology Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Clinical Pathology Volume 65 ; 65 >
 
   }
 
@@ -1086,6 +1208,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Epidemiology & Community Health Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Epidemiology & Community Health Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; notReady ; 2011 ; Journal of Epidemiology & Community Health Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Epidemiology & Community Health Volume 66 ; 66 >
 
   }
 
@@ -1096,11 +1219,22 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       eissn = 2045-2098 
     >
 
-    {
+    param[base_url] = http://jfprhc.bmj.com/
+    
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Family Planning and Reproductive Health Care Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Family Planning and Reproductive Health Care Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Family Planning and Reproductive Health Care Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Family Planning and Reproductive Health Care Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Family Planning and Reproductive Health Care Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; Journal of Family Planning and Reproductive Health Care Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; Journal of Family Planning and Reproductive Health Care Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Journal of Family Planning and Reproductive Health Care Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Family Planning and Reproductive Health Care Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Family Planning and Reproductive Health Care Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Family Planning and Reproductive Health Care Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Family Planning and Reproductive Health Care Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Family Planning and Reproductive Health Care Volume 38 ; 38 >
 
-      param[base_url] = http://jfprhc.bmj.com/
-
-    }
   }
 
   {
@@ -1113,23 +1247,24 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://jme.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Medical Ethics Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Medical Ethics Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Medical Ethics Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Medical Ethics Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 1975 ; Journal of Medical Ethics Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1976 ; Journal of Medical Ethics Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1977 ; Journal of Medical Ethics Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1978 ; Journal of Medical Ethics Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 1979 ; Journal of Medical Ethics Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Medical Ethics Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Medical Ethics Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1981 ; Journal of Medical Ethics Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Medical Ethics Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Medical Ethics Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Medical Ethics Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1984 ; Journal of Medical Ethics Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Medical Ethics Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Medical Ethics Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Medical Ethics Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Medical Ethics Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Medical Ethics Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1987 ; Journal of Medical Ethics Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 1988 ; Journal of Medical Ethics Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1989 ; Journal of Medical Ethics Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Medical Ethics Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of Medical Ethics Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of Medical Ethics Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of Medical Ethics Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of Medical Ethics Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of Medical Ethics Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 1994 ; Journal of Medical Ethics Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of Medical Ethics Volume 21 ; 21 >
@@ -1149,6 +1284,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Medical Ethics Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Medical Ethics Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Medical Ethics Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medical Ethics Volume 38 ; 38 >
 
   }
 
@@ -1162,47 +1298,47 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://jmg.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; Journal of Medical Genetics Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Journal of Medical Genetics Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Journal of Medical Genetics Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of Medical Genetics Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of Medical Genetics Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of Medical Genetics Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Journal of Medical Genetics Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Journal of Medical Genetics Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of Medical Genetics Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Medical Genetics Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Medical Genetics Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Medical Genetics Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Medical Genetics Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Medical Genetics Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Medical Genetics Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Medical Genetics Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Medical Genetics Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Medical Genetics Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Medical Genetics Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Medical Genetics Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Medical Genetics Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Medical Genetics Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Medical Genetics Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Medical Genetics Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Medical Genetics Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Medical Genetics Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Medical Genetics Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of Medical Genetics Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of Medical Genetics Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of Medical Genetics Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Journal of Medical Genetics Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of Medical Genetics Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of Medical Genetics Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Journal of Medical Genetics Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Journal of Medical Genetics Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Journal of Medical Genetics Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Medical Genetics Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Medical Genetics Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Medical Genetics Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Medical Genetics Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Medical Genetics Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; ready ; 1964 ; Journal of Medical Genetics Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1965 ; Journal of Medical Genetics Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1966 ; Journal of Medical Genetics Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1967 ; Journal of Medical Genetics Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 1968 ; Journal of Medical Genetics Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 1969 ; Journal of Medical Genetics Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 1970 ; Journal of Medical Genetics Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1971 ; Journal of Medical Genetics Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 1972 ; Journal of Medical Genetics Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 1973 ; Journal of Medical Genetics Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1974 ; Journal of Medical Genetics Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 1975 ; Journal of Medical Genetics Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 1976 ; Journal of Medical Genetics Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 1977 ; Journal of Medical Genetics Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1978 ; Journal of Medical Genetics Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1979 ; Journal of Medical Genetics Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 1980 ; Journal of Medical Genetics Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 1981 ; Journal of Medical Genetics Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; ready ; 1982 ; Journal of Medical Genetics Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 1983 ; Journal of Medical Genetics Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; ready ; 1984 ; Journal of Medical Genetics Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 1985 ; Journal of Medical Genetics Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 1986 ; Journal of Medical Genetics Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 1987 ; Journal of Medical Genetics Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; 1988 ; Journal of Medical Genetics Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; 1989 ; Journal of Medical Genetics Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; ready ; 1990 ; Journal of Medical Genetics Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of Medical Genetics Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of Medical Genetics Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; ready ; 1993 ; Journal of Medical Genetics Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; ready ; 1994 ; Journal of Medical Genetics Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; ready ; 1995 ; Journal of Medical Genetics Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 1996 ; Journal of Medical Genetics Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; ready ; 1997 ; Journal of Medical Genetics Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; ready ; 1998 ; Journal of Medical Genetics Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; ready ; 1999 ; Journal of Medical Genetics Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Journal of Medical Genetics Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Journal of Medical Genetics Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Medical Genetics Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Medical Genetics Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Journal of Medical Genetics Volume 41 ; 41 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Medical Genetics Volume 42 ; 42 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Medical Genetics Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Medical Genetics Volume 44 ; 44 >
@@ -1210,6 +1346,23 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Medical Genetics Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Medical Genetics Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Medical Genetics Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medical Genetics Volume 49 ; 49 >
+
+  }
+
+  {
+    title <
+      name = Journal of NeuroInterventional Surgery ;
+      eissn = 1759-8486 ;
+      issnl = 1759-8486
+    >
+
+    param[base_url] = http://jnis.bmj.com/
+
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of NeuroInterventional Surgery Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of NeuroInterventional Surgery Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of NeuroInterventional Surgery Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of NeuroInterventional Surgery Volume 4 ; 4 >
 
   }
 
@@ -1227,6 +1380,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 1939 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1940 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 1941 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1942 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1943 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1944 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1945 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 1946 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 1947 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 1948 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 11 ; 11 >
@@ -1301,6 +1458,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 82 ; 82 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 83 ; 83 >
 
   }
 
@@ -1326,6 +1484,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Medical Humanities Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Medical Humanities Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Medical Humanities Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Medical Humanities Volume 38 ; 38 >
 
   }
 
@@ -1429,6 +1588,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Occupational and Environmental Medicine Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Occupational and Environmental Medicine Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Occupational and Environmental Medicine Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Occupational and Environmental Medicine Volume 69 ; 69 >
 
   }
 
@@ -1442,6 +1602,86 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://pmj.bmj.com/
 
+    au < HighWirePressH20Plugin ; manifest ; 1925 ; Postgraduate Medical Journal Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1926 ; Postgraduate Medical Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1927 ; Postgraduate Medical Journal Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1928 ; Postgraduate Medical Journal Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1929 ; Postgraduate Medical Journal Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1930 ; Postgraduate Medical Journal Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1931 ; Postgraduate Medical Journal Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1932 ; Postgraduate Medical Journal Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1933 ; Postgraduate Medical Journal Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1934 ; Postgraduate Medical Journal Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1935 ; Postgraduate Medical Journal Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1936 ; Postgraduate Medical Journal Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1937 ; Postgraduate Medical Journal Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1938 ; Postgraduate Medical Journal Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 1939 ; Postgraduate Medical Journal Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1940 ; Postgraduate Medical Journal Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1941 ; Postgraduate Medical Journal Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 1942 ; Postgraduate Medical Journal Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1943 ; Postgraduate Medical Journal Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1944 ; Postgraduate Medical Journal Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 1945 ; Postgraduate Medical Journal Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 1946 ; Postgraduate Medical Journal Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 1947 ; Postgraduate Medical Journal Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 1948 ; Postgraduate Medical Journal Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; manifest ; 1949 ; Postgraduate Medical Journal Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 1950 ; Postgraduate Medical Journal Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 1951 ; Postgraduate Medical Journal Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 1952 ; Postgraduate Medical Journal Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 1953 ; Postgraduate Medical Journal Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 1954 ; Postgraduate Medical Journal Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 1955 ; Postgraduate Medical Journal Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 1956 ; Postgraduate Medical Journal Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 1957 ; Postgraduate Medical Journal Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 1958 ; Postgraduate Medical Journal Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 1959 ; Postgraduate Medical Journal Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; manifest ; 1960 ; Postgraduate Medical Journal Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; manifest ; 1961 ; Postgraduate Medical Journal Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; Postgraduate Medical Journal Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; Postgraduate Medical Journal Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; Postgraduate Medical Journal Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; Postgraduate Medical Journal Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; Postgraduate Medical Journal Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; manifest ; 1967 ; Postgraduate Medical Journal Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; Postgraduate Medical Journal Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; Postgraduate Medical Journal Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; Postgraduate Medical Journal Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; Postgraduate Medical Journal Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; Postgraduate Medical Journal Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; manifest ; 1973 ; Postgraduate Medical Journal Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; manifest ; 1974 ; Postgraduate Medical Journal Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; manifest ; 1975 ; Postgraduate Medical Journal Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; Postgraduate Medical Journal Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; Postgraduate Medical Journal Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; Postgraduate Medical Journal Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; Postgraduate Medical Journal Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; Postgraduate Medical Journal Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; Postgraduate Medical Journal Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; Postgraduate Medical Journal Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; Postgraduate Medical Journal Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; Postgraduate Medical Journal Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; Postgraduate Medical Journal Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; Postgraduate Medical Journal Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; Postgraduate Medical Journal Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; Postgraduate Medical Journal Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; Postgraduate Medical Journal Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; Postgraduate Medical Journal Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; Postgraduate Medical Journal Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; Postgraduate Medical Journal Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; Postgraduate Medical Journal Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; Postgraduate Medical Journal Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; Postgraduate Medical Journal Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; Postgraduate Medical Journal Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; Postgraduate Medical Journal Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; Postgraduate Medical Journal Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; Postgraduate Medical Journal Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; Postgraduate Medical Journal Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Postgraduate Medical Journal Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Postgraduate Medical Journal Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; Postgraduate Medical Journal Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Postgraduate Medical Journal Volume 80 ; 80 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Postgraduate Medical Journal Volume 81 ; 81 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Postgraduate Medical Journal Volume 82 ; 82 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Postgraduate Medical Journal Volume 83 ; 83 >
@@ -1449,6 +1689,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Postgraduate Medical Journal Volume 85 ; 85 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Postgraduate Medical Journal Volume 86 ; 86 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Postgraduate Medical Journal Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Postgraduate Medical Journal Volume 88 ; 88 >
 
   }
 
@@ -1462,6 +1703,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://pn.bmj.com/
 
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Practical Neurology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Practical Neurology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; Practical Neurology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Practical Neurology Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2005 ; Practical Neurology Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 2006 ; Practical Neurology Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Practical Neurology Volume 7 ; 7 >
@@ -1469,6 +1714,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Practical Neurology Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Practical Neurology Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Practical Neurology Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Practical Neurology Volume 12 ; 12 >
 
   }
 
@@ -1515,6 +1761,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; released ; 2009 ; Quality and Safety in Health Care Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; notReady ; 2010 ; Quality and Safety in Health Care Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; notReady ; 2011 ; Quality and Safety in Health Care Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Quality and Safety in Health Care Volume 21 ; 21 >
       
     }
 
@@ -1529,85 +1776,87 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     >
 
     param[base_url] = http://sti.bmj.com/
-    
-    comment[v87] = hash mismatch
 
-    au < HighWirePressH20Plugin ; manifest ; 1925 ; Sexually Transmitted Infections Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1927 ; Sexually Transmitted Infections Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1928 ; Sexually Transmitted Infections Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1929 ; Sexually Transmitted Infections Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1930 ; Sexually Transmitted Infections Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1931 ; Sexually Transmitted Infections Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1932 ; Sexually Transmitted Infections Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1933 ; Sexually Transmitted Infections Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1934 ; Sexually Transmitted Infections Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1935 ; Sexually Transmitted Infections Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1936 ; Sexually Transmitted Infections Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1937 ; Sexually Transmitted Infections Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1938 ; Sexually Transmitted Infections Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1939 ; Sexually Transmitted Infections Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1943 ; Sexually Transmitted Infections Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1944 ; Sexually Transmitted Infections Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1945 ; Sexually Transmitted Infections Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1946 ; Sexually Transmitted Infections Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1947 ; Sexually Transmitted Infections Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; Sexually Transmitted Infections Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; Sexually Transmitted Infections Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; Sexually Transmitted Infections Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; Sexually Transmitted Infections Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; manifest ; 1952 ; Sexually Transmitted Infections Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; Sexually Transmitted Infections Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; manifest ; 1954 ; Sexually Transmitted Infections Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 1955 ; Sexually Transmitted Infections Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1956 ; Sexually Transmitted Infections Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 1957 ; Sexually Transmitted Infections Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 1958 ; Sexually Transmitted Infections Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 1959 ; Sexually Transmitted Infections Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 1960 ; Sexually Transmitted Infections Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; Sexually Transmitted Infections Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; Sexually Transmitted Infections Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; Sexually Transmitted Infections Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; Sexually Transmitted Infections Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Sexually Transmitted Infections Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Sexually Transmitted Infections Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Sexually Transmitted Infections Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Sexually Transmitted Infections Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Sexually Transmitted Infections Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Sexually Transmitted Infections Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Sexually Transmitted Infections Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Sexually Transmitted Infections Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Sexually Transmitted Infections Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Sexually Transmitted Infections Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Sexually Transmitted Infections Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Sexually Transmitted Infections Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Sexually Transmitted Infections Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Sexually Transmitted Infections Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Sexually Transmitted Infections Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Sexually Transmitted Infections Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Sexually Transmitted Infections Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Sexually Transmitted Infections Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Sexually Transmitted Infections Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Sexually Transmitted Infections Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Sexually Transmitted Infections Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Sexually Transmitted Infections Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Sexually Transmitted Infections Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Sexually Transmitted Infections Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Sexually Transmitted Infections Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Sexually Transmitted Infections Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Sexually Transmitted Infections Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Sexually Transmitted Infections Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Sexually Transmitted Infections Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Sexually Transmitted Infections Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Sexually Transmitted Infections Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Sexually Transmitted Infections Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Sexually Transmitted Infections Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Sexually Transmitted Infections Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Sexually Transmitted Infections Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Sexually Transmitted Infections Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Sexually Transmitted Infections Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Sexually Transmitted Infections Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Sexually Transmitted Infections Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Sexually Transmitted Infections Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; released ; 1925 ; Sexually Transmitted Infections Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 1926 ; Sexually Transmitted Infections Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 1927 ; Sexually Transmitted Infections Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 1928 ; Sexually Transmitted Infections Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; released ; 1929 ; Sexually Transmitted Infections Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; released ; 1930 ; Sexually Transmitted Infections Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; released ; 1931 ; Sexually Transmitted Infections Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; released ; 1932 ; Sexually Transmitted Infections Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; released ; 1933 ; Sexually Transmitted Infections Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 1934 ; Sexually Transmitted Infections Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; released ; 1935 ; Sexually Transmitted Infections Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; released ; 1936 ; Sexually Transmitted Infections Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; released ; 1937 ; Sexually Transmitted Infections Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; released ; 1938 ; Sexually Transmitted Infections Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; released ; 1939 ; Sexually Transmitted Infections Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; released ; 1940 ; Sexually Transmitted Infections Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; released ; 1941 ; Sexually Transmitted Infections Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; released ; 1942 ; Sexually Transmitted Infections Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; released ; 1943 ; Sexually Transmitted Infections Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; released ; 1944 ; Sexually Transmitted Infections Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; released ; 1945 ; Sexually Transmitted Infections Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; released ; 1946 ; Sexually Transmitted Infections Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; released ; 1947 ; Sexually Transmitted Infections Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; released ; 1948 ; Sexually Transmitted Infections Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; released ; 1949 ; Sexually Transmitted Infections Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; released ; 1950 ; Sexually Transmitted Infections Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; released ; 1951 ; Sexually Transmitted Infections Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; released ; 1952 ; Sexually Transmitted Infections Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; released ; 1953 ; Sexually Transmitted Infections Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; released ; 1954 ; Sexually Transmitted Infections Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; released ; 1955 ; Sexually Transmitted Infections Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; released ; 1956 ; Sexually Transmitted Infections Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; released ; 1957 ; Sexually Transmitted Infections Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; released ; 1958 ; Sexually Transmitted Infections Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; released ; 1959 ; Sexually Transmitted Infections Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; released ; 1960 ; Sexually Transmitted Infections Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; released ; 1961 ; Sexually Transmitted Infections Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; released ; 1962 ; Sexually Transmitted Infections Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; released ; 1963 ; Sexually Transmitted Infections Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; released ; 1964 ; Sexually Transmitted Infections Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; released ; 1965 ; Sexually Transmitted Infections Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; released ; 1966 ; Sexually Transmitted Infections Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; released ; 1967 ; Sexually Transmitted Infections Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; released ; 1968 ; Sexually Transmitted Infections Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; released ; 1969 ; Sexually Transmitted Infections Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; released ; 1970 ; Sexually Transmitted Infections Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; released ; 1971 ; Sexually Transmitted Infections Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; released ; 1972 ; Sexually Transmitted Infections Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; released ; 1973 ; Sexually Transmitted Infections Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; released ; 1974 ; Sexually Transmitted Infections Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; released ; 1975 ; Sexually Transmitted Infections Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; released ; 1976 ; Sexually Transmitted Infections Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; released ; 1977 ; Sexually Transmitted Infections Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; released ; 1978 ; Sexually Transmitted Infections Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; released ; 1979 ; Sexually Transmitted Infections Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; released ; 1980 ; Sexually Transmitted Infections Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; released ; 1981 ; Sexually Transmitted Infections Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; released ; 1982 ; Sexually Transmitted Infections Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; released ; 1983 ; Sexually Transmitted Infections Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; released ; 1984 ; Sexually Transmitted Infections Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; released ; 1985 ; Sexually Transmitted Infections Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; released ; 1986 ; Sexually Transmitted Infections Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; released ; 1987 ; Sexually Transmitted Infections Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; released ; 1988 ; Sexually Transmitted Infections Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; released ; 1989 ; Sexually Transmitted Infections Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; released ; 1990 ; Sexually Transmitted Infections Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; released ; 1991 ; Sexually Transmitted Infections Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; released ; 1992 ; Sexually Transmitted Infections Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; released ; 1993 ; Sexually Transmitted Infections Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; released ; 1994 ; Sexually Transmitted Infections Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; released ; 1995 ; Sexually Transmitted Infections Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; released ; 1996 ; Sexually Transmitted Infections Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; released ; 1997 ; Sexually Transmitted Infections Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; released ; 1998 ; Sexually Transmitted Infections Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; released ; 1999 ; Sexually Transmitted Infections Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; released ; 2000 ; Sexually Transmitted Infections Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; released ; 2001 ; Sexually Transmitted Infections Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; released ; 2002 ; Sexually Transmitted Infections Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; released ; 2003 ; Sexually Transmitted Infections Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; released ; 2004 ; Sexually Transmitted Infections Volume 80 ; 80 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Sexually Transmitted Infections Volume 81 ; 81 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Sexually Transmitted Infections Volume 82 ; 82 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Sexually Transmitted Infections Volume 83 ; 83 >
@@ -1615,6 +1864,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Sexually Transmitted Infections Volume 85 ; 85 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Sexually Transmitted Infections Volume 86 ; 86 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Sexually Transmitted Infections Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Sexually Transmitted Infections Volume 88 ; 88 >
 
   }
 
@@ -1628,65 +1878,65 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://thorax.bmj.com/
 
-    au < HighWirePressH20Plugin ; ready ; 1946 ; Thorax Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; ready ; 1947 ; Thorax Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; ready ; 1948 ; Thorax Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; ready ; 1949 ; Thorax Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; ready ; 1950 ; Thorax Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; ready ; 1951 ; Thorax Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; ready ; 1952 ; Thorax Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; ready ; 1953 ; Thorax Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; ready ; 1954 ; Thorax Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; ready ; 1955 ; Thorax Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; ready ; 1956 ; Thorax Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; ready ; 1957 ; Thorax Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; ready ; 1958 ; Thorax Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; ready ; 1959 ; Thorax Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; ready ; 1960 ; Thorax Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; ready ; 1961 ; Thorax Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; ready ; 1962 ; Thorax Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; ready ; 1963 ; Thorax Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; ready ; 1964 ; Thorax Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; ready ; 1965 ; Thorax Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; ready ; 1966 ; Thorax Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; ready ; 1967 ; Thorax Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; ready ; 1968 ; Thorax Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; ready ; 1969 ; Thorax Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; ready ; 1970 ; Thorax Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; ready ; 1971 ; Thorax Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; ready ; 1972 ; Thorax Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; ready ; 1973 ; Thorax Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; ready ; 1974 ; Thorax Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; ready ; 1975 ; Thorax Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; ready ; 1976 ; Thorax Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; ready ; 1977 ; Thorax Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; ready ; 1978 ; Thorax Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; ready ; 1979 ; Thorax Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; ready ; 1980 ; Thorax Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; ready ; 1981 ; Thorax Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; ready ; 1982 ; Thorax Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; ready ; 1983 ; Thorax Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; ready ; 1984 ; Thorax Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; ready ; 1985 ; Thorax Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; ready ; 1986 ; Thorax Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; ready ; 1987 ; Thorax Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; ready ; 1988 ; Thorax Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; ready ; 1989 ; Thorax Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; ready ; 1990 ; Thorax Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; ready ; 1991 ; Thorax Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; ready ; 1992 ; Thorax Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; ready ; 1993 ; Thorax Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; ready ; 1994 ; Thorax Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; ready ; 1995 ; Thorax Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; ready ; 1996 ; Thorax Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; ready ; 1997 ; Thorax Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; ready ; 1998 ; Thorax Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; ready ; 1999 ; Thorax Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; ready ; 2000 ; Thorax Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; ready ; 2001 ; Thorax Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; ready ; 2002 ; Thorax Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; ready ; 2003 ; Thorax Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; ready ; 2004 ; Thorax Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; released ; 1946 ; Thorax Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 1947 ; Thorax Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 1948 ; Thorax Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 1949 ; Thorax Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; released ; 1950 ; Thorax Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; released ; 1951 ; Thorax Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; released ; 1952 ; Thorax Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; released ; 1953 ; Thorax Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; released ; 1954 ; Thorax Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 1955 ; Thorax Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; released ; 1956 ; Thorax Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; released ; 1957 ; Thorax Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; released ; 1958 ; Thorax Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; released ; 1959 ; Thorax Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; released ; 1960 ; Thorax Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; released ; 1961 ; Thorax Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; released ; 1962 ; Thorax Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; released ; 1963 ; Thorax Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; released ; 1964 ; Thorax Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; released ; 1965 ; Thorax Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; released ; 1966 ; Thorax Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; released ; 1967 ; Thorax Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; released ; 1968 ; Thorax Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; released ; 1969 ; Thorax Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; released ; 1970 ; Thorax Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; released ; 1971 ; Thorax Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; released ; 1972 ; Thorax Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; released ; 1973 ; Thorax Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; released ; 1974 ; Thorax Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; released ; 1975 ; Thorax Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; released ; 1976 ; Thorax Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; released ; 1977 ; Thorax Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; released ; 1978 ; Thorax Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; released ; 1979 ; Thorax Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; released ; 1980 ; Thorax Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; released ; 1981 ; Thorax Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; released ; 1982 ; Thorax Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; released ; 1983 ; Thorax Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; released ; 1984 ; Thorax Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; released ; 1985 ; Thorax Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; released ; 1986 ; Thorax Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; released ; 1987 ; Thorax Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; released ; 1988 ; Thorax Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; released ; 1989 ; Thorax Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; released ; 1990 ; Thorax Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; released ; 1991 ; Thorax Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; released ; 1992 ; Thorax Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; released ; 1993 ; Thorax Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; released ; 1994 ; Thorax Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; released ; 1995 ; Thorax Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; released ; 1996 ; Thorax Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; released ; 1997 ; Thorax Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; released ; 1998 ; Thorax Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; released ; 1999 ; Thorax Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; released ; 2000 ; Thorax Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; released ; 2001 ; Thorax Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; released ; 2002 ; Thorax Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; released ; 2003 ; Thorax Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; released ; 2004 ; Thorax Volume 59 ; 59 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Thorax Volume 60 ; 60 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Thorax Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Thorax Volume 62 ; 62 >
@@ -1694,6 +1944,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2009 ; Thorax Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Thorax Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Thorax Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Thorax Volume 67 ; 67 >
 
   }
 
@@ -1739,6 +1990,7 @@ comment[tc15] = recursive URL structure
       au < HighWirePressH20Plugin ; released ; 2009 ; Tobacco Control Volume 18 ; 18 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Tobacco Control Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Tobacco Control Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Tobacco Control Volume 21 ; 21 >
 
     }
 

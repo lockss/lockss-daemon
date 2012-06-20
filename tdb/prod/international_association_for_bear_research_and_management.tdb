@@ -13,21 +13,19 @@
     >
 
     {
-      implicit < status ; year ; name ; param[volume] >
-      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
-      param[journal_id] = 1537-6176
+      param[journal_id] = ursu
   
-      au < doNotProcess ; 2004 ; Ursus Volume 15 ; 15 >
-      au < doNotProcess ; 2005 ; Ursus Volume 16 ; 16 >
-      au < doNotProcess ; 2006 ; Ursus Volume 17 ; 17 >
-      au < doNotProcess ; 2007 ; Ursus Volume 18 ; 18 >
-    }
-
-    {
-
-comment[0] = Atypon AUs
-
+      au < testing ; 2004 ; Ursus Volume 15 ; 15 >
+      au < testing ; 2005 ; Ursus Volume 16 ; 16 >
+      au < testing ; 2006 ; Ursus Volume 17 ; 17 >
+      au < testing ; 2007 ; Ursus Volume 18 ; 18 >
+      au < testing ; 2008 ; Ursus Volume 19 ; 19 >
+      au < testing ; 2009 ; Ursus Volume 20 ; 20 >
+      au < testing ; 2010 ; Ursus Volume 21 ; 21 >
+      au < testing ; 2011 ; Ursus Volume 22 ; 22 >
     }
 
   }

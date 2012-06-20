@@ -1,7 +1,7 @@
 #!/bin/sh
 
 TITLE_DBS=""
-HEAP_ARG=-mx512m
+HEAP_ARG=-Xmx512m
 
 while true ; do
   case "$1" in

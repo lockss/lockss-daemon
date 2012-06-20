@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.59 2011-09-25 04:20:40 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.59.4.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
@@ -304,6 +304,13 @@ public interface ArchivalUnit {
   public LinkRewriterFactory getLinkRewriterFactory(String contentType);
 
   /**
+   * Return the {@link ArchiveFileTypes} describing which archive (zip,
+   * etc.) files should have their members exposed as pseudo-CachedUrls.
+   * @return an {@link ArchiveFileTypes} or null if none
+   */
+  public ArchiveFileTypes getArchiveFileTypes();
+
+  /**
    * Returns an Iterator for articles from the AU's plugin. If there isn't
    * one, an empty iterator will be returned.
    * @return the ArticleIterator
@@ -327,7 +334,8 @@ public interface ArchivalUnit {
   public CachedUrlSet makeCachedUrlSet( CachedUrlSetSpec spec);
 
   /**
-   * Create a {@link CachedUrl} object within the set.
+   * Create a {@link CachedUrl} object representing the URL within this AU
+   * (even if the URL doesn't exist or is excluded by the crawl rules).
    * @param url the url of interest
    * @return a {@link CachedUrl} object representing the url.
    */

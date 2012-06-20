@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.9 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.9.12.1 2012-06-20 00:03:08 nchondros Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.nature;
 
-import java.io.*;
 import java.util.*;
 import java.util.regex.*;
 
@@ -67,7 +66,7 @@ public class NaturePublishingGroupArticleIteratorFactory
 
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+    return new BaseArticleMetadataExtractor(null);
   }
 
   protected static class NaturePublishingGroupArticleIterator

@@ -18,20 +18,38 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1042-7260
   
-      au < superseded ; 1999 ; Journal of Zoo and Wildlife Medicine Volume 31 ; 31 >
-      au < superseded ; 2000 ; Journal of Zoo and Wildlife Medicine Volume 32 ; 32 >
-      au < superseded ; 2001 ; Journal of Zoo and Wildlife Medicine Volume 33 ; 33 >
-      au < superseded ; 2002 ; Journal of Zoo and Wildlife Medicine Volume 34 ; 34 >
+      au < down ; 1999 ; Journal of Zoo and Wildlife Medicine Volume 31 ; 31 >
+      au < down ; 2000 ; Journal of Zoo and Wildlife Medicine Volume 32 ; 32 >
+      au < down ; 2001 ; Journal of Zoo and Wildlife Medicine Volume 33 ; 33 >
+      au < down ; 2002 ; Journal of Zoo and Wildlife Medicine Volume 34 ; 34 >
       au < doNotProcess ; 2003 ; Journal of Zoo and Wildlife Medicine Volume 35 ; 35 >
-      au < superseded ; 2004 ; Journal of Zoo and Wildlife Medicine Volume 35 ; 035 >
-      au < superseded ; 2005 ; Journal of Zoo and Wildlife Medicine Volume 36 ; 36 >
-      au < superseded ; 2006 ; Journal of Zoo and Wildlife Medicine Volume 37 ; 37 >
-      au < superseded ; 2007 ; Journal of Zoo and Wildlife Medicine Volume 38 ; 38 >
+      au < down ; 2004 ; Journal of Zoo and Wildlife Medicine Volume 35 ; 035 >
+      au < down ; 2005 ; Journal of Zoo and Wildlife Medicine Volume 36 ; 36 >
+      au < down ; 2006 ; Journal of Zoo and Wildlife Medicine Volume 37 ; 37 >
+      au < down ; 2007 ; Journal of Zoo and Wildlife Medicine Volume 38 ; 38 >
     }
 
     {
 
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = zamd
+
+      au < doNotProcess ; 1999 ; Journal of Zoo and Wildlife Medicine Volume 31 ; 31 >
+      au < doNotProcess ; 2000 ; Journal of Zoo and Wildlife Medicine Volume 32 ; 32 >
+      au < doNotProcess ; 2001 ; Journal of Zoo and Wildlife Medicine Volume 33 ; 33 >
+      au < doNotProcess ; 2002 ; Journal of Zoo and Wildlife Medicine Volume 34 ; 34 >
+      au < doNotProcess ; 2003 ; Journal of Zoo and Wildlife Medicine Volume 35 ; 35 >
+      au < doNotProcess ; 2005 ; Journal of Zoo and Wildlife Medicine Volume 36 ; 36 >
+      au < doNotProcess ; 2006 ; Journal of Zoo and Wildlife Medicine Volume 37 ; 37 >
+      au < doNotProcess ; 2007 ; Journal of Zoo and Wildlife Medicine Volume 38 ; 38 >
+      au < ready ; 2008 ; Journal of Zoo and Wildlife Medicine Volume 39 ; 39 >
+      au < testing ; 2009 ; Journal of Zoo and Wildlife Medicine Volume 40 ; 40 >
+      au < ready ; 2010 ; Journal of Zoo and Wildlife Medicine Volume 41 ; 41 >
+      au < ready ; 2011 ; Journal of Zoo and Wildlife Medicine Volume 42 ; 42 >
+      au < testing ; 2012 ; Journal of Zoo and Wildlife Medicine Volume 43 ; 43 >
+      
 
     }
 

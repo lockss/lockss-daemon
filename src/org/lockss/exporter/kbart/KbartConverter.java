@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.25 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.25.2.1 2012-06-20 00:02:56 nchondros Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ import org.lockss.config.TdbUtil;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.exporter.biblio.BibliographicOrderScorer;
 import org.lockss.exporter.biblio.BibliographicUtil;
-import static org.lockss.exporter.kbart.KbartTdbAuUtil.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.daemon.AuHealthMetric;
 import org.lockss.daemon.AuHealthMetric.HealthUnavailableException;
@@ -92,9 +91,21 @@ import static org.lockss.exporter.kbart.KbartTitle.Field.*;
  * iteration the resulting output is undefined.
  * <p>
  * <emph>Note that the <code>title_id</code> field is now filled with the 
- * ISSN-L code, as these have now been incorporated for all titles, and are 
- * used for linking.</emph>
- * 
+ * results of getIssn(), which gives a preferred ISSN for linking.</emph>
+ *
+ * <h3>Note: Iteration</h3>
+ * The converter can accept an iterator instead of a list, as it deals with a
+ * single title at a time. The ordering of those titles can be established in
+ * the client using this class, or in the resultant exporter itself; it is not
+ * important here except as it relates to the contract made by this class.
+ * <p>
+ * All non-range versions of convertTitleToKbartTitles perform sorting and
+ * return a list, and these could be adapted to omit sorting and return
+ * iterators. Ultimately these methods inform
+ * ListHoldings.getKbartTitlesForExport and are used in creating a filter, so
+ * if the filter is updated to use iterators, we should use the
+ * KbartTitleIterator classes instead of the list-returning methods.
+ *
  * @author Neil Mayo
  */
 public class KbartConverter {
@@ -127,6 +138,7 @@ public class KbartConverter {
    * KbartTitle objects and add them to a list. 
    * 
    * @return a List of KbartTitle objects representing all the TDB titles
+   * @deprecated no longer used
    */
   public static List<KbartTitle> extractAllTitles() {
     return convertTitles(TdbUtil.getAllTdbTitles());
@@ -146,9 +158,9 @@ public class KbartConverter {
   /**
    * Convert the given collection of TdbTitles into KbartTitles.
    * The number of KbartTitles returned is likely to be different to the number
-   * of TdbTitles which was originally supplied, as KbartTitles are grouped 
-   * based on their coverage period rather than purely by title. 
-   * 
+   * of TdbTitles which was originally supplied, as KbartTitles are grouped
+   * based on their coverage period rather than purely by title.
+   *
    * @param titles a collection of TdbTitles
    * @return a list of KbartTitles
    */
@@ -156,29 +168,131 @@ public class KbartConverter {
     if (titles==null) return Collections.emptyList();
     List<KbartTitle> list = new Vector<KbartTitle>();
     for (TdbTitle t : titles) {
-      list.addAll( createKbartTitles(t) );
+      list.addAll( convertTitleToKbartTitles(t) );
     }
     return list;
   }
-  
+
+  /**
+   * Convert the given collection of TdbTitles into KbartTitles. This
+   * version accepts an iterator.
+   *
+   * @param titles an iterator over TdbTitles
+   * @return a list of KbartTitles
+   */
+  /*public static List<KbartTitle> convertTitles(Iterator<TdbTitle> titles) {
+    if (titles==null) return Collections.emptyList();
+    List<KbartTitle> list = new Vector<KbartTitle>();
+    while (titles.hasNext()) {
+      TdbTitle title = titles.next();
+      list.addAll(convertTitleToKbartTitles(title));
+    }
+    return list;
+  }*/
+
+  /**
+   * Convert the given collection of TdbTitles into KbartTitles. This
+   * version accepts and returns an iterator.
+   *
+   * @param titles an iterator over TdbTitles
+   * @return an iterator over KbartTitles resulting from the conversion
+   */
+  /*public static Iterator<KbartTitle> convertTitles(Iterator<TdbTitle> titles) {
+    return new TdbTitleKbartTitleIterator(titles);
+  }*/
+
   /**
    * Convert the given collection of ArchivalUnits into KbartTitles representing
    * coverage ranges.
-   * 
+   *
    * @param auMap a map of TdbTitles to lists of ArchivalUnits
    * @param showHealth whether or not to calculate a health rating for each title
    * @param rangeFieldsIncluded whether range fields are included in the output
    * @return a list of KbartTitles
    */
-  public static List<KbartTitle> convertAus(Map<TdbTitle, List<ArchivalUnit>> auMap, 
-      boolean showHealth, boolean rangeFieldsIncluded) {
+  /*public static List<KbartTitle> convertTitleAus(Map<TdbTitle, List<ArchivalUnit>> auMap,
+                                                 boolean showHealth, boolean rangeFieldsIncluded) {
     if (auMap==null) return Collections.emptyList();
     List<KbartTitle> list = new Vector<KbartTitle>();
     for (List<ArchivalUnit> titleAus : auMap.values()) {
-      list.addAll(createKbartTitles(titleAus, showHealth, rangeFieldsIncluded));
+      list.addAll(convertTitleToKbartTitles(titleAus, showHealth, rangeFieldsIncluded));
+    }
+    return list;
+  }*/
+
+  /**
+   * Convert the given collection of lists of ArchivalUnit ranges into
+   * KbartTitles representing coverage ranges. Each list should represent the
+   * AUs for a single title.
+   *
+   * @param auLists a collection of lists of AUs representing ranges
+   * @param showHealth whether or not to calculate a health rating for each title
+   * @param rangeFieldsIncluded whether range fields are included in the output
+   * @return a list of KbartTitles
+   */
+  public static List<KbartTitle> convertTitleAus(
+      Collection<List<ArchivalUnit>> auLists,
+      boolean showHealth, boolean rangeFieldsIncluded) {
+    if (auLists==null) return Collections.emptyList();
+    List<KbartTitle> list = new Vector<KbartTitle>();
+    for (List<ArchivalUnit> titleAus : auLists) {
+      list.addAll(convertTitleToKbartTitles(titleAus, showHealth, rangeFieldsIncluded));
     }
     return list;
   }
+
+  // Version that accepts and returns an iterator
+  /*public static List<KbartTitle> convertTitleAus(
+      Iterator<List<ArchivalUnit>> auLists,
+      boolean showHealth, boolean rangeFieldsIncluded) {
+    if (auLists==null) return Collections.emptyList();
+    List<KbartTitle> list = new Vector<KbartTitle>();
+    while (auLists.hasNext()) {
+      List<ArchivalUnit> titleAus = auLists.next();
+      list.addAll(convertTitleToKbartTitles(titleAus, showHealth, rangeFieldsIncluded));
+    }
+    return list;
+  }*/
+  /*public static Iterator<KbartTitle> convertTitleAus(
+      Iterator<List<ArchivalUnit>> auLists,
+      boolean showHealth, boolean rangeFieldsIncluded) {
+    return new AuKbartTitleIterator(auLists, showHealth, rangeFieldsIncluded);
+  }*/
+
+
+  /**
+   * Convert the given collection of lists of BibliographicItems (each list
+   * representing a single title) into KbartTitles representing coverage ranges.
+   * Each list should represent the AUs for a single title.
+   *
+   * @param bibItemLists a collection of lists of BibliographicItems representing ranges
+   * @return a list of KbartTitles
+   */
+  public static List<KbartTitle> convertTitleAus(
+      Collection<List<BibliographicItem>> bibItemLists) {
+    if (bibItemLists==null) return Collections.emptyList();
+    List<KbartTitle> list = new Vector<KbartTitle>();
+    for (List<BibliographicItem> titleItems : bibItemLists) {
+      list.addAll(convertTitleToKbartTitles(titleItems));
+    }
+    return list;
+  }
+
+  // Version that accepts an iterator
+  public static List<KbartTitle> convertTitleAus(
+      Iterator<List<BibliographicItem>> bibItemLists) {
+    if (bibItemLists==null) return Collections.emptyList();
+    List<KbartTitle> list = new Vector<KbartTitle>();
+    while (bibItemLists.hasNext()) {
+      List<BibliographicItem> titleItems = bibItemLists.next();
+      list.addAll(convertTitleToKbartTitles(titleItems));
+    }
+    return list;
+  }
+  /*public static Iterator<KbartTitle> convertTitleAus(
+      Iterator<List<BibliographicItem>> bibItemLists) {
+    return new BibliographicItemKbartTitleIterator(bibItemLists);
+  }*/
 
   /**
    * Analyse the list of BibliographicItems to see whether it contains a mix of volume
@@ -277,7 +391,8 @@ public class KbartConverter {
    * @param rangeFieldsIncluded whether the export fields include range fields
    * @return a list of KbartTitle objects in no particular order
    */
-  public static List<KbartTitle> createKbartTitles(Collection<ArchivalUnit> titleAus, 
+  protected static List<KbartTitle> convertTitleToKbartTitles(
+      Collection<ArchivalUnit> titleAus,
       boolean showHealth, boolean rangeFieldsIncluded) {
     if (titleAus==null) return Collections.emptyList();
     // Create a list of BibliographicItems from the ArchivalUnits
@@ -285,15 +400,15 @@ public class KbartConverter {
     // Map the AUs from BibliographicItems for later reference
     final Map<? extends BibliographicItem, ArchivalUnit> ausMap = TdbUtil.mapTdbAusToAus(titleAus);
     // Calculate the KbartTitles, each mapped to the BibliographicItem range that informed it
-    final Map<KbartTitle, TitleRange> map = createKbartTitlesWithRanges(tdbAus);
+    final Map<KbartTitle, TitleRange> map = convertTitleToKbartTitlesWithRanges(tdbAus);
     // Start constructing a result list
     List<KbartTitle> res = new ArrayList<KbartTitle>();
 
     // A tally of health values for the current title, in case they need to 
     // be aggregated due to a lack of range fields in the output 
     double totalHealth = 0;
-    int numTdbAus = 0;
-    // For each (ordered) KbartTitle, use its TdbAu range, and the mapped AUs,
+    int numItems = 0;
+    // For each (ordered) KbartTitle, use its BibItem range, and the mapped AUs,
     // to calculate the aggregate health of its underlying AUs.
     List<KbartTitle> keyList = new ArrayList<KbartTitle>(map.keySet());
     sortKbartTitles(keyList);
@@ -306,7 +421,7 @@ public class KbartConverter {
           // Add a KbartTitle wrapper that decorates it with a health value
           double health = AuHealthMetric.getAggregateHealth(
               new ArrayList<ArchivalUnit>() {{
-                for (BibliographicItem tdbAu : map.get(kbt).items) add(ausMap.get(tdbAu));
+                for (BibliographicItem bibItem : map.get(kbt).items) add(ausMap.get(bibItem));
               }}
           );
           // If there are no range fields in the output, aggregate all the
@@ -315,10 +430,10 @@ public class KbartConverter {
             int numContributingAus = map.get(kbt).items.size();
             // Health is an average over the AUs
             totalHealth += health * numContributingAus;
-            numTdbAus += numContributingAus;
+            numItems += numContributingAus;
             // On the final KbartTitle, calculate the average health
             if (!it.hasNext()) {
-              res.add(new KbartTitleHealthWrapper(kbt, totalHealth/numTdbAus));
+              res.add(new KbartTitleHealthWrapper(kbt, totalHealth/numItems));
             }
           } else
             res.add(new KbartTitleHealthWrapper(kbt, health));
@@ -340,7 +455,7 @@ public class KbartConverter {
     if (titleAus==null) return Collections.emptyList();
     // Create a list of TdbAus from the ArchivalUnits so we can sort it.
     List<TdbAu> aus = TdbUtil.getTdbAusFromAus(titleAus);
-    return createKbartTitles(aus);
+    return convertTitleToKbartTitles(aus);
   }*/
 
   
@@ -351,34 +466,39 @@ public class KbartConverter {
    * @param tdbt a TdbTitle from which to create the KbartTitle
    * @return a list of KbartTitle objects which may be unordered
    */
-  public static List<KbartTitle> createKbartTitles(TdbTitle tdbt) {
+  protected static List<KbartTitle> convertTitleToKbartTitles(TdbTitle tdbt) {
     if (tdbt==null) return Collections.emptyList();
     // Create a list of AUs from the collection returned by the TdbTitle getter,
     // so we can sort it.
     List<BibliographicItem> aus = new ArrayList<BibliographicItem>(tdbt.getTdbAus());
-    return createKbartTitles(aus);
+    return convertTitleToKbartTitles(aus);
   }
   
   /**
    * Create a list of KbartTitles from the supplied range of BibliographicItems.
-   * The list is sorted.
+   * The list is sorted. This method is public for use by any client that has a
+   * list of {@link org.lockss.exporter.biblio.BibliographicItem}s to convert.
    * 
    * @param aus a list of BibliographicItems which represent a single title
    * @return a list of KbartTitles
    */
-  public static List<KbartTitle> createKbartTitles(List<? extends BibliographicItem> aus) {
-    List<KbartTitle> res = new ArrayList<KbartTitle>(createKbartTitlesWithRanges(aus).keySet());
+  public static List<KbartTitle> convertTitleToKbartTitles(
+      List<? extends BibliographicItem> aus) {
+    List<KbartTitle> res = new ArrayList<KbartTitle>(
+        convertTitleToKbartTitlesWithRanges(aus).keySet()
+    );
     sortKbartTitles(res);
     return res;
   }
   
   /**
-   * Convert a list of BibliographicItems into one or more KbartTitles using as much
-   * information as possible, but maintain a record of the BibliographicItem range for each
-   * KbartTitle, and return as a map of the former to the latter. Note that 
-   * this should only be called with a list of BibliographicItems which represent a single
-   * title, otherwise the Map will be large and the assumptions about which 
-   * metadata is shared by the titles will not hold.
+   * Convert a list of BibliographicItems into one or more KbartTitles using as
+   * much information as possible, but maintain a record of the
+   * BibliographicItem range for each KbartTitle, and return as a map of the
+   * former to the latter. Note that this should only be called with a list of
+   * BibliographicItems which represent a single title, otherwise the Map will
+   * be large and the assumptions about which metadata is shared by the titles
+   * will not hold.
    * <p> 
    * A list of BibliographicItems relating to a single title will yield multiple
    * KbartTitles if it has gaps in its coverage of greater than a year, in 
@@ -418,9 +538,9 @@ public class KbartConverter {
    * @param aus a list of BibliographicItems relating to a single title
    * @return a map of KbartTitle to the TitleRange underlying it
    */
-  public static Map<KbartTitle, TitleRange> createKbartTitlesWithRanges(
+  public static Map<KbartTitle, TitleRange> convertTitleToKbartTitlesWithRanges(
       List<? extends BibliographicItem> aus) {
-    
+
     // If there are no aus, we have no title records to add
     if (aus==null || aus.size()==0) return Collections.emptyMap();
 
@@ -428,16 +548,9 @@ public class KbartConverter {
     // need to be split into ranges    
     TitleRangeInfo tri = getAuCoverageRanges(aus);
     List<TitleRange> ranges = tri.ranges;
-       
+
     // If there is at least one AU, get the first for reference
     BibliographicItem firstAu = aus.get(0);
-    // Identify the issue format
-    IssueFormat issueFormat = identifyIssueFormat(firstAu);
-    // Reporting:
-    if (issueFormat!=null) {
-      log.debug( String.format("AU %s uses issue format: param[%s] = %s", 
-          firstAu, issueFormat.getKey(), issueFormat.getIssueString((TdbAu)firstAu)) );
-    }
 
     // -----------------------------------------------------------------------
     // Create a title which will have the generic properties set; it can
@@ -463,11 +576,12 @@ public class KbartConverter {
       verifyRange(range);
       
       KbartTitle kbt = baseKbt.clone();
-      fillKbartTitle(kbt, range, issueFormat, tri.hasVols);
+      fillKbartTitle(kbt, range, tri.hasVols);
       
       // Add the title to the map
       kbtList.put(kbt, range);
     }
+
     return kbtList;
   }
 
@@ -477,7 +591,9 @@ public class KbartConverter {
    * fields set, which can then be cloned to create KbartTitles on which the 
    * remaining range-specific fields can be set. The fields which are set on 
    * the base title are the generic title fields, that is publisher name, 
-   * publication title, ISSN identifiers and URL.
+   * publication title, ISSN identifiers and URL. ISSN identifiers have their
+   * form validated, ignoring the checksum, and if they are invalid are replaced
+   * with null.
    * 
    * @param au a sample AU from which to take general field values
    * @return a KbartTitle with only general (title-level) properties set
@@ -491,13 +607,13 @@ public class KbartConverter {
     baseKbt.setField(PUBLICATION_TITLE, au.getJournalTitle());
 
     // Now add information that can be retrieved from the AUs.
-    // Add ISSN, EISSN and ISSN-L if available.
+    // Add ISSN, EISSN and a preferred ISSN.
     baseKbt.setField(PRINT_IDENTIFIER,
-        MetadataUtil.validateISSN(au.getPrintIssn()));
+        MetadataUtil.validateIssn(au.getPrintIssn()));
     baseKbt.setField(ONLINE_IDENTIFIER,
-        MetadataUtil.validateISSN(au.getEissn()));
+        MetadataUtil.validateIssn(au.getEissn()));
     baseKbt.setField(TITLE_ID,
-        MetadataUtil.validateISSN(au.getIssnL()));
+        MetadataUtil.validateIssn(au.getIssn()));
 
     // Title URL
     // Set using a substitution parameter 
@@ -516,7 +632,6 @@ public class KbartConverter {
    */
   private static void fillKbartTitle(KbartTitle kbt,
                                      TitleRange range,
-                                     KbartTdbAuUtil.IssueFormat issueFormat,
                                      boolean hasVols) {
     // Volume numbers (we omit volumes if the title did not yield a full and
     // consistent set)
@@ -527,16 +642,9 @@ public class KbartConverter {
     }
 
     // Issue numbers
-    if (issueFormat != null) {
-      kbt.setField(NUM_FIRST_ISSUE_ONLINE,
-          issueFormat.getFirstIssue((TdbAu)range.first));
-      kbt.setField(NUM_LAST_ISSUE_ONLINE,
-          issueFormat.getLastIssue((TdbAu) range.last));
-    } else {
-      kbt.setField(NUM_FIRST_ISSUE_ONLINE, range.first.getStartIssue());
-      kbt.setField(NUM_LAST_ISSUE_ONLINE, range.last.getEndIssue());
-    }
-
+    kbt.setField(NUM_FIRST_ISSUE_ONLINE, range.first.getStartIssue());
+    kbt.setField(NUM_LAST_ISSUE_ONLINE, range.last.getEndIssue());
+    
     // Issue years (will be zero if years could not be found)
     if (isPublicationDate(range.getFirstYear()) &&
         isPublicationDate(range.getLastYear())) {
@@ -547,11 +655,13 @@ public class KbartConverter {
           Integer.toString(range.getLastYear()));
       // If the final year in the range is this year or later,
       // leave empty the last issue/volume/date fields
-      if (range.getLastYear() >= getThisYear()) {
+      // NB: We now record the value and handle the blank requirements within
+      // the KbartTitle's getters
+      /*if (range.getLastYear() >= getThisYear()) {
         kbt.setField(DATE_LAST_ISSUE_ONLINE, "");
         kbt.setField(NUM_LAST_ISSUE_ONLINE, "");
         kbt.setField(NUM_LAST_VOL_ONLINE, "");
-      }
+      }*/
     }
   }
 
@@ -566,7 +676,8 @@ public class KbartConverter {
   /**
    * Update the KbartTitle with new values for the title fields if the
    * BibliographicItem has different values. Fields checked are title name,
-   * issn, eissn, and issnl.
+   * issn, eissn, and issnl. ISSN identifiers have their form validated,
+   * ignoring the checksum, and if they are invalid are replaced with null.
    *  
    * @param au a BibliographicItem with potentially new field values
    * @param kbt a KbartTitle whose properties to update
@@ -585,17 +696,17 @@ public class KbartConverter {
     if (issnCheck!=null && !issnCheck.equals(kbt.getField(PRINT_IDENTIFIER))) {
       log.info(String.format("ISSN change within title %s => %s", 
           kbt.getField(PRINT_IDENTIFIER), issnCheck));
-      kbt.setField(PRINT_IDENTIFIER, issnCheck);
+      kbt.setField(PRINT_IDENTIFIER, MetadataUtil.validateIssn(issnCheck));
     }
     if (eissnCheck!=null && !eissnCheck.equals(kbt.getField(ONLINE_IDENTIFIER))) {
       log.info(String.format("EISSN change within title %s => %s", 
           kbt.getField(ONLINE_IDENTIFIER), eissnCheck));
-      kbt.setField(ONLINE_IDENTIFIER, eissnCheck);
+      kbt.setField(ONLINE_IDENTIFIER, MetadataUtil.validateIssn(eissnCheck));
     }
     if (issnlCheck!=null && !issnlCheck.equals(kbt.getField(TITLE_ID))) {
       log.info(String.format("ISSN-L change within title %s => %s",
           kbt.getField(TITLE_ID), issnlCheck));
-      kbt.setField(TITLE_ID, issnlCheck);
+      kbt.setField(TITLE_ID, MetadataUtil.validateIssn(issnlCheck));
     }
   }
   
@@ -706,7 +817,7 @@ public class KbartConverter {
    * the last year, volume and issue fields empty as suggested by 
    * KBART 5.3.2.8 - 5.3.2.10.
    * 
-   * @param aus ordered list of AUs
+   * @param aus ordered list of AUs for a single title
    * @return a TitleRangeInfo containing a similarly-ordered list of TitleRange objects 
    */
   static TitleRangeInfo getAuCoverageRanges(
@@ -762,7 +873,7 @@ public class KbartConverter {
     }
 
     // Log which ordering is used by each title after the analysis
-    log.debug(String.format("%s will use %s ordering\n",
+    log.debug2(String.format("%s will use %s ordering\n",
         aus.get(0).getJournalTitle(), preferVolume ? "VOLUME" : "YEAR"));
 
     return new TitleRangeInfo(preferVolume ? rangesByVol : rangesByYear, hasFullVols, hasFullYears);
@@ -804,7 +915,8 @@ public class KbartConverter {
     if (coverageValues==null || coverageValues.size()!=aus.size()) {
       if (sortField==SORT_FIELD.VOLUME)
         ranges.add(new TitleRange(aus.subList(0, aus.size())));
-      log.warning(String.format(
+      // Record the lack of metadata if debugging
+      log.debug(String.format(
           "%s lacks a complete and consistent set of %ss; no coverage gap " +
               "calculations possible with this field.",
           aus.get(0).getJournalTitle(), sortField
@@ -833,6 +945,9 @@ public class KbartConverter {
       currentCoverageVal = coverageValues.get(i);
       previousAu = aus.get(i-1);
       currentAu = aus.get(i);
+
+      // Reporting: Output a warning if an AU is 'down' with a replacement.
+      verifyNotSuperseded(previousAu, currentAu);
 
       boolean isCoverageGap = false;
       // Whether there is a gap on the chosen sort field
@@ -874,7 +989,8 @@ public class KbartConverter {
    * A generic method for establishing whether there is a coverage gap between
    * the given BibliographicItems. The field argument indicates the primary field which will
    * be analysed for a coverage gap. If the values are not appropriately
-   * consecutive on that field, there is a coverage gap.
+   * consecutive on that field, there is a coverage gap. If either of the values
+   * on the given field is null, we return true.
    * @param au1 the first BibliographicItem
    * @param au2 the second BibliographicItem
    * @param field the primary field used in sorting the BibliographicItems
@@ -883,7 +999,11 @@ public class KbartConverter {
   private static boolean isCoverageGap(BibliographicItem au1,
                                        BibliographicItem au2,
                                        SORT_FIELD field) {
-    return !field.areAppropriatelyConsecutive(au1, au2);
+    try {
+      return !field.areAppropriatelyConsecutive(au1, au2);
+    } catch (NumberFormatException e) {
+      return true;
+    }
   }
 
 
@@ -928,11 +1048,41 @@ public class KbartConverter {
     String lastVol = range.last.getEndVolume();
     // If either of the volumes is null, we can't verify; return true
     if (firstVol==null || lastVol==null) return true;
-    // Check if the first vol is greater than last
+    // Check if the first vol is greater than last (integer)
     if (NumberUtil.isInteger(firstVol) && NumberUtil.isInteger(lastVol)) {
       return Integer.parseInt(firstVol) <= Integer.parseInt(lastVol);
-    } else {
+
+    }
+    // Check if the first vol is greater than last (normalised Roman)
+    else if (NumberUtil.isRomanNumber(firstVol) && NumberUtil.isRomanNumber(lastVol)) {
+      return NumberUtil.parseRomanNumber(firstVol, true) <= NumberUtil.parseRomanNumber(lastVol, true);
+    }
+    // Otherwise compare first and last vol alphabetically
+    else {
       return firstVol.compareTo(lastVol) <= 0;
+    }
+  }
+
+  // Output a warning if an AU is 'down' with a replacement.
+  // Note this only works if the AUs are consecutive, which they should be
+  // when ordering by either vol or yr, as we expect a replacement to share
+  // the same range fields and id fields.
+  // It might be helpful, but is harder, to say if an AU is superseded without a
+  // replacement, as it requires tracking the statuse of all the TdbAus in a
+  // title.
+  private static void verifyNotSuperseded(BibliographicItem previousAu,
+                                          BibliographicItem currentAu) {
+    if (previousAu instanceof TdbAu && currentAu instanceof TdbAu) {
+      // Are they equivalent?
+      if (BibliographicUtil.areApparentlyEquivalent(previousAu, currentAu)) {
+        String prevStat = ((TdbAu) previousAu).getAttr("status");
+        String currStat = ((TdbAu) currentAu).getAttr("status");
+        //if (prevStat==null || currStat==null) return;
+        if ("down".equals(prevStat) || "down".equals(currStat)) {
+          log.warning(String.format("Down AU should be superseded:" +
+              "\n %s (%s)\n %s (%s)", previousAu, prevStat, currentAu, currStat));
+        }
+      }
     }
   }
   /////////////////////////////////////////////////////////////////////////////
@@ -969,6 +1119,101 @@ public class KbartConverter {
       this.hasVols = false; 
       this.hasYears = false; 
     }
+  }
+
+
+
+  /**
+   * Create an iterator on KbartTitles produced from TdbTitles.
+   */
+  public static class TdbTitleKbartTitleIterator
+      extends AbstractKbartTitleIterator<TdbTitle> {
+    // Create an iterator on TdbTitles.
+    public TdbTitleKbartTitleIterator(final Iterator<TdbTitle> titles) {
+      super(titles);
+    }
+    protected void updateResultsList() {
+      // Convert titles until we have a set of results or run out.
+      while ((results==null || !results.hasNext()) && titles.hasNext()) {
+        results = convertTitleToKbartTitles(titles.next()).iterator();
+      }
+    }
+  }
+
+  /**
+   * Create an iterator on KbartTitles produced from Lists of AUs. Each List
+   * of AUs represents a title.
+   */
+  public static class AuKbartTitleIterator 
+      extends AbstractKbartTitleIterator<List<ArchivalUnit>> {
+    // Flags relevant to lists of AUs
+    final boolean showHealth;
+    final boolean rangeFieldsIncluded;
+    // Create an iterator on Lists of AUs.
+    public AuKbartTitleIterator(final Iterator<List<ArchivalUnit>> titles,
+                                 boolean showHealth, boolean rangeFieldsIncluded) {
+      super(titles);
+      this.showHealth = showHealth;
+      this.rangeFieldsIncluded = rangeFieldsIncluded;
+    }
+    protected void updateResultsList() {
+      // Convert titles until we have a set of results or run out.
+      while ((results==null || !results.hasNext()) && titles.hasNext()) {
+        results = convertTitleToKbartTitles(titles.next(),
+            showHealth, rangeFieldsIncluded).iterator();
+      }
+    }
+  }
+
+  /**
+   * Create an iterator on KbartTitles produced from Lists of
+   * BibliographicItems. Each List of BibliographicItems represents a title.
+   */
+  public static class BibliographicItemKbartTitleIterator
+      extends AbstractKbartTitleIterator<List<BibliographicItem>> {
+    // Create an iterator on Lists of BibliographicItems.
+    public BibliographicItemKbartTitleIterator(
+        final Iterator<List<BibliographicItem>> titles) {
+      super(titles);
+    }
+    protected void updateResultsList() {
+      // Convert titles until we have a set of results or run out.
+      while ((results==null || !results.hasNext()) && titles.hasNext()) {
+        results = convertTitleToKbartTitles(titles.next()).iterator();
+      }
+    }
+  }
+
+  /**
+   * An iterator on KbartTitles produced from an iterator on objects
+   * representing a Tdb title. Each object representing a title is converted
+   * into one or more KbartTitles which feed the output iterator. The
+   * resulting number of KbartTitles will likely be greater than the
+   * number of input titles.
+   */
+  private static abstract class AbstractKbartTitleIterator<T> implements Iterator<KbartTitle> {
+    // Iterator on objects representing a TDB title
+    final Iterator<T> titles;
+    // KbartTitles resulting from the last conversion of a TdbTitle
+    Iterator<KbartTitle> results;
+    protected AbstractKbartTitleIterator(final Iterator<T> titles) {
+      this.titles = titles;
+    }
+    public KbartTitle next() {
+      return results.next();
+    }
+    public boolean hasNext() {
+      updateResultsList();
+      // Results iterator may be null or empty, though only if we have processed
+      // all input lists
+      return results!=null && results.hasNext();
+    }
+    public void remove() {
+      throw new UnsupportedOperationException();
+    }
+    // The implementation of this method should convert input titles until
+    // we have a set of results or run out of input titles.
+    protected abstract void updateResultsList();
   }
 
 }

@@ -20,6 +20,7 @@
 	comment[pr48] = http://muse.jhu.edu/journals/population_review/v048/48.2.haller01_supp01.pdf 500 Internal Server Error
 
     param[journal_dir] = population_review
+    attr[journal_id] = prv
 
     au < released ; 2003 ; Population Review Volume 42 ; 42 >
     au < released ; 2004 ; Population Review Volume 43 ; 43 >
@@ -30,6 +31,7 @@
     au < notReady ; 2009 ; Population Review Volume 48 ; 48 >
     au < released ; 2010 ; Population Review Volume 49 ; 49 >
     au < ready ; 2011 ; Population Review Volume 50 ; 50 >
+    au < manifest ; 2012 ; Population Review Volume 51 ; 51 >
 
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpUtil.java,v 1.8 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: RegexpUtil.java,v 1.8.14.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -147,4 +147,17 @@ public class RegexpUtil {
       return RegexpUtil.isMatchRe(s, re);
     }
   }
+
+
+  public static boolean patEquals(java.util.regex.Pattern p1,
+				  java.util.regex.Pattern p2) {
+    if (p1 == p2) {
+      return true;
+    }
+    if (p1 == null || p2 == null) {
+      return false;
+    }
+    return p1.flags() == p2.flags() && p1.pattern().equals(p2.pattern());
+  }
+
 }

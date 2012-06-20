@@ -18,10 +18,12 @@
     >
 
     param[journal_dir] = melus
+    attr[journal_id] = mel
 
     au < released ; 2009 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 ; 34 >
     au < ready ; 2010 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 35 ; 35 >
     au < ready ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 ; 36 >
+    au < manifest ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 ; 37 >
 
   }
 

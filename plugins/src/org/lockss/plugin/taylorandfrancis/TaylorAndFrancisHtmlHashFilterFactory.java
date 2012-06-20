@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.2 2011-10-10 19:20:04 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.2.4.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
@@ -64,6 +64,8 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "newsArticles"),
         // Related and most read articles
         HtmlNodeFilters.tagWithAttribute("div", "id", "relatedArticles"),
+        //Ad module
+        HtmlNodeFilters.tagWithAttribute("div", "class", "ad module"),
         /*
          * Proper to the hash filter
          */
@@ -71,8 +73,6 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         new TagNameFilter("script"),
         // Contains site-specific SFX markup
         HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
-        // Counterpart of the previous clause when there is no integrated SFX
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout\\?"),
         // Contains institution-specific markup
         HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
         // Contains a cookie or session ID
@@ -83,6 +83,8 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "&feed=rss"),
         // Contains a variant phrase "Full access" or "Free access"
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessIconWrapper"),
+        // Counterpart of the previous clause when there is no integrated SFX
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout\\?"),
     };
     
     HtmlTransform xform = new HtmlTransform() {

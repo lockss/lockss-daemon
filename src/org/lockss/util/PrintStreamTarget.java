@@ -1,5 +1,5 @@
 /*
- * $Id: PrintStreamTarget.java,v 1.6 2005-06-04 18:59:49 tlipkis Exp $
+ * $Id: PrintStreamTarget.java,v 1.6.104.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class PrintStreamTarget implements LogTarget {
   /** Write the message to stdout */
   void writeMessage(Logger log, String msgLevel, String message) {
     StringBuffer sb = new StringBuffer();
-    sb.append(df.format(new Date()));
+    sb.append(log.getTimeStampFormat().format(new Date()));
     if (TimeBase.isSimulated()) {
       sb.append("(sim ");
       sb.append(TimeBase.nowMs());

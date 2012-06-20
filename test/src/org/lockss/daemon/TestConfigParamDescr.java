@@ -1,10 +1,10 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.14 2011-11-08 20:21:50 tlipkis Exp $
+ * $Id: TestConfigParamDescr.java,v 1.14.2.1 2012-06-20 00:02:42 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -332,4 +332,46 @@ public class TestConfigParamDescr extends LockssTestCase {
     assertEquals("SampleString", ConfigParamDescr.CRAWL_PROXY.getSampleValue());
     assertEquals("10d", ConfigParamDescr.CRAWL_INTERVAL.getSampleValue());
   }
+  
+  public void testYear() throws Exception {
+    // Four-digit years are okay
+    assertEquals(new Integer(1000), ConfigParamDescr.YEAR.getValueOfType("1000"));
+    assertEquals(new Integer(9999), ConfigParamDescr.YEAR.getValueOfType("9999"));
+    
+    // Currently, the special value "0" is allowed
+    assertEquals(new Integer(0), ConfigParamDescr.YEAR.getValueOfType("0"));
+
+    // Other lengths are not allowed 
+    try {
+      ConfigParamDescr.YEAR.getValueOfType("999");
+      fail("Should have thrown InvalidFormatException");
+    }
+    catch (InvalidFormatException expected) {
+      // Expected
+    }
+    try {
+      ConfigParamDescr.YEAR.getValueOfType("10000");
+      fail("Should have thrown InvalidFormatException");
+    }
+    catch (InvalidFormatException expected) {
+      // Expected
+    }
+
+    // Strings that parse to negative integers or that don't parse to integers are not allowed
+    try {
+      ConfigParamDescr.YEAR.getValueOfType("-123");
+      fail("Should have thrown InvalidFormatException");
+    }
+    catch (InvalidFormatException expected) {
+      // Expected
+    }
+    try {
+      ConfigParamDescr.YEAR.getValueOfType("123X");
+      fail("Should have thrown InvalidFormatException");
+    }
+    catch (InvalidFormatException expected) {
+      // Expected
+    }
+  }
+  
 }

@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlRateLimiter.java,v 1.1 2011-09-25 04:20:40 tlipkis Exp $
+ * $Id: CrawlRateLimiter.java,v 1.1.4.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,140 +33,63 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.util.regex.*;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 
 /**
- * Manages the rate limiters in use by a crawl: default limiter plus
- * optional MIME-type or URL dependent limiters.
+ * Manages the rate limiters in use by a crawl.  Implementations select
+ * rate limiters based on URL or MIME type, or date/time, etc.
  */
-public class CrawlRateLimiter {
-  static Logger log = Logger.getLogger("CrawlRateLimiter");
+public interface CrawlRateLimiter {
+  /** Add a crawler to the list of those using this CrawlRateLimiter */
+  public void addCrawler(Crawler c);
 
-  class PatElem {
-    Pattern pat;
-    RateLimiter limiter;
+  /** Remove a crawler from the list of those using this CrawlRateLimiter */
+  public void removeCrawler(Crawler c);
 
-    PatElem(Pattern pat, RateLimiter limiter) {
-      this.pat = pat;
-      this.limiter = limiter;
-    }
-  }
+  /** Return the number of crawlers using this crawl rate limiter. */
+  public int getCrawlerCount();
 
-  public class UrlLimiters extends ArrayList<PatElem>{
-    public UrlLimiters(int size) {
-      super(size);
-    }
-  }
+  /** Return the number of repair crawlers using this crawl rate
+   * limiter. */
+  public int getRepairCount();
 
-  public class MimeLimiters extends HashMap<String,RateLimiter>{}
-
-  RateLimiter defaultLimiter;
-
-  UrlLimiters urlLimiters;
-  MimeLimiters mimeLimiterMap;
-
-  /** Create a CrawlRateLimiter from an AU
-   */
-  public CrawlRateLimiter(ArchivalUnit au) {
-    this(au.getRateLimiterInfo());
-  }
-
-  /** Separate constructor for unit tests */
-  CrawlRateLimiter(RateLimiterInfo rli) {
-    if (rli == null) {
-      defaultLimiter = newRateLimiter(1, BaseArchivalUnit.DEFAULT_FETCH_DELAY);
-    } else {
-      defaultLimiter = newRateLimiter(rli.getDefaultRate());
-      urlLimiters = makeUrlLimiters(rli.getUrlRates());
-      mimeLimiterMap = makeMimeLimiterMap(rli.getMimeRates());
-    }
-  }
-
-  protected RateLimiter newRateLimiter(String rate) {
-    return new RateLimiter(rate);
-  }
-
-  protected RateLimiter newRateLimiter(int events, long interval) {
-    return new RateLimiter(events, interval);
-  }
-
-  /** Convert URL -> rate map to list of Pattern,RateLimiter pairs */
-  UrlLimiters makeUrlLimiters(Map<String,String> urlRates) {
-    if (urlRates == null) {
-      return null;
-    }
-    UrlLimiters res = new UrlLimiters(urlRates.size());
-    for (Map.Entry<String,String> ent : urlRates.entrySet()) {
-      Pattern pat = Pattern.compile(ent.getKey());
-      res.add(new PatElem(pat, newRateLimiter(ent.getValue())));
-    }
-    return res;
-  }
-
-  /** Convert MIME -> rate map to MIME -> RateLimiter map */
-  MimeLimiters makeMimeLimiterMap(Map<String,String> mimeRates) {
-    if (mimeRates == null) {
-      return null;
-    }
-    MimeLimiters res = new MimeLimiters();
-    for (Map.Entry<String,String> ent : mimeRates.entrySet()) {
-      RateLimiter limiter = newRateLimiter(ent.getValue());
-      for (String mime :
-	     StringUtil.breakAt(ent.getKey(), ",", -1, true, true)) {
-	res.put(mime, limiter);
-      }
-    }
-    return res;
-  }
+  /** Return the number of new content crawlers using this crawl rate
+   * limiter. */
+  public int getNewContentCount();
 
   /** Return the RateLimiter on which to wait for the next fetch
    * @param url the url about to be fetched
    * @param previousContentType the MIME type or Content-Type of the
    * previous file fetched
    */
-  public RateLimiter getRateLimiterFor(String url, String previousContentType) {
-    if (urlLimiters != null) {
-      for (PatElem pe : urlLimiters) {
-	if (pe.pat.matcher(url).find()) {
-	  return pe.limiter;
-	}
-      }
-      return defaultLimiter;
-    }
-    if (mimeLimiterMap != null) {
-      String mime = HeaderUtil.getMimeTypeFromContentType(previousContentType);
-      RateLimiter res = mimeLimiterMap.get(mime);
-      if (res == null) {
-	res = mimeLimiterMap.get(MimeTypeMap.wildSubType(mime));
-      }
-      if (res == null) {
-	res = defaultLimiter;
-      }
-      return res;
-    }
-    return defaultLimiter;
-  }
+  public RateLimiter getRateLimiterFor(String url, String previousContentType);
 
   /** Wait until it's time for the next fetch
    * @param url the url about to be fetched
    * @param previousContentType the MIME type or Content-Type of the
    * previous file fetched
    */
-  public void pauseBeforeFetch(String url, String  previousContentType) {
-    RateLimiter limiter = getRateLimiterFor(url, previousContentType);
-    try {
-      if (log.isDebug3()) log.debug3("Pausing: " + limiter.rateString());
-      limiter.fifoWaitAndSignalEvent();
-    } catch (InterruptedException ignore) {
-      // no action
+  public void pauseBeforeFetch(String url, String previousContentType);
+
+  /** Return the number of times this CrawlRateLimiter has been asked to
+   * pause.  Used to check that rate limiter is actually being invoked. */
+  public int getPauseCounter();
+
+  public static class Util {
+    public static CrawlRateLimiter forAu(ArchivalUnit au) {
+      return forRli(au.getRateLimiterInfo());
+    }
+
+    public static CrawlRateLimiter forRli(RateLimiterInfo rli) {
+      if (rli.getCond() != null) {
+	return new ConditionalCrawlRateLimiter(rli);
+      }
+      return new FileTypeCrawlRateLimiter(rli);
     }
   }
+
 
 }

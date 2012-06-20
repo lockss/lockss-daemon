@@ -1,10 +1,10 @@
 /*
- * $Id: UrlCacher.java,v 1.30 2011-09-25 04:20:40 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.30.4.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.daemon.*;
+import org.lockss.crawler.CrawlRateLimiter;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
@@ -161,6 +162,14 @@ public interface UrlCacher {
    * @see StreamUtil#copy(InputStream, OutputStream, long, LockssWatchdog)
    */
   public void setWatchdog(LockssWatchdog wdog);
+
+  /** Set a CrawlRateLimiter, which should be consulted before every fetch
+   * request */
+  public void setCrawlRateLimiter(CrawlRateLimiter crl);
+
+  /** Set the content type just fetched, for MIME-type dependent rate
+   * limiters */
+  public void setPreviousContentType(String prevContentType);
 
   /**
    * Copies the content and properties from the source into the cache.

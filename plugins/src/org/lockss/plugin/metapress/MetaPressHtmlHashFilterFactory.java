@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressHtmlHashFilterFactory.java,v 1.2 2011-10-13 00:13:00 thib_gc Exp $
+ * $Id: MetaPressHtmlHashFilterFactory.java,v 1.2.4.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -113,6 +113,8 @@ public class MetaPressHtmlHashFilterFactory implements FilterFactory {
          * bit much.
          */
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "[?&amp;]p="),
+        // Institution-specific greeting
+        HtmlNodeFilters.tagWithAttribute("div", "class", "MetaPress_Products_Reader_Web_UI_Controls_RecognizedAsControlBody")
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

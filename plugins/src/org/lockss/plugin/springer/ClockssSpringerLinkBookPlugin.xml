@@ -1,0 +1,137 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.springer.ClockssSpringerLinkBookPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>12</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>4</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.47.0</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>SpringerLink Book Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>book_isbn</key>
+        <displayName>Book ISBN</displayName>
+        <description>International Standard Book Number</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;SpringerLink Book Plugin (CLOCKSS), Base URL %s, ISBN %s&quot;, base_url, book_isbn</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%scontent/%s/contents/&quot;, base_url, book_isbn</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>2,&quot;^%sfulltext-image\.asp\?&quot;, base_url</string>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>2,&quot;^%s.*\?(target=(export|print|save)|MUD=MP)&quot;, base_url</string>
+      <string>2,&quot;^%scontent/%s(/mycopy)?/?$&quot;, base_url, book_isbn</string>
+      <string>1,&quot;^%scontent/%s/&quot;, base_url, book_isbn</string>
+      <string>2,&quot;^%scontent/[A-Za-z0-9]{16}/(export-citation|referrers)/&quot;, base_url</string>
+      <string>1,&quot;^%scontent/[A-Za-z0-9]{16}/&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:Springer</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.springer.SpringerLinkHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/css_filter_factory</string>
+    <string>org.lockss.plugin.springer.SpringerLinkCssFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.springer.SpringerLinkHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.springer.SpringerLinkBookArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.springer.SpringerLinkBookArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.springer.SpringerLinkBookMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>java.io.IOException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_3_30S</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%scontent/[A-Za-z0-9]{16}/fulltext\.pdf$&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+</map>

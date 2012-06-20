@@ -20,6 +20,8 @@
       param[base_url] = http://www.jhc.org/
       implicit < status ; year ; name ; param[volume] >
       
+      comment[h20] = Moved to Sage.  Url redirects to http://jhc.sagepub.com/
+
       au < down ; 2004 ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
       au < down ; 2006 ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
 
@@ -29,32 +31,14 @@
 
       param[base_url] = http://www.jhc.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+      
+      comment[h20] = Moved to Sage.  Url redirects to http://jhc.sagepub.com/
 
-      au < HighWirePressPlugin ; doNotProcess ; 2004 ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
-      au < HighWirePressPlugin ; doNotProcess ; 2006 ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
       au < HighWirePressPlugin ; down ; 2008 ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
       au < HighWirePressPlugin ; down ; 2009 ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
       au < HighWirePressPlugin ; down ; 2010 ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
-
-    }
-
-    {
-    
-      pluginSuffix = HighWirePressH20Plugin
-      param[base_url] = http://jhc.sagepub.com/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      comment[uh] = This is probably wrong, the publisher should now be SAGE
-
-      au < doNotProcess ; 2004 ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
-      au < doNotProcess ; 2005 ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
-      au < doNotProcess ; 2006 ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
-      au < doNotProcess ; 2007 ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
-      au < doNotProcess ; 2008 ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
-      au < doNotProcess ; 2009 ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
-      au < doNotProcess ; 2010 ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
 
     }
 

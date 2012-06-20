@@ -1,10 +1,10 @@
 /*
- * $Id: BePressArticleIteratorFactory.java,v 1.9 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: BePressArticleIteratorFactory.java,v 1.9.12.1 2012-06-20 00:03:09 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.bepress;
 
-import java.io.*;
 import java.util.*;
 import java.util.regex.*;
 
@@ -46,6 +45,29 @@ public class BePressArticleIteratorFactory
   implements ArticleIteratorFactory,
 	     ArticleMetadataExtractorFactory {
   
+  /**
+   * <p>An article iterator factory, for the Section plugin variant</p>
+   * @author Thib Guicherd-Callin
+   */
+  public static class Section implements ArticleIteratorFactory {
+    
+    protected static final String ROOT_TEMPLATE = "\"%s%s/%s\", base_url, journal_abbr, journal_section";
+    
+    protected static final String PATTERN_TEMPLATE = "\"^%s%s/%s/((([^0-9]+/)?(vol)?%d/(iss)?[0-9]+/(art|editorial)?[0-9]+)|(vol%d/(?-i:[A-Z])[0-9]+))$\", base_url, journal_abbr, journal_section, volume, volume";
+
+    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+                                                        MetadataTarget target)
+        throws PluginException {
+      return new BePressArticleIterator(au,
+                                        new SubTreeArticleIterator.Spec()
+                                            .setTarget(target)
+                                            .setRootTemplate(ROOT_TEMPLATE)
+                                            .setPatternTemplate(PATTERN_TEMPLATE),
+                                        true);
+    }
+    
+  }
+  
   protected static Logger log = Logger.getLogger("BePressArticleIteratorFactory");
   
   protected static final String ROOT_TEMPLATE = "\"%s%s\", base_url, journal_abbr";
@@ -55,10 +77,12 @@ public class BePressArticleIteratorFactory
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
 						      MetadataTarget target)
       throws PluginException {
-    return new BePressArticleIterator(au, new SubTreeArticleIterator.Spec()
+    return new BePressArticleIterator(au,
+                                      new SubTreeArticleIterator.Spec()
 				          .setTarget(target)
 				          .setRootTemplate(ROOT_TEMPLATE)
-				          .setPatternTemplate(PATTERN_TEMPLATE));
+				          .setPatternTemplate(PATTERN_TEMPLATE),
+				      false);
   }
   
   protected static class BePressArticleIterator extends SubTreeArticleIterator {
@@ -66,10 +90,14 @@ public class BePressArticleIteratorFactory
     protected Pattern pattern;
     
     public BePressArticleIterator(ArchivalUnit au,
-                                  SubTreeArticleIterator.Spec spec) {
+                                  SubTreeArticleIterator.Spec spec,
+                                  boolean isSection) {
       super(au, spec);
-      String journalAbbr = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ABBR.getKey());
       String volumeAsString = au.getConfiguration().get(ConfigParamDescr.VOLUME_NUMBER.getKey());
+      String journalAbbr = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ABBR.getKey());
+      if (isSection) {
+        journalAbbr = journalAbbr + "/" + au.getConfiguration().get("journal_section");
+      }
       this.pattern = Pattern.compile(String.format("/%s/((([^0-9]+/)?(vol)?%s/(iss)?[0-9]+/(art)?[0-9]+)|(vol%s/(?-i:[A-Z])[0-9]+))$", journalAbbr, volumeAsString, volumeAsString), Pattern.CASE_INSENSITIVE);
     }
     

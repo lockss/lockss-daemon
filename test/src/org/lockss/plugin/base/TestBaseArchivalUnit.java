@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.57 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.57.4.1 2012-06-20 00:03:10 nchondros Exp $
  */
 
 /*
@@ -61,7 +61,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
 
-    pollMgr = getMockLockssDaemon().getPollManager();
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    pollMgr = daemon.getPollManager();
 
     List rules = new LinkedList();
     // exclude anything which doesn't start with our base url
@@ -70,8 +71,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     rules.add(new CrawlRules.RE(startUrl, CrawlRules.RE.MATCH_INCLUDE));
     CrawlRule rule = new CrawlRules.FirstMatch(rules);
     mplug = new MyMockPlugin();
-    mplug.initPlugin(getMockLockssDaemon());
-    mbau =  new MyBaseArchivalUnit(mplug, auName, rule, startUrl);
+    mplug.initPlugin(daemon);
+    mbau = new MyBaseArchivalUnit(mplug, auName, rule, startUrl);
   }
 
   public void tearDown() throws Exception {
@@ -606,11 +607,11 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     props.setProperty(BaseArchivalUnit.KEY_PAUSE_TIME, "10000");
-    props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "10000");
+    props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "10001");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
     assertEquals(10000, mbau.findFetchRateLimiter().getInterval());
-    assertEquals(10000, mbau.newContentCrawlIntv);
+    assertEquals(10001, mbau.newContentCrawlIntv);
     assertEquals(auName,mbau.getName());
     assertEquals(ListUtil.list(startUrl), mbau.getNewContentCrawlUrls());
     assertTrue(mbau.getCrawlSpec().getCrawlWindow()
@@ -792,6 +793,66 @@ try {
     assertEquals(10000, pmap.getLong(key));
   }
 
+  public void testMakeCachedUrl() {
+    String u1 = "http://www.example.com/1";
+    CachedUrl cu = mbau.makeCachedUrl(u1);
+    assertEquals(u1, cu.getUrl());
+    assertClass(BaseCachedUrl.class, cu);
+    BaseCachedUrl bcu = (BaseCachedUrl)cu;
+    assertFalse(bcu.isArchiveMember());
+  }
+
+  public void testMakeCachedUrlNotInAu() throws Exception {
+    Properties props = new Properties();
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
+    Configuration exp = ConfigurationUtil.fromProps(props);
+    mbau.setConfiguration(exp);
+    String url = "http://other.site/non-preserved.html";
+    CachedUrl cu = mbau.makeCachedUrl(url);
+    assertEquals(url, cu.getUrl());
+    assertFalse(mbau.shouldBeCached(url));
+  }
+
+  public void testMakeCachedUrlWithMember() {
+    mbau.setArchiveFileTypes(ArchiveFileTypes.DEFAULT);
+    String u1 = "http://www.example.com/foo.zip!/member/path.ext";
+    CachedUrl cu = mbau.makeCachedUrl(u1);
+    assertEquals(u1, cu.getUrl());
+    assertClass(BaseCachedUrl.Member.class, cu);
+    BaseCachedUrl.Member bcu = (BaseCachedUrl.Member)cu;
+    assertTrue(bcu.isArchiveMember());
+    assertEquals("http://www.example.com/foo.zip", bcu.getArchiveUrl());
+    ArchiveMemberSpec ams = bcu.getArchiveMemberSpec();
+    assertNotNull(ams);
+    assertEquals("member/path.ext", ams.getName());
+  }
+
+  public void testMakeCachedUrlWithFalseMember() {
+    String u1 = "http://www.example.com/foo.zip!/member/path.ext";
+    CachedUrl cu = mbau.makeCachedUrl(u1);
+    assertEquals(u1, cu.getUrl());
+    assertNotClass(BaseCachedUrl.Member.class, cu);
+  }
+
+  public void testMakeUrlCacher() {
+    mbau.setAuId("random");
+    String u1 = "http://www.example.com/1.zip";
+    UrlCacher uc = mbau.makeUrlCacher(u1);
+    assertEquals(u1, uc.getUrl());
+    assertClass(BaseUrlCacher.class, uc);
+  }
+
+  public void testMakeUrlCacherWithMember() {
+    mbau.setAuId("random");
+    String u1 = "http://www.example.com/1.zip!/foo/bar";
+    try {
+      mbau.makeUrlCacher(u1);
+      fail("Should not be able to make a UrlCacher for an archive member");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
   public static void main(String[] argv) {
     String[] testCaseList = { MyBaseArchivalUnit.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
@@ -865,7 +926,6 @@ try {
   }
 
   static class MyBaseArchivalUnit extends BaseArchivalUnit {
-    private String auId = null;
     private String m_name = "MockBaseArchivalUnit";
     private CrawlRule m_rules = null;
     private String m_startUrl ="http://www.example.com/index.html";
@@ -954,6 +1014,20 @@ try {
 
     public void setFetchRateLimiter(RateLimiter limit) {
       fetchRateLimiter = limit;      
+    }
+
+    void setAuId(String auid) {
+      this.auId = auid;
+    }
+
+    ArchiveFileTypes aft = null;
+
+    public ArchiveFileTypes getArchiveFileTypes() {
+      return aft;
+    }
+
+    public void setArchiveFileTypes(ArchiveFileTypes aft) {
+      this.aft = aft;
     }
   }
 }

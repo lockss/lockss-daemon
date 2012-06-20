@@ -1,10 +1,10 @@
 /*
- * $Id: DebugPanel.java,v 1.20 2011-06-02 18:59:52 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.20.8.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -73,9 +73,12 @@ public class DebugPanel extends LockssServlet {
   static final String KEY_NAME_TYPE = "name_type";
   static final String KEY_AUID = "auid";
   static final String KEY_TEXT = "text";
+  static final String KEY_URL = "url";
 
   static final String ACTION_MAIL_BACKUP = "Mail Backup File";
   static final String ACTION_THROW_IOEXCEPTION = "Throw IOException";
+  static final String ACTION_FIND_URL = "Find Preserved URL";
+
   static final String ACTION_START_V3_POLL = "Start V3 Poll";
   static final String ACTION_FORCE_START_V3_POLL = "Force V3 Poll";
   static final String ACTION_START_CRAWL = "Start Crawl";
@@ -126,6 +129,7 @@ public class DebugPanel extends LockssServlet {
 
   public void lockssHandleRequest() throws IOException {
     resetVars();
+    boolean showForm = true;
     String action = getParameter(KEY_ACTION);
 
     if (!StringUtil.isNullString(action)) {
@@ -160,7 +164,12 @@ public class DebugPanel extends LockssServlet {
     if (ACTION_CRAWL_PLUGINS.equals(action)) {
       crawlPluginRegistries();
     }
-    displayPage();
+    if (ACTION_FIND_URL.equals(action)) {
+      showForm = doFindUrl();
+    }
+    if (showForm) {
+      displayPage();
+    }
   }
 
   private void doMailBackup() {
@@ -256,8 +265,11 @@ public class DebugPanel extends LockssServlet {
     try {
       NodeManager nodeMgr = daemon.getNodeManager(au);
       // Don't call a poll on this if we're already running a V3 poll on it.
-      if (pollManager.isPollRunning(au)) {
-	errMsg = "Poll already running.  Click again to force new poll.";
+      try {
+	pollManager.checkEligibleForPoll(new PollManager.PollReq(au));
+      } catch (PollManager.NotEligibleException e) {
+	errMsg = "Ineligible: " + e.getMessage() +
+	  "<br>Click again to force new poll.";
 	showForcePoll = true;
 	return;
       }
@@ -286,13 +298,34 @@ public class DebugPanel extends LockssServlet {
   }
 
   private void callV3ContentPoll(ArchivalUnit au) {
+    log.debug("Enqueuing a V3 Content Poll on " + au.getName());
     PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
-    log.debug("Calling a V3 Content Poll on " + au.getName());
-    if (pollManager.callPoll(au, spec) == null) {
-      errMsg = "Failed to call poll on " + au.getName() + ", see log.";
-    } else {
-      statusMsg = "Started V3 poll for " + au.getName();
+    PollManager.PollReq req = new PollManager.PollReq(au)
+      .setPollSpec(spec)
+      .setPriority(2);
+    try {
+      pollManager.enqueuePoll(req);
+      statusMsg = "Enqueued V3 poll for " + au.getName();
+    } catch (IllegalStateException e) {
+      errMsg = "Failed to enqueue poll on "
+	+ au.getName() + ": " + e.getMessage();
     }
+  }
+
+  private boolean doFindUrl() throws IOException {
+    
+    String url = getParameter(KEY_URL);
+
+    String redir =
+      srvURL(AdminServletManager.SERVLET_DAEMON_STATUS,
+	     PropUtil.fromArgs("table",
+			       ArchivalUnitStatus.AUS_WITH_URL_TABLE_NAME,
+			       "key", url));
+
+    resp.setContentLength(0);
+//     resp.sendRedirect(resp.encodeRedirectURL(redir));
+    resp.sendRedirect(redir);
+    return false;
   }
 
   ArchivalUnit getAu() {
@@ -314,8 +347,7 @@ public class DebugPanel extends LockssServlet {
     ServletUtil.layoutExplanationBlock(page, "Debug Actions");
     page.add(makeForm());
     page.add("<br>");
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   private Element makeForm() {
@@ -324,22 +356,36 @@ public class DebugPanel extends LockssServlet {
     frm.method("POST");
 
 
+    frm.add("<br><center>");
     Input reload = new Input(Input.Submit, KEY_ACTION, ACTION_RELOAD_CONFIG);
     setTabOrder(reload);
-    frm.add("<br><center>"+reload+"</center>");
+    frm.add(reload);
+    frm.add(" ");
     Input backup = new Input(Input.Submit, KEY_ACTION, ACTION_MAIL_BACKUP);
     setTabOrder(backup);
-    frm.add("<br><center>"+backup+"</center>");
+    frm.add(backup);
+    frm.add(" ");
     Input crawlplug = new Input(Input.Submit, KEY_ACTION, ACTION_CRAWL_PLUGINS);
     setTabOrder(crawlplug);
-    frm.add("<br><center>"+crawlplug+"</center>");
+    frm.add(crawlplug);
+    frm.add("</center>");
     ServletDescr d1 = AdminServletManager.SERVLET_HASH_CUS;
-    frm.add("<br><center>"+srvLink(d1, d1.heading)+"</center>");
+    if (isServletRunnable(d1)) {
+      frm.add("<br><center>"+srvLink(d1, d1.heading)+"</center>");
+    }
+    Input findUrl = new Input(Input.Submit, KEY_ACTION, ACTION_FIND_URL);
+    Input findUrlText = new Input(Input.Text, KEY_URL);
+    findUrlText.setSize(50);
+    setTabOrder(findUrl);
+    setTabOrder(findUrlText);
+    frm.add("<br><center>"+findUrl+" " + findUrlText + "</center>");
+
     Input thrw = new Input(Input.Submit, KEY_ACTION, ACTION_THROW_IOEXCEPTION);
     Input thmsg = new Input(Input.Text, KEY_MSG);
     setTabOrder(thrw);
     setTabOrder(thmsg);
     frm.add("<br><center>"+thrw+" " + thmsg + "</center>");
+
     frm.add("<br><center>AU Actions: select AU</center>");
     Composite ausel = ServletUtil.layoutSelectAu(this, KEY_AUID, auid);
     frm.add("<br><center>"+ausel+"</center>");
@@ -353,8 +399,11 @@ public class DebugPanel extends LockssServlet {
 			    ( showForceCrawl
 			      ? ACTION_FORCE_START_CRAWL
 			      : ACTION_START_CRAWL));
-    frm.add("<br><center>" + v3Poll + "</center>");
-    frm.add("<br><center>" + crawl + "</center>");
+    frm.add("<br><center>");
+    frm.add(v3Poll);
+    frm.add(" ");
+    frm.add(crawl);
+    frm.add("</center>");
     comp.add(frm);
     return comp;
   }

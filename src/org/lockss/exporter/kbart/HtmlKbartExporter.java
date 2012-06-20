@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.17 2011-09-23 13:23:15 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.17.4.1 2012-06-20 00:02:56 nchondros Exp $
  */
 
 /*
@@ -32,12 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
-import java.util.Collections;
 import java.util.List;
 import java.io.OutputStream;
 import java.io.IOException;
-
-import javax.mail.search.OrTerm;
 
 import org.lockss.config.Configuration;
 import org.lockss.exporter.kbart.KbartTitle.Field;
@@ -88,12 +85,17 @@ public class HtmlKbartExporter extends KbartExporter {
    * table cells to stop it wrapping. 
    */
   private int eissnFieldIndex;
-  /** 
-   * The index of the issnl field. Will have the td.issn style applied to its 
-   * table cells to stop it wrapping. 
+  /**
+   * The index of the issnl field. Will have the td.issn style applied to its
+   * table cells to stop it wrapping.
    */
   private int issnlFieldIndex;
-  /** 
+  /**
+   * The index of the coverage_notes field. Will have the td.coverage_notes
+   * style applied to its table cells to stop it wrapping.
+   */
+  private int covNotesFieldIndex;
+  /**
    * The index of the optional health field. Will have an appropriate style 
    * applied to its table cells to show tortoises and stop it wrapping. 
    */
@@ -112,9 +114,9 @@ public class HtmlKbartExporter extends KbartExporter {
     super(titles, format);
   }
   
-  public void sortByField(Field f) {
+  /*public void sortByField(Field f) {
     Collections.sort(titles, KbartTitleComparatorFactory.getComparator(f));
-  }
+  }*/
   
   /** Called by org.lockss.config.MiscConfig
    */
@@ -129,8 +131,6 @@ public class HtmlKbartExporter extends KbartExporter {
   @Override
   public void setFilter(KbartExportFilter filter) {
     super.setFilter(filter);
-    // Use the filter to sort the titles for custom output 
-    filter.sortTitlesByFirstTwoFields();
   }
   
   @Override
@@ -158,6 +158,16 @@ public class HtmlKbartExporter extends KbartExporter {
       String cssClass = "";
       if (i==issnFieldIndex || i==eissnFieldIndex || i==issnlFieldIndex) {
         cssClass = "issn";
+      }
+      if (i==covNotesFieldIndex) {
+        cssClass = "coverage_notes";
+        // Process val to add line breaks after the rngSep of the
+        // CoverageNotesFormat. We try to match all possibilities by replacing
+        // "||" in SFX expressions, and ")," otherwise. However, we could
+        // instead pass the CoverageNotesFormat into OutputFormat.makeExporter().
+        if (val.startsWith("$obj")) // SFX format
+          val = val.replaceAll("(\\|\\|)", "$1<br/>");
+        else val = val.replaceAll(",", ",<br/>");
       }
       // Add different type of entry for health ratings if required
       if (i==healthFieldIndex) {
@@ -203,13 +213,17 @@ public class HtmlKbartExporter extends KbartExporter {
   protected void setup(OutputStream os) throws IOException {
     super.setup(os);
     // Construct a title and summary
-    this.exportSummary = String.format("%s title list created on %s by %s " +
+    /*this.exportSummary = String.format("%s title list created on %s by %s " +
 	"| %d items listed from %d titles.",
-	scope, getDate(), getHostName(), titles.size(), tdbTitleTotal);
+	scope, getDate(), getHostName(), titles.size(), tdbTitleTotal);*/
+    this.exportSummary = String.format(
+        "%s title list created on %s by %s from %d titles.",
+        scope, getDate(), getHostName(), tdbTitleTotal);
     this.header = makeHeader();
     this.issnFieldIndex = findFieldIndex(Field.PRINT_IDENTIFIER);
     this.eissnFieldIndex = findFieldIndex(Field.ONLINE_IDENTIFIER);
     this.issnlFieldIndex = findFieldIndex(Field.TITLE_ID);
+    this.covNotesFieldIndex = findFieldIndex(Field.COVERAGE_NOTES);
     // The health field index will be one bigger than the last field index
     this.healthFieldIndex = getFieldLabels().size();
     // Write html and head tags, including a metatag declaring the content type UTF-8
@@ -272,6 +286,7 @@ public class HtmlKbartExporter extends KbartExporter {
     sb.append("tr.odd { background-color: #cce; }");
     sb.append("tr.even { background-color: #aac; }");
     sb.append("td.issn { white-space: nowrap; }");
+    sb.append("td.coverage_notes { white-space: nowrap; }");
     // General health style
     sb.append("td.health1, td.health2, td.health3, td.health4, td.health5 { font-weight: bold; text-align: center; }");
     sb.append("td.health1 { background-color: #cc0000; }"); // red

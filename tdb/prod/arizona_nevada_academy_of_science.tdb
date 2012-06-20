@@ -13,19 +13,20 @@
     >
 
     {
-      implicit < status ; year ; name ; param[volume] >
-      plugin = org.lockss.plugin.bioone.BioOnePlugin
+
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_id] = 1533-6085
-  
-      au < doNotProcess ; 2005 ; Journal of the Arizona-Nevada Academy of Science Volume 37 ; 37 >
-      au < doNotProcess ; 2006 ; Journal of the Arizona-Nevada Academy of Science Volume 38 ; 38 >
-      au < doNotProcess ; 2007 ; Journal of the Arizona-Nevada Academy of Science Volume 39 ; 39 >
-    }
-
-    {
-
-comment[0] = Atypon AUs
+      param[journal_id] = jana
+      
+      au < ready ; 2005 ; Journal of the Arizona-Nevada Academy of Science Volume 37 ; 37 >
+      au < ready ; 2006 ; Journal of the Arizona-Nevada Academy of Science Volume 38 ; 38 >
+      au < ready ; 2007 ; Journal of the Arizona-Nevada Academy of Science Volume 39 ; 39 >  
+      au < ready ; 2008 ; Journal of the Arizona-Nevada Academy of Science Volume 40 ; 40 >
+      au < ready ; 2009 ; Journal of the Arizona-Nevada Academy of Science Volume 41 ; 41 >
+      au < ready ; 2010 ; Journal of the Arizona-Nevada Academy of Science Volume 42 ; 42 >
+      au < ready ; 2011 ; Journal of the Arizona-Nevada Academy of Science Volume 43 ; 43 >
+      au < expected ; 2012 ; Journal of the Arizona-Nevada Academy of Science Volume 44 ; 44 >
 
     }
 

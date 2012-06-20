@@ -18,6 +18,7 @@
     >
 
     param[journal_dir] = transformation
+    attr[journal_id] = trn
     comment[0] = combined numbers listed under first
 
     au < released ; 2002 ; Transformation: Critical Perspectives on Southern Africa Number 49 ; 49 >
@@ -44,6 +45,12 @@
     au < ready ; 2010 ; Transformation: Critical Perspectives on Southern Africa Number 71 ; 71 >
     au < ready ; 2010 ; Transformation: Critical Perspectives on Southern Africa Number 72/73 ; 72 >
     au < ready ; 2010 ; Transformation: Critical Perspectives on Southern Africa Number 74 ; 74 >
+    au < manifest ; 2011 ; Transformation: Critical Perspectives on Southern Africa Number 75 ; 75 >
+    au < manifest ; 2011 ; Transformation: Critical Perspectives on Southern Africa Number 76 ; 76 >
+    au < manifest ; 2011 ; Transformation: Critical Perspectives on Southern Africa Number 77 ; 77 >
+    au < expected ; 2012 ; Transformation: Critical Perspectives on Southern Africa Number 78 ; 78 >
+    au < expected ; 2012 ; Transformation: Critical Perspectives on Southern Africa Number 79 ; 79 >
+    au < expected ; 2012 ; Transformation: Critical Perspectives on Southern Africa Number 80 ; 80 >
     
   }
 

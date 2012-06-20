@@ -1,10 +1,10 @@
 /*
- * $Id: IngentaPdfUtil.java,v 1.1 2010-09-01 21:10:35 pgust Exp $
+ * $Id: IngentaPdfUtil.java,v 1.1.14.1 2012-06-20 00:02:56 nchondros Exp $
  */ 
 
 /*
 
-Copyright (c) 2000-20010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,7 @@ package org.lockss.plugin.ingenta;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.PdfDocument;
 import org.pdfbox.cos.COSArray;
 import org.pdfbox.cos.COSDictionary;
@@ -47,6 +48,10 @@ import org.pdfbox.cos.COSString;
  * @author Philip Gust
  */
 public class IngentaPdfUtil {
+  
+  public interface NeedsArchivalUnit {
+    public void setArchivalUnit(ArchivalUnit au);
+  }
   
   /**
    * This transform removes the creation and modification dates,

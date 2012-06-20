@@ -1,10 +1,10 @@
 /*
- * $Id: BaseFuncExporter.java,v 1.6 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: BaseFuncExporter.java,v 1.6.4.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -67,24 +67,9 @@ public abstract class BaseFuncExporter extends LockssTestCase {
     daemon = getMockLockssDaemon();
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
-      PropKeyEncoder.encode(tempDirPath);
-    String pref = "org.lockss.au." + auId + ".";
 
     Properties props = new Properties();
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props.setProperty(pref + SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
-    props.setProperty(pref + SimulatedPlugin.AU_PARAM_DEPTH, "2");
-    props.setProperty(pref + SimulatedPlugin.AU_PARAM_BRANCH, "2");
-    props.setProperty(pref + SimulatedPlugin.AU_PARAM_NUM_FILES, "3");
-    props.setProperty(pref + SimulatedPlugin.AU_PARAM_FILE_TYPES,
-                      ""+SimulatedContentGenerator.FILE_TYPE_BIN);
-    props.setProperty(pref + SimulatedPlugin.AU_PARAM_ODD_BRANCH_CONTENT,
-		      "true");
-
-//     props.setProperty(pref + SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE,
-// 		      ""+fileSize);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     daemon.getPluginManager();
@@ -92,10 +77,7 @@ public abstract class BaseFuncExporter extends LockssTestCase {
     daemon.getPluginManager().startService();
     daemon.getPluginManager().startLoadablePlugins();
 
-    sau =
-        (SimulatedArchivalUnit)daemon.getPluginManager().getAllAus().get(0);
-    daemon.getLockssRepository(sau).startService();
-    daemon.setNodeManager(new MockNodeManager(), sau);
+    sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
 
     sau.generateContentTree();
 
@@ -105,6 +87,17 @@ public abstract class BaseFuncExporter extends LockssTestCase {
   public void tearDown() throws Exception {
     daemon.stopDaemon();
     super.tearDown();
+  }
+
+  Configuration simAuConfig(String rootPath) {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put("depth", "2");
+    conf.put("branch", "2");
+    conf.put("numFiles", "3");
+    conf.put("fileTypes", "" + SimulatedContentGenerator.FILE_TYPE_BIN);
+    conf.put(SimulatedPlugin.AU_PARAM_ODD_BRANCH_CONTENT, "true");
+    return conf;
   }
 
   Pattern dirpat = Pattern.compile(".*branch[0-9]+/?$");

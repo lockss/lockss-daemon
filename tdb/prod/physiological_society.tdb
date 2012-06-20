@@ -16,7 +16,7 @@
       issnl = 0958-0670
     >
     
-    comment[continued_from] = 0144-8757
+    comment[continued_from] = 0144-8757 , Quarterly Journal of Experimental Physiology.
     param[base_url] = http://ep.physoc.org/
 
     au < released ; 1990 ; Experimental Physiology Volume 75 ; 75  >
@@ -39,7 +39,9 @@
     au < released ; 2007 ; Experimental Physiology Volume 92 ; 92  >
     au < released ; 2008 ; Experimental Physiology Volume 93 ; 93  >
     au < released ; 2009 ; Experimental Physiology Volume 94 ; 94  >
-    au < released ; 2010 ; Experimental Physiology Volume 95 ; 95  >       
+    au < released ; 2010 ; Experimental Physiology Volume 95 ; 95  >
+    au < released ; 2011 ; Experimental Physiology Volume 96 ; 96  >
+    au < manifest ; 2012 ; Experimental Physiology Volume 97 ; 97  >
 
   }
     
@@ -642,6 +644,8 @@
     au < released ; 2008 ; Journal of Physiology Volume 586 ; 586  >
     au < released ; 2009 ; Journal of Physiology Volume 587 ; 587  >
     au < released ; 2010 ; Journal of Physiology Volume 588 ; 588  >
+    au < manifest ; 2011 ; Journal of Physiology Volume 589 ; 589  >
+    au < manifest ; 2012 ; Journal of Physiology Volume 590 ; 590  >
 
   }
 
@@ -653,7 +657,7 @@
       issnl = 0370-2901
     >
     
-    comment[continued_by] = 0033-5541
+    comment[continued_by] = 0033-5541 , Quarterly Journal of Experimental Physiology and Cognate Medical Sciences
     param[base_url] = http://ep.physoc.org/
   
     au < released ; 1908 ; Quarterly Journal of Experimental Physiology Volume 1 ; 1  >
@@ -694,8 +698,8 @@
       issnl = 0144-8757
     >
   
-    comment[continued_from] = 0033-5541
-    comment[continued_by] = 0958-0670
+    comment[continued_from] = 0033-5541 , Quarterly Journal of Experimental Physiology and Cognate Medical Sciences
+    comment[continued_by] = 0958-0670 , Experimental Physiology
     param[base_url] = http://ep.physoc.org/
   
     au < released ; 1981 ; Quarterly Journal of Experimental Physiology Volume 66 ; 66  >
@@ -718,8 +722,8 @@
       issnl = 0033-5541
     >
   
-    comment[continued_from] = 0370-2901  
-    comment[continued_by] = 0144-8757
+    comment[continued_from] = 0370-2901 , Quarterly Journal of Experimental Physiology
+    comment[continued_by] = 0144-8757 , Quarterly Journal of Experimental Physiology
     param[base_url] = http://ep.physoc.org/
   
     au < released ; 1938 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 28 ; 28  >
@@ -760,7 +764,7 @@
     au < released ; 1978 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 63 ; 63  >
     au < released ; 1979 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 64 ; 64  >
     au < released ; 1980 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 65 ; 65  >
-
+    
   }
 
 }

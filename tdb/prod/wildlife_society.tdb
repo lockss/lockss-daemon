@@ -20,14 +20,15 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = wild
   
-      au < manifest ; 2004 ; Journal of Wildlife Management Volume 68 ; 68 >
-      au < manifest ; 2005 ; Journal of Wildlife Management Volume 69 ; 69 >
-      au < manifest ; 2006 ; Journal of Wildlife Management Volume 70 ; 70 >
-      au < manifest ; 2007 ; Journal of Wildlife Management Volume 71 ; 71 >
-      au < manifest ; 2008 ; Journal of Wildlife Management Volume 72 ; 72 >
-      au < manifest ; 2009 ; Journal of Wildlife Management Volume 73 ; 73 >
-      au < manifest ; 2010 ; Journal of Wildlife Management Volume 74 ; 74 >
-      au < manifest ; 2011 ; Journal of Wildlife Management Volume 75 ; 75 >
+      au < ready ; 2004 ; Journal of Wildlife Management Volume 68 ; 68 >
+      au < ready ; 2005 ; Journal of Wildlife Management Volume 69 ; 69 >
+      au < ready ; 2006 ; Journal of Wildlife Management Volume 70 ; 70 >
+      au < ready ; 2007 ; Journal of Wildlife Management Volume 71 ; 71 >
+      au < ready ; 2008 ; Journal of Wildlife Management Volume 72 ; 72 >
+      au < ready ; 2009 ; Journal of Wildlife Management Volume 73 ; 73 >
+      au < ready ; 2010 ; Journal of Wildlife Management Volume 74 ; 74 >
+      au < ready ; 2011 ; Journal of Wildlife Management Volume 75 ; 75 >
+      au < expected ; 2012 ; Journal of Wildlife Management Volume 76 ; 76 >
 
     }
 
@@ -65,23 +66,30 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = wmon
 
-      au < testing ; 2006 ; Wildlife Monographs Number 161 ; 161 >
-      au < testing ; 2006 ; Wildlife Monographs Number 162 ; 162 >
-      au < testing ; 2006 ; Wildlife Monographs Number 163 ; 163 >
-      au < testing ; 2006 ; Wildlife Monographs Number 164 ; 164 >
-      au < testing ; 2006 ; Wildlife Monographs Number 165 ; 165 >
-      au < testing ; 2006 ; Wildlife Monographs Number 166 ; 166 >
-      au < testing ; 2006 ; Wildlife Monographs Number 167 ; 167 >
-      au < testing ; 2007 ; Wildlife Monographs Number 168 ; 168 >
-      au < testing ; 2008 ; Wildlife Monographs Number 169 ; 169 >
-      au < testing ; 2008 ; Wildlife Monographs Number 170 ; 170 >
-      au < testing ; 2008 ; Wildlife Monographs Number 171 ; 171 >
-      au < testing ; 2009 ; Wildlife Monographs Number 172 ; 172 >
-      au < testing ; 2009 ; Wildlife Monographs Number 173 ; 173 >
-      au < testing ; 2010 ; Wildlife Monographs Number 174 ; 174 >
-      au < testing ; 2011 ; Wildlife Monographs Number 175 ; 175 >
-      au < testing ; 2011 ; Wildlife Monographs Number 176 ; 176 >
-      au < testing ; 2011 ; Wildlife Monographs Number 177 ; 177 >
+      attr[where] = content5b
+      comment[notReady] = manifest page link has double backslash in URL causing crawl failures 
+
+      au < doNotProcess ; 2006 ; Wildlife Monographs Number 161 ; 161 >
+      au < doNotProcess ; 2006 ; Wildlife Monographs Number 162 ; 162 >
+      au < doNotProcess ; 2006 ; Wildlife Monographs Number 163 ; 163 >
+      au < doNotProcess ; 2006 ; Wildlife Monographs Number 164 ; 164 >
+      au < doNotProcess ; 2006 ; Wildlife Monographs Number 165 ; 165 >
+      au < doNotProcess ; 2006 ; Wildlife Monographs Number 166 ; 166 >
+      au < doNotProcess ; 2006 ; Wildlife Monographs Number 167 ; 167 >
+      au < doNotProcess ; 2007 ; Wildlife Monographs Number 168 ; 168 >
+      au < notReady ; 2008 ; Wildlife Monographs Number 169 ; 169 >
+      au < notReady ; 2008 ; Wildlife Monographs Number 170 ; 170 >
+      au < notReady ; 2008 ; Wildlife Monographs Number 171 ; 171 >
+      au < notReady ; 2009 ; Wildlife Monographs Number 172 ; 172 >
+      au < notReady ; 2009 ; Wildlife Monographs Number 173 ; 173 >
+      au < ready ; 2010 ; Wildlife Monographs Number 174 ; 174 >
+      au < ready ; 2011 ; Wildlife Monographs Number 175 ; 175 >
+      au < ready ; 2011 ; Wildlife Monographs Number 176 ; 176 >
+      au < ready ; 2011 ; Wildlife Monographs Number 177 ; 177 >
+      au < manifest ; 2011 ; Wildlife Monographs Number 178 ; 178 >
+      au < manifest ; 2011 ; Wildlife Monographs Number 179 ; 179 >
+      au < expected ; 2012 ; Wildlife Monographs Number 180 ; 180 >
+      
 
     }
 
@@ -114,9 +122,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = wbul
 
-      au < testing ; 2004 ; Wildlife Society Bulletin Volume 32 ; 32 >
-      au < testing ; 2005 ; Wildlife Society Bulletin Volume 33 ; 33 >
-      au < testing ; 2006 ; Wildlife Society Bulletin Volume 34 ; 34 >
+      au < doNotProcess ; 2004 ; Wildlife Society Bulletin Volume 32 ; 32 >
+      au < doNotProcess ; 2005 ; Wildlife Society Bulletin Volume 33 ; 33 >
+      au < doNotProcess ; 2006 ; Wildlife Society Bulletin Volume 34 ; 34 >
 
     }
 

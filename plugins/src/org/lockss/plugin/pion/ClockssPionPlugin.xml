@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -46,6 +46,27 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%scontents.cgi?journal=%s&amp;volume=%s&quot;, base_url, short_journal_code, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>&quot;%sallvols.cgi?journal=%s&quot;, base_url, short_journal_code</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>&quot;%scontents.cgi?journal=%s&amp;volume=%s&quot;, base_url, short_journal_code, volume_name</string>
+    </entry>
+    <entry>
+      <string>au_issue</string>
+      <string>&quot;%scontents.cgi?journal=%s&amp;volume=%s&amp;issue=%s&quot;, base_url, short_journal_code, volume_name, issue</string>
+    </entry>
+    <entry>
+      <string>au_article</string>
+      <string>&quot;%sabstract.cgi?id=%s%02d%04d&quot;, base_url, short_journal_code_lc, issue, article</string>
+    </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -98,5 +119,14 @@
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.pion.PionArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
   </entry>
 </map>

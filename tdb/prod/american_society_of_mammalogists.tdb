@@ -20,15 +20,15 @@
       param[journal_id] = 1545-1542
       implicit < status ; year ; name ; param[volume] >
   
-      au < superseded ; 2000 ; Journal of Mammalogy Volume 81 ; 81 >
-      au < superseded ; 2001 ; Journal of Mammalogy Volume 82 ; 82 >
-      au < superseded ; 2002 ; Journal of Mammalogy Volume 83 ; 83 >
-      au < superseded ; 2003 ; Journal of Mammalogy Volume 84 ; 84 >
-      au < superseded ; 2004 ; Journal of Mammalogy Volume 85 ; 85 >
-      au < superseded ; 2005 ; Journal of Mammalogy Volume 86 ; 086 >
-      au < superseded ; 2005 ; Journal of Mammalogy Volume 86 [superseded] ; 86 >
-      au < superseded ; 2006 ; Journal of Mammalogy Volume 87 ; 87 >
-      au < superseded ; 2007 ; Journal of Mammalogy Volume 88 ; 88 >
+      au < down ; 2000 ; Journal of Mammalogy Volume 81 ; 81 >
+      au < down ; 2001 ; Journal of Mammalogy Volume 82 ; 82 >
+      au < down ; 2002 ; Journal of Mammalogy Volume 83 ; 83 >
+      au < down ; 2003 ; Journal of Mammalogy Volume 84 ; 84 >
+      au < down ; 2004 ; Journal of Mammalogy Volume 85 ; 85 >
+      au < down ; 2005 ; Journal of Mammalogy Volume 86 ; 086 >
+      au < down ; 2005 ; Journal of Mammalogy Volume 86 ; 86 >
+      au < down ; 2006 ; Journal of Mammalogy Volume 87 ; 87 >
+      au < down ; 2007 ; Journal of Mammalogy Volume 88 ; 88 >
       
     }
     
@@ -38,8 +38,20 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = mamm
-  
-      au < exists ; 2005 ; Journal of Mammalogy Volume 86 ; 86 >      
+
+      au < doNotProcess ; 2000 ; Journal of Mammalogy Volume 81 ; 81 >
+      au < doNotProcess ; 2001 ; Journal of Mammalogy Volume 82 ; 82 >
+      au < doNotProcess ; 2002 ; Journal of Mammalogy Volume 83 ; 83 >
+      au < doNotProcess ; 2003 ; Journal of Mammalogy Volume 84 ; 84 >
+      au < doNotProcess ; 2004 ; Journal of Mammalogy Volume 85 ; 85 >
+      au < doNotProcess ; 2005 ; Journal of Mammalogy Volume 86 ; 86 >
+      au < doNotProcess ; 2006 ; Journal of Mammalogy Volume 87 ; 87 >
+      au < doNotProcess ; 2007 ; Journal of Mammalogy Volume 88 ; 88 >
+      au < manifest ; 2008 ; Journal of Mammalogy Volume 89 ; 89 >      
+      au < manifest ; 2009 ; Journal of Mammalogy Volume 90 ; 90 >      
+      au < manifest ; 2010 ; Journal of Mammalogy Volume 91 ; 91 >      
+      au < manifest ; 2011 ; Journal of Mammalogy Volume 92 ; 92 >      
+      au < manifest ; 2012 ; Journal of Mammalogy Volume 93 ; 93 >      
 
     }
 
@@ -238,7 +250,230 @@
 
     {
 
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = mmsp
+      
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 632 ; 632 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 633 ; 633 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 634 ; 634 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 635 ; 635 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 636 ; 636 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 637 ; 637 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 638 ; 638 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 639 ; 639 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 640 ; 640 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 641 ; 641 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 642 ; 642 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 643 ; 643 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 644 ; 644 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 645 ; 645 >
+      au < doNotProcess ; 2000 ; Mammalian Species Volume 646 ; 646 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 647 ; 647 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 648 ; 648 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 649 ; 649 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 650 ; 650 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 651 ; 651 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 652 ; 652 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 653 ; 653 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 654 ; 654 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 655 ; 655 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 656 ; 656 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 657 ; 657 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 658 ; 658 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 659 ; 659 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 660 ; 660 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 661 ; 661 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 662 ; 662 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 663 ; 663 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 664 ; 664 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 665 ; 665 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 666 ; 666 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 667 ; 667 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 668 ; 668 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 669 ; 669 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 670 ; 670 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 671 ; 671 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 672 ; 672 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 673 ; 673 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 674 ; 674 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 675 ; 675 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 676 ; 676 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 677 ; 677 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 678 ; 678 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 679 ; 679 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 680 ; 680 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 681 ; 681 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 682 ; 682 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 683 ; 683 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 684 ; 684 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 685 ; 685 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 686 ; 686 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 687 ; 687 >
+      au < doNotProcess ; 2001 ; Mammalian Species Volume 688 ; 688 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 689 ; 689 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 690 ; 690 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 691 ; 691 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 692 ; 692 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 693 ; 693 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 694 ; 694 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 695 ; 695 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 696 ; 696 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 697 ; 697 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 698 ; 698 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 699 ; 699 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 700 ; 700 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 701 ; 701 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 702 ; 702 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 703 ; 703 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 704 ; 704 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 705 ; 705 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 706 ; 706 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 707 ; 707 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 708 ; 708 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 709 ; 709 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 710 ; 710 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 711 ; 711 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 712 ; 712 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 713 ; 713 >
+      au < doNotProcess ; 2002 ; Mammalian Species Volume 714 ; 714 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 715 ; 715 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 716 ; 716 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 717 ; 717 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 718 ; 718 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 719 ; 719 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 720 ; 720 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 721 ; 721 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 722 ; 722 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 723 ; 723 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 724 ; 724 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 725 ; 725 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 726 ; 726 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 727 ; 727 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 728 ; 728 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 729 ; 729 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 730 ; 730 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 731 ; 731 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 732 ; 732 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 733 ; 733 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 734 ; 734 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 735 ; 735 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 736 ; 736 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 737 ; 737 >
+      au < doNotProcess ; 2003 ; Mammalian Species Volume 738 ; 738 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 739 ; 739 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 740 ; 740 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 741 ; 741 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 742 ; 742 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 743 ; 743 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 744 ; 744 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 745 ; 745 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 746 ; 746 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 747 ; 747 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 748 ; 748 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 749 ; 749 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 750 ; 750 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 751 ; 751 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 752 ; 752 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 753 ; 753 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 754 ; 754 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 755 ; 755 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 756 ; 756 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 757 ; 757 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 758 ; 758 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 759 ; 759 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 760 ; 760 >
+      au < doNotProcess ; 2004 ; Mammalian Species Volume 761 ; 761 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 762 ; 762 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 763 ; 763 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 764 ; 764 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 765 ; 765 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 766 ; 766 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 767 ; 767 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 768 ; 768 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 769 ; 769 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 770 ; 770 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 771 ; 771 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 772 ; 772 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 773 ; 773 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 774 ; 774 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 775 ; 775 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 776 ; 776 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 777 ; 777 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 778 ; 778 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 779 ; 779 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 780 ; 780 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 781 ; 781 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 782 ; 782 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 783 ; 783 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 784 ; 784 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 785 ; 785 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 786 ; 786 >
+      au < doNotProcess ; 2005 ; Mammalian Species Volume 787 ; 787 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 788 ; 788 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 789 ; 789 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 790 ; 790 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 791 ; 791 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 792 ; 792 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 793 ; 793 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 794 ; 794 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 795 ; 795 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 796 ; 796 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 797 ; 797 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 798 ; 798 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 799 ; 799 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 800 ; 800 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 801 ; 801 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 802 ; 802 >
+      au < doNotProcess ; 2006 ; Mammalian Species Volume 803 ; 803 >
+      au < manifest ; 2007 ; Mammalian Species Volume 804 ; 804 >
+      au < manifest ; 2007 ; Mammalian Species Volume 805 ; 805 >
+      au < manifest ; 2007 ; Mammalian Species Volume 806 ; 806 >
+      au < manifest ; 2007 ; Mammalian Species Volume 807 ; 807 >
+      au < manifest ; 2008 ; Mammalian Species Volume 808 ; 808 >
+      au < manifest ; 2008 ; Mammalian Species Volume 809 ; 809 >
+      au < manifest ; 2008 ; Mammalian Species Volume 810 ; 810 >
+      au < manifest ; 2008 ; Mammalian Species Volume 811 ; 811 >
+      au < manifest ; 2008 ; Mammalian Species Volume 812 ; 812 >
+      au < manifest ; 2008 ; Mammalian Species Volume 813 ; 813 >
+      au < manifest ; 2008 ; Mammalian Species Volume 814 ; 814 >
+      au < manifest ; 2008 ; Mammalian Species Volume 815 ; 815 >
+      au < manifest ; 2008 ; Mammalian Species Volume 816 ; 816 >
+      au < manifest ; 2008 ; Mammalian Species Volume 817 ; 817 >
+      au < manifest ; 2008 ; Mammalian Species Volume 818 ; 818 >
+      au < manifest ; 2008 ; Mammalian Species Volume 819 ; 819 >
+      au < manifest ; 2008 ; Mammalian Species Volume 820 ; 820 >
+      au < manifest ; 2008 ; Mammalian Species Volume 821 ; 821 >
+      au < manifest ; 2008 ; Mammalian Species Volume 822 ; 822 >
+      au < manifest ; 2008 ; Mammalian Species Volume 823 ; 823 >
+      au < manifest ; 2009 ; Mammalian Species Volume 824 ; 824 >
+      au < manifest ; 2009 ; Mammalian Species Volume 825 ; 825 >
+      au < manifest ; 2009 ; Mammalian Species Volume 826 ; 826 >
+      au < manifest ; 2009 ; Mammalian Species Volume 827 ; 827 >
+      au < manifest ; 2009 ; Mammalian Species Volume 828 ; 828 >
+      au < manifest ; 2009 ; Mammalian Species Volume 829 ; 829 >
+      au < manifest ; 2009 ; Mammalian Species Volume 830 ; 830 >
+      au < manifest ; 2009 ; Mammalian Species Volume 831 ; 831 >
+      au < manifest ; 2009 ; Mammalian Species Volume 832 ; 832 >
+      au < manifest ; 2009 ; Mammalian Species Volume 833 ; 833 >
+      au < manifest ; 2009 ; Mammalian Species Volume 834 ; 834 >
+      au < manifest ; 2009 ; Mammalian Species Volume 835 ; 835 >
+      au < manifest ; 2009 ; Mammalian Species Volume 836 ; 836 >
+      au < manifest ; 2009 ; Mammalian Species Volume 837 ; 837 >
+      au < manifest ; 2009 ; Mammalian Species Volume 838 ; 838 >
+      au < manifest ; 2009 ; Mammalian Species Volume 839 ; 839 >
+      au < manifest ; 2009 ; Mammalian Species Volume 840 ; 840 >
+      au < manifest ; 2009 ; Mammalian Species Volume 841 ; 841 >
+      au < manifest ; 2009 ; Mammalian Species Volume 842 ; 842 >
+      au < manifest ; 2009 ; Mammalian Species Volume 843 ; 843 >
+      au < manifest ; 2009 ; Mammalian Species Volume 844 ; 844 >
+      au < manifest ; 2009 ; Mammalian Species Volume 845 ; 845 >
+      au < manifest ; 2009 ; Mammalian Species Volume 846 ; 846 >
+      au < manifest ; 2009 ; Mammalian Species Volume 847 ; 847 >    
+      au < manifest ; 2010 ; Mammalian Species Volume 42 ; 42 >
+      au < manifest ; 2011 ; Mammalian Species Volume 43 ; 43 >
+      au < manifest ; 2012 ; Mammalian Species Volume 44 ; 44 >
 
     }
 

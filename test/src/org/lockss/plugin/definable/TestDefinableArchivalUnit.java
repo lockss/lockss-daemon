@@ -1,10 +1,10 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.53 2011-11-08 20:22:43 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.53.2.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -472,7 +472,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     defMap.putString(ArchivalUnit.KEY_AU_START_URL,
 		     "\"%svolume/%i.html\", base_url, volume");
     String permUrl = "http://other.host/permission.html";
-    defMap.putString(DefinableArchivalUnit.KEY_AU_MANIFEST,
+    defMap.putString(DefinableArchivalUnit.KEY_AU_PERMISSION_URL,
 		     "\"" + permUrl + "\"");
     setupAu();
 
@@ -616,7 +616,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     String baseKey = ConfigParamDescr.BASE_URL.getKey();
     String volKey = ConfigParamDescr.VOLUME_NUMBER.getKey();
     setStdConfigProps();
-    defMap.putString(DefinableArchivalUnit.KEY_AU_MANIFEST,
+    defMap.putString(DefinableArchivalUnit.KEY_AU_PERMISSION_URL,
 		     "\"%scontents-by-date.%d.shtml\", " +
 		     baseKey + ", " + volKey);
     defMap.putString(ArchivalUnit.KEY_AU_START_URL,
@@ -636,7 +636,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     String baseKey = ConfigParamDescr.BASE_URL.getKey();
     String b2Key = ConfigParamDescr.BASE_URL2.getKey();
     configProps.add(ConfigParamDescr.BASE_URL2);
-    defMap.putCollection(DefinableArchivalUnit.KEY_AU_MANIFEST,
+    defMap.putCollection(DefinableArchivalUnit.KEY_AU_PERMISSION_URL,
 			 ListUtil.list("\"%sfoo/\", " + baseKey,
 				       "\"%sbar/\", " + b2Key));
     defMap.putString(ArchivalUnit.KEY_AU_START_URL,
@@ -653,6 +653,25 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertSameElements(ListUtil.list("http://www.example.com/",
 			       "http://mmm.example.org/"),
 		 cau.getUrlStems());
+  }
+
+  public void testObsolescentAuManifest() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a plugin definition with the old au_manifest
+    String pname = "org.lockss.plugin.definable.GoodPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue("Plugin was not successfully loaded",
+	       pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+
+    assertEquals(ListUtil.list("http://base.foo/base_path/perm.page"),
+		 au.getPermissionPages());
   }
 
   public void testGetLinkExtractor() {
@@ -1164,6 +1183,11 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       getHttpResultMap(defplug).mapException(null, null, 522, null);
     assertClass(CacheException.RetryDeadLinkException.class, ex);
     assertEquals("522 from handler", ex.getMessage());
+
+    ArchiveFileTypes aft = defplug.getArchiveFileTypes();
+    assertNotNull(aft);
+    assertEquals(MapUtil.map(".zip", ".zip", "application/x-tar", ".tar"),
+		 aft.getExtMimeMap());
   }
 
   public void testFeatureUrls() throws Exception {
@@ -1419,6 +1443,40 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(exp, rli.getUrlRates());
     assertEquals("1/43000", rli.getDefaultRate());
     assertEquals("pool1", rli.getCrawlPoolKey());
+  }
+
+  public void testConditionalRateLimiterInfo() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a complex plugin definition
+    String pname = "org.lockss.plugin.definable.ConditionalRateLimiterPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue(pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+    RateLimiterInfo rli = au.getRateLimiterInfo();
+    assertEquals("pool1", rli.getCrawlPoolKey());
+    assertClass(LinkedHashMap.class, rli.getCond());
+    Map<CrawlWindow,RateLimiterInfo> cond = rli.getCond();
+    LinkedHashMap<CrawlWindow,RateLimiterInfo> exp =
+      new LinkedHashMap<CrawlWindow,RateLimiterInfo>();
+    exp.put(new CrawlWindows.Daily("8:00", "22:00", "America/Los Angeles"),
+	    new RateLimiterInfo(null, "2/1s")
+	    .setMimeRates(MapUtil.map("text/html,application/pdf", "10/1m",
+				      "image/*", "5/1s")));
+    exp.put(new CrawlWindows.Daily("22:00", "8:00", "America/Los Angeles"),
+	    new RateLimiterInfo(null, "10/2s")
+	    .setMimeRates(MapUtil.map("text/html,application/pdf", "10/300ms",
+				      "image/*", "5/1s")));
+
+    // For some reason the entrySet()s themselves don't compare equal, but
+    // their elements do
+    assertEquals(new ArrayList(exp.entrySet()),
+		 new ArrayList(cond.entrySet()));
   }
 
   public static class PositiveCrawlRuleFactory

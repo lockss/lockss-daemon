@@ -75,6 +75,8 @@
     au < released ; 2008 ; Biographical Memoirs of Fellows of the Royal Society Volume 54 ; 54 >
     au < released ; 2009 ; Biographical Memoirs of Fellows of the Royal Society Volume 55 ; 55 >
     au < released ; 2010 ; Biographical Memoirs of Fellows of the Royal Society Volume 56 ; 56 >
+    au < released ; 2011 ; Biographical Memoirs of Fellows of the Royal Society Volume 57 ; 57 >
+    au < expected ; 2012 ; Biographical Memoirs of Fellows of the Royal Society Volume 58 ; 58 >
 
   }
 
@@ -96,6 +98,7 @@
     au < released ; 2009 ; Biology Letters Volume 5 ; 5 >
     au < released ; 2010 ; Biology Letters Volume 6 ; 6 >
     au < released ; 2011 ; Biology Letters Volume 7 ; 7 >
+    au < released ; 2012 ; Biology Letters Volume 8 ; 8 >
 
   }
 
@@ -112,7 +115,8 @@
 
     param[base_url] = http://rsfs.royalsocietypublishing.org/
 
-    au < manifest ; 2011 ; Interface Focus Volume 1 ; 1 >
+    au < released ; 2011 ; Interface Focus Volume 1 ; 1 >
+    au < released ; 2012 ; Interface Focus Volume 2 ; 2 >
 
   }
 
@@ -135,6 +139,7 @@
     au < released ; 2009 ; Journal of the Royal Society Interface Volume 6 ; 6 >
     au < released ; 2010 ; Journal of the Royal Society Interface Volume 7 ; 7 >
     au < released ; 2011 ; Journal of the Royal Society Interface Volume 8 ; 8 >
+    au < released ; 2012 ; Journal of the Royal Society Interface Volume 9 ; 9 >
 
   }
 
@@ -214,6 +219,7 @@
     au < released ; 2009 ; Notes and Records of the Royal Society Volume 63 ; 63 >
     au < released ; 2010 ; Notes and Records of the Royal Society Volume 64 ; 64 >
     au < released ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 >
+    au < released ; 2012 ; Notes and Records of the Royal Society Volume 66 ; 66 >
 
   }
 
@@ -227,7 +233,9 @@
     >
 
     param[base_url] = http://rsob.royalsocietypublishing.org/
-    comment = Open Biology will begin receiving submissions of research articles starting in July 2011
+    
+    au < released ; 2011 ; Open Biology Volume 1 ; 1 >
+    au < released ; 2012 ; Open Biology Volume 2 ; 2 >
   
   }
   
@@ -434,6 +442,7 @@
     au < released ; 2009 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 367 ; 367 >
     au < released ; 2010 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 368 ; 368 >
     au < released ; 2011 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 369 ; 369 >
+    au < released ; 2012 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 370 ; 370 >
 
   }
 
@@ -637,6 +646,7 @@
     au < released ; 2009 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 364 ; 364 >
     au < released ; 2010 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 365 ; 365 >
     au < released ; 2011 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 366 ; 366 >
+    au < released ; 2012 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 367 ; 367 >
 
   }
 
@@ -650,8 +660,8 @@
 
     param[base_url] = http://rstl.royalsocietypublishing.org/
 
-    au < released ; 1665 ; Philosophical Transactions of the Royal Society of London Volume 1 ; 1 >
-    au < released ; 1666 ; Philosophical Transactions of the Royal Society of London Volume 2 ; 2 >
+    au < released ; 1665-1666 ; Philosophical Transactions of the Royal Society of London Volume 1 ; 1 >
+    au < released ; 1666-1667 ; Philosophical Transactions of the Royal Society of London Volume 2 ; 2 >
     au < released ; 1668 ; Philosophical Transactions of the Royal Society of London Volume 3 ; 3 >
     au < released ; 1669 ; Philosophical Transactions of the Royal Society of London Volume 4 ; 4 >
     au < released ; 1670 ; Philosophical Transactions of the Royal Society of London Volume 5 ; 5 >
@@ -661,47 +671,47 @@
     au < released ; 1674 ; Philosophical Transactions of the Royal Society of London Volume 9 ; 9 >
     au < released ; 1675 ; Philosophical Transactions of the Royal Society of London Volume 10 ; 10 >
     au < released ; 1676 ; Philosophical Transactions of the Royal Society of London Volume 11 ; 11 >
-    au < released ; 1677 ; Philosophical Transactions of the Royal Society of London Volume 12 ; 12 >
+    au < released ; 1677-1678 ; Philosophical Transactions of the Royal Society of London Volume 12 ; 12 >
     au < released ; 1683 ; Philosophical Transactions of the Royal Society of London Volume 13 ; 13 >
     au < released ; 1684 ; Philosophical Transactions of the Royal Society of London Volume 14 ; 14 >
     au < released ; 1685 ; Philosophical Transactions of the Royal Society of London Volume 15 ; 15 >
-    au < released ; 1686 ; Philosophical Transactions of the Royal Society of London Volume 16 ; 16 >
+    au < released ; 1686-1692 ; Philosophical Transactions of the Royal Society of London Volume 16 ; 16 >
     au < released ; 1693 ; Philosophical Transactions of the Royal Society of London Volume 17 ; 17 >
     au < released ; 1694 ; Philosophical Transactions of the Royal Society of London Volume 18 ; 18 >
-    au < released ; 1695 ; Philosophical Transactions of the Royal Society of London Volume 19 ; 19 >
+    au < released ; 1695-1697 ; Philosophical Transactions of the Royal Society of London Volume 19 ; 19 >
     au < released ; 1698 ; Philosophical Transactions of the Royal Society of London Volume 20 ; 20 >
     au < released ; 1699 ; Philosophical Transactions of the Royal Society of London Volume 21 ; 21 >
-    au < released ; 1700 ; Philosophical Transactions of the Royal Society of London Volume 22 ; 22 >
-    au < released ; 1702 ; Philosophical Transactions of the Royal Society of London Volume 23 ; 23 >
-    au < released ; 1704 ; Philosophical Transactions of the Royal Society of London Volume 24 ; 24 >
-    au < released ; 1706 ; Philosophical Transactions of the Royal Society of London Volume 25 ; 25 >
-    au < released ; 1708 ; Philosophical Transactions of the Royal Society of London Volume 26 ; 26 >
-    au < released ; 1710 ; Philosophical Transactions of the Royal Society of London Volume 27 ; 27 >
-    au < released ; 1712 ; Philosophical Transactions of the Royal Society of London Volume 28 ; 28 >
-    au < released ; 1714 ; Philosophical Transactions of the Royal Society of London Volume 29 ; 29 >
-    au < released ; 1717 ; Philosophical Transactions of the Royal Society of London Volume 30 ; 30 >
-    au < released ; 1720 ; Philosophical Transactions of the Royal Society of London Volume 31 ; 31 >
-    au < released ; 1722 ; Philosophical Transactions of the Royal Society of London Volume 32 ; 32 >
-    au < released ; 1724 ; Philosophical Transactions of the Royal Society of London Volume 33 ; 33 >
-    au < released ; 1726 ; Philosophical Transactions of the Royal Society of London Volume 34 ; 34 >
-    au < released ; 1727 ; Philosophical Transactions of the Royal Society of London Volume 35 ; 35 >
-    au < released ; 1729 ; Philosophical Transactions of the Royal Society of London Volume 36 ; 36 >
-    au < released ; 1731 ; Philosophical Transactions of the Royal Society of London Volume 37 ; 37 >
-    au < released ; 1733 ; Philosophical Transactions of the Royal Society of London Volume 38 ; 38 >
-    au < released ; 1735 ; Philosophical Transactions of the Royal Society of London Volume 39 ; 39 >
-    au < released ; 1737 ; Philosophical Transactions of the Royal Society of London Volume 40 ; 40 >
-    au < released ; 1739 ; Philosophical Transactions of the Royal Society of London Volume 41 ; 41 >
-    au < released ; 1742 ; Philosophical Transactions of the Royal Society of London Volume 42 ; 42 >
-    au < released ; 1744 ; Philosophical Transactions of the Royal Society of London Volume 43 ; 43 >
-    au < released ; 1746 ; Philosophical Transactions of the Royal Society of London Volume 44 ; 44 >
+    au < released ; 1700-1701 ; Philosophical Transactions of the Royal Society of London Volume 22 ; 22 >
+    au < released ; 1702-1703 ; Philosophical Transactions of the Royal Society of London Volume 23 ; 23 >
+    au < released ; 1704-1705 ; Philosophical Transactions of the Royal Society of London Volume 24 ; 24 >
+    au < released ; 1706-1707 ; Philosophical Transactions of the Royal Society of London Volume 25 ; 25 >
+    au < released ; 1708-1709 ; Philosophical Transactions of the Royal Society of London Volume 26 ; 26 >
+    au < released ; 1710-1711 ; Philosophical Transactions of the Royal Society of London Volume 27 ; 27 >
+    au < released ; 1712-1713 ; Philosophical Transactions of the Royal Society of London Volume 28 ; 28 >
+    au < released ; 1714-1716 ; Philosophical Transactions of the Royal Society of London Volume 29 ; 29 >
+    au < released ; 1717-1719 ; Philosophical Transactions of the Royal Society of London Volume 30 ; 30 >
+    au < released ; 1720-1721 ; Philosophical Transactions of the Royal Society of London Volume 31 ; 31 >
+    au < released ; 1722-1723 ; Philosophical Transactions of the Royal Society of London Volume 32 ; 32 >
+    au < released ; 1724-1725 ; Philosophical Transactions of the Royal Society of London Volume 33 ; 33 >
+    au < released ; 1726-1727 ; Philosophical Transactions of the Royal Society of London Volume 34 ; 34 >
+    au < released ; 1727-1728 ; Philosophical Transactions of the Royal Society of London Volume 35 ; 35 >
+    au < released ; 1729-1730 ; Philosophical Transactions of the Royal Society of London Volume 36 ; 36 >
+    au < released ; 1731-1732 ; Philosophical Transactions of the Royal Society of London Volume 37 ; 37 >
+    au < released ; 1733-1734 ; Philosophical Transactions of the Royal Society of London Volume 38 ; 38 >
+    au < released ; 1735-1736 ; Philosophical Transactions of the Royal Society of London Volume 39 ; 39 >
+    au < released ; 1737-1738 ; Philosophical Transactions of the Royal Society of London Volume 40 ; 40 >
+    au < released ; 1739-1741 ; Philosophical Transactions of the Royal Society of London Volume 41 ; 41 >
+    au < released ; 1742-1743 ; Philosophical Transactions of the Royal Society of London Volume 42 ; 42 >
+    au < released ; 1744-1745 ; Philosophical Transactions of the Royal Society of London Volume 43 ; 43 >
+    au < released ; 1746-1747 ; Philosophical Transactions of the Royal Society of London Volume 44 ; 44 >
     au < released ; 1748 ; Philosophical Transactions of the Royal Society of London Volume 45 ; 45 >
-    au < released ; 1749 ; Philosophical Transactions of the Royal Society of London Volume 46 ; 46 >
-    au < released ; 1751 ; Philosophical Transactions of the Royal Society of London Volume 47 ; 47 >
-    au < released ; 1753 ; Philosophical Transactions of the Royal Society of London Volume 48 ; 48 >
-    au < released ; 1755 ; Philosophical Transactions of the Royal Society of London Volume 49 ; 49 >
-    au < released ; 1757 ; Philosophical Transactions of the Royal Society of London Volume 50 ; 50 >
-    au < released ; 1759 ; Philosophical Transactions of the Royal Society of London Volume 51 ; 51 >
-    au < released ; 1761 ; Philosophical Transactions of the Royal Society of London Volume 52 ; 52 >
+    au < released ; 1749-1750 ; Philosophical Transactions of the Royal Society of London Volume 46 ; 46 >
+    au < released ; 1751-1752 ; Philosophical Transactions of the Royal Society of London Volume 47 ; 47 >
+    au < released ; 1753-1754 ; Philosophical Transactions of the Royal Society of London Volume 48 ; 48 >
+    au < released ; 1755-1756 ; Philosophical Transactions of the Royal Society of London Volume 49 ; 49 >
+    au < released ; 1757-1758 ; Philosophical Transactions of the Royal Society of London Volume 50 ; 50 >
+    au < released ; 1759-1760 ; Philosophical Transactions of the Royal Society of London Volume 51 ; 51 >
+    au < released ; 1761-1762 ; Philosophical Transactions of the Royal Society of London Volume 52 ; 52 >
     au < released ; 1763 ; Philosophical Transactions of the Royal Society of London Volume 53 ; 53 >
     au < released ; 1764 ; Philosophical Transactions of the Royal Society of London Volume 54 ; 54 >
     au < released ; 1765 ; Philosophical Transactions of the Royal Society of London Volume 55 ; 55 >
@@ -1233,6 +1243,7 @@
     au < released ; 2009 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 465 ; 465 >
     au < released ; 2010 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 466 ; 466 >
     au < released ; 2011 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 467 ; 467 >
+    au < released ; 2012 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 468 ; 468 >
 
   }
 
@@ -1450,6 +1461,7 @@
     au < released ; 2009 ; Proceedings of the Royal Society B: Biological Sciences Volume 276 ; 276 >
     au < released ; 2010 ; Proceedings of the Royal Society B: Biological Sciences Volume 277 ; 277 >
     au < released ; 2011 ; Proceedings of the Royal Society B: Biological Sciences Volume 278 ; 278 >
+    au < released ; 2012 ; Proceedings of the Royal Society B: Biological Sciences Volume 279 ; 279 >
 
   }
 

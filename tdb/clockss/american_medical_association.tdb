@@ -3,6 +3,7 @@
   publisher <
     name = American Medical Association
   >
+    attr[contract] = 2008
 
   {
 
@@ -13,7 +14,9 @@
   
       title <
         name = Archives of Dermatology ;
-        issn = 0003-987X
+        issn = 0003-987X;
+        eissn = 0096-5359;
+        issnl = 0003-987X
       >
       
       param[base_url] = http://archderm.ama-assn.org/
@@ -169,7 +172,8 @@
         au < released ; crawling ; 2008 ; Archives of Dermatology Volume 144 ; 144 ; >
         au < released ; crawling ; 2009 ; Archives of Dermatology Volume 145 ; 145 ; >
         au < released ; crawling ; 2010 ; Archives of Dermatology Volume 146 ; 146 ; >
-        au < manifest ; exists ; 2011 ; Archives of Dermatology Volume 147 ; 147 ; >
+        au < released ; crawling ; 2011 ; Archives of Dermatology Volume 147 ; 147 ; >
+        au < crawling ; exists ; 2012 ; Archives of Dermatology Volume 148 ; 148 ; >
         
       }
       
@@ -185,7 +189,8 @@
     
       title <
         name = Archives of Family Medicine ;
-        issn = 1063-3987
+        eissn = 1063-3987;
+        issnl = 1063-3987
       >
       
       param[base_url] = http://archfami.ama-assn.org/
@@ -194,6 +199,7 @@
   
         pluginSuffix = ClockssHighWirePlugin
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
+		comment[0] = ceased publication in 2000
       
         au < released ; crawling ; 1992 ; Archives of Family Medicine Volume 1 ; 1 ; reingest1.clockss.org:8082 >
         au < released ; crawling ; 1993 ; Archives of Family Medicine Volume 2 ; 2 ; reingest2.clockss.org:8085 >
@@ -219,7 +225,9 @@
     
       title <
         name = Archives of Facial Plastic Surgery ;
-        issn = 1521-2491
+        issn = 1521-2491;
+        eissn = 1538-3660;
+        issnl = 1521-2491
       >
       
       param[base_url] = http://archfaci.ama-assn.org/
@@ -260,7 +268,8 @@
         au < released ; crawling ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
         au < released ; crawling ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
         au < released ; crawling ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ; >      
-        au < manifest ; exists ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; >      
+        au < released ; crawling ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; >      
+        au < crawling ; exists ; 2012 ; Archives of Facial Plastic Surgery Volume 14 ; 14 ; >      
 
       }
     
@@ -270,7 +279,9 @@
     
       title <
         name = Archives of General Psychiatry ;
-        issn = 0003-990X
+        issn = 0003-990X;
+        eissn = 1538-3636;
+        issnl = 0003-990X
       >
       
       param[base_url] = http://archpsyc.ama-assn.org/
@@ -347,7 +358,8 @@
         au < released ; crawling ; 2008 ; Archives of General Psychiatry Volume 65 ; 65 ; >
         au < released ; crawling ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 ; >
         au < released ; crawling ; 2010 ; Archives of General Psychiatry Volume 67 ; 67 ; >
-        au < manifest ; exists ; 2011 ; Archives of General Psychiatry Volume 68 ; 68 ; >
+        au < released ; crawling ; 2011 ; Archives of General Psychiatry Volume 68 ; 68 ; >
+        au < crawling ; exists ; 2012 ; Archives of General Psychiatry Volume 69 ; 69 ; >
 
       }
       
@@ -363,7 +375,9 @@
     
       title <
         name = Archives of Internal Medicine ;
-        issn = 0003-9926
+        issn = 0003-9926;
+        eissn = 1538-3679;
+        issnl = 0003-9926
       >
       
       param[base_url] = http://archinte.ama-assn.org/
@@ -543,7 +557,8 @@
         au < released ; crawling ; 2008 ; Archives of Internal Medicine Volume 168 ; 168 ; >
         au < released ; crawling ; 2009 ; Archives of Internal Medicine Volume 169 ; 169 ; >
         au < released ; crawling ; 2010 ; Archives of Internal Medicine Volume 170 ; 170 ; >
-        au < manifest ; exists ; 2011 ; Archives of Internal Medicine Volume 171 ; 171 ; >
+        au < released ; crawling ; 2011 ; Archives of Internal Medicine Volume 171 ; 171 ; >
+        au < crawling ; exists ; 2012 ; Archives of Internal Medicine Volume 172 ; 172 ; >
 
       }
       
@@ -559,7 +574,9 @@
     
       title <
         name = Archives of Neurology ;
-        issn = 0003-9942
+        issn = 0003-9942;
+        eissn = 1538-3687;
+        issnl = 0003-9942
       >
       
       param[base_url] = http://archneur.ama-assn.org/
@@ -636,7 +653,8 @@
         au < released ; crawling ; 2008 ; Archives of Neurology Volume 65 ; 65 ; >
         au < released ; crawling ; 2009 ; Archives of Neurology Volume 66 ; 66 ; >
         au < released ; crawling ; 2010 ; Archives of Neurology Volume 67 ; 67 ; >
-        au < manifest ; exists ; 2011 ; Archives of Neurology Volume 68 ; 68 ; >
+        au < released ; crawling ; 2011 ; Archives of Neurology Volume 68 ; 68 ; >
+        au < crawling ; exists ; 2012 ; Archives of Neurology Volume 69 ; 69 ; >
 
       }
       
@@ -652,7 +670,8 @@
     
       title <
         name = AMA Archives of Neurology and Psychiatry ;
-        issn = 0096-6886
+        issn = 0096-6886;
+        issnl = 0096-6886
       >
       
       param[base_url] = http://archneurpsyc.ama-assn.org/
@@ -660,96 +679,99 @@
       {
         pluginSuffix = ClockssHighWirePlugin
 
-        au < exists ; exists ; 1919 ; Archives of Neurology and Psychiatry Volume 1 ; 1 ; >
-        au < exists ; exists ; 1919 ; Archives of Neurology and Psychiatry Volume 2 ; 2 ; >
-        au < manifest ; exists ; 1920 ; Archives of Neurology and Psychiatry Volume 3 ; 3 ; >
-        au < manifest ; exists ; 1920 ; Archives of Neurology and Psychiatry Volume 4 ; 4 ; >
-        au < manifest ; exists ; 1921 ; Archives of Neurology and Psychiatry Volume 5 ; 5 ; >
-        au < manifest ; exists ; 1921 ; Archives of Neurology and Psychiatry Volume 6 ; 6 ; >
-        au < manifest ; exists ; 1922 ; Archives of Neurology and Psychiatry Volume 7 ; 7 ; >
-        au < manifest ; exists ; 1922 ; Archives of Neurology and Psychiatry Volume 8 ; 8 ; >
-        au < manifest ; exists ; 1923 ; Archives of Neurology and Psychiatry Volume 9 ; 9 ; >
-        au < manifest ; exists ; 1923 ; Archives of Neurology and Psychiatry Volume 10 ; 10 ; >
-        au < manifest ; exists ; 1924 ; Archives of Neurology and Psychiatry Volume 11 ; 11 ; >
-        au < manifest ; exists ; 1924 ; Archives of Neurology and Psychiatry Volume 12 ; 12 ; >
-        au < manifest ; exists ; 1925 ; Archives of Neurology and Psychiatry Volume 13 ; 13 ; >
-        au < manifest ; exists ; 1925 ; Archives of Neurology and Psychiatry Volume 14 ; 14 ; >
-        au < manifest ; exists ; 1926 ; Archives of Neurology and Psychiatry Volume 15 ; 15 ; >
-        au < manifest ; exists ; 1926 ; Archives of Neurology and Psychiatry Volume 16 ; 16 ; >
-        au < manifest ; exists ; 1927 ; Archives of Neurology and Psychiatry Volume 17 ; 17 ; >
-        au < manifest ; exists ; 1927 ; Archives of Neurology and Psychiatry Volume 18 ; 18 ; >
-        au < manifest ; exists ; 1928 ; Archives of Neurology and Psychiatry Volume 19 ; 19 ; >
-        au < manifest ; exists ; 1928 ; Archives of Neurology and Psychiatry Volume 20 ; 20 ; >
-        au < manifest ; exists ; 1929 ; Archives of Neurology and Psychiatry Volume 21 ; 21 ; >
-        au < manifest ; exists ; 1929 ; Archives of Neurology and Psychiatry Volume 22 ; 22 ; >
-        au < manifest ; exists ; 1930 ; Archives of Neurology and Psychiatry Volume 23 ; 23 ; >
-        au < manifest ; exists ; 1930 ; Archives of Neurology and Psychiatry Volume 24 ; 24 ; >
-        au < manifest ; exists ; 1931 ; Archives of Neurology and Psychiatry Volume 25 ; 25 ; >
-        au < manifest ; exists ; 1931 ; Archives of Neurology and Psychiatry Volume 26 ; 26 ; >
-        au < manifest ; exists ; 1932 ; Archives of Neurology and Psychiatry Volume 27 ; 27 ; >
-        au < manifest ; exists ; 1932 ; Archives of Neurology and Psychiatry Volume 28 ; 28 ; >
-        au < manifest ; exists ; 1933 ; Archives of Neurology and Psychiatry Volume 29 ; 29 ; >
-        au < manifest ; exists ; 1933 ; Archives of Neurology and Psychiatry Volume 30 ; 30 ; >
-        au < manifest ; exists ; 1934 ; Archives of Neurology and Psychiatry Volume 31 ; 31 ; >
-        au < manifest ; exists ; 1934 ; Archives of Neurology and Psychiatry Volume 32 ; 32 ; >
-        au < manifest ; exists ; 1935 ; Archives of Neurology and Psychiatry Volume 33 ; 33 ; >
-        au < manifest ; exists ; 1935 ; Archives of Neurology and Psychiatry Volume 34 ; 34 ; >
-        au < manifest ; exists ; 1936 ; Archives of Neurology and Psychiatry Volume 35 ; 35 ; >
-        au < manifest ; exists ; 1936 ; Archives of Neurology and Psychiatry Volume 36 ; 36 ; >
-        au < manifest ; exists ; 1937 ; Archives of Neurology and Psychiatry Volume 37 ; 37 ; >
-        au < manifest ; exists ; 1937 ; Archives of Neurology and Psychiatry Volume 38 ; 38 ; >
-        au < manifest ; exists ; 1938 ; Archives of Neurology and Psychiatry Volume 39 ; 39 ; >
-        au < manifest ; exists ; 1938 ; Archives of Neurology and Psychiatry Volume 40 ; 40 ; >
-        au < manifest ; exists ; 1939 ; Archives of Neurology and Psychiatry Volume 41 ; 41 ; >
-        au < manifest ; exists ; 1939 ; Archives of Neurology and Psychiatry Volume 42 ; 42 ; >
-        au < manifest ; exists ; 1940 ; Archives of Neurology and Psychiatry Volume 43 ; 43 ; >
-        au < manifest ; exists ; 1940 ; Archives of Neurology and Psychiatry Volume 44 ; 44 ; >
-        au < manifest ; exists ; 1941 ; Archives of Neurology and Psychiatry Volume 45 ; 45 ; >
-        au < manifest ; exists ; 1941 ; Archives of Neurology and Psychiatry Volume 46 ; 46 ; >
-        au < manifest ; exists ; 1942 ; Archives of Neurology and Psychiatry Volume 47 ; 47 ; >
-        au < manifest ; exists ; 1942 ; Archives of Neurology and Psychiatry Volume 48 ; 48 ; >
-        au < manifest ; exists ; 1943 ; Archives of Neurology and Psychiatry Volume 49 ; 49 ; >
-        au < manifest ; exists ; 1943 ; Archives of Neurology and Psychiatry Volume 50 ; 50 ; >
-        au < manifest ; exists ; 1944 ; Archives of Neurology and Psychiatry Volume 51 ; 51 ; >
-        au < manifest ; exists ; 1944 ; Archives of Neurology and Psychiatry Volume 52 ; 52 ; >
-        au < manifest ; exists ; 1945 ; Archives of Neurology and Psychiatry Volume 53 ; 53 ; >
-        au < manifest ; exists ; 1945 ; Archives of Neurology and Psychiatry Volume 54 ; 54 ; >
-        au < manifest ; exists ; 1946 ; Archives of Neurology and Psychiatry Volume 55 ; 55 ; >
-        au < manifest ; exists ; 1946 ; Archives of Neurology and Psychiatry Volume 56 ; 56 ; >
-        au < manifest ; exists ; 1947 ; Archives of Neurology and Psychiatry Volume 57 ; 57 ; >
-        au < manifest ; exists ; 1947 ; Archives of Neurology and Psychiatry Volume 58 ; 58 ; >
-        au < manifest ; exists ; 1948 ; Archives of Neurology and Psychiatry Volume 59 ; 59 ; >
-        au < manifest ; exists ; 1948 ; Archives of Neurology and Psychiatry Volume 60 ; 60 ; >
-        au < manifest ; exists ; 1949 ; Archives of Neurology and Psychiatry Volume 61 ; 61 ; >
-        au < manifest ; exists ; 1949 ; Archives of Neurology and Psychiatry Volume 62 ; 62 ; >
-        au < manifest ; exists ; 1950 ; Archives of Neurology and Psychiatry Volume 63 ; 63 ; >
-        au < manifest ; exists ; 1950 ; Archives of Neurology and Psychiatry Volume 64 ; 64 ; >
-        au < manifest ; exists ; 1951 ; AMA Archives of Neurology and Psychiatry Volume 65 ; 65 ; >
-        au < manifest ; exists ; 1951 ; AMA Archives of Neurology and Psychiatry Volume 66 ; 66 ; >
-        au < manifest ; exists ; 1952 ; AMA Archives of Neurology and Psychiatry Volume 67 ; 67 ; >
-        au < manifest ; exists ; 1952 ; AMA Archives of Neurology and Psychiatry Volume 68 ; 68 ; >
-        au < manifest ; exists ; 1953 ; AMA Archives of Neurology and Psychiatry Volume 69 ; 69 ; >
-        au < manifest ; exists ; 1953 ; AMA Archives of Neurology and Psychiatry Volume 70 ; 70 ; >
-        au < manifest ; exists ; 1954 ; AMA Archives of Neurology and Psychiatry Volume 71 ; 71 ; >
-        au < manifest ; exists ; 1954 ; AMA Archives of Neurology and Psychiatry Volume 72 ; 72 ; >
-        au < manifest ; exists ; 1955 ; AMA Archives of Neurology and Psychiatry Volume 73 ; 73 ; >
-        au < manifest ; exists ; 1955 ; AMA Archives of Neurology and Psychiatry Volume 74 ; 74 ; >
-        au < manifest ; exists ; 1956 ; AMA Archives of Neurology and Psychiatry Volume 75 ; 75 ; >
-        au < manifest ; exists ; 1956 ; AMA Archives of Neurology and Psychiatry Volume 76 ; 76 ; >
-        au < manifest ; exists ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 77 ; 77 ; >
-        au < manifest ; exists ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 78 ; 78 ; >
-        au < manifest ; exists ; 1958 ; AMA Archives of Neurology and Psychiatry Volume 79 ; 79 ; >
-        au < manifest ; exists ; 1958 ; AMA Archives of Neurology and Psychiatry Volume 80 ; 80 ; >
-        au < manifest ; exists ; 1959 ; AMA Archives of Neurology and Psychiatry Volume 81 ; 81 ; >
+        au < crawling ; exists ; 1919 ; AMA Archives of Neurology and Psychiatry Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1919 ; AMA Archives of Neurology and Psychiatry Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1920 ; AMA Archives of Neurology and Psychiatry Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1920 ; AMA Archives of Neurology and Psychiatry Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1921 ; AMA Archives of Neurology and Psychiatry Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1921 ; AMA Archives of Neurology and Psychiatry Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1922 ; AMA Archives of Neurology and Psychiatry Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1922 ; AMA Archives of Neurology and Psychiatry Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1924 ; AMA Archives of Neurology and Psychiatry Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1924 ; AMA Archives of Neurology and Psychiatry Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1925 ; AMA Archives of Neurology and Psychiatry Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1925 ; AMA Archives of Neurology and Psychiatry Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1926 ; AMA Archives of Neurology and Psychiatry Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1926 ; AMA Archives of Neurology and Psychiatry Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1927 ; AMA Archives of Neurology and Psychiatry Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1927 ; AMA Archives of Neurology and Psychiatry Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1928 ; AMA Archives of Neurology and Psychiatry Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1928 ; AMA Archives of Neurology and Psychiatry Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1929 ; AMA Archives of Neurology and Psychiatry Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1929 ; AMA Archives of Neurology and Psychiatry Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1930 ; AMA Archives of Neurology and Psychiatry Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1930 ; AMA Archives of Neurology and Psychiatry Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1931 ; AMA Archives of Neurology and Psychiatry Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1931 ; AMA Archives of Neurology and Psychiatry Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1932 ; AMA Archives of Neurology and Psychiatry Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1932 ; AMA Archives of Neurology and Psychiatry Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1933 ; AMA Archives of Neurology and Psychiatry Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1933 ; AMA Archives of Neurology and Psychiatry Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1934 ; AMA Archives of Neurology and Psychiatry Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1934 ; AMA Archives of Neurology and Psychiatry Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1935 ; AMA Archives of Neurology and Psychiatry Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1935 ; AMA Archives of Neurology and Psychiatry Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1936 ; AMA Archives of Neurology and Psychiatry Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1936 ; AMA Archives of Neurology and Psychiatry Volume 36 ; 36 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1937 ; AMA Archives of Neurology and Psychiatry Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1937 ; AMA Archives of Neurology and Psychiatry Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1938 ; AMA Archives of Neurology and Psychiatry Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1938 ; AMA Archives of Neurology and Psychiatry Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1939 ; AMA Archives of Neurology and Psychiatry Volume 41 ; 41 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1939 ; AMA Archives of Neurology and Psychiatry Volume 42 ; 42 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1940 ; AMA Archives of Neurology and Psychiatry Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1940 ; AMA Archives of Neurology and Psychiatry Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1941 ; AMA Archives of Neurology and Psychiatry Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1941 ; AMA Archives of Neurology and Psychiatry Volume 46 ; 46 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1942 ; AMA Archives of Neurology and Psychiatry Volume 47 ; 47 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1942 ; AMA Archives of Neurology and Psychiatry Volume 48 ; 48 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1943 ; AMA Archives of Neurology and Psychiatry Volume 49 ; 49 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1943 ; AMA Archives of Neurology and Psychiatry Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1944 ; AMA Archives of Neurology and Psychiatry Volume 51 ; 51 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1944 ; AMA Archives of Neurology and Psychiatry Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1945 ; AMA Archives of Neurology and Psychiatry Volume 53 ; 53 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1945 ; AMA Archives of Neurology and Psychiatry Volume 54 ; 54 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1946 ; AMA Archives of Neurology and Psychiatry Volume 55 ; 55 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1946 ; AMA Archives of Neurology and Psychiatry Volume 56 ; 56 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1947 ; AMA Archives of Neurology and Psychiatry Volume 57 ; 57 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1947 ; AMA Archives of Neurology and Psychiatry Volume 58 ; 58 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1948 ; AMA Archives of Neurology and Psychiatry Volume 59 ; 59 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1948 ; AMA Archives of Neurology and Psychiatry Volume 60 ; 60 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1949 ; AMA Archives of Neurology and Psychiatry Volume 61 ; 61 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1949 ; AMA Archives of Neurology and Psychiatry Volume 62 ; 62 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1950 ; AMA Archives of Neurology and Psychiatry Volume 63 ; 63 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1950 ; AMA Archives of Neurology and Psychiatry Volume 64 ; 64 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1951 ; AMA Archives of Neurology and Psychiatry Volume 65 ; 65 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1951 ; AMA Archives of Neurology and Psychiatry Volume 66 ; 66 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1952 ; AMA Archives of Neurology and Psychiatry Volume 67 ; 67 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1952 ; AMA Archives of Neurology and Psychiatry Volume 68 ; 68 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1953 ; AMA Archives of Neurology and Psychiatry Volume 69 ; 69 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1953 ; AMA Archives of Neurology and Psychiatry Volume 70 ; 70 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1954 ; AMA Archives of Neurology and Psychiatry Volume 71 ; 71 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1954 ; AMA Archives of Neurology and Psychiatry Volume 72 ; 72 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1955 ; AMA Archives of Neurology and Psychiatry Volume 73 ; 73 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1955 ; AMA Archives of Neurology and Psychiatry Volume 74 ; 74 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1956 ; AMA Archives of Neurology and Psychiatry Volume 75 ; 75 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1956 ; AMA Archives of Neurology and Psychiatry Volume 76 ; 76 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 77 ; 77 ; reingest4.clockss.org:8082 >
+        au < crawling ; exists ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 78 ; 78 ; reingest1.clockss.org:8082 >
+        au < crawling ; exists ; 1958 ; AMA Archives of Neurology and Psychiatry Volume 79 ; 79 ; reingest2.clockss.org:8085 >
+        au < crawling ; exists ; 1958 ; AMA Archives of Neurology and Psychiatry Volume 80 ; 80 ; reingest3.clockss.org:8083 >
+        au < crawling ; exists ; 1959 ; AMA Archives of Neurology and Psychiatry Volume 81 ; 81 ; reingest4.clockss.org:8082 >
 
       }
+    
     }
 
     {
     
       title <
         name = Archives of Ophthalmology ;
-        issn = 0003-9950
+        issn = 0003-9950;
+        eissn = 0096-6339;
+        issnl = 0003-9950
       >
       
       param[base_url] = http://archopht.ama-assn.org/
@@ -887,7 +909,8 @@
         au < released ; crawling ; 2008 ; Archives of Ophthalmology Volume 126 ; 126 ; >
         au < released ; crawling ; 2009 ; Archives of Ophthalmology Volume 127 ; 127 ; >
         au < released ; crawling ; 2010 ; Archives of Ophthalmology Volume 128 ; 128 ; >
-        au < manifest ; exists ; 2011 ; Archives of Ophthalmology Volume 129 ; 129 ; >
+        au < released ; crawling ; 2011 ; Archives of Ophthalmology Volume 129 ; 129 ; >
+        au < crawling ; exists ; 2012 ; Archives of Ophthalmology Volume 130 ; 130 ; >
 
       }
       
@@ -903,7 +926,9 @@
     
       title <
         name = Archives of Otolaryngology - Head & Neck Surgery ;
-        issn = 0886-4470
+        issn = 0886-4470;
+        eissn = 1538-361X;
+        issnl = 0886-4470
       >
       
       param[base_url] = http://archotol.ama-assn.org/
@@ -1008,7 +1033,7 @@
          au < released ; crawling ; 1971 ; Archives of Otolaryngology Volume 93 ; 93 ; reingest4.clockss.org:8082 >
          au < released ; crawling ; 1971 ; Archives of Otolaryngology Volume 94 ; 94 ; reingest4.clockss.org:8082 >
          au < released ; crawling ; 1972 ; Archives of Otolaryngology Volume 95 ; 95 ; reingest1.clockss.org:8082 >
-         au < manifest ; exists ; 1972 ; Archives of Otolaryngology Volume 96 ; 96 ; >
+         au < released ; crawling ; 1972 ; Archives of Otolaryngology Volume 96 ; 96 ; reingest1.clockss.org:8082 >
          au < released ; crawling ; 1973 ; Archives of Otolaryngology Volume 97 ; 97 ; reingest2.clockss.org:8085 >
          au < released ; crawling ; 1973 ; Archives of Otolaryngology Volume 98 ; 98 ; reingest2.clockss.org:8085 >
          au < released ; crawling ; 1974 ; Archives of Otolaryngology Volume 99 ; 99 ; reingest3.clockss.org:8083 >
@@ -1049,7 +1074,8 @@
          au < released ; crawling ; 2008 ; Archives of Otolaryngology - Head & Neck Surgery Volume 134 ; 134 ; >
          au < released ; crawling ; 2009 ; Archives of Otolaryngology - Head & Neck Surgery Volume 135 ; 135 ; >
          au < released ; crawling ; 2010 ; Archives of Otolaryngology - Head & Neck Surgery Volume 136 ; 136 ; >
-         au < manifest ; exists ; 2011 ; Archives of Otolaryngology - Head & Neck Surgery Volume 137 ; 137 ; >
+         au < released ; crawling ; 2011 ; Archives of Otolaryngology - Head & Neck Surgery Volume 137 ; 137 ; >
+         au < crawling ; exists ; 2012 ; Archives of Otolaryngology - Head & Neck Surgery Volume 138 ; 138 ; >
 
       }
       
@@ -1065,8 +1091,9 @@
     
       title <
         name = Archives of Pediatrics & Adolescent Medicine ;
-        issn = 1072-4710 ;
-        eissn = 1538-3628
+        issn = 1072-4710;
+        eissn = 1538-3628;
+        issnl = 1072-4710
       >
       
       param[base_url] = http://archpedi.ama-assn.org/
@@ -1240,7 +1267,8 @@
         au < released ; crawling ; 2008 ; Archives of Pediatrics & Adolescent Medicine Volume 162 ; 162 ; >
         au < released ; crawling ; 2009 ; Archives of Pediatrics & Adolescent Medicine Volume 163 ; 163 ; >
         au < released ; crawling ; 2010 ; Archives of Pediatrics & Adolescent Medicine Volume 164 ; 164 ; >
-        au < manifest ; exists ; 2011 ; Archives of Pediatrics & Adolescent Medicine Volume 165 ; 165 ; >
+        au < released ; crawling ; 2011 ; Archives of Pediatrics & Adolescent Medicine Volume 165 ; 165 ; >
+        au < crawling ; exists ; 2012 ; Archives of Pediatrics & Adolescent Medicine Volume 166 ; 166 ; >
 
       }
       
@@ -1256,7 +1284,9 @@
     
       title <
         name = Archives of Surgery ;
-        issn = 0004-0010
+        issn = 0004-0010;
+        eissn = 0096-6908;
+        issnl = 0004-0010
       >
       
       param[base_url] = http://archsurg.ama-assn.org/
@@ -1411,7 +1441,8 @@
         au < released ; crawling ; 2008 ; Archives of Surgery Volume 143 ; 143 ; >
         au < released ; crawling ; 2009 ; Archives of Surgery Volume 144 ; 144 ; >
         au < released ; crawling ; 2010 ; Archives of Surgery Volume 145 ; 145 ; >
-        au < manifest ; exists ; 2011 ; Archives of Surgery Volume 146 ; 146 ; >
+        au < released ; crawling ; 2011 ; Archives of Surgery Volume 146 ; 146 ; >
+        au < crawling ; exists ; 2012 ; Archives of Surgery Volume 147 ; 147 ; >
 
       }
       
@@ -1427,8 +1458,9 @@
     
       title <
         name = JAMA: The Journal of the American Medical Association ;
-        issn = 0098-7484 ;
-        eissn = 1538-3598
+        issn = 0098-7484;
+        eissn = 1538-3598;
+        issnl = 0098-7484
       >
       
       comment[jama_183_202] = volumes 183-202 are assigned differently to reingest[1234].clockss.org than other AUs
@@ -1754,8 +1786,9 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
 
-        au < crawling ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305 ; 305 ; >
-        au < manifest ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 306 ; 306 ; >
+        au < released ; crawling ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305 ; 305 ; >
+        au < released ; crawling ; 2011 ; JAMA: The Journal of the American Medical Association Volume 306 ; 306 ; >
+        au < crawling ; exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307 ; 307 ; >
 
       }
 
@@ -1765,7 +1798,8 @@
     
       title <
         name = JAMA Français ;
-        issn = 1930-4625
+        eissn = 1930-4625;
+        issnl = 1930-4625
       >
       
       param[base_url] = http://jamafr.ama-assn.org/
@@ -1773,18 +1807,18 @@
       {
         pluginSuffix = ClockssHighWirePlugin
 
-        au < manifest ; exists ; 2003 ; JAMA Français Volume 289 ; 289 ; >
-        au < manifest ; exists ; 2003 ; JAMA Français Volume 290 ; 290 ; >
-        au < manifest ; exists ; 2004 ; JAMA Français Volume 291 ; 291 ; >
-        au < manifest ; exists ; 2004 ; JAMA Français Volume 292 ; 292 ; >
-        au < manifest ; exists ; 2005 ; JAMA Français Volume 293 ; 293 ; >
-        au < manifest ; exists ; 2005 ; JAMA Français Volume 294 ; 294 ; >
-        au < manifest ; exists ; 2006 ; JAMA Français Volume 295 ; 295 ; >
-        au < manifest ; exists ; 2006 ; JAMA Français Volume 296 ; 296 ; >
-        au < manifest ; exists ; 2007 ; JAMA Français Volume 297 ; 297 ; >
-        au < manifest ; exists ; 2007 ; JAMA Français Volume 298 ; 298 ; >
-        au < manifest ; exists ; 2008 ; JAMA Français Volume 299 ; 299 ; >
-        au < manifest ; exists ; 2008 ; JAMA Français Volume 300 ; 300 ; >
+        au < released ; crawling ; 2003 ; JAMA Français Volume 289 ; 289 ; >
+        au < released ; crawling ; 2003 ; JAMA Français Volume 290 ; 290 ; >
+        au < released ; crawling ; 2004 ; JAMA Français Volume 291 ; 291 ; >
+        au < released ; crawling ; 2004 ; JAMA Français Volume 292 ; 292 ; >
+        au < released ; crawling ; 2005 ; JAMA Français Volume 293 ; 293 ; >
+        au < released ; crawling ; 2005 ; JAMA Français Volume 294 ; 294 ; >
+        au < released ; crawling ; 2006 ; JAMA Français Volume 295 ; 295 ; >
+        au < released ; crawling ; 2006 ; JAMA Français Volume 296 ; 296 ; >
+        au < released ; crawling ; 2007 ; JAMA Français Volume 297 ; 297 ; >
+        au < released ; crawling ; 2007 ; JAMA Français Volume 298 ; 298 ; >
+        au < released ; crawling ; 2008 ; JAMA Français Volume 299 ; 299 ; >
+        au < released ; crawling ; 2008 ; JAMA Français Volume 300 ; 300 ; >
         
       }
     }
@@ -1794,7 +1828,8 @@
   
     title <
       name = Virtual Mentor ;
-      issn = 1937-7010
+      eissn = 1937-7010;
+      issnl = 1937-7010
     >
     
     plugin = org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin
@@ -1813,7 +1848,8 @@
     au < released ; crawling ; 2008 ; Virtual Mentor Volume 10 ; 10 ; 2008 >
     au < released ; crawling ; 2009 ; Virtual Mentor Volume 11 ; 11 ; 2009 >
     au < released ; crawling ; 2010 ; Virtual Mentor Volume 12 ; 12 ; 2010 >
-    au < manifest ; exists ; 2011 ; Virtual Mentor Volume 13 ; 13 ; 2011 >
+    au < released ; crawling ; 2011 ; Virtual Mentor Volume 13 ; 13 ; 2011 >
+    au < crawling ; exists ; 2012 ; Virtual Mentor Volume 14 ; 14 ; 2012 >
 
   }
   

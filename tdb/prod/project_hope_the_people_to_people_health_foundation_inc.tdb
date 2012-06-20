@@ -1,9 +1,11 @@
 {
+
   publisher <
     name = Project HOPE - The People-to-People Health Foundation, Inc.
   >
 
   {
+
     title <
       name = Health Affairs ;
       issn = 0278-2715 ;
@@ -11,30 +13,42 @@
       issnl = 0278-2715
     >
 
-    {
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://content.healthaffairs.org/
+    implicit < status ; year ; name ; param[volume_name] >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://content.healthaffairs.org/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < exists ; 1998 ; Health Affairs Volume 17 ; 17 >
-      au < exists ; 1999 ; Health Affairs Volume 18 ; 18 >
-      au < exists ; 2000 ; Health Affairs Volume 19 ; 19 >
-      au < exists ; 2001 ; Health Affairs Volume 20 ; 20 >
-      au < exists ; 2002 ; Health Affairs Volume 21 ; 21 >
-      au < exists ; 2003 ; Health Affairs Volume 22 ; 22 >
-      au < exists ; 2004 ; Health Affairs Volume 23 ; 23 >
-      au < ready ; 2005 ; Health Affairs Volume 24 ; 24 >
-      au < ready ; 2006 ; Health Affairs Volume 25 ; 25 >
-      au < ready ; 2007 ; Health Affairs Volume 26 ; 26 >
-      au < ready ; 2008 ;  Health Affairs Volume 27 ; 27 >
-      au < ready ; 2009 ; Health Affairs Volume 28 ; 28 >
-      au < ready ; 2010 ; Health Affairs Volume 29 ; 29 >
-      au < ready ; 2011 ; Health Affairs Volume 30 ; 30 >
-
-    }
+    au < testing ; 1981 ; Health Affairs Volume 1 ; 1 >
+    au < testing ; 1983 ; Health Affairs Volume 2 ; 2 >
+    au < testing ; 1984 ; Health Affairs Volume 3 ; 3 >
+    au < testing ; 1985 ; Health Affairs Volume 4 ; 4 >
+    au < testing ; 1986 ; Health Affairs Volume 5 ; 5 >
+    au < ready ; 1987 ; Health Affairs Volume 6 ; 6 >
+    au < ready ; 1988 ; Health Affairs Volume 7 ; 7 >
+    au < testing ; 1989 ; Health Affairs Volume 8 ; 8 >
+    au < testing ; 1990 ; Health Affairs Volume 9 ; 9 >
+    au < ready ; 1991 ; Health Affairs Volume 10 ; 10 >
+    au < testing ; 1992 ; Health Affairs Volume 11 ; 11 >
+    au < testing ; 1993 ; Health Affairs Volume 12 ; 12 >
+    au < ready ; 1994 ; Health Affairs Volume 13 ; 13 >
+    au < testing ; 1995 ; Health Affairs Volume 14 ; 14 >
+    au < testing ; 1996 ; Health Affairs Volume 15 ; 15 >
+    au < ready ; 1997 ; Health Affairs Volume 16 ; 16 >
+    au < ready ; 1998 ; Health Affairs Volume 17 ; 17 >
+    au < released ; 1999 ; Health Affairs Volume 18 ; 18 >
+    au < released ; 2000 ; Health Affairs Volume 19 ; 19 >
+    au < released ; 2001 ; Health Affairs Volume 20 ; 20 >
+    au < released ; 2002 ; Health Affairs Volume 21 ; 21 >
+    au < released ; 2003 ; Health Affairs Volume 22 ; 22 >
+    au < released ; 2004 ; Health Affairs Volume 23 ; 23 >
+    au < released ; 2005 ; Health Affairs Volume 24 ; 24 >
+    au < released ; 2006 ; Health Affairs Volume 25 ; 25 >
+    au < released ; 2007 ; Health Affairs Volume 26 ; 26 >
+    au < released ; 2008 ; Health Affairs Volume 27 ; 27 >
+    au < released ; 2009 ; Health Affairs Volume 28 ; 28 >
+    au < released ; 2010 ; Health Affairs Volume 29 ; 29 >
+    au < released ; 2011 ; Health Affairs Volume 30 ; 30 >
+    au < released ; 2012 ; Health Affairs Volume 31 ; 31 >
 
   }
 
 }
-

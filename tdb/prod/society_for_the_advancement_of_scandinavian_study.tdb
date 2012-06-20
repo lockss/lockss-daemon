@@ -8,17 +8,20 @@
     implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://muse.jhu.edu/
 
-    comment[0] = upcoming journal in 2012 with no content online yet
-
     {
 
       title <
         name = Scandinavian Studies ;
         issn = 0036-5637 ;
+        eissn = 2163-8195 ;
         issnl = 0036-5637  
       >
 
       param[journal_dir] = scandinavian_studies
+      attr[journal_id] = scd
+
+      au < manifest ; 2011 ; Scandinavian Studies Volume 83 ; 83 >
+      au < expected ; 2012 ; Scandinavian Studies Volume 84 ; 84 >
 
     }
     

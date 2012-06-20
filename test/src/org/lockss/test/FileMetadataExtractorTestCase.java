@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractorTestCase.java,v 1.5 2011-06-14 09:30:12 tlipkis Exp $
+ * $Id: FileMetadataExtractorTestCase.java,v 1.5.8.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -46,10 +46,7 @@ import org.lockss.plugin.*;
 public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
   public static String URL = "http://www.example.com/";
 
-  public static String MIME_TYPE_HTML = "text/html";
   public static String MIME_TYPE_XML = "application/xml";
-  public static String MIME_TYPE_RAM = "audio/x-pn-realaudio";
-
   protected FileMetadataListExtractor extractor = null;
   protected String encoding;
   protected MockArchivalUnit mau;
@@ -122,9 +119,14 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
 	}
       } else {
 	String actual = md.getRaw(key);
-	if (!expval.equals(actual)) {
-	  errors.add("Key: " + key + " expected:<" + expval + "> but was:<"
-		     + actual + ">");
+	if (expval == null) {
+	  if (actual != null) {
+	    errors.add("Key: " + key + " expected:<" + expval + "> but was:<"
+	         + actual + ">");
+	  }
+  } else if (!expval.equals(actual)) {
+    errors.add("Key: " + key + " expected:<" + expval + "> but was:<"
+  	     + actual + ">");
 	}
       }
     }

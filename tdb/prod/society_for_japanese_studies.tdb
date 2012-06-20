@@ -18,6 +18,7 @@
     >
 
     param[journal_dir] = journal_of_japanese_studies
+    attr[journal_id] = jjs
 
     au < released ; 2004 ; The Journal of Japanese Studies Volume 30 ; 30 >
     au < released ; 2005 ; The Journal of Japanese Studies Volume 31 ; 31 >
@@ -27,6 +28,7 @@
     au < released ; 2009 ; The Journal of Japanese Studies Volume 35 ; 35 >
     au < released ; 2010 ; The Journal of Japanese Studies Volume 36 ; 36 >
     au < ready ; 2011 ; The Journal of Japanese Studies Volume 37 ; 37 >
+    au < manifest ; 2012 ; The Journal of Japanese Studies Volume 38 ; 38 >
 
   }
 

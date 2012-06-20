@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.9 2005-08-11 06:37:12 tlipkis Exp $
+ * $Id: CachedUrlSet.java,v 1.9.102.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
@@ -110,6 +110,15 @@ public interface CachedUrlSet extends CachedUrlSetNode {
    *         {@link CachedUrlSetSpec} list.
    */
   public Iterator contentHashIterator();
+
+  /**
+   * Return an {@link Iterator} of {@link CachedUrl}s for each content node
+   * within the {@link CachedUrlSetSpec}.  Any archive files (zip, etc.)
+   * recognized by the plugin are opened and their members interated over
+   * (including opening any nested archives).  Archive files themselves are
+   * not included in the iteration.
+   */
+  public Iterator<CachedUrl> archiveMemberIterator();
 
   /**
    * Return an estimate of the time required to hash the content.

@@ -17,10 +17,12 @@
     
     param[journal_id] = nwsc
   
-    au < exists ; 2007 ; Northwest Science Volume 81 ; 81 >
-    au < exists ; 2008 ; Northwest Science Volume 82 ; 82 >
-    au < exists ; 2009 ; Northwest Science Volume 83 ; 83 >
-    au < exists ; 2010 ; Northwest Science Volume 84 ; 84 >
+    au < manifest ; 2007 ; Northwest Science Volume 81 ; 81 >
+    au < manifest ; 2008 ; Northwest Science Volume 82 ; 82 >
+    au < manifest ; 2009 ; Northwest Science Volume 83 ; 83 >
+    au < manifest ; 2010 ; Northwest Science Volume 84 ; 84 >
+    au < manifest ; 2011 ; Northwest Science Volume 85 ; 85 >
+    au < manifest ; 2012 ; Northwest Science Volume 86 ; 86 >
 
   }
   

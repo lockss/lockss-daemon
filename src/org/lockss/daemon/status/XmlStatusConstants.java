@@ -1,10 +1,10 @@
 /*
- * $Id: XmlStatusConstants.java,v 1.4 2004-05-14 08:40:13 tlipkis Exp $
+ * $Id: XmlStatusConstants.java,v 1.4.126.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,4 +54,9 @@ public class XmlStatusConstants {
   public static final String NS_PREFIX = "st";
   public static final String NS_URI = "http://lockss.org/statusui";
   public static final String ERROR = "error";
+  public static final String PROPERTY = "property";
+
+  public static final String PROP_NAME = "prop";
+  public static final String PEERID = "peerid";
+  public static final String URL_STEM = "urlstem";
 }

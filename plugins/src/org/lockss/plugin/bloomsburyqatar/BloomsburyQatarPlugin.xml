@@ -1,0 +1,110 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.bloomsburyqatar.BloomsburyQatarPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Bloomsbury Qatar Foundation Plugin, Base URL %s, Journal Abbreviation %s, Volume %s&quot;, base_url, journal_dir, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Bloomsbury Qatar Foundation Plugin</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%sclockss/%s/%s/index.html&quot;, base_url, journal_dir, volume_name</string>
+      <string>2,&quot;^%spage&quot;,base_url</string>
+      <string>1,&quot;^%stoc/%s/%s(/|$)&quot;, base_url, journal_dir, volume_name</string>
+      <string>1,&quot;^%sdoi/(pdf|pdfplus|abs|full|suppl)/10\.5339/%s\.(.*\.)?%s\.&quot;, base_url, journal_dir, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_dir, volume_name</string>
+  </entry>
+  <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+  	  <entry>
+  	    <string>au_title</string>
+        <string>&quot;%sjournal/%s&quot;, base_url, journal_dir</string>
+  	  </entry>
+  	  <entry>
+  	    <string>au_issue</string>
+        <string>&quot;%stoc/%s/%s/%s&quot;, base_url, journal_dir, volume_name, issue</string>
+  	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+    	<string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_dir, volume_name</string>
+	  </entry>
+  	</map>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.bloomsburyqatar.BloomsburyQatarArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.bloomsburyqatar.BloomsburyQatarArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.bloomsburyqatar.BloomsburyQatarUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+     	<string>*;DublinCore</string>
+        <string>org.lockss.plugin.bloomsburyqatar.BloomsburyQatarHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_dir</key>
+        <displayName>Journal Abbreviation</displayName>
+        <description>Identifier for journal</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Descriptor (Year or Number)</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>    

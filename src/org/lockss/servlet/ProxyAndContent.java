@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.28 2010-02-23 06:25:53 tlipkis Exp $
+ * $Id: ProxyAndContent.java,v 1.28.22.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.servlet;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
-
+import java.util.regex.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import org.mortbay.html.*;
@@ -373,8 +373,7 @@ public class ProxyAndContent extends LockssServlet {
     if (!StringUtil.isNullString(backLink)) {
       ServletUtil.layoutBackLink(page, backLink);
     }
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   private void displayMenu_Content() throws IOException {
@@ -446,8 +445,7 @@ public class ProxyAndContent extends LockssServlet {
 
     // Finish up
     ServletUtil.layoutBackLink(page, srvLink(myServletDescr(), BACK_LINK_TXT));
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   private void displayProxyClient() throws IOException {
@@ -487,7 +485,7 @@ public class ProxyAndContent extends LockssServlet {
     tbl.newRow();
     tbl.newCell("align=\"center\"");
 
-    tbl.add("HTTP Proxy:&nbsp;");
+    tbl.add("HTTP Proxy host:&nbsp;");
     hostElem.setSize(40);
     hostElem.attribute("id", "host_entry");
     setTabOrder(hostElem);
@@ -507,8 +505,7 @@ public class ProxyAndContent extends LockssServlet {
 
     // Finish up
     ServletUtil.layoutBackLink(page, srvLink(myServletDescr(), BACK_LINK_TXT));
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   private boolean getDefaultCrawlProxyEnable() {
@@ -648,6 +645,10 @@ public class ProxyAndContent extends LockssServlet {
       log.warning("Error deleting obsolete config file", e);
     }
   }
+
+//   String PROXY_AS_URL_RE = "http://
+// url=([^&]*)";
+//   Pattern PROXY_AS_URL_PAT = Pattern.compile(PROXY_AS_URL_RE);
 
   private void processUpdateProxyClient() throws IOException {
     ArrayList errList = new ArrayList();

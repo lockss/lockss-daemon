@@ -1,10 +1,10 @@
 /*
- * $Id: UserAccount.java,v 1.11 2010-05-27 06:58:50 tlipkis Exp $
+ * $Id: UserAccount.java,v 1.11.18.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -63,6 +63,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   private static Map<HttpSession,UserAccount> active = new HashMap();
   private static TimerQueue.Request alerter = null;
   protected final String userName;
+  protected int version;
   protected String email;
   protected String currentPassword;
   protected String[] passwordHistory;
@@ -94,7 +95,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 
   /** Setup configuration before first use.  Called by factory. */
   protected void init(AccountManager acctMgr, Configuration config) {
-    postLoadInit(acctMgr, config);
+    commonInit(acctMgr, config);
     init(acctMgr);
   }
 
@@ -109,10 +110,29 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     hashAlg = getDefaultHashAlgorithm();
     lastPasswordChange = -1;
     lastUserPasswordChange = -1;
+    version = 2;
+  }
+
+  /** Called after loading from file, not called by factory.
+   * If not already version 2, update to version 2 and add
+   * LockssServlet#ROLE_CONTENT_ACCESS} if necessary.
+   */
+  protected void postLoadInit(AccountManager acctMgr, Configuration config) {
+    commonInit(acctMgr, config);
+    if (version < 2) {
+      Set r = new HashSet(getRoleSet());
+      if (r.add(LockssServlet.ROLE_CONTENT_ACCESS)) {
+	log.debug("Adding accessContentRole to " + getName());
+	setRoles(r);
+      }
+      log.debug("Updating " + getName() + " to version 2");
+      version = 2;
+      storeUser(true);
+    }
   }
 
   /** Setup configuration before first use.  Called by factory. */
-  protected void postLoadInit(AccountManager acctMgr, Configuration config) {
+  protected void commonInit(AccountManager acctMgr, Configuration config) {
     this.acctMgr = acctMgr;
   }
 
@@ -627,9 +647,19 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   /** Should be called whenever a change has been made to the account, in a
    * context where AccountManager doesn't otherwise know to save it */
   public void storeUser() {
+    storeUser(false);
+  }
+
+  /** Should be called whenever a change has been made to the account, in a
+   * context where AccountManager doesn't otherwise know to save it */
+  public void storeUser(boolean internal) {
     setChanged(true);
     try {
-      acctMgr.storeUser(this);
+      if (internal) {
+	acctMgr.storeUserInternal(this);
+      } else {
+	acctMgr.storeUser(this);
+      }
     } catch (AccountManager.NotStoredException e) {
       log.error("Failed to store account: " + getName(), e);
     }

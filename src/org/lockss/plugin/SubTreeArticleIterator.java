@@ -1,10 +1,10 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.13 2011-09-08 23:40:57 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.13.4.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,9 +60,14 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     private String mimeType;
     private List<String> roots;
     private List<String> rootTemplates;
-    private Pattern pat;
-    private String patTempl;
-    private int patFlags = 0;		// Pattern compilation flags
+
+    private PatSpec matchPatSpec;
+    private PatSpec includePatSpec;
+    private PatSpec excludePatSpec;
+
+    /** If true, iterator will descend into archive files (zip, etc.) and
+     * include their members rather than the archive file itself */
+    private boolean isVisitArchiveMembers = false;
 
 
     /** Set the MIME type of the desired files.  If null or not set, MIME
@@ -149,12 +154,41 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
       return rootTemplates;
     }
 
+    PatSpec getMatchPatSpec() {
+      if (matchPatSpec == null) {
+	matchPatSpec = new PatSpec();
+      }
+      return matchPatSpec;
+    }
+
+    PatSpec getIncludePatSpec() {
+      if (includePatSpec == null) {
+	includePatSpec = new PatSpec();
+      }
+      return includePatSpec;
+    }
+
+    boolean hasIncludePat() {
+      return includePatSpec != null;
+    }
+
+    PatSpec getExcludePatSpec() {
+      if (excludePatSpec == null) {
+	excludePatSpec = new PatSpec();
+      }
+      return excludePatSpec;
+    }
+
+    boolean hasExcludePat() {
+      return excludePatSpec != null;
+    }
+
     /** Set the regular expression the article URLs must match
      * @param regex compiled regular expression
      * @return this
      */
     public Spec setPattern(Pattern regex) {
-      pat = regex;
+      getMatchPatSpec().setPattern(regex);
       return this;
     }
 
@@ -172,11 +206,7 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
      * @return this
      */
     public Spec setPattern(String regex, int flags) {
-      if (patTempl != null) {
-	throw new IllegalArgumentException("Can't set both pattern and patternTemplate");
-      }
-      patFlags = flags;
-      pat = Pattern.compile(regex, flags);
+      getMatchPatSpec().setPattern(regex, flags);
       return this;
     }
 
@@ -196,25 +226,199 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
      * @return this
      */
     public Spec setPatternTemplate(String patternTemplate, int flags) {
-      if (pat != null) {
-	throw new IllegalArgumentException("Can't set both pattern and patternTemplate");
-      }
-      this.patTempl = patternTemplate;
-      this.patFlags = flags;
+      getMatchPatSpec().setPatternTemplate(patternTemplate, flags);
       return this;
     }
 
     /** Return the pattern */
     public Pattern getPattern() {
-      return pat;
+      return getMatchPatSpec().getPattern();
     }
 
     /** Return the pattern template */
     public String getPatternTemplate() {
-      return patTempl;
+      return getMatchPatSpec().getPatternTemplate();
     }
 
     /** Return the pattern compilation flags */
+    public int getPatternFlags() {
+      return getMatchPatSpec().getPatternFlags();
+    }
+
+    /** Include only subtrees that match the pattern.  The pattern must be
+     * anchored at the front
+     * @param regex compiled regular expression
+     * @return this
+     */
+    public Spec setIncludeSubTreePattern(Pattern regex) {
+      getIncludePatSpec().setPattern(regex);
+      return this;
+    }
+
+    /** Include only subtrees that match the pattern.  The pattern must be
+     * anchored at the front
+     * @param regex regular expression
+     * @return this
+     */
+    public Spec setIncludeSubTreePattern(String regex) {
+      return setIncludeSubTreePattern(regex, 0);
+    }
+
+    /** Include only subtrees that match the pattern.  The pattern must be
+     * anchored at the front
+     * @param regex regular expression
+     * @param flags compilation flags for regex
+     * @return this
+     */
+    public Spec setIncludeSubTreePattern(String regex, int flags) {
+      getIncludePatSpec().setPattern(regex, flags);
+      return this;
+    }
+
+    /** Include only subtrees that match the pattern.  The pattern must be
+     * anchored at the front
+     * @param patternTemplate printf string and args
+     * @return this
+     */
+    public Spec setIncludeSubTreePatternTemplate(String patternTemplate) {
+      return setIncludeSubTreePatternTemplate(patternTemplate, 0);
+    }
+
+    /** Include only subtrees that match the pattern.  The pattern must be
+     * anchored at the front
+     * @param patternTemplate printf string and args
+     * @param flags compilation flags for regex
+     * @return this
+     */
+    public Spec setIncludeSubTreePatternTemplate(String patternTemplate,
+						 int flags) {
+      getIncludePatSpec().setPatternTemplate(patternTemplate, flags);
+      return this;
+    }
+
+    /** Return the include subtrees pattern */
+    public Pattern getIncludeSubTreePattern() {
+      return getIncludePatSpec().getPattern();
+    }
+
+    /** Return the include subtrees pattern template */
+    public String getIncludeSubTreePatternTemplate() {
+      return getIncludePatSpec().getPatternTemplate();
+    }
+
+    /** Return the include subtrees pattern compilation flags */
+    public int getIncludeSubTreePatternFlags() {
+      return getIncludePatSpec().getPatternFlags();
+    }
+
+    /** Exclude subtrees that match the pattern.
+     * @param regex compiled regular expression
+     * @return this
+     */
+    public Spec setExcludeSubTreePattern(Pattern regex) {
+      getExcludePatSpec().setPattern(regex);
+      return this;
+    }
+
+    /** Exclude subtrees that match the pattern.
+     * @param regex regular expression
+     * @return this
+     */
+    public Spec setExcludeSubTreePattern(String regex) {
+      return setExcludeSubTreePattern(regex, 0);
+    }
+
+    /** Exclude subtrees that match the pattern.
+     * @param regex regular expression
+     * @param flags compilation flags for regex
+     * @return this
+     */
+    public Spec setExcludeSubTreePattern(String regex, int flags) {
+      getExcludePatSpec().setPattern(regex, flags);
+      return this;
+    }
+
+    /** Exclude subtrees that match the pattern.
+     * @param patternTemplate printf string and args
+     * @return this
+     */
+    public Spec setExcludeSubTreePatternTemplate(String patternTemplate) {
+      return setExcludeSubTreePatternTemplate(patternTemplate, 0);
+    }
+
+    /** Exclude subtrees that match the pattern.
+     * @param patternTemplate printf string and args
+     * @param flags compilation flags for regex
+     * @return this
+     */
+    public Spec setExcludeSubTreePatternTemplate(String patternTemplate,
+						 int flags) {
+      getExcludePatSpec().setPatternTemplate(patternTemplate, flags);
+      return this;
+    }
+
+    /** Return the exclude subtrees pattern */
+    public Pattern getExcludeSubTreePattern() {
+      return getExcludePatSpec().getPattern();
+    }
+
+    /** Return the exclude subtrees pattern template */
+    public String getExcludeSubTreePatternTemplate() {
+      return getExcludePatSpec().getPatternTemplate();
+    }
+
+    /** Return the exclude subtrees pattern compilation flags */
+    public int getExcludeSubTreePatternFlags() {
+      return getExcludePatSpec().getPatternFlags();
+    }
+
+    /** If true, will descend into archive files */
+    public Spec setVisitArchiveMembers(boolean val) {
+      isVisitArchiveMembers = val;
+      return this;
+    }
+
+    /** Return true if should descend into archive files */
+    public boolean isVisitArchiveMembers() {
+      return isVisitArchiveMembers;
+    }
+  }
+
+  /** Encapsulates the varies ways to specifiy a pattern (as a compiled
+   * Pattern, a printf template, or a template and compilation flags */
+  static class PatSpec {
+    private Pattern pat;
+    private String patTempl;
+    private int patFlags = 0;		// Pattern compilation flags
+
+    void setPattern(Pattern regex) {
+      pat = regex;
+    }
+
+    void setPattern(String regex, int flags) {
+      if (patTempl != null) {
+	throw new IllegalArgumentException("Can't set both pattern and patternTemplate");
+      }
+      patFlags = flags;
+      pat = Pattern.compile(regex, flags);
+    }
+
+    void setPatternTemplate(String patternTemplate, int flags) {
+      if (pat != null) {
+	throw new IllegalArgumentException("Can't set both pattern and patternTemplate");
+      }
+      this.patTempl = patternTemplate;
+      this.patFlags = flags;
+    }
+
+    Pattern getPattern() {
+      return pat;
+    }
+
+    public String getPatternTemplate() {
+      return patTempl;
+    }
+
     public int getPatternFlags() {
       return patFlags;
     }
@@ -229,6 +433,10 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   protected ArchivalUnit au;
   /** Pattern that URLs must match */
   protected Pattern pat = null;
+  /** Pattern for subtrees to recurse into, or null */
+  protected Pattern includeSubTreePat = null;
+  /** Pattern for subtrees not to recurse into, or null */
+  protected Pattern excludeSubTreePat = null;
   /** Underlying CachedUrlSet iterator */
   protected Iterator cusIter = null;
   /** Root CachecUrlSets */
@@ -250,8 +458,14 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     this.au = au;
     this.spec = spec;
     mimeType = getMimeType();
+    if (spec.hasIncludePat()) {
+      this.includeSubTreePat = makePattern(spec.getIncludePatSpec());
+    }
+    if (spec.hasExcludePat()) {
+      this.excludeSubTreePat = makePattern(spec.getExcludePatSpec());
+    }
     roots = makeRoots();
-    this.pat = makePattern();
+    this.pat = makePattern(spec.getMatchPatSpec());
     rootIter = roots.iterator();
     log.debug2("Create: AU: " + au.getName() + ", Mime: " + this.mimeType
 	       + ", roots: " + roots + ", pat: " + pat);
@@ -270,14 +484,14 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     return tmpMime;
   }
 
-  protected Pattern makePattern() {
-    if (spec.getPattern() != null) {
-      return spec.getPattern();
+  protected Pattern makePattern(PatSpec pspec) {
+    if (pspec.getPattern() != null) {
+      return pspec.getPattern();
     }
-    if (spec.getPatternTemplate() != null) {
+    if (pspec.getPatternTemplate() != null) {
       String re =
-	convertVariableUrlRegexpString(spec.getPatternTemplate()).getRegexp();
-      return Pattern.compile(re, spec.getPatternFlags());
+	convertVariableUrlRegexpString(pspec.getPatternTemplate()).getRegexp();
+      return Pattern.compile(re, pspec.getPatternFlags());
     }
     return null;
   }
@@ -286,13 +500,26 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     Collection<String> roots = makeRootUrls();
     log.debug2("rootUrls: " + roots);
     if (roots == null || roots.isEmpty()) {
-      return ListUtil.list(au.getAuCachedUrlSet());
+//       return ListUtil.list(au.getAuCachedUrlSet());
+      return ListUtil.list(au.makeCachedUrlSet(makeCuss(AuCachedUrlSetSpec.URL)));
     }
     Collection<CachedUrlSet> res = new ArrayList<CachedUrlSet>();
     for (String root : roots) {
-      res.add(au.makeCachedUrlSet(new RangeCachedUrlSetSpec(root)));
+      res.add(au.makeCachedUrlSet(makeCuss(root)));
     }
     return res;
+  }
+
+  CachedUrlSetSpec makeCuss(String root) {
+    if (includeSubTreePat != null) {
+      return PrunedCachedUrlSetSpec.includeMatchingSubTrees(root,
+							    includeSubTreePat);
+    }
+    if (excludeSubTreePat != null) {
+      return PrunedCachedUrlSetSpec.excludeMatchingSubTrees(root,
+							    excludeSubTreePat);
+    }
+    return new RangeCachedUrlSetSpec(root);
   }
 
   protected Collection<String> makeRootUrls() {
@@ -339,7 +566,8 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
 	      return null;
 	    } else {
 	      CachedUrlSet root = rootIter.next();
-	      cusIter = root.contentHashIterator();
+	      cusIter = spec.isVisitArchiveMembers
+		? root.archiveMemberIterator() : root.contentHashIterator();
 	      continue;
 	    }
 	  } else {
@@ -347,6 +575,8 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
 	    cu = AuUtil.getCu(node);
 	    if (cu != null && cu.hasContent()) {
 	      if (isArticleCu(cu)) {
+		// isArticleCu() might have caused file to open
+		cu.release();
 		visitArticleCu(cu);
 		if (nextElement == null) {
 		  continue;

@@ -16,7 +16,8 @@
       issnl = 0065-860X
     >
 
-    param[journal_dir] = american_imago
+    param[journal_dir] = american_imago 
+    attr[journal_id] = aim
 
     au < released ; 1995 ; American Imago Volume 52 ; 52 >
     au < released ; 1996 ; American Imago Volume 53 ; 53 >
@@ -34,7 +35,8 @@
     au < released ; 2008 ; American Imago Volume 65 ; 65 >
     au < released ; 2009 ; American Imago Volume 66 ; 66 >
     au < ready ; 2010 ; American Imago Volume 67 ; 67 >
-
+    au < manifest ; 2011 ; American Imago Volume 68 ; 68 >
+    
   }
 
   {
@@ -46,6 +48,7 @@
     >
 
     param[journal_dir] = american_jewish_history
+    attr[journal_id] = ajh
 
     au < released ; 1996 ; American Jewish History Volume 84 ; 84 >
     au < released ; 1997 ; American Jewish History Volume 85 ; 85 >
@@ -58,7 +61,8 @@
     au < released ; 2004 ; American Jewish History Volume 92 ; 92 >
     au < released ; 2007 ; American Jewish History Volume 93 ; 93 >
     au < released ; 2008 ; American Jewish History Volume 94 ; 94 >
-
+    au < manifest ; 2009 ; American Jewish History Volume 95 ; 95 >
+    
   }
 
   {
@@ -70,6 +74,7 @@
     >
 
     param[journal_dir] = american_journal_of_mathematics
+    attr[journal_id] = ajm
 
     au < released ; 1996 ; American Journal of Mathematics Volume 118 ; 118 >
     au < released ; 1997 ; American Journal of Mathematics Volume 119 ; 119 >
@@ -86,7 +91,9 @@
     au < released ; 2008 ; American Journal of Mathematics Volume 130 ; 130 >
     au < released ; 2009 ; American Journal of Mathematics Volume 131 ; 131 >
     au < released ; 2010 ; American Journal of Mathematics Volume 132 ; 132 >
-
+    au < manifest ; 2011 ; American Journal of Mathematics Volume 133 ; 133 >
+    au < manifest ; 2012 ; American Journal of Mathematics Volume 134 ; 135 >
+    
   }
 
   {
@@ -98,6 +105,7 @@
     >
 
     param[journal_dir] = american_journal_of_philology
+    attr[journal_id] = ajp
 
     au < released ; 1996 ; American Journal of Philology Volume Volume 117 ; 117 >
     au < released ; 1997 ; American Journal of Philology Volume Volume 118 ; 118 >
@@ -113,7 +121,10 @@
     au < released ; 2007 ; American Journal of Philology Volume Volume 128 ; 128 >
     au < released ; 2008 ; American Journal of Philology Volume Volume 129 ; 129 >
     au < released ; 2009 ; American Journal of Philology Volume Volume 130 ; 130 >
-
+    au < manifest ; 2010 ; American Journal of Philology Volume Volume 131 ; 131 >
+    au < manifest ; 2011 ; American Journal of Philology Volume Volume 132 ; 132 >
+    au < manifest ; 2012 ; American Journal of Philology Volume Volume 133 ; 133 >
+    
   }
 
   {
@@ -125,6 +136,7 @@
     >
 
     param[journal_dir] = american_quarterly
+    attr[journal_id] = aq
 
     au < released ; 1996 ; American Quarterly Volume 48 ; 48 >
     au < released ; 1997 ; American Quarterly Volume 49 ; 49 >
@@ -140,6 +152,9 @@
     au < released ; 2007 ; American Quarterly Volume 59 ; 59 >
     au < released ; 2008 ; American Quarterly Volume 60 ; 60 >
     au < released ; 2009 ; American Quarterly Volume 61 ; 61 >
+    au < manifest ; 2010 ; American Quarterly Volume 62 ; 62 >
+    au < manifest ; 2011 ; American Quarterly Volume 63 ; 63 >
+    au < manifest ; 2012 ; American Quarterly Volume 64 ; 64 >
 
   }
 
@@ -152,6 +167,7 @@
     >
 
     param[journal_dir] = arethusa
+    attr[journal_id] = are
 
     au < released ; 1996 ; Arethusa Volume 29 ; 29 >
     au < released ; 1997 ; Arethusa Volume 30 ; 30 >
@@ -168,7 +184,9 @@
     au < released ; 2008 ; Arethusa Volume 41 ; 41 >
     au < released ; 2009 ; Arethusa Volume 42 ; 42 >
     au < released ; 2010 ; Arethusa Volume 43 ; 43 >
-
+    au < manifest ; 2011 ; Arethusa Volume 44 ; 44 >
+    au < manifest ; 2012 ; Arethusa Volume 45 ; 45 >
+    
   }
 
   {
@@ -180,6 +198,7 @@
     >
 
     param[journal_dir] = book_history
+    attr[journal_id] = bh
 
     au < released ; 1998 ; Book History Volume 1 ; 1 >
     au < released ; 1999 ; Book History Volume 2 ; 2 >
@@ -193,6 +212,9 @@
     au < released ; 2007 ; Book History Volume 10 ; 10 >
     au < released ; 2008 ; Book History Volume 11 ; 11 >
     au < released ; 2009 ; Book History Volume 12 ; 12 >
+    au < manifest ; 2010 ; Book History Volume 13 ; 13 >
+    au < manifest ; 2011 ; Book History Volume 14 ; 14 >
+    au < expected ; 2012 ; Book History Volume 15 ; 15 >
     
   }
 
@@ -206,10 +228,13 @@
     >
 
     param[journal_dir] = bookbird
+    attr[journal_id] = bkb
 
     au < released ; 2008 ; Bookbird: A Journal of International Children's Literature Volume 46 ; 46 >
     au < released ; 2009 ; Bookbird: A Journal of International Children's Literature Volume 47 ; 47 >
     au < released ; 2010 ; Bookbird: A Journal of International Children's Literature Volume 48 ; 48 >
+    au < manifest ; 2011 ; Bookbird: A Journal of International Children's Literature Volume 49 ; 49 >
+    au < manifest ; 2012 ; Bookbird: A Journal of International Children's Literature Volume 50 ; 50 >
 
   }
 
@@ -222,12 +247,15 @@
     >
 
     param[journal_dir] = bulletin_of_the_center_for_childrens_books
-
+    attr[journal_id] = bcc
+    
     au < released ; 2005 ; Bulletin of the Center for Children's Books Volume 59 ; 59 >
     au < released ; 2006 ; Bulletin of the Center for Children's Books Volume 60 ; 60 >
     au < released ; 2007 ; Bulletin of the Center for Children's Books Volume 61 ; 61 >
     au < released ; 2008 ; Bulletin of the Center for Children's Books Volume 62 ; 62 >
     au < released ; 2009 ; Bulletin of the Center for Children's Books Volume 63 ; 63 >
+    au < manifest ; 2010-2012 ; Bulletin of the Center for Children's Books Volume 64 ; 64 >
+    au < manifest ; 2011-2012 ; Bulletin of the Center for Children's Books Volume 65 ; 65 >
     
   }
 
@@ -240,6 +268,7 @@
     >
 
     param[journal_dir] = bulletin_of_the_history_of_medicine
+    attr[journal_id] = bhm
 
     au < released ; 1996 ; Bulletin of the History of Medicine Volume 70 ; 70 >
     au < released ; 1997 ; Bulletin of the History of Medicine Volume 71 ; 71 >
@@ -255,7 +284,10 @@
     au < released ; 2007 ; Bulletin of the History of Medicine Volume 81 ; 81 >
     au < released ; 2008 ; Bulletin of the History of Medicine Volume 82 ; 82 >
     au < released ; 2009 ; Bulletin of the History of Medicine Volume 83 ; 83 >
-
+    au < manifest ; 2010 ; Bulletin of the History of Medicine Volume 84 ; 84 >
+    au < manifest ; 2011 ; Bulletin of the History of Medicine Volume 85 ; 85 >
+    au < manifest ; 2012 ; Bulletin of the History of Medicine Volume 86 ; 86 >
+    
   }
   
   {
@@ -267,7 +299,8 @@
     >
 
     param[journal_dir] = callaloo
-
+    attr[journal_id] = cal
+    
     au < released ; 1995 ; Callaloo Volume 18 ; 18 >
     au < released ; 1996 ; Callaloo Volume 19 ; 19 >
     au < released ; 1997 ; Callaloo Volume 20 ; 20 >
@@ -283,8 +316,10 @@
     au < released ; 2007 ; Callaloo Volume 30 ; 30 >
     au < released ; 2008 ; Callaloo Volume 31 ; 31 >
     au < released ; 2009 ; Callaloo Volume 32 ; 32 >
-
-
+    au < manifest ; 2010 ; Callaloo Volume 33 ; 33 >
+    au < manifest ; 2011 ; Callaloo Volume 34 ; 34 >
+    au < manifest ; 2012 ; Callaloo Volume 35 ; 35 >
+    
   }
 
   {
@@ -296,6 +331,7 @@
     >
 
     param[journal_dir] = childrens_literature
+    attr[journal_id] = chl
 
     au < released ; 1972 ; Children's Literature Volume 1 ; 1 >
     au < released ; 1973 ; Children's Literature Volume 2 ; 2 >
@@ -334,7 +370,10 @@
     au < released ; 2007 ; Children's Literature Volume 35 ; 35 >
     au < released ; 2008 ; Children's Literature Volume 36 ; 36 >
     au < released ; 2009 ; Children's Literature Volume 37 ; 37 >
-
+    au < manifest ; 2010 ; Children's Literature Volume 38 ; 38 >
+    au < manifest ; 2011 ; Children's Literature Volume 39 ; 39 >
+    au < manifest ; 2012 ; Children's Literature Volume 40 ; 40 >
+    
   }
 
   {
@@ -346,12 +385,16 @@
     >
 
     param[journal_dir] = childrens_literature_association_quarterly
+    attr[journal_id] = chq
 
     au < released ; 2005 ; Children's Literature Association Quarterly Volume 30 ; 30 >
     au < released ; 2006 ; Children's Literature Association Quarterly Volume 31 ; 31 >
     au < released ; 2007 ; Children's Literature Association Quarterly Volume 32 ; 32 >
     au < released ; 2008 ; Children's Literature Association Quarterly Volume 33 ; 33 >
     au < released ; 2009 ; Children's Literature Association Quarterly Volume 34 ; 34 >
+    au < manifest ; 2010 ; Children's Literature Association Quarterly Volume 35 ; 35 >
+    au < manifest ; 2011 ; Children's Literature Association Quarterly Volume 36 ; 36 >
+    au < manifest ; 2012 ; Children's Literature Association Quarterly Volume 37 ; 37 >
 
   }
 
@@ -364,6 +407,7 @@
     >
 
     param[journal_dir] = comparative_technology_transfer_and_society
+    attr[journal_id] = ctt
 
     au < released ; 2003 ; Comparative Technology Transfer and Society Volume 1 ; 1 >
     au < released ; 2004 ; Comparative Technology Transfer and Society Volume 2 ; 2 >
@@ -371,7 +415,8 @@
     au < released ; 2006 ; Comparative Technology Transfer and Society Volume 4 ; 4 >
     au < released ; 2007 ; Comparative Technology Transfer and Society Volume 5 ; 5 >
     au < released ; 2008 ; Comparative Technology Transfer and Society Volume 6 ; 6 >
-
+    au < manifest ; 2009 ; Comparative Technology Transfer and Society Volume 7 ; 7 >
+    
   }
 
   {
@@ -383,6 +428,7 @@
     >
 
     param[journal_dir] = configurations
+    attr[journal_id] = con		
 
     au < released ; 1993 ; Configurations Volume 1 ; 1 >
     au < released ; 1994 ; Configurations Volume 2 ; 2 >
@@ -399,7 +445,11 @@
     au < released ; 2005 ; Configurations Volume 13 ; 13 >
     au < released ; 2006 ; Configurations Volume 14 ; 14 >
     au < released ; 2007 ; Configurations Volume 15 ; 15 >
-
+    au < manifest ; 2008 ; Configurations Volume 16 ; 16 >
+    au < manifest ; 2009 ; Configurations Volume 17 ; 17 >
+    au < manifest ; 2010 ; Configurations Volume 18 ; 18 >
+    au < manifest ; 2011 ; Configurations Volume 19 ; 19 >
+    
   }
 
   {
@@ -411,6 +461,7 @@
     >
 
     param[journal_dir] = diacritics
+    attr[journal_id] = dia
 
     au < released ; 1996 ; diacritics Volume 26 ; 26 >
     au < released ; 1997 ; diacritics Volume 27 ; 27 >
@@ -424,16 +475,20 @@
     au < released ; 2005 ; diacritics Volume 35 ; 35 >
     au < released ; 2006 ; diacritics Volume 36 ; 36 >
     au < released ; 2007 ; diacritics Volume 37 ; 37 >
+    au < manifest ; 2008 ; diacritics Volume 38 ; 38 >
+    au < manifest ; 2009 ; diacritics Volume 39 ; 39 >
     
   }
 
   {
     title <
       name = Digital Philology: A Journal of Medieval Cultures ;
-      issn =  ;
-      eissn = ;
-      issnl = 
+      issn = 2162-9544 ;
+      eissn = 2162-9552 ;
+      issnl = 2162-9544
     >
+    
+    param[journal_dir] = digital_philology
 
 	comment[upcoming] = this journal is upcoming in projectmuse
     
@@ -448,6 +503,7 @@
     >
 
     param[journal_dir] = eighteenth-century_studies
+    attr[journal_id] = ecs
 
     au < released ; 1995-1996 ; Eighteenth-Century Studies Volume 29 ; 29 >
     au < released ; 1996-1997 ; Eighteenth-Century Studies Volume 30 ; 30 >
@@ -463,7 +519,10 @@
     au < released ; 2006-2007 ; Eighteenth-Century Studies Volume 40 ; 40 >
     au < released ; 2007-2008 ; Eighteenth-Century Studies Volume 41 ; 41 >
     au < released ; 2008-2009 ; Eighteenth-Century Studies Volume 42 ; 42 >
-
+    au < manifest ; 2009-2010 ; Eighteenth-Century Studies Volume 43 ; 43 >
+    au < manifest ; 2010-2011 ; Eighteenth-Century Studies Volume 44 ; 44 >
+    au < manifest ; 2011-2012 ; Eighteenth-Century Studies Volume 45 ; 45 >
+    
   }
 
   {
@@ -475,6 +534,7 @@
     >
 
     param[journal_dir] = elh
+    attr[journal_id] = elh
 
     au < released ; 1993 ; ELH Volume 60 ; 60 >
     au < released ; 1994 ; ELH Volume 61 ; 61 >
@@ -493,6 +553,9 @@
     au < released ; 2007 ; ELH Volume 74 ; 74 >
     au < released ; 2008 ; ELH Volume 75 ; 75 >
     au < released ; 2009 ; ELH Volume 76 ; 76 >
+    au < manifest ; 2010 ; ELH Volume 77 ; 77 >
+    au < manifest ; 2011 ; ELH Volume 78 ; 78 >
+    au < manifest ; 2012 ; ELH Volume 79 ; 79 >
 
   }
 
@@ -508,8 +571,11 @@
     comment[continuity] = continued from 1040-0656. Formerly NWSA Journal, through Volume 21, No. 3, Fall 2009 (E-ISSN: 1527-1889, Print ISSN: 1040-0656)
 
     param[journal_dir] = feminist_formations
+    attr[journal_id] = ff
     
     au < released ; 2010 ; Feminist Formations Volume 22 ; 22 >
+    au < manifest ; 2011 ; Feminist Formations Volume 23 ; 23 >
+    au < manifest ; 2012 ; Feminist Formations Volume 24 ; 24 >
 
   }
 
@@ -517,12 +583,16 @@
 
     title <
       name = German Studies Review ;
-      issn = ;
-      eissn = ;
-      issnl =
+      issn = 0149-7952 ;
+      eissn = 2164-8646 ;
+      issnl = 0149-7952 
     >
     
-	comment[upcoming] = this journal is upcoming in projectmuse
+    param[journal_dir] = german_studies_review
+    attr[journal_id] = gsr
+    
+    
+    au < exists ; 2011 ; German Studies Review Volume 1 ; 1 >
 
   }
   
@@ -536,8 +606,11 @@
     >
 
     param[journal_dir] = hispania
+    attr[journal_id] = hpn
     
     au < released ; 2010 ; Hispania Volume 93 ; 93 >
+    au < manifest ; 2011 ; Hispania Volume 94 ; 94 >
+    au < manifest ; 2012 ; Hispania Volume 95 ; 95 >
 
   }
 
@@ -551,9 +624,12 @@
     >
 
     param[journal_dir] = historically_speaking
+    attr[journal_id] = hsp
     
     au < released ; 2009 ; Historically Speaking Volume 10 ; 10 >
     au < released ; 2010 ; Historically Speaking Volume 11 ; 11 >
+    au < manifest ; 2011 ; Historically Speaking Volume 12 ; 12 >
+    au < manifest ; 2012 ; Historically Speaking Volume 13 ; 13 >
 
   }
 
@@ -567,10 +643,13 @@
     >
 
     param[journal_dir] = the_hopkins_review
+    attr[journal_id] =   thr
     
     au < released ; 2008 ; The Hopkins Review Volume 1 ; 1 >
     au < released ; 2009 ; The Hopkins Review Volume 2 ; 2 >
     au < released ; 2010 ; The Hopkins Review Volume 3 ; 3 >
+    au < manifest ; 2011 ; The Hopkins Review Volume 4 ; 4 >
+    au < manifest ; 2012 ; The Hopkins Review Volume 5 ; 5 >
 
   }
   
@@ -583,6 +662,7 @@
     >
 
     param[journal_dir] = human_rights_quarterly
+    attr[journal_id] = hrq
 
     au < released ; 1995 ; Human Rights Quarterly Volume 17 ; 17 >
     au < released ; 1996 ; Human Rights Quarterly Volume 18 ; 18 >
@@ -599,6 +679,9 @@
     au < released ; 2007 ; Human Rights Quarterly Volume 29 ; 29 >
     au < released ; 2008 ; Human Rights Quarterly Volume 30 ; 30 >
     au < released ; 2009 ; Human Rights Quarterly Volume 31 ; 31 >
+    au < manifest ; 2010 ; Human Rights Quarterly Volume 32 ; 32 >
+    au < manifest ; 2011 ; Human Rights Quarterly Volume 33 ; 33 >
+    au < manifest ; 2012 ; Human Rights Quarterly Volume 34 ; 34 >
 
   }
 
@@ -611,6 +694,7 @@
     >
 
     param[journal_dir] = journal_of_asian_american_studies
+    attr[journal_id] = jaas
 
     au < released ; 1998 ; Journal of Asian American Studies Volume 1 ; 1 >
     au < released ; 1999 ; Journal of Asian American Studies Volume 2 ; 2 >
@@ -623,6 +707,10 @@
     au < released ; 2006 ; Journal of Asian American Studies Volume 9 ; 9 >
     au < released ; 2007 ; Journal of Asian American Studies Volume 10 ; 10 >
     au < released ; 2008 ; Journal of Asian American Studies Volume 11 ; 11 >
+    au < manifest ; 2009 ; Journal of Asian American Studies Volume 12 ; 12 >
+    au < manifest ; 2010 ; Journal of Asian American Studies Volume 13 ; 13 >
+    au < manifest ; 2011 ; Journal of Asian American Studies Volume 14 ; 14 >
+    au < manifest ; 2012 ; Journal of Asian American Studies Volume 15 ; 15 >
 
   }
 
@@ -635,6 +723,7 @@
     >
 
     param[journal_dir] = journal_of_college_student_development
+    attr[journal_id] = csd
 
     au < released ; 2003 ; Journal of College Student Development Volume 44 ; 44 >
     au < released ; 2004 ; Journal of College Student Development Volume 45 ; 45 >
@@ -643,6 +732,9 @@
     au < released ; 2007 ; Journal of College Student Development Volume 48 ; 48 >
     au < released ; 2008 ; Journal of College Student Development Volume 49 ; 49 >
     au < released ; 2009 ; Journal of College Student Development Volume 50 ; 50 >
+    au < manifest ; 2010 ; Journal of College Student Development Volume 51 ; 51 >
+    au < manifest ; 2011 ; Journal of College Student Development Volume 52 ; 52 >
+    au < manifest ; 2012 ; Journal of College Student Development Volume 53 ; 53 >
 
   }
 
@@ -653,6 +745,7 @@
     >
 
     param[journal_dir] = journal_of_colonialism_and_colonial_history
+    attr[journal_id] = cch
 
     au < released ; 2000 ; Journal of Colonialism and Colonial History Volume 1 ; 1 >
     au < released ; 2001 ; Journal of Colonialism and Colonial History Volume 2 ; 2 >
@@ -663,6 +756,9 @@
     au < released ; 2006 ; Journal of Colonialism and Colonial History Volume 7 ; 7 >
     au < released ; 2007 ; Journal of Colonialism and Colonial History Volume 8 ; 8 >
     au < released ; 2008 ; Journal of Colonialism and Colonial History Volume 9 ; 9 >
+    au < manifest ; 2009 ; Journal of Colonialism and Colonial History Volume 10 ; 10 >
+    au < manifest ; 2010 ; Journal of Colonialism and Colonial History Volume 11 ; 11 >
+    au < manifest ; 2011 ; Journal of Colonialism and Colonial History Volume 12 ; 12 >
 
   }
 
@@ -675,6 +771,7 @@
     >
 
     param[journal_dir] = journal_of_democracy
+    attr[journal_id] = jod
 
     au < released ; 1995 ; Journal of Democracy Volume 6 ; 6 >
     au < released ; 1996 ; Journal of Democracy Volume 7 ; 7 >
@@ -691,7 +788,10 @@
     au < released ; 2007 ; Journal of Democracy Volume 18 ; 18 >
     au < released ; 2008 ; Journal of Democracy Volume 19 ; 19 >
     au < released ; 2009 ; Journal of Democracy Volume 20 ; 20 >
-
+    au < manifest ; 2010 ; Journal of Democracy Volume 21 ; 21 >
+    au < manifest ; 2011 ; Journal of Democracy Volume 22 ; 22 >
+    au < manifest ; 2012 ; Journal of Democracy Volume 23 ; 23 >
+    
   }
 
   {
@@ -703,6 +803,7 @@
     >
 
     param[journal_dir] = journal_of_early_christian_studies
+    attr[journal_id] = earl
 
     au < released ; 1996 ; Journal of Early Christian Studies Volume 4 ; 4 >
     au < released ; 1997 ; Journal of Early Christian Studies Volume 5 ; 5 >
@@ -718,6 +819,9 @@
     au < released ; 2007 ; Journal of Early Christian Studies Volume 15 ; 15 >
     au < released ; 2008 ; Journal of Early Christian Studies Volume 16 ; 16 >
     au < released ; 2009 ; Journal of Early Christian Studies Volume 17 ; 17 >
+    au < manifest ; 2010 ; Journal of Early Christian Studies Volume 18 ; 18 >
+    au < manifest ; 2011 ; Journal of Early Christian Studies Volume 19 ; 19 >
+    au < manifest ; 2012 ; Journal of Early Christian Studies Volume 20 ; 20 >
 
   }
 
@@ -730,6 +834,7 @@
     >
 
     param[journal_dir] = journal_of_health_care_for_the_poor_and_underserved
+    attr[journal_id] = hpu
 
     au < released ; 2004 ; Journal of Health Care for the Poor and Underserved Volume 15 ; 15 >
     au < released ; 2005 ; Journal of Health Care for the Poor and Underserved Volume 16 ; 16 >
@@ -737,6 +842,9 @@
     au < released ; 2007 ; Journal of Health Care for the Poor and Underserved Volume 18 ; 18 >
     au < released ; 2008 ; Journal of Health Care for the Poor and Underserved Volume 19 ; 19 >
     au < released ; 2009 ; Journal of Health Care for the Poor and Underserved Volume 20 ; 20 >
+    au < manifest ; 2010 ; Journal of Health Care for the Poor and Underserved Volume 21 ; 21 >
+    au < manifest ; 2011 ; Journal of Health Care for the Poor and Underserved Volume 22 ; 22 >
+    au < manifest ; 2012 ; Journal of Health Care for the Poor and Underserved Volume 23 ; 23 >
 
   }
 
@@ -750,9 +858,13 @@
     >
 
     param[journal_dir] = journal_of_late_antiquity
+    attr[journal_id] = jla
     
     au < released ; 2008 ; Journal of Late Antiquity Volume 1 ; 1 >
     au < released ; 2009 ; Journal of Late Antiquity Volume 2 ; 2 >
+    au < manifest ; 2010 ; Journal of Late Antiquity Volume 3 ; 3 >
+    au < manifest ; 2011 ; Journal of Late Antiquity Volume 4 ; 4 >
+    au < expected ; 2012 ; Journal of Late Antiquity Volume 5 ; 5 >
 
   }
 
@@ -765,6 +877,7 @@
     >
 
     param[journal_dir] = journal_of_modern_greek_studies
+    attr[journal_id] = mgs
 
     au < released ; 1996 ; Journal of Modern Greek Studies Volume 14 ; 14 >
     au < released ; 1997 ; Journal of Modern Greek Studies Volume 15 ; 15 >
@@ -779,6 +892,10 @@
     au < released ; 2006 ; Journal of Modern Greek Studies Volume 24 ; 24 >
     au < released ; 2007 ; Journal of Modern Greek Studies Volume 25 ; 25 >
     au < released ; 2008 ; Journal of Modern Greek Studies Volume 26 ; 26 >
+    au < manifest ; 2009 ; Journal of Modern Greek Studies Volume 27 ; 27 >
+    au < manifest ; 2010 ; Journal of Modern Greek Studies Volume 28 ; 28 >
+    au < manifest ; 2011 ; Journal of Modern Greek Studies Volume 29 ; 29 >
+    au < manifest ; 2012 ; Journal of Modern Greek Studies Volume 30 ; 30 >
 
   }
 
@@ -792,10 +909,13 @@
     >
 
     param[journal_dir] = journal_of_the_history_of_youth_and_childhood
+    attr[journal_id] = hcy
     
     au < released ; 2008 ; The Journal of the History of Childhood and Youth Volume 1 ; 1 >
     au < released ; 2009 ; The Journal of the History of Childhood and Youth Volume 2 ; 2 >
     au < released ; 2010 ; The Journal of the History of Childhood and Youth Volume 3 ; 3 >
+    au < manifest ; 2011 ; The Journal of the History of Childhood and Youth Volume 4 ; 4 >
+    au < manifest ; 2012 ; The Journal of the History of Childhood and Youth Volume 5 ; 5 >
 
   }
 
@@ -808,6 +928,7 @@
     >
 
     param[journal_dir] = journal_of_the_history_of_philosophy
+    attr[journal_id] = hph
 
     au < released ; 2000 ; Journal of the History of Philosophy Volume 38 ; 38 >
     au < released ; 2001 ; Journal of the History of Philosophy Volume 39 ; 39 >
@@ -819,7 +940,10 @@
     au < released ; 2007 ; Journal of the History of Philosophy Volume 45 ; 45 >
     au < released ; 2008 ; Journal of the History of Philosophy Volume 46 ; 46 >
     au < released ; 2009 ; Journal of the History of Philosophy Volume 47 ; 47 >
-
+    au < manifest ; 2010 ; Journal of the History of Philosophy Volume 48 ; 48 >
+    au < manifest ; 2011 ; Journal of the History of Philosophy Volume 49 ; 49 >
+    au < manifest ; 2012 ; Journal of the History of Philosophy Volume 50 ; 50 >
+    
   }
 
   {
@@ -831,6 +955,7 @@
     >
 
     param[journal_dir] = journal_of_womens_history
+    attr[journal_id] = jowh
 
     au < released ; 1999-2000 ; Journal of Women's History Volume 11 ; 11 >
     au < released ; 2000-2001 ; Journal of Women's History Volume 12 ; 12 >
@@ -843,6 +968,9 @@
     au < released ; 2007 ; Journal of Women's History Volume 19 ; 19 >
     au < released ; 2008 ; Journal of Women's History Volume 20 ; 20 >
     au < released ; 2009 ; Journal of Women's History Volume 21 ; 21 >
+    au < manifest ; 2010 ; Journal of Women's History Volume 22 ; 22 >
+    au < manifest ; 2011 ; Journal of Women's History Volume 23 ; 23 >
+    au < manifest ; 2012 ; Journal of Women's History Volume 24 ; 24 >
 
   }
 
@@ -855,6 +983,7 @@
     >
 
     param[journal_dir] = kennedy_institute_of_ethics_journal
+    attr[journal_id] = ken
 
     au < released ; 1996 ; Kennedy Institute of Ethics Journal Volume 6 ; 6 >
     au < released ; 1997 ; Kennedy Institute of Ethics Journal Volume 7 ; 7 >
@@ -869,6 +998,10 @@
     au < released ; 2006 ; Kennedy Institute of Ethics Journal Volume 16 ; 16 >
     au < released ; 2007 ; Kennedy Institute of Ethics Journal Volume 17 ; 17 >
     au < released ; 2008 ; Kennedy Institute of Ethics Journal Volume 18 ; 18 >
+    au < manifest ; 2009 ; Kennedy Institute of Ethics Journal Volume 19 ; 19 >
+    au < manifest ; 2010 ; Kennedy Institute of Ethics Journal Volume 20 ; 20 >
+    au < manifest ; 2011 ; Kennedy Institute of Ethics Journal Volume 21 ; 21 >
+    au < manifest ; 2012 ; Kennedy Institute of Ethics Journal Volume 22 ; 22 >
 
   }
 
@@ -881,10 +1014,15 @@
     >
 
     param[journal_dir] = lesprit_createur
+    attr[journal_id] = esp
 
     au < released ; 2006 ; L'Esprit Créateur Volume 46 ; 46 >
     au < released ; 2007 ; L'Esprit Créateur Volume 47 ; 47 >
     au < released ; 2008 ; L'Esprit Créateur Volume 48 ; 48 >
+    au < manifest ; 2009 ; L'Esprit Créateur Volume 49 ; 49 >
+    au < manifest ; 2010 ; L'Esprit Créateur Volume 50 ; 50 >
+    au < manifest ; 2011 ; L'Esprit Créateur Volume 51 ; 51 >
+    au < manifest ; 2012 ; L'Esprit Créateur Volume 52 ; 52 >
 
   }
 
@@ -897,6 +1035,7 @@
     >
 
     param[journal_dir] = late_imperial_china
+    attr[journal_id] = late
 
     au < released ; 1996 ; Late Imperial China Volume 17 ; 17 >
     au < released ; 1997 ; Late Imperial China Volume 18 ; 18 >
@@ -911,6 +1050,10 @@
     au < released ; 2006 ; Late Imperial China Volume 27 ; 27 >
     au < released ; 2007 ; Late Imperial China Volume 28 ; 28 >
     au < released ; 2008 ; Late Imperial China Volume 29 ; 29 >
+    au < manifest ; 2009 ; Late Imperial China Volume 30 ; 30 >
+    au < manifest ; 2010 ; Late Imperial China Volume 31 ; 31 >
+    au < manifest ; 2011 ; Late Imperial China Volume 32 ; 32 >
+    au < expected ; 2012 ; Late Imperial China Volume 33 ; 33 >
 
   }
 
@@ -923,11 +1066,15 @@
     >
 
     param[journal_dir] = library_trends
+    attr[journal_id] = lib
 
     au < released ; 2006 ; Library Trends Volume 54 ; 54 >
     au < released ; 2007 ; Library Trends Volume 55 ; 55 >
     au < released ; 2008 ; Library Trends Volume 56 ; 56 >
     au < released ; 2009 ; Library Trends Volume 57 ; 57 >
+    au < manifest ; 2009 ; Library Trends Volume 58 ; 58 >
+    au < manifest ; 2010 ; Library Trends Volume 59 ; 59 >
+    au < manifest ; 2011 ; Library Trends Volume 60 ; 60 >
 
   }
 
@@ -940,6 +1087,7 @@
     >
 
     param[journal_dir] = literature_and_medicine
+    attr[journal_id] = lm
 
     au < released ; 1995 ; Literature and Medicine Volume 14 ; 14 >
     au < released ; 1996 ; Literature and Medicine Volume 15 ; 15 >
@@ -954,6 +1102,10 @@
     au < released ; 2005 ; Literature and Medicine Volume 24 ; 24 >
     au < released ; 2006 ; Literature and Medicine Volume 25 ; 25 >
     au < released ; 2007 ; Literature and Medicine Volume 26 ; 26 >
+    au < manifest ; 2008 ; Literature and Medicine Volume 27 ; 27 >
+    au < manifest ; 2009 ; Literature and Medicine Volume 28 ; 28 >
+    au < manifest ; 2011 ; Literature and Medicine Volume 29 ; 29 >
+    au < expected ; 2012 ; Literature and Medicine Volume 30 ; 30 >
 
   }
 
@@ -966,6 +1118,7 @@
     >
 
     param[journal_dir] = modern_fiction_studies
+    attr[journal_id] = mfs
 
     au < released ; 1994 ; MFS Modern Fiction Studies Volume 40 ; 40 >
     au < released ; 1995 ; MFS Modern Fiction Studies Volume 41 ; 41 >
@@ -982,6 +1135,10 @@
     au < released ; 2006 ; MFS Modern Fiction Studies Volume 52 ; 52 >
     au < released ; 2007 ; MFS Modern Fiction Studies Volume 53 ; 53 >
     au < released ; 2008 ; MFS Modern Fiction Studies Volume 54 ; 54 >
+    au < manifest ; 2009 ; MFS Modern Fiction Studies Volume 55 ; 55 >
+    au < manifest ; 2010 ; MFS Modern Fiction Studies Volume 56 ; 56 >
+    au < manifest ; 2011 ; MFS Modern Fiction Studies Volume 57 ; 57 >
+    au < manifest ; 2012 ; MFS Modern Fiction Studies Volume 58 ; 58 >
 
   }
 
@@ -994,6 +1151,7 @@
     >
 
     param[journal_dir] = milton_quarterly
+    attr[journal_id] = mq
 
     au < released ; 1997 ; Milton Quarterly Volume 31 ; 31 >
     au < released ; 1998 ; Milton Quarterly Volume 32 ; 32 >
@@ -1011,6 +1169,7 @@
     >
 
     param[journal_dir] = mln
+    attr[journal_id] = mln
 
     au < released ; 1995 ; MLN Volume 110 ; 110 >
     au < released ; 1996 ; MLN Volume 111 ; 111 >
@@ -1026,6 +1185,9 @@
     au < released ; 2006 ; MLN Volume 121 ; 121 >
     au < released ; 2007 ; MLN Volume 122 ; 122 >
     au < released ; 2008 ; MLN Volume 123 ; 123 >
+    au < manifest ; 2009 ; MLN Volume 124 ; 124 >
+    au < manifest ; 2010 ; MLN Volume 125 ; 125 >
+    au < manifest ; 2011 ; MLN Volume 126 ; 126 >
 
   }
 
@@ -1038,7 +1200,8 @@
     >
 
     param[journal_dir] = modernism-modernity
-
+    attr[journal_id] = mod
+    
     au < released ; 1994 ; Modernism/modernity Volume 1 ; 1 >
     au < released ; 1995 ; Modernism/modernity Volume 2 ; 2 >
     au < released ; 1996 ; Modernism/modernity Volume 3 ; 3 >
@@ -1055,6 +1218,9 @@
     au < released ; 2007 ; Modernism/modernity Volume 14 ; 14 >
     au < released ; 2008 ; Modernism/modernity Volume 15 ; 15 >
     au < released ; 2009 ; Modernism/modernity Volume 16 ; 16 >
+    au < manifest ; 2010 ; Modernism/modernity Volume 17 ; 17 >
+    au < manifest ; 2011 ; Modernism/modernity Volume 18 ; 18 >
+    au < manifest ; 2012 ; Modernism/modernity Volume 19 ; 19 >
 
   }
   
@@ -1067,9 +1233,12 @@
       >
     
       param[journal_dir] = narrative_inquiry_in_bioethics
-	  comment[upcoming] = this journal is upcoming in muse
+	  attr[journal_id] = nib
+  
+      au < manifest ; 2011 ; Narrative Inquiry in Bioethics Volume 1 ;1 >
+      
   }
-
+      
   {
     title <
       name = New Literary History ;
@@ -1079,6 +1248,7 @@
     >
 
     param[journal_dir] = new_literary_history
+    attr[journal_id] = nlh
 
     au < released ; 1995 ; New Literary History Volume 26 ; 26 >
     au < released ; 1996 ; New Literary History Volume 27 ; 27 >
@@ -1094,6 +1264,10 @@
     au < released ; 2006 ; New Literary History Volume 37 ; 37 >
     au < released ; 2007 ; New Literary History Volume 38 ; 38 >
     au < released ; 2008 ; New Literary History Volume 39 ; 39 >
+    au < manifest ; 2009 ; New Literary History Volume 40 ; 40 >
+    au < manifest ; 2010 ; New Literary History Volume 41 ; 41 >
+    au < manifest ; 2011 ; New Literary History Volume 42 ; 42 >
+    au < manifest ; 2012 ; New Literary History Volume 43 ; 43 >
 
   }
 
@@ -1109,6 +1283,7 @@
     comment[continuity] = continued by 2151-7363
 
     param[journal_dir] = nwsa_journal
+    attr[journal_id] = ff
 
     au < released ; 1999 ; NWSA Journal Volume 11 ; 11 >
     au < released ; 2000 ; NWSA Journal Volume 12 ; 12 >
@@ -1121,6 +1296,8 @@
     au < released ; 2007 ; NWSA Journal Volume 19 ; 19 >
     au < released ; 2008 ; NWSA Journal Volume 20 ; 20 >
     au < released ; 2009 ; NWSA Journal Volume 21 ; 21 >
+    au < manifest ; 2010 ; NWSA Journal Volume 22 ; 22 >
+    au < manifest ; 2011 ; NWSA Journal Volume 23 ; 23 >
 
   }
   
@@ -1132,10 +1309,14 @@
     >
 
     param[journal_dir] = partial_answers
+    attr[journal_id] = pan
 
     au < released ; 2007 ; Partial Answers: Journal of Literature and the History of Ideas Volume 5 ; 5 >
     au < released ; 2008 ; Partial Answers: Journal of Literature and the History of Ideas Volume 6 ; 6 >
     au < released ; 2009 ; Partial Answers: Journal of Literature and the History of Ideas Volume 7 ; 7 >
+    au < manifest ; 2010 ; Partial Answers: Journal of Literature and the History of Ideas Volume 8 ; 8 >
+    au < manifest ; 2011 ; Partial Answers: Journal of Literature and the History of Ideas Volume 9 ; 9 >
+    au < manifest ; 2012 ; Partial Answers: Journal of Literature and the History of Ideas Volume 10 ; 10 >
 
   }
 
@@ -1148,6 +1329,7 @@
     >
 
     param[journal_dir] = perspectives_in_biology_and_medicine
+    attr[journal_id] = pbm
 
     au < released ; 2000 ; Perspectives in Biology and Medicine Volume 43 ; 43 >
     au < released ; 2001 ; Perspectives in Biology and Medicine Volume 44 ; 44 >
@@ -1159,6 +1341,9 @@
     au < released ; 2007 ; Perspectives in Biology and Medicine Volume 50 ; 50 >
     au < released ; 2008 ; Perspectives in Biology and Medicine Volume 51 ; 51 >
     au < released ; 2009 ; Perspectives in Biology and Medicine Volume 52 ; 52 >
+    au < manifest ; 2010 ; Perspectives in Biology and Medicine Volume 53 ; 53 >
+    au < manifest ; 2011 ; Perspectives in Biology and Medicine Volume 54 ; 54 >
+    au < manifest ; 2012 ; Perspectives in Biology and Medicine Volume 55 ; 55 >
 
   }
 
@@ -1171,6 +1356,7 @@
     >
 
     param[journal_dir] = philosophy_and_literature
+    attr[journal_id] = phl
 
     au < released ; 1995 ; Philosophy and Literature Volume 19 ; 19 >
     au < released ; 1996 ; Philosophy and Literature Volume 20 ; 20 >
@@ -1186,6 +1372,10 @@
     au < released ; 2006 ; Philosophy and Literature Volume 30 ; 30 >
     au < released ; 2007 ; Philosophy and Literature Volume 31 ; 31 >
     au < released ; 2008 ; Philosophy and Literature Volume 32 ; 32 >
+    au < manifest ; 2009 ; Philosophy and Literature Volume 33 ; 33 >
+    au < manifest ; 2010 ; Philosophy and Literature Volume 34 ; 34 >
+    au < manifest ; 2011 ; Philosophy and Literature Volume 35 ; 35 >
+    au < expected ; 2012 ; Philosophy and Literature Volume 36 ; 36 >
 
   }
 
@@ -1198,6 +1388,7 @@
     >
 
     param[journal_dir] = philosophy_psychiatry_and_psychology
+    attr[journal_id] = ppp
 
     au < released ; 1996 ; Philosophy, Psychiatry, & Psychology Volume 3 ; 3 >
     au < released ; 1997 ; Philosophy, Psychiatry, & Psychology Volume 4 ; 4 >
@@ -1212,6 +1403,10 @@
     au < released ; 2006 ; Philosophy, Psychiatry, & Psychology Volume 13 ; 13 >
     au < released ; 2007 ; Philosophy, Psychiatry, & Psychology Volume 14 ; 14 >
     au < released ; 2008 ; Philosophy, Psychiatry, & Psychology Volume 15 ; 15 >
+    au < manifest ; 2009 ; Philosophy, Psychiatry, & Psychology Volume 16 ; 16 >
+    au < manifest ; 2010 ; Philosophy, Psychiatry, & Psychology Volume 17 ; 17 >
+    au < manifest ; 2011 ; Philosophy, Psychiatry, & Psychology Volume 18 ; 18 >
+    au < manifest ; 2012 ; Philosophy, Psychiatry, & Psychology Volume 19 ; 19 >
 
   }
 
@@ -1224,6 +1419,7 @@
     >
 
     param[journal_dir] = portal_libraries_and_the_academy
+    attr[journal_id] = pla
 
     au < released ; 2001 ; portal: Libraries and the Academy Volume 1 ; 1 >
     au < released ; 2002 ; portal: Libraries and the Academy Volume 2 ; 2 >
@@ -1234,6 +1430,9 @@
     au < released ; 2007 ; portal: Libraries and the Academy Volume 7 ; 7 >
     au < released ; 2008 ; portal: Libraries and the Academy Volume 8 ; 8 >
     au < released ; 2009 ; portal: Libraries and the Academy Volume 9 ; 9 >
+    au < manifest ; 2010 ; portal: Libraries and the Academy Volume 10 ; 10 >
+    au < manifest ; 2011 ; portal: Libraries and the Academy Volume 11 ; 11 >
+    au < manifest ; 2012 ; portal: Libraries and the Academy Volume 12 ; 12 >
 
   }
 
@@ -1244,6 +1443,7 @@
     >
 
     param[journal_dir] = postmodern_culture
+    attr[journal_id] = pmc
 
     au < released ; 1991 ; Postmodern Culture Volume 1 ; 1 >
     au < released ; 1992 ; Postmodern Culture Volume 2 ; 2 >
@@ -1263,6 +1463,10 @@
     au < released ; 2006 ; Postmodern Culture Volume 16 ; 16 >
     au < released ; 2007 ; Postmodern Culture Volume 17 ; 17 >
     au < released ; 2008 ; Postmodern Culture Volume 18 ; 18 >
+    au < manifest ; 2009 ; Postmodern Culture Volume 19 ; 19 >
+    au < manifest ; 2010 ; Postmodern Culture Volume 20 ; 20 >
+    au < manifest ; 2011 ; Postmodern Culture Volume 21 ; 21 >
+    au < expected ; 2012 ; Postmodern Culture Volume 22 ; 22 >
 
   }
 
@@ -1275,9 +1479,14 @@
     >
 
     param[journal_dir] = progress_in_community_health_partnerships_research_education_and_action
+    attr[journal_id] = cpr
 
     au < released ; 2007 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 1 ; 1 >
     au < released ; 2008 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 2 ; 2 >
+    au < manifest ; 2009 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 3 ; 3 >
+    au < manifest ; 2010 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 4 ; 4 >
+    au < manifest ; 2011 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 5 ; 5 >
+    au < manifest ; 2012 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 6 ; 6 >
 
   }
 
@@ -1290,6 +1499,7 @@
     >
 
     param[journal_dir] = reviews_in_american_history
+    attr[journal_id] = rah
 
     au < released ; 1995 ; Reviews in American History Volume 23 ; 23 >
     au < released ; 1996 ; Reviews in American History Volume 24 ; 24 >
@@ -1306,6 +1516,9 @@
     au < released ; 2007 ; Reviews in American History Volume 35 ; 35 >
     au < released ; 2008 ; Reviews in American History Volume 36 ; 36 >
     au < released ; 2009 ; Reviews in American History Volume 37 ; 37 >
+    au < manifest ; 2010 ; Reviews in American History Volume 38 ; 38 >
+    au < manifest ; 2011 ; Reviews in American History Volume 39 ; 39 >
+    au < manifest ; 2012 ; Reviews in American History Volume 40 ; 40 >
 
   }
 
@@ -1317,6 +1530,7 @@
     >
 
     param[journal_dir] = sais_review
+    attr[journal_id] = sais
 
     au < released ; 1995 ; SAIS Review Volume 15 ; 15 >
     au < released ; 1996 ; SAIS Review Volume 16 ; 16 >
@@ -1332,6 +1546,10 @@
     au < released ; 2006 ; SAIS Review Volume 26 ; 26 >
     au < released ; 2007 ; SAIS Review Volume 27 ; 27 >
     au < released ; 2008 ; SAIS Review Volume 28 ; 28 >
+    au < manifest ; 2009 ; SAIS Review Volume 29 ; 29 >
+    au < manifest ; 2010 ; SAIS Review Volume 30 ; 30 >
+    au < manifest ; 2011 ; SAIS Review Volume 31 ; 31 >
+    au < manifest ; 2012 ; SAIS Review Volume 32 ; 32 >
 
   }
 
@@ -1344,6 +1562,7 @@
     >
 
     param[journal_dir] = studies_in_english_literature
+    attr[journal_id] = sel
 
     au < released ; 1999 ; SEL Studies in English Literature 1500-1900 Volume 39 ; 39 >
     au < released ; 2000 ; SEL Studies in English Literature 1500-1900 Volume 40 ; 40 >
@@ -1356,6 +1575,9 @@
     au < released ; 2007 ; SEL Studies in English Literature 1500-1900 Volume 47 ; 47 >
     au < released ; 2008 ; SEL Studies in English Literature 1500-1900 Volume 48 ; 48 >
     au < released ; 2009 ; SEL Studies in English Literature 1500-1900 Volume 49 ; 49 >
+    au < manifest ; 2010 ; SEL Studies in English Literature 1500-1900 Volume 50 ; 50 >
+    au < manifest ; 2011 ; SEL Studies in English Literature 1500-1900 Volume 51 ; 51 >
+    au < manifest ; 2012 ; SEL Studies in English Literature 1500-1900 Volume 52 ; 52 >
 
   }
 
@@ -1368,11 +1590,15 @@
     >
 
     param[journal_dir] = sewanee_review
+    attr[journal_id] = sew
 
     au < released ; 2007 ; Sewanee Review Volume 115 ; 115 >
     au < released ; 2008 ; Sewanee Review Volume 116 ; 116 >
     au < released ; 2009 ; Sewanee Review Volume 117 ; 117 >
-
+    au < manifest ; 2010 ; Sewanee Review Volume 118 ; 118 >
+    au < manifest ; 2011 ; Sewanee Review Volume 119 ; 119 >
+    au < manifest ; 2012 ; Sewanee Review Volume 120 ; 120 >
+    
   }
 
   {
@@ -1384,10 +1610,15 @@
     >
 
     param[journal_dir] = shakespeare_bulletin
+    attr[journal_id] = shb
 
     au < released ; 2006 ; Shakespeare Bulletin Volume 24 ; 24 >
     au < released ; 2007 ; Shakespeare Bulletin Volume 25 ; 25 >
     au < released ; 2008 ; Shakespeare Bulletin Volume 26 ; 26 >
+    au < manifest ; 2009 ; Shakespeare Bulletin Volume 27 ; 27 >
+    au < manifest ; 2010 ; Shakespeare Bulletin Volume 28 ; 28 >
+    au < manifest ; 2011 ; Shakespeare Bulletin Volume 29 ; 29 >
+    au < manifest ; 2012 ; Shakespeare Bulletin Volume 30 ; 30 >
 
   }
 
@@ -1400,6 +1631,7 @@
     >
 
     param[journal_dir] = shakespeare_quarterly
+    attr[journal_id] = shq
 
     au < released ; 2001 ; Shakespeare Quarterly Volume 52 ; 52 >
     au < released ; 2002 ; Shakespeare Quarterly Volume 53 ; 53 >
@@ -1409,6 +1641,11 @@
     au < released ; 2006 ; Shakespeare Quarterly Volume 57 ; 57 >
     au < released ; 2007 ; Shakespeare Quarterly Volume 58 ; 58 >
     au < released ; 2008 ; Shakespeare Quarterly Volume 59 ; 59 >
+    au < manifest ; 2009 ; Shakespeare Quarterly Volume 60 ; 60 >
+    au < manifest ; 2010 ; Shakespeare Quarterly Volume 61 ; 61 >
+    au < manifest ; 2011 ; Shakespeare Quarterly Volume 62 ; 62 >
+    au < manifest ; 2012 ; Shakespeare Quarterly Volume 63 ; 63 >
+    
 
   }
 
@@ -1421,12 +1658,15 @@
     >
 
     param[journal_dir] = sirena_poesia_arte_y_critica
+    attr[journal_id] = sir
 
     au < released ; 2005 ; Sirena: poesia, arte y critica 2005 ; 2005 >
     au < released  ;2006 ; Sirena: poesia, arte y critica 2006 ; 2006 >
     au < released ; 2007 ; Sirena: poesia, arte y critica 2007 ; 2007 >
     au < released ; 2008 ; Sirena: poesia, arte y critica 2008 ; 2008 >
-
+    au < manifest ; 2009 ; Sirena: poesia, arte y critica 2009 ; 2009 >
+    au < manifest ; 2010 ; Sirena: poesia, arte y critica 2010 ; 2010 >
+  
   }
 
   {
@@ -1438,13 +1678,18 @@
     >
 
     param[journal_dir] = south_central_review
+    attr[journal_id] = scr
 
     au < released ; 2004 ; South Central Review Volume 21 ; 21 >
     au < released ; 2005 ; South Central Review Volume 22 ; 22 >
     au < released ; 2006 ; South Central Review Volume 23 ; 23 >
     au < released ; 2007 ; South Central Review Volume 24 ; 24 >
     au < released ; 2008 ; South Central Review Volume 25 ; 25 >
-
+    au < manifest ; 2009 ; South Central Review Volume 26 ; 26 >
+    au < manifest ; 2010 ; South Central Review Volume 27 ; 27 >
+    au < manifest ; 2011 ; South Central Review Volume 28 ; 28 >
+    au < manifest ; 2012 ; South Central Review Volume 29 ; 29 >
+    
   }
 
   {
@@ -1456,6 +1701,7 @@
     >
 
     param[journal_dir] = spiritus
+    attr[journal_id] = scs
 
     au < released ; 2001 ; Spiritus: A Journal of Christian Spirituality Volume 1 ; 1 >
     au < released ; 2002 ; Spiritus: A Journal of Christian Spirituality Volume 2 ; 2 >
@@ -1465,6 +1711,10 @@
     au < released ; 2006 ; Spiritus: A Journal of Christian Spirituality Volume 6 ; 6 >
     au < released ; 2007 ; Spiritus: A Journal of Christian Spirituality Volume 7 ; 7 >
     au < released ; 2008 ; Spiritus: A Journal of Christian Spirituality Volume 8 ; 8 >
+    au < manifest ; 2009 ; Spiritus: A Journal of Christian Spirituality Volume 9 ; 9 >
+    au < manifest ; 2010 ; Spiritus: A Journal of Christian Spirituality Volume 10 ; 10 >
+    au < manifest ; 2011 ; Spiritus: A Journal of Christian Spirituality Volume 11 ; 11 >
+    au < manifest ; 2012 ; Spiritus: A Journal of Christian Spirituality Volume 12 ; 12 >
 
   }
 
@@ -1477,11 +1727,14 @@
     >
 
     param[journal_dir] = studies_in_eighteenth_century_culture
+    attr[journal_id] = sec
 
     au < released ; 2007 ; Studies in Eighteenth Century Culture Volume 36 ; 36 >
     au < released ; 2008 ; Studies in Eighteenth Century Culture Volume 37 ; 37 >
     au < released ; 2009 ; Studies in Eighteenth Century Culture Volume 38 ; 38 >
     au < released ; 2010 ; Studies in Eighteenth Century Culture Volume 39 ; 39 >
+    au < manifest ; 2011 ; Studies in Eighteenth Century Culture Volume 40 ; 40 >
+    au < manifest ; 2012 ; Studies in Eighteenth Century Culture Volume 41 ; 41 >
 
   }
   
@@ -1494,6 +1747,7 @@
     >
 
     param[journal_dir] = technology_and_culture
+    attr[journal_id] = tech
 
     au < released ; 1998 ; Technology and Culture Volume 39 ; 39 >
     au < released ; 1999 ; Technology and Culture Volume 40 ; 40 >
@@ -1507,6 +1761,9 @@
     au < released ; 2007 ; Technology and Culture Volume 48 ; 48 >
     au < released ; 2008 ; Technology and Culture Volume 49 ; 49 >
     au < released ; 2009 ; Technology and Culture Volume 50 ; 50 >
+    au < manifest ; 2010 ; Technology and Culture Volume 51 ; 51 >
+    au < manifest ; 2011 ; Technology and Culture Volume 52 ; 52 >
+    au < manifest ; 2012 ; Technology and Culture Volume 53 ; 53 >
 
   }
 
@@ -1519,6 +1776,9 @@
     >
 
     param[journal_dir] = emily_dickinson_journal
+    attr[journal_id] = edj
+    
+    comment = Current 2011 issues is Volume 20
 
     au < released ; 1985-1986 ; The Emily Dickinson Journal Volume 7 ; 7 >
     au < released ; 1986-1987 ; The Emily Dickinson Journal Volume 8 ; 8 >
@@ -1531,6 +1791,22 @@
     au < released ; 1994 ; The Emily Dickinson Journal Volume 15 ; 15 >
     au < released ; 1995 ; The Emily Dickinson Journal Volume 16 ; 16 >
     au < released ; 1996 ; The Emily Dickinson Journal Volume 17 ; 17 >
+    au < manifest ; 1997 ; The Emily Dickinson Journal Volume 18 ; 18 >
+    au < manifest ; 1998 ; The Emily Dickinson Journal Volume 19 ; 19 >
+    au < manifest ; 1999 ; The Emily Dickinson Journal Volume 20 ; 20 >
+    au < manifest ; 2000 ; The Emily Dickinson Journal Volume 21 ; 21 >
+    au < manifest ; 2001 ; The Emily Dickinson Journal Volume 22 ; 22 >
+    au < manifest ; 2002 ; The Emily Dickinson Journal Volume 23 ; 23 >
+    au < manifest ; 2003 ; The Emily Dickinson Journal Volume 24 ; 24 >
+    au < manifest ; 2004 ; The Emily Dickinson Journal Volume 25 ; 25 >
+    au < manifest ; 2005 ; The Emily Dickinson Journal Volume 26 ; 26 >
+    au < manifest ; 2006 ; The Emily Dickinson Journal Volume 27 ; 27 >
+    au < manifest ; 2007 ; The Emily Dickinson Journal Volume 28 ; 28 >
+    au < manifest ; 2008 ; The Emily Dickinson Journal Volume 29 ; 29 >
+    au < manifest ; 2009 ; The Emily Dickinson Journal Volume 30 ; 30 >
+    au < manifest ; 2010 ; The Emily Dickinson Journal Volume 31 ; 31 >
+    au < manifest ; 2011 ; The Emily Dickinson Journal Volume 32 ; 32 >
+    
 
   }
 
@@ -1543,6 +1819,7 @@
     >
 
     param[journal_dir] = henry_james_review
+    attr[journal_id] = hjr
 
     au < released ; 1995 ; The Henry James Review Volume 16 ; 16 >
     au < released ; 1996 ; The Henry James Review Volume 17 ; 17 >
@@ -1559,6 +1836,9 @@
     au < released ; 2007 ; The Henry James Review Volume 28 ; 28 >
     au < released ; 2008 ; The Henry James Review Volume 29 ; 29 >
     au < released ; 2009 ; The Henry James Review Volume 30 ; 30 >
+    au < manifest ; 2010 ; The Henry James Review Volume 31 ; 31 >
+    au < manifest ; 2011 ; The Henry James Review Volume 32 ; 32 >
+    au < manifest ; 2012 ; The Henry James Review Volume 33 ; 33 >
 
   }
 
@@ -1571,6 +1851,7 @@
     >
 
     param[journal_dir] = lion_and_the_unicorn
+    attr[journal_id] = uni
 
     au < released ; 1995 ; The Lion and the Unicorn Volume 19 ; 19 >
     au < released ; 1996 ; The Lion and the Unicorn Volume 20 ; 20 >
@@ -1587,6 +1868,9 @@
     au < released ; 2007 ; The Lion and the Unicorn Volume 31 ; 31 >
     au < released ; 2008 ; The Lion and the Unicorn Volume 32 ; 32 >
     au < released ; 2009 ; The Lion and the Unicorn Volume 33 ; 33 >
+    au < manifest ; 2010 ; The Lion and the Unicorn Volume 34 ; 34 >
+    au < manifest ; 2011 ; The Lion and the Unicorn Volume 35 ; 35 >
+    au < manifest ; 2012 ; The Lion and the Unicorn Volume 36 ; 36 >
 
   }
 
@@ -1599,6 +1883,7 @@
     >
 
     param[journal_dir] = review_of_higher_education
+    attr[journal_id] = rhe
 
     au < released ; 1996-1997 ; The Review of Higher Education Volume 20 ; 20 >
     au < released ; 1997-1998 ; The Review of Higher Education Volume 21 ; 21 >
@@ -1613,7 +1898,10 @@
     au < released ; 2006-2007 ; The Review of Higher Education Volume 30 ; 30 >
     au < released ; 2007-2008 ; The Review of Higher Education Volume 31 ; 31 >
     au < released ; 2008-2009 ; The Review of Higher Education Volume 32 ; 32 >
-
+    au < manifest ; 2009-2010 ; The Review of Higher Education Volume 33 ; 33 >
+    au < manifest ; 2010-2011 ; The Review of Higher Education Volume 34 ; 34 >
+    au < manifest ; 2011-2012 ; The Review of Higher Education Volume 35 ; 35 >
+    
   }
 
   {
@@ -1625,6 +1913,7 @@
     >
 
     param[journal_dir] = yale_journal_of_criticism
+    attr[journal_id] = yale
 
     au < released ; 1996 ; The Yale Journal of Criticism Volume 9 ; 9 >
     au < released ; 1997 ; The Yale Journal of Criticism Volume 10 ; 10 >
@@ -1648,6 +1937,7 @@
     >
 
     param[journal_dir] = theatre_journal
+    attr[journal_id] = tj
 
     au < released ; 1996 ; Theatre Journal Volume 48 ; 48 >
     au < released ; 1997 ; Theatre Journal Volume 49 ; 49 >
@@ -1662,6 +1952,10 @@
     au < released ; 2006 ; Theatre Journal Volume 58 ; 58 >
     au < released ; 2007 ; Theatre Journal Volume 59 ; 59 >
     au < released ; 2008 ; Theatre Journal Volume 60 ; 60 >
+    au < manifest ; 2009 ; Theatre Journal Volume 61 ; 61 >
+    au < manifest ; 2010 ; Theatre Journal Volume 62 ; 62 >
+    au < manifest ; 2011 ; Theatre Journal Volume 63 ; 63 >
+    au < manifest ; 2012 ; Theatre Journal Volume 64 ; 64 >
 
   }
 
@@ -1674,6 +1968,7 @@
     >
 
     param[journal_dir] = theatre_topics
+    attr[journal_id] = tt
 
     au < released ; 1996 ; Theatre Topics Volume 6 ; 6 >
     au < released ; 1997 ; Theatre Topics Volume 7 ; 7 >
@@ -1689,6 +1984,9 @@
     au < released ; 2007 ; Theatre Topics Volume 17 ; 17 >
     au < released ; 2008 ; Theatre Topics Volume 18 ; 18 >
     au < released ; 2009 ; Theatre Topics Volume 19 ; 19 >
+    au < manifest ; 2010 ; Theatre Topics Volume 20 ; 20 >
+    au < manifest ; 2011 ; Theatre Topics Volume 21 ; 21 >
+    au < manifest ; 2012 ; Theatre Topics Volume 22 ; 22 >
 
   }
 
@@ -1700,6 +1998,7 @@
     >
 
     param[journal_dir] = theory_and_event
+    attr[journal_id] = tae
 
     au < released ; 1997 ; Theory and Event Volume 1 ; 1 >
     au < released ; 1998 ; Theory and Event Volume 2 ; 2 >
@@ -1707,11 +2006,15 @@
     au < released ; 2000 ; Theory and Event Volume 4 ; 4 >
     au < released ; 2001 ; Theory and Event Volume 5 ; 5 >
     au < released ; 2002 ; Theory and Event Volume 6 ; 6 >
-    au < released ; 2003 ; Theory and Event Volume 7 ; 7 >
-    au < released ; 2004 ; Theory and Event Volume 8 ; 8 >
-    au < released ; 2005 ; Theory and Event Volume 9 ; 9 >
-    au < released ; 2006 ; Theory and Event Volume 10 ; 10 >
-    au < released ; 2007 ; Theory and Event Volume 11 ; 11 >
+    au < released ; 2003-2005 ; Theory and Event Volume 7 ; 7 >
+    au < released ; 2005 ; Theory and Event Volume 8 ; 8 >
+    au < released ; 2006 ; Theory and Event Volume 9 ; 9 >
+    au < released ; 2007 ; Theory and Event Volume 10 ; 10 >
+    au < released ; 2008 ; Theory and Event Volume 11 ; 11 >
+    au < manifest ; 2009 ; Theory and Event Volume 12 ; 12 >
+    au < manifest ; 2010 ; Theory and Event Volume 13 ; 13 >
+    au < manifest ; 2011 ; Theory and Event Volume 14 ; 14 >
+    au < manifest ; 2012 ; Theory and Event Volume 15 ; 15 >
 
   }
 
@@ -1724,6 +2027,7 @@
     >
 
     param[journal_dir] = transactions_of_the_american_philological_association
+    attr[journal_id] = apa
 
     au < released ; 2000 ; Transactions of the American Philological Association Volume 130 ; 130 >
     au < released ; 2001 ; Transactions of the American Philological Association Volume 131 ; 131 >
@@ -1734,6 +2038,10 @@
     au < released ; 2006 ; Transactions of the American Philological Association Volume 136 ; 136 >
     au < released ; 2007 ; Transactions of the American Philological Association Volume 137 ; 137 >
     au < released ; 2008 ; Transactions of the American Philological Association Volume 138 ; 138 >
+    au < manifest ; 2009 ; Transactions of the American Philological Association Volume 139 ; 139 >
+    au < manifest ; 2010 ; Transactions of the American Philological Association Volume 140 ; 140 >
+    au < manifest ; 2011 ; Transactions of the American Philological Association Volume 141 ; 141 >
+    au < manifest ; 2012 ; Transactions of the American Philological Association Volume 142 ; 142 >
 
   }
   
@@ -1746,12 +2054,16 @@
     >
 
     param[journal_dir] = victorian_periodicals_review
+    attr[journal_id] = vpr
 
     au < released ; 2005 ; Victorian Periodicals Review Volume 38 ; 38 >
     au < released ; 2006 ; Victorian Periodicals Review Volume 39 ; 39 >
     au < released ; 2007 ; Victorian Periodicals Review Volume 40 ; 40 >
     au < released ; 2008 ; Victorian Periodicals Review Volume 41 ; 41 >
     au < released ; 2009 ; Victorian Periodicals Review Volume 42 ; 42 >
+    au < manifest ; 2010 ; Victorian Periodicals Review Volume 43 ; 43 >
+    au < manifest ; 2011 ; Victorian Periodicals Review Volume 44 ; 44 >
+    au < manifest ; 2012 ; Victorian Periodicals Review Volume 45 ; 45 >
 
   }
   
@@ -1764,8 +2076,10 @@
     >
 
     param[journal_dir] = wallace_stevens_journal
+    attr[journal_id] = wsj
 
     au < ready ; 2011 ; Wallace Stevens Journal Volume 35 ; 35 >
+    au < manifest ; 2012 ; Wallace Stevens Journal Volume 36 ; 36 >
 
   }  
   
@@ -1778,6 +2092,7 @@
     >
 
     param[journal_dir] = wide_angle
+    attr[journal_id] = wan
 
     au < released ; 1996 ; Wide Angle Volume 18 ; 18 >
     au < released ; 1997 ; Wide Angle Volume 19 ; 19 >

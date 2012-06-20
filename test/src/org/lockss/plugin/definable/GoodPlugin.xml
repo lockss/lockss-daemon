@@ -25,9 +25,10 @@
     </list>
   </entry>
   <entry>
+    <!-- The old name for au_permission_url -->
     <string>au_manifest</string>
     <list>
-      <string>&quot;%s&quot;, base_url</string>
+      <string>&quot;%sperm.page&quot;, base_url</string>
     </list>
   </entry>
   <entry>
@@ -62,6 +63,14 @@
     <long>6000</long>
   </entry>
   <entry>
+    <string>parent_cancel</string>
+    <string>child_val</string>
+  </entry>
+  <entry>
+    <string>child_cancel</string>
+    <string>val_17</string>
+  </entry>
+  <entry>
     <string>content-testing_override</string>
     <map>
       <entry>
@@ -71,6 +80,10 @@
       <entry>
         <string>parent_only</string>
 	<string>pval</string>
+      </entry>
+      <entry>
+        <string>parent_cancel</string>
+	<org.lockss.util.Default />
       </entry>
     </map>
   </entry>
@@ -87,5 +100,9 @@
         <string>Substance</string> <string>farty-two</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_archive_file_types</string>
+    <string>standard</string>
   </entry>
 </map>

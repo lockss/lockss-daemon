@@ -5,28 +5,28 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-	<string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
-	<string>1</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Metadata</string>
-	<string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.51.0</string>
+    <string>1.54.0</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -129,5 +129,23 @@
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.metapress.MetaPressArticleIteratorFactory</string>
+  </entry>
+  <entry>
+  <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+  <map>
+    <entry>
+    <string>*;RIS</string>
+    <string>org.lockss.plugin.metapress.MetaPressRisMetadataExtractorFactory</string>
+   </entry>
+ </map>
+ </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
   </entry>
 </map>

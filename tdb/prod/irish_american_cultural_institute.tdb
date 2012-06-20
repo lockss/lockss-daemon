@@ -17,6 +17,7 @@
     >
 
     param[journal_dir] = eire-ireland
+    attr[journal_id] = eir
 
     au < released ; 2004 ; Éire-Ireland Volume 39 ; 39 >
     au < released ; 2005 ; Éire-Ireland Volume 40 ; 40 >
@@ -24,6 +25,9 @@
     au < released ; 2007 ; Éire-Ireland Volume 42 ; 42 >
     au < released ; 2008 ; Éire-Ireland Volume 43 ; 43 >
     au < released ; 2009 ; Éire-Ireland Volume 44 ; 44 >
+    au < manifest ; 2010 ; Éire-Ireland Volume 45 ; 45 >
+    au < manifest ; 2011 ; Éire-Ireland Volume 46 ; 46 >
+    au < expected ; 2012 ; Éire-Ireland Volume 47 ; 47 >
 
   }
 

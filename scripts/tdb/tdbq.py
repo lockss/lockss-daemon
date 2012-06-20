@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.13 2011-05-20 19:35:58 pgust Exp $
+# $Id: tdbq.py,v 1.13.8.1 2012-06-20 00:02:55 nchondros Exp $
 
-# Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,9 +48,9 @@ class TdbqConstants:
     OPTION_EXISTS_SHORT = 'E'
     OPTION_EXISTS_HELP = 'keep AUs whose status is "%s"' % (AU.Status.EXISTS,)
     
-    OPTION_EXPUNGED = 'expunged'
-    OPTION_EXPUNGED_SHORT = 'X'
-    OPTION_EXPUNGED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.EXPUNGED,)
+    OPTION_EXPECTED = 'expected'
+    OPTION_EXPECTED_SHORT = 'X'
+    OPTION_EXPECTED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.EXPECTED,)
     
     OPTION_MANIFEST = 'manifest'
     OPTION_MANIFEST_SHORT = 'M'
@@ -114,6 +114,10 @@ class TdbqConstants:
     OPTION_WANTED_SHORT = 'W'
     OPTION_WANTED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.WANTED,)
     
+    OPTION_ZAPPED = 'zapped'
+    OPTION_ZAPPED_SHORT = 'Z'
+    OPTION_ZAPPED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.ZAPPED,)
+    
     OPTION_STATUSES = 'statuses'
     
     ALL_TESTABLE_STATUSES = UNRELEASED_STATUSES + PRODUCTION_STATUSES 
@@ -128,14 +132,15 @@ class TdbqConstants:
                        OPTION_RELEASING_SHORT,
                        OPTION_MANIFEST_SHORT,
                        OPTION_NOT_READY_SHORT,
-                       OPTION_PRODUCTION,
+                       OPTION_PRODUCTION_SHORT,
                        OPTION_RELEASED_SHORT,
                        OPTION_SUPERSEDED_SHORT,
                        OPTION_TESTING_SHORT,
-                       OPTION_UNRELEASED,
+                       OPTION_UNRELEASED_SHORT,
                        OPTION_WANTED_SHORT,
-                       OPTION_EXPUNGED_SHORT,
-                       OPTION_READY_SHORT]
+                       OPTION_EXPECTED_SHORT,
+                       OPTION_READY_SHORT,
+                       OPTION_ZAPPED_SHORT]
 
 class TdbqLiteral:
     '''Literals encountered in TDB query strings.'''
@@ -558,6 +563,7 @@ def __option_parser__(parser=None):
     tdbq_group = OptionGroup(parser, 'tdbq module (%s)' % (__version__,))
     
     for sho, lon, hel, con in [(TdbqConstants.OPTION_EXISTS_SHORT, TdbqConstants.OPTION_EXISTS, TdbqConstants.OPTION_EXISTS_HELP, AU.Status.EXISTS),
+                               (TdbqConstants.OPTION_EXPECTED_SHORT, TdbqConstants.OPTION_EXPECTED, TdbqConstants.OPTION_EXPECTED_HELP, AU.Status.EXPECTED),
                                (TdbqConstants.OPTION_MANIFEST_SHORT, TdbqConstants.OPTION_MANIFEST, TdbqConstants.OPTION_MANIFEST_HELP, AU.Status.MANIFEST),
                                (TdbqConstants.OPTION_WANTED_SHORT, TdbqConstants.OPTION_WANTED, TdbqConstants.OPTION_WANTED_HELP, AU.Status.WANTED),
                                (TdbqConstants.OPTION_CRAWLING_SHORT, TdbqConstants.OPTION_CRAWLING, TdbqConstants.OPTION_CRAWLING_HELP, AU.Status.CRAWLING),
@@ -568,7 +574,7 @@ def __option_parser__(parser=None):
                                (TdbqConstants.OPTION_RELEASED_SHORT, TdbqConstants.OPTION_RELEASED, TdbqConstants.OPTION_RELEASED_HELP, AU.Status.RELEASED),
                                (TdbqConstants.OPTION_DOWN_SHORT, TdbqConstants.OPTION_DOWN, TdbqConstants.OPTION_DOWN_HELP, AU.Status.DOWN),
                                (TdbqConstants.OPTION_SUPERSEDED_SHORT, TdbqConstants.OPTION_SUPERSEDED, TdbqConstants.OPTION_SUPERSEDED_HELP, AU.Status.SUPERSEDED),
-                               (TdbqConstants.OPTION_EXPUNGED_SHORT, TdbqConstants.OPTION_EXPUNGED, TdbqConstants.OPTION_EXPUNGED_HELP, AU.Status.EXPUNGED),
+                               (TdbqConstants.OPTION_ZAPPED_SHORT, TdbqConstants.OPTION_ZAPPED, TdbqConstants.OPTION_ZAPPED_HELP, AU.Status.ZAPPED),
                                (TdbqConstants.OPTION_UNRELEASED_SHORT, TdbqConstants.OPTION_UNRELEASED, TdbqConstants.OPTION_UNRELEASED_HELP, TdbqConstants.UNRELEASED_STATUSES),
                                (TdbqConstants.OPTION_PRODUCTION_SHORT, TdbqConstants.OPTION_PRODUCTION, TdbqConstants.OPTION_PRODUCTION_HELP, TdbqConstants.PRODUCTION_STATUSES),
                                (TdbqConstants.OPTION_ALL_SHORT, TdbqConstants.OPTION_ALL, TdbqConstants.OPTION_ALL_HELP, TdbqConstants.ALL_TESTABLE_STATUSES)]:
@@ -638,6 +644,9 @@ def str_to_lambda_au(str):
                    ('rights', lambda au: au.rights()),
                    ('auid', lambda au: au.auid()),
                    ('title', lambda au: au.title().name()),
+                   ('type', lambda au: au.title().type()),
+                   ('isbn', lambda au: au.title().isbn()),
+                   ('eisbn', lambda au: au.title().eisbn()),
                    ('issn', lambda au: au.title().issn()),
                    ('eissn', lambda au: au.title().eissn()),
                    ('issnl', lambda au: au.title().issnl()),

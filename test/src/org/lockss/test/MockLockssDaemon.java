@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.67 2011-01-25 00:51:50 pgust Exp $
+ * $Id: MockLockssDaemon.java,v 1.67.12.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.daemon.status.StatusService;
 import org.lockss.hasher.HashService;
 import org.lockss.mail.MailService;
 import org.lockss.plugin.*;
+import org.lockss.truezip.*;
 import org.lockss.poller.PollManager;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
@@ -86,6 +87,7 @@ public class MockLockssDaemon extends LockssDaemon {
   PluginManager pluginManager = null;
   MetadataManager metadataManager = null;
   IdentityManager identityManager = null;
+  TrueZipManager tzipManager = null;
   StatusService statusService = null;
   RemoteApi remoteApi = null;
   IcpManager icpManager = null;
@@ -401,6 +403,18 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * return the TrueZip manager instance
+   * @return the TrueZipManager
+   */
+  public TrueZipManager getTrueZipManager() {
+    if (tzipManager == null) {
+      tzipManager = (TrueZipManager)newManager(LockssDaemon.TRUEZIP_MANAGER);
+      managerMap.put(LockssDaemon.TRUEZIP_MANAGER, tzipManager);
+    }
+    return tzipManager;
+  }
+
+  /**
    * return the crawl manager instance
    * @return the CrawlManager
    */
@@ -708,6 +722,15 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * Set the TrueZipManager
+   * @param tzMgr the new manager
+   */
+  public void setTrueZipManager(TrueZipManager tzMgr) {
+    tzipManager = tzMgr;
+    managerMap.put(LockssDaemon.TRUEZIP_MANAGER, tzipManager);
+  }
+
+  /**
    * Set the SystemMetrics
    * @param sysMetrics the new metrics
    */
@@ -761,6 +784,14 @@ public class MockLockssDaemon extends LockssDaemon {
   public void startOrReconfigureAuManagers(ArchivalUnit au,
 					   Configuration auConfig)
       throws Exception {
+  }
+
+  /** For tests that override startOrReconfigureAuManagers and want to
+   * conditionally start them. */
+  public void reallyStartOrReconfigureAuManagers(ArchivalUnit au,
+						 Configuration auConfig)
+      throws Exception {
+    super.startOrReconfigureAuManagers(au, auConfig);
   }
 
   /** Return ActivityRegulator for AU */

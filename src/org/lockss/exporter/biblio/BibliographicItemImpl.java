@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemImpl.java,v 1.1 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: BibliographicItemImpl.java,v 1.1.2.1 2012-06-20 00:03:07 nchondros Exp $
  */
 
 /*
@@ -36,16 +36,16 @@ package org.lockss.exporter.biblio;
  * is mutable. All bibliographic data is passed in at construction, though
  * values may be null. Extends the {@link BibliographicItemAdapter}, so has
  * setters which return the BibliographicItem so they can be chained.
+ * Values are set in the constructors using the adapter's methods.
  *
  * @author Neil Mayo
  */
 public class BibliographicItemImpl extends BibliographicItemAdapter {
 
   /**
-   * Create a BibliographicItem with no properties; only for package or
-   * subclass internal use.
+   * Create a BibliographicItem with no properties.
    */
-  protected BibliographicItemImpl() {}
+  public BibliographicItemImpl() {}
 
   /**
    * Create a BibliographicItem with the supplied field values. Values may

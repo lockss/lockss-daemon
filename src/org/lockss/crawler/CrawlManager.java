@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.36 2011-09-25 04:20:40 tlipkis Exp $
+ * $Id: CrawlManager.java,v 1.36.4.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -87,9 +87,8 @@ public interface CrawlManager {
 				   CrawlManager.Callback cb,
 				   Object cookie, ActivityRegulator.Lock lock);
 
-  /** Return a CrawlRateLimiter object for the au.  All concurrent crawls
-   * of the AU (new and repair) should get the same CrawlRateLimiter. */
-  public CrawlRateLimiter getCrawlRateLimiter(ArchivalUnit au);
+  /** Return the CrawlRateLimiter assigned to the crawler. */
+  public CrawlRateLimiter getCrawlRateLimiter(Crawler crawler);
 
   /** Return true if the periodic crawl starter is running */
   public boolean isCrawlStarterEnabled();

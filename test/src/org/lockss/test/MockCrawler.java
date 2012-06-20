@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawler.java,v 1.14 2006-11-14 19:21:28 tlipkis Exp $
+ * $Id: MockCrawler.java,v 1.14.72.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.test;
 import java.util.Collection;
 import org.lockss.util.Deadline;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.daemon.*;
 import org.lockss.crawler.*;
 
 public class MockCrawler extends NullCrawler {
@@ -44,7 +45,7 @@ public class MockCrawler extends NullCrawler {
   boolean doCrawlCalled = false;
   Deadline deadline = null;
   boolean crawlSuccessful = true;
-  int type = -1;
+  Crawler.Type type = null;
   boolean isWholeAU = false;
   long startTime = -1;
   long endTime = -1;
@@ -102,11 +103,11 @@ public class MockCrawler extends NullCrawler {
     this.followLinks = followLinks;
   }
 
-  public void setType(int type) {
+  public void setType(Crawler.Type type) {
     this.type = type;
   }
 
-  public int getType() {
+  public Crawler.Type getType() {
     return type;
   }
 

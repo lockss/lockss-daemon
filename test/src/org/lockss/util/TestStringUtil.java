@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.87 2011-11-15 00:58:19 barry409 Exp $
+ * $Id: TestStringUtil.java,v 1.87.2.1 2012-06-20 00:02:56 nchondros Exp $
  */
 
 /*
@@ -189,7 +189,35 @@ public class TestStringUtil extends LockssTestCase {
       // Check non-greediness
       assertEquals("two", StringUtil.getTextBetween("One two three, One five three", "One ", " three"));
   }
-  
+
+  public void testCommonPrefix() {
+    assertEquals("", StringUtil.commonPrefix("", ""));
+    assertEquals("", StringUtil.commonPrefix("one", "cone"));
+    assertEquals("co", StringUtil.commonPrefix("come", "cone"));
+    assertEquals("", StringUtil.commonPrefix("CAPS", "caps"));
+    assertEquals("", StringUtil.commonPrefix("parse", "arse"));
+    assertEquals("LaTe", StringUtil.commonPrefix("LaTeX", "LaTex"));
+    assertEquals("LaTe", StringUtil.commonPrefix("LaTex", "LaTeX"));
+    assertEquals("locks", StringUtil.commonPrefix("locks", "lockss"));
+    // Try comparing ASCII chars with same char value
+    assertEquals("", StringUtil.commonPrefix("\t", "9"));
+    assertEquals("", StringUtil.commonPrefix("\0", "0"));
+  }
+
+  public void testCommonSuffix() {
+    assertEquals("", StringUtil.commonSuffix("", ""));
+    assertEquals("one", StringUtil.commonSuffix("one", "cone"));
+    assertEquals("e", StringUtil.commonSuffix("come", "cone"));
+    assertEquals("", StringUtil.commonSuffix("CAPS", "caps"));
+    assertEquals("arse", StringUtil.commonSuffix("parse", "arse"));
+    assertEquals("", StringUtil.commonSuffix("LaTeX", "LaTex"));
+    assertEquals("", StringUtil.commonSuffix("LaTex", "LaTeX"));
+    assertEquals("s", StringUtil.commonSuffix("locks", "lockss"));
+    // Try comparing ASCII chars with same char value
+    assertEquals("", StringUtil.commonSuffix("\t", "9"));
+    assertEquals("", StringUtil.commonSuffix("\0", "0"));
+  }
+
   public void testReplaceStringNonExistingSubstring(){
     String testStr = "blahTestblah";
     // if no substitutions are made, original string should be returned
@@ -588,6 +616,13 @@ public class TestStringUtil extends LockssTestCase {
 						    new Class[0]);
     assertEquals("TestStringUtil.testShortNameMethod",
 		 StringUtil.shortName(meth));
+  }
+
+  public void testSanitizeToIdentifier() {
+    assertEquals("foobar123", StringUtil.sanitizeToIdentifier("foobar123"));
+    assertEquals("fooBAR", StringUtil.sanitizeToIdentifier("foo.BAR"));
+    assertEquals("fooBar_",
+		 StringUtil.sanitizeToIdentifier(" +.!|,foo.Bar?<>_"));
   }
 
   public void testStackTraceString() {

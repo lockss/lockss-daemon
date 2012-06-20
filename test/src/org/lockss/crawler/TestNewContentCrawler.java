@@ -1,10 +1,10 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.76 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.76.4.1 2012-06-20 00:02:51 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,6 +54,8 @@ import static org.lockss.crawler.BaseCrawler.DEFAULT_DEFAULT_RETRY_COUNT;
  */
 public class TestNewContentCrawler extends LockssTestCase {
 
+  protected MockLockssDaemon theDaemon;
+  protected CrawlManagerImpl crawlMgr;
   protected MyMockArchivalUnit mau = null;
   protected MockCachedUrlSet mcus = null;
   protected CrawlSpec spec = null;
@@ -71,7 +73,12 @@ public class TestNewContentCrawler extends LockssTestCase {
     super.setUp();
     TimeBase.setSimulated(10);
 
-    getMockLockssDaemon().getAlertManager();
+    theDaemon = getMockLockssDaemon();
+    crawlMgr = new NoPauseCrawlManagerImpl();
+    theDaemon.setCrawlManager(crawlMgr);
+    crawlMgr.initService(theDaemon);
+
+    theDaemon.getAlertManager();
 
     mau = newMyMockArchivalUnit();
     mau.setPlugin(new MockPlugin(getMockLockssDaemon()));
@@ -132,7 +139,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   public void testReturnsProperType() {
-    assertEquals(Crawler.NEW_CONTENT, crawler.getType());
+    assertEquals(Crawler.Type.NEW_CONTENT, crawler.getType());
     assertEquals("New Content", crawler.getTypeString());
   }
 
@@ -153,7 +160,6 @@ public class TestNewContentCrawler extends LockssTestCase {
     Set cachedUrls = cus.getCachedUrls();
     Set expected = SetUtil.set(startUrl, permissionPage);
     assertEquals(expected, cachedUrls);
-    assertEquals(ListUtil.list(startUrl), crawler.pauses);
   }
 
   public void testPassesParamsToUrlCacherDefault() {
@@ -228,7 +234,6 @@ public class TestNewContentCrawler extends LockssTestCase {
     Set expected = SetUtil.fromList(urls);
     expected.add(permissionPage);
     assertEquals(expected, cus.getCachedUrls());
-    assertEquals(urls, crawler.pauses);
   }
 
   public void testDoCrawlOnePageWithOneLinkSuccessful() {
@@ -495,9 +500,9 @@ public class TestNewContentCrawler extends LockssTestCase {
     CrawlerStatus crawlStatus = crawler.getStatus();
     assertEquals(6, crawlStatus.getNumFetched());
     assertEmpty(crawlStatus.getUrlsOfMimeType("no-such-mimetype"));
-    assertEquals(SetUtil.set(startUrl, url1),
+    assertEquals(SetUtil.set(startUrl, url1, permissionPage),
 		 SetUtil.theSet(crawlStatus.getUrlsOfMimeType("text/html")));
-    assertEquals(2, crawlStatus.getNumUrlsOfMimeType("text/html"));   
+    assertEquals(3, crawlStatus.getNumUrlsOfMimeType("text/html"));   
     assertEquals(SetUtil.set(url2, url3),
 		 SetUtil.theSet(crawlStatus.getUrlsOfMimeType("image/png")));
     assertEquals(2, crawlStatus.getNumUrlsOfMimeType("image/png"));   
@@ -531,7 +536,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertTrue(crawlStatus.getUrlsOfMimeType("bla-ba-type").isEmpty());
     assertEquals(3, crawlStatus.getNumUrlsOfMimeType("bla-content-type"));  
     assertEquals(1, crawlStatus.getNumUrlsOfMimeType("bla-ba-type"));  
-    assertEquals(1, crawlStatus.getNumUrlsOfMimeType("text/html"));  
+    assertEquals(2, crawlStatus.getNumUrlsOfMimeType("text/html"));  
   }
   
   /** test status update of pending urls   */
@@ -1268,9 +1273,8 @@ public class TestNewContentCrawler extends LockssTestCase {
     return crawler.doCrawl0();
   }
 
-  private static class MyNewContentCrawler extends NewContentCrawler {
+  private class MyNewContentCrawler extends NewContentCrawler {
     List fetchedUrls = new ArrayList();
-    List pauses = new ArrayList();
     
     protected MyNewContentCrawler(ArchivalUnit au, CrawlSpec spec,
 				  AuState aus) {
@@ -1278,6 +1282,7 @@ public class TestNewContentCrawler extends LockssTestCase {
       crawlStatus =
 	new MyCrawlerStatus(au, ((SpiderCrawlSpec)spec).getStartingUrls(),
 			    getTypeString());
+      setCrawlManager(TestNewContentCrawler.this.crawlMgr);
     }
 
     // Ordered set makes results easier to check
@@ -1305,11 +1310,6 @@ public class TestNewContentCrawler extends LockssTestCase {
     @Override
     protected CrawlUrlData newCrawlUrlData(String url, int depth) {
       return new MyCrawlUrlData(url, depth);
-    }
-
-    @Override
-    public void pauseBeforeFetch(String url) {
-      pauses.add(url);
     }
   }
 

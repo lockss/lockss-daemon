@@ -41,6 +41,7 @@ import org.lockss.util.*;
 import org.htmlparser.*;
 import org.htmlparser.util.*;
 import org.htmlparser.filters.*;
+import org.htmlparser.lexer.InputStreamSource;
 
 public class TestHtmlFilterInputStream extends LockssTestCase {
 
@@ -197,6 +198,127 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     } catch (IOException e) {
     }
   }
+  
+  public void testChangeCharsetBadCharConfig() throws Exception {
+    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_ENCODING_MATCH_RANGE,
+				  "1000");
+    String file = "charset-change3.txt";
+    java.net.URL url = getClass().getResource(file);
+    assertNotNull(file + " missing.", url);
+    InputStream in = null;
+    InputStream expin = null;
+    try {
+      in = UrlUtil.openInputStream(url.toString());
+      in = new BufferedInputStream(in);
+      expin = UrlUtil.openInputStream(url.toString());
+      Reader exprdr = new InputStreamReader(expin, "UTF-8");
+      HtmlFilterInputStream actin = new HtmlFilterInputStream(in, "ISO-8859-1", "UTF-8", new IdentityXform());
+      Reader actrdr = new InputStreamReader(actin, "UTF-8");
+      String exp = StringUtil.fromReader(exprdr);
+      String act = StringUtil.fromReader(actrdr);
+      assertEquals(exp.substring(3227), act.substring(3234));
+    } finally {
+      IOUtil.safeClose(in);
+      IOUtil.safeClose(expin);
+    }
+  }
+  
+  public void testChangeCharsetBadCharSetter() throws Exception {
+    // Ensure setter (below) overrides config
+    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_ENCODING_MATCH_RANGE,
+				  "0");
+    String file = "charset-change3.txt";
+    java.net.URL url = getClass().getResource(file);
+    assertNotNull(file + " missing.", url);
+    InputStream in = null;
+    InputStream expin = null;
+    try {
+      in = UrlUtil.openInputStream(url.toString());
+      in = new BufferedInputStream(in);
+      expin = UrlUtil.openInputStream(url.toString());
+      Reader exprdr = new InputStreamReader(expin, "UTF-8");
+      HtmlFilterInputStream actin = new HtmlFilterInputStream(in, "ISO-8859-1", "UTF-8", new IdentityXform());
+      actin.setEncodingMatchRange(128);
+      Reader actrdr = new InputStreamReader(actin, "UTF-8");
+      String exp = StringUtil.fromReader(exprdr);
+      String act = StringUtil.fromReader(actrdr);
+      assertEquals(exp.substring(3227), act.substring(3234));
+    } finally {
+      IOUtil.safeClose(in);
+      IOUtil.safeClose(expin);
+    }
+  }
+  
+  public void testChangeCharsetBadCharLargeRange() throws Exception {
+    String file = "charset-change3.txt";
+    java.net.URL url = getClass().getResource(file);
+    assertNotNull(file + " missing.", url);
+    InputStream in = null;
+    InputStream expin = null;
+    try {
+      in = UrlUtil.openInputStream(url.toString());
+      in = new BufferedInputStream(in);
+      expin = UrlUtil.openInputStream(url.toString());
+      Reader exprdr = new InputStreamReader(expin, "UTF-8");
+      HtmlFilterInputStream actin = new HtmlFilterInputStream(in, "ISO-8859-1", "UTF-8", new IdentityXform());
+      actin.setEncodingMatchRange(10000);
+      Reader actrdr = new InputStreamReader(actin, "UTF-8");
+      String exp = StringUtil.fromReader(exprdr);
+      String act = StringUtil.fromReader(actrdr);
+      assertEquals(exp.substring(3227), act.substring(3234));
+    } finally {
+      IOUtil.safeClose(in);
+      IOUtil.safeClose(expin);
+    }
+  }
+  
+  public void testChangeCharsetBadCharLateChange() throws Exception {
+    String file = "charset-change3.txt";
+    java.net.URL url = getClass().getResource(file);
+    assertNotNull(file + " missing.", url);
+    InputStream in = null;
+    InputStream expin = null;
+    try {
+      in = UrlUtil.openInputStream(url.toString());
+      in = new BufferedInputStream(in);
+      expin = UrlUtil.openInputStream(url.toString());
+      Reader exprdr = new InputStreamReader(expin, "UTF-8");
+      HtmlFilterInputStream actin = new HtmlFilterInputStream(in, "ISO-8859-1", "UTF-8", new IdentityXform());
+      actin.setEncodingMatchRange(1000);
+      Reader actrdr = new InputStreamReader(actin, "UTF-8");
+      String exp = StringUtil.fromReader(exprdr);
+      String act = StringUtil.fromReader(actrdr);
+      assertEquals(exp.substring(3227), act.substring(3234));
+    } finally {
+      IOUtil.safeClose(in);
+      IOUtil.safeClose(expin);
+    }
+
+
+  }
+
+  public void testChangeCharsetMatchRangeDisabled() throws Exception {
+    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_ENCODING_MATCH_RANGE,
+				  "0");
+    String file = "charset-change3.txt";
+    java.net.URL url = getClass().getResource(file);
+    assertNotNull(file + " missing.", url);
+    InputStream in = null;
+    InputStream expin = null;
+    try {
+      in = UrlUtil.openInputStream(url.toString());
+      in = new BufferedInputStream(in);
+      HtmlFilterInputStream actin = new HtmlFilterInputStream(in, "ISO-8859-1", "UTF-8", new IdentityXform());
+      Reader actrdr = new InputStreamReader(actin, "UTF-8");
+      StringUtil.fromReader(actrdr);
+      fail("encodingMatchRange set to zero, mismatch should throw");
+    } catch (IOException e) {
+      // ignored
+    } finally {
+      IOUtil.safeClose(in);
+    }
+  }
+  
 
   // Test default mark size
   public void testChangeCharset() throws Exception {

@@ -4,10 +4,11 @@
     name = Nature Publishing Group
   >
 
+  attr[contract] = 2008
   plugin = org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin
   param[base_url] = http://www.nature.com/
   implicit < status ; status2 ; year ; name ; param[year] ; param[volume_name] >
-  
+
   {
 
     title <
@@ -25,7 +26,8 @@
     au < released ; crawling ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
     au < released ; crawling ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
     au < released ; crawling ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 >
-    au < released ; manifest ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 >
+    au < released ; crawling ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 >
+    au < crawling ; exists ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 >
 
   }
 
@@ -45,15 +47,16 @@
     au < exists ; exists ; 2000 ; American Journal of Gastroenterology Volume 95 ; 2000 ; 95 >
     au < exists ; exists ; 2001 ; American Journal of Gastroenterology Volume 96 ; 2001 ; 96 >
     au < exists ; exists ; 2002 ; American Journal of Gastroenterology Volume 97 ; 2002 ; 97 >
-    au < exists ; exists ; 2003 ; American Journal of Gastroenterology Volume 98 ; 2003 ; 98 >
+    au < manifest ; exists ; 2003 ; American Journal of Gastroenterology Volume 98 ; 2003 ; 98 >
     au < exists ; exists ; 2004 ; American Journal of Gastroenterology Volume 99 ; 2004 ; 99 >
     au < exists ; exists ; 2005 ; American Journal of Gastroenterology Volume 100 ; 2005 ; 100 >
     au < exists ; exists ; 2006 ; American Journal of Gastroenterology Volume 101 ; 2006 ; 101 >
     au < exists ; exists ; 2007 ; American Journal of Gastroenterology Volume 102 ; 2007 ; 102 >
     au < exists ; exists ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
     au < exists ; exists ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
-    au < manifest ; exists ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
-    au < released ; manifest ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 >
+    au < crawling ; exists ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
+    au < released ; crawling ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 >
+    au < crawling ; exists ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 >
 
   }
 
@@ -84,8 +87,9 @@
     au < exists ; exists ; 2008 ; American Journal of Hypertension Volume 21 ; 2008 ; 21 >
     au < exists ; exists ; 2009 ; American Journal of Hypertension Volume 22 ; 2009 ; 22 >
     au < exists ; exists ; 2010 ; American Journal of Hypertension Volume 23 ; 2010 ; 23 >
-    au < released ; manifest ; 2011 ; American Journal of Hypertension Volume 24 ; 2011 ; 24 >
-    
+    au < released ; crawling ; 2011 ; American Journal of Hypertension Volume 24 ; 2011 ; 24 >
+    au < crawling ; exists ; 2012 ; American Journal of Hypertension Volume 25 ; 2012 ; 25 >
+
   }
 
   {
@@ -105,7 +109,8 @@
     au < released ; crawling ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
     au < released ; crawling ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
     au < released ; crawling ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
-    au < released ; manifest ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 >
+    au < released ; crawling ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 >
+    au < crawling ; exists ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
 
   }
 
@@ -119,7 +124,7 @@
     >
 
     param[journal_id] = bmt
-    
+
     au < manifest ; exists ; 1997 ; Bone Marrow Transplantation Volume 19 ; 1997 ; 19 >
     au < manifest ; exists ; 1997 ; Bone Marrow Transplantation Volume 20 ; 1997 ; 20 >
     au < manifest ; exists ; 1998 ; Bone Marrow Transplantation Volume 21 ; 1998 ; 21 >
@@ -147,107 +152,9 @@
     au < released ; crawling ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
     au < released ; crawling ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
     au < released ; crawling ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 >
-    au < released ; crawling ; 2010 ; Bone Marrow Transplantation Volume 46 ; 2010 ; 46 >
-    au < released ; manifest ; 2011 ; Bone Marrow Transplantation Volume 47 ; 2011 ; 47 >
-
-  }
-
-  {
-
-    title <
-      name = British Dental Journal ;
-      issn = 0007-0610 ;
-      eissn = 1476-5373 ;
-      issnl = 0007-0610
-    >
-
-    param[journal_id] = bdj
-
-    au < exists ; exists ; 1970 ; British Dental Journal Volume 128 ; 1970 ; 128 >
-    au < exists ; exists ; 1970 ; British Dental Journal Volume 129 ; 1970 ; 129 >
-    au < exists ; exists ; 1971 ; British Dental Journal Volume 130 ; 1971 ; 130 >
-    au < exists ; exists ; 1971 ; British Dental Journal Volume 131 ; 1971 ; 131 >
-    au < exists ; exists ; 1972 ; British Dental Journal Volume 132 ; 1972 ; 132 >
-    au < exists ; exists ; 1972 ; British Dental Journal Volume 133 ; 1972 ; 133 >
-    au < exists ; exists ; 1973 ; British Dental Journal Volume 134 ; 1973 ; 134 >
-    au < exists ; exists ; 1973 ; British Dental Journal Volume 135 ; 1973 ; 135 >
-    au < exists ; exists ; 1974 ; British Dental Journal Volume 136 ; 1974 ; 136 >
-    au < exists ; exists ; 1974 ; British Dental Journal Volume 137 ; 1974 ; 137 >
-    au < exists ; exists ; 1975 ; British Dental Journal Volume 138 ; 1975 ; 138 >
-    au < exists ; exists ; 1975 ; British Dental Journal Volume 139 ; 1975 ; 139 >
-    au < exists ; exists ; 1976 ; British Dental Journal Volume 140 ; 1976 ; 140 >
-    au < exists ; exists ; 1976 ; British Dental Journal Volume 141 ; 1976 ; 141 >
-    au < exists ; exists ; 1977 ; British Dental Journal Volume 142 ; 1977 ; 142 >
-    au < exists ; exists ; 1977 ; British Dental Journal Volume 143 ; 1977 ; 143 >
-    au < exists ; exists ; 1978 ; British Dental Journal Volume 144 ; 1978 ; 144 >
-    au < exists ; exists ; 1978 ; British Dental Journal Volume 145 ; 1978 ; 145 >
-    au < exists ; exists ; 1979 ; British Dental Journal Volume 146 ; 1979 ; 146 >
-    au < exists ; exists ; 1979 ; British Dental Journal Volume 147 ; 1979 ; 147 >
-    au < exists ; exists ; 1980 ; British Dental Journal Volume 148 ; 1980 ; 148 >
-    au < exists ; exists ; 1980 ; British Dental Journal Volume 149 ; 1980 ; 149 >
-    au < exists ; exists ; 1981 ; British Dental Journal Volume 150 ; 1981 ; 150 >
-    au < exists ; exists ; 1981 ; British Dental Journal Volume 151 ; 1981 ; 151 >
-    au < exists ; exists ; 1982 ; British Dental Journal Volume 152 ; 1982 ; 152 >
-    au < exists ; exists ; 1982 ; British Dental Journal Volume 153 ; 1982 ; 153 >
-    au < exists ; exists ; 1983 ; British Dental Journal Volume 154 ; 1983 ; 154 >
-    au < exists ; exists ; 1983 ; British Dental Journal Volume 155 ; 1983 ; 155 >
-    au < exists ; exists ; 1984 ; British Dental Journal Volume 156 ; 1984 ; 156 >
-    au < exists ; exists ; 1984 ; British Dental Journal Volume 157 ; 1984 ; 157 >
-    au < exists ; exists ; 1985 ; British Dental Journal Volume 158 ; 1985 ; 158 >
-    au < exists ; exists ; 1985 ; British Dental Journal Volume 159 ; 1985 ; 159 >
-    au < exists ; exists ; 1986 ; British Dental Journal Volume 160 ; 1986 ; 160 >
-    au < exists ; exists ; 1986 ; British Dental Journal Volume 161 ; 1986 ; 161 >
-    au < exists ; exists ; 1987 ; British Dental Journal Volume 162 ; 1987 ; 162 >
-    au < exists ; exists ; 1987 ; British Dental Journal Volume 163 ; 1987 ; 163 >
-    au < exists ; exists ; 1988 ; British Dental Journal Volume 164 ; 1988 ; 164 >
-    au < exists ; exists ; 1988 ; British Dental Journal Volume 165 ; 1988 ; 165 >
-    au < exists ; exists ; 1989 ; British Dental Journal Volume 166 ; 1989 ; 166 >
-    au < exists ; exists ; 1989 ; British Dental Journal Volume 167 ; 1989 ; 167 >
-    au < exists ; exists ; 1990 ; British Dental Journal Volume 168 ; 1990 ; 168 >
-    au < exists ; exists ; 1990 ; British Dental Journal Volume 169 ; 1990 ; 169 >
-    au < exists ; exists ; 1991 ; British Dental Journal Volume 170 ; 1991 ; 170 >
-    au < exists ; exists ; 1991 ; British Dental Journal Volume 171 ; 1991 ; 171 >
-    au < exists ; exists ; 1992 ; British Dental Journal Volume 172 ; 1992 ; 172 >
-    au < exists ; exists ; 1992 ; British Dental Journal Volume 173 ; 1992 ; 173 >
-    au < exists ; exists ; 1993 ; British Dental Journal Volume 174 ; 1993 ; 174 >
-    au < exists ; exists ; 1993 ; British Dental Journal Volume 175 ; 1993 ; 175 >
-    au < exists ; exists ; 1994 ; British Dental Journal Volume 176 ; 1994 ; 176 >
-    au < exists ; exists ; 1994 ; British Dental Journal Volume 177 ; 1994 ; 177 >
-    au < exists ; exists ; 1995 ; British Dental Journal Volume 178 ; 1995 ; 178 >
-    au < exists ; exists ; 1995 ; British Dental Journal Volume 179 ; 1995 ; 179 >
-    au < exists ; exists ; 1996 ; British Dental Journal Volume 180 ; 1996 ; 180 >
-    au < exists ; exists ; 1996 ; British Dental Journal Volume 181 ; 1996 ; 181 >
-    au < exists ; exists ; 1997 ; British Dental Journal Volume 182 ; 1997 ; 182 >
-    au < exists ; exists ; 1997 ; British Dental Journal Volume 183 ; 1997 ; 183 >
-    au < exists ; exists ; 1998 ; British Dental Journal Volume 184 ; 1998 ; 184 >
-    au < exists ; exists ; 1998 ; British Dental Journal Volume 185 ; 1998 ; 185 >
-    au < exists ; exists ; 1999 ; British Dental Journal Volume 186 ; 1999 ; 186 >
-    au < exists ; exists ; 1999 ; British Dental Journal Volume 187 ; 1999 ; 187 >
-    au < exists ; exists ; 2000 ; British Dental Journal Volume 188 ; 2000 ; 188 >
-    au < exists ; exists ; 2000 ; British Dental Journal Volume 189 ; 2000 ; 189 >
-    au < exists ; exists ; 2001 ; British Dental Journal Volume 190 ; 2001 ; 190 >
-    au < exists ; exists ; 2001 ; British Dental Journal Volume 191 ; 2001 ; 191 >
-    au < exists ; exists ; 2002 ; British Dental Journal Volume 192 ; 2002 ; 192 >
-    au < exists ; exists ; 2002 ; British Dental Journal Volume 193 ; 2002 ; 193 >
-    au < exists ; exists ; 2003 ; British Dental Journal Volume 194 ; 2003 ; 194 >
-    au < exists ; exists ; 2003 ; British Dental Journal Volume 195 ; 2003 ; 195 >
-    au < exists ; exists ; 2004 ; British Dental Journal Volume 196 ; 2004 ; 196 >
-    au < exists ; exists ; 2004 ; British Dental Journal Volume 197 ; 2004 ; 197 >
-    au < exists ; exists ; 2005 ; British Dental Journal Volume 198 ; 2005 ; 198 >
-    au < exists ; exists ; 2005 ; British Dental Journal Volume 199 ; 2005 ; 199 >
-    au < exists ; exists ; 2006 ; British Dental Journal Volume 200 ; 2006 ; 200 >
-    au < exists ; exists ; 2006 ; British Dental Journal Volume 201 ; 2006 ; 201 >
-    au < exists ; exists ; 2007 ; British Dental Journal Volume 202 ; 2007 ; 202 >
-    au < exists ; exists ; 2007 ; British Dental Journal Volume 203 ; 2007 ; 203 >
-    au < exists ; exists ; 2008 ; British Dental Journal Volume 204 ; 2008 ; 204 >
-    au < exists ; exists ; 2008 ; British Dental Journal Volume 205 ; 2008 ; 205 >
-    au < exists ; exists ; 2009 ; British Dental Journal Volume 206 ; 2009 ; 206 >
-    au < exists ; exists ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 >
-    au < exists ; exists ; 2010 ; British Dental Journal Volume 208 ; 2010 ; 208 >
-    au < exists ; exists ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 >
-    au < exists ; exists ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 >
-    au < exists ; exists ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 >
-
+    au < superseded ; down ; 2010 ; Bone Marrow Transplantation Volume 46 [superseded] ; 2010 ; 46 >
+    au < released ; manifest ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 >
+    au < crawling ; exists ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 >
 
   }
 
@@ -265,6 +172,84 @@
     comment[clockss] = True
     comment[verify] = different website design?
 
+    au < manifest ; exists ; 1947 ; British Journal of Cancer Volume 1 ; 1947 ; 1 >
+    au < manifest ; exists ; 1948 ; British Journal of Cancer Volume 2 ; 1948 ; 2 >
+    au < manifest ; exists ; 1949 ; British Journal of Cancer Volume 3 ; 1949 ; 3 >
+    au < manifest ; exists ; 1950 ; British Journal of Cancer Volume 4 ; 1950 ; 4 >
+    au < manifest ; exists ; 1951 ; British Journal of Cancer Volume 5 ; 1951 ; 5 >
+    au < manifest ; exists ; 1952 ; British Journal of Cancer Volume 6 ; 1952 ; 6 >
+    au < manifest ; exists ; 1953 ; British Journal of Cancer Volume 7 ; 1953 ; 7 >
+    au < manifest ; exists ; 1954 ; British Journal of Cancer Volume 8 ; 1954 ; 8 >
+    au < manifest ; exists ; 1955 ; British Journal of Cancer Volume 9 ; 1955 ; 9 >
+    au < manifest ; exists ; 1956 ; British Journal of Cancer Volume 10 ; 1956 ; 10 >
+    au < manifest ; exists ; 1957 ; British Journal of Cancer Volume 11 ; 1957 ; 11 >
+    au < manifest ; exists ; 1958 ; British Journal of Cancer Volume 12 ; 1958 ; 12 >
+    au < manifest ; exists ; 1959 ; British Journal of Cancer Volume 13 ; 1959 ; 13 >
+    au < manifest ; exists ; 1960 ; British Journal of Cancer Volume 14 ; 1960 ; 14 >
+    au < manifest ; exists ; 1961 ; British Journal of Cancer Volume 15 ; 1961 ; 15 >
+    au < manifest ; exists ; 1962 ; British Journal of Cancer Volume 16 ; 1962 ; 16 >
+    au < manifest ; exists ; 1963 ; British Journal of Cancer Volume 17 ; 1963 ; 17 >
+    au < manifest ; exists ; 1964 ; British Journal of Cancer Volume 18 ; 1964 ; 18 >
+    au < manifest ; exists ; 1965 ; British Journal of Cancer Volume 19 ; 1965 ; 19 >
+    au < manifest ; exists ; 1966 ; British Journal of Cancer Volume 20 ; 1966 ; 20 >
+    au < manifest ; exists ; 1967 ; British Journal of Cancer Volume 21 ; 1967 ; 21 >
+    au < manifest ; exists ; 1968 ; British Journal of Cancer Volume 22 ; 1968 ; 22 >
+    au < manifest ; exists ; 1969 ; British Journal of Cancer Volume 23 ; 1969 ; 23 >
+    au < manifest ; exists ; 1970 ; British Journal of Cancer Volume 24 ; 1970 ; 24 >
+    au < manifest ; exists ; 1971 ; British Journal of Cancer Volume 25 ; 1971 ; 25 >
+    au < manifest ; exists ; 1972 ; British Journal of Cancer Volume 26 ; 1972 ; 26 >
+    au < manifest ; exists ; 1973 ; British Journal of Cancer Volume 27 ; 1973 ; 27 >
+    au < manifest ; exists ; 1973 ; British Journal of Cancer Volume 28 ; 1973 ; 28 >
+    au < manifest ; exists ; 1974 ; British Journal of Cancer Volume 29 ; 1974 ; 29 >
+    au < manifest ; exists ; 1974 ; British Journal of Cancer Volume 30 ; 1974 ; 30 >
+    au < manifest ; exists ; 1975 ; British Journal of Cancer Volume 31 ; 1975 ; 31 >
+    au < manifest ; exists ; 1975 ; British Journal of Cancer Volume 32 ; 1975 ; 32 >
+    au < manifest ; exists ; 1976 ; British Journal of Cancer Volume 33 ; 1976 ; 33 >
+    au < manifest ; exists ; 1976 ; British Journal of Cancer Volume 34 ; 1976 ; 34 >
+    au < manifest ; exists ; 1977 ; British Journal of Cancer Volume 35 ; 1977 ; 35 >
+    au < manifest ; exists ; 1977 ; British Journal of Cancer Volume 36 ; 1977 ; 36 >
+    au < manifest ; exists ; 1978 ; British Journal of Cancer Volume 37 ; 1978 ; 37 >
+    au < manifest ; exists ; 1978 ; British Journal of Cancer Volume 38 ; 1978 ; 38 >
+    au < manifest ; exists ; 1979 ; British Journal of Cancer Volume 39 ; 1979 ; 39 >
+    au < manifest ; exists ; 1979 ; British Journal of Cancer Volume 40 ; 1979 ; 40 >
+    au < manifest ; exists ; 1980 ; British Journal of Cancer Volume 41 ; 1980 ; 41 >
+    au < manifest ; exists ; 1980 ; British Journal of Cancer Volume 42 ; 1980 ; 42 >
+    au < manifest ; exists ; 1981 ; British Journal of Cancer Volume 43 ; 1981 ; 43 >
+    au < manifest ; exists ; 1981 ; British Journal of Cancer Volume 44 ; 1981 ; 44 >
+    au < manifest ; exists ; 1982 ; British Journal of Cancer Volume 45 ; 1982 ; 45 >
+    au < manifest ; exists ; 1982 ; British Journal of Cancer Volume 46 ; 1982 ; 46 >
+    au < manifest ; exists ; 1983 ; British Journal of Cancer Volume 47 ; 1983 ; 47 >
+    au < manifest ; exists ; 1983 ; British Journal of Cancer Volume 48 ; 1983 ; 48 >
+    au < manifest ; exists ; 1984 ; British Journal of Cancer Volume 49 ; 1984 ; 49 >
+    au < manifest ; exists ; 1984 ; British Journal of Cancer Volume 50 ; 1984 ; 50 >
+    au < manifest ; exists ; 1985 ; British Journal of Cancer Volume 51 ; 1985 ; 51 >
+    au < manifest ; exists ; 1985 ; British Journal of Cancer Volume 52 ; 1985 ; 52 >
+    au < manifest ; exists ; 1986 ; British Journal of Cancer Volume 53 ; 1986 ; 53 >
+    au < manifest ; exists ; 1986 ; British Journal of Cancer Volume 54 ; 1986 ; 54 >
+    au < manifest ; exists ; 1987 ; British Journal of Cancer Volume 55 ; 1987 ; 55 >
+    au < manifest ; exists ; 1987 ; British Journal of Cancer Volume 56 ; 1987 ; 56 >
+    au < manifest ; exists ; 1988 ; British Journal of Cancer Volume 57 ; 1988 ; 57 >
+    au < manifest ; exists ; 1988 ; British Journal of Cancer Volume 58 ; 1988 ; 58 >
+    au < manifest ; exists ; 1989 ; British Journal of Cancer Volume 59 ; 1989 ; 59 >
+    au < manifest ; exists ; 1989 ; British Journal of Cancer Volume 60 ; 1989 ; 60 >
+    au < manifest ; exists ; 1990 ; British Journal of Cancer Volume 61 ; 1990 ; 61 >
+    au < manifest ; exists ; 1990 ; British Journal of Cancer Volume 62 ; 1990 ; 62 >
+    au < manifest ; exists ; 1991 ; British Journal of Cancer Volume 63 ; 1991 ; 63 >
+    au < manifest ; exists ; 1991 ; British Journal of Cancer Volume 64 ; 1991 ; 64 >
+    au < manifest ; exists ; 1992 ; British Journal of Cancer Volume 65 ; 1992 ; 65 >
+    au < manifest ; exists ; 1992 ; British Journal of Cancer Volume 66 ; 1992 ; 66 >
+    au < manifest ; exists ; 1993 ; British Journal of Cancer Volume 67 ; 1993 ; 67 >
+    au < manifest ; exists ; 1993 ; British Journal of Cancer Volume 68 ; 1993 ; 68 >
+    au < manifest ; exists ; 1994 ; British Journal of Cancer Volume 69 ; 1994 ; 69 >
+    au < manifest ; exists ; 1994 ; British Journal of Cancer Volume 70 ; 1994 ; 70 >
+    au < manifest ; exists ; 1995 ; British Journal of Cancer Volume 71 ; 1995 ; 71 >
+    au < manifest ; exists ; 1995 ; British Journal of Cancer Volume 72 ; 1995 ; 72 >
+    au < manifest ; exists ; 1996 ; British Journal of Cancer Volume 73 ; 1996 ; 73 >
+    au < manifest ; exists ; 1996 ; British Journal of Cancer Volume 74 ; 1996 ; 74 >
+    au < manifest ; exists ; 1997 ; British Journal of Cancer Volume 75 ; 1997 ; 75 >
+    au < manifest ; exists ; 1997 ; British Journal of Cancer Volume 76 ; 1997 ; 76 >
+    au < manifest ; exists ; 1998 ; British Journal of Cancer Volume 77 ; 1998 ; 77 >
+    au < manifest ; exists ; 1998 ; British Journal of Cancer Volume 78 ; 1998 ; 78 >
     au < manifest ; exists ; 1999 ; British Journal of Cancer Volume 79 ; 1999 ; 79 >
     au < manifest ; exists ; 1999 ; British Journal of Cancer Volume 80 ; 1999 ; 80 >
     au < manifest ; exists ; 1999 ; British Journal of Cancer Volume 81 ; 1999 ; 81 >
@@ -290,8 +275,9 @@
     au < released ; crawling ; 2009 ; British Journal of Cancer Volume 101 ; 2009 ; 101 >
     au < released ; crawling ; 2010 ; British Journal of Cancer Volume 102 ; 2010 ; 102 >
     au < released ; crawling ; 2010 ; British Journal of Cancer Volume 103 ; 2010 ; 103 >
-    au < released ; manifest ; 2011 ; British Journal of Cancer Volume 104 ; 2011 ; 104 >
-    au < released ; manifest ; 2011 ; British Journal of Cancer Volume 105 ; 2011 ; 105 >
+    au < released ; crawling ; 2011 ; British Journal of Cancer Volume 104 ; 2011 ; 104 >
+    au < released ; crawling ; 2011 ; British Journal of Cancer Volume 105 ; 2011 ; 105 >
+    au < crawling ; exists ; 2012 ; British Journal of Cancer Volume 106 ; 2012 ; 106 >
 
   }
 
@@ -318,7 +304,8 @@
     au < released ; crawling ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; crawling ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Cancer Gene Therapy Volume 17 ; 2010 ; 17 >
-    au < released ; manifest ; 2011 ; Cancer Gene Therapy Volume 18 ; 2011 ; 18 >
+    au < released ; crawling ; 2011 ; Cancer Gene Therapy Volume 18 ; 2011 ; 18 >
+    au < crawling ; exists ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 >
 
   }
 
@@ -347,7 +334,8 @@
     au < released ; crawling ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
     au < released ; crawling ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Cell Death and Differentiation Volume 17 ; 2010 ; 17 >
-    au < released ; manifest ; 2011 ; Cell Death and Differentiation Volume 18 ; 2011 ; 18 >
+    au < released ; crawling ; 2011 ; Cell Death and Differentiation Volume 18 ; 2011 ; 18 >
+    au < crawling ; exists ; 2012 ; Cell Death and Differentiation Volume 19 ; 2012 ; 19 >
 
   }
 
@@ -362,10 +350,20 @@
 
     param[journal_id] = cr
 
+    au < manifest ; exists ; 1999 ; Cell Research Volume 9 ; 1999 ; 9 >
+    au < manifest ; exists ; 2000 ; Cell Research Volume 10 ; 2000 ; 10 >
+    au < manifest ; exists ; 2001 ; Cell Research Volume 11 ; 2001 ; 11 >
+    au < manifest ; exists ; 2002 ; Cell Research Volume 12 ; 2002 ; 12 >
+    au < manifest ; exists ; 2003 ; Cell Research Volume 13 ; 2003 ; 13 >
+    au < manifest ; exists ; 2004 ; Cell Research Volume 14 ; 2004 ; 14 >
+    au < manifest ; exists ; 2005 ; Cell Research Volume 15 ; 2005 ; 15 >
+    au < manifest ; exists ; 2006 ; Cell Research Volume 16 ; 2006 ; 16 >
+    au < manifest ; exists ; 2007 ; Cell Research Volume 17 ; 2007 ; 17 >
     au < released ; crawling ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
     au < released ; crawling ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
     au < released ; crawling ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 >
-    au < released ; manifest ; 2011 ; Cell Research Volume 21 ; 2011 ; 21 >
+    au < released ; crawling ; 2011 ; Cell Research Volume 21 ; 2011 ; 21 >
+    au < crawling ; exists ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 >
 
   }
 
@@ -380,10 +378,71 @@
 
     param[journal_id] = clpt
 
+    au < exists ; exists ; 1980 ; Clinical Pharmacology & Therapeutics Volume 27 ; 1980 ; 27 >
+    au < exists ; exists ; 1980 ; Clinical Pharmacology & Therapeutics Volume 28 ; 1980 ; 28 >
+    au < exists ; exists ; 1981 ; Clinical Pharmacology & Therapeutics Volume 29 ; 1981 ; 29 >
+    au < exists ; exists ; 1981 ; Clinical Pharmacology & Therapeutics Volume 30 ; 1981 ; 30 >
+    au < exists ; exists ; 1982 ; Clinical Pharmacology & Therapeutics Volume 31 ; 1982 ; 31 >
+    au < exists ; exists ; 1982 ; Clinical Pharmacology & Therapeutics Volume 32 ; 1982 ; 32 >
+    au < exists ; exists ; 1983 ; Clinical Pharmacology & Therapeutics Volume 33 ; 1983 ; 33 >
+    au < exists ; exists ; 1983 ; Clinical Pharmacology & Therapeutics Volume 34 ; 1983 ; 34 >
+    au < exists ; exists ; 1984 ; Clinical Pharmacology & Therapeutics Volume 35 ; 1984 ; 35 >
+    au < exists ; exists ; 1984 ; Clinical Pharmacology & Therapeutics Volume 36 ; 1984 ; 36 >
+    au < exists ; exists ; 1985 ; Clinical Pharmacology & Therapeutics Volume 37 ; 1985 ; 37 >
+    au < exists ; exists ; 1985 ; Clinical Pharmacology & Therapeutics Volume 38 ; 1985 ; 38 >
+    au < exists ; exists ; 1986 ; Clinical Pharmacology & Therapeutics Volume 39 ; 1986 ; 39 >
+    au < exists ; exists ; 1986 ; Clinical Pharmacology & Therapeutics Volume 40 ; 1986 ; 40 >
+    au < exists ; exists ; 1987 ; Clinical Pharmacology & Therapeutics Volume 41 ; 1987 ; 41 >
+    au < exists ; exists ; 1987 ; Clinical Pharmacology & Therapeutics Volume 42 ; 1987 ; 42 >
+    au < exists ; exists ; 1988 ; Clinical Pharmacology & Therapeutics Volume 43 ; 1988 ; 43 >
+    au < exists ; exists ; 1988 ; Clinical Pharmacology & Therapeutics Volume 44 ; 1988 ; 44 >
+    au < exists ; exists ; 1989 ; Clinical Pharmacology & Therapeutics Volume 45 ; 1989 ; 45 >
+    au < exists ; exists ; 1989 ; Clinical Pharmacology & Therapeutics Volume 46 ; 1989 ; 46 >
+    au < exists ; exists ; 1990 ; Clinical Pharmacology & Therapeutics Volume 47 ; 1990 ; 47 >
+    au < exists ; exists ; 1990 ; Clinical Pharmacology & Therapeutics Volume 48 ; 1990 ; 48 >
+    au < exists ; exists ; 1991 ; Clinical Pharmacology & Therapeutics Volume 49 ; 1991 ; 49 >
+    au < exists ; exists ; 1991 ; Clinical Pharmacology & Therapeutics Volume 50 ; 1991 ; 50 >
+    au < exists ; exists ; 1992 ; Clinical Pharmacology & Therapeutics Volume 51 ; 1992 ; 51 >
+    au < exists ; exists ; 1992 ; Clinical Pharmacology & Therapeutics Volume 52 ; 1992 ; 52 >
+    au < exists ; exists ; 1993 ; Clinical Pharmacology & Therapeutics Volume 53 ; 1993 ; 53 >
+    au < exists ; exists ; 1993 ; Clinical Pharmacology & Therapeutics Volume 54 ; 1993 ; 54 >
+    au < exists ; exists ; 1994 ; Clinical Pharmacology & Therapeutics Volume 55 ; 1994 ; 55 >
+    au < exists ; exists ; 1994 ; Clinical Pharmacology & Therapeutics Volume 56 ; 1994 ; 56 >
+    au < exists ; exists ; 1995 ; Clinical Pharmacology & Therapeutics Volume 57 ; 1995 ; 57 >
+    au < exists ; exists ; 1995 ; Clinical Pharmacology & Therapeutics Volume 58 ; 1995 ; 58 >
+    au < exists ; exists ; 1996 ; Clinical Pharmacology & Therapeutics Volume 59 ; 1996 ; 59 >
+    au < exists ; exists ; 1996 ; Clinical Pharmacology & Therapeutics Volume 60 ; 1996 ; 60 >
+    au < exists ; exists ; 1997 ; Clinical Pharmacology & Therapeutics Volume 61 ; 1997 ; 61 >
+    au < exists ; exists ; 1997 ; Clinical Pharmacology & Therapeutics Volume 62 ; 1997 ; 62 >
+    au < exists ; exists ; 1998 ; Clinical Pharmacology & Therapeutics Volume 63 ; 1998 ; 63 >
+    au < exists ; exists ; 1998 ; Clinical Pharmacology & Therapeutics Volume 64 ; 1998 ; 64 >
+    au < exists ; exists ; 1999 ; Clinical Pharmacology & Therapeutics Volume 65 ; 1999 ; 65 >
+    au < exists ; exists ; 1999 ; Clinical Pharmacology & Therapeutics Volume 66 ; 1999 ; 66 >
+    au < exists ; exists ; 2000 ; Clinical Pharmacology & Therapeutics Volume 67 ; 2000 ; 67 >
+    au < exists ; exists ; 2000 ; Clinical Pharmacology & Therapeutics Volume 68 ; 2000 ; 68 >
+    au < exists ; exists ; 2001 ; Clinical Pharmacology & Therapeutics Volume 69 ; 2001 ; 69 >
+    au < exists ; exists ; 2001 ; Clinical Pharmacology & Therapeutics Volume 70 ; 2001 ; 70 >
+    au < exists ; exists ; 2002 ; Clinical Pharmacology & Therapeutics Volume 71 ; 2002 ; 71 >
+    au < exists ; exists ; 2002 ; Clinical Pharmacology & Therapeutics Volume 72 ; 2002 ; 72 >
+    au < exists ; exists ; 2003 ; Clinical Pharmacology & Therapeutics Volume 73 ; 2003 ; 73 >
+    au < exists ; exists ; 2003 ; Clinical Pharmacology & Therapeutics Volume 74 ; 2003 ; 74 >
+    au < exists ; exists ; 2004 ; Clinical Pharmacology & Therapeutics Volume 75 ; 2004 ; 75 >
+    au < exists ; exists ; 2004 ; Clinical Pharmacology & Therapeutics Volume 76 ; 2004 ; 76 >
+    au < manifest ; exists ; 2005 ; Clinical Pharmacology & Therapeutics Volume 77 ; 2005 ; 77 >
+    au < manifest ; exists ; 2005 ; Clinical Pharmacology & Therapeutics Volume 78 ; 2005 ; 78 >
+    au < exists ; exists ; 2006 ; Clinical Pharmacology & Therapeutics Volume 79 ; 2006 ; 79 >
+    au < exists ; exists ; 2006 ; Clinical Pharmacology & Therapeutics Volume 80 ; 2006 ; 80 >
+    au < exists ; exists ; 2007 ; Clinical Pharmacology & Therapeutics Volume 81 ; 2007 ; 81 >
+    au < exists ; exists ; 2007 ; Clinical Pharmacology & Therapeutics Volume 82 ; 2007 ; 82 >
+    au < exists ; exists ; 2008 ; Clinical Pharmacology & Therapeutics Volume 83 ; 2008 ; 83 >
+    au < exists ; exists ; 2008 ; Clinical Pharmacology & Therapeutics Volume 84 ; 2008 ; 84 >
+    au < exists ; exists ; 2009 ; Clinical Pharmacology & Therapeutics Volume 85 ; 2009 ; 85 >
+    au < exists ; exists ; 2009 ; Clinical Pharmacology & Therapeutics Volume 86 ; 2009 ; 86 >
     au < released ; crawling ; 2010 ; Clinical Pharmacology & Therapeutics Volume 87 ; 2010 ; 87 >
-    au < manifest ; exists ; 2010 ; Clinical Pharmacology & Therapeutics Volume 88 ; 2010 ; 88 >
-    au < released ; manifest ; 2011 ; Clinical Pharmacology & Therapeutics Volume 89 ; 2011 ; 89 >
-    au < released ; manifest ; 2011 ; Clinical Pharmacology & Therapeutics Volume 90 ; 2011 ; 90 >
+    au < crawling ; exists ; 2010 ; Clinical Pharmacology & Therapeutics Volume 88 ; 2010 ; 88 >
+    au < released ; crawling ; 2011 ; Clinical Pharmacology & Therapeutics Volume 89 ; 2011 ; 89 >
+    au < released ; crawling ; 2011 ; Clinical Pharmacology & Therapeutics Volume 90 ; 2011 ; 90 >
+    au < crawling ; exists ; 2012 ; Clinical Pharmacology & Therapeutics Volume 91 ; 2012 ; 91 >
 
   }
 
@@ -412,7 +471,8 @@
     au < released ; crawling ; 2008 ; The EMBO Journal Volume 27 ; 2008 ; 27 >
     au < released ; crawling ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
     au < released ; crawling ; 2010 ; The EMBO Journal Volume 29 ; 2010 ; 29 >
-    au < released ; manifest ; 2011 ; The EMBO Journal Volume 30 ; 2011 ; 30 >
+    au < released ; crawling ; 2011 ; The EMBO Journal Volume 30 ; 2011 ; 30 >
+    au < crawling ; exists ; 2012 ; The EMBO Journal Volume 31 ; 2012 ; 31 >
 
   }
 
@@ -427,9 +487,19 @@
 
     param[journal_id] = embor
 
+    au < manifest ; exists ; 2000 ; EMBO Reports Volume 1 ; 2000 ; 1 >
+    au < manifest ; exists ; 2001 ; EMBO Reports Volume 2 ; 2001 ; 2 >
+    au < manifest ; exists ; 2002 ; EMBO Reports Volume 3 ; 2002 ; 3 >
+    au < manifest ; exists ; 2003 ; EMBO Reports Volume 4 ; 2003 ; 4 >
+    au < manifest ; exists ; 2004 ; EMBO Reports Volume 5 ; 2004 ; 5 >
+    au < manifest ; exists ; 2005 ; EMBO Reports Volume 6 ; 2005 ; 6 >
+    au < manifest ; exists ; 2006 ; EMBO Reports Volume 7 ; 2006 ; 7 >
+    au < manifest ; exists ; 2007 ; EMBO Reports Volume 8 ; 2007 ; 8 >
+    au < crawling ; exists ; 2008 ; EMBO Reports Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; EMBO Reports Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 >
-    au < released ; manifest ; 2011 ; EMBO Reports Volume 12 ; 2011 ; 12 >
+    au < released ; crawling ; 2011 ; EMBO Reports Volume 12 ; 2011 ; 12 >
+    au < crawling ; exists ; 2012 ; EMBO Reports Volume 13 ; 2012 ; 13 >
 
   }
 
@@ -458,7 +528,8 @@
     au < released ; crawling ; 2008 ; European Journal of Clinical Nutrition Volume 62 ; 2008 ; 62 >
     au < released ; crawling ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
     au < released ; crawling ; 2010 ; European Journal of Clinical Nutrition Volume 64 ; 2010 ; 64 >
-    au < released ; manifest ; 2011 ; European Journal of Clinical Nutrition Volume 65 ; 2011 ; 65 >
+    au < released ; crawling ; 2011 ; European Journal of Clinical Nutrition Volume 65 ; 2011 ; 65 >
+    au < crawling ; exists ; 2012 ; European Journal of Clinical Nutrition Volume 66 ; 2012 ; 66 >
 
   }
 
@@ -473,7 +544,21 @@
 
     param[journal_id] = ejhg
 
-    au < released ; manifest ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 >
+    au < manifest ; exists ; 1998 ; European Journal of Human Genetics Volume 6 ; 1998 ; 6 >
+    au < manifest ; exists ; 1999 ; European Journal of Human Genetics Volume 7 ; 1999 ; 7 >
+    au < manifest ; exists ; 2000 ; European Journal of Human Genetics Volume 8 ; 2000 ; 8 >
+    au < manifest ; exists ; 2001 ; European Journal of Human Genetics Volume 9 ; 2001 ; 9 >
+    au < manifest ; exists ; 2002 ; European Journal of Human Genetics Volume 10 ; 2002 ; 10 >
+    au < manifest ; exists ; 2003 ; European Journal of Human Genetics Volume 11 ; 2003 ; 11 >
+    au < manifest ; exists ; 2004 ; European Journal of Human Genetics Volume 12 ; 2004 ; 12 >
+    au < manifest ; exists ; 2005 ; European Journal of Human Genetics Volume 13 ; 2005 ; 13 >
+    au < manifest ; exists ; 2006 ; European Journal of Human Genetics Volume 14 ; 2006 ; 14 >
+    au < manifest ; exists ; 2007 ; European Journal of Human Genetics Volume 15 ; 2007 ; 15 >
+    au < crawling ; exists ; 2008 ; European Journal of Human Genetics Volume 16 ; 2008 ; 16 >
+    au < crawling ; exists ; 2009 ; European Journal of Human Genetics Volume 17 ; 2009 ; 17 >
+    au < crawling ; exists ; 2010 ; European Journal of Human Genetics Volume 18 ; 2010 ; 18 >
+    au < released ; crawling ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 >
+    au < crawling ; exists ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 >
 
   }
 
@@ -488,7 +573,20 @@
 
     param[journal_id] = ebd
 
-    au < released ; manifest ; 2011 ; Evidence-Based Dentistry Volume 12 ; 2011 ; 12 >
+    au < exists ; exists ; 1998 ; Evidence-Based Dentistry Volume 1 ; 1998 ; 1 >
+    au < exists ; exists ; 1999 ; Evidence-Based Dentistry Volume 1 ; 1999 ; 1 >
+    au < exists ; exists ; 2000 ; Evidence-Based Dentistry Volume 2 ; 2000 ; 2 >
+    au < exists ; exists ; 2002 ; Evidence-Based Dentistry Volume 3 ; 2002 ; 3 >
+    au < exists ; exists ; 2003 ; Evidence-Based Dentistry Volume 4 ; 2003 ; 4 >
+    au < exists ; exists ; 2004 ; Evidence-Based Dentistry Volume 5 ; 2004 ; 5 >
+    au < exists ; exists ; 2005 ; Evidence-Based Dentistry Volume 6 ; 2005 ; 6 >
+    au < exists ; exists ; 2006 ; Evidence-Based Dentistry Volume 7 ; 2006 ; 7 >
+    au < exists ; exists ; 2007 ; Evidence-Based Dentistry Volume 8 ; 2007 ; 8 >
+    au < exists ; exists ; 2008 ; Evidence-Based Dentistry Volume 9 ; 2008 ; 9 >
+    au < exists ; exists ; 2009 ; Evidence-Based Dentistry Volume 10 ; 2009 ; 10 >
+    au < exists ; exists ; 2010 ; Evidence-Based Dentistry Volume 11 ; 2010 ; 11 >
+    au < released ; crawling ; 2011 ; Evidence-Based Dentistry Volume 12 ; 2011 ; 12 >
+    au < crawling ; exists ; 2012 ; Evidence-Based Dentistry Volume 13 ; 2012 ; 13 >
 
   }
 
@@ -503,6 +601,21 @@
 
     param[journal_id] = eye
 
+    au < manifest ; exists ; 1987 ; Eye Volume 1 ; 1987 ; 1 >
+    au < manifest ; exists ; 1988 ; Eye Volume 2 ; 1988 ; 2 >
+    au < manifest ; exists ; 1989 ; Eye Volume 3 ; 1989 ; 3 >
+    au < manifest ; exists ; 1990 ; Eye Volume 4 ; 1990 ; 4 >
+    au < manifest ; exists ; 1991 ; Eye Volume 5 ; 1991 ; 5 >
+    au < manifest ; exists ; 1992 ; Eye Volume 6 ; 1992 ; 6 >
+    au < manifest ; exists ; 1993 ; Eye Volume 7 ; 1993 ; 7 >
+    au < manifest ; exists ; 1994 ; Eye Volume 8 ; 1994 ; 8 >
+    au < manifest ; exists ; 1995 ; Eye Volume 9 ; 1995 ; 9 >
+    au < manifest ; exists ; 1996 ; Eye Volume 10 ; 1996 ; 10 >
+    au < manifest ; exists ; 1997 ; Eye Volume 11 ; 1997 ; 11 >
+    au < manifest ; exists ; 1998 ; Eye Volume 12 ; 1998 ; 12 >
+    au < manifest ; exists ; 1999 ; Eye Volume 13 ; 1999 ; 13 >
+    au < manifest ; exists ; 2000 ; Eye Volume 14 ; 2000 ; 14 >
+    au < manifest ; exists ; 2001 ; Eye Volume 15 ; 2001 ; 15 >
     au < manifest ; exists ; 2002 ; Eye Volume 16 ; 2002 ; 16 >
     au < manifest ; exists ; 2003 ; Eye Volume 17 ; 2003 ; 17 >
     au < manifest ; exists ; 2004 ; Eye Volume 18 ; 2004 ; 18 >
@@ -512,7 +625,8 @@
     au < released ; crawling ; 2008 ; Eye Volume 22 ; 2008 ; 22 >
     au < released ; crawling ; 2009 ; Eye Volume 23 ; 2009 ; 23 >
     au < released ; crawling ; 2010 ; Eye Volume 24 ; 2010 ; 24 >
-    au < released ; manifest ; 2011 ; Eye Volume 25 ; 2011 ; 25 >
+    au < released ; crawling ; 2011 ; Eye Volume 25 ; 2011 ; 25 >
+    au < crawling ; exists ; 2012 ; Eye Volume 26 ; 2012 ; 26 >
 
   }
 
@@ -541,7 +655,8 @@
     au < released ; crawling ; 2008 ; Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; crawling ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Gene Therapy Volume 17 ; 2010 ; 17 >
-    au < released ; manifest ; 2011 ; Gene Therapy Volume 18 ; 2011 ; 18 >
+    au < released ; crawling ; 2011 ; Gene Therapy Volume 18 ; 2011 ; 18 >
+    au < crawling ; exists ; 2012 ; Gene Therapy Volume 19 ; 2012 ; 19 >
 
   }
 
@@ -567,7 +682,8 @@
     au < released ; crawling ; 2008 ; Genes and Immunity Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Genes and Immunity Volume 11 ; 2010 ; 11 >
-    au < released ; manifest ; 2011 ; Genes and Immunity Volume 12 ; 2011 ; 12 >
+    au < released ; crawling ; 2011 ; Genes and Immunity Volume 12 ; 2011 ; 12 >
+    au < crawling ; exists ; 2012 ; Genes and Immunity Volume 13 ; 2012 ; 13 >
 
   }
 
@@ -582,6 +698,83 @@
 
     param[journal_id] = hdy
 
+    au < manifest ; exists ; 1947 ; Heredity Volume 1 ; 1947 ; 1 >
+    au < manifest ; exists ; 1948 ; Heredity Volume 2 ; 1948 ; 2 >
+    au < manifest ; exists ; 1949 ; Heredity Volume 3 ; 1949 ; 3 >
+    au < manifest ; exists ; 1950 ; Heredity Volume 4 ; 1950 ; 4 >
+    au < manifest ; exists ; 1951 ; Heredity Volume 5 ; 1951 ; 5 >
+    au < manifest ; exists ; 1952 ; Heredity Volume 6 ; 1952 ; 6 >
+    au < manifest ; exists ; 1953 ; Heredity Volume 7 ; 1953 ; 7 >
+    au < manifest ; exists ; 1954 ; Heredity Volume 8 ; 1954 ; 8 >
+    au < manifest ; exists ; 1955 ; Heredity Volume 9 ; 1955 ; 9 >
+    au < manifest ; exists ; 1956 ; Heredity Volume 10 ; 1956 ; 10 >
+    au < manifest ; exists ; 1957 ; Heredity Volume 11 ; 1957 ; 11 >
+    au < manifest ; exists ; 1958 ; Heredity Volume 12 ; 1958 ; 12 >
+    au < manifest ; exists ; 1959 ; Heredity Volume 13 ; 1959 ; 13 >
+    au < manifest ; exists ; 1960 ; Heredity Volume 14 ; 1960 ; 14 >
+    au < manifest ; exists ; 1960 ; Heredity Volume 15 ; 1960 ; 15 >
+    au < manifest ; exists ; 1961 ; Heredity Volume 16 ; 1961 ; 16 >
+    au < manifest ; exists ; 1962 ; Heredity Volume 17 ; 1962 ; 17 >
+    au < manifest ; exists ; 1963 ; Heredity Volume 18 ; 1963 ; 18 >
+    au < manifest ; exists ; 1964 ; Heredity Volume 19 ; 1964 ; 19 >
+    au < manifest ; exists ; 1965 ; Heredity Volume 20 ; 1965 ; 20 >
+    au < manifest ; exists ; 1966 ; Heredity Volume 21 ; 1966 ; 21 >
+    au < manifest ; exists ; 1967 ; Heredity Volume 22 ; 1967 ; 22 >
+    au < manifest ; exists ; 1968 ; Heredity Volume 23 ; 1968 ; 23 >
+    au < manifest ; exists ; 1969 ; Heredity Volume 24 ; 1969 ; 24 >
+    au < manifest ; exists ; 1970 ; Heredity Volume 25 ; 1970 ; 25 >
+    au < manifest ; exists ; 1971 ; Heredity Volume 26 ; 1971 ; 26 >
+    au < manifest ; exists ; 1971 ; Heredity Volume 27 ; 1971 ; 27 >
+    au < manifest ; exists ; 1972 ; Heredity Volume 28 ; 1972 ; 28 >
+    au < manifest ; exists ; 1972 ; Heredity Volume 29 ; 1972 ; 29 >
+    au < manifest ; exists ; 1973 ; Heredity Volume 30 ; 1973 ; 30 >
+    au < manifest ; exists ; 1973 ; Heredity Volume 31 ; 1973 ; 31 >
+    au < manifest ; exists ; 1974 ; Heredity Volume 32 ; 1974 ; 32 >
+    au < manifest ; exists ; 1974 ; Heredity Volume 33 ; 1974 ; 33 >
+    au < manifest ; exists ; 1975 ; Heredity Volume 34 ; 1975 ; 34 >
+    au < manifest ; exists ; 1975 ; Heredity Volume 35 ; 1975 ; 35 >
+    au < manifest ; exists ; 1976 ; Heredity Volume 36 ; 1976 ; 36 >
+    au < manifest ; exists ; 1976 ; Heredity Volume 37 ; 1976 ; 37 >
+    au < manifest ; exists ; 1977 ; Heredity Volume 38 ; 1977 ; 38 >
+    au < manifest ; exists ; 1977 ; Heredity Volume 39 ; 1977 ; 39 >
+    au < manifest ; exists ; 1978 ; Heredity Volume 40 ; 1978 ; 40 >
+    au < manifest ; exists ; 1978 ; Heredity Volume 41 ; 1978 ; 41 >
+    au < manifest ; exists ; 1979 ; Heredity Volume 42 ; 1979 ; 42 >
+    au < manifest ; exists ; 1979 ; Heredity Volume 43 ; 1979 ; 43 >
+    au < manifest ; exists ; 1980 ; Heredity Volume 44 ; 1980 ; 44 >
+    au < manifest ; exists ; 1980 ; Heredity Volume 45 ; 1980 ; 45 >
+    au < manifest ; exists ; 1981 ; Heredity Volume 46 ; 1981 ; 46 >
+    au < manifest ; exists ; 1981 ; Heredity Volume 47 ; 1981 ; 47 >
+    au < manifest ; exists ; 1982 ; Heredity Volume 48 ; 1982 ; 48 >
+    au < manifest ; exists ; 1982 ; Heredity Volume 49 ; 1982 ; 49 >
+    au < manifest ; exists ; 1983 ; Heredity Volume 50 ; 1983 ; 50 >
+    au < manifest ; exists ; 1983 ; Heredity Volume 51 ; 1983 ; 51 >
+    au < manifest ; exists ; 1984 ; Heredity Volume 52 ; 1984 ; 52 >
+    au < manifest ; exists ; 1984 ; Heredity Volume 53 ; 1984 ; 53 >
+    au < manifest ; exists ; 1985 ; Heredity Volume 54 ; 1985 ; 54 >
+    au < manifest ; exists ; 1985 ; Heredity Volume 55 ; 1985 ; 55 >
+    au < manifest ; exists ; 1986 ; Heredity Volume 56 ; 1986 ; 56 >
+    au < manifest ; exists ; 1986 ; Heredity Volume 57 ; 1986 ; 57 >
+    au < manifest ; exists ; 1987 ; Heredity Volume 58 ; 1987 ; 58 >
+    au < manifest ; exists ; 1987 ; Heredity Volume 59 ; 1987 ; 59 >
+    au < manifest ; exists ; 1988 ; Heredity Volume 60 ; 1988 ; 60 >
+    au < manifest ; exists ; 1988 ; Heredity Volume 61 ; 1988 ; 61 >
+    au < manifest ; exists ; 1989 ; Heredity Volume 62 ; 1989 ; 62 >
+    au < manifest ; exists ; 1989 ; Heredity Volume 63 ; 1989 ; 63 >
+    au < manifest ; exists ; 1990 ; Heredity Volume 64 ; 1990 ; 64 >
+    au < manifest ; exists ; 1990 ; Heredity Volume 65 ; 1990 ; 65 >
+    au < manifest ; exists ; 1991 ; Heredity Volume 66 ; 1991 ; 66 >
+    au < manifest ; exists ; 1991 ; Heredity Volume 67 ; 1991 ; 67 >
+    au < manifest ; exists ; 1992 ; Heredity Volume 68 ; 1992 ; 68 >
+    au < manifest ; exists ; 1992 ; Heredity Volume 69 ; 1992 ; 69 >
+    au < manifest ; exists ; 1993 ; Heredity Volume 70 ; 1993 ; 70 >
+    au < manifest ; exists ; 1993 ; Heredity Volume 71 ; 1993 ; 71 >
+    au < manifest ; exists ; 1994 ; Heredity Volume 72 ; 1994 ; 72 >
+    au < manifest ; exists ; 1994 ; Heredity Volume 73 ; 1994 ; 73 >
+    au < manifest ; exists ; 1995 ; Heredity Volume 74 ; 1995 ; 74 >
+    au < manifest ; exists ; 1995 ; Heredity Volume 75 ; 1995 ; 75 >
+    au < manifest ; exists ; 1996 ; Heredity Volume 76 ; 1996 ; 76 >
+    au < manifest ; exists ; 1996 ; Heredity Volume 77 ; 1996 ; 77 >
     au < manifest ; exists ; 1997 ; Heredity Volume 78 ; 1997 ; 78 >
     au < manifest ; exists ; 1997 ; Heredity Volume 79 ; 1997 ; 79 >
     au < manifest ; exists ; 1998 ; Heredity Volume 80 ; 1998 ; 80 >
@@ -610,8 +803,9 @@
     au < released ; crawling ; 2009 ; Heredity Volume 103 ; 2009 ; 103 >
     au < released ; crawling ; 2010 ; Heredity Volume 104 ; 2010 ; 104 >
     au < released ; crawling ; 2010 ; Heredity Volume 105 ; 2010 ; 105 >
-    au < released ; manifest ; 2011 ; Heredity Volume 106 ; 2011 ; 106 >
-    au < released ; manifest ; 2011 ; Heredity Volume 107 ; 2011 ; 107 >
+    au < released ; crawling ; 2011 ; Heredity Volume 106 ; 2011 ; 106 >
+    au < released ; crawling ; 2011 ; Heredity Volume 107 ; 2011 ; 107 >
+    au < crawling ; exists ; 2012 ; Heredity Volume 108 ; 2012 ; 108 >
 
   }
 
@@ -632,8 +826,9 @@
     au < released ; crawling ; 2008 ; Hypertension Research Volume 31 ; 2008 ; 31 >
     au < released ; crawling ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
     au < released ; crawling ; 2010 ; Hypertension Research Volume 33 ; 2010 ; 33 >
-    au < released ; manifest ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 >
-    
+    au < released ; crawling ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 >
+    au < crawling ; exists ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 >
+
   }
 
   {
@@ -647,10 +842,96 @@
 
     param[journal_id] = icb
 
+    au < manifest ; exists ; 1924 ; Australian Journal of Experimental Biology and Medical Science Volume 1 ; 1924 ; 1 >
+    au < manifest ; exists ; 1925 ; Australian Journal of Experimental Biology and Medical Science Volume 2 ; 1925 ; 2 >
+    au < manifest ; exists ; 1926 ; Australian Journal of Experimental Biology and Medical Science Volume 3 ; 1926 ; 3 >
+    au < manifest ; exists ; 1927 ; Australian Journal of Experimental Biology and Medical Science Volume 4 ; 1927 ; 4 >
+    au < manifest ; exists ; 1928 ; Australian Journal of Experimental Biology and Medical Science Volume 5 ; 1928 ; 5 >
+    au < manifest ; exists ; 1929 ; Australian Journal of Experimental Biology and Medical Science Volume 6 ; 1929 ; 6 >
+    au < manifest ; exists ; 1930 ; Australian Journal of Experimental Biology and Medical Science Volume 7 ; 1930 ; 7 >
+    au < manifest ; exists ; 1931 ; Australian Journal of Experimental Biology and Medical Science Volume 8 ; 1931 ; 8 >
+    au < manifest ; exists ; 1932 ; Australian Journal of Experimental Biology and Medical Science Volume 9 ; 1932 ; 9 >
+    au < manifest ; exists ; 1932 ; Australian Journal of Experimental Biology and Medical Science Volume 10 ; 1932 ; 10 >
+    au < manifest ; exists ; 1933 ; Australian Journal of Experimental Biology and Medical Science Volume 11 ; 1933 ; 11 >
+    au < manifest ; exists ; 1934 ; Australian Journal of Experimental Biology and Medical Science Volume 12 ; 1934 ; 12 >
+    au < manifest ; exists ; 1935 ; Australian Journal of Experimental Biology and Medical Science Volume 13 ; 1935 ; 13 >
+    au < manifest ; exists ; 1936 ; Australian Journal of Experimental Biology and Medical Science Volume 14 ; 1936 ; 14 >
+    au < manifest ; exists ; 1937 ; Australian Journal of Experimental Biology and Medical Science Volume 15 ; 1937 ; 15 >
+    au < manifest ; exists ; 1938 ; Australian Journal of Experimental Biology and Medical Science Volume 16 ; 1938 ; 16 >
+    au < manifest ; exists ; 1939 ; Australian Journal of Experimental Biology and Medical Science Volume 17 ; 1939 ; 17 >
+    au < manifest ; exists ; 1940 ; Australian Journal of Experimental Biology and Medical Science Volume 18 ; 1940 ; 18 >
+    au < manifest ; exists ; 1941 ; Australian Journal of Experimental Biology and Medical Science Volume 19 ; 1941 ; 19 >
+    au < manifest ; exists ; 1942 ; Australian Journal of Experimental Biology and Medical Science Volume 20 ; 1942 ; 20 >
+    au < manifest ; exists ; 1943 ; Australian Journal of Experimental Biology and Medical Science Volume 21 ; 1943 ; 21 >
+    au < manifest ; exists ; 1944 ; Australian Journal of Experimental Biology and Medical Science Volume 22 ; 1944 ; 22 >
+    au < manifest ; exists ; 1945 ; Australian Journal of Experimental Biology and Medical Science Volume 23 ; 1945 ; 23 >
+    au < manifest ; exists ; 1946 ; Australian Journal of Experimental Biology and Medical Science Volume 24 ; 1946 ; 24 >
+    au < manifest ; exists ; 1947 ; Australian Journal of Experimental Biology and Medical Science Volume 25 ; 1947 ; 25 >
+    au < manifest ; exists ; 1948 ; Australian Journal of Experimental Biology and Medical Science Volume 26 ; 1948 ; 26 >
+    au < manifest ; exists ; 1949 ; Australian Journal of Experimental Biology and Medical Science Volume 27 ; 1949 ; 27 >
+    au < manifest ; exists ; 1950 ; Australian Journal of Experimental Biology and Medical Science Volume 28 ; 1950 ; 28 >
+    au < manifest ; exists ; 1951 ; Australian Journal of Experimental Biology and Medical Science Volume 29 ; 1951 ; 29 >
+    au < manifest ; exists ; 1952 ; Australian Journal of Experimental Biology and Medical Science Volume 30 ; 1952 ; 30 >
+    au < manifest ; exists ; 1953 ; Australian Journal of Experimental Biology and Medical Science Volume 31 ; 1953 ; 31 >
+    au < manifest ; exists ; 1954 ; Australian Journal of Experimental Biology and Medical Science Volume 32 ; 1954 ; 32 >
+    au < manifest ; exists ; 1955 ; Australian Journal of Experimental Biology and Medical Science Volume 33 ; 1955 ; 33 >
+    au < manifest ; exists ; 1956 ; Australian Journal of Experimental Biology and Medical Science Volume 34 ; 1956 ; 34 >
+    au < manifest ; exists ; 1957 ; Australian Journal of Experimental Biology and Medical Science Volume 35 ; 1957 ; 35 >
+    au < manifest ; exists ; 1958 ; Australian Journal of Experimental Biology and Medical Science Volume 36 ; 1958 ; 36 >
+    au < manifest ; exists ; 1959 ; Australian Journal of Experimental Biology and Medical Science Volume 37 ; 1959 ; 37 >
+    au < manifest ; exists ; 1960 ; Australian Journal of Experimental Biology and Medical Science Volume 38 ; 1960 ; 38 >
+    au < manifest ; exists ; 1961 ; Australian Journal of Experimental Biology and Medical Science Volume 39 ; 1961 ; 39 >
+    au < manifest ; exists ; 1962 ; Australian Journal of Experimental Biology and Medical Science Volume 40 ; 1962 ; 40 >
+    au < manifest ; exists ; 1963 ; Australian Journal of Experimental Biology and Medical Science Volume 41 ; 1963 ; 41 >
+    au < manifest ; exists ; 1964 ; Australian Journal of Experimental Biology and Medical Science Volume 42 ; 1964 ; 42 >
+    au < manifest ; exists ; 1965 ; Australian Journal of Experimental Biology and Medical Science Volume 43 ; 1965 ; 43 >
+    au < manifest ; exists ; 1966 ; Australian Journal of Experimental Biology and Medical Science Volume 44 ; 1966 ; 44 >
+    au < manifest ; exists ; 1967 ; Australian Journal of Experimental Biology and Medical Science Volume 45 ; 1967 ; 45 >
+    au < manifest ; exists ; 1968 ; Australian Journal of Experimental Biology and Medical Science Volume 46 ; 1968 ; 46 >
+    au < manifest ; exists ; 1969 ; Australian Journal of Experimental Biology and Medical Science Volume 47 ; 1969 ; 47 >
+    au < manifest ; exists ; 1970 ; Australian Journal of Experimental Biology and Medical Science Volume 48 ; 1970 ; 48 >
+    au < manifest ; exists ; 1971 ; Australian Journal of Experimental Biology and Medical Science Volume 49 ; 1971 ; 49 >
+    au < manifest ; exists ; 1972 ; Australian Journal of Experimental Biology and Medical Science Volume 50 ; 1972 ; 50 >
+    au < manifest ; exists ; 1973 ; Australian Journal of Experimental Biology and Medical Science Volume 51 ; 1973 ; 51 >
+    au < manifest ; exists ; 1974 ; Australian Journal of Experimental Biology and Medical Science Volume 52 ; 1974 ; 52 >
+    au < manifest ; exists ; 1975 ; Australian Journal of Experimental Biology and Medical Science Volume 53 ; 1975 ; 53 >
+    au < manifest ; exists ; 1976 ; Australian Journal of Experimental Biology and Medical Science Volume 54 ; 1976 ; 54 >
+    au < manifest ; exists ; 1977 ; Australian Journal of Experimental Biology and Medical Science Volume 55 ; 1977 ; 55 >
+    au < manifest ; exists ; 1978 ; Australian Journal of Experimental Biology and Medical Science Volume 56 ; 1978 ; 56 >
+    au < manifest ; exists ; 1979 ; Australian Journal of Experimental Biology and Medical Science Volume 57 ; 1979 ; 57 >
+    au < manifest ; exists ; 1980 ; Australian Journal of Experimental Biology and Medical Science Volume 58 ; 1980 ; 58 >
+    au < manifest ; exists ; 1981 ; Australian Journal of Experimental Biology and Medical Science Volume 59 ; 1981 ; 59 >
+    au < manifest ; exists ; 1982 ; Australian Journal of Experimental Biology and Medical Science Volume 60 ; 1982 ; 60 >
+    au < manifest ; exists ; 1983 ; Australian Journal of Experimental Biology and Medical Science Volume 61 ; 1983 ; 61 >
+    au < manifest ; exists ; 1984 ; Australian Journal of Experimental Biology and Medical Science Volume 62 ; 1984 ; 62 >
+    au < manifest ; exists ; 1985 ; Australian Journal of Experimental Biology and Medical Science Volume 63 ; 1985 ; 63 >
+    au < manifest ; exists ; 1986 ; Australian Journal of Experimental Biology and Medical Science Volume 64 ; 1986 ; 64 >
+    au < manifest ; exists ; 1987 ; Immunology & Cell Biology Volume 65 ; 1987 ; 65 >
+    au < manifest ; exists ; 1988 ; Immunology & Cell Biology Volume 66 ; 1988 ; 66 >
+    au < manifest ; exists ; 1989 ; Immunology & Cell Biology Volume 67 ; 1989 ; 67 >
+    au < manifest ; exists ; 1990 ; Immunology & Cell Biology Volume 68 ; 1990 ; 68 >
+    au < manifest ; exists ; 1991 ; Immunology & Cell Biology Volume 69 ; 1991 ; 69 >
+    au < manifest ; exists ; 1992 ; Immunology & Cell Biology Volume 70 ; 1992 ; 70 >
+    au < manifest ; exists ; 1993 ; Immunology & Cell Biology Volume 71 ; 1993 ; 71 >
+    au < manifest ; exists ; 1994 ; Immunology & Cell Biology Volume 72 ; 1994 ; 72 >
+    au < manifest ; exists ; 1995 ; Immunology & Cell Biology Volume 73 ; 1995 ; 73 >
+    au < manifest ; exists ; 1996 ; Immunology & Cell Biology Volume 74 ; 1996 ; 74 >
+    au < manifest ; exists ; 1997 ; Immunology & Cell Biology Volume 75 ; 1997 ; 75 >
+    au < manifest ; exists ; 1998 ; Immunology & Cell Biology Volume 76 ; 1998 ; 76 >
+    au < manifest ; exists ; 1999 ; Immunology & Cell Biology Volume 77 ; 1999 ; 77 >
+    au < manifest ; exists ; 2000 ; Immunology & Cell Biology Volume 78 ; 2000 ; 78 >
+    au < manifest ; exists ; 2001 ; Immunology & Cell Biology Volume 79 ; 2001 ; 79 >
+    au < manifest ; exists ; 2002 ; Immunology & Cell Biology Volume 80 ; 2002 ; 80 >
+    au < manifest ; exists ; 2003 ; Immunology & Cell Biology Volume 81 ; 2003 ; 81 >
+    au < manifest ; exists ; 2004 ; Immunology & Cell Biology Volume 82 ; 2004 ; 82 >
+    au < manifest ; exists ; 2005 ; Immunology & Cell Biology Volume 83 ; 2005 ; 83 >
+    au < manifest ; exists ; 2006 ; Immunology & Cell Biology Volume 84 ; 2006 ; 84 >
+    au < manifest ; exists ; 2007 ; Immunology & Cell Biology Volume 85 ; 2007 ; 85 >
     au < released ; crawling ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 >
     au < released ; crawling ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
     au < released ; crawling ; 2010 ; Immunology & Cell Biology Volume 88 ; 2010 ; 88 >
-    au < released ; manifest ; 2011 ; Immunology & Cell Biology Volume 89 ; 2011 ; 89 >
+    au < released ; crawling ; 2011 ; Immunology & Cell Biology Volume 89 ; 2011 ; 89 >
+    au < crawling ; exists ; 2012 ; Immunology & Cell Biology Volume 90 ; 2012 ; 90 >
 
   }
 
@@ -679,7 +960,8 @@
     au < released ; crawling ; 2008 ; International Journal of Impotence Research Volume 20 ; 2008 ; 20 >
     au < released ; crawling ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
     au < released ; crawling ; 2010 ; International Journal of Impotence Research Volume 22 ; 2010 ; 22 >
-    au < released ; manifest ; 2011 ; International Journal of Impotence Research Volume 23 ; 2011 ; 23 >
+    au < released ; crawling ; 2011 ; International Journal of Impotence Research Volume 23 ; 2011 ; 23 >
+    au < crawling ; exists ; 2012 ; International Journal of Impotence Research Volume 24 ; 2012 ; 24 >
 
   }
 
@@ -708,7 +990,8 @@
     au < released ; crawling ; 2008 ; International Journal of Obesity Volume 32 ; 2008 ; 32 >
     au < released ; crawling ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
     au < released ; crawling ; 2010 ; International Journal of Obesity Volume 34 ; 2010 ; 34 >
-    au < released ; manifest ; 2011 ; International Journal of Obesity Volume 35 ; 2011 ; 35 >
+    au < released ; crawling ; 2011 ; International Journal of Obesity Volume 35 ; 2011 ; 35 >
+    au < crawling ; exists ; 2012 ; International Journal of Obesity Volume 36 ; 2012 ; 36 >
 
   }
 
@@ -723,7 +1006,12 @@
 
     param[journal_id] = ismej
 
-    au < released ; manifest ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 >
+    au < manifest ; exists ; 2007 ; The ISME Journal Volume 1 ; 2007 ; 1 >
+    au < crawling ; exists ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 >
+    au < crawling ; exists ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 >
+    au < crawling ; exists ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 >
+    au < released ; crawling ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 >
+    au < crawling ; exists ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 >
 
   }
 
@@ -738,7 +1026,20 @@
 
     param[journal_id] = jidsp
 
-	comment[jidsp] = missing manifest pages
+    au < exists ; exists ; 1997 ; JID Symposium Proceedings Volume 2 ; 1997 ; 2 >
+    au < exists ; exists ; 1998 ; JID Symposium Proceedings Volume 3 ; 1998 ; 3 >
+    au < exists ; exists ; 1999 ; JID Symposium Proceedings Volume 4 ; 1999 ; 4 >
+    au < exists ; exists ; 2000 ; JID Symposium Proceedings Volume 5 ; 2000 ; 5 >
+    au < exists ; exists ; 2001 ; JID Symposium Proceedings Volume 6 ; 2001 ; 6 >
+    au < exists ; exists ; 2002 ; JID Symposium Proceedings Volume 7 ; 2002 ; 7 >
+    au < exists ; exists ; 2003 ; JID Symposium Proceedings Volume 8 ; 2003 ; 8 >
+    au < exists ; exists ; 2004 ; JID Symposium Proceedings Volume 9 ; 2004 ; 9 >
+    au < exists ; exists ; 2005 ; JID Symposium Proceedings Volume 10 ; 2005 ; 10 >
+    au < exists ; exists ; 2006 ; JID Symposium Proceedings Volume 11 ; 2006 ; 11 >
+    au < exists ; exists ; 2007 ; JID Symposium Proceedings Volume 12 ; 2007 ; 12 >
+    au < exists ; exists ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 >
+    au < exists ; exists ; 2009 ; JID Symposium Proceedings Volume 14 ; 2009 ; 14 >
+    au < exists ; exists ; 2010 ; JID Symposium Proceedings Volume 15 ; 2010 ; 15 >
 	
   }
 
@@ -759,7 +1060,8 @@
     au < released ; crawling ; 2008 ; The Journal of Antibiotics Volume 61 ; 2008 ; 61 >
     au < released ; crawling ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
     au < released ; crawling ; 2010 ; The Journal of Antibiotics Volume 63 ; 2010 ; 63 >
-    au < released ; manifest ; 2011 ; The Journal of Antibiotics Volume 64 ; 2011 ; 64 >
+    au < released ; crawling ; 2011 ; The Journal of Antibiotics Volume 64 ; 2011 ; 64 >
+    au < crawling ; exists ; 2012 ; The Journal of Antibiotics Volume 65 ; 2012 ; 65 >
 
   }
 
@@ -773,8 +1075,41 @@
     >
 
     param[journal_id] = jcbfm
+    
+    comment[notReady] = ingest3 Rice does not have access to http://www.nature.com/jcbfm/journal/v31/n12/full/jcbfm2011137a.html
 
-    au < testing ; exists ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
+    au < exists ; exists ; 1981 ; Journal of Cerebral Blood Flow and Metabolism Volume 1 ; 1981 ; 1 >
+    au < exists ; exists ; 1982 ; Journal of Cerebral Blood Flow and Metabolism Volume 2 ; 1982 ; 2 >
+    au < exists ; exists ; 1983 ; Journal of Cerebral Blood Flow and Metabolism Volume 3 ; 1983 ; 3 >
+    au < exists ; exists ; 1984 ; Journal of Cerebral Blood Flow and Metabolism Volume 4 ; 1984 ; 4 >
+    au < exists ; exists ; 1985 ; Journal of Cerebral Blood Flow and Metabolism Volume 5 ; 1985 ; 5 >
+    au < exists ; exists ; 1986 ; Journal of Cerebral Blood Flow and Metabolism Volume 6 ; 1986 ; 6 >
+    au < manifest ; exists ; 1987 ; Journal of Cerebral Blood Flow and Metabolism Volume 7 ; 1987 ; 7 >
+    au < exists ; exists ; 1988 ; Journal of Cerebral Blood Flow and Metabolism Volume 8 ; 1988 ; 8 >
+    au < exists ; exists ; 1989 ; Journal of Cerebral Blood Flow and Metabolism Volume 9 ; 1989 ; 9 >
+    au < exists ; exists ; 1990 ; Journal of Cerebral Blood Flow and Metabolism Volume 10 ; 1990 ; 10 >
+    au < exists ; exists ; 1991 ; Journal of Cerebral Blood Flow and Metabolism Volume 11 ; 1991 ; 11 >
+    au < exists ; exists ; 1992 ; Journal of Cerebral Blood Flow and Metabolism Volume 12 ; 1992 ; 12 >
+    au < exists ; exists ; 1993 ; Journal of Cerebral Blood Flow and Metabolism Volume 13 ; 1993 ; 13 >
+    au < exists ; exists ; 1994 ; Journal of Cerebral Blood Flow and Metabolism Volume 14 ; 1994 ; 14 >
+    au < manifest ; exists ; 1995 ; Journal of Cerebral Blood Flow and Metabolism Volume 15 ; 1995 ; 15 >
+    au < exists ; exists ; 1996 ; Journal of Cerebral Blood Flow and Metabolism Volume 16 ; 1996 ; 16 >
+    au < exists ; exists ; 1997 ; Journal of Cerebral Blood Flow and Metabolism Volume 17 ; 1997 ; 17 >
+    au < exists ; exists ; 1998 ; Journal of Cerebral Blood Flow and Metabolism Volume 18 ; 1998 ; 18 >
+    au < exists ; exists ; 1999 ; Journal of Cerebral Blood Flow and Metabolism Volume 19 ; 1999 ; 19 >
+    au < exists ; exists ; 2000 ; Journal of Cerebral Blood Flow and Metabolism Volume 20 ; 2000 ; 20 >
+    au < exists ; exists ; 2001 ; Journal of Cerebral Blood Flow and Metabolism Volume 21 ; 2001 ; 21 >
+    au < exists ; exists ; 2002 ; Journal of Cerebral Blood Flow and Metabolism Volume 22 ; 2002 ; 22 >
+    au < exists ; exists ; 2003 ; Journal of Cerebral Blood Flow and Metabolism Volume 23 ; 2003 ; 23 >
+    au < exists ; exists ; 2004 ; Journal of Cerebral Blood Flow and Metabolism Volume 24 ; 2004 ; 24 >
+    au < exists ; exists ; 2005 ; Journal of Cerebral Blood Flow and Metabolism Volume 25 ; 2005 ; 25 >
+    au < exists ; exists ; 2006 ; Journal of Cerebral Blood Flow and Metabolism Volume 26 ; 2006 ; 26 >
+    au < exists ; exists ; 2007 ; Journal of Cerebral Blood Flow and Metabolism Volume 27 ; 2007 ; 27 >
+    au < exists ; exists ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 >
+    au < crawling ; exists ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 >
+    au < exists ; exists ; 2010 ; Journal of Cerebral Blood Flow and Metabolism Volume 30 ; 2010 ; 30 >
+    au < notReady ; exists ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
+    au < crawling ; exists ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 >
 
   }
 
@@ -791,12 +1126,20 @@
 
     comment[19] = Stubburn lack of consensus in issue 6, almost at agreement threshold
 
+    au < exists ; exists ; 1999 ; Journal of Exposure Science and Environmental Epidemiology Volume 9 ; 1999 ; 9 >
+    au < exists ; exists ; 2000 ; Journal of Exposure Science and Environmental Epidemiology Volume 10 ; 2000 ; 10 >
+    au < exists ; exists ; 2001 ; Journal of Exposure Science and Environmental Epidemiology Volume 11 ; 2001 ; 11 >
+    au < exists ; exists ; 2002 ; Journal of Exposure Science and Environmental Epidemiology Volume 12 ; 2002 ; 12 >
+    au < exists ; exists ; 2003 ; Journal of Exposure Science and Environmental Epidemiology Volume 13 ; 2003 ; 13 >
+    au < exists ; exists ; 2004 ; Journal of Exposure Science and Environmental Epidemiology Volume 14 ; 2004 ; 14 >
+    au < exists ; exists ; 2005 ; Journal of Exposure Science and Environmental Epidemiology Volume 15 ; 2005 ; 15 >
     au < manifest ; exists ; 2006 ; Journal of Exposure Science and Environmental Epidemiology Volume 16 ; 2006 ; 16 >
     au < manifest ; exists ; 2007 ; Journal of Exposure Science and Environmental Epidemiology Volume 17 ; 2007 ; 17 >
     au < released ; crawling ; 2008 ; Journal of Exposure Science and Environmental Epidemiology Volume 18 ; 2008 ; 18 >
     au < released ; crawling ; 2009 ; Journal of Exposure Science and Environmental Epidemiology Volume 19 ; 2009 ; 19 >
     au < released ; crawling ; 2010 ; Journal of Exposure Science and Environmental Epidemiology Volume 20 ; 2010 ; 20 >
-    au < released ; manifest ; 2011 ; Journal of Exposure Science and Environmental Epidemiology Volume 21 ; 2011 ; 21 >
+    au < released ; crawling ; 2011 ; Journal of Exposure Science and Environmental Epidemiology Volume 21 ; 2011 ; 21 >
+    au < crawling ; exists ; 2012 ; Journal of Exposure Science and Environmental Epidemiology Volume 22 ; 2012 ; 22 >
 
   }
 
@@ -811,6 +1154,27 @@
 
     param[journal_id] = jhg
 
+    au < manifest ; exists ; 1977 ; Journal of Human Genetics Volume 22 ; 1977 ; 22 >
+    au < manifest ; exists ; 1978 ; Journal of Human Genetics Volume 23 ; 1978 ; 23 >
+    au < manifest ; exists ; 1979 ; Journal of Human Genetics Volume 24 ; 1979 ; 24 >
+    au < manifest ; exists ; 1980 ; Journal of Human Genetics Volume 25 ; 1980 ; 25 >
+    au < manifest ; exists ; 1981 ; Journal of Human Genetics Volume 26 ; 1981 ; 26 >
+    au < manifest ; exists ; 1982 ; Journal of Human Genetics Volume 27 ; 1982 ; 27 >
+    au < manifest ; exists ; 1983 ; Journal of Human Genetics Volume 28 ; 1983 ; 28 >
+    au < manifest ; exists ; 1984 ; Journal of Human Genetics Volume 29 ; 1984 ; 29 >
+    au < manifest ; exists ; 1985 ; Journal of Human Genetics Volume 30 ; 1985 ; 30 >
+    au < manifest ; exists ; 1986 ; Journal of Human Genetics Volume 31 ; 1986 ; 31 >
+    au < manifest ; exists ; 1987 ; Journal of Human Genetics Volume 32 ; 1987 ; 32 >
+    au < manifest ; exists ; 1988 ; Journal of Human Genetics Volume 33 ; 1988 ; 33 >
+    au < manifest ; exists ; 1989 ; Journal of Human Genetics Volume 34 ; 1989 ; 34 >
+    au < manifest ; exists ; 1990 ; Journal of Human Genetics Volume 35 ; 1990 ; 35 >
+    au < manifest ; exists ; 1991 ; Journal of Human Genetics Volume 36 ; 1991 ; 36 >
+    au < manifest ; exists ; 1992 ; Journal of Human Genetics Volume 37 ; 1992 ; 37 >
+    au < manifest ; exists ; 1993 ; Journal of Human Genetics Volume 38 ; 1993 ; 38 >
+    au < manifest ; exists ; 1994 ; Journal of Human Genetics Volume 39 ; 1994 ; 39 >
+    au < manifest ; exists ; 1995 ; Journal of Human Genetics Volume 40 ; 1995 ; 40 >
+    au < manifest ; exists ; 1996 ; Journal of Human Genetics Volume 41 ; 1996 ; 41 >
+    au < manifest ; exists ; 1997 ; Journal of Human Genetics Volume 42 ; 1997 ; 42 >
     au < manifest ; exists ; 1998 ; Journal of Human Genetics Volume 43 ; 1998 ; 43 >
     au < manifest ; exists ; 1999 ; Journal of Human Genetics Volume 44 ; 1999 ; 44 >
     au < manifest ; exists ; 2000 ; Journal of Human Genetics Volume 45 ; 2000 ; 45 >
@@ -824,7 +1188,8 @@
     au < released ; crawling ; 2008 ; Journal of Human Genetics Volume 53 ; 2008 ; 53 >
     au < released ; crawling ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
     au < released ; crawling ; 2010 ; Journal of Human Genetics Volume 55 ; 2010 ; 55 >
-    au < released ; manifest ; 2011 ; Journal of Human Genetics Volume 56 ; 2011 ; 56 >
+    au < released ; crawling ; 2011 ; Journal of Human Genetics Volume 56 ; 2011 ; 56 >
+    au < crawling ; exists ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 >
 
   }
 
@@ -853,7 +1218,8 @@
     au < released ; crawling ; 2008 ; Journal of Human Hypertension Volume 22 ; 2008 ; 22 >
     au < released ; crawling ; 2009 ; Journal of Human Hypertension Volume 23 ; 2009 ; 23 >
     au < released ; crawling ; 2010 ; Journal of Human Hypertension Volume 24 ; 2010 ; 24 >
-    au < released ; manifest ; 2011 ; Journal of Human Hypertension Volume 25 ; 2011 ; 25 >
+    au < released ; crawling ; 2011 ; Journal of Human Hypertension Volume 25 ; 2011 ; 25 >
+    au < crawling ; exists ; 2012 ; Journal of Human Hypertension Volume 26 ; 2012 ; 26 >
 
   }
 
@@ -867,109 +1233,123 @@
     >
 
     param[journal_id] = jid
-    comment[1967] = The manifest page for 1967 is missing, and 1966 is odd.
 
-    au < manifest ; exists ; 1950 ; The Journal of Investigative Dermatology Volume 14 ; 1950 ; 14 >                                                                             
-    au < manifest ; exists ; 1950 ; The Journal of Investigative Dermatology Volume 15 ; 1950 ; 15 >                                                                             
-    au < manifest ; exists ; 1951 ; The Journal of Investigative Dermatology Volume 16 ; 1951 ; 16 >                                                                             
-    au < manifest ; exists ; 1951 ; The Journal of Investigative Dermatology Volume 17 ; 1951 ; 17 >                                                                             
-    au < manifest ; exists ; 1952 ; The Journal of Investigative Dermatology Volume 18 ; 1952 ; 18 >                                                                             
-    au < manifest ; exists ; 1952 ; The Journal of Investigative Dermatology Volume 19 ; 1952 ; 19 >                                                                             
-    au < manifest ; exists ; 1953 ; The Journal of Investigative Dermatology Volume 20 ; 1953 ; 20 >                                                                             
-    au < manifest ; exists ; 1953 ; The Journal of Investigative Dermatology Volume 21 ; 1953 ; 21 >                                                                             
-    au < manifest ; exists ; 1954 ; The Journal of Investigative Dermatology Volume 22 ; 1954 ; 22 >                                                                             
-    au < manifest ; exists ; 1954 ; The Journal of Investigative Dermatology Volume 23 ; 1954 ; 23 >                                                                             
-    au < manifest ; exists ; 1955 ; The Journal of Investigative Dermatology Volume 24 ; 1955 ; 24 >                                                                             
-    au < manifest ; exists ; 1955 ; The Journal of Investigative Dermatology Volume 25 ; 1955 ; 25 >                                                                             
-    au < manifest ; exists ; 1956 ; The Journal of Investigative Dermatology Volume 26 ; 1956 ; 26 >                                                                             
-    au < manifest ; exists ; 1956 ; The Journal of Investigative Dermatology Volume 27 ; 1956 ; 27 >                                                                             
-    au < manifest ; exists ; 1957 ; The Journal of Investigative Dermatology Volume 28 ; 1957 ; 28 >                                                                             
-    au < manifest ; exists ; 1957 ; The Journal of Investigative Dermatology Volume 29 ; 1957 ; 29 >                                                                             
-    au < manifest ; exists ; 1958 ; The Journal of Investigative Dermatology Volume 30 ; 1958 ; 30 >                                                                             
-    au < manifest ; exists ; 1958 ; The Journal of Investigative Dermatology Volume 31 ; 1958 ; 31 >                                                                             
-    au < manifest ; exists ; 1959 ; The Journal of Investigative Dermatology Volume 32 ; 1959 ; 32 >                                                                             
-    au < manifest ; exists ; 1959 ; The Journal of Investigative Dermatology Volume 33 ; 1959 ; 33 >                                                                             
-    au < manifest ; exists ; 1960 ; The Journal of Investigative Dermatology Volume 34 ; 1960 ; 34 >                                                                             
-    au < manifest ; exists ; 1960 ; The Journal of Investigative Dermatology Volume 35 ; 1960 ; 35 >                                                                             
-    au < manifest ; exists ; 1961 ; The Journal of Investigative Dermatology Volume 36 ; 1961 ; 36 >                                                                             
-    au < manifest ; exists ; 1961 ; The Journal of Investigative Dermatology Volume 37 ; 1961 ; 37 >                                                                             
-    au < manifest ; exists ; 1962 ; The Journal of Investigative Dermatology Volume 38 ; 1962 ; 38 >                                                                             
-    au < manifest ; exists ; 1962 ; The Journal of Investigative Dermatology Volume 39 ; 1962 ; 39 >                                                                             
-    au < manifest ; exists ; 1963 ; The Journal of Investigative Dermatology Volume 40 ; 1963 ; 40 >                                                                             
-    au < manifest ; exists ; 1963 ; The Journal of Investigative Dermatology Volume 41 ; 1963 ; 41 >                                                                             
-    au < manifest ; exists ; 1964 ; The Journal of Investigative Dermatology Volume 42 ; 1964 ; 42 >                                                                             
-    au < manifest ; exists ; 1964 ; The Journal of Investigative Dermatology Volume 43 ; 1964 ; 43 >                                                                             
-    au < manifest ; exists ; 1965 ; The Journal of Investigative Dermatology Volume 44 ; 1965 ; 44 >                                                                             
-    au < manifest ; exists ; 1965 ; The Journal of Investigative Dermatology Volume 45 ; 1965 ; 45 >                                                                             
-    au < manifest ; exists ; 1966 ; The Journal of Investigative Dermatology Volume 46 ; 1966 ; 46 >                                                                             
-    au < manifest ; exists ; 1966 ; The Journal of Investigative Dermatology Volume 47 ; 1966 ; 47 >                                                                             
-    au < manifest ; exists ; 1968 ; The Journal of Investigative Dermatology Volume 50 ; 1968 ; 50 >                                                                             
-    au < manifest ; exists ; 1968 ; The Journal of Investigative Dermatology Volume 51 ; 1968 ; 51 >                                                                             
-    au < manifest ; exists ; 1969 ; The Journal of Investigative Dermatology Volume 52 ; 1969 ; 52 >                                                                             
-    au < manifest ; exists ; 1969 ; The Journal of Investigative Dermatology Volume 53 ; 1969 ; 53 >                                                                             
-    au < manifest ; exists ; 1970 ; The Journal of Investigative Dermatology Volume 54 ; 1970 ; 54 >                                                                             
-    au < manifest ; exists ; 1970 ; The Journal of Investigative Dermatology Volume 55 ; 1970 ; 55 >                                                                             
-    au < manifest ; exists ; 1971 ; The Journal of Investigative Dermatology Volume 56 ; 1971 ; 56 >                                                                             
-    au < manifest ; exists ; 1971 ; The Journal of Investigative Dermatology Volume 57 ; 1971 ; 57 >                                                                             
-    au < manifest ; exists ; 1972 ; The Journal of Investigative Dermatology Volume 58 ; 1972 ; 58 >                                                                             
-    au < manifest ; exists ; 1972 ; The Journal of Investigative Dermatology Volume 59 ; 1972 ; 59 >                                                                             
-    au < manifest ; exists ; 1973 ; The Journal of Investigative Dermatology Volume 60 ; 1973 ; 60 >                                                                             
-    au < manifest ; exists ; 1973 ; The Journal of Investigative Dermatology Volume 61 ; 1973 ; 61 >                                                                             
-    au < manifest ; exists ; 1974 ; The Journal of Investigative Dermatology Volume 62 ; 1974 ; 62 >                                                                             
-    au < manifest ; exists ; 1974 ; The Journal of Investigative Dermatology Volume 63 ; 1974 ; 63 >                                                                             
-    au < manifest ; exists ; 1975 ; The Journal of Investigative Dermatology Volume 64 ; 1975 ; 64 >                                                                             
-    au < manifest ; exists ; 1975 ; The Journal of Investigative Dermatology Volume 65 ; 1975 ; 65 >                                                                             
-    au < manifest ; exists ; 1976 ; The Journal of Investigative Dermatology Volume 66 ; 1976 ; 66 >                                                                             
-    au < manifest ; exists ; 1976 ; The Journal of Investigative Dermatology Volume 67 ; 1976 ; 67 >                                                                             
-    au < manifest ; exists ; 1977 ; The Journal of Investigative Dermatology Volume 68 ; 1977 ; 68 >                                                                             
-    au < manifest ; exists ; 1977 ; The Journal of Investigative Dermatology Volume 69 ; 1977 ; 69 >                                                                             
-    au < manifest ; exists ; 1978 ; The Journal of Investigative Dermatology Volume 70 ; 1978 ; 70 >                                                                             
-    au < manifest ; exists ; 1978 ; The Journal of Investigative Dermatology Volume 71 ; 1978 ; 71 >                                                                             
-    au < manifest ; exists ; 1979 ; The Journal of Investigative Dermatology Volume 72 ; 1979 ; 72 >                                                                             
-    au < manifest ; exists ; 1979 ; The Journal of Investigative Dermatology Volume 73 ; 1979 ; 73 >                                                                             
-    au < manifest ; exists ; 1980 ; The Journal of Investigative Dermatology Volume 74 ; 1980 ; 74 >                                                                             
-    au < manifest ; exists ; 1980 ; The Journal of Investigative Dermatology Volume 75 ; 1980 ; 75 >                                                                             
-    au < manifest ; exists ; 1981 ; The Journal of Investigative Dermatology Volume 76 ; 1981 ; 76 >                                                                             
-    au < manifest ; exists ; 1981 ; The Journal of Investigative Dermatology Volume 77 ; 1981 ; 77 >                                                                             
-    au < manifest ; exists ; 1982 ; The Journal of Investigative Dermatology Volume 78 ; 1982 ; 78 >                                                                             
-    au < manifest ; exists ; 1982 ; The Journal of Investigative Dermatology Volume 79 ; 1982 ; 79 >                                                                             
-    au < manifest ; exists ; 1983 ; The Journal of Investigative Dermatology Volume 80 ; 1983 ; 80 >                                                                             
-    au < manifest ; exists ; 1983 ; The Journal of Investigative Dermatology Volume 81 ; 1983 ; 81 >                                                                             
-    au < manifest ; exists ; 1984 ; The Journal of Investigative Dermatology Volume 82 ; 1984 ; 82 >                                                                             
-    au < manifest ; exists ; 1984 ; The Journal of Investigative Dermatology Volume 83 ; 1984 ; 83 >                                                                             
-    au < manifest ; exists ; 1985 ; The Journal of Investigative Dermatology Volume 84 ; 1985 ; 84 >                                                                             
-    au < manifest ; exists ; 1985 ; The Journal of Investigative Dermatology Volume 85 ; 1985 ; 85 >                                                                             
-    au < manifest ; exists ; 1986 ; The Journal of Investigative Dermatology Volume 86 ; 1986 ; 86 >                                                                             
-    au < manifest ; exists ; 1986 ; The Journal of Investigative Dermatology Volume 87 ; 1986 ; 87 >                                                                             
-    au < manifest ; exists ; 1987 ; The Journal of Investigative Dermatology Volume 88 ; 1987 ; 88 >                                                                             
-    au < manifest ; exists ; 1987 ; The Journal of Investigative Dermatology Volume 89 ; 1987 ; 89 >                                                                             
-    au < manifest ; exists ; 1988 ; The Journal of Investigative Dermatology Volume 90 ; 1988 ; 90 >                                                                             
-    au < manifest ; exists ; 1988 ; The Journal of Investigative Dermatology Volume 91 ; 1988 ; 91 >                                                                             
-    au < manifest ; exists ; 1989 ; The Journal of Investigative Dermatology Volume 92 ; 1989 ; 92 >                                                                             
-    au < manifest ; exists ; 1989 ; The Journal of Investigative Dermatology Volume 93 ; 1989 ; 93 >                                                                             
-    au < manifest ; exists ; 1990 ; The Journal of Investigative Dermatology Volume 94 ; 1990 ; 94 >                                                                             
-    au < manifest ; exists ; 1990 ; The Journal of Investigative Dermatology Volume 95 ; 1990 ; 95 >                                                                             
-    au < manifest ; exists ; 1991 ; The Journal of Investigative Dermatology Volume 96 ; 1991 ; 96 >                                                                             
-    au < manifest ; exists ; 1991 ; The Journal of Investigative Dermatology Volume 97 ; 1991 ; 97 >                                                                             
-    au < manifest ; exists ; 1992 ; The Journal of Investigative Dermatology Volume 98 ; 1992 ; 98 >                                                                             
-    au < manifest ; exists ; 1992 ; The Journal of Investigative Dermatology Volume 99 ; 1992 ; 99 >                                                                             
-    au < manifest ; exists ; 1993 ; The Journal of Investigative Dermatology Volume 100 ; 1993 ; 100 >                                                                           
-    au < manifest ; exists ; 1993 ; The Journal of Investigative Dermatology Volume 101 ; 1993 ; 101 >                                                                           
-    au < manifest ; exists ; 1994 ; The Journal of Investigative Dermatology Volume 102 ; 1994 ; 102 >                                                                           
-    au < manifest ; exists ; 1994 ; The Journal of Investigative Dermatology Volume 103 ; 1994 ; 103 >                                                                           
-    au < manifest ; exists ; 1995 ; The Journal of Investigative Dermatology Volume 104 ; 1995 ; 104 >                                                                           
-    au < manifest ; exists ; 1995 ; The Journal of Investigative Dermatology Volume 105 ; 1995 ; 105 >                                                                           
-    au < manifest ; exists ; 1996 ; The Journal of Investigative Dermatology Volume 106 ; 1996 ; 106 >                                                                           
-    au < manifest ; exists ; 1996 ; The Journal of Investigative Dermatology Volume 107 ; 1996 ; 107 >                                                                           
-    au < manifest ; exists ; 1997 ; The Journal of Investigative Dermatology Volume 108 ; 1997 ; 108 >                                                                           
-    au < manifest ; exists ; 1997 ; The Journal of Investigative Dermatology Volume 109 ; 1997 ; 109 >                                                                           
-    au < manifest ; exists ; 1998 ; The Journal of Investigative Dermatology Volume 110 ; 1998 ; 110 >                                                                           
-    au < manifest ; exists ; 1998 ; The Journal of Investigative Dermatology Volume 111 ; 1998 ; 111 >                                                                           
-    au < manifest ; exists ; 1999 ; The Journal of Investigative Dermatology Volume 112 ; 1999 ; 112 >                                                                           
-    au < manifest ; exists ; 1999 ; The Journal of Investigative Dermatology Volume 113 ; 1999 ; 113 >                                                                           
-    au < manifest ; exists ; 2000 ; The Journal of Investigative Dermatology Volume 114 ; 2000 ; 114 >                                                                           
-    au < manifest ; exists ; 2000 ; The Journal of Investigative Dermatology Volume 115 ; 2000 ; 115 >                                                                           
-    au < manifest ; exists ; 2001 ; The Journal of Investigative Dermatology Volume 116 ; 2001 ; 116 >                                                                           
+    au < manifest ; exists ; 1938 ; The Journal of Investigative Dermatology Volume 1 ; 1938 ; 1 >
+    au < manifest ; exists ; 1939 ; The Journal of Investigative Dermatology Volume 2 ; 1939 ; 2 >
+    au < exists ; exists ; 1940 ; The Journal of Investigative Dermatology Volume 3 ; 1940 ; 3 >
+    au < exists ; exists ; 1941 ; The Journal of Investigative Dermatology Volume 4 ; 1941 ; 4 >
+    au < exists ; exists ; 1942 ; The Journal of Investigative Dermatology Volume 5 ; 1942 ; 5 >
+    au < manifest ; exists ; 1945 ; The Journal of Investigative Dermatology Volume 6 ; 1945 ; 6 >
+    au < exists ; exists ; 1946 ; The Journal of Investigative Dermatology Volume 7 ; 1946 ; 7 >
+    au < manifest ; exists ; 1947 ; The Journal of Investigative Dermatology Volume 8 (1947) ; 1947 ; 8 >
+    au < manifest ; exists ; 1947 ; The Journal of Investigative Dermatology Volume 9 (1947) ; 1947 ; 9 >
+    au < manifest ; exists ; 1948 ; The Journal of Investigative Dermatology Volume 10 (1948) ; 1948 ; 10 >
+    au < manifest ; exists ; 1948 ; The Journal of Investigative Dermatology Volume 11 (1948) ; 1948 ; 11 >
+    au < exists ; exists ; 1949 ; The Journal of Investigative Dermatology Volume 12 (1949) ; 1949 ; 12 >
+    au < exists ; exists ; 1949 ; The Journal of Investigative Dermatology Volume 13 (1949) ; 1949 ; 13 >
+    au < manifest ; exists ; 1950 ; The Journal of Investigative Dermatology Volume 14 ; 1950 ; 14 >
+    au < manifest ; exists ; 1950 ; The Journal of Investigative Dermatology Volume 15 ; 1950 ; 15 >
+    au < manifest ; exists ; 1951 ; The Journal of Investigative Dermatology Volume 16 ; 1951 ; 16 >
+    au < manifest ; exists ; 1951 ; The Journal of Investigative Dermatology Volume 17 ; 1951 ; 17 >
+    au < manifest ; exists ; 1952 ; The Journal of Investigative Dermatology Volume 18 ; 1952 ; 18 >
+    au < manifest ; exists ; 1952 ; The Journal of Investigative Dermatology Volume 19 ; 1952 ; 19 >
+    au < manifest ; exists ; 1953 ; The Journal of Investigative Dermatology Volume 20 ; 1953 ; 20 >
+    au < manifest ; exists ; 1953 ; The Journal of Investigative Dermatology Volume 21 ; 1953 ; 21 >
+    au < manifest ; exists ; 1954 ; The Journal of Investigative Dermatology Volume 22 ; 1954 ; 22 >
+    au < manifest ; exists ; 1954 ; The Journal of Investigative Dermatology Volume 23 ; 1954 ; 23 >
+    au < manifest ; exists ; 1955 ; The Journal of Investigative Dermatology Volume 24 ; 1955 ; 24 >
+    au < manifest ; exists ; 1955 ; The Journal of Investigative Dermatology Volume 25 ; 1955 ; 25 >
+    au < manifest ; exists ; 1956 ; The Journal of Investigative Dermatology Volume 26 ; 1956 ; 26 >
+    au < manifest ; exists ; 1956 ; The Journal of Investigative Dermatology Volume 27 ; 1956 ; 27 >
+    au < manifest ; exists ; 1957 ; The Journal of Investigative Dermatology Volume 28 ; 1957 ; 28 >
+    au < manifest ; exists ; 1957 ; The Journal of Investigative Dermatology Volume 29 ; 1957 ; 29 >
+    au < manifest ; exists ; 1958 ; The Journal of Investigative Dermatology Volume 30 ; 1958 ; 30 >
+    au < manifest ; exists ; 1958 ; The Journal of Investigative Dermatology Volume 31 ; 1958 ; 31 >
+    au < manifest ; exists ; 1959 ; The Journal of Investigative Dermatology Volume 32 ; 1959 ; 32 >
+    au < manifest ; exists ; 1959 ; The Journal of Investigative Dermatology Volume 33 ; 1959 ; 33 >
+    au < manifest ; exists ; 1960 ; The Journal of Investigative Dermatology Volume 34 ; 1960 ; 34 >
+    au < manifest ; exists ; 1960 ; The Journal of Investigative Dermatology Volume 35 ; 1960 ; 35 >
+    au < manifest ; exists ; 1961 ; The Journal of Investigative Dermatology Volume 36 ; 1961 ; 36 >
+    au < manifest ; exists ; 1961 ; The Journal of Investigative Dermatology Volume 37 ; 1961 ; 37 >
+    au < manifest ; exists ; 1962 ; The Journal of Investigative Dermatology Volume 38 ; 1962 ; 38 >
+    au < manifest ; exists ; 1962 ; The Journal of Investigative Dermatology Volume 39 ; 1962 ; 39 >
+    au < manifest ; exists ; 1963 ; The Journal of Investigative Dermatology Volume 40 ; 1963 ; 40 >
+    au < manifest ; exists ; 1963 ; The Journal of Investigative Dermatology Volume 41 ; 1963 ; 41 >
+    au < manifest ; exists ; 1964 ; The Journal of Investigative Dermatology Volume 42 ; 1964 ; 42 >
+    au < manifest ; exists ; 1964 ; The Journal of Investigative Dermatology Volume 43 ; 1964 ; 43 >
+    au < manifest ; exists ; 1965 ; The Journal of Investigative Dermatology Volume 44 ; 1965 ; 44 >
+    au < manifest ; exists ; 1965 ; The Journal of Investigative Dermatology Volume 45 ; 1965 ; 45 >
+    au < manifest ; exists ; 1966 ; The Journal of Investigative Dermatology Volume 46 ; 1966 ; 46 >
+    au < manifest ; exists ; 1966 ; The Journal of Investigative Dermatology Volume 47 ; 1966 ; 47 >
+    au < exists ; exists ; 1967 ; The Journal of Investigative Dermatology Volume 48 ; 1967 ; 48 >
+    au < exists ; exists ; 1967 ; The Journal of Investigative Dermatology Volume 49 ; 1967 ; 49 >
+    au < manifest ; exists ; 1968 ; The Journal of Investigative Dermatology Volume 50 ; 1968 ; 50 >
+    au < manifest ; exists ; 1968 ; The Journal of Investigative Dermatology Volume 51 ; 1968 ; 51 >
+    au < manifest ; exists ; 1969 ; The Journal of Investigative Dermatology Volume 52 ; 1969 ; 52 >
+    au < manifest ; exists ; 1969 ; The Journal of Investigative Dermatology Volume 53 ; 1969 ; 53 >
+    au < manifest ; exists ; 1970 ; The Journal of Investigative Dermatology Volume 54 ; 1970 ; 54 >
+    au < manifest ; exists ; 1970 ; The Journal of Investigative Dermatology Volume 55 ; 1970 ; 55 >
+    au < manifest ; exists ; 1971 ; The Journal of Investigative Dermatology Volume 56 ; 1971 ; 56 >
+    au < manifest ; exists ; 1971 ; The Journal of Investigative Dermatology Volume 57 ; 1971 ; 57 >
+    au < manifest ; exists ; 1972 ; The Journal of Investigative Dermatology Volume 58 ; 1972 ; 58 >
+    au < manifest ; exists ; 1972 ; The Journal of Investigative Dermatology Volume 59 ; 1972 ; 59 >
+    au < manifest ; exists ; 1973 ; The Journal of Investigative Dermatology Volume 60 ; 1973 ; 60 >
+    au < manifest ; exists ; 1973 ; The Journal of Investigative Dermatology Volume 61 ; 1973 ; 61 >
+    au < manifest ; exists ; 1974 ; The Journal of Investigative Dermatology Volume 62 ; 1974 ; 62 >
+    au < manifest ; exists ; 1974 ; The Journal of Investigative Dermatology Volume 63 ; 1974 ; 63 >
+    au < manifest ; exists ; 1975 ; The Journal of Investigative Dermatology Volume 64 ; 1975 ; 64 >
+    au < manifest ; exists ; 1975 ; The Journal of Investigative Dermatology Volume 65 ; 1975 ; 65 >
+    au < manifest ; exists ; 1976 ; The Journal of Investigative Dermatology Volume 66 ; 1976 ; 66 >
+    au < manifest ; exists ; 1976 ; The Journal of Investigative Dermatology Volume 67 ; 1976 ; 67 >
+    au < manifest ; exists ; 1977 ; The Journal of Investigative Dermatology Volume 68 ; 1977 ; 68 >
+    au < manifest ; exists ; 1977 ; The Journal of Investigative Dermatology Volume 69 ; 1977 ; 69 >
+    au < manifest ; exists ; 1978 ; The Journal of Investigative Dermatology Volume 70 ; 1978 ; 70 >
+    au < manifest ; exists ; 1978 ; The Journal of Investigative Dermatology Volume 71 ; 1978 ; 71 >
+    au < manifest ; exists ; 1979 ; The Journal of Investigative Dermatology Volume 72 ; 1979 ; 72 >
+    au < manifest ; exists ; 1979 ; The Journal of Investigative Dermatology Volume 73 ; 1979 ; 73 >
+    au < manifest ; exists ; 1980 ; The Journal of Investigative Dermatology Volume 74 ; 1980 ; 74 >
+    au < manifest ; exists ; 1980 ; The Journal of Investigative Dermatology Volume 75 ; 1980 ; 75 >
+    au < manifest ; exists ; 1981 ; The Journal of Investigative Dermatology Volume 76 ; 1981 ; 76 >
+    au < manifest ; exists ; 1981 ; The Journal of Investigative Dermatology Volume 77 ; 1981 ; 77 >
+    au < manifest ; exists ; 1982 ; The Journal of Investigative Dermatology Volume 78 ; 1982 ; 78 >
+    au < manifest ; exists ; 1982 ; The Journal of Investigative Dermatology Volume 79 ; 1982 ; 79 >
+    au < manifest ; exists ; 1983 ; The Journal of Investigative Dermatology Volume 80 ; 1983 ; 80 >
+    au < manifest ; exists ; 1983 ; The Journal of Investigative Dermatology Volume 81 ; 1983 ; 81 >
+    au < manifest ; exists ; 1984 ; The Journal of Investigative Dermatology Volume 82 ; 1984 ; 82 >
+    au < manifest ; exists ; 1984 ; The Journal of Investigative Dermatology Volume 83 ; 1984 ; 83 >
+    au < manifest ; exists ; 1985 ; The Journal of Investigative Dermatology Volume 84 ; 1985 ; 84 >
+    au < manifest ; exists ; 1985 ; The Journal of Investigative Dermatology Volume 85 ; 1985 ; 85 >
+    au < manifest ; exists ; 1986 ; The Journal of Investigative Dermatology Volume 86 ; 1986 ; 86 >
+    au < manifest ; exists ; 1986 ; The Journal of Investigative Dermatology Volume 87 ; 1986 ; 87 >
+    au < manifest ; exists ; 1987 ; The Journal of Investigative Dermatology Volume 88 ; 1987 ; 88 >
+    au < manifest ; exists ; 1987 ; The Journal of Investigative Dermatology Volume 89 ; 1987 ; 89 >
+    au < manifest ; exists ; 1988 ; The Journal of Investigative Dermatology Volume 90 ; 1988 ; 90 >
+    au < manifest ; exists ; 1988 ; The Journal of Investigative Dermatology Volume 91 ; 1988 ; 91 >
+    au < manifest ; exists ; 1989 ; The Journal of Investigative Dermatology Volume 92 ; 1989 ; 92 >
+    au < manifest ; exists ; 1989 ; The Journal of Investigative Dermatology Volume 93 ; 1989 ; 93 >
+    au < manifest ; exists ; 1990 ; The Journal of Investigative Dermatology Volume 94 ; 1990 ; 94 >
+    au < manifest ; exists ; 1990 ; The Journal of Investigative Dermatology Volume 95 ; 1990 ; 95 >
+    au < manifest ; exists ; 1991 ; The Journal of Investigative Dermatology Volume 96 ; 1991 ; 96 >
+    au < manifest ; exists ; 1991 ; The Journal of Investigative Dermatology Volume 97 ; 1991 ; 97 >
+    au < manifest ; exists ; 1992 ; The Journal of Investigative Dermatology Volume 98 ; 1992 ; 98 >
+    au < manifest ; exists ; 1992 ; The Journal of Investigative Dermatology Volume 99 ; 1992 ; 99 >
+    au < manifest ; exists ; 1993 ; The Journal of Investigative Dermatology Volume 100 ; 1993 ; 100 >
+    au < manifest ; exists ; 1993 ; The Journal of Investigative Dermatology Volume 101 ; 1993 ; 101 >
+    au < manifest ; exists ; 1994 ; The Journal of Investigative Dermatology Volume 102 ; 1994 ; 102 >
+    au < manifest ; exists ; 1994 ; The Journal of Investigative Dermatology Volume 103 ; 1994 ; 103 >
+    au < manifest ; exists ; 1995 ; The Journal of Investigative Dermatology Volume 104 ; 1995 ; 104 >
+    au < manifest ; exists ; 1995 ; The Journal of Investigative Dermatology Volume 105 ; 1995 ; 105 >
+    au < manifest ; exists ; 1996 ; The Journal of Investigative Dermatology Volume 106 ; 1996 ; 106 >
+    au < manifest ; exists ; 1996 ; The Journal of Investigative Dermatology Volume 107 ; 1996 ; 107 >
+    au < manifest ; exists ; 1997 ; The Journal of Investigative Dermatology Volume 108 ; 1997 ; 108 >
+    au < manifest ; exists ; 1997 ; The Journal of Investigative Dermatology Volume 109 ; 1997 ; 109 >
+    au < manifest ; exists ; 1998 ; The Journal of Investigative Dermatology Volume 110 ; 1998 ; 110 >
+    au < manifest ; exists ; 1998 ; The Journal of Investigative Dermatology Volume 111 ; 1998 ; 111 >
+    au < manifest ; exists ; 1999 ; The Journal of Investigative Dermatology Volume 112 ; 1999 ; 112 >
+    au < manifest ; exists ; 1999 ; The Journal of Investigative Dermatology Volume 113 ; 1999 ; 113 >
+    au < manifest ; exists ; 2000 ; The Journal of Investigative Dermatology Volume 114 ; 2000 ; 114 >
+    au < manifest ; exists ; 2000 ; The Journal of Investigative Dermatology Volume 115 ; 2000 ; 115 >
+    au < manifest ; exists ; 2001 ; The Journal of Investigative Dermatology Volume 116 ; 2001 ; 116 >
     au < manifest ; exists ; 2001 ; The Journal of Investigative Dermatology Volume 117 ; 2001 ; 117 >
     au < manifest ; exists ; 2002 ; The Journal of Investigative Dermatology Volume 118 ; 2002 ; 118 >
     au < manifest ; exists ; 2002 ; The Journal of Investigative Dermatology Volume 119 ; 2002 ; 119 >
@@ -980,11 +1360,12 @@
     au < manifest ; exists ; 2005 ; The Journal of Investigative Dermatology Volume 124 ; 2005 ; 124 >
     au < manifest ; exists ; 2005 ; The Journal of Investigative Dermatology Volume 125 ; 2005 ; 125 >
     au < manifest ; exists ; 2006 ; The Journal of Investigative Dermatology Volume 126 ; 2006 ; 126 >
-    au < manifest ; exists ; 2007 ; The Journal of Investigative Dermatology Volume 127 ; 2007 ; 127 >    
+    au < manifest ; exists ; 2007 ; The Journal of Investigative Dermatology Volume 127 ; 2007 ; 127 >
     au < released ; crawling ; 2008 ; The Journal of Investigative Dermatology Volume 128 ; 2008 ; 128 >
     au < released ; crawling ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
     au < released ; crawling ; 2010 ; The Journal of Investigative Dermatology Volume 130 ; 2010 ; 130 >
-    au < released ; manifest ; 2011 ; The Journal of Investigative Dermatology Volume 131 ; 2011 ; 131 >
+    au < released ; crawling ; 2011 ; The Journal of Investigative Dermatology Volume 131 ; 2011 ; 131 >
+    au < crawling ; exists ; 2012 ; The Journal of Investigative Dermatology Volume 132 ; 2012 ; 132 >
 
   }
 
@@ -1011,8 +1392,9 @@
     au < released ; crawling ; 2008 ; Journal of Perinatology Volume 28 ; 2008 ; 28 >
     au < released ; crawling ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
     au < released ; crawling ; 2010 ; Journal of Perinatology Volume 30 ; 2010 ; 30 >
-    au < released ; manifest ; 2011 ; Journal of Perinatology Volume 31 ; 2011 ; 31 >
-    
+    au < released ; crawling ; 2011 ; Journal of Perinatology Volume 31 ; 2011 ; 31 >
+    au < crawling ; exists ; 2012 ; Journal of Perinatology Volume 32 ; 2012 ; 32 >
+
   }
 
   {
@@ -1025,9 +1407,90 @@
     >
 
     param[journal_id] = ki
+    
+    comment[notReady] = ingest3 Rice doesn't have permission to crawl http://www.nature.com/ki/journal/v79/n12/full/ki201153a.html
 
-    au < testing ; exists ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 >
-    au < testing ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 >
+    au < exists ; exists ; 1972 ; Journal of Perinatology Volume 1 (1972) ; 1972 ; 1 >
+    au < exists ; exists ; 1972 ; Journal of Perinatology Volume 2 (1972) ; 1972 ; 2 >
+    au < exists ; exists ; 1973 ; Journal of Perinatology Volume 3 (1973) ; 1973 ; 3 >
+    au < exists ; exists ; 1973 ; Journal of Perinatology Volume 4 (1973) ; 1973 ; 4 >
+    au < exists ; exists ; 1974 ; Journal of Perinatology Volume 5 (1974) ; 1974 ; 5 >
+    au < exists ; exists ; 1974 ; Journal of Perinatology Volume 6 (1974) ; 1974 ; 6 >
+    au < exists ; exists ; 1975 ; Journal of Perinatology Volume 7 (1975) ; 1975 ; 7 >
+    au < exists ; exists ; 1975 ; Journal of Perinatology Volume 8 (1975) ; 1975 ; 8 >
+    au < exists ; exists ; 1976 ; Journal of Perinatology Volume 9 (1976) ; 1976 ; 9 >
+    au < exists ; exists ; 1976 ; Journal of Perinatology Volume 10 (1976) ; 1976 ; 10 >
+    au < exists ; exists ; 1977 ; Journal of Perinatology Volume 11 (1977) ; 1977 ; 11 >
+    au < exists ; exists ; 1977 ; Journal of Perinatology Volume 12 (1977) ; 1977 ; 12 >
+    au < exists ; exists ; 1978 ; Journal of Perinatology Volume 13 (1978) ; 1978 ; 13 >
+    au < exists ; exists ; 1978 ; Journal of Perinatology Volume 14 (1978) ; 1978 ; 14 >
+    au < exists ; exists ; 1979 ; Journal of Perinatology Volume 15 (1979) ; 1979 ; 15 >
+    au < exists ; exists ; 1979 ; Journal of Perinatology Volume 16 (1979) ; 1979 ; 16 >
+    au < exists ; exists ; 1980 ; Journal of Perinatology Volume 17 (1980) ; 1980 ; 17 >
+    au < exists ; exists ; 1980 ; Journal of Perinatology Volume 18 (1980) ; 1980 ; 18 >
+    au < exists ; exists ; 1981 ; Journal of Perinatology Volume 19 (1981) ; 1981 ; 19 >
+    au < exists ; exists ; 1981 ; Journal of Perinatology Volume 20 (1981) ; 1981 ; 20 >
+    au < exists ; exists ; 1982 ; Journal of Perinatology Volume 21 (1982) ; 1982 ; 21 >
+    au < exists ; exists ; 1982 ; Journal of Perinatology Volume 22 (1982) ; 1982 ; 22 >
+    au < exists ; exists ; 1983 ; Journal of Perinatology Volume 23 (1983) ; 1983 ; 23 >
+    au < exists ; exists ; 1983 ; Journal of Perinatology Volume 24 (1983) ; 1983 ; 24 >
+    au < exists ; exists ; 1984 ; Journal of Perinatology Volume 25 (1984) ; 1984 ; 25 >
+    au < exists ; exists ; 1984 ; Journal of Perinatology Volume 26 (1984) ; 1984 ; 26 >
+    au < exists ; exists ; 1985 ; Journal of Perinatology Volume 27 (1985) ; 1985 ; 27 >
+    au < exists ; exists ; 1985 ; Journal of Perinatology Volume 28 (1985) ; 1985 ; 28 >
+    au < exists ; exists ; 1986 ; Journal of Perinatology Volume 29 (1986) ; 1986 ; 29 >
+    au < exists ; exists ; 1986 ; Journal of Perinatology Volume 30 (1986) ; 1986 ; 30 >
+    au < exists ; exists ; 1987 ; Journal of Perinatology Volume 31 (1987) ; 1987 ; 31 >
+    au < exists ; exists ; 1987 ; Journal of Perinatology Volume 32 (1987) ; 1987 ; 32 >
+    au < exists ; exists ; 1988 ; Journal of Perinatology Volume 33 (1988) ; 1988 ; 33 >
+    au < exists ; exists ; 1988 ; Journal of Perinatology Volume 34 (1988) ; 1988 ; 34 >
+    au < exists ; exists ; 1989 ; Journal of Perinatology Volume 35 (1989) ; 1989 ; 35 >
+    au < exists ; exists ; 1989 ; Journal of Perinatology Volume 36 (1989) ; 1989 ; 36 >
+    au < exists ; exists ; 1990 ; Journal of Perinatology Volume 37 (1990) ; 1990 ; 37 >
+    au < exists ; exists ; 1990 ; Journal of Perinatology Volume 38 (1990) ; 1990 ; 38 >
+    au < exists ; exists ; 1991 ; Journal of Perinatology Volume 39 (1991) ; 1991 ; 39 >
+    au < exists ; exists ; 1991 ; Journal of Perinatology Volume 40 (1991) ; 1991 ; 40 >
+    au < exists ; exists ; 1992 ; Journal of Perinatology Volume 41 (1992) ; 1992 ; 41 >
+    au < exists ; exists ; 1992 ; Journal of Perinatology Volume 42 (1992) ; 1992 ; 42 >
+    au < exists ; exists ; 1993 ; Journal of Perinatology Volume 43 (1993) ; 1993 ; 43 >
+    au < exists ; exists ; 1993 ; Journal of Perinatology Volume 44 (1993) ; 1993 ; 44 >
+    au < exists ; exists ; 1994 ; Journal of Perinatology Volume 45 (1994) ; 1994 ; 45 >
+    au < exists ; exists ; 1994 ; Journal of Perinatology Volume 46 (1994) ; 1994 ; 46 >
+    au < exists ; exists ; 1995 ; Journal of Perinatology Volume 47 (1995) ; 1995 ; 47 >
+    au < exists ; exists ; 1995 ; Journal of Perinatology Volume 48 (1995) ; 1995 ; 48 >
+    au < exists ; exists ; 1996 ; Journal of Perinatology Volume 49 (1996) ; 1996 ; 49 >
+    au < exists ; exists ; 1996 ; Journal of Perinatology Volume 50 (1996) ; 1996 ; 50 >
+    au < exists ; exists ; 1997 ; Journal of Perinatology Volume 51 (1997) ; 1997 ; 51 >
+    au < exists ; exists ; 1997 ; Journal of Perinatology Volume 52 (1997) ; 1997 ; 52 >
+    au < exists ; exists ; 1998 ; Journal of Perinatology Volume 53 (1998) ; 1998 ; 53 >
+    au < exists ; exists ; 1998 ; Journal of Perinatology Volume 54 (1998) ; 1998 ; 54 >
+    au < exists ; exists ; 1999 ; Journal of Perinatology Volume 55 (1999) ; 1999 ; 55 >
+    au < exists ; exists ; 1999 ; Journal of Perinatology Volume 56 (1999) ; 1999 ; 56 >
+    au < exists ; exists ; 2000 ; Journal of Perinatology Volume 57 (2000) ; 2000 ; 57 >
+    au < exists ; exists ; 2000 ; Journal of Perinatology Volume 58 (2000) ; 2000 ; 58 >
+    au < exists ; exists ; 2001 ; Journal of Perinatology Volume 59 (2001) ; 2001 ; 59 >
+    au < exists ; exists ; 2001 ; Journal of Perinatology Volume 60 (2001) ; 2001 ; 60 >
+    au < exists ; exists ; 2002 ; Journal of Perinatology Volume 61 (2002) ; 2002 ; 61 >
+    au < exists ; exists ; 2002 ; Journal of Perinatology Volume 62 (2002) ; 2002 ; 62 >
+    au < exists ; exists ; 2003 ; Journal of Perinatology Volume 63 (2003) ; 2003 ; 63 >
+    au < exists ; exists ; 2003 ; Journal of Perinatology Volume 64 (2003) ; 2003 ; 64 >
+    au < exists ; exists ; 2004 ; Journal of Perinatology Volume 65 (2004) ; 2004 ; 65 >
+    au < exists ; exists ; 2004 ; Journal of Perinatology Volume 66 (2004) ; 2004 ; 66 >
+    au < exists ; exists ; 2005 ; Journal of Perinatology Volume 67 (2005) ; 2005 ; 67 >
+    au < exists ; exists ; 2005 ; Journal of Perinatology Volume 68 (2005) ; 2005 ; 68 >
+    au < exists ; exists ; 2006 ; Journal of Perinatology Volume 69 (2006) ; 2006 ; 69 >
+    au < exists ; exists ; 2006 ; Journal of Perinatology Volume 70 (2006) ; 2006 ; 70 >
+    au < exists ; exists ; 2007 ; Journal of Perinatology Volume 71 (2007) ; 2007 ; 71 >
+    au < exists ; exists ; 2007 ; Journal of Perinatology Volume 72 (2007) ; 2007 ; 72 >
+    au < exists ; exists ; 2008 ; Journal of Perinatology Volume 73 (2008) ; 2008 ; 73 >
+    au < exists ; exists ; 2008 ; Journal of Perinatology Volume 74 (2008) ; 2008 ; 74 >
+    au < exists ; exists ; 2009 ; Journal of Perinatology Volume 75 (2009) ; 2009 ; 75 >
+    au < exists ; exists ; 2009 ; Journal of Perinatology Volume 76 (2009) ; 2009 ; 76 >
+    au < exists ; exists ; 2010 ; Journal of Perinatology Volume 77 (2010) ; 2010 ; 77 >
+    au < exists ; exists ; 2010 ; Journal of Perinatology Volume 78 (2010) ; 2010 ; 78 >
+    au < notReady ; exists ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 >
+    au < notReady ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 >
+    au < crawling ; exists ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 >
 
   }
 
@@ -1042,7 +1505,19 @@
 
     param[journal_id] = labinvest
 
-    au < released ; manifest ; 2011 ; Laboratory Investigation Volume 91 ; 2011 ; 91 >
+    au < exists ; exists ; 2000 ; Laboratory Investigation Volume 80 ; 2000 ; 80 >
+    au < exists ; exists ; 2001 ; Laboratory Investigation Volume 81 ; 2001 ; 81 >
+    au < exists ; exists ; 2002 ; Laboratory Investigation Volume 82 ; 2002 ; 82 >
+    au < exists ; exists ; 2003 ; Laboratory Investigation Volume 83 ; 2003 ; 83 >
+    au < exists ; exists ; 2004 ; Laboratory Investigation Volume 84 ; 2004 ; 84 >
+    au < exists ; exists ; 2005 ; Laboratory Investigation Volume 85 ; 2005 ; 85 >
+    au < exists ; exists ; 2006 ; Laboratory Investigation Volume 86 ; 2006 ; 86 >
+    au < exists ; exists ; 2007 ; Laboratory Investigation Volume 87 ; 2007 ; 87 >
+    au < exists ; exists ; 2008 ; Laboratory Investigation Volume 88 ; 2008 ; 88 >
+    au < exists ; exists ; 2009 ; Laboratory Investigation Volume 89 ; 2009 ; 89 >
+    au < crawling ; exists ; 2010 ; Laboratory Investigation Volume 90 ; 2010 ; 90 >
+    au < released ; crawling ; 2011 ; Laboratory Investigation Volume 91 ; 2011 ; 91 >
+    au < crawling ; exists ; 2012 ; Laboratory Investigation Volume 92 ; 2012 ; 92 >
 
   }
 
@@ -1069,10 +1544,11 @@
     au < manifest ; exists ; 2006 ; Leukemia Volume 20 ; 2006 ; 20 >
     au < manifest ; exists ; 2007 ; Leukemia Volume 21 ; 2007 ; 21 >
     au < released ; crawling ; 2008 ; Leukemia Volume 22 ; 2008 ; 22 >
-    au < notReady ; exists ; 2009 ; Leukemia Volume 23 ; 2009 ; 23 >
+    au < released ; crawling ; 2009 ; Leukemia Volume 23 ; 2009 ; 23 >
     au < released ; crawling ; 2010 ; Leukemia Volume 24 ; 2010 ; 24 >
-    au < released ; manifest ; 2011 ; Leukemia Volume 25 ; 2011 ; 25 >
-    
+    au < released ; crawling ; 2011 ; Leukemia Volume 25 ; 2011 ; 25 >
+    au < crawling ; exists ; 2012 ; Leukemia Volume 26 ; 2012 ; 26 >
+
   }
 
   {
@@ -1086,7 +1562,20 @@
 
     param[journal_id] = modpathol
 
-    au < testing ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
+    au < exists ; exists ; 2000 ; Modern Pathology Volume 13 ; 2000 ; 13 >
+    au < exists ; exists ; 2000 ; Modern Pathology Volume 14 (2000) ; 2000 ; 14 >
+    au < exists ; exists ; 2001 ; Modern Pathology Volume 14 (2001) ; 2001 ; 14 >
+    au < exists ; exists ; 2002 ; Modern Pathology Volume 15 ; 2002 ; 15 >
+    au < exists ; exists ; 2003 ; Modern Pathology Volume 16 ; 2003 ; 16 >
+    au < exists ; exists ; 2004 ; Modern Pathology Volume 17 ; 2004 ; 17 >
+    au < exists ; exists ; 2005 ; Modern Pathology Volume 18 ; 2005 ; 18 >
+    au < manifest ; exists ; 2006 ; Modern Pathology Volume 19 ; 2006 ; 19 >
+    au < exists ; exists ; 2007 ; Modern Pathology Volume 20 ; 2007 ; 20 >
+    au < exists ; exists ; 2008 ; Modern Pathology Volume 21 ; 2008 ; 21 >
+    au < exists ; exists ; 2009 ; Modern Pathology Volume 22 ; 2009 ; 22 >
+    au < crawling ; exists ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 >
+    au < notReady ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
+    au < crawling ; exists ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
 
   }
 
@@ -1115,7 +1604,8 @@
     au < released ; crawling ; 2008 ; Molecular Psychiatry Volume 13 ; 2008 ; 13 >
     au < released ; crawling ; 2009 ; Molecular Psychiatry Volume 14 ; 2009 ; 14 >
     au < released ; crawling ; 2010 ; Molecular Psychiatry Volume 15 ; 2010 ; 15 >
-    au < released ; manifest ; 2011 ; Molecular Psychiatry Volume 16 ; 2011 ; 16 >
+    au < released ; crawling ; 2011 ; Molecular Psychiatry Volume 16 ; 2011 ; 16 >
+    au < crawling ; exists ; 2012 ; Molecular Psychiatry Volume 17 ; 2012 ; 17 >
 
   }
 
@@ -1128,7 +1618,15 @@
 
     param[journal_id] = msb
 	
-	comment[msb] = missing manifest pages
+    au < exists ; exists ; 2005 ; Molecular Systems Biology Volume 1 ; 2005 ; 1 >
+    au < exists ; exists ; 2006 ; Molecular Systems Biology Volume 2 ; 2006 ; 2 >
+    au < exists ; exists ; 2007 ; Molecular Systems Biology Volume 3 ; 2007 ; 3 >
+    au < exists ; exists ; 2008 ; Molecular Systems Biology Volume 4 ; 2008 ; 4 >
+    au < exists ; exists ; 2009 ; Molecular Systems Biology Volume 5 ; 2009 ; 5 >
+    au < exists ; exists ; 2010 ; Molecular Systems Biology Volume 6 ; 2010 ; 6 >
+    au < exists ; exists ; 2011 ; Molecular Systems Biology Volume 7 ; 2011 ; 7 >
+    au < expected ; exists ; 2012 ; Molecular Systems Biology Volume 8 ; 2012 ; 8 >
+
   }
 
   {
@@ -1142,7 +1640,26 @@
 
     param[journal_id] = mt
 
-    au < released ; manifest ; 2011 ; Molecular Therapy Volume 19 ; 2011 ; 19 >
+    au < exists ; exists ; 2000 ; Molecular Therapy Volume 1 (2000) ; 2000 ; 1 >
+    au < exists ; exists ; 2000 ; Molecular Therapy Volume 2 (2000) ; 2000 ; 2 >
+    au < exists ; exists ; 2001 ; Molecular Therapy Volume 3 (2001) ; 2001 ; 3 >
+    au < exists ; exists ; 2001 ; Molecular Therapy Volume 4 (2001) ; 2001 ; 4 >
+    au < exists ; exists ; 2002 ; Molecular Therapy Volume 5 (2002) ; 2002 ; 5 >
+    au < exists ; exists ; 2002 ; Molecular Therapy Volume 6 (2002) ; 2002 ; 6 >
+    au < exists ; exists ; 2003 ; Molecular Therapy Volume 7 (2003) ; 2003 ; 7 >
+    au < exists ; exists ; 2003 ; Molecular Therapy Volume 8 (2003) ; 2003 ; 8 >
+    au < manifest ; exists ; 2004 ; Molecular Therapy Volume 9 (2004) ; 2004 ; 9 >
+    au < manifest ; exists ; 2004 ; Molecular Therapy Volume 10 (2004) ; 2004 ; 10 >
+    au < exists ; exists ; 2005 ; Molecular Therapy Volume 11 (2005) ; 2005 ; 11 >
+    au < exists ; exists ; 2005 ; Molecular Therapy Volume 12 (2005) ; 2005 ; 12 >
+    au < exists ; exists ; 2006 ; Molecular Therapy Volume 13 (2006) ; 2006 ; 13 >
+    au < exists ; exists ; 2006 ; Molecular Therapy Volume 14 (2006) ; 2006 ; 14 >
+    au < exists ; exists ; 2007 ; Molecular Therapy Volume 15 ; 2007 ; 15 >
+    au < exists ; exists ; 2008 ; Molecular Therapy Volume 16 ; 2008 ; 16 >
+    au < exists ; exists ; 2009 ; Molecular Therapy Volume 17 ; 2009 ; 17 >
+    au < exists ; exists ; 2010 ; Molecular Therapy Volume 18 ; 2010 ; 18 >
+    au < released ; crawling ; 2011 ; Molecular Therapy Volume 19 ; 2011 ; 19 >
+    au < crawling ; exists ; 2012 ; Molecular Therapy Volume 20 ; 2012 ; 20 >
 
   }
 
@@ -1157,7 +1674,11 @@
 
     param[journal_id] = mi
 
-    au < testing ; exists ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
+    au < exists ; exists ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
+    au < exists ; exists ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
+    au < exists ; exists ; 2010 ; Mucosal Immunology Volume 3 ; 2010 ; 3 >
+    au < notReady ; exists ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
+    au < crawling ; exists ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 >
 
   }
 
@@ -1172,6 +1693,519 @@
 
     param[journal_id] = nature
 
+    au < exists ; exists ; 1869 ; Nature Volume 1 ; 1869 ; 1 >
+    au < exists ; exists ; 1870 ; Nature Volume 1 ; 1870 ; 1 >
+    au < exists ; exists ; 1870 ; Nature Volume 2 ; 1870 ; 2 >
+    au < exists ; exists ; 1870 ; Nature Volume 3 ; 1870 ; 3 >
+    au < exists ; exists ; 1871 ; Nature Volume 3 ; 1871 ; 3 >
+    au < exists ; exists ; 1871 ; Nature Volume 4 ; 1871 ; 4 >
+    au < exists ; exists ; 1871 ; Nature Volume 5 ; 1871 ; 5 >
+    au < exists ; exists ; 1872 ; Nature Volume 5 ; 1872 ; 5 >
+    au < exists ; exists ; 1872 ; Nature Volume 6 ; 1872 ; 6 >
+    au < exists ; exists ; 1872 ; Nature Volume 7 ; 1872 ; 7 >
+    au < exists ; exists ; 1873 ; Nature Volume 7 ; 1873 ; 7 >
+    au < exists ; exists ; 1873 ; Nature Volume 8 ; 1873 ; 8 >
+    au < exists ; exists ; 1873 ; Nature Volume 9 ; 1873 ; 9 >
+    au < exists ; exists ; 1874 ; Nature Volume 9 ; 1874 ; 9 >
+    au < exists ; exists ; 1874 ; Nature Volume 10 ; 1874 ; 10 >
+    au < exists ; exists ; 1874 ; Nature Volume 11 ; 1874 ; 11 >
+    au < exists ; exists ; 1875 ; Nature Volume 11 ; 1875 ; 11 >
+    au < exists ; exists ; 1875 ; Nature Volume 12 ; 1875 ; 12 >
+    au < exists ; exists ; 1875 ; Nature Volume 13 ; 1875 ; 13 >
+    au < exists ; exists ; 1876 ; Nature Volume 13 ; 1876 ; 13 >
+    au < exists ; exists ; 1876 ; Nature Volume 14 ; 1876 ; 14 >
+    au < exists ; exists ; 1876 ; Nature Volume 15 ; 1876 ; 15 >
+    au < exists ; exists ; 1877 ; Nature Volume 15 ; 1877 ; 15 >
+    au < exists ; exists ; 1877 ; Nature Volume 16 ; 1877 ; 16 >
+    au < exists ; exists ; 1877 ; Nature Volume 17 ; 1877 ; 17 >
+    au < exists ; exists ; 1878 ; Nature Volume 17 ; 1878 ; 17 >
+    au < exists ; exists ; 1878 ; Nature Volume 18 ; 1878 ; 18 >
+    au < exists ; exists ; 1878 ; Nature Volume 19 ; 1878 ; 19 >
+    au < exists ; exists ; 1879 ; Nature Volume 19 ; 1879 ; 19 >
+    au < exists ; exists ; 1879 ; Nature Volume 20 ; 1879 ; 20 >
+    au < exists ; exists ; 1879 ; Nature Volume 21 ; 1879 ; 21 >
+    au < exists ; exists ; 1880 ; Nature Volume 21 ; 1880 ; 21 >
+    au < exists ; exists ; 1880 ; Nature Volume 22 ; 1880 ; 22 >
+    au < exists ; exists ; 1880 ; Nature Volume 23 ; 1880 ; 23 >
+    au < exists ; exists ; 1881 ; Nature Volume 23 ; 1881 ; 23 >
+    au < exists ; exists ; 1881 ; Nature Volume 24 ; 1881 ; 24 >
+    au < exists ; exists ; 1881 ; Nature Volume 25 ; 1881 ; 25 >
+    au < exists ; exists ; 1882 ; Nature Volume 25 ; 1882 ; 25 >
+    au < exists ; exists ; 1882 ; Nature Volume 26 ; 1882 ; 26 >
+    au < exists ; exists ; 1882 ; Nature Volume 27 ; 1882 ; 27 >
+    au < exists ; exists ; 1883 ; Nature Volume 27 ; 1883 ; 27 >
+    au < exists ; exists ; 1883 ; Nature Volume 28 ; 1883 ; 28 >
+    au < exists ; exists ; 1883 ; Nature Volume 29 ; 1883 ; 29 >
+    au < exists ; exists ; 1884 ; Nature Volume 29 ; 1884 ; 29 >
+    au < exists ; exists ; 1884 ; Nature Volume 30 ; 1884 ; 30 >
+    au < exists ; exists ; 1884 ; Nature Volume 31 ; 1884 ; 31 >
+    au < exists ; exists ; 1885 ; Nature Volume 31 ; 1885 ; 31 >
+    au < exists ; exists ; 1885 ; Nature Volume 32 ; 1885 ; 32 >
+    au < exists ; exists ; 1885 ; Nature Volume 33 ; 1885 ; 33 >
+    au < exists ; exists ; 1886 ; Nature Volume 33 ; 1886 ; 33 >
+    au < exists ; exists ; 1886 ; Nature Volume 34 ; 1886 ; 34 >
+    au < exists ; exists ; 1886 ; Nature Volume 35 ; 1886 ; 35 >
+    au < exists ; exists ; 1887 ; Nature Volume 35 ; 1887 ; 35 >
+    au < exists ; exists ; 1887 ; Nature Volume 36 ; 1887 ; 36 >
+    au < exists ; exists ; 1887 ; Nature Volume 37 ; 1887 ; 37 >
+    au < exists ; exists ; 1888 ; Nature Volume 37 ; 1888 ; 37 >
+    au < exists ; exists ; 1888 ; Nature Volume 38 ; 1888 ; 38 >
+    au < exists ; exists ; 1888 ; Nature Volume 39 ; 1888 ; 39 >
+    au < exists ; exists ; 1889 ; Nature Volume 39 ; 1889 ; 39 >
+    au < exists ; exists ; 1889 ; Nature Volume 40 ; 1889 ; 40 >
+    au < exists ; exists ; 1889 ; Nature Volume 41 ; 1889 ; 41 >
+    au < exists ; exists ; 1890 ; Nature Volume 41 ; 1890 ; 41 >
+    au < exists ; exists ; 1890 ; Nature Volume 42 ; 1890 ; 42 >
+    au < exists ; exists ; 1890 ; Nature Volume 43 ; 1890 ; 43 >
+    au < exists ; exists ; 1891 ; Nature Volume 43 ; 1891 ; 43 >
+    au < exists ; exists ; 1891 ; Nature Volume 44 ; 1891 ; 44 >
+    au < exists ; exists ; 1891 ; Nature Volume 45 ; 1891 ; 45 >
+    au < exists ; exists ; 1892 ; Nature Volume 45 ; 1892 ; 45 >
+    au < exists ; exists ; 1892 ; Nature Volume 46 ; 1892 ; 46 >
+    au < exists ; exists ; 1892 ; Nature Volume 47 ; 1892 ; 47 >
+    au < exists ; exists ; 1893 ; Nature Volume 47 ; 1893 ; 47 >
+    au < exists ; exists ; 1893 ; Nature Volume 48 ; 1893 ; 48 >
+    au < exists ; exists ; 1893 ; Nature Volume 49 ; 1893 ; 49 >
+    au < exists ; exists ; 1894 ; Nature Volume 49 ; 1894 ; 49 >
+    au < exists ; exists ; 1894 ; Nature Volume 50 ; 1894 ; 50 >
+    au < exists ; exists ; 1894 ; Nature Volume 51 ; 1894 ; 51 >
+    au < exists ; exists ; 1895 ; Nature Volume 51 ; 1895 ; 51 >
+    au < exists ; exists ; 1895 ; Nature Volume 52 ; 1895 ; 52 >
+    au < exists ; exists ; 1895 ; Nature Volume 53 ; 1895 ; 53 >
+    au < exists ; exists ; 1896 ; Nature Volume 53 ; 1896 ; 53 >
+    au < exists ; exists ; 1896 ; Nature Volume 54 ; 1896 ; 54 >
+    au < exists ; exists ; 1896 ; Nature Volume 55 ; 1896 ; 55 >
+    au < exists ; exists ; 1897 ; Nature Volume 55 ; 1897 ; 55 >
+    au < exists ; exists ; 1897 ; Nature Volume 56 ; 1897 ; 56 >
+    au < exists ; exists ; 1897 ; Nature Volume 57 ; 1897 ; 57 >
+    au < exists ; exists ; 1898 ; Nature Volume 57 ; 1898 ; 57 >
+    au < exists ; exists ; 1898 ; Nature Volume 58 ; 1898 ; 58 >
+    au < exists ; exists ; 1898 ; Nature Volume 59 ; 1898 ; 59 >
+    au < exists ; exists ; 1899 ; Nature Volume 59 ; 1899 ; 59 >
+    au < exists ; exists ; 1899 ; Nature Volume 60 ; 1899 ; 60 >
+    au < exists ; exists ; 1899 ; Nature Volume 61 ; 1899 ; 61 >
+    au < exists ; exists ; 1900 ; Nature Volume 61 ; 1900 ; 61 >
+    au < exists ; exists ; 1900 ; Nature Volume 62 ; 1900 ; 62 >
+    au < exists ; exists ; 1900 ; Nature Volume 63 ; 1900 ; 63 >
+    au < exists ; exists ; 1901 ; Nature Volume 63 ; 1901 ; 63 >
+    au < exists ; exists ; 1901 ; Nature Volume 64 ; 1901 ; 64 >
+    au < exists ; exists ; 1901 ; Nature Volume 65 ; 1901 ; 65 >
+    au < exists ; exists ; 1902 ; Nature Volume 65 ; 1902 ; 65 >
+    au < exists ; exists ; 1902 ; Nature Volume 66 ; 1902 ; 66 >
+    au < exists ; exists ; 1902 ; Nature Volume 67 ; 1902 ; 67 >
+    au < exists ; exists ; 1903 ; Nature Volume 67 ; 1903 ; 67 >
+    au < exists ; exists ; 1903 ; Nature Volume 68 ; 1903 ; 68 >
+    au < exists ; exists ; 1903 ; Nature Volume 69 ; 1903 ; 69 >
+    au < exists ; exists ; 1904 ; Nature Volume 69 ; 1904 ; 69 >
+    au < exists ; exists ; 1904 ; Nature Volume 70 ; 1904 ; 70 >
+    au < exists ; exists ; 1904 ; Nature Volume 71 ; 1904 ; 71 >
+    au < exists ; exists ; 1905 ; Nature Volume 71 ; 1905 ; 71 >
+    au < exists ; exists ; 1905 ; Nature Volume 72 ; 1905 ; 72 >
+    au < exists ; exists ; 1905 ; Nature Volume 73 ; 1905 ; 73 >
+    au < exists ; exists ; 1906 ; Nature Volume 73 ; 1906 ; 73 >
+    au < exists ; exists ; 1906 ; Nature Volume 74 ; 1906 ; 74 >
+    au < exists ; exists ; 1906 ; Nature Volume 75 ; 1906 ; 75 >
+    au < exists ; exists ; 1907 ; Nature Volume 75 ; 1907 ; 75 >
+    au < exists ; exists ; 1907 ; Nature Volume 76 ; 1907 ; 76 >
+    au < exists ; exists ; 1907 ; Nature Volume 77 ; 1907 ; 77 >
+    au < exists ; exists ; 1908 ; Nature Volume 77 ; 1908 ; 77 >
+    au < exists ; exists ; 1908 ; Nature Volume 78 ; 1908 ; 78 >
+    au < exists ; exists ; 1908 ; Nature Volume 79 ; 1908 ; 79 >
+    au < exists ; exists ; 1909 ; Nature Volume 79 ; 1909 ; 79 >
+    au < exists ; exists ; 1909 ; Nature Volume 80 ; 1909 ; 80 >
+    au < exists ; exists ; 1909 ; Nature Volume 81 ; 1909 ; 81 >
+    au < exists ; exists ; 1909 ; Nature Volume 82 ; 1909 ; 82 >
+    au < exists ; exists ; 1910 ; Nature Volume 82 ; 1910 ; 82 >
+    au < exists ; exists ; 1910 ; Nature Volume 83 ; 1910 ; 83 >
+    au < exists ; exists ; 1910 ; Nature Volume 84 ; 1910 ; 84 >
+    au < exists ; exists ; 1910 ; Nature Volume 85 ; 1910 ; 85 >
+    au < exists ; exists ; 1911 ; Nature Volume 85 ; 1911 ; 85 >
+    au < exists ; exists ; 1911 ; Nature Volume 86 ; 1911 ; 86 >
+    au < exists ; exists ; 1911 ; Nature Volume 87 ; 1911 ; 87 >
+    au < exists ; exists ; 1911 ; Nature Volume 88 ; 1911 ; 88 >
+    au < exists ; exists ; 1912 ; Nature Volume 88 ; 1912 ; 88 >
+    au < exists ; exists ; 1912 ; Nature Volume 89 ; 1912 ; 89 >
+    au < exists ; exists ; 1912 ; Nature Volume 90 ; 1912 ; 90 >
+    au < exists ; exists ; 1913 ; Nature Volume 90 ; 1913 ; 90 >
+    au < exists ; exists ; 1913 ; Nature Volume 91 ; 1913 ; 91 >
+    au < exists ; exists ; 1913 ; Nature Volume 92 ; 1913 ; 92 >
+    au < exists ; exists ; 1914 ; Nature Volume 92 ; 1914 ; 92 >
+    au < exists ; exists ; 1914 ; Nature Volume 93 ; 1914 ; 93 >
+    au < exists ; exists ; 1914 ; Nature Volume 94 ; 1914 ; 94 >
+    au < exists ; exists ; 1915 ; Nature Volume 94 ; 1915 ; 94 >
+    au < exists ; exists ; 1915 ; Nature Volume 95 ; 1915 ; 95 >
+    au < exists ; exists ; 1915 ; Nature Volume 96 ; 1915 ; 96 >
+    au < exists ; exists ; 1916 ; Nature Volume 96 ; 1916 ; 96 >
+    au < exists ; exists ; 1916 ; Nature Volume 97 ; 1916 ; 97 >
+    au < exists ; exists ; 1916 ; Nature Volume 98 ; 1916 ; 98 >
+    au < exists ; exists ; 1917 ; Nature Volume 98 ; 1917 ; 98 >
+    au < exists ; exists ; 1917 ; Nature Volume 99 ; 1917 ; 99 >
+    au < exists ; exists ; 1917 ; Nature Volume 100 ; 1917 ; 100 >
+    au < exists ; exists ; 1918 ; Nature Volume 100 ; 1918 ; 100 >
+    au < exists ; exists ; 1918 ; Nature Volume 101 ; 1918 ; 101 >
+    au < exists ; exists ; 1918 ; Nature Volume 102 ; 1918 ; 102 >
+    au < exists ; exists ; 1919 ; Nature Volume 102 ; 1919 ; 102 >
+    au < exists ; exists ; 1919 ; Nature Volume 103 ; 1919 ; 103 >
+    au < exists ; exists ; 1919 ; Nature Volume 104 ; 1919 ; 104 >
+    au < exists ; exists ; 1920 ; Nature Volume 104 ; 1920 ; 104 >
+    au < exists ; exists ; 1920 ; Nature Volume 105 ; 1920 ; 105 >
+    au < exists ; exists ; 1920 ; Nature Volume 106 ; 1920 ; 106 >
+    au < exists ; exists ; 1921 ; Nature Volume 106 ; 1921 ; 106 >
+    au < exists ; exists ; 1921 ; Nature Volume 107 ; 1921 ; 107 >
+    au < exists ; exists ; 1921 ; Nature Volume 108 ; 1921 ; 108 >
+    au < exists ; exists ; 1922 ; Nature Volume 109 ; 1922 ; 109 >
+    au < exists ; exists ; 1922 ; Nature Volume 110 ; 1922 ; 110 >
+    au < exists ; exists ; 1922 ; Nature Volume 111 ; 1922 ; 111 >
+    au < exists ; exists ; 1923 ; Nature Volume 111 ; 1923 ; 111 >
+    au < exists ; exists ; 1923 ; Nature Volume 112 ; 1923 ; 112 >
+    au < exists ; exists ; 1923 ; Nature Volume 113 ; 1923 ; 113 >
+    au < exists ; exists ; 1924 ; Nature Volume 113 ; 1924 ; 113 >
+    au < exists ; exists ; 1924 ; Nature Volume 114 ; 1924 ; 114 >
+    au < exists ; exists ; 1924 ; Nature Volume 115 ; 1924 ; 115 >
+    au < exists ; exists ; 1925 ; Nature Volume 115 ; 1925 ; 115 >
+    au < exists ; exists ; 1925 ; Nature Volume 116 ; 1925 ; 116 >
+    au < exists ; exists ; 1925 ; Nature Volume 117 ; 1925 ; 117 >
+    au < exists ; exists ; 1926 ; Nature Volume 117 ; 1926 ; 117 >
+    au < exists ; exists ; 1926 ; Nature Volume 118 ; 1926 ; 118 >
+    au < exists ; exists ; 1926 ; Nature Volume 119 ; 1926 ; 119 >
+    au < exists ; exists ; 1927 ; Nature Volume 119 ; 1927 ; 119 >
+    au < exists ; exists ; 1927 ; Nature Volume 120 ; 1927 ; 120 >
+    au < exists ; exists ; 1927 ; Nature Volume 121 ; 1927 ; 121 >
+    au < exists ; exists ; 1928 ; Nature Volume 121 ; 1928 ; 121 >
+    au < exists ; exists ; 1928 ; Nature Volume 122 ; 1928 ; 122 >
+    au < exists ; exists ; 1928 ; Nature Volume 123 ; 1928 ; 123 >
+    au < exists ; exists ; 1929 ; Nature Volume 123 ; 1929 ; 123 >
+    au < exists ; exists ; 1929 ; Nature Volume 124 ; 1929 ; 124 >
+    au < exists ; exists ; 1930 ; Nature Volume 125 ; 1930 ; 125 >
+    au < exists ; exists ; 1930 ; Nature Volume 126 ; 1930 ; 126 >
+    au < exists ; exists ; 1931 ; Nature Volume 127 ; 1931 ; 127 >
+    au < exists ; exists ; 1931 ; Nature Volume 128 ; 1931 ; 128 >
+    au < exists ; exists ; 1932 ; Nature Volume 129 ; 1932 ; 129 >
+    au < exists ; exists ; 1932 ; Nature Volume 130 ; 1932 ; 130 >
+    au < exists ; exists ; 1933 ; Nature Volume 131 ; 1933 ; 131 >
+    au < exists ; exists ; 1933 ; Nature Volume 132 ; 1933 ; 132 >
+    au < exists ; exists ; 1934 ; Nature Volume 133 ; 1934 ; 133 >
+    au < exists ; exists ; 1934 ; Nature Volume 134 ; 1934 ; 134 >
+    au < exists ; exists ; 1935 ; Nature Volume 135 ; 1935 ; 135 >
+    au < exists ; exists ; 1935 ; Nature Volume 136 ; 1935 ; 136 >
+    au < exists ; exists ; 1936 ; Nature Volume 137 ; 1936 ; 137 >
+    au < exists ; exists ; 1936 ; Nature Volume 138 ; 1936 ; 138 >
+    au < exists ; exists ; 1937 ; Nature Volume 139 ; 1937 ; 139 >
+    au < exists ; exists ; 1937 ; Nature Volume 140 ; 1937 ; 140 >
+    au < exists ; exists ; 1938 ; Nature Volume 141 ; 1938 ; 141 >
+    au < exists ; exists ; 1938 ; Nature Volume 142 ; 1938 ; 142 >
+    au < exists ; exists ; 1939 ; Nature Volume 143 ; 1939 ; 143 >
+    au < exists ; exists ; 1939 ; Nature Volume 144 ; 1939 ; 144 >
+    au < exists ; exists ; 1940 ; Nature Volume 145 ; 1940 ; 145 >
+    au < exists ; exists ; 1940 ; Nature Volume 146 ; 1940 ; 146 >
+    au < exists ; exists ; 1941 ; Nature Volume 147 ; 1941 ; 147 >
+    au < exists ; exists ; 1941 ; Nature Volume 148 ; 1941 ; 148 >
+    au < exists ; exists ; 1942 ; Nature Volume 149 ; 1942 ; 149 >
+    au < exists ; exists ; 1942 ; Nature Volume 150 ; 1942 ; 150 >
+    au < exists ; exists ; 1943 ; Nature Volume 151 ; 1943 ; 151 >
+    au < exists ; exists ; 1943 ; Nature Volume 152 ; 1943 ; 152 >
+    au < exists ; exists ; 1944 ; Nature Volume 153 ; 1944 ; 153 >
+    au < exists ; exists ; 1944 ; Nature Volume 154 ; 1944 ; 154 >
+    au < exists ; exists ; 1945 ; Nature Volume 155 ; 1945 ; 155 >
+    au < exists ; exists ; 1945 ; Nature Volume 156 ; 1945 ; 156 >
+    au < exists ; exists ; 1946 ; Nature Volume 157 ; 1946 ; 157 >
+    au < exists ; exists ; 1946 ; Nature Volume 158 ; 1946 ; 158 >
+    au < exists ; exists ; 1947 ; Nature Volume 159 ; 1947 ; 159 >
+    au < exists ; exists ; 1947 ; Nature Volume 160 ; 1947 ; 160 >
+    au < exists ; exists ; 1948 ; Nature Volume 161 ; 1948 ; 161 >
+    au < exists ; exists ; 1948 ; Nature Volume 162 ; 1948 ; 162 >
+    au < exists ; exists ; 1949 ; Nature Volume 163 ; 1949 ; 163 >
+    au < exists ; exists ; 1949 ; Nature Volume 164 ; 1949 ; 164 >
+    au < exists ; exists ; 1950 ; Nature Volume 165 ; 1950 ; 165 >
+    au < exists ; exists ; 1950 ; Nature Volume 166 ; 1950 ; 166 >
+    au < exists ; exists ; 1951 ; Nature Volume 167 ; 1951 ; 167 >
+    au < exists ; exists ; 1951 ; Nature Volume 168 ; 1951 ; 168 >
+    au < exists ; exists ; 1952 ; Nature Volume 169 ; 1952 ; 169 >
+    au < exists ; exists ; 1952 ; Nature Volume 170 ; 1952 ; 170 >
+    au < exists ; exists ; 1953 ; Nature Volume 171 ; 1953 ; 171 >
+    au < exists ; exists ; 1953 ; Nature Volume 172 ; 1953 ; 172 >
+    au < exists ; exists ; 1954 ; Nature Volume 173 ; 1954 ; 173 >
+    au < exists ; exists ; 1954 ; Nature Volume 174 ; 1954 ; 174 >
+    au < exists ; exists ; 1955 ; Nature Volume 175 ; 1955 ; 175 >
+    au < exists ; exists ; 1955 ; Nature Volume 176 ; 1955 ; 176 >
+    au < exists ; exists ; 1956 ; Nature Volume 177 ; 1956 ; 177 >
+    au < exists ; exists ; 1956 ; Nature Volume 178 ; 1956 ; 178 >
+    au < exists ; exists ; 1957 ; Nature Volume 179 ; 1957 ; 179 >
+    au < exists ; exists ; 1957 ; Nature Volume 180 ; 1957 ; 180 >
+    au < exists ; exists ; 1958 ; Nature Volume 181 ; 1958 ; 181 >
+    au < exists ; exists ; 1958 ; Nature Volume 182 ; 1958 ; 182 >
+    au < exists ; exists ; 1959 ; Nature Volume 183 ; 1959 ; 183 >
+    au < exists ; exists ; 1959 ; Nature Volume 184 ; 1959 ; 184 >
+    au < exists ; exists ; 1960 ; Nature Volume 185 ; 1960 ; 185 >
+    au < exists ; exists ; 1960 ; Nature Volume 186 ; 1960 ; 186 >
+    au < exists ; exists ; 1960 ; Nature Volume 187 ; 1960 ; 187 >
+    au < exists ; exists ; 1960 ; Nature Volume 188 ; 1960 ; 188 >
+    au < exists ; exists ; 1961 ; Nature Volume 189 ; 1961 ; 189 >
+    au < exists ; exists ; 1961 ; Nature Volume 190 ; 1961 ; 190 >
+    au < exists ; exists ; 1961 ; Nature Volume 191 ; 1961 ; 191 >
+    au < exists ; exists ; 1961 ; Nature Volume 192 ; 1961 ; 192 >
+    au < exists ; exists ; 1962 ; Nature Volume 193 ; 1962 ; 193 >
+    au < exists ; exists ; 1962 ; Nature Volume 194 ; 1962 ; 194 >
+    au < exists ; exists ; 1962 ; Nature Volume 195 ; 1962 ; 195 >
+    au < exists ; exists ; 1962 ; Nature Volume 196 ; 1962 ; 196 >
+    au < exists ; exists ; 1963 ; Nature Volume 197 ; 1963 ; 197 >
+    au < exists ; exists ; 1963 ; Nature Volume 198 ; 1963 ; 198 >
+    au < exists ; exists ; 1963 ; Nature Volume 199 ; 1963 ; 199 >
+    au < exists ; exists ; 1963 ; Nature Volume 200 ; 1963 ; 200 >
+    au < exists ; exists ; 1964 ; Nature Volume 201 ; 1964 ; 201 >
+    au < exists ; exists ; 1964 ; Nature Volume 202 ; 1964 ; 202 >
+    au < exists ; exists ; 1964 ; Nature Volume 203 ; 1964 ; 203 >
+    au < exists ; exists ; 1964 ; Nature Volume 204 ; 1964 ; 204 >
+    au < exists ; exists ; 1965 ; Nature Volume 205 ; 1965 ; 205 >
+    au < exists ; exists ; 1965 ; Nature Volume 206 ; 1965 ; 206 >
+    au < exists ; exists ; 1965 ; Nature Volume 207 ; 1965 ; 207 >
+    au < exists ; exists ; 1965 ; Nature Volume 208 ; 1965 ; 208 >
+    au < exists ; exists ; 1966 ; Nature Volume 209 ; 1966 ; 209 >
+    au < exists ; exists ; 1966 ; Nature Volume 210 ; 1966 ; 210 >
+    au < exists ; exists ; 1966 ; Nature Volume 211 ; 1966 ; 211 >
+    au < exists ; exists ; 1966 ; Nature Volume 212 ; 1966 ; 212 >
+    au < exists ; exists ; 1967 ; Nature Volume 213 ; 1967 ; 213 >
+    au < exists ; exists ; 1967 ; Nature Volume 214 ; 1967 ; 214 >
+    au < exists ; exists ; 1967 ; Nature Volume 215 ; 1967 ; 215 >
+    au < exists ; exists ; 1967 ; Nature Volume 216 ; 1967 ; 216 >
+    au < exists ; exists ; 1968 ; Nature Volume 217 ; 1968 ; 217 >
+    au < exists ; exists ; 1968 ; Nature Volume 218 ; 1968 ; 218 >
+    au < exists ; exists ; 1968 ; Nature Volume 219 ; 1968 ; 219 >
+    au < exists ; exists ; 1968 ; Nature Volume 220 ; 1968 ; 220 >
+    au < exists ; exists ; 1969 ; Nature Volume 221 ; 1969 ; 221 >
+    au < exists ; exists ; 1969 ; Nature Volume 222 ; 1969 ; 222 >
+    au < exists ; exists ; 1969 ; Nature Volume 223 ; 1969 ; 223 >
+    au < exists ; exists ; 1969 ; Nature Volume 224 ; 1969 ; 224 >
+    au < exists ; exists ; 1970 ; Nature Volume 225 ; 1970 ; 225 >
+    au < exists ; exists ; 1970 ; Nature Volume 226 ; 1970 ; 226 >
+    au < exists ; exists ; 1970 ; Nature Volume 227 ; 1970 ; 227 >
+    au < exists ; exists ; 1970 ; Nature Volume 228 ; 1970 ; 228 >
+    au < exists ; exists ; 1971 ; Nature Volume 229 ; 1971 ; 229 >
+    au < exists ; exists ; 1971 ; Nature Volume 230 ; 1971 ; 230 >
+    au < exists ; exists ; 1971 ; Nature Volume 231 ; 1971 ; 231 >
+    au < exists ; exists ; 1971 ; Nature Volume 232 ; 1971 ; 232 >
+    au < exists ; exists ; 1971 ; Nature Volume 233 ; 1971 ; 233 >
+    au < exists ; exists ; 1971 ; Nature Volume 234 ; 1971 ; 234 >
+    au < exists ; exists ; 1972 ; Nature Volume 235 ; 1972 ; 235 >
+    au < exists ; exists ; 1972 ; Nature Volume 236 ; 1972 ; 236 >
+    au < exists ; exists ; 1972 ; Nature Volume 237 ; 1972 ; 237 >
+    au < exists ; exists ; 1972 ; Nature Volume 238 ; 1972 ; 238 >
+    au < exists ; exists ; 1972 ; Nature Volume 239 ; 1972 ; 239 >
+    au < exists ; exists ; 1972 ; Nature Volume 240 ; 1972 ; 240 >
+    au < exists ; exists ; 1973 ; Nature Volume 241 ; 1973 ; 241 >
+    au < exists ; exists ; 1973 ; Nature Volume 242 ; 1973 ; 242 >
+    au < exists ; exists ; 1973 ; Nature Volume 243 ; 1973 ; 243 >
+    au < exists ; exists ; 1973 ; Nature Volume 244 ; 1973 ; 244 >
+    au < exists ; exists ; 1973 ; Nature Volume 245 ; 1973 ; 245 >
+    au < exists ; exists ; 1973 ; Nature Volume 246 ; 1973 ; 246 >
+    au < exists ; exists ; 1974 ; Nature Volume 247 ; 1974 ; 247 >
+    au < exists ; exists ; 1974 ; Nature Volume 248 ; 1974 ; 248 >
+    au < exists ; exists ; 1974 ; Nature Volume 249 ; 1974 ; 249 >
+    au < exists ; exists ; 1974 ; Nature Volume 250 ; 1974 ; 250 >
+    au < exists ; exists ; 1974 ; Nature Volume 251 ; 1974 ; 251 >
+    au < exists ; exists ; 1974 ; Nature Volume 252 ; 1974 ; 252 >
+    au < exists ; exists ; 1975 ; Nature Volume 253 ; 1975 ; 253 >
+    au < exists ; exists ; 1975 ; Nature Volume 254 ; 1975 ; 254 >
+    au < exists ; exists ; 1975 ; Nature Volume 255 ; 1975 ; 255 >
+    au < exists ; exists ; 1975 ; Nature Volume 256 ; 1975 ; 256 >
+    au < exists ; exists ; 1975 ; Nature Volume 257 ; 1975 ; 257 >
+    au < exists ; exists ; 1975 ; Nature Volume 258 ; 1975 ; 258 >
+    au < exists ; exists ; 1976 ; Nature Volume 259 ; 1976 ; 259 >
+    au < exists ; exists ; 1976 ; Nature Volume 260 ; 1976 ; 260 >
+    au < exists ; exists ; 1976 ; Nature Volume 261 ; 1976 ; 261 >
+    au < exists ; exists ; 1976 ; Nature Volume 262 ; 1976 ; 262 >
+    au < exists ; exists ; 1976 ; Nature Volume 263 ; 1976 ; 263 >
+    au < exists ; exists ; 1976 ; Nature Volume 264 ; 1976 ; 264 >
+    au < exists ; exists ; 1977 ; Nature Volume 265 ; 1977 ; 265 >
+    au < exists ; exists ; 1977 ; Nature Volume 266 ; 1977 ; 266 >
+    au < exists ; exists ; 1977 ; Nature Volume 267 ; 1977 ; 267 >
+    au < exists ; exists ; 1977 ; Nature Volume 268 ; 1977 ; 268 >
+    au < exists ; exists ; 1977 ; Nature Volume 269 ; 1977 ; 269 >
+    au < exists ; exists ; 1977 ; Nature Volume 270 ; 1977 ; 270 >
+    au < exists ; exists ; 1978 ; Nature Volume 271 ; 1978 ; 271 >
+    au < exists ; exists ; 1978 ; Nature Volume 272 ; 1978 ; 272 >
+    au < exists ; exists ; 1978 ; Nature Volume 273 ; 1978 ; 273 >
+    au < exists ; exists ; 1978 ; Nature Volume 274 ; 1978 ; 274 >
+    au < exists ; exists ; 1978 ; Nature Volume 275 ; 1978 ; 275 >
+    au < exists ; exists ; 1978 ; Nature Volume 276 ; 1978 ; 276 >
+    au < exists ; exists ; 1979 ; Nature Volume 277 ; 1979 ; 277 >
+    au < exists ; exists ; 1979 ; Nature Volume 278 ; 1979 ; 278 >
+    au < exists ; exists ; 1979 ; Nature Volume 279 ; 1979 ; 279 >
+    au < exists ; exists ; 1979 ; Nature Volume 280 ; 1979 ; 280 >
+    au < exists ; exists ; 1979 ; Nature Volume 281 ; 1979 ; 281 >
+    au < exists ; exists ; 1979 ; Nature Volume 282 ; 1979 ; 282 >
+    au < exists ; exists ; 1980 ; Nature Volume 283 ; 1980 ; 283 >
+    au < exists ; exists ; 1980 ; Nature Volume 284 ; 1980 ; 284 >
+    au < exists ; exists ; 1980 ; Nature Volume 285 ; 1980 ; 285 >
+    au < exists ; exists ; 1980 ; Nature Volume 286 ; 1980 ; 286 >
+    au < exists ; exists ; 1980 ; Nature Volume 287 ; 1980 ; 287 >
+    au < exists ; exists ; 1980 ; Nature Volume 288 ; 1980 ; 288 >
+    au < exists ; exists ; 1981 ; Nature Volume 289 ; 1981 ; 289 >
+    au < exists ; exists ; 1981 ; Nature Volume 290 ; 1981 ; 290 >
+    au < exists ; exists ; 1981 ; Nature Volume 291 ; 1981 ; 291 >
+    au < exists ; exists ; 1981 ; Nature Volume 292 ; 1981 ; 292 >
+    au < exists ; exists ; 1981 ; Nature Volume 293 ; 1981 ; 293 >
+    au < exists ; exists ; 1981 ; Nature Volume 294 ; 1981 ; 294 >
+    au < exists ; exists ; 1982 ; Nature Volume 295 ; 1982 ; 295 >
+    au < exists ; exists ; 1982 ; Nature Volume 296 ; 1982 ; 296 >
+    au < exists ; exists ; 1982 ; Nature Volume 297 ; 1982 ; 297 >
+    au < exists ; exists ; 1982 ; Nature Volume 298 ; 1982 ; 298 >
+    au < exists ; exists ; 1982 ; Nature Volume 299 ; 1982 ; 299 >
+    au < exists ; exists ; 1982 ; Nature Volume 300 ; 1982 ; 300 >
+    au < exists ; exists ; 1983 ; Nature Volume 301 ; 1983 ; 301 >
+    au < exists ; exists ; 1983 ; Nature Volume 302 ; 1983 ; 302 >
+    au < exists ; exists ; 1983 ; Nature Volume 303 ; 1983 ; 303 >
+    au < exists ; exists ; 1983 ; Nature Volume 304 ; 1983 ; 304 >
+    au < exists ; exists ; 1983 ; Nature Volume 305 ; 1983 ; 305 >
+    au < exists ; exists ; 1983 ; Nature Volume 306 ; 1983 ; 306 >
+    au < exists ; exists ; 1984 ; Nature Volume 307 ; 1984 ; 307 >
+    au < exists ; exists ; 1984 ; Nature Volume 308 ; 1984 ; 308 >
+    au < exists ; exists ; 1984 ; Nature Volume 309 ; 1984 ; 309 >
+    au < exists ; exists ; 1984 ; Nature Volume 310 ; 1984 ; 310 >
+    au < exists ; exists ; 1984 ; Nature Volume 311 ; 1984 ; 311 >
+    au < exists ; exists ; 1984 ; Nature Volume 312 ; 1984 ; 312 >
+    au < exists ; exists ; 1985 ; Nature Volume 313 ; 1985 ; 313 >
+    au < exists ; exists ; 1985 ; Nature Volume 314 ; 1985 ; 314 >
+    au < exists ; exists ; 1985 ; Nature Volume 315 ; 1985 ; 315 >
+    au < exists ; exists ; 1985 ; Nature Volume 316 ; 1985 ; 316 >
+    au < exists ; exists ; 1985 ; Nature Volume 317 ; 1985 ; 317 >
+    au < exists ; exists ; 1985 ; Nature Volume 318 ; 1985 ; 318 >
+    au < exists ; exists ; 1986 ; Nature Volume 319 ; 1986 ; 319 >
+    au < exists ; exists ; 1986 ; Nature Volume 320 ; 1986 ; 320 >
+    au < exists ; exists ; 1986 ; Nature Volume 321 ; 1986 ; 321 >
+    au < exists ; exists ; 1986 ; Nature Volume 322 ; 1986 ; 322 >
+    au < exists ; exists ; 1986 ; Nature Volume 323 ; 1986 ; 323 >
+    au < exists ; exists ; 1986 ; Nature Volume 324 ; 1986 ; 324 >
+    au < exists ; exists ; 1987 ; Nature Volume 325 ; 1987 ; 325 >
+    au < exists ; exists ; 1987 ; Nature Volume 326 ; 1987 ; 326 >
+    au < exists ; exists ; 1987 ; Nature Volume 327 ; 1987 ; 327 >
+    au < exists ; exists ; 1987 ; Nature Volume 328 ; 1987 ; 328 >
+    au < exists ; exists ; 1987 ; Nature Volume 329 ; 1987 ; 329 >
+    au < exists ; exists ; 1987 ; Nature Volume 330 ; 1987 ; 330 >
+    au < exists ; exists ; 1988 ; Nature Volume 331 ; 1988 ; 331 >
+    au < exists ; exists ; 1988 ; Nature Volume 332 ; 1988 ; 332 >
+    au < exists ; exists ; 1988 ; Nature Volume 333 ; 1988 ; 333 >
+    au < exists ; exists ; 1988 ; Nature Volume 334 ; 1988 ; 334 >
+    au < exists ; exists ; 1988 ; Nature Volume 335 ; 1988 ; 335 >
+    au < exists ; exists ; 1988 ; Nature Volume 336 ; 1988 ; 336 >
+    au < exists ; exists ; 1988 ; Nature Volume 395 ; 1988 ; 395 >
+    au < exists ; exists ; 1989 ; Nature Volume 337 ; 1989 ; 337 >
+    au < exists ; exists ; 1989 ; Nature Volume 338 ; 1989 ; 338 >
+    au < exists ; exists ; 1989 ; Nature Volume 339 ; 1989 ; 339 >
+    au < exists ; exists ; 1989 ; Nature Volume 340 ; 1989 ; 340 >
+    au < exists ; exists ; 1989 ; Nature Volume 341 ; 1989 ; 341 >
+    au < exists ; exists ; 1989 ; Nature Volume 342 ; 1989 ; 342 >
+    au < exists ; exists ; 1990 ; Nature Volume 343 ; 1990 ; 343 >
+    au < exists ; exists ; 1990 ; Nature Volume 344 ; 1990 ; 344 >
+    au < exists ; exists ; 1990 ; Nature Volume 345 ; 1990 ; 345 >
+    au < exists ; exists ; 1990 ; Nature Volume 346 ; 1990 ; 346 >
+    au < exists ; exists ; 1990 ; Nature Volume 347 ; 1990 ; 347 >
+    au < exists ; exists ; 1990 ; Nature Volume 348 ; 1990 ; 348 >
+    au < exists ; exists ; 1991 ; Nature Volume 349 ; 1991 ; 349 >
+    au < exists ; exists ; 1991 ; Nature Volume 350 ; 1991 ; 350 >
+    au < exists ; exists ; 1991 ; Nature Volume 351 ; 1991 ; 351 >
+    au < exists ; exists ; 1991 ; Nature Volume 352 ; 1991 ; 352 >
+    au < exists ; exists ; 1991 ; Nature Volume 353 ; 1991 ; 353 >
+    au < exists ; exists ; 1991 ; Nature Volume 354 ; 1991 ; 354 >
+    au < exists ; exists ; 1992 ; Nature Volume 355 ; 1992 ; 355 >
+    au < exists ; exists ; 1992 ; Nature Volume 356 ; 1992 ; 356 >
+    au < exists ; exists ; 1992 ; Nature Volume 357 ; 1992 ; 357 >
+    au < exists ; exists ; 1992 ; Nature Volume 358 ; 1992 ; 358 >
+    au < exists ; exists ; 1992 ; Nature Volume 359 ; 1992 ; 359 >
+    au < exists ; exists ; 1992 ; Nature Volume 360 ; 1992 ; 360 >
+    au < exists ; exists ; 1993 ; Nature Volume 361 ; 1993 ; 361 >
+    au < exists ; exists ; 1993 ; Nature Volume 362 ; 1993 ; 362 >
+    au < exists ; exists ; 1993 ; Nature Volume 363 ; 1993 ; 363 >
+    au < exists ; exists ; 1993 ; Nature Volume 364 ; 1993 ; 364 >
+    au < exists ; exists ; 1993 ; Nature Volume 365 ; 1993 ; 365 >
+    au < exists ; exists ; 1993 ; Nature Volume 366 ; 1993 ; 366 >
+    au < exists ; exists ; 1994 ; Nature Volume 367 ; 1994 ; 367 >
+    au < exists ; exists ; 1994 ; Nature Volume 368 ; 1994 ; 368 >
+    au < exists ; exists ; 1994 ; Nature Volume 369 ; 1994 ; 369 >
+    au < exists ; exists ; 1994 ; Nature Volume 370 ; 1994 ; 370 >
+    au < exists ; exists ; 1994 ; Nature Volume 371 ; 1994 ; 371 >
+    au < exists ; exists ; 1994 ; Nature Volume 372 ; 1994 ; 372 >
+    au < exists ; exists ; 1995 ; Nature Volume 373 ; 1995 ; 373 >
+    au < exists ; exists ; 1995 ; Nature Volume 374 ; 1995 ; 374 >
+    au < exists ; exists ; 1995 ; Nature Volume 375 ; 1995 ; 375 >
+    au < exists ; exists ; 1995 ; Nature Volume 376 ; 1995 ; 376 >
+    au < exists ; exists ; 1995 ; Nature Volume 377 ; 1995 ; 377 >
+    au < exists ; exists ; 1995 ; Nature Volume 378 ; 1995 ; 378 >
+    au < exists ; exists ; 1996 ; Nature Volume 379 ; 1996 ; 379 >
+    au < exists ; exists ; 1996 ; Nature Volume 380 ; 1996 ; 380 >
+    au < exists ; exists ; 1996 ; Nature Volume 381 ; 1996 ; 381 >
+    au < exists ; exists ; 1996 ; Nature Volume 382 ; 1996 ; 382 >
+    au < exists ; exists ; 1996 ; Nature Volume 383 ; 1996 ; 383 >
+    au < exists ; exists ; 1996 ; Nature Volume 384 ; 1996 ; 384 >
+    au < exists ; exists ; 1997 ; Nature Volume 385 ; 1997 ; 385 >
+    au < exists ; exists ; 1997 ; Nature Volume 386 ; 1997 ; 386 >
+    au < exists ; exists ; 1997 ; Nature Volume 387 ; 1997 ; 387 >
+    au < exists ; exists ; 1997 ; Nature Volume 388 ; 1997 ; 388 >
+    au < exists ; exists ; 1997 ; Nature Volume 389 ; 1997 ; 389 >
+    au < exists ; exists ; 1997 ; Nature Volume 390 ; 1997 ; 390 >
+    au < exists ; exists ; 1998 ; Nature Volume 391 ; 1998 ; 391 >
+    au < exists ; exists ; 1998 ; Nature Volume 392 ; 1998 ; 392 >
+    au < exists ; exists ; 1998 ; Nature Volume 393 ; 1998 ; 393 >
+    au < exists ; exists ; 1998 ; Nature Volume 394 ; 1998 ; 394 >
+    au < exists ; exists ; 1998 ; Nature Volume 395 ; 1998 ; 395 >
+    au < exists ; exists ; 1998 ; Nature Volume 396 ; 1998 ; 396 >
+    au < exists ; exists ; 1999 ; Nature Volume 397 ; 1999 ; 397 >
+    au < exists ; exists ; 1999 ; Nature Volume 398 ; 1999 ; 398 >
+    au < exists ; exists ; 1999 ; Nature Volume 399 ; 1999 ; 399 >
+    au < exists ; exists ; 1999 ; Nature Volume 400 ; 1999 ; 400 >
+    au < exists ; exists ; 1999 ; Nature Volume 401 ; 1999 ; 401 >
+    au < exists ; exists ; 1999 ; Nature Volume 402 ; 1999 ; 402 >
+    au < exists ; exists ; 2000 ; Nature Volume 403 ; 2000 ; 403 >
+    au < exists ; exists ; 2000 ; Nature Volume 404 ; 2000 ; 404 >
+    au < exists ; exists ; 2000 ; Nature Volume 405 ; 2000 ; 405 >
+    au < exists ; exists ; 2000 ; Nature Volume 406 ; 2000 ; 406 >
+    au < exists ; exists ; 2000 ; Nature Volume 407 ; 2000 ; 407 >
+    au < exists ; exists ; 2000 ; Nature Volume 408 ; 2000 ; 408 >
+    au < exists ; exists ; 2000 ; Nature Volume 424 ; 2000 ; 424 >
+    au < exists ; exists ; 2001 ; Nature Volume 409 ; 2001 ; 409 >
+    au < exists ; exists ; 2001 ; Nature Volume 410 ; 2001 ; 410 >
+    au < exists ; exists ; 2001 ; Nature Volume 411 ; 2001 ; 411 >
+    au < exists ; exists ; 2001 ; Nature Volume 412 ; 2001 ; 412 >
+    au < exists ; exists ; 2001 ; Nature Volume 413 ; 2001 ; 413 >
+    au < exists ; exists ; 2001 ; Nature Volume 414 ; 2001 ; 414 >
+    au < exists ; exists ; 2002 ; Nature Volume 415 ; 2002 ; 415 >
+    au < exists ; exists ; 2002 ; Nature Volume 416 ; 2002 ; 416 >
+    au < exists ; exists ; 2002 ; Nature Volume 417 ; 2002 ; 417 >
+    au < exists ; exists ; 2002 ; Nature Volume 418 ; 2002 ; 418 >
+    au < exists ; exists ; 2002 ; Nature Volume 419 ; 2002 ; 419 >
+    au < exists ; exists ; 2002 ; Nature Volume 420 ; 2002 ; 420 >
+    au < exists ; exists ; 2002 ; Nature Volume 430 ; 2002 ; 430 >
+    au < exists ; exists ; 2003 ; Nature Volume 421 ; 2003 ; 421 >
+    au < exists ; exists ; 2003 ; Nature Volume 422 ; 2003 ; 422 >
+    au < exists ; exists ; 2003 ; Nature Volume 423 ; 2003 ; 423 >
+    au < exists ; exists ; 2003 ; Nature Volume 424 ; 2003 ; 424 >
+    au < exists ; exists ; 2003 ; Nature Volume 425 ; 2003 ; 425 >
+    au < exists ; exists ; 2003 ; Nature Volume 426 ; 2003 ; 426 >
+    au < exists ; exists ; 2004 ; Nature Volume 427 ; 2004 ; 427 >
+    au < exists ; exists ; 2004 ; Nature Volume 428 ; 2004 ; 428 >
+    au < exists ; exists ; 2004 ; Nature Volume 429 ; 2004 ; 429 >
+    au < exists ; exists ; 2004 ; Nature Volume 430 ; 2004 ; 430 >
+    au < exists ; exists ; 2004 ; Nature Volume 431 ; 2004 ; 431 >
+    au < exists ; exists ; 2004 ; Nature Volume 432 ; 2004 ; 432 >
+    au < exists ; exists ; 2004 ; Nature Volume 438 ; 2004 ; 438 >
+    au < exists ; exists ; 2005 ; Nature Volume 433 ; 2005 ; 433 >
+    au < exists ; exists ; 2005 ; Nature Volume 434 ; 2005 ; 434 >
+    au < exists ; exists ; 2005 ; Nature Volume 435 ; 2005 ; 435 >
+    au < exists ; exists ; 2005 ; Nature Volume 436 ; 2005 ; 436 >
+    au < exists ; exists ; 2005 ; Nature Volume 437 ; 2005 ; 437 >
+    au < exists ; exists ; 2005 ; Nature Volume 438 ; 2005 ; 438 >
+    au < exists ; exists ; 2006 ; Nature Volume 439 ; 2006 ; 439 >
+    au < exists ; exists ; 2006 ; Nature Volume 440 ; 2006 ; 440 >
+    au < exists ; exists ; 2006 ; Nature Volume 441 ; 2006 ; 441 >
+    au < exists ; exists ; 2006 ; Nature Volume 442 ; 2006 ; 442 >
+    au < exists ; exists ; 2006 ; Nature Volume 443 ; 2006 ; 443 >
+    au < exists ; exists ; 2006 ; Nature Volume 444 ; 2006 ; 444 >
+    au < exists ; exists ; 2007 ; Nature Volume 445 ; 2007 ; 445 >
+    au < exists ; exists ; 2007 ; Nature Volume 446 ; 2007 ; 446 >
+    au < exists ; exists ; 2007 ; Nature Volume 447 ; 2007 ; 447 >
+    au < exists ; exists ; 2007 ; Nature Volume 448 ; 2007 ; 448 >
+    au < exists ; exists ; 2007 ; Nature Volume 449 ; 2007 ; 449 >
+    au < exists ; exists ; 2007 ; Nature Volume 450 ; 2007 ; 450 >
     au < released ; crawling ; 2008 ; Nature Volume 451 ; 2008 ; 451 >
     au < released ; crawling ; 2008 ; Nature Volume 452 ; 2008 ; 452 >
     au < released ; crawling ; 2008 ; Nature Volume 453 ; 2008 ; 453 >
@@ -1190,16 +2224,21 @@
     au < released ; crawling ; 2010 ; Nature Volume 466 ; 2010 ; 466 >
     au < released ; crawling ; 2010 ; Nature Volume 467 ; 2010 ; 467 >
     au < released ; crawling ; 2010 ; Nature Volume 468 ; 2010 ; 468 >
-    au < testing ; exists ; 2011 ; Nature Volume 469 ; 2011 ; 469 >
-    au < testing ; exists ; 2011 ; Nature Volume 470 ; 2011 ; 470 >
-    au < testing ; exists ; 2011 ; Nature Volume 471 ; 2011 ; 471 >
-    au < testing ; exists ; 2011 ; Nature Volume 472 ; 2011 ; 472 >
-    au < testing ; exists ; 2011 ; Nature Volume 473 ; 2011 ; 473 >
-    au < testing ; exists ; 2011 ; Nature Volume 474 ; 2011 ; 474 >
-    au < testing ; exists ; 2011 ; Nature Volume 475 ; 2011 ; 475 >
-    au < testing ; exists ; 2011 ; Nature Volume 476 ; 2011 ; 476 >
-    au < testing ; exists ; 2011 ; Nature Volume 477 ; 2011 ; 477 >
-                                                               
+    au < released ; crawling ; 2011 ; Nature Volume 469 ; 2011 ; 469 >
+    au < released ; crawling ; 2011 ; Nature Volume 470 ; 2011 ; 470 >
+    au < released ; crawling ; 2011 ; Nature Volume 471 ; 2011 ; 471 >
+    au < released ; crawling ; 2011 ; Nature Volume 472 ; 2011 ; 472 >
+    au < released ; crawling ; 2011 ; Nature Volume 473 ; 2011 ; 473 >
+    au < released ; crawling ; 2011 ; Nature Volume 474 ; 2011 ; 474 >
+    au < released ; crawling ; 2011 ; Nature Volume 475 ; 2011 ; 475 >
+    au < released ; crawling ; 2011 ; Nature Volume 476 ; 2011 ; 476 >
+    au < released ; crawling ; 2011 ; Nature Volume 477 ; 2011 ; 477 >
+    au < testing ; exists ; 2011 ; Nature Volume 478 ; 2011 ; 478 >
+    au < testing ; exists ; 2011 ; Nature Volume 479 ; 2011 ; 479 >
+    au < released ; manifest ; 2011 ; Nature Volume 480 ; 2011 ; 480 >
+    au < crawling ; exists ; 2012 ; Nature Volume 481 ; 2012 ; 481 >
+    au < crawling ; exists ; 2012 ; Nature Volume 482 ; 2012 ; 482 >
+
   }
 
   {
@@ -1213,10 +2252,36 @@
 
     param[journal_id] = nbt
 
+    au < exists ; exists ; 1983 ; Nature Biotechnology Volume 1 ; 1983 ; 1 >
+    au < exists ; exists ; 1984 ; Nature Biotechnology Volume 2 ; 1984 ; 2 >
+    au < exists ; exists ; 1985 ; Nature Biotechnology Volume 3 ; 1985 ; 3 >
+    au < exists ; exists ; 1986 ; Nature Biotechnology Volume 4 ; 1986 ; 4 >
+    au < exists ; exists ; 1987 ; Nature Biotechnology Volume 5 ; 1987 ; 5 >
+    au < exists ; exists ; 1988 ; Nature Biotechnology Volume 6 ; 1988 ; 6 >
+    au < exists ; exists ; 1989 ; Nature Biotechnology Volume 7 ; 1989 ; 7 >
+    au < exists ; exists ; 1990 ; Nature Biotechnology Volume 8 ; 1990 ; 8 >
+    au < exists ; exists ; 1991 ; Nature Biotechnology Volume 9 ; 1991 ; 9 >
+    au < exists ; exists ; 1992 ; Nature Biotechnology Volume 10 ; 1992 ; 10 >
+    au < exists ; exists ; 1993 ; Nature Biotechnology Volume 11 ; 1993 ; 11 >
+    au < exists ; exists ; 1994 ; Nature Biotechnology Volume 12 ; 1994 ; 12 >
+    au < exists ; exists ; 1995 ; Nature Biotechnology Volume 13 ; 1995 ; 13 >
+    au < exists ; exists ; 1996 ; Nature Biotechnology Volume 14 ; 1996 ; 14 >
+    au < exists ; exists ; 1997 ; Nature Biotechnology Volume 15 ; 1997 ; 15 >
+    au < exists ; exists ; 1998 ; Nature Biotechnology Volume 16 ; 1998 ; 16 >
+    au < exists ; exists ; 1999 ; Nature Biotechnology Volume 17 ; 1999 ; 17 >
+    au < exists ; exists ; 2000 ; Nature Biotechnology Volume 18 ; 2000 ; 18 >
+    au < exists ; exists ; 2001 ; Nature Biotechnology Volume 19 ; 2001 ; 19 >
+    au < exists ; exists ; 2002 ; Nature Biotechnology Volume 20 ; 2002 ; 20 >
+    au < exists ; exists ; 2003 ; Nature Biotechnology Volume 21 ; 2003 ; 21 >
+    au < exists ; exists ; 2004 ; Nature Biotechnology Volume 22 ; 2004 ; 22 >
+    au < exists ; exists ; 2005 ; Nature Biotechnology Volume 23 ; 2005 ; 23 >
+    au < exists ; exists ; 2006 ; Nature Biotechnology Volume 24 ; 2006 ; 24 >
+    au < exists ; exists ; 2007 ; Nature Biotechnology Volume 25 ; 2007 ; 25 >
     au < released ; crawling ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
     au < released ; crawling ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
     au < released ; crawling ; 2010 ; Nature Biotechnology Volume 28 ; 2010 ; 28 >
-    au < testing ; exists ; 2011 ; Nature Biotechnology Volume 29 ; 2011 ; 29 >
+    au < released ; crawling ; 2011 ; Nature Biotechnology Volume 29 ; 2011 ; 29 >
+    au < crawling ; exists ; 2012 ; Nature Biotechnology Volume 30 ; 2012 ; 30 >
 
   }
 
@@ -1231,10 +2296,20 @@
 
     param[journal_id] = ncb
 
+    au < exists ; exists ; 1999 ; Nature Cell Biology Volume 1 ; 1999 ; 1 >
+    au < exists ; exists ; 2000 ; Nature Cell Biology Volume 2 ; 2000 ; 2 >
+    au < exists ; exists ; 2001 ; Nature Cell Biology Volume 3 ; 2001 ; 3 >
+    au < exists ; exists ; 2002 ; Nature Cell Biology Volume 4 ; 2002 ; 4 >
+    au < exists ; exists ; 2003 ; Nature Cell Biology Volume 5 ; 2003 ; 5 >
+    au < exists ; exists ; 2004 ; Nature Cell Biology Volume 6 ; 2004 ; 6 >
+    au < exists ; exists ; 2005 ; Nature Cell Biology Volume 7 ; 2005 ; 7 >
+    au < exists ; exists ; 2006 ; Nature Cell Biology Volume 8 ; 2006 ; 8 >
+    au < exists ; exists ; 2007 ; Nature Cell Biology Volume 9 ; 2007 ; 9 >
     au < released ; crawling ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
     au < released ; crawling ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
     au < released ; crawling ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 >
     au < testing ; exists ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 >
+    au < crawling ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 >
 
   }
 
@@ -1243,16 +2318,20 @@
     title <
       name = Nature Chemical Biology ;
       issn = 1552-4450 ;
-      eissn = 1548-7105 ;
+      eissn = 1552-4469;
       issnl = 1552-4450
     >
 
     param[journal_id] = nchembio
 
+    au < exists ; exists ; 2005 ; Nature Chemical Biology Volume 1 ; 2005 ; 1 >
+    au < exists ; exists ; 2006 ; Nature Chemical Biology Volume 2 ; 2006 ; 2 >
+    au < exists ; exists ; 2007 ; Nature Chemical Biology Volume 3 ; 2007 ; 3 >
     au < released ; crawling ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 >
-    au < testing ; exists ; 2010 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 >
+    au < testing ; exists ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 >
+    au < crawling ; exists ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 >
 
   }
 
@@ -1270,6 +2349,7 @@
     au < released ; crawling ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
     au < released ; crawling ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 >
     au < testing ; exists ; 2011 ; Nature Chemistry Volume 3 ; 2011 ; 3 >
+    au < crawling ; exists ; 2012 ; Nature Chemistry Volume 4 ; 2012 ; 4 >
 
   }
 
@@ -1282,10 +2362,15 @@
 
     param[journal_id] = ndigest
 
+    au < exists ; exists ; 2004 ; Nature Digest Volume 1 ; 2004 ; 1 >
+    au < exists ; exists ; 2005 ; Nature Digest Volume 2 ; 2005 ; 2 >
+    au < exists ; exists ; 2006 ; Nature Digest Volume 3 ; 2006 ; 3 >
+    au < exists ; exists ; 2007 ; Nature Digest Volume 4 ; 2007 ; 4 >
     au < released ; crawling ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
-    au < testing ; exists ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
+    au < released ; crawling ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
+    au < crawling ; exists ; 2012 ; Nature Digest Volume 9 ; 2012 ; 9 >
 
   }
 
@@ -1300,10 +2385,50 @@
 
     param[journal_id] = ng
 
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 1 (1992) ; 1992 ; 1 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 2 (1992) ; 1992 ; 2 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 3 (1993) ; 1993 ; 3 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 4 (1993) ; 1993 ; 4 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 5 (1993) ; 1993 ; 4 >
+    au < exists ; exists ; 1994 ; Nature Genetics Volume 6 (1994) ; 1994 ; 6 >
+    au < exists ; exists ; 1994 ; Nature Genetics Volume 7 (1994) ; 1994 ; 7 >
+    au < exists ; exists ; 1994 ; Nature Genetics Volume 8 (1994) ; 1994 ; 7 >
+    au < exists ; exists ; 1995 ; Nature Genetics Volume 9 (1995) ; 1995 ; 9 >
+    au < exists ; exists ; 1995 ; Nature Genetics Volume 10 (1995) ; 1995 ; 10 >
+    au < exists ; exists ; 1995 ; Nature Genetics Volume 11 (1995) ; 1995 ; 10 >
+    au < exists ; exists ; 1996 ; Nature Genetics Volume 12 (1996) ; 1996 ; 12 >
+    au < exists ; exists ; 1996 ; Nature Genetics Volume 13 (1996) ; 1996 ; 13 >
+    au < exists ; exists ; 1996 ; Nature Genetics Volume 14 (1996) ; 1996 ; 13 >
+    au < exists ; exists ; 1997 ; Nature Genetics Volume 15 (1997) ; 1997 ; 15 >
+    au < exists ; exists ; 1997 ; Nature Genetics Volume 16 (1997) ; 1997 ; 16 >
+    au < exists ; exists ; 1997 ; Nature Genetics Volume 17 (1997) ; 1997 ; 16 >
+    au < exists ; exists ; 1998 ; Nature Genetics Volume 18 (1998) ; 1998 ; 18 >
+    au < exists ; exists ; 1998 ; Nature Genetics Volume 19 (1998) ; 1998 ; 19 >
+    au < exists ; exists ; 1998 ; Nature Genetics Volume 20 (1998) ; 1998 ; 19 >
+    au < exists ; exists ; 1999 ; Nature Genetics Volume 21 (1999) ; 1999 ; 21 >
+    au < exists ; exists ; 1999 ; Nature Genetics Volume 22 (1999) ; 1999 ; 22 >
+    au < exists ; exists ; 1999 ; Nature Genetics Volume 23 (1999) ; 1999 ; 22 >
+    au < exists ; exists ; 2000 ; Nature Genetics Volume 24 (2000) ; 2000 ; 24 >
+    au < exists ; exists ; 2000 ; Nature Genetics Volume 25 (2000) ; 2000 ; 25 >
+    au < exists ; exists ; 2000 ; Nature Genetics Volume 26 (2000) ; 2000 ; 25 >
+    au < exists ; exists ; 2001 ; Nature Genetics Volume 27 (2001) ; 2001 ; 27 >
+    au < exists ; exists ; 2001 ; Nature Genetics Volume 28 (2001) ; 2001 ; 28 >
+    au < exists ; exists ; 2001 ; Nature Genetics Volume 29 (2001) ; 2001 ; 28 >
+    au < exists ; exists ; 2002 ; Nature Genetics Volume 30 (2002) ; 2002 ; 30 >
+    au < exists ; exists ; 2002 ; Nature Genetics Volume 31 (2002) ; 2002 ; 31 >
+    au < exists ; exists ; 2002 ; Nature Genetics Volume 32 (2002) ; 2002 ; 31 >
+    au < exists ; exists ; 2003 ; Nature Genetics Volume 33 (2003) ; 2003 ; 33 >
+    au < exists ; exists ; 2003 ; Nature Genetics Volume 34 (2003) ; 2003 ; 34 >
+    au < exists ; exists ; 2003 ; Nature Genetics Volume 35 (2003) ; 2003 ; 34 >
+    au < exists ; exists ; 2004 ; Nature Genetics Volume 36 ; 2004 ; 36 >
+    au < exists ; exists ; 2005 ; Nature Genetics Volume 37 ; 2005 ; 37 >
+    au < exists ; exists ; 2006 ; Nature Genetics Volume 38 ; 2006 ; 38 >
+    au < exists ; exists ; 2007 ; Nature Genetics Volume 39 ; 2007 ; 39 >
     au < released ; crawling ; 2008 ; Nature Genetics Volume 40 ; 2008 ; 40 >
     au < released ; crawling ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 >
     au < released ; crawling ; 2010 ; Nature Genetics Volume 42 ; 2010 ; 42 >
     au < testing ; exists ; 2011 ; Nature Genetics Volume 43 ; 2011 ; 43 >
+    au < crawling ; exists ; 2012 ; Nature Genetics Volume 44 ; 2012 ; 44 >
 
   }
 
@@ -1322,6 +2447,7 @@
     au < released ; crawling ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 >
     au < released ; crawling ; 2010 ; Nature Geoscience Volume 3 ; 2010 ; 3 >
     au < testing ; exists ; 2011 ; Nature Geoscience Volume 4 ; 2011 ; 4 >
+    au < crawling ; exists ; 2012 ; Nature Geoscience Volume 5 ; 2012 ; 5 >
 
   }
 
@@ -1336,10 +2462,19 @@
 
     param[journal_id] = ni
 
+    au < exists ; exists ; 2000 ; Nature Immunology Volume 1 ; 2000 ; 1 >
+    au < exists ; exists ; 2001 ; Nature Immunology Volume 2 ; 2001 ; 2 >
+    au < exists ; exists ; 2002 ; Nature Immunology Volume 3 ; 2002 ; 3 >
+    au < exists ; exists ; 2003 ; Nature Immunology Volume 4 ; 2003 ; 4 >
+    au < exists ; exists ; 2004 ; Nature Immunology Volume 5 ; 2004 ; 5 >
+    au < exists ; exists ; 2005 ; Nature Immunology Volume 6 ; 2005 ; 6 >
+    au < exists ; exists ; 2006 ; Nature Immunology Volume 7 ; 2006 ; 7 >
+    au < exists ; exists ; 2007 ; Nature Immunology Volume 8 ; 2007 ; 8 >
     au < released ; crawling ; 2008 ; Nature Immunology Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Immunology Volume 11 ; 2010 ; 11 >
     au < testing ; exists ; 2011 ; Nature Immunology Volume 12 ; 2011 ; 12 >
+    au < crawling ; exists ; 2012 ; Nature Immunology Volume 13 ; 2012 ; 13 >
 
   }
 
@@ -1354,10 +2489,17 @@
 
     param[journal_id] = nmat
 
+    au < exists ; exists ; 2002 ; Nature Materials Volume 1 ; 2002 ; 1 >
+    au < manifest ; exists ; 2003 ; Nature Materials Volume 2 ; 2003 ; 2 >
+    au < manifest ; exists ; 2004 ; Nature Materials Volume 3 ; 2004 ; 3 >
+    au < exists ; exists ; 2005 ; Nature Materials Volume 4 ; 2005 ; 4 >
+    au < exists ; exists ; 2006 ; Nature Materials Volume 5 ; 2006 ; 5 >
+    au < exists ; exists ; 2007 ; Nature Materials Volume 6 ; 2007 ; 6 >
     au < released ; crawling ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
     au < released ; crawling ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
     au < released ; crawling ; 2010 ; Nature Materials Volume 9 ; 2010 ; 9 >
     au < testing ; exists ; 2011 ; Nature Materials Volume 10 ; 2011 ; 10 >
+    au < crawling ; exists ; 2012 ; Nature Materials Volume 11 ; 2012 ; 11 >
 
   }
 
@@ -1372,10 +2514,24 @@
 
     param[journal_id] = nm
 
+    au < exists ; exists ; 1995 ; Nature Medicine Volume 1 ; 1995 ; 1 >
+    au < exists ; exists ; 1996 ; Nature Medicine Volume 2 ; 1996 ; 2 >
+    au < exists ; exists ; 1997 ; Nature Medicine Volume 3 ; 1997 ; 3 >
+    au < exists ; exists ; 1998 ; Nature Medicine Volume 4 ; 1998 ; 4 >
+    au < exists ; exists ; 1999 ; Nature Medicine Volume 5 ; 1999 ; 5 >
+    au < exists ; exists ; 2000 ; Nature Medicine Volume 6 ; 2000 ; 6 >
+    au < exists ; exists ; 2001 ; Nature Medicine Volume 7 ; 2001 ; 7 >
+    au < exists ; exists ; 2002 ; Nature Medicine Volume 8 ; 2002 ; 8 >
+    au < exists ; exists ; 2003 ; Nature Medicine Volume 9 ; 2003 ; 9 >
+    au < exists ; exists ; 2004 ; Nature Medicine Volume 10 ; 2004 ; 10 >
+    au < exists ; exists ; 2005 ; Nature Medicine Volume 11 ; 2005 ; 11 >
+    au < exists ; exists ; 2006 ; Nature Medicine Volume 12 ; 2006 ; 12 >
+    au < exists ; exists ; 2007 ; Nature Medicine Volume 13 ; 2007 ; 13 >
     au < released ; crawling ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 >
     au < released ; crawling ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 >
     au < released ; crawling ; 2010 ; Nature Medicine Volume 16 ; 2010 ; 16 >
     au < testing ; exists ; 2011 ; Nature Medicine Volume 17 ; 2011 ; 17 >
+    au < crawling ; exists ; 2012 ; Nature Medicine Volume 18 ; 2012 ; 18 >
 
   }
 
@@ -1390,10 +2546,15 @@
 
     param[journal_id] = nmeth
 
+    au < exists ; exists ; 2004 ; Nature Methods Volume 1 ; 2004 ; 1 >
+    au < exists ; exists ; 2005 ; Nature Methods Volume 2 ; 2005 ; 2 >
+    au < exists ; exists ; 2006 ; Nature Methods Volume 3 ; 2006 ; 3 >
+    au < exists ; exists ; 2007 ; Nature Methods Volume 4 ; 2007 ; 4 >
     au < released ; crawling ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 >
     au < testing ; exists ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 >
+    au < crawling ; exists ; 2012 ; Nature Methods Volume 9 ; 2012 ; 9 >
 
   }
 
@@ -1408,10 +2569,13 @@
 
     param[journal_id] = nnano
 
+    au < exists ; exists ; 2006 ; Nature Nanotechnology Volume 1 ; 2006 ; 1 >
+    au < exists ; exists ; 2007 ; Nature Nanotechnology Volume 2 ; 2007 ; 2 >
     au < released ; crawling ; 2008 ; Nature Nanotechnology Volume 3 ; 2008 ; 3 >
     au < released ; crawling ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 >
     au < released ; crawling ; 2010 ; Nature Nanotechnology Volume 5 ; 2010 ; 5 >
-    au < crawling ; exists ; 2011 ; Nature Nanotechnology Volume 6 ; 2011 ; 6 >
+    au < released ; manifest ; 2011 ; Nature Nanotechnology Volume 6 ; 2011 ; 6 >
+    au < crawling ; exists ; 2012 ; Nature Nanotechnology Volume 7 ; 2012 ; 7 >
 
   }
 
@@ -1426,10 +2590,21 @@
 
     param[journal_id] = neuro
 
+    au < exists ; exists ; 1998 ; Nature Neuroscience Volume 1 ; 1998 ; 1 >
+    au < exists ; exists ; 1999 ; Nature Neuroscience Volume 2 ; 1999 ; 2 >
+    au < exists ; exists ; 2000 ; Nature Neuroscience Volume 3 ; 2000 ; 3 >
+    au < exists ; exists ; 2001 ; Nature Neuroscience Volume 4 ; 2001 ; 4 >
+    au < exists ; exists ; 2002 ; Nature Neuroscience Volume 5 ; 2002 ; 5 >
+    au < exists ; exists ; 2003 ; Nature Neuroscience Volume 6 ; 2003 ; 6 >
+    au < exists ; exists ; 2004 ; Nature Neuroscience Volume 7 ; 2004 ; 7 >
+    au < exists ; exists ; 2005 ; Nature Neuroscience Volume 8 ; 2005 ; 8 >
+    au < exists ; exists ; 2006 ; Nature Neuroscience Volume 9 ; 2006 ; 9 >
+    au < exists ; exists ; 2007 ; Nature Neuroscience Volume 10 ; 2007 ; 10 >
     au < released ; crawling ; 2008 ; Nature Neuroscience Volume 11 ; 2008 ; 11 >
     au < released ; crawling ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
     au < released ; crawling ; 2010 ; Nature Neuroscience Volume 13 ; 2010 ; 13 >
-    au < crawling ; exists ; 2011 ; Nature Neuroscience Volume 14 ; 2011 ; 14 >
+    au < testing ; exists ; 2011 ; Nature Neuroscience Volume 14 ; 2011 ; 14 >
+    au < crawling ; exists ; 2012 ; Nature Neuroscience Volume 15 ; 2012 ; 15 >
 
   }
 
@@ -1444,10 +2619,13 @@
 
     param[journal_id] = nphoton
 
+    au < manifest ; exists ; 2006 ; Nature Photonics Volume sample ; 2008 ; sample >
+    au < manifest ; exists ; 2007 ; Nature Photonics Volume 1 ; 2007 ; 1 >
     au < released ; crawling ; 2008 ; Nature Photonics Volume 2 ; 2008 ; 2 >
     au < released ; crawling ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 >
     au < released ; crawling ; 2010 ; Nature Photonics Volume 4 ; 2010 ; 4 >
-    au < crawling ; exists ; 2011 ; Nature Photonics Volume 5 ; 2011 ; 5 >
+    au < released ; crawling ; 2011 ; Nature Photonics Volume 5 ; 2011 ; 5 >
+    au < crawling ; exists ; 2012 ; Nature Photonics Volume 6 ; 2012 ; 6 >
 
   }
 
@@ -1462,10 +2640,14 @@
 
     param[journal_id] = nphys
 
+    au < exists ; exists ; 2005 ; Nature Physics Volume 1 ; 2005 ; 1 >
+    au < exists ; exists ; 2006 ; Nature Physics Volume 2 ; 2006 ; 2 >
+    au < exists ; exists ; 2007 ; Nature Physics Volume 3 ; 2007 ; 3 >
     au < released ; crawling ; 2008 ; Nature Physics Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Physics Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Physics Volume 6 ; 2010 ; 6 >
-    au < crawling ; exists ; 2011 ; Nature Physics Volume 7 ; 2011 ; 7 >
+    au < testing ; exists ; 2011 ; Nature Physics Volume 7 ; 2011 ; 7 >
+    au < crawling ; exists ; 2012 ; Nature Physics Volume 8 ; 2012 ; 8 >
 
   }
 
@@ -1480,10 +2662,13 @@
 
     param[journal_id] = nprot
 
+    au < exists ; exists ; 2006 ; Nature Protocols Volume 1 ; 2006 ; 1 >
+    au < exists ; exists ; 2007 ; Nature Protocols Volume 2 ; 2007 ; 2 >
     au < released ; crawling ; 2008 ; Nature Protocols Volume 3 ; 2008 ; 3 >
     au < released ; crawling ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 >
     au < released ; crawling ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 >
-    au < crawling ; exists ; 2011 ; Nature Protocols Volume 6 ; 2011 ; 6 >
+    au < testing ; exists ; 2011 ; Nature Protocols Volume 6 ; 2011 ; 6 >
+    au < crawling ; exists ; 2012 ; Nature Protocols Volume 7 ; 2012 ; 7 >
 
   }
 
@@ -1498,10 +2683,18 @@
 
     param[journal_id] = nrc
 
+    au < exists ; exists ; 2001 ; Nature Reviews Cancer Volume 1 ; 2001 ; 1 >
+    au < exists ; exists ; 2002 ; Nature Reviews Cancer Volume 2 ; 2002 ; 2 >
+    au < exists ; exists ; 2003 ; Nature Reviews Cancer Volume 3 ; 2003 ; 3 >
+    au < exists ; exists ; 2004 ; Nature Reviews Cancer Volume 4 ; 2004 ; 4 >
+    au < exists ; exists ; 2005 ; Nature Reviews Cancer Volume 5 ; 2005 ; 5 >
+    au < exists ; exists ; 2006 ; Nature Reviews Cancer Volume 6 ; 2006 ; 6 >
+    au < exists ; exists ; 2007 ; Nature Reviews Cancer Volume 7 ; 2007 ; 7 >
     au < released ; crawling ; 2008 ; Nature Reviews Cancer Volume 8 ; 2008 ; 8 >
     au < released ; crawling ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; Nature Reviews Cancer Volume 10 ; 2010 ; 10 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Cancer Volume 11 ; 2011 ; 11 >
+    au < released ; manifest ; 2011 ; Nature Reviews Cancer Volume 11 ; 2011 ; 11 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Cancer Volume 12 ; 2012 ; 12 >
 
   }
 
@@ -1516,10 +2709,15 @@
 
     param[journal_id] = nrcardio
 
+    au < exists ; exists ; 2004 ; Nature Reviews Cardiology Volume 1 ; 2004 ; 1 >
+    au < exists ; exists ; 2005 ; Nature Reviews Cardiology Volume 2 ; 2005 ; 2 >
+    au < exists ; exists ; 2006 ; Nature Reviews Cardiology Volume 3 ; 2006 ; 3 >
+    au < exists ; exists ; 2007 ; Nature Reviews Cardiology Volume 4 ; 2007 ; 4 >
     au < released ; crawling ; 2008 ; Nature Reviews Cardiology Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Cardiology Volume 7 ; 2010 ; 7 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Cardiology Volume 8 ; 2011 ; 8 >
+    au < released ; crawling ; 2011 ; Nature Reviews Cardiology Volume 8 ; 2011 ; 8 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Cardiology Volume 9 ; 2012 ; 9 >
 
   }
 
@@ -1534,10 +2732,15 @@
 
     param[journal_id] = nrclinonc
 
+    au < exists ; exists ; 2004 ; Nature Reviews Clinical Oncology Volume 1 ; 2004 ; 1 >
+    au < exists ; exists ; 2005 ; Nature Reviews Clinical Oncology Volume 2 ; 2005 ; 2 >
+    au < exists ; exists ; 2006 ; Nature Reviews Clinical Oncology Volume 3 ; 2006 ; 3 >
+    au < exists ; exists ; 2007 ; Nature Reviews Clinical Oncology Volume 4 ; 2007 ; 4 >
     au < released ; crawling ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Clinical Oncology Volume 7 ; 2010 ; 7 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Clinical Oncology Volume 8 ; 2011 ; 8 >
+    au < released ; manifest ; 2011 ; Nature Reviews Clinical Oncology Volume 8 ; 2011 ; 8 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Clinical Oncology Volume 9 ; 2012 ; 9 >
 
   }
 
@@ -1552,10 +2755,17 @@
 
     param[journal_id] = nrd
 
+    au < exists ; exists ; 2002 ; Nature Reviews Drug Discovery Volume 1 ; 2002 ; 1 >
+    au < exists ; exists ; 2003 ; Nature Reviews Drug Discovery Volume 2 ; 2003 ; 2 >
+    au < manifest ; exists ; 2004 ; Nature Reviews Drug Discovery Volume 3 ; 2004 ; 3 >
+    au < exists ; exists ; 2005 ; Nature Reviews Drug Discovery Volume 4 ; 2005 ; 4 >
+    au < exists ; exists ; 2006 ; Nature Reviews Drug Discovery Volume 5 ; 2006 ; 5 >
+    au < manifest ; exists ; 2007 ; Nature Reviews Drug Discovery Volume 6 ; 2007 ; 6 >
     au < released ; crawling ; 2008 ; Nature Reviews Drug Discovery Volume 7 ; 2008 ; 7 >
     au < released ; crawling ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
     au < released ; crawling ; 2010 ; Nature Reviews Drug Discovery Volume 9 ; 2010 ; 9 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Drug Discovery Volume 10 ; 2011 ; 10 >
+    au < released ; crawling ; 2011 ; Nature Reviews Drug Discovery Volume 10 ; 2011 ; 10 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Drug Discovery Volume 11 ; 2012 ; 11 >
 
   }
 
@@ -1570,10 +2780,14 @@
 
     param[journal_id] = nrendo
 
+    au < exists ; exists ; 2005 ; Nature Reviews Endocrinology Volume 1 ; 2005 ; 1 >
+    au < exists ; exists ; 2006 ; Nature Reviews Endocrinology Volume 2 ; 2006 ; 2 >
+    au < exists ; exists ; 2007 ; Nature Reviews Endocrinology Volume 3 ; 2007 ; 3 >
     au < released ; crawling ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
+    au < notReady ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 >
 
   }
 
@@ -1588,10 +2802,15 @@
 
     param[journal_id] = nrgastro
 
+    au < exists ; exists ; 2004 ; Nature Reviews Gastroenterology and Hepatology Volume 1 ; 2004 ; 1 >
+    au < exists ; exists ; 2005 ; Nature Reviews Gastroenterology and Hepatology Volume 2 ; 2005 ; 2 >
+    au < exists ; exists ; 2006 ; Nature Reviews Gastroenterology and Hepatology Volume 3 ; 2006 ; 3 >
+    au < exists ; exists ; 2007 ; Nature Reviews Gastroenterology and Hepatology Volume 4 ; 2007 ; 4 >
     au < released ; crawling ; 2008 ; Nature Reviews Gastroenterology and Hepatology Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Reviews Gastroenterology and Hepatology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Gastroenterology and Hepatology Volume 7 ; 2010 ; 7 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Gastroenterology and Hepatology Volume 8 ; 2011 ; 8 >
+    au < released ; crawling ; 2011 ; Nature Reviews Gastroenterology and Hepatology Volume 8 ; 2011 ; 8 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Gastroenterology and Hepatology Volume 9 ; 2012 ; 9 >
 
   }
 
@@ -1606,10 +2825,19 @@
 
     param[journal_id] = nrg
 
+    au < exists ; exists ; 2000 ; Nature Reviews Genetics Volume 1 ; 2000 ; 1 >
+    au < exists ; exists ; 2001 ; Nature Reviews Genetics Volume 2 ; 2001 ; 2 >
+    au < exists ; exists ; 2002 ; Nature Reviews Genetics Volume 3 ; 2002 ; 3 >
+    au < exists ; exists ; 2003 ; Nature Reviews Genetics Volume 4 ; 2003 ; 4 >
+    au < exists ; exists ; 2004 ; Nature Reviews Genetics Volume 5 ; 2004 ; 5 >
+    au < exists ; exists ; 2005 ; Nature Reviews Genetics Volume 6 ; 2005 ; 6 >
+    au < exists ; exists ; 2006 ; Nature Reviews Genetics Volume 7 ; 2006 ; 7 >
+    au < exists ; exists ; 2007 ; Nature Reviews Genetics Volume 8 ; 2007 ; 8 >
     au < released ; crawling ; 2008 ; Nature Reviews Genetics Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Reviews Genetics Volume 11 ; 2010 ; 11 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Genetics Volume 12 ; 2011 ; 12 >
+    au < released ; crawling ; 2011 ; Nature Reviews Genetics Volume 12 ; 2011 ; 12 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Genetics Volume 13 ; 2012 ; 13 >
 
   }
 
@@ -1624,10 +2852,18 @@
 
     param[journal_id] = nri
 
+    au < exists ; exists ; 2001 ; Nature Reviews Immunology Volume 1 ; 2001 ; 1 >
+    au < exists ; exists ; 2002 ; Nature Reviews Immunology Volume 2 ; 2002 ; 2 >
+    au < exists ; exists ; 2003 ; Nature Reviews Immunology Volume 3 ; 2003 ; 3 >
+    au < exists ; exists ; 2004 ; Nature Reviews Immunology Volume 4 ; 2004 ; 4 >
+    au < exists ; exists ; 2005 ; Nature Reviews Immunology Volume 5 ; 2005 ; 5 >
+    au < exists ; exists ; 2006 ; Nature Reviews Immunology Volume 6 ; 2006 ; 6 >
+    au < exists ; exists ; 2007 ; Nature Reviews Immunology Volume 7 ; 2007 ; 7 >
     au < released ; crawling ; 2008 ; Nature Reviews Immunology Volume 8 ; 2008 ; 8 >
     au < released ; crawling ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; Nature Reviews Immunology Volume 10 ; 2010 ; 10 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Immunology Volume 11 ; 2011 ; 11 >
+    au < released ; crawling ; 2011 ; Nature Reviews Immunology Volume 11 ; 2011 ; 11 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Immunology Volume 12 ; 2012 ; 12 >
 
   }
 
@@ -1642,10 +2878,16 @@
 
     param[journal_id] = nrmicro
 
+    au < exists ; exists ; 2003 ; Nature Reviews Microbiology Volume 1 ; 2003 ; 1 >
+    au < exists ; exists ; 2004 ; Nature Reviews Microbiology Volume 2 ; 2004 ; 2 >
+    au < manifest ; exists ; 2005 ; Nature Reviews Microbiology Volume 3 ; 2005 ; 3 >
+    au < exists ; exists ; 2006 ; Nature Reviews Microbiology Volume 4 ; 2006 ; 4 >
+    au < exists ; exists ; 2007 ; Nature Reviews Microbiology Volume 5 ; 2007 ; 5 >
     au < released ; crawling ; 2008 ; Nature Reviews Microbiology Volume 6 ; 2008 ; 6 >
     au < released ; crawling ; 2009 ; Nature Reviews Microbiology Volume 7 ; 2009 ; 7 >
     au < released ; crawling ; 2010 ; Nature Reviews Microbiology Volume 8 ; 2010 ; 8 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Microbiology Volume 9 ; 2011 ; 9 >
+    au < released ; crawling ; 2011 ; Nature Reviews Microbiology Volume 9 ; 2011 ; 9 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Microbiology Volume 10 ; 2012 ; 10 >
 
   }
 
@@ -1660,10 +2902,19 @@
 
     param[journal_id] = nrm
 
+    au < exists ; exists ; 2000 ; Nature Reviews Molecular Cell Biology Volume 1 ; 2000 ; 1 >
+    au < manifest ; exists ; 2001 ; Nature Reviews Molecular Cell Biology Volume 2 ; 2001 ; 2 >
+    au < exists ; exists ; 2002 ; Nature Reviews Molecular Cell Biology Volume 3 ; 2002 ; 3 >
+    au < exists ; exists ; 2003 ; Nature Reviews Molecular Cell Biology Volume 4 ; 2003 ; 4 >
+    au < exists ; exists ; 2004 ; Nature Reviews Molecular Cell Biology Volume 5 ; 2004 ; 5 >
+    au < exists ; exists ; 2005 ; Nature Reviews Molecular Cell Biology Volume 6 ; 2005 ; 6 >
+    au < exists ; exists ; 2006 ; Nature Reviews Molecular Cell Biology Volume 7 ; 2006 ; 7 >
+    au < exists ; exists ; 2007 ; Nature Reviews Molecular Cell Biology Volume 8 ; 2007 ; 8 >
     au < released ; crawling ; 2008 ; Nature Reviews Molecular Cell Biology Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; Nature Reviews Molecular Cell Biology Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Reviews Molecular Cell Biology Volume 11 ; 2010 ; 11 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Molecular Cell Biology Volume 12 ; 2011 ; 12 >
+    au < released ; crawling ; 2011 ; Nature Reviews Molecular Cell Biology Volume 12 ; 2011 ; 12 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Molecular Cell Biology Volume 13 ; 2012 ; 13 >
 
   }
 
@@ -1678,10 +2929,14 @@
 
     param[journal_id] = nrneph
 
+    au < exists ; exists ; 2005 ; Nature Reviews Nephrology Volume 1 ; 2005 ; 1 >
+    au < exists ; exists ; 2006 ; Nature Reviews Nephrology Volume 2 ; 2006 ; 2 >
+    au < exists ; exists ; 2007 ; Nature Reviews Nephrology Volume 3 ; 2007 ; 3 >
     au < released ; crawling ; 2008 ; Nature Reviews Nephrology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Nephrology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Nephrology Volume 6 ; 2010 ; 6 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Nephrology Volume 7 ; 2011 ; 7 >
+    au < released ; crawling ; 2011 ; Nature Reviews Nephrology Volume 7 ; 2011 ; 7 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Nephrology Volume 8 ; 2012 ; 8 >
 
   }
 
@@ -1696,10 +2951,14 @@
 
     param[journal_id] = nrneurol
 
+    au < exists ; exists ; 2005 ; Nature Reviews Neurology Volume 1 ; 2005 ; 1 >
+    au < exists ; exists ; 2006 ; Nature Reviews Neurology Volume 2 ; 2006 ; 2 >
+    au < exists ; exists ; 2007 ; Nature Reviews Neurology Volume 3 ; 2007 ; 3 >
     au < released ; crawling ; 2008 ; Nature Reviews Neurology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 >
+    au < released ; crawling ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Neurology Volume 8 ; 2012 ; 8 >
 
   }
 
@@ -1714,10 +2973,19 @@
 
     param[journal_id] = nrn
 
+    au < exists ; exists ; 2000 ; Nature Reviews Neuroscience Volume 1 ; 2000 ; 1 >
+    au < exists ; exists ; 2001 ; Nature Reviews Neuroscience Volume 2 ; 2001 ; 2 >
+    au < exists ; exists ; 2002 ; Nature Reviews Neuroscience Volume 3 ; 2002 ; 3 >
+    au < exists ; exists ; 2003 ; Nature Reviews Neuroscience Volume 4 ; 2003 ; 4 >
+    au < exists ; exists ; 2004 ; Nature Reviews Neuroscience Volume 5 ; 2004 ; 5 >
+    au < exists ; exists ; 2005 ; Nature Reviews Neuroscience Volume 6 ; 2005 ; 6 >
+    au < exists ; exists ; 2006 ; Nature Reviews Neuroscience Volume 7 ; 2006 ; 7 >
+    au < exists ; exists ; 2007 ; Nature Reviews Neuroscience Volume 8 ; 2007 ; 8 >
     au < released ; crawling ; 2008 ; Nature Reviews Neuroscience Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Reviews Neuroscience Volume 11 ; 2010 ; 11 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Neuroscience Volume 12 ; 2011 ; 12 >
+    au < released ; crawling ; 2011 ; Nature Reviews Neuroscience Volume 12 ; 2011 ; 12 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Neuroscience Volume 13 ; 2012 ; 13 >
 
   }
 
@@ -1732,10 +3000,14 @@
 
     param[journal_id] = nrrheum
 
+    au < exists ; exists ; 2005 ; Nature Reviews Rheumatology Volume 1 ; 2005 ; 1 >
+    au < exists ; exists ; 2006 ; Nature Reviews Rheumatology Volume 2 ; 2006 ; 2 >
+    au < exists ; exists ; 2007 ; Nature Reviews Rheumatology Volume 3 ; 2007 ; 3 >
     au < released ; crawling ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Rheumatology Volume 7 ; 2011 ; 7 >
+    au < released ; crawling ; 2011 ; Nature Reviews Rheumatology Volume 7 ; 2011 ; 7 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Rheumatology Volume 8 ; 2012 ; 8 >
 
   }
 
@@ -1750,10 +3022,15 @@
 
     param[journal_id] = nrurol
 
+    au < exists ; exists ; 2004 ; Nature Reviews Urology Volume 1 ; 2004 ; 1 >
+    au < exists ; exists ; 2005 ; Nature Reviews Urology Volume 2 ; 2005 ; 2 >
+    au < exists ; exists ; 2006 ; Nature Reviews Urology Volume 3 ; 2006 ; 3 >
+    au < exists ; exists ; 2007 ; Nature Reviews Urology Volume 4 ; 2007 ; 4 >
     au < released ; crawling ; 2008 ; Nature Reviews Urology Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Urology Volume 8 ; 2011 ; 8 >
+    au < released ; crawling ; 2011 ; Nature Reviews Urology Volume 8 ; 2011 ; 8 >
+    au < crawling ; exists ; 2012 ; Nature Reviews Urology Volume 9 ; 2012 ; 9 >
 
   }
 
@@ -1768,10 +3045,25 @@
 
     param[journal_id] = nsmb
 
+    au < exists ; exists ; 1994 ; Nature Structural and Molecular Biology Volume 1 ; 1994 ; 1 >
+    au < exists ; exists ; 1995 ; Nature Structural and Molecular Biology Volume 2 ; 1995 ; 2 >
+    au < exists ; exists ; 1996 ; Nature Structural and Molecular Biology Volume 3 ; 1996 ; 3 >
+    au < exists ; exists ; 1997 ; Nature Structural and Molecular Biology Volume 4 ; 1997 ; 4 >
+    au < exists ; exists ; 1998 ; Nature Structural and Molecular Biology Volume 5 ; 1998 ; 5 >
+    au < exists ; exists ; 1999 ; Nature Structural and Molecular Biology Volume 6 ; 1999 ; 6 >
+    au < exists ; exists ; 2000 ; Nature Structural and Molecular Biology Volume 7 ; 2000 ; 7 >
+    au < exists ; exists ; 2001 ; Nature Structural and Molecular Biology Volume 8 ; 2001 ; 8 >
+    au < exists ; exists ; 2002 ; Nature Structural and Molecular Biology Volume 9 ; 2002 ; 9 >
+    au < exists ; exists ; 2003 ; Nature Structural and Molecular Biology Volume 10 ; 2003 ; 10 >
+    au < exists ; exists ; 2004 ; Nature Structural and Molecular Biology Volume 11 ; 2004 ; 11 >
+    au < exists ; exists ; 2005 ; Nature Structural and Molecular Biology Volume 12 ; 2005 ; 12 >
+    au < exists ; exists ; 2006 ; Nature Structural and Molecular Biology Volume 13 ; 2006 ; 13 >
+    au < exists ; exists ; 2007 ; Nature Structural and Molecular Biology Volume 14 ; 2007 ; 14 >
     au < released ; crawling ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 >
     au < released ; crawling ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 >
-    au < crawling ; exists ; 2011 ; Nature Structural and Molecular Biology Volume 18 ; 2011 ; 18 >
+    au < testing ; exists ; 2011 ; Nature Structural and Molecular Biology Volume 18 ; 2011 ; 18 >
+    au < crawling ; exists ; 2012 ; Nature Structural and Molecular Biology Volume 19 ; 2012 ; 19 >
 
   }
 
@@ -1780,11 +3072,41 @@
     title <
       name = Neuropsychopharmacology ;
       issn = 0893-133X ;
-      eissn = 1470-634X ;
+      eissn = 1740-634X ;
       issnl = 0893-133X
     >
 
+    comment[issn] = corrected publisher eissn 1470-634X.
+
     param[journal_id] = npp
+
+    au < exists ; exists ; 1994 ; Neuropsychopharmacology Volume 11 ; 1994 ; 11 >
+    au < manifest ; exists ; 1995 ; Neuropsychopharmacology Volume 12 (1995) ; 1995 ; 12 >
+    au < manifest ; exists ; 1996 ; Neuropsychopharmacology Volume 13 (1995) ; 1995 ; 13 >
+    au < manifest ; exists ; 1997 ; Neuropsychopharmacology Volume 14 (1996) ; 1996 ; 14 >
+    au < manifest ; exists ; 1998 ; Neuropsychopharmacology Volume 15 (1996) ; 1996 ; 15 >
+    au < exists ; exists ; 1999 ; Neuropsychopharmacology Volume 16 (1997) ; 1997 ; 16 >
+    au < exists ; exists ; 2000 ; Neuropsychopharmacology Volume 17 (1997) ; 2007 ; 17 >
+    au < exists ; exists ; 2001 ; Neuropsychopharmacology Volume 18 (1998) ; 1998 ; 18 >
+    au < exists ; exists ; 2002 ; Neuropsychopharmacology Volume 19 (1998) ; 1998 ; 19 >
+    au < exists ; exists ; 2003 ; Neuropsychopharmacology Volume 20 (1999) ; 1999 ; 20 >
+    au < exists ; exists ; 2004 ; Neuropsychopharmacology Volume 21 (1999) ; 1999 ; 21 >
+    au < exists ; exists ; 2005 ; Neuropsychopharmacology Volume 22 (2000) ; 2000 ; 22 >
+    au < exists ; exists ; 2006 ; Neuropsychopharmacology Volume 23 (2000) ; 2000 ; 23 >
+    au < exists ; exists ; 2007 ; Neuropsychopharmacology Volume 24 (2000) ; 2001 ; 24 >
+    au < exists ; exists ; 2008 ; Neuropsychopharmacology Volume 25 (2000) ; 2001 ; 25 >
+    au < exists ; exists ; 2009 ; Neuropsychopharmacology Volume 26 (2002) ; 2002 ; 26 >
+    au < exists ; exists ; 2010 ; Neuropsychopharmacology Volume 27 (2002) ; 2002 ; 27 >
+    au < exists ; exists ; 2003 ; Neuropsychopharmacology Volume 28 ; 2003 ; 28 >
+    au < exists ; exists ; 2004 ; Neuropsychopharmacology Volume 29 ; 2004 ; 29 >
+    au < exists ; exists ; 2005 ; Neuropsychopharmacology Volume 30 ; 2005 ; 30 >
+    au < exists ; exists ; 2006 ; Neuropsychopharmacology Volume 31 ; 2006 ; 31 >
+    au < exists ; exists ; 2007 ; Neuropsychopharmacology Volume 32 ; 2007 ; 32 >
+    au < exists ; exists ; 2008 ; Neuropsychopharmacology Volume 33 ; 2008 ; 33 >
+    au < exists ; exists ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 >
+    au < crawling ; exists ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
+    au < notReady ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
+    au < crawling ; exists ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
 
   }
 
@@ -1798,6 +3120,20 @@
     >
 
     param[journal_id] = oby
+
+    au < exists ; exists ; 2000 ; Obesity Volume 8 ; 2000 ; 8 >
+    au < exists ; exists ; 2001 ; Obesity Volume 9 ; 2001 ; 9 >
+    au < exists ; exists ; 2002 ; Obesity Volume 10 ; 2002 ; 10 >
+    au < exists ; exists ; 2003 ; Obesity Volume 11 ; 2003 ; 11 >
+    au < exists ; exists ; 2004 ; Obesity Volume 12 ; 2004 ; 12 >
+    au < exists ; exists ; 2005 ; Obesity Volume 13 ; 2005 ; 13 >
+    au < exists ; exists ; 2006 ; Obesity Volume 14 ; 2006 ; 14 >
+    au < exists ; exists ; 2007 ; Obesity Volume 15 ; 2007 ; 15 >
+    au < exists ; exists ; 2008 ; Obesity Volume 16 ; 2008 ; 16 >
+    au < exists ; exists ; 2009 ; Obesity Volume 17 ; 2009 ; 17 >
+    au < exists ; exists ; 2010 ; Obesity Volume 18 ; 2010 ; 18 >
+    au < notReady ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
+    au < crawling ; exists ; 2012 ; Obesity Volume 20 ; 2012 ; 20 >
 
   }
 
@@ -1826,9 +3162,10 @@
     au < manifest ; exists ; 2006 ; Oncogene Volume 25 ; 2006 ; 25 >
     au < manifest ; exists ; 2007 ; Oncogene Volume 26 ; 2007 ; 26 >
     au < released ; crawling ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
-    au < notReady ; exists ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
-    au < testing ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
-    au < crawling ; exists ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
+    au < released ; manifest ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
+    au < crawling ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
+    au < released ; manifest ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
+    au < crawling ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
 
   }
 
@@ -1851,9 +3188,11 @@
     au < manifest ; exists ; 2006 ; The Pharmacogenomics Journal Volume 6 ; 2006 ; 6 >
     au < manifest ; exists ; 2007 ; The Pharmacogenomics Journal Volume 7 ; 2007 ; 7 >
     au < released ; crawling ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 2008 ; 8 >
-    au < notReady ; exists ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
+    au < released ; manifest ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 >
-    
+    au < released ; crawling ; 2011 ; The Pharmacogenomics Journal Volume 11 ; 2011 ; 11 >
+    au < crawling ; exists ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 >
+
   }
 
   {
@@ -1867,7 +3206,8 @@
 
     param[journal_id] = pcan
 
-    au < manifest ; exists ; 1998 ; Prostate Cancer and Prostatic Diseases Volume 1 ; 1998 ; 1 >
+    au < manifest ; exists ; 1997 ; Prostate Cancer and Prostatic Diseases Volume 1 (1997) ; 1997 ; 1 >
+    au < manifest ; exists ; 1998 ; Prostate Cancer and Prostatic Diseases Volume 1 (1998) ; 1998 ; 1 >
     au < manifest ; exists ; 1999 ; Prostate Cancer and Prostatic Diseases Volume 2 ; 1999 ; 2 >
     au < manifest ; exists ; 2000 ; Prostate Cancer and Prostatic Diseases Volume 3 ; 2000 ; 3 >
     au < manifest ; exists ; 2001 ; Prostate Cancer and Prostatic Diseases Volume 4 ; 2001 ; 4 >
@@ -1880,6 +3220,8 @@
     au < released ; crawling ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 2008 ; 11 >
     au < released ; crawling ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
     au < released ; crawling ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
+    au < released ; crawling ; 2011 ; Prostate Cancer and Prostatic Diseases Volume 14 ; 2011 ; 14 >
+    au < crawling ; exists ; 2012 ; Prostate Cancer and Prostatic Diseases Volume 15 ; 2012 ; 15 >
 
   }
 
@@ -1891,6 +3233,13 @@
     >
 
     param[journal_id] = scibx
+	comment[scibx] = Missing Manifest Pages
+
+    au < exists ; exists ; 2008 ; SciBX: Science-Business eXchange Volume 1 ; 2008 ; 1 >
+    au < exists ; exists ; 2009 ; SciBX: Science-Business eXchange Volume 2 ; 2009 ; 2 >
+    au < exists ; exists ; 2010 ; SciBX: Science-Business eXchange Volume 3 ; 2010 ; 3 >
+    au < exists ; exists ; 2011 ; SciBX: Science-Business eXchange Volume 4 ; 2011 ; 4 >
+    au < expected ; exists ; 2012 ; SciBX: Science-Business eXchange Volume 5 ; 2012 ; 5 >
 
   }
 
@@ -1905,6 +3254,56 @@
 
     param[journal_id] = sc
 
+    au < manifest ; exists ; 1963 ; Spinal Cord Volume 1 (1963) ; 1963 ; 1 >
+    au < manifest ; exists ; 1964 ; Spinal Cord Volume 1 (1964) ; 1964 ; 1 >
+    au < manifest ; exists ; 1964 ; Spinal Cord Volume 2 (1964) ; 1964 ; 2 >
+    au < manifest ; exists ; 1965 ; Spinal Cord Volume 2 (1965) ; 1965 ; 2 >
+    au < manifest ; exists ; 1965 ; Spinal Cord Volume 3 (1965) ; 1965 ; 3 >
+    au < manifest ; exists ; 1966 ; Spinal Cord Volume 3 (1966) ; 1966 ; 3 >
+    au < manifest ; exists ; 1966 ; Spinal Cord Volume 4 (1966) ; 1966 ; 4 >
+    au < manifest ; exists ; 1967 ; Spinal Cord Volume 4 (1967) ; 1967 ; 4 >
+    au < manifest ; exists ; 1967 ; Spinal Cord Volume 5 (1967) ; 1967 ; 5 >
+    au < manifest ; exists ; 1968 ; Spinal Cord Volume 5 (1968) ; 1968 ; 5 >
+    au < manifest ; exists ; 1968 ; Spinal Cord Volume 6 (1968) ; 1968 ; 6 >
+    au < manifest ; exists ; 1969 ; Spinal Cord Volume 6 (1969) ; 1969 ; 6 >
+    au < manifest ; exists ; 1969 ; Spinal Cord Volume 7 (1969) ; 1969 ; 7 >
+    au < manifest ; exists ; 1970 ; Spinal Cord Volume 7 (1970) ; 1970 ; 7 >
+    au < manifest ; exists ; 1970 ; Spinal Cord Volume 8 (1970) ; 1970 ; 8 >
+    au < manifest ; exists ; 1971 ; Spinal Cord Volume 8 (1971) ; 1971 ; 8 >
+    au < manifest ; exists ; 1971 ; Spinal Cord Volume 9 (1971) ; 1971 ; 9 >
+    au < manifest ; exists ; 1972 ; Spinal Cord Volume 9 (1972) ; 1972 ; 9 >
+    au < manifest ; exists ; 1972 ; Spinal Cord Volume 10 (1972) ; 1972 ; 10 >
+    au < manifest ; exists ; 1973 ; Spinal Cord Volume 10 (1973) ; 1973 ; 10 >
+    au < manifest ; exists ; 1973 ; Spinal Cord Volume 11 (1973) ; 1973 ; 11 >
+    au < manifest ; exists ; 1974 ; Spinal Cord Volume 11 (1974) ; 1974 ; 11 >
+    au < manifest ; exists ; 1974 ; Spinal Cord Volume 12 (1974) ; 1974 ; 12 >
+    au < manifest ; exists ; 1975 ; Spinal Cord Volume 12 (1975) ; 1975 ; 12 >
+    au < manifest ; exists ; 1975 ; Spinal Cord Volume 13 (1975) ; 1975 ; 13 >
+    au < manifest ; exists ; 1976 ; Spinal Cord Volume 13 (1976) ; 1976 ; 13 >
+    au < manifest ; exists ; 1976 ; Spinal Cord Volume 14 (1976) ; 1976 ; 14 >
+    au < manifest ; exists ; 1977 ; Spinal Cord Volume 14 (1977) ; 1977 ; 14 >
+    au < manifest ; exists ; 1977 ; Spinal Cord Volume 15 (1977) ; 1977 ; 15 >
+    au < manifest ; exists ; 1978 ; Spinal Cord Volume 15 (1978) ; 1978 ; 15 >
+    au < manifest ; exists ; 1978 ; Spinal Cord Volume 16 (1978) ; 1978 ; 16 >
+    au < manifest ; exists ; 1979 ; Spinal Cord Volume 16 (1979) ; 1979 ; 16 >
+    au < manifest ; exists ; 1979 ; Spinal Cord Volume 17 ; 1979 ; 17 >
+    au < manifest ; exists ; 1980 ; Spinal Cord Volume 18 ; 1980 ; 18 >
+    au < manifest ; exists ; 1981 ; Spinal Cord Volume 19 ; 1981 ; 19 >
+    au < manifest ; exists ; 1982 ; Spinal Cord Volume 20 ; 1982 ; 20 >
+    au < manifest ; exists ; 1983 ; Spinal Cord Volume 21 ; 1983 ; 21 >
+    au < manifest ; exists ; 1984 ; Spinal Cord Volume 22 ; 1984 ; 22 >
+    au < manifest ; exists ; 1985 ; Spinal Cord Volume 23 ; 1985 ; 23 >
+    au < manifest ; exists ; 1986 ; Spinal Cord Volume 24 ; 1986 ; 24 >
+    au < manifest ; exists ; 1987 ; Spinal Cord Volume 25 ; 1987 ; 25 >
+    au < manifest ; exists ; 1988 ; Spinal Cord Volume 26 ; 1988 ; 26 >
+    au < manifest ; exists ; 1989 ; Spinal Cord Volume 27 ; 1989 ; 27 >
+    au < manifest ; exists ; 1990 ; Spinal Cord Volume 28 ; 1990 ; 28 >
+    au < manifest ; exists ; 1991 ; Spinal Cord Volume 29 ; 1991 ; 29 >
+    au < manifest ; exists ; 1992 ; Spinal Cord Volume 30 ; 1992 ; 30 >
+    au < manifest ; exists ; 1993 ; Spinal Cord Volume 31 ; 1993 ; 31 >
+    au < manifest ; exists ; 1994 ; Spinal Cord Volume 32 ; 1994 ; 32 >
+    au < manifest ; exists ; 1995 ; Spinal Cord Volume 33 ; 1995 ; 33 >
+    au < manifest ; exists ; 1996 ; Spinal Cord Volume 34 ; 1996 ; 34 >
     au < manifest ; exists ; 1997 ; Spinal Cord Volume 35 ; 1997 ; 35 >
     au < manifest ; exists ; 1998 ; Spinal Cord Volume 36 ; 1998 ; 36 >
     au < manifest ; exists ; 1999 ; Spinal Cord Volume 37 ; 1999 ; 37 >
@@ -1919,7 +3318,9 @@
     au < released ; crawling ; 2008 ; Spinal Cord Volume 46 ; 2008 ; 46 >
     au < released ; crawling ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
     au < released ; crawling ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 >
-    
+    au < released ; crawling ; 2011 ; Spinal Cord Volume 49 ; 2011 ; 49 >
+    au < crawling ; exists ; 2012 ; Spinal Cord Volume 50 ; 2012 ; 50 >
+
   }
 
   {
@@ -1932,11 +3333,20 @@
     >
 
     param[journal_id] = vital
-    
+
+    au < exists ; exists ; 2003 ; Vital Volume 1 (2003) ; 2003 ; 1 >
+    au < exists ; exists ; 2004 ; Vital Volume 1 (2004) ; 2004 ; 1 >
+    au < manifest ; exists ; 2005 ; Vital Volume 1 (2005) ; 2005 ; 1 >
+    au < manifest ; exists ; 2005 ; Vital Volume 2 ; 2005 ; 2 >
+    au < exists ; exists ; 2006 ; Vital Volume 3 ; 2006 ; 3 >
+    au < exists ; exists ; 2007 ; Vital Volume 4 ; 2007 ; 4 >
+    au < exists ; exists ; 2008 ; Vital Volume 5 ; 2008 ; 5 >
+    au < exists ; exists ; 2008 ; Vital Volume 6 (2008) ; 2008 ; 6 >
     au < released ; crawling ; 2009 ; Vital Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2009 ; Vital Volume 7 (2009) ; 2009 ; 7 >
     au < released ; crawling ; 2010 ; Vital Volume 7 (2010) ; 2010 ; 7 >
-    au < manifest ; exists ; 2011 ; Vital Volume 8 ; 2011 ; 8 >
+    au < released ; crawling ; 2011 ; Vital Volume 8 ; 2011 ; 8 >
+    au < crawling ; exists ; 2012 ; Vital Volume 9 ; 2012 ; 9 >
 
   }
 

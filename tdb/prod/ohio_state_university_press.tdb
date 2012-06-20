@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = american_periodicals
+    attr[journal_id] = amp
 
     au < released ; 2003 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 13 ; 13 >
     au < released ; 2004 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 14 ; 14 >
@@ -24,6 +25,9 @@
     au < released ; 2007 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 17 ; 17 >
     au < released ; 2008 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 18 ; 18 >
     au < released ; 2009 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 19 ; 19 >
+    au < ready ; 2010 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 20 ; 20 >
+    au < ready ; 2011 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 21 ; 21 >
+    au < manifest ; 2012 ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 22 ; 22 >
 
   }
 
@@ -36,6 +40,7 @@
     >
 
     param[journal_dir] = geographical_analysis
+    attr[journal_id] = geo
 
     au < released ; 2002 ; Geographical Analysis Volume 34 ; 34 >
     au < released ; 2003 ; Geographical Analysis Volume 35 ; 35 >
@@ -52,6 +57,7 @@
     >
 
     param[journal_dir] = journal_for_the_psychoanalysis_of_culture_and_society
+    attr[journal_id] = psy
 
     au < released ; 2003 ; Journal for the Psychoanalysis of Culture and Society Volume 8 ; 8 >
 
@@ -66,6 +72,7 @@
     >
 
     param[journal_dir] = journal_of_money_credit_and_banking
+    attr[journal_id] = mcb
 
     au < released ; 2002 ; Journal of Money, Credit, and Banking Volume 34 ; 34 >
     au < released ; 2003 ; Journal of Money, Credit, and Banking Volume 35 ; 35 >
@@ -84,6 +91,7 @@
     >
 
     param[journal_dir] = narrative
+    attr[journal_id] = nar
 
     au < released ; 2002 ; Narrative Volume 10 ; 10 >
     au < released ; 2003 ; Narrative Volume 11 ; 11 >
@@ -94,6 +102,8 @@
     au < released ; 2008 ; Narrative Volume 16 ; 16 >
     au < released ; 2009 ; Narrative Volume 17 ; 17 >
     au < released ; 2010 ; Narrative Volume 18 ; 18 >
+    au < ready ; 2011 ; Narrative Volume 19 ; 19 >
+    au < manifest ; 2012 ; Narrative Volume 20 ; 20 >
 
   }
 
@@ -106,6 +116,7 @@
     >
 
     param[journal_dir] = journal_of_higher_education
+    attr[journal_id] = jhe
 
     au < released ; 2002 ; The Journal of Higher Education Volume 73 ; 73 >
     au < released ; 2003 ; The Journal of Higher Education Volume 74 ; 74 >
@@ -116,6 +127,8 @@
     au < released ; 2008 ; The Journal of Higher Education Volume 79 ; 79 >
     au < released ; 2009 ; The Journal of Higher Education Volume 80 ; 80 >
     au < released ; 2010 ; The Journal of Higher Education Volume 81 ; 81 >
+    au < ready ; 2011 ; The Journal of Higher Education Volume 82 ; 82 >
+    au < manifest ; 2012 ; The Journal of Higher Education Volume 83 ; 83 >
 
   }
 
@@ -128,9 +141,11 @@
     >
 
     param[journal_dir] = twentiethcentury_china
+    attr[journal_id] = tcc
 
     au < released ; 2007 ; Twentieth-Century China Volume 33 ; 33 >
     au < released ; 2008 ; Twentieth-Century China Volume 34 ; 34 >
+    au < ready ; 2009 ; Twentieth-Century China Volume 35 ; 35 >
 
   }
 

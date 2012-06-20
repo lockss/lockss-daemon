@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.13 2011-12-01 17:39:31 easyonthemayo Exp $
+ * $Id: TdbAu.java,v 1.13.2.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
@@ -40,12 +40,19 @@ import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.*;
 
+import sun.util.logging.resources.logging;
+
 /**
  * This class represents a title database archival unit (AU).
  *
  * @author  Philip Gust
  */
 public class TdbAu implements BibliographicItem {
+  /**
+   * Set up logger
+   */
+  protected final static Logger logger = Logger.getLogger("TdbAu");
+
   /**
    * The name of this instance
    */
@@ -66,7 +73,6 @@ public class TdbAu implements BibliographicItem {
    */
   private Map<String, String> params;
  
-
   /**
    * The plugin attrs for this AU
    */
@@ -144,8 +150,8 @@ public class TdbAu implements BibliographicItem {
       return PluginManager.generateAuId(TdbAu.this.getPluginId(), props);
     }
   }
-
-    /**
+  
+  /**
    * Create a new instance of an au.
    * 
    * @param name the name of the au
@@ -163,13 +169,7 @@ public class TdbAu implements BibliographicItem {
     
     this.name = name;
     this.pluginId = pluginId;
-
-    if (System.getProperty("org.lockss.unitTesting", "false").equals("true")) {
-      // use LinkedHashMap to preserve param order for testing
-      params = new LinkedHashMap<String,String>();
-    } else {
-      params = new HashMap<String,String>();
-    }
+    params = new HashMap<String,String>();
   }
 
   /**
@@ -258,6 +258,16 @@ public class TdbAu implements BibliographicItem {
     }
     
     this.title = title;
+  }
+  
+  /**
+   * Determines whether this AU is marked "down".
+   * 
+   * @return <code>true</code> if this AU is marked "down"
+   */
+  public boolean isDown() {
+    return "true".equals(getParam("pub_down"));
+
   }
   
   /**
@@ -504,44 +514,61 @@ public class TdbAu implements BibliographicItem {
   }
 
   /**
-   * Get the start issue for this AU.
+   * Get the start issue for this AU. Allows for the issue string to represent
+   * a delimited list of ranges.
    * @return the start issue or <code>null</code> if not specified
    */
   public String getStartIssue() {
-    return NumberUtil.getRangeStart(getIssue());
+    return BibliographicUtil.getRangeSetStart(getIssue());
   }
 
   /**
-   * Get the end issue for this AU.
+   * Get the end issue for this AU. Allows for the issue string to represent
+   * a delimited list of ranges.
    * @return the end issue or <code>null</code> if not specified
    */
   public String getEndIssue() {
-    return NumberUtil.getRangeEnd(getIssue());
+    return BibliographicUtil.getRangeSetEnd(getIssue());
   }
 
   /**
-   * Determine whether issues(s) for this AU include a given issue.
+   * Determine whether the issue string for this AU include a given issue.
+   * Uses {@link BibliographicUtil.coverageIncludes} to check each range
+   * specified in the string.
+   *
    * @param anIssue an issue
    * @return <code>true</code> if this AU includes the issue
    */
   public boolean includesIssue(String anIssue) {
-    return NumberUtil.rangeIncludes(getIssue(), anIssue);
+    return BibliographicUtil.coverageIncludes(getIssue(), anIssue);
   }
 
   /**
    * Convenience method returns issue for this AU. Uses the issue attribute 
    * as preferred bibliographic value because parameter values are sometimes 
-   * not used correctly
-   * 
+   * not used correctly. Otherwise tries one of the several parameter formats,
+   * in order from most to least likely.
+   *
    * @return issue for for this AU or <code>null</code> if not specified
    */
   public String getIssue() {
     String issue = getAttr("issue");
-    if (issue == null) {
-      issue = getParam("issue");
+    for (String key : new String[] {
+        "issue",
+        "num_issue_range",
+        "issue_set",
+        "issue_no",
+        "issues",
+        "issue_no.",
+        "issue_dir"
+    }) {
+      if (issue == null) {
+        issue = getParam(key);
+      } else return issue;
     }
     return issue;
   }
+
   
   /**
    * Return print ISSN for this AU.
@@ -573,55 +600,105 @@ public class TdbAu implements BibliographicItem {
   }
   
   /**
-   * Return ISBN for this title.
+   * Return representative ISSN for this title.  Returns ISSN-L if available, 
+   * then print ISSN, and finally eISSN. This approximates the way ISSN-Ls
+   * are assigned. The returned ISSN is checked for well-formedness, but is 
+   * not checksummed.
    * 
-   * @return the ISBN for this title or <code>null</code> if not specified
-   */
-  public String getIsbn() {
-    return getPropertyByName("isbn");
-  }
-
-  /**
-   * Return representative ISSN for this title. 
-   * Uses ISSN-L, then eISSN, and finally print ISSN.
-   * Each ISSN is checked for well-formedness, but is not checksummed.
-   * 
-   * @return representative for this title or <code>null</code> if not specified or ill-formed
+   * @return representative for this title or <code>null</code> if not 
+   *  specified or is ill-formed
    */
   public String getIssn() {
     String issn = getIssnL();
-    if (!MetadataUtil.isISSN(issn)) {
-      issn = getEissn();
-      if (!MetadataUtil.isISSN(issn)) {
-        issn = getPrintIssn();
+    if (!MetadataUtil.isIssn(issn)) {
+      issn = getPrintIssn();
+      if (!MetadataUtil.isIssn(issn)) {
+        issn = getEissn();
+        if (!MetadataUtil.isIssn(issn)) {
+          issn = null;
+        }
       }
     }
-    return MetadataUtil.isISSN(issn) ? issn : null;
+    return issn;
   }
   
   /**
-   * Get the start year for this AU.
-   * @return the start year or <code>null</code> if not specified
+   * Return the print ISBN for this TdbAu.
+   * 
+   * @return the print ISBN for this TdbAu or <code>null</code> if not specified
    */
-  public String getStartYear() {
-    return NumberUtil.getRangeStart(getYear());
+  public String getPrintIsbn() {
+    String printIsbn = (attrs == null) ? null : attrs.get("isbn");
+    if (printIsbn != null) {
+      logger.debug("Found " + printIsbn + " for " + getName());
+    }
+    return printIsbn;
   }
 
   /**
-   * Get the end year for this AU.
+   * Return the eISBN for this TdbAu.
+   * 
+   * @return the print ISBN for this TdbAu or <code>null</code> if not specified
+   */
+  public String getEisbn() {
+    String eisbn = (attrs == null) ? null : attrs.get("eisbn");
+    if (eisbn != null) {
+      logger.debug("Found " + eisbn + " for " + getName());
+    }
+    return eisbn;
+  }
+
+  /**
+   * Return a representative ISBN for this TdbAu; the eISBN if specified or the
+   * print ISBN. Each ISBN is check for well-formedness but is not checksummed.
+   * Also checks deprecated "isbn' title property if ISBN or eISBN attribute
+   * are not present. 
+   * 
+   * @return the ISBN for this title or <code>null</code> if not specified
+   *  or is malformed
+   */
+  public String getIsbn() {
+    String isbn = getEisbn();
+    if (!MetadataUtil.isIsbn(isbn)) {
+      isbn = getPrintIsbn();
+      if (!MetadataUtil.isIsbn(isbn)) {
+        isbn = (props == null) ? null : props.get("isbn");
+        if ((isbn != null) && !MetadataUtil.isIsbn(isbn)) {
+          isbn = null;
+        }
+      }
+    }
+    return isbn;
+  }
+
+  /**
+   * Get the start year for this AU. Allows for the year string to represent
+   * a delimited list of ranges.
+   * @return the start year or <code>null</code> if not specified
+   */
+  public String getStartYear() {
+    return BibliographicUtil.getRangeSetStart(getYear());
+  }
+
+  /**
+   * Get the end year for this AU. Allows for the year string to represent
+   * a delimited list of ranges.
    * @return the end year or <code>null</code> if not specified
    */
   public String getEndYear() {
-    return NumberUtil.getRangeEnd(getYear());
+    return BibliographicUtil.getRangeSetEnd(getYear());
   }
 
   /**
    * Determine whether year(s) for this AU include a given date.
+   * Uses {@link BibliographicUtil.coverageIncludes} to check each range
+   * specified in the string.
    * @param aYear a year
    * @return <code>true</code> if this AU includes the date
    */
   public boolean includesYear(String aYear) {
-    return NumberUtil.rangeIncludes(getYear(), aYear);
+    //return NumberUtil.rangeIncludes(getYear(), aYear);
+    return BibliographicUtil.coverageIncludes(getYear(), aYear);
   }
 
   /**
@@ -640,7 +717,7 @@ public class TdbAu implements BibliographicItem {
     }
     return auYear;
   }
-  
+
   /**
    * Get the start volume for this AU. First the method checks whether the volume
    * string looks like a genuine range. If it looks like a single identifier
@@ -648,9 +725,7 @@ public class TdbAu implements BibliographicItem {
    * @return the start volume or <code>null</code> if not specified
    */
   public String getStartVolume() {
-    String vol = getVolume();
-    return BibliographicUtil.isVolumeRange(vol) ?
-        NumberUtil.getRangeStart(vol) : vol;
+    return BibliographicUtil.getRangeSetStart(getVolume());
   }
 
   /**
@@ -660,18 +735,22 @@ public class TdbAu implements BibliographicItem {
    * @return the end volume or <code>null</code> if not specified
    */
   public String getEndVolume() {
-    String vol = getVolume();
-    return BibliographicUtil.isVolumeRange(vol) ?
-        NumberUtil.getRangeEnd(vol) : vol;
+    return BibliographicUtil.getRangeSetEnd(getVolume());
   }
 
   /**
-   * Determine whether volume(s) for this AU include a given volume.
+   * Determine whether the volume string for this AU include a given volume.
+   * Uses {@link BibliographicUtil.coverageIncludes} to check each range
+   * specified in the string.
    * @param aVolume a volume
    * @return <code>true</code> if this AU includes the volume
    */
   public boolean includesVolume(String aVolume) {
-    return NumberUtil.rangeIncludes(getVolume(), aVolume);
+    //return NumberUtil.rangeIncludes(getVolume(), aVolume);
+    return BibliographicUtil.coverageIncludes(getVolume(), aVolume);
+    // TODO Use a volume-aware method instead, that allows for example
+    // s2ii to not include s2iii
+    // s2v-s2x to include s2ix but not s2w
   }
 
   /**

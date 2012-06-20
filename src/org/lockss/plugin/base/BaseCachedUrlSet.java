@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.26 2009-09-17 02:53:38 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.26.30.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
@@ -32,9 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.base;
 
+import java.io.*;
 import java.util.*;
 import java.security.*;
 import java.net.MalformedURLException;
+import de.schlichtherle.truezip.file.*;
+// import de.schlichtherle.truezip.fs.*;
 
 import org.lockss.plugin.*;
 import org.lockss.app.*;
@@ -44,6 +47,7 @@ import org.lockss.scheduler.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
+import org.lockss.truezip.*;
 
 /**
  * Base class for CachedUrlSets.  Utilizes the LockssRepository.
@@ -188,8 +192,12 @@ public class BaseCachedUrlSet implements CachedUrlSet {
    * no range or a SingleNodeCachedUrlSetSpec
    * @return an {@link Iterator}
    */
-  public Iterator contentHashIterator() {
+  public Iterator<CachedUrlSetNode> contentHashIterator() {
     return new CusIterator();
+  }
+
+  public Iterator<CachedUrl> archiveMemberIterator() {
+    return new ArcMemIterator();
   }
 
   public CachedUrlSetHasher getContentHasher(MessageDigest digest) {
@@ -431,7 +439,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   /**
    * Iterator over all the elements in a CachedUrlSet
    */
-  protected class CusIterator implements Iterator {
+  public class CusIterator implements Iterator<CachedUrlSetNode> {
     //Stack of flatSetIterators at each tree level
     LinkedList stack = new LinkedList();
 
@@ -453,8 +461,8 @@ public class BaseCachedUrlSet implements CachedUrlSet {
       return findNextElement() != null;
     }
 
-    public Object next() {
-      Object element = findNextElement();
+    public CachedUrlSetNode next() {
+      CachedUrlSetNode element = findNextElement();
       nextElement = null;
 
       if (element != null) {
@@ -481,11 +489,13 @@ public class BaseCachedUrlSet implements CachedUrlSet {
           stack.removeFirst();
         } else {
           CachedUrlSetNode curNode = (CachedUrlSetNode)it.next();
-
+	  if (!spec.matches(curNode.getUrl())) {
+	    continue;
+	  }
           if (!curNode.isLeaf()) {
-            CachedUrlSet cus = (CachedUrlSet)curNode;
-            //push the iterator of this child node onto the stack
-            stack.addFirst(cus.flatSetIterator());
+	    CachedUrlSet cus = (CachedUrlSet)curNode;
+	    //push the iterator of this child node onto the stack
+	    stack.addFirst(cus.flatSetIterator());
           }
           nextElement = curNode;
           return nextElement;
@@ -493,5 +503,174 @@ public class BaseCachedUrlSet implements CachedUrlSet {
       }
     }
   }
+  /**
+   * Iterator over all the content files in a CachedUrlSet, including
+   * archive members  */
+  public class ArcMemIterator implements Iterator<CachedUrl> {
+    private Iterator<CachedUrlSetNode> cusIter;
+    // Stack of directory iterators in the current archive
+    private LinkedList<Iterator<TFile>> arcIterStack =
+      new LinkedList<Iterator<TFile>>();
 
+    // if null, we have to look for nextElement
+    private CachedUrl nextCu = null;
+    // the CU of the archive we're currently traversing
+    private CachedUrl curArcCu = null;
+
+    ArcMemIterator(Iterator cusIter) {
+      this.cusIter = cusIter;
+    }
+
+    ArcMemIterator() {
+      this(BaseCachedUrlSet.this.contentHashIterator());
+    }
+
+    public void remove() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public boolean hasNext() {
+      return findNextElement() != null;
+    }
+
+    public CachedUrl next() {
+      CachedUrl cu = findNextElement();
+      nextCu = null;
+
+      if (cu != null) {
+        return cu;
+      }
+      throw new NoSuchElementException();
+    }
+
+    /**
+     * Does a pre-order traversal of the CachedUrlSet tree
+     * @return a {@link CachedUrlSetNode}
+     */
+    private CachedUrl findNextElement() {
+      if (nextCu != null) {
+        return nextCu;
+      }
+      while (true) {
+	if (!arcIterStack.isEmpty()) {
+	  Iterator<TFile> arcIter = arcIterStack.getFirst();
+	  if (arcIter.hasNext()) {
+	    TFile tf = arcIter.next();
+	    ArchiveMemberSpec ams = amsOf(curArcCu, tf);
+	    if (!spec.matches(ams.toUrl())) {
+	      continue;
+	    }
+	    if (tf.isFile()) {
+	      nextCu = makeCu(curArcCu, tf, ams);
+	      break;
+	    } else if (tf.isDirectory()) {
+	      // push a new dir iterator onto the stack
+	      arcIterStack.addFirst(new ArrayIterator(sortedDir(tf)));
+	      continue;
+	    } else {
+	      logger.warning("Archive element was neither file nor dir: "
+			     + tf + ", in " + curArcCu);
+	      continue;
+	    }
+	  } else {
+	    arcIterStack.removeFirst();
+	    continue;
+	  }
+	}
+	curArcCu = null;
+	if (cusIter.hasNext()) {
+	  CachedUrl cu = AuUtil.getCu(cusIter.next());
+	  try {
+	    if (cu == null || !cu.hasContent()) {
+	      continue;
+	    }
+	    String arcExt = ArchiveFileTypes.getArchiveExtension(cu);
+	    if (arcExt != null) {
+	      TFile tf;
+	      try {
+		tf = getTFile(cu);
+		if (!tf.isDirectory()) {
+		  logger.error("isDirectory(" + tf +
+			       ") = false, including in iterator");
+		  nextCu = cu;
+		  break;
+		}
+		if (logger.isDebug3()) {
+		  logger.debug3("Found archive: " + tf + " in " + cu);
+		}
+		TFile[] tfiles = sortedDir(tf);
+		arcIterStack.addFirst(new ArrayIterator(tfiles));
+		curArcCu = cu;
+		continue;
+	      } catch (IOException e) {
+		logger.warning("Error opening archive: " + cu, e);
+		continue;
+	      }
+	    } else {
+	      nextCu = cu;
+	      break;
+	    }
+	  } finally {
+	    AuUtil.safeRelease(cu);
+	  }
+	} else {	
+	  nextCu = null;
+	  break;
+	}
+      }
+      return nextCu;
+    }
+
+    private TFile[] sortedDir(TFile tf) {
+      TFile[] tfiles = tf.listFiles();
+      Arrays.sort(tfiles);
+      return tfiles;
+    }
+
+    private TFile getTFile(CachedUrl cu) throws IOException {
+      TrueZipManager tzm = theDaemon.getTrueZipManager();
+      return tzm.getCachedTFile(au.makeCachedUrl(cu.getUrl()));
+    }
+
+    private ArchiveMemberSpec amsOf(CachedUrl cu, TFile tf) {
+      TFile top = tf.getTopLevelArchive();
+      if (top == null) {
+	String msg = "Shouldn't: TFile.getTopLevelArchive(" + tf + ") = null";
+	throw new RuntimeException(msg);
+      } else {
+	// Find member_path from full_path and topmost_archive_path
+	//   Full path = topmost_archive_path + "/" + member_path
+	String path = tf.getPath();
+	String toppath = top.getPath();
+	if (path.startsWith(toppath)) {
+	  int pos = toppath.length();
+	  if (path.charAt(pos) == '/') {
+	    pos++;
+	  } else {
+	    logger.debug2("no / after archive name in path: " + path);
+	  }
+	  path = path.substring(pos);
+
+	  return ArchiveMemberSpec.fromCu(cu, path);
+	} else {
+	  String msg = "Shouldn't: TFile path (" + path
+	    + ") doesn't begin with top level archive path (" + toppath + ")";
+	  throw new RuntimeException(msg);
+	}
+      }
+    }
+
+    // Create a CU representing an archive member
+    private CachedUrl makeCu(CachedUrl cu, TFile tf, ArchiveMemberSpec ams) {
+      CachedUrl res = au.makeCachedUrl(cu.getUrl());
+      if (false) {
+	// experimental - reuse the TFile returned by listFiles() in
+	// the member CU
+	BaseCachedUrl bcu = (BaseCachedUrl)res;
+	return bcu.getArchiveMemberCu(ams, tf);
+      } else {
+	return res.getArchiveMemberCu(ams);
+      }
+    }
+  }
 }

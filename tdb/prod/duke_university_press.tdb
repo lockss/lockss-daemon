@@ -18,6 +18,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = american_literary_scholarship
+      attr[journal_id] = als
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1998 ; American Literary Scholarship 1998 ; 1998 >
@@ -30,7 +31,8 @@
       au < released ; 2005 ; American Literary Scholarship 2005 ; 2005 >
       au < released ; 2006 ; American Literary Scholarship 2006 ; 2006 >
       au < released ; 2007 ; American Literary Scholarship 2007 ; 2007 >
-      au < ready ; 2008 ; American Literary Scholarship 2008 ; 2008 >
+      au < released ; 2008 ; American Literary Scholarship 2008 ; 2008 >
+      au < ready ; 2009 ; American Literary Scholarship 2009 ; 2009 >
         
     }
 
@@ -41,17 +43,20 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
       comment[years] = years in web addresses are two years behind the publishing year as of 20110912
+      comment[years1] = .long links still go to the year indicated (i.e. vol2009 manifest links to 2009, not 2011)
       
-      au < HighWirePressH20Plugin ; exists ; 2002 ; American Literary Scholarship 2002 ; 2000 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; American Literary Scholarship 2003 ; 2001 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; American Literary Scholarship 2004 ; 2002 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; American Literary Scholarship 2000 ; 1998 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; American Literary Scholarship 2001 ; 1999 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; American Literary Scholarship 2002 ; 2000 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; American Literary Scholarship 2003 ; 2001 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; American Literary Scholarship 2004 ; 2002 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Literary Scholarship 2005 ; 2003 >
       au < HighWireStrVolPlugin ; down ; 2006 ; American Literary Scholarship 2006 ; 2004 >
       au < HighWirePressH20Plugin ; released ; 2007 ; American Literary Scholarship 2007 ; 2005 >
       au < HighWirePressH20Plugin ; released ; 2008 ; American Literary Scholarship 2008 ; 2006 >
       au < HighWirePressH20Plugin ; released ; 2009 ; American Literary Scholarship 2009 ; 2007 >
       au < HighWirePressH20Plugin ; released ; 2010 ; American Literary Scholarship 2010 ; 2008 >
-      au < HighWirePressH20Plugin ; manifest ; 2011 ; American Literary Scholarship 2011 ; 2009 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; American Literary Scholarship 2011 ; 2009 >
       
     }
     
@@ -72,6 +77,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = american_literature
+      attr[journal_id] = al
 
       au < released ; 1999 ; American Literature Volume 71 ; 71 >
       au < released ; 2000 ; American Literature Volume 72 ; 72 >
@@ -88,11 +94,11 @@
       param[base_url] = http://americanliterature.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 2000 ; American Literature Volume 72 ; 72 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; American Literature Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; American Literature Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; American Literature Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; American Literature Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; American Literature Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; American Literature Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; American Literature Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; American Literature Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; American Literature Volume 76 ; 76 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Literature Volume 77 ; 77 >
       au < HighWireStrVolPlugin ; down ; 2006 ; American Literature Volume 78 ; 78 >
       au < HighWireStrVolPlugin ; down ; 2007 ; American Literature Volume 79 ; 79 >
@@ -100,6 +106,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; American Literature Volume 81 ; 81 >
       au < HighWirePressH20Plugin ; released ; 2010 ; American Literature Volume 82 ; 82 >
       au < HighWirePressH20Plugin ; released ; 2011 ; American Literature Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; American Literature Volume 84 ; 84 >
     
     }
     
@@ -120,6 +127,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = american_speech
+      attr[journal_id] = as
 
       au < released ; 1999 ; American Speech Volume 74 ; 74 >
       au < released ; 2000 ; American Speech Volume 75 ; 75 >
@@ -136,11 +144,11 @@
       param[base_url] = http://americanspeech.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 2000 ; American Speech Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; American Speech Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; American Speech Volume 77 ; 77 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; American Speech Volume 78 ; 78 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; American Speech Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; American Speech Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; American Speech Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; American Speech Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; American Speech Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; American Speech Volume 79 ; 79 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Speech Volume 80 ; 80 >
       au < HighWireStrVolPlugin ; down ; 2006 ; American Speech Volume 81 ; 81 >
       au < HighWireStrVolPlugin ; down ; 2007 ; American Speech Volume 82 ; 82 >
@@ -148,6 +156,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; American Speech Volume 84 ; 84 >
       au < HighWirePressH20Plugin ; released ; 2010 ; American Speech Volume 85 ; 85 >
       au < HighWirePressH20Plugin ; released ; 2011 ; American Speech Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; American Speech Volume 87 ; 87 >
     
     }
     
@@ -167,6 +176,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = boundary
+      attr[journal_id] = b2
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; boundary 2 Volume 26 ; 26 >
@@ -184,11 +194,11 @@
       param[base_url] = http://boundary2.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 2000 ; boundary 2 Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; boundary 2 Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; boundary 2 Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; boundary 2 Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; boundary 2 Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; boundary 2 Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; boundary 2 Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; boundary 2 Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; boundary 2 Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; boundary 2 Volume 31 ; 31 >
       au < HighWireStrVolPlugin ; down ; 2005 ; boundary 2 Volume 32 ; 32 >
       au < HighWireStrVolPlugin ; down ; 2006 ; boundary 2 Volume 33 ; 33 >
       au < HighWireStrVolPlugin ; down ; 2007 ; boundary 2 Volume 34 ; 34 >      
@@ -196,6 +206,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; boundary 2 Volume 36 ; 36 >
       au < HighWirePressH20Plugin ; released ; 2010 ; boundary 2 Volume 37 ; 37 >
       au < HighWirePressH20Plugin ; released ; 2011 ; boundary 2 Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; boundary 2 Volume 39 ; 39 >
       
     }
     
@@ -215,6 +226,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = camera_obscura
+      attr[journal_id] = co
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2000 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 15 ; 15 >
@@ -238,6 +250,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 27 ; 27 >
       
     }
     
@@ -257,6 +270,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = comparative_studies_of_south_asia_africa_and_the_middle_east
+      attr[journal_id] = cst
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2000 ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 ; 20 >
@@ -269,8 +283,8 @@
       au < released ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >
       au < released ; 2008 ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
       au < released ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
-      au < ready ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
-      au < ready ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
+      au < released ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
+      au < released ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
 
     }
     
@@ -287,6 +301,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 ; 32 >
       
     }
     
@@ -305,8 +320,11 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = cultural_politics
+      param[journal_id] = cup
 
-    
+      au < manifest ; 2012 ; Cultural Politics Volume 8 ; 8 >
+
     }
     
    }
@@ -325,6 +343,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = differences
+      attr[journal_id] = dif
 
       au < released ; 1999 ; differences: A Journal of Feminist Cultural Studies Volume 10 ; 10 >
       au < released ; 2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
@@ -348,6 +367,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; released ; 2010 ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; differences: A Journal of Feminist Cultural Studies Volume 23 ; 23 >
       
     }
     
@@ -356,7 +376,7 @@
   {
 
     title <
-      name = East Asian Science, Technology and Society: an International Journal ;
+      name = East Asian Science, Technology and Society: An International Journal ;
       issn = 1875-2160 ;
       eissn = 1875-2152 
     >
@@ -367,11 +387,12 @@
       param[base_url] = http://easts.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 2007 ; East Asian Science, Technology and Society: an International Journal Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; 2008 ; East Asian Science, Technology and Society: an International Journal Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; 2009 ; East Asian Science, Technology and Society: an International Journal Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; 2010 ; East Asian Science, Technology and Society: an International Journal Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; 2011 ; East Asian Science, Technology and Society: an International Journal Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; East Asian Science, Technology and Society: an International Journal Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; East Asian Science, Technology and Society: an International Journal Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; East Asian Science, Technology and Society: an International Journal Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; East Asian Science, Technology and Society: an International Journal Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; East Asian Science, Technology and Society: an International Journal Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; East Asian Science, Technology and Society: an International Journal Volume 6 ; 6 >
 
     }
     
@@ -391,6 +412,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = eighteenth-century_life
+      attr[journal_id] = ecl
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1996 ; Eighteenth-Century Life Volume 20 ; 20 >
@@ -408,7 +430,8 @@
       au < released ; 2008 ; Eighteenth-Century Life Volume 32 ; 32 >
       au < released ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
       au < released ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
-      au < ready ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
+      au < released ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
+      au < manifest ; 2012 ; Eighteenth-Century Life Volume 36 ; 36 >
 
     }
 
@@ -420,11 +443,12 @@
       
       au < HighWireStrVolPlugin ; down ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 >
-      au < HighWireStrVolPlugin ; down ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >      
+      au < HighWireStrVolPlugin ; down ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Eighteenth-Century Life Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Eighteenth-Century Life Volume 36 ; 36 >
 
     }
     
@@ -444,6 +468,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = ethnohistory
+      attr[journal_id] = eth
 
       au < released ; 1999 ; Ethnohistory Volume 46 ; 46 >
       au < released ; 2000 ; Ethnohistory Volume 47 ; 47 >
@@ -467,6 +492,7 @@
      au < HighWirePressH20Plugin ; released ; 2009 ; Ethnohistory Volume 56 ; 56 >
      au < HighWirePressH20Plugin ; released ; 2010 ; Ethnohistory Volume 57 ; 57 >
      au < HighWirePressH20Plugin ; released ; 2011 ; Ethnohistory Volume 58 ; 58 >
+     au < HighWirePressH20Plugin ; manifest ; 2012 ; Ethnohistory Volume 59 ; 59 >
     
     }
     
@@ -486,6 +512,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = french_historical_studies
+      attr[journal_id] = fhs
 
       au < released ; 1999 ; French Historical Studies Volume 22 ; 22 >
       au < released ; 2000 ; French Historical Studies Volume 23 ; 23 >
@@ -508,6 +535,8 @@
      au < HighWirePressH20Plugin ; released ; 2008 ; French Historical Studies Volume 31 ; 31 >
      au < HighWirePressH20Plugin ; released ; 2009 ; French Historical Studies Volume 32 ; 32 >
      au < HighWirePressH20Plugin ; released ; 2010 ; French Historical Studies Volume 33 ; 33 >
+     au < HighWirePressH20Plugin ; ready ; 2011 ; French Historical Studies Volume 34 ; 34 >
+     au < HighWirePressH20Plugin ; manifest ; 2012 ; French Historical Studies Volume 35 ; 35 >
     
     }
     
@@ -527,18 +556,19 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://genre.dukejournals.org/
 
-      au < manifest ; 2000 ; Genre: Forms of Discourse and Culture Volume 33 ; 33 >
-      au < manifest ; 2001 ; Genre: Forms of Discourse and Culture Volume 34 ; 34 >
-      au < manifest ; 2002 ; Genre: Forms of Discourse and Culture Volume 35 ; 35 >
-      au < manifest ; 2003 ; Genre: Forms of Discourse and Culture Volume 36 ; 36 >
-      au < manifest ; 2004 ; Genre: Forms of Discourse and Culture Volume 37 ; 37 >
-      au < manifest ; 2005 ; Genre: Forms of Discourse and Culture Volume 38 ; 38 >
-      au < manifest ; 2006 ; Genre: Forms of Discourse and Culture Volume 39 ; 39 >
-      au < manifest ; 2007 ; Genre: Forms of Discourse and Culture Volume 40 ; 40 >
-      au < manifest ; 2008 ; Genre: Forms of Discourse and Culture Volume 41 ; 41 >
-      au < manifest ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 >
-      au < manifest ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 >
-      au < manifest ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 >
+      au < released ; 2000 ; Genre: Forms of Discourse and Culture Volume 33 ; 33 >
+      au < released ; 2001 ; Genre: Forms of Discourse and Culture Volume 34 ; 34 >
+      au < released ; 2002 ; Genre: Forms of Discourse and Culture Volume 35 ; 35 >
+      au < released ; 2003 ; Genre: Forms of Discourse and Culture Volume 36 ; 36 >
+      au < released ; 2004 ; Genre: Forms of Discourse and Culture Volume 37 ; 37 >
+      au < released ; 2005 ; Genre: Forms of Discourse and Culture Volume 38 ; 38 >
+      au < released ; 2006 ; Genre: Forms of Discourse and Culture Volume 39 ; 39 >
+      au < released ; 2007 ; Genre: Forms of Discourse and Culture Volume 40 ; 40 >
+      au < released ; 2008 ; Genre: Forms of Discourse and Culture Volume 41 ; 41 >
+      au < released ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 >
+      au < released ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 >
+      au < released ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 >
+      au < manifest ; 2012 ; Genre: Forms of Discourse and Culture Volume 45 ; 45 >
       
     }
   }
@@ -558,6 +588,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_lesbian_and_gay_studies
+      attr[journal_id] = glq
 
       au < released ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
       au < released ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
@@ -571,7 +602,8 @@
       au < released ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
       au < released ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
       au < released ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
-      au < ready ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
+      au < released ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
+      au < manifest ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 ; 18 >
       
     }
 
@@ -587,6 +619,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 ; 18 >
 
     }
     
@@ -606,8 +639,9 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = hispanic_american_historical_review
+      attr[journal_id] = hahr
 
-      au < ready ; 1999 ; Hispanic American Historical Review Volume 79 ; 79 >
+      au < released ; 1999 ; Hispanic American Historical Review Volume 79 ; 79 >
       au < released ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 >
       au < released ; 2001 ; Hispanic American Historical Review Volume 81 ; 81 >
       au < released ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 >
@@ -629,6 +663,7 @@
      au < HighWirePressH20Plugin ; released ; 2009 ; Hispanic American Historical Review Volume 89 ; 89 >
      au < HighWirePressH20Plugin ; released ; 2010 ; Hispanic American Historical Review Volume 90 ; 90 >
      au < HighWirePressH20Plugin ; released ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 >
+     au < HighWirePressH20Plugin ; manifest ; 2012 ; Hispanic American Historical Review Volume 92 ; 92 >
     
     }
     
@@ -648,6 +683,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = history_of_political_economy
+      attr[journal_id] = hpe
 
       au < released ; 1999 ; History of Political Economy Volume 31 ; 31 >
       au < released ; 2000 ; History of Political Economy Volume 32 ; 32 >
@@ -671,6 +707,7 @@
      au < HighWirePressH20Plugin ; released ; 2009 ; History of Political Economy Volume 41 ; 41 >
      au < HighWirePressH20Plugin ; released ; 2010 ; History of Political Economy Volume 42 ; 42 >
      au < HighWirePressH20Plugin ; released ; 2011 ; History of Political Economy Volume 43 ; 43 >
+     au < HighWirePressH20Plugin ; manifest ; 2012 ; History of Political Economy Volume 44 ; 44 >
     
     }
     
@@ -690,6 +727,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_health_politics_policy_and_law
+      attr[journal_id] = jhp
 
       au < released ; 1999 ; Journal of Health Politics, Policy and Law Volume 24 ; 24 >
       au < released ; 2000 ; Journal of Health Politics, Policy and Law Volume 25 ; 25 >
@@ -712,6 +750,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Health Politics, Policy and Law Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Health Politics, Policy and Law Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Health Politics, Policy and Law Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Health Politics, Policy and Law Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Health Politics, Policy and Law Volume 37 ; 37 >
     
     }
     
@@ -731,6 +771,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_medieval_and_early_modern_studies
+      attr[journal_id] = jmems
 
       au < released ; 1997 ; Journal of Medieval and Early Modern Studies Volume 27 ; 27 >
       au < released ; 2000 ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
@@ -753,6 +794,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Medieval and Early Modern Studies Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medieval and Early Modern Studies Volume 42 ; 42 >
     
     }
     
@@ -778,6 +821,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Labor: Studies in Working-Class History of the Americas Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Labor: Studies in Working-Class History of the Americas Volume 9 ; 9 >
     
     }
     
@@ -797,6 +842,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = mediterranean_quarterly
+      attr[journal_id] = med
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; Mediterranean Quarterly Volume 10 ; 10 >
@@ -810,8 +856,9 @@
       au < released ; 2007 ; Mediterranean Quarterly Volume 18 ; 18 >
       au < released ; 2008 ; Mediterranean Quarterly Volume 19 ; 19 >
       au < released ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
-      au < ready ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
-      au < ready ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
+      au < released ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
+      au < released ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
+      au < manifest ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
 
     }
     
@@ -827,6 +874,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Mediterranean Quarterly Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 >
 
     }
     
@@ -846,13 +895,14 @@
       param[base_url] = http://minnesotareview.dukejournals.org/
       implicit < status ; year ; name ; param[volume_name] >  
       
-      au < manifest ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
-      au < ready ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
+      au < released ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
+      au < released ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
+      au < released ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
+      au < released ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
+      au < released ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
+      au < released ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
+      au < released ; 2011 ; The Minnesota Review Volume 2011 ; 2011 >
+      au < manifest ; 2012 ; The Minnesota Review Volume 2012 ; 2012 >
       
     }
     
@@ -872,6 +922,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = modern_language_quarterly
+      attr[journal_id] = mlq
 
       au < released ; 1999 ; MLQ: Modern Language Quarterly Volume 60 ; 60 >
       au < released ; 2000 ; MLQ: Modern Language Quarterly Volume 61 ; 61 >
@@ -895,6 +946,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; MLQ: Modern Language Quarterly Volume 70 ; 70 >
       au < HighWirePressH20Plugin ; released ; 2010 ; MLQ: Modern Language Quarterly Volume 71 ; 71 >
       au < HighWirePressH20Plugin ; released ; 2011 ; MLQ: Modern Language Quarterly Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; MLQ: Modern Language Quarterly Volume 73 ; 73 >
     
     }
     
@@ -914,29 +966,31 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = nka
+      attr[journal_id] = nka
       
-      au < ready ; 1994 ; Nka: Journal of Contemporary African Art Issue 1 ; 1 >
-      au < ready ; 1995 ; Nka: Journal of Contemporary African Art Number 2 ; 2 >
-      au < ready ; 1995 ; Nka: Journal of Contemporary African Art Number 3 ; 3 >
-      au < ready ; 1996 ; Nka: Journal of Contemporary African Art Number 4 ; 4 >
-      au < ready ; 1996 ; Nka: Journal of Contemporary African Art Number 5 ; 5 >
-      au < ready ; 1997 ; Nka: Journal of Contemporary African Art Number 6-7 ; 6 >
-      au < ready ; 1998 ; Nka: Journal of Contemporary African Art Number 8 ; 8 >
-      au < ready ; 1998 ; Nka: Journal of Contemporary African Art Number 9 ; 9 >
-      au < ready ; 1999 ; Nka: Journal of Contemporary African Art Number 10 ; 10 >
-      au < ready ; 2000 ; Nka: Journal of Contemporary African Art Number 11/12 ; 11 >
-      au < ready ; 2001 ; Nka: Journal of Contemporary African Art Number 13/14 ; 13 >
-      au < ready ; 2001 ; Nka: Journal of Contemporary African Art Number 15 ; 15 >
-      au < ready ; 2002 ; Nka: Journal of Contemporary African Art Number 16/17 ; 16 >
-      au < ready ; 2003 ; Nka: Journal of Contemporary African Art Number 18 ; 18 >
-      au < ready ; 2004 ; Nka: Journal of Contemporary African Art Number 19 ; 19 >
-      au < ready ; 2006 ; Nka: Journal of Contemporary African Art Number 20 ; 20 >
-      au < ready ; 2007 ; Nka: Journal of Contemporary African Art Number 21 ; 21 >
-      au < ready ; 2008 ; Nka: Journal of Contemporary African Art Number 22/23 ; 22 >
-      au < ready ; 2009 ; Nka: Journal of Contemporary African Art Number 24 ; 24 >
-      au < ready ; 2009 ; Nka: Journal of Contemporary African Art Number 25 ; 25 >
-      au < ready ; 2010 ; Nka: Journal of Contemporary African Art Number 26 ; 26 >
-      au < ready ; 2010 ; Nka: Journal of Contemporary African Art Number 27 ; 27 >
+      au < released ; 1994 ; Nka: Journal of Contemporary African Art Issue 1 ; 1 >
+      au < released ; 1995 ; Nka: Journal of Contemporary African Art Number 2 ; 2 >
+      au < released ; 1995 ; Nka: Journal of Contemporary African Art Number 3 ; 3 >
+      au < released ; 1996 ; Nka: Journal of Contemporary African Art Number 4 ; 4 >
+      au < released ; 1996 ; Nka: Journal of Contemporary African Art Number 5 ; 5 >
+      au < released ; 1997 ; Nka: Journal of Contemporary African Art Number 6-7 ; 6 >
+      au < released ; 1998 ; Nka: Journal of Contemporary African Art Number 8 ; 8 >
+      au < released ; 1998 ; Nka: Journal of Contemporary African Art Number 9 ; 9 >
+      au < released ; 1999 ; Nka: Journal of Contemporary African Art Number 10 ; 10 >
+      au < released ; 2000 ; Nka: Journal of Contemporary African Art Number 11/12 ; 11 >
+      au < released ; 2001 ; Nka: Journal of Contemporary African Art Number 13/14 ; 13 >
+      au < released ; 2001 ; Nka: Journal of Contemporary African Art Number 15 ; 15 >
+      au < released ; 2002 ; Nka: Journal of Contemporary African Art Number 16/17 ; 16 >
+      au < released ; 2003 ; Nka: Journal of Contemporary African Art Number 18 ; 18 >
+      au < released ; 2004 ; Nka: Journal of Contemporary African Art Number 19 ; 19 >
+      au < released ; 2006 ; Nka: Journal of Contemporary African Art Number 20 ; 20 >
+      au < released ; 2007 ; Nka: Journal of Contemporary African Art Number 21 ; 21 >
+      au < released ; 2008 ; Nka: Journal of Contemporary African Art Number 22/23 ; 22 >
+      au < released ; 2009 ; Nka: Journal of Contemporary African Art Number 24 ; 24 >
+      au < released ; 2009 ; Nka: Journal of Contemporary African Art Number 25 ; 25 >
+      au < released ; 2010 ; Nka: Journal of Contemporary African Art Number 26 ; 26 >
+      au < released ; 2010 ; Nka: Journal of Contemporary African Art Number 27 ; 27 >
+      au < ready ; 2011 ; Nka: Journal of Contemporary African Art Number 28 ; 28 >
 
     }
     
@@ -956,6 +1010,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = poetics_today
+      attr[journal_id] = poet
 
       au < released ; 1999 ; Poetics Today Volume 20 ; 20 >
       au < released ; 2000 ; Poetics Today Volume 21 ; 21 >
@@ -978,6 +1033,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Poetics Today Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Poetics Today Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Poetics Today Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Poetics Today Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Poetics Today Volume 33 ; 33 >
     
     }
     
@@ -997,6 +1054,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = positions
+      attr[journal_id] = pos
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; positions: east asia cultures critique Volume 7 ; 7 >
@@ -1010,8 +1068,8 @@
       au < released ; 2007 ; positions: east asia cultures critique Volume 15 ; 15 >
       au < released ; 2008 ; positions: east asia cultures critique Volume 16 ; 16 >
       au < released ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 >
-      au < ready ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
-      au < ready ; 2011 ; positions: east asia cultures critique Volume 19 ; 19 >
+      au < released ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
+      au < released ; 2011 ; positions: east asia cultures critique Volume 19 ; 19 >
 
     }
     
@@ -1020,6 +1078,7 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://positions.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      comment[title] = title changed since 2012 in Duke only
       
       au < HighWireStrVolPlugin ; down ; 2005 ; positions: east asia cultures critique Volume 13 ; 13 >
       au < HighWireStrVolPlugin ; down ; 2006 ; positions: east asia cultures critique Volume 14 ; 14 >
@@ -1027,6 +1086,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; positions: east asia cultures critique Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; positions: east asia cultures critique Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; positions: asia critique Volume 20 ; 20 >
 
     }
     
@@ -1046,18 +1107,20 @@
       param[base_url] = http://pads.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; manifest ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
-      au < HighWirePressH20Plugin ; manifest ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
-      au < HighWirePressH20Plugin ; manifest ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
-      au < HighWirePressH20Plugin ; manifest ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
-      au < HighWirePressH20Plugin ; manifest ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
-      au < HighWirePressH20Plugin ; manifest ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
-      au < HighWirePressH20Plugin ; manifest ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
-      au < HighWirePressH20Plugin ; manifest ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; ready ; 2011 ; Publication of the American Dialect Society Volume 96 ; 96 >
+      au < HighWirePressH20Plugin ; expected ; 2012 ; Publication of the American Dialect Society Volume 97 ; 97 >
 
     }
   
@@ -1077,6 +1140,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = public_culture
+      attr[journal_id] = pc
 
       au < released ; 1999 ; Public Culture Volume 11 ; 11 >
       au < released ; 2000 ; Public Culture Volume 12 ; 12 >
@@ -1100,6 +1164,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Public Culture Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Public Culture Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Public Culture Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Public Culture Volume 24 ; 24 >
     
     }
   
@@ -1119,6 +1184,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = radical_history_review
+      attr[journal_id] = rhr
 
       au < released ; 2001 ; Radical History Review Issue 79 ; 79 >
       au < released ; 2001 ; Radical History Review Issue 80 ; 80 >
@@ -1148,6 +1214,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Radical History Review 2009 ; 2009 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Radical History Review 2010 ; 2010 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Radical History Review 2011 ; 2011 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Radical History Review 2012 ; 2012 >
     
     }
   
@@ -1167,6 +1234,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = social_science_history
+      attr[journal_id] = ssh
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; Social Science History Volume 23 ; 23 >
@@ -1181,7 +1249,7 @@
       au < released ; 2008 ; Social Science History Volume 32 ; 32 >
       au < released ; 2009 ; Social Science History Volume 33 ; 33 >
       au < released ; 2010 ; Social Science History Volume 34 ; 34 >
-      au < ready ; 2011 ; Social Science History Volume 35 ; 35 >
+      au < released ; 2011 ; Social Science History Volume 35 ; 35 >
       
     }
 
@@ -1198,6 +1266,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Social Science History Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Social Science History Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Social Science History Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Social Science History Volume 36 ; 36 >
     
     }
   
@@ -1217,6 +1286,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = social_text
+      attr[journal_id] = soc
 
       au < released ; 1999 ; Social Text Volume 17 ; 17 >
       au < released ; 2000 ; Social Text Volume 18 ; 18 >
@@ -1239,6 +1309,8 @@
       au < HighWirePressH20Plugin ; released ; 2008 ; Social Text Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Social Text Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Social Text Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; Social Text Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Social Text Volume 30 ; 30 >
     
     }
   
@@ -1258,6 +1330,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = south_atlantic_quarterly
+      attr[journal_id] = saq
 
       au < released ; 1999 ; The South Atlantic Quarterly Volume 98 ; 98 >
       au < released ; 2000 ; The South Atlantic Quarterly Volume 99 ; 99 >
@@ -1274,10 +1347,11 @@
       param[base_url] = http://saq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 2001 ; The South Atlantic Quarterly Volume 100 ; 100 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; The South Atlantic Quarterly Volume 102 ; 102 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; The South Atlantic Quarterly Volume 103 ; 103 >
+      au < HighWirePressH20Plugin ; ready ; 2000 ; The South Atlantic Quarterly Volume 99 ; 99 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; The South Atlantic Quarterly Volume 100 ; 100 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; The South Atlantic Quarterly Volume 102 ; 102 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; The South Atlantic Quarterly Volume 103 ; 103 >
       au < HighWireStrVolPlugin ; down ; 2005 ; The South Atlantic Quarterly Volume 104 ; 104 >
       au < HighWireStrVolPlugin ; down ; 2006 ; The South Atlantic Quarterly Volume 105 ; 105 >
       au < HighWireStrVolPlugin ; down ; 2007 ; The South Atlantic Quarterly Volume 106 ; 106 >
@@ -1285,6 +1359,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; The South Atlantic Quarterly Volume 108 ; 108 >
       au < HighWirePressH20Plugin ; released ; 2010 ; The South Atlantic Quarterly Volume 109 ; 109 >
       au < HighWirePressH20Plugin ; released ; 2011 ; The South Atlantic Quarterly Volume 110 ; 110 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; The South Atlantic Quarterly Volume 111 ; 111 >
     
     }
   
@@ -1304,6 +1379,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = theater
+      attr[journal_id] = the
 
       au < released ; 1999 ; Theater Volume 29 ; 29 >
       au < released ; 2000 ; Theater Volume 30 ; 30 >
@@ -1327,6 +1403,7 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Theater Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Theater Volume 40 ; 40 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Theater Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; manifest ; 2012 ; Theater Volume 42 ; 42 >
     
     }
   
@@ -1340,9 +1417,33 @@
       issnl = 0887-9982
 
     >
-    comment = Tikkun joining Duke in 2012.
-  }
     
+    {
+    
+	plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+    param[base_url] = http://muse.jhu.edu/
+
+    param[journal_dir] = tikkun
+    attr[journal_id] = tik
+    
+    au < manifest ; 2012 ; Tikkun Volume 27 ; 27 >
+    
+    }
+   
+    {
+    
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://tikkun.dukejournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      
+
+      au < HighWirePressH20Plugin ; exists ; 2012 ; Tikkun Volume 27 ; 27 >
+    
+     }
+    
+    }
+     
   {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
@@ -1358,6 +1459,7 @@
       >
 
       param[journal_dir] = common_knowledge
+      attr[journal_id] = ckn
 
       au < released ; 2002 ; Common Knowledge Volume 8 ; 8 >
       au < released ; 2003 ; Common Knowledge Volume 9 ; 9 >
@@ -1368,7 +1470,8 @@
       au < released ; 2008 ; Common Knowledge Volume 14 ; 14 >
       au < released ; 2009 ; Common Knowledge Volume 15 ; 15 >
       au < released ; 2010 ; Common Knowledge Volume 16 ; 16 >
-      au < ready ; 2011 ; Common Knowledge Volume 17 ; 17 >
+      au < released ; 2011 ; Common Knowledge Volume 17 ; 17 >
+      au < manifest ; 2012 ; Common Knowledge Volume 18 ; 18 >
 
     }
 
@@ -1381,6 +1484,7 @@
       >
 
       param[journal_dir] = hopscotch
+      attr[journal_id] = hop
 
       au < released ; 1999 ; Hopscotch: A Cultural Review Volume 1 ; 1 >
       au < released ; 2000-2001 ; Hopscotch: A Cultural Review Volume 2 ; 2 >
@@ -1396,6 +1500,7 @@
       >
 
       param[journal_dir] = nepantla
+      attr[journal_id] = nep
 
       au < released ; 2000 ; Nepantla: Views from South Volume 1 ; 1 >
       au < released ; 2001 ; Nepantla: Views from South Volume 2 ; 2 >
@@ -1413,6 +1518,7 @@
       >
 
       param[journal_dir] = pedagogy
+      attr[journal_id] = ped
 
       au < released ; 2001 ; Pedagogy Volume 1 ; 1 >
       au < released ; 2002 ; Pedagogy Volume 2 ; 2 >
@@ -1424,7 +1530,8 @@
       au < released ; 2008 ; Pedagogy Volume 8 ; 8 >
       au < released ; 2009 ; Pedagogy Volume 9 ; 9 >
       au < released ; 2010 ; Pedagogy Volume 10 ; 10 >
-      au < ready ; 2011 ; Pedagogy Volume 11 ; 11 >
+      au < released ; 2011 ; Pedagogy Volume 11 ; 11 >
+      au < manifest ; 2012 ; Pedagogy Volume 12 ; 12 >
 
     }
 
@@ -1437,6 +1544,7 @@
       >
 
       param[journal_dir] = small_axe
+      attr[journal_id] = smx
 
       au < released ; 2001 ; Small Axe Volume 5 ; 5 >
       au < released ; 2002 ; Small Axe Volume 6 ; 6 >
@@ -1447,8 +1555,9 @@
       au < released ; 2007 ; Small Axe Volume 11 ; 11 >
       au < released ; 2008 ; Small Axe Volume 12 ; 12 >
       au < released ; 2009 ; Small Axe Volume 13 ; 13 >
-      au < ready ; 2010 ; Small Axe Volume 14 ; 14 >
-      au < ready ; 2011 ; Small Axe Volume 15 ; 15 >
+      au < released ; 2010 ; Small Axe Volume 14 ; 14 >
+      au < released ; 2011 ; Small Axe Volume 15 ; 15 >
+      au < manifest ; 2012 ; Small Axe Volume 16 ; 16 >
 
     }
 

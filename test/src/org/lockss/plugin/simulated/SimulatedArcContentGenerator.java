@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArcContentGenerator.java,v 1.4 2008-05-09 19:08:11 dshr Exp $
+ * $Id: SimulatedArcContentGenerator.java,v 1.4.52.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -187,7 +187,15 @@ public class SimulatedArcContentGenerator extends SimulatedContentGenerator {
     ARCWriter ret = null;
     List dirs = new ArrayList();
     dirs.add(new File(contentRoot));
-    ret = new ARCWriter(serialNo, dirs, arcFilePrefix, compressArc, maxSize);
+
+    String template = "${prefix}-${timestamp17}-${serialno}";
+    List<String> metadata = new ArrayList<String>();
+
+    WriterPoolSettingsData settings = new WriterPoolSettingsData(arcFilePrefix,
+	template, maxSize, compressArc, dirs, metadata);
+
+    ret = new ARCWriter(serialNo, settings);
+
     return ret;
   }
 

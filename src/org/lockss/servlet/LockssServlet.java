@@ -1,10 +1,10 @@
 /*
- * $Id: LockssServlet.java,v 1.120 2011-03-03 18:57:32 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.120.10.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -99,6 +99,9 @@ public abstract class LockssServlet extends HttpServlet
   public static final String JAVASCRIPT_RESOURCE =
     "org/lockss/htdocs/admin.js";
 
+  private static final String DOCTYPE =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">";
+
   public static final String ATTR_INCLUDE_SCRIPT = "IncludeScript";
   public static final String ATTR_ALLOW_ROLES = "AllowRoles";
 
@@ -111,6 +114,9 @@ public abstract class LockssServlet extends HttpServlet
 
   /** User may change AU configuration (add/delete content) */
   public static final String ROLE_AU_ADMIN = "auAdminRole";
+
+  /** User may access content) */
+  public static final String ROLE_CONTENT_ACCESS = "accessContentRole";
 
   public static final String ROLE_DEBUG = "debugRole";
 
@@ -170,7 +176,6 @@ public abstract class LockssServlet extends HttpServlet
   public void service(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
     resetState();
-    boolean success = false;
     HttpSession session = req.getSession(false);
     try {
       this.req = req;
@@ -213,7 +218,6 @@ public abstract class LockssServlet extends HttpServlet
 	session.setAttribute(SESSION_KEY_REQUEST_HOST, reqHost);
       }
       lockssHandleRequest();
-      success = (errMsg == null);
     } catch (ServletException e) {
       log.error("Servlet threw", e);
       throw e;
@@ -228,10 +232,6 @@ public abstract class LockssServlet extends HttpServlet
 	session.setAttribute(SESSION_KEY_RUNNING_SERVLET, null);
 	session.setAttribute(LockssFormAuthenticator.__J_AUTH_ACTIVITY,
 			     TimeBase.nowMs());
-      }
-      if ("please".equalsIgnoreCase(req.getHeader("X-Lockss-Result"))) {
-	log.debug3("X-Lockss-Result: " + (success ? "Ok" : "Fail"));
-	resp.setHeader("X-Lockss-Result", success ? "Ok" : "Fail");
       }
       resetMyLocals();
       resetLocals();
@@ -493,6 +493,7 @@ public abstract class LockssServlet extends HttpServlet
     noRoleParams.put(ROLE_USER_ADMIN, "noadmin");
     noRoleParams.put(ROLE_CONTENT_ADMIN, "nocontent");
     noRoleParams.put(ROLE_AU_ADMIN, "noau");
+    noRoleParams.put(ROLE_CONTENT_ACCESS, "noaccess");
     noRoleParams.put(ROLE_DEBUG, "nodebug");
   }
 
@@ -509,6 +510,11 @@ public abstract class LockssServlet extends HttpServlet
 			     || roles.contains(ROLE_USER_ADMIN));
   }
 
+
+  protected boolean isServletRunnable(ServletDescr d) {
+    return isServletAllowed(d) && isServletEnabled(d);
+  }
+
   protected boolean isServletAllowed(ServletDescr d) {
     if (d.needsUserAdminRole() && !doesUserHaveRole(ROLE_USER_ADMIN))
       return false;
@@ -516,12 +522,17 @@ public abstract class LockssServlet extends HttpServlet
       return false;
     if (d.needsAuAdminRole() && !doesUserHaveRole(ROLE_AU_ADMIN))
       return false;
-    
+    if (d.needsContentAccessRole() && !doesUserHaveRole(ROLE_CONTENT_ACCESS))
+      return false;
+    return true;
+  }
+
+  protected boolean isServletEnabled(ServletDescr d) {
     return d.isEnabled(getLockssDaemon());
   }
 
   protected boolean isServletDisplayed(ServletDescr d) {
-    if (!isServletAllowed(d)) return false;
+    if (!isServletRunnable(d)) return false;
     if (d.needsDebugRole() && !doesUserHaveRole(ROLE_DEBUG))
       return false;
     return true;
@@ -1022,6 +1033,27 @@ public abstract class LockssServlet extends HttpServlet
 			       + srvLink(myServletDescr(), "try again",
 					 getParamsAsProps())
 			       + " in a moment.");
+  }
+
+  protected void endPage(Page page) throws IOException {
+    layoutFooter(page);
+    writePage(page);
+  }
+
+  protected void endPageNoFooter(Page page) throws IOException {
+    writePage(page);
+  }
+
+  protected void writePage(Page page) throws IOException {
+    if ("please".equalsIgnoreCase(req.getHeader("X-Lockss-Result"))) {
+      boolean success = (errMsg == null);
+      log.debug3("X-Lockss-Result: " + (success ? "Ok" : "Fail"));
+      resp.setHeader("X-Lockss-Result", success ? "Ok" : "Fail");
+    }
+    resp.setContentType("text/html");
+    PrintWriter wrtr = resp.getWriter();
+    wrtr.println(DOCTYPE);
+    page.write(wrtr);
   }
 
   public MultiPartRequest getMultiPartRequest()

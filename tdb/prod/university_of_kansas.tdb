@@ -8,7 +8,7 @@
   
     title <
       name = Journal of Dramatic Theory and Criticism ;
-      issn = 0888-3202 
+      issn = 0888-3203 
     >
     
     {
@@ -117,6 +117,7 @@
       au < exists ; 2008-2009 ; Latin American Theatre Review Volume 42 ; 42 ; 2009 >
       au < exists ; 2009-2010 ; Latin American Theatre Review Volume 43 ; 43 ; 2010 >  
       au < exists ; 2010-2011 ; Latin American Theatre Review Volume 44 ; 44 ; 2011 >
+      au < exists ; 2011-2012 ; Latin American Theatre Review Volume 44 ; 44 ; 2012 >
 
     }
 
@@ -124,10 +125,12 @@
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = latin_american_theatre_review      
+      param[journal_dir] = latin_american_theatre_review  
+      attr[journal_id] = ltr    
       implicit < status ; year ; name ; param[volume] >
 
       au < ready ; 2010-2011 ; Latin American Theatre Review Volume 44 ; 44 >
+      au < manifest ; 2011-2012 ; Latin American Theatre Review Volume 45 ; 45 >
 
     }
 

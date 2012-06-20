@@ -1,10 +1,10 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.12 2011-08-22 23:50:46 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.12.6.1 2012-06-20 00:02:58 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,9 +34,11 @@ package org.lockss.plugin.springer;
 
 import java.io.*;
 
-import org.htmlparser.NodeFilter;
+import org.htmlparser.*;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -58,10 +60,16 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
       throws PluginException {
     // First filter with HtmlParser
     NodeFilter[] filters = new NodeFilter[] {
-        // Contains ad-specific cookies
-        new TagNameFilter("script"),
+        /*
+         * Crawl filter
+         */
         // Contains cross-links to other articles in other journals/volumes
         HtmlNodeFilters.tagWithAttribute("div", "id", "RelatedSection"),
+        /*
+         * Hash filter
+         */
+        // Contains ad-specific cookies
+        new TagNameFilter("script"),
         // Contains ads
         HtmlNodeFilters.tagWithAttribute("div", "class", "advertisement"),
         // Contains a lot of variable elements; institution name, gensyms for tag IDs or names, etc.
@@ -93,20 +101,53 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         
         // MAINTENANCE
         
-        // Sadly, the "copyright" <meta> tag isn't the publication year
-        HtmlNodeFilters.tagWithAttribute("meta", "name", "copyright"),
-        // Static, but was added after thousands of AUs had crawled already
-        HtmlNodeFilters.tagWithAttribute("meta", "name", "robots"),
+        // Alas, the <title> tag switched from "SpringerLink - Foo" to
+        // "Foo - SpringerLink", and the order/number of <meta> tags
+        // changes over time
+        new TagNameFilter("head"),
+        
         // Eventually changed from <h1 lang="en" class="title"> to <h1>
         new TagNameFilter("h1"),
+        
+        // Over time, <span class="...toolbarSprite..."></span>
+        // became <a class="...toolbarSprite...">...</a>
+        new NodeFilter() {
+          @Override
+          public boolean accept(Node node) {
+            if (node instanceof Span || node instanceof LinkTag) {
+              Tag tag = (Tag)node;
+              String attr = tag.getAttribute("class");
+              return (attr != null && attr.contains("toolbarSprite"));
+            }
+            return false;
+          }
+        },
+        
+        // The back link to the issue TOC contained in this <div>
+        // now has the year parenthesized after the back link
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ContentHeading"),
+        
+        // The inline styling of this <div> has changed from
+        // <div class="coverImage" title="Cover Image" style="background-image: url(...)">
+        // to
+        // <div class="coverImage" title="Cover Image" style="background-image: url(...); background-size: contain;">
+        HtmlNodeFilters.tagWithAttribute("div", "class", "coverImage"),
+        
     };
     InputStream filteredStream = new HtmlFilterInputStream(in,
                                                            encoding,
                                                            HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
 
-    // Then apply WhitespaceFilter
+    // Then apply Reader-based transformations
     try {
-      return new ReaderInputStream(new WhiteSpaceFilter(new InputStreamReader(filteredStream, encoding)));
+      // Turn into a Reader (can throw)
+      Reader reader1 = new InputStreamReader(filteredStream, encoding);
+      // Inconsistent use of "'" and "&#39;"
+      Reader reader2 = new StringFilter(reader1, "&#39;", "'");
+      // Noisy whitespace
+      Reader reader3 = new WhiteSpaceFilter(reader2);
+      // Convert back into an InputStream
+      return new ReaderInputStream(reader3);
     }
     catch (UnsupportedEncodingException uee) {
       throw new FilteringException(uee);

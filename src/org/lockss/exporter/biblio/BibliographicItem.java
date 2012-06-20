@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItem.java,v 1.1 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: BibliographicItem.java,v 1.1.2.1 2012-06-20 00:03:07 nchondros Exp $
  */
 
 /*
@@ -122,7 +122,7 @@ public interface BibliographicItem {
    * of four digits, optionally followed by a hyphen and a further four digits,
    * in which case the string represents a range. Whitespace can be included
    * around and between the years and hyphen. For example, "2011", "1999-2001",
-   * " 1976 - 2011 ". If the string deviates from this format,it will not
+   * " 1976 - 2011 ". If the string deviates from this format, it will not
    * be successfully parsed as a date range.
    * @return the year string for the bibliographic item
    */

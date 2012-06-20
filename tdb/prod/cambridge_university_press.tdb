@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = canadian_journal_on_aging
+    attr[journal_id] = cja
 
     au < released ; 2004 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 23 ; 23 >
     au < released ; 2005 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 24 ; 24 >
@@ -23,8 +24,9 @@
     au < released ; 2007 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 26 ; 26 >
     au < released ; 2008 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 27 ; 27 >
     au < released ; 2009 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 28 ; 28 >
-    au < manifest ; 2010 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 29 ; 29 >
-    au < manifest ; 2011 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 30 ; 30 >
+    au < ready ; 2010 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 29 ; 29 >
+    au < ready ; 2011 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 30 ; 30 >
+    au < manifest ; 2012 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 31 ; 31 >
 
   }
 
@@ -37,6 +39,7 @@
     >
 
     param[journal_dir] = journal_of_policy_history
+    attr[journal_id] = jph
 
     au < released ; 1999 ; Journal of Policy History Volume 11 ; 11 >
     au < released ; 2000 ; Journal of Policy History Volume 12 ; 12 >
@@ -50,7 +53,8 @@
     au < released ; 2008 ; Journal of Policy History Volume 20 ; 20 >
     au < released ; 2009 ; Journal of Policy History Volume 21 ; 21 >
     au < released ; 2010 ; Journal of Policy History Volume 22 ; 22 >
-    au < manifest ; 2011 ; Journal of Policy History Volume 23 ; 23 >
+    au < ready ; 2011 ; Journal of Policy History Volume 23 ; 23 >
+    au < manifest ; 2012 ; Journal of Policy History Volume 24 ; 24 >
 
   }
 
@@ -63,6 +67,7 @@
     >
 
     param[journal_dir] = world_politics
+    attr[journal_id] = wp
 
     au < released ; 1996 ; World Politics Volume 48 ; 48 >
     au < released ; 1997 ; World Politics Volume 49 ; 49 >
@@ -79,7 +84,8 @@
     au < released ; 2008 ; World Politics Volume 60 ; 60 >
     au < released ; 2009 ; World Politics Volume 61 ; 61 >
     au < released ; 2010 ; World Politics Volume 62 ; 62 >
-    au < manifest ; 2011 ; World Politics Volume 63 ; 63 >
+    au < ready ; 2011 ; World Politics Volume 63 ; 63 >
+    au < manifest ; 2012 ; World Politics Volume 64 ; 64 >
 
   }
 

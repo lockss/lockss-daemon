@@ -1,10 +1,10 @@
 /*
- * $Id: ServletDescr.java,v 1.15 2009-06-15 07:52:44 tlipkis Exp $
+ * $Id: ServletDescr.java,v 1.15.32.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -53,6 +53,8 @@ public class ServletDescr {
 
   static Class UNAVAILABLE_SERVLET_MARKER = UnavailableServletMarker.class;
 
+  static Class UNCONFIGURED_SERVLET_CLASS = DisabledServlet.class;
+
   // flags
   /** Include link in nav table */
   public static final int IN_NAV = 0x04;
@@ -76,11 +78,14 @@ public class ServletDescr {
   /** Needs user admin role */
   public static final int NEED_ROLE_USER_ADMIN = 0x2000;
 
-  /** Needs content access admin role */
+  /** Needs content admin role */
   public static final int NEED_ROLE_CONTENT_ADMIN = 0x4000;
 
   /** Needs AU admin role */
   public static final int NEED_ROLE_AU_ADMIN = 0x8000;
+
+  /** Needs content access role */
+  public static final int NEED_ROLE_CONTENT_ACCESS = 0x10000;
 
   public ServletDescr(String servletName,
 		      Class cls,
@@ -216,6 +221,10 @@ public class ServletDescr {
 
   boolean needsAuAdminRole() {
     return (flags & NEED_ROLE_AU_ADMIN) != 0;
+  }
+
+  boolean needsContentAccessRole() {
+    return (flags & NEED_ROLE_CONTENT_ACCESS) != 0;
   }
 
   boolean needsDebugRole() {

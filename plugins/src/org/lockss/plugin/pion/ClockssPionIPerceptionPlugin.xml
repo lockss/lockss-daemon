@@ -5,19 +5,32 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>&quot;%sjournal/%s&quot;, base_url, journal_code</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>&quot;%sjournal/%s/volume/%s&quot;, base_url, journal_code, volume_name</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>&quot;%sjournal/%s/volume/%s/issue/%s&quot;, base_url, journal_code, volume_name, issue</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
   <entry>
-    <string>plugin_fetch_rate_limiter_source</string>
-    <string>key:Pion</string>
-  </entry>
-  <entry>
     <string>au_name</string>
-    <string>&quot;Pion i-Perception Plugin (CLOCKSS), Base URL %s, Second Base URL %s, Journal Code %s, Volume %s&quot;, base_url, base_url2, journal_code, volume_name</string>
+    <string>&quot;Pion i-Perception Plugin (CLOCKSS), Base URL %s, Journal Code %s, Volume %s&quot;, base_url, journal_code, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -31,12 +44,13 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>4,&quot;^(%s|%s)&quot;, base_url, base_url2</string>
       <string>1,&quot;^%sjournal/%s/volume/%s$&quot;, base_url, journal_code, volume_name</string>
       <string>1,&quot;^%sjournal/%s/volume/%s/&quot;, base_url, journal_code, volume_name</string>
       <string>1,&quot;^%sjournal/%s/article/%s&quot;, base_url, journal_code, journal_code</string>
       <string>1,&quot;^%sfulltext/%s0?%s/%s.*\.pdf&quot;, base_url, journal_code, volume_name, journal_code</string>
-      <string>1,&quot;^%s/ris\.cgi\?id=%s&quot;, base_url2, journal_code</string>
+      <string>1,&quot;^%smisc/%s0?%s/%s.*(_s|-supp)&quot;, base_url, journal_code, volume_name, journal_code</string>
+      <string>1,&quot;^%sris\.cgi\?id=&quot;, base_url2</string>
     </list>
   </entry>
   <entry>
@@ -91,7 +105,29 @@
     <string>org.lockss.plugin.pion.PionHashHtmlFilterFactory</string>
   </entry>
   <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.pion.PionCrawlHtmlFilterFactory</string>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.pion.PionIPerceptionArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.pion.PionIPerceptionArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.pion.PionHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
   </entry>
 </map>

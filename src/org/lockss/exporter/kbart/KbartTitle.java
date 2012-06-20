@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitle.java,v 1.12 2011-09-23 13:23:15 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.12.4.1 2012-06-20 00:02:56 nchondros Exp $
  */
 
 /*
@@ -32,17 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.EnumSet;
-import java.util.List;
-import java.util.Set;
-import java.util.SortedMap;
-import java.util.TreeMap;
+import java.util.*;
 
 import org.apache.commons.lang.builder.HashCodeBuilder;
+import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
@@ -56,7 +49,15 @@ import org.lockss.util.UrlUtil;
  * Null values are not allowed; an unused field returns the empty string as its
  * value.
  * <p>
- * Future enhancements might include format checking (currently performed 
+ * Note that KBART defines end dates/volumes/issues to be empty if they
+ * represent the range extending to the present. Instead of recording an empty
+ * string and thus losing this information, we record the value but then check
+ * the date when returning the field value. Values returned from getField()
+ * should therefore represent the value which should be displayed in a KBART
+ * report; the actual value of a range end may still be retrieved with getter
+ * method getFieldValue().
+ * <p>
+ * Future enhancements might include format checking (currently performed
  * externally) and normalisation, and defaults for field values. In particular, 
  * here are some of the more pressing recommendations taken from
  * <emph>KBART Phase I Recommended Practice</emph> document NISO-RP-9-2010
@@ -127,35 +128,65 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
    * 
    * @param field the Field to set
    * @param value the string value to give the field
+   * @return the KbartTitle so setField calls can be chained
    */
-  public void setField(Field field, String value) {
-    if (field==null) return;
+  public KbartTitle setField(Field field, String value) {
+    if (field==null) return this;
     if (value==null) value = "";
     fields.put(field, normalise(value));
+    return this;
   }
 
+
+  protected static EnumSet<Field> blankIfCoverageToPresent = EnumSet.of(
+      Field.DATE_LAST_ISSUE_ONLINE,
+      Field.NUM_LAST_ISSUE_ONLINE,
+      Field.NUM_LAST_VOL_ONLINE
+  );
+
   /**
-   * Get the recorded value of the field. If the field or the value is null, 
-   * return an empty string.
+   * Get the display value of the field. If the field or the value is null,
+   * return an empty string. If the field represents a range end, return the
+   * empty string if it extends to now.
    * 
    * @param field the Field object whose value is required
    * @return the string value of the field, or an empty string
    */
   public String getField(Field field) {
-    if (field==null) return "";
-    String value = fields.get(field);
-    return value==null ? "" : value;
+    if (blankIfCoverageToPresent.contains(field)) {
+      try {
+        String lastYear = getFieldValue(Field.DATE_LAST_ISSUE_ONLINE);
+        // Return blank if the year is empty or current
+        if (StringUtil.isNullString(lastYear) ||
+            Integer.parseInt(lastYear) >= BibliographicUtil.getThisYear()) {
+          return "";
+        }
+      } catch (NumberFormatException e) {/* Ignore and return actual value */}
+    }
+    return getFieldValue(field);
   }
 
   /**
-   * Check whether the title has a value for the given field.
+   * Check whether the title has a non-null value for the given field.
    * @param f the Field to check
    * @return whether the field has a non-empty value
    */
   public boolean hasFieldValue(Field f) {
     return !StringUtil.isNullString(fields.get(f)); 
   }
-  
+
+  /**
+   * Get the recorded value of the field. If the field or the value is null,
+   * return an empty string.
+   * @param field the Field object whose value is required
+   * @return the string value of the field, or an empty string
+   */
+  public String getFieldValue(Field field) {
+    if (field==null) return "";
+    String value = fields.get(field);
+    return value==null ? "" : value;
+  }
+
   /**
    * Attempts to return a valid ISSN from the title's fields. If no ISSN, 
    * an eISSN is returned. If neither is set, an empty string is returned.
@@ -407,7 +438,8 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     public static final EnumSet<Field> idFields = EnumSet.of(
         Field.PUBLICATION_TITLE,
         Field.PRINT_IDENTIFIER,
-        Field.ONLINE_IDENTIFIER
+        Field.ONLINE_IDENTIFIER,
+        Field.TITLE_ID
     ); 
     
 

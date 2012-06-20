@@ -1,10 +1,10 @@
 /*
- * $Id: BasicUserAccount.java,v 1.3 2009-06-13 09:10:26 tlipkis Exp $
+ * $Id: BasicUserAccount.java,v 1.3.34.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -94,9 +94,9 @@ public class BasicUserAccount extends UserAccount {
     super(name);
   }
 
-  protected void postLoadInit(AccountManager acctMgr, Configuration config) {
+  protected void commonInit(AccountManager acctMgr, Configuration config) {
     this.config = config;
-    super.postLoadInit(acctMgr, config);
+    super.commonInit(acctMgr, config);
   }
 
   public String getType() {

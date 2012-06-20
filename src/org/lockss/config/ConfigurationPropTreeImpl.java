@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.13 2011-08-09 03:59:01 tlipkis Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.13.6.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2001-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2001-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -355,7 +355,8 @@ public class ConfigurationPropTreeImpl extends Configuration {
   public Configuration getConfigTree(String key) {
     PropertyTree tree = props.getTree(key);
     if (tree == null) {
-      return null;
+      // getTree never returns null, but be safe
+      return ConfigManager.EMPTY_CONFIGURATION;
     }
     Configuration res = new ConfigurationPropTreeImpl(tree);
     if (isSealed()) {

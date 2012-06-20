@@ -1,10 +1,10 @@
 /*
- * $Id: DefinablePlugin.java,v 1.61 2011-09-25 04:37:39 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.61.4.1 2012-06-20 00:03:09 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -89,6 +89,9 @@ public class DefinablePlugin extends BasePlugin {
   public static final String KEY_PLUGIN_FETCH_RATE_LIMITER_SOURCE =
     "plugin_fetch_rate_limiter_source";
 
+  public static final String KEY_PLUGIN_ARCHIVE_FILE_TYPES =
+    "plugin_archive_file_types";
+
   public static final String KEY_PLUGIN_ARTICLE_ITERATOR_FACTORY =
     "plugin_article_iterator_factory";
 
@@ -126,6 +129,7 @@ public class DefinablePlugin extends BasePlugin {
   protected List<String> loadedFromUrls;
   protected CrawlWindow crawlWindow;
   protected Map<Plugin.Feature,String> featureVersion;
+  protected ArchiveFileTypes archiveFileSpec;
 
   public void initPlugin(LockssDaemon daemon, String extMapName)
       throws FileNotFoundException {
@@ -137,6 +141,7 @@ public class DefinablePlugin extends BasePlugin {
       throws FileNotFoundException {
     // convert the plugin class name to an xml file name
     // load the configuration map from jar file
+    theDaemon = daemon;
     ExternalizableMap defMap = loadMap(extMapName, loader);
     this.initPlugin(daemon, extMapName, defMap, loader);
   }
@@ -146,11 +151,13 @@ public class DefinablePlugin extends BasePlugin {
 			 ClassLoader loader) {
     mapName = extMapName;
     this.classLoader = loader;
+    processObsolescentFields(defMap);
     this.definitionMap = defMap;
     super.initPlugin(daemon);
     initMimeMap();
     initFeatureVersions();
     initAuFeatureMap();
+    initArchiveFileTypes();
     checkParamAgreement();
   }
 
@@ -191,8 +198,34 @@ public class DefinablePlugin extends BasePlugin {
 	next = null;
       }
     }
+    processDefault(res);
     loadedFromUrls = urls;
     return res;
+  }
+
+  void processDefault(TypedEntryMap map) {
+    List<String> delKeys = new ArrayList<String>(4);;
+    for (Map.Entry ent : map.entrySet()) {
+      Object val = ent.getValue();
+      if (val instanceof org.lockss.util.Default) {
+	String key = (String)ent.getKey();
+	log.debug(getDefaultPluginName() + ": Resetting "
+		  + key + " to default value");
+	delKeys.add(key);
+      }
+    }
+    for (String key : delKeys) {
+      map.removeMapElement(key);
+    }
+  }
+
+  // Move any values from obsolescent keys to their official key
+  void processObsolescentFields(TypedEntryMap map) {
+    if (map.containsKey(DefinableArchivalUnit.KEY_AU_MANIFEST_OBSOLESCENT)) {
+      map.setMapElement(DefinableArchivalUnit.KEY_AU_PERMISSION_URL,
+			map.getMapElement(DefinableArchivalUnit.KEY_AU_MANIFEST_OBSOLESCENT));
+      map.removeMapElement(DefinableArchivalUnit.KEY_AU_MANIFEST_OBSOLESCENT);
+    }
   }
 
   /** If in testing mode FOO, copy values from FOO_override map, if any, to
@@ -212,15 +245,23 @@ public class DefinablePlugin extends BasePlugin {
       for (Map.Entry entry : (Set<Map.Entry>)overrideMap.entrySet()) {
 	String key = (String)entry.getKey();
 	Object val = entry.getValue();
-	log.debug(getDefaultPluginName() + ": Overriding "
-		  + key + " with " + val);
-	map.setMapElement(key, val);
+
+	// If we add org.lockss.util.Parent it will do something like this
+// 	if (val instanceof org.lockss.util.Default) {
+// 	  log.debug(getDefaultPluginName() + ": Overriding "
+// 		    + key + " with default value");
+// 	  map.removeMapElement(key);
+// 	} else {
+	  log.debug(getDefaultPluginName() + ": Overriding "
+		    + key + " with " + val);
+	  map.setMapElement(key, val);
+// 	}
       }
     }
   }
 
   String getTestingMode() {
-    return theDaemon == null ? null : theDaemon.getTestingMode();
+    return theDaemon.getTestingMode();
   }
 
   // Used by tests
@@ -617,6 +658,27 @@ public class DefinablePlugin extends BasePlugin {
 	}
       }
     }
+  }
+
+  protected void initArchiveFileTypes () {
+    if (definitionMap.containsKey(KEY_PLUGIN_ARCHIVE_FILE_TYPES)) {
+      Object obj = 
+	definitionMap.getMapElement(KEY_PLUGIN_ARCHIVE_FILE_TYPES);
+      if (obj instanceof ArchiveFileTypes) {
+	archiveFileSpec = (ArchiveFileTypes)obj;
+	log.debug2(getPluginName() + ": ArchiveFileTypes: "
+		   + archiveFileSpec.getExtMimeMap());
+      } else if (obj instanceof String) {
+	if ("standard".equalsIgnoreCase((String)obj)) {
+	  archiveFileSpec = ArchiveFileTypes.DEFAULT;
+	  log.debug2(getPluginName() + ": ArchiveFileTypes: STANDARD");
+	}
+      }
+    }
+  }
+
+  public ArchiveFileTypes getArchiveFileTypes() {
+    return archiveFileSpec;
   }
 
   /** Create a CrawlWindow if necessary and return it.  The CrawlWindow

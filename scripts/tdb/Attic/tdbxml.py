@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.20 2011-08-25 23:40:49 thib_gc Exp $
+# $Id: tdbxml.py,v 1.20.6.1 2012-06-20 00:02:55 nchondros Exp $
 #
-# Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -27,7 +27,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '0.3.5'
+__version__ = '0.3.7'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -37,7 +37,7 @@ import tdbparse
 
 class TdbxmlConstants:
     
-    OPTION_NO_PUB_DOWN = 'nopubdown'
+    OPTION_NO_PUB_DOWN = 'no-pub-down'
     OPTION_NO_PUB_DOWN_SHORT = 'd'
     OPTION_NO_PUB_DOWN_HELP = 'do not include pub_down markers'
 
@@ -83,6 +83,8 @@ def __short_au_name(au):
     str = re.sub(r'é|è|ê|ë|ē', 'e', str)
     str = re.sub(r'Í|Ì|Î|Ï|Ī', 'I', str)
     str = re.sub(r'í|ì|î|ï|ī', 'i', str)
+    str = re.sub(r'Ş', 'S', str)
+    str = re.sub(r'ş', 's', str)
     str = re.sub(r'Ž', 'Z', str)
     str = re.sub(r'ž', 'z', str)
     str = re.sub(r'\W+', '', str)
@@ -189,11 +191,17 @@ def __process_au(au, options):
     au_proxy = au.proxy()
     if au_proxy is not None:
         __do_param(au, 98, 'crawl_proxy', value=au_proxy)
-    if not options.nopubdown and au.status() in [AU.Status.DOWN, AU.Status.SUPERSEDED]:
+    if not options.no_pub_down and au.status() in [AU.Status.DOWN, AU.Status.SUPERSEDED, AU.Status.ZAPPED]:
         __do_param(au, 99, 'pub_down', value='true')
     au_attrs = au.attrs()
     for attr in au_attrs:
         __do_attr(au, attr, au_attrs[attr])
+    if au.edition() is not None:
+        __do_attr(au, 'edition', au.edition());
+    if au.eisbn() is not None:
+        __do_attr(au, 'eisbn', au.eisbn());
+    if au.isbn() is not None:
+        __do_attr(au, 'isbn', au.isbn());
     if au.year() is not None:
         __do_attr(au, 'year', au.year())
     if au.volumeName() is not None:
@@ -222,8 +230,8 @@ def __process(tdb, options):
             print '''\
  <property name="org.lockss.titleSet">
 
-  <property name="%(publisher)s">
-   <property name="name" value="All %(publisher)s Titles" />
+  <property name="%(publisher1)s">
+   <property name="name" value="All %(publisher)s AUs" />
    <property name="class" value="xpath" />
    <property name="xpath" value=%(outer)s[attributes/publisher=%(inner)s%(publisher2)s%(inner)s]%(outer)s />
   </property>
@@ -231,7 +239,8 @@ def __process(tdb, options):
  </property>
  
  <property name="org.lockss.title">
-''' % { 'publisher': __escape(current_pub.name().replace('.', '')),
+''' % { 'publisher': __escape(current_pub.name()),
+        'publisher1': __escape(current_pub.name().replace('.', '')),
         'publisher2': re.sub(r'\'', '&apos;', __escape(current_pub.name())),
         'outer': '"' if "'" not in current_pub.name() else "'",
         'inner': "'" if "'" not in current_pub.name() else '"' }

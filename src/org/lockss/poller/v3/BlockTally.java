@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.15 2011-11-15 01:30:34 barry409 Exp $
+ * $Id: BlockTally.java,v 1.15.2.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -34,230 +34,152 @@ package org.lockss.poller.v3;
 
 import java.util.*;
 
-import org.lockss.poller.*;
-import org.lockss.protocol.*;
-import org.lockss.util.*;
-import org.lockss.config.*;
+import org.lockss.hasher.HashBlock;
+import org.lockss.protocol.VoteBlock;
+import org.lockss.util.Logger;
+
 
 /**
  * Representation of the tally for an individual vote block.
  */
-public class BlockTally {
+public class BlockTally<T> implements VoteBlockTallier.VoteBlockTally<T> {
 
-  public static final int RESULT_HASHING = 0;
-  public static final int RESULT_NOQUORUM = 1;
-  public static final int RESULT_TOO_CLOSE = 2;
-  public static final int RESULT_TOO_CLOSE_POLLER_ONLY_BLOCK = 3;
-  public static final int RESULT_TOO_CLOSE_VOTER_ONLY_BLOCK = 4;
-  public static final int RESULT_LOST = 5;
-  public static final int RESULT_LOST_POLLER_ONLY_BLOCK = 6;
-  public static final int RESULT_LOST_VOTER_ONLY_BLOCK = 7;
-  public static final int RESULT_WON = 8;
-  public static final int RESULT_REPAIRED = 9;
+  public enum Result {
+    NOQUORUM("No Quorum"),
+    TOO_CLOSE("Too Close"),
+    LOST("Lost"),
+    LOST_POLLER_ONLY_BLOCK("Lost - Poller-only Block"),
+    LOST_VOTER_ONLY_BLOCK("Lost - Voter-only Block"),
+    WON("Won");
 
-  // List of voters with whom we agree
-  private List agreeVoters = new ArrayList();
-  // List of voters with whom we disagree
-  private List disagreeVoters = new ArrayList();
-  // List of voters who we believe do not have a block that we do.
-  private List pollerOnlyBlockVoters = new ArrayList();
-  // List of voters who we believe have an block that we do not.
-  // This is a map of URLs to peer identities.
-  // JAVA5: Map<String,Set<PeerIdentity>>
-  private Map voterOnlyBlockVoters = new HashMap();
-  /** 
-   * Deprecated in Daemon 1.23.
-   * @deprecated
-   */
-  private LinkedHashMap votes = new LinkedHashMap();
-  // Name of the voterOnly block, if any.
-  private String voterOnlyBlockUrl;
-
-  int result = RESULT_HASHING; // Always hashing when BlockTally is created.
-  int quorum;
-  double voteMargin;
+    final String printString;
+    Result(String printString) {
+      this.printString = printString;
+    }
+  }
 
   private static final Logger log = Logger.getLogger("BlockTally");
 
-  public BlockTally(int quorum) {
-    this.quorum = quorum;
-    this.voteMargin =
-      ((double)CurrentConfig.getIntParam(V3Poller.PARAM_V3_VOTE_MARGIN,
-                                         V3Poller.DEFAULT_V3_VOTE_MARGIN)) / 100;
-  }
+  // package level, for testing, and access by BlockTally.
+  // List of voters with whom the poller agrees.
+  final Collection<T> agreeVoters = new ArrayList<T>();
+  // List of voters with whom the poller disagrees.
+  final Collection<T> disagreeVoters = new ArrayList<T>();
+  // List of voters who do not have a block that the poller does.
+  final Collection<T> pollerOnlyVoters = new ArrayList<T>();
+  // List of voters who have an block that the poller does not.
+  final Collection<T> voterOnlyVoters = new ArrayList<T>();
 
-  // Set back to initial state
-  public void reset() {
-    agreeVoters = new ArrayList();
-    disagreeVoters = new ArrayList();
-    pollerOnlyBlockVoters = new ArrayList();
-    voterOnlyBlockVoters = new HashMap();
-    voterOnlyBlockUrl = null;
-    result = RESULT_HASHING;
+  // Interface methods to springboard to our internal methods.
+  public void voteSpoiled(T id) {}
+  public void voteAgreed(T id) {
+    addAgreeVoter(id);
   }
-  
-  public String getStatusString() {
-    switch (result) {
-    case RESULT_HASHING:
-      return "Hashing";
-    case RESULT_NOQUORUM:
-      return "No Quorum";
-    case RESULT_TOO_CLOSE:
-      return "Too Close";
-    case RESULT_TOO_CLOSE_POLLER_ONLY_BLOCK:
-      return "Too Close - Poller-only Block";
-    case RESULT_TOO_CLOSE_VOTER_ONLY_BLOCK:
-      return "Too Close - Voter-only Block";
-    case RESULT_LOST:
-      return "Lost";
-    case RESULT_LOST_POLLER_ONLY_BLOCK:
-      return "Lost - Poller-only Block";
-    case RESULT_LOST_VOTER_ONLY_BLOCK:
-      return "Lost - Voter-only Block";
-    case RESULT_WON:
-      return "Won";
-    case RESULT_REPAIRED:
-      return "Repaired";
-    default:
-      return "Unknown";
-    }
+  public void voteDisagreed(T id) {
+    addDisagreeVoter(id);
   }
-
-  public void tallyVotes() {
-    int agree = agreeVoters.size();
-    int disagree = disagreeVoters.size();
-    int pollerOnlyBlocks = pollerOnlyBlockVoters.size();
-    int voterOnlyBlocks = getAllVoterOnlyBlockVoters().size();
-
-    if (agree + disagree < quorum) {
-      result = RESULT_NOQUORUM;
-    } else if (!isWithinMargin()) { 
-      result = RESULT_TOO_CLOSE;
-    } else if (pollerOnlyBlocks >= quorum) {
-      result = RESULT_LOST_POLLER_ONLY_BLOCK;
-    } else if (voterOnlyBlocks >= quorum) {
-      // Attempt to find the name of the missing block, if possible.
-      String voterOnlyUrl = null;
-      int maxVoterOnlyUrlCount = 0;
-      for (Iterator iter = voterOnlyBlockVoters.keySet().iterator(); iter.hasNext(); ) {
-        String url = (String)iter.next();
-        Set s = (Set)voterOnlyBlockVoters.get(url);
-        if (s.size() > maxVoterOnlyUrlCount) {
-          maxVoterOnlyUrlCount = s.size();
-          voterOnlyUrl = url;
-        }
-      }
-      if (maxVoterOnlyUrlCount >= quorum) {
-        log.debug("Found agreement on missing URL name: " + voterOnlyUrl);
-        result = RESULT_LOST_VOTER_ONLY_BLOCK;
-        this.voterOnlyBlockUrl = voterOnlyUrl;
-      } else {
-        log.debug("Could not reach agreement on missing URL name: " + voterOnlyBlockVoters);
-        result = RESULT_TOO_CLOSE_VOTER_ONLY_BLOCK;
-      }
-    } else if (agree > disagree) {
-      result = RESULT_WON;
-    } else {
-      result = RESULT_LOST;
-    }
+  public void votePollerOnly(T id) {
+    addPollerOnlyVoter(id);
   }
-
-  public int getTallyResult() {
-    return result;
+  public void voteVoterOnly(T id) {
+    addVoterOnlyVoter(id);
   }
-
-  public void addDisagreeVoter(PeerIdentity id) {
-    disagreeVoters.add(id);
-  }
-
-  public List getDisagreeVoters() {
-    return disagreeVoters;
-  }
-
-  public void addAgreeVoter(PeerIdentity id) {
-    agreeVoters.add(id);
-  }
-
-  public List getAgreeVoters() {
-    return agreeVoters;
-  }
-
-  public void addPollerOnlyBlockVoter(PeerIdentity id) {
-    pollerOnlyBlockVoters.add(id);
-    disagreeVoters.add(id);
-  }
-
-  public Collection getPollerOnlyBlockVoters() {
-    return pollerOnlyBlockVoters;
+  public void voteNeither(T id) {
+    // todo(bhayes): This is questionable.
+    addAgreeVoter(id);
   }
 
   /**
-   * Return the name of the missing block, if any.
+   * @return a String representing the votes by category, separated by "/":
+   * agree/disagree/pollerOnly/voterOnly
    */
-  public String getVoterOnlyBlockUrl() {
-    return voterOnlyBlockUrl;
+  String votes() {
+    return agreeVoters.size() + "/" + disagreeVoters.size() + "/" +
+      pollerOnlyVoters.size() + "/" + voterOnlyVoters.size();
   }
 
-  public void addVoterOnlyBlockVoter(PeerIdentity id, String url) {
-    Set voters;
-    if ((voters = (Set)voterOnlyBlockVoters.get(url)) == null) {
-      voters = new HashSet();
-      voterOnlyBlockVoters.put(url, voters);
+  /**
+   * @return the result of the tally.
+   */
+  BlockTally.Result getTallyResult(int quorum, int voteMargin) {
+    BlockTally.Result result;
+    int agree = agreeVoters.size();
+    int disagree = disagreeVoters.size();
+    int pollerOnly = pollerOnlyVoters.size();
+    int voterOnly = voterOnlyVoters.size();
+
+    if (numVotes() < quorum) {
+      result = BlockTally.Result.NOQUORUM;
+    } else if (!isWithinMargin(voteMargin)) { 
+      result = BlockTally.Result.TOO_CLOSE;
+    } else if (pollerOnly >= quorum) {
+      result = BlockTally.Result.LOST_POLLER_ONLY_BLOCK;
+    } else if (voterOnly >= quorum) {
+      result = BlockTally.Result.LOST_VOTER_ONLY_BLOCK;
+    } else if (agree > disagree) {
+      result = BlockTally.Result.WON;
+    } else {
+      result = BlockTally.Result.LOST;
     }
-    voters.add(id);
-    disagreeVoters.add(id);
+    return result;
   }
 
-  private Collection getAllVoterOnlyBlockVoters() {
-    Set voters = new HashSet();
-    for (Iterator iter = voterOnlyBlockVoters.values().iterator(); iter.hasNext(); ) {
-      Set s = (Set)iter.next();
-      voters.addAll(s);
-    }
-    return voters;
+  public Collection<T> getAgreeVoters() {
+    return Collections.unmodifiableCollection(agreeVoters);
   }
 
-  boolean isWithinMargin() {
+  public Collection<T> getDisagreeVoters() {
+    return Collections.unmodifiableCollection(disagreeVoters);
+  }
+
+  public Collection<T> getPollerOnlyBlockVoters() {
+    return Collections.unmodifiableCollection(pollerOnlyVoters);
+  }
+
+  public Collection<T> getVoterOnlyBlockVoters() {
+    return Collections.unmodifiableCollection(voterOnlyVoters);
+  }
+
+  private int numVotes() {
+    return agreeVoters.size() + disagreeVoters.size();
+  }
+
+  /**
+   * @return if the result is a landslide.
+   */
+  boolean isWithinMargin(int voteMargin) {
     int numAgree = agreeVoters.size();
     int numDisagree = disagreeVoters.size();
-    double num_votes = numAgree + numDisagree;
-    double req_margin = voteMargin;
-    double act_margin;
+    double numVotes = numVotes();
+    double actualMargin;
 
     if (numAgree > numDisagree) {
-      act_margin = (double) numAgree / num_votes;
+      actualMargin = (double) numAgree / numVotes;
     } else {
-      act_margin = (double) numDisagree / num_votes;
+      actualMargin = (double) numDisagree / numVotes;
     }
 
-    if (act_margin < req_margin) {
+    if (actualMargin * 100 < voteMargin) {
       return false;
     }
     return true;
   }
-  
-  /**
-   * Return a set of all peers that claim to have the specified URL.
-   * @param url
-   * @return a set of all peers that claim to have the specified URL.
-   */
-  public Collection getVoterOnlyBlockVoters(String url) {
-    return (Set)voterOnlyBlockVoters.get(url);
+
+  void addAgreeVoter(T id) {
+    agreeVoters.add(id);
   }
 
-  /**
-   * Deprecated in Daemon 1.23. 
-   * @deprecated
-   */
-  public void addVoteForBlock(PeerIdentity id, VoteBlock vb) {
-    throw new UnsupportedOperationException("No longer implemented.");
+  void addDisagreeVoter(T id) {
+    disagreeVoters.add(id);
   }
 
-  /**
-   * Deprecated in Daemon 1.23. 
-   * @deprecated
-   */
-  public LinkedHashMap getVotesForBlock() {
-    throw new UnsupportedOperationException("No longer implemented.");
+  void addPollerOnlyVoter(T id) {
+    disagreeVoters.add(id);
+    pollerOnlyVoters.add(id);
+  }
+
+  void addVoterOnlyVoter(T id) {
+    disagreeVoters.add(id);
+    voterOnlyVoters.add(id);
   }
 }

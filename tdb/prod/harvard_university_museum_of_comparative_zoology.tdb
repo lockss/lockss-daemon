@@ -12,20 +12,37 @@
       issnl = 0006-9698
     >
 
-    {
-      implicit < status ; year ; name ; param[volume] >
-      plugin = org.lockss.plugin.bioone.BioOnePlugin
+  {
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_id] = 0006-9698
-  
-      au < doNotProcess ; 2004 ; Breviora Volume 512 ; 512 >
-    }
+      param[journal_id] = brvo
+      
+      au < manifest ; 2004 ; Breviora Volume 512 ; 512 >
+      au < manifest ; 2008 ; Breviora Volume 513 ; 513 > 
+      au < manifest ; 2008 ; Breviora Volume 514 ; 514 >
+      au < manifest ; 2009 ; Breviora Volume 515 ; 515 >
+      au < manifest ; 2009 ; Breviora Volume 516 ; 516 >
+      au < manifest ; 2009 ; Breviora Volume 517 ; 517 >
+      au < manifest ; 2009 ; Breviora Volume 518 ; 518 >
+      au < manifest ; 2010 ; Breviora Volume 519 ; 519 >
+      au < manifest ; 2010 ; Breviora Volume 520 ; 520 >     
+      au < manifest ; 2011 ; Breviora Volume 521 ; 521 >
+      au < manifest ; 2011 ; Breviora Volume 522 ; 522 >
+      au < manifest ; 2011 ; Breviora Volume 523 ; 523 >
+      au < manifest ; 2011 ; Breviora Volume 524 ; 524 >
+      au < manifest ; 2011 ; Breviora Volume 525 ; 525 >
+      au < manifest ; 2011 ; Breviora Volume 526 ; 526 >
+      au < manifest ; 2011 ; Breviora Volume 527 ; 527 >
+      au < manifest ; 2011 ; Breviora Volume 528 ; 528 >
+      au < manifest ; 2012 ; Breviora Volume 529 ; 529 >
+      
+      }
 
   }
   
   {
-
-    title <
+     title <
       name = Bulletin of the Museum of Comparative Zoology ;
       issn = 0027-4100 ;
       eissn = 1938-2987 ;
@@ -33,18 +50,15 @@
     >
 
     {
-      implicit < status ; year ; name ; param[volume] >
-      plugin = org.lockss.plugin.bioone.BioOnePlugin
+
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_id] = 0027-4100
-  
-      au < doNotProcess ; 2003-2007 ; Bulletin of the Museum of Comparative Zoology Volume 158 ; 158 >
-      au < doNotProcess ; 2007-2009 ; Bulletin of the Museum of Comparative Zoology Volume 159 ; 159 >
-    }
-
-    {
-
-comment[0] = Atypon AUs
+      param[journal_id] = harv
+      
+      au < manifest ; 2003-2007 ; Bulletin of the Museum of Comparative Zoology Volume 158 ; 158 >
+      au < manifest ; 2007-2009 ; Bulletin of the Museum of Comparative Zoology Volume 159 ; 159 > 
+      au < manifest ; 2010-2011 ; Bulletin of the Museum of Comparative Zoology Volume 160 ; 160 >
 
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.15 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.15.2.1 2012-06-20 00:02:56 nchondros Exp $
  */
 
 /*
@@ -140,7 +140,7 @@ public class KbartTdbAuUtil {
   static String findIssn(TdbAu au) {
     String s = au.getPrintIssn();
     if (!StringUtils.isEmpty(s)) {
-      if (MetadataUtil.isISSN(s)) {
+      if (MetadataUtil.isIssn(s)) {
         return s;
       }
       log.warning(String.format("AU %s yielded an invalid non-empty ISSN: %s", au, s));
@@ -162,7 +162,7 @@ public class KbartTdbAuUtil {
   static String findEissn(TdbAu au) {
     String s = au.getEissn();
     if (!StringUtils.isEmpty(s)) {
-      if (MetadataUtil.isISSN(s)) {
+      if (MetadataUtil.isIssn(s)) {
         return s;
       }
       log.warning(String.format("AU %s yielded an invalid non-empty eISSN: %s", au, s));
@@ -185,7 +185,7 @@ public class KbartTdbAuUtil {
   static String findIssnL(TdbAu au) {
     String s = au.getIssnL();
     if (!StringUtils.isEmpty(s)) {
-      if (MetadataUtil.isISSN(s)) {
+      if (MetadataUtil.isIssn(s)) {
         return s;
       }
       log.warning(String.format("AU %s yielded an invalid non-empty ISSNL: %s", au, s));

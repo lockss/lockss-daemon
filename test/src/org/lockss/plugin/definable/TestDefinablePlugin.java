@@ -1,10 +1,10 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.42 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.42.4.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -317,9 +317,15 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertIsomorphic(ListUtil.list("\"%s\", base_url"),
 		     map.getCollection("au_start_url"));
     assertEquals(6000, map.getLong("au_def_pause_time"));
+    assertFalse(map.containsKey("parent_only"));
+    assertEquals("child_val", map.getString("parent_cancel"));
+
+    ArchiveFileTypes aft = definablePlugin.getArchiveFileTypes();
+    assertSame(aft,ArchiveFileTypes.DEFAULT);
+    assertEquals("val_17", map.getString("child_cancel"));
   }
 
-  public void testGoodPluginWithOverrise() throws Exception {
+  public void testGoodPluginWithOverride() throws Exception {
     ConfigurationUtil.addFromArgs("org.lockss.daemon.testingMode",
 				  "content-testing");
     String prefix = "org.lockss.plugin.definable.";
@@ -340,6 +346,7 @@ public class TestDefinablePlugin extends LockssTestCase {
 		     map.getCollection("au_start_url"));
     assertEquals(3000, map.getLong("au_def_pause_time"));
     assertEquals("pval", map.getString("parent_only"));
+    assertNull(map.getMapElement("parent_cancel"));
   }
 
   public void testInherit() throws Exception {
@@ -364,7 +371,9 @@ public class TestDefinablePlugin extends LockssTestCase {
 		     map.getCollection("au_start_url"));
     assertEquals(6000, map.getLong("au_def_pause_time"));
     assertFalse(map.containsKey("parent_only"));
+    assertEquals("child_val", map.getString("parent_cancel"));
     assertEquals("bar", map.getString("foo"));
+    assertFalse(map.containsKey("child_cancel"));
   }
 
   public void testInheritWithOverride() throws Exception {
@@ -391,6 +400,7 @@ public class TestDefinablePlugin extends LockssTestCase {
 		     map.getCollection("au_start_url"));
     assertEquals(3000, map.getLong("au_def_pause_time"));
     assertEquals("pval", map.getString("parent_only"));
+    assertFalse(map.containsKey("parent_cancel"));
     assertEquals("barprime", map.getString("foo"));
   }
 

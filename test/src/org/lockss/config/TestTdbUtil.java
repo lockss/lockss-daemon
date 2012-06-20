@@ -43,12 +43,8 @@ public class TestTdbUtil extends LockssTestCase {
 
     // Every operation using the Tdb uses TdbUtil.getTdb() to get the CurrentConfig's Tdb,
     // so we need to set that up.
-    
-    // Create a new ConfigManager and set the curent configuration
-    ConfigManager mgr = ConfigManager.makeConfigManager();
-    mgr.setCurrentConfig(ConfigManager.newConfiguration());
-    // Create a test tdb and set it in the current config
-    ConfigManager.getCurrentConfig().setTdb(TdbTestUtil.makeTestTdb());
+    TdbTestUtil.setUpConfig();
+
     // (test tdb has a publisher, a title and 2 TdbAus)
     configuredAus = TdbUtil.getConfiguredAus();
     preservedAus = TdbUtil.getPreservedAus();
@@ -58,13 +54,13 @@ public class TestTdbUtil extends LockssTestCase {
     defaultTitles = TdbUtil.getTdbTitles(null);
     allTitles = TdbUtil.getTdbTitles(ContentScope.ALL);
     configuredTitles = TdbUtil.getTdbTitles(ContentScope.CONFIGURED);
-    preservedTitles = TdbUtil.getTdbTitles(ContentScope.PRESERVED);
+    preservedTitles = TdbUtil.getTdbTitles(ContentScope.COLLECTED);
     
     numNull = TdbUtil.getNumberTdbTitles(null);
     numDefault = TdbUtil.getNumberTdbTitles(ContentScope.DEFAULT_SCOPE);
     numAll = TdbUtil.getNumberTdbTitles(ContentScope.ALL);
     numConfigured = TdbUtil.getNumberTdbTitles(ContentScope.CONFIGURED);
-    numPreserved = TdbUtil.getNumberTdbTitles(ContentScope.PRESERVED);
+    numPreserved = TdbUtil.getNumberTdbTitles(ContentScope.COLLECTED);
   }
 
   protected void tearDown() throws Exception {

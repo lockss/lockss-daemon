@@ -1,10 +1,10 @@
 /*
- * $Id: RepairCrawler.java,v 1.71 2011-09-25 04:20:40 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.71.4.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -162,16 +162,12 @@ public class RepairCrawler extends BaseCrawler {
 
   }
 
-  public String getTypeString() {
-    return "Repair";
-  }
-
   public boolean isWholeAU() {
     return false;
   }
 
-  public int getType() {
-    return Crawler.REPAIR;
+  public Crawler.Type getType() {
+    return Crawler.Type.REPAIR;
   }
 
   protected Iterator getStartingUrls() {
@@ -422,7 +418,6 @@ public class RepairCrawler extends BaseCrawler {
   }
 
   private int cache(UrlCacher uc, String id) throws IOException {
-    pauseBeforeFetch(uc);
     InputStream input = uc.getUncachedInputStream();
     try {
       CIProperties headers = uc.getUncachedProperties();
@@ -464,7 +459,6 @@ public class RepairCrawler extends BaseCrawler {
     if (proxyHost != null) {
       uc.setProxy(proxyHost, proxyPort);
     }
-    pauseBeforeFetch(uc);
     updateCacheStats(uc.cache(), uc);
     crawlStatus.addSource("Publisher");
   }

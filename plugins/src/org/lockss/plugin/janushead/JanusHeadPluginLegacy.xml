@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -41,6 +41,15 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%sarchives.cfm&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>&quot;%s&quot;, base_url</string>
+    </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_config_props</string>

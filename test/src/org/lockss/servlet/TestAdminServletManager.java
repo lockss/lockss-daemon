@@ -1,5 +1,5 @@
 /*
- * $Id: TestAdminServletManager.java,v 1.6 2011-01-06 18:32:53 neilmayo Exp $
+ * $Id: TestAdminServletManager.java,v 1.6.12.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
@@ -54,12 +54,8 @@ public class TestAdminServletManager extends LockssTestCase {
     SERVLET_HOME,
     SERVLET_PROXY_INFO,
     SERVLET_DAEMON_STATUS,
-    SERVLET_DISPLAY_CONTENT,
-    SERVLET_SERVE_CONTENT,
     SERVLET_LIST_OBJECTS,
-    SERVLET_HASH_CUS,
     SERVLET_LIST_HOLDINGS,   
-    LINK_LOGS,
     SERVLET_THREAD_DUMP,
     LINK_CONTACT,
     LINK_HELP,
@@ -86,8 +82,15 @@ public class TestAdminServletManager extends LockssTestCase {
   ServletDescr contentAdminDescrs[] = {
     SERVLET_PROXY_ACCESS_CONTROL,
     SERVLET_PROXY_AND_CONTENT,
+  };
+
+  ServletDescr contentAccessDescrs[] = {
+    SERVLET_SERVE_CONTENT,
     SERVLET_EXPORT_CONTENT,
+    SERVLET_DISPLAY_CONTENT,
+    SERVLET_HASH_CUS,
     LINK_EXPORTS,
+    LINK_LOGS,
   };
 
   ServletDescr debugDescrs[] = {
@@ -105,6 +108,7 @@ public class TestAdminServletManager extends LockssTestCase {
     Set<ServletDescr> userAdminOnly = new HashSet<ServletDescr>();
     Set<ServletDescr> auAdminOnly = new HashSet<ServletDescr>();
     Set<ServletDescr> contentAdminOnly = new HashSet<ServletDescr>();
+    Set<ServletDescr> contentAccessOnly = new HashSet<ServletDescr>();
     Set<ServletDescr> readOnly = new HashSet<ServletDescr>();
     Set<ServletDescr> debugOnly = new HashSet<ServletDescr>();
     for (ServletDescr descr : mgr.getServletDescrs()) {
@@ -117,12 +121,16 @@ public class TestAdminServletManager extends LockssTestCase {
       if (descr.needsContentAdminRole()) {
 	contentAdminOnly.add(descr);
       }
+      if (descr.needsContentAccessRole()) {
+	contentAccessOnly.add(descr);
+      }
       if (descr.needsDebugRole()) {
 	debugOnly.add(descr);
       }
       if (!descr.needsUserAdminRole()
 	  && !descr.needsAuAdminRole()
-	  && !descr.needsContentAdminRole()) {
+	  && !descr.needsContentAdminRole()
+	  && !descr.needsContentAccessRole()) {
 	readOnly.add(descr);
       }
 
@@ -130,6 +138,7 @@ public class TestAdminServletManager extends LockssTestCase {
     assertEquals(SetUtil.fromArray(userAdminDescrs), userAdminOnly);
     assertEquals(SetUtil.fromArray(auAdminDescrs), auAdminOnly);
     assertEquals(SetUtil.fromArray(contentAdminDescrs), contentAdminOnly);
+    assertEquals(SetUtil.fromArray(contentAccessDescrs), contentAccessOnly);
     assertEquals(SetUtil.fromArray(debugDescrs), debugOnly);
     assertEquals(SetUtil.fromArray(readOnlyDescrs), readOnly);
   }

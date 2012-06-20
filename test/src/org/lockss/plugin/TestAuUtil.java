@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.16 2011-06-20 07:00:06 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.16.8.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -81,6 +81,16 @@ public class TestAuUtil extends LockssTestCase {
   public void testGetDaemon()  {
     LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
     assertSame(getMockLockssDaemon(), AuUtil.getDaemon(mau));
+  }
+
+  public void testThreadName() throws IOException {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    mau.setName("Artichokes Volume Six");
+    assertEquals("Crawl: Artichokes Volume Six",
+		 AuUtil.getThreadNameFor("Crawl", mau));
+    mau.setName("Fran\u00E7ais Volume Six");
+    assertEquals("Crawl: Francais Volume Six",
+		 AuUtil.getThreadNameFor("Crawl", mau));
   }
 
   public void testGetPollVersion() throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedWarcContentGenerator.java,v 1.1 2011-05-09 02:34:01 tlipkis Exp $
+ * $Id: SimulatedWarcContentGenerator.java,v 1.1.10.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -40,6 +40,8 @@ import java.text.*;
 import org.archive.io.*;
 import org.archive.io.arc.*;
 import org.archive.io.warc.*;
+import org.archive.uid.RecordIDGenerator;
+import org.archive.uid.UUIDGenerator;
 import org.archive.util.anvl.*;
 import org.archive.util.ArchiveUtils;
 import org.lockss.util.*;
@@ -198,7 +200,16 @@ public class SimulatedWarcContentGenerator extends SimulatedContentGenerator {
     dirs.add(new File(contentRoot));
     List warcinfoData = new ArrayList();
     warcinfoData.add("");
-    ret = new WARCWriter(serialNo, dirs, warcFilePrefix, null, compressWarc, maxSize, warcinfoData);
+
+    String template = "${prefix}-${timestamp17}-${serialno}";
+    RecordIDGenerator generator = new UUIDGenerator();
+
+    WARCWriterPoolSettingsData settings = new WARCWriterPoolSettingsData(
+	warcFilePrefix, template, maxSize, compressWarc, dirs, warcinfoData,
+	generator);
+
+    ret = new WARCWriter(serialNo, settings);
+
     return ret;
   }
 

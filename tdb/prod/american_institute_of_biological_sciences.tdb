@@ -24,14 +24,31 @@
       au < doNotProcess ; 2003 ; BioScience Volume 53 ; 53 >
       au < doNotProcess ; 2004 ; BioScience Volume 54 ; 54 >
       au < doNotProcess ; 2005 ; BioScience Volume 55 ; 55 >
-      au < superseded ; 2005 ; BioScience Volume 55 ; 055 >
+      au < down ; 2005 ; BioScience Volume 55 ; 055 >
       au < doNotProcess ; 2006 ; BioScience Volume 56 ; 56 >
       au < doNotProcess ; 2007 ; BioScience Volume 57 ; 57 >
     }
 
     {
 
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = bisi
+
+      au < doNotProcess ; 2000 ; BioScience Volume 50 ; 50 >
+      au < doNotProcess ; 2001 ; BioScience Volume 51 ; 51 >
+      au < doNotProcess ; 2002 ; BioScience Volume 52 ; 52 >
+      au < doNotProcess ; 2003 ; BioScience Volume 53 ; 53 >
+      au < doNotProcess ; 2004 ; BioScience Volume 54 ; 54 >
+      au < doNotProcess ; 2005 ; BioScience Volume 55 ; 55 >
+      au < doNotProcess ; 2006 ; BioScience Volume 56 ; 56 >
+      au < doNotProcess ; 2007 ; BioScience Volume 57 ; 57 >
+      au < ready ; 2008 ; BioScience Volume 58 ; 58 >
+      au < ready ; 2009 ; BioScience Volume 59 ; 59 >
+      au < ready ; 2010 ; BioScience Volume 60 ; 60 >
+      au < ready ; 2011 ; BioScience Volume 61 ; 61 >
+      au < ready ; 2012 ; BioScience Volume 62 ; 62 >
 
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.14 2008-05-19 07:42:11 tlipkis Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.14.50.1 2012-06-20 00:03:10 nchondros Exp $
  */
 
 /*
@@ -213,6 +213,34 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
       "http://www.example.com/testDir/branch1",
       "http://www.example.com/testDir/branch1/leaf1",
       "http://www.example.com/testDir/branch1/leaf2"
+      };
+    assertIsomorphic(expectedA, childL);
+  }
+
+  public void testHashIteratorPruned() throws Exception {
+    createLeaf("http://www.example.com/testDir/branch1/leaf2",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf4", "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch2/leaf3",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf1",
+               "test stream", null);
+
+    CachedUrlSetSpec rSpec =
+      PrunedCachedUrlSetSpec.includeMatchingSubTrees("http://www.example.com/testDir",
+						     "http://www.example.com/testDir/branch1");
+    CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
+    Iterator setIt = fileSet.contentHashIterator();
+    ArrayList childL = new ArrayList(7);
+    while (setIt.hasNext()) {
+      childL.add(((CachedUrlSetNode)setIt.next()).getUrl());
+    }
+    // should be sorted
+    String[] expectedA = new String[] {
+      "http://www.example.com/testDir",
+      "http://www.example.com/testDir/branch1",
+      "http://www.example.com/testDir/branch1/leaf1",
+      "http://www.example.com/testDir/branch1/leaf2",
       };
     assertIsomorphic(expectedA, childL);
   }

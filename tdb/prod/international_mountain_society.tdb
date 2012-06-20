@@ -18,20 +18,33 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0276-4741
   
-      au < doNotProcess ; 2000 ; Mountain Research and Development Volume 20 ; 20 >
-      au < doNotProcess ; 2001 ; Mountain Research and Development Volume 21 ; 21 >
-      au < doNotProcess ; 2002 ; Mountain Research and Development Volume 22 ; 22 >
-      au < doNotProcess ; 2003 ; Mountain Research and Development Volume 23 ; 23 >
-      au < superseded ; 2004 ; Mountain Research and Development Volume 24 ; 24 >
-      au < doNotProcess ; 2005 ; Mountain Research and Development Volume 25 ; 25 >
-      au < doNotProcess ; 2006 ; Mountain Research and Development Volume 26 ; 26 >
-      au < doNotProcess ; 2007 ; Mountain Research and Development Volume 27 ; 27 >
+      comment[AUs048] = 024 was tested and released normally, accidentally deleted and reinstated.
+      comment[AUs48] = 24 was accidentally created on 6/28/2011.
+
+      au < down ; 2004 ; Mountain Research and Development Volume 024 ; 024 >
+      au < down ; 2004 ; Mountain Research and Development Volume 24 ; 24 >
+      
     }
 
     {
-
-	comment[0] = Atypon AUs
-
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = mred
+  
+      au < testing ; 2000 ; Mountain Research and Development Volume 20 ; 20 >
+      au < testing ; 2001 ; Mountain Research and Development Volume 21 ; 21 >
+      au < testing ; 2002 ; Mountain Research and Development Volume 22 ; 22 >
+      au < testing ; 2003 ; Mountain Research and Development Volume 23 ; 23 >
+      au < doNotProcess ; 2004 ; Mountain Research and Development Volume 24 ; 24 >
+      au < testing ; 2005 ; Mountain Research and Development Volume 25 ; 25 >
+      au < testing ; 2006 ; Mountain Research and Development Volume 26 ; 26 >
+      au < testing ; 2007 ; Mountain Research and Development Volume 27 ; 27 >
+      au < testing ; 2008 ; Mountain Research and Development Volume 28 ; 28 >
+      au < testing ; 2009 ; Mountain Research and Development Volume 29 ; 29 >
+      au < testing ; 2010 ; Mountain Research and Development Volume 30 ; 30 >
+      au < testing ; 2011 ; Mountain Research and Development Volume 31 ; 31 >
+      au < testing ; 2012 ; Mountain Research and Development Volume 32 ; 32 >
     }
 
   }

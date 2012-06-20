@@ -1,5 +1,5 @@
 /*
- * $Id: TestElsevierMetadataExtractor.java,v 1.4 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: TestElsevierMetadataExtractor.java,v 1.4.12.1 2012-06-20 00:03:05 nchondros Exp $
  */
 
 /*
@@ -136,7 +136,7 @@ public class TestElsevierMetadataExtractor extends LockssTestCase {
       assertNotNull(md);
       String doi = md.get(MetadataField.FIELD_DOI);
       log.debug(fcu.getUrl() + " doi " + doi);
-      assertTrue(MetadataUtil.isDOI(doi));
+      assertTrue(MetadataUtil.isDoi(doi));
       foundDoiSet.add(doi);
     }
     log.debug("Article count is " + count);

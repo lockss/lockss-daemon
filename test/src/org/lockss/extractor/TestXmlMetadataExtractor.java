@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlMetadataExtractor.java,v 1.2 2011-06-14 09:30:12 tlipkis Exp $
+ * $Id: TestXmlMetadataExtractor.java,v 1.2.8.1 2012-06-20 00:03:06 nchondros Exp $
  */
 
 /*
@@ -34,6 +34,11 @@ package org.lockss.extractor;
 
 import java.io.*;
 import java.util.*;
+
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
 import junit.framework.*;
 
 import org.lockss.test.*;
@@ -99,10 +104,69 @@ public abstract class TestXmlMetadataExtractor
     }
   }
 
+  /** 
+   * This test class transforms the old-style raw tags into XPath equivalents
+   * that locate a node anywhere in the DOM tree.
+   * 
+   * @author phil
+   */
+  public static class MyXmlMetadataExtractor extends XmlDomMetadataExtractor {
+    public MyXmlMetadataExtractor(Collection<String> keys) 
+        throws XPathExpressionException {
+      super(keys.size());
+      
+      int i = 0;
+      XPath xpath = XPathFactory.newInstance().newXPath();
+      for (String key : keys) {
+        xpathKeys[i] = key;
+        xpathExprs[i] = xpath.compile("//" + key);
+        nodeValues[i] = TEXT_VALUE;
+        i++;
+      }
+    }
+  }
+  
+  // Variant to test XmlMetadataExtractor which uses XPath expressions
+  public static class TestXPath extends TestXmlMetadataExtractor {
+    public FileMetadataExtractorFactory getFactory() {
+      return new FileMetadataExtractorFactory() {
+        public FileMetadataExtractor
+          createFileMetadataExtractor(MetadataTarget target, String mimeType)
+          throws PluginException {
+          try {
+            return new MyXmlMetadataExtractor(Arrays.asList(TEST_TAGS));
+          } catch (XPathExpressionException ex) {
+            PluginException ex2 = 
+                new PluginException("Error parsing XPath expressions");
+            ex2.initCause(ex);
+            throw ex2;
+          }
+        }
+      };
+    }
+
+    public void testNestedTag() throws Exception {
+      String text =
+        "<root>" +
+        "<FirstTag>FirstValue</FirstTag>" +
+        "<SecondTag>SecondValue" +
+        "<ThirdTag>ThirdValue</ThirdTag>" +
+        "MoreValueSecond</SecondTag>" +
+        "</root>";
+      // The XML Document parser resolves this differently
+      assertRawEquals(ListUtil.list("FirstTag", "FirstValue",
+          "SecondTag", "SecondValueThirdValueMoreValueSecond",
+          "ThirdTag", "ThirdValue"),
+         
+        extractFrom(text));
+    }
+  }
+  
   public static Test suite() {
     return variantSuites(new Class[] {
 	TestSax.class,
-	TestSimple.class
+	TestSimple.class,
+	TestXPath.class
       });
   }
 
@@ -139,8 +203,8 @@ public abstract class TestXmlMetadataExtractor
   }
 
   public void testSingleTagIgnoreCase() throws Exception {
-    assertRawEquals("fIRSTtAG", "FirstValue",
-		    extractFrom("<fIRSTtAG>FirstValue</fIRSTtAG>"));
+    assertRawEquals("FirstTag", "FirstValue",
+		    extractFrom("<FirstTag>FirstValue</FirstTag>"));
   }
 
   public void testMultipleTag() throws Exception {
@@ -152,12 +216,12 @@ public abstract class TestXmlMetadataExtractor
       "<FourthTag>FourthValue</FourthTag>" +
       "<FifthTag>FifthValue</FifthTag>" +
       "</root>";
-    assertRawEquals(ListUtil.list("firsttag", "FirstValue",
-				  "secondtag", "SecondValue",
-				  "thirdtag", "ThirdValue",
-				  "fourthtag", "FourthValue",
-				  "fifthtag", "FifthValue"),
-		    extractFrom(text));
+    assertRawEquals(ListUtil.list("FirstTag", "FirstValue",
+          "SecondTag", "SecondValue",
+          "ThirdTag", "ThirdValue",
+          "FourthTag", "FourthValue",
+          "FifthTag", "FifthValue"),
+        extractFrom(text));
   }
 
   public void testMultipleTagWithNoise() throws Exception {
@@ -202,7 +266,6 @@ public abstract class TestXmlMetadataExtractor
 
 
   static final String[] TEST_TAGS = {
-    "FirstTag",
     "FirstTag",
     "SecondTag",
     "ThirdTag",

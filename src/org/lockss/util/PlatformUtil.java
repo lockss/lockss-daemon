@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.19 2011-09-07 03:05:43 tlipkis Exp $
+ * $Id: PlatformUtil.java,v 1.19.4.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
+import java.lang.management.ManagementFactory;
 import java.net.*;
 import java.text.*;
 import java.util.*;
@@ -593,25 +594,56 @@ public class PlatformUtil {
   public static class MacOS extends PlatformUtil {
     public String dfArgs = "-k";
 
-	/**
-	 * Determines whether file system is case-sensitive for operations that
-	 * depend on case sensitivity
-	 * @return <code>true</code> if the file system is case-sensitive
-	 */
-	public boolean isCaseSensitiveFileSystem() {
-		return false; // MacOS FS is not case sensitive
-	}
+    /**
+     * Determines whether file system is case-sensitive for operations that
+     * depend on case sensitivity
+     * @return <code>true</code> if the file system is case-sensitive
+     */
+    public boolean isCaseSensitiveFileSystem() {
+      return false; // MacOS FS is not case sensitive
+    }
     public DF getDF(String path) throws UnsupportedException {
       return (super.getDF(path, dfArgs));
     }
 
     public int getPid() throws UnsupportedException {
-      throw new UnsupportedException("Don't know how to get PID on MacOS");
+      // see http://stackoverflow.com/questions/35842/process-id-in-java
+      String pidprop = System.getProperty("pid");
+      if (!StringUtil.isNullString(pidprop)) {
+        try {
+          int pid = Integer.parseInt(pidprop);
+          return pid;
+        } catch (NumberFormatException ex) {
+          System.setProperty("pid", "");
+          // shouldn't happen, so fall through and reset it
+        }
+      }
+
+      // Note: may fail in some JVM implementations
+      // therefore fallback has to be provided
+
+      // something like '<pid>@<hostname>', at least in SUN / Oracle JVMs
+      final String jvmName = ManagementFactory.getRuntimeMXBean().getName();
+      final int index = jvmName.indexOf('@');
+
+      if (index < 1) {
+          // part before '@' empty (index = 0) / '@' not found (index = -1)
+        throw new UnsupportedException("Don't know how to get PID on MacOS");
+      }
+
+      try {
+          pidprop = jvmName.substring(0, index);
+          int pid = Integer.parseInt(pidprop);
+          System.setProperty("pid", pidprop);
+          return pid;
+      } catch (NumberFormatException e) {
+        throw new UnsupportedException("Don't know how to get PID on MacOS");
+      }
     }
 
     /** Get PID of main java process */
     public int getMainPid() throws UnsupportedException {
-      throw new UnsupportedException("Don't know how to get PID on MacOS");
+      return getPid();
     }
     
     public Vector getProcStats(String pid) throws UnsupportedException {

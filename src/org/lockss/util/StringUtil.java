@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.106 2011-11-15 00:58:19 barry409 Exp $
+ * $Id: StringUtil.java,v 1.106.2.1 2012-06-20 00:02:57 nchondros Exp $
  */
 
 /*
@@ -48,6 +48,39 @@ public class StringUtil {
 
   static Logger log = Logger.getLogger("StringUtil");
 
+  /**
+   * Find the longest common prefix of a pair of strings. Case sensitive.
+   * @param s1 a string
+   * @param s2 another string
+   * @return the longest common prefix, which may be the emopty string
+   */
+  public static String commonPrefix(String s1, String s2) {
+    char[] c1 = s1.toCharArray();
+    char[] c2 = s2.toCharArray();
+    StringBuilder sb = new StringBuilder();
+    for (int i=0; i<Math.min(c1.length, c2.length); i++) {
+      if (c1[i]==c2[i]) sb.append(c1[i]);
+      else break;
+    }
+    return sb.toString();
+  }
+
+  /**
+   * Find the longest common suffix of a pair of strings. Case sensitive.
+   * @param s1 a string
+   * @param s2 another string
+   * @return the longest common suffix, which may be the emopty string
+   */
+  public static String commonSuffix(String s1, String s2) {
+    char[] c1 = s1.toCharArray();
+    char[] c2 = s2.toCharArray();
+    StringBuilder sb = new StringBuilder();
+    for (int i=1; i<=Math.min(c1.length, c2.length); i++) {
+      if (c1[c1.length-i]==c2[c2.length-i]) sb.append(c1[c1.length-i]);
+      else break;
+    }
+    return sb.reverse().toString();
+  }
 
   /**
    * Replace all occurrences of oldstr in source with newstr
@@ -597,6 +630,17 @@ public class StringUtil {
       "." + method.getName();
   }
 
+  public static String sanitizeToIdentifier(String name) {
+    StringBuilder sb = new StringBuilder();
+    for (int ix = 0; ix < name.length(); ix++) {
+      char ch = name.charAt(ix);
+      if (Character.isJavaIdentifierPart(ch)) {
+	sb.append(ch);
+      }
+    }
+    return sb.toString();
+  }
+
   static Pattern alphanum =
     RegexpUtil.uncheckedCompile("([^a-zA-Z0-9])",
 				Perl5Compiler.READ_ONLY_MASK);
@@ -1014,10 +1058,11 @@ public class StringUtil {
     }
   }
 
-  /** Return a string with lines from a reader, separated by a newline character,
-   * throwing if more than maxSize chars. Reader is wrapped with a reader
-   * returned by {@link #getLineReader(Reader) before processing. 
-   * */
+  /** Return a string with lines from a reader, separated by a newline
+   * character.  The reader is not closed.  Throw if more than maxSize
+   * chars. Reader is wrapped with a reader returned by {@link
+   * #getLineReader(Reader) before processing.
+   */
   public static String fromReader(Reader r, int maxSize) throws IOException {
     r = getLineReader(r);
     char[] buf = new char[1000];
@@ -1067,7 +1112,8 @@ public class StringUtil {
   }
 
   /** Return a string with lines from an InputStream separated by a newline
-   * character using the default encoding, throwing if more than maxSize chars  */
+   * character using the default encoding.  The InputStream is not closed.
+   * Throw if more than maxSize chars  */
   public static String fromInputStream(InputStream in, int maxSize)
       throws IOException {
     // use our default encoding rather than system default
@@ -1077,12 +1123,17 @@ public class StringUtil {
 
   /** Return a string with lines from the file path separated by a newline character */
   public static String fromFile(String path) throws IOException {
-    return fromReader(new FileReader(path));
+    return fromFile(new File(path));
   }
 
   /** Return a string with lines from the file separated by a newline character */
   public static String fromFile(File file) throws IOException {
-    return fromReader(new FileReader(file));
+    Reader rdr = new FileReader(file);
+    try {
+      return fromReader(rdr);
+    } finally {
+      IOUtil.safeClose(rdr);
+    }
   }
 
   /** Write a string to a File */

@@ -1,10 +1,10 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.16 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: TestHighWirePlugin.java,v 1.16.12.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,7 +40,6 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
-import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.plugin.wrapper.*;
@@ -167,8 +166,5 @@ public class TestHighWirePlugin extends LockssTestCase {
 //    assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory())
 //	       instanceof org.lockss.plugin.highwire.HighWireArticleIteratorFactory);
   }
-  public void testGetDefaultArticleMimeType() {
-    assertNotNull(plugin.getDefaultArticleMimeType());
-    assertEquals("text/html", plugin.getDefaultArticleMimeType());
-  }
+
 }

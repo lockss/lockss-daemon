@@ -18,6 +18,7 @@
     >
 
     param[journal_dir] = goethe_yearbook
+    attr[journal_id] = gyr
 
     au < manifest ; 1982 ; Goethe Yearbook Volume 1 ; 1 >
     au < manifest ; 1984 ; Goethe Yearbook Volume 2 ; 2 >
@@ -37,6 +38,7 @@
     au < released ; 2009 ; Goethe Yearbook Volume 16 ; 16 >
     au < released ; 2010 ; Goethe Yearbook Volume 17 ; 17 >
     au < manifest ; 2011 ; Goethe Yearbook Volume 18 ; 18 >
+    au < manifest ; 2012 ; Goethe Yearbook Volume 19 ; 19 >
 
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: WarcExporter.java,v 1.6 2011-05-11 03:31:30 tlipkis Exp $
+ * $Id: WarcExporter.java,v 1.6.10.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
@@ -39,7 +39,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.*;
 
 import org.archive.io.*;
+import org.archive.io.arc.WriterPoolSettingsData;
 import org.archive.io.warc.*;
+import org.archive.uid.RecordIDGenerator;
+import org.archive.uid.UUIDGenerator;
 import org.archive.util.*;
 import org.archive.util.anvl.*;
 import static org.archive.io.warc.WARCConstants.*;
@@ -93,14 +96,15 @@ public class WarcExporter extends Exporter {
       metadata.add((String)ent.getKey() + ": "
 		   + (String)ent.getValue() + "\r\n");
     }
-    return new WARCWriter(serialNo,
-			  ListUtil.list(dir),
-			  prefix,
-			  "" /*settings.getSuffix()*/ ,
-			  compress,
-			  maxSize >= 0 ? maxSize : Long.MAX_VALUE,
-			  metadata
-			  );
+
+    String template = "${prefix}-${timestamp17}-${serialno}";
+    RecordIDGenerator generator = new UUIDGenerator();
+
+    WARCWriterPoolSettingsData settings = new WARCWriterPoolSettingsData(
+	prefix, template, maxSize >= 0 ? maxSize : Long.MAX_VALUE, compress,
+	ListUtil.list(dir), metadata, generator);
+
+    return new WARCWriter(serialNo, settings);
   }
 
   protected void writeCu(CachedUrl cu) throws IOException {
@@ -137,7 +141,7 @@ public class WarcExporter extends Exporter {
 	  ww.writeResponseRecord(xlateFilename(url),
 				 timestamp,
 				 HTTP_RESPONSE_MIMETYPE,
-				 WARCWriter.getRecordID(),
+				 new UUIDGenerator().getRecordID(),
 				 headers, concat, size);
 	} finally {
 	  IOUtil.safeClose(concat);

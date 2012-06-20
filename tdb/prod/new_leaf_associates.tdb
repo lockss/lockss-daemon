@@ -5,7 +5,7 @@
 
   plugin = needs.plugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://x.y.z/
+  param[base_url] = http://www.agdevjournal.com/
 
   {
     title <
@@ -14,7 +14,9 @@
       eissn = 2152-0801 
     >
 
-    au < exists ; 2011 ; Journal of Agriculture, Food Systems, and Community Development Volume 1 ; 1 >
+    au < exists ; 2010-2011 ; Journal of Agriculture, Food Systems, and Community Development Volume 1 ; 1 >
+    au < exists ; 2011 ; Journal of Agriculture, Food Systems, and Community Development Volume 2 ; 2 >
+    au < expected ; 2012 ; Journal of Agriculture, Food Systems, and Community Development Volume 3 ; 3 >
 
   }
 

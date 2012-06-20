@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedTarContentGenerator.java,v 1.3 2009-08-20 23:11:09 dshr Exp $
+ * $Id: SimulatedTarContentGenerator.java,v 1.3.30.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
@@ -229,10 +229,10 @@ public class SimulatedTarContentGenerator extends SimulatedContentGenerator {
 			f.length());
 	  InputStream is = new FileInputStream(f);
 	  TarInputStream tis = new TarInputStream(is);
-	  for (Enumeration en = new TarEntryEnumerator(tis);
-	       en.hasMoreElements(); ) {
-	    TarEntry ze = (TarEntry)en.nextElement();
+	  TarEntry ze = tis.getNextEntry();
+	  while (ze != null) {
 	    logger.debug3("Found: " + ze.getName() + " bytes " + ze.getSize());
+	    ze = tis.getNextEntry();
 	  }
 	}
       }

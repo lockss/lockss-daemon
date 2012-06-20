@@ -21,7 +21,7 @@
 
       comment[0] = formerly The Society of Wetland Scientists Bulletin (aka SWS Bulletin)
   
-      au < superseded ; 2004 ; Wetland Science and Practice Volume 21 ; 021 >
+      au < down ; 2004 ; Wetland Science and Practice Volume 21 ; 021 >
 
     }
 
@@ -32,16 +32,20 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = wtbl
       
-      au < manifest ; 2000 ; Wetland Science and Practice Volume 17 ; 17 >
-      au < manifest ; 2001 ; Wetland Science and Practice Volume 18 ; 18 >
-      au < manifest ; 2002 ; Wetland Science and Practice Volume 19 ; 19 >
-      au < manifest ; 2003 ; Wetland Science and Practice Volume 20 ; 20 >
-      au < manifest ; 2004 ; Wetland Science and Practice Volume 21 ; 21 >
-      au < manifest ; 2005 ; Wetland Science and Practice Volume 22 ; 22 >
-      au < manifest ; 2006 ; Wetland Science and Practice Volume 23 ; 23 >
-      au < manifest ; 2007 ; Wetland Science and Practice Volume 24 ; 24 >
-      au < manifest ; 2008 ; Wetland Science and Practice Volume 25 ; 25 >
-      au < manifest ; 2009 ; Wetland Science and Practice Volume 26 ; 26 >
+      attr[where] = content1a
+      comment[notReady] = persistent 403 error for URL redirection below
+      comment[URL]= http://www.bioone.org/doi/abs/10.1672/0732-9393%282005%2922%5B41%3AATSSGP%5D2.0.CO%3B2 
+      
+      au < ready ; 2000 ; Wetland Science and Practice Volume 17 ; 17 >
+      au < ready ; 2001 ; Wetland Science and Practice Volume 18 ; 18 >
+      au < ready ; 2002 ; Wetland Science and Practice Volume 19 ; 19 >
+      au < ready ; 2003 ; Wetland Science and Practice Volume 20 ; 20 >
+      au < doNotProcess ; 2004 ; Wetland Science and Practice Volume 21 ; 21 >
+      au < notReady ; 2005 ; Wetland Science and Practice Volume 22 ; 22 >
+      au < ready ; 2006 ; Wetland Science and Practice Volume 23 ; 23 >
+      au < ready ; 2007 ; Wetland Science and Practice Volume 24 ; 24 >
+      au < ready ; 2008 ; Wetland Science and Practice Volume 25 ; 25 >
+      au < ready ; 2009 ; Wetland Science and Practice Volume 26 ; 26 >
 
     }
 
@@ -52,6 +56,7 @@
     title <
       name = Wetlands ;
       issn = 0277-5212 ;
+      eissn = 1943-6246 ;
       issnl = 0277-5212
     >
 
@@ -61,7 +66,7 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0277-5212
   
-      au < superseded ; 2004 ; Wetlands Volume 24 ; 024 >
+      au < down ; 2004 ; Wetlands Volume 24 ; 024 >
 
     }
 
@@ -72,16 +77,16 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = wetl
 
-      au < manifest ; 2000 ; Wetlands Volume 20 ; 20 >
-      au < manifest ; 2001 ; Wetlands Volume 21 ; 21 >
-      au < manifest ; 2002 ; Wetlands Volume 22 ; 22 >
-      au < manifest ; 2003 ; Wetlands Volume 23 ; 23 >
-      au < manifest ; 2004 ; Wetlands Volume 24 ; 24 >
-      au < manifest ; 2005 ; Wetlands Volume 25 ; 25 >
-      au < manifest ; 2006 ; Wetlands Volume 26 ; 26 >
-      au < manifest ; 2007 ; Wetlands Volume 27 ; 27 >
-      au < manifest ; 2008 ; Wetlands Volume 28 ; 28 >
-      au < manifest ; 2009 ; Wetlands Volume 29 ; 29 >      
+      au < ready ; 2000 ; Wetlands Volume 20 ; 20 >
+      au < ready ; 2001 ; Wetlands Volume 21 ; 21 >
+      au < ready ; 2002 ; Wetlands Volume 22 ; 22 >
+      au < ready ; 2003 ; Wetlands Volume 23 ; 23 >
+      au < doNotProcess; 2004 ; Wetlands Volume 24 ; 24 >
+      au < ready ; 2005 ; Wetlands Volume 25 ; 25 >
+      au < ready ; 2006 ; Wetlands Volume 26 ; 26 >
+      au < ready ; 2007 ; Wetlands Volume 27 ; 27 >
+      au < ready ; 2008 ; Wetlands Volume 28 ; 28 >
+      au < ready ; 2009 ; Wetlands Volume 29 ; 29 >      
 
     }
 

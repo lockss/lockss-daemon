@@ -1,10 +1,10 @@
 /*
- * $Id: ClockssUrlCacher.java,v 1.9 2011-09-25 04:20:40 tlipkis Exp $
+ * $Id: ClockssUrlCacher.java,v 1.9.4.1 2012-06-20 00:03:07 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,7 +39,7 @@ import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
-import org.lockss.crawler.PermissionMap;
+import org.lockss.crawler.*;
 
 /**
  * Wrapper for UrlConnection, which performs CLOCKSS subscription
@@ -111,6 +111,14 @@ public class ClockssUrlCacher implements UrlCacher {
 
   public void setWatchdog(LockssWatchdog wdog) {
     uc.setWatchdog(wdog);
+  }
+
+  public void setCrawlRateLimiter(CrawlRateLimiter crl) {
+    uc.setCrawlRateLimiter(crl);
+  }
+
+  public void setPreviousContentType(String previousContentType) {
+    uc.setPreviousContentType(previousContentType);
   }
 
   public void storeContent(InputStream input, CIProperties headers)

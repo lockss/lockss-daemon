@@ -1,10 +1,10 @@
 /*
- * $Id: MockPermissionHelper.java,v 1.7 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: MockPermissionHelper.java,v 1.7.14.1 2012-06-20 00:03:03 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,7 +50,7 @@ public class MockPermissionHelper implements PermissionHelper {
     this.au = au;
   }
 
-  public UrlCacher makeUrlCacher(String url) {
+  public UrlCacher makePermissionUrlCacher(String url) {
     throw new UnsupportedOperationException("not implemented");
   }
 
@@ -59,7 +59,12 @@ public class MockPermissionHelper implements PermissionHelper {
     throw new UnsupportedOperationException("not implemented");
   }
 
-  public void refetchPermissionPage(String url) {
+  public void storePermissionPage(UrlCacher uc, BufferedInputStream is)
+      throws IOException {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public void setPreviousContentType(String previousContentType) {
     throw new UnsupportedOperationException("not implemented");
   }
 

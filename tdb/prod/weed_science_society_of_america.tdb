@@ -18,10 +18,11 @@
     param[base_url] = http://www.bioone.org/
     param[journal_id] = ipsm
 
-    au < manifest ; 2008 ; Invasive Plant Science and Management Volume 1 ; 1 >
-    au < manifest ; 2009 ; Invasive Plant Science and Management Volume 2 ; 2 >
-    au < manifest ; 2010 ; Invasive Plant Science and Management Volume 3 ; 3 >
-    au < manifest ; 2011 ; Invasive Plant Science and Management Volume 4 ; 4 >
+    au < ready ; 2008 ; Invasive Plant Science and Management Volume 1 ; 1 >
+    au < ready ; 2009 ; Invasive Plant Science and Management Volume 2 ; 2 >
+    au < ready ; 2010 ; Invasive Plant Science and Management Volume 3 ; 3 >
+    au < ready ; 2011 ; Invasive Plant Science and Management Volume 4 ; 4 >
+    au < manifest ; 2012 ; Invasive Plant Science and Management Volume 5 ; 5 >
 
   }
 
@@ -60,18 +61,19 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = wees
 
-      au < manifest ; 2000 ; Weed Science Volume 48 ; 48 >
-      au < manifest ; 2001 ; Weed Science Volume 49 ; 49 >
-      au < manifest ; 2002 ; Weed Science Volume 50 ; 50 >
-      au < manifest ; 2003 ; Weed Science Volume 51 ; 51 >
-      au < manifest ; 2004 ; Weed Science Volume 52 ; 52 >
-      au < manifest ; 2005 ; Weed Science Volume 53 ; 53 >
-      au < manifest ; 2006 ; Weed Science Volume 54 ; 54 >
-      au < manifest ; 2007 ; Weed Science Volume 55 ; 55 >
-      au < manifest ; 2008 ; Weed Science Volume 56 ; 56 >
-      au < manifest ; 2009 ; Weed Science Volume 57 ; 57 >
-      au < manifest ; 2010 ; Weed Science Volume 58 ; 58 >
-      au < manifest ; 2011 ; Weed Science Volume 59 ; 59 >
+      au < doNotProcess ; 2000 ; Weed Science Volume 48 ; 48 >
+      au < doNotProcess ; 2001 ; Weed Science Volume 49 ; 49 >
+      au < doNotProcess ; 2002 ; Weed Science Volume 50 ; 50 >
+      au < doNotProcess ; 2003 ; Weed Science Volume 51 ; 51 >
+      au < doNotProcess ; 2004 ; Weed Science Volume 52 ; 52 >
+      au < doNotProcess ; 2005 ; Weed Science Volume 53 ; 53 >
+      au < doNotProcess ; 2006 ; Weed Science Volume 54 ; 54 >
+      au < doNotProcess ; 2007 ; Weed Science Volume 55 ; 55 >
+      au < ready ; 2008 ; Weed Science Volume 56 ; 56 >
+      au < ready ; 2009 ; Weed Science Volume 57 ; 57 >
+      au < ready ; 2010 ; Weed Science Volume 58 ; 58 >
+      au < ready ; 2011 ; Weed Science Volume 59 ; 59 >
+      au < manifest ; 2012 ; Weed Science Volume 60 ; 60 >
 
     }
 
@@ -112,18 +114,19 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = wete
 
-      au < manifest ; 2000 ; Weed Technology Volume 14 ; 14 >
-      au < manifest ; 2001 ; Weed Technology Volume 15 ; 15 >
-      au < manifest ; 2002 ; Weed Technology Volume 16 ; 16 >
-      au < manifest ; 2003 ; Weed Technology Volume 17 ; 17 >
-      au < manifest ; 2004 ; Weed Technology Volume 18 ; 18 >
-      au < manifest ; 2005 ; Weed Technology Volume 19 ; 19 >
-      au < manifest ; 2006 ; Weed Technology Volume 20 ; 20 >
-      au < manifest ; 2007 ; Weed Technology Volume 21 ; 21 >
-      au < manifest ; 2008 ; Weed Technology Volume 22 ; 22 >
-      au < manifest ; 2009 ; Weed Technology Volume 23 ; 23 >
-      au < manifest ; 2010 ; Weed Technology Volume 24 ; 24 >
-      au < manifest ; 2011 ; Weed Technology Volume 25 ; 25 >
+      au < doNotProcess ; 2000 ; Weed Technology Volume 14 ; 14 >
+      au < doNotProcess ; 2001 ; Weed Technology Volume 15 ; 15 >
+      au < doNotProcess ; 2002 ; Weed Technology Volume 16 ; 16 >
+      au < doNotProcess ; 2003 ; Weed Technology Volume 17 ; 17 >
+      au < doNotProcess ; 2004 ; Weed Technology Volume 18 ; 18 >
+      au < doNotProcess ; 2005 ; Weed Technology Volume 19 ; 19 >
+      au < doNotProcess ; 2006 ; Weed Technology Volume 20 ; 20 >
+      au < doNotProcess ; 2007 ; Weed Technology Volume 21 ; 21 >
+      au < ready ; 2008 ; Weed Technology Volume 22 ; 22 >
+      au < ready ; 2009 ; Weed Technology Volume 23 ; 23 >
+      au < ready ; 2010 ; Weed Technology Volume 24 ; 24 >
+      au < ready ; 2011 ; Weed Technology Volume 25 ; 25 >
+      au < manifest ; 2012 ; Weed Technology Volume 26 ; 26 >
 
     }
 

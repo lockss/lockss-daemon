@@ -17,15 +17,26 @@
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1402-2001
-  
-      au < doNotProcess ; 2002 ; Applied Vegetation Science Volume 5 ; 5 >
-      au < doNotProcess ; 2003 ; Applied Vegetation Science Volume 6 ; 6 >
-      au < superseded ; 2004 ; Applied Vegetation Science Volume 7 ; 7 >
-      au < doNotProcess ; 2005 ; Applied Vegetation Science Volume 8 ; 8 >
-      au < doNotProcess ; 2006 ; Applied Vegetation Science Volume 9 ; 9 >
-      au < doNotProcess ; 2007 ; Applied Vegetation Science Volume 10 ; 10 >
-    }
 
+      au < down ; 2004 ; Applied Vegetation Science Volume 7 ; 7 >
+
+    }
+	{
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = apve
+  	  comment[defunct] = Last issue published was Dec. 2008
+  	  comment[notReady] = crawl tracker failed to create a crawl in 12 tries. 4/1/12 jc. re-test later. 
+  	  
+      au < ready ; 2002 ; Applied Vegetation Science Volume 5 ; 5 >
+      au < notReady ; 2003 ; Applied Vegetation Science Volume 6 ; 6 >
+      au < doNotProcess ; 2004 ; Applied Vegetation Science Volume 7 ; 7 >
+      au < ready ; 2005 ; Applied Vegetation Science Volume 8 ; 8 >
+      au < ready ; 2006 ; Applied Vegetation Science Volume 9 ; 9 >
+      au < ready ; 2007 ; Applied Vegetation Science Volume 10 ; 10 >
+      au < ready ; 2008 ; Applied Vegetation Science Volume 11 ; 11 >
+    }
   }
   
   {
@@ -42,17 +53,25 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1100-9233
   
-      au < doNotProcess ; 2002 ; Journal of Vegetation Science Volume 13 ; 13 >
-      au < doNotProcess ; 2003 ; Journal of Vegetation Science Volume 14 ; 14 >
-      au < superseded ; 2004 ; Journal of Vegetation Science Volume 15 ; 015 >
-      au < doNotProcess ; 2005 ; Journal of Vegetation Science Volume 16 ; 16 >
-      au < doNotProcess ; 2006 ; Journal of Vegetation Science Volume 17 ; 17 >
-      au < doNotProcess ; 2007 ; Journal of Vegetation Science Volume 18 ; 18 >
+      au < down ; 2004 ; Journal of Vegetation Science Volume 15 ; 015 >
+
     }
 
     {
 
-	  comment[0] = Atypon AUs
+	  implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = vegs
+      comment[defunct] = Last issue published was Dec. 2008
+      
+      au < ready ; 2002 ; Journal of Vegetation Science Volume 13 ; 13 >
+      au < ready ; 2003 ; Journal of Vegetation Science Volume 14 ; 14 >
+      au < doNotProcess ; 2004 ; Journal of Vegetation Science Volume 15 ; 15 >
+      au < ready ; 2005 ; Journal of Vegetation Science Volume 16 ; 16 >
+      au < ready ; 2006 ; Journal of Vegetation Science Volume 17 ; 17 >
+      au < ready ; 2007 ; Journal of Vegetation Science Volume 18 ; 18 >
+      au < ready ; 2008 ; Journal of Vegetation Science Volume 19 ; 19 >
 
     }
 

@@ -1,10 +1,10 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.38 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.38.4.1 2012-06-20 00:02:51 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,6 +48,8 @@ import static org.lockss.state.SubstanceChecker.State;
 
 public class TestFollowLinkCrawler extends LockssTestCase {
 
+  private MockLockssDaemon theDaemon;
+  private CrawlManagerImpl crawlMgr;
   private MyMockArchivalUnit mau = null;
   private MockCachedUrlSet mcus = null;
   private CrawlSpec spec = null;
@@ -68,7 +70,12 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     super.setUp();
     TimeBase.setSimulated(10);
 
-    getMockLockssDaemon().getAlertManager();
+    theDaemon = getMockLockssDaemon();
+    crawlMgr = new NoPauseCrawlManagerImpl();
+    theDaemon.setCrawlManager(crawlMgr);
+    crawlMgr.initService(theDaemon);
+
+    theDaemon.getAlertManager();
 
     MockPlugin plug = new MockPlugin(getMockLockssDaemon());
     plug.initPlugin(getMockLockssDaemon());
@@ -86,6 +93,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(startUrl);
     spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new TestableFollowLinkCrawler(mau, spec, aus);
+
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(1));
 
@@ -252,7 +260,6 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.addUrl(url1, false, true);
 
     assertTrue(doCrawl0(crawler));
-    assertEquals(ListUtil.list(url1), crawler.pauses);
    }
 
   //Fetch startUrl, extractor will return a single url that already exists
@@ -270,7 +277,6 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
-    assertEmpty(crawler.pauses);
   }
 
   public void testHandlesRedirects() {
@@ -290,7 +296,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     Set expected = SetUtil.set(startUrl);
     Set expectedSrcUrls = SetUtil.set("http://www.example.com/extra_level/");
-    assertEquals(expectedSrcUrls, extractor.getSrcUrls());
+    assertEquals(expectedSrcUrls,extractor.getSrcUrls());
   }
 
   CIProperties fromArgs(String prop, String val) {
@@ -1342,7 +1348,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   public void testPermissionPageShouldFailAsFetchPermissionFailTwice(){
     ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
 				  "false",
-				  BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE,
+				  BaseCrawler.PARAM_REFETCH_PERMISSION_PAGE,
 				  "true");
 
     String permissionUrl1 = "http://www.example.com/index.html";
@@ -1368,7 +1374,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   public void testPermissionPageFailOnceAndOkAfterRefetch(){
     ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
 				  "false",
-				  BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE,
+				  BaseCrawler.PARAM_REFETCH_PERMISSION_PAGE,
 				  "true");
 
     String permissionUrl1 = "http://www.example.com/index.html";
@@ -1545,22 +1551,22 @@ public class TestFollowLinkCrawler extends LockssTestCase {
      */
     public boolean checkPermission(Crawler.PermissionHelper pHelper,
 				   Reader reader, String permissionUrl) {
-        if (numPermissionGranted-- > 0) {
-          return true;
-        } else {
-          return false;
-        }
-
+      return (numPermissionGranted-- > 0);
     }
   }
 
-  private static class TestableFollowLinkCrawler extends FollowLinkCrawler {
+  static class MyLoginPageChecker implements LoginPageChecker {
+    public boolean isLoginPage(Properties props, Reader reader) {
+      return false;
+    }
+  }
+
+  private class TestableFollowLinkCrawler extends FollowLinkCrawler {
 
     Set<String> urlsToFollow = new HashSet<String>();
     Set<String> nonStartUrlsToFollow = new HashSet<String>();
     Set fetched = new HashSet();
     boolean isFailOnStartUrlError = true;
-    List pauses = new ArrayList();
 
     protected TestableFollowLinkCrawler(ArchivalUnit au,
 					CrawlSpec spec, AuState aus){
@@ -1568,6 +1574,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       crawlStatus = new CrawlerStatus(au,
 		    ((SpiderCrawlSpec)spec).getStartingUrls(),
 		    null);
+      setCrawlManager(TestFollowLinkCrawler.this.crawlMgr);
     }
 
     MyLinkExtractorCallback
@@ -1580,21 +1587,20 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 					 processedUrls, maxDepthUrls);
     }
 
+    @Override
     protected boolean shouldFollowLink(){
       //always return true here
       return true;
     }
 
+    @Override
     protected int getRefetchDepth() {
       return 0;
     }
 
     /** suppress these actions */
+    @Override
     protected void doCrawlEndActions() {
-    }
-
-    protected void pauseBeforeFetch(String url) {
-      pauses.add(url);
     }
 
     /**
@@ -1630,14 +1636,17 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       return urlsToFollow;
     }
 
-    public int getType() {
+    @Override
+    public Crawler.Type getType() {
       throw new UnsupportedOperationException("not implemented");
     }
 
+    @Override
     public String getTypeString() {
       return "Follow Link";
     }
 
+    @Override
     public boolean isWholeAU() {
       return false;
     }
@@ -1657,6 +1666,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       this.isFailOnStartUrlError = isFailOnStartUrlError;
     }
 
+    @Override
     protected boolean isFailOnStartUrlError() {
       return isFailOnStartUrlError;
     }

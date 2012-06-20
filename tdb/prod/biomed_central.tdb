@@ -19,6 +19,7 @@
       >
 
       param[journal_issn] = 1471-2253
+      nondefparam[journal_code] = bmcanesthesiol
 
       au < released ; 2001 ; BMC Anesthesiology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Anesthesiology Volume 2 ; 2 >
@@ -31,6 +32,7 @@
       au < released ; 2009 ; BMC Anesthesiology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Anesthesiology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Anesthesiology Volume 11 ; 11 >
+      au < ready ; 2012 ; BMC Anesthesiology Volume 12 ; 12 >
       
     }
 
@@ -42,6 +44,7 @@
       >
 
       param[journal_issn] = 1471-2091
+      nondefparam[journal_code] = bmcbiochem
 
       au < released ; 2000 ; BMC Biochemistry Volume 1 ; 1 >
       au < released ; 2001 ; BMC Biochemistry Volume 2 ; 2 >
@@ -55,6 +58,7 @@
       au < released ; 2009 ; BMC Biochemistry Volume 10 ; 10 >
       au < released ; 2010 ; BMC Biochemistry Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Biochemistry Volume 12 ; 12 >
+      au < ready ; 2012 ; BMC Biochemistry Volume 13 ; 13 >
 
     }
 
@@ -66,6 +70,7 @@
       >
 
       param[journal_issn] = 1471-2105
+      nondefparam[journal_code] = bmcbioinformatics
 
       au < released ; 2000 ; BMC Bioinformatics Volume 1 ; 1 >
       au < released ; 2001 ; BMC Bioinformatics Volume 2 ; 2 >
@@ -79,6 +84,7 @@
       au < released ; 2009 ; BMC Bioinformatics Volume 10 ; 10 >
       au < released ; 2010 ; BMC Bioinformatics Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Bioinformatics Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Bioinformatics Volume 13 ; 13 >
 
     }
 
@@ -90,6 +96,7 @@
       >
 
       param[journal_issn] = 1741-7007
+      nondefparam[journal_code] = bmcbiol
 
       au < released ; 2003 ; BMC Biology Volume 1 ; 1 >
       au < released ; 2004 ; BMC Biology Volume 2 ; 2 >
@@ -100,6 +107,7 @@
       au < released ; 2009 ; BMC Biology Volume 7 ; 7 >
       au < released ; 2010 ; BMC Biology Volume 8 ; 8 >
       au < ready ; 2011 ; BMC Biology Volume 9 ; 9 >
+      au < manifest ; 2012 ; BMC Biology Volume 10 ; 10 >
 
     }
 
@@ -111,6 +119,7 @@
       >
 
       param[journal_issn] = 1472-6750
+      nondefparam[journal_code] = bmcbiotechnol
 
       au < released ; 2001 ; BMC Biotechnology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Biotechnology Volume 2 ; 2 >
@@ -123,6 +132,7 @@
       au < released ; 2009 ; BMC Biotechnology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Biotechnology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Biotechnology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Biotechnology Volume 12 ; 12 >
 
     }
 
@@ -134,7 +144,7 @@
       >
 
       param[journal_issn] = 1471-2326
-
+      nondefparam[journal_code] = bmcblooddisord
 
       au < released ; 2001 ; BMC Blood Disorders Volume 1 ; 1 >
       au < released ; 2002 ; BMC Blood Disorders Volume 2 ; 2 >
@@ -147,18 +157,19 @@
       au < released ; 2009 ; BMC Blood Disorders Volume 9 ; 9 >
       au < released ; 2010 ; BMC Blood Disorders Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Blood Disorders Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Blood Disorders Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Cancer ;
-        issn = 1471-2407;
+        issn = 1471-2407 ;
         issnl = 1471-2407
       >
 
       param[journal_issn] = 1471-2407
-
+      nondefparam[journal_code] = bmccancer
 
       au < released ; 2001 ; BMC Cancer Volume 1 ; 1 >
       au < released ; 2002 ; BMC Cancer Volume 2 ; 2 >
@@ -171,17 +182,20 @@
       au < released ; 2009 ; BMC Cancer Volume 9 ; 9 >
       au < released ; 2010 ; BMC Cancer Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Cancer Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Cancer Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Cardiovascular Disorders ;
-        issn = 1471-2261;
+        issn = 1471-2261 ;
         issnl = 1471-2261
       >
 
       param[journal_issn] = 1471-2261
+      nondefparam[journal_code] = bmccardiovascdisord
+      
 
       au < released ; 2001 ; BMC Cardiovascular Disorders Volume 1 ; 1 >
       au < released ; 2002 ; BMC Cardiovascular Disorders Volume 2 ; 2 >
@@ -194,17 +208,19 @@
       au < released ; 2009 ; BMC Cardiovascular Disorders Volume 9 ; 9 >
       au < released ; 2010 ; BMC Cardiovascular Disorders Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Cardiovascular Disorders Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Cardiovascular Disorders Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Cell Biology ;
-        issn = 1471-2121;
+        issn = 1471-2121 ;
         issnl = 1471-2121
       >
 
       param[journal_issn] = 1471-2121
+      nondefparam[journal_code] = bmccellbiol
 
       au < released ; 2000 ; BMC Cell Biology Volume 1 ; 1 >
       au < released ; 2001 ; BMC Cell Biology Volume 2 ; 2 >
@@ -218,18 +234,20 @@
       au < released ; 2009 ; BMC Cell Biology Volume 10 ; 10 >
       au < released ; 2010 ; BMC Cell Biology Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Cell Biology Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Cell Biology Volume 13 ; 13 >
 
     }
 
     {
       title <
         name = BMC Chemical Biology ;
-        issn = 1472-6769;
+        issn = 1472-6769 ;
         issnl = 1472-6769
       >
 
       param[journal_issn] = 1472-6769
-
+      nondefparam[journal_code] = bmcchembiol
+      
       au < released ; 2001 ; BMC Chemical Biology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Chemical Biology Volume 2 ; 2 >
       au < released ; 2003 ; BMC Chemical Biology Volume 3 ; 3 >
@@ -241,17 +259,19 @@
       au < released ; 2009 ; BMC Chemical Biology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Chemical Biology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Chemical Biology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Chemical Biology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Clinical Pathology ;
-        issn = 1472-6890;
+        issn = 1472-6890 ;
         issnl = 1472-6890
       >
 
-      param[journal_issn] = 1472-6890
+      param[journal_issn] = 1472-6890 
+      nondefparam[journal_code] = bmcclinpathol
 
       au < released ; 2001 ; BMC Clinical Pathology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Clinical Pathology Volume 2 ; 2 >
@@ -264,17 +284,19 @@
       au < released ; 2009 ; BMC Clinical Pathology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Clinical Pathology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Clinical Pathology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Clinical Pathology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Clinical Pharmacology ;
-        issn = 1472-6904;
+        issn = 1472-6904 ;
         issnl = 1472-6904
       >
 
       param[journal_issn] = 1472-6904
+      nondefparam[journal_code] = bmcclinpharmacol
 
       au < released ; 2001 ; BMC Clinical Pharmacology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Clinical Pharmacology Volume 2 ; 2 >
@@ -287,17 +309,19 @@
       au < released ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Complementary and Alternative Medicine ;
-        issn = 1472-6882;
+        issn = 1472-6882 ;
         issnl = 1472-6882
       >
 
       param[journal_issn] = 1472-6882
+      nondefparam[journal_code] = bmccomplementalternmed
 
       au < released ; 2001 ; BMC Complementary and Alternative Medicine Volume 1 ; 1 >
       au < released ; 2002 ; BMC Complementary and Alternative Medicine Volume 2 ; 2 >
@@ -310,17 +334,19 @@
       au < released ; 2009 ; BMC Complementary and Alternative Medicine Volume 9 ; 9 >
       au < released ; 2010 ; BMC Complementary and Alternative Medicine Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Complementary and Alternative Medicine Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Complementary and Alternative Medicine Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Dermatology ;
-        issn = 1471-5945;
+        issn = 1471-5945 ;
         issnl = 1471-5945
       >
 
       param[journal_issn] = 1471-5945
+      nondefparam[journal_code] = bmcdermatol
 
       au < released ; 2001 ; BMC Dermatology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Dermatology Volume 2 ; 2 >
@@ -333,18 +359,19 @@
       au < released ; 2009 ; BMC Dermatology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Dermatology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Dermatology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Dermatology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Developmental Biology ;
-        issn = 1471-213X;
+        issn = 1471-213X ;
         issnl = 1471-213X
       >
 
       param[journal_issn] = 1471-213X
-
+      nondefparam[journal_code] = bmcdevbiol
 
       au < released ; 2001 ; BMC Developmental Biology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Developmental Biology Volume 2 ; 2 >
@@ -357,17 +384,19 @@
       au < released ; 2009 ; BMC Developmental Biology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Developmental Biology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Developmental Biology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Developmental Biology Volume 12 ; 12 >
       
     }
 
     {
       title <
         name = BMC Ear, Nose and Throat Disorders ;
-        issn = 1472-6815;
+        issn = 1472-6815 ;
         issnl = 1472-6815
       >
 
       param[journal_issn] = 1472-6815
+      nondefparam[journal_code] = bmcearnosethroatdisord
 
       au < released ; 2001 ; BMC Ear, Nose and Throat Disorders Volume 1 ; 1 >
       au < released ; 2002 ; BMC Ear, Nose and Throat Disorders Volume 2 ; 2 >
@@ -380,17 +409,19 @@
       au < released ; 2009 ; BMC Ear, Nose and Throat Disorders Volume 9 ; 9 >
       au < released ; 2010 ; BMC Ear, Nose and Throat Disorders Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Ear, Nose and Throat Disorders Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Ear, Nose and Throat Disorders Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Ecology ;
-        issn = 1472-6785;
+        issn = 1472-6785 ;
         issnl = 1472-6785
       >
 
       param[journal_issn] = 1472-6785
+      nondefparam[journal_code] = bmcecol
 
       au < released ; 2001 ; BMC Ecology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Ecology Volume 2 ; 2 >
@@ -403,17 +434,19 @@
       au < released ; 2009 ; BMC Ecology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Ecology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Ecology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Ecology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Emergency Medicine ;
-        issn = 1471-227X;
+        issn = 1471-227X ;
         issnl = 1471-227X
       >
 
       param[journal_issn] = 1471-227X
+      nondefparam[journal_code] = bmcemergmed
 
       au < released ; 2001 ; BMC Emergency Medicine Volume 1 ; 1 >
       au < released ; 2002 ; BMC Emergency Medicine Volume 2 ; 2 >
@@ -426,17 +459,19 @@
       au < released ; 2009 ; BMC Emergency Medicine Volume 9 ; 9 >
       au < released ; 2010 ; BMC Emergency Medicine Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Emergency Medicine Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Emergency Medicine Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Endocrine Disorders ;
-        issn = 1472-6823;
+        issn = 1472-6823 ;
         issnl = 1472-6823
       >
 
       param[journal_issn] = 1472-6823
+      nondefparam[journal_code] = bmcendocrdisord
 
       au < released ; 2001 ; BMC Endocrine Disorders Volume 1 ; 1 >
       au < released ; 2002 ; BMC Endocrine Disorders Volume 2 ; 2 >
@@ -449,17 +484,19 @@
       au < released ; 2009 ; BMC Endocrine Disorders Volume 9 ; 9 >
       au < released ; 2010 ; BMC Endocrine Disorders Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Endocrine Disorders Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Endocrine Disorders Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Evolutionary Biology ;
-        issn = 1471-2148;
+        issn = 1471-2148 ;
         issnl = 1471-2148
       >
 
       param[journal_issn] = 1471-2148
+      nondefparam[journal_code] = bmcevolbiol
 
       au < released ; 2001 ; BMC Evolutionary Biology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Evolutionary Biology Volume 2 ; 2 >
@@ -472,17 +509,19 @@
       au < released ; 2009 ; BMC Evolutionary Biology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Evolutionary Biology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Evolutionary Biology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Evolutionary Biology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Family Practice ;
-        issn = 1471-2296;
+        issn = 1471-2296 ;
         issnl = 1471-2296
       >
 
       param[journal_issn] = 1471-2296
+      nondefparam[journal_code] = bmcfampract
 
       au < released ; 2000 ; BMC Family Practice Volume 1 ; 1 >
       au < released ; 2001 ; BMC Family Practice Volume 2 ; 2 >
@@ -496,17 +535,19 @@
       au < released ; 2009 ; BMC Family Practice Volume 10 ; 10 >
       au < released ; 2010 ; BMC Family Practice Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Family Practice Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Family Practice Volume 13 ; 13 >
 
     }
 
     {
       title <
         name = BMC Gastroenterology ;
-        issn = 1471-230X;
+        issn = 1471-230X ;
         issnl = 1471-230X
       >
 
       param[journal_issn] = 1471-230X
+      nondefparam[journal_code] = bmcgastroenterol
 
       au < released ; 2001 ; BMC Gastroenterology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Gastroenterology Volume 2 ; 2 >
@@ -519,17 +560,19 @@
       au < released ; 2009 ; BMC Gastroenterology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Gastroenterology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Gastroenterology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Gastroenterology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Genetics ;
-        issn = 1471-2156;
+        issn = 1471-2156 ;
         issnl = 1471-2156
       >
 
       param[journal_issn] = 1471-2156
+      nondefparam[journal_code] = bmcgenet
 
       au < released ; 2000 ; BMC Genetics Volume 1 ; 1 >
       au < released ; 2001 ; BMC Genetics Volume 2 ; 2 >
@@ -543,17 +586,19 @@
       au < released ; 2009 ; BMC Genetics Volume 10 ; 10 >
       au < released ; 2010 ; BMC Genetics Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Genetics Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Genetics Volume 13 ; 13 >
 
     }
 
     {
       title <
         name = BMC Genomics ;
-        issn = 1471-2164;
+        issn = 1471-2164 ;
         issnl = 1471-2164
       >
 
       param[journal_issn] = 1471-2164
+      nondefparam[journal_code] = bmcgenomics
 
       au < released ; 2000 ; BMC Genomics Volume 1 ; 1 >
       au < released ; 2001 ; BMC Genomics Volume 2 ; 2 >
@@ -567,17 +612,19 @@
       au < released ; 2009 ; BMC Genomics Volume 10 ; 10 >
       au < released ; 2010 ; BMC Genomics Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Genomics Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Genomics Volume 13; 13 >
 
     }
 
     {
       title <
         name = BMC Geriatrics ;
-        issn = 1471-2318;
+        issn = 1471-2318 ;
         issnl = 1471-2318
       >
 
       param[journal_issn] = 1471-2318
+      nondefparam[journal_code] = bmcgeriatr
 
       au < released ; 2001 ; BMC Geriatrics Volume 1 ; 1 >
       au < released ; 2002 ; BMC Geriatrics Volume 2 ; 2 >
@@ -590,17 +637,19 @@
       au < released ; 2009 ; BMC Geriatrics Volume 9 ; 9 >
       au < released ; 2010 ; BMC Geriatrics Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Geriatrics Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Geriatrics Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Health Services Research ;
-        issn = 1472-6963;
+        issn = 1472-6963 ;
         issnl = 1472-6963
       >
 
       param[journal_issn] = 1472-6963
+      nondefparam[journal_code] = bmchealthservres
 
       au < released ; 2001 ; BMC Health Services Research Volume 1 ; 1 >
       au < released ; 2002 ; BMC Health Services Research Volume 2 ; 2 >
@@ -613,17 +662,19 @@
       au < released ; 2009 ; BMC Health Services Research Volume 9 ; 9 >
       au < released ; 2010 ; BMC Health Services Research Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Health Services Research Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Health Services Research Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Immunology ;
-        issn = 1471-2172;
+        issn = 1471-2172 ;
         issnl = 1471-2172
       >
 
       param[journal_issn] = 1471-2172
+      nondefparam[journal_code] = bmcimmunol
 
       au < released ; 2000 ; BMC Immunology Volume 1 ; 1 >
       au < released ; 2001 ; BMC Immunology Volume 2 ; 2 >
@@ -637,17 +688,19 @@
       au < released ; 2009 ; BMC Immunology Volume 10 ; 10 >
       au < released ; 2010 ; BMC Immunology Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Immunology Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Immunology Volume 13 ; 13 >
 
     }
 
     {
       title <
         name = BMC Infectious Diseases ;
-        issn = 1471-2334;
+        issn = 1471-2334 ;
         issnl = 1471-2334
       >
 
       param[journal_issn] = 1471-2334
+      nondefparam[journal_code] = bmcinfectdis
 
       au < released ; 2001 ; BMC Infectious Diseases Volume 1 ; 1 >
       au < released ; 2002 ; BMC Infectious Diseases Volume 2 ; 2 >
@@ -660,18 +713,21 @@
       au < released ; 2009 ; BMC Infectious Diseases Volume 9 ; 9 >
       au < released ; 2010 ; BMC Infectious Diseases Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Infectious Diseases Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Infectious Diseases Volume 12 ; 12 >
 
     }
     
     {
       title <
         name = BMC International Health and Human Rights ;
-        issn = 1472-698X;
+        issn = 1472-698X ;
         issnl = 1472-698X
       >
 
       param[journal_issn] = 1472-698X
+      nondefparam[journal_code] = bmcinthealthhumrights
       comment[ihhr4] = was in props marked down, probably never released
+      comment[ihhr4_2] = manifest exists as of 3/2012
 
       au < released ; 2001 ; BMC International Health and Human Rights Volume 1 ; 1 >
       au < released ; 2002 ; BMC International Health and Human Rights Volume 2 ; 2 >
@@ -684,17 +740,19 @@
       au < released ; 2009 ; BMC International Health and Human Rights Volume 9 ; 9 >
       au < released ; 2010 ; BMC International Health and Human Rights Volume 10 ; 10 >
       au < ready ; 2011 ; BMC International Health and Human Rights Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC International Health and Human Rights Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Medical Education ;
-        issn = 1472-6920;
+        issn = 1472-6920 ;
         issnl = 1472-6920
       >
 
       param[journal_issn] = 1472-6920
+      nondefparam[journal_code] = bmcmededuc
 
       au < released ; 2001 ; BMC Medical Education Volume 1 ; 1 >
       au < released ; 2002 ; BMC Medical Education Volume 2 ; 2 >
@@ -707,17 +765,19 @@
       au < released ; 2009 ; BMC Medical Education Volume 9 ; 9 >
       au < released ; 2010 ; BMC Medical Education Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Medical Education Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Medical Education Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Medical Ethics ;
-        issn = 1472-6939;
+        issn = 1472-6939 ;
         issnl = 1472-6939
       >
 
       param[journal_issn] = 1472-6939
+      nondefparam[journal_code] = bmcmedethics
 
       au < released ; 2000 ; BMC Medical Ethics Volume 1 ; 1 >
       au < released ; 2001 ; BMC Medical Ethics Volume 2 ; 2 >
@@ -731,17 +791,19 @@
       au < released ; 2009 ; BMC Medical Ethics Volume 10 ; 10 >
       au < released ; 2010 ; BMC Medical Ethics Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Medical Ethics Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Medical Ethics Volume 13 ; 13 >
 
     }
 
     {
       title <
         name = BMC Medical Genetics ;
-        issn = 1471-2350;
+        issn = 1471-2350 ;
         issnl = 1471-2350
       >
 
       param[journal_issn] = 1471-2350
+      nondefparam[journal_code] = bmcmedgenet
 
       au < released ; 2000 ; BMC Medical Genetics Volume 1 ; 1 >
       au < released ; 2001 ; BMC Medical Genetics Volume 2 ; 2 >
@@ -755,17 +817,19 @@
       au < released ; 2009 ; BMC Medical Genetics Volume 10 ; 10 >
       au < released ; 2010 ; BMC Medical Genetics Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Medical Genetics Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Medical Genetics Volume 13 ; 13 >
 
     }
 
     {
       title <
         name = BMC Medical Imaging ;
-        issn = 1471-2342;
+        issn = 1471-2342 ;
         issnl = 1471-2342
       >
 
       param[journal_issn] = 1471-2342
+      nondefparam[journal_code] = bmcmedimaging
 
       au < released ; 2001 ; BMC Medical Imaging Volume 1 ; 1 >
       au < released ; 2002 ; BMC Medical Imaging Volume 2 ; 2 >
@@ -778,17 +842,19 @@
       au < released ; 2009 ; BMC Medical Imaging Volume 9 ; 9 >
       au < released ; 2010 ; BMC Medical Imaging Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Medical Imaging Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Medical Imaging Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Medical Informatics and Decision Making ;
-        issn = 1472-6947;
+        issn = 1472-6947 ;
         issnl = 1472-6947
       >
 
       param[journal_issn] = 1472-6947
+      nondefparam[journal_code] = bmcmedinformdecismak
 
       au < released ; 2001 ; BMC Medical Informatics and Decision Making Volume 1 ; 1 >
       au < released ; 2002 ; BMC Medical Informatics and Decision Making Volume 2 ; 2 >
@@ -801,17 +867,19 @@
       au < released ; 2009 ; BMC Medical Informatics and Decision Making Volume 9 ; 9 >
       au < released ; 2010 ; BMC Medical Informatics and Decision Making Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Medical Informatics and Decision Making Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Medical Informatics and Decision Making Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Medical Research Methodology ;
-        issn = 1471-2288;
+        issn = 1471-2288 ;
         issnl = 1471-2288
       >
 
       param[journal_issn] = 1471-2288
+      nondefparam[journal_code] = bmcmedresmethodol
 
       au < released ; 2001 ; BMC Medical Research Methodology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Medical Research Methodology Volume 2 ; 2 >
@@ -824,17 +892,19 @@
       au < released ; 2009 ; BMC Medical Research Methodology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Medical Research Methodology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Medical Research Methodology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Medical Research Methodology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Medicine ;
-        issn = 1741-7015;
+        issn = 1741-7015 ;
         issnl = 1741-7015
       >
 
       param[journal_issn] = 1741-7015
+      nondefparam[journal_code] = bmcmed
 
       au < released ; 2003 ; BMC Medicine Volume 1 ; 1 >
       au < released ; 2004 ; BMC Medicine Volume 2 ; 2 >
@@ -845,17 +915,19 @@
       au < released ; 2009 ; BMC Medicine Volume 7 ; 7 >
       au < released ; 2010 ; BMC Medicine Volume 8 ; 8 >
       au < ready ; 2011 ; BMC Medicine Volume 9 ; 9 >
+      au < manifest ; 2012 ; BMC Medicine Volume 10 ; 10 >
 
     }
 
     {
       title <
         name = BMC Microbiology ;
-        issn = 1471-2180;
+        issn = 1471-2180 ;
         issnl = 1471-2180
       >
 
       param[journal_issn] = 1471-2180
+      nondefparam[journal_code] = bmcmicrobiol
 
       au < released ; 2001 ; BMC Microbiology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Microbiology Volume 2 ; 2 >
@@ -868,17 +940,19 @@
       au < released ; 2009 ; BMC Microbiology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Microbiology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Microbiology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Microbiology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Molecular Biology ;
-        issn = 1471-2199;
+        issn = 1471-2199 ;
         issnl = 1471-2199
       >
 
       param[journal_issn] = 1471-2199
+      nondefparam[journal_code] = bmcmolbiol
 
       au < released ; 2000 ; BMC Molecular Biology Volume 1 ; 1 >
       au < released ; 2001 ; BMC Molecular Biology Volume 2 ; 2 >
@@ -892,17 +966,19 @@
       au < released ; 2009 ; BMC Molecular Biology Volume 10 ; 10 >
       au < released ; 2010 ; BMC Molecular Biology Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Molecular Biology Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Molecular Biology Volume 13 ; 13 >
 
     }
 
     {
       title <
         name = BMC Musculoskeletal Disorders ;
-        issn = 1471-2474;
+        issn = 1471-2474 ;
         issnl = 1471-2474
       >
 
       param[journal_issn] = 1471-2474
+      nondefparam[journal_code] = bmcmusculoskeletdisord
 
       au < released ; 2000 ; BMC Musculoskeletal Disorders Volume 1 ; 1 >
       au < released ; 2001 ; BMC Musculoskeletal Disorders Volume 2 ; 2 >
@@ -916,17 +992,19 @@
       au < released ; 2009 ; BMC Musculoskeletal Disorders Volume 10 ; 10 >
       au < released ; 2010 ; BMC Musculoskeletal Disorders Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Musculoskeletal Disorders Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Musculoskeletal Disorders Volume 13 ; 13 >
 
     }
 
     {
       title <
         name = BMC Nephrology ;
-        issn = 1471-2369;
+        issn = 1471-2369 ;
         issnl = 1471-2369
       >
 
       param[journal_issn] = 1471-2369
+      nondefparam[journal_code] = bmcnephrol
 
       au < released ; 2000 ; BMC Nephrology Volume 1 ; 1 >
       au < released ; 2001 ; BMC Nephrology Volume 2 ; 2 >
@@ -940,17 +1018,19 @@
       au < released ; 2009 ; BMC Nephrology Volume 10 ; 10 >
       au < released ; 2010 ; BMC Nephrology Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Nephrology Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Nephrology Volume 13 ; 13 >
 
     }
 
     {
       title <
         name = BMC Neurology ;
-        issn = 1471-2377;
+        issn = 1471-2377 ;
         issnl = 1471-2377
       >
 
       param[journal_issn] = 1471-2377
+      nondefparam[journal_code] = bmcneurol
 
       au < released ; 2001 ; BMC Neurology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Neurology Volume 2 ; 2 >
@@ -963,18 +1043,19 @@
       au < released ; 2009 ; BMC Neurology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Neurology Volume 10 ; 10 >
       au < released ; 2011 ; BMC Neurology Volume 11 ; 11 >
-      au < ready ; 2012 ; BMC Neurology Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Neurology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Neuroscience ;
-        issn = 1471-2202;
+        issn = 1471-2202 ;
         issnl = 1471-2202
       >
 
       param[journal_issn] = 1471-2202
+      nondefparam[journal_code] = bmcneurosci
 
       au < released ; 2000 ; BMC Neuroscience Volume 1 ; 1 >
       au < released ; 2001 ; BMC Neuroscience Volume 2 ; 2 >
@@ -988,17 +1069,19 @@
       au < released ; 2009 ; BMC Neuroscience Volume 10 ; 10 >
       au < released ; 2010 ; BMC Neuroscience Volume 11 ; 11 >
       au < ready ; 2011 ; BMC Neuroscience Volume 12 ; 12 >
+      au < manifest ; 2012 ; BMC Neuroscience Volume 13 ; 13 >
 
     }
 
     {
       title <
         name = BMC Nuclear Medicine ;
-        issn = 1471-2385;
+        issn = 1471-2385 ;
         issnl = 1471-2385
       >
 
       param[journal_issn] = 1471-2385
+      nondefparam[journal_code] = bmcmedphys
 
       au < released ; 2001 ; BMC Nuclear Medicine Volume 1 ; 1 >
       au < released ; 2002 ; BMC Nuclear Medicine Volume 2 ; 2 >
@@ -1011,17 +1094,19 @@
       au < released ; 2009 ; BMC Nuclear Medicine Volume 9 ; 9 >
       au < released ; 2010 ; BMC Nuclear Medicine Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Nuclear Medicine Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Nuclear Medicine Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Nursing ;
-        issn = 1472-6955;
+        issn = 1472-6955 ;
         issnl = 1472-6955
       >
 
       param[journal_issn] = 1472-6955
+      nondefparam[journal_code] = bmcnurs
 
       au < released ; 2002 ; BMC Nursing Volume 1 ; 1 >
       au < released ; 2003 ; BMC Nursing Volume 2 ; 2 >
@@ -1033,17 +1118,19 @@
       au < released ; 2009 ; BMC Nursing Volume 8 ; 8 >
       au < released ; 2010 ; BMC Nursing Volume 9 ; 9 >
       au < ready ; 2011 ; BMC Nursing Volume 10 ; 10 >
+      au < manifest ; 2012 ; BMC Nursing Volume 11 ; 11 >
 
     }
 
     {
       title <
         name = BMC Ophthalmology ;
-        issn = 1471-2415;
+        issn = 1471-2415 ;
         issnl = 1471-2415
       >
 
       param[journal_issn] = 1471-2415
+      nondefparam[journal_code] = bmcophthalmol
 
       au < released ; 2001 ; BMC Ophthalmology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Ophthalmology Volume 2 ; 2 >
@@ -1056,17 +1143,19 @@
       au < released ; 2009 ; BMC Ophthalmology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Ophthalmology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Ophthalmology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Ophthalmology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Oral Health ;
-        issn = 1472-6831;
+        issn = 1472-6831 ;
         issnl = 1472-6831
       >
 
       param[journal_issn] = 1472-6831
+      nondefparam[journal_code] = bmcoralhealth
 
       au < released ; 2001 ; BMC Oral Health Volume 1 ; 1 >
       au < released ; 2002 ; BMC Oral Health Volume 2 ; 2 >
@@ -1079,39 +1168,42 @@
       au < released ; 2009 ; BMC Oral Health Volume 9 ; 9 >
       au < released ; 2010 ; BMC Oral Health Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Oral Health Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Oral Health Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Palliative Care ;
-        issn = 1472-684X;
+        issn = 1472-684X ;
         issnl = 1472-684X
       >
-
       param[journal_issn] = 1472-684X
+      nondefparam[journal_code] = bmcpalliatcare
 
-      au < released ; 2001 ; BMC Palliative Care Volume 1 ; 1 >
-      au < released ; 2002 ; BMC Palliative Care Volume 2 ; 2 >
-      au < released ; 2003 ; BMC Palliative Care Volume 3 ; 3 >
-      au < released ; 2004 ; BMC Palliative Care Volume 4 ; 4 >
-      au < released ; 2005 ; BMC Palliative Care Volume 5 ; 5 >
-      au < released ; 2006 ; BMC Palliative Care Volume 6 ; 6 >
-      au < released ; 2007 ; BMC Palliative Care Volume 7 ; 7 >
-      au < released ; 2008 ; BMC Palliative Care Volume 8 ; 8 >
-      au < released ; 2009 ; BMC Palliative Care Volume 9 ; 9 >
-      au < ready ; 2010 ; BMC Palliative Care Volume 10 ; 10 >
+      au < released ; 2002 ; BMC Palliative Care Volume 1 ; 1 >
+      au < released ; 2003 ; BMC Palliative Care Volume 2 ; 2 >
+      au < released ; 2004 ; BMC Palliative Care Volume 3 ; 3 >
+      au < released ; 2005 ; BMC Palliative Care Volume 4 ; 4 >
+      au < released ; 2006 ; BMC Palliative Care Volume 5 ; 5 >
+      au < released ; 2007 ; BMC Palliative Care Volume 6 ; 6 >
+      au < released ; 2008 ; BMC Palliative Care Volume 7 ; 7 >
+      au < released ; 2009 ; BMC Palliative Care Volume 8 ; 8 >
+      au < released ; 2010 ; BMC Palliative Care Volume 9 ; 9 >
+      au < ready ; 2011 ; BMC Palliative Care Volume 10 ; 10 >
+      au < ready ; 2012 ; BMC Palliative Care Volume 11 ; 11 >
 
     }
 
     {
       title <
         name = BMC Pediatrics ;
-        issn = 1471-2431;
+        issn = 1471-2431 ;
         issnl = 1471-2431
       >
 
       param[journal_issn] = 1471-2431
+      nondefparam[journal_code] = bmcpediatr
 
       au < released ; 2001 ; BMC Pediatrics Volume 1 ; 1 >
       au < released ; 2002 ; BMC Pediatrics Volume 2 ; 2 > 
@@ -1124,17 +1216,19 @@
       au < released ; 2009 ; BMC Pediatrics Volume 9 ; 9 >
       au < released ; 2010 ; BMC Pediatrics Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Pediatrics Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Pediatrics Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Pharmacology ;
-        issn = 1471-2210;
+        issn = 1471-2210 ;
         issnl = 1471-2210
       >
 
       param[journal_issn] = 1471-2210
+      nondefparam[journal_code] = bmcpharmacol
 
       au < released ; 2001 ; BMC Pharmacology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Pharmacology Volume 2 ; 2 >
@@ -1153,11 +1247,12 @@
     {
       title <
         name = BMC Physiology ;
-        issn = 1472-6793;
+        issn = 1472-6793 ;
         issnl = 1472-6793
       >
 
       param[journal_issn] = 1472-6793
+      nondefparam[journal_code] = bmcphysiol
 
       au < released ; 2001 ; BMC Physiology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Physiology Volume 2 ; 2 >
@@ -1170,17 +1265,19 @@
       au < released ; 2009 ; BMC Physiology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Physiology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Physiology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Physiology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Plant Biology ;
-        issn = 1471-2229;
+        issn = 1471-2229 ;
         issnl = 1471-2229
       >
 
       param[journal_issn] = 1471-2229
+      nondefparam[journal_code] = bmcplantbiol
 
       au < released ; 2001 ; BMC Plant Biology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Plant Biology Volume 2 ; 2 >
@@ -1193,17 +1290,19 @@
       au < released ; 2009 ; BMC Plant Biology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Plant Biology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Plant Biology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Plant Biology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Pregnancy and Childbirth ;
-        issn = 1471-2393;
+        issn = 1471-2393 ;
         issnl = 1471-2393
       >
 
       param[journal_issn] = 1471-2393
+      nondefparam[journal_code] = bmcpregnancychildbirth
 
       au < released ; 2001 ; BMC Pregnancy and Childbirth Volume 1 ; 1 >
       au < released ; 2002 ; BMC Pregnancy and Childbirth Volume 2 ; 2 >
@@ -1216,17 +1315,19 @@
       au < released ; 2009 ; BMC Pregnancy and Childbirth Volume 9 ; 9 >
       au < released ; 2010 ; BMC Pregnancy and Childbirth Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Pregnancy and Childbirth Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Pregnancy and Childbirth Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Psychiatry ;
-        issn = 1471-244X;
+        issn = 1471-244X ;
         issnl = 1471-244X
       >
 
       param[journal_issn] = 1471-244X
+      nondefparam[journal_code] = bmcpsychiatry
 
       au < released ; 2001 ; BMC Psychiatry Volume 1 ; 1 >
       au < released ; 2002 ; BMC Psychiatry Volume 2 ; 2 >
@@ -1239,17 +1340,19 @@
       au < released ; 2009 ; BMC Psychiatry Volume 9 ; 9 >
       au < released ; 2010 ; BMC Psychiatry Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Psychiatry Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Psychiatry Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Public Health ;
-        issn = 1471-2458;
+        issn = 1471-2458 ;
         issnl = 1471-2458
       >
 
       param[journal_issn] = 1471-2458
+      nondefparam[journal_code] = bmcpublichealth
 
       au < released ; 2001 ; BMC Public Health Volume 1 ; 1 >
       au < released ; 2002 ; BMC Public Health Volume 2 ; 2 >
@@ -1262,17 +1365,19 @@
       au < released ; 2009 ; BMC Public Health Volume 9 ; 9 >
       au < released ; 2010 ; BMC Public Health Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Public Health Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Public Health Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Pulmonary Medicine ;
-        issn = 1471-2466;
+        issn = 1471-2466 ;
         issnl = 1471-2466
       >
 
       param[journal_issn] = 1471-2466
+      nondefparam[journal_code] = bmcpulmmed
 
       au < released ; 2001 ; BMC Pulmonary Medicine Volume 1 ; 1 >
       au < released ; 2002 ; BMC Pulmonary Medicine Volume 2 ; 2 >
@@ -1285,17 +1390,19 @@
       au < released ; 2009 ; BMC Pulmonary Medicine Volume 9 ; 9 >
       au < released ; 2010 ; BMC Pulmonary Medicine Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Pulmonary Medicine Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Pulmonary Medicine Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Structural Biology ;
-        issn = 1472-6807;
+        issn = 1472-6807 ;
         issnl = 1472-6807
       >
 
       param[journal_issn] = 1472-6807
+      nondefparam[journal_code] = bmcstructbiol
 
       au < released ; 2001 ; BMC Structural Biology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Structural Biology Volume 2 ; 2 >
@@ -1308,17 +1415,19 @@
       au < released ; 2009 ; BMC Structural Biology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Structural Biology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Structural Biology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Structural Biology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Surgery ;
-        issn = 1471-2482;
+        issn = 1471-2482 ;
         issnl = 1471-2482
       >
 
       param[journal_issn] = 1471-2482
+      nondefparam[journal_code] = bmcsurg
 
       au < released ; 2001 ; BMC Surgery Volume 1 ; 1 >
       au < released ; 2002 ; BMC Surgery Volume 2 ; 2 >
@@ -1331,38 +1440,40 @@
       au < released ; 2009 ; BMC Surgery Volume 9 ; 9 >
       au < released ; 2010 ; BMC Surgery Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Surgery Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Surgery Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Systems Biology ;
-        issn = 1752-0509;
+        issn = 1752-0509 ;
         issnl = 1752-0509
       >
 
       param[journal_issn] = 1752-0509
+      nondefparam[journal_code] = bmcsystbiol
 
       au < released ; 2007 ; BMC Systems Biology Volume 1 ; 1 >
       au < released ; 2008 ; BMC Systems Biology Volume 2 ; 2 >
       au < released ; 2009 ; BMC Systems Biology Volume 3 ; 3 >
       au < released ; 2010 ; BMC Systems Biology Volume 4 ; 4 >
       au < released ; 2011 ; BMC Systems Biology Volume 5 ; 5 >
-      au < released ; 2012 ; BMC Systems Biology Volume 6 ; 6 >
-      au < released ; 2013 ; BMC Systems Biology Volume 7 ; 7 >
-      au < released ; 2014 ; BMC Systems Biology Volume 8 ; 8 >
-      au < ready ; 2015 ; BMC Systems Biology Volume 9 ; 9 >
+      au < down ; 2012 ; BMC Systems Biology Volume 6 ; 6 >
+      au < down ; 2013 ; BMC Systems Biology Volume 7 ; 7 >
+      au < down ; 2014 ; BMC Systems Biology Volume 8 ; 8 >
 
     }
 
     {
       title <
         name = BMC Urology ;
-        issn = 1471-2490;
+        issn = 1471-2490 ;
         issnl = 1471-2490
       >
 
       param[journal_issn] = 1471-2490
+      nondefparam[journal_code] = bmcurol
 
       au < released ; 2001 ; BMC Urology Volume 1 ; 1 >
       au < released ; 2002 ; BMC Urology Volume 2 ; 2 >
@@ -1375,17 +1486,19 @@
       au < released ; 2009 ; BMC Urology Volume 9 ; 9 >
       au < released ; 2010 ; BMC Urology Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Urology Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Urology Volume 12 ; 12 >
 
     }
 
     {
       title <
         name = BMC Veterinary Research ;
-        issn = 1746-6148;
+        issn = 1746-6148 ;
         issnl = 1746-6148
       >
 
       param[journal_issn] = 1746-6148
+      nondefparam[journal_code] = bmcvetres
 
       au < released ; 2005 ; BMC Veterinary Research Volume 1 ; 1 >
       au < released ; 2006 ; BMC Veterinary Research Volume 2 ; 2 >
@@ -1394,21 +1507,21 @@
       au < released ; 2009 ; BMC Veterinary Research Volume 5 ; 5 >
       au < released ; 2010 ; BMC Veterinary Research Volume 6 ; 6 >
       au < released ; 2011 ; BMC Veterinary Research Volume 7 ; 7 >
-      au < released ; 2012 ; BMC Veterinary Research Volume 8 ; 8 >
-      au < released ; 2013 ; BMC Veterinary Research Volume 9 ; 9 >
-      au < released ; 2014 ; BMC Veterinary Research Volume 10 ; 10 >
-      au < ready ; 2015 ; BMC Veterinary Research Volume 11 ; 11 >
+      au < down ; 2012 ; BMC Veterinary Research Volume 8 ; 8 >
+      au < down ; 2013 ; BMC Veterinary Research Volume 9 ; 9 >
+      au < down ; 2014 ; BMC Veterinary Research Volume 10 ; 10 >
 
     }
 
     {
       title <
         name = BMC Women's Health ;
-        issn = 1472-6874;
+        issn = 1472-6874 ;
         issnl = 1472-6874
       >
 
       param[journal_issn] = 1472-6874
+      nondefparam[journal_code] = bmcwomenshealth
 
       au < released ; 2001 ; BMC Women's Health Volume 1 ; 1 >
       au < released ; 2002 ; BMC Women's Health Volume 2 ; 2 >
@@ -1421,6 +1534,7 @@
       au < released ; 2009 ; BMC Women's Health Volume 9 ; 9 >
       au < released ; 2010 ; BMC Women's Health Volume 10 ; 10 >
       au < ready ; 2011 ; BMC Women's Health Volume 11 ; 11 >
+      au < manifest ; 2012 ; BMC Women's Health Volume 12 ; 12 >
 
     }
     
@@ -1450,7 +1564,8 @@
       au < released ; 2008 ; Acta Veterinaria Scandinavica Volume 50 ; 50 >
       au < released ; 2009 ; Acta Veterinaria Scandinavica Volume 51 ; 51 >
       au < released ; 2010 ; Acta Veterinaria Scandinavica Volume 52 ; 52 >
-      au < ready ; 2011 ; Acta Veterinaria Scandinavica Volume 53 ; 53 >
+      au < released ; 2011 ; Acta Veterinaria Scandinavica Volume 53 ; 53 >
+      au < released ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 >
       
     }
 
@@ -1473,7 +1588,8 @@
       au < released ; 2008 ; AIDS Research and Therapy Volume 5 ; 5 >
       au < released ; 2009 ; AIDS Research and Therapy Volume 6 ; 6 >
       au < released ; 2010 ; AIDS Research and Therapy Volume 7 ; 7 >
-      au < exists ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 >
+      au < released ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 >
+      au < manifest ; 2012 ; AIDS Research and Therapy Volume 9 ; 9 >
 
     }
 
@@ -1492,7 +1608,8 @@
       au < released ; 2008 ; Algorithms for Molecular Biology Volume 3 ; 3 >
       au < released ; 2009 ; Algorithms for Molecular Biology Volume 4 ; 4 >
       au < released ; 2010 ; Algorithms for Molecular Biology Volume 5 ; 5 >
-      au < ready ; 2011 ; Algorithms for Molecular Biology Volume 6 ; 6 >
+      au < released ; 2011 ; Algorithms for Molecular Biology Volume 6 ; 6 >
+      au < manifest ; 2012 ; Algorithms for Molecular Biology Volume 7 ; 7 >
 
     }
 
@@ -1518,7 +1635,7 @@
       au < released ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 >
       au < released ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
       au < released ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
-      au < exists ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
+      au < manifest ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
 
     }
 
@@ -1541,7 +1658,8 @@
       au < released ; 2008 ; Annals of General Psychiatry Volume 7 ; 7 >
       au < released ; 2009 ; Annals of General Psychiatry Volume 8 ; 8 >
       au < released ; 2010 ; Annals of General Psychiatry Volume 9 ; 9 >
-      au < ready ; 2011 ; Annals of General Psychiatry Volume 10 ; 10 >
+      au < released ; 2011 ; Annals of General Psychiatry Volume 10 ; 10 >
+      au < manifest ; 2012 ; Annals of General Psychiatry Volume 11 ; 11 >
 
     }
 
@@ -1559,7 +1677,8 @@
       au < released ; 2008 ; Annals of Surgical Innovation and Research Volume 2 ; 2 >
       au < released ; 2009 ; Annals of Surgical Innovation and Research Volume 3 ; 3 >
       au < released ; 2010 ; Annals of Surgical Innovation and Research Volume 4 ; 4 >
-      au < ready ; 2011 ; Annals of Surgical Innovation and Research Volume 5 ; 5 >
+      au < released ; 2011 ; Annals of Surgical Innovation and Research Volume 5 ; 5 >
+      au < manifest ; 2012 ; Annals of Surgical Innovation and Research Volume 6 ; 6 >
 
     }
 
@@ -1567,6 +1686,7 @@
       title <
         name = Arthritis Research & Therapy ;
         issn = 1478-6354 ;
+        eissn = 1478-6362 ;
         issnl = 1478-6354
       >
       
@@ -1587,7 +1707,8 @@
       au < released ; 2008 ; Arthritis Research & Therapy Volume 10 ; 10 >
       au < released ; 2009 ; Arthritis Research & Therapy Volume 11 ; 11 >
       au < released ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
-      au < notReady ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
+      au < released ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
+      au < manifest ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
 
     }
 
@@ -1608,7 +1729,7 @@
       au < released ; 2008 ; Australia and New Zealand Health Policy Volume 5 ; 5 >
       au < released ; 2009 ; Australia and New Zealand Health Policy Volume 6 ; 6 >
       au < released ; 2010 ; Australia and New Zealand Health Policy Volume 7 ; 7 >
-      au < ready ; 2011 ; Australia and New Zealand Health Policy Volume 8 ; 8 >
+      au < released ; 2011 ; Australia and New Zealand Health Policy Volume 8 ; 8 >
 
     }
 
@@ -1628,7 +1749,8 @@
       au < released ; 2008 ; Behavioral and Brain Functions Volume 4 ; 4 >
       au < released ; 2009 ; Behavioral and Brain Functions Volume 5 ; 5 >
       au < released ; 2010 ; Behavioral and Brain Functions Volume 6 ; 6 >
-      au < ready ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 >
+      au < released ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 >
+      au < manifest ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 >
 
     }
 
@@ -1638,7 +1760,14 @@
         issn = 1480-9222 ;
         issnl = 1480-9222
       >
+      
+      param[base_url] = http://www.biologicalproceduresonline.com/
+      param[journal_issn] = 1480-9222
 
+      au < released ; 2009 ; Biological Procedures Online Volume 11 ; 11 >
+      au < released ; 2009-2010 ; Biological Procedures Online Volume 12 ; 12 >
+      au < released ; 2010-2011 ; Biological Procedures Online Volume 13 ; 13 >
+      au < manifest ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
 
     }
 
@@ -1649,7 +1778,7 @@
         issnl = 1745-6150
       >
 
-comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/supplementary/OST-HTH_Supp.html
+      comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/supplementary/OST-HTH_Supp.html
 
       param[base_url] = http://www.biology-direct.com/
       param[journal_issn] = 1745-6150
@@ -1659,7 +1788,8 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       au < released ; 2008 ; Biology Direct Volume 3 ; 3 >
       au < released ; 2009 ; Biology Direct Volume 4 ; 4 >
       au < notReady ; 2010 ; Biology Direct Volume 5 ; 5 >
-      au < ready ; 2011 ; Biology Direct Volume 6 ; 6 >
+      au < released ; 2011 ; Biology Direct Volume 6 ; 6 >
+      au < manifest ; 2012 ; Biology Direct Volume 7 ; 7 >
 
     }
 
@@ -1681,7 +1811,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; BioMagnetic Research and Technology Volume 4 ; 4 >
       au < released ; 2007 ; BioMagnetic Research and Technology Volume 5 ; 5 >
       au < released ; 2008 ; BioMagnetic Research and Technology Volume 6 ; 6 >
-      au < ready ; 2009 ; BioMagnetic Research and Technology Volume 7 ; 7 >
+      au < released ; 2009 ; BioMagnetic Research and Technology Volume 7 ; 7 >
 
     }
 
@@ -1704,7 +1834,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; BioMedical Engineering OnLine Volume 7 ; 7 >
       au < released ; 2009 ; BioMedical Engineering OnLine Volume 8 ; 8 >
       au < released ; 2010 ; BioMedical Engineering OnLine Volume 9 ; 9 >
-      au < ready ; 2011 ; BioMedical Engineering OnLine Volume 10 ; 10 >
+      au < released ; 2011 ; BioMedical Engineering OnLine Volume 10 ; 10 >
+      au < manifest ; 2012 ; BioMedical Engineering OnLine Volume 11 ; 11 >
 
     }
 
@@ -1724,7 +1855,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; BioPsychoSocial Medicine Volume 2 ; 2 >
       au < released ; 2009 ; BioPsychoSocial Medicine Volume 3 ; 3 >
       au < released ; 2010 ; BioPsychoSocial Medicine Volume 4 ; 4 >
-      au < notReady ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
+      au < released ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
+      au < manifest ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
       
     }
 
@@ -1743,7 +1875,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Biotechnology for Biofuels Volume 1 ; 1 >
       au < released ; 2009 ; Biotechnology for Biofuels Volume 2 ; 2 >
       au < released ; 2010 ; Biotechnology for Biofuels Volume 3 ; 3 >
-      au < notReady ; 2011 ; Biotechnology for Biofuels Volume 4 ; 4 >
+      au < released ; 2011 ; Biotechnology for Biofuels Volume 4 ; 4 >
+      au < manifest ; 2012 ; Biotechnology for Biofuels Volume 5 ; 5 >
       
     }
 
@@ -1769,7 +1902,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Breast Cancer Research Volume 10 ; 10 >
       au < released ; 2009 ; Breast Cancer Research Volume 11 ; 11 >
       au < released ; 2010 ; Breast Cancer Research Volume 12 ; 12 >
-      au < ready ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
+      au < released ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
+      au < manifest ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
 
     }
 
@@ -1793,7 +1927,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Cancer Cell International Volume 8 ; 8 >
       au < released ; 2009 ; Cancer Cell International Volume 9 ; 9 >
       au < released ; 2010 ; Cancer Cell International Volume 10 ; 10 >
-      au < ready ; 2011 ; Cancer Cell International Volume 11 ; 11 >
+      au < released ; 2011 ; Cancer Cell International Volume 11 ; 11 >
+      au < manifest ; 2012 ; Cancer Cell International Volume 12 ; 12 >
 
     }
 
@@ -1814,7 +1949,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Carbon Balance and Management Volume 3 ; 3 >
       au < released ; 2009 ; Carbon Balance and Management Volume 4 ; 4 >
       au < released ; 2010 ; Carbon Balance and Management Volume 5 ; 5 >
-      au < notReady ; 2011 ; Carbon Balance and Management Volume 6 ; 6 >
+      au < released ; 2011 ; Carbon Balance and Management Volume 6 ; 6 >
+      au < manifest ; 2012 ; Carbon Balance and Management Volume 7 ; 7 >
 
     }
 
@@ -1839,7 +1975,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Cardiovascular Diabetology Volume 7 ; 7 >
       au < released ; 2009 ; Cardiovascular Diabetology Volume 8 ; 8 >
       au < released ; 2010 ; Cardiovascular Diabetology Volume 9 ; 9 >
-      au < notReady ; 2011 ; Cardiovascular Diabetology Volume 10 ; 10 >
+      au < ready ; 2011 ; Cardiovascular Diabetology Volume 10 ; 10 >
+      au < manifest ; 2012 ; Cardiovascular Diabetology Volume 11 ; 11 >
 
     }
 
@@ -1863,7 +2000,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Cardiovascular Ultrasound Volume 6 ; 6 >
       au < released ; 2009 ; Cardiovascular Ultrasound Volume 7 ; 7 >
       au < released ; 2010 ; Cardiovascular Ultrasound Volume 8 ; 8 >
-      au < notReady ; 2011 ; Cardiovascular Ultrasound Volume 9 ; 9 >
+      au < released ; 2011 ; Cardiovascular Ultrasound Volume 9 ; 9 >
+      au < manifest ; 2012 ; Cardiovascular Ultrasound Volume 10 ; 10 >
 
     }
 
@@ -1880,7 +2018,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Cases Journal Volume 1 ; 1 >
       au < released ; 2009 ; Cases Journal Volume 2 ; 2 >
       au < released ; 2010 ; Cases Journal Volume 3 ; 3 >
-      au < ready ; 2011 ; Cases Journal Volume 4 ; 4 >
+      au < released ; 2011 ; Cases Journal Volume 4 ; 4 >
 
     }
 
@@ -1904,7 +2042,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Cell Communication and Signaling Volume 6 ; 6 >
       au < released ; 2009 ; Cell Communication and Signaling Volume 7 ; 7 >
       au < released ; 2010 ; Cell Communication and Signaling Volume 8 ; 8 >
-      au < notReady ; 2011 ; Cell Communication and Signaling Volume 9 ; 9 >
+      au < released ; 2011 ; Cell Communication and Signaling Volume 9 ; 9 >
+      au < manifest ; 2012 ; Cell Communication and Signaling Volume 10 ; 10 >
 
     }
 
@@ -1923,7 +2062,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Cell Division Volume 3 ; 3 >
       au < released ; 2009 ; Cell Division Volume 4 ; 4 >
       au < released ; 2010 ; Cell Division Volume 5 ; 5 >
-      au < ready ; 2011 ; Cell Division Volume 6 ; 6 >
+      au < released ; 2011 ; Cell Division Volume 6 ; 6 >
+      au < manifest ; 2012 ; Cell Division Volume 7 ; 7 >
 
     }
 
@@ -1934,19 +2074,39 @@ comment[bmr] = journal archive available, but no new volumes
         issnl = 1743-8454
       >
       
-      comment[CereFluid] = website restructured? 2011-05
+      comment[CereFluid] = Journal name changed to Fluids and Barriers of the CNS
+      
+      {
 
-      param[base_url] = http://www.cerebrospinalfluidresearch.com/
-      param[journal_issn] = 1743-8454
+        comment[continued_by] = 2045-8118
+        param[base_url] = http://www.cerebrospinalfluidresearch.com/
+        param[journal_issn] = 1743-8454
 
-      au < released ; 2004 ; Cerebrospinal Fluid Research Volume 1 ; 1 >
-      au < released ; 2005 ; Cerebrospinal Fluid Research Volume 2 ; 2 >
-      au < released ; 2006 ; Cerebrospinal Fluid Research Volume 3 ; 3 >
-      au < released ; 2007 ; Cerebrospinal Fluid Research Volume 4 ; 4 >
-      au < released ; 2008 ; Cerebrospinal Fluid Research Volume 5 ; 5 >
-      au < released ; 2009 ; Cerebrospinal Fluid Research Volume 6 ; 6 >
-      au < released ; 2010 ; Cerebrospinal Fluid Research Volume 7 ; 7 >
-      au < notReady ; 2011 ; Cerebrospinal Fluid Research Volume 8 ; 8 >
+        au < down ; 2004 ; Cerebrospinal Fluid Research Volume 1 ; 1 >
+        au < down ; 2005 ; Cerebrospinal Fluid Research Volume 2 ; 2 >
+        au < down ; 2006 ; Cerebrospinal Fluid Research Volume 3 ; 3 >
+        au < down ; 2007 ; Cerebrospinal Fluid Research Volume 4 ; 4 >
+        au < down ; 2008 ; Cerebrospinal Fluid Research Volume 5 ; 5 >
+        au < down ; 2009 ; Cerebrospinal Fluid Research Volume 6 ; 6 >
+        au < down ; 2010 ; Cerebrospinal Fluid Research Volume 7 ; 7 >
+
+      }
+      
+      {
+
+        comment[continued_by] = 2045-8118
+        param[base_url] = http://www.fluidsbarrierscns.com/
+        param[journal_issn] = 1743-8454
+
+        au < doNotProcess ; 2004 ; Cerebrospinal Fluid Research Volume 1 ; 1 >
+        au < doNotProcess ; 2005 ; Cerebrospinal Fluid Research Volume 2 ; 2 >
+        au < doNotProcess ; 2006 ; Cerebrospinal Fluid Research Volume 3 ; 3 >
+        au < doNotProcess ; 2007 ; Cerebrospinal Fluid Research Volume 4 ; 4 >
+        au < doNotProcess ; 2008 ; Cerebrospinal Fluid Research Volume 5 ; 5 >
+        au < doNotProcess ; 2009 ; Cerebrospinal Fluid Research Volume 6 ; 6 >
+        au < doNotProcess ; 2010 ; Cerebrospinal Fluid Research Volume 7 ; 7 >
+
+      }
 
     }
 
@@ -1966,7 +2126,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 >
       au < released ; 2009 ; Child and Adolescent Psychiatry and Mental Health Volume 3 ; 3 >
       au < released ; 2010 ; Child and Adolescent Psychiatry and Mental Health Volume 4 ; 4 >
-      au < notReady ; 2011 ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 >
+      au < released ; 2011 ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 >
+      au < manifest ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 >
 
     }
 
@@ -1985,10 +2146,28 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Chinese Medicine Volume 3 ; 3 >
       au < released ; 2009 ; Chinese Medicine Volume 4 ; 4 >
       au < released ; 2010 ; Chinese Medicine Volume 5 ; 5 >
-      au < ready ; 2011 ; Chinese Medicine Volume 6 ; 6 >
+      au < released ; 2011 ; Chinese Medicine Volume 6 ; 6 >
+      au < manifest ; 2012 ; Chinese Medicine Volume 7 ; 7 >
 
     }
 
+
+    {
+      title <
+        name = Chiropractic & Manual Therapies ;
+        issn = 2045-709X ;
+        issnl = 2045-709X
+      >
+      
+      comment[continued_from] = 1746-1340
+      param[base_url] = http://chiromt.com/
+      param[journal_issn] = 2045-709X
+  
+      au < released ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
+      au < manifest ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
+      
+    }
+    
     {
       title <
         name = Chiropractic & Osteopathy ;
@@ -1996,18 +2175,33 @@ comment[bmr] = journal archive available, but no new volumes
         issnl = 1746-1340
       >
       
-      comment[ChiOst] = Website being restructured? 
+      {
+      
+        param[base_url] = http://www.chiroandosteo.com/
+        param[journal_issn] = 1746-1340
 
-      param[base_url] = http://www.chiroandosteo.com/
+        au < down ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
+        au < down ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
+        au < down ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
+        au < down ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
+        au < down ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
+        au < down ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
+      
+      }
+      
+      {
+      
+      param[base_url] = http://chiromt.com/
       param[journal_issn] = 1746-1340
 
-      au < released ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
-      au < released ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
-      au < released ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
-      au < released ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
-      au < released ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
-      au < released ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
-      au < notReady ; 2011 ; Chiropractic & Osteopathy Volume 19 ; 19 >
+        au < doNotProcess ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
+        au < doNotProcess ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
+        au < doNotProcess ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
+        au < doNotProcess ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
+        au < doNotProcess ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
+        au < doNotProcess ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
+      
+      }
       
     }
 
@@ -2029,22 +2223,25 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Clinical and Molecular Allergy Volume 6 ; 6 >
       au < released ; 2009 ; Clinical and Molecular Allergy Volume 7 ; 7 >
       au < released ; 2010 ; Clinical and Molecular Allergy Volume 8 ; 8 >
-      au < manifest ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 >
+      au < released ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 >
+      au < manifest ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
       
     }
 
     {
       title <
         name = Clinical Proteomics ;
-        issn = 1559-0275 ;
-        issnl = 1559-0275
+        issn = 1542-6416 ;
+        eissn = 1559-0275 ;
+        issnl = 1542-6416
       >
 
       param[base_url] = http://www.clinicalproteomicsjournal.com/
       param[journal_issn] = 1542-6416
       comment[moved_from] = Springer Science+Business Media in 2011
       
-      au < exists ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
+      au < expected ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
+      au < expected ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
 
     }
 
@@ -2064,7 +2261,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Cough Volume 4 ; 4 >
       au < released ; 2009 ; Cough Volume 5 ; 5 >
       au < released ; 2010 ; Cough Volume 6 ; 6 >
-      au < manifest ; 2011 ; Cough Volume 7 ; 7 >
+      au < released ; 2011 ; Cough Volume 7 ; 7 >
+      au < manifest ; 2012 ; Cough Volume 8 ; 8 >
 
     }
 
@@ -2092,7 +2290,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Critical Care Volume 12 ; 12 >
       au < released ; 2009 ; Critical Care Volume 13 ; 13 >
       au < released ; 2010 ; Critical Care Volume 14 ; 14 >
-      au < manifest ; 2011 ; Critical Care Volume 15 ; 15 >
+      au < released ; 2011 ; Critical Care Volume 15 ; 15 >
+      au < manifest ; 2012 ; Critical Care Volume 16 ; 16 >
 
     }
 
@@ -2111,7 +2310,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Diagnostic Pathology Volume 3 ; 3 >
       au < released ; 2009 ; Diagnostic Pathology Volume 4 ; 4 >
       au < released ; 2010 ; Diagnostic Pathology Volume 5 ; 5 >
-      au < manifest ; 2011 ; Diagnostic Pathology Volume 6 ; 6 >
+      au < released ; 2011 ; Diagnostic Pathology Volume 6 ; 6 >
+      au < manifest ; 2012 ; Diagnostic Pathology Volume 7 ; 7 >
 
     }
 
@@ -2134,7 +2334,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Dynamic Medicine Volume 7 ; 7 >
       au < released ; 2009 ; Dynamic Medicine Volume 8 ; 8 >
       au < released ; 2010 ; Dynamic Medicine Volume 9 ; 9 >
-      au < manifest ; 2011 ; Dynamic Medicine Volume 10 ; 10 >
+      au < released ; 2011 ; Dynamic Medicine Volume 10 ; 10 >
 
     }
 
@@ -2155,7 +2355,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Emerging Themes in Epidemiology Volume 5 ; 5 >
       au < released ; 2009 ; Emerging Themes in Epidemiology Volume 6 ; 6 >
       au < released ; 2010 ; Emerging Themes in Epidemiology Volume 7 ; 7 >
-      au < manifest ; 2011 ; Emerging Themes in Epidemiology Volume 8 ; 8 >
+      au < released ; 2011 ; Emerging Themes in Epidemiology Volume 8 ; 8 >
+      au < manifest ; 2012 ; Emerging Themes in Epidemiology Volume 9 ; 9 >
 
     }
 
@@ -2178,7 +2379,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Environmental Health Volume 7 ; 7 >
       au < released ; 2009 ; Environmental Health Volume 8 ; 8 >
       au < released ; 2010 ; Environmental Health Volume 9 ; 9 >
-      au < manifest ; 2011 ; Environmental Health Volume 10 ; 10 >
+      au < released ; 2011 ; Environmental Health Volume 10 ; 10 >
+      au < manifest ; 2012 ; Environmental Health Volume 11 ; 11 >
 
     }
 
@@ -2197,7 +2399,26 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Epidemiologic Perspectives & Innovations Volume 3 ; 3 >
       au < released ; 2007 ; Epidemiologic Perspectives & Innovations Volume 4 ; 4 >
       au < released ; 2008 ; Epidemiologic Perspectives & Innovations Volume 5 ; 5 >
-      au < manifest ; 2009 ; Epidemiologic Perspectives & Innovations Volume 6 ; 6 >
+      au < released ; 2009 ; Epidemiologic Perspectives & Innovations Volume 6 ; 6 >
+      au < released ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 >
+      au < released ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 ; 8 >
+      au < manifest ; 2012 ; Epidemiologic Perspectives & Innovations Volume 9 ; 9 >
+
+    }
+
+    {
+      title <
+        name = Fluids and Barriers of the CNS ;
+        issn = 2045-8118 ;
+        issnl = 2045-8118
+      >
+      
+      comment[continued_from] = 1743-8454
+      param[base_url] = http://www.fluidsbarrierscns.com/
+      param[journal_issn] = 2045-8118
+
+      au < released ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
+      au < manifest ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
 
     }
 
@@ -2216,7 +2437,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Frontiers in Zoology Volume 3 ; 3 >
       au < released ; 2007 ; Frontiers in Zoology Volume 4 ; 4 >
       au < released ; 2008 ; Frontiers in Zoology Volume 5 ; 5 >
-      au < manifest ; 2009 ; Frontiers in Zoology Volume 6 ; 6 >
+      au < released ; 2009 ; Frontiers in Zoology Volume 6 ; 6 >
+      au < released ; 2010 ; Frontiers in Zoology Volume 7 ; 7 >
+      au < released ; 2011 ; Frontiers in Zoology Volume 8 ; 8 >
+      au < manifest ; 2012 ; Frontiers in Zoology Volume 9 ; 9 >
       
     }
 
@@ -2236,7 +2460,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Genetic Vaccines and Therapy Volume 4 ; 4 >
       au < released ; 2007 ; Genetic Vaccines and Therapy Volume 5 ; 5 >
       au < released ; 2008 ; Genetic Vaccines and Therapy Volume 6 ; 6 >
-      au < manifest ; 2009 ; Genetic Vaccines and Therapy Volume 7 ; 7 >
+      au < released ; 2009 ; Genetic Vaccines and Therapy Volume 7 ; 7 >
+      au < released ; 2010 ; Genetic Vaccines and Therapy Volume 8 ; 8 >
+      au < released ; 2011 ; Genetic Vaccines and Therapy Volume 9 ; 9 >
+      au < manifest ; 2012 ; Genetic Vaccines and Therapy Volume 10 ; 10 >
 
     }
 
@@ -2259,7 +2486,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Genome Biology Volume 7 ; 7 >
       au < released ; 2007 ; Genome Biology Volume 8 ; 8 >
       au < released ; 2008 ; Genome Biology Volume 9 ; 9 >
-      au < manifest ; 2009 ; Genome Biology Volume 10 ; 10 >
+      au < released ; 2009 ; Genome Biology Volume 10 ; 10 >
+      au < released ; 2010 ; Genome Biology Volume 11 ; 11 >
+      au < released ; 2011 ; Genome Biology Volume 12 ; 12 >
+      au < manifest ; 2012 ; Genome Biology Volume 13 ; 13 >
       
     }
 
@@ -2274,7 +2504,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2041-9414
 
       au < released ; 2010 ; Genome Integrity Volume 1 ; 1 >
-      au < manifest ; 2011 ; Genome Integrity Volume 2 ; 2 >
+      au < released ; 2011 ; Genome Integrity Volume 2 ; 2 >
+      au < manifest ; 2012 ; Genome Integrity Volume 3 ; 3 >
       
     }
       
@@ -2297,7 +2528,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Geochemical Transactions Volume 7 ; 7 >
       au < released ; 2007 ; Geochemical Transactions Volume 8 ; 8 >
       au < released ; 2008 ; Geochemical Transactions Volume 9 ; 9 >
-      au < manifest ; 2009 ; Geochemical Transactions Volume 10 ; 10 >
+      au < released ; 2009 ; Geochemical Transactions Volume 10 ; 10 >
+      au < released ; 2010 ; Geochemical Transactions Volume 11 ; 11 >
+      au < released ; 2011 ; Geochemical Transactions Volume 12 ; 12 >
+      au < manifest ; 2012 ; Geochemical Transactions Volume 13 ; 13 >
 
     }
 
@@ -2315,7 +2549,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Globalization and Health Volume 2 ; 2 >
       au < released ; 2007 ; Globalization and Health Volume 3 ; 3 >
       au < released ; 2008 ; Globalization and Health Volume 4 ; 4 >
-      au < manifest ; 2009 ; Globalization and Health Volume 5 ; 5 >
+      au < released ; 2009 ; Globalization and Health Volume 5 ; 5 >
+      au < released ; 2010 ; Globalization and Health Volume 6 ; 6 >
+      au < released ; 2011 ; Globalization and Health Volume 7 ; 7 >
+      au < manifest ; 2012 ; Globalization and Health Volume 8 ; 8 >
 
     }
 
@@ -2334,7 +2571,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Harm Reduction Journal Volume 3 ; 3 >
       au < released ; 2007 ; Harm Reduction Journal Volume 4 ; 4 >
       au < released ; 2008 ; Harm Reduction Journal Volume 5 ; 5 >
-      au < manifest ; 2009 ; Harm Reduction Journal Volume 6 ; 6 >
+      au < released ; 2009 ; Harm Reduction Journal Volume 6 ; 6 >
+      au < released ; 2010 ; Harm Reduction Journal Volume 7 ; 7 >
+      au < released ; 2011 ; Harm Reduction Journal Volume 8 ; 8 >
+      au < manifest ; 2012 ; Harm Reduction Journal Volume 9 ; 9 >
 
     }
 
@@ -2352,7 +2592,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Head & Face Medicine Volume 2 ; 2 >
       au < released ; 2007 ; Head & Face Medicine Volume 3 ; 3 >
       au < released ; 2008 ; Head & Face Medicine Volume 4 ; 4 >
-      au < manifest ; 2009 ; Head & Face Medicine Volume 5 ; 5 >
+      au < released ; 2009 ; Head & Face Medicine Volume 5 ; 5 >
+      au < released ; 2010 ; Head & Face Medicine Volume 6 ; 6 >
+      au < released ; 2011 ; Head & Face Medicine Volume 7 ; 7 >
+      au < manifest ; 2012 ; Head & Face Medicine Volume 8 ; 8 >
 
     }
 
@@ -2372,7 +2615,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Health and Quality of Life Outcomes Volume 4 ; 4 >
       au < released ; 2007 ; Health and Quality of Life Outcomes Volume 5 ; 5 >
       au < released ; 2008 ; Health and Quality of Life Outcomes Volume 6 ; 6 >
-      au < manifest ; 2009 ; Health and Quality of Life Outcomes Volume 7 ; 7 >
+      au < released ; 2009 ; Health and Quality of Life Outcomes Volume 7 ; 7 >
+      au < testing ; 2010 ; Health and Quality of Life Outcomes Volume 8 ; 8 >
+      au < released ; 2011 ; Health and Quality of Life Outcomes Volume 9 ; 9 >
+      au < manifest ; 2012 ; Health and Quality of Life Outcomes Volume 10 ; 10 >
 
     }
 
@@ -2385,9 +2631,19 @@ comment[bmr] = journal archive available, but no new volumes
 
       param[base_url] = http://www.health-policy-systems.com/
       param[journal_issn] = 1478-4505
+      
+      comment[HRPS] = Volume 1 is from 2003 
 
       au < released ; 2002 ; Health Research Policy and Systems Volume 1 ; 1 >
-      au < manifest ; 2003 ; Health Research Policy and Systems Volume 2 ; 2 >
+      au < released ; 2004 ; Health Research Policy and Systems Volume 2 ; 2 >
+      au < released ; 2005 ; Health Research Policy and Systems Volume 3 ; 3 >
+      au < released ; 2006 ; Health Research Policy and Systems Volume 4 ; 4 >
+      au < released ; 2007 ; Health Research Policy and Systems Volume 5 ; 5 >
+      au < released ; 2008 ; Health Research Policy and Systems Volume 6 ; 6 >
+      au < released ; 2009 ; Health Research Policy and Systems Volume 7 ; 7 >
+      au < released ; 2010 ; Health Research Policy and Systems Volume 8 ; 8 >
+      au < released ; 2011 ; Health Research Policy and Systems Volume 9 ; 9 >
+      au < manifest ; 2012 ; Health Research Policy and Systems Volume 10 ; 10 >
 
     }
 
@@ -2407,7 +2663,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Human Resources for Health Volume 4 ; 4 >
       au < released ; 2007 ; Human Resources for Health Volume 5 ; 5 >
       au < released ; 2008 ; Human Resources for Health Volume 6 ; 6 >
-      au < manifest ; 2009 ; Human Resources for Health Volume 7 ; 7 >
+      au < released ; 2009 ; Human Resources for Health Volume 7 ; 7 >
+      au < released ; 2010 ; Human Resources for Health Volume 8 ; 8 >
+      au < released ; 2011 ; Human Resources for Health Volume 9 ; 9 >
+      au < manifest ; 2012 ; Human Resources for Health Volume 10 ; 10 >
 
     }
 
@@ -2426,7 +2685,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Immunity & Ageing Volume 3 ; 3 >
       au < released ; 2007 ; Immunity & Ageing Volume 4 ; 4 >
       au < released ; 2008 ; Immunity & Ageing Volume 5 ; 5 >
-      au < manifest ; 2009 ; Immunity & Ageing Volume 6 ; 6 >
+      au < released ; 2009 ; Immunity & Ageing Volume 6 ; 6 >
+      au < released ; 2010 ; Immunity & Ageing Volume 7 ; 7 >
+      au < released ; 2011 ; Immunity & Ageing Volume 8 ; 8 >
       
     }
 
@@ -2443,7 +2704,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Implementation Science Volume 1 ; 1 >
       au < released ; 2007 ; Implementation Science Volume 2 ; 2 >
       au < released ; 2008 ; Implementation Science Volume 3 ; 3 >
-      au < manifest ; 2009 ; Implementation Science Volume 4 ; 4 >
+      au < released ; 2009 ; Implementation Science Volume 4 ; 4 >
+      au < released ; 2010 ; Implementation Science Volume 5 ; 5 >
+      au < released ; 2011 ; Implementation Science Volume 6 ; 6 >
+      au < manifest ; 2012 ; Implementation Science Volume 7 ; 7 >
 
     }
 
@@ -2460,7 +2724,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Infectious Agents and Cancer Volume 1 ; 1 >
       au < released ; 2007 ; Infectious Agents and Cancer Volume 2 ; 2 >
       au < released ; 2008 ; Infectious Agents and Cancer Volume 3 ; 3 >
-      au < manifest ; 2009 ; Infectious Agents and Cancer Volume 4 ; 4 >
+      au < ready ; 2009 ; Infectious Agents and Cancer Volume 4 ; 4 >
+      au < testing ; 2010 ; Infectious Agents and Cancer Volume 5 ; 5 >
+      au < ready ; 2011 ; Infectious Agents and Cancer Volume 6 ; 6 >
+      au < manifest ; 2012 ; Infectious Agents and Cancer Volume 7 ; 7 >
 
     }
 
@@ -2475,7 +2742,10 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1755-7682
 
       au < released ; 2008 ; International Archives of Medicine Volume 1 ; 1 >
-      au < manifest ; 2009 ; International Archives of Medicine Volume 2 ; 2 >
+      au < released ; 2009 ; International Archives of Medicine Volume 2 ; 2 >
+      au < released ; 2010 ; International Archives of Medicine Volume 3 ; 3 >
+      au < released ; 2011 ; International Archives of Medicine Volume 4 ; 4 >
+      au < manifest ; 2012 ; International Archives of Medicine Volume 5 ; 5 >
 
     }
 
@@ -2492,7 +2762,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; International Breastfeeding Journal Volume 1 ; 1 >
       au < released ; 2007 ; International Breastfeeding Journal Volume 2 ; 2 >
       au < released ; 2008 ; International Breastfeeding Journal Volume 3 ; 3 >
-      au < manifest ; 2009 ; International Breastfeeding Journal Volume 4 ; 4 >
+      au < released ; 2009 ; International Breastfeeding Journal Volume 4 ; 4 >
+      au < released ; 2010 ; International Breastfeeding Journal Volume 5 ; 5 >
+      au < released ; 2011 ; International Breastfeeding Journal Volume 6 ; 6 >
+      au < manifest ; 2012 ; International Breastfeeding Journal Volume 7 ; 7 >
 
     }
 
@@ -2513,7 +2786,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; International Journal for Equity in Health Volume 5 ; 5 >
       au < released ; 2007 ; International Journal for Equity in Health Volume 6 ; 6 >
       au < released ; 2008 ; International Journal for Equity in Health Volume 7 ; 7 >
-      au < manifest ; 2009 ; International Journal for Equity in Health Volume 8 ; 8 >
+      au < released ; 2009 ; International Journal for Equity in Health Volume 8 ; 8 >
+      au < released ; 2010 ; International Journal for Equity in Health Volume 9 ; 9 >
+      au < released ; 2011 ; International Journal for Equity in Health Volume 10 ; 10 >
+      au < manifest ; 2012 ; International Journal for Equity in Health Volume 11 ; 11 >
 
     }
 
@@ -2532,7 +2808,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; International Journal of Behavioral Nutrition and Physical Activity Volume 3 ; 3 >
       au < released ; 2007 ; International Journal of Behavioral Nutrition and Physical Activity Volume 4 ; 4 >
       au < released ; 2008 ; International Journal of Behavioral Nutrition and Physical Activity Volume 5 ; 5 >
-      au < manifest ; 2009 ; International Journal of Behavioral Nutrition and Physical Activity Volume 6 ; 6 >
+      au < ready ; 2009 ; International Journal of Behavioral Nutrition and Physical Activity Volume 6 ; 6 >
+      au < ready ; 2010 ; International Journal of Behavioral Nutrition and Physical Activity Volume 7 ; 7 >
+      au < ready ; 2011 ; International Journal of Behavioral Nutrition and Physical Activity Volume 8 ; 8 >
+      au < manifest ; 2012 ; International Journal of Behavioral Nutrition and Physical Activity Volume 9 ; 9 >
 
     }
 
@@ -2553,7 +2832,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; International Journal of Health Geographics Volume 5 ; 5 >
       au < released ; 2007 ; International Journal of Health Geographics Volume 6 ; 6 >
       au < released ; 2008 ; International Journal of Health Geographics Volume 7 ; 7 >
-      au < manifest ; 2009 ; International Journal of Health Geographics Volume 8 ; 8 >
+      au < released ; 2009 ; International Journal of Health Geographics Volume 8 ; 8 >
+      au < released ; 2010 ; International Journal of Health Geographics Volume 9 ; 9 >
+      au < released ; 2011 ; International Journal of Health Geographics Volume 10 ; 10 >
+      au < manifest ; 2012 ; International Journal of Health Geographics Volume 11 ; 11 >
 
     }
 
@@ -2569,7 +2851,10 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; 2007 ; International Journal of Mental Health Systems Volume 1 ; 1 >
       au < released ; 2008 ; International Journal of Mental Health Systems Volume 2 ; 2 >
-      au < manifest ; 2009 ; International Journal of Mental Health Systems Volume 3 ; 3 >
+      au < released ; 2009 ; International Journal of Mental Health Systems Volume 3 ; 3 >
+      au < released ; 2010 ; International Journal of Mental Health Systems Volume 4 ; 4 >
+      au < released ; 2011 ; International Journal of Mental Health Systems Volume 5 ; 5 >
+      au < manifest ; 2012 ; International Journal of Mental Health Systems Volume 6 ; 6 >
 
     }
 
@@ -2585,7 +2870,10 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1687-9856
       comment[ijpe] = This journal is transferring to BMC 3/2011, but it's still available in Hindawi
 
-      au < exists ; 2011 ; International Journal of Pediatric Endocrinology Volume 2011 ; 2011 >
+      au < released ; 2009 ; International Journal of Pediatric Endocrinology Volume 2009 ; 2009 >
+      au < released ; 2010 ; International Journal of Pediatric Endocrinology Volume 2010 ; 2010 >
+      au < released ; 2011 ; International Journal of Pediatric Endocrinology Volume 2011 ; 2011 >
+      au < manifest ; 2012 ; International Journal of Pediatric Endocrinology Volume 2012 ; 2012 >
       
     }
 
@@ -2604,7 +2892,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; International Seminars in Surgical Oncology Volume 3 ; 3 >
       au < released ; 2007 ; International Seminars in Surgical Oncology Volume 4 ; 4 >
       au < released ; 2008 ; International Seminars in Surgical Oncology Volume 5 ; 5 >
-      au < manifest ; 2009 ; International Seminars in Surgical Oncology Volume 6 ; 6 >
+      au < released ; 2009 ; International Seminars in Surgical Oncology Volume 6 ; 6 >
+      au < manifest ; 2010 ; International Seminars in Surgical Oncology Volume 7 ; 7 >
 
     }
 
@@ -2614,6 +2903,19 @@ comment[bmr] = journal archive available, but no new volumes
         issn = 0368-0762 ;
         issnl = 0368-0762
       >
+
+      param[base_url] = http://www.irishvetjournal.org/
+      param[journal_issn] = 0368-0762
+
+      au < exists ; 2004 ; Irish Veterinary Journal Volume 57 ; 57 >
+      au < exists ; 2005 ; Irish Veterinary Journal Volume 58 ; 58 >
+      au < exists ; 2006 ; Irish Veterinary Journal Volume 59 ; 59 >
+      au < exists ; 2007 ; Irish Veterinary Journal Volume 60 ; 60 >
+      au < exists ; 2008 ; Irish Veterinary Journal Volume 61 ; 61 >
+      au < exists ; 2009 ; Irish Veterinary Journal Volume 62 ; 62 >
+      au < exists ; 2010 ; Irish Veterinary Journal Volume 63 ; 63 >
+      au < exists ; 2011 ; Irish Veterinary Journal Volume 64 ; 64 >
+      au < exists ; 2012 ; Irish Veterinary Journal Volume 65 ; 65 >
 
     }
 
@@ -2648,7 +2950,10 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; 2007 ; Journal of Biological Engineering Volume 1 ; 1 >
       au < released ; 2008 ; Journal of Biological Engineering Volume 2 ; 2 >
-      au < manifest ; 2009 ; Journal of Biological Engineering Volume 3 ; 3 >
+      au < ready ; 2009 ; Journal of Biological Engineering Volume 3 ; 3 >
+      au < ready ; 2010 ; Journal of Biological Engineering Volume 4 ; 4 >
+      au < ready ; 2011 ; Journal of Biological Engineering Volume 5 ; 5 >
+      au < manifest ; 2012 ; Journal of Biological Engineering Volume 6 ; 6 >
 
     }
 
@@ -2669,7 +2974,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Journal of Biology Volume 5 ; 5 >
       au < released ; 2007 ; Journal of Biology Volume 6 ; 6 >
       au < released ; 2008 ; Journal of Biology Volume 7 ; 7 >
-      au < manifest ; 2009 ; Journal of Biology Volume 8 ; 8 >
+      au < ready ; 2009 ; Journal of Biology Volume 8 ; 8 >
+      au < manifest ; 2010 ; Journal of Biology Volume 9 ; 9 >
 
     }
 
@@ -2703,7 +3009,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 1 ; 1 >
       au < released ; 2007 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2 ; 2 >
       au < released ; 2008 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 3 ; 3 >
-      au < manifest ; 2009 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 4 ; 4 >
+      au < released ; 2009 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 4 ; 4 >
+      au < released ; 2010 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 5 ; 5 >
+      au < released ; 2011 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 6 ; 6 >
+      au < manifest ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 7 ; 7 >
 
     }
 
@@ -2721,7 +3030,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Journal of Cardiothoracic Surgery Volume 1 ; 1 >
       au < released ; 2007 ; Journal of Cardiothoracic Surgery Volume 2 ; 2 >
       au < released ; 2008 ; Journal of Cardiothoracic Surgery Volume 3 ; 3 >
-      au < manifest ; 2009 ; Journal of Cardiothoracic Surgery Volume 4 ; 4 >
+      au < ready ; 2009 ; Journal of Cardiothoracic Surgery Volume 4 ; 4 >
+      au < ready ; 2010 ; Journal of Cardiothoracic Surgery Volume 5 ; 5 >
+      au < ready ; 2011 ; Journal of Cardiothoracic Surgery Volume 6 ; 6 >
+      au < manifest ; 2012 ; Journal of Cardiothoracic Surgery Volume 7 ; 7 >
 
     }
 
@@ -2734,6 +3046,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       param[base_url] = http://jcmr-online.com/
       param[journal_issn] = 1532-429X
+      comment[notReady] = No manifest page due to website restructure(possibly).
 
       au < released ; 1999 ; Journal of Cardiovascular Magnetic Resonance Volume 1 ; 1 >
       au < released ; 2000 ; Journal of Cardiovascular Magnetic Resonance Volume 2 ; 2 >
@@ -2745,7 +3058,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Journal of Cardiovascular Magnetic Resonance Volume 8 ; 8 >
       au < released ; 2007 ; Journal of Cardiovascular Magnetic Resonance Volume 9 ; 9 >
       au < released ; 2008 ; Journal of Cardiovascular Magnetic Resonance Volume 10 ; 10 >
-      au < manifest ; 2009 ; Journal of Cardiovascular Magnetic Resonance Volume 11 ; 11 >
+      au < notReady ; 2009 ; Journal of Cardiovascular Magnetic Resonance Volume 11 ; 11 >
+      au < notReady ; 2010 ; Journal of Cardiovascular Magnetic Resonance Volume 12 ; 12 >
+      au < notReady ; 2011 ; Journal of Cardiovascular Magnetic Resonance Volume 13 ; 13 >
+      au < notReady ; 2012 ; Journal of Cardiovascular Magnetic Resonance Volume 14 ; 14 >
 
     }
 
@@ -2765,7 +3081,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Journal of Circadian Rhythms Volume 4 ; 4 >
       au < released ; 2007 ; Journal of Circadian Rhythms Volume 5 ; 5 >
       au < released ; 2008 ; Journal of Circadian Rhythms Volume 6 ; 6 >
-      au < manifest ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 >
+      au < released ; 2009 ; Journal of Circadian Rhythms Volume 7 ; 7 >
+      au < released ; 2010 ; Journal of Circadian Rhythms Volume 8 ; 8 >
+      au < released ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 >
+      au < manifest ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 >
       
     }
 
@@ -2777,6 +3096,10 @@ comment[bmr] = journal archive available, but no new volumes
       >
 
       param[base_url] = http://www.jclinbioinformatics.com/
+      param[journal_issn] = 2403-9113
+
+      au < released ; 2011 ; Journal of Clinical Bioinformatics Volume 1 ; 1 >
+      au < manifest ; 2012 ; Journal of Clinical Bioinformatics Volume 2 ; 2 >
 
     }
 
@@ -2794,7 +3117,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Journal of Ethnobiology and Ethnomedicine Volume 2 ; 2 >
       au < released ; 2007 ; Journal of Ethnobiology and Ethnomedicine Volume 3 ; 3 >
       au < released ; 2008 ; Journal of Ethnobiology and Ethnomedicine Volume 4 ; 4 >
-      au < manifest ; 2009 ; Journal of Ethnobiology and Ethnomedicine Volume 5 ; 5 >
+      au < released ; 2009 ; Journal of Ethnobiology and Ethnomedicine Volume 5 ; 5 >
+      au < released ; 2010 ; Journal of Ethnobiology and Ethnomedicine Volume 6 ; 6 >
+      au < released ; 2011 ; Journal of Ethnobiology and Ethnomedicine Volume 7 ; 7 >
+      au < manifest ; 2012 ; Journal of Ethnobiology and Ethnomedicine Volume 8 ; 8 >
 
     }
 
@@ -2809,7 +3135,10 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1756-9966
 
       au < released ; 2008 ; Journal of Experimental & Clinical Cancer Research Volume 27 ; 27 >
-      au < manifest ; 2009 ; Journal of Experimental & Clinical Cancer Research Volume 28 ; 28 >
+      au < released ; 2009 ; Journal of Experimental & Clinical Cancer Research Volume 28 ; 28 >
+      au < released ; 2010 ; Journal of Experimental & Clinical Cancer Research Volume 29 ; 29 >
+      au < released ; 2011 ; Journal of Experimental & Clinical Cancer Research Volume 30 ; 30 >
+      au < manifest ; 2012 ; Journal of Experimental & Clinical Cancer Research Volume 31 ; 31 >
 
     }
 
@@ -2824,6 +3153,10 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1756-8722
 
       au < released ; 2008 ; Journal of Hematology & Oncology Volume 1 ; 1 >
+      au < ready ; 2009 ; Journal of Hematology & Oncology Volume 2 ; 2 >
+      au < ready ; 2010 ; Journal of Hematology & Oncology Volume 3 ; 3 >
+      au < ready ; 2011 ; Journal of Hematology & Oncology Volume 4 ; 4 >
+      au < manifest ; 2012 ; Journal of Hematology & Oncology Volume 5 ; 5 >
 
     }
 
@@ -2836,6 +3169,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       param[base_url] = http://www.jibtherapies.com/
       param[journal_issn] = 1476-8518
+      
+      comment[moved] = as of 1/1/2012 this journal has moved platforms.
 
       au < released ; 2003 ; Journal of Immune Based Therapies and Vaccines Volume 1 ; 1 >
       au < released ; 2004 ; Journal of Immune Based Therapies and Vaccines Volume 2 ; 2 >
@@ -2843,7 +3178,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Journal of Immune Based Therapies and Vaccines Volume 4 ; 4 >
       au < released ; 2007 ; Journal of Immune Based Therapies and Vaccines Volume 5 ; 5 >
       au < released ; 2008 ; Journal of Immune Based Therapies and Vaccines Volume 6 ; 6 >
-      au < manifest ; 2009 ; Journal of Immune Based Therapies and Vaccines Volume 7 ; 7 >
+      au < ready ; 2009 ; Journal of Immune Based Therapies and Vaccines Volume 7 ; 7 >
+      au < ready ; 2010 ; Journal of Immune Based Therapies and Vaccines Volume 8 ; 8 >
+      au < manifest ; 2011 ; Journal of Immune Based Therapies and Vaccines Volume 9 ; 9 >
 
     }
 
@@ -2862,7 +3199,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Journal of Inflammation Volume 3 ; 3 >
       au < released ; 2007 ; Journal of Inflammation Volume 4 ; 4 >
       au < released ; 2008 ; Journal of Inflammation Volume 5 ; 5 >
-      au < manifest ; 2009 ; Journal of Inflammation Volume 6 ; 6 >
+      au < ready ; 2009 ; Journal of Inflammation Volume 6 ; 6 >
+      au < ready ; 2010 ; Journal of Inflammation Volume 7 ; 7 >
+      au < ready ; 2011 ; Journal of Inflammation Volume 8 ; 8 >
+      au < manifest ; 2012 ; Journal of Inflammation Volume 9 ; 9 >
       
     }
 
@@ -2880,7 +3220,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Journal of Molecular Signaling Volume 1 ; 1 >
       au < released ; 2007 ; Journal of Molecular Signaling Volume 2 ; 2 >
       au < released ; 2008 ; Journal of Molecular Signaling Volume 3 ; 3 >
-      au < manifest ; 2009 ; Journal of Molecular Signaling Volume 4 ; 4 >
+      au < ready ; 2009 ; Journal of Molecular Signaling Volume 4 ; 4 >
+      au < ready ; 2010 ; Journal of Molecular Signaling Volume 5 ; 5 >
+      au < ready ; 2011 ; Journal of Molecular Signaling Volume 6 ; 6 >
+      au < manifest ; 2012 ; Journal of Molecular Signaling Volume 7 ; 7 >
 
     }
 
@@ -2900,13 +3243,16 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Journal of Nanobiotechnology Volume 4 ; 4 >
       au < released ; 2007 ; Journal of Nanobiotechnology Volume 5 ; 5 >
       au < released ; 2008 ; Journal of Nanobiotechnology Volume 6 ; 6 >
-      au < manifest ; 2009 ; Journal of Nanobiotechnology Volume 7 ; 7 >
+      au < ready ; 2009 ; Journal of Nanobiotechnology Volume 7 ; 7 >
+      au < ready ; 2010 ; Journal of Nanobiotechnology Volume 8 ; 8 >
+      au < ready ; 2011 ; Journal of Nanobiotechnology Volume 9 ; 9 >
+      au < manifest ; 2012 ; Journal of Nanobiotechnology Volume 10 ; 10 >
 
     }
 
     {
       title <
-        name = Journal of Negative Results in Biomedicine ;
+        name = Journal of Negative Results in BioMedicine ;
         issn = 1477-5751 ;
         issnl = 1477-5751
       >
@@ -2914,16 +3260,17 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jnrbm.com/
       param[journal_issn] = 1477-5751
 
-      au < released ; 2002 ; Journal of Negative Results in Biomedicine Volume 1 ; 1 >
-      au < released ; 2003 ; Journal of Negative Results in Biomedicine Volume 2 ; 2 >
-      au < released ; 2004 ; Journal of Negative Results in Biomedicine Volume 3 ; 3 >
-      au < released ; 2005 ; Journal of Negative Results in Biomedicine Volume 4 ; 4 >
-      au < released ; 2006 ; Journal of Negative Results in Biomedicine Volume 5 ; 5 >
-      au < released ; 2007 ; Journal of Negative Results in Biomedicine Volume 6 ; 6 >
-      au < released ; 2008 ; Journal of Negative Results in Biomedicine Volume 7 ; 7 >
-      au < released ; 2009 ; Journal of Negative Results in Biomedicine Volume 8 ; 8 >
-      au < released ; 2010 ; Journal of Negative Results in Biomedicine Volume 9 ; 9 >
-      au < manifest ; 2011 ; Journal of Negative Results in Biomedicine Volume 10 ; 10 >
+      au < released ; 2002 ; Journal of Negative Results in BioMedicine Volume 1 ; 1 >
+      au < released ; 2003 ; Journal of Negative Results in BioMedicine Volume 2 ; 2 >
+      au < released ; 2004 ; Journal of Negative Results in BioMedicine Volume 3 ; 3 >
+      au < released ; 2005 ; Journal of Negative Results in BioMedicine Volume 4 ; 4 >
+      au < released ; 2006 ; Journal of Negative Results in BioMedicine Volume 5 ; 5 >
+      au < released ; 2007 ; Journal of Negative Results in BioMedicine Volume 6 ; 6 >
+      au < released ; 2008 ; Journal of Negative Results in BioMedicine Volume 7 ; 7 >
+      au < released ; 2009 ; Journal of Negative Results in BioMedicine Volume 8 ; 8 >
+      au < released ; 2010 ; Journal of Negative Results in BioMedicine Volume 9 ; 9 >
+      au < ready ; 2011 ; Journal of Negative Results in BioMedicine Volume 10 ; 10 >
+      au < manifest ; 2012 ; Journal of Negative Results in BioMedicine Volume 11 ; 11 >
 
     }
 
@@ -2944,7 +3291,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Journal of NeuroEngineering and Rehabilitation Volume 5 ; 5 >
       au < released ; 2009 ; Journal of NeuroEngineering and Rehabilitation Volume 6 ; 6 >
       au < released ; 2010 ; Journal of NeuroEngineering and Rehabilitation Volume 7 ; 7 >
-      au < manifest ; 2011 ; Journal of NeuroEngineering and Rehabilitation Volume 8 ; 8 >
+      au < ready ; 2011 ; Journal of NeuroEngineering and Rehabilitation Volume 8 ; 8 >
+      au < manifest ; 2012 ; Journal of NeuroEngineering and Rehabilitation Volume 9 ; 9 >
 
     }
 
@@ -2965,7 +3313,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Journal of Neuroinflammation Volume 5 ; 5 >
       au < released ; 2009 ; Journal of Neuroinflammation Volume 6 ; 6 >
       au < released ; 2010 ; Journal of Neuroinflammation Volume 7 ; 7 >
-      au < manifest ; 2011 ; Journal of Neuroinflammation Volume 8 ; 8 >
+      au < ready ; 2011 ; Journal of Neuroinflammation Volume 8 ; 8 >
+      au < manifest ; 2012 ; Journal of Neuroinflammation Volume 9 ; 9 >
 
     }
 
@@ -2984,7 +3333,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Journal of Occupational Medicine and Toxicology Volume 3 ; 3 >
       au < released ; 2009 ; Journal of Occupational Medicine and Toxicology Volume 4 ; 4 >
       au < released ; 2010 ; Journal of Occupational Medicine and Toxicology Volume 5 ; 5 >
-      au < manifest ; 2011 ; Journal of Occupational Medicine and Toxicology Volume 6 ; 6 >
+      au < ready ; 2011 ; Journal of Occupational Medicine and Toxicology Volume 6 ; 6 >
+      au < manifest ; 2012 ; Journal of Occupational Medicine and Toxicology Volume 7 ; 7 >
 
     }
 
@@ -3003,7 +3353,22 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Journal of Orthopaedic Surgery and Research Volume 3 ; 3 >
       au < released ; 2009 ; Journal of Orthopaedic Surgery and Research Volume 4 ; 4 >
       au < released ; 2010 ; Journal of Orthopaedic Surgery and Research Volume 5 ; 5 >
-      au < manifest ; 2011 ; Journal of Orthopaedic Surgery and Research Volume 6 ; 6 >
+      au < ready ; 2011 ; Journal of Orthopaedic Surgery and Research Volume 6 ; 6 >
+      au < manifest ; 2012 ; Journal of Orthopaedic Surgery and Research Volume 7 ; 7 >
+
+    }
+
+    {
+      title <
+        name = Journal of Physiological Anthropology ;
+        issn = 1880-6805 ;
+        issnl = 1880-6805
+      >
+
+      param[base_url] = http://www.jphysiolanthropol.com/
+      param[journal_issn] = 1880-6805
+
+      au < manifest ; 2012 ; Journal of Physiological Anthropology Volume 31 ; 31 >
 
     }
 
@@ -3024,7 +3389,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Journal of the International Society of Sports Nutrition Volume 5 ; 5 >
       au < released ; 2009 ; Journal of the International Society of Sports Nutrition Volume 6 ; 6 >
       au < released ; 2010 ; Journal of the International Society of Sports Nutrition Volume 7 ; 7 >
-      au < manifest ; 2011 ; Journal of the International Society of Sports Nutrition Volume 8 ; 8 >
+      au < ready ; 2011 ; Journal of the International Society of Sports Nutrition Volume 8 ; 8 >
+      au < manifest ; 2012 ; Journal of the International Society of Sports Nutrition Volume 9 ; 9 >
 
     }
 
@@ -3046,7 +3412,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Journal of Translational Medicine Volume 6 ; 6 >
       au < released ; 2009 ; Journal of Translational Medicine Volume 7 ; 7 >
       au < released ; 2010 ; Journal of Translational Medicine Volume 8 ; 8 >
-      au < manifest ; 2011 ; Journal of Translational Medicine Volume 9 ; 9 >
+      au < ready ; 2011 ; Journal of Translational Medicine Volume 9 ; 9 >
+      au < manifest ; 2012 ; Journal of Translational Medicine Volume 10 ; 10 >
 
     }
 
@@ -3064,7 +3431,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Journal of Trauma Management & Outcomes Volume 2 ; 2 >
       au < released ; 2009 ; Journal of Trauma Management & Outcomes Volume 3 ; 3 >
       au < released ; 2010 ; Journal of Trauma Management & Outcomes Volume 4 ; 4 >
-      au < manifest ; 2011 ; Journal of Trauma Management & Outcomes Volume 5 ; 5 >
+      au < ready ; 2011 ; Journal of Trauma Management & Outcomes Volume 5 ; 5 >
+      au < manifest ; 2012 ; Journal of Trauma Management & Outcomes Volume 6 ; 6 >
 
     }
 
@@ -3087,7 +3455,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Lipids in Health and Disease Volume 7 ; 7 >
       au < released ; 2009 ; Lipids in Health and Disease Volume 8 ; 8 >
       au < released ; 2010 ; Lipids in Health and Disease Volume 9 ; 9 >
-      au < manifest ; 2011 ; Lipids in Health and Disease Volume 10 ; 10 >
+      au < ready ; 2011 ; Lipids in Health and Disease Volume 10 ; 10 >
+      au < manifest ; 2012 ; Lipids in Health and Disease Volume 11 ; 11 >
 
     }
 
@@ -3110,7 +3479,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Malaria Journal Volume 7 ; 7 >
       au < released ; 2009 ; Malaria Journal Volume 8 ; 8 >
       au < released ; 2010 ; Malaria Journal Volume 9 ; 9 >
-      au < manifest ; 2011 ; Malaria Journal Volume 10 ; 10 >
+      au < ready ; 2011 ; Malaria Journal Volume 10 ; 10 >
+      au < manifest ; 2012 ; Malaria Journal Volume 11 ; 11 >
 
     }
 
@@ -3124,7 +3494,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.medicalgasresearch.com/
       param[journal_issn] = 2045-9912
 
-      au < exists ; 2011 ; Medical Gas Research Volume 1 ; 1 >
+      au < ready ; 2011 ; Medical Gas Research Volume 1 ; 1 >
+      au < manifest ; 2012 ; Medical Gas Research Volume 2 ; 2 >
 
     }
 
@@ -3147,7 +3518,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Microbial Cell Factories Volume 7 ; 7 >
       au < released ; 2009 ; Microbial Cell Factories Volume 8 ; 8 >
       au < released ; 2010 ; Microbial Cell Factories Volume 9 ; 9 >
-      au < manifest ; 2011 ; Microbial Cell Factories Volume 10 ; 10 >
+      au < ready ; 2011 ; Microbial Cell Factories Volume 10 ; 10 >
+      au < manifest ; 2012 ; Microbial Cell Factories Volume 11 ; 11 >
 
     }
 
@@ -3161,7 +3533,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.microbialinformaticsj.com/
       param[journal_issn] = 2042-5783
 
-      au < exists ; 2011 ; Microbial Informatics and Experimentation Volume 1 ; 1 >
+      au < ready ; 2011 ; Microbial Informatics and Experimentation Volume 1 ; 1 >
+      au < manifest ; 2012 ; Microbial Informatics and Experimentation Volume 2 ; 2 >
 
     }
 
@@ -3180,6 +3553,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2009 ; Molecular Brain Volume 2 ; 2 >
       au < released ; 2010 ; Molecular Brain Volume 3 ; 3 >
       au < manifest ; 2011 ; Molecular Brain Volume 4 ; 4 >
+      au < manifest ; 2012 ; Molecular Brain Volume 5 ; 5 >
 
     }
 
@@ -3202,7 +3576,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Molecular Cancer Volume 7 ; 7 >
       au < released ; 2009 ; Molecular Cancer Volume 8 ; 8 >
       au < released ; 2010 ; Molecular Cancer Volume 9 ; 9 >
-      au < manifest ; 2011 ; Molecular Cancer Volume 10 ; 10 >
+      au < testing ; 2011 ; Molecular Cancer Volume 10 ; 10 >
+      au < manifest ; 2012 ; Molecular Cancer Volume 11 ; 11 >
 
     }
 
@@ -3219,7 +3594,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Molecular Cytogenetics Volume 1 ; 1 >
       au < released ; 2009 ; Molecular Cytogenetics Volume 2 ; 2 >
       au < released ; 2010 ; Molecular Cytogenetics Volume 3 ; 3 >
-      au < manifest ; 2011 ; Molecular Cytogenetics Volume 4 ; 4 >
+      au < testing ; 2011 ; Molecular Cytogenetics Volume 4 ; 4 >
+      au < manifest ; 2012 ; Molecular Cytogenetics Volume 5 ; 5 >
 
     }
 
@@ -3238,7 +3614,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Molecular Neurodegeneration Volume 3 ; 3 >
       au < released ; 2009 ; Molecular Neurodegeneration Volume 4 ; 4 >
       au < released ; 2010 ; Molecular Neurodegeneration Volume 5 ; 5 >
-      au < manifest ; 2011 ; Molecular Neurodegeneration Volume 6 ; 6 >
+      au < testing ; 2011 ; Molecular Neurodegeneration Volume 6 ; 6 >
+      au < manifest ; 2012 ; Molecular Neurodegeneration Volume 7 ; 7 >
       
     }
 
@@ -3258,7 +3635,24 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Molecular Pain Volume 4 ; 4 >
       au < released ; 2009 ; Molecular Pain Volume 5 ; 5 >
       au < released ; 2010 ; Molecular Pain Volume 6 ; 6 >
-      au < manifest ; 2011 ; Molecular Pain Volume 7 ; 7 >
+      au < testing ; 2011 ; Molecular Pain Volume 7 ; 7 >
+      au < manifest ; 2012 ; Molecular Pain Volume 8 ; 8 >
+
+    }
+
+    {
+      title < 
+      name = Multidisciplinary Respiratory Medicine ;
+      issn = 2049-6958 ;
+      issnl = 2049-6958
+    >
+
+      param[base_url] = http://http://www.mrmjournal.com/
+      param[journal_issn] = 2049-6958
+
+      au < expected ; 2010 ; Multidisciplinary Respiratory Medicine Volume 5 ; 5 >
+      au < expected ; 2011 ; Multidisciplinary Respiratory Medicine Volume 6 ; 6 >
+      au < expected ; 2012 ; Multidisciplinary Respiratory Medicine Volume 7 ; 7 >
 
     }
 
@@ -3277,7 +3671,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Neural Development Volume 3 ; 3 >
       au < released ; 2009 ; Neural Development Volume 4 ; 4 >
       au < released ; 2010 ; Neural Development Volume 5 ; 5 >
-      au < manifest ; 2011 ; Neural Development Volume 6 ; 6 >
+      au < testing ; 2011 ; Neural Development Volume 6 ; 6 >
+      au < manifest ; 2012 ; Neural Development Volume 7 ; 7 >
 
     }
 
@@ -3295,7 +3690,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Nonlinear Biomedical Physics Volume 2 ; 2 >
       au < released ; 2009 ; Nonlinear Biomedical Physics Volume 3 ; 3 >
       au < released ; 2010 ; Nonlinear Biomedical Physics Volume 4 ; 4 >
-      au < manifest ; 2011 ; Nonlinear Biomedical Physics Volume 5 ; 5 >
+      au < testing ; 2011 ; Nonlinear Biomedical Physics Volume 5 ; 5 >
+      au < manifest ; 2012 ; Nonlinear Biomedical Physics Volume 6 ; 6 >
 
     }
 
@@ -3316,7 +3712,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Nutrition & Metabolism Volume 5 ; 5 >
       au < released ; 2009 ; Nutrition & Metabolism Volume 6 ; 6 >
       au < released ; 2010 ; Nutrition & Metabolism Volume 7 ; 7 >      
-      au < manifest ; 2011 ; Nutrition & Metabolism Volume 8 ; 8 >      
+      au < testing ; 2011 ; Nutrition & Metabolism Volume 8 ; 8 >
+      au < manifest ; 2012 ; Nutrition & Metabolism Volume 9 ; 9 >
 
     }
 
@@ -3339,7 +3736,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Nutrition Journal Volume 7 ; 7 >
       au < released ; 2009 ; Nutrition Journal Volume 8 ; 8 >
       au < released ; 2010 ; Nutrition Journal Volume 9 ; 9 >      
-      au < manifest ; 2011 ; Nutrition Journal Volume 10 ; 10 >      
+      au < testing ; 2011 ; Nutrition Journal Volume 10 ; 10 >
+      au < manifest ; 2012 ; Nutrition Journal Volume 11 ; 11 >
       
     }
 
@@ -3356,7 +3754,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Orphanet Journal of Rare Diseases Volume 1 ; 1 >
       au < released ; 2007 ; Orphanet Journal of Rare Diseases Volume 2 ; 2 >
       au < released ; 2008 ; Orphanet Journal of Rare Diseases Volume 3 ; 3 >
-      au < manifest ; 2009 ; Orphanet Journal of Rare Diseases Volume 4 ; 4 >
+      au < testing ; 2009 ; Orphanet Journal of Rare Diseases Volume 4 ; 4 >
+      au < testing ; 2010 ; Orphanet Journal of Rare Diseases Volume 5 ; 5 >
+      au < testing ; 2011 ; Orphanet Journal of Rare Diseases Volume 6 ; 6 >
+      au < manifest ; 2012 ; Orphanet Journal of Rare Diseases Volume 7 ; 7 >
 
     }
 
@@ -3372,7 +3773,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; 2007 ; Osteopathic Medicine and Primary Care Volume 1 ; 1 >
       au < released ; 2008 ; Osteopathic Medicine and Primary Care Volume 2 ; 2 >
-      au < manifest ; 2009 ; Osteopathic Medicine and Primary Care Volume 3 ; 3 >
+      au < testing ; 2009 ; Osteopathic Medicine and Primary Care Volume 3 ; 3 >
+      au < manifest ; 2010 ; Osteopathic Medicine and Primary Care Volume 4 ; 4 >
 
     }
 
@@ -3390,8 +3792,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2009 ; Parasites & Vectors Volume 2 ; 2 >
       au < released ; 2010 ; Parasites & Vectors Volume 3 ; 3 >
       au < released ; 2011 ; Parasites & Vectors Volume 4 ; 4 >
-      au < released ; 2012 ; Parasites & Vectors Volume 5 ; 5 >
-      au < manifest ; 2013 ; Parasites & Vectors Volume 6 ; 6 >
+      au < down ; 2012 ; Parasites & Vectors Volume 5 ; 5 >
 
     }
 
@@ -3413,6 +3814,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2009 ; Particle and Fibre Toxicology Volume 6 ; 6 >
       au < released ; 2010 ; Particle and Fibre Toxicology Volume 7 ; 7 >
       au < manifest ; 2011 ; Particle and Fibre Toxicology Volume 8 ; 8 >
+      au < manifest ; 2012 ; Particle and Fibre Toxicology Volume 9 ; 9 >
 
     }
 
@@ -3429,6 +3831,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Patient Safety in Surgery Volume 1 ; 1 >
       au < released ; 2008 ; Patient Safety in Surgery Volume 2 ; 2 >
       au < manifest ; 2009 ; Patient Safety in Surgery Volume 3 ; 3 >
+      au < manifest ; 2010 ; Patient Safety in Surgery Volume 4 ; 4 >
+      au < manifest ; 2011 ; Patient Safety in Surgery Volume 5 ; 5 >
+      au < manifest ; 2012 ; Patient Safety in Surgery Volume 6 ; 6 >
 
     }
 
@@ -3449,6 +3854,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Pediatric Rheumatology Volume 5 ; 5 >
       au < released ; 2008 ; Pediatric Rheumatology Volume 6 ; 6 >
       au < manifest ; 2009 ; Pediatric Rheumatology Volume 7 ; 7 >
+      au < manifest ; 2010 ; Pediatric Rheumatology Volume 8 ; 8 >
+      au < manifest ; 2011 ; Pediatric Rheumatology Volume 9 ; 9 >
+      au < manifest ; 2012 ; Pediatric Rheumatology Volume 10 ; 10 >
 
     }
 
@@ -3466,6 +3874,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Philosophy, Ethics, and Humanities in Medicine Volume 2 ; 2 >
       au < released ; 2008 ; Philosophy, Ethics, and Humanities in Medicine Volume 3 ; 3 >
       au < manifest ; 2009 ; Philosophy, Ethics, and Humanities in Medicine Volume 4 ; 4 >
+      au < manifest ; 2010 ; Philosophy, Ethics, and Humanities in Medicine Volume 5 ; 5 >
+      au < manifest ; 2011 ; Philosophy, Ethics, and Humanities in Medicine Volume 6 ; 6 >
+      au < manifest ; 2012 ; Philosophy, Ethics, and Humanities in Medicine Volume 7 ; 7 >
 
     }
 
@@ -3484,6 +3895,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Plant Methods Volume 3 ; 3 >
       au < released ; 2008 ; Plant Methods Volume 4 ; 4 >
       au < manifest ; 2009 ; Plant Methods Volume 5 ; 5 >
+      au < manifest ; 2010 ; Plant Methods Volume 6 ; 6 >
+      au < manifest ; 2011 ; Plant Methods Volume 7 ; 7 >
+      au < manifest ; 2012 ; Plant Methods Volume 8 ; 8 >
 
     }
 
@@ -3504,6 +3918,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Population Health Metrics Volume 5 ; 5 >
       au < released ; 2008 ; Population Health Metrics Volume 6 ; 6 >
       au < manifest ; 2009 ; Population Health Metrics Volume 7 ; 7 >
+      au < manifest ; 2010 ; Population Health Metrics Volume 8 ; 8 >
+      au < manifest ; 2011 ; Population Health Metrics Volume 9 ; 9 >
+      au < manifest ; 2012 ; Population Health Metrics Volume 10 ; 10 >
 
     }
 
@@ -3524,6 +3941,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Proteome Science Volume 5 ; 5 >
       au < released ; 2008 ; Proteome Science Volume 6 ; 6 >
       au < manifest ; 2009 ; Proteome Science Volume 7 ; 7 >
+      au < manifest ; 2010 ; Proteome Science Volume 8 ; 8 >
+      au < manifest ; 2011 ; Proteome Science Volume 9 ; 9 >
+      au < manifest ; 2012 ; Proteome Science Volume 10 ; 10 >
 
     }
 
@@ -3541,6 +3961,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Radiation Oncology Volume 2 ; 2 >
       au < released ; 2008 ; Radiation Oncology Volume 3 ; 3 >
       au < manifest ; 2009 ; Radiation Oncology Volume 4 ; 4 >
+      au < manifest ; 2010 ; Radiation Oncology Volume 5 ; 5 >
+      au < manifest ; 2011 ; Radiation Oncology Volume 6 ; 6 >
+      au < manifest ; 2012 ; Radiation Oncology Volume 7 ; 7 >
 
     }
 
@@ -3561,6 +3984,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Reproductive Biology and Endocrinology Volume 5 ; 5 >
       au < released ; 2008 ; Reproductive Biology and Endocrinology Volume 6 ; 6 >
       au < manifest ; 2009 ; Reproductive Biology and Endocrinology Volume 7 ; 7 >
+      au < manifest ; 2010 ; Reproductive Biology and Endocrinology Volume 8 ; 8 >
+      au < manifest ; 2011 ; Reproductive Biology and Endocrinology Volume 9 ; 9 >
+      au < manifest ; 2012 ; Reproductive Biology and Endocrinology Volume 10 ; 10 >
 
     }
 
@@ -3580,6 +4006,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Reproductive Health Volume 4 ; 4 >
       au < released ; 2008 ; Reproductive Health Volume 5 ; 5 >
       au < manifest ; 2009 ; Reproductive Health Volume 6 ; 6 >
+      au < manifest ; 2010 ; Reproductive Health Volume 7 ; 7 >
+      au < manifest ; 2011 ; Reproductive Health Volume 8 ; 8 >
+      au < manifest ; 2012 ; Reproductive Health Volume 9 ; 9 >
 
     }
 
@@ -3599,6 +4028,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Retrovirology Volume 4 ; 4 >
       au < released ; 2008 ; Retrovirology Volume 5 ; 5 >
       au < manifest ; 2009 ; Retrovirology Volume 6 ; 6 >
+      au < manifest ; 2010 ; Retrovirology Volume 7 ; 7 >
+      au < manifest ; 2011 ; Retrovirology Volume 8 ; 8 >
+      au < manifest ; 2012 ; Retrovirology Volume 9 ; 9 >
 
     }
 
@@ -3608,6 +4040,7 @@ comment[bmr] = journal archive available, but no new volumes
         issn = 1746-1448 ;
         issnl = 1746-1448
       >
+      comment[SalSys] = Title changed name/url to Aquatic Biosystems/aquaticbiosystems.org but redirects accordingly
 
       param[base_url] = http://www.salinesystems.org/
       param[journal_issn] = 1746-1448
@@ -3617,6 +4050,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Saline Systems Volume 3 ; 3 >
       au < released ; 2008 ; Saline Systems Volume 4 ; 4 >
       au < manifest ; 2009 ; Saline Systems Volume 5 ; 5 >
+      au < manifest ; 2010 ; Saline Systems Volume 6 ; 6 >
+      au < manifest ; 2011 ; Saline Systems Volume 7 ; 7 >
+      au < manifest ; 2012 ; Saline Systems Volume 8 ; 8 >
 
     }
 
@@ -3634,6 +4070,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Scoliosis Volume 2 ; 2 >
       au < released ; 2008 ; Scoliosis Volume 3 ; 3 >
       au < manifest ; 2009 ; Scoliosis Volume 4 ; 4 >
+      au < manifest ; 2010 ; Scoliosis Volume 5 ; 5 >
+      au < manifest ; 2011 ; Scoliosis Volume 6 ; 6 >
+      au < manifest ; 2012 ; Scoliosis Volume 7 ; 7 >
 
     }
 
@@ -3651,6 +4090,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Source Code for Biology and Medicine Volume 2 ; 2 >
       au < released ; 2008 ; Source Code for Biology and Medicine Volume 3 ; 3 >
       au < manifest ; 2009 ; Source Code for Biology and Medicine Volume 4 ; 4 >
+      au < manifest ; 2010 ; Source Code for Biology and Medicine Volume 5 ; 5 >
+      au < manifest ; 2011 ; Source Code for Biology and Medicine Volume 6 ; 6 >
+      au < manifest ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 >
 
     }
 
@@ -3668,6 +4110,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
       au < released ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
       au < manifest ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
+      au < manifest ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 >
+      au < manifest ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
+      au < manifest ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 >
 
 
     }
@@ -3688,6 +4133,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Theoretical Biology and Medical Modelling Volume 4 ; 4 >
       au < released ; 2008 ; Theoretical Biology and Medical Modelling Volume 5 ; 5 >
       au < manifest ; 2009 ; Theoretical Biology and Medical Modelling Volume 6 ; 6 >
+      au < manifest ; 2010 ; Theoretical Biology and Medical Modelling Volume 7 ; 7 >
+      au < manifest ; 2011 ; Theoretical Biology and Medical Modelling Volume 8 ; 8 >
+      au < manifest ; 2012 ; Theoretical Biology and Medical Modelling Volume 9 ; 9 >
 
     }
 
@@ -3710,6 +4158,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2009 ; Thrombosis Journal Volume 7 ; 7 >
       au < released ; 2010 ; Thrombosis Journal Volume 8 ; 8 >
       au < manifest ; 2011 ; Thrombosis Journal Volume 9 ; 9 >
+      au < manifest ; 2012 ; Thrombosis Journal Volume 10 ; 10 >
 
     }
 
@@ -3735,6 +4184,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2009 ; Trials Volume 10 ; 10 >
       au < released ; 2010 ; Trials Volume 11 ; 11 >
       au < manifest ; 2011 ; Trials Volume 12 ; 12 >
+      au < manifest ; 2012 ; Trials Volume 13 ; 13 >
 
     }
 
@@ -3744,6 +4194,12 @@ comment[bmr] = journal archive available, but no new volumes
         issn = 1297-9716 ;
         issnl = 1297-9716
       >
+      
+      param[base_url] = http://www.veterinaryresearch.org/
+      param[journal_issn] = 1297-9716
+
+      au < exists ; 2011 ; Veterinary Research Volume 42 ; 42 >
+      au < exists ; 2012 ; Veterinary Research Volume 43 ; 43 >
 
     }
 
@@ -3764,7 +4220,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Virology Journal Volume 5 ; 5 >
       au < released ; 2009 ; Virology Journal Volume 6 ; 6 >
       au < released ; 2010 ; Virology Journal Volume 7 ; 7 >      
-      au < manifest ; 2011 ; Virology Journal Volume 8 ; 8 >      
+      au < manifest ; 2011 ; Virology Journal Volume 8 ; 8 >
+      au < manifest ; 2012 ; Virology Journal Volume 9 ; 9>
 
     }
 
@@ -3784,6 +4241,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2009 ; World Journal of Emergency Surgery Volume 4 ; 4 >
       au < released ; 2010 ; World Journal of Emergency Surgery Volume 5 ; 5 >
       au < manifest ; 2011 ; World Journal of Emergency Surgery Volume 6 ; 6 >
+      au < manifest ; 2012 ; World Journal of Emergency Surgery Volume 7 ; 7 >
 
     }
 
@@ -3806,6 +4264,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2009 ; World Journal of Surgical Oncology Volume 7 ; 7 >
       au < released ; 2010 ; World Journal of Surgical Oncology Volume 8 ; 8 >
       au < manifest ; 2011 ; World Journal of Surgical Oncology Volume 9 ; 9 >
+      au < manifest ; 2012 ; World Journal of Surgical Oncology Volume 10 ; 10 >
 
     }
         

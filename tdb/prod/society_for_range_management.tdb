@@ -29,14 +29,15 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = rama
 
-      au < manifest ; 2004 ; Rangeland Ecology & Management Volume 57 ; 57 >
-      au < manifest ; 2005 ; Rangeland Ecology & Management Volume 58 ; 58 >
-      au < manifest ; 2006 ; Rangeland Ecology & Management Volume 59 ; 59 >
-      au < manifest ; 2007 ; Rangeland Ecology & Management Volume 60 ; 60 >
-      au < manifest ; 2008 ; Rangeland Ecology & Management Volume 61 ; 61 >
-      au < manifest ; 2009 ; Rangeland Ecology & Management Volume 62 ; 62 >
-      au < manifest ; 2010 ; Rangeland Ecology & Management Volume 63 ; 63 >
-      au < manifest ; 2011 ; Rangeland Ecology & Management Volume 64 ; 64 >
+      au < ready ; 2004 ; Rangeland Ecology & Management Volume 57 ; 57 >
+      au < doNotProcess ; 2005 ; Rangeland Ecology & Management Volume 58 ; 58 >
+      au < ready ; 2006 ; Rangeland Ecology & Management Volume 59 ; 59 >
+      au < ready ; 2007 ; Rangeland Ecology & Management Volume 60 ; 60 >
+      au < ready ; 2008 ; Rangeland Ecology & Management Volume 61 ; 61 >
+      au < ready ; 2009 ; Rangeland Ecology & Management Volume 62 ; 62 >
+      au < ready ; 2010 ; Rangeland Ecology & Management Volume 63 ; 63 >
+      au < ready ; 2011 ; Rangeland Ecology & Management Volume 64 ; 64 >
+      au < manifest ; 2012 ; Rangeland Ecology & Management Volume 65 ; 65 >
 
     }
  
@@ -58,14 +59,15 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = rala
 
-      au < manifest ; 2004 ; Rangelands Volume 26 ; 26 >
-      au < manifest ; 2005 ; Rangelands Volume 27 ; 27 >
-      au < manifest ; 2006 ; Rangelands Volume 28 ; 28 >
-      au < manifest ; 2007 ; Rangelands Volume 29 ; 29 >
-      au < manifest ; 2008 ; Rangelands Volume 30 ; 30 >
-      au < manifest ; 2009 ; Rangelands Volume 31 ; 31 >
-      au < manifest ; 2010 ; Rangelands Volume 32 ; 32 >
-      au < manifest ; 2011 ; Rangelands Volume 33 ; 33 >
+      au < ready ; 2004 ; Rangelands Volume 26 ; 26 >
+      au < ready ; 2005 ; Rangelands Volume 27 ; 27 >
+      au < ready ; 2006 ; Rangelands Volume 28 ; 28 >
+      au < ready ; 2007 ; Rangelands Volume 29 ; 29 >
+      au < ready ; 2008 ; Rangelands Volume 30 ; 30 >
+      au < ready ; 2009 ; Rangelands Volume 31 ; 31 >
+      au < ready ; 2010 ; Rangelands Volume 32 ; 32 >
+      au < ready ; 2011 ; Rangelands Volume 33 ; 33 >
+      au < manifest ; 2012 ; Rangelands Volume 34 ; 34 >
 
     }
 

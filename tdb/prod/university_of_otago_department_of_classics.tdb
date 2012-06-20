@@ -16,6 +16,7 @@
     plugin = nz.ac.otago.plugin.scholia.ScholiaPlugin
     param[base_url] = http://www.otago.ac.nz/
     implicit < status ; year ; name ; param[volume] >
+    comment[doNotProcess] = RU3904
     
     au < down ; 1992 ; Scholia Volume 1 ; 1 >
     au < down ; 1993 ; Scholia Volume 2 ; 2 >

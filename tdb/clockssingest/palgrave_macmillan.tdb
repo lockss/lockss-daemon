@@ -1,0 +1,491 @@
+{
+  publisher <
+    name = Palgrave Macmillan
+  >
+    attr[contract] = 2011
+    plugin = org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin
+    param[base_url] = http://www.palgrave-journals.com/
+    implicit < status ; status2 ; year ; name ; param[year] ; param[volume_name] >
+
+    {
+
+      title <
+        name = Acta Politica;
+        issn = 0001-6810;
+        eissn = 1741-1416;
+        issnl = 0001-6810
+      >
+
+    param[journal_id] = ap
+
+    }
+
+    {
+
+      title <
+        name = Asian Business Management;
+        issn = 1472-4782;
+        eissn = 1476-9328;
+        issnl = 1472-4782
+      >
+
+    param[journal_id] = abm
+
+    }
+
+    {
+
+      title <
+        name = British Politics;
+        issn = 1746-918X;
+        eissn = 1746-9198;
+        issnl = 1746-918X
+      >
+
+    param[journal_id] = bp
+
+    }
+
+    {
+
+      title <
+        name = Comparative European Politics;
+        issn = 1472-4790;
+        eissn = 1740-388X;
+        issnl = 1472-4790
+      >
+
+    param[journal_id] = cep
+
+    }
+
+    {
+
+      title <
+        name = Contemporary Political Theory;
+        issn = 1470-8914;
+        eissn = 1476-9336;
+        issnl = 1470-8914
+      >
+
+    param[journal_id] = cpt
+
+    }
+
+    {
+
+      title <
+        name = Corporate Reputation Review;
+        issn = 1363-3589;
+        eissn = 1479-1889;
+        issnl = 1363-3589
+      >
+
+    param[journal_id] = crr
+
+    }
+
+    {
+
+      title <
+        name = Crime Prevention & Community Safety;
+        issn = 1460-3780;
+        eissn = 1743-4629;
+        issnl = 1460-3780
+      >
+
+    param[journal_id] = cpcs
+
+    }
+
+    {
+
+      title <
+        name = French Politics;
+        issn = 1476-3419;
+        eissn = 1476-3427;
+        issnl = 1476-3419
+      >
+
+    param[journal_id] = fp
+
+    }
+
+    {
+
+      title <
+        name = Interest Groups & Advocacy;
+        issn = 2047-7414;
+        eissn = 2047-7422;
+        issnl = 2047-7414
+      >
+
+    param[journal_id] = iga
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Disclosure & Governance;
+        issn = 1741-3591;
+        eissn = 1746-6539;
+        issnl = 1741-3591
+      >
+
+    param[journal_id] = jdg
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Educational Advancement;
+        issn = 1744-6503;
+        eissn = 1744-6511;
+        issnl = 1744-6503
+      >
+
+    param[journal_id] = ijea
+
+    }
+
+    {
+
+      title <
+        name = International Politics;
+        issn = 1384-5748;
+        eissn = 1740-3898;
+        issnl = 1384-5748
+      >
+
+    param[journal_id] = ip
+
+    }
+
+    {
+
+      title <
+        name = Journal of Asset Management;
+        issn = 1470-8272;
+        eissn = 1479-179X;
+        issnl = 1470-8272
+      >
+
+    param[journal_id] = jam
+
+    }
+
+    {
+
+      title <
+        name = Journal of Banking Regulation;
+        issn = 1745-6452;
+        eissn = 1750-2071;
+        issnl = 1745-6452
+      >
+
+    param[journal_id] = jbr
+
+    }
+
+    {
+
+      title <
+        name = Journal of Brand Management;
+        issn = 1350-231X;
+        eissn = 1479-1803;
+        issnl = 1350-231X
+      >
+
+    param[journal_id] = bm
+
+    }
+
+    {
+
+      title <
+        name = Journal of Building Appraisal;
+        issn = 1742-8262;
+        eissn = 1744-9545;
+        issnl = 1742-8262
+      >
+
+    param[journal_id] = jba
+
+    }
+
+    {
+
+      title <
+        name = Journal of Database Marketing & Customer Strategy Management;
+        issn = 1741-2439;
+        eissn = 1741-2447;
+        issnl = 1741-2439
+      >
+
+    param[journal_id] = dbm
+
+    }
+
+    {
+
+      title <
+        name = Journal of Derivatives and Hedge Funds;
+        issn = 1753-9641;
+        eissn = 1753-965X;
+        issnl = 1753-9641
+      >
+
+    param[journal_id] = jdhf
+
+    }
+
+    {
+
+      title <
+        name = Journal of Digital Asset Management;
+        issn = 1743-6540;
+        eissn = 1743-6559;
+        issnl = 1743-6540
+      >
+
+    param[journal_id] = dam
+
+    }
+
+    {
+
+      title <
+        name = Journal of Direct, Data and Digital Marketing Practice;
+        issn = 1746-0166;
+        eissn = 1746-0174;
+        issnl = 1746-0166
+      >
+
+    param[journal_id] = dddmp
+
+    }
+
+    {
+
+      title <
+        name = Journal of Financial Services Marketing;
+        issn = 1363-0539;
+        eissn = 1479-1846;
+        issnl = 1363-0539
+      >
+
+    param[journal_id] = fsm
+
+    }
+
+    {
+
+      title <
+        name = Journal of International Relations and Development;
+        issn = 1408-6980;
+        eissn = 1581-1980;
+        issnl = 1408-6980
+      >
+
+    param[journal_id] = jird
+
+    }
+
+    {
+
+      title <
+        name = Journal of Public Health Policy;
+        issn = 0197-5897;
+        eissn = 1745-655X;
+        issnl = 0197-5897
+      >
+
+    param[journal_id] = jphp
+
+    }
+
+    {
+
+      title <
+        name = Journal of Retail & Leisure Property;
+        issn = 1479-1110;
+        eissn = 1750-2098;
+        issnl = 1479-1110
+      >
+
+    param[journal_id] = rlp
+
+    }
+
+    {
+
+      title <
+        name = Journal of Revenue & Pricing Management;
+        issn = 1476-6930;
+        eissn = 1477-657X;
+        issnl = 1476-6930
+      >
+
+    param[journal_id] = rpm
+
+    }
+
+    {
+
+      title <
+        name = Journal of Targeting, Measurement and Analysis for Marketing;
+        issn = 0967-3237;
+        eissn = 1479-1862;
+        issnl = 0967-3237
+      >
+
+    param[journal_id] = jt
+
+    }
+
+    {
+
+      title <
+        name = Latino Studies;
+        issn = 1476-3435;
+        eissn = 1476-3443;
+        issnl = 1476-3435
+      >
+
+    param[journal_id] = lst
+
+    }
+
+    {
+
+      title <
+        name = Maritime Economics & Logistics;
+        issn = 1479-2931;
+        eissn = 1479-294X;
+        issnl = 1479-2931
+      >
+
+    param[journal_id] = mel
+
+    }
+
+    {
+
+      title <
+        name = Pensions: An International Journal;
+        issn = 1478-5315;
+        eissn = 1750-208X;
+        issnl = 1478-5315
+      >
+
+    param[journal_id] = pm
+
+    }
+
+    {
+
+      title <
+        name = Place Branding and Public Diplomacy;
+        issn = 1751-8040;
+        eissn = 1751-8059;
+        issnl = 1751-8040
+      >
+
+    param[journal_id] = pb
+
+    }
+
+    {
+
+      title <
+        name = postmedieval;
+        issn = 2040-5960;
+        eissn = 2040-5979;
+        issnl = 2040-5960
+      >
+
+    param[journal_id] = pmed
+
+    }
+
+    {
+
+      title <
+        name = Psychoanalysis, Culture & Society;
+        issn = 1088-0763;
+        eissn = 1543-3390;
+        issnl = 1088-0763
+      >
+
+    param[journal_id] = pcs
+
+    }
+
+    {
+
+      title <
+        name = Risk Management;
+        issn = 1460-3799;
+        eissn = 1743-4637;
+        issnl = 1460-3799
+      >
+
+    param[journal_id] = rm
+
+    }
+
+    {
+
+      title <
+        name = Security Journal;
+        issn = 0955-1662;
+        eissn = 1743-4645;
+        issnl = 0955-1662
+      >
+
+    param[journal_id] = sj
+
+    }
+
+    {
+
+      title <
+        name = Social Theory & Health;
+        issn = 1477-8211;
+        eissn = 1477-822X;
+        issnl = 1477-8211
+      >
+
+    param[journal_id] = sth
+
+    }
+
+    {
+
+      title <
+        name = Subjectivity;
+        issn = 1755-6341;
+        eissn = 1755-635X;
+        issnl = 1755-6341
+      >
+
+    param[journal_id] = sub
+
+    }
+
+    {
+
+      title <
+        name = Urban Design International;
+        issn = 1357-5317;
+        eissn = 1468-4519;
+        issnl = 1357-5317
+      >
+
+    param[journal_id] = udi
+
+    }
+
+}

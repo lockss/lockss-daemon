@@ -1,10 +1,10 @@
 /*
- * $Id: DaemonStatus.java,v 1.82 2011-06-21 00:31:47 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.82.8.1 2012-06-20 00:02:55 nchondros Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,6 +38,7 @@ import java.util.*;
 
 import javax.servlet.*;
 
+import org.apache.commons.lang.time.FastDateFormat;
 import org.mortbay.html.*;
 import org.w3c.dom.Document;
 
@@ -59,13 +60,6 @@ public class DaemonStatus extends LockssServlet {
   static final int OUTPUT_TEXT = 2;
   static final int OUTPUT_XML = 3;
   static final int OUTPUT_CSV = 4;
-
-  /** Format to display date/time in tables */
-  public static final DateFormat tableDf =
-    new SimpleDateFormat("HH:mm:ss MM/dd/yy");
-
-//   public static final DateFormat tableDf =
-//     DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
 
   private String tableName;
   private String tableKey;
@@ -164,7 +158,7 @@ public class DaemonStatus extends LockssServlet {
       try {
         doXmlStatusTable();
       } catch (XmlDomBuilder.XmlDomException xde) {
-        throw new IOException("Error with XML: "+xde.toString());
+        throw new IOException("Error building XML", xde);
       }
       break;
     case OUTPUT_TEXT:
@@ -207,8 +201,7 @@ public class DaemonStatus extends LockssServlet {
 
   private void doHtmlStatusTable() throws IOException {
     Page page = doHtmlStatusTable0();
-    layoutFooter(page);
-    ServletUtil.writePage(resp, page);
+    endPage(page);
   }
 
   private void doTextStatusTable() throws IOException {
@@ -705,6 +698,7 @@ public class DaemonStatus extends LockssServlet {
       return "left";
     case ColumnDescriptor.TYPE_INT:
     case ColumnDescriptor.TYPE_PERCENT:
+    case ColumnDescriptor.TYPE_AGREEMENT:
     case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
       return "right";
     }
@@ -719,6 +713,7 @@ public class DaemonStatus extends LockssServlet {
       return true;
     case ColumnDescriptor.TYPE_INT:
     case ColumnDescriptor.TYPE_PERCENT:
+    case ColumnDescriptor.TYPE_AGREEMENT:
     case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
     case ColumnDescriptor.TYPE_DATE:
       return false;
@@ -763,7 +758,13 @@ public class DaemonStatus extends LockssServlet {
     if (val instanceof StatusTable.Reference) {
       return getRefString((StatusTable.Reference)val, type);
     } else if (val instanceof StatusTable.SrvLink) {
-      return getSrvLinkString((StatusTable.SrvLink)val, type);
+      // Display as link iff user is allowed access to the target servlet
+      StatusTable.SrvLink slink = (StatusTable.SrvLink)val;
+      if (isServletRunnable(slink.getServletDescr())) {
+	return getSrvLinkString(slink, type);
+      } else {
+	return getDisplayString1(StatusTable.getActualValue(val), type);
+      }
     } else if (val instanceof StatusTable.LinkValue) {
       // A LinkValue type we don't know about.  Just display its embedded
       // value.
@@ -816,7 +817,9 @@ public class DaemonStatus extends LockssServlet {
   private String getDisplayString1(Object val, int type) {
     if (val instanceof StatusTable.DisplayedValue) {
       StatusTable.DisplayedValue aval = (StatusTable.DisplayedValue)val;
-      String str = getDisplayString1(aval.getValue(), type);
+      String str = aval.hasDisplayString()
+	? HtmlUtil.htmlEncode(aval.getDisplayString())
+	: getDisplayString1(aval.getValue(), type);
       String color = aval.getColor();
       String footnote = aval.getFootnote();
       if (color != null) {
@@ -838,12 +841,63 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  static NumberFormat bigIntFmt = NumberFormat.getInstance();
-  static NumberFormat floatFmt = new DecimalFormat("0.0");
-  static {
-//     if (bigIntFmt instanceof DecimalFormat) {
-//       ((DecimalFormat)bigIntFmt).setDecimalSeparatorAlwaysShown(true);
-//     }
+  // Thread-safe formatters.
+  // FastDateFormat is thread-safe, NumberFormat & subclasses aren't.
+
+  /** Format to display date/time in tables */
+  private static final Format tableDf =
+    FastDateFormat.getInstance("HH:mm:ss MM/dd/yy");
+
+//   public static final DateFormat tableDf =
+//     DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
+
+  static Format getTableDateFormat() {
+    return tableDf;
+  }
+
+  private static final ThreadLocal<NumberFormat> agmntFmt = 
+    new ThreadLocal<NumberFormat> () {
+    @Override protected NumberFormat initialValue() {
+      return new DecimalFormat("0.00");
+    }
+  };
+
+  static NumberFormat getAgreementFormat() {
+    return agmntFmt.get();
+  }
+
+  private static final ThreadLocal<NumberFormat> floatFmt = 
+    new ThreadLocal<NumberFormat> () {
+    @Override protected NumberFormat initialValue() {
+      return new DecimalFormat("0.0");
+    }
+  };
+
+  static NumberFormat getFloatFormat() {
+    return floatFmt.get();
+  }
+
+  private static final ThreadLocal<NumberFormat> bigIntFmt = 
+    new ThreadLocal<NumberFormat> () {
+    @Override protected NumberFormat initialValue() {
+      NumberFormat fmt = NumberFormat.getInstance();
+//       if (fmt instanceof DecimalFormat) {
+//         ((DecimalFormat)fmt).setDecimalSeparatorAlwaysShown(true);
+//       }
+      return fmt;
+    }
+  };
+
+  static NumberFormat getBigIntFormat() {
+    return bigIntFmt.get();
+  }
+
+  /* DecimalFormat automatically applies half-even rounding to
+   * values being formatted under Java < 1.6.  This is a workaround. */ 
+  private static String doubleToPercent(double d) {
+    int i = (int)(d * 10000);
+    double pc = i / 100.0;
+    return getAgreementFormat().format(pc);
   }
 
   // turn a value into a display string
@@ -857,7 +911,7 @@ public class DaemonStatus extends LockssServlet {
 	if (val instanceof Number) {
 	  long lv = ((Number)val).longValue();
 	  if (lv >= 1000000) {
-	    return bigIntFmt.format(lv);
+	    return getBigIntFormat().format(lv);
 	  }
 	}
 	// fall thru
@@ -865,10 +919,13 @@ public class DaemonStatus extends LockssServlet {
       default:
 	return val.toString();
       case ColumnDescriptor.TYPE_FLOAT:
-	return floatFmt.format(((Number)val).doubleValue());
+	return getFloatFormat().format(((Number)val).doubleValue());
       case ColumnDescriptor.TYPE_PERCENT:
 	float fv = ((Number)val).floatValue();
 	return Integer.toString(Math.round(fv * 100)) + "%";
+      case ColumnDescriptor.TYPE_AGREEMENT:
+	float av = ((Number)val).floatValue();
+	return doubleToPercent(av) + "%";
       case ColumnDescriptor.TYPE_DATE:
 	Date d;
 	if (val instanceof Number) {
@@ -888,13 +945,13 @@ public class DaemonStatus extends LockssServlet {
 	return StringUtil.timeIntervalToString(millis);
       }
     } catch (NumberFormatException e) {
-      log.warning("Bad number: " + val.toString() + ": " + e.toString());
+      log.warning("Bad number: " + val.toString(), e);
       return val.toString();
     } catch (ClassCastException e) {
-      log.warning("Wrong type value: " + val.toString() + ": " + e.toString());
+      log.warning("Wrong type value: " + val.toString(), e);
       return val.toString();
     } catch (Exception e) {
-      log.warning("Error formatting value: " + val.toString() + ": " + e.toString());
+      log.warning("Error formatting value: " + val.toString(), e);
       return val.toString();
     }
   }
@@ -904,7 +961,7 @@ public class DaemonStatus extends LockssServlet {
     if (val == 0 || val == -1) {
       return "never";
     } else {
-      return tableDf.format(d);
+      return getTableDateFormat().format(d);
     }
   }
 

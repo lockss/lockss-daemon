@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmeraldUrlNormalizer.java,v 1.1 2007-10-26 22:25:12 thib_gc Exp $
+ * $Id: TestEmeraldUrlNormalizer.java,v 1.1.58.1 2012-06-20 00:03:04 nchondros Exp $
  */
 
 /*
@@ -58,6 +58,10 @@ public class TestEmeraldUrlNormalizer extends LockssTestCase {
     assertEquals("http://www.example.com/page.do;jsessionid=0FEDCBA9876543210FEDCBA987654321?foo=bar",
                  normalizer.normalizeUrl("http://www.example.com/page.do;jsessionid=123456789ABCDEF0123456789ABCDEF0;jsessionid=0FEDCBA9876543210FEDCBA987654321?foo=bar",
                                          null));
+    assertEquals("http://www.emeraldinsight.com/journals.htm?issn=1757-0972&volume=4&issue=3",
+            normalizer.normalizeUrl("http://www.emeraldinsight.com/journals.htm?issn=1757-0972&volume=4&issue=3&PHPSESSID=4nf97ud2ko8qoj6caeerpa2ek6",
+                                    null));
+	
   }
 
 }

@@ -219,6 +219,7 @@ public class TestEmeraldMetadataExtractor extends LockssTestCase {
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
+    assertNotNull(mle);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);

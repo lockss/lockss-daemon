@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = catholic_historical_review
+    attr[journal_id] = cat
 
     au < released ; 2000 ; The Catholic Historical Review Volume 86 ; 86 >
     au < released ; 2001 ; The Catholic Historical Review Volume 87 ; 87 >
@@ -29,6 +30,7 @@
     au < released ; 2009 ; The Catholic Historical Review Volume 95 ; 95 >
     au < released ; 2010 ; The Catholic Historical Review Volume 96 ; 96 >
     au < manifest ; 2011 ; The Catholic Historical Review Volume 97 ; 97 >
+    au < manifest ; 2012 ; The Catholic Historical Review Volume 98 ; 98 >
 
   }
 
@@ -41,6 +43,7 @@
     >
 
     param[journal_dir] = us_catholic_historian
+    attr[journal_id] = cht
 
     au < released ; 2009 ; U.S. Catholic Historian Volume 27 ; 27 >
     au < manifest ; 2010 ; U.S. Catholic Historian Volume 28 ; 28 >
@@ -56,6 +59,8 @@
     >
 
     param[journal_dir] = xxx
+    
+    comment[0] = content not online yet
 
   }
 

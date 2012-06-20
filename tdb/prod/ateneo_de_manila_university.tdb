@@ -14,10 +14,11 @@
 
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = philippine_studies
+    attr[journal_id] = phs
     implicit < status ; year ; name ; param[volume] >
     comment[coverage] = starting from vol.59 
 
-    au < manifest ; 2011 ; Philippine Studies Volume 59 ; 59 >
+    au < ready ; 2011 ; Philippine Studies Volume 59 ; 59 >
   }
   
 }
