@@ -5,7 +5,7 @@
     name = Michigan State University Extension
   >
 
-  plugin = org.lockss.plugin.michganstate.MichiganStateUExtPlugin
+  plugin = org.lockss.plugin.msue.MichiganStateUniversityExtensionPlugin
   param[base_url] = http://web2.msue.msu.edu/
   implicit < status ; year; name ; param[year] >
 
