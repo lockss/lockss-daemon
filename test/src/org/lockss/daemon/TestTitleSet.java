@@ -1,10 +1,10 @@
 /*
- * $Id: TestTitleSet.java,v 1.5 2011-06-30 19:06:00 tlipkis Exp $
+ * $Id: TestTitleSet.java,v 1.6 2012-06-20 18:58:46 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,7 +54,7 @@ public class TestTitleSet extends LockssTestCase {
 
   public void testIll() throws Exception {
     try {
-      new TitleSetAllTitles(null);
+      new TitleSetAllAus(null);
       fail("Should throw NullPointerException");
     } catch (NullPointerException e) {
     }
@@ -71,7 +71,7 @@ public class TestTitleSet extends LockssTestCase {
   }
 
   public void testSort() throws Exception {
-    TitleSet tsAll1 = new TitleSetAllTitles(daemon);
+    TitleSet tsAll1 = new TitleSetAllAus(daemon);
     TitleSet tsAll2 = new TitleSetActiveAus(daemon);
     TitleSet ts1 = TitleSetXpath.create(daemon, "Title a", "[foo]");
     TitleSet ts2 = TitleSetXpath.create(daemon, "Title B", "[foo]");

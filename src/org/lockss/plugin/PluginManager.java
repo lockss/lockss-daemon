@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.225 2012-06-17 23:06:44 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.226 2012-06-20 18:58:46 thib_gc Exp $
  */
 
 /*
@@ -38,18 +38,16 @@ import java.security.KeyStore;
 import java.util.*;
 import java.util.jar.*;
 
-import org.apache.commons.collections.*;
+import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.*;
-import org.apache.commons.collections.map.LRUMap;
-
+import org.lockss.alert.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
-import org.lockss.alert.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.poller.PollSpec;
-import org.lockss.state.*;
+import org.lockss.state.AuState;
 import org.lockss.util.*;
 
 /**
@@ -198,7 +196,7 @@ public class PluginManager
   static final String TITLE_SET_CLASS_XPATH = "xpath";
   static final String TITLE_SET_XPATH_XPATH = "xpath";
 
-  static final String TITLE_SET_CLASS_ALL_TITLES = "AllTitles";
+  static final String TITLE_SET_CLASS_ALL_AUS = "AllAus";
   static final String TITLE_SET_CLASS_ACTIVE_AUS = "ActiveAus";
   static final String TITLE_SET_CLASS_INACTIVE_AUS = "InactiveAus";
 
@@ -515,7 +513,7 @@ public class PluginManager
   private void configureDefaultTitleSets() {
     if (titleSets == null || titleSets.isEmpty()) {
       TreeSet<TitleSet> list = new TreeSet<TitleSet>();
-      list.add(new TitleSetAllTitles(getDaemon()));
+      list.add(new TitleSetAllAus(getDaemon()));
       list.add(new TitleSetActiveAus(getDaemon()));
       list.add(new TitleSetInactiveAus(getDaemon()));
       installTitleSets(list);
@@ -562,8 +560,8 @@ public class PluginManager
       return TitleSetXpath.create(getDaemon(), name,
 				  config.get(TITLE_SET_XPATH_XPATH));
     }
-    if (cls.equalsIgnoreCase(TITLE_SET_CLASS_ALL_TITLES)) {
-      return new TitleSetAllTitles(getDaemon());
+    if (cls.equalsIgnoreCase(TITLE_SET_CLASS_ALL_AUS)) {
+      return new TitleSetAllAus(getDaemon());
     }
     if (cls.equalsIgnoreCase(TITLE_SET_CLASS_ACTIVE_AUS)) {
       return new TitleSetActiveAus(getDaemon());

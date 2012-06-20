@@ -1,10 +1,10 @@
 /*
- * $Id: TitleSetInactiveAus.java,v 1.7 2011-06-30 19:06:00 tlipkis Exp $
+ * $Id: TitleSetInactiveAus.java,v 1.8 2012-06-20 18:58:46 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +45,7 @@ public class TitleSetInactiveAus extends BaseTitleSet {
    * @param daemon used to get list of all known titles
    */
   public TitleSetInactiveAus(LockssDaemon daemon) {
-    super(daemon, "All inactive AUs on this cache");
+    super(daemon, "All inactive AUs");
   }
 
   /** Return the titles in the set.
@@ -110,6 +110,6 @@ public class TitleSetInactiveAus extends BaseTitleSet {
   }
 
   public String toString() {
-    return "[InactiveTitles]";
+    return "[TS.InactiveAus]";
   }
 }
