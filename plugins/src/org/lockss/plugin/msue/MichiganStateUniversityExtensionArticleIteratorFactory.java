@@ -1,5 +1,5 @@
 /*
- * $Id: MichiganStateUniversityExtensionArticleIteratorFactory.java,v 1.1 2012-06-14 22:56:04 davidecorcoran Exp $
+ * $Id: MichiganStateUniversityExtensionArticleIteratorFactory.java,v 1.2 2012-06-20 22:51:23 davidecorcoran Exp $
  */ 
 
 /*
@@ -97,7 +97,7 @@ public class MichiganStateUniversityExtensionArticleIteratorFactory
       
       if (pdfCu != null && pdfCu.hasContent()) {
         af.setFullTextCu(pdfCu);
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);;
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
       }
       
       guessMetadataFile(af, pdfMat);
