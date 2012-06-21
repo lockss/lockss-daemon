@@ -1,5 +1,5 @@
 /*
- * $Id: UbiquityPressUrlNormalizer.java,v 1.2 2012-02-18 16:43:17 pgust Exp $
+ * $Id: UbiquityPressUrlNormalizer.java,v 1.3 2012-06-21 23:00:56 kendrayee Exp $
  */
 
 /*
@@ -29,7 +29,7 @@
  in this Software without prior written authorization from Stanford University.
 
  *//*
- * $Id: UbiquityPressUrlNormalizer.java,v 1.2 2012-02-18 16:43:17 pgust Exp $
+ * $Id: UbiquityPressUrlNormalizer.java,v 1.3 2012-06-21 23:00:56 kendrayee Exp $
  */
 
 /*
@@ -65,10 +65,12 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.UrlNormalizer;
+import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
 public class UbiquityPressUrlNormalizer implements UrlNormalizer {
- 
+//Logger logger = Logger.getLogger("UbiquityPressUrlNormalizer");
+	
   @Override
    public String normalizeUrl(String url,ArchivalUnit au)
       throws PluginException {
@@ -76,7 +78,8 @@ public class UbiquityPressUrlNormalizer implements UrlNormalizer {
                                           .getKey());
     String journalCode = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID
                                               .getKey());
-    return normalizeUrl(url,baseUrl,journalCode) ; 
+    String normalizedUrl = normalizeUrl(url,baseUrl,journalCode) ;
+    return normalizedUrl ;
   }
   
   /**Defines the protected normalize method  which will normalize the url into 
@@ -91,6 +94,7 @@ public class UbiquityPressUrlNormalizer implements UrlNormalizer {
     if (   StringUtil.isNullString(journalCode) 
         || StringUtil.isNullString(baseUrl)
         || !StringUtil.startsWithIgnoreCase(url, baseUrl)) {
+    	//logger.debug("returning orginal url: "+ url) ;
       return url;
     }
     
@@ -104,6 +108,8 @@ public class UbiquityPressUrlNormalizer implements UrlNormalizer {
     buffer.append(journalCode);
     buffer.append("/");
     buffer.append(urlDetailInfo);
-    return buffer.toString();
+    String normalizedUrl = buffer.toString();
+    //logger.debug ("orginal url: " + url + " normalizedUrl: " + normalizedUrl) ;
+    return normalizedUrl ;
   }
 }
