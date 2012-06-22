@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.22.4.1 2012-06-20 00:02:55 nchondros Exp $
+ * $Id: AdminServletManager.java,v 1.22.4.2 2012-06-22 23:21:02 nchondros Exp $
  */
 
 /*
@@ -397,7 +397,7 @@ public class AdminServletManager extends BaseServletManager {
                      ServletDescr.NEED_ROLE_DEBUG | ServletDescr.NEED_ROLE_USER_ADMIN);
   protected static final ServletDescr SERVLET_DEBUG_PANEL =
     new ServletDescr("DebugPanel",
-		     DebugPanel.class,
+		     DebugPanelLH.class,
                      "Debug Panel",
 		     (ServletDescr.IN_NAV | ServletDescr.NEED_ROLE_DEBUG
 		      | ServletDescr.NEED_ROLE_AU_ADMIN));
