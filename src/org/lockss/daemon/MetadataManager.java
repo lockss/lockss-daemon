@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.32 2012-06-22 13:26:46 pgust Exp $
+ * $Id: MetadataManager.java,v 1.33 2012-06-22 19:20:56 pgust Exp $
  */
 
 /*
@@ -2284,8 +2284,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** 
    * This method adds an AU to be reindexed.
    * @param au the AU to add.
+   * @return <code>true</code> if au was added for reindexing
    */
-  private void addAuToReindex(ArchivalUnit au) {
+  public boolean addAuToReindex(ArchivalUnit au) {
     synchronized (reindexingTasks) {
       Connection conn = null;
       try {
@@ -2295,7 +2296,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         if (conn == null) {
           log.error(  "Cannot connect to database"
                     + " -- cannot add aus to pending aus");
-          return;
+          return false;
         }
         
         cancelAuTask(au.getAuId());
@@ -2303,8 +2304,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         conn.commit();
 
         startReindexing(conn);
+        return true;
       } catch (SQLException ex) {
         log.error("Cannot add au to pending AUs: " + au.getName(), ex);
+        return false;
       } finally {
         safeClose(conn);
       }
