@@ -46,7 +46,7 @@
       au < manifest ; exists ; 2006 ; Accounting History Volume 11 ; 11 ; >
       au < manifest ; exists ; 2007 ; Accounting History Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Accounting History Volume 13 ; 13 ; >
-      au < testing ; exists ; 2009 ; Accounting History Volume 14 ; 14 ; >
+      au < released ; manifest ; 2009 ; Accounting History Volume 14 ; 14 ; >
       au < released ; crawling ; 2010 ; Accounting History Volume 15 ; 15 ; >
       au < released ; crawling ; 2011 ; Accounting History Volume 16 ; 16 ; >
       au < crawling ; exists ; 2012 ; Accounting History Volume 17 ; 17 ; >
@@ -129,7 +129,7 @@
       au < manifest ; exists ; 2006 ; Acta Sociologica Volume 49 ; 49 ; >
       au < manifest ; exists ; 2007 ; Acta Sociologica Volume 50 ; 50 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Acta Sociologica Volume 51 ; 51 ; >
-      au < testing ; exists ; 2009 ; Acta Sociologica Volume 52 ; 52 ; >
+      au < released ; manifest ; 2009 ; Acta Sociologica Volume 52 ; 52 ; >
       au < released ; crawling ; 2010 ; Acta Sociologica Volume 53 ; 53 ; >
       au < released ; crawling ; 2011 ; Acta Sociologica Volume 54 ; 54 ; >
       au < crawling ; exists ; 2012 ; Acta Sociologica Volume 55 ; 55 ; >
@@ -358,7 +358,7 @@
       au < manifest ; exists ; 2006 ; Administrative Science Quarterly Volume 51 ; 51 ; >
       au < manifest ; exists ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 ; >
       au < manifest ; exists ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 ; >
-      au < testing ; exists ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 ; >
+      au < released ; manifest ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 ; >
       au < released ; crawling ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 ; >
       au < released ; crawling ; 2011 ; Administrative Science Quarterly Volume 56 ; 56 ; >
       au < crawling ; exists ; 2012 ; Administrative Science Quarterly Volume 57 ; 57 ; >
@@ -615,7 +615,7 @@
       au < manifest ; exists ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 ; >
       au < manifest ; exists ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 ; >
       au < manifest ; exists ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 ; >
-      au < testing ; exists ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
+      au < released ; manifest ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
       au < released ; crawling ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 ; >
       au < released ; crawling ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 ; >
       au < crawling ; exists ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 ; >
@@ -696,7 +696,7 @@
       au < manifest ; exists ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 ; >
       au < manifest ; exists ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 ; >
       au < manifest ; exists ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 ; >
-      au < testing ; exists ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 ; >
+      au < released ; manifest ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 ; >
       au < released ; crawling ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 ; >
       au < released ; crawling ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 ; >
       au < crawling ; exists ; 2012 ; Alternatives: Global, Local, Political Volume 37 ; 37 ; >
@@ -858,7 +858,7 @@
       au < manifest ; exists ; 2006 ; American Educational Research Journal Volume 43 ; 43 ; >
       au < manifest ; exists ; 2007 ; American Educational Research Journal Volume 44 ; 44 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; American Educational Research Journal Volume 45 ; 45 ; >
-      au < testing ; exists ; 2009 ; American Educational Research Journal Volume 46 ; 46 ; >
+      au < released ; manifest ; 2009 ; American Educational Research Journal Volume 46 ; 46 ; >
       au < released ; crawling ; 2010 ; American Educational Research Journal Volume 47 ; 47 ; >
       au < released ; crawling ; 2011 ; American Educational Research Journal Volume 48 ; 48 ; >
       au < crawling ; exists ; 2012 ; American Educational Research Journal Volume 49 ; 49 ; >
@@ -913,7 +913,7 @@
       au < manifest ; exists ; 2006 ; American Journal of Alzheimer's Disease and Other Dementias Volume 21 ; 21 ; >
       au < manifest ; exists ; 2007 ; American Journal of Alzheimer's Disease and Other Dementias Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 ; >
-      au < testing ; exists ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 ; >
+      au < released ; manifest ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; American Journal of Alzheimer's Disease and Other Dementias Volume 25 ; 25 ; >
       au < released ; crawling ; 2011 ; American Journal of Alzheimer's Disease and Other Dementias Volume 26 ; 26 ; >
       au < crawling ; exists ; 2012 ; American Journal of Alzheimer's Disease and Other Dementias Volume 27 ; 27 ; >
@@ -1186,7 +1186,7 @@
       au < manifest ; exists ; 2006 ; The American Journal of Sports Medicine Volume 34 ; 34 ; >
       au < manifest ; exists ; 2007 ; The American Journal of Sports Medicine Volume 35 ; 35 ; >
       au < manifest ; exists ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 ; >
-      au < testing ; exists ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 ; >
+      au < released ; manifest ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 ; >
       au < released ; crawling ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 ; >
       au < released ; crawling ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 ; >
       au < crawling ; exists ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 ; >
@@ -1354,7 +1354,7 @@
       au < manifest ; exists ; 2006 ; American Sociological Review Volume 71 ; 71 ; >
       au < manifest ; exists ; 2007 ; American Sociological Review Volume 72 ; 72 ; >
       au < manifest ; exists ; 2008 ; American Sociological Review Volume 73 ; 73 ; >
-      au < testing ; exists ; 2009 ; American Sociological Review Volume 74 ; 74 ; >
+      au < released ; manifest ; 2009 ; American Sociological Review Volume 74 ; 74 ; >
       au < released ; crawling ; 2010 ; American Sociological Review Volume 75 ; 75 ; >
       au < released ; crawling ; 2011 ; American Sociological Review Volume 76 ; 76 ; >
       au < crawling ; exists ; 2012 ; American Sociological Review Volume 77 ; 77 ; >
@@ -2149,7 +2149,7 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 625 ; 625 ; >
-      au < testing ; exists ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 626 ; 626 ; >
+      au < released ; manifest ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 626 ; 626 ; >
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 627 ; 627 ; >
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 628 ; 628 ; >
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 629 ; 629 ; >
@@ -2741,7 +2741,7 @@
         au < manifest ; exists ; 2006 ; Australian & New Zealand Journal of Psychiatry Volume 40 ; 40 ; >
         au < manifest ; exists ; 2007 ; Australian & New Zealand Journal of Psychiatry Volume 41 ; 41 ; >
         au < manifest ; exists ; 2008 ; Australian & New Zealand Journal of Psychiatry Volume 42 ; 42 ; >
-        au < testing ; exists ; 2009 ; Australian & New Zealand Journal of Psychiatry Volume 43 ; 43 ; >
+        au < released ; manifest ; 2009 ; Australian & New Zealand Journal of Psychiatry Volume 43 ; 43 ; >
         au < released ; crawling ; 2010 ; Australian & New Zealand Journal of Psychiatry Volume 44 ; 44 ; >
         au < released ; crawling ;2011 ; Australian & New Zealand Journal of Psychiatry Volume 45 ; 45 ; >
         au < crawling ; exists ; 2012 ; Australian & New Zealand Journal of Psychiatry Volume 46 ; 46 ; >
@@ -2796,7 +2796,7 @@
       au < manifest ; exists ; 2006 ; Australian Journal of Management Volume 31 ; 31 ; >
       au < manifest ; exists ; 2007 ; Australian Journal of Management Volume 32 ; 32 ; >
       au < manifest ; exists ; 2008 ; Australian Journal of Management Volume 33 ; 33 ; >
-      au < testing ; exists ; 2009 ; Australian Journal of Management Volume 34 ; 34 ; >
+      au < released ; manifest ; 2009 ; Australian Journal of Management Volume 34 ; 34 ; >
       au < released ; crawling ; 2010 ; Australian Journal of Management Volume 35 ; 35 ; >
       au < released ; crawling ; 2011 ; Australian Journal of Management Volume 36 ; 36 ; >
       au < crawling ; exists ; 2012 ; Australian Journal of Management Volume 37 ; 37 ; >
@@ -2880,7 +2880,7 @@
       au < manifest ; exists ; 2006 ; Australasian Psychiatry Volume 14 ; 14 ; >
       au < manifest ; exists ; 2007 ; Australasian Psychiatry Volume 15 ; 15 ; >
       au < manifest ; exists ; 2008 ; Australasian Psychiatry Volume 16 ; 16 ; >
-      au < testing ; exists ; 2009 ; Australasian Psychiatry Volume 17 ; 17 ; >
+      au < released ; manifest ; 2009 ; Australasian Psychiatry Volume 17 ; 17 ; >
       au < released ; crawling ; 2010 ; Australasian Psychiatry Volume 18 ; 18 ; >
       au < released ; crawling ; 2011 ; Australasian Psychiatry Volume 19 ; 19 ; >
       au < crawling ; exists ; 2012 ; Australasian Psychiatry Volume 20 ; 20 ; >
@@ -3547,10 +3547,10 @@
       au < manifest ; exists ; 2008 ; Bulletin de Méthodologie Sociologique Volume 98 ; 98 ; >
       au < manifest ; exists ; 2008 ; Bulletin de Méthodologie Sociologique Volume 99 ; 99 ; >
       au < manifest ; exists ; 2008 ; Bulletin de Méthodologie Sociologique Volume 100 ; 100 ; >
-      au < testing ; exists ; 2009 ; Bulletin de Méthodologie Sociologique Volume 101 ; 101 ; >
-      au < testing ; exists ; 2009 ; Bulletin de Méthodologie Sociologique Volume 102 ; 102 ; >
-      au < testing ; exists ; 2009 ; Bulletin de Méthodologie Sociologique Volume 103 ; 103 ; >
-      au < testing ; exists ; 2009 ; Bulletin de Méthodologie Sociologique Volume 104 ; 104 ; >
+      au < released ; manifest ; 2009 ; Bulletin de Méthodologie Sociologique Volume 101 ; 101 ; >
+      au < released ; manifest ; 2009 ; Bulletin de Méthodologie Sociologique Volume 102 ; 102 ; >
+      au < released ; manifest ; 2009 ; Bulletin de Méthodologie Sociologique Volume 103 ; 103 ; >
+      au < released ; manifest ; 2009 ; Bulletin de Méthodologie Sociologique Volume 104 ; 104 ; >
       au < released ; crawling ; 2010 ; Bulletin de Méthodologie Sociologique Volume 105 ; 105 ; >
       au < released ; crawling ; 2010 ; Bulletin de Méthodologie Sociologique Volume 106 ; 106 ; >
       au < released ; crawling ; 2010 ; Bulletin de Méthodologie Sociologique Volume 107 ; 107 ; >
@@ -3592,7 +3592,7 @@
       au < manifest ; exists ; 2006 ; Bulletin of the Atomic Scientists Volume 62 ; 62 ; >
       au < manifest ; exists ; 2007 ; Bulletin of the Atomic Scientists Volume 63 ; 63 ; >
       au < manifest ; exists ; 2008 ; Bulletin of the Atomic Scientists Volume 64 ; 64 ; >
-      au < manifest ; exists ; 2009 ; Bulletin of the Atomic Scientists Volume 65 ; 65 ; >
+      au < testing ; exists ; 2009 ; Bulletin of the Atomic Scientists Volume 65 ; 65 ; >
       au < released ; crawling ; 2010 ; Bulletin of the Atomic Scientists Volume 66 ; 66 ; >
       au < released ; crawling ; 2011 ; Bulletin of the Atomic Scientists Volume 67 ; 67 ; >
       au < crawling ; exists ; 2012 ; Bulletin of the Atomic Scientists Volume 68 ; 68 ; >
@@ -3907,7 +3907,7 @@
       au < manifest ; exists ; 2006 ; Capital & Class Volume 30 ; 30 ; >
       au < manifest ; exists ; 2007 ; Capital & Class Volume 31 ; 31 ; >
       au < manifest ; exists ; 2008 ; Capital & Class Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2009 ; Capital & Class Volume 33 ; 33 ; >
+      au < testing ; exists ; 2009 ; Capital & Class Volume 33 ; 33 ; >
       au < released ; crawling ; 2010 ; Capital & Class Volume 34 ; 34 ; >
       au < released ; crawling ; 2011 ; Capital & Class Volume 35 ; 35 ; >
       au < crawling ; exists ; 2012 ; Capital & Class Volume 36 ; 36 ; >
@@ -4074,7 +4074,7 @@
       au < manifest ; exists ; 2006 ; Cephalalgia Volume 26 ; 26 ; >
       au < manifest ; exists ; 2007 ; Cephalalgia Volume 27 ; 27 ; >
       au < manifest ; exists ; 2008 ; Cephalalgia Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2009 ; Cephalalgia Volume 29 ; 29 ; >
+      au < testing ; exists ; 2009 ; Cephalalgia Volume 29 ; 29 ; >
       au < released ; crawling ; 2010 ; Cephalalgia Volume 30 ; 30 ; >
       au < released ; crawling ; 2011 ; Cephalalgia Volume 31 ; 31 ; >
       au < crawling ; exists ; 2012 ; Cephalalgia Volume 32 ; 32 ; >
@@ -4669,7 +4669,7 @@
         au < manifest ; exists ; 2006 ; Clinical EEG and Neuroscience Volume 37 ; 37 ; >
         au < manifest ; exists ; 2007 ; Clinical EEG and Neuroscience Volume 38 ; 38 ; >
         au < manifest ; exists ; 2008 ; Clinical EEG and Neuroscience Volume 39 ; 39 ; >
-        au < manifest ; exists ; 2009 ; Clinical EEG and Neuroscience Volume 40 ; 40 ; >
+        au < testing ; exists ; 2009 ; Clinical EEG and Neuroscience Volume 40 ; 40 ; >
         au < released ; crawling ; 2010 ; Clinical EEG and Neuroscience Volume 41 ; 41 ; >
         au < released ; crawling ; 2011 ; Clinical EEG and Neuroscience Volume 42 ; 42 ; >
         au < crawling ; exists ; 2012 ; Clinical EEG and Neuroscience Volume 43 ; 43 ; >
@@ -5528,7 +5528,7 @@
       au < manifest ; exists ; 2006 ; Contemporary Sociology: A Journal of Reviews Volume 35 ; 35 ; >
       au < manifest ; exists ; 2007 ; Contemporary Sociology: A Journal of Reviews Volume 36 ; 36 ; >
       au < manifest ; exists ; 2008 ; Contemporary Sociology: A Journal of Reviews Volume 37 ; 37 ; >
-      au < manifest ; exists ; 2009 ; Contemporary Sociology: A Journal of Reviews Volume 38 ; 38 ; >
+      au < testing ; exists ; 2009 ; Contemporary Sociology: A Journal of Reviews Volume 38 ; 38 ; >
       au < released ; crawling ; 2010 ; Contemporary Sociology: A Journal of Reviews Volume 39 ; 39 ; >
       au < released ; crawling ; 2011 ; Contemporary Sociology: A Journal of Reviews Volume 40 ; 40 ; >
       au < crawling ; exists ; 2012 ; Contemporary Sociology: A Journal of Reviews Volume 41 ; 41 ; >
@@ -5558,7 +5558,7 @@
       au < manifest ; exists ; 2006 ; Contexts Volume 5 ; 5 ; >
       au < manifest ; exists ; 2007 ; Contexts Volume 6 ; 6 ; >
       au < manifest ; exists ; 2008 ; Contexts Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2009 ; Contexts Volume 8 ; 8 ; >
+      au < testing ; exists ; 2009 ; Contexts Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; Contexts Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; Contexts Volume 10 ; 10 ; >
       au < crawling ; exists ; 2012 ; Contexts Volume 11 ; 11 ; >
@@ -6842,7 +6842,7 @@
       au < manifest ; exists ; 2006 ; Current Directions in Psychological Science Volume 15 ; 15 ; >
       au < manifest ; exists ; 2007 ; Current Directions in Psychological Science Volume 16 ; 16 ; >
       au < manifest ; exists ; 2008 ; Current Directions in Psychological Science Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2009 ; Current Directions in Psychological Science Volume 18 ; 18 ; >
+      au < testing ; exists ; 2009 ; Current Directions in Psychological Science Volume 18 ; 18 ; >
       au < released ; crawling ; 2010 ; Current Directions in Psychological Science Volume 19 ; 19 ; >
       au < released ; crawling ; 2011 ; Current Directions in Psychological Science Volume 20 ; 20 ; >
       au < crawling ; exists ; 2012 ; Current Directions in Psychological Science Volume 21 ; 21 ; >
@@ -7411,7 +7411,7 @@
       au < manifest ; exists ; 2006 ; Drug Information Journal Volume 40 ; 40 ; >
       au < manifest ; exists ; 2007 ; Drug Information Journal Volume 41 ; 41 ; >
       au < manifest ; exists ; 2008 ; Drug Information Journal Volume 42 ; 42 ; >
-      au < manifest ; exists ; 2009 ; Drug Information Journal Volume 43 ; 43 ; >
+      au < testing ; exists ; 2009 ; Drug Information Journal Volume 43 ; 43 ; >
       au < released ; crawling ; 2010 ; Drug Information Journal Volume 44 ; 44 ; >
       au < released ; crawling ; 2011 ; Drug Information Journal Volume 45 ; 45 ; >
       au < crawling ; exists ; 2012 ; Drug Information Journal Volume 46 ; 46 ; >
@@ -7657,7 +7657,7 @@
       au < manifest ; exists ; 2006 ; Education and Urban Society Volume 39 ; 39 ; >
       au < doNotProcess ; doNotProcess ; 2007 ; Education and Urban Society Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Education and Urban Society Volume 41 ; 41 ; >
-      au < manifest ; exists ; 2009 ; Education and Urban Society Volume 42 ; 42 ; >
+      au < testing ; exists ; 2009 ; Education and Urban Society Volume 42 ; 42 ; >
       au < released ; crawling ; 2011 ; Education and Urban Society Volume 43 ; 43 ; >
       au < crawling ; exists ; 2012 ; Education and Urban Society Volume 44 ; 44 ; >
 
@@ -8152,7 +8152,7 @@
 
       au < manifest ; exists ; 2007 ; Electronic News Volume 1 ; 1 ; >
       au < manifest ; exists ; 2008 ; Electronic News Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2009 ; Electronic News Volume 3 ; 3 ; >
+      au < testing ; exists ; 2009 ; Electronic News Volume 3 ; 3 ; >
       au < released ; crawling ; 2010 ; Electronic News Volume 4 ; 4 ; >
       au < released ; crawling ; 2011 ; Electronic News Volume 5 ; 5 ; >
       au < crawling ; exists ; 2012 ; Electronic News Volume 6 ; 6 ; >
@@ -8368,7 +8368,7 @@
       au < manifest ; exists ; 2006 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 14 ; 14 ; >
       au < manifest ; exists ; 2007 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 15 ; 15 ; >
       au < manifest ; exists ; 2008 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2009 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 17 ; 17 ; >
+      au < testing ; exists ; 2009 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 17 ; 17 ; >
       au < released ; crawling ; 2010 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 18 ; 18 ; >
       au < released ; crawling ; 2011 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 19 ; 19 ; >
       au < crawling ; exists ; 2012 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 20 ; 20 ; >
@@ -8582,7 +8582,7 @@
       au < manifest ; exists ; 2006 ; European Journal of Archaeology Volume 9 ; 9 ; >
       au < manifest ; exists ; 2007 ; European Journal of Archaeology Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Archaeology Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2009 ; European Journal of Archaeology Volume 12 ; 12 ; >
+      au < testing ; exists ; 2009 ; European Journal of Archaeology Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; European Journal of Archaeology Volume 13 ; 13 ; >
 
     }
@@ -8610,7 +8610,7 @@
       au < manifest ; exists ; 2006 ; European Journal of Cardiovascular Nursing Volume 5 ; 5 ; >
       au < manifest ; exists ; 2007 ; European Journal of Cardiovascular Nursing Volume 6 ; 6 ; >
       au < manifest ; exists ; 2008 ; European Journal of Cardiovascular Nursing Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8 ; >
+      au < testing ; exists ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9 ; >
       au < released ; crawling ; 2011 ; European Journal of Cardiovascular Nursing Volume 10 ; 10 ; >
       au < crawling ; exists ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 11 ; >
@@ -8650,7 +8650,7 @@
       au < manifest ; exists ; 2006 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 13 ; 13 ; >
       au < manifest ; exists ; 2007 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 14 ; 14 ; >
       au < manifest ; exists ; 2008 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2009 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 16 ; 16 ; >
+      au < testing ; exists ; 2009 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 17 ; 17 ; >
       au < released ; crawling ; 2011 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 18 ; 18 ; >
       au < doesNotExist ; doesNotExist ; 0 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 19 ; 19 ; >
@@ -10464,7 +10464,7 @@
       au < manifest ; exists ; 2006-2007 ; Gifted Education International Volume 22 ; 22 ; >
       au < manifest ; exists ; 2007 ; Gifted Education International Volume 23 ; 23 ; >
       au < manifest ; exists ; 2008 ; Gifted Education International Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2009 ; Gifted Education International Volume 25 ; 25 ; >
+      au < testing ; exists ; 2009 ; Gifted Education International Volume 25 ; 25 ; >
       au < released ; crawling ; 2010 ; Gifted Education International Volume 26 ; 26 ; >
       au < released ; crawling ; 2010-2011 ; Gifted Education International Volume 27 ; 27 ; >
       au < crawling ; exists ; 2012 ; Gifted Education International Volume 28 ; 28 ; >
