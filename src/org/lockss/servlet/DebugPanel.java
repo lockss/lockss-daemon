@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.23 2012-06-17 23:08:03 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.24 2012-06-22 19:19:46 pgust Exp $
  */
 
 /*
@@ -79,6 +79,8 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_THROW_IOEXCEPTION = "Throw IOException";
   static final String ACTION_FIND_URL = "Find Preserved URL";
 
+  static final String ACTION_REINDEX_METADATA = "Reindex Metadata";
+  static final String ACTION_FORCE_REINDEX_METADATA = "Force Reindex Metadata";
   static final String ACTION_START_V3_POLL = "Start V3 Poll";
   static final String ACTION_FORCE_START_V3_POLL = "Force V3 Poll";
   static final String ACTION_START_CRAWL = "Start Crawl";
@@ -96,6 +98,7 @@ public class DebugPanel extends LockssServlet {
   private PollManager pollManager;
   private CrawlManager crawlMgr;
   private ConfigManager cfgMgr;
+  private MetadataManager metadataMgr;
   private RemoteApi rmtApi;
 
   String auid;
@@ -104,6 +107,7 @@ public class DebugPanel extends LockssServlet {
   boolean showResult;
   boolean showForcePoll;
   boolean showForceCrawl;
+  boolean showForceReindexMetadata;
   protected void resetLocals() {
     resetVars();
     super.resetLocals();
@@ -115,6 +119,7 @@ public class DebugPanel extends LockssServlet {
     statusMsg = null;
     showForcePoll = false;
     showForceCrawl = false;
+    showForceReindexMetadata = false;
   }
 
   public void init(ServletConfig config) throws ServletException {
@@ -125,6 +130,9 @@ public class DebugPanel extends LockssServlet {
     crawlMgr = daemon.getCrawlManager();
     cfgMgr = daemon.getConfigManager();
     rmtApi = daemon.getRemoteApi();
+    try {
+      metadataMgr = daemon.getMetadataManager();
+    } catch (IllegalArgumentException ex) {}
   }
 
   public void lockssHandleRequest() throws IOException {
@@ -167,6 +175,12 @@ public class DebugPanel extends LockssServlet {
     if (ACTION_FIND_URL.equals(action)) {
       showForm = doFindUrl();
     }
+    if (ACTION_REINDEX_METADATA.equals(action)) {
+      doReindexMetadata();
+    }
+    if (ACTION_FORCE_REINDEX_METADATA.equals(action)) {
+      forceReindexMetadata();
+    }
     if (showForm) {
       displayPage();
     }
@@ -187,6 +201,28 @@ public class DebugPanel extends LockssServlet {
   private void doThrow() throws IOException {
     String msg = getParameter(KEY_MSG);
     throw new IOException(msg != null ? msg : "Test message");
+  }
+
+  private void doReindexMetadata() {
+    ArchivalUnit au = getAu();
+    if (au == null) return;
+    try {
+      startReindexingMetadata(au, false);
+    } catch (RuntimeException e) {
+      log.error("Can't reindex metadata", e);
+      errMsg = "Error: " + e.toString();
+    }
+  }
+
+  private void forceReindexMetadata() {
+    ArchivalUnit au = getAu();
+    if (au == null) return;
+    try {
+      startReindexingMetadata(au, true);
+    } catch (RuntimeException e) {
+      log.error("Can't reindex metadata", e);
+      errMsg = "Error: " + e.toString();
+    }
   }
 
   private void doCrawl() {
@@ -256,6 +292,44 @@ public class DebugPanel extends LockssServlet {
     } else {
       return false;
     }
+  }
+  
+  private boolean startReindexingMetadata(ArchivalUnit au, boolean force) {
+    if (metadataMgr == null) {
+      errMsg = "Metadata processing is not enabled.";
+      return false;
+    }
+
+    if (!force) {
+      if (!AuUtil.hasCrawled(au)) {
+        errMsg = "Au has never crawled. Click again to reindex metadata";
+        showForceReindexMetadata = true;
+        return false;
+      }
+      
+      SubstanceChecker.State state = new SubstanceChecker(au).hasSubstance();
+      if (state.equals(SubstanceChecker.State.No)) {
+        errMsg = "Au has no substance. Click again to reindex metadata";
+        showForceReindexMetadata = true;
+        return false;
+      }
+      if (state.equals(SubstanceChecker.State.Unknown)) {
+        errMsg = "Unknown substance for Au. Click again to reindex metadata.";
+        showForceReindexMetadata = true;
+        return false;
+      }
+    }
+    
+    if (metadataMgr.addAuToReindex(au)) {
+      statusMsg = "Reindexing metadata for " + au.getName();
+      return true;
+    }
+    if (force) {
+      errMsg = "Still annot reindex metadata for " + au.getName();
+    } else {
+      errMsg = "Cannot reindex metadata for " + au.getName();
+    }
+    return false;
   }
 
 
@@ -399,10 +473,19 @@ public class DebugPanel extends LockssServlet {
 			    ( showForceCrawl
 			      ? ACTION_FORCE_START_CRAWL
 			      : ACTION_START_CRAWL));
+
     frm.add("<br><center>");
     frm.add(v3Poll);
     frm.add(" ");
     frm.add(crawl);
+    if (metadataMgr != null) {
+      Input reindex = new Input(Input.Submit, KEY_ACTION,
+                                ( showForceReindexMetadata
+                                  ? ACTION_FORCE_REINDEX_METADATA
+                                  : ACTION_REINDEX_METADATA));
+      frm.add(" ");
+      frm.add(reindex);
+    }
     frm.add("</center>");
     comp.add(frm);
     return comp;
