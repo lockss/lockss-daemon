@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.31 2012-03-15 08:35:15 tlipkis Exp $
+ * $Id: MetadataManager.java,v 1.32 2012-06-22 13:26:46 pgust Exp $
  */
 
 /*
@@ -1009,7 +1009,18 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     + "'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromArticleUrl' " 
     + "parameter style java no sql",
     
-      "create function yearFromDate(date varchar(16)) returns varchar(4) "
+      "create function contentTypeFromUrl(url varchar(4096)) "
+    + "returns varchar(512) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getContentTypeFromArticleUrl' " 
+    + "parameter style java no sql",
+
+    
+    "create function contentSizeFromUrl(url varchar(4096)) "
+    + "returns bigint language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getContentSizeFromArticleUrl' " 
+    + "parameter style java no sql",
+
+    "create function yearFromDate(date varchar(16)) returns varchar(4) "
     + "language java external name "
     + "'org.lockss.util.SqlStoredProcedures.getYearFromDate' "
     + "parameter style java no sql",
