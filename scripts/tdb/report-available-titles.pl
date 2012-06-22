@@ -213,6 +213,10 @@ my $kborder = "KBART"; #$kborder = "PUBLISHER_PUBLICATION"
 my $generateCsvMetadata = 0; # Don't generate by default
 # Show the warning messages from the KBART converter
 my $showKbartWarnings = 0; # Hide them by default
+# Generate data for clockss files
+my $clockss = 0; # Do not generate CLOCKSS by default
+# Generate data for gln files
+my $gln = 0; # Generate GLN by default
 # Show help
 my $help = 0;
 
@@ -221,29 +225,45 @@ my $help = 0;
 # ------------------------------------------------------------------------------
 
 # Long option processing
-GetOptions ("daemon-home=s"     => \$daemonHome, # LOCKSS Daemon home dir
+my $ret = GetOptions ("daemon-home=s"     => \$daemonHome, # LOCKSS Daemon home dir
 #            "production=s"      => \$kbartProduction, # KBART Production report filename
 #            "unreleased=s"      => \$kbartUnreleased, # KBART Unreleased report filename
             "committed=s"       => \$committedTitles, # Committed titles report
             "generate-tdb-metadata" => \$generateCsvMetadata, # Generate fresh CSV metadata from TDB
             "show-kbart-warnings" => \$showKbartWarnings, # Show the warning messages from the KBART converter
+            "clockss" => \$clockss,
+            "gln" => \$gln,
             "help|?"            => \$help
     );
 
+if (($clockss == 0) && ($gln == 0)) {
+    $gln = 1;
+}
+    
+# Show help if needed
+#usage() if $help;
+if (($ret != 1) || $help || ($clockss == $gln)) {
+	  usage();
+}
+
 # Now set up the paths based on lockss-daemon-home
-# List of all the TDB files (including UK)
-my $tdbs = "$daemonHome/tdb/prod*/*.tdb";
-my $tdbs_c = "$daemonHome/tdb/clockssingest/*.tdb";
 # Location of the tdbout script
 my $tdbout = "$daemonHome/scripts/tdb/tdbout.py";
+# List of all the TDB files
+my $tdbs_clockss = "$daemonHome/tdb/clockssingest/*.tdb";
+my $tdbs_gln = "$daemonHome/tdb/prod*/*.tdb"; #including UK
+my $tdbs = $tdbs_gln;
+if ($clockss) {
+    $tdbs = $tdbs_clockss;
+    print STDERR "****CLOCKSS Report****\n";
+} else {
+    print STDERR "****GLN Report****\n";
+}
 
 
 # ------------------------------------------------------------------------------
 # Do the conversions
 # ------------------------------------------------------------------------------
-
-# Show help if needed
-usage() if $help;
 
 # 1. Generate CSV files of TDB content
 # If the files exist and a new generate was not requested, no generation needed
@@ -560,6 +580,10 @@ sub usage {
                                   (default $committedTitles)
 
     Options:
+      --gln                      Generate data from the GLN, including the UK 
+                                  (default, do not use with --clockss)
+      --clockss                  Generate data from the CLOCKSS Ingest Network,
+                                  (not default, do not use with --gln)
       --generate-tdb-metadata    Generate fresh CSV metadata from TDBs 
                                   (time-consuming but necessary on first run)
       --show-kbart-warnings      Show the warning messages from the KBART converter
