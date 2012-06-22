@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-# $Id: propose_new_aus.pl,v 1.1 2012-03-27 01:49:47 mellen22 Exp $
+# $Id: propose_new_aus.pl,v 1.2 2012-06-22 06:25:35 mellen22 Exp $
 #
 # Read in a list of AUs defined with the HighWire plugins.
 # Propose new AUs, either before or after the range provided
@@ -17,7 +17,7 @@ my @Usage = ("$0 [-h] [--pre=<num1>] [--post=<num2>] auid_file\n",
     "--post=<num2> Print <num2> newer AUs (default $opt_post)\n",
     "-h            Print this help message.");
 sub usage {
-    print '$Revision: 1.1 $' . "\n";
+    print '$Revision: 1.2 $' . "\n";
     print "Usage:\n @Usage\n";
     exit(1);
 }
@@ -62,6 +62,15 @@ foreach my $base_url (sort(keys(%au_volume))) {
 	&print_au($base_url, $x) if ($x > 0);
     }
 }
+
+#printf("org|lockss|plugin|highwire|HighWirePressH20Plugin&base_url~http%3A%2F%2Fapplij%2Eoxfordjournals%2Eorg%2F&volume_name~3");
+#printf("org|lockss|plugin|highwire|HighWirePressH20Plugin&base_url~http%3A%2F%2Fbfgp%2Eoxfordjournals%2Eorg%2F&volume_name~6");
+#printf("org|lockss|plugin|highwire|HighWirePressH20Plugin&base_url~http%3A%2F%2Fbfgp%2Eoxfordjournals%2Eorg%2F&volume_name~6");
+#printf("org|lockss|plugin|highwire|HighWirePressH20Plugin&base_url~http%3A%2F%2Fbfgp%2Eoxfordjournals%2Eorg%2F&volume_name~10");
+#printf("org|lockss|plugin|highwire|HighWirePressH20Plugin&base_url~http%3A%2F%2Fbjps%2Eoxfordjournals%2Eorg%2F&volume_name~16");
+#printf("org|lockss|plugin|highwire|HighWirePressH20Plugin&base_url~http%3A%2F%2Fcamqtly%2Eoxfordjournals%2Eorg%2F&volume_name~29");
+#printf("org|lockss|plugin|highwire|HighWirePressH20Plugin&base_url~http%3A%2F%2Fehr%2Eoxfordjournals%2Eorg%2F&volume_name~112");
+#printf("org|lockss|plugin|highwire|HighWirePressH20Plugin&base_url~http%3A%2F%2Fehr%2Eoxfordjournals%2Eorg%2F&volume_name~121");
 
 exit(0);
 

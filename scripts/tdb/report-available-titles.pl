@@ -113,10 +113,11 @@ my $productionQuery = '--query \''.
     #'or status is "doesNotExist"'.
     ')\'';
 
-# Unreleased TDB (manifest, testing, notReady, ready, exists)
+# Unreleased TDB (crawling, manifest, testing, notReady, ready, exists)
 my $unreleasedQuery = '--query \''.
     &combineTypes()." and (".
-    'status is "manifest"'.
+    'status is "crawling"'.
+    'or status is "manifest"'.
     'or status is "testing"'.
     'or status is "notReady"'.
     'or status is "ready"'.
@@ -232,6 +233,7 @@ GetOptions ("daemon-home=s"     => \$daemonHome, # LOCKSS Daemon home dir
 # Now set up the paths based on lockss-daemon-home
 # List of all the TDB files (including UK)
 my $tdbs = "$daemonHome/tdb/prod*/*.tdb";
+my $tdbs_c = "$daemonHome/tdb/clockssingest/*.tdb";
 # Location of the tdbout script
 my $tdbout = "$daemonHome/scripts/tdb/tdbout.py";
 
