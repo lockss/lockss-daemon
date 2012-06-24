@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlLinkExtractor.java,v 1.7 2010-10-02 22:23:37 tlipkis Exp $
+ * $Id: TestGoslingHtmlLinkExtractor.java,v 1.8 2012-06-24 15:34:49 pgust Exp $
  */
 
 /*
@@ -108,6 +108,14 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
     // test parssing the tag with attriutes before the link
     singleTagShouldParse("http://www.example.com/web_link.jpg",
                          "<img\nwidth='280' hight='90' src=", "</img>");
+  }
+
+  public void testParsesIFrame() throws IOException {
+    singleTagShouldParse("http://www.example.com/web_link.jpg",
+                         "<iframe src=", "</iframe>");
+    // test parssing the tag with attriutes before the link
+    singleTagShouldParse("http://www.example.com/web_link.jpg",
+                         "<iframe\nwidth='280' hight='90' src=", "</iframe>");
   }
 
   public void testParsesEmbed() throws IOException {

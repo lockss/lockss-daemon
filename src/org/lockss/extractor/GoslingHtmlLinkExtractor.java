@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlLinkExtractor.java,v 1.9 2012-02-16 10:42:29 tlipkis Exp $
+ * $Id: GoslingHtmlLinkExtractor.java,v 1.10 2012-06-24 15:34:48 pgust Exp $
  */
 
 /*
@@ -106,6 +106,7 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
   protected static final String CODEBASE = "codebase";
   protected static final String EMBEDTAG = "embed";
   protected static final String FRAMETAG = "frame";
+  protected static final String IFRAMETAG = "iframe";
   protected static final String IMGTAG = "img";
   protected static final String JSCRIPTTAG = "javascript";
   protected static final String HREF = "href";
@@ -436,6 +437,9 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
       case 'I':
         if (beginsWithTag(link, IMGTAG)) {
           return (  getAttributeValue(SRC, link) );
+        }
+        if (beginsWithTag(link, IFRAMETAG)) {
+          return(getAttributeValue(SRC, link));
         }
         break;
       case 'e': //<embed src=image.gif>
