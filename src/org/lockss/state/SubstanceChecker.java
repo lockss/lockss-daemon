@@ -1,5 +1,5 @@
 /*
- * $Id: SubstanceChecker.java,v 1.4 2012-06-24 19:39:51 pgust Exp $
+ * $Id: SubstanceChecker.java,v 1.5 2012-06-24 19:46:43 pgust Exp $
  */
 
 /*
@@ -286,6 +286,10 @@ public class SubstanceChecker {
 	  log.debug3("checkSubstanceUrl(" + url + ") matched non-substance");
 	}
 	nowHasSubstance(url);
+      } else {
+        if (log.isDebug3()) {
+          log.debug3("checkSubstanceUrl(" + url + ") does not match non-substance");
+        }
       }
     }
   }
