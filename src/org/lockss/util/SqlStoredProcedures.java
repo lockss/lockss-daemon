@@ -1,5 +1,5 @@
 /*
- * $Id: SqlStoredProcedures.java,v 1.6 2012-03-03 23:09:56 pgust Exp $
+ * $Id: SqlStoredProcedures.java,v 1.7 2012-06-24 16:47:09 pgust Exp $
  */
 
 /*
@@ -884,6 +884,42 @@ public class SqlStoredProcedures {
   static public String getEndYearFromArticleUrl(String articleUrl) {
     TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
     return (tdbAu == null) ? null : tdbAu.getEndYear();
+  }
+  
+  /**
+   * Return the article content type from the daemon that corresponds
+   * to the URL of an article in that publisher.
+   * 
+   * @param articleUrl the URL of the article
+   * @return the content type for the given URL or null if not available
+   */
+  static public String getContentTypeFromArticleUrl(String articleUrl) {
+    // get the CachedUrl from the article URL
+    CachedUrl cu = getPluginManager().findCachedUrl(articleUrl);
+    if (cu == null) {
+      queryLog.debug2("No CachedUrl for articleUrl: " + articleUrl);
+      return null;
+    }
+    
+    return cu.getContentType();
+  }
+  
+  /**
+   * Return the article content size from the daemon that corresponds
+   * to the URL of an article in that publisher.
+   * 
+   * @param articleUrl the URL of the article
+   * @return the contentsize for the given URL or -1 if not available
+   */
+  static public long getContentSizeFromArticleUrl(String articleUrl) {
+    // get the CachedUrl from the article URL
+    CachedUrl cu = getPluginManager().findCachedUrl(articleUrl);
+    if (cu == null) {
+      queryLog.debug2("No CachedUrl for articleUrl: " + articleUrl);
+      return -1;
+    }
+    
+    return cu.getContentSize();
   }
   
   static public void main(String[] args) {
