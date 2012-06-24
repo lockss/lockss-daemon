@@ -1,6 +1,6 @@
 <map>
   <entry>
-  	<string>plugin_status</string>
+    <string>plugin_status</string>
     <string>testing</string>
   </entry>
   <entry>
@@ -9,28 +9,32 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>IGI Global Plugin</string>
+    <string>IGI Global Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
+        <string>Metadata</string>
+        <string>2</string>
+      </entry>
+      <entry>
         <string>Poll</string>
-		<string>1</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Substance</string>
-		<string>3</string>
+        <string>4</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;IGI Global Plugin, Base URL %s, Journal ISSN %s, Volume %s&quot;, base_url, journal_issn, volume</string>
+    <string>&quot;IGI Global Plugin (CLOCKSS), Base URL %s, Journal ISSN %s, Volume %s&quot;, base_url, journal_issn, volume</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -44,7 +48,8 @@
       <string>1,&quot;^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.+)?$&quot;, base_url</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%sgateway/contentowned/articles\.aspx&quot;, base_url</string>
-      <string>1,&quot;^%sgateway/(article|issue)/([0-9]+|full-text-pdf/[0-9]+)$&quot;, base_url</string>
+      <string>1,&quot;^%sgateway/(issue|article(/full-text-pdf|/full-text-html)?)/[0-9]+$&quot;, base_url</string>
+      <string>1,&quot;^%sviewtitle.aspx\?titleid=[0-9]+$&quot;, base_url</string>
     </list>
   </entry>
   <entry>
@@ -79,8 +84,16 @@
     </list>
   </entry>
   <entry>
-  	 <string>au_substance_url_pattern</string>
-     <string>&quot;^%s(gateway/contentowned/articles|viewtitle)\.aspx&quot;, base_url</string>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalLoginPageChecker</string>
+  </entry>
+  <entry>
+     <string>au_substance_url_pattern</string>
+     <string>&quot;^%s(viewtitle.aspx\?titleid=|gateway/article/full-text-html/)[0-9]+$&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
