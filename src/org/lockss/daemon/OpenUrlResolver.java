@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.30 2012-05-30 21:08:43 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.31 2012-06-24 19:13:23 pgust Exp $
  */
 
 /*
@@ -1216,7 +1216,7 @@ public class OpenUrlResolver {
     for (TdbAu tdbau : notFoundTdbAuList) {
       OpenUrlInfo aResolved = 
           getJournalUrl(tdbau, year, volume, issue, spage);
-      if (aResolved != null) {
+      if (aResolved.resolvedUrl != null) {
         // found the URL if in cache
         if  (pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
           resolved = aResolved;
@@ -1685,7 +1685,7 @@ public class OpenUrlResolver {
           anEdition  = tdbau.getEdition();
         }
         OpenUrlInfo aResolved = getBookUrl(tdbau, year, aVolume, anEdition, spage);
-        if (aResolved != null) {
+        if (aResolved.resolvedUrl != null) {
           // found the URL if in cache
           if  (pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
             resolved = aResolved;
