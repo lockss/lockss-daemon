@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.33 2012-06-22 19:20:56 pgust Exp $
+ * $Id: MetadataManager.java,v 1.34 2012-06-24 19:24:28 pgust Exp $
  */
 
 /*
@@ -1403,13 +1403,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return <code>true</code> if the AU has article metadata
    */
   private boolean hasArticleMetadata(ArchivalUnit au) {
-    if (au.getArticleIterator(MetadataTarget.Article) == null) {
+    if (au.getArticleIterator(MetadataTarget.OpenURL) == null) {
       return false;
     }
     // has article metadata if there is a metadata extractor
     if (useMetadataExtractor) {
       Plugin p = au.getPlugin();
-      if (p.getArticleMetadataExtractor(MetadataTarget.Article, au) != null) {
+      if (p.getArticleMetadataExtractor(MetadataTarget.OpenURL, au) != null) {
         return true;
       }
     }
@@ -1430,7 +1430,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     ArticleMetadataExtractor ae = null;
     if (useMetadataExtractor) {
       Plugin plugin = au.getPlugin();
-      ae = plugin.getArticleMetadataExtractor(MetadataTarget.Article, au);
+      ae = plugin.getArticleMetadataExtractor(MetadataTarget.OpenURL, au);
     }
     if (ae == null) {
       ae = new BaseArticleMetadataExtractor(null);
@@ -1555,7 +1555,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             startClockTime = currentClockTime;
             // article iterator won't be null because only aus
             // with article iterators are queued for processing
-            articleIterator = au.getArticleIterator(MetadataTarget.Article);
+            articleIterator = au.getArticleIterator(MetadataTarget.OpenURL);
             log.debug2("Reindexing task starting for au: " + au.getName()
                 + " has articles? " + articleIterator.hasNext());
             try {
