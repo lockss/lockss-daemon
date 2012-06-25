@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPluginTestCase.java,v 1.2 2006-04-10 23:10:52 troberts Exp $
+ * $Id: LockssPluginTestCase.java,v 1.3 2012-06-25 05:47:05 tlipkis Exp $
  */
 
 /*
@@ -32,24 +32,44 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
+import java.io.*;
 import java.util.*;
 
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
+import org.lockss.state.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.definable.*;
 
+/** Base class for plugin tests. */
 public class LockssPluginTestCase extends LockssTestCase {
 
-  public DefinableArchivalUnit makeAu(Properties props, String pluginID)
+  public void setUp() throws Exception {
+    super.setUp();
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tempDirPath);
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    daemon.getPluginManager().startService();
+  }
+
+  public void tearDown() throws Exception {
+    super.tearDown();
+  }
+
+  public ArchivalUnit makeAu(String pluginId, Properties props)
       throws Exception {
-    Configuration config = ConfigurationUtil.fromProps(props);
-    DefinablePlugin ap = new DefinablePlugin();
-    ap.initPlugin(getMockLockssDaemon(), pluginID);
-    DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
-    return au;
+    return makeAu(pluginId, ConfigurationUtil.fromProps(props));
+  }
+
+  private ArchivalUnit makeAu(String pluginId, Configuration config)
+      throws Exception {
+    return PluginTestUtil.createAndStartAu(pluginId, config);
   }
 
   public void assertShouldCache(String url, ArchivalUnit au, CachedUrlSet cus) {
+    assertShouldCache(url, au);
+  }
+
+  public void assertShouldCache(String url, ArchivalUnit au) {
     UrlCacher uc = au.makeUrlCacher(url);
     assertTrue(url+" incorrectly marked as shouldn't cache",
                uc.shouldBeCached());
@@ -57,6 +77,10 @@ public class LockssPluginTestCase extends LockssTestCase {
 
   public void assertShouldNotCache(String url, 
                                    ArchivalUnit au, CachedUrlSet cus) {
+    assertShouldNotCache(url, au);
+  }
+
+  public void assertShouldNotCache(String url, ArchivalUnit au) {
      UrlCacher uc = au.makeUrlCacher(url);
      assertFalse(url+" incorrectly marked as should cache",
                  uc.shouldBeCached());
@@ -64,17 +88,53 @@ public class LockssPluginTestCase extends LockssTestCase {
 
   
   public void assertShouldCache(Set urls, ArchivalUnit au, CachedUrlSet cus) {
+    assertShouldCache(urls, au);
+  }
+
+  public void assertShouldCache(Set urls, ArchivalUnit au) {
       Iterator it = urls.iterator(); 
       while (it.hasNext()) {
-        assertShouldCache((String)it.next(), au, cus);
+        assertShouldCache((String)it.next(), au);
       }
     }
     
-  public void assertShouldNotCache(Set urls, ArchivalUnit au, CachedUrlSet cus) {
+  public void assertShouldNotCache(Set urls, ArchivalUnit au,
+				   CachedUrlSet cus) {
+    assertShouldNotCache(urls, au);
+  }
+
+  public void assertShouldNotCache(Set urls, ArchivalUnit au) {
       Iterator it = urls.iterator(); 
       while (it.hasNext()) {
-        assertShouldNotCache((String)it.next(), au, cus);
+        assertShouldNotCache((String)it.next(), au);
       }
     }
     
+  /** Assert that the URL matches a substance pattern */
+  public void assertSubstanceUrl(String url, ArchivalUnit au) {
+    SubstanceChecker checker = new SubstanceChecker(au);
+    assertTrue("Not a substance URL: " + url,
+	       checker.isSubstanceUrl(url));
+  }
+
+  /** Assert that the URL does not match a substance pattern */
+  public void assertNonSubstance(String url, ArchivalUnit au) {
+    SubstanceChecker checker = new SubstanceChecker(au);
+    assertTrue("Not a non-substance URL: " + url,
+	       checker.isNonSubstanceUrl(url));
+  }
+
+  /** Assert that the URL matches a non-substance pattern */
+  public void assertNotSubstanceUrl(String url, ArchivalUnit au) {
+    SubstanceChecker checker = new SubstanceChecker(au);
+    assertFalse("Is a substance URL: " + url,
+		checker.isSubstanceUrl(url));
+  }
+
+  /** Assert that the URL does not match a non-substance pattern */
+  public void assertNotNonSubstance(String url, ArchivalUnit au) {
+    SubstanceChecker checker = new SubstanceChecker(au);
+    assertFalse("Is a non-substance URL: " + url,
+		checker.isNonSubstanceUrl(url));
+  }
 }
