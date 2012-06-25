@@ -113,10 +113,10 @@ public class TestIgiGlobalPlugin extends PluginTestCase {
 	    
 	    assertShouldCache(BASE_URL + "gateway/contentowned/article.aspx?titleid=55656&accesstype=infosci", false, au, cus);
 	    assertShouldCache(BASE_URL + "gateway/contentowned/issues.aspx?titleid=55656", false, au, cus);
-	    // pdfs
+	    // pdf page with iframe
 	    assertShouldCache(BASE_URL + "gateway/article/full-text-pdf/55656", true, au, cus);
-	    
-	    assertShouldCache(BASE_URL + "viewtitle.aspx?titleid=55663", false, au, cus);
+	    // pdf file displayed in iframe
+	    assertShouldCache(BASE_URL + "viewtitle.aspx?titleid=55663", true, au, cus);
 	    
 	    // images, css, js
 	    assertShouldCache(BASE_URL + "jQuery/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png", true, au, cus);
