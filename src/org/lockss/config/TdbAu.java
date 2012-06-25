@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.17 2012-06-01 23:34:49 pgust Exp $
+ * $Id: TdbAu.java,v 1.18 2012-06-25 05:49:17 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.config;
 import java.io.*;
 import java.util.*;
 
+import org.apache.commons.collections.map.Flat3Map;
 import org.lockss.config.Tdb.TdbException;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.exporter.biblio.BibliographicUtil;
@@ -169,7 +170,8 @@ public class TdbAu implements BibliographicItem {
     
     this.name = name;
     this.pluginId = pluginId;
-    params = new HashMap<String,String>();
+//     params = new HashMap<String,String>();
+    params = new Flat3Map();
   }
 
   /**
@@ -334,9 +336,10 @@ public class TdbAu implements BibliographicItem {
         throw new TdbException("value cannot be null for property \"" + name + "\" for au \"" + this.name + "\"");
       }
       if (props == null) {
-        props = new HashMap<String,String>();
+//         props = new HashMap<String,String>();
+        props = new Flat3Map();
       }
-      props.put(name, value);
+      props.put(StringPool.AU_CONFIG_PROPS.intern(name), value);
     }
   }
   
@@ -384,7 +387,7 @@ public class TdbAu implements BibliographicItem {
     if (params.containsKey(name)) {
       throw new TdbException("cannot replace value of au param \"" + name + "\" for au \"" + this.name + "\"");
     }
-    params.put(name, value);
+    params.put(StringPool.AU_CONFIG_PROPS.intern(name), value);
     getId().invalidateHashCode();  // setting params modifies ID hashcode
   }
   
@@ -425,13 +428,14 @@ public class TdbAu implements BibliographicItem {
     }
     
     if (attrs == null) {
-      attrs = new HashMap<String,String>();
+//       attrs = new HashMap<String,String>();
+      attrs = new Flat3Map();
     }
     
     if (attrs.containsKey(name)) {
       throw new TdbException("cannot replace value of au attr \"" + name + "\" for au \"" + this.name + "\"");
     }
-    attrs.put(name, value);
+    attrs.put(StringPool.AU_CONFIG_PROPS.intern(name), value);
   }
   
   /**
