@@ -404,7 +404,7 @@
     
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       param[base_url] = http://rphr.endojournals.org/
 
       au < exists ; exists ; 2001 ; Recent Progress in Hormone Research Volume 56 ; 56 >
