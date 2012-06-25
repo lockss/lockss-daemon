@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.55 2012-06-25 01:05:19 pgust Exp $
+ * $Id: ServeContent.java,v 1.56 2012-06-25 07:34:21 tlipkis Exp $
  */
 
 /*
@@ -785,19 +785,27 @@ public class ServeContent extends LockssServlet {
         Reader reader = new InputStreamReader(input, charset);
         
         if (checker.isLoginPage(headers, reader)) {
+	  IOUtil.safeClose(input);
+	  input = null;
           throw new CacheException.PermissionException("Found a login page");
         }
       } catch (PluginException e) {
         CacheException.PermissionException ex = 
           new CacheException.PermissionException("Error checking login page");
         ex.initCause(e);
+	IOUtil.safeClose(input);
+	input = null;
         throw ex;
       } finally {
-        // special treatment because cannot reset FileInputStream,
-        // so must close and re-open input stream from temp file
-        if (dos.isInMemory()) {
+	if (input == null) {
+	  // delete the temp file immediately if not returning an input
+	  // stream open on it
+	  dos.deleteTempFile();
+	} else if (dos.isInMemory()) {
           input.reset();
         } else {
+	  // special treatment because cannot reset FileInputStream,
+	  // so must close and re-open input stream from temp file
           IOUtil.safeClose(input);
           input = new DeleteFileOnCloseInputStream(dos.getFile());
         }
