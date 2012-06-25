@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>down - crawl rules need modification (dcor)</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.evergreenreview.EvergreenReviewPlugin</string>
   </entry>
@@ -23,14 +27,14 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%s(archives|arch_right|topnav_archive).htm&quot;, base_url</string>
+      <string>1,&quot;%s(archive|submission_new|contact_new|history_new).shtml&quot;, base_url</string>
       <string>1,&quot;%s%s&quot;, base_url, volume_name</string>
       <string>1,&quot;.*\.([cC][sS][sS]|[gG][iI][fF]|[jJ][pP][eE][gG]|[jJ][pP][gG]|[jJ][sS]|[pP][nN][gG])$&quot;</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sarchives.htm&quot;, base_url</string>
+    <string>&quot;%sarchive.shtml&quot;, base_url</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
