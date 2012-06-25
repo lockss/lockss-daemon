@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.17 2012-05-17 18:03:42 tlipkis Exp $
+ * $Id: ServletDescr.java,v 1.18 2012-06-25 14:14:55 easyonthemayo Exp $
  */
 
 /*
@@ -86,6 +86,16 @@ public class ServletDescr {
 
   /** Needs content access role */
   public static final int NEED_ROLE_CONTENT_ACCESS = 0x10000;
+
+  /** Appears in content admin menu */
+  public static final int NEED_PERSONA_CONTENT_ADMIN = 0x100000;
+
+  /** Appears in content mgr menu */
+  public static final int NEED_PERSONA_CONTENT_MANAGER = 0x200000;
+
+  /** Appears in sys admin menu */
+  public static final int NEED_PERSONA_SYS_ADMIN = 0x400000;
+
 
   public ServletDescr(String servletName,
 		      Class cls,
@@ -229,6 +239,18 @@ public class ServletDescr {
 
   boolean needsDebugRole() {
     return (flags & NEED_ROLE_DEBUG) != 0;
+  }
+
+  boolean needsContentAdminPersona() {
+    return (flags & NEED_PERSONA_CONTENT_ADMIN) != 0;
+  }
+
+  boolean needsContentManagerPersona() {
+    return (flags & NEED_PERSONA_CONTENT_MANAGER) != 0;
+  }
+
+  boolean needsSysAdminPersona() {
+    return (flags & NEED_PERSONA_SYS_ADMIN) != 0;
   }
 
   boolean isLargeLogo() {

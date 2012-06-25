@@ -1,5 +1,5 @@
 /*
- * $Id: ContentServletManager.java,v 1.8 2011-09-15 18:51:04 pgust Exp $
+ * $Id: ContentServletManager.java,v 1.9 2012-06-25 14:14:55 easyonthemayo Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public class ContentServletManager
   public static final ServletDescr SERVLET_LIST_OBJECTS =
     new ServletDescr("ListObjects",
 		     ListObjects.class,
-                     "List Objests");
+                     "List Objects");
   protected static final ServletDescr LINK_HELP =
     new ServletDescr(null,
 		     null,
@@ -156,7 +156,19 @@ public class ContentServletManager
 	return CurrentConfig.getBooleanParam(ListHoldings.PARAM_ENABLE_HOLDINGS,
 					     ListHoldings.DEFAULT_ENABLE_HOLDINGS);
       }};
-  
+
+  /*protected static final ServletDescr SERVLET_OPENURL_QUERY =
+    new ServletDescr("OpenUrlQuery",
+                     OpenUrlQuery.class,
+                     "OpenURL Query",
+                     "OpenUrlQuery",
+                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
+                     "Perform an OpenURL query against the holdings.") {
+      public boolean isEnabled(LockssDaemon daemon) {
+        return CurrentConfig.getBooleanParam(OpenUrlQuery.PARAM_ENABLE_QUERY,
+          OpenUrlQuery.DEFAULT_ENABLE_QUERY);
+      }};*/
+
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;
   }
@@ -168,10 +180,11 @@ public class ContentServletManager
   // All servlets must be listed here (even if not in nav table).
   // Order of descrs determines order in nav table.
   static final ServletDescr servletDescrs[] = {
-     SERVLET_SERVE_CONTENT,
-     SERVLET_LIST_HOLDINGS,
-     SERVLET_LIST_OBJECTS,
-     LINK_HELP,
+      SERVLET_SERVE_CONTENT,
+      SERVLET_LIST_HOLDINGS,
+      //SERVLET_OPENURL_QUERY,
+      SERVLET_LIST_OBJECTS,
+      LINK_HELP,
   };
 
   public ServletDescr[] getServletDescrs() {

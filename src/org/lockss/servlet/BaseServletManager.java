@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.35 2012-05-17 18:03:42 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.36 2012-06-25 14:14:55 easyonthemayo Exp $
  */
 
 /*
@@ -71,6 +71,13 @@ public abstract class BaseServletManager
 
   /** Prefix of doc-only parameters */
   public static final String DOC_PREFIX = Configuration.PREFIX + "<server>.";
+
+  /** A parameter to enable new UI features for testing. */
+  public static final String PARAM_ENABLE_NEW_UI = Configuration.PREFIX + "ui.new";
+  public static final boolean DEFAULT_ENABLE_NEW_UI = false;
+  public static final String PARAM_ENABLE_TRANSITIONAL_UI = Configuration.PREFIX + "ui.transitional";
+  public static final boolean DEFAULT_ENABLE_TRANSITIONAL_UI = false;
+
 
   public static final String SUFFIX_START = "start";
   /** Start the named server */
