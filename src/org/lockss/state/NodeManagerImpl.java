@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.220 2011-08-22 00:11:33 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.221 2012-06-25 05:50:20 tlipkis Exp $
  */
 
 /*
@@ -111,9 +111,15 @@ public class NodeManagerImpl
 
   public void stopService() {
     if (logger.isDebug()) logger.debug("Stopping: " + managedAu);
-    activeNodes.clear();
-    damagedNodes.clear();
-    nodeCache.clear();
+    if (activeNodes != null) {
+      activeNodes.clear();
+    }
+    if (damagedNodes != null) {
+      damagedNodes.clear();
+    }
+    if (nodeCache != null) {
+      nodeCache.clear();
+    }
 
     super.stopService();
     logger.debug2("NodeManager successfully stopped");
