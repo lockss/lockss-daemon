@@ -43,7 +43,7 @@ import org.lockss.util.Constants;
 import org.lockss.util.ListUtil;
 import org.lockss.util.TimeBase;
 
-public class TestMassachusettsMedicalSocietyPlugin extends PluginTestCase {
+public class TestMassachusettsMedicalSocietyPlugin extends LockssPluginTestCase {
 	
 	protected MockLockssDaemon daemon;
 	private final String PLUGIN_NAME = "org.lockss.plugin.massachusettsmedicalsociety.MassachusettsMedicalSocietyPlugin";
@@ -64,9 +64,6 @@ public class TestMassachusettsMedicalSocietyPlugin extends PluginTestCase {
 	
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  tempDirPath);
   }
   
   public void tearDown() throws Exception {
@@ -170,6 +167,18 @@ public class TestMassachusettsMedicalSocietyPlugin extends PluginTestCase {
 	    UrlCacher uc = au.makeUrlCacher(url);
 	    assertEquals("AU crawl rules applied incorrectly to " + url + " ", shouldCache, uc.shouldBeCached());
 	  }
+
+  public void testSubstancePatterns() throws Exception {
+    ArchivalUnit au = createAu();
+    // start page
+    assertNotSubstanceUrl(BASE_URL + "lockss/" + JOURNAL_ID + "/"
+			  + VOLUME_NAME + "/index.html",
+			  au);
+    // full text
+    assertSubstanceUrl(BASE_URL + "doi/full/10.1056/"
+		       + JOURNAL_ID + "p32411224",
+		       au);
+  }	    
 
 	  public void testStartUrlConstruction() throws Exception {
 	    String expectedStartUrl = BASE_URL + "lockss/" + JOURNAL_ID + "/" + VOLUME_NAME + "/index.html";
