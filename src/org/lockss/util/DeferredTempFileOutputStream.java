@@ -1,5 +1,5 @@
 /*
- * $Id: DeferredTempFileOutputStream.java,v 1.1 2007-08-27 06:50:11 tlipkis Exp $
+ * $Id: DeferredTempFileOutputStream.java,v 1.2 2012-06-25 07:34:00 tlipkis Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ package org.lockss.util;
 
 import org.apache.commons.io.output.*;
 import org.apache.commons.io.output.ByteArrayOutputStream;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import java.io.*;
 
@@ -203,7 +204,7 @@ public class DeferredTempFileOutputStream extends ThresholdingOutputStream {
       if (!closed) {
 	close();
       }
-      tempFile.delete();
+      FileUtils.deleteQuietly(tempFile);
       tempFile = null;
     }
   }
