@@ -71,7 +71,7 @@
     param[journal_id] = ehtj
 
     au < ready ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
-    au < testing ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
+    au < ready ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
     au < released ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
     au < released ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 >
@@ -496,8 +496,8 @@
     param[journal_id] = rlt
 
     au < testing ; 1993 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 1 ; 1 ; 1993 >
-    au < testing ; 1994 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 2 ; 2 ; 1994 >
-    au < testing ; 1995 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 3 ; 3 ; 1995 >
+    au < ready ; 1994 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 2 ; 2 ; 1994 >
+    au < ready ; 1995 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 3 ; 3 ; 1995 >
     au < testing ; 1996 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 4 ; 4 ; 1996 >
     au < testing ; 1997 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 5 ; 5 ; 1997 >
     au < testing ; 1998 ; Research in Learning Technology: The Journal of the Association for Learning Technology Volume 6 ; 6 ; 1998 >
