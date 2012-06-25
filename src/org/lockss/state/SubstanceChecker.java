@@ -1,5 +1,5 @@
 /*
- * $Id: SubstanceChecker.java,v 1.5 2012-06-24 19:46:43 pgust Exp $
+ * $Id: SubstanceChecker.java,v 1.6 2012-06-25 05:46:38 tlipkis Exp $
  */
 
 /*
@@ -266,7 +266,7 @@ public class SubstanceChecker {
 
   private void checkSubstanceUrl(String url) {
     if (substancePats != null) {
-      if (isMatch(url, substancePats)) {
+      if (isSubstanceUrl(url)) {
 	nowHasSubstance(url);
 	if (log.isDebug3()) {
 	  log.debug3("checkSubstanceUrl(" + url + ") matched substance");
@@ -279,9 +279,7 @@ public class SubstanceChecker {
       }
     }
     if (nonSubstancePats != null) {
-      if (!isMatch(url, nonSubstancePats)
-	  && (additionalNonSubstanceUrls == null
-	      || !additionalNonSubstanceUrls.contains(url))) {
+      if (!isNonSubstanceUrl(url)) {
 	if (log.isDebug3()) {
 	  log.debug3("checkSubstanceUrl(" + url + ") matched non-substance");
 	}
@@ -292,6 +290,16 @@ public class SubstanceChecker {
         }
       }
     }
+  }
+
+  public boolean isSubstanceUrl(String url) {
+    return substancePats != null && isMatch(url, substancePats);
+  }
+
+  public boolean isNonSubstanceUrl(String url) {
+    return (nonSubstancePats != null && isMatch(url, nonSubstancePats)) ||
+      (additionalNonSubstanceUrls != null &&
+       additionalNonSubstanceUrls.contains(url));
   }
 
   boolean isMatch(String url, List<Pattern> pats) {
