@@ -13,7 +13,7 @@
 
     {
 
-      plugin = plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       attr[journal_id] = comitatus
       implicit < status ; year ; name ; param[volume] >
