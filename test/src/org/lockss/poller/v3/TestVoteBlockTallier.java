@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlockTallier.java,v 1.3 2012-06-25 23:10:22 barry409 Exp $
+ * $Id: TestVoteBlockTallier.java,v 1.4 2012-06-25 23:30:10 barry409 Exp $
  */
 
 /*
@@ -54,29 +54,6 @@ public class TestVoteBlockTallier extends LockssTestCase {
     BlockTally tally = new BlockTally();
     assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult(5, 75));
   }
-
-//  public void testVersionAgreedVoters() {
-//    BlockTally tally;
-//    Collection<String> versionAgreedVoters;
-//
-//    tally = new BlockTally();
-//    tally.voteAgreed(testPeers[0]);
-//    tally.voteDisagreed(testPeers[1]);
-//    versionAgreedVoters = tally.getVersionAgreedVoters();
-//    assertEquals(0, versionAgreedVoters.size());
-//
-//    tally = new BlockTally(new BlockTally.HashBlockComparer() {
-//	public boolean compare(VoteBlock voteBlock, int participantIndex) {
-//	  fail("Should not be called.");
-//	  return true;
-//	}
-//      });
-//    tally.voteAgreed(testPeers[0]);
-//    tally.voteDisagreed(testPeers[1]);
-//    versionAgreedVoters = tally.getVersionAgreedVoters();
-//    assertEquals(1, versionAgreedVoters.size());
-//    assertContains(versionAgreedVoters, testPeers[0]);
-//  }
 
   public void testVoteWithBlockTallyPollerHas() {
     VoteBlockTallier voteBlockTallier;
