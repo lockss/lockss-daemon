@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackwellArchivalUnit.java,v 1.9 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: TestBlackwellArchivalUnit.java,v 1.10 2012-06-25 05:48:07 tlipkis Exp $
  */
 
 /*
@@ -63,10 +63,6 @@ public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
   
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
@@ -87,18 +83,14 @@ public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
     return props;
   }
 
-  private DefinableArchivalUnit makeAu(String url, String journal,
-				       String issn, String year, String volume)
+  private ArchivalUnit makeAu(String url, String journal,
+			      String issn, String year, String volume)
       throws Exception {
     return makeAu(makeConfig(url, journal, issn, year, volume));
   }
 
-  private DefinableArchivalUnit makeAu(Properties props) throws Exception {
-    Configuration config = ConfigurationUtil.fromProps(props);
-    DefinablePlugin plugin = new DefinablePlugin();
-    plugin.initPlugin(theDaemon,"org.lockss.plugin.blackwell.BlackwellPlugin");
-    DefinableArchivalUnit au = (DefinableArchivalUnit)plugin.createAu(config);
-    return au;
+  private ArchivalUnit makeAu(Properties props) throws Exception {
+    return makeAu("org.lockss.plugin.blackwell.BlackwellPlugin", props);
   }
 
   public void testGoodConfig() throws Exception {
@@ -141,7 +133,7 @@ public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
 
 
   public void testShouldCacheProperPages() throws Exception {
-    DefinableArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN,
+    ArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN,
 				      YEAR, "42");
 
     theDaemon.getLockssRepository(au);
@@ -214,18 +206,17 @@ public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
     URL url = new URL(BASE_URL);
 
     String expectedStr = BASE_URL+"clockss/pace/25/manifest.html";
-    DefinableArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN,
-				      YEAR, "25");
+    ArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN, YEAR, "25");
     assertEquals(expectedStr,
 		 ((SpiderCrawlSpec)au.getCrawlSpec()).getStartingUrls().get(0));
   }
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://www.blackwell.com/";
-    DefinableArchivalUnit au1 = makeAu(stem1 + "foo/", JOURNAL_ID, ISSN, YEAR, "2");
+    ArchivalUnit au1 = makeAu(stem1 + "foo/", JOURNAL_ID, ISSN, YEAR, "2");
     assertEquals(ListUtil.list(stem1), au1.getUrlStems());
     String stem2 = "http://www.blackwell.com:8080/";
-    DefinableArchivalUnit au2 = makeAu(stem2, JOURNAL_ID, ISSN, YEAR, "2");
+    ArchivalUnit au2 = makeAu(stem2, JOURNAL_ID, ISSN, YEAR, "2");
     assertEquals(ListUtil.list(stem2), au2.getUrlStems());
   }
 
@@ -265,7 +256,6 @@ public class TestBlackwellArchivalUnit extends LockssPluginTestCase {
     ArchivalUnit au = makeAu(BASE_URL, JOURNAL_ID, ISSN, YEAR, "2");
     CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
     assertNotNull(window);
-    log.info("window: " + window.getClass());
     assertTrue(window instanceof CrawlWindows.Or);
   }
 

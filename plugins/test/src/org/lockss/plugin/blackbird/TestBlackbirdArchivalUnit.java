@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdArchivalUnit.java,v 1.8 2010-03-08 06:50:34 thib_gc Exp $
+ * $Id: TestBlackbirdArchivalUnit.java,v 1.9 2012-06-25 05:48:07 tlipkis Exp $
  */
 
 /*
@@ -57,10 +57,6 @@ public class TestBlackbirdArchivalUnit extends LockssPluginTestCase {
   
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();

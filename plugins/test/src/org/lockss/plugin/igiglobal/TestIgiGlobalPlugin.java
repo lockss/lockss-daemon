@@ -43,7 +43,7 @@ import org.lockss.util.Constants;
 import org.lockss.util.ListUtil;
 import org.lockss.util.TimeBase;
 
-public class TestIgiGlobalPlugin extends PluginTestCase {
+public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 	
 	protected MockLockssDaemon daemon;
 	private final String PLUGIN_NAME = "org.lockss.plugin.igiglobal.IgiGlobalPlugin";
@@ -59,9 +59,6 @@ public class TestIgiGlobalPlugin extends PluginTestCase {
 										 		JOURNAL_ISSN_KEY, JOURNAL_ISSN);
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  tempDirPath);
   }
   
   public void tearDown() throws Exception {

@@ -26,9 +26,6 @@ public class TestVTETD97And98Plugin extends LockssPluginTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  tempDirPath);
   }
 
   private Properties makeProps(String url, int year, String oaiProvider) {
@@ -42,7 +39,7 @@ public class TestVTETD97And98Plugin extends LockssPluginTestCase {
   public void testShouldCacheProperPages() throws Exception {
     int year = 1998;
     ArchivalUnit bbAu = 
-      makeAu(makeProps(ROOT_URL, year, OAI_PROVIDER), PLUGIN_ID);
+      makeAu(PLUGIN_ID, makeProps(ROOT_URL, year, OAI_PROVIDER));
     MockLockssDaemon theDaemon = getMockLockssDaemon();
     theDaemon.getLockssRepository(bbAu);
     theDaemon.getNodeManager(bbAu);
@@ -75,11 +72,11 @@ public class TestVTETD97And98Plugin extends LockssPluginTestCase {
   }
 
   public void testGetName() throws Exception {
-    DefinableArchivalUnit au = 
-      makeAu(makeProps(ROOT_URL, 1999, OAI_PROVIDER), PLUGIN_ID);
+    ArchivalUnit au = 
+      makeAu(PLUGIN_ID, makeProps(ROOT_URL, 1999, OAI_PROVIDER));
     assertEquals("Virginia Tech ETD Collection 1999", au.getName());
 
-    au = makeAu(makeProps(ROOT_URL, 1998, OAI_PROVIDER), PLUGIN_ID);
+    au = makeAu(PLUGIN_ID, makeProps(ROOT_URL, 1998, OAI_PROVIDER));
     assertEquals("Virginia Tech ETD Collection 1998", au.getName());
   }
 }
