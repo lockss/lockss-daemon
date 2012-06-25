@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.156 2012-05-17 17:58:06 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.157 2012-06-25 05:49:30 tlipkis Exp $
  */
 
 /*
@@ -286,6 +286,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   protected void addImpliedConfigParams()
       throws ArchivalUnit.ConfigurationException {
+    StringPool pool = StringPool.AU_CONFIG_PROPS;
     for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
       String key = descr.getKey();
       try {
@@ -294,7 +295,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 	  // we store years in two formats - short and long
 	  if (descr.getType() == ConfigParamDescr.TYPE_YEAR) {
 	    int year = ((Integer)val).intValue() % 100;
-	    paramMap.putInt(PREFIX_AU_SHORT_YEAR + key, year);
+	    paramMap.putInt(pool.intern(PREFIX_AU_SHORT_YEAR + key),
+			    year);
 	    if (logger.isDebug3()) {
 	      logger.debug3("Inferred " + PREFIX_AU_SHORT_YEAR + key +
 			    " = " + year);
@@ -304,13 +306,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 	  if (descr.getType() == ConfigParamDescr.TYPE_URL) {
 	    URL url = (URL)val;
 	    if(url != null) {
-	      paramMap.putString(key + SUFFIX_AU_HOST, url.getHost());
-	      paramMap.putString(key + SUFFIX_AU_PATH, url.getPath());
+	      paramMap.putString(pool.intern(key + SUFFIX_AU_HOST),
+				 url.getHost());
+	      paramMap.putString(pool.intern(key + SUFFIX_AU_PATH),
+				 url.getPath());
 	      if (logger.isDebug3()) {
 		logger.debug3("Inferred " + key + SUFFIX_AU_HOST +
 			      " = " + url.getHost());
-		  logger.debug3("Inferred " + key + SUFFIX_AU_PATH +
-				" = " + url.getPath());
+		logger.debug3("Inferred " + key + SUFFIX_AU_PATH +
+			      " = " + url.getPath());
 	      }
 	    }
 	  }
