@@ -342,7 +342,19 @@
       issnl = 1087-2981
     >
 
+    {
+
     param[base_url] = http://www.med-ed-online.net/
+    param[journal_id] = meo
+
+    au < released ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
+    au < released ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
+    
+    }
+
+    {
+
+    param[base_url] = http://med-ed-online.net/
     param[journal_id] = meo
 
     au < testing ; 1996 ; Medical Education Online Volume 1 ; 1 ; 1996 >
@@ -359,10 +371,12 @@
     au < testing ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
     au < testing ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
     au < testing ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
-    au < released ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
-    au < released ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
+    au < doNotProcess ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
+    au < doNotProcess ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
     au < manifest ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
-    
+
+    }
+
   }
 
   {
