@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.54 2012-06-24 18:54:35 pgust Exp $
+ * $Id: ServeContent.java,v 1.55 2012-06-25 01:05:19 pgust Exp $
  */
 
 /*
@@ -781,9 +781,9 @@ public class ServeContent extends LockssServlet {
         charset = Constants.DEFAULT_ENCODING;
       }
 
-      Reader reader = new InputStreamReader(input, charset);
-  
       try {
+        Reader reader = new InputStreamReader(input, charset);
+        
         if (checker.isLoginPage(headers, reader)) {
           throw new CacheException.PermissionException("Found a login page");
         }
