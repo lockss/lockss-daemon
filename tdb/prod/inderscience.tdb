@@ -1200,7 +1200,7 @@
       au < ready ; 2008 ; International Journal of Business Intelligence and Data Mining Volume 3 ; 3 >
       au < ready ; 2009 ; International Journal of Business Intelligence and Data Mining Volume 4 ; 4 >
       au < ready ; 2010 ; International Journal of Business Intelligence and Data Mining Volume 5 ; 5 >
-      au < testing ; 2011 ; International Journal of Business Intelligence and Data Mining Volume 6 ; 6 >
+      au < ready ; 2011 ; International Journal of Business Intelligence and Data Mining Volume 6 ; 6 >
 
     }
 
@@ -1264,7 +1264,7 @@
       au < ready ; 2007 ; International Journal of Business Process Integration and Management Volume 2 ; 2 >
       au < testing ; 2008 ; International Journal of Business Process Integration and Management Volume 3 ; 3 >
       au < ready ; 2009 ; International Journal of Business Process Integration and Management Volume 4 ; 4 >
-      au < manifest ; 2010-2011 ; International Journal of Business Process Integration and Management Volume 5 ; 5 >
+      au < ready ; 2010-2011 ; International Journal of Business Process Integration and Management Volume 5 ; 5 >
 
     }
 
@@ -1281,7 +1281,7 @@
       
       au < ready ; 2007-2008 ; International Journal of Chinese Culture and Management Volume 1 ; 1 >
       au < testing ; 2009 ; International Journal of Chinese Culture and Management Volume 2 ; 2 >
-      au < manifest ; 2010-2012 ; International Journal of Chinese Culture and Management Volume 3 ; 3 >
+      au < ready ; 2010-2012 ; International Journal of Chinese Culture and Management Volume 3 ; 3 >
 
     }
 
@@ -1296,7 +1296,7 @@
 
       param[journal_issn] = 2043-9997
       
-      au < manifest ; 2011 ; International Journal of Cloud Computing Volume 1 ; 1 >
+      au < ready ; 2011 ; International Journal of Cloud Computing Volume 1 ; 1 >
 
     }
 
@@ -1357,7 +1357,7 @@
       param[journal_issn] = 1740-2093
       
       au < testing ; 2009-2010 ; International Journal of Collaborative Enterprise Volume 1 ; 1 >
-      au < manifest ; 2011 ; International Journal of Collaborative Enterprise Volume 2 ; 2 >
+      au < ready ; 2011 ; International Journal of Collaborative Enterprise Volume 2 ; 2 >
 
     }
 
@@ -1377,7 +1377,7 @@
       au < ready ; 2009 ; International Journal of Communication Networks and Distributed Systems Volume 3 ; 3 >
       au < ready ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 4 ; 4 >
       au < ready ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 5 ; 5 >
-      au < testing ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 6 ; 6 >
+      au < ready ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 6 ; 6 >
       au < ready ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 7 ; 7 >
       au < manifest ; 2012 ; International Journal of Communication Networks and Distributed Systems Volume 8 ; 8 >
 
@@ -1409,7 +1409,7 @@
 
       param[journal_issn] = 1759-0264
       
-      au < manifest ; 2010-2011 ; International Journal of Complexity in Leadership and Management Volume 1 ; 1 >
+      au < ready ; 2010-2011 ; International Journal of Complexity in Leadership and Management Volume 1 ; 1 >
 
     }
 
@@ -1427,7 +1427,7 @@
       au < testing ; 2008 ; International Journal of Computational Biology and Drug Design Volume 1 ; 1 >
       au < ready ; 2009 ; International Journal of Computational Biology and Drug Design Volume 2 ; 2 >
       au < ready ; 2010 ; International Journal of Computational Biology and Drug Design Volume 3 ; 3 >
-      au < testing ; 2011 ; International Journal of Computational Biology and Drug Design Volume 4 ; 4 >
+      au < ready ; 2011 ; International Journal of Computational Biology and Drug Design Volume 4 ; 4 >
       au < manifest ; 2012 ; International Journal of Computational Biology and Drug Design Volume 5 ; 5 >
 
     }
@@ -1459,7 +1459,7 @@
       param[journal_issn] = 1757-1189
       
       au < testing ; 2009-2010 ; International Journal of Computational Economics and Econometrics Volume 1 ; 1 >
-      au < manifest ; 2011 ; International Journal of Computational Economics and Econometrics Volume 2 ; 2 >
+      au < ready ; 2011 ; International Journal of Computational Economics and Econometrics Volume 2 ; 2 >
 
     }
 
@@ -1866,9 +1866,9 @@
 
       param[journal_issn] = 1755-8069
       
-      au < manifest ; 2008-2009 ; International Journal of Data Analysis Techniques and Strategies Volume 1 ; 1 >
-      au < manifest ; 2010 ; International Journal of Data Analysis Techniques and Strategies Volume 2 ; 2 >
-      au < manifest ; 2011 ; International Journal of Data Analysis Techniques and Strategies Volume 3 ; 3 >
+      au < testing ; 2008-2009 ; International Journal of Data Analysis Techniques and Strategies Volume 1 ; 1 >
+      au < testing ; 2010 ; International Journal of Data Analysis Techniques and Strategies Volume 2 ; 2 >
+      au < testing ; 2011 ; International Journal of Data Analysis Techniques and Strategies Volume 3 ; 3 >
       au < manifest ; 2012 ; International Journal of Data Analysis Techniques and Strategies Volume 4 ; 4 >
 
     }
@@ -1884,11 +1884,11 @@
 
       param[journal_issn] = 1748-5681
       
-      au < manifest ; 2006-2007 ; International Journal of Data Mining and Bioinformatics Volume 1 ; 1 >
-      au < manifest ; 2008 ; International Journal of Data Mining and Bioinformatics Volume 2 ; 2 >
-      au < manifest ; 2009 ; International Journal of Data Mining and Bioinformatics Volume 3 ; 3 >
-      au < manifest ; 2010 ; International Journal of Data Mining and Bioinformatics Volume 4 ; 4 >
-      au < manifest ; 2011 ; International Journal of Data Mining and Bioinformatics Volume 5 ; 5 >
+      au < testing ; 2006-2007 ; International Journal of Data Mining and Bioinformatics Volume 1 ; 1 >
+      au < testing ; 2008 ; International Journal of Data Mining and Bioinformatics Volume 2 ; 2 >
+      au < testing ; 2009 ; International Journal of Data Mining and Bioinformatics Volume 3 ; 3 >
+      au < testing ; 2010 ; International Journal of Data Mining and Bioinformatics Volume 4 ; 4 >
+      au < testing ; 2011 ; International Journal of Data Mining and Bioinformatics Volume 5 ; 5 >
       au < manifest ; 2012 ; International Journal of Data Mining and Bioinformatics Volume 6 ; 6 >
 
     }
@@ -1904,9 +1904,9 @@
 
       param[journal_issn] = 1759-1171
       
-      au < manifest ; 2008-2009 ; International Journal of Data Mining, Modelling and Management Volume 1 ; 1 >
-      au < manifest ; 2010 ; International Journal of Data Mining, Modelling and Management Volume 2 ; 2 >
-      au < manifest ; 2011 ; International Journal of Data Mining, Modelling and Management Volume 3 ; 3 >
+      au < testing ; 2008-2009 ; International Journal of Data Mining, Modelling and Management Volume 1 ; 1 >
+      au < testing ; 2010 ; International Journal of Data Mining, Modelling and Management Volume 2 ; 2 >
+      au < testing ; 2011 ; International Journal of Data Mining, Modelling and Management Volume 3 ; 3 >
       au < manifest ; 2012 ; International Journal of Data Mining, Modelling and Management Volume 4 ; 4 >
 
     }
@@ -1922,8 +1922,8 @@
 
       param[journal_issn] = 1753-7177
       
-      au < manifest ; 2009 ; International Journal of Decision Sciences, Risk and Management Volume 1 ; 1 >
-      au < manifest ; 2010 ; International Journal of Decision Sciences, Risk and Management Volume 2 ; 2 >
+      au < testing ; 2009 ; International Journal of Decision Sciences, Risk and Management Volume 1 ; 1 >
+      au < testing ; 2010 ; International Journal of Decision Sciences, Risk and Management Volume 2 ; 2 >
       au < manifest ; 2011 ; International Journal of Decision Sciences, Risk and Management Volume 3 ; 3 >
 
     }
@@ -1939,9 +1939,9 @@
 
       param[journal_issn] = 1751-5882
       
-      au < manifest ; 2007-2008 ; International Journal of Design Engineering Volume 1 ; 1 >
-      au < manifest ; 2009 ; International Journal of Design Engineering Volume 2 ; 2 >
-      au < manifest ; 2010 ; International Journal of Design Engineering Volume 3 ; 3 >
+      au < testing ; 2007-2008 ; International Journal of Design Engineering Volume 1 ; 1 >
+      au < testing ; 2009 ; International Journal of Design Engineering Volume 2 ; 2 >
+      au < testing ; 2010 ; International Journal of Design Engineering Volume 3 ; 3 >
       au < manifest ; 2011 ; International Journal of Design Engineering Volume 4 ; 4 >
 
     }
@@ -1957,7 +1957,7 @@
 
       param[journal_issn] = 1753-5220
       
-      au < manifest ; 2009-2009 ; International Journal of Digital Culture and Electronic Tourism Volume 1 ; 1 >
+      au < testing ; 2009-2009 ; International Journal of Digital Culture and Electronic Tourism Volume 1 ; 1 >
 
     }
 
@@ -2017,8 +2017,8 @@
 
       param[journal_issn] = 1752-3591
       
-      au < manifest ; 2007-2008 ;  International Journal of Dynamical Systems and Differential Equations Volume 1 ; 1 >
-      au < manifest ; 2009;  International Journal of Dynamical Systems and Differential Equations Volume 2 ; 2 >
+      au < testing ; 2007-2008 ;  International Journal of Dynamical Systems and Differential Equations Volume 1 ; 1 >
+      au < testing ; 2009;  International Journal of Dynamical Systems and Differential Equations Volume 2 ; 2 >
       au < manifest ; 2011;  International Journal of Dynamical Systems and Differential Equations Volume 3 ; 3 >
 
     }
@@ -2034,10 +2034,10 @@
 
       param[journal_issn] = 1752-0460
       
-      au < manifest ; 2007-2008 ; International Journal of Economic Policy in Emerging Economies Volume 1 ; 1 >
-      au < manifest ; 2009 ; International Journal of Economic Policy in Emerging Economies Volume 2 ; 2 >
-      au < manifest ; 2010 ; International Journal of Economic Policy in Emerging Economies Volume 3 ; 3 >
-      au < manifest ; 2011 ; International Journal of Economic Policy in Emerging Economies Volume 4 ; 4 >
+      au < testing ; 2007-2008 ; International Journal of Economic Policy in Emerging Economies Volume 1 ; 1 >
+      au < testing ; 2009 ; International Journal of Economic Policy in Emerging Economies Volume 2 ; 2 >
+      au < testing ; 2010 ; International Journal of Economic Policy in Emerging Economies Volume 3 ; 3 >
+      au < testing ; 2011 ; International Journal of Economic Policy in Emerging Economies Volume 4 ; 4 >
       au < manifest ; 2012 ; International Journal of Economic Policy in Emerging Economies Volume 5 ; 5 >
 
     }
