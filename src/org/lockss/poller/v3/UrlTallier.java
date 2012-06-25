@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.7 2012-03-14 22:20:21 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.8 2012-06-25 23:10:22 barry409 Exp $
  */
 
 /*
@@ -262,7 +262,7 @@ final class UrlTallier {
    * current URL known to any participant.
    * @return tally Collects the votes.
    */
-  BlockTally<ParticipantUserData> tallyVoterUrl(String url) {
+  BlockTally tallyVoterUrl(String url) {
     if (url == null) {
       throw new ShouldNotHappenException("url is null.");
     }
@@ -271,10 +271,8 @@ final class UrlTallier {
 					 peekUrl()+" not "+url);
     }
 
-    BlockTally<ParticipantUserData> tally =
-      new BlockTally<ParticipantUserData>();
-    VoteBlockTallier<ParticipantUserData> voteBlockTallier =
-      new VoteBlockTallier<ParticipantUserData>();
+    BlockTally tally = new BlockTally();
+    VoteBlockTallier voteBlockTallier = new VoteBlockTallier();
     log.debug3("tallyVoterUrl: "+url);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.addTally(ParticipantUserData.voteTally);
@@ -291,8 +289,7 @@ final class UrlTallier {
    * @param hashBlock The poller's {@link HashBlock}.
    * @return tally Collects the votes.
    */
-  BlockTally<ParticipantUserData> tallyPollerUrl(String url,
-						 HashBlock hashBlock) {
+  BlockTally tallyPollerUrl(String url, HashBlock hashBlock) {
     if (url == null) {
       throw new ShouldNotHappenException("url is null.");
     }
@@ -301,10 +298,8 @@ final class UrlTallier {
 					 " comes before "+url);
     }
 
-    BlockTally<ParticipantUserData> tally =
-      new BlockTally<ParticipantUserData>();
-    VoteBlockTallier<ParticipantUserData> voteBlockTallier =
-      new VoteBlockTallier<ParticipantUserData>(hashBlock);
+    BlockTally tally = new BlockTally();
+    VoteBlockTallier voteBlockTallier = new VoteBlockTallier(hashBlock);
     log.debug3("tallyPollerUrl: "+url);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.addTally(ParticipantUserData.voteTally);
@@ -321,8 +316,7 @@ final class UrlTallier {
    * @param hashBlock The poller's {@link HashBlock}.
    * @return tally Collects the votes.
    */
-  BlockTally<ParticipantUserData> tallyRepairUrl(String url,
-						 HashBlock hashBlock) {
+  BlockTally tallyRepairUrl(String url, HashBlock hashBlock) {
     if (url == null) {
       throw new ShouldNotHappenException("url is null.");
     }
@@ -332,17 +326,14 @@ final class UrlTallier {
     }
 
     log.debug3("tallyRepairUrl: "+url);
-    VoteBlockTallier<ParticipantUserData> voteBlockTallier =
-      new VoteBlockTallier<ParticipantUserData>(hashBlock);
-    BlockTally<ParticipantUserData> tally =
-      new BlockTally<ParticipantUserData>();
+    VoteBlockTallier voteBlockTallier = new VoteBlockTallier(hashBlock);
+    BlockTally tally = new BlockTally();
     voteBlockTallier.addTally(tally);
     voteAllParticipants(url, voteBlockTallier);
     return tally;
   }
 
-  void voteAllParticipants(String url,
-      VoteBlockTallier<ParticipantUserData> voteBlockTallier) {
+  void voteAllParticipants(String url, VoteBlockTallier voteBlockTallier) {
     for (int participantIndex = 0; participantIndex < participantsList.size();
 	 participantIndex++) {
       Entry e = participantsList.get(participantIndex);

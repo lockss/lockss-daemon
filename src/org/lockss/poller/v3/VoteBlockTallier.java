@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.4 2012-03-19 20:08:33 barry409 Exp $
+ * $Id: VoteBlockTallier.java,v 1.5 2012-06-25 23:10:22 barry409 Exp $
  */
 
 /*
@@ -44,17 +44,17 @@ import org.lockss.util.Logger;
  * URL. This class encapsulates what it means to compare a VoteBlock
  * to a HashBlock.
  */
-public class VoteBlockTallier<T> {
+public class VoteBlockTallier {
 
   // todo(bhayes): There should be an enum of these things. But that
   // leads to EnumMap<Vote, Long> with boxed longs.
-  interface VoteBlockTally<U> {
-    public void voteAgreed(U id);
-    public void voteDisagreed(U id);
-    public void votePollerOnly(U id);
-    public void voteVoterOnly(U id);
-    public void voteNeither(U id);
-    public void voteSpoiled(U id);
+  interface VoteBlockTally {
+    public void voteAgreed(ParticipantUserData id);
+    public void voteDisagreed(ParticipantUserData id);
+    public void votePollerOnly(ParticipantUserData id);
+    public void voteVoterOnly(ParticipantUserData id);
+    public void voteNeither(ParticipantUserData id);
+    public void voteSpoiled(ParticipantUserData id);
   }
 
   interface HashBlockComparer {
@@ -63,7 +63,7 @@ public class VoteBlockTallier<T> {
 
   // Null if the poller does not have this URL.
   private final HashBlockComparer comparer;
-  private final Collection<VoteBlockTally<T>> tallies;
+  private final Collection<VoteBlockTally> tallies;
   private boolean votingStarted = false;
 
   private static final Logger log = Logger.getLogger("VoteBlockTallier");
@@ -80,7 +80,7 @@ public class VoteBlockTallier<T> {
    */
   public VoteBlockTallier(HashBlockComparer comparer) {
     this.comparer = comparer;
-    tallies = new ArrayList<VoteBlockTally<T>>();
+    tallies = new ArrayList<VoteBlockTally>();
   }
 
   /**
@@ -93,7 +93,7 @@ public class VoteBlockTallier<T> {
   /**
    * Add a tally which will be informed of each vote.
    */
-  public void addTally(VoteBlockTally<T> tally) {
+  public void addTally(VoteBlockTally tally) {
     if (votingStarted) {
       throw new IllegalStateException("tally added after voting started.");
     }
@@ -108,7 +108,8 @@ public class VoteBlockTallier<T> {
   /**
    * Vote using all the versions of the voter's VoteBlock.
    */
-  public void vote(VoteBlock voteBlock, T id, int participantIndex) {
+  public void vote(VoteBlock voteBlock, ParticipantUserData id,
+		   int participantIndex) {
     votingStarted = true;
     if (pollerHas()) {
       if (comparer.compare(voteBlock, participantIndex)) {
@@ -124,7 +125,7 @@ public class VoteBlockTallier<T> {
   /**
    * Vote that the URL is missing.
    */
-  public void voteMissing(T id) {
+  public void voteMissing(ParticipantUserData id) {
     votingStarted = true;
     if (pollerHas()) {
       votePollerOnly(id);
@@ -136,7 +137,7 @@ public class VoteBlockTallier<T> {
   /**
    * The voter is unable to cast a meaningful vote.
    */
-  public void voteSpoiled(T id) {
+  public void voteSpoiled(ParticipantUserData id) {
     votingStarted = true;
     log.debug3(id+"  spoiled");
     for (VoteBlockTally tally: tallies) {
@@ -144,35 +145,35 @@ public class VoteBlockTallier<T> {
     }
   }
 
-  void voteAgreed(T id) {
+  void voteAgreed(ParticipantUserData id) {
     log.debug3(id+"  agreed");
     for (VoteBlockTally tally: tallies) {
       tally.voteAgreed(id);
     }
   }
 
-  void voteDisagreed(T id) {
+  void voteDisagreed(ParticipantUserData id) {
     log.debug3(id+"  disagreed");
     for (VoteBlockTally tally: tallies) {
       tally.voteDisagreed(id);
     }
   }
 
-  void votePollerOnly(T id) {
+  void votePollerOnly(ParticipantUserData id) {
     log.debug3(id+"  didn't have");
     for (VoteBlockTally tally: tallies) {
       tally.votePollerOnly(id);
     }
   }
 
-  void voteVoterOnly(T id) {
+  void voteVoterOnly(ParticipantUserData id) {
     log.debug3(id+"  voterOnly");
     for (VoteBlockTally tally: tallies) {
       tally.voteVoterOnly(id);
     }
   }
 
-  void voteNeither(T id) {
+  void voteNeither(ParticipantUserData id) {
     log.debug3(id+"  neither have");
     for (VoteBlockTally tally: tallies) {
       tally.voteNeither(id);
@@ -218,8 +219,7 @@ public class VoteBlockTallier<T> {
       for (HashBlock.Version hbVersion : hbVersions) {
 	if (hbVersion.getHashError() == null) {
 	  // todo(bhayes): the participantIndex could be removed if
-	  // HashBlock could return versions by T
-	  // [e.g. ParticipantUserData].
+	  // HashBlock could return versions keyed by ParticipantUserData.
 	  byte[] hbHash = hbVersion.getHashes()[participantIndex];
 	  VoteBlock.Version[] vbVersions = voteBlock.getVersions();
 	  for (int versionIndex = 0; versionIndex < vbVersions.length;

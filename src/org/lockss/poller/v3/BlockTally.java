@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.23 2012-03-14 22:20:21 barry409 Exp $
+ * $Id: BlockTally.java,v 1.24 2012-06-25 23:10:22 barry409 Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.Logger;
 /**
  * Representation of the tally for an individual vote block.
  */
-public class BlockTally<T> implements VoteBlockTallier.VoteBlockTally<T> {
+public class BlockTally implements VoteBlockTallier.VoteBlockTally {
 
   public enum Result {
     NOQUORUM("No Quorum"),
@@ -62,29 +62,33 @@ public class BlockTally<T> implements VoteBlockTallier.VoteBlockTally<T> {
 
   // package level, for testing, and access by BlockTally.
   // List of voters with whom the poller agrees.
-  final Collection<T> agreeVoters = new ArrayList<T>();
+  final Collection<ParticipantUserData> agreeVoters =
+    new ArrayList<ParticipantUserData>();
   // List of voters with whom the poller disagrees.
-  final Collection<T> disagreeVoters = new ArrayList<T>();
+  final Collection<ParticipantUserData> disagreeVoters =
+    new ArrayList<ParticipantUserData>();
   // List of voters who do not have a block that the poller does.
-  final Collection<T> pollerOnlyVoters = new ArrayList<T>();
+  final Collection<ParticipantUserData> pollerOnlyVoters =
+    new ArrayList<ParticipantUserData>();
   // List of voters who have an block that the poller does not.
-  final Collection<T> voterOnlyVoters = new ArrayList<T>();
+  final Collection<ParticipantUserData> voterOnlyVoters =
+    new ArrayList<ParticipantUserData>();
 
   // Interface methods to springboard to our internal methods.
-  public void voteSpoiled(T id) {}
-  public void voteAgreed(T id) {
+  public void voteSpoiled(ParticipantUserData id) {}
+  public void voteAgreed(ParticipantUserData id) {
     addAgreeVoter(id);
   }
-  public void voteDisagreed(T id) {
+  public void voteDisagreed(ParticipantUserData id) {
     addDisagreeVoter(id);
   }
-  public void votePollerOnly(T id) {
+  public void votePollerOnly(ParticipantUserData id) {
     addPollerOnlyVoter(id);
   }
-  public void voteVoterOnly(T id) {
+  public void voteVoterOnly(ParticipantUserData id) {
     addVoterOnlyVoter(id);
   }
-  public void voteNeither(T id) {
+  public void voteNeither(ParticipantUserData id) {
     // todo(bhayes): This is questionable.
     addAgreeVoter(id);
   }
@@ -124,19 +128,19 @@ public class BlockTally<T> implements VoteBlockTallier.VoteBlockTally<T> {
     return result;
   }
 
-  public Collection<T> getAgreeVoters() {
+  public Collection<ParticipantUserData> getAgreeVoters() {
     return Collections.unmodifiableCollection(agreeVoters);
   }
 
-  public Collection<T> getDisagreeVoters() {
+  public Collection<ParticipantUserData> getDisagreeVoters() {
     return Collections.unmodifiableCollection(disagreeVoters);
   }
 
-  public Collection<T> getPollerOnlyBlockVoters() {
+  public Collection<ParticipantUserData> getPollerOnlyBlockVoters() {
     return Collections.unmodifiableCollection(pollerOnlyVoters);
   }
 
-  public Collection<T> getVoterOnlyBlockVoters() {
+  public Collection<ParticipantUserData> getVoterOnlyBlockVoters() {
     return Collections.unmodifiableCollection(voterOnlyVoters);
   }
 
@@ -165,20 +169,20 @@ public class BlockTally<T> implements VoteBlockTallier.VoteBlockTally<T> {
     return true;
   }
 
-  void addAgreeVoter(T id) {
+  void addAgreeVoter(ParticipantUserData id) {
     agreeVoters.add(id);
   }
 
-  void addDisagreeVoter(T id) {
+  void addDisagreeVoter(ParticipantUserData id) {
     disagreeVoters.add(id);
   }
 
-  void addPollerOnlyVoter(T id) {
+  void addPollerOnlyVoter(ParticipantUserData id) {
     disagreeVoters.add(id);
     pollerOnlyVoters.add(id);
   }
 
-  void addVoterOnlyVoter(T id) {
+  void addVoterOnlyVoter(ParticipantUserData id) {
     disagreeVoters.add(id);
     voterOnlyVoters.add(id);
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockTally.java,v 1.13 2012-03-14 23:33:23 barry409 Exp $
+ * $Id: TestBlockTally.java,v 1.14 2012-06-25 23:10:22 barry409 Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import java.util.*;
 import java.io.*;
 
 public class TestBlockTally extends LockssTestCase {
-  private String[] testPeers;
+  private ParticipantUserData[] testPeers;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -51,56 +51,51 @@ public class TestBlockTally extends LockssTestCase {
   }
   
   private void setupPeers() {
-    testPeers = new String[10];
-    testPeers[0] = "TCP:[192.168.0.1]:9900";
-    testPeers[1] = "TCP:[192.168.0.1]:9901";
-    testPeers[2] = "TCP:[192.168.0.1]:9902";
-    testPeers[3] = "TCP:[192.168.0.1]:9903";
-    testPeers[4] = "TCP:[192.168.0.1]:9904";
-    testPeers[5] = "TCP:[192.168.0.1]:9905";
-    testPeers[6] = "TCP:[192.168.0.1]:9906";
-    testPeers[7] = "TCP:[192.168.0.1]:9907";
-    testPeers[8] = "TCP:[192.168.0.1]:9908";
-    testPeers[9] = "TCP:[192.168.0.1]:9909";
+    testPeers = new ParticipantUserData[10];
+    // todo(bhayes): None of the tests at present actually care about
+    // the actual ParticipantUserData. It would improve the situation
+    // to make mocks [or use the no-arg constructor] and check the
+    // get*Voters methods in BlockTally which return the actual
+    // arrays.
   }
 
   public void testConstructPollTally() throws Exception {
-    BlockTally<String> tally = new BlockTally<String>();
+    BlockTally tally = new BlockTally();
     assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult(5, 75));
   }
   
   public void testIsWithinMargin() throws Exception {
-    BlockTally<String> tally = null;
+    BlockTally tally = null;
     
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addAgreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertTrue(tally.isWithinMargin(50));
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertTrue(tally.isWithinMargin(50));
     
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertTrue(tally.isWithinMargin(50));
     
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertTrue(tally.isWithinMargin(50));
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
@@ -108,35 +103,35 @@ public class TestBlockTally extends LockssTestCase {
     assertTrue(tally.isWithinMargin(50));
     
     
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addAgreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertTrue(tally.isWithinMargin(75));
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertTrue(tally.isWithinMargin(75));
     
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertFalse(tally.isWithinMargin(75));
     
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertTrue(tally.isWithinMargin(75));
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
@@ -144,35 +139,35 @@ public class TestBlockTally extends LockssTestCase {
     assertTrue(tally.isWithinMargin(75));
     
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addAgreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertTrue(tally.isWithinMargin(80));
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertFalse(tally.isWithinMargin(80));
     
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertFalse(tally.isWithinMargin(80));
     
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertFalse(tally.isWithinMargin(80));
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
@@ -181,7 +176,7 @@ public class TestBlockTally extends LockssTestCase {
   }
 
   public void testWonPoll() throws Exception {
-    BlockTally<String> tally = new BlockTally<String>();
+    BlockTally tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
@@ -191,7 +186,7 @@ public class TestBlockTally extends LockssTestCase {
   }
 
   public void testLostPoll() throws Exception {
-    BlockTally<String> tally = new BlockTally<String>();
+    BlockTally tally = new BlockTally();
     tally.addAgreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
@@ -201,7 +196,7 @@ public class TestBlockTally extends LockssTestCase {
   }
 
   public void testResultTooCloseUnder() throws Exception {
-    BlockTally<String> tally = new BlockTally<String>();
+    BlockTally tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
@@ -212,7 +207,7 @@ public class TestBlockTally extends LockssTestCase {
   }
 
   public void testResultTooCloseOver() throws Exception {
-    BlockTally<String> tally = new BlockTally<String>();
+    BlockTally tally = new BlockTally();
     tally.addAgreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
@@ -223,7 +218,7 @@ public class TestBlockTally extends LockssTestCase {
   }
 
   public void testResultTooCloseEqual() throws Exception {
-    BlockTally<String> tally = new BlockTally<String>();
+    BlockTally tally = new BlockTally();
     tally.addAgreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
@@ -234,7 +229,7 @@ public class TestBlockTally extends LockssTestCase {
   }
 
   public void testNoQuorum() throws Exception {
-    BlockTally<String> tally = new BlockTally<String>();
+    BlockTally tally = new BlockTally();
     tally.addAgreeVoter(testPeers[0]);
     tally.addAgreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
@@ -244,9 +239,9 @@ public class TestBlockTally extends LockssTestCase {
 
   public void testPollerOnly() throws Exception {
     // A combination of disagree, and poller only
-    BlockTally<String> tally;
+    BlockTally tally;
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
@@ -255,14 +250,14 @@ public class TestBlockTally extends LockssTestCase {
 
     // Note: the reparing peer will be drawn from all the voters,
     // including the one who doesn't have it. This is wrong.
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addDisagreeVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
     tally.addDisagreeVoter(testPeers[3]);
     assertEquals(BlockTally.Result.LOST, tally.getTallyResult(4, 75));
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addPollerOnlyVoter(testPeers[1]);
     tally.addDisagreeVoter(testPeers[2]);
@@ -271,14 +266,14 @@ public class TestBlockTally extends LockssTestCase {
 
     // Note: a landslide of voters say it doesn't exist, yet a repair
     // will be requested from a random voter. This is wrong.
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addPollerOnlyVoter(testPeers[1]);
     tally.addPollerOnlyVoter(testPeers[2]);
     tally.addDisagreeVoter(testPeers[3]);
     assertEquals(BlockTally.Result.LOST, tally.getTallyResult(4, 75));
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addPollerOnlyVoter(testPeers[1]);
     tally.addPollerOnlyVoter(testPeers[2]);
@@ -289,7 +284,7 @@ public class TestBlockTally extends LockssTestCase {
     // The LOST_POLLER_ONLY_BLOCK result is returned when the number
     // of "poller only" voters is greater than the quorum, even if
     // there are a lot of disagree voters. This is wrong.
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addPollerOnlyVoter(testPeers[1]);
     tally.addPollerOnlyVoter(testPeers[2]);
@@ -303,7 +298,7 @@ public class TestBlockTally extends LockssTestCase {
     assertEquals(BlockTally.Result.LOST_POLLER_ONLY_BLOCK,
 		 tally.getTallyResult(4, 75));
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addPollerOnlyVoter(testPeers[0]);
     tally.addPollerOnlyVoter(testPeers[1]);
     tally.addPollerOnlyVoter(testPeers[2]);
@@ -318,20 +313,20 @@ public class TestBlockTally extends LockssTestCase {
   }
 
   public void testAddVoters() {
-    BlockTally<String> tally;
-    tally = new BlockTally<String>();
+    BlockTally tally;
+    tally = new BlockTally();
     tally.addAgreeVoter(testPeers[0]);
     assertEquals("1/0/0/0", tally.votes());
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addDisagreeVoter(testPeers[0]);
     assertEquals("0/1/0/0", tally.votes());
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addPollerOnlyVoter(testPeers[0]);
     assertEquals("0/1/1/0", tally.votes());
 
-    tally = new BlockTally<String>();
+    tally = new BlockTally();
     tally.addVoterOnlyVoter(testPeers[0]);
     assertEquals("0/1/0/1", tally.votes());
   }

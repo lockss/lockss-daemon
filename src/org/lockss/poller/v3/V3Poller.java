@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.120 2012-03-20 17:24:38 barry409 Exp $
+ * $Id: V3Poller.java,v 1.121 2012-06-25 23:10:22 barry409 Exp $
  */
 
 /*
@@ -1089,7 +1089,7 @@ public class V3Poller extends BasePoll {
    * results have been acted upon, and the tally is returned for
    * testing purposes.
    */
-  BlockTally<ParticipantUserData> tallyBlock(HashBlock hashBlock) {
+  BlockTally tallyBlock(HashBlock hashBlock) {
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
 
     final String pollerUrl = hashBlock.getUrl();
@@ -1106,8 +1106,7 @@ public class V3Poller extends BasePoll {
     }
 
     tallyVoterUrls(pollerUrl);
-    BlockTally<ParticipantUserData> tally =
-      tallyPollerUrl(pollerUrl, hashBlock);
+    BlockTally tally = tallyPollerUrl(pollerUrl, hashBlock);
 
     // Check to see if it's time to checkpoint the poll.
     bytesHashedSinceLastCheckpoint += hashBlock.getTotalFilteredBytes();
@@ -1173,7 +1172,7 @@ public class V3Poller extends BasePoll {
    */
   private void tallyVoterUrl(String voterUrl) {
     log.debug3("tallyVoterUrl: "+voterUrl);
-    BlockTally<ParticipantUserData> tally = urlTallier.tallyVoterUrl(voterUrl);
+    BlockTally tally = urlTallier.tallyVoterUrl(voterUrl);
     checkTally(tally, voterUrl);
   }
 
@@ -1186,11 +1185,9 @@ public class V3Poller extends BasePoll {
    * results have been acted upon, and the tally is returned for
    * testing purposes.
    */
-  private BlockTally<ParticipantUserData> tallyPollerUrl(String pollerUrl,
-						  HashBlock hashBlock) {
+  private BlockTally tallyPollerUrl(String pollerUrl, HashBlock hashBlock) {
     log.debug3("tallyPollerUrl: "+pollerUrl);
-    BlockTally<ParticipantUserData> tally =
-      urlTallier.tallyPollerUrl(pollerUrl, hashBlock);
+    BlockTally tally = urlTallier.tallyPollerUrl(pollerUrl, hashBlock);
     signalNodeAgreement(tally, pollerUrl);
     checkTally(tally, pollerUrl);
     return tally;
@@ -1211,8 +1208,7 @@ public class V3Poller extends BasePoll {
    * @param tally The tally containing votes.
    * @param url The target URL.
    */
-  private void signalNodeAgreement(BlockTally<ParticipantUserData> tally,
-				   String url) {
+  private void signalNodeAgreement(BlockTally tally, String url) {
     if (tally.getAgreeVoters().size() > 0) {
       try {
         RepositoryNode node = AuUtil.getRepositoryNode(getAu(), url);
@@ -1237,8 +1233,7 @@ public class V3Poller extends BasePoll {
    * @param url The target URL for any possible repairs.
    * @return The status of the tally.
    */
-  private BlockTally.Result checkTally(BlockTally<ParticipantUserData> tally,
-				       String url) {
+  private BlockTally.Result checkTally(BlockTally tally, String url) {
     // Should never happen -- if it does, track it down.
     if (url == null) {
       throw new NullPointerException("Passed a null url to checkTally!");
@@ -1247,7 +1242,7 @@ public class V3Poller extends BasePoll {
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
     BlockTally.Result tallyResult =
       tally.getTallyResult(pollerState.getQuorum(),
-				       pollerState.getVoteMargin());
+			   pollerState.getVoteMargin());
     PollerStateBean.TallyStatus tallyStatus = pollerState.getTallyStatus();
 
     // Have now counted agreement in tally and recorded per-file agreement.
@@ -1613,8 +1608,7 @@ public class V3Poller extends BasePoll {
 	UrlTallier urlTallier = makeUrlTallier();
 	try {
 	  urlTallier.seek(url);
-	  BlockTally<ParticipantUserData> tally =
-	    urlTallier.tallyRepairUrl(url, hashBlock);
+	  BlockTally tally = urlTallier.tallyRepairUrl(url, hashBlock);
 	  // NOTE: ParticipantUserData was updated from the initial
 	  // pre-repair tally. Results of a repair do not change the
 	  // ParticipantUserData.

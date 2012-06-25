@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlockTallier.java,v 1.2 2012-03-19 19:11:12 barry409 Exp $
+ * $Id: TestVoteBlockTallier.java,v 1.3 2012-06-25 23:10:22 barry409 Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import org.lockss.test.*;
 
 
 public class TestVoteBlockTallier extends LockssTestCase {
-  private String[] testPeers;
+  private ParticipantUserData[] testPeers;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -45,35 +45,27 @@ public class TestVoteBlockTallier extends LockssTestCase {
   }
   
   private void setupPeers() {
-    testPeers = new String[10];
-    testPeers[0] = "TCP:[192.168.0.1]:9900";
-    testPeers[1] = "TCP:[192.168.0.1]:9901";
-    testPeers[2] = "TCP:[192.168.0.1]:9902";
-    testPeers[3] = "TCP:[192.168.0.1]:9903";
-    testPeers[4] = "TCP:[192.168.0.1]:9904";
-    testPeers[5] = "TCP:[192.168.0.1]:9905";
-    testPeers[6] = "TCP:[192.168.0.1]:9906";
-    testPeers[7] = "TCP:[192.168.0.1]:9907";
-    testPeers[8] = "TCP:[192.168.0.1]:9908";
-    testPeers[9] = "TCP:[192.168.0.1]:9909";
+    testPeers = new ParticipantUserData[10];
+    // todo(bhayes): None of the tests at present actually care about
+    // the actual ParticipantUserData.
   }
 
   public void testConstructPollTally() {
-    BlockTally<String> tally = new BlockTally<String>();
+    BlockTally tally = new BlockTally();
     assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult(5, 75));
   }
 
 //  public void testVersionAgreedVoters() {
-//    BlockTally<String> tally;
+//    BlockTally tally;
 //    Collection<String> versionAgreedVoters;
 //
-//    tally = new BlockTally<String>();
+//    tally = new BlockTally();
 //    tally.voteAgreed(testPeers[0]);
 //    tally.voteDisagreed(testPeers[1]);
 //    versionAgreedVoters = tally.getVersionAgreedVoters();
 //    assertEquals(0, versionAgreedVoters.size());
 //
-//    tally = new BlockTally<String>(new BlockTally.HashBlockComparer() {
+//    tally = new BlockTally(new BlockTally.HashBlockComparer() {
 //	public boolean compare(VoteBlock voteBlock, int participantIndex) {
 //	  fail("Should not be called.");
 //	  return true;
@@ -87,8 +79,8 @@ public class TestVoteBlockTallier extends LockssTestCase {
 //  }
 
   public void testVoteWithBlockTallyPollerHas() {
-    VoteBlockTallier<String> voteBlockTallier;
-    BlockTally<String> tally;
+    VoteBlockTallier voteBlockTallier;
+    BlockTally tally;
     VoteBlockTallier.HashBlockComparer comparer =
       new VoteBlockTallier.HashBlockComparer() {
 	public boolean compare(VoteBlock voteBlock, int participantIndex) {
@@ -96,28 +88,28 @@ public class TestVoteBlockTallier extends LockssTestCase {
 	}
       };
 
-    voteBlockTallier = new VoteBlockTallier<String>(comparer);
-    tally = new BlockTally<String>();
+    voteBlockTallier = new VoteBlockTallier(comparer);
+    tally = new BlockTally();
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteSpoiled(testPeers[0]);
     assertEquals("0/0/0/0", tally.votes());
 
-    voteBlockTallier = new VoteBlockTallier<String>(comparer);
-    tally = new BlockTally<String>();
+    voteBlockTallier = new VoteBlockTallier(comparer);
+    tally = new BlockTally();
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteMissing(testPeers[0]);
     assertEquals("0/1/1/0", tally.votes());
 
-    voteBlockTallier = new VoteBlockTallier<String>(comparer);
-    tally = new BlockTally<String>();
+    voteBlockTallier = new VoteBlockTallier(comparer);
+    tally = new BlockTally();
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(null, testPeers[0], 0);
     assertEquals("1/0/0/0", tally.votes());
   }
 
   public void testVoteWithBlockTallyPollerDoesntHave() {
-    VoteBlockTallier<String> voteBlockTallier;
-    BlockTally<String> tally;
+    VoteBlockTallier voteBlockTallier;
+    BlockTally tally;
     VoteBlockTallier.HashBlockComparer comparer =
       new VoteBlockTallier.HashBlockComparer() {
 	public boolean compare(VoteBlock voteBlock, int participantIndex) {
@@ -125,20 +117,20 @@ public class TestVoteBlockTallier extends LockssTestCase {
 	}
       };
 
-    voteBlockTallier = new VoteBlockTallier<String>();
-    tally = new BlockTally<String>();
+    voteBlockTallier = new VoteBlockTallier();
+    tally = new BlockTally();
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteSpoiled(testPeers[0]);
     assertEquals("0/0/0/0", tally.votes());
 
-    voteBlockTallier = new VoteBlockTallier<String>();
-    tally = new BlockTally<String>();
+    voteBlockTallier = new VoteBlockTallier();
+    tally = new BlockTally();
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteMissing(testPeers[0]);
     assertEquals("1/0/0/0", tally.votes());
 
-    voteBlockTallier = new VoteBlockTallier<String>();
-    tally = new BlockTally<String>();
+    voteBlockTallier = new VoteBlockTallier();
+    tally = new BlockTally();
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(null, testPeers[0], 0);
     assertEquals("0/1/0/1", tally.votes());
@@ -146,8 +138,8 @@ public class TestVoteBlockTallier extends LockssTestCase {
 
   public void testVoteWithParticipantUserData() {
     ParticipantUserData voter;
-    VoteBlockTallier<ParticipantUserData> voteBlockTallier;
-    VoteBlockTallier.VoteBlockTally<ParticipantUserData> tally;
+    VoteBlockTallier voteBlockTallier;
+    VoteBlockTallier.VoteBlockTally tally;
     VoteBlockTallier.HashBlockComparer comparer =
       new VoteBlockTallier.HashBlockComparer() {
 	public boolean compare(VoteBlock voteBlock, int participantIndex) {
@@ -155,35 +147,35 @@ public class TestVoteBlockTallier extends LockssTestCase {
 	}
       };
 
-    voteBlockTallier = new VoteBlockTallier<ParticipantUserData>(comparer);
+    voteBlockTallier = new VoteBlockTallier(comparer);
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(null, voter, 0);
     assertEquals("1/0/0/0/0/0", voter.getVoteCounts().votes());
 
-    voteBlockTallier = new VoteBlockTallier<ParticipantUserData>(comparer);
+    voteBlockTallier = new VoteBlockTallier(comparer);
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(null, voter, 1);
     assertEquals("0/1/0/0/0/0", voter.getVoteCounts().votes());
 
-    voteBlockTallier = new VoteBlockTallier<ParticipantUserData>(comparer);
+    voteBlockTallier = new VoteBlockTallier(comparer);
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteMissing(voter);
     assertEquals("0/0/1/0/0/0", voter.getVoteCounts().votes());
 
-    voteBlockTallier = new VoteBlockTallier<ParticipantUserData>();
+    voteBlockTallier = new VoteBlockTallier();
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(null, voter, 0);
     assertEquals("0/0/0/1/0/0", voter.getVoteCounts().votes());
 
-    voteBlockTallier = new VoteBlockTallier<ParticipantUserData>(comparer);
+    voteBlockTallier = new VoteBlockTallier(comparer);
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);

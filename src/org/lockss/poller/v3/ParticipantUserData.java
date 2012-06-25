@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.27 2012-03-19 18:25:09 barry409 Exp $
+ * $Id: ParticipantUserData.java,v 1.28 2012-06-25 23:10:22 barry409 Exp $
  */
 
 /*
@@ -115,8 +115,8 @@ public class ParticipantUserData implements LockssSerializable {
    * voter.
    */
   public static transient final 
-    VoteBlockTallier.VoteBlockTally<ParticipantUserData> voteTally =
-      new VoteBlockTallier.VoteBlockTally<ParticipantUserData>() {
+    VoteBlockTallier.VoteBlockTally voteTally =
+      new VoteBlockTallier.VoteBlockTally() {
     public void voteAgreed(ParticipantUserData voter) {
       voter.voteCounts.agreedVotes++;
     }
