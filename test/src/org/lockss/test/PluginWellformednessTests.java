@@ -1,5 +1,5 @@
 /*
-n * $Id: PluginTestCase.java,v 1.3 2011-09-25 04:20:39 tlipkis Exp $
+n * $Id: PluginWellformednessTests.java,v 1.1 2012-06-25 05:47:19 tlipkis Exp $
  */
 
 /*
@@ -39,8 +39,6 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-// import org.lockss.plugin.base.*;
-// import org.lockss.plugin.definable.*;
 import org.lockss.extractor.*;
 
 /** Base class for plugin tests.  If invoked as itself, by junit or java,
@@ -49,11 +47,11 @@ import org.lockss.extractor.*;
  * property org.lockss.test.TestPluginNames or, if invoked directly, on the
  * command line. */
 
-public class PluginTestCase extends LockssTestCase {
-  static Logger log = Logger.getLogger("PluginTestCase");
+public final class PluginWellformednessTests extends LockssTestCase {
+  static Logger log = Logger.getLogger("PluginWellformednessTests");
 
   /** The System property under which this class expects to find a
-   * semicolon-separated list of plugins names. */
+   * semicolon-separated list of plugin names. */
   public static String PLUGIN_NAME_PROP = "org.lockss.test.TestPluginNames";
 
   protected MockLockssDaemon daemon;
@@ -203,7 +201,7 @@ public class PluginTestCase extends LockssTestCase {
       System.setProperty(PLUGIN_NAME_PROP, pluginNames);
     }
     junit.textui.TestRunner.main(new String[] {
-	PluginTestCase.class.getName() });
+	PluginWellformednessTests.class.getName() });
   }
 
 }

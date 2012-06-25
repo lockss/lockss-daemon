@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.298 2012-06-17 23:05:15 tlipkis Exp $
+ $Id: build.xml,v 1.299 2012-06-25 05:46:32 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -2190,7 +2190,7 @@ Test results in ${test.results}
       <junit1 fork="${fork}" printsummary="yes"
 	      haltonfailure="${halt}" failureproperty="failed"
 	      filtertrace="${filtertrace}" showoutput="${showoutput}">
-        <test fork="${fork}" name="org.lockss.test.PluginTestCase" />
+        <test fork="${fork}" name="org.lockss.test.PluginWellformednessTests" />
 		    <jvmarg value="-server"/>
 	<formatter type="plain" usefile="@{usefile}" />
 	<classpath refid="test.run.classpath" />
