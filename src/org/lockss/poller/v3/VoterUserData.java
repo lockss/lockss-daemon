@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.22 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: VoterUserData.java,v 1.23 2012-06-25 05:49:51 tlipkis Exp $
  */
 
 /*
@@ -77,6 +77,7 @@ public class VoterUserData
   private String errorDetail;
   private boolean activePoll = true;
   private double agreementHint;
+  private boolean hasReceivedHint = false;
   private SubstanceChecker.State subCheckerState;
   /** @deprecated 
    * Left here only for deserialization compatibility */
@@ -389,6 +390,11 @@ public class VoterUserData
 
   public void setAgreementHint(double agreementHint) {
     this.agreementHint = agreementHint;
+    this.hasReceivedHint = true;
+  }
+
+  public boolean hasReceivedHint() {
+    return hasReceivedHint;
   }
 
   public SubstanceChecker.State getSubstanceCheckerState() {

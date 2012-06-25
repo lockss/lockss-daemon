@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.39 2012-06-17 23:06:00 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.40 2012-06-25 05:49:51 tlipkis Exp $
  */
 
 /*
@@ -1191,6 +1191,7 @@ public class V3PollStatus {
 
     private List getSummary(V3Voter voter, StatusTable table) {
       boolean isDebug = table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
+      VoterUserData userData = voter.getVoterUserData();
       List summary = new ArrayList();
       summary.add(new SummaryInfo("Volume",
                                   ColumnDescriptor.TYPE_STRING,
@@ -1217,10 +1218,10 @@ public class V3PollStatus {
 	  }
 	}
       }
-      if (voter.getVoterUserData().getErrorDetail() != null) {
+      if (userData.getErrorDetail() != null) {
         summary.add(new SummaryInfo("Error",
                                     ColumnDescriptor.TYPE_STRING,
-                                    voter.getVoterUserData().getErrorDetail()));
+                                    userData.getErrorDetail()));
       }
       PeerIdentity peer = voter.getPollerId();
       Object caller = isDebug
@@ -1244,10 +1245,10 @@ public class V3PollStatus {
                                     ColumnDescriptor.TYPE_TIME_INTERVAL,
                                     new Long(remain)));
       }
-      if (voter.getStatus() == STATUS_COMPLETE) {
+      if (voter.getStatus() == STATUS_COMPLETE && userData.hasReceivedHint()) {
 	summary.add(new SummaryInfo("Agreement",
 				    ColumnDescriptor.TYPE_AGREEMENT,
-				    voter.getVoterUserData().getAgreementHint()));
+				    userData.getAgreementHint()));
       }
       summary.add(new SummaryInfo("Poller Nonce",
                                   ColumnDescriptor.TYPE_STRING,
