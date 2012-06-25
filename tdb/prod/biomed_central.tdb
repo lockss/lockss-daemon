@@ -3650,8 +3650,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.mrmjournal.com/
       param[journal_issn] = 2049-6958
 
-      au < manifest ; 2010 ; Multidisciplinary Respiratory Medicine Volume 5 ; 5 >
-      au < manifest ; 2011 ; Multidisciplinary Respiratory Medicine Volume 6 ; 6 >
+      au < testing ; 2010 ; Multidisciplinary Respiratory Medicine Volume 5 ; 5 >
+      au < testing ; 2011 ; Multidisciplinary Respiratory Medicine Volume 6 ; 6 >
       au < manifest ; 2012 ; Multidisciplinary Respiratory Medicine Volume 7 ; 7 >
 
     }
