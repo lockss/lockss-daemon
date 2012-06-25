@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.89 2012-05-30 08:28:13 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.90 2012-06-25 05:49:00 tlipkis Exp $
  */
 
 /*
@@ -1484,6 +1484,36 @@ public class ConfigManager implements LockssManager {
     }
     if (elided > 0) log.debug(elided + " keys elided");
     log.debug("New TdbAus: " + diffs.getTdbAuDifferenceCount());
+
+    if (log.isDebug2()) {
+      Tdb tdb = config.getTdb();
+      if (tdb != null) {
+	log.debug2(StringPool.AU_CONFIG_PROPS.toStats());
+
+	Histogram hist1 = new Histogram(15);
+	Histogram hist2 = new Histogram(15);
+	Histogram hist3 = new Histogram(15);
+
+	for (TdbAu.Id id : tdb.getAllTdbAuIds()) {
+	  TdbAu tau = id.getTdbAu();
+	  hist1.addDataPoint(tau.getParams().size());
+	  hist2.addDataPoint(tau.getAttrs().size());
+	  hist3.addDataPoint(tau.getProperties().size());
+	}
+	logHist("Tdb Params", hist1);
+	logHist("Tdb Attrs", hist2);
+	logHist("Tdb Props", hist3);
+      }
+    }
+  }
+
+  private void logHist(String name, Histogram hist) {
+    int[] freqs = hist.getFreqs();
+    log.debug2(name + " histogram");
+    log.debug2("size  number");
+    for (int ix = 0; ix <= hist.getMax(); ix++) {
+      log.debug(String.format("%2d   %6d", ix, freqs[ix]));
+    }
   }
 
   public static boolean shouldParamBeLogged(String key) {
