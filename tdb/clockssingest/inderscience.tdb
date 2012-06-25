@@ -1751,7 +1751,7 @@
       param[journal_issn] = 1754-3045
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Corporate Governance Volume 1 ; 1 >
-      au < manifest ; exists ; 2010-2011 ; International Journal of Corporate Governance Volume 2 ; 2 >
+      au < testing ; exists ; 2010-2011 ; International Journal of Corporate Governance Volume 2 ; 2 >
       au < manifest ; exists ; 2012 ; International Journal of Corporate Governance Volume 3 ; 3 >
 
     }
@@ -1823,7 +1823,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Critical Infrastructures Volume 4 ; 4 > 
       au < manifest ; exists ; 2009 ; International Journal of Critical Infrastructures Volume 5 ; 5 > 
       au < manifest ; exists ; 2010 ; International Journal of Critical Infrastructures Volume 6 ; 6 > 
-      au < testing ; exists ; 2011 ; International Journal of Critical Infrastructures Volume 7 ; 7 > 
+      au < released ; manifest ; 2011 ; International Journal of Critical Infrastructures Volume 7 ; 7 > 
 
     }
 
@@ -1870,7 +1870,7 @@
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Data Analysis Techniques and Strategies Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Data Analysis Techniques and Strategies Volume 2 ; 2 >
-      au < testing ; exists ; 2011 ; International Journal of Data Analysis Techniques and Strategies Volume 3 ; 3 >
+      au < released ; manifest ; 2011 ; International Journal of Data Analysis Techniques and Strategies Volume 3 ; 3 >
       au < manifest ; exists ; 2012 ; International Journal of Data Analysis Techniques and Strategies Volume 4 ; 4 >
 
     }
@@ -1890,7 +1890,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Data Mining and Bioinformatics Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Data Mining and Bioinformatics Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; International Journal of Data Mining and Bioinformatics Volume 4 ; 4 >
-      au < testing ; exists ; 2011 ; International Journal of Data Mining and Bioinformatics Volume 5 ; 5 >
+      au < released ; manifest ; 2011 ; International Journal of Data Mining and Bioinformatics Volume 5 ; 5 >
       au < manifest ; exists ; 2012 ; International Journal of Data Mining and Bioinformatics Volume 6 ; 6 >
 
     }
@@ -1908,7 +1908,7 @@
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Data Mining, Modelling and Management Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Data Mining, Modelling and Management Volume 2 ; 2 >
-      au < testing ; exists ; 2011 ; International Journal of Data Mining, Modelling and Management Volume 3 ; 3 >
+      au < released ; manifest ; 2011 ; International Journal of Data Mining, Modelling and Management Volume 3 ; 3 >
       au < manifest ; exists ; 2012 ; International Journal of Data Mining, Modelling and Management Volume 4 ; 4 >
 
     }
@@ -1926,7 +1926,7 @@
       
       au < manifest ; exists ; 2009 ; International Journal of Decision Sciences, Risk and Management Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Decision Sciences, Risk and Management Volume 2 ; 2 >
-      au < testing ; exists ; 2011 ; International Journal of Decision Sciences, Risk and Management Volume 3 ; 3 >
+      au < released ; manifest ; 2011 ; International Journal of Decision Sciences, Risk and Management Volume 3 ; 3 >
 
     }
 
@@ -1944,7 +1944,7 @@
 	      au < manifest ; exists ; 2007-2008 ; International Journal of Design Engineering Volume 1 ; 1 >
 	      au < manifest ; exists ; 2009 ; International Journal of Design Engineering Volume 2 ; 2 >
 	      au < manifest ; exists ; 2010 ; International Journal of Design Engineering Volume 3 ; 3 >
-	      au < testing ; exists ; 2011 ; International Journal of Design Engineering Volume 4 ; 4 >
+	      au < released ; manifest ; 2011 ; International Journal of Design Engineering Volume 4 ; 4 >
 
     }
 
@@ -2021,7 +2021,7 @@
       
       au < manifest ; exists ; 2007-2008 ;  International Journal of Dynamical Systems and Differential Equations Volume 1 ; 1 >
       au < manifest ; exists ; 2009;  International Journal of Dynamical Systems and Differential Equations Volume 2 ; 2 >
-      au < testing ; exists ; 2011;  International Journal of Dynamical Systems and Differential Equations Volume 3 ; 3 >
+      au < released ; manifest ; 2011;  International Journal of Dynamical Systems and Differential Equations Volume 3 ; 3 >
 
     }
 
@@ -2039,7 +2039,7 @@
       au < manifest ; exists ; 2007-2008 ; International Journal of Economic Policy in Emerging Economies Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Economic Policy in Emerging Economies Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Economic Policy in Emerging Economies Volume 3 ; 3 >
-      au < testing ; exists ; 2011 ; International Journal of Economic Policy in Emerging Economies Volume 4 ; 4 >
+      au < released ; manifest ; 2011 ; International Journal of Economic Policy in Emerging Economies Volume 4 ; 4 >
       au < manifest ; exists ; 2012 ; International Journal of Economic Policy in Emerging Economies Volume 5 ; 5 >
 
     }
@@ -2056,7 +2056,7 @@
       param[journal_issn] = 2041-8698
       
       au < manifest ; exists ; 2010 ; International Journal of Economics and Accounting Volume 1 ; 1 >
-      au < testing ; exists ; 2011 ; International Journal of Economics and Accounting Volume 2 ; 2 >
+      au < released ; manifest ; 2011 ; International Journal of Economics and Accounting Volume 2 ; 2 >
       au < manifest ; exists ; 2012 ; International Journal of Economics and Accounting Volume 3 ; 3 >
 
     }
@@ -2074,7 +2074,7 @@
       
       au < manifest ; exists ; 2009 ; International Journal of Economics and Business Research Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Economics and Business Research Volume 2 ; 2 >
-      au < testing ; exists ; 2011 ; International Journal of Economics and Business Research Volume 3 ; 3 >
+      au < released ; manifest ; 2011 ; International Journal of Economics and Business Research Volume 3 ; 3 >
       au < manifest ; exists ; 2012 ; International Journal of Economics and Business Research Volume 4 ; 4 >
 
     }
@@ -2091,7 +2091,7 @@
       param[journal_issn] = 1759-5681
       
       au < manifest ; exists ; 2009-2010 ; International Journal of Education Economics and Development Volume 1 ; 1 >
-      au < manifest ; exists ; 2011 ; International Journal of Education Economics and Development Volume 2 ; 2 >
+      au < testing ; exists ; 2011 ; International Journal of Education Economics and Development Volume 2 ; 2 >
       au < manifest ; exists ; 2012 ; International Journal of Education Economics and Development Volume 3 ; 3 >
 
     }
@@ -2109,7 +2109,7 @@
       
       au < manifest ; exists ; 2007-2008 ; International Journal of Electric and Hybrid Vehicles Volume 1 ; 1 >
       au < manifest ; exists ; 2009-2010 ; International Journal of Electric and Hybrid Vehicles Volume 2 ; 2 >
-      au < manifest ; exists ; 2011 ; International Journal of Electric and Hybrid Vehicles Volume 3 ; 3 >
+      au < testing ; exists ; 2011 ; International Journal of Electric and Hybrid Vehicles Volume 3 ; 3 >
 
     }
 
@@ -2147,7 +2147,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Electronic Business Volume 6 ; 6 >
       au < manifest ; exists ; 2009 ; International Journal of Electronic Business Volume 7 ; 7 >
       au < manifest ; exists ; 2010 ; International Journal of Electronic Business Volume 8 ; 8 >
-      au < manifest ; exists ; 2011 ; International Journal of Electronic Business Volume 9 ; 9 >
+      au < testing ; exists ; 2011 ; International Journal of Electronic Business Volume 9 ; 9 >
 
     }
 
@@ -2166,7 +2166,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Electronic Customer Relationship Management Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Electronic Customer Relationship Management Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; International Journal of Electronic Customer Relationship Management Volume 4 ; 4 >
-      au < manifest ; exists ; 2011 ; International Journal of Electronic Customer Relationship Management Volume 5 ; 5 >
+      au < testing ; exists ; 2011 ; International Journal of Electronic Customer Relationship Management Volume 5 ; 5 >
       
     }
 
@@ -2200,7 +2200,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Electronic Finance Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Electronic Finance Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; International Journal of Electronic Finance Volume 4 ; 4 >
-      au < manifest ; exists ; 2011 ; International Journal of Electronic Finance Volume 5 ; 5 >
+      au < testing ; exists ; 2011 ; International Journal of Electronic Finance Volume 5 ; 5 >
 
     }
 
@@ -2218,7 +2218,7 @@
       au < manifest ; exists ; 2007-2008 ; International Journal of Electronic Governance Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Electronic Governance Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Electronic Governance Volume 3 ; 3 >
-      au < manifest ; exists ; 2011 ; International Journal of Electronic Governance Volume 4 ; 4 >
+      au < testing ; exists ; 2011 ; International Journal of Electronic Governance Volume 4 ; 4 >
 
     }
 
@@ -2238,7 +2238,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Electronic Healthcare Volume 3 ; 3 >
       au < manifest ; exists ; 2008 ; International Journal of Electronic Healthcare Volume 4 ; 4 >
       au < manifest ; exists ; 2009-2010 ; International Journal of Electronic Healthcare Volume 5 ; 5 >
-      au < manifest ; exists ; 2011 ; International Journal of Electronic Healthcare Volume 6 ; 6 >
+      au < testing ; exists ; 2011 ; International Journal of Electronic Healthcare Volume 6 ; 6 >
 
     }
 
@@ -2256,7 +2256,7 @@
       au < manifest ; exists ; 2006-2007 ; International Journal of Electronic Marketing and Retailing Volume 1 ; 1 >
       au < manifest ; exists ; 2008-2009 ; International Journal of Electronic Marketing and Retailing Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Electronic Marketing and Retailing Volume 3 ; 3 >
-      au < manifest ; exists ; 2011 ; International Journal of Electronic Marketing and Retailing Volume 4 ; 4 >
+      au < testing ; exists ; 2011 ; International Journal of Electronic Marketing and Retailing Volume 4 ; 4 >
       
     }
 
@@ -2304,7 +2304,7 @@
 
       param[journal_issn] = 1742-6960
       
-      au < manifest ; exists ; 2011 ; International Journal of Electronic Transport Volume 1 ; 1 >
+      au < testing ; exists ; 2011 ; International Journal of Electronic Transport Volume 1 ; 1 >
 
     }
 
