@@ -6,7 +6,7 @@
 
   attr[contract] = 2011
   plugin = org.lockss.plugin.biologicinstitute.ClockssBiologicInstitutePlugin
-  param[base_url] = http://bio-complexity.org/
+  param[base_url] = http://bio-complexity.org/ojs/
   implicit < status ; year ; name ; param[volume_name] >
 
   {
