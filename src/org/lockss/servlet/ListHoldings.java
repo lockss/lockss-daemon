@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.33.4.3 2012-06-13 10:20:02 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.33.4.4 2012-06-26 00:56:55 tlipkis Exp $
  */
 
 /*
@@ -73,11 +73,6 @@ import org.mortbay.html.Page;
  * the output can be strict KBART, or can be customised in terms of fields and
  * field ordering. A health metric rating can also be appended to the custom
  * output, though this is currently disabled.
- * <p>
- * The servlet is accessible via direct URL, using the parameters
- * scope, format, report and coverageNotesFormat. For this to work, the bare
- * minimum parameter of 'format' must be supplied, and its presence must be
- * recognised by the servlet to indicate that an export is taking place.
  * <p>
  * Possible enhancements for a future version:
  * <ul>
@@ -443,15 +438,9 @@ public class ListHoldings extends LockssServlet {
       return null;
     }
 
-    // XXX Set coverage note format to SFX if SFX output chosen
-    //if (reportDataFormat == ReportDataFormat.SFX) coverageNotesFormat = CoverageNotesFormat.SFX;
-
     // Process the titles using a report format, to add supplementary data or
-    // amalgamate records as required; submit the SFX covnotes format if SFX
-    // data format chosen.
-    titles = ReportFormat.process(titles,
-        reportDataFormat == ReportDataFormat.SFX ? CoverageNotesFormat.SFX : coverageNotesFormat,
-        reportDataFormat);
+    // amalgamate records as required
+    titles = ReportFormat.process(titles, coverageNotesFormat, reportDataFormat);
 
     // Create a filter
     KbartExportFilter filter;

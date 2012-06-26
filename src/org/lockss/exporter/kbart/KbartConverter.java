@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.29.4.3 2012-06-13 14:16:06 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.29.4.4 2012-06-26 00:56:55 tlipkis Exp $
  */
 
 /*
@@ -91,7 +91,8 @@ import static org.lockss.exporter.kbart.KbartTitle.Field.*;
  * iteration the resulting output is undefined.
  * <p>
  * <emph>Note that the <code>title_id</code> field is now filled with the 
- * results of getIssn(), which gives a preferred ISSN for linking.</emph>
+ * ISSN-L code, as these have now been incorporated for all titles, and are 
+ * used for linking.</emph>
  *
  * <h3>Note: Iteration</h3>
  * The converter can accept an iterator instead of a list, as it deals with a
@@ -607,13 +608,13 @@ public class KbartConverter {
     baseKbt.setField(PUBLICATION_TITLE, au.getJournalTitle());
 
     // Now add information that can be retrieved from the AUs.
-    // Add ISSN, EISSN and a preferred ISSN.
+    // Add ISSN, EISSN and ISSN-L if available.
     baseKbt.setField(PRINT_IDENTIFIER,
         MetadataUtil.validateIssn(au.getPrintIssn()));
     baseKbt.setField(ONLINE_IDENTIFIER,
         MetadataUtil.validateIssn(au.getEissn()));
     baseKbt.setField(TITLE_ID,
-        MetadataUtil.validateIssn(au.getIssn()));
+        MetadataUtil.validateIssn(au.getIssnL()));
 
     // Title URL
     // Set using a substitution parameter 
@@ -1048,17 +1049,10 @@ public class KbartConverter {
     String lastVol = range.last.getEndVolume();
     // If either of the volumes is null, we can't verify; return true
     if (firstVol==null || lastVol==null) return true;
-    // Check if the first vol is greater than last (integer)
+    // Check if the first vol is greater than last
     if (NumberUtil.isInteger(firstVol) && NumberUtil.isInteger(lastVol)) {
       return Integer.parseInt(firstVol) <= Integer.parseInt(lastVol);
-
-    }
-    // Check if the first vol is greater than last (normalised Roman)
-    else if (NumberUtil.isRomanNumber(firstVol) && NumberUtil.isRomanNumber(lastVol)) {
-      return NumberUtil.parseRomanNumber(firstVol, true) <= NumberUtil.parseRomanNumber(lastVol, true);
-    }
-    // Otherwise compare first and last vol alphabetically
-    else {
+    } else {
       return firstVol.compareTo(lastVol) <= 0;
     }
   }

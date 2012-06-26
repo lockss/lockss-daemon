@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicComparatorFactory.java,v 1.1.10.1 2012-06-13 10:20:02 easyonthemayo Exp $
+ * $Id: BibliographicComparatorFactory.java,v 1.1.10.2 2012-06-26 00:56:55 tlipkis Exp $
  */
 
 /*
@@ -40,14 +40,6 @@ import java.util.Comparator;
  * The factory methods return a new {@link BibliographicComparator} which
  * overrides the <code>getBibliographicComparisonString()</code> method to
  * provide the appropriate comparison string.
- * <p>
- * Sorting volume strings can be a challenge; one problem we try to overcome
- * here is that volume strings can consist of a mix of alphanumeric and Roman
- * numeral tokens, rendering standard alphanumeric ordering insufficient.
- * Therefore. when creating a comparator on volume strings, we first try to
- * normalise the string by converting anything that looks like a Roman numeral
- * token into a number. Note that the superclass deals with padding numbers
- * before comparison.
  *
  * @author Neil Mayo
  */
@@ -76,10 +68,6 @@ public class BibliographicComparatorFactory {
       protected String getBibliographicComparisonString(BibliographicItem item) {
         return item.getVolume();
       }
-      @Override
-      protected String xlate(String s) {
-        return super.xlate(BibliographicUtil.translateRomanTokens(s));
-      }
     };
   }
 
@@ -93,10 +81,6 @@ public class BibliographicComparatorFactory {
       protected String getBibliographicComparisonString(BibliographicItem item) {
         return item.getStartVolume();
       }
-      @Override
-      protected String xlate(String s) {
-        return super.xlate(BibliographicUtil.translateRomanTokens(s));
-      }
     };
   }
 
@@ -109,10 +93,6 @@ public class BibliographicComparatorFactory {
       @Override
       protected String getBibliographicComparisonString(BibliographicItem item) {
         return item.getEndVolume();
-      }
-      @Override
-      protected String xlate(String s) {
-        return super.xlate(BibliographicUtil.translateRomanTokens(s));
       }
     };
   }

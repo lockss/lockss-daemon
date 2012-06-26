@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.88.4.1 2012-06-13 10:20:03 easyonthemayo Exp $
+ * $Id: TestStringUtil.java,v 1.88.4.2 2012-06-26 00:56:54 tlipkis Exp $
  */
 
 /*
@@ -189,35 +189,7 @@ public class TestStringUtil extends LockssTestCase {
       // Check non-greediness
       assertEquals("two", StringUtil.getTextBetween("One two three, One five three", "One ", " three"));
   }
-
-  public void testCommonPrefix() {
-    assertEquals("", StringUtil.commonPrefix("", ""));
-    assertEquals("", StringUtil.commonPrefix("one", "cone"));
-    assertEquals("co", StringUtil.commonPrefix("come", "cone"));
-    assertEquals("", StringUtil.commonPrefix("CAPS", "caps"));
-    assertEquals("", StringUtil.commonPrefix("parse", "arse"));
-    assertEquals("LaTe", StringUtil.commonPrefix("LaTeX", "LaTex"));
-    assertEquals("LaTe", StringUtil.commonPrefix("LaTex", "LaTeX"));
-    assertEquals("locks", StringUtil.commonPrefix("locks", "lockss"));
-    // Try comparing ASCII chars with same char value
-    assertEquals("", StringUtil.commonPrefix("\t", "9"));
-    assertEquals("", StringUtil.commonPrefix("\0", "0"));
-  }
-
-  public void testCommonSuffix() {
-    assertEquals("", StringUtil.commonSuffix("", ""));
-    assertEquals("one", StringUtil.commonSuffix("one", "cone"));
-    assertEquals("e", StringUtil.commonSuffix("come", "cone"));
-    assertEquals("", StringUtil.commonSuffix("CAPS", "caps"));
-    assertEquals("arse", StringUtil.commonSuffix("parse", "arse"));
-    assertEquals("", StringUtil.commonSuffix("LaTeX", "LaTex"));
-    assertEquals("", StringUtil.commonSuffix("LaTex", "LaTeX"));
-    assertEquals("s", StringUtil.commonSuffix("locks", "lockss"));
-    // Try comparing ASCII chars with same char value
-    assertEquals("", StringUtil.commonSuffix("\t", "9"));
-    assertEquals("", StringUtil.commonSuffix("\0", "0"));
-  }
-
+  
   public void testReplaceStringNonExistingSubstring(){
     String testStr = "blahTestblah";
     // if no substitutions are made, original string should be returned

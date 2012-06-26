@@ -1,5 +1,5 @@
 /*
- * $Id: ReportFormat.java,v 1.2.2.3 2012-06-13 10:20:02 easyonthemayo Exp $
+ * $Id: ReportFormat.java,v 1.2.2.4 2012-06-26 00:56:55 tlipkis Exp $
  */
 
 /*
@@ -38,22 +38,49 @@ import static org.lockss.exporter.kbart.KbartTitle.Field.*;
 import java.util.*;
 
 /**
- * Enables the post-processing of KBART title ranges to produce a different
- * set of output rows, with different formats for the coverage_notes field,
- * and optionally using a ReportDataFormat.
+ * Represents the format of the report; currently that is either KBART or
+ * one-title-per-line. Different report formats can process the basic report
+ * data to produce a different set of output rows.
+ *
+ * Eventually it would make sense to redefine the export process to yield a
+ * cleaner sequence encompassing all the different options which have now been
+ * added on top of the original KBART package, This would clarify the work flow
+ * and remove the "Kbart" prefix from classes where it is no longer relevant.
  *
  * @author Neil Mayo
  */
 public class ReportFormat {
 
+  /** Default encoding for output. */
+  //public static final String DEFAULT_ENCODING = "UTF-8";
+
+  /** A description of the report format, for display to user. */
+  //protected String description;
+
   /** A default field ordering for the report. */
-  //protected KbartExportFilter.FieldOrdering defaultFieldOrdering;
+  protected KbartExportFilter.FieldOrdering defaultFieldOrdering;
 
   /** A listing of the fields which can appear in the report. Anything
    * not in this list will be ignored. */
-  //protected List<KbartTitle.Field> relevantFields;
+  protected List<KbartTitle.Field> relevantFields;
+
+  /*
+  private static final String TITLE_PER_LINE_NOTE = "One entry per title, with " +
+      "coverage gaps recorded in the coverage_notes field.";
+  private static final String SFX_NOTE =
+      "SFX DataLoader format can be imported into SFX sytems.";
+*/
 
   //protected Map<KbartTitle.Field, FieldFormatter> fieldFormats;
+
+  /**
+   *
+   * @param titles the list of titles which are to be exported
+   */
+  /*public ReportFormat(List<KbartTitle> titles, OutputFormat format) {
+    //super(titles, format);
+    this.titles = titles;
+  }*/
 
 
   /**
@@ -73,13 +100,8 @@ public class ReportFormat {
 
   /**
    * Process a list of KbartTitles, combining those which are from the same
-   * title according to the specified coverage notes format, and return a new
-   * list. Note that the coverage notes format can change the expected output;
-   * for example if the data format is SFX but the coverage notes format is
-   * something ither than SFX, the output will not be pure SFX.
+   * title according to the specified coverage notes format, and return a new list.
    * @param titles
-   * @param coverageNotesFormat
-   * @param reportDataFormat
    * @return
    */
   public static List<KbartTitle> process(List<KbartTitle> titles,
@@ -89,6 +111,8 @@ public class ReportFormat {
     Collections.sort(titles,
         KbartTitleComparatorFactory.getComparator(PUBLICATION_TITLE)
     );
+    // XXX Set coverage note format to SFX if SFX output chosen
+    if (reportDataFormat == ReportDataFormat.SFX) coverageNotesFormat = CoverageNotesFormat.SFX;
     // Process std KBART is not one line per title
     if (!reportDataFormat.isOneLinePerTitle()) return processKbart(titles, coverageNotesFormat);
 
@@ -127,9 +151,9 @@ public class ReportFormat {
    * @param target title which will receive the end values
    */
   public static void updateEndValues(KbartTitle source, KbartTitle target) {
-    String de = source.getFieldValue(DATE_LAST_ISSUE_ONLINE);
-    String ve = source.getFieldValue(NUM_LAST_VOL_ONLINE);
-    String ie = source.getFieldValue(NUM_LAST_ISSUE_ONLINE);
+    String de = source.getField(DATE_LAST_ISSUE_ONLINE);
+    String ve = source.getField(NUM_LAST_VOL_ONLINE);
+    String ie = source.getField(NUM_LAST_ISSUE_ONLINE);
     // Extend range end values
     target.setField(DATE_LAST_ISSUE_ONLINE, de);
     target.setField(NUM_LAST_ISSUE_ONLINE, ie);
@@ -147,6 +171,8 @@ public class ReportFormat {
 
     /** The format to adhere to in coverge range declarations. */
     private CoverageNotesFormat format;
+    /** A string builder used to build up the full coverage string. */
+    private StringBuilder sb = new StringBuilder();
     /** Record of the individual coverage ranges to include. */
     private List<KbartTitle> kbTitles = new ArrayList<KbartTitle>();
     /**
@@ -212,13 +238,10 @@ public class ReportFormat {
 
     /**
      * Get a KbartTitle representing the combination of the titles listed in
-     * this TitleCoverageRanges object. Note that before returning, the coverage
-     * notes field value is updated, so the combined title must be called anew
-     * after each operation that changes the object.
-     * @return the combined title, or null if no titles have been added
+     * this
+     * @return
      */
     public KbartTitle getCombinedTitle() {
-      if (combinedTitle==null) return null;
       combinedTitle.setField(COVERAGE_NOTES, constructCoverageNotes());
       return combinedTitle;
     }
