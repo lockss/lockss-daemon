@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.blackbird.BlackbirdPlugin</string>
+  </entry>
+  <entry>
     <string>audio/x-pn-realaudio_parser</string>
     <string>org.lockss.plugin.blackbird.BlackbirdRamParser</string>
   </entry>
@@ -13,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_name</string>
