@@ -1751,13 +1751,8 @@
       param[journal_issn] = 1754-3045
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Corporate Governance Volume 1 ; 1 >
-<<<<<<< inderscience.tdb
       au < released ; manifest ; 2010-2011 ; International Journal of Corporate Governance Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; International Journal of Corporate Governance Volume 3 ; 3 >
-=======
-      au < testing ; exists ; 2010-2011 ; International Journal of Corporate Governance Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; International Journal of Corporate Governance Volume 3 ; 3 >
->>>>>>> 1.36
 
     }
 
@@ -2096,13 +2091,8 @@
       param[journal_issn] = 1759-5681
       
       au < manifest ; exists ; 2009-2010 ; International Journal of Education Economics and Development Volume 1 ; 1 >
-<<<<<<< inderscience.tdb
       au < released ; manifest ; 2011 ; International Journal of Education Economics and Development Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; International Journal of Education Economics and Development Volume 3 ; 3 >
-=======
-      au < testing ; exists ; 2011 ; International Journal of Education Economics and Development Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; International Journal of Education Economics and Development Volume 3 ; 3 >
->>>>>>> 1.36
 
     }
 
@@ -2795,7 +2785,7 @@
       param[journal_issn] = 2040-2260
       
       au < manifest ; exists ; 2009-2010 ; International Journal of Experimental Design and Process Optimisation Volume 1 ; 1 >
-      au < manifest ; exists ; 2011 ; International Journal of Experimental Design and Process Optimisation Volume 2 ; 2 >
+      au < testing ; exists ; 2011 ; International Journal of Experimental Design and Process Optimisation Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; International Journal of Experimental Design and Process Optimisation Volume 3 ; 3 >
 
     }
@@ -2825,7 +2815,7 @@
       param[journal_issn] = 1756-7149
       
       au < manifest ; exists ; 2009-2010 ; International Journal of Financial Markets and Derivatives Volume 1 ; 1 >
-      au < manifest ; exists ; 2011 ; International Journal of Financial Markets and Derivatives Volume 2 ; 2 >
+      au < testing ; exists ; 2011 ; International Journal of Financial Markets and Derivatives Volume 2 ; 2 >
 
     }
 
@@ -2844,7 +2834,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Financial Services Management Volume 2 ; 2 >
       au < manifest ; exists ; 2008 ; International Journal of Financial Services Management Volume 3 ; 3 >
       au < manifest ; exists ; 2009-2010 ; International Journal of Financial Services Management Volume 4 ; 4 >
-      au < manifest ; exists ; 2011 ; International Journal of Financial Services Management Volume 5 ; 5 >
+      au < testing ; exists ; 2011 ; International Journal of Financial Services Management Volume 5 ; 5 >
 
     }
 
@@ -2862,7 +2852,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Food Safety, Nutrition and Public Health Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Food Safety, Nutrition and Public Health Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; International Journal of Food Safety, Nutrition and Public Health Volume 3 ; 3 >
-      au < manifest ; exists ; 2011 ; International Journal of Food Safety, Nutrition and Public Health Volume 4 ; 4 >
+      au < testing ; exists ; 2011 ; International Journal of Food Safety, Nutrition and Public Health Volume 4 ; 4 >
 
     }
 
@@ -2922,7 +2912,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Foresight and Innovation Policy Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; International Journal of Foresight and Innovation Policy Volume 5 ; 5 >
       au < manifest ; exists ; 2010 ; International Journal of Foresight and Innovation Policy Volume 6 ; 6 >
-      au < manifest ; exists ; 2011 ; International Journal of Foresight and Innovation Policy Volume 7 ; 7 >
+      au < testing ; exists ; 2011 ; International Journal of Foresight and Innovation Policy Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; International Journal of Foresight and Innovation Policy Volume 8 ; 8 >
 
     }
@@ -2979,7 +2969,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Global Energy Issues Volume 32 ; 32 >
       au < manifest ; exists ; 2010 ; International Journal of Global Energy Issues Volume 33 ; 33 >
       au < manifest ; exists ; 2010 ; International Journal of Global Energy Issues Volume 34 ; 34 >
-      au < manifest ; exists ; 2011 ; International Journal of Global Energy Issues Volume 35 ; 35 >
+      au < testing ; exists ; 2011 ; International Journal of Global Energy Issues Volume 35 ; 35 >
 
     }
 
@@ -3004,7 +2994,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Global Environmental Issues Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; International Journal of Global Environmental Issues Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; International Journal of Global Environmental Issues Volume 10 ; 10 >
-      au < manifest ; exists ; 2011 ; International Journal of Global Environmental Issues Volume 11 ; 11 >
+      au < testing ; exists ; 2011 ; International Journal of Global Environmental Issues Volume 11 ; 11 >
 
     }
 
@@ -3021,7 +3011,7 @@
       
       au < manifest ; exists ; 2009 ; International Journal of Global Warming Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; International Journal of Global Warming Volume 2 ; 2 >
-      au < manifest ; exists ; 2011 ; International Journal of Global Warming Volume 3 ; 3 >
+      au < testing ; exists ; 2011 ; International Journal of Global Warming Volume 3 ; 3 >
 
     }
 
@@ -3055,7 +3045,7 @@
       param[journal_issn] = 1757-2711
       
       au < manifest ; exists ; 2009-2010 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 1 ; 1 >
-      au < manifest ; exists ; 2011 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 2 ; 2 >
+      au < testing ; exists ; 2011 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 2 ; 2 >
 
     }
 
@@ -3074,7 +3064,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Green Economics Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Green Economics Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; International Journal of Green Economics Volume 4 ; 4 >
-      au < manifest ; exists ; 2011 ; International Journal of Green Economics Volume 5 ; 5 >
+      au < testing ; exists ; 2011 ; International Journal of Green Economics Volume 5 ; 5 >
 
     }
 
