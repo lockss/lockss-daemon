@@ -508,12 +508,12 @@
       param[base_url] = http://jgp.rupress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 1918-1919 ; The Journal of General Physiology Volume 1 ; 1 >
-      au < ready ; 1919-1920 ; The Journal of General Physiology Volume 2 ; 2 >
-      au < ready ; 1920-1921 ; The Journal of General Physiology Volume 3 ; 3 >
-      au < ready ; 1921-1922 ; The Journal of General Physiology Volume 4 ; 4 >
-      au < ready ; 1922-1923 ; The Journal of General Physiology Volume 5 ; 5 >
-      au < ready ; 1923-1924 ; The Journal of General Physiology Volume 6 ; 6 >
+      au < releasing ; 1918-1919 ; The Journal of General Physiology Volume 1 ; 1 >
+      au < releasing ; 1919-1920 ; The Journal of General Physiology Volume 2 ; 2 >
+      au < releasing ; 1920-1921 ; The Journal of General Physiology Volume 3 ; 3 >
+      au < releasing ; 1921-1922 ; The Journal of General Physiology Volume 4 ; 4 >
+      au < releasing ; 1922-1923 ; The Journal of General Physiology Volume 5 ; 5 >
+      au < releasing ; 1923-1924 ; The Journal of General Physiology Volume 6 ; 6 >
       au < released ; 1924-1925 ; The Journal of General Physiology Volume 7 ; 7 >
       au < released ; 1925-1926 ; The Journal of General Physiology Volume 8 ; 8 >
       au < released ; 1926 ; The Journal of General Physiology Volume 9 ; 9 >
@@ -526,7 +526,7 @@
       au < released ; 1932-1933 ; The Journal of General Physiology Volume 16 ; 16 >
       au < released ; 1933-1934 ; The Journal of General Physiology Volume 17 ; 17 >
       au < released ; 1934-1935 ; The Journal of General Physiology Volume 18 ; 18 >
-      au < ready ; 1935-1936 ; The Journal of General Physiology Volume 19 ; 19 >
+      au < releasing ; 1935-1936 ; The Journal of General Physiology Volume 19 ; 19 >
       au < released ; 1936-1937 ; The Journal of General Physiology Volume 20 ; 20 >
       au < released ; 1937-1938 ; The Journal of General Physiology Volume 21 ; 21 >
       au < released ; 1938-1939 ; The Journal of General Physiology Volume 22 ; 22 >
@@ -536,8 +536,8 @@
       au < released ; 1942-1943 ; The Journal of General Physiology Volume 26 ; 26 >
       au < released ; 1943-1944 ; The Journal of General Physiology Volume 27 ; 27 >
       au < testing ; 1944-1945 ; The Journal of General Physiology Volume 28 ; 28 >
-      au < ready ; 1945-1946 ; The Journal of General Physiology Volume 29 ; 29 >
-      au < ready ; 1946-1947 ; The Journal of General Physiology Volume 30 ; 30 >
+      au < releasing ; 1945-1946 ; The Journal of General Physiology Volume 29 ; 29 >
+      au < releasing ; 1946-1947 ; The Journal of General Physiology Volume 30 ; 30 >
       au < released ; 1947-1948 ; The Journal of General Physiology Volume 31 ; 31 >
       au < released ; 1948-1949 ; The Journal of General Physiology Volume 32 ; 32 >
       au < released ; 1949-1950 ; The Journal of General Physiology Volume 33 ; 33 >
@@ -566,7 +566,7 @@
       au < released ; 1970 ; The Journal of General Physiology Volume 56 ; 56 >
       au < released ; 1971 ; The Journal of General Physiology Volume 57 ; 57 >
       au < released ; 1971 ; The Journal of General Physiology Volume 58 ; 58 >
-      au < ready ; 1972 ; The Journal of General Physiology Volume 59 ; 59 >
+      au < releasing ; 1972 ; The Journal of General Physiology Volume 59 ; 59 >
       au < released ; 1972 ; The Journal of General Physiology Volume 60 ; 60 >
       au < released ; 1973 ; The Journal of General Physiology Volume 61 ; 61 >
       au < released ; 1973 ; The Journal of General Physiology Volume 62 ; 62 >
@@ -631,9 +631,9 @@
       au < released ; 2003 ; The Journal of General Physiology Volume 121 ; 121 >
       au < released ; 2003 ; The Journal of General Physiology Volume 122 ; 122 >
       au < released ; 2004 ; The Journal of General Physiology Volume 123 ; 123 >
-      au < ready ; 2004 ; The Journal of General Physiology Volume 124 ; 124 >
-      au < ready ; 2005 ; The Journal of General Physiology Volume 125 ; 125 >
-      au < ready ; 2005 ; The Journal of General Physiology Volume 126 ; 126 >
+      au < releasing ; 2004 ; The Journal of General Physiology Volume 124 ; 124 >
+      au < releasing ; 2005 ; The Journal of General Physiology Volume 125 ; 125 >
+      au < releasing ; 2005 ; The Journal of General Physiology Volume 126 ; 126 >
       au < doNotProcess; 2006 ; The Journal of General Physiology Volume 127 ; 127 >
       au < released ; 2006 ; The Journal of General Physiology Volume 128 ; 128 >
       au < released ; 2007 ; The Journal of General Physiology Volume 129 ; 129 >
