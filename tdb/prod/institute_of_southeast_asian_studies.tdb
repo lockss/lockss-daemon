@@ -20,15 +20,15 @@
     param[journal_dir] = asean_economic_bulletin
     attr[journal_id] = ase
 
-    au < manifest ; 2003 ; ASEAN Economic Bulletin Volume 20 ; 20 >
-    au < manifest ; 2004 ; ASEAN Economic Bulletin Volume 21 ; 21 >
-    au < manifest ; 2005 ; ASEAN Economic Bulletin Volume 22 ; 22 >
+    au < testing ; 2003 ; ASEAN Economic Bulletin Volume 20 ; 20 >
+    au < testing ; 2004 ; ASEAN Economic Bulletin Volume 21 ; 21 >
+    au < testing ; 2005 ; ASEAN Economic Bulletin Volume 22 ; 22 >
     au < released ; 2006 ; ASEAN Economic Bulletin Volume 23 ; 23 >
     au < released ; 2007 ; ASEAN Economic Bulletin Volume 24 ; 24 >
     au < released ; 2008 ; ASEAN Economic Bulletin Volume 25 ; 25 >
     au < released ; 2009 ; ASEAN Economic Bulletin Volume 26 ; 26 >
-    au < manifest ; 2010 ; ASEAN Economic Bulletin Volume 27 ; 27 >
-    au < manifest ; 2011 ; ASEAN Economic Bulletin Volume 28 ; 28 >
+    au < testing ; 2010 ; ASEAN Economic Bulletin Volume 27 ; 27 >
+    au < testing ; 2011 ; ASEAN Economic Bulletin Volume 28 ; 28 >
     au < manifest ; 2012 ; ASEAN Economic Bulletin Volume 29 ; 29 >
 
   }
@@ -49,8 +49,8 @@
     au < released ; 2007 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 29 ; 29 >
     au < released ; 2008 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 30 ; 30 >
     au < released ; 2009 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 31 ; 31 >
-    au < manifest ; 2010 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 32 ; 32 >
-    au < manifest ; 2011 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 33 ; 33 >
+    au < testing ; 2010 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 32 ; 32 >
+    au < testing ; 2011 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 33 ; 33 >
     au < manifest ; 2012 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 34 ; 34 >
 
   }
@@ -67,12 +67,12 @@
     param[journal_dir] = sojourn_journal_of_social_issues_in_southeast_asia
     attr[journal_id] =  soj
 
-    au < manifest ; 2006 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 21 ; 21 >
-    au < manifest ; 2007 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 22 ; 22 >
-    au < manifest ; 2008 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 23 ; 23 >
-    au < manifest ; 2009 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 24 ; 24 >
-    au < manifest ; 2010 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 25 ; 25 >
-    au < manifest ; 2011 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 26 ; 26 >
+    au < testing ; 2006 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 21 ; 21 >
+    au < testing ; 2007 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 22 ; 22 >
+    au < testing ; 2008 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 23 ; 23 >
+    au < testing ; 2009 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 24 ; 24 >
+    au < testing ; 2010 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 25 ; 25 >
+    au < testing ; 2011 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 26 ; 26 >
     au < manifest ; 2012 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 27 ; 27 >
 
   }
@@ -90,7 +90,7 @@
 
     au < released ; 2008 ; Southeast Asian Affairs Volume 2008 ; 2008 >
     au < released ; 2009 ; Southeast Asian Affairs Volume 2009 ; 2009 >
-    au < manifest ; 2010 ; Southeast Asian Affairs Volume 2010 ; 2010 >
+    au < testing ; 2010 ; Southeast Asian Affairs Volume 2010 ; 2010 >
 
   }
 
