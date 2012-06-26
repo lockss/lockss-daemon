@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = Royal College of Physicians
+  >
+
+  {
+
+    title <
+      name = Clinical Medicine ;
+      issn = 1470-2118 ;
+      eissn = 1473-4893 
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.clinmed.rcpjournal.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < expected ; 2001 ; Clinical Medicine Volume 1 ; 1 >
+    au < expected ; 2002 ; Clinical Medicine Volume 2 ; 2 >
+    au < expected ; 2003 ; Clinical Medicine Volume 3 ; 3 >
+    au < expected ; 2004 ; Clinical Medicine Volume 4 ; 4 >
+    au < expected ; 2005 ; Clinical Medicine Volume 5 ; 5 >
+    au < expected ; 2006 ; Clinical Medicine Volume 6 ; 6 >
+    au < expected ; 2007 ; Clinical Medicine Volume 7 ; 7 >
+    au < expected ; 2008 ; Clinical Medicine Volume 8 ; 8 >
+    au < expected ; 2009 ; Clinical Medicine Volume 9 ; 9 >
+    au < expected ; 2010 ; Clinical Medicine Volume 10 ; 10 >
+    au < expected ; 2011 ; Clinical Medicine Volume 11 ; 11 >
+    au < expected ; 2012 ; Clinical Medicine Volume 12 ; 12 >
+    
+  }
+    
+
+}
