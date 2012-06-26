@@ -167,9 +167,9 @@
       au < manifest ; exists ; 2005 ; NeoReviews Volume 6 ; 6 >
       au < manifest ; exists ; 2006 ; NeoReviews Volume 7 ; 7 >
       au < manifest ; exists ; 2007 ; NeoReviews Volume 8 ; 8 >
-      au < doNotProcess ; exists ; 2008 ; NeoReviews Volume 9 ; 9 >
-      au < doNotProcess ; exists ; 2009 ; NeoReviews Volume 10 ; 10 >
-      au < doNotProcess ; exists ; 2010 ; NeoReviews Volume 11 ; 11 >
+      au < doNotProcess ; doNotProcess ; 2008 ; NeoReviews Volume 9 ; 9 >
+      au < doNotProcess ; doNotProcess ; 2009 ; NeoReviews Volume 10 ; 10 >
+      au < doNotProcess ; doNotProcess ; 2010 ; NeoReviews Volume 11 ; 11 >
       au < released ; crawling ; 2011 ; NeoReviews Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; NeoReviews Volume 13 ; 13 >
 

@@ -2033,7 +2033,7 @@
     au < manifest ; exists ; 2005-2006 ; Briefings in Functional Genomics and Proteomics Volume 4 ; 4 ; >
     au < manifest ; exists ; 2006 ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 ; >
     au < manifest ; exists ; 2007 ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 ; >
-    au < doNotProcess ; exists ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
     au < released ; crawling ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; >
 
     }
