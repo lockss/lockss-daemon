@@ -18,7 +18,7 @@
 
     {
     
-      plugin = edu.wisc.library.plugin.CortlandReviewPlugin98
+      plugin = edu.wisc.library.plugin.CortlandReview98Plugin
       param[base_url] = http://www.cortlandreview.com/ 
       implicit < status ; year ; name >
       
@@ -28,7 +28,7 @@
     
     {
     
-      plugin = edu.wisc.library.plugin.CortlandReviewPlugin99
+      plugin = edu.wisc.library.plugin.CortlandReview99Plugin
       param[base_url] = http://www.cortlandreview.com/ 
       implicit < status ; year ; name >
       
@@ -38,7 +38,7 @@
     
     {
     
-      plugin = edu.wisc.library.plugin.CortlandReviewPlugin00
+      plugin = edu.wisc.library.plugin.CortlandReview00Plugin
       param[base_url] = http://www.cortlandreview.com/ 
       implicit < status ; year ; name >
       
