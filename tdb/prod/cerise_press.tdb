@@ -6,7 +6,7 @@
 
   implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://www.cerisepress.com/
-  plugin = need.plugin
+  plugin = needs.plugin
 
   {
 
