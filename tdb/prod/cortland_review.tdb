@@ -5,68 +5,68 @@
   >
 
   {
-  
+
     title <
       name = Cortland Review ;
       issn = 1524-6744 ;
       issnl = 1524-6744
-    >  
+    >
 
     rights = openaccess
- 
+
     comment[cr] = all manifests have disappeared
 
     {
-    
+
       plugin = edu.wisc.library.plugin.CortlandReview98Plugin
-      param[base_url] = http://www.cortlandreview.com/ 
+      param[base_url] = http://www.cortlandreview.com/
       implicit < status ; year ; name >
-      
-      au < exists ; 1998 ; Cortland Review 1998 >     
-    
+
+      au < exists ; 1998 ; Cortland Review 1998 >
+
     }
-    
+
     {
-    
+
       plugin = edu.wisc.library.plugin.CortlandReview99Plugin
-      param[base_url] = http://www.cortlandreview.com/ 
+      param[base_url] = http://www.cortlandreview.com/
       implicit < status ; year ; name >
-      
-      au < exists ; 1999 ; Cortland Review 1999 >     
-    
+
+      au < exists ; 1999 ; Cortland Review 1999 >
+
     }
-    
+
     {
-    
+
       plugin = edu.wisc.library.plugin.CortlandReview00Plugin
-      param[base_url] = http://www.cortlandreview.com/ 
+      param[base_url] = http://www.cortlandreview.com/
       implicit < status ; year ; name >
-      
-      au < exists ; 2000 ; Cortland Review 2000 >     
-    
+
+      au < exists ; 2000 ; Cortland Review 2000 >
+
     }
-    
-    {  
-            
+
+    {
+
       plugin = edu.wisc.library.plugin.CortlandReviewPlugin
-      param[base_url] = http://www.cortlandreview.com/ 
+      param[base_url] = http://www.cortlandreview.com/
       implicit < status ; name ; param[year] ; param[num_issue_range] >
-      
+
       au < exists ; Cortland Review 2001 ; 2001 ; 15-18 >
-      au < exists ; Cortland Review 2002 ; 2002 ; 19-21 >      
+      au < exists ; Cortland Review 2002 ; 2002 ; 19-21 >
       au < down ; Cortland Review 2003 ; 2003 ; 22-24 >
-      au < exists ; Cortland Review 2004 ; 2004 ; 25-26 >      
-      au < exists ; Cortland Review 2005 ; 2005 ; 27-30 >      
-      au < exists ; Cortland Review 2006 ; 2006 ; 31-33 >      
-      au < exists ; Cortland Review 2007 ; 2007 ; 34-37 >      
-      au < exists ; Cortland Review 2008 ; 2008 ; 38-41 >      
-      au < exists ; Cortland Review 2009 ; 2009 ; 42-45 >      
+      au < exists ; Cortland Review 2004 ; 2004 ; 25-26 >
+      au < exists ; Cortland Review 2005 ; 2005 ; 27-30 >
+      au < exists ; Cortland Review 2006 ; 2006 ; 31-33 >
+      au < exists ; Cortland Review 2007 ; 2007 ; 34-37 >
+      au < exists ; Cortland Review 2008 ; 2008 ; 38-41 >
+      au < exists ; Cortland Review 2009 ; 2009 ; 42-45 >
       au < exists ; Cortland Review 2010 ; 2010 ; 46-49 >
       au < exists ; Cortland Review 2011 ; 2011 ; 50-53 >
-      au < exists ; Cortland Review 2012 ; 2012 ; 54 >      
-      
+      au < exists ; Cortland Review 2012 ; 2012 ; 54 >
+
     }
-  
+
   }
-  
+
 }
