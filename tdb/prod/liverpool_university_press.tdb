@@ -48,12 +48,12 @@
     implicit < status ; year ; name ; param[volume_name] >      
     param[journal_issn] = 1757-8078
 
-    au < manifest ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 >
-    au < manifest ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 >
-    au < manifest ; 2005 ; British Journal of Canadian Studies Volume 18 ; 18 >
-    au < manifest ; 2006 ; British Journal of Canadian Studies Volume 19 ; 19 >
-    au < manifest ; 2007 ; British Journal of Canadian Studies Volume 20 ; 20 >
-    au < manifest ; 2008 ; British Journal of Canadian Studies Volume 21 ; 21 >
+    au < testing ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 >
+    au < testing ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 >
+    au < testing ; 2005 ; British Journal of Canadian Studies Volume 18 ; 18 >
+    au < testing ; 2006 ; British Journal of Canadian Studies Volume 19 ; 19 >
+    au < testing ; 2007 ; British Journal of Canadian Studies Volume 20 ; 20 >
+    au < testing ; 2008 ; British Journal of Canadian Studies Volume 21 ; 21 >
     au < ready ; 2009 ; British Journal of Canadian Studies Volume 22 ; 22 >
     au < ready ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 >    
     au < released ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
