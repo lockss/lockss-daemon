@@ -1,10 +1,10 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.3 2012-04-24 01:16:40 thib_gc Exp $
+ * $Id: OJS2HtmlFilterFactory.java,v 1.4 2012-06-27 06:20:45 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,8 +49,16 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarKeywordCloud"),
             // Some OJS sites have a subscription status area
             HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarSubscription"),
+            // Some OJS sites have a language switcher, which can change over time
+            HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarLanguageToggle"),
+            // Top-level menu items sometimes change over time
+            HtmlNodeFilters.tagWithAttribute("div", "id", "navbar"),
             // Popular location for sidebar customizations
             HtmlNodeFilters.tagWithAttribute("div", "id", "custom"),
+            // Site customizations often involve Javascript (e.g. Google Analytics), which can change over time
+            new TagNameFilter("script"),
+            // The version of the OJS software, which can change over time, appears in a tag
+            HtmlNodeFilters.tagWithAttribute("meta", "name", "generator"),
         };
         return new HtmlFilterInputStream(in,
                                          encoding,
