@@ -19,7 +19,7 @@
     param[journal_dir] = ahcsps
  
     au < ready ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
-    au < manifest ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 >
+    au < testing ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 >
   
   }
 
@@ -34,7 +34,7 @@
 
     au < ready ; 2010 ; Avicenna Volume 2010 ; 2010 >
     au < ready ; 2011 ; Avicenna Volume 2011 ; 2011 >    
-    au < manifest ; 2012 ; Avicenna Volume 2012 ; 2012 >    
+    au < testing ; 2012 ; Avicenna Volume 2012 ; 2012 >    
     
   }
 
@@ -81,7 +81,7 @@
 
     au < ready ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
     au < ready ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >  
-    au < manifest ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 >  
+    au < testing ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 >  
     
   }
 
@@ -109,7 +109,7 @@
     param[journal_dir] = connect
     
     au < ready ; 2011 ; QScience Connect Volume 2011 ; 2011 >
-    au < manifest ; 2012 ; QScience Connect Volume 2012 ; 2012 >
+    au < testing ; 2012 ; QScience Connect Volume 2012 ; 2012 >
      
   }
   
