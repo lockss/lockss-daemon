@@ -119,12 +119,18 @@
     title <
       name = Comma ;
       issn = 1680-1865 ; 
+      eissn = 2049-3355 ;
       issnl = 1680-1865
     >
     
-    param[journal_issn] = 1680-1865
+    param[journal_issn] = 2049-3355
     
-    au < crawling ; exists ; 2010 ; Comma Volume 1 ; 1 >
+    au < exists ; exists ; 2004 ; Comma Volume 2004 ; 2004 >
+    au < exists ; exists ; 2006 ; Comma Volume 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; Comma Volume 2010 ; 2007 >
+    au < exists ; exists ; 2008 ; Comma Volume 2010 ; 2008 >
+    au < exists ; exists ; 2009 ; Comma Volume 2010 ; 2009 >
+    au < exists ; exists ; 2010 ; Comma Volume 2010 ; 2010 >
     
   }
   
