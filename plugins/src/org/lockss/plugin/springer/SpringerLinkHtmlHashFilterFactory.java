@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.16 2012-06-06 02:18:58 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.17 2012-06-27 23:58:47 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.springer;
 
 import java.io.*;
 
+import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.*;
@@ -42,6 +43,7 @@ import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.test.StringInputStream;
 import org.lockss.util.ReaderInputStream;
 
 public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
@@ -99,6 +101,26 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         // Text includes number of reverse citations
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/referrers/$"),
         
+        // The end volume and year of a journal's coverage keeps moving forward
+        new NodeFilter() {
+          @Override public boolean accept(Node node) {
+            if (node instanceof DefinitionListBullet) {
+              Tag tag = (Tag)node;
+              if ("DD".equals(tag.getTagName())) {
+                Node prevNode = tag.getPreviousSibling();
+                while (prevNode != null && !(prevNode instanceof DefinitionListBullet)) {
+                  prevNode = prevNode.getPreviousSibling();
+                }
+                if (prevNode != null && prevNode instanceof DefinitionListBullet) {
+                  CompositeTag prevTag = (CompositeTag)prevNode;
+                  return "Coverage".equals(prevTag.getStringText());
+                }
+              }
+            }
+            return false;
+          }
+        },
+        
         // MAINTENANCE
         
         // Alas, the <title> tag switched from "SpringerLink - Foo" to
@@ -112,8 +134,7 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         // Over time, <span class="...toolbarSprite..."></span>
         // became <a class="...toolbarSprite...">...</a>
         new NodeFilter() {
-          @Override
-          public boolean accept(Node node) {
+          @Override public boolean accept(Node node) {
             if (node instanceof Span || node instanceof LinkTag) {
               Tag tag = (Tag)node;
               String attr = tag.getAttribute("class");
@@ -153,5 +174,5 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
       throw new FilteringException(uee);
     }
   }
-  
+
 }
