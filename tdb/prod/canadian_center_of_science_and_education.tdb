@@ -21,7 +21,7 @@
     au < released ; 2009 ; Applied Physics Research Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; Applied Physics Research Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Applied Physics Research Volume 3 ; 3 ; 2011 >
-    au < manifest ; 2012 ; Applied Physics Research Volume 4 ; 4 ; 2012 >
+    au < testing ; 2012 ; Applied Physics Research Volume 4 ; 4 ; 2012 >
   }
 
   {
@@ -37,7 +37,7 @@
     au < released ; 2009 ; Asian Culture and History Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; Asian Culture and History Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Asian Culture and History Volume 3 ; 3 ; 2011 >
-    au < manifest ; 2012 ; Asian Culture and History Volume 4 ; 4 ; 2012 >
+    au < testing ; 2012 ; Asian Culture and History Volume 4 ; 4 ; 2012 >
   }
 
   {
@@ -57,7 +57,7 @@
     au < released ; 2009 ; Asian Social Science Volume 5 ; 5 ; 2009 >
     au < released ; 2010 ; Asian Social Science Volume 6 ; 6 ; 2010 >
     au < released ; 2011 ; Asian Social Science Volume 7 ; 7 ; 2011 >
-    au < manifest ; 2012 ; Asian Social Science Volume 8 ; 8 ; 2012 >
+    au < testing ; 2012 ; Asian Social Science Volume 8 ; 8 ; 2012 >
   }
 
   {
@@ -74,7 +74,7 @@
     au < released ; 2009 ; Computer and Information Science Volume 2 ; 2 ; 2009 >
     au < released ; 2010 ; Computer and Information Science Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; Computer and Information Science Volume 4 ; 4 ; 2011 >
-    au < manifest ; 2012 ; Computer and Information Science Volume 5 ; 5 ; 2012 >
+    au < testing ; 2012 ; Computer and Information Science Volume 5 ; 5 ; 2012 >
   }
 
   {
@@ -88,7 +88,7 @@
     param[journal_id] = ells
 
     au < released ; 2011 ; English Language and Literature Studies Volume 1 ; 1 ; 2011 >
-    au < manifest ; 2012 ; English Language and Literature Studies Volume 2 ; 2 ; 2012 >
+    au < testing ; 2012 ; English Language and Literature Studies Volume 2 ; 2 ; 2012 >
   }
 
   {
@@ -105,7 +105,7 @@
     au < released ; 2009 ; English Language Teaching Volume 2 ; 2 ; 2009 >
     au < released ; 2010 ; English Language Teaching Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; English Language Teaching Volume 4 ; 4 ; 2011 >
-    au < manifest ; 2012 ; English Language Teaching Volume 5 ; 5 ; 2012 >
+    au < testing ; 2012 ; English Language Teaching Volume 5 ; 5 ; 2012 >
   }
 
   {
@@ -121,7 +121,7 @@
     au < released ; 2009 ; Global Journal of Health Science Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; Global Journal of Health Science Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Global Journal of Health Science Volume 3 ; 3 ; 2011 >
-    au < manifest ; 2012 ; Global Journal of Health Science Volume 4 ; 4 ; 2012 >
+    au < testing ; 2012 ; Global Journal of Health Science Volume 4 ; 4 ; 2012 >
 
   }
 
@@ -136,7 +136,7 @@
     param[journal_id] = hes
 
     au < released ; 2011 ; Higher Education Studies Volume 1 ; 1 ; 2011 >
-    au < manifest ; 2012 ; Higher Education Studies Volume 2 ; 2 ; 2012 >
+    au < testing ; 2012 ; Higher Education Studies Volume 2 ; 2 ; 2012 >
   }
 
   {
@@ -153,7 +153,7 @@
     au < released ; 2009 ; International Business Research Volume 2 ; 2 ; 2009 >
     au < released ; 2010 ; International Business Research Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; International Business Research Volume 4 ; 4 ; 2011 >
-    au < manifest ; 2012 ; International Business Research Volume 5 ; 5 ; 2012 >
+    au < testing ; 2012 ; International Business Research Volume 5 ; 5 ; 2012 >
   }
 
   {
@@ -170,7 +170,7 @@
     au < released ; 2009 ; International Education Studies Volume 2 ; 2 ; 2009 >
     au < released ; 2010 ; International Education Studies Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; International Education Studies Volume 4 ; 4 ; 2011 >
-    au < manifest ; 2012 ; International Education Studies Volume 5 ; 5 ; 2012 >
+    au < testing ; 2012 ; International Education Studies Volume 5 ; 5 ; 2012 >
   }
 
   {
@@ -186,7 +186,7 @@
     au < released ; 2009 ; International Journal of Biology Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; International Journal of Biology Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; International Journal of Biology Volume 3 ; 3 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Biology Volume 4 ; 4 ; 2012 >
+    au < testing ; 2012 ; International Journal of Biology Volume 4 ; 4 ; 2012 >
   }
   
   {
@@ -201,11 +201,11 @@
 
     au < doesNotExist ; 2006 ; International Journal of Business and Management Volume 1 ; 1 ; 2006 >
     au < doesNotExist ; 2007 ; International Journal of Business and Management Volume 2 ; 2 ; 2007 >
-    au < notReady ; 2008 ; International Journal of Business and Management Volume 3 ; 3 ; 2008 >
+    au < testing ; 2008 ; International Journal of Business and Management Volume 3 ; 3 ; 2008 >
     au < released ; 2009 ; International Journal of Business and Management Volume 4 ; 4 ; 2009 >
     au < released ; 2010 ; International Journal of Business and Management Volume 5 ; 5 ; 2010 >
     au < released ; 2011 ; International Journal of Business and Management Volume 6 ; 6 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Business and Management Volume 7 ; 7 ; 2012 >
+    au < testing ; 2012 ; International Journal of Business and Management Volume 7 ; 7 ; 2012 >
   }
 
   {
@@ -221,7 +221,7 @@
     au < released ; 2009 ; International Journal of Chemistry Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; International Journal of Chemistry Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; International Journal of Chemistry Volume 3 ; 3 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Chemistry Volume 4 ; 4 ; 2012 >
+    au < testing ; 2012 ; International Journal of Chemistry Volume 4 ; 4 ; 2012 >
   }
   
   {
@@ -237,7 +237,7 @@
     au < released ; 2009 ; International Journal of Economics and Finance Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; International Journal of Economics and Finance Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; International Journal of Economics and Finance Volume 3 ; 3 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Economics and Finance Volume 4 ; 4 ; 2012 >
+    au < testing ; 2012 ; International Journal of Economics and Finance Volume 4 ; 4 ; 2012 >
   }
   
   {
@@ -251,7 +251,7 @@
     param[journal_id] = ijel
 
     au < released ; 2011 ; International Journal of English Linguistics Volume 1 ; 1 ; 2011 >
-    au < manifest ; 2012 ; International Journal of English Linguistics Volume 2 ; 2 ; 2012 >
+    au < testing ; 2012 ; International Journal of English Linguistics Volume 2 ; 2 ; 2012 >
   }
   
   {
@@ -267,7 +267,7 @@
     au < released ; 2009 ; International Journal of Marketing Studies Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; International Journal of Marketing Studies Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; International Journal of Marketing Studies Volume 3 ; 3 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Marketing Studies Volume 4 ; 4 ; 2012 >
+    au < testing ; 2012 ; International Journal of Marketing Studies Volume 4 ; 4 ; 2012 >
   }
   
   {
@@ -283,7 +283,7 @@
     au < released ; 2009 ; International Journal of Psychological Studies Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; International Journal of Psychological Studies Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; International Journal of Psychological Studies Volume 3 ; 3 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Psychological Studies Volume 4 ; 4 ; 2012 >
+    au < testing ; 2012 ; International Journal of Psychological Studies Volume 4 ; 4 ; 2012 >
   }
   
   {
@@ -299,7 +299,7 @@
     au < released ; 2009 ; Journal of Agricultural Science Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; Journal of Agricultural Science Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Journal of Agricultural Science Volume 3 ; 3 ; 2011 >
-    au < manifest ; 2012 ; Journal of Agricultural Science Volume 4 ; 4 ; 2012 >
+    au < testing ; 2012 ; Journal of Agricultural Science Volume 4 ; 4 ; 2012 >
   }
   
   {
@@ -312,8 +312,8 @@
     
     param[journal_id] = jgg
 
-    au < notReady ; 2010 ; Journal of Geography and Geology Volume 1 ; 1 ; 2010 >
-    au < notReady ; 2011 ; Journal of Geography and Geology Volume 2 ; 2 ; 2011 >
+    au < testing ; 2010 ; Journal of Geography and Geology Volume 1 ; 1 ; 2010 >
+    au < testing ; 2011 ; Journal of Geography and Geology Volume 2 ; 2 ; 2011 >
     au < exists ; 2011 ; Journal of Geography and Geology Volume 3 ; 3 ; 2011 >
     au < exists ; 2012 ; Journal of Geography and Geology Volume 4 ; 4 ; 2012 >
 
@@ -329,7 +329,7 @@
     
     param[journal_id] = jms
 
-    au < manifest ; 2012 ; Journal of Management and Sustainability Volume 2 ; 2; 2012 >
+    au < testing ; 2012 ; Journal of Management and Sustainability Volume 2 ; 2; 2012 >
   }
   
   {
@@ -345,7 +345,7 @@
     au < released ; 2009 ; Journal of Mathematics Research Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; Journal of Mathematics Research Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Journal of Mathematics Research Volume 3 ; 3 ; 2011 >
-    au < manifest ; 2012 ; Journal of Mathematics Research Volume 4 ; 4 ; 2012 >
+    au < testing ; 2012 ; Journal of Mathematics Research Volume 4 ; 4 ; 2012 >
   }
   
   {
@@ -359,7 +359,7 @@
     param[journal_id] = jmbr
     comment[jmbr] = no issues as of 20110615
 
-    au < manifest ; 2012 ; Journal of Molecular Biology Research Volume 1 ; 1 ; 2012 >
+    au < testing ; 2012 ; Journal of Molecular Biology Research Volume 1 ; 1 ; 2012 >
 
   }
   
@@ -377,7 +377,7 @@
     au < released ; 2009 ; Journal of Politics and Law Volume 2 ; 2 ; 2009 >
     au < released ; 2010 ; Journal of Politics and Law Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; Journal of Politics and Law Volume 4 ; 4 ; 2011 >
-    au < manifest ; 2012 ; Journal of Politics and Law Volume 5 ; 5 ; 2012 >
+    au < testing ; 2012 ; Journal of Politics and Law Volume 5 ; 5 ; 2012 >
   }
   
   {
@@ -394,7 +394,7 @@
     au < released ; 2009 ; Journal of Sustainable Development Volume 2 ; 2 ; 2009 >
     au < released ; 2010 ; Journal of Sustainable Development Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; Journal of Sustainable Development Volume 4 ; 4 ; 2011 >
-    au < manifest ; 2012 ; Journal of Sustainable Development Volume 5 ; 5 ; 2012 >
+    au < testing ; 2012 ; Journal of Sustainable Development Volume 5 ; 5 ; 2012 >
   }
   
   {
@@ -412,7 +412,7 @@
     au < released ; 2009 ; Modern Applied Science Volume 3 ; 3 ; 2009 >
     au < released ; 2010 ; Modern Applied Science Volume 4 ; 4 ; 2010 >
     au < released ; 2011 ; Modern Applied Science Volume 5 ; 5 ; 2011 >
-    au < manifest ; 2012 ; Modern Applied Science Volume 6 ; 6 ; 2012 >
+    au < testing ; 2012 ; Modern Applied Science Volume 6 ; 6 ; 2012 >
   }
   
   {
@@ -428,7 +428,7 @@
     au < released ; 2009 ; Review of European Studies Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; Review of European Studies Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Review of European Studies Volume 3 ; 3 ; 2011 >
-    au < manifest ; 2012 ; Review of European Studies Volume 4 ; 4 ; 2012 >
+    au < testing ; 2012 ; Review of European Studies Volume 4 ; 4 ; 2012 >
   }
   
 }
