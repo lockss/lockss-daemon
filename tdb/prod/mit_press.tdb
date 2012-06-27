@@ -28,7 +28,7 @@
     au < released ; 2008 ; Computer Music Journal Volume 32 ; 32 >
     au < released ; 2009 ; Computer Music Journal Volume 33 ; 33 >
     au < released ; 2010 ; Computer Music Journal Volume 34 ; 34 >
-    au < manifest ; 2011 ; Computer Music Journal Volume 35 ; 35 >
+    au < testing ; 2011 ; Computer Music Journal Volume 35 ; 35 >
     au < manifest ; 2012 ; Computer Music Journal Volume 36 ; 36 >
 
   }
@@ -52,7 +52,7 @@
     au < released ; 2008 ; Global Environmental Politics Volume 8 ; 8 >
     au < released ; 2009 ; Global Environmental Politics Volume 9 ; 9 >
     au < released ; 2010 ; Global Environmental Politics Volume 10 ; 10 >
-    au < manifest ; 2011 ; Global Environmental Politics Volume 11 ; 11 >
+    au < testing ; 2011 ; Global Environmental Politics Volume 11 ; 11 >
     au < manifest ; 2012 ; Global Environmental Politics Volume 12 ; 12 >
 
   }
@@ -110,7 +110,7 @@
     au < released ; 2008 ; International Security Volume 32 ; 32 >
     au < released ; 2009 ; International Security Volume 33 ; 33 >
     au < released ; 2010 ; International Security Volume 34 ; 34 >
-    au < manifest ; 2011 ; International Security Volume 35 ; 35 >
+    au < testing ; 2011 ; International Security Volume 35 ; 35 >
     au < manifest ; 2011-2012 ; International Security Volume 36 ; 36 >
 
   }
@@ -137,8 +137,8 @@
     au < released ; 2007 ; Journal of Cold War Studies Volume 9 ; 9 >
     au < released ; 2008 ; Journal of Cold War Studies Volume 10 ; 10 >
     au < released ; 2009 ; Journal of Cold War Studies Volume 11 ; 11 >
-    au < manifest ; 2010 ; Journal of Cold War Studies Volume 12 ; 12 >
-    au < manifest ; 2011 ; Journal of Cold War Studies Volume 13 ; 13 >
+    au < testing ; 2010 ; Journal of Cold War Studies Volume 12 ; 12 >
+    au < testing ; 2011 ; Journal of Cold War Studies Volume 13 ; 13 >
     au < manifest ; 2012 ; Journal of Cold War Studies Volume 14 ; 14 >
 
   }
@@ -165,7 +165,7 @@
     au < released ; 2007-2008 ; Journal of Interdisciplinary History Volume 38 ; 38 >
     au < released ; 2008-2009 ; Journal of Interdisciplinary History Volume 39 ; 39 >
     au < released ; 2009-2010 ; Journal of Interdisciplinary History Volume 40 ; 40 >
-    au < manifest ; 2010-2011 ; Journal of Interdisciplinary History Volume 41 ; 41 >
+    au < testing ; 2010-2011 ; Journal of Interdisciplinary History Volume 41 ; 41 >
     au < manifest ; 2011-2012 ; Journal of Interdisciplinary History Volume 42 ; 42 >
 
   }
@@ -191,7 +191,7 @@
     au < released ; 2008 ; Leonardo Volume 41 ; 41 >
     au < released ; 2009 ; Leonardo Volume 42 ; 42 >
     au < released ; 2010 ; Leonardo Volume 43 ; 43 >
-    au < manifest ; 2011 ; Leonardo Volume 44 ; 44 >
+    au < testing ; 2011 ; Leonardo Volume 44 ; 44 >
     au < manifest ; 2012 ; Leonardo Volume 45 ; 45 >
 
   }
@@ -217,8 +217,8 @@
     au < released ; 2007 ; Leonardo Music Journal Volume 17 ; 17 >
     au < released ; 2008 ; Leonardo Music Journal Volume 18 ; 18 >
     au < released ; 2009 ; Leonardo Music Journal Volume 19 ; 19 >
-    au < manifest ; 2010 ; Leonardo Music Journal Volume 20 ; 20 >
-    au < manifest ; 2011 ; Leonardo Music Journal Volume 21 ; 21 >
+    au < testing ; 2010 ; Leonardo Music Journal Volume 20 ; 20 >
+    au < testing ; 2011 ; Leonardo Music Journal Volume 21 ; 21 >
     au < expected ; 2012 ; Leonardo Music Journal Volume 22 ; 22 >
 
   }
@@ -245,7 +245,7 @@
     au < released ; 2008 ; Linguistic Inquiry Volume 39 ; 39 >
     au < released ; 2009 ; Linguistic Inquiry Volume 40 ; 40 >
     au < released ; 2010 ; Linguistic Inquiry Volume 41 ; 41 >
-    au < manifest ; 2011 ; Linguistic Inquiry Volume 42 ; 42 >
+    au < testing ; 2011 ; Linguistic Inquiry Volume 42 ; 42 >
     au < manifest ; 2012 ; Linguistic Inquiry Volume 43 ; 43 >
 
   }
@@ -275,8 +275,8 @@
     au < released ; 2007 ; PAJ: A Journal of Performance and Art Volume 29 ; 29 >
     au < released ; 2008 ; PAJ: A Journal of Performance and Art Volume 30 ; 30 >
     au < released ; 2009 ; PAJ: A Journal of Performance and Art Volume 31 ; 31 >
-    au < manifest ; 2010 ; PAJ: A Journal of Performance and Art Volume 32 ; 32 >
-    au < manifest ; 2011 ; PAJ: A Journal of Performance and Art Volume 33 ; 33 >
+    au < testing ; 2010 ; PAJ: A Journal of Performance and Art Volume 32 ; 32 >
+    au < testing ; 2011 ; PAJ: A Journal of Performance and Art Volume 33 ; 33 >
     au < manifest ; 2012 ; PAJ: A Journal of Performance and Art Volume 34 ; 34 >
 
   }
@@ -305,7 +305,7 @@
     au < released ; 2008 ; Perspectives on Science Volume 16 ; 16 >
     au < released ; 2009 ; Perspectives on Science Volume 17 ; 17 >
     au < released ; 2010 ; Perspectives on Science Volume 18 ; 18 >
-    au < manifest ; 2011 ; Perspectives on Science Volume 19 ; 19 >
+    au < testing ; 2011 ; Perspectives on Science Volume 19 ; 19 >
     au < manifest ; 2012 ; Perspectives on Science Volume 20 ; 20 >
 
   }
@@ -321,7 +321,7 @@
     param[journal_dir] = the_drama_review
     attr[journal_id] = tdr
 
-    au < manifest ; 1999 ; TDR: The Drama Review Volume 43 ; 43 >
+    au < testing ; 1999 ; TDR: The Drama Review Volume 43 ; 43 >
     au < released ; 2000 ; TDR: The Drama Review Volume 44 ; 44 >
     au < released ; 2001 ; TDR: The Drama Review Volume 45 ; 45 >
     au < released ; 2002 ; TDR: The Drama Review Volume 46 ; 46 >
@@ -333,7 +333,7 @@
     au < released ; 2008 ; TDR: The Drama Review Volume 52 ; 52 >
     au < released ; 2009 ; TDR: The Drama Review Volume 53 ; 53 >
     au < released ; 2010 ; TDR: The Drama Review Volume 54 ; 54 >
-    au < manifest ; 2011 ; TDR: The Drama Review Volume 55 ; 55 >
+    au < testing ; 2011 ; TDR: The Drama Review Volume 55 ; 55 >
     au < manifest ; 2012 ; TDR: The Drama Review Volume 56 ; 56 >
 
 
