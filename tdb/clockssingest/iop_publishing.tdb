@@ -739,23 +739,22 @@
 
     param[journal_issn] = 1755-1315
     comment[param] = eissn preferred
-    comment[au_start_url] = redirects to issue toc, missing permission statement
-    comment[1] = no permission
+    comment[au_start_url] = redirects to issue toc, permission statement found in page source
 
-    au < notReady ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 1 ; 1 > 
-    au < exists ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 2 ; 2 > 
-    au < exists ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 3 ; 3 > 
-    au < exists ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 4 ; 4 > 
-    au < exists ; exists ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 5 ; 5 > 
+    au < manifest ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 1 ; 1 > 
+    au < manifest ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 2 ; 2 > 
+    au < manifest ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 3 ; 3 > 
+    au < manifest ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 4 ; 4 > 
+    au < manifest ; exists ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 5 ; 5 > 
     au < released ; crawling ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 6 ; 6 > 
-    au < exists ; exists ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 7 ; 7 > 
-    au < exists ; exists ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 8 ; 8 > 
-    au < exists ; exists ; 2010 ; IOP Conference Series: Earth and Environmental Science Volume 9 ; 9 > 
-    au < exists ; exists ; 2010 ; IOP Conference Series: Earth and Environmental Science Volume 10 ; 10 > 
-    au < exists ; exists ; 2010 ; IOP Conference Series: Earth and Environmental Science Volume 11 ; 11 > 
-    au < exists ; exists ; 2010 ; IOP Conference Series: Earth and Environmental Science Volume 12 ; 12 > 
-    au < exists ; exists ; 2010 ; IOP Conference Series: Earth and Environmental Science Volume 13 ; 13 > 
-    au < exists ; exists ; 2011 ; IOP Conference Series: Earth and Environmental Science Volume 14 ; 14 >  
+    au < manifest ; exists ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 7 ; 7 > 
+    au < manifest ; exists ; 2009 ; IOP Conference Series: Earth and Environmental Science Volume 8 ; 8 > 
+    au < manifest ; exists ; 2010 ; IOP Conference Series: Earth and Environmental Science Volume 9 ; 9 > 
+    au < manifest ; exists ; 2010 ; IOP Conference Series: Earth and Environmental Science Volume 10 ; 10 > 
+    au < manifest ; exists ; 2010 ; IOP Conference Series: Earth and Environmental Science Volume 11 ; 11 > 
+    au < manifest ; exists ; 2010 ; IOP Conference Series: Earth and Environmental Science Volume 12 ; 12 > 
+    au < manifest ; exists ; 2010 ; IOP Conference Series: Earth and Environmental Science Volume 13 ; 13 > 
+    au < manifest ; exists ; 2011 ; IOP Conference Series: Earth and Environmental Science Volume 14 ; 14 >  
     au < expected ; exists ; 2012 ; IOP Conference Series: Earth and Environmental Science Volume 15 ; 15 >  
 
   }
