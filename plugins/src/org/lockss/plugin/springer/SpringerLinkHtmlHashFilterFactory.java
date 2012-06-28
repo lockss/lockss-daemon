@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.17 2012-06-27 23:58:47 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.18 2012-06-28 00:08:43 thib_gc Exp $
  */
 
 /*
@@ -153,6 +153,11 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         // to
         // <div class="coverImage" title="Cover Image" style="background-image: url(...); background-size: contain;">
         HtmlNodeFilters.tagWithAttribute("div", "class", "coverImage"),
+
+        // Switched from
+        // <a title="Frequently Asked Questions" ...>FAQ</a> to
+        // <a title="Frequently Asked Questions" ...>Frequently Asked Questions</a>
+        HtmlNodeFilters.tagWithAttribute("a", "title", "Frequently Asked Questions"),
         
     };
     InputStream filteredStream = new HtmlFilterInputStream(in,
