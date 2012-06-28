@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.18 2012-06-28 00:08:43 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.19 2012-06-28 18:58:52 thib_gc Exp $
  */
 
 /*
@@ -43,7 +43,6 @@ import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.test.StringInputStream;
 import org.lockss.util.ReaderInputStream;
 
 public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
