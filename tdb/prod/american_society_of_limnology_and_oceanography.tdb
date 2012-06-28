@@ -64,11 +64,11 @@ comment[aslo] = we're not preserving the last ~4 volumes of the run due to a mov
     au < ready ; 2000 ; Limnology and Oceanography Volume 45 ; 45 >
     au < ready ; 2001 ; Limnology and Oceanography Volume 46 ; 46 >
     au < ready ; 2002 ; Limnology and Oceanography Volume 47 ; 47 >
-    au < ready ; 2003 ; Limnology and Oceanography Volume 48 ; 48 >
-    au < ready ; 2004 ; Limnology and Oceanography Volume 49 ; 49 >
-    au < ready ; 2005 ; Limnology and Oceanography Volume 50 ; 50 >
-    au < ready ; 2006 ; Limnology and Oceanography Volume 51 ; 51 >
-    au < ready ; 2007 ; Limnology and Oceanography Volume 52 ; 52 >
+    au < testing ; 2003 ; Limnology and Oceanography Volume 48 ; 48 >
+    au < testing ; 2004 ; Limnology and Oceanography Volume 49 ; 49 >
+    au < testing ; 2005 ; Limnology and Oceanography Volume 50 ; 50 >
+    au < testing ; 2006 ; Limnology and Oceanography Volume 51 ; 51 >
+    au < testing ; 2007 ; Limnology and Oceanography Volume 52 ; 52 >
     au < exists ; 2008 ; Limnology and Oceanography Volume 53 ; 53 >
     au < exists ; 2009 ; Limnology and Oceanography Volume 54 ; 54 >
     au < exists ; 2010 ; Limnology and Oceanography Volume 55 ; 55 >
