@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.19 2012-06-28 18:58:52 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.20 2012-06-28 18:59:19 thib_gc Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.plugin.springer;
 
 import java.io.*;
 
-import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.*;
