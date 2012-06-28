@@ -29,7 +29,7 @@
     au < manifest ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 >
     au < manifest ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 >
     au < manifest ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 >
-    au < exists ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 >
+    au < manifest ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 >
     
   }
 
@@ -92,7 +92,7 @@
            
     au < manifest ; 2010 ; Asia Pacific World Volume 1 ; 1 >
     au < manifest ; 2011 ; Asia Pacific World Volume 2 ; 2 >
-    au < exists ; 2012 ; Asia Pacific World Volume 3 ; 3 >
+    au < manifest ; 2012 ; Asia Pacific World Volume 3 ; 3 >
     
   }
 
@@ -317,7 +317,7 @@
     au < manifest ; 2009 ; Girlhood Studies Volume 2 ; 2 >
     au < manifest ; 2010 ; Girlhood Studies Volume 3 ; 3 >
     au < manifest ; 2011 ; Girlhood Studies Volume 4 ; 4 >
-    au < expected ; 2012 ; Girlhood Studies Volume 5 ; 5 >
+    au < manifest ; 2012 ; Girlhood Studies Volume 5 ; 5 >
     
   }
 
@@ -373,7 +373,7 @@
     au < manifest ; 2009 ; Journal of Educational Memory, Media, and Society Volume 1 ; 1 >
     au < manifest ; 2010 ; Journal of Educational Memory, Media, and Society Volume 2 ; 2 >
     au < manifest ; 2011 ; Journal of Educational Memory, Media, and Society Volume 3 ; 3 >
-    au < exists ; 2012 ; Journal of Educational Memory, Media, and Society Volume 4 ; 4 >
+    au < manifest ; 2012 ; Journal of Educational Memory, Media, and Society Volume 4 ; 4 >
     
   }
 
@@ -537,7 +537,7 @@
     param[journal_issn] = 2152-906X
 
     au < ready ; 2011 ; Regions & Cohesion Volume 1 ; 1 >
-    au < exists ; 2012 ; Regions & Cohesion Volume 2 ; 2 >
+    au < manifest ; 2012 ; Regions & Cohesion Volume 2 ; 2 >
     
   }
 
@@ -680,7 +680,7 @@
 
 
     au < manifest ; 2011 ; Transfers Volume 1 ; 1 >
-    au < exists ; 2012 ; Transfers Volume 2 ; 2 >
+    au < manifest ; 2012 ; Transfers Volume 2 ; 2 >
     
   }
 }
