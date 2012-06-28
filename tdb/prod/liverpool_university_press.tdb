@@ -48,12 +48,12 @@
     implicit < status ; year ; name ; param[volume_name] >      
     param[journal_issn] = 1757-8078
 
-    au < testing ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 >
-    au < testing ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 >
-    au < testing ; 2005 ; British Journal of Canadian Studies Volume 18 ; 18 >
-    au < testing ; 2006 ; British Journal of Canadian Studies Volume 19 ; 19 >
-    au < testing ; 2007 ; British Journal of Canadian Studies Volume 20 ; 20 >
-    au < testing ; 2008 ; British Journal of Canadian Studies Volume 21 ; 21 >
+    au < ready ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 >
+    au < ready ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 >
+    au < ready ; 2005 ; British Journal of Canadian Studies Volume 18 ; 18 >
+    au < ready ; 2006 ; British Journal of Canadian Studies Volume 19 ; 19 >
+    au < ready ; 2007 ; British Journal of Canadian Studies Volume 20 ; 20 >
+    au < ready ; 2008 ; British Journal of Canadian Studies Volume 21 ; 21 >
     au < ready ; 2009 ; British Journal of Canadian Studies Volume 22 ; 22 >
     au < ready ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 >    
     au < released ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
@@ -94,21 +94,21 @@
       param[journal_issn] = 1478-3398 
       comment[0] = vols. 73-78 currently not available online
      
-      au < manifest ; 1994 ; Bulletin of Hispanic Studies Volume 71 ; 71 >
-      au < manifest ; 1995 ; Bulletin of Hispanic Studies Volume 72 ; 72 >
+      au < testing ; 1994 ; Bulletin of Hispanic Studies Volume 71 ; 71 >
+      au < testing ; 1995 ; Bulletin of Hispanic Studies Volume 72 ; 72 >
       au < doesNotExist ; 1996 ; Bulletin of Hispanic Studies Volume 73 ; 73 >
       au < doesNotExist ; 1997 ; Bulletin of Hispanic Studies Volume 74 ; 74 >
       au < doesNotExist ; 1998 ; Bulletin of Hispanic Studies Volume 75 ; 75 >
       au < doesNotExist ; 1999 ; Bulletin of Hispanic Studies Volume 76 ; 76 >
       au < doesNotExist ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 >
       au < doesNotExist ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 >
-      au < manifest ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 >
-      au < manifest ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 >
-      au < manifest ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 >
-      au < manifest ; 2005 ; Bulletin of Hispanic Studies Volume 82 ; 82 >
-      au < manifest ; 2006 ; Bulletin of Hispanic Studies Volume 83 ; 83 >
-      au < manifest ; 2007 ; Bulletin of Hispanic Studies Volume 84 ; 84 >
-      au < manifest ; 2008 ; Bulletin of Hispanic Studies Volume 85 ; 85 >
+      au < testing ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 >
+      au < testing ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 >
+      au < testing ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 >
+      au < testing ; 2005 ; Bulletin of Hispanic Studies Volume 82 ; 82 >
+      au < testing ; 2006 ; Bulletin of Hispanic Studies Volume 83 ; 83 >
+      au < testing ; 2007 ; Bulletin of Hispanic Studies Volume 84 ; 84 >
+      au < testing ; 2008 ; Bulletin of Hispanic Studies Volume 85 ; 85 >
       au < ready ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 >
       au < ready ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 >
       au < released ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
