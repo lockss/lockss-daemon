@@ -4,7 +4,7 @@
     name = Libertas Academica
   >
 
-  plugin = org.clockss.plugin.libertasacademica.LibertasAcademicaPlugin
+  plugin = org.lockss.plugin.libertasacademica.LibertasAcademicaPlugin
   param[base_url] = http://www.la-press.com/
   implicit < status1 ; status ; year ; name ; param[year] >
 
