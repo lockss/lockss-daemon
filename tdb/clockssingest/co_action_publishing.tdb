@@ -345,27 +345,37 @@
       issnl = 1087-2981
     >
 
-    param[base_url] = http://www.med-ed-online.net/
-    param[journal_id] = meo
-
-    au < manifest ; exists ; 1996 ; Medical Education Online Volume 1 ; 1 ; 1996 >
-    au < manifest ; exists ; 1997 ; Medical Education Online Volume 2 ; 2 ; 1997 >
-    au < manifest ; exists ; 1998 ; Medical Education Online Volume 3 ; 3 ; 1998 >
-    au < manifest ; exists ; 1999 ; Medical Education Online Volume 4 ; 4 ; 1999 >
-    au < manifest ; exists ; 2000 ; Medical Education Online Volume 5 ; 5 ; 2000 >
-    au < manifest ; exists ; 2001 ; Medical Education Online Volume 6 ; 6 ; 2001 >
-    au < manifest ; exists ; 2002 ; Medical Education Online Volume 7 ; 7 ; 2002 >
-    au < manifest ; exists ; 2003 ; Medical Education Online Volume 8 ; 8 ; 2003 >
-    au < manifest ; exists ; 2004 ; Medical Education Online Volume 9 ; 9 ; 2004 >
-    au < manifest ; exists ; 2005 ; Medical Education Online Volume 10 ; 10 ; 2005 >
-    au < manifest ; exists ; 2006 ; Medical Education Online Volume 11 ; 11 ; 2006 >
-    au < manifest ; exists ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
-    au < manifest ; exists ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
-    au < manifest ; exists ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
-    au < released ; crawling ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
-    au < released ; crawling ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
-    au < crawling ; exists ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
+    {
+      param[base_url] = http://www.med-ed-online.net/
+      param[journal_id] = meo
+      
+      au < down ; crawling ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
+      au < down ; crawling ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
+    }
     
+    {
+    {
+      param[base_url] = http://med-ed-online.net/
+      param[journal_id] = meo
+      
+      au < manifest ; exists ; 1996 ; Medical Education Online Volume 1 ; 1 ; 1996 >
+      au < manifest ; exists ; 1997 ; Medical Education Online Volume 2 ; 2 ; 1997 >
+      au < manifest ; exists ; 1998 ; Medical Education Online Volume 3 ; 3 ; 1998 >
+      au < manifest ; exists ; 1999 ; Medical Education Online Volume 4 ; 4 ; 1999 >
+      au < manifest ; exists ; 2000 ; Medical Education Online Volume 5 ; 5 ; 2000 >
+      au < manifest ; exists ; 2001 ; Medical Education Online Volume 6 ; 6 ; 2001 >
+      au < manifest ; exists ; 2002 ; Medical Education Online Volume 7 ; 7 ; 2002 >
+      au < manifest ; exists ; 2003 ; Medical Education Online Volume 8 ; 8 ; 2003 >
+      au < manifest ; exists ; 2004 ; Medical Education Online Volume 9 ; 9 ; 2004 >
+      au < manifest ; exists ; 2005 ; Medical Education Online Volume 10 ; 10 ; 2005 >
+      au < manifest ; exists ; 2006 ; Medical Education Online Volume 11 ; 11 ; 2006 >
+      au < manifest ; exists ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
+      au < manifest ; exists ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
+      au < manifest ; exists ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
+      au < doNotProcess ; doNotProcess ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
+      au < doNotProcess ; doNotProcess ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
+      au < manifest ; exists ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
+    }
   }
 
   {
