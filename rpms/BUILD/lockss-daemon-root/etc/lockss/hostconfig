@@ -585,7 +585,7 @@ Linux)
     LOCAL_IPADDR=`ifconfig eth0 | grep 'inet addr:' | grep -v 127.0.0.1 | tail -1 | sed 's/.*inet addr:\(.*\)  Mask.*/\1/'`
     ;;
 *)
-    echo "${OS_NAME} not supported"
+    echo "${OS_TYPE} not supported"
     exit 1
     ;;
 esac
