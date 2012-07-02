@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.17 2011-01-08 15:38:16 pgust Exp $
+ * $Id: TitleConfig.java,v 1.18 2012-07-02 16:19:31 tlipkis Exp $
  */
 
 /*
@@ -439,6 +439,10 @@ public class TitleConfig {
     sb.append(journalTitle);
     sb.append(", plugin: ");
     sb.append(pluginName);
+    if (pluginVersion != null) {
+      sb.append(" v");
+      sb.append(pluginVersion);
+    }
     sb.append(", params: ");
     sb.append(params);
     if (attrs != null) {
