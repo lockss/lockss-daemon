@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.21 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.22 2012-07-02 16:26:24 tlipkis Exp $
  */
 
 /*
@@ -179,6 +179,15 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
       CachedUrl cu = getTestCu(url1);
       assertEquals(url1, cu.getUrl());
+    }
+
+    public void testGetUrlSlash() throws Exception {
+      String urlslash = "http://www.example.com/testDir/dir/";
+
+      createLeaf(urlslash, content1, null);
+
+      CachedUrl cu = getTestCu(urlslash);
+      assertEquals(urlslash, cu.getUrl());
     }
 
     public void testIsLeaf() throws Exception {
