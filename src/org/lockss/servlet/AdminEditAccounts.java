@@ -1,5 +1,5 @@
 /*
- * $Id: AdminEditAccounts.java,v 1.8 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: AdminEditAccounts.java,v 1.9 2012-07-02 16:26:04 tlipkis Exp $
  */
 
 /*
@@ -251,6 +251,7 @@ public class AdminEditAccounts extends EditAccountBase {
     addHeading(tbl, "Last Login");
     List<UserAccount> users = new ArrayList(acctMgr.getUsers());
     Collections.sort(users, USER_COMPARATOR);
+    DisplayConverter dispConverter = new DisplayConverter();
     for (UserAccount acct : users) {
       tbl.newRow();
       tbl.newCell();
@@ -272,7 +273,7 @@ public class AdminEditAccounts extends EditAccountBase {
       tbl.add(acct.getEmail());
 
       tbl.newCell();
-      tbl.add(DaemonStatus.dateString(new Date(acct.getLastLogin())));
+      tbl.add(dispConverter.dateString(new Date(acct.getLastLogin())));
 
       if (!acct.isEnabled()) {
 	tbl.newCell();

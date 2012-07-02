@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonStatus.java,v 1.10 2012-01-31 07:21:40 tlipkis Exp $
+ * $Id: TestDaemonStatus.java,v 1.11 2012-07-02 16:26:04 tlipkis Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class TestDaemonStatus extends LockssServletTestCase {
     cal.set(Calendar.HOUR_OF_DAY, 15);
     cal.set(Calendar.MINUTE, 15);
     testObj = cal.getTime();
-    assertEquals(DaemonStatus.getTableDateFormat().format(testObj),
+    assertEquals(new DisplayConverter().getTableDateFormat().format(testObj),
                  format(testObj, ColumnDescriptor.TYPE_DATE));
 
     // test IPAddr
@@ -129,7 +129,7 @@ public class TestDaemonStatus extends LockssServletTestCase {
   }
 
   private String format(Object obj, int type) {
-    return DaemonStatus.convertDisplayString(obj, type);
+    return new DisplayConverter().convertDisplayString(obj, type);
   }
 
   // Utilities for running the servlet
