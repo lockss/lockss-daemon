@@ -7,6 +7,54 @@
   {
 
     title <
+      name = ACCP Critical Care Medicine Board Review: 20th Edition ;
+      type = book ;
+      isbn = 978-0-916609-76-4
+    >
+
+    comment[url] = http://ccbr.chestpubs.org/content/current
+
+  }
+
+  {
+
+    title <
+      name = ACCP Pulmonary Medicine Board Review: 25th Edition ;
+      type = book ;
+      isbn = 978-0-916609-77-1
+    >
+
+    comment[url] = http://pbr.chestpubs.org/content/current
+
+  }
+
+  {
+
+    title <
+      name = ACCP Sleep Medicine Board Review: 4th Edition ;
+      type = book ;
+      isbn = 978-0-916609-75-7
+    >
+
+    comment[url] = http://smbr.chestpubs.org/content/current
+
+  }
+
+  {
+
+    title <
+      name = ACCP/AAP Pediatric Pulmonary Medicine Board Review: 1st Edition ;
+      type = book ;
+      isbn = 978-0-916609-85-6
+    >
+
+    comment[url] = http://ppmbr.chestpubs.org/content/current
+
+  }
+
+  {
+
+    title <
       name = Chest ;
       issn = 0012-3692 ;
       eissn = 1931-3543 ;
