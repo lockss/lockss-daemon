@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.19 2012-01-31 07:20:47 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.20 2012-07-02 16:20:10 tlipkis Exp $
  */
 
 /*
@@ -33,15 +33,26 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon.status;
 
 import java.util.*;
+import java.text.*;
 
 import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang.time.FastDateFormat;
+
 import org.lockss.util.*;
-import org.lockss.servlet.DaemonStatus;
+import org.lockss.config.*;
+import org.lockss.servlet.*;
 
 import org.w3c.dom.*;
 
 public class XmlStatusTable {
   private static Logger logger = Logger.getLogger("XmlStatusTable");
+
+  /** Date/time format in XML output with outputVersion=1.  "Local" is
+   * localtime, "GMT" or "UTC" are GMT, else should be a legal
+   * SimpleDateFormat spec. */
+  public static final String PARAM_XML_DATE_FORMAT =
+    Configuration.PREFIX + "admin.xmlDataFormat";
+  public static final String DEFAULT_XML_DATE_FORMAT = "Local";
 
   XmlDomBuilder xmlBuilder = new XmlDomBuilder(XmlStatusConstants.NS_PREFIX,
                                                XmlStatusConstants.NS_URI,
@@ -50,9 +61,29 @@ public class XmlStatusTable {
   StatusTable statusTable = null;
   Document tableDocument = null;
   int outputVersion = 1;
+  Format dateFmt;
 
   public XmlStatusTable(StatusTable statusTable) {
     this.statusTable = statusTable;
+    Configuration config = CurrentConfig.getCurrentConfig();
+    dateFmt = getDateFormat(config.get(PARAM_XML_DATE_FORMAT,
+				       DEFAULT_XML_DATE_FORMAT));
+  }
+
+  Format getDateFormat(String spec) {
+    logger.critical("getDateFormat: " + spec);
+    if ("GMT".equalsIgnoreCase(spec) || "UTC".equalsIgnoreCase(spec)) {
+      return DisplayConverter.TABLE_DATE_FORMATTER_GMT;
+    } else if ("local".equalsIgnoreCase(spec)) {
+      return DisplayConverter.TABLE_DATE_FORMATTER_LOCAL;
+    } else {
+      try {
+	return FastDateFormat.getInstance(spec);
+      } catch (RuntimeException e) {
+	logger.warning("org.lockss.admin.xmlDateFormat invalid: " + spec, e);
+	return getDateFormat(DEFAULT_XML_DATE_FORMAT);
+      }
+    }
   }
 
   public void setOutputVersion(int ver) {
@@ -346,7 +377,7 @@ public class XmlStatusTable {
     switch (outputVersion) {
     case 1:
     default:
-      str = DaemonStatus.convertDisplayString(object, type);
+      str = getDisplayConverter().convertDisplayString(object, type);
       break;
     case 2:
       if (object instanceof Date) {
@@ -361,6 +392,21 @@ public class XmlStatusTable {
 //       str = StringEscapeUtils.escapeXml(str); 
 //     }
     return str;
+  }
+
+  DisplayConverter dispConverter;
+
+  private DisplayConverter getDisplayConverter() {
+    if (dispConverter == null) {
+      dispConverter = new XmlDisplayConverter();
+    }
+    return dispConverter;
+  }
+
+  class XmlDisplayConverter extends DisplayConverter {
+    protected Format getTableDateFormat() {
+      return dateFmt;
+    }
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlStatusTable.java,v 1.14 2012-06-15 18:09:46 easyonthemayo Exp $
+ * $Id: TestXmlStatusTable.java,v 1.15 2012-07-02 16:20:10 tlipkis Exp $
  */
 
 /*
@@ -49,32 +49,8 @@ public class TestXmlStatusTable extends LockssTestCase {
     new ServletDescr("test", LockssServlet.class, "name");
   static String peerKey = "TCP:[127.0.0.1]:9729";
 
-  private MyIdentityManager idMgr;
-
-  // Setup calendar for locale, and calculate offset of the Stanford timezone
-  // from the local one. I had to add this because the test was failing.
-  // Note that if tests fail again, it might be necessary to get an offset
-  // from the TimeZone object based on the date being used.
-  // -- Neil
-  private long timezoneOffset;
-  private Calendar cal = new GregorianCalendar();
-
   public void setUp() throws Exception {
     super.setUp();
-
-    idMgr = new MyIdentityManager();
-    getMockLockssDaemon().setIdentityManager(idMgr);
-
-    TimeZone stanfordTimeZone = TimeZone.getTimeZone("America/Los_Angeles");
-    // Local timezone offset in ms (including daylight savings offset)
-    long localTimezoneOffset = -(cal.get(Calendar.ZONE_OFFSET) + cal.get(Calendar.DST_OFFSET));
-    // Stanford timezone offset from GMT in ms
-    //long stanfordTimezoneOffsetFromGMT = stanfordTimeZone.getOffset(date.getTime());
-    long stanfordTimezoneOffsetFromGMT = stanfordTimeZone.getOffset(0);
-    // Difference is Stanford offset minus local offset (from GMT) minus
-    // local timezone offset (including daylight saving)
-    timezoneOffset = stanfordTimezoneOffsetFromGMT + localTimezoneOffset;
-    //System.out.println("Timezone offset "+(timezoneOffset/3600000)+"h");
   }
 
   // The expected value for this test is in statustest1.xml in this dir.
@@ -83,7 +59,9 @@ public class TestXmlStatusTable extends LockssTestCase {
   // This should use a more xml-aware comparison (one that doesn't depend
   // on the output formatting), either by parsing the expected file, or
   // canonicalizing both.
-  public void testCreateTableDocument(int outver, String file) throws Exception {
+  public void testCreateTableDocument(int outver, String file)
+      throws Exception {
+    ConfigurationUtil.addFromArgs(XmlStatusTable.PARAM_XML_DATE_FORMAT, "GMT");
     // create a status table
     StatusTable table = new StatusTable("table", "key");
     MockStatusAccessor accessor = new MockStatusAccessor();
@@ -103,18 +81,17 @@ public class TestXmlStatusTable extends LockssTestCase {
     StatusTable.Reference refValue1 =
       new StatusTable.Reference("row2 string", "table2", "key2");
 
-    PeerIdentity pid = idMgr.findPeerIdentity(peerKey);
+    PeerIdentity pid = V3TestUtils.findPeerIdentity(getMockLockssDaemon(),
+						    peerKey);
     StatusTable.Reference refValue2 =
       new StatusTable.Reference("row3 string3", pid, "tableN", "keyN");
     refValue2.setProperty("prop4", "val4");
     refValue2.setProperty("prop8", "no");
 
-    Date testDate = new Date(30000000);
-
     Object[][] rowObj = {
       {new Integer(123), "row1 string"},
       {dispValue, refValue1},
-      {dispValue, refValue2, testDate},
+      {dispValue, refValue2, new Date(30000000)},
       {new Integer(99960), Collections.EMPTY_LIST},
       {new Integer(99970)},		// sparse row
       {StatusTable.NO_VALUE, "missing value row"}, // elem w/ no value, sorts first
@@ -161,19 +138,6 @@ public class TestXmlStatusTable extends LockssTestCase {
 				       Constants.DEFAULT_ENCODING);
     String exp = StringUtil.fromReader(rdr);
     String actual = wrtr.toString();
-
-    // Note the actual value of dates is locale dependent, and also dependent
-    // on the format. The long ms-since-epoch value will be the same regardless
-    // of locale, but the string date will differ according to locale.
-    cal.setTimeInMillis(testDate.getTime());
-    String localTestDate = DaemonStatus.dateString(cal.getTime());
-    cal.setTimeInMillis(testDate.getTime()+timezoneOffset);
-    String stanfTestDate = DaemonStatus.dateString(cal.getTime());
-    // Solution: preprocess the expected content, changing any string date values
-    String rePre = "<st:value>";
-    String reSuf = "</st:value>";
-    exp = exp.replaceAll(rePre+stanfTestDate+reSuf, rePre+localTestDate+reSuf);
-
     log.debug3("XML output:\n" + actual);
     assertEquals(exp, actual);
   }
@@ -188,10 +152,5 @@ public class TestXmlStatusTable extends LockssTestCase {
 
   public void testCreateTableDocument3() throws Exception {
     testCreateTableDocument(2, "statustest2.xml");
-  }
-
-  static class MyIdentityManager extends IdentityManagerImpl {
-    public void storeIdentities() throws org.lockss.protocol.ProtocolException {
-    }
   }
 }
