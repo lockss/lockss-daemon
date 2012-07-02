@@ -50,7 +50,7 @@ public class TestV3Serializer extends LockssTestCase {
 
   File tempDir;
   String tempDirPath;
-  LockssDaemon theDaemon;
+  MockLockssDaemon theDaemon;
   IdentityManager idManager;
 
   public void setUp() throws Exception {
@@ -104,10 +104,10 @@ public class TestV3Serializer extends LockssTestCase {
     PollerStateBean vsb1 = makePollerStateBean(pollerSerializer);
     pollerSerializer.savePollerState(vsb1);
     PollerStateBean vsb2 = pollerSerializer.loadPollerState();
-    V3TestUtil.assertEqualPollerStateBeans(vsb1, vsb2);
+    V3PollTestUtil.assertEqualPollerStateBeans(vsb1, vsb2);
     pollerSerializer = new V3PollerSerializer(theDaemon, pollDir);
     PollerStateBean vsb3 = pollerSerializer.loadPollerState();
-    V3TestUtil.assertEqualPollerStateBeans(vsb1, vsb3);
+    V3PollTestUtil.assertEqualPollerStateBeans(vsb1, vsb3);
   }
 
 
@@ -119,10 +119,10 @@ public class TestV3Serializer extends LockssTestCase {
     PeerIdentity id = ud1.getVoterId();
     pollerSerializer.savePollerUserData(ud1);
     ParticipantUserData ud2 = pollerSerializer.loadPollerUserData(id);
-    V3TestUtil.assertEqualParticipantUserData(ud1, ud2);
+    V3PollTestUtil.assertEqualParticipantUserData(ud1, ud2);
     pollerSerializer = new V3PollerSerializer(theDaemon, pollDir);
     ParticipantUserData ud3 = pollerSerializer.loadPollerUserData(id);
-    V3TestUtil.assertEqualParticipantUserData(ud1, ud3);
+    V3PollTestUtil.assertEqualParticipantUserData(ud1, ud3);
     PeerIdentity id2 = new MockPeerIdentity("TCP:[192.168.1.1]:9999");
     try {
       pollerSerializer.loadPollerUserData(id2);
@@ -139,10 +139,10 @@ public class TestV3Serializer extends LockssTestCase {
     VoterUserData ud1 = makeVoterUserData(voterSerializer);
     voterSerializer.saveVoterUserData(ud1);
     VoterUserData ud2 = voterSerializer.loadVoterUserData();
-    V3TestUtil.assertEqualVoterUserData(ud1, ud2);
+    V3PollTestUtil.assertEqualVoterUserData(ud1, ud2);
     voterSerializer = new V3VoterSerializer(theDaemon, pollDir);
     VoterUserData ud3 = voterSerializer.loadVoterUserData();
-    V3TestUtil.assertEqualVoterUserData(ud1, ud3);
+    V3PollTestUtil.assertEqualVoterUserData(ud1, ud3);
   }
 
   public void testLoadInnerCircleStates() throws Exception {
@@ -265,7 +265,7 @@ public class TestV3Serializer extends LockssTestCase {
     for(int i = 0 ; i < a.size(); i++) {
       ParticipantUserData ud1 = (ParticipantUserData)la.get(i);
       ParticipantUserData ud2 = (ParticipantUserData)lb.get(i);
-      V3TestUtil.assertEqualParticipantUserData(ud1, ud2);
+      V3PollTestUtil.assertEqualParticipantUserData(ud1, ud2);
     }
   }
 

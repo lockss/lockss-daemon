@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.37 2011-11-08 20:22:26 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.38 2012-07-02 16:27:28 tlipkis Exp $
  */
 
 /*
@@ -112,7 +112,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
   private byte[] peerbuf = new byte[BlockingPeerChannel.MAX_PEERID_LEN];
 
   private MockLockssDaemon daemon;
-  private IdentityManager idmgr;
 
   Properties cprops;			// some tests add more to this and
 					// reconfigure
@@ -158,11 +157,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     cprops.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     cprops.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(cprops);
-    idmgr = new MyIdentityManager();
-    daemon.setIdentityManager(idmgr);
-    idmgr.initService(daemon);
     daemon.setDaemonInited(true);
-//    idmgr.startService();
     setupMessages();
     useInternalSockets(false);
   }
@@ -181,10 +176,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
       } finally {
 	if (intr != null) intr.cancel();
       }
-    }
-    if (idmgr != null) {
-      idmgr.stopService();
-      idmgr = null;
     }
     TimeBase.setReal();
     super.tearDown();
@@ -253,7 +244,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
   PeerIdentity findPeerId(String addr, int port)
       throws IdentityManager.MalformedIdentityKeyException {
     String id = IDUtil.ipAddrToKey(addr, port);
-    return idmgr.findPeerIdentity(id);
+    return V3TestUtils.findPeerIdentity(daemon, id);
   }
 
   /** Create a PeerIdentity for an InternalSocket
@@ -2002,11 +1993,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
     public void handleMessage(PeerMessage msg) {
       log.debug("handleMessage(" + msg + ")");
       queue.put(msg);
-    }
-  }
-
-  static class MyIdentityManager extends IdentityManagerImpl {
-    public void storeIdentities() throws ProtocolException {
     }
   }
 
