@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlockTallier.java,v 1.4 2012-06-25 23:30:10 barry409 Exp $
+ * $Id: TestVoteBlockTallier.java,v 1.5 2012-07-02 16:21:00 tlipkis Exp $
  */
 
 /*
@@ -32,22 +32,62 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
-import org.lockss.protocol.VoteBlock;
+import java.io.*;
+import java.util.*;
+
 import org.lockss.test.*;
+import org.lockss.util.*;
+import org.lockss.config.*;
+import org.lockss.protocol.*;
+import org.lockss.poller.*;
 
 
 public class TestVoteBlockTallier extends LockssTestCase {
+
+  MockLockssDaemon daemon;
   private ParticipantUserData[] testPeers;
+  private File tempDir;
+  String tempDirPath;
+  private byte[] testBytes = ByteArray.makeRandomBytes(20);
 
   public void setUp() throws Exception {
     super.setUp();
+    daemon = getMockLockssDaemon();
+    tempDir = getTempDir();
+    tempDirPath = tempDir.getAbsolutePath();
+    Properties p = new Properties();
+    p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    p.setProperty(V3Poller.PARAM_STATE_PATH, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    IdentityManager idMgr = new V3TestUtils.NoStoreIdentityManager();
+    daemon.setIdentityManager(idMgr);
+    idMgr.initService(daemon);
     setupPeers();
   }
   
-  private void setupPeers() {
+  private void setupPeers() throws Exception {
     testPeers = new ParticipantUserData[10];
-    // todo(bhayes): None of the tests at present actually care about
-    // the actual ParticipantUserData.
+    V3Poller poller = makeV3Poller("pollkey");
+    for (int ix = 1; ix <= testPeers.length; ix++) {
+      String id = String.format("TCP:[127.0.0.%d]:9729", ix);
+      PeerIdentity pid = V3TestUtils.findPeerIdentity(daemon, id);
+      ParticipantUserData ud = new ParticipantUserData(pid, poller, tempDir);
+      testPeers[ix - 1] = ud;
+    }
+  }
+
+  // Minimal poller to satisfy tests
+  private V3Poller makeV3Poller(String key) throws Exception {
+    PollSpec ps =
+      new MockPollSpec(new MockCachedUrlSet(new MockCachedUrlSetSpec()),
+		       null, null, Poll.V3_POLL);
+    return new V3Poller(ps, daemon, null, key, 20000, "SHA-1");
+  }
+
+  VoteBlock makeVoteBlock() {
+    VoteBlock vb = new VoteBlock("foo", VoteBlock.CONTENT_VOTE);
+    vb.addVersion(0, 123, 0, 155, testBytes, testBytes, false);
+    return vb;
   }
 
   public void testConstructPollTally() {
@@ -80,8 +120,10 @@ public class TestVoteBlockTallier extends LockssTestCase {
     voteBlockTallier = new VoteBlockTallier(comparer);
     tally = new BlockTally();
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.vote(null, testPeers[0], 0);
+    voteBlockTallier.vote(makeVoteBlock(), testPeers[0], 0);
     assertEquals("1/0/0/0", tally.votes());
+    assertEquals(286, testPeers[0].getBytesHashed());
+    assertEquals(155, testPeers[0].getBytesRead());
   }
 
   public void testVoteWithBlockTallyPollerDoesntHave() {
@@ -109,8 +151,10 @@ public class TestVoteBlockTallier extends LockssTestCase {
     voteBlockTallier = new VoteBlockTallier();
     tally = new BlockTally();
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.vote(null, testPeers[0], 0);
+    voteBlockTallier.vote(makeVoteBlock(), testPeers[0], 0);
     assertEquals("0/1/0/1", tally.votes());
+    assertEquals(286, testPeers[0].getBytesHashed());
+    assertEquals(155, testPeers[0].getBytesRead());
   }
 
   public void testVoteWithParticipantUserData() {
@@ -128,15 +172,17 @@ public class TestVoteBlockTallier extends LockssTestCase {
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.vote(null, voter, 0);
+    voteBlockTallier.vote(makeVoteBlock(), voter, 0);
     assertEquals("1/0/0/0/0/0", voter.getVoteCounts().votes());
 
     voteBlockTallier = new VoteBlockTallier(comparer);
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.vote(null, voter, 1);
+    voteBlockTallier.vote(makeVoteBlock(), voter, 1);
     assertEquals("0/1/0/0/0/0", voter.getVoteCounts().votes());
+    assertEquals(286, voter.getBytesHashed());
+    assertEquals(155, voter.getBytesRead());
 
     voteBlockTallier = new VoteBlockTallier(comparer);
     voter = new ParticipantUserData();
@@ -144,13 +190,17 @@ public class TestVoteBlockTallier extends LockssTestCase {
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteMissing(voter);
     assertEquals("0/0/1/0/0/0", voter.getVoteCounts().votes());
+    assertEquals(0, voter.getBytesHashed());
+    assertEquals(0, voter.getBytesRead());
 
     voteBlockTallier = new VoteBlockTallier();
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.vote(null, voter, 0);
+    voteBlockTallier.vote(makeVoteBlock(), voter, 0);
     assertEquals("0/0/0/1/0/0", voter.getVoteCounts().votes());
+    assertEquals(286, voter.getBytesHashed());
+    assertEquals(155, voter.getBytesRead());
 
     voteBlockTallier = new VoteBlockTallier(comparer);
     voter = new ParticipantUserData();
@@ -158,5 +208,7 @@ public class TestVoteBlockTallier extends LockssTestCase {
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteSpoiled(voter);
     assertEquals("0/0/0/0/0/1", voter.getVoteCounts().votes());
+    assertEquals(0, voter.getBytesHashed());
+    assertEquals(0, voter.getBytesRead());
   }
 }

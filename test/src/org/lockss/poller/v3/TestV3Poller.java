@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.47 2012-06-25 23:10:22 barry409 Exp $
+ * $Id: TestV3Poller.java,v 1.48 2012-07-02 16:21:00 tlipkis Exp $
  */
 
 /*
@@ -444,6 +444,7 @@ public class TestV3Poller extends LockssTestCase {
     
     block.addVersion(0, content.length(), 
                      0, content.length(), 
+                     digests.length * content.length(), // total bytes hashed
                      digests, TestV3Poller.hbVersionNum++, null);    
   }
   

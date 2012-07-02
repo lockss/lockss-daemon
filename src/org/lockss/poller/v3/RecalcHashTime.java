@@ -1,5 +1,5 @@
 /*
- * $Id: RecalcHashTime.java,v 1.2 2008-05-27 00:51:08 tlipkis Exp $
+ * $Id: RecalcHashTime.java,v 1.3 2012-07-02 16:21:01 tlipkis Exp $
  */
 
 /*
@@ -92,8 +92,9 @@ public class RecalcHashTime {
     byte[][] initBytes = new byte[n][];
     initBytes[0] = new byte[0];
     for (int ix = 1; ix < n; ix++) {
-      initBytes[ix] = ByteArray.concat(PollUtil.makeHashNonce(20),
-				       PollUtil.makeHashNonce(20));
+      initBytes[ix] =
+	ByteArray.concat(PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH),
+			 PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH));
     }
     return initBytes;
   }

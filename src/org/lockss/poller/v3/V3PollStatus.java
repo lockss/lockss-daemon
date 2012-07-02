@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.40 2012-06-25 05:49:51 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.41 2012-07-02 16:21:01 tlipkis Exp $
  */
 
 /*
@@ -598,6 +598,10 @@ public class V3PollStatus {
                                          ColumnDescriptor.TYPE_INT),
                     new ColumnDescriptor("numvoteronly", "Voter-only URLs",
                                          ColumnDescriptor.TYPE_INT),
+                    new ColumnDescriptor("byteshashed", "Bytes Hashed",
+                                         ColumnDescriptor.TYPE_INT),
+                    new ColumnDescriptor("bytesread", "Bytes Read",
+                                         ColumnDescriptor.TYPE_INT),
                     new ColumnDescriptor("state", "PSM State",
                                          ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor("when", "When",
@@ -625,19 +629,23 @@ public class V3PollStatus {
         return;
       }
       if (poll == null) return;
-      table.setColumnDescriptors(colDescs, getDefaultCols(table));
+      table.setColumnDescriptors(colDescs, getDefaultCols(table, poll));
       table.setDefaultSortRules(sortRules);
       table.setSummaryInfo(getSummary(poll, table));
       table.setTitle("Status of Poll " + key);
       table.setRows(getRows(table, poll));
     }
 
-    private List<String> getDefaultCols(StatusTable table) {
+    private List<String> getDefaultCols(StatusTable table, V3Poller poll) {
       boolean includeState =
 	table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       List<String> res = new ArrayList<String>(6);
       res.add("identity");
       res.add("peerStatus");
+      if (poll.isEnableHashStats()) {
+	res.add("byteshashed");
+	res.add("bytesread");
+      }
       if (includeState) {
 	res.add("state");
 	res.add("when");
@@ -673,6 +681,8 @@ public class V3PollStatus {
 	row.put("numdisagree", voteCounts.disagreedVotes);
 	row.put("numpolleronly", voteCounts.pollerOnlyVotes);
 	row.put("numvoteronly", voteCounts.voterOnlyVotes);
+	row.put("byteshashed", voter.getBytesHashed());
+	row.put("bytesread", voter.getBytesRead());
       }
       PsmInterp interp = voter.getPsmInterp();
       if (interp != null) {
@@ -804,6 +814,16 @@ public class V3PollStatus {
                                     new StatusTable.Reference(new Integer(activeRepairs),
                                                               "V3ActiveRepairsTable",
                                                               poll.getKey())));
+        
+      }
+      if (poll.isEnableHashStats()) {
+        summary.add(new SummaryInfo("Bytes Hashed",
+                                    ColumnDescriptor.TYPE_INT,
+                                    poll.getBytesHashed()));
+        
+        summary.add(new SummaryInfo("Bytes Read",
+                                    ColumnDescriptor.TYPE_INT,
+                                    poll.getBytesRead()));
         
       }
       summary.add(new SummaryInfo("Quorum",

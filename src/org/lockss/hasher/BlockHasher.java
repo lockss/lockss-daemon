@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.19 2012-03-19 20:55:12 barry409 Exp $
+ * $Id: BlockHasher.java,v 1.20 2012-07-02 16:21:01 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,7 @@ public class BlockHasher extends GenericHasher {
   CachedUrl curVer;
   int vix = -1;
   private long verBytesRead;
+  private long verBytesHashed;
   InputStream is = null;
   MessageDigest[] peerDigests;
 
@@ -212,6 +213,8 @@ public class BlockHasher extends GenericHasher {
     curVer = cuVersions[vix];
     verBytesRead = 0;
     cloneDigests();
+    // Account for nonce in hash count
+    verBytesHashed = nonceLength();
     try {
       is = getInputStream(curVer);
       return true;
@@ -274,6 +277,7 @@ public class BlockHasher extends GenericHasher {
 	if (bytesRead >= 0) {
 	  int hashed = updateDigests(contentBytes, bytesRead);
 	  bytesHashed += hashed;
+	  verBytesHashed += hashed;
 	  verBytesRead += bytesRead;
 	  remaining -= bytesRead;
 	} else {
@@ -324,6 +328,21 @@ public class BlockHasher extends GenericHasher {
     return len * peerDigests.length;
   }
 
+  private int nonceLength = -1;
+
+  int nonceLength() {
+    if (nonceLength < 0) {
+      int res = 0;
+      for (byte[] nonce : initByteArrays) {
+	if (nonce != null) {
+	  res += nonce.length;
+	}
+      }
+      nonceLength = res;
+    }
+    return nonceLength;
+  }
+
   private void initDigests() {
     for (int ix = 0; ix < initialDigests.length; ix++) {
       byte[] initArr = initByteArrays[ix];
@@ -352,7 +371,8 @@ public class BlockHasher extends GenericHasher {
 
   protected HashBlock.Version endVersion(Throwable hashError) {
     if (hblock != null) {
-      hblock.addVersion(0, curVer.getContentSize(), 0, verBytesRead,
+      hblock.addVersion(0, curVer.getContentSize(),
+			0, verBytesRead, verBytesHashed,
                         peerDigests, curVer.getVersion(), hashError);
       return hblock.lastVersion();
     }

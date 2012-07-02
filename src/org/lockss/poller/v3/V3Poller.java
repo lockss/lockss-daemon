@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.121 2012-06-25 23:10:22 barry409 Exp $
+ * $Id: V3Poller.java,v 1.122 2012-07-02 16:21:01 tlipkis Exp $
  */
 
 /*
@@ -368,6 +368,14 @@ public class V3Poller extends BasePoll {
     PREFIX + "logUniqueVersions";
   public static final boolean DEFAULT_LOG_UNIQUE_VERSIONS = false;
 
+  public static final String PARAM_V3_ENABLE_HASH_STATS =
+    PREFIX + "enableHashStats";
+  public static final boolean DEFAULT_V3_ENABLE_HASH_STATS = false;
+  
+  /** Length of poller and voter challenges */
+  public static final int HASH_NONCE_LENGTH = 20;
+
+
   // Global state for the poll.
   private PollerStateBean pollerState;
   // The order of theParticipants is used in indexing into the Arrays
@@ -416,12 +424,15 @@ public class V3Poller extends BasePoll {
   private Deadline voteTallyStart;
   private Deadline nextInvitationTime;
   private long bytesHashedSinceLastCheckpoint = 0;
+  private long totalBytesHashed = 0;
+  private long totalBytesRead = 0;
   private int voteDeadlineMultiplier = DEFAULT_VOTE_DURATION_MULTIPLIER;
   private boolean enableDiscovery = DEFAULT_ENABLE_DISCOVERY;
   private VoteTallyCallback voteTallyCallback;
   private boolean isAsynch;
   private boolean repairHashAllVersions = DEFAULT_REPAIR_HASH_ALL_VERSIONS;
   private boolean logUniqueVersions = DEFAULT_LOG_UNIQUE_VERSIONS;
+  private boolean enableHashStats = DEFAULT_V3_ENABLE_HASH_STATS;
 
   private long tallyEnd;
 
@@ -578,6 +589,8 @@ public class V3Poller extends BasePoll {
 					 DEFAULT_V3_ENABLE_REPAIR_FROM_CACHE);
     logUniqueVersions = c.getBoolean(PARAM_LOG_UNIQUE_VERSIONS,
 				     DEFAULT_LOG_UNIQUE_VERSIONS);
+    enableHashStats = c.getBoolean(PARAM_V3_ENABLE_HASH_STATS,
+				   DEFAULT_V3_ENABLE_HASH_STATS);
   }
 
   PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {
@@ -1009,7 +1022,7 @@ public class V3Poller extends BasePoll {
   private ParticipantUserData makeParticipant(final PeerIdentity id) {
     final ParticipantUserData participant =
       new ParticipantUserData(id, this, stateDir);
-    participant.setPollerNonce(PollUtil.makeHashNonce(20));
+    participant.setPollerNonce(PollUtil.makeHashNonce(HASH_NONCE_LENGTH));
     PsmMachine machine = makeMachine();
     PsmInterp interp = newPsmInterp(machine, participant);
     interp.setCheckpointer(new PsmInterp.Checkpointer() {
@@ -1105,11 +1118,14 @@ public class V3Poller extends BasePoll {
       }
     }
 
+    totalBytesHashed += hashBlock.getTotalHashedBytes();
+    totalBytesRead += hashBlock.getTotalUnfilteredBytes();
+
     tallyVoterUrls(pollerUrl);
     BlockTally tally = tallyPollerUrl(pollerUrl, hashBlock);
 
     // Check to see if it's time to checkpoint the poll.
-    bytesHashedSinceLastCheckpoint += hashBlock.getTotalFilteredBytes();
+    bytesHashedSinceLastCheckpoint += hashBlock.getTotalHashedBytes();
     if (bytesHashedSinceLastCheckpoint >= this.hashBytesBeforeCheckpoint) {
       checkpointPoll();
     }
@@ -2530,6 +2546,10 @@ public class V3Poller extends BasePoll {
     return null;
   }
 
+  public boolean isEnableHashStats() {
+    return enableHashStats;
+  }
+
   /**
    * Not used by V3
    */
@@ -2745,6 +2765,16 @@ public class V3Poller extends BasePoll {
   public Map<String,String> getErrorUrls() {
     return pollerState.getTallyStatus().getErrorUrls();
   }
+
+  public long getBytesHashed() {
+    return totalBytesHashed;
+  }
+  
+  public long getBytesRead() {
+    return totalBytesRead;
+  }
+  
+
 
   /**
    * Release members not used after the poll has been closed.

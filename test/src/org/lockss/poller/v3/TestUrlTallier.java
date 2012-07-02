@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.8 2012-06-25 23:10:22 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.9 2012-07-02 16:21:01 tlipkis Exp $
  */
 
 /*
@@ -147,10 +147,7 @@ public class TestUrlTallier extends LockssTestCase {
   }
 
   PeerIdentity findPeerIdentity(String key) throws Exception {
-    PeerIdentity pid = idMgr.findPeerIdentity(key);
-    // hack to ensure it's created
-    idMgr.findLcapIdentity(pid, pid.getIdString());
-    return pid;
+    return V3TestUtils.findPeerIdentity(theDaemon, key);
   }
 
   private PeerIdentity[] makeVoters(List keys) throws Exception {
@@ -590,7 +587,8 @@ public class TestUrlTallier extends LockssTestCase {
     digests[4].update(content.getBytes());
     
     block.addVersion(0, content.length(), 
-                     0, content.length(), 
+                     0, content.length(),
+		     digests.length * content.length(), // total bytes hashed
                      digests, hbVersionNum++, null);    
   }
   

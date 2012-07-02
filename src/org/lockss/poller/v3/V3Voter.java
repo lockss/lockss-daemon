@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.70 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.71 2012-07-02 16:21:01 tlipkis Exp $
  */
 
 /*
@@ -285,7 +285,7 @@ public class V3Voter extends BasePoll {
                                              duration,
                                              msg.getHashAlgorithm(),
                                              msg.getPollerNonce(),
-                                             PollUtil.makeHashNonce(20),
+                                             PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH),
                                              msg.getEffortProof(),
                                              stateDir);
       voterUserData.setPollMessage(msg);

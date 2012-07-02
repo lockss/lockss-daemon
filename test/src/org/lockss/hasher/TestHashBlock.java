@@ -19,13 +19,23 @@ public class TestHashBlock extends LockssTestCase {
     digests[0] = MessageDigest.getInstance("MD5");
     digests[0].update(input.getBytes());
     
-    block.addVersion(0, 100, 0, 100, digests, versionNum, null);    
+    block.addVersion(0, 100, 0, 100, 200, digests, versionNum, null);    
   }
   
   private void addVersion(HashBlock block, int versionNum) throws Exception {
     addVersion(block, versionNum, "foobarbazquux");
   }
 
+  public void testByteCount() throws Exception {
+    HashBlock block = makeHashBlock();
+    addVersion(block, 1);
+    addVersion(block, 2);
+    addVersion(block, 3);
+
+    assertEquals(600, block.getTotalHashedBytes());
+    assertEquals(300, block.getTotalFilteredBytes());
+  }
+  
   public void testArraySortOrder() throws Exception {
     HashBlock block = makeHashBlock();
     addVersion(block, 100);

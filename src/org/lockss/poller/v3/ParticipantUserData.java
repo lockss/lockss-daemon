@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.28 2012-06-25 23:10:22 barry409 Exp $
+ * $Id: ParticipantUserData.java,v 1.29 2012-07-02 16:21:01 tlipkis Exp $
  */
 
 /*
@@ -155,6 +155,8 @@ public class ParticipantUserData implements LockssSerializable {
   private int status = V3Poller.PEER_STATUS_INITIALIZED;
   private String statusMsg = null;
   private VoteCounts voteCounts = new VoteCounts();
+  private long bytesHashed;
+  private long bytesRead;
   /** The poll NAK code, if any */
   private PollNak pollNak;
 
@@ -323,6 +325,25 @@ public class ParticipantUserData implements LockssSerializable {
 
   public VoteBlocks getVoteBlocks() {
     return voteBlocks;
+  }
+
+  public void addHashStats(VoteBlock vb) {
+    for (VoteBlock.Version ver : vb.getVersions()) {
+      // Voter hashed the filtered content twice (plain & nonced), plus the
+      // poller nonce plus voter nonce.  Replace this if/when hash count
+      // included in VoteBlock.
+      bytesHashed +=
+	2 * ver.getFilteredLength() + 2 * V3Poller.HASH_NONCE_LENGTH;
+      bytesRead += ver.getUnfilteredLength();
+    }
+  }
+
+  public long getBytesHashed() {
+    return bytesHashed;
+  }
+
+  public long getBytesRead() {
+    return bytesRead;
   }
 
   /**
