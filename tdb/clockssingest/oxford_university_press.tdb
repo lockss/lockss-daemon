@@ -365,9 +365,23 @@
         eissn = 1937-5239 ;
         issnl = 0002-8762
       >
+      
+    {
 
-    comment[coming_soon] = Transferring from Chicago University Press July 2012
-
+    param[base_url] = http://ahr.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    au < exists ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 ; >
+    au < exists ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 ; >
+    au < exists ; exists ; 2007 ; The American Historical Review Volume 112 ; 112 ; >
+    au < exists ; exists ; 2008 ; The American Historical Review Volume 113 ; 113 ; >
+    au < exists ; exists ; 2009 ; The American Historical Review Volume 114 ; 114 ; >
+    au < exists ; exists ; 2010 ; The American Historical Review Volume 115 ; 115 ; >
+    au < exists ; exists ; 2011 ; The American Historical Review Volume 116 ; 116 ; >
+    au < exists ; exists ; 2012 ; The American Historical Review Volume 117 ; 117 ; >
+    
+    }
+    
   }
 
   {
