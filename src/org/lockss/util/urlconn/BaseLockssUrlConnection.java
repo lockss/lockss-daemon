@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssUrlConnection.java,v 1.12 2011-03-06 00:12:34 tlipkis Exp $
+ * $Id: BaseLockssUrlConnection.java,v 1.13 2012-07-02 16:25:28 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -118,14 +118,6 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
     throw new UnsupportedOperationException();
   }
 
-  // Preferred date format according to RFC 2068(HTTP1.1),
-  // RFC 822 and RFC 1123
-  public static final SimpleDateFormat GMT_DATE_FORMAT =
-    new SimpleDateFormat ("EEE, dd MMM yyyy HH:mm:ss 'GMT'");
-  static {
-    GMT_DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
-  }
-
   public void setUserAgent(String value) {
     setRequestProperty("user-agent", value);
   }
@@ -133,7 +125,7 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
   public void setRequestPropertyDate(String key, long time) {
     assertNotExecuted();
     Date date = new Date(time);
-    setRequestProperty(key, GMT_DATE_FORMAT.format(date));
+    setRequestProperty(key, DateTimeUtil.GMT_DATE_FORMATTER.format(date));
   }
 
   public void addRequestProperty(String key, String value) {

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.90 2012-04-03 18:54:54 akanshab01 Exp $
+ * $Id: BaseUrlCacher.java,v 1.91 2012-07-02 16:25:28 tlipkis Exp $
  */
 
 /*
@@ -79,14 +79,6 @@ public class BaseUrlCacher implements UrlCacher {
 
   /** Maximum number of redirects that will be followed */
   static final int MAX_REDIRECTS = 10;
-
-  // Preferred date format according to RFC 2068(HTTP1.1),
-  // RFC 822 and RFC 1123
-  public static final SimpleDateFormat GMT_DATE_FORMAT =
-    new SimpleDateFormat ("EEE, dd MMM yyyy HH:mm:ss 'GMT'");
-  static {
-    GMT_DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
-  }
 
   protected final ArchivalUnit au;
   protected final String origUrl;		// URL with which I was created

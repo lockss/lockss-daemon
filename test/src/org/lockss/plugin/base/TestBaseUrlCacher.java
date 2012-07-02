@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.67 2012-01-18 03:40:41 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.68 2012-07-02 16:25:27 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.util.urlconn.*;
 import org.lockss.repository.*;
 import org.lockss.crawler.*;
 import org.lockss.config.*;
+import static org.lockss.util.DateTimeUtil.GMT_DATE_FORMATTER;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher
@@ -60,7 +61,11 @@ public class TestBaseUrlCacher extends LockssTestCase {
   private static final int CLEAR_DAMAGE_FLAG = 1;
   private static final int REFETCH_IF_DAMAGE_FLAG = 2;
 
-  static DateFormat GMT_DATE_FORMAT = BaseUrlCacher.GMT_DATE_FORMAT;
+  private static final SimpleDateFormat GMT_DATE_PARSER =
+    new SimpleDateFormat ("EEE, dd MMM yyyy HH:mm:ss 'GMT'");
+  static {
+    GMT_DATE_PARSER.setTimeZone(TimeZone.getTimeZone("GMT"));
+  }
 
   MyMockBaseUrlCacher cacher;
   MockCachedUrlSet mcus;
@@ -165,8 +170,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
   public void testLastModifiedCache() throws IOException {
     // add the 'cached' version
     CIProperties cachedProps = new CIProperties();
-    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED, GMT_DATE_FORMAT
-        .format(new Date(12345)));
+    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
+			    GMT_DATE_FORMATTER.format(new Date(12345)));
     // mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
     mau.addUrl(TEST_URL, true, true, cachedProps);
 
@@ -191,8 +196,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
   public void testForceCache() throws IOException {
     // add the 'cached' version
     CIProperties cachedProps = new CIProperties();
-    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED, GMT_DATE_FORMAT
-        .format(new Date(12345)));
+    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
+			    GMT_DATE_FORMATTER.format(new Date(12345)));
     // mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
     mau.addUrl(TEST_URL, true, true, cachedProps);
 
@@ -251,8 +256,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     nodeMgr.setDamagedNodes(dnSet);
 
     CIProperties cachedProps = new CIProperties();
-    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED, GMT_DATE_FORMAT
-        .format(new Date(12345)));
+    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
+			    GMT_DATE_FORMATTER.format(new Date(12345)));
     mau.addUrl(TEST_URL, true, true, cachedProps);
 
     TimeBase.setSimulated(10000);
@@ -557,8 +562,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
       new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
     CIProperties cuprops = new CIProperties();
 
-    cuprops.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED, GMT_DATE_FORMAT
-        .format(new Date(12345000)));
+    cuprops.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
+			GMT_DATE_FORMATTER.format(new Date(12345000)));
 
     mau.addUrl(TEST_URL, true, true, cuprops);
     return muc;
@@ -1143,8 +1148,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
     // add the 'cached' version
     CIProperties cachedProps = new CIProperties();
-    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED, GMT_DATE_FORMAT
-        .format(new Date(12345)));
+    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
+			    GMT_DATE_FORMATTER.format(new Date(12345)));
     // mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
     mau.addUrl(TEST_URL, true, true, cachedProps);
 
@@ -1408,7 +1413,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
 	      long last = -1;
 	      if (ifMod != null) {
 		try {
-		  last = BaseUrlCacher.GMT_DATE_FORMAT.parse(ifMod).getTime();
+		  last = GMT_DATE_PARSER.parse(ifMod).getTime();
 		} catch (ParseException e) {
 		}
 	      }

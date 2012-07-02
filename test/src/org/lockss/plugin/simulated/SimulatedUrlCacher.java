@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.28 2012-02-16 10:41:08 tlipkis Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.29 2012-07-02 16:25:27 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.test.StringInputStream;
+import static org.lockss.util.DateTimeUtil.GMT_DATE_FORMATTER;
 
 /**
  * This is the UrlCacher object for the SimulatedPlugin
@@ -55,6 +56,12 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
   private CIProperties props = null;
   private SimulatedContentGenerator scgen = null;
   private Properties addProps = null;
+
+  private static final SimpleDateFormat GMT_DATE_PARSER =
+    new SimpleDateFormat ("EEE, dd MMM yyyy HH:mm:ss 'GMT'");
+  static {
+    GMT_DATE_PARSER.setTimeZone(TimeZone.getTimeZone("GMT"));
+  }
 
   public SimulatedUrlCacher(ArchivalUnit owner, String url, String contentRoot) {
     super(owner, url);
@@ -130,9 +137,10 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
       throws IOException {
     if (lastModified != null) {
       try {
-	long lastCached = GMT_DATE_FORMAT.parse(lastModified).getTime();
+	long lastCached = GMT_DATE_PARSER.parse(lastModified).getTime();
 	if ((file.lastModified() <= lastCached) && !toBeDamaged()) {
-	  logger.debug3("Last-Modified: " + lastModified + " <= " + GMT_DATE_FORMAT.format(file.lastModified()));
+	  logger.debug3("Last-Modified: " + lastModified + " <= " +
+			GMT_DATE_FORMATTER.format(file.lastModified()));
 	  return null;
 	}
       } catch (ParseException e) {}
@@ -168,7 +176,7 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
     // set last-modified to the file's write date
     Date date = new Date(getContentFile().lastModified());
     props.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
-		      GMT_DATE_FORMAT.format(date));
+		      GMT_DATE_FORMATTER.format(date));
     if (addProps != null) {
       props.putAll(addProps);
       addProps = null;

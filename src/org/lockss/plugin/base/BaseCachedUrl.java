@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.46 2012-03-12 05:22:44 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.47 2012-07-02 16:25:28 tlipkis Exp $
  */
 
 /*
@@ -464,7 +464,7 @@ public class BaseCachedUrl implements CachedUrl {
 	long lastMod = membtf.lastModified();
 	if (lastMod > 0) {
 	  res.put(CachedUrl.PROPERTY_LAST_MODIFIED,
-		  BaseUrlCacher.GMT_DATE_FORMAT.format(new Date(lastMod)));
+		  DateTimeUtil.GMT_DATE_FORMATTER.format(new Date(lastMod)));
 	}
       } catch (IOException e) {
 	logger.warning("Couldn't get member Last-Modified", e);

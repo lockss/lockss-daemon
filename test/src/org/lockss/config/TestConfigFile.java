@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigFile.java,v 1.12 2010-12-20 23:44:39 tlipkis Exp $
+ * $Id: TestConfigFile.java,v 1.13 2012-07-02 16:25:27 tlipkis Exp $
  */
 
 /*
@@ -189,7 +189,7 @@ public abstract class TestConfigFile extends LockssTestCase {
 
   static String dateString(long time) {
     Date date = new Date(time);
-    return BaseLockssUrlConnection.GMT_DATE_FORMAT.format(date);
+    return DateTimeUtil.GMT_DATE_FORMATTER.format(date);
   }
 
   protected String suff(boolean isXml) {
