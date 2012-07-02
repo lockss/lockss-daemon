@@ -1,5 +1,5 @@
 /*
- * $Id: V3TestUtils.java,v 1.6 2010-11-29 07:26:41 tlipkis Exp $
+ * $Id: V3TestUtils.java,v 1.7 2012-07-02 16:27:50 tlipkis Exp $
  */
 
 /*
@@ -35,9 +35,38 @@ package org.lockss.protocol;
 import java.security.MessageDigest;
 import java.util.*;
 
+import org.lockss.app.*;
+import org.lockss.protocol.*;
+import org.lockss.test.*;
 import org.lockss.util.*;
 
 public class V3TestUtils {
+
+  public static class NoStoreIdentityManager extends IdentityManagerImpl {
+    @Override
+    public void storeIdentities() {
+    }
+
+    @Override
+    protected void setupLocalIdentities() {
+    }
+  }
+
+  public static PeerIdentity findPeerIdentity(MockLockssDaemon daemon,
+					      String id)
+      throws IdentityManager.MalformedIdentityKeyException {
+    IdentityManager idMgr;
+    if (daemon.hasIdentityManager()) {
+      idMgr = daemon.getIdentityManager();
+    } else {
+      idMgr = new NoStoreIdentityManager();
+      daemon.setIdentityManager(idMgr);
+      idMgr.initService(daemon);
+//       idMgr.startService();
+    }
+    return idMgr.findPeerIdentity(id);
+  }
+
   public static List<VoteBlock> makeVoteBlockList(int count) {
     ArrayList<VoteBlock> vbList = new ArrayList<VoteBlock>();
     for (int ix = 0; ix < count; ix++) {

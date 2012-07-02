@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.69 2012-05-17 18:04:54 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.70 2012-07-02 16:27:50 tlipkis Exp $
  */
 
 /*
@@ -487,6 +487,10 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
     }
     return identityManager;
+  }
+
+  public boolean hasIdentityManager() {
+    return identityManager != null;
   }
 
   public StatusService getStatusService() {
