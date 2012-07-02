@@ -1,5 +1,5 @@
 /*
- * $Id: TestGPOFDSysHtmlFilterFactory.java,v 1.3 2012-03-27 18:46:41 davidecorcoran Exp $
+ * $Id: TestGPOFDSysHtmlFilterFactory.java,v 1.4 2012-07-02 20:29:29 davidecorcoran Exp $
  */
 
 /*
@@ -51,36 +51,46 @@ public class TestGPOFDSysHtmlFilterFactory extends LockssTestCase {
   }
 
   private static final String inst1 = 
-      "<a href=\"search/notificationPage.action?emailBody=" +
-      "http%3A%2F%2Fwww.gpo.gov%3A80%2Ffdsys%2Fgranule%2" +
-      "FWCPD-2005-01-03%2FWCPD-2005-01-03-Pg3017-2%2Fcontent-detail.html" +
-      "%3Fnull\">Email a link to this page</a>" +
+    "<a href=\"search/notificationPage.action?emailBody=" +
+    "http%3A%2F%2Fwww.gpo.gov%3A80%2Ffdsys%2Fgranule%2" +
+    "FWCPD-2005-01-03%2FWCPD-2005-01-03-Pg3017-2%2Fcontent-detail.html" +
+    "%3Fnull\">Email a link to this page</a>" +
       
-      "<script type=\"text/javascript\">" +
-	  "var WT_SERVER = '162.140.239.17';" +
+    "<script type=\"text/javascript\">" +
+	  "var WT_SERVER = '192.168.0.1';" +
 	  "var WT_DCS_ID = 'dcsjsw8h600000gotf0vyrmly_2j7v';" +
 	  "var WT_HOST_SERVER_NAME = 'http://www.gpo.gov/fdsys';" +
 	  "var BASE_PRESENTATION_PATH = 'http://www.gpo.gov/fdsys/';" +
 	  "var BASE_USER_HELP = 'http://www.gpo.gov/help/';" +
 	  "var SEARCHWEBAPP_BUILD = 'CM_INT_R2_20';" +
 	  "var coopValue='';" +
-	  "</script>";
+	  "</script>" +
+	  
+	  "<form id=\"searchresults\" onsubmit=\"return true;\" " +
+	  "action=\"/fdsys/search/searchresults.action;" +
+	  "jsessionid=1234567890y73BjvBVQGJnhgsNy2Sb0FTQ5XpnRpJ2Hl40yCFhHj!1229" +
+	  "324444!-1220217765\" method=\"get\" class=\"inline\">"; 
   
   private static final String inst2 =
-	  "<a href=\"search/notificationPage.action?emailBody=" +
-      "http%3A%2F%2Fwww.gpo.gov%3A80%2Ffdsys%2Fpkg%2" +
-      "FERIC-ED465240%2Fcontent-detail.html%3Fnull\">" +
-      "Email a link to this page</a>" +
+    "<a href=\"search/notificationPage.action?emailBody=" +
+    "http%3A%2F%2Fwww.gpo.gov%3A80%2Ffdsys%2Fpkg%2" +
+    "FERIC-ED465240%2Fcontent-detail.html%3Fnull\">" +
+    "Email a link to this page</a>" +
       
-      "<script type=\"text/javascript\">" +
-	  "var WT_SERVER = '162.140.239.17';" +
+    "<script type=\"text/javascript\">" +
+	  "var WT_SERVER = '192.168.0.1';" +
 	  "var WT_DCS_ID = 'dcsjsw8h600000gotf0vyrmly_2j7v';" +
 	  "var WT_HOST_SERVER_NAME = 'http://www.gpo.gov/fdsys';" +
 	  "var BASE_PRESENTATION_PATH = 'http://www.gpo.gov/fdsys/';" +
 	  "var BASE_USER_HELP = 'http://www.gpo.gov/help/';" +
 	  "var SEARCHWEBAPP_BUILD = 'CM_INT_R2_23';" +
 	  "var coopValue='';" +
-	  "</script>";	  
+	  "</script>" +
+	  
+	  "<form id=\"searchresults\" onsubmit=\"return true;\" " +
+    "action=\"/fdsys/search/searchresults.action;" +
+    "jsessionid=abcdefghijX9PY210xSMPk0HmqHPMJkbMTyGMb18N00QKbLT8g5t!1884" +
+    "944162!1999305086\" method=\"get\" class=\"inline\">"; 
 
   public void testFiltering() throws PluginException, IOException {
     InputStream inA;

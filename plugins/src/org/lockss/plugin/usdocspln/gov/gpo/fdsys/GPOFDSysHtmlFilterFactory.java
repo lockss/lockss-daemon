@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysHtmlFilterFactory.java,v 1.3 2012-03-27 18:46:41 davidecorcoran Exp $
+ * $Id: GPOFDSysHtmlFilterFactory.java,v 1.4 2012-07-02 20:29:29 davidecorcoran Exp $
  */
 
 /*
@@ -57,7 +57,9 @@ public InputStream createFilteredInputStream(ArchivalUnit au,
   // Filters the "Email a link to this page" link
   HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^search.notificationPage\\.action\\?emailBody="),
   // Filters all embedded JavaScript
-  HtmlNodeFilters.tagWithAttribute("script", "type", "text/javascript")
+  HtmlNodeFilters.tagWithAttribute("script", "type", "text/javascript"),
+  // Filters session ID from search results
+  HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid=")
   };
 
   OrFilter combinedFilter = new OrFilter(filters);
