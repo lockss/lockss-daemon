@@ -16,6 +16,11 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://www.clinchem.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+      
+      au < HighWireStrVolPlugin ; down ; 2005 ; Clinical Chemistry Volume 51 ; 51 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Clinical Chemistry Volume 52 ; 52 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Clinical Chemistry Volume 53 ; 53 >
+      
 
       au < HighWirePressPlugin ; exists ; 1955 ; Clinical Chemistry Volume 1 ; 1 >
       au < HighWirePressPlugin ; exists ; 1956 ; Clinical Chemistry Volume 2 ; 2 >
@@ -67,9 +72,9 @@
       au < HighWirePressPlugin ; exists ; 2002 ; Clinical Chemistry Volume 48 ; 48 >
       au < HighWirePressPlugin ; exists ; 2003 ; Clinical Chemistry Volume 49 ; 49 >
       au < HighWirePressPlugin ; exists ; 2004 ; Clinical Chemistry Volume 50 ; 50 >
-      au < HighWireStrVolPlugin ; released ; 2005 ; Clinical Chemistry Volume 51 ; 51 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Clinical Chemistry Volume 52 ; 52 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; Clinical Chemistry Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; exists ; 2005 ; Clinical Chemistry Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; exists ; 2006 ; Clinical Chemistry Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; exists ; 2007 ; Clinical Chemistry Volume 53 ; 53 >
       au < HighWirePressPlugin ; testing ; 2008 ; Clinical Chemistry Volume 54 ; 54 >
       au < HighWirePressPlugin ; testing ; 2009 ; Clinical Chemistry Volume 55 ; 55 >
       au < HighWirePressPlugin ; testing ; 2010 ; Clinical Chemistry Volume 56 ; 56 >
