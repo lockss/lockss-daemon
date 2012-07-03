@@ -46,12 +46,12 @@ public class TestUbiquityPressHtmlFilterFactory extends LockssTestCase {
   //HtmlNodeFilters.tagWithAttribute("div", "id", "rightSidebar"),
   
   private static final String sidebarHtml =
-		 "<div id='rightSidebar'></div>";
+		 "<div id=\"rightSidebar\"></div>";
   private static final String sidebarHtmlFiltered =
   		 "";
   
   private static final String sideStuffBarHtml =
-		 "<div id='rightSidebar'><p align='center' class='ads'><a href='www.ads.org/'><img src='ads.gif'/></a></p></div>";
+		 "<div id=\"rightSidebar\"><p align=\"center\" class=\"ads\"><a href=\"www.ads.org/\"><img src=\"ads.gif\"/></a></p></div>";
   private static final String sideStuffBarHtmlFiltered =
 	  	 "";
 

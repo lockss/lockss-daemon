@@ -63,36 +63,36 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
   //and the expected post filter HTML strings.
   
   private static final String scriptHtml =
-		 "<script type='text/javascript'></script";
+		 "<script type=\"text/javascript\"></script";
   private static final String scriptHtmlFiltered =
   		 "";
   
   private static final String stuffScriptHtml =
 		 "<body>" +
-		 "<div id='footer'>" +
+		 "<div id=\"footer\">" +
 		 "</div>" +
-		 "<script type='text/javascript'></script>" +
+		 "<script type=\"text/javascript\"></script>" +
 		 "</body>";
   private static final String stuffScriptHtmlFiltered =
 	  	 "<body>" +
-		 "<div id='footer'>" +
+		 "<div id=\"footer\">" +
 		 "</div>" +
 		 "</body>";
   
   private static final String stuffScriptStuffHtml =
-		  "<header> 'Stuff' </header>" +
-          "<img scr= 'http://images.jpg'/>" +
-          "<script type='text/javascript'></script>" +
-          "<div class='logo'></div>" +
-          "<a href='/' id='ctl00_logourl'></a>" +
-          "<script type='text/javascript'></script>" +
-          "<div id='footer'></div>";	  
+		  "<header> \"Stuff\" </header>" +
+          "<img scr= \"http://images.jpg\"/>" +
+          "<script type=\"text/javascript\"></script>" +
+          "<div class=\"logo\"></div>" +
+          "<a href=\"/\" id=\"ctl00_logourl\"></a>" +
+          "<script type=\"text/javascript\"></script>" +
+          "<div id=\"footer\"></div>";	  
   private static final String stuffScriptStuffHtmlFiltered =
-		  "<header> 'Stuff' </header>" +
-		  "<img scr= 'http://images.jpg'/>" +
-		  "<div class='logo'></div>" +
-          "<a href='/' id='ctl00_logourl'></a>" +	  
-		  "<div id='footer'></div>";
+		  "<header> \"Stuff\" </header>" +
+		  "<img scr= \"http://images.jpg\"/>" +
+		  "<div class=\"logo\"></div>" +
+          "<a href=\"/\" id=\"ctl00_logourl\"></a>" +	  
+		  "<div id=\"footer\"></div>";
   
   private static final String leftColumnHtml =
 		"<div class=\"left_column\"><div id=\"left_column\" class=\"InnerRight\">\n" +

@@ -51,19 +51,19 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
   //HtmlNodeFilters.tagWithAttribute("div", "id", "custom"),
   
   private static final String sidebarKeywordCloudHtml =
-		 "<div class='block' id='sidebarUser'><div id='sidebarKeywordCloud'></div></div>";
+		 "<div class=\"block\" id=\"sidebarUser\"><div id=\"sidebarKeywordCloud\"></div></div>";
   private static final String sidebarKeywordCloudHtmlFiltered =
-  		 "<div class='block' id='sidebarUser'></div>";
+  		 "<div class=\"block\" id=\"sidebarUser\"></div>";
   
   private static final String sidebarSubscriptionHtml =
-		 "<div id='sidebarSubscription'><a class='blockTitle' href='http://pkp.sfu.ca/ojs/' id='developedBy'>Open Journal Systems</a></div>";
+		 "<div id=\"sidebarSubscription\"><a class=\"blockTitle\" href=\"http://pkp.sfu.ca/ojs/\" id=\"developedBy\">Open Journal Systems</a></div>";
   private static final String sidebarSubscriptionHtmlFiltered =
 	  	 "";
   
   private static final String customHtml =
-			 "<div id='header'><div id='custom'></div></div>";
+			 "<div id=\"header\"><div id=\"custom\"></div></div>";
   private static final String customHtmlFiltered =
-	  		 "<div id='header'></div>";
+	  		 "<div id=\"header\"></div>";
 
   
   public void testSidebarKeywordCloudFiltering() throws Exception {
