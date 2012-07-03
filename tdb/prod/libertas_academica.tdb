@@ -1150,11 +1150,11 @@
 
     param[journal_id] = 131
     
-    au < manifest ; 2008 ; Journal of Experimental Neuroscience Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Journal of Experimental Neuroscience Volume 2-3 ; 2009 >
-    au < manifest ; 2010 ; Journal of Experimental Neuroscience Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Journal of Experimental Neuroscience Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Journal of Experimental Neuroscience Volume 6 ; 2012 >
+    au < testing ; 2008 ; Journal of Experimental Neuroscience Volume 1 ; 2008 >
+    au < testing ; 2009 ; Journal of Experimental Neuroscience Volume 2-3 ; 2009 >
+    au < testing ; 2010 ; Journal of Experimental Neuroscience Volume 4 ; 2010 >
+    au < testing ; 2011 ; Journal of Experimental Neuroscience Volume 5 ; 2011 >
+    au < testing ; 2012 ; Journal of Experimental Neuroscience Volume 6 ; 2012 >
 
 
   }
@@ -1173,7 +1173,7 @@
     
     au < notReady ; 2010 ; Journal of Genomics and Exomics Volume 1 ; 2010 >
     au < notReady ; 2011 ; Journal of Genomics and Exomics Volume 2 ; 2011 >
-    au < manifest ; 2012 ; Journal of Genomics and Exomics Volume 3 ; 2012 >
+    au < testing ; 2012 ; Journal of Genomics and Exomics Volume 3 ; 2012 >
 
 
   }
@@ -1188,10 +1188,10 @@
 
     param[journal_id] = 109
     
-    au < manifest ; 2008 ; Lipid Insights Volume 1-2 ; 2008 >
-    au < manifest ; 2010 ; Lipid Insights Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Lipid Insights Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Lipid Insights Volume 5 ; 2012 >
+    au < testing ; 2008 ; Lipid Insights Volume 1-2 ; 2008 >
+    au < testing ; 2010 ; Lipid Insights Volume 3 ; 2010 >
+    au < testing ; 2011 ; Lipid Insights Volume 4 ; 2011 >
+    au < testing ; 2012 ; Lipid Insights Volume 5 ; 2012 >
 
 
   }
@@ -1206,8 +1206,8 @@
     
     param[journal_id] = 147
 
-    au < manifest ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2010 >
+    au < testing ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 2009 >
+    au < testing ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2010 >
 
   }
   
@@ -1221,10 +1221,10 @@
 
     param[journal_id] = 115
 
-    au < manifest ; 2008 ; Magnetic Resonance Insights Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Magnetic Resonance Insights Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Magnetic Resonance Insights Volume 4 ; 2010 >
-    au < manifest ; 2012 ; Magnetic Resonance Insights Volume 5 ; 2012 >
+    au < testing ; 2008 ; Magnetic Resonance Insights Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Magnetic Resonance Insights Volume 3 ; 2009 >
+    au < testing ; 2010 ; Magnetic Resonance Insights Volume 4 ; 2010 >
+    au < testing ; 2012 ; Magnetic Resonance Insights Volume 5 ; 2012 >
     
 
   }
@@ -1239,10 +1239,10 @@
 
     param[journal_id] = 98
 
-    au < manifest ; 2008 ; Medical Equipment Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Medical Equipment Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Medical Equipment Insights Volume 3 ; 2010 >
-    au < manifest ; 2012 ; Medical Equipment Insights Volume 4 ; 2012 >
+    au < testing ; 2008 ; Medical Equipment Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Medical Equipment Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Medical Equipment Insights Volume 3 ; 2010 >
+    au < testing ; 2012 ; Medical Equipment Insights Volume 4 ; 2012 >
     
   }
   
@@ -1256,10 +1256,10 @@
 
     param[journal_id] = 108
 
-    au < manifest ; 2008 ; Microbiology Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Microbiology Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Microbiology Insights Volume 3 ; 2010 >
-    au < manifest ; 2012 ; Microbiology Insights Volume 4 ; 2012 >
+    au < testing ; 2008 ; Microbiology Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Microbiology Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Microbiology Insights Volume 3 ; 2010 >
+    au < testing ; 2012 ; Microbiology Insights Volume 4 ; 2012 >
   }     
   
   {
@@ -1272,10 +1272,10 @@
 
     param[journal_id] = 101
 
-    au < manifest ; 2008 ; Nutrition and Metabolic Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Nutrition and Metabolic Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Nutrition and Metabolic Insights Volume 3 ; 2010 >
-    au < manifest ; 2012 ; Nutrition and Metabolic Insights Volume 4 ; 2012 >
+    au < testing ; 2008 ; Nutrition and Metabolic Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Nutrition and Metabolic Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Nutrition and Metabolic Insights Volume 3 ; 2010 >
+    au < testing ; 2012 ; Nutrition and Metabolic Insights Volume 4 ; 2012 >
   }
   
   {
@@ -1288,11 +1288,11 @@
 
     param[journal_id] = 123
 
-    au < manifest ; 2008 ; Open Journal of Cardiovascular Surgery Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Open Journal of Cardiovascular Surgery Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Open Journal of Cardiovascular Surgery Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Open Journal of Cardiovascular Surgery Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Open Journal of Cardiovascular Surgery Volume 5 ; 2012 >
+    au < testing ; 2008 ; Open Journal of Cardiovascular Surgery Volume 1 ; 2008 >
+    au < testing ; 2009 ; Open Journal of Cardiovascular Surgery Volume 2 ; 2009 >
+    au < testing ; 2010 ; Open Journal of Cardiovascular Surgery Volume 3 ; 2010 >
+    au < testing ; 2011 ; Open Journal of Cardiovascular Surgery Volume 4 ; 2011 >
+    au < testing ; 2012 ; Open Journal of Cardiovascular Surgery Volume 5 ; 2012 >
 
   }
   
@@ -1306,10 +1306,10 @@
 
     param[journal_id] = 146
 
-    au < manifest ; 2009 ; Ophthalmology and Eye Diseases Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Ophthalmology and Eye Diseases Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Ophthalmology and Eye Diseases Volume 3 ; 2011 >
-    au < manifest ; 2012 ; Ophthalmology and Eye Diseases Volume 4 ; 2012 >
+    au < testing ; 2009 ; Ophthalmology and Eye Diseases Volume 1 ; 2009 >
+    au < testing ; 2010 ; Ophthalmology and Eye Diseases Volume 2 ; 2010 >
+    au < testing ; 2011 ; Ophthalmology and Eye Diseases Volume 3 ; 2011 >
+    au < testing ; 2012 ; Ophthalmology and Eye Diseases Volume 4 ; 2012 >
   }
   
   {
@@ -1322,10 +1322,10 @@
 
     param[journal_id] = 104
 
-    au < manifest ; 2008 ; Organic Chemistry Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Organic Chemistry Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Organic Chemistry Insights Volume 3 ; 2010 >
-    au < manifest ; 2012 ; Organic Chemistry Insights Volume 4 ; 2012 >
+    au < testing ; 2008 ; Organic Chemistry Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Organic Chemistry Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Organic Chemistry Insights Volume 3 ; 2010 >
+    au < testing ; 2012 ; Organic Chemistry Insights Volume 4 ; 2012 >
   }
   
   {
@@ -1338,11 +1338,11 @@
 
     param[journal_id] = 86
 
-    au < manifest ; 2008 ; Palliative Care: Research and Treatment Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Palliative Care: Research and Treatment Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Palliative Care: Research and Treatment Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Palliative Care: Research and Treatment Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Palliative Care: Research and Treatment Volume 6 ; 2012 >
+    au < testing ; 2008 ; Palliative Care: Research and Treatment Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Palliative Care: Research and Treatment Volume 3 ; 2009 >
+    au < testing ; 2010 ; Palliative Care: Research and Treatment Volume 4 ; 2010 >
+    au < testing ; 2011 ; Palliative Care: Research and Treatment Volume 5 ; 2011 >
+    au < testing ; 2012 ; Palliative Care: Research and Treatment Volume 6 ; 2012 >
 
   }
   
@@ -1356,10 +1356,10 @@
 
     param[journal_id] = 105
 
-    au < manifest ; 2008 ; Particle Physics Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Particle Physics Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Particle Physics Insights Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Particle Physics Insights Volume 4 ; 2011 >
+    au < testing ; 2008 ; Particle Physics Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Particle Physics Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Particle Physics Insights Volume 3 ; 2010 >
+    au < testing ; 2011 ; Particle Physics Insights Volume 4 ; 2011 >
 
   }
   
@@ -1373,11 +1373,11 @@
 
     param[journal_id] = 25
     
-    au < manifest ; 2007 ; Perspectives in Medicinal Chemistry Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Perspectives in Medicinal Chemistry Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Perspectives in Medicinal Chemistry Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Perspectives in Medicinal Chemistry Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Perspectives in Medicinal Chemistry Volume 5 ; 2011 >
+    au < testing ; 2007 ; Perspectives in Medicinal Chemistry Volume 1 ; 2007 >
+    au < testing ; 2008 ; Perspectives in Medicinal Chemistry Volume 2 ; 2008 >
+    au < testing ; 2009 ; Perspectives in Medicinal Chemistry Volume 3 ; 2009 >
+    au < testing ; 2010 ; Perspectives in Medicinal Chemistry Volume 4 ; 2010 >
+    au < testing ; 2011 ; Perspectives in Medicinal Chemistry Volume 5 ; 2011 >
     
   }
   
@@ -1391,8 +1391,8 @@
 
     param[journal_id] = 135
 
-    au < manifest ; 2009 ; Primary Prevention Insights Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Primary Prevention Insights Volume 2 ; 2010 >
+    au < testing ; 2009 ; Primary Prevention Insights Volume 1 ; 2009 >
+    au < testing ; 2010 ; Primary Prevention Insights Volume 2 ; 2010 >
     
   }
   
@@ -1406,11 +1406,11 @@
 
     param[journal_id] = 106
 
-    au < manifest ; 2008 ; Proteomics Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Proteomics Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Proteomics Insights Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Proteomics Insights Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Proteomics Insights Volume 5 ; 2012 >
+    au < testing ; 2008 ; Proteomics Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Proteomics Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Proteomics Insights Volume 3 ; 2010 >
+    au < testing ; 2011 ; Proteomics Insights Volume 4 ; 2011 >
+    au < testing ; 2012 ; Proteomics Insights Volume 5 ; 2012 >
     
     
   }
@@ -1425,8 +1425,8 @@
 
     param[journal_id] = 134
 
-    au < manifest ; 2008 ; Rehabilitation Process and Outcome Volume 1 ; 2008 >
-    au < manifest ; 2010 ; Rehabilitation Process and Outcome Volume 3 ; 2010 >
+    au < testing ; 2008 ; Rehabilitation Process and Outcome Volume 1 ; 2008 >
+    au < testing ; 2010 ; Rehabilitation Process and Outcome Volume 3 ; 2010 >
     
   }
   
@@ -1440,10 +1440,10 @@
 
     param[journal_id] = 111
 
-    au < manifest ; 2008 ; Reproductive Biology Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Reproductive Biology Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Reproductive Biology Insights Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Reproductive Biology Insights Volume 4 ; 2011 >
+    au < testing ; 2008 ; Reproductive Biology Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Reproductive Biology Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Reproductive Biology Insights Volume 3 ; 2010 >
+    au < testing ; 2011 ; Reproductive Biology Insights Volume 4 ; 2011 >
     
   }
   
@@ -1457,8 +1457,8 @@
 
     param[journal_id] = 52
 
-    au < manifest ; 2008 ; Retrovirology: Research and Treatment Volume 1-2 ; 2008 >
-    au < manifest ; 2010 ; Retrovirology: Research and Treatment Volume 3 ; 2010 >
+    au < testing ; 2008 ; Retrovirology: Research and Treatment Volume 1-2 ; 2008 >
+    au < testing ; 2010 ; Retrovirology: Research and Treatment Volume 3 ; 2010 >
 
     
   }
@@ -1473,8 +1473,8 @@
 
     param[journal_id] = 102
 
-    au < manifest ; 2008 ; Signal Transduction Insights Volume 1 ; 2008 >
-    au < manifest ; 2010 ; Signal Transduction Insights Volume 2 ; 2010 >
+    au < testing ; 2008 ; Signal Transduction Insights Volume 1 ; 2008 >
+    au < testing ; 2010 ; Signal Transduction Insights Volume 2 ; 2010 >
 
     
   }
@@ -1489,11 +1489,11 @@
 
     param[journal_id] = 80
 
-    au < manifest ; 2008 ; Substance Abuse: Research and Treatment Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Substance Abuse: Research and Treatment Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Substance Abuse: Research and Treatment Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Substance Abuse: Research and Treatment Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Substance Abuse: Research and Treatment Volume 5 ; 2012 >
+    au < testing ; 2008 ; Substance Abuse: Research and Treatment Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Substance Abuse: Research and Treatment Volume 3 ; 2009 >
+    au < testing ; 2010 ; Substance Abuse: Research and Treatment Volume 4 ; 2010 >
+    au < testing ; 2011 ; Substance Abuse: Research and Treatment Volume 5 ; 2011 >
+    au < testing ; 2012 ; Substance Abuse: Research and Treatment Volume 5 ; 2012 >
     
     
   }
@@ -1508,11 +1508,11 @@
 
     param[journal_id] = 139
 
-    au < manifest ; 2008 ; Tobacco Use Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Tobacco Use Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Tobacco Use Insights Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Tobacco Use Insights Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Tobacco Use Insights Volume 5 ; 2012 >
+    au < testing ; 2008 ; Tobacco Use Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Tobacco Use Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Tobacco Use Insights Volume 3 ; 2010 >
+    au < testing ; 2011 ; Tobacco Use Insights Volume 4 ; 2011 >
+    au < testing ; 2012 ; Tobacco Use Insights Volume 5 ; 2012 >
     
   }
   
@@ -1526,11 +1526,11 @@
 
     param[journal_id] = 19
 
-    au < manifest ; 2006 ; Translational Oncogenomics Volume 1 ; 2006 >
-    au < manifest ; 2007 ; Translational Oncogenomics Volume 2 ; 2007 >
-    au < manifest ; 2008 ; Translational Oncogenomics Volume 3 ; 2008 >
-    au < manifest ; 2010 ; Translational Oncogenomics Volume 4 ; 2010 >
-    au < manifest ; 2012 ; Translational Oncogenomics Volume 5 ; 2012 >
+    au < testing ; 2006 ; Translational Oncogenomics Volume 1 ; 2006 >
+    au < testing ; 2007 ; Translational Oncogenomics Volume 2 ; 2007 >
+    au < testing ; 2008 ; Translational Oncogenomics Volume 3 ; 2008 >
+    au < testing ; 2010 ; Translational Oncogenomics Volume 4 ; 2010 >
+    au < testing ; 2012 ; Translational Oncogenomics Volume 5 ; 2012 >
     
     
   }
@@ -1545,8 +1545,8 @@
 
     param[journal_id] = 50
 
-    au < manifest ; 2008 ; Virology: Research and Treatment Volume 1 ; 2008 >
-    au < manifest ; 2010 ; Virology: Research and Treatment Volume 2 ; 2010 >
+    au < testing ; 2008 ; Virology: Research and Treatment Volume 1 ; 2008 >
+    au < testing ; 2010 ; Virology: Research and Treatment Volume 2 ; 2010 >
 
     
   }
