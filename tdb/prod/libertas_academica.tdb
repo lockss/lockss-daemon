@@ -782,11 +782,11 @@
 
     param[journal_id] = 110
 
-    au < manifest ; 2008 ; Environmental Health Insights Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Environmental Health Insights Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Environmental Health Insights Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Environmental Health Insights Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Environmental Health Insights Volume 6 ; 2012 >
+    au < testing ; 2008 ; Environmental Health Insights Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Environmental Health Insights Volume 3 ; 2009 >
+    au < testing ; 2010 ; Environmental Health Insights Volume 4 ; 2010 >
+    au < testing ; 2011 ; Environmental Health Insights Volume 5 ; 2011 >
+    au < testing ; 2012 ; Environmental Health Insights Volume 6 ; 2012 >
 
   }
   
@@ -800,14 +800,14 @@
 
     param[journal_id] = 17
 
-    au < manifest ; 2005 ; Evolutionary Bioinformatics Volume 1 ; 2005 >
-    au < manifest ; 2006 ; Evolutionary Bioinformatics Volume 2 ; 2006 >
-    au < manifest ; 2007 ; Evolutionary Bioinformatics Volume 3 ; 2007 >
-    au < manifest ; 2008 ; Evolutionary Bioinformatics Volume 4 ; 2008 >
-    au < manifest ; 2009 ; Evolutionary Bioinformatics Volume 5 ; 2009 >
-    au < manifest ; 2010 ; Evolutionary Bioinformatics Volume 6 ; 2010 >
-    au < manifest ; 2011 ; Evolutionary Bioinformatics Volume 7 ; 2011 >
-    au < manifest ; 2012 ; Evolutionary Bioinformatics Volume 8 ; 2012 >
+    au < testing ; 2005 ; Evolutionary Bioinformatics Volume 1 ; 2005 >
+    au < testing ; 2006 ; Evolutionary Bioinformatics Volume 2 ; 2006 >
+    au < testing ; 2007 ; Evolutionary Bioinformatics Volume 3 ; 2007 >
+    au < testing ; 2008 ; Evolutionary Bioinformatics Volume 4 ; 2008 >
+    au < testing ; 2009 ; Evolutionary Bioinformatics Volume 5 ; 2009 >
+    au < testing ; 2010 ; Evolutionary Bioinformatics Volume 6 ; 2010 >
+    au < testing ; 2011 ; Evolutionary Bioinformatics Volume 7 ; 2011 >
+    au < testing ; 2012 ; Evolutionary Bioinformatics Volume 8 ; 2012 >
 
   }
   
@@ -821,9 +821,9 @@
 
     param[journal_id] = 137
 
-    au < manifest ; 2008 ; Gene Expression to Genetical Genomics Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Gene Expression to Genetical Genomics Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Gene Expression to Genetical Genomics Volume 3 ; 2010 >
+    au < testing ; 2008 ; Gene Expression to Genetical Genomics Volume 1 ; 2008 >
+    au < testing ; 2009 ; Gene Expression to Genetical Genomics Volume 2 ; 2009 >
+    au < testing ; 2010 ; Gene Expression to Genetical Genomics Volume 3 ; 2010 >
 
     
 
@@ -839,12 +839,12 @@
 
     param[journal_id] = 26
 
-    au < manifest ; 2007 ; Gene Regulation and Systems Biology Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Gene Regulation and Systems Biology Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Gene Regulation and Systems Biology Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Gene Regulation and Systems Biology Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Gene Regulation and Systems Biology Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Gene Regulation and Systems Biology Volume 6 ; 2012 >
+    au < testing ; 2007 ; Gene Regulation and Systems Biology Volume 1 ; 2007 >
+    au < testing ; 2008 ; Gene Regulation and Systems Biology Volume 2 ; 2008 >
+    au < testing ; 2009 ; Gene Regulation and Systems Biology Volume 3 ; 2009 >
+    au < testing ; 2010 ; Gene Regulation and Systems Biology Volume 4 ; 2010 >
+    au < testing ; 2011 ; Gene Regulation and Systems Biology Volume 5 ; 2011 >
+    au < testing ; 2012 ; Gene Regulation and Systems Biology Volume 6 ; 2012 >
 
   }
   
@@ -858,9 +858,9 @@
 
     param[journal_id] = 127
     
-    au < manifest ; 2008 ; Genetics & Epigenetics Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Genetics & Epigenetics Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Genetics & Epigenetics Volume 3 ; 2010 >
+    au < testing ; 2008 ; Genetics & Epigenetics Volume 1 ; 2008 >
+    au < testing ; 2009 ; Genetics & Epigenetics Volume 2 ; 2009 >
+    au < testing ; 2010 ; Genetics & Epigenetics Volume 3 ; 2010 >
 
 
 
@@ -876,11 +876,11 @@
 
     param[journal_id] = 103
     
-    au < manifest ; 2008 ; Genomics Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Genomics Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Genomics Insights Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Genomics Insights Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Genomics Insights Volume 5 ; 2012 >
+    au < testing ; 2008 ; Genomics Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Genomics Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Genomics Insights Volume 3 ; 2010 >
+    au < testing ; 2011 ; Genomics Insights Volume 4 ; 2011 >
+    au < testing ; 2012 ; Genomics Insights Volume 5 ; 2012 >
 
 
 
@@ -896,9 +896,9 @@
 
     param[journal_id] = 153
     
-    au < manifest ; 2009 ; Glycobiology Insights Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Glycobiology Insights Volume 2 ; 2010 >
-    au < manifest ; 2012 ; Glycobiology Insights Volume 3 ; 2012 >
+    au < testing ; 2009 ; Glycobiology Insights Volume 1 ; 2009 >
+    au < testing ; 2010 ; Glycobiology Insights Volume 2 ; 2010 >
+    au < testing ; 2012 ; Glycobiology Insights Volume 3 ; 2012 >
 
   }
   
@@ -912,11 +912,11 @@
 
     param[journal_id] = 117
     
-    au < manifest ; 2008 ; Health Services Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Health Services Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Health Services Insights Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Health Services Insights Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Health Services Insights Volume 5 ; 2012 >
+    au < testing ; 2008 ; Health Services Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Health Services Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Health Services Insights Volume 3 ; 2010 >
+    au < testing ; 2011 ; Health Services Insights Volume 4 ; 2011 >
+    au < testing ; 2012 ; Health Services Insights Volume 5 ; 2012 >
 
 
   }
@@ -931,10 +931,10 @@
 
     param[journal_id] = 119
     
-    au < manifest ; 2008 ; Healthy Aging & Clinical Care in the Elderly Volume 1 ; 2008 >
-    au < manifest ; 2010 ; Healthy Aging & Clinical Care in the Elderly Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Healthy Aging & Clinical Care in the Elderly Volume 3 ; 2011 >
-    au < manifest ; 2012 ; Healthy Aging & Clinical Care in the Elderly Volume 4 ; 2012 >
+    au < testing ; 2008 ; Healthy Aging & Clinical Care in the Elderly Volume 1 ; 2008 >
+    au < testing ; 2010 ; Healthy Aging & Clinical Care in the Elderly Volume 2 ; 2010 >
+    au < testing ; 2011 ; Healthy Aging & Clinical Care in the Elderly Volume 3 ; 2011 >
+    au < testing ; 2012 ; Healthy Aging & Clinical Care in the Elderly Volume 4 ; 2012 >
 
 
   }
@@ -949,9 +949,9 @@
 
     param[journal_id] = 142
     
-    au < manifest ; 2009 ; Human Parasitic Diseases Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Human Parasitic Diseases Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Human Parasitic Diseases Volume 3 ; 2011 >
+    au < testing ; 2009 ; Human Parasitic Diseases Volume 1 ; 2009 >
+    au < testing ; 2010 ; Human Parasitic Diseases Volume 2 ; 2010 >
+    au < testing ; 2011 ; Human Parasitic Diseases Volume 3 ; 2011 >
 
 
   }
@@ -969,6 +969,7 @@
     au < manifest ; 2009 ; Immunology and Immunogenetics Insights Volume 1 ; 2009 >
     au < manifest ; 2010 ; Immunology and Immunogenetics Insights Volume 2 ; 2010 >
     au < manifest ; 2011 ; Immunology and Immunogenetics Insights Volume 3 ; 2011 >
+    au < manifest ; 2012 ; Immunology and Immunogenetics Insights Volume 4 ; 2012 >
 
 
   }
