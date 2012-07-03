@@ -19,8 +19,8 @@
 
     param[journal_id] = 132
 
-    au < manifest ; 2009 ; Advances in Tumor Virology Volume 1 ; 2009 >
-    au < manifest ; 2011 ; Advances in Tumor Virology Volume 2 ; 2011 >
+    au < testing ; 2009 ; Advances in Tumor Virology Volume 1 ; 2009 >
+    au < testing ; 2011 ; Advances in Tumor Virology Volume 2 ; 2011 >
 
   }
   
@@ -34,11 +34,11 @@
 
     param[journal_id] = 99
 
-    au < manifest ; 2008 ; Air, Soil & Water Research Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Air, Soil & Water Research Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Air, Soil & Water Research Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Air, Soil & Water Research Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Air, Soil & Water Research Volume 5 ; 2012 >
+    au < testing ; 2008 ; Air, Soil & Water Research Volume 1 ; 2008 >
+    au < testing ; 2009 ; Air, Soil & Water Research Volume 2 ; 2009 >
+    au < testing ; 2010 ; Air, Soil & Water Research Volume 3 ; 2010 >
+    au < testing ; 2011 ; Air, Soil & Water Research Volume 4 ; 2011 >
+    au < testing ; 2012 ; Air, Soil & Water Research Volume 5 ; 2012 >
 
   }
   
@@ -52,12 +52,12 @@
 
     param[journal_id] = 1
 
-    au < manifest ; 2007 ; Analytical Chemistry Insights Volume 1-2 ; 2007 >
-    au < manifest ; 2008 ; Analytical Chemistry Insights Volume 3 ; 2008 >
-    au < manifest ; 2009 ; Analytical Chemistry Insights Volume 4 ; 2009 >
-    au < manifest ; 2010 ; Analytical Chemistry Insights Volume 5 ; 2010 >
-    au < manifest ; 2011 ; Analytical Chemistry Insights Volume 6 ; 2011 >
-    au < manifest ; 2012 ; Analytical Chemistry Insights Volume 7 ; 2012 >
+    au < testing ; 2007 ; Analytical Chemistry Insights Volume 1-2 ; 2007 >
+    au < testing ; 2008 ; Analytical Chemistry Insights Volume 3 ; 2008 >
+    au < testing ; 2009 ; Analytical Chemistry Insights Volume 4 ; 2009 >
+    au < testing ; 2010 ; Analytical Chemistry Insights Volume 5 ; 2010 >
+    au < testing ; 2011 ; Analytical Chemistry Insights Volume 6 ; 2011 >
+    au < testing ; 2012 ; Analytical Chemistry Insights Volume 7 ; 2012 >
 
   }
   
@@ -72,10 +72,10 @@
 
     param[journal_id] = 155
 
-    au < manifest ; 2009 ; Autism Insights Volume 1 ; 2009 >
-    au < manifest ; 2010 ; Autism Insights Volume 2 ; 2010 >
-    au < manifest ; 2011 ; Autism Insights Volume 3 ; 2011 >
-    au < manifest ; 2012 ; Autism Insights Volume 4 ; 2012 >
+    au < testing ; 2009 ; Autism Insights Volume 1 ; 2009 >
+    au < testing ; 2010 ; Autism Insights Volume 2 ; 2010 >
+    au < testing ; 2011 ; Autism Insights Volume 3 ; 2011 >
+    au < testing ; 2012 ; Autism Insights Volume 4 ; 2012 >
 
   }
   
