@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.35 2012-07-03 17:17:13 barry409 Exp $
+ * $Id: V3PollFactory.java,v 1.36 2012-07-03 17:22:59 barry409 Exp $
  */
 
 /*
@@ -292,7 +292,7 @@ public class V3PollFactory extends BasePollFactory {
 
     // Never vote if not crawled, even if pub down XXX Voting should be
     // allowed if either crawled or recovered.  Substance test isn't
-    // enoough.  Should vote only after *complete* crawl or recovery (which
+    // enough.  Should vote only after *complete* crawl or recovery (which
     // might be determined by poll agreement), but might have substance
     // after incomplete crawl.
     if (!aus.hasCrawled()) { 
