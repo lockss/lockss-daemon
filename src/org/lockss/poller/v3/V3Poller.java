@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.122 2012-07-02 16:21:01 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.123 2012-07-03 08:13:24 tlipkis Exp $
  */
 
 /*
@@ -2774,8 +2774,6 @@ public class V3Poller extends BasePoll {
     return totalBytesRead;
   }
   
-
-
   /**
    * Release members not used after the poll has been closed.
    */
