@@ -196,9 +196,9 @@
 
     param[journal_id] = 120
 
-    au < manifest ; 2008 ; Bone and Tissue Regeneration Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Bone and Tissue Regeneration Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Bone and Tissue Regeneration Insights Volume 3 ; 2010 >
+    au < testing ; 2008 ; Bone and Tissue Regeneration Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Bone and Tissue Regeneration Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Bone and Tissue Regeneration Insights Volume 3 ; 2010 >
     
 
   }
@@ -213,11 +213,11 @@
 
     param[journal_id] = 84
 
-    au < manifest ; 2008 ; Breast Cancer: Basic and Clinical Research Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Breast Cancer: Basic and Clinical Research Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Breast Cancer: Basic and Clinical Research Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Breast Cancer: Basic and Clinical Research Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Breast Cancer: Basic and Clinical Research Volume 6 ; 2012 >
+    au < testing ; 2008 ; Breast Cancer: Basic and Clinical Research Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Breast Cancer: Basic and Clinical Research Volume 3 ; 2009 >
+    au < testing ; 2010 ; Breast Cancer: Basic and Clinical Research Volume 4 ; 2010 >
+    au < testing ; 2011 ; Breast Cancer: Basic and Clinical Research Volume 5 ; 2011 >
+    au < testing ; 2012 ; Breast Cancer: Basic and Clinical Research Volume 6 ; 2012 >
 
   }
   
@@ -231,11 +231,11 @@
 
     param[journal_id] = 122
 
-    au < manifest ; 2008 ; Cancer Growth and Metastasis Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Cancer Growth and Metastasis Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Cancer Growth and Metastasis Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Cancer Growth and Metastasis Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Cancer Growth and Metastasis Volume 5 ; 2012 >
+    au < testing ; 2008 ; Cancer Growth and Metastasis Volume 1 ; 2008 >
+    au < testing ; 2009 ; Cancer Growth and Metastasis Volume 2 ; 2009 >
+    au < testing ; 2010 ; Cancer Growth and Metastasis Volume 3 ; 2010 >
+    au < testing ; 2011 ; Cancer Growth and Metastasis Volume 4 ; 2011 >
+    au < testing ; 2012 ; Cancer Growth and Metastasis Volume 5 ; 2012 >
 
   }
   
@@ -249,14 +249,14 @@
 
     param[journal_id] = 10
 
-    au < manifest ; 2005 ; Cancer Informatics Volume 1 ; 2005 >
-    au < manifest ; 2006 ; Cancer Informatics Volume 2 ; 2006 >
-    au < manifest ; 2007 ; Cancer Informatics Volume 3-5 ; 2007 >
-    au < manifest ; 2008 ; Cancer Informatics Volume 6 ; 2008 >
-    au < manifest ; 2009 ; Cancer Informatics Volume 7-8 ; 2009 >
-    au < manifest ; 2010 ; Cancer Informatics Volume 9 ; 2010 >
-    au < manifest ; 2011 ; Cancer Informatics Volume 10 ; 2011 >
-    au < manifest ; 2012 ; Cancer Informatics Volume 11 ; 2012 >
+    au < testing ; 2005 ; Cancer Informatics Volume 1 ; 2005 >
+    au < testing ; 2006 ; Cancer Informatics Volume 2 ; 2006 >
+    au < testing ; 2007 ; Cancer Informatics Volume 3-5 ; 2007 >
+    au < testing ; 2008 ; Cancer Informatics Volume 6 ; 2008 >
+    au < testing ; 2009 ; Cancer Informatics Volume 7-8 ; 2009 >
+    au < testing ; 2010 ; Cancer Informatics Volume 9 ; 2010 >
+    au < testing ; 2011 ; Cancer Informatics Volume 10 ; 2011 >
+    au < testing ; 2012 ; Cancer Informatics Volume 11 ; 2012 >
     
 
   }
@@ -271,9 +271,9 @@
 
     param[journal_id] = 125
 
-    au < manifest ; 2008 ; Cell & Tissue Transplantation & Therapy Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Cell & Tissue Transplantation & Therapy Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Cell & Tissue Transplantation & Therapy Volume 3 ; 2010 >
+    au < testing ; 2008 ; Cell & Tissue Transplantation & Therapy Volume 1 ; 2008 >
+    au < testing ; 2009 ; Cell & Tissue Transplantation & Therapy Volume 2 ; 2009 >
+    au < testing ; 2010 ; Cell & Tissue Transplantation & Therapy Volume 3 ; 2010 >
 
   }
   
@@ -287,7 +287,7 @@
 
     param[journal_id] = 96
 
-    au < manifest ; 2008 ; Cell Biology Insights Volume 1 ; 2008 >
+    au < testing ; 2008 ; Cell Biology Insights Volume 1 ; 2008 >
 
   }
   
@@ -301,9 +301,9 @@
 
     param[journal_id] = 140
 
-    au < manifest ; 2008 ; Cell Communication Insights Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Cell Communication Insights Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Cell Communication Insights Volume 3 ; 2010 >
+    au < testing ; 2008 ; Cell Communication Insights Volume 1 ; 2008 >
+    au < testing ; 2009 ; Cell Communication Insights Volume 2 ; 2009 >
+    au < testing ; 2010 ; Cell Communication Insights Volume 3 ; 2010 >
 
   }
   
@@ -317,11 +317,11 @@
 
     param[journal_id] = 46
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 5 ; 2012 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 2 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 3 ; 2010 >
+    au < testing ; 2011 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 4 ; 2011 >
+    au < testing ; 2012 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 5 ; 2012 >
 
   }
   
@@ -335,11 +335,11 @@
 
     param[journal_id] = 63
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Blood Disorders Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Blood Disorders Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Blood Disorders Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Blood Disorders Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Clinical Medicine Insights: Blood Disorders Volume 5 ; 2012 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Blood Disorders Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Blood Disorders Volume 2 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Blood Disorders Volume 3 ; 2010 >
+    au < testing ; 2011 ; Clinical Medicine Insights: Blood Disorders Volume 4 ; 2011 >
+    au < testing ; 2012 ; Clinical Medicine Insights: Blood Disorders Volume 5 ; 2012 >
 
   }
   
@@ -353,12 +353,12 @@
 
     param[journal_id] = 48
 
-    au < manifest ; 2007 ; Clinical Medicine Insights: Cardiology Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Clinical Medicine Insights: Cardiology Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Cardiology Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Cardiology Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Cardiology Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Clinical Medicine Insights: Cardiology Volume 6 ; 2012 >
+    au < testing ; 2007 ; Clinical Medicine Insights: Cardiology Volume 1 ; 2007 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Cardiology Volume 2 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Cardiology Volume 3 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Cardiology Volume 4 ; 2010 >
+    au < testing ; 2011 ; Clinical Medicine Insights: Cardiology Volume 5 ; 2011 >
+    au < testing ; 2012 ; Clinical Medicine Insights: Cardiology Volume 6 ; 2012 >
 
   }
   
@@ -372,11 +372,11 @@
 
     param[journal_id] = 91
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Cardiology Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Cardiology Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Cardiology Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Cardiology Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Clinical Medicine Insights: Cardiology Volume 5 ; 2012 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Cardiology Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Cardiology Volume 2 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Cardiology Volume 3 ; 2010 >
+    au < testing ; 2011 ; Clinical Medicine Insights: Cardiology Volume 4 ; 2011 >
+    au < testing ; 2012 ; Clinical Medicine Insights: Cardiology Volume 5 ; 2012 >
 
   }
   
@@ -390,12 +390,12 @@
 
     param[journal_id] = 44
 
-    au < manifest ; 2007 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 6 ; 2012 >
+    au < testing ; 2007 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 1 ; 2007 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 2 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 3 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 4 ; 2010 >
+    au < testing ; 2011 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 5 ; 2011 >
+    au < testing ; 2012 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 6 ; 2012 >
 
   }
   
@@ -409,11 +409,11 @@
 
     param[journal_id] = 69
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Dermatology Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Dermatology Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Dermatology Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Dermatology Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Clinical Medicine Insights: Dermatology Volume 5 ; 2012 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Dermatology Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Dermatology Volume 2 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Dermatology Volume 3 ; 2010 >
+    au < testing ; 2011 ; Clinical Medicine Insights: Dermatology Volume 4 ; 2011 >
+    au < testing ; 2012 ; Clinical Medicine Insights: Dermatology Volume 5 ; 2012 >
 
   }
   
@@ -427,11 +427,11 @@
 
     param[journal_id] = 61
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 5 ; 2012 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 2 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 3 ; 2010 >
+    au < testing ; 2011 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 4 ; 2011 >
+    au < testing ; 2012 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 5 ; 2012 >
 
   }
   
@@ -445,11 +445,11 @@
 
     param[journal_id] = 65
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 5 ; 2012 >
+    au < testing; 2008 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 1 ; 2008 >
+    au < testing; 2009 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 2 ; 2009 >
+    au < testing; 2010 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 3 ; 2010 >
+    au < testing; 2011 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 4 ; 2011 >
+    au < testing; 2012 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 5 ; 2012 >
 
   }
   
@@ -463,11 +463,11 @@
 
     param[journal_id] = 56
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Gastroenterology Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Gastroenterology Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Gastroenterology Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Gastroenterology Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Clinical Medicine Insights: Gastroenterology Volume 5 ; 2012 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Gastroenterology Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Gastroenterology Volume 2 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Gastroenterology Volume 3 ; 2010 >
+    au < testing ; 2011 ; Clinical Medicine Insights: Gastroenterology Volume 4 ; 2011 >
+    au < testing ; 2012 ; Clinical Medicine Insights: Gastroenterology Volume 5 ; 2012 >
   }
   
   {
@@ -480,9 +480,9 @@
 
     param[journal_id] = 73
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Geriatrics Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Geriatrics Volume 3 ; 2009 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Geriatrics Volume 4 ; 2011 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Geriatrics Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Geriatrics Volume 3 ; 2009 >
+    au < testing ; 2011 ; Clinical Medicine Insights: Geriatrics Volume 4 ; 2011 >
 
   }
   
@@ -496,12 +496,12 @@
 
     param[journal_id] = 42
 
-    au < manifest ; 2007 ; Clinical Medicine Insights: Oncology Volume 1 ; 2007 >
-    au < manifest ; 2008 ; Clinical Medicine Insights: Oncology Volume 2 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Oncology Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Oncology Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Oncology Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Clinical Medicine Insights: Oncology Volume 6 ; 2012 >
+    au < testing ; 2007 ; Clinical Medicine Insights: Oncology Volume 1 ; 2007 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Oncology Volume 2 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Oncology Volume 3 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Oncology Volume 4 ; 2010 >
+    au < testing ; 2011 ; Clinical Medicine Insights: Oncology Volume 5 ; 2011 >
+    au < testing ; 2012 ; Clinical Medicine Insights: Oncology Volume 6 ; 2012 >
 
   }
   
@@ -515,11 +515,11 @@
 
     param[journal_id] = 54
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Pathology Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Pathology Volume 2 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Pathology Volume 3 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Pathology Volume 4 ; 2011 >
-    au < manifest ; 2012 ; Clinical Medicine Insights: Pathology Volume 5 ; 2012 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Pathology Volume 1 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Pathology Volume 2 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Pathology Volume 3 ; 2010 >
+    au < testing ; 2011 ; Clinical Medicine Insights: Pathology Volume 4 ; 2011 >
+    au < testing ; 2012 ; Clinical Medicine Insights: Pathology Volume 5 ; 2012 >
 
   }
   
@@ -533,11 +533,11 @@
 
     param[journal_id] = 78
 
-    au < manifest ; 2008 ; Clinical Medicine Insights: Pediatrics Volume 1-2 ; 2008 >
-    au < manifest ; 2009 ; Clinical Medicine Insights: Pediatrics Volume 3 ; 2009 >
-    au < manifest ; 2010 ; Clinical Medicine Insights: Pediatrics Volume 4 ; 2010 >
-    au < manifest ; 2011 ; Clinical Medicine Insights: Pediatrics Volume 5 ; 2011 >
-    au < manifest ; 2012 ; Clinical Medicine Insights: Pediatrics Volume 6 ; 2012 >
+    au < testing ; 2008 ; Clinical Medicine Insights: Pediatrics Volume 1-2 ; 2008 >
+    au < testing ; 2009 ; Clinical Medicine Insights: Pediatrics Volume 3 ; 2009 >
+    au < testing ; 2010 ; Clinical Medicine Insights: Pediatrics Volume 4 ; 2010 >
+    au < testing ; 2011 ; Clinical Medicine Insights: Pediatrics Volume 5 ; 2011 >
+    au < testing ; 2012 ; Clinical Medicine Insights: Pediatrics Volume 6 ; 2012 >
 
   }
   
