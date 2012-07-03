@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.34 2012-07-03 16:15:44 barry409 Exp $
+ * $Id: V3PollFactory.java,v 1.35 2012-07-03 17:17:13 barry409 Exp $
  */
 
 /*
@@ -196,7 +196,7 @@ public class V3PollFactory extends BasePollFactory {
    * Construct a new V3 Poller to call a poll.
    * 
    * @param daemon The LOCKSS daemon.
-   * @param pollspec  The Poll Spec fotr this poll.
+   * @param pollspec  The Poll Spec for this poll.
    * @param orig  The caller of the poll.
    * @param duration  The duration of the poll.
    * @param hashAlg  The Hash Algorithm used to call the poll.
@@ -219,7 +219,7 @@ public class V3PollFactory extends BasePollFactory {
    * @param daemon  The LOCKSS Daemon
    * @param msg  The Poll message that invited this peer.
    * @param orig  The caller of the poll
-   * @param pollspec  The Poll Spec fotr this poll.
+   * @param pollspec  The Poll Spec for this poll.
    * @return  An active V3 Voter or null if decide not to participate.
    * @throws V3Serializer.PollSerializerException
    */
