@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.6 2012-07-02 16:21:01 tlipkis Exp $
+ * $Id: VoteBlockTallier.java,v 1.7 2012-07-03 08:13:10 tlipkis Exp $
  */
 
 /*
@@ -111,7 +111,6 @@ public class VoteBlockTallier {
   public void vote(VoteBlock voteBlock, ParticipantUserData id,
 		   int participantIndex) {
     votingStarted = true;
-    log.critical("id: " + id);
     id.addHashStats(voteBlock);
     if (pollerHas()) {
       if (comparer.compare(voteBlock, participantIndex)) {

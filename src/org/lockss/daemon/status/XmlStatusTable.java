@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.20 2012-07-02 16:20:10 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.21 2012-07-03 08:13:10 tlipkis Exp $
  */
 
 /*
@@ -71,7 +71,6 @@ public class XmlStatusTable {
   }
 
   Format getDateFormat(String spec) {
-    logger.critical("getDateFormat: " + spec);
     if ("GMT".equalsIgnoreCase(spec) || "UTC".equalsIgnoreCase(spec)) {
       return DisplayConverter.TABLE_DATE_FORMATTER_GMT;
     } else if ("local".equalsIgnoreCase(spec)) {
