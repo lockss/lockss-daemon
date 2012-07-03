@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.33 2011-06-02 18:59:52 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.34 2012-07-03 16:15:44 barry409 Exp $
  */
 
 /*
@@ -152,6 +152,9 @@ public class V3PollFactory extends BasePollFactory {
       throw new ProtocolException("Unexpected poll type:" +
 				  pollspec.getPollType());
     }
+    if (duration <= 0) {
+      throw new ProtocolException("bad duration " + duration);
+    }
     if (msg == null) {
       // If there's no message, we're making a poller
       try {
@@ -160,47 +163,21 @@ public class V3PollFactory extends BasePollFactory {
 	log.error("Serialization exception creating new V3Poller: ", ex);
 	return null;
       }
-    } else {
-      // This is an incoming message for which we have no current poll
-      // Ignore if not poll request
-      if (msg.getOpcode() != V3LcapMessage.MSG_POLL) {
-	log.warning("Received msg for nonexistent poll: " + msg);
-	return null;
-      }
-      CachedUrlSet cus = pollspec.getCachedUrlSet();
-      // Do we have the AU?
-      if (cus == null) {
-	log.debug2("Ignoring poll request from " + orig + " don't have AU: "
-		   + pollspec.getAuId());
-	PollNak reason =
-	  daemon.areAusStarted() ? PollNak.NAK_NO_AU : PollNak.NAK_NOT_READY;
-	sendNak(daemon, reason, pollspec.getAuId(), (V3LcapMessage)msg);
-	return null;
-      }
-      ArchivalUnit au = cus.getArchivalUnit();
-      String auPollVer = AuUtil.getPollVersion(au);
-      if (!pollspec.getPluginVersion().equals(auPollVer)) {
-	log.debug("Ignoring poll request from " + orig + " for " + au.getName()
-		  + ", plugin version mismatch; have: " +
-		  auPollVer +
-		  ", need: " + pollspec.getPluginVersion());
-	sendNak(daemon, PollNak.NAK_PLUGIN_VERSION_MISMATCH,
-		pollspec.getAuId(), (V3LcapMessage)msg,
-		auPollVer);
-	return null;
-      }
-      if (duration <= 0) {
-	throw new ProtocolException("bad duration " + duration);
-      }
+    }
+    // This is an incoming message for which we have no current poll.
+    // poll request means we are make a voter.
+    if (msg.getOpcode() == V3LcapMessage.MSG_POLL) {
       try {
-	// Remove any record that this peer doesn't have the AU
-	deleteFromNoAuPeers(au, orig);
-        return makeV3Voter(daemon, msg, pollspec, orig);
+	return makeV3Voter(daemon, msg, pollspec, orig, duration);
       } catch (V3Serializer.PollSerializerException ex) {
 	log.error("Serialization exception creating new V3Voter: ", ex);
 	return null;
       }
     }
+    // todo(bhayes): MSG_REPAIR_REQ should create a V3Voter willing to
+    // repair, but nothing else.
+    log.warning("Received msg for nonexistent poll: " + msg);
+    return null;
   }
   
   void deleteFromNoAuPeers(ArchivalUnit au, PeerIdentity peer) {
@@ -247,11 +224,37 @@ public class V3PollFactory extends BasePollFactory {
    * @throws V3Serializer.PollSerializerException
    */
   private V3Voter makeV3Voter(LockssDaemon daemon, LcapMessage msg,
-			      PollSpec pollspec, PeerIdentity orig)
+			      PollSpec pollspec, PeerIdentity orig,
+			      long duration)
       throws V3Serializer.PollSerializerException {
     log.debug2("Creating V3Voter for " + orig + "'s poll: " + pollspec);
     IdentityManager idMgr = daemon.getIdentityManager();
     V3LcapMessage m = (V3LcapMessage)msg;
+    CachedUrlSet cus = pollspec.getCachedUrlSet();
+    // Do we have the AU?
+    if (cus == null) {
+      log.debug2("Ignoring poll request from " + orig + " don't have AU: "
+		 + pollspec.getAuId());
+      PollNak reason =
+	daemon.areAusStarted() ? PollNak.NAK_NO_AU : PollNak.NAK_NOT_READY;
+      sendNak(daemon, reason, pollspec.getAuId(), (V3LcapMessage)msg);
+      return null;
+    }
+    ArchivalUnit au = cus.getArchivalUnit();
+    String auPollVer = AuUtil.getPollVersion(au);
+    if (!pollspec.getPluginVersion().equals(auPollVer)) {
+      log.debug("Ignoring poll request from " + orig + " for " + au.getName()
+		+ ", plugin version mismatch; have: " +
+		auPollVer +
+		", need: " + pollspec.getPluginVersion());
+      sendNak(daemon, PollNak.NAK_PLUGIN_VERSION_MISMATCH,
+	      pollspec.getAuId(), (V3LcapMessage)msg,
+	      auPollVer);
+      return null;
+    }
+
+    // Remove any record that this peer doesn't have the AU
+    deleteFromNoAuPeers(au, orig);
 
     // Ignore messages from ourself.
     if (orig == idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL)) {
@@ -274,17 +277,6 @@ public class V3PollFactory extends BasePollFactory {
       sendNak(daemon, PollNak.NAK_GROUP_MISMATCH, pollspec.getAuId(), m);
       return null;
     }
-    // check that we have AU
-    CachedUrlSet cus = pollspec.getCachedUrlSet();
-    if (cus == null) {
-      log.debug("Ignoring poll request from " + orig + ", don't have AU: " +
-		pollspec.getAuId());
-      sendNak(daemon, PollNak.NAK_NO_AU,
-	      pollspec.getAuId(), m);
-      return null;
-    }
-    ArchivalUnit au = cus.getArchivalUnit();
-
     AuState aus = AuUtil.getAuState(au);
 
     // Decline poll if AU is known not to have substance.  (Might drop out
@@ -309,18 +301,6 @@ public class V3PollFactory extends BasePollFactory {
       return null;
     }
 
-    // and that plugin version agrees
-    // XXX Checked in createPoll() so can't happen here?
-    String auPollVer = AuUtil.getPollVersion(au);
-    if (!pollspec.getPluginVersion().equals(auPollVer)) {
-      log.debug("Ignoring poll request for " + au.getName() +
-		", plugin version mismatch; have: " +
-		auPollVer +
-		", need: " + pollspec.getPluginVersion());
-      sendNak(daemon, PollNak.NAK_PLUGIN_VERSION_MISMATCH,
-	      pollspec.getAuId(), m);
-      return null;
-    }
     V3Voter voter = null;
     // Check to see if we're running too many polls already.
 
@@ -351,7 +331,7 @@ public class V3PollFactory extends BasePollFactory {
 
     log.debug("Creating V3Voter to participate in poll " + m.getKey());
     voter = new V3Voter(daemon, m);
-//        voter.startPoll(); // Voters need to be started immediately.
+    //        voter.startPoll(); // Voters need to be started immediately.
     
     // Update the status of the peer that called this poll.
     if (status != null) {
