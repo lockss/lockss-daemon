@@ -1,5 +1,5 @@
 /*
- * $Id: DisplayConverter.java,v 1.1 2012-07-02 16:26:04 tlipkis Exp $
+ * $Id: DisplayConverter.java,v 1.2 2012-07-03 08:13:39 tlipkis Exp $
  */
 
 /*
@@ -41,13 +41,14 @@ import org.apache.commons.lang.time.FastDateFormat;
 import org.lockss.util.*;
 import org.lockss.daemon.status.*;
 
+/** Convert values to display strings for the UI.  Currently behavior is
+ * fixed, or can be overridden by subclass. */
 
 public class DisplayConverter {
   protected static Logger log = Logger.getLogger("DisplayConverter");
 
   // Thread-safe formatters.
   // FastDateFormat is thread-safe, NumberFormat & subclasses aren't.
-
 
   /** Local time date formatter. */
   public static final FastDateFormat TABLE_DATE_FORMATTER_LOCAL =
@@ -119,7 +120,7 @@ public class DisplayConverter {
       case ColumnDescriptor.TYPE_INT:
 	if (val instanceof Number) {
 	  long lv = ((Number)val).longValue();
-	  if (lv >= 1000000) {
+	  if (lv >= 1000000 || lv <= -1000000) {
 	    return getBigIntFormat().format(lv);
 	  }
 	}
