@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.34 2012-06-24 19:24:28 pgust Exp $
+ * $Id: MetadataManager.java,v 1.35 2012-07-04 20:24:32 pgust Exp $
  */
 
 /*
@@ -834,6 +834,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private static final String[] createFunctions = new String[] {
     
+    "create function contentSizeFromUrl(url varchar(4096)) "
+    + "returns bigint language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getContentSizeFromArticleUrl' " 
+    + "parameter style java no sql",
+
+      "create function contentTypeFromUrl(url varchar(4096)) "
+    + "returns varchar(512) language java external name "
+    + "'org.lockss.util.SqlStoredProcedures.getContentTypeFromArticleUrl' " 
+    + "parameter style java no sql",
+
       "create function eisbnFromAuId(pluginId varchar(128), "
     + "auKey varchar(512)) returns varchar(8) language java external name "
     + "'org.lockss.util.SqlStoredProcedures.getEisbnFromAuId' "
@@ -1009,17 +1019,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     + "'org.lockss.util.SqlStoredProcedures.getVolumeTitleFromArticleUrl' " 
     + "parameter style java no sql",
     
-      "create function contentTypeFromUrl(url varchar(4096)) "
-    + "returns varchar(512) language java external name "
-    + "'org.lockss.util.SqlStoredProcedures.getContentTypeFromArticleUrl' " 
-    + "parameter style java no sql",
-
-    
-    "create function contentSizeFromUrl(url varchar(4096)) "
-    + "returns bigint language java external name "
-    + "'org.lockss.util.SqlStoredProcedures.getContentSizeFromArticleUrl' " 
-    + "parameter style java no sql",
-
     "create function yearFromDate(date varchar(16)) returns varchar(4) "
     + "language java external name "
     + "'org.lockss.util.SqlStoredProcedures.getYearFromDate' "
@@ -1030,6 +1029,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * SQL statements that drop the functions
    */
   private static final String[] deleteFunctions = new String[] {
+    "drop function contentSizeFromUrl",
+    "drop function contentTypeFromUrl",
     "drop function eisbnFromAuId",
     "drop function eisbnFromUrl",
     "drop function eissnFromAuId",
