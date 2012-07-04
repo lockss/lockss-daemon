@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.1 2012-06-18 23:39:12 davidecorcoran Exp $
+ * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.2 2012-07-04 00:22:34 kendrayee Exp $
  */
 
 /*
@@ -54,6 +54,13 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
 
   private static final String inst2 = "<li class=\"greeting\"><strong>Welcome <span id=\"username\">Stanford University</span></strong></li>";
   
+  private static final String articlesTab1 = "<li><a href=\"/content\"><span id=\"articles-tab\"\">Articles</span></a></li>";
+  
+  private static final String articlesTab2 = "<li><a href=\"/content\"><span id=\"articles-tab\">Articles</span></a></li>";
+  
+  private static final String whiteSpace1 = "\n  <li><a href=\"/content/pdf/1477-7525-8-103.pdf\">PDF</a>\n (543KB)\n </li>";
+  
+  private static final String whiteSpace2 = "\n      <li><a href=\"/content/pdf/1477-7525-8-103.pdf\">PDF</a>\n       (543KB)\n      </li>";
  
   public void testFiltering() throws IOException {
     InputStream inA;
@@ -67,9 +74,39 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
       
     assertEquals(StringUtil.fromInputStream(inA),
           StringUtil.fromInputStream(inB));
+    
 
     } catch (PluginException e) {
        e.printStackTrace();
     }
+    
+    try {
+      inA = fact.createFilteredInputStream(mau, new StringInputStream(articlesTab1),
+          ENC);
+      inB = fact.createFilteredInputStream(mau, new StringInputStream(articlesTab2),
+          ENC);
+      
+    assertEquals(StringUtil.fromInputStream(inA),
+          StringUtil.fromInputStream(inB));
+    
+
+    } catch (PluginException e) {
+       e.printStackTrace();
+    }
+    
+    try {
+      inA = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpace1),
+          ENC);
+      inB = fact.createFilteredInputStream(mau, new StringInputStream(whiteSpace2),
+          ENC);
+      
+    assertEquals(StringUtil.fromInputStream(inA),
+          StringUtil.fromInputStream(inB));
+    
+
+    } catch (PluginException e) {
+       e.printStackTrace();
+    }
+    
   }
 }

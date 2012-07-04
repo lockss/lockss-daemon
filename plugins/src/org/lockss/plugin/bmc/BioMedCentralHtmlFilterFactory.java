@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.5 2012-06-18 23:39:12 davidecorcoran Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.6 2012-07-04 00:22:34 kendrayee Exp $
  */
 
 /*
@@ -33,12 +33,17 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.bmc;
 
 import java.io.InputStream;
+import java.io.Reader;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ReaderInputStream;
 
 public class BioMedCentralHtmlFilterFactory implements FilterFactory {
 
@@ -71,9 +76,16 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         // Institution-dependent link resolvers
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp"),
         // Institution-dependent greeting
-        HtmlNodeFilters.tagWithAttribute("span", "id", "username")
+        HtmlNodeFilters.tagWithAttribute("span", "id", "username"),
+        // Malformed HTML
+        HtmlNodeFilters.tagWithAttribute("span", "id", "articles-tab")
+        
     };
-    return new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    
+    InputStream filtered =  new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    
+    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
 
 }
