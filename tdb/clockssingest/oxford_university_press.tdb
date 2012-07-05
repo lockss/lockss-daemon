@@ -371,8 +371,8 @@
     param[base_url] = http://ahr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     
-    au < exists ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 ; >
-    au < exists ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 ; >
+    au < manifest ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 ; >
+    au < manifest ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 ; >
     au < exists ; exists ; 2007 ; The American Historical Review Volume 112 ; 112 ; >
     au < exists ; exists ; 2008 ; The American Historical Review Volume 113 ; 113 ; >
     au < exists ; exists ; 2009 ; The American Historical Review Volume 114 ; 114 ; >
@@ -4878,7 +4878,7 @@
     au < released ; crawling ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 ; >
     au < released ; crawling ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 ; >
     au < crawling ; exists ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 41 ; 41 ; >
-    au < expected ; exists ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 ; >
 
   }
 
@@ -8289,7 +8289,7 @@
     au < released ; crawling ; 2010 ; Jerusalem Review of Legal Studies Volume 1 ; 1 ; >
     au < released ; crawling ; 2010 ; Jerusalem Review of Legal Studies Volume 2 ; 2 ; >
     au < released ; crawling ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 ; >
-    au < expected ; exists ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 ; >
 
   }
 
@@ -8896,7 +8896,7 @@
     au < released ; crawling ; 2011 ; The Journal of Biochemistry Volume 149 ; 149 ; >
     au < released ; crawling ; 2011 ; The Journal of Biochemistry Volume 150 ; 150 ; >
     au < crawling ; exists ; 2012 ; The Journal of Biochemistry Volume 151 ; 151 ; >
-    au < exists ; exists ; 2012 ; The Journal of Biochemistry Volume 152 ; 152 ; >
+    au < manifest ; exists ; 2012 ; The Journal of Biochemistry Volume 152 ; 152 ; >
     }
 
   }
