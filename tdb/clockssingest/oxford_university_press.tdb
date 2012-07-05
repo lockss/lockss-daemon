@@ -370,9 +370,10 @@
 
     param[base_url] = http://ahr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[0] = manifest page carries broken links 
     
-    au < manifest ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 ; >
-    au < manifest ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 ; >
+    au < exists ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 ; >
+    au < exists ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 ; >
     au < exists ; exists ; 2007 ; The American Historical Review Volume 112 ; 112 ; >
     au < exists ; exists ; 2008 ; The American Historical Review Volume 113 ; 113 ; >
     au < exists ; exists ; 2009 ; The American Historical Review Volume 114 ; 114 ; >
