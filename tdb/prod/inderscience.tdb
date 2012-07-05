@@ -225,6 +225,7 @@
       au < ready ; 2009 ; International Journal of Abrasive Technology Volume 2 ; 2 >
       au < ready ; 2010 ; International Journal of Abrasive Technology Volume 3 ; 3 >
       au < manifest ; 2011 ; International Journal of Abrasive Technology Volume 4 ; 4 >
+      au < manifest ; 2012 ; International Journal of Abrasive Technology Volume 5 ; 5 >
 
     }
 
@@ -2557,7 +2558,7 @@
 
       param[journal_issn] = 1741-5101
       
-      au < exists ; 1991 ; International Journal of Environment and Pollution Volume 1 ; 1 >
+      au < manifest ; 1991 ; International Journal of Environment and Pollution Volume 1 ; 1 >
       au < exists ; 1992 ; International Journal of Environment and Pollution Volume 2 ; 2 >
       au < exists ; 1993 ; International Journal of Environment and Pollution Volume 3 ; 3 >
       au < exists ; 1994 ; International Journal of Environment and Pollution Volume 4 ; 4 >
