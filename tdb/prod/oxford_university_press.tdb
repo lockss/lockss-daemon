@@ -351,6 +351,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ahr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[0] = manifest page carries broken links 
     
     au < HighWirePressH20Plugin ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 >
     au < HighWirePressH20Plugin ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 >
