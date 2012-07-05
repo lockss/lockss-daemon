@@ -51,15 +51,26 @@
       issnl = 2000-625X
     >
 
-    param[base_url] = http://www.diabeticfootandankle.net/
-    param[journal_id] = dfa
-    comment[0] = includes supplements
+    {
+      param[base_url] = http://www.diabeticfootandankle.net/
+      param[journal_id] = dfa
+      comment[0] = includes supplements
+      comment[1] = AUs mistakenly released with 'www': ingested content has no substance
 
-    au < released ; crawling ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
-    au < released ; crawling ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
-    au < released ; crawling ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012
-     >
+      au < down ; crawling ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
+      au < down ; crawling ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
+      au < down ; crawling ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+    }
     
+    {
+      param[base_url] = http://diabeticfootandankle.net/
+      param[journal_id] = dfa
+      comment[0] = includes supplements
+
+      au < manifest ; exists ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
+      au < manifest ; exists ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
+      au < manifest ; exists ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+    }
   }
    
   {
@@ -348,6 +359,8 @@
     {
       param[base_url] = http://www.med-ed-online.net/
       param[journal_id] = meo
+      comment[0] = AUs mistakenly released with 'www': ingested content has no substance
+      
       
       au < down ; crawling ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
       au < down ; crawling ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
@@ -371,8 +384,8 @@
       au < manifest ; exists ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
       au < manifest ; exists ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
       au < manifest ; exists ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
-      au < doNotProcess ; doNotProcess ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
-      au < doNotProcess ; doNotProcess ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
+      au < manifest ; exists ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
+      au < manifest ; exists ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
       au < manifest ; exists ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
     }
   }
