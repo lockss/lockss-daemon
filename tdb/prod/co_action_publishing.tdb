@@ -16,7 +16,7 @@
       issnl = 2000-7396 
     >
 
-    param[base_url] = http://www.innovationandentrepreneurship.net/
+    param[base_url] = 
     param[journal_id] = aie
     
     au < released ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
@@ -50,13 +50,24 @@
       issnl = 2000-625X
     >
 
-    param[base_url] = http://www.diabeticfootandankle.net/
-    param[journal_id] = dfa
+    {
+      param[base_url] = http://www.diabeticfootandankle.net/
+      param[journal_id] = dfa
+      comment[0] = AUs mistakenly released with 'www': ingested content has no substance
 
-    au < released ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
-    au < released ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
-    au < released ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+      au < down ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
+      au < down ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
+      au < down ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+    }
     
+    {
+      param[base_url] = http://diabeticfootandankle.net/
+      param[journal_id] = dfa
+
+      au < manifest ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
+      au < manifest ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
+      au < manifest ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+    }
   }
 
   {
@@ -346,6 +357,8 @@
 
     param[base_url] = http://www.med-ed-online.net/
     param[journal_id] = meo
+    comment[0] = AUs mistakenly released with 'www': ingested content has no substance
+    
 
     au < down ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
     au < down ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
@@ -357,22 +370,22 @@
     param[base_url] = http://med-ed-online.net/
     param[journal_id] = meo
 
-    au < ready ; 1996 ; Medical Education Online Volume 1 ; 1 ; 1996 >
-    au < ready ; 1997 ; Medical Education Online Volume 2 ; 2 ; 1997 >
-    au < ready ; 1998 ; Medical Education Online Volume 3 ; 3 ; 1998 >
-    au < ready ; 1999 ; Medical Education Online Volume 4 ; 4 ; 1999 >
-    au < ready ; 2000 ; Medical Education Online Volume 5 ; 5 ; 2000 >
-    au < ready ; 2001 ; Medical Education Online Volume 6 ; 6 ; 2001 >
-    au < ready ; 2002 ; Medical Education Online Volume 7 ; 7 ; 2002 >
-    au < ready ; 2003 ; Medical Education Online Volume 8 ; 8 ; 2003 >
-    au < ready ; 2004 ; Medical Education Online Volume 9 ; 9 ; 2004 >
-    au < ready ; 2005 ; Medical Education Online Volume 10 ; 10 ; 2005 >
-    au < ready ; 2006 ; Medical Education Online Volume 11 ; 11 ; 2006 >
-    au < ready ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
-    au < ready ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
-    au < ready ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
-    au < doNotProcess ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
-    au < doNotProcess ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
+    au < manifest ; 1996 ; Medical Education Online Volume 1 ; 1 ; 1996 >
+    au < manifest ; 1997 ; Medical Education Online Volume 2 ; 2 ; 1997 >
+    au < manifest ; 1998 ; Medical Education Online Volume 3 ; 3 ; 1998 >
+    au < manifest ; 1999 ; Medical Education Online Volume 4 ; 4 ; 1999 >
+    au < manifest ; 2000 ; Medical Education Online Volume 5 ; 5 ; 2000 >
+    au < manifest ; 2001 ; Medical Education Online Volume 6 ; 6 ; 2001 >
+    au < manifest ; 2002 ; Medical Education Online Volume 7 ; 7 ; 2002 >
+    au < manifest ; 2003 ; Medical Education Online Volume 8 ; 8 ; 2003 >
+    au < manifest ; 2004 ; Medical Education Online Volume 9 ; 9 ; 2004 >
+    au < manifest ; 2005 ; Medical Education Online Volume 10 ; 10 ; 2005 >
+    au < manifest ; 2006 ; Medical Education Online Volume 11 ; 11 ; 2006 >
+    au < manifest ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
+    au < manifest ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
+    au < manifest ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
+    au < manifest ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
+    au < manifest ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
     au < manifest ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
 
     }
