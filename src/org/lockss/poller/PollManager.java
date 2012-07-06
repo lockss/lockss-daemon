@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.219 2012-06-17 23:07:11 tlipkis Exp $
+ * $Id: PollManager.java,v 1.220 2012-07-06 19:08:53 barry409 Exp $
  */
 
 /*
@@ -292,7 +292,7 @@ public class PollManager
 
   private AuPeersMap atRiskAuInstances = null;
 
-  // If true, restore V3 Voters
+  // If true, restore V3 Pollers
   private boolean enablePollers = DEFAULT_ENABLE_V3_POLLER;
   // If true, restore V3 Voters
   private boolean enableVoters = DEFAULT_ENABLE_V3_VOTER;
