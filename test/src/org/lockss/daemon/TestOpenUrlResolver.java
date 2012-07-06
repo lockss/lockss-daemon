@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.19 2012-03-28 21:08:48 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.20 2012-07-06 22:57:14 fergaloy-sf Exp $
  */
 
 /*
@@ -38,11 +38,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
-
-import javax.sql.DataSource;
-
 import org.lockss.config.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
+import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -75,6 +73,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
   private PluginManager pluginManager;
   private OpenUrlResolver openUrlResolver;
   private boolean disableMetadataManager = false;
+  private DbManager dbManager;
 
   /** set of AUs reindexed by the MetadataManager */
   Set<String> ausReindexed = new HashSet<String>();
@@ -102,6 +101,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     props.setProperty(MetadataManager.PARAM_INDEXING_ENABLED, 
                       paramIndexingEnabled);
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(DbManager.PARAM_DATASOURCE_ROOTDIR, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
     Configuration config = ConfigurationUtil.fromProps(props);
 
@@ -176,22 +176,23 @@ public class TestOpenUrlResolver extends LockssTestCase {
     PluginTestUtil.crawlSimAu(sau3);
 
     ausReindexed.clear();
+
+    dbManager = new DbManager() {
+      public Connection getConnection() throws SQLException {
+	return super.getConnection();
+      }
+    };
+
+    theDaemon.setDbManager(dbManager);
+    dbManager.initService(theDaemon);
+
+    try {
+      dbManager.startService();
+    } catch (IllegalArgumentException ex) {
+      // ignored
+    }
+
     metadataManager = new MetadataManager() {
-      public Connection newConnection() throws SQLException {
-        if (disableMetadataManager) {
-          throw new IllegalArgumentException("MetadataManager is disabled");
-        }
-        return super.newConnection();
-      }
-      
-      /**
-       * Get the db root directory for testing.
-       * @return the db root directory
-       */
-      protected String getDbRootDirectory() {
-        return tempDirPath;
-      }
-      
       /**
        * Notify listeners that an AU is being reindexed.
        * 
@@ -262,19 +263,18 @@ public class TestOpenUrlResolver extends LockssTestCase {
   }
 
   public void createMetadata() throws Exception {
+    dbManager.startService();
+
     // reset set of reindexed aus
     ausReindexed.clear();
 
     metadataManager.restartService();
     theDaemon.setAusStarted(true);
     
-    DataSource ds = metadataManager.getDataSource();
-    assertNotNull(ds);
-    
     int expectedAuCount = 4;
     assertEquals(expectedAuCount, pluginManager.getAllAus().size());
     
-    Connection con = ds.getConnection();
+    Connection con = dbManager.getConnection();
     
     long maxWaitTime = expectedAuCount * 20000; // 20 sec. per au
     int ausCount = waitForReindexing(expectedAuCount, maxWaitTime);

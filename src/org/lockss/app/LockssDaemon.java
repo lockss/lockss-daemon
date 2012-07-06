@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.110 2012-02-16 10:31:08 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.111 2012-07-06 22:50:47 fergaloy-sf Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.apache.commons.lang.SystemUtils;
 import org.lockss.util.*;
 import org.lockss.alert.*;
 import org.lockss.daemon.*;
+import org.lockss.db.DbManager;
 import org.lockss.account.*;
 import org.lockss.hasher.*;
 import org.lockss.scheduler.*;
@@ -140,6 +141,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String CRON = "Cron";
   public static final String CLOCKSS_PARAMS = "ClockssParams";
   public static final String TRUEZIP_MANAGER = "TrueZipManager";
+  public static final String DB_MANAGER = "DbManager";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
@@ -169,7 +171,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 		    "org.lockss.repository.RepositoryManager"),
     // start plugin manager after generic services
     new ManagerDesc(PLUGIN_MANAGER, "org.lockss.plugin.PluginManager"),
-    // start metadata manager after pluggin manager
+    // start database manager before any manager that uses it.
+    new ManagerDesc(DB_MANAGER, "org.lockss.db.DbManager"),
+    // start metadata manager after pluggin manager and database manager.
     new ManagerDesc(METADATA_MANAGER, "org.lockss.daemon.MetadataManager") {
       public boolean shouldStart() { 
         return ConfigManager.getCurrentConfig().getBoolean("org.lockss.daemon.metadataManager.enabled", false); 
@@ -533,6 +537,17 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public TrueZipManager getTrueZipManager() {
     return (TrueZipManager)getManager(TRUEZIP_MANAGER);
+  }
+
+  /**
+   * Provides the database manager instance.
+   * 
+   * @return a DbManager with the database manager instance.
+   * @throws IllegalArgumentException
+   *           if the manager is not available.
+   */
+  public DbManager getDbManager() {
+    return (DbManager) getManager(DB_MANAGER);
   }
 
   /**

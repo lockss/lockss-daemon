@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.8 2011-11-08 21:29:08 pgust Exp $
+ * $Id: TestMetadataManager.java,v 1.9 2012-07-06 22:57:14 fergaloy-sf Exp $
  */
 
 /*
@@ -36,10 +36,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.*;
-
-import javax.sql.DataSource;
-
 import org.lockss.config.*;
+import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -65,6 +63,7 @@ public class TestMetadataManager extends LockssTestCase {
   private MetadataManager metadataManager;
   private PluginManager pluginManager;
   private String tempDirPath;
+  private DbManager dbManager;
 
   /** set of AuIds of AUs reindexed by the MetadataManager */
   Set<String> ausReindexed = new HashSet<String>();
@@ -92,6 +91,7 @@ public class TestMetadataManager extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(MetadataManager.PARAM_INDEXING_ENABLED, "true");
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(DbManager.PARAM_DATASOURCE_ROOTDIR, tempDirPath);
     Configuration config = ConfigurationUtil.fromProps(props);
     ConfigurationUtil.installConfig(config);
 
@@ -111,27 +111,24 @@ public class TestMetadataManager extends LockssTestCase {
     // reset set of reindexed aus
     ausReindexed.clear();
 
+    dbManager = new DbManager();
+    theDaemon.setDbManager(dbManager);
+    dbManager.initService(theDaemon);
+    dbManager.startService();
+
     metadataManager = new MetadataManager() {
-      /**
-       * Get the db root directory for testing.
-       * @return the db root directory
-       */
-      protected String getDbRootDirectory() {
-        return tempDirPath;
-      }
-      
       /**
        * Notify listeners that an AU has been deleted
        * @param auId the AuId of the AU that was deleted
        * @param articleCount the number of articles deleted for the AU
        */
       protected void notifyDeletedAu(String auId, int articleCount) {
-        synchronized (articlesDeleted) {
-          articlesDeleted[0] += articleCount;
-          articlesDeleted.notifyAll();
-        }
+	synchronized (articlesDeleted) {
+	  articlesDeleted[0] += articleCount;
+	  articlesDeleted.notifyAll();
+	}
       }
-      
+
       /**
        * Notify listeners that an AU is being reindexed.
        * 
@@ -237,10 +234,7 @@ public class TestMetadataManager extends LockssTestCase {
   }
 
   public void testCreateMetadata() throws Exception {
-    DataSource ds = metadataManager.getDataSource();
-    assertNotNull(ds);
-    
-    Connection con = ds.getConnection();
+    Connection con = dbManager.getConnection();
     
     assertEquals(0, metadataManager.reindexingTasks.size());
     assertEquals(0, metadataManager.getAuIdsToReindex(con, Integer.MAX_VALUE).size());
@@ -327,9 +321,7 @@ public class TestMetadataManager extends LockssTestCase {
   }
   
   public void testModifyMetadata() throws Exception {
-    DataSource ds = metadataManager.getDataSource();
-    assertNotNull(ds);
-    Connection con = ds.getConnection();
+    Connection con = dbManager.getConnection();
     
     // check unique plugin IDs
     String query =           
@@ -378,9 +370,7 @@ public class TestMetadataManager extends LockssTestCase {
   
   
   public void testDeleteMetadata() throws Exception {
-    DataSource ds = metadataManager.getDataSource();
-    assertNotNull(ds);
-    Connection con = ds.getConnection();
+    Connection con = dbManager.getConnection();
     
     // check unique plugin IDs
     String query =           

@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.35 2012-07-04 20:24:32 pgust Exp $
+ * $Id: MetadataManager.java,v 1.36 2012-07-06 22:50:47 fergaloy-sf Exp $
  */
 
 /*
@@ -31,19 +31,13 @@
  */
 package org.lockss.daemon;
 
-import java.io.File;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadMXBean;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.sql.BatchUpdateException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -55,12 +49,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-
-import javax.sql.DataSource;
-
-import org.apache.commons.lang.ClassUtils;
 import org.apache.commons.lang.mutable.MutableInt;
-import org.apache.derby.jdbc.ClientDataSource;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
 import org.lockss.app.LockssDaemon;
@@ -68,6 +57,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.Configuration.Differences;
 import org.lockss.config.TdbAu;
+import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractor.Emitter;
@@ -147,11 +137,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Default maximum concurrent reindexing tasks */
   static public final int DEFAULT_MAX_REINDEXING_TASKS = 1;
 
-
-  /** Property tree root for datasource properties */
-  static public final String DATASOURCE_ROOT = PREFIX + "datasource";
-  
-
   /**
    * Map of running reindexing tasks keyed by their AuIds
    */
@@ -175,11 +160,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Maximum number of reindexing tasks */
   int maxReindexingTasks = DEFAULT_MAX_REINDEXING_TASKS;
 
-  /** The database data source */
-  private DataSource dataSource = null;
-
   /** The plugin manager */
   private PluginManager pluginMgr = null;
+
+  /** The database manager */
+  private DbManager dbManager = null;
 
   /** Name of DOI table */
   static final String DOI_TABLE = "DOI";
@@ -328,7 +313,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     Connection conn;
     try {
-      conn = newConnection();
+      conn = dbManager.getConnection();
     } catch (SQLException ex) {
       log.error("Cannot connect to database -- service not started");
       return;
@@ -337,16 +322,22 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // create schema and initialize tables if schema does not exist
     String[] schemas = null;
 
-    dbIsNew = !tableExists(conn, PENDINGAUS_TABLE);
+    try {
+    dbIsNew = !dbManager.tableExists(conn, PENDINGAUS_TABLE);
     if (dbIsNew) {
       schemas = createSchema;
-    } else if (!tableExists(conn, TITLE_TABLE)) {
+    } else if (!dbManager.tableExists(conn, TITLE_TABLE)) {
       // add new title table if needed
       schemas = new String[] {create_TITLE_TABLE};
     }
+    } catch (SQLException sqle) {
+      log.error("Error initializing manager");
+      return;
+    }
+    
     if (schemas != null) {
       try {
-        executeBatch(conn, schemas);
+	dbManager.executeBatch(conn, schemas);
       } catch (BatchUpdateException ex) {
         // handle batch update exception
         int[] counts = ex.getUpdateCounts();
@@ -356,11 +347,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                     + schemas[i]);
         }
         log.error("Cannot initialize schema -- service not started", ex);
-        safeClose(conn);
+        dbManager.safeRollbackAndClose(conn);
         return;
       } catch (SQLException ex) {
         log.error("Cannot initialize schema -- service not started", ex);
-        safeClose(conn);
+        dbManager.safeRollbackAndClose(conn);
         return;
       }
     }
@@ -368,7 +359,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (!dbIsNew) {
       // delete all old functions
       try {
-        executeBatch(conn, deleteFunctions);
+	dbManager.executeBatch(conn, deleteFunctions);
       } catch (BatchUpdateException ex) {
         // handle batch update exception
         int[] counts = ex.getUpdateCounts();
@@ -384,8 +375,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     // add new functions
     try {
-      executeBatch(conn, createFunctions);
-      safeCommit(conn);
+      dbManager.executeBatch(conn, createFunctions);
+      conn.commit();
     } catch (BatchUpdateException ex) {
       // handle batch update exception
       int[] counts = ex.getUpdateCounts();
@@ -398,8 +389,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.error("Cannot create functions", ex);
     }
 
-    safeCommit(conn);
-    safeClose(conn);
+    dbManager.safeRollbackAndClose(conn);
 
     // register to receive content change notifications to 
     // reindex the database content associated with the au
@@ -448,7 +438,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     Connection conn;
     try {
-      conn = newConnection();
+      conn = dbManager.getConnection();
     } catch (SQLException ex) {
       log.error("Cannot get database connection -- service not started");
       return;
@@ -457,8 +447,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // reset database tables
     try {
       // drop schema tables already exist
-      if (tableExists(conn, PENDINGAUS_TABLE)) {
-        executeBatch(conn, dropSchema);
+      if (dbManager.tableExists(conn, PENDINGAUS_TABLE)) {
+	dbManager.executeBatch(conn, dropSchema);
       }
       conn.commit();
       conn.close();
@@ -470,11 +460,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                   + createSchema[i]);
       }
       log.error("Cannot drop existing schema -- service not started", ex);
-      safeClose(conn);
+      dbManager.safeRollbackAndClose(conn);
       return;
     } catch (SQLException ex) {
       log.error("Cannot drop existing schema -- service not started", ex);
-      safeClose(conn);
+      dbManager.safeRollbackAndClose(conn);
       return;
     }
 
@@ -489,256 +479,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return <code>true</code> if initialized
    */
   protected boolean initializeService(Configuration config) {
-    // already initialized if datasource exists
-    if (dataSource != null) {
-      return true;  // already initialized
-    }
-
     // determine maximum number of concurrent reindexing tasks
     // (0 disables reindexing)
     maxReindexingTasks = config.getInt(PARAM_MAX_REINDEXING_TASKS,
                                        DEFAULT_MAX_REINDEXING_TASKS);
     maxReindexingTasks = Math.max(0, maxReindexingTasks);
 
-    // get datasource class and properties
-    Configuration datasourceConfig = ConfigManager.newConfiguration();
-    datasourceConfig.copyFrom(
-      ConfigManager.getCurrentConfig().getConfigTree(DATASOURCE_ROOT));
-    String dataSourceClassName = datasourceConfig.get("className");
-    if (dataSourceClassName != null) {
-      // class name not really part of data source definition.
-      datasourceConfig.remove("className");
-    } else {
-      File databaseFile = new File(getDbRootDirectory(), "db/MetadataManager");
-      String databaseName = databaseFile.getAbsolutePath();
-      // use derby embedded datasource by default
-      dataSourceClassName = "org.apache.derby.jdbc.EmbeddedDataSource";
-      datasourceConfig.put("databaseName", databaseName);
-      datasourceConfig.put("description", "Embeddded JavaDB data source");
-      datasourceConfig.put("user", "LOCKSS");
-//      datasourceConfig.put("password", "LOCKSS");
-      datasourceConfig.put("createDatabase", "create");
-    }
-    Class<?> cls;
-    try {
-      cls = Class.forName(dataSourceClassName);
-    } catch (Throwable ex) {
-      log.error("Cannot locate datasource class \"" + dataSourceClassName
-          + "\"", ex);
-      return false;
-    }
-
-    // create datasource
-    try {
-      dataSource = (DataSource) cls.newInstance();
-    } catch (ClassCastException ex) {
-      log.error("Class not a DataSource \"" + dataSourceClassName + "\"");
-      return false;
-    } catch (Throwable ex) {
-      log.error("Cannot create instance of datasource class \""
-          + dataSourceClassName + "\"", ex);
-      return false;
-    }
-    boolean errors = false;
-    // initialize datasource properties
-    for (String key : datasourceConfig.keySet()) {
-      String value = datasourceConfig.get(key);
-      try {
-        setPropertyByName(dataSource, key, value);
-      } catch (Throwable ex) {
-        errors = true;
-        log.error(  "Cannot set property \"" + key
-                  + "\" for instance of datasource class \"" 
-                  + dataSourceClassName + "\"", ex);
-      }
-    }
-    if (errors) {
-      log.error(  "Cannot initialize instance of datasource class \""
-                + dataSourceClassName + "\"");
-      dataSource = null;
-      return false;
-    }
-    
-    boolean ready = true;
-    if (dataSource instanceof ClientDataSource) {
-      // start Derby NetworkServerControl for client connection
-      ClientDataSource cds = (ClientDataSource) dataSource;
-      String serverName = cds.getServerName();
-      int serverPort = cds.getPortNumber();
-      try {
-        ready = startNetworkServerControl(serverName, serverPort);
-        if (!ready) {
-          log.error("Cannot enable remote access to Derby database");
-          dataSource = null;
-        }
-      } catch (UnknownHostException ex) {
-        log.error("Unknown host for remote Derby database: " + serverName);
-        dataSource = null;
-        ready = false;
-      }
-    }
-
-    return ready;
-  }
-  
-  /**
-   * Start the Derby NetworkServerConrol and wait for it to be ready.
-   * 
-   * @param serverName the server name
-   * @param serverPort the server port
-   * @throws UnknownHostException if serverName not valid
-   */
-  private boolean startNetworkServerControl(String serverName, int serverPort) 
-    throws UnknownHostException {
-    // if dataSource is a Derby ClientDataSource, enable remote access
-    InetAddress inetAddr = InetAddress.getByName(serverName);
-
-    org.apache.derby.drda.NetworkServerControl networkServerControl; 
-    try {
-        networkServerControl = 
-          new org.apache.derby.drda.NetworkServerControl(inetAddr, serverPort);
-      networkServerControl.start(null);
-    } catch (Exception ex) {
-      return false; // unspecified error occurred
-    }
-    
-    // wait for network server control to be ready
-    for (int i = 0; i < 40; i++) { // at most 20 seconds;
-      try {
-        networkServerControl.ping();
-        return true;
-      } catch (Exception ex) {
-        // control not ready; wait and try again
-        try {
-          Thread.sleep(500);       // about 1/2 second
-        } catch (InterruptedException ex2) {
-          break;
-        }
-      }
-    }
-    return false;
-  }
-
-  /**
-   * Set a bean property for an object by name. Property value string is
-   * converted to the appropriate data type.
-   * 
-   * @param obj the object
-   * @param propName the property name
-   * @param propValue the property value
-   * @throws Throwable if an error occurred.
-   */
-  private void setPropertyByName(Object obj, String propName, String propValue)
-      throws Throwable {
-
-    String setterName =   "set" + propName.substring(0, 1).toUpperCase()
-                        + propName.substring(1);
-    for (Method m : obj.getClass().getMethods()) {
-      // find matching setter method
-      if (m.getName().equals(setterName)) {
-        // find single-argument method
-        Class<?>[] paramTypes = m.getParameterTypes();
-        if (paramTypes.length == 1) {
-          try {
-            // only handle argument types that have String constructors
-            @SuppressWarnings("rawtypes")
-            Class paramType = ClassUtils.primitiveToWrapper(paramTypes[0]);
-            @SuppressWarnings({ "rawtypes", "unchecked" })
-            Constructor c = paramType.getConstructor(String.class);
-            // invoke method with instance created from string
-            Object val = c.newInstance(propValue);
-            m.invoke(obj, val);
-            return;
-          } catch (Throwable ex) {
-            // ignore
-            log.debug2(setterName, ex);
-          }
-        }
-      }
-    }
-    throw new NoSuchMethodException(  obj.getClass().getName() 
-                                    + "." + setterName + "()");
-  }
-
-  /**
-   * Get the root directory for creating the database files.
-   * 
-   * @return the root directory
-   */
-  protected String getDbRootDirectory() {
-    Configuration config = ConfigManager.getCurrentConfig();
-    String rootDir = config.get(ConfigManager.PARAM_TMPDIR);
-    @SuppressWarnings("unchecked")
-    List<String> dSpaceList = 
-    	config.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
-    if (dSpaceList != null && !dSpaceList.isEmpty()) {
-      rootDir = dSpaceList.get(0);
-    }
-    return rootDir;
-  }
-
-  /**
-   * Determines whether a table exists.
-   * 
-   * @param conn the connection
-   * @param tableName the table name
-   * @return <code>true</code> if the named table exists
-   */
-  private static boolean tableExists(Connection conn, String tableName) {
-    if (conn != null) {
-      try {
-        Statement st = conn.createStatement();
-        st.setMaxRows(1);
-
-        String sql = "select * from " + tableName;
-        st.executeQuery(sql);
-        st.close();
-        return true;
-      } catch (SQLException ex) {
-      }
-    }
-    return false;
-  }
-
-  /**
-   * Write the named table schema to the log. For debugging purposes only.
-   * <p>
-   * See http://www.roseindia.net/jdbc/Jdbc-meta-data-get-tables.shtml
-   * 
-   * @param conn the connection
-   * @param tableName the table name
-   */
-  @SuppressWarnings("unused")
-  private static void logSchema(Connection conn, String tableName) {
-    if (conn != null) {
-      try {
-        Statement st = conn.createStatement();
-        st.setMaxRows(1);
-
-        String sql = "select * from " + tableName;
-        ResultSet rs = st.executeQuery(sql);
-        ResultSetMetaData metaData = rs.getMetaData();
-
-        int rowCount = metaData.getColumnCount();
-
-        log.info("Table Name : " + metaData.getTableName(2));
-        log.info("Field  \tsize\tDataType");
-
-        for (int i = 1; i <= rowCount; i++) {
-          StringBuilder sb = new StringBuilder();
-          sb.append(metaData.getColumnName(i));
-          sb.append("  \t");
-          sb.append(metaData.getColumnDisplaySize(i));
-          sb.append(" \t");
-          sb.append(metaData.getColumnTypeName(i + 1));
-          log.info(sb.toString());
-        }
-        st.close();
-        return;
-      } catch (SQLException ex) {
-      }
-    }
-    log.info("Cannot log table \"" + tableName + "\"");
+    dbManager = getDaemon().getDbManager();
+    return true;
   }
 
   /**
@@ -1069,50 +817,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     "drop function yearFromDate",
   };
 
-
-  /**
-   * Execute a batch of statements.
-   * 
-   * @param conn the connection
-   * @param stmts the statements
-   * @throws BatchUpdateException if a batch update exception occurred
-   * @throws SQLException if any other SQL exception occurred
-   */
-  private void executeBatch(Connection conn, String[] stmts)
-      throws BatchUpdateException, SQLException {
-    Statement s = conn.createStatement();
-    for (String stmt : stmts) {
-      s.addBatch(stmt);
-    }
-    s.executeBatch();
-  }
-
-  /**
-   * Get the DataSource for this instance.
-   * 
-   * @return the DataSource for this instance
-   */
-  DataSource getDataSource() {
-    return dataSource;
-  }
-
-  /**
-   * Create a new database connection using the datasource. Autocommit is
-   * disabled.
-   * 
-   * @return the new connection
-   * @throws SQLException if an error occurred while connecting
-   */
-  public Connection newConnection() throws SQLException {
-    if (dataSource == null) {
-      throw new SQLException("No datasource");
-    }
-
-    Connection conn = dataSource.getConnection();
-    conn.setAutoCommit(false);
-    return conn;
-  }
-
   /**
    * Ensure that as many reindexing tasks as possible are running if manager is
    * enabled.
@@ -1192,12 +896,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     Connection conn = null;
     int count = 0;
     try {
-      conn = newConnection();
+      conn = dbManager.getConnection();
       count = startReindexing(conn);
     } catch (SQLException ex) {
       log.debug("Cannot connect to database -- indexing not started", ex);
     } finally {
-      safeClose(conn);
+      dbManager.safeRollbackAndClose(conn);
     }
     return count;
   }
@@ -1237,7 +941,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     log.debug("enabled: " + reindexingEnabled);
 
     // start or stop reindexing if initialized
-    if (dataSource != null) {
+    if (dbManager != null) {
       if (!wasEnabled && reindexingEnabled) {
         // start reindexing
         startReindexing();
@@ -1276,7 +980,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
       Connection conn;
       try {
-        conn = newConnection();
+        conn = dbManager.getConnection();
       } catch (SQLException ex) {
         log.error("Cannot connect to database -- extraction not started");
         return;
@@ -1301,17 +1005,17 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       
       try {
         addToPendingAus(conn, allAus);
-        safeCommit(conn);
+        conn.commit();
         dbIsNew = false;
       } catch (SQLException ex) {
         log.error(  "Cannot add pending AUs table \"" + PENDINGAUS_TABLE
                   + "\"", ex);
-        safeClose(conn);
+        dbManager.safeRollbackAndClose(conn);
         return;
       }
 
       startReindexing(conn);
-      safeClose(conn);
+      dbManager.safeRollbackAndClose(conn);
       
       // now that all aus started, it's safe to add the AuEventHandler
       pluginMgr.registerAuEventHandler(new AuEventHandler.Base() {
@@ -1560,7 +1264,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             log.debug2("Reindexing task starting for au: " + au.getName()
                 + " has articles? " + articleIterator.hasNext());
             try {
-              conn = newConnection();
+              conn = dbManager.getConnection();
 
               // remove old metadata before adding new for AU
               removeMetadata(conn, au);
@@ -1634,7 +1338,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                 // schedule another task if available
                 startReindexing(conn);
               }
-              safeClose(conn);
+              dbManager.safeRollbackAndClose(conn);
               conn = null;
             }
 
@@ -2207,48 +1911,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Close the connection and report an error if cannot close.
-   * 
-   * @param conn the connection
-   */
-  public static void safeClose(Connection conn) {
-    if (conn != null) {
-      try {
-        // rollback if not already committed
-        conn.rollback();
-      } catch (SQLException ex) {
-        // ignore
-      }
-
-      try {
-        conn.close();
-      } catch (SQLException ex) {
-        log.error(ex.getMessage(), ex);
-      }
-    }
-  }
-
-  /**
-   * Commit the transaction if the connection is not closed.
-   * 
-   * @param conn the connection
-   * @return <code>true</code> if the transaction was committed or the
-   *         connection was already closed
-   */
-  public static boolean safeCommit(Connection conn) {
-    if (conn != null) {
-      try {
-        if (!conn.isClosed()) {
-          conn.commit();
-        }
-        return true;
-      } catch (SQLException ex) {
-      }
-    }
-    return false;
-  }
-
-  /**
    * Cancel a reindexing task for the specified AU.
    * @param auId the AU id
    */
@@ -2293,7 +1955,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       try {
         log.debug2("Adding au to reindex: " + au.getName());
         // add pending AU
-        conn = newConnection();
+        conn = dbManager.getConnection();
         if (conn == null) {
           log.error(  "Cannot connect to database"
                     + " -- cannot add aus to pending aus");
@@ -2310,7 +1972,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         log.error("Cannot add au to pending AUs: " + au.getName(), ex);
         return false;
       } finally {
-        safeClose(conn);
+        dbManager.safeRollbackAndClose(conn);
       }
     }
   }

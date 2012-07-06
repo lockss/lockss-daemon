@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.70 2012-07-02 16:27:50 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.71 2012-07-06 22:55:05 fergaloy-sf Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.config.*;
 import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.StatusService;
+import org.lockss.db.DbManager;
 import org.lockss.hasher.HashService;
 import org.lockss.mail.MailService;
 import org.lockss.plugin.*;
@@ -92,6 +93,7 @@ public class MockLockssDaemon extends LockssDaemon {
   RemoteApi remoteApi = null;
   IcpManager icpManager = null;
   ClockssParams clockssParams = null;
+  DbManager dbManager = null;
 
   /** Unit tests that need a MockLockssDaemon should use {@link
    * LockssTestCase#getMockLockssDaemon()} rather than calling this
@@ -141,6 +143,7 @@ public class MockLockssDaemon extends LockssDaemon {
     identityManager = null;
     statusService = null;
     icpManager = null;
+    dbManager = null;
 
     //super.stopDaemon();
   }
@@ -493,6 +496,18 @@ public class MockLockssDaemon extends LockssDaemon {
     return identityManager != null;
   }
 
+  /**
+   * return the database manager instance
+   * @return the DbManager
+   */
+  public DbManager getDbManager() {
+    if (dbManager == null) {
+      dbManager = (DbManager)newManager(LockssDaemon.DB_MANAGER);
+      managerMap.put(LockssDaemon.DB_MANAGER, dbManager);
+    }
+    return dbManager;
+  }
+
   public StatusService getStatusService() {
     if (statusService == null) {
       statusService = (StatusService)newManager(LockssDaemon.STATUS_SERVICE);
@@ -732,6 +747,15 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setTrueZipManager(TrueZipManager tzMgr) {
     tzipManager = tzMgr;
     managerMap.put(LockssDaemon.TRUEZIP_MANAGER, tzipManager);
+  }
+
+  /**
+   * Set the DbManager
+   * @param dbMan the new manager
+   */
+  public void setDbManager(DbManager dbMan) {
+    dbManager = dbMan;
+    managerMap.put(LockssDaemon.DB_MANAGER, dbManager);
   }
 
   /**

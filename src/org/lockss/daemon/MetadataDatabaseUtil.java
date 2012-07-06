@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.1 2012-03-10 15:13:26 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.2 2012-07-06 22:50:47 fergaloy-sf Exp $
  */
 
 /*
@@ -38,10 +38,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.sql.DataSource;
-
 import org.lockss.app.LockssDaemon;
+import org.lockss.db.DbManager;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
@@ -234,11 +232,10 @@ final public class MetadataDatabaseUtil {
   static public List<? extends BibliographicItem>  getBibliographicItems() {
     List<BibliographicItem> items = new ArrayList<BibliographicItem>();
     Connection conn = null;
+    DbManager dbManager = null;
     try {
-      MetadataManager metadataManager = getDaemon().getMetadataManager();
-      DataSource source = metadataManager.getDataSource();
-    
-      conn = source.getConnection();
+      dbManager = getDaemon().getDbManager();
+      conn = dbManager.getConnection();
       Statement statement = conn.createStatement();
       if (statement.execute(bibliographicItemsQuery)) {
         ResultSet resultSet = statement.getResultSet();
@@ -252,7 +249,7 @@ final public class MetadataDatabaseUtil {
     } catch (SQLException ex) {
       log.warning(ex.getMessage());
     } finally {
-      MetadataManager.safeClose(conn);
+      dbManager.safeRollbackAndClose(conn);
     }
     return items;
   }

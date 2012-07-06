@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.31 2012-06-24 19:13:23 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.32 2012-07-06 22:50:47 fergaloy-sf Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ import org.lockss.config.TdbAu;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
 import org.lockss.daemon.ConfigParamDescr.InvalidFormatException;
+import org.lockss.db.DbManager;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PrintfConverter;
@@ -219,7 +220,7 @@ public class OpenUrlResolver {
   }
 
   /**
-   * Create a resolver for the specified metadata manager.
+   * Create a resolver for the specified database manager.
    * 
    * @param daemon the LOCKSS daemon
    */
@@ -887,9 +888,9 @@ public class OpenUrlResolver {
     }
     OpenUrlInfo resolved = noOpenUrlInfo;
     try {
-      // resolve from metadata manager
-      MetadataManager metadataMgr = daemon.getMetadataManager();
-      resolved = resolveFromDoi(metadataMgr, doi);
+      // resolve from database manager
+      DbManager dbMgr = daemon.getDbManager();
+      resolved = resolveFromDoi(dbMgr, doi);
     } catch (IllegalArgumentException ex) {
     }
     
@@ -902,15 +903,15 @@ public class OpenUrlResolver {
 
   /**
    * Return the article URL from a DOI using the MDB.
-   * @param metadataMgr the metadata manager
+   * @param dbMgr the database manager
    * @param doi the DOI
    * @return the OpenUrlInfo
    */
-  private OpenUrlInfo resolveFromDoi(MetadataManager metadataMgr, String doi) {
+  private OpenUrlInfo resolveFromDoi(DbManager dbMgr, String doi) {
     String url = null;
     Connection conn = null;
     try {
-      conn = metadataMgr.newConnection();
+      conn = dbMgr.getConnection();
 
       String MTN = MetadataManager.METADATA_TABLE;
       String DTN = MetadataManager.DOI_TABLE;
@@ -930,7 +931,7 @@ public class OpenUrlResolver {
       log.error("Getting DOI:" + doi, ex);
       
     } finally {
-      MetadataManager.safeClose(conn);
+      dbMgr.safeRollbackAndClose(conn);
     }
     return new OpenUrlInfo(url, OpenUrlInfo.ResolvedTo.ARTICLE);
   }
@@ -956,13 +957,13 @@ public class OpenUrlResolver {
     Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
     TdbTitle title = (tdb == null) ? null : tdb.getTdbTitleByIssn(issn);
     
-    // only go to metadata manager if requesting individual article
+    // only go to database manager if requesting individual article
     try {
-      // resolve article from metadata manager
+      // resolve article from database manager
       String[] issns = (title == null) ? 
         new String[] { issn } : title.getIssns();
-      MetadataManager metadataMgr = daemon.getMetadataManager();
-      resolved = resolveFromIssn(metadataMgr, issns, date, 
+      DbManager dbMgr = daemon.getDbManager();
+      resolved = resolveFromIssn(dbMgr, issns, date, 
                                 volume, issue, spage, author, atitle);
     } catch (IllegalArgumentException ex) {
       // intentionally ignore input error
@@ -983,7 +984,7 @@ public class OpenUrlResolver {
    * Return article URL from an ISSN, date, volume, issue, spage, and author. 
    * The first author will only be used when the starting page is not given.
    * 
-   * @param metadataMgr the metadata manager
+   * @param dbMgr the database manager
    * @param issns a list of alternate ISSNs for the title
    * @param date the publication date
    * @param volume the volume
@@ -994,14 +995,14 @@ public class OpenUrlResolver {
    * @return the article URL
    */
   private OpenUrlInfo resolveFromIssn(
-      MetadataManager metadataMgr,
+      DbManager dbMgr,
       String[] issns, String date, String volume, String issue, 
       String spage, String author, String atitle) {
           
     Connection conn = null;
     OpenUrlInfo resolved = noOpenUrlInfo;
     try {
-      conn = metadataMgr.newConnection();
+      conn = dbMgr.getConnection();
       StringBuilder query = new StringBuilder();
       ArrayList<String> args = new ArrayList<String>();
       buildAuxiliaryTableQuery(
@@ -1085,7 +1086,7 @@ public class OpenUrlResolver {
       log.error("Getting ISSNs:" + Arrays.toString(issns), ex);
         
     } finally {
-      MetadataManager.safeClose(conn);
+      dbMgr.safeRollbackAndClose(conn);
     }
     return resolved;
   }
@@ -1731,7 +1732,7 @@ public class OpenUrlResolver {
   /**
    * Return the article URL from an ISBN, edition, spage, and author.
    * The first author will only be used when the starting page is not given.
-   * "Volume" is used to hold edition information in the metadata manager 
+   * "Volume" is used to hold edition information in the database manager 
    * schema for books.  First author can be used in place of start page.
    * 
    * @param isbn the isbn
@@ -1747,12 +1748,12 @@ public class OpenUrlResolver {
     String isbn, String date, String volume, String edition, 
     String spage, String author, String atitle) {
     OpenUrlInfo resolved = noOpenUrlInfo;
-    // only go to metadata manager if requesting individual article/chapter
+    // only go to database manager if requesting individual article/chapter
     try {
-      // resolve from metadata manager
-      MetadataManager metadataMgr = daemon.getMetadataManager();
+      // resolve from database manager
+      DbManager dbMgr = daemon.getDbManager();
       resolved = resolveFromIsbn(
-          metadataMgr, isbn, date, volume, edition, spage, author, atitle);
+          dbMgr, isbn, date, volume, edition, spage, author, atitle);
     } catch (IllegalArgumentException ex) {
     }
 
@@ -1782,7 +1783,7 @@ public class OpenUrlResolver {
    * If none of the three are specified, the URL for the book table of contents 
    * is returned.
    * 
-   * @param metadataMgr the metadata manager
+   * @param dbMgr the database manager
    * @param isbn the isbn
    * @param String date the date
    * @param String volumeName the volumeName
@@ -1793,13 +1794,13 @@ public class OpenUrlResolver {
    * @return the url
    */
   private OpenUrlInfo resolveFromIsbn(
-      MetadataManager metadataMgr, String isbn, 
+      DbManager dbMgr, String isbn, 
       String date, String volume, String edition, 
       String spage, String author, String atitle) {
       OpenUrlInfo resolved = noOpenUrlInfo;
     Connection conn = null;
     try {
-      conn = metadataMgr.newConnection();
+      conn = dbMgr.getConnection();
       // strip punctuation
       isbn = isbn.replaceAll("[- ]", "");
       
@@ -1884,7 +1885,7 @@ public class OpenUrlResolver {
       log.error("Getting ISBN:" + isbn, ex);
         
     } finally {
-      MetadataManager.safeClose(conn);
+      dbMgr.safeRollbackAndClose(conn);
     }
     return resolved;
   }
