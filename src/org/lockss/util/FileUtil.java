@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.13 2010-06-17 18:48:25 tlipkis Exp $
+ * $Id: FileUtil.java,v 1.14 2012-07-06 22:35:23 fergaloy-sf Exp $
  *
 
 Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
@@ -444,4 +444,21 @@ public class FileUtil {
     tmpFileCnt++;
     return new File(dir, prefix + Integer.toString(tmpFileCnt) + suffix);
   }
+
+  /**
+   * Provides the canonical path of a file, or its absolute path, if it's not
+   * possible to provide the canonical path.
+   * 
+   * @param file
+   *          A File with the file whose path is to be provided.
+   * @return a String with the requested path.
+   */
+  public static String getCanonicalOrAbsolutePath(File file) {
+    try {
+      return file.getCanonicalPath();
+    } catch (IOException ioe) {
+      return file.getAbsolutePath();
+    }
+  }
+
 }
