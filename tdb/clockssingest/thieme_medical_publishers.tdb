@@ -332,16 +332,47 @@
   
     title < 
       name = Craniomaxillofacial Trauma & Reconstruction ;
-      issn = 1943-3875 
+      issn = 1943-3875 ;
+      eissn = 1943-3883
+       
     >
+    param[journal_id] = 10.1055/s-00000151
+    comment[years] = 2008-current
     
+  }
+  
+  {
+    title <
+      name = Deutsche Gesellschaft für Unfallchirurgie - Mitteilungen und Nachrichten ;
+      issn = 1436-6142 ;
+      eissn = 1438-9576
+    
+    >
+    param[journal_id] = 10.1055/s-00000176
+    comment[years] = 2011-current
+  
+  }
+  
+  {
+    title <
+      name = Deutsche Heilpraktiker-Zeitschrift ;
+      issn = 1862-2267 ;
+      eissn = 1862-2275
+    
+    >
+    param[journal_id] = 10.1055/s-00000135
+    comment[years] = 2006-current
+  
+  
+  
   }
   
   {
   
     title < 
       name = Endoscopy ;
-      issn = 0013-726X
+      issn = 0013-726X ;
+      eissn = 
     >
     
   }
