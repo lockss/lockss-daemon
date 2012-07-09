@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.106 2012-05-17 18:04:35 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.107 2012-07-09 07:54:16 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import junit.framework.*;
 import org.apache.commons.collections.Predicate;
 import org.apache.commons.collections.iterators.*;
 import org.apache.oro.text.regex.Pattern;
-import org.lockss.config.ConfigManager;
+import org.lockss.config.*;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.util.*;
 import org.lockss.util.ArrayIterator;
@@ -152,6 +152,17 @@ public class LockssTestCase extends TestCase {
     mockDaemon = newMockLockssDaemon();
     super.setUp();
     disableThreadWatchdog();
+  }
+
+  /** If org.lockss.platform.diskSpacePaths isn't set in the current
+   * config, set it to point to a new temp dir */
+  protected void setUpCacheDir() throws IOException {
+    Configuration curConfig = ConfigManager.getCurrentConfig();
+    if (!curConfig.containsKey(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST)) {
+      String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+      ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				    tempDirPath);
+    }
   }
 
   protected MockLockssDaemon newMockLockssDaemon() {
