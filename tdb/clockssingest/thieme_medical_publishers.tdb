@@ -492,9 +492,84 @@
     title < 
       name = Endoscopy ;
       issn = 0013-726X ;
-      eissn = 
+      eissn = 1438-8812
+      
     >
+    param[journal_id] = 10.1055/s-00000012
+    comment[years] = 1969-current
     
+  }
+  {
+    title <
+      name = Endoskopie heute ;
+      issn = 0933-811X ;
+      eissn = 1439-2577
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000013
+    comment[years] = 2002-current
+  
+  
+  
+  }
+  {
+    title <
+      name = Erfahrungsheilkunde ;
+      issn = 0014-0082 ;
+      eissn = 1439-4294
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000014
+    comment[years] = 2000-current
+  
+  
+  
+  }
+
+  {
+    title <
+      name = Ergopraxis ;
+      issn = 1439-2283 ;
+      eissn = 1869-5507
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000163
+    comment[years] = 2008-current  
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = ergoscience ;
+      issn = 1861-6348 ;
+      eissn = 1861-6356
+       
+    
+    >
+    param[journal_id] = 10.1055/s-00000138
+    comment[years] = 2006-current
+  
+  
+  
+  }
+  {
+    title <
+      name = Ernährung & Medizin ;
+      issn = 1439-1635 ;
+      eissn = 1438-9002
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000093
+    comment[years] = 2003-current
+  
+  
+  
   }
   
   {
