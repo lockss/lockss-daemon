@@ -171,9 +171,45 @@
 
    }
   
+   {
+     title <
+       name = Allgemein- und Viszeralchirurgie up2date ;
+       issn = 1611-6437 ;
+       eissn = 1611-6461
+       
+     >
+     param[journal_id] = 10.1055/s-00000147
+     comment[years] = 2007-current  
+       
+  }     
+  
+  {
+    title <
+      name = Allgemeine Homöopathische Zeitung ;
+      issn = 1438-2563 ;
+      eissn = 1439-8990
+      
+    >
+    param[journal_id] = 10.1055/s-00000008
+    comment[years] = 1948-current
+    
+    }
+    
+    {
+      title <
+        name = American Journal of Perinatology ;
+        issn = 0735-1631 ;
+        eissn = 1098-8785
+        
+      >  
+      param[journal_id] = 10.1055/s-00000009
+      comment[years] = 1983-current
+        
+   }     
+  
   {
     title < 
-      name = AJP Reports ;
+      name = American Journal of Perinatology Reports ;
       issn = 2157-6998 ;
       eissn = 2157-7005
        
