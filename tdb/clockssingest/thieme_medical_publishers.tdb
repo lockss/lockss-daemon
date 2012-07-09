@@ -273,20 +273,58 @@
   }
   
   {
+    title <
+      name = Balint Journal ;
+      issn = 1439-5142 ;
+      eissn = 1439-9008
+    
+    >
+    param[journal_id] = 10.1055/s-00000114
+    comment[years] = 2001-current 
+  
+  
+  
+  }
+  
+  {
   
     title < 
       name = Central European Neurosurgery ;
-      issn = 1868-4904 
+      issn = 1868-4904 ;
+      eissn = 1868-4912
+      
     >
+    param[journal_id] = 10.1055/s-00000107
+    comment[years] = 2009-current
+    comment[0] = originally Zentralblatt fuer Neurochirurgie
     
+  }
+  
+  {
+    title <
+      name = Central European Neurosurgery - Zentralblatt für Neurochirurgie ;
+      issn = 1438-9746 ;
+      eissn = 0044-4251
+    
+    >
+    param[journal_id] = 10.1055/s-00000110
+    comment[years] = 2000-2008
+    comment[0] = combined with Journal of Neurological Surgery in 2012
+  
+  
   }
   
   {
   
     title < 
       name = Clinics in Colon and Rectal Surgery ;
-      issn = 1531-0043 
+      issn = 1531-0043 ;
+      eissn = 1530-9681
+      
     >
+    param[journal_id] = 10.1055/s-00000049
+    comment[years] = 2001-current
+    
     
   }
   
