@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.99 2012-05-17 17:58:05 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.100 2012-07-09 07:52:31 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.apache.oro.text.regex.*;
 
 import org.lockss.app.*;
 import org.lockss.daemon.*;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
@@ -50,7 +50,7 @@ import org.lockss.extractor.*;
  * This is a mock version of <code>ArchivalUnit</code> used for testing
  */
 public class MockArchivalUnit implements ArchivalUnit {
-  private Configuration config;
+  private Configuration config = ConfigManager.EMPTY_CONFIGURATION;
   private CrawlSpec spec;
   private String pluginId = "mock";
   private String auId = null;
@@ -59,6 +59,8 @@ public class MockArchivalUnit implements ArchivalUnit {
   private List newContentUrls = null;
   private List<Pattern> nonSubstanceUrlPatterns = null;
   private List<Pattern> substanceUrlPatterns = null;
+  private SubstancePredicate substancePred = null;
+
   private boolean shouldCrawlForNewContent = true;
   private boolean shouldCallTopLevelPoll = true;
   private static Logger log = Logger.getLogger("MockArchivalUnit");
@@ -167,12 +169,20 @@ public class MockArchivalUnit implements ArchivalUnit {
     return substanceUrlPatterns;
   }
 
+  public SubstancePredicate makeSubstancePredicate() {
+    return substancePred;
+  }
+
   public void setNonSubstanceUrlPatterns(List<Pattern> pats) {
     nonSubstanceUrlPatterns = pats;
   }
 
   public void setSubstanceUrlPatterns(List<Pattern> pats) {
     substanceUrlPatterns = pats;
+  }
+
+  public void setSubstancePredicate(SubstancePredicate pred) {
+    substancePred = pred;
   }
 
   public TitleConfig getTitleConfig() {
@@ -417,7 +427,7 @@ public class MockArchivalUnit implements ArchivalUnit {
     if (auId != null) {
       return auId;
     }
-    if (plugin == null || config == null) {
+    if (plugin == null || config == null  || config.isEmpty()) {
       return defaultAUId;
     }
     Properties props = new Properties();

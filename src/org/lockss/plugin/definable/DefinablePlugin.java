@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.67 2012-05-17 18:00:40 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.68 2012-07-09 07:52:31 tlipkis Exp $
  */
 
 /*
@@ -97,6 +97,9 @@ public class DefinablePlugin extends BasePlugin {
 
   public static final String KEY_PLUGIN_ARTICLE_METADATA_EXTRACTOR_FACTORY =
     "plugin_article_metadata_extractor_factory";
+
+  public static final String KEY_PLUGIN_SUBSTANCE_PREDICATE_FACTORY =
+    "plugin_substance_predicate_factory";
 
   public static final String KEY_DEFAULT_ARTICLE_MIME_TYPE =
     "plugin_default_article_mime_type";
@@ -855,6 +858,26 @@ public class DefinablePlugin extends BasePlugin {
       }
     }
     return articleMetadataFact;
+  }
+
+  protected SubstancePredicateFactory substancePredFast = null;
+
+  /**
+   * Returns the plugin's substance predicate factory, if any
+   * @return the SubstancePredicateFactory
+   */
+  public SubstancePredicateFactory getSubstancePredicateFactory() {
+    if (substancePredFast == null) {
+      String factClass =
+	definitionMap.getString(KEY_PLUGIN_SUBSTANCE_PREDICATE_FACTORY,
+				null);
+      if (factClass != null) {
+	substancePredFast =
+	  (SubstancePredicateFactory)newAuxClass(factClass,
+						 SubstancePredicateFactory.class);
+      }
+    }
+    return substancePredFast;
   }
 
   public String getPluginId() {

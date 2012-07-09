@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.56 2012-03-27 20:58:52 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.57 2012-07-09 07:52:31 tlipkis Exp $
  */
 
 /*
@@ -880,6 +880,29 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertIsomorphic(ListUtil.list("vol47/pdf/",
 				   "http\\:\\/\\/si\\.te\\/path\\//toc"),
 		     RegexpUtil.regexpCollection(cau.makeSubstanceUrlPatterns()));
+  }
+
+  public void testMakeSubstancePredicate() throws Exception {
+    defMap.putString(DefinablePlugin.KEY_PLUGIN_SUBSTANCE_PREDICATE_FACTORY,
+		     "org.lockss.plugin.definable.TestDefinableArchivalUnit$MySubstancePredicateFactory");
+    setupAu();
+    SubstancePredicate pred = cau.makeSubstancePredicate();
+    assertTrue(pred instanceof MySubstancePredicate);
+  }
+
+  public static class MySubstancePredicateFactory
+    implements SubstancePredicateFactory {
+    public SubstancePredicate makeSubstancePredicate(ArchivalUnit au) {
+      return new MySubstancePredicate(au);
+    }
+  }
+
+  public static class MySubstancePredicate implements SubstancePredicate {
+    public MySubstancePredicate(ArchivalUnit au) {
+    }
+    public boolean isSubstanceUrl(String url) {
+      return true;
+    }
   }
 
   /*

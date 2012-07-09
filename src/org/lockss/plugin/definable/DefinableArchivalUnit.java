@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.91 2012-03-27 21:00:57 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.92 2012-07-09 07:52:31 tlipkis Exp $
  */
 
 /*
@@ -317,6 +317,16 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       throws ArchivalUnit.ConfigurationException {
     return compileRegexpList(KEY_AU_SUBSTANCE_URL_PATTERN,
 			     RegexpContext.Url);
+  }
+
+  public SubstancePredicate makeSubstancePredicate()
+      throws ArchivalUnit.ConfigurationException, PluginException.LinkageError {
+    SubstancePredicateFactory fact =
+      getDefinablePlugin().getSubstancePredicateFactory();
+    if (fact == null) {
+      return null;
+    }
+    return fact.makeSubstancePredicate(this);
   }
 
   Map<String,List<String>> featureUrlMap;

@@ -157,6 +157,10 @@
     <string>org.lockss.plugin.definable.MockFactories$JsRewriterFact</string>
   </entry>
   <entry>
+    <string>plugin_substance_predicate_factory</string>
+    <string>org.lockss.plugin.definable.MockFactories$SubstancePredicateFactory</string>
+  </entry>
+  <entry>
     <!-- Crawl window open from midnight to 6:00AM EST -->
     <string>au_crawlwindow_ser</string>
     <org.lockss.daemon.CrawlWindows-Interval>

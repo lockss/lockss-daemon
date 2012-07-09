@@ -1,5 +1,5 @@
 /*
- * $Id: MockFactories.java,v 1.6 2011-11-08 20:22:43 tlipkis Exp $
+ * $Id: MockFactories.java,v 1.7 2012-07-09 07:52:31 tlipkis Exp $
  */
 
 /*
@@ -114,4 +114,27 @@ public class MockFactories {
     }
   }
 
+  public static class SubstPredFact implements SubstancePredicateFactory {
+    public SubstancePredicate makeSubstancePredicate(ArchivalUnit au)
+	throws PluginException.LinkageError {
+      return new SubstPred(au);
+    }
+  }
+
+  private static final Set SUBSTANCE_TYPES = SetUtil.set("application/pdf",
+							 "video/mpeg");
+
+  public static class SubstPred implements SubstancePredicate {
+    private ArchivalUnit au;
+
+    public SubstPred(ArchivalUnit au) {
+      this.au = au;
+    }
+
+    public boolean isSubstanceUrl(String url) {
+      CachedUrl cu = au.makeCachedUrl(url);
+      return cu.hasContent() &&
+	SUBSTANCE_TYPES.contains(HeaderUtil.getMimeTypeFromContentType(cu.getContentType()));
+    }
+  }
 }
