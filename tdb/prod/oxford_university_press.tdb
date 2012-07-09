@@ -351,16 +351,15 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ahr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[0] = manifest page carries broken links 
     
-    au < HighWirePressH20Plugin ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 >
-    au < HighWirePressH20Plugin ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; The American Historical Review Volume 110 ; 110 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; The American Historical Review Volume 111 ; 111 >
     au < HighWirePressH20Plugin ; exists ; 2007 ; The American Historical Review Volume 112 ; 112 >
-    au < HighWirePressH20Plugin ; exists ; 2008 ; The American Historical Review Volume 113 ; 113 >
-    au < HighWirePressH20Plugin ; exists ; 2009 ; The American Historical Review Volume 114 ; 114 >
-    au < HighWirePressH20Plugin ; exists ; 2010 ; The American Historical Review Volume 115 ; 115 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; The American Historical Review Volume 116 ; 116 >
-    au < HighWirePressH20Plugin ; exists ; 2012 ; The American Historical Review Volume 117 ; 117 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; The American Historical Review Volume 113 ; 113 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; The American Historical Review Volume 114 ; 114 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; The American Historical Review Volume 115 ; 115 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; The American Historical Review Volume 116 ; 116 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; The American Historical Review Volume 117 ; 117 >
 
     }
   
@@ -11687,7 +11686,7 @@
     param[base_url] = http://jrr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     
-    au < HighWirePressH20Plugin ; exists ; 2012 ; Journal of Radiation Research Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Radiation Research Volume 53 ; 53 >
     
   }
 
@@ -17982,7 +17981,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Toxicological Sciences Volume 125 ; 125 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Toxicological Sciences Volume 126 ; 126 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Toxicological Sciences Volume 127 ; 127 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; Toxicological Sciences Volume 128 ; 128 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Toxicological Sciences Volume 128 ; 128 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Toxicological Sciences Volume 129 ; 129 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Toxicological Sciences Volume 130 ; 130 >
 
@@ -18334,7 +18333,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Yearbook of International Environmental Law Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Yearbook of International Environmental Law Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Yearbook of International Environmental Law Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; expected ; 2011 ; Yearbook of International Environmental Law Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Yearbook of International Environmental Law Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; expected ; 2012 ; Yearbook of International Environmental Law Volume 22 ; 22 >
 
   }
