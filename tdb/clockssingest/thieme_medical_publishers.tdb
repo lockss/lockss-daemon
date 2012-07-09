@@ -17,7 +17,7 @@
        
      > 
     param[journal_id] = 10.1055/s-00000001
-    comment[years] = 1991-2012
+    comment[years] = 1991-current
     
     au < manifest ; exists ; 1991 ; AINS - Anästhesiologie · Intensivmedizin · Notfallmedizin · Schmerztherapie 1991 ; 1991 >  
     au < manifest ; exists ; 1992 ; AINS - Anästhesiologie · Intensivmedizin · Notfallmedizin · Schmerztherapie 1992 ; 1992 >  
@@ -77,7 +77,7 @@
        
      > 
     param[journal_id] = 10.1055/s-00000002
-    comment[years] = 2001-2012
+    comment[years] = 2001-current
     
     au < manifest ; exists ; 2001 ; Aktuelle Dermatologie 2001 ; 2001 >  
     au < manifest ; exists ; 2002 ; Aktuelle Dermatologie 2002 ; 2002 >  
@@ -102,7 +102,7 @@
       
      >
     param[journal_id] = 10.1055/s-00000003
-    comment[years] = 2001-2012
+    comment[years] = 2001-current
     
     au < manifest ; exists ; 2001 ; Aktuelle Ernährungsmedizin 2001 ; 2001 >  
     au < manifest ; exists ; 2002 ; Aktuelle Ernährungsmedizin 2002 ; 2002 >  
@@ -127,7 +127,7 @@
       
     >
     param[journal_id] = 10.1055/s-00000004
-    comment[years] = 1980-2012
+    comment[years] = 1980-current
     
     au < manifest ; exists ; 2012 ; Aktuelle Neurologie 2012 ; 2012 >   
            
@@ -141,9 +141,35 @@
       
     >
     param[journal_id] = 10.1055/s-00000005
-    comment[years] = 1980-2012   
+    comment[years] = 1980-current
+       
       
   }
+
+  {
+  
+    title <
+      name = Aktuelle Traumatologie ;
+      issn = 0044-6173 ;
+      eissn = 1438-9436
+      
+   >
+   param[journal_id] = 10.1055/s-00000006
+   comment[years] = 2001-current
+   
+   }
+   
+   {
+     title <
+       name = Aktuelle Urologie ;
+       issn = 0001-7868 ;
+       eissn = 1438-8820
+       
+    >
+    param[journal_id] = 10.1055/s-00000007
+    comment[years] = 1980-current   
+
+   }
   
   {
     title < 
