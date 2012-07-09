@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.85 2012-05-17 18:01:57 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.86 2012-07-09 07:54:28 tlipkis Exp $
  */
 
 /*
@@ -325,11 +325,9 @@ public class LockssRepositoryImpl
    */
   public static LockssRepository createNewLockssRepository(ArchivalUnit au) {
     String root = getRepositoryRoot(au);
-    if (root == null) {
-      logger.error("Couldn't get " + PARAM_CACHE_LOCATION +
-		   " from Configuration");
-      throw new LockssRepository.RepositoryStateException(
-          "Couldn't load param.");
+    if (root == null || root.equals("null")) {
+      logger.error("No repository dir set in config");
+      throw new LockssRepository.RepositoryStateException("No repository dir set in config");
     }
     String auDir = LockssRepositoryImpl.mapAuToFileLocation(root, au);
     if (logger.isDebug2()) {
