@@ -69,20 +69,7 @@
   
   }
   
-  {
-     title < 
-       name = AJP Reports ;
-       issn = 2157-6998 ;
-       eissn = 2157-7005
-       
-    >
-    param[journal_id] = 10.1055/s-00000169
-    comment[years] = 2004, 2006, 2011
-    
-  }
-  
-  {
-  
+  { 
     title <
       name = Aktuelle Dermatologie ;
       issn = 0340-2541 ;
@@ -93,8 +80,31 @@
     comment[years] = 2001-2012
     
     au < manifest ; exists ; 2001 ; Aktuelle Dermatologie 2001 ; 2001 >  
+    au < manifest ; exists ; 2002 ; Aktuelle Dermatologie 2002 ; 2002 >  
+    au < manifest ; exists ; 2003 ; Aktuelle Dermatologie 2003 ; 2003 >  
+    au < manifest ; exists ; 2004 ; Aktuelle Dermatologie 2004 ; 2004 >  
+    au < manifest ; exists ; 2005 ; Aktuelle Dermatologie 2005 ; 2005 >  
+    au < manifest ; exists ; 2006 ; Aktuelle Dermatologie 2006 ; 2006 >  
+    au < manifest ; exists ; 2007 ; Aktuelle Dermatologie 2007 ; 2007 >  
+    au < manifest ; exists ; 2008 ; Aktuelle Dermatologie 2008 ; 2008 >  
+    au < manifest ; exists ; 2009 ; Aktuelle Dermatologie 2009 ; 2009 >  
+    au < manifest ; exists ; 2010 ; Aktuelle Dermatologie 2010 ; 2010 >  
+    au < manifest ; exists ; 2011 ; Aktuelle Dermatologie 2011 ; 2011 >  
+    au < manifest ; exists ; 2012 ; Aktuelle Dermatologie 2012 ; 2012 >  
   
   
+  {
+    title < 
+      name = AJP Reports ;
+      issn = 2157-6998 ;
+      eissn = 2157-7005
+       
+    >
+    param[journal_id] = 10.1055/s-00000169
+    comment[years] = 2004, 2006, 2011
+    
+  }
+    
   {
   
     title < 
