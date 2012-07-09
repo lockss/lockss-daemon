@@ -23,7 +23,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
-*/
+ */
 
 package org.lockss.plugin.emerald;
 
@@ -40,104 +40,144 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 
 public class TestEmeraldArticleIteratorFactory extends ArticleIteratorTestCase {
-	
-	private SimulatedArchivalUnit sau;	// Simulated AU to generate content
-	
-	private final String PLUGIN_NAME = "org.lockss.plugin.emerald.EmeraldPlugin";
-	private static final int DEFAULT_FILESIZE = 3000;
+
+  private SimulatedArchivalUnit sau; // Simulated AU to generate content
+
+  private final String PLUGIN_NAME = "org.lockss.plugin.emerald.EmeraldPlugin";
+  private static final int DEFAULT_FILESIZE = 3000;
 
   public void setUp() throws Exception {
     super.setUp();
     au = createAu();
-    
+
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  tempDirPath);
-    
+        tempDirPath);
+
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
   }
-  
+
   public void tearDown() throws Exception {
-	    sau.deleteContentTree();
-	    super.tearDown();
-	  }
+    sau.deleteContentTree();
+    super.tearDown();
+  }
 
   protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
-    return
-      PluginTestUtil.createAndStartAu(PLUGIN_NAME, emeraldAuConfig());
+    return PluginTestUtil.createAndStartAu(PLUGIN_NAME, emeraldAuConfig());
   }
-  
+
   Configuration simAuConfig(String rootPath) {
-	    Configuration conf = ConfigManager.newConfiguration();
-	    conf.put("root", rootPath);
-	    conf.put("base_url", "http://www.example.com/");
-	    conf.put("journal_issn", "5555-5555");
-	    conf.put("volume_name", "16");
-	    conf.put("depth", "1");
-	    conf.put("branch", "4");
-	    conf.put("numFiles", "7");
-	    conf.put("fileTypes",
-	             "" + (  SimulatedContentGenerator.FILE_TYPE_HTML
-	                   | SimulatedContentGenerator.FILE_TYPE_PDF));
-	    conf.put("binFileSize", ""+DEFAULT_FILESIZE);
-	    return conf;
-	  }
-  
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put("base_url", "http://www.example.com/");
+    conf.put("journal_issn", "5555-5555");
+    conf.put("volume_name", "16");
+    conf.put("depth", "1");
+    conf.put("branch", "4");
+    conf.put("numFiles", "7");
+    conf.put(
+        "fileTypes",
+        ""
+            + (SimulatedContentGenerator.FILE_TYPE_HTML | SimulatedContentGenerator.FILE_TYPE_PDF));
+    conf.put("binFileSize", "" + DEFAULT_FILESIZE);
+    return conf;
+  }
+
   Configuration emeraldAuConfig() {
-	    return ConfigurationUtil.fromArgs("base_url",
-				 "http://www.example.com/",
-				 "journal_issn", "5555-5555",
-				 "volume_name", "16");
-	  }
+    return ConfigurationUtil.fromArgs("base_url", "http://www.example.com/",
+        "journal_issn", "5555-5555", "volume_name", "16");
+  }
 
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list("http://www.example.com/"),
-		 getRootUrls(artIter));
+    assertEquals(ListUtil.list("http://www.example.com/"), getRootUrls(artIter));
   }
 
   public void testUrlsWithPrefixes() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
-    
-    assertNotMatchesRE(pat, "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=pdf");
-    assertNotMatchesRE(pat, "http://www.wrong.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=html&view=printarticle");
-    assertNotMatchesRE(pat, "http://www.example.com/journal.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=html&view=printarticle");
-    assertNotMatchesRE(pat, "http://www.example.com/journals.html?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=html&view=printarticle");
-    assertNotMatchesRE(pat, "http://www.example.com/journals.htm?issn=0000-0000&volume=16&issue=1&articleid=1465119&show=html&view=printarticle");
-    assertNotMatchesRE(pat, "http://www.example.com/journals.htm?issn=5555-5555&volume=00&issue=1&articleid=1465119&show=html&view=printarticle");
-    assertNotMatchesRE(pat, "http://www.example.com/journals.htm?issn=5555-5555&vol=16&issue=1&articleid=1465119&show=html&view=printarticle");
-    assertNotMatchesRE(pat, "http://www.example.com/journals.htm?issn=5555-5555&volume=16&articleid=1465119&show=pdf&view=printarticle");
-    assertNotMatchesRE(pat, "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid&show=html&view=printarticle");
-    assertNotMatchesRE(pat, "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=show=html&view=printarticle");
-    assertNotMatchesRE(pat, "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&=html&view=printarticle");
-    assertNotMatchesRE(pat, "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=xml&view=printarticle");
-    
-    
-    assertMatchesRE(pat, "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=html&view=printarticle");
-    assertMatchesRE(pat, "http://www.example.com/books.htm?issn=5555-5555&volume=16&chapterid=1465119&show=html&view=printarticle");
-    assertMatchesRE(pat, "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=html&view=printarticle");
-    assertMatchesRE(pat, "http://www.example.com/books.htm?issn=5555-5555&volume=16&chapterid=1465119&show=html&view=printarticle");
-   }
+
+    assertNotMatchesRE(
+        pat,
+        "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=pdf");
+    assertNotMatchesRE(
+        pat,
+        "http://www.wrong.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=html&view=printarticle");
+    assertNotMatchesRE(
+        pat,
+        "http://www.example.com/journal.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=html&view=printarticle");
+    assertNotMatchesRE(
+        pat,
+        "http://www.example.com/journals.html?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=html&view=printarticle");
+    assertNotMatchesRE(
+        pat,
+        "http://www.example.com/journals.htm?issn=0000-0000&volume=16&issue=1&articleid=1465119&show=html&view=printarticle");
+    assertNotMatchesRE(
+        pat,
+        "http://www.example.com/journals.htm?issn=5555-5555&volume=00&issue=1&articleid=1465119&show=html&view=printarticle");
+    assertNotMatchesRE(
+        pat,
+        "http://www.example.com/journals.htm?issn=5555-5555&vol=16&issue=1&articleid=1465119&show=html&view=printarticle");
+    assertNotMatchesRE(
+        pat,
+        "http://www.example.com/journals.htm?issn=5555-5555&volume=16&articleid=1465119&show=pdf&view=printarticle");
+    assertNotMatchesRE(
+        pat,
+        "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid&show=html&view=printarticle");
+    assertNotMatchesRE(
+        pat,
+        "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=show=html&view=printarticle");
+    assertNotMatchesRE(
+        pat,
+        "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&=html&view=printarticle");
+    assertNotMatchesRE(
+        pat,
+        "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=xml&view=printarticle");
+
+    assertMatchesRE(
+        pat,
+        "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=html&view=printarticle");
+    assertMatchesRE(
+        pat,
+        "http://www.example.com/books.htm?issn=5555-5555&volume=16&chapterid=1465119&show=html&view=printarticle");
+    assertMatchesRE(
+        pat,
+        "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=html&view=printarticle");
+    assertMatchesRE(
+        pat,
+        "http://www.example.com/books.htm?issn=5555-5555&volume=16&chapterid=1465119&show=html&view=printarticle");
+  }
 
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
+    // copy tree for HTML article pattern
     String pat1 = "branch(\\d+)/(\\d+file\\.pdf)";
     String rep1 = "journals.htm?issn=5555-5555&volume=16&issue=3&articleid=1482932&show=html&view=printarticle";
-    PluginTestUtil.copyAu(sau, au, ".*[^.][^p][^d][^f]$", pat1, rep1);
+    PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat1, rep1);
+
+    // copy tree for PDF article pattern
     String pat2 = "branch(\\d+)/(\\d+file\\.pdf)";
-    String rep2 = "journals.htm?issn=5555-5555&volume=16&articleid=1482932&show=pdf";
+    String rep2 = "journals.htm?issn=5555-5555&volume=16&issue=3&articleid=1482932&show=pdf";
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat2, rep2);
-  
-    String pdfUrl = "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=3&articleid=1482932&show=html&view=printarticle";
-    CachedUrl cu = au.makeCachedUrl(pdfUrl);
-    assertNotNull(cu);
+
+    // copy tree for article abstract pattern
+    String pat3 = "branch(\\d+)/(\\d+file\\.pdf)";
+    String rep3 = "journals.htm?issn=5555-5555&volume=16&issue=3&articleid=1482932&show=abstract";
+    PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat3, rep3);
+
+    String htmlUrl = "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=3&articleid=1482932&show=html&view=printarticle";
+    String pdfUrl = "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=3&articleid=1482932&show=pdf";
+    String abstractUrl = "http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=3&articleid=1482932&show=abstract";
+    CachedUrl htmlCu = au.makeCachedUrl(htmlUrl);
+
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertNotNull(artIter);
-    ArticleFiles af = createArticleFiles(artIter, cu);
+    ArticleFiles af = createArticleFiles(artIter, htmlCu);
     assertNotNull(af);
-    assertEquals(cu, af.getFullTextCu());
-    assertEquals(cu, af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML));
-  }			
+    assertEquals(htmlUrl, af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_HTML));
+    assertEquals(htmlUrl, af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_HTML));
+    assertEquals(pdfUrl, af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF));
+    assertEquals(abstractUrl, af.getRoleUrl(ArticleFiles.ROLE_ABSTRACT));
+  }
 
 }

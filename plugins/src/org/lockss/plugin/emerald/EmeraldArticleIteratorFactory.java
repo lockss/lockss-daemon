@@ -43,24 +43,26 @@ public class EmeraldArticleIteratorFactory implements ArticleIteratorFactory, Ar
 
   protected static Logger log = Logger.getLogger("EmeraldArticleIteratorFactory");
   
+  // example: http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=html&view=printarticle
   protected static final String ROOT_TEMPLATE = "\"%s\",base_url";
-  protected static final String PATTERN_TEMPLATE = "\"%s(journals|books)\\.htm\\?issn=%s&volume=%s.*&(articleid|chapterid)=[^&]*&show=(html)\", base_url, journal_issn, volume_name";
+  protected static final String PATTERN_TEMPLATE = "\"%s(journals|books)\\.htm\\?issn=%s&volume=%s.*&(articleid|chapterid)=[^&]*&show=(html.*$)\", base_url, journal_issn, volume_name";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
-    return new UpdatedMinervaArticleIterator(au, new SubTreeArticleIterator.Spec()
-                                       .setTarget(target)
-                                       .setRootTemplate(ROOT_TEMPLATE)
-                                       .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
+    return new EmeraldArticleIterator(au, new SubTreeArticleIterator.Spec()
+                                      .setTarget(target)
+                                      .setRootTemplate(ROOT_TEMPLATE)
+                                      .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
   }
   
-  protected static class UpdatedMinervaArticleIterator extends SubTreeArticleIterator {
-	 
-    protected static Pattern PATTERN = Pattern.compile("((journals|books).htm\\?issn=[\\d]+-[\\d]+\\&volume=[\\d]+(\\&issue=[\\d]+)?\\&(articleid|chapterid)=[^\\&]+\\&show=)(html)", Pattern.CASE_INSENSITIVE);
+  protected static class EmeraldArticleIterator extends SubTreeArticleIterator {
+    // example: http://www.example.com/journals.htm?issn=5555-5555&volume=16&issue=1&articleid=1465119&show=html&view=printarticle
+    // ending pattern matches html and optional '&view=printarticle'
+    protected static Pattern PATTERN = Pattern.compile("((journals|books).htm\\?issn=[\\d]+-[\\d]+\\&volume=[\\d]+(\\&issue=[\\d]+)?\\&(articleid|chapterid)=[^\\&]+\\&show=)(html.*$)", Pattern.CASE_INSENSITIVE);
     
-    protected UpdatedMinervaArticleIterator(ArchivalUnit au,
+    protected EmeraldArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
       super(au, spec);
     }
@@ -77,22 +79,54 @@ public class EmeraldArticleIteratorFactory implements ArticleIteratorFactory, Ar
       return null;
     }
 
+    /**
+     * Fill in full-text HTML and full-text roles if an html article page exists like:
+     * http://www.emeraldinsight.com/journals.htm?articleid=1677014&show=html
+     * 
+     * @param cu the CachedUrl
+     * @param mat the matcher
+     */
     protected ArticleFiles processFullText(CachedUrl cu, Matcher mat) {
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(cu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, cu);
    
-      if(spec.getTarget() != MetadataTarget.Article)
-		guessPdfFile(af, mat);
+      // fill in other roles if not merely counting articles
+      if(spec.getTarget() != MetadataTarget.Article) {
+	guessPdfFile(af, mat);
+	guessAbstractFile(af, mat);
+      }
       
       return af;
     }
     
+    /**
+     * Fill in full-text PDF role if a related pdf article page exists like:
+     * http://www.emeraldinsight.com/journals.htm?articleid=1677014&show=pdf
+     * 
+     * @param af the ArticleFiles
+     * @param mat the matcher
+     */
     protected void guessPdfFile(ArticleFiles af, Matcher mat) {
       CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("$1pdf"));
       
       if (pdfCu != null && pdfCu.hasContent()) {
-    	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+      }
+    }
+
+    /**
+     * Fill in abstract role if a related abstract page exists like:
+     * http://www.emeraldinsight.com/journals.htm?articleid=1677014&show=abstract
+     * 
+     * @param af the ArticleFiles
+     * @param mat the Matcher
+     */
+    protected void guessAbstractFile(ArticleFiles af, Matcher mat) {
+      CachedUrl abstractCu = au.makeCachedUrl(mat.replaceFirst("$1abstract"));
+      
+      if (abstractCu != null && abstractCu.hasContent()) {
+    	  af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, abstractCu);
       }
     }
   }
