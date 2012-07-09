@@ -1,5 +1,5 @@
 /*
-* $Id: PollFactory.java,v 1.10 2007-10-09 00:49:55 smorabito Exp $
+* $Id: PollFactory.java,v 1.11 2012-07-09 18:53:40 barry409 Exp $
  */
 
 /*
@@ -46,18 +46,6 @@ import org.lockss.config.*;
  */
 
 public interface PollFactory {
-
-  /**
-   * Call a poll.  Only used by the tree walk via the poll manager.
-   * For V1 sends the poll request.
-   * @param poll the <code>Poll</code> to be called
-   * @param daemon LockssDaemon
-   * @return true if the poll was successfuly called.
-   */
-  boolean callPoll(Poll poll,
-		   LockssDaemon daemon);
-
-
   /**
    * createPoll is invoked when (a) an incoming message requires a new
    * Poll to be created (msg != null) and (b) when a new Poll is required

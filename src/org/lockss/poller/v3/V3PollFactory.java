@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.36 2012-07-03 17:22:59 barry409 Exp $
+ * $Id: V3PollFactory.java,v 1.37 2012-07-09 18:53:40 barry409 Exp $
  */
 
 /*
@@ -99,11 +99,6 @@ public class V3PollFactory extends BasePollFactory {
 
   public V3PollFactory(PollManager pollMgr) {
     this.pollMgr = pollMgr;
-  }
-
-  public boolean callPoll(Poll poll, LockssDaemon daemon) {
-    poll.startPoll();
-    return true;
   }
 
   protected void sendNak(LockssDaemon daemon, PollNak nak,

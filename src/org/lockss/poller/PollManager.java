@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.220 2012-07-06 19:08:53 barry409 Exp $
+ * $Id: PollManager.java,v 1.221 2012-07-09 18:53:40 barry409 Exp $
  */
 
 /*
@@ -587,11 +587,8 @@ public class PollManager
 		     LcapMessage.getDefaultHashAlgorithm(),
 		     null);
 	  if (thePoll != null) {
-	    if (pollFact.callPoll(thePoll, getDaemon())) {
-	      return thePoll;
-	    } else {
-	      theLog.debug("pollFact.callPoll() returned false");
-	    }
+	    thePoll.startPoll();
+	    return thePoll;
 	  } else {
 	    theLog.debug("makePoll(" + pollspec + ") returned null");
 	  }
