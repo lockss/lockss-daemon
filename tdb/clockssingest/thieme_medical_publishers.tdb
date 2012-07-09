@@ -295,8 +295,9 @@
       
     >
     param[journal_id] = 10.1055/s-00000107
-    comment[years] = 2009-current
+    comment[years] = 2009-2011
     comment[0] = originally Zentralblatt fuer Neurochirurgie
+    comment[1] = combined with Journal of Neurological Surgery Part A : Central European Neorosurgery in 2012
     
   }
   
@@ -309,7 +310,7 @@
     >
     param[journal_id] = 10.1055/s-00000110
     comment[years] = 2000-2008
-    comment[0] = combined with Journal of Neurological Surgery in 2012
+    comment[0] = combined with Journal of Neurological Surgery Part A : Central European Neorosurgery in 2012
   
   
   }
@@ -499,6 +500,7 @@
     comment[years] = 1969-current
     
   }
+  
   {
     title <
       name = Endoskopie heute ;
@@ -513,6 +515,7 @@
   
   
   }
+  
   {
     title <
       name = Erfahrungsheilkunde ;
@@ -545,20 +548,6 @@
   
   {
     title <
-      name = ergoscience ;
-      issn = 1861-6348 ;
-      eissn = 1861-6356
-       
-    
-    >
-    param[journal_id] = 10.1055/s-00000138
-    comment[years] = 2006-current
-  
-  
-  
-  }
-  {
-    title <
       name = Ernährung & Medizin ;
       issn = 1439-1635 ;
       eissn = 1438-9002
@@ -576,8 +565,12 @@
   
     title < 
       name = European Journal of Pediatric Surgery ;
-      issn = 0939-7248 
+      issn = 0939-7248 ;
+      eissn = 1439-359X
+      
     >
+    param[journal_id] = 10.1055/s-00000015
+    comment[years] = 1991-current
     
   }
   
@@ -585,9 +578,28 @@
   
     title < 
       name = Evidence-Based Spine-Care Journal ;
-      issn = 1663-7976 
+      issn = 1663-7976 ;
+      eissn = 1869-4136
+       
     >
+    param[journal_id] = 10.1055/s-00000165
+    comment[years] = 2010
+    comment[0] = continuation of Evidence-Based Spine Surgery
     
+  }
+  {
+    title <
+      name = Evidence-Based Spine Surgery ; 
+      issn = 1867-2302 ;
+      eissn = 1867-2310
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000152
+    comment[years] = 2009
+  
+  
+  
   }
   
   {
@@ -696,9 +708,13 @@
   {
   
     title < 
-      name = Journal of Neurological Surgery 
+      name = Journal of Neurological Surgery ;
+      issn = 2193-6315 ;
+      eissn = 2193-6323
     >
-    
+    param[journal_id] = 10.500/s.00000180
+    comment[years] = 2012
+    comment[0] = combines two earlier titles - Central European Surgery and Zentralblatt fur Neurochirurgie
   }
   
   {
