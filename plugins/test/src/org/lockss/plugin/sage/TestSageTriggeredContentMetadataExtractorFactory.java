@@ -55,7 +55,7 @@ public class TestSageTriggeredContentMetadataExtractorFactory extends LockssTest
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 				  tempDirPath);
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -66,7 +66,7 @@ public class TestSageTriggeredContentMetadataExtractorFactory extends LockssTest
 
     sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
 					     simAuConfig(tempDirPath));
-    hau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, springerAuConfig());
+    hau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, sageAuConfig());
   }
 
   public void tearDown() throws Exception {
@@ -94,15 +94,14 @@ public class TestSageTriggeredContentMetadataExtractorFactory extends LockssTest
     return conf;
   }
 
-  Configuration springerAuConfig() {
-	  Configuration conf = ConfigurationUtil.fromArgs(
-	    		"base_url", "http://www.example.com/",
-				"base_url2", "http://www.example2.com/",
-				"volume_name", "12",
-				"journal_dir", "jrnl");
-	    ConfigurationUtil.installConfig(conf);
-	    ConfigurationUtil.addFromArgs("year", "2000");
-	    return CurrentConfig.getCurrentConfig();
+  Configuration sageAuConfig() {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("base_url", "http://www.example.com/");
+    conf.put("base_url2", "http://www.example2.com/");
+    conf.put("volume_name", "12");
+    conf.put("journal_dir", "jrnl");
+    conf.put("year", "2000");
+    return conf;
   }
   
   String goodAuthors = "[Author, John A., Author, John B., Author, John C.]";

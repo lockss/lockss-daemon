@@ -49,12 +49,12 @@ public class TestSageTriggeredContentArticleIteratorFactory extends ArticleItera
 
   public void setUp() throws Exception {
     super.setUp();
-    au = createAu();
     
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
 				  tempDirPath);
     
+    au = createAu();
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
   }
   
@@ -89,15 +89,14 @@ public class TestSageTriggeredContentArticleIteratorFactory extends ArticleItera
 	  }
   
   Configuration sageAuConfig() {
-	    Configuration conf = ConfigurationUtil.fromArgs(
-	    		"base_url", "http://www.example.com/",
-				"base_url2", "http://www.example2.com/",
-				"volume_name", "12",
-				"journal_dir", "jrnl");
-	    ConfigurationUtil.installConfig(conf);
-	    ConfigurationUtil.addFromArgs("year", "2000");
-	    return CurrentConfig.getCurrentConfig();
-	  }
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("base_url", "http://www.example.com/");
+    conf.put("base_url2", "http://www.example2.com/");
+    conf.put("volume_name", "12");
+    conf.put("journal_dir", "jrnl");
+    conf.put("year", "2000");
+    return conf;
+  }
 
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();

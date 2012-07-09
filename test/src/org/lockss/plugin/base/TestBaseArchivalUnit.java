@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.60 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.61 2012-07-09 07:55:13 tlipkis Exp $
  */
 
 /*
@@ -60,6 +60,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+
+    setUpCacheDir();
 
     MockLockssDaemon daemon = getMockLockssDaemon();
     pollMgr = daemon.getPollManager();
