@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.301 2012-07-06 22:50:47 fergaloy-sf Exp $
+ $Id: build.xml,v 1.302 2012-07-09 16:41:10 fergaloy-sf Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -2684,11 +2684,5 @@ optionally -Dtests= for tests to be run.
              bottom="Copyright &amp;copy; 2000-2010 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
     </javadoc>
-  </target>
-
-  <target name="wsgen" >
-    <exec executable="wsgen">
-      <arg line="-cp ./classes -keep -s ./src -d ./bin org.lockss.HelloWorldWS"/>
-    </exec>
   </target>
 </project>
