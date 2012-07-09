@@ -105,7 +105,7 @@
     au < released ; 2009 ; Ethics & Global Politics Volume 2 ; 2 ; 2009 >
     au < released ; 2010 ; Ethics & Global Politics Volume 3 ; 3 ; 2010 >
     au < released ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; 2011 >
-    au < testing ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; 2012 >
+    au < ready ; 2012 ; Ethics & Global Politics Volume 5 ; 5 ; 2012 >
 
   }
     
@@ -244,7 +244,7 @@
     param[base_url] = http://www.ijqhw.net/
     param[journal_id] = qhw
 
-    au < testing ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 ; 2006 >
+    au < ready ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 ; 2006 >
     au < ready ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2 ; 2007 >
     au < testing ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 >
     au < released ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 >
@@ -318,8 +318,8 @@
     param[base_url] = http://www.libyanjournalofmedicine.net/
     param[journal_id] = ljm
 
-    au < testing ; 2006 ; Libyan Journal of Medicine Volume 1 ; 1 ; 2006 >
-    au < testing ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2 ; 2007 >
+    au < ready ; 2006 ; Libyan Journal of Medicine Volume 1 ; 1 ; 2006 >
+    au < r ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2 ; 2007 >
     au < testing ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 >
     au < testing ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 >
     au < released ; 2010 ; Libyan Journal of Medicine [including Supplements] Volume 5 ; 5 ; 2010 >
