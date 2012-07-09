@@ -117,8 +117,33 @@
     au < manifest ; exists ; 2011 ; Aktuelle Ernährungsmedizin 2011 ; 2011 >  
     au < manifest ; exists ; 2012 ; Aktuelle Ernährungsmedizin 2012 ; 2012 >  
       
-        
+  }
   
+  {
+    title <
+      name = Aktuelle Neurologie ;
+      issn = 0302-4350 ;
+      eissn = 1438-9428
+      
+    >
+    param[journal_id] = 10.1055/s-00000004
+    comment[years] = 1980-2012
+    
+    au < manifest ; exists ; 2012 ; Aktuelle Neurologie 2012 ; 2012 >   
+           
+  }
+  
+  {
+    title <
+      name =  Aktuelle Rheumatologie ;
+      issn = 0341-051X ;
+      eissn = 1438-9940
+      
+    >
+    param[journal_id] = 10.1055/s-00000005
+    comment[years] = 1980-2012   
+      
+  }
   
   {
     title < 
