@@ -370,16 +370,15 @@
 
     param[base_url] = http://ahr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[0] = manifest page carries broken links 
     
-    au < exists ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 ; >
-    au < exists ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 ; >
+    au < manifest ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 ; >
+    au < manifest ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 ; >
     au < exists ; exists ; 2007 ; The American Historical Review Volume 112 ; 112 ; >
-    au < exists ; exists ; 2008 ; The American Historical Review Volume 113 ; 113 ; >
-    au < exists ; exists ; 2009 ; The American Historical Review Volume 114 ; 114 ; >
-    au < exists ; exists ; 2010 ; The American Historical Review Volume 115 ; 115 ; >
-    au < exists ; exists ; 2011 ; The American Historical Review Volume 116 ; 116 ; >
-    au < exists ; exists ; 2012 ; The American Historical Review Volume 117 ; 117 ; >
+    au < manifest ; exists ; 2008 ; The American Historical Review Volume 113 ; 113 ; >
+    au < manifest ; exists ; 2009 ; The American Historical Review Volume 114 ; 114 ; >
+    au < manifest ; exists ; 2010 ; The American Historical Review Volume 115 ; 115 ; >
+    au < manifest ; exists ; 2011 ; The American Historical Review Volume 116 ; 116 ; >
+    au < manifest ; exists ; 2012 ; The American Historical Review Volume 117 ; 117 ; >
     
     }
     
@@ -14173,7 +14172,7 @@
 
     {
     
-    au < exists ; exists ; 2012 ; Oxford Journal of Law and Religion Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2012 ; Oxford Journal of Law and Religion Volume 1 ; 1 ; >
     
     }
 
@@ -17516,7 +17515,7 @@
     au < crawling ; exists ; 2012 ; Toxicological Sciences Volume 125 ; 125 ; >
     au < crawling ; exists ; 2012 ; Toxicological Sciences Volume 126 ; 126 ; >
     au < crawling ; exists ; 2012 ; Toxicological Sciences Volume 127 ; 127 ; >
-    au < expected ; exists ; 2012 ; Toxicological Sciences Volume 128 ; 128 ; >
+    au < manifest ; exists ; 2012 ; Toxicological Sciences Volume 128 ; 128 ; >
     au < expected ; exists ; 2012 ; Toxicological Sciences Volume 129 ; 129 ; >
     au < expected ; exists ; 2012 ; Toxicological Sciences Volume 130 ; 130 ; >
 
@@ -17873,7 +17872,7 @@
     au < manifest ; exists ; 2008 ; Yearbook of International Environmental Law Volume 18 ; 18 ; >
     au < released ; crawling ; 2009 ; Yearbook of International Environmental Law Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Yearbook of International Environmental Law Volume 20 ; 20 ; >
-    au < expected ; exists ; 2011 ; Yearbook of International Environmental Law Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2011 ; Yearbook of International Environmental Law Volume 21 ; 21 ; >
     au < expected ; exists ; 2012 ; Yearbook of International Environmental Law Volume 22 ; 22 ; >
 
   }
