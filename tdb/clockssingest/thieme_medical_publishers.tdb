@@ -587,17 +587,17 @@
     comment[0] = continuation of Evidence-Based Spine Surgery
     
   }
-  {
+    
+    {
     title <
-      name = Evidence-Based Spine Surgery ; 
-      issn = 1867-2302 ;
-      eissn = 1867-2310
+      name = Experimental and Clinical Endocrinology & Diabetes ;
+      issn = 0947-7349 ;
+      eissn = 1439-3646
       
     
     >
-    param[journal_id] = 10.1055/s-00000152
-    comment[years] = 2009
-  
+    param[journal_id] = 10.1055/s-00000017
+    comment[years] = 1995-current
   
   
   }
@@ -606,8 +606,13 @@
   
     title < 
       name = Experimental and Clinical Endocrinology & Diabetes ;
-      issn = 0947-7349 
+      issn = 0947-7349 ;
+      eissn = 1439-3646
+       
     >
+    param[journal_id] = 10.1055/s-00000017
+    comment[years] = 1995-current
+    
     
   }
   
@@ -615,8 +620,12 @@
   
     title < 
       name = Facial Plastic Surgery ;
-      issn = 0736-6825 
+      issn = 0736-6825 ;
+      eissn = 1098-8793
+      
     >
+    param[journal_id] = 10.1055/s-00000018
+    comment[years] = 1983-current
     
   }
     
