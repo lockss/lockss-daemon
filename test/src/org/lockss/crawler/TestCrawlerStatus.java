@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.7 2011-05-11 08:41:10 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.8 2012-07-09 07:50:15 tlipkis Exp $
  */
 
 /*
@@ -86,6 +86,13 @@ public class TestCrawlerStatus extends LockssTestCase {
     c1.auDeleted(mau);
     // Shouldn't cause NPE, but now value should be default false
     assertFalse(c1.isOffHost("http://foo.bar/"));
+  }
+
+  public void testAllHaveDefaultMessage() {
+    CrawlerStatus c1 = new CrawlerStatus(mau, null, "Type 42");
+    for (int stat = 0; stat <= Crawler.STATUS_LAST; stat++) {
+      assertNotMatchesRE("^Unknown code", c1.getDefaultMessage(stat));
+    }
   }
 
   public void testGetDefaultMessage() {

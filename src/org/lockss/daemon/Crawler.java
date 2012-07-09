@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.57 2012-05-17 17:58:06 tlipkis Exp $
+ * $Id: Crawler.java,v 1.58 2012-07-09 07:50:15 tlipkis Exp $
  */
 
 /*
@@ -81,6 +81,9 @@ public interface Crawler {
   public static final int STATUS_REPO_ERR = 10;
   public static final int STATUS_RUNNING_AT_CRASH = 11;
   public static final int STATUS_EXTRACTOR_ERROR = 12;
+  public static final int STATUS_CRAWL_TEST_SUCCESSFUL = 13;
+  public static final int STATUS_CRAWL_TEST_FAIL = 14;
+  public static final int STATUS_LAST = 14;
 
   /**
    * Initiate a crawl starting with all the urls in urls

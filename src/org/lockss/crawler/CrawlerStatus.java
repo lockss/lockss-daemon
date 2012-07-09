@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.10 2011-05-11 08:41:10 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.11 2012-07-09 07:50:15 tlipkis Exp $
  */
 
 /*
@@ -87,6 +87,8 @@ public class CrawlerStatus {
     DEFAULT_MESSAGES.put(Crawler.STATUS_QUEUED, "Pending");
     DEFAULT_MESSAGES.put(Crawler.STATUS_ACTIVE, "Active");
     DEFAULT_MESSAGES.put(Crawler.STATUS_SUCCESSFUL, "Successful");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_CRAWL_TEST_SUCCESSFUL, "Crawl test successful");
+    DEFAULT_MESSAGES.put(Crawler.STATUS_CRAWL_TEST_FAIL, "Crawl test failed");
     DEFAULT_MESSAGES.put(Crawler.STATUS_ERROR, "Error");
     DEFAULT_MESSAGES.put(Crawler.STATUS_ABORTED, "Aborted");
     DEFAULT_MESSAGES.put(Crawler.STATUS_WINDOW_CLOSED,
@@ -329,7 +331,12 @@ public class CrawlerStatus {
 
   /** Return true if any error has been recorded */
   public boolean isCrawlError() {
-    switch (status) {
+    return isCrawlError(status);
+  }
+
+  /** Return true if crawlStatus is an error status */
+  public boolean isCrawlError(int crawlStatus) {
+    switch (crawlStatus) {
     case Crawler.STATUS_UNKNOWN:
     case Crawler.STATUS_SUCCESSFUL:
     case Crawler.STATUS_ACTIVE:
@@ -606,10 +613,10 @@ public class CrawlerStatus {
 
   private UrlErrorInfo errInfo(String urlMsg, int status) {
     Severity sev;
-    if (isCrawlError()) {
+    if (isCrawlError(status)) {
       sev = Severity.Error;
     } else {
-      sev = Severity.Error;
+      sev = Severity.Warning;
     }
     return new UrlErrorInfo(urlMsg, sev);
   }

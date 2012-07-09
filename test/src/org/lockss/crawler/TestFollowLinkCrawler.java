@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.41 2012-03-15 08:20:25 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.42 2012-07-09 07:50:14 tlipkis Exp $
  */
 
 /*
@@ -407,10 +407,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   String nsurl1="http://www.example.com/one.html";
-  String nsurl2="http://www.example.com/two";
-  String nsurl3="http://www.example.com/three";
-  String nsurl4="http://www.example.com/four";
-  String nsurl5="http://www.example.com/redir1";
+  String nsurl2="http://www.example.com/two.xml";
+  String nsurl3="http://www.example.com/three.xml";
+  String nsurl4="http://www.example.com/four.html";
+  String nsurl5="http://www.example.com/redir1.html";
 
   public void testNoSubstance(SubstanceChecker.State expSubState,
 			      List<String> substanceUrlRegexps,
@@ -455,67 +455,151 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     assertEquals(expSubState, subState);
   }
 
+  void setSubstanceMode(String mode) {
+    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
+				  mode);
+  }
 
   public void testNoSubstanceNoPats() throws Exception {
-    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
-				  "Crawl");
+    setSubstanceMode("Crawl");
     testNoSubstance(State.Unknown, null, null);
   }
 
   public void testNoSubstanceNoUrlsMatchSubstancePatterns() throws Exception {
-    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
-				  "Crawl");
+    setSubstanceMode("Crawl");
     testNoSubstance(State.No, ListUtil.list("important"), null);
   }
 
   public void testNoSubstanceSomeUrlsMatchSubstancePatterns() throws Exception {
-    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
-				  "Crawl");
+    setSubstanceMode("Crawl");
     testNoSubstance(State.Yes, ListUtil.list("important","two"), null);
   }
 
   // Same as previous but disabled
   public void testNoSubstanceDisabled() throws Exception {
-    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
-				  "None");
+    setSubstanceMode("None");
     testNoSubstance(State.Unknown, ListUtil.list("important","two"), null);
   }
 
   public void testNoSubstanceSomeAlreadyCachedUrlsMatchSubstancePatterns()
       throws Exception {
-    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
-				  "Crawl");
+    setSubstanceMode("Crawl");
     testNoSubstance(State.Yes, ListUtil.list("four"), null);
   }
 
   public void testNoSubstanceRedirUrlMatchesSubstancePatterns() throws Exception {
-    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
-				  "Crawl");
+    setSubstanceMode("Crawl");
     testNoSubstance(State.Yes, ListUtil.list("important","redir"), null,
 		    ListUtil.list(nsurl1, nsurl2, nsurl3));
   }
 
   public void testNoSubstanceSumeUrlsMatchNonSubstancePatterns() throws Exception {
-    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
-				  "Crawl");
+    setSubstanceMode("Crawl");
     testNoSubstance(State.Yes, null, ListUtil.list("important","two"));
   }
 
   public void testNoSubstanceAllUrlsMatchNonSubstancePatterns() throws Exception {
-    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
-				  "Crawl");
+    setSubstanceMode("Crawl");
     testNoSubstance(State.No, null,
 		    ListUtil.list("one","two","three", "four"));
   }
 
   public void testNoSubstanceMostUrlsMatchNonSubstancePatterns() throws Exception {
-    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
-				  "Crawl");
+    setSubstanceMode("Crawl");
     testNoSubstance(State.Yes, null,
 		    ListUtil.list("one","tow","three", "four"));
   }
 
 
+  public void testAbbreviatedCrawlTest(int expCrawlerStatus,
+				       SubstanceChecker.State expSubState,
+				       Collection<String> expFetched,
+				       int substanceThreshold,
+				       List<String> substanceUrlRegexps,
+				       List<String> nonSubstanceUrlRegexps,
+				       List<String> urlsToFollow
+				       )
+      throws Exception {
+
+    setSubstanceMode("Crawl");
+    Configuration auConfig = mau.getConfiguration().copy();
+    auConfig.put(ConfigParamDescr.CRAWL_TEST_SUBSTANCE_THRESHOLD.getKey(),
+		 ""+substanceThreshold);
+    mau.setConfiguration(auConfig);
+    if (substanceUrlRegexps != null)
+      mau.setSubstanceUrlPatterns(compileRegexps(substanceUrlRegexps));
+    if (nonSubstanceUrlRegexps != null)
+      mau.setNonSubstanceUrlPatterns(compileRegexps(nonSubstanceUrlRegexps));
+
+    crawler.setUrlsToFollow(urlsToFollow);
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(startUrl, false, true);
+    mau.addUrl(nsurl1, false, true);
+    mau.addUrl(nsurl2, false, true);
+    mau.addUrl(nsurl3, false, true);
+    mau.addUrl(nsurl4, true, true);
+
+    assertFalse(crawler.doCrawl());
+    AuState aus1 = AuUtil.getAuState(mau);
+    SubstanceChecker.State subState = aus1.getSubstanceState();
+    CrawlerStatus crawlStatus = crawler.getStatus();
+    assertEquals(expCrawlerStatus, crawlStatus.getCrawlStatus());
+    assertEquals(expSubState, subState);
+    assertEquals(expFetched, crawler.fetched);
+  }
+
+  public void testCrawlTestPassZero() throws Exception {
+    testAbbreviatedCrawlTest(Crawler.STATUS_CRAWL_TEST_SUCCESSFUL,
+			     State.Yes,
+			     SetUtil.set(nsurl1),
+			     0,
+			     ListUtil.list("html"),
+			     null,
+			     ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
+  }
+
+  public void testCrawlTestPass1() throws Exception {
+    testAbbreviatedCrawlTest(Crawler.STATUS_CRAWL_TEST_SUCCESSFUL,
+			     State.Yes,
+			     SetUtil.set(nsurl1),
+			     1,
+			     ListUtil.list("html"),
+			     null,
+			     ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
+  }
+
+  public void testCrawlTestPass2() throws Exception {
+    testAbbreviatedCrawlTest(Crawler.STATUS_CRAWL_TEST_SUCCESSFUL,
+			     State.Yes,
+			     SetUtil.set(nsurl1, nsurl2, nsurl3, nsurl4),
+			     2,
+			     ListUtil.list("html"),
+			     null,
+			     ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
+  }
+
+  public void testCrawlTestFail() throws Exception {
+    testAbbreviatedCrawlTest(Crawler.STATUS_CRAWL_TEST_FAIL,
+			     State.Yes,
+			     SetUtil.set(nsurl1, nsurl2, nsurl3, nsurl4),
+			     3,
+			     ListUtil.list("html"),
+			     null,
+			     ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
+  }
+
+  public void testCrawlTestCrawlFail() throws Exception {
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MyMockPermissionChecker(0));
+    testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
+			     State.Unknown,
+			     Collections.EMPTY_SET,
+			     1,
+			     ListUtil.list("html"),
+			     null,
+			     ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
+  }
 
   private static class MyFiltFact implements FilterFactory {
     int skip;

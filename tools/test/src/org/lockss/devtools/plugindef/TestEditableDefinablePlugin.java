@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.38 2012-03-19 17:54:24 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.39 2012-07-09 07:50:14 tlipkis Exp $
  */
 
 /*
@@ -232,6 +232,7 @@ public class TestEditableDefinablePlugin
     set.add(ConfigParamDescr.USER_CREDENTIALS);
     set.add(ConfigParamDescr.COLLECTION);
     set.add(ConfigParamDescr.CRAWL_INTERVAL);
+    set.add(ConfigParamDescr.CRAWL_TEST_SUBSTANCE_THRESHOLD);
     Collection actualReturn = edPlugin.getKnownConfigParamDescrs();
     assertIsomorphic("default descrs", set, actualReturn);
 

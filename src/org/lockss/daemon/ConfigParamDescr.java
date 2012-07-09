@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.48 2012-03-07 00:06:58 thib_gc Exp $
+ * $Id: ConfigParamDescr.java,v 1.49 2012-07-09 07:50:15 tlipkis Exp $
  */
 
 /*
@@ -286,10 +286,22 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     .setDescription("The interval at which the AU should crawl "
 		    + "the publisher site.");
 
+  public static final ConfigParamDescr CRAWL_TEST_SUBSTANCE_THRESHOLD =
+    new ConfigParamDescr()
+    .setDefinitional(false)
+    .setDefaultOnly(false)
+    .setKey("crawl_test_substance_threshold")
+    .setDisplayName("Crawl Test Substance Threshold")
+    .setType(TYPE_STRING)
+    .setSize(20)
+    .setDescription("Minimum number of substance URL necessary for "
+		    + "successful abbreviated crawl test.");
+
   public static final ConfigParamDescr[] DEFAULT_DESCR_ARRAY = {
       BASE_URL, VOLUME_NUMBER, VOLUME_NAME, YEAR, JOURNAL_ID, JOURNAL_ISSN,
       PUBLISHER_NAME, ISSUE_RANGE, NUM_ISSUE_RANGE, ISSUE_SET, OAI_REQUEST_URL,
       OAI_SPEC, BASE_URL2, USER_CREDENTIALS, COLLECTION, CRAWL_INTERVAL,
+      CRAWL_TEST_SUBSTANCE_THRESHOLD,
   };
 
   private String key;			// param (prop) key

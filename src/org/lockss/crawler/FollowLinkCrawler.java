@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.89 2012-03-12 05:26:38 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.90 2012-07-09 07:50:15 tlipkis Exp $
  */
 
 /*
@@ -138,6 +138,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   protected String crawlEndReportEmail = DEFAULT_CRAWL_END_REPORT_EMAIL;
   protected String crawlEndReportHashAlg = DEFAULT_CRAWL_END_REPORT_HASH_ALG;
   protected SubstanceChecker subChecker;
+  protected boolean isAbbreviatedCrawlTest = false;
+  protected boolean crawlTerminated = false;
 
   // Cache recent negative results from au.shouldBeCached().  This is set
   // to an LRUMsp when crawl is initialzed, it's initialized here to a
@@ -246,6 +248,20 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     subChecker = new SubstanceChecker(au);
     if (subChecker.isEnabledFor(SubstanceChecker.CONTEXT_CRAWL)) {
       logger.debug2("Checking AU for substance during crawl");
+      Configuration auConfig = au.getConfiguration();
+      String key = ConfigParamDescr.CRAWL_TEST_SUBSTANCE_THRESHOLD.getKey();
+      if (auConfig.containsKey(key)) {
+	try {
+	  int threshold = auConfig.getInt(key);
+	  subChecker.setSubstanceMin(threshold);
+	  isAbbreviatedCrawlTest = true;
+	  logger.debug("Performing abbreviated crawl test");
+	} catch (Configuration.InvalidParam e) {
+	  logger.error("Illegal crawl test threshold: " + auConfig.get(key)
+		       + ", performing regular crawl");
+	  isAbbreviatedCrawlTest = false;
+	}
+      }
     } else {
       subChecker = null;
       logger.debug3("Not checking AU for substance during crawl");
@@ -290,7 +306,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       // PERSIST load fetchQueue here
     }
 
-    while (!fetchQueue.isEmpty() && !crawlAborted) {
+    while (!fetchQueue.isEmpty() && !(crawlAborted || crawlTerminated)) {
       // check crawl window during crawl
       if (!withinCrawlWindow()) {
 	crawlStatus.setCrawlStatus(Crawler.STATUS_WINDOW_CLOSED);
@@ -367,6 +383,15 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	logger.siteWarning("" + au + ": " + msg);
 	break;
       case Yes:
+	if (isAbbreviatedCrawlTest) {
+	  if (subChecker.getSubstanceCnt() >= subChecker.getSubstanceMin()) {
+	    logger.debug("Abbreviated crawl test succeeded");
+	    crawlStatus.setCrawlStatus(Crawler.STATUS_CRAWL_TEST_SUCCESSFUL);
+	  } else {
+	    logger.debug("Abbreviated crawl test failed");
+	    crawlStatus.setCrawlStatus(Crawler.STATUS_CRAWL_TEST_FAIL);
+	  }
+	}
 	aus.setSubstanceState(SubstanceChecker.State.Yes);
 	break;
       default:
@@ -640,11 +665,16 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     return (!crawlStatus.isCrawlError());
   }
 
-  // Callers are all local, know that we release the CU
+  // Callers are all local and know that we release the CU
   private void checkSubstanceCollected(CachedUrl cu) {
     try {
       if (subChecker != null) {
 	subChecker.checkSubstance(cu);
+	if (isAbbreviatedCrawlTest &&
+	    subChecker.getSubstanceCnt() >= subChecker.getSubstanceMin()) {
+	  crawlStatus.setCrawlStatus(Crawler.STATUS_CRAWL_TEST_SUCCESSFUL);
+	  crawlTerminated = true;
+	}
       }
     } finally {
       AuUtil.safeRelease(cu);
