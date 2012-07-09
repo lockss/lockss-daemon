@@ -215,26 +215,61 @@
        
     >
     param[journal_id] = 10.1055/s-00000169
-    comment[years] = 2004, 2006, 2011
+    comment[years] = 2011-current
     
   }
-    
+      
   {
-  
-    title < 
-      name = American Journal of Perinatology ;
-      issn = 0735-1631
-    >
+    title <
+      name = Arzneimittelforschung ;
+      issn = 0004-4172 ;
+      eissn = 1616-7066
     
+    >
+    param[journal_id] = 10.1055/s-00000175
+    comment[years] = 1999-current  
+    
+    
+  }    
+  
+  {
+    title <
+      name = Augenheilkunde up2date ;
+      issn = 1616-9719 ;
+      eissn = 1616-9735
+    
+    >
+    param[journal_id] = 10.1055/s-00000174
+    comment[years] = 2011-current
+  
+  
+  
   }
   
   {
   
     title < 
       name = Arzneimittelforschung Drug Research ;
-      issn = 0004-4172
+      issn = 0004-4172 ;
+      eissn = 
+      
     >
+    param[journal_id] = 10.1055/s-002-22827
+    comment[0] = became Arzneimittelforschung when Georg Thieme Verlag took over publishing in January 2012
+  }
+  
+  {
+    title <
+      name = B&G Bewegungstherapie und Gesundheitssport ;
+      issn = 1613-0863 ;
+      eissn = 1613-3269
     
+    >
+    param[journal_id] = 10.1055/s-00000119
+    comment[years] =  2004-current
+  
+  
+  
   }
   
   {
