@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.24 2012-06-22 19:19:46 pgust Exp $
+ * $Id: DebugPanel.java,v 1.25 2012-07-09 07:53:09 tlipkis Exp $
  */
 
 /*
@@ -307,16 +307,18 @@ public class DebugPanel extends LockssServlet {
         return false;
       }
       
-      SubstanceChecker.State state = new SubstanceChecker(au).hasSubstance();
-      if (state.equals(SubstanceChecker.State.No)) {
+      AuState auState = AuUtil.getAuState(au);
+      switch (auState.getSubstanceState()) {
+      case No:
         errMsg = "Au has no substance. Click again to reindex metadata";
         showForceReindexMetadata = true;
         return false;
-      }
-      if (state.equals(SubstanceChecker.State.Unknown)) {
+      case Unknown:
         errMsg = "Unknown substance for Au. Click again to reindex metadata.";
         showForceReindexMetadata = true;
         return false;
+      case Yes:
+	// fall through
       }
     }
     
