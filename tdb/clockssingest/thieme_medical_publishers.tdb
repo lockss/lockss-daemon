@@ -707,13 +707,31 @@
   
   
   }
+  {
+    title <
+      name = Gesundheitswesen Das ;
+      issn = 0941-3790 ;
+      eissn = 1439-4421
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000022
+    comment[years] = 2000-current
+  
+  
+  
+  }
     
   {
   
     title < 
       name = Global Spine Journal ;
-      issn = 2192-5682
+      issn = 2192-5682 ;
+      eissn = 2192-5690
+      
     >
+    param[journal_id] = 10.1055/s-00000177
+    comment[years] = 2011-current
     
   }
   
