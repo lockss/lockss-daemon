@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPluginTestCase.java,v 1.3 2012-06-25 05:47:05 tlipkis Exp $
+ * $Id: LockssPluginTestCase.java,v 1.4 2012-07-09 07:53:42 tlipkis Exp $
  */
 
 /*
@@ -118,23 +118,9 @@ public class LockssPluginTestCase extends LockssTestCase {
   }
 
   /** Assert that the URL does not match a substance pattern */
-  public void assertNonSubstance(String url, ArchivalUnit au) {
-    SubstanceChecker checker = new SubstanceChecker(au);
-    assertTrue("Not a non-substance URL: " + url,
-	       checker.isNonSubstanceUrl(url));
-  }
-
-  /** Assert that the URL matches a non-substance pattern */
   public void assertNotSubstanceUrl(String url, ArchivalUnit au) {
     SubstanceChecker checker = new SubstanceChecker(au);
     assertFalse("Is a substance URL: " + url,
 		checker.isSubstanceUrl(url));
-  }
-
-  /** Assert that the URL does not match a non-substance pattern */
-  public void assertNotNonSubstance(String url, ArchivalUnit au) {
-    SubstanceChecker checker = new SubstanceChecker(au);
-    assertFalse("Is a non-substance URL: " + url,
-		checker.isNonSubstanceUrl(url));
   }
 }

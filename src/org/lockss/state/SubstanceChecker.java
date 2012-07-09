@@ -1,5 +1,5 @@
 /*
- * $Id: SubstanceChecker.java,v 1.6 2012-06-25 05:46:38 tlipkis Exp $
+ * $Id: SubstanceChecker.java,v 1.7 2012-07-09 07:53:42 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,8 @@ import org.lockss.filter.*;
 import org.lockss.extractor.*;
 import org.lockss.alert.Alert;
 
-/** 
+/** Logic to maintain substance state during a scan of URLs in an AU.
+ * Typically used during a crawl or vote.
  */
 public class SubstanceChecker {
   static Logger log = Logger.getLogger("SubstanceChecker");
@@ -119,14 +120,16 @@ public class SubstanceChecker {
   public static final NoSubstanceRedirectUrl
     DEFAULT_DETECT_NO_SUBSTANCE_REDIRECT_URL = NoSubstanceRedirectUrl.Last;
 
+  static final SubstancePredicateFactory DEFAULT_FACT =
+    new UrlPredicateFactory();
+
   protected String enabledContexts = DEFAULT_DETECT_NO_SUBSTANCE_MODE;
 
   protected ArchivalUnit au;
-  protected List<Pattern> substancePats = null;
-  protected List<Pattern> nonSubstancePats = null;
-  protected Set<String> additionalNonSubstanceUrls = null;
+  protected SubstancePredicate substancePred;
   protected State hasSubstance = State.Unknown;
-  protected Perl5Matcher matcher = new Perl5Matcher();
+  protected int substanceCnt = 0;
+  protected int substanceMin = -1;
   protected NoSubstanceRedirectUrl detectNoSubstanceRedirectUrl =
     DEFAULT_DETECT_NO_SUBSTANCE_REDIRECT_URL;
 
@@ -138,24 +141,20 @@ public class SubstanceChecker {
     this.au = au;
     setConfig(config);
     try {
-      nonSubstancePats = au.makeNonSubstanceUrlPatterns();
-      substancePats = au.makeSubstanceUrlPatterns();
-      if (nonSubstancePats != null || substancePats != null) {
-	if (nonSubstancePats != null) {
-	  additionalNonSubstanceUrls = getAdditionalNonSubstanceUrls();
-	}
+      substancePred = au.makeSubstancePredicate();
+      if (substancePred == null) {
+	substancePred = DEFAULT_FACT.makeSubstancePredicate(au);
+      }
+      if (substancePred != null) {
 	hasSubstance = State.No;
-	log.debug("NonSubstancePatterns: "
-		  + RegexpUtil.regexpCollection(nonSubstancePats));
-	log.debug("SubstancePatterns: " +
-		  RegexpUtil.regexpCollection(substancePats));
       } else {
 	hasSubstance = State.Unknown;
       }
     } catch (ArchivalUnit.ConfigurationException e) {
       log.error("Error in substance or non-substance pattern, disabling substance checking", e);
-      nonSubstancePats = null;
-      substancePats = null;
+      hasSubstance = State.Unknown;
+    } catch (PluginException.LinkageError e) {
+      log.error("Error creating SubstancePredicate, disabling substance checking", e);
       hasSubstance = State.Unknown;
     }
   }
@@ -170,9 +169,15 @@ public class SubstanceChecker {
 		     DEFAULT_DETECT_NO_SUBSTANCE_REDIRECT_URL);
   }
 
+  /** If called, puts SubstanceChecker into counting mode, where it counts
+   * up to the specified minimum then stops checking */
+  public void setSubstanceMin(int min) {
+    substanceMin = min;
+  }
+
   public boolean isEnabledFor(String context) {
-    if (nonSubstancePats == null && substancePats == null) {
-      log.debug3("isEnabledFor(" + context + "): false, no patterns");
+    if (substancePred == null) {
+      log.debug3("isEnabledFor(" + context + "): false, no predicate");
       return false;
     }
     boolean res = enabledContexts.equalsIgnoreCase(CONTEXT_ALL)
@@ -181,28 +186,25 @@ public class SubstanceChecker {
     return res;
   }
 
-  protected Set<String> getAdditionalNonSubstanceUrls() {
-    Set<String> res = new HashSet<String>();
-    CrawlSpec spec = au.getCrawlSpec();
-    addImplicitUrls(spec.getPermissionPages(), res);
-    addImplicitUrls(spec.getStartingUrls(), res);
-    return res;
-  }
-
-  private void addImplicitUrls(Collection<String> urls, Set<String> to) {
-    for (String url : urls) {
-      if (!isMatch(url, nonSubstancePats)) {
-	to.add(url);
-      }
+  // return true if there's no reason to check any more URLs
+  private boolean isStateFullyDetermined() {
+    switch (hasSubstance) {
+    case No:
+    case Unknown:
+      return false;
+    case Yes:
+      // if already established has substance, continue checking only until
+      // reach threshold
+      return (substanceMin <= 0) ? true : substanceCnt >= substanceMin;
     }
+    throw new ShouldNotHappenException();
   }
 
   /** If substance not detected yet, check whether this CachedUrl contains
    * substance.  Releasing the CachedUrl is the responsibility of the
    * caller. */
   public void checkSubstance(CachedUrl cu) {
-    if (hasSubstance == State.Yes) {
-      // no need to check if already established has substance.
+    if (isStateFullyDetermined()) {
       return;
     }
     Properties props;
@@ -246,14 +248,13 @@ public class SubstanceChecker {
   /** If substance not detected yet, check whether this URL is a substance
    * URL */
   public void checkSubstance(String url) {
-    if (hasSubstance == State.Yes) {
-      // no need to check if already established has substance.
+    if (isStateFullyDetermined()) {
       return;
     }
     checkSubstanceUrl(url);
   }
 
-  private void nowHasSubstance(String url) {
+  private void foundSubstanceUrl(String url) {
     switch (hasSubstance) {
     case No:
     case Unknown:
@@ -262,68 +263,143 @@ public class SubstanceChecker {
     default:
     }
     hasSubstance = State.Yes;
+    substanceCnt++;
   }
 
   private void checkSubstanceUrl(String url) {
-    if (substancePats != null) {
-      if (isSubstanceUrl(url)) {
-	nowHasSubstance(url);
-	if (log.isDebug3()) {
-	  log.debug3("checkSubstanceUrl(" + url + ") matched substance");
-	}
-	return;
-      } else {
-        if (log.isDebug3()) {
-          log.debug3("checkSubstanceUrl(" + url + ") does not match substance");
-        }
-      }
-    }
-    if (nonSubstancePats != null) {
-      if (!isNonSubstanceUrl(url)) {
-	if (log.isDebug3()) {
-	  log.debug3("checkSubstanceUrl(" + url + ") matched non-substance");
-	}
-	nowHasSubstance(url);
-      } else {
-        if (log.isDebug3()) {
-          log.debug3("checkSubstanceUrl(" + url + ") does not match non-substance");
-        }
-      }
+    if (isSubstanceUrl(url)) {
+      foundSubstanceUrl(url);
     }
   }
 
   public boolean isSubstanceUrl(String url) {
-    return substancePats != null && isMatch(url, substancePats);
-  }
-
-  public boolean isNonSubstanceUrl(String url) {
-    return (nonSubstancePats != null && isMatch(url, nonSubstancePats)) ||
-      (additionalNonSubstanceUrls != null &&
-       additionalNonSubstanceUrls.contains(url));
-  }
-
-  boolean isMatch(String url, List<Pattern> pats) {
-    for (Pattern pat : pats) {
-      if (matcher.contains(url, pat)) {
-	if (log.isDebug3()) {
-	  log.debug3("checkSubstanceUrl(" + url + ") matches "
-		     + RegexpUtil.regexpCollection(pats));
-	}
-	return true;
-      }
-    }
-    if (log.isDebug3()) {
-      log.debug3("checkSubstanceUrl(" + url + ") no match "
-		 + RegexpUtil.regexpCollection(pats));
-    }
-    return false;
+    return substancePred.isSubstanceUrl(url);
   }
 
   public State hasSubstance() {
     return hasSubstance;
   }
 
+  public int getSubstanceCnt() {
+    return substanceCnt;
+  }
+
+  public int getSubstanceMin() {
+    return substanceMin;
+  }
+
   public void setHasSubstance(State state) {
     hasSubstance = state;
+  }
+
+  /** A SubstancePredicate that matches URLs against plugin-supplied regexp
+   * lists: <code>au_substance_url_pattern</code> or
+   * <code>au_non_substance_url_pattern</code> */
+  public static class UrlPredicate implements SubstancePredicate {
+    protected ArchivalUnit au;
+    protected List<Pattern> substancePats = null;
+    protected List<Pattern> nonSubstancePats = null;
+    protected Set<String> additionalNonSubstanceUrls = null;
+    protected Perl5Matcher matcher = new Perl5Matcher();
+
+    public UrlPredicate(ArchivalUnit au, List<Pattern> substancePats,
+			List<Pattern> nonSubstancePats) {
+      this.au = au;
+      this.substancePats = substancePats;
+      this.nonSubstancePats = nonSubstancePats;
+      if (nonSubstancePats != null || substancePats != null) {
+	if (nonSubstancePats != null) {
+	  additionalNonSubstanceUrls = getAdditionalNonSubstanceUrls();
+	}
+      }
+    }
+
+    public boolean isSubstanceUrl(String url) {
+      if (substancePats != null) {
+	if (isMatchSubstancePat(url)) {
+	  if (log.isDebug3()) {
+	    log.debug3("checkSubstanceUrl(" + url + ") matched substance");
+	  }
+	  return true;
+	} else {
+	  if (log.isDebug3()) {
+	    log.debug3("checkSubstanceUrl(" + url + ") does not match substance");
+	  }
+	}
+      }
+      if (nonSubstancePats != null) {
+	if (!isMatchNonSubstancePat(url)) {
+	  if (log.isDebug3()) {
+	    log.debug3("checkSubstanceUrl(" + url + ") matched non-substance");
+	  }
+	  return true;
+	} else {
+	  if (log.isDebug3()) {
+	    log.debug3("checkSubstanceUrl(" + url + ") does not match non-substance");
+	  }
+	}
+      }
+      return false;
+    }
+
+    public boolean isMatchSubstancePat(String url) {
+      return substancePats != null && isMatch(url, substancePats);
+    }
+
+    public boolean isMatchNonSubstancePat(String url) {
+      return (nonSubstancePats != null && isMatch(url, nonSubstancePats)) ||
+	(additionalNonSubstanceUrls != null &&
+	 additionalNonSubstanceUrls.contains(url));
+    }
+
+    boolean isMatch(String url, List<Pattern> pats) {
+      for (Pattern pat : pats) {
+	if (matcher.contains(url, pat)) {
+	  if (log.isDebug3()) {
+	    log.debug3("checkSubstanceUrl(" + url + ") matches "
+		       + RegexpUtil.regexpCollection(pats));
+	  }
+	  return true;
+	}
+      }
+      if (log.isDebug3()) {
+	log.debug3("checkSubstanceUrl(" + url + ") no match "
+		   + RegexpUtil.regexpCollection(pats));
+      }
+      return false;
+    }
+
+    private Set<String> getAdditionalNonSubstanceUrls() {
+      Set<String> res = new HashSet<String>();
+      CrawlSpec spec = au.getCrawlSpec();
+      addImplicitUrls(spec.getPermissionPages(), res);
+      addImplicitUrls(spec.getStartingUrls(), res);
+      return res;
+    }
+
+    private void addImplicitUrls(Collection<String> urls, Set<String> to) {
+      for (String url : urls) {
+	if (!isMatch(url, nonSubstancePats)) {
+	  to.add(url);
+	}
+      }
+    }
+  }
+
+  /** Factory that creates a {@link UrlPredicate} for the AU */
+  public static class UrlPredicateFactory implements SubstancePredicateFactory {
+    public SubstancePredicate makeSubstancePredicate(ArchivalUnit au) {
+      try {
+	List<Pattern> substancePats = au.makeSubstanceUrlPatterns();
+	List<Pattern> nonSubstancePats = au.makeNonSubstanceUrlPatterns();
+	if (nonSubstancePats != null || substancePats != null) {
+	  return new UrlPredicate(au, substancePats, nonSubstancePats);
+	}
+	return null;
+      } catch (ArchivalUnit.ConfigurationException e) {
+	log.error("Error in substance or non-substance pattern, disabling substance URL checking", e);
+	return null;
+      }
+    }
   }
 }

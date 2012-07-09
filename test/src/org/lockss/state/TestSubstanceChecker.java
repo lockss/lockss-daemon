@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubstanceChecker.java,v 1.1 2010-09-01 07:54:31 tlipkis Exp $
+ * $Id: TestSubstanceChecker.java,v 1.2 2012-07-09 07:53:42 tlipkis Exp $
  */
 
 /*
@@ -133,6 +133,46 @@ public class TestSubstanceChecker extends LockssTestCase {
     check("http://perm/");
     assertEquals(State.No, checker.hasSubstance());
     check("http://other/");
+    assertEquals(State.Yes, checker.hasSubstance());
+  }
+
+  public void testCountSubst() throws Exception {
+    mau.setSubstanceUrlPatterns(compileRegexps(ListUtil.list("one", "two" )));
+    checker = new SubstanceChecker(mau);
+    checker.setSubstanceMin(3);
+    assertEquals(State.No, checker.hasSubstance());
+    assertEquals(0, checker.getSubstanceCnt());
+    check("http://four/");
+    assertEquals(State.No, checker.hasSubstance());
+    assertEquals(0, checker.getSubstanceCnt());
+    check("http://two/");
+    assertEquals(State.Yes, checker.hasSubstance());
+    assertEquals(1, checker.getSubstanceCnt());
+    check("http://one/");
+    assertEquals(State.Yes, checker.hasSubstance());
+    assertEquals(2, checker.getSubstanceCnt());
+    check("http://one/");
+    assertEquals(State.Yes, checker.hasSubstance());
+    assertEquals(3, checker.getSubstanceCnt());
+    // should stop testing URL once reaches 3
+    check("http://one/");
+    assertEquals(State.Yes, checker.hasSubstance());
+    assertEquals(3, checker.getSubstanceCnt());
+  }
+
+  public void testPluginPredicate() throws Exception {
+    mau.setSubstancePredicate(new SubstancePredicate() {
+	public boolean isSubstanceUrl(String url) {
+	  return url.indexOf("yes") >= 0;
+	}});
+    checker = new SubstanceChecker(mau);
+    assertTrue(checker.isSubstanceUrl("xxyesxx"));
+    assertFalse(checker.isSubstanceUrl("xxnoxx"));
+
+    assertEquals(State.No, checker.hasSubstance());
+    check("http://four/");
+    assertEquals(State.No, checker.hasSubstance());
+    check("http://yes/");
     assertEquals(State.Yes, checker.hasSubstance());
   }
 
