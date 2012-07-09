@@ -364,6 +364,68 @@
     comment[years] = 2006-current
   
   
+  }
+  {
+    title <
+      name = Deutsche Zeitschrift für Akupunktur ;
+      issn = 0415-6412 ;
+      eissn = 1439-4359
+    
+    >
+    param[journal_id] = 10.1055/s-00000010
+    comment[years] = 2000-2002
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Deutsche Zeitschrift für Onkologie ;
+      issn = 1617-5891 ;
+      eissn = 1439-0930
+    
+    >
+    param[journal_id] = 10.1055/s-00000097
+    comment[years] = 2001-current
+  
+  }
+  {
+    title <
+      name = Zeitschrift für Onkologie ;
+      issn = 1432-2919 
+    
+    >
+    param[journal_id] = 10.1055/s-00000097
+    comment[years] = 2000
+   
+  
+  }
+  
+  {
+    title <
+      name = Diabetes aktuell ;
+      issn = 1861-6089 ;
+      eissn = 1864-1733
+    
+    >
+    param[journal_id] = 10.1055/s-00000146
+    comment[years] = 2007-current  
+  
+  }
+  
+  {
+    title <
+      name = Diabetologie und Stoffwechsel ;
+      issn = 1861-9002 ;
+      eissn = 1861-9010
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000134
+    comment[years] = 2006-current  
+  
+  
   
   }
   
