@@ -848,41 +848,66 @@
   
     title < 
       name = intensiv ;
-      issn = xxxx-yyyy
+      issn = 0942-6035 ;
+	  eissn = 1439-3840
+	  
       
     >
     param[journal_id] = 10.1055/s-00000027
-    comment[years] = 1996-2012
+    comment[years] = 2001-2012
     
     au < manifest ; exists ; 2012 ; intensiv 2012 ; 2012 >  
   }
   
+  {
+    title <
+      name = Intensivmedizin up2date ;
+      issn = 1614-4856 ;
+      eissn = 1614-6697
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000126
+    comment[years] = 2005-current
+  
+  
+  
+  }
   
    {
   
     title < 
       name = International Journal of Angiology ;
-      issn = 1061-1711
+      issn = 1061-1711 ;
+      eissn = 1615-5939
+      
     >
-    
+    param[journal_id] = 10.1055/s-00000167
+    comment[years] = 2011-current
   }
   
   {
   
     title < 
       name = International Journal of Sports Medicine ;
-      issn = 0172-4622
+      issn = 0172-4622 ;
+      eissn = 1439-3964
+      
     >
-    
+    param[journal_id] = 10.1055/s-00000028
+    comment[years] = 1980-current
   }
   
   {
   
     title < 
       name = Journal of Knee Surgery ;
-      issn = 1538-8506
+      issn = 1538-8506 ;
+      eissn = 1938-2480
+      
     >
-    
+    param[journal_id] = 10.1055/s-00000161
+    comment[years] = 2004-current
   }
   
   {
