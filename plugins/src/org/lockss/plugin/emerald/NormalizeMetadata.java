@@ -1,5 +1,5 @@
 /*
- * $Id: NormalizeMetadata.java,v 1.1 2012-05-22 23:30:46 wkwilson Exp $
+ * $Id: NormalizeMetadata.java,v 1.2 2012-07-10 23:55:33 thib_gc Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.pdfbox.cos.COSDictionary;
 import org.pdfbox.cos.COSName;
 import org.pdfbox.cos.COSString;
 
+@Deprecated
 public class NormalizeMetadata implements OutputDocumentTransform {
 
   public boolean transform(PdfDocument pdfDocument, OutputStream outputStream) {

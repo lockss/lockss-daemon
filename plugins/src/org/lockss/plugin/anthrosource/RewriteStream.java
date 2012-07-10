@@ -1,5 +1,5 @@
 /*
- * $Id: RewriteStream.java,v 1.2 2008-01-16 00:40:26 thib_gc Exp $
+ * $Id: RewriteStream.java,v 1.3 2012-07-10 23:55:11 thib_gc Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.filter.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.pdfbox.util.operator.OperatorProcessor;
 
+@Deprecated
 public class RewriteStream extends PageStreamTransform {
 
   public RewriteStream(final ArchivalUnit au) throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: NormalizeXObjects.java,v 1.1 2012-05-22 23:30:46 wkwilson Exp $
+ * $Id: NormalizeXObjects.java,v 1.2 2012-07-10 23:55:33 thib_gc Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
 import org.pdfbox.util.operator.OperatorProcessor;
 
+@Deprecated
 public class NormalizeXObjects extends AggregatePageTransform {
 
   public static class NormalizeReferences extends PageStreamTransform {

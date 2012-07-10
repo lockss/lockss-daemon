@@ -1,5 +1,5 @@
 /*
- * $Id: MassachusettsMedicalSocietyPdfTransform.java,v 1.1 2012-03-26 18:27:33 wkwilson Exp $
+ * $Id: MassachusettsMedicalSocietyPdfTransform.java,v 1.2 2012-07-10 23:56:05 thib_gc Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.plugin.ArchivalUnit;
  * Downloaded from nejm.org at LANE MEDICAL LIBRARY on March 5, 2012.
  * matches on "Downloaded from.*"
  */
+@Deprecated
 public class MassachusettsMedicalSocietyPdfTransform extends SimpleOutputDocumentTransform {
 
 	  public MassachusettsMedicalSocietyPdfTransform(ArchivalUnit au) throws IOException {

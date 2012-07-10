@@ -1,5 +1,5 @@
 /*
- * $Id: NormalizeTrailerId.java,v 1.2 2008-01-16 00:41:00 thib_gc Exp $
+ * $Id: NormalizeTrailerId.java,v 1.3 2012-07-10 23:55:11 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.filter.pdf.DocumentTransform;
 import org.lockss.util.PdfDocument;
 import org.pdfbox.cos.*;
 
+@Deprecated
 public class NormalizeTrailerId implements DocumentTransform {
 
   public boolean transform(PdfDocument pdfDocument) throws IOException {

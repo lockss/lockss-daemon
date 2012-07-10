@@ -1,5 +1,5 @@
 /*
- * $Id: NormalizeMetadata.java,v 1.1 2012-03-26 18:27:33 wkwilson Exp $
+ * $Id: NormalizeMetadata.java,v 1.2 2012-07-10 23:56:06 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.io.IOException;
 import org.lockss.filter.pdf.DocumentTransform;
 import org.lockss.util.PdfDocument;
 
+@Deprecated
 public class NormalizeMetadata implements DocumentTransform {
 
   public boolean transform(PdfDocument pdfDocument) throws IOException {

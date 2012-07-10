@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanSocietyForNutritionPdfTransform.java,v 1.3 2008-02-27 21:48:25 thib_gc Exp $
+ * $Id: AmericanSocietyForNutritionPdfTransform.java,v 1.4 2012-07-10 23:55:48 thib_gc Exp $
  */
 
 /*
@@ -39,10 +39,12 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.*;
 import org.lockss.util.*;
 
+@Deprecated
 public class AmericanSocietyForNutritionPdfTransform
     implements OutputDocumentTransform,
                ArchivalUnitDependent {
 
+  @Deprecated
   public static class Simplified
       extends ResilientTextScrapingDocumentTransform
         implements ArchivalUnitDependent {

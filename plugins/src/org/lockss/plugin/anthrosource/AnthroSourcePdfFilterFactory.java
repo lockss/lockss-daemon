@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourcePdfFilterFactory.java,v 1.5 2008-01-16 00:41:00 thib_gc Exp $
+ * $Id: AnthroSourcePdfFilterFactory.java,v 1.6 2012-07-10 23:55:11 thib_gc Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.filter.pdf.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
+@Deprecated
 public class AnthroSourcePdfFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,

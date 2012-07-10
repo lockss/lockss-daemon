@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.30 2008-02-27 21:48:25 thib_gc Exp $
+ * $Id: AmericanPhysiologicalSocietyPdfTransform.java,v 1.31 2012-07-10 23:55:48 thib_gc Exp $
  */
 
 /*
@@ -90,6 +90,7 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * @see NormalizeCurrentAsOf
  * @see Simplified
  */
+@Deprecated
 public class AmericanPhysiologicalSocietyPdfTransform
     implements OutputDocumentTransform,
                ArchivalUnitDependent {
@@ -148,6 +149,7 @@ public class AmericanPhysiologicalSocietyPdfTransform
    * @author Thib Guicherd-Callin
    * @see AmericanPhysiologicalSocietyPdfTransform
    */
+  @Deprecated
   public static class Simplified
       extends ResilientTextScrapingDocumentTransform
       implements ArchivalUnitDependent {

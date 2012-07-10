@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisPdfFilterFactory.java,v 1.2 2011-11-19 01:21:34 thib_gc Exp $
+ * $Id: TaylorAndFrancisPdfFilterFactory.java,v 1.3 2012-07-10 23:56:18 thib_gc Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.pdfbox.cos.*;
 import org.pdfbox.pdfwriter.ContentStreamWriter;
 import org.pdfbox.pdmodel.common.PDStream;
 
+@Deprecated
 public class TaylorAndFrancisPdfFilterFactory implements FilterFactory {
 
   public static class FilteringException extends PluginException {

@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourcePdfTransform.java,v 1.2 2008-01-16 00:41:00 thib_gc Exp $
+ * $Id: AnthroSourcePdfTransform.java,v 1.3 2012-07-10 23:55:11 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.io.*;
 import org.lockss.filter.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
 
+@Deprecated
 public class AnthroSourcePdfTransform extends SimpleOutputDocumentTransform {
 
   public AnthroSourcePdfTransform(ArchivalUnit au) throws IOException {

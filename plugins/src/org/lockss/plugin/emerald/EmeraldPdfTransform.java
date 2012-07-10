@@ -33,9 +33,7 @@ import java.io.*;
 import org.lockss.filter.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
 
-/*
- * 
- */
+@Deprecated
 public class EmeraldPdfTransform extends SimpleOutputDocumentTransform {
 
 	  public EmeraldPdfTransform(ArchivalUnit au) throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanMedicalAssociationPdfTransform.java,v 1.8 2009-11-14 00:28:31 thib_gc Exp $
+ * $Id: AmericanMedicalAssociationPdfTransform.java,v 1.9 2012-07-10 23:55:48 thib_gc Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.plugin.highwire.HighWirePdfFilterFactory.*;
 import org.lockss.util.*;
 import org.pdfbox.util.operator.OperatorProcessor;
 
+@Deprecated
 public class AmericanMedicalAssociationPdfTransform
     implements OutputDocumentTransform,
                ArchivalUnitDependent {
@@ -73,7 +74,8 @@ public class AmericanMedicalAssociationPdfTransform
     }
     
   }
-  
+
+  @Deprecated
   public static class Simplified
       extends ResilientTextScrapingDocumentTransform
       implements ArchivalUnitDependent {

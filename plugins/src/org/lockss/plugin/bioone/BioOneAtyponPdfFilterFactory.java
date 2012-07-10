@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneAtyponPdfFilterFactory.java,v 1.1 2011-09-01 21:38:17 thib_gc Exp $
+ * $Id: BioOneAtyponPdfFilterFactory.java,v 1.2 2012-07-10 23:55:21 thib_gc Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.pdfbox.cos.*;
 
+@Deprecated
 public class BioOneAtyponPdfFilterFactory implements FilterFactory {
 
   public static class FilteringException extends PluginException {

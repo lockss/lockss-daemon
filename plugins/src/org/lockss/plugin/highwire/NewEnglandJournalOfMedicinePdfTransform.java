@@ -1,5 +1,5 @@
 /*
- * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.12 2008-02-27 21:48:25 thib_gc Exp $
+ * $Id: NewEnglandJournalOfMedicinePdfTransform.java,v 1.13 2012-07-10 23:55:48 thib_gc Exp $
  */
 
 /*
@@ -75,6 +75,7 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * @see EraseVariableFooter
  * @see Simplified
  */
+@Deprecated
 public class NewEnglandJournalOfMedicinePdfTransform
     implements OutputDocumentTransform,
                ArchivalUnitDependent {
@@ -291,6 +292,7 @@ public class NewEnglandJournalOfMedicinePdfTransform
    * @see NewEnglandJournalOfMedicinePdfTransform
    * @see SimplifiedEraseVariableFooter
    */
+  @Deprecated
   public static class Simplified
       extends ResilientTextScrapingDocumentTransform
       implements ArchivalUnitDependent {

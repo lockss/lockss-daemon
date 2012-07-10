@@ -1,5 +1,5 @@
 /*
- * $Id: SagePublicationsPdfTransform.java,v 1.9 2009-10-12 17:34:26 thib_gc Exp $
+ * $Id: SagePublicationsPdfTransform.java,v 1.10 2012-07-10 23:55:48 thib_gc Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.*;
 import org.lockss.util.*;
 
+@Deprecated
 public class SagePublicationsPdfTransform
     implements OutputDocumentTransform,
                ArchivalUnitDependent {
@@ -125,6 +126,7 @@ public class SagePublicationsPdfTransform
 
   }
 
+  @Deprecated
   public static class Simplified
       extends ResilientTextScrapingDocumentTransform
       implements ArchivalUnitDependent {

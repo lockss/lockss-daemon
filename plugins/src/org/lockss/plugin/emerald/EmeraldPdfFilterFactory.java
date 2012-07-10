@@ -37,7 +37,7 @@ import org.lockss.plugin.FilterFactory;
 import org.lockss.util.Logger;
 import org.lockss.util.PdfUtil;
 
-//Applies {@link EmeraldPdfTransform}
+@Deprecated
 public class EmeraldPdfFilterFactory implements FilterFactory {
 	static Logger log = Logger.getLogger("EmeraldPdfFilterFactory");
 	
