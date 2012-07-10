@@ -1239,13 +1239,89 @@
   
   
   }
+  {
+    title <
+      name = Notfallmedizin up2date ;
+      issn = 1611-6550 ;
+      eissn = 1862-6955
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000139
+    comment[years] = 2006-current 
+  
+  
+  
+  }
+  {
+    title <
+      name = Nuklearmediziner Der ;
+      issn = 0723-7065 ;
+      eissn = 1439-5800
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000045
+    comment[years] = 2002-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = OP-Journal ;
+      issn = 0178-1715 ;
+      eissn = 1439-2496
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000046
+    comment[years] = 2000-current
+  
+  
+  
+  }
+    {
+    title <
+      name = Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten ;
+      issn = 2193-5254 ;
+      eissn = 2193-5262
+    
+    >
+    param[journal_id] = 10.1055/s-00000046179
+    comment[years] = 2012-current
+    comment[0] = coming online soon as of July 2012
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Orthopädie und Unfallchirurgie up2date ;
+      issn = 1611-7859 ;
+      eissn = 1861-1982
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000132
+    comment[years] = 2006-current
+  
+  
+  
+  }
   
   {
   
     title < 
       name = Orthopedic Trauma Directions ;
-      issn = 1612-8060
+      issn = 1612-8060 ;
+      eissn = 1612-8087
+      
     >
+    param[journal_id] = 10.1055/s-00000121
+    comment[years] = 2003-current
     
   }
   
