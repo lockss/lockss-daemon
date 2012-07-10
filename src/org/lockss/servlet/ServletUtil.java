@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.74 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.75 2012-07-10 04:37:59 tlipkis Exp $
  */
 
 /*
@@ -112,24 +112,31 @@ public class ServletUtil {
 
   static Logger log = Logger.getLogger("ServletUtil");
 
+  static final String PREFIX = Configuration.PREFIX + "ui.";
+
   /** Groups names not to display in header */
-  static final String PARAM_DONT_DISPLAY_GROUPS =
-    Configuration.PREFIX + "ui.dontDisplayGroups";
+  static final String PARAM_DONT_DISPLAY_GROUPS = PREFIX + "dontDisplayGroups";
   static final List DEFAULT_DONT_DISPLAY_GROUPS =
     ConfigManager.DEFAULT_DAEMON_GROUP_LIST;
 
   /** Disabled servlets; list of servlet name or name:explanation */
-  static final String PARAM_DISABLED_SERVLETS =
-    Configuration.PREFIX + "ui.disabledServlets";
+  static final String PARAM_DISABLED_SERVLETS = PREFIX + "disabledServlets";
   static final List DEFAULT_DISABLED_SERVLETS = Collections.EMPTY_LIST;
 
   /** URL of third party logo image */
-  static final String PARAM_THIRD_PARTY_LOGO_IMAGE =
-    Configuration.PREFIX + "ui.logo.img";
+  static final String PARAM_THIRD_PARTY_LOGO_IMAGE = PREFIX + "logo.img";
 
   /** URL of third party logo link */
-  static final String PARAM_THIRD_PARTY_LOGO_LINK =
-    Configuration.PREFIX + "ui.logo.link";
+  static final String PARAM_THIRD_PARTY_LOGO_LINK = PREFIX + "logo.link";
+
+  /** If true, Identity IP will be displayed in header along with hostname */
+  static final String PARAM_DISPLAY_IP_ADDR = PREFIX + "displayIpAddr";
+  static final boolean DEFAULT_DISPLAY_IP_ADDR = false;
+
+  /** If true, page title will start with hostname.  Useful with multiple
+   * tabs open on different LOCKSS boxes. */
+  static final String PARAM_HOSTNAME_IN_TITLE = PREFIX + "hostNameInTitle";
+  static final boolean DEFAULT_HOSTNAME_IN_TITLE = false;
 
   /** Format to display date/time in headers */
   public static final DateFormat headerDf =
@@ -347,6 +354,8 @@ public class ServletUtil {
 
   private static String thirdPartyLogo;
   private static String thirdPartyLogoLink;
+  private static boolean displayIpAddr = DEFAULT_DISPLAY_IP_ADDR;
+  static boolean hostNameInTitle = DEFAULT_HOSTNAME_IN_TITLE;
 
   private static Map<String,String> disabledServlets = new HashMap();
 
@@ -358,28 +367,38 @@ public class ServletUtil {
     if (diffs.contains(ServeContent.PREFIX)) {
       ServeContent.setConfig(config, oldConfig, diffs);
     }
-    thirdPartyLogo = config.get(PARAM_THIRD_PARTY_LOGO_IMAGE);
-    if (thirdPartyLogo != null) {
-      thirdPartyLogoLink = config.get(PARAM_THIRD_PARTY_LOGO_LINK);
-    }
-    if (diffs.contains(PARAM_DISABLED_SERVLETS)) {
-      List<String> dis = config.getList(PARAM_DISABLED_SERVLETS,
-				DEFAULT_DISABLED_SERVLETS);
-      disabledServlets.clear();
-      for (String s : dis) {
-	String exp = "";
-	int pos = s.indexOf(':');
-	if (pos > 0) {
-	  exp = s.substring(pos + 1);
-	  s = s.substring(0, pos);
+    if (diffs.contains(PREFIX)) {
+      thirdPartyLogo = config.get(PARAM_THIRD_PARTY_LOGO_IMAGE);
+      if (thirdPartyLogo != null) {
+	thirdPartyLogoLink = config.get(PARAM_THIRD_PARTY_LOGO_LINK);
+      }
+      displayIpAddr = config.getBoolean(PARAM_DISPLAY_IP_ADDR,
+					DEFAULT_DISPLAY_IP_ADDR);
+      hostNameInTitle = config.getBoolean(PARAM_HOSTNAME_IN_TITLE,
+					  DEFAULT_HOSTNAME_IN_TITLE);
+      if (diffs.contains(PARAM_DISABLED_SERVLETS)) {
+	List<String> dis = config.getList(PARAM_DISABLED_SERVLETS,
+					  DEFAULT_DISABLED_SERVLETS);
+	disabledServlets.clear();
+	for (String s : dis) {
+	  String exp = "";
+	  int pos = s.indexOf(':');
+	  if (pos > 0) {
+	    exp = s.substring(pos + 1);
+	    s = s.substring(0, pos);
+	  }
+	  disabledServlets.put(s, exp);
 	}
-	disabledServlets.put(s, exp);
       }
     }
   }
 
   public static String servletDisabledReason(String servlet) {
     return disabledServlets.get(servlet);
+  }
+
+  public static boolean isHostNameInTitle() {
+    return hostNameInTitle;
   }
 
   /** Return the URL of this machine's config backup file to download */
@@ -787,6 +806,7 @@ public class ServletUtil {
                                   String heading,
                                   boolean isLargeLogo,
                                   String machineName,
+                                  String machineIpAddr,
                                   Date startDate,
                                   Iterator descrIterator) {
     Composite comp = new Composite();
@@ -812,6 +832,11 @@ public class ServletUtil {
     table.add("<br>");
 
     addBold(table, machineName);
+    if (displayIpAddr && machineIpAddr != null) {
+      table.add(" (");
+      table.add(machineIpAddr);
+      table.add(")");
+    }
     List<String> groups = ConfigManager.getPlatformGroupList();
     if (shouldDisplayGroups(groups)) {
       table.add("&nbsp;&nbsp;(");

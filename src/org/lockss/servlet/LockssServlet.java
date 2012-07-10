@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.123 2012-05-17 18:03:42 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.124 2012-07-10 04:37:59 tlipkis Exp $
  */
 
 /*
@@ -406,6 +406,10 @@ public abstract class LockssServlet extends HttpServlet
     return PlatformUtil.getLocalHostname();
   }
 
+  String getMachineIpAddr() {
+    return CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_IP_ADDRESS);
+  }
+
 //   String getMachineName0() {
 //     if (myName == null) {
 //       // Return the canonical name of the interface the request was aimed
@@ -787,6 +791,7 @@ public abstract class LockssServlet extends HttpServlet
                              heading,
                              isLargeLogo(),
                              getMachineName(),
+                             getMachineIpAddr(),
                              getLockssApp().getStartDate(),
                              inNavIterator);
     String warnMsg = CurrentConfig.getParam(PARAM_UI_WARNING);
@@ -827,10 +832,14 @@ public abstract class LockssServlet extends HttpServlet
 
   protected String getPageTitle() {
     String heading = getHeading();
+    String first = "LOCKSS";
+    if (ServletUtil.isHostNameInTitle()) {
+      first = getMachineName();
+    }
     if (heading != null) {
-      return "LOCKSS: " + heading;
+      return first + ": " + heading;
     } else {
-      return "LOCKSS";
+      return first;
     }
   }
 
