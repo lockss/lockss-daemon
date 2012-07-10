@@ -228,6 +228,7 @@
     >
     param[journal_id] = 10.1055/s-00000175
     comment[years] = 1999-current  
+    comment[0] = includes Arzneimittelforschung Drug Research
     
     
   }    
@@ -246,17 +247,6 @@
   
   }
   
-  {
-  
-    title < 
-      name = Arzneimittelforschung Drug Research ;
-      issn = 0004-4172 ;
-      eissn = 
-      
-    >
-    param[journal_id] = 10.1055/s-002-22827
-    comment[0] = became Arzneimittelforschung when Georg Thieme Verlag took over publishing in January 2012
-  }
   
   {
     title <
@@ -286,20 +276,6 @@
   
   }
   
-  {
-  
-    title < 
-      name = Central European Neurosurgery ;
-      issn = 1868-4904 ;
-      eissn = 1868-4912
-      
-    >
-    param[journal_id] = 10.1055/s-00000107
-    comment[years] = 2009-2011
-    comment[0] = originally Zentralblatt fuer Neurochirurgie
-    comment[1] = combined with Journal of Neurological Surgery Part A : Central European Neorosurgery in 2012
-    
-  }
   
   {
     title <
@@ -458,6 +434,7 @@
   
   
   }
+  
   {
     title <
       name = DO - Deutsche Zeitschrift für Osteopathie ;
@@ -578,7 +555,7 @@
        
     >
     param[journal_id] = 10.1055/s-00000165
-    comment[years] = 2010
+    comment[years] = 2010-current
     comment[0] = continuation of Evidence-Based Spine Surgery
     
   }
@@ -915,6 +892,11 @@
     param[journal_id] = 10.500/s.00000180
     comment[years] = 2012-current
     comment[0] = combines two earlier titles - Central European Surgery and Zentralblatt fur Neurochirurgie
+    comment[0] = Minimally Invasive Neurosurgery was merged with this journal
+      
+    
+  }
+    
   }
   
   {
@@ -1171,18 +1153,6 @@
   
   }
   
-  {
-  
-    title < 
-      name = Minimally Invasive Neurosurgery ;
-      issn = 0946-7211 ;
-      eissn = 1439-2291
-      
-    >
-    param[journal_id] = 10.1055/s-00000039
-    comment[years] = 1994-current
-    
-  }
   
   {
   
