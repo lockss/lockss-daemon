@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.226 2012-06-20 18:58:46 thib_gc Exp $
+ * $Id: PluginManager.java,v 1.227 2012-07-10 16:14:44 tlipkis Exp $
  */
 
 /*
@@ -74,6 +74,11 @@ public class PluginManager
 
   /** List of plugins not to load, or to remove if already loaded. */
   static final String PARAM_PLUGIN_RETRACT = PREFIX + "retract";
+
+  /** Set to true for at least one config reload period to enqueue crawls
+   * of all plugin registries */
+  static final String PARAM_CRAWL_PLUGINS_ONCE = PREFIX + "crawlRegistriesOnce";
+  static final boolean DEFAULT_CRAWL_PLUGINS_ONCE = false;
 
   static final String PARAM_REMOVE_STOPPED_AUS = PREFIX + "removeStoppedAus";
   static final boolean DEFAULT_REMOVE_STOPPED_AUS = true;
@@ -269,6 +274,7 @@ public class PluginManager
   // Map of plugin key to PluginInfo
   private Map pluginfoMap = Collections.synchronizedMap(new HashMap());
   private RegistryPlugin regPlugin;
+  private boolean prevCrawlOnce = false;
 
   private KeyStore keystore;
   private JarValidator jarValidator;
@@ -450,6 +456,15 @@ public class PluginManager
 
     // Don't load or start other plugins until the daemon is running.
     if (loadablePluginsReady) {
+      boolean crawlOnce = config.getBoolean(PARAM_CRAWL_PLUGINS_ONCE,
+					    DEFAULT_CRAWL_PLUGINS_ONCE);
+      if (!prevCrawlOnce && crawlOnce) {
+	queuePluginRegistryCrawls();
+	prevCrawlOnce = true;
+      } else {
+	prevCrawlOnce = crawlOnce;
+      }
+
       // Process loadable plugin registries.
       if (changedKeys.contains(PARAM_PLUGIN_REGISTRIES) ||
 	  changedKeys.contains(PARAM_USER_PLUGIN_REGISTRIES) ||
@@ -1949,6 +1964,13 @@ public class PluginManager
 
   public Collection getInactiveAuIds() {
     return inactiveAuIds;
+  }
+
+  private void queuePluginRegistryCrawls() {
+    CrawlManager crawlMgr = getDaemon().getCrawlManager();
+    for (ArchivalUnit au : getAllRegistryAus()) {
+      crawlMgr.startNewContentCrawl(au, null, null, null);
+    }
   }
 
   /** Return a collection of all RegistryArchivalUnits.  This is a subset

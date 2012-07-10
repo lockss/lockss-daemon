@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.95 2012-06-17 23:06:44 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.96 2012-07-10 16:14:44 tlipkis Exp $
  */
 
 /*
@@ -1350,6 +1350,46 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(SetUtil.theSet(mgr.getAllAus()),
 		 SetUtil.theSet(mgr.getAllRegistryAus()));
     assertEquals(3, mgr.getAllRegistryAus().size());
+  }
+
+  public void testCrawlRegistriesOnce() throws Exception {
+    mgr.startService();
+    MockCrawlManager mcm = new MockCrawlManager();
+    theDaemon.setCrawlManager(mcm);
+
+    Properties p = new Properties();
+    prepareLoadablePluginTests(p);
+    List urls = ListUtil.list("http://plug1.example.com/blueplugs/",
+			      "http://plug1.example.com/redplugs/");
+    List urls2 = ListUtil.list("http://plug2.example.com/blueplugs/");
+    assertEmpty(mgr.getAllRegistryAus());
+    assertEmpty(mgr.getAllAus());
+    mgr.initLoadablePluginRegistries(urls);
+    assertEquals(SetUtil.theSet(mgr.getAllAus()),
+		 SetUtil.theSet(mgr.getAllRegistryAus()));
+    assertEquals(2, mgr.getAllRegistryAus().size());
+
+    assertEmpty(mcm.scheduledCrawls);
+    ConfigurationUtil.addFromArgs(PluginManager.PARAM_CRAWL_PLUGINS_ONCE,
+				  "true");
+    assertEquals(SetUtil.theSet(mgr.getAllRegistryAus()),
+		 mcm.scheduledCrawls.keySet());
+    mcm.scheduledCrawls.clear();
+    assertEmpty(mcm.scheduledCrawls);
+    // Set another param that causes PluginManager.setConfig() to run
+    ConfigurationUtil.addFromArgs(PluginManager.PARAM_CRAWL_PLUGINS_ONCE + "xx",
+				  "1234");
+    assertEmpty(mcm.scheduledCrawls);
+    ConfigurationUtil.addFromArgs(PluginManager.PARAM_CRAWL_PLUGINS_ONCE,
+				  "true");
+    assertEmpty(mcm.scheduledCrawls);
+    ConfigurationUtil.addFromArgs(PluginManager.PARAM_CRAWL_PLUGINS_ONCE,
+				  "false");
+    assertEmpty(mcm.scheduledCrawls);
+    ConfigurationUtil.addFromArgs(PluginManager.PARAM_CRAWL_PLUGINS_ONCE,
+				  "true");
+    assertEquals(SetUtil.theSet(mgr.getAllRegistryAus()),
+		 mcm.scheduledCrawls.keySet());
   }
 
 
