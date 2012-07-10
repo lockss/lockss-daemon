@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.57 2012-03-20 17:40:11 tlipkis Exp $
+ * $Id: Logger.java,v 1.58 2012-07-10 23:46:00 thib_gc Exp $
  */
 
 /*
@@ -203,6 +203,18 @@ public class Logger {
   public static Logger getLogger(String name) {
     deferredInit();
     return getLoggerWithInitialLevel(name, getConfiguredLevel(name));
+  }
+  
+  /**
+   * <p>Convenience method to name a logger after a class.
+   * Simply calls {@link #getLogger(String)} with the result of
+   * {@link Class#getSimpleName()}.</p>
+   * @param clazz The class after which to name the returned logger.
+   * @return A logger named after the given class.
+   * @since 1.56
+   */
+  public static Logger getLogger(Class<?> clazz) {
+    return getLogger(clazz.getSimpleName());
   }
 
   private static void deferredInit() {
