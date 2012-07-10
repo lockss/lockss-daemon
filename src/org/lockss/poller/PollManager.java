@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.221 2012-07-09 18:53:40 barry409 Exp $
+ * $Id: PollManager.java,v 1.222 2012-07-10 17:51:40 barry409 Exp $
  */
 
 /*
@@ -581,19 +581,17 @@ public class PollManager
       long duration = pollFact.calcDuration(pollspec, this);
       if (duration > 0) {
 	try {
+	  PeerIdentity orig =
+	    theIDManager.getLocalPeerIdentity(pollspec.getProtocolVersion());
 	  BasePoll thePoll =
-	    makePoll(pollspec, duration,
-		     theIDManager.getLocalPeerIdentity(pollspec.getProtocolVersion()),
-		     LcapMessage.getDefaultHashAlgorithm(),
-		     null);
+	    makePoller(pollspec, duration, orig);
 	  if (thePoll != null) {
-	    thePoll.startPoll();
 	    return thePoll;
 	  } else {
-	    theLog.debug("makePoll(" + pollspec + ") returned null");
+	    theLog.debug("makePoller(" + pollspec + ") returned null");
 	  }
 	} catch (ProtocolException ex) {
-	  theLog.debug("Error in makePoll or callPoll", ex);
+	  theLog.debug("Error in makePoller or callPoll", ex);
 	}
       } else {
 	errMsg = "Too busy";
@@ -813,73 +811,96 @@ public class PollManager
    */
   BasePoll makePoll(LcapMessage msg) throws ProtocolException {
     theLog.debug2("makePoll: From message: " + msg);
-    BasePoll poll = null;
-    PollSpec spec = null;
-
     // XXX: V3 Refactor - this could be cleaned up
+    // Dispatch on the type of the msg.
     if (msg instanceof V1LcapMessage) {
-      V1LcapMessage v1msg = (V1LcapMessage)msg;
-      spec = new PollSpec(v1msg);
+      return makeV1Poll((V1LcapMessage)msg);
     } else if (msg instanceof V3LcapMessage) {
-      V3LcapMessage v3msg = (V3LcapMessage)msg;
-      spec = new PollSpec(v3msg);
+      return makeV3Voter((V3LcapMessage)msg);
     } else {
       throw new ProtocolException("Unexpected LCAP Message type.");
     }
+  }
 
+  /**
+   * Make a V3Voter.
+   */
+  private BasePoll makeV3Voter(V3LcapMessage msg) throws ProtocolException {
+    PollSpec spec = new PollSpec(msg);
     long duration = msg.getDuration();
     PeerIdentity orig = msg.getOriginatorId();
     String hashAlg = msg.getHashAlgorithm();
-    poll = makePoll(spec, duration, orig, hashAlg, msg);
-    if (poll != null) {
-      poll.setMessage(msg);
+
+    theLog.debug("Making V3Voter from: " + spec);
+    PollFactory pollFact = getPollFactory(spec);
+    BasePoll poll = pollFact.createPoll(spec, getDaemon(),
+					orig, duration, hashAlg, msg);
+    if (!(poll instanceof V3Voter)) {
+      throw new ProtocolException("msg "+msg+
+				  " made unexpected kind of poll: "+poll);
     }
+    processNewPoll(poll, msg);
     return poll;
   }
 
-  BasePoll makePoll(PollSpec spec,
-		    long duration,
-		    PeerIdentity orig,
-		    String hashAlg,
-                    LcapMessage msg) throws ProtocolException {
-    theLog.debug3("makePoll: From pollSpec " + spec);
-    boolean isV1 = msg instanceof V1LcapMessage;
-    BasePoll ret_poll = null;
-    if (isV1) {
-      CachedUrlSet cus = spec.getCachedUrlSet();
-      // check for presence of item in the cache
-      if (cus == null) {
-	theLog.debug2("Ignoring poll request, don't have AU: " +
-		      spec.getAuId());
-	return null;
-      }
-      ArchivalUnit au = cus.getArchivalUnit();
-      if (!spec.getPluginVersion().equals(AuUtil.getPollVersion(au))) {
-	theLog.debug("Ignoring poll request for " + au.getName() +
-		     " from peer " + orig +
-		     ". plugin version mismatch; have: " +
-		     AuUtil.getPollVersion(au) +
-		     ", need: " + spec.getPluginVersion());
-	return null;
-      }
-    }
-    theLog.debug("Making poll from: " + spec);
-    // create the appropriate poll for the message type
-    PollFactory pollFact = getPollFactory(spec);
-    ret_poll = pollFact.createPoll(spec, getDaemon(),
-                                   orig, duration, hashAlg, msg);
+  /**
+   * V1 for testing only.
+   */
+  private BasePoll makeV1Poll(V1LcapMessage msg) throws ProtocolException {
+    PollSpec spec = new PollSpec(msg);
+    long duration = msg.getDuration();
+    PeerIdentity orig = msg.getOriginatorId();
+    String hashAlg = msg.getHashAlgorithm();
 
-    if (ret_poll == null) {
+    CachedUrlSet cus = spec.getCachedUrlSet();
+    // check for presence of item in the cache
+    if (cus == null) {
+      theLog.debug2("Ignoring poll request, don't have AU: " +
+		    spec.getAuId());
       return null;
-    } else {
+    }
+    ArchivalUnit au = cus.getArchivalUnit();
+    if (!spec.getPluginVersion().equals(AuUtil.getPollVersion(au))) {
+      theLog.debug("Ignoring poll request for " + au.getName() +
+		   " from peer " + msg.getOriginatorId() +
+		   ". plugin version mismatch; have: " +
+		   AuUtil.getPollVersion(au) +
+		   ", need: " + spec.getPluginVersion());
+      return null;
+    }
+
+    theLog.debug("Making poll from: " + spec);
+    PollFactory pollFact = getPollFactory(spec);
+    BasePoll poll = pollFact.createPoll(spec, getDaemon(),
+					orig, duration, hashAlg, msg);
+    processNewPoll(poll, msg);
+    return poll;
+  }
+
+  private BasePoll makePoller(PollSpec spec,
+			      long duration,
+			      PeerIdentity orig) throws ProtocolException {
+    theLog.debug("Making poll from: " + spec);
+    // If this is a V3 PollSpec, passing null to V3PollFactory will
+    // create a V3Poller
+    PollFactory pollFact = getPollFactory(spec);
+    String hashAlg = LcapMessage.getDefaultHashAlgorithm();
+    BasePoll poll = pollFact.createPoll(spec, getDaemon(),
+					orig, duration, hashAlg, null);
+    processNewPoll(poll, null);
+    return poll;
+  }
+
+  /**
+   * If poll is not null, do what needs to be done to new polls.
+   */
+  private void processNewPoll(BasePoll poll, LcapMessage msg) {
+    if (poll != null) {
+      poll.setMessage(msg);
       synchronized (pollMapLock) {
-	thePolls.put(ret_poll.getKey(), new PollManagerEntry(ret_poll));
+	thePolls.put(poll.getKey(), new PollManagerEntry(poll));
       }
-      // If this is a V3 Voter, start it right away.
-      if (ret_poll instanceof V3Voter) {
-        ret_poll.startPoll();
-      }
-      return ret_poll;
+      poll.startPoll();
     }
   }
 
