@@ -1657,13 +1657,35 @@
 
 
 
+  {
+    title <
+      name = RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren ;                   
+      issn = 1438-9029 ;
+      eissn = 1438-9010
+    
+    >
+    param[journal_id] = 10.1055/s-00000066
+    comment[years] = 1949-current
+    comment[0] = includes Fortschritte auf dem Gebiete der Röntgenstrahlen und der Nuklearmedizin, 1956-74, and Fortschritte auf dem Gebiete der Röntgenstrahlen vereinigt mit Röntgenpraxis, 1949-55
+    
+  
+  
+  
+  }
+
+
+
   
   {
   
     title < 
       name = Seminars in Hearing ;
-      issn = 0734-0451
+      issn = 0734-0451 ;
+      eissn = 1098-8955
+      
     >
+    param[journal_id] = 10.1055/s-00000067
+    comment[years] = 1983-current
     
   }
   
