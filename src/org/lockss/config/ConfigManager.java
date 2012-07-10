@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.90 2012-06-25 05:49:00 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.91 2012-07-10 04:35:07 tlipkis Exp $
  */
 
 /*
@@ -1810,6 +1810,8 @@ public class ConfigManager implements LockssManager {
     return res;
   }
 
+  private boolean didWarnNoAuConfig = false;
+
   /**
    * Return the contents of the local AU config file.
    * @return the Configuration from the AU config file, or an empty config
@@ -1819,8 +1821,12 @@ public class ConfigManager implements LockssManager {
     Configuration auConfig;
     try {
       auConfig = readCacheConfigFile(CONFIG_FILE_AU_CONFIG);
+      didWarnNoAuConfig = false;
     } catch (IOException e) {
-      log.warning("Couldn't read AU config file: " + e.getMessage());
+      if (!didWarnNoAuConfig) {
+	log.warning("Couldn't read AU config file: " + e.getMessage());
+	didWarnNoAuConfig = true;
+      }
       auConfig = newConfiguration();
     }
     return auConfig;
