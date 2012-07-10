@@ -1,10 +1,10 @@
 /*
- * $Id: MockIcpMessage.java,v 1.9 2007-03-14 23:39:41 thib_gc Exp $
+ * $Id: MockIcpMessage.java,v 1.10 2012-07-10 23:50:05 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,10 +45,6 @@ import org.lockss.util.*;
  */
 public abstract class MockIcpMessage implements IcpMessage {
 
-  /*
-   * begin STATIC NESTED CLASS
-   * =========================
-   */
   /**
    * <p>A mock ICP query without a hit object.</p>
    * @author Thib Guicherd-Callin
@@ -75,15 +71,7 @@ public abstract class MockIcpMessage implements IcpMessage {
       return true;
     }
   }
-  /*
-   * end STATIC NESTED CLASS
-   * =======================
-   */
 
-  /*
-   * begin STATIC NESTED CLASS
-   * =========================
-   */
   /**
    * <p>A mock ICP response message with a source return time trip
    * reponse.</p>
@@ -117,15 +105,7 @@ public abstract class MockIcpMessage implements IcpMessage {
     }
 
   }
-  /*
-   * end STATIC NESTED CLASS
-   * =======================
-   */
 
-  /*
-   * begin STATIC NESTED CLASS
-   * =========================
-   */
   /**
    * <p>A simple struct associating an ICP message and an equivalent
    * UDP packet representation.</p>
@@ -142,10 +122,6 @@ public abstract class MockIcpMessage implements IcpMessage {
     }
 
   }
-  /*
-   * end STATIC NESTED CLASS
-   * =======================
-   */
 
   /* Inherit documentation */
   public boolean containsSrcRttResponse() {
@@ -438,7 +414,7 @@ public abstract class MockIcpMessage implements IcpMessage {
   public static byte[] getMockPayloadData() {
     try {
       return "<html><head><title>Sample</title></head><body><p>Test</p></body></html>"
-             .getBytes(Constants.US_ASCII_ENCODING);
+             .getBytes(Constants.ENCODING_US_ASCII);
     } catch (UnsupportedEncodingException exc) {
       throw new RuntimeException(
           "Runtime exception while creating mock payload data");
