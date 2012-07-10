@@ -1,10 +1,10 @@
 /*
- * $Id: TestTitleSetInactiveAus.java,v 1.5 2005-10-10 23:48:55 troberts Exp $
+ * $Id: TestTitleSetInactiveAus.java,v 1.6 2012-07-10 04:35:42 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -82,6 +82,9 @@ public class TestTitleSetInactiveAus extends LockssTestCase {
     tc2 = new TitleConfig("title2", mp);
     tc2.setParams(ListUtil.list(cpa1, cpa3));
 
+    mp.setTitleConfigMap(MapUtil.map(tc1.getDisplayName(), tc1,
+				     tc2.getDisplayName(), tc2));
+
     mp.setAuConfigDescrs(ListUtil.list(d1, d2));
     mau1 = new MyMockArchivalUnit();
     mau2 = new MyMockArchivalUnit();
@@ -107,11 +110,11 @@ public class TestTitleSetInactiveAus extends LockssTestCase {
     mau2.setTitleConfig(tc2);
     pluginMgr.updateAuConfigFile(mau1.getAuId(), mau1.getConfiguration());
     pluginMgr.deactivateAu(mau1);
-    Collection set =
+    Collection<TitleConfig> set =
       new TitleSetInactiveAus(getMockLockssDaemon()).getTitles();
-    assertEquals(1, set.size());
-    List lst = new ArrayList(set);
-    assertEquals(tc1, lst.get(0));
+    assertSameElements(SetUtil.set(tc1), set);
+    TitleConfig fromSet = new ArrayList<TitleConfig>(set).get(0);
+    assertSame(tc1, fromSet);
   }
 
   class MyMockArchivalUnit extends MockArchivalUnit {

@@ -1,10 +1,10 @@
 /*
- * $Id: PluginProxy.java,v 1.6 2008-08-17 08:40:30 tlipkis Exp $
+ * $Id: PluginProxy.java,v 1.7 2012-07-10 04:35:42 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -67,7 +67,11 @@ public class PluginProxy {
     this.remoteApi = remoteApi;
   }
 
-  Plugin getPlugin() {
+  /**
+   * Return the real Plugin
+   * @return the Plugin
+   */
+  public Plugin getPlugin() {
     return plugin;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetInactiveAus.java,v 1.8 2012-06-20 18:58:46 thib_gc Exp $
+ * $Id: TitleSetInactiveAus.java,v 1.9 2012-07-10 04:35:42 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.plugin.*;
 import org.lockss.remote.*;
 
 /** The set of titles configured on the cache */
@@ -66,8 +67,13 @@ public class TitleSetInactiveAus extends BaseTitleSet {
   TitleConfig titleConfigFromAu(InactiveAuProxy au) {
     PluginProxy plugin = au.getPlugin();
     String auname = au.getName();
-    TitleConfig tc = new TitleConfig(auname, plugin.getPluginId());
     Configuration auConfig = au.getConfiguration();
+    TitleConfig tc = AuUtil.findTitleConfig(auConfig, plugin.getPlugin());
+    if (tc != null) {
+      return tc;
+    }
+
+    tc = new TitleConfig(auname, plugin.getPluginId());
     ArrayList<ConfigParamAssignment> params = new ArrayList();
     for (Iterator iter = auConfig.keyIterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
