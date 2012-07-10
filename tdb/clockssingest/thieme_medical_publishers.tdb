@@ -1144,6 +1144,7 @@
   
   
   }
+  
   {
     title <
       name = Lege artis - Das Magazin zur ärztlichen Weiterbildung ;
@@ -1157,13 +1158,30 @@
   
   
   }
+  {
+    title <
+      name = manuelletherapie ;
+      issn = 1433-2671 ;
+      eissn = 1439-2348
+    
+    >
+    param[journal_id] = 10.1055/s-00000038
+    comment[years] = 2004-current
+  
+  
+  
+  }
   
   {
   
     title < 
       name = Minimally Invasive Neurosurgery ;
-      issn = 0946-7211
+      issn = 0946-7211 ;
+      eissn = 1439-2291
+      
     >
+    param[journal_id] = 10.1055/s-00000039
+    comment[years] = 1994-current
     
   }
   
@@ -1171,9 +1189,55 @@
   
     title < 
       name = Neuropediatrics ;
-      issn = 0174-304X
+      issn = 0174-304X ;
+      eissn = 1439-1899
+      
     >
+    param[journal_id] = 10.1055/s-00000041
+    comment[years] = 1980-current
     
+  }
+  {
+    title <
+      name = Neuroradiologie Scan ;
+      issn = 1616-9697 ;
+      eissn = 1616-9700
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000173
+    comment[years] = 2011-current
+  
+  
+  
+  }
+  {
+    title <
+      name = neuroreha ;
+      issn = 1611-6496 ;
+      eissn = 1611-7654
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000160
+    comment[years] = 2009-current
+  
+  
+  
+  }
+  {
+    title <
+      name = Notarzt Der ;
+      issn = 0177-2309 ;
+      eissn = 1438-8693
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000043
+    comment[years] = 1999-current
+  
+  
+  
   }
   
   {
