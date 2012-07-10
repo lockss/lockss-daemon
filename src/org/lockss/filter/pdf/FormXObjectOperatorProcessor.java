@@ -1,5 +1,5 @@
 /*
- * $Id: FormXObjectOperatorProcessor.java,v 1.2 2007-08-14 09:19:27 thib_gc Exp $
+ * $Id: FormXObjectOperatorProcessor.java,v 1.3 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -50,8 +50,12 @@ import org.pdfbox.util.PDFOperator;
  * @author Thib Guicherd-Callin
  * @see PdfUtil#INVOKE_NAMED_XOBJECT
  */
+@Deprecated
 public class FormXObjectOperatorProcessor extends SimpleOperatorProcessor {
 
+  @Deprecated
+  public FormXObjectOperatorProcessor() {}
+  
   @Override
   public void process(PageStreamTransform pageStreamTransform,
                       PDFOperator operator,

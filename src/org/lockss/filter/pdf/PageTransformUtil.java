@@ -1,5 +1,5 @@
 /*
- * $Id: PageTransformUtil.java,v 1.10 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: PageTransformUtil.java,v 1.11 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.pdfbox.util.*;
  * <p>Utility page transforms.</p>
  * @author Thib Guicherd-Callin
  */
+@Deprecated
 public class PageTransformUtil {
 
   /**
@@ -55,6 +56,7 @@ public class PageTransformUtil {
    * @author Thib Guicherd-Callin
    * @see PageTransformUtil.ExtractStringsToOutputStream.WriteToOutputStream
    */
+  @Deprecated
   public static class ExtractStringsToOutputStream extends NullPageStreamTransform {
 
     /**
@@ -69,6 +71,7 @@ public class PageTransformUtil {
      * @author Thib Guicherd-Callin
      * @see PageTransformUtil.ExtractStringsToOutputStream
      */
+    @Deprecated
     public static class WriteToOutputStream extends ProcessString {
 
       /* Inherit documentation */
@@ -95,6 +98,7 @@ public class PageTransformUtil {
      * @param outputStream An output stream for output.
      * @throws IOException if any processing error occurs.
      */
+    @Deprecated
     public ExtractStringsToOutputStream(OutputStream outputStream) throws IOException {
       super(PdfUtil.SHOW_TEXT, WriteToOutputStream.class,
             PdfUtil.SHOW_TEXT_GLYPH_POSITIONING, WriteToOutputStream.class,
@@ -114,6 +118,7 @@ public class PageTransformUtil {
    * @author Thib Guicherd-Callin
    * @see PageTransformUtil.ExtractStringsToStringBuffer.AppendToStringBuffer
    */
+  @Deprecated
   public static class ExtractStringsToStringBuffer extends NullPageStreamTransform {
 
     /**
@@ -128,6 +133,7 @@ public class PageTransformUtil {
      * @author Thib Guicherd-Callin
      * @see PageTransformUtil.ExtractStringsToStringBuffer
      */
+    @Deprecated
     public static class AppendToStringBuffer extends ProcessString {
 
       /* Inherit documentation */
@@ -154,6 +160,7 @@ public class PageTransformUtil {
      * @param buffer A string buffer for output.
      * @throws IOException if any processing error occurs.
      */
+    @Deprecated
     public ExtractStringsToStringBuffer(StringBuffer buffer) throws IOException {
       super(PdfUtil.SHOW_TEXT, AppendToStringBuffer.class,
             PdfUtil.SHOW_TEXT_GLYPH_POSITIONING, AppendToStringBuffer.class,
@@ -168,6 +175,7 @@ public class PageTransformUtil {
    * <p>A page transform that does nothing.</p>
    * @author Thib Guicherd-Callin
    */
+  @Deprecated
   public static class IdentityPageTransform implements PageTransform {
 
     /**
@@ -182,6 +190,7 @@ public class PageTransformUtil {
      * @see #IdentityPageTransform(boolean)
      * @see #RESULT_DEFAULT
      */
+    @Deprecated
     public IdentityPageTransform() {
       this(RESULT_DEFAULT);
     }
@@ -192,6 +201,7 @@ public class PageTransformUtil {
      * result value.</p>
      * @param returnValue The return value for {@link #transform}.
      */
+    @Deprecated
     public IdentityPageTransform(boolean returnValue) {
       this.returnValue = returnValue;
     }
@@ -216,6 +226,7 @@ public class PageTransformUtil {
    * {@link PageTransform#transform} method.</p>
    * @author Thib Guicherd-Callin
    */
+  @Deprecated
   public static class OppositePageTransform extends PageTransformDecorator {
 
     /**
@@ -223,6 +234,7 @@ public class PageTransformUtil {
      * page transform.</p>
      * @param pageTransform A page transform to be wrapped.
      */
+    @Deprecated
     public OppositePageTransform(PageTransform pageTransform) {
       super(pageTransform);
     }
@@ -241,6 +253,7 @@ public class PageTransformUtil {
    * <p>A base wrapper for another page transform.</p>
    * @author Thib Guicherd-Callin
    */
+  @Deprecated
   public static abstract class PageTransformDecorator implements PageTransform {
 
     /**
@@ -253,6 +266,7 @@ public class PageTransformUtil {
      * page transform.</p>
      * @param pageTransform A page transform to be wrapped.
      */
+    @Deprecated
     protected PageTransformDecorator(PageTransform pageTransform) {
       this.pageTransform = pageTransform;
     }
@@ -265,6 +279,7 @@ public class PageTransformUtil {
    * transform fails.</p>
    * @author Thib Guicherd-Callin
    */
+  @Deprecated
   public static class StrictPageTransform extends PageTransformDecorator {
 
     /**
@@ -272,6 +287,7 @@ public class PageTransformUtil {
      * page transform.</p>
      * @param pageTransform A page transform.
      */
+    @Deprecated
     public StrictPageTransform(PageTransform pageTransform) {
       super(pageTransform);
     }
@@ -294,6 +310,7 @@ public class PageTransformUtil {
   /**
    * <p>Not publicly instantiable.</p>
    */
+  @Deprecated
   private PageTransformUtil() { }
 
   /**

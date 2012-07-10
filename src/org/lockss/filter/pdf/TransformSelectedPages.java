@@ -1,5 +1,5 @@
 /*
- * $Id: TransformSelectedPages.java,v 1.10 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: TransformSelectedPages.java,v 1.11 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.util.PdfUtil.ResultPolicy;
  * @author Thib Guicherd-Callin
  * @see #getSelectedPages
  */
+@Deprecated
 public abstract class TransformSelectedPages extends PageTransformWrapper {
 
   /**
@@ -60,6 +61,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   protected TransformSelectedPages(PageTransform pageTransform) {
     this(POLICY_DEFAULT,
          pageTransform);
@@ -74,6 +76,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform, PageTransform)
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   protected TransformSelectedPages(PageTransform pageTransform1,
                                    PageTransform pageTransform2) {
     this(POLICY_DEFAULT,
@@ -91,6 +94,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform, PageTransform, PageTransform)
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   protected TransformSelectedPages(PageTransform pageTransform1,
                                    PageTransform pageTransform2,
                                    PageTransform pageTransform3) {
@@ -108,6 +112,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform[])
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   protected TransformSelectedPages(PageTransform[] pageTransforms) {
     this(POLICY_DEFAULT,
          pageTransforms);
@@ -120,6 +125,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @param pageTransform A page transform.
    * @see PageTransformWrapper#PageTransformWrapper(PageTransform)
    */
+  @Deprecated
   protected TransformSelectedPages(ResultPolicy resultPolicy,
                                    PageTransform pageTransform) {
     super(pageTransform);
@@ -142,6 +148,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
    * @see AggregatePageTransform#AggregatePageTransform(PageTransform, PageTransform)
    */
+  @Deprecated
   protected TransformSelectedPages(ResultPolicy resultPolicy,
                                    PageTransform pageTransform1,
                                    PageTransform pageTransform2) {
@@ -162,6 +169,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
    * @see AggregatePageTransform#AggregatePageTransform(PageTransform, PageTransform, PageTransform)
    */
+  @Deprecated
   protected TransformSelectedPages(ResultPolicy resultPolicy,
                                    PageTransform pageTransform1,
                                    PageTransform pageTransform2,
@@ -182,6 +190,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
    * @see AggregatePageTransform#AggregatePageTransform(PageTransform[])
    */
+  @Deprecated
   protected TransformSelectedPages(ResultPolicy resultPolicy,
                                    PageTransform[] pageTransforms) {
     this(resultPolicy,
@@ -202,6 +211,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
    * @see AggregatePageTransform#AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform, PageTransform)
    */
+  @Deprecated
   protected TransformSelectedPages(ResultPolicy pageIterationResultPolicy,
                                    ResultPolicy pageTransformResultPolicy,
                                    PageTransform pageTransform1,
@@ -227,6 +237,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
    * @see AggregatePageTransform#AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform, PageTransform, PageTransform)
    */
+  @Deprecated
   protected TransformSelectedPages(ResultPolicy pageIterationResultPolicy,
                                    ResultPolicy pageTransformResultPolicy,
                                    PageTransform pageTransform1,
@@ -252,6 +263,7 @@ public abstract class TransformSelectedPages extends PageTransformWrapper {
    * @see #TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
    * @see AggregatePageTransform#AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform[])
    */
+  @Deprecated
   protected TransformSelectedPages(ResultPolicy pageIterationResultPolicy,
                                    ResultPolicy pageTransformResultPolicy,
                                    PageTransform[] pageTransforms) {

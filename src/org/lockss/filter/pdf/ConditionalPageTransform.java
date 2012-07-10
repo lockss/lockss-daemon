@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalPageTransform.java,v 1.8 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: ConditionalPageTransform.java,v 1.9 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.util.PdfUtil.ResultPolicy;
  * by an "if" page transform.</p>
  * @author Thib Guicherd-Callin
  */
+@Deprecated
 public class ConditionalPageTransform extends PageTransformDecorator {
 
   /**
@@ -58,6 +59,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * @see PageTransformDecorator#PageTransformDecorator(PageTransform)
    * @see AggregatePageTransform#AggregatePageTransform(PageTransform, PageTransform)
    */
+  @Deprecated
   public ConditionalPageTransform(PageTransform ifTransform,
                                   boolean thenStrictness,
                                   PageTransform thenTransform) {
@@ -98,6 +100,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * @see AggregatePageTransform#AggregatePageTransform(PageTransform, PageTransform)
    * @see AggregatePageTransform#POLICY_DEFAULT
    */
+  @Deprecated
   public ConditionalPageTransform(PageTransform ifTransform,
                                   boolean thenStrictness,
                                   PageTransform thenTransform1,
@@ -123,6 +126,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * @see #ConditionalPageTransform(PageTransform, boolean, PageTransform)
    * @see AggregatePageTransform#AggregatePageTransform(PageTransform[])
    */
+  @Deprecated
   public ConditionalPageTransform(PageTransform ifTransform,
                                   boolean thenStrictness,
                                   PageTransform[] thenTransforms) {
@@ -148,6 +152,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * @param thenTransform2   A "then" page transform.
    * @see #ConditionalPageTransform(PageTransform, boolean, PageTransform)
    */
+  @Deprecated
   public ConditionalPageTransform(PageTransform ifTransform,
                                   boolean thenStrictness,
                                   ResultPolicy thenResultPolicy,
@@ -177,6 +182,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * @see #ConditionalPageTransform(PageTransform, boolean, PageTransform)
    * @see AggregatePageTransform#AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform[])
    */
+  @Deprecated
   public ConditionalPageTransform(PageTransform ifTransform,
                                   boolean thenStrictness,
                                   ResultPolicy thenResultPolicy,
@@ -197,6 +203,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * @see #ConditionalPageTransform(PageTransform, boolean, PageTransform)
    * @see #STRICTNESS_DEFAULT
    */
+  @Deprecated
   public ConditionalPageTransform(PageTransform ifTransform,
                                   PageTransform thenTransform) {
     this(ifTransform,
@@ -215,6 +222,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * @see #ConditionalPageTransform(PageTransform, boolean, PageTransform, PageTransform)
    * @see #STRICTNESS_DEFAULT
    */
+  @Deprecated
   public ConditionalPageTransform(PageTransform ifTransform,
                                   PageTransform thenTransform1,
                                   PageTransform thenTransform2) {
@@ -234,6 +242,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * @see #ConditionalPageTransform(PageTransform, boolean, PdfUtil.ResultPolicy, PageTransform, PageTransform)
    * @see #STRICTNESS_DEFAULT
    */
+  @Deprecated
   public ConditionalPageTransform(PageTransform ifTransform,
                                   PageTransform[] thenTransforms) {
     this(ifTransform,
@@ -254,6 +263,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * @see #ConditionalPageTransform(PageTransform, boolean, PdfUtil.ResultPolicy, PageTransform, PageTransform)
    * @see #STRICTNESS_DEFAULT
    */
+  @Deprecated
   public ConditionalPageTransform(PageTransform ifTransform,
                                   ResultPolicy thenResultPolicy,
                                   PageTransform thenTransform1,
@@ -277,6 +287,7 @@ public class ConditionalPageTransform extends PageTransformDecorator {
    * @see #ConditionalPageTransform(PageTransform, boolean, PdfUtil.ResultPolicy, PageTransform, PageTransform)
    * @see #STRICTNESS_DEFAULT
    */
+  @Deprecated
   public ConditionalPageTransform(PageTransform ifTransform,
                                   ResultPolicy thenResultPolicy,
                                   PageTransform[] thenTransforms) {

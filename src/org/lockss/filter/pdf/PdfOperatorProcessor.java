@@ -1,5 +1,5 @@
 /*
- * $Id: PdfOperatorProcessor.java,v 1.8 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: PdfOperatorProcessor.java,v 1.9 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -49,8 +49,12 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * @author Thib Guicherd-Callin
  * @see PageStreamTransform
  */
+@Deprecated
 public abstract class PdfOperatorProcessor extends OperatorProcessor {
 
+  @Deprecated
+  public PdfOperatorProcessor() {}
+  
   /**
    * <p>Inherited from {@link OperatorProcessor}; simply calls
    * {@link #process(PageStreamTransform, PDFOperator, List)}

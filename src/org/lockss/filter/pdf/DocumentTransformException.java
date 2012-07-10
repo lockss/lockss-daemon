@@ -1,5 +1,5 @@
 /*
- * $Id: DocumentTransformException.java,v 1.3 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: DocumentTransformException.java,v 1.4 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -40,11 +40,13 @@ import java.io.IOException;
  * @author Thib Guicherd-Callin
  * @see DocumentTransform#transform
  */
+@Deprecated
 public class DocumentTransformException extends IOException {
 
   /**
    * <p>Builds a new exception.</p>
    */
+  @Deprecated
   public DocumentTransformException() {
     super();
   }
@@ -53,6 +55,7 @@ public class DocumentTransformException extends IOException {
    * <p>Builds a new exception using the given message.</p>
    * @param message A detail message.
    */
+  @Deprecated
   public DocumentTransformException(String message) {
     super(message);
   }
@@ -62,6 +65,7 @@ public class DocumentTransformException extends IOException {
    * @param message A detail message.
    * @param cause   A {@link Throwable} cause.
    */
+  @Deprecated
   public DocumentTransformException(String message, Throwable cause) {
     super(message);
     initCause(cause);
@@ -71,6 +75,7 @@ public class DocumentTransformException extends IOException {
    * <p>Builds a new exception using the given cause.</p>
    * @param cause A {@link Throwable} cause.
    */
+  @Deprecated
   public DocumentTransformException(Throwable cause) {
     super();
     initCause(cause);

@@ -1,5 +1,5 @@
 /*
- * $Id: ProcessString.java,v 1.5 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: ProcessString.java,v 1.6 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -52,8 +52,12 @@ import org.pdfbox.util.PDFOperator;
  * @see PdfUtil#SHOW_TEXT
  * @see PdfUtil#SHOW_TEXT_GLYPH_POSITIONING
  */
+@Deprecated
 public abstract class ProcessString extends PdfOperatorProcessor {
 
+  @Deprecated
+  public ProcessString() {}
+  
   /* Inherit documentation */
   public void process(PageStreamTransform pageStreamTransform,
                       PDFOperator operator,

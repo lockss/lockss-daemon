@@ -1,5 +1,5 @@
 /*
- * $Id: SplitOperatorProcessor.java,v 1.9 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: SplitOperatorProcessor.java,v 1.10 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -66,8 +66,12 @@ import org.pdfbox.util.PDFOperator;
  * @see PageStreamTransform#mergeOutputList()
  * @see PageStreamTransform#mergeOutputList(List)
  */
+@Deprecated
 public class SplitOperatorProcessor extends PdfOperatorProcessor {
 
+  @Deprecated
+  public SplitOperatorProcessor() {}
+  
   /* Inherit documentation */
   public void process(PageStreamTransform pageStreamTransform,
                       PDFOperator operator,

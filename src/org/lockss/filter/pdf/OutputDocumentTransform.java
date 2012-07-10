@@ -1,5 +1,5 @@
 /*
- * $Id: OutputDocumentTransform.java,v 1.3 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: OutputDocumentTransform.java,v 1.4 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.util.PdfDocument;
  * need not be valid PDF.</p>
  * @author Thib Guicherd-Callin
  */
+@Deprecated
 public interface OutputDocumentTransform extends DocumentTransform {
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: TextScrapingDocumentTransform.java,v 1.4 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: TextScrapingDocumentTransform.java,v 1.5 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -44,8 +44,12 @@ import org.lockss.filter.pdf.PageTransformUtil.ExtractStringsToOutputStream;
  * @author Thib Guicherd-Callin.
  * @see PageTransformUtil.ExtractStringsToOutputStream
  */
+@Deprecated
 public abstract class TextScrapingDocumentTransform extends OutputStreamDocumentTransform {
 
+  @Deprecated
+  public TextScrapingDocumentTransform() {}
+  
   /**
    * <p>Makes a new document transform which will be applied before
    * scraping all string constants from the document with

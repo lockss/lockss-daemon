@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalOperatorProcessor.java,v 1.5 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: ConditionalOperatorProcessor.java,v 1.6 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -57,8 +57,12 @@ import org.pdfbox.util.PDFOperator;
  * {@link PageStreamTransform} instantiation.</p>
  * @author Thib Guicherd-Callin
  */
+@Deprecated
 public abstract class ConditionalOperatorProcessor extends PdfOperatorProcessor {
 
+  @Deprecated
+  public ConditionalOperatorProcessor() {}
+  
   /**
    * <p>Computes a sequence of tokens to be examined by the
    * {@link #identify} method.</p>

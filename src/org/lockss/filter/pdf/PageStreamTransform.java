@@ -1,5 +1,5 @@
 /*
- * $Id: PageStreamTransform.java,v 1.12 2007-11-08 21:03:15 thib_gc Exp $
+ * $Id: PageStreamTransform.java,v 1.13 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -101,6 +101,7 @@ import org.pdfbox.util.operator.OperatorProcessor;
  * @see PdfOperatorProcessor
  * @see SplitOperatorProcessor
  */
+@Deprecated
 public class PageStreamTransform extends PDFStreamEngine implements PageTransform {
 
   /**
@@ -109,6 +110,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * it by way of {@link PageStreamTransform#signalChange}.</p>
    * @author Thib Guicherd-Callin
    */
+  @Deprecated
   public static class NullPageStreamTransform extends PageStreamTransform {
 
     /**
@@ -117,6 +119,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
      * @throws IOException if any processing error occurs.
      * @see PageStreamTransform#PageStreamTransform()
      */
+    @Deprecated
     public NullPageStreamTransform() throws IOException {
       super();
     }
@@ -140,6 +143,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
      * @throws IOException          if any processing error occurs.
      * @see PageStreamTransform#PageStreamTransform(Properties)
      */
+    @Deprecated
     public NullPageStreamTransform(Properties customOperatorProcessors) throws IOException {
       super(customOperatorProcessors);
     }
@@ -156,6 +160,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
      * @throws IOException if any processing error occurs.
      * @see PageStreamTransform#PageStreamTransform(String, Class, String, Class)
      */
+    @Deprecated
     public NullPageStreamTransform(String pdfOperatorString, Class pdfOperatorProcessor)
         throws IOException {
       super(pdfOperatorString, pdfOperatorProcessor);
@@ -176,6 +181,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
      * @throws IOException if any processing error occurs.
      * @see PageStreamTransform#PageStreamTransform(String, Class, String, Class)
      */
+    @Deprecated
     public NullPageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
                                    String pdfOperatorString2, Class pdfOperatorProcessor2)
         throws IOException {
@@ -201,6 +207,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
      * @throws IOException if any processing error occurs.
      * @see PageStreamTransform#PageStreamTransform(String, Class, String, Class, String, Class)
      */
+    @Deprecated
     public NullPageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
                                    String pdfOperatorString2, Class pdfOperatorProcessor2,
                                    String pdfOperatorString3, Class pdfOperatorProcessor3)
@@ -231,6 +238,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
      * @throws IOException if any processing error occurs.
      * @see PageStreamTransform#PageStreamTransform(String, Class, String, Class, String, Class, String, Class)
      */
+    @Deprecated
     public NullPageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
                                    String pdfOperatorString2, Class pdfOperatorProcessor2,
                                    String pdfOperatorString3, Class pdfOperatorProcessor3,
@@ -270,6 +278,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see #PageStreamTransform(Properties)
    * @deprecated Use {@link #PageStreamTransform(OperatorProcessorFactory)}.
    */
+  @Deprecated
   public PageStreamTransform() throws IOException {
     this(new Properties());
   }
@@ -281,6 +290,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @throws IOException if any processing error occurs.
    * @see #PageStreamTransform(OperatorProcessorFactory, Properties)
    */
+  @Deprecated
   public PageStreamTransform(OperatorProcessorFactory factory) throws IOException {
     this(factory, new Properties());
   }
@@ -308,6 +318,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    *      Bug #1544943</a>
    * @deprecated Use {@link #PageStreamTransform(OperatorProcessorFactory, Properties)}.
    */
+  @Deprecated
   public PageStreamTransform(Properties customOperatorProcessors) throws IOException {
     super(rewriteProperties(customOperatorProcessors));
     this.listStack = new Stack();
@@ -337,6 +348,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see <a href="http://sourceforge.net/tracker/index.php?func=detail&aid=1544943&group_id=78314&atid=552832">PDFBox
    *      Bug #1544943</a>
    */
+  @Deprecated
   public PageStreamTransform(OperatorProcessorFactory factory,
                              Properties customOperatorProcessors) throws IOException {
     super(factory, rewriteProperties(customOperatorProcessors));
@@ -357,6 +369,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see PropUtil#fromArgs(String, String)
    * @deprecated Use {@link #PageStreamTransform(OperatorProcessorFactory, String, Class)}.
    */
+  @Deprecated
   public PageStreamTransform(String pdfOperatorString, Class pdfOperatorProcessor)
       throws IOException {
     this(PropUtil.fromArgs(pdfOperatorString, pdfOperatorProcessor.getName()));
@@ -377,6 +390,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see #PageStreamTransform(OperatorProcessorFactory, Properties)
    * @see PropUtil#fromArgs(String, String)
    */
+  @Deprecated
   public PageStreamTransform(OperatorProcessorFactory factory,
                              String pdfOperatorString, Class pdfOperatorProcessor)
       throws IOException {
@@ -401,6 +415,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see PropUtil#fromArgs(String, String, String, String)
    * @deprecated Use {@link #PageStreamTransform(OperatorProcessorFactory, String, Class, String, Class)}.
    */
+  @Deprecated
   public PageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
                              String pdfOperatorString2, Class pdfOperatorProcessor2)
       throws IOException {
@@ -426,6 +441,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see #PageStreamTransform(OperatorProcessorFactory, Properties)
    * @see PropUtil#fromArgs(String, String, String, String)
    */
+  @Deprecated
   public PageStreamTransform(OperatorProcessorFactory factory,
                              String pdfOperatorString1, Class pdfOperatorProcessor1,
                              String pdfOperatorString2, Class pdfOperatorProcessor2)
@@ -455,6 +471,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see PropUtil#fromArgs(String, String, String, String, String, String)
    * @deprecated Use {@link #PageStreamTransform(OperatorProcessorFactory, String, Class, String, Class, String, Class)}.
    */
+  @Deprecated
   public PageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
                              String pdfOperatorString2, Class pdfOperatorProcessor2,
                              String pdfOperatorString3, Class pdfOperatorProcessor3)
@@ -485,6 +502,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see #PageStreamTransform(OperatorProcessorFactory, Properties)
    * @see PropUtil#fromArgs(String, String, String, String, String, String)
    */
+  @Deprecated
   public PageStreamTransform(OperatorProcessorFactory factory,
                              String pdfOperatorString1, Class pdfOperatorProcessor1,
                              String pdfOperatorString2, Class pdfOperatorProcessor2,
@@ -519,6 +537,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see PropUtil#fromArgs(String, String, String, String, String, String, String, String)
    * @deprecated Use {@link #PageStreamTransform(OperatorProcessorFactory, String, Class, String, Class, String, Class, String, Class)}
    */
+  @Deprecated
   public PageStreamTransform(String pdfOperatorString1, Class pdfOperatorProcessor1,
                              String pdfOperatorString2, Class pdfOperatorProcessor2,
                              String pdfOperatorString3, Class pdfOperatorProcessor3,
@@ -554,6 +573,7 @@ public class PageStreamTransform extends PDFStreamEngine implements PageTransfor
    * @see #PageStreamTransform(Properties)
    * @see PropUtil#fromArgs(String, String, String, String, String, String, String, String)
    */
+  @Deprecated
   public PageStreamTransform(OperatorProcessorFactory factory,
                              String pdfOperatorString1, Class pdfOperatorProcessor1,
                              String pdfOperatorString2, Class pdfOperatorProcessor2,

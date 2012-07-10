@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleOutputDocumentTransform.java,v 1.3 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: SimpleOutputDocumentTransform.java,v 1.4 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.util.*;
  * @author Thib Guicherd-Callin
  * @see PdfDocument#save
  */
+@Deprecated
 public class SimpleOutputDocumentTransform
     extends DocumentTransformDecorator
     implements OutputDocumentTransform {
@@ -54,6 +55,7 @@ public class SimpleOutputDocumentTransform
    * @param documentTransform A document transform.
    * @see DocumentTransformDecorator#DocumentTransformDecorator(DocumentTransform)
    */
+  @Deprecated
   public SimpleOutputDocumentTransform(DocumentTransform documentTransform) {
     super(documentTransform);
   }

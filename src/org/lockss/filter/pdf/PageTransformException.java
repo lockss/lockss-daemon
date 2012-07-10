@@ -1,5 +1,5 @@
 /*
- * $Id: PageTransformException.java,v 1.3 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: PageTransformException.java,v 1.4 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -40,11 +40,13 @@ import java.io.IOException;
  * @author Thib Guicherd-Callin
  * @see PageTransform#transform
  */
+@Deprecated
 public class PageTransformException extends IOException {
 
   /**
    * <p>Builds a new exception.</p>
    */
+  @Deprecated
   public PageTransformException() {
     super();
   }
@@ -53,6 +55,7 @@ public class PageTransformException extends IOException {
    * <p>Builds a new exception using the given message.</p>
    * @param message A detail message.
    */
+  @Deprecated
   public PageTransformException(String message) {
     super(message);
   }
@@ -62,6 +65,7 @@ public class PageTransformException extends IOException {
    * @param message A detail message.
    * @param cause   A {@link Throwable} cause.
    */
+  @Deprecated
   public PageTransformException(String message, Throwable cause) {
     super(message);
     initCause(cause);
@@ -71,6 +75,7 @@ public class PageTransformException extends IOException {
    * <p>Builds a new exception using the given cause.</p>
    * @param cause A {@link Throwable} cause.
    */
+  @Deprecated
   public PageTransformException(Throwable cause) {
     super();
     initCause(cause);

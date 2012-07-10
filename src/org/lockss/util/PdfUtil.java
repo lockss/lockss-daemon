@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.31 2012-04-04 23:43:33 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.32 2012-07-10 23:53:32 thib_gc Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ import org.pdfbox.util.PDFOperator;
  * <p>Utilities for PDF processing and filtering.</p>
  * @author Thib Guicherd-Callin
  */
+@Deprecated
 public class PdfUtil {
 
   /** Filtered PDF files smaller than this will be kept in memory, larger
@@ -413,8 +414,10 @@ return success;
    * <p>A suggested prefix for non-definitional parameters conveying
    * hints about PDF filter factories.</p>
    * @see DefinableArchivalUnit#SUFFIX_FILTER_FACTORY
+   * @deprecated Use {@link org.lockss.pdf.PdfUtil#PREFIX_PDF_FILTER_FACTORY_HINT}
    */
-  public static final String PREFIX_PDF_FILTER_FACTORY_HINT = "hint_";
+  @Deprecated
+  public static final String PREFIX_PDF_FILTER_FACTORY_HINT = org.lockss.pdf.PdfUtil.PREFIX_PDF_FILTER_FACTORY_HINT;
 
   /**
    * <p>The PDF MIME type, <code>{@value}</code>.</p>

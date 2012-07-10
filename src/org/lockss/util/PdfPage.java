@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPage.java,v 1.5 2007-02-23 19:42:04 thib_gc Exp $
+ * $Id: PdfPage.java,v 1.6 2012-07-10 23:53:32 thib_gc Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.pdfbox.pdmodel.interactive.annotation.PDAnnotation;
  * @author Thib Guicherd-Callin
  * @see PDPage
  */
+@Deprecated
 public class PdfPage {
 
   /**
@@ -62,11 +63,13 @@ public class PdfPage {
    * <p>Builds a new PDF page.</p>
    * @param pdPage An underlying {@link PDPage} instance.
    */
+  @Deprecated
   public PdfPage(PdfDocument pdfDocument, PDPage pdPage) {
     this.pdfDocument = pdfDocument;
     this.pdPage = pdPage;
   }
 
+  @Deprecated
   protected PdfPage() { }
 
   /**

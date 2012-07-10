@@ -1,5 +1,5 @@
 /*
- * $Id: AggregateDocumentTransform.java,v 1.8 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: AggregateDocumentTransform.java,v 1.9 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.util.PdfUtil.ResultPolicy;
  * applied sequentially.</p>
  * @author Thib Guicherd-Callin
  */
+@Deprecated
 public class AggregateDocumentTransform implements DocumentTransform {
 
   /**
@@ -62,6 +63,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy)
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   public AggregateDocumentTransform() {
     this(POLICY_DEFAULT);
   }
@@ -73,6 +75,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform)
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   public AggregateDocumentTransform(DocumentTransform documentTransform) {
     this(POLICY_DEFAULT,
          documentTransform);
@@ -86,6 +89,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform)
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   public AggregateDocumentTransform(DocumentTransform documentTransform1,
                                     DocumentTransform documentTransform2) {
     this(POLICY_DEFAULT,
@@ -102,6 +106,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform, DocumentTransform)
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   public AggregateDocumentTransform(DocumentTransform documentTransform1,
                                     DocumentTransform documentTransform2,
                                     DocumentTransform documentTransform3) {
@@ -121,6 +126,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform, DocumentTransform, DocumentTransform)
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   public AggregateDocumentTransform(DocumentTransform documentTransform1,
                                     DocumentTransform documentTransform2,
                                     DocumentTransform documentTransform3,
@@ -139,6 +145,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @see #AggregateDocumentTransform(DocumentTransform[])
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   public AggregateDocumentTransform(DocumentTransform[] documentTransforms) {
     this(POLICY_DEFAULT,
          documentTransforms);
@@ -149,6 +156,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * result policy.</p>
    * @param resultPolicy A result policy.
    */
+  @Deprecated
   public AggregateDocumentTransform(ResultPolicy resultPolicy) {
     if (resultPolicy == null) {
       String logMessage = "Cannot specify a null result policy";
@@ -167,6 +175,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform A document transform.
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy)
    */
+  @Deprecated
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
                                     DocumentTransform documentTransform) {
     this(resultPolicy);
@@ -182,6 +191,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform2 A document transform.
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform)
    */
+  @Deprecated
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
                                     DocumentTransform documentTransform1,
                                     DocumentTransform documentTransform2) {
@@ -200,6 +210,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform3 A document transform.
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform)
    */
+  @Deprecated
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
                                     DocumentTransform documentTransform1,
                                     DocumentTransform documentTransform2,
@@ -221,6 +232,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @param documentTransform4 A document transform.
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy, DocumentTransform, DocumentTransform, DocumentTransform)
    */
+  @Deprecated
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
                                     DocumentTransform documentTransform1,
                                     DocumentTransform documentTransform2,
@@ -243,6 +255,7 @@ public class AggregateDocumentTransform implements DocumentTransform {
    * @see #AggregateDocumentTransform(PdfUtil.ResultPolicy)
    * @see #add(DocumentTransform[])
    */
+  @Deprecated
   public AggregateDocumentTransform(ResultPolicy resultPolicy,
                                     DocumentTransform[] documentTransforms) {
     this(resultPolicy);

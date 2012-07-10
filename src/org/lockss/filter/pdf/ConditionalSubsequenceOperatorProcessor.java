@@ -1,9 +1,10 @@
 /*
- * $Id: ConditionalSubsequenceOperatorProcessor.java,v 1.4 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: ConditionalSubsequenceOperatorProcessor.java,v 1.5 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
-76 Board of Trustees of Leland Stanford Jr. University,
+
+Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -82,8 +83,12 @@ import org.pdfbox.util.PDFOperator;
  * {@link PageStreamTransform} instantiation.</p>
  * @author Thib Guicherd-Callin
  */
+@Deprecated
 public abstract class ConditionalSubsequenceOperatorProcessor extends ConditionalOperatorProcessor {
 
+  @Deprecated
+  public ConditionalSubsequenceOperatorProcessor() {}
+  
   /**
    * <p>Computes a replacement for tokens identified by this
    * operator processor.</p>

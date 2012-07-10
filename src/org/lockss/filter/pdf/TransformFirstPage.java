@@ -1,5 +1,5 @@
 /*
- * $Id: TransformFirstPage.java,v 1.7 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: TransformFirstPage.java,v 1.8 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.util.PdfUtil.ResultPolicy;
  * page of the PDF document only.</p>
  * @author Thib Guicherd-Callin
  */
+@Deprecated
 public class TransformFirstPage extends TransformSelectedPages {
 
   /**
@@ -52,6 +53,7 @@ public class TransformFirstPage extends TransformSelectedPages {
    * @param pageTransform A page transform.
    * @see TransformSelectedPages#TransformSelectedPages(PageTransform)
    */
+  @Deprecated
   public TransformFirstPage(PageTransform pageTransform) {
     super(pageTransform);
   }
@@ -64,6 +66,7 @@ public class TransformFirstPage extends TransformSelectedPages {
    * @param pageTransform2 A page transform.
    * @see TransformSelectedPages#TransformSelectedPages(PageTransform, PageTransform)
    */
+  @Deprecated
   public TransformFirstPage(PageTransform pageTransform1,
                             PageTransform pageTransform2) {
     super(pageTransform1,
@@ -79,6 +82,7 @@ public class TransformFirstPage extends TransformSelectedPages {
    * @param pageTransform3 A page transform.
    * @see TransformSelectedPages#TransformSelectedPages(PageTransform, PageTransform, PageTransform)
    */
+  @Deprecated
   public TransformFirstPage(PageTransform pageTransform1,
                             PageTransform pageTransform2,
                             PageTransform pageTransform3) {
@@ -94,6 +98,7 @@ public class TransformFirstPage extends TransformSelectedPages {
    * @param pageTransforms An array of page transforms.
    * @see TransformSelectedPages#TransformSelectedPages(PageTransform[])
    */
+  @Deprecated
   public TransformFirstPage(PageTransform[] pageTransforms) {
     super(pageTransforms);
   }
@@ -109,6 +114,7 @@ public class TransformFirstPage extends TransformSelectedPages {
    * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PdfUtil.ResultPolicy, PageTransform, PageTransform)
    * @see TransformSelectedPages#POLICY_DEFAULT
    */
+  @Deprecated
   public TransformFirstPage(ResultPolicy pageTransformResultPolicy,
                             PageTransform pageTransform1,
                             PageTransform pageTransform2) {
@@ -130,6 +136,7 @@ public class TransformFirstPage extends TransformSelectedPages {
    * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PdfUtil.ResultPolicy, PageTransform, PageTransform, PageTransform)
    * @see TransformSelectedPages#POLICY_DEFAULT
    */
+  @Deprecated
   public TransformFirstPage(ResultPolicy pageTransformResultPolicy,
                             PageTransform pageTransform1,
                             PageTransform pageTransform2,
@@ -151,6 +158,7 @@ public class TransformFirstPage extends TransformSelectedPages {
    * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PdfUtil.ResultPolicy, PageTransform[])
    * @see TransformSelectedPages#POLICY_DEFAULT
    */
+  @Deprecated
   public TransformFirstPage(ResultPolicy pageTransformResultPolicy,
                             PageTransform[] pageTransforms) {
     super(POLICY_DEFAULT,

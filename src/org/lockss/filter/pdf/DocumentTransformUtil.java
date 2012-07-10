@@ -1,5 +1,5 @@
 /*
- * $Id: DocumentTransformUtil.java,v 1.10 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: DocumentTransformUtil.java,v 1.11 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -40,12 +40,14 @@ import org.lockss.util.*;
  * <p>Utility document transforms.</p>
  * @author Thib Guicherd-Callin
  */
+@Deprecated
 public class DocumentTransformUtil {
 
   /**
    * <p>A base wrapper for another document transform.</p>
    * @author Thib Guicherd-Callin
    */
+  @Deprecated
   public static abstract class DocumentTransformDecorator implements DocumentTransform {
 
     /**
@@ -58,6 +60,7 @@ public class DocumentTransformUtil {
      * document transform.</p>
      * @param documentTransform A document transform to be wrapped.
      */
+    @Deprecated
     protected DocumentTransformDecorator(DocumentTransform documentTransform) {
       this.documentTransform = documentTransform;
     }
@@ -68,6 +71,7 @@ public class DocumentTransformUtil {
    * <p>A document transform that does nothing.</p>
    * @author Thib Guicherd-Callin
    */
+  @Deprecated
   public static class IdentityDocumentTransform implements DocumentTransform {
 
     /**
@@ -82,6 +86,7 @@ public class DocumentTransformUtil {
      * @see #IdentityDocumentTransform(boolean)
      * @see #RESULT_DEFAULT
      */
+    @Deprecated
     public IdentityDocumentTransform() {
       this(RESULT_DEFAULT);
     }
@@ -92,6 +97,7 @@ public class DocumentTransformUtil {
      * return value.</p>
      * @param returnValue The return value for {@link #transform}.
      */
+    @Deprecated
     public IdentityDocumentTransform(boolean returnValue) {
       this.returnValue = returnValue;
     }
@@ -116,6 +122,7 @@ public class DocumentTransformUtil {
    * {@link DocumentTransform#transform} method.</p>
    * @author Thib Guicherd-Callin
    */
+  @Deprecated
   public static class OppositeDocumentTransform extends DocumentTransformDecorator {
 
     /**
@@ -123,6 +130,7 @@ public class DocumentTransformUtil {
      * document transform.</p>
      * @param documentTransform A document transform to be wrapped.
      */
+    @Deprecated
     public OppositeDocumentTransform(DocumentTransform documentTransform) {
       super(documentTransform);
     }
@@ -142,6 +150,7 @@ public class DocumentTransformUtil {
    * page transform.</p>
    * @author Thib Guicherd-Callin
    */
+  @Deprecated
   public static abstract class PageTransformWrapper implements DocumentTransform {
 
     /**
@@ -154,6 +163,7 @@ public class DocumentTransformUtil {
      * transform.</p>
      * @param pageTransform
      */
+    @Deprecated
     protected PageTransformWrapper(PageTransform pageTransform) {
       this.pageTransform = pageTransform;
     }
@@ -166,6 +176,7 @@ public class DocumentTransformUtil {
    * transform fails.</p>
    * @author Thib Guicherd-Callin
    */
+  @Deprecated
   public static class StrictDocumentTransform extends DocumentTransformDecorator {
 
     /**
@@ -173,6 +184,7 @@ public class DocumentTransformUtil {
      * document transform.</p>
      * @param documentTransform A document transform.
      */
+    @Deprecated
     public StrictDocumentTransform(DocumentTransform documentTransform) {
       super(documentTransform);
     }

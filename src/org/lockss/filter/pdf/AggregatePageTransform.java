@@ -1,5 +1,5 @@
 /*
- * $Id: AggregatePageTransform.java,v 1.8 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: AggregatePageTransform.java,v 1.9 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.util.PdfUtil.ResultPolicy;
  * applied sequentially.
  * @author Thib Guicherd-Callin
  */
+@Deprecated
 public class AggregatePageTransform implements PageTransform {
 
   /**
@@ -62,6 +63,7 @@ public class AggregatePageTransform implements PageTransform {
    * @see #AggregatePageTransform(PdfUtil.ResultPolicy)
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   public AggregatePageTransform() {
     this(POLICY_DEFAULT);
   }
@@ -73,6 +75,7 @@ public class AggregatePageTransform implements PageTransform {
    * @see #AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform)
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   public AggregatePageTransform(PageTransform pageTransform) {
     this(POLICY_DEFAULT,
          pageTransform);
@@ -86,6 +89,7 @@ public class AggregatePageTransform implements PageTransform {
    * @see #AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform, PageTransform)
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   public AggregatePageTransform(PageTransform pageTransform1,
                                 PageTransform pageTransform2) {
     this(POLICY_DEFAULT,
@@ -102,6 +106,7 @@ public class AggregatePageTransform implements PageTransform {
    * @see #AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform, PageTransform, PageTransform)
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   public AggregatePageTransform(PageTransform pageTransform1,
                                 PageTransform pageTransform2,
                                 PageTransform pageTransform3) {
@@ -118,6 +123,7 @@ public class AggregatePageTransform implements PageTransform {
    * @see #AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform[])
    * @see #POLICY_DEFAULT
    */
+  @Deprecated
   public AggregatePageTransform(PageTransform[] pageTransforms) {
     this(POLICY_DEFAULT,
          pageTransforms);
@@ -128,6 +134,7 @@ public class AggregatePageTransform implements PageTransform {
    * result policy.</p>
    * @param resultPolicy   A result policy.
    */
+  @Deprecated
   public AggregatePageTransform(ResultPolicy resultPolicy) {
     if (resultPolicy == null) {
       String logMessage = "Cannot specify a null result policy";
@@ -146,6 +153,7 @@ public class AggregatePageTransform implements PageTransform {
    * @param pageTransform A page transform.
    * @see #AggregatePageTransform(PdfUtil.ResultPolicy)
    */
+  @Deprecated
   public AggregatePageTransform(ResultPolicy resultPolicy,
                                 PageTransform pageTransform) {
     this(resultPolicy);
@@ -161,6 +169,7 @@ public class AggregatePageTransform implements PageTransform {
    * @param pageTransform2 A page transform.
    * @see #AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform)
    */
+  @Deprecated
   public AggregatePageTransform(ResultPolicy resultPolicy,
                                 PageTransform pageTransform1,
                                 PageTransform pageTransform2) {
@@ -179,6 +188,7 @@ public class AggregatePageTransform implements PageTransform {
    * @param pageTransform3 A page transform.
    * @see #AggregatePageTransform(PdfUtil.ResultPolicy, PageTransform, PageTransform)
    */
+  @Deprecated
   public AggregatePageTransform(ResultPolicy resultPolicy,
                                 PageTransform pageTransform1,
                                 PageTransform pageTransform2,
@@ -197,6 +207,7 @@ public class AggregatePageTransform implements PageTransform {
    * @param pageTransforms     An array of page transforms.
    * @see #AggregatePageTransform(PdfUtil.ResultPolicy)
    */
+  @Deprecated
   public AggregatePageTransform(ResultPolicy resultPolicy,
                                 PageTransform[] pageTransforms) {
     this(resultPolicy);

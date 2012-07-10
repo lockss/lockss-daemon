@@ -1,5 +1,5 @@
 /*
- * $Id: ConditionalMergeOperatorProcessor.java,v 1.3 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: ConditionalMergeOperatorProcessor.java,v 1.4 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -76,8 +76,12 @@ import org.pdfbox.util.PDFOperator;
  * @see PageStreamTransform#mergeOutputList()
  * @see PageStreamTransform#mergeOutputList(List)
  */
+@Deprecated
 public abstract class ConditionalMergeOperatorProcessor extends ConditionalOperatorProcessor {
 
+  @Deprecated
+  public ConditionalMergeOperatorProcessor() {}
+  
   /**
    * <p>Computes a replacement for tokens identified by this
    * operator processor.</p>

@@ -1,5 +1,5 @@
 /*
- * $Id: ReplaceString.java,v 1.5 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: ReplaceString.java,v 1.6 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -51,8 +51,12 @@ import org.pdfbox.util.PDFOperator;
  * @author Thib Guicherd-Callin
  * @see PdfUtil#SHOW_TEXT
  */
+@Deprecated
 public abstract class ReplaceString extends PdfOperatorProcessor {
 
+  @Deprecated
+  public ReplaceString() {}
+  
   /**
    * <p>Determines if an operand string is to be replaced.</p>
    * @param candidate A candidate string (operand of the "show text"

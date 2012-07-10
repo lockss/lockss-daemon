@@ -1,5 +1,5 @@
 /*
- * $Id: TransformEachPage.java,v 1.7 2007-02-23 19:41:34 thib_gc Exp $
+ * $Id: TransformEachPage.java,v 1.8 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.util.PdfUtil.ResultPolicy;
  * page of the PDF document.</p>
  * @author Thib Guicherd-Callin
  */
+@Deprecated
 public class TransformEachPage extends TransformSelectedPages {
 
   /**
@@ -51,6 +52,7 @@ public class TransformEachPage extends TransformSelectedPages {
    * @param pageTransform A page transform.
    * @see TransformSelectedPages#TransformSelectedPages(PageTransform)
    */
+  @Deprecated
   public TransformEachPage(PageTransform pageTransform) {
     super(pageTransform);
   }
@@ -63,6 +65,7 @@ public class TransformEachPage extends TransformSelectedPages {
    * @param pageTransform2 A page transform.
    * @see TransformSelectedPages#TransformSelectedPages(PageTransform, PageTransform)
    */
+  @Deprecated
   public TransformEachPage(PageTransform pageTransform1,
                            PageTransform pageTransform2) {
     super(pageTransform1,
@@ -78,6 +81,7 @@ public class TransformEachPage extends TransformSelectedPages {
    * @param pageTransform3 A page transform.
    * @see TransformSelectedPages#TransformSelectedPages(PageTransform, PageTransform, PageTransform)
    */
+  @Deprecated
   public TransformEachPage(PageTransform pageTransform1,
                            PageTransform pageTransform2,
                            PageTransform pageTransform3) {
@@ -93,6 +97,7 @@ public class TransformEachPage extends TransformSelectedPages {
    * @param pageTransforms An array of page transforms.
    * @see TransformSelectedPages#TransformSelectedPages(PageTransform[])
    */
+  @Deprecated
   public TransformEachPage(PageTransform[] pageTransforms) {
     super(pageTransforms);
   }
@@ -104,6 +109,7 @@ public class TransformEachPage extends TransformSelectedPages {
    * @param pageTransform A page transform.
    * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform)
    */
+  @Deprecated
   public TransformEachPage(ResultPolicy resultPolicy,
                            PageTransform pageTransform) {
     super(resultPolicy,
@@ -119,6 +125,7 @@ public class TransformEachPage extends TransformSelectedPages {
    * @param pageTransform2 A page transform.
    * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform, PageTransform)
    */
+  @Deprecated
   public TransformEachPage(ResultPolicy resultPolicy,
                            PageTransform pageTransform1,
                            PageTransform pageTransform2) {
@@ -137,6 +144,7 @@ public class TransformEachPage extends TransformSelectedPages {
    * @param pageTransform3 A page transform.
    * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform, PageTransform, PageTransform)
    */
+  @Deprecated
   public TransformEachPage(ResultPolicy resultPolicy,
                            PageTransform pageTransform1,
                            PageTransform pageTransform2,
@@ -155,6 +163,7 @@ public class TransformEachPage extends TransformSelectedPages {
    * @param pageTransforms An array of page transforms.
    * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PageTransform[])
    */
+  @Deprecated
   public TransformEachPage(ResultPolicy resultPolicy,
                            PageTransform[] pageTransforms) {
     super(resultPolicy,
@@ -173,6 +182,7 @@ public class TransformEachPage extends TransformSelectedPages {
    * @param pageTransform2            A page transform.
    * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PdfUtil.ResultPolicy, PageTransform, PageTransform)
    */
+  @Deprecated
   public TransformEachPage(ResultPolicy pageIterationResultPolicy,
                            ResultPolicy pageTransformResultPolicy,
                            PageTransform pageTransform1,
@@ -196,6 +206,7 @@ public class TransformEachPage extends TransformSelectedPages {
    * @param pageTransform3            A page transform.
    * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PdfUtil.ResultPolicy, PageTransform, PageTransform, PageTransform)
    */
+  @Deprecated
   public TransformEachPage(ResultPolicy pageIterationResultPolicy,
                            ResultPolicy pageTransformResultPolicy,
                            PageTransform pageTransform1,
@@ -219,6 +230,7 @@ public class TransformEachPage extends TransformSelectedPages {
    * @param pageTransforms            An array of page transforms.
    * @see TransformSelectedPages#TransformSelectedPages(PdfUtil.ResultPolicy, PdfUtil.ResultPolicy, PageTransform[])
    */
+  @Deprecated
   public TransformEachPage(ResultPolicy pageIterationResultPolicy,
                            ResultPolicy pageTransformResultPolicy,
                            PageTransform[] pageTransforms) {

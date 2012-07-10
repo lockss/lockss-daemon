@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.17 2007-07-31 08:40:05 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.18 2012-07-10 23:53:32 thib_gc Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ import org.pdfbox.pdmodel.fdf.FDFDocument;
  * API more related to the PDF document under the parser.</p>
  * @author Thib Guicherd-Callin
  */
+@Deprecated
 public class PdfDocument {
 
   /**
@@ -70,11 +71,13 @@ public class PdfDocument {
    * @see PDFParser#PDFParser(InputStream)
    * @see PDFParser#parse
    */
+  @Deprecated
   public PdfDocument(InputStream inputStream) throws IOException {
     this.pdfParser = new PDFParser(inputStream);
     parse();
   }
 
+  @Deprecated
   protected PdfDocument() { }
 
   /**

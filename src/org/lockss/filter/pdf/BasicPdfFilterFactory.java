@@ -1,5 +1,5 @@
 /*
- * $Id: BasicPdfFilterFactory.java,v 1.5 2007-07-31 22:40:24 thib_gc Exp $
+ * $Id: BasicPdfFilterFactory.java,v 1.6 2012-07-10 23:53:21 thib_gc Exp $
  */
 
 /*
@@ -49,8 +49,12 @@ import org.lockss.util.*;
  * @see PdfUtil#PDF_MIME_TYPE
  * @see DefinableArchivalUnit#SUFFIX_FILTER_FACTORY
  */
+@Deprecated
 public class BasicPdfFilterFactory implements FilterFactory {
 
+  @Deprecated
+  public BasicPdfFilterFactory() {}
+  
   /* Inherit documentation */
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
