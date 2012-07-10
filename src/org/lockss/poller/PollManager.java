@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.222 2012-07-10 17:51:40 barry409 Exp $
+ * $Id: PollManager.java,v 1.223 2012-07-10 17:56:37 barry409 Exp $
  */
 
 /*
@@ -1498,11 +1498,12 @@ public class PollManager
   }
 
   public PollFactory getPollFactory(int version) {
-    if (version > 0 || version <= pf.length) {
+    try {
       return pf[version];
+    } catch (ArrayIndexOutOfBoundsException e) {
+      theLog.error("Unknown poll version: " + version, e);
+      return null;
     }
-    theLog.error("Unknown poll version: " + version, new Throwable());
-    return null;
   }
 
   /**

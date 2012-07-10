@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.102 2012-06-17 23:07:11 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.103 2012-07-10 17:56:37 barry409 Exp $
  */
 
 /*
@@ -118,14 +118,20 @@ public class TestPollManager extends LockssTestCase {
   }
 
   public void testGetPollFactoryByVersion() throws Exception {
+    PollFactory pfm1 = pollmanager.getPollFactory(-1);
+    PollFactory pf0 = pollmanager.getPollFactory(0);
     PollFactory pf1 = pollmanager.getPollFactory(1);
     PollFactory pf2 = pollmanager.getPollFactory(2);
     PollFactory pf3 = pollmanager.getPollFactory(3);
+    PollFactory pf4 = pollmanager.getPollFactory(4);
+    assertNull(pfm1);
+    assertNull(pf0);
     assertNotNull(pf1);
     assertTrue(pf1 instanceof V1PollFactory);
     assertNull(pf2);
     assertNotNull(pf3);
     assertTrue(pf3 instanceof V3PollFactory);
+    assertNull(pf4);
   }
 
   public void testGetPollFactoryByPollSpec() throws Exception {
