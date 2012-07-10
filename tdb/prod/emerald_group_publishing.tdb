@@ -3632,7 +3632,7 @@
     au < manifest ; 2012 ; International Journal of Managerial Finance Volume 8 ; 8 >
 
   }
-
+  
   {
     title <
       name = International Journal of Managing Projects in Business ;
@@ -3940,6 +3940,20 @@
     au < released ; 2011 ; International Journal of Physical Distribution & Logistics Management Volume 41 ; 41 >
     au < manifest ; 2012 ; International Journal of Physical Distribution & Logistics Management Volume 42 ; 42 >
 
+  }
+  
+    {
+    title <
+      name = International Journal of Prisoner Health ;
+      issn = 1744-9200 ;
+      eissn = 
+    
+    >
+    param[journal_issn] = 1744-9200
+      
+  
+  
+  
   }
 
   {
