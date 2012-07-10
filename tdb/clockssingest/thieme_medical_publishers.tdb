@@ -958,7 +958,21 @@
     comment[years] = 1984-current
     
   }
-    {
+    
+  {
+  
+    title < 
+      name = Journal of Wrist Surgery ;
+      issn = 2163-3916 ;
+      eissn = 2163-3924
+    >
+    param[journal_id] = 10.500/s.0032.1312044
+    comment[years] = 2012-current
+    
+  }
+    
+    
+  {
     title <
       name = JuKiP - Ihr Fachmagazin für Gesundheits- und Kinderkrankenpflege ;
       issn = 1439-2569 ;
@@ -988,12 +1002,17 @@
   }
   
   {
-  
-    title < 
-      name = Journal of Wrist Surgery ;
-      issn = 2163-3916
-    >
+    title <
+      name = kleintier konkret ; 
+      issn = 1434-9132 ;
+      eissn = 1439-3832
     
+    >
+    param[journal_id] = 10.1055/s-002-23374
+    comment[years] = 2007-current
+  
+  
+  
   }
   
   {
