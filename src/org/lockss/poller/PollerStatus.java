@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.29 2010-09-01 07:51:28 tlipkis Exp $
+* $Id: PollerStatus.java,v 1.30 2012-07-10 23:37:46 thib_gc Exp $
  */
 
 /*
@@ -413,7 +413,7 @@ public class PollerStatus {
       PollTally tally = poll.getVoteTally();
       List list = new ArrayList();
       PollManager.PollManagerEntry entry =
-	pollManager.getCurrentOrRecentPollEntry(poll.getKey());
+	pollManager.getCurrentOrRecentV1PollEntry(poll.getKey());
 
       list.add(new StatusTable.SummaryInfo("Volume" , STRINGTYPE,
 					   tally.getArchivalUnit().getName()));

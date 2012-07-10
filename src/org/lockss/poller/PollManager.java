@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.224 2012-07-10 21:11:07 barry409 Exp $
+ * $Id: PollManager.java,v 1.225 2012-07-10 23:37:46 thib_gc Exp $
  */
 
 /*
@@ -652,7 +652,7 @@ public class PollManager
   }
 
   /** Find the poll either in current or recent polls */
-  private PollManagerEntry getCurrentOrRecentV1PollEntry(String key) {
+  PollManagerEntry getCurrentOrRecentV1PollEntry(String key) {
     synchronized (pollMapLock) {
       PollManagerEntry pme = thePolls.get(key);
       if (pme == null) {
