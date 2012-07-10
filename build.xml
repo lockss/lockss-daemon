@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.303 2012-07-09 20:56:56 thib_gc Exp $
+ $Id: build.xml,v 1.304 2012-07-10 23:49:01 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -276,13 +276,25 @@ Args:
   <property name="getopt.jar"  value="${test.lib}/gnu-getopt-1.0.13.jar"/>
   <property name="javacsv.jar"  value="${test.lib}/javacsv.jar"/>
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
-  <property name="pdfbox.jar" value="${lib}/PDFBox-0.7.3.jar" />
-  <!-- Needed by PDFBox: -->
-  <property name="fontbox.jar" value="${lib}/FontBox-0.1.0-dev.jar" />
-  <!-- Needed by PDFBox: -->
-  <property name="bouncycastle.provider.jar" value="${lib}/bcprov-jdk14-132.jar" />
-  <!-- Needed by PDFBox: -->
-  <property name="bouncycastle.mail.jar" value="${lib}/bcmail-jdk14-132.jar" />
+
+  <!-- PDFBox -->
+  <property name="pdfbox.jar" value="${lib}/pdfbox-1.6.0.jar" />
+  <!-- Next 7 needed by PDFBox: -->
+  <property name="fontbox.jar" value="${lib}/fontbox-1.6.0.jar" />
+  <property name="jempbox.jar" value="${lib}/jempbox-1.6.0.jar" />
+  <property name="bouncycastle-provider.jar" value="${lib}/bcprov-jdk15on-147.jar" />
+  <property name="bouncycastle-mail.jar" value="${lib}/bcmail-jdk15on-147.jar" />
+  <property name="icu4j.jar" value="${lib}/icu4j-49_1.jar" />
+  <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-49_1.jar" />
+  <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-49_1.jar" />
+	
+  <!-- PDFBox 0.7.3 -->
+  <property name="pdfbox-old.jar" value="${lib}/PDFBox-0.7.3.jar" />
+  <!-- Next 3 needed by PDFBox 0.7.3: -->
+  <property name="fontbox-old.jar" value="${lib}/FontBox-0.1.0-dev.jar" />
+<!--  <property name="bouncycastle.provider-old.jar" value="${lib}/bcprov-jdk14-132.jar" /> -->
+<!--  <property name="bouncycastle.mail-old.jar" value="${lib}/bcmail-jdk14-132.jar" /> -->
+  
   <!-- Needed by ArcExploder, exporters, jcr repo: -->
   <property name="heritrix.jar" value="${lib}/heritrix-commons-3.1.0-p1.jar" />
   <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.7.jar" />
@@ -366,12 +378,18 @@ Args:
     <pathelement path="${rdf.jar}" />
     <pathelement path="${xstream.jar}" />
     <pathelement path="${pdfbox.jar}" />
-  	<!-- Needed by PDFBox: -->
-  	<pathelement path="${fontbox.jar}" />
-  	<!-- Needed by PDFBox: -->
-  	<pathelement path="${bouncycastle.provider.jar}" />
-  	<!-- Needed by PDFBox: -->
-  	<pathelement path="${bouncycastle.mail.jar}" />
+    <!-- Next 7 needed by PDFBox: -->
+    <pathelement path="${fontbox.jar}" />
+    <pathelement path="${jempbox-old.jar}" />
+    <pathelement path="${bouncycastle-provider.jar}" />
+    <pathelement path="${bouncycastle-mail.jar}" />
+    <pathelement path="${icu4j.jar}" />
+    <pathelement path="${icu4j-charset.jar}" />
+    <pathelement path="${icu4j-localespi.jar}" />
+    <!-- Next 3 needed by PDFBox 0.7.3: -->
+    <pathelement path="${fontbox-old.jar}" />
+<!--    <pathelement path="${bouncycastle.provider-old.jar}" /> -->
+<!--    <pathelement path="${bouncycastle.mail-old.jar}" /> -->
     <!-- jars needed to run the OAI harvester -->
     <pathelement path="${oai-harvester.jar}" />
     <pathelement path="${xalan.jar}" />
