@@ -734,32 +734,103 @@
     comment[years] = 2011-current
     
   }
-  
   {
-  
-    title < 
-      name = Hepato-Gastroenterology ;
-      issn = 0172-6390
-    >
+    title <
+      name = Handchirurgie · Mikrochirurgie · Plastische Chirurgie ;
+      issn = 0722-1819 ;
+      eissn = 1439-3980
+      
     
+    >
+    param[journal_id] = 10.1055/s-00000023
+    comment[years] = 1999-current  
+  
+  
+  
+  }
+  {
+    title <
+      name = Hebamme Die ;
+      issn = 0932-8122 ;
+      eissn = 1439-4197
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000024
+    comment[years] = 2004-current
+  
+  
+  
+  }
+  {
+    title <
+      name = HNO-Informationen ;
+      issn = 0344-9319 ;
+      eissn = 1439-4537
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000130
+    comment[years] = 2005 inclusive
+  
+  
+  
   }
   
   {
-  
-    title < 
+    title <
       name = Homoeopathic Links ;
-      issn = 1019-2050
-    >
+      issn = 1019-2050 ;
+      eissn = 1860-3149
+      
     
-  }
+    >
+    param[journal_id] = 10.1055/s-00000127
+    comment[years] = 2005-current  
   
+  
+  
+  }
+    
   {
   
     title < 
       name = Hormone and Metabolic Research ;
-      issn = 0018-5043
+      issn = 0018-5043 ;
+      eissn = 1439-4286
+      
     >
+    param[journal_id] = 10.1055/s-00000025
+    comment[years] = 1969
     
+  }
+  {
+    title <
+      name = Im OP ;
+      issn = 1611-7905 ;
+      eissn = 1611-7913
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000166
+    comment[years] = 2011-current
+  
+  
+  
+  }
+  {
+    title <
+      name = Informationen aus Orthodontie & Kieferorthopädie ;
+      issn = 0020-0336 ;
+      eissn = 1439-4200
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000026
+    comment[years] =  2000-current
+  
+  
+  
   }
   
   {
