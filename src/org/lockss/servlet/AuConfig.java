@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.71 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.72 2012-07-10 04:36:22 tlipkis Exp $
  */
 
 /*
@@ -696,7 +696,13 @@ public class AuConfig extends LockssServlet {
     try {
       Plugin plugin =
 	pluginMgr.getPlugin(PluginManager.pluginKeyFromId(tc.getPluginName()));
-      au = pluginMgr.createAndSaveAuConfiguration(plugin, tc.getConfig());
+      Configuration auConfig = tc.getConfig();
+      Configuration addConfig = getAdditionalAuConfig();
+      if (!addConfig.isEmpty()) {
+	auConfig = auConfig.copy();
+	auConfig.copyFrom(addConfig);
+      }
+      au = pluginMgr.createAndSaveAuConfiguration(plugin, auConfig);
       statusMsg = "Created Archival Unit:<br>" + encodeText(au.getName());
       displayAddResult();
     } catch (ArchivalUnit.ConfigurationException e) {
@@ -710,6 +716,20 @@ public class AuConfig extends LockssServlet {
     }
   }
       
+  public static final String AU_PARAM_PREFIX = "auparam_";
+
+  private Configuration getAdditionalAuConfig() {
+    Configuration config = ConfigManager.newConfiguration();
+    for (Enumeration en = req.getParameterNames(); en.hasMoreElements(); ) {
+      String name = (String)en.nextElement();
+      if (name.startsWith(AU_PARAM_PREFIX)) {
+	String param = name.substring(AU_PARAM_PREFIX.length());
+	config.put(param, req.getParameter(name));
+      }
+    }
+    return config;
+  }
+
   /** Display result of addByAuid */
   private void displayAddResult() throws IOException {
     Page page = newPage();
