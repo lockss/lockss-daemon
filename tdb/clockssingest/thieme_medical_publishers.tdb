@@ -1008,8 +1008,22 @@
       eissn = 1439-3832
     
     >
-    param[journal_id] = 10.1055/s-002-23374
+    param[journal_id] = 10.1055/s-00000143
     comment[years] = 2007-current
+  
+  
+  
+  }
+  {
+    title <
+      name = Klinikarzt Der ;
+      issn = 0341-2350 ;
+      eissn = 1439-3859
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000030
+    comment[years] = 2003-current
   
   
   
