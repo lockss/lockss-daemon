@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.25 2012-03-14 21:04:55 wkwilson Exp $
+ * $Id: Constants.java,v 1.26 2012-07-10 23:44:29 thib_gc Exp $
  */
 
 /*
@@ -72,18 +72,28 @@ public interface Constants {
   /** The RE string matching the EOL string */
   public static String EOL_RE = StringUtil.escapeNonAlphaNum(EOL);
 
-  /** The default encoding used when none is detected */
-  public static String DEFAULT_ENCODING = "ISO-8859-1";
-
   /**
    * <p>The US ASCII encoding.</p>
    */
-  public static final String US_ASCII_ENCODING = "US-ASCII";
+  public static final String ENCODING_US_ASCII = "US-ASCII";
+  
+  /**
+   * <p>The UTF-8 encoding.</p>
+   */
+  public static final String ENCODING_UTF_8 = "UTF-8";
+  
+  /**
+   * <p>The ISO-8859-1 encoding.</p>
+   */
+  public static final String ENCODING_ISO_8859_1 = "ISO-8859-1";
+  
+  /** The default encoding used when none is detected */
+  public static String DEFAULT_ENCODING = ENCODING_ISO_8859_1;
 
   /**
    * <p>The encoding of URLs.</p>
    */
-  public static final String URL_ENCODING = US_ASCII_ENCODING;
+  public static final String URL_ENCODING = ENCODING_US_ASCII;
 
   /** LOCKSS home page */
   public static String LOCKSS_HOME_URL = "http://www.lockss.org/";
