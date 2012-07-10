@@ -1663,17 +1663,24 @@
   
     title < 
       name = Seminars in Interventional Radiology ;
-      issn = 0739-9529
+      issn = 0739-9529 ;
+      eissn = 1098-8963
+      
     >
-    
+    param[journal_id] = 10.1055/s-00000068
+    comment[years] = 1984-current
   }
   
   {
   
     title < 
       name = Seminars in Liver Disease ;
-      issn = 0272-8087
+      issn = 0272-8087 ;
+      eissn = 1098-8971
+      
     >
+    param[journal_id] = 10.1055/s-00000069
+    comment]years] = 1981-current
     
   }
   
@@ -1682,8 +1689,12 @@
   
     title < 
       name = Seminars in Musculoskeletal Radiology ;
-      issn = 1089-7860
+      issn = 1089-7860 ;
+      eissn = 1098-898X
+      
     >
+    param[journal_id] = 10.1055/s-00000070
+    comment[years] = 1997-current
     
   }
   
@@ -1691,17 +1702,42 @@
   
     title < 
       name = Seminars in Neurology ;
-      issn = 0271-8235
+      issn = 0271-8235 ;
+      eissn = 1098-9021
+      
     >
+    param[journal_id] = 10.1055/s-00000071
+    comment[years] = 1981-current
     
   }
+
+
+  {
+    title <
+      name = Seminars in Neurosurgery ;      
+      issn = 1526-8012 ;
+      eissn = 1526-4572
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000050 
+    comment[years] = 2000-2004
+  
+  
+  
+  }
+
   
   {
   
     title < 
       name = Seminars in Plastic Surgery ;
-      issn = 1535-2188
+      issn = 1535-2188 ;
+      eissn = 1536-0067
+      
     >
+    param[journal_id] = 10.1055/s-00000051
+    comment[years] = 2002-current
     
   }
   
