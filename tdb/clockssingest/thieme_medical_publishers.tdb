@@ -1392,7 +1392,24 @@
     >
     param[journal_id] = 10.1055/s-00000054
     comment[years] = 1968-current
+    comment[0] = includes Pharmacopsychiatria and Pharmakopsychiatrie, Neuropsychopharmakologie 
     
+    
+    
+  }
+  {
+    title <
+      name = Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin ;
+      issn = 0940-6689 ;
+      eissn = 1439-085X
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000056
+    comment[years] = 1991-current
+  
+  
+  
   }
   
   {
