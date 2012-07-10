@@ -1,5 +1,5 @@
 /*
- * $Id: RunKbartReport.java,v 1.2 2012-02-01 21:57:40 easyonthemayo Exp $
+ * $Id: RunKbartReport.java,v 1.3 2012-07-10 16:29:29 easyonthemayo Exp $
  */
 
 /*
@@ -55,9 +55,6 @@ import java.util.*;
  * The iteration over the input should probably be extracted to an external
  * class.
  * <p>
- * The input CSV format must be ...
- *
- * <p>
  * Uses the Apache Commons cli library, which has some quirks:
  * <ul>
  *   <li>By default, it is not possible to display a usage message where the
@@ -103,7 +100,7 @@ public class RunKbartReport {
   private final boolean showTdbStatus;
   private KbartExportFilter.FieldOrdering fieldOrdering;
 
-  private static final String DATA_FORMATS_CONFIG_FILE = "data-formats.xml";
+  //private static final String DATA_FORMATS_CONFIG_FILE = "data-formats.xml";
   /*  data-formats.xml
   org.lockss.exporter.kbart.Data-Format
   format @name
@@ -157,7 +154,6 @@ public class RunKbartReport {
    * The exporter is configured with the basic settings; further configuration
    * may be necessary for custom exports.
    *
-   * @param outputFormat the output format for the exporter
    * @return a usable exporter, or null if one could not be created
    */
   private KbartExporter createExporter() {

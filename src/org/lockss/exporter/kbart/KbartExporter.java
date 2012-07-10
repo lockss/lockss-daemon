@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.21 2012-05-31 16:53:18 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.22 2012-07-10 16:29:29 easyonthemayo Exp $
  */
 
 /*
@@ -382,13 +382,20 @@ public abstract class KbartExporter {
    * apparently means "without the top-level domain". Unfortunately the examples
    * in the given recommendation do not make this clear, and although it does 
    * say that the idea is to provide a clear distinction from data provided by 
-   * others, it does not suggest that the identifier should be unique. For the 
-   * moment I have used the host name without further processing. 
+   * others, it does not suggest that the identifier should be unique. <s>For
+   * the moment I have used the host name without further processing.</s>
+   * <p>
+   * We now just return the name of the provider, which seems better to
+   * represent the intended meaning of this recommendation.
    * 
    * @return an appropriate provider name 
    */
   private String getProviderName() {
-    return getHostName(); 
+    // Remove punctuation
+    /*String providerName = getHostName();
+    providerName = providerName.replaceAll("[-_.,]", "");
+    return providerName;*/
+    return "lockss";
   }
   
   protected String getHostName() {
@@ -427,14 +434,14 @@ public abstract class KbartExporter {
   }
 
   /**
-   * Return the name of the collection; this uses the scope label if a scope is
-   * available.
+   * Return the name of the collection; this uses the scope outputName if a
+   * scope is available.
    * See KBART 5.3.1.3.
    * 
    * @return an appropriate collection name for the (section of) TDB being exported 
    */ 
   private String getCollectionName() {
-    return (scope==null ? "All" : scope.label) + "Titles";
+    return scope==null ? ContentScope.DEFAULT_SCOPE.outputName : scope.outputName;
   }
   
   /**
@@ -537,9 +544,10 @@ public abstract class KbartExporter {
    * creation. 
    */
   public static enum OutputFormat {
-        
+
+    /** The extension of the TSV file must be ".txt" as per KBART 5.3.1.2 */
     TSV("TSV",
-     "text/tab-separated-values", "tsv", 
+     "text/tab-separated-values", "txt",
      true, false, false,
         TSV_NOTE) {
       @Override     

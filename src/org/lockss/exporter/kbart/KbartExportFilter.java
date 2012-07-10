@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExportFilter.java,v 1.10 2012-06-15 16:55:35 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.11 2012-07-10 16:29:29 easyonthemayo Exp $
  */
 
 /*
@@ -320,7 +320,9 @@ public class KbartExportFilter {
    * @return a list of labels for the exported columns of data
    */
   public List<String> getColumnLabels(ContentScope scope) {
-    List<String> l = new ArrayList(this.visibleFieldOrder);
+    List<String> l = new ArrayList<String>() {{
+      for (Field f : visibleFieldOrder) add(f.getLabel());
+    }};
     // Health rating is only added if showHealthRatings is true and the scope
     // is not ALL - neither of these should be true when processing external
     // data.

@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.32 2012-06-13 14:15:12 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.33 2012-07-10 16:29:29 easyonthemayo Exp $
  */
 
 /*
@@ -1056,6 +1056,14 @@ public class KbartConverter {
     // Check if the first vol is greater than last (normalised Roman)
     else if (NumberUtil.isRomanNumber(firstVol) && NumberUtil.isRomanNumber(lastVol)) {
       return NumberUtil.parseRomanNumber(firstVol, true) <= NumberUtil.parseRomanNumber(lastVol, true);
+    }
+    // If the identifiers appear not to differ in format, compare the
+    // normalised strings. Note: alternatively we could try something like
+    // BibliographicOrderScorer.areVolumesIncreasing() which is expensive and
+    // therefore not public.
+    else if (!BibliographicUtil.changeOfFormats(firstVol, lastVol)) {
+      return BibliographicUtil.normaliseIdentifier(firstVol).compareTo(
+          BibliographicUtil.normaliseIdentifier(lastVol)) <= 0;
     }
     // Otherwise compare first and last vol alphabetically
     else {

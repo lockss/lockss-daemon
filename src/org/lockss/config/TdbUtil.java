@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.12 2012-05-31 16:53:18 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.13 2012-07-10 16:29:29 easyonthemayo Exp $
  */
 
 /*
@@ -418,8 +418,9 @@ public class TdbUtil {
    * relevant to TDB-based reports in a running daemon, not external data.
    */
   public static enum ContentScope {
-    /** Everything available according to the TDB files. */
-    ALL ("Available", false),
+    /** Everything available according to the TDB files. This must be called
+     * AllTitles as per KBART 5.3.1.2. */
+    ALL ("Available", "AllTitles", false),
     /** Everything configured for collection. */
     CONFIGURED ("Configured", true),
     /** Everything collected and available in the LOCKSS box. */
@@ -431,8 +432,12 @@ public class TdbUtil {
 
     /** A label for describing the scope in the UI. */
     public String label;
-    
-    /** 
+
+    /** A name to use in describing the scope in the output filename. By default
+     * it is set to the same as the label. */
+    public String outputName;
+
+    /**
      * A flag indicating whether this scope has ArchivalUnits. Only scopes
      * which involve items being configured on the LOCKSS box can provide AUs. 
      * For example, the list of all content is independent of whether anything 
@@ -442,13 +447,25 @@ public class TdbUtil {
      * It is not possible to get from a TdbAu to an ArchivalUnit.
      */
     public boolean areAusAvailable;
-    
+
     /**
-     * Create a scope option 
+     * Create a scope option.
+     * @param label the public label for the scope option
+     */
+    ContentScope(String label, String outputName, boolean hasAus) {
+      this.label = label;
+      this.outputName = outputName;
+      this.areAusAvailable = hasAus;
+    }
+
+    /**
+     * Create a scope option, using the label as the scope's name in the
+     * output filename.
      * @param label the public label for the scope option
      */
     ContentScope(String label, boolean hasAus) {
       this.label = label;
+      this.outputName = label;
       this.areAusAvailable = hasAus;
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.20 2012-06-01 16:10:22 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.21 2012-07-10 16:29:29 easyonthemayo Exp $
  */
 
 /*
@@ -252,9 +252,13 @@ public class HtmlKbartExporter extends KbartExporter {
     }
     return -1;
   }
-  
+
+  /**
+   * The field names should be lower case.
+   * @return
+   */
   private String makeHeader() {
-    return String.format("<tr><th>Index</th><th>%s</th></tr>", 
+    return String.format("<tr><th>index</th><th>%s</th></tr>",
 	StringUtil.separatedString(filter.getColumnLabels(scope), "</th><th>")	
     );
   }
