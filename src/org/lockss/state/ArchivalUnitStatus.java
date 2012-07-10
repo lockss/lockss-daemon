@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.108 2012-06-17 23:08:03 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.109 2012-07-10 04:38:10 tlipkis Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class ArchivalUnitStatus
   public static final String PEERS_REPAIR_TABLE_NAME = "PeerRepair";
   public static final String FILE_VERSIONS_TABLE_NAME = "FileVersions";
   public static final String AU_DEFINITION_TABLE_NAME = "AuConfiguration";
-  public static final String AUS_WITH_URL_TABLE_NAME = "AusWithUtl";
+  public static final String AUS_WITH_URL_TABLE_NAME = "AusWithUrl";
 
 
   private static Logger logger = Logger.getLogger("AuStatus");
