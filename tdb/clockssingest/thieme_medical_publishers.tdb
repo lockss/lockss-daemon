@@ -913,21 +913,36 @@
   {
   
     title < 
-      name = Journal of Neurological Surgery ;
+      name = Journal of Neurological Surgery Part A : Central European Neurosurgery ;
       issn = 2193-6315 ;
       eissn = 2193-6323
     >
     param[journal_id] = 10.500/s.00000180
-    comment[years] = 2012
+    comment[years] = 2012-current
     comment[0] = combines two earlier titles - Central European Surgery and Zentralblatt fur Neurochirurgie
+  }
+  {
+    title <
+      name = Journal of Neurological Surgery Part : Skull Base ;
+      issn = 2193-6315 ;
+      eissn = 2193-634X
+    
+    >
+    param[journal_id] = 10.500/s.00000181
+    comment[years] = 2012-current
+    comment[0] = under the umbrella title Journal of Neurological Surgery which combines several old titles
+  
   }
   
   {
   
     title < 
       name = Journal of Neurological Surgery Reports ;
-      issn = 2193-6358
+      issn = 2193-6358 ;
+      eissn = 2193-6366
     >
+    param[journal_id] = 10.500/s.00000182
+    comment[years] = 2012-current 
     
   }
   
@@ -935,9 +950,41 @@
   
     title < 
       name = Journal of Reconstructive Microsurgery  ;
-      issn = 1662-3282
+      issn = 1662-3282 ;
+      eissn = 1098-8947
+      
     >
+    param[journal_id] = 10.1055/s-00000029
+    comment[years] = 1984-current
     
+  }
+    {
+    title <
+      name = JuKiP - Ihr Fachmagazin für Gesundheits- und Kinderkrankenpflege ;
+      issn = 1439-2569 ;
+      eissn = 1439-9164
+    
+    >
+    param[journal_id] = 10.1055/s-002-23435
+    comment[years] = 2012-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Kardiologie up2date ;
+      issn = 1611-6534 ;
+      eissn = 1860-3513
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000129
+    comment[years] = 2005-current
+  
+  
+  
   }
   
   {
