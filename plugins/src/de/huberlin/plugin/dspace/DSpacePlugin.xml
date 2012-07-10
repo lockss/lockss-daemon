@@ -1,0 +1,73 @@
+<map>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection</key>
+        <displayName>Collection</displayName>
+        <description>Name of ArchiveIt collection</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <string>&quot;%s/lockss.txt&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;DSpace @ %s, Year %d, Collection %s&quot;, base_url_host, year, collection</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sadvanced-search?scope=%s&amp;order=DESC&amp;rpp=10&amp;sort_by=1&amp;conjunction1=AND&amp;etal=0&amp;field1=date&amp;num_search_field=1&amp;query1=%d&quot;, base_url, collection, year</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>DSpace</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>de.huberlin.plugin.dspace.DSpacePlugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sadvanced-search?scope=%s&amp;order=DESC&amp;rpp=10&amp;sort_by=1&amp;conjunction1=AND&amp;etal=0&amp;field1=date&amp;num_search_field=1&amp;query1=%d&quot;, base_url, collection, year</string>
+      <string>1,&quot;%sadvanced-search.*$&quot;, base_url</string>
+      <string>1,&quot;%shandle/[^/]+$&quot;, base_url</string>
+      <string>1,&quot;%sbitstream/handle/[^/]+/.*$&quot;, base_url</string>
+      <string>1,&quot;%sxmlui/bitstream/handle/[^/]+/.*$&quot;, base_url</string>
+    </list>
+  </entry>
+</map>
