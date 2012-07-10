@@ -1324,13 +1324,74 @@
     comment[years] = 2003-current
     
   }
+  {
+    title <
+      name = Osteosynthesis & Trauma Care ;
+      issn = 1618-971X ;
+      eissn = 1618-9728
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000048
+    comment[years] = 2002-2007
+  
+  
+  
+  }
+  {
+    title <
+      name = Osteosynthese International ;
+      issn = 0944-6516 ;
+      eissn = 1439-0868
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000047
+    comment[years] = 2001  
+  
+  
+  
+  }
+  {
+    title <
+      name = Pädiatrie up2date ;
+      issn = 1611-6445 ;
+      eissn = 1862-9393
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000140
+    comment[years] = 2006-current
+  
+  
+  
+  }
+  {
+    title <
+      name = pferde spiegel ;
+      issn = 1860-3203 ;
+      eissn = 1868-0445
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000155
+    comment[years] = 2003-current
+  
+  
+  
+  }
+
   
   {
   
     title < 
       name = Pharmacopsychiatry ;
-      issn = 0176-3679
+      issn = 0176-3679 ;
+      eissn = 1439-0795
+      
     >
+    param[journal_id] = 10.1055/s-00000054
+    comment[years] = 1968-current
     
   }
   
