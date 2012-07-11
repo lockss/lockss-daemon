@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.304 2012-07-10 23:49:01 thib_gc Exp $
+ $Id: build.xml,v 1.305 2012-07-11 00:09:29 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -386,6 +386,7 @@ Args:
     <pathelement path="${icu4j.jar}" />
     <pathelement path="${icu4j-charset.jar}" />
     <pathelement path="${icu4j-localespi.jar}" />
+    <pathelement path="${pdfbox-old.jar}" />
     <!-- Next 3 needed by PDFBox 0.7.3: -->
     <pathelement path="${fontbox-old.jar}" />
 <!--    <pathelement path="${bouncycastle.provider-old.jar}" /> -->
