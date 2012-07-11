@@ -892,13 +892,11 @@
     param[journal_id] = 10.500/s.00000180
     comment[years] = 2012-current
     comment[0] = combines two earlier titles - Central European Surgery and Zentralblatt fur Neurochirurgie
-    comment[0] = Minimally Invasive Neurosurgery was merged with this journal
+    comment[1] = Minimally Invasive Neurosurgery was merged with this journal
       
     
   }
     
-  }
-  
   {
     title <
       name = Journal of Neurological Surgery Part : Skull Base ;
@@ -1680,7 +1678,7 @@
       
     >
     param[journal_id] = 10.1055/s-00000069
-    comment]years] = 1981-current
+    comment[years] = 1981-current
     
   }
   
