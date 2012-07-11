@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.143 2012-05-17 17:58:06 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.144 2012-07-11 18:53:44 tlipkis Exp $
  */
 
 /*
@@ -1149,8 +1149,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   static String makeThreadName(Crawler crawler) {
-    return AuUtil.getThreadNameFor(crawler.getType().toString() + " Crawl",
+    return AuUtil.getThreadNameFor(getThreadNamePrefix(crawler),
 				   crawler.getAu());
+  }
+
+  static String getThreadNamePrefix(Crawler crawler) {
+    return crawler.getType().toString() + " Crawl";
   }
 
   private static int createIndex = 0;
@@ -1275,6 +1279,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	// on fetched URL list
 	callCallback(cb, cookie, crawlSuccessful, cs);
 	if (cs != null) cs.sealCounters();
+	setThreadName(getThreadNamePrefix(crawler) + ": idle");
       }
     }
   }
