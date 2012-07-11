@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.1.2.1 2012-07-11 23:21:37 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.1.2.2 2012-07-11 23:41:14 thib_gc Exp $
  */
 
 /*
@@ -361,7 +361,6 @@ public interface PdfDocument {
    * Note that in PDF parlance, "metadata" is a field you can get and
    * set, just like "author" is a field you can get and set.
    * </p>
-   * @return The non-<code>null</code> document metadata as a string.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -375,8 +374,6 @@ public interface PdfDocument {
    * Note that in PDF parlance, "metadata" is a field you can get and
    * set, just like "author" is a field you can get and set.
    * </p>
-   * @return The non-<code>null</code> document metadata as an XMP
-   *         document.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -426,7 +423,7 @@ public interface PdfDocument {
    * <p>
    * Retrieves the document's trailer dictionary.
    * </p>
-   * @return The trailer dictionary.
+   * @param trailerMapping The trailer dictionary.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    * @see PdfToken
