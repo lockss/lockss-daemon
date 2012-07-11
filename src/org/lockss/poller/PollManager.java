@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.225 2012-07-10 23:37:46 thib_gc Exp $
+ * $Id: PollManager.java,v 1.226 2012-07-11 17:54:44 barry409 Exp $
  */
 
 /*
@@ -651,6 +651,7 @@ public class PollManager
     }
   }
 
+  // Used in PollerStatus.getSummary, which is V1 code.
   /** Find the poll either in current or recent polls */
   PollManagerEntry getCurrentOrRecentV1PollEntry(String key) {
     synchronized (pollMapLock) {
