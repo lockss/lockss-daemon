@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.2 2012-07-11 23:42:23 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.3 2012-07-11 23:53:38 thib_gc Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ import org.w3c.dom.Document;
  * </p>
  * <ul>
  * <li>{@link #close()}</li>
- * <li>{@link #getAdapter()}</li>
+ * <li>{@link #getTokenFactory()}</li>
  * <li>{@link #getTrailer()} / {@link #setTrailer(Map)}</li>
  * <li>{@link #save(OutputStream)}</li>
  * </ul>
@@ -100,16 +100,6 @@ public interface PdfDocument {
    * @since 1.56
    */
   void close() throws PdfException;
-
-  /**
-   * <p>
-   * Returns a PDF adapter associated with this document.
-   * </p>
-   * @return A PDF adapter.
-   * @throws PdfException If PDF processing fails.
-   * @since 1.56
-   */
-  PdfAdapter getAdapter() throws PdfException;
 
   /**
    * <p>
@@ -265,6 +255,16 @@ public interface PdfDocument {
 
   /**
    * <p>
+   * Returns a PDF token factory associated with this document.
+   * </p>
+   * @return A PDF token factory.
+   * @throws PdfException If PDF processing fails.
+   * @since 1.56
+   */
+  PdfTokenFactory getTokenFactory() throws PdfException;
+
+  /**
+   * <p>
    * Retrieves the document's trailer dictionary.
    * </p>
    * @return The trailer dictionary.
@@ -361,7 +361,6 @@ public interface PdfDocument {
    * Note that in PDF parlance, "metadata" is a field you can get and
    * set, just like "author" is a field you can get and set.
    * </p>
-   * @return The non-<code>null</code> document metadata as a string.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -375,8 +374,6 @@ public interface PdfDocument {
    * Note that in PDF parlance, "metadata" is a field you can get and
    * set, just like "author" is a field you can get and set.
    * </p>
-   * @return The non-<code>null</code> document metadata as an XMP
-   *         document.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -426,7 +423,7 @@ public interface PdfDocument {
    * <p>
    * Retrieves the document's trailer dictionary.
    * </p>
-   * @return The trailer dictionary.
+   * @param trailerMapping The trailer dictionary.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    * @see PdfToken

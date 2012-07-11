@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxPage.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfBoxPage.java,v 1.2 2012-07-11 23:53:38 thib_gc Exp $
  */
 
 /*
@@ -95,16 +95,10 @@ public class PdfBoxPage implements PdfPage {
   }
 
   @Override
-  public PdfAdapter getAdapter() throws PdfException {
-    return getDocument().getAdapter();
-  }
-
-  @Override
   public List<InputStream> getAllByteStreams() throws PdfException {
     final List<InputStream> ret = new ArrayList<InputStream>();
     
     PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
-      @Override public void setUp() throws PdfException {}
       @Override public void operatorCallback() throws PdfException {
         String op = operator.getOperator();
         // 'ID' and 'BI'
@@ -129,19 +123,19 @@ public class PdfBoxPage implements PdfPage {
           logger.debug2("getAllByteStreams: invalid input");
         }
       }
+      @Override public void setUp() throws PdfException {}
     };
     
     worker.process(getPageTokenStream());
     return ret;
   }
-  
+
   @Override
   public List<PdfTokenStream> getAllTokenStreams() throws PdfException {
     final List<PdfTokenStream> ret = new ArrayList<PdfTokenStream>();
     ret.add(getPageTokenStream()); // First, add the page stream itself
 
     PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
-      @Override public void setUp() throws PdfException {}
       @Override public void operatorCallback() throws PdfException {
         if (PdfOpcodes.INVOKE_XOBJECT.equals(operator.getOperator())) {
           PdfToken operand = tokens.get(index - 1);
@@ -154,6 +148,7 @@ public class PdfBoxPage implements PdfPage {
           logger.debug2("getAllTokenStreams: invalid input");
         }
       }
+      @Override public void setUp() throws PdfException {}
     };
     
     worker.process(getPageTokenStream());
@@ -187,7 +182,7 @@ public class PdfBoxPage implements PdfPage {
   public PdfDocument getDocument() {
     return pdfBoxDocument;
   }
-
+  
   @Override
   public PdfTokenStream getPageTokenStream() throws PdfException {
     try {
@@ -196,6 +191,11 @@ public class PdfBoxPage implements PdfPage {
     catch (IOException ioe) {
       throw new PdfException("Failed to get the page content stream", ioe);
     }
+  }
+
+  @Override
+  public PdfTokenFactory getTokenFactory() throws PdfException {
+    return getDocument().getTokenFactory();
   }
 
   @Override

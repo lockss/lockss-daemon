@@ -1,5 +1,5 @@
 /*
- * $Id: PdfAdapter.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfTokenFactory.java,v 1.2 2012-07-11 23:53:38 thib_gc Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import java.util.*;
  * @see PdfDocumentFactory
  * @see PdfToken
  */
-public interface PdfAdapter {
+public interface PdfTokenFactory {
 
   /**
    * <p>

@@ -1,5 +1,5 @@
 /*
- * $Id: PdfToken.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfToken.java,v 1.2 2012-07-11 23:53:38 thib_gc Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * This API defines a mapping between high-level PDF tokens (@link
  * PdfToken) and their external representation (Java types). This
  * interface defines characterization and external downcast; upcast
- * is defined in the sister interface {@link PdfAdapter}.
+ * is defined in the sister interface {@link PdfTokenFactory}.
  * </p>
  * <p>
  * The naming used in the methods of this interface reflects the PDF
@@ -124,7 +124,7 @@ import java.util.*;
  * </p>
  * @author Thib Guicherd-Callin
  * @since 1.56
- * @see PdfAdapter
+ * @see PdfTokenFactory
  */
 public interface PdfToken {
 

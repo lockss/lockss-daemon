@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxDocument.java,v 1.2 2012-07-11 23:42:23 thib_gc Exp $
+ * $Id: PdfBoxDocument.java,v 1.3 2012-07-11 23:53:38 thib_gc Exp $
  */
 
 /*
@@ -126,11 +126,6 @@ public class PdfBoxDocument implements PdfDocument {
   }
 
   @Override
-  public PdfAdapter getAdapter() {
-    return PdfBoxTokens.getAdapterInstance();
-  }
-
-  @Override
   public String getAuthor() {
     return pdDocument.getDocumentInformation().getAuthor();
   }
@@ -222,6 +217,11 @@ public class PdfBoxDocument implements PdfDocument {
   @Override
   public String getTitle() {
     return pdDocument.getDocumentInformation().getTitle();
+  }
+
+  @Override
+  public PdfTokenFactory getTokenFactory() {
+    return PdfBoxTokens.getAdapterInstance();
   }
   
   @Override

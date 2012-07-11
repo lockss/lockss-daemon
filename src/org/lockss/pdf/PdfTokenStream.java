@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTokenStream.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfTokenStream.java,v 1.2 2012-07-11 23:53:38 thib_gc Exp $
  */
 
 /*
@@ -47,22 +47,22 @@ public interface PdfTokenStream {
 
   /**
    * <p>
-   * Returns a PDF adapter associated with this PDF token stream.
-   * </p>
-   * @return A PDF adapter.
-   * @throws PdfException If PDF processing fails.
-   * @since 1.56
-   */
-  PdfAdapter getAdapter() throws PdfException;
-
-  /**
-   * <p>
    * Returns the PDF page associated with this PDF token stream.
    * </p>
    * @return The parent PDF page.
    * @since 1.56
    */
   PdfPage getPage();
+
+  /**
+   * <p>
+   * Returns a PDF token factory associated with this PDF token stream.
+   * </p>
+   * @return A PDF token factory.
+   * @throws PdfException If PDF processing fails.
+   * @since 1.56
+   */
+  PdfTokenFactory getTokenFactory() throws PdfException;
   
   /**
    * <p>

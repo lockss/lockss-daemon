@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocumentFactory.java,v 1.2 2012-07-11 23:42:23 thib_gc Exp $
+ * $Id: PdfDocumentFactory.java,v 1.3 2012-07-11 23:53:38 thib_gc Exp $
  */
 
 /*
