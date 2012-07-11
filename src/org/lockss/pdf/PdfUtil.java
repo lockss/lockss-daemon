@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.2 2012-07-11 23:03:09 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.3 2012-07-11 23:38:33 thib_gc Exp $
  */
 
 /*
@@ -185,7 +185,23 @@ public class PdfUtil {
 
   /**
    * <p>
-   * Unravels all the token streams of the given PDF page.
+   * Normalizes all token stream of each page of the given PDF document.
+   * </p>
+   * @param pdfDocument A PDF document.
+   * @throws PdfException If PDF processing fails.
+   * @since 1.56
+   * @see #normalizeTokenStream(PdfTokenStream)
+   */
+  public static void normalizeAllTokenStreams(PdfDocument pdfDocument)
+      throws PdfException {
+    for (PdfPage pdfPage : pdfDocument.getPages()) {
+      normalizeAllTokenStreams(pdfPage);
+    }
+  }
+  
+  /**
+   * <p>
+   * Normalizes all the token streams of the given PDF page.
    * </p>
    * @param pdfPage A PDF page.
    * @throws PdfException If PDF processing fails.
@@ -201,7 +217,7 @@ public class PdfUtil {
   
   /**
    * <p>
-   * Unravels the page token stream of the given PDF page.
+   * Normalizes the page token stream of the given PDF page.
    * </p>
    * @param pdfPage A PDF page.
    * @throws PdfException If PDF processing fails.
@@ -215,7 +231,7 @@ public class PdfUtil {
   
   /**
    * <p>
-   * Unravels the page stream of each page of the given PDF document.
+   * Normalizes the page stream of each page of the given PDF document.
    * </p>
    * @param pdfDocument A PDF document.
    * @throws PdfException If PDF processing fails.
@@ -225,7 +241,7 @@ public class PdfUtil {
   public static void normalizePageTokenStreams(PdfDocument pdfDocument)
       throws PdfException {
     for (PdfPage pdfPage : pdfDocument.getPages()) {
-      normalizeTokenStream(pdfPage.getPageTokenStream());
+      normalizePageTokenStream(pdfPage);
     }
   }
   
@@ -278,7 +294,7 @@ public class PdfUtil {
    */
   public static void safeClose(PdfDocument pdfDocument) {
     try {
-      if (pdfDocument == null) {
+      if (pdfDocument != null) {
         pdfDocument.close();
       }
     }
@@ -312,24 +328,6 @@ public class PdfUtil {
     pdfDocument.setTrailer(trailerMapping);
   }
 
-  /**
-   * <p>
-   * Unravels all the token streams of each page of the given PDF
-   * document.
-   * </p>
-   * @param pdfDocument A PDF document.
-   * @throws PdfException If PDF processing fails.
-   * @since 1.56
-   * @see #normalizeTokenStream(PdfTokenStream)
-   * @see #normalizeAllTokenStreams(PdfPage)
-   */
-  public static void unravelAllTokenStreams(PdfDocument pdfDocument)
-      throws PdfException {
-    for (PdfPage pdfPage : pdfDocument.getPages()) {
-      normalizeAllTokenStreams(pdfPage);
-    }
-  }
-  
   /**
    * <p>
    * This class cannot be instantiated.
