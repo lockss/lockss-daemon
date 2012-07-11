@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.37 2012-07-09 18:53:40 barry409 Exp $
+ * $Id: V3PollFactory.java,v 1.38 2012-07-11 22:49:58 barry409 Exp $
  */
 
 /*
@@ -296,18 +296,10 @@ public class V3PollFactory extends BasePollFactory {
       return null;
     }
 
-    V3Voter voter = null;
     // Check to see if we're running too many polls already.
-
-    int maxVoters =
-      CurrentConfig.getIntParam(V3Voter.PARAM_MAX_SIMULTANEOUS_V3_VOTERS,
-                                V3Voter.DEFAULT_MAX_SIMULTANEOUS_V3_VOTERS);
-    int activeVoters = daemon.getPollManager().getActiveV3Voters().size();
-
-    if (activeVoters >= maxVoters) {
+    if (daemon.getPollManager().tooManyV3Voters()) {
       log.info("Not starting new V3 Voter for poll on AU " 
-               + au.getAuId() + ".  Maximum number of active voters is " 
-               + maxVoters + "; " + activeVoters + " are already running.");
+               + au.getAuId() + ".");
       sendNak(daemon, PollNak.NAK_TOO_MANY_VOTERS, pollspec.getAuId(), m);
       return null;
     }
@@ -325,7 +317,7 @@ public class V3PollFactory extends BasePollFactory {
     }
 
     log.debug("Creating V3Voter to participate in poll " + m.getKey());
-    voter = new V3Voter(daemon, m);
+    V3Voter voter = new V3Voter(daemon, m);
     //        voter.startPoll(); // Voters need to be started immediately.
     
     // Update the status of the peer that called this poll.

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.226 2012-07-11 17:54:44 barry409 Exp $
+ * $Id: PollManager.java,v 1.227 2012-07-11 22:49:58 barry409 Exp $
  */
 
 /*
@@ -1744,8 +1744,7 @@ public class PollManager
     return polls;
   }
   
-  // size() used in V3PollFactory to signal too many voters.
-  public Collection getActiveV3Voters() {
+  private Collection getActiveV3Voters() {
     Collection polls = new ArrayList();
     synchronized (pollMapLock) {
       for (PollManagerEntry pme : thePolls.values()) {
@@ -1755,6 +1754,25 @@ public class PollManager
       }
     }
     return polls;
+  }
+
+  /**
+   * Check the current policy to see if a request for a new V3Voter
+   * should be rejected due to too many V3Voters already present.
+   * @return true iff the number of active V3Voters is already at or
+   * above the limit.
+   */
+  public boolean tooManyV3Voters() {
+    int maxVoters =
+      CurrentConfig.getIntParam(V3Voter.PARAM_MAX_SIMULTANEOUS_V3_VOTERS,
+                                V3Voter.DEFAULT_MAX_SIMULTANEOUS_V3_VOTERS);
+    int activeVoters = getActiveV3Voters().size();
+    if (activeVoters >= maxVoters) {
+      theLog.info("Maximum number of active voters is " 
+	       + maxVoters + "; " + activeVoters + " are already running.");
+      return true;
+    }
+    return false;
   }
   
   private Collection getRecentV3Voters() {
