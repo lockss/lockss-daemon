@@ -1,5 +1,5 @@
 /*
- * $Id: MassachesettsMedicalSocietyNewPdfFilterFactory.java,v 1.1 2012-07-11 00:04:39 thib_gc Exp $
+ * $Id: MassachesettsMedicalSocietyNewPdfFilterFactory.java,v 1.1.2.1 2012-07-11 23:37:10 thib_gc Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class MassachesettsMedicalSocietyNewPdfFilterFactory extends SavingPdfFil
     pdfDocument.unsetCreationDate();
     pdfDocument.unsetModificationDate();
     PdfUtil.normalizeTrailerId(pdfDocument);
-    PdfUtil.unravelAllTokenStreams(pdfDocument);
+    PdfUtil.normalizeAllTokenStreams(pdfDocument);
   }
   
 }
