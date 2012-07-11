@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourceNewPdfFilterFactory.java,v 1.1 2012-07-11 00:04:39 thib_gc Exp $
+ * $Id: AnthroSourceNewPdfFilterFactory.java,v 1.1.2.1 2012-07-11 23:10:09 thib_gc Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ public class AnthroSourceNewPdfFilterFactory extends SavingPdfFilterFactory {
                         PdfDocument pdfDocument)
       throws PdfException {
     PdfUtil.normalizeTrailerId(pdfDocument);
-    PdfUtil.unravelPageTokenStreams(pdfDocument);
+    PdfUtil.normalizePageTokenStreams(pdfDocument);
   }
 
 }
