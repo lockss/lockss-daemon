@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisNewPdfFilterFactory.java,v 1.1 2012-07-11 00:04:39 thib_gc Exp $
+ * $Id: TaylorAndFrancisNewPdfFilterFactory.java,v 1.2 2012-07-11 23:08:31 thib_gc Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class TaylorAndFrancisNewPdfFilterFactory extends SavingPdfFilterFactory 
     pdfDocument.unsetCreationDate();
     pdfDocument.unsetModificationDate();
     PdfUtil.normalizeTrailerId(pdfDocument);
-    PdfUtil.unravelPageTokenStreams(pdfDocument);
+    PdfUtil.normalizePageTokenStreams(pdfDocument);
   }
   
 }
