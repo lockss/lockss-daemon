@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.2 2012-07-11 23:42:23 thib_gc Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ import org.w3c.dom.Document;
  * {@link #unsetSubject()}</li>
  * <li>{@link #getTitle()} / {@link #setTitle(String)} /
  * {@link #unsetTitle()}</li>
- * <li>{@link #getXmpMetadata()} / {@link #setXmpMetadata(Document)}</li>
+ * <li>{@link #getMetadataAsXmp()} / {@link #setMetadataFromXmp(Document)}</li>
  * </ul>
  * <p>
  * <b>Hierarchical</b>
@@ -165,11 +165,30 @@ public interface PdfDocument {
    * <p>
    * Retrieves the document metadata as a standalone string.
    * </p>
+   * <p>
+   * Note that in PDF parlance, "metadata" is a field you can get and
+   * set, just like "author" is a field you can get and set.
+   * </p>
    * @return The metadata as a string, or <code>null</code> if unset.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
   String getMetadata() throws PdfException;
+
+  /**
+   * <p>
+   * Retrieves the document metadata as an XMP document.
+   * </p>
+   * <p>
+   * Note that in PDF parlance, "metadata" is a field you can get and
+   * set, just like "author" is a field you can get and set.
+   * </p>
+   * @return The metadata as an XMP document, or <code>null</code> if
+   *         unset.
+   * @throws PdfException If PDF processing fails.
+   * @since 1.56
+   */
+  Document getMetadataAsXmp() throws PdfException;
 
   /**
    * <p>
@@ -257,19 +276,12 @@ public interface PdfDocument {
 
   /**
    * <p>
-   * Retrieves the document metadata as an XMP document.
-   * </p>
-   * @return The metadata as an XMP document, or <code>null</code> if
-   *         unset.
-   * @throws PdfException If PDF processing fails.
-   * @since 1.56
-   */
-  Document getXmpMetadata() throws PdfException;
-
-  /**
-   * <p>
    * Removes the page at the given zero-based index from this
    * document.
+   * </p>
+   * <p>
+   * This affects the result of {@link #getNumberOfPages()},
+   * {@link #getPage(int)} and {@link #getPages()}.
    * </p>
    * @param index The page's index in the range from <code>0</code>
    *          inclusive to {@link #getNumberOfPages()} exclusive.
@@ -345,11 +357,30 @@ public interface PdfDocument {
    * <p>
    * Sets the document metadata as a standalone string.
    * </p>
+   * <p>
+   * Note that in PDF parlance, "metadata" is a field you can get and
+   * set, just like "author" is a field you can get and set.
+   * </p>
    * @return The non-<code>null</code> document metadata as a string.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
   void setMetadata(String metadata) throws PdfException;
+
+  /**
+   * <p>
+   * Sets the document metadata as an XMP document.
+   * </p>
+   * <p>
+   * Note that in PDF parlance, "metadata" is a field you can get and
+   * set, just like "author" is a field you can get and set.
+   * </p>
+   * @return The non-<code>null</code> document metadata as an XMP
+   *         document.
+   * @throws PdfException If PDF processing fails.
+   * @since 1.56
+   */
+  void setMetadataFromXmp(Document xmpDocument) throws PdfException;
 
   /**
    * <p>
@@ -401,17 +432,6 @@ public interface PdfDocument {
    * @see PdfToken
    */
   void setTrailer(Map<String, PdfToken> trailerMapping) throws PdfException;
-
-  /**
-   * <p>
-   * Sets the document metadata as an XMP document.
-   * </p>
-   * @return The non-<code>null</code> document metadata as an XMP
-   *         document.
-   * @throws PdfException If PDF processing fails.
-   * @since 1.56
-   */
-  void setXmpMetadata(Document xmpDocument) throws PdfException;
 
   /**
    * <p>

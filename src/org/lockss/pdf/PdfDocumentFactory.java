@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocumentFactory.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfDocumentFactory.java,v 1.2 2012-07-11 23:42:23 thib_gc Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import java.io.*;
  * Provides access to a PDF implementation.
  * </p>
  * <p>
- * The PDF API acts as a façade; the result of intermingling objects
+ * The PDF API acts as a facade; the result of intermingling objects
  * from multiple PDF implementations is undefined and will likely not
  * work at all.
  * </p>
@@ -55,12 +55,15 @@ public interface PdfDocumentFactory {
    * </p>
    * <p>
    * The input stream is not closed by this call. It is the caller's
-   * responsibility to close the input stream.
+   * responsibility to close the input stream. However, when this call
+   * returns, it is safe to close the input stream even if the
+   * document has not been closed (see {@link PdfDocument #close()}).
    * </p>
    * <p>
    * It is possible that the returned document is not fully parsed due
    * to lazy parsing, caching, and other implementation-dependent
-   * details that may require access to be triggered.
+   * details, so full parsing of parts of the document may not be
+   * triggered until these parts are accessed.
    * </p>
    * <p>
    * If parsing fails and an exception is thrown, the state of the

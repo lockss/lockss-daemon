@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxDocument.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfBoxDocument.java,v 1.2 2012-07-11 23:42:23 thib_gc Exp $
  */
 
 /*
@@ -171,6 +171,16 @@ public class PdfBoxDocument implements PdfDocument {
   }
 
   @Override
+  public Document getMetadataAsXmp() throws PdfException {
+    try {
+      return pdDocument.getDocumentCatalog().getMetadata().exportXMPMetadata().getXMPDocument();
+    }
+    catch (IOException ioe) {
+      throw new PdfException("Error parsing XMP data", ioe);
+    }
+  }
+
+  @Override
   public Calendar getModificationDate() throws PdfException {
     try {
       return pdDocument.getDocumentInformation().getModificationDate();
@@ -213,7 +223,7 @@ public class PdfBoxDocument implements PdfDocument {
   public String getTitle() {
     return pdDocument.getDocumentInformation().getTitle();
   }
-
+  
   @Override
   public Map<String, PdfToken> getTrailer() {
     COSDictionary trailer = pdDocument.getDocument().getTrailer();
@@ -221,16 +231,6 @@ public class PdfBoxDocument implements PdfDocument {
       trailer = new COSDictionary();
     }
     return PdfBoxTokens.getDictionary(trailer);
-  }
-  
-  @Override
-  public Document getXmpMetadata() throws PdfException {
-    try {
-      return pdDocument.getDocumentCatalog().getMetadata().exportXMPMetadata().getXMPDocument();
-    }
-    catch (IOException ioe) {
-      throw new PdfException("Error parsing XMP data", ioe);
-    }
   }
 
   @Override
@@ -301,6 +301,19 @@ public class PdfBoxDocument implements PdfDocument {
   }
 
   @Override
+  public void setMetadataFromXmp(Document xmpDocument) throws PdfException {
+    try {
+      pdDocument.getDocumentCatalog().getMetadata().importXMPMetadata(new XMPMetadata(xmpDocument));
+    }
+    catch (IOException ioe) {
+      throw new PdfException("Error converting XMP document to metadata", ioe);
+    }
+    catch (TransformerException te) {
+      throw new PdfException("Error converting XMP document to metadata", te);
+    }
+  }
+
+  @Override
   public void setModificationDate(Calendar date) {
     pdDocument.getDocumentInformation().setModificationDate(date);
   }
@@ -323,19 +336,6 @@ public class PdfBoxDocument implements PdfDocument {
   @Override
   public void setTrailer(Map<String, PdfToken> trailerMapping) {
     pdDocument.getDocument().setTrailer(PdfBoxTokens.asCOSDictionary(trailerMapping));
-  }
-
-  @Override
-  public void setXmpMetadata(Document xmpDocument) throws PdfException {
-    try {
-      pdDocument.getDocumentCatalog().getMetadata().importXMPMetadata(new XMPMetadata(xmpDocument));
-    }
-    catch (IOException ioe) {
-      throw new PdfException("Error converting XMP document to metadata", ioe);
-    }
-    catch (TransformerException te) {
-      throw new PdfException("Error converting XMP document to metadata", te);
-    }
   }
 
   @Override
