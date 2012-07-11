@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxTokenStream.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfBoxTokenStream.java,v 1.1.2.1 2012-07-11 23:46:21 thib_gc Exp $
  */
 
 /*
@@ -82,13 +82,13 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
   }
   
   @Override
-  public PdfAdapter getAdapter() throws PdfException {
-    return getPage().getDocument().getAdapter();
+  public PdfPage getPage() {
+    return pdfBoxPage;
   }
   
   @Override
-  public PdfPage getPage() {
-    return pdfBoxPage;
+  public PdfTokenFactory getTokenFactory() throws PdfException {
+    return getPage().getDocument().getTokenFactory();
   }
 
   @Override

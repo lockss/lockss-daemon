@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.1.2.2 2012-07-11 23:37:10 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.1.2.3 2012-07-11 23:46:21 thib_gc Exp $
  */
 
 /*
@@ -318,7 +318,7 @@ public class PdfUtil {
                                   String id0,
                                   String id1)
       throws PdfException {
-    PdfAdapter pdfAdapter = pdfDocument.getAdapter();
+    PdfTokenFactory pdfAdapter = pdfDocument.getTokenFactory();
     Map<String, PdfToken> trailerMapping = pdfDocument.getTrailer();
     trailerMapping.remove(NAME_ID);
     List<PdfToken> idArray = new ArrayList<PdfToken>(2);

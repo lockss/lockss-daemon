@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxTokens.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfBoxTokens.java,v 1.1.2.1 2012-07-11 23:46:21 thib_gc Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.util.Logger;
  * between high-level PDF tokens ({@link PdfToken}), their external
  * representation (Java types) and their internal representation
  * (PDFBox 1.6.0 objects). It provides {@link PdfToken} and
- * {@link PdfAdapter} implementations based on PDFBox 1.6.0.
+ * {@link PdfTokenFactory} implementations based on PDFBox 1.6.0.
  * </p>
  * <table>
  * <thead>
@@ -161,12 +161,12 @@ public class PdfBoxTokens {
 
   /**
    * <p>
-   * An implementation of {@link PdfAdapter} based on PDFBox 1.6.0.
+   * An implementation of {@link PdfTokenFactory} based on PDFBox 1.6.0.
    * </p>
    * @author Thib Guicherd-Callin
    * @since 1.56
    */
-  private static class Adapter implements PdfAdapter {
+  private static class Adapter implements PdfTokenFactory {
 
     @Override
     public PdfToken makeArray() {
@@ -424,7 +424,7 @@ public class PdfBoxTokens {
    * </p>
    * @since 1.56
    */
-  private static final PdfAdapter adapterInstance = new Adapter();
+  private static final PdfTokenFactory adapterInstance = new Adapter();
   
   /**
    * <p>
@@ -571,7 +571,7 @@ public class PdfBoxTokens {
    * @return A PDF adapter.
    * @since 1.56
    */
-  public static PdfAdapter getAdapterInstance() {
+  public static PdfTokenFactory getAdapterInstance() {
     return adapterInstance;
   }
   

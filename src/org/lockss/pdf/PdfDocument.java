@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.1.2.2 2012-07-11 23:41:14 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.1.2.3 2012-07-11 23:46:21 thib_gc Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ import org.w3c.dom.Document;
  * </p>
  * <ul>
  * <li>{@link #close()}</li>
- * <li>{@link #getAdapter()}</li>
+ * <li>{@link #getTokenFactory()}</li>
  * <li>{@link #getTrailer()} / {@link #setTrailer(Map)}</li>
  * <li>{@link #save(OutputStream)}</li>
  * </ul>
@@ -100,16 +100,6 @@ public interface PdfDocument {
    * @since 1.56
    */
   void close() throws PdfException;
-
-  /**
-   * <p>
-   * Returns a PDF adapter associated with this document.
-   * </p>
-   * @return A PDF adapter.
-   * @throws PdfException If PDF processing fails.
-   * @since 1.56
-   */
-  PdfAdapter getAdapter() throws PdfException;
 
   /**
    * <p>
@@ -262,6 +252,16 @@ public interface PdfDocument {
    * @since 1.56
    */
   String getTitle() throws PdfException;
+
+  /**
+   * <p>
+   * Returns a PDF token factory associated with this document.
+   * </p>
+   * @return A PDF token factory.
+   * @throws PdfException If PDF processing fails.
+   * @since 1.56
+   */
+  PdfTokenFactory getTokenFactory() throws PdfException;
 
   /**
    * <p>
