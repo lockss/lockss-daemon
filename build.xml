@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.305 2012-07-11 00:09:29 thib_gc Exp $
+ $Id: build.xml,v 1.306 2012-07-11 00:12:35 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -379,8 +379,8 @@ Args:
     <pathelement path="${xstream.jar}" />
     <pathelement path="${pdfbox.jar}" />
     <!-- Next 7 needed by PDFBox: -->
-    <pathelement path="${fontbox.jar}" />
-    <pathelement path="${jempbox-old.jar}" />
+    <pathelement path="${fontbox-old.jar}" />
+    <pathelement path="${jempbox.jar}" />
     <pathelement path="${bouncycastle-provider.jar}" />
     <pathelement path="${bouncycastle-mail.jar}" />
     <pathelement path="${icu4j.jar}" />
