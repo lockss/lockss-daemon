@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.227 2012-07-10 16:14:44 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.228 2012-07-11 18:53:55 tlipkis Exp $
  */
 
 /*
@@ -240,7 +240,8 @@ public class PluginManager
   private Map<String,Plugin> pluginMap =
     Collections.synchronizedMap(new HashMap());
   // maps auid to AU
-  private Map auMap = Collections.synchronizedMap(new HashMap());
+  private Map<String,ArchivalUnit> auMap =
+    Collections.synchronizedMap(new HashMap());
   // A set of all aus sorted by title.  The UI relies on this behavior.
   private Set<ArchivalUnit> auSet = new TreeSet<ArchivalUnit>(auComparator);
   private List<ArchivalUnit> auList = null;
@@ -890,6 +891,8 @@ public class PluginManager
       auMap.remove(auid);
       auSet.remove(au);
       auList = null;
+
+      checkAuSetConsistency();
     }
     delHostAus(au);
 
@@ -1040,8 +1043,38 @@ public class PluginManager
       auMap.put(au.getAuId(), au);
       auSet.add(au);
       auList = null;
+
+      checkAuSetConsistency();
     }
     addHostAus(au);
+  }
+
+  private void checkAuSetConsistency() {
+    if (auMap.size() != auSet.size()) {
+      log.critical("auSet.size() = " + auSet.size() +
+		   ", auMap.size() = " + auMap.size());
+      for (ArchivalUnit setAu : auSet) {
+	ArchivalUnit mapAu = auMap.get(setAu.getAuId());
+	if (mapAu == null) {
+	  log.critical("AU in auSet missing from auMap: " + setAu.getName());
+	} else if (mapAu != setAu) {
+	  log.critical("AU in auSet differs from auMap: " + setAu.getName());
+	  log.critical("AU is " + (auSet.contains(mapAu) ? "" : "not ") +
+		       "in auSet");
+	}
+      }
+      for (Map.Entry<String,ArchivalUnit> ent : auMap.entrySet()) {
+	ArchivalUnit mapAu = ent.getValue();
+	if (!auSet.contains(mapAu)) {
+	  log.critical("AU in auMap not in auSet: " + mapAu.getName());
+	}
+      }
+      log.critical("Rebuilding auSet");
+      auSet.clear();
+      auSet.addAll(auMap.values());
+      log.critical("Rebuilt auSet.size() = " + auSet.size());
+      auList = null;
+    }
   }
 
   public ArchivalUnit getAuFromId(String auId) {
