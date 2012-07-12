@@ -1,5 +1,5 @@
 /*
- * $Id: SavingPdfFilterFactory.java,v 1.1 2012-07-11 00:00:59 thib_gc Exp $
+ * $Id: SavingPdfFilterFactory.java,v 1.2 2012-07-12 03:58:46 thib_gc Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 
 public abstract class SavingPdfFilterFactory
-    implements FilterFactory, Transform<PdfDocument> {
+    implements FilterFactory, PdfTransform<PdfDocument> {
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
