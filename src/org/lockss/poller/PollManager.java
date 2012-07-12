@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.228 2012-07-12 22:34:52 barry409 Exp $
+ * $Id: PollManager.java,v 1.229 2012-07-12 23:50:40 barry409 Exp $
  */
 
 /*
@@ -318,17 +318,11 @@ public class PollManager
 
   static class PollReq {
     ArchivalUnit au;
-    AuState aus = null;
     int priority = 0;
     PollSpec spec;
 
     public PollReq(ArchivalUnit au) {
-      this(au, AuUtil.getAuState(au));
-    }
-
-    PollReq(ArchivalUnit au, AuState aus) {
       this.au = au;
-      this.aus = aus;
     }
 
     public PollReq setPriority(int val) {
@@ -343,10 +337,6 @@ public class PollManager
 
     public ArchivalUnit getAu() {
       return au;
-    }
-
-    public AuState getAuState() {
-      return aus;
     }
 
     public int getPriority() {
@@ -2340,10 +2330,10 @@ public class PollManager
 	      // already added above.
 	      continue;
 	    }
-	    AuState auState = AuUtil.getAuState(au);
 	    if (req == null) {
-	      req = new PollReq(au, auState);
+	      req = new PollReq(au);
 	    }
+	    AuState auState = AuUtil.getAuState(au);
 	    if (isEligibleForPoll(req, auState)) {
 	      if (req.getPriority() > 0) {
 		pollQueue.add(req);
