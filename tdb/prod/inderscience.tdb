@@ -2902,7 +2902,7 @@
       
       au < ready ; 2004 ; International Journal of Foresight and Innovation Policy Volume 1 ; 1 >
       au < ready ; 2005-2006 ; International Journal of Foresight and Innovation Policy Volume 2 ; 2 >
-      au < testing ; 2007 ; International Journal of Foresight and Innovation Policy Volume 3 ; 3 >
+      au < ready ; 2007 ; International Journal of Foresight and Innovation Policy Volume 3 ; 3 >
       au < ready ; 2008 ; International Journal of Foresight and Innovation Policy Volume 4 ; 4 >
       au < ready ; 2009 ; International Journal of Foresight and Innovation Policy Volume 5 ; 5 >
       au < testing ; 2010 ; International Journal of Foresight and Innovation Policy Volume 6 ; 6 >
@@ -2978,16 +2978,16 @@
 
       param[journal_issn] = 1741-5136
       
-      au < manifest ; 2001 ; International Journal of Global Environmental Issues Volume 1 ; 1 >
-      au < manifest ; 2002 ; International Journal of Global Environmental Issues Volume 2 ; 2 >
-      au < manifest ; 2003 ; International Journal of Global Environmental Issues Volume 3 ; 3 >
-      au < manifest ; 2004 ; International Journal of Global Environmental Issues Volume 4 ; 4 >
-      au < manifest ; 2005 ; International Journal of Global Environmental Issues Volume 5 ; 5 >
-      au < manifest ; 2006 ; International Journal of Global Environmental Issues Volume 6 ; 6 >
-      au < manifest ; 2007 ; International Journal of Global Environmental Issues Volume 7 ; 7 >
-      au < manifest ; 2008 ; International Journal of Global Environmental Issues Volume 8 ; 8 >
-      au < manifest ; 2009 ; International Journal of Global Environmental Issues Volume 9 ; 9 >
-      au < manifest ; 2010 ; International Journal of Global Environmental Issues Volume 10 ; 10 >
+      au < testing ; 2001 ; International Journal of Global Environmental Issues Volume 1 ; 1 >
+      au < testing ; 2002 ; International Journal of Global Environmental Issues Volume 2 ; 2 >
+      au < testing ; 2003 ; International Journal of Global Environmental Issues Volume 3 ; 3 >
+      au < testing ; 2004 ; International Journal of Global Environmental Issues Volume 4 ; 4 >
+      au < testing ; 2005 ; International Journal of Global Environmental Issues Volume 5 ; 5 >
+      au < testing ; 2006 ; International Journal of Global Environmental Issues Volume 6 ; 6 >
+      au < testing ; 2007 ; International Journal of Global Environmental Issues Volume 7 ; 7 >
+      au < testing ; 2008 ; International Journal of Global Environmental Issues Volume 8 ; 8 >
+      au < testing ; 2009 ; International Journal of Global Environmental Issues Volume 9 ; 9 >
+      au < testing ; 2010 ; International Journal of Global Environmental Issues Volume 10 ; 10 >
       au < ready ; 2011 ; International Journal of Global Environmental Issues Volume 11 ; 11 >
 
     }
@@ -3003,8 +3003,8 @@
 
       param[journal_issn] = 1758-2091
       
-      au < manifest ; 2009 ; International Journal of Global Warming Volume 1 ; 1 >
-      au < manifest ; 2010 ; International Journal of Global Warming Volume 2 ; 2 >
+      au < testing ; 2009 ; International Journal of Global Warming Volume 1 ; 1 >
+      au < testing ; 2010 ; International Journal of Global Warming Volume 2 ; 2 >
       au < ready ; 2011 ; International Journal of Global Warming Volume 3 ; 3 >
 
     }
@@ -3020,9 +3020,9 @@
 
       param[journal_issn] = 1479-3067
       
-      au < manifest ; 2004-2006 ; International Journal of Globalisation and Small Business Volume 1 ; 1 >
-      au < manifest ; 2007-2008 ; International Journal of Globalisation and Small Business Volume 2 ; 2 >
-      au < manifest ; 2009 ; International Journal of Globalisation and Small Business Volume 3 ; 3 >
+      au < testing ; 2004-2006 ; International Journal of Globalisation and Small Business Volume 1 ; 1 >
+      au < testing ; 2007-2008 ; International Journal of Globalisation and Small Business Volume 2 ; 2 >
+      au < testing ; 2009 ; International Journal of Globalisation and Small Business Volume 3 ; 3 >
       au < ready ; 2010-2011 ; International Journal of Globalisation and Small Business Volume 4 ; 4 >
 
     }
@@ -3038,7 +3038,7 @@
 
       param[journal_issn] = 1757-2711
       
-      au < manifest ; 2009-2010 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 1 ; 1 >
+      au < testing ; 2009-2010 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 1 ; 1 >
       au < ready ; 2011 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 2 ; 2 >
 
     }
@@ -3054,10 +3054,10 @@
 
       param[journal_issn] = 1744-9936
       
-      au < manifest ; 2006-2007 ; International Journal of Green Economics Volume 1 ; 1 >
-      au < manifest ; 2008 ; International Journal of Green Economics Volume 2 ; 2 >
-      au < manifest ; 2009 ; International Journal of Green Economics Volume 3 ; 3 >
-      au < manifest ; 2010 ; International Journal of Green Economics Volume 4 ; 4 >
+      au < testing ; 2006-2007 ; International Journal of Green Economics Volume 1 ; 1 >
+      au < testing ; 2008 ; International Journal of Green Economics Volume 2 ; 2 >
+      au < testing ; 2009 ; International Journal of Green Economics Volume 3 ; 3 >
+      au < testing ; 2010 ; International Journal of Green Economics Volume 4 ; 4 >
       au < ready ; 2011 ; International Journal of Green Economics Volume 5 ; 5 >
 
     }
