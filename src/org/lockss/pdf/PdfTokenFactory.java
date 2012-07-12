@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTokenFactory.java,v 1.1.2.1 2012-07-11 23:46:21 thib_gc Exp $
+ * $Id: PdfTokenFactory.java,v 1.1.2.2 2012-07-12 03:30:04 thib_gc Exp $
  */
 
 /*
@@ -61,7 +61,8 @@ public interface PdfTokenFactory {
    * <p>
    * Creates a PDF array from the given list of PDF tokens.
    * </p>
-   * @param arrayElements A list of PDF tokens.
+   * @param arrayElements A non-<code>null</code> list of PDF tokens
+   *          (possibly empty).
    * @return A PDF token.
    * @since 1.56
    */
@@ -91,7 +92,8 @@ public interface PdfTokenFactory {
    * Creates a PDF array from the given map from strings (PDF names)
    * to PDF tokens.
    * </p>
-   * @param mapping A map from strings to PDF tokens.
+   * @param mapping A non-<code>null</code> map from strings to PDF
+   *          tokens (possibly empty).
    * @return A PDF token.
    * @since 1.56
    */
@@ -121,7 +123,7 @@ public interface PdfTokenFactory {
    * <p>
    * Creates a PDF name from the given value.
    * </p>
-   * @param value A string value.
+   * @param value A non-<code>null</code> string value.
    * @return A PDF token.
    * @since 1.56
    */
@@ -129,7 +131,7 @@ public interface PdfTokenFactory {
   
   /**
    * <p>
-   * Convenience method to obtain the PDF null object.
+   * Convenience method to obtain a PDF null object.
    * </p>
    * @return The PDF null object.
    * @since 1.56
@@ -140,7 +142,7 @@ public interface PdfTokenFactory {
    * <p>
    * Creates a PDF operator from the given value.
    * </p>
-   * @param value A string value.
+   * @param value A non-<code>null</code> string value.
    * @return A PDF token.
    * @since 1.56
    */
@@ -150,7 +152,7 @@ public interface PdfTokenFactory {
    * <p>
    * Creates a PDF string from the given value.
    * </p>
-   * @param value A string value.
+   * @param value A non-<code>null</code> string value.
    * @return A PDF token.
    * @since 1.56
    */

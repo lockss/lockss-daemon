@@ -1,5 +1,5 @@
 /*
- * $Id: PdfToken.java,v 1.1.2.1 2012-07-11 23:46:21 thib_gc Exp $
+ * $Id: PdfToken.java,v 1.1.2.2 2012-07-12 03:30:04 thib_gc Exp $
  */
 
 /*
@@ -39,8 +39,8 @@ import java.util.*;
  * Abstraction for a PDF token (PDF data type).
  * </p>
  * <p>
- * This API defines a mapping between high-level PDF tokens (@link
- * PdfToken) and their external representation (Java types). This
+ * This API defines a mapping between high-level PDF tokens ({@link
+ * PdfToken}) and their external representation (Java types). This
  * interface defines characterization and external downcast; upcast
  * is defined in the sister interface {@link PdfTokenFactory}.
  * </p>
@@ -48,8 +48,8 @@ import java.util.*;
  * The naming used in the methods of this interface reflects the PDF
  * type being represented, even if it seemingly clashes in name with
  * the Java type it is represented by (e.g. {@link #getInteger()}
- * returns a <code>long</code>, because PDF integers are values that
- * do not fit into a Java <code>int</code>).
+ * returns a <code>long</code>, because not all PDF integers can
+ * fit into a Java <code>int</code>).
  * </p>
  * <table>
  * <thead>
@@ -86,7 +86,7 @@ import java.util.*;
  * <td>{@link #getFloat()}</td>
  * </tr>
  * <tr>
- * <td>PDF int</td>
+ * <td>PDF integer</td>
  * <td><code>long</code></td>
  * <td>{@link #isInteger()}</td>
  * <td>{@link #getInteger()}</td>
@@ -264,8 +264,8 @@ public interface PdfToken {
   
   /**
    * <p>
-   * Determines if this token is the PDF null object.
-   * @return <code>true</code> if and only if this token is the PDF
+   * Determines if this token is a PDF null object.
+   * @return <code>true</code> if and only if this token is a PDF
    *         null object.
    * @since 1.56
    */

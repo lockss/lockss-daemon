@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTokenStream.java,v 1.1.2.1 2012-07-11 23:46:21 thib_gc Exp $
+ * $Id: PdfTokenStream.java,v 1.1.2.2 2012-07-12 03:30:04 thib_gc Exp $
  */
 
 /*
@@ -69,7 +69,11 @@ public interface PdfTokenStream {
    * Returns the sequence of PDF tokens contained in this PDF token
    * stream.
    * </p>
-   * @return A list of PDF tokens.
+   * <p>
+   * Note that changing the resulting list does not change the tokens
+   * of the stream; only a call to {@link #setTokens(List)} does.
+   * </p>
+   * @return A list of PDF tokens (possibly empty).
    * @throws PdfException If PDF processing fails.
    */
   List<PdfToken> getTokens() throws PdfException;
