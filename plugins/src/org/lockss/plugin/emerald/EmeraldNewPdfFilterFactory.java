@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldNewPdfFilterFactory.java,v 1.1 2012-07-11 00:04:39 thib_gc Exp $
+ * $Id: EmeraldNewPdfFilterFactory.java,v 1.2 2012-07-12 03:32:12 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ public class EmeraldNewPdfFilterFactory extends SavingPdfFilterFactory {
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
       throws PdfException {
-    PdfUtil.unravelAllTokenStreams(pdfDocument);
+    PdfUtil.normalizeAllTokenStreams(pdfDocument);
   }
   
 }
