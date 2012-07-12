@@ -1,5 +1,5 @@
 /*
- * $Id: TriggeredHighWirePermissionCheckerFactory.java,v 1.1 2012-05-14 20:58:36 akanshab01 Exp $
+ * $Id: TriggeredHighWirePermissionCheckerFactory.java,v 1.2 2012-07-12 21:50:45 pgust Exp $
  */
 
 /*
@@ -37,6 +37,20 @@ import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
+/**
+ * This class implements a permission checker that is called only after 
+ * the permission statement is verified to exist. This permssion checker 
+ * always returns <code>true</code>. 
+ * <p>
+ * It replaces the standard {@link HighwirePermissionChecker} in the parent
+ * HighWirePlugin that requires a probe to appear on the combined HighWire 
+ * permission/manifest page and verifies that the URL it indicates can be 
+ * accessed. The permission statement for the triggered content is not on the
+ * manifest page with the probe link, so the probe link check must be disabled.
+ *  
+ * @author phil
+ *
+ */
 public class TriggeredHighWirePermissionCheckerFactory implements
     PermissionCheckerFactory {
 
