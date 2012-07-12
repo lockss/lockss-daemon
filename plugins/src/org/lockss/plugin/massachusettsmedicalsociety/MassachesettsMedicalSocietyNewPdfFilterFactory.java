@@ -1,5 +1,5 @@
 /*
- * $Id: MassachesettsMedicalSocietyNewPdfFilterFactory.java,v 1.2 2012-07-12 03:32:12 tlipkis Exp $
+ * $Id: MassachesettsMedicalSocietyNewPdfFilterFactory.java,v 1.3 2012-07-12 04:59:43 thib_gc Exp $
  */
 
 /*
@@ -32,11 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.massachusettsmedicalsociety;
 
-import org.lockss.filter.pdf.SavingPdfFilterFactory;
+import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 
-public class MassachesettsMedicalSocietyNewPdfFilterFactory extends SavingPdfFilterFactory {
+public class MassachesettsMedicalSocietyNewPdfFilterFactory extends SimplePdfFilterFactory {
 
   @Override
   public void transform(ArchivalUnit au,

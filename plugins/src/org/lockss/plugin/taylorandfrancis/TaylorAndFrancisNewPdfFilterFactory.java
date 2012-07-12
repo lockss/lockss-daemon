@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisNewPdfFilterFactory.java,v 1.2 2012-07-11 23:08:31 thib_gc Exp $
+ * $Id: TaylorAndFrancisNewPdfFilterFactory.java,v 1.3 2012-07-12 04:59:43 thib_gc Exp $
  */
 
 /*
@@ -32,11 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.taylorandfrancis;
 
-import org.lockss.filter.pdf.SavingPdfFilterFactory;
+import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 
-public class TaylorAndFrancisNewPdfFilterFactory extends SavingPdfFilterFactory {
+public class TaylorAndFrancisNewPdfFilterFactory extends SimplePdfFilterFactory {
 
   @Override
   public void transform(ArchivalUnit au,
