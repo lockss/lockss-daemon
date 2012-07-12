@@ -1,5 +1,5 @@
 /*
- * $Id: Transform.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfTransform.java,v 1.2.2.2 2012-07-12 03:55:02 thib_gc Exp $
  */
 
 /*
@@ -35,10 +35,10 @@ package org.lockss.filter.pdf;
 import org.lockss.pdf.PdfException;
 import org.lockss.plugin.ArchivalUnit;
 
-public interface Transform<A> {
+public interface PdfTransform<P> {
 
   void transform(ArchivalUnit au,
-                 A anObject)
+                 P anObject)
       throws PdfException;
   
 }
