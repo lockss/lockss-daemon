@@ -1,5 +1,5 @@
 /*
- * $Id: CoverageNotesFormat.java,v 1.4 2012-07-12 17:23:21 easyonthemayo Exp $
+ * $Id: CoverageNotesFormat.java,v 1.5 2012-07-12 17:41:45 easyonthemayo Exp $
  */
 
 /*
@@ -142,6 +142,9 @@ public enum CoverageNotesFormat {
   /** An optional character limit for the coverage notes format. Default 1024. */
   public int charLimit;
   private static final int DEFAULT_CHAR_LIMIT = 1024;
+  /** The max number of years allowable between ranges such that they are
+   * combined when peforming a reduction on the ranges. */
+  public static final int DEFAULT_RANGE_REDUCTION_THRESHOLD = 2;
   /** A description of the coverage notes format, for display to user. */
   public final String label;
   /** String used to separate ranges; comma space by default. */
@@ -338,7 +341,6 @@ public enum CoverageNotesFormat {
    * @return
    */
   public List<KbartTitle> restrictRanges(List<KbartTitle> titles) {
-    final int MAX_GAP = 1;
     List<KbartTitle> newList = new ArrayList<KbartTitle>();
     int currentEndDate = 0;
     KbartTitle rangeTitle = null;
@@ -356,7 +358,7 @@ public enum CoverageNotesFormat {
       int eDate = BibliographicUtil.stringYearAsInt(kbt.getFieldValue(DATE_LAST_ISSUE_ONLINE));
       // If either date is invalid or the difference is greater than the
       // threshold, add the title and start a new one.
-      if (currentEndDate==0 || sDate==0 || sDate - currentEndDate > MAX_GAP) {
+      if (currentEndDate==0 || sDate==0 || sDate - currentEndDate > DEFAULT_RANGE_REDUCTION_THRESHOLD) {
         newList.add(rangeTitle);
         rangeTitle = kbt;
       } // Otherwise set the end date

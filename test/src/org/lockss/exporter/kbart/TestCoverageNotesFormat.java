@@ -90,23 +90,24 @@ public class TestCoverageNotesFormat extends LockssTestCase {
     allTitles = Arrays.asList(title1, title2, title1novol, title2novol, titleNoRng);
 
     // Set up titles for restrictRanges test
+    int gap = CoverageNotesFormat.DEFAULT_RANGE_REDUCTION_THRESHOLD;
     trng1a = new KbartTitle()
         .setField(Field.PUBLICATION_TITLE, "My Journal Title")
         .setField(Field.DATE_FIRST_ISSUE_ONLINE, "1991")
         .setField(Field.DATE_LAST_ISSUE_ONLINE, "1999");
     trng1b = new KbartTitle(trng1a)
-        .setField(Field.DATE_FIRST_ISSUE_ONLINE, "2001")
+        .setField(Field.DATE_FIRST_ISSUE_ONLINE, ""+(1999+gap))
         .setField(Field.DATE_LAST_ISSUE_ONLINE, "2003");
     trng2a = new KbartTitle(trng1a)
-        .setField(Field.DATE_FIRST_ISSUE_ONLINE, "2006")
-        .setField(Field.DATE_LAST_ISSUE_ONLINE, "2006");
+        .setField(Field.DATE_FIRST_ISSUE_ONLINE, ""+(2003+gap+1))
+        .setField(Field.DATE_LAST_ISSUE_ONLINE, "2007");
     trng2b = new KbartTitle(trng2a)
-        .setField(Field.DATE_FIRST_ISSUE_ONLINE, "2007")
-        .setField(Field.DATE_LAST_ISSUE_ONLINE, "2008");
+        .setField(Field.DATE_FIRST_ISSUE_ONLINE, ""+(2007+gap-1))
+        .setField(Field.DATE_LAST_ISSUE_ONLINE, "2012");
     // Not close enough
     trng3 = new KbartTitle(trng2a)
-        .setField(Field.DATE_FIRST_ISSUE_ONLINE, "2011")
-        .setField(Field.DATE_LAST_ISSUE_ONLINE, "2015");
+        .setField(Field.DATE_FIRST_ISSUE_ONLINE, ""+(2012+gap+3))
+        .setField(Field.DATE_LAST_ISSUE_ONLINE, "2030");
     // No date data
     trng4 = new KbartTitle(trng2a)
         .setField(Field.DATE_FIRST_ISSUE_ONLINE, "")
@@ -121,8 +122,8 @@ public class TestCoverageNotesFormat extends LockssTestCase {
             .setField(Field.DATE_LAST_ISSUE_ONLINE, "2003"),
         new KbartTitle()
             .setField(Field.PUBLICATION_TITLE, "My Journal Title")
-            .setField(Field.DATE_FIRST_ISSUE_ONLINE, "2006")
-            .setField(Field.DATE_LAST_ISSUE_ONLINE, "2008"),
+            .setField(Field.DATE_FIRST_ISSUE_ONLINE, ""+(2003+gap+1))
+            .setField(Field.DATE_LAST_ISSUE_ONLINE, "2030"),
         trng3,
         trng4
     );
