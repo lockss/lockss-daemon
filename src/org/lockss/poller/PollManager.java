@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.227 2012-07-11 22:49:58 barry409 Exp $
+ * $Id: PollManager.java,v 1.228 2012-07-12 22:34:52 barry409 Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class PollManager
     org.lockss.poller.v3.V3PollFactory.PARAM_ENABLE_V3_VOTER;
   public static final boolean DEFAULT_ENABLE_V3_VOTER =
     org.lockss.poller.v3.V3PollFactory.DEFAULT_ENABLE_V3_VOTER;
-  
+
   /** The classes of AUs for which polls should be run.  May be a singleton
    * or list of:
    * <dl>
@@ -316,7 +316,7 @@ public class PollManager
   Map<ArchivalUnit,PollReq> highPriorityPollRequests =
     Collections.synchronizedMap(new ListOrderedMap());
 
-  public static class PollReq {
+  static class PollReq {
     ArchivalUnit au;
     AuState aus = null;
     int priority = 0;
@@ -2275,15 +2275,26 @@ public class PollManager
     return autoPollAuClassess;
   }
 
-  public List<PollReq> getPendingQueue() {
+  public List<ArchivalUnit> getPendingQueueAus() {
     rebuildPollQueueIfNeeded();
+    ArrayList<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
     synchronized (queueLock) {
-      return new ArrayList(pollQueue);
+      for (PollReq req : pollQueue) {
+	aus.add(req.getAu());
+      }
     }
+    return aus;
   }
 
-  public void enqueuePoll(PollReq req) throws IllegalStateException {
-    theLog.debug2("enqueuePoll(" + req + ")");
+  public void enqueueHighPriorityPoll(ArchivalUnit au, PollSpec spec) {
+    PollReq req = new PollManager.PollReq(au)
+      .setPollSpec(spec)
+      .setPriority(2);
+    enqueueHighPriorityPoll(req);
+  }
+
+  private void enqueueHighPriorityPoll(PollReq req) {
+    theLog.debug2("enqueueHighPriorityPoll(" + req + ")");
     if (isEligibleForPoll(req)) {
       highPriorityPollRequests.put(req.au, req);
       needRebuildPollQueue();
@@ -2386,6 +2397,11 @@ public class PollManager
     } catch (NotEligibleException e) {
       return false;
     }
+  }
+
+  public void checkEligibleForPoll(ArchivalUnit au)
+      throws NotEligibleException {
+    checkEligibleForPoll(new PollReq(au));
   }
 
   public void checkEligibleForPoll(PollReq req)

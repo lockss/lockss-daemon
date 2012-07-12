@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.41 2012-07-02 16:21:01 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.42 2012-07-12 22:34:53 barry409 Exp $
  */
 
 /*
@@ -223,12 +223,12 @@ public class V3PollStatus {
                                     ColumnDescriptor.TYPE_TIME_INTERVAL,
 				    val));
       }
-//       List<PollManager.PollReq> queue = pollManager.getPendingQueue();
+//       List<ArchivalUnit> queue = pollManager.getPendingQueueAus();
 //       if (!queue.isEmpty()) {
 //         summary.add(new SummaryInfo("Queued",
 //                                     ColumnDescriptor.TYPE_INT,
 //                                     queue.size()));
-// 	ArchivalUnit au = queue.get(0).getAu();
+// 	ArchivalUnit au = queue.get(0);
 //         summary.add(new SummaryInfo("Next",
 //                                     ColumnDescriptor.TYPE_STRING,
 // 				    au.getName()));
@@ -260,10 +260,9 @@ public class V3PollStatus {
           rows.add(makeRow(poller));
         }
       }
-      List<PollManager.PollReq> queue = pollManager.getPendingQueue();
       int rowNum = 0;
-      for (PollManager.PollReq req : pollManager.getPendingQueue()) {
-	rows.add(makePendingRow(req, rowNum++));
+      for (ArchivalUnit au : pollManager.getPendingQueueAus()) {
+	rows.add(makePendingRow(au, rowNum++));
 
       }
 
@@ -304,9 +303,8 @@ public class V3PollStatus {
       return row;
     }
 
-    private Map makePendingRow(PollManager.PollReq req, int rowNum) {
+    private Map makePendingRow(ArchivalUnit au, int rowNum) {
       Map row = new HashMap();
-      ArchivalUnit au = req.getAu();
       row.put("auId", makeAuRef(au, ArchivalUnitStatus.AU_STATUS_TABLE_NAME));
       row.put("status", "Pending");
       row.put(SORT_KEY1, SORT_BASE_PENDING);

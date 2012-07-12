@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.25 2012-07-09 07:53:09 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.26 2012-07-12 22:34:53 barry409 Exp $
  */
 
 /*
@@ -342,7 +342,7 @@ public class DebugPanel extends LockssServlet {
       NodeManager nodeMgr = daemon.getNodeManager(au);
       // Don't call a poll on this if we're already running a V3 poll on it.
       try {
-	pollManager.checkEligibleForPoll(new PollManager.PollReq(au));
+	pollManager.checkEligibleForPoll(au);
       } catch (PollManager.NotEligibleException e) {
 	errMsg = "Ineligible: " + e.getMessage() +
 	  "<br>Click again to force new poll.";
@@ -376,11 +376,8 @@ public class DebugPanel extends LockssServlet {
   private void callV3ContentPoll(ArchivalUnit au) {
     log.debug("Enqueuing a V3 Content Poll on " + au.getName());
     PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
-    PollManager.PollReq req = new PollManager.PollReq(au)
-      .setPollSpec(spec)
-      .setPriority(2);
     try {
-      pollManager.enqueuePoll(req);
+      pollManager.enqueueHighPriorityPoll(au, spec);
       statusMsg = "Enqueued V3 poll for " + au.getName();
     } catch (IllegalStateException e) {
       errMsg = "Failed to enqueue poll on "
