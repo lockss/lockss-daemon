@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPage.java,v 1.2 2012-07-11 23:53:38 thib_gc Exp $
+ * $Id: PdfPage.java,v 1.3 2012-07-12 03:57:05 thib_gc Exp $
  */
 
 /*
@@ -121,8 +121,9 @@ public interface PdfPage {
    * position of the page token stream within the returned list is
    * undefined.
    * </p>
-   * @return A list of {@link PdfTokenStream} instances.
-   * @throws PdfException If PDF processing fails.s
+   * @return A list of {@link PdfTokenStream} instances (possibly
+   *         empty).
+   * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
   List<PdfTokenStream> getAllTokenStreams() throws PdfException;
@@ -133,6 +134,11 @@ public interface PdfPage {
    * dictionaries. In other words, for every element <code>a</code> in
    * the returned list, <code>a.isDictionary()</code> is <b>true</b>.
    * The order of the returned list is undefined.
+   * </p>
+   * <p>
+   * Note that changing the resulting list does not change the
+   * annotations of the page; only a call to
+   * {@link #setAnnotations(List)} does.
    * </p>
    * @return A list of PDF dictionaries, one for each annotation.
    * @throws PdfException
@@ -154,7 +160,7 @@ public interface PdfPage {
    * <p>
    * Returns the designated page token stream.
    * </p>
-   * @return The page token stream.
+   * @return The page token stream (possibly empty).
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -166,7 +172,9 @@ public interface PdfPage {
    * In other words, it must be the case that for each element
    * <code>a</code> in the argument, <code>a.isDictionary()</code> is
    * <b>true</b>. These dictionaries must also obey other properties
-   * to make them valid per the PDF specification.
+   * to make them valid per the PDF specification. If invalid or
+   * malformed annotations are passed to the page, the behavior is
+   * undefined.
    * </p>
    * @param annotations A list of PDF annotations (PDF dictionaries).
    * @throws PdfException If PDF processing fails.
