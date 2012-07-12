@@ -1,5 +1,5 @@
 /*
- * $Id: SavingPdfFilterFactory.java,v 1.1.2.1 2012-07-12 03:55:02 thib_gc Exp $
+ * $Id: SimplePdfFilterFactory.java,v 1.1.2.1 2012-07-12 04:58:53 thib_gc Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 
-public abstract class SavingPdfFilterFactory
+public abstract class SimplePdfFilterFactory
     implements FilterFactory, PdfTransform<PdfDocument> {
 
   @Override

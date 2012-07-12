@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneAtyponNewPdfFilterFactory.java,v 1.1 2012-07-11 00:04:39 thib_gc Exp $
+ * $Id: BioOneAtyponNewPdfFilterFactory.java,v 1.1.2.1 2012-07-12 04:58:53 thib_gc Exp $
  */
 
 /*
@@ -32,12 +32,12 @@
 
 package org.lockss.plugin.bioone;
 
-import org.lockss.filter.pdf.SavingPdfFilterFactory;
+import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 
 
-public class BioOneAtyponNewPdfFilterFactory extends SavingPdfFilterFactory {
+public class BioOneAtyponNewPdfFilterFactory extends SimplePdfFilterFactory {
 
   @Override
   public void transform(ArchivalUnit au,

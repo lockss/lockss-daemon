@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldNewPdfFilterFactory.java,v 1.1.2.1 2012-07-11 23:37:10 thib_gc Exp $
+ * $Id: EmeraldNewPdfFilterFactory.java,v 1.1.2.2 2012-07-12 04:58:53 thib_gc Exp $
  */
 
 /*
@@ -32,11 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.emerald;
 
-import org.lockss.filter.pdf.SavingPdfFilterFactory;
+import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 
-public class EmeraldNewPdfFilterFactory extends SavingPdfFilterFactory {
+public class EmeraldNewPdfFilterFactory extends SimplePdfFilterFactory {
 
   @Override
   public void transform(ArchivalUnit au,

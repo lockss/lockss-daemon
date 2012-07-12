@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourceNewPdfFilterFactory.java,v 1.1.2.1 2012-07-11 23:10:09 thib_gc Exp $
+ * $Id: AnthroSourceNewPdfFilterFactory.java,v 1.1.2.2 2012-07-12 04:58:53 thib_gc Exp $
  */
 
 /*
@@ -32,11 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.anthrosource;
 
-import org.lockss.filter.pdf.SavingPdfFilterFactory;
+import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 
-public class AnthroSourceNewPdfFilterFactory extends SavingPdfFilterFactory {
+public class AnthroSourceNewPdfFilterFactory extends SimplePdfFilterFactory {
 
   @Override
   public void transform(ArchivalUnit au,
