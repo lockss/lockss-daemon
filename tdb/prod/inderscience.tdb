@@ -2747,16 +2747,16 @@
 
       param[journal_issn] = 1742-8297
       
-      au < testing ; 2004 ; International Journal of Exergy Volume 1 ; 1 >
-      au < testing ; 2005 ; International Journal of Exergy Volume 2 ; 2 >
-      au < testing ; 2006 ; International Journal of Exergy Volume 3 ; 3 >
-      au < testing ; 2007 ; International Journal of Exergy Volume 4 ; 4 >
+      au < ready ; 2004 ; International Journal of Exergy Volume 1 ; 1 >
+      au < ready ; 2005 ; International Journal of Exergy Volume 2 ; 2 >
+      au < ready ; 2006 ; International Journal of Exergy Volume 3 ; 3 >
+      au < ready ; 2007 ; International Journal of Exergy Volume 4 ; 4 >
       au < testing ; 2008 ; International Journal of Exergy Volume 5 ; 5 >
-      au < testing ; 2009 ; International Journal of Exergy Volume 6 ; 6 >
-      au < testing ; 2010 ; International Journal of Exergy Volume 7 ; 7 >
+      au < ready ; 2009 ; International Journal of Exergy Volume 6 ; 6 >
+      au < ready ; 2010 ; International Journal of Exergy Volume 7 ; 7 >
       au < ready ; 2011 ; International Journal of Exergy Volume 8 ; 8 >
       au < ready ; 2011 ; International Journal of Exergy Volume 9 ; 9 >
-      au < testing ; 2012 ; International Journal of Exergy Volume 10 ; 10 >
+      au < ready ; 2012 ; International Journal of Exergy Volume 10 ; 10 >
 
     }
 
@@ -2771,7 +2771,7 @@
 
       param[journal_issn] = 1755-8743
       
-      au < testing ; 2009-2011 ; International Journal of Experimental and Computational Biomechanics Volume 1 ; 1 >
+      au < ready ; 2009-2011 ; International Journal of Experimental and Computational Biomechanics Volume 1 ; 1 >
 
     }
 
@@ -2786,7 +2786,7 @@
 
       param[journal_issn] = 2040-2260
       
-      au < testing ; 2009-2010 ; International Journal of Experimental Design and Process Optimisation Volume 1 ; 1 >
+      au < ready ; 2009-2010 ; International Journal of Experimental Design and Process Optimisation Volume 1 ; 1 >
       au < ready ; 2011 ; International Journal of Experimental Design and Process Optimisation Volume 2 ; 2 >
       au < testing ; 2012 ; International Journal of Experimental Design and Process Optimisation Volume 3 ; 3 >
 
@@ -2814,7 +2814,7 @@
 
       param[journal_issn] = 1756-7149
       
-      au < testing ; 2009-2010 ; International Journal of Financial Markets and Derivatives Volume 1 ; 1 >
+      au < ready ; 2009-2010 ; International Journal of Financial Markets and Derivatives Volume 1 ; 1 >
       au < ready ; 2011 ; International Journal of Financial Markets and Derivatives Volume 2 ; 2 >
 
     }
@@ -2830,10 +2830,10 @@
 
       param[journal_issn] = 1741-8062
       
-      au < testing ; 2005-2006 ; International Journal of Financial Services Management Volume 1 ; 1 >
-      au < testing ; 2007 ; International Journal of Financial Services Management Volume 2 ; 2 >
-      au < testing ; 2008 ; International Journal of Financial Services Management Volume 3 ; 3 >
-      au < testing ; 2009-2010 ; International Journal of Financial Services Management Volume 4 ; 4 >
+      au < ready ; 2005-2006 ; International Journal of Financial Services Management Volume 1 ; 1 >
+      au < ready ; 2007 ; International Journal of Financial Services Management Volume 2 ; 2 >
+      au < ready ; 2008 ; International Journal of Financial Services Management Volume 3 ; 3 >
+      au < ready ; 2009-2010 ; International Journal of Financial Services Management Volume 4 ; 4 >
       au < ready ; 2011 ; International Journal of Financial Services Management Volume 5 ; 5 >
 
     }
@@ -2849,9 +2849,9 @@
 
       param[journal_issn] = 1479-392X
       
-      au < testing ; 2008 ; International Journal of Food Safety, Nutrition and Public Health Volume 1 ; 1 >
-      au < testing ; 2009 ; International Journal of Food Safety, Nutrition and Public Health Volume 2 ; 2 >
-      au < testing ; 2010 ; International Journal of Food Safety, Nutrition and Public Health Volume 3 ; 3 >
+      au < ready ; 2008 ; International Journal of Food Safety, Nutrition and Public Health Volume 1 ; 1 >
+      au < ready ; 2009 ; International Journal of Food Safety, Nutrition and Public Health Volume 2 ; 2 >
+      au < ready ; 2010 ; International Journal of Food Safety, Nutrition and Public Health Volume 3 ; 3 >
       au < ready ; 2011 ; International Journal of Food Safety, Nutrition and Public Health Volume 4 ; 4 >
 
     }
@@ -2900,14 +2900,14 @@
 
       param[journal_issn] = 1740-2824
       
-      au < testing ; 2004 ; International Journal of Foresight and Innovation Policy Volume 1 ; 1 >
-      au < testing ; 2005-2006 ; International Journal of Foresight and Innovation Policy Volume 2 ; 2 >
+      au < ready ; 2004 ; International Journal of Foresight and Innovation Policy Volume 1 ; 1 >
+      au < ready ; 2005-2006 ; International Journal of Foresight and Innovation Policy Volume 2 ; 2 >
       au < testing ; 2007 ; International Journal of Foresight and Innovation Policy Volume 3 ; 3 >
-      au < testing ; 2008 ; International Journal of Foresight and Innovation Policy Volume 4 ; 4 >
-      au < testing ; 2009 ; International Journal of Foresight and Innovation Policy Volume 5 ; 5 >
+      au < ready ; 2008 ; International Journal of Foresight and Innovation Policy Volume 4 ; 4 >
+      au < ready ; 2009 ; International Journal of Foresight and Innovation Policy Volume 5 ; 5 >
       au < testing ; 2010 ; International Journal of Foresight and Innovation Policy Volume 6 ; 6 >
       au < ready ; 2011 ; International Journal of Foresight and Innovation Policy Volume 7 ; 7 >
-      au < testing ; 2012 ; International Journal of Foresight and Innovation Policy Volume 8 ; 8 >
+      au < ready ; 2012 ; International Journal of Foresight and Innovation Policy Volume 8 ; 8 >
 
     }
 
@@ -2922,9 +2922,9 @@
 
       param[journal_issn] = 1756-2112
       
-      au < testing ; 2008 ; International Journal of Functional Informatics and Personalised Medicine Volume 1 ; 1 >
-      au < testing ; 2009 ; International Journal of Functional Informatics and Personalised Medicine Volume 2 ; 2 >
-      au < testing ; 2010 ; International Journal of Functional Informatics and Personalised Medicine Volume 3 ; 3 >
+      au < ready ; 2008 ; International Journal of Functional Informatics and Personalised Medicine Volume 1 ; 1 >
+      au < ready ; 2009 ; International Journal of Functional Informatics and Personalised Medicine Volume 2 ; 2 >
+      au < ready ; 2010 ; International Journal of Functional Informatics and Personalised Medicine Volume 3 ; 3 >
 
     }
 
@@ -2945,24 +2945,24 @@
       au < manifest ; 2000 ; International Journal of Global Energy Issues Volume 14 ; 14 >
       au < exists ; 2001 ; International Journal of Global Energy Issues Volume 15 ; 15 >
       au < exists ; 2002 ; International Journal of Global Energy Issues Volume 16 ; 16 >
-      au < testing ; 2002 ; International Journal of Global Energy Issues Volume 17 ; 17 >
-      au < testing ; 2002 ; International Journal of Global Energy Issues Volume 18 ; 18 >
-      au < testing ; 2003 ; International Journal of Global Energy Issues Volume 19 ; 19 >
-      au < testing ; 2003 ; International Journal of Global Energy Issues Volume 20 ; 20 >
-      au < testing ; 2004 ; International Journal of Global Energy Issues Volume 21 ; 21 >
-      au < testing ; 2004 ; International Journal of Global Energy Issues Volume 22 ; 22 >
-      au < testing ; 2005 ; International Journal of Global Energy Issues Volume 23 ; 23 >
-      au < testing ; 2005 ; International Journal of Global Energy Issues Volume 24 ; 24 >
-      au < testing ; 2006 ; International Journal of Global Energy Issues Volume 25 ; 25 >
-      au < testing ; 2006 ; International Journal of Global Energy Issues Volume 26 ; 26 >
+      au < ready ; 2002 ; International Journal of Global Energy Issues Volume 17 ; 17 >
+      au < ready ; 2002 ; International Journal of Global Energy Issues Volume 18 ; 18 >
+      au < ready ; 2003 ; International Journal of Global Energy Issues Volume 19 ; 19 >
+      au < ready ; 2003 ; International Journal of Global Energy Issues Volume 20 ; 20 >
+      au < ready ; 2004 ; International Journal of Global Energy Issues Volume 21 ; 21 >
+      au < ready ; 2004 ; International Journal of Global Energy Issues Volume 22 ; 22 >
+      au < ready ; 2005 ; International Journal of Global Energy Issues Volume 23 ; 23 >
+      au < ready ; 2005 ; International Journal of Global Energy Issues Volume 24 ; 24 >
+      au < ready ; 2006 ; International Journal of Global Energy Issues Volume 25 ; 25 >
+      au < ready ; 2006 ; International Journal of Global Energy Issues Volume 26 ; 26 >
       au < testing ; 2007 ; International Journal of Global Energy Issues Volume 27 ; 27 >
-      au < testing ; 2007 ; International Journal of Global Energy Issues Volume 28 ; 28 >
-      au < testing ; 2008 ; International Journal of Global Energy Issues Volume 29 ; 29 >
-      au < testing ; 2008 ; International Journal of Global Energy Issues Volume 30 ; 30 >
+      au < ready ; 2007 ; International Journal of Global Energy Issues Volume 28 ; 28 >
+      au < ready ; 2008 ; International Journal of Global Energy Issues Volume 29 ; 29 >
+      au < ready ; 2008 ; International Journal of Global Energy Issues Volume 30 ; 30 >
       au < testing ; 2009 ; International Journal of Global Energy Issues Volume 31 ; 31 >
-      au < testing ; 2009 ; International Journal of Global Energy Issues Volume 32 ; 32 >
-      au < testing ; 2010 ; International Journal of Global Energy Issues Volume 33 ; 33 >
-      au < testing ; 2010 ; International Journal of Global Energy Issues Volume 34 ; 34 >
+      au < ready ; 2009 ; International Journal of Global Energy Issues Volume 32 ; 32 >
+      au < ready ; 2010 ; International Journal of Global Energy Issues Volume 33 ; 33 >
+      au < ready ; 2010 ; International Journal of Global Energy Issues Volume 34 ; 34 >
       au < ready ; 2011 ; International Journal of Global Energy Issues Volume 35 ; 35 >
 
     }
