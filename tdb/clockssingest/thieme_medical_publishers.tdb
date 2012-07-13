@@ -1764,8 +1764,12 @@
   
     title < 
       name = Seminars in Respiratory and Critical Care Medicine ;
-      issn = 1069-3424
+      issn = 1069-3424 ;
+      eissn = 1098-9048
+      
     >
+    param[journal_id] = 10.1055/s-00000075
+    comment[years] = 1994-current
     
   }
   
