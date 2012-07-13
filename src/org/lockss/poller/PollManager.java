@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.231 2012-07-13 00:52:31 barry409 Exp $
+ * $Id: PollManager.java,v 1.232 2012-07-13 00:55:23 barry409 Exp $
  */
 
 /*
@@ -2356,9 +2356,9 @@ public class PollManager
 	  }
 	}
 	// weightedRandomSelection throws if the count is larger than the size.
-	int count = Math.min(weightMap.size(), availablePollCount));
+	int count = Math.min(weightMap.size(), availablePollCount);
 	if (!weightMap.isEmpty()) {
-	  pollQueue.addAll(weightedRandomSelection(weightMap, count);
+	  pollQueue.addAll(weightedRandomSelection(weightMap, count));
 	}
       }
       if (theLog.isDebug()) {
