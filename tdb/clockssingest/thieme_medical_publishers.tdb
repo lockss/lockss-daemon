@@ -1751,8 +1751,12 @@
   
     title < 
       name = Seminars in Reproductive Medicine ;
-      issn = 1526-8004
+      issn = 1526-8004 ;
+      eissn = 1526-4564
+      
     >
+    param[journal_id] = 10.1055/s-00000072
+    comment[years] = 2000-current
     
   }
   
