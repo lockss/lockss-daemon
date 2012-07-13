@@ -181,9 +181,9 @@
      param[journal_id] = 10.1055/s-00000147
      comment[years] = 2007-current  
        
-  }     
+   }     
   
-  {
+   {
     title <
       name = Allgemeine Homöopathische Zeitung ;
       issn = 1438-2563 ;
@@ -207,7 +207,7 @@
         
    }     
   
-  {
+   {
     title < 
       name = American Journal of Perinatology Reports ;
       issn = 2157-6998 ;
@@ -217,9 +217,9 @@
     param[journal_id] = 10.1055/s-00000169
     comment[years] = 2011-current
     
-  }
+   }
       
-  {
+   {
     title <
       name = Arzneimittelforschung ;
       issn = 0004-4172 ;
@@ -231,9 +231,9 @@
     comment[0] = includes Arzneimittelforschung Drug Research
     
     
-  }    
+   }    
   
-  {
+   {
     title <
       name = Augenheilkunde up2date ;
       issn = 1616-9719 ;
@@ -367,6 +367,7 @@
     comment[years] = 2001-current
   
   }
+  
   {
     title <
       name = Zeitschrift für Onkologie ;
@@ -560,7 +561,7 @@
     
   }
     
-    {
+  {
     title <
       name = Experimental and Clinical Endocrinology & Diabetes ;
       issn = 0947-7349 ;
@@ -639,9 +640,9 @@
     comment[years] = 2007-current  
   
   
+   }
   
-  }
-  {
+   {
     title <
       name = Gastroenterologie up2date ;
       issn = 1616-9670 ;
@@ -1812,12 +1813,29 @@
     comment[years] = 1974-current
   }
   
+    {
+  
+    title < 
+      name = Senologie - Zeitschrift für Mammadiagnostik und -therapie ;
+      issn = 1611-6453 ;
+      eissn = 1611-647X
+      
+    >
+    param[journal_id] = 10.1055/s-00000125
+    comment[years] = 2004-current
+    
+  }
+  
   {
   
     title < 
       name = Skull Base ;
-      issn = 1531-5010
+      issn = 1531-5010 ;
+      eissn = 1532-0065
+      
     >
+    param[journal_id] = 10.1055/s-00000079
+    comment[years] = 2001-current
     
   }
   
@@ -1825,8 +1843,25 @@
   
     title < 
       name = Skull Base Reports ;
-      issn = 2157-6971
+      issn = 2157-6971 ;
+      eissn = 2157-698X
+      
     >
+    param[journal_id] = 10.1055/s-00000170
+    comment[years] = 2157-698X
+    
+  }
+   {
+  
+    title < 
+      name = Sleep And Breathing ;
+      issn = 1520-9512 ;
+      eissn = 1522-1709
+      
+      
+    >
+    param[journal_id] = 10.1055/s-00000080
+    comment[years] = 1999-2004
     
   }
   
