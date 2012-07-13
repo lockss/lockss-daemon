@@ -2045,6 +2045,71 @@
     comment[years] = 2003-current
     
   }
+  
+  {
+  
+    title < 
+      name = Via medici ;
+      issn = 0949-2488 ;
+      eissn = 1439-1414
+      
+    >
+    param[journal_id] = 10.1055/s-00000158
+    comment[years] = 2007-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Viszeralchirurgie ;
+      issn = 1435-3067 ;
+      eissn = 1439-1643
+      
+    >
+    param[journal_id] = 10.1055/s-00000091
+    comment[years] = 2000-2007
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zahnmedizin up2date ;
+      issn = 1865-0457 ;
+      eissn = 1865-0465
+      
+    >
+    param[journal_id] = 10.1055/s-00000150
+    comment[years] = 2007-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zeitschrift für Ganzheitliche Tiermedizin ;
+      issn = 0939-7868 ;
+      eissn = 1439-1422
+      
+    >
+    param[journal_id] = 10.1055/s-00000149
+    comment[years] = 2007-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zeitschrift für Gastroenterologie ;
+      issn = 0044-2771 ;
+      eissn = 1439-7803
+      
+    >
+    param[journal_id] = 10.1055/s-00000094
+    comment[years] = 2000-current
+    
+  }
 
 
 }
