@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressH20Plugin.java,v 1.1 2010-02-17 02:35:07 thib_gc Exp $
+ * $Id: TestHighWirePressH20Plugin.java,v 1.2 2012-07-13 12:12:18 pgust Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
     String starturl =
       "http://www.example.com/lockss-manifest/vol_322_manifest.dtl";
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("HighWire Press Plugin (H20), Base URL http://www.example.com/, Volume 322", au.getName());
+    assertEquals("HighWire Plugin (H20 for Triggered Content), Base URL http://www.example.com/, Volume 322", au.getName());
     SpiderCrawlSpec spec = (SpiderCrawlSpec)au.getCrawlSpec();
     assertEquals(ListUtil.list(starturl), spec.getStartingUrls());
   }
