@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.230 2012-07-13 00:43:01 barry409 Exp $
+ * $Id: PollManager.java,v 1.231 2012-07-13 00:52:31 barry409 Exp $
  */
 
 /*
@@ -2332,7 +2332,8 @@ public class PollManager
 	  pollQueue.add(req);
 	}
       }
-      if (pollQueue.size() < paramPollQueueMax) {
+      int availablePollCount = paramPollQueueMax - pollQueue.size();
+      if (availablePollCount > 0) {
 	for (ArchivalUnit au : pluginMgr.getAllAus()) {
 	  try {
 	    if (highPriorityPollRequests.get(au) != null) {
@@ -2354,11 +2355,10 @@ public class PollManager
 	    // ignore AU if it caused an error
 	  }
 	}
-	int n = paramPollQueueMax - pollQueue.size();
-	if (n > 0 && !weightMap.isEmpty()) {
-	  pollQueue.addAll(weightedRandomSelection(weightMap,
-						   Math.min(weightMap.size(),
-							    n)));
+	// weightedRandomSelection throws if the count is larger than the size.
+	int count = Math.min(weightMap.size(), availablePollCount));
+	if (!weightMap.isEmpty()) {
+	  pollQueue.addAll(weightedRandomSelection(weightMap, count);
 	}
       }
       if (theLog.isDebug()) {
