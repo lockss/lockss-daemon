@@ -1868,6 +1868,19 @@
   {
   
     title < 
+      name = Sportverletzung - Sportschaden ;
+      issn = 0932-0555 ;
+      eissn = 1439-1236
+      
+    >
+    param[journal_id] = 10.1055/s-00000081
+    comment[years] = 1987-current
+    
+  }
+  
+  {
+  
+    title < 
       name = SYNFACTS ;
       issn = 1861-1958
     >
