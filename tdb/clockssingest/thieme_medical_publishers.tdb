@@ -2111,5 +2111,72 @@
     
   }
 
+  {
+  
+    title < 
+      name = Zeitschrift für Geburtshilfe und Neonatologie ;
+      issn = 0948-2393 ;
+      eissn = 1439-1651
+      
+    >
+    param[journal_id] = 10.1055/s-00000095
+    comment[years] = 2000-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zeitschrift für Klassische Homöopathie ;                                                                        
+      issn = 0935-0853 ;
+      eissn = 1439-4308
+      
+    >
+    param[journal_id] = 10.1055/s-00000096
+    comment[years] = 1957-current
+    comment[0] = includes Zeitschrift für klassische Homöopathie und Arzneipotenzierung and Acta homoeopathica
+    
+    
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zeitschrift für Komplementärmedizin ;
+      issn = 1867-6081 ;
+      eissn = 1867-6103
+      
+    >
+    param[journal_id] = 10.1055/s-00000153
+    comment[years] = 2009-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zeitschrift für Orthomolekulare Medizin ;
+      issn = 1611-5562 ;
+      eissn = 1864-2470
+      
+    >
+    param[journal_id] = 10.1055/s-00000144
+    comment[years] = 2007-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zeitschrift für Orthopädie und Unfallchirurgie ;
+      issn = 1864-6697 ;
+      eissn = 1864-6743
+      
+    >
+    param[journal_id] = 10.1055/s-00000099
+    comment[years] = 2007-current
+    
+  }
 
 }
