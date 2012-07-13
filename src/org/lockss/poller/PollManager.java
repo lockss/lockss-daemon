@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.229 2012-07-12 23:50:40 barry409 Exp $
+ * $Id: PollManager.java,v 1.230 2012-07-13 00:43:01 barry409 Exp $
  */
 
 /*
@@ -341,6 +341,10 @@ public class PollManager
 
     public int getPriority() {
       return priority;
+    }
+
+    public boolean isHighPriority() {
+      return priority > 0;
     }
 
     public String toString() {
@@ -2285,10 +2289,16 @@ public class PollManager
 
   private void enqueueHighPriorityPoll(PollReq req) {
     theLog.debug2("enqueueHighPriorityPoll(" + req + ")");
+    if (!req.isHighPriority()) {
+      throw new IllegalArgumentException(
+        "High priority polls must have a positive priority: "+req);
+    }
     if (isEligibleForPoll(req)) {
       highPriorityPollRequests.put(req.au, req);
       needRebuildPollQueue();
     } else {
+      // todo(bhayes): IllegalStateException? The state is just fine,
+      // thanks; the argument is not.
       throw new IllegalStateException("AU is already running a poll");
     }
   }
@@ -2318,30 +2328,23 @@ public class PollManager
       // created.
       for (PollReq req : highPriorityPollRequests.values()) {
 	AuState auState = AuUtil.getAuState(req.au);
-	if (isEligibleForPoll(req, auState) && req.getPriority() > 0) {
+	if (isEligibleForPoll(req, auState)) {
 	  pollQueue.add(req);
 	}
       }
       if (pollQueue.size() < paramPollQueueMax) {
 	for (ArchivalUnit au : pluginMgr.getAllAus()) {
 	  try {
-	    PollReq req = highPriorityPollRequests.get(au);
-	    if (req != null && req.getPriority() > 0) {
-	      // already added above.
+	    if (highPriorityPollRequests.get(au) != null) {
+	      // already tried above; might or might not have been added.
 	      continue;
 	    }
-	    if (req == null) {
-	      req = new PollReq(au);
-	    }
+	    PollReq req = new PollReq(au);
 	    AuState auState = AuUtil.getAuState(au);
 	    if (isEligibleForPoll(req, auState)) {
-	      if (req.getPriority() > 0) {
-		pollQueue.add(req);
-	      } else {
-		double weight = pollWeight(au, auState);
-		if (weight > 0.0) {
-		  weightMap.put(req, weight);
-		}
+	      double weight = pollWeight(au, auState);
+	      if (weight > 0.0) {
+		weightMap.put(req, weight);
 	      }
 	    } else if (theLog.isDebug3()) {
 	      theLog.debug3("Not eligible for poll: " + au);
@@ -2410,7 +2413,7 @@ public class PollManager
 
     checkAuClassAllowed(req);
 
-    if (req.getPriority() > 0) {
+    if (req.isHighPriority()) {
       return;
     }
 
@@ -2447,8 +2450,7 @@ public class PollManager
     if (pluginMgr.isInternalAu(au) && autoPollAuClassess.contains("internal")) {
       return;
     }
-    if (req != null &&
-	req.getPriority() > 0 &&
+    if (req.isHighPriority() &&
 	autoPollAuClassess.contains("priority")) {
       return;
     }
