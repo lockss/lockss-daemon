@@ -1334,6 +1334,20 @@
   
   
   }
+  
+  {
+  
+    title < 
+      name = Perspectives in Plastic Surgery ;
+      issn = 0892-3957 ;
+      eissn = 1521-575X
+      
+    >
+    param[journal_id] = 10.1055/s-00000051
+    comment[years] = 1987-2001
+    
+  }
+  
   {
     title <
       name = pferde spiegel ;
@@ -1769,7 +1783,7 @@
       
     >
     param[journal_id] = 10.1055/s-00000075
-    comment[years] = 1994-current
+    comment[years] = 1994-current 
     
   }
   
@@ -1777,8 +1791,12 @@
   
     title < 
       name = Seminars in Speech and Language ;
-      issn = 0734-0478
+      issn = 0734-0478 ;
+      eissn = 1098-9056
+      
     >
+    param[journal_id] = 10.1055/s-00000076
+    comment[years] = 1984-current
     
   }
   
@@ -1786,9 +1804,12 @@
   
     title < 
       name = Seminars in Thrombosis and Hemostasis ;
-      issn = 0094-6176
+      issn = 0094-6176 ;
+      eissn = 1098-9064
+      
     >
-    
+    param[journal_id] = 10.1055/s-00000077
+    comment[years] = 1974-current
   }
   
   {
