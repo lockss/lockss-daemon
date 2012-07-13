@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.233 2012-07-13 17:33:59 barry409 Exp $
+ * $Id: PollManager.java,v 1.234 2012-07-13 18:23:31 barry409 Exp $
  */
 
 /*
@@ -2324,17 +2324,26 @@ public class PollManager
       pollQueue.clear();
       // XXX Until have real sort, just add these in the order they were
       // created.
-      for (PollReq req : highPriorityPollRequests.values()) {
-	AuState auState = AuUtil.getAuState(req.au);
-	if (isEligibleForPoll(req, auState)) {
-	  pollQueue.add(req);
+
+      // highPriorityPollRequests is from Collections.synchronizedMap;
+      // Failure to synchronize over it when iterating over any of its
+      // collection views causes non-deterministic behavior. [See
+      // javadocs for java.util.Collections.synchronizedMap.]
+      Set<ArchivalUnit> highPriorityAus = new HashSet<ArchivalUnit>();
+      synchronized (highPriorityPollRequests) {
+	for (PollReq req : highPriorityPollRequests.values()) {
+	  AuState auState = AuUtil.getAuState(req.au);
+	  highPriorityAus.add(req.au);
+	  if (isEligibleForPoll(req, auState)) {
+	    pollQueue.add(req);
+	  }
 	}
       }
       int availablePollCount = paramPollQueueMax - pollQueue.size();
       if (availablePollCount > 0) {
 	for (ArchivalUnit au : pluginMgr.getAllAus()) {
 	  try {
-	    if (highPriorityPollRequests.get(au) != null) {
+	    if (highPriorityAus.contains(au)) {
 	      // already tried above; might or might not have been added.
 	      continue;
 	    }
