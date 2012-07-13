@@ -1876,15 +1876,44 @@
     param[journal_id] = 10.1055/s-00000081
     comment[years] = 1987-current
     
+   }
+  
+   {
+  
+    title < 
+      name = Sprache Stimme Gehör ;
+      issn = 0342-0477 ;
+      eissn = 1439-1260
+      
+    >
+    param[journal_id] = 10.1055/s-00000082
+    comment[years] = 2000-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Suchttherapie ;
+      issn = 1439-9903 ;
+      eissn = 1439-989X
+      
+    >
+    param[journal_id] = 10.1055/s-00000115
+    comment[years] = 2000-current
+    
   }
   
   {
   
     title < 
       name = SYNFACTS ;
-      issn = 1861-1958
+      issn = 1861-1958 ;
+      eissn = 1861-194X
+      
     >
-    
+    param[journal_id] = 10.1055/s-00000131
+    comment[years] = 2005-current
   }
   
   {
@@ -1904,8 +1933,38 @@
   
     title < 
       name = SYNTHESIS ;
-      issn = 0039-7881
+      issn = 0039-7881 ;
+      eissn = 1437-210X
+      
     >
+    param[journal_id] = 10.1055/s-00000084
+    comment[years] = 1989-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = team spiegel ;
+      issn = 1868-1948 ;
+      eissn = 1868-193X
+      
+    >
+    param[journal_id] = 10.1055/s-00000156
+    comment[years] = 2003-2009
+    
+  }
+  
+  {
+  
+    title < 
+      name = team-konkret ;
+      issn = 1869-3202 ;
+      eissn = 1869-3210
+      
+    >
+    param[journal_id] = 10.1055/s-00000164
+    comment[years] = 2010-current
     
   }
   
@@ -1913,11 +1972,79 @@
   
     title < 
       name = The Thoracic and Cardiovascular Surgeon ;
-      issn = 0171-6425
+      issn = 0171-6425 ;
+      eissn = 1439-1902
+      
     >
-    
+   param[journal_id] = 10.1055/s-00000085
+   comment[years] = 1979-current 
   }  
 
+  {
+  
+    title < 
+      name = Tierarzthelfer/in konkret ;
+      issn = 1614-8754 ;
+      eissn = 1865-3987
+      
+      
+    >
+    param[journal_id] = 10.1055/s-00000157
+    comment[years] = 2008-2009
+    
+  }
+  
+  {
+  
+    title < 
+      name = Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie ;
+      issn = 2191-8805 ;
+      eissn = 2191-8813
+      
+    >
+    param[journal_id] = 10.1055/s-00000172
+    comment[years] = 2011-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = TumorDiagnostik & Therapie ;
+      issn = 0722-219X ;
+      eissn = 1439-1279
+      
+    >
+    param[journal_id] = 10.1055/s-00000088
+    comment[years] = 2000-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Ultraschall in der Medizin - European Journal of Ultrasound ;
+      issn = 0172-4614 ;
+      eissn = 1438-8782
+      
+    >
+    param[journal_id] = 10.1055/s-00000089
+    comment[years] = 1980-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = veterinär spiegel ;
+      issn = 0940-8711 ;
+      eissn = 1868-0437
+      
+    >
+    param[journal_id] = 10.1055/s-00000154
+    comment[years] = 2003-current
+    
+  }
 
 
 }
