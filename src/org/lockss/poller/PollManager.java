@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.232 2012-07-13 00:55:23 barry409 Exp $
+ * $Id: PollManager.java,v 1.233 2012-07-13 17:33:59 barry409 Exp $
  */
 
 /*
@@ -2280,27 +2280,25 @@ public class PollManager
     return aus;
   }
 
-  public void enqueueHighPriorityPoll(ArchivalUnit au, PollSpec spec) {
+  public void enqueueHighPriorityPoll(ArchivalUnit au, PollSpec spec) 
+      throws NotEligibleException {
     PollReq req = new PollManager.PollReq(au)
       .setPollSpec(spec)
       .setPriority(2);
     enqueueHighPriorityPoll(req);
   }
 
-  private void enqueueHighPriorityPoll(PollReq req) {
+  private void enqueueHighPriorityPoll(PollReq req)
+      throws NotEligibleException {
     theLog.debug2("enqueueHighPriorityPoll(" + req + ")");
     if (!req.isHighPriority()) {
       throw new IllegalArgumentException(
         "High priority polls must have a positive priority: "+req);
     }
-    if (isEligibleForPoll(req)) {
-      highPriorityPollRequests.put(req.au, req);
-      needRebuildPollQueue();
-    } else {
-      // todo(bhayes): IllegalStateException? The state is just fine,
-      // thanks; the argument is not.
-      throw new IllegalStateException("AU is already running a poll");
-    }
+    // the check will throw NotEligibleException with an appropriate message.
+    checkEligibleForPoll(req);
+    highPriorityPollRequests.put(req.au, req);
+    needRebuildPollQueue();
   }
 
   void needRebuildPollQueue() {
@@ -2379,11 +2377,7 @@ public class PollManager
     }
   }
 
-  boolean isEligibleForPoll(PollReq req) {
-    return isEligibleForPoll(req, AuUtil.getAuState(req.au));
-  }
-
-  boolean isEligibleForPoll(PollReq req, AuState auState) {
+  private boolean isEligibleForPoll(PollReq req, AuState auState) {
     try {
       checkEligibleForPoll(req, auState);
       return true;

@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.26 2012-07-12 22:34:53 barry409 Exp $
+ * $Id: DebugPanel.java,v 1.27 2012-07-13 17:33:59 barry409 Exp $
  */
 
 /*
@@ -379,7 +379,7 @@ public class DebugPanel extends LockssServlet {
     try {
       pollManager.enqueueHighPriorityPoll(au, spec);
       statusMsg = "Enqueued V3 poll for " + au.getName();
-    } catch (IllegalStateException e) {
+    } catch (PollManager.NotEligibleException e) {
       errMsg = "Failed to enqueue poll on "
 	+ au.getName() + ": " + e.getMessage();
     }
