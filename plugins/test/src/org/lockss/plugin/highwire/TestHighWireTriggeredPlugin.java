@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireTriggeredPlugin.java,v 1.2 2012-07-13 12:12:18 pgust Exp $
+ * $Id: TestHighWireTriggeredPlugin.java,v 1.3 2012-07-13 12:56:38 pgust Exp $
  */
 
 /*
@@ -121,7 +121,7 @@ public class TestHighWireTriggeredPlugin extends LockssTestCase {
 //     props.setProperty(YEAR_KEY, "2004");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("HighWire Plugin (H10c for Triggered Content), Base URL http://pediatrics.aappublications.org/, Volume 52", au.getName());
+    assertEquals("HighWire Plugin (H10c Triggered Content), Base URL http://pediatrics.aappublications.org/, Volume 52", au.getName());
   }
 
   public void testGetPluginId() {
