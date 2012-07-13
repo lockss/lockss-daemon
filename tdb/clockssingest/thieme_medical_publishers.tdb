@@ -2179,4 +2179,121 @@
     
   }
 
-}
+  {
+  
+    title < 
+      name = Zeitschrift für Orthopädie und ihre Grenzgebiete ;
+      issn = 0044-3220 ;
+      eissn = 1438-941X
+      
+    >
+    param[journal_id] = 10.1055/s-00000100
+    comment[years] = 1980-2007
+    
+  }
+
+  {
+  
+    title < 
+      name = Zeitschrift für Palliativmedizin ;
+      issn = 1615-2921 ;
+      eissn = 1615-293X
+      
+    >
+    param[journal_id] = 10.1055/s-00000102
+    comment[years] = 2000-current
+    
+  }
+
+  {
+  
+    title < 
+      name = Zeitschrift für Phytotherapie ;
+      issn = 0722-348X ;
+      eissn = 1438-9584
+      
+    >
+    param[journal_id] = 10.1055/s-00000101
+    comment[years] = 2005-current
+    
+  }
+
+  {
+  
+    title < 
+      name = Zeitschrift für Sexualforschung ;
+      issn = 0932-8114 ;
+      eissn = 1438-9460
+      
+    >
+    param[journal_id] = 10.1055/s-00000103
+    comment[years] = 2001-current
+    
+  }
+
+  {
+  
+    title < 
+      name = Zentralblatt für Chirurgie ;
+      issn = 0044-409X ;
+      eissn = 1438-9592
+      
+    >
+    param[journal_id] = 10.1055/s-00000104
+    comment[years] = 2000-current
+    
+  }
+
+  {
+  
+    title < 
+      name = Zentralblatt für Gynäkologie ;
+      issn = 0044-4197 ;
+      eissn = 1438-9762
+      
+    >
+    param[journal_id] = 10.1055/s-00000105
+    comment[years] = 2000-2006
+    
+  }
+
+  {
+  
+    title < 
+      name = Zentralblatt für Kinderchirurgie ;
+      issn = 0940-9599 ;
+      eissn = 1438-9770
+      
+    >
+    param[journal_id] = 10.1055/s-00000016
+    comment[years] = 2000-2002
+    
+  }
+
+  {
+  
+    title < 
+      name = ZFA - Zeitschrift für Allgemeinmedizin ;
+      issn = 1433-6251 ;
+      eissn = 1439-9229
+      
+    >
+    param[journal_id] = 10.1055/s-00000111
+    comment[years] = 2003-current
+    
+  }
+
+  {
+  
+    title < 
+      name = ZWR - Das Deutsche Zahnärzteblatt ;
+      issn = 0044-166X ;
+      eissn = 1439-9148
+      
+    >
+    param[journal_id] = 10.1055/s-00000112
+    comment[years] = 2003-current
+    
+  }
+  
+  }
