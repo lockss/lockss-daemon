@@ -278,16 +278,18 @@
   {
     title <
       name = Cross-Currents: East Asian History and Culture Review ;
-      issn = 2158-9666 
+      issn = 2158-9666 ;
+      eissn = 2158-9674
     >
 
     {
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = 
- 
-      comment[0] = not online yet
+      param[journal_dir] = cross_currents_east_asian_history_and_culture_review
+      attr[journal_id] = ach
+      
+      au < manifest ; 2012 ; Cross-Currents: East Asian History and Culture Review Volume 1 ; 1 >
  
     }  
   }
