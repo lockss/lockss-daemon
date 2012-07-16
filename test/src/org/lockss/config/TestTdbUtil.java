@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.lockss.config.TdbUtil.ContentScope;
+import org.lockss.config.TdbUtil.ContentType;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
@@ -19,6 +20,7 @@ import org.lockss.test.MockArchivalUnit;
  * Testing requires a deeper and more complex mock Tdb to be created, with
  * ArchivalUnits and TitleConfigs.
  * Use MockArchivalUnit or SimulatedArchivalUnit.
+ * Also test for book/journal differences.
  *
  * @author  Neil Mayo
  */
@@ -51,16 +53,16 @@ public class TestTdbUtil extends LockssTestCase {
     configuredTdbAus = TdbUtil.getConfiguredTdbAus();
     preservedTdbAus = TdbUtil.getPreservedTdbAus();
     
-    defaultTitles = TdbUtil.getTdbTitles(null);
-    allTitles = TdbUtil.getTdbTitles(ContentScope.ALL);
-    configuredTitles = TdbUtil.getTdbTitles(ContentScope.CONFIGURED);
-    preservedTitles = TdbUtil.getTdbTitles(ContentScope.COLLECTED);
+    defaultTitles = TdbUtil.getTdbTitles(null, null);
+    allTitles = TdbUtil.getTdbTitles(ContentScope.ALL, ContentType.ALL);
+    configuredTitles = TdbUtil.getTdbTitles(ContentScope.CONFIGURED, ContentType.ALL);
+    preservedTitles = TdbUtil.getTdbTitles(ContentScope.COLLECTED, ContentType.ALL);
     
-    numNull = TdbUtil.getNumberTdbTitles(null);
-    numDefault = TdbUtil.getNumberTdbTitles(ContentScope.DEFAULT_SCOPE);
-    numAll = TdbUtil.getNumberTdbTitles(ContentScope.ALL);
-    numConfigured = TdbUtil.getNumberTdbTitles(ContentScope.CONFIGURED);
-    numPreserved = TdbUtil.getNumberTdbTitles(ContentScope.COLLECTED);
+    numNull = TdbUtil.getNumberTdbTitles(null, null);
+    numDefault = TdbUtil.getNumberTdbTitles(ContentScope.DEFAULT_SCOPE, ContentType.ALL);
+    numAll = TdbUtil.getNumberTdbTitles(ContentScope.ALL, ContentType.ALL);
+    numConfigured = TdbUtil.getNumberTdbTitles(ContentScope.CONFIGURED, ContentType.ALL);
+    numPreserved = TdbUtil.getNumberTdbTitles(ContentScope.COLLECTED, ContentType.ALL);
   }
 
   protected void tearDown() throws Exception {
@@ -84,6 +86,29 @@ public class TestTdbUtil extends LockssTestCase {
     // The result will be null as the mock AU will have no TitleConfig
     assertEquals(null, TdbUtil.getTdbAu(au));
   }
+
+
+  public final void testFilterTitlesByType() {
+    try {
+      List<TdbTitle> titles = new ArrayList<TdbTitle>() {{
+        add(TdbTestUtil.makeBookTestTitle("v1", "1990", "2000"));
+        add(TdbTestUtil.makeBookTestTitle("v2", "1995", "1996", "2007"));
+      }};
+      assertIsomorphic(titles, TdbUtil.filterTitlesByType(titles, ContentType.ALL));
+      assertIsomorphic(titles, TdbUtil.filterTitlesByType(titles, ContentType.BOOKS));
+      assertEmpty(TdbUtil.filterTitlesByType(titles, ContentType.JOURNALS));
+      // Add a non-book title
+      titles.add(TdbTestUtil.makeYearTestTitle("2010", "2011"));
+      assertIsomorphic(titles, TdbUtil.filterTitlesByType(titles, ContentType.ALL));
+      assertEquals(titles.size()-1, TdbUtil.filterTitlesByType(titles, ContentType.BOOKS).size());
+      assertEquals(1, TdbUtil.filterTitlesByType(titles, ContentType.JOURNALS).size());
+    } catch (Exception e) {
+      e.printStackTrace();
+      fail("Could not create book test title");
+    }
+  }
+
+  //public final void testFilterAusByType() {  }
 
   public final void testGetAllTdbTitles() {
     assertNotNull(TdbUtil.getAllTdbTitles());
@@ -123,8 +148,8 @@ public class TestTdbUtil extends LockssTestCase {
   // because of when AUs are available, passing either ALL or null
   // to the method should result in an empty list.
   public final void testGetAus() {
-    assertEmpty(TdbUtil.getAus(ContentScope.ALL));
-    assertEmpty(TdbUtil.getAus(null));
+    assertEmpty(TdbUtil.getAus(ContentScope.ALL, ContentType.ALL));
+    assertEmpty(TdbUtil.getAus(null, null));
   }
   
   public final void testGetConfiguredAus() {
@@ -182,5 +207,5 @@ public class TestTdbUtil extends LockssTestCase {
     for (int i=0; i<NUM_MOCK_AUS; i++) aus.add(MockArchivalUnit.newInited());
     return aus;
   }
-  
+
 }

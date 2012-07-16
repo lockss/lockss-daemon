@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.39 2012-06-15 16:55:35 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.40 2012-07-16 21:10:49 easyonthemayo Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import javax.servlet.ServletException;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.config.*;
 import org.lockss.config.TdbUtil.ContentScope;
+import org.lockss.config.TdbUtil.ContentType;
 import org.lockss.daemon.AuHealthMetric;
 import org.lockss.daemon.MetadataDatabaseUtil;
 import org.lockss.exporter.biblio.BibliographicItem;
@@ -121,6 +122,7 @@ public class ListHoldings extends LockssServlet {
   // These keys are used in the URL for direct access to particular reports.
   // DO NOT CHANGE
   public static final String KEY_TITLE_SCOPE = "scope";
+  public static final String KEY_TITLE_TYPE = "type";
   public static final String KEY_OUTPUT_FORMAT = "format";
   public static final String KEY_REPORT_FORMAT = "report";
   public static final String KEY_COVERAGE_NOTES_FORMAT = "coverageNotesFormat";
@@ -135,6 +137,8 @@ public class ListHoldings extends LockssServlet {
   public static final String ACTION_CUSTOM_RESET = "Reset";
   /** Cancel the current customisation and show the output again. */
   public static final String ACTION_CUSTOM_CANCEL = "Cancel";
+  /** Export the current report in some format. */
+  public static final String ACTION_CUSTOM_EXPORT = "Export";
 
   // ------------------------- FORM PARAMS AND OPTIONS -------------------------
   public static final String KEY_COMPRESS = "compress";
@@ -157,6 +161,8 @@ public class ListHoldings extends LockssServlet {
   static final ReportDataFormat REPORT_DEFAULT = ReportDataFormat.KBART;
   /** Default scope is the default in the scope enum. */
   static final ContentScope SCOPE_DEFAULT = ContentScope.DEFAULT_SCOPE;
+  /** Default type is the default in the type enum. */
+  static final ContentType TYPE_DEFAULT = ContentType.DEFAULT_TYPE;
   /** Default coverage notes format is year(volume) ranges. */
   static final CoverageNotesFormat COVERAGE_NOTES_DEFAULT = CoverageNotesFormat.YEAR_VOLUME;
 
@@ -171,6 +177,7 @@ public class ListHoldings extends LockssServlet {
   // Bits of state that must be reset to defaults in resetLocals()
   /** Holdings scope option. */
   private ContentScope selectedScope = ContentScope.DEFAULT_SCOPE;
+  private ContentType selectedType = ContentType.DEFAULT_TYPE;
   private OutputFormat outputFormat = OUTPUT_DEFAULT;
   private ReportDataFormat reportDataFormat = REPORT_DEFAULT;
   private CoverageNotesFormat coverageNotesFormat = COVERAGE_NOTES_DEFAULT;
@@ -205,6 +212,7 @@ public class ListHoldings extends LockssServlet {
     doExport = false;
     // Reset export parameters to defaults
     selectedScope = ContentScope.DEFAULT_SCOPE;
+    selectedType = ContentType.DEFAULT_TYPE;
     outputFormat = OUTPUT_DEFAULT;
     reportDataFormat = REPORT_DEFAULT;
     coverageNotesFormat = COVERAGE_NOTES_DEFAULT;
@@ -282,6 +290,7 @@ public class ListHoldings extends LockssServlet {
     reportDataFormat = ReportDataFormat.byName(params.getProperty(KEY_REPORT_FORMAT), REPORT_DEFAULT);
     coverageNotesFormat = CoverageNotesFormat.byName(params.getProperty(KEY_COVERAGE_NOTES_FORMAT), COVERAGE_NOTES_DEFAULT);
     selectedScope = ContentScope.byName(params.getProperty(KEY_TITLE_SCOPE), SCOPE_DEFAULT);
+    selectedType = ContentType.byName(params.getProperty(KEY_TITLE_TYPE), TYPE_DEFAULT);
 
     // Set compression from the output format
     //if (outputFormat!=null) this.isCompress = outputFormat.isCompressible();
@@ -373,7 +382,7 @@ public class ListHoldings extends LockssServlet {
 
     // Now we are doing an export - create the exporter
     KbartExporter kexp = createExporter(outputFormat, selectedScope,
-        reportDataFormat, coverageNotesFormat);
+        selectedType, reportDataFormat, coverageNotesFormat);
 
     // Make sure the exporter was properly instantiated
     if (kexp==null) {
@@ -414,32 +423,37 @@ public class ListHoldings extends LockssServlet {
    * @param outputFormat the output format for the exporter
    * @param scope the scope of titles to export
    * @param reportDataFormat the format of the report
+   * @param coverageNotesFormat the format of the coverage notes field
    * @return a usable exporter, or null if one could not be created
    */
-  private KbartExporter createExporter(OutputFormat outputFormat, 
-      ContentScope scope, ReportDataFormat reportDataFormat, 
-      CoverageNotesFormat coverageNotesFormat) {
+  private KbartExporter createExporter(OutputFormat outputFormat,
+                                       ContentScope scope, ContentType type,
+                                       ReportDataFormat reportDataFormat,
+                                       CoverageNotesFormat coverageNotesFormat) {
 
     // The following counts the number of TdbTitles informing the export, by 
     // processing the list of AUs in the given scope. It is provided as 
     // information in the export, but is actually a little meaningless and 
     // should probably be omitted.
-    int numTdbTitles = TdbUtil.getNumberTdbTitles(scope);
+    int numTdbTitles = TdbUtil.getNumberTdbTitles(scope, type);
 
     KbartCustomOptions opts = getSessionCustomOpts(false);
 
-    // The list of KbartTitles to export; each title represents a TdbTitle over
-    // a particular range of coverage.
-    List<KbartTitle> titles = getKbartTitlesForExport(scope);
+    // The list of KbartTitles to export; each title represents a TdbTitle
+    // containing particular types of AU, over a particular range of coverage.
+    List<KbartTitle> titles = getKbartTitlesForExport(scope, type);
     //KbartTitleIterator titles = getKbartTitlesForExport(scope);
  
     /*log.info(String.format("Creating exporter for %d titles in scope %s\n",
 	titles.size(), scope));*/
-    log.info(String.format("Creating exporter for titles in scope %s\n", scope));
+    log.info(
+        String.format("Creating exporter for titles of type %s in scope %s\n",
+            type, scope)
+    );
     
     // Return if there are no titles
     if (titles.isEmpty()) {
-      errMsg = "No "+scope.label+" titles for export.";
+      errMsg = String.format("No %s titles of type %s for export.", scope, type);
       return null;
     }
 
@@ -510,19 +524,22 @@ public class ListHoldings extends LockssServlet {
   /**
    * Get the list of TdbTitles or AUs in the given scope, and turn them into
    * KbartTitles which represent the coverage ranges available for titles in
-   * the scope.
+   * the scope. It is also now possible to specify a ContentType in order to
+   * filter the list on books or journals.
    *
    * @param scope the scope of titles to create
+   * @param type the type of titles to include
    * @return a list of KbartTitles
    */
-  private List<KbartTitle> getKbartTitlesForExport(ContentScope scope) {
+  private List<KbartTitle> getKbartTitlesForExport(ContentScope scope,
+                                                   ContentType type) {
 
     List<KbartTitle> titles;
     Iterator<KbartTitle> titleIterator;
     // If we are exporting in a scope where ArchivalUnits are not available,
     // act on a list of TdbTitles, with their full AU ranges.
     if (!scope.areAusAvailable) {
-      Collection<TdbTitle> tdbTitles = TdbUtil.getTdbTitles(scope);
+      Collection<TdbTitle> tdbTitles = TdbUtil.getTdbTitles(scope, type);
       // TODO Sort the TdbTitles first if we are expecting an iterator back (??)
       titles = KbartConverter.convertTitles(tdbTitles);
       // TODO titleIterator = new KbartConverter.TdbTitleKbartTitleIterator(tdbTitles.iterator());
@@ -576,7 +593,7 @@ public class ListHoldings extends LockssServlet {
       }
       
       // list content from the title database
-      Collection<ArchivalUnit> aus = TdbUtil.getAus(scope);
+      Collection<ArchivalUnit> aus = TdbUtil.getAus(scope, type);
       Map<TdbTitle, List<ArchivalUnit>> map = TdbUtil.mapTitlesToAus(aus);
       titles = KbartConverter.convertTitleAus(map.values(), getShowHealthRatings(),
         rangeFieldsIncluded);
@@ -737,6 +754,8 @@ public class ListHoldings extends LockssServlet {
       form.add(BREAK);
     // Add an option to select the scope of exported holdings
     form.add(layoutScopeOptions());
+    // Add an option to select the type of exported holdings
+    form.add(layoutTypeOptions());
 
     // Add compress option (disabled as the CSV output is not very large)
     //tab.newRow();
@@ -774,7 +793,8 @@ public class ListHoldings extends LockssServlet {
         subTab.add(BREAK+"By default, list is in the industry-standard KBART " +
       		"format. Alternatively you can customise the list to define " +
       		"which columns are visible and in what order they appear. " +
-      		"Use this option also to add health ratings to the output."+BREAK);
+      		(AuHealthMetric.isSupported() ? "Use this option also to add health ratings to the output.":"")+
+                BREAK);
       } else {
         subTab.add(BREAK+"By default, list is in the industry-standard KBART " +
             "format. Alternatively you can customise the list to define " +
@@ -889,7 +909,7 @@ public class ListHoldings extends LockssServlet {
     }
     return tab;
   }
-  
+
   /**
    * Layout content scope options.
    */
@@ -908,7 +928,7 @@ public class ListHoldings extends LockssServlet {
       // NOTE: getNumberTdbTitles() first has to produce a full list of titles;
       // this is expensive, in particular for the Preserved option, and so
       // should only be done when required.
-      int total = TdbUtil.getNumberTdbTitles(scope);
+      int total = TdbUtil.getNumberTdbTitles(scope, ContentType.ALL);
       /*log.debug(String.format("Title count %s took approximately %ss",
           scope, (System.currentTimeMillis()-s)/1000
       ));*/
@@ -920,7 +940,25 @@ public class ListHoldings extends LockssServlet {
     }
     return tab;
   }
-  
+
+  /**
+   * Layout content type options.
+   */
+  private Table layoutTypeOptions() {
+    Table tab = new Table();
+    tab.newRow();
+    tab.newCell("align=\"center\" valign=\"middle\"");
+    tab.add("Title type: ");
+    for (ContentType type : ContentType.values()) {
+      boolean typeEnabled = true;
+      tab.add(ServletUtil.radioButton(this, KEY_TITLE_TYPE, type.name(),
+          type.label, type==selectedType, typeEnabled));
+      if (!typeEnabled) tab.add(notAvailFootnote);
+      tab.add(" &nbsp; ");
+    }
+    return tab;
+  }
+
   /**
    * Display top level export options, no custom options. 
    * @throws IOException
@@ -1044,7 +1082,7 @@ public class ListHoldings extends LockssServlet {
    * Construct an HTML form providing a link to customisation options for output.
    * This consists of a hidden list of ordered output fields, and a submit button,
    * and will appear on the output page.
-   * 
+   *
    * @return a Jetty form
    */
   private Form makeHtmlCustomForm() {
@@ -1055,6 +1093,7 @@ public class ListHoldings extends LockssServlet {
     // Indicate that we are expecting custom out
     form.add(new Input(Input.Hidden, KEY_CUSTOM, "true"));
     form.add(new Input(Input.Hidden, KEY_TITLE_SCOPE, selectedScope.name()));
+    form.add(new Input(Input.Hidden, KEY_TITLE_TYPE, selectedType.name()));
     form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST,
         getOrderingAsCustomFieldList(opts.getFieldOrdering())));
     form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS,
@@ -1067,8 +1106,8 @@ public class ListHoldings extends LockssServlet {
     ServletUtil.layoutSubmitButton(this, form, ACTION_TAG, ACTION_CUSTOM);
     form.add(new Link(servletUrl, "Return to main title list page"));
     return form;
-  }  
-  
+  }
+
   /**
    * An alternative to <code>ServletUtil.layoutSubmitButton</code> which doesn't put 
    * every button on a new line.

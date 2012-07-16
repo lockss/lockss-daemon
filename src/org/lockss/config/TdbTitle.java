@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.11 2012-01-16 17:46:10 pgust Exp $
+ * $Id: TdbTitle.java,v 1.12 2012-07-16 21:10:49 easyonthemayo Exp $
  */
 
 /*
@@ -38,10 +38,10 @@ import org.lockss.config.Tdb.TdbException;
 import org.lockss.util.*;
 
 /**
- * This class represents a title database publisher.
+ * This class represents a title database title.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.11 2012-01-16 17:46:10 pgust Exp $
+ * @version $Id: TdbTitle.java,v 1.12 2012-07-16 21:10:49 easyonthemayo Exp $
  */
 public class TdbTitle {
   /**
@@ -530,18 +530,18 @@ public class TdbTitle {
     return (linkTitles != null) 
       ? linkTitles : Collections.<LinkType,Collection<String>>emptyMap();
   }
-  
+
   /**
    * Return all TdbAus for this title.
    * <p>
    * Note: the collection should be treated as read-only.
-   * 
+   *
    * @return a collection of TdbAus for this title
    */
   public Collection<TdbAu> getTdbAus() {
     return tdbAus.values();
   }
-  
+
   /**
    * Add a new TdbAu for this title.  All params must be set prior
    * to adding tdbAu to this title.

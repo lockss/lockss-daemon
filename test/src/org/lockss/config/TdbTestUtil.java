@@ -26,6 +26,8 @@ public class TdbTestUtil {
   public static String DEFAULT_YEAR = "2003";
   public static String DEFAULT_ISSUE = "8";
 
+  public static String DEFAULT_ISBN_1 = "978-1-58562-257-3";
+
   public static String DEFAULT_ISSN_1 = "0001-0006";
   public static String DEFAULT_EISSN_1 = "0002-0001";
 
@@ -265,6 +267,20 @@ public class TdbTestUtil {
       t1p1.addTdbAu(au);
     }
     return t1p1;
+  }
+
+
+  public static TdbTitle makeBookTestTitle(String id, String ... years) throws TdbException {
+    TdbTitle bk1 = new TdbTitle("book "+id, DEFAULT_TITLE_ID);
+    bk1.setTdbPublisher(new TdbPublisher(DEFAULT_PUBLISHER));
+    for (int i = 0; i < years.length; i++) {
+      // Create AUs with basic properties and different year
+      TdbAu au = createBasicAu("book "+id+":"+i, DEFAULT_PLUGIN);
+      au.setAttr("isbn", DEFAULT_ISBN_1);
+      au.setParam("year", years[i]);
+      bk1.addTdbAu(au);
+    }
+    return bk1;
   }
 
 

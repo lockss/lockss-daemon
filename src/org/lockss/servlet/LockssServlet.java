@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.124 2012-07-10 04:37:59 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.125 2012-07-16 21:10:49 easyonthemayo Exp $
  */
 
 /*
@@ -52,8 +52,6 @@ import org.mortbay.servlet.MultiPartRequest;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.account.*;
-import org.lockss.remote.RemoteApi;
-import org.lockss.servlet.BatchAuConfig.Verb;
 import org.lockss.protocol.*;
 import org.lockss.jetty.*;
 import org.lockss.util.*;
@@ -947,6 +945,14 @@ public abstract class LockssServlet extends HttpServlet
   protected Element setTabOrder(Element ele) {
     ele.attribute("tabindex", tabindex++);
     return ele;
+  }
+
+  /**
+   * Increment and return the tab index so that it can be applied to an element
+   * which is not a Jetty Element.
+   */
+  protected int getNextTabIndex() {
+    return tabindex++;
   }
 
   /** Store a footnote, assign it a number, return html for footnote
