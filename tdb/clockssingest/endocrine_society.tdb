@@ -406,11 +406,13 @@
 
       plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       param[base_url] = http://rphr.endojournals.org/
+      
+      comment[down] = No manifest pages for this journal. Vol 59 should be deleted from ingest machines.
 
       au < exists ; exists ; 2001 ; Recent Progress in Hormone Research Volume 56 ; 56 >
       au < exists ; exists ; 2002 ; Recent Progress in Hormone Research Volume 57 ; 57 >
       au < exists ; exists ; 2003 ; Recent Progress in Hormone Research Volume 58 ; 58 >
-      au < down ; manifest ; 2004 ; Recent Progress in Hormone Research Volume 59 ; 59 >
+      au < down ; exists ; 2004 ; Recent Progress in Hormone Research Volume 59 ; 59 >
 
     }
 
