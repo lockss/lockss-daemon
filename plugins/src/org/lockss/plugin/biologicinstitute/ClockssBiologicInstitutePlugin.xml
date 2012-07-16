@@ -1,11 +1,32 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.biologicinstitute.ClockssBiologicInstitutePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -30,5 +51,11 @@
   <entry>
     <string>au_manifest</string>
     <string>&quot;%sindex.php/%s/about/editorialPolicies&quot;, base_url, journal_id</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+        <string>&quot;^%sindex\.php/%s/article/view/[\w\-\.]+/[\w\-\.]+$&quot;, base_url, journal_id</string>
+      </list>
   </entry>
 </map>
