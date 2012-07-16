@@ -4290,7 +4290,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Management and Decision Making Volume 8 ; 8 >
       au < manifest ; exists ; 2008 ; International Journal of Management and Decision Making Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; International Journal of Management and Decision Making Volume 10 ; 10 >
-      au < manifest ; exists ; 2010-2011 ; International Journal of Management and Decision Making Volume 11 ; 11 >
+      au < testing ; exists ; 2010-2011 ; International Journal of Management and Decision Making Volume 11 ; 11 >
 
     }
 
@@ -4314,8 +4314,8 @@
       au < manifest ; exists ; 2009 ; International Journal of Management and Enterprise Development Volume 7 ; 7 >
       au < manifest ; exists ; 2010 ; International Journal of Management and Enterprise Development Volume 8 ; 8 >
       au < manifest ; exists ; 2010 ; International Journal of Management and Enterprise Development Volume 9 ; 9 >
-      au < crawling ; exists ; 2011 ; International Journal of Management and Enterprise Development Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; International Journal of Management and Enterprise Development Volume 11 ; 11 >
+      au < testing ; exists ; 2011 ; International Journal of Management and Enterprise Development Volume 10 ; 10 >
+      au < testing ; exists ; 2011 ; International Journal of Management and Enterprise Development Volume 11 ; 11 >
 
     }
 
@@ -4331,7 +4331,7 @@
       param[journal_issn] = 1754-2324
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Management and Network Economics Volume 1 ; 1 >
-      au < crawling ; exists ; 2011 ; International Journal of Management and Network Economics Volume 2 ; 2 >
+      au < testing ; exists ; 2011 ; International Journal of Management and Network Economics Volume 2 ; 2 >
 
     }
 
@@ -4350,7 +4350,7 @@
       au < manifest ; exists ; 2006-2007 ; International Journal of Management Concepts and Philosophy Volume 2 ; 2 >
       au < manifest ; exists ; 2008-2009 ; International Journal of Management Concepts and Philosophy Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; International Journal of Management Concepts and Philosophy Volume 4 ; 4 >
-      au < crawling ; exists ; 2011 ; International Journal of Management Concepts and Philosophy Volume 5 ; 5 >
+      au < testing ; exists ; 2011 ; International Journal of Management Concepts and Philosophy Volume 5 ; 5 >
 
     }
 
@@ -4365,7 +4365,7 @@
 
       param[journal_issn] = 1752-850X
       
-      au < crawling ; exists ; 2011 ; International Journal of Management Development Volume 1 ; 1 >
+      au < testing ; exists ; 2011 ; International Journal of Management Development Volume 1 ; 1 >
 
     }
 
@@ -4384,7 +4384,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Management in Education Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Management in Education Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; International Journal of Management in Education Volume 4 ; 4 >
-      au < crawling ; exists ; 2011 ; International Journal of Management in Education Volume 5 ; 5 >
+      au < testing ; exists ; 2011 ; International Journal of Management in Education Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; International Journal of Management in Education Volume 6 ; 6 >
 
     }
