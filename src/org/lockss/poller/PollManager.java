@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.235 2012-07-16 22:46:43 barry409 Exp $
+ * $Id: PollManager.java,v 1.236 2012-07-16 23:09:16 barry409 Exp $
  */
 
 /*
@@ -321,7 +321,6 @@ public class PollManager
   static class PollReq {
     ArchivalUnit au;
     int priority = 0;
-    PollSpec spec;
 
     public PollReq(ArchivalUnit au) {
       this.au = au;
@@ -329,11 +328,6 @@ public class PollManager
 
     public PollReq setPriority(int val) {
       priority = val;
-      return this;
-    }
-
-    public PollReq setPollSpec(PollSpec spec) {
-      this.spec = spec;
       return this;
     }
 
@@ -2278,11 +2272,9 @@ public class PollManager
     }
   }
 
-  public void enqueueHighPriorityPoll(ArchivalUnit au, PollSpec spec) 
+  public void enqueueHighPriorityPoll(ArchivalUnit au) 
       throws NotEligibleException {
-    PollReq req = new PollManager.PollReq(au)
-      .setPollSpec(spec)
-      .setPriority(2);
+    PollReq req = new PollManager.PollReq(au).setPriority(2);
     enqueueHighPriorityPoll(req);
   }
 

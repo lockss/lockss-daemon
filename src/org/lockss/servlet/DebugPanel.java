@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.27 2012-07-13 17:33:59 barry409 Exp $
+ * $Id: DebugPanel.java,v 1.28 2012-07-16 23:09:16 barry409 Exp $
  */
 
 /*
@@ -375,9 +375,8 @@ public class DebugPanel extends LockssServlet {
 
   private void callV3ContentPoll(ArchivalUnit au) {
     log.debug("Enqueuing a V3 Content Poll on " + au.getName());
-    PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
     try {
-      pollManager.enqueueHighPriorityPoll(au, spec);
+      pollManager.enqueueHighPriorityPoll(au);
       statusMsg = "Enqueued V3 poll for " + au.getName();
     } catch (PollManager.NotEligibleException e) {
       errMsg = "Failed to enqueue poll on "
