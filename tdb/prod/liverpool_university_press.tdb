@@ -223,12 +223,14 @@
     param[base_url] = http://liverpool.metapress.com/
     param[journal_issn] = 1754-3800 
     implicit < status ; year ; name ; param[volume_name] > 
+    comment[down] = publisher has been moved to Berghahn Journals
 
-    au < manifest ; 2008 ; European Comic Art Volume 1 ; 1 >
-    au < ready ; 2009 ; European Comic Art Volume 2 ; 2 >
-    au < ready ; 2010 ; European Comic Art Volume 3 ; 3 >    
-    au < released ; 2011 ; European Comic Art Volume 4 ; 4 >
-    au < expected ; 2012 ; European Comic Art Volume 5 ; 5 >
+
+    au < down ; 2008 ; European Comic Art Volume 1 ; 1 >
+    au < down ; 2009 ; European Comic Art Volume 2 ; 2 >
+    au < down ; 2010 ; European Comic Art Volume 3 ; 3 >    
+    au < down ; 2011 ; European Comic Art Volume 4 ; 4 >
+    au < down ; 2012 ; European Comic Art Volume 5 ; 5 >
 
   }  
   
