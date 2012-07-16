@@ -193,6 +193,25 @@
   {
   
     title <
+      name = European Comic Art ;
+      issn = 1754-3797 ;
+      eissn = 1754-3800
+    >
+    
+    param[journal_id] = eca
+    param[journal_issn] = 1754-3797
+     
+    au < manifest ; 2008 ; European Comic Art Volume 1 ; 1 >
+    au < manifest ; 2009 ; European Comic Art Volume 2 ; 2 >
+    au < manifest ; 2010 ; European Comic Art Volume 3 ; 3 >
+    au < manifest ; 2011 ; European Comic Art Volume 4 ; 4 >
+    au < manifest ; 2012 ; European Comic Art Volume 5 ; 5 >
+    
+  }
+
+  {
+  
+    title <
       name = European Judaism ;
       issn = 0014-3006 ;
       eissn = 1752-2323 ;
