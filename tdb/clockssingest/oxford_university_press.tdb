@@ -11350,7 +11350,7 @@
     param[base_url] = http://jrr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; exists ; 2012 ; Journal of Radiation Research Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2012 ; Journal of Radiation Research Volume 53 ; 53 ; >
 
   }
 
@@ -15098,7 +15098,7 @@
     au < released ; crawling ; 2011 ; Proceedings of the London Mathematical Society Volume 102 ; 102 ; >
     au < released ; crawling ; 2011 ; Proceedings of the London Mathematical Society Volume 103 ; 103 ; >
     au < crawling ; exists ; 2012 ; Proceedings of the London Mathematical Society Volume 104 ; 104 ; >
-    au < expected ; exists ; 2012 ; Proceedings of the London Mathematical Society Volume 105 ; 105 ; >
+    au < manifest ; exists ; 2012 ; Proceedings of the London Mathematical Society Volume 105 ; 105 ; >
 
     }
 
