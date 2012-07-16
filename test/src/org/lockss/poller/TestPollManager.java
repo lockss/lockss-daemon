@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.104 2012-07-12 22:34:53 barry409 Exp $
+ * $Id: TestPollManager.java,v 1.105 2012-07-16 22:46:43 barry409 Exp $
  */
 
 /*
@@ -464,9 +464,9 @@ public class TestPollManager extends LockssTestCase {
 			     aus[11], aus[9], aus[1], aus[3],
 			     aus[5], aus[7], aus[12]);
     assertEquals(exp, weightOrder());
-    List queue = pollmanager.pollQueue;
+    List<ArchivalUnit> queue = pollmanager.pollQueue;
     assertEquals(8, queue.size());
-    assertTrue(queue+"", exp.containsAll(ausOfReqs(queue)));
+    assertTrue(queue+"", exp.containsAll(queue));
 
     p.put(V3Poller.PARAM_AT_RISK_AU_INSTANCES, atRiskString);
     p.put(PollManager.PARAM_POLL_WEIGHT_AT_RISK_PEERS_CURVE,
@@ -494,23 +494,23 @@ public class TestPollManager extends LockssTestCase {
     // enqueue a high priority poll, ensure it's now first
     pollmanager.enqueueHighPriorityPoll(aus[2], null);
     pollmanager.rebuildPollQueue();
-    assertEquals(aus[2], pollmanager.pollQueue.get(0).getAu());
+    assertEquals(aus[2], pollmanager.pollQueue.get(0));
   }
 
-  List weightOrder() {
-    final Map<PollManager.PollReq,Double> weightMap =
+  List<ArchivalUnit> weightOrder() {
+    final Map<ArchivalUnit,Double> weightMap =
       pollmanager.getWeightMap();
-    ArrayList<PollManager.PollReq> queued = new ArrayList(weightMap.keySet());
-    Collections.sort(queued, new Comparator<PollManager.PollReq>() {
-	public int compare(PollManager.PollReq req1,
-			   PollManager.PollReq req2) {
-	  int res = - weightMap.get(req1).compareTo(weightMap.get(req2)); 
+    ArrayList<ArchivalUnit> queued = new ArrayList(weightMap.keySet());
+    Collections.sort(queued, new Comparator<ArchivalUnit>() {
+	public int compare(ArchivalUnit au1,
+			   ArchivalUnit au2) {
+	  int res = - weightMap.get(au1).compareTo(weightMap.get(au2)); 
 	  if (res == 0) {
-	    res = req1.getAu().getAuId().compareTo(req2.getAu().getAuId());
+	    res = au1.getAuId().compareTo(au2.getAuId());
 	  }
 	  return res;
 	}});
-    return ausOfReqs(queued);
+    return queued;
   }
 
   List<ArchivalUnit> ausOfReqs(List<PollManager.PollReq> reqs) {
@@ -719,7 +719,7 @@ public class TestPollManager extends LockssTestCase {
     }
 
     @Override
-    protected List weightedRandomSelection(Map weightMap, int n) {
+      protected List<ArchivalUnit> weightedRandomSelection(Map<ArchivalUnit, Double> weightMap, int n) {
       log.debug("weightMap: " + weightMap);
       this.weightMap = weightMap;
       return super.weightedRandomSelection(weightMap, n);

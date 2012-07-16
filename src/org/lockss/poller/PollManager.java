@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.234 2012-07-13 18:23:31 barry409 Exp $
+ * $Id: PollManager.java,v 1.235 2012-07-16 22:46:43 barry409 Exp $
  */
 
 /*
@@ -310,9 +310,11 @@ public class PollManager
   Deadline timeToRebuildPollQueue = Deadline.in(0);
   Deadline startOneWait = Deadline.in(0);
 
-  Object queueLock = new Object();	// lock for sharedRateReqs and
-					// pollQueue
-  protected List<PollReq> pollQueue = new ArrayList<PollReq>();
+  Object queueLock = new Object();	// lock for pollQueue
+  /**
+   * The processed list of AUs, in the order they will be polled.
+   */
+  protected List<ArchivalUnit> pollQueue = new ArrayList<ArchivalUnit>();
   Map<ArchivalUnit,PollReq> highPriorityPollRequests =
     Collections.synchronizedMap(new ListOrderedMap());
 
@@ -2201,10 +2203,10 @@ public class PollManager
       if (activePollers >= maxSimultaneousPollers) {
 	startOneWait.expireIn(paramMaxPollersSleep);
       } else {
-	PollReq req = nextReq();
-	if (req != null) {
-	  startPoll(req);
-	  highPriorityPollRequests.remove(req.au);
+	ArchivalUnit au = nextAu();
+	if (au != null) {
+	  startPoll(au);
+	  highPriorityPollRequests.remove(au);
 	  return true;
 	} else {
 	  startOneWait.expireIn(paramQueueEmptySleep);
@@ -2233,33 +2235,33 @@ public class PollManager
   }
 
 
-  PollReq nextReq() throws InterruptedException {
+  ArchivalUnit nextAu() throws InterruptedException {
     boolean rebuilt = rebuildPollQueueIfNeeded();
-    PollReq res = nextReqFromBuiltQueue();
-    if (res != null) {
-      return res;
+    ArchivalUnit au = nextAuFromBuiltQueue();
+    if (au != null) {
+      return au;
     }
     if (!rebuilt) {
       rebuildPollQueue();
     }
-    return nextReqFromBuiltQueue();
+    return nextAuFromBuiltQueue();
   }
 
-  PollReq nextReqFromBuiltQueue() {
+  ArchivalUnit nextAuFromBuiltQueue() {
     synchronized (queueLock) {
       if (theLog.isDebug3()) {
-	theLog.debug3("nextReqFromBuiltQueue(), " +
+	theLog.debug3("nextAuFromBuiltQueue(), " +
 		      pollQueue.size() + " in queue");
       }
       while (!pollQueue.isEmpty()) {
-	PollReq req = pollQueue.remove(0);
+	ArchivalUnit au = pollQueue.remove(0);
 	// ignore deleted AUs
-	if (pluginMgr.isActiveAu(req.getAu())) {
-	  return req;
+	if (pluginMgr.isActiveAu(au)) {
+	  return au;
 	}
       }
       if (theLog.isDebug3()) {
-	theLog.debug3("nextReqFromBuiltQueue(): null");
+	theLog.debug3("nextAuFromBuiltQueue(): null");
       }
       return null;
     }
@@ -2271,13 +2273,9 @@ public class PollManager
 
   public List<ArchivalUnit> getPendingQueueAus() {
     rebuildPollQueueIfNeeded();
-    ArrayList<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
     synchronized (queueLock) {
-      for (PollReq req : pollQueue) {
-	aus.add(req.getAu());
-      }
+      return new ArrayList<ArchivalUnit>(pollQueue);
     }
-    return aus;
   }
 
   public void enqueueHighPriorityPoll(ArchivalUnit au, PollSpec spec) 
@@ -2319,7 +2317,7 @@ public class PollManager
   }
 
   void rebuildPollQueue0() {
-    Map weightMap = new HashMap();
+    Map<ArchivalUnit, Double> weightMap = new HashMap<ArchivalUnit, Double>();
     synchronized (queueLock) {
       pollQueue.clear();
       // XXX Until have real sort, just add these in the order they were
@@ -2335,7 +2333,7 @@ public class PollManager
 	  AuState auState = AuUtil.getAuState(req.au);
 	  highPriorityAus.add(req.au);
 	  if (isEligibleForPoll(req, auState)) {
-	    pollQueue.add(req);
+	    pollQueue.add(req.au);
 	  }
 	}
       }
@@ -2352,7 +2350,7 @@ public class PollManager
 	    if (isEligibleForPoll(req, auState)) {
 	      double weight = pollWeight(au, auState);
 	      if (weight > 0.0) {
-		weightMap.put(req, weight);
+		weightMap.put(au, weight);
 	      }
 	    } else if (theLog.isDebug3()) {
 	      theLog.debug3("Not eligible for poll: " + au);
@@ -2374,8 +2372,10 @@ public class PollManager
     }
   }
 
-  protected List weightedRandomSelection(Map weightMap, int n) {
-    return CollectionUtil.weightedRandomSelection(weightMap, n);
+  // testing will override.
+  protected List<ArchivalUnit>
+      weightedRandomSelection(Map<ArchivalUnit, Double> weightMap, int n) {
+    return (List<ArchivalUnit>)CollectionUtil.weightedRandomSelection(weightMap, n);
   }
 
   /** Used to convey reason an AU is ineligible to be polled to clients for
@@ -2503,8 +2503,7 @@ public class PollManager
     return peers.size();
   }
 
-  boolean startPoll(PollReq req) {
-    ArchivalUnit au = req.getAu();
+  boolean startPoll(ArchivalUnit au) {
     if (isPollRunning(au)) {
       theLog.debug("Attempted to start poll when one is already running: " +
 		   au.getName());
