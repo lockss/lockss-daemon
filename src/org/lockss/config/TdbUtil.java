@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.14 2012-07-16 21:10:49 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.15 2012-07-17 14:30:47 easyonthemayo Exp $
  */
 
 /*
@@ -234,7 +234,10 @@ public class TdbUtil {
                                                   ContentType type) {
     if (type==null) return aus;
     Collection<ArchivalUnit> ausOfType = new ArrayList<ArchivalUnit>();
-    for (ArchivalUnit au: aus) if(type.isOfType(getTdbAu(au))) ausOfType.add(au);
+    for (ArchivalUnit au: aus) {
+      TdbAu tdbAu = getTdbAu(au);
+      if(tdbAu!=null && type.isOfType(tdbAu)) ausOfType.add(au);
+    }
     return ausOfType;
   }
 
