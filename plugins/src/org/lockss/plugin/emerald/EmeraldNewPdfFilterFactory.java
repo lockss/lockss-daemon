@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldNewPdfFilterFactory.java,v 1.3 2012-07-12 04:59:43 thib_gc Exp $
+ * $Id: EmeraldNewPdfFilterFactory.java,v 1.4 2012-07-17 02:48:55 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,10 @@ import org.lockss.plugin.*;
 
 public class EmeraldNewPdfFilterFactory extends SimplePdfFilterFactory {
 
+  public EmeraldNewPdfFilterFactory() {
+    super();
+  }
+  
   @Override
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)

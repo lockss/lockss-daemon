@@ -1,5 +1,5 @@
 /*
- * $Id: MassachesettsMedicalSocietyNewPdfFilterFactory.java,v 1.3 2012-07-12 04:59:43 thib_gc Exp $
+ * $Id: MassachesettsMedicalSocietyNewPdfFilterFactory.java,v 1.4 2012-07-17 02:48:56 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,10 @@ import org.lockss.plugin.*;
 
 public class MassachesettsMedicalSocietyNewPdfFilterFactory extends SimplePdfFilterFactory {
 
+  public MassachesettsMedicalSocietyNewPdfFilterFactory() {
+    super();
+  }
+  
   @Override
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)

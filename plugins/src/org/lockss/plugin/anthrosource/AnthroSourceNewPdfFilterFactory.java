@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourceNewPdfFilterFactory.java,v 1.3 2012-07-12 04:59:43 thib_gc Exp $
+ * $Id: AnthroSourceNewPdfFilterFactory.java,v 1.4 2012-07-17 02:48:55 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,10 @@ import org.lockss.plugin.*;
 
 public class AnthroSourceNewPdfFilterFactory extends SimplePdfFilterFactory {
 
+  public AnthroSourceNewPdfFilterFactory() {
+    super();
+  }
+  
   @Override
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)

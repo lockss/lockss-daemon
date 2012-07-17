@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTransform.java,v 1.3 2012-07-12 03:58:46 thib_gc Exp $
+ * $Id: PdfTransform.java,v 1.4 2012-07-17 02:48:55 thib_gc Exp $
  */
 
 /*
@@ -35,8 +35,26 @@ package org.lockss.filter.pdf;
 import org.lockss.pdf.PdfException;
 import org.lockss.plugin.ArchivalUnit;
 
+/**
+ * <p>
+ * A transform interface for PDF-related objects. 
+ * </p>
+ * @author Thib Guicherd-Callin
+ * @param <P> The type of PDF-related object being transformed
+ * @since 1.56
+ */
 public interface PdfTransform<P> {
 
+  /**
+   * <p>
+   * Transforms an object of type <code>P</code> in place, in the
+   * context of the given archival unit.
+   * </p>
+   * @param au An archival unit.
+   * @param anObject An object of type <code>P</code>.
+   * @throws PdfException If PDF processing fails.
+   * @since 1.56
+   */
   void transform(ArchivalUnit au,
                  P anObject)
       throws PdfException;

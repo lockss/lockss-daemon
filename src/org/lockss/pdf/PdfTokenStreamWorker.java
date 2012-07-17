@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTokenStreamWorker.java,v 1.2 2012-07-11 23:53:38 thib_gc Exp $
+ * $Id: PdfTokenStreamWorker.java,v 1.3 2012-07-17 02:48:55 thib_gc Exp $
  */
 
 /*
@@ -42,18 +42,17 @@ import java.util.*;
  * </p>
  * <p>
  * At the end of the transform, the token stream is left unchanged.
- * Only a call to the token stream's
- * {@link PdfTokenStream#setTokens(List)} method. As such, it is
- * typical for subclasses of this class to implement {@link Transform}
- * &lt;{@link PdfTokenStream}&gt; (or similar) to perform a
- * transformation based on the results of this worker.
+ * Only a call to {@link PdfTokenStream#setTokens(List)} alters the
+ * stream's sequence of tokens. As such, it is typical for subclasses
+ * of this class to implement {@link Transform}&lt;{@link PdfTokenStream}&gt;
+ * (or similar) to perform a transformation based on the results of
+ * this worker.
  * </p>
  * <p>
  * Below is an example of a worker that determines if a string in the
  * token stream contains <code>"foo"</code>.
  * </p>
- * 
- * <pre>
+<pre>
 class MyWorker extends PdfTokenStreamWorker() {
   
   boolean result;
@@ -71,6 +70,7 @@ class MyWorker extends PdfTokenStreamWorker() {
   }
 
 }
+
 MyWorker worker = new MyWorker();
 worker.process(myPdfTokenStream);
 if (worker.result) {
@@ -104,12 +104,17 @@ class BadWorker extends PdfTokenStreamWorker {
   }
 
 }
+
 BadWorker worker = new BadWorker();
 worker.process(myPdfTokenStream);
 // Nothing has changed, even if worker.result is true
 </pre>
  * <p>
- * An idiom for the desired behavior is shown below.
+ * An idiom for the desired behavior is shown below. In this idiom,
+ * the transform invokes the worker, and if the worker signals it has
+ * altered its internal list of tokens, sets the stream's tokens. The
+ * caller views this as a single operation in the form of a
+ * transform.
  * </p>
 <pre>
 class MyWorkerTransform extends PdfTokenStreamWorker implements Transform<PdfTokenStream> {
@@ -139,11 +144,14 @@ class MyWorkerTransform extends PdfTokenStreamWorker implements Transform<PdfTok
   }
 
 }
+
 MyWorkerTransform workerTransform = new MyWorkerTransform();
 workerTransform.transform(myPdfTokenStream);
 </pre>
  * <p>
- * Another idiom is shown below.
+ * Another idiom is shown below. In this idiom, the caller invokes the
+ * worker, then if the worker signals it has altered its internal list
+ * of tokens, invokes the transform, which sets the stream's tokens.
  * </p>
 <pre>
 class MyWorkerTransform2 extends PdfTokenStreamWorker implements Transform<PdfTokenStream> {
@@ -177,9 +185,13 @@ if (workerTransform.result) {
 }
 </pre>
  * <p>
- * This utility class works on a single PDF token stream at a time.
- * It can be re-used but its behavior is undefined if used
- * concurrently by multiple threads.
+ * The former is easier to view as a single operation, and keeps all
+ * knowledge of the worker-transform interaction internal. The latter
+ * is more flexible in applying transformations conditionally, for
+ * instance if the worker-transform is re-used.
+ * </p>
+ * <p>
+ * This utility class can be re-used but is not thread-safe.
  * </p>
  * @author Thib Guicherd-Callin
  * @since 1.56
