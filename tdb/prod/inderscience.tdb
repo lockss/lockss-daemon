@@ -2335,7 +2335,7 @@
       
       au < ready ; 2005 ; International Journal of Embedded Systems Volume 1 ; 1 >
       au < ready ; 2006 ; International Journal of Embedded Systems Volume 2 ; 2 >
-      au < testing ; 2007-2008 ; International Journal of Embedded Systems Volume 3 ; 3 >
+      au < ready ; 2007-2008 ; International Journal of Embedded Systems Volume 3 ; 3 >
       au < ready ; 2009-2010 ; International Journal of Embedded Systems Volume 4 ; 4 >
 
     }
@@ -2357,7 +2357,7 @@
       au < ready ; 2007 ; International Journal of Emergency Management Volume 4 ; 4 >
       au < ready ; 2008 ; International Journal of Emergency Management Volume 5 ; 5 >
       au < ready ; 2009 ; International Journal of Emergency Management Volume 6 ; 6 >
-      au < testing ; 2010 ; International Journal of Emergency Management Volume 7 ; 7 >
+      au < ready ; 2010 ; International Journal of Emergency Management Volume 7 ; 7 >
       au < ready ; 2011 ; International Journal of Emergency Management Volume 8 ; 8 >
 
     }
@@ -2374,7 +2374,7 @@
       param[journal_issn] = 1741-508X
       
       au < ready ; 2002-2003 ; International Journal of Energy Technology and Policy Volume 1 ; 1 >
-      au < testing ; 2004 ; International Journal of Energy Technology and Policy Volume 2 ; 2 >
+      au < ready ; 2004 ; International Journal of Energy Technology and Policy Volume 2 ; 2 >
       au < ready ; 2005 ; International Journal of Energy Technology and Policy Volume 3 ; 3 >
       au < ready ; 2006 ; International Journal of Energy Technology and Policy Volume 4 ; 4 >
       au < ready ; 2007 ; International Journal of Energy Technology and Policy Volume 5 ; 5 >
@@ -2502,7 +2502,7 @@
       au < ready ; 2004 ; International Journal of Entrepreneurship and Innovation Management Volume 4 ; 4 >
       au < ready ; 2005 ; International Journal of Entrepreneurship and Innovation Management Volume 5 ; 5 >
       au < ready ; 2006 ; International Journal of Entrepreneurship and Innovation Management Volume 6 ; 6 >
-      au < testing ; 2007 ; International Journal of Entrepreneurship and Innovation Management Volume 7 ; 7 >
+      au < ready ; 2007 ; International Journal of Entrepreneurship and Innovation Management Volume 7 ; 7 >
       au < ready ; 2008 ; International Journal of Entrepreneurship and Innovation Management Volume 8 ; 8 >
       au < ready ; 2009 ; International Journal of Entrepreneurship and Innovation Management Volume 9 ; 9 >
       au < ready ; 2009 ; International Journal of Entrepreneurship and Innovation Management Volume 10 ; 10 >
@@ -2533,7 +2533,7 @@
       au < ready ; 2008 ; International Journal of Entrepreneurship and Small Business Volume 6 ; 6 >
       au < ready ; 2009 ; International Journal of Entrepreneurship and Small Business Volume 7 ; 7 >
       au < ready ; 2009 ; International Journal of Entrepreneurship and Small Business Volume 8 ; 8 >
-      au < testing ; 2010 ; International Journal of Entrepreneurship and Small Business Volume 9 ; 9 >
+      au < ready ; 2010 ; International Journal of Entrepreneurship and Small Business Volume 9 ; 9 >
       au < ready ; 2010 ; International Journal of Entrepreneurship and Small Business Volume 10 ; 10 >
       au < ready ; 2010 ; International Journal of Entrepreneurship and Small Business Volume 11 ; 11 >
       au < ready ; 2011 ; International Journal of Entrepreneurship and Small Business Volume 12 ; 12 >
@@ -2635,7 +2635,7 @@
 
       param[journal_issn] = 1478-7466
       
-      au < testing ; 2002 ; International Journal of Environment and Sustainable Development Volume 1 ; 1 >
+      au < ready ; 2002 ; International Journal of Environment and Sustainable Development Volume 1 ; 1 >
       au < ready ; 2003 ; International Journal of Environment and Sustainable Development Volume 2 ; 2 >
       au < ready ; 2004 ; International Journal of Environment and Sustainable Development Volume 3 ; 3 >
       au < ready ; 2005 ; International Journal of Environment and Sustainable Development Volume 4 ; 4 >
@@ -3093,9 +3093,9 @@
 
       param[journal_issn] = 1741-8488
       
-      au < testing ; 2005-2009 ; International Journal of Grid and Utility Computing Volume 1 ; 1 >
+      au < ready ; 2005-2009 ; International Journal of Grid and Utility Computing Volume 1 ; 1 >
       au < ready ; 2011 ; International Journal of Grid and Utility Computing Volume 2 ; 2 >
-      au < testing ; 2012 ; International Journal of Grid and Utility Computing Volume 3 ; 3 >
+      au < ready ; 2012 ; International Journal of Grid and Utility Computing Volume 3 ; 3 >
 
     }
 
@@ -3125,16 +3125,16 @@
 
       param[journal_issn] = 1741-5144
       
-      au < testing ; 1999 ; International Journal of Healthcare Technology and Management Volume 1 ; 1 >
-      au < testing ; 2000 ; International Journal of Healthcare Technology and Management Volume 2 ; 2 >
-      au < testing ; 2001 ; International Journal of Healthcare Technology and Management Volume 3 ; 3 >
-      au < testing ; 2002 ; International Journal of Healthcare Technology and Management Volume 4 ; 4 >
-      au < testing ; 2003 ; International Journal of Healthcare Technology and Management Volume 5 ; 5 >
-      au < testing ; 2004-2005 ; International Journal of Healthcare Technology and Management Volume 6 ; 6 >
-      au < testing ; 2006 ; International Journal of Healthcare Technology and Management Volume 7 ; 7 >
-      au < testing ; 2007 ; International Journal of Healthcare Technology and Management Volume 8 ; 8 >
-      au < testing ; 2008 ; International Journal of Healthcare Technology and Management Volume 9 ; 9 >
-      au < testing ; 2009 ; International Journal of Healthcare Technology and Management Volume 10 ; 10 >
+      au < ready ; 1999 ; International Journal of Healthcare Technology and Management Volume 1 ; 1 >
+      au < ready ; 2000 ; International Journal of Healthcare Technology and Management Volume 2 ; 2 >
+      au < ready ; 2001 ; International Journal of Healthcare Technology and Management Volume 3 ; 3 >
+      au < ready ; 2002 ; International Journal of Healthcare Technology and Management Volume 4 ; 4 >
+      au < ready ; 2003 ; International Journal of Healthcare Technology and Management Volume 5 ; 5 >
+      au < ready ; 2004-2005 ; International Journal of Healthcare Technology and Management Volume 6 ; 6 >
+      au < ready ; 2006 ; International Journal of Healthcare Technology and Management Volume 7 ; 7 >
+      au < ready ; 2007 ; International Journal of Healthcare Technology and Management Volume 8 ; 8 >
+      au < ready ; 2008 ; International Journal of Healthcare Technology and Management Volume 9 ; 9 >
+      au < ready ; 2009 ; International Journal of Healthcare Technology and Management Volume 10 ; 10 >
       au < testing ; 2010 ; International Journal of Healthcare Technology and Management Volume 11 ; 11 >
       au < ready ; 2011 ; International Journal of Healthcare Technology and Management Volume 12 ; 12 >
 
@@ -3151,17 +3151,17 @@
 
       param[journal_issn] = 1741-5152
       
-      au < testing ; 2000 ; International Journal of Heavy Vehicle Systems Volume 7 ; 7 >
-      au < testing ; 2001 ; International Journal of Heavy Vehicle Systems Volume 8 ; 8 >
-      au < testing ; 2002 ; International Journal of Heavy Vehicle Systems Volume 9 ; 9 >
-      au < testing ; 2003 ; International Journal of Heavy Vehicle Systems Volume 10 ; 10 >
-      au < testing ; 2004 ; International Journal of Heavy Vehicle Systems Volume 11 ; 11 >
-      au < testing ; 2005 ; International Journal of Heavy Vehicle Systems Volume 12 ; 12 >
-      au < testing ; 2006 ; International Journal of Heavy Vehicle Systems Volume 13 ; 13 >
-      au < testing ; 2007 ; International Journal of Heavy Vehicle Systems Volume 14 ; 14 >
-      au < testing ; 2008 ; International Journal of Heavy Vehicle Systems Volume 15 ; 15 >
-      au < testing ; 2009 ; International Journal of Heavy Vehicle Systems Volume 16 ; 16 >
-      au < testing ; 2010 ; International Journal of Heavy Vehicle Systems Volume 17 ; 17 >
+      au < ready ; 2000 ; International Journal of Heavy Vehicle Systems Volume 7 ; 7 >
+      au < ready ; 2001 ; International Journal of Heavy Vehicle Systems Volume 8 ; 8 >
+      au < ready ; 2002 ; International Journal of Heavy Vehicle Systems Volume 9 ; 9 >
+      au < ready ; 2003 ; International Journal of Heavy Vehicle Systems Volume 10 ; 10 >
+      au < ready ; 2004 ; International Journal of Heavy Vehicle Systems Volume 11 ; 11 >
+      au < ready ; 2005 ; International Journal of Heavy Vehicle Systems Volume 12 ; 12 >
+      au < ready ; 2006 ; International Journal of Heavy Vehicle Systems Volume 13 ; 13 >
+      au < ready ; 2007 ; International Journal of Heavy Vehicle Systems Volume 14 ; 14 >
+      au < ready ; 2008 ; International Journal of Heavy Vehicle Systems Volume 15 ; 15 >
+      au < ready ; 2009 ; International Journal of Heavy Vehicle Systems Volume 16 ; 16 >
+      au < ready ; 2010 ; International Journal of Heavy Vehicle Systems Volume 17 ; 17 >
       au < ready ; 2011 ; International Journal of Heavy Vehicle Systems Volume 18 ; 18 >
       au < testing ; 2012 ; International Journal of Heavy Vehicle Systems Volume 19 ; 19 >
 
@@ -3178,12 +3178,12 @@
 
       param[journal_issn] = 1740-0570
       
-      au < testing ; 2004 ; International Journal of High Performance Computing and Networking Volume 1 ; 1 >
-      au < testing ; 2004 ; International Journal of High Performance Computing and Networking Volume 2 ; 2 >
-      au < testing ; 2005 ; International Journal of High Performance Computing and Networking Volume 3 ; 3 >
-      au < testing ; 2006 ; International Journal of High Performance Computing and Networking Volume 4 ; 4 >
-      au < testing ; 2007-2008 ; International Journal of High Performance Computing and Networking Volume 5 ; 5 >
-      au < testing ; 2009-2010 ; International Journal of High Performance Computing and Networking Volume 6 ; 6 >
+      au < ready ; 2004 ; International Journal of High Performance Computing and Networking Volume 1 ; 1 >
+      au < ready ; 2004 ; International Journal of High Performance Computing and Networking Volume 2 ; 2 >
+      au < ready ; 2005 ; International Journal of High Performance Computing and Networking Volume 3 ; 3 >
+      au < ready ; 2006 ; International Journal of High Performance Computing and Networking Volume 4 ; 4 >
+      au < ready ; 2007-2008 ; International Journal of High Performance Computing and Networking Volume 5 ; 5 >
+      au < ready ; 2009-2010 ; International Journal of High Performance Computing and Networking Volume 6 ; 6 >
       au < ready ; 2011-2012 ; International Journal of High Performance Computing and Networking Volume 7 ; 7 >
 
     }
@@ -3199,8 +3199,8 @@
 
       param[journal_issn] = 1751-6536
       
-      au < testing ; 2007-2008 ; International Journal of High Performance Systems Architecture Volume 1 ; 1 >
-      au < testing ; 2009-2010 ; International Journal of High Performance Systems Architecture Volume 2 ; 2 >
+      au < ready ; 2007-2008 ; International Journal of High Performance Systems Architecture Volume 1 ; 1 >
+      au < ready ; 2009-2010 ; International Journal of High Performance Systems Architecture Volume 2 ; 2 >
       au < ready ; 2011 ; International Journal of High Performance Systems Architecture Volume 3 ; 3 >
       au < manifest ; 2012 ; International Journal of High Performance Systems Architecture Volume 4 ; 4 >
 
@@ -3217,7 +3217,7 @@
 
       param[journal_issn] = 2045-7812
       
-      au < testing ; 2012 ; International Journal of Human Factors and Ergonomics Volume 1 ; 1 >
+      au < ready ; 2012 ; International Journal of Human Factors and Ergonomics Volume 1 ; 1 >
 
     }
 
@@ -3232,7 +3232,7 @@
 
       param[journal_issn] = 1742-5557
       
-      au < testing ; 2006-2010 ; International Journal of Human Factors Modelling and Simulation Volume 1 ; 1 >
+      au < ready ; 2006-2010 ; International Journal of Human Factors Modelling and Simulation Volume 1 ; 1 >
       au < ready ; 2011 ; International Journal of Human Factors Modelling and Simulation Volume 2 ; 2 >
 
     }
@@ -3248,18 +3248,18 @@
 
       param[journal_issn] = 1741-5160
       
-      au < testing ; 2000-2001 ; International Journal of Human Resources Development and Management Volume 1 ; 1 >
-      au < testing ; 2002 ; International Journal of Human Resources Development and Management Volume 2 ; 2 >
-      au < testing ; 2003 ; International Journal of Human Resources Development and Management Volume 3 ; 3 >
-      au < testing ; 2004 ; International Journal of Human Resources Development and Management Volume 4 ; 4 >
-      au < testing ; 2005 ; International Journal of Human Resources Development and Management Volume 5 ; 5 >
-      au < testing ; 2006 ; International Journal of Human Resources Development and Management Volume 6 ; 6 >
-      au < testing ; 2007 ; International Journal of Human Resources Development and Management Volume 7 ; 7 >
-      au < testing ; 2008 ; International Journal of Human Resources Development and Management Volume 8 ; 8 >
-      au < testing ; 2009 ; International Journal of Human Resources Development and Management Volume 9 ; 9 >
-      au < testing ; 2010 ; International Journal of Human Resources Development and Management Volume 10 ; 10 >
+      au < ready ; 2000-2001 ; International Journal of Human Resources Development and Management Volume 1 ; 1 >
+      au < ready ; 2002 ; International Journal of Human Resources Development and Management Volume 2 ; 2 >
+      au < ready ; 2003 ; International Journal of Human Resources Development and Management Volume 3 ; 3 >
+      au < ready ; 2004 ; International Journal of Human Resources Development and Management Volume 4 ; 4 >
+      au < ready ; 2005 ; International Journal of Human Resources Development and Management Volume 5 ; 5 >
+      au < ready ; 2006 ; International Journal of Human Resources Development and Management Volume 6 ; 6 >
+      au < ready ; 2007 ; International Journal of Human Resources Development and Management Volume 7 ; 7 >
+      au < ready ; 2008 ; International Journal of Human Resources Development and Management Volume 8 ; 8 >
+      au < ready ; 2009 ; International Journal of Human Resources Development and Management Volume 9 ; 9 >
+      au < ready ; 2010 ; International Journal of Human Resources Development and Management Volume 10 ; 10 >
       au < ready ; 2011 ; International Journal of Human Resources Development and Management Volume 11 ; 11 >
-      au < testing ; 2012 ; International Journal of Human Resources Development and Management Volume 12 ; 12 >
+      au < ready ; 2012 ; International Journal of Human Resources Development and Management Volume 12 ; 12 >
 
     }
 
@@ -3275,7 +3275,7 @@
       param[journal_issn] = 2042-7816
       
       au < ready ; 2011 ; International Journal of Hydrology Science and Technology Volume 1 ; 1 >
-      au < testing ; 2012 ; International Journal of Hydrology Science and Technology Volume 2 ; 2 >
+      au < ready ; 2012 ; International Journal of Hydrology Science and Technology Volume 2 ; 2 >
 
     }
 
@@ -3305,11 +3305,11 @@
 
       param[journal_issn] = 1753-0814
       
-      au < testing ; 2007-2008 ; International Journal of Indian Culture and Business Management Volume 1 ; 1 >
-      au < testing ; 2009 ; International Journal of Indian Culture and Business Management Volume 2 ; 2 >
-      au < testing ; 2010 ; International Journal of Indian Culture and Business Management Volume 3 ; 3 >
+      au < ready ; 2007-2008 ; International Journal of Indian Culture and Business Management Volume 1 ; 1 >
+      au < ready ; 2009 ; International Journal of Indian Culture and Business Management Volume 2 ; 2 >
+      au < ready ; 2010 ; International Journal of Indian Culture and Business Management Volume 3 ; 3 >
       au < ready ; 2011 ; International Journal of Indian Culture and Business Management Volume 4 ; 4 >
-      au < testing ; 2012 ; International Journal of Indian Culture and Business Management Volume 5 ; 5 >
+      au < ready ; 2012 ; International Journal of Indian Culture and Business Management Volume 5 ; 5 >
 
     }
 
@@ -3324,16 +3324,16 @@
 
       param[journal_issn] = 1748-5045
       
-      au < testing ; 2006 ; International Journal of Industrial and Systems Engineering Volume 1 ; 1 >
-      au < testing ; 2007 ; International Journal of Industrial and Systems Engineering Volume 2 ; 2 >
-      au < testing ; 2008 ; International Journal of Industrial and Systems Engineering Volume 3 ; 3 >
-      au < testing ; 2009 ; International Journal of Industrial and Systems Engineering Volume 4 ; 4 >
-      au < testing ; 2010 ; International Journal of Industrial and Systems Engineering Volume 5 ; 5 >
-      au < testing ; 2010 ; International Journal of Industrial and Systems Engineering Volume 6 ; 6 >
+      au < ready ; 2006 ; International Journal of Industrial and Systems Engineering Volume 1 ; 1 >
+      au < ready ; 2007 ; International Journal of Industrial and Systems Engineering Volume 2 ; 2 >
+      au < ready ; 2008 ; International Journal of Industrial and Systems Engineering Volume 3 ; 3 >
+      au < ready ; 2009 ; International Journal of Industrial and Systems Engineering Volume 4 ; 4 >
+      au < ready ; 2010 ; International Journal of Industrial and Systems Engineering Volume 5 ; 5 >
+      au < ready ; 2010 ; International Journal of Industrial and Systems Engineering Volume 6 ; 6 >
       au < ready ; 2011 ; International Journal of Industrial and Systems Engineering Volume 7 ; 7 >
       au < ready ; 2011 ; International Journal of Industrial and Systems Engineering Volume 8 ; 8 >
       au < ready ; 2011 ; International Journal of Industrial and Systems Engineering Volume 9 ; 9 >
-      au < testing ; 2012 ; International Journal of Industrial and Systems Engineering Volume 10 ; 10 >
+      au < ready ; 2012 ; International Journal of Industrial and Systems Engineering Volume 10 ; 10 >
 
     }
 
