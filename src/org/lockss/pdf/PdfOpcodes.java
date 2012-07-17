@@ -1,5 +1,5 @@
 /*
- * $Id: PdfOpcodes.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfOpcodes.java,v 1.1.2.1 2012-07-17 23:54:32 thib_gc Exp $
  */
 
 /*
@@ -79,16 +79,28 @@ public class PdfOpcodes {
   
   /**
    * <p>The {@value} opcode.</p>
-   * @since 1.56
+   * @since 1.56.3
    */
-  public static final String SET_SPACING_NEXT_LINE_SHOW_TEXT = "\"";
+  public static final String RESTORE_GRAPHICS_STATE = "Q";
+  
+  /**
+   * <p>The {@value} opcode.</p>
+   * @since 1.56.3
+   */
+  public static final String SAVE_GRAPHICS_STATE = "q";
   
   /**
    * <p>The {@value} opcode.</p>
    * @since 1.56
    */
+  public static final String SET_SPACING_NEXT_LINE_SHOW_TEXT = "\"";
+
+  /**
+   * <p>The {@value} opcode.</p>
+   * @since 1.56
+   */
   public static final String SHOW_TEXT = "Tj";
-  
+
   /**
    * <p>The {@value} opcode.</p>
    * @since 1.56
@@ -105,4 +117,5 @@ public class PdfOpcodes {
     // Prevent instantiation
   }
   
+
 }

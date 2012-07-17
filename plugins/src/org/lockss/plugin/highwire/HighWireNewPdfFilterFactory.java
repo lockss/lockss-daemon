@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireNewPdfFilterFactory.java,v 1.1.2.1 2012-07-17 02:48:30 thib_gc Exp $
+ * $Id: HighWireNewPdfFilterFactory.java,v 1.1.2.2 2012-07-17 23:54:32 thib_gc Exp $
  */
 
 /*
@@ -351,7 +351,7 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
       if (   PdfOpcodes.SHOW_TEXT.equals(operator.getOperator())
           && tokens.get(index - 1).getString().startsWith(CURRENT_AS_OF)) {
         result = true; // but don't stop()
-        tokens.set(index - 1, adapter.makeString(CURRENT_AS_OF));
+        tokens.set(index - 1, factory.makeString(CURRENT_AS_OF));
       }
     }
     
