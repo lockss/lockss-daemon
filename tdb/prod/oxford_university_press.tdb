@@ -9238,9 +9238,10 @@
     param[base_url] = http://chromsci.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Chromatographic Science Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Chromatographic Science Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; expected ; 2012 ; Journal of Chromatographic Science Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Chromatographic Science Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Chromatographic Science Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Chromatographic Science Volume 50 ; 50 >
+    
 
   }
 
