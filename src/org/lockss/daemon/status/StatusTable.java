@@ -1,10 +1,10 @@
 /*
- * $Id: StatusTable.java,v 1.59 2012-01-31 07:23:55 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.59.8.1 2012-07-17 08:43:49 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,6 +50,8 @@ public class StatusTable {
   public static final int OPTION_DEBUG_USER = 2;
   public static final OrderedObject NO_VALUE =
     new OrderedObject("-", new Long(-1));
+
+  public static final String PROP_COLUMNS = "columns";
 
   private String name;
   private String key;
@@ -255,7 +257,7 @@ public class StatusTable {
   public List<ColumnDescriptor> filterColDescs(List<ColumnDescriptor>colDescs,
 					       List<String>defaultCols) {
     List<String> cols = defaultCols;
-    String colprop = getProperty("columns");
+    String colprop = getProperty(PROP_COLUMNS);
     if (!StringUtil.isNullString(colprop)) {
       if ("*".equals(colprop) || "All".equalsIgnoreCase(colprop)) {
 	return colDescs;
@@ -395,6 +397,7 @@ public class StatusTable {
     private String color = null;
     private String footnote = null;
     private boolean bold = false;
+    private Layout layout = Layout.None;
     private String displayStr;  // if present, human-friendly display string
 
     /** Create a DisplayedValue with the specified value.  Any
@@ -480,6 +483,22 @@ public class StatusTable {
       return footnote;
     }
 
+    /** Set layout.
+     * @param layout the layout selector
+     */
+    public DisplayedValue setLayout(Layout layout) {
+      if (layout == null) {
+	throw new IllegalArgumentException("null layout");
+      }
+      this.layout = layout;
+      return this;
+    }
+
+    /** Get the layout */
+    public Layout getLayout() {
+      return layout;
+    }
+
     public String toString() {
       StringBuilder sb = new StringBuilder();
       sb.append("[StatusTable.DisplayedValue: ");
@@ -501,6 +520,8 @@ public class StatusTable {
       }	
       return sb.toString();
     }
+
+    public enum Layout {None, Column};
 
   }
 

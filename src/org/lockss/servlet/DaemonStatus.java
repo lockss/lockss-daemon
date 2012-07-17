@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.88 2012-07-02 16:26:04 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.88.2.1 2012-07-17 08:43:49 tlipkis Exp $
  */
 
 /*
@@ -727,30 +727,46 @@ public class DaemonStatus extends LockssServlet {
       // Some, but not all text formats avoid calling this with NO_VALUE
       return "";
     }
-    if (val instanceof java.util.List) {
+    Object aval = StatusTable.getActualValue(val);
+    if (aval instanceof Collection) {
       StringBuilder sb = new StringBuilder();
-      for (Iterator iter = ((java.util.List)val).iterator(); iter.hasNext(); ) {
+      for (Iterator iter = ((Collection)aval).iterator(); iter.hasNext(); ) {
 	sb.append(StatusTable.getActualValue(iter.next()));
       }
       return sb.toString();
     } else {
-      Object dispVal = StatusTable.getActualValue(val);
-      return dispVal != null ? dispVal.toString() : "(null)";
+      return aval != null ? aval.toString() : "(null)";
     }
   }
 
 
   // Handle lists
   private String getDisplayString(Object val, int type) {
-    if (val instanceof java.util.List) {
-      StringBuilder sb = new StringBuilder();
-      for (Iterator iter = ((java.util.List)val).iterator(); iter.hasNext(); ) {
-	sb.append(getDisplayString0(iter.next(), type));
-      }
-      return sb.toString();
+    if (val instanceof Collection) {
+      return getCollectionDisplayString((Collection)val,
+					StatusTable.DisplayedValue.Layout.None,
+					type);
     } else {
       return getDisplayString0(val, type);
     }
+  }
+
+  // Handle lists
+  private String getCollectionDisplayString(Collection coll,
+					    StatusTable.DisplayedValue.Layout layout,
+					    int type) {
+    StringBuilder sb = new StringBuilder();
+    for (Iterator iter = coll.iterator(); iter.hasNext(); ) {
+      sb.append(getDisplayString0(iter.next(), type));
+      switch (layout) {
+      case Column:
+	if (iter.hasNext()) {
+	  sb.append("<br>");
+	}
+      default:
+      }
+    }
+    return sb.toString();
   }
 
   // Process References and other links
@@ -816,16 +832,22 @@ public class DaemonStatus extends LockssServlet {
   // add display attributes from a DisplayedValue
   private String getDisplayString1(Object val, int type) {
     if (val instanceof StatusTable.DisplayedValue) {
-      StatusTable.DisplayedValue aval = (StatusTable.DisplayedValue)val;
-      String str = aval.hasDisplayString()
-	? HtmlUtil.htmlEncode(aval.getDisplayString())
-	: getDisplayString1(aval.getValue(), type);
-      String color = aval.getColor();
-      String footnote = aval.getFootnote();
+      StatusTable.DisplayedValue dval = (StatusTable.DisplayedValue)val;
+      Object innerVal = dval.getValue();
+      if (innerVal instanceof Collection) {
+	return getCollectionDisplayString((Collection)innerVal,
+					  dval.getLayout(),
+					  type);
+      }
+      String str = dval.hasDisplayString()
+	? HtmlUtil.htmlEncode(dval.getDisplayString())
+	: getDisplayString1(innerVal, type);
+      String color = dval.getColor();
+      String footnote = dval.getFootnote();
       if (color != null) {
 	str = "<font color=" + color + ">" + str + "</font>";
       }
-      if (aval.getBold()) {
+      if (dval.getBold()) {
 	str = "<b>" + str + "</b>";
       }
       if (footnote != null) {

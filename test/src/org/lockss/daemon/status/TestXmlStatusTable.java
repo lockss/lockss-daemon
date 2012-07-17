@@ -1,10 +1,10 @@
 /*
- * $Id: TestXmlStatusTable.java,v 1.15 2012-07-02 16:20:10 tlipkis Exp $
+ * $Id: TestXmlStatusTable.java,v 1.15.2.1 2012-07-17 08:43:49 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -98,6 +98,8 @@ public class TestXmlStatusTable extends LockssTestCase {
       {new Integer(99980), new StatusTable.DisplayedValue("raw value", "disp value")},
       {new StatusTable.SrvLink(new Integer(99990), srvDescr, null),
        ListUtil.list("cc", new StatusTable.Reference("x1", "tt", "k42"))},
+      {new Integer(99990),
+       new StatusTable.DisplayedValue(ListUtil.list("int1", "out2")).setLayout(StatusTable.DisplayedValue.Layout.Column)},
     };
 
 
