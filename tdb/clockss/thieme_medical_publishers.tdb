@@ -3,49 +3,305 @@
   publisher <
     name = Thieme Medical Publishers
   >
+  param[base_url] = https://www.thieme-connect.com/
+  plugin = needs.plugin
+  implicit < status1 ; status ; year ; name ; param[year] >
+  
+  
+  {
+  
+    title <
+       name = AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie ;
+       issn = 0939-2661 ;
+       eissn = 1439-1074
+       
+     > 
+    param[journal_id] = 10.1055/s-00000001
+    comment[years] = 1991-current
+    
+    au < manifest ; exists ; 1991 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1991 ; 1991 >  
+    au < manifest ; exists ; 1992 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1992 ; 1992 >  
+    au < manifest ; exists ; 1993 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1993 ; 1993 >  
+    au < manifest ; exists ; 1994 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1994 ; 1994 >  
+    au < manifest ; exists ; 1995 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1995 ; 1995 >  
+    au < manifest ; exists ; 1996 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1996 ; 1996 >  
+    au < manifest ; exists ; 1997 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1997 ; 1997 >  
+    au < manifest ; exists ; 1998 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1998 ; 1998 >  
+    au < manifest ; exists ; 1999 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1999 ; 1999 >  
+    au < manifest ; exists ; 2000 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2000 ; 2000 >  
+    au < manifest ; exists ; 2001 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2001 ; 2001 >  
+    au < manifest ; exists ; 2002 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2002 ; 2002 >  
+    au < manifest ; exists ; 2003 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2003 ; 2003 >  
+    au < manifest ; exists ; 2004 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2004 ; 2004 >  
+    au < manifest ; exists ; 2005 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2005 ; 2005 >  
+    au < manifest ; exists ; 2006 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2006 ; 2006 >  
+    au < manifest ; exists ; 2007 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2007 ; 2007 >  
+    au < manifest ; exists ; 2008 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2008 ; 2008 >  
+    au < manifest ; exists ; 2009 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2009 ; 2009 >  
+    au < manifest ; exists ; 2010 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2010 ; 2010 > 
+    au < manifest ; exists ; 2011 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2011 ; 2011 >  
+    au < manifest ; exists ; 2012 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2012 ; 2012 >  
+  
+  }
+  
+  
+  {
+     title < 
+       name = Anästhesiologie, Intensivmedizin, Notfallmedizin ;
+       issn = 0174-1837 ;
+       eissn = 1439-1074
+       
+     > 
+    param[journal_id] = 10.1055/s-00000001
+    comment[years] = 1980-1990
+    
+    au < manifest ; exists ; 1980 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1980 ; 1980 >  
+    au < manifest ; exists ; 1981 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1981 ; 1981 >  
+    au < manifest ; exists ; 1982 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1982 ; 1982 >  
+    au < manifest ; exists ; 1983 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1983 ; 1983 >  
+    au < manifest ; exists ; 1984 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1984 ; 1984 >  
+    au < manifest ; exists ; 1985 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1985 ; 1985 >  
+    au < manifest ; exists ; 1986 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1986 ; 1986 >  
+    au < manifest ; exists ; 1987 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1987 ; 1987 >  
+    au < manifest ; exists ; 1988 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1988 ; 1988 >  
+    au < manifest ; exists ; 1989 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1989 ; 1989 >  
+    au < manifest ; exists ; 1990 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1990 ; 1990 >  
+  
+  }
+  
+  { 
+    title <
+      name = Aktuelle Dermatologie ;
+      issn = 0340-2541 ;
+      eissn = 1438-938X
+       
+     > 
+    param[journal_id] = 10.1055/s-00000002
+    comment[years] = 2001-current
+    
+    au < manifest ; exists ; 2001 ; Aktuelle Dermatologie 2001 ; 2001 >  
+    au < manifest ; exists ; 2002 ; Aktuelle Dermatologie 2002 ; 2002 >  
+    au < manifest ; exists ; 2003 ; Aktuelle Dermatologie 2003 ; 2003 >  
+    au < manifest ; exists ; 2004 ; Aktuelle Dermatologie 2004 ; 2004 >  
+    au < manifest ; exists ; 2005 ; Aktuelle Dermatologie 2005 ; 2005 >  
+    au < manifest ; exists ; 2006 ; Aktuelle Dermatologie 2006 ; 2006 >  
+    au < manifest ; exists ; 2007 ; Aktuelle Dermatologie 2007 ; 2007 >  
+    au < manifest ; exists ; 2008 ; Aktuelle Dermatologie 2008 ; 2008 >  
+    au < manifest ; exists ; 2009 ; Aktuelle Dermatologie 2009 ; 2009 >  
+    au < manifest ; exists ; 2010 ; Aktuelle Dermatologie 2010 ; 2010 >  
+    au < manifest ; exists ; 2011 ; Aktuelle Dermatologie 2011 ; 2011 >  
+    au < manifest ; exists ; 2012 ; Aktuelle Dermatologie 2012 ; 2012 >  
+    
+  } 
+  
+  {
+    title <
+      name = Aktuelle Ernährungsmedizin ;
+      issn = 0341-0501 ;
+      eissn = 1438-9916
+      
+     >
+    param[journal_id] = 10.1055/s-00000003
+    comment[years] = 2001-current
+    
+    au < manifest ; exists ; 2001 ; Aktuelle Ernährungsmedizin 2001 ; 2001 >  
+    au < manifest ; exists ; 2002 ; Aktuelle Ernährungsmedizin 2002 ; 2002 >  
+    au < manifest ; exists ; 2003 ; Aktuelle Ernährungsmedizin 2003 ; 2003 >  
+    au < manifest ; exists ; 2004 ; Aktuelle Ernährungsmedizin 2004 ; 2004 >  
+    au < manifest ; exists ; 2005 ; Aktuelle Ernährungsmedizin 2005 ; 2005 >  
+    au < manifest ; exists ; 2006 ; Aktuelle Ernährungsmedizin 2006 ; 2006 >  
+    au < manifest ; exists ; 2007 ; Aktuelle Ernährungsmedizin 2007 ; 2007 >  
+    au < manifest ; exists ; 2008 ; Aktuelle Ernährungsmedizin 2008 ; 2008 >  
+    au < manifest ; exists ; 2009 ; Aktuelle Ernährungsmedizin 2009 ; 2009 >  
+    au < manifest ; exists ; 2010 ; Aktuelle Ernährungsmedizin 2010 ; 2010 >  
+    au < manifest ; exists ; 2011 ; Aktuelle Ernährungsmedizin 2011 ; 2011 >  
+    au < manifest ; exists ; 2012 ; Aktuelle Ernährungsmedizin 2012 ; 2012 >  
+      
+  }
+  
+  {
+    title <
+      name = Aktuelle Neurologie ;
+      issn = 0302-4350 ;
+      eissn = 1438-9428
+      
+    >
+    param[journal_id] = 10.1055/s-00000004
+    comment[years] = 1980-current
+    
+    au < manifest ; exists ; 2012 ; Aktuelle Neurologie 2012 ; 2012 >   
+           
+  }
+  
+  {
+    title <
+      name =  Aktuelle Rheumatologie ;
+      issn = 0341-051X ;
+      eissn = 1438-9940
+      
+    >
+    param[journal_id] = 10.1055/s-00000005
+    comment[years] = 1980-current
+       
+      
+  }
 
   {
   
-    title < 
-      name = AJP Reports ;
-      issn = 2157-6998 
+    title <
+      name = Aktuelle Traumatologie ;
+      issn = 0044-6173 ;
+      eissn = 1438-9436
+      
+   >
+   param[journal_id] = 10.1055/s-00000006
+   comment[years] = 2001-current
+   
+   }
+   
+   {
+     title <
+       name = Aktuelle Urologie ;
+       issn = 0001-7868 ;
+       eissn = 1438-8820
+       
     >
+    param[journal_id] = 10.1055/s-00000007
+    comment[years] = 1980-current   
+
+   }
+  
+   {
+     title <
+       name = Allgemein- und Viszeralchirurgie up2date ;
+       issn = 1611-6437 ;
+       eissn = 1611-6461
+       
+     >
+     param[journal_id] = 10.1055/s-00000147
+     comment[years] = 2007-current  
+       
+   }     
+  
+   {
+    title <
+      name = Allgemeine Homöopathische Zeitung ;
+      issn = 1438-2563 ;
+      eissn = 1439-8990
+      
+    >
+    param[journal_id] = 10.1055/s-00000008
+    comment[years] = 1948-current
     
+    }
+    
+    {
+      title <
+        name = American Journal of Perinatology ;
+        issn = 0735-1631 ;
+        eissn = 1098-8785
+        
+      >  
+      param[journal_id] = 10.1055/s-00000009
+      comment[years] = 1983-current
+        
+   }     
+  
+   {
+    title < 
+      name = American Journal of Perinatology Reports ;
+      issn = 2157-6998 ;
+      eissn = 2157-7005
+       
+    >
+    param[journal_id] = 10.1055/s-00000169
+    comment[years] = 2011-current
+    
+   }
+      
+   {
+    title <
+      name = Arzneimittelforschung ;
+      issn = 0004-4172 ;
+      eissn = 1616-7066
+    
+    >
+    param[journal_id] = 10.1055/s-00000175
+    comment[years] = 1999-current  
+    comment[0] = includes Arzneimittelforschung Drug Research
+    
+    
+   }    
+  
+   {
+    title <
+      name = Augenheilkunde up2date ;
+      issn = 1616-9719 ;
+      eissn = 1616-9735
+    
+    >
+    param[journal_id] = 10.1055/s-00000174
+    comment[years] = 2011-current
+  
+  
+  
+  }
+  
+  
+  {
+    title <
+      name = B&G Bewegungstherapie und Gesundheitssport ;
+      issn = 1613-0863 ;
+      eissn = 1613-3269
+    
+    >
+    param[journal_id] = 10.1055/s-00000119
+    comment[years] =  2004-current
+  
+  
+  
   }
   
   {
-  
-    title < 
-      name = American Journal of Perinatology ;
-      issn = 0735-1631
-    >
+    title <
+      name = Balint Journal ;
+      issn = 1439-5142 ;
+      eissn = 1439-9008
     
+    >
+    param[journal_id] = 10.1055/s-00000114
+    comment[years] = 2001-current 
+  
+  
+  
   }
   
-  {
-  
-    title < 
-      name = Arzneimittelforschung Drug Research ;
-      issn = 0004-4172
-    >
-    
-  }
   
   {
-  
-    title < 
-      name = Central European Neurosurgery ;
-      issn = 1868-4904 
-    >
+    title <
+      name = Central European Neurosurgery - Zentralblatt für Neurochirurgie ;
+      issn = 1438-9746 ;
+      eissn = 0044-4251
     
+    >
+    param[journal_id] = 10.1055/s-00000110
+    comment[years] = 2000-2008
+    comment[0] = combined with Journal of Neurological Surgery Part A - Central European Neorosurgery in 2012
+  
+  
   }
   
   {
   
     title < 
       name = Clinics in Colon and Rectal Surgery ;
-      issn = 1531-0043 
+      issn = 1531-0043 ;
+      eissn = 1530-9681
+      
     >
+    param[journal_id] = 10.1055/s-00000049
+    comment[years] = 2001-current
+    
     
   }
   
@@ -53,26 +309,241 @@
   
     title < 
       name = Craniomaxillofacial Trauma & Reconstruction ;
-      issn = 1943-3875 
+      issn = 1943-3875 ;
+      eissn = 1943-3883
+       
     >
+    param[journal_id] = 10.1055/s-00000151
+    comment[years] = 2008-current
     
+  }
+  
+  {
+    title <
+      name = Deutsche Gesellschaft für Unfallchirurgie - Mitteilungen und Nachrichten ;
+      issn = 1436-6142 ;
+      eissn = 1438-9576
+    
+    >
+    param[journal_id] = 10.1055/s-00000176
+    comment[years] = 2011-current
+  
+  }
+  
+  {
+    title <
+      name = Deutsche Heilpraktiker-Zeitschrift ;
+      issn = 1862-2267 ;
+      eissn = 1862-2275
+    
+    >
+    param[journal_id] = 10.1055/s-00000135
+    comment[years] = 2006-current
+  
+  
+  }
+  {
+    title <
+      name = Deutsche Zeitschrift für Akupunktur ;
+      issn = 0415-6412 ;
+      eissn = 1439-4359
+    
+    >
+    param[journal_id] = 10.1055/s-00000010
+    comment[years] = 2000-2002
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Deutsche Zeitschrift für Onkologie ;
+      issn = 1617-5891 ;
+      eissn = 1439-0930
+    
+    >
+    param[journal_id] = 10.1055/s-00000097
+    comment[years] = 2001-current
+  
+  }
+  
+  {
+    title <
+      name = Zeitschrift für Onkologie ;
+      issn = 1432-2919 
+    
+    >
+    param[journal_id] = 10.1055/s-00000097
+    comment[years] = 2000
+   
+  
+  }
+  
+  {
+    title <
+      name = Diabetes aktuell ;
+      issn = 1861-6089 ;
+      eissn = 1864-1733
+    
+    >
+    param[journal_id] = 10.1055/s-00000146
+    comment[years] = 2007-current  
+  
+  }
+  
+  {
+    title <
+      name = Diabetologie und Stoffwechsel ;
+      issn = 1861-9002 ;
+      eissn = 1861-9010
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000134
+    comment[years] = 2006-current  
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Dialyse aktuell ;
+      issn = 1434-0704 ;
+      eissn = 1860-3300
+    
+    >
+    param[journal_id] = 10.1055/s-00000145
+    comment[years] = 2007-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = DMW - Deutsche Medizinische Wochenschrift ;
+      issn = 0012-0472 ;
+      eissn = 1439-4413
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000011
+    comment[years] = 1875-current  
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = DO - Deutsche Zeitschrift für Osteopathie ;
+      issn = 1610-5044 ;
+      eissn = 1613-3781
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000120
+    comment[years] = 2003-current  
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Endo-Praxis ;
+      issn = 0177-4077 ;
+      eissn = 1611-6429
+      
+    >
+    param[journal_id] = 10.1055/s-00000136
+    comment[years] = 2006-current  
+  
+  
+  
   }
   
   {
   
     title < 
       name = Endoscopy ;
-      issn = 0013-726X
+      issn = 0013-726X ;
+      eissn = 1438-8812
+      
     >
+    param[journal_id] = 10.1055/s-00000012
+    comment[years] = 1969-current
     
+  }
+  
+  {
+    title <
+      name = Endoskopie heute ;
+      issn = 0933-811X ;
+      eissn = 1439-2577
+      
+    >
+    param[journal_id] = 10.1055/s-00000013
+    comment[years] = 2002-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Erfahrungsheilkunde ;
+      issn = 0014-0082 ;
+      eissn = 1439-4294
+    
+    >
+    param[journal_id] = 10.1055/s-00000014
+    comment[years] = 2000-current
+  
+  
+  
+  }
+
+  {
+    title <
+      name = Ergopraxis ;
+      issn = 1439-2283 ;
+      eissn = 1869-5507
+      
+    >
+    param[journal_id] = 10.1055/s-00000163
+    comment[years] = 2008-current  
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Ernährung & Medizin ;
+      issn = 1439-1635 ;
+      eissn = 1438-9002
+    
+    >
+    param[journal_id] = 10.1055/s-00000093
+    comment[years] = 2003-current
+  
+  
+  
   }
   
   {
   
     title < 
       name = European Journal of Pediatric Surgery ;
-      issn = 0939-7248 
+      issn = 0939-7248 ;
+      eissn = 1439-359X
+      
     >
+    param[journal_id] = 10.1055/s-00000015
+    comment[years] = 1991-current
     
   }
   
@@ -80,17 +551,40 @@
   
     title < 
       name = Evidence-Based Spine-Care Journal ;
-      issn = 1663-7976 
+      issn = 1663-7976 ;
+      eissn = 1869-4136
+       
     >
+    param[journal_id] = 10.1055/s-00000165
+    comment[years] = 2010-current
+    comment[0] = continuation of Evidence-Based Spine Surgery
     
+  }
+    
+  {
+    title <
+      name = Experimental and Clinical Endocrinology & Diabetes ;
+      issn = 0947-7349 ;
+      eissn = 1439-3646
+    
+    >
+    param[journal_id] = 10.1055/s-00000017
+    comment[years] = 1995-current
+  
+  
   }
   
   {
   
     title < 
       name = Experimental and Clinical Endocrinology & Diabetes ;
-      issn = 0947-7349 
+      issn = 0947-7349 ;
+      eissn = 1439-3646
+       
     >
+    param[journal_id] = 10.1055/s-00000017
+    comment[years] = 1995-current
+    
     
   }
   
@@ -98,169 +592,1091 @@
   
     title < 
       name = Facial Plastic Surgery ;
-      issn = 0736-6825 
+      issn = 0736-6825 ;
+      eissn = 1098-8793
+      
     >
+    param[journal_id] = 10.1055/s-00000018
+    comment[years] = 1983-current
     
+  }
+  
+  {
+    title <
+      name = Flugmedizin - Tropenmedizin - Reisemedizin - FTR ;
+      issn = 1864-4538 ;
+      eissn = 1864-175X
+    
+    >
+    param[journal_id] = 10.1055/s-00000148
+    comment[years] = 2007-current 
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Fortschritte der Neurologie - Psychiatrie ;
+      issn = 0720-4299 ;
+      eissn = 1439-3522
+    
+    >
+    param[journal_id] = 10.1055/s-00000019
+    comment[years] = 1980-current  
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Frauenheilkunde up2date ;
+      issn = 1439-3719 ;
+      eissn = 1611-650X
+      
+    >
+    param[journal_id] = 10.1055/s-00000142
+    comment[years] = 2007-current  
+  
+  
+   }
+  
+   {
+    title <
+      name = Gastroenterologie up2date ;
+      issn = 1616-9670 ;
+      eissn = 1616-9727
+    
+    >
+    param[journal_id] = 10.1055/s-00000133
+    comment[years] = 2005-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Geburtshilfe und Frauenheilkunde ;
+      issn = 0016-5751 ;
+      eissn = 1438-8804
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000020
+    comment[years] = 1980-current
+  
+  }
+  
+  {
+    title <
+      name = Gesundheitsökonomie & Qualitätsmanagement ;
+      issn = 1432-2625 ;
+      eissn = 1439-4049
+         
+    >
+    param[journal_id] = 10.1055/s-00000021
+    comment[years] = 2001-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Gesundheitswesen Das ;
+      issn = 0941-3790 ;
+      eissn = 1439-4421
+      
+    >
+    param[journal_id] = 10.1055/s-00000022
+    comment[years] = 2000-current
+  
+  
+  
   }
     
   {
   
     title < 
       name = Global Spine Journal ;
-      issn = 2192-5682
+      issn = 2192-5682 ;
+      eissn = 2192-5690
+      
     >
+    param[journal_id] = 10.1055/s-00000177
+    comment[years] = 2011-current
     
   }
   
   {
-  
-    title < 
-      name = Hepato-Gastroenterology ;
-      issn = 0172-6390
+    title <
+      name = Handchirurgie - Mikrochirurgie - Plastische Chirurgie ;
+      issn = 0722-1819 ;
+      eissn = 1439-3980
+       
     >
-    
+    param[journal_id] = 10.1055/s-00000023
+    comment[years] = 1999-current  
+  
+  
+  
   }
   
   {
+    title <
+      name = Hebamme Die ;
+      issn = 0932-8122 ;
+      eissn = 1439-4197    
+    
+    >
+    param[journal_id] = 10.1055/s-00000024
+    comment[years] = 2004-current
   
-    title < 
+  
+  
+  }
+  
+  {
+    title <
+      name = HNO-Informationen ;
+      issn = 0344-9319 ;
+      eissn = 1439-4537
+    
+    >
+    param[journal_id] = 10.1055/s-00000130
+    comment[years] = 2005 inclusive
+  
+  
+  
+  }
+  
+  {
+    title <
       name = Homoeopathic Links ;
-      issn = 1019-2050
-    >
+      issn = 1019-2050 ;
+      eissn = 1860-3149
     
-  }
+    >
+    param[journal_id] = 10.1055/s-00000127
+    comment[years] = 2005-current  
   
+  
+  
+  }
+    
   {
   
     title < 
       name = Hormone and Metabolic Research ;
-      issn = 0018-5043
+      issn = 0018-5043 ;
+      eissn = 1439-4286
+      
     >
+    param[journal_id] = 10.1055/s-00000025
+    comment[years] = 1969
     
+  }
+  
+  {
+    title <
+      name = Im OP ;
+      issn = 1611-7905 ;
+      eissn = 1611-7913
+    
+    >
+    param[journal_id] = 10.1055/s-00000166
+    comment[years] = 2011-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Informationen aus Orthodontie & Kieferorthopädie ;
+      issn = 0020-0336 ;
+      eissn = 1439-4200
+      
+    >
+    param[journal_id] = 10.1055/s-00000026
+    comment[years] =  2000-current
+  
+  
+  
   }
   
   {
   
     title < 
       name = InSpine ;
-      issn = 1662-3282
+      issn = 1662-3282 ;
+      eissn = 1439-3840
+      
     >
+    param[journal_id] = 10.1055/s-00000027
+    comment[years] = 2001-current
+  }
+  
+  {
+    title < 
+      name = intensiv ;
+      issn = 0942-6035 ;
+	  eissn = 1439-3840
+	  
+    >
+    param[journal_id] = 10.1055/s-00000027
+    comment[years] = 2001-2012
     
+    au < manifest ; exists ; 2012 ; intensiv 2012 ; 2012 >  
+  }
+  
+  {
+    title <
+      name = Intensivmedizin up2date ;
+      issn = 1614-4856 ;
+      eissn = 1614-6697
+    
+    >
+    param[journal_id] = 10.1055/s-00000126
+    comment[years] = 2005-current
+  
+  
+  
   }
   
    {
   
     title < 
       name = International Journal of Angiology ;
-      issn = 1061-1711
+      issn = 1061-1711 ;
+      eissn = 1615-5939
+      
     >
-    
+    param[journal_id] = 10.1055/s-00000167
+    comment[years] = 2011-current
   }
   
   {
   
     title < 
       name = International Journal of Sports Medicine ;
-      issn = 0172-4622
+      issn = 0172-4622 ;
+      eissn = 1439-3964
+      
     >
-    
+    param[journal_id] = 10.1055/s-00000028
+    comment[years] = 1980-current
   }
   
   {
   
     title < 
       name = Journal of Knee Surgery ;
-      issn = 1538-8506
+      issn = 1538-8506 ;
+      eissn = 1938-2480
+      
     >
-    
+    param[journal_id] = 10.1055/s-00000161
+    comment[years] = 2004-current
   }
-  
+
   {
   
     title < 
-      name = Journal of Neurological Surgery 
+      name = Journal of Neurological Surgery Part A : Central European Neurosurgery ;
+      issn = 2193-6315 ;
+      eissn = 2193-6323
+      
     >
+    param[journal_id] = 10.500/s.00000180
+    comment[years] = 2012-current
+    comment[0] = combines two earlier titles - Central European Surgery and Zentralblatt fur Neurochirurgie
+    comment[1] = Minimally Invasive Neurosurgery was merged with this journal
+      
     
+  }
+    
+  {
+    title <
+      name = Journal of Neurological Surgery Part : Skull Base ;
+      issn = 2193-6315 ;
+      eissn = 2193-634X
+    
+    >
+    param[journal_id] = 10.500/s.00000181
+    comment[years] = 2012-current
+    comment[0] = under the umbrella title Journal of Neurological Surgery which combines several old titles
+  
   }
   
   {
   
     title < 
       name = Journal of Neurological Surgery Reports ;
-      issn = 2193-6358
+      issn = 2193-6358 ;
+      eissn = 2193-6366
+      
     >
+    param[journal_id] = 10.500/s.00000182
+    comment[years] = 2012-current 
     
   }
   
   {
   
     title < 
-      name = Journal of Reconstructive Microsurgery  ;
-      issn = 1662-3282
+      name = Journal of Reconstructive Microsurgery ;
+      issn = 1662-3282 ;
+      eissn = 1098-8947
+      
     >
+    param[journal_id] = 10.1055/s-00000029
+    comment[years] = 1984-current
     
   }
-  
+    
   {
   
     title < 
       name = Journal of Wrist Surgery ;
-      issn = 2163-3916
+      issn = 2163-3916 ;
+      eissn = 2163-3924
+      
     >
+    param[journal_id] = 10.500/s.0032.1312044
+    comment[years] = 2012-current
     
+  }
+    
+    
+  {
+  
+    title <
+      name = JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege ;
+      issn = 1439-2569 ;
+      eissn = 1439-9164
+    
+    >
+    param[journal_id] = 10.1055/s-002-23435
+    comment[years] = 2012-current
+  
+  
+  
   }
   
   {
-  
-    title < 
-      name = Minimally Invasive Neurosurgery ;
-      issn = 0946-7211
-    >
+    title <
+      name = Kardiologie up2date ;
+      issn = 1611-6534 ;
+      eissn = 1860-3513
     
+    >
+    param[journal_id] = 10.1055/s-00000129
+    comment[years] = 2005-current
+  
+  
+  
   }
+  
+  {
+    title <
+      name = kleintier konkret ; 
+      issn = 1434-9132 ;
+      eissn = 1439-3832
+    
+    >
+    param[journal_id] = 10.1055/s-00000143
+    comment[years] = 2007-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Klinikarzt Der ;
+      issn = 0341-2350 ;
+      eissn = 1439-3859
+      
+    >
+    param[journal_id] = 10.1055/s-00000030
+    comment[years] = 2003-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Klinische Monatsblätter für Augenheilkunde ;
+      issn = 0023-2165 ;
+      eissn = 1439-3999
+      
+    >
+    param[journal_id] = 10.1055/s-00000031
+    comment[years] = 1980-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Klinische Neurophysiologie ;
+      issn = 1434-0275 ;
+      eissn = 1439-4081
+      
+    >
+    param[journal_id] = 10.1055/s-00000032
+    comment[years] = 1998
+  
+  
+  
+  }
+  
+  {
+    
+    title <
+      name = Klinische Monatsblätter für Augenheilkunde ;
+      issn = 0023-2165 ;
+      eissn = 1439-3999
+    
+    >
+    param[journal_id] = 10.1055/s-00000031
+    comment[years] = 2003-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Klinische Neurophysiologie ;
+      issn = 1434-0275 ;
+      eissn = 1439-4081
+    
+    >
+    param[journal_id] = 10.1055/s-00000032
+    comment[years] = 1997-current
+    comment[0] = this journal shares its eissn with EEG, EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete
+    comment[1] = EEG, EMG published from 1980-1997 under the same eissn 
+              
+    
+  
+  }
+  
+  {
+    title <
+      name = Klinische Pädiatrie ;
+      issn = 0300-8630 ;
+      eissn = 1439-3824
+    
+    >
+    param[journal_id] = 10.1055/s-00000034
+    comment[years] = 1980-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Krankenhaushygiene up2date ;
+      issn = 1862-5797 ;
+      eissn = 1862-5800
+    
+    >
+    param[journal_id] = 10.1055/s-00000137
+    comment[years] = 2006-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Krankenhauspsychiatrie ;
+      issn = 0937-289X ;
+      eissn = 1439-3816
+    
+    >
+    param[journal_id] = 10.1055/s-00000035
+    comment[years] = 2000-2006
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Laryngo-Rhino-Otologie ;
+      issn = 0935-8943 ;
+      eissn = 1438-8685
+      
+    >
+    param[journal_id] = 10.1055/s-00000036
+    comment[years] = 1980-current
+    comment[0] = this journal subsumed Laryngologie, Rhinologie, Otologie und ihre Grenzgebiete
+    
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Lege artis Das Magazin zur ärztlichen Weiterbildung ;
+      issn = 2191-4192 ;
+      eissn = 2191-4591
+    
+    >
+    param[journal_id] = 10.1055/s-00000168
+    comment[years] = 2011-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = manuelletherapie ;
+      issn = 1433-2671 ;
+      eissn = 1439-2348
+    
+    >
+    param[journal_id] = 10.1055/s-00000038
+    comment[years] = 2004-current
+  
+  
+  
+  }
+  
   
   {
   
     title < 
       name = Neuropediatrics ;
-      issn = 0174-304X
+      issn = 0174-304X ;
+      eissn = 1439-1899
+      
     >
+    param[journal_id] = 10.1055/s-00000041
+    comment[years] = 1980-current
     
+  }
+  
+  {
+    title <
+      name = Neuroradiologie Scan ;
+      issn = 1616-9697 ;
+      eissn = 1616-9700
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000173
+    comment[years] = 2011-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = neuroreha ;
+      issn = 1611-6496 ;
+      eissn = 1611-7654
+        
+    >
+    param[journal_id] = 10.1055/s-00000160
+    comment[years] = 2009-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Notarzt Der ;
+      issn = 0177-2309 ;
+      eissn = 1438-8693
+        
+    >
+    param[journal_id] = 10.1055/s-00000043
+    comment[years] = 1999-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Notfallmedizin up2date ;
+      issn = 1611-6550 ;
+      eissn = 1862-6955
+        
+    >
+    param[journal_id] = 10.1055/s-00000139
+    comment[years] = 2006-current 
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Nuklearmediziner Der ;
+      issn = 0723-7065 ;
+      eissn = 1439-5800
+        
+    >
+    param[journal_id] = 10.1055/s-00000045
+    comment[years] = 2002-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = OP-Journal ;
+      issn = 0178-1715 ;
+      eissn = 1439-2496
+         
+    >
+    param[journal_id] = 10.1055/s-00000046
+    comment[years] = 2000-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten ;
+      issn = 2193-5254 ;
+      eissn = 2193-5262
+    
+    >
+    param[journal_id] = 10.1055/s-00000046179
+    comment[years] = 2012-current
+    comment[0] = coming online soon as of July 2012
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Orthopädie und Unfallchirurgie up2date ;
+      issn = 1611-7859 ;
+      eissn = 1861-1982
+         
+    >
+    param[journal_id] = 10.1055/s-00000132
+    comment[years] = 2006-current
+  
+  
+  
   }
   
   {
   
     title < 
       name = Orthopedic Trauma Directions ;
-      issn = 1612-8060
+      issn = 1612-8060 ;
+      eissn = 1612-8087
+      
     >
+    param[journal_id] = 10.1055/s-00000121
+    comment[years] = 2003-current
     
+  }
+  
+  {
+    title <
+      name = Osteosynthesis & Trauma Care ;
+      issn = 1618-971X ;
+      eissn = 1618-9728
+         
+    >
+    param[journal_id] = 10.1055/s-00000048
+    comment[years] = 2002-2007
+  
+  
+  
+  }
+ 
+  {
+    title <
+      name = Osteosynthese International ;
+      issn = 0944-6516 ;
+      eissn = 1439-0868
+          
+    >
+    param[journal_id] = 10.1055/s-00000047
+    comment[years] = 2001  
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = Pädiatrie up2date ;
+      issn = 1611-6445 ;
+      eissn = 1862-9393
+         
+    >
+    param[journal_id] = 10.1055/s-00000140
+    comment[years] = 2006-current
+  
+  
+  
   }
   
   {
   
     title < 
-      name = Pharmacopsychiatry ;
-      issn = 0176-3679
+      name = Perspectives in Plastic Surgery ;
+      issn = 0892-3957 ;
+      eissn = 1521-575X
+      
     >
+    param[journal_id] = 10.1055/s-00000051
+    comment[years] = 1987-2001
     
   }
+  
+  {
+    title <
+      name = pferde spiegel ;
+      issn = 1860-3203 ;
+      eissn = 1868-0445
+         
+    >
+    param[journal_id] = 10.1055/s-00000155
+    comment[years] = 2003-current
+  
+  
+  
+  }
+
+  
+  {
+    title < 
+      name = Pharmacopsychiatry ;
+      issn = 0176-3679 ;
+      eissn = 1439-0795
+      
+    >
+    param[journal_id] = 10.1055/s-00000054
+    comment[years] = 1968-current
+    comment[0] = includes Pharmacopsychiatria and Pharmakopsychiatrie, Neuropsychopharmakologie 
+    
+    
+    
+  }
+  {
+    title <
+      name = Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin ;
+      issn = 0940-6689 ;
+      eissn = 1439-085X
+          
+    >
+    param[journal_id] = 10.1055/s-00000056
+    comment[years] = 1991-current
+  
+  
+  
+  }
+  {
+    title <
+      name = physiopraxis ;
+      issn = 1439-023X ;
+      eissn = 1869-5515
+      
+    >
+    param[journal_id] = 10.1055/s-00000162
+    comment[years] = 2010-current
+  
+  
+  
+  }
+  
+  {
+    title <
+      name = physioscience ;
+      issn = 1860-3092 ;
+      eissn = 1860-3351
+      
+    >
+    param[journal_id] = 10.1055/s-00000128
+    comment[years] = 2005-current
+  
+  
+  
+  }
+
+ 
+
+  {
+    title <
+      name = PiD - Psychotherapie im Dialog ;
+      issn = 1438-7026 ;
+      eissn = 1439-913X
+      
+    >
+    param[journal_id] = 10.1055/s-00000117
+    comment[years] = 2000-current
+  
+  
+  
+  }
+
+
+
+  {
+  
+    title <
+      name = Plant Biology ;
+      issn = 1435-8603 ;
+      eissn = 1438-8677 
+      
+    >
+    param[journal_id] = 10.1055/s-00000057
+    comment[years] = 1999-2007
+  
+  
+  
+  }
+
   
   {
   
     title < 
       name = Planta Medica ;
-      issn = 0032-0943
+      issn = 0032-0943 ;
+      eissn = 1439-0221
+      
     >
+    param[journal_id] = 10.1055/s-00000058
+    comment[years] = 1953-current
     
   }
+
+
+  {
+    title <
+      name = Pneumologie ;       
+      issn = 0934-8387 ;
+      eissn = 1438-8790
+    
+    >
+    param[journal_id] = 10.1055/s-00000059
+    comment[years] = 1999-current
+  
+  
+  
+  }
+
+
+
+  {
+    title <
+      name = PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie ;                            
+      issn = 0937-2032 ;
+      eissn = 1439-1058
+      
+    >
+    param[journal_id] = 10.1055/s-00000060
+    comment[years] = 2000-current
+  
+  
+  
+  }
+
+  {
+    title <
+      name = Psych Pflege Heute ;
+      issn = 0949-1619 ;
+      eissn = 1439-0213
+      
+    >
+    param[journal_id] = 10.1055/s-00000061
+    comment[years] = 2001-current
+  
+  
+  
+  }
+
+ 
+
+  {
+    title <
+      name = Psychiatrie und Psychotherapie up2date ;
+      issn = 1611-7867 ;
+      eissn = 1863-7175
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000141
+    comment[years] = 2007-current
+  
+  
+  
+  }
+
+
+  {
+    title <
+      name = Psychiatrische Praxis ;                     
+      issn = 0303-4259 ;
+      eissn = 1439-0876 
+      
+    >
+    param[journal_id] = 10.1055/s-00000062
+    comment[years] = 2001-current 
+  
+  
+  
+  }
+
+  {
+    title <
+      name = Psychoneuro - Psychiatrie - Neurologie - Psychotherapie ;    
+      issn = 1611-9991 ;
+      eissn = 1439-1813
+      
+    >
+    param[journal_id] = 10.1055/s-00000063
+    comment[years] = 2003-2008
+  
+  
+  
+  }
+
+
+  {
+    title <
+      name = Psychiatrische Praxis ;
+      issn = 0303-4259 ;
+      eissn = 1439-0876
+      
+    >
+    param[journal_id] = 10.1055/s-00000062
+    comment[years] = 2001-current
+  
+  
+  
+  }
+
+  {
+    title <
+      name = Psychoneuro - Psychiatrie - Neurologie - Psychotherapie ;                     
+      issn = 1611-9991 ;
+      eissn = 1439-1813
+      
+    >
+    param[journal_id] = 10.1055/s-00000063
+    comment[years] = 2003-2008
+  
+  
+  
+  }
+
+  {
+    title <
+      name = Radiologie up2date ;
+      issn = 1616-0681 ;
+      eissn = 1617-8300
+      
+    >
+    param[journal_id] = 10.1055/s-00000118
+    comment[years] = 2001-current
+  
+  
+  
+  }
+
+
+
+  {
+    title <
+      name = Radiopraxis ;
+      issn = 1866-1033 ;
+      eissn = 1866-1041
+      
+    >
+    param[journal_id] = 10.1055/s-00000159
+    comment[years] = 2008-current
+  
+  
+  
+  }
+
+  {
+    title <
+      name = Rehabilitation Die ;
+      issn = 0034-3536 ;
+      eissn = 1439-1309
+    
+    >
+    param[journal_id] = 10.1055/s-00000065
+    comment[years] = 2000-current
+  
+  
+  
+  }
+
+
+
+  {
+    title <
+      name = retten! ;                 
+      issn = 2193-2387 ;
+      eissn = 2193-2395
+      
+    >
+    param[journal_id] = 10.1055/s-002-23220
+    comment[years] = 2012-current
+  
+  
+  
+  }
+
+
+
+  {
+    title <
+      name = RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren ;                   
+      issn = 1438-9029 ;
+      eissn = 1438-9010
+    
+    >
+    param[journal_id] = 10.1055/s-00000066
+    comment[years] = 1949-current
+    comment[0] = includes Fortschritte auf dem Gebiete der Röntgenstrahlen und der Nuklearmedizin, 1956-74, and Fortschritte auf dem Gebiete der Röntgenstrahlen vereinigt mit Röntgenpraxis, 1949-55
+    
+  
+  
+  
+  }
+
+
+
   
   {
   
     title < 
       name = Seminars in Hearing ;
-      issn = 0734-0451
+      issn = 0734-0451 ;
+      eissn = 1098-8955
+      
     >
+    param[journal_id] = 10.1055/s-00000067
+    comment[years] = 1983-current
     
   }
   
@@ -268,17 +1684,24 @@
   
     title < 
       name = Seminars in Interventional Radiology ;
-      issn = 0739-9529
+      issn = 0739-9529 ;
+      eissn = 1098-8963
+      
     >
-    
+    param[journal_id] = 10.1055/s-00000068
+    comment[years] = 1984-current
   }
   
   {
   
     title < 
       name = Seminars in Liver Disease ;
-      issn = 0272-8087
+      issn = 0272-8087 ;
+      eissn = 1098-8971
+      
     >
+    param[journal_id] = 10.1055/s-00000069
+    comment[years] = 1981-current
     
   }
   
@@ -287,8 +1710,12 @@
   
     title < 
       name = Seminars in Musculoskeletal Radiology ;
-      issn = 1089-7860
+      issn = 1089-7860 ;
+      eissn = 1098-898X
+      
     >
+    param[journal_id] = 10.1055/s-00000070
+    comment[years] = 1997-current
     
   }
   
@@ -296,17 +1723,42 @@
   
     title < 
       name = Seminars in Neurology ;
-      issn = 0271-8235
+      issn = 0271-8235 ;
+      eissn = 1098-9021
+      
     >
+    param[journal_id] = 10.1055/s-00000071
+    comment[years] = 1981-current
     
   }
+
+
+  {
+    title <
+      name = Seminars in Neurosurgery ;      
+      issn = 1526-8012 ;
+      eissn = 1526-4572
+      
+    
+    >
+    param[journal_id] = 10.1055/s-00000050 
+    comment[years] = 2000-2004
+  
+  
+  
+  }
+
   
   {
   
     title < 
       name = Seminars in Plastic Surgery ;
-      issn = 1535-2188
+      issn = 1535-2188 ;
+      eissn = 1536-0067
+      
     >
+    param[journal_id] = 10.1055/s-00000051
+    comment[years] = 2002-current
     
   }
   
@@ -314,8 +1766,12 @@
   
     title < 
       name = Seminars in Reproductive Medicine ;
-      issn = 1526-8004
+      issn = 1526-8004 ;
+      eissn = 1526-4564
+      
     >
+    param[journal_id] = 10.1055/s-00000072
+    comment[years] = 2000-current
     
   }
   
@@ -323,8 +1779,12 @@
   
     title < 
       name = Seminars in Respiratory and Critical Care Medicine ;
-      issn = 1069-3424
+      issn = 1069-3424 ;
+      eissn = 1098-9048
+      
     >
+    param[journal_id] = 10.1055/s-00000075
+    comment[years] = 1994-current 
     
   }
   
@@ -332,8 +1792,12 @@
   
     title < 
       name = Seminars in Speech and Language ;
-      issn = 0734-0478
+      issn = 0734-0478 ;
+      eissn = 1098-9056
+      
     >
+    param[journal_id] = 10.1055/s-00000076
+    comment[years] = 1984-current
     
   }
   
@@ -341,8 +1805,24 @@
   
     title < 
       name = Seminars in Thrombosis and Hemostasis ;
-      issn = 0094-6176
+      issn = 0094-6176 ;
+      eissn = 1098-9064
+      
     >
+    param[journal_id] = 10.1055/s-00000077
+    comment[years] = 1974-current
+  }
+  
+    {
+  
+    title < 
+      name = Senologie - Zeitschrift für Mammadiagnostik und -therapie ;
+      issn = 1611-6453 ;
+      eissn = 1611-647X
+      
+    >
+    param[journal_id] = 10.1055/s-00000125
+    comment[years] = 2004-current
     
   }
   
@@ -350,8 +1830,12 @@
   
     title < 
       name = Skull Base ;
-      issn = 1531-5010
+      issn = 1531-5010 ;
+      eissn = 1532-0065
+      
     >
+    param[journal_id] = 10.1055/s-00000079
+    comment[years] = 2001-current
     
   }
   
@@ -359,8 +1843,64 @@
   
     title < 
       name = Skull Base Reports ;
-      issn = 2157-6971
+      issn = 2157-6971 ;
+      eissn = 2157-698X
+      
     >
+    param[journal_id] = 10.1055/s-00000170
+    comment[years] = 2157-698X
+    
+  }
+   {
+  
+    title < 
+      name = Sleep And Breathing ;
+      issn = 1520-9512 ;
+      eissn = 1522-1709
+      
+      
+    >
+    param[journal_id] = 10.1055/s-00000080
+    comment[years] = 1999-2004
+    
+  }
+  
+  {
+  
+    title < 
+      name = Sportverletzung - Sportschaden ;
+      issn = 0932-0555 ;
+      eissn = 1439-1236
+      
+    >
+    param[journal_id] = 10.1055/s-00000081
+    comment[years] = 1987-current
+    
+   }
+  
+   {
+  
+    title < 
+      name = Sprache Stimme Gehör ;
+      issn = 0342-0477 ;
+      eissn = 1439-1260
+      
+    >
+    param[journal_id] = 10.1055/s-00000082
+    comment[years] = 2000-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Suchttherapie ;
+      issn = 1439-9903 ;
+      eissn = 1439-989X
+      
+    >
+    param[journal_id] = 10.1055/s-00000115
+    comment[years] = 2000-current
     
   }
   
@@ -368,17 +1908,24 @@
   
     title < 
       name = SYNFACTS ;
-      issn = 1861-1958
+      issn = 1861-1958 ;
+      eissn = 1861-194X
+      
     >
-    
+    param[journal_id] = 10.1055/s-00000131
+    comment[years] = 2005-current
   }
   
   {
   
     title < 
       name = SYNLETT ;
-      issn = 0936-5214
+      issn = 0936-5214 ;
+      eissn = 1437-2096
+      
     >
+    param[journal_id] = 10.1055/s-00000083
+    comment[years] = 1989-current
     
   }
   
@@ -386,8 +1933,38 @@
   
     title < 
       name = SYNTHESIS ;
-      issn = 0039-7881
+      issn = 0039-7881 ;
+      eissn = 1437-210X
+      
     >
+    param[journal_id] = 10.1055/s-00000084
+    comment[years] = 1989-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = team spiegel ;
+      issn = 1868-1948 ;
+      eissn = 1868-193X
+      
+    >
+    param[journal_id] = 10.1055/s-00000156
+    comment[years] = 2003-2009
+    
+  }
+  
+  {
+  
+    title < 
+      name = team-konkret ;
+      issn = 1869-3202 ;
+      eissn = 1869-3210
+      
+    >
+    param[journal_id] = 10.1055/s-00000164
+    comment[years] = 2010-current
     
   }
   
@@ -395,8 +1972,328 @@
   
     title < 
       name = The Thoracic and Cardiovascular Surgeon ;
-      issn = 0171-6425
+      issn = 0171-6425 ;
+      eissn = 1439-1902
+      
     >
+   param[journal_id] = 10.1055/s-00000085
+   comment[years] = 1979-current 
+  }  
+
+  {
+  
+    title < 
+      name = Tierarzthelfer/in konkret ;
+      issn = 1614-8754 ;
+      eissn = 1865-3987
+      
+      
+    >
+    param[journal_id] = 10.1055/s-00000157
+    comment[years] = 2008-2009
     
   }
-}
+  
+  {
+  
+    title < 
+      name = Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie ;
+      issn = 2191-8805 ;
+      eissn = 2191-8813
+      
+    >
+    param[journal_id] = 10.1055/s-00000172
+    comment[years] = 2011-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = TumorDiagnostik & Therapie ;
+      issn = 0722-219X ;
+      eissn = 1439-1279
+      
+    >
+    param[journal_id] = 10.1055/s-00000088
+    comment[years] = 2000-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Ultraschall in der Medizin - European Journal of Ultrasound ;
+      issn = 0172-4614 ;
+      eissn = 1438-8782
+      
+    >
+    param[journal_id] = 10.1055/s-00000089
+    comment[years] = 1980-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = veterinär spiegel ;
+      issn = 0940-8711 ;
+      eissn = 1868-0437
+      
+    >
+    param[journal_id] = 10.1055/s-00000154
+    comment[years] = 2003-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Via medici ;
+      issn = 0949-2488 ;
+      eissn = 1439-1414
+      
+    >
+    param[journal_id] = 10.1055/s-00000158
+    comment[years] = 2007-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Viszeralchirurgie ;
+      issn = 1435-3067 ;
+      eissn = 1439-1643
+      
+    >
+    param[journal_id] = 10.1055/s-00000091
+    comment[years] = 2000-2007
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zahnmedizin up2date ;
+      issn = 1865-0457 ;
+      eissn = 1865-0465
+      
+    >
+    param[journal_id] = 10.1055/s-00000150
+    comment[years] = 2007-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zeitschrift für Ganzheitliche Tiermedizin ;
+      issn = 0939-7868 ;
+      eissn = 1439-1422
+      
+    >
+    param[journal_id] = 10.1055/s-00000149
+    comment[years] = 2007-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zeitschrift für Gastroenterologie ;
+      issn = 0044-2771 ;
+      eissn = 1439-7803
+      
+    >
+    param[journal_id] = 10.1055/s-00000094
+    comment[years] = 2000-current
+    
+  }
+
+  {
+  
+    title < 
+      name = Zeitschrift für Geburtshilfe und Neonatologie ;
+      issn = 0948-2393 ;
+      eissn = 1439-1651
+      
+    >
+    param[journal_id] = 10.1055/s-00000095
+    comment[years] = 2000-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zeitschrift für Klassische Homöopathie ;                                                                        
+      issn = 0935-0853 ;
+      eissn = 1439-4308
+      
+    >
+    param[journal_id] = 10.1055/s-00000096
+    comment[years] = 1957-current
+    comment[0] = includes Zeitschrift für klassische Homöopathie und Arzneipotenzierung and Acta homoeopathica
+    
+    
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zeitschrift für Komplementärmedizin ;
+      issn = 1867-6081 ;
+      eissn = 1867-6103
+      
+    >
+    param[journal_id] = 10.1055/s-00000153
+    comment[years] = 2009-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zeitschrift für Orthomolekulare Medizin ;
+      issn = 1611-5562 ;
+      eissn = 1864-2470
+      
+    >
+    param[journal_id] = 10.1055/s-00000144
+    comment[years] = 2007-current
+    
+  }
+  
+  {
+  
+    title < 
+      name = Zeitschrift für Orthopädie und Unfallchirurgie ;
+      issn = 1864-6697 ;
+      eissn = 1864-6743
+      
+    >
+    param[journal_id] = 10.1055/s-00000099
+    comment[years] = 2007-current
+    
+  }
+
+  {
+  
+    title < 
+      name = Zeitschrift für Orthopädie und ihre Grenzgebiete ;
+      issn = 0044-3220 ;
+      eissn = 1438-941X
+      
+    >
+    param[journal_id] = 10.1055/s-00000100
+    comment[years] = 1980-2007
+    
+  }
+
+  {
+  
+    title < 
+      name = Zeitschrift für Palliativmedizin ;
+      issn = 1615-2921 ;
+      eissn = 1615-293X
+      
+    >
+    param[journal_id] = 10.1055/s-00000102
+    comment[years] = 2000-current
+    
+  }
+
+  {
+  
+    title < 
+      name = Zeitschrift für Phytotherapie ;
+      issn = 0722-348X ;
+      eissn = 1438-9584
+      
+    >
+    param[journal_id] = 10.1055/s-00000101
+    comment[years] = 2005-current
+    
+  }
+
+  {
+  
+    title < 
+      name = Zeitschrift für Sexualforschung ;
+      issn = 0932-8114 ;
+      eissn = 1438-9460
+      
+    >
+    param[journal_id] = 10.1055/s-00000103
+    comment[years] = 2001-current
+    
+  }
+
+  {
+  
+    title < 
+      name = Zentralblatt für Chirurgie ;
+      issn = 0044-409X ;
+      eissn = 1438-9592
+      
+    >
+    param[journal_id] = 10.1055/s-00000104
+    comment[years] = 2000-current
+    
+  }
+
+  {
+  
+    title < 
+      name = Zentralblatt für Gynäkologie ;
+      issn = 0044-4197 ;
+      eissn = 1438-9762
+      
+    >
+    param[journal_id] = 10.1055/s-00000105
+    comment[years] = 2000-2006
+    
+  }
+
+  {
+  
+    title < 
+      name = Zentralblatt für Kinderchirurgie ;
+      issn = 0940-9599 ;
+      eissn = 1438-9770
+      
+    >
+    param[journal_id] = 10.1055/s-00000016
+    comment[years] = 2000-2002
+    
+  }
+
+  {
+  
+    title < 
+      name = ZFA - Zeitschrift für Allgemeinmedizin ;
+      issn = 1433-6251 ;
+      eissn = 1439-9229
+      
+    >
+    param[journal_id] = 10.1055/s-00000111
+    comment[years] = 2003-current
+    
+  }
+
+  {
+  
+    title < 
+      name = ZWR - Das Deutsche Zahnärzteblatt ;
+      issn = 0044-166X ;
+      eissn = 1439-9148
+      
+    >
+    param[journal_id] = 10.1055/s-00000112
+    comment[years] = 2003-current
+    
+  }
+  
+  }

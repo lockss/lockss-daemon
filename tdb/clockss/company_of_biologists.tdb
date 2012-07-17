@@ -34,31 +34,31 @@
 
     param[base_url] = http://dev.biologists.org/
 
-    au < wanted ; exists ; 1987 ; Development Volume 99 ; 99 >
-    au < wanted ; exists ; 1987 ; Development Volume 100 ; 100 >
-    au < wanted ; exists ; 1987 ; Development Volume 101 ; 101 >
-    au < wanted ; exists ; 1988 ; Development Volume 102 ; 102 >
-    au < wanted ; exists ; 1988 ; Development Volume 103 ; 103 >
-    au < wanted ; exists ; 1988 ; Development Volume 104 ; 104 >
-    au < wanted ; exists ; 1989 ; Development Volume 105 ; 105 >
-    au < wanted ; exists ; 1989 ; Development Volume 106 ; 106 >
-    au < wanted ; exists ; 1989 ; Development Volume 107 ; 107 >
-    au < wanted ; exists ; 1990 ; Development Volume 108 ; 108 >
-    au < wanted ; exists ; 1990 ; Development Volume 109 ; 109 >
-    au < wanted ; exists ; 1990 ; Development Volume 110 ; 110 >
-    au < wanted ; exists ; 1991 ; Development Volume 111 ; 111 >
-    au < wanted ; exists ; 1991 ; Development Volume 112 ; 112 >
-    au < wanted ; exists ; 1991 ; Development Volume 113 ; 113 >
-    au < wanted ; exists ; 1992 ; Development Volume 114 ; 114 >
-    au < wanted ; exists ; 1992 ; Development Volume 115 ; 115 >
-    au < wanted ; exists ; 1992 ; Development Volume 116 ; 116 >
-    au < wanted ; exists ; 1993 ; Development Volume 117 ; 117 >
-    au < wanted ; exists ; 1993 ; Development Volume 118 ; 118 >
-    au < wanted ; exists ; 1993 ; Development Volume 119 ; 119 >
-    au < wanted ; exists ; 1994 ; Development Volume 120 ; 120 >
-    au < wanted ; exists ; 1995 ; Development Volume 121 ; 121 >
-    au < wanted ; exists ; 1996 ; Development Volume 122 ; 122 >
-    au < wanted ; exists ; 1996 ; Development Volume 123 ; 123 >
+    au < manifest ; exists  ; 1987 ; Development Volume 99 ; 99 >
+    au < manifest ; exists  ; 1987 ; Development Volume 100 ; 100 >
+    au < manifest ; exists  ; 1987 ; Development Volume 101 ; 101 >
+    au < manifest ; exists  ; 1988 ; Development Volume 102 ; 102 >
+    au < manifest ; exists  ; 1988 ; Development Volume 103 ; 103 >
+    au < manifest ; exists  ; 1988 ; Development Volume 104 ; 104 >
+    au < manifest ; exists  ; 1989 ; Development Volume 105 ; 105 >
+    au < manifest ; exists  ; 1989 ; Development Volume 106 ; 106 >
+    au < manifest ; exists  ; 1989 ; Development Volume 107 ; 107 >
+    au < manifest ; exists  ; 1990 ; Development Volume 108 ; 108 >
+    au < manifest ; exists  ; 1990 ; Development Volume 109 ; 109 >
+    au < manifest ; exists  ; 1990 ; Development Volume 110 ; 110 >
+    au < manifest ; exists  ; 1991 ; Development Volume 111 ; 111 >
+    au < manifest ; exists  ; 1991 ; Development Volume 112 ; 112 >
+    au < manifest ; exists  ; 1991 ; Development Volume 113 ; 113 >
+    au < manifest ; exists  ; 1992 ; Development Volume 114 ; 114 >
+    au < manifest ; exists  ; 1992 ; Development Volume 115 ; 115 >
+    au < manifest ; exists  ; 1992 ; Development Volume 116 ; 116 >
+    au < manifest ; exists  ; 1993 ; Development Volume 117 ; 117 >
+    au < manifest ; exists  ; 1993 ; Development Volume 118 ; 118 >
+    au < manifest ; exists  ; 1993 ; Development Volume 119 ; 119 >
+    au < manifest ; exists  ; 1994 ; Development Volume 120 ; 120 >
+    au < manifest ; exists  ; 1995 ; Development Volume 121 ; 121 >
+    au < manifest ; exists  ; 1996 ; Development Volume 122 ; 122 >
+    au < manifest ; exists  ; 1996 ; Development Volume 123 ; 123 >
     au < manifest ; exists ; 1997 ; Development Volume 124 ; 124 >
     au < manifest ; exists ; 1998 ; Development Volume 125 ; 125 >
     au < manifest ; exists ; 1999 ; Development Volume 126 ; 126 >
@@ -69,10 +69,10 @@
     au < manifest ; exists ; 2004 ; Development Volume 131 ; 131 >
     au < manifest ; exists ; 2005 ; Development Volume 132 ; 132 >
     au < manifest ; exists ; 2006 ; Development Volume 133 ; 133 >
-    au < wanted ; exists ; 2007 ; Development Volume 134 ; 134 >
-    au < wanted ; exists ; 2008 ; Development Volume 135 ; 135 >
-    au < wanted ; exists ; 2009 ; Development Volume 136 ; 136 >
-    au < wanted ; exists ; 2010 ; Development Volume 137 ; 137 >
+    au < manifest ; exists  ; 2007 ; Development Volume 134 ; 134 >
+    au < manifest ; exists  ; 2008 ; Development Volume 135 ; 135 >
+    au < manifest ; exists  ; 2009 ; Development Volume 136 ; 136 >
+    au < manifest ; exists  ; 2010 ; Development Volume 137 ; 137 >
     au < released ; crawling ; 2011 ; Development Volume 138 ; 138 >
     au < crawling ; exists ; 2012 ; Development Volume 139 ; 139 >
 

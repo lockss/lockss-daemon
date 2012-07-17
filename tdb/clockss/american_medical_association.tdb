@@ -9,6 +9,7 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
+    comment[0] = AMA Virtual Mentor is moving to Silver Chair, transition date not yet determined.
   
     {
   

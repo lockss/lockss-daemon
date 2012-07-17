@@ -154,6 +154,7 @@
     
     param[base_url] = http://pia-journal.co.uk/
     param[journal_id] = pia
+    comment[base_url] = manifest page does not use www.
 
     au < manifest ; exists ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
     au < manifest ; exists ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
@@ -175,7 +176,7 @@
     au < manifest ; exists ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 ; 2007 >
     au < manifest ; exists ; 2009 ; Papers from the Institute of Archaeology Volume 19 ; 19 ; 2009 >
     au < manifest ; exists ; 2010 ; Papers from the Institute of Archaeology Volume 20 ; 20 ; 2010 >
-    au < crawling ; exists ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
+    au < released ; crawling ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
     
   }
   
@@ -186,12 +187,12 @@
       eissn = 1759-2941
     >
     
-    param[base_url] = http://presentpasts.info/
+    param[base_url] = http://www.presentpasts.info/
     param[journal_id] = pp
 
     au < manifest ; exists ; 2009 ; Present Pasts Volume 1 ; 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Present Pasts Volume 2 ; 2 ; 2010 >
-    au < crawling ; exists ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
+    au < released ; crawling ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
     
   }
 

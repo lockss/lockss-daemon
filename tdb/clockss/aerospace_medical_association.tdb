@@ -13,20 +13,20 @@
     >
 
     {
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     implicit < status1 ; status ; year ; name ; param[volume_name] >
   
-    au < exists ; exists ; 2003 ; Aviation, Space, and Environmental Medicine Volume 74 ; 74 >
-    au < exists ; exists ; 2004 ; Aviation, Space, and Environmental Medicine Volume 75 ; 75 >
-    au < exists ; exists ; 2005 ; Aviation, Space, and Environmental Medicine Volume 76 ; 76 >
-    au < exists ; exists ; 2006 ; Aviation, Space, and Environmental Medicine Volume 77 ; 77 >
-    au < exists ; exists ; 2007 ; Aviation, Space, and Environmental Medicine Volume 78 ; 78 >
-    au < exists ; exists ; 2008 ; Aviation, Space, and Environmental Medicine Volume 79 ; 79 >
-    au < exists ; exists ; 2009 ; Aviation, Space, and Environmental Medicine Volume 80 ; 80 >
-    au < exists ; exists ; 2010 ; Aviation, Space, and Environmental Medicine Volume 81 ; 81 >
-    au < exists ; exists ; 2011 ; Aviation, Space, and Environmental Medicine Volume 82 ; 82 >
-    au < exists ; exists ; 2012 ; Aviation, Space, and Environmental Medicine Volume 83 ; 83 >
+    au < manifest ; exists ; 2003 ; Aviation, Space, and Environmental Medicine Volume 74 ; 74 >
+    au < manifest ; exists ; 2004 ; Aviation, Space, and Environmental Medicine Volume 75 ; 75 >
+    au < manifest ; exists ; 2005 ; Aviation, Space, and Environmental Medicine Volume 76 ; 76 >
+    au < manifest ; exists ; 2006 ; Aviation, Space, and Environmental Medicine Volume 77 ; 77 >
+    au < manifest ; exists ; 2007 ; Aviation, Space, and Environmental Medicine Volume 78 ; 78 >
+    au < manifest ; exists ; 2008 ; Aviation, Space, and Environmental Medicine Volume 79 ; 79 >
+    au < manifest ; exists ; 2009 ; Aviation, Space, and Environmental Medicine Volume 80 ; 80 >
+    au < manifest ; exists ; 2010 ; Aviation, Space, and Environmental Medicine Volume 81 ; 81 >
+    au < manifest ; exists ; 2011 ; Aviation, Space, and Environmental Medicine Volume 82 ; 82 >
+    au < manifest ; exists ; 2012 ; Aviation, Space, and Environmental Medicine Volume 83 ; 83 >
       
     }
 

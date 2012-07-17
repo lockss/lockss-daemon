@@ -365,9 +365,23 @@
         eissn = 1937-5239 ;
         issnl = 0002-8762
       >
+      
+    {
 
-    comment[coming_soon] = Transferring from Chicago University Press July 2012
-
+    param[base_url] = http://ahr.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    au < manifest ; exists ; 2005 ; The American Historical Review Volume 110 ; 110 ; >
+    au < manifest ; exists ; 2006 ; The American Historical Review Volume 111 ; 111 ; >
+    au < exists ; exists ; 2007 ; The American Historical Review Volume 112 ; 112 ; >
+    au < manifest ; exists ; 2008 ; The American Historical Review Volume 113 ; 113 ; >
+    au < manifest ; exists ; 2009 ; The American Historical Review Volume 114 ; 114 ; >
+    au < manifest ; exists ; 2010 ; The American Historical Review Volume 115 ; 115 ; >
+    au < manifest ; exists ; 2011 ; The American Historical Review Volume 116 ; 116 ; >
+    au < crawling ; exists ; 2012 ; The American Historical Review Volume 117 ; 117 ; >
+    
+    }
+    
   }
 
   {
@@ -1061,7 +1075,7 @@
     au < manifest ; exists ; 2006 ; Annals of Botany Volume 97 ; 97 ; >
     au < manifest ; exists ; 2006 ; Annals of Botany Volume 98 ; 98 ; >
     au < manifest ; exists ; 2007 ; Annals of Botany Volume 99 ; 99 ; >
-    au < wanted ; exists ; 2007 ; Annals of Botany Volume 100 ; 100 ; >
+    au < manifest ; exists ; 2007 ; Annals of Botany Volume 100 ; 100 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Annals of Botany Volume 102 ; 102 ; >
     au < released ; crawling ; 2009 ; Annals of Botany Volume 103 ; 103 ; >
@@ -1071,7 +1085,7 @@
     au < released ; crawling ; 2011 ; Annals of Botany Volume 107 ; 107 ; >
     au < released ; crawling ; 2011 ; Annals of Botany Volume 108 ; 108 ; >
     au < crawling ; exists ; 2012 ; Annals of Botany Volume 109 ; 109 ; >
-    au < expected ; exists ; 2012 ; Annals of Botany Volume 110 ; 110 ; >
+    au < crawling ; exists ; 2012 ; Annals of Botany Volume 110 ; 110 ; >
     }
 
   }
@@ -1708,7 +1722,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 4 ; 4 ; >
-    au < expected ; exists ; 2012 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2012 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 5 ; 5 ; >
 
     }
 
@@ -2033,7 +2047,7 @@
     au < manifest ; exists ; 2005-2006 ; Briefings in Functional Genomics and Proteomics Volume 4 ; 4 ; >
     au < manifest ; exists ; 2006 ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 ; >
     au < manifest ; exists ; 2007 ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 ; >
-    au < doNotProcess ; exists ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
     au < released ; crawling ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; >
 
     }
@@ -2434,7 +2448,7 @@
     au < manifest ; exists ; 2004 ; The British Journal for the Philosophy of Science Volume 55 ; 55 ; >
     au < manifest ; exists ; 2005 ; The British Journal for the Philosophy of Science Volume 56 ; 56 ; >
     au < manifest ; exists ; 2006 ; The British Journal for the Philosophy of Science Volume 57 ; 57 ; >
-    au < wanted ; exists ; 2007 ; The British Journal for the Philosophy of Science Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2007 ; The British Journal for the Philosophy of Science Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 ; >
     au < released ; crawling ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; >
     au < released ; crawling ; 2010 ; The British Journal for the Philosophy of Science Volume 61 ; 61 ; >
@@ -2616,14 +2630,14 @@
     au < manifest ; exists ; 2004 ; British Medical Bulletin Volume 69 ; 69 ; >
     au < manifest ; exists ; 2004 ; British Medical Bulletin Volume 70 ; 70 ; >
     au < manifest ; exists ; 2004 ; British Medical Bulletin Volume 71 ; 71 ; >
-    au < wanted ; exists ; 2004 ; British Medical Bulletin Volume 72 ; 72 ; >
+    au < manifest ; exists ; 2004 ; British Medical Bulletin Volume 72 ; 72 ; >
     au < manifest ; exists ; 2005 ; British Medical Bulletin Volume 73-74 ; 73-74 ; >
     au < manifest ; exists ; 2005 ; British Medical Bulletin Volume 75-76 ; 75-76 ; >
     au < manifest ; exists ; 2006 ; British Medical Bulletin Volume 77-78 ; 77-78 ; >
     au < manifest ; exists ; 2006 ; British Medical Bulletin Volume 79-80 ; 79-80 ; >
     au < manifest ; exists ; 2007 ; British Medical Bulletin Volume 81-82 ; 81-82 ; >
     au < manifest ; exists ; 2007 ; British Medical Bulletin Volume 83 ; 83 ; >
-    au < wanted ; exists ; 2007 ; British Medical Bulletin Volume 84 ; 84 ; >
+    au < manifest ; exists ; 2007 ; British Medical Bulletin Volume 84 ; 84 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; British Medical Bulletin Volume 85 ; 85 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; British Medical Bulletin Volume 86 ; 86 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; British Medical Bulletin Volume 87 ; 87 ; >
@@ -2965,8 +2979,8 @@
     param[base_url] = http://cmlj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < wanted ; exists ; 2006 ; Capital Markets Law Journal Volume 1 ; 1 ; >
-    au < wanted ; exists ; 2007 ; Capital Markets Law Journal Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2006 ; Capital Markets Law Journal Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2007 ; Capital Markets Law Journal Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Capital Markets Law Journal Volume 3 ; 3 ; >
     au < released ; crawling ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; >
     au < released ; crawling ; 2010 ; Capital Markets Law Journal Volume 5 ; 5 ; >
@@ -3163,7 +3177,7 @@
     au < released ; crawling ; 2011 ; Cardiovascular Research Volume 92 ; 92 ; >
     au < crawling ; exists ; 2012 ; Cardiovascular Research Volume 93 ; 93 ; >
     au < crawling ; exists ; 2012 ; Cardiovascular Research Volume 94 ; 94 ; >
-    au < expected ; exists ; 2012 ; Cardiovascular Research Volume 95 ; 95 ; >
+    au < crawling ; exists ; 2012 ; Cardiovascular Research Volume 95 ; 95 ; >
     au < expected ; exists ; 2012 ; Cardiovascular Research Volume 96 ; 96 ; >
 
     }
@@ -3249,7 +3263,7 @@
     au < manifest ; exists ; 2004 ; CESifo Economic Studies Volume 50 ; 50 ; >
     au < manifest ; exists ; 2005 ; CESifo Economic Studies Volume 51 ; 51 ; >
     au < manifest ; exists ; 2006 ; CESifo Economic Studies Volume 52 ; 52 ; >
-    au < wanted ; exists ; 2007 ; CESifo Economic Studies Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2007 ; CESifo Economic Studies Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; CESifo Economic Studies Volume 54 ; 54 ; >
     au < released ; crawling ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; >
     au < released ; crawling ; 2010 ; CESifo Economic Studies Volume 56 ; 56 ; >
@@ -3353,7 +3367,7 @@
     au < released ; crawling ; 2009 ; Children & Schools Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; Children & Schools Volume 32 ; 32 ; >
     au < released ; crawling ; 2011 ; Children & Schools Volume 33 ; 33 ; >
-    au < expected ; exists ; 2012 ; Children & Schools Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2012 ; Children & Schools Volume 34 ; 34 ; >
 
   }
 
@@ -3386,7 +3400,7 @@
     au < manifest ; exists ; 2004 ; Chinese Journal of International Law Volume 3 ; 3 ; >
     au < manifest ; exists ; 2005 ; Chinese Journal of International Law Volume 4 ; 4 ; >
     au < manifest ; exists ; 2006 ; Chinese Journal of International Law Volume 5 ; 5 ; >
-    au < wanted ; exists ; 2007 ; Chinese Journal of International Law Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2007 ; Chinese Journal of International Law Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Chinese Journal of International Law Volume 7 ; 7 ; >
     au < released ; crawling ; 2009 ; Chinese Journal of International Law Volume 8 ; 8 ; >
     au < released ; crawling ; 2010 ; Chinese Journal of International Law Volume 9 ; 9 ; >
@@ -3873,10 +3887,10 @@
     au < manifest ; exists ; 2001 ; Contributions to Political Economy Volume 20 ; 20 ; >
     au < manifest ; exists ; 2002 ; Contributions to Political Economy Volume 21 ; 21 ; >
     au < manifest ; exists ; 2003 ; Contributions to Political Economy Volume 22 ; 22 ; >
-    au < wanted ; exists ; 2004 ; Contributions to Political Economy Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2004 ; Contributions to Political Economy Volume 23 ; 23 ; >
     au < manifest ; exists ; 2005 ; Contributions to Political Economy Volume 24 ; 24 ; >
     au < manifest ; exists ; 2006 ; Contributions to Political Economy Volume 25 ; 25 ; >
-    au < wanted ; exists ; 2007 ; Contributions to Political Economy Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2007 ; Contributions to Political Economy Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Contributions to Political Economy Volume 27 ; 27 ; >
     au < released ; crawling ; 2009 ; Contributions to Political Economy Volume 28 ; 28 ; >
     au < released ; crawling ; 2010 ; Contributions to Political Economy Volume 29 ; 29 ; >
@@ -3978,7 +3992,7 @@
     au < manifest ; exists ; 2004 ; DNA Research Volume 11 ; 11 ; >
     au < manifest ; exists ; 2005 ; DNA Research Volume 12 ; 12 ; >
     au < manifest ; exists ; 2006 ; DNA Research Volume 13 ; 13 ; >
-    au < wanted ; exists ; 2007 ; DNA Research Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2007 ; DNA Research Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; DNA Research Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; DNA Research Volume 16 ; 16 ; >
     au < released ; crawling ; 2010 ; DNA Research Volume 17 ; 17 ; >
@@ -4363,9 +4377,9 @@
     au < manifest ; exists ; 2002 ; ELT Journal Volume 56 ; 56 ; >
     au < manifest ; exists ; 2003 ; ELT Journal Volume 57 ; 57 ; >
     au < manifest ; exists ; 2004 ; ELT Journal Volume 58 ; 58 ; >
-    au < wanted ; exists ; 2005 ; ELT Journal Volume 59 ; 59 ; >
-    au < wanted ; exists ; 2006 ; ELT Journal Volume 60 ; 60 ; >
-    au < wanted ; exists ; 2007 ; ELT Journal Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2005 ; ELT Journal Volume 59 ; 59 ; >
+    au < manifest ; exists ; 2006 ; ELT Journal Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2007 ; ELT Journal Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; ELT Journal Volume 62 ; 62 ; >
     au < released ; crawling ; 2009 ; ELT Journal Volume 63 ; 63 ; >
     au < released ; crawling ; 2010 ; ELT Journal Volume 64 ; 64 ; >
@@ -4405,9 +4419,9 @@
     au < manifest ; exists ; 2002 ; Enterprise & Society Volume 3 ; 3 ; >
     au < manifest ; exists ; 2003 ; Enterprise & Society Volume 4 ; 4 ; >
     au < manifest ; exists ; 2004 ; Enterprise & Society Volume 5 ; 5 ; >
-    au < wanted ; exists ; 2005 ; Enterprise & Society Volume 6 ; 6 ; >
-    au < wanted ; exists ; 2006 ; Enterprise & Society Volume 7 ; 7 ; >
-    au < wanted ; exists ; 2007 ; Enterprise & Society Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2005 ; Enterprise & Society Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2006 ; Enterprise & Society Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2007 ; Enterprise & Society Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Enterprise & Society Volume 9 ; 9 ; >
     au < released ; crawling ; 2009 ; Enterprise & Society Volume 10 ; 10 ; >
     au < released ; crawling ; 2010 ; Enterprise & Society Volume 11 ; 11 ; >
@@ -4533,9 +4547,9 @@
     au < manifest ; exists ; 2002 ; Epidemiologic Reviews Volume 24 ; 24 ; >
     au < manifest ; exists ; 2003 ; Epidemiologic Reviews Volume 25 ; 25 ; >
     au < manifest ; exists ; 2004 ; Epidemiologic Reviews Volume 26 ; 26 ; >
-    au < wanted ; exists ; 2005 ; Epidemiologic Reviews Volume 27 ; 27 ; >
-    au < wanted ; exists ; 2006 ; Epidemiologic Reviews Volume 28 ; 28 ; >
-    au < wanted ; exists ; 2007 ; Epidemiologic Reviews Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2005 ; Epidemiologic Reviews Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2006 ; Epidemiologic Reviews Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2007 ; Epidemiologic Reviews Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Epidemiologic Reviews Volume 30 ; 30 ; >
     au < released ; crawling ; 2009 ; Epidemiologic Reviews Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; Epidemiologic Reviews Volume 32 ; 32 ; >
@@ -4864,7 +4878,7 @@
     au < released ; crawling ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 ; >
     au < released ; crawling ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 ; >
     au < crawling ; exists ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 41 ; 41 ; >
-    au < expected ; exists ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 ; >
 
   }
 
@@ -5044,9 +5058,9 @@
     au < manifest ; exists ; 2002 ; European Journal of International Law Volume 13 ; 13 ; >
     au < manifest ; exists ; 2003 ; European Journal of International Law Volume 14 ; 14 ; >
     au < manifest ; exists ; 2004 ; European Journal of International Law Volume 15 ; 15 ; >
-    au < wanted ; exists ; 2005 ; European Journal of International Law Volume 16 ; 16 ; >
-    au < wanted ; exists ; 2006 ; European Journal of International Law Volume 17 ; 17 ; >
-    au < wanted ; exists ; 2007 ; European Journal of International Law Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2005 ; European Journal of International Law Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2006 ; European Journal of International Law Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2007 ; European Journal of International Law Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of International Law Volume 19 ; 19 ; >
     au < released ; crawling ; 2009 ; European Journal of International Law Volume 20 ; 20 ; >
     au < released ; crawling ; 2010 ; European Journal of International Law Volume 21 ; 21 ; >
@@ -5108,8 +5122,8 @@
     au < manifest ; exists ; 2003 ; European Journal of Orthodontics Volume 25 ; 25 ; >
     au < manifest ; exists ; 2004 ; European Journal of Orthodontics Volume 26 ; 26 ; >
     au < manifest ; exists ; 2005 ; European Journal of Orthodontics Volume 27 ; 27 ; >
-    au < wanted ; exists ; 2006 ; European Journal of Orthodontics Volume 28 ; 28 ; >
-    au < wanted ; exists ; 2007 ; European Journal of Orthodontics Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2006 ; European Journal of Orthodontics Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2007 ; European Journal of Orthodontics Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 ; >
     au < released ; crawling ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ; >
@@ -5158,9 +5172,9 @@
     au < manifest ; exists ; 2002 ; European Journal of Public Health Volume 12 ; 12 ; >
     au < manifest ; exists ; 2003 ; European Journal of Public Health Volume 13 ; 13 ; >
     au < manifest ; exists ; 2004 ; European Journal of Public Health Volume 14 ; 14 ; >
-    au < wanted ; exists ; 2005 ; European Journal of Public Health Volume 15 ; 15 ; >
-    au < wanted ; exists ; 2006 ; European Journal of Public Health Volume 16 ; 16 ; >
-    au < wanted ; exists ; 2007 ; European Journal of Public Health Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2005 ; European Journal of Public Health Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2006 ; European Journal of Public Health Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2007 ; European Journal of Public Health Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Public Health Volume 18 ; 18 ; >
     au < released ; crawling ; 2009 ; European Journal of Public Health Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; European Journal of Public Health Volume 20 ; 20 ; >
@@ -5226,9 +5240,9 @@
     au < manifest ; exists ; 2002 ; European Review of Agricultural Economics Volume 29 ; 29 ; >
     au < manifest ; exists ; 2003 ; European Review of Agricultural Economics Volume 30 ; 30 ; >
     au < manifest ; exists ; 2004 ; European Review of Agricultural Economics Volume 31 ; 31 ; >
-    au < wanted ; exists ; 2005 ; European Review of Agricultural Economics Volume 32 ; 32 ; >
-    au < wanted ; exists ; 2006 ; European Review of Agricultural Economics Volume 33 ; 33 ; >
-    au < wanted ; exists ; 2007 ; European Review of Agricultural Economics Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2005 ; European Review of Agricultural Economics Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2006 ; European Review of Agricultural Economics Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2007 ; European Review of Agricultural Economics Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 ; >
     au < released ; crawling ; 2010 ; European Review of Agricultural Economics Volume 37 ; 37 ; >
@@ -5314,9 +5328,9 @@
     au < manifest ; exists ; 2002 ; European Sociological Review Volume 18 ; 18 ; >
     au < manifest ; exists ; 2003 ; European Sociological Review Volume 19 ; 19 ; >
     au < manifest ; exists ; 2004 ; European Sociological Review Volume 20 ; 20 ; >
-    au < wanted ; exists ; 2005 ; European Sociological Review Volume 21 ; 21 ; >
-    au < wanted ; exists ; 2006 ; European Sociological Review Volume 22 ; 22 ; >
-    au < wanted ; exists ; 2007 ; European Sociological Review Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2005 ; European Sociological Review Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2006 ; European Sociological Review Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2007 ; European Sociological Review Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Sociological Review Volume 24 ; 24 ; >
     au < released ; crawling ; 2009 ; European Sociological Review Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; European Sociological Review Volume 26 ; 26 ; >
@@ -5395,9 +5409,9 @@
     au < manifest ; exists ; 2002 ; Family Practice Volume 19 ; 19 ; >
     au < manifest ; exists ; 2003 ; Family Practice Volume 20 ; 20 ; >
     au < manifest ; exists ; 2004 ; Family Practice Volume 21 ; 21 ; >
-    au < wanted ; exists ; 2005 ; Family Practice Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2005 ; Family Practice Volume 22 ; 22 ; >
     au < manifest ; exists ; 2006 ; Family Practice Volume 23 ; 23 ; >
-    au < wanted ; exists ; 2007 ; Family Practice Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2007 ; Family Practice Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Family Practice Volume 25 ; 25 ; >
     au < released ; crawling ; 2009 ; Family Practice Volume 26 ; 26 ; >
     au < released ; crawling ; 2010 ; Family Practice Volume 27 ; 27 ; >
@@ -5562,9 +5576,9 @@
     au < manifest ; exists ; 2002 ; Forestry: An International Journal of Forest Research Volume 75 ; 75 ; >
     au < manifest ; exists ; 2003 ; Forestry: An International Journal of Forest Research Volume 76 ; 76 ; >
     au < manifest ; exists ; 2004 ; Forestry: An International Journal of Forest Research Volume 77 ; 77 ; >
-    au < wanted ; exists ; 2005 ; Forestry: An International Journal of Forest Research Volume 78 ; 78 ; >
-    au < wanted ; exists ; 2006 ; Forestry: An International Journal of Forest Research Volume 79 ; 79 ; >
-    au < wanted ; exists ; 2007 ; Forestry: An International Journal of Forest Research Volume 80 ; 80 ; >
+    au < manifest ; exists ; 2005 ; Forestry: An International Journal of Forest Research Volume 78 ; 78 ; >
+    au < manifest ; exists ; 2006 ; Forestry: An International Journal of Forest Research Volume 79 ; 79 ; >
+    au < manifest ; exists ; 2007 ; Forestry: An International Journal of Forest Research Volume 80 ; 80 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Forestry: An International Journal of Forest Research Volume 81 ; 81 ; >
     au < released ; crawling ; 2009 ; Forestry: An International Journal of Forest Research Volume 82 ; 82 ; >
     au < released ; crawling ; 2010 ; Forestry: An International Journal of Forest Research Volume 83 ; 83 ; >
@@ -5639,9 +5653,9 @@
     au < manifest ; exists ; 2002 ; Forum for Modern Language Studies Volume 38 ; 38 ; >
     au < manifest ; exists ; 2003 ; Forum for Modern Language Studies Volume 39 ; 39 ; >
     au < manifest ; exists ; 2004 ; Forum for Modern Language Studies Volume 40 ; 40 ; >
-    au < wanted ; exists ; 2005 ; Forum for Modern Language Studies Volume 41 ; 41 ; >
-    au < wanted ; exists ; 2006 ; Forum for Modern Language Studies Volume 42 ; 42 ; >
-    au < wanted ; exists ; 2007 ; Forum for Modern Language Studies Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2005 ; Forum for Modern Language Studies Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2006 ; Forum for Modern Language Studies Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2007 ; Forum for Modern Language Studies Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 ; >
     au < released ; crawling ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 ; >
     au < released ; crawling ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 ; >
@@ -5694,9 +5708,9 @@
     au < manifest ; exists ; 2002 ; French History Volume 16 ; 16 ; >
     au < manifest ; exists ; 2003 ; French History Volume 17 ; 17 ; >
     au < manifest ; exists ; 2004 ; French History Volume 18 ; 18 ; >
-    au < wanted ; exists ; 2005 ; French History Volume 19 ; 19 ; >
-    au < wanted ; exists ; 2006 ; French History Volume 20 ; 20 ; >
-    au < wanted ; exists ; 2007 ; French History Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2005 ; French History Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2006 ; French History Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2007 ; French History Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; French History Volume 22 ; 22 ; >
     au < released ; crawling ; 2009 ; French History Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; French History Volume 24 ; 24 ; >
@@ -5789,9 +5803,9 @@
     au < manifest ; exists ; 2002 ; French Studies: A Quarterly Review Volume 56 ; 56 ; >
     au < manifest ; exists ; 2003 ; French Studies: A Quarterly Review Volume 57 ; 57 ; >
     au < manifest ; exists ; 2004 ; French Studies: A Quarterly Review Volume 58 ; 58 ; >
-    au < wanted ; exists ; 2005 ; French Studies: A Quarterly Review Volume 59 ; 59 ; >
-    au < wanted ; exists ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 ; >
-    au < wanted ; exists ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2005 ; French Studies: A Quarterly Review Volume 59 ; 59 ; >
+    au < manifest ; exists ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 ; >
     au < released ; crawling ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 ; >
     au < released ; crawling ; 2010 ; French Studies: A Quarterly Review Volume 64 ; 64 ; >
@@ -6048,7 +6062,7 @@
     au < manifest ; exists ; 2002 ; Glycobiology Volume 12 ; 12 ; >
     au < manifest ; exists ; 2003 ; Glycobiology Volume 13 ; 13 ; >
     au < manifest ; exists ; 2004 ; Glycobiology Volume 14 ; 14 ; >
-    au < wanted ; exists ; 2005 ; Glycobiology Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2005 ; Glycobiology Volume 15 ; 15 ; >
     au < manifest ; exists ; 2006 ; Glycobiology Volume 16 ; 16 ; >
     au < manifest ; exists ; 2007 ; Glycobiology Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Glycobiology Volume 18 ; 18 ; >
@@ -6135,9 +6149,9 @@
     au < manifest ; exists ; 2002 ; Health Education Research Volume 17 ; 17 ; >
     au < manifest ; exists ; 2003 ; Health Education Research Volume 18 ; 18 ; >
     au < manifest ; exists ; 2004 ; Health Education Research Volume 19 ; 19 ; >
-    au < wanted ; exists ; 2005 ; Health Education Research Volume 20 ; 20 ; >
-    au < wanted ; exists ; 2006 ; Health Education Research Volume 21 ; 21 ; >
-    au < wanted ; exists ; 2007 ; Health Education Research Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2005 ; Health Education Research Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2006 ; Health Education Research Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2007 ; Health Education Research Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Health Education Research Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; Health Education Research Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Health Education Research Volume 25 ; 25 ; >
@@ -6247,9 +6261,9 @@
     au < manifest ; exists ; 2002 ; Health Promotion International Volume 17 ; 17 ; >
     au < manifest ; exists ; 2003 ; Health Promotion International Volume 18 ; 18 ; >
     au < manifest ; exists ; 2004 ; Health Promotion International Volume 19 ; 19 ; >
-    au < wanted ; exists ; 2005 ; Health Promotion International Volume 20 ; 20 ; >
-    au < wanted ; exists ; 2006 ; Health Promotion International Volume 21 ; 21 ; >
-    au < wanted ; exists ; 2007 ; Health Promotion International Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2005 ; Health Promotion International Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2006 ; Health Promotion International Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2007 ; Health Promotion International Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; Health Promotion International Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Health Promotion International Volume 25 ; 25 ; >
@@ -6338,12 +6352,12 @@
     au < manifest ; exists ; 2003 ; History Workshop Journal Volume 56 ; 56 ; >
     au < manifest ; exists ; 2004 ; History Workshop Journal Volume 57 ; 57 ; >
     au < manifest ; exists ; 2004 ; History Workshop Journal Volume 58 ; 58 ; >
-    au < wanted ; exists ; 2005 ; History Workshop Journal Volume 59 ; 59 ; >
-    au < wanted ; exists ; 2005 ; History Workshop Journal Volume 60 ; 60 ; >
-    au < wanted ; exists ; 2006 ; History Workshop Journal Volume 61 ; 61 ; >
-    au < wanted ; exists ; 2006 ; History Workshop Journal Volume 62 ; 62 ; >
-    au < wanted ; exists ; 2007 ; History Workshop Journal Volume 63 ; 63 ; >
-    au < wanted ; exists ; 2007 ; History Workshop Journal Volume 64 ; 64 ; >
+    au < manifest ; exists ; 2005 ; History Workshop Journal Volume 59 ; 59 ; >
+    au < manifest ; exists ; 2005 ; History Workshop Journal Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2006 ; History Workshop Journal Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2006 ; History Workshop Journal Volume 62 ; 62 ; >
+    au < manifest ; exists ; 2007 ; History Workshop Journal Volume 63 ; 63 ; >
+    au < manifest ; exists ; 2007 ; History Workshop Journal Volume 64 ; 64 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; History Workshop Journal Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; History Workshop Journal Volume 66 ; 66 ; >
     au < released ; crawling ; 2009 ; History Workshop Journal Volume 67 ; 67 ; >
@@ -6508,9 +6522,9 @@
     au < manifest ; exists ; 2002 ; Human Reproduction Volume 17 ; 17 ; >
     au < manifest ; exists ; 2003 ; Human Reproduction Volume 18 ; 18 ; >
     au < manifest ; exists ; 2004 ; Human Reproduction Volume 19 ; 19 ; >
-    au < wanted ; exists ; 2005 ; Human Reproduction Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2005 ; Human Reproduction Volume 20 ; 20 ; >
     au < manifest ; exists ; 2006 ; Human Reproduction Volume 21 ; 21 ; >
-    au < wanted ; exists ; 2007 ; Human Reproduction Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2007 ; Human Reproduction Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; Human Reproduction Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Human Reproduction Volume 25 ; 25 ; >
@@ -6555,9 +6569,9 @@
     au < manifest ; exists ; 2002 ; Human Reproduction Update Volume 8 ; 8 ; >
     au < manifest ; exists ; 2003 ; Human Reproduction Update Volume 9 ; 9 ; >
     au < manifest ; exists ; 2004 ; Human Reproduction Update Volume 10 ; 10 ; >
-    au < wanted ; exists ; 2005 ; Human Reproduction Update Volume 11 ; 11 ; >
-    au < wanted ; exists ; 2006 ; Human Reproduction Update Volume 12 ; 12 ; >
-    au < wanted ; exists ; 2007 ; Human Reproduction Update Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2005 ; Human Reproduction Update Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2006 ; Human Reproduction Update Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2007 ; Human Reproduction Update Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Human Reproduction Update Volume 14 ; 14 ; >
     au < released ; crawling ; 2009 ; Human Reproduction Update Volume 15 ; 15 ; >
     au < released ; crawling ; 2010 ; Human Reproduction Update Volume 16 ; 16 ; >
@@ -6596,9 +6610,9 @@
     au < manifest ; exists ; 2002 ; Human Rights Law Review Volume 2 ; 2 ; >
     au < manifest ; exists ; 2003 ; Human Rights Law Review Volume 3 ; 3 ; >
     au < manifest ; exists ; 2004 ; Human Rights Law Review Volume 4 ; 4 ; >
-    au < wanted ; exists ; 2005 ; Human Rights Law Review Volume 5 ; 5 ; >
-    au < wanted ; exists ; 2006 ; Human Rights Law Review Volume 6 ; 6 ; >
-    au < wanted ; exists ; 2007 ; Human Rights Law Review Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2005 ; Human Rights Law Review Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2006 ; Human Rights Law Review Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2007 ; Human Rights Law Review Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Human Rights Law Review Volume 8 ; 8 ; >
     au < released ; crawling ; 2009 ; Human Rights Law Review Volume 9 ; 9 ; >
     au < released ; crawling ; 2010 ; Human Rights Law Review Volume 10 ; 10 ; >
@@ -6921,9 +6935,9 @@
     au < manifest ; exists ; 2002 ; IMA Journal of Applied Mathematics Volume 67 ; 67 ; >
     au < manifest ; exists ; 2003 ; IMA Journal of Applied Mathematics Volume 68 ; 68 ; >
     au < manifest ; exists ; 2004 ; IMA Journal of Applied Mathematics Volume 69 ; 69 ; >
-    au < wanted ; exists ; 2005 ; IMA Journal of Applied Mathematics Volume 70 ; 70 ; >
-    au < wanted ; exists ; 2006 ; IMA Journal of Applied Mathematics Volume 71 ; 71 ; >
-    au < wanted ; exists ; 2007 ; IMA Journal of Applied Mathematics Volume 72 ; 72 ; >
+    au < manifest ; exists ; 2005 ; IMA Journal of Applied Mathematics Volume 70 ; 70 ; >
+    au < manifest ; exists ; 2006 ; IMA Journal of Applied Mathematics Volume 71 ; 71 ; >
+    au < manifest ; exists ; 2007 ; IMA Journal of Applied Mathematics Volume 72 ; 72 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; IMA Journal of Applied Mathematics Volume 73 ; 73 ; >
     au < released ; crawling ; 2009 ; IMA Journal of Applied Mathematics Volume 74 ; 74 ; >
     au < released ; crawling ; 2010 ; IMA Journal of Applied Mathematics Volume 75 ; 75 ; >
@@ -6973,9 +6987,9 @@
     au < manifest ; exists ; 2002 ; IMA Journal of Management Mathematics Volume 13 ; 13 ; >
     au < manifest ; exists ; 2003 ; IMA Journal of Management Mathematics Volume 14 ; 14 ; >
     au < manifest ; exists ; 2004 ; IMA Journal of Management Mathematics Volume 15 ; 15 ; >
-    au < wanted ; exists ; 2005 ; IMA Journal of Management Mathematics Volume 16 ; 16 ; >
-    au < wanted ; exists ; 2006 ; IMA Journal of Management Mathematics Volume 17 ; 17 ; >
-    au < wanted ; exists ; 2007 ; IMA Journal of Management Mathematics Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2005 ; IMA Journal of Management Mathematics Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2006 ; IMA Journal of Management Mathematics Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2007 ; IMA Journal of Management Mathematics Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; IMA Journal of Management Mathematics Volume 19 ; 19 ; >
     au < released ; crawling ; 2009 ; IMA Journal of Management Mathematics Volume 20 ; 20 ; >
     au < released ; crawling ; 2010 ; IMA Journal of Management Mathematics Volume 21 ; 21 ; >
@@ -7031,9 +7045,9 @@
     au < manifest ; exists ; 2002 ; IMA Journal of Mathematical Control and Information Volume 19 ; 19 ; >
     au < manifest ; exists ; 2003 ; IMA Journal of Mathematical Control and Information Volume 20 ; 20 ; >
     au < manifest ; exists ; 2004 ; IMA Journal of Mathematical Control and Information Volume 21 ; 21 ; >
-    au < wanted ; exists ; 2005 ; IMA Journal of Mathematical Control and Information Volume 22 ; 22 ; >
-    au < wanted ; exists ; 2006 ; IMA Journal of Mathematical Control and Information Volume 23 ; 23 ; >
-    au < wanted ; exists ; 2007 ; IMA Journal of Mathematical Control and Information Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2005 ; IMA Journal of Mathematical Control and Information Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2006 ; IMA Journal of Mathematical Control and Information Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2007 ; IMA Journal of Mathematical Control and Information Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; IMA Journal of Mathematical Control and Information Volume 25 ; 25 ; >
     au < released ; crawling ; 2009 ; IMA Journal of Mathematical Control and Information Volume 26 ; 26 ; >
     au < released ; crawling ; 2010 ; IMA Journal of Mathematical Control and Information Volume 27 ; 27 ; >
@@ -7092,9 +7106,9 @@
     au < manifest ; exists ; 2002 ; IMA Journal of Numerical Analysis Volume 22 ; 22 ; >
     au < manifest ; exists ; 2003 ; IMA Journal of Numerical Analysis Volume 23 ; 23 ; >
     au < manifest ; exists ; 2004 ; IMA Journal of Numerical Analysis Volume 24 ; 24 ; >
-    au < wanted ; exists ; 2005 ; IMA Journal of Numerical Analysis Volume 25 ; 25 ; >
-    au < wanted ; exists ; 2006 ; IMA Journal of Numerical Analysis Volume 26 ; 26 ; >
-    au < wanted ; exists ; 2007 ; IMA Journal of Numerical Analysis Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2005 ; IMA Journal of Numerical Analysis Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2006 ; IMA Journal of Numerical Analysis Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2007 ; IMA Journal of Numerical Analysis Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; IMA Journal of Numerical Analysis Volume 28 ; 28 ; >
     au < released ; crawling ; 2009 ; IMA Journal of Numerical Analysis Volume 29 ; 29 ; >
     au < released ; crawling ; 2010 ; IMA Journal of Numerical Analysis Volume 30 ; 30 ; >
@@ -7142,9 +7156,9 @@
     au < manifest ; exists ; 2002 ; Industrial and Corporate Change Volume 11 ; 11 ; >
     au < manifest ; exists ; 2003 ; Industrial and Corporate Change Volume 12 ; 12 ; >
     au < manifest ; exists ; 2004 ; Industrial and Corporate Change Volume 13 ; 13 ; >
-    au < wanted ; exists ; 2005 ; Industrial and Corporate Change Volume 14 ; 14 ; >
-    au < wanted ; exists ; 2006 ; Industrial and Corporate Change Volume 15 ; 15 ; >
-    au < wanted ; exists ; 2007 ; Industrial and Corporate Change Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2005 ; Industrial and Corporate Change Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2006 ; Industrial and Corporate Change Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2007 ; Industrial and Corporate Change Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Industrial and Corporate Change Volume 17 ; 17 ; >
     au < released ; crawling ; 2009 ; Industrial and Corporate Change Volume 18 ; 18 ; >
     au < released ; crawling ; 2010 ; Industrial and Corporate Change Volume 19 ; 19 ; >
@@ -7212,9 +7226,9 @@
     au < manifest ; exists ; 2002 ; Industrial Law Journal Volume 31 ; 31 ; >
     au < manifest ; exists ; 2003 ; Industrial Law Journal Volume 32 ; 32 ; >
     au < manifest ; exists ; 2004 ; Industrial Law Journal Volume 33 ; 33 ; >
-    au < wanted ; exists ; 2005 ; Industrial Law Journal Volume 34 ; 34 ; >
-    au < wanted ; exists ; 2006 ; Industrial Law Journal Volume 35 ; 35 ; >
-    au < wanted ; exists ; 2007 ; Industrial Law Journal Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2005 ; Industrial Law Journal Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2006 ; Industrial Law Journal Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2007 ; Industrial Law Journal Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Industrial Law Journal Volume 37 ; 37 ; >
     au < released ; crawling ; 2009 ; Industrial Law Journal Volume 38 ; 38 ; >
     au < released ; crawling ; 2010 ; Industrial Law Journal Volume 39 ; 39 ; >
@@ -7303,7 +7317,7 @@
     au < released ; crawling ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; Interactive CardioVascular and Thoracic Surgery Volume 13 ; 13 ; >
     au < crawling ; exists ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 14 ; 14 ; >
-	au < expected ; exists ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 15 ; 15 ; >
+	au < crawling ; exists ; 2012 ; Interactive Cardiovascular and Thoracic Surgery Volume 15 ; 15 ; >
    
   }
 
@@ -7379,7 +7393,7 @@
     au < manifest ; exists ; 2004 ; Integrative and Comparative Biology Volume 44 ; 44 ; >
     au < manifest ; exists ; 2005 ; Integrative and Comparative Biology Volume 45 ; 45 ; >
     au < manifest ; exists ; 2006 ; Integrative and Comparative Biology Volume 46 ; 46 ; >
-    au < wanted ; exists ; 2007 ; Integrative and Comparative Biology Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2007 ; Integrative and Comparative Biology Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Integrative and Comparative Biology Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Integrative and Comparative Biology Volume 49 ; 49 ; >
     au < released ; crawling ; 2010 ; Integrative and Comparative Biology Volume 50 ; 50 ; >
@@ -7613,7 +7627,7 @@
     au < manifest ; exists ; 2004 ; International Journal of Epidemiology Volume 33 ; 33 ; >
     au < manifest ; exists ; 2005 ; International Journal of Epidemiology Volume 34 ; 34 ; >
     au < manifest ; exists ; 2006 ; International Journal of Epidemiology Volume 35 ; 35 ; >
-    au < wanted ; exists ; 2007 ; International Journal of Epidemiology Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2007 ; International Journal of Epidemiology Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Epidemiology Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Epidemiology Volume 38 ; 38 ; >
     au < released ; crawling ; 2010 ; International Journal of Epidemiology Volume 39 ; 39 ; >
@@ -7772,7 +7786,7 @@
     au < manifest ; exists ; 2004 ; International Journal of Lexicography Volume 17 ; 17 ; >
     au < manifest ; exists ; 2005 ; International Journal of Lexicography Volume 18 ; 18 ; >
     au < manifest ; exists ; 2006 ; International Journal of Lexicography Volume 19 ; 19 ; >
-    au < wanted ; exists ; 2007 ; International Journal of Lexicography Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2007 ; International Journal of Lexicography Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Lexicography Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Lexicography Volume 22 ; 22 ; >
     au < released ; crawling ; 2010 ; International Journal of Lexicography Volume 23 ; 23 ; >
@@ -7861,7 +7875,7 @@
     au < manifest ; exists ; 2004 ; International Journal of Public Opinion Research Volume 16 ; 16 ; >
     au < manifest ; exists ; 2005 ; International Journal of Public Opinion Research Volume 17 ; 17 ; >
     au < manifest ; exists ; 2006 ; International Journal of Public Opinion Research Volume 18 ; 18 ; >
-    au < wanted ; exists ; 2007 ; International Journal of Public Opinion Research Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2007 ; International Journal of Public Opinion Research Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Public Opinion Research Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Public Opinion Research Volume 21 ; 21 ; >
     au < released ; crawling ; 2010 ; International Journal of Public Opinion Research Volume 22 ; 22 ; >
@@ -7967,7 +7981,7 @@
     au < manifest ; exists ; 2004 ; International Journal of Refugee Law Volume 16 ; 16 ; >
     au < manifest ; exists ; 2005 ; International Journal of Refugee Law Volume 17 ; 17 ; >
     au < manifest ; exists ; 2006 ; International Journal of Refugee Law Volume 18 ; 18 ; >
-    au < wanted ; exists ; 2007 ; International Journal of Refugee Law Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2007 ; International Journal of Refugee Law Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Refugee Law Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Refugee Law Volume 21 ; 21 ; >
     au < released ; crawling ; 2010 ; International Journal of Refugee Law Volume 22 ; 22 ; >
@@ -8002,7 +8016,7 @@
     param[base_url] = http://ijtj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < wanted ; exists ; 2007 ; International Journal of Transitional Justice Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2007 ; International Journal of Transitional Justice Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Transitional Justice Volume 2 ; 2 ; >
     au < released ; crawling ; 2009 ; International Journal of Transitional Justice Volume 3 ; 3 ; >
     au < released ; crawling ; 2010 ; International Journal of Transitional Justice Volume 4 ; 4 ; >
@@ -8129,9 +8143,9 @@
     au < manifest ; exists ; 2002 ; International Relations of the Asia-Pacific Volume 2 ; 2 ; >
     au < manifest ; exists ; 2003 ; International Relations of the Asia-Pacific Volume 3 ; 3 ; >
     au < manifest ; exists ; 2004 ; International Relations of the Asia-Pacific Volume 4 ; 4 ; >
-    au < wanted ; exists ; 2005 ; International Relations of the Asia-Pacific Volume 5 ; 5 ; >
-    au < wanted ; exists ; 2006 ; International Relations of the Asia-Pacific Volume 6 ; 6 ; >
-    au < wanted ; exists ; 2007 ; International Relations of the Asia-Pacific Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2005 ; International Relations of the Asia-Pacific Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2006 ; International Relations of the Asia-Pacific Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2007 ; International Relations of the Asia-Pacific Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Relations of the Asia-Pacific Volume 8 ; 8 ; >
     au < released ; crawling ; 2009 ; International Relations of the Asia-Pacific Volume 9 ; 9 ; >
     au < released ; crawling ; 2010 ; International Relations of the Asia-Pacific Volume 10 ; 10 ; >
@@ -8176,9 +8190,9 @@
     au < manifest ; exists ; 2002 ; ITNOW Volume 44 ; 44 ; >
     au < manifest ; exists ; 2003 ; ITNOW Volume 45 ; 45 ; >
     au < manifest ; exists ; 2004 ; ITNOW Volume 46 ; 46 ; >
-    au < wanted ; exists ; 2005 ; ITNOW Volume 47 ; 47 ; >
-    au < wanted ; exists ; 2006 ; ITNOW Volume 48 ; 48 ; >
-    au < wanted ; exists ; 2007 ; ITNOW Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2005 ; ITNOW Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2006 ; ITNOW Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2007 ; ITNOW Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; ITNOW Volume 50 ; 50 ; >
     au < released ; crawling ; 2009 ; ITNOW Volume 51 ; 51 ; >
     au < released ; crawling ; 2010 ; ITNOW Volume 52 ; 52 ; >
@@ -8247,9 +8261,9 @@
     au < manifest ; exists ; 2002 ; Japanese Journal of Clinical Oncology Volume 32 ; 32 ; >
     au < manifest ; exists ; 2003 ; Japanese Journal of Clinical Oncology Volume 33 ; 33 ; >
     au < manifest ; exists ; 2004 ; Japanese Journal of Clinical Oncology Volume 34 ; 34 ; >
-    au < wanted ; exists ; 2005 ; Japanese Journal of Clinical Oncology Volume 35 ; 35 ; >
-    au < wanted ; exists ; 2006 ; Japanese Journal of Clinical Oncology Volume 36 ; 36 ; >
-    au < wanted ; exists ; 2007 ; Japanese Journal of Clinical Oncology Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2005 ; Japanese Journal of Clinical Oncology Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2006 ; Japanese Journal of Clinical Oncology Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2007 ; Japanese Journal of Clinical Oncology Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Japanese Journal of Clinical Oncology Volume 38 ; 38 ; >
     au < released ; crawling ; 2009 ; Japanese Journal of Clinical Oncology Volume 39 ; 39 ; >
     au < released ; crawling ; 2010 ; Japanese Journal of Clinical Oncology Volume 40 ; 40 ; >
@@ -8275,7 +8289,7 @@
     au < released ; crawling ; 2010 ; Jerusalem Review of Legal Studies Volume 1 ; 1 ; >
     au < released ; crawling ; 2010 ; Jerusalem Review of Legal Studies Volume 2 ; 2 ; >
     au < released ; crawling ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 ; >
-    au < expected ; exists ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 ; >
 
   }
 
@@ -8348,9 +8362,9 @@
     au < manifest ; exists ; 2002 ; Journal of African Economies Volume 11 ; 11 ; >
     au < manifest ; exists ; 2003 ; Journal of African Economies Volume 12 ; 12 ; >
     au < manifest ; exists ; 2004 ; Journal of African Economies Volume 13 ; 13 ; >
-    au < wanted ; exists ; 2005 ; Journal of African Economies Volume 14 ; 14 ; >
-    au < wanted ; exists ; 2006 ; Journal of African Economies Volume 15 ; 15 ; >
-    au < wanted ; exists ; 2007 ; Journal of African Economies Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2005 ; Journal of African Economies Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2006 ; Journal of African Economies Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2007 ; Journal of African Economies Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of African Economies Volume 17 ; 17 ; >
     au < released ; crawling ; 2009 ; Journal of African Economies Volume 18 ; 18 ; >
     au < released ; crawling ; 2010 ; Journal of African Economies Volume 19 ; 19 ; >
@@ -8461,7 +8475,7 @@
     au < manifest ; exists ; 2004 ; Journal of the American Academy of Religion Volume 72 ; 72 ; >
     au < manifest ; exists ; 2005 ; Journal of the American Academy of Religion Volume 73 ; 73 ; >
     au < manifest ; exists ; 2006 ; Journal of the American Academy of Religion Volume 74 ; 74 ; >
-    au < wanted ; exists ; 2007 ; Journal of the American Academy of Religion Volume 75 ; 75 ; >
+    au < manifest ; exists ; 2007 ; Journal of the American Academy of Religion Volume 75 ; 75 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 ; >
     au < released ; crawling ; 2010 ; Journal of the American Academy of Religion Volume 78 ; 78 ; >
@@ -8687,12 +8701,12 @@
     au < manifest ; exists ; 2003 ; Journal of Antimicrobial Chemotherapy Volume 52 ; 52 ; >
     au < manifest ; exists ; 2004 ; Journal of Antimicrobial Chemotherapy Volume 53 ; 53 ; >
     au < manifest ; exists ; 2004 ; Journal of Antimicrobial Chemotherapy Volume 54 ; 54 ; >
-    au < wanted ; exists ; 2005 ; Journal of Antimicrobial Chemotherapy Volume 55 ; 55 ; >
-    au < wanted ; exists ; 2005 ; Journal of Antimicrobial Chemotherapy Volume 56 ; 56 ; >
-    au < wanted ; exists ; 2006 ; Journal of Antimicrobial Chemotherapy Volume 57 ; 57 ; >
-    au < wanted ; exists ; 2006 ; Journal of Antimicrobial Chemotherapy Volume 58 ; 58 ; >
-    au < wanted ; exists ; 2007 ; Journal of Antimicrobial Chemotherapy Volume 59 ; 59 ; >
-    au < wanted ; exists ; 2007 ; Journal of Antimicrobial Chemotherapy Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2005 ; Journal of Antimicrobial Chemotherapy Volume 55 ; 55 ; >
+    au < manifest ; exists ; 2005 ; Journal of Antimicrobial Chemotherapy Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2006 ; Journal of Antimicrobial Chemotherapy Volume 57 ; 57 ; >
+    au < manifest ; exists ; 2006 ; Journal of Antimicrobial Chemotherapy Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2007 ; Journal of Antimicrobial Chemotherapy Volume 59 ; 59 ; >
+    au < manifest ; exists ; 2007 ; Journal of Antimicrobial Chemotherapy Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 ; >
     au < released ; crawling ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 63 ; 63 ; >
@@ -8869,10 +8883,10 @@
     au < manifest ; exists ; 2004 ; The Journal of Biochemistry Volume 136 ; 136 ; >
     au < manifest ; exists ; 2005 ; The Journal of Biochemistry Volume 137 ; 137 ; >
     au < manifest ; exists ; 2005 ; The Journal of Biochemistry Volume 138 ; 138 ; >
-    au < wanted ; exists ; 2006 ; The Journal of Biochemistry Volume 139 ; 139 ; >
-    au < wanted ; exists ; 2006 ; The Journal of Biochemistry Volume 140 ; 140 ; >
-    au < wanted ; exists ; 2007 ; The Journal of Biochemistry Volume 141 ; 141 ; >
-    au < wanted ; exists ; 2007 ; The Journal of Biochemistry Volume 142 ; 142 ; >
+    au < manifest ; exists ; 2006 ; The Journal of Biochemistry Volume 139 ; 139 ; >
+    au < manifest ; exists ; 2006 ; The Journal of Biochemistry Volume 140 ; 140 ; >
+    au < manifest ; exists ; 2007 ; The Journal of Biochemistry Volume 141 ; 141 ; >
+    au < manifest ; exists ; 2007 ; The Journal of Biochemistry Volume 142 ; 142 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Biochemistry Volume 143 ; 143 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Biochemistry Volume 144 ; 144 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Biochemistry Volume 145 ; 145 ; >
@@ -8882,7 +8896,7 @@
     au < released ; crawling ; 2011 ; The Journal of Biochemistry Volume 149 ; 149 ; >
     au < released ; crawling ; 2011 ; The Journal of Biochemistry Volume 150 ; 150 ; >
     au < crawling ; exists ; 2012 ; The Journal of Biochemistry Volume 151 ; 151 ; >
-    au < exists ; exists ; 2012 ; The Journal of Biochemistry Volume 152 ; 152 ; >
+    au < crawling ; exists ; 2012 ; The Journal of Biochemistry Volume 152 ; 152 ; >
     }
 
   }
@@ -9013,7 +9027,7 @@
 
     au < manifest ; exists ; 2005 ; Journal of Competition Law & Economics Volume 1 ; 1 ; >
     au < manifest ; exists ; 2006 ; Journal of Competition Law & Economics Volume 2 ; 2 ; >
-    au < wanted ; exists ; 2007 ; Journal of Competition Law & Economics Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2007 ; Journal of Competition Law & Economics Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
     au < released ; crawling ; 2010 ; Journal of Competition Law & Economics Volume 6 ; 6 ; >
@@ -9059,7 +9073,7 @@
     au < manifest ; exists ; 2004 ; Journal of Conflict and Security Law Volume 9 ; 9 ; >
     au < manifest ; exists ; 2005 ; Journal of Conflict and Security Law Volume 10 ; 10 ; >
     au < manifest ; exists ; 2006 ; Journal of Conflict and Security Law Volume 11 ; 11 ; >
-    au < wanted ; exists ; 2007 ; Journal of Conflict and Security Law Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2007 ; Journal of Conflict and Security Law Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
     au < released ; crawling ; 2010 ; Journal of Conflict and Security Law Volume 15 ; 15 ; >
@@ -9159,7 +9173,7 @@
     au < manifest ; exists ; 2004 ; Journal of Design History Volume 17 ; 17 ; >
     au < manifest ; exists ; 2005 ; Journal of Design History Volume 18 ; 18 ; >
     au < manifest ; exists ; 2006 ; Journal of Design History Volume 19 ; 19 ; >
-    au < wanted ; exists ; 2007 ; Journal of Design History Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2007 ; Journal of Design History Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Design History Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
     au < released ; crawling ; 2010 ; Journal of Design History Volume 23 ; 23 ; >
@@ -9291,7 +9305,7 @@
     au < manifest ; exists ; 2004 ; Journal of Electron Microscopy Volume 53 ; 53 ; >
     au < manifest ; exists ; 2005 ; Journal of Electron Microscopy Volume 54 ; 54 ; >
     au < manifest ; exists ; 2006 ; Journal of Electron Microscopy Volume 55 ; 55 ; >
-    au < wanted ; exists ; 2007 ; Journal of Electron Microscopy Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2007 ; Journal of Electron Microscopy Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
     au < released ; crawling ; 2010 ; Journal of Electron Microscopy Volume 59 ; 59 ; >
@@ -9344,7 +9358,7 @@
     au < manifest ; exists ; 2004 ; Journal of Environmental Law Volume 16 ; 16 ; >
     au < manifest ; exists ; 2005 ; Journal of Environmental Law Volume 17 ; 17 ; >
     au < manifest ; exists ; 2006 ; Journal of Environmental Law Volume 18 ; 18 ; >
-    au < wanted ; exists ; 2007 ; Journal of Environmental Law Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2007 ; Journal of Environmental Law Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Environmental Law Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Environmental Law Volume 21 ; 21 ; >
     au < released ; crawling ; 2010 ; Journal of Environmental Law Volume 22 ; 22 ; >
@@ -9812,7 +9826,7 @@
     au < manifest ; exists ; 2004 ; Journal of the History of Collections Volume 16 ; 16 ; >
     au < manifest ; exists ; 2005 ; Journal of the History of Collections Volume 17 ; 17 ; >
     au < manifest ; exists ; 2006 ; Journal of the History of Collections Volume 18 ; 18 ; >
-    au < wanted ; exists ; 2007 ; Journal of the History of Collections Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2007 ; Journal of the History of Collections Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the History of Collections Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of the History of Collections Volume 21 ; 21 ; >
     au < released ; crawling ; 2010 ; Journal of the History of Collections Volume 22 ; 22 ; >
@@ -10239,8 +10253,8 @@
     au < manifest ; exists ; 2003 ; Journal of International Criminal Justice Volume 1 ; 1 ; >
     au < manifest ; exists ; 2004 ; Journal of International Criminal Justice Volume 2 ; 2 ; >
     au < manifest ; exists ; 2005 ; Journal of International Criminal Justice Volume 3 ; 3 ; >
-    au < wanted ; exists ; 2006 ; Journal of International Criminal Justice Volume 4 ; 4 ; >
-    au < wanted ; exists ; 2007 ; Journal of International Criminal Justice Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2006 ; Journal of International Criminal Justice Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2007 ; Journal of International Criminal Justice Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 ; >
     au < released ; crawling ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 ; >
     au < released ; crawling ; 2010 ; Journal of International Criminal Justice Volume 8 ; 8 ; >
@@ -10300,9 +10314,9 @@
     au < manifest ; exists ; 2002 ; Journal of International Economic Law Volume 5 ; 5 ; >
     au < manifest ; exists ; 2003 ; Journal of International Economic Law Volume 6 ; 6 ; >
     au < manifest ; exists ; 2004 ; Journal of International Economic Law Volume 7 ; 7 ; >
-    au < wanted ; exists ; 2005 ; Journal of International Economic Law Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2005 ; Journal of International Economic Law Volume 8 ; 8 ; >
     au < manifest ; exists ; 2006 ; Journal of International Economic Law Volume 9 ; 9 ; >
-    au < wanted ; exists ; 2007 ; Journal of International Economic Law Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2007 ; Journal of International Economic Law Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of International Economic Law Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of International Economic Law Volume 12 ; 12 ; >
     au < released ; crawling ; 2010 ; Journal of International Economic Law Volume 13 ; 13 ; >
@@ -10352,8 +10366,8 @@
     au < manifest ; exists ; 2002 ; Journal of Islamic Studies Volume 13 ; 13 ; >
     au < manifest ; exists ; 2003 ; Journal of Islamic Studies Volume 14 ; 14 ; >
     au < manifest ; exists ; 2004 ; Journal of Islamic Studies Volume 15 ; 15 ; >
-    au < wanted ; exists ; 2005 ; Journal of Islamic Studies Volume 16 ; 16 ; >
-    au < wanted ; exists ; 2006 ; Journal of Islamic Studies Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2005 ; Journal of Islamic Studies Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2006 ; Journal of Islamic Studies Volume 17 ; 17 ; >
     au < manifest ; exists ; 2007 ; Journal of Islamic Studies Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 ; >
@@ -10411,7 +10425,7 @@
     au < manifest ; exists ; 2004 ; Journal of Law, Economics, and Organization Volume 20 ; 20 ; >
     au < manifest ; exists ; 2005 ; Journal of Law, Economics, and Organization Volume 21 ; 21 ; >
     au < manifest ; exists ; 2006 ; Journal of Law, Economics, and Organization Volume 22 ; 22 ; >
-    au < wanted ; exists ; 2007 ; Journal of Law, Economics, and Organization Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2007 ; Journal of Law, Economics, and Organization Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Law, Economics, and Organization Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Law, Economics, and Organization Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; Journal of Law, Economics, and Organization Volume 26 ; 26 ; >
@@ -10484,8 +10498,8 @@
     au < manifest ; exists ; 2003 ; Journal of Logic and Computation Volume 13 ; 13 ; >
     au < manifest ; exists ; 2004 ; Journal of Logic and Computation Volume 14 ; 14 ; >
     au < manifest ; exists ; 2005 ; Journal of Logic and Computation Volume 15 ; 15 ; >
-    au < wanted ; exists ; 2006 ; Journal of Logic and Computation Volume 16 ; 16 ; >
-    au < wanted ; exists ; 2007 ; Journal of Logic and Computation Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2006 ; Journal of Logic and Computation Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2007 ; Journal of Logic and Computation Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Logic and Computation Volume 18 ; 18 ; >
     au < released ; crawling ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Journal of Logic and Computation Volume 20 ; 20 ; >
@@ -10642,7 +10656,7 @@
     au < manifest ; exists ; 2006 ; Journal of the London Mathematical Society Volume 73 ; 73 ; >
     au < manifest ; exists ; 2006 ; Journal of the London Mathematical Society Volume 74 ; 74 ; >
     au < manifest ; exists ; 2007 ; Journal of the London Mathematical Society Volume 75 ; 75 ; >
-    au < wanted ; exists ; 2007 ; Journal of the London Mathematical Society Volume 76 ; 76 ; >
+    au < manifest ; exists ; 2007 ; Journal of the London Mathematical Society Volume 76 ; 76 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
     au < released ; crawling ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
@@ -10850,9 +10864,9 @@
     au < manifest ; exists ; 2002 ; Journal of Molluscan Studies Volume 68 ; 68 ; >
     au < manifest ; exists ; 2003 ; Journal of Molluscan Studies Volume 69 ; 69 ; >
     au < manifest ; exists ; 2004 ; Journal of Molluscan Studies Volume 70 ; 70 ; >
-    au < wanted ; exists ; 2005 ; Journal of Molluscan Studies Volume 71 ; 71 ; >
+    au < manifest ; exists ; 2005 ; Journal of Molluscan Studies Volume 71 ; 71 ; >
     au < manifest ; exists ; 2006 ; Journal of Molluscan Studies Volume 72 ; 72 ; >
-    au < wanted ; exists ; 2007 ; Journal of Molluscan Studies Volume 73 ; 73 ; >
+    au < manifest ; exists ; 2007 ; Journal of Molluscan Studies Volume 73 ; 73 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 ; >
     au < released ; crawling ; 2010 ; Journal of Molluscan Studies Volume 76 ; 76 ; >
@@ -10906,7 +10920,7 @@
     au < manifest ; exists ; 2004 ; Journal of the National Cancer Institute Volume 96 ; 96 ; >
     au < manifest ; exists ; 2005 ; Journal of the National Cancer Institute Volume 97 ; 97 ; >
     au < manifest ; exists ; 2006 ; Journal of the National Cancer Institute Volume 98 ; 98 ; >
-    au < wanted ; exists ; 2007 ; Journal of the National Cancer Institute Volume 99 ; 99 ; >
+    au < manifest ; exists ; 2007 ; Journal of the National Cancer Institute Volume 99 ; 99 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the National Cancer Institute Volume 100 ; 100 ; >
     au < released ; crawling ; 2009 ; Journal of the National Cancer Institute Volume 101 ; 101 ; >
     au < released ; crawling ; 2010 ; Journal of the National Cancer Institute Volume 102 ; 102 ; >
@@ -11176,7 +11190,7 @@
     au < manifest ; exists ; 2004 ; Journal of Plankton Research Volume 26 ; 26 ; >
     au < manifest ; exists ; 2005 ; Journal of Plankton Research Volume 27 ; 27 ; >
     au < manifest ; exists ; 2006 ; Journal of Plankton Research Volume 28 ; 28 ; >
-    au < wanted ; exists ; 2007 ; Journal of Plankton Research Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2007 ; Journal of Plankton Research Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Plankton Research Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Plankton Research Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; Journal of Plankton Research Volume 32 ; 32 ; >
@@ -11313,8 +11327,8 @@
     au < manifest ; exists ; 2004 ; Journal of Public Health Volume 26 ; 26 ; >
     au < manifest ; exists ; 2005 ; Journal of Public Health Volume 27 ; 27 ; >
     au < manifest ; exists ; 2006 ; Journal of Public Health Volume 28 ; 28 ; >
-    au < wanted ; exists ; 2007 ; Journal of Public Health Volume 29 ; 29 ; >
-    au < wanted ; exists ; 2008 ; Journal of Public Health Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2007 ; Journal of Public Health Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2008 ; Journal of Public Health Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Public Health Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; Journal of Public Health Volume 32 ; 32 ; >
     au < released ; crawling ; 2011 ; Journal of Public Health Volume 33 ; 33 ; >
@@ -11336,7 +11350,7 @@
     param[base_url] = http://jrr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; expected ; 2012 ; Journal of Radiation Research Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2012 ; Journal of Radiation Research Volume 53 ; 53 ; >
 
   }
 
@@ -11383,7 +11397,7 @@
     au < manifest ; exists ; 2004 ; Journal of Refugee Studies Volume 17 ; 17 ; >
     au < manifest ; exists ; 2005 ; Journal of Refugee Studies Volume 18 ; 18 ; >
     au < manifest ; exists ; 2006 ; Journal of Refugee Studies Volume 19 ; 19 ; >
-    au < wanted ; exists ; 2007 ; Journal of Refugee Studies Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2007 ; Journal of Refugee Studies Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Refugee Studies Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 ; >
     au < released ; crawling ; 2010 ; Journal of Refugee Studies Volume 23 ; 23 ; >
@@ -11527,7 +11541,7 @@
     au < manifest ; exists ; 2004 ; Journal of Semitic Studies Volume 49 ; 49 ; >
     au < manifest ; exists ; 2005 ; Journal of Semitic Studies Volume 50 ; 50 ; >
     au < manifest ; exists ; 2006 ; Journal of Semitic Studies Volume 51 ; 51 ; >
-    au < wanted ; exists ; 2007 ; Journal of Semitic Studies Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2007 ; Journal of Semitic Studies Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Semitic Studies Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 ; >
     au < released ; crawling ; 2010 ; Journal of Semitic Studies Volume 55 ; 55 ; >
@@ -11733,7 +11747,7 @@
     au < manifest ; exists ; 2004 ; The Journal of Theological Studies Volume 55 ; 55 ; >
     au < manifest ; exists ; 2005 ; The Journal of Theological Studies Volume 56 ; 56 ; >
     au < manifest ; exists ; 2006 ; The Journal of Theological Studies Volume 57 ; 57 ; >
-    au < wanted ; exists ; 2007 ; The Journal of Theological Studies Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2007 ; The Journal of Theological Studies Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Theological Studies Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 ; >
     au < released ; crawling ; 2010 ; The Journal of Theological Studies Volume 61 ; 61 ; >
@@ -11852,9 +11866,9 @@
     au < manifest ; exists ; 2002 ; Journal of Tropical Pediatrics Volume 48 ; 48 ; >
     au < manifest ; exists ; 2003 ; Journal of Tropical Pediatrics Volume 49 ; 49 ; >
     au < manifest ; exists ; 2004 ; Journal of Tropical Pediatrics Volume 50 ; 50 ; >
-    au < wanted ; exists ; 2005 ; Journal of Tropical Pediatrics Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2005 ; Journal of Tropical Pediatrics Volume 51 ; 51 ; >
     au < manifest ; exists ; 2006 ; Journal of Tropical Pediatrics Volume 52 ; 52 ; >
-    au < wanted ; exists ; 2007 ; Journal of Tropical Pediatrics Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2007 ; Journal of Tropical Pediatrics Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Tropical Pediatrics Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Tropical Pediatrics Volume 55 ; 55 ; >
     au < released ; crawling ; 2010 ; Journal of Tropical Pediatrics Volume 56 ; 56 ; >
@@ -11927,8 +11941,8 @@
     au < manifest ; exists ; 2003 ; Law, Probability and Risk Volume 2 ; 2 ; >
     au < manifest ; exists ; 2004 ; Law, Probability and Risk Volume 3 ; 3 ; >
     au < manifest ; exists ; 2005 ; Law, Probability and Risk Volume 4 ; 4 ; >
-    au < wanted ; exists ; 2006 ; Law, Probability and Risk Volume 5 ; 5 ; >
-    au < wanted ; exists ; 2007 ; Law, Probability and Risk Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2006 ; Law, Probability and Risk Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2007 ; Law, Probability and Risk Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Law, Probability and Risk Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Law, Probability and Risk Volume 8 ; 8 ; >
     au < released ; crawling ; 2010 ; Law, Probability and Risk Volume 9 ; 9 ; >
@@ -12186,7 +12200,7 @@
     au < manifest ; exists ; 2004 ; The Library Volume 5 ; 5 ; >
     au < manifest ; exists ; 2005 ; The Library Volume 6 ; 6 ; >
     au < manifest ; exists ; 2006 ; The Library Volume 7 ; 7 ; >
-    au < wanted ; exists ; 2007 ; The Library Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2007 ; The Library Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Library Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Library Volume 10 ; 10 ; >
     au < released ; crawling ; 2010 ; The Library Volume 11 ; 11 ; >
@@ -12242,7 +12256,7 @@
     au < manifest ; exists ; 2004 ; Literary and Linguistic Computing Volume 19 ; 19 ; >
     au < manifest ; exists ; 2005 ; Literary and Linguistic Computing Volume 20 ; 20 ; >
     au < manifest ; exists ; 2006 ; Literary and Linguistic Computing Volume 21 ; 21 ; >
-    au < wanted ; exists ; 2007 ; Literary and Linguistic Computing Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2007 ; Literary and Linguistic Computing Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Literary and Linguistic Computing Volume 25 ; 25 ; >
@@ -12284,8 +12298,8 @@
     au < manifest ; exists ; 2003 ; Literary Imagination Volume 5 ; 5 ; >
     au < manifest ; exists ; 2004 ; Literary Imagination Volume 6 ; 6 ; >
     au < manifest ; exists ; 2005 ; Literary Imagination Volume 7 ; 7 ; >
-    au < wanted ; exists ; 2006 ; Literary Imagination Volume 8 ; 8 ; >
-    au < wanted ; exists ; 2007 ; Literary Imagination Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2006 ; Literary Imagination Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2007 ; Literary Imagination Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Literary Imagination Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Literary Imagination Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; Literary Imagination Volume 12 ; 12 ; >
@@ -12494,9 +12508,9 @@
     au < manifest ; exists ; 2002 ; Medical Law Review Volume 10 ; 10 ; >
     au < manifest ; exists ; 2003 ; Medical Law Review Volume 11 ; 11 ; >
     au < manifest ; exists ; 2004 ; Medical Law Review Volume 12 ; 12 ; >
-    au < wanted ; exists ; 2005 ; Medical Law Review Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2005 ; Medical Law Review Volume 13 ; 13 ; >
     au < manifest ; exists ; 2006 ; Medical Law Review Volume 14 ; 14 ; >
-    au < wanted ; exists ; 2007 ; Medical Law Review Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2007 ; Medical Law Review Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Medical Law Review Volume 16 ; 16 ; >
     au < released ; crawling ; 2009 ; Medical Law Review Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Medical Law Review Volume 18 ; 18 ; >
@@ -12760,9 +12774,9 @@
     au < manifest ; exists ; 2002 ; Modern Judaism Volume 22 ; 22 ; >
     au < manifest ; exists ; 2003 ; Modern Judaism Volume 23 ; 23 ; >
     au < manifest ; exists ; 2004 ; Modern Judaism Volume 24 ; 24 ; >
-    au < wanted ; exists ; 2005 ; Modern Judaism Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2005 ; Modern Judaism Volume 25 ; 25 ; >
     au < manifest ; exists ; 2006 ; Modern Judaism Volume 26 ; 26 ; >
-    au < wanted ; exists ; 2007 ; Modern Judaism Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2007 ; Modern Judaism Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Modern Judaism Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Modern Judaism Volume 29 ; 29 ; >
     au < released ; crawling ; 2010 ; Modern Judaism Volume 30 ; 30 ; >
@@ -12818,7 +12832,7 @@
     au < manifest ; exists ; 2002 ; Molecular Biology and Evolution Volume 19 ; 19 ; >
     au < manifest ; exists ; 2003 ; Molecular Biology and Evolution Volume 20 ; 20 ; >
     au < manifest ; exists ; 2004 ; Molecular Biology and Evolution Volume 21 ; 21 ; >
-    au < wanted ; exists ; 2005 ; Molecular Biology and Evolution Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2005 ; Molecular Biology and Evolution Volume 22 ; 22 ; >
     au < manifest ; exists ; 2006 ; Molecular Biology and Evolution Volume 23 ; 23 ; >
     au < manifest ; exists ; 2007 ; Molecular Biology and Evolution Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 ; >
@@ -13674,7 +13688,7 @@
     au < manifest ; exists ; 2004 ; Nucleic Acids Research Volume 32 ; 32 ; >
     au < manifest ; exists ; 2005 ; Nucleic Acids Research Volume 33 ; 33 ; >
     au < manifest ; exists ; 2006 ; Nucleic Acids Research Volume 34 ; 34 ; >
-    au < wanted ; exists ; 2007 ; Nucleic Acids Research Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2007 ; Nucleic Acids Research Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Nucleic Acids Research Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Nucleic Acids Research Volume 37 ; 37 ; >
     au < released ; crawling ; 2010 ; Nucleic Acids Research Volume 38 ; 38 ; >
@@ -13715,7 +13729,7 @@
     au < manifest ; exists ; 2001 ; Nucleic Acids Symposium Series Volume 1 ; 1 ; >
     au < manifest ; exists ; 2002 ; Nucleic Acids Symposium Series Volume 2 ; 2 ; >
     au < manifest ; exists ; 2003 ; Nucleic Acids Symposium Series Volume 3 ; 3 ; >
-    au < wanted ; exists ; 2004 ; Nucleic Acids Symposium Series Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2004 ; Nucleic Acids Symposium Series Volume 48 ; 48 ; >
     au < manifest ; exists ; 2005 ; Nucleic Acids Symposium Series Volume 49 ; 49 ; >
     au < manifest ; exists ; 2006 ; Nucleic Acids Symposium Series Volume 50 ; 50 ; >
     au < manifest ; exists ; 2007 ; Nucleic Acids Symposium Series Volume 51 ; 51 ; >
@@ -13968,7 +13982,7 @@
     au < manifest ; exists ; 2004 ; The Oral History Review Volume 31 ; 31 ; >
     au < manifest ; exists ; 2005 ; The Oral History Review Volume 32 ; 32 ; >
     au < manifest ; exists ; 2006 ; The Oral History Review Volume 33 ; 33 ; >
-    au < wanted ; exists ; 2007 ; The Oral History Review Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2007 ; The Oral History Review Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Oral History Review Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
     au < released ; crawling ; 2010 ; The Oral History Review Volume 37 ; 37 ; >
@@ -14158,7 +14172,7 @@
 
     {
     
-    au < exists ; exists ; 2012 ; Oxford Journal of Law and Religion Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2012 ; Oxford Journal of Law and Religion Volume 1 ; 1 ; >
     
     }
 
@@ -14591,8 +14605,8 @@
     au < manifest ; exists ; 2004 ; Past & Present Volume 185 ; 185 ; >
     au < manifest ; exists ; 2005 ; Past & Present Volume 186 ; 186 ; >
     au < manifest ; exists ; 2005 ; Past & Present Volume 187 ; 187 ; >
-    au < wanted ; exists ; 2005 ; Past & Present Volume 188 ; 188 ; >
-    au < wanted ; exists ; 2005 ; Past & Present Volume 189 ; 189 ; >
+    au < manifest ; exists ; 2005 ; Past & Present Volume 188 ; 188 ; >
+    au < manifest ; exists ; 2005 ; Past & Present Volume 189 ; 189 ; >
     au < manifest ; exists ; 2006 ; Past & Present Volume 190 ; 190 ; >
     au < manifest ; exists ; 2006 ; Past & Present Volume 191 ; 191 ; >
     au < manifest ; exists ; 2006 ; Past & Present Volume 192 ; 192 ; >
@@ -14804,7 +14818,7 @@
     param[base_url] = http://policing.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < wanted ; exists ; 2007 ; Policing: A Journal of Policy and Practice Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2007 ; Policing: A Journal of Policy and Practice Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Policing: A Journal of Policy and Practice Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
     au < released ; crawling ; 2010 ; Policing: A Journal of Policy and Practice Volume 4 ; 4 ; >
@@ -15074,7 +15088,7 @@
     au < manifest ; exists ; 2006 ; Proceedings of the London Mathematical Society Volume 92 ; 92 ; >
     au < manifest ; exists ; 2006 ; Proceedings of the London Mathematical Society Volume 93 ; 93 ; >
     au < manifest ; exists ; 2007 ; Proceedings of the London Mathematical Society Volume 94 ; 94 ; >
-    au < wanted ; exists ; 2007 ; Proceedings of the London Mathematical Society Volume 95 ; 95 ; >
+    au < manifest ; exists ; 2007 ; Proceedings of the London Mathematical Society Volume 95 ; 95 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Proceedings of the London Mathematical Society Volume 96 ; 96 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Proceedings of the London Mathematical Society Volume 97 ; 97 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Proceedings of the London Mathematical Society Volume 98 ; 98 ; >
@@ -15084,7 +15098,7 @@
     au < released ; crawling ; 2011 ; Proceedings of the London Mathematical Society Volume 102 ; 102 ; >
     au < released ; crawling ; 2011 ; Proceedings of the London Mathematical Society Volume 103 ; 103 ; >
     au < crawling ; exists ; 2012 ; Proceedings of the London Mathematical Society Volume 104 ; 104 ; >
-    au < expected ; exists ; 2012 ; Proceedings of the London Mathematical Society Volume 105 ; 105 ; >
+    au < manifest ; exists ; 2012 ; Proceedings of the London Mathematical Society Volume 105 ; 105 ; >
 
     }
 
@@ -15272,7 +15286,7 @@
     au < manifest ; exists ; 2004 ; Public Opinion Quarterly Volume 68 ; 68 ; >
     au < manifest ; exists ; 2005 ; Public Opinion Quarterly Volume 69 ; 69 ; >
     au < manifest ; exists ; 2006 ; Public Opinion Quarterly Volume 70 ; 70 ; >
-    au < wanted ; exists ; 2007 ; Public Opinion Quarterly Volume 71 ; 71 ; >
+    au < manifest ; exists ; 2007 ; Public Opinion Quarterly Volume 71 ; 71 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Public Opinion Quarterly Volume 72 ; 72 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Public Opinion Quarterly Volume 73 ; 73 ; >
     au < released ; crawling ; 2010 ; Public Opinion Quarterly Volume 74 ; 74 ; >
@@ -15501,7 +15515,7 @@
     au < manifest ; exists ; 2004 ; QJM: An International Journal of Medicine Volume 97 ; 97 ; >
     au < manifest ; exists ; 2005 ; QJM: An International Journal of Medicine Volume 98 ; 98 ; >
     au < manifest ; exists ; 2006 ; QJM: An International Journal of Medicine Volume 99 ; 99 ; >
-    au < wanted ; exists ; 2007 ; QJM: An International Journal of Medicine Volume 100 ; 100 ; >
+    au < manifest ; exists ; 2007 ; QJM: An International Journal of Medicine Volume 100 ; 100 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; QJM: An International Journal of Medicine Volume 101 ; 101 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
     au < released ; crawling ; 2010 ; QJM: An International Journal of Medicine Volume 103 ; 103 ; >
@@ -15618,7 +15632,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; >
     au < released ; crawling ; 2010 ; The Quarterly Journal of Mathematics Volume 61 ; 61 ; >
     au < released ; crawling ; 2011 ; The Quarterly Journal of Mathematics Volume 62 ; 62 ; >
-    au < crawling ; expected ; 2012 ; The Quarterly Journal of Mathematics Volume 63 ; 63 ; >
+    au < crawling ; exists ; 2012 ; The Quarterly Journal of Mathematics Volume 63 ; 63 ; >
 
     }
 
@@ -15862,19 +15876,19 @@
     au < manifest ; exists ; 2004 ; Radiation Protection Dosimetry Volume 112 ; 112 ; >
     au < manifest ; exists ; 2005 ; Radiation Protection Dosimetry Volume 113 ; 113 ; >
     au < manifest ; exists ; 2005 ; Radiation Protection Dosimetry Volume 114 ; 114 ; >
-    au < wanted ; exists ; 2005 ; Radiation Protection Dosimetry Volume 115 ; 115 ; >
-    au < wanted ; exists ; 2005 ; Radiation Protection Dosimetry Volume 116 ; 116 ; >
+    au < manifest ; exists ; 2005 ; Radiation Protection Dosimetry Volume 115 ; 115 ; >
+    au < manifest ; exists ; 2005 ; Radiation Protection Dosimetry Volume 116 ; 116 ; >
     au < manifest ; exists ; 2005 ; Radiation Protection Dosimetry Volume 117 ; 117 ; >
     au < manifest ; exists ; 2006 ; Radiation Protection Dosimetry Volume 118 ; 118 ; >
     au < manifest ; exists ; 2006 ; Radiation Protection Dosimetry Volume 119 ; 119 ; >
     au < manifest ; exists ; 2006 ; Radiation Protection Dosimetry Volume 120 ; 120 ; >
-    au < wanted ; exists ; 2006 ; Radiation Protection Dosimetry Volume 121 ; 121 ; >
-    au < wanted ; exists ; 2006 ; Radiation Protection Dosimetry Volume 122 ; 122 ; >
-    au < wanted ; exists ; 2007 ; Radiation Protection Dosimetry Volume 123 ; 123 ; >
-    au < wanted ; exists ; 2007 ; Radiation Protection Dosimetry Volume 124 ; 124 ; >
-    au < wanted ; exists ; 2007 ; Radiation Protection Dosimetry Volume 125 ; 125 ; >
-    au < wanted ; exists ; 2007 ; Radiation Protection Dosimetry Volume 126 ; 126 ; >
-    au < wanted ; exists ; 2007 ; Radiation Protection Dosimetry Volume 127 ; 127 ; >
+    au < manifest ; exists ; 2006 ; Radiation Protection Dosimetry Volume 121 ; 121 ; >
+    au < manifest ; exists ; 2006 ; Radiation Protection Dosimetry Volume 122 ; 122 ; >
+    au < manifest ; exists ; 2007 ; Radiation Protection Dosimetry Volume 123 ; 123 ; >
+    au < manifest ; exists ; 2007 ; Radiation Protection Dosimetry Volume 124 ; 124 ; >
+    au < manifest ; exists ; 2007 ; Radiation Protection Dosimetry Volume 125 ; 125 ; >
+    au < manifest ; exists ; 2007 ; Radiation Protection Dosimetry Volume 126 ; 126 ; >
+    au < manifest ; exists ; 2007 ; Radiation Protection Dosimetry Volume 127 ; 127 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 129 ; 129 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
@@ -15953,7 +15967,7 @@
     au < manifest ; exists ; 2003 ; Refugee Survey Quarterly Volume 22 ; 22 ; >
     au < manifest ; exists ; 2004 ; Refugee Survey Quarterly Volume 23 ; 23 ; >
     au < manifest ; exists ; 2005 ; Refugee Survey Quarterly Volume 24 ; 24 ; >
-    au < wanted ; exists ; 2006 ; Refugee Survey Quarterly Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2006 ; Refugee Survey Quarterly Volume 25 ; 25 ; >
     au < manifest ; exists ; 2007 ; Refugee Survey Quarterly Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Refugee Survey Quarterly Volume 27 ; 27 ; >
     au < released ; crawling ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; >
@@ -16307,7 +16321,7 @@
     param[base_url] = http://reep.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < wanted ; exists ; 2007 ; Review of Environmental Economics and Policy Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2007 ; Review of Environmental Economics and Policy Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Review of Environmental Economics and Policy Volume 2 ; 2 ; >
     au < released ; crawling ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; >
     au < released ; crawling ; 2010 ; Review of Environmental Economics and Policy Volume 4 ; 4 ; >
@@ -16796,7 +16810,7 @@
     au < manifest ; exists ; 2006 ; Social Forces Volume 85 ; 85 ; >
     au < manifest ; exists ; 2007 ; Social Forces Volume 86 ; 86 ; >
     au < manifest ; exists ; 2008 ; Social Forces Volume 87 ; 87 ; >
-    au < released ; manifest  ; 2009 ; Social Forces Volume 88 ; 88 ; >
+    au < released ; crawling ; 2009 ; Social Forces Volume 88 ; 88 ; >
     au < released ; crawling ; 2010 ; Social Forces Volume 89 ; 89 ; >
     au < released ; crawling ; 2011 ; Social Forces Volume 90 ; 90 ; >
     au < expected ; exists ; 2012 ; Social Forces Volume 91 ; 91 ; >
@@ -17472,7 +17486,7 @@
     au < manifest ; exists ; 2007 ; Toxicological Sciences Volume 96 ; 96 ; >
     au < manifest ; exists ; 2007 ; Toxicological Sciences Volume 97 ; 97 ; >
     au < manifest ; exists ; 2007 ; Toxicological Sciences Volume 98 ; 98 ; >
-    au < wanted ; exists ; 2007 ; Toxicological Sciences Volume 99 ; 99 ; >
+    au < manifest ; exists ; 2007 ; Toxicological Sciences Volume 99 ; 99 ; >
     au < manifest ; exists ; 2007 ; Toxicological Sciences Volume 100 ; 100 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Toxicological Sciences Volume 101 ; 101 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
@@ -17501,7 +17515,7 @@
     au < crawling ; exists ; 2012 ; Toxicological Sciences Volume 125 ; 125 ; >
     au < crawling ; exists ; 2012 ; Toxicological Sciences Volume 126 ; 126 ; >
     au < crawling ; exists ; 2012 ; Toxicological Sciences Volume 127 ; 127 ; >
-    au < expected ; exists ; 2012 ; Toxicological Sciences Volume 128 ; 128 ; >
+    au < crawling ; exists ; 2012 ; Toxicological Sciences Volume 128 ; 128 ; >
     au < expected ; exists ; 2012 ; Toxicological Sciences Volume 129 ; 129 ; >
     au < expected ; exists ; 2012 ; Toxicological Sciences Volume 130 ; 130 ; >
 
@@ -17604,7 +17618,7 @@
     au < manifest ; exists ; 2002-2003 ; Trusts & Trustees Volume 9 ; 9 ; >
     au < manifest ; exists ; 2003-2004 ; Trusts & Trustees Volume 10 ; 10 ; >
     au < manifest ; exists ; 2004-2005 ; Trusts & Trustees Volume 11 ; 11 ; >
-    au < wanted ; exists ; 2005-2006 ; Trusts & Trustees Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2005-2006 ; Trusts & Trustees Volume 12 ; 12 ; >
     au < manifest ; exists ; 2007 ; Trusts & Trustees Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
     au < released ; crawling ; 2009 ; Trusts & Trustees Volume 15 ; 15 ; >
@@ -17655,9 +17669,9 @@
     au < manifest ; exists ; 2002 ; Twentieth Century British History Volume 13 ; 13 ; >
     au < manifest ; exists ; 2003 ; Twentieth Century British History Volume 14 ; 14 ; >
     au < manifest ; exists ; 2004 ; Twentieth Century British History Volume 15 ; 15 ; >
-    au < wanted ; exists ; 2005 ; Twentieth Century British History Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2005 ; Twentieth Century British History Volume 16 ; 16 ; >
     au < manifest ; exists ; 2006 ; Twentieth Century British History Volume 17 ; 17 ; >
-    au < wanted ; exists ; 2007 ; Twentieth Century British History Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2007 ; Twentieth Century British History Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
     au < released ; crawling ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; >
     au < released ; crawling ; 2010 ; Twentieth Century British History Volume 21 ; 21 ; >
@@ -17710,9 +17724,9 @@
     au < manifest ; exists ; 2002 ; The World Bank Economic Review Volume 16 ; 16 ; >
     au < manifest ; exists ; 2003 ; The World Bank Economic Review Volume 17 ; 17 ; >
     au < manifest ; exists ; 2004 ; The World Bank Economic Review Volume 18 ; 18 ; >
-    au < wanted ; exists ; 2005 ; The World Bank Economic Review Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2005 ; The World Bank Economic Review Volume 19 ; 19 ; >
     au < manifest ; exists ; 2006 ; The World Bank Economic Review Volume 20 ; 20 ; >
-    au < wanted ; exists ; 2007 ; The World Bank Economic Review Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2007 ; The World Bank Economic Review Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The World Bank Economic Review Volume 22 ; 22 ; >
     au < released ; crawling ; 2009 ; The World Bank Economic Review Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; The World Bank Economic Review Volume 24 ; 24 ; >
@@ -17767,7 +17781,7 @@
     au < manifest ; exists ; 2003 ; The World Bank Research Observer Volume 18 ; 18 ; >
     au < manifest ; exists ; 2004 ; The World Bank Research Observer Volume 19 ; 19 ; >
     au < manifest ; exists ; 2005 ; The World Bank Research Observer Volume 20 ; 20 ; >
-    au < wanted ; exists ; 2006 ; The World Bank Research Observer Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2006 ; The World Bank Research Observer Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; The World Bank Research Observer Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; The World Bank Research Observer Volume 24 ; 24 ; >
@@ -17858,7 +17872,7 @@
     au < manifest ; exists ; 2008 ; Yearbook of International Environmental Law Volume 18 ; 18 ; >
     au < released ; crawling ; 2009 ; Yearbook of International Environmental Law Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Yearbook of International Environmental Law Volume 20 ; 20 ; >
-    au < expected ; exists ; 2011 ; Yearbook of International Environmental Law Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2011 ; Yearbook of International Environmental Law Volume 21 ; 21 ; >
     au < expected ; exists ; 2012 ; Yearbook of International Environmental Law Volume 22 ; 22 ; >
 
   }
@@ -17899,8 +17913,8 @@
     au < manifest ; exists ; 2002 ; The Year's Work in Critical and Cultural Theory Volume 10 ; 10 ; >
     au < manifest ; exists ; 2003 ; The Year's Work in Critical and Cultural Theory Volume 11 ; 11 ; >
     au < manifest ; exists ; 2004 ; The Year's Work in Critical and Cultural Theory Volume 12 ; 12 ; >
-    au < wanted ; exists ; 2005 ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 ; >
-    au < wanted ; exists ; 2006 ; The Year's Work in Critical and Cultural Theory Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2005 ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2006 ; The Year's Work in Critical and Cultural Theory Volume 14 ; 14 ; >
     au < manifest ; exists ; 2007 ; The Year's Work in Critical and Cultural Theory Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 ; >
     au < released ; crawling ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 ; >
@@ -18018,9 +18032,9 @@
     au < manifest ; exists ; 2002 ; The Year's Work in English Studies Volume 81 ; 81 ; >
     au < manifest ; exists ; 2003 ; The Year's Work in English Studies Volume 82 ; 82 ; >
     au < manifest ; exists ; 2004 ; The Year's Work in English Studies Volume 83 ; 83 ; >
-    au < wanted ; exists ; 2005 ; The Year's Work in English Studies Volume 84 ; 84 ; >
-    au < wanted ; exists ; 2006 ; The Year's Work in English Studies Volume 85 ; 85 ; >
-    au < wanted ; exists ; 2007 ; The Year's Work in English Studies Volume 86 ; 86 ; >
+    au < manifest ; exists ; 2005 ; The Year's Work in English Studies Volume 84 ; 84 ; >
+    au < manifest ; exists ; 2006 ; The Year's Work in English Studies Volume 85 ; 85 ; >
+    au < manifest ; exists ; 2007 ; The Year's Work in English Studies Volume 86 ; 86 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 ; >
     au < released ; crawling ; 2009 ; The Year's Work in English Studies Volume 88 ; 88 ; >
     au < released ; crawling ; 2010 ; The Year's Work in English Studies Volume 89 ; 89 ; >

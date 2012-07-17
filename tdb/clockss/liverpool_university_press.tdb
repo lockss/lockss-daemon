@@ -110,7 +110,7 @@
     au < released ; crawling ; 2009 ; The Byron Journal Volume 37 ; 37 >
     au < released ; crawling ; 2010 ; The Byron Journal Volume 38 ; 38 >    
     au < released ; crawling ; 2011 ; The Byron Journal Volume 39 ; 39 >
-    au < expected ; exists ; 2012 ; The Byron Journal Volume 40 ; 40 >
+    au < crawling ; exists ; 2012 ; The Byron Journal Volume 40 ; 40 >
 
   }
 
@@ -119,12 +119,18 @@
     title <
       name = Comma ;
       issn = 1680-1865 ; 
+      eissn = 2049-3355 ;
       issnl = 1680-1865
     >
     
-    param[journal_issn] = 1680-1865
+    param[journal_issn] = 2049-3355
     
-    au < manifest ; exists ; 2010 ; Comma Volume 1 ; 1 >
+    au < manifest ; exists ; 2004 ; Comma Volume 2004 ; 2004 >
+    au < manifest ; exists ; 2006 ; Comma Volume 2006 ; 2006 >
+    au < manifest ; exists ; 2007 ; Comma Volume 2007 ; 2007 >
+    au < manifest ; exists ; 2008 ; Comma Volume 2008 ; 2008 >
+    au < manifest ; exists ; 2009 ; Comma Volume 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Comma Volume 2010 ; 2010 >
     
   }
   
@@ -146,7 +152,7 @@
     au < released ; crawling ; 2010 ; Contemporary French Civilization Volume 34 ; 34 >
     au < released ; crawling ; 2011 ; Contemporary French Civilization Volume 35 ; 35 >    
     au < released ; crawling ; 2011 ; Contemporary French Civilization Volume 36 ; 36 >
-    au < expected ; exists ; 2012 ; Contemporary French Civilization Volume 37 ; 37 >
+    au < manifest ; exists ; 2012 ; Contemporary French Civilization Volume 37 ; 37 >
 
   }  
   
@@ -160,12 +166,13 @@
     >
     
     param[journal_issn] = 1754-3800 
+    comment[down] = publisher has been moved to Berghahn Journals
 
-    au < manifest ; exists ; 2008 ; European Comic Art Volume 1 ; 1 >
-    au < released ; crawling ; 2009 ; European Comic Art Volume 2 ; 2 >
-    au < released ; crawling ; 2010 ; European Comic Art Volume 3 ; 3 >    
-    au < released ; crawling ; 2011 ; European Comic Art Volume 4 ; 4 >
-    au < expected ; exists ; 2012 ; European Comic Art Volume 5 ; 5 >
+    au < down ; exists ; 2008 ; European Comic Art Volume 1 ; 1 >
+    au < down ; crawling ; 2009 ; European Comic Art Volume 2 ; 2 >
+    au < down ; crawling ; 2010 ; European Comic Art Volume 3 ; 3 >    
+    au < down ; crawling ; 2011 ; European Comic Art Volume 4 ; 4 >
+    au < down ; exists ; 2012 ; European Comic Art Volume 5 ; 5 >
 
   }  
   
@@ -287,7 +294,7 @@
     au < released ; crawling ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
     au < released ; crawling ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 >
     au < released ; crawling ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
-    au < expected ; exists ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
+    au < manifest ; exists ; 2012 ; Music, Sound, and the Moving Image Volume 6 ; 6 >
 
   }
   
@@ -377,7 +384,7 @@
     au < released ; crawling ; 2009 ; Sculpture Journal Volume 18 ; 18 >
     au < released ; crawling ; 2010 ; Sculpture Journal Volume 19 ; 19 > 
     au < released ; crawling ; 2011 ; Sculpture Journal Volume 20 ; 20 >
-    au < expected ; exists ; 2012 ; Sculpture Journal Volume 21 ; 21 >
+    au < crawling ; exists ; 2012 ; Sculpture Journal Volume 21 ; 21 >
 
   }
   
