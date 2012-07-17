@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.109 2012-07-10 04:38:10 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.110 2012-07-17 22:15:06 tlipkis Exp $
  */
 
 /*
@@ -570,19 +570,18 @@ public class ArchivalUnitStatus
 
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
-      table.setColumnDescriptors(columnDescriptors);
-      table.setDefaultSortRules(sortRules);
       String url = table.getKey();
       table.setTitle("AUs containing URL: " + url);
       try {
 	List<CachedUrl> cuLst =
 	  theDaemon.getPluginManager().findCachedUrls(url);
 	if (cuLst.isEmpty()) {
-	  throw new StatusService.NoSuchTableException("Unknown URL: " + url);
+	  table.setSummaryInfo(getNoMatchSummaryInfo());
+	} else {
+	  table.setColumnDescriptors(columnDescriptors);
+	  table.setDefaultSortRules(sortRules);
+	  table.setRows(getRows(table, cuLst));
 	}
-	table.setRows(getRows(table, cuLst));
-      } catch (StatusService.NoSuchTableException e) {
-	throw e;
       } catch (Exception e) {
 	logger.warning("Error building table", e);
 	throw new StatusService.
@@ -644,6 +643,13 @@ public class ArchivalUnitStatus
       return rowMap;
     }
 
+    private List getNoMatchSummaryInfo() {
+      List res = new ArrayList();
+      res.add(new StatusTable.SummaryInfo(null,
+					  ColumnDescriptor.TYPE_STRING,
+					  "No AUs contain this URL"));
+      return res;
+    }
   }
 
   static final StatusTable.DisplayedValue DAMAGE_STATE_OK =
