@@ -17465,6 +17465,7 @@
     param[base_url] = http://sw.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; Social Work Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Social Work Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Social Work Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Social Work Volume 44 ; 44 >
@@ -17498,6 +17499,7 @@
     param[base_url] = http://swr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; Social Work Research Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Social Work Research Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Social Work Research Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Social Work Research Volume 23 ; 23 >
