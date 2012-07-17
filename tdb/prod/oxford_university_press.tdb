@@ -3354,10 +3354,27 @@
     param[base_url] = http://cs.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; Children & Schools Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; Children & Schools Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; Children & Schools Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; Children & Schools Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; Children & Schools Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; Children & Schools Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; Children & Schools Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; Children & Schools Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; Children & Schools Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; Children & Schools Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; Children & Schools Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; Children & Schools Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; Children & Schools Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; Children & Schools Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; Children & Schools Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; Children & Schools Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; Children & Schools Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; Children & Schools Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Children & Schools Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Children & Schools Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Children & Schools Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; Children & Schools Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 2000 ; Children & Schools Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2001 ; Children & Schools Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; manifest ; 2002 ; Children & Schools Volume 24 ; 24 >
@@ -9239,10 +9256,57 @@
     param[base_url] = http://chromsci.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; Journal of Chromatographic Science Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; Journal of Chromatographic Science Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; Journal of Chromatographic Science Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; Journal of Chromatographic Science Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of Chromatographic Science Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of Chromatographic Science Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of Chromatographic Science Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; Journal of Chromatographic Science Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; Journal of Chromatographic Science Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of Chromatographic Science Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Chromatographic Science Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Chromatographic Science Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Chromatographic Science Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Chromatographic Science Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Chromatographic Science Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Chromatographic Science Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Chromatographic Science Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Chromatographic Science Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Chromatographic Science Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Chromatographic Science Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Chromatographic Science Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Chromatographic Science Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Chromatographic Science Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Chromatographic Science Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Chromatographic Science Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Chromatographic Science Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Chromatographic Science Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Chromatographic Science Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of Chromatographic Science Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of Chromatographic Science Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of Chromatographic Science Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; Journal of Chromatographic Science Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of Chromatographic Science Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of Chromatographic Science Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; Journal of Chromatographic Science Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; Journal of Chromatographic Science Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; Journal of Chromatographic Science Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Chromatographic Science Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Chromatographic Science Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Chromatographic Science Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Chromatographic Science Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Chromatographic Science Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; Journal of Chromatographic Science Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; Journal of Chromatographic Science Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Journal of Chromatographic Science Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Chromatographic Science Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Chromatographic Science Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Chromatographic Science Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Chromatographic Science Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Chromatographic Science Volume 50 ; 50 >
-    
+    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Chromatographic Science Volume 51 ; 51 >
 
   }
 
@@ -17465,6 +17529,46 @@
     param[base_url] = http://sw.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    au < HighWirePressH20Plugin ; manifest ; 1956 ; Social Work Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1957 ; Social Work Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1958 ; Social Work Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1959 ; Social Work Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1960 ; Social Work Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1961 ; Social Work Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1962 ; Social Work Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1963 ; Social Work Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1964 ; Social Work Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1965 ; Social Work Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1966 ; Social Work Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1967 ; Social Work Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 1968 ; Social Work Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1969 ; Social Work Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 1970 ; Social Work Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1971 ; Social Work Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1972 ; Social Work Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 1973 ; Social Work Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 1974 ; Social Work Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 1975 ; Social Work Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 1976 ; Social Work Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 1977 ; Social Work Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 1978 ; Social Work Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 1979 ; Social Work Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; manifest ; 1980 ; Social Work Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 1981 ; Social Work Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 1982 ; Social Work Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 1983 ; Social Work Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 1984 ; Social Work Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; Social Work Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 1986 ; Social Work Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 1987 ; Social Work Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 1988 ; Social Work Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 1989 ; Social Work Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 1990 ; Social Work Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; manifest ; 1991 ; Social Work Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; Social Work Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; manifest ; 1993 ; Social Work Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; Social Work Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; Social Work Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; Social Work Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Social Work Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Social Work Volume 43 ; 43 >
@@ -17499,6 +17603,7 @@
     param[base_url] = http://swr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; Social Work Research Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; Social Work Research Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Social Work Research Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Social Work Research Volume 22 ; 22 >
