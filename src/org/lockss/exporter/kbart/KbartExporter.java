@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.22 2012-07-10 16:29:29 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.22.2.1 2012-07-17 22:04:20 easyonthemayo Exp $
  */
 
 /*
@@ -441,7 +441,7 @@ public abstract class KbartExporter {
    * @return an appropriate collection name for the (section of) TDB being exported 
    */ 
   private String getCollectionName() {
-    return scope==null ? ContentScope.DEFAULT_SCOPE.outputName : scope.outputName;
+    return scope==null ? ContentScope.DEFAULT_SCOPE.toString() : scope.toString();
   }
   
   /**
