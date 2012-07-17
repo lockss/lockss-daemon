@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.106 2012-07-16 23:09:16 barry409 Exp $
+ * $Id: TestPollManager.java,v 1.107 2012-07-17 17:16:20 barry409 Exp $
  */
 
 /*
@@ -492,7 +492,8 @@ public class TestPollManager extends LockssTestCase {
     assertEquals(exp3, weightOrder());
 
     // enqueue a high priority poll, ensure it's now first
-    pollmanager.enqueueHighPriorityPoll(aus[2]);
+    PollSpec spec = new PollSpec(aus[2].getAuCachedUrlSet(), Poll.V3_POLL);
+    pollmanager.enqueueHighPriorityPoll(aus[2], spec);
     pollmanager.rebuildPollQueue();
     assertEquals(aus[2], pollmanager.pollQueue.get(0));
   }

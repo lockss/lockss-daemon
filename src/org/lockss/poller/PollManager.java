@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.236 2012-07-16 23:09:16 barry409 Exp $
+ * $Id: PollManager.java,v 1.237 2012-07-17 17:16:20 barry409 Exp $
  */
 
 /*
@@ -321,6 +321,7 @@ public class PollManager
   static class PollReq {
     ArchivalUnit au;
     int priority = 0;
+    PollSpec spec;
 
     public PollReq(ArchivalUnit au) {
       this.au = au;
@@ -331,6 +332,11 @@ public class PollManager
       return this;
     }
 
+    public PollReq setPollSpec(PollSpec spec) { 	 
+      this.spec = spec; 	 
+      return this; 	 
+    } 	 
+	 
     public ArchivalUnit getAu() {
       return au;
     }
@@ -2272,9 +2278,16 @@ public class PollManager
     }
   }
 
-  public void enqueueHighPriorityPoll(ArchivalUnit au) 
+  public void enqueueHighPriorityPoll(ArchivalUnit au, PollSpec spec) 
       throws NotEligibleException {
-    PollReq req = new PollManager.PollReq(au).setPriority(2);
+    if (au.getAuId() != spec.getAuId()) {
+      throw new IllegalArgumentException("auId in au \""+au.getAuId()
+					 +"\" does not match auId in spec \""
+					 +spec.getAuId()+"\"");
+    }
+    PollReq req = new PollManager.PollReq(au)
+      .setPollSpec(spec)
+      .setPriority(2);
     enqueueHighPriorityPoll(req);
   }
 
