@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.29 2012-07-17 17:16:20 barry409 Exp $
+ * $Id: DebugPanel.java,v 1.30 2012-07-17 19:13:30 barry409 Exp $
  */
 
 /*
@@ -349,6 +349,9 @@ public class DebugPanel extends LockssServlet {
 	showForcePoll = true;
 	return;
       }
+      // todo(bhayes): This check is duplicated in
+      // PollManager.checkEligibleForPoll. Is it needed in both
+      // places?
       // Don't poll if never crawled & not down
       if (!AuUtil.hasCrawled(au) && !AuUtil.isPubDown(au)) {
 	errMsg = "Not crawled yet.  Click again to force new poll.";

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.238 2012-07-17 18:02:10 barry409 Exp $
+ * $Id: PollManager.java,v 1.239 2012-07-17 19:13:30 barry409 Exp $
  */
 
 /*
@@ -2334,9 +2334,8 @@ public class PollManager
       Set<ArchivalUnit> highPriorityAus = new HashSet<ArchivalUnit>();
       synchronized (highPriorityPollRequests) {
 	for (PollReq req : highPriorityPollRequests.values()) {
-	  AuState auState = AuUtil.getAuState(req.au);
 	  highPriorityAus.add(req.au);
-	  if (isEligibleForPoll(req, auState)) {
+	  if (isEligibleForPoll(req)) {
 	    pollQueue.add(req);
 	  }
 	}
@@ -2349,15 +2348,15 @@ public class PollManager
 	      // already tried above; might or might not have been added.
 	      continue;
 	    }
-	    PollReq req = new PollReq(au);
-	    AuState auState = AuUtil.getAuState(au);
-	    if (isEligibleForPoll(req, auState)) {
-	      double weight = pollWeight(au, auState);
+	    try {
+	      double weight = pollWeight(au);
 	      if (weight > 0.0) {
 		weightMap.put(au, weight);
 	      }
-	    } else if (theLog.isDebug3()) {
-	      theLog.debug3("Not eligible for poll: " + au);
+	    } catch (NotEligibleException e) {
+	      if (theLog.isDebug3()) {
+		theLog.debug3("Not eligible for poll: " + au);
+	      }
 	    }
 	  } catch (RuntimeException e) {
 	    theLog.warning("Checking for pollworthiness: " + au.getName(), e);
@@ -2396,26 +2395,34 @@ public class PollManager
     }
   }
 
-  private boolean isEligibleForPoll(PollReq req, AuState auState) {
+  private boolean isEligibleForPoll(PollReq req) {
     try {
-      checkEligibleForPoll(req, auState);
+      checkEligibleForPoll(req);
       return true;
     } catch (NotEligibleException e) {
       return false;
     }
   }
 
+  // todo(bhayes): DebugPanel calls this, assuming the default is a V3
+  // Content Poll. On the other hand, it also creates an explicit
+  // PollSpec for enqueueHighPriorityPoll. It feels as if in this API
+  // the two calls should be parallel. Also possible would be for
+  // checkEligibleForPoll to let the caller know if a high priority
+  // would be eligible when a default priority would not.
+  /**
+   * @return true iff the ArchivalUnit would be eligible for a
+   * "default" V3 Content Poll.
+   */
   public void checkEligibleForPoll(ArchivalUnit au)
       throws NotEligibleException {
+    // todo(bhayes): This is creating a PollReq with no PollSpec,
+    // purely for the prupose of checking eligibility, which happens
+    // to not use the spec.
     checkEligibleForPoll(new PollReq(au));
   }
 
-  public void checkEligibleForPoll(PollReq req)
-      throws NotEligibleException {
-    checkEligibleForPoll(req, AuUtil.getAuState(req.au));
-  }
-
-  public void checkEligibleForPoll(PollReq req, AuState auState)
+  private void checkEligibleForPoll(PollReq req)
       throws NotEligibleException {
     ArchivalUnit au = req.au;
 
@@ -2433,6 +2440,7 @@ public class PollManager
     // Following tests suppressed for high priority (manually enqueued)
     // polls
 
+    AuState auState = AuUtil.getAuState(req.au);
     // Does AU want to be polled?
     if (!au.shouldCallTopLevelPoll(auState)) {
       throw new NotEligibleException("AU does not want to be polled.");
@@ -2476,7 +2484,9 @@ public class PollManager
 
   /** Return a number proportional to the desirability of calling a poll on
    * the AU. */
-  double pollWeight(ArchivalUnit au, AuState auState) {
+  double pollWeight(ArchivalUnit au) throws NotEligibleException {
+    checkEligibleForPoll(au);
+    AuState auState = AuUtil.getAuState(au);
     long lastEnd = auState.getLastTopLevelPollTime();
     long pollInterval;
     if (pollIntervalAgreementCurve != null &&
