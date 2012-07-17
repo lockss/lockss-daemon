@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.107 2012-07-17 17:16:20 barry409 Exp $
+ * $Id: TestPollManager.java,v 1.108 2012-07-17 18:02:11 barry409 Exp $
  */
 
 /*
@@ -464,9 +464,9 @@ public class TestPollManager extends LockssTestCase {
 			     aus[11], aus[9], aus[1], aus[3],
 			     aus[5], aus[7], aus[12]);
     assertEquals(exp, weightOrder());
-    List<ArchivalUnit> queue = pollmanager.pollQueue;
+    List<PollManager.PollReq> queue = pollmanager.pollQueue;
     assertEquals(8, queue.size());
-    assertTrue(queue+"", exp.containsAll(queue));
+    assertTrue(queue+"", exp.containsAll(ausOfReqs(queue)));
 
     p.put(V3Poller.PARAM_AT_RISK_AU_INSTANCES, atRiskString);
     p.put(PollManager.PARAM_POLL_WEIGHT_AT_RISK_PEERS_CURVE,
@@ -495,7 +495,7 @@ public class TestPollManager extends LockssTestCase {
     PollSpec spec = new PollSpec(aus[2].getAuCachedUrlSet(), Poll.V3_POLL);
     pollmanager.enqueueHighPriorityPoll(aus[2], spec);
     pollmanager.rebuildPollQueue();
-    assertEquals(aus[2], pollmanager.pollQueue.get(0));
+    assertEquals(aus[2], pollmanager.pollQueue.get(0).getAu());
   }
 
   List<ArchivalUnit> weightOrder() {

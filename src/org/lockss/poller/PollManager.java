@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.237 2012-07-17 17:16:20 barry409 Exp $
+ * $Id: PollManager.java,v 1.238 2012-07-17 18:02:10 barry409 Exp $
  */
 
 /*
@@ -312,9 +312,9 @@ public class PollManager
 
   Object queueLock = new Object();	// lock for pollQueue
   /**
-   * The processed list of AUs, in the order they will be polled.
+   * The processed list of poll requests, in the order they will be executed.
    */
-  protected List<ArchivalUnit> pollQueue = new ArrayList<ArchivalUnit>();
+  protected List<PollReq> pollQueue = new ArrayList<PollReq>();
   Map<ArchivalUnit,PollReq> highPriorityPollRequests =
     Collections.synchronizedMap(new ListOrderedMap());
 
@@ -2203,10 +2203,10 @@ public class PollManager
       if (activePollers >= maxSimultaneousPollers) {
 	startOneWait.expireIn(paramMaxPollersSleep);
       } else {
-	ArchivalUnit au = nextAu();
-	if (au != null) {
-	  startPoll(au);
-	  highPriorityPollRequests.remove(au);
+	PollReq req = nextReq();
+	if (req != null) {
+	  startPoll(req);
+	  highPriorityPollRequests.remove(req.au);
 	  return true;
 	} else {
 	  startOneWait.expireIn(paramQueueEmptySleep);
@@ -2235,33 +2235,33 @@ public class PollManager
   }
 
 
-  ArchivalUnit nextAu() throws InterruptedException {
+  PollReq nextReq() throws InterruptedException {
     boolean rebuilt = rebuildPollQueueIfNeeded();
-    ArchivalUnit au = nextAuFromBuiltQueue();
-    if (au != null) {
-      return au;
+    PollReq req = nextReqFromBuiltQueue();
+    if (req != null) {
+      return req;
     }
     if (!rebuilt) {
       rebuildPollQueue();
     }
-    return nextAuFromBuiltQueue();
+    return nextReqFromBuiltQueue();
   }
 
-  ArchivalUnit nextAuFromBuiltQueue() {
+  PollReq nextReqFromBuiltQueue() {
     synchronized (queueLock) {
       if (theLog.isDebug3()) {
-	theLog.debug3("nextAuFromBuiltQueue(), " +
+	theLog.debug3("nextReqFromBuiltQueue(), " +
 		      pollQueue.size() + " in queue");
       }
       while (!pollQueue.isEmpty()) {
-	ArchivalUnit au = pollQueue.remove(0);
+	PollReq req = pollQueue.remove(0);
 	// ignore deleted AUs
-	if (pluginMgr.isActiveAu(au)) {
-	  return au;
+	if (pluginMgr.isActiveAu(req.getAu())) {
+	  return req;
 	}
       }
       if (theLog.isDebug3()) {
-	theLog.debug3("nextAuFromBuiltQueue(): null");
+	theLog.debug3("nextReqFromBuiltQueue(): null");
       }
       return null;
     }
@@ -2273,9 +2273,13 @@ public class PollManager
 
   public List<ArchivalUnit> getPendingQueueAus() {
     rebuildPollQueueIfNeeded();
+    ArrayList<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
     synchronized (queueLock) {
-      return new ArrayList<ArchivalUnit>(pollQueue);
+       for (PollReq req : pollQueue) {
+         aus.add(req.getAu());
+       }
     }
+    return aus;
   }
 
   public void enqueueHighPriorityPoll(ArchivalUnit au, PollSpec spec) 
@@ -2325,20 +2329,15 @@ public class PollManager
     Map<ArchivalUnit, Double> weightMap = new HashMap<ArchivalUnit, Double>();
     synchronized (queueLock) {
       pollQueue.clear();
-      // XXX Until have real sort, just add these in the order they were
-      // created.
-
-      // highPriorityPollRequests is from Collections.synchronizedMap;
-      // Failure to synchronize over it when iterating over any of its
-      // collection views causes non-deterministic behavior. [See
-      // javadocs for java.util.Collections.synchronizedMap.]
+      // XXX Until have real priority system, just add these in the
+      // order they were created.
       Set<ArchivalUnit> highPriorityAus = new HashSet<ArchivalUnit>();
       synchronized (highPriorityPollRequests) {
 	for (PollReq req : highPriorityPollRequests.values()) {
 	  AuState auState = AuUtil.getAuState(req.au);
 	  highPriorityAus.add(req.au);
 	  if (isEligibleForPoll(req, auState)) {
-	    pollQueue.add(req.au);
+	    pollQueue.add(req);
 	  }
 	}
       }
@@ -2368,7 +2367,13 @@ public class PollManager
 	// weightedRandomSelection throws if the count is larger than the size.
 	int count = Math.min(weightMap.size(), availablePollCount);
 	if (!weightMap.isEmpty()) {
-	  pollQueue.addAll(weightedRandomSelection(weightMap, count));
+	  List<ArchivalUnit> selected =
+	    weightedRandomSelection(weightMap, count);
+	  for (ArchivalUnit au : selected) {
+	    PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
+	    PollReq req = new PollReq(au).setPollSpec(spec);
+	    pollQueue.add(req);
+	  }
 	}
       }
       if (theLog.isDebug()) {
@@ -2508,13 +2513,15 @@ public class PollManager
     return peers.size();
   }
 
-  boolean startPoll(ArchivalUnit au) {
+  boolean startPoll(PollReq req) {
+    ArchivalUnit au = req.getAu();
     if (isPollRunning(au)) {
       theLog.debug("Attempted to start poll when one is already running: " +
 		   au.getName());
       return false;
     }
 
+    // todo(bhayes): Should this be using the spec from the request?
     PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
     theLog.debug("Calling a V3 poll on AU " + au);
 
