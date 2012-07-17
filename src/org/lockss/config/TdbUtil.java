@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.13 2012-07-10 16:29:29 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.13.2.1 2012-07-17 14:31:41 easyonthemayo Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.daemon.AuHealthMetric;
 import org.lockss.plugin.AuOrderComparator;
 import org.lockss.state.SubstanceChecker;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 
 /**
  * Static utility methods for getting lists of Tdb entities. Sometimes the 
@@ -113,7 +114,35 @@ public class TdbUtil {
     if (tcfg==null) return null;
     return tcfg.getTdbAu(); 
   }
-  
+
+  /**
+   * Return all TdbAus representing journals for this title. Any AU without an
+   * ISBN is considered a journal.
+   *
+   * @return a collection of TdbAus for this title
+   */
+  /*public static Collection<TdbAu> getTdbAuJournals(TdbTitle title) {
+    Collection<TdbAu> journals = new ArrayList<TdbAu>();
+    for (TdbAu au : title.getTdbAus()) {
+      if (!TdbUtil.isBook(au)) journals.add(au);
+    }
+    return journals;
+  }*/
+
+  /**
+   * Return all TdbAus representing books for this title. Any AU with an ISBN
+   * is considered a book.
+   *
+   * @return a collection of TdbAu for this title
+   */
+  /*public static Collection<TdbAu> getTdbAuBooks(TdbTitle title) {
+    Collection<TdbAu> books = new ArrayList<TdbAu>();
+    for (TdbAu au : title.getTdbAus()) {
+      if (TdbUtil.isBook(au)) books.add(au);
+    }
+    return books;
+  }*/
+
   /**
    * Get a list of all the TdbTitles which are available for archiving. That
    * is, titles which are marked as available in the LOCKSS box's TDB records.
@@ -156,6 +185,63 @@ public class TdbUtil {
   }
 
   /**
+   * Get TdbTitles within the specified scope, and filter the list by type.
+   * @param scope
+   * @param type
+   * @return
+   */
+  public static Collection<TdbTitle> getTdbTitles(ContentScope scope,
+                                                  ContentType type) {
+    return filterTitlesByType(getTdbTitles(scope), type);
+  }
+
+  /**
+   * Get ArchivalUnits within the specified scope, and filter the list by type.
+   * @param scope
+   * @param type
+   * @return
+   */
+  public static Collection<ArchivalUnit> getAus(ContentScope scope,
+                                                  ContentType type) {
+    return filterAusByType(getAus(scope), type);
+  }
+
+
+  /**
+   * Filter a collection of TdbTitles to return only those of the specified type.
+   * Checks the first Au in a title.
+   * @param type type of content to filter for
+   * @return a list of TdbTitles with AUs of only the specified type
+   */
+  public static Collection<TdbTitle> filterTitlesByType(Collection<TdbTitle> titles,
+                                                  ContentType type) {
+    if (type==null) return titles;
+    Collection<TdbTitle> titlesOfType = new ArrayList<TdbTitle>();
+    for (TdbTitle title: titles) {
+      Iterator<TdbAu> it = title.getTdbAus().iterator();
+      if(it.hasNext() && type.isOfType(it.next())) titlesOfType.add(title);
+    }
+    return titlesOfType;
+  }
+
+  /**
+   * Filter a collection of ArchivalUnits to return only those of the specified
+   * type.
+   * @param type type of content to filter for
+   * @return a list of ArchivalUnits of only the specified type
+   */
+  public static Collection<ArchivalUnit> filterAusByType(Collection<ArchivalUnit> aus,
+                                                  ContentType type) {
+    if (type==null) return aus;
+    Collection<ArchivalUnit> ausOfType = new ArrayList<ArchivalUnit>();
+    for (ArchivalUnit au: aus) {
+      TdbAu tdbAu = getTdbAu(au);
+      if(tdbAu!=null && type.isOfType(tdbAu)) ausOfType.add(au);
+    }
+    return ausOfType;
+  }
+
+  /**
    * Retrieve a collection of all the ArchivalUnits available within a specified 
    * scope. If the scope is null or ALL, an empty collection is returned as we 
    * cannot guarantee that any AUs are available unless they are configured.
@@ -188,8 +274,8 @@ public class TdbUtil {
    * @param scope the ContentScope in which to count titles
    * @return the number of TdbTitles which have at least one AU in the given scope
    */
-  public static int getNumberTdbTitles(ContentScope scope) {
-    return getTdbTitles(scope).size();
+  public static int getNumberTdbTitles(ContentScope scope, ContentType type) {
+    return filterTitlesByType(getTdbTitles(scope), type).size();
   }
  
   /**
@@ -411,6 +497,14 @@ public class TdbUtil {
     return map; 
   }
 
+  /**
+   * Test whether an AU appears to be a book, that is it has some sort of ISBN.
+   * @param au
+   * @return
+   */
+  public static boolean isBook(TdbAu au) {
+    return !StringUtil.isNullString(au.getIsbn());
+  }
 
   /**
    * An enum representing the various scopes which can be requested and 
@@ -498,6 +592,78 @@ public class TdbUtil {
       return label; 
     }
     
+  }
+
+  /**
+   * An enum representing the type of content to include in the report. This
+   * can be books, journals, or both.
+   */
+  public static enum ContentType {
+    JOURNALS ("Journals") {
+      @Override
+      /** An AU is considered a journal if it has no ISBN. */
+      public boolean isOfType(TdbAu au) {
+        return StringUtil.isNullString(au.getIsbn());
+      }
+    },
+    BOOKS ("Books") {
+      @Override
+      /** An AU is considered a book if it has an ISBN. */
+      public boolean isOfType(TdbAu au) {
+        return !StringUtil.isNullString(au.getIsbn());
+      }
+    },
+    ALL ("All types") {
+      @Override
+      /** Any AU is of type all. */
+      public boolean isOfType(TdbAu au) { return true; }
+    };
+
+    /** The default fallback type. */
+    public static final ContentType DEFAULT_TYPE = JOURNALS;
+
+    /** A label for describing the type in the UI. */
+    public String label;
+
+    /**
+     * Create a scope option.
+     * @param label the public label for the scope option
+     */
+    ContentType(String label) {
+      this.label = label;
+    }
+
+    /**
+     * Get a ContentType by name. Upper cases the name so lower case values
+     * can be passed in URLs.
+     *
+     * @param name a string representing the name of the format
+     * @return a ContentType with the specified name, or null if none was found
+     */
+    public static ContentType byName(String name) {
+      return byName(name, DEFAULT_TYPE);
+    }
+    /**
+     * Get a ContentType by name, or the default if the name cannot be parsed.
+     *
+     * @param name a string representing the name of the format
+     * @param def the default to return if the name is invalid
+     * @return a ContentType with the specified name, or the default
+     */
+    public static ContentType byName(String name, ContentType def) {
+      try {
+        return valueOf(name.toUpperCase());
+      } catch (Exception e) {
+        return def;
+      }
+    }
+
+    /** A method to establish whether an AU is of the given type. */
+    public abstract boolean isOfType(TdbAu au);
+
+    public String toString() {
+      return label;
+    }
   }
 
 }
