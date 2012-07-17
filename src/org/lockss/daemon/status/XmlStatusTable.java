@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.21 2012-07-03 08:13:10 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.22 2012-07-17 08:49:04 tlipkis Exp $
  */
 
 /*
@@ -265,7 +265,16 @@ public class XmlStatusTable {
 
   /** Add value element to parent.  If list, add multiple values  */
   void addValueElement(Element parent, Object value, int type) {
-    if (value instanceof List) {
+    // XXX List can now be embedded in DisplayedValue.  Handle specially at
+    // top level until fully integrated.
+    if (value instanceof StatusTable.DisplayedValue) {
+      StatusTable.DisplayedValue dv = (StatusTable.DisplayedValue)value;
+      if (dv.getValue() instanceof Collection) {
+	addValueElement(parent, dv.getValue(), type);
+	return;
+      }
+    }
+    if (value instanceof Collection) {
       for (Iterator iter = ((List)value).iterator(); iter.hasNext(); ) {
 	addLinkValueElement(parent, iter.next(), type);
       }

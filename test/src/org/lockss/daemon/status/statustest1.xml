@@ -120,6 +120,17 @@
             </st:value>
         </st:cell>
     </st:row>
+    <st:row>
+        <st:cell>
+            <st:columnname>intCol</st:columnname>
+            <st:value>99990</st:value>
+        </st:cell>
+        <st:cell>
+            <st:columnname>strCol</st:columnname>
+            <st:value>int1</st:value>
+            <st:value>out2</st:value>
+        </st:cell>
+    </st:row>
     <st:summaryinfo>
         <st:title>summary</st:title>
         <st:type>4</st:type>
