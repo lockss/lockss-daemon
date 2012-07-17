@@ -1,10 +1,10 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.8 2012-07-09 07:50:15 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.8.2.1 2012-07-17 08:42:36 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,6 +41,7 @@ import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.crawler.CrawlerStatus.*;
+import static org.lockss.crawler.CrawlerStatus.ReferrerType;
 
 /**
  * Test class for CrawlerStatus.
@@ -52,6 +53,11 @@ public class TestCrawlerStatus extends LockssTestCase {
   String url3 = "http://example.com/query?foo=bar";
   String url_off1 = "http://nother.host/path/1";
   String url_off2 = "http://nother.host/path/2";
+
+  String ref1 = "http://example.com/ref1";
+  String ref2 = "http://example.com/ref2";
+  String ref3 = "http://example.com/ref3";
+  String ref4 = "http://example.com/ref4";
 
   MockArchivalUnit mau;
   CrawlerStatus cs;
@@ -615,6 +621,133 @@ public class TestCrawlerStatus extends LockssTestCase {
 
     assertEmpty(cs.getUrlsWithErrors());
     assertEquals(3, cs.getNumUrlsWithErrors());
+  }
+
+  public void testReferrersNo() {
+    ConfigurationUtil.setFromArgs(CrawlerStatus.PARAM_RECORD_REFERRERS_MODE,
+				  "None");
+    CrawlerStatus cs = new CrawlerStatus(mau, null, "Type 42");
+    assertFalse(cs.hasReferrers());
+    assertFalse(cs.hasReferrersOfType(ReferrerType.Included));
+    assertFalse(cs.hasReferrersOfType(ReferrerType.Excluded));
+  }
+
+  public void testReferrersFirst() {
+    ConfigurationUtil.setFromArgs(CrawlerStatus.PARAM_RECORD_REFERRERS_MODE,
+				  "First");
+    CrawlerStatus cs = new CrawlerStatus(mau, null, "Type 42");
+    assertTrue(cs.hasReferrers());
+    assertTrue(cs.hasReferrersOfType(ReferrerType.Included));
+    assertTrue(cs.hasReferrersOfType(ReferrerType.Excluded));
+    assertEmpty(cs.getReferrers(url1));
+
+    cs.signalReferrer(url1, ref1, ReferrerType.Included);
+    assertEquals(ListUtil.list(ref1), cs.getReferrers(url1));
+    cs.signalReferrer(url1, ref2, ReferrerType.Included);
+    assertEquals(ListUtil.list(ref1), cs.getReferrers(url1));
+    cs.signalReferrer(url2, ref2, ReferrerType.Excluded);
+    assertEquals(ListUtil.list(ref2), cs.getReferrers(url2));
+    assertEquals(ListUtil.list(ref1), cs.getReferrers(url1));
+  }
+
+  public void testReferrersAll() {
+    ConfigurationUtil.setFromArgs(CrawlerStatus.PARAM_RECORD_REFERRERS_MODE,
+				  "All");
+    CrawlerStatus cs = new CrawlerStatus(mau, null, "Type 42");
+    assertTrue(cs.hasReferrers());
+    assertTrue(cs.hasReferrersOfType(ReferrerType.Included));
+    assertTrue(cs.hasReferrersOfType(ReferrerType.Excluded));
+    assertEmpty(cs.getReferrers(url1));
+
+    cs.signalReferrer(url1, ref1, ReferrerType.Included);
+    assertEquals(ListUtil.list(ref1), cs.getReferrers(url1));
+    assertEmpty(cs.getReferrers(url2));
+    cs.signalReferrer(url1, ref2, ReferrerType.Excluded);
+    assertEquals(ListUtil.list(ref1, ref2), cs.getReferrers(url1));
+    cs.signalReferrer(url2, ref2, ReferrerType.Included);
+    assertEquals(ListUtil.list(ref2), cs.getReferrers(url2));
+    assertEquals(ListUtil.list(ref1, ref2), cs.getReferrers(url1));
+    cs.signalReferrer(url1, ref1, ReferrerType.Included);
+    // signalReferrer() contract is to not be called redundantly
+    // Documenting its current list sementics, but a set implementation
+    // would be ok.
+    assertEquals(ListUtil.list(ref1, ref2, ref1), cs.getReferrers(url1));
+  }
+
+  public void testReferrersIncluded() {
+    ConfigurationUtil.setFromArgs(CrawlerStatus.PARAM_RECORD_REFERRERS_MODE,
+				  "All",
+				  CrawlerStatus.PARAM_RECORD_REFERRER_TYPES,
+				  "Included");
+    CrawlerStatus cs = new CrawlerStatus(mau, null, "Type 42");
+    assertTrue(cs.hasReferrers());
+    assertTrue(cs.hasReferrersOfType(ReferrerType.Included));
+    assertFalse(cs.hasReferrersOfType(ReferrerType.Excluded));
+    assertEmpty(cs.getReferrers(url1));
+
+    cs.signalReferrer(url1, ref1, ReferrerType.Included);
+    assertEquals(ListUtil.list(ref1), cs.getReferrers(url1));
+    cs.signalReferrer(url1, ref2, ReferrerType.Excluded);
+    assertEquals(ListUtil.list(ref1), cs.getReferrers(url1));
+    cs.signalReferrer(url1, ref3, ReferrerType.Included);
+    assertEquals(ListUtil.list(ref1, ref3), cs.getReferrers(url1));
+  }
+
+  public void testReferrersExcluded() {
+    ConfigurationUtil.setFromArgs(CrawlerStatus.PARAM_RECORD_REFERRERS_MODE,
+				  "All",
+				  CrawlerStatus.PARAM_RECORD_REFERRER_TYPES,
+				  "Excluded");
+    CrawlerStatus cs = new CrawlerStatus(mau, null, "Type 42");
+    assertTrue(cs.hasReferrers());
+    assertFalse(cs.hasReferrersOfType(ReferrerType.Included));
+    assertTrue(cs.hasReferrersOfType(ReferrerType.Excluded));
+    assertEmpty(cs.getReferrers(url1));
+
+    cs.signalReferrer(url1, ref1, ReferrerType.Included);
+    assertEmpty(cs.getReferrers(url1));
+    cs.signalReferrer(url1, ref2, ReferrerType.Excluded);
+    cs.signalReferrer(url_off1, ref3, ReferrerType.Excluded);
+    assertEquals(ListUtil.list(ref2), cs.getReferrers(url1));
+    assertEquals(ListUtil.list(ref3), cs.getReferrers(url_off1));
+  }
+
+  public void testReferrersExcludedOnHost() {
+    ConfigurationUtil.setFromArgs(CrawlerStatus.PARAM_RECORD_REFERRERS_MODE,
+				  "All",
+				  CrawlerStatus.PARAM_RECORD_REFERRER_TYPES,
+				  "ExcludedOnHost");
+    CrawlerStatus cs = new CrawlerStatus(mau, null, "Type 42");
+    assertTrue(cs.hasReferrers());
+    assertFalse(cs.hasReferrersOfType(ReferrerType.Included));
+    assertTrue(cs.hasReferrersOfType(ReferrerType.Excluded));
+    assertEmpty(cs.getReferrers(url1));
+
+    cs.signalReferrer(url1, ref1, ReferrerType.Included);
+    assertEmpty(cs.getReferrers(url1));
+    cs.signalReferrer(url1, ref2, ReferrerType.Excluded);
+    cs.signalReferrer(url_off1, ref3, ReferrerType.Excluded);
+    assertEquals(ListUtil.list(ref2), cs.getReferrers(url1));
+    assertEmpty(cs.getReferrers(url_off1));
+  }
+
+  public void testReferrersExcludedOffHost() {
+    ConfigurationUtil.setFromArgs(CrawlerStatus.PARAM_RECORD_REFERRERS_MODE,
+				  "All",
+				  CrawlerStatus.PARAM_RECORD_REFERRER_TYPES,
+				  "ExcludedOffHost");
+    CrawlerStatus cs = new CrawlerStatus(mau, null, "Type 42");
+    assertTrue(cs.hasReferrers());
+    assertFalse(cs.hasReferrersOfType(ReferrerType.Included));
+    assertTrue(cs.hasReferrersOfType(ReferrerType.Excluded));
+    assertEmpty(cs.getReferrers(url1));
+
+    cs.signalReferrer(url1, ref1, ReferrerType.Included);
+    assertEmpty(cs.getReferrers(url1));
+    cs.signalReferrer(url1, ref2, ReferrerType.Excluded);
+    cs.signalReferrer(url_off1, ref3, ReferrerType.Excluded);
+    assertEmpty(cs.getReferrers(url1));
+    assertEquals(ListUtil.list(ref3), cs.getReferrers(url_off1));
   }
 
 
