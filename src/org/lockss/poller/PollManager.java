@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.240 2012-07-17 21:05:07 barry409 Exp $
+ * $Id: PollManager.java,v 1.241 2012-07-17 21:58:27 barry409 Exp $
  */
 
 /*
@@ -747,13 +747,16 @@ public class PollManager
   }
 
   /**
-   * Call a poll.  Used by PollStarter.
+   * Call a poll.  Used by NodeManagerImpl; V1 only.
    * @param pollspec the <code>PollSpec</code> that defines the subject of
    *                 the <code>Poll</code>.
    * @return the poll, if it was successfuly called, else null.
    */
   public Poll callPoll(PollSpec pollspec) {
-    return callPoll(null, pollspec);
+    if (pollspec.getProtocolVersion() != 1) {
+      throw new IllegalArgumentException("V1 method called with: "+pollspec);
+    }
+    return callPoll0(pollspec);
   }
   
 
@@ -765,11 +768,13 @@ public class PollManager
    * @return the poll, if it was successfuly called, else null.
    */
   public Poll callPoll(ArchivalUnit au, PollSpec pollspec) {
+    AuState auState = AuUtil.getAuState(au);
+    auState.pollAttempted();
+    return callPoll0(pollspec);
+  }
+
+  private Poll callPoll0(PollSpec pollspec) {
     String errMsg = null;
-    if (au != null) {
-      AuState auState = AuUtil.getAuState(au);
-      auState.pollAttempted();
-    }
     PollFactory pollFact = getPollFactory(pollspec);
     if (pollFact != null) {
       long duration = pollFact.calcDuration(pollspec, this);
@@ -794,7 +799,7 @@ public class PollManager
     } else {
       errMsg = "Unknown poll version: " + pollspec.getProtocolVersion();
     }
-    theLog.debug("Poll not started: " + errMsg + ", au: " + au.getName());
+    theLog.debug("Poll not started: " + errMsg + ", au: " + pollspec.getAuId());
     return null;
   }
 
