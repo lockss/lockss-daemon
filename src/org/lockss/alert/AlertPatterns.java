@@ -1,5 +1,5 @@
 /*
- * $Id: AlertPatterns.java,v 1.5 2009-06-09 06:11:53 tlipkis Exp $
+ * $Id: AlertPatterns.java,v 1.6 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.util.*;
 /** AlertPatterns is a collection of useful {@link AlertPattern}
  * implementations, and factories for creating them */
 public class AlertPatterns {
-  private static Logger log = Logger.getLogger("AlertPatterns");
+  private static final Logger log = Logger.getLogger(AlertPatterns.class);
 
   private static final AlertPattern TRUE = new True();
   private static final AlertPattern FALSE = new False();

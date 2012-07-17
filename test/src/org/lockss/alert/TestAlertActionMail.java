@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertActionMail.java,v 1.8 2009-06-09 06:11:53 tlipkis Exp $
+ * $Id: TestAlertActionMail.java,v 1.9 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.plugin.*;
  * This is the test class for org.lockss.alert.AlertActionMail
  */
 public class TestAlertActionMail extends LockssTestCase {
-  private static Logger log = Logger.getLogger("TestAlertActionMail");
+  private static final Logger log = Logger.getLogger(TestAlertActionMail.class);
 
   MockMailService mgr;
 

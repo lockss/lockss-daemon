@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActionLog.java,v 1.2 2004-07-12 21:09:44 clairegriffin Exp $
+ * $Id: AlertActionLog.java,v 1.3 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import org.lockss.util.*;
 
 /** An AlertAction that records the Alert by adding it to an AlertLog */
 public class AlertActionLog extends AbstractAlertAction {
-  private static Logger log = Logger.getLogger("AlertActionLog");
+  private static final Logger log = Logger.getLogger(AlertActionLog.class);
   private AlertLog alertLog;
 
   public AlertActionLog(AlertLog alertLog) {

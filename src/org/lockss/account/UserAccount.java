@@ -1,5 +1,5 @@
 /*
- * $Id: UserAccount.java,v 1.12 2012-01-18 03:37:52 tlipkis Exp $
+ * $Id: UserAccount.java,v 1.13 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ import org.lockss.alert.*;
 /** User account data.
  */
 public abstract class UserAccount implements LockssSerializable, Comparable {
-  static Logger log = Logger.getLogger("UserAccount");
+  private static final Logger log = Logger.getLogger(UserAccount.class);
 
   // XXX enhance test/src/org/lockss/account/TestLCUserAccount.java
 

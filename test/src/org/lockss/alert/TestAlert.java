@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlert.java,v 1.5 2009-06-09 06:11:53 tlipkis Exp $
+ * $Id: TestAlert.java,v 1.6 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.plugin.*;
  * This is the test class for org.lockss.alert.Alert
  */
 public class TestAlert extends LockssTestCase {
-  private static Logger log = Logger.getLogger("TestAlert");
+  private static final Logger log = Logger.getLogger(TestAlert.class);
 
   public void setUp() throws Exception {
     super.setUp();

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.24 2010-04-05 16:36:41 pgust Exp $
+ * $Id: BaseLockssManager.java,v 1.25 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
 
 public abstract class BaseLockssManager implements LockssManager {
 
-  private static Logger log = Logger.getLogger("BaseLockssManager");
+  private static final Logger log = Logger.getLogger(BaseLockssManager.class);
 
   protected LockssApp theApp = null;
   private Configuration.Callback configCallback;

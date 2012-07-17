@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActionMail.java,v 1.10 2009-06-09 06:11:53 tlipkis Exp $
+ * $Id: AlertActionMail.java,v 1.11 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
 
 /** An AlertAction that records the Alert by emailing it */
 public class AlertActionMail extends AbstractAlertAction {
-  private static Logger log = Logger.getLogger("AlertActionMail");
+  private static final Logger log = Logger.getLogger(AlertActionMail.class);
 
   /** If specified, the sender address on alert emails.  If not specified,
    * uses the admin email adress */

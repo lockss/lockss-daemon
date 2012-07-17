@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbstractAlertAction.java,v 1.2 2004-09-21 21:24:55 dshr Exp $
+ * $Id: TestAbstractAlertAction.java,v 1.3 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.plugin.*;
  * This is the test class for org.lockss.alert.AbstractAlertAction
  */
 public class TestAbstractAlertAction extends LockssTestCase {
-  private static Logger log = Logger.getLogger("TestAbstractAlertAction");
+  private static final Logger log = Logger.getLogger(TestAbstractAlertAction.class);
 
   MyMockAlertAction action;
 

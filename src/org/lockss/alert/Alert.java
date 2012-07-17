@@ -1,5 +1,5 @@
 /*
- * $Id: Alert.java,v 1.16 2012-01-18 03:38:39 tlipkis Exp $
+ * $Id: Alert.java,v 1.17 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.plugin.*;
  * may be interested in.
  */
 public class Alert {
-  private static Logger log = Logger.getLogger("Alert");
+  private static final Logger log = Logger.getLogger(Alert.class);
 
   // Attribute names
   public static final String ATTR_NAME = "name";

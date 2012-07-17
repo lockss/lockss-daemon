@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.20 2011-01-07 20:04:21 pgust Exp $
+ * $Id: LockssApp.java,v 1.21 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.apache.commons.collections.map.LinkedMap;
  */
 
 public abstract class LockssApp {
-  private static Logger log = Logger.getLogger("LockssApp");
+  private static final Logger log = Logger.getLogger(LockssApp.class);
 
   private static final String PREFIX = Configuration.PREFIX + "app.";
 

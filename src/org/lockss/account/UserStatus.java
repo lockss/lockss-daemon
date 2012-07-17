@@ -1,5 +1,5 @@
 /*
- * $Id: UserStatus.java,v 1.2 2009-06-19 08:27:25 tlipkis Exp $
+ * $Id: UserStatus.java,v 1.3 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.servlet.*;
 
 /** User status table */
 public class UserStatus implements StatusAccessor {
-  static Logger log = Logger.getLogger("UserStatus");
+  private static final Logger log = Logger.getLogger(UserStatus.class);
 
   final static String USER_STATUS_TABLE = "UserStatus";
 

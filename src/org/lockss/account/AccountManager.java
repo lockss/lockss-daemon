@@ -1,5 +1,5 @@
 /*
- * $Id: AccountManager.java,v 1.12 2012-03-15 08:19:01 tlipkis Exp $
+ * $Id: AccountManager.java,v 1.13 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ import static org.lockss.servlet.BaseServletManager.SUFFIX_USE_SSL;
 public class AccountManager
   extends BaseLockssDaemonManager implements ConfigurableManager  {
 
-  protected static Logger log = Logger.getLogger("AccountManager");
+  private static final Logger log = Logger.getLogger(AccountManager.class);
 
   public static final UserAccount NOBODY_ACCOUNT = new NobodyAccount();
 

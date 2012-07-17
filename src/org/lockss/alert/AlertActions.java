@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActions.java,v 1.4 2009-11-04 03:13:19 dshr Exp $
+ * $Id: AlertActions.java,v 1.5 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import org.lockss.util.*;
 
 /** AlertActions is a group of  {@link AlertAction} factories */
 public class AlertActions {
-  private static Logger log = Logger.getLogger("AlertActions");
+  private static final Logger log = Logger.getLogger(AlertActions.class);
 
   public static AlertAction Log(AlertLog log) {
     return new AlertActionLog(log);

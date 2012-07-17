@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.16 2012-01-18 03:38:17 tlipkis Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.17 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.test.*;
  */
 public class TestAlertManagerImpl extends LockssTestCase {
 
-  static Logger log = Logger.getLogger("TestAlertManager");
+  private static final Logger log = Logger.getLogger(TestAlertManagerImpl.class);
 
   MockLockssDaemon daemon;
   MyMockAlertManagerImpl mgr;

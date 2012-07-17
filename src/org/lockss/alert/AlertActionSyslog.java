@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActionSyslog.java,v 1.2 2009-11-09 05:19:53 tlipkis Exp $
+ * $Id: AlertActionSyslog.java,v 1.3 2012-07-17 02:33:26 thib_gc Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import java.net.*;
 
 /** An AlertAction that records the Alert by sending it to syslog */
 public class AlertActionSyslog extends AbstractAlertAction {
-  private static Logger log = Logger.getLogger("AlertActionSyslog");
+  private static final Logger log = Logger.getLogger(AlertActionSyslog.class);
   /** Hostname or IP addess of syslog server */
   static final String PARAM_HOST = PREFIX + "syslog.host";
   /** Syslog server port */
