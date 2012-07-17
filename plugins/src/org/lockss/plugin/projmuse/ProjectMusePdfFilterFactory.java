@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePdfFilterFactory.java,v 1.3 2012-05-14 22:46:16 wkwilson Exp $
+ * $Id: ProjectMusePdfFilterFactory.java,v 1.4 2012-07-17 01:33:12 thib_gc Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.pdfbox.cos.*;
 import org.pdfbox.pdfwriter.ContentStreamWriter;
 import org.pdfbox.pdmodel.common.PDStream;
 
+@Deprecated
 public class ProjectMusePdfFilterFactory implements FilterFactory {
 
   public static class FilteringException extends PluginException {
