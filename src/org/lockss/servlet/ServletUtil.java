@@ -1,10 +1,10 @@
 /*
- * $Id: ServletUtil.java,v 1.75 2012-07-10 04:37:59 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.76 2012-07-17 08:49:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -352,10 +352,10 @@ public class ServletUtil {
   private static final String SUBMIT_BEFORE =
     "<br><center>";
 
-  private static String thirdPartyLogo;
-  private static String thirdPartyLogoLink;
-  private static boolean displayIpAddr = DEFAULT_DISPLAY_IP_ADDR;
-  static boolean hostNameInTitle = DEFAULT_HOSTNAME_IN_TITLE;
+  private static volatile String thirdPartyLogo;
+  private static volatile String thirdPartyLogoLink;
+  private static volatile boolean displayIpAddr = DEFAULT_DISPLAY_IP_ADDR;
+  static volatile boolean hostNameInTitle = DEFAULT_HOSTNAME_IN_TITLE;
 
   private static Map<String,String> disabledServlets = new HashMap();
 
