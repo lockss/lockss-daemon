@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.307 2012-07-11 00:15:23 thib_gc Exp $
+ $Id: build.xml,v 1.307.2.1 2012-07-17 08:41:44 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -40,7 +40,6 @@ Args:
   -Dargs="args ..."        Supply cmd line args to run-class
   -Djvmargs="args ..."     Supply cmd line args to java (e.g., -Xmx1000m)
   -Dclass=pack.age.Class   Specify class for test-one, test-class, run-class
-  -Dcvstag=tag             Cvs tag to checkout for post-commit-test
   -Dexclude=path           Exclude matching tests.
   -Dfile=path/to/file      Specify file for print or index.
                               File is relative to project base dir
@@ -64,9 +63,15 @@ Args:
   -Dnowarn=true            Turn off compiler warnings.
   -Dshowoutput=yes         With test-one, show System.err output as it happens.
   -Dsuite=suite-name       Specify stf suite name.
-  -Dtarget=target          target that post-commit-test will build
   -Dtimeout=msecs          Override the default test failure timeout.
   -Dtitledb=file           Title DB config file to bundle with a plugin JAR.
+
+  post-commit-test args:
+  -Dcvstag=tag             Cvs tag to checkout (defaults to tag of current tree)
+  -Dcopylib=true           If true, lib jars are copied to temp build dir,
+                           not checked out from cvs.
+  -Dtarget=target          Target that post-commit-test will build.
+
 
  Release targets (jar-lockss, rpm))
   -Dreleasename=string     Name of daemon release, if building a release.
@@ -124,7 +129,7 @@ Args:
   <property name="build.sysclasspath" value="ignore" />
 
   <!--  CVS-related -->
-  <property name="cvs.module"    value="lockss-daemon-code" />
+  <property name="cvs.module.default" value="lockss-daemon-code" />
   <property name="cvs.dir"       value="lockss-daemon" />
 
   <!--  Directories -->
@@ -2384,6 +2389,22 @@ Test results in ${test.results}
      <if>
       <isfalse value="${nocvs}" />
       <then>
+        <if>
+          <istrue value="${copylib}" />
+          <then>
+            <echo message="copying lib dir"/>
+            <property name="cvs.module" value="lockss-daemon-butlib" />
+            <copy todir="${temp.proj.dir}"
+                  preservelastmodified="true" >
+              <fileset dir="${basedir}" >
+                <include name="lib/"/>
+              </fileset>
+            </copy>
+          </then>
+          <else>        
+            <property name="cvs.module" value="${cvs.module.default}" />
+          </else>
+        </if>
 	<loadfile property="cvs.root" srcfile="${basedir}/CVS/Root"
          failonerror="no">
           <filterchain> <striplinebreaks/> </filterchain>
