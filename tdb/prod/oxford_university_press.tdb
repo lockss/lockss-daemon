@@ -3354,6 +3354,7 @@
     param[base_url] = http://cs.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; Children & Schools Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Children & Schools Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Children & Schools Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Children & Schools Volume 21 ; 21 >
