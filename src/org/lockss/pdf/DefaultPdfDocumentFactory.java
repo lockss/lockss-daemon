@@ -1,5 +1,5 @@
 /*
- * $Id: DefaultPdfDocumentFactory.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: DefaultPdfDocumentFactory.java,v 1.1.2.1 2012-07-17 02:48:30 thib_gc Exp $
  */
 
 /*
@@ -31,8 +31,6 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.pdf;
-
-import java.io.*;
 
 import org.lockss.pdf.pdfbox.PdfBoxDocumentFactory;
 
