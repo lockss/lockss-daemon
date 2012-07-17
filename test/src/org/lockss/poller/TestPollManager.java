@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.108 2012-07-17 18:02:11 barry409 Exp $
+ * $Id: TestPollManager.java,v 1.109 2012-07-17 21:05:08 barry409 Exp $
  */
 
 /*
@@ -458,22 +458,22 @@ public class TestPollManager extends LockssTestCase {
       aus[7].getAuId() + "," + p1 + ";" +
       aus[12].getAuId() + "," + p1 + "," + p2;
 
-    pollmanager.rebuildPollQueue();
+    pollmanager.pollQueue.rebuildPollQueue();
 
     List exp = ListUtil.list(aus[14], aus[10], aus[13], aus[15],
 			     aus[11], aus[9], aus[1], aus[3],
 			     aus[5], aus[7], aus[12]);
     assertEquals(exp, weightOrder());
-    List<PollManager.PollReq> queue = pollmanager.pollQueue;
+    List<ArchivalUnit> queue = pollmanager.pollQueue.getPendingQueueAus();
     assertEquals(8, queue.size());
-    assertTrue(queue+"", exp.containsAll(ausOfReqs(queue)));
+    assertTrue(queue+"", exp.containsAll(queue));
 
     p.put(V3Poller.PARAM_AT_RISK_AU_INSTANCES, atRiskString);
     p.put(PollManager.PARAM_POLL_WEIGHT_AT_RISK_PEERS_CURVE,
 	  "[0,1],[1,2],[2,4]");
     ConfigurationUtil.addFromProps(p);
 
-    pollmanager.rebuildPollQueue();
+    pollmanager.pollQueue.rebuildPollQueue();
 
     List exp2 = ListUtil.list(aus[14], aus[12], aus[7], aus[10],
 			      aus[13], aus[15], aus[11], aus[9],
@@ -484,7 +484,7 @@ public class TestPollManager extends LockssTestCase {
 	  "[0,-1],[2,-1],[3,1]");
     ConfigurationUtil.addFromProps(p);
 
-    pollmanager.rebuildPollQueue();
+    pollmanager.pollQueue.rebuildPollQueue();
 
     List exp3 = ListUtil.list(aus[0], aus[14], aus[12], aus[7], aus[10],
 			      aus[13], aus[15], aus[11], aus[9],
@@ -494,8 +494,8 @@ public class TestPollManager extends LockssTestCase {
     // enqueue a high priority poll, ensure it's now first
     PollSpec spec = new PollSpec(aus[2].getAuCachedUrlSet(), Poll.V3_POLL);
     pollmanager.enqueueHighPriorityPoll(aus[2], spec);
-    pollmanager.rebuildPollQueue();
-    assertEquals(aus[2], pollmanager.pollQueue.get(0).getAu());
+    pollmanager.pollQueue.rebuildPollQueue();
+    assertEquals(aus[2], pollmanager.pollQueue.getPendingQueueAus().get(0));
   }
 
   List<ArchivalUnit> weightOrder() {
