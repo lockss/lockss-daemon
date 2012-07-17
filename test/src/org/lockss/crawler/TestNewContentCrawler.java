@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.79 2012-03-15 08:20:25 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.80 2012-07-17 08:48:25 tlipkis Exp $
  */
 
 /*
@@ -641,6 +641,45 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(1045, crawlStatus.getContentBytesFetched());
     assertEquals(SetUtil.set("Publisher"),
 		 SetUtil.theSet(crawlStatus.getSources()));
+  }
+
+  public void testReferrers() {
+    ConfigurationUtil.addFromArgs(CrawlerStatus.PARAM_RECORD_URLS,
+				  "all",
+				  CrawlerStatus.PARAM_RECORD_REFERRERS_MODE,
+				  "All");
+    String url1 = "http://www.example.com/link1.html";
+    String url2 = "http://www.example.com/link2.html";
+    String url3 = "http://www.example.com/link3.html";
+    String url4 = "http://www.example.com/link4.html";
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(startUrl);
+    extractor.addUrlsToReturn(startUrl,
+			      SetUtil.set(url1));
+    extractor.addUrlsToReturn(url1,
+			      SetUtil.set(url1, url2));
+    extractor.addUrlsToReturn(url2,
+			      SetUtil.set(url3, url1));
+    extractor.addUrlsToReturn(url3,
+			      SetUtil.set(url3, url4, url2));
+    mau.addUrl(url1).setContentSize(42);
+    mau.addUrl(url2).setContentSize(3);;
+    mau.addUrl(url3).setContentSize(1000);;
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
+    crawlRule.addUrlToCrawl(url3);
+
+    // Must create crawler after config set
+    crawler = new MyNewContentCrawler(mau, spec, aus);
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(1));
+    crawler.doCrawl();
+    CrawlerStatus crawlStatus = crawler.getStatus();
+    assertEquals(ListUtil.list(startUrl, url2), crawlStatus.getReferrers(url1));
+    assertEquals(ListUtil.list(url1, url3), crawlStatus.getReferrers(url2));
+    assertEquals(ListUtil.list(url2), crawlStatus.getReferrers(url3));
+    assertEquals(ListUtil.list(url3), crawlStatus.getReferrers(url4));
   }
 
   public void testGetStatusCrawlDoneNotModified() {

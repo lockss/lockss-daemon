@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.90 2012-07-09 07:50:15 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.91 2012-07-17 08:48:25 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ import org.lockss.hasher.*;
 import org.lockss.filter.*;
 import org.lockss.extractor.*;
 import org.lockss.alert.Alert;
+import static org.lockss.crawler.CrawlerStatus.ReferrerType;
 
 /**
  * A abstract class that implemented by NewContentCrawler and OaiCrawler
@@ -851,9 +852,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  if (logger.isDebug3()) logger.debug3("Self reference to " + url);
 	  return;
 	}
+	// The same URLs may be found repeatedly.  Ensure each is processed
+	// only once.  Both CrawlUrlData and CrawlerStatus.signalReferrer()
+	// assume no redundant calls.
 	if (foundUrls.contains(normUrl)) {
-	  // for simplicity and efficiency, CrawlUrlData doesn't allow children
-	  // to be added redundantly, so prevent it here.
 	  if (logger.isDebug3()) logger.debug3("Redundant child: " + normUrl);
 	  return;
 	}
@@ -863,18 +865,27 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	if ((child = processedUrls.get(normUrl)) != null) {
 	  if (logger.isDebug2())
 	    logger.debug2("Already processed url: " + child);
+	  signalReferrer(normUrl, ReferrerType.Included);
 	} else if ((child = fetchQueue.get(normUrl)) != null) {
 	  if (logger.isDebug3())
 	    logger.debug3("Already queued url: " + child);
+	  signalReferrer(normUrl, ReferrerType.Included);
 	} else if ((child = maxDepthUrls.get(normUrl)) != null) {
 	  if (logger.isDebug3())
 	    logger.debug3("Already too-deep url: " + child);
-	} else if (excludedUrlCache.containsKey(normUrl)
-	       || failedUrls.contains(normUrl)) {
+	  signalReferrer(normUrl, ReferrerType.Included);
+	} else if (excludedUrlCache.containsKey(normUrl)) {
 	  // au.shouldBeCached() is expensive, don't call it if we already
 	  // know the answer
 	  if (logger.isDebug3())
-	    logger.debug3("Already failed or excluded url: " + normUrl);
+	    logger.debug3("Already excluded url: " + normUrl);
+	  signalReferrer(normUrl, ReferrerType.Excluded);
+	  return;
+	} else if (failedUrls.contains(normUrl)) {
+	    // ditto
+	  if (logger.isDebug3())
+	    logger.debug3("Already failed to fetch url: " + normUrl);
+	  signalReferrer(normUrl, ReferrerType.Included);
 	  return;
 	} else {
 	  if (au.shouldBeCached(normUrl)) {
@@ -882,11 +893,13 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	      if (logger.isDebug2()) {
 		logger.debug2("Globally excluded url: "+normUrl);
 	      }
+	      signalReferrer(normUrl, ReferrerType.Excluded);
 	      return;
 	    } else {
 	      if (logger.isDebug2()) {
 		logger.debug2("Included url: "+normUrl);
 	      }
+	      signalReferrer(normUrl, ReferrerType.Included);
 	      child = newCrawlUrlData(normUrl, curl.getDepth() + 1);
 	      if (child.getDepth() > maxDepth) {
 		maxDepthUrls.put(normUrl, child);
@@ -899,6 +912,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	      logger.debug2("Excluded url: "+normUrl);
 	    }
 	    crawlStatus.signalUrlExcluded(normUrl);
+	    signalReferrer(normUrl, ReferrerType.Excluded);
 	    excludedUrlCache.put(normUrl, "");
 	  }
 	}
@@ -915,6 +929,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
     void addToFetchQueue(CrawlUrlData curl) {
       addToQueue(curl, fetchQueue, crawlStatus);
+    }
+
+    void signalReferrer(String url, ReferrerType rt) {
+      crawlStatus.signalReferrer(url, curl.getUrl(), rt);
     }
 
     /** Called whenever the depth of an already-known child node is reduced

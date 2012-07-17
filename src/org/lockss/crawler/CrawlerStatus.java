@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlerStatus.java,v 1.11 2012-07-09 07:50:15 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.12 2012-07-17 08:48:25 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -68,18 +68,72 @@ public class CrawlerStatus {
    * (Accumulating lots of URL lists from multiple crawls can cause the
    * daemon to run out of memory.)  If the substrings <code>fetched</code>,
    * <code>excluded</code>, <code>parsed</code>, <code>notModified</code>,
-   * <code>pending</code>, <code>error</code> appear in the value of the
-   * parameter, the corresponding sets or URLs will be recorded.
-   * <code>all</code> causes all sets to be kept. */
+   * <code>pending</code>, <code>error</code>, <code>referrers</code>
+   * appear in the value of the parameter, the corresponding sets or URLs
+   * will be recorded.  <code>all</code> causes all sets to be kept. */
   public static final String PARAM_KEEP_URLS =
     Configuration.PREFIX + "crawlStatus.keepUrls";
-  public static final String DEFAULT_KEEP_URLS = "errors, sources";
+  public static final String DEFAULT_KEEP_URLS = "errors, sources, referrers";
 
   /** Max number of off-site excluded URLs to keep; any more are just
    * counted.  -1 is the same as infinite. */
   public static final String PARAM_KEEP_OFF_HOST_EXCLUDES =
     Configuration.PREFIX + "crawlStatus.keepOffHostExcludes";
   public static final int DEFAULT_KEEP_OFF_HOST_EXCLUDES = 50;
+
+  /** Determines whether to record referrer URLs, and how many.  See also
+   * org.lockss.crawlStatus.recordReferrerTypes
+   *
+   * <dl><lh>Set to one of:</lh>
+   *
+   * <dt>None</dt><dd>Referrers will not be recorded.</dd>
+   *
+   * <dt>First</dt><dd>The first referrer to a page will be recorded.</dd>
+   *
+   * <dt>All</dt><dd>All referrers to a page will be recorded.</dd>
+   * </dl>
+   */
+  public static final String PARAM_RECORD_REFERRERS_MODE =
+    Configuration.PREFIX + "crawlStatus.recordReferrers";
+  public static final RecordReferrersMode DEFAULT_RECORD_REFERRERS_MODE =
+    RecordReferrersMode.None;
+
+  /** Specifies the types of URLs whose referrers will be recorded.  See
+   * also org.lockss.crawlStatus.recordReferrers
+   *
+   * <dl><lh>Set to one of:</lh>
+   *
+   * <dt>All</dt><dd>Referrers will be recorded for all URLs encountered.</dd>
+   *
+   * <dt>Included</dt><dd>Referrers of included URLs (those that match the
+   * crawl rules) will be recorded.</dd>
+   *
+   * <dt>Excluded</dt><dd>Referrers of excluded URLs (those that do not
+   * match the crawl rules) will be recorded.</dd>
+   *
+   * <dt>ExcludedOnHost</dt><dd>Referrers of excluded URLs on the AUs
+   * host(s) will be recorded.</dd>
+   *
+   * <dt>ExcludedOffHost</dt><dd>Referrers of excluded URLs on other hosts
+   * will be recorded.</dd>
+   * </dl>
+   */
+  public static final String PARAM_RECORD_REFERRER_TYPES =
+    Configuration.PREFIX + "crawlStatus.recordReferrerTypes";
+  public static final RecordReferrerTypes DEFAULT_RECORD_REFERRER_TYPES =
+    RecordReferrerTypes.All;
+
+  /** Record no referrer info, only the first referrer to any URL, or all
+   * referrers */
+  public enum RecordReferrersMode {None, First, All};
+
+  /** URLs whose referrers are recorded.  See {@link
+  /** #PARAM_RECORD_REFERRER_TYPES} */
+  public enum RecordReferrerTypes {
+    All, Included, Excluded, ExcludedOnHost, ExcludedOffHost};
+
+  public enum ReferrerType {Included, Excluded};
+
 
   static Map<Integer,String> DEFAULT_MESSAGES = new HashMap();
   static {
@@ -133,9 +187,11 @@ public class CrawlerStatus {
   protected UrlCount parsed;
   protected UrlCount pending;
   protected UrlCount errors;
+  protected ReferrerMap referrers;
+  protected RecordReferrersMode recordRefMode;
 
-  //  Maps mimetype to UrlCounter
-  protected Map mimeCounts = new HashMap(); 
+  // Maps mimetype to UrlCounter
+  protected Map<String,UrlCount> mimeCounts = new HashMap<String,UrlCount>(); 
     
   public CrawlerStatus(ArchivalUnit au, Collection startUrls, String type) {
     this.au = au;;
@@ -179,6 +235,15 @@ public class CrawlerStatus {
       pending = newSetCounter("pending", recordUrls);
       errors = newMapCounter("error", recordUrls);
       paramRecordUrls = recordUrls;
+      RecordReferrerTypes rrt =
+	(RecordReferrerTypes)config.getEnum(RecordReferrerTypes.class,
+					    PARAM_RECORD_REFERRER_TYPES,
+					    DEFAULT_RECORD_REFERRER_TYPES);
+      recordRefMode =
+	(RecordReferrersMode)config.getEnum(RecordReferrersMode.class,
+					    PARAM_RECORD_REFERRERS_MODE,
+					    DEFAULT_RECORD_REFERRERS_MODE);
+      referrers = new ReferrerMap(recordRefMode, rrt);
     }
   }
 
@@ -196,10 +261,10 @@ public class CrawlerStatus {
     sources = sources.seal(isType("sources", keepUrls));
     pending = pending.seal(isType("pending", keepUrls));
     errors = errors.seal(isType("errors", keepUrls));
+    referrers = referrers.seal(isType("referrers", keepUrls));
     boolean keepMime = isType("mime", keepUrls);
-    for (Iterator iter = mimeCounts.entrySet().iterator(); iter.hasNext(); ) {
-      Map.Entry ent = (Map.Entry)iter.next();
-      ent.setValue(((UrlCount)ent.getValue()).seal(keepMime));
+    for (Map.Entry<String,UrlCount> ent : mimeCounts.entrySet()) {
+      ent.setValue((ent.getValue()).seal(keepMime));
     }
   }
 
@@ -703,7 +768,7 @@ public class CrawlerStatus {
   public synchronized void signalMimeTypeOfUrl(String mimeType,
 					       String url) {
     if (mimeType == null) return;      
-    UrlCount ctr = (UrlCount)mimeCounts.get(mimeType);  
+    UrlCount ctr = mimeCounts.get(mimeType);  
     if (ctr == null) {          
       ctr = newListCounter("mime", paramRecordUrls);
       mimeCounts.put(mimeType, ctr);
@@ -712,15 +777,15 @@ public class CrawlerStatus {
   }
  
   public UrlCount getMimeTypeCtr(String mimeType) {
-    return (UrlCount)mimeCounts.get(mimeType);  
+    return mimeCounts.get(mimeType);  
   }
 
   /**
    * @return list of the mime types
    */
-  public synchronized Collection getMimeTypes() {
+  public synchronized Collection<String> getMimeTypes() {
     if (isCrawlActive()) {   
-      return new ArrayList(mimeCounts.keySet());
+      return new ArrayList<String>(mimeCounts.keySet());
     } else {
       return mimeCounts.keySet();
     }
@@ -737,7 +802,7 @@ public class CrawlerStatus {
    * @return list of urls with this mime-type found during a crawl
    */
   public synchronized List getUrlsOfMimeType(String mimeType) {
-    UrlCount ctr = (UrlCount)mimeCounts.get(mimeType);  
+    UrlCount ctr = mimeCounts.get(mimeType);  
     if (ctr != null) {          
       return ctr.getList(); 
     }
@@ -748,12 +813,43 @@ public class CrawlerStatus {
    * @return number of urls with this mime-type found during a crawl
    */
   public synchronized int getNumUrlsOfMimeType(String mimeType) {
-    UrlCount ctr = (UrlCount)mimeCounts.get(mimeType);  
+    UrlCount ctr = mimeCounts.get(mimeType);  
     if (ctr != null) {          
       return ctr.getCount(); 
     }
     return 0;  
   }
+
+  // Referrers
+
+  /** Record a referrer URL for a URL.  Must be called only once for any
+   * {referrer, URL} pair */
+  public synchronized void signalReferrer(String url, String referrerUrl,
+					  ReferrerType rt) {
+    referrers.addReferrer(url, referrerUrl, rt);
+  }
+ 
+  public RecordReferrersMode getRecordReferrersMode() {
+    return recordRefMode;
+  }
+
+  public boolean hasReferrers() {
+    switch (recordRefMode) {
+    case None:
+      return false;
+    default:
+      return true;
+    }
+  }
+
+  public boolean hasReferrersOfType(ReferrerType rt) {
+    return referrers.hasReferrersOfType(rt);
+  }
+
+  public List<String> getReferrers(String url) {
+    return referrers.getReferrers(url);  
+  }
+
 
   /** Maintain a count and optional collection (list/set/map).  If
   collection is present, seal() will make it immutable and possibly
@@ -999,6 +1095,113 @@ public class CrawlerStatus {
       } else {
 	return new UrlCount((map != null) ? map.size() : 0);
       }
+    }
+  }
+
+  public class ReferrerMap {
+    Map map;
+    RecordReferrersMode recordMode;
+    RecordReferrerTypes recordTypes;
+
+    ReferrerMap(RecordReferrersMode recordMode,
+		RecordReferrerTypes recordTypes) {
+      this.recordMode = recordMode;
+      this.recordTypes = recordTypes;
+    }
+
+    boolean shouldRecord(String url, ReferrerType rt) {
+      if (recordMode == RecordReferrersMode.None) {
+	return false;
+      }
+      switch (recordTypes) {
+      case All:
+	return true;
+      case Included:
+	return rt == ReferrerType.Included;
+      case Excluded:
+	return rt == ReferrerType.Excluded;
+      case ExcludedOffHost:
+	return rt == ReferrerType.Excluded && isOffHost(url);
+      case ExcludedOnHost:
+	return rt == ReferrerType.Excluded && !isOffHost(url);
+      default:
+	throw new RuntimeException("Shouldn't happen - unknown ReferrerType: "
+				   + recordTypes);
+      }
+    }
+
+    public boolean hasReferrersOfType(ReferrerType rt) {
+      if (recordMode == RecordReferrersMode.None) {
+	return false;
+      }
+      switch (rt) {
+      case Included:
+	switch (recordTypes) {
+	case All:
+	case Included:
+	  return true;
+	default:
+	  return false;
+	}
+      case Excluded:
+	switch (recordTypes) {
+	case All:
+	case Excluded:
+	case ExcludedOffHost:
+	case ExcludedOnHost:
+	  return true;
+	default:
+	  return false;
+	}
+      }
+      return false;
+    }
+
+    void addReferrer(String url, String referrerUrl, ReferrerType rt) {
+      if (shouldRecord(url, rt)) {
+	if (map == null) {
+	  map = new HashMap();
+	}
+	Object val = map.get(url);
+	if (val == null) {
+	  map.put(url, referrerUrl);
+	} else if (val instanceof List) {
+	  ((List)val).add(referrerUrl);
+	} else {
+	  switch (recordMode) {
+	  case All:
+	    List coll = new ArrayList(4);
+	    map.put(url, coll);
+	    coll.add(val);
+	    coll.add(referrerUrl);
+	    break;
+	  case First:
+	    // no action
+	    break;
+	  }
+	}
+      }
+    }
+
+    List<String> getReferrers(String url) {
+      if (map == null) {
+	return Collections.EMPTY_LIST;
+      }
+      Object val = map.get(url);
+      if (val == null) {
+	return Collections.EMPTY_LIST;
+      } else if (val instanceof List) {
+	return (List<String>)val;
+      } else {
+	return Collections.singletonList((String)val);
+      }
+    }
+
+    public ReferrerMap seal(boolean keepColl) {
+      if (!keepColl) {
+	map = null;
+      }
+      return this;
     }
   }
 

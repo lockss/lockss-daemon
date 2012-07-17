@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlUrlsStatusAccessor.java,v 1.9 2011-05-11 08:41:10 tlipkis Exp $
+ * $Id: CrawlUrlsStatusAccessor.java,v 1.10 2012-07-17 08:48:25 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,18 +34,19 @@ package org.lockss.crawler;
 import java.util.*;
 import org.lockss.daemon.status.*;
 import org.lockss.daemon.*;
-// import org.lockss.app.*;
 import org.lockss.plugin.*;
-// import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import static org.lockss.crawler.CrawlerStatus.UrlErrorInfo;
+import static org.lockss.crawler.CrawlerStatus.ReferrerType;
 
 public class CrawlUrlsStatusAccessor implements StatusAccessor {
+  static Logger log = Logger.getLogger("CrawlUrlsStatusAccessor");
 
   private static final String URL = "url";
   private static final String IX = "ix";
   private static final String CRAWL_ERROR = "crawl_error";
   private static final String CRAWL_SEVERITY = "crawl_severity";
+  private static final String REFERRER = "referrer";
 
   private static final String FETCHED_TABLE_NAME = "fetched";
   private static final String ERROR_TABLE_NAME = "error";
@@ -84,9 +85,15 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     ListUtil.list(new ColumnDescriptor(URL, "URL Excluded",
 				       ColumnDescriptor.TYPE_STRING));
 
-  private List colDescsMimeTypeUrls; 
 
-  
+  private static ColumnDescriptor REFERRER_FIRST_COLDESC =
+    new ColumnDescriptor(REFERRER, "First Referrer",
+			 ColumnDescriptor.TYPE_STRING);
+
+  private static ColumnDescriptor REFERRER_ALL_COLDESC =
+    new ColumnDescriptor(REFERRER, "Referrers", ColumnDescriptor.TYPE_STRING);
+
+
   private static final List statusSortRules =
     ListUtil.list(new StatusTable.SortRule(IX, true));
 
@@ -113,10 +120,33 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
       throw new StatusService.NoSuchTableException("Status info from that crawl is no longer available");
     }
     table.setDefaultSortRules(statusSortRules);
-    table.setColumnDescriptors(getColDescs(tableStr, status));
+    setColumnDescriptors(table, getColDescs(tableStr, status), status);
     table.setTitle(getTableTitle(status, tableStr));
-    table.setRows(makeRows(status, tableStr));
-    table.setSummaryInfo(getSummaryInfo(tableStr, status));
+    boolean includeReferrers =
+      table.isIncludeColumn(REFERRER) && status.hasReferrers();
+    table.setRows(makeRows(status, tableStr, includeReferrers));
+    table.setSummaryInfo(getSummaryInfo(table, status, tableStr));
+  }
+
+  void setColumnDescriptors(StatusTable table,
+			    List<ColumnDescriptor> colDescs,
+			    CrawlerStatus status) {
+    List<ColumnDescriptor> cols =
+      new ArrayList<ColumnDescriptor>(colDescs.size() + 1);
+    List<String> defaultCols = new ArrayList<String>(colDescs.size());
+    for (ColumnDescriptor desc : colDescs) {
+      cols.add(desc);
+      defaultCols.add(desc.getColumnName());
+    }
+    switch (status.getRecordReferrersMode()) {
+    case First: 
+      cols.add(REFERRER_FIRST_COLDESC);
+      break;
+    case All: 
+      cols.add(REFERRER_ALL_COLDESC);
+      break;
+    }
+    table.setColumnDescriptors(cols, defaultCols);
   }
 
   private String getTableTitle(CrawlerStatus status, String tableStr) {
@@ -153,7 +183,8 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     return key.substring(0, key.indexOf("."));
   }
 
-  private List getColDescs(String tableStr, CrawlerStatus status) {
+  private List<ColumnDescriptor> getColDescs(String tableStr,
+					     CrawlerStatus status) {
     if (FETCHED_TABLE_NAME.equals(tableStr)) {
       return colDescsFetched;
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
@@ -167,38 +198,41 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       return colDescsExcluded;
     } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {    
-      colDescsMimeTypeUrls =
+      return
 	ListUtil.list(new ColumnDescriptor(URL, 
 					   getMimeTypeStr(tableStr),
 					   ColumnDescriptor.TYPE_STRING));
-      return colDescsMimeTypeUrls;
     }
     return null;
   }
 
-  private List makeRows(CrawlerStatus status, String tableStr) {
+  private List makeRows(CrawlerStatus status, String tableStr,
+			boolean includeReferrers) {
     List rows = null;
 
     if (FETCHED_TABLE_NAME.equals(tableStr)) {
-      rows = urlSetToRows(status.getUrlsFetched());
+      rows = urlSetToRows(status.getUrlsFetched(), status, includeReferrers);
     } else if (NOT_MODIFIED_TABLE_NAME.equals(tableStr)) {
-      rows = urlSetToRows(status.getUrlsNotModified());
+      rows = urlSetToRows(status.getUrlsNotModified(),
+			  status, includeReferrers);
     } else if (PARSED_TABLE_NAME.equals(tableStr)) {
-      rows = urlSetToRows(status.getUrlsParsed());
+      rows = urlSetToRows(status.getUrlsParsed(), status, includeReferrers);
     } else if (PENDING_TABLE_NAME.equals(tableStr)) {
-      rows = urlSetToRows(status.getUrlsPending());
+      rows = urlSetToRows(status.getUrlsPending(), status, includeReferrers);
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
-      rows = urlSetToRows(status.getUrlsExcluded());
+      rows = urlSetToRows(status.getUrlsExcluded(), status, includeReferrers);
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
       Map<String,UrlErrorInfo> errorMap = status.getUrlsErrorMap();
       Set errorUrls = errorMap.keySet();
       rows = new ArrayList(errorUrls.size());
       int ix = 1;
       for (Map.Entry<String,UrlErrorInfo> ent : errorMap.entrySet()) {
- 	rows.add(makeRow(ent.getKey(), ix++, ent.getValue()));
+ 	rows.add(makeRow(ent.getKey(), ix++, ent.getValue(),
+			    status, includeReferrers));
       }
     } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {
-      rows = urlSetToRows( status.getUrlsOfMimeType(getMimeTypeStr(tableStr)) );
+      rows = urlSetToRows(status.getUrlsOfMimeType(getMimeTypeStr(tableStr)),
+			  status, includeReferrers);
     } 
     return rows;
   }
@@ -206,51 +240,93 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
   /**
    * Take a set of URLs and make a row for each, where row{"URL"}=<url>
    */
-  private List urlSetToRows(Collection urls) {
+  private List urlSetToRows(Collection urls,
+			    CrawlerStatus status, boolean includeReferrers) {
     List rows = new ArrayList(urls.size());
-    return urlSetToRows(rows, urls);
+    return urlSetToRows(rows, urls, status, includeReferrers);
   }
 
   /**
    * Take a set of URLs and make a row for each, where row{"URL"}=<url>
    */
-  private List urlSetToRows(List rows, Collection urls) {
+  private List urlSetToRows(List rows, Collection urls,
+			    CrawlerStatus status, boolean includeReferrers) {
     int ix = rows.size();
     for (Iterator it = urls.iterator(); it.hasNext();) {
       String url = (String)it.next();
-      rows.add(makeRow(url, ix++));
+      rows.add(makeRow(url, ix++, status, includeReferrers));
     }
     return rows;
   }
 
-  private Map makeRow(String url, int ix) {
+  private Map makeRow(String url, int ix,
+		      CrawlerStatus status, boolean includeReferrers) {
     Map row = new HashMap();
     row.put(URL, url);
     row.put(IX, new Integer(ix));
+    if (includeReferrers) {
+      Collection refs = status.getReferrers(url);
+      if (refs.size() > 1) {
+	row.put(REFERRER, 
+		new StatusTable.DisplayedValue(refs)
+		.setLayout(StatusTable.DisplayedValue.Layout.Column));
+      } else {
+	row.put(REFERRER, refs);
+      }
+    }
     return row;
   }
 
-  private Map makeRow(String url, int ix, CrawlerStatus.UrlErrorInfo ui) {
-    Map row = makeRow(url, ix);
+  private Map makeRow(String url, int ix, CrawlerStatus.UrlErrorInfo ui,
+			    CrawlerStatus status, boolean includeReferrers) {
+    Map row = makeRow(url, ix, status, includeReferrers);
     row.put(CRAWL_ERROR, ui.getMessage());
     row.put(CRAWL_SEVERITY, ui.getSeverity().toString());
     return row;
   }
 
-  List getSummaryInfo(String tableStr, CrawlerStatus status) {
-    if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
+  List getSummaryInfo(StatusTable table,
+		      CrawlerStatus status,
+		      String tableStr) {
+    List summary = new ArrayList();
+    boolean isExcluded = EXCLUDED_TABLE_NAME.equals(tableStr);
+    if (isExcluded) {
       Collection excl = status.getUrlsExcluded();
       if (status.getNumExcludedExcludes() > 0) {
-	List summary = new ArrayList();
 	String str = status.getNumExcludedExcludes() +
 	  " or fewer additional off-site URLs were excluded but not listed";
 	summary.add(new StatusTable.SummaryInfo(null,
 						ColumnDescriptor.TYPE_STRING,
 						str));
-	return summary;
       }
     }
-    return null;
+    if (table.isIncludeColumn(REFERRER)) {
+      StatusTable.Reference link = 
+	new StatusTable.Reference("Hide Referrers",
+				  CrawlManagerImpl.CRAWL_URLS_STATUS_TABLE,
+				  table.getKey());
+      link.setProperty(StatusTable.PROP_COLUMNS, "");
+      summary.add(new StatusTable.SummaryInfo(null,
+					      ColumnDescriptor.TYPE_STRING,
+					      link));
+    } else {
+      if (status.hasReferrersOfType(isExcluded ? ReferrerType.Excluded
+				    : ReferrerType.Included)) {
+	StatusTable.Reference link = 
+	  new StatusTable.Reference("Show Referrers",
+				    CrawlManagerImpl.CRAWL_URLS_STATUS_TABLE,
+				    table.getKey());
+	link.setProperty(StatusTable.PROP_COLUMNS, "all");
+	summary.add(new StatusTable.SummaryInfo(null,
+						ColumnDescriptor.TYPE_STRING,
+						link));
+      }
+    }
+    if (summary.isEmpty()) {
+      return null;
+    } else {
+      return summary;
+    }
   }
 
 
