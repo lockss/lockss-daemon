@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTokenStreamWorker.java,v 1.3 2012-07-17 02:48:55 thib_gc Exp $
+ * $Id: PdfTokenStreamWorker.java,v 1.4 2012-07-17 23:53:44 thib_gc Exp $
  */
 
 /*
@@ -212,11 +212,11 @@ public abstract class PdfTokenStreamWorker {
   
   /**
    * <p>
-   * A PDF adapter for the token stream being processed.
+   * A PDF token factory for the token stream being processed.
    * </p>
-   * @since 1.56
+   * @since 1.56.3
    */
-  protected PdfTokenFactory adapter;
+  protected PdfTokenFactory factory;
   
   /**
    * <p>
@@ -306,7 +306,7 @@ public abstract class PdfTokenStreamWorker {
    * variables are accessible to subclasses:
    * </p>
    * <ul>
-   * <li>{@link #adapter}</li>
+   * <li>{@link #factory}</li>
    * <li>{@link #index}</li>
    * <li>{@link #opcode}</li>
    * <li>{@link #operands}</li>
@@ -326,7 +326,7 @@ public abstract class PdfTokenStreamWorker {
    * @throws PdfException If PDF processing fails.
    */
   public void process(PdfTokenStream pdfTokenStream) throws PdfException {
-    adapter = pdfTokenStream.getTokenFactory();
+    factory = pdfTokenStream.getTokenFactory();
     index = -1;
     opcode = null;
     operands = new ArrayList<PdfToken>();
