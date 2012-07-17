@@ -1,5 +1,5 @@
 /*
- * $Id: ReportFormat.java,v 1.4 2012-06-15 16:55:35 easyonthemayo Exp $
+ * $Id: ReportFormat.java,v 1.4.4.1 2012-07-17 09:40:28 easyonthemayo Exp $
  */
 
 /*
@@ -143,9 +143,9 @@ public class ReportFormat {
    * string. It is assumed that KbartTitles are added to this set in
    * chronological order.
    */
-  public static class TitleCoverageRanges {
+  protected static class TitleCoverageRanges {
 
-    /** The format to adhere to in coverge range declarations. */
+    /** The format to adhere to in coverage range declarations. */
     private CoverageNotesFormat format;
     /** Record of the individual coverage ranges to include. */
     private List<KbartTitle> kbTitles = new ArrayList<KbartTitle>();
@@ -197,17 +197,42 @@ public class ReportFormat {
      * according to the format.
      * @return
      */
-    public String constructCoverageNotes() {
+    protected String constructCoverageNotes() {
       StringBuilder coverageNotes = new StringBuilder();
       if (format.isSummary) {
         // Create coverage notes from start of first and end of last
         format.addSummaryCoverage(kbTitles, coverageNotes);
       }
-      else
+      else {
         for (KbartTitle kbt : kbTitles) {
           format.addTitleCoverage(kbt, coverageNotes);
         }
+        // If the field value is too long, try constructing the restricted version
+        if (coverageNotes.length() > format.charLimit) {
+          return constructRestrictedCoverageNotes();
+        }
+      }
       return coverageNotes.toString();
+    }
+
+    /**
+     * Construct a restricted coverage notes string from the list of KbartTitles,
+     * according to the format. If it is too long, return the summary format.
+     * @return
+     */
+    protected String constructRestrictedCoverageNotes() {
+      kbTitles = format.restrictRanges(kbTitles);
+      StringBuilder coverageNotes = new StringBuilder();
+      for (KbartTitle kbt : kbTitles) {
+        format.addTitleCoverage(kbt, coverageNotes);
+      }
+      // If the field value is too long, return the summary
+      if (coverageNotes.length() > format.charLimit) {
+        coverageNotes = new StringBuilder();
+        format.addSummaryCoverage(kbTitles, coverageNotes);
+      }
+      return coverageNotes.toString();
+
     }
 
     /**

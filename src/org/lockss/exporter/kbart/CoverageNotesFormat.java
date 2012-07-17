@@ -1,5 +1,5 @@
 /*
- * $Id: CoverageNotesFormat.java,v 1.3 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id: CoverageNotesFormat.java,v 1.3.4.1 2012-07-17 09:40:28 easyonthemayo Exp $
  */
 
 /*
@@ -31,7 +31,10 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.exporter.kbart;
 
+import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.util.StringUtil;
+
+import java.util.ArrayList;
 import java.util.List;
 import static org.lockss.exporter.kbart.KbartTitle.Field.*;
 
@@ -77,8 +80,11 @@ public enum CoverageNotesFormat {
    * </pre>
    * represents a range 1995(39)-2005(49). Further ranges are appnded with an
    * or "||" separator.
+   *
+   * The field character limit is set to 500 as SFX has a limit of around 512
+   * characters.
    */
-  SFX("SFX DataLoader", " && ", " || ", "undef", true, false) {
+  SFX("SFX DataLoader", " && ", " || ", "undef", true, false, 500) {
     @Override
     /** Override the join sep; don't add if there is nothing following. */
     public void appendRangeJoin(StringBuilder sb, boolean hasRangeEnd) {
@@ -133,8 +139,14 @@ public enum CoverageNotesFormat {
 
   // ------------------ Format members and methods below here ------------------
 
+  /** An optional character limit for the coverage notes format. Default 1024. */
+  public int charLimit;
+  private static final int DEFAULT_CHAR_LIMIT = 1024;
+  /** The max number of years allowable between ranges such that they are
+   * combined when peforming a reduction on the ranges. */
+  public static final int DEFAULT_RANGE_REDUCTION_THRESHOLD = 2;
   /** A description of the coverage notes format, for display to user. */
-  public String label;
+  public final String label;
   /** String used to separate ranges; comma space by default. */
   protected String rngSep = ", ";
   /** String used to separate endpoints of ranges; hyphen by default. */
@@ -144,7 +156,7 @@ public enum CoverageNotesFormat {
   /** Whether this format provides a summary, that is, only endpoints across
    * the set of ranges. This implies that the rngSep is not used. */
   protected boolean isSummary = false;
-  /** Whether to show volume info; false by default. */
+  /** Whether to show volume info. */
   protected boolean showVol = false;
 
   /** Construct a non-summary enum with default values for strings. */
@@ -160,12 +172,18 @@ public enum CoverageNotesFormat {
    */
   CoverageNotesFormat(String label, String rngJoin, String rngSep,
                       String noValStr, boolean showVol, boolean summary) {
+    this(label, rngJoin, rngSep, noValStr, showVol, summary, DEFAULT_CHAR_LIMIT);
+  }
+  CoverageNotesFormat(String label, String rngJoin, String rngSep,
+                      String noValStr, boolean showVol, boolean summary,
+                      int charLimit) {
     this.label = label;
     if (rngJoin!=null) this.rngJoin = rngJoin;
     if (rngSep!=null) this.rngSep = rngSep;
     if (noValStr !=null) this.noValStr = noValStr;
     this.showVol = showVol;
     this.isSummary = summary;
+    this.charLimit = charLimit;
   }
   /**
    * Construct an enum with the given summary switch, and default values for
@@ -313,6 +331,46 @@ public enum CoverageNotesFormat {
     } else appendEqualRange(range, kbt);
     return range.toString();
   }
+
+
+  /**
+   * Go through the given list of KbartTitles and try to reduce the number of
+   * entries by increasing the scope of the ranges. By default we do this by
+   * attempting to combine ranges which are separated by no more than 2 years.
+   * @param titles
+   * @return
+   */
+  public List<KbartTitle> restrictRanges(List<KbartTitle> titles) {
+    List<KbartTitle> newList = new ArrayList<KbartTitle>();
+    int currentEndDate = 0;
+    KbartTitle rangeTitle = null;
+    //
+    for (KbartTitle kbt : titles) {
+      // if this is the first title, make it the current range title and record end
+      if (rangeTitle==null) {
+        rangeTitle = kbt;
+        currentEndDate = BibliographicUtil.stringYearAsInt(rangeTitle.getFieldValue(DATE_LAST_ISSUE_ONLINE));
+        continue;
+      }
+      // Compare the last date in the joinedTitle with the first in the next title
+      // Get the dates of the current title
+      int sDate = BibliographicUtil.stringYearAsInt(kbt.getFieldValue(DATE_FIRST_ISSUE_ONLINE));
+      int eDate = BibliographicUtil.stringYearAsInt(kbt.getFieldValue(DATE_LAST_ISSUE_ONLINE));
+      // If either date is invalid or the difference is greater than the
+      // threshold, add the title and start a new one.
+      if (currentEndDate==0 || sDate==0 || sDate - currentEndDate > DEFAULT_RANGE_REDUCTION_THRESHOLD) {
+        newList.add(rangeTitle);
+        rangeTitle = kbt;
+      } // Otherwise set the end date
+      else rangeTitle.setField(DATE_LAST_ISSUE_ONLINE, ""+eDate);
+      // Set the end date
+      currentEndDate = eDate;
+    }
+    // Add last title to the list
+    newList.add(rangeTitle);
+    return newList;
+  }
+
 
   /**
    * Get a CoverageNotesFormat by name. Upper cases the name so lower case values
