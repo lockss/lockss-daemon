@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.241 2012-07-17 21:58:27 barry409 Exp $
+ * $Id: PollManager.java,v 1.242 2012-07-18 18:12:40 barry409 Exp $
  */
 
 /*
@@ -1057,7 +1057,7 @@ public class PollManager
     PollFactory pollFact = getPollFactory(spec);
     BasePoll poll = pollFact.createPoll(spec, getDaemon(),
 					orig, duration, hashAlg, msg);
-    if (!(poll instanceof V3Voter)) {
+    if (poll != null && !(poll instanceof V3Voter)) {
       throw new ProtocolException("msg "+msg+
 				  " made unexpected kind of poll: "+poll);
     }
