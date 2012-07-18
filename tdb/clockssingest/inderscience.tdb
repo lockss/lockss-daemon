@@ -4403,7 +4403,7 @@
       au < manifest ; exists ; 2004-2005 ; International Journal of Management Practice Volume 1 ; 1 >
       au < manifest ; exists ; 2006-2007 ; International Journal of Management Practice Volume 2 ; 2 >
       au < manifest ; exists ; 2008-2009 ; International Journal of Management Practice Volume 3 ; 3 >
-      au < testing ; exists ; 2010-2011 ; International Journal of Management Practice Volume 4 ; 4 >
+      au < released ; manifest ; 2010-2011 ; International Journal of Management Practice Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; International Journal of Management Practice Volume 5 ; 5 >
 
     }
@@ -4442,7 +4442,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Manufacturing Research Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; International Journal of Manufacturing Research Volume 4 ; 4 >
       au < manifest ; exists ; 2010 ; International Journal of Manufacturing Research Volume 5 ; 5 >
-      au < testing ; exists ; 2011 ; International Journal of Manufacturing Research Volume 6 ; 6 >
+      au < released ; manifest ; 2011 ; International Journal of Manufacturing Research Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; International Journal of Manufacturing Research Volume 7 ; 7 >
 
     }
@@ -4479,8 +4479,8 @@
       au < manifest ; exists ; 2010 ; International Journal of Manufacturing Technology and Management Volume 19 ; 19 >
       au < manifest ; exists ; 2010 ; International Journal of Manufacturing Technology and Management Volume 20 ; 20 >
       au < manifest ; exists ; 2010 ; International Journal of Manufacturing Technology and Management Volume 21 ; 21 >
-      au < testing ; exists ; 2011 ; International Journal of Manufacturing Technology and Management Volume 22 ; 22 >
-      au < testing ; exists ; 2011 ; International Journal of Manufacturing Technology and Management Volume 23 ; 23 >
+      au < released ; manifest ; 2011 ; International Journal of Manufacturing Technology and Management Volume 22 ; 22 >
+      au < released ; manifest ; 2011 ; International Journal of Manufacturing Technology and Management Volume 23 ; 23 >
 
     }
 
@@ -4498,7 +4498,7 @@
       au < manifest ; exists ; 2005-2006 ; International Journal of Mass Customisation Volume 1 ; 1 >
       au < manifest ; exists ; 2007-2008 ; International Journal of Mass Customisation Volume 2 ; 2 >
       au < manifest ; exists ; 2009-2010 ; International Journal of Mass Customisation Volume 3 ; 3 >
-      au < testing ; exists ; 2011 ; International Journal of Mass Customisation Volume 4 ; 4 >
+      au < released ; manifest ; 2011 ; International Journal of Mass Customisation Volume 4 ; 4 >
 
     }
 
@@ -4552,9 +4552,9 @@
       au < manifest ; exists ; 2010 ; International Journal of Materials and Product Technology Volume 37 ; 37 >
       au < manifest ; exists ; 2010 ; International Journal of Materials and Product Technology Volume 38 ; 38 >
       au < manifest ; exists ; 2010 ; International Journal of Materials and Product Technology Volume 39 ; 39 >
-      au < testing ; exists ; 2011 ; International Journal of Materials and Product Technology Volume 40 ; 40 >
-      au < testing ; exists ; 2011 ; International Journal of Materials and Product Technology Volume 41 ; 41 >
-      au < testing ; exists ; 2011 ; International Journal of Materials and Product Technology Volume 42 ; 42 >
+      au < released ; manifest ; 2011 ; International Journal of Materials and Product Technology Volume 40 ; 40 >
+      au < released ; manifest ; 2011 ; International Journal of Materials and Product Technology Volume 41 ; 41 >
+      au < released ; manifest ; 2011 ; International Journal of Materials and Product Technology Volume 42 ; 42 >
 
     }
 
@@ -4573,7 +4573,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Materials and Structural Integrity Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Materials and Structural Integrity Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; International Journal of Materials and Structural Integrity Volume 4 ; 4 >
-      au < testing ; exists ; 2011 ; International Journal of Materials and Structural Integrity Volume 5 ; 5 >
+      au < released ; manifest ; 2011 ; International Journal of Materials and Structural Integrity Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; International Journal of Materials and Structural Integrity Volume 6 ; 6 >
 
     }
@@ -4590,7 +4590,7 @@
       param[journal_issn] = 1757-2762
       
       au < manifest ; exists ; 2009-2010 ; International Journal of Materials Engineering Innovation Volume 1 ; 1 >
-      au < testing ; exists ; 2011 ; International Journal of Materials Engineering Innovation Volume 2 ; 2 >
+      au < released ; manifest ; 2011 ; International Journal of Materials Engineering Innovation Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; International Journal of Materials Engineering Innovation Volume 3 ; 3 > 
 
     }
