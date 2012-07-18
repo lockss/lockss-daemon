@@ -1,6 +1,8 @@
 #!/bin/bash
 #
 # Script to provide alerts to problems in the title database
+tpath="/home/$LOGNAME/tmp"
+mkdir -p $tpath
 
 # Find incorrect status
 echo "---------------------"
@@ -11,9 +13,22 @@ echo "*Status typos clockssingest: "
 #cat ../../tdb/clockssingest/*.tdb | ./tdbout -t status | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist | grep -vx crawling | grep -vx zapped
 cat ../../tdb/clockssingest/*.tdb | ./tdbout -c status,status2 | sort | uniq -c | sort -n | grep -vw "manifest,exists" | grep -vw "crawling,exists" | grep -vw "released,crawling" | grep -vw "exists,exists" | grep -vw "down,crawling" | grep -vw "doNotProcess,doNotProcess" | grep -vw "expected,exists" | grep -vw "testing,exists" | grep -vw "notReady,exists" | grep -vw "zapped,down" | grep -vw "doesNotExist,doesNotExist"
 #
+# Find plugins listed in tdb files, that don't exist
+# Script is run from lockss-daemon/scripts/tdb
+# These items should be run from lockss-daemon/plugins/src
+echo "---------------------"
+echo "---------------------"
+echo "*Plugins that don't exist, but are listed in tdb files: "
+cd ../../plugins/src
+grep -rl --include "*.xml" "plugin_identifier" * | sed 's/\(.*\).xml/\1/' | sort -u > $tpath/ab.txt
+cat ../../tdb/*/*.tdb | tdbout -t plugin | sort -u | sed 's/\./\//g' > $tpath/ac.txt
+#plugins that have no AUs.
+#diff $tpath/ab.txt $tpath/ac.txt | grep "^< "     
+#plugins that don't exist, but are listed in tdb files
+diff $tpath/ab.txt $tpath/ac.txt | grep "^> "
+cd ../../scripts/tdb
+#
 # Find duplicates in the gln title database
-tpath="/home/$LOGNAME/tmp"
-mkdir -p $tpath
 cat ../../tdb/prod/*.tdb | ./tdbout -Aa | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
