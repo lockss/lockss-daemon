@@ -23,7 +23,7 @@
     param[journal_issn] = 1471-4787 
     param[publisher_id] = manup
     param[journal_id] = vcb 
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     comment[URGENT] = Trigger in clockss
 
