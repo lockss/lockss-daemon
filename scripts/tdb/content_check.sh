@@ -21,7 +21,7 @@ echo "---------------------"
 echo "*Plugins that don't exist, but are listed in tdb files: "
 cd ../../plugins/src
 grep -rl --include "*.xml" "plugin_identifier" * | sed 's/\(.*\).xml/\1/' | sort -u > $tpath/ab.txt
-cat ../../tdb/*/*.tdb | tdbout -t plugin | sort -u | sed 's/\./\//g' > $tpath/ac.txt
+cat ../../tdb/*/*.tdb | ../../scripts/tdb/tdbout -t plugin | sort -u | sed 's/\./\//g' > $tpath/ac.txt
 #plugins that have no AUs.
 #diff $tpath/ab.txt $tpath/ac.txt | grep "^< "     
 #plugins that don't exist, but are listed in tdb files
