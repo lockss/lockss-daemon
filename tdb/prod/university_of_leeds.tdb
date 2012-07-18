@@ -17,7 +17,8 @@
     
     {
     
-    param[base_url] = http://www.leeds.ac.uk/classics/lics/
+    comment[base_url] = The web site is structured such that the base URL cannot have a trailing slash.
+    param[base_url] = http://www.leeds.ac.uk/classics/lics
 
     implicit < status ; volume ; name ; param[year] ; param[volume_str] >
   
@@ -28,8 +29,8 @@
     }
     
     {
-
-    param[base_url] = http://lics.leeds.ac.uk/
+    
+    param[base_url] = http://lics.leeds.ac.uk
 
     implicit < status ; volume ; name ; param[year] ; param[volume_str] >
   
