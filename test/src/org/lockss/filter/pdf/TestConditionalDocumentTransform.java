@@ -1,5 +1,5 @@
 /*
- * $Id: TestConditionalDocumentTransform.java,v 1.3 2006-11-01 22:25:16 thib_gc Exp $
+ * $Id: TestConditionalDocumentTransform.java,v 1.3.84.1 2012-07-19 00:16:17 thib_gc Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.filter.pdf.MockTransforms.RememberDocumentTransform;
 import org.lockss.test.*;
 import org.lockss.util.PdfDocument;
 
+@Deprecated
 public class TestConditionalDocumentTransform extends LockssTestCase {
 
   public void testIfFalse() throws Exception {

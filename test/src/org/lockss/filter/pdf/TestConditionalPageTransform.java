@@ -1,5 +1,5 @@
 /*
- * $Id: TestConditionalPageTransform.java,v 1.3 2006-11-01 22:25:16 thib_gc Exp $
+ * $Id: TestConditionalPageTransform.java,v 1.3.84.1 2012-07-19 00:16:17 thib_gc Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.filter.pdf.PageTransformUtil.IdentityPageTransform;
 import org.lockss.test.*;
 import org.lockss.util.PdfPage;
 
+@Deprecated
 public class TestConditionalPageTransform extends LockssTestCase {
 
   public void testIfFalse() throws Exception {
