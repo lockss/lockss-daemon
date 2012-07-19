@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxDocument.java,v 1.1.2.3 2012-07-19 03:59:22 thib_gc Exp $
+ * $Id: PdfBoxDocument.java,v 1.1.2.4 2012-07-19 09:56:04 thib_gc Exp $
  */
 
 /*
@@ -176,7 +176,11 @@ public class PdfBoxDocument implements PdfDocument {
   @Override
   public String getMetadata() throws PdfException {
     try {
-      return pdDocument.getDocumentCatalog().getMetadata().getInputStreamAsString();
+      PDMetadata metadata = pdDocument.getDocumentCatalog().getMetadata();
+      if (metadata == null) {
+        return null;
+      }
+      return metadata.getInputStreamAsString();
     }
     catch (IOException ioe) {
       throw new PdfException("Error converting metadata stream to string", ioe);
@@ -186,7 +190,11 @@ public class PdfBoxDocument implements PdfDocument {
   @Override
   public Document getMetadataAsXmp() throws PdfException {
     try {
-      return pdDocument.getDocumentCatalog().getMetadata().exportXMPMetadata().getXMPDocument();
+      PDMetadata metadata = pdDocument.getDocumentCatalog().getMetadata();
+      if (metadata == null) {
+        return null;
+      }
+      return metadata.exportXMPMetadata().getXMPDocument();
     }
     catch (IOException ioe) {
       throw new PdfException("Error parsing XMP data", ioe);
