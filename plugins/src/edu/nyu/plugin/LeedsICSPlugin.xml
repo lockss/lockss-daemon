@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>edu.nyu.plugin.LeedsICSPlugin</string>
   </entry>
@@ -13,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -33,8 +37,9 @@
       <string>4,&quot;^https?://%s/&quot;, base_url_host</string>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>1,&quot;^%s/volumes\.html$&quot;, base_url</string>
-      <string>1,&quot;^%s/lockss-2002\.html$&quot;, base_url</string>
+      <string>1,&quot;^%s/lockss-%d\.html$&quot;, base_url, year</string>
       <string>1,&quot;^%s/%s/&quot;, base_url, volume_str</string>
+      <string>1,&quot;^%s/%d/&quot;, base_url, year</string>
       <string>1,&quot;^%s/discussion/%d&quot;, base_url, year</string>
     </list>
   </entry>
@@ -44,7 +49,7 @@
   </entry>
   <entry>
     <string>au_manifest</string>
-    <string>&quot;%s/lockss-2002.html&quot;, base_url</string>
+    <string>&quot;%s/lockss-%d.html&quot;, base_url, year</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
