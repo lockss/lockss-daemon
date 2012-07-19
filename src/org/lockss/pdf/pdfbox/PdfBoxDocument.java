@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxDocument.java,v 1.1.2.2 2012-07-11 23:46:21 thib_gc Exp $
+ * $Id: PdfBoxDocument.java,v 1.1.2.3 2012-07-19 03:59:22 thib_gc Exp $
  */
 
 /*
@@ -57,16 +57,18 @@ import org.w3c.dom.Document;
  * </p>
  * <p>
  * The logger in this class is used to record a few messages at
- * {@link Logger#LEVEL_DEBUG} level if certain assumptions about the
+ * {@link Logger#LEVEL_WARNING} level if certain assumptions about the
  * state of this PDF document are violated. Other logging messages are
  * at {@link Logger#LEVEL_DEBUG2} or finer.
  * </p>
  * <ul>
  * <li>The finalizer ({@link Object#finalize()}) records instances
- * that are garbage-collected without having been explicitly closed.</li>
+ * that are garbage-collected without having been explicitly closed,
+ * and provides a stack trace context of when the document was
+ * created.</li>
  * <li>The ISO-8859-1 encoding is guaranteed to exist in Java, but
  * should an {@link UnsupportedEncodingException} arise, a message is
- * recorded at {@link Logger#LEVEL_DEBUG} level.</li>
+ * recorded at {@link Logger#LEVEL_WARNING} level.</li>
  * </ul>
  * @author Thib Guicherd-Callin
  * @since 1.56
@@ -96,8 +98,16 @@ public class PdfBoxDocument implements PdfDocument {
    * </p>
    * @since 1.56
    */
-  private boolean closed;
+  private volatile boolean closed;
 
+  /**
+   * <p>
+   * String representation of the context when the document was
+   * created.
+   * </p>
+   */
+  private String openStackTrace;
+  
   /**
    * <p>
    * This constructor is accessible to classes in this package and
@@ -110,6 +120,14 @@ public class PdfBoxDocument implements PdfDocument {
   protected PdfBoxDocument(PDDocument pdDocument) {
     this.pdDocument = pdDocument;
     this.closed = false;
+
+    StringBuilder sb = new StringBuilder();
+    for (StackTraceElement e : Thread.currentThread().getStackTrace()) {
+      if (sb.length() == 0) { continue; } // That's getStackTrace()
+      sb.append('\n'); // Intentional, see finalize()
+      sb.append(e.toString());
+    }
+    this.openStackTrace = sb.toString();
   }
 
   @Override
@@ -192,16 +210,30 @@ public class PdfBoxDocument implements PdfDocument {
 
   @Override
   public PdfPage getPage(int index) {
-    return new PdfBoxPage(this, (PDPage)(pdDocument.getDocumentCatalog().getAllPages().get(index)));
+    /*
+     * IMPLEMENTATION NOTE
+     * 
+     * The documentation of getAllPages() (PDFBox 1.6.0:
+     * PDDocumentCatalog line 205) states that all the elements in the
+     * returned list are of type PDPage.
+     */
+    return new PdfBoxPage(this, (PDPage)pdDocument.getDocumentCatalog().getAllPages().get(index));
   }
 
   @Override
   public List<PdfPage> getPages() {
-    List<PdfPage> list = new ArrayList<PdfPage>(getNumberOfPages());
-    for (int index = 0 ; index < getNumberOfPages() ; ++index) {
-      list.add(getPage(index));
-    }
-    return list;
+    /*
+     * IMPLEMENTATION NOTE
+     * 
+     * The documentation of getAllPages() (PDFBox 1.6.0:
+     * PDDocumentCatalog line 205) states that all the elements in the
+     * returned list are of type PDPage.
+     */
+    return new ArrayList<PdfPage>() {{
+      for (Object obj : pdDocument.getDocumentCatalog().getAllPages()) {
+        add(new PdfBoxPage(PdfBoxDocument.this, (PDPage)obj));
+      }
+    }};
   }
 
   @Override
@@ -247,7 +279,7 @@ public class PdfBoxDocument implements PdfDocument {
       pdDocument.save(outputStream);
     }
     catch (COSVisitorException cve) {
-      logger.debug("Error saving PDF document", cve);
+      logger.debug2("Error saving PDF document", cve);
       throw new PdfException("Error saving PDF document", cve);
     }
   }
@@ -282,9 +314,10 @@ public class PdfBoxDocument implements PdfDocument {
     /*
      * IMPLEMENTATION NOTE
      * 
-     * PDFBox 1.6.0: PDStream line 496: the encoding used by
-     * getInputStreamAsString() is ISO-8859-1, so we need to encode
-     * the string accordingly.
+     * getInputStreamAsString() (PDFBox 1.6.0: PDStream line 496) uses
+     * the encoding ISO-8859-1, so we need to encode the string
+     * accordingly. If it defined a constant, we could use it, but it
+     * hard-codes the string "ISO-8859-1".
      */
     try {
       InputStream is = new ByteArrayInputStream(metadata.getBytes(Constants.ENCODING_ISO_8859_1));
@@ -292,7 +325,7 @@ public class PdfBoxDocument implements PdfDocument {
     }
     catch (UnsupportedEncodingException uee) {
       // Shouldn't happen, ISO-8859-1 is guaranteed to exist
-      logger.debug("Unexpected unsupported encoding exception: " + Constants.ENCODING_ISO_8859_1, uee);
+      logger.warning("Unexpected unsupported encoding exception: " + Constants.ENCODING_ISO_8859_1, uee);
       throw new PdfException("Unexpected error converting metadata string to stream", uee);
     }
     catch (IOException ioe) {
@@ -392,8 +425,8 @@ public class PdfBoxDocument implements PdfDocument {
   protected void finalize() throws Throwable {
     try {
       if (!closed) {
-        logger.debug("Closing PDF document implicitly in finalizer");
-        closed = true; // Not particularly useful, obviously
+        // Starts with newline, doesn't end with one, see constructor
+        logger.warning("Closing PDF document implicitly in finalizer; creation context:" + openStackTrace);
         pdDocument.close();
       }
     }
@@ -402,5 +435,5 @@ public class PdfBoxDocument implements PdfDocument {
       // Don't rethrow
     }
   }
-  
+
 }
