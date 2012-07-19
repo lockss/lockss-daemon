@@ -1,5 +1,5 @@
 /*
- * $Id: MockTransforms.java,v 1.2 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: MockTransforms.java,v 1.3 2012-07-19 00:16:15 thib_gc Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.filter.pdf.DocumentTransformUtil.IdentityDocumentTransform;
 import org.lockss.filter.pdf.PageTransformUtil.IdentityPageTransform;
 import org.lockss.util.*;
 
+@Deprecated
 public class MockTransforms {
 
   /**

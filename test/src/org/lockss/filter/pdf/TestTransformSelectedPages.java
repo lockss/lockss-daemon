@@ -1,5 +1,5 @@
 /*
- * $Id: TestTransformSelectedPages.java,v 1.1 2006-09-10 07:50:49 thib_gc Exp $
+ * $Id: TestTransformSelectedPages.java,v 1.2 2012-07-19 00:16:15 thib_gc Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.filter.pdf.MockTransforms.RememberPagePageTransform;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
+@Deprecated
 public class TestTransformSelectedPages extends LockssTestCase {
 
   public void testTransform() throws Exception {

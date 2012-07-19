@@ -1,5 +1,5 @@
 /*
- * $Id: TestTransformEachPage.java,v 1.3 2006-09-14 23:10:39 thib_gc Exp $
+ * $Id: TestTransformEachPage.java,v 1.4 2012-07-19 00:16:15 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.apache.commons.collections.iterators.*;
 import org.lockss.test.*;
 import org.lockss.util.PdfPage;
 
+@Deprecated
 public class TestTransformEachPage extends LockssTestCase {
 
   public void testGetSelectedPages() throws Exception {

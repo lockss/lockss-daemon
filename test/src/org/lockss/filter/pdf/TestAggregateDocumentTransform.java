@@ -1,5 +1,5 @@
 /*
- * $Id: TestAggregateDocumentTransform.java,v 1.2 2006-11-01 22:25:16 thib_gc Exp $
+ * $Id: TestAggregateDocumentTransform.java,v 1.3 2012-07-19 00:16:15 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.filter.pdf.MockTransforms.RememberDocumentTransform;
 import org.lockss.test.*;
 import org.lockss.util.PdfUtil;
 
+@Deprecated
 public class TestAggregateDocumentTransform extends LockssTestCase {
 
   public void testRightOrder_1ArgConstructor() throws Exception {
