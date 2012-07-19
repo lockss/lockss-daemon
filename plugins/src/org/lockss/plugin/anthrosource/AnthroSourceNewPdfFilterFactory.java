@@ -1,5 +1,5 @@
 /*
- * $Id: AnthroSourceNewPdfFilterFactory.java,v 1.1.2.3 2012-07-17 02:48:30 thib_gc Exp $
+ * $Id: AnthroSourceNewPdfFilterFactory.java,v 1.1.2.4 2012-07-19 08:01:20 thib_gc Exp $
  */
 
 /*
@@ -32,11 +32,25 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.anthrosource;
 
-import org.lockss.filter.pdf.SimplePdfFilterFactory;
+import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 
-public class AnthroSourceNewPdfFilterFactory extends SimplePdfFilterFactory {
+/**
+ * <p>
+ * A new-style PDF filter factory for the American Anthropological
+ * Association's former AnthroSource platform (hosted by Atypon
+ * Systems).
+ * </p>
+ * <p>
+ * Originally, this transform normalized the page token streams and
+ * the document trailer as part of a simple PDF-to-PDF filter. But the
+ * actual diversity of this content (now offline) was greater than the
+ * original sample suggested and makes a scraping filter more likely
+ * to achieve good results in the field.
+ * </p>
+ */
+public class AnthroSourceNewPdfFilterFactory extends ExtractingPdfFilterFactory {
 
   public AnthroSourceNewPdfFilterFactory() {
     super();
@@ -46,8 +60,7 @@ public class AnthroSourceNewPdfFilterFactory extends SimplePdfFilterFactory {
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
       throws PdfException {
-    PdfUtil.normalizeTrailerId(pdfDocument);
-    PdfUtil.normalizePageTokenStreams(pdfDocument);
+    // No transformation, just scrape
   }
-
+  
 }
