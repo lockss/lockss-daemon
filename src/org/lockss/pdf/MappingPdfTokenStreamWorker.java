@@ -1,5 +1,5 @@
 /*
- * $Id: MappingPdfTokenStreamWorker.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: MappingPdfTokenStreamWorker.java,v 1.1.2.1 2012-07-19 04:01:00 thib_gc Exp $
  */
 
 /*
@@ -60,12 +60,12 @@ public abstract class MappingPdfTokenStreamWorker extends PdfTokenStreamWorker {
   
   @Override
   public void operatorCallback() throws PdfException {
-    Action action = mapping.get(operator.getOperator());
+    Action action = mapping.get(getOperator().getOperator());
     if (action == null) {
       action = defaultAction;
     }
     if (action != null) {
-      action.actionCallback(index, operator, operands);
+      action.actionCallback(getIndex(), getOperator(), getOperands());
     }
   }
   
