@@ -1,5 +1,5 @@
 /*
- * $Id: PdfPage.java,v 1.1.2.2 2012-07-12 03:21:10 thib_gc Exp $
+ * $Id: PdfPage.java,v 1.1.2.3 2012-07-19 03:58:44 thib_gc Exp $
  */
 
 /*
@@ -140,7 +140,8 @@ public interface PdfPage {
    * annotations of the page; only a call to
    * {@link #setAnnotations(List)} does.
    * </p>
-   * @return A list of PDF dictionaries, one for each annotation.
+   * @return A non-<code>null</code>, possibly empty, list of PDF
+   *         dictionaries, one for each annotation.
    * @throws PdfException
    * @since 1.56
    * @see PdfToken#isDictionary()

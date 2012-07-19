@@ -1,5 +1,5 @@
 /*
- * $Id: PdfDocument.java,v 1.1.2.3 2012-07-11 23:46:21 thib_gc Exp $
+ * $Id: PdfDocument.java,v 1.1.2.4 2012-07-19 03:58:44 thib_gc Exp $
  */
 
 /*
@@ -267,7 +267,8 @@ public interface PdfDocument {
    * <p>
    * Retrieves the document's trailer dictionary.
    * </p>
-   * @return The trailer dictionary.
+   * @return The non-<code>null</code> trailer dictionary, possibly
+   *         empty.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    * @see PdfToken
