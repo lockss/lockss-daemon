@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxTokens.java,v 1.1.2.2 2012-07-19 03:59:35 thib_gc Exp $
+ * $Id: PdfBoxTokens.java,v 1.1.2.3 2012-07-19 08:00:58 thib_gc Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.pdf.pdfbox;
 
+import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.*;
 
@@ -132,6 +133,18 @@ import org.lockss.util.Logger;
  * <td>{@link #makeNull()}</td>
  * </tr>
  * <tr>
+ * <td>PDF object</td>
+ * <td>{@link PdfToken}</td>
+ * <td>{@link COSObject}</td>
+ * <td>{@link #isObject(Object)}</td>
+ * <td>{@link #getOobject(PdfToken)} /
+ * {@link #getObject(COSObject)}</td>
+ * <td>{@link #downgradeToCOSObject(PdfToken)} /
+ * {@link #upgradeToCOSObject(PdfToken)}</td>
+ * <td>{@link #makeOobject(PdfToken)} /
+ * {@link #makeObject(COSObject)}</td>
+ * </tr>
+ * <tr>
  * <td>PDF operator</td>
  * <td>{@link String}</td>
  * <td>{@link PDFOperator}</td>
@@ -213,6 +226,11 @@ public class PdfBoxTokens {
       return PdfBoxTokens.makeNull();
     }
     
+    @Override
+    public PdfToken makeObject(PdfToken value) {
+      return PdfBoxTokens.makeObject(value);
+    }
+
     @Override
     public PdfToken makeOperator(String operator) {
       return PdfBoxTokens.makeOperator(operator);
@@ -312,6 +330,11 @@ public class PdfBoxTokens {
     }
 
     @Override
+    public PdfToken getObject() {
+      return PdfBoxTokens.getObject(this);
+    }
+    
+    @Override
     public String getOperator() {
       return PdfBoxTokens.getOperator(this);
     }
@@ -354,6 +377,11 @@ public class PdfBoxTokens {
     @Override
     public boolean isNull() {
       return PdfBoxTokens.isNull(token);
+    }
+    
+    @Override
+    public boolean isObject() {
+      return PdfBoxTokens.isObject(token);
     }
 
     @Override
@@ -521,6 +549,11 @@ public class PdfBoxTokens {
             return makeNull();
           }
         });
+        put(COSObject.class, new Converter() {
+          @Override public PdfToken convert(Object obj) {
+            return makeObject((COSObject)obj);
+          }
+        });
         put(PDFOperator.class, new Converter() {
           @Override public PdfToken convert(Object obj) {
             return makeOperator((PDFOperator)obj); 
@@ -534,12 +567,6 @@ public class PdfBoxTokens {
         put(COSStream.class, new Converter() {
           @Override public PdfToken convert(Object obj) {
             logger.warning("Encountered a token of type COSStream");
-            return makeNull();
-          }
-        });
-        put(COSObject.class, new Converter() {
-          @Override public PdfToken convert(Object obj) {
-            logger.warning("Encountered a token of type COSObject");
             return makeNull();
           }
         });
@@ -756,6 +783,45 @@ public class PdfBoxTokens {
     return new COSString(value);
   }
   
+  /**
+   * <p>
+   * Converts from a PDF token for which {@link PdfToken#isObject()}
+   * is <b>true</b> to a {@link COSObject}.
+   * </p>
+   * @param pdfToken A PDF token.
+   * @return The {@link COSObject} instance represented by the token.
+   * @since 1.56.3
+   */
+  protected static COSObject downgradeToCOSObject(PdfToken pdfToken) {
+    return (COSObject)asCOSBase(pdfToken);
+  }
+  
+  /**
+   * <p>
+   * Converts from a PDF token to a {@link COSObject}.
+   * </p>
+   * @param operator An operator.
+   * @return A {@link PDFOperator} instance.
+   * @since 1.56.3
+   */
+  protected static COSObject upgradeToCOSObject(PdfToken value) {
+    try {
+      return new COSObject(asCOSBase(value));
+    }
+    catch (IOException ioe) {
+      /*
+       * IMPLEMENTATION NOTE
+       * 
+       * As it turns out, IOException can never be thrown even though
+       * the signatures of COSObject.COSObject() (PDFBox 1.6.0:
+       * COSObject line 42) COSObject.setObject() (line 99) say it
+       * might.
+       */
+      logger.warning("Error while converting to COSObject", ioe);
+      return null;
+    }
+  }
+
   /**
    * <p>
    * Converts from a PDF token for which {@link PdfToken#isOperator()}
@@ -985,6 +1051,31 @@ public class PdfBoxTokens {
   
   /**
    * <p>
+   * Converts from a {@link COSObject} to a PDF token value.
+   * </p>
+   * @param cosObject A {@link COSObject} instance.
+   * @return A PDFToken value.
+   * @since 1.56.3
+   */
+  protected static PdfToken getObject(COSObject cosObject) {
+    return convertOne(cosObject.getObject());
+  }
+  
+  /**
+   * <p>
+   * Converts from a PDF token for which {@link PdfToken#isOperator()}
+   * is <b>true</b> to a string value.
+   * </p>
+   * @param pdfToken A PDF token.
+   * @return A string value.
+   * @since 1.56.3
+   */
+  protected static PdfToken getObject(PdfToken pdfToken) {
+    return getObject(downgradeToCOSObject(pdfToken));
+  }
+
+  /**
+   * <p>
    * Converts from a {@link PDFOperator} to a string value.
    * </p>
    * @param pdfOperator A {@link PDFOperator} instance.
@@ -1043,7 +1134,7 @@ public class PdfBoxTokens {
    * @since 1.56
    */
   protected static boolean isArray(Object obj) {
-    return (obj instanceof COSArray);
+    return obj instanceof COSArray;
   }
 
   /**
@@ -1056,7 +1147,7 @@ public class PdfBoxTokens {
    * @since 1.56
    */
   protected static boolean isBoolean(Object obj) {
-    return (obj instanceof COSBoolean);
+    return obj instanceof COSBoolean;
   }
     
   /**
@@ -1069,7 +1160,7 @@ public class PdfBoxTokens {
    * @since 1.56
    */
   protected static boolean isDictionary(Object obj) {
-    return (obj instanceof COSDictionary);
+    return obj instanceof COSDictionary;
   }
     
   /**
@@ -1082,7 +1173,7 @@ public class PdfBoxTokens {
    * @since 1.56
    */
   protected static boolean isFloat(Object obj) {
-    return (obj instanceof COSFloat);
+    return obj instanceof COSFloat;
   }
 
   /**
@@ -1095,7 +1186,7 @@ public class PdfBoxTokens {
    * @since 1.56
    */
   protected static boolean isInteger(Object obj) {
-    return (obj instanceof COSInteger);
+    return obj instanceof COSInteger;
   }
 
   /**
@@ -1108,7 +1199,7 @@ public class PdfBoxTokens {
    * @since 1.56
    */
   protected static boolean isName(Object obj) {
-    return (obj instanceof COSName);
+    return obj instanceof COSName;
   }
   
   /**
@@ -1122,12 +1213,25 @@ public class PdfBoxTokens {
    * @since 1.56
    */
   protected static boolean isNull(Object obj) {
-    return (obj instanceof COSNull);
+    return obj instanceof COSNull;
   }
 
   /**
    * <p>
-   * Determines if an object of an internal type is a PDF oeprator.
+   * Determines if an object of an internal type is a PDF object.
+   * </p>
+   * @param obj An object (internal type).
+   * @return <code>true</code> if and only if the object is a PDF
+   *         object.
+   * @since 1.56.3
+   */
+  protected static boolean isObject(Object obj) {
+    return obj instanceof COSObject;
+  }
+  
+  /**
+   * <p>
+   * Determines if an object of an internal type is a PDF operator.
    * </p>
    * @param obj An object (internal type).
    * @return <code>true</code> if and only if the object is a PDF
@@ -1135,7 +1239,7 @@ public class PdfBoxTokens {
    * @since 1.56
    */
   protected static boolean isOperator(Object obj) {
-    return (obj instanceof PDFOperator);
+    return obj instanceof PDFOperator;
   }
   
   /**
@@ -1148,7 +1252,7 @@ public class PdfBoxTokens {
    * @since 1.56
    */
   protected static boolean isString(Object obj) {
-    return (obj instanceof COSString);
+    return obj instanceof COSString;
   }
   
   /**
@@ -1350,16 +1454,40 @@ public class PdfBoxTokens {
   
   /**
    * <p>
+   * Wraps a {@link COSObject} instance as a PDF token.
+   * </p>
+   * @param cosObject A {@link COSObject} instance.
+   * @return A PDF token.
+   * @since 1.56.3
+   */
+  protected static PdfToken makeObject(COSObject cosObject) {
+    return new Token(cosObject);
+  }
+  
+  /**
+   * <p>
+   * Creates a PDF object from the given value.
+   * </p>
+   * @param value A PDF token value.
+   * @return A PDF token.
+   * @since 1.56.3
+   */
+  protected static PdfToken makeObject(PdfToken value) {
+    return convertOne(unwrapOne(value));
+  }
+  
+  /**
+   * <p>
    * Wraps a {@link PDFOperator} instance as a PDF token.
    * </p>
-   * @param cosArray A {@link PDFOperator} instance.
+   * @param operator A {@link PDFOperator} instance.
    * @return A PDF token.
    * @since 1.56
    */
   protected static PdfToken makeOperator(PDFOperator operator) {
     Token ret = cachedOperators.get(operator);
     if (ret == null) {
-      ret = new Token(operator);
+      Token newToken = new Token(operator);
       /*
        * IMPLEMENTATION NOTE
        * 
@@ -1370,7 +1498,10 @@ public class PdfBoxTokens {
        */
       if (!(   PdfOpcodes.BEGIN_IMAGE_OBJECT.equals(operator)
             || PdfOpcodes.BEGIN_IMAGE_DATA.equals(operator))) {
-        ret = cachedOperators.putIfAbsent(operator, ret);
+        ret = cachedOperators.putIfAbsent(operator, newToken);
+        if (ret == null) {
+          ret = newToken;
+        }
       }
     }
     return ret;
@@ -1434,7 +1565,7 @@ public class PdfBoxTokens {
    * Unwraps one PDF token (that is really of our type {@link Token})
    * to reveal its inner object.
    * </p>
-   * @param pdfToken A PDF token of type {@type Token}.
+   * @param pdfToken A PDF token of type {@link Token}.
    * @return The object wrapped by the argument.
    * @since 1.56.3
    */

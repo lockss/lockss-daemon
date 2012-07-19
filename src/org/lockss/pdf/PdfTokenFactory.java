@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTokenFactory.java,v 1.1.2.2 2012-07-12 03:30:04 thib_gc Exp $
+ * $Id: PdfTokenFactory.java,v 1.1.2.3 2012-07-19 08:00:59 thib_gc Exp $
  */
 
 /*
@@ -137,6 +137,16 @@ public interface PdfTokenFactory {
    * @since 1.56
    */
   PdfToken makeNull();
+  
+  /**
+   * <p>
+   * Creates a PDF object from the given value.
+   * </p>
+   * @param value A non-<code>null</code> PDF token.
+   * @return A PDF token.
+   * @since 1.56.3
+   */
+  PdfToken makeObject(PdfToken value);
   
   /**
    * <p>
