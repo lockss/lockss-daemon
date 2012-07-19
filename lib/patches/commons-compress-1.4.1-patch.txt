@@ -1,0 +1,54 @@
+diff -c commons-compress-1.4.1-src/src/main/java/org/apache/commons/compress/archivers/tar/TarUtils.java.\~1\~ commons-compress-1.4.1-src/src/main/java/org/apache/commons/compress/archivers/tar/TarUtils.java
+*** commons-compress-1.4.1-src/src/main/java/org/apache/commons/compress/archivers/tar/TarUtils.java.~1~	2012-05-21 21:49:21.000000000 -0700
+--- commons-compress-1.4.1-src/src/main/java/org/apache/commons/compress/archivers/tar/TarUtils.java	2012-07-18 22:36:20.000000000 -0700
+***************
+*** 118,138 ****
+              }
+          }
+  
+!         // Must have trailing NUL or space
+!         byte trailer;
+!         trailer = buffer[end-1];
+!         if (trailer == 0 || trailer == ' '){
+!             end--;
+!         } else {
+!             throw new IllegalArgumentException(
+!                     exceptionMessage(buffer, offset, length, end-1, trailer));
+          }
+!         // May have additional NUL or space
+!         trailer = buffer[end-1];
+!         if (trailer == 0 || trailer == ' '){
+!             end--;
+          }
+  
+          for ( ;start < end; start++) {
+              final byte currentByte = buffer[start];
+              // CheckStyle:MagicNumber OFF
+--- 118,143 ----
+              }
+          }
+  
+!         boolean seenNul = false;
+! 
+!         // Skip trailing spaces or NULs.  (This is more permissive than the
+!         // original code, which allowed 1 or 2 terminating NUL or space.)
+!         while (start < end){
+!             if (buffer[end-1] == ' ' || buffer[end-1] == 0){
+!                 seenNul = true;
+!                 end--;
+!             } else {
+!                 break;
+!             }
+          }
+! 
+! 	// error if no NUL, or if no non-blank non-NUL chars
+!         if (!seenNul || start == end) {
+!             throw new IllegalArgumentException(
+!                        exceptionMessage(buffer, offset, length, end-1, (byte)0));
+          }
+  
++ 
+          for ( ;start < end; start++) {
+              final byte currentByte = buffer[start];
+              // CheckStyle:MagicNumber OFF
+
