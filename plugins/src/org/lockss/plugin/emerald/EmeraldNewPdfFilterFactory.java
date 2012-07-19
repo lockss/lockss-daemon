@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldNewPdfFilterFactory.java,v 1.1.2.3 2012-07-17 02:48:30 thib_gc Exp $
+ * $Id: EmeraldNewPdfFilterFactory.java,v 1.1.2.4 2012-07-19 09:57:00 thib_gc Exp $
  */
 
 /*
@@ -32,21 +32,131 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.emerald;
 
-import org.lockss.filter.pdf.SimplePdfFilterFactory;
+import java.io.*;
+
+import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
 
-public class EmeraldNewPdfFilterFactory extends SimplePdfFilterFactory {
+/**
+ * <p>
+ * A new-style PDF filter factory for Emerald Group Publishing
+ * content. 
+ * </p>
+ * <p>
+ * When synthetic front pages were introduced, the major PDF version
+ * of most documents was upped and most document-level metadata was
+ * stripped. The former makes it necessary to use a scraping filter
+ * instead of the older PDF-to-PDF filter.
+ * </p>
+ */
+public class EmeraldNewPdfFilterFactory extends ExtractingPdfFilterFactory {
 
+  public static class FrontPageWorker extends PdfTokenStreamWorker {
+
+    protected boolean result;
+    
+    private int state;
+    
+    @Override
+    public void operatorCallback() throws PdfException {
+      switch (state) {
+
+        case 0: case 3: {
+          if (PdfOpcodes.SAVE_GRAPHICS_STATE.equals(getOpcode())) { ++state; }
+          else { stop(); }
+        } break;
+        
+        case 1: case 4: {
+          if (PdfOpcodes.RESTORE_GRAPHICS_STATE.equals(getOpcode())) { stop(); }
+          else if (PdfOpcodes.INVOKE_XOBJECT.equals(getOpcode())) { ++state; }
+        } break;
+        
+        case 2: case 5: {
+          if (PdfOpcodes.RESTORE_GRAPHICS_STATE.equals(getOpcode())) { ++state; }
+        } break;
+        
+        // case 3: see case 0
+        
+        // case 4: see case 1
+        
+        // case 5: see case 2
+        
+        case 6: {
+          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { ++state; }
+        } break;
+        
+        case 7: {
+          if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { state = 6; }
+          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+              && getTokens().get(getIndex() - 1).getString().startsWith("Downloaded on: ")) { ++state; }
+        } break;
+        
+        case 8: {
+          if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { ++state; }
+        } break;
+
+        case 9: {
+          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { ++state; }
+        } break;
+        
+        case 10: {
+          if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { state = 9; }
+          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+              && getTokens().get(getIndex() - 1).getString().startsWith("Access to this document was granted through an Emerald subscription provided by ")) { ++state; }
+        } break;
+        
+        case 11: {
+          if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) {
+            result = true;
+            stop();
+          }
+        } break;
+
+        default: {
+          throw new PdfException("Invalid state in " + getClass().getName() + ": " + state);
+        }
+      }
+    }
+    
+    @Override
+    public void setUp() throws PdfException {
+      super.setUp();
+      this.state = 0;
+      this.result = false;
+    }
+    
+  }
+  
   public EmeraldNewPdfFilterFactory() {
     super();
   }
   
   @Override
+  public PdfTransform<PdfDocument> getDocumentTransform(ArchivalUnit au,
+                                                        OutputStream os) {
+    // Override the document-level transform to skip all document-level strings
+    return new BaseDocumentExtractingTransform(os) {
+      @Override
+      public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
+        this.au = au;
+        this.pdfDocument = pdfDocument;
+        for (PdfPage pdfPage : pdfDocument.getPages()) {
+          outputPage(pdfPage);
+        }
+      }
+    };
+  }
+
+  @Override
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
       throws PdfException {
-    PdfUtil.normalizeAllTokenStreams(pdfDocument);
+    FrontPageWorker frontPageWorker = new FrontPageWorker();
+    frontPageWorker.process(pdfDocument.getPage(0).getPageTokenStream());
+    if (frontPageWorker.result) {
+      pdfDocument.removePage(0);
+    }
   }
   
 }
