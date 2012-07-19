@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxPageTokenStream.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfBoxPageTokenStream.java,v 1.1.2.1 2012-07-19 04:00:24 thib_gc Exp $
  */
 
 /*
@@ -77,21 +77,21 @@ public class PdfBoxPageTokenStream extends PdfBoxTokenStream {
   }
   
   @Override
-  protected PDStream getPdStream() {
-    return pdStream;
-  }
-  
-  @Override
   public void setTokens(List<PdfToken> newTokens) throws PdfException {
     try {
       PDStream newPdStream = makeNewPdStream();
       ContentStreamWriter tokenWriter = new ContentStreamWriter(newPdStream.createOutputStream());
-      tokenWriter.writeTokens(newTokens);
+      tokenWriter.writeTokens(PdfBoxTokens.unwrapList(newTokens));
       pdfBoxPage.pdPage.setContents(newPdStream);
     }
     catch (IOException ioe) {
       throw new PdfException("Error while writing page token stream", ioe);
     }
+  }
+  
+  @Override
+  protected PDStream getPdStream() {
+    return pdStream;
   }
 
 }

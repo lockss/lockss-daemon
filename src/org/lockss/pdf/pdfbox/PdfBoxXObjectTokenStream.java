@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxXObjectTokenStream.java,v 1.1 2012-07-10 23:59:49 thib_gc Exp $
+ * $Id: PdfBoxXObjectTokenStream.java,v 1.1.2.1 2012-07-19 04:00:24 thib_gc Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
    * <p>
    * The {@link PDXObjectForm} instance underpinning this instance.
    * </p>
+   * @since 1.56
    */
   protected PDXObjectForm pdXObjectForm;
   
@@ -68,6 +69,7 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
    * </p>
    * @param pdfBoxPage The parent PDF page.
    * @param pdXObjectForm The {@link PDXObjectForm} being wrapped.
+   * @since 1.56
    */
   protected PdfBoxXObjectTokenStream(PdfBoxPage pdfBoxPage, PDXObjectForm pdXObjectForm) {
     super(pdfBoxPage);
@@ -80,7 +82,7 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
       PDStream newPdStream = makeNewPdStream();
       newPdStream.getStream().setName("Subtype", PDXObjectForm.SUB_TYPE);
       ContentStreamWriter tokenWriter = new ContentStreamWriter(newPdStream.createOutputStream());
-      tokenWriter.writeTokens(newTokens);
+      tokenWriter.writeTokens(PdfBoxTokens.unwrapList(newTokens));
       pdXObjectForm.getCOSStream().replaceWithStream(newPdStream.getStream());
     }
     catch (IOException ioe) {
