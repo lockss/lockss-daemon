@@ -1,5 +1,5 @@
 /*
- * $Id: FakePdfToken.java,v 1.2 2012-07-19 04:01:53 thib_gc Exp $
+ * $Id: FakePdfToken.java,v 1.3 2012-07-19 08:01:55 thib_gc Exp $
  */
 
 /*
@@ -69,6 +69,11 @@ public class FakePdfToken implements PdfToken {
   }
 
   @Override
+  public PdfToken getObject() {
+    return null;
+  }
+
+  @Override
   public String getOperator() {
     return null;
   }
@@ -110,6 +115,11 @@ public class FakePdfToken implements PdfToken {
 
   @Override
   public boolean isNull() {
+    return false;
+  }
+
+  @Override
+  public boolean isObject() {
     return false;
   }
 

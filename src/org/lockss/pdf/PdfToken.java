@@ -1,5 +1,5 @@
 /*
- * $Id: PdfToken.java,v 1.3 2012-07-12 03:57:05 thib_gc Exp $
+ * $Id: PdfToken.java,v 1.4 2012-07-19 08:01:55 thib_gc Exp $
  */
 
 /*
@@ -104,6 +104,12 @@ import java.util.*;
  * <td>n/a</td>
  * </tr>
  * <tr>
+ * <td>PDF object</td>
+ * <td>{@link PdfToken}</td>
+ * <td>{@link #isObject()}</td>
+ * <td>{@link #getObject()}</td>
+ * </tr>
+ * <tr>
  * <td>PDF operator</td>
  * <td>{@link String}</td>
  * <td>{@link #isOperator()}</td>
@@ -119,8 +125,7 @@ import java.util.*;
  * </table>
  * <p>
  * This interface does not currently provide a representation for the
- * PDF 'stream' and 'object' types. This may change in a future
- * version.
+ * PDF 'stream' type. This may change in a future version.
  * </p>
  * @author Thib Guicherd-Callin
  * @since 1.56
@@ -187,6 +192,17 @@ public interface PdfToken {
    * @since 1.56
    */
   String getName();
+  
+
+  /**
+   * <p>
+   * If {@link #isObject()} is <b>true</b>, downcasts this token to
+   * its external representation, otherwise the behavior is undefined.
+   * </p>
+   * @return A {@link PdfToken} value.
+   * @since 1.56.3
+   */
+  PdfToken getObject();
   
   /**
    * <p>
@@ -270,6 +286,16 @@ public interface PdfToken {
    * @since 1.56
    */
   boolean isNull();
+  
+  /**
+   * <p>
+   * Determines if this token is a PDF object.
+   * </p>
+   * @return <code>true</code> if and only if this token is a PDF
+   *         object.
+   * @since 1.56.3
+   */
+  boolean isObject();
   
   /**
    * <p>

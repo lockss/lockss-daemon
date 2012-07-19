@@ -1,5 +1,5 @@
 /*
- * $Id: FakePdfTokenFactory.java,v 1.2 2012-07-19 04:01:53 thib_gc Exp $
+ * $Id: FakePdfTokenFactory.java,v 1.3 2012-07-19 08:01:55 thib_gc Exp $
  */
 
 /*
@@ -107,6 +107,14 @@ public class FakePdfTokenFactory implements PdfTokenFactory {
     };
   }
 
+  @Override
+  public PdfToken makeObject(final PdfToken value) {
+    return new FakePdfToken() {
+      @Override public PdfToken getObject() { return value; }
+      @Override public boolean isObject() { return true; }
+    };
+  }
+  
   @Override
   public PdfToken makeOperator(final String operator) {
     return new FakePdfToken() {
