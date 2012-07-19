@@ -1,5 +1,5 @@
 /*
- * $Id: Button.java,v 1.1 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: Button.java,v 1.2 2012-07-19 13:56:43 easyonthemayo Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.jetty;
 
 import org.lockss.util.Logger;
-import org.mortbay.html.Element;
 import org.mortbay.html.Tag;
 
 import java.io.IOException;
@@ -48,60 +47,46 @@ public class Button extends Tag {
 
   static Logger log = Logger.getLogger("Button");
 
-  private String mytag;			// private in Block, dammit
-
-  /** The name of the button. */
-  protected String key;
-  /** The value submitted by the button. */
-  protected String value;
-  /** The type of the button, such as submit, reset, cancel. */
-  protected String type;
-  /** The text displayed on the button. */
+  /** The text displayed on the button. This can be internationalised. */
   protected String label;
 
   /**
    * Create a button.
-   * @param key
+   * @param key    the name of the button
    * @param value  the value submitted by the button
    * @param type   the type of the button, such as submit, reset, cancel
    * @param label  the text displayed on the button
    */
   public Button(String key, String value, String type, String label) {
     super(key);
-    mytag = "button";
-    this.key = key;
-    this.value = value;
-    this.type = type;
     this.label = label;
+    // Add attributes to the map
+    attribute("name", key);
+    attribute("value", value);
+    attribute("type", type);
   }
 
   public void write(Writer out) throws IOException {
-    out.write(
-        String.format(
-            "<button type=\"%s\" name=\"%s\" value=\"%s\">%s</button>",
-            type, key, value, label)
+    out.write( String.format(
+        "<button %s>%s</button>",
+        combineAttributes(), label)
     );
   }
 
-  // Copy of Block.write(Writer), changed to omit the newline in the
-  // closing tag.  Block.write(Writer) calls super.write(Writer), but we
-  // can't do that here (because that would call Block.write(Writer)), so
-  // the body of Block.write(Writer) is also copied here.
-  /*public void write(Writer out) throws IOException {
-    out.write('<'+mytag+attributes()+'>');
-    // this loop is Composite.write(Writer)
-    for (int i=0; i <elements.size() ; i++) {
-      Object element = elements.get(i);
-
-      if (element instanceof Element)
-	((Element)element).write(out);
-      else if (element==null)
-	out.write("null");
-      else
-	out.write(element.toString());
+  /**
+   * Combine the attribute key/value pairs into a string which can be inserted
+   * into the element's opening tag.
+   * @return
+   */
+  protected String combineAttributes() {
+    StringBuilder sb = new StringBuilder();
+    for (Object k : attributeMap.keySet()) {
+      // Jetty seems to quote string values before putting them in the
+      // attributeMap, so don't quote them again!
+      sb.append(" ").append(k).append("=").append(attributeMap.get(k));
     }
-    out.write("</"+mytag+">");
-  }*/
+    return sb.toString();
+  }
 
 }
 
