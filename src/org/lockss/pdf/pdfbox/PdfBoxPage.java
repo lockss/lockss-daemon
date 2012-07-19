@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxPage.java,v 1.1.2.1 2012-07-11 23:46:21 thib_gc Exp $
+ * $Id: PdfBoxPage.java,v 1.1.2.2 2012-07-19 03:59:56 thib_gc Exp $
  */
 
 /*
@@ -64,11 +64,56 @@ public class PdfBoxPage implements PdfPage {
   
   /**
    * <p>
+   * Determines if the given {@link PDXObject} instance is a byte
+   * stream (as opposed to a token stream).
+   * </p>
+   * @param xObject A {@link PDXObject} instance.
+   * @return <code>true</code> if and only if the argument is a byte
+   *         stream.
+   * @since 1.56.3
+   * @see #isTokenStream(PDXObject)
+   */
+  private static boolean isByteStream(PDXObject xObject) {
+    /*
+     * IMPLEMENTATION NOTE
+     * 
+     * PDXObject is an abstract class whose subtypes all represent
+     * image XObjects (PDJpeg, PDCcitt or PDPixelMap) i.e. a byte
+     * stream, except one, PDXObjectForm, which represents a form
+     * XObject i.e. a token stream.
+     */
+    return !isTokenStream(xObject);
+  }
+
+  /**
+   * <p>
+   * Determines if the given {@link PDXObject} instance is a token
+   * stream (as opposed to a byte stream).
+   * </p>
+   * @param xObject A {@link PDXObject} instance.
+   * @return <code>true</code> if and only if the argument is a token
+   *         stream.
+   * @since 1.56.3
+   */
+  private static boolean isTokenStream(PDXObject xObject) {
+    /*
+     * IMPLEMENTATION NOTE
+     * 
+     * PDXObject is an abstract class whose subtypes all represent
+     * image XObjects (PDJpeg, PDCcitt or PDPixelMap) i.e. a byte
+     * stream, except one, PDXObjectForm, which represents a form
+     * XObject i.e. a token stream.
+     */
+    return xObject instanceof PDXObjectForm;
+  }
+  
+  /**
+   * <p>
    * The parent {@link PdfBoxDocument} instance.
    * </p>
    * @since 1.56
    */
-  protected PdfBoxDocument pdfBoxDocument;
+  protected final PdfBoxDocument pdfBoxDocument;
 
   /**
    * <p>
@@ -76,8 +121,8 @@ public class PdfBoxPage implements PdfPage {
    * </p>
    * @since 1.56
    */
-  protected PDPage pdPage;
-  
+  protected final PDPage pdPage;
+
   /**
    * <p>
    * This constructor is accessible to classes in this package and
@@ -100,20 +145,26 @@ public class PdfBoxPage implements PdfPage {
     
     PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
       @Override public void operatorCallback() throws PdfException {
-        String op = operator.getOperator();
         // 'ID' and 'BI'
-        if (   PdfOpcodes.BEGIN_IMAGE_DATA.equals(op)
-            || PdfOpcodes.BEGIN_IMAGE_OBJECT.equals(op)) {
-          ret.add(new ByteArrayInputStream(PdfBoxTokens.asPDFOperator(operator).getImageData()));
+        if (   PdfOpcodes.BEGIN_IMAGE_DATA.equals(getOpcode())
+            || PdfOpcodes.BEGIN_IMAGE_OBJECT.equals(getOpcode())) {
+          /*
+           * IMPLEMENTATION NOTE
+           * 
+           * getImageData() (PDFBox 1.6.0: PDFOperator line 105) does
+           * not copy the byte array, nor does ByteArrayInputStream
+           * (http://docs.oracle.com/javase/1.5.0/docs/api/java/io/ByteArrayInputStream.html#ByteArrayInputStream%28byte[]%29).
+           */
+          ret.add(new ByteArrayInputStream(PdfBoxTokens.asPDFOperator(getOperator()).getImageData()));
         }
         // 'Do'
-        else if (PdfOpcodes.INVOKE_XOBJECT.equals(op)) {
-          PdfToken operand = tokens.get(index - 1);
+        else if (PdfOpcodes.INVOKE_XOBJECT.equals(getOpcode())) {
+          PdfToken operand = getTokens().get(getIndex() - 1);
           if (operand.isName()) {
-            PDXObject xobject = getPDXObjectByName(operand.getName());
-            if (!(xobject instanceof PDXObjectForm)) {
+            PDXObject xObject = getPDXObjectByName(operand.getName());
+            if (isByteStream(xObject)) {
               try {
-                ret.add(xobject.getCOSStream().getUnfilteredStream());
+                ret.add(xObject.getCOSStream().getUnfilteredStream());
               }
               catch (IOException ioe) {
                 logger.debug2("getAllByteStreams: Error retrieving a byte stream", ioe);
@@ -123,7 +174,6 @@ public class PdfBoxPage implements PdfPage {
           logger.debug2("getAllByteStreams: invalid input");
         }
       }
-      @Override public void setUp() throws PdfException {}
     };
     
     worker.process(getPageTokenStream());
@@ -137,24 +187,23 @@ public class PdfBoxPage implements PdfPage {
 
     PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
       @Override public void operatorCallback() throws PdfException {
-        if (PdfOpcodes.INVOKE_XOBJECT.equals(operator.getOperator())) {
-          PdfToken operand = tokens.get(index - 1);
+        if (PdfOpcodes.INVOKE_XOBJECT.equals(getOperator().getOperator())) {
+          PdfToken operand = getTokens().get(getIndex() - 1);
           if (operand.isName()) {
-            PDXObject xobject = getPDXObjectByName(operand.getName());
-            if (xobject instanceof PDXObjectForm) {
-              ret.add(new PdfBoxXObjectTokenStream(PdfBoxPage.this, (PDXObjectForm)xobject));
+            PDXObject xObject = getPDXObjectByName(operand.getName());
+            if (isTokenStream(xObject)) {
+              ret.add(new PdfBoxXObjectTokenStream(PdfBoxPage.this, (PDXObjectForm)xObject));
             }
           }
           logger.debug2("getAllTokenStreams: invalid input");
         }
       }
-      @Override public void setUp() throws PdfException {}
     };
     
     worker.process(getPageTokenStream());
     return ret;
   }
-  
+
   @Override
   public List<PdfToken> getAnnotations() {
     /*
@@ -163,17 +212,16 @@ public class PdfBoxPage implements PdfPage {
      * Annotations are just dictionaries, but because there are many
      * types, the PDFBox API defines a vast hierarchy of objects to
      * represent them. At this time, this is way too much detail for
-     * this API, because only one type of annotation has a
-     * foreseeable use case. So for now, we are only representing
+     * this API, because only one type of annotation has a foreseeable
+     * use case (the Link type). So for now, we are only representing
      * annotations as the dictionaries they are by circumventing the
-     * PDAnnotation factory call in getAnnotations() (PDFBox 1.6.0,
+     * PDAnnotation factory call in getAnnotations() (PDFBox 1.6.0:
      * PDPage line 780).
      */
     COSDictionary pageDictionary = pdPage.getCOSDictionary();
     COSArray annots = (COSArray)pageDictionary.getDictionaryObject(COSName.ANNOTS);
     if (annots == null) {
-      annots = new COSArray();
-      pageDictionary.setItem(COSName.ANNOTS, annots);
+      return new ArrayList<PdfToken>();
     }
     return PdfBoxTokens.getArray(annots);
   }
