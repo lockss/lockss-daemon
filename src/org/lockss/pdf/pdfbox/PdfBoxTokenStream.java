@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxTokenStream.java,v 1.1.2.1 2012-07-11 23:46:21 thib_gc Exp $
+ * $Id: PdfBoxTokenStream.java,v 1.1.2.2 2012-07-19 04:00:09 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.pdf.pdfbox;
 import java.io.IOException;
 import java.util.*;
 
-import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.common.PDStream;
 import org.lockss.pdf.*;
 
@@ -63,14 +62,6 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
   
   /**
    * <p>
-   * The cached result of conputing {@link #getTokens()}.
-   * </p>
-   * @since 1.56
-   */
-  private List<PdfToken> cachedTokens;
-  
-  /**
-   * <p>
    * This constructor is accessible to classes in this package and
    * subclasses.
    * </p>
@@ -94,10 +85,7 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
   @Override
   public List<PdfToken> getTokens() throws PdfException {
     try {
-      if (cachedTokens == null) {
-        cachedTokens = PdfBoxTokens.convertList(getPdStream().getStream().getStreamTokens());
-      }
-      return cachedTokens;
+      return PdfBoxTokens.convertList(getPdStream().getStream().getStreamTokens());
     }
     catch (IOException ioe) {
       throw new PdfException(ioe);
