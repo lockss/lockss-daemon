@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemImpl.java,v 1.2 2011-12-19 11:14:27 easyonthemayo Exp $
+ * $Id: BibliographicItemImpl.java,v 1.3 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
    * Create a BibliographicItem with the supplied field values. Values may
    * be null. Start and end values for volumes, years and issues are retrieved
    * from the full strings which may contain ranges.
+   * @param printIsbn
    * @param printIssn
    * @param journalTitle
    * @param name
@@ -58,9 +59,11 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
    * @param year
    * @param issue
    */
-  public BibliographicItemImpl(String printIssn, String journalTitle,
+  public BibliographicItemImpl(String printIsbn, String printIssn,
+                               String journalTitle,
                                String publisherName, String name,
                                String volume, String year, String issue) {
+    setPrintIsbn(printIsbn);
     setPrintIssn(printIssn);
     setJournalTitle(journalTitle);
     setPublisherName(publisherName);
@@ -74,6 +77,7 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
    * Create a BibliographicItem with the supplied field values. Values may
    * be null. Start and end values for volumes, years and issues are explicitly
    * supplied.
+   * @param printIsbn
    * @param printIssn
    * @param journalTitle
    * @param name
@@ -84,11 +88,13 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
    * @param startIssue
    * @param endIssue
    */
-  public BibliographicItemImpl(String printIssn, String journalTitle,
+  public BibliographicItemImpl(String printIsbn, String printIssn,
+                               String journalTitle,
                                String publisherName, String name,
                                String startVolume, String endVolume,
                                String startYear, String endYear,
                                String startIssue, String endIssue) {
+    setPrintIsbn(printIsbn);
     setPrintIssn(printIssn);
     setJournalTitle(journalTitle);
     setPublisherName(publisherName);

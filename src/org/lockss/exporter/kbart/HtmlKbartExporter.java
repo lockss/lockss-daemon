@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.21 2012-07-10 16:29:29 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.22 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.config.Configuration;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.util.StringUtil;
 import org.lockss.util.Logger;
+import org.mortbay.html.Composite;
 
 /**
  * An exporter that simply writes the records to an HTML table.
@@ -142,9 +143,8 @@ public class HtmlKbartExporter extends KbartExporter {
   protected void emitRecord(List<String> values) {
     odd = !odd;
     // Print a header every few rows
-    if (exportCount % headerInterval == 0) {
-      printWriter.printf(this.header); 
-    }
+    if (!filter.isOmitHeader() && exportCount % headerInterval == 0) emitHeader();
+
     //printWriter.println( "<tr><td>" + StringUtil.separatedString(title.fieldValues(), SEPARATOR) + "</td></tr>" );
     printWriter.println("<tr class=\"" + (odd?"odd":"even") + "\">");
     
@@ -231,7 +231,8 @@ public class HtmlKbartExporter extends KbartExporter {
 	"content=\"text/html; charset="+DEFAULT_ENCODING+"\"/>");
     printWriter.printf("<title>%s</title>", this.exportSummary);
     printWriter.printf("%s</head><body>", css);
-    if (getHtmlCustomForm()!=null) printWriter.println(getHtmlCustomForm());
+    Composite customPanel = getHtmlCustomForm();
+    if (customPanel!=null) printWriter.println(customPanel);
     // Initial attempt to get a static header on the page:
     //printWriter.printf("<div class=\"header\"><table>%s</table></div>", this.header);
     printWriter.println("<table>");

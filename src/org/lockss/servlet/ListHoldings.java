@@ -1,10 +1,10 @@
 /*
- * $Id: ListHoldings.java,v 1.40 2012-07-16 21:10:49 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.41 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
 
-Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -140,9 +140,19 @@ public class ListHoldings extends LockssServlet {
   /** Export the current report in some format. */
   public static final String ACTION_CUSTOM_EXPORT = "Export";
 
+  // --------------------- I18N LABELS FOR SUBMIT BUTTONS ----------------------
+  public static final String I18N_ACTION_EXPORT = i18n.tr("List Titles");
+  public static final String I18N_ACTION_CUSTOM = i18n.tr("Customise Fields");
+  public static final String I18N_ACTION_HIDE_CUSTOM_EXPORT = i18n.tr("Hide Customise Fields");
+  public static final String I18N_ACTION_CUSTOM_OK = i18n.tr("List Titles");
+  public static final String I18N_ACTION_CUSTOM_RESET = i18n.tr("Reset");
+  public static final String I18N_ACTION_CUSTOM_CANCEL = i18n.tr("Cancel");
+  public static final String I18N_ACTION_CUSTOM_EXPORT = i18n.tr("Export");
+
   // ------------------------- FORM PARAMS AND OPTIONS -------------------------
   public static final String KEY_COMPRESS = "compress";
   public static final String KEY_OMIT_EMPTY_COLS = "omitEmptyCols";
+  public static final String KEY_OMIT_HEADER = "omitHeader";
   public static final String KEY_SHOW_HEALTH = "showHealthRatings";
   public static final String KEY_CUSTOM = "isCustom";
   public static final String KEY_CUSTOM_ORDERING = "ordering";
@@ -170,6 +180,8 @@ public class ListHoldings extends LockssServlet {
   static final FieldOrdering FIELD_ORDERING_DEFAULT = CustomFieldOrdering.getDefaultOrdering();
   /** Default approach to omitting empty fields - inherited from the exporter base class. */
   static final Boolean OMIT_EMPTY_COLUMNS_BY_DEFAULT = KbartExporter.omitEmptyFieldsByDefault;
+  /** Default approach to omitting header row is false (do not omit). */
+  static final Boolean OMIT_HEADER_ROW_BY_DEFAULT = KbartExporter.omitHeaderRowByDefault;
   /** Default approach to showing health ratings - inherited from the exporter base class. */
   static final Boolean SHOW_HEALTH_RATINGS_BY_DEFAULT = KbartExporter.showHealthRatingsByDefault;
 
@@ -273,7 +285,7 @@ public class ListHoldings extends LockssServlet {
     if (!AuHealthMetric.isSupported()) {
       /*String fn = String.format("Not available on this platform (%s).",
 	PlatformUtil.getInstance());*/
-      String fn = "Not available on this platform.";
+      String fn = i18n.tr("Not available on this platform.");
       notAvailFootnote = addFootnote(fn);
     }
     
@@ -297,9 +309,14 @@ public class ListHoldings extends LockssServlet {
 
     // Omit empty columns - use the option supplied from the form, or the
     // default if one of the other outputs was chosen
-    boolean omitEmptyColumns = Boolean.valueOf( 
-	params.getProperty(KEY_OMIT_EMPTY_COLS,
+    boolean omitEmptyColumns = Boolean.valueOf(
+        params.getProperty(KEY_OMIT_EMPTY_COLS,
             OMIT_EMPTY_COLUMNS_BY_DEFAULT.toString())
+    );
+    // Omit header - use the option supplied from the form, or the default
+    boolean omitHeader = Boolean.valueOf(
+        params.getProperty(KEY_OMIT_HEADER,
+            OMIT_HEADER_ROW_BY_DEFAULT.toString())
     );
     // Show health ratings - use the option supplied from the form, or the
     // default if one of the other outputs was chosen
@@ -312,9 +329,12 @@ public class ListHoldings extends LockssServlet {
     String action = params.getProperty(ACTION_TAG, "");
     // Manual custom ordering received from the text area
     String manualOrdering = params.getProperty(KEY_CUSTOM_ORDERING_LIST);
-    // Last manual ordering (only received from customisation page)
-    lastManualOrdering = params.getProperty(KEY_CUSTOM_ORDERING_PREVIOUS_MANUAL);
-    // Set custom ordering to default 
+    // Last manual ordering (only received from customisation page, as ordering_list)
+    // We set it if available, otherwise set it to the current ordering
+    lastManualOrdering = params.getProperty(KEY_CUSTOM_ORDERING_PREVIOUS_MANUAL, manualOrdering);
+    // Set lastManualOrdering unless a reset was requested, in which case we need the old value.
+    //if (!action.equals(ACTION_CUSTOM_RESET)) lastManualOrdering = manualOrdering;
+    // Set custom ordering to default
     this.customFieldOrdering = FIELD_ORDERING_DEFAULT;
     
     // ---------- Interpret parameters ----------
@@ -354,17 +374,19 @@ public class ListHoldings extends LockssServlet {
         setCustomFieldOrdering(manualOrdering);
         if (doExport) manualOrdering = lastManualOrdering;
         omitEmptyColumns = customOpts.isOmitEmptyColumns();
+        omitHeader = customOpts.isOmitHeader();
       }
-      // Reset the ordering customisation to the default
+      // Reset the ordering customisation to the previous value
       else if (action.equals(ACTION_CUSTOM_RESET)) {
-        customFieldOrdering = FIELD_ORDERING_DEFAULT;
+        //customFieldOrdering = FIELD_ORDERING_DEFAULT;
+        setCustomFieldOrdering(lastManualOrdering);
         //omitEmptyColumns = OMIT_EMPTY_COLUMNS_BY_DEFAULT;
       }
       
       // Create an object encapsulating the custom HTML options, and store it
       // in the session.
-      customOpts = new KbartCustomOptions(omitEmptyColumns, showHealthRatings,
-          customFieldOrdering);
+      customOpts = new KbartCustomOptions(omitEmptyColumns, omitHeader,
+          showHealthRatings, customFieldOrdering);
       putSessionCustomOpts(customOpts);
     }
     // If this is not a valid custom or one-per-line output, reset the
@@ -447,33 +469,34 @@ public class ListHoldings extends LockssServlet {
     /*log.info(String.format("Creating exporter for %d titles in scope %s\n",
 	titles.size(), scope));*/
     log.info(
-        String.format("Creating exporter for titles of type %s in scope %s\n",
+        i18n.tr("Creating exporter for titles of type {0} in scope {1}\n",
             type, scope)
     );
     
     // Return if there are no titles
+    errMsg = i18n.tr("No {0} titles of type {1} for export.", scope, type);
     if (titles.isEmpty()) {
-      errMsg = String.format("No %s titles of type %s for export.", scope, type);
       return null;
     }
 
-    // XXX Set coverage note format to SFX if SFX output chosen
-    //if (reportDataFormat == ReportDataFormat.SFX) coverageNotesFormat = CoverageNotesFormat.SFX;
+    // Override the customisation options according to this ReportDataFormat's
+    // preferences.
+    reportDataFormat.overrideCustomOptions(opts);
+    if (reportDataFormat.hasCoverageNotesFormat())
+      coverageNotesFormat = reportDataFormat.getCoverageNotesFormat();
+    if (reportDataFormat.hasOutputFormat())
+      outputFormat = reportDataFormat.getOutputFormat();
 
-    // Process the titles using a report format, to add supplementary data or
-    // amalgamate records as required; submit the SFX covnotes format if SFX
-    // data format chosen.
-    /*titles = ReportFormat.process(titles,
-        reportDataFormat == ReportDataFormat.SFX ? CoverageNotesFormat.SFX : coverageNotesFormat,
-        reportDataFormat);*/
-
+    // Process the titles using a ReportFormat, to add supplementary data or
+    // amalgamate records as required
     titles = ReportFormat.process(titles, coverageNotesFormat, reportDataFormat);
 
     // Create a filter
     KbartExportFilter filter;
     if (opts !=null) {
       filter = new KbartExportFilter(titles, opts.getFieldOrdering(),
-          opts.isOmitEmptyColumns(), opts.isShowHealthRatings());
+          opts.isOmitEmptyColumns(), opts.isOmitHeader(),
+          opts.isShowHealthRatings());
     } else {
       filter = new KbartExportFilter(titles);
     }
@@ -716,7 +739,7 @@ public class ListHoldings extends LockssServlet {
     tab.newCell("align=\"center\"");
     Tdb tdb = TdbUtil.getTdb();
     if (tdb==null || tdb.isEmpty()) {
-      tab.add("No titlesets are defined.");
+      tab.add(i18n.tr("No titlesets are defined."));
       addBlankRow(tab);
       return tab;
     }
@@ -725,10 +748,10 @@ public class ListHoldings extends LockssServlet {
     Form form = ServletUtil.newForm(srvURL(myServletDescr()));
     form.add(new Input(Input.Hidden, "isForm", "true"));
     if (isEnablePreserved()) {
-      form.add("View or export a list of titles " +
+      form.add(i18n.tr("View or export a list of titles " +
       	"that are available for collection, configured for collection, " +
     	"or actually collected in your LOCKSS box."
-      );
+      ));
       // Footnote for HealthMetric-based preserved option
       /*form.add(addFootnote("Titles in the 'ingested' output are " +
     	"included based on a metric which assigns each configured volume " +
@@ -741,14 +764,14 @@ public class ListHoldings extends LockssServlet {
           "ingested."
       ));*/
     } else {
-      form.add("View or export a list of titles " +
+      form.add(i18n.tr("View or export a list of titles " +
       "available for collection, or configured for collection in " +
       "your LOCKSS box."
-      );
+      ));
     }
     form.add(BREAK);
-    form.add(String.format(
-	"There are %s titles available for collection, from %s publishers.", 
+    form.add(i18n.tr(
+	"There are {0} titles available for collection, from {1} publishers.",
 	tdb.getTdbTitleCount(), tdb.getTdbPublisherCount()
     ));
       form.add(BREAK);
@@ -780,25 +803,33 @@ public class ListHoldings extends LockssServlet {
     // Add the appropriate options to the sub table in the form
     if (custom) {
       // Add "hide custom" button at top
-      layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_HIDE_CUSTOM_EXPORT);
+      ServletUtil.layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_HIDE_CUSTOM_EXPORT,
+          I18N_ACTION_HIDE_CUSTOM_EXPORT, false, true);
       // Add HTML customisation options
-      subTab.add(new Heading(3, ACTION_CUSTOM));
+      subTab.add(new Heading(3, I18N_ACTION_CUSTOM));
       layoutFormCustomOpts(subTab);
       subTab.add(BREAK);
-      layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_CUSTOM_OK);
+      ServletUtil.layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_CUSTOM_OK,
+          I18N_ACTION_CUSTOM_OK, false, true);
     } else {
       // Show customise button and advice
-      layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_CUSTOM);
+      ServletUtil.layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_CUSTOM,
+          I18N_ACTION_CUSTOM, false, true);
       if (isEnablePreserved()) {
-        subTab.add(BREAK+"By default, list is in the industry-standard KBART " +
-      		"format. Alternatively you can customise the list to define " +
-      		"which columns are visible and in what order they appear. " +
-      		(AuHealthMetric.isSupported() ? "Use this option also to add health ratings to the output.":"")+
-                BREAK);
+        subTab.add(BREAK +
+            i18n.tr("By default, list is in the industry-standard KBART " +
+                "format. Alternatively you can customise the list to define " +
+                "which columns are visible and in what order they appear. ") +
+            (AuHealthMetric.isSupported() ?
+                i18n.tr("Use this option also to add health ratings to the output.")
+                : "") +
+            BREAK);
       } else {
-        subTab.add(BREAK+"By default, list is in the industry-standard KBART " +
-            "format. Alternatively you can customise the list to define " +
-            "which columns are visible and in what order they appear. "+BREAK);
+        subTab.add(BREAK+
+            i18n.tr("By default, list is in the industry-standard KBART " +
+                "format. Alternatively you can customise the list to define " +
+                "which columns are visible and in what order they appear. ") +
+            BREAK);
       }
       // Show the option to customise the export details, which are KBART by default:
       //form.add(new Input(Input.Hidden, KEY_TITLE_SCOPE, selectedScope.name()));
@@ -806,10 +837,13 @@ public class ListHoldings extends LockssServlet {
                          COVERAGE_NOTES_DEFAULT.toString()));
       form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST, 
                          getOrderingAsCustomFieldList(FIELD_ORDERING_DEFAULT)));
-      form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS, 
-                         htmlInputTruthValue(false)));
+      form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS,
+          htmlInputTruthValue(false)));
+      form.add(new Input(Input.Hidden, KEY_OMIT_HEADER,
+          htmlInputTruthValue(false)));
       // Add the submit at the bottom
-      layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_EXPORT);
+      ServletUtil.layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_EXPORT,
+          I18N_ACTION_EXPORT);
     }
     
     // Add some space
@@ -833,7 +867,7 @@ public class ListHoldings extends LockssServlet {
     //tab.add("Please choose one of the following actions.<br/>");
     tab.newRow();
     tab.newCell("align=\"center\" valign=\"middle\"");
-    tab.add("Output: ");
+    tab.add(i18n.tr("Output: "));
 
     for (OutputFormat fmt : OutputFormat.values()) {
       boolean selected = outputFormat!=null ?
@@ -854,7 +888,7 @@ public class ListHoldings extends LockssServlet {
   private void addReportFormatOptions(Table tab) {
     tab.newRow();
     tab.newCell("align=\"center\" valign=\"middle\"");
-    tab.add("Format: ");
+    tab.add(i18n.tr("Format: "));
 
     for (ReportDataFormat fmt : ReportDataFormat.values()) {
       boolean selected = reportDataFormat!=null ?
@@ -875,7 +909,7 @@ public class ListHoldings extends LockssServlet {
     tab.newRow();
     tab.newCell("align=\"center\" valign=\"middle\"");
     //tab.add("Format: ");
-    tab.add("<br/>Choose a format for ranges in the coverage field:<br/>");
+    tab.add("<br/>"+i18n.tr("Choose a format for ranges in the coverage field:")+"<br/>");
     int count = 0;
     for (CoverageNotesFormat fmt : CoverageNotesFormat.values()) {
       // Start a new row every 3 options
@@ -917,7 +951,7 @@ public class ListHoldings extends LockssServlet {
     Table tab = new Table();
     tab.newRow();
     tab.newCell("align=\"center\" valign=\"middle\"");
-    tab.add("Show: ");
+    tab.add(i18n.tr("Show: "));
     for (ContentScope scope : ContentScope.values()) {
       //long s = System.currentTimeMillis();
       boolean scopeEnabled = true;
@@ -932,7 +966,7 @@ public class ListHoldings extends LockssServlet {
       /*log.debug(String.format("Title count %s took approximately %ss",
           scope, (System.currentTimeMillis()-s)/1000
       ));*/
-      String label = String.format("%s (%d)", scope.label, total);
+      String label = String.format("%s (%d)", i18n.tr(scope.label), total);
       tab.add(ServletUtil.radioButton(this, KEY_TITLE_SCOPE, scope.name(),
           label, scope==selectedScope, scopeEnabled));
       if (!scopeEnabled) tab.add(notAvailFootnote);
@@ -948,7 +982,7 @@ public class ListHoldings extends LockssServlet {
     Table tab = new Table();
     tab.newRow();
     tab.newCell("align=\"center\" valign=\"middle\"");
-    tab.add("Title type: ");
+    tab.add(i18n.tr("Title type: "));
     for (ContentType type : ContentType.values()) {
       boolean typeEnabled = true;
       tab.add(ServletUtil.radioButton(this, KEY_TITLE_TYPE, type.name(),
@@ -982,7 +1016,7 @@ public class ListHoldings extends LockssServlet {
 
   /**
    * Create a form of options for custom HTML output. This includes options to
-   * use a custom field list or ordering, and to omit empty columns.
+   * use a custom field list or ordering, and to omit empty columns or the header.
    * 
    * @return an HTML form 
    */
@@ -990,7 +1024,7 @@ public class ListHoldings extends LockssServlet {
     
     // Get the opts from the session
     KbartCustomOptions opts = getSessionCustomOpts();
-    
+
     // Add a format parameter
     //comp.add(new Input(Input.Hidden, KEY_FORMAT, OutputFormat.HTML.name()));
     // Add a hidden field listing the last manual ordering
@@ -1016,12 +1050,12 @@ public class ListHoldings extends LockssServlet {
      */
     
     comp.add(
-	"<br/>Use the box below to provide a custom ordering for the fields - one field per line."+
-	"<br/>Omit any fields you don't want, but include an identifying field for sensible results."+
-	//"<br/>(" + StringUtils.join(Field.getLabels(Field.idFields), LIST_COMMA) + ")"+
-	"<br/>There is a description of the KBART fields next to the box; identifying fields are shown in bold."+
-	"<br/><br/>"
-	);
+        "<br/>"+i18n.tr("Use the box below to provide a custom ordering for the fields - one field per line.")+
+            "<br/>"+i18n.tr("Omit any fields you don't want, but include an identifying field for sensible results.")+
+            //"<br/>"+i18n.tr("(" + StringUtils.join(Field.getLabels(Field.idFields), LIST_COMMA) + ")")+
+            "<br/>"+i18n.tr("There is a description of the KBART fields next to the box; identifying fields are shown in bold.")+
+            "<br/><br/>"
+    );
 
     Table tab = new Table();
     tab.newRow();
@@ -1030,32 +1064,38 @@ public class ListHoldings extends LockssServlet {
     // Add a text area of an appropriate size
     int taCols = 25; // this should be the longest field width
     int taLines = Field.values().length+1;
-    tab.add("Field ordering<br/>");
+    tab.add(i18n.tr("Field ordering")+"<br/>");
     tab.add(new TextArea(KEY_CUSTOM_ORDERING_LIST, 
         getOrderingAsCustomFieldList(opts.getFieldOrdering())).setSize(taCols, taLines));
     // Omit empty columns option
     tab.add("<br/>");
-    tab.add(ServletUtil.checkbox(this, KEY_OMIT_EMPTY_COLS, 
-        Boolean.TRUE.toString(), "Omit empty columns<br/>",
+    tab.add(ServletUtil.checkbox(this, KEY_OMIT_EMPTY_COLS,
+        Boolean.TRUE.toString(), i18n.tr("Omit empty columns")+"<br/>",
         opts.isOmitEmptyColumns()));
+    // Omit header option
+    tab.add("<br/>");
+    tab.add(ServletUtil.checkbox(this, KEY_OMIT_HEADER,
+        Boolean.TRUE.toString(), i18n.tr("Omit header row")+"<br/>",
+        opts.isOmitHeader()));
     // Show health option if available
     if (isEnablePreserved() && getShowHealthRatings()) {
       tab.add(ServletUtil.checkbox(this, KEY_SHOW_HEALTH,
-          Boolean.TRUE.toString(), "Show health ratings",
+          Boolean.TRUE.toString(), i18n.tr("Show health ratings"),
           opts.isShowHealthRatings(), AuHealthMetric.isSupported()));
       if (!AuHealthMetric.isSupported()) {
         tab.add(notAvailFootnote);
       } else {
-        tab.add(addFootnote("Health ratings will only be shown for titles which " +
-                            "you have configured on your box. The '"+ContentScope.ALL+"' export " +
-                            "will not show health ratings."));
+        tab.add(addFootnote(i18n.tr("Health ratings will only be shown for titles which " +
+                            "you have configured on your box. The '{0}' export " +
+                            "will not show health ratings.", ContentScope.ALL)));
       }
     }
     // Add buttons
     tab.add("<br/><br/><center>");
-    //layoutSubmitButton(this, tab, ACTION_TAG, ACTION_CUSTOM_OK);
-    layoutSubmitButton(this, tab, ACTION_TAG, ACTION_CUSTOM_RESET);
-    layoutSubmitButton(this, tab, ACTION_TAG, ACTION_CUSTOM_CANCEL);
+    ServletUtil.layoutSubmitButton(this, tab, ACTION_TAG, ACTION_CUSTOM_RESET,
+        I18N_ACTION_CUSTOM_RESET, false, true);
+    ServletUtil.layoutSubmitButton(this, tab, ACTION_TAG, ACTION_CUSTOM_CANCEL,
+        I18N_ACTION_CUSTOM_CANCEL, false, true);
     tab.add("</center>");
     
     // Add a legend for the fields
@@ -1080,16 +1120,50 @@ public class ListHoldings extends LockssServlet {
   
   /**
    * Construct an HTML form providing a link to customisation options for output.
-   * This consists of a hidden list of ordered output fields, and a submit button,
-   * and will appear on the output page.
+   * This consists of a hidden list of ordered output fields, and a variety of
+   * submit buttons, one for accessing the customisation options, and others
+   * for directly exporting the current report in one of the non-HTML formats.
+   * It is intended to be used on the output page.
+   * 
+   * @return a Jetty composite element
+   */
+  private Composite makeHtmlCustomForm() {
+    String servletUrl = srvURL(myServletDescr());
+    Composite panel = new Composite();
+    panel.add(
+        makeHtmlCustomExportFormSingleFormat(OutputFormat.HTML, I18N_ACTION_CUSTOM, ACTION_CUSTOM)
+    );
+    panel.add(" &nbsp; ");
+    // Provide selector for output options, and submit
+    for (OutputFormat fmt : EnumSet.complementOf(EnumSet.of(OutputFormat.HTML))) {
+      panel.add(
+          makeHtmlCustomExportFormSingleFormat(fmt, i18n.tr("Export as {0}", fmt.getLabel()), ACTION_EXPORT)
+      );
+      panel.add(" &nbsp; ");
+    }
+    panel.add("<p>");
+    panel.add(new Link(servletUrl, i18n.tr("Return to main title list page")));
+    panel.add("</p>");
+    return panel;
+  }
+
+  /**
+   * Construct an HTML form for diaply on the HTML output page, encoding all
+   * current options along with a single output format option. This
+   * provides a way to directly export the current HTML report in a different
+   * format, or to go to the customisation screen. All options are encoded as
+   * hidden parameters.
    *
    * @return a Jetty form
    */
-  private Form makeHtmlCustomForm() {
+  private Form makeHtmlCustomExportFormSingleFormat(OutputFormat outputFormat,
+                                                    String label,
+                                                    String key) {
     // Get the opts from the session
     KbartCustomOptions opts = getSessionCustomOpts();
     String servletUrl = srvURL(myServletDescr());
     Form form = ServletUtil.newForm(servletUrl);
+    form.style("margin: 0; padding: 0; display: inline");
     // Indicate that we are expecting custom out
     form.add(new Input(Input.Hidden, KEY_CUSTOM, "true"));
     form.add(new Input(Input.Hidden, KEY_TITLE_SCOPE, selectedScope.name()));
@@ -1098,41 +1172,20 @@ public class ListHoldings extends LockssServlet {
         getOrderingAsCustomFieldList(opts.getFieldOrdering())));
     form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS,
         htmlInputTruthValue(opts.isOmitEmptyColumns())));
+    form.add(new Input(Input.Hidden, KEY_OMIT_HEADER,
+        htmlInputTruthValue(opts.isOmitHeader())));
     form.add(new Input(Input.Hidden, KEY_SHOW_HEALTH,
         htmlInputTruthValue(opts.isShowHealthRatings())));
-    form.add(new Input(Input.Hidden, KEY_OUTPUT_FORMAT, outputFormat.name()));
     form.add(new Input(Input.Hidden, KEY_REPORT_FORMAT, reportDataFormat.name()));
     form.add(new Input(Input.Hidden, KEY_COVERAGE_NOTES_FORMAT, coverageNotesFormat.name()));
-    ServletUtil.layoutSubmitButton(this, form, ACTION_TAG, ACTION_CUSTOM);
-    form.add(new Link(servletUrl, "Return to main title list page"));
+    // The export format
+    form.add(new Input(Input.Hidden, KEY_OUTPUT_FORMAT, outputFormat.name()));
+    ServletUtil.layoutSubmitButton(this, form, ACTION_TAG, key, label, false, false);
+    // TODO distinguish label/value!
     return form;
   }
 
-  /**
-   * An alternative to <code>ServletUtil.layoutSubmitButton</code> which doesn't put 
-   * every button on a new line.
-   * @param servlet the servlet containing the button
-   * @param composite the object to add the button to
-   * @param key the name of the button
-   * @param value the value of the button
-   */
-  private static void layoutButton(LockssServlet servlet, 
-      Composite composite, String key, String value, String type) {
-    Input submit = new Input(type, key, value);
-    servlet.setTabOrder(submit);
-    composite.add(submit);
-  }
 
-  private static void layoutSubmitButton(LockssServlet servlet, 
-      Composite composite, String key, String value) {
-    layoutButton(servlet, composite, key, value, Input.Submit); 
-  }
-  private static void layoutResetButton(LockssServlet servlet, 
-      Composite composite, String key, String value) {
-    layoutButton(servlet, composite, key, value, Input.Reset); 
-  }
-
-  
   /**
    * Get the string representation of a boolean value, appropriate for use as
    * the value of a form input.
@@ -1172,13 +1225,13 @@ public class ListHoldings extends LockssServlet {
   private void addBoxSummary(Table tab) {
     tab.newRow();
     tab.newCell("align=\"center\"");
-    tab.add("This is the KBART Metadata Exporter for ");
-    tab.add("<b>"+getMachineName()+"</b>.");
+    tab.add(i18n.tr("This is the KBART Metadata Exporter for {0}",
+        "<b>"+getMachineName()+"</b>."));
 
     tab.newRow();
     tab.newCell("align=\"center\"");
-    tab.add("The permanent KBART output URL for this server is:<br/>" +
-        "<b><font color=\"navy\">"+getDefaultUpdateUrl()+"</font></b>");
+    tab.add(i18n.tr("The permanent KBART output URL for this server is:")+
+        "<br/><b><font color=\"navy\">"+getDefaultUpdateUrl()+"</font></b>");
     addBlankRow(tab);
   }
 

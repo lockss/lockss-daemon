@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.44 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.45 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -201,8 +201,8 @@ public abstract class IpAccessControl extends LockssServlet {
         inclErrs, exclErrs, ALLOW_IPS_NAME, DENY_IPS_NAME);
     additionalFormLayout(form);
     boolean doConfirm = warnings != 0 && warnings == inclErrs.size();
-    ServletUtil.layoutSubmitButton(this, form,
-				   doConfirm ? ACTION_CONFIRM : ACTION_UPDATE);
+    String action = doConfirm ? ACTION_CONFIRM : ACTION_UPDATE;
+    ServletUtil.layoutSubmitButton(this, form, action, i18n.tr(action));
     page.add(form);
 
     // Finish laying out page

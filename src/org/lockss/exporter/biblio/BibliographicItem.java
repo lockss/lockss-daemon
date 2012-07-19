@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItem.java,v 1.2 2012-05-14 16:36:02 easyonthemayo Exp $
+ * $Id: BibliographicItem.java,v 1.3 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -58,6 +58,29 @@ package org.lockss.exporter.biblio;
  * @author Neil Mayo
  */
 public interface BibliographicItem {
+
+  /**
+   * Returns a representative ISBN for the bibliographic item. This should be
+   * whatever available ISBN is considered most appropriate. This may be any
+   * available ISBN, but the order of preference is eISBN, then print ISBN.
+   *
+   * @return an ISBN for the bibliographic item
+   */
+  public String getIsbn();
+
+  /**
+   * Returns print ISBN for this item. This is what is usually just called "ISBN".
+   *
+   * @return the print ISBN for this title or <code>null</code> if not specified
+   */
+  public String getPrintIsbn();
+
+  /**
+   * Returns eISBN for this item.
+   *
+   * @return the eISBN for this title or <code>null</code> if not specified
+   */
+  public String getEisbn();
 
   /**
    * Returns a representative ISSN for the bibliographic item. This should be

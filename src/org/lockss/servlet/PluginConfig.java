@@ -1,5 +1,5 @@
 /*
- * $Id: PluginConfig.java,v 1.3 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: PluginConfig.java,v 1.4 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -201,7 +201,7 @@ public class PluginConfig extends LockssServlet {
 // 				   "Include default keystore",
 // 				   useDefaultKeystore));
     spaceRow(table);
-    ServletUtil.layoutSubmitButton(this, table, ACTION_UPDATE);
+    ServletUtil.layoutSubmitButton(this, table, ACTION_UPDATE, i18n.tr(ACTION_UPDATE));
     form.add(table);
     page.add(form);
 

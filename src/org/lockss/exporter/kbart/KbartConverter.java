@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.33 2012-07-10 16:29:29 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.34 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -91,7 +91,8 @@ import static org.lockss.exporter.kbart.KbartTitle.Field.*;
  * iteration the resulting output is undefined.
  * <p>
  * <emph>Note that the <code>title_id</code> field is now filled with the 
- * results of getIssn(), which gives a preferred ISSN for linking.</emph>
+ * results of either getIsbn() or getIssn(), which gives a preferred ISBN/ISSN
+ * for linking.</emph>
  *
  * <h3>Note: Iteration</h3>
  * The converter can accept an iterator instead of a list, as it deals with a
@@ -151,9 +152,9 @@ public class KbartConverter {
    * @return a List of KbartTitle objects representing all the TDB titles
    * @deprecated instead use TdbUtil to get the list of TdbTitles, which can be cached, and pass it to convertTitles
    */
-  public static List<KbartTitle> extractTitles(TdbUtil.ContentScope scope) {
+  /*public static List<KbartTitle> extractTitles(TdbUtil.ContentScope scope) {
     return convertTitles(TdbUtil.getTdbTitles(scope));
-  }
+  }*/
   
   /**
    * Convert the given collection of TdbTitles into KbartTitles.
@@ -523,13 +524,13 @@ public class KbartConverter {
    *   <li>title_url</li>
    *   <li>title_id</li>
    *   <li>publisher_name</li>
+   *   <li>coverage_notes (free text field, filled with list of coverage ranges)</li>
    * </ul>
    * The following fields currently have no analog in the TDB data:
    * <ul>
    *   <li><del>first_author</del> (not relevant to journals)</li>
    *   <li>embargo_info</li>
    *   <li>coverage_depth</li>
-   *   <li>coverage_notes (free text field, may be used for PEPRS data)</li>
    * </ul>
    * <p>
    * We assume AUs are listed in order from earliest to most recent, when they 
@@ -612,8 +613,9 @@ public class KbartConverter {
         MetadataUtil.validateIssn(au.getPrintIssn()));
     baseKbt.setField(ONLINE_IDENTIFIER,
         MetadataUtil.validateIssn(au.getEissn()));
-    baseKbt.setField(TITLE_ID,
-        MetadataUtil.validateIssn(au.getIssn()));
+    baseKbt.setField(TITLE_ID, getTitleId(au));
+    // TODO Validate as either ISBN or ISSN
+    //MetadataUtil.validateIssn(au.getIssn()));
 
     // Title URL
     // Set using a substitution parameter 
@@ -672,6 +674,21 @@ public class KbartConverter {
   private static int getThisYear() { 
     return Calendar.getInstance().get(Calendar.YEAR);
   }
+
+
+  /**
+   * Get the value that will be used in the title_id field, that is, as an
+   * internal unique identifier. This will be an ISBN if available, then an ISSN
+   * if available, in order of preference for those two fields as defined in
+   * the BibliographicItem.
+   * @param au a BibliographicItem
+   * @return
+   */
+  public static String getTitleId(BibliographicItem au) {
+    String id = au.getIsbn();
+    if (id==null) id = au.getIssn();
+    return id;
+  }
   
   /**
    * Update the KbartTitle with new values for the title fields if the
@@ -683,9 +700,9 @@ public class KbartConverter {
    * @param kbt a KbartTitle whose properties to update
    */
   private static void updateTitleProperties(BibliographicItem au, KbartTitle kbt) {
+    String titleIdCheck = getTitleId(au);
     String issnCheck = au.getPrintIssn();
     String eissnCheck = au.getEissn();
-    String issnlCheck = au.getIssnL();
     String titleCheck = au.getJournalTitle();
     // TODO Validate the ISSNs as well as null-checking?
     if (titleCheck!=null && !titleCheck.equals(kbt.getField(PUBLICATION_TITLE))) {
@@ -703,10 +720,10 @@ public class KbartConverter {
           kbt.getField(ONLINE_IDENTIFIER), eissnCheck));
       kbt.setField(ONLINE_IDENTIFIER, MetadataUtil.validateIssn(eissnCheck));
     }
-    if (issnlCheck!=null && !issnlCheck.equals(kbt.getField(TITLE_ID))) {
-      log.info(String.format("ISSN-L change within title %s => %s",
-          kbt.getField(TITLE_ID), issnlCheck));
-      kbt.setField(TITLE_ID, MetadataUtil.validateIssn(issnlCheck));
+    if (titleIdCheck!=null && !titleIdCheck.equals(kbt.getField(TITLE_ID))) {
+      log.info(String.format("TITLE_ID (ISSN/ISBN) change within title %s => %s",
+          kbt.getField(TITLE_ID), titleIdCheck));
+      kbt.setField(TITLE_ID, MetadataUtil.validateIssn(titleIdCheck));
     }
   }
   

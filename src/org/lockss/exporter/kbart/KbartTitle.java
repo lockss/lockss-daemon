@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitle.java,v 1.15 2012-06-15 16:55:35 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.16 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -209,9 +209,10 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
    * @return a parameter string appropriate for OpenURL resolving
    */
   public String getResolverUrlParams() {
-    if (hasFieldValue(Field.ONLINE_IDENTIFIER)) 
+    // TODO Use title id (prefers ISBN) if possible
+    if (hasFieldValue(Field.ONLINE_IDENTIFIER))
       return "?eissn=" + getField(Field.ONLINE_IDENTIFIER);
-    if (hasFieldValue(Field.PRINT_IDENTIFIER)) 
+    if (hasFieldValue(Field.PRINT_IDENTIFIER))
       return "?issn=" + getField(Field.PRINT_IDENTIFIER);
     // Resort to title and publisher (assume that they exist)
     String pubTitle = UrlUtil.encodeUrl(getField(Field.PUBLICATION_TITLE));

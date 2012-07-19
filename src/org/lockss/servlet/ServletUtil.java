@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.76 2012-07-17 08:49:41 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.77 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.*;
@@ -40,14 +39,12 @@ import java.util.*;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import javax.servlet.http.HttpServletResponse;
-
 import org.apache.commons.collections.*;
-import org.apache.commons.collections.map.*;
 import org.apache.commons.lang.mutable.*;
 import org.lockss.config.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
+import org.lockss.jetty.Button;
 import org.lockss.jetty.MyTextArea;
 import org.lockss.plugin.*;
 import org.lockss.remote.*;
@@ -346,11 +343,17 @@ public class ServletUtil {
 
   private static final String SPACE = "&nbsp;"; /* (a) */
 
-  private static final String SUBMIT_AFTER =
+  private static final String CENTRE_CLOSE =
     "</center>";
 
-  private static final String SUBMIT_BEFORE =
-    "<br><center>";
+  private static final String CENTRE_OPEN =
+      "<center>";
+
+  private static final String BREAK =
+      "<br/>";
+
+  private static final boolean BTN_NEWLINE_DEFAULT = true;
+  private static final boolean BTN_CENTRE_DEFAULT = true;
 
   private static volatile String thirdPartyLogo;
   private static volatile String thirdPartyLogoLink;
@@ -1031,18 +1034,76 @@ public class ServletUtil {
 
   public static void layoutSubmitButton(LockssServlet servlet,
                                         Composite composite,
-                                        String value) {
-    layoutSubmitButton(servlet, composite, "action", value);
+                                        String value,
+                                        String label) {
+    layoutSubmitButton(servlet, composite, "action", value, label);
   }
 
   public static void layoutSubmitButton(LockssServlet servlet,
                                         Composite composite,
-					String key,
-                                        String value) {
-    Input submit = new Input(Input.Submit, key, value);
-    servlet.setTabOrder(submit);
-    composite.add(SUBMIT_BEFORE + submit + SUBMIT_AFTER);
+                                        String key,
+                                        String value,
+                                        String label) {
+    layoutSubmitButton(servlet, composite, key, value, label, BTN_NEWLINE_DEFAULT, BTN_CENTRE_DEFAULT);
   }
+
+  /**
+   * Layout a submit button with a preceding newline (HTML line break) if
+   * specified.
+   */
+  public static void layoutSubmitButton(LockssServlet servlet,
+                                        Composite composite,
+                                        String key,
+                                        String value,
+                                        String label,
+                                        boolean newline,
+                                        boolean centre) {
+    layoutButton(servlet, composite, key, value, Input.Submit, label, newline, centre);
+  }
+
+  public static void layoutResetButton(LockssServlet servlet,
+                                       Composite composite,
+                                       String key,
+                                       String value,
+                                       String label,
+                                       boolean newline,
+                                       boolean centre) {
+    layoutButton(servlet, composite, key, value, Input.Reset, label, newline, centre);
+  }
+
+  /**
+   * Layout a button of the specified type, optionally preceded by a line break.
+   * The button will be an HTML <button> element so that it can be
+   * internationalized (that is, it can have a distinct value and label). The
+   * button element is not provided by the Jetty library, so in order to set
+   * the tab order on it, we must either create one or increment the tabindex
+   * independently of the setTabOrder method.
+   *
+   * @param servlet the servlet containing the button
+   * @param composite the object to add the button to
+   * @param key the name of the button
+   * @param value the value of the button
+   * @param type the type of the button
+   * @param label the localised display label for the button
+   * @param lineBreak whether to insert a line break before the button
+   * @param centre whether to centre the button
+   */
+  public static void layoutButton(LockssServlet servlet,
+                                  Composite composite,
+                                  String key,
+                                  String value,
+                                  String type,
+                                  String label,
+                                  boolean lineBreak,
+                                  boolean centre) {
+    Button button = new Button(key, value, type, label);
+    servlet.setTabOrder(button);
+    if (lineBreak) composite.add(BREAK);
+    if (centre) composite.add(CENTRE_OPEN);
+    composite.add(button);
+    if (centre) composite.add(CENTRE_CLOSE);
+  }
+
 
   public static Composite makeChooseAus(LockssServlet servlet,
                                         Iterator basEntryIter,

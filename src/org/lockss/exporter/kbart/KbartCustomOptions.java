@@ -1,5 +1,5 @@
 /*
- * $Id: KbartCustomOptions.java,v 1.3 2012-05-31 16:53:18 easyonthemayo Exp $
+ * $Id: KbartCustomOptions.java,v 1.4 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import java.io.Serializable;
 public class KbartCustomOptions implements Serializable {
 
   private boolean omitEmptyColumns;
+  private boolean omitHeader;
   private boolean showHealthRatings;
   //private boolean oneTitlePerLine;
   private KbartExportFilter.FieldOrdering fieldOrdering;
@@ -55,9 +56,11 @@ public class KbartCustomOptions implements Serializable {
     this.fieldOrdering = ord;
   }*/
 
-  public KbartCustomOptions(boolean omit, boolean health,
+  public KbartCustomOptions(boolean omitEmptyColumns, boolean omitHeader,
+                            boolean health,
                             KbartExportFilter.FieldOrdering ord) {
-    this.omitEmptyColumns = omit;
+    this.omitEmptyColumns = omitEmptyColumns;
+    this.omitHeader = omitHeader;
     this.showHealthRatings = health;
     this.fieldOrdering = ord;
   }
@@ -65,6 +68,7 @@ public class KbartCustomOptions implements Serializable {
   public static KbartCustomOptions getDefaultOptions() {
     return new KbartCustomOptions(
         KbartExporter.omitEmptyFieldsByDefault,
+        KbartExporter.omitHeaderRowByDefault,
         KbartExporter.showHealthRatingsByDefault,
         //DEFAULT_oneTitlePerLine,
         KbartExportFilter.CustomFieldOrdering.getDefaultOrdering()
@@ -77,6 +81,14 @@ public class KbartCustomOptions implements Serializable {
 
   public void setOmitEmptyColumns(boolean omitEmptyColumns) {
     this.omitEmptyColumns = omitEmptyColumns;
+  }
+
+  public boolean isOmitHeader() {
+    return omitHeader;
+  }
+
+  public void setOmitHeader(boolean omitHeader) {
+    this.omitHeader = omitHeader;
   }
 
   public boolean isShowHealthRatings() {

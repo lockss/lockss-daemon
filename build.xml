@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.309 2012-07-19 06:24:39 tlipkis Exp $
+ $Id: build.xml,v 1.310 2012-07-19 11:54:41 easyonthemayo Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -240,10 +240,13 @@ Args:
 				  value="${lib}/commons-jxpath-1.3.jar"/>
   <property name="commons.beanutils.jar"
 				  value="${lib}/commons-beanutils-1.8.3.jar"/>
-
+  <!-- gettext jars, for i18n -->
+  <property name="gettext.tasks.jar" 
+            value="${lib}/gettext-ant-tasks-0.9.7.jar"/>
+  <property name="gettext.commons.jar" 
+            value="${lib}/gettext-commons-0.9.6.jar"/>
   <!-- TrueZIP -->
   <property name="truezip.version" value="7.5.5" />
-
   <property name="truezip-driver-file.jar"
 	    value="${lib}/truezip-driver-file-${truezip.version}.jar" />
   <property name="truezip-driver-tar.jar"
@@ -404,6 +407,8 @@ Args:
     <pathelement path="${heritrix-fastutil.jar}" />
     <pathelement path="${heritrix-guava.jar}" />
     <pathelement path="${commons.beanutils.jar}" />
+    <!-- Jars for I18N -->
+    <pathelement path="${gettext.commons.jar}" />
   </path>
 
   <path id="run.classpath">
@@ -765,10 +770,16 @@ The target you have selected requires compiling under JDK 1.7.
           <include name="**/*.props"/>
           <include name="**/*.keystore"/>
           <include name="commons-logging.properties"/>
+          <include name="i18n.properties"/>
           <include name="org/lockss/htdocs/**/*"/>
 	  <include name="**/urlrewriter.js"/> <!-- IA/WERA javascript -->
        </fileset>
     </copy>
+    <!-- Generate compiled message bundles for main LOCKSS module -->
+    <antcall target="i18n-generate-bundles">
+      <param name="srcdir" value="${src}"/>
+      <param name="clsdir" value="${classes}"/>
+    </antcall>
   </target>
 
   <!-- ==================================================================== -->
@@ -811,6 +822,11 @@ The target you have selected requires compiling under JDK 1.7.
           <include name="**/*.xml"/>   <!-- Definable plugins -->
        </fileset>
     </copy>
+    <!-- Generate compiled message bundles for plugins -->
+    <antcall target="i18n-generate-bundles">
+      <param name="srcdir" value="${plugins.src}"/>
+      <param name="clsdir" value="${plugins.classes}"/>
+    </antcall>
   </target>
 
   <target name="compile-plugins-tests" depends="jar-plugins,jar-tests"
@@ -860,7 +876,13 @@ The target you have selected requires compiling under JDK 1.7.
           <include name="**/images/*"/>
        </fileset>
     </copy>
+    <!-- Generate compiled message bundles for tools -->
+    <antcall target="i18n-generate-bundles">
+      <param name="srcdir" value="${tools.src}"/>
+      <param name="clsdir" value="${tools.classes}"/>
+    </antcall>
   </target>
+
   <target name="compile-tools-tests" depends="jar-tools,jar-tests"
    description="Compile the LOCKSS test classes for tools" >
     <mkdir dir="${tools.test.classes}" />
@@ -1049,7 +1071,6 @@ Must specify pln with -Dplnname=name
            failifexecutionfails="true"
            relative="false"
            parallel="false">
-      
       <fileset dir="${indir}" includes="**/*.tdb"/>
       <mapper type="glob" from="*.tdb" to="*.xml"/>
       <arg value="-A"/>
@@ -2695,6 +2716,10 @@ optionally -Dtests= for tests to be run.
     </exec>
   </target>
 
+  <!-- ==================================================================== -->
+  <!--  Supplementary documentation and processing tasks -->
+  <!-- ==================================================================== -->
+
   <target name="javadoc-apiviz" depends="jar-tests,prepare-javadoc,-load-build-info,param-docs"
           description="Make the javadocs along with apiviz UML graphs.">
     <!-- Write the text param doc into the doc tree -->
@@ -2713,7 +2738,7 @@ optionally -Dtests= for tests to be run.
              use="${use}"
              author="${author}"
              version="${version}"
-	     access="private"
+             access="private"
              windowtitle="LOCKSS API"
              doctitle="LOCKSS"
              verbose="false"
@@ -2723,4 +2748,204 @@ optionally -Dtests= for tests to be run.
        <classpath refid="compile.classpath" />
     </javadoc>
   </target>
+
+
+  <!-- ==================================================================== -->
+  <!--  Internationalization processing tasks -->
+  <!-- ==================================================================== -->
+
+  <!-- Package and base class name in which to place i18n messages. 
+       This must match the basename declared in i18n.properties. -->
+  <property name="i18n.bundle" value="org.lockss.i18n.Messages"/>
+  <!-- Directory with translated message files -->
+  <property name="i18n.dir" value="i18n"/>
+  <!-- Name of the default pot file in each module -->
+  <property name="i18n.default.pot.file" value="keys.pot"/>
+  <!-- Name of the manually-edited pot file -->
+  <property name="i18n.manual.pot.file" value="manual.pot"/>
+  <!-- A percentage threshold of translation above which a translated locale will be incorporated -->
+  <property name="i18n.translation.threshold" value="0"/>
+
+
+  <!-- ==================================================================== -->
+  <!-- Extract message keys from the source code of a single module. 
+       Takes a single srcdir argument. -->
+  <target name="i18n-extract-messages" depends="check.contrib"
+          description="Extract message keys from the source code of a single module">
+    <fail unless="srcdir">Must specify srcdir with -Dsrcdir=dir</fail>
+    <echo message="Extracting i18n messages from ${srcdir}"/>
+    <!-- Make the path relative -->
+    <pathconvert property="relsrcdir">
+      <map from="${basedir}" to="."/>
+      <path location="${srcdir}"/>
+    </pathconvert>
+    <!-- If the pot file dir exists, extract the src messages to there -->
+    <property name="local.po.dir" value="${relsrcdir}/${i18n.dir}"/>
+    <if>
+      <available file="${local.po.dir}"/>
+      <then>
+        <echo message="Extracting messages in ${local.po.dir}"/>
+        <!-- Load the task definition and run message extraction -->
+        <taskdef name="gettext-extract" classname="org.xnap.commons.ant.gettext.GettextExtractKeysTask" classpath="${gettext.tasks.jar}"/>
+        <taskdef name="gettext-merge" classname="org.xnap.commons.ant.gettext.GettextMergeKeysTask" classpath="${gettext.tasks.jar}"/>
+        <gettext-extract keysFile="${i18n.default.pot.file}" poDirectory="${local.po.dir}">
+          <fileset dir="${relsrcdir}" includes="**/*.java"/>
+        </gettext-extract>
+        <!-- Merge messages -->
+        <gettext-merge keysFile="${i18n.default.pot.file}" poDirectory="${local.po.dir}"/>
+      </then>
+    </if>
+  </target>
+
+
+  <!-- ==================================================================== -->
+  <!-- Merge newly extracted messages into existing po files -->
+  <target name="i18n-merge-messages" depends="check.contrib"
+          description="Merge newly extracted messages into existing po files">
+    <fail unless="srcdir">Must specify srcdir with -Dsrcdir=dir</fail>
+    <!-- We have to convert the paths to relative paths as gettext tasks seem to assume they are relative. -->
+    <pathconvert property="relsrcdir">
+      <map from="${basedir}" to="."/>
+      <path location="${srcdir}"/>
+    </pathconvert>
+    <!-- Merge new messages -->
+    <!-- If the pot dir exists, merge the messages -->
+    <property name="local.po.dir" value="${relsrcdir}/${i18n.dir}"/>
+    <if>
+      <available file="${local.po.dir}"/>
+      <then>
+        <echo message="Merging new i18n messages into po files in ${srcdir}" />
+        <taskdef name="gettext-merge" classname="org.xnap.commons.ant.gettext.GettextMergeKeysTask" classpath="${gettext.tasks.jar}"/>
+        <!-- Merge the default extracted messages  -->
+        <if>
+          <available file="${local.po.dir}/${i18n.default.pot.file}"/>
+          <then>
+            <gettext-merge keysFile="${i18n.default.pot.file}" poDirectory="${local.po.dir}"/>
+          </then>
+        </if>
+      </then>
+    </if>
+  </target>
+
+
+  <!-- NOTE: It looks like we can't merge multiple pot files into the same 
+       set of .pos, so the manually-managed messages and pos should perhaps 
+       be in their own distinct dir and bundles?
+       Alternatively we could write a task to use gettext's msgcat -->
+  <!-- ==================================================================== -->
+  <!-- Merge manual messages into existing po files -->
+  <target name="i18n-merge-messages-manual" depends="check.contrib"
+          description="Merge manual messages into po files">
+    <fail unless="srcdir">Must specify srcdir with -Dsrcdir=dir</fail>
+    <!-- We have to convert the paths to relative paths as gettext tasks seem to assume they are relative. -->
+    <pathconvert property="relsrcdir">
+      <map from="${basedir}" to="."/>
+      <path location="${srcdir}"/>
+    </pathconvert>
+    <!-- Merge manual messages -->
+    <!-- If the pot dir exists, merge the messages -->
+    <property name="local.po.dir" value="${relsrcdir}/${i18n.dir}"/>
+    <if>
+      <available file="${local.po.dir}"/>
+      <then>
+        <echo message="Merging manual i18n messages into po files in ${srcdir}" />
+        <taskdef name="gettext-merge" classname="org.xnap.commons.ant.gettext.GettextMergeKeysTask" classpath="${gettext.tasks.jar}"/>
+        <if>
+          <available file="${local.po.dir}/${i18n.manual.pot.file}"/>
+          <then>
+            <gettext-merge keysFile="${i18n.manual.pot.file}" poDirectory="${local.po.dir}"/>
+          </then>
+        </if>
+      </then>
+    </if>
+  </target>
+  
+
+  <!-- ==================================================================== -->  
+  <!-- Generate Java message resource bundles in the named classes dir. 
+       This is an essential part of the compile process and is called by
+       the compile targets of each module. The target is hidden by having 
+       no description, as it is not intended for manual use. -->
+  <target name="i18n-generate-bundles" depends="check.contrib">
+    <fail unless="srcdir">Must specify srcdir with -Dsrcdir=dir</fail>
+    <fail unless="clsdir">Must specify clsdir with -Dclsdir=dir</fail>
+    <!-- We have to convert the paths to relative paths as gettext tasks seem to assume they are relative. -->
+    <pathconvert property="relsrcdir">
+      <map from="${basedir}" to="."/>
+      <path location="${srcdir}"/>
+    </pathconvert>
+    <pathconvert property="relclsdir">
+      <map from="${basedir}" to="."/>
+      <path location="${clsdir}"/>
+    </pathconvert>
+    <!-- If the pot file exists, generate the default resource bundle first  -->
+    <echo message="Generating i18n message bundles in ${srcdir}" />
+    <property name="local.po.dir" value="${relsrcdir}/${i18n.dir}"/>
+    <property name="local.pot.file" value="${local.po.dir}/${i18n.default.pot.file}"/>
+    <if>
+      <available file="${local.pot.file}"/>
+      <then>
+        <echo message="Generating bundle from ${local.pot.file}"/>
+        <taskdef name="gettext-generate-default" classname="org.xnap.commons.ant.gettext.GenerateDefaultBundleTask" classpath="${gettext.tasks.jar}"/>
+        <gettext-generate-default targetBundle="${i18n.bundle}" outputDirectory="${relclsdir}" potfile="${local.pot.file}"/>
+        <!-- Generate the other language bundles -->
+        <taskdef name="gettext-dist" classname="org.xnap.commons.ant.gettext.GettextDistTask" classpath="${gettext.tasks.jar}"/>
+        <gettext-dist targetBundle="${i18n.bundle}" percentage="${i18n.translation.threshold}"
+                      poDirectory="${local.po.dir}" outputDirectory="${relclsdir}"/>
+      </then>
+    </if>
+  </target>
+
+
+
+  <!-- ==================================================================== -->  
+  <!-- Perform full i18n process - extraction, merge, bundle. -->
+  <target name="i18n-build-all" description="Perform the whole i18n message bundle generation process,
+                                             that is extract, merge, generate/compile bundles.">
+    <antcall target="i18n-extract-messages-all"/>
+    <antcall target="i18n-merge-messages-all"/>
+    <antcall target="i18n-generate-bundles-all"/>
+  </target>
+
+  <!-- ==================================================================== -->
+  <!-- Extract message keys from the source code for all modules. -->
+  <target name="i18n-extract-messages-all" description="Extract message keys from the source code">
+    <echo message="Extracting i18n messages for all modules"/>
+    <antcall target="i18n-extract-messages">
+      <param name="srcdir" value="${src}"/>
+    </antcall>
+    <!-- At some point we might extract plugin messages to individual language files in each plugin dir  -->
+    <!--<antcall target="i18n-extract-messages">
+      <param name="srcdir" value="${plugins.src}"/>
+    </antcall>-->
+  </target>
+
+  <!-- ==================================================================== -->
+  <!-- Extract message keys from the source code for all modules. -->
+  <target name="i18n-merge-messages-all" description="Merge messages into existing po files">
+    <antcall target="i18n-merge-messages">
+      <param name="srcdir" value="${src}"/>
+    </antcall>
+    <!-- At some point we might merge plugin messages into language files for each plugin dir  -->
+    <!--<antcall target="i18n-merge-messages">
+      <param name="srcdir" value="${plugins.src}"/>
+    </antcall>-->
+  </target>
+
+  <!-- ==================================================================== -->
+  <!-- Generate resource bundles for all modules. -->
+  <target name="i18n-generate-bundles-all" depends="check.contrib"
+          description="Generate compiled resource bundles">
+    <antcall target="i18n-generate-bundles">
+      <param name="srcdir" value="${src}"/>
+      <param name="clsdir" value="${classes}"/>
+    </antcall>
+    <!-- At some point we might extract generate a bundle per plugin  -->
+    <!--<antcall target="i18n-generate-bundles">
+      <param name="srcdir" value="${plugins.src}"/>
+      <param name="clsdir" value="${plugins.classes}"/>
+    </antcall>-->
+  </target>
+
 </project>
+

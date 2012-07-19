@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicUtil.java,v 1.5 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id: BibliographicUtil.java,v 1.6 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -807,16 +807,21 @@ public class BibliographicUtil {
     // Tokenise the string on punctuation
     StringBuilder sb = new StringBuilder();
     PatternMatcherInput input = new PatternMatcherInput(s);
-    while (volTokenMatcher.contains(input, VOL_TOK_DELIM_PTN)) {
-      // Check if the string is normalised Roman when it is upper cased;
-      // if so it is converted to Arabic to normalise the string
-      String pre = input.preMatch();
-      if (NumberUtil.isNormalisedRomanNumber(pre.toUpperCase())) {
-        sb.append(NumberUtil.toArabicNumber(pre));
-      } else sb.append(pre);
-      sb.append(input.match());
-      // Set input to the remainder of the input
-      input.setInput(input.postMatch());
+    try {
+      while (volTokenMatcher.contains(input, VOL_TOK_DELIM_PTN)) {
+        // Check if the string is normalised Roman when it is upper cased;
+        // if so it is converted to Arabic to normalise the string
+        String pre = input.preMatch();
+        if (NumberUtil.isNormalisedRomanNumber(pre.toUpperCase())) {
+          sb.append(NumberUtil.toArabicNumber(pre));
+        } else sb.append(pre);
+        sb.append(input.match());
+        // Set input to the remainder of the input
+        input.setInput(input.postMatch());
+      }
+    } catch (ArrayIndexOutOfBoundsException e) {
+      // Ignore - this seems to occur occasionally through some combination of
+      // back button, reload or stopping the submission of a report request..
     }
     // Finally, try and convert the end of the string
     if (NumberUtil.isNormalisedRomanNumber(input.toString().toUpperCase())) {

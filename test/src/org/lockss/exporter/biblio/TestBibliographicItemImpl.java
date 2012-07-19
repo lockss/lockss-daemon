@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicItemImpl.java,v 1.1 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: TestBibliographicItemImpl.java,v 1.2 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -38,6 +38,10 @@ import org.lockss.test.LockssTestCase;
  */
 public class TestBibliographicItemImpl extends LockssTestCase {
 
+  private final static String badIsbn = "54321";
+  private final static String pIsbn = "978-1-58562-257-3";
+  private final static String eIsbn = "1-58562-340-2";
+
   private final static String badIssn = "12345";
   private final static String pIssn = "0148-2076";
   private final static String eIssn = "1533-8606";
@@ -68,11 +72,11 @@ public class TestBibliographicItemImpl extends LockssTestCase {
 
   // A BibliographicItem constructed using vol/year/issue convenience strings
   private BibliographicItem bibItem1 = new BibliographicItemImpl(
-      pIssn, title, publisher, name, volume, year, issue
+      pIsbn, pIssn, title, publisher, name, volume, year, issue
   );
   // A BibliographicItem constructed using vol/year/issue start and end strings
   private BibliographicItem bibItem2 = new BibliographicItemImpl(
-      pIssn, title,
+      pIsbn, pIssn, title,
       publisher, name,
       sVol, eVol,
       sYear, eYear,
@@ -96,6 +100,16 @@ public class TestBibliographicItemImpl extends LockssTestCase {
     assertNull(bibItem2.getVolume());
     assertNull(bibItem2.getYear());
     assertNull(bibItem2.getIssue());
+  }
+
+  /**
+   * ISBN should be the preferred available ISBN
+   * (eISBN, then ISBN).
+   */
+  public void testGetIsbn() {
+    assertEquals(pIsbn, bibItem1.getIsbn());
+    ((BibliographicItemImpl)bibItem1).setEisbn(eIsbn);
+    assertEquals(eIsbn, bibItem1.getIsbn());
   }
 
   /**

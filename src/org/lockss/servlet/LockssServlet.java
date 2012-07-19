@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.125 2012-07-16 21:10:49 easyonthemayo Exp $
+ * $Id: LockssServlet.java,v 1.126 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -55,6 +55,8 @@ import org.lockss.account.*;
 import org.lockss.protocol.*;
 import org.lockss.jetty.*;
 import org.lockss.util.*;
+import org.xnap.commons.i18n.I18n;
+import org.xnap.commons.i18n.I18nFactory;
 
 /** Abstract base class for LOCKSS servlets
  */
@@ -63,6 +65,10 @@ import org.lockss.util.*;
 public abstract class LockssServlet extends HttpServlet
   implements SingleThreadModel {
   protected static Logger log = Logger.getLogger("LockssServlet");
+
+  /** Get a gettext-commons i18n object usable by all servlets. The object is
+   * cached per-package (internally to the gettext-commons library). */
+  protected static I18n i18n = I18nFactory.getI18n(LockssServlet.class);
 
   // Constants
   static final String PARAM_LOCAL_IP = Configuration.PREFIX + "localIPAddress";

@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-18 17:33+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/org/lockss/servlet/ExpertConfig.java:63
+msgid "Update"
+msgstr ""
+
+#. --------------------- I18N LABELS FOR SUBMIT BUTTONS ----------------------
+#: src/org/lockss/servlet/ListHoldings.java:144
+#: src/org/lockss/servlet/ListHoldings.java:147
+msgid "List Titles"
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:145
+msgid "Customise Fields"
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:146
+msgid "Hide Customise Fields"
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:148
+msgid "Reset"
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:149
+msgid "Cancel"
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:150
+msgid "Export"
+msgstr ""
+
+#. String fn = String.format("Not available on this platform (%s).",
+#. PlatformUtil.getInstance());
+#: src/org/lockss/servlet/ListHoldings.java:288
+msgid "Not available on this platform."
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:468
+#, java-format
+msgid "Creating exporter for titles of type {0} in scope {1}\n"
+msgstr ""
+
+#. Return if there are no titles
+#: src/org/lockss/servlet/ListHoldings.java:473
+#, java-format
+msgid "No {0} titles of type {1} for export."
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:738
+msgid "No titlesets are defined."
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:747
+msgid ""
+"View or export a list of titles that are available for collection, "
+"configured for collection, or actually collected in your LOCKSS box."
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:763
+msgid ""
+"View or export a list of titles available for collection, or configured for "
+"collection in your LOCKSS box."
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:770
+#, java-format
+msgid "There are {0} titles available for collection, from {1} publishers."
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:816
+#: src/org/lockss/servlet/ListHoldings.java:825
+msgid ""
+"By default, list is in the industry-standard KBART format. Alternatively you "
+"can customise the list to define which columns are visible and in what order "
+"they appear. "
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:820
+msgid "Use this option also to add health ratings to the output."
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:865
+msgid "Output: "
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:886
+msgid "Format: "
+msgstr ""
+
+#. tab.add("Format: ");
+#: src/org/lockss/servlet/ListHoldings.java:907
+msgid "Choose a format for ranges in the coverage field:"
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:949
+msgid "Show: "
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:980
+msgid "Title type: "
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:1048
+msgid ""
+"Use the box below to provide a custom ordering for the fields - one field "
+"per line."
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:1049
+msgid ""
+"Omit any fields you don't want, but include an identifying field for "
+"sensible results."
+msgstr ""
+
+#. "<br/>"+i18n.tr("(" + StringUtils.join(Field.getLabels(Field.idFields), LIST_COMMA) + ")")+
+#: src/org/lockss/servlet/ListHoldings.java:1051
+msgid ""
+"There is a description of the KBART fields next to the box; identifying "
+"fields are shown in bold."
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:1062
+msgid "Field ordering"
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:1068
+msgid "Omit empty columns"
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:1073
+msgid "Omit header row"
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:1078
+msgid "Show health ratings"
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:1083
+msgid ""
+"Health ratings will only be shown for titles which you have configured on "
+"your box. The '{0}' export will not show health ratings."
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:1135
+#, java-format
+msgid "Export as {0}"
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:1140
+msgid "Return to main title list page"
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:1223
+#, java-format
+msgid "This is the KBART Metadata Exporter for {0}"
+msgstr ""
+
+#: src/org/lockss/servlet/ListHoldings.java:1228
+msgid "The permanent KBART output URL for this server is:"
+msgstr ""

@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.22 2012-07-10 16:29:29 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.23 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ import org.lockss.exporter.kbart.KbartTitle.Field;
 
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.mortbay.html.Composite;
 import org.mortbay.html.Form;
 
 /**
@@ -139,9 +140,10 @@ public abstract class KbartExporter {
   
   /**
    * An optional HTML form containing customisation options. This option is 
-   * meaningless to non-HTML outputs. 
+   * meaningless to non-HTML outputs. It is recorded as a Composite so it can
+   * in fact contain a variety of forms.
    */
-  private Form customForm;
+  private Composite customForm;
 
   /** A count of how many records have been exported. */
   protected int exportCount = 0;
@@ -160,13 +162,17 @@ public abstract class KbartExporter {
    * By default, we don't show health ratings as they are non-KBART.
    */
   public static final boolean showHealthRatingsByDefault = false;
-  
+  /**
+   * By default, we show the header row.
+   */
+  public static final boolean omitHeaderRowByDefault = false;
+
   /** Default encoding for output. */
   public static final String DEFAULT_ENCODING = "UTF-8";
   /** Whether to auto flush the writer streams. */
   protected static final boolean AUTO_FLUSH = true;
-  
-  
+
+
   /**
    * Default constructor takes a list of KbartTitle objects to be exported.
    * Creates an export filter and sorts the titles. Due to this sorting,
@@ -268,7 +274,7 @@ public abstract class KbartExporter {
    * the output.
    */
   private void doExport() throws IOException {
-    emitHeader();
+    if (!filter.isOmitHeader()) emitHeader();
     for (KbartTitle title : titles) {
       // Don't output some titles
       if (!filter.isTitleForOutput(title)) {
@@ -526,7 +532,7 @@ public abstract class KbartExporter {
    * Return the custom form for HTML output. It may not be set.
    * @return a form containing customisation options; may be null
    */
-  public Form getHtmlCustomForm() { 
+  public Composite getHtmlCustomForm() {
     return customForm; 
   }
   
@@ -534,7 +540,7 @@ public abstract class KbartExporter {
    * Set the HTML form which represents customisable options.
    * @param form a fully-defined Jetty form
    */
-  public void setHtmlCustomForm(Form form) {
+  public void setHtmlCustomForm(Composite form) {
     //if (!isHtml) throw new UnsupportedOperationException();
     if (this.outputFormat.isHtml) this.customForm = form;
   }

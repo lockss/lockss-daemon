@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExportFilter.java,v 1.11 2012-07-10 16:29:29 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.12 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -86,9 +86,11 @@ public class KbartExportFilter {
   
   private static Logger log = Logger.getLogger("KbartExportFilter");
 
-  public static final boolean OMIT_EMPTY_FIELDS_DEFAULT = 
+  public static final boolean OMIT_EMPTY_FIELDS_DEFAULT =
       KbartExporter.omitEmptyFieldsByDefault;
-  public static final boolean SHOW_HEALTH_RATINGS_DEFAULT = 
+  public static final boolean OMIT_HEADER_ROW_BY_DEFAULT =
+      KbartExporter.omitHeaderRowByDefault;
+  public static final boolean SHOW_HEALTH_RATINGS_DEFAULT =
       KbartExporter.showHealthRatingsByDefault;
   public static final PredefinedFieldOrdering FIELD_ORDERING_DEFAULT =
       PredefinedFieldOrdering.KBART;
@@ -131,10 +133,12 @@ public class KbartExportFilter {
   private final FieldOrdering fieldOrdering;
   /** The titles which will be filtered. */  
   private final List<KbartTitle> titles;
-  
+
+  /** Whether to omit the header row. False by default. */
+  private final boolean omitHeaderRow;
   /** Whether to omit empty field columns from the output. False by default. */
   private final boolean omitEmptyFields;
-  /** 
+  /**
    * A set of fields which have no entries in any of the titles. This will 
    * be filled in if omitEmptyFields is true. 
    */
@@ -151,13 +155,12 @@ public class KbartExportFilter {
 
   /**
    * Make an identity filter on the title set. This uses the default KBART 
-   * field set and ordering and does not omit empty fields.
+   * field set and ordering and does not omit empty fields or header.
    * @param titles the titles to be exported
    * @return a filter with pure KBART settings
    */
   public static KbartExportFilter identityFilter(List<KbartTitle> titles) {
     return new KbartExportFilter(titles, PredefinedFieldOrdering.KBART, false, false);
-    //return new KbartExportFilter(titles, PredefinedFieldOrdering.KBART, false);
   }
  
   /**
@@ -177,9 +180,8 @@ public class KbartExportFilter {
    * @return a filter with default settings
    */
   public KbartExportFilter(List<KbartTitle> titles) {
-    this(titles, FIELD_ORDERING_DEFAULT, OMIT_EMPTY_FIELDS_DEFAULT, 
-        SHOW_HEALTH_RATINGS_DEFAULT);
-    //this(titles, FIELD_ORDERING_DEFAULT, OMIT_EMPTY_FIELDS_DEFAULT);
+    this(titles, FIELD_ORDERING_DEFAULT, OMIT_EMPTY_FIELDS_DEFAULT,
+        OMIT_HEADER_ROW_BY_DEFAULT, SHOW_HEALTH_RATINGS_DEFAULT);
   }
   
   /**
@@ -195,8 +197,8 @@ public class KbartExportFilter {
    * @param ordering an ordering to impose on the fields of each title
    */
   public KbartExportFilter(List<KbartTitle> titles, FieldOrdering ordering) {
-    this(titles, ordering, OMIT_EMPTY_FIELDS_DEFAULT, SHOW_HEALTH_RATINGS_DEFAULT);
-    //this(titles, ordering, OMIT_EMPTY_FIELDS_DEFAULT);
+    this(titles, ordering, OMIT_EMPTY_FIELDS_DEFAULT,
+        OMIT_HEADER_ROW_BY_DEFAULT, SHOW_HEALTH_RATINGS_DEFAULT);
   }
 
 
@@ -210,8 +212,8 @@ public class KbartExportFilter {
    * @param omitEmptyFields whether to omit empty field columns from the output
    */
   public KbartExportFilter(List<KbartTitle> titles, FieldOrdering ordering,
-                           boolean omitEmptyFields) {
-    this(titles, ordering, omitEmptyFields, SHOW_HEALTH_RATINGS_DEFAULT);
+                           boolean omitEmptyFields, boolean omitHeader) {
+    this(titles, ordering, omitEmptyFields, omitHeader, SHOW_HEALTH_RATINGS_DEFAULT);
   }
 
   /**
@@ -229,10 +231,12 @@ public class KbartExportFilter {
    * @param omitEmptyFields whether to omit empty field columns from the output
    */
   public KbartExportFilter(List<KbartTitle> titles, FieldOrdering ordering,
-                           boolean omitEmptyFields, boolean showHealthRatings) {
+                           boolean omitEmptyFields, boolean omitHeader,
+                           boolean showHealthRatings) {
     this.titles = titles;
     this.fieldOrdering = ordering;
     this.omitEmptyFields = omitEmptyFields;
+    this.omitHeaderRow = omitHeader;
     this.showHealthRatings = showHealthRatings;
     // Work out the list of empty fields if necessary
     this.emptyFields = omitEmptyFields ? findEmptyFields() : 
@@ -332,13 +336,22 @@ public class KbartExportFilter {
 
   /**
    * Whether this filter is set to omit empty fields.
-   * 
-   * @return whether this filter is set to omit empty fields 
+   *
+   * @return whether this filter is set to omit empty fields
    */
   public boolean isOmitEmptyFields() {
     return omitEmptyFields;
   }
-  
+
+  /**
+   * Whether this filter is set to omit the header.
+   *
+   * @return whether this filter is set to omit the header
+   */
+  public boolean isOmitHeader() {
+    return omitHeaderRow;
+  }
+
   /**
    * Whether this filter is set to show health ratings.
    * 
@@ -682,6 +695,16 @@ public class KbartExportFilter {
     // ISSN only (will have duplicates)
     ISSN_ONLY("ISSN only", "Produce a list of ISSNs",
         new Field[] {PRINT_IDENTIFIER}
+    ),
+
+    // TITLE_ID only - should have an id for every record
+    TITLE_ID_ONLY("Title ID only", "Produce a list of unique identifiers",
+        new Field[] {TITLE_ID}
+    ),
+
+    // SFX fields only
+    SFX("SFX Fields", "Produce a list of fields for SFX DataLoader",
+        new Field[] {TITLE_ID, COVERAGE_NOTES}
     ),
 
     // SFX DataLoader format only requires title_id and coverage_notes

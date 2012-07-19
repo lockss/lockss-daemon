@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.29 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: ProxyAndContent.java,v 1.30 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -440,7 +440,8 @@ public class ProxyAndContent extends LockssServlet {
     frm.add(new Input(Input.Hidden, "isForm", "true"));
 
     ServletUtil.layoutSubmitButton(this, frm, ACTION_TAG,
-				   ACTION_UPDATE_CONTENT_SERVER);
+				   ACTION_UPDATE_CONTENT_SERVER,
+                                   ACTION_UPDATE_CONTENT_SERVER);
     page.add(frm);
 
     // Finish up
@@ -500,7 +501,8 @@ public class ProxyAndContent extends LockssServlet {
     frm.add(tbl);
     frm.add(new Input(Input.Hidden, "isForm", "true"));
     ServletUtil.layoutSubmitButton(this, frm, ACTION_TAG,
-				   ACTION_UPDATE_PROXY_CLIENT);
+				   ACTION_UPDATE_PROXY_CLIENT,
+                                   ACTION_UPDATE_PROXY_CLIENT);
     page.add(frm);
 
     // Finish up

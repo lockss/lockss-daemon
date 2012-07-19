@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.4 2012-02-24 15:39:57 easyonthemayo Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.5 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -59,6 +59,8 @@ import org.lockss.util.NumberUtil;
  */
 public abstract class BibliographicItemAdapter implements BibliographicItem {
 
+  protected String printIsbn = null;
+  protected String eIsbn = null;
   protected String printIssn = null;
   protected String eIssn = null;
   protected String issnL = null;
@@ -77,6 +79,25 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
 
   // Getters (implementing the interface)
 
+  public String getPrintIsbn() {
+    return printIsbn;
+  }
+
+  public String getEisbn() {
+    return eIsbn;
+  }
+
+  public String getIsbn() {
+    String isbn = getEisbn();
+    if (!MetadataUtil.isIsbn(isbn)) {
+      isbn = getPrintIsbn();
+      if (!MetadataUtil.isIsbn(isbn)) {
+        isbn = null;
+      }
+    }
+    return isbn;
+  }
+
   /**
    * Returns a representative ISSN for the bibliographic item. This may be any
    * available ISSN, but the order of preference is ISSN-L, then eISSN, and
@@ -86,10 +107,13 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
    */
   public String getIssn() {
     String theIssn = getIssnL();
-    if (theIssn == null) {
+    if (!MetadataUtil.isIssn(theIssn)) {
       theIssn = getEissn();
-      if (theIssn == null) {
+      if (!MetadataUtil.isIssn(theIssn)) {
         theIssn = getPrintIssn();
+        if (!MetadataUtil.isIssn(theIssn)) {
+          theIssn = null;
+        }
       }
     }
     return theIssn;
@@ -161,6 +185,16 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
 
 
   // Setters (chainable)
+  public BibliographicItemAdapter setPrintIsbn(String printIsbn) {
+    if (MetadataUtil.isIsbn(printIsbn)) this.printIsbn = printIsbn;
+    return this;
+  }
+
+  public BibliographicItemAdapter setEisbn(String eIsbn) {
+    if (MetadataUtil.isIsbn(eIsbn)) this.eIsbn = eIsbn;
+    return this;
+  }
+
   public BibliographicItemAdapter setPrintIssn(String printIssn) {
     if (MetadataUtil.isIssn(printIssn)) this.printIssn = printIssn;
     return this;

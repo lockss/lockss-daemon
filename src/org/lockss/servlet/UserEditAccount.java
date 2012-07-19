@@ -1,5 +1,5 @@
 /*
- * $Id: UserEditAccount.java,v 1.3 2011-02-14 00:09:56 tlipkis Exp $
+ * $Id: UserEditAccount.java,v 1.4 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class UserEditAccount extends EditAccountBase {
     tbl.add(buildUserEditTable(acct));
 
     frm.add(tbl);
-    ServletUtil.layoutSubmitButton(this, frm, ACTION_USER_UPDATE);
+    ServletUtil.layoutSubmitButton(this, frm, ACTION_USER_UPDATE, i18n.tr(ACTION_USER_UPDATE));
     page.add(frm);
     endPage(page);
   }

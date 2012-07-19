@@ -1,5 +1,5 @@
 /*
- * $Id: ExpertConfig.java,v 1.7 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: ExpertConfig.java,v 1.8 2012-07-19 11:54:42 easyonthemayo Exp $
  */
 
 /*
@@ -60,6 +60,7 @@ public class ExpertConfig extends LockssServlet {
   private static final String KEY_TEXT = "expert_text";
 
   public static final String ACTION_UPDATE = "Update";
+  public static final String I18N_ACTION_UPDATE = i18n.tr("Update");
 
   private static final String foot1 =
     "Enter <a href=\"@PARAMDOCURL@\">parameters</a>, one per line, in the form<pre>\n" +
@@ -163,7 +164,7 @@ public class ExpertConfig extends LockssServlet {
 			   KEY_TEXT,
 			   etext));
     spaceRow(table);
-    ServletUtil.layoutSubmitButton(this, table, ACTION_UPDATE);
+    ServletUtil.layoutSubmitButton(this, table, ACTION_UPDATE, I18N_ACTION_UPDATE);
     form.add(table);
     page.add(form);
     if (displayConfig != null) {
