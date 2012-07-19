@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxTokens.java,v 1.2 2012-07-11 23:53:38 thib_gc Exp $
+ * $Id: PdfBoxTokens.java,v 1.3 2012-07-19 04:01:53 thib_gc Exp $
  */
 
 /*
@@ -407,33 +407,12 @@ public class PdfBoxTokens {
   protected static final LRUMap/*<COSName, Token>*/ lruNames = new LRUMap/*<COSName, Token>*/(400);
 
   /**
-   * A convenience constant for the {@link Long} <code>3L</code>.
-   * @since 1.56
-   */
-  private static final Long _THREE_LONG = new Long(3L);
-    
-  /**
-   * A convenience constant for the {@link Long} <code>0L</code>.
-   * @since 1.56
-   */
-  private static final Long _ZERO_LONG = new Long(0L);
-  
-  /**
    * <p>
    * Our PDF adapter singleton.
    * </p>
    * @since 1.56
    */
   private static final PdfTokenFactory adapterInstance = new Adapter();
-  
-  /**
-   * <p>
-   * A converter mapping.
-   * </p>
-   * @since 1.56
-   */
-  private static final Map<Class<?>, Converter> converters =
-      new HashMap<Class<?>, Converter>();
   
   /**
    * <p>
@@ -499,70 +478,72 @@ public class PdfBoxTokens {
    */
   private static final PdfToken ZERO = new Token(COSInteger.ZERO);
 
-  /*
-   * STATIC INITIALIZER
-   * 
-   * Populates the mapping of converters.
+  /**
+   * <p>
+   * A converter mapping.
+   * </p>
+   * @since 1.56
    */
-  static {
-    converters.put(COSArray.class, new Converter() {
-      @Override public PdfToken convert(Object obj) {
-        return makeArray((COSArray)obj);
-      }
-    });
-    converters.put(COSBoolean.class, new Converter() {
-      @Override public PdfToken convert(Object obj) {
-        return makeBoolean((COSBoolean)obj);
-      }
-    });
-    converters.put(COSDictionary.class, new Converter() {
-      @Override public PdfToken convert(Object obj) {
-        return makeDictionary((COSDictionary)obj);
-      }
-    });
-    converters.put(COSFloat.class, new Converter() {
-      @Override public PdfToken convert(Object obj) {
-        return makeFloat((COSFloat)obj);
-      }
-    });
-    converters.put(COSInteger.class, new Converter() {
-      @Override public PdfToken convert(Object obj) {
-        return makeInteger((COSInteger)obj);
-      }
-    });
-    converters.put(COSName.class, new Converter() {
-      @Override public PdfToken convert(Object obj) {
-        return makeName((COSName)obj);
-      }
-    });
-    converters.put(COSNull.class, new Converter() {
-      @Override public PdfToken convert(Object obj) {
-        return makeNull();
-      }
-    });
-    converters.put(PDFOperator.class, new Converter() {
-      @Override public PdfToken convert(Object obj) {
-        return makeOperator((PDFOperator)obj); 
-      }
-    });
-    converters.put(COSString.class, new Converter() {
-      @Override public PdfToken convert(Object obj) {
-        return makeString((COSString)obj);
-      }
-    });
-    converters.put(COSStream.class, new Converter() {
-      @Override public PdfToken convert(Object obj) {
-        logger.debug("Encountered a token of type COSStream");
-        return makeNull();
-      }
-    });
-    converters.put(COSObject.class, new Converter() {
-      @Override public PdfToken convert(Object obj) {
-        logger.debug("Encountered a token of type COSObject");
-        return makeNull();
-      }
-    });
-  }
+  private static final Map<Class<?>, Converter> converters =
+      new HashMap<Class<?>, Converter>() {{
+        put(COSArray.class, new Converter() {
+          @Override public PdfToken convert(Object obj) {
+            return makeArray((COSArray)obj);
+          }
+        });
+        put(COSBoolean.class, new Converter() {
+          @Override public PdfToken convert(Object obj) {
+            return makeBoolean((COSBoolean)obj);
+          }
+        });
+        put(COSDictionary.class, new Converter() {
+          @Override public PdfToken convert(Object obj) {
+            return makeDictionary((COSDictionary)obj);
+          }
+        });
+        put(COSFloat.class, new Converter() {
+          @Override public PdfToken convert(Object obj) {
+            return makeFloat((COSFloat)obj);
+          }
+        });
+        put(COSInteger.class, new Converter() {
+          @Override public PdfToken convert(Object obj) {
+            return makeInteger((COSInteger)obj);
+          }
+        });
+        put(COSName.class, new Converter() {
+          @Override public PdfToken convert(Object obj) {
+            return makeName((COSName)obj);
+          }
+        });
+        put(COSNull.class, new Converter() {
+          @Override public PdfToken convert(Object obj) {
+            return makeNull();
+          }
+        });
+        put(PDFOperator.class, new Converter() {
+          @Override public PdfToken convert(Object obj) {
+            return makeOperator((PDFOperator)obj); 
+          }
+        });
+        put(COSString.class, new Converter() {
+          @Override public PdfToken convert(Object obj) {
+            return makeString((COSString)obj);
+          }
+        });
+        put(COSStream.class, new Converter() {
+          @Override public PdfToken convert(Object obj) {
+            logger.warning("Encountered a token of type COSStream");
+            return makeNull();
+          }
+        });
+        put(COSObject.class, new Converter() {
+          @Override public PdfToken convert(Object obj) {
+            logger.warning("Encountered a token of type COSObject");
+            return makeNull();
+          }
+        });
+      }};
   
   /**
    * <p>
@@ -810,12 +791,12 @@ public class PdfBoxTokens {
    * @return A list of wrapped objects.
    * @since 1.56
    */
-  protected static List<PdfToken> convertList(List<Object> listObj) {
-    List<PdfToken> ret = new ArrayList<PdfToken>(listObj.size());
-    for (Object obj : listObj) {
-      ret.add(convertOne(obj));
-    }
-    return ret;
+  protected static List<PdfToken> convertList(final List<Object> listObj) {
+    return new ArrayList<PdfToken>() {{
+      for (Object obj : listObj) {
+        add(convertOne(obj));
+      }
+    }};
   }
   
   /**
@@ -834,7 +815,7 @@ public class PdfBoxTokens {
     }
     Converter converter = converters.get(obj.getClass());
     if (converter == null) {
-      logger.debug("Encountered a token of unexpected type: " + obj.getClass().getCanonicalName());
+      logger.warning("Encountered a token of unexpected type: " + obj.getClass().getCanonicalName());
       return null; // Controversial
     }
     return converter.convert(obj);
@@ -911,7 +892,7 @@ public class PdfBoxTokens {
     }
     return ret;
   }
-
+  
   /**
    * <p>
    * Converts from a PDF token for which {@link PdfToken#isDictionary()}
@@ -937,7 +918,7 @@ public class PdfBoxTokens {
   protected static float getFloat(COSFloat cosFloat) {
     return cosFloat.floatValue();
   }
-  
+
   /**
    * <p>
    * Converts from a PDF token for which {@link PdfToken#isFloat()}
@@ -950,7 +931,7 @@ public class PdfBoxTokens {
   protected static float getFloat(PdfToken pdfToken) {
     return getFloat(asCOSFloat(pdfToken));
   }
-
+  
   /**
    * <p>
    * Converts from a {@link COSInteger} to a <code>long</code>
@@ -963,7 +944,7 @@ public class PdfBoxTokens {
   protected static long getInteger(COSInteger cosInteger) {
     return cosInteger.longValue();
   }
-
+  
   /**
    * <p>
    * Converts from a PDF token for which {@link PdfToken#isInteger()}
@@ -976,7 +957,7 @@ public class PdfBoxTokens {
   protected static long getInteger(PdfToken pdfToken) {
     return getInteger(asCOSInteger(pdfToken));
   }
-  
+
   /**
    * <p>
    * Converts from a {@link COSName} to a string value.
@@ -988,7 +969,7 @@ public class PdfBoxTokens {
   protected static String getName(COSName cosName) {
     return cosName.getName();
   }
-  
+
   /**
    * <p>
    * Converts from a PDF token for which {@link PdfToken#isName()}
@@ -1001,7 +982,7 @@ public class PdfBoxTokens {
   protected static String getName(PdfToken pdfToken) {
     return getName(asCOSName(pdfToken));
   }
-
+  
   /**
    * <p>
    * Converts from a {@link PDFOperator} to a string value.
@@ -1013,7 +994,7 @@ public class PdfBoxTokens {
   protected static String getOperator(PDFOperator pdfOperator) {
     return pdfOperator.getOperation();
   }
-
+  
   /**
    * <p>
    * Converts from a PDF token for which {@link PdfToken#isOperator()}
@@ -1051,7 +1032,7 @@ public class PdfBoxTokens {
   protected static String getString(PdfToken pdfToken) {
     return getString((COSString)asCOSBase(pdfToken));
   }
-    
+
   /**
    * <p>
    * Determines if an object of an internal type is a PDF array.
@@ -1064,7 +1045,7 @@ public class PdfBoxTokens {
   protected static boolean isArray(Object obj) {
     return (obj instanceof COSArray);
   }
-    
+
   /**
    * <p>
    * Determines if an object of an internal type is a PDF boolean.
@@ -1077,7 +1058,7 @@ public class PdfBoxTokens {
   protected static boolean isBoolean(Object obj) {
     return (obj instanceof COSBoolean);
   }
-
+    
   /**
    * <p>
    * Determines if an object of an internal type is a PDF dictionary.
@@ -1090,7 +1071,7 @@ public class PdfBoxTokens {
   protected static boolean isDictionary(Object obj) {
     return (obj instanceof COSDictionary);
   }
-
+    
   /**
    * <p>
    * Determines if an object of an internal type is a PDF float.
@@ -1103,7 +1084,7 @@ public class PdfBoxTokens {
   protected static boolean isFloat(Object obj) {
     return (obj instanceof COSFloat);
   }
-  
+
   /**
    * <p>
    * Determines if an object of an internal type is a PDF integer.
@@ -1143,7 +1124,7 @@ public class PdfBoxTokens {
   protected static boolean isNull(Object obj) {
     return (obj instanceof COSNull);
   }
-  
+
   /**
    * <p>
    * Determines if an object of an internal type is a PDF oeprator.
@@ -1156,7 +1137,7 @@ public class PdfBoxTokens {
   protected static boolean isOperator(Object obj) {
     return (obj instanceof PDFOperator);
   }
-
+  
   /**
    * <p>
    * Determines if an object of an internal type is a PDF string.
@@ -1169,7 +1150,7 @@ public class PdfBoxTokens {
   protected static boolean isString(Object obj) {
     return (obj instanceof COSString);
   }
-
+  
   /**
    * <p>
    * Convenience method to make an empty PDF array.
@@ -1192,7 +1173,7 @@ public class PdfBoxTokens {
   protected static PdfToken makeArray(COSArray cosArray) {
     return new Token(cosArray);
   }
-  
+
   /**
    * <p>
    * Creates a PDF array from the given list of PDF tokens.
@@ -1232,7 +1213,7 @@ public class PdfBoxTokens {
   protected static PdfToken makeBoolean(COSBoolean cosBoolean) {
     return makeBoolean(getBoolean(cosBoolean));
   }
-  
+
   /**
    * <p>
    * Convenience method to make an empty PDF dictionary.
@@ -1255,7 +1236,7 @@ public class PdfBoxTokens {
   protected static PdfToken makeDictionary(COSDictionary cosDictionary) {
     return new Token(cosDictionary);
   }
-
+  
   /**
    * <p>
    * Creates a PDF array from the given map from strings (PDF names)
@@ -1280,7 +1261,7 @@ public class PdfBoxTokens {
   protected static PdfToken makeFloat(COSFloat cosFloat) {
     return new Token(cosFloat);
   }
-  
+
   /**
    * <p>
    * Creates a PDF float from the given value.
@@ -1302,10 +1283,10 @@ public class PdfBoxTokens {
    * @since 1.56
    */
   protected static PdfToken makeInteger(COSInteger cosInteger) {
-    Long value = new Long(getInteger(cosInteger));
-    if (_ZERO_LONG.compareTo(value) <= 0 && value.compareTo(_THREE_LONG) <= 0) {
-      // 'switch' truncates, but this Long really is 0, 1, 2 or 3
-      switch (value.intValue()) {
+    long value = getInteger(cosInteger);
+    if (0L <= value && value <= 3L) {
+      // 'switch' truncates, but this really is 0, 1, 2 or 3 
+      switch ((int)value) {
         case 0: return ZERO;
         case 1: return ONE;
         case 2: return TWO;
@@ -1335,10 +1316,9 @@ public class PdfBoxTokens {
    * @return A PDF token.
    * @since 1.56
    */
-  protected static PdfToken makeName(COSName cosName) {
+  protected synchronized static PdfToken makeName(COSName cosName) {
     Token ret = (Token)lruNames.get(cosName);
     if (ret == null) {
-      // Not as fussy on uniqueness as cachedOperators/makeOperator()
       ret = new Token(cosName);
       lruNames.put(cosName, ret);
     }
@@ -1380,7 +1360,16 @@ public class PdfBoxTokens {
     Token ret = cachedOperators.get(operator);
     if (ret == null) {
       ret = new Token(operator);
-      if (!(PdfOpcodes.BEGIN_IMAGE_OBJECT.equals(operator) || PdfOpcodes.BEGIN_IMAGE_DATA.equals(operator))) {
+      /*
+       * IMPLEMENTATION NOTE
+       * 
+       * 'BI' and 'ID' operators are never cached by PDFBox because
+       * they contain their own image data, so we should not cache
+       * them either. (PDFBox 1.6.0: PDFOperator.getOperator() line
+       * 63).
+       */
+      if (!(   PdfOpcodes.BEGIN_IMAGE_OBJECT.equals(operator)
+            || PdfOpcodes.BEGIN_IMAGE_DATA.equals(operator))) {
         ret = cachedOperators.putIfAbsent(operator, ret);
       }
     }
@@ -1398,7 +1387,7 @@ public class PdfBoxTokens {
   protected static PdfToken makeOperator(String operator) {
     return makeOperator(asPDFOperator(operator));
   }
-
+  
   /**
    * <p>
    * Wraps a {@link COSString} instance as a PDF token.
@@ -1421,6 +1410,36 @@ public class PdfBoxTokens {
    */
   protected static PdfToken makeString(String value) {
     return makeString(asCOSString(value));
+  }
+
+  /**
+   * <p>
+   * Unwraps a list of PDF tokens (that are really of type
+   * {@link Token}) into a list of the inner objects.
+   * </p>
+   * @param listTokens A list of PDF tokens of type {@link Token}.
+   * @return The list of the objects wrapped in the argument list.
+   * @since 1.56.3
+   */
+  protected static List<Object> unwrapList(final List<PdfToken> listTokens) {
+    return new ArrayList<Object>() {{
+      for (PdfToken tok : listTokens) {
+        add(unwrapOne(tok));
+      }
+    }};
+  }
+  
+  /**
+   * <p>
+   * Unwraps one PDF token (that is really of our type {@link Token})
+   * to reveal its inner object.
+   * </p>
+   * @param pdfToken A PDF token of type {@type Token}.
+   * @return The object wrapped by the argument.
+   * @since 1.56.3
+   */
+  protected static Object unwrapOne(PdfToken pdfToken) {
+    return asToken(pdfToken).token;
   }
   
   /**

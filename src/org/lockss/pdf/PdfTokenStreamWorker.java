@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTokenStreamWorker.java,v 1.4 2012-07-17 23:53:44 thib_gc Exp $
+ * $Id: PdfTokenStreamWorker.java,v 1.5 2012-07-19 04:01:53 thib_gc Exp $
  */
 
 /*
@@ -212,70 +212,69 @@ public abstract class PdfTokenStreamWorker {
   
   /**
    * <p>
-   * A PDF token factory for the token stream being processed.
-   * </p>
-   * @since 1.56.3
-   */
-  protected PdfTokenFactory factory;
-  
-  /**
-   * <p>
-   * The index within {@link #tokens} of the current operator.
-   * </p>
-   * @since 1.56
-   */
-  protected int index;
-  
-  /**
-   * <p>
-   * Convenience variable holding the result of calling
-   * {@link PdfToken#getOperator()} on the current operator.
-   * </p>
-   * @since 1.56
-   */
-  protected String opcode;
-
-  /**
-   * <p>
-   * Zero or more operands for the current operator.
-   * </p>
-   * @since 1.56
-   */
-  protected List<PdfToken> operands;
-  
-  /**
-   * <p>
-   * The current operator.
-   * </p>
-   * @since 1.56
-   */
-  protected PdfToken operator;
-  
-  /**
-   * <p>
-   * The token sequence being operated upon by this worker.
-   * </p>
-   * @since 1.56
-   */
-  protected List<PdfToken> tokens;
-
-  /**
-   * <p>
    * Whether to keep traversing this token stream.
    * </p>
    * @since 1.56
    * @see #stop()
    */
   private boolean continueFlag;
-
+  
   /**
    * <p>
-   * The direction in which the token stream is being traversed.
+   * This worker's direction.
    * </p>
    * @since 1.56
    * @see Direction
    */
-  private Direction direction;
+  private final Direction direction;
+
+  /**
+   * <p>
+   * The current PDF token factory.
+   * </p>
+   * @since 1.56.3
+   */
+  private PdfTokenFactory factory;
+  
+  /**
+   * <p>
+   * The index of the current operator.
+   * </p>
+   * @since 1.56
+   */
+  private int index;
+  
+  /**
+   * <p>
+   * The current opcode.
+   * </p>
+   * @since 1.56
+   */
+  private String opcode;
+
+  /**
+   * <p>
+   * The current operator.
+   * </p>
+   * @since 1.56
+   */
+  private List<PdfToken> operands;
+
+  /**
+   * <p>
+   * The current operator.
+   * </p>
+   * @since 1.56
+   */
+  private PdfToken operator;
+
+  /**
+   * <p>
+   * The current token sequence.
+   * </p>
+   * @since 1.56
+   */
+  private List<PdfToken> tokens;
 
   /**
    * <p>
@@ -302,16 +301,17 @@ public abstract class PdfTokenStreamWorker {
   
   /**
    * <p>
-   * Callback when an operator is encountered. The following protected
-   * variables are accessible to subclasses:
+   * Callback when an operator is encountered. State is
+   * accessible to subclasses via the following methods:
    * </p>
    * <ul>
-   * <li>{@link #factory}</li>
-   * <li>{@link #index}</li>
-   * <li>{@link #opcode}</li>
-   * <li>{@link #operands}</li>
-   * <li>{@link #operator}</li>
-   * <li>{@link #tokens}</li>
+   * <li>{@link #getDirection()}</li>
+   * <li>{@link #getFactory()}</li>
+   * <li>{@link #getIndex()}</li>
+   * <li>{@link #getOpcode()}</li>
+   * <li>{@link #getOperands()}</li>
+   * <li>{@link #getOperator()}</li>
+   * <li>{@link #getTokens()}</li>
    * </ul>
    * @throws PdfException If PDF processing fails.
    */
@@ -327,40 +327,106 @@ public abstract class PdfTokenStreamWorker {
    */
   public void process(PdfTokenStream pdfTokenStream) throws PdfException {
     factory = pdfTokenStream.getTokenFactory();
-    index = -1;
-    opcode = null;
-    operands = new ArrayList<PdfToken>();
-    operator = null;
     tokens = pdfTokenStream.getTokens();
+    index = -1;
+    operator = null;
+    operands = new ArrayList<PdfToken>();
     continueFlag = true;
     setUp();
-    if (direction.equals(Direction.FORWARD)) {
-      processForward(pdfTokenStream);
-    }
-    else {
-      processBackward(pdfTokenStream);
+    switch (getDirection()) {
+      case FORWARD: {
+        processForward(pdfTokenStream);
+      } break;
+      case BACKWARD: {
+        processBackward(pdfTokenStream);
+      } break;
+      default: {
+        throw new IllegalStateException("Illegal direction: " + getDirection());
+      }
     }
   }
   
   /**
    * <p>
-   * Allows subclasses to initialize whatever variables and data
-   * structures are required for processing the current token stream.
+   * Initializes whatever variables and data structures are required
+   * for processing the current token stream. Subclasses that do not
+   * call <code>super.setUp()</code> risk being incorrectly
+   * initialized.
    * </p>
    * @throws PdfException If PDF processing fails.
    */
-  public abstract void setUp() throws PdfException;
+  public void setUp() throws PdfException {
+
+  }
   
+  protected Direction getDirection() {
+    return direction;
+  }
+
+  protected PdfTokenFactory getFactory() {
+    return factory;
+  }
+
   /**
    * <p>
-   * Requests that processing of the token stream end prematurely.
-   * No calls to {@link #operatorCallback()} will be issued unless
-   * {@link #process(PdfTokenStream)} is invoked again.
+   * Gets the index of the operator for which
+   * {@link #operatorCallback()} is being called.
    * </p>
-   * @since 1.56
+   * @return The index of the current operator.
+   * @since 1.56.3
    */
-  public void stop() {
-    continueFlag = false;
+  protected int getIndex() {
+    return index;
+  }
+
+  /**
+   * <p>
+   * Gets the opcode for which {@link #operatorCallback()} is being
+   * called. Equivalent to <code>getOperator().getOperator()</code>.
+   * </p>
+   * @return The current opcode.
+   * @since 1.56.3
+   */
+  protected String getOpcode() {
+    return opcode;
+  }
+
+  /**
+   * <p>
+   * Gets the operands that go with the operator for which
+   * {@link #operatorCallback()} is being called.
+   * </p>
+   * @return The current operator's operands (possibly an empty list).
+   * @since 1.56.3
+   */
+  protected List<PdfToken> getOperands() {
+    return operands;
+  }
+
+  /**
+   * <p>
+   * Gets the operator token for which {@link #operatorCallback()} is
+   * being called.
+   * </p>
+   * @return The current operator.
+   * @since 1.56.3
+   */
+  protected PdfToken getOperator() {
+    return operator;
+  }
+
+  /**
+   * <p>
+   * Gets the internal list of all tokens currently being processed by
+   * {@link #process(PdfTokenStream)}. Altering it is okay if it does
+   * not interfere with the internal loop skipping from operator to
+   * operator, otherwise the behavior of the worker becomes undefined.
+   * </p>
+   * @return The current list of all tokens.
+   * @since 1.56.3
+   */
+  protected List<PdfToken> getTokens() {
+    return tokens;
   }
 
   /**
@@ -387,7 +453,7 @@ public abstract class PdfTokenStreamWorker {
       end = beginMinusOne;
     }
   }
-  
+
   /**
    * <p>
    * Processes a token stream forward.
@@ -409,8 +475,20 @@ public abstract class PdfTokenStreamWorker {
       opcode = operator.getOperator();
       index = end;
       operatorCallback();
-      begin = end;
+      begin = end + 1;
     }
+  }
+
+  /**
+   * <p>
+   * Requests that processing of the token stream end prematurely.
+   * No calls to {@link #operatorCallback()} will be issued unless
+   * {@link #process(PdfTokenStream)} is invoked again.
+   * </p>
+   * @since 1.56
+   */
+  protected void stop() {
+    continueFlag = false;
   }
 
 }

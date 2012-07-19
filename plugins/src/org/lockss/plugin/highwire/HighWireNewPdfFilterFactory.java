@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireNewPdfFilterFactory.java,v 1.3 2012-07-17 23:53:45 thib_gc Exp $
+ * $Id: HighWireNewPdfFilterFactory.java,v 1.4 2012-07-19 04:01:53 thib_gc Exp $
  */
 
 /*
@@ -63,57 +63,57 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
         throws PdfException {
       if (logger.isDebug3()) {
         logger.debug3("ComplexDownloadedFromWorkerTransform: initial: " + state);
-        logger.debug3("ComplexDownloadedFromWorkerTransform: index: " + index);
-        logger.debug3("ComplexDownloadedFromWorkerTransform: operator: " + opcode);
+        logger.debug3("ComplexDownloadedFromWorkerTransform: index: " + getIndex());
+        logger.debug3("ComplexDownloadedFromWorkerTransform: operator: " + getOpcode());
       }
       
       switch (state) {
         
         case 0: {
-          if (PdfOpcodes.END_TEXT_OBJECT.equals(opcode)) { ++state; }
+          if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { ++state; }
           else { stop(); }
         } break;
         
         case 1: {
-          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(opcode)) { stop(); }
-          else if (   PdfOpcodes.SHOW_TEXT.equals(opcode)
-                   && DOWNLOADED_FROM.equals(tokens.get(index - 1).getString())) { ++state; }
+          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { stop(); }
+          else if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+                   && DOWNLOADED_FROM.equals(getTokens().get(getIndex() - 1).getString())) { ++state; }
         } break;
         
         case 2: {
-          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(opcode)) { state = 20; }
-          else if (   PdfOpcodes.SHOW_TEXT.equals(opcode)
-                   && tokens.get(index - 1).getString().matches(URL_REGEX)) { ++state; }
+          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { state = 20; }
+          else if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+                   && getTokens().get(getIndex() - 1).getString().matches(URL_REGEX)) { ++state; }
         } break;
 
         case 3: {
-          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(opcode)) { stop(); }
-          else if (PdfOpcodes.SHOW_TEXT.equals(opcode)) { ++state; }
+          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { stop(); }
+          else if (PdfOpcodes.SHOW_TEXT.equals(getOpcode())) { ++state; }
         } break;
         
         case 4: {
-          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(opcode)) {
+          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) {
             result = true;
             stop();
           }
         } break;
         
         case 20: {
-          if (PdfOpcodes.END_TEXT_OBJECT.equals(opcode)) { ++state; }
+          if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { ++state; }
         } break;
         
         case 21: {
-          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(opcode)) { stop(); }
-          else if (   PdfOpcodes.SHOW_TEXT.equals(opcode)
-                   && tokens.get(index - 1).getString().matches(URL_REGEX)) { ++state; }
+          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) { stop(); }
+          else if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+                   && getTokens().get(getIndex() - 1).getString().matches(URL_REGEX)) { ++state; }
         } break;
 
         case 22: {
-          if (PdfOpcodes.END_TEXT_OBJECT.equals(opcode)) { ++state; }
+          if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { ++state; }
         } break;
         
         case 23: {
-          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(opcode)) {
+          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) {
             result = true;
             stop();
           }
@@ -131,12 +131,13 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
       }
       
       if (result) {
-        tokens.subList(index, tokens.size()).clear();
+        getTokens().subList(getIndex(), getTokens().size()).clear();
       }
     }
     
     @Override
     public void setUp() throws PdfException {
+      super.setUp();
       state = 0;
       result = false;
     }
@@ -146,7 +147,7 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
                           PdfTokenStream pdfTokenStream)
         throws PdfException {
       if (result) {
-        pdfTokenStream.setTokens(tokens);
+        pdfTokenStream.setTokens(getTokens());
       }
     }
     
@@ -172,20 +173,20 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
         throws PdfException {
       if (logger.isDebug3()) {
         logger.debug3("SagePublicationsFrontPageWorker: initial: " + state);
-        logger.debug3("SagePublicationsFrontPageWorker: index: " + index);
-        logger.debug3("SagePublicationsFrontPageWorker: operator: " + opcode);
+        logger.debug3("SagePublicationsFrontPageWorker: index: " + getIndex());
+        logger.debug3("SagePublicationsFrontPageWorker: operator: " + getOpcode());
       }
 
       switch (state) {
         
         case 0: {
-          if (   PdfOpcodes.SHOW_TEXT.equals(opcode)
-              && tokens.get(index - 1).getString().matches(UPDATED_INFORMATION_AND_SERVICES)) { ++state; }
+          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+              && getTokens().get(getIndex() - 1).getString().matches(UPDATED_INFORMATION_AND_SERVICES)) { ++state; }
         } break;
         
         case 1: {
-          if (   PdfOpcodes.SHOW_TEXT.equals(opcode)
-              && tokens.get(index - 1).getString().matches(DOWNLOADED_FROM)) {
+          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+              && getTokens().get(getIndex() - 1).getString().matches(DOWNLOADED_FROM)) {
             result = true;
             stop();
           }
@@ -205,6 +206,7 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
     
     @Override
     public void setUp() throws PdfException {
+      super.setUp();
       result = false;
       state = 0;
     }
@@ -239,42 +241,42 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
         throws PdfException {
       if (logger.isDebug3()) {
         logger.debug3("SagePublicationsFrontPageWorker: initial: " + state);
-        logger.debug3("SagePublicationsFrontPageWorker: index: " + index);
-        logger.debug3("SagePublicationsFrontPageWorker: operator: " + opcode);
+        logger.debug3("SagePublicationsFrontPageWorker: index: " + getIndex());
+        logger.debug3("SagePublicationsFrontPageWorker: operator: " + getOpcode());
       }
       
       switch (state) {
         
         case 0: case 5: {
-          if (   PdfOpcodes.SHOW_TEXT.equals(opcode)
-              && tokens.get(index - 1).getString().matches(URL_REGEX)) { ++state; }
+          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+              && getTokens().get(getIndex() - 1).getString().matches(URL_REGEX)) { ++state; }
         } break;
         
         case 1: {
-          if (   PdfOpcodes.SHOW_TEXT.equals(opcode)
-              && ONLINE_VERSION.equals(tokens.get(index - 1).getString())) { ++state; }
+          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+              && ONLINE_VERSION.equals(getTokens().get(getIndex() - 1).getString())) { ++state; }
         } break;
         
         case 2: {
-          if (   PdfOpcodes.SHOW_TEXT.equals(opcode)
-              && tokens.get(index - 1).getString().matches(PUBLISHED_BY_REGEX)) { ++state; }
+          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+              && getTokens().get(getIndex() - 1).getString().matches(PUBLISHED_BY_REGEX)) { ++state; }
         } break;
         
         case 3: {
-          if (   PdfOpcodes.SHOW_TEXT.equals(opcode)
-              && SAGE_PUBLICATIONS_URL.equals(tokens.get(index - 1).getString())) { ++state; }
+          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+              && SAGE_PUBLICATIONS_URL.equals(getTokens().get(getIndex() - 1).getString())) { ++state; }
         } break;
         
         case 4: {
-          if (   PdfOpcodes.SHOW_TEXT.equals(opcode)
-              && ADDITIONAL_SERVICES.equals(tokens.get(index - 1).getString())) { ++state; }
+          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+              && ADDITIONAL_SERVICES.equals(getTokens().get(getIndex() - 1).getString())) { ++state; }
         } break;
         
         // case 5: see case 0
         
         case 6: {
-          if (   PdfOpcodes.SHOW_TEXT.equals(opcode)
-              && DOWNLOADED_FROM.equals(tokens.get(index - 1).getString())) {
+          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+              && DOWNLOADED_FROM.equals(getTokens().get(getIndex() - 1).getString())) {
             result = true;
             stop();
           }
@@ -295,6 +297,7 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
     
     @Override
     public void setUp() throws PdfException {
+      super.setUp();
       result = false;
       state = 0;
     }
@@ -316,23 +319,24 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
     @Override
     public void operatorCallback()
         throws PdfException {
-      if (   PdfOpcodes.SHOW_TEXT.equals(opcode)
-          && tokens.get(index - 1).getString().startsWith(DOWNLOADED_FROM)) {
+      if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+          && getTokens().get(getIndex() - 1).getString().startsWith(DOWNLOADED_FROM)) {
         result = true;
         stop();
-        tokens.subList(index - 1, index + 1).clear();
+        getTokens().subList(getIndex() - 1, getIndex() + 1).clear();
       }
     }
     
     @Override
     public void setUp() throws PdfException {
+      super.setUp();
       result = false;
     }
     
     @Override
     public void transform(ArchivalUnit au, PdfTokenStream pdfTokenStream) throws PdfException {
       if (result) {
-        pdfTokenStream.setTokens(tokens);
+        pdfTokenStream.setTokens(getTokens());
       }
     }  
     
@@ -348,16 +352,17 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
 
     @Override
     public void operatorCallback() throws PdfException {
-      if (   PdfOpcodes.SHOW_TEXT.equals(operator.getOperator())
-          && tokens.get(index - 1).getString().startsWith(CURRENT_AS_OF)) {
+      if (   PdfOpcodes.SHOW_TEXT.equals(getOperator().getOperator())
+          && getTokens().get(getIndex() - 1).getString().startsWith(CURRENT_AS_OF)) {
         result = true; // but don't stop()
-        tokens.set(index - 1, factory.makeString(CURRENT_AS_OF));
+        getTokens().set(getIndex() - 1, getFactory().makeString(CURRENT_AS_OF));
       }
     }
     
     @Override
     public void setUp() throws PdfException {
-      this.result = false;
+      super.setUp();
+      result = false;
     }
     
     public CurrentAsOfPageWorkerTransform() {
@@ -367,7 +372,7 @@ public class HighWireNewPdfFilterFactory extends ExtractingPdfFilterFactory {
     @Override
     public void transform(ArchivalUnit au, PdfTokenStream pdfTokenStream) throws PdfException {
       if (result) {
-        pdfTokenStream.setTokens(tokens);
+        pdfTokenStream.setTokens(getTokens());
       }
     }
     

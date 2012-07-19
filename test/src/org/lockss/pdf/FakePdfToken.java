@@ -1,5 +1,5 @@
 /*
- * $Id: MappingPdfTokenStreamWorker.java,v 1.2 2012-07-19 04:01:53 thib_gc Exp $
+ * $Id: FakePdfToken.java,v 1.2 2012-07-19 04:01:53 thib_gc Exp $
  */
 
 /*
@@ -34,43 +34,93 @@ package org.lockss.pdf;
 
 import java.util.*;
 
-public abstract class MappingPdfTokenStreamWorker extends PdfTokenStreamWorker {
+import org.lockss.pdf.PdfToken;
 
-  public interface Action {
-    
-    void actionCallback(int index,
-                        PdfToken operator,
-                        List<PdfToken> operands)
-        throws PdfException;
-    
-  }
-  
-  private Action defaultAction;
+public class FakePdfToken implements PdfToken {
 
-  private Map<String, Action> mapping;
-  
-  public MappingPdfTokenStreamWorker() {
-    this.mapping = new HashMap<String, Action>();
-    this.defaultAction = null;
-  }
-  
-  public void addAction(String operator, Action action) {
-    mapping.put(operator, action);
-  }
-  
   @Override
-  public void operatorCallback() throws PdfException {
-    Action action = mapping.get(getOperator().getOperator());
-    if (action == null) {
-      action = defaultAction;
-    }
-    if (action != null) {
-      action.actionCallback(getIndex(), getOperator(), getOperands());
-    }
+  public List<PdfToken> getArray() {
+    return null;
   }
-  
-  public void setDefaultAction(Action defaultAction) {
-    this.defaultAction = defaultAction;
+
+  @Override
+  public boolean getBoolean() {
+    return false;
   }
- 
+
+  @Override
+  public Map<String, PdfToken> getDictionary() {
+    return null;
+  }
+
+  @Override
+  public float getFloat() {
+    return 0.0f;
+  }
+
+  @Override
+  public long getInteger() {
+    return 0L;
+  }
+
+  @Override
+  public String getName() {
+    return null;
+  }
+
+  @Override
+  public String getOperator() {
+    return null;
+  }
+
+  @Override
+  public String getString() {
+    return null;
+  }
+
+  @Override
+  public boolean isArray() {
+    return false;
+  }
+
+  @Override
+  public boolean isBoolean() {
+    return false;
+  }
+
+  @Override
+  public boolean isDictionary() {
+    return false;
+  }
+
+  @Override
+  public boolean isFloat() {
+    return false;
+  }
+
+  @Override
+  public boolean isInteger() {
+    return false;
+  }
+
+  @Override
+  public boolean isName() {
+    return false;
+  }
+
+  @Override
+  public boolean isNull() {
+    return false;
+  }
+
+  @Override
+  public boolean isOperator() {
+    return false;
+  }
+
+  @Override
+  public boolean isString() {
+    return false;
+  }
+
 }

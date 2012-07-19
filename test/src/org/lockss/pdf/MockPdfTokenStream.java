@@ -1,5 +1,5 @@
 /*
- * $Id: MappingPdfTokenStreamWorker.java,v 1.2 2012-07-19 04:01:53 thib_gc Exp $
+ * $Id: MockPdfTokenStream.java,v 1.2 2012-07-19 04:01:53 thib_gc Exp $
  */
 
 /*
@@ -34,43 +34,51 @@ package org.lockss.pdf;
 
 import java.util.*;
 
-public abstract class MappingPdfTokenStreamWorker extends PdfTokenStreamWorker {
+import org.lockss.pdf.*;
 
-  public interface Action {
-    
-    void actionCallback(int index,
-                        PdfToken operator,
-                        List<PdfToken> operands)
-        throws PdfException;
-    
+public class MockPdfTokenStream implements PdfTokenStream {
+
+  /**
+   * <p>
+   * The tokens in this stream -- intentionally public.
+   * </p>
+   */
+  public List<PdfToken> tokens;
+  
+  public MockPdfTokenStream() {
+    this(new ArrayList<PdfToken>());
   }
   
-  private Action defaultAction;
-
-  private Map<String, Action> mapping;
-  
-  public MappingPdfTokenStreamWorker() {
-    this.mapping = new HashMap<String, Action>();
-    this.defaultAction = null;
-  }
-  
-  public void addAction(String operator, Action action) {
-    mapping.put(operator, action);
+  public MockPdfTokenStream(List<PdfToken> tokens) {
+    this.tokens = tokens;
   }
   
   @Override
-  public void operatorCallback() throws PdfException {
-    Action action = mapping.get(getOperator().getOperator());
-    if (action == null) {
-      action = defaultAction;
-    }
-    if (action != null) {
-      action.actionCallback(getIndex(), getOperator(), getOperands());
-    }
+  public PdfPage getPage() {
+    return null;
+  }
+
+  @Override
+  public PdfTokenFactory getTokenFactory() throws PdfException {
+    return new FakePdfTokenFactory();
+  }
+
+  @Override
+  public List<PdfToken> getTokens() throws PdfException {
+    return tokens;
+  }
+
+  @Override
+  public void setTokens(List<PdfToken> newTokens) throws PdfException {
+    tokens = newTokens;
   }
   
-  public void setDefaultAction(Action defaultAction) {
-    this.defaultAction = defaultAction;
+  public void addToken(PdfToken token) {
+    tokens.add(token);
   }
- 
+
+  public void addToken(int index, PdfToken token) {
+    tokens.add(index, token);
+  }
+
 }

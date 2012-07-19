@@ -1,5 +1,5 @@
 /*
- * $Id: ExtractingPdfFilterFactory.java,v 1.2 2012-07-17 02:48:55 thib_gc Exp $
+ * $Id: ExtractingPdfFilterFactory.java,v 1.3 2012-07-19 04:01:53 thib_gc Exp $
  */
 
 /*
@@ -285,21 +285,20 @@ public abstract class ExtractingPdfFilterFactory
       PdfTokenStreamWorker worker = new PdfTokenStreamWorker() {
         @Override public void operatorCallback() throws PdfException {
           // 'Tj', '\'' and '"'
-          if (   PdfOpcodes.SHOW_TEXT.equals(opcode)
-              || PdfOpcodes.NEXT_LINE_SHOW_TEXT.equals(opcode)
-              || PdfOpcodes.SET_SPACING_NEXT_LINE_SHOW_TEXT.equals(opcode)) {
-            outputString(tokens.get(index - 1).getString());
+          if (   PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+              || PdfOpcodes.NEXT_LINE_SHOW_TEXT.equals(getOpcode())
+              || PdfOpcodes.SET_SPACING_NEXT_LINE_SHOW_TEXT.equals(getOpcode())) {
+            outputString(getTokens().get(getIndex() - 1).getString());
           }
           // 'TJ'
-          else if (PdfOpcodes.SHOW_TEXT_GLYPH_POSITIONING.equals(opcode)) {
-            for (PdfToken token : tokens.get(index - 1).getArray()) {
+          else if (PdfOpcodes.SHOW_TEXT_GLYPH_POSITIONING.equals(getOpcode())) {
+            for (PdfToken token : getTokens().get(getIndex() - 1).getArray()) {
               if (token.isString()) {
                 outputString(token.getString());
               }
             }
           }
         }
-        @Override public void setUp() throws PdfException {}
       };
       
       // Apply the worker to every token stream in the page
