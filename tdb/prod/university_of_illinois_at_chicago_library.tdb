@@ -59,12 +59,11 @@
     param[journal_id] = fm
     
     implicit < status ; year ; name ; volume ; param[year] >
-    comment[notReady] = RU3806, RU4149 for vol2010-2011
     
     au < ready ; 1996 ; First Monday Volume 1 ; 1 ; 1996 >
     au < ready ; 1997 ; First Monday Volume 2 ; 2 ; 1997 >
     au < ready ; 1998 ; First Monday Volume 3 ; 3 ; 1998 >
-    au < testing ; 1999 ; First Monday Volume 4 ; 4 ; 1999 >
+    au < testing ; 1999 ; First Monday Volume 4 ; 4 ; 1999 > 
     au < ready ; 2000 ; First Monday Volume 5 ; 5 ; 2000 >
     au < ready ; 2001 ; First Monday Volume 6 ; 6 ; 2001 >
     au < ready ; 2002 ; First Monday Volume 7 ; 7 ; 2002 >
