@@ -5,7 +5,6 @@
   >
   
   attr[contract] = 2009
-  pluginPrefix = org.lockss.plugin.highwire.
   implicit < status ; status2 ; year ; name ; param[volume_name] >
   
   {
@@ -20,7 +19,7 @@
     
     {
     
-      pluginSuffix = ClockssHighWirePlugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
       au < down ; crawling ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
@@ -34,7 +33,7 @@
     
     {
     
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     
       au < manifest ; exists ; 1999 ; AAP Grand Rounds Volume 1 ; 1 >
       au < manifest ; exists ; 1999 ; AAP Grand Rounds Volume 2 ; 2 >
@@ -81,7 +80,7 @@
     
     {
     
-      pluginSuffix = ClockssHighWirePlugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
       au < down ; exists ; 2001 ; AAP News Volume 19 ; 19 >
@@ -95,7 +94,7 @@
     
     {
     
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     
       au < manifest ; exists ; 1985 ; AAP News Volume 1 ; 1 >
       au < manifest ; exists ; 1986 ; AAP News Volume 2 ; 2 >
@@ -146,7 +145,7 @@
 
     {
     
-      pluginSuffix = ClockssHighWirePlugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
       au < down ; crawling ; 2008 ; NeoReviews Volume 9 ; 9 >
@@ -157,7 +156,7 @@
     
     {
     
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     
       au < manifest ; exists ; 2000 ; NeoReviews Volume 1 ; 1 >
       au < manifest ; exists ; 2001 ; NeoReviews Volume 2 ; 2 >
@@ -189,7 +188,7 @@
     
     {
     
-      pluginSuffix = ClockssHighWirePlugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
       au < down ; crawling ; 2008 ; Pediatrics Volume 121 ; 121 >
@@ -203,7 +202,7 @@
     
     {
     
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     
       au < manifest ; exists ; 1948 ; Pediatrics Volume 1 ; 1 >
       au < manifest ; exists ; 1948 ; Pediatrics Volume 2 ; 2 >
@@ -352,7 +351,7 @@
     
     {
     
-      pluginSuffix = ClockssHighWirePlugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
       au < down ; crawling ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
@@ -363,7 +362,7 @@
 
     {
     
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     
       au < manifest ; exists ; 1980 ; Pediatrics in Review Volume 1 ; 1 >
       au < manifest ; exists ; 1981 ; Pediatrics in Review Volume 2 ; 2 >
