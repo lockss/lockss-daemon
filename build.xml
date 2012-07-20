@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.310 2012-07-19 11:54:41 easyonthemayo Exp $
+ $Id: build.xml,v 1.311 2012-07-20 17:31:45 easyonthemayo Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -823,10 +823,10 @@ The target you have selected requires compiling under JDK 1.7.
        </fileset>
     </copy>
     <!-- Generate compiled message bundles for plugins -->
-    <antcall target="i18n-generate-bundles">
+    <!--<antcall target="i18n-generate-bundles">
       <param name="srcdir" value="${plugins.src}"/>
       <param name="clsdir" value="${plugins.classes}"/>
-    </antcall>
+    </antcall>-->
   </target>
 
   <target name="compile-plugins-tests" depends="jar-plugins,jar-tests"
@@ -877,10 +877,10 @@ The target you have selected requires compiling under JDK 1.7.
        </fileset>
     </copy>
     <!-- Generate compiled message bundles for tools -->
-    <antcall target="i18n-generate-bundles">
+    <!--<antcall target="i18n-generate-bundles">
       <param name="srcdir" value="${tools.src}"/>
       <param name="clsdir" value="${tools.classes}"/>
-    </antcall>
+    </antcall>-->
   </target>
 
   <target name="compile-tools-tests" depends="jar-tools,jar-tests"
@@ -2753,10 +2753,13 @@ optionally -Dtests= for tests to be run.
   <!-- ==================================================================== -->
   <!--  Internationalization processing tasks -->
   <!-- ==================================================================== -->
-
+  <!-- Package in which to place i18n messages -->
+  <property name="i18n.bundle.pkg" value="org.lockss.i18n"/>
+  <!-- Basename for i18n bundles in the package -->
+  <property name="i18n.bundle.basename" value="Messages"/>
   <!-- Package and base class name in which to place i18n messages. 
        This must match the basename declared in i18n.properties. -->
-  <property name="i18n.bundle" value="org.lockss.i18n.Messages"/>
+  <property name="i18n.bundle" value="${i18n.bundle.pkg}.${i18n.bundle.basename}"/>
   <!-- Directory with translated message files -->
   <property name="i18n.dir" value="i18n"/>
   <!-- Name of the default pot file in each module -->
@@ -2878,10 +2881,12 @@ optionally -Dtests= for tests to be run.
       <map from="${basedir}" to="."/>
       <path location="${clsdir}"/>
     </pathconvert>
-    <!-- If the pot file exists, generate the default resource bundle first  -->
     <echo message="Generating i18n message bundles in ${srcdir}" />
     <property name="local.po.dir" value="${relsrcdir}/${i18n.dir}"/>
     <property name="local.pot.file" value="${local.po.dir}/${i18n.default.pot.file}"/>
+    <!-- Check for existence of msgfmt (using version arg) and fail otherwise -->
+    <exec executable="msgfmt" failifexecutionfails="true"><arg value="-V"/></exec>
+    <!-- If the pot file exists, generate the default resource bundle first  -->
     <if>
       <available file="${local.pot.file}"/>
       <then>
@@ -2894,14 +2899,27 @@ optionally -Dtests= for tests to be run.
                       poDirectory="${local.po.dir}" outputDirectory="${relclsdir}"/>
       </then>
     </if>
+    <!-- Check if bundles were created; if not, the build must fail or there will be runtime errors -->
+    <propertyregex property="i18n.bundle.dir"
+                   input="${i18n.bundle.pkg}"
+                   regexp="\."
+                   replace="${file.separator}"
+                   global="true"/>
+    <property name="i18n.bundle.clsdir" value="${relclsdir}${file.separator}${i18n.bundle.dir}"/>
+    <echo>Checking ${i18n.bundle.clsdir}</echo>
+    <if>
+      <not><available file="${i18n.bundle.clsdir}"/></not>
+      <then>
+        <fail>There are no resource bundles at ${i18n.bundle.clsdir}. Make sure you have gettext installed on your system.</fail>
+      </then>
+    </if>
   </target>
 
 
 
   <!-- ==================================================================== -->  
   <!-- Perform full i18n process - extraction, merge, bundle. -->
-  <target name="i18n-build-all" description="Perform the whole i18n message bundle generation process,
-                                             that is extract, merge, generate/compile bundles.">
+  <target name="i18n-build-all" description="Perform the whole i18n message bundle generation process (extract, merge, generate/compile bundles).">
     <antcall target="i18n-extract-messages-all"/>
     <antcall target="i18n-merge-messages-all"/>
     <antcall target="i18n-generate-bundles-all"/>
