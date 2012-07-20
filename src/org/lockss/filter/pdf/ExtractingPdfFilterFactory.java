@@ -1,5 +1,5 @@
 /*
- * $Id: ExtractingPdfFilterFactory.java,v 1.1.2.2 2012-07-19 04:01:00 thib_gc Exp $
+ * $Id: ExtractingPdfFilterFactory.java,v 1.1.2.3 2012-07-20 01:01:37 thib_gc Exp $
  */
 
 /*
@@ -263,6 +263,15 @@ public abstract class ExtractingPdfFilterFactory
       return STRING_CHARSET;
     }
     
+    public void outputByteStream(InputStream is) throws PdfException {
+      try {
+        StreamUtil.copy(is, os);
+      }
+      catch (IOException ioe) {
+        throw new PdfException(ioe);
+      }
+    }
+    
     public void outputString(String string) throws PdfException {
       try {
         if (string != null) {
@@ -308,12 +317,7 @@ public abstract class ExtractingPdfFilterFactory
       
       // Now output all byte streams in the page wholesale
       for (InputStream byteStream : pdfPage.getAllByteStreams()) {
-        try {
-          StreamUtil.copy(byteStream, os);
-        }
-        catch (IOException ioe) {
-          throw new PdfException(ioe);
-        }
+        outputByteStream(byteStream);
       }
     }
 
