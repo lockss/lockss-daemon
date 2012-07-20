@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.242 2012-07-18 18:12:40 barry409 Exp $
+ * $Id: PollManager.java,v 1.243 2012-07-20 17:43:24 barry409 Exp $
  */
 
 /*
@@ -2093,7 +2093,6 @@ public class PollManager
   /**
    * <p>PollManagerEntry: </p>
    * <p>Description: Class to represent the data store in the polls table.
-   * Only used by V1 polls.</p>
    * @version 1.0
    */
 
