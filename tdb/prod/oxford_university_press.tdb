@@ -1963,7 +1963,7 @@
     comment[doNotProcess] = This section is under construction -- do not process
     attr[title_url] = http://www.clockss.org/clockss/Brief_Treatment_and_Crisis_Intervention
 
-    implicit < status ; year ; name ; param[volume] ; proxy >
+    implicit < status ; year ; name ; param[volume_name] ; proxy >
 
     au < testing ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 ; reingest.lockss.org:80 >
     au < testing ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 ; reingest.lockss.org:80 >
