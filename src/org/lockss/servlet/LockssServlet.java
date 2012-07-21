@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.127 2012-07-21 19:25:41 easyonthemayo Exp $
+ * $Id: LockssServlet.java,v 1.128 2012-07-21 21:12:44 easyonthemayo Exp $
  */
 
 /*
@@ -55,8 +55,8 @@ import org.lockss.account.*;
 import org.lockss.protocol.*;
 import org.lockss.jetty.*;
 import org.lockss.util.*;
+
 import org.xnap.commons.i18n.I18n;
-import org.xnap.commons.i18n.I18nFactory;
 
 /** Abstract base class for LOCKSS servlets
  */
@@ -66,28 +66,9 @@ public abstract class LockssServlet extends HttpServlet
   implements SingleThreadModel {
   protected static Logger log = Logger.getLogger("LockssServlet");
 
-  // XXX This will move to a util class 
-  /** Get a gettext-commons i18n object usable by all servlets. The object is
+  /** A gettext-commons I18n object usable by all servlets. The object is
    * cached per-package (internally to the gettext-commons library). */
-  protected static I18n i18n;
-  private static String defaultBundle = "DefaultBundle";
-  static {
-    try {
-      i18n = I18nFactory.getI18n(LockssServlet.class);
-    } catch (MissingResourceException ex) {
-      log.error("Cannot initialize i18n for LockssServlet", ex);
-      // Try again, specifying the default bundle
-      try {
-        i18n = I18nFactory.getI18n(LockssServlet.class, defaultBundle);
-        log.warning("i18n is disabled: using "+defaultBundle);
-      } catch (MissingResourceException e) {
-        log.critical("Cannot initialize "+defaultBundle+" for LockssServlet", e);
-        i18n = null;
-        // This shouldn't happen if the DefaultBundle is incorporated into the 
-        // build. Is the omission a serious enough build error to stop the daemon?
-      }
-    }
-  }
+  protected static I18n i18n = I18nUtil.getI18n(LockssServlet.class);
 
   // Constants
   static final String PARAM_LOCAL_IP = Configuration.PREFIX + "localIPAddress";
