@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.311 2012-07-20 17:31:45 easyonthemayo Exp $
+ $Id: build.xml,v 1.312 2012-07-21 19:25:41 easyonthemayo Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -770,7 +770,8 @@ The target you have selected requires compiling under JDK 1.7.
           <include name="**/*.props"/>
           <include name="**/*.keystore"/>
           <include name="commons-logging.properties"/>
-          <include name="i18n.properties"/>
+          <include name="i18n.properties"/> <!-- gettext-commons config -->
+          <include name="DefaultBundle.properties"/> <!-- default resource bundle -->
           <include name="org/lockss/htdocs/**/*"/>
 	  <include name="**/urlrewriter.js"/> <!-- IA/WERA javascript -->
        </fileset>
@@ -822,11 +823,6 @@ The target you have selected requires compiling under JDK 1.7.
           <include name="**/*.xml"/>   <!-- Definable plugins -->
        </fileset>
     </copy>
-    <!-- Generate compiled message bundles for plugins -->
-    <!--<antcall target="i18n-generate-bundles">
-      <param name="srcdir" value="${plugins.src}"/>
-      <param name="clsdir" value="${plugins.classes}"/>
-    </antcall>-->
   </target>
 
   <target name="compile-plugins-tests" depends="jar-plugins,jar-tests"
@@ -876,11 +872,6 @@ The target you have selected requires compiling under JDK 1.7.
           <include name="**/images/*"/>
        </fileset>
     </copy>
-    <!-- Generate compiled message bundles for tools -->
-    <!--<antcall target="i18n-generate-bundles">
-      <param name="srcdir" value="${tools.src}"/>
-      <param name="clsdir" value="${tools.classes}"/>
-    </antcall>-->
   </target>
 
   <target name="compile-tools-tests" depends="jar-tools,jar-tests"
@@ -2593,6 +2584,36 @@ Test results in ${test.results}
   <target name="check.contrib"
    depends="prepare.contrib,load.ant-contrib" />
 
+  <target name="check.gettext" depends="load.gettext"/>
+
+  <!-- Load the Ant gettext tasks -->
+  <target name="load.gettext" depends="check.contrib" unless="gettext.loaded">
+    <!-- Check for existence of gettext program msgfmt -->
+    <trycatch>
+      <try>
+        <exec executable="msgfmt" failifexecutionfails="true">
+          <arg value="-V"/> <!-- Just get version -->
+        </exec>
+        <!-- Set a flag if gettext is available -->
+        <property name="gettext.available" value="true"/>
+      </try>
+      <catch>
+        <echo message="gettext is not available, continuing without i18n"/>
+      </catch>
+    </trycatch>
+    
+    <!-- Load gettext-commons tasks -->
+    <taskdef name="gettext-extract" classpath="${gettext.tasks.jar}"
+             classname="org.xnap.commons.ant.gettext.GettextExtractKeysTask" />
+    <taskdef name="gettext-merge" classpath="${gettext.tasks.jar}"
+             classname="org.xnap.commons.ant.gettext.GettextMergeKeysTask"/>
+    <taskdef name="gettext-generate-default" classpath="${gettext.tasks.jar}"
+             classname="org.xnap.commons.ant.gettext.GenerateDefaultBundleTask"/>
+    <taskdef name="gettext-dist" classpath="${gettext.tasks.jar}"
+           classname="org.xnap.commons.ant.gettext.GettextDistTask"/>
+    <property name="gettext.loaded" value="true" />
+  </target>
+  
   <target name="load.ant-contrib" unless="ant-contrib.loaded" >
    <!--  Non-standard tasks -->
    <taskdef resource="${ant-contrib.resource}">
@@ -2773,7 +2794,8 @@ optionally -Dtests= for tests to be run.
   <!-- ==================================================================== -->
   <!-- Extract message keys from the source code of a single module. 
        Takes a single srcdir argument. -->
-  <target name="i18n-extract-messages" depends="check.contrib"
+  <target name="i18n-extract-messages" 
+          depends="check.gettext,check.contrib" if="gettext.available"
           description="Extract message keys from the source code of a single module">
     <fail unless="srcdir">Must specify srcdir with -Dsrcdir=dir</fail>
     <echo message="Extracting i18n messages from ${srcdir}"/>
@@ -2788,9 +2810,7 @@ optionally -Dtests= for tests to be run.
       <available file="${local.po.dir}"/>
       <then>
         <echo message="Extracting messages in ${local.po.dir}"/>
-        <!-- Load the task definition and run message extraction -->
-        <taskdef name="gettext-extract" classname="org.xnap.commons.ant.gettext.GettextExtractKeysTask" classpath="${gettext.tasks.jar}"/>
-        <taskdef name="gettext-merge" classname="org.xnap.commons.ant.gettext.GettextMergeKeysTask" classpath="${gettext.tasks.jar}"/>
+        <!-- Run message extraction -->
         <gettext-extract keysFile="${i18n.default.pot.file}" poDirectory="${local.po.dir}">
           <fileset dir="${relsrcdir}" includes="**/*.java"/>
         </gettext-extract>
@@ -2803,7 +2823,8 @@ optionally -Dtests= for tests to be run.
 
   <!-- ==================================================================== -->
   <!-- Merge newly extracted messages into existing po files -->
-  <target name="i18n-merge-messages" depends="check.contrib"
+  <target name="i18n-merge-messages" 
+          depends="check.gettext,check.contrib" if="gettext.available"
           description="Merge newly extracted messages into existing po files">
     <fail unless="srcdir">Must specify srcdir with -Dsrcdir=dir</fail>
     <!-- We have to convert the paths to relative paths as gettext tasks seem to assume they are relative. -->
@@ -2818,7 +2839,6 @@ optionally -Dtests= for tests to be run.
       <available file="${local.po.dir}"/>
       <then>
         <echo message="Merging new i18n messages into po files in ${srcdir}" />
-        <taskdef name="gettext-merge" classname="org.xnap.commons.ant.gettext.GettextMergeKeysTask" classpath="${gettext.tasks.jar}"/>
         <!-- Merge the default extracted messages  -->
         <if>
           <available file="${local.po.dir}/${i18n.default.pot.file}"/>
@@ -2837,7 +2857,8 @@ optionally -Dtests= for tests to be run.
        Alternatively we could write a task to use gettext's msgcat -->
   <!-- ==================================================================== -->
   <!-- Merge manual messages into existing po files -->
-  <target name="i18n-merge-messages-manual" depends="check.contrib"
+  <target name="i18n-merge-messages-manual" 
+          depends="check.gettext,check.contrib" if="gettext.available"
           description="Merge manual messages into po files">
     <fail unless="srcdir">Must specify srcdir with -Dsrcdir=dir</fail>
     <!-- We have to convert the paths to relative paths as gettext tasks seem to assume they are relative. -->
@@ -2845,14 +2866,12 @@ optionally -Dtests= for tests to be run.
       <map from="${basedir}" to="."/>
       <path location="${srcdir}"/>
     </pathconvert>
-    <!-- Merge manual messages -->
     <!-- If the pot dir exists, merge the messages -->
     <property name="local.po.dir" value="${relsrcdir}/${i18n.dir}"/>
     <if>
       <available file="${local.po.dir}"/>
       <then>
         <echo message="Merging manual i18n messages into po files in ${srcdir}" />
-        <taskdef name="gettext-merge" classname="org.xnap.commons.ant.gettext.GettextMergeKeysTask" classpath="${gettext.tasks.jar}"/>
         <if>
           <available file="${local.po.dir}/${i18n.manual.pot.file}"/>
           <then>
@@ -2869,7 +2888,8 @@ optionally -Dtests= for tests to be run.
        This is an essential part of the compile process and is called by
        the compile targets of each module. The target is hidden by having 
        no description, as it is not intended for manual use. -->
-  <target name="i18n-generate-bundles" depends="check.contrib">
+  <target name="i18n-generate-bundles" 
+          depends="check.gettext,check.contrib" if="gettext.available">
     <fail unless="srcdir">Must specify srcdir with -Dsrcdir=dir</fail>
     <fail unless="clsdir">Must specify clsdir with -Dclsdir=dir</fail>
     <!-- We have to convert the paths to relative paths as gettext tasks seem to assume they are relative. -->
@@ -2884,33 +2904,16 @@ optionally -Dtests= for tests to be run.
     <echo message="Generating i18n message bundles in ${srcdir}" />
     <property name="local.po.dir" value="${relsrcdir}/${i18n.dir}"/>
     <property name="local.pot.file" value="${local.po.dir}/${i18n.default.pot.file}"/>
-    <!-- Check for existence of msgfmt (using version arg) and fail otherwise -->
-    <exec executable="msgfmt" failifexecutionfails="true"><arg value="-V"/></exec>
     <!-- If the pot file exists, generate the default resource bundle first  -->
     <if>
       <available file="${local.pot.file}"/>
       <then>
         <echo message="Generating bundle from ${local.pot.file}"/>
-        <taskdef name="gettext-generate-default" classname="org.xnap.commons.ant.gettext.GenerateDefaultBundleTask" classpath="${gettext.tasks.jar}"/>
         <gettext-generate-default targetBundle="${i18n.bundle}" outputDirectory="${relclsdir}" potfile="${local.pot.file}"/>
         <!-- Generate the other language bundles -->
         <taskdef name="gettext-dist" classname="org.xnap.commons.ant.gettext.GettextDistTask" classpath="${gettext.tasks.jar}"/>
         <gettext-dist targetBundle="${i18n.bundle}" percentage="${i18n.translation.threshold}"
                       poDirectory="${local.po.dir}" outputDirectory="${relclsdir}"/>
-      </then>
-    </if>
-    <!-- Check if bundles were created; if not, the build must fail or there will be runtime errors -->
-    <propertyregex property="i18n.bundle.dir"
-                   input="${i18n.bundle.pkg}"
-                   regexp="\."
-                   replace="${file.separator}"
-                   global="true"/>
-    <property name="i18n.bundle.clsdir" value="${relclsdir}${file.separator}${i18n.bundle.dir}"/>
-    <echo>Checking ${i18n.bundle.clsdir}</echo>
-    <if>
-      <not><available file="${i18n.bundle.clsdir}"/></not>
-      <then>
-        <fail>There are no resource bundles at ${i18n.bundle.clsdir}. Make sure you have gettext installed on your system.</fail>
       </then>
     </if>
   </target>
@@ -2919,7 +2922,9 @@ optionally -Dtests= for tests to be run.
 
   <!-- ==================================================================== -->  
   <!-- Perform full i18n process - extraction, merge, bundle. -->
-  <target name="i18n-build-all" description="Perform the whole i18n message bundle generation process (extract, merge, generate/compile bundles).">
+  <target name="i18n-build-all" 
+          depends="check.gettext" if="gettext.available"
+          description="Perform the whole i18n message bundle generation process (extract, merge, generate/compile bundles).">
     <antcall target="i18n-extract-messages-all"/>
     <antcall target="i18n-merge-messages-all"/>
     <antcall target="i18n-generate-bundles-all"/>
@@ -2927,42 +2932,34 @@ optionally -Dtests= for tests to be run.
 
   <!-- ==================================================================== -->
   <!-- Extract message keys from the source code for all modules. -->
-  <target name="i18n-extract-messages-all" description="Extract message keys from the source code">
+  <target name="i18n-extract-messages-all" 
+          depends="check.gettext" if="gettext.available"
+          description="Extract message keys from the source code">
     <echo message="Extracting i18n messages for all modules"/>
     <antcall target="i18n-extract-messages">
       <param name="srcdir" value="${src}"/>
     </antcall>
-    <!-- At some point we might extract plugin messages to individual language files in each plugin dir  -->
-    <!--<antcall target="i18n-extract-messages">
-      <param name="srcdir" value="${plugins.src}"/>
-    </antcall>-->
   </target>
 
   <!-- ==================================================================== -->
   <!-- Extract message keys from the source code for all modules. -->
-  <target name="i18n-merge-messages-all" description="Merge messages into existing po files">
+  <target name="i18n-merge-messages-all" 
+          depends="check.gettext" if="gettext.available"
+          description="Merge messages into existing po files">
     <antcall target="i18n-merge-messages">
       <param name="srcdir" value="${src}"/>
     </antcall>
-    <!-- At some point we might merge plugin messages into language files for each plugin dir  -->
-    <!--<antcall target="i18n-merge-messages">
-      <param name="srcdir" value="${plugins.src}"/>
-    </antcall>-->
   </target>
 
   <!-- ==================================================================== -->
-  <!-- Generate resource bundles for all modules. -->
-  <target name="i18n-generate-bundles-all" depends="check.contrib"
-          description="Generate compiled resource bundles">
+  <!-- Generate resource bundles for all modules. Hidden; requires classes 
+       dir and should only be called as part of a compile/jar process. -->
+  <target name="i18n-generate-bundles-all" 
+          depends="check.gettext" if="gettext.available">
     <antcall target="i18n-generate-bundles">
       <param name="srcdir" value="${src}"/>
       <param name="clsdir" value="${classes}"/>
     </antcall>
-    <!-- At some point we might extract generate a bundle per plugin  -->
-    <!--<antcall target="i18n-generate-bundles">
-      <param name="srcdir" value="${plugins.src}"/>
-      <param name="clsdir" value="${plugins.classes}"/>
-    </antcall>-->
   </target>
 
 </project>
