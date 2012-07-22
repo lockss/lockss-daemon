@@ -80,10 +80,13 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
     protected ArticleFiles processFullText(CachedUrl cu, Matcher mat) {
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(cu);
+      log.debug3("setting role FullTextCu: " + cu.getUrl());
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
+      log.debug3("setting ROLE_FULL_TEXT_PDF: " + cu.getUrl());
       
+      log.debug3("target: " + spec.getTarget().getPurpose());
       if(spec.getTarget() != MetadataTarget.Article)
-		guessAdditionalFiles(af, mat);
+	guessAdditionalFiles(af, mat);
       
       return af;
     }
@@ -91,14 +94,23 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
     protected void guessAdditionalFiles(ArticleFiles af, Matcher mat) {
       CachedUrl metadataCu = au.makeCachedUrl(mat.replaceFirst("$1$3.xml.Meta"));
       CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1$3.xml"));
-	  System.out.println(metadataCu.getUrl());
 
       if (metadataCu != null && metadataCu.hasContent()) {
     	  af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, metadataCu);
-    	  System.out.println(metadataCu.getUrl());
+    	  log.debug3("setting ROLE_ARTICLE_METADATA: " + metadataCu.getUrl());
+      } else if (metadataCu != null) {
+        log.debug3("not setting ROLE_ARTICLE_METADATA -- no content: " + metadataCu.getUrl());
+      } else {
+        log.debug3("not setting ROLE_ARTICLE_METADATA -- no matching Cu");
       }
-      if (xmlCu != null && xmlCu.hasContent())
+      if (xmlCu != null && xmlCu.hasContent()) {
     	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, xmlCu);
+          log.debug3("setting ROLE_FULL_TEXT_HTML: " + metadataCu.getUrl());
+      } else if (metadataCu != null) {
+        log.debug3("not setting ROLE_FULL_TEXT_HTML -- no content: " + xmlCu.getUrl());
+      } else {
+        log.debug3("not setting ROLE_FULL_TEXT_HTML -- no matching Cu");
+      }
     }
   }
   
