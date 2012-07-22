@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.56 2012-06-25 07:34:21 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.57 2012-07-22 16:17:31 pgust Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo.ResolvedTo;
+import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseUrlCacher;
 import org.lockss.proxy.ProxyManager;
@@ -378,8 +379,8 @@ public class ServeContent extends LockssServlet {
       	}
       }
       
-      url = resolved.resolvedUrl;
-      if (resolved.resolvedTo != ResolvedTo.NONE) {
+      url = resolved.getResolvedUrl();
+      if (resolved.getResolvedTo() != ResolvedTo.NONE) {
         handleOpenUrlInfo(resolved);
         return;
       } 
@@ -481,7 +482,7 @@ public class ServeContent extends LockssServlet {
    * @throws IOException if an IO error happens
    */
   protected void handleOpenUrlInfo(OpenUrlInfo info) throws IOException {
-    log.debug2("resolvedTo: " + info.resolvedTo + " url: " + url);
+    log.debug2("resolvedTo: " + info.getResolvedTo() + " url: " + url);
     try {
       // Get the CachedUrl for the URL, only if it has content.
       if (au != null) {
@@ -1093,6 +1094,14 @@ public class ServeContent extends LockssServlet {
       return missingFileAction;
     }
   }
+  
+  // format used for a row label cell (e.g. Publisher:).
+  static final private String labelfmt = 
+      "style=\"font-weight:bold; padding-right:20px;\"";
+
+  // format used for a row
+  static final private String rowfmt = "valign=\"top\"";
+  
 
   /**
    * Handler for missing OpenURL requests displays synthetic TOC
@@ -1111,7 +1120,7 @@ public class ServeContent extends LockssServlet {
     switch (missingFileAction) {
       case Error_404:
         resp.sendError(HttpServletResponse.SC_NOT_FOUND,
-                     info.resolvedUrl + " is not preserved on this LOCKSS box");
+                     info.getResolvedUrl() + " is not preserved on this LOCKSS box");
         logAccess("not present, 404");
         return;
       case Redirect:
@@ -1128,61 +1137,192 @@ public class ServeContent extends LockssServlet {
     
     // build block with message specific to resolved-to level
     Block block = new Block(Block.Center);
-    if (info.resolvedTo == ResolvedTo.PUBLISHER) {
+    ResolvedTo resolvedTo = info.getResolvedTo();
+    BibliographicItem bibliographicItem = info.getBibliographicItem();
+    
+    if (resolvedTo == ResolvedTo.PUBLISHER) {
       // display publisher page
-      block.add("<p>Found publisher page ");
-      block.add("that is not preserved  on this LOCKSS box. ");
+      if (bibliographicItem == null) {
+        block.add("<h2>Found requested publisher</h2>");
+      } else {
+        block.add("<h2>");
+        block.add(bibliographicItem.getPublisherName());
+        block.add("</h2>");
+      }
+      
+      Table table = new Table(0, "");
+      addLink(table, 
+              "Additional publisher information available at the publisher.");
+      block.add(table);
+      block.add("<br/><br/>");
+
       logAccess("404 to publisher page");
-    } else if (info.resolvedTo == ResolvedTo.TITLE) {
+
+    } else if (resolvedTo == ResolvedTo.TITLE) {
       // display title page
-      block.add("<p>Found title page ");
-      block.add("that is not preserved  on this LOCKSS box. ");
+      Table table = new Table(0, "");
+      if (bibliographicItem == null) {
+        block.add("<h2>Found requested title</h2>");
+      } else {
+        block.add("<h2>");
+        block.add(bibliographicItem.getJournalTitle());
+        block.add("</h2>"); 
+        
+        addPublisher(table, bibliographicItem);
+        addIsbnOrIssn(table, bibliographicItem);
+      }
+      
+      addLink(table,"Additional title information available at the publisher.");
+      block.add(table);
+      block.add("<br/><br/>");
+
       logAccess("404 title page");
-    } else if (info.resolvedTo == ResolvedTo.VOLUME) {
+
+    } else if (resolvedTo == ResolvedTo.VOLUME) {
       // display volume page
-      block.add("<p>Found volume page ");
-      block.add("that is not preserved  on this LOCKSS box. ");
+      Table table = new Table(0, "");
+      if (bibliographicItem == null) {
+        block.add("<h2>Found requested volume</h2>");
+      } else {
+        block.add("<h2>");
+        block.add(bibliographicItem.getName());
+        block.add("</h2>");
+
+        addPublisher(table, bibliographicItem);
+        addIsbnOrIssn(table, bibliographicItem);
+        addVolumeAndYear(table, bibliographicItem);
+      }
+        
+      addLink(table, "Volume is available at the publisher.");
+
+      block.add(table);
+      block.add("<br/><br/>");
+
+      // display volume page
       logAccess("404 volume page");
-    } else if (info.resolvedTo == ResolvedTo.ISSUE) {
+    
+    } else if (resolvedTo == ResolvedTo.ISSUE) {
       // display issue page
-      block.add("<p>Found issue page ");
-      block.add("that is not preserved  on this LOCKSS box. ");
+      Table table = new Table(0, "");
+      if (bibliographicItem == null) {
+        block.add("<h2>Found requested issue</h2>");
+      } else {
+        block.add("<h2>");
+        block.add(bibliographicItem.getName());
+        block.add("</h2>");
+        
+        addPublisher(table, bibliographicItem);
+        addIsbnOrIssn(table, bibliographicItem);
+        addVolumeAndYear(table, bibliographicItem);
+        
+        String issue = bibliographicItem.getIssue();
+        if (issue != null) {
+          table.newRow(rowfmt);
+          table.newCell(labelfmt);
+          table.add("<b>Issue:</b>");
+          table.newCell();
+          table.add(issue);
+        }
+      }
+        
+      addLink(table, "Issue is available at the publisher.");
+      block.add(table);
+      block.add("<br/><br/>");
+
       logAccess("404 issue page");
-    } else if (info.resolvedTo == ResolvedTo.CHAPTER) {
+
+    } else if (resolvedTo == ResolvedTo.CHAPTER) {
       // display chapter page
-      block.add("<p>Found chapter ");
-      block.add("that is not preserved  on this LOCKSS box. ");
+      Table table = new Table(0, "");
+      if (bibliographicItem == null) {
+        block.add("<h2>Found requested chapter</h2>");
+      } else {
+        block.add("<h2>");
+        block.add(bibliographicItem.getName());
+        block.add("</h2>");
+        
+        addPublisher(table, bibliographicItem);
+        addIsbnOrIssn(table, bibliographicItem);
+        addVolumeAndYear(table, bibliographicItem);
+
+        String chapter = bibliographicItem.getIssue();
+        if (chapter != null) {
+          table.newRow(rowfmt);
+          table.newCell(labelfmt);
+          table.add("Chapter:");
+          table.newCell();
+          table.add(chapter);
+        }
+      }
+        
+      addLink(table, "Chapter is available at the publisher.");
+
+      block.add(table);
+      block.add("<br/><br/>");
+
       logAccess("404 chapter page");
-    } else if (info.resolvedTo == ResolvedTo.ARTICLE) {
+
+    } else if (resolvedTo == ResolvedTo.ARTICLE) {
       // display article page
-      block.add("<p>Found article ");
-      block.add("that is not preserved  on this LOCKSS box. ");
+      Table table = new Table(0, "");
+      if (bibliographicItem == null) {
+        block.add("<h2>Found requested article</h2>");
+
+      } else {
+        block.add("<h2>");
+        block.add(bibliographicItem.getName());
+        block.add("</h2>");
+        
+        addPublisher(table, bibliographicItem);
+        addIsbnOrIssn(table, bibliographicItem);
+        addVolumeAndYear(table, bibliographicItem);
+        
+        String issue = bibliographicItem.getIssue();
+        if (issue != null) {
+          table.newRow(rowfmt);
+          table.newCell(labelfmt);
+          table.add("Issue:");
+          table.newCell();
+          table.add(issue);
+        }
+      }
+
+      addLink(table, "Article is available at the publisher.");
+
+      block.add(table);
+      block.add("<br/><br/>");
+
       logAccess("404 article page");
+
     } else {
       // display other page for ResolvedTo.OTHER
-      block.add("<p>Found page ");
-      block.add("that is not preserved  on this LOCKSS box. ");
+      block.add("<h2>Found requested page</h2>");
+
+      Table table = new Table(0, "");
+      addLink(table, "Article is available at the publisher.");
+      block.add(table);
+      block.add("<br/><br/>");
+
       logAccess("404 other page");
     }
     
-    // add detail message
-    block.add("Select link");
-    block.add(addFootnote(
-        "Selecting publisher link takes you away from this LOCKSS box."));
-    block.add(" to view it at the publisher:</p>");
-    block.add("<a href=\"" + url + "\">" + url + "</a><br/><br/>");
-
     switch (missingFileAction) {
     case HostAuIndex:
-      Collection candidateAus = pluginMgr.getCandidateAus(info.resolvedUrl);
-      if (candidateAus != null && !candidateAus.isEmpty()) {
+      Collection<ArchivalUnit> candidateAus;
+      if (bibliographicItem != null) {
+        candidateAus = getCandidateAus(bibliographicItem);
+      } else {
+        candidateAus = pluginMgr.getCandidateAus(url);
+      }
+      
+      if (candidateAus == null || !candidateAus.isEmpty()) {
         displayIndexPage(candidateAus,
                          HttpResponse.__404_Not_Found,
                          block,
                          "Possibly related content may be found "
                          + "in the following Archival Units");
       } else {
-        displayIndexPage(Collections.EMPTY_LIST,
+        displayIndexPage(Collections.<ArchivalUnit> emptyList(),
             HttpResponse.__404_Not_Found,
             block,
             null);
@@ -1197,6 +1337,179 @@ public class ServeContent extends LockssServlet {
       logAccess("not present, 404 with index");
       break;
     }
+  }
+  
+  /**
+   * Add publisher to the block.
+   * 
+   * @param block the Block
+   * @param bibliographicItem the bibliographic item
+   */
+  private void addPublisher(
+      Table table, BibliographicItem bibliographicItem) {
+    table.newRow(rowfmt);
+    table.newCell(labelfmt);
+    table.add("Publisher:");
+    table.newCell();
+    table.add(bibliographicItem.getPublisherName());
+  }
+  
+  /**
+   * Add isbn or issn information to the block.
+   * 
+   * @param block the Block
+   * @param bibliographicItem the bibliographic item
+   */
+  private void addIsbnOrIssn(
+      Table table, BibliographicItem bibliographicItem) {
+    String printIsbn = bibliographicItem.getIsbn();
+    String eIsbn = bibliographicItem.getEisbn();
+    String printIssn = bibliographicItem.getIssn();
+    String eIssn = bibliographicItem.getEissn();
+    if (printIsbn != null || eIsbn != null) {
+      if (printIsbn != null) {
+        table.newRow(rowfmt);
+        table.newCell(labelfmt);
+        table.add("ISBN:");
+        table.newCell();
+        table.add(printIsbn);
+      }
+      if (eIsbn != null) {
+        table.newRow(rowfmt);
+        table.newCell(labelfmt);
+        table.add("eISBN:");
+        table.newCell();
+        table.add(eIsbn);
+      }
+    } else if (printIssn != null || eIssn != null) {
+      if (printIssn != null) {
+        table.newRow(rowfmt);
+        table.newCell(labelfmt);
+        table.add("ISSN:");
+        table.newCell();
+        table.add(printIssn);
+      }
+      if (eIssn != null) {
+        table.newRow(rowfmt);
+        table.newCell(labelfmt);
+        table.add("eISSN:");
+        table.newCell();
+        table.add(eIssn);
+      }
+    }
+  }
+  
+  /**
+   * Add volume and year information to the block.
+   * 
+   * @param block the Block
+   * @param bibliographicItem the bibliographic item
+   */
+  private void addVolumeAndYear(
+      Table table, BibliographicItem bibliographicItem) {
+    String volume = bibliographicItem.getVolume();
+    String year = bibliographicItem.getYear();
+
+    if (volume != null) {
+      table.newRow(rowfmt);
+      table.newCell(labelfmt);
+      table.add("Volume:");
+      table.newCell();
+      table.add(volume);
+    }
+    if (year != null) {
+      table.newRow(rowfmt);
+      table.newCell(labelfmt);
+      table.add("Year:");
+      table.newCell();
+      table.add(year);
+    }
+  }
+  
+  /**
+   * Add link to url and additional info to the block.
+   * 
+   * @param block the block
+   * @param additionalInfo additional info to appear in the footnote
+   */
+  private void addLink(
+      Table table, String additionalInfo) {
+    table.newRow(rowfmt);
+    table.newCell(labelfmt);
+    table.add("URL:");
+    table.add(addFootnote(
+        ((additionalInfo == null) ? "" : additionalInfo)
+      + " Selecting link takes you away from this LOCKSS box."));
+    table.newCell();
+    table.add("<a href=\"");
+    table.add(url);
+    table.add("\">");
+    table.add(url);
+    table.add("</a></td></tr>");
+    
+  }
+  
+  /**
+   * Get candidate AUs that match the specified bibliographic item's
+   * issn, isbn, or publisher and title fields
+   * 
+   * @param bibliographicItem the bibliographic item
+   * @return a collection of candidate AUs
+   */
+  protected Collection<ArchivalUnit> getCandidateAus(
+      BibliographicItem bibliographicItem) {
+    
+   Collection<ArchivalUnit> candidateAus = new ArrayList<ArchivalUnit>();
+   
+    Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
+    String isbn = bibliographicItem.getIsbn();
+    String issn = bibliographicItem.getIssn();
+    Collection<TdbAu> tdbaus = Collections.emptySet();
+   
+    if (isbn != null) {
+      // get TdbAus for books by thieir ISBN
+      tdbaus = tdb.getTdbAusByIsbn(isbn);
+      
+    } else if (issn != null) {
+      // get TdbAus for journals by thieir ISBN
+      TdbTitle tdbtitle = tdb.getTdbTitleByIssn(issn);
+      if (tdbtitle != null) {
+        tdbaus = tdbtitle.getTdbAus();
+      }
+      
+    } else {
+      // get TdbAus by publisher and title
+      String title = bibliographicItem.getJournalTitle();
+      String publisher = bibliographicItem.getPublisherName();
+      TdbPublisher tdbpublisher = tdb.getTdbPublisher(publisher);
+      if (tdbpublisher != null) {
+        Collection<TdbTitle> tdbtitles = 
+            tdbpublisher.getTdbTitlesByName(title);
+        tdbaus = new ArrayList<TdbAu>();
+        for (TdbTitle tdbtitle : tdbtitles) {
+          tdbaus.addAll(tdbtitle.getTdbAus());
+        }
+      }
+    }
+    
+    // get the AUs corresponding to the TdbAus found
+    for (TdbAu tdbau : tdbaus) {
+      ArchivalUnit au = pluginMgr.getAuFromId(tdbau.getId().toString());
+      if (au != null) {
+        // only accept the AU if it has
+        switch (AuUtil.getAuState(au).getSubstanceState()) {
+          case Unknown:
+          case Yes:
+            candidateAus.add(au);
+            break;
+          case No:
+            if (log.isDebug3()) {
+              log.debug3(  "Ignoring AU with no substance: " + au.getName());
+            }
+        }
+      }
+    }
+    return candidateAus;
   }
 
   protected void handleMissingUrlRequest(String missingUrl, PubState pstate)
@@ -1290,8 +1603,10 @@ public class ServeContent extends LockssServlet {
       page.add(headerElement);
     }
     
+    Block centeredBlock = new Block(Block.Center);
+    
     if (areAllExcluded(auList, pred) && !offerUnfilteredList) {
-      ServletUtil.layoutExplanationBlock(page,
+      ServletUtil.layoutExplanationBlock(centeredBlock,
           "No matching content has been preserved on this LOCKSS box");
     } else {
       // Layout manifest index w/ URLs pointing to this servlet
@@ -1312,9 +1627,8 @@ public class ServeContent extends LockssServlet {
 						     url, query);
 				    }},
 				  true);
-      page.add(ele);
+      centeredBlock.add(ele);
       if (offerUnfilteredList) {
-	Block centeredBlock = new Block(Block.Center);
 	centeredBlock.add("<br>");
 	centeredBlock.add("Other possibly relevant content has not yet been "
 			  + "certified for use with ServeContent and may not "
@@ -1323,9 +1637,9 @@ public class ServeContent extends LockssServlet {
 	args.put("filterPlugins", "no");
 	centeredBlock.add(srvLink(myServletDescr(), "here", args));
 	centeredBlock.add(" to see the complete list.");
-	page.add(centeredBlock);
       }
     }
+    page.add(centeredBlock);
     endPage(page);
     if (result > 0) {
       resp.setStatus(result);
