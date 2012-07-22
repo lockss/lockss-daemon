@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.228 2012-07-11 18:53:55 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.229 2012-07-22 15:53:50 pgust Exp $
  */
 
 /*
@@ -1740,16 +1740,18 @@ public class PluginManager
   // good a place as any to sort it.
   //  XXX Should do something about the redundant normalization involved in
   // calling more than one of these methods
-  public Collection getCandidateAus(String url) throws MalformedURLException {
+  public Collection<ArchivalUnit> getCandidateAus(String url) 
+      throws MalformedURLException {
     String normStem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(url));
     return getCandidateAusFromStem(normStem);
   }
 
-  public Collection getCandidateAusFromStem(String normStem) {
+  public Collection<ArchivalUnit> getCandidateAusFromStem(String normStem) {
     synchronized (hostAus) {
-      Collection cand = (Collection)hostAus.get(normStem);
+      Collection<ArchivalUnit> cand = (Collection)hostAus.get(normStem);
       if (cand != null) {
-	Set res = new TreeSet(new AuOrderComparator());
+	Set<ArchivalUnit> res = 
+	    new TreeSet<ArchivalUnit>(new AuOrderComparator());
 	res.addAll(cand);
 	cand = res;
       }
@@ -1763,14 +1765,15 @@ public class PluginManager
   // good a place as any to sort it.
   //  XXX Should do something about the redundant normalization involved in
   // calling more than one of these methods
-  public SortedSet getAllStems() {
+  public SortedSet<ArchivalUnit> getAllStems() {
     synchronized (hostAus) {
       return new TreeSet(hostAus.keySet());
     }
   }
 
   // Return actual list of candiate AUs, used only for testing
-  List getRawCandidateAus(String url) throws MalformedURLException {
+  List<ArchivalUnit> getRawCandidateAus(String url) 
+      throws MalformedURLException {
     String normStem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(url));
     synchronized (hostAus) {
       return (List)hostAus.get(normStem);
