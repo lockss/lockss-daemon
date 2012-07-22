@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.20 2012-07-06 22:57:14 fergaloy-sf Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.21 2012-07-22 17:06:25 pgust Exp $
  */
 
 /*
@@ -543,15 +543,15 @@ public class TestOpenUrlResolver extends LockssTestCase {
       // use real DOI so test doesn't take so long to time out
       params.put("rft_id", "info:doi/" + "10.3789/isqv22n3.2010.04"); 
       OpenUrlInfo resolver = openUrlResolver.resolveOpenUrl(params);
-      assertEquals(OpenUrlInfo.ResolvedTo.OTHER, resolver.resolvedTo);
+      assertEquals(OpenUrlInfo.ResolvedTo.OTHER, resolver.getResolvedTo());
       assertEquals("http://dx.doi.org/10.3789/isqv22n3.2010.04", 
-                   resolver.resolvedUrl);
+                   resolver.getResolvedUrl());
     } else {
       params.put("rft_id", "info:doi/" + "10.1234/12345678.2010-Q1.1"); 
       OpenUrlInfo resolver = openUrlResolver.resolveOpenUrl(params);
-      assertEquals(OpenUrlInfo.ResolvedTo.ARTICLE, resolver.resolvedTo);
+      assertEquals(OpenUrlInfo.ResolvedTo.ARTICLE, resolver.getResolvedTo());
       assertEquals("http://www.title0.org/plugin0/XI/1st Quarter/p1", 
-                   resolver.resolvedUrl);
+                   resolver.getResolvedUrl());
     }
   }
   
@@ -571,11 +571,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.spage", "4");
     resolved = openUrlResolver.resolveOpenUrl(params);
   	if (disableMetadataManager) {
-  	  assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/", resolved.resolvedUrl);
+  	  assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/", resolved.getResolvedUrl());
   	} else {
-  	  assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/plugin2/1993/p4", resolved.resolvedUrl);
+  	  assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/plugin2/1993/p4", resolved.getResolvedUrl());
   	}
     
     // from SimulatedPlugin2 with ISBN and bad start page
@@ -584,8 +584,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.isbn", "978-1-58562-317-4");
     params.put("rft.spage", "bad");
     resolved = openUrlResolver.resolveOpenUrl(params);
-    assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.resolvedTo);
-    assertEquals("http://www.title2.org/", resolved.resolvedUrl);
+    assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.getResolvedTo());
+    assertEquals("http://www.title2.org/", resolved.getResolvedUrl());
 	
     // from SimulatedPlugin2 with ISBN and article number
     // expect url for specified chapter
@@ -594,11 +594,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.artnum", "2");
     resolved = openUrlResolver.resolveOpenUrl(params);
   	if (disableMetadataManager) {
-  	  assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/", resolved.resolvedUrl);
+  	  assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/", resolved.getResolvedUrl());
   	} else {
-      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/plugin2/1993/p2", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/plugin2/1993/p2", resolved.getResolvedUrl());
   	}
 
     // from SimulatedPlugin2 with ISBN and author
@@ -608,11 +608,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.au", "Author2[10.1357/9781585623174.1]");
     resolved = openUrlResolver.resolveOpenUrl(params);
   	if (disableMetadataManager) {
-      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/", resolved.getResolvedUrl());
   	} else {
-      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/plugin2/1993/p1", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/plugin2/1993/p1", resolved.getResolvedUrl());
   	}
 	
     // from SimulatedPlugin2 with ISBN only
@@ -622,11 +622,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.atitle", "Title[10.1357/9781585623174.1]");
     resolved = openUrlResolver.resolveOpenUrl(params);
   	if (disableMetadataManager) {
-      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/", resolved.getResolvedUrl());
   	} else {
-      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/plugin2/1993/p1", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/plugin2/1993/p1", resolved.getResolvedUrl());
   	}
 	
     // from SimulatedPlugin2 with ISBN, start page, author, and title
@@ -638,11 +638,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.spage", "1");
     resolved = openUrlResolver.resolveOpenUrl(params);
   	if (disableMetadataManager) {
-      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/", resolved.getResolvedUrl());
   	} else {
-      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/plugin2/1993/p1", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/plugin2/1993/p1", resolved.getResolvedUrl());
   	}
 
 	// from SimulatedPlugin2 with ISBN, start page, author, and title
@@ -652,11 +652,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.date", "1993");
     resolved = openUrlResolver.resolveOpenUrl(params);
   	if (disableMetadataManager) {
-      assertEquals(OpenUrlInfo.ResolvedTo.VOLUME, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/plugin2/1993", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.VOLUME, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/plugin2/1993", resolved.getResolvedUrl());
   	} else {
-      assertEquals(OpenUrlInfo.ResolvedTo.VOLUME, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/plugin2/1993", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.VOLUME, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/plugin2/1993", resolved.getResolvedUrl());
   	}
   }
   
@@ -680,11 +680,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.spage", "1");
     resolved = openUrlResolver.resolveOpenUrl(params);
   	if (disableMetadataManager) {
-      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/", resolved.getResolvedUrl());
   	} else {
-      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/plugin2/1993/p1", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/plugin2/1993/p1", resolved.getResolvedUrl());
   	}
 
     
@@ -695,11 +695,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.spage", "1");
     resolved = openUrlResolver.resolveOpenUrl(params);
   	if (disableMetadataManager) {
-      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/", resolved.getResolvedUrl());
   	} else {
-      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/plugin2/1993/p1", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/plugin2/1993/p1", resolved.getResolvedUrl());
   	}
 
     // from SimulatedPlugin2 book title and page only, without publisher
@@ -709,11 +709,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.atitle", "Title[10.1357/9781585623174.1]");
     resolved = openUrlResolver.resolveOpenUrl(params);
   	if (disableMetadataManager) {
-      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/", resolved.getResolvedUrl());
   	} else {
-      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.resolvedTo);
-  	  assertEquals("http://www.title2.org/plugin2/1993/p1", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.getResolvedTo());
+  	  assertEquals("http://www.title2.org/plugin2/1993/p1", resolved.getResolvedUrl());
   	}
 
     // from SimulatedPlugin2 book title only
@@ -721,8 +721,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.clear();
     params.put("rft.btitle", "Title[Manual of Clinical Psychopharmacology]");
     resolved = openUrlResolver.resolveOpenUrl(params);
-    assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.resolvedTo);
-    assertEquals("http://www.title2.org/", resolved.resolvedUrl);
+    assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.getResolvedTo());
+    assertEquals("http://www.title2.org/", resolved.getResolvedUrl());
 
     // from SimulatedPlugin2 book title and year
     // expect url of book landing page
@@ -730,8 +730,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.btitle", "Title[Manual of Clinical Psychopharmacology]");
     params.put("rft.date", "1993");
     resolved = openUrlResolver.resolveOpenUrl(params);
-    assertEquals(OpenUrlInfo.ResolvedTo.VOLUME, resolved.resolvedTo);
-    assertEquals("http://www.title2.org/plugin2/1993", resolved.resolvedUrl);
+    assertEquals(OpenUrlInfo.ResolvedTo.VOLUME, resolved.getResolvedTo());
+    assertEquals("http://www.title2.org/plugin2/1993", resolved.getResolvedUrl());
   }
   
   /**
@@ -746,16 +746,16 @@ public class TestOpenUrlResolver extends LockssTestCase {
     // expect base_url
     params.put("rft.issn", "1144-875X");
     resolved = openUrlResolver.resolveOpenUrl(params);
-    assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.resolvedTo);
-    assertEquals("http://www.title1.org/plugin1/toc", resolved.resolvedUrl);
+    assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.getResolvedTo());
+    assertEquals("http://www.title1.org/plugin1/toc", resolved.getResolvedUrl());
 
     // from SimulatedPlugin1, journal EISSN only
     // expect base_url (eventually title TOC)
     params.clear();
     params.put("rft.eissn", "7744-6521");
     resolved = openUrlResolver.resolveOpenUrl(params);
-    assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.resolvedTo);
-    assertEquals("http://www.title1.org/plugin1/toc", resolved.resolvedUrl);
+    assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.getResolvedTo());
+    assertEquals("http://www.title1.org/plugin1/toc", resolved.getResolvedUrl());
     
     // from SimulatedPlugin1, journal ISSN and article number only
     // expect base_url (eventually title TOC) since article number is not unique
@@ -763,8 +763,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.issn", "1144-875X");
     params.put("rft.artnum", "1");
     resolved = openUrlResolver.resolveOpenUrl(params);
-    assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.resolvedTo);
-    assertEquals("http://www.title1.org/plugin1/toc", resolved.resolvedUrl);
+    assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.getResolvedTo());
+    assertEquals("http://www.title1.org/plugin1/toc", resolved.getResolvedUrl());
 
     // from SimulatedPlugin1, journal ISSN, volume, issue, and article title
     // expect article URL
@@ -775,13 +775,13 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.atitle", "Title[10.2468/28681357.2010-S2.1]");
     resolved = openUrlResolver.resolveOpenUrl(params);
   	if (disableMetadataManager) {
-      assertEquals(OpenUrlInfo.ResolvedTo.ISSUE, resolved.resolvedTo);
+      assertEquals(OpenUrlInfo.ResolvedTo.ISSUE, resolved.getResolvedTo());
   	  assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/key1/toc", 
-  	               resolved.resolvedUrl);
+  	               resolved.getResolvedUrl());
   	} else {
-      assertEquals(OpenUrlInfo.ResolvedTo.ARTICLE, resolved.resolvedTo);
+      assertEquals(OpenUrlInfo.ResolvedTo.ARTICLE, resolved.getResolvedTo());
   	  assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/p_1", 
-                   resolved.resolvedUrl);
+                   resolved.getResolvedUrl());
   	}
 
     // from SimulatedPlugin1, journal ISSN, volume, issue, and article author
@@ -793,13 +793,13 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.au", "Author1[10.2468/28681357.2010-S2.1]");
     resolved = openUrlResolver.resolveOpenUrl(params);
   	if (disableMetadataManager) {
-      assertEquals(OpenUrlInfo.ResolvedTo.ISSUE, resolved.resolvedTo);
+      assertEquals(OpenUrlInfo.ResolvedTo.ISSUE, resolved.getResolvedTo());
   	  assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/key1/toc", 
-  	               resolved.resolvedUrl);
+  	               resolved.getResolvedUrl());
   	} else {
-      assertEquals(OpenUrlInfo.ResolvedTo.ARTICLE, resolved.resolvedTo);
+      assertEquals(OpenUrlInfo.ResolvedTo.ARTICLE, resolved.getResolvedTo());
   	  assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/p_1", 
-  	               resolved.resolvedUrl);
+  	               resolved.getResolvedUrl());
   	}
 
     // from SimulatedPlugin1, journal ISSN, volume, issue, and start page
@@ -811,13 +811,13 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.spage", "1");
     resolved = openUrlResolver.resolveOpenUrl(params);
     if (disableMetadataManager) {
-      assertEquals(OpenUrlInfo.ResolvedTo.ISSUE, resolved.resolvedTo);
+      assertEquals(OpenUrlInfo.ResolvedTo.ISSUE, resolved.getResolvedTo());
   	  assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/key1/toc", 
-  	               resolved.resolvedUrl);
+  	               resolved.getResolvedUrl());
   	} else {
-      assertEquals(OpenUrlInfo.ResolvedTo.ARTICLE, resolved.resolvedTo);
+      assertEquals(OpenUrlInfo.ResolvedTo.ARTICLE, resolved.getResolvedTo());
   	  assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/p_1", 
-  	               resolved.resolvedUrl);
+  	               resolved.getResolvedUrl());
   	}
 
     // from SimulatedPlugin1, journal ISSN, and article title only
@@ -827,12 +827,12 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.atitle", "Title[10.2468/28681357.2010-S2.1]");
     resolved = openUrlResolver.resolveOpenUrl(params);
   	if (disableMetadataManager) {
-      assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.resolvedTo);
-  	  assertEquals("http://www.title1.org/plugin1/toc", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.getResolvedTo());
+  	  assertEquals("http://www.title1.org/plugin1/toc", resolved.getResolvedUrl());
   	} else {
-      assertEquals(OpenUrlInfo.ResolvedTo.ARTICLE, resolved.resolvedTo);
+      assertEquals(OpenUrlInfo.ResolvedTo.ARTICLE, resolved.getResolvedTo());
   	  assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/p_1", 
-  	               resolved.resolvedUrl);
+  	               resolved.getResolvedUrl());
   	}
 
     // from SimulatedPlugin1, journal ISSN, and article article author only
@@ -842,12 +842,12 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.au", "Author1[10.2468/28681357.2010-S2.1]");
     resolved = openUrlResolver.resolveOpenUrl(params);
     if (disableMetadataManager) {
-      assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.resolvedTo);
-   	  assertEquals("http://www.title1.org/plugin1/toc", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.getResolvedTo());
+   	  assertEquals("http://www.title1.org/plugin1/toc", resolved.getResolvedUrl());
    	} else {
-      assertEquals(OpenUrlInfo.ResolvedTo.ARTICLE, resolved.resolvedTo);
+      assertEquals(OpenUrlInfo.ResolvedTo.ARTICLE, resolved.getResolvedTo());
    	  assertEquals("http://www.title1.org/plugin1/v_42/i_Summer/p_1", 
-   	               resolved.resolvedUrl);
+   	               resolved.getResolvedUrl());
    	}
   }
   
@@ -870,8 +870,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.jtitle", "Journal[10.2468/24681357]");
     params.put("rft.spage", "1");
     resolved = openUrlResolver.resolveOpenUrl(params);
-    assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.resolvedTo);
-    assertEquals("http://www.title1.org/plugin1/toc", resolved.resolvedUrl);
+    assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.getResolvedTo());
+    assertEquals("http://www.title1.org/plugin1/toc", resolved.getResolvedUrl());
     
     // from SimulatedPlugin1
     // journal title and page only, without publisher
@@ -880,8 +880,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.jtitle", "Journal[10.2468/24681357]");
     params.put("rft.spage", "1");
     resolved = openUrlResolver.resolveOpenUrl(params);
-    assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.resolvedTo);
-    assertEquals("http://www.title1.org/plugin1/toc", resolved.resolvedUrl);
+    assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.getResolvedTo());
+    assertEquals("http://www.title1.org/plugin1/toc", resolved.getResolvedUrl());
 
     // from SimulatedPlugin1
     // journal title and invalid page only, without publisher
@@ -890,8 +890,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.jtitle", "Journal[10.2468/24681357]");
     params.put("rft.spage", "1");
     resolved = openUrlResolver.resolveOpenUrl(params);
-    assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.resolvedTo);
-    assertEquals("http://www.title1.org/plugin1/toc", resolved.resolvedUrl);
+    assertEquals(OpenUrlInfo.ResolvedTo.TITLE, resolved.getResolvedTo());
+    assertEquals("http://www.title1.org/plugin1/toc", resolved.getResolvedUrl());
 
     // from SimulatedPlugin1
     // journal title and invalid page only, without publisher
@@ -901,8 +901,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.volume", "42");
     resolved = openUrlResolver.resolveOpenUrl(params);
     // ensure this is a volume URL
-    assertEquals(OpenUrlInfo.ResolvedTo.VOLUME, resolved.resolvedTo);
-    assertEquals("http://www.title1.org/plugin1/v_42/toc", resolved.resolvedUrl);
+    assertEquals(OpenUrlInfo.ResolvedTo.VOLUME, resolved.getResolvedTo());
+    assertEquals("http://www.title1.org/plugin1/v_42/toc", resolved.getResolvedUrl());
 
     // from SimulatedPlugin3
     // book title and page only, without publisher
@@ -912,11 +912,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.spage", "1");
     resolved = openUrlResolver.resolveOpenUrl(params);
     if (disableMetadataManager) {
-      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.resolvedTo);
-      assertEquals("http://www.title3.org/", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.getResolvedTo());
+      assertEquals("http://www.title3.org/", resolved.getResolvedUrl());
     } else {
-      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.resolvedTo);
-      assertEquals("http://www.title3.org/plugin3/1999/p1", resolved.resolvedUrl);
+      assertEquals(OpenUrlInfo.ResolvedTo.CHAPTER, resolved.getResolvedTo());
+      assertEquals("http://www.title3.org/plugin3/1999/p1", resolved.getResolvedUrl());
     }
 
     // from SimulatedPlugin3
@@ -925,8 +925,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.clear();
     params.put("rft.jtitle", "Journal[10.0135/12345678]");
     resolved = openUrlResolver.resolveOpenUrl(params);
-    assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.resolvedTo);
-    assertEquals("http://www.title3.org/", resolved.resolvedUrl);
+    assertEquals(OpenUrlInfo.ResolvedTo.PUBLISHER, resolved.getResolvedTo());
+    assertEquals("http://www.title3.org/", resolved.getResolvedUrl());
   }
   
 }
