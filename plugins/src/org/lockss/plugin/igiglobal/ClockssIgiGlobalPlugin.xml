@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -39,6 +39,19 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%slockss/journal-issues.aspx?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>&quot;%sjournals.aspx?p=%s&quot;, base_url, journal_issn</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>&quot;%slockss/journal-issues.aspx?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_crawlrules</string>
