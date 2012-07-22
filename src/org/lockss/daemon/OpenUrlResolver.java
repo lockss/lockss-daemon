@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.32 2012-07-06 22:50:47 fergaloy-sf Exp $
+ * $Id: OpenUrlResolver.java,v 1.33 2012-07-22 15:59:11 pgust Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
 import org.lockss.daemon.ConfigParamDescr.InvalidFormatException;
 import org.lockss.db.DbManager;
+import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PrintfConverter;
@@ -147,32 +148,29 @@ public class OpenUrlResolver {
   /**
    * Keys to search for a matching journal feature. The order of the keys 
    * is the order they will be tried, from article, to issue, to volume, 
-   * to title TOC.
+   * to title, to publisher.
    */
-  private static final FeatureEntry[] auJournalauFeatures = {
+  private static final FeatureEntry[] auJournalFeatures = {
 //    "au_feature_urls/au_abstract",
     new FeatureEntry("au_feature_urls/au_article",OpenUrlInfo.ResolvedTo.ARTICLE),
     new FeatureEntry("au_feature_urls/au_issue", OpenUrlInfo.ResolvedTo.ISSUE),
-    new FeatureEntry("au_issue_url", OpenUrlInfo.ResolvedTo.ISSUE),
     new FeatureEntry("au_feature_urls/au_volume", OpenUrlInfo.ResolvedTo.VOLUME),
-    new FeatureEntry("au_volume_url", OpenUrlInfo.ResolvedTo.VOLUME),
     new FeatureEntry("au_start_url", OpenUrlInfo.ResolvedTo.VOLUME),
     new FeatureEntry("au_feature_urls/au_title", OpenUrlInfo.ResolvedTo.TITLE),
-    new FeatureEntry("au_title_url", OpenUrlInfo.ResolvedTo.TITLE)
+    new FeatureEntry("au_feature_urls/au_publisher", OpenUrlInfo.ResolvedTo.PUBLISHER),
   };
   
   /**
    * Keys to search for a matching book feature. The order of the keys is the
-   * the order they will be tried, from chapter, to volume, to title TOC.
+   * the order they will be tried, from chapter, to volume, to title, to 
+   * publisher.
    */
-  private static final FeatureEntry[] auBookauFeatures = {
+  private static final FeatureEntry[] auBookAuFeatures = {
     new FeatureEntry("au_feature_urls/au_chapter", OpenUrlInfo.ResolvedTo.CHAPTER),
-    new FeatureEntry("au_chapter_url", OpenUrlInfo.ResolvedTo.CHAPTER),
     new FeatureEntry("au_feature_urls/au_volume", OpenUrlInfo.ResolvedTo.VOLUME),
-    new FeatureEntry("au_volume_url", OpenUrlInfo.ResolvedTo.VOLUME),
     new FeatureEntry("au_start_url", OpenUrlInfo.ResolvedTo.VOLUME),
     new FeatureEntry("au_feature_urls/au_title", OpenUrlInfo.ResolvedTo.TITLE),
-    new FeatureEntry("au_title_url", OpenUrlInfo.ResolvedTo.TITLE),
+    new FeatureEntry("au_feature_urls/au_publisher", OpenUrlInfo.ResolvedTo.PUBLISHER),
   };
   
   /** The name of the TDB au_feature key selector */
@@ -198,24 +196,35 @@ public class OpenUrlResolver {
       NONE,
     };
     
-    public final String resolvedUrl;
-    public final ResolvedTo resolvedTo;
+    private String resolvedUrl;
+    private ResolvedTo resolvedTo;
+    private BibliographicItem resolvedBibliographicItem = null;
     
     private OpenUrlInfo(String resolvedUrl, ResolvedTo resolvedTo) {
       this.resolvedUrl = resolvedUrl;
       this.resolvedTo = resolvedTo;
     }
 
-    public static OpenUrlInfo newInstance(
+    protected static OpenUrlInfo newInstance(
         String resolvedUrl, ResolvedTo resolvedTo) {
       return ((resolvedTo == ResolvedTo.NONE) || (resolvedUrl == null)) 
           ? OpenUrlResolver.noOpenUrlInfo
           : new OpenUrlInfo(resolvedUrl, resolvedTo);
     }
-    public static OpenUrlInfo newInstance(String resolvedUrl) {
+    protected static OpenUrlInfo newInstance(String resolvedUrl) {
       return (resolvedUrl == null) 
           ? noOpenUrlInfo 
           : new OpenUrlInfo(resolvedUrl, OpenUrlInfo.ResolvedTo.OTHER);
+    }
+    
+    public String getResolvedUrl() {
+      return resolvedUrl;
+    }
+    public ResolvedTo getResolvedTo() {
+      return resolvedTo;
+    }
+    public BibliographicItem getBibliographicItem() {
+      return resolvedBibliographicItem;
     }
   }
 
@@ -1194,16 +1203,18 @@ public class OpenUrlResolver {
         if (anIssue == null) {
           anIssue  = tdbau.getStartIssue();
         }
-        OpenUrlInfo aResolved = getJournalUrl(tdbau, aYear, aVolume, anIssue, spage);
+        OpenUrlInfo aResolved = 
+            getJournalUrl(tdbau, aYear, aVolume, anIssue, spage);
         if (aResolved.resolvedUrl != null) {
-          // found the URL if in cache
-          if  (pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
+          if  (   aResolved.resolvedTo != OpenUrlInfo.ResolvedTo.TITLE
+               && aResolved.resolvedTo != OpenUrlInfo.ResolvedTo.PUBLISHER
+               && pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
+            // found the URL if in cache
             resolved = aResolved;
             return resolved;
           }
-          // not a viable URL if the AU is down
-          // note: even though getJournalUrl() checks that page exists,
-          // we can't rely on it being usable if TdbAu is down
+          // even though getJournalUrl() checks that page exists,
+          // we can't rely on resolved URL being usable if the TdbAu is down
           if (!tdbau.isDown()) {
             resolved = aResolved;
             return resolved;
@@ -1213,19 +1224,22 @@ public class OpenUrlResolver {
         }
       }
     }
+    
     // look for URL that is cached from list of non-matching AUs
     for (TdbAu tdbau : notFoundTdbAuList) {
       OpenUrlInfo aResolved = 
           getJournalUrl(tdbau, year, volume, issue, spage);
       if (aResolved.resolvedUrl != null) {
-        // found the URL if in cache
-        if  (pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
+        if  (   aResolved.resolvedTo != OpenUrlInfo.ResolvedTo.TITLE
+             && aResolved.resolvedTo != OpenUrlInfo.ResolvedTo.PUBLISHER
+             && pluginMgr.findCachedUrl(aResolved.resolvedUrl, true) != null) {
+          // found the URL if in cache
           resolved = aResolved;
           return resolved;
         }
-        // not a viable URL if the AU is down
-        // note: even though getJournalUrl() checks that page exists,
-        // we can't rely on it being usable if TdbAu is down
+        
+        // even though getJournalUrl() checks that page exists,
+        // we can't rely on resolved URL being usable if the TdbAu is down
         if (!tdbau.isDown()) {
           resolved = aResolved;
           return resolved;
@@ -1375,6 +1389,7 @@ public class OpenUrlResolver {
       }
       
       resolved = getBookUrl(plugin, paramMap);
+      resolved.resolvedBibliographicItem = tdbau;
       log.debug3(  "Found starting url from definable plugin: " 
                  + resolved.resolvedUrl);
     } else {
@@ -1391,7 +1406,7 @@ public class OpenUrlResolver {
    * @return the issue URL
    */
   private OpenUrlInfo getBookUrl(Plugin plugin, TypedEntryMap paramMap) {
-    OpenUrlInfo resolved = getPluginUrl(plugin, auBookauFeatures, paramMap);
+    OpenUrlInfo resolved = getPluginUrl(plugin, auBookAuFeatures, paramMap);
     if (resolved.resolvedUrl == null) {
       resolved = OpenUrlInfo.newInstance(
           paramMap.getString("base_url"), OpenUrlInfo.ResolvedTo.PUBLISHER);
@@ -1468,6 +1483,7 @@ public class OpenUrlResolver {
       // for the same feature (e.g. au_feature_urls/au_year)
       paramMap.setMapElement(AU_FEATURE_KEY, tdbau.getAttr(AU_FEATURE_KEY));
       resolved = getJournalUrl(plugin, paramMap);
+      resolved.resolvedBibliographicItem = tdbau;
       log.debug3(  "Found starting url from definable plugin: " 
                  + resolved.resolvedUrl);
     } else {
@@ -1483,7 +1499,7 @@ public class OpenUrlResolver {
    * @return the issue URL
    */
   private OpenUrlInfo getJournalUrl(Plugin plugin, TypedEntryMap paramMap) { 
-    OpenUrlInfo resolved = getPluginUrl(plugin, auJournalauFeatures, paramMap);
+    OpenUrlInfo resolved = getPluginUrl(plugin, auJournalFeatures, paramMap);
     if (resolved.resolvedUrl == null) {
       resolved = OpenUrlInfo.newInstance(paramMap.getString("base_url"), 
                                          OpenUrlInfo.ResolvedTo.PUBLISHER);
