@@ -1,5 +1,5 @@
 /*
- * $Id: I18nUtil.java,v 1.1 2012-07-21 21:12:44 easyonthemayo Exp $
+ * $Id: I18nUtil.java,v 1.2 2012-07-22 01:40:21 pgust Exp $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.servlet;
+package org.lockss.util;
 
 import java.util.MissingResourceException;
 import org.lockss.util.Logger;
