@@ -699,6 +699,7 @@
     au < released ; crawling ; 2011 ; American Journal of Epidemiology Volume 173 ; 173 ; >
     au < testing ; exists ; 2011 ; American Journal of Epidemiology Volume 174 ; 174 ; >
     au < crawling ; exists ; 2012 ; American Journal of Epidemiology Volume 175 ; 175 ; >
+    au < manifest ; exists ; 2012 ; American Journal of Epidemiology Volume 176 ; 176 ; >
 
     }
 
@@ -3352,6 +3353,23 @@
     param[base_url] = http://cs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
+    au < manifest ; manifest ; 1978-1979 ; Children & Schools Volume 1 ; 1 ; >
+    au < manifest ; manifest ; 1979-1980 ; Children & Schools Volume 2 ; 2 ; >
+    au < manifest ; manifest ; 1980-1981 ; Children & Schools Volume 3 ; 3 ; >
+    au < manifest ; manifest ; 1981-1982 ; Children & Schools Volume 4 ; 4 ; >
+    au < manifest ; manifest ; 1982-1983 ; Children & Schools Volume 5 ; 5 ; >
+    au < manifest ; manifest ; 1983-1984 ; Children & Schools Volume 6 ; 6 ; >
+    au < manifest ; manifest ; 1984-1985 ; Children & Schools Volume 7 ; 7 ; >
+    au < manifest ; manifest ; 1985-1986 ; Children & Schools Volume 8 ; 8 ; >
+    au < manifest ; manifest ; 1986-1987 ; Children & Schools Volume 9 ; 9 ; >
+    au < manifest ; manifest ; 1987-1988 ; Children & Schools Volume 10 ; 10 ; >
+    au < manifest ; manifest ; 1988-1989 ; Children & Schools Volume 11 ; 11 ; >
+    au < manifest ; manifest ; 1990-1991 ; Children & Schools Volume 13 ; 13 ; >
+    au < manifest ; manifest ; 1992 ; Children & Schools Volume 14 ; 14 ; >
+    au < manifest ; manifest ; 1993 ; Children & Schools Volume 15 ; 15 ; >
+    au < manifest ; manifest ; 1994 ; Children & Schools Volume 16 ; 16 ; >
+    au < manifest ; manifest ; 1995 ; Children & Schools Volume 17 ; 17 ; >
+    au < manifest ; manifest ; 1996 ; Children & Schools Volume 18 ; 18 ; >
     au < manifest ; exists ; 1997 ; Children & Schools Volume 19 ; 19 ; >
     au < manifest ; exists ; 1998 ; Children & Schools Volume 20 ; 20 ; >
     au < manifest ; exists ; 1998 ; Children & Schools Volume 21 ; 21 ; >
@@ -8913,6 +8931,54 @@
     param[base_url] = http://chromsci.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
+    au < manifest ; manifest ; 1963 ; Journal of Chromatographic Science Volume 1 ; 1 ; >
+    au < manifest ; manifest ; 1964 ; Journal of Chromatographic Science Volume 2 ; 2 ; >
+    au < manifest ; manifest ; 1965 ; Journal of Chromatographic Science Volume 3 ; 3 ; >
+    au < manifest ; manifest ; 1966 ; Journal of Chromatographic Science Volume 4 ; 4 ; >
+    au < manifest ; manifest ; 1967 ; Journal of Chromatographic Science Volume 5 ; 5 ; >
+    au < manifest ; manifest ; 1968 ; Journal of Chromatographic Science Volume 6 ; 6 ; >
+    au < manifest ; manifest ; 1969 ; Journal of Chromatographic Science Volume 7 ; 7 ; >
+    au < manifest ; manifest ; 1970 ; Journal of Chromatographic Science Volume 8 ; 8 ; >
+    au < manifest ; manifest ; 1971 ; Journal of Chromatographic Science Volume 9 ; 9 ; >
+    au < manifest ; manifest ; 1972 ; Journal of Chromatographic Science Volume 10 ; 10 ; >
+    au < manifest ; manifest ; 1973 ; Journal of Chromatographic Science Volume 11 ; 11 ; >
+    au < manifest ; manifest ; 1974 ; Journal of Chromatographic Science Volume 12 ; 12 ; >
+    au < manifest ; manifest ; 1975 ; Journal of Chromatographic Science Volume 13 ; 13 ; >
+    au < manifest ; manifest ; 1976 ; Journal of Chromatographic Science Volume 14 ; 14 ; >
+    au < manifest ; manifest ; 1977 ; Journal of Chromatographic Science Volume 15 ; 15 ; >
+    au < manifest ; manifest ; 1978 ; Journal of Chromatographic Science Volume 16 ; 16 ; >
+    au < manifest ; manifest ; 1979 ; Journal of Chromatographic Science Volume 17 ; 17 ; >
+    au < manifest ; manifest ; 1980 ; Journal of Chromatographic Science Volume 18 ; 18 ; >
+    au < manifest ; manifest ; 1981 ; Journal of Chromatographic Science Volume 19 ; 19 ; >
+    au < manifest ; manifest ; 1982 ; Journal of Chromatographic Science Volume 20 ; 20 ; >
+    au < manifest ; manifest ; 1983 ; Journal of Chromatographic Science Volume 21 ; 21 ; >
+    au < manifest ; manifest ; 1984 ; Journal of Chromatographic Science Volume 22 ; 22 ; >
+    au < manifest ; manifest ; 1985 ; Journal of Chromatographic Science Volume 23 ; 23 ; >
+    au < manifest ; manifest ; 1986 ; Journal of Chromatographic Science Volume 24 ; 24 ; >
+    au < manifest ; manifest ; 1987 ; Journal of Chromatographic Science Volume 25 ; 25 ; >
+    au < manifest ; manifest ; 1988 ; Journal of Chromatographic Science Volume 26 ; 26 ; >
+    au < manifest ; manifest ; 1989 ; Journal of Chromatographic Science Volume 27 ; 27 ; >
+    au < manifest ; manifest ; 1990 ; Journal of Chromatographic Science Volume 28 ; 28 ; >
+    au < manifest ; manifest ; 1991 ; Journal of Chromatographic Science Volume 29 ; 29 ; >
+    au < manifest ; manifest ; 1992 ; Journal of Chromatographic Science Volume 30 ; 30 ; >
+    au < manifest ; manifest ; 1993 ; Journal of Chromatographic Science Volume 31 ; 31 ; >
+    au < manifest ; manifest ; 1994 ; Journal of Chromatographic Science Volume 32 ; 32 ; >
+    au < manifest ; manifest ; 1995 ; Journal of Chromatographic Science Volume 33 ; 33 ; >
+    au < manifest ; manifest ; 1996 ; Journal of Chromatographic Science Volume 34 ; 34 ; >
+    au < manifest ; manifest ; 1997 ; Journal of Chromatographic Science Volume 35 ; 35 ; >
+    au < manifest ; manifest ; 1998 ; Journal of Chromatographic Science Volume 36 ; 36 ; >
+    au < manifest ; manifest ; 1999 ; Journal of Chromatographic Science Volume 37 ; 37 ; >
+    au < manifest ; manifest ; 2000 ; Journal of Chromatographic Science Volume 38 ; 38 ; >
+    au < manifest ; manifest ; 2001 ; Journal of Chromatographic Science Volume 39 ; 39 ; >
+    au < manifest ; manifest ; 2002 ; Journal of Chromatographic Science Volume 40 ; 40 ; >
+    au < manifest ; manifest ; 2003 ; Journal of Chromatographic Science Volume 41 ; 41 ; >
+    au < manifest ; manifest ; 2004 ; Journal of Chromatographic Science Volume 42 ; 42 ; >
+    au < manifest ; manifest ; 2005 ; Journal of Chromatographic Science Volume 43 ; 43 ; >
+    au < manifest ; manifest ; 2006 ; Journal of Chromatographic Science Volume 44 ; 44 ; >
+    au < manifest ; manifest ; 2007 ; Journal of Chromatographic Science Volume 45 ; 45 ; >
+    au < manifest ; manifest ; 2008 ; Journal of Chromatographic Science Volume 46 ; 46 ; >
+    au < manifest ; manifest ; 2009 ; Journal of Chromatographic Science Volume 47 ; 47 ; >
+    au < manifest ; manifest ; 2010 ; Journal of Chromatographic Science Volume 48 ; 48 ; >
     au < released ; crawling ; 2010 ; Journal of Chromatographic Science Volume 49 ; 49 ; >
     au < released ; crawling ; 2011 ; Journal of Chromatographic Science Volume 50 ; 50 ; >
     au < expected ; exists ; 2012 ; Journal of Chromatographic Science Volume 51 ; 51 ; >

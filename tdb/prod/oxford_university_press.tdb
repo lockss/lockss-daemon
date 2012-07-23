@@ -3354,19 +3354,18 @@
     param[base_url] = http://cs.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Children & Schools Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Children & Schools Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Children & Schools Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Children & Schools Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Children & Schools Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Children & Schools Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Children & Schools Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Children & Schools Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Children & Schools Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Children & Schools Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Children & Schools Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Children & Schools Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Children & Schools Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 1978-1979 ; Children & Schools Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 1979-1980 ; Children & Schools Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1980-1981 ; Children & Schools Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 1981-1982 ; Children & Schools Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 1982-1983 ; Children & Schools Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 1983-1984 ; Children & Schools Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1984-1985 ; Children & Schools Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1985-1986 ; Children & Schools Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1986-1987 ; Children & Schools Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 1987-1988 ; Children & Schools Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 1988-1989 ; Children & Schools Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 1990-1991 ; Children & Schools Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 1992 ; Children & Schools Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Children & Schools Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 1994 ; Children & Schools Volume 16 ; 16 >
