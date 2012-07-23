@@ -2240,6 +2240,19 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2012 ; Critical Care Volume 16 ; 16 >
 
     }
+    
+    {
+  
+    title < 
+      name = DARU Journal of Pharmaceutical Sciences ;
+      issn = 1560-8115 ;
+      eissn = 2008-2231
+      
+    >
+    param[base_url] = http://daru.tums.ac.ir
+    comment[journal_issn] = 1560-8115
+    
+    }
 
     {
       title <
