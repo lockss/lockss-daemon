@@ -1,5 +1,5 @@
 /*
- * $Id: PdfUtil.java,v 1.4 2012-07-11 23:53:38 thib_gc Exp $
+ * $Id: PdfUtil.java,v 1.5 2012-07-23 21:17:21 thib_gc Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.pdf;
 import java.io.*;
 import java.util.*;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
@@ -285,6 +286,88 @@ public class PdfUtil {
 
   /**
    * <p>
+   * Convenience method to convert the given PDF token to a
+   * human-readable String.
+   * </p>
+   * @param pdfToken A PDF token.
+   * @return A string representing the token.
+   */
+  public static String prettyPrint(PdfToken pdfToken) {
+    StringBuilder sb = new StringBuilder();
+    prettyPrint(sb, pdfToken);
+    return sb.toString();
+  }
+
+  /**
+   * <p>
+   * Convenience method to output a human-readable version of the
+   * given token to the given string builder.
+   * </p>
+   * @param sb A string builder.
+   * @param pdfToken A PDF token.
+   * @since 1.57
+   */
+  public static void prettyPrint(StringBuilder sb,
+                                 PdfToken pdfToken) {
+    sb.append("[");
+    if (pdfToken.isArray()) {
+      sb.append("array:");
+      for (PdfToken arrayToken : pdfToken.getArray()) {
+        prettyPrint(arrayToken);
+      }
+    }
+    else if (pdfToken.isBoolean()) {
+      sb.append("boolean:");
+      sb.append(Boolean.toString(pdfToken.getBoolean()));
+    }
+    else if (pdfToken.isDictionary()) {
+      boolean first = true;
+      sb.append("dictionary:");
+      for (Map.Entry<String, PdfToken> entry : pdfToken.getDictionary().entrySet()) {
+        if (first) {
+          first = false;
+        }
+        else {
+          sb.append(";");
+        }
+        sb.append(StringEscapeUtils.escapeJava(entry.getKey()));
+        sb.append("=");
+        prettyPrint(entry.getValue());
+      }
+    }
+    else if (pdfToken.isFloat()) {
+      sb.append("float:");
+      sb.append(Float.toString(pdfToken.getFloat()));
+    }
+    else if (pdfToken.isInteger()) {
+      sb.append("integer:");
+      sb.append(Long.toString(pdfToken.getInteger()));
+    }
+    else if (pdfToken.isName()) {
+      sb.append("name:");
+      sb.append(StringEscapeUtils.escapeJava(pdfToken.getName()));
+    }
+    else if (pdfToken.isNull()) {
+      sb.append("null");
+    }
+    else if (pdfToken.isObject()) {
+      sb.append("object:");
+      prettyPrint(sb, pdfToken.getObject());
+    }
+    else if (pdfToken.isOperator()) {
+      sb.append("operator:");
+      sb.append(StringEscapeUtils.escapeJava(pdfToken.getOperator()));
+    }
+    else if (pdfToken.isString()) {
+      sb.append("string:\"");
+      sb.append(StringEscapeUtils.escapeJava(pdfToken.getString()));
+      sb.append("\"");
+    }
+    sb.append("]");
+  }
+
+  /**
+   * <p>
    * If the given PDF document is not <code>null</code>, closes it
    * ignoring any exception thrown by {@link PdfDocument#close()}.
    * </p>
@@ -327,7 +410,7 @@ public class PdfUtil {
     trailerMapping.put(NAME_ID, pdfAdapter.makeArray(idArray));
     pdfDocument.setTrailer(trailerMapping);
   }
-
+  
   /**
    * <p>
    * This class cannot be instantiated.
