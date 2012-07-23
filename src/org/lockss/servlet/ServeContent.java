@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.57 2012-07-22 16:17:31 pgust Exp $
+ * $Id: ServeContent.java,v 1.58 2012-07-23 17:47:46 pgust Exp $
  */
 
 /*
@@ -485,15 +485,17 @@ public class ServeContent extends LockssServlet {
     log.debug2("resolvedTo: " + info.getResolvedTo() + " url: " + url);
     try {
       // Get the CachedUrl for the URL, only if it has content.
-      if (au != null) {
-        cu = au.makeCachedUrl(url);
-      } else {
-        // Find CU if belongs to any configured AU even if has no content,
-        // so can rewrite from publisher
-        cu = pluginMgr.findCachedUrl(url, false);
-        if (cu != null) {
-          if (log.isDebug3()) log.debug3("cu: " + cu);
-          au = cu.getArchivalUnit();
+      if (url != null) {
+        if (au != null) {
+          cu = au.makeCachedUrl(url);
+        } else {
+          // Find CU if belongs to any configured AU even if has no content,
+          // so can rewrite from publisher
+          cu = pluginMgr.findCachedUrl(url, false);
+          if (cu != null) {
+            if (log.isDebug3()) log.debug3("cu: " + cu);
+            au = cu.getArchivalUnit();
+          }
         }
       }
       
@@ -515,16 +517,16 @@ public class ServeContent extends LockssServlet {
         return;
       }
       
-      if (isNeverProxy()) {
+      if ((url != null) && isNeverProxy()) {
         // do not offer publisher link if never proxying
         handleMissingUrlRequest(url, PubState.Unknown);
         return;
       }
 
-      handleMissingOpenUrlRequest(info, PubState.Unknown)
-      ;
+      handleMissingOpenUrlRequest(info, PubState.Unknown);
+
     } catch (IOException e) {
-      log.warning("Handling " + url + " throws ", e);
+      log.warning("Handling " + ((url == null) ? "url" : url) + " throws ", e);
       throw e;
     } finally {
       AuUtil.safeRelease(cu);
@@ -1118,15 +1120,18 @@ public class ServeContent extends LockssServlet {
     // handle non-cached url according to missingFileAction
     MissingFileAction missingFileAction = getMissingFileAction(pstate);
     switch (missingFileAction) {
-      case Error_404:
-        resp.sendError(HttpServletResponse.SC_NOT_FOUND,
-                     info.getResolvedUrl() + " is not preserved on this LOCKSS box");
-        logAccess("not present, 404");
-        return;
       case Redirect:
       case AlwaysRedirect:
-        redirectToUrl();
-        logAccess("not configured, 302 redirect to pub");
+        if (url != null) {
+          redirectToUrl();
+          logAccess("not configured, 302 redirect to pub");
+          return;
+        }
+        // fall through if au is down
+      case Error_404:
+        resp.sendError(HttpServletResponse.SC_NOT_FOUND,
+          ((url == null) ? "url" : url) + " is not preserved on this LOCKSS box");
+        logAccess("not present, 404");
         return;
       case HostAuIndex:
       case AuIndex:
@@ -1308,14 +1313,14 @@ public class ServeContent extends LockssServlet {
     
     switch (missingFileAction) {
     case HostAuIndex:
-      Collection<ArchivalUnit> candidateAus;
+      Collection<ArchivalUnit> candidateAus = Collections.emptyList();
       if (bibliographicItem != null) {
         candidateAus = getCandidateAus(bibliographicItem);
-      } else {
+      } else if (url != null) {
         candidateAus = pluginMgr.getCandidateAus(url);
       }
       
-      if (candidateAus == null || !candidateAus.isEmpty()) {
+      if (candidateAus != null && !candidateAus.isEmpty()) {
         displayIndexPage(candidateAus,
                          HttpResponse.__404_Not_Found,
                          block,
@@ -1427,26 +1432,28 @@ public class ServeContent extends LockssServlet {
   }
   
   /**
-   * Add link to url and additional info to the block.
+   * Add link to publisher url and additional info 
+   * to the block if the AU for the URL is not down.
    * 
    * @param block the block
    * @param additionalInfo additional info to appear in the footnote
    */
   private void addLink(
       Table table, String additionalInfo) {
-    table.newRow(rowfmt);
-    table.newCell(labelfmt);
-    table.add("URL:");
-    table.add(addFootnote(
-        ((additionalInfo == null) ? "" : additionalInfo)
-      + " Selecting link takes you away from this LOCKSS box."));
-    table.newCell();
-    table.add("<a href=\"");
-    table.add(url);
-    table.add("\">");
-    table.add(url);
-    table.add("</a></td></tr>");
-    
+    if (url != null) {
+      table.newRow(rowfmt);
+      table.newCell(labelfmt);
+      table.add("URL:");
+      table.add(addFootnote(
+          ((additionalInfo == null) ? "" : additionalInfo)
+        + " Selecting link takes you away from this LOCKSS box."));
+      table.newCell();
+      table.add("<a href=\"");
+      table.add(url);
+      table.add("\">");
+      table.add(url);
+      table.add("</a></td></tr>");
+    }    
   }
   
   /**
@@ -1458,7 +1465,6 @@ public class ServeContent extends LockssServlet {
    */
   protected Collection<ArchivalUnit> getCandidateAus(
       BibliographicItem bibliographicItem) {
-    
    Collection<ArchivalUnit> candidateAus = new ArrayList<ArchivalUnit>();
    
     Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
@@ -1492,21 +1498,11 @@ public class ServeContent extends LockssServlet {
       }
     }
     
-    // get the AUs corresponding to the TdbAus found
+    // get preserved AUs corresponding to TdbAus found
     for (TdbAu tdbau : tdbaus) {
-      ArchivalUnit au = pluginMgr.getAuFromId(tdbau.getId().toString());
-      if (au != null) {
-        // only accept the AU if it has
-        switch (AuUtil.getAuState(au).getSubstanceState()) {
-          case Unknown:
-          case Yes:
-            candidateAus.add(au);
-            break;
-          case No:
-            if (log.isDebug3()) {
-              log.debug3(  "Ignoring AU with no substance: " + au.getName());
-            }
-        }
+      ArchivalUnit au = TdbUtil.getAu(tdbau);
+      if (au != null && TdbUtil.isAuPreserved(au)) {
+        candidateAus.add(au);
       }
     }
     return candidateAus;
