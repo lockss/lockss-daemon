@@ -31,6 +31,22 @@
   {
   
     title <
+      name = SAE International Journal of Alternative Powertrains ;
+      issn = 2167-4191 ;
+      eissn = 2167-4205 ;
+      issnl = 2167-4191
+    >
+    
+    param[base_url] = http://saealtpow.saejournals.org/
+    
+    
+    au < exists ; 2012 ; SAE International Journal of Alternative Powertrains Volume 1 ; 1 >
+  
+  }
+
+  {
+  
+    title <
       name = SAE International Journal of Commercial Vehicles ;
       issn = 1946-391X ;
       eissn = 1946-3928 ;
