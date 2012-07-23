@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.244 2012-07-23 17:26:32 barry409 Exp $
+ * $Id: PollManager.java,v 1.245 2012-07-23 20:18:14 barry409 Exp $
  */
 
 /*
@@ -74,6 +74,13 @@ import static org.lockss.poller.v3.V3PollFactory.*;
  */
 
 // CR: Code review comments are marked with CR:
+
+// todo(bhayes): Much of the synchronization here could be eliminated
+// or simplified, particularly with the elimination of V1 code. There
+// are public methods for status information, and otherwise all
+// activity is under the control of the PollStarter [which starts V3
+// polls from the pollQueue] and handleIncomingMessage [which starts
+// V3 votes].
 
 public class PollManager
   extends BaseLockssDaemonManager implements ConfigurableManager {
