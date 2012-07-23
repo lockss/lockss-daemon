@@ -489,8 +489,9 @@
     >
     
     param[journal_dir] = digital_philology
+    attr[journal_id] = dph
 
-	comment[upcoming] = this journal is upcoming in projectmuse
+	au < manifest ; 2012 ; Digital Philology: A Journal of Medieval Cultures Volume 1 ; 1 >
     
   }
   
