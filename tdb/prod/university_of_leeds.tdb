@@ -14,13 +14,12 @@
 
     rights = openaccess
     plugin = edu.nyu.plugin.LeedsICSPlugin
+    implicit < status ; volume ; name ; param[year] ; param[volume_str] >
+    comment[base_url] = The plugin was written such that the base URL doesn't have a trailing slash
     
     {
     
-    comment[base_url] = The web site is structured such that the base URL cannot have a trailing slash.
     param[base_url] = http://www.leeds.ac.uk/classics/lics
-
-    implicit < status ; volume ; name ; param[year] ; param[volume_str] >
   
     au < down ; 1 ; Leeds International Classical Studies 2002 ; 2002 ; 2002 >
     au < down ; 2 ; Leeds International Classical Studies 2003 ; 2003 ; 2003 >
@@ -32,8 +31,6 @@
     
     param[base_url] = http://lics.leeds.ac.uk
 
-    implicit < status ; volume ; name ; param[year] ; param[volume_str] >
-  
     au < doNotProcess ; 1 ; Leeds International Classical Studies 2002 ; 2002 ; 2002 >
     au < doNotProcess ; 2 ; Leeds International Classical Studies 2003 ; 2003 ; 2003 >
     au < doNotProcess ; 3 ; Leeds International Classical Studies 2003-2004 ; 2004 ; 200304 >
@@ -47,7 +44,6 @@
     au < expected ; 11 ; Leeds International Classical Studies 2012 ; 2012 ; 2012 >
     
     }    
-    
   
   }
   
