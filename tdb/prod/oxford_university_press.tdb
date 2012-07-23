@@ -684,6 +684,27 @@
     }
 
   }
+  
+  {
+
+    title <
+      name = The American Journal of Jurisprudence;
+      issn = 0065-8995 ;
+      eissn = 2049-6494 ;
+      issnl = 0065-8995
+    >
+
+    {
+    
+    plugin = org.lockss.plugin.highwire.HighWirePlugin
+    param[base_url] = http://ajj.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    
+    au < HighWirePressH20Plugin ; expected ; 2013 ; The American Journal of Jurisprudence Volume 1 ; 1 >
+    
+    }
+    
+  }
 
   {
 
