@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.38 2012-07-11 22:49:58 barry409 Exp $
+ * $Id: V3PollFactory.java,v 1.39 2012-07-23 20:44:33 barry409 Exp $
  */
 
 /*
@@ -304,8 +304,6 @@ public class V3PollFactory extends BasePollFactory {
       return null;
     }
 
-    PeerIdentityStatus status = idMgr.getPeerIdentityStatus(orig);
-
     // Make a probabilistic choice based on the number of willing repairers
     // we have for this AU
     if (!ProbabilisticChoice.choose(acceptProb(orig, au))) {
@@ -316,14 +314,14 @@ public class V3PollFactory extends BasePollFactory {
       return null;
     }
 
-    log.debug("Creating V3Voter to participate in poll " + m.getKey());
-    V3Voter voter = new V3Voter(daemon, m);
-    //        voter.startPoll(); // Voters need to be started immediately.
-    
     // Update the status of the peer that called this poll.
+    PeerIdentityStatus status = idMgr.getPeerIdentityStatus(orig);
     if (status != null) {
       status.calledPoll();
     }
+
+    log.debug("Creating V3Voter to participate in poll " + m.getKey());
+    V3Voter voter = new V3Voter(daemon, m);
     return voter;
   }
 
