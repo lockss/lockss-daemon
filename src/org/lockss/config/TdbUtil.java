@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.15 2012-07-17 14:30:47 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.16 2012-07-23 17:07:13 pgust Exp $
  */
 
 /*
@@ -35,8 +35,11 @@ package org.lockss.config;
 import java.util.*;
 
 import org.lockss.app.LockssDaemon;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.TitleConfig;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.Plugin;
+import org.lockss.plugin.PluginManager;
 import org.lockss.daemon.AuHealthMetric;
 import org.lockss.plugin.AuOrderComparator;
 import org.lockss.state.SubstanceChecker;
@@ -88,6 +91,33 @@ public class TdbUtil {
     // which is not very efficient  
     return getTdbTitles(scope).size();
   }*/
+  
+  /**
+   * Get the AU that corresponds to the specified TdbAu.
+   * 
+   * @param tdbau the TdbAu
+   * @return the ArchivalUnit or <code>null</code> if no corresponding AU
+   */
+  public static ArchivalUnit getAu(TdbAu tdbau) {
+    PluginManager pluginMgr = LockssDaemon.getLockssDaemon().getPluginManager();
+    String pluginId = tdbau.getPluginId();
+    Plugin plugin = 
+        pluginMgr.getPlugin(PluginManager.pluginKeyFromName(pluginId));
+    ArchivalUnit au = null;
+    if (plugin != null) {
+      Properties props = new Properties();
+      for (Map.Entry<String,String> prop : tdbau.getParams().entrySet()) {
+        String key = prop.getKey();
+        ConfigParamDescr descr = plugin.findAuConfigDescr(key);
+        if ((descr != null) && descr.isDefinitional()) {
+          props.put(key, prop.getValue());
+        }
+      }
+      String auid = PluginManager.generateAuId(pluginId, props);
+      au = pluginMgr.getAuFromId(auid);
+    }
+    return au;
+  }
   
   /**
    * Get the TdbTitle with which an AU is associated.
@@ -359,7 +389,7 @@ public class TdbUtil {
    * @param au an ArchivalUnit
    * @return whether it should be considered to be preserved
    */
-  private static boolean isAuPreserved(ArchivalUnit au) {
+  public static boolean isAuPreserved(ArchivalUnit au) {
     AuHealthMetric metric = AuHealthMetric.getAuHealthMetric(au);
     SubstanceChecker.State state = metric.getSubstanceState();
     switch (state) {
