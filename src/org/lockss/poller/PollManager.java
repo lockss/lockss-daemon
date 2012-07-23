@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.245 2012-07-23 20:18:14 barry409 Exp $
+ * $Id: PollManager.java,v 1.246 2012-07-23 20:53:44 barry409 Exp $
  */
 
 /*
@@ -1230,8 +1230,7 @@ public class PollManager
 	  theLog.debug3("findPoll: Did not make new poll: " + key);
 	}
       }
-    }
-    else {
+    } else {
       theLog.debug3("findPoll: Returning existing poll: " + key);
       ret = pme.poll;
     }
