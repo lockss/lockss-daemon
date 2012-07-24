@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.249 2012-07-24 21:15:54 barry409 Exp $
+ * $Id: PollManager.java,v 1.250 2012-07-24 22:26:25 barry409 Exp $
  */
 
 /*
@@ -287,20 +287,20 @@ public class PollManager
     }
 
     /**
-     * @return a the set of PollManagerEntries which are running, are
-     * concerned with this au, and which have not yet completed.
+     * @return a the set of PollManagerEntries which are running, and
+     * are concerned with this au.
      */
-    Set<PollManagerEntry> toCancel(ArchivalUnit au) {
-      Set<PollManagerEntry> toCancel = new HashSet<PollManagerEntry>();
+    Set<PollManagerEntry> forAu(ArchivalUnit au) {
+      Set<PollManagerEntry> forAu = new HashSet<PollManagerEntry>();
       synchronized (pollMapLock) {
 	for (PollManagerEntry pme : thePolls.values()) {
 	  ArchivalUnit pau = pme.poll.getCachedUrlSet().getArchivalUnit();
-	  if (pau == au && !pme.isPollCompleted()) {
-	    toCancel.add(pme);
+	  if (pau == au) {
+	    forAu.add(pme);
 	  }
 	}
       }
-      return toCancel;
+      return forAu;
     }
 
     /**
@@ -997,17 +997,19 @@ public class PollManager
    * @param au the AU
    */
   void cancelAuPolls(ArchivalUnit au) {
-    // first remove from queues
+    // first remove from queues, so none will run.
     pollQueue.cancelAuPolls(au);
 
-    // collect polls to cancel
-    Set<PollManagerEntry> toCancel = entryManager.toCancel(au);
-    // then actually cancel them
-    // Note that the poll may have completed since we collected the Set.
-    for (PollManagerEntry pme : toCancel) {
-      ArchivalUnit pau = pme.poll.getCachedUrlSet().getArchivalUnit();
-      theHashService.cancelAuHashes(pau);
-      pme.poll.abortPoll();
+    // collect PollManagerEntries related to this au
+    Set<PollManagerEntry> forAu = entryManager.forAu(au);
+    // then actually cancel the polls
+    for (PollManagerEntry pme : forAu) {
+      BasePoll poll = pme.poll;
+      if (!poll.isPollCompleted()) {
+	ArchivalUnit pau = poll.getCachedUrlSet().getArchivalUnit();
+	theHashService.cancelAuHashes(pau);
+	poll.abortPoll();
+      }
     }
   }
 
