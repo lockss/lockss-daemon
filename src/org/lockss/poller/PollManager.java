@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.247 2012-07-24 18:03:32 barry409 Exp $
+ * $Id: PollManager.java,v 1.248 2012-07-24 18:38:14 barry409 Exp $
  */
 
 /*
@@ -2240,6 +2240,8 @@ public class PollManager
   public static class PollManagerEntry {
     private BasePoll poll;
     private PollSpec spec;
+    private Deadline pollDeadline;
+    private Deadline deadline;
     private int type;
     private String key;
 
@@ -2247,6 +2249,8 @@ public class PollManager
       poll = p;
       spec = p.getPollSpec();
       type = p.getPollSpec().getPollType();
+      pollDeadline = p.getDeadline();
+      deadline = null;
       key = p.getKey();
     }
 
@@ -2273,6 +2277,10 @@ public class PollManager
 
     synchronized void setPollSuspended() {
       // todo(bhayes): Why is this synchronized?
+      if(deadline != null) {
+	deadline.expire();
+	deadline = null;
+      }
       poll.getVoteTally().setStateSuspended();
     }
 
@@ -2316,6 +2324,14 @@ public class PollManager
 
     public PollSpec getPollSpec() {
       return spec;
+    }
+
+    public Deadline getPollDeadline() {
+      return pollDeadline;
+    }
+
+    public Deadline getDeadline() {
+      return deadline;
     }
 
     public boolean isSamePoll(PollSpec otherSpec) {
