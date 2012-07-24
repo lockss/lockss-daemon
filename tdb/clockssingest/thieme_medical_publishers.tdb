@@ -220,18 +220,18 @@
    param[journal_id] = 10.1055/s-00000006
    comment[years] = 2001-current
 
-    au < manifest ; exists ; 2001 ; Aktuelle Traumatologie 2001 ; 2001 >   
-    au < manifest ; exists ; 2002 ; Aktuelle Traumatologie 2002 ; 2002 >   
-    au < manifest ; exists ; 2003 ; Aktuelle Traumatologie 2003 ; 2003 >   
-    au < manifest ; exists ; 2004 ; Aktuelle Traumatologie 2004 ; 2004 >   
-    au < manifest ; exists ; 2005 ; Aktuelle Traumatologie 2005 ; 2005 >   
-    au < manifest ; exists ; 2006 ; Aktuelle Traumatologie 2006 ; 2006 >   
-    au < manifest ; exists ; 2007 ; Aktuelle Traumatologie 2007 ; 2007 >   
-    au < manifest ; exists ; 2008 ; Aktuelle Traumatologie 2008 ; 2008 >   
-    au < manifest ; exists ; 2009 ; Aktuelle Traumatologie 2009 ; 2009 >   
-    au < manifest ; exists ; 2010 ; Aktuelle Traumatologie 2010 ; 2010 >   
-    au < manifest ; exists ; 2011 ; Aktuelle Traumatologie 2011 ; 2011 >   
-    au < manifest ; exists ; 2012 ; Aktuelle Traumatologie 2012 ; 2012 >   
+    au < manifest ; exists ; 2001 ; Aktuelle Trauatologie 2001 ; 2001 >   
+    au < manifest ; exists ; 2002 ; Aktuelle Trauatologie 2002 ; 2002 >   
+    au < manifest ; exists ; 2003 ; Aktuelle Trauatologie 2003 ; 2003 >   
+    au < manifest ; exists ; 2004 ; Aktuelle Trauatologie 2004 ; 2004 >   
+    au < manifest ; exists ; 2005 ; Aktuelle Trauatologie 2005 ; 2005 >   
+    au < manifest ; exists ; 2006 ; Aktuelle Trauatologie 2006 ; 2006 >   
+    au < manifest ; exists ; 2007 ; Aktuelle Trauatologie 2007 ; 2007 >   
+    au < manifest ; exists ; 2008 ; Aktuelle Trauatologie 2008 ; 2008 >   
+    au < manifest ; exists ; 2009 ; Aktuelle Trauatologie 2009 ; 2009 >   
+    au < manifest ; exists ; 2010 ; Aktuelle Trauatologie 2010 ; 2010 >   
+    au < manifest ; exists ; 2011 ; Aktuelle Trauatologie 2011 ; 2011 >   
+    au < manifest ; exists ; 2012 ; Aktuelle Trauatologie 2012 ; 2012 >   
    
    }
    
@@ -245,6 +245,38 @@
     param[journal_id] = 10.1055/s-00000007
     comment[years] = 1980-current   
     
+    au < manifest ; exists ; 1981 ; Aktuelle Urologie 1981 ; 1981 >   
+    au < manifest ; exists ; 1982 ; Aktuelle Urologie 1982 ; 1982 >   
+    au < manifest ; exists ; 1983 ; Aktuelle Urologie 1983 ; 1983 >   
+    au < manifest ; exists ; 1984 ; Aktuelle Urologie 1984 ; 1984 >   
+    au < manifest ; exists ; 1985 ; Aktuelle Urologie 1985 ; 1985 >   
+    au < manifest ; exists ; 1986 ; Aktuelle Urologie 1986 ; 1986 >   
+    au < manifest ; exists ; 1987 ; Aktuelle Urologie 1987 ; 1987 >   
+    au < manifest ; exists ; 1988 ; Aktuelle Urologie 1988 ; 1988 >   
+    au < manifest ; exists ; 1989 ; Aktuelle Urologie 1989 ; 1989 >   
+    au < manifest ; exists ; 1990 ; Aktuelle Urologie 1990 ; 1990 >
+    au < manifest ; exists ; 1991 ; Aktuelle Urologie 1991 ; 1991 >
+    au < manifest ; exists ; 1992 ; Aktuelle Urologie 1992 ; 1992 >
+    au < manifest ; exists ; 1993 ; Aktuelle Urologie 1993 ; 1993 >
+    au < manifest ; exists ; 1994 ; Aktuelle Urologie 1994 ; 1994 >
+    au < manifest ; exists ; 1995 ; Aktuelle Urologie 1995 ; 1995 >
+    au < manifest ; exists ; 1996 ; Aktuelle Urologie 1996 ; 1996 >
+    au < manifest ; exists ; 1997 ; Aktuelle Urologie 1997 ; 1997 >
+    au < manifest ; exists ; 1998 ; Aktuelle Urologie 1998 ; 1998 >
+    au < manifest ; exists ; 1999 ; Aktuelle Urologie 1999 ; 1999 >
+    au < manifest ; exists ; 2000 ; Aktuelle Urologie 2000 ; 2000 >   
+    au < manifest ; exists ; 2001 ; Aktuelle Urologie 2001 ; 2001 >   
+    au < manifest ; exists ; 2002 ; Aktuelle Urologie 2002 ; 2002 >   
+    au < manifest ; exists ; 2003 ; Aktuelle Urologie 2003 ; 2003 >   
+    au < manifest ; exists ; 2004 ; Aktuelle Urologie 2004 ; 2004 >   
+    au < manifest ; exists ; 2005 ; Aktuelle Urologie 2005 ; 2005 >   
+    au < manifest ; exists ; 2006 ; Aktuelle Urologie 2006 ; 2006 >   
+    au < manifest ; exists ; 2007 ; Aktuelle Urologie 2007 ; 2007 >   
+    au < manifest ; exists ; 2008 ; Aktuelle Urologie 2008 ; 2008 >   
+    au < manifest ; exists ; 2009 ; Aktuelle Urologie 2009 ; 2009 >   
+    au < manifest ; exists ; 2010 ; Aktuelle Urologie 2010 ; 2010 >   
+    au < manifest ; exists ; 2011 ; Aktuelle Urologie 2011 ; 2011 >   
+    au < manifest ; exists ; 2012 ; Aktuelle Urologie 2012 ; 2012 >   
     
 
    }
