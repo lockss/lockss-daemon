@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>down for selected AUs - publisher in process of implementing fix</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.iop.ClockssIOPSciencePlugin</string>
   </entry>
@@ -132,7 +136,6 @@
       </entry>
     </map>
   </entry>
-  
   <entry>
     <string>clockss_override</string>
     <map>
