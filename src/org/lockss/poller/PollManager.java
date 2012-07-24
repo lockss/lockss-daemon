@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.248 2012-07-24 18:38:14 barry409 Exp $
+ * $Id: PollManager.java,v 1.249 2012-07-24 21:15:54 barry409 Exp $
  */
 
 /*
@@ -2241,7 +2241,6 @@ public class PollManager
     private BasePoll poll;
     private PollSpec spec;
     private Deadline pollDeadline;
-    private Deadline deadline;
     private int type;
     private String key;
 
@@ -2250,7 +2249,6 @@ public class PollManager
       spec = p.getPollSpec();
       type = p.getPollSpec().getPollType();
       pollDeadline = p.getDeadline();
-      deadline = null;
       key = p.getKey();
     }
 
@@ -2277,10 +2275,6 @@ public class PollManager
 
     synchronized void setPollSuspended() {
       // todo(bhayes): Why is this synchronized?
-      if(deadline != null) {
-	deadline.expire();
-	deadline = null;
-      }
       poll.getVoteTally().setStateSuspended();
     }
 
@@ -2326,12 +2320,10 @@ public class PollManager
       return spec;
     }
 
+    // V1 only; V3 uses the current deadline in the V3Poller and V3Voter.
+    /** Return the Deadline in effect when the poll was first created. */
     public Deadline getPollDeadline() {
       return pollDeadline;
-    }
-
-    public Deadline getDeadline() {
-      return deadline;
     }
 
     public boolean isSamePoll(PollSpec otherSpec) {
