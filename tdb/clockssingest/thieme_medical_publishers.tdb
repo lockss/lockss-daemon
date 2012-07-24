@@ -282,18 +282,6 @@
    }
   
    {
-     title <
-       name = Allgemein- und Viszeralchirurgie up2date ;
-       issn = 1611-6437 ;
-       eissn = 1611-6461
-       
-     >
-     param[journal_id] = 10.1055/s-00000147
-     comment[years] = 2007-current  
-       
-   }     
-  
-   {
     title <
       name = Allgemeine Homöopathische Zeitung ;
       issn = 1438-2563 ;
@@ -303,7 +291,67 @@
     param[journal_id] = 10.1055/s-00000008
     comment[years] = 1948-current
     
+    au < exists ; exists ; 1970 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
+    au < exists ; exists ; 1971 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
+    au < exists ; exists ; 1972 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
+    au < exists ; exists ; 1973 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
+    au < exists ; exists ; 1974 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
+    au < exists ; exists ; 1975 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
+    au < exists ; exists ; 1976 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
+    au < exists ; exists ; 1977 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
+    au < exists ; exists ; 1978 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
+    au < exists ; exists ; 1979 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
+    au < exists ; exists ; 1980 ; Allgemeine Homöopathische Zeitung 1980 ; 1980 >   
+    au < exists ; exists ; 1981 ; Allgemeine Homöopathische Zeitung 1981 ; 1981 >   
+    au < exists ; exists ; 1982 ; Allgemeine Homöopathische Zeitung 1982 ; 1982 >   
+    au < exists ; exists ; 1983 ; Allgemeine Homöopathische Zeitung 1983 ; 1983 >   
+    au < exists ; exists ; 1984 ; Allgemeine Homöopathische Zeitung 1984 ; 1984 >   
+    au < exists ; exists ; 1985 ; Allgemeine Homöopathische Zeitung 1985 ; 1985 >   
+    au < exists ; exists ; 1986 ; Allgemeine Homöopathische Zeitung 1986 ; 1986 >   
+    au < exists ; exists ; 1987 ; Allgemeine Homöopathische Zeitung 1987 ; 1987 >   
+    au < exists ; exists ; 1988 ; Allgemeine Homöopathische Zeitung 1988 ; 1988 >   
+    au < exists ; exists ; 1989 ; Allgemeine Homöopathische Zeitung 1989 ; 1989 >
+    au < exists ; exists ; 1990 ; Allgemeine Homöopathische Zeitung 1990 ; 1990 >   
+    au < exists ; exists ; 1991 ; Allgemeine Homöopathische Zeitung 1991 ; 1991 >   
+    au < exists ; exists ; 1992 ; Allgemeine Homöopathische Zeitung 1992 ; 1992 >   
+    au < exists ; exists ; 1993 ; Allgemeine Homöopathische Zeitung 1993 ; 1993 >   
+    au < exists ; exists ; 1994 ; Allgemeine Homöopathische Zeitung 1994 ; 1994 >   
+    au < exists ; exists ; 1995 ; Allgemeine Homöopathische Zeitung 1995 ; 1995 >   
+    au < exists ; exists ; 1996 ; Allgemeine Homöopathische Zeitung 1996 ; 1996 >   
+    au < exists ; exists ; 1997 ; Allgemeine Homöopathische Zeitung 1997 ; 1997 >   
+    au < exists ; exists ; 1998 ; Allgemeine Homöopathische Zeitung 1998 ; 1998 >   
+    au < exists ; exists ; 1999 ; Allgemeine Homöopathische Zeitung 1999 ; 1999 >   
+    au < exists ; exists ; 2000 ; Allgemeine Homöopathische Zeitung 2000 ; 2000 >   
+    au < exists ; exists ; 2001 ; Allgemeine Homöopathische Zeitung 2001 ; 2001 >   
+    au < exists ; exists ; 2002 ; Allgemeine Homöopathische Zeitung 2002 ; 2002 >   
+    au < exists ; exists ; 2003 ; Allgemeine Homöopathische Zeitung 2003 ; 2003 >   
+    au < exists ; exists ; 2004 ; Allgemeine Homöopathische Zeitung 2004 ; 2004 >   
+    au < exists ; exists ; 2005 ; Allgemeine Homöopathische Zeitung 2005 ; 2005 >   
+    au < exists ; exists ; 2006 ; Allgemeine Homöopathische Zeitung 2006 ; 2006 >   
+    au < exists ; exists ; 2007 ; Allgemeine Homöopathische Zeitung 2007 ; 2007 >   
+    au < exists ; exists ; 2008 ; Allgemeine Homöopathische Zeitung 2008 ; 2008 >   
+    au < exists ; exists ; 2009 ; Allgemeine Homöopathische Zeitung 2009 ; 2009 >   
+    au < exists ; exists ; 2010 ; Allgemeine Homöopathische Zeitung 2010 ; 2010 >   
+    au < exists ; exists ; 2011 ; Allgemeine Homöopathische Zeitung 2011 ; 2011 >   
+    au < exists ; exists ; 2012 ; Allgemeine Homöopathische Zeitung 2012 ; 2012 >   
+    
     }
+    
+   {
+     title <
+       name = Allgemein- und Viszeralchirurgie up2date ;
+       issn = 1611-6437 ;
+       eissn = 1611-6461
+       
+     >
+     param[journal_id] = 10.1055/s-00000147
+     comment[years] = 2007-current  
+     
+    au < exists ; exists ; 2010 ; Allgemein- und Viszeralchirurgie up2date 2010 ; 2010 >   
+    au < exists ; exists ; 2011 ; Allgemein- und Viszeralchirurgie up2date 2011 ; 2011 >   
+    au < exists ; exists ; 2012 ; Allgemein- und Viszeralchirurgie up2date 2012 ; 2012 >   
+       
+   }     
     
     {
       title <
