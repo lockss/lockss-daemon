@@ -5,6 +5,9 @@
   >
 
   rights = openaccess
+  
+  {
+  
   plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
   param[base_url] = http://www.gpo.gov/
   implicit < status ; year ; name ; param[year] >
@@ -776,6 +779,8 @@
 
   }
 
+
+
   {
 
     title <
@@ -950,5 +955,8 @@
     au < released ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; 2009 >
       
   }
+  
+  }
+  
 
 }
