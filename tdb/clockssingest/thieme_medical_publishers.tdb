@@ -3,6 +3,7 @@
   publisher <
     name = Thieme Medical Publishers
   >
+  attr[contract] = 2010
   param[base_url] = https://www.thieme-connect.com/
   plugin = needs.plugin
   implicit < status ; status2 ; year ; name ; param[year] >
