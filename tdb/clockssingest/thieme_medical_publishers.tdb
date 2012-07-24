@@ -362,6 +362,10 @@
       >  
       param[journal_id] = 10.1055/s-00000009
       comment[years] = 1983-current
+
+    au < exists ; exists ; American Journal of Perinatology 2010 ;  2010 ; 2010 >   
+    au < exists ; exists ; American Journal of Perinatology 2011 ;  2011 ; 2011 >   
+    au < exists ; exists ; American Journal of Perinatology 2012 ;  2012 ; 2012 >   
         
    }     
   
@@ -375,6 +379,10 @@
     param[journal_id] = 10.1055/s-00000169
     comment[years] = 2011-current
     
+    au < exists ; exists ; American Journal of Perinatology Reports 2010 ;  2010 ; 2010 >   
+    au < exists ; exists ; American Journal of Perinatology Reports 2011 ;  2011 ; 2011 >   
+    au < exists ; exists ; American Journal of Perinatology Reports 2012 ;  2012 ; 2012 >   
+    
    }
       
    {
@@ -387,6 +395,10 @@
     param[journal_id] = 10.1055/s-00000175
     comment[years] = 1999-current  
     comment[0] = includes Arzneimittelforschung Drug Research
+    
+    au < exists ; exists ; Arzneimittelforschung 2010 ;  2010 ; 2010 >   
+    au < exists ; exists ; Arzneimittelforschung 2011 ;  2011 ; 2011 >   
+    au < exists ; exists ; Arzneimittelforschung 2012 ;  2012 ; 2012 >   
     
     
    }    
