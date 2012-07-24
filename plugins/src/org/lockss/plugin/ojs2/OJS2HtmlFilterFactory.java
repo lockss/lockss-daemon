@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.4 2012-06-27 06:20:45 thib_gc Exp $
+ * $Id: OJS2HtmlFilterFactory.java,v 1.5 2012-07-24 22:05:25 davidecorcoran Exp $
  */
 
 /*
@@ -57,6 +57,8 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "id", "custom"),
             // Site customizations often involve Javascript (e.g. Google Analytics), which can change over time
             new TagNameFilter("script"),
+            // Date accessed is a variable
+            HtmlNodeFilters.tagWithTextRegex("div", "Date accessed: "),
             // The version of the OJS software, which can change over time, appears in a tag
             HtmlNodeFilters.tagWithAttribute("meta", "name", "generator"),
         };

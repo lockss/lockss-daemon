@@ -64,6 +64,18 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
 			 "<div id=\"header\"><div id=\"custom\"></div></div>";
   private static final String customHtmlFiltered =
 	  		 "<div id=\"header\"></div>";
+  
+  private static final String dateAccessedHtml = 
+    "<div class=\"separator\">" +
+  		"</div><div id=\"citation\">SMITH, J., DOE, J..Article " +
+  		"title that goes on for a little ways.<strong>Journal Title</strong>, North America, " +
+  		"1,may. 2010. Available at: &lt;<a href=\"http://sampleurl." +
+  		"net/index.php/more/path/here\" target=\"_new\">http://sampleurl" +
+  		".net/index.php/more/path/here</a>&gt;. Date accessed" +
+  		": 13 Jul. 2012.</div></div><div class=\"separator\"></div>";
+  
+  private static final String dateAccessedHtmlFiltered = 
+    "<div class=\"separator\"></div></div><div class=\"separator\"></div>";
 
   
   public void testSidebarKeywordCloudFiltering() throws Exception {
@@ -89,6 +101,15 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
 				  										 Constants.DEFAULT_ENCODING);
 		  
       assertEquals(customHtmlFiltered, StringUtil.fromInputStream(actIn));
+    
+  }
+  
+  public void testDateAccessed() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+                               new StringInputStream(dateAccessedHtml),
+                               Constants.DEFAULT_ENCODING);
+      
+      assertEquals(dateAccessedHtmlFiltered, StringUtil.fromInputStream(actIn));
     
   }
   
