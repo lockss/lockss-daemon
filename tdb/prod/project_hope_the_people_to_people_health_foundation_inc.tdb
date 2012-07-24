@@ -17,20 +17,20 @@
     param[base_url] = http://content.healthaffairs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < ready ; 1981 ; Health Affairs Volume 1 ; 1 >
-    au < ready ; 1983 ; Health Affairs Volume 2 ; 2 >
-    au < ready ; 1984 ; Health Affairs Volume 3 ; 3 >
-    au < ready ; 1985 ; Health Affairs Volume 4 ; 4 >
-    au < ready ; 1986 ; Health Affairs Volume 5 ; 5 >
-    au < ready ; 1987 ; Health Affairs Volume 6 ; 6 >
-    au < ready ; 1988 ; Health Affairs Volume 7 ; 7 >
-    au < ready ; 1989 ; Health Affairs Volume 8 ; 8 >
-    au < ready ; 1990 ; Health Affairs Volume 9 ; 9 >
-    au < ready ; 1991 ; Health Affairs Volume 10 ; 10 >
-    au < ready ; 1992 ; Health Affairs Volume 11 ; 11 >
-    au < ready ; 1993 ; Health Affairs Volume 12 ; 12 >
-    au < ready ; 1994 ; Health Affairs Volume 13 ; 13 >
-    au < ready ; 1995 ; Health Affairs Volume 14 ; 14 >
+    au < releasing ; 1981 ; Health Affairs Volume 1 ; 1 >
+    au < releasing ; 1983 ; Health Affairs Volume 2 ; 2 >
+    au < releasing ; 1984 ; Health Affairs Volume 3 ; 3 >
+    au < releasing ; 1985 ; Health Affairs Volume 4 ; 4 >
+    au < releasing ; 1986 ; Health Affairs Volume 5 ; 5 >
+    au < releasing ; 1987 ; Health Affairs Volume 6 ; 6 >
+    au < releasing ; 1988 ; Health Affairs Volume 7 ; 7 >
+    au < releasing ; 1989 ; Health Affairs Volume 8 ; 8 >
+    au < releasing ; 1990 ; Health Affairs Volume 9 ; 9 >
+    au < releasing ; 1991 ; Health Affairs Volume 10 ; 10 >
+    au < releasing ; 1992 ; Health Affairs Volume 11 ; 11 >
+    au < releasing ; 1993 ; Health Affairs Volume 12 ; 12 >
+    au < releasing ; 1994 ; Health Affairs Volume 13 ; 13 >
+    au < releasing ; 1995 ; Health Affairs Volume 14 ; 14 >
     au < testing ; 1996 ; Health Affairs Volume 15 ; 15 >
     au < released ; 1997 ; Health Affairs Volume 16 ; 16 >
     au < released ; 1998 ; Health Affairs Volume 17 ; 17 >

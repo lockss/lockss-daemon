@@ -17,23 +17,23 @@
     implicit < status ; year ; name ; param[base_url] ; param[volume] ; nondefparam[issues] >
     
     comment[special_issues] = "Some special issues also have the volume name in the URL and don't require inclusion in the nondefparam. -- bhayes"
-    au < ready ; 1995 ; Early Modern Literary Studies Volume 1 ; http://extra.shu.ac.uk/emls/ ; 1 ; >
-    au < ready ; 1996 ; Early Modern Literary Studies Volume 2 ; http://extra.shu.ac.uk/emls/ ; 2 ; >
-    au < ready ; 1997-1998 ; Early Modern Literary Studies Volume 3 ; http://extra.shu.ac.uk/emls/ ; 3 ; si-01,si-02 >
-    au < ready ; 1998-1999 ; Early Modern Literary Studies Volume 4 ; http://extra.shu.ac.uk/emls/ ; 4 ; >
-    au < ready ; 1999-2000 ; Early Modern Literary Studies Volume 5 ; http://extra.shu.ac.uk/emls/ ; 5 ; >
-    au < ready ; 2000-2001 ; Early Modern Literary Studies Volume 6 ; http://extra.shu.ac.uk/emls/ ; 6 ; >
-    au < ready ; 2001-2002 ; Early Modern Literary Studies Volume 7 ; http://extra.shu.ac.uk/emls/ ; 7 ; si-07,si-09 >
-    au < ready ; 2002-2003 ; Early Modern Literary Studies Volume 8 ; http://extra.shu.ac.uk/emls/ ; 8 ; >
+    au < releasing ; 1995 ; Early Modern Literary Studies Volume 1 ; http://extra.shu.ac.uk/emls/ ; 1 ; >
+    au < releasing ; 1996 ; Early Modern Literary Studies Volume 2 ; http://extra.shu.ac.uk/emls/ ; 2 ; >
+    au < releasing ; 1997-1998 ; Early Modern Literary Studies Volume 3 ; http://extra.shu.ac.uk/emls/ ; 3 ; si-01,si-02 >
+    au < releasing ; 1998-1999 ; Early Modern Literary Studies Volume 4 ; http://extra.shu.ac.uk/emls/ ; 4 ; >
+    au < releasing ; 1999-2000 ; Early Modern Literary Studies Volume 5 ; http://extra.shu.ac.uk/emls/ ; 5 ; >
+    au < releasing ; 2000-2001 ; Early Modern Literary Studies Volume 6 ; http://extra.shu.ac.uk/emls/ ; 6 ; >
+    au < releasing ; 2001-2002 ; Early Modern Literary Studies Volume 7 ; http://extra.shu.ac.uk/emls/ ; 7 ; si-07,si-09 >
+    au < releasing ; 2002-2003 ; Early Modern Literary Studies Volume 8 ; http://extra.shu.ac.uk/emls/ ; 8 ; >
     au < superseded ; 2003-2004 ; Early Modern Literary Studies Volume 9 [superseded] ; http://www.shu.ac.uk/emls/ ; 9 ; >
-    au < ready ; 2003-2004 ; Early Modern Literary Studies Volume 9 ; http://extra.shu.ac.uk/emls/ ; 9 ; si-13 >
-    au < ready ; 2004-2005 ; Early Modern Literary Studies Volume 10 ; http://extra.shu.ac.uk/emls/ ; 10 ; si-14 >
-    au < ready ; 2005-2006 ; Early Modern Literary Studies Volume 11 ; http://extra.shu.ac.uk/emls/ ; 11 ; >
-    au < ready ; 2006-2007 ; Early Modern Literary Studies Volume 12 ; http://extra.shu.ac.uk/emls/ ; 12 ; >
-    au < ready ; 2007-2008 ; Early Modern Literary Studies Volume 13 ; http://extra.shu.ac.uk/emls/ ; 13 ; si-15,si-16 >
-    au < ready ; 2008-2009 ; Early Modern Literary Studies Volume 14 ; http://extra.shu.ac.uk/emls/ ; 14 ; >
-    au < ready ; 2009-2010 ; Early Modern Literary Studies Volume 15 ; http://extra.shu.ac.uk/emls/ ; 15 ; si-19 >
-    au < ready ; 2012 ; Early Modern Literary Studies Volume 16 ; http://extra.shu.ac.uk/emls/ ; 16 ; >
+    au < releasing ; 2003-2004 ; Early Modern Literary Studies Volume 9 ; http://extra.shu.ac.uk/emls/ ; 9 ; si-13 >
+    au < releasing ; 2004-2005 ; Early Modern Literary Studies Volume 10 ; http://extra.shu.ac.uk/emls/ ; 10 ; si-14 >
+    au < releasing ; 2005-2006 ; Early Modern Literary Studies Volume 11 ; http://extra.shu.ac.uk/emls/ ; 11 ; >
+    au < releasing ; 2006-2007 ; Early Modern Literary Studies Volume 12 ; http://extra.shu.ac.uk/emls/ ; 12 ; >
+    au < releasing ; 2007-2008 ; Early Modern Literary Studies Volume 13 ; http://extra.shu.ac.uk/emls/ ; 13 ; si-15,si-16 >
+    au < releasing ; 2008-2009 ; Early Modern Literary Studies Volume 14 ; http://extra.shu.ac.uk/emls/ ; 14 ; >
+    au < releasing ; 2009-2010 ; Early Modern Literary Studies Volume 15 ; http://extra.shu.ac.uk/emls/ ; 15 ; si-19 >
+    au < releasing ; 2012 ; Early Modern Literary Studies Volume 16 ; http://extra.shu.ac.uk/emls/ ; 16 ; >
   
   }
 
