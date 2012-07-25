@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.8 2011-05-18 16:34:55 barry409 Exp $
+# $Id: tdbparse.py,v 1.9 2012-07-25 02:02:06 thib_gc Exp $
 
-# Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.3'''
+__version__ = '''0.3.4'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -179,6 +179,12 @@ class TdbScanner(object):
     The constructor accepts keyword arguments which are interpreted
     as options. Option keys cannot begin with an underscore.'''
 
+    RE_WHITE1 = re.compile(r'\s+')
+    RE_WHITE0EOL = re.compile(r'\s*$')
+    RE_SEMIANGLE = re.compile(r'[;>]')
+    RE_KEYWORD = re.compile(r'(publisher|title|au|implicit)(\s|<|$)')
+    RE_IDENTIFIER = re.compile(r'[a-zA-Z0-9_./]+')
+
     def __init__(self, file, options):
         '''Constructor.
 
@@ -202,7 +208,7 @@ class TdbScanner(object):
         # File is closed
         if self.__file.closed: raise RuntimeError, 'file already closed'
         # Maybe advance to next line or lines
-        while re.match(r'\s*$', self.__cur):
+        while TdbScanner.RE_WHITE0EOL.match(self.__cur):
             # Empty bare string
             if self.__stringFlag == TdbparseToken.EQUAL:
                 self.__stringFlag = None
@@ -220,15 +226,15 @@ class TdbScanner(object):
             if self.__cur.endswith('\n'): self.__cur = self.__cur[0:-1]
             # Optional debug output
             if self.__options.tdbparse_echo_lines: sys.stderr.write(self.__cur + '\n')
-            match = re.match(r'\s+', self.__cur)
+            match = TdbScanner.RE_WHITE1.match(self.__cur)
             if match: self.__move(match.end())
         # Skip initial whitespace
-        match = re.match(r'\s+', self.__cur)
+        match = TdbScanner.RE_WHITE1.match(self.__cur)
         if match: self.__move(match.end())
         # Strings
         if self.__stringFlag in [TdbparseToken.EQUAL, TdbparseToken.SEMICOLON]:
             # Empty bare string
-            if re.match(r'[;>]', self.__cur):
+            if TdbScanner.RE_SEMIANGLE.match(self.__cur):
                 if self.__stringFlag == TdbparseToken.EQUAL:
                     self.__stringFlag = None
                 else:
@@ -241,7 +247,7 @@ class TdbScanner(object):
             # Bare string
             return self.__bstring()
         # Keywords
-        match = re.match(r'(publisher|title|au|implicit)(\s|<|$)', self.__cur)
+        match = TdbScanner.RE_KEYWORD.match(self.__cur)
         if match: return self.__keyword(match)
         # Single-character tokens
         if self.__cur.startswith(TdbparseLiteral.CURLY_OPEN): return self.__single(TdbparseToken.CURLY_OPEN)
@@ -263,7 +269,7 @@ class TdbScanner(object):
             self.__stringFlag = TdbparseToken.EQUAL
             return self.__single(TdbparseToken.EQUAL)
         # Identifiers
-        match = re.match(r'[a-zA-Z0-9_./]+', self.__cur)
+        match = TdbScanner.RE_IDENTIFIER.match(self.__cur)
         if match:
             self.__token(TdbparseToken.IDENTIFIER)
             self.__tok.set_value(match.group())
