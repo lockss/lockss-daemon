@@ -1,5 +1,5 @@
 /*
- * $Id: I18nUtil.java,v 1.2 2012-07-22 01:40:21 pgust Exp $
+ * $Id: I18nUtil.java,v 1.3 2012-07-25 09:56:35 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,10 @@ import org.xnap.commons.i18n.I18nFactory;
  */
 public class I18nUtil {
 
-  protected static Logger log = Logger.getLogger("I18nUtil");
+  // Avoid circular loading dependencies.
+  protected static Logger log =
+    Logger.getLoggerWithInitialLevel("I18nUtil",
+				     Logger.getInitialDefaultLevel());
 
   /** The name of the default backup bundle. This should always be in the build. */
   private static final String defaultBundle = "DefaultBundle";
@@ -65,7 +68,7 @@ public class I18nUtil {
     try {
       i18n = I18nFactory.getI18n(clazz);
     } catch (MissingResourceException ex) {
-      log.error("Cannot initialize i18n for "+clazz, ex);
+      log.error("Cannot initialize i18n for " + clazz + ex.toString());
       // Try again, specifying the default bundle
       try {
         i18n = I18nFactory.getI18n(clazz, defaultBundle);
