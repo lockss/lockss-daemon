@@ -36,7 +36,7 @@
       comment[platform] = Atypon
       plugin = org.lockss.plugin.massachusettsmedicalsociety.MassachusettsMedicalSocietyPlugin
       param[base_url] = http://www.nejm.org/
-      param[journal_id] = nejm
+      param[base_url2] = http://cdn.nejm.org/
       implicit < status ; year ; name ; param[volume_name] >
 
       au < testing ; 2008 ; New England Journal of Medicine Volume 358 ; 358 > 
