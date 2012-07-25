@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.312 2012-07-21 19:25:41 easyonthemayo Exp $
+ $Id: build.xml,v 1.313 2012-07-25 09:55:07 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -247,6 +247,7 @@ Args:
             value="${lib}/gettext-commons-0.9.6.jar"/>
   <!-- TrueZIP -->
   <property name="truezip.version" value="7.5.5" />
+
   <property name="truezip-driver-file.jar"
 	    value="${lib}/truezip-driver-file-${truezip.version}.jar" />
   <property name="truezip-driver-tar.jar"
@@ -673,10 +674,8 @@ The target you have selected requires compiling under JDK 1.7.
   <!--  Public tasks -->
   <!-- ==================================================================== -->
   <target name="clean-all"
-     depends="clean"
-   description="Delete all generated files and dirs" >
-    <delete dir="${tdb.xml.dir}" quiet="true"/>
-  </target>
+     depends="clean,clean-tdbxml"
+   description="Delete all generated files and dirs" />
 
   <!-- Old target.  Remove  -->
   <target name="clean0" depends="clean"
@@ -742,6 +741,11 @@ The target you have selected requires compiling under JDK 1.7.
        <include name="*/**"/>
       </fileset>
     </delete>
+  </target>
+
+  <target name="clean-tdbxml"
+   description="Delete generated tdbxml files" >
+    <delete dir="${tdb.xml.dir}" quiet="true"/>
   </target>
 
   <!-- ==================================================================== -->
@@ -1045,10 +1049,10 @@ The target you have selected requires compiling under JDK 1.7.
   </target>
 
   <!-- ==================================================================== -->
-  <target name="tdb-pln" depends="compile-plugins,check.contrib"
+  <target name="tdb-pln"
 	  description="Process .tdb files for -Dplnname=PLN into .xml">
     <fail unless="plnname">
-Must specify pln with -Dplnname=name
+Must specify PLN name with -Dplnname=name
     </fail>
 
     <property name="indir" value="${tdb.src.dir}/${plnname}"/>
@@ -2410,6 +2414,14 @@ Test results in ${test.results}
                   preservelastmodified="true" >
               <fileset dir="${basedir}" >
                 <include name="lib/"/>
+                <exclude name="${lockss.jar}/"/>
+                <exclude name="${lockss.test.jar}/"/>
+                <exclude name="${lockss.plugins.jar}/"/>
+                <exclude name="${lockss.plugins.test.jar}/"/>
+                <exclude name="${lockss.ant.jar}/"/>
+                <exclude name="${lockss.tools.jar}/"/>
+                <exclude name="${lockss.tools.test.jar}/"/>
+                <exclude name="${lockss.platform.jar}/"/>
               </fileset>
             </copy>
           </then>
@@ -2521,11 +2533,11 @@ Test results in ${test.results}
   </target>
 
   <!-- ==================================================================== -->
-  <target name="pre-commit-test" depends="rebuild-all"
-   description="Synonym for rebuild-all." />
+  <target name="pre-commit-test" depends="clean,test-all"
+   description="Clean, build and test all." />
 
   <target name="post-commit-test" depends="checkout-and-build"
-   description="Synonym for checkout-and-build." />
+   description="Checkout current cvs into temp dir, build and test all." />
 
   <!-- ==================================================================== -->
   <target name="check.class.arg" unless="class.arg.specified" >
@@ -2584,34 +2596,42 @@ Test results in ${test.results}
   <target name="check.contrib"
    depends="prepare.contrib,load.ant-contrib" />
 
-  <target name="check.gettext" depends="load.gettext"/>
+  <!-- Fail if i18n language bundles aren't available -->
+  <!-- XXX This should test whether the language bundles are actually
+       present -->
+  <target name="require.i18n" depends="check.gettext">
+    <fail unless="gettext.available">Required language bundles can't be built.</fail>
+  </target>
 
   <!-- Load the Ant gettext tasks -->
-  <target name="load.gettext" depends="check.contrib" unless="gettext.loaded">
+  <target name="check.gettext" depends="check.contrib" unless="gettext.checked">
     <!-- Check for existence of gettext program msgfmt -->
     <trycatch>
       <try>
-        <exec executable="msgfmt" failifexecutionfails="true">
+        <exec executable="msgfmt"
+	      outputproperty="gettext.available.output"
+	      failifexecutionfails="true">
           <arg value="-V"/> <!-- Just get version -->
         </exec>
+	<!-- Load gettext-commons tasks -->
+	<taskdef name="gettext-extract" classpath="${gettext.tasks.jar}"
+		 classname="org.xnap.commons.ant.gettext.GettextExtractKeysTask" />
+	<taskdef name="gettext-merge" classpath="${gettext.tasks.jar}"
+		 classname="org.xnap.commons.ant.gettext.GettextMergeKeysTask"/>
+	<taskdef name="gettext-generate-default" classpath="${gettext.tasks.jar}"
+		 classname="org.xnap.commons.ant.gettext.GenerateDefaultBundleTask"/>
+	<taskdef name="gettext-dist" classpath="${gettext.tasks.jar}"
+		 classname="org.xnap.commons.ant.gettext.GettextDistTask"/>
+
         <!-- Set a flag if gettext is available -->
         <property name="gettext.available" value="true"/>
       </try>
       <catch>
-        <echo message="gettext is not available, continuing without i18n"/>
+        <echo message="Warning: gettext is not available, continuing without i18n"/>
       </catch>
     </trycatch>
-    
-    <!-- Load gettext-commons tasks -->
-    <taskdef name="gettext-extract" classpath="${gettext.tasks.jar}"
-             classname="org.xnap.commons.ant.gettext.GettextExtractKeysTask" />
-    <taskdef name="gettext-merge" classpath="${gettext.tasks.jar}"
-             classname="org.xnap.commons.ant.gettext.GettextMergeKeysTask"/>
-    <taskdef name="gettext-generate-default" classpath="${gettext.tasks.jar}"
-             classname="org.xnap.commons.ant.gettext.GenerateDefaultBundleTask"/>
-    <taskdef name="gettext-dist" classpath="${gettext.tasks.jar}"
-           classname="org.xnap.commons.ant.gettext.GettextDistTask"/>
-    <property name="gettext.loaded" value="true" />
+    <!-- Don't check again even if isn't available -->
+    <property name="gettext.checked" value="true" />
   </target>
   
   <target name="load.ant-contrib" unless="ant-contrib.loaded" >
@@ -2776,6 +2796,8 @@ optionally -Dtests= for tests to be run.
   <!-- ==================================================================== -->
   <!-- Package in which to place i18n messages -->
   <property name="i18n.bundle.pkg" value="org.lockss.i18n"/>
+  <!-- Rel dir corresponding to i18n.bundle.pkg -->
+  <property name="i18n.bundle.dir" value="org/lockss/i18n"/>
   <!-- Basename for i18n bundles in the package -->
   <property name="i18n.bundle.basename" value="Messages"/>
   <!-- Package and base class name in which to place i18n messages. 
@@ -2892,29 +2914,47 @@ optionally -Dtests= for tests to be run.
           depends="check.gettext,check.contrib" if="gettext.available">
     <fail unless="srcdir">Must specify srcdir with -Dsrcdir=dir</fail>
     <fail unless="clsdir">Must specify clsdir with -Dclsdir=dir</fail>
-    <!-- We have to convert the paths to relative paths as gettext tasks seem to assume they are relative. -->
-    <pathconvert property="relsrcdir">
-      <map from="${basedir}" to="."/>
-      <path location="${srcdir}"/>
-    </pathconvert>
-    <pathconvert property="relclsdir">
-      <map from="${basedir}" to="."/>
-      <path location="${clsdir}"/>
-    </pathconvert>
-    <echo message="Generating i18n message bundles in ${srcdir}" />
-    <property name="local.po.dir" value="${relsrcdir}/${i18n.dir}"/>
-    <property name="local.pot.file" value="${local.po.dir}/${i18n.default.pot.file}"/>
-    <!-- If the pot file exists, generate the default resource bundle first  -->
+    <property name="bundles.timestamp.file"
+	      value="${clsdir}/${i18n.bundle.dir}/.timestamp"/>
+    <uptodate property="bundles.are.up.to.date"
+	      targetfile="${bundles.timestamp.file}">
+      <srcfiles dir="${srcdir}" />
+    </uptodate>
     <if>
-      <available file="${local.pot.file}"/>
-      <then>
-        <echo message="Generating bundle from ${local.pot.file}"/>
-        <gettext-generate-default targetBundle="${i18n.bundle}" outputDirectory="${relclsdir}" potfile="${local.pot.file}"/>
-        <!-- Generate the other language bundles -->
-        <taskdef name="gettext-dist" classname="org.xnap.commons.ant.gettext.GettextDistTask" classpath="${gettext.tasks.jar}"/>
-        <gettext-dist targetBundle="${i18n.bundle}" percentage="${i18n.translation.threshold}"
-                      poDirectory="${local.po.dir}" outputDirectory="${relclsdir}"/>
-      </then>
+      <isset property="bundles.are.up.to.date" />
+      <else>
+	<!-- We have to convert the paths to relative paths as gettext
+	     tasks seem to assume they are relative. -->
+	<pathconvert property="relsrcdir">
+	  <map from="${basedir}" to="."/>
+	  <path location="${srcdir}"/>
+	</pathconvert>
+	<pathconvert property="relclsdir">
+	  <map from="${basedir}" to="."/>
+	  <path location="${clsdir}"/>
+	</pathconvert>
+	<echo message="Generating i18n message bundles in ${srcdir}" />
+	<property name="local.po.dir" value="${relsrcdir}/${i18n.dir}"/>
+	<property name="local.pot.file"
+		  value="${local.po.dir}/${i18n.default.pot.file}"/>
+	<!-- If the pot file exists, generate the default resource bundle
+	     first -->
+	<if>
+	  <available file="${local.pot.file}"/>
+	  <then>
+            <echo message="Generating bundle from ${local.pot.file}"/>
+            <gettext-generate-default targetBundle="${i18n.bundle}"
+				      outputDirectory="${relclsdir}"
+				      potfile="${local.pot.file}"/>
+            <!-- Generate the other language bundles -->
+            <gettext-dist targetBundle="${i18n.bundle}"
+			  percentage="${i18n.translation.threshold}"
+			  poDirectory="${local.po.dir}"
+			  outputDirectory="${relclsdir}"/>
+	    <touch file="${bundles.timestamp.file}" />
+	  </then>
+	</if>
+      </else>
     </if>
   </target>
 
@@ -2942,7 +2982,7 @@ optionally -Dtests= for tests to be run.
   </target>
 
   <!-- ==================================================================== -->
-  <!-- Extract message keys from the source code for all modules. -->
+  <!-- Merge messages into existing po files for all modules. -->
   <target name="i18n-merge-messages-all" 
           depends="check.gettext" if="gettext.available"
           description="Merge messages into existing po files">
@@ -2963,4 +3003,3 @@ optionally -Dtests= for tests to be run.
   </target>
 
 </project>
-
