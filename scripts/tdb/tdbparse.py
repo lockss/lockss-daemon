@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.9 2012-07-25 02:02:06 thib_gc Exp $
+# $Id: tdbparse.py,v 1.10 2012-07-25 03:43:30 thib_gc Exp $
 
 # Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.4'''
+__version__ = '''0.3.5'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -319,24 +319,26 @@ class TdbScanner(object):
         Double quotes and backslashes must be escaped.'''
         self.__token(TdbparseToken.STRING)
         val = []
-        self.__move(1) # Consume the opening quote
-        if self.__cur == '':
+        maxindex = len(self.__cur)
+        index = 1 # Consume the opening quote
+        if index >= maxindex:
             raise TdbparseSyntaxError('run-on quoted string', self.file_name(), self.__tok.line(), self.__tok.col())
-        ch = self.__cur[0]
+        ch = self.__cur[index]
         while ch != TdbparseLiteral.QUOTE_DOUBLE:
             if ch == '\\':
-                self.__move(1) # Consume the backslash
-                if self.__cur == '':
-                    raise TdbparseSyntaxError('end-of-line after backslash', self.file_name(), self.__tok.line(), self.__tok.col())
-                ch = self.__cur[0]
+                index = index + 1 # Consume the backslash
+                if index >= maxindex:
+                    raise TdbparseSyntaxError('end-of-line after backslash', self.file_name(), self.__tok.line(), self.__tok.col()+index)
+                ch = self.__cur[index]
                 if ch not in '"\\':
-                    raise TdbparseSyntaxError('invalid quoted string escape: %s' % ch, self.file_name(), self.__line, self.__col-1)
+                    raise TdbparseSyntaxError('invalid quoted string escape: %s' % ch, self.file_name(), self.__line, self.__col-1+index)
             val.append(ch)
-            self.__move(1) # Consume the character
-            if self.__cur == '':
-                raise TdbparseSyntaxError('run-on quoted string', self.file_name(), self.__tok.line(), self.__tok.col())
-            ch = self.__cur[0]
-        self.__move(1) # Consume the closing quote
+            index = index + 1 # Consume the character
+            if index >= maxindex:
+                raise TdbparseSyntaxError('run-on quoted string', self.file_name(), self.__tok.line(), self.__tok.col()+index)
+            ch = self.__cur[index]
+        index = index + 1 # Consume the closing quote
+        self.__move(index)
         self.__tok.set_value(''.join(val))
         if self.__stringFlag == TdbparseToken.EQUAL:
             self.__stringFlag = None
@@ -353,25 +355,28 @@ class TdbScanner(object):
         and trailing spaces must be escaped.'''
         self.__token(TdbparseToken.STRING)
         val = []
+        maxindex = len(self.__cur)
+        index = 0
         trailingSpace = False
         trailingSpaces = 0
-        while self.__cur != '':
-            ch = self.__cur[0]
+        while index < maxindex:
+            ch = self.__cur[index]
             if ch in [TdbparseLiteral.SEMICOLON, TdbparseLiteral.ANGLE_CLOSE]: break
             if ch == '\\':
-                self.__move(1) # Consume the backslash
-                if self.__cur == '':
-                    raise TdbparseSyntaxError('run-on quoted string', self.file_name(), self.__tok.line(), self.__tok.col())
-                ch = self.__cur[0]
+                index = index + 1 # Consume the backslash
+                if index >= maxindex:
+                    raise TdbparseSyntaxError('run-on quoted string', self.file_name(), self.__tok.line(), self.__tok.col()+index)
+                ch = self.__cur[index]
                 if ch not in ';> \\':
-                    raise TdbparseSyntaxError('invalid quoted string escape: %s' % ch, self.file_name(), self.__line, self.__col-1)
+                    raise TdbparseSyntaxError('invalid quoted string escape: %s' % ch, self.file_name(), self.__line, self.__col-1+index)
                 if ch == ' ': trailingSpace = True
             val.append(ch)
             if trailingSpace:
                 trailingSpaces = trailingSpaces + 1
                 trailingSpace = False
             elif ch != ' ': trailingSpaces = 0
-            self.__move(1) # Consume the character
+            index = index + 1 # Consume the character
+        self.__move(index)
         self.__tok.set_value(''.join(val).rstrip() + ' '*trailingSpaces)
         if self.__stringFlag == TdbparseToken.EQUAL:
             self.__stringFlag = None
