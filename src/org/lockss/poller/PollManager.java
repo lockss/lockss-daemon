@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.250 2012-07-24 22:26:25 barry409 Exp $
+ * $Id: PollManager.java,v 1.251 2012-07-25 20:54:57 barry409 Exp $
  */
 
 /*
@@ -227,33 +227,50 @@ public class PollManager
   public static class AuPeersMap extends HashMap<String,Set<PeerIdentity>> {}
   public static class Peer2PeerMap extends HashMap<PeerIdentity,PeerIdentity> {}
 
+  /**
+   * Maintain a collection of current and recent polls. The current
+   * collection contains V3Pollers and V3Voters which are generally
+   * expected to be able to handle incoming LcapMessages. 
+   *
+   * todo(bhayes): What's the relationship between being in this list
+   * and being in state "isPollActive"?
+   *
+   * Entries move from the current to the recent collection at the
+   * time they are closed. Entries remain in the recent collection
+   * only for a certain length of time. The recent collection is
+   * intended for the V3PollStatus, which needs to keep track of all
+   * the current polls, and the recent closed polls.
+   *
+   * Note: This documentation is intended to be accurate for V3; V1
+   * may or may not conform to this use.
+   */
   private static class EntryManager {
-
+    // todo(bhayes): Move this to its own file for testing.
     /**
-     * A collection of running polls.
+     * A collection of current polls.
      */
     private HashMap<String,PollManagerEntry> thePolls =
       new HashMap<String,PollManagerEntry>();
 
     // FixedTimedMap is not generic.
     /**
-     * A collection of finished polls, removed from the collection
-     * when they reach a certain age.
+     * A collection of finished polls, automatically deleted from the
+     * collection when they reach a certain age.
      */
     private FixedTimedMap theRecentPolls =
       new FixedTimedMap(DEFAULT_RECENT_EXPIRATION);
     
-    // Items are moved between thePolls and theRecentPolls, so it's simplest
-    // to synchronize all accesses on a single object, pollMapLock.
     private Object pollMapLock = thePolls;
 
-    void setExpireInterval(long recentPollExpireTime) {
+    /** Remember a current poll. It will remain available to
+     * getPollManagerEntry until it is closed by closePoll. */
+    void addPoll(BasePoll poll) {
       synchronized (pollMapLock) {
-	theRecentPolls.setInterval(recentPollExpireTime);
+	thePolls.put(poll.getKey(), new PollManagerEntry(poll));
       }
     }
 
-    /** Return the PollManagerEntry for the poll with the specified
+    /** Return the PollManagerEntry for the current poll with the specified
      * key. */
     PollManagerEntry getPollManagerEntry(String key) {
       synchronized (pollMapLock) {
@@ -261,34 +278,34 @@ public class PollManager
       }
     }
 
-    void addPoll(BasePoll poll) {
-      synchronized (pollMapLock) {
-	thePolls.put(poll.getKey(), new PollManagerEntry(poll));
+    /**
+     * Is there a current V3Poller for the given ArchivalUnit
+     * @param spec the ArchivalUnit
+     * @return true if we have a current V3Poller for au
+     */
+    public boolean isPollRunning(ArchivalUnit au) {
+      if (au == null || au.getAuId() == null) {
+	throw new NullPointerException("Passed a null AU or AU with null ID " 
+				       + "to isPollRunning!");
       }
-    }
-
-    PollManagerEntry removePoll(String key) {
       synchronized (pollMapLock) {
-	return thePolls.remove(key);
+	for (PollManagerEntry pme : thePolls.values()) {
+	  if (au.getAuId().equals(pme.getPollSpec().getAuId())) {
+	    if (pme.getPoll() instanceof V3Poller) {
+	      // todo(bhayes): is the isPollActive check required for V3?
+	      if (pme.isPollActive()) {
+		return true;
+	      }
+	    }
+	  }
+	}
       }
-    }
- 
-    void addRecentPoll(String key, PollManagerEntry pme) {
-      synchronized (pollMapLock) {
-	theRecentPolls.put(key, pme);
-      }
-    }
-
-    void clear() {
-      synchronized (pollMapLock) {
-	thePolls.clear();
-	theRecentPolls.clear();
-      }
+      return false;
     }
 
     /**
-     * @return a the set of PollManagerEntries which are running, and
-     * are concerned with this au.
+     * @return a Set of PollManagerEntries which are current, and are
+     * concerned with this au.
      */
     Set<PollManagerEntry> forAu(ArchivalUnit au) {
       Set<PollManagerEntry> forAu = new HashSet<PollManagerEntry>();
@@ -302,6 +319,139 @@ public class PollManager
       }
       return forAu;
     }
+
+    /** Remove the current poll. It will no longer be available from
+     * getPollManagerEntry, but will be available in the accessors for
+     * recent polls. */
+    PollManagerEntry closePoll(String key) {
+      synchronized (pollMapLock) {
+	PollManagerEntry pme = thePolls.remove(key);
+	if (pme != null && pme.poll != null) {
+	  theRecentPolls.put(key, pme);
+	}
+	return pme;
+      }
+    }
+
+    /** Set the time after which recent polls will expire. */
+    void setExpireInterval(long recentPollExpireTime) {
+      synchronized (pollMapLock) {
+	theRecentPolls.setInterval(recentPollExpireTime);
+      }
+    }
+ 
+    /** Remove all the polls, both current and recent. */
+    void clear() {
+      synchronized (pollMapLock) {
+	thePolls.clear();
+	theRecentPolls.clear();
+      }
+    }
+
+    /**
+     * @return the number of current V3Pollers.
+     */
+    int countActiveV3Pollers() {
+      int count = 0;
+      synchronized (pollMapLock) {
+	for (PollManagerEntry pme : thePolls.values()) {
+	  if (pme.isV3Poll() && pme.getPoll() instanceof V3Poller) {
+	    count++;
+	  }
+	}
+      }
+      return count;
+    }
+  
+    /**
+     * @return the number of current V3Pollers.
+     */
+    int countActiveV3Voters() {
+      int count = 0;
+      synchronized (pollMapLock) {
+	for (PollManagerEntry pme : thePolls.values()) {
+	  if (pme.isV3Poll() && pme.getPoll() instanceof V3Voter) {
+	    count++;
+	  }
+	}
+      }
+      return count;
+    }
+
+    //--------------- V3PollStatus Accessors from here -----------------------
+
+    /** Find the poll either in current or recent collection;
+     * reached only by V3PollStatus. */
+    PollManagerEntry getCurrentOrRecentV3PollEntry(String key) {
+      synchronized (pollMapLock) {
+	PollManagerEntry pme = thePolls.get(key);
+	if (pme == null) {
+	  pme = (PollManagerEntry)theRecentPolls.get(key);
+	}
+	if (pme != null && !pme.isV3Poll()) {
+	  throw new IllegalStateException("Expected V3Poll: "+key);
+	}
+	return pme;
+      }
+    }
+
+    /**
+     * @return the union of the current and recent V3Pollers
+     */
+    Collection<V3Poller> getV3Pollers() {
+      Collection<V3Poller> polls = new ArrayList<V3Poller>();
+      synchronized (pollMapLock) {
+	for (PollManagerEntry pme : thePolls.values()) {
+	  if (pme.isV3Poll() && pme.getPoll() instanceof V3Poller) {
+	    polls.add((V3Poller)pme.getPoll());
+	  }
+	}
+	for (Object o : theRecentPolls.values()) {
+	  PollManagerEntry pme = (PollManagerEntry)o;
+	  if (pme.isV3Poll() && pme.getPoll() instanceof V3Poller) {
+	    polls.add((V3Poller)pme.getPoll());
+	  }
+	}
+      }
+      return polls;
+    }
+
+    /**
+     * @return the union of the active and recent V3Voters
+     */
+    Collection<V3Voter> getV3Voters() {
+      Collection<V3Voter> polls = new ArrayList<V3Voter>();
+      synchronized (pollMapLock) {
+	for (PollManagerEntry pme : thePolls.values()) {
+	  if (pme.isV3Poll() && pme.getPoll() instanceof V3Voter) {
+	    polls.add((V3Voter)pme.getPoll());
+	  }
+	}
+	for (Object o : theRecentPolls.values()) {
+	  PollManagerEntry pme = (PollManagerEntry)o;
+	  if (pme.isV3Poll() && pme.getPoll() instanceof V3Voter) {
+	    polls.add((V3Voter)pme.getPoll());
+	  }
+	}
+      }
+      return polls;
+    }
+
+    // Reached only by TestPollManager.
+    /**
+     * @return true iff there is an entry in the recent polls, and
+     * the poll's isPollCompleted returns true.
+     */
+    boolean isPollClosed(String key) {
+      PollManagerEntry pme;
+      synchronized (pollMapLock) {
+	pme = (PollManagerEntry)theRecentPolls.get(key);
+      }
+      // todo(bhayes): is the isPollCompleted needed for V3?
+      return (pme != null) ? pme.isPollCompleted() : false;
+    }
+
+    //--------------- V1 Accessors from here -----------------------------
 
     /**
      * Is a poll of the given type and spec currently running
@@ -319,101 +469,6 @@ public class PollManager
 	}
       }
       return false;
-    }
-
-    public boolean isPollRunning(ArchivalUnit au) {
-      if (au == null || au.getAuId() == null) {
-	throw new NullPointerException("Passed a null AU or AU with null ID " 
-				       + "to isPollRunning!");
-      }
-      synchronized (pollMapLock) {
-	for (PollManagerEntry pme : thePolls.values()) {
-	  if (au.getAuId().equals(pme.getPollSpec().getAuId())) {
-	    // Keep looking until we find a V3Poller that is active, or
-	    // we run out of poll objects to examine.  If we find an active
-	    // poller, return right away.
-	    if (pme.getPoll() instanceof V3Poller) {
-	      if (pme.isPollActive()) {
-		return true;
-	      }
-	    }
-	  }
-	}
-      }
-      return false;
-    }
-
-    /** Find the poll either in current or recent polls */
-    PollManagerEntry getCurrentOrRecentV3PollEntry(String key) {
-      synchronized (pollMapLock) {
-	PollManagerEntry pme = thePolls.get(key);
-	if (pme == null) {
-	  pme = (PollManagerEntry)theRecentPolls.get(key);
-	}
-	if (pme != null && !pme.isV3Poll()) {
-	  throw new IllegalStateException("Expected V3Poll: "+key);
-	}
-	return pme;
-      }
-    }
-
-    Collection<V3Poller> getActiveV3Pollers() {
-      Collection<V3Poller> polls = new ArrayList<V3Poller>();
-      synchronized (pollMapLock) {
-	for (PollManagerEntry pme : thePolls.values()) {
-	  if (pme.isV3Poll() && pme.getPoll() instanceof V3Poller) {
-	    polls.add((V3Poller)pme.getPoll());
-	  }
-	}
-      }
-      return polls;
-    }
-
-    Collection<V3Poller> getRecentV3Pollers() {
-      Collection<V3Poller> polls = new ArrayList<V3Poller>();
-      synchronized (pollMapLock) {
-	for (Iterator it = theRecentPolls.values().iterator(); it.hasNext(); ) {
-	  PollManagerEntry pme = (PollManagerEntry)it.next();
-	  if (pme.isV3Poll() && pme.getPoll() instanceof V3Poller) {
-	    polls.add((V3Poller)pme.getPoll());
-	  }
-	}
-      }
-      return polls;
-    }
-  
-    Collection<V3Voter> getActiveV3Voters() {
-      Collection<V3Voter> polls = new ArrayList<V3Voter>();
-      synchronized (pollMapLock) {
-	for (PollManagerEntry pme : thePolls.values()) {
-	  if (pme.isV3Poll() && pme.getPoll() instanceof V3Voter) {
-	    polls.add((V3Voter)pme.getPoll());
-	  }
-	}
-      }
-      return polls;
-    }
-
-    Collection<V3Voter> getRecentV3Voters() {
-      Collection<V3Voter> polls = new ArrayList<V3Voter>();
-      synchronized (pollMapLock) {
-	for (Iterator it = theRecentPolls.values().iterator(); it.hasNext(); ) {
-	  PollManagerEntry pme = (PollManagerEntry)it.next();
-	  if (pme.isV3Poll() && pme.getPoll() instanceof V3Voter) {
-	    polls.add((V3Voter)pme.getPoll());
-	  }
-	}
-      }
-      return polls;
-    }
-
-    // Reached only by TestPollManager
-    boolean isPollClosed(String key) {
-      PollManagerEntry pme;
-      synchronized (pollMapLock) {
-	pme = (PollManagerEntry)theRecentPolls.get(key);
-      }
-      return (pme != null) ? pme.isPollCompleted() : false;
     }
 
     // Used only in V1PollFactory.
@@ -491,11 +546,13 @@ public class PollManager
     PollManagerEntry suspendPoll(String key) {
       PollManagerEntry pme;
       synchronized (pollMapLock) {
-	pme = getCurrentOrRecentV1PollEntry(key);
+	pme = this.getCurrentOrRecentV1PollEntry(key);
 	if (pme != null) {
+	  // todo(bhayes): Why is a poll that isn't already in
+	  // thePolls being suspended?
 	  theRecentPolls.remove(key);
-	  thePolls.put(key, pme);
 	  pme.setPollSuspended();
+	  thePolls.put(key, pme);
 	}
       }
       return pme;
@@ -1081,24 +1138,19 @@ public class PollManager
     return entryManager.isPollRunning(spec);
   }
   
+  /**
+   * Is a poll of the given ArchivalUnit currrently running
+   * @param au the ArchivalUnit
+   * @return true if we have a poll which is running for the ArchivalUnit
+   */
   public boolean isPollRunning(ArchivalUnit au) {
     return entryManager.isPollRunning(au);
-  }
-
-  /** Return the PollManagerEntry for the poll with the specified key. */
-  private PollManagerEntry getPollManagerEntry(String key) {
-    return entryManager.getPollManagerEntry(key);
   }
 
   // Used in PollerStatus.getSummary, which is V1 code.
   /** Find the poll either in current or recent polls */
   PollManagerEntry getCurrentOrRecentV1PollEntry(String key) {
     return entryManager.getCurrentOrRecentV1PollEntry(key);
-  }
-
-  /** Find the poll either in current or recent polls */
-  private PollManagerEntry getCurrentOrRecentV3PollEntry(String key) {
-    return entryManager.getCurrentOrRecentV3PollEntry(key);
   }
 
   // XXX: V3 -- Only required for V1 polls.
@@ -1139,7 +1191,7 @@ public class PollManager
   public void resumePoll(boolean replayNeeded,
 			 String key,
 			 ActivityRegulator.Lock lock) {
-    PollManagerEntry pme = getPollManagerEntry(key);
+    PollManagerEntry pme = entryManager.getPollManagerEntry(key);
     if(pme == null) {
       theLog.debug2("ignoring resume request for unknown key " + key);
       return;
@@ -1191,7 +1243,7 @@ public class PollManager
       // Needed for TestPollManager.testCloseThePoll to pass.
       pme = getCurrentOrRecentV1PollEntry(key);
     } else {
-      pme = getPollManagerEntry(key);
+      pme = entryManager.getPollManagerEntry(key);
     }
     if(pme != null) {
       if(pme.isPollCompleted() || pme.isPollSuspended()) {
@@ -1218,7 +1270,7 @@ public class PollManager
     String key = msg.getKey();
     BasePoll ret = null;
 
-    PollManagerEntry pme = getPollManagerEntry(key);
+    PollManagerEntry pme = entryManager.getPollManagerEntry(key);
     if (pme == null) {
       theLog.debug3("findPoll: Making new poll: " + key);
       // makePoll will add the poll to the entryMap.  todo(bhayes):
@@ -1345,7 +1397,7 @@ public class PollManager
    * @param key the poll signature
    */
   public void closeThePoll(String key)  {
-    PollManagerEntry pme = entryManager.removePoll(key);
+    PollManagerEntry pme = entryManager.closePoll(key);
     if (pme == null || pme.poll == null) {
       theLog.warning("Attempt to close unknown poll : " + key);
       return;
@@ -1355,9 +1407,6 @@ public class PollManager
     // PollTally tally = pme.poll.getVoteTally();
     BasePoll p = pme.getPoll();
     pme.setPollCompleted();
-    // todo(bhayes): No synchronized on the removePoll/addRecentPoll;
-    // display could see a list without the poll.
-    entryManager.addRecentPoll(key, pme);
     try {
       theIDManager.storeIdentities();
     } catch (ProtocolException ex) {
@@ -2063,7 +2112,7 @@ public class PollManager
         File dir = (File)pollDirIter.next();
         try {
           V3Poller p = new V3Poller(getDaemon(), dir);
-          addPoll(p);
+          entryManager.addPoll(p);
           p.startPoll();
         } catch (PollSerializerException e) {
           theLog.error("Unable to restore poller from dir: " + dir, e);
@@ -2080,7 +2129,7 @@ public class PollManager
         File dir = (File)voterDirIter.next();
         try {
           V3Voter v = new V3Voter(getDaemon(), dir);
-          addPoll(v);
+          entryManager.addPoll(v);
           v.startPoll();
         } catch (PollSerializerException e) {
           theLog.error("Unable to restore poller from dir: " + dir, e);
@@ -2098,22 +2147,6 @@ public class PollManager
   public Collection<PollManagerEntry> getV1Polls() {
     return entryManager.getV1Polls();
   }
-  
-  private Collection<V3Poller> getActiveV3Pollers() {
-    return entryManager.getActiveV3Pollers();
-  }
-
-  private Collection<V3Poller> getRecentV3Pollers() {
-    return entryManager.getRecentV3Pollers();
-  }
-  
-  private Collection<V3Voter> getActiveV3Voters() {
-    return entryManager.getActiveV3Voters();
-  }
-  
-  private Collection<V3Voter> getRecentV3Voters() {
-    return entryManager.getRecentV3Voters();
-  }
 
   /**
    * Check the current policy to see if a request for a new V3Voter
@@ -2125,8 +2158,7 @@ public class PollManager
     int maxVoters =
       CurrentConfig.getIntParam(V3Voter.PARAM_MAX_SIMULTANEOUS_V3_VOTERS,
                                 V3Voter.DEFAULT_MAX_SIMULTANEOUS_V3_VOTERS);
-    // todo(bhayes): Generating the list just to get the size.
-    int activeVoters = getActiveV3Voters().size();
+    int activeVoters = entryManager.countActiveV3Voters();
     if (activeVoters >= maxVoters) {
       theLog.info("Maximum number of active voters is " 
 	       + maxVoters + "; " + activeVoters + " are already running.");
@@ -2136,50 +2168,32 @@ public class PollManager
   }
   
   // Used by V3PollStatus.
-  // todo(bhayes): Should be on EntryManager, and synchronizing there.
-  public synchronized Collection getV3Pollers() {
-    Collection polls = new ArrayList();
-    polls.addAll(getActiveV3Pollers());
-    polls.addAll(getRecentV3Pollers());
-    return polls;
+  public Collection<V3Poller> getV3Pollers() {
+    return entryManager.getV3Pollers();
   }
   
   // Used by V3PollStatus
-  // todo(bhayes): Should be on EntryManager, and synchronizing there.
-  public synchronized Collection getV3Voters() {
-    Collection polls = new ArrayList();
-    polls.addAll(getActiveV3Voters());
-    polls.addAll(getRecentV3Voters());
-    return polls;
+  public Collection<V3Voter> getV3Voters() {
+    return entryManager.getV3Voters();
   }
 
   // Used by V3PollStatus
   public BasePoll getPoll(String key) {
-    PollManagerEntry pme = getCurrentOrRecentV3PollEntry(key);
+    PollManagerEntry pme = entryManager.getCurrentOrRecentV3PollEntry(key);
     if(pme != null) {
       return pme.getPoll();
     }
     return null;
   }
-  
-  /**
-   * remove the poll represented by the given key from the poll table and
-   * return it.
-   * @param key the String representation of the polls key
-   * @return Poll the poll if found or null
-   */
-  BasePoll removePoll(String key) {
-    PollManagerEntry pme = entryManager.removePoll(key);
-    return (pme != null) ? pme.poll : null;
-  }
 
+  // Used only in TestPollManager
   void addPoll(BasePoll p) {
     entryManager.addPoll(p);
   }
 
   // Used only in TestPollManager
   boolean isPollActive(String key) {
-    PollManagerEntry pme = getPollManagerEntry(key);
+    PollManagerEntry pme = entryManager.getPollManagerEntry(key);
     return (pme != null) ? pme.isPollActive() : false;
   }
 
@@ -2190,7 +2204,7 @@ public class PollManager
 
   // Used only in TestPollManager
   boolean isPollSuspended(String key) {
-    PollManagerEntry pme = getPollManagerEntry(key);
+    PollManagerEntry pme = entryManager.getPollManagerEntry(key);
     return (pme != null) ? pme.isPollSuspended() : false;
   }
 
@@ -2254,6 +2268,10 @@ public class PollManager
       key = p.getKey();
     }
 
+    // Note: V3Poller and V3Voter have only two states: excatly one of
+    // isPollActive or isPollCompleted will return true. In V1, there
+    // is also a "suspended" state.
+
     boolean isPollActive() {
       return poll.isPollActive();
     }
@@ -2302,6 +2320,7 @@ public class PollManager
       return Poll.POLL_NAME[type];
     }
 
+    // Only used in V1
     public String getShortKey() {
       return(key.substring(0,10));
     }
@@ -2538,8 +2557,7 @@ public class PollManager
     if (!enableV3Poller) {
       startOneWait.expireIn(paramMaxPollersSleep);
     } else {
-      // todo(bhayes): Generating the list just to get the size.
-      int activePollers = getActiveV3Pollers().size();
+      int activePollers = entryManager.countActiveV3Pollers();
       if (activePollers >= maxSimultaneousPollers) {
 	startOneWait.expireIn(paramMaxPollersSleep);
       } else {
@@ -2655,7 +2673,7 @@ public class PollManager
     ArchivalUnit au = req.au;
 
     // If a poll is already running, don't start another one.
-    if (isPollRunning(au)) {
+    if (entryManager.isPollRunning(au)) {
       throw new NotEligibleException("AU is already running a poll.");
     }
 
@@ -2753,7 +2771,7 @@ public class PollManager
 
   boolean startPoll(PollReq req) {
     ArchivalUnit au = req.getAu();
-    if (isPollRunning(au)) {
+    if (entryManager.isPollRunning(au)) {
       theLog.debug("Attempted to start poll when one is already running: " +
 		   au.getName());
       return false;

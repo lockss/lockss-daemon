@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.109 2012-07-17 21:05:08 barry409 Exp $
+ * $Id: TestPollManager.java,v 1.110 2012-07-25 20:54:57 barry409 Exp $
  */
 
 /*
@@ -253,21 +253,6 @@ public class TestPollManager extends LockssTestCase {
     catch (IOException ex) {
       fail("name poll couldn't be found");
     }
-  }
-
-
-  /** test for method removePoll(..) */
-  public void testRemovePoll() {
-    try {
-      BasePoll p1 = pollmanager.makePoll(v1Testmsg[0]);
-      assertNotNull(p1);
-      BasePoll p2 = pollmanager.removePoll(p1.getKey());
-      assertEquals(p1, p2);
-    }
-    catch (IOException ex) {
-      fail("name poll couldn't be found");
-    }
-
   }
 
   /** test for method closeThePoll(..) */

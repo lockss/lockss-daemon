@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.99 2007-08-14 03:10:26 smorabito Exp $
+ * $Id: TestPoll.java,v 1.100 2012-07-25 20:54:57 barry409 Exp $
  */
 
 /*
@@ -92,10 +92,6 @@ public class TestPoll extends LockssTestCase {
     theDaemon.getRouterManager().stopService();
     theDaemon.getSystemMetrics().stopService();
     TimeBase.setReal();
-    for(int i=0; i<testV1msg.length; i++) {
-      if (testV1msg[i] != null)
-	pollmanager.removePoll(testV1msg[i].getKey());
-    }
     super.tearDown();
   }
 
