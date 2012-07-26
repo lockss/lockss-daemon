@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.4 2012-04-06 23:13:57 dylanrhodes Exp $
+ * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.5 2012-07-26 16:36:59 pgust Exp $
  */
 
 /*
@@ -117,7 +117,7 @@ public class ElsevierTocMetadataExtractorFactory
       MetadataField.FIELD_END_PAGE,
 	  };
 	 
-	  private int lastTag = 0;
+	  private int lastTag = INVALID_TAG;
 	  private String base_url, year;
 	  
     /**
@@ -129,9 +129,9 @@ public class ElsevierTocMetadataExtractorFactory
 				throws IOException {
 			CachedUrl metadata = cu.getArchivalUnit().makeCachedUrl(getToc(cu.getUrl()));
 			
-			if(metadata.getUrl().equals(cu.getUrl()))
+			if(metadata.getUrl().equals(cu.getUrl())) {
 				metadata = cu;
-			
+			}
 			if (metadata == null || !metadata.hasContent()) {
 				log.error("The metadata file does not exist or is not readable.");
 				return;
@@ -142,8 +142,7 @@ public class ElsevierTocMetadataExtractorFactory
 
 			BufferedReader bReader = new BufferedReader(metadata.openForReading());
 			try {
-				for (String line = bReader.readLine(); line != null; line = bReader.readLine()) 
-				{
+				for (String line = bReader.readLine(); line != null; line = bReader.readLine()) { 
 					line = line.trim();
 
 					if (extractFrom(line) && articleValues[FILE_NAME_INDEX] != null) {
@@ -164,8 +163,9 @@ public class ElsevierTocMetadataExtractorFactory
 		}
     
 		private String getIssnFrom(String line) {
-      if(line.length() < 4)
+      if(line.length() < 4) {
         return "";
+      }
 		  int i = line.lastIndexOf(' ');
 		  if (i > 0) {
 		    return MetadataUtil.formatIssn(line.substring(i+1));
@@ -188,8 +188,9 @@ public class ElsevierTocMetadataExtractorFactory
     }
 
     private String getEndPageFrom(String line) {
-      if(line.length() < 4)
+      if(line.length() < 4) {
         return "";
+      }
       int i = line.indexOf(' ');
       if (i > 0) {
         int j = line.lastIndexOf('-');
@@ -204,21 +205,24 @@ public class ElsevierTocMetadataExtractorFactory
 
     private String getDoiFrom(String line)
     {
-    	if(line.contains("[DOI] "))
+    	if(line.contains("[DOI] ")) {
     		return line.substring(line.indexOf("[DOI] ")+DOI_LEN);
+    	}
     	return line;
     }
     
     private void clear(String[] values)
     {
-    	for(int i = FILE_NAME_INDEX; i < values.length; ++i)
+    	for(int i = FILE_NAME_INDEX; i < values.length; ++i) {
     		values[i] = null;
+    	}
     }
     
     private String getMetadataFrom(String line)
     {
-    	if(line.length() < 4)
+    	if(line.length() < 4) {
     		return "";
+    	}
     	return line.substring(4); //substring after '_xx' tag
     }
     
@@ -230,46 +234,51 @@ public class ElsevierTocMetadataExtractorFactory
      */
     private int getTagIndex(String line)
     {
-    	if(line.indexOf("_") < 0)
+    	if(line.indexOf("_") < 0) {
     		return REPEATED_TAG;
-    	
+    	}
     	String tag = line.substring(0,3);
     	
-    	if(tag.equals(END_ARTICLE_METADATA))
+    	if(tag.equals(END_ARTICLE_METADATA)) {
     		return ARTICLE_COMPLETE;
-    	else if(articleTags.contains(tag))
+    	} else if(articleTags.contains(tag)) {
     		return articleTags.indexOf(tag);
-    	else
+    	} else {
     		return INVALID_TAG;
+    	}
     }
     
     private boolean extractFrom(String line)
     {
     	int tag = getTagIndex(line);
     	
-    	if(tag == INVALID_TAG)
-    		return false;
-    	if(tag == ARTICLE_COMPLETE)
-    		return true;
-    	if(tag == REPEATED_TAG)
-    		articleValues[lastTag] += " "+line;
-    	else 
-    	{
-    		if(tag == AUTHOR_INDEX || tag == KEYWORD_INDEX)
-    			if(articleValues[tag] == null)
+        if(tag == ARTICLE_COMPLETE) {
+          return true;
+        }
+    	if(tag == INVALID_TAG) {
+    		lastTag = tag;
+    	} else if(tag == REPEATED_TAG) {
+    		if (lastTag != INVALID_TAG) {
+    	          articleValues[lastTag] += " "+line;
+    		}
+    	} else {
+    		if(tag == AUTHOR_INDEX || tag == KEYWORD_INDEX) {
+    			if(articleValues[tag] == null) {
     				articleValues[tag] = getMetadataFrom(line);
-    			else
+    			} else {
     				articleValues[tag] += "; "+getMetadataFrom(line);
-    		else if(tag == DOI_INDEX)
+    			}
+    		} else if(tag == DOI_INDEX) {
     			articleValues[tag] = getDoiFrom(line);
-        else if(tag == ISSN_INDEX)
+    		} else if(tag == ISSN_INDEX) {
           articleValues[tag] = getIssnFrom(line);
-        else if(tag == PAGE_INDEX) {
+        } else if(tag == PAGE_INDEX) {
           articleValues[tag] = getStartPageFrom(line);
           articleValues[tag+1] = getEndPageFrom(line);
         }
-    		else
+    		else {
     			articleValues[tag] = getMetadataFrom(line);
+    		}
     		
     		lastTag = tag;
     	}
@@ -286,7 +295,9 @@ public class ElsevierTocMetadataExtractorFactory
     {   
         for(int i = 0; i < articleTags.size(); ++i) {
         	am.put(metadataFields[i],articleValues[i]);
-        	System.out.println(articleValues[i]);
+        	if (log.isDebug3()) {
+        	  log.debug(metadataFields[i].getKey() + ": " +  articleValues[i]);
+        	}
         }
     }
     
