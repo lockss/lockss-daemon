@@ -219,6 +219,83 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodEnd, md.get(MetadataField.FIELD_END_PAGE));
   }
   
+  
+  String testContent = 
+      "_t1 OXH26350 02726386\n" + 
+      "_jn American Journal of Kidney Diseases\n" +
+      "_cr Copyright (c) 2011 The National Kidney Foundation, Inc.\n" +
+      "_t2 OXH26350 02726386 005901S1\n" +
+      "_ps [S300]\n" +
+      "_vl 59\n" +
+      "_is 1\n" +
+      "_pr A1-A8,e1-e420\n" +
+      "_cf [name] United States Renal Data System 2011 Annual Data Report: Atlas\n" +
+      "    of Chronic Kidney Disease & End-Stage Renal Disease in the United States\n" +
+      "_xt Supplement 1\n" +
+      "_dt 201201\n" +
+      "_t3 OXH26350 02726386 005901S1 11016325\n" +
+      "_ps [S300]\n" +
+      "_ii S0272-6386(11)01632-5\n" +
+      "_ii [DOI] 10.1053/S0272-6386(11)01632-5\n" +
+      "_ty MIS\n" +
+      "_li EN\n" +
+      "_ti Masthead\n" +
+      "_pg A1\n" +
+      "_mf [PDF 1.7 6.2 DISTILLED OPTIMIZED] main\n" +
+      "_mf [XML JA 5.1.0 SIMPLE-ARTICLE] main\n" +
+      "_mf [Raw ASCII] main\n";
+
+  String testVolume = "59";
+  String testDate = null;
+  String testUrl = "http://test.com/2012/OXH26350/02726386.tar!/005901S1/11016325/main.pdf";
+  String testJournal = "American Journal of Kidney Diseases";
+  String testIssn = "0272-6386";
+  String testDoi = "10.1053/S0272-6386(11)01632-5";
+  String testLanguage = null;
+  String testIssue = "1";
+  String testRights = "Copyright (c) 2011 The National Kidney Foundation, Inc.";
+  String testTitle = "Masthead";
+  String testAuthors = null;
+  String testSummary = null;
+  String testKeywords = null;
+  String testStart = "A1";
+  String testEnd = "A1";
+  
+  public void testExtractFromTestContent() throws Exception {
+    String url = "OXH26350 02726386 005901S1 11016325";
+    MockCachedUrl cu = new MockCachedUrl(url, hau);
+    cu.setContent(testContent);
+    cu.setContentSize(testContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
+    ElsevierTocMetadataExtractor me =
+      new ElsevierTocMetadataExtractorFactory.ElsevierTocMetadataExtractor();
+    assertNotNull(me);
+    
+    log.debug3("Extractor: " + me.toString());
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    
+    assertEquals(testVolume, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(testDate, md.get(MetadataField.FIELD_DATE));
+    assertEquals(testUrl, md.get(MetadataField.FIELD_ACCESS_URL));
+    assertEquals(testJournal, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(testIssn, md.get(MetadataField.FIELD_ISSN));
+    assertEquals(testDoi, md.get(MetadataField.FIELD_DOI));
+    assertEquals(testLanguage, md.get(MetadataField.DC_FIELD_LANGUAGE));
+    assertEquals(testAuthors, md.get(MetadataField.FIELD_AUTHOR));
+    assertEquals(testSummary, md.get(MetadataField.DC_FIELD_DESCRIPTION));
+    assertEquals(testKeywords, md.get(MetadataField.FIELD_KEYWORDS));
+    assertEquals(testStart, md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals(testRights, md.get(MetadataField.DC_FIELD_RIGHTS));
+    assertEquals(testIssue, md.get(MetadataField.FIELD_ISSUE));
+    assertEquals(testTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(testEnd, md.get(MetadataField.FIELD_END_PAGE));
+  }
+
   String badContent =
     "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
     "<meta name=\"foo\"" +  " content=\"bar\">\n" +
