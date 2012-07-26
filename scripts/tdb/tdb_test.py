@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-# $Id: tdb_test.py,v 1.1 2011-02-17 23:14:25 barry409 Exp $
+# $Id: tdb_test.py,v 1.2 2012-07-26 00:32:09 thib_gc Exp $
 
-# Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,167 +26,89 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.0.1'''
+__version__ = '''0.4.0'''
 
 import unittest
-import tdb
+from tdb import AU, Map, MapError
 
 class TestMap(unittest.TestCase):
     
-    def testSimple(self):
-        """Test simple put/get"""
-        m = tdb._Map()
+    def testGet(self):
+        '''Tests simple set/get.'''
+        m = Map()
         # What goes in is what comes out.
-        m.set('key', 'value')
-        self.assertEquals(m.get('key'), 'value')
-        # Singletons and atoms work as keys.
-        self.assertEquals(m.get(('key')), 'value')
-        self.assertEquals(m.get('foo'), None)
+        m.set('key1', 'value1')
+        self.assertEquals(m.get(('key1',)), 'value1')
+        # Atoms work as keys.
+        self.assertEquals(m.get('key2'), None)
         # Values are write-once
-        self.assertRaises(tdb.MapError, m.set, 'key', 'value')
+        self.assertRaises(MapError, m.set, 'key1', 'value1b')
     
-    def testParams(self):
-        """Test multiple-level put/get"""
-        m = tdb._Map()
-        m.set(('param', 'foo'), 'bar')
-        self.assertEquals(m.get('param'), {'foo': 'bar'})
-        self.assertEquals(m.get(('param', 'foo')), 'bar')
-        m.set(('param', 'fee', 'baz'), 'bar')
-        m.set(('param', 'yab', 'dab'), 'doo')
-        self.assertEquals(m.get('param'), {'fee': {'baz': 'bar'}, 'foo': 'bar', 'yab': {'dab': 'doo'}})
+    def testGetPrefix(self):
+        '''Tests set/get_prefix.'''
+        m = Map()
+        # Tuple key
+        m.set(('key1a', 'key1b'), 'value1ab')
+        self.assertEquals(m.get(('key1a', 'key1b')), 'value1ab')
+        # Retrieve by prefix
+        self.assertEquals(m.get_prefix('key1a'), {'key1b': 'value1ab'})
+        # get_prefix only retrieves at the given level
+        m.set(('key1a', 'key1b', 'key1c'), 'value1abc')
+        self.assertEquals(m.get_prefix('key1a'), {'key1b': 'value1ab'})
     
-    def testArgs(self):
-        """Test that correct exceptions happen when top-level args are not valid"""
-        m = tdb._Map()
-        self.assertRaises(tdb.MapError, m.set, (), 'yab')
-        self.assertRaises(tdb.MapError, m.get, ())
-        self.assertRaises(tdb.MapError, m.set, 'foo', {'yab': 'dab'})
-        self.assertRaises(tdb.MapError, m.set, 'foo', None)
+    def testArgumentChecking(self):
+        '''Tests argument checking.'''
+        # Keys cannot be None, the empty tuple, or something that isn't a tuple or a string
+        m = Map()
+        self.assertRaises(MapError, m.set, None, 'value1')
+        self.assertRaises(MapError, m.set, (), 'value1')
+        self.assertRaises(MapError, m.set, [1,2,3], 'value1')
+        self.assertRaises(MapError, m.get, None)
+        self.assertRaises(MapError, m.get, ())
+        self.assertRaises(MapError, m.get, [1,2,3])
         
-    def testMismatch(self):
-        '''shouldn't be able to set a value and try to access it as an array, or
-        the reverse.'''
-        m = tdb._Map()
-        m.set('foo', 'bar')
-        self.assertRaises(tdb.MapError, m.get, ('foo', 'foo'))
-        # having both param['foo'] and param['foo']['bar'] isn't permitted
-        m.set(('param', 'foo', 'baz'), 'bar')
-        self.assertRaises(tdb.MapError, m.set, ('param', 'foo'), 'yab')
-        m.set(('param', 'doo'), 'yab')
-        self.assertRaises(tdb.MapError, m.set, ('param', 'doo', 'baz'), 'bar')
-
-class TestChainedMap(unittest.TestCase):
+    def testInheritance(self):
+        '''Tests that inheritance from a parent map works'''
+        parent_map = Map()
+        parent_map.set('key1', 'value1')
+        self.assertEquals(parent_map.get('key1'), 'value1')
+        child_map = Map(parent_map)
+        # Check that the child map inherits values from the parent map
+        self.assertEquals(child_map.get('key1'), 'value1')
+        # Now override the value
+        child_map.set('key1', 'value1child')
+        self.assertEquals(parent_map.get('key1'), 'value1')
+        self.assertEquals(child_map.get('key1'), 'value1child')
+        # Likewise with a shared parent
+        other_child = Map(parent_map)
+        other_child.set('key1', 'value1other')
+        self.assertEquals(parent_map.get('key1'), 'value1')
+        self.assertEquals(child_map.get('key1'), 'value1child')
+        self.assertEquals(other_child.get('key1'), 'value1other')
     
-    def testShadowing(self):
-        '''Test that shadowing works correctly'''
-        outer = tdb._ChainedMap()
-        outer.set('foo', 'bar')
-        self.assertEquals(outer.get('foo'), 'bar')
-        inner = tdb._ChainedMap(outer)
-        # Before inner overrides, it inherits
-        self.assertEquals(inner.get('foo'), 'bar')
-        # Now it's overridden
-        inner.set('foo', 'baz')
-        self.assertEquals(outer.get('foo'), 'bar')
-        self.assertEquals(inner.get('foo'), 'baz')
-        # Likewise a tree.
-        m3 = tdb._ChainedMap(outer)
-        m3.set('foo', 'yab')
-        self.assertEquals(outer.get('foo'), 'bar')
-        self.assertEquals(inner.get('foo'), 'baz')
-        self.assertEquals(m3.get('foo'), 'yab')
-    
-    def testShadowingArray(self):
-        outer = tdb._ChainedMap()
-        inner = tdb._ChainedMap(outer)
-        outer.set(('params', 'foo'), 'bar')
-        inner.set(('params', 'foo'), 'baz')
-        self.assertEquals(inner.get(('params', 'foo')), 'baz')
-        self.assertEquals(outer.get(('params', 'foo')), 'bar')
-        # Setting in outer is visible to inner
-        outer.set(('params', 'yab'), 'dab')
-        self.assertEquals(inner.get('params'), {'foo': 'baz', 'yab': 'dab'})
+    def testInheritancePrefix(self):
+        '''Tests that inheritance works with prefixes'''
+        parent_map = Map()
+        parent_map.set(('key1a', 'key1b'), 'value1ab')
+        child_map = Map(parent_map)
+        self.assertEquals(parent_map.get(('key1a', 'key1b')), 'value1ab')
+        self.assertEquals(child_map.get(('key1a', 'key1b')), 'value1ab')
+        self.assertEquals(parent_map.get_prefix(('key1a',)), {'key1b': 'value1ab'})
+        self.assertEquals(child_map.get_prefix(('key1a',)), {'key1b': 'value1ab'})
+        # Override in the child
+        child_map.set(('key1a', 'key1b'), 'value1abchild')
+        self.assertEquals(parent_map.get(('key1a', 'key1b')), 'value1ab')
+        self.assertEquals(child_map.get(('key1a', 'key1b')), 'value1abchild')
+        self.assertEquals(parent_map.get_prefix(('key1a',)), {'key1b': 'value1ab'})
+        self.assertEquals(child_map.get_prefix(('key1a',)), {'key1b': 'value1abchild'})
         
-    def testShadowing3(self):
-        outer = tdb._ChainedMap()
-        inner = tdb._ChainedMap(outer)
-        outer.set(('params', 'doo', 'foo'), 'bar')
-        inner.set(('params', 'doo', 'foo'), 'baz')
-        self.assertEquals(inner.get(('params', 'doo')), {'foo': 'baz'})
-        self.assertEquals(outer.get(('params', 'doo')), {'foo': 'bar'})
-        self.assertEquals(inner.get('params'), {'doo': {'foo': 'baz'}})
-        # Setting in outer is visible to inner
-        outer.set(('params', 'doo', 'yab'), 'dab')
-        self.assertEquals(inner.get(('params', 'doo')), {'foo': 'baz', 'yab': 'dab'})
-        self.assertEquals(inner.get(('params')), {'doo': {'foo': 'baz', 'yab': 'dab'}})
-        
-    def testMismatchedChild(self):
-        '''Test that any setting of an inner scope's value checks the outer
-        scope to make sure it's a leaf.'''
-        outer = tdb._ChainedMap()
-        inner = tdb._ChainedMap(outer)
-        outer.set(('params', 'foo'), 'bar')
-        self.assertRaises(tdb.MapError, inner.set, 'params', 'baz')
-        outer.set('xparams', 'bar')
-        self.assertRaises(tdb.MapError, inner.set, ('xparams', 'foo'), 'baz')
-        outer.set(('foo', 'bar', 'baz'), 'foo')
-        self.assertRaises(tdb.MapError, inner.set, ('foo', 'bar'), 'baz')
-        outer.set(('fee', 'bar'), 'foo')
-        self.assertRaises(tdb.MapError, inner.set, ('fee', 'bar', 'baz'), 'baz')
-
-    '''
-    There are no backpointers from the outer scope to all the inner scopes it contains.
-    When an outer scope's value is set, an inner scope might already have it defined as
-    a non-leaf, but we can't check.
-
-    def testMismatchedParent(self):
-        # Test that any setting of an outer scope's value checks the inner
-        # scopes to make sure it's a leaf.
-        outer = tdb._ChainedMap()
-        inner = tdb._ChainedMap(outer)
-        inner.set(('params', 'foo'), 'bar')
-        self.assertRaises(tdb.MapError, outer.set, 'params', 'baz')
-        inner.set('xparams', 'bar')
-        self.assertRaises(tdb.MapError, outer.set, ('xparams', 'foo'), 'baz')
-    '''
-    
-    def testMismatchedParent2(self):
-        outer = tdb._ChainedMap()
-        inner = tdb._ChainedMap(outer)
-        inner.set(('xparams', 'foo'), 'bar')
-        outer.set('xparams', 'baz')
-        # see testMismatchedParent: it's a bug that this doesn't
-        # raise tdb.MapError. But the 'get' does raise it.
-        self.assertRaises(tdb.MapError, inner.get, 'xparams')
-        inner.set(('yparams', 'foo', 'bar', 'baz'), 'foo')
-        outer.set(('yparams', 'foo', 'bar'), 'foo')
-        self.assertRaises(tdb.MapError, inner.get, 'yparams')
-        inner.set(('zparams', 'foo', 'bar'), 'foo')
-        outer.set(('zparams', 'foo', 'bar', 'baz'), 'foo')
-        self.assertRaises(tdb.MapError, inner.get, 'zparams')
-   
-    def testCombine(self):
-        outer = tdb._ChainedMap()
-        inner = tdb._ChainedMap(outer)
-        inner.set(('params', 'doo', 'foo'), 'baz')
-        inner.set(('params', 'doo', 'dum'), 'foo')
-        inner.set(('params', 'dee'), 'bax')
-        outer.set(('params', 'fip'), 'foo')
-        self.assertEquals(inner.get('params'), {'fip': 'foo',
-                                                'doo': {'foo': 'baz', 'dum': 'foo'},
-                                                'dee': 'bax'})
-        outer.set(('params', 'doo', 'foo'), 'bar') # shadowed
-        outer.set(('params', 'doo', 'fee'), 'bar') # new
-        self.assertEquals(inner.get('params'), {'fip': 'foo',
-                                                'doo': {'fee': 'bar', 'foo': 'baz', 'dum': 'foo'},
-                                                'dee': 'bax'})
-
 class TestAU(unittest.TestCase):
 
     def testAuid(self):
         for st, par in [('a~b&c~d', {'a': 'b', 'c': 'd'}),
                        ('a~b&c~d', {'c': 'd', 'a': 'b'}),
-                       ('base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2F&volume_name~123', {'base_url': 'http://www.example.com/', 'volume_name': '123'})]:
-            self.assertEquals('org|lockss|plugin|FooPlugin&' + st, tdb.AU.computeAuid('org.lockss.plugin.FooPlugin', par))
+                       ('base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2F&volume_name~123', {'base_url': 'http://www.example.com/', 'volume_name': '123'}),
+                       ('base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2F&volume_name~123', {'volume_name': '123', 'base_url': 'http://www.example.com/'})]:
+            self.assertEquals('org|lockss|plugin|FooPlugin&' + st, AU.compute_auid('org.lockss.plugin.FooPlugin', par))
 
 if __name__ == '__main__': unittest.main()

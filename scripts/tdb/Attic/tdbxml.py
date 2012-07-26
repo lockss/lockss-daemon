@@ -1,33 +1,36 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.25 2012-05-09 22:18:54 thib_gc Exp $
-#
-# Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
-# all rights reserved.
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-# STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-# WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-# IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-#
-# Except as contained in this notice, the name of Stanford University shall not
-# be used in advertising or otherwise to promote the sale, use or other dealings
-# in this Software without prior written authorization from Stanford University.
+# $Id: tdbxml.py,v 1.26 2012-07-26 00:32:09 thib_gc Exp $
 
-__version__ = '0.3.7'
+__copyright__ = '''\
+
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+'''
+
+__version__ = '0.4.0'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -204,10 +207,8 @@ def __process_au(au, options):
         __do_attr(au, 'isbn', au.isbn());
     if au.year() is not None:
         __do_attr(au, 'year', au.year())
-    if au.volumeName() is not None:
-        __do_attr(au, 'volume', au.volumeName())
-    if au.status() == AU.Status.PRE_RELEASED:
-        __do_attr(au, 'releaseStatus', 'pre-release')
+    if au.volume() is not None:
+        __do_attr(au, 'volume', au.volume())
     if au.rights() == 'openaccess':
         __do_attr(au, 'rights', 'openaccess')
     print '''\

@@ -1,32 +1,35 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.15 2012-02-07 00:32:49 thib_gc Exp $
+# $Id: tdbq.py,v 1.16 2012-07-26 00:32:09 thib_gc Exp $
 
-# Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
-# all rights reserved.
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-# STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-# WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-# IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-#
-# Except as contained in this notice, the name of Stanford University shall not
-# be used in advertising or otherwise to promote the sale, use or other dealings
-# in this Software without prior written authorization from Stanford University.
+__copyright__ = '''\
 
-__version__ = '''0.3.4'''
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+'''
+
+__version__ = '''0.4.0'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -103,8 +106,6 @@ class TdbqConstants:
                            AU.Status.TESTING,
                            AU.Status.NOT_READY,
                            AU.Status.READY,
-                           AU.Status.PRE_RELEASING,
-                           AU.Status.PRE_RELEASED,
                            AU.Status.RELEASING]
     OPTION_UNRELEASED = 'unreleased'
     OPTION_UNRELEASED_SHORT = 'U'
@@ -635,7 +636,7 @@ def str_to_lambda_au(str):
                    ('status1', lambda au: au.get('status1')),
                    ('status2', lambda au: au.get('status2')),
                    ('year', lambda au: au.year()),
-                   ('volume', lambda au: au.volumeName()),
+                   ('volume', lambda au: au.volume()),
                    ('name', lambda au: au.name()),
                    ('plugin', lambda au: au.plugin()),
                    ('pluginPrefix', lambda au: au.get(AU.PLUGIN_PREFIX)),
