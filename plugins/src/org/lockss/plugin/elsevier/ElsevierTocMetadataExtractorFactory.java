@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.5 2012-07-26 16:36:59 pgust Exp $
+ * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.6 2012-07-26 20:01:43 pgust Exp $
  */
 
 /*
@@ -174,15 +174,17 @@ public class ElsevierTocMetadataExtractorFactory
 		}
 		
     private String getStartPageFrom(String line) {
-      if(line.length() < 4)
+      // skip past "_pg " prefix
+      if(line.length() < 4) {
         return "";
+      }
       int i = line.indexOf(' ');
       if (i > 0) {
-        int j = line.lastIndexOf('-');
-        if (j < 0) {
-          j = line.length();
-        }
-        return line.substring(i+1,j);
+        // "6A" -> "6A"
+        // "18A-19A" -> "18A"
+        // "6A,8A,10A,12A,14A,16A,18A-19A" -> "6A
+        String[] pages = line.substring(i+1).split("[-,]");
+        return pages[0].trim();
       }
       return line;
     }
@@ -193,12 +195,12 @@ public class ElsevierTocMetadataExtractorFactory
       }
       int i = line.indexOf(' ');
       if (i > 0) {
-        int j = line.lastIndexOf('-');
-        if (j > i) {
-          i = j;
-        }
-        j = line.length();
-        return line.substring(i+1,j);
+        // examples:
+        // "6A" -> "6A"
+        // "18A-19A" -> "19A"
+        // "6A,8A,10A,12A,14A,16A,18A-19A" -> "19A
+        String[] pages = line.substring(i+1).split("[-,]");
+        return pages[pages.length-1].trim();
       }
       return line;
     }
