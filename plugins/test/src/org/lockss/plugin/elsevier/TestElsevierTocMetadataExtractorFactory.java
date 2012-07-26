@@ -240,7 +240,7 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
       "_ty MIS\n" +
       "_li EN\n" +
       "_ti Masthead\n" +
-      "_pg A1\n" +
+      "_pg 6A,8A,10A,12A,14A,16A,18A-19A\n" +
       "_mf [PDF 1.7 6.2 DISTILLED OPTIMIZED] main\n" +
       "_mf [XML JA 5.1.0 SIMPLE-ARTICLE] main\n" +
       "_mf [Raw ASCII] main\n";
@@ -258,8 +258,8 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
   String testAuthors = null;
   String testSummary = null;
   String testKeywords = null;
-  String testStart = "A1";
-  String testEnd = "A1";
+  String testStart = "6A";
+  String testEnd = "19A";
   
   public void testExtractFromTestContent() throws Exception {
     String url = "OXH26350 02726386 005901S1 11016325";
