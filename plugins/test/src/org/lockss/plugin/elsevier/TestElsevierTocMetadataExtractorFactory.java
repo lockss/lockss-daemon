@@ -107,7 +107,7 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
   }
   
 	String goodVolume = "volume";
-	String goodDate = "Date";
+	String goodDate = "2011-12-16";
 	String goodUrl = "http://test.com/2012/0XFAKE0X/1231231.tar!/3453453/5675675/main.pdf";
 	String goodJournal = "Journal";
 	String goodDoi = "10.1016/d.rhodes.2011.05.001";
@@ -131,7 +131,7 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
   "_ii [DOI] 55.5555/d.rhodes.2011.05.010\n"+
   "_ty FLA\n"+
   "_t1 Issn\n"+
-  "_pd Date\n"+
+  "_pd 20111216\n"+
   "_jn Journal\n"+
   "_cr Rights\n"+ 
   "_is Issue\n"+
