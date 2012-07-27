@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.7 2012-07-27 13:25:35 pgust Exp $
+ * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.8 2012-07-27 17:44:45 pgust Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class ElsevierTocMetadataExtractorFactory
 	  private final int DOI_LEN = 6;
 	  
     private final int ISSN_INDEX = 0;
-    private final int DATE_INDEX = 2;
+    private final int DATE_INDEX = 5;
 	  private final int FILE_NAME_INDEX = 6;
 	  private final int DOI_INDEX = 7;
     private final int AUTHOR_INDEX = 10;
@@ -81,10 +81,10 @@ public class ElsevierTocMetadataExtractorFactory
 	  private List<String> articleTags = Arrays.asList(new String[]{
 	    "_t1",
 	    "_vl",
-      "_pd",
 		  "_jn", 
 		  "_cr", 
-		  "_is", 
+		  "_is",
+		  "_dt",
 		  "_t3", 
 		  "_ii",
 		  "_la",
@@ -103,10 +103,10 @@ public class ElsevierTocMetadataExtractorFactory
 	  private MetadataField[] metadataFields = {
 	    MetadataField.FIELD_ISSN, 
         MetadataField.FIELD_VOLUME, 
-        MetadataField.FIELD_DATE,
   		MetadataField.FIELD_JOURNAL_TITLE, 
   		MetadataField.DC_FIELD_RIGHTS,
   		MetadataField.FIELD_ISSUE,
+  	        MetadataField.FIELD_DATE,
   		MetadataField.FIELD_ACCESS_URL, 
   		MetadataField.FIELD_DOI, 
   		MetadataField.DC_FIELD_LANGUAGE,
@@ -206,18 +206,27 @@ public class ElsevierTocMetadataExtractorFactory
       return line;
     }
 
+    
+    Pattern datepat = Pattern.compile("([\\d]{4})([\\d]{2})?([\\d]{2})?");
+
     private String getDateFrom(String line) {
       if(line.length() < 4) {
         return "";
       }
+      
       int i = line.indexOf(' ');
-      if ((i > 0) && (line.length()-i-1 == 8)) {
-        // "_pd 20111216"
-        return   line.substring(i+1,i+5)  // 2011
-               + "-"
-               + line.substring(i+5,i+7)  // 12
-               + "-"
-               + line.substring(i+7,i+9); // 16
+      if (i >= 3) {
+        Matcher m = datepat.matcher(line.substring(i+1));
+        if (m.matches()) {
+          String date = m.group(1);
+          if (m.group(2) != null) {
+            date += "-" + m.group(2);
+            if (m.group(3) != null) {
+              date += "-" + m.group(3);
+            }
+         }
+          return date;
+        }
       }
       return line;
     }
