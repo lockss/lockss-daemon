@@ -107,7 +107,7 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
   }
   
 	String goodVolume = "volume";
-	String goodDate = "2011-12-16";
+	String goodDate = "2011-07-23";
 	String goodUrl = "http://test.com/2012/0XFAKE0X/1231231.tar!/3453453/5675675/main.pdf";
 	String goodJournal = "Journal";
 	String goodDoi = "10.1016/d.rhodes.2011.05.001";
@@ -131,7 +131,7 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
   "_ii [DOI] 55.5555/d.rhodes.2011.05.010\n"+
   "_ty FLA\n"+
   "_t1 Issn\n"+
-  "_pd 20111216\n"+
+  "_pd Date\n"+
   "_jn Journal\n"+
   "_cr Rights\n"+ 
   "_is Issue\n"+
@@ -163,7 +163,7 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
   "_mf [Raw ASCII] main\n"+
   "_t3 0XFAKE0X 1231231 3453453 6786786\n"+
   "_ps [PS000]\n"+
-  "_dt 20120120\n"+
+  "_dt 201201\n"+
   "_ti This tests a title which\n"+
   " spans two lines\n"+
   "_au Author, A.\n"+
@@ -246,7 +246,7 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
       "_mf [Raw ASCII] main\n";
 
   String testVolume = "59";
-  String testDate = null;
+  String testDate = "2012-01";
   String testUrl = "http://test.com/2012/OXH26350/02726386.tar!/005901S1/11016325/main.pdf";
   String testJournal = "American Journal of Kidney Diseases";
   String testIssn = "0272-6386";
