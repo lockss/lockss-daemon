@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.6 2012-07-26 20:01:43 pgust Exp $
+ * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.7 2012-07-27 13:25:35 pgust Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class ElsevierTocMetadataExtractorFactory
 	  private final int DOI_LEN = 6;
 	  
     private final int ISSN_INDEX = 0;
+    private final int DATE_INDEX = 2;
 	  private final int FILE_NAME_INDEX = 6;
 	  private final int DOI_INDEX = 7;
     private final int AUTHOR_INDEX = 10;
@@ -205,6 +206,22 @@ public class ElsevierTocMetadataExtractorFactory
       return line;
     }
 
+    private String getDateFrom(String line) {
+      if(line.length() < 4) {
+        return "";
+      }
+      int i = line.indexOf(' ');
+      if ((i > 0) && (line.length()-i-1 == 8)) {
+        // "_pd 20111216"
+        return   line.substring(i+1,i+5)  // 2011
+               + "-"
+               + line.substring(i+5,i+7)  // 12
+               + "-"
+               + line.substring(i+7,i+9); // 16
+      }
+      return line;
+    }
+    
     private String getDoiFrom(String line)
     {
     	if(line.contains("[DOI] ")) {
@@ -277,6 +294,8 @@ public class ElsevierTocMetadataExtractorFactory
         } else if(tag == PAGE_INDEX) {
           articleValues[tag] = getStartPageFrom(line);
           articleValues[tag+1] = getEndPageFrom(line);
+        } else if (tag == DATE_INDEX) {
+          articleValues[tag] = getDateFrom(line);
         }
     		else {
     			articleValues[tag] = getMetadataFrom(line);
