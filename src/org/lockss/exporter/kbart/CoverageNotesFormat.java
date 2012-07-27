@@ -1,5 +1,5 @@
 /*
- * $Id: CoverageNotesFormat.java,v 1.5 2012-07-12 17:41:45 easyonthemayo Exp $
+ * $Id: CoverageNotesFormat.java,v 1.6 2012-07-27 12:54:33 easyonthemayo Exp $
  */
 
 /*
@@ -103,7 +103,7 @@ public enum CoverageNotesFormat {
 
     @Override
     public void appendEqualRange(StringBuilder sb, KbartTitle kbt) {
-      appendPoint(sb, kbt, "=", false);
+      appendPoint(sb, kbt, "==", false);
     }
 
     /**
