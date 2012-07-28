@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.11 2012-07-26 00:32:09 thib_gc Exp $
+# $Id: tdbparse.py,v 1.12 2012-07-28 00:09:10 thib_gc Exp $
 
 __copyright__ = '''\
 
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.0'''
+__version__ = '''0.4.1'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -253,22 +253,23 @@ class TdbScanner(object):
         match = TdbScanner.RE_KEYWORD.match(self.__cur)
         if match: return self.__keyword(match)
         # Single-character tokens
-        if self.__cur.startswith(TdbparseLiteral.CURLY_OPEN): return self.__single(TdbparseToken.CURLY_OPEN)
-        if self.__cur.startswith(TdbparseLiteral.CURLY_CLOSE): return self.__single(TdbparseToken.CURLY_CLOSE)
-        if self.__cur.startswith(TdbparseLiteral.ANGLE_OPEN):
+        ch = self.__cur[0]
+        if ch == TdbparseLiteral.CURLY_OPEN: return self.__single(TdbparseToken.CURLY_OPEN)
+        if ch == TdbparseLiteral.CURLY_CLOSE: return self.__single(TdbparseToken.CURLY_CLOSE)
+        if ch == TdbparseLiteral.ANGLE_OPEN:
             if self.__tok.type() == TdbparseToken.AU:
                 self.__stringFlag = TdbparseToken.SEMICOLON
             return self.__single(TdbparseToken.ANGLE_OPEN)
-        if self.__cur.startswith(TdbparseLiteral.ANGLE_CLOSE):
+        if ch == TdbparseLiteral.ANGLE_CLOSE:
             self.__stringFlag = None
             return self.__single(TdbparseToken.ANGLE_CLOSE)
-        if self.__cur.startswith(TdbparseLiteral.SQUARE_OPEN): return self.__single(TdbparseToken.SQUARE_OPEN)
-        if self.__cur.startswith(TdbparseLiteral.SQUARE_CLOSE): return self.__single(TdbparseToken.SQUARE_CLOSE)
-        if self.__cur.startswith(TdbparseLiteral.SEMICOLON):
+        if ch == TdbparseLiteral.SQUARE_OPEN: return self.__single(TdbparseToken.SQUARE_OPEN)
+        if ch == TdbparseLiteral.SQUARE_CLOSE: return self.__single(TdbparseToken.SQUARE_CLOSE)
+        if ch == TdbparseLiteral.SEMICOLON:
             if self.__stringFlag == TdbparseToken.AU:
                 self.__stringFlag = TdbparseToken.SEMICOLON
             return self.__single(TdbparseToken.SEMICOLON)
-        if self.__cur.startswith(TdbparseLiteral.EQUAL):
+        if ch == TdbparseLiteral.EQUAL:
             self.__stringFlag = TdbparseToken.EQUAL
             return self.__single(TdbparseToken.EQUAL)
         # Identifiers
@@ -320,6 +321,9 @@ class TdbScanner(object):
         line.
 
         Double quotes and backslashes must be escaped.'''
+        # __bstring has been altered to count characters and escape the
+        # string conditionally. The same should be done to __qstring,
+        # but it's called very infrequently.
         self.__token(TdbparseToken.STRING)
         val = []
         maxindex = len(self.__cur)
@@ -357,30 +361,28 @@ class TdbScanner(object):
         Semicolons, closing angle brackets, backslashes, and leading
         and trailing spaces must be escaped.'''
         self.__token(TdbparseToken.STRING)
-        val = []
-        maxindex = len(self.__cur)
         index = 0
-        trailingSpace = False
-        trailingSpaces = 0
+        maxindex = len(self.__cur)
+        escapes = []
         while index < maxindex:
+          ch = self.__cur[index]
+          if ch == TdbparseLiteral.SEMICOLON or ch == TdbparseLiteral.ANGLE_CLOSE: break
+          if ch == '\\':
+            escapes.append(index)
+            index = index + 1 # Count the backslash
+            if index >= maxindex: raise TdbparseSyntaxError('run-on bare string', self.file_name(), self.__tok.line(), self.__tok.col()+index)
             ch = self.__cur[index]
-            if ch in [TdbparseLiteral.SEMICOLON, TdbparseLiteral.ANGLE_CLOSE]: break
-            if ch == '\\':
-                index = index + 1 # Consume the backslash
-                if index >= maxindex:
-                    raise TdbparseSyntaxError('run-on quoted string', self.file_name(), self.__tok.line(), self.__tok.col()+index)
-                ch = self.__cur[index]
-                if ch not in ';> \\':
-                    raise TdbparseSyntaxError('invalid quoted string escape: %s' % ch, self.file_name(), self.__line, self.__col-1+index)
-                if ch == ' ': trailingSpace = True
-            val.append(ch)
-            if trailingSpace:
-                trailingSpaces = trailingSpaces + 1
-                trailingSpace = False
-            elif ch != ' ': trailingSpaces = 0
-            index = index + 1 # Consume the character
-        self.__move(index)
-        self.__tok.set_value(''.join(val).rstrip() + ' '*trailingSpaces)
+            if not (ch == TdbparseLiteral.SEMICOLON or ch == TdbparseLiteral.ANGLE_CLOSE \
+                or ch == ' ' or ch == '\\'): raise TdbparseSyntaxError('invalid bare string escape: %s' % ch, self.file_name(), self.__line, self.__col-1+index)
+          index = index + 1 # Count the character
+        val = self.__cur[0:index].rstrip()
+        self.__move(index) # Consume the characters
+        if len(escapes) > 0:
+          val_seq = [c for c in val]
+          if val_seq[-1] == '\\': val_seq.append(' ')
+          for i in reversed(escapes): del val_seq[i]
+          val = ''.join(val_seq)
+        self.__tok.set_value(val)
         if self.__stringFlag == TdbparseToken.EQUAL:
             self.__stringFlag = None
         elif self.__stringFlag == TdbparseToken.SEMICOLON:
