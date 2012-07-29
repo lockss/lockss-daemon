@@ -106,6 +106,7 @@ public class TestCasaEditriceCluebSourceXmlMetadataExtractorFactory extends Lock
   String goodArticle = "Article Title";
   String goodDate = "Date";
   String goodStartPage = "1";
+  String goodIsbn = "9788849132953";
     
   String goodContent =
 		  "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><ONIXDOIMonographChapterWorkRegistrationMessage xmlns=\"http://www.editeur.org/onix/DOIMetadata/1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><DOIMonographChapterWork>"+
@@ -123,8 +124,8 @@ public class TestCasaEditriceCluebSourceXmlMetadataExtractorFactory extends Lock
 		  "</MonographicWork>"+
 		  "<MonographicProduct>"+
 		  "<ProductIdentifier>"+
-		  "<ProductIDType>02</ProductIDType>"+  
-		  "<IDValue>00000000</IDValue>"+
+		  "<ProductIDType>02</ProductIDType>"+  // type 02 is ISBN
+		  "<IDValue>9788849132953</IDValue>"+
 		  "</ProductIdentifier>"+
 		  "<ProductIdentifier>"+
 		  "<ProductIDType>03</ProductIDType>"+  
@@ -181,6 +182,7 @@ public class TestCasaEditriceCluebSourceXmlMetadataExtractorFactory extends Lock
     assertEquals(goodArticle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals(goodIsbn, md.get(MetadataField.FIELD_ISBN));
   }
   
   String badContent =
@@ -214,6 +216,7 @@ public class TestCasaEditriceCluebSourceXmlMetadataExtractorFactory extends Lock
     assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertNull(md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertNull(md.get(MetadataField.FIELD_DATE));
+    assertNull(md.get(MetadataField.FIELD_ISBN));
   }
   
   /**
