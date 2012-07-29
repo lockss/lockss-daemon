@@ -1,5 +1,5 @@
 /*
- * $Id: CasaEditriceCluebSourceXmlMetadataExtractorFactory.java,v 1.1 2012-03-13 22:39:42 dylanrhodes Exp $
+ * $Id: CasaEditriceCluebSourceXmlMetadataExtractorFactory.java,v 1.2 2012-07-29 17:09:36 pgust Exp $
  */
 
 /*
@@ -71,6 +71,7 @@ public class CasaEditriceCluebSourceXmlMetadataExtractorFactory
 	      nodeMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/ContentItem/Contributor/PersonNameInverted", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/DOI", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/MonographicPublication/MonographicWork/Title/TitleText", XmlDomMetadataExtractor.TEXT_VALUE);
+              nodeMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/MonographicPublication/MonographicProduct/ProductIdentifier/IDValue", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/MonographicPublication/MonographicProduct/Publisher/PublisherName", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/ContentItem/Title/TitleText", XmlDomMetadataExtractor.TEXT_VALUE);
 	      nodeMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/ContentItem/PublicationDate", XmlDomMetadataExtractor.TEXT_VALUE);
@@ -81,9 +82,10 @@ public class CasaEditriceCluebSourceXmlMetadataExtractorFactory
 	    static private final MultiValueMap xpathMap = new MultiValueMap();
 	    static {
 	      // normal journal article schema
-          xpathMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/ContentItem/Contributor/PersonNameInverted", MetadataField.FIELD_AUTHOR);
+              xpathMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/ContentItem/Contributor/PersonNameInverted", MetadataField.FIELD_AUTHOR);
 	      xpathMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/DOI", MetadataField.FIELD_DOI);
 	      xpathMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/MonographicPublication/MonographicWork/Title/TitleText", MetadataField.FIELD_JOURNAL_TITLE);
+              xpathMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/MonographicPublication/MonographicProduct/ProductIdentifier/IDValue", MetadataField.FIELD_ISBN);
 	      xpathMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/MonographicPublication/MonographicProduct/Publisher/PublisherName", MetadataField.FIELD_PUBLISHER);
 	      xpathMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/ContentItem/Title/TitleText", MetadataField.FIELD_ARTICLE_TITLE);
 	      xpathMap.put("/ONIXDOIMonographChapterWorkRegistrationMessage/DOIMonographChapterWork/ContentItem/PublicationDate", MetadataField.FIELD_DATE);
