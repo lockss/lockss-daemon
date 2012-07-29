@@ -5,11 +5,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.38.0</string>
+    <string>1.53.10</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -18,6 +18,15 @@
   <entry>
     <string>plugin_parent_version</string>
     <string>4</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_name</string>
