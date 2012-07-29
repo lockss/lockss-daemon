@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.36 2012-07-06 22:50:47 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.37 2012-07-29 00:54:32 pgust Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.Configuration.Differences;
 import org.lockss.config.TdbAu;
+import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
@@ -137,8 +138,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Default maximum concurrent reindexing tasks */
   static public final int DEFAULT_MAX_REINDEXING_TASKS = 1;
 
+  /** Name of metadata status table */
+  public static final String 
+    METADATA_STATUS_TABLE_NAME = "metadata_status_table";
+
   /**
-   * Map of running reindexing tasks keyed by their AuIds
+   * Map of running reindexing tasks keyed and sorted by their AuIds
    */
   final Map<String, ReindexingTask> reindexingTasks = 
     new HashMap<String, ReindexingTask>();
@@ -390,6 +395,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     dbManager.safeRollbackAndClose(conn);
+    
+    StatusService statusServ = dbManager.getDaemon().getStatusService();
+    statusServ.registerStatusAccessor(METADATA_STATUS_TABLE_NAME,
+                                      new MetadataManagerStatusAccessor(this));
+    statusServ.registerOverviewAccessor(METADATA_STATUS_TABLE_NAME,
+        new MetadataManagerStatusAccessor.IndexingOverview(this));
+
 
     // register to receive content change notifications to 
     // reindex the database content associated with the au
@@ -886,6 +898,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
+   * Get get the number of active reindexing tasks.
+   * 
+   * @return the number of active reindexing tasks
+   */
+  public int getReindexingTaskCount() {
+    return reindexingTasks.size();
+  }
+  
+  /**
+   * Get the list of reindexing tasks.
+   * @return the 
+   */
+  public Collection<ReindexingTask> getReindexingTasks() {
+    return Collections.unmodifiableCollection(reindexingTasks.values());
+  }
+  
+  /**
    * Ensure as many reindexing tasks as possible are running if manager is
    * enabled.
    * 
@@ -1190,6 +1219,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     private final String tdbauJournalTitle;
     private final String tdbauName;
     
+    /** The number of articles indexed by this task */
+    private int articleCount = 0;
+    
+
+    
     private final boolean isTitleInTdb;
 
 
@@ -1366,6 +1400,24 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         setFinished();
       }
     }
+    
+    /**
+     * Returns the reindexing status of this task.
+     * 
+     * @return the reindexing status
+     */
+    public ReindexingStatus getReindexingStatus() {
+      return status;
+    }
+    
+    /**
+     * Returns the number of articles extracted by this task.
+     * 
+     * @return the number of articles extracted by this task
+     */
+    public int getArticleCount() {
+      return articleCount;
+    }
 
     /**
      * Extract metadata from the next group of articles.
@@ -1395,6 +1447,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           try {
             addMetadata(md);
             extracted.increment();
+            articleCount++;
+            
           } catch (SQLException ex) {
             log.error(  "Failed to index metadata for article URL: "
                       + af.getFullTextUrl(), ex);
@@ -1417,6 +1471,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           setFinished();
           if (status == ReindexingStatus.success) {
             status = ReindexingStatus.rescheduled;
+            articleCount = 0;
           }
         } catch (PluginException ex) {
           log.error(  "Failed to index metadata for full text URL: "
@@ -1424,10 +1479,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           setFinished();
           if (status == ReindexingStatus.success) {
             status = ReindexingStatus.rescheduled;
+            articleCount = 0;
           }
         } catch (RuntimeException ex) {
           log.error(" Caught unexpected Throwable for full text URL: "
               + af.getFullTextUrl(), ex);
+          articleCount = 0;
         }
       }
 
@@ -1785,7 +1842,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         Statement selectPendingAus = conn.createStatement();
 
         ResultSet results = 
-        	selectPendingAus.executeQuery("select * from PendingAus");
+            selectPendingAus.executeQuery("select * from " + PENDINGAUS_TABLE);
         while ((auIds.size() < maxAuIds) && results.next()) {
           String pluginId = results.getString(1);
           String auKey = results.getString(2);
