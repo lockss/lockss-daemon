@@ -1,5 +1,5 @@
 /*
- * $Id: OverviewStatus.java,v 1.1 2007-08-15 07:09:37 tlipkis Exp $
+ * $Id: OverviewStatus.java,v 1.2 2012-07-29 00:57:32 pgust Exp $
  */
 
 /*
@@ -89,6 +89,7 @@ public class OverviewStatus extends BaseLockssDaemonManager {
       org.lockss.state.ArchivalUnitStatus.SERVICE_STATUS_TABLE_NAME,
       org.lockss.repository.LockssRepositoryStatus.SPACE_TABLE_NAME,
       org.lockss.crawler.CrawlManagerImpl.CRAWL_STATUS_TABLE_NAME,
+      org.lockss.daemon.MetadataManager.METADATA_STATUS_TABLE_NAME,
       V3PollStatus.POLLER_STATUS_TABLE_NAME,
       V3PollStatus.VOTER_STATUS_TABLE_NAME,
       org.lockss.hasher.HashSvcSchedImpl.HASH_STATUS_TABLE,
