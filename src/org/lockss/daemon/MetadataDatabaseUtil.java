@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.3 2012-07-20 11:10:54 easyonthemayo Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.4 2012-07-30 03:11:06 pgust Exp $
  */
 
 /*
@@ -89,14 +89,14 @@ final public class MetadataDatabaseUtil {
     public BibliographicDatabaseItem(ResultSet resultSet) throws SQLException {
       publisher = resultSet.getString(1);
       title = resultSet.getString(2);
-      printisbn = null;
-      eisbn = null;
       printissn = MetadataUtil.formatIssn(resultSet.getString(3));
       eissn = MetadataUtil.formatIssn(resultSet.getString(4));
-      startvolume = resultSet.getString(5);
-      endvolume = resultSet.getString(5);
-      startyear = resultSet.getString(6);
-      endyear = resultSet.getString(6);
+      printisbn = MetadataUtil.formatIssn(resultSet.getString(5));
+      eisbn = MetadataUtil.formatIssn(resultSet.getString(6));
+      startvolume = resultSet.getString(7);
+      endvolume = resultSet.getString(7);
+      startyear = resultSet.getString(8);
+      endyear = resultSet.getString(8);
     }
 
     @Override
@@ -234,12 +234,18 @@ final public class MetadataDatabaseUtil {
     sb.append("  nullif(");
     sb.append("    (select max(issn) from issn where metadata.md_id=issn.md_id),");
     sb.append("    printISSNFromAuid(plugin_id,au_key))) as \"eissn\", ");
+    sb.append(" printISBNFromAuid(plugin_id,au_key) as \"printisbn\",");
+    sb.append(" coalesce(");
+    sb.append("  eISBNFromAuid(plugin_id,au_key),");
+    sb.append("  nullif(");
+    sb.append("    (select max(isbn) from isbn where metadata.md_id=isbn.md_id),");
+    sb.append("    printISBNFromAuid(plugin_id,au_key))) as \"eisbn\", ");
     sb.append(" volume,");
     sb.append(" coalesce(");
     sb.append("  yearFromDate(date),");
     sb.append("  startYearFromAuid(plugin_id,au_key)) as \"year\" ");
-    sb.append("from metadata,issn ");
-    sb.append(" where metadata.md_id=issn.md_id order by 1,2,6");
+    sb.append("from metadata ");
+    sb.append(" order by 1,2,8");  // publisher, title, date
     
     bibliographicItemsQuery = sb.toString();
   }
