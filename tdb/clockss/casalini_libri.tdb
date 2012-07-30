@@ -1,0 +1,20 @@
+{
+
+  publisher <
+    name = Casalini Libri
+  >
+  
+  {
+  
+    title <
+      name = Casalini Libri
+    >
+    
+    plugin = 
+    param[base_url] = 
+    proxy = DIRECT
+    implicit < status ; year ; name ; param[year] >
+    
+  }
+
+}
