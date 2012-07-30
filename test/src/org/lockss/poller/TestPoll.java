@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.100 2012-07-25 20:54:57 barry409 Exp $
+ * $Id: TestPoll.java,v 1.101 2012-07-30 21:42:27 barry409 Exp $
  */
 
 /*
@@ -267,6 +267,7 @@ public class TestPoll extends LockssTestCase {
     p.m_tally.numDisagree = 3;
     p.m_pollstate = V1Poll.PS_WAIT_TALLY;
     p.stopPoll();
+    assertTrue(p.isPollCompleted());
     assertTrue(p.m_pollstate == V1Poll.PS_COMPLETE);
     p.startPoll();
     assertTrue(p.m_pollstate == V1Poll.PS_COMPLETE);
