@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.251 2012-07-25 20:54:57 barry409 Exp $
+ * $Id: PollManager.java,v 1.252 2012-07-30 21:44:47 barry409 Exp $
  */
 
 /*
@@ -227,32 +227,50 @@ public class PollManager
   public static class AuPeersMap extends HashMap<String,Set<PeerIdentity>> {}
   public static class Peer2PeerMap extends HashMap<PeerIdentity,PeerIdentity> {}
 
+  // todo(bhayes): It would be nice to get this class out of the
+  // business if knowing about isPollComplete. The behavior before
+  // this class existed was that current entries were always
+  // isPollActive and the recent entries were always
+  // !isPollActive. When transitioning, the entry was first removed,
+  // then transitioned, then put back as "recent". In the transition,
+  // the list if all current and recent polls would not contain the
+  // transitioning items.
+
+  // todo(bhayes): It would also be nice to get this class out of the
+  // business of catering to the V3PollStatus; it feels as if there's
+  // some core functions about tracking current and recent polls [that
+  // is, "objects which receive LcapMessages"], and letting some
+  // wrapper deal with V3PollStatus needing to distinguish V3Poller
+  // from V3Voter.
+
   /**
-   * Maintain a collection of current and recent polls. The current
-   * collection contains V3Pollers and V3Voters which are generally
-   * expected to be able to handle incoming LcapMessages. 
-   *
-   * todo(bhayes): What's the relationship between being in this list
-   * and being in state "isPollActive"?
-   *
-   * Entries move from the current to the recent collection at the
-   * time they are closed. Entries remain in the recent collection
-   * only for a certain length of time. The recent collection is
-   * intended for the V3PollStatus, which needs to keep track of all
-   * the current polls, and the recent closed polls.
-   *
    * Note: This documentation is intended to be accurate for V3; V1
    * may or may not conform to this use.
+   *
+   * Maintain a collection of current and recent V3Pollers and
+   * V3Voters.  The "recent" entries will expire from the collection
+   * as time passes; the "current" entries will not.
+   *
+   * Taking a poll to the completed state involves writing to disk; it
+   * would be inadvisable to hold a lock while completing a poll. [Is
+   * this V1 only?] There is some inconsistency between which list a
+   * poll is in and whether isPollComplete returns true.
+   *
+   * Since a poll may be closed at any time, there is no guarantee
+   * that an item which was active when returned by EntryManager will
+   * still be active in the calling code; calling code has to be aware
+   * that a "current" poll may be closed.
    */
   private static class EntryManager {
-    // todo(bhayes): Move this to its own file for testing.
+    // todo(bhayes): Move this to its own file for testing, or at
+    // least refactor tests.
     /**
      * A collection of current polls.
      */
     private HashMap<String,PollManagerEntry> thePolls =
       new HashMap<String,PollManagerEntry>();
 
-    // FixedTimedMap is not generic.
+    // todo(bhayes): FixedTimedMap could be made generic.
     /**
      * A collection of finished polls, automatically deleted from the
      * collection when they reach a certain age.
@@ -262,28 +280,45 @@ public class PollManager
     
     private Object pollMapLock = thePolls;
 
+    /** Set the time after which recent polls will expire. */
+    void setExpireInterval(long recentPollExpireTime) {
+      synchronized (pollMapLock) {
+	theRecentPolls.setInterval(recentPollExpireTime);
+      }
+    }
+
     /** Remember a current poll. It will remain available to
-     * getPollManagerEntry until it is closed by closePoll. */
+     * getCurrentPoll until it is closed by closePoll.
+     * @throw IllegalArgumentException if the pool's key is already
+     * current.
+     */
     void addPoll(BasePoll poll) {
       synchronized (pollMapLock) {
+	if (thePolls.containsKey(poll.getKey())) {
+	  throw new IllegalArgumentException("Poll "+poll.getKey()+
+            " is already in the EntryManager.");
+	}
+	// todo(bhayes): Should also check under the lock that there's
+	// no V3Poller with this AU [or perhaps AUID] in thePolls;
+	// startPoll checks isPollRunning(), but outside the lock.
 	thePolls.put(poll.getKey(), new PollManagerEntry(poll));
       }
     }
 
     /** Return the PollManagerEntry for the current poll with the specified
-     * key. */
-    PollManagerEntry getPollManagerEntry(String key) {
+     * key; the poll may be closed at any time. */
+    PollManagerEntry getCurrentPoll(String key) {
       synchronized (pollMapLock) {
 	return thePolls.get(key);
       }
     }
 
     /**
-     * Is there a current V3Poller for the given ArchivalUnit
+     * Is there a current, active V3Poller for the given ArchivalUnit
      * @param spec the ArchivalUnit
-     * @return true if we have a current V3Poller for au
+     * @return true if we have a current, active V3Poller for au
      */
-    public boolean isPollRunning(ArchivalUnit au) {
+    boolean isPollRunning(ArchivalUnit au) {
       if (au == null || au.getAuId() == null) {
 	throw new NullPointerException("Passed a null AU or AU with null ID " 
 				       + "to isPollRunning!");
@@ -292,7 +327,10 @@ public class PollManager
 	for (PollManagerEntry pme : thePolls.values()) {
 	  if (au.getAuId().equals(pme.getPollSpec().getAuId())) {
 	    if (pme.getPoll() instanceof V3Poller) {
-	      // todo(bhayes): is the isPollActive check required for V3?
+	      // todo(bhayes): is the isPollActive check required for
+	      // V3? Could this be replaced with forAu(au) and then a
+	      // loop over that Collection looking for V3Poller and
+	      // isPollActive?
 	      if (pme.isPollActive()) {
 		return true;
 	      }
@@ -311,6 +349,8 @@ public class PollManager
       Set<PollManagerEntry> forAu = new HashSet<PollManagerEntry>();
       synchronized (pollMapLock) {
 	for (PollManagerEntry pme : thePolls.values()) {
+	  // todo(bhayes): why does isPollRunning use the AUID to
+	  // decide equality, and this code use the ArchivalUnit?
 	  ArchivalUnit pau = pme.poll.getCachedUrlSet().getArchivalUnit();
 	  if (pau == au) {
 	    forAu.add(pme);
@@ -320,23 +360,23 @@ public class PollManager
       return forAu;
     }
 
-    /** Remove the current poll. It will no longer be available from
-     * getPollManagerEntry, but will be available in the accessors for
-     * recent polls. */
-    PollManagerEntry closePoll(String key) {
+    /** Allow the current poll to expire. It will no longer be
+     * available from getCurrentPoll, but will be available in
+     * the accessors for recent polls. 
+     * @throws IllegalStateException if the entry specified by the key
+     * is not complete.
+     */
+    PollManagerEntry allowToExpire(String key) {
       synchronized (pollMapLock) {
 	PollManagerEntry pme = thePolls.remove(key);
 	if (pme != null && pme.poll != null) {
+	  if (!pme.isPollCompleted()) { 
+	    throw new IllegalStateException("Poll "+key+
+	      " should have been completed before it was expired.");
+	  }
 	  theRecentPolls.put(key, pme);
 	}
 	return pme;
-      }
-    }
-
-    /** Set the time after which recent polls will expire. */
-    void setExpireInterval(long recentPollExpireTime) {
-      synchronized (pollMapLock) {
-	theRecentPolls.setInterval(recentPollExpireTime);
       }
     }
  
@@ -351,7 +391,7 @@ public class PollManager
     /**
      * @return the number of current V3Pollers.
      */
-    int countActiveV3Pollers() {
+    int countCurrentV3Pollers() {
       int count = 0;
       synchronized (pollMapLock) {
 	for (PollManagerEntry pme : thePolls.values()) {
@@ -366,7 +406,7 @@ public class PollManager
     /**
      * @return the number of current V3Pollers.
      */
-    int countActiveV3Voters() {
+    int countCurrentV3Voters() {
       int count = 0;
       synchronized (pollMapLock) {
 	for (PollManagerEntry pme : thePolls.values()) {
@@ -1191,7 +1231,7 @@ public class PollManager
   public void resumePoll(boolean replayNeeded,
 			 String key,
 			 ActivityRegulator.Lock lock) {
-    PollManagerEntry pme = entryManager.getPollManagerEntry(key);
+    PollManagerEntry pme = entryManager.getCurrentPoll(key);
     if(pme == null) {
       theLog.debug2("ignoring resume request for unknown key " + key);
       return;
@@ -1232,18 +1272,25 @@ public class PollManager
    */
   void handleIncomingMessage(LcapMessage msg) throws IOException {
     if (theLog.isDebug2()) theLog.debug2("Got a message: " + msg);
+    // V1 only: discard duplicates; this is a no-op in V3.
     PollFactory fact = getPollFactory(msg);
     if(fact.isDuplicateMessage(msg, this)) {
       theLog.debug3("Dropping duplicate message:" + msg);
       return;
     }
+    // todo(bhayes): Since PollManager is asynchronous with polls
+    // closing, the check here can't always know; BasePoll objects
+    // should be ready to have receiveMessage called when they are
+    // closed.
+    // Avoid sending messages to polls that aren't active. 
     String key = msg.getKey();
     PollManagerEntry pme;
     if (msg instanceof V1LcapMessage) {
-      // Needed for TestPollManager.testCloseThePoll to pass.
+      // Needed for TestPollManager.testCloseThePoll to test V1
+      // semantics.
       pme = getCurrentOrRecentV1PollEntry(key);
     } else {
-      pme = entryManager.getPollManagerEntry(key);
+      pme = entryManager.getCurrentPoll(key);
     }
     if(pme != null) {
       if(pme.isPollCompleted() || pme.isPollSuspended()) {
@@ -1258,6 +1305,14 @@ public class PollManager
     }
   }
 
+  // todo(bhayes): This is synchronized because in the case where
+  // entryManager.getCurrentPoll is null, we need to create an entry
+  // [in V3, a V3Voter] and have it in the entryManager before the
+  // next message comes in. In fact, findPoll is only called by the
+  // RouterMessageHandler callback, which is defined to be serialized,
+  // so the synchronize here isn't doing anything. It may be a
+  // misguided effort to synchronize entryManager getting entries from
+  // the PollStarter, or some remnant from some past requirement.
   /**
    * Find the poll defined by the <code>Message</code>.  If the poll
    * does not exist this will create a new poll (iff there are no conflicts)
@@ -1270,7 +1325,7 @@ public class PollManager
     String key = msg.getKey();
     BasePoll ret = null;
 
-    PollManagerEntry pme = entryManager.getPollManagerEntry(key);
+    PollManagerEntry pme = entryManager.getCurrentPoll(key);
     if (pme == null) {
       theLog.debug3("findPoll: Making new poll: " + key);
       // makePoll will add the poll to the entryMap.  todo(bhayes):
@@ -1387,6 +1442,9 @@ public class PollManager
   private void processNewPoll(BasePoll poll, LcapMessage msg) {
     if (poll != null) {
       poll.setMessage(msg);
+      // Make sure the new poll is in the entryManager before it is
+      // started; PollManager will be ready to handleIncomingMessage
+      // from the addPoll.
       entryManager.addPoll(poll);
       poll.startPoll();
     }
@@ -1397,22 +1455,28 @@ public class PollManager
    * @param key the poll signature
    */
   public void closeThePoll(String key)  {
-    PollManagerEntry pme = entryManager.closePoll(key);
+    PollManagerEntry pme = entryManager.getCurrentPoll(key);
     if (pme == null || pme.poll == null) {
       theLog.warning("Attempt to close unknown poll : " + key);
       return;
     }
+    // todo(bhayes): I believe that in V3 the poll.isPollComplete() is
+    // always true at this point; in V1 calling closeThePoll() calls
+    // setPollCompleted(), which makes poll.isPollComplete() true.
+
+    // todo(bhayes): No idea what this comment is saying. V1? V3?
     // mark the poll completed because if we need to call a repair poll
     // we don't want this one to be in conflict with it.
     // PollTally tally = pme.poll.getVoteTally();
-    BasePoll p = pme.getPoll();
     pme.setPollCompleted();
+    entryManager.allowToExpire(key);
     try {
       theIDManager.storeIdentities();
     } catch (ProtocolException ex) {
       theLog.error("Unable to write Identity DB file.");
     }
 
+    BasePoll p = pme.getPoll();
     NodeManager nm = getDaemon().getNodeManager(p.getAu());
 
     // XXX: This is hacked up, admittedly.  The entire NodeManager
@@ -2158,7 +2222,7 @@ public class PollManager
     int maxVoters =
       CurrentConfig.getIntParam(V3Voter.PARAM_MAX_SIMULTANEOUS_V3_VOTERS,
                                 V3Voter.DEFAULT_MAX_SIMULTANEOUS_V3_VOTERS);
-    int activeVoters = entryManager.countActiveV3Voters();
+    int activeVoters = entryManager.countCurrentV3Voters();
     if (activeVoters >= maxVoters) {
       theLog.info("Maximum number of active voters is " 
 	       + maxVoters + "; " + activeVoters + " are already running.");
@@ -2193,7 +2257,7 @@ public class PollManager
 
   // Used only in TestPollManager
   boolean isPollActive(String key) {
-    PollManagerEntry pme = entryManager.getPollManagerEntry(key);
+    PollManagerEntry pme = entryManager.getCurrentPoll(key);
     return (pme != null) ? pme.isPollActive() : false;
   }
 
@@ -2204,7 +2268,7 @@ public class PollManager
 
   // Used only in TestPollManager
   boolean isPollSuspended(String key) {
-    PollManagerEntry pme = entryManager.getPollManagerEntry(key);
+    PollManagerEntry pme = entryManager.getCurrentPoll(key);
     return (pme != null) ? pme.isPollSuspended() : false;
   }
 
@@ -2254,11 +2318,11 @@ public class PollManager
    * @version 1.0
    */
   public static class PollManagerEntry {
-    private BasePoll poll;
-    private PollSpec spec;
-    private Deadline pollDeadline;
-    private int type;
-    private String key;
+    private final BasePoll poll;
+    private final PollSpec spec;
+    private final Deadline pollDeadline;
+    private final int type;
+    private final String key;
 
     PollManagerEntry(BasePoll p) {
       poll = p;
@@ -2557,7 +2621,7 @@ public class PollManager
     if (!enableV3Poller) {
       startOneWait.expireIn(paramMaxPollersSleep);
     } else {
-      int activePollers = entryManager.countActiveV3Pollers();
+      int activePollers = entryManager.countCurrentV3Pollers();
       if (activePollers >= maxSimultaneousPollers) {
 	startOneWait.expireIn(paramMaxPollersSleep);
       } else {
