@@ -99,7 +99,7 @@ public class WileyArticleIteratorFactory
     }
     
     protected void guessAdditionalFiles(ArticleFiles af, Matcher mat) {
-      CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1$3.wml.xml"));
+      CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1.wml.xml"));
       
       if (xmlCu != null && xmlCu.hasContent()) {
     	  af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, xmlCu);
