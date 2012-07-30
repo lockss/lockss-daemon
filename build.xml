@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.314 2012-07-30 05:43:31 tlipkis Exp $
+ $Id: build.xml,v 1.315 2012-07-30 06:12:59 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -2414,14 +2414,8 @@ Test results in ${test.results}
                   preservelastmodified="true" >
               <fileset dir="${basedir}" >
                 <include name="lib/"/>
-                <exclude name="${lockss.jar}/"/>
-                <exclude name="${lockss.test.jar}/"/>
-                <exclude name="${lockss.plugins.jar}/"/>
-                <exclude name="${lockss.plugins.test.jar}/"/>
-                <exclude name="${lockss.ant.jar}/"/>
-                <exclude name="${lockss.tools.jar}/"/>
-                <exclude name="${lockss.tools.test.jar}/"/>
-                <exclude name="${lockss.platform.jar}/"/>
+                <exclude name="lib/lockss.jar"/>
+                <exclude name="lib/lockss-*.jar"/>
               </fileset>
             </copy>
           </then>
