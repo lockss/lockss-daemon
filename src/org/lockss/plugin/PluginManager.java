@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.229 2012-07-22 15:53:50 pgust Exp $
+ * $Id: PluginManager.java,v 1.230 2012-07-30 05:43:58 tlipkis Exp $
  */
 
 /*
@@ -242,8 +242,7 @@ public class PluginManager
   // maps auid to AU
   private Map<String,ArchivalUnit> auMap =
     Collections.synchronizedMap(new HashMap());
-  // A set of all aus sorted by title.  The UI relies on this behavior.
-  private Set<ArchivalUnit> auSet = new TreeSet<ArchivalUnit>(auComparator);
+  // List of all aus sorted by title.  The UI relies on this behavior.
   private List<ArchivalUnit> auList = null;
 
   // maps host to collections of AUs.  Used to quickly locate candidate AUs
@@ -887,12 +886,9 @@ public class PluginManager
     log.debug("Deactivating AU: " + au.getName());
     // remove from map first, so no new activity can start (poll messages,
     // RemoteAPI, etc.)
-    synchronized (auSet) {
+    synchronized (auMap) {
       auMap.remove(auid);
-      auSet.remove(au);
       auList = null;
-
-      checkAuSetConsistency();
     }
     delHostAus(au);
 
@@ -1039,42 +1035,11 @@ public class PluginManager
 
   protected void putAuInMap(ArchivalUnit au) {
     log.debug2("putAuMap(" + au.getAuId() +", " + au);
-    synchronized (auSet) {
+    synchronized (auMap) {
       auMap.put(au.getAuId(), au);
-      auSet.add(au);
       auList = null;
-
-      checkAuSetConsistency();
     }
     addHostAus(au);
-  }
-
-  private void checkAuSetConsistency() {
-    if (auMap.size() != auSet.size()) {
-      log.critical("auSet.size() = " + auSet.size() +
-		   ", auMap.size() = " + auMap.size());
-      for (ArchivalUnit setAu : auSet) {
-	ArchivalUnit mapAu = auMap.get(setAu.getAuId());
-	if (mapAu == null) {
-	  log.critical("AU in auSet missing from auMap: " + setAu.getName());
-	} else if (mapAu != setAu) {
-	  log.critical("AU in auSet differs from auMap: " + setAu.getName());
-	  log.critical("AU is " + (auSet.contains(mapAu) ? "" : "not ") +
-		       "in auSet");
-	}
-      }
-      for (Map.Entry<String,ArchivalUnit> ent : auMap.entrySet()) {
-	ArchivalUnit mapAu = ent.getValue();
-	if (!auSet.contains(mapAu)) {
-	  log.critical("AU in auMap not in auSet: " + mapAu.getName());
-	}
-      }
-      log.critical("Rebuilding auSet");
-      auSet.clear();
-      auSet.addAll(auMap.values());
-      log.critical("Rebuilt auSet.size() = " + auSet.size());
-      auList = null;
-    }
   }
 
   public ArchivalUnit getAuFromId(String auId) {
@@ -1780,7 +1745,17 @@ public class PluginManager
     }
   }
 
-  private Map recentCuMap = Collections.synchronizedMap(new LRUMap(20));
+  private Map recentCuMap = new LRUMap(20);
+  private int recentCuHits = 0;
+  private int recentCuMisses = 0;
+
+  int getRecentCuHits() {
+    return recentCuHits;
+  }
+
+  int getRecentCuMisses() {
+    return recentCuMisses;
+  }
 
   /** Find a CachedUrl for the URL.  
    */
@@ -1788,19 +1763,38 @@ public class PluginManager
     // Maintain a small cache of URL -> CU.  When ICP is in use, each URL
     // will likely be looked up twice in quick succession
 
-    CachedUrl res = (CachedUrl)recentCuMap.get(url);
-    if (log.isDebug3()) {
+    CachedUrl res;
+    synchronized (recentCuMap) {
+      res = (CachedUrl)recentCuMap.get(url);
       if (res != null) {
-	log.debug3("cache hit " + res.toString() +
-		   (res.hasContent() ? "with" : "without") + " content.");
+	// Ensure we flush CUs belonging to stale AUs.  (The test is cheap,
+	// and handling this with AuEvent handler would require a search as
+	// map is keyed by CU, not AU.)
+	if (isActiveAu(res.getArchivalUnit())) {
+	  if (log.isDebug3()) {
+	    log.debug3("cache hit " + res.toString() +
+		       (res.hasContent() ? "with" : "without") + " content.");
+	  }
+	  recentCuHits++;
+	} else {
+	  log.debug3("cache hit " + res.toString() + " in stale AU: " +
+		     res.getArchivalUnit() + ", flushed");
+	  recentCuMap.remove(url);
+	  res = null;
+	  recentCuMisses++;
+	}
       } else {
 	log.debug3("cache miss for " + url);
+	recentCuMisses++;
       }
     }
+    // Don't nood to hold lock while searching.
     if (res == null || (withContent && !res.hasContent())) {
       res = findTheCachedUrl0(url, withContent);
       if (res != null) {
-	recentCuMap.put(url, res);
+	synchronized (recentCuMap) {
+	  recentCuMap.put(url, res);
+	}
       }
     }
     return res;
@@ -1972,16 +1966,21 @@ public class PluginManager
 
   /**
    * Return a list of all configured ArchivalUnits.  The UI relies on
-   * this being sorted by au title, and so we return a copy of auSet,
-   * which is kept in the right order.
+   * this being sorted by au title.
    *
    * @return the List of aus
    */
   public List<ArchivalUnit> getAllAus() {
-    synchronized (auSet) {
+    synchronized (auMap) {
       if (auList == null) {
-	auList =
-	  Collections.unmodifiableList(new ArrayList<ArchivalUnit>(auSet));
+	long startSort = TimeBase.nowMs();
+	List<ArchivalUnit> tmp = new ArrayList<ArchivalUnit>(auMap.values());
+	Collections.sort(tmp, auComparator);
+	auList = Collections.unmodifiableList(tmp);
+	if (log.isDebug2()) {
+	  long diff = TimeBase.msSince(startSort);
+	  log.debug2("Sort AUs list: " + StringUtil.timeIntervalToString(diff));
+	}
       }
       return auList;
     }
@@ -1991,10 +1990,10 @@ public class PluginManager
    * Return a randomly ordered list of all AUs.
    */
   // putting this here in PluginManager saves having to make an extra copy
-  // of auSet
+  // of the list.
   public List<ArchivalUnit> getRandomizedAus() {
-    synchronized (auSet) {
-      return CollectionUtil.randomPermutation(auSet);
+    synchronized (auMap) {
+      return CollectionUtil.randomPermutation(auMap.values());
     }
   }
 

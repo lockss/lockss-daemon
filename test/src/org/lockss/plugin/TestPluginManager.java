@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.96 2012-07-10 16:14:44 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.97 2012-07-30 05:43:58 tlipkis Exp $
  */
 
 /*
@@ -660,7 +660,17 @@ public class TestPluginManager extends LockssTestCase {
     mgr.putAuInMap(mau2);
     mgr.putAuInMap(mau3);
     mgr.putAuInMap(mau1);
-    assertEquals(ListUtil.list(mau1, mau2, mau3, mau4, mau5), mgr.getAllAus());
+    List allAus = mgr.getAllAus();
+    assertEquals(ListUtil.list(mau1, mau2, mau3, mau4, mau5), allAus);
+    // ensure list is cached
+    assertSame(allAus, mgr.getAllAus());
+
+    MockArchivalUnit mau6 = new MockArchivalUnit();
+    mau6.setName("Aardvark"); mau6.setAuId("0");
+    mgr.putAuInMap(mau6);
+    assertNotSame(allAus, mgr.getAllAus());
+    assertEquals(ListUtil.list(mau6, mau1, mau2, mau3, mau4, mau5),
+		 mgr.getAllAus());
   }
 
   public void testgetRandomizedAus() throws Exception {
@@ -1024,8 +1034,12 @@ public class TestPluginManager extends LockssTestCase {
     // get the two archival units
     MockArchivalUnit au1 = (MockArchivalUnit)mgr.getAuFromId(mauauid1);
     MockArchivalUnit au2 = (MockArchivalUnit)mgr.getAuFromId(mauauid2);
+    assertEquals(0, mgr.getRecentCuMisses());
+    assertEquals(0, mgr.getRecentCuHits());
     assertNull(mgr.findCachedUrl(url1));
     assertNull(mgr.findCachedUrl(url2));
+    assertEquals(2, mgr.getRecentCuMisses());
+    assertEquals(0, mgr.getRecentCuHits());
     CachedUrl cu1 = au1.addUrl(url1, true, true, null);
     CachedUrl cu2 = au2.addUrl(url2, true, true, null);
     CachedUrl cu31 = au1.addUrl(url3, true, true, null);
@@ -1033,24 +1047,68 @@ public class TestPluginManager extends LockssTestCase {
     CachedUrl cu = mgr.findCachedUrl(url1);
     assertEquals(url1, cu.getUrl());
     assertSame(au1, cu.getArchivalUnit());
+    assertEquals(3, mgr.getRecentCuMisses());
+    assertEquals(0, mgr.getRecentCuHits());
+    CachedUrl cuSave = cu;
     cu = mgr.findCachedUrl(url1a);
     assertEquals(url1, cu.getUrl());
     assertSame(au1, cu.getArchivalUnit());
+    assertEquals(4, mgr.getRecentCuMisses());
+    assertEquals(0, mgr.getRecentCuHits());
     cu = mgr.findCachedUrl(url1b);
     assertEquals(url1, cu.getUrl());
     assertSame(au1, cu.getArchivalUnit());
+    assertEquals(5, mgr.getRecentCuMisses());
+    assertEquals(0, mgr.getRecentCuHits());
 
     cu = mgr.findCachedUrl(url2);
     assertEquals(url2, cu.getUrl());
     assertSame(au2, cu.getArchivalUnit());
+    assertEquals(6, mgr.getRecentCuMisses());
+    assertEquals(0, mgr.getRecentCuHits());
+
+    // url1 should be in cache
+    cu = mgr.findCachedUrl(url1);
+    assertSame(cuSave, cu);
+    assertEquals(url1, cu.getUrl());
+    assertSame(au1, cu.getArchivalUnit());
+    assertEquals(6, mgr.getRecentCuMisses());
+    assertEquals(1, mgr.getRecentCuHits());
 
     cu = mgr.findCachedUrl(url3);
     assertEquals(url3, cu.getUrl());
+    assertEquals(7, mgr.getRecentCuMisses());
+    assertEquals(1, mgr.getRecentCuHits());
 
     // Test version that returns all matches
     assertEquals(ListUtil.list(cu1), mgr.findCachedUrls(url1));
     assertEquals(ListUtil.list(cu2), mgr.findCachedUrls(url2));
     assertSameElements(ListUtil.list(cu31, cu32), mgr.findCachedUrls(url3));
+
+    // url1 should still be in cache
+    cu = mgr.findCachedUrl(url1);
+    assertSame(cuSave, cu);
+    assertEquals(url1, cu.getUrl());
+    assertSame(au1, cu.getArchivalUnit());
+    assertEquals(7, mgr.getRecentCuMisses());
+    assertEquals(2, mgr.getRecentCuHits());
+    Plugin plug1 = au1.getPlugin();
+    Configuration au1conf = au1.getConfiguration();
+
+    // stop and start AU1
+    mgr.stopAu(au1, AuEvent.Deactivate);
+    MockArchivalUnit xmau1 =
+      (MockArchivalUnit)mgr.createAu(plug1, au1conf, AuEvent.RestartCreate);
+    CachedUrl xcu1 = xmau1.addUrl(url1, true, true, null);
+    CachedUrl xcu31 = xmau1.addUrl(url3, true, true, null);
+
+    // url1 cache entry should be detected as invalid and a new CU returned.
+    cu = mgr.findCachedUrl(url1);
+    assertEquals(url1, cu.getUrl());
+    assertSame(xmau1, cu.getArchivalUnit());
+    assertEquals(8, mgr.getRecentCuMisses());
+    assertEquals(2, mgr.getRecentCuHits());
+    assertNotSame(cuSave, cu);
   }
 
   AuState setUpAuState(MockArchivalUnit mau) {
