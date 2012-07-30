@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.313 2012-07-25 09:55:07 tlipkis Exp $
+ $Id: build.xml,v 1.314 2012-07-30 05:43:31 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -674,8 +674,8 @@ The target you have selected requires compiling under JDK 1.7.
   <!--  Public tasks -->
   <!-- ==================================================================== -->
   <target name="clean-all"
-     depends="clean,clean-tdbxml"
-   description="Delete all generated files and dirs" />
+	  depends="clean,clean-tdbxml"
+	  description="Delete all generated files and dirs" />
 
   <!-- Old target.  Remove  -->
   <target name="clean0" depends="clean"
@@ -2596,13 +2596,6 @@ Test results in ${test.results}
   <target name="check.contrib"
    depends="prepare.contrib,load.ant-contrib" />
 
-  <!-- Fail if i18n language bundles aren't available -->
-  <!-- XXX This should test whether the language bundles are actually
-       present -->
-  <target name="require.i18n" depends="check.gettext">
-    <fail unless="gettext.available">Required language bundles can't be built.</fail>
-  </target>
-
   <!-- Load the Ant gettext tasks -->
   <target name="check.gettext" depends="check.contrib" unless="gettext.checked">
     <!-- Check for existence of gettext program msgfmt -->
@@ -2814,6 +2807,15 @@ optionally -Dtests= for tests to be run.
 
 
   <!-- ==================================================================== -->
+  <!-- Fail if i18n language bundles aren't available. -->
+  <!-- XXX This should probably be changed to check that specific language
+       bundles are actually present, once we have such a list. -->
+  <target name="require-i18n" depends="check.gettext"
+	  description="Fail if i18n language bundles can't be built." >
+    <fail unless="gettext.available">Required language bundles can't be built.</fail>
+  </target>
+
+  <!-- ==================================================================== -->
   <!-- Extract message keys from the source code of a single module. 
        Takes a single srcdir argument. -->
   <target name="i18n-extract-messages" 
@@ -2918,7 +2920,7 @@ optionally -Dtests= for tests to be run.
 	      value="${clsdir}/${i18n.bundle.dir}/.timestamp"/>
     <uptodate property="bundles.are.up.to.date"
 	      targetfile="${bundles.timestamp.file}">
-      <srcfiles dir="${srcdir}" />
+      <srcfiles dir="${srcdir}/${i18n.dir}" />
     </uptodate>
     <if>
       <isset property="bundles.are.up.to.date" />
