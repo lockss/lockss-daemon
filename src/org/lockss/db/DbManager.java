@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.1 2012-07-06 22:36:33 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.2 2012-07-30 17:34:00 fergaloy-sf Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import java.util.List;
 import javax.sql.DataSource;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.derby.drda.NetworkServerControl;
+import org.apache.derby.jdbc.ClientConnectionPoolDataSource;
 import org.apache.derby.jdbc.ClientDataSource;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.config.ConfigManager;
@@ -212,7 +213,18 @@ public class DbManager extends BaseLockssDaemonManager {
       throw new SQLException("DbManager has not been initialized.");
     }
 
-    Connection conn = dataSource.getConnection();
+    Connection conn = null;
+
+    if (dataSource instanceof javax.sql.ConnectionPoolDataSource) {
+    log.debug("Pooled");
+      conn =
+	  ((javax.sql.ConnectionPoolDataSource) dataSource)
+	      .getPooledConnection().getConnection();
+    } else {
+      log.debug("Not pooled");
+      conn = dataSource.getConnection();
+    }
+
     conn.setAutoCommit(false);
 
     return conn;
@@ -236,6 +248,14 @@ public class DbManager extends BaseLockssDaemonManager {
   public boolean createTableIfMissing(Connection conn, String tableName,
       String tableCreateSql) throws BatchUpdateException, SQLException {
     final String DEBUG_HEADER = "createTableIfMissing(): ";
+
+    if (!ready) {
+      throw new SQLException("DbManager has not been initialized.");
+    }
+
+    if (conn == null) {
+      throw new NullPointerException("Null connection.");
+    }
 
     // Check whether the table needs to be created.
     if (!tableExists(conn, tableName)) {
