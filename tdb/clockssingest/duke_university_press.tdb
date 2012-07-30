@@ -1,0 +1,400 @@
+{
+
+  publisher <
+    name = Duke University Press
+  >
+  
+  attr[contract] = 2012
+
+  {
+  
+    title <
+      name = American Literary Scholarship ;
+      issn = 0065-9142 ;
+      eissn = 1527-2125 ;
+      issnl = 0065-9142
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://als.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; American Literary Scholarship 2000 ; 1998 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; American Literary Scholarship 2001 ; 1999 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; American Literary Scholarship 2002 ; 2000 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; American Literary Scholarship 2003 ; 2001 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; American Literary Scholarship 2004 ; 2002 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; American Literary Scholarship 2005 ; 2003 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; American Literary Scholarship 2006 ; 2004 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; American Literary Scholarship 2007 ; 2005 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; American Literary Scholarship 2008 ; 2006 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; American Literary Scholarship 2009 ; 2007 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; American Literary Scholarship 2010 ; 2008 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; American Literary Scholarship 2011 ; 2009 >
+  
+    }
+  
+  }
+  
+  {
+  
+    title <
+      name = American Literature ;
+      issn = 0002-9831 ;
+      eissn = 1527-2117 ;
+      issnl = 0002-9831
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://americanliterature.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; American Literature Volume 72 ; 72 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; American Literature Volume 73 ; 73 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; American Literature Volume 74 ; 74 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; American Literature Volume 75 ; 75 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; American Literature Volume 76 ; 76 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; American Literature Volume 77 ; 77 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; American Literature Volume 78 ; 78 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; American Literature Volume 79 ; 79 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; American Literature Volume 80 ; 80 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; American Literature Volume 81 ; 81 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; American Literature Volume 82 ; 82 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; American Literature Volume 83 ; 83 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; American Literature Volume 84 ; 84 >
+  
+    }
+  
+  }
+  
+  {
+  
+    title <
+      name = American Speech ;
+      issn = 0003-1283 ;
+      eissn = 1527-2133 ;
+      issnl = 0003-1283
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://americanspeech.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; American Speech Volume 75 ; 75 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; American Speech Volume 76 ; 76 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; American Speech Volume 77 ; 77 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; American Speech Volume 78 ; 78 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; American Speech Volume 79 ; 79 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; American Speech Volume 80 ; 80 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; American Speech Volume 81 ; 81 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; American Speech Volume 82 ; 82 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; American Speech Volume 83 ; 83 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; American Speech Volume 84 ; 84 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; American Speech Volume 85 ; 85 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; American Speech Volume 86 ; 86 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; American Speech Volume 87 ; 87 >
+  
+    }
+  
+  }
+  
+  {
+  
+     title <
+      name = boundary 2 ;
+      issn = 0190-3659 ;
+      eissn = 1527-2141 ;
+      issnl = 0190-3659
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://boundary2.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; boundary 2 Volume 27 ; 27 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; boundary 2 Volume 28 ; 28 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; boundary 2 Volume 29 ; 29 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; boundary 2 Volume 30 ; 30 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; boundary 2 Volume 31 ; 31 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; boundary 2 Volume 32 ; 32 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; boundary 2 Volume 33 ; 33 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; boundary 2 Volume 34 ; 34 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; boundary 2 Volume 35 ; 35 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; boundary 2 Volume 36 ; 36 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; boundary 2 Volume 37 ; 37 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; boundary 2 Volume 38 ; 38 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; boundary 2 Volume 39 ; 39 >
+  
+    }
+  
+  }
+  
+  {
+  
+    title <
+      name = Camera Obscura: Feminism, Culture, and Media Studies ;
+      issn = 0270-5346 ;
+      eissn = 1529-1510 ;
+      issnl = 0270-5346
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://cameraobscura.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 23 ; 23 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 26 ; 26 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 27 ; 27 >
+  
+    }
+  
+  }
+  
+  {
+  
+    title <
+      name = The Carlyle Letters Online ;
+      issn = 0002-9831 ;
+      eissn = 1527-2117 ;
+      issnl = 0002-9831
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://carlyleletters.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1812-1821 ; The Carlyle Letters Online Volume 1 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1822-1823 ; The Carlyle Letters Online Volume 2 ; 2 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1824-1825 ; The Carlyle Letters Online Volume 3 ; 3 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1826-1828 ; The Carlyle Letters Online Volume 4 ; 4 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1829-1831 ; The Carlyle Letters Online Volume 5 ; 5 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1831-1833 ; The Carlyle Letters Online Volume 6 ; 6 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1833-1834 ; The Carlyle Letters Online Volume 7 ; 7 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1835-1836 ; The Carlyle Letters Online Volume 8 ; 8 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1836-1837 ; The Carlyle Letters Online Volume 9 ; 9 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1838 ; The Carlyle Letters Online Volume 10 ; 10 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1839 ; The Carlyle Letters Online Volume 11 ; 11 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1840 ; The Carlyle Letters Online Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1841 ; The Carlyle Letters Online Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1842 ; The Carlyle Letters Online Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1842 ; The Carlyle Letters Online Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1843 ; The Carlyle Letters Online Volume 16 ; 16 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1843-1844 ; The Carlyle Letters Online Volume 17 ; 17 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1844 ; The Carlyle Letters Online Volume 18 ; 18 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1845 ; The Carlyle Letters Online Volume 19 ; 19 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1845-1846 ; The Carlyle Letters Online Volume 20 ; 20 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1846-1847 ; The Carlyle Letters Online Volume 21 ; 21 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1847-1848 ; The Carlyle Letters Online Volume 22 ; 22 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1848-1849 ; The Carlyle Letters Online Volume 23 ; 23 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1849 ; The Carlyle Letters Online Volume 24 ; 24 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1850 ; The Carlyle Letters Online Volume 25 ; 25 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1851 ; The Carlyle Letters Online Volume 26 ; 26 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1852 ; The Carlyle Letters Online Volume 27 ; 27 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1853 ; The Carlyle Letters Online Volume 28 ; 28 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1854-1855 ; The Carlyle Letters Online Volume 29 ; 29 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1855 ; The Carlyle Letters Online Volume 30 ; 30 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1856 ; The Carlyle Letters Online Volume 31 ; 31 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1856-1857 ; The Carlyle Letters Online Volume 32 ; 32 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1857-1858 ; The Carlyle Letters Online Volume 33 ; 33 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1858 ; The Carlyle Letters Online Volume 34 ; 34 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1859 ; The Carlyle Letters Online Volume 35 ; 35 >
+ 
+   }
+  
+  }
+  
+  {
+  
+    title <
+      name = Common Knowledge ;
+      issn = 0961-754X ;
+      eissn = 1538-4578 ;
+      issnl = 0961-754X
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://commonknowledge.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Common Knowledge Volume 8 ; 8 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Common Knowledge Volume 9 ; 9 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Common Knowledge Volume 10 ; 10 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Common Knowledge Volume 11 ; 11 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Common Knowledge Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Common Knowledge Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Common Knowledge Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Common Knowledge Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Common Knowledge Volume 16 ; 16 >
+  
+    }
+  
+  }
+  
+  {
+  
+    title <
+      name = Comparative Literature ;
+      issn = 0010-4124 ;
+      eissn = 1945-8517 ;
+      issnl = 0010-4124
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://complit.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Comparative Literature Volume 52 ; 52 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Comparative Literature Volume 53 ; 53 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Comparative Literature Volume 54 ; 54 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Comparative Literature Volume 55 ; 55 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Comparative Literature Volume 56 ; 56 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Comparative Literature Volume 57 ; 57 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Comparative Literature Volume 58 ; 58 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Comparative Literature Volume 59 ; 59 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Comparative Literature Volume 60 ; 60 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Comparative Literature Volume 61 ; 61 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Comparative Literature Volume 62 ; 62 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Comparative Literature Volume 63 ; 63 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Comparative Literature Volume 64 ; 64 >
+  
+    }
+  
+  }
+  
+  {
+  
+    title <
+      name = Comparative Studies of South Asia, Africa and the Middle East ;
+      issn = 1089-201X ;
+      eissn = 1548-226X ;
+      issnl = 1089-201X
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://cssaame.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 ; 32 >
+  
+    }
+  
+  }
+  
+  {
+  
+     title <
+      name = Cultural Politics ;
+      issn = 1743-2197 ;
+      eissn = 1751-7435 ;
+      issnl = 1743-2197
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://culturalpolitics.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Cultural Politics Volume 1 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Cultural Politics Volume 2 ; 2 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Cultural Politics Volume 3 ; 3 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Cultural Politics Volume 4 ; 4 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Cultural Politics Volume 5 ; 5 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Cultural Politics Volume 6 ; 6 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Cultural Politics Volume 7 ; 7 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Cultural Politics Volume 8 ; 8 >
+  
+    }
+  
+  }
+  
+  {
+  
+    title <
+      name = differences: A Journal of Feminist Cultural Studies ;
+      issn = 1040-7391 ;
+      eissn = 1527-1986 ;
+      issnl = 1040-7391
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://differences.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999-2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; differences: A Journal of Feminist Cultural Studies Volume 19 ; 19 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; differences: A Journal of Feminist Cultural Studies Volume 23 ; 23 >
+  
+    }
+  
+  }
+  
+  {
+  
+    title <
+      name = East Asian Science, Technology and Society: An International Journal ;
+      issn = 1875-2160 ;
+      eissn = 1875-2152 ;
+      issnl = 1875-2160
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://easts.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 ; 2 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 ; 3 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 ; 4 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 ; 5 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
+  
+    }
+  
+  }
+  
+}
