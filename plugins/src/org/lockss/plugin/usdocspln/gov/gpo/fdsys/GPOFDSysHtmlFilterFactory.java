@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysHtmlFilterFactory.java,v 1.5 2012-07-31 00:10:37 thib_gc Exp $
+ * $Id: GPOFDSysHtmlFilterFactory.java,v 1.6 2012-07-31 21:42:56 thib_gc Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class GPOFDSysHtmlFilterFactory implements FilterFactory {
         // Some URL targets changed over time
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "top-menu-one"),
         // Filters the "Email a link to this page" link
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^search\\.notificationPage\\.action\\?emailBody="),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^search/notificationPage\\.action\\?emailBody="),
         // Filters session ID from search results
         HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid="),
         // Differ over time in the presence and placement of rel="nofollow"
