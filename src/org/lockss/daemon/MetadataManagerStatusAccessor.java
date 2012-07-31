@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.2 2012-07-29 15:08:47 pgust Exp $
+ * $Id: MetadataManagerStatusAccessor.java,v 1.3 2012-07-31 23:36:31 pgust Exp $
  */
 
 /*
@@ -33,16 +33,25 @@ package org.lockss.daemon;
 
 import java.util.ArrayList;
 import java.util.BitSet;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import org.apache.derby.iapi.sql.Row;
+import org.lockss.daemon.MetadataManager.ReindexingStatus;
+import org.lockss.daemon.MetadataManager.ReindexingTask;
 import org.lockss.daemon.status.ColumnDescriptor;
 import org.lockss.daemon.status.OverviewAccessor;
 import org.lockss.daemon.status.StatusAccessor;
 import org.lockss.daemon.status.StatusService.NoSuchTableException;
 import org.lockss.daemon.status.StatusTable;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.state.ArchivalUnitStatus;
 import org.lockss.util.CatalogueOrderComparator;
 import org.lockss.util.ListUtil;
 import org.lockss.util.StringUtil;
+import org.lockss.util.TimeBase;
 
 /**
  * This class is the StatusAccessor for the MetadataManager.
@@ -60,11 +69,16 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
   private static final String AU_COL_NAME = "au";
   private static final String INDEX_TYPE = "crawl_type";
   private static final String START_TIME_COL_NAME = "start";
-  private static final String END_TIME_COL_NAME = "end";
   private static final String DURATION_COL_NAME = "dur";
-  private static final String INDEX_STATUS = "status";
-  private static final String NUM_INDEXED = "num_indexed";
-  private static final String NUM_ERRORS = "num_errors";
+  private static final String INDEX_STATUS_COL_NAME = "status";
+  private static final String NUM_INDEXED_COL_NAME = "num_indexed";
+  // Sort keys, not visible columns
+  private static final String SORT_KEY1 = "sort1";
+  private static final String SORT_KEY2 = "sort2";
+  
+  private static int SORT_BASE_INDEXING = 0;
+  private static int SORT_BASE_WAITING = 1000000;
+  private static int SORT_BASE_DONE = 2000000;
 
   final private List<ColumnDescriptor> colDescs =
       ListUtil.fromArray(new ColumnDescriptor[] {
@@ -75,21 +89,13 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
                              ColumnDescriptor.TYPE_STRING),
         new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
                              ColumnDescriptor.TYPE_DATE),
-        new ColumnDescriptor(END_TIME_COL_NAME, "End Time",
-                             ColumnDescriptor.TYPE_DATE),
         new ColumnDescriptor(DURATION_COL_NAME, "Duration",
                              ColumnDescriptor.TYPE_TIME_INTERVAL),
-        new ColumnDescriptor(INDEX_STATUS, "Status",
+        new ColumnDescriptor(INDEX_STATUS_COL_NAME, "Status",
                              ColumnDescriptor.TYPE_STRING),
-        new ColumnDescriptor(NUM_INDEXED, "Articles Indexed",
-                                 ColumnDescriptor.TYPE_INT),
-        new ColumnDescriptor(NUM_ERRORS, "Errors",
-                             ColumnDescriptor.TYPE_INT,
-                             "Number of articles that could not be indexed"),
+        new ColumnDescriptor(NUM_INDEXED_COL_NAME, "Articles Indexed",
+                             ColumnDescriptor.TYPE_INT),
       });
-
-  private static final String SORT_KEY1 = "sort1";
-  private static final String SORT_KEY2 = "sort2";
 
   // ascending by category, descending start or end time
   private final List sortRules =
@@ -104,21 +110,13 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
     this.metadataMgr = metadataMgr;
   }
   
-  private void addIfNonZero(List res, String head, int val) {
-    if (val != 0) {
-      res.add(new StatusTable.SummaryInfo(head,
-                                          ColumnDescriptor.TYPE_INT,
-                                          new Long(val)));
-    }
-  }
-
   private List getSummaryInfo() {
     List res = new ArrayList();
-    long totalTime = 0;
-    int activeOps = metadataMgr.getReindexingTaskCount();
-    int pendingOps = 0; // metadataMgr.getPendingTaskCount();
-    int successfulOps = 0; // metadataMgr.getSuccessfulTaskCount();
-    int failedOps = 0; // metadataMgr.getFailedTaskCount();
+    long activeOps = metadataMgr.getActiveReindexingCount();
+    long pendingOps = metadataMgr.getPendingAusCount() - activeOps;
+    long successfulOps = metadataMgr.getSuccessfulReindexingCount();
+    long failedOps = metadataMgr.getFailedReindexingCount();
+    long articleCount = metadataMgr.getArticleCount();
     boolean indexingEnabled = metadataMgr.isIndexingEnabled();
     
     res.add(new StatusTable.SummaryInfo(
@@ -137,18 +135,91 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         successfulOps));
 
     res.add(new StatusTable.SummaryInfo(
-        "Failed Indexing Operations",
+        "Failed/Rescheduled Indexing Operations",
         ColumnDescriptor.TYPE_INT,
         failedOps));
 
-    res.add(new StatusTable.SummaryInfo("Indexing enabled",
+    res.add(new StatusTable.SummaryInfo(
+        "Total Articles in Index",
+        ColumnDescriptor.TYPE_INT,
+        articleCount));
+
+    res.add(new StatusTable.SummaryInfo("Indexing Enabled",
                                           ColumnDescriptor.TYPE_STRING,
                                           indexingEnabled));
     return res;
   }
 
   private List getRows() {
-    List rows = new ArrayList();
+    List<Map<String,Object>> rows = new ArrayList<Map<String,Object>>();
+    int rowNum = 0;
+    for (ReindexingTask task : metadataMgr.getReindexingTasks()) {
+      ArchivalUnit au = task.getAu();
+      long startTime = task.getStartTime();
+      long endTime = task.getEndTime();
+      ReindexingStatus indexStatus = task.getReindexingStatus();
+      long numIndexed = task.getIndexedArticleCount();
+      boolean isNewAu = task.isNewAu();      
+      long curTime = TimeBase.nowMs();
+      
+      Map<String,Object> row = new HashMap<String,Object>();
+      row.put(AU_COL_NAME,
+              new StatusTable.Reference(au.getName(),
+                                        ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
+                                        au.getAuId()));
+      if (isNewAu) {
+        row.put(INDEX_TYPE, "New Index");
+      } else {
+        row.put(INDEX_TYPE, "Reindex");
+      }
+      
+      if (startTime == 0) {
+        // task hasn't started yet
+        row.put(START_TIME_COL_NAME, "");
+        row.put(DURATION_COL_NAME, "");
+        row.put(INDEX_STATUS_COL_NAME, "Waiting");
+        row.put(NUM_INDEXED_COL_NAME, "");
+        // invisible keys for sorting
+        row.put(SORT_KEY1, SORT_BASE_WAITING);
+        row.put(SORT_KEY2, rowNum);
+      } else if (endTime == 0) {
+        // task is running but hasn't finished yet
+        row.put(START_TIME_COL_NAME, startTime);
+        row.put(DURATION_COL_NAME, curTime-startTime);
+        row.put(INDEX_STATUS_COL_NAME, "Indexing");
+        row.put(NUM_INDEXED_COL_NAME, numIndexed);
+        // invisible keys for sorting
+        row.put(SORT_KEY1, SORT_BASE_INDEXING);
+        row.put(SORT_KEY2, startTime);
+
+      } else {
+        // task is finished
+        row.put(START_TIME_COL_NAME, startTime);
+        row.put(DURATION_COL_NAME, endTime-startTime);
+        String status;
+        switch (indexStatus) {
+          case success:
+            status = "Success";
+            break;
+          case failed:
+            status = "Failed";
+            break;
+          case rescheduled:
+            status = "Rescheduled";
+            break;
+          default:
+            status = indexStatus.toString();
+        }
+        row.put(INDEX_STATUS_COL_NAME, status);
+        row.put(NUM_INDEXED_COL_NAME, numIndexed);
+        // invisible keys for sorting
+        row.put(SORT_KEY1, SORT_BASE_DONE);
+        row.put(SORT_KEY2, endTime);
+      }
+      rows.add(row);
+      rowNum++;
+    }
+    
     return rows;
   }
 
@@ -195,10 +266,16 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
     @Override
     public Object getOverview(String tableName, BitSet options) {
       List<StatusTable.Reference> res = new ArrayList<StatusTable.Reference>();
-      String s =
-          StringUtil.numberOfUnits(metadataMgr.getReindexingTaskCount(), 
-              "active metadata indexing operation", "active metadata index operations");
-        res.add(new StatusTable.Reference(s, MetadataManager.METADATA_STATUS_TABLE_NAME));
+      String s;
+      if (metadataMgr.isIndexingEnabled()) {
+        s = StringUtil.numberOfUnits(
+              metadataMgr.getActiveReindexingCount(), 
+              "active metadata indexing operation", 
+              "active metadata index operations");
+      } else {
+        s = "Metadata Indexing Disabled";
+      }
+      res.add(new StatusTable.Reference(s, MetadataManager.METADATA_STATUS_TABLE_NAME));
 
       return res;
     }
