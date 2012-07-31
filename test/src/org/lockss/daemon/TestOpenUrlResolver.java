@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.21 2012-07-22 17:06:25 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.22 2012-07-31 23:14:03 pgust Exp $
  */
 
 /*
@@ -280,7 +280,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     int ausCount = waitForReindexing(expectedAuCount, maxWaitTime);
     assertEquals(expectedAuCount, ausCount);
     
-    assertEquals(0, metadataManager.reindexingTasks.size());
+    assertEquals(0, metadataManager.activeReindexingTasks.size());
     assertEquals(0, metadataManager.getAuIdsToReindex(con, Integer.MAX_VALUE).size());
 
     String query =           

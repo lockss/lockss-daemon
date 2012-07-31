@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.9 2012-07-06 22:57:14 fergaloy-sf Exp $
+ * $Id: TestMetadataManager.java,v 1.10 2012-07-31 23:14:03 pgust Exp $
  */
 
 /*
@@ -236,7 +236,7 @@ public class TestMetadataManager extends LockssTestCase {
   public void testCreateMetadata() throws Exception {
     Connection con = dbManager.getConnection();
     
-    assertEquals(0, metadataManager.reindexingTasks.size());
+    assertEquals(0, metadataManager.activeReindexingTasks.size());
     assertEquals(0, metadataManager.getAuIdsToReindex(con, Integer.MAX_VALUE).size());
 
     // check distinct access URLs
@@ -313,7 +313,7 @@ public class TestMetadataManager extends LockssTestCase {
     results.remove("9761585623177");
     assertEquals(0, results.size());
     
-    assertEquals(0, metadataManager.reindexingTasks.size());
+    assertEquals(0, metadataManager.activeReindexingTasks.size());
     assertEquals(0, metadataManager.getAuIdsToReindex(con, Integer.MAX_VALUE).size());
 
     con.rollback();

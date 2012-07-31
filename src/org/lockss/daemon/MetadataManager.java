@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.37 2012-07-29 00:54:32 pgust Exp $
+ * $Id: MetadataManager.java,v 1.38 2012-07-31 23:14:03 pgust Exp $
  */
 
 /*
@@ -138,6 +138,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Default maximum concurrent reindexing tasks */
   static public final int DEFAULT_MAX_REINDEXING_TASKS = 1;
 
+  /** 
+   * The maximum number reindexing task history. This
+   * property can be changed at runtime 
+   */
+  static public final String 
+    PARAM_HISTORY_MAX = PREFIX + "historySize";
+
+  /** Default maximum reindexing tasks history*/
+  static public final int DEFAULT_HISTORY_MAX = 200;
+
   /** Name of metadata status table */
   public static final String 
     METADATA_STATUS_TABLE_NAME = "metadata_status_table";
@@ -145,8 +155,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /**
    * Map of running reindexing tasks keyed and sorted by their AuIds
    */
-  final Map<String, ReindexingTask> reindexingTasks = 
+  final Map<String, ReindexingTask> activeReindexingTasks = 
     new HashMap<String, ReindexingTask>();
+
+  /**
+   * List of reindexing tasks in order from most recent (0) to least recent.
+   */
+  final List<ReindexingTask> reindexingTaskHistory =
+      new ArrayList<ReindexingTask>();
 
   /**
    * Metadata manager indexing enabled flag
@@ -164,7 +180,24 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   /** Maximum number of reindexing tasks */
   int maxReindexingTasks = DEFAULT_MAX_REINDEXING_TASKS;
+  
+  /** Maximum size of the reindexing task history list
+  int maxReindexingTaskHistory = DEFAULT_MAX_REINDEXING_TASKS_HISTORY;
 
+  /** The number of articles currently in the metadatabase */
+  long articleCount = 0;
+  
+  /** The number of AUs pending for reindexing */
+  private long pendingAusCount = 0;
+  
+  /** The number successful reindexing operations */
+  private long successfulReindexingCount = 0;
+  
+  /** The number successful reindexing operations */
+  private long failedReindexingCount = 0;
+  
+  private int maxReindexingTaskHistory = DEFAULT_HISTORY_MAX;
+  
   /** The plugin manager */
   private PluginManager pluginMgr = null;
 
@@ -276,7 +309,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   /** Length of feature field */
   static public final int MAX_FEATURE_FIELD = 16;
-
+  
   /** 
    * Length of plugin ID field. This field will be used as horizontal
    * partitioning field in the future, so it's length must be compatible
@@ -290,10 +323,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Length of volume field */
   static public final int MAX_VOLUME_FIELD = 16;
   
-  private long totalCpuTime = 0;
-  private long totalUserTime = 0;
-  private long totalClockTime = 0;
-
   private static ThreadMXBean tmxb = ManagementFactory.getThreadMXBean();
   static {
     log.debug3(  "current thread CPU time supported? "
@@ -394,6 +423,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.error("Cannot create functions", ex);
     }
 
+    // initialize pending AUs and article counts from database
+    try {
+      pendingAusCount = getPendingAusCount(conn);
+      articleCount = getArticleCount(conn);
+    } catch (SQLException ex) {
+      log.error("Cannot get pending AUs and article counts");
+    }
+
     dbManager.safeRollbackAndClose(conn);
     
     StatusService statusServ = dbManager.getDaemon().getStatusService();
@@ -410,6 +447,42 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // start metadata extraction
     MetadataStarter starter = new MetadataStarter();
     new Thread(starter).start();
+  }
+
+  /**
+   * Get the number of pending AUs.
+   * 
+   * @param conn the connection
+   * @return the number of pending AUs
+   * @throws SQLException if error executing the query
+   */
+  public long getPendingAusCount(Connection conn) throws SQLException {
+    Statement stmt = conn.createStatement();
+    ResultSet resultSet = 
+        stmt.executeQuery("SELECT COUNT(*) FROM " + PENDINGAUS_TABLE);
+    resultSet.next();
+    long rowCount = resultSet.getLong(1);
+    resultSet.close();
+    stmt.close();
+    return rowCount;
+  }
+  
+  /**
+   * Get the number articles in the metadatabase.
+   * 
+   * @param conn the connection
+   * @return the number of articles in the metadatabase
+   * @throws SQLException if error executing the query
+   */
+  public long getArticleCount(Connection conn) throws SQLException {
+    Statement stmt = conn.createStatement();
+    ResultSet resultSet = 
+        stmt.executeQuery("SELECT COUNT(*) FROM " + METADATA_TABLE);
+    resultSet.next();
+    long rowCount = resultSet.getLong(1);
+    resultSet.close();
+    stmt.close();
+    return rowCount;
   }
 
   /**
@@ -430,7 +503,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     boolean doEnable = config.getBoolean(PARAM_INDEXING_ENABLED,
                                          DEFAULT_INDEXING_ENABLED);
     setIndexingEnabled(doEnable);
-
+    
+    if (changedKeys.contains(PARAM_HISTORY_MAX) ) {
+      int histSize = config.getInt(PARAM_HISTORY_MAX, 
+                                    DEFAULT_HISTORY_MAX);
+      setMaxHistory(histSize);
+    }
   }
 
   /**
@@ -461,6 +539,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // drop schema tables already exist
       if (dbManager.tableExists(conn, PENDINGAUS_TABLE)) {
 	dbManager.executeBatch(conn, dropSchema);
+	pendingAusCount = 0;
       }
       conn.commit();
       conn.close();
@@ -849,11 +928,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     int reindexedTaskCount = 0;
-    synchronized (reindexingTasks) {
-    while (reindexingTasks.size() < maxReindexingTasks) {
+    synchronized (activeReindexingTasks) {
+    while (activeReindexingTasks.size() < maxReindexingTasks) {
         // get list of pending aus to reindex
         List<String> auIds =
-      	  getAuIdsToReindex(conn, maxReindexingTasks - reindexingTasks.size());
+      	  getAuIdsToReindex(conn, maxReindexingTasks - activeReindexingTasks.size());
         if (auIds.isEmpty()) {
         	break;
         }
@@ -885,7 +964,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             } else {
               log.debug("running reindexing task for au: " + au.getName());
               ReindexingTask task = new ReindexingTask(au, ae);
-              reindexingTasks.put(au.getAuId(), task);
+              activeReindexingTasks.put(au.getAuId(), task);
+
+              // add reindexing task to the history; limit history list size
+              addToHistory(task);
+              
               runReindexingTask(task);
               reindexedTaskCount++;
             }
@@ -902,17 +985,49 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * 
    * @return the number of active reindexing tasks
    */
-  public int getReindexingTaskCount() {
-    return reindexingTasks.size();
+  public long getActiveReindexingCount() {
+    return activeReindexingTasks.size();
+  }
+  
+  /**
+   * Return the number of succesful reindexing operations.
+   * 
+   * @return the number of successful reindexing operations
+   */
+  public long getSuccessfulReindexingCount() {
+    return this.successfulReindexingCount;
+  }
+  
+  /**
+   * Return the number of unsuccesful reindexing operations.
+   * 
+   * @return the number of unsuccessful reindexing operations
+   */
+  public long getFailedReindexingCount() {
+    return this.failedReindexingCount;
   }
   
   /**
    * Get the list of reindexing tasks.
    * @return the 
    */
-  public Collection<ReindexingTask> getReindexingTasks() {
-    return Collections.unmodifiableCollection(reindexingTasks.values());
+  public List<ReindexingTask> getReindexingTasks() {
+    return new ArrayList<ReindexingTask>(reindexingTaskHistory);
   }
+  
+  /**
+   * Get the number of distinct articles in the metadatabase.
+   * 
+   * @return the number of distinct articles in the metadatabase
+   */
+  public long getArticleCount() {
+    return articleCount;
+  }
+  
+  public long getPendingAusCount() {
+    return pendingAusCount;
+  }
+  
   
   /**
    * Ensure as many reindexing tasks as possible are running if manager is
@@ -940,14 +1055,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private void stopReindexing() {
     log.debug(  "number of reindexing tasks being stopped: "
-              + reindexingTasks.size());
+              + activeReindexingTasks.size());
 
     // quit any running reindexing tasks
-    synchronized (reindexingTasks) {
-      for (MetadataManager.ReindexingTask task : reindexingTasks.values()) {
+    synchronized (activeReindexingTasks) {
+      for (MetadataManager.ReindexingTask task : activeReindexingTasks.values()) {
         task.cancel();
       }
-      reindexingTasks.clear();
+      activeReindexingTasks.clear();
     }
   }
 
@@ -1100,7 +1215,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
             // This case occurs when the AU is being deleted, so delete 
             // its metadata
-            addAuToReindex(au);
+            removeAuForReindex(au);
             break;
           case RestartDelete:
             // This case occurs when the plugin is about to restart. There is
@@ -1206,6 +1321,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     /** The status of the task: successful if true */
     private ReindexingStatus status = ReindexingStatus.success;
     
+    /** Whether the AU being indexed is new to the index */
+    private boolean isNewAu = true;
+    
     // properties of AU and the TdbAu for this task
     private final String auid;
     private final String pluginId;
@@ -1220,9 +1338,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     private final String tdbauName;
     
     /** The number of articles indexed by this task */
-    private int articleCount = 0;
+    private long indexedArticleCount = 0;
     
+    // ThreadMXBean times
+    long startCpuTime = 0;
+    long startUserTime = 0;
+    long startClockTime = 0;
 
+    private long totalCpuTime = 0;
+    private long totalUserTime = 0;
+    private long totalClockTime = 0;
     
     private final boolean isTitleInTdb;
 
@@ -1254,7 +1379,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       TitleConfig tc = au.getTitleConfig();
       tdbau = (tc == null) ? null : tc.getTdbAu();
       tdbauName = (tdbau == null) ? null : tdbau.getName();
-      tdbauStartYear = (tdbau == null) ? null : tdbau.getStartYear();
+      tdbauStartYear = (tdbau == null) ? au.getName() : tdbau.getStartYear();
       tdbauYear = (tdbau == null) ? null : tdbau.getYear();
 
       if (isTitleInTdb && (tdbau != null)) {
@@ -1273,11 +1398,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
       // set task callback after construction to ensure instance is initialized
       callback = new TaskCallback() {
-        // ThreadMXBean times
-        long startCpuTime = 0;
-        long startUserTime = 0;
-        long startClockTime = 0;
-
         public void taskEvent(SchedulableTask task, Schedule.EventType type) {
           long threadCpuTime = 0;
           long threadUserTime = 0;
@@ -1301,7 +1421,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
               conn = dbManager.getConnection();
 
               // remove old metadata before adding new for AU
-              removeMetadata(conn, au);
+              int articlesRemoved = removeMetadata(conn, au);
+              isNewAu = (articlesRemoved == 0);
+              
               notifyStartReindexingAu(au);
             } catch (SQLException ex) {
               log.error("Failed to set up to reindex pending au: "
@@ -1323,18 +1445,21 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                   removeFromPendingAus(conn, au.getAuId());
                   conn.commit();
                   
+                  successfulReindexingCount++;
+                  articleCount = MetadataManager.this.getArticleCount(conn);
+                  
                   // update AU's feature version to that of the plugin
                   // so we can test whether it's up-to-date in case of a
                   // later reload of the plugin
                   AuUtil.getAuState(au).setFeatureVersion(Feature.Metadata, 
                       au.getPlugin().getFeatureVersion(Feature.Metadata));
+                  long elapsedCpuTime = threadCpuTime = startCpuTime;
+                  long elapsedUserTime = threadUserTime - startUserTime;
+                  long elapsedClockTime = currentClockTime - startClockTime;
+                  totalCpuTime += elapsedCpuTime;
+                  totalUserTime += elapsedUserTime;
+                  totalClockTime += elapsedClockTime;
                   if (log.isDebug2()) {
-                    long elapsedCpuTime = threadCpuTime = startCpuTime;
-                    long elapsedUserTime = threadUserTime - startUserTime;
-                    long elapsedClockTime = currentClockTime - startClockTime;
-                    totalCpuTime += elapsedCpuTime;
-                    totalUserTime += elapsedUserTime;
-                    totalClockTime += elapsedClockTime;
                     log.debug2("Reindexing task finished for au: "
                         + au.getName() + " CPU time: " + elapsedCpuTime / 1.0e9
                         + " (" + totalCpuTime / 1.0e9 + "), UserTime: "
@@ -1342,6 +1467,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                         / 1.0e9 + ") Clock time: " + elapsedClockTime / 1.0e3
                         + " (" + totalClockTime / 1.0e3 + ")");
                   }
+                  
                   break;
             	case failed: 
             	case rescheduled:
@@ -1352,9 +1478,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                   // attempt to move failed AU to end of pending list
                   removeFromPendingAus(conn, au.getAuId());
                   if (status == ReindexingStatus.rescheduled) {
-                	addToPendingAus(conn, Collections.singleton(au));
+                    addToPendingAus(conn, Collections.singleton(au));
                   }
                   conn.commit();
+                  failedReindexingCount++;
                   break;
                 }
               } catch (SQLException ex) {
@@ -1365,8 +1492,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                 }
               }
 
-              synchronized (reindexingTasks) {
-                reindexingTasks.remove(au.getAuId());
+              synchronized (activeReindexingTasks) {
+                activeReindexingTasks.remove(au.getAuId());
                 notifyFinishReindexingAu(au, status);
 
                 // schedule another task if available
@@ -1401,6 +1528,39 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       }
     }
     
+    /** 
+     * Returns the AU being reindexed.
+     * 
+     * @return the AU being reindexed
+     */
+    public ArchivalUnit getAu() {
+      return au;
+    }
+    
+    /**
+     * Returns <code>true<.code> if the AU is not yet indexed.
+     * @return <code>true</code> if the AU is not yet indexed
+     */
+    public boolean isNewAu() {
+      return isNewAu;
+    }
+    
+    /**
+     * Get the start time for indexing
+     * @return the start time in miliseconds since epoch (0 if not started)
+     */
+    public long getStartTime() {
+      return startClockTime;
+    }
+
+    /**
+     * Get the end time for indexing.
+     * @return the end time in miliseconds since epoch (0 if not finished)
+     */
+    public long getEndTime() {
+      return totalClockTime+startClockTime;
+    }
+
     /**
      * Returns the reindexing status of this task.
      * 
@@ -1415,8 +1575,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
      * 
      * @return the number of articles extracted by this task
      */
-    public int getArticleCount() {
-      return articleCount;
+    public long getIndexedArticleCount() {
+      return indexedArticleCount;
     }
 
     /**
@@ -1447,7 +1607,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           try {
             addMetadata(md);
             extracted.increment();
-            articleCount++;
+            indexedArticleCount++;
             
           } catch (SQLException ex) {
             log.error(  "Failed to index metadata for article URL: "
@@ -1471,7 +1631,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           setFinished();
           if (status == ReindexingStatus.success) {
             status = ReindexingStatus.rescheduled;
-            articleCount = 0;
+            indexedArticleCount = 0;
           }
         } catch (PluginException ex) {
           log.error(  "Failed to index metadata for full text URL: "
@@ -1479,12 +1639,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           setFinished();
           if (status == ReindexingStatus.success) {
             status = ReindexingStatus.rescheduled;
-            articleCount = 0;
+            indexedArticleCount = 0;
           }
         } catch (RuntimeException ex) {
           log.error(" Caught unexpected Throwable for full text URL: "
               + af.getFullTextUrl(), ex);
-          articleCount = 0;
+          indexedArticleCount = 0;
         }
       }
 
@@ -1847,7 +2007,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           String pluginId = results.getString(1);
           String auKey = results.getString(2);
           String auId = PluginManager.generateAuId(pluginId, auKey);
-          if (!reindexingTasks.containsKey(auId)) {
+          if (!activeReindexingTasks.containsKey(auId)) {
             auIds.add(auId);
           }
         }
@@ -1972,7 +2132,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @param auId the AU id
    */
   private void cancelAuTask(String auId) {
-    ReindexingTask task = reindexingTasks.get(auId);
+    ReindexingTask task = activeReindexingTasks.get(auId);
     if (task != null) {
       // task cancellation will remove task and schedule next one
       log.debug2(  "Canceling pending reindexing task for auId " + auId);
@@ -1991,13 +2151,67 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     throws SQLException {
     cancelAuTask(auId);
 
+    // remove from the history list
+    removeFromHistory(auId);
+    
     // remove the metadata for this AU
-    int count = removeMetadata(conn, auId);
+    int articleCount = removeMetadata(conn, auId);
     
     // remove pending reindexing operations for deleted AU
     removeFromPendingAus(conn, auId);
 
     conn.commit();
+    
+    notifyDeletedAu(auId, articleCount);
+    
+    return articleCount;
+  }
+  
+  /**
+   * Set maximum reindexing task history list size.
+   * 
+   * @param maxSize the maximum reindexing task history list size
+   */
+  public void setMaxHistory(int maxSize) {
+    maxReindexingTaskHistory = maxSize;
+    synchronized (reindexingTaskHistory) {
+      while (reindexingTaskHistory.size() > maxReindexingTaskHistory) {
+        reindexingTaskHistory.remove(maxReindexingTaskHistory);
+      }
+    }
+  }
+  
+  /** 
+   * Add task to history.
+   * 
+   * @param task the task
+   */
+  private void addToHistory(ReindexingTask task) {
+    synchronized (reindexingTaskHistory) {
+      reindexingTaskHistory.add(0, task);
+      setMaxHistory(maxReindexingTaskHistory);
+    }
+  }
+
+  /**
+   * Remove tasks with specified auid from history
+   * 
+   * @param auId the auid
+   * @return the number of items removed
+   */
+  private int removeFromHistory(String auId) {
+    int count = 0;
+    synchronized (reindexingTaskHistory) {
+      // remove tasks with this auid from task history list
+      for (Iterator<ReindexingTask> itr = reindexingTaskHistory.iterator();
+          itr.hasNext(); ) {
+        ReindexingTask task = itr.next();
+        if (auId.equals(task.getAu().getAuId())) {
+          itr.remove();
+          count++;
+        }
+      }
+    }
     return count;
   }
   
@@ -2007,7 +2221,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return <code>true</code> if au was added for reindexing
    */
   public boolean addAuToReindex(ArchivalUnit au) {
-    synchronized (reindexingTasks) {
+    synchronized (activeReindexingTasks) {
       Connection conn = null;
       try {
         log.debug2("Adding au to reindex: " + au.getName());
@@ -2023,6 +2237,37 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         addToPendingAus(conn, Collections.singleton(au));
         conn.commit();
 
+        startReindexing(conn);
+        return true;
+      } catch (SQLException ex) {
+        log.error("Cannot add au to pending AUs: " + au.getName(), ex);
+        return false;
+      } finally {
+        dbManager.safeRollbackAndClose(conn);
+      }
+    }
+  }
+
+  /** 
+   * This method removes an AU from being reindexed.
+   * @param au the AU to add.
+   * @return <code>true</code> if au was added for reindexing
+   */
+  public boolean removeAuForReindex(ArchivalUnit au) {
+    synchronized (activeReindexingTasks) {
+      Connection conn = null;
+      try {
+        log.debug2("Removing au to reindex: " + au.getName());
+        // add pending AU
+        conn = dbManager.getConnection();
+        if (conn == null) {
+          log.error(  "Cannot connect to database"
+                    + " -- cannot add aus to pending aus");
+          return false;
+        }
+        deleteAu(conn, au.getAuId());
+        conn.commit();
+        // force reindexing to start next task
         startReindexing(conn);
         return true;
       } catch (SQLException ex) {
@@ -2079,6 +2324,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       }
     }
     insertPendingAu.executeBatch();
+    
+    pendingAusCount = getPendingAusCount(conn);
   }
 
   /**
@@ -2100,5 +2347,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     deletePendingAu.setString(1, pluginId);
     deletePendingAu.setString(2, auKey);
     deletePendingAu.execute();
+    
+    pendingAusCount = getPendingAusCount(conn);
   }
 }
