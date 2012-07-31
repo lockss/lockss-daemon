@@ -555,7 +555,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 ; 18 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 19 ; 19 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 20 ; 20 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 20 ; 20 >
      
       
     }
@@ -644,6 +644,58 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; History of Political Economy Volume 42 ; 42 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; History of Political Economy Volume 43 ; 43 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; History of Political Economy Volume 44 ; 44 >
+    
+    }
+    
+    {
+  
+    title < 
+      name = Journal of Health Politics, Policy and Law ;
+      issn = 0361-6878 ;
+      eissn = 1527-1927
+  
+>
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://jhppl.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1976 ; History of Political Economy Volume 1; 1 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1977 ; History of Political Economy Volume 2 ; 2 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1978 ; History of Political Economy Volume 3 ; 3 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1979 ; History of Political Economy Volume 4 ; 4 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1980 ; History of Political Economy Volume 5 ; 5 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1981 ; History of Political Economy Volume 6 ; 6 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1982 ; History of Political Economy Volume 7 ; 7 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1983 ; History of Political Economy Volume 8 ; 8 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1984 ; History of Political Economy Volume 9 ; 9 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1985 ; History of Political Economy Volume 10 ; 10 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1986 ; History of Political Economy Volume 11 ; 11 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1987 ; History of Political Economy Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1988 ; History of Political Economy Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1989 ; History of Political Economy Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1990 ; History of Political Economy Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1991 ; History of Political Economy Volume 16 ; 16 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1992 ; History of Political Economy Volume 17 ; 17 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1993 ; History of Political Economy Volume 18 ; 18 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1994 ; History of Political Economy Volume 19 ; 19 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1995 ; History of Political Economy Volume 20 ; 20 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1996 ; History of Political Economy Volume 21 ; 21 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1997 ; History of Political Economy Volume 22 ; 22 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1998 ; History of Political Economy Volume 23 ; 23 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999 ; History of Political Economy Volume 24 ; 24 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; History of Political Economy Volume 25 ; 25 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; History of Political Economy Volume 26 ; 26 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; History of Political Economy Volume 27 ; 27 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; History of Political Economy Volume 28 ; 28 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; History of Political Economy Volume 29 ; 29 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; History of Political Economy Volume 30 ; 30 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; History of Political Economy Volume 31 ; 31 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; History of Political Economy Volume 32 ; 32 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; History of Political Economy Volume 33 ; 33 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; History of Political Economy Volume 34 ; 34 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; History of Political Economy Volume 35 ; 35 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; History of Political Economy Volume 36 ; 36 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; History of Political Economy Volume 37 ; 37 >
 
 
    }
