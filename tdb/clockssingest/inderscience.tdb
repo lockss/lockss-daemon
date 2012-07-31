@@ -6763,10 +6763,10 @@
       au < manifest ; exists ; 2010 ; International Journal of Technology Management Volume 50 ; 50 >
       au < manifest ; exists ; 2010 ; International Journal of Technology Management Volume 51 ; 51 >
       au < manifest ; exists ; 2010 ; International Journal of Technology Management Volume 52 ; 52 >
-      au < crawling ; exists ; 2011 ; International Journal of Technology Management Volume 53 ; 53 >
-      au < crawling ; exists ; 2011 ; International Journal of Technology Management Volume 54 ; 54 >
-      au < crawling ; exists ; 2011 ; International Journal of Technology Management Volume 55 ; 55 >
-      au < crawling ; exists ; 2011 ; International Journal of Technology Management Volume 56 ; 56 >
+      au < testing ; exists ; 2011 ; International Journal of Technology Management Volume 53 ; 53 >
+      au < testing ; exists ; 2011 ; International Journal of Technology Management Volume 54 ; 54 >
+      au < testing ; exists ; 2011 ; International Journal of Technology Management Volume 55 ; 55 >
+      au < testing ; exists ; 2011 ; International Journal of Technology Management Volume 56 ; 56 >
       au < crawling ; exists ; 2012 ; International Journal of Technology Management Volume 57 ; 57 >
       au < crawling ; exists ; 2012 ; International Journal of Technology Management Volume 58 ; 58 >
       au < manifest ; exists ; 2012 ; International Journal of Technology Management Volume 59 ; 59 >
@@ -6789,7 +6789,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Technology Marketing Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; International Journal of Technology Marketing Volume 4 ; 4 >
       au < manifest ; exists ; 2010 ; International Journal of Technology Marketing Volume 5 ; 5 >
-      au < crawling ; exists ; 2011 ; International Journal of Technology Marketing Volume 6 ; 6 >
+      au < testing ; exists ; 2011 ; International Journal of Technology Marketing Volume 6 ; 6 >
       au < manifest ; exists ; 2012 ; International Journal of Technology Marketing Volume 7 ; 7 >
 
     }
@@ -6829,7 +6829,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Technology Transfer and Commercialisation Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; International Journal of Technology Transfer and Commercialisation Volume 8 ; 8 >
       au < manifest ; exists ; 2010 ; International Journal of Technology Transfer and Commercialisation Volume 9 ; 9 >
-      au < crawling ; exists ; 2011 ; International Journal of Technology Transfer and Commercialisation Volume 10 ; 10 >
+      au < testing ; exists ; 2011 ; International Journal of Technology Transfer and Commercialisation Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; International Journal of Technology Transfer and Commercialisation Volume 11 ; 11 >
 
     }
@@ -6855,7 +6855,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Technology, Policy and Management Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; International Journal of Technology, Policy and Management Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; International Journal of Technology, Policy and Management Volume 10 ; 10 >
-      au < crawling ; exists ; 2011 ; International Journal of Technology, Policy and Management Volume 11 ; 11 >
+      au < testing ; exists ; 2011 ; International Journal of Technology, Policy and Management Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; International Journal of Technology, Policy and Management Volume 12 ; 12 >
 
     }
@@ -6871,7 +6871,7 @@
 
       param[journal_issn] = 2046-4541
       
-      au < crawling ; exists ; 2011 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
+      au < testing ; exists ; 2011 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
 
     }
 
@@ -6887,7 +6887,7 @@
       param[journal_issn] = 1756-0004
       
       au < manifest ; exists ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 >
-      au < crawling ; exists ; 2011 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 >
+      au < testing ; exists ; 2011 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 >
 
     }
 
@@ -6902,7 +6902,7 @@
 
       param[journal_issn] = 1759-0450
       
-      au < crawling ; exists ; 2010-2011 ; International Journal of Tourism Anthropology Volume 1 ; 1 >
+      au < testing ; exists ; 2010-2011 ; International Journal of Tourism Anthropology Volume 1 ; 1 >
 
     }
 
