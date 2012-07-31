@@ -542,10 +542,10 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1996 ; GLQ: A Journal of Lesbian and Gay Studies Volume 4 ; 4 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1997 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1998 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 > 
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >
@@ -556,7 +556,36 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 18 ; 18 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 19 ; 19 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; GLQ: A Journal of Lesbian and Gay Studies Volume 20 ; 20 >
+     
       
+    }
+          
+    {
+  
+    title < 
+      name = Hispanic American Historical Review ;
+      issn = 0018-2168 ;
+      eissn = 1527-1900
+
+>
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://hahr.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Hispanic American Historical Review Volume 81 ; 81 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Hispanic American Historical Review Volume 83 ; 83 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Hispanic American Historical Review Volume 84 ; 84 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Hispanic American Historical Review Volume 85 ; 85 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Hispanic American Historical Review Volume 86 ; 86 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Hispanic American Historical Review Volume 87 ; 87 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Hispanic American Historical Review Volume 88 ; 88 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Hispanic American Historical Review Volume 89 ; 89 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Hispanic American Historical Review Volume 90 ; 90>
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Hispanic American Historical Review Volume 92 ; 92 >
+
 
 
    }
