@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysHtmlFilterFactory.java,v 1.4 2012-07-02 20:29:29 davidecorcoran Exp $
+ * $Id: GPOFDSysHtmlFilterFactory.java,v 1.5 2012-07-31 00:10:37 thib_gc Exp $
  */
 
 /*
@@ -36,55 +36,58 @@ import java.io.*;
 import java.util.List;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.OrFilter;
+import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
-import org.lockss.filter.html.HtmlFilterInputStream;
-import org.lockss.filter.html.HtmlNodeFilterTransform;
-import org.lockss.filter.html.HtmlNodeFilters;
+import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 public class GPOFDSysHtmlFilterFactory implements FilterFactory {
 
-public InputStream createFilteredInputStream(ArchivalUnit au,
-	                                          InputStream in,
-	                                          String encoding)
-  throws PluginException {
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding)
+      throws PluginException {
 	
-  NodeFilter[] filters = new NodeFilter[] {
-  // Filters the "Email a link to this page" link
-  HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^search.notificationPage\\.action\\?emailBody="),
-  // Filters all embedded JavaScript
-  HtmlNodeFilters.tagWithAttribute("script", "type", "text/javascript"),
-  // Filters session ID from search results
-  HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid=")
-  };
-
-  OrFilter combinedFilter = new OrFilter(filters);
-  HtmlNodeFilterTransform transform = HtmlNodeFilterTransform.exclude(combinedFilter);
-  InputStream prefilteredStream = new HtmlFilterInputStream(in, encoding, transform);
-	    
-  try {
-	      
-  List pairs = ListUtil.list(
-  // May contain a session token in a comment
-  new TagPair("<!--<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />",
-              "\" />-->"),
-  // ...Or not in a comment, just two <input> tags in a row
-  new TagPair("<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />",
-              "\" />")
-  );
-	      
-  Reader prefilteredReader = new InputStreamReader(prefilteredStream, encoding);
-  Reader filteredReader = HtmlTagFilter.makeNestedFilter(prefilteredReader, pairs);
-  return new ReaderInputStream(filteredReader);
-  }
+    NodeFilter[] filters = new NodeFilter[] {
+        // Differences in the presence and order of <meta> tags and spacing of the <title> tag
+        new TagNameFilter("head"),
+        // Variability of scripts
+        new TagNameFilter("script"),
+        // Some URL targets changed over time
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "top-menu-one"),
+        // Filters the "Email a link to this page" link
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^search\\.notificationPage\\.action\\?emailBody="),
+        // Filters session ID from search results
+        HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid="),
+        // Differ over time in the presence and placement of rel="nofollow"
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^delivery/getpackage\\.action\\?packageId="),
+    };
   
-  catch (UnsupportedEncodingException uee) {
-  throw new PluginException(uee);
-  }
-}  
+    OrFilter combinedFilter = new OrFilter(filters);
+    HtmlNodeFilterTransform transform = HtmlNodeFilterTransform.exclude(combinedFilter);
+    InputStream prefilteredStream = new HtmlFilterInputStream(in, encoding, transform);
+  	    
+    List pairs = ListUtil.list(
+    // May contain a session token in a comment
+    new TagPair("<!--<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />",
+                "\" />-->"),
+    // ...Or not in a comment, just two <input> tags in a row
+    new TagPair("<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />",
+                "\" />")
+    );
+  	      
+    try {
+      Reader prefilteredReader = new InputStreamReader(prefilteredStream, encoding);
+      Reader filteredReader = HtmlTagFilter.makeNestedFilter(prefilteredReader, pairs);
+      Reader whitespaceReader = new WhiteSpaceFilter(filteredReader);
+      return new ReaderInputStream(whitespaceReader);
+    }
+    catch (UnsupportedEncodingException uee) {
+      throw new PluginException(uee);
+    }
+  }  
 }
    
