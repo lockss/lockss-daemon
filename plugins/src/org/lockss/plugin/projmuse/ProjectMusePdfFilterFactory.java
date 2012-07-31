@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePdfFilterFactory.java,v 1.4 2012-07-17 01:33:12 thib_gc Exp $
+ * $Id: ProjectMusePdfFilterFactory.java,v 1.5 2012-07-31 23:37:23 wkwilson Exp $
  */
 
 /*
@@ -32,167 +32,145 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.projmuse;
 
-import java.io.*;
 import java.util.List;
 
-import org.apache.commons.io.FileUtils;
-import org.lockss.daemon.PluginException;
-import org.lockss.plugin.*;
-import org.lockss.util.*;
-import org.pdfbox.cos.*;
-import org.pdfbox.pdfwriter.ContentStreamWriter;
-import org.pdfbox.pdmodel.common.PDStream;
+import org.lockss.filter.pdf.PdfTransform;
+import org.lockss.filter.pdf.SimplePdfFilterFactory;
+import org.lockss.pdf.PdfDocument;
+import org.lockss.pdf.PdfException;
+import org.lockss.pdf.PdfOpcodes;
+import org.lockss.pdf.PdfPage;
+import org.lockss.pdf.PdfToken;
+import org.lockss.pdf.PdfTokenStream;
+import org.lockss.pdf.PdfTokenStreamWorker;
+import org.lockss.pdf.PdfUtil;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.Logger;
 
-@Deprecated
-public class ProjectMusePdfFilterFactory implements FilterFactory {
-
-  public static class FilteringException extends PluginException {
-    public FilteringException() { super(); }
-    public FilteringException(String msg, Throwable cause) { super(msg, cause); }
-    public FilteringException(String msg) { super(msg); }
-    public FilteringException(Throwable cause) { super(cause); }
-  }
-
-  /**
-   * <p>The result is written to a temporary file output stream; this
-   * constant defines the size up to which it is handled entirely in
-   * memory.</p>
-   */
-  protected static final int TEMP_FILE_THRESHOLD = 10*1024*1024; // 10MB
+public class ProjectMusePdfFilterFactory extends SimplePdfFilterFactory {
   
   protected static final Logger logger = Logger.getLogger("ProjectMusePdfFilterFactory");
   
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
+  
+  @Override
+  public void transform(ArchivalUnit au, PdfDocument pdfDocument)
+      throws PdfException {
     
-    try {
-      PdfDocument pdfDocument = new PdfDocument(in);
-      PdfPage frontPage = pdfDocument.getPage(0);
-      List tokens = frontPage.getStreamTokens();
-      
-      int indexOfEt = -1;
-      int indexOfBt = -1;
-      int progress = 0;
-      
-      iteration_label: for (int index = tokens.size() - 1 ; index >= 0 ; --index) {
-        
-        switch (progress) {
-
-          case 0:
-          
-            if (PdfUtil.isEndTextObject(tokens, index)) {
-              indexOfEt = index;
-              progress = 1;
-            }
-            break;
-          
-          case 1:
-            
-            if (PdfUtil.isBeginTextObject(tokens, index)) {
-              progress = 0;
-              indexOfEt = -1;
-              break;
-            }
-            if (PdfUtil.isShowTextGlyphPositioning(tokens, index)) {
-              progress = 2;
-            }
-            break;
-          
-          case 2:
-            
-            if (PdfUtil.isBeginTextObject(tokens, index)) {
-              progress = 0;
-              indexOfEt = -1;
-              break;
-            }
-            Object obj = tokens.get(index);
-            if (!(obj instanceof COSArray)) {
-              progress = 1;
-              break;
-            }
-            COSArray cosArray = (COSArray)obj;
-            internal_label: for (int i = 0 ; i < cosArray.size() ; ++i) {
-              if (PdfUtil.matchPdfStringMatches(cosArray.get(i), ".*Access Provided by .*")) {
-                progress = 3;
-                break internal_label;
-              }
-            }
-            if (progress != 3) {
-              progress = 1;
-            }
-            break;
-          
-          case 3:
-            
-            if (PdfUtil.isBeginTextObject(tokens, index)) {
-              indexOfBt = index;
-              progress = 4;
-            }
-            break;
-            
-          case 4:
-            
-            break iteration_label;
-        
-        }
-        
+    ProvidedByWorkerTransform worker = new ProvidedByWorkerTransform();
+    boolean removeFirstPage = false;
+    
+    for (PdfPage pdfPage : pdfDocument.getPages()) {
+      PdfTokenStream pdfTokenStream = pdfPage.getPageTokenStream();
+      worker.process(pdfTokenStream);
+      if (worker.result) {
+        worker.transform(au, pdfTokenStream);
+        removeFirstPage = true;
       }
-        
-      if (progress == 4) {
-        // We have identified that this PDF document has dynamic elements
-
-        // Remove the dynamic elements on the front page
-        PDStream resultStream = frontPage.getPdfDocument().makePdStream();
-        OutputStream tokenOutputStream = resultStream.createOutputStream();
-        ContentStreamWriter tokenWriter = new ContentStreamWriter(tokenOutputStream);
-        tokenWriter.writeTokens(tokens, 0, indexOfBt);
-        tokenWriter.writeTokens(tokens, indexOfEt + 1, tokens.size());
-        frontPage.setContents(resultStream);
-        pdfDocument.removeCreationDate();
-        pdfDocument.removeModificationDate();
-        // Normalize the trailer ID
-        COSDictionary trailer = pdfDocument.getTrailer();
-        if (trailer != null) {
-          // Put bogus ID to prevent autogenerated (variable) ID
-          COSArray id = new COSArray();
-          id.add(new COSString("12345678901234567890123456789012"));
-          id.add(id.get(0));
-          trailer.setItem(COSName.getPDFName("ID"), id);
-        }
-      }
-
-      DeferredTempFileOutputStream pdfOutputStream = new DeferredTempFileOutputStream(TEMP_FILE_THRESHOLD);
-      pdfDocument.save(pdfOutputStream);
-      pdfDocument.close();
-      if (pdfOutputStream.isInMemory()) {
-        return new ByteArrayInputStream(pdfOutputStream.getData());
-      }
-      else {
-        File tempFile = null;
-        try {
-          tempFile = pdfOutputStream.getFile();
-          InputStream fileStream = new BufferedInputStream(new FileInputStream(tempFile));
-          CloseCallbackInputStream.Callback cb = new CloseCallbackInputStream.Callback() {
-            public void streamClosed(Object file) {
-              FileUtils.deleteQuietly(((File)file));
-            }
-          };
-          return new CloseCallbackInputStream(fileStream, cb, tempFile);
-        }
-        catch (FileNotFoundException fnfe) {
-          FileUtils.deleteQuietly(tempFile);
-          throw new FilteringException("Error while creating a temporary file output stream", fnfe);
-        }
-        
-      }
-
     }
-    catch (IOException ioe) {
-      throw new FilteringException("Error thrown by the PDF framework", ioe);
+    
+    if (removeFirstPage) {
+      pdfDocument.removePage(0);
     }
-
+    
+    pdfDocument.unsetCreationDate();
+    pdfDocument.unsetModificationDate();
+    pdfDocument.unsetMetadata();
+    PdfUtil.normalizeTrailerId(pdfDocument);
+    
   }
   
+  public static class ProvidedByWorkerTransform
+      extends PdfTokenStreamWorker
+      implements PdfTransform<PdfTokenStream> {
+    
+    public static final String PROVIDED_BY_REGEX = "\\s*Access Provided by .*";
+    
+    private boolean result;
+    
+    private int state;
+    
+    private int startIndex;
+    
+    public ProvidedByWorkerTransform() {
+      super(Direction.FORWARD);
+    }
+    
+    @Override
+    public void operatorCallback()
+        throws PdfException {
+      if (logger.isDebug3()) {
+        logger.debug3("ProvidedByWorkerTransform: initial: " + state);
+        logger.debug3("ProvidedByWorkerTransform: index: " + getIndex());
+        logger.debug3("ProvidedByWorkerTransform: operator: " + getOpcode());
+      }
+      
+      switch (state) {
+        
+        case 0: {
+          if (PdfOpcodes.BEGIN_TEXT_OBJECT.equals(getOpcode())) {
+            startIndex = getIndex();
+            ++state; 
+          }
+        } break;
+        
+        case 1: {
+          if (PdfOpcodes.SHOW_TEXT.equals(getOpcode())
+              && getTokens().get(getIndex() - 1).getString().matches(PROVIDED_BY_REGEX)) {
+            ++state; 
+          } else if (PdfOpcodes.SHOW_TEXT_GLYPH_POSITIONING.equals(getOpcode())) {
+            PdfToken token = getTokens().get(getIndex() - 1);
+            if (token.isArray()) {
+              for(PdfToken t : token.getArray()) {
+        	if(t.isString() && t.getString().matches(PROVIDED_BY_REGEX)) {
+        	  ++state; 
+        	}
+              }
+            } else if (token.isString() && token.getString().matches(PROVIDED_BY_REGEX)) {
+              ++state; 
+            }
+          } else if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) { 
+            state = 0;
+          }
+        } break;
+        
+        case 2: {
+          if (PdfOpcodes.END_TEXT_OBJECT.equals(getOpcode())) {
+            result = true;
+            stop(); 
+          }
+        } break;
+        
+        default: {
+          throw new PdfException("Invalid state in ProvidedByWorkerTransform: " + state);
+        }
+    
+      }
+    
+      if (logger.isDebug3()) {
+        logger.debug3("ProvidedByWorkerTransform: final: " + state);
+        logger.debug3("ProvidedByWorkerTransform: result: " + result);
+      }
+      
+      if (result) {
+        getTokens().subList(startIndex, getIndex()).clear();
+      }
+    }
+    
+    @Override
+    public void setUp() throws PdfException {
+      super.setUp();
+      state = 0;
+      result = false;
+    }
+    
+    @Override
+    public void transform(ArchivalUnit au,
+                          PdfTokenStream pdfTokenStream)
+        throws PdfException {
+      if (result) {
+        pdfTokenStream.setTokens(getTokens());
+      }
+    }
+    
+  }
 }
