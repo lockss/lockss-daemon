@@ -824,4 +824,27 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Mediterranean Quarterly: A Journal of Global Issues Volume 23 ; 23 >
 
 }
+
+    {
+  
+    title < 
+      name = minnesota review: a journal of creative and critical writing ;
+      issn = 0026-5667 ;
+      eissn = 2157-4189
+  
+>
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://minnesotareview.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; minnesota review: a journal of creative and critical writing Volume 63-64 ; 63-64 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; minnesota review: a journal of creative and critical writing Volume 65-67 ; 65-67 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; minnesota review: a journal of creative and critical writing Volume 68-69 ; 68-69 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; minnesota review: a journal of creative and critical writing Volume 70 ; 70 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; minnesota review: a journal of creative and critical writing Volume 71-73 ; 71-73 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; minnesota review: a journal of creative and critical writing Volume 75 ; 75 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; minnesota review: a journal of creative and critical writing Volume 76-77 ; 76-77 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; minnesota review: a journal of creative and critical writing Volume 78 ; 78 >
+
+}
    }
