@@ -792,8 +792,8 @@
       param[base_url] = http://lofe.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Labor: Studies in Working-Class History of the Americas Volume 1 ; 1 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Limnology and Oceanography: Fluids and Environments Volume 2 ; 2 >
 
 }
    }
