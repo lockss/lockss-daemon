@@ -726,5 +726,33 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; History of Political Economy Volume 42 ; 42 >
 
    }
+   
+   {
+  
+    title < 
+      name = Journal of Music Theory ;
+      issn = 0022-2909 ;
+      eissn = 1941-7497
+  
+   >
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://jmt.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999 ; History of Political Economy Volume 43 ; 43 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; History of Political Economy Volume 44 ; 44 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; History of Political Economy Volume 45 ; 45 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; History of Political Economy Volume 46 ; 46 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; History of Political Economy Volume 47 ; 47 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; History of Political Economy Volume 48 ; 48 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; History of Political Economy Volume 49 ; 49 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; History of Political Economy Volume 50 ; 50 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; History of Political Economy Volume 51 ; 51 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; History of Political Economy Volume 52 ; 52 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; History of Political Economy Volume 53 ; 53 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; History of Political Economy Volume 54 ; 54 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; History of Political Economy Volume 55 ; 55 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; History of Political Economy Volume 56 ; 56 >
+
+}
    }
