@@ -20,21 +20,21 @@
     
       param[base_url] = http://absinthe-literary-review.com/
 
-      au < superseded ; Absinthe Literary Review 2003 [superseded] ; 2003 >
-      au < superseded ; Absinthe Literary Review 2004 [superseded] ; 2004 >
-      au < superseded ; Absinthe Literary Review 2005 [superseded] ; 2005 >
+      au < down ; Absinthe Literary Review 2003 [superseded] ; 2003 >
+      au < down ; Absinthe Literary Review 2004 [superseded] ; 2004 >
+      au < down ; Absinthe Literary Review 2005 [superseded] ; 2005 >
       
     }
      
     {
     
-      param[base_url] = http://absintheliteraryreview.com/
+      param[base_url] = http://www.absintheliteraryreview.com/
 
       comment[ar] = there are more materials, but they aren't grouped by volume (maybe URL Extractor?), and don't have a manifest
 
-      au < ready ; Absinthe Literary Review 2003 ; 2003 >
-      au < ready ; Absinthe Literary Review 2004 ; 2004 >
-      au < ready ; Absinthe Literary Review 2005 ; 2005 >
+      au < manifest ; Absinthe Literary Review 2003 ; 2003 >
+      au < manifest ; Absinthe Literary Review 2004 ; 2004 >
+      au < manifest ; Absinthe Literary Review 2005 ; 2005 >
       
     }    
     
