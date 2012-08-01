@@ -17,16 +17,19 @@
     param[base_url] = http://www.19thc-artworldwide.org/
     implicit < status ; year ; name ; param[year] ; param[volume] >
     
+    comment[down] = Why are 4 AUs down?
+    
     au < down ; 2002 ; Nineteenth-Century Art Worldwide Volume 1 ; 2002 ; 1 >
     au < down ; 2003 ; Nineteenth-Century Art Worldwide Volume 2 ; 2003 ; 2 >
     au < down ; 2004 ; Nineteenth-Century Art Worldwide Volume 3 ; 2004 ; 3 >
     au < down ; 2005 ; Nineteenth-Century Art Worldwide Volume 4 ; 2005 ; 4 >
-    au < ready ; 2006 ; Nineteenth-Century Art Worldwide Volume 5 ; 2006 ; 5 >
-    au < ready ; 2007 ; Nineteenth-Century Art Worldwide Volume 6 ; 2007 ; 6 >
-    au < ready ; 2008 ; Nineteenth-Century Art Worldwide Volume 7 ; 2008 ; 7 >
-    au < ready ; 2009 ; Nineteenth-Century Art Worldwide Volume 8 ; 2009 ; 8 >
-    au < testing ; 2010 ; Nineteenth-Century Art Worldwide Volume 9 ; 2010 ; 9 >
-    au < testing ; 2011 ; Nineteenth-Century Art Worldwide Volume 10 ; 2011 ; 10 >
+    au < manifest ; 2006 ; Nineteenth-Century Art Worldwide Volume 5 ; 2006 ; 5 >
+    au < manifest ; 2007 ; Nineteenth-Century Art Worldwide Volume 6 ; 2007 ; 6 >
+    au < manifest ; 2008 ; Nineteenth-Century Art Worldwide Volume 7 ; 2008 ; 7 >
+    au < manifest ; 2009 ; Nineteenth-Century Art Worldwide Volume 8 ; 2009 ; 8 >
+    au < manifest ; 2010 ; Nineteenth-Century Art Worldwide Volume 9 ; 2010 ; 9 >
+    au < manifest ; 2011 ; Nineteenth-Century Art Worldwide Volume 10 ; 2011 ; 10 >
+    au < manifest ; 2012 ; Nineteenth-Century Art Worldwide Volume 11 ; 2012 ; 11 >
   
   }
 
