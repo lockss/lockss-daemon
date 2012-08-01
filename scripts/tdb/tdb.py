@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.14 2012-07-26 00:32:09 thib_gc Exp $
+# $Id: tdb.py,v 1.15 2012-08-01 18:55:54 thib_gc Exp $
 
 __copyright__ = '''\
 
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.0'
+__version__ = '0.4.1'
 
 import re
 
@@ -46,8 +46,9 @@ class Map(object):
 
   def get(self, key):
     if key is None: raise MapError('key must not be None')
-    if isinstance(key, basestring): key = (key,)
-    if not isinstance(key, tuple): raise MapError('key must be a tuple or a string')
+    typ = type(key)
+    if typ == str or typ == unicode: key = (key,)
+    if type(key) != tuple: raise MapError('key must be a tuple or a string')
     if len(key) == 0: raise MapError('key must not be the empty tuple')
     return self._internal_get(key)
 
@@ -58,8 +59,9 @@ class Map(object):
 
   def get_prefix(self, prefix):
     if prefix is None: raise MapError('prefix must not be None')
-    if isinstance(prefix, basestring): prefix = (prefix,)
-    if not isinstance(prefix, tuple): raise MapError('prefix must be a tuple or a string')
+    typ = type(prefix)
+    if typ == str or typ == unicode: prefix = (prefix,)
+    if type(prefix) != tuple: raise MapError('prefix must be a tuple or a string')
     if len(prefix) == 0: raise MapError('prefix must not be the empty tuple')
     return self._internal_get_prefix(prefix)
 
@@ -73,21 +75,26 @@ class Map(object):
 
   def set(self, key, value):
     if key is None: raise MapError('key must not be None')
-    if isinstance(key, basestring): key = (key,)
-    if not isinstance(key, tuple): raise MapError('key must be a tuple or a string')
+    typ = type(key)
+    if typ == str or typ == unicode: key = (key,)
+    if type(key) != tuple: raise MapError('key must be a tuple or a string')
     if len(key) == 0: raise MapError('key must not be the empty tuple')
     if key in self._map: raise MapError('key is already defined')
+    self._internal_set(key, value)
+
+  def _internal_set(self, key, value):
     self._map[key] = value
 
 class Publisher(Map):
     '''A TDB Publisher object.'''
+    
     NAME = ('name',)
     
     def __init__(self):
         '''Constructor.'''
         super(Publisher, self).__init__()
     
-    def name(self): return self.get(Publisher.NAME)
+    def name(self): return self._internal_get(Publisher.NAME)
 
 class Title(Map):
   '''A TDB Title object.'''
@@ -109,16 +116,16 @@ class Title(Map):
     '''Constructor.'''
     super(Title, self).__init__()
     
-  def set_publisher(self, publisher): self.set(Title.PUBLISHER, publisher)
+  def set_publisher(self, publisher): self._internal_set(Title.PUBLISHER, publisher)
 
-  def name(self): return self.get(Title.NAME)
-  def eisbn(self): return self.get(Title.EISBN)
-  def eissn(self): return self.get(Title.EISSN)
-  def isbn(self): return self.get(Title.ISBN)
-  def issn(self): return self.get(Title.ISSN)
-  def issnl(self): return self.get(Title.ISSNL)
-  def publisher(self): return self.get(Title.PUBLISHER)
-  def type(self): return self.get(Title.TYPE) or Title.Type.DEFAULT
+  def name(self): return self._internal_get(Title.NAME)
+  def eisbn(self): return self._internal_get(Title.EISBN)
+  def eissn(self): return self._internal_get(Title.EISSN)
+  def isbn(self): return self._internal_get(Title.ISBN)
+  def issn(self): return self._internal_get(Title.ISSN)
+  def issnl(self): return self._internal_get(Title.ISSNL)
+  def publisher(self): return self._internal_get(Title.PUBLISHER)
+  def type(self): return self._internal_get(Title.TYPE) or Title.Type.DEFAULT
 
 class AU(Map):
   '''A TDB AU object.'''
@@ -163,29 +170,29 @@ class AU(Map):
     '''Constructor.'''
     super(AU, self).__init__(next)
     
-  def set_title(self, title): self.set(AU.TITLE, title)
+  def set_title(self, title): self._internal_set(AU.TITLE, title)
 
-  def attr(self, attr): return self.get((AU.ATTR[0], attr))
-  def attrs(self): return self.get_prefix(AU.ATTR)
+  def attr(self, attr): return self._internal_get((AU.ATTR[0], attr))
+  def attrs(self): return self._internal_get_prefix(AU.ATTR)
   def auid(self): return AU.compute_auid(self.plugin(), self.params())
-  def edition(self): return self.get(AU.EDITION)
-  def eisbn(self): return self.get(AU.EISBN)
-  def isbn(self): return self.get(AU.ISBN)
-  def name(self): return self.get(AU.NAME)
-  def nondefparam(self, nondefparam): return self.get((AU.NONDEFPARAM[0], nondefparam))
-  def nondefparams(self): return self.get_prefix(AU.NONDEFPARAM)
-  def param(self, param): return self.get((AU.PARAM[0], param))
-  def params(self): return self.get_prefix(AU.PARAM)
-  def plugin(self): return self.get(AU.PLUGIN) or (self.get(AU.PLUGIN_PREFIX) + self.get(AU.PLUGIN_SUFFIX))
+  def edition(self): return self._internal_get(AU.EDITION)
+  def eisbn(self): return self._internal_get(AU.EISBN)
+  def isbn(self): return self._internal_get(AU.ISBN)
+  def name(self): return self._internal_get(AU.NAME)
+  def nondefparam(self, nondefparam): return self._internal_get((AU.NONDEFPARAM[0], nondefparam))
+  def nondefparams(self): return self._internal_get_prefix(AU.NONDEFPARAM)
+  def param(self, param): return self._internal_get((AU.PARAM[0], param))
+  def params(self): return self._internal_get_prefix(AU.PARAM)
+  def plugin(self): return self._internal_get(AU.PLUGIN) or (self.get(AU.PLUGIN_PREFIX) + self.get(AU.PLUGIN_SUFFIX))
   def proxy(self):
-    val = self.get(AU.PROXY)
+    val = self._internal_get(AU.PROXY)
     if val is None or len(val) == 0: return None
     else: return val
-  def rights(self): return self.get(AU.RIGHTS)
-  def status(self): return self.get(AU.STATUS)
-  def title(self): return self.get(AU.TITLE)
-  def year(self): return self.get(AU.YEAR)
-  def volume(self): return self.get(AU.VOLUME)
+  def rights(self): return self._internal_get(AU.RIGHTS)
+  def status(self): return self._internal_get(AU.STATUS)
+  def title(self): return self._internal_get(AU.TITLE)
+  def year(self): return self._internal_get(AU.YEAR)
+  def volume(self): return self._internal_get(AU.VOLUME)
 
   @staticmethod
   def auid_encode(c):

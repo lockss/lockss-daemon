@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.12 2012-07-28 00:09:10 thib_gc Exp $
+# $Id: tdbparse.py,v 1.13 2012-08-01 18:55:54 thib_gc Exp $
 
 __copyright__ = '''\
 
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.1'''
+__version__ = '''0.4.2'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -226,7 +226,7 @@ class TdbScanner(object):
                 self.__token(TdbparseToken.END_OF_FILE)
                 return self.__tok
             # Remove line reader's trailing newline; idiom to avoid removing other meaningful whitespace
-            if self.__cur.endswith('\n'): self.__cur = self.__cur[0:-1]
+            if self.__cur[-1] == '\n': self.__cur = self.__cur[0:-1]
             # Optional debug output
             if self.__options.tdbparse_echo_lines: sys.stderr.write(self.__cur + '\n')
             match = TdbScanner.RE_WHITE1.match(self.__cur)
@@ -235,7 +235,7 @@ class TdbScanner(object):
         match = TdbScanner.RE_WHITE1.match(self.__cur)
         if match: self.__move(match.end())
         # Strings
-        if self.__stringFlag in [TdbparseToken.EQUAL, TdbparseToken.SEMICOLON]:
+        if self.__stringFlag == TdbparseToken.EQUAL or self.__stringFlag == TdbparseToken.SEMICOLON:
             # Empty bare string
             if TdbScanner.RE_SEMIANGLE.match(self.__cur):
                 if self.__stringFlag == TdbparseToken.EQUAL:
@@ -246,7 +246,7 @@ class TdbScanner(object):
                 self.__tok.set_value('')
                 return self.__tok
             # Quoted string
-            if self.__cur.startswith('"'): return self.__qstring()
+            if self.__cur[0] == '"': return self.__qstring()
             # Bare string
             return self.__bstring()
         # Keywords
