@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.26 2012-07-26 00:32:09 thib_gc Exp $
+# $Id: tdbxml.py,v 1.27 2012-08-01 20:36:09 thib_gc Exp $
 
 __copyright__ = '''\
 
@@ -30,7 +30,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.0'
+__version__ = '0.4.1'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -75,22 +75,37 @@ def __escape(str):
     from xml.sax import saxutils
     return saxutils.escape(str).replace('"', '&quot;').decode('utf-8').encode('ascii', 'xmlcharrefreplace')
 
+RE_VOLUME = re.compile(r'Volume\s+(\S+)$')
+RE_WHITE = re.compile(r'\s+')
+RE_AA = re.compile(r'Á|À|Â|Ä|̣Ā')
+RE_A = re.compile(r'á|à|â|ä|ā')
+RE_AE = re.compile(r'æ')
+RE_EE = re.compile(r'É|È|Ê|Ë|Ē')
+RE_E = re.compile(r'é|è|ê|ë|ē')
+RE_II = re.compile(r'Í|Ì|Î|Ï|Ī')
+RE_I = re.compile(r'í|ì|î|ï|ī')
+RE_SS = re.compile(r'Ş')
+RE_S = re.compile(r'ş')
+RE_ZZ = re.compile(r'Ž')
+RE_Z = re.compile(r'ž')
+RE_NONWORD = re.compile(r'\W+')
+
 def __short_au_name(au):
     str = au.name()
-    str = re.sub(r'Volume\s+(\S+)$', r'\1', str)
-    str = re.sub(r'\s+', '', str)
-    str = re.sub(r'Á|À|Â|Ä|̣Ā', 'A', str)
-    str = re.sub(r'á|à|â|ä|ā', 'a', str)
-    str = re.sub(r'æ', 'ae', str)
-    str = re.sub(r'É|È|Ê|Ë|Ē', 'E', str)
-    str = re.sub(r'é|è|ê|ë|ē', 'e', str)
-    str = re.sub(r'Í|Ì|Î|Ï|Ī', 'I', str)
-    str = re.sub(r'í|ì|î|ï|ī', 'i', str)
-    str = re.sub(r'Ş', 'S', str)
-    str = re.sub(r'ş', 's', str)
-    str = re.sub(r'Ž', 'Z', str)
-    str = re.sub(r'ž', 'z', str)
-    str = re.sub(r'\W+', '', str)
+    str = RE_VOLUME.sub('\1', str)
+    str = RE_WHITE.sub('', str)
+    str = RE_AA.sub('A', str)
+    str = RE_A.sub('a', str)
+    str = RE_AE.sub('ae', str)
+    str = RE_EE.sub('E', str)
+    str = RE_E.sub('e', str)
+    str = RE_II.sub('I', str)
+    str = RE_I.sub('i', str)
+    str = RE_SS.sub('S', str)
+    str = RE_S.sub('s', str)
+    str = RE_ZZ.sub('Z', str)
+    str = RE_Z.sub('z', str)
+    str = RE_NONWORD.sub('', str)
     return au.plugin().split('.')[-1] + __escape(str)
 
 def __preamble(tdb, options):
@@ -162,15 +177,12 @@ def __process_au(au, options):
         __short_au_name(au),
         __escape(au.title().publisher().name()),
         __escape(au.title().name()) )
-    if au.title().issn() is not None:
-        print '''\
-   <property name="issn" value="%s" />''' % ( au.title().issn(), )
-    if au.title().eissn() is not None:
-        print '''\
-   <property name="eissn" value="%s" />''' % ( au.title().eissn(), )
-    if au.title().issnl() is not None:
-        print '''\
-   <property name="issnl" value="%s" />''' % ( au.title().issnl(), )
+    title = au.title()
+    for val, st in [(title.issn(), 'issn'),
+                    (title.eissn(), 'eissn'),
+                    (title.issnl(), 'issnl')]:
+      if val is not None: print '''\
+   <property name="%s" value="%s" />''' % ( st, val )
     print '''\
    <property name="title" value="%s" />
    <property name="plugin" value="%s" />''' % (
@@ -199,21 +211,19 @@ def __process_au(au, options):
     au_attrs = au.attrs()
     for attr in au_attrs:
         __do_attr(au, attr, au_attrs[attr])
-    if au.edition() is not None:
-        __do_attr(au, 'edition', au.edition());
-    if au.eisbn() is not None:
-        __do_attr(au, 'eisbn', au.eisbn());
-    if au.isbn() is not None:
-        __do_attr(au, 'isbn', au.isbn());
-    if au.year() is not None:
-        __do_attr(au, 'year', au.year())
-    if au.volume() is not None:
-        __do_attr(au, 'volume', au.volume())
+    for val, st in [(au.edition(), 'edition'),
+                    (au.eisbn(), 'eisbn'),
+                    (au.isbn(), 'isbn'),
+                    (au.year(), 'year'),
+                    (au.volume(), 'volume')]:
+      if val is not None: __do_attr(au, st, val)
     if au.rights() == 'openaccess':
         __do_attr(au, 'rights', 'openaccess')
     print '''\
   </property>
 '''
+
+RE_APOS = re.compile(r'\'')
 
 def __process(tdb, options):
     current_pub = None
@@ -242,7 +252,7 @@ def __process(tdb, options):
  <property name="org.lockss.title">
 ''' % { 'publisher': __escape(current_pub.name()),
         'publisher1': __escape(current_pub.name().replace('.', '')),
-        'publisher2': re.sub(r'\'', '&apos;', __escape(current_pub.name())),
+        'publisher2': RE_APOS.sub('&apos;', __escape(current_pub.name())),
         'outer': '"' if "'" not in current_pub.name() else "'",
         'inner': "'" if "'" not in current_pub.name() else '"' }
         __process_au(au, options)
