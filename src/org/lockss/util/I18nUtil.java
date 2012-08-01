@@ -1,5 +1,5 @@
 /*
- * $Id: I18nUtil.java,v 1.3 2012-07-25 09:56:35 tlipkis Exp $
+ * $Id: I18nUtil.java,v 1.4 2012-08-01 15:05:32 easyonthemayo Exp $
  */
 
 /*
@@ -33,6 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.util.MissingResourceException;
+
+import org.lockss.config.Configuration;
+import org.lockss.config.CurrentConfig;
 import org.lockss.util.Logger;
 import org.xnap.commons.i18n.I18n;
 import org.xnap.commons.i18n.I18nFactory;
@@ -52,9 +55,17 @@ public class I18nUtil {
   /** The name of the default backup bundle. This should always be in the build. */
   private static final String defaultBundle = "DefaultBundle";
 
+  // -------------------------- LOCKSS CONFIG PARAMS --------------------------
+  static final String PREFIX = Configuration.PREFIX + "i18n.";
+  /** Enable i18n using the gettext-commons-generated packages.
+   * Daemon restart required. */
+  public static final String PARAM_ENABLE_I18N = PREFIX + "enabled";
+  public static final boolean DEFAULT_ENABLE_I18N = false;
+
   /**
    * Get a gettext-commons I18n object suitable for performing
-   * localisation of strings. If the gettext bundles are not available, 
+   * localisation of strings. If the gettext bundles are not available,
+   * or the config param is set to false,
    * it will use the defaultBundle, which does no translation but does
    * perform formatting for strings with arguments.
    * <p>
@@ -64,22 +75,28 @@ public class I18nUtil {
    * @return an I18n object
    */
   public static I18n getI18n(Class clazz) {
-    I18n i18n;
-    try {
+    boolean enableI18n = CurrentConfig.getBooleanParam(PARAM_ENABLE_I18N,
+        DEFAULT_ENABLE_I18N);
+    I18n i18n = null;
+    // Try loading the full i18n if enabled
+    if (enableI18n) try {
       i18n = I18nFactory.getI18n(clazz);
     } catch (MissingResourceException ex) {
       log.error("Cannot initialize i18n for " + clazz + ex.toString());
-      // Try again, specifying the default bundle
-      try {
-        i18n = I18nFactory.getI18n(clazz, defaultBundle);
-        log.warning("i18n is disabled: using "+defaultBundle);
-      } catch (MissingResourceException e) {
-        log.critical("Cannot initialize "+defaultBundle+" for "+clazz, e);
-        i18n = null;
-        // This shouldn't happen if the DefaultBundle is incorporated into the 
-        // build. Is the omission a serious enough build error to stop the daemon?
-      }
+      enableI18n = false;
     }
+
+    // If i18n disabled (manually or through failure), load the default bundle
+    if (!enableI18n) try {
+      i18n = I18nFactory.getI18n(clazz, defaultBundle);
+      log.warning("i18n is disabled: using "+defaultBundle);
+    } catch (MissingResourceException e) {
+      log.critical("Cannot initialize "+defaultBundle+" for "+clazz, e);
+      i18n = null;
+      // This shouldn't happen if the DefaultBundle is incorporated into the
+      // build. Is the omission a serious enough build error to stop the daemon?
+    }
+
     return i18n;
   }
   
