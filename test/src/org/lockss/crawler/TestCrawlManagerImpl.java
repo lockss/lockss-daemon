@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.91 2012-05-17 17:58:06 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.92 2012-08-01 21:32:07 tlipkis Exp $
 */
 
 /*
@@ -768,9 +768,13 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       crawlManager.setTestCrawler(crawler2);
       crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem2), null, null);
 
+      // The two status objects will have been added to the status map in
+      // the order created above, but if one of them gets referenced before
+      // this test it might be moved to the most-recently-used position of
+      // the LRUMap, so the order here is unpredictable
       List actual = statusSource.getStatus().getCrawlerStatusList();
-      List expected = ListUtil.list(crawler.getStatus(), crawler2.getStatus());
-      assertEquals(expected, actual);
+      Set expected = SetUtil.set(crawler.getStatus(), crawler2.getStatus());
+      assertEquals(expected, SetUtil.theSet(actual));
       waitForCrawlToFinish(sem1);
       waitForCrawlToFinish(sem2);
     }
