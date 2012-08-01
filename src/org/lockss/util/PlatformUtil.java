@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.20 2012-06-02 05:49:17 pgust Exp $
+ * $Id: PlatformUtil.java,v 1.21 2012-08-01 20:40:24 pgust Exp $
  */
 
 /*
@@ -282,11 +282,11 @@ public class PlatformUtil {
     while (st.hasMoreTokens()) {
       String tok = st.nextToken();
       if (ntok > 5) {
-	return null;
+	break;
       }
       tokens[ntok++] = tok;
     }
-    if (ntok != 6) {
+    if (ntok < 6) {
       return null;
     }
     DF df = new DF();
