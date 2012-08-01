@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.38 2012-07-31 23:14:03 pgust Exp $
+ * $Id: MetadataManager.java,v 1.39 2012-08-01 03:45:17 pgust Exp $
  */
 
 /*
@@ -1558,7 +1558,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
      * @return the end time in miliseconds since epoch (0 if not finished)
      */
     public long getEndTime() {
-      return totalClockTime+startClockTime;
+      return (totalClockTime == 0) ? 0 : totalClockTime+startClockTime;
     }
 
     /**
