@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.71 2011-08-09 03:59:23 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.72 2012-08-02 03:09:44 clairegriffin Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.71 2011-08-09 03:59:23 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.72 2012-08-02 03:09:44 clairegriffin Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -42,6 +42,7 @@ import java.net.*;
 import java.net.HttpURLConnection;
 import java.util.*;
 
+import org.apache.commons.collections.SetUtils;
 import org.apache.commons.httpclient.util.*;
 import org.apache.commons.logging.Log;
 import org.mortbay.http.*;
@@ -86,6 +87,9 @@ public class ProxyHandler extends AbstractHttpHandler {
   static final String PARAM_NEVER_PROXY =
     Configuration.PREFIX + "proxy.neverProxy";
   static final boolean DEFAULT_NEVER_PROXY = false;
+  static final String PARAM_PROCESS_FORMS =
+      Configuration.PREFIX + "proxy.handleFormPost";
+  static final boolean DEFAULT_PROCESS_FORMS = false;
 
   private LockssDaemon theDaemon = null;
   private PluginManager pluginMgr = null;
@@ -96,6 +100,7 @@ public class ProxyHandler extends AbstractHttpHandler {
   private boolean neverProxy = DEFAULT_NEVER_PROXY;
   private boolean auditProxy = false;
   private boolean auditIndex = false;
+  private boolean handleFormPost = DEFAULT_PROCESS_FORMS;
 
   private boolean isFailOver = false;
   private URI failOverTargetUri;
@@ -110,6 +115,8 @@ public class ProxyHandler extends AbstractHttpHandler {
     proxyMgr = theDaemon.getProxyManager();
     neverProxy = CurrentConfig.getBooleanParam(PARAM_NEVER_PROXY,
 					       DEFAULT_NEVER_PROXY);
+    handleFormPost = CurrentConfig.getBooleanParam(PARAM_PROCESS_FORMS,
+        DEFAULT_PROCESS_FORMS);
     hostname = PlatformUtil.getLocalHostname();
   }
 
@@ -145,6 +152,11 @@ public class ProxyHandler extends AbstractHttpHandler {
    * will never be proxied */
   public void setFromCacheOnly(boolean flg) {
     neverProxy = flg;
+  }
+
+  public void setHandleFormPost(boolean flg)
+  {
+    handleFormPost =flg;
   }
 
   /** Set a target to use as a base (protocol, host, port) for all incoming
@@ -303,6 +315,35 @@ public class ProxyHandler extends AbstractHttpHandler {
       log.debug3("pathInContext="+pathInContext);
       log.debug3("URI="+uri);
     }
+
+    // Handling post requests specially.
+    // During a crawl, we can store links from a POST form similar to a GET form.
+    // See TestHtmlParserLinkExtractor::testPOSTForm.
+    //
+    // TODO(lockss-team): This logic is also needed by ServeContent. Refactor and share.
+    if (HttpRequest.__POST.equals(request.getMethod()) && handleFormPost) {
+      log.debug3("POST request found!");
+      // TODO(fkautz): Use request headers instead to get the POST parameters in the order in which proxy receives these.
+      MultiMap params = request.getParameters();
+      Set<String> unsortedKeys = SetUtils.typedSet(params.keySet(), String.class);
+      SortedSet<String> keys = new TreeSet<String>(unsortedKeys);
+
+      FormUrlHelper helper = new FormUrlHelper(uri.toString());
+
+      for (String k : keys) {
+        helper.add((k), params.get(k).toString());
+      }
+      if (log.isDebug3()) {
+        log.debug3("Overriding original URI to:" + helper.toEncodedString());
+      }
+      URI postUri = new URI(helper.toEncodedString());
+      // We only want to override the post request by proxy if we cached it during crawling.
+      CachedUrl cu = pluginMgr.findCachedUrl(postUri.toString());
+      if (cu != null) {
+        uri = postUri;
+      }
+    }
+
     if (isFailOver) {
       if (uri.getHost() == null && failOverTargetUri.getHost() != null) {
 	uri.setHost(failOverTargetUri.getHost());
