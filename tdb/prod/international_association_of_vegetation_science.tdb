@@ -27,10 +27,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = apve
   	  comment[defunct] = Last issue published was Dec. 2008
-  	  comment[notReady] = crawl tracker failed to create a crawl in 12 tries. 4/1/12 jc. re-test later. 
   	  
       au < ready ; 2002 ; Applied Vegetation Science Volume 5 ; 5 >
-      au < notReady ; 2003 ; Applied Vegetation Science Volume 6 ; 6 >
+      au < manifest ; 2003 ; Applied Vegetation Science Volume 6 ; 6 >
       au < doNotProcess ; 2004 ; Applied Vegetation Science Volume 7 ; 7 >
       au < ready ; 2005 ; Applied Vegetation Science Volume 8 ; 8 >
       au < ready ; 2006 ; Applied Vegetation Science Volume 9 ; 9 >

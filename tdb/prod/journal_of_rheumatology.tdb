@@ -19,12 +19,11 @@
     {
     
       comment[processing] = only available to lockss from 2012 forward.
-      comment[notReady] = needs a plugin filter for div id="leaderboard-ads-ft". re-test later. 4-1-12 jc.
         
       param[base_url] = http://jrheum.org/
         
       au < doNotProcess ; 2011 ; Journal of Rheumatology Volume 38 ; 38 >
-      au < notReady ; 2012 ; Journal of Rheumatology Volume 39 ; 39 >
+      au < manifest ; 2012 ; Journal of Rheumatology Volume 39 ; 39 >
 
      }
    
