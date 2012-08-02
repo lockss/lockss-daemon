@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.58 2012-07-23 17:47:46 pgust Exp $
+ * $Id: ServeContent.java,v 1.59 2012-08-02 19:54:46 pgust Exp $
  */
 
 /*
@@ -379,15 +379,16 @@ public class ServeContent extends LockssServlet {
       	}
       }
       
-      url = resolved.getResolvedUrl();
+      url = null;
       if (resolved.getResolvedTo() != ResolvedTo.NONE) {
+        url = resolved.getResolvedUrl();
         handleOpenUrlInfo(resolved);
         return;
       } 
 
-      log.debug3("Request is not an OpenUrl");
+      log.debug3("Unknown request");
     } catch (RuntimeException ex) {
-      log.warning("Couldn't handle OpenUrl", ex);
+      log.warning("Couldn't handle unknown request", ex);
     }
     // Maybe should display a message here if URL is unknown format.  But
     // this is also the default case for the bare ServeContent URL, which
@@ -416,8 +417,8 @@ public class ServeContent extends LockssServlet {
       	// so can rewrite from publisher
       	cu = pluginMgr.findCachedUrl(url, false);
       	if (cu != null) {
-      	  if (log.isDebug3()) log.debug3("cu: " + cu);
       	  au = cu.getArchivalUnit();
+          if (log.isDebug3()) log.debug3("cu: " + cu + " au: " + au);
       	}
       }
       if (au != null) {
@@ -491,7 +492,7 @@ public class ServeContent extends LockssServlet {
         } else {
           // Find CU if belongs to any configured AU even if has no content,
           // so can rewrite from publisher
-          cu = pluginMgr.findCachedUrl(url, false);
+          cu = pluginMgr.findCachedUrl(url, true);
           if (cu != null) {
             if (log.isDebug3()) log.debug3("cu: " + cu);
             au = cu.getArchivalUnit();
@@ -499,7 +500,7 @@ public class ServeContent extends LockssServlet {
         }
       }
       
-      if (au != null) {
+      if (cu != null) {
         // display cached page if it has content
         String ref = null;
         try {
@@ -517,12 +518,6 @@ public class ServeContent extends LockssServlet {
         return;
       }
       
-      if ((url != null) && isNeverProxy()) {
-        // do not offer publisher link if never proxying
-        handleMissingUrlRequest(url, PubState.Unknown);
-        return;
-      }
-
       handleMissingOpenUrlRequest(info, PubState.Unknown);
 
     } catch (IOException e) {
@@ -1129,10 +1124,6 @@ public class ServeContent extends LockssServlet {
         }
         // fall through if au is down
       case Error_404:
-        resp.sendError(HttpServletResponse.SC_NOT_FOUND,
-          ((url == null) ? "url" : url) + " is not preserved on this LOCKSS box");
-        logAccess("not present, 404");
-        return;
       case HostAuIndex:
       case AuIndex:
       default:
@@ -1145,7 +1136,11 @@ public class ServeContent extends LockssServlet {
     ResolvedTo resolvedTo = info.getResolvedTo();
     BibliographicItem bibliographicItem = info.getBibliographicItem();
     
-    if (resolvedTo == ResolvedTo.PUBLISHER) {
+    Table table = new Table(0, "");
+
+    switch (resolvedTo) {
+    case PUBLISHER:
+      
       // display publisher page
       if (bibliographicItem == null) {
         block.add("<h2>Found requested publisher</h2>");
@@ -1155,17 +1150,14 @@ public class ServeContent extends LockssServlet {
         block.add("</h2>");
       }
       
-      Table table = new Table(0, "");
       addLink(table, 
               "Additional publisher information available at the publisher.");
-      block.add(table);
-      block.add("<br/><br/>");
 
       logAccess("404 to publisher page");
+      break;
 
-    } else if (resolvedTo == ResolvedTo.TITLE) {
+    case TITLE:
       // display title page
-      Table table = new Table(0, "");
       if (bibliographicItem == null) {
         block.add("<h2>Found requested title</h2>");
       } else {
@@ -1178,14 +1170,12 @@ public class ServeContent extends LockssServlet {
       }
       
       addLink(table,"Additional title information available at the publisher.");
-      block.add(table);
-      block.add("<br/><br/>");
 
       logAccess("404 title page");
-
-    } else if (resolvedTo == ResolvedTo.VOLUME) {
+      break;
+      
+    case VOLUME:
       // display volume page
-      Table table = new Table(0, "");
       if (bibliographicItem == null) {
         block.add("<h2>Found requested volume</h2>");
       } else {
@@ -1200,15 +1190,12 @@ public class ServeContent extends LockssServlet {
         
       addLink(table, "Volume is available at the publisher.");
 
-      block.add(table);
-      block.add("<br/><br/>");
-
       // display volume page
       logAccess("404 volume page");
-    
-    } else if (resolvedTo == ResolvedTo.ISSUE) {
+      break;
+      
+    case ISSUE:
       // display issue page
-      Table table = new Table(0, "");
       if (bibliographicItem == null) {
         block.add("<h2>Found requested issue</h2>");
       } else {
@@ -1231,14 +1218,12 @@ public class ServeContent extends LockssServlet {
       }
         
       addLink(table, "Issue is available at the publisher.");
-      block.add(table);
-      block.add("<br/><br/>");
 
       logAccess("404 issue page");
-
-    } else if (resolvedTo == ResolvedTo.CHAPTER) {
+      break;
+      
+    case CHAPTER:
       // display chapter page
-      Table table = new Table(0, "");
       if (bibliographicItem == null) {
         block.add("<h2>Found requested chapter</h2>");
       } else {
@@ -1262,17 +1247,13 @@ public class ServeContent extends LockssServlet {
         
       addLink(table, "Chapter is available at the publisher.");
 
-      block.add(table);
-      block.add("<br/><br/>");
-
       logAccess("404 chapter page");
+      break;
 
-    } else if (resolvedTo == ResolvedTo.ARTICLE) {
+    case ARTICLE:
       // display article page
-      Table table = new Table(0, "");
       if (bibliographicItem == null) {
         block.add("<h2>Found requested article</h2>");
-
       } else {
         block.add("<h2>");
         block.add(bibliographicItem.getName());
@@ -1294,54 +1275,57 @@ public class ServeContent extends LockssServlet {
 
       addLink(table, "Article is available at the publisher.");
 
-      block.add(table);
-      block.add("<br/><br/>");
-
       logAccess("404 article page");
-
-    } else {
+      break;
+      
+    default:
       // display other page for ResolvedTo.OTHER
       block.add("<h2>Found requested page</h2>");
 
-      Table table = new Table(0, "");
       addLink(table, "Article is available at the publisher.");
-      block.add(table);
-      block.add("<br/><br/>");
 
       logAccess("404 other page");
+      break;
     }
+
+    block.add(table) ; 
+    block.add("<br/><br/>");
     
     switch (missingFileAction) {
-    case HostAuIndex:
-      Collection<ArchivalUnit> candidateAus = Collections.emptyList();
-      if (bibliographicItem != null) {
-        candidateAus = getCandidateAus(bibliographicItem);
-      } else if (url != null) {
-        candidateAus = pluginMgr.getCandidateAus(url);
-      }
-      
-      if (candidateAus != null && !candidateAus.isEmpty()) {
-        displayIndexPage(candidateAus,
+      case AuIndex:
+        displayIndexPage(pluginMgr.getAllAus(),
                          HttpResponse.__404_Not_Found,
-                         block,
-                         "Possibly related content may be found "
-                         + "in the following Archival Units");
-      } else {
-        displayIndexPage(Collections.<ArchivalUnit> emptyList(),
-            HttpResponse.__404_Not_Found,
-            block,
-            null);
-        logAccess("not present, 404");
+                         block, 
+                         "The LOCKSS box has the following Archival Units");
+        logAccess("not present, 404 with index");
+        break;
+      case Redirect:
+      case AlwaysRedirect:
+      case Error_404:
+      case HostAuIndex:
+      default:
+        Collection<ArchivalUnit> candidateAus = Collections.emptyList();
+        if (bibliographicItem != null) {
+          candidateAus = getCandidateAus(bibliographicItem);
+        } else if (url != null) {
+          candidateAus = pluginMgr.getCandidateAus(url);
+        }
+        
+        if (candidateAus != null && !candidateAus.isEmpty()) {
+          displayIndexPage(candidateAus,
+                           HttpResponse.__404_Not_Found,
+                           block,
+                           "Possibly related content may be found "
+                           + "in the following Archival Units");
+        } else {
+          displayIndexPage(Collections.<ArchivalUnit> emptyList(),
+              HttpResponse.__404_Not_Found,
+              block,
+              null);
+          logAccess("not present, 404");
+        }
+        break;
       }
-      break;
-    case AuIndex:
-      displayIndexPage(pluginMgr.getAllAus(),
-                       HttpResponse.__404_Not_Found,
-                       block, 
-                       "The LOCKSS box has the following Archival Units");
-      logAccess("not present, 404 with index");
-      break;
-    }
   }
   
   /**
@@ -1448,11 +1432,8 @@ public class ServeContent extends LockssServlet {
           ((additionalInfo == null) ? "" : additionalInfo)
         + " Selecting link takes you away from this LOCKSS box."));
       table.newCell();
-      table.add("<a href=\"");
-      table.add(url);
-      table.add("\">");
-      table.add(url);
-      table.add("</a></td></tr>");
+      Link link = new Link(url);
+      table.add(link);
     }    
   }
   
