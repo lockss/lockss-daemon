@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataField.java,v 1.10 2012-02-25 00:23:30 akanshab01 Exp $
+ * $Id: TestMetadataField.java,v 1.11 2012-08-02 13:03:11 pgust Exp $
  */
 
 /*
@@ -91,6 +91,8 @@ public class TestMetadataField extends LockssTestCase {
         DC_FIELD_IDENTIFIER_ISSNL);
     assertField(DC_KEY_IDENTIFIER_ISBN, Cardinality.Single,
         DC_FIELD_IDENTIFIER_ISBN);
+    assertField(DC_KEY_IDENTIFIER_EISBN, Cardinality.Single,
+        DC_FIELD_IDENTIFIER_EISBN);
     assertField(DC_KEY_ISSUED, Cardinality.Single, DC_FIELD_ISSUED);
     assertField(DC_KEY_LANGUAGE, Cardinality.Single, DC_FIELD_LANGUAGE);
     assertField(DC_KEY_PUBLISHER, Cardinality.Single, DC_FIELD_PUBLISHER);
@@ -153,6 +155,21 @@ public class TestMetadataField extends LockssTestCase {
     } catch (MetadataException.ValidationException e) {
       fail("Should not throw ValidationException");
     }
+
+    MetadataField f2 = FIELD_EISBN;
+    assertEquals("978-1-58562-317-4", f2.validate(am, "978-1-58562-317-4"));
+    assertEquals("978-1-58562-317-4", f2.validate(am, "eisbn:978-1-58562-317-4"));
+    assertEquals("978-1-58562-317-4", f2.validate(am, "EISBN:978-1-58562-317-4"));
+    try {
+      f2.validate(am, "not.a.isbn.1234");
+      fail("Should throw ValidationException");
+    } catch (MetadataException.ValidationException e) {
+    }
+    try {
+      f2.validate(am, "eisbn:978-1-58562-317-3"); // checksum error
+    } catch (MetadataException.ValidationException e) {
+      fail("Should not throw ValidationException");
+    }
   }
 
  
@@ -169,27 +186,24 @@ public class TestMetadataField extends LockssTestCase {
     } catch (MetadataException.ValidationException e) {
     }
     try {
-      f1.validate(am, "eissn:1234-5679");
-      fail("Should throw ValidationException");
+      f1.validate(am, "issn:1234-567X"); // checksum error
     } catch (MetadataException.ValidationException e) {
+      fail("Should not throw ValidationException");
     }
-  }
 
-  public void testEissn() throws MetadataException.ValidationException {
-  
-    MetadataField f1 = FIELD_EISSN;
-    assertEquals("1234-5679", f1.validate(am, "1234-5679"));
-    assertEquals("1234-5679", f1.validate(am, "eissn:1234-5679"));
-    assertEquals("1234-5679", f1.validate(am, "EISSN:1234-5679"));
+    MetadataField f2 = FIELD_EISSN;
+    assertEquals("1234-5679", f2.validate(am, "1234-5679"));
+    assertEquals("1234-5679", f2.validate(am, "eissn:1234-5679"));
+    assertEquals("1234-5679", f2.validate(am, "EISSN:1234-5679"));
     try {
-      f1.validate(am, "not.a.eissn.1234");
+      f2.validate(am, "not.a.eissn.1234");
       fail("Should throw ValidationException");
     } catch (MetadataException.ValidationException e) {
     }
     try {
-      f1.validate(am, "issn:1234-5679");
-      fail("Should throw ValidationException");
+      f2.validate(am, "eissn:1234-567X"); // checksum error
     } catch (MetadataException.ValidationException e) {
+      fail("Should not throw ValidationException");
     }
   }
 
