@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.59 2012-08-02 19:54:46 pgust Exp $
+ * $Id: ServeContent.java,v 1.60 2012-08-02 19:56:32 pgust Exp $
  */
 
 /*
@@ -1514,7 +1514,8 @@ public class ServeContent extends LockssServlet {
       redirectToUrl();
       break;
     case HostAuIndex:
-      Collection candidateAus = pluginMgr.getCandidateAus(missingUrl);
+      Collection<ArchivalUnit> candidateAus = 
+          pluginMgr.getCandidateAus(missingUrl);
       if (candidateAus != null && !candidateAus.isEmpty()) {
 	displayIndexPage(candidateAus,
 			 HttpResponse.__404_Not_Found,
