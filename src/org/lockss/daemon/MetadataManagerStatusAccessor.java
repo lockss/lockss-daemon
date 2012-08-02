@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.3 2012-07-31 23:36:31 pgust Exp $
+ * $Id: MetadataManagerStatusAccessor.java,v 1.4 2012-08-02 18:56:30 pgust Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.derby.iapi.sql.Row;
+import org.lockss.crawler.SingleCrawlStatusAccessor;
 import org.lockss.daemon.MetadataManager.ReindexingStatus;
 import org.lockss.daemon.MetadataManager.ReindexingTask;
 import org.lockss.daemon.status.ColumnDescriptor;
@@ -47,6 +48,7 @@ import org.lockss.daemon.status.StatusAccessor;
 import org.lockss.daemon.status.StatusService.NoSuchTableException;
 import org.lockss.daemon.status.StatusTable;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.state.ArchivalUnitStatus;
 import org.lockss.util.CatalogueOrderComparator;
 import org.lockss.util.ListUtil;
@@ -67,7 +69,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
   final MetadataManager metadataMgr;
   
   private static final String AU_COL_NAME = "au";
-  private static final String INDEX_TYPE = "crawl_type";
+  private static final String INDEX_TYPE = "index_type";
   private static final String START_TIME_COL_NAME = "start";
   private static final String DURATION_COL_NAME = "dur";
   private static final String INDEX_STATUS_COL_NAME = "status";
@@ -196,8 +198,11 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         // task is finished
         row.put(START_TIME_COL_NAME, startTime);
         row.put(DURATION_COL_NAME, endTime-startTime);
-        String status;
+        Object status;
         switch (indexStatus) {
+          case completed:
+            status = "Completed";
+            break;
           case success:
             status = "Success";
             break;
@@ -210,8 +215,18 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
           default:
             status = indexStatus.toString();
         }
+        if (au != null) {
+          if (indexStatus == ReindexingStatus.success &&
+              AuUtil.getAuState(au).hasNoSubstance()) {
+            status =
+              new StatusTable.DisplayedValue(status).setFootnote(
+                "Though metadata indexing finished successfully, no"
+              + " article files containing substantial content were found");
+          }
+        }
         row.put(INDEX_STATUS_COL_NAME, status);
         row.put(NUM_INDEXED_COL_NAME, numIndexed);
+
         // invisible keys for sorting
         row.put(SORT_KEY1, SORT_BASE_DONE);
         row.put(SORT_KEY2, endTime);
