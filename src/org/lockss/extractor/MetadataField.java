@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.11 2012-08-02 12:37:29 pgust Exp $
+ * $Id: MetadataField.java,v 1.12 2012-08-02 12:44:40 pgust Exp $
  */
 
 /*
@@ -338,6 +338,12 @@ public static final String KEY_PUBLISHER = "publisher";
   public static final MetadataField DC_FIELD_IDENTIFIER_ISBN = new 
       MetadataField(
       DC_KEY_IDENTIFIER_ISBN, Cardinality.Single);
+
+  /** The ISBN of the resource (dc qualified: non-standard NIH) */
+  public static final String DC_KEY_IDENTIFIER_EISBN = "dc.identifier.eisbn";
+  public static final MetadataField DC_FIELD_IDENTIFIER_EISBN = new 
+      MetadataField(
+      DC_KEY_IDENTIFIER_EISBN, Cardinality.Single);
 
   /**
    * Date of publication, i.e., the date that would normally be cited in
