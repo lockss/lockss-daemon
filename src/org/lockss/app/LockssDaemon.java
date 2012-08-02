@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.113 2012-07-17 03:10:28 thib_gc Exp $
+ * $Id: LockssDaemon.java,v 1.114 2012-08-02 12:33:20 pgust Exp $
  */
 
 /*
@@ -174,11 +174,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     // start database manager before any manager that uses it.
     new ManagerDesc(DB_MANAGER, "org.lockss.db.DbManager"),
     // start metadata manager after pluggin manager and database manager.
-    new ManagerDesc(METADATA_MANAGER, "org.lockss.daemon.MetadataManager") {
-      public boolean shouldStart() { 
-        return ConfigManager.getCurrentConfig().getBoolean("org.lockss.daemon.metadataManager.enabled", false); 
-      }
-    },
+    new ManagerDesc(METADATA_MANAGER, "org.lockss.daemon.MetadataManager"),
     // start proxy and servlets after plugin manager
     new ManagerDesc(REMOTE_API, "org.lockss.remote.RemoteApi"),
     new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.AdminServletManager"),
