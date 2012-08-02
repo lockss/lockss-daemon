@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeMap.java,v 1.13 2012-02-16 10:42:09 tlipkis Exp $
+ * $Id: MimeTypeMap.java,v 1.14 2012-08-02 03:08:13 clairegriffin Exp $
  */
 
 /*
@@ -27,14 +27,14 @@
 package org.lockss.daemon;
 
 import java.util.*;
+
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.plugin.*;
 import org.lockss.rewriter.*;
 
-/** Record of MIME type-specific factories (<i>eg</i>, FilterFactory,
+/**
+ * Record of MIME type-specific factories (<i>eg</i>, FilterFactory,
  * LinkExtractorFactory), and static global defaults
  */
 public class MimeTypeMap {
@@ -47,64 +47,89 @@ public class MimeTypeMap {
   static final String PREFIX = Configuration.PREFIX + "mimeInfo.";
 
   public static final String PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY =
-    PREFIX + "defaultCssExtractorFactory";
+      PREFIX + "defaultCssExtractorFactory";
   public static final String DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY =
-    "org.lockss.extractor.RegexpCssLinkExtractor$Factory";
+      "org.lockss.extractor.RegexpCssLinkExtractor$Factory";
 
   public static final String PARAM_DEFAULT_CSS_REWRITER_FACTORY =
-    PREFIX + "defaultCssRewriterFactory";
+      PREFIX + "defaultCssRewriterFactory";
   public static final String DEFAULT_DEFAULT_CSS_REWRITER_FACTORY =
-    "org.lockss.rewriter.RegexpCssLinkRewriterFactory";
+      "org.lockss.rewriter.RegexpCssLinkRewriterFactory";
+
+  public static final String PARAM_DEFAULT_HTML_EXTRACTOR_FACTORY =
+      PREFIX + "defaultHtmlExtractorFactory";
+  public static final String DEFAULT_DEFAULT_HTML_EXTRACTOR_FACTORY =
+      "org.lockss.extractor.GoslingHtmlLinkExtractor$Factory";
+  public static final String PARAM_DEFAULT_HTML_REWRITER_FACTORY =
+      PREFIX + "defaultHtmlRewriterFactory";
+  public static final String DEFAULT_DEFAULT_HTML_REWRITER_FACTORY =
+      "org.lockss.rewriter.NodeFilterHtmlLinkRewriterFactory";
 
   private static MimeTypeInfo.Mutable HTML = new MimeTypeInfo.Impl();
   private static MimeTypeInfo.Mutable CSS = new MimeTypeInfo.Impl();
 
   static {
-    HTML.setLinkExtractorFactory(new GoslingHtmlLinkExtractor.Factory());
-    // XXX
-    // HTML.setLinkRewriterFactory(new JavascriptHtmlLinkRewriterFactory());
-    HTML.setLinkRewriterFactory(new NodeFilterHtmlLinkRewriterFactory());
+    setLinkExtractorFactory(HTML,
+        DEFAULT_DEFAULT_HTML_EXTRACTOR_FACTORY, null);
+    setLinkRewriterFactory(HTML,
+        DEFAULT_DEFAULT_HTML_REWRITER_FACTORY, null);
     DEFAULT.putMimeTypeInfo("text/html", HTML);
     DEFAULT.putMimeTypeInfo("application/xhtml+xml", HTML);
+
     setLinkExtractorFactory(CSS,
-			    DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY);
+        DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY, null);
     setLinkRewriterFactory(CSS,
-			    DEFAULT_DEFAULT_CSS_REWRITER_FACTORY);
-   DEFAULT.putMimeTypeInfo("text/css", CSS);
+        DEFAULT_DEFAULT_CSS_REWRITER_FACTORY, null);
+    DEFAULT.putMimeTypeInfo("text/css", CSS);
   }
 
-  /** Called by org.lockss.config.MiscConfig
-   */
+  /** Called by org.lockss.config.MiscConfig */
   public static void setConfig(Configuration config,
-			       Configuration oldConfig,
-			       Configuration.Differences diffs) {
+                               Configuration oldConfig,
+                               Configuration.Differences diffs) {
+    if (diffs.contains(PARAM_DEFAULT_HTML_EXTRACTOR_FACTORY)) {
+      setLinkExtractorFactory(HTML,
+          config.get(PARAM_DEFAULT_HTML_EXTRACTOR_FACTORY,
+              DEFAULT_DEFAULT_HTML_EXTRACTOR_FACTORY),
+          new GoslingHtmlLinkExtractor.Factory());
+    }
+    if (diffs.contains(PARAM_DEFAULT_HTML_REWRITER_FACTORY)) {
+      setLinkRewriterFactory(HTML,
+          config.get(PARAM_DEFAULT_HTML_REWRITER_FACTORY,
+              DEFAULT_DEFAULT_HTML_REWRITER_FACTORY),
+          new NodeFilterHtmlLinkRewriterFactory());
+    }
     if (diffs.contains(PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY)) {
       setLinkExtractorFactory(CSS,
-			      config.get(PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY,
-					 DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY));
+          config.get(PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY,
+              DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY),
+          new RegexpCssLinkExtractor.Factory());
     }
     if (diffs.contains(PARAM_DEFAULT_CSS_REWRITER_FACTORY)) {
       setLinkRewriterFactory(CSS,
-			      config.get(PARAM_DEFAULT_CSS_REWRITER_FACTORY,
-					 DEFAULT_DEFAULT_CSS_REWRITER_FACTORY));
+          config.get(PARAM_DEFAULT_CSS_REWRITER_FACTORY,
+              DEFAULT_DEFAULT_CSS_REWRITER_FACTORY),
+          new RegexpCssLinkRewriterFactory());
     }
   }
-					  
+
   private static void setLinkExtractorFactory(MimeTypeInfo.Mutable mti,
-					      String className) {
+                                              String className,
+                                              LinkExtractorFactory defFactory) {
     LinkExtractorFactory fact =
-      (LinkExtractorFactory)newFact(className,
-				    LinkExtractorFactory.class,
-				    new RegexpCssLinkExtractor.Factory());
+        (LinkExtractorFactory) newFact(className,
+            LinkExtractorFactory.class,
+            defFactory);
     mti.setLinkExtractorFactory(fact);
   }
 
   private static void setLinkRewriterFactory(MimeTypeInfo.Mutable mti,
-					      String className) {
+                                             String className,
+                                             LinkRewriterFactory defFactory) {
     LinkRewriterFactory fact =
-      (LinkRewriterFactory)newFact(className,
-				    LinkRewriterFactory.class,
-				    new RegexpCssLinkRewriterFactory());
+        (LinkRewriterFactory) newFact(className,
+            LinkRewriterFactory.class,
+            defFactory);
     mti.setLinkRewriterFactory(fact);
   }
 
@@ -120,19 +145,20 @@ public class MimeTypeMap {
 
   public MimeTypeMap getParent() {
     return parent;
-  }      
+  }
 
   public static Object newFact(String factClassName, Class expectedType,
-			       Object dfault) {
+                               Object dfault) {
     Object obj = null;
     try {
       obj = Class.forName(factClassName).newInstance();
       if (!expectedType.isInstance(obj)) {
-	throw new IllegalArgumentException(factClassName + " is not a "
-					   + expectedType.getName());
+        throw new IllegalArgumentException(factClassName + " is not a "
+            + expectedType.getName());
       }
       return obj;
-  } catch (Exception e) {
+    }
+    catch (Exception e) {
       log.error(e.toString());
       return dfault;
     }
@@ -143,42 +169,50 @@ public class MimeTypeMap {
     map.put(mime, mti);
   }
 
-  /** Return immutable view of MimeTypeInfo for the specified contentType,
-   * from this map or its nearest parent.  Use {@link
-   * #modifyMimeTypeInfo(String)} to get a mutable view.
+  /**
+   * Return immutable view of MimeTypeInfo for the specified contentType, from
+   * this map or its nearest parent.  Use {@link #modifyMimeTypeInfo(String)} to
+   * get a mutable view.
+   *
    * @param contentType MIME type or value of Content-Type: header
-   * @return MimeTypeInfo if exists, else null. */
+   * @return MimeTypeInfo if exists, else null.
+   */
   public MimeTypeInfo getMimeTypeInfo(String contentType) {
     String mime = HeaderUtil.getMimeTypeFromContentType(contentType);
-    MimeTypeInfo res = (MimeTypeInfo)map.get(mime);
+    MimeTypeInfo res = (MimeTypeInfo) map.get(mime);
     if (res == null && parent != null) {
       return parent.getMimeTypeInfo(mime);
     }
     return res;
   }
 
-  /** Return a modifiable (<i>Ie</i>, owned by this map) MimeTypeInfo for
-   * the given MIME type, creating one if necessary.
+  /**
+   * Return a modifiable (<i>Ie</i>, owned by this map) MimeTypeInfo for the
+   * given MIME type, creating one if necessary.
+   *
    * @param contentType MIME type or value of Content-Type: header
-   * @return a MimeTypeInfo local to this MimeTypeMap. */
+   * @return a MimeTypeInfo local to this MimeTypeMap.
+   */
   public MimeTypeInfo.Mutable modifyMimeTypeInfo(String contentType) {
     String mime = HeaderUtil.getMimeTypeFromContentType(contentType);
-    MimeTypeInfo.Mutable res = (MimeTypeInfo.Mutable)map.get(mime);
+    MimeTypeInfo.Mutable res = (MimeTypeInfo.Mutable) map.get(mime);
     if (res == null) {
       if (parent != null) {
-	res = new MimeTypeInfo.Impl(parent.getMimeTypeInfo(mime));
-      } else {
-	res = new MimeTypeInfo.Impl();
+        res = new MimeTypeInfo.Impl(parent.getMimeTypeInfo(mime));
+      }
+      else {
+        res = new MimeTypeInfo.Impl();
       }
       map.put(mime, res);
     }
     return res;
   }
 
-  /** Turn a mime type into one with a wildcard subtype.  (E.g.,
-   * <code>image/gif</code> -> <code>image/*</code>.)
-   * If the argument already has a wildcard subtype or is misformatted,
-   * return it unmodified. */
+  /**
+   * Turn a mime type into one with a wildcard subtype.  (E.g.,
+   * <code>image/gif</code> -> <code>image/*</code>.) If the argument already
+   * has a wildcard subtype or is misformatted, return it unmodified.
+   */
 
   public static String wildSubType(String mime) {
     List<String> parts = StringUtil.breakAt(mime, "/");

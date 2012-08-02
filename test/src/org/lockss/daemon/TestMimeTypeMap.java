@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeTypeMap.java,v 1.10 2011-09-25 04:16:32 tlipkis Exp $
+ * $Id: TestMimeTypeMap.java,v 1.11 2012-08-02 03:08:13 clairegriffin Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.daemon;
 import java.util.*;
 
 import org.lockss.app.LockssApp;
+import org.lockss.config.Configuration;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -140,4 +141,12 @@ public class TestMimeTypeMap extends LockssTestCase {
     assertEquals("image/bad/mime", MimeTypeMap.wildSubType("image/bad/mime"));
   }
 
+  public void testHtmlParserLinkExtractor()
+  {
+	  MimeTypeInfo mt1 = MimeTypeMap.DEFAULT.getMimeTypeInfo("text/html");
+	  assertNull(mt1.getHashFilterFactory());
+	  assertNull(mt1.getCrawlFilterFactory());
+	  assertTrue(mt1.getLinkExtractorFactory()
+				   instanceof GoslingHtmlLinkExtractor.Factory);
+  }
 }
