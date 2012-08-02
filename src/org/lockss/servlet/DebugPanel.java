@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.25 2012-07-09 07:53:09 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.25.2.1 2012-08-02 05:59:48 tlipkis Exp $
  */
 
 /*
@@ -339,10 +339,9 @@ public class DebugPanel extends LockssServlet {
     ArchivalUnit au = getAu();
     if (au == null) return;
     try {
-      NodeManager nodeMgr = daemon.getNodeManager(au);
       // Don't call a poll on this if we're already running a V3 poll on it.
       try {
-	pollManager.checkEligibleForPoll(new PollManager.PollReq(au));
+	pollManager.checkEligibleForPoll(makePollReq(au));
       } catch (PollManager.NotEligibleException e) {
 	errMsg = "Ineligible: " + e.getMessage() +
 	  "<br>Click again to force new poll.";
@@ -373,14 +372,18 @@ public class DebugPanel extends LockssServlet {
     }
   }
 
-  private void callV3ContentPoll(ArchivalUnit au) {
-    log.debug("Enqueuing a V3 Content Poll on " + au.getName());
+  private PollManager.PollReq makePollReq(ArchivalUnit au) {
     PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
     PollManager.PollReq req = new PollManager.PollReq(au)
       .setPollSpec(spec)
       .setPriority(2);
+    return req;
+  }
+
+  private void callV3ContentPoll(ArchivalUnit au) {
+    log.debug("Enqueuing a V3 Content Poll on " + au.getName());
     try {
-      pollManager.enqueuePoll(req);
+      pollManager.enqueuePoll(makePollReq(au));
       statusMsg = "Enqueued V3 poll for " + au.getName();
     } catch (IllegalStateException e) {
       errMsg = "Failed to enqueue poll on "
