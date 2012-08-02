@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.60 2012-08-02 19:56:32 pgust Exp $
+ * $Id: ServeContent.java,v 1.61 2012-08-02 19:58:08 pgust Exp $
  */
 
 /*
@@ -1524,7 +1524,7 @@ public class ServeContent extends LockssServlet {
 			 + "in the following Archival Units");
 	logAccess("not present, 404 with index");
       } else {
-        displayIndexPage(Collections.EMPTY_LIST,
+        displayIndexPage(Collections.<ArchivalUnit>emptyList(),
             HttpResponse.__404_Not_Found,
             block,
             null);
