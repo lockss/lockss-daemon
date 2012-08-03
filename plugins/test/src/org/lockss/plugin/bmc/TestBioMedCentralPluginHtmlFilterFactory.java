@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.2 2012-07-04 00:22:34 kendrayee Exp $
+ * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.3 2012-08-03 23:05:06 kendrayee Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
   
   private static final String whiteSpace1 = "\n  <li><a href=\"/content/pdf/1477-7525-8-103.pdf\">PDF</a>\n (543KB)\n </li>";
   
-  private static final String whiteSpace2 = "\n      <li><a href=\"/content/pdf/1477-7525-8-103.pdf\">PDF</a>\n       (543KB)\n      </li>";
+  private static final String whiteSpace2 = "\n\n      <li><a href=\"/content/pdf/1477-7525-8-103.pdf\">PDF</a>\n       (543KB)\n      </li>";
  
   public void testFiltering() throws IOException {
     InputStream inA;
