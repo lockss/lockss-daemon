@@ -413,6 +413,9 @@
     param[journal_id] = 10.1055/s-00000174
     comment[years] = 2011-current
   
+    au < exists ; exists ; Augenheilkunde up2date 2010 ;  2010 ; 2010 >   
+    au < exists ; exists ; Augenheilkunde up2date 2011 ;  2011 ; 2011 >   
+    au < exists ; exists ; Augenheilkunde up2date 2012 ;  2012 ; 2012 >   
   
   
   }
@@ -427,8 +430,10 @@
     >
     param[journal_id] = 10.1055/s-00000119
     comment[years] =  2004-current
-  
-  
+    
+        au < exists ; exists ; B&G Bewegungstherapie und Gesundheitssport 2010 ;  2010 ; 2010 > 
+        au < exists ; exists ; B&G Bewegungstherapie und Gesundheitssport 2011 ;  2011 ; 2011 > 
+        au < exists ; exists ; B&G Bewegungstherapie und Gesundheitssport 2012 ;  2012 ; 2012 > 
   
   }
   
@@ -442,6 +447,9 @@
     param[journal_id] = 10.1055/s-00000114
     comment[years] = 2001-current 
   
+        au < exists ; exists ; Balint Journal 2010 ;  2010 ; 2010 > 
+        au < exists ; exists ; Balint Journal 2011 ;  2011 ; 2011 > 
+        au < exists ; exists ; Balint Journal 2012 ;  2012 ; 2012 > 
   
   
   }
