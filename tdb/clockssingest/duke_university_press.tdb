@@ -947,7 +947,7 @@
   
      >
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-      param[base_url] = http://  .dukejournals.org/
+      param[base_url] = http://nmj.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1950 ; Nagoya Mathematical Journal Volume 1 ; 1 >
@@ -1014,7 +1014,27 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Nagoya Mathematical Journal Volume 62 ; 62 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Nagoya Mathematical Journal Volume 63 ; 63 >
 
+    }
+    
+    {
+  
+    title < 
+      name = New German Critique ;
+      issn = 0094-033X ;
+      eissn = 1558-1462
+  
+     >
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://ngc.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; New German Critique Volume 33 ; 33 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; New German Critique Volume 34 ; 34 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; New German Critique Volume 35 ; 35 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; New German Critique Volume 36 ; 36 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; New German Critique Volume 37 ; 37 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; New German Critique Volume 38 ; 38 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; New German Critique Volume 39 ; 39 >
 
 
      }
