@@ -3609,7 +3609,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2049-6958
 
       au < crawling ; exists ; 2010 ; Multidisciplinary Respiratory Medicine Volume 5 ; 5 >
-      au < testing ; exists ; 2011 ; Multidisciplinary Respiratory Medicine Volume 6 ; 6 >
+      au < released ; manifest ; 2011 ; Multidisciplinary Respiratory Medicine Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Multidisciplinary Respiratory Medicine Volume 7 ; 7 >
 
     }
@@ -3629,7 +3629,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Neural Development Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; Neural Development Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Neural Development Volume 5 ; 5 >
-      au < testing ; exists ; 2011 ; Neural Development Volume 6 ; 6 >
+      au < released ; manifest ; 2011 ; Neural Development Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Neural Development Volume 7 ; 7 >
 
     }
@@ -3648,7 +3648,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Nonlinear Biomedical Physics Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; Nonlinear Biomedical Physics Volume 3 ; 3 >
       au < crawling ; exists ; 2010 ; Nonlinear Biomedical Physics Volume 4 ; 4 >
-      au < testing ; exists ; 2011 ; Nonlinear Biomedical Physics Volume 5 ; 5 >
+      au < released ; manifest ; 2011 ; Nonlinear Biomedical Physics Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Nonlinear Biomedical Physics Volume 6 ; 6 >
 
     }
@@ -3694,7 +3694,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Nutrition Journal Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; Nutrition Journal Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Nutrition Journal Volume 9 ; 9 >      
-      au < testing ; exists ; 2011 ; Nutrition Journal Volume 10 ; 10 >
+      au < released ; manifest ; 2011 ; Nutrition Journal Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Nutrition Journal Volume 11 ; 11 >
       
     }
@@ -3790,7 +3790,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Patient Safety in Surgery Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; Patient Safety in Surgery Volume 3 ; 3 >
       au < crawling ; exists ; 2010 ; Patient Safety in Surgery Volume 4 ; 4 >
-      au < testing ; exists ; 2011 ; Patient Safety in Surgery Volume 5 ; 5 >
+      au < released ; manifest ; 2011 ; Patient Safety in Surgery Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Patient Safety in Surgery Volume 6 ; 6 >
 
     }
@@ -3877,7 +3877,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Population Health Metrics Volume 6 ; 6 >
       au < manifest ; exists ; 2009 ; Population Health Metrics Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Population Health Metrics Volume 8 ; 8 >
-      au < testing ; exists ; 2011 ; Population Health Metrics Volume 9 ; 9 >
+      au < released ; manifest ; 2011 ; Population Health Metrics Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Population Health Metrics Volume 10 ; 10 >
 
     }
