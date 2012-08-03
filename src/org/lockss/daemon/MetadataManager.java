@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.42 2012-08-03 03:40:20 pgust Exp $
+ * $Id: MetadataManager.java,v 1.43 2012-08-03 16:46:44 pgust Exp $
  */
 
 /*
@@ -1511,14 +1511,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                   case rescheduled:
                     log.debug2("Reindexing task did not finished for au "
                         + au.getName());
-                    conn.rollback();
-
                     // attempt to move failed AU to end of pending list
                     removeFromPendingAus(conn, au.getAuId());
                     if (status == ReindexingStatus.rescheduled) {
                       addToPendingAus(conn, Collections.singleton(au));
                     }
-                    conn.commit();
+
                     failedReindexingCount++;
                     break;
                 }
