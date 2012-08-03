@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.41 2012-08-02 18:55:11 pgust Exp $
+ * $Id: MetadataManager.java,v 1.42 2012-08-03 03:40:20 pgust Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private static Logger log = Logger.getLogger("MetadataManager");
 
   /** prefix for config properties */
-  static public final String PREFIX = "org.lockss.daemon.metadataManager.";
+  static public final String PREFIX = "org.lockss.metadataManager.";
 
   /**
    * Determines whether MedataExtractor specified by plugin should be used if it
@@ -635,11 +635,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + ")";
 
   /** table for recording a feature URL for an article */
-  private static final String create_FEATURE_TABLE = "create table "
-      + FEATURE_TABLE + " (" + FEATURE_FIELD + " VARCHAR(" + MAX_FEATURE_FIELD
-      + ") NOT NULL," + ACCESS_URL_FIELD + " VARCHAR(" + MAX_ACCESS_URL_FIELD
-      + ") NOT NULL" + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES "
-      + METADATA_TABLE + "(md_id) on delete cascade" + ")";
+//  private static final String create_FEATURE_TABLE = "create table "
+//      + FEATURE_TABLE + " (" + FEATURE_FIELD + " VARCHAR(" + MAX_FEATURE_FIELD
+//      + ") NOT NULL," + ACCESS_URL_FIELD + " VARCHAR(" + MAX_ACCESS_URL_FIELD
+//      + ") NOT NULL" + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES "
+//      + METADATA_TABLE + "(md_id) on delete cascade" + ")";
 
   /** table for recording a DOI for an article */
   private static final String create_DOI_TABLE = "create table " + DOI_TABLE
@@ -1288,7 +1288,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   /** enumeration status for reindexing tasks */
   enum ReindexingStatus {
-    completed, // if the reindexing task completed
     success, // if the reindexing task was successful
     failed, // if the reindexing task failed
     rescheduled // if the reindexing task was rescheduled
@@ -1319,7 +1318,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     private static final int default_steps = 10;
 
     /** The status of the task: successful if true */
-    private ReindexingStatus status = ReindexingStatus.completed;
+    private ReindexingStatus status = ReindexingStatus.success;
 
     /** Whether the AU being indexed is new to the index */
     private boolean isNewAu = true;
@@ -1345,9 +1344,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     long startUserTime = 0;
     long startClockTime = 0;
 
-    private long totalCpuTime = 0;
-    private long totalUserTime = 0;
-    private long totalClockTime = 0;
+    long startUpdateCpuTime = 0;
+    long startUpdateUserTime = 0;
+    long startUpdateClockTime = 0;
+
+    private long endCpuTime = 0;
+    private long endUserTime = 0;
+    private long endClockTime = 0;
 
     private final boolean isTitleInTdb;
 
@@ -1436,14 +1439,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
               log.error(
                   "Failed to set up to reindex pending au: " + au.getName(), ex);
               setFinished();
-              if (status == ReindexingStatus.completed) {
+              if (status == ReindexingStatus.success) {
                 status = ReindexingStatus.rescheduled;
               }
             } catch (SQLException ex) {
               log.error(
                   "Failed to set up to reindex pending au: " + au.getName(), ex);
               setFinished();
-              if (status == ReindexingStatus.completed) {
+              if (status == ReindexingStatus.success) {
                 status = ReindexingStatus.rescheduled;
               }
             }
@@ -1453,7 +1456,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                 // if reindexing not complete at this point,
                 // roll back current transaction, and try later
                 switch (status) {
-                  case completed:
+                  case success:
+                    startUpdateCpuTime = threadCpuTime;
+                    startUpdateUserTime = threadUserTime;
+                    startUpdateClockTime = currentClockTime;
+
                     // add collected metadata to database
                     conn = dbManager.getConnection();
 
@@ -1466,11 +1473,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                       addMetadata(mditr.next());
                     }
 
+                    
                     // remove the AU just reindexed from the pending list
                     removeFromPendingAus(conn, au.getAuId());
                     conn.commit();
 
-                    status = ReindexingStatus.success;
                     successfulReindexingCount++;
                     metadataArticleCount = getArticleCount(conn);
 
@@ -1479,19 +1486,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                     // later reload of the plugin
                     AuUtil.getAuState(au).setFeatureVersion(Feature.Metadata,
                         au.getPlugin().getFeatureVersion(Feature.Metadata));
+                    
+                    endClockTime = System.currentTimeMillis();
+                    if (tmxb.isCurrentThreadCpuTimeSupported()) {
+                      endCpuTime = tmxb.getCurrentThreadCpuTime();
+                      endUserTime = tmxb.getCurrentThreadUserTime();
+                    }
+
                     long elapsedCpuTime = threadCpuTime = startCpuTime;
                     long elapsedUserTime = threadUserTime - startUserTime;
                     long elapsedClockTime = currentClockTime - startClockTime;
-                    totalCpuTime += elapsedCpuTime;
-                    totalUserTime += elapsedUserTime;
-                    totalClockTime += elapsedClockTime;
                     if (log.isDebug2()) {
                       log.debug2("Reindexing task finished for au: "
                           + au.getName() + " CPU time: " + elapsedCpuTime
-                          / 1.0e9 + " (" + totalCpuTime / 1.0e9
+                          / 1.0e9 + " (" + endCpuTime / 1.0e9
                           + "), UserTime: " + elapsedUserTime / 1.0e9 + " ("
-                          + totalUserTime / 1.0e9 + ") Clock time: "
-                          + elapsedClockTime / 1.0e3 + " (" + totalClockTime
+                          + endUserTime / 1.0e9 + ") Clock time: "
+                          + elapsedClockTime / 1.0e3 + " (" + endClockTime
                           / 1.0e3 + ")");
                     }
 
@@ -1515,7 +1526,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                 log.error(
                     "error finishing processing of pending au: " + au.getName(),
                     ex);
-                if (status == ReindexingStatus.completed) {
+                if (status == ReindexingStatus.success) {
                   status = ReindexingStatus.rescheduled;
                 }
               }
@@ -1544,7 +1555,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     /** Cancel current task without rescheduling */
     public void cancel() {
-      if (!isFinished() && (status == ReindexingStatus.completed)) {
+      if (!isFinished() && (status == ReindexingStatus.success)) {
         status = ReindexingStatus.failed;
         super.cancel();
         setFinished();
@@ -1553,7 +1564,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     /** Cancel and mark current task for rescheduling */
     public void reschedule() {
-      if (!isFinished() && (status == ReindexingStatus.completed)) {
+      if (!isFinished() && (status == ReindexingStatus.success)) {
         status = ReindexingStatus.rescheduled;
         super.cancel();
         setFinished();
@@ -1587,13 +1598,17 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       return startClockTime;
     }
 
+    public long getStartUpdateTime() {
+      return startUpdateClockTime;
+    }
+    
     /**
      * Get the end time for indexing.
      * 
      * @return the end time in miliseconds since epoch (0 if not finished)
      */
     public long getEndTime() {
-      return (totalClockTime == 0) ? 0 : totalClockTime + startClockTime;
+      return endClockTime;
     }
 
     /**
@@ -1661,7 +1676,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
               "Failed to index metadata for full text URL: "
                   + af.getFullTextUrl(), ex);
           setFinished();
-          if (status == ReindexingStatus.completed) {
+          if (status == ReindexingStatus.success) {
             status = ReindexingStatus.rescheduled;
             indexedArticleCount = 0;
           }
@@ -1670,7 +1685,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
               "Failed to index metadata for full text URL: "
                   + af.getFullTextUrl(), ex);
           setFinished();
-          if (status == ReindexingStatus.completed) {
+          if (status == ReindexingStatus.success) {
             status = ReindexingStatus.rescheduled;
             indexedArticleCount = 0;
           }
