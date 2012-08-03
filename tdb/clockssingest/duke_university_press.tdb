@@ -847,6 +847,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; minnesota review: a journal of creative and critical writing Volume 78 ; 78 >
 
     }
+    
     {
   
     title < 
@@ -934,7 +935,88 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Modern Language Quarterly: A Journal of Literary History Volume 71 ; 71 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Modern Language Quarterly: A Journal of Literary History Volume 72 ; 72 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Modern Language Quarterly: A Journal of Literary History Volume 73 ; 73 >
+ 
+    }
+    
+    {
+  
+    title < 
+      name = Nagoya Mathematical Journal ;
+      issn = 0027-7630 ;
+      eissn = 2152-6842
+  
+     >
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://  .dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
-}
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1950 ; Nagoya Mathematical Journal Volume 1 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1951 ; Nagoya Mathematical Journal Volume 2 ; 2 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1952 ; Nagoya Mathematical Journal Volume 3 ; 3 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1953 ; Nagoya Mathematical Journal Volume 4 ; 4 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1954 ; Nagoya Mathematical Journal Volume 5 ; 5 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1955 ; Nagoya Mathematical Journal Volume 6 ; 6 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1956 ; Nagoya Mathematical Journal Volume 7 ; 7 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1957 ; Nagoya Mathematical Journal Volume 8 ; 8 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1958 ; Nagoya Mathematical Journal Volume 9 ; 9 >     
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1959 ; Nagoya Mathematical Journal Volume 10 ; 10 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1960 ; Nagoya Mathematical Journal Volume 11 ; 11 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1961 ; Nagoya Mathematical Journal Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1962 ; Nagoya Mathematical Journal Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1963 ; Nagoya Mathematical Journal Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1964 ; Nagoya Mathematical Journal Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1965 ; Nagoya Mathematical Journal Volume 16 ; 16 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1966 ; Nagoya Mathematical Journal Volume 17 ; 17 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1967 ; Nagoya Mathematical Journal Volume 18 ; 18 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1968 ; Nagoya Mathematical Journal Volume 19 ; 19 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1969 ; Nagoya Mathematical Journal Volume 20 ; 20 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1970 ; Nagoya Mathematical Journal Volume 21 ; 21 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1971 ; Nagoya Mathematical Journal Volume 22 ; 22 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1972 ; Nagoya Mathematical Journal Volume 23 ; 23 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1973 ; Nagoya Mathematical Journal Volume 24 ; 24 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1974 ; Nagoya Mathematical Journal Volume 25 ; 25 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1975 ; Nagoya Mathematical Journal Volume 26 ; 26 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1976 ; Nagoya Mathematical Journal Volume 27 ; 27 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1977 ; Nagoya Mathematical Journal Volume 28 ; 28 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1978 ; Nagoya Mathematical Journal Volume 29 ; 29 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1979 ; Nagoya Mathematical Journal Volume 30 ; 30 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1980 ; Nagoya Mathematical Journal Volume 31 ; 31 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1981 ; Nagoya Mathematical Journal Volume 32 ; 32 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1982 ; Nagoya Mathematical Journal Volume 33 ; 33 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1983 ; Nagoya Mathematical Journal Volume 34 ; 34 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1984 ; Nagoya Mathematical Journal Volume 35 ; 35 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1985 ; Nagoya Mathematical Journal Volume 36 ; 36 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1986 ; Nagoya Mathematical Journal Volume 37 ; 37 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1987 ; Nagoya Mathematical Journal Volume 38 ; 38 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1988 ; Nagoya Mathematical Journal Volume 39 ; 39 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1989 ; Nagoya Mathematical Journal Volume 40 ; 40 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1990 ; Nagoya Mathematical Journal Volume 41 ; 41 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1991 ; Nagoya Mathematical Journal Volume 42 ; 42 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1992 ; Nagoya Mathematical Journal Volume 43 ; 43 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1993 ; Nagoya Mathematical Journal Volume 44 ; 44 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1994 ; Nagoya Mathematical Journal Volume 45 ; 45 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1995 ; Nagoya Mathematical Journal Volume 46 ; 46 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1996 ; Nagoya Mathematical Journal Volume 47 ; 47 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1997 ; Nagoya Mathematical Journal Volume 48 ; 48 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1998 ; Nagoya Mathematical Journal Volume 49 ; 49 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999 ; Nagoya Mathematical Journal Volume 50 ; 50 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Nagoya Mathematical Journal Volume 51 ; 51 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Nagoya Mathematical Journal Volume 52 ; 52 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Nagoya Mathematical Journal Volume 53 ; 53 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Nagoya Mathematical Journal Volume 54 ; 54 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Nagoya Mathematical Journal Volume 55 ; 55 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Nagoya Mathematical Journal Volume 56 ; 56 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Nagoya Mathematical Journal Volume 57 ; 57 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Nagoya Mathematical Journal Volume 58 ; 58 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Nagoya Mathematical Journal Volume 59 ; 59 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Nagoya Mathematical Journal Volume 50 ; 50 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Nagoya Mathematical Journal Volume 61 ; 61 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Nagoya Mathematical Journal Volume 62 ; 62 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Nagoya Mathematical Journal Volume 63 ; 63 >
+
+
+
+
+     }
 
    }
