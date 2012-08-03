@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.44 2012-08-03 18:32:12 pgust Exp $
+ * $Id: MetadataManager.java,v 1.45 2012-08-03 21:37:19 pgust Exp $
  */
 
 /*
@@ -1353,6 +1353,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     private long endCpuTime = 0;
     private long endUserTime = 0;
     private long endClockTime = 0;
+    
+    final String auName;
+    final String auId;
+    final boolean auNoSubstance;
+
 
     private final boolean isTitleInTdb;
 
@@ -1377,7 +1382,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       null); /* Object cookie */
       this.au = theAu;
       this.ae = theAe;
-
+      this.auName = au.getName();
+      this.auId = au.getAuId();
+      this.auNoSubstance = AuUtil.getAuState(au).hasNoSubstance();
+      
       // initialize values used for processing every article in the AU
       auid = au.getAuId();
       pluginId = PluginManager.pluginIdFromAuId(auid);
@@ -1573,7 +1581,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     /**
-     * Returns the AU being reindexed.
+     * Returns the task AU.
      * 
      * @return the AU being reindexed
      */
@@ -1581,6 +1589,29 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       return au;
     }
 
+    /**
+     * Returns the name of the task AU.
+     * @return the name of the task AU
+     */
+    public String getAuName() {
+      return auName;
+    }
+    
+    /**
+     * Returns auid of task AU.
+     * @return the auid of the task AU
+     */
+    public String getAuId() {
+      return auId;
+    }
+    
+    /**
+     * Returns substance state of task AU.
+     * @return <code>true</code> if AU has no substance
+     */
+    public boolean hasNoAuSubstance() {
+      return auNoSubstance;
+    }
     /**
      * Returns <code>true<.code> if the AU is not yet indexed.
      * 
@@ -1696,7 +1727,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                   + af.getFullTextUrl(), ex);
           setFinished();
           if (status == ReindexingStatus.success) {
-            status = ReindexingStatus.rescheduled;
+            status = ReindexingStatus.failed;
             indexedArticleCount = 0;
           }
         } catch (RuntimeException ex) {
