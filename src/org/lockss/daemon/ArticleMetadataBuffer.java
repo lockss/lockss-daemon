@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataBuffer.java,v 1.2 2012-08-03 18:30:08 pgust Exp $
+ * $Id: ArticleMetadataBuffer.java,v 1.3 2012-08-03 19:26:04 pgust Exp $
  */
 
 /*
@@ -298,12 +298,10 @@ class ArticleMetadataBuffer {
     return new Iterator<ArticleMetadataInfo>() {
       {
         try {
-          if (isOpen() && (infoCount > 0)) {
-            collectedMetadataReader = 
-              new BufferedReader(
-                  new InputStreamReader(
-                      new DeleteFileOnCloseInputStream(collectedMetadataFile)));
-          }
+          collectedMetadataReader = 
+            new BufferedReader(
+                new InputStreamReader(
+                    new DeleteFileOnCloseInputStream(collectedMetadataFile)));
         } catch (IOException ex) {
           log.warning("Error opening input stream", ex);
         }
