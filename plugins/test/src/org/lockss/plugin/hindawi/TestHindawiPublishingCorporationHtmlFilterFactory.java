@@ -63,7 +63,7 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
   //and the expected post filter HTML strings.
   
   private static final String scriptHtml =
-		 "<script type=\"text/javascript\"></script";
+		 "<script type=\"text/javascript\"></script>";
   private static final String scriptHtmlFiltered =
   		 "";
   
