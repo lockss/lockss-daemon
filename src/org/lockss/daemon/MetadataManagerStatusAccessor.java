@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.6 2012-08-03 18:32:12 pgust Exp $
+ * $Id: MetadataManagerStatusAccessor.java,v 1.7 2012-08-03 21:37:58 pgust Exp $
  */
 
 /*
@@ -166,7 +166,9 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
     List<Map<String,Object>> rows = new ArrayList<Map<String,Object>>();
     int rowNum = 0;
     for (ReindexingTask task : metadataMgr.getReindexingTasks()) {
-      ArchivalUnit au = task.getAu();
+      String auName = task.getAuName();
+      String auId = task.getAuId();
+      boolean auNoSubstance = task.hasNoAuSubstance();
       long startTime = task.getStartTime();
       long startUpdateTime = task.getStartUpdateTime();
       long endTime = task.getEndTime();
@@ -178,9 +180,9 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
       
       Map<String,Object> row = new HashMap<String,Object>();
       row.put(AU_COL_NAME,
-              new StatusTable.Reference(au.getName(),
+              new StatusTable.Reference(auName,
                                         ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
-                                        au.getAuId()));
+                                        auId));
       if (isNewAu) {
         row.put(INDEX_TYPE, "New Index");
       } else {
@@ -240,9 +242,8 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
           default:
             status = indexStatus.toString();
         }
-        if (au != null) {
-          if (indexStatus == ReindexingStatus.success &&
-              AuUtil.getAuState(au).hasNoSubstance()) {
+        if (auId != null) {
+          if ((indexStatus == ReindexingStatus.success) && auNoSubstance) {
             status =
               new StatusTable.DisplayedValue(status).setFootnote(
                 "Though metadata indexing finished successfully, no"
