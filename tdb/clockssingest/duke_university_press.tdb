@@ -1038,5 +1038,38 @@
 
 
      }
+     
+    {
+  
+    title < 
+      name = Nka: Journal of Contemporary African Art ;
+      issn = 1075-7163 ;
+      eissn = 2152-7792
+  
+     >
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://nka.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1994 ; Nka: Journal of Contemporary African Art Volume 1 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1995 ; Nka: Journal of Contemporary African Art Volume 2 ; 2 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1996 ; Nka: Journal of Contemporary African Art Volume 3 ; 3 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1997 ; Nka: Journal of Contemporary African Art Volume 4 ; 4 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1998 ; Nka: Journal of Contemporary African Art Volume 5 ; 5 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999 ; Nka: Journal of Contemporary African Art Volume 6 ; 6 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Nka: Journal of Contemporary African Art Volume 7 ; 7 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Nka: Journal of Contemporary African Art Volume 8 ; 8 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Nka: Journal of Contemporary African Art Volume 9 ; 9 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Nka: Journal of Contemporary African Art Volume 10 ;10  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Nka: Journal of Contemporary African Art Volume 11 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Nka: Journal of Contemporary African Art Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Nka: Journal of Contemporary African Art Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Nka: Journal of Contemporary African Art Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Nka: Journal of Contemporary African Art Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Nka: Journal of Contemporary African Art Volume 16 ; 16 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Nka: Journal of Contemporary African Art Volume 17 ; 17 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Nka: Journal of Contemporary African Art Volume 18 ; 18 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Nka: Journal of Contemporary African Art Volume 19 ; 19 >
+
+}
    }
