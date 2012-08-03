@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.5 2012-08-03 03:48:25 pgust Exp $
+ * $Id: MetadataManagerStatusAccessor.java,v 1.6 2012-08-03 18:32:12 pgust Exp $
  */
 
 /*
@@ -33,13 +33,10 @@ package org.lockss.daemon;
 
 import java.util.ArrayList;
 import java.util.BitSet;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.derby.iapi.sql.Row;
-import org.lockss.crawler.SingleCrawlStatusAccessor;
 import org.lockss.daemon.MetadataManager.ReindexingStatus;
 import org.lockss.daemon.MetadataManager.ReindexingTask;
 import org.lockss.daemon.status.ColumnDescriptor;
@@ -75,6 +72,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
   private static final String UPDATE_DURATION_COL_NAME = "update_dur";
   private static final String INDEX_STATUS_COL_NAME = "status";
   private static final String NUM_INDEXED_COL_NAME = "num_indexed";
+  private static final String NUM_UPDATED_COL_NAME = "num_updated";
   // Sort keys, not visible columns
   private static final String SORT_KEY1 = "sort1";
   private static final String SORT_KEY2 = "sort2";
@@ -92,6 +90,9 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
                              ColumnDescriptor.TYPE_STRING,
                              "Indicates whether new content is being indexed "
                              + " or existing content index is being updated"),
+        new ColumnDescriptor(INDEX_STATUS_COL_NAME, "Status",
+                             ColumnDescriptor.TYPE_STRING,
+                             "Status of indexing operation."),
         new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
                              ColumnDescriptor.TYPE_DATE,
                              "Start date and time of indexing operation"),
@@ -99,13 +100,12 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
                              ColumnDescriptor.TYPE_TIME_INTERVAL,
                              "Duration of metadata indexing, including"
                              + " scanning articles and extracting metadata."),
+        new ColumnDescriptor(NUM_INDEXED_COL_NAME, "Articles Indexed",
+                             ColumnDescriptor.TYPE_INT),
         new ColumnDescriptor(UPDATE_DURATION_COL_NAME, "Update Duration",
                              ColumnDescriptor.TYPE_TIME_INTERVAL,
                              "Duration of updating stored metadata."),
-        new ColumnDescriptor(INDEX_STATUS_COL_NAME, "Status",
-                             ColumnDescriptor.TYPE_STRING,
-                             "Status of indexing operation."),
-        new ColumnDescriptor(NUM_INDEXED_COL_NAME, "Articles Indexed",
+        new ColumnDescriptor(NUM_UPDATED_COL_NAME, "Articles Updated",
                              ColumnDescriptor.TYPE_INT),
       });
 
@@ -172,6 +172,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
       long endTime = task.getEndTime();
       ReindexingStatus indexStatus = task.getReindexingStatus();
       long numIndexed = task.getIndexedArticleCount();
+      long numUpdated = task.getUpdatedArticleCount();
       boolean isNewAu = task.isNewAu();      
       long curTime = TimeBase.nowMs();
       
@@ -193,6 +194,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         row.put(UPDATE_DURATION_COL_NAME, "");
         row.put(INDEX_STATUS_COL_NAME, "Waiting");
         row.put(NUM_INDEXED_COL_NAME, "");
+        row.put(NUM_UPDATED_COL_NAME, "");
         // invisible keys for sorting
         row.put(SORT_KEY1, SORT_BASE_WAITING);
         row.put(SORT_KEY2, rowNum);
@@ -203,6 +205,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         row.put(UPDATE_DURATION_COL_NAME, "");
         row.put(INDEX_STATUS_COL_NAME, "Indexing");
         row.put(NUM_INDEXED_COL_NAME, numIndexed);
+        row.put(NUM_UPDATED_COL_NAME, "");
         // invisible keys for sorting
         row.put(SORT_KEY1, SORT_BASE_INDEXING);
         row.put(SORT_KEY2, startTime);
@@ -213,6 +216,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         row.put(UPDATE_DURATION_COL_NAME, curTime-startUpdateTime);
         row.put(INDEX_STATUS_COL_NAME, "Updating");
         row.put(NUM_INDEXED_COL_NAME, numIndexed);
+        row.put(NUM_UPDATED_COL_NAME, numUpdated);
         // invisible keys for sorting
         row.put(SORT_KEY1, SORT_BASE_INDEXING);
         row.put(SORT_KEY2, startTime);
@@ -247,6 +251,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         }
         row.put(INDEX_STATUS_COL_NAME, status);
         row.put(NUM_INDEXED_COL_NAME, numIndexed);
+        row.put(NUM_UPDATED_COL_NAME, numUpdated);
 
         // invisible keys for sorting
         row.put(SORT_KEY1, SORT_BASE_DONE);

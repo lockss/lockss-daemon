@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.43 2012-08-03 16:46:44 pgust Exp $
+ * $Id: MetadataManager.java,v 1.44 2012-08-03 18:32:12 pgust Exp $
  */
 
 /*
@@ -1338,6 +1338,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     /** The number of articles indexed by this task */
     private long indexedArticleCount = 0;
+    /** The number of articles updated by this task */
+    private long updatedArticleCount = 0;
 
     // ThreadMXBean times
     long startCpuTime = 0;
@@ -1471,6 +1473,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                         .iterator();
                     while (mditr.hasNext()) {
                       addMetadata(mditr.next());
+                      updatedArticleCount++;
                     }
 
                     
@@ -1625,6 +1628,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
      */
     public long getIndexedArticleCount() {
       return indexedArticleCount;
+    }
+
+    /**
+     * Returns the number of articles extracted by this task.
+     * 
+     * @return the number of articles extracted by this task
+     */
+    public long getUpdatedArticleCount() {
+      return updatedArticleCount;
     }
 
     /**
