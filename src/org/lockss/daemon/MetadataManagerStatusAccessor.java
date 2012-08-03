@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.4 2012-08-02 18:56:30 pgust Exp $
+ * $Id: MetadataManagerStatusAccessor.java,v 1.5 2012-08-03 03:48:25 pgust Exp $
  */
 
 /*
@@ -71,7 +71,8 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
   private static final String AU_COL_NAME = "au";
   private static final String INDEX_TYPE = "index_type";
   private static final String START_TIME_COL_NAME = "start";
-  private static final String DURATION_COL_NAME = "dur";
+  private static final String INDEX_DURATION_COL_NAME = "index_dur";
+  private static final String UPDATE_DURATION_COL_NAME = "update_dur";
   private static final String INDEX_STATUS_COL_NAME = "status";
   private static final String NUM_INDEXED_COL_NAME = "num_indexed";
   // Sort keys, not visible columns
@@ -88,13 +89,22 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
                              ColumnDescriptor.TYPE_STRING)
         .setComparator(CatalogueOrderComparator.SINGLETON),
         new ColumnDescriptor(INDEX_TYPE, "Index Type",
-                             ColumnDescriptor.TYPE_STRING),
+                             ColumnDescriptor.TYPE_STRING,
+                             "Indicates whether new content is being indexed "
+                             + " or existing content index is being updated"),
         new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
-                             ColumnDescriptor.TYPE_DATE),
-        new ColumnDescriptor(DURATION_COL_NAME, "Duration",
-                             ColumnDescriptor.TYPE_TIME_INTERVAL),
+                             ColumnDescriptor.TYPE_DATE,
+                             "Start date and time of indexing operation"),
+        new ColumnDescriptor(INDEX_DURATION_COL_NAME, "Index Duration",
+                             ColumnDescriptor.TYPE_TIME_INTERVAL,
+                             "Duration of metadata indexing, including"
+                             + " scanning articles and extracting metadata."),
+        new ColumnDescriptor(UPDATE_DURATION_COL_NAME, "Update Duration",
+                             ColumnDescriptor.TYPE_TIME_INTERVAL,
+                             "Duration of updating stored metadata."),
         new ColumnDescriptor(INDEX_STATUS_COL_NAME, "Status",
-                             ColumnDescriptor.TYPE_STRING),
+                             ColumnDescriptor.TYPE_STRING,
+                             "Status of indexing operation."),
         new ColumnDescriptor(NUM_INDEXED_COL_NAME, "Articles Indexed",
                              ColumnDescriptor.TYPE_INT),
       });
@@ -158,6 +168,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
     for (ReindexingTask task : metadataMgr.getReindexingTasks()) {
       ArchivalUnit au = task.getAu();
       long startTime = task.getStartTime();
+      long startUpdateTime = task.getStartUpdateTime();
       long endTime = task.getEndTime();
       ReindexingStatus indexStatus = task.getReindexingStatus();
       long numIndexed = task.getIndexedArticleCount();
@@ -178,17 +189,29 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
       if (startTime == 0) {
         // task hasn't started yet
         row.put(START_TIME_COL_NAME, "");
-        row.put(DURATION_COL_NAME, "");
+        row.put(INDEX_DURATION_COL_NAME, "");
+        row.put(UPDATE_DURATION_COL_NAME, "");
         row.put(INDEX_STATUS_COL_NAME, "Waiting");
         row.put(NUM_INDEXED_COL_NAME, "");
         // invisible keys for sorting
         row.put(SORT_KEY1, SORT_BASE_WAITING);
         row.put(SORT_KEY2, rowNum);
-      } else if (endTime == 0) {
-        // task is running but hasn't finished yet
+      } if (startUpdateTime == 0) {
+        // task is running but hasn't finished indexing yet
         row.put(START_TIME_COL_NAME, startTime);
-        row.put(DURATION_COL_NAME, curTime-startTime);
+        row.put(INDEX_DURATION_COL_NAME, curTime-startTime);
+        row.put(UPDATE_DURATION_COL_NAME, "");
         row.put(INDEX_STATUS_COL_NAME, "Indexing");
+        row.put(NUM_INDEXED_COL_NAME, numIndexed);
+        // invisible keys for sorting
+        row.put(SORT_KEY1, SORT_BASE_INDEXING);
+        row.put(SORT_KEY2, startTime);
+      } else if (endTime == 0) {
+        // task is finished indexing but hasn't finished updating yet
+        row.put(START_TIME_COL_NAME, startTime);
+        row.put(INDEX_DURATION_COL_NAME, startUpdateTime-startTime);
+        row.put(UPDATE_DURATION_COL_NAME, curTime-startUpdateTime);
+        row.put(INDEX_STATUS_COL_NAME, "Updating");
         row.put(NUM_INDEXED_COL_NAME, numIndexed);
         // invisible keys for sorting
         row.put(SORT_KEY1, SORT_BASE_INDEXING);
@@ -197,12 +220,10 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
       } else {
         // task is finished
         row.put(START_TIME_COL_NAME, startTime);
-        row.put(DURATION_COL_NAME, endTime-startTime);
+        row.put(INDEX_DURATION_COL_NAME, startUpdateTime-startTime);
+        row.put(UPDATE_DURATION_COL_NAME, endTime-startUpdateTime);
         Object status;
         switch (indexStatus) {
-          case completed:
-            status = "Completed";
-            break;
           case success:
             status = "Success";
             break;
