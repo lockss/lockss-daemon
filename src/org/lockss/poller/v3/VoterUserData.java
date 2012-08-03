@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.23 2012-06-25 05:49:51 tlipkis Exp $
+ * $Id: VoterUserData.java,v 1.24 2012-08-03 19:08:12 barry409 Exp $
  */
 
 /*
@@ -372,16 +372,24 @@ public class VoterUserData
     return errorDetail;
   }
   
-  public boolean isPollActive() {
+  synchronized public boolean isPollActive() {
     return activePoll;
   }
   
-  public boolean isPollCompleted() {
+  synchronized public boolean isPollCompleted() {
     return !activePoll;
   }
   
-  public void setActivePoll(boolean b) {
+  synchronized public void setActivePoll(boolean b) {
     this.activePoll = b;
+  }
+
+  /** Close the poll.
+      @return true if the poll was previously open. */
+  synchronized public boolean checkAndCompletePoll() {
+    boolean previous = this.activePoll;
+    this.activePoll = false;
+    return previous;
   }
 
   public double getAgreementHint() {

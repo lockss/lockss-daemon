@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.71 2012-07-02 16:21:01 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.72 2012-08-03 19:08:12 barry409 Exp $
  */
 
 /*
@@ -649,9 +649,10 @@ public class V3Voter extends BasePoll {
    * @param status The final status code of the poll, for the status table.
    */
   public void stopPoll(final int status) {
-    if (voterUserData.isPollActive()) {
-      voterUserData.setActivePoll(false);
-    } else {
+    // Force the poll to be complete, and continue only if it was
+    // previously not complete, to ensure that the rest of this method
+    // is executed only once.
+    if (!voterUserData.checkAndCompletePoll()) {
       return;
     }
     if (task != null && !task.isExpired()) {
@@ -741,7 +742,7 @@ public class V3Voter extends BasePoll {
   public void nominatePeers() {
     // XXX:  'allPeers' should probably contain only peers that have agreed with
     //       us in the past for this au.
-    if (idManager == null || voterUserData == null) {
+    if (isPollCompleted()) {
       log.warning("nominatePeers called on a possibly closed poll: "
                   + getKey());
       return;
@@ -929,9 +930,8 @@ public class V3Voter extends BasePoll {
    */
   public void hashComplete() {
     // The task should have been canceled by now if the poll ended before
-    // hashing was complete, but it may not have been.  If stateMachine
-    // is null, the poll has ended and its resources have been released.
-    if (stateMachine == null) {
+    // hashing was complete, but it may not have been.
+    if (isPollCompleted()) {
       log.debug("HashService callback called hashComplete() on a poll " +
       		"that was over.  Poll key = " + getKey());
       return;

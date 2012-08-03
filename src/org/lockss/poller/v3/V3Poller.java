@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.123 2012-07-03 08:13:24 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.124 2012-08-03 19:08:12 barry409 Exp $
  */
 
 /*
@@ -850,13 +850,12 @@ public class V3Poller extends BasePoll {
    */
   public void stopPoll(final int status) {
     pollManager.countPollEndEvent(status);
-    synchronized (this) {
-      if (activePoll) {
-	activePoll = false;
-      } else {
-	log.debug("Poll has already been closed: " + getKey());
-	return;
-      }
+    // Force the poll to be complete, and continue only if it was
+    // previously not complete, to ensure that the rest of this method
+    // is executed only once.
+    if (!checkAndCompletePoll()) {
+      log.debug("Poll has already been closed: " + getKey());
+      return;
     }
 
     log.info("Stopping poll " + getKey() + " with status " + 
@@ -1601,8 +1600,8 @@ public class V3Poller extends BasePoll {
    */
   public void receivedRepair(final String url) {
     // It is possible that a repair may come in after the poll has been closed
-    // and its resources released.  If pollManager is null, just return.
-    if (pollManager == null) {
+    // and its resources released.
+    if (isPollCompleted()) {
       log.debug("Repair was received after the poll was closed. " +
                 "Poll key = " + getKey());
       // CR: Race?  Have stored content, but not going to check it
@@ -1678,7 +1677,7 @@ public class V3Poller extends BasePoll {
 
   // The vote is over.
   private void voteComplete() {
-    if (idManager == null) {
+    if (isPollCompleted()) {
       log.warning("voteComplete() called on a possibly closed poll: "
                   + getKey());
       return;
@@ -2564,12 +2563,20 @@ public class V3Poller extends BasePoll {
     return false;
   }
 
-  public boolean isPollActive() {
+  synchronized public boolean isPollActive() {
     return activePoll;
   }
 
-  public boolean isPollCompleted() {
+  synchronized public boolean isPollCompleted() {
     return !activePoll;
+  }
+
+  /** Close the poll.
+      @return true if the poll was previously open. */
+  synchronized boolean checkAndCompletePoll() {
+    boolean previous = this.activePoll;
+    this.activePoll = false;
+    return previous;
   }
 
   /**
