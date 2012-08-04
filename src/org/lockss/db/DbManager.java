@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.2 2012-07-30 17:34:00 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.3 2012-08-04 14:40:23 pgust Exp $
  */
 
 /*
@@ -409,12 +409,12 @@ public class DbManager extends BaseLockssDaemonManager {
    *          A Connection with the database connection to be closed.
    */
   public void safeCloseConnection(Connection conn) {
-    if (conn != null) {
-      try {
-	conn.close();
-      } catch (SQLException sqle) {
-	log.error("Cannot close connection", sqle);
+    try {
+      if ((conn != null) && !conn.isClosed()) {
+        conn.close();
       }
+    } catch (SQLException sqle) {
+      log.error("Cannot close connection", sqle);
     }
   }
 
@@ -426,16 +426,16 @@ public class DbManager extends BaseLockssDaemonManager {
    *          closed.
    */
   public void safeRollbackAndClose(Connection conn) {
-    if (conn != null) {
-      // Roll back the connection.
-      try {
-	conn.rollback();
-      } catch (SQLException sqle) {
-	log.error("Cannot roll back the connection", sqle);
+    // Roll back the connection.
+    try {
+      if ((conn != null) && !conn.isClosed()) {
+        conn.rollback();
       }
-      // Close it.
-      safeCloseConnection(conn);
+    } catch (SQLException sqle) {
+      log.error("Cannot roll back the connection", sqle);
     }
+    // Close it.
+    safeCloseConnection(conn);
   }
 
   /**
