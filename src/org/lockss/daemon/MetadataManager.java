@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.45 2012-08-03 21:37:19 pgust Exp $
+ * $Id: MetadataManager.java,v 1.46 2012-08-04 04:27:24 pgust Exp $
  */
 
 /*
@@ -452,13 +452,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public long getPendingAusCount(Connection conn) throws SQLException {
     Statement stmt = conn.createStatement();
-    ResultSet resultSet = stmt.executeQuery("SELECT COUNT(*) FROM "
-        + PENDINGAUS_TABLE);
-    resultSet.next();
-    long rowCount = resultSet.getLong(1);
-    resultSet.close();
-    stmt.close();
-    return rowCount;
+    ResultSet resultSet = null;
+    try {
+      resultSet = stmt.executeQuery("SELECT COUNT(*) FROM " + PENDINGAUS_TABLE);
+      resultSet.next();
+      long rowCount = resultSet.getLong(1);
+      return rowCount;
+    } finally {
+      dbManager.safeCloseResultSet(resultSet);
+      stmt.close();
+    }
   }
 
   /**
@@ -472,13 +475,17 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public long getArticleCount(Connection conn) throws SQLException {
     Statement stmt = conn.createStatement();
-    ResultSet resultSet = stmt.executeQuery("SELECT COUNT(*) FROM "
-        + METADATA_TABLE);
-    resultSet.next();
-    long rowCount = resultSet.getLong(1);
-    resultSet.close();
-    stmt.close();
-    return rowCount;
+    ResultSet resultSet = null;
+    try {
+      resultSet = stmt.executeQuery("SELECT COUNT(*) FROM "
+          + METADATA_TABLE);
+      resultSet.next();
+      long rowCount = resultSet.getLong(1);
+      return rowCount;
+    } finally {
+      dbManager.safeCloseResultSet(resultSet);
+      stmt.close();
+    }
   }
 
   /**
@@ -494,18 +501,22 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public long getArticleCount(Connection conn, String auid) throws SQLException {
     Statement stmt = conn.createStatement();
-    String plugin_id = PluginManager.pluginIdFromAuId(auid);
-    String au_key = PluginManager.auKeyFromAuId(auid);
-    String query = "SELECT COUNT(*) FROM " + METADATA_TABLE + " WHERE "
-        + PLUGIN_ID_FIELD + "='" + plugin_id + "'" + " AND " + AU_KEY_FIELD
-        + "='" + au_key + "'";
-    ResultSet resultSet = stmt.executeQuery(query);
-    resultSet.next();
-    long rowCount = resultSet.getLong(1);
-    resultSet.close();
-    stmt.close();
-    log.debug("Article count for " + query + " = " + rowCount);
-    return rowCount;
+    ResultSet resultSet = null;
+    try {
+      String plugin_id = PluginManager.pluginIdFromAuId(auid);
+      String au_key = PluginManager.auKeyFromAuId(auid);
+      String query = "SELECT COUNT(*) FROM " + METADATA_TABLE + " WHERE "
+          + PLUGIN_ID_FIELD + "='" + plugin_id + "'" + " AND " + AU_KEY_FIELD
+          + "='" + au_key + "'";
+      resultSet = stmt.executeQuery(query);
+      resultSet.next();
+      long rowCount = resultSet.getLong(1);
+      log.debug("Article count for " + query + " = " + rowCount);
+      return rowCount;
+    } finally {
+      dbManager.safeCloseResultSet(resultSet);
+      stmt.close();
+    }
   }
 
   /**
@@ -1900,32 +1911,39 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       }
 
       // insert common data into metadata table
+      long mdid;
       PreparedStatement insertMetadata = conn.prepareStatement("insert into "
           + METADATA_TABLE + " " + "values (default,?,?,?,?,?,?,?,?,?)",
           Statement.RETURN_GENERATED_KEYS);
-      // TODO PJG: Keywords???
-      // skip auto-increment key field #0
-      insertMetadata.setString(1, mdinfo.pubDate);
-      insertMetadata.setString(2, mdinfo.volume);
-      insertMetadata.setString(3, mdinfo.issue);
-      insertMetadata.setString(4, mdinfo.startPage);
-      insertMetadata.setString(5, mdinfo.articleTitle);
-      insertMetadata.setString(6, mdinfo.authors);
-      insertMetadata.setString(7, pluginId);
-      insertMetadata.setString(8, auKey);
-      insertMetadata.setString(9, mdinfo.accessUrl);
-      insertMetadata.executeUpdate();
-      ResultSet resultSet = insertMetadata.getGeneratedKeys();
-      if (!resultSet.next()) {
-        log.error("Unable to create metadata entry for auid: " + auid);
-        return;
-      }
-      int mdid = resultSet.getInt(1);
-      if (log.isDebug3()) {
-        log.debug3("added [accessURL:" + mdinfo.accessUrl + ", md_id: " + mdid
-            + ", date: " + mdinfo.pubDate + ", vol: " + mdinfo.volume
-            + ", issue: " + mdinfo.issue + ", page: " + mdinfo.startPage
-            + ", pluginId:" + pluginId + "]");
+      ResultSet resultSet = null;
+      try {
+        // TODO PJG: Keywords???
+        // skip auto-increment key field #0
+        insertMetadata.setString(1, mdinfo.pubDate);
+        insertMetadata.setString(2, mdinfo.volume);
+        insertMetadata.setString(3, mdinfo.issue);
+        insertMetadata.setString(4, mdinfo.startPage);
+        insertMetadata.setString(5, mdinfo.articleTitle);
+        insertMetadata.setString(6, mdinfo.authors);
+        insertMetadata.setString(7, pluginId);
+        insertMetadata.setString(8, auKey);
+        insertMetadata.setString(9, mdinfo.accessUrl);
+        insertMetadata.executeUpdate();
+        resultSet = insertMetadata.getGeneratedKeys();
+        if (!resultSet.next()) {
+          log.error("Unable to create metadata entry for auid: " + auid);
+          return;
+        }
+        mdid = resultSet.getLong(1);
+        if (log.isDebug3()) {
+          log.debug3("added [accessURL:" + mdinfo.accessUrl + ", md_id: " + mdid
+              + ", date: " + mdinfo.pubDate + ", vol: " + mdinfo.volume
+              + ", issue: " + mdinfo.issue + ", page: " + mdinfo.startPage
+              + ", pluginId:" + pluginId + "]");
+        }
+      } finally {
+        dbManager.safeCloseResultSet(resultSet);
+        insertMetadata.close();
       }
 
       // insert row for DOI
@@ -1942,24 +1960,32 @@ public class MetadataManager extends BaseLockssDaemonManager implements
          */
         PreparedStatement insertDOI = conn.prepareStatement("insert into "
             + DOI_TABLE + " " + "values (?,?)");
-        insertDOI.setString(1, doi);
-        insertDOI.setInt(2, mdid);
-        insertDOI.executeUpdate();
-        log.debug3("added [doi:" + doi + ", md_id: " + mdid + ", pluginId:"
-            + pluginId + "]");
+        try {
+          insertDOI.setString(1, doi);
+          insertDOI.setLong(2, mdid);
+          insertDOI.executeUpdate();
+          log.debug3("added [doi:" + doi + ", md_id: " + mdid + ", pluginId:"
+              + pluginId + "]");
+        } finally {
+          insertDOI.close();
+        }
       }
 
       // insert row for ISBN
       if (!isbns.isEmpty()) {
         PreparedStatement insertISBN = conn.prepareStatement("insert into "
             + ISBN_TABLE + " " + "values (?,?)");
-        insertISBN.setInt(2, mdid);
-        for (String anIsbn : isbns) {
-          anIsbn = anIsbn.replaceAll("-", "");
-          insertISBN.setString(1, anIsbn);
-          insertISBN.executeUpdate();
-          log.debug3("added [isbn:" + anIsbn + ", md_id: " + mdid
-              + ", pluginId:" + pluginId + "]");
+        try {
+          insertISBN.setLong(2, mdid);
+          for (String anIsbn : isbns) {
+            anIsbn = anIsbn.replaceAll("-", "");
+            insertISBN.setString(1, anIsbn);
+            insertISBN.executeUpdate();
+            log.debug3("added [isbn:" + anIsbn + ", md_id: " + mdid
+                + ", pluginId:" + pluginId + "]");
+          }
+        } finally {
+          insertISBN.close();
         }
       }
 
@@ -1967,13 +1993,17 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       if (!issns.isEmpty()) {
         PreparedStatement insertISSN = conn.prepareStatement("insert into "
             + ISSN_TABLE + " " + "values (?,?)");
-        insertISSN.setInt(2, mdid);
-        for (String anIssn : issns) {
-          anIssn = anIssn.replaceAll("-", "");
-          insertISSN.setString(1, anIssn);
-          insertISSN.executeUpdate();
-          log.debug3("added [issn:" + anIssn + ", md_id: " + mdid
-              + ", pluginId:" + pluginId + "]");
+        try {
+          insertISSN.setLong(2, mdid);
+          for (String anIssn : issns) {
+            anIssn = anIssn.replaceAll("-", "");
+            insertISSN.setString(1, anIssn);
+            insertISSN.executeUpdate();
+            log.debug3("added [issn:" + anIssn + ", md_id: " + mdid
+                + ", pluginId:" + pluginId + "]");
+          }
+        } finally {
+          insertISSN.close();
         }
       }
 
@@ -1982,14 +2012,18 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           && !StringUtil.isNullString(mdinfo.journalTitle)) {
         PreparedStatement insertTitle = conn.prepareStatement("insert into "
             + TITLE_TABLE + " " + "values (?,?)");
-        // truncate to MAX_TITLE_FIELD for database
-        String title = mdinfo.journalTitle.substring(0,
-            Math.min(mdinfo.journalTitle.length(), MAX_TITLE_FIELD));
-        insertTitle.setString(1, title);
-        insertTitle.setInt(2, mdid);
-        insertTitle.executeUpdate();
-        log.debug3("added [title:'" + mdinfo.journalTitle + "', md_id: " + mdid
-            + ", pluginId:" + pluginId + "]");
+        try {
+          // truncate to MAX_TITLE_FIELD for database
+          String title = mdinfo.journalTitle.substring(0,
+              Math.min(mdinfo.journalTitle.length(), MAX_TITLE_FIELD));
+          insertTitle.setString(1, title);
+          insertTitle.setLong(2, mdid);
+          insertTitle.executeUpdate();
+          log.debug3("added [title:'" + mdinfo.journalTitle + "', md_id: " + mdid
+              + ", pluginId:" + pluginId + "]");
+        } finally {
+          insertTitle.close();
+        }
       }
     }
 
@@ -2030,13 +2064,17 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     PreparedStatement deletePendingAu = conn.prepareStatement("delete from "
         + METADATA_TABLE + " where " + PLUGIN_ID_FIELD + " = ? and "
         + AU_KEY_FIELD + " = ?");
-    String pluginId = PluginManager.pluginIdFromAuId(auId);
-    String auKey = PluginManager.auKeyFromAuId(auId);
-
-    deletePendingAu.setString(1, pluginId);
-    deletePendingAu.setString(2, auKey);
-    int count = deletePendingAu.executeUpdate();
-    return count;
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      String auKey = PluginManager.auKeyFromAuId(auId);
+  
+      deletePendingAu.setString(1, pluginId);
+      deletePendingAu.setString(2, auKey);
+      int count = deletePendingAu.executeUpdate();
+      return count;
+    } finally {
+      deletePendingAu.close();
+    }
   }
 
   /**
@@ -2081,10 +2119,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   List<String> getAuIdsToReindex(Connection conn, int maxAuIds) {
     ArrayList<String> auIds = new ArrayList<String>();
     if (pluginMgr != null) {
+      Statement selectPendingAus = null;
+      ResultSet results = null;
       try {
-        Statement selectPendingAus = conn.createStatement();
+        selectPendingAus = conn.createStatement();
 
-        ResultSet results = selectPendingAus.executeQuery("select * from "
+        results = selectPendingAus.executeQuery("select * from "
             + PENDINGAUS_TABLE);
         while ((auIds.size() < maxAuIds) && results.next()) {
           String pluginId = results.getString(1);
@@ -2096,6 +2136,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         }
       } catch (SQLException ex) {
         log.error(ex.getMessage(), ex);
+      } finally {
+        dbManager.safeCloseResultSet(results);
+        dbManager.safeCloseStatement(selectPendingAus);
       }
     }
     auIds.trimToSize();
@@ -2316,34 +2359,41 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         + PENDINGAUS_TABLE + " where " + PLUGIN_ID_FIELD + " = ? and "
         + AU_KEY_FIELD + " = ?");
 
+    ResultSet results = null;
     log.debug2("number of pending aus to add: " + aus.size());
-
-    // add an AU to the list of pending AUs
-    for (ArchivalUnit au : aus) {
-      // only add for extraction iff it has article metadata
-      if (!hasArticleMetadata(au)) {
-        log.debug3("not adding au " + au.getName()
-            + " to pending list because it has no metadata");
-      } else {
-        String auid = au.getAuId();
-        String pluginId = PluginManager.pluginIdFromAuId(auid);
-        String auKey = PluginManager.auKeyFromAuId(auid);
-
-        // only insert if entry does not exist
-        selectPendingAu.setString(1, pluginId);
-        selectPendingAu.setString(2, auKey);
-        if (!selectPendingAu.executeQuery().next()) {
-          log.debug3("adding au " + au.getName() + " to pending list");
-          insertPendingAu.setString(1, pluginId);
-          insertPendingAu.setString(2, auKey);
-          insertPendingAu.addBatch();
+    try {
+      // add an AU to the list of pending AUs
+      for (ArchivalUnit au : aus) {
+        // only add for extraction iff it has article metadata
+        if (!hasArticleMetadata(au)) {
+          log.debug3("not adding au " + au.getName()
+              + " to pending list because it has no metadata");
         } else {
-          log.debug3("Not adding au " + au.getName()
-              + " to pending list becuase it is already on the list");
+          String auid = au.getAuId();
+          String pluginId = PluginManager.pluginIdFromAuId(auid);
+          String auKey = PluginManager.auKeyFromAuId(auid);
+  
+          // only insert if entry does not exist
+          selectPendingAu.setString(1, pluginId);
+          selectPendingAu.setString(2, auKey);
+          results = selectPendingAu.executeQuery();
+          if (!results.next()) {
+            log.debug3("adding au " + au.getName() + " to pending list");
+            insertPendingAu.setString(1, pluginId);
+            insertPendingAu.setString(2, auKey);
+            insertPendingAu.addBatch();
+          } else {
+            log.debug3("Not adding au " + au.getName()
+                + " to pending list becuase it is already on the list");
+          }
         }
       }
+      insertPendingAu.executeBatch();
+    } finally {
+      dbManager.safeCloseResultSet(results);
+      insertPendingAu.close();
+      selectPendingAu.close();
     }
-    insertPendingAu.executeBatch();
 
     pendingAusCount = getPendingAusCount(conn);
   }
@@ -2363,12 +2413,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     PreparedStatement deletePendingAu = conn.prepareStatement("delete from "
         + PENDINGAUS_TABLE + " where " + PLUGIN_ID_FIELD + " = ? and "
         + AU_KEY_FIELD + " = ?");
-    String pluginId = PluginManager.pluginIdFromAuId(auId);
-    String auKey = PluginManager.auKeyFromAuId(auId);
-
-    deletePendingAu.setString(1, pluginId);
-    deletePendingAu.setString(2, auKey);
-    deletePendingAu.execute();
+    try {
+      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      String auKey = PluginManager.auKeyFromAuId(auId);
+  
+      deletePendingAu.setString(1, pluginId);
+      deletePendingAu.setString(2, auKey);
+      deletePendingAu.execute();
+    } finally {
+      deletePendingAu.close();
+    }
 
     pendingAusCount = getPendingAusCount(conn);
   }
