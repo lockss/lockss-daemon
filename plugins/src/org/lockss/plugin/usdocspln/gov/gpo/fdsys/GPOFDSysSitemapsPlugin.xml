@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - kendra adding substance checker</string>
+    <string>testing - David</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -74,6 +74,12 @@
       <string>1,&quot;^%sfdsys/search/getfrtoc\.action\?selectedDate=%d&quot;, base_url, year</string>
       <string>1,&quot;^%sfdsys/search/pagedetails\.action\?.*packageId=%s-&quot;, base_url, collection_id</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <list>
+        <string>&quot;^%sfdsys/(granule|pkg)/%s[^/]+/(htm|pdf|html)/%s[^\.]+\.(htm|pdf|html)$&quot;, base_url, collection_id, collection_id</string>
+      </list>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
