@@ -35,7 +35,7 @@
     au < released ; Abstract and Applied Analysis Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Abstract and Applied Analysis Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Abstract and Applied Analysis Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Abstract and Applied Analysis Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Abstract and Applied Analysis Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -99,7 +99,7 @@
     au < released ; Advances in Acoustics and Vibration Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Acoustics and Vibration Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Acoustics and Vibration Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Acoustics and Vibration Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Acoustics and Vibration Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -188,7 +188,7 @@
     au < released ; Advances in Civil Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Civil Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Civil Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Civil Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Civil Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -236,7 +236,7 @@
     au < released ; Advances in Decision Sciences Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Decision Sciences Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Decision Sciences Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Decision Sciences Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Decision Sciences Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -274,7 +274,7 @@
     au < released ; Advances in Fuzzy Systems Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Fuzzy Systems Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Fuzzy Systems Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Fuzzy Systems Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Fuzzy Systems Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -289,9 +289,9 @@
     param[journal_id] = ah
 
     au < ready ; Advances in Hematology Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Advances in Hematology Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Advances in Hematology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Hematology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Hematology Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Advances in Hematology Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in Hematology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -310,7 +310,7 @@
     au < released ; Advances in High Energy Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in High Energy Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in High Energy Physics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in High Energy Physics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in High Energy Physics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -328,7 +328,7 @@
     au < released ; Advances in Human-Computer Interaction Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Human-Computer Interaction Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Human-Computer Interaction Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Human-Computer Interaction Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Human-Computer Interaction Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -348,7 +348,7 @@
     au < released ; Advances in Materials Science and Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Materials Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Materials Science and Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Materials Science and Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Materials Science and Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -365,7 +365,7 @@
     au < released ; Advances in Mathematical Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Mathematical Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Mathematical Physics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Mathematical Physics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Mathematical Physics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -382,7 +382,7 @@
     au < released ; Advances in Mechanical Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Mechanical Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Mechanical Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Mechanical Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Mechanical Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -396,10 +396,10 @@
 
     param[journal_id] = amet
     
-    au < testing ; Advances in Meteorology Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Advances in Meteorology Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Advances in Meteorology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Meteorology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Meteorology Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Advances in Meteorology Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Advances in Meteorology Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in Meteorology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
 
   }
@@ -419,7 +419,7 @@
     au < released ; Advances in Multimedia Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Multimedia Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Multimedia Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Multimedia Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Multimedia Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -452,7 +452,7 @@
     au < released ; Advances in Numerical Analysis Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Numerical Analysis Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Numerical Analysis Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Numerical Analysis Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Numerical Analysis Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -487,7 +487,7 @@
     au < doesNotExist ; Advances in Optical Technologies Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Optical Technologies Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Optical Technologies Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Optical Technologies Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Optical Technologies Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -506,7 +506,7 @@
     au < released ; Advances in OptoElectronics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in OptoElectronics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in OptoElectronics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in OptoElectronics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in OptoElectronics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
  
@@ -520,7 +520,7 @@
     param[journal_id] = aop
 
     au < released ; Advances in Orthopedics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Orthopedics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Orthopedics Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
  
@@ -538,7 +538,7 @@
     au < released ; Advances in Pharmacological Sciences Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Pharmacological Sciences Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Pharmacological Sciences Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Pharmacological Sciences Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Pharmacological Sciences Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
  
@@ -558,7 +558,7 @@
     au < released ; Advances in Physical Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Physical Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Physical Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Physical Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Physical Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
  
@@ -577,7 +577,7 @@
     au < doesNotExist ; Advances in Power Electronics Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Power Electronics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Power Electronics Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Power Electronics Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
 
     
   }
@@ -592,7 +592,7 @@
     param[journal_id] = apm    
 
     au < released ; Advances in Preventive Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Preventive Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Preventive Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
  
@@ -609,7 +609,7 @@
     au < released ; Advances in Software Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Software Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Software Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Software Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Software Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -627,7 +627,7 @@
     au < released ; Advances in Tribology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Tribology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Tribology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Tribology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Tribology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -644,7 +644,7 @@
     au < released ; Advances in Urology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Urology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Urology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Urology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Urology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -661,7 +661,7 @@
     au < released ; Advances in Virology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Advances in Virology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Advances in Virology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Virology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Advances in Virology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
   
@@ -677,7 +677,7 @@
 
     au < released ; AIDS Research and Treatment Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; AIDS Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; AIDS Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; AIDS Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
       
   }
   
@@ -692,7 +692,7 @@
     param[journal_id] = ari
 
     au < released ; Anatomy Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Anatomy Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Anatomy Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
       
   } 
 
@@ -708,7 +708,7 @@
 
     au < released ; Anemia Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Anemia Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Anemia Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Anemia Volume 2012 ; 2012 ; 2012 ; 2012 >
       
   } 
     
@@ -726,7 +726,7 @@
     au < released ; Anesthesiology Research and Practice Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Anesthesiology Research and Practice Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Anesthesiology Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Anesthesiology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Anesthesiology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -743,7 +743,7 @@
     au < released ; Applied and Environmental Soil Science Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Applied and Environmental Soil Science Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Applied and Environmental Soil Science Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Applied and Environmental Soil Science Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Applied and Environmental Soil Science Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -760,7 +760,7 @@
     au < released ; Applied Computational Intelligence and Soft Computing Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Applied Computational Intelligence and Soft Computing Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Applied Computational Intelligence and Soft Computing Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Applied Computational Intelligence and Soft Computing Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Applied Computational Intelligence and Soft Computing Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -800,7 +800,7 @@
 
     au < released ; Arthritis Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Arthritis Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Arthritis Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Arthritis Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -816,7 +816,7 @@
 
     au < released ; Autism Research and Treatment Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Autism Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Autism Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Autism Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -831,7 +831,7 @@
 
     au < released ; Autoimmune Diseases Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Autoimmune Diseases Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Autoimmune Diseases Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Autoimmune Diseases Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -850,7 +850,7 @@
     au < ready ; Biochemistry Research International Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Biochemistry Research International Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Biochemistry Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Biochemistry Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Biochemistry Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
           
@@ -873,7 +873,7 @@
     au < released ; Bioinorganic Chemistry and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Bioinorganic Chemistry and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Bioinorganic Chemistry and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Bioinorganic Chemistry and Applications Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Bioinorganic Chemistry and Applications Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
   
@@ -887,7 +887,7 @@
     param[journal_id] = btri
 
     au < released ; Biotechnology Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Biotechnology Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Biotechnology Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -939,7 +939,7 @@
     au < released ; Cardiology Research and Practice Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Cardiology Research and Practice Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Cardiology Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Cardiology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Cardiology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
         
   }
 
@@ -956,7 +956,7 @@
     au < released ; Cardiovascular Psychiatry and Neurology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Cardiovascular Psychiatry and Neurology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Cardiovascular Psychiatry and Neurology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Cardiovascular Psychiatry and Neurology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Cardiovascular Psychiatry and Neurology Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
       
@@ -1183,7 +1183,7 @@
     au < released ; Case Reports in Medicine Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Case Reports in Medicine Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Case Reports in Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Case Reports in Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Case Reports in Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -1199,7 +1199,7 @@
     comments[2] = redirects to /crim subdir
 
     au < ready ; Case Reports in Nephrology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Case Reports in Nephrology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Case Reports in Nephrology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -1485,7 +1485,7 @@
 
     au < released ; Chemotherapy Research and Practice Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Chemotherapy Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -1500,7 +1500,7 @@
     param[journal_id] = cdr
 
     au < released ; Child Development Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Child Development Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Child Development Research Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
   
@@ -1516,7 +1516,7 @@
 
     au < released ; Cholesterol Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Cholesterol Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Cholesterol Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Cholesterol Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -1530,7 +1530,7 @@
     param[journal_id] = cri
 
     au < released ; Chromatography Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Chromatography Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Chromatography Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -1562,7 +1562,7 @@
     au < released ; Clinical and Developmental Immunology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Clinical and Developmental Immunology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Clinical and Developmental Immunology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -1587,7 +1587,7 @@
     au < released ; Comparative and Functional Genomics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Comparative and Functional Genomics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Comparative and Functional Genomics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Comparative and Functional Genomics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Comparative and Functional Genomics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -1634,7 +1634,7 @@
     au < released ; Computational Intelligence and Neuroscience Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Computational Intelligence and Neuroscience Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Computational Intelligence and Neuroscience Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Computational Intelligence and Neuroscience Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Computational Intelligence and Neuroscience Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -1668,7 +1668,7 @@
     au < released ; Current Gerontology and Geriatrics Research Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Current Gerontology and Geriatrics Research Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Current Gerontology and Geriatrics Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Current Gerontology and Geriatrics Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Current Gerontology and Geriatrics Research Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -1684,7 +1684,7 @@
 
     au < released ; Depression Research and Treatment Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Depression Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Depression Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Depression Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -1701,7 +1701,7 @@
     au < released ; Dermatology Research and Practice Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Dermatology Research and Practice Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Dermatology Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Dermatology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Dermatology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -1726,7 +1726,7 @@
     au < released ; Diagnostic and Therapeutic Endoscopy Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Diagnostic and Therapeutic Endoscopy Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Diagnostic and Therapeutic Endoscopy Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -1773,7 +1773,7 @@
     au < released ; Discrete Dynamics in Nature and Society Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Discrete Dynamics in Nature and Society Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Discrete Dynamics in Nature and Society Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Discrete Dynamics in Nature and Society Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Discrete Dynamics in Nature and Society Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -1789,7 +1789,7 @@
 
     au < released ; Economics Research International Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Economics Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Economics Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Economics Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -1804,7 +1804,7 @@
     param[journal_id] = edu
 
     au < released ; Education Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Education Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Education Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -1818,15 +1818,15 @@
 
     param[journal_id] = chem
 
-    au < testing ; E-Journal of Chemistry Volume 2004 ; 2004 ; 2004 ; 2004 >
-    au < testing ; E-Journal of Chemistry Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < testing ; E-Journal of Chemistry Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < testing ; E-Journal of Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < testing ; E-Journal of Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < testing ; E-Journal of Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; E-Journal of Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; E-Journal of Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; E-Journal of Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; E-Journal of Chemistry Volume 2004 ; 2004 ; 2004 ; 2004 >
+    au < manifest ; E-Journal of Chemistry Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < manifest ; E-Journal of Chemistry Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < manifest ; E-Journal of Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < manifest ; E-Journal of Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < manifest ; E-Journal of Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; E-Journal of Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; E-Journal of Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; E-Journal of Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -1842,7 +1842,7 @@
 
     au < released ; Emergency Medicine International Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Emergency Medicine International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Emergency Medicine International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Emergency Medicine International Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -1857,7 +1857,7 @@
 
     au < released ; Enzyme Research Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Enzyme Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Enzyme Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Enzyme Research Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -1872,7 +1872,7 @@
     param[journal_id] = eri
 
     au < released ; Epidemiology Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Epidemiology Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Epidemiology Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2072,7 +2072,7 @@
     au < released ; Experimental Diabetes Research Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Experimental Diabetes Research Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Experimental Diabetes Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Experimental Diabetes Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Experimental Diabetes Research Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2111,7 +2111,7 @@
     au < released ; Gastroenterology Research and Practice Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Gastroenterology Research and Practice Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Gastroenterology Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Gastroenterology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Gastroenterology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2125,7 +2125,7 @@
     param[journal_id] = gri
 
     au < released ; Genetics Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Genetics Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Genetics Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2184,7 +2184,7 @@
     au < released ; HPB Surgery Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; HPB Surgery Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; HPB Surgery Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; HPB Surgery Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; HPB Surgery Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2217,7 +2217,7 @@
     au < released ; Infectious Diseases in Obstetrics and Gynecology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Infectious Diseases in Obstetrics and Gynecology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Infectious Diseases in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2251,7 +2251,7 @@
     au < released ; Interdisciplinary Perspectives on Infectious Diseases Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Interdisciplinary Perspectives on Infectious Diseases Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Interdisciplinary Perspectives on Infectious Diseases Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Interdisciplinary Perspectives on Infectious Diseases Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Interdisciplinary Perspectives on Infectious Diseases Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2270,7 +2270,7 @@
     au < notReady ; International Journal of Aerospace Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Aerospace Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Aerospace Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Aerospace Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Aerospace Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2287,7 +2287,7 @@
     au < released ; International Journal of Agronomy Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Agronomy Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Agronomy Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Agronomy Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Agronomy Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
   
@@ -2303,7 +2303,7 @@
     au < released ; International Journal of Alzheimer's Disease Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Alzheimer's Disease Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Alzheimer's Disease Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Alzheimer's Disease Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Alzheimer's Disease Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -2339,7 +2339,7 @@
     au < released ; International Journal of Antennas and Propagation Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Antennas and Propagation Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Antennas and Propagation Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Antennas and Propagation Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Antennas and Propagation Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2356,7 +2356,7 @@
     au < released ; International Journal of Biomaterials Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Biomaterials Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Biomaterials Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Biomaterials Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Biomaterials Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2376,7 +2376,7 @@
     au < released ; International Journal of Biomedical Imaging Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Biomedical Imaging Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Biomedical Imaging Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Biomedical Imaging Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Biomedical Imaging Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2390,7 +2390,7 @@
     param[journal_id] = ijbc
 
     au < released ; International Journal of Breast Cancer Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Breast Cancer Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Breast Cancer Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2407,7 +2407,7 @@
     au < released ; International Journal of Carbohydrate Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Carbohydrate Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Carbohydrate Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Carbohydrate Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Carbohydrate Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2424,7 +2424,7 @@
     au < released ; International Journal of Cell Biology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Cell Biology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Cell Biology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Cell Biology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Cell Biology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2442,7 +2442,7 @@
     au < released ; International Journal of Chemical Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Chemical Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Chemical Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Chemical Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Chemical Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2493,7 +2493,7 @@
 
     au < released ; International Journal of Corrosion Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Corrosion Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Corrosion Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Corrosion Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2510,7 +2510,7 @@
     au < released ; International Journal of Dentistry Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Dentistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Dentistry Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Dentistry Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Dentistry Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2531,7 +2531,7 @@
     au < released ; International Journal of Differential Equations Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Differential Equations Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Differential Equations Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal fo Differential Equations Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal fo Differential Equations Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2549,7 +2549,7 @@
     au < released ; International Journal of Digital Multimedia Broadcasting Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Digital Multimedia Broadcasting Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Digital Multimedia Broadcasting Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Digital Multimedia Broadcasting Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Digital Multimedia Broadcasting Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2570,7 +2570,7 @@
     au < released ; International Journal of Distributed Sensor Networks Volume 5 (2009) ; 2009 ; 5 ; 2009 >
     au < released ; International Journal of Distributed Sensor Networks Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Distributed Sensor Networks Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Distributed Sensor Networks Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Distributed Sensor Networks Volume 2012 ; 2012 ; 2012 ; 2012 >
         
   }
 
@@ -2621,7 +2621,7 @@
     au < released ; International Journal of Endocrinology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Endocrinology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Endocrinology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Endocrinology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Endocrinology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2637,7 +2637,7 @@
     au < released ; International Journal of Evolutionary Biology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Evolutionary Biology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Evolutionary Biology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Evolutionary Biology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Evolutionary Biology Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -2653,7 +2653,7 @@
 
     au < released ; International Journal of Family Medicine Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Family Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Family Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Family Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -2688,7 +2688,7 @@
     au < released ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2716,7 +2716,7 @@
 
     au < released ; International Journal of Hypertension Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Hypertension Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Hypertension Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Hypertension Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -2731,7 +2731,7 @@
 
     au < released ; International Journal of Inflammation Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Inflammation Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Inflammation Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Inflammation Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -2750,7 +2750,7 @@
     au < ready ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Research Letters in Inorganic Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Inorganic Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Inorganic Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Inorganic Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -2805,7 +2805,7 @@
     au < released ; International Journal of Mathematics and Mathematical Sciences Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Mathematics and Mathematical Sciences Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Mathematics and Mathematical Sciences Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2820,7 +2820,7 @@
     param[journal_id] = ijmc
 
     au < released ; International Journal of Medicinal Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2837,7 +2837,7 @@
     au < released ; International Journal of Microbiology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Microbiology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Microbiology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2856,7 +2856,7 @@
     au < released ; International Journal of Microwave Science and Technology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Microwave Science and Technology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Microwave Science and Technology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Microwave Science and Technology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Microwave Science and Technology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2871,7 +2871,7 @@
     param[journal_id] = ijmi
 
     au < released ; International Journal of Molecular Imaging Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Molecular Imaging Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Molecular Imaging Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
   
@@ -2889,7 +2889,7 @@
     au < released ; International Journal of Navigation and Observation Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Navigation and Observation Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Navigation and Observation Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Navigation and Observation Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Navigation and Observation Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2922,7 +2922,7 @@
     au < released ; International Journal of Oceanography Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Oceanography Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Oceanography Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2941,7 +2941,7 @@
     au < released ; International Journal of Optics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Optics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Optics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Optics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Optics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2959,7 +2959,7 @@
     au < released ; International Journal of Otolaryngology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Otolaryngology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Otolaryngology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Otolaryngology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Otolaryngology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2997,7 +2997,7 @@
     au < released ; International Journal of Pediatrics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Pediatrics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Pediatrics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Pediatrics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Pediatrics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3015,7 +3015,7 @@
     au < released ; International Journal of Peptides Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Peptides Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Peptides Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Peptides Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Peptides Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3042,7 +3042,7 @@
     au < released ; International Journal of Photoenergy Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Photoenergy Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Photoenergy Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Photoenergy Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Photoenergy Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3061,7 +3061,7 @@
     au < released ; International Journal of Plant Genomics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Plant Genomics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Plant Genomics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Plant Genomics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Plant Genomics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3094,10 +3094,10 @@
     param[journal_id] = ijps
 
     au < doesNotExist ; International Journal of Polymer Science Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < testing ; International Journal of Polymer Science Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; International Journal of Polymer Science Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Polymer Science Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Polymer Science Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Polymer Science Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Polymer Science Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3112,7 +3112,7 @@
     param[journal_id] = ijpr
 
     au < released ; International Journal of Population Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Population Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Population Research Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3128,7 +3128,7 @@
 
     au < released ; International Journal of Proteomics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Proteomics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Proteomics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Proteomics Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -3165,7 +3165,7 @@
     au < released ; International Journal of Quality, Statistics, and Reliability Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Quality, Statistics, and Reliability Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Quality, Statistics, and Reliability Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Quality, Statistics, and Reliability Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Quality, Statistics, and Reliability Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3202,7 +3202,7 @@
     au < released ; International Journal of Reconfigurable Computing Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Reconfigurable Computing Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Reconfigurable Computing Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Reconfigurable Computing Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Reconfigurable Computing Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3220,7 +3220,7 @@
     au < released ; International Journal of Rheumatology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Rheumatology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Rheumatology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Rheumatology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Rheumatology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3251,7 +3251,7 @@
     au < released ; International Journal of Rotating Machinery Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Rotating Machinery Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Rotating Machinery Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Rotating Machinery Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Rotating Machinery Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3269,7 +3269,7 @@
     au < released ; International Journal of Spectroscopy Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Spectroscopy Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Spectroscopy Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Spectroscopy Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Spectroscopy Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3309,7 +3309,7 @@
     au < ready ; Journal of Applied Mathematics and Simulation Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Journal of Applied Mathematics and Simulation Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Stochastic Analysis Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2012 ; 2012 ; 2012 ; 2012 >
         
   }
 
@@ -3325,7 +3325,7 @@
 
     au < released ; International Journal of Surgical Oncology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Surgical Oncology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Surgical Oncology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Surgical Oncology Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -3343,7 +3343,7 @@
     au < released ; International Journal of Telemedicine and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Telemedicine and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Telemedicine and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Telemedicine and Applications Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Telemedicine and Applications Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3359,7 +3359,7 @@
 
     au < released ; International Journal of Vascular Medicine Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Vascular Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Vascular Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Vascular Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -3377,7 +3377,7 @@
     au < released ; International Journal of Vehicular Technology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Vehicular Technology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Vehicular Technology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Vehicular Technology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Vehicular Technology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3394,7 +3394,7 @@
     au < released ; International Journal of Zoology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; International Journal of Zoology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Zoology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Zoology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; International Journal of Zoology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3409,7 +3409,7 @@
 
     au < released ; Journal of Aging Research Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Aging Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Aging Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Aging Research Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -3427,7 +3427,7 @@
     au < released ; Journal of Allergy Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Allergy Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Allergy Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Jornal of Allergy Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Jornal of Allergy Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3442,7 +3442,7 @@
 
     au < released ; Journal of Amino Acids Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Amino Acids Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Amino Acids Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Amino Acids Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -3456,39 +3456,39 @@
 
     param[journal_id] = jamc
 
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 1 (1980) ; 1980 ; 1 ; 1980 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 2 (1981) ; 1981 ; 2 ; 1981 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 3 (1982) ; 1982 ; 3 ; 1982 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 4 (1983) ; 1983 ; 4 ; 1983 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 5 (1984) ; 1984 ; 5 ; 1984 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 6 (1985) ; 1985 ; 6 ; 1985 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 7 (1986) ; 1986 ; 7 ; 1986 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 8 (1987) ; 1987 ; 8 ; 1987 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 9 (1988) ; 1988 ; 9 ; 1988 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 10 (1989) ; 1989 ; 10 ; 1989 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 11 (1990) ; 1990 ; 11 ; 1990 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 12 (1991) ; 1991 ; 12 ; 1991 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 13 (1992) ; 1992 ; 13 ; 1992 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 14 (1993) ; 1993 ; 14 ; 1993 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 15 (1994) ; 1994 ; 15 ; 1994 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 16 (1995) ; 1995 ; 16 ; 1995 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 17 (1996) ; 1996 ; 17 ; 1996 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 18 (1997) ; 1997 ; 18 ; 1997 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 19 (1998) ; 1998 ; 19 ; 1998 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 20 (1999) ; 1999 ; 20 ; 1999 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 21 (2000) ; 2000 ; 21 ; 2000 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 22 (2001) ; 2001 ; 22 ; 2001 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 23 (2002) ; 2002 ; 23 ; 2002 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 24 (2003) ; 2003 ; 24 ; 2003 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 25 (2004) ; 2004 ; 25 ; 2004 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Analytical Methods in Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 1 (1980) ; 1980 ; 1 ; 1980 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2 (1981) ; 1981 ; 2 ; 1981 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 3 (1982) ; 1982 ; 3 ; 1982 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 4 (1983) ; 1983 ; 4 ; 1983 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 5 (1984) ; 1984 ; 5 ; 1984 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 6 (1985) ; 1985 ; 6 ; 1985 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 7 (1986) ; 1986 ; 7 ; 1986 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 8 (1987) ; 1987 ; 8 ; 1987 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 9 (1988) ; 1988 ; 9 ; 1988 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 10 (1989) ; 1989 ; 10 ; 1989 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 11 (1990) ; 1990 ; 11 ; 1990 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 12 (1991) ; 1991 ; 12 ; 1991 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 13 (1992) ; 1992 ; 13 ; 1992 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 14 (1993) ; 1993 ; 14 ; 1993 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 15 (1994) ; 1994 ; 15 ; 1994 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 16 (1995) ; 1995 ; 16 ; 1995 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 17 (1996) ; 1996 ; 17 ; 1996 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 18 (1997) ; 1997 ; 18 ; 1997 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 19 (1998) ; 1998 ; 19 ; 1998 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 20 (1999) ; 1999 ; 20 ; 1999 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 21 (2000) ; 2000 ; 21 ; 2000 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 22 (2001) ; 2001 ; 22 ; 2001 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 23 (2002) ; 2002 ; 23 ; 2002 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 24 (2003) ; 2003 ; 24 ; 2003 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 25 (2004) ; 2004 ; 25 ; 2004 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Journal of Analytical Methods in Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3503,7 +3503,7 @@
     param[journal_id] = janth
 
     au < released ; Journal of Anthropology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Anthropology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Anthropology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3528,7 +3528,7 @@
     au < released ; Journal of Applied Mathematics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Applied Mathematics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Applied Mathematics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Applied Mathematics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Applied Mathematics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3633,7 +3633,7 @@
     au < released ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3703,7 +3703,7 @@
     au < released ; Journal of Biomedicine and Biotechnology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Biomedicine and Biotechnology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Biomedicine and Biotechnology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Biomedicine and Biotechnology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Biomedicine and Biotechnology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3735,8 +3735,8 @@
 
     param[journal_id] = jbt
 
-    au < testing ; Journal of Blood Transfusion Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Blood Transfusion Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Blood Transfusion Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Journal of Blood Transfusion Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3753,7 +3753,7 @@
     au < released ; Journal of Botany Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Botany Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Botany Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Botany Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Botany Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -3790,7 +3790,7 @@
     au < doesNotExist ; Journal of Combustion Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Combustion Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Combustion Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Combustion Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Combustion Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -3808,7 +3808,7 @@
     au < released ; Journal of Computer Networks and Communications Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Computer Networks and Communications Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Computer Networks and Communications Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Computer Networks and Communications Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Computer Networks and Communications Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -3845,7 +3845,7 @@
     au < released ; Journal of Control Science and Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Control Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Control Science and Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Control Science and Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Control Science and Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3860,7 +3860,7 @@
     param[journal_id] = jdd
 
     au < released ; Journal of Drug Delivery Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Drug Delivery Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Drug Delivery Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3880,7 +3880,7 @@
     au < ready ; Journal of Electrical and Computer Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Journal of Electrical and Computer Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Electrical and Computer Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Electrical and Computer Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Electrical and Computer Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -3896,7 +3896,7 @@
 
     au < released ; Journal of Environmental and Public Health Volume 2009 ; 2009 ; 2009 ; 2009 > 
     au < released ; Journal of Environmental and Public Health Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Environmental and Public Health Volume 2012 ; 2012 ; 2012 ; 2012 > 
+    au < manifest ; Journal of Environmental and Public Health Volume 2012 ; 2012 ; 2012 ; 2012 > 
 
   }
 
@@ -3910,16 +3910,16 @@
 
     param[journal_id] = jfsa
 
-    au < testing ; Journal of Function Spaces and Applications Volume 2003 ; 2003 ; 2003 ; 2003 >
-    au < testing ; Journal of Function Spaces and Applications Volume 2004 ; 2004 ; 2004 ; 2004 >
-    au < testing ; Journal of Function Spaces and Applications Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < testing ; Journal of Function Spaces and Applications Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < testing ; Journal of Function Spaces and Applications Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < testing ; Journal of Function Spaces and Applications Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < testing ; Journal of Function Spaces and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Journal of Function Spaces and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Function Spaces and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Function Spaces and Applications Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2003 ; 2003 ; 2003 ; 2003 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2004 ; 2004 ; 2004 ; 2004 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Journal of Function Spaces and Applications Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3936,7 +3936,7 @@
     au < released ; Journal of Geological Research Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Geological Research Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Geological Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Geological Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Geological Research Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -3978,7 +3978,7 @@
     param[journal_id] = jl
 
     au < released ; Journal of Lipids Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Lipids Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Lipids Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
   
@@ -4014,7 +4014,7 @@
     au < released ; Journal of Marine Biology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Marine Biology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Marine Biology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Marine Biology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Marine Biology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4031,7 +4031,7 @@
     au < released ; Journal of Metallurgy Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Metallurgy Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Metallurgy Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Metallurgy Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Metallurgy Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4051,7 +4051,7 @@
     au < released ; Journal of Nanomaterials Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Nanomaterials Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Nanomaterials Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Nanomaterials Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Nanomaterials Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4070,7 +4070,7 @@
     au < released ; Journal of Nanotechnology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Nanotechnology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Nanotechnology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Nanotechnology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Nanotechnology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4085,7 +4085,7 @@
 
     au < released ; Journal of Nucleic Acids Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Nucleic Acids Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Nucleic Acids Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Nucleic Acids Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -4101,7 +4101,7 @@
 
     au < released ; Journal of Nutrition and Metabolism Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Nutrition and Metabolism Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Nutrition and Metabolism Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Nutrition and Metabolism Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -4117,7 +4117,7 @@
    
     au < released ; Journal of Obesity Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Obesity Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Obesity Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Obesity Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4135,7 +4135,7 @@
     au < released ; Journal of Oncology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Oncology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Oncology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Oncology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Oncology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4152,7 +4152,7 @@
     au < released ; Journal of Ophthalmology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Ophthalmology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Ophthalmology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Ophthalmology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Ophthalmology Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4167,7 +4167,7 @@
 
     au < released ; Journal of Osteoporosis Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Osteoporosis Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Osteoporosis Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Osteoporosis Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -4184,7 +4184,7 @@
     au < released ; Journal of Parasitology Research Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Parasitology Research Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Parasitology Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Parasitology Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Parasitology Research Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4198,7 +4198,7 @@
     param[journal_id] = jpath
 
     au < released ; Journal of Pathogens Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Pathogens Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Pathogens Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4214,7 +4214,7 @@
 
     au < released ; Journal of Pregnancy Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Pregnancy Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Pregnancy Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Pregnancy Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4230,7 +4230,7 @@
 
     au < released ; Journal of Probability and Statistics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Probability and Statistics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Probability and Statistics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Probability and Statistics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4246,7 +4246,7 @@
 
     au < released ; Journal of Robotics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Robotics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Robotics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Robotics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4264,7 +4264,7 @@
     au < released ; Journal of Sensors Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Sensors Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Sensors Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Sensors Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Sensors Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4280,7 +4280,7 @@
 
     au < released ; Journal of Signal Transduction Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Signal Transduction Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Signal Transduction Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Signal Transduction Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4295,7 +4295,7 @@
     param[journal_id] = jsc
 
     au < released ; Journal of Skin Cancer Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Skin Cancer Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Skin Cancer Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4312,7 +4312,7 @@
     au < released ; Journal of Thermodynamics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Thermodynamics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Thermodynamics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of thermodynamics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of thermodynamics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4327,7 +4327,7 @@
 
     au < released ; Journal of Thyroid Research Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Thyroid Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Thyroid Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Thyroid Research Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -4344,7 +4344,7 @@
     au < released ; Journal of Toxicology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Toxicology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Toxicology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Toxicology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Toxicology Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4375,7 +4375,7 @@
     au < released ; Journal of Transplantation Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Transplantation Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Transplantation Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Transplantation Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Transplantation Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4392,7 +4392,7 @@
     au < released ; Journal of Tropical Medicine Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Tropical Medicine Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Journal of Tropical Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Journal of Tropical Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Journal of Tropical Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4449,7 +4449,7 @@
     param[journal_id] = lrt
 
     au < released ; Leukemia Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Leukemia Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Leukemia Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4463,7 +4463,7 @@
     param[journal_id] = lci
 
     au < released ; Lung Cancer International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Lung Cancer International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Lung Cancer International Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4492,7 +4492,7 @@
 
     au < released ; Malaria Research and Treatment Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Malaria Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Malaria Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Malaria Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4523,7 +4523,7 @@
     au < released ; Mathematical Problems in Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Mathematical Problems in Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Mathematical Problems in Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Mathematical Problems in Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Mathematical Problems in Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4557,7 +4557,7 @@
     au < released ; Mediators of Inflammation Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Mediators of Inflammation Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Mediators of Inflammation Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Mediators of Inflammation Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Mediators of Inflammation Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4600,7 +4600,7 @@
     param[journal_id] = mis
 
     au < released ; Minimally Invasive Surgery Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Minimally Invasive Surgery Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Minimally Invasive Surgery Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
   
@@ -4619,7 +4619,7 @@
     au < released ; Modelling and Simulation in Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Modelling and Simulation in Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Modelling and Simulation in Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Modelling and Simulation in Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Modelling and Simulation in Engineering Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4634,7 +4634,7 @@
 
     au < released ; Molecular Biology International Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Molecular Biology International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Molecular Biology International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Molecular Biology International Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4650,7 +4650,7 @@
 
     au < released ; Multiple Sclerosis International Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Multiple Sclerosis International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Multiple Sclerosis International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Multiple Sclerosis International Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4681,7 +4681,7 @@
     au < released ; Neural Plasticity Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Neural Plasticity Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Neural Plasticity Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Neural Plasticity Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Neural Plasticity Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
   
@@ -4713,7 +4713,7 @@
 
     au < released ; Nursing Research and Practice Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Nursing Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Nursing Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Nursing Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4730,7 +4730,7 @@
     au < released ; Obstetrics and Gynecology International Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Obstetrics and Gynecology International Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Obstetrics and Gynecology International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Obstetrics and Gynecology International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Obstetrics and Gynecology International Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -4749,7 +4749,7 @@
     au < ready ; Research Letters in Organic Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Research Letters in Organic Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Organic Chemistry International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Organic Chemistry International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Organic Chemistry International Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4767,7 +4767,7 @@
     au < released ; Oxidative Medicine and Cellular Longevity Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Oxidative Medicine and Cellular Longevity Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Oxidative Medicine and Cellular Longevity Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Oxidative Medicine and Cellular Longevity Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Oxidative Medicine and Cellular Longevity Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4783,7 +4783,7 @@
 
     au < released ; Pain Research and Treatment Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Pain Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Pain Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Pain Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4798,7 +4798,7 @@
 
     au < released ; Parkinson's Disease Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Parkinson's Disease Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Parkinson's Disease Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Parkinson's Disease Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4813,7 +4813,7 @@
 
     au < released ; Pathology Research International Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Pathology Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Pathology Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Pathology Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4832,7 +4832,7 @@
     au < ready ; Research Letters in Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Research Letters in Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Physics Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Physics Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Physics Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4848,7 +4848,7 @@
 
     au < released ; Plastic Surgery International Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Plastic Surgery International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Plastic Surgery International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Plastic Surgery International Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4901,7 +4901,7 @@
     au < released ; PPAR Research Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; PPAR Research Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; PPAR Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; PPAR Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; PPAR Research Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -5063,7 +5063,7 @@
     au < released ; Psyche Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Psyche Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Psyche Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Psyche Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Psyche Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -5079,7 +5079,7 @@
 
     au < released ; Pulmonary Medicine Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Pulmonary Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Pulmonary Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Pulmonary Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -5094,7 +5094,7 @@
     param[journal_id] = rrp
 
     au < released ; Radiology Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Radiology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Radiology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -5110,7 +5110,7 @@
 
     au < released ; Rehabilitation Research and Practice Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Rehabilitation Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Rehabilitation Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Rehabilitation Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -5370,7 +5370,7 @@
     au < released ; Sarcoma Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Sarcoma Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Sarcoma Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Sarcoma Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Sarcoma Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -5385,7 +5385,7 @@
     param[journal_id] = sprt
 
     au < released ; Schizophrenia Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Schizophrenia Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Schizophrenia Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
   
@@ -5404,7 +5404,7 @@
     au < released ; Science and Technology of Nuclear Installations Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Science and Technology of Nuclear Installations Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Science and Technology of Nuclear Installations Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Science and Technology of Nuclear Installations Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Science and Technology of Nuclear Installations Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -5419,7 +5419,7 @@
     param[journal_id] = seq
 
     au < released ; Sequencing Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Sequencing Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Sequencing Volume 2011 ; 2011 ; 2011 ; 2011 >
     au < expected ; Sequencing Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
@@ -5435,7 +5435,7 @@
     param[journal_id] = sd
 
     au < released ; Sleep Disorders Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Sleep Disorders Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Sleep Disorders Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -5450,7 +5450,7 @@
     param[journal_id] = smr
 
     au < released ; Smart Materials Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Smart Materials Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Smart Materials Research Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -5465,7 +5465,7 @@
 
     au < released ; Stem Cells International Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Stem Cells International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Stem Cells International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Stem Cells International Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -5481,7 +5481,7 @@
 
     au < released ; Stroke Research and Treatment Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Stroke Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Stroke Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Stroke Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -5546,7 +5546,7 @@
 
     au < released ; Thrombosis Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Thrombosis Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Thrombosis Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Thrombosis Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -5562,7 +5562,7 @@
 
     au < released ; Tuberculosis Research and Treatment Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Tuberculosis Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Tuberculosis Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Tuberculosis Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -5578,7 +5578,7 @@
 
     au < released ; Ulcers Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Ulcers Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Ulcers Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Ulcers Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -5593,7 +5593,7 @@
     param[journal_id] = usr
 
     au < released ; Urban Studies Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Urban Studies Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Urban Studies Research Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -5608,7 +5608,7 @@
 
     au < released ; Veterinary Medicine International Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Veterinary Medicine International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Veterinary Medicine International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; Veterinary Medicine International Volume 2012 ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -5644,7 +5644,7 @@
     au < released ; VLSI Design Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; VLSI Design Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; VLSI Design Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; VLSI Design Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < manifest ; VLSI Design Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
