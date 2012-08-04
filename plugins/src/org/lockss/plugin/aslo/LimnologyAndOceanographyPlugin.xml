@@ -1,11 +1,11 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.aslo.ASLOPlugin</string>
+    <string>org.lockss.plugin.aslo.LimnologyAndOceanographyPlugin</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_name</string>
