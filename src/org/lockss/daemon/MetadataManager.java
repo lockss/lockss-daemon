@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.47 2012-08-04 05:54:52 pgust Exp $
+ * $Id: MetadataManager.java,v 1.48 2012-08-04 08:53:04 pgust Exp $
  */
 
 /*
@@ -1481,6 +1481,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                     startUpdateCpuTime = threadCpuTime;
                     startUpdateUserTime = threadUserTime;
                     startUpdateClockTime = currentClockTime;
+
+                    // add collected metadata to database
+                    conn = dbManager.getConnection();
 
                     // remove old metadata before adding new for AU
                     removeMetadata(conn, au);
