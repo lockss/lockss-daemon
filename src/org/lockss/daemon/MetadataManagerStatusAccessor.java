@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.7 2012-08-03 21:37:58 pgust Exp $
+ * $Id: MetadataManagerStatusAccessor.java,v 1.8 2012-08-04 15:02:25 pgust Exp $
  */
 
 /*
@@ -44,8 +44,6 @@ import org.lockss.daemon.status.OverviewAccessor;
 import org.lockss.daemon.status.StatusAccessor;
 import org.lockss.daemon.status.StatusService.NoSuchTableException;
 import org.lockss.daemon.status.StatusTable;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.AuUtil;
 import org.lockss.state.ArchivalUnitStatus;
 import org.lockss.util.CatalogueOrderComparator;
 import org.lockss.util.ListUtil;
