@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.49 2012-08-04 14:37:09 pgust Exp $
+ * $Id: MetadataManager.java,v 1.50 2012-08-05 00:16:00 pgust Exp $
  */
 
 /*
@@ -1449,7 +1449,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
               conn = dbManager.getConnection();
               long articleCount = getArticleCount(conn, au.getAuId());
               isNewAu = (articleCount == 0);
-              conn.rollback();
 
               startCpuTime = threadCpuTime;
               startUserTime = threadUserTime;
@@ -1471,13 +1470,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                 status = ReindexingStatus.rescheduled;
               }
             }
+
+            // close connection now, and re-establish it when finished
+            // to avoid database connection timeouts that seem to be
+            // endemic to Derby
+            dbManager.safeRollbackAndClose(conn);
+            conn = null;
+ 
           } else if (type == Schedule.EventType.FINISH) {
-            if (conn != null) {
+            if (status == ReindexingStatus.success) {
               try {
-                // if reindexing not complete at this point,
-                // roll back current transaction, and try later
+                // re-establish connection to database
+                conn = dbManager.getConnection();
+                
                 switch (status) {
                   case success:
+                    // metadata extraction completed successfully,
+                    // so update database tables with extracted metadata
                     startUpdateCpuTime = threadCpuTime;
                     startUpdateUserTime = threadUserTime;
                     startUpdateClockTime = currentClockTime;
@@ -1491,7 +1500,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                       addMetadata(mditr.next());
                       updatedArticleCount++;
                     }
-
                     
                     // remove the AU just reindexed from the pending list
                     removeFromPendingAus(conn, au.getAuId());
@@ -1528,16 +1536,22 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                     break;
                   case failed:
                   case rescheduled:
+                    
+                    failedReindexingCount++;
+
+                    // reindexing not successful so, again try later
+                    // if status indicates the operation should be rescheduled
                     log.debug2("Reindexing task did not finished for au "
                         + au.getName());
                     // attempt to move failed AU to end of pending list
                     removeFromPendingAus(conn, au.getAuId());
                     if (status == ReindexingStatus.rescheduled) {
+                      log.debug2("Rescheduling reindexing task au "
+                          + au.getName());
                       addToPendingAus(conn, Collections.singleton(au));
                     }
-
-                    failedReindexingCount++;
-                    break;
+                    conn.commit();
+                    
                 }
               } catch (SQLException ex) {
                 log.error(
