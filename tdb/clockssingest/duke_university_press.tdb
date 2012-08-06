@@ -1225,4 +1225,32 @@
 
   }
   
+  
+      {
+  
+    title < 
+      name = Poetics Today: International Journal for Theory and Analysis of Literature and Communication ;
+      issn =  0333-5372 ;
+      eissn = 1527-5507
+  
+     >
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://poeticstoday.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 21 ; 21 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 22 ; 22 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 23 ; 23 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 24 ; 24 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 25 ; 25 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 26 ; 26 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 27 ; 27 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 28 ; 28 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 29 ; 29 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 30 ; 30 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 31 ; 31 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 32 ; 32 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Poetics Today: International Journal for Theory and Analysis of Literature and Communication Volume 33 ; 33 >
+     
+}
    }
