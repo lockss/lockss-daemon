@@ -1465,5 +1465,33 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Social Text Volume 30 ; 30 >
 
      }  
+     
+     {
    
+    title < 
+      name = South Atlantic Quarterly ;
+      issn = 0038-2876 ;
+      eissn = 1527-8026
+  
+      >
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://saq.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; South Atlantic Quarterly Volume 99 ; 99 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; South Atlantic Quarterly Volume 100 ; 100 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; South Atlantic Quarterly Volume 101 ; 101 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; South Atlantic Quarterly Volume 102 ; 102 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; South Atlantic Quarterly Volume 103 ; 103 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; South Atlantic Quarterly Volume 104 ; 104  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; South Atlantic Quarterly Volume 105 ; 105  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; South Atlantic Quarterly Volume 106 ; 106 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; South Atlantic Quarterly Volume 107 ; 107 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; South Atlantic Quarterly Volume 108 ; 108 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; South Atlantic Quarterly Volume 109 ; 109 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; South Atlantic Quarterly Volume 110 ; 110 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; South Atlantic Quarterly Volume 111 ; 111 >
+ 
+     }  
+      
      }
