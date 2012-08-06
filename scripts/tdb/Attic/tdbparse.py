@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.13 2012-08-01 18:55:54 thib_gc Exp $
+# $Id: tdbparse.py,v 1.14 2012-08-06 20:54:43 thib_gc Exp $
 
 __copyright__ = '''\
 
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.2'''
+__version__ = '''0.4.3'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -184,7 +184,6 @@ class TdbScanner(object):
 
     RE_WHITE1 = re.compile(r'\s+')
     RE_WHITE0EOL = re.compile(r'\s*$')
-    RE_SEMIANGLE = re.compile(r'[;>]')
     RE_KEYWORD = re.compile(r'(publisher|title|au|implicit)(\s|<|$)')
     RE_IDENTIFIER = re.compile(r'[a-zA-Z0-9_./]+')
 
@@ -232,12 +231,15 @@ class TdbScanner(object):
             match = TdbScanner.RE_WHITE1.match(self.__cur)
             if match: self.__move(match.end())
         # Skip initial whitespace
-        match = TdbScanner.RE_WHITE1.match(self.__cur)
-        if match: self.__move(match.end())
+        ch = self.__cur[0]
+        if ch == ' ' or ch == '\t':
+            match = TdbScanner.RE_WHITE1.match(self.__cur)
+            if match: self.__move(match.end())
+            ch = self.__cur[0]
         # Strings
         if self.__stringFlag == TdbparseToken.EQUAL or self.__stringFlag == TdbparseToken.SEMICOLON:
             # Empty bare string
-            if TdbScanner.RE_SEMIANGLE.match(self.__cur):
+            if ch == TdbparseLiteral.SEMICOLON or ch == TdbparseLiteral.ANGLE_CLOSE:
                 if self.__stringFlag == TdbparseToken.EQUAL:
                     self.__stringFlag = None
                 else:
@@ -246,16 +248,17 @@ class TdbScanner(object):
                 self.__tok.set_value('')
                 return self.__tok
             # Quoted string
-            if self.__cur[0] == '"': return self.__qstring()
+            if ch == TdbparseLiteral.QUOTE_DOUBLE: return self.__qstring()
             # Bare string
             return self.__bstring()
         # Keywords
         match = TdbScanner.RE_KEYWORD.match(self.__cur)
-        if match: return self.__keyword(match)
+        if match: return self.__keyword(match.group(1))
         # Single-character tokens
-        ch = self.__cur[0]
-        if ch == TdbparseLiteral.CURLY_OPEN: return self.__single(TdbparseToken.CURLY_OPEN)
-        if ch == TdbparseLiteral.CURLY_CLOSE: return self.__single(TdbparseToken.CURLY_CLOSE)
+        if ch == TdbparseLiteral.SEMICOLON:
+            if self.__stringFlag == TdbparseToken.AU:
+                self.__stringFlag = TdbparseToken.SEMICOLON
+            return self.__single(TdbparseToken.SEMICOLON)
         if ch == TdbparseLiteral.ANGLE_OPEN:
             if self.__tok.type() == TdbparseToken.AU:
                 self.__stringFlag = TdbparseToken.SEMICOLON
@@ -263,15 +266,13 @@ class TdbScanner(object):
         if ch == TdbparseLiteral.ANGLE_CLOSE:
             self.__stringFlag = None
             return self.__single(TdbparseToken.ANGLE_CLOSE)
-        if ch == TdbparseLiteral.SQUARE_OPEN: return self.__single(TdbparseToken.SQUARE_OPEN)
-        if ch == TdbparseLiteral.SQUARE_CLOSE: return self.__single(TdbparseToken.SQUARE_CLOSE)
-        if ch == TdbparseLiteral.SEMICOLON:
-            if self.__stringFlag == TdbparseToken.AU:
-                self.__stringFlag = TdbparseToken.SEMICOLON
-            return self.__single(TdbparseToken.SEMICOLON)
         if ch == TdbparseLiteral.EQUAL:
             self.__stringFlag = TdbparseToken.EQUAL
             return self.__single(TdbparseToken.EQUAL)
+        if ch == TdbparseLiteral.SQUARE_OPEN: return self.__single(TdbparseToken.SQUARE_OPEN)
+        if ch == TdbparseLiteral.SQUARE_CLOSE: return self.__single(TdbparseToken.SQUARE_CLOSE)
+        if ch == TdbparseLiteral.CURLY_OPEN: return self.__single(TdbparseToken.CURLY_OPEN)
+        if ch == TdbparseLiteral.CURLY_CLOSE: return self.__single(TdbparseToken.CURLY_CLOSE)
         # Identifiers
         match = TdbScanner.RE_IDENTIFIER.match(self.__cur)
         if match:
@@ -289,18 +290,16 @@ class TdbScanner(object):
         self.__cur = self.__cur[n:]
         self.__col = self.__col + n
 
-    def __keyword(self, match):
-        '''Consumes one reserved keyword (expected to be group 1 of
-        the match).
+    def __keyword(self, keyword):
+        '''Consumes one reserved keyword.
 
         The valid keywords are publisher, title, au and implicit.'''
-        keyword = match.group(1)
-        if keyword == 'publisher': self.__token(TdbparseToken.PUBLISHER)
-        elif keyword == 'title': self.__token(TdbparseToken.TITLE)
-        elif keyword == 'au':
+        if keyword == TdbparseLiteral.AU:
             self.__token(TdbparseToken.AU)
             self.__stringFlag = TdbparseToken.AU
-        elif keyword == 'implicit': self.__token(TdbparseToken.IMPLICIT)
+        elif keyword == TdbparseLiteral.TITLE: self.__token(TdbparseToken.TITLE)
+        elif keyword == TdbparseLiteral.IMPLICIT: self.__token(TdbparseToken.IMPLICIT)
+        elif keyword == TdbparseLiteral.PUBLISHER: self.__token(TdbparseToken.PUBLISHER)
         else:
             raise RuntimeError, 'internal error at line %d column %d: expected %s, %s, %s or %s but got %s' % (self.__tok.line(), self.__tok.col(), TdbparseLiteral.PUBLISHER, TdbparseLiteral.TITLE, TdbparseLiteral.AU, TdbparseLiteral.IMPLICIT, keyword)
         self.__move(len(keyword))
@@ -414,8 +413,6 @@ class TdbParser(object):
 
     All other methods and variables are private.'''
 
-    LOOKAHEAD = 1
-
     def __init__(self, scanner, options):
         self.__scanner = scanner
         self.__file_name = scanner.file_name()
@@ -428,10 +425,9 @@ class TdbParser(object):
             publisher_container_or_publisher_block*
             TdbparseToken.END_OF_FILE
         ;'''
-        if self.__token[0].type() == TdbparseToken.END_OF_FILE:
+        if self.__token0.type() == TdbparseToken.END_OF_FILE:
             raise RuntimeError, 'already done parsing'
-        self.__advance()
-        while self.__token[0].type() == TdbparseToken.CURLY_OPEN:
+        while self.__token0.type() == TdbparseToken.CURLY_OPEN:
             self.__publisher_container_or_publisher_block()
         self.__expect(TdbparseToken.END_OF_FILE)
         return self.__tdb
@@ -442,7 +438,7 @@ class TdbParser(object):
         |
             publisher_block
         ;'''
-        if self.__token[1].type() == TdbparseToken.PUBLISHER:
+        if self.__token1.type() == TdbparseToken.PUBLISHER:
             self.__publisher_block()
         else:
             self.__publisher_container()
@@ -456,9 +452,9 @@ class TdbParser(object):
         ;'''
         self.__expect(TdbparseToken.CURLY_OPEN)
         self.__current_au.append(AU(self.__current_au[-1]))
-        while self.__token[0].type() in [TdbparseToken.IDENTIFIER, TdbparseToken.IMPLICIT]:
+        while self.__token0.type() in [TdbparseToken.IDENTIFIER, TdbparseToken.IMPLICIT]:
             self.__assignment()
-        while self.__token[0].type() == TdbparseToken.CURLY_OPEN:
+        while self.__token0.type() == TdbparseToken.CURLY_OPEN:
             self.__publisher_container_or_publisher_block()
         self.__expect(TdbparseToken.CURLY_CLOSE)
         self.__current_au.pop()
@@ -474,9 +470,9 @@ class TdbParser(object):
         self.__expect(TdbparseToken.CURLY_OPEN)
         self.__current_au.append(AU(self.__current_au[-1]))
         self.__publisher()
-        while self.__token[0].type() in [TdbparseToken.IDENTIFIER, TdbparseToken.IMPLICIT]:
+        while self.__token0.type() in [TdbparseToken.IDENTIFIER, TdbparseToken.IMPLICIT]:
             self.__assignment()
-        while self.__token[0].type() == TdbparseToken.CURLY_OPEN:
+        while self.__token0.type() == TdbparseToken.CURLY_OPEN:
             self.__title_container_or_title_block()
         self.__expect(TdbparseToken.CURLY_CLOSE)
         self.__current_au.pop()
@@ -487,7 +483,7 @@ class TdbParser(object):
         |
             title_block
         ;'''
-        if self.__token[1].type() == TdbparseToken.TITLE:
+        if self.__token1.type() == TdbparseToken.TITLE:
             self.__title_block()
         else:
             self.__title_container()
@@ -501,9 +497,9 @@ class TdbParser(object):
         ;'''
         self.__expect(TdbparseToken.CURLY_OPEN)
         self.__current_au.append(AU(self.__current_au[-1]))
-        while self.__token[0].type() in [TdbparseToken.IDENTIFIER, TdbparseToken.IMPLICIT]:
+        while self.__token0.type() in [TdbparseToken.IDENTIFIER, TdbparseToken.IMPLICIT]:
             self.__assignment()
-        while self.__token[0].type() == TdbparseToken.CURLY_OPEN:
+        while self.__token0.type() == TdbparseToken.CURLY_OPEN:
             self.__title_container_or_title_block()
         self.__expect(TdbparseToken.CURLY_CLOSE)
         self.__current_au.pop()
@@ -519,9 +515,9 @@ class TdbParser(object):
         self.__expect(TdbparseToken.CURLY_OPEN)
         self.__current_au.append(AU(self.__current_au[-1]))
         self.__title()
-        while self.__token[0].type() in [TdbparseToken.IDENTIFIER, TdbparseToken.IMPLICIT]:
+        while self.__token0.type() in [TdbparseToken.IDENTIFIER, TdbparseToken.IMPLICIT]:
             self.__assignment()
-        while self.__token[0].type() in [TdbparseToken.AU, TdbparseToken.CURLY_OPEN]:
+        while self.__token0.type() in [TdbparseToken.AU, TdbparseToken.CURLY_OPEN]:
             self.__au_container_or_au()
         self.__expect(TdbparseToken.CURLY_CLOSE)
         self.__current_au.pop()
@@ -532,18 +528,18 @@ class TdbParser(object):
         |
             au
         ;'''
-        if self.__token[0].type() == TdbparseToken.AU:
+        if self.__token0.type() == TdbparseToken.AU:
             self.__au()
-        elif self.__token[0].type() == TdbparseToken.CURLY_OPEN:
+        elif self.__token0.type() == TdbparseToken.CURLY_OPEN:
             self.__au_container()
         else:
             assert False # This code is unreachable in the current grammar.
             raise TdbparseSyntaxError(
                 'expected %s or %s but got %s' % 
                 (TdbparseLiteral.AU, TdbparseLiteral.CURLY_OPEN,
-                 self.__token[0].translate()), 
-                self.__file_name, self.__token[0].line(),
-                self.__token[0].col())
+                 self.__token0.translate()), 
+                self.__file_name, self.__token0.line(),
+                self.__token0.col())
 
     def __au_container(self):
         '''au_container :
@@ -554,9 +550,9 @@ class TdbParser(object):
         ;'''
         self.__expect(TdbparseToken.CURLY_OPEN)
         self.__current_au.append(AU(self.__current_au[-1]))
-        while self.__token[0].type() in [TdbparseToken.IDENTIFIER, TdbparseToken.IMPLICIT]:
+        while self.__token0.type() in [TdbparseToken.IDENTIFIER, TdbparseToken.IMPLICIT]:
             self.__assignment()
-        while self.__token[0].type() in [TdbparseToken.AU, TdbparseToken.CURLY_OPEN]:
+        while self.__token0.type() in [TdbparseToken.AU, TdbparseToken.CURLY_OPEN]:
             self.__au_container_or_au()
         self.__expect(TdbparseToken.CURLY_CLOSE)
         self.__current_au.pop()
@@ -567,32 +563,32 @@ class TdbParser(object):
         |
             implicit
         ;'''
-        assert self.__token[0].type() in [TdbparseToken.IDENTIFIER, TdbparseToken.IMPLICIT]
-        if self.__token[0].type() == TdbparseToken.IDENTIFIER:
+        assert self.__token0.type() in [TdbparseToken.IDENTIFIER, TdbparseToken.IMPLICIT]
+        if self.__token0.type() == TdbparseToken.IDENTIFIER:
             self.__simple_assignment()
             key, val = self.__stack.pop()
             self.__current_au[-1].set(key, val)
-        elif self.__token[0].type() == TdbparseToken.IMPLICIT:
+        elif self.__token0.type() == TdbparseToken.IMPLICIT:
             self.__implicit()
         else:
             assert False # This code is unreachable in the current grammar.
             raise TdbparseSyntaxError(
                 'expected %s or %s but got %s' % 
                 (TdbparseLiteral.IDENTIFIER, TdbparseLiteral.IMPLICIT,
-                 self.__token[0].translate()), 
-                self.__file_name, self.__token[0].line(),
-                self.__token[0].col())
+                 self.__token0.translate()), 
+                self.__file_name, self.__token0.line(),
+                self.__token0.col())
 
     def __identifier(self):
         '''identifier :
             TdbparseToken.IDENTIFIER
             ( TdbparseToken.SQUARE_OPEN TdbparseToken.IDENTIFIER TdbparseToken.SQUARE_CLOSE )?
         ;'''
-        tok = self.__token[0] # Remember potential identifier
+        tok = self.__token0 # Remember potential identifier
         self.__expect(TdbparseToken.IDENTIFIER)
         base = tok.value()
         if self.__accept(TdbparseToken.SQUARE_OPEN):
-            tok = self.__token[0] # Remember potential identifier
+            tok = self.__token0 # Remember potential identifier
             self.__expect(TdbparseToken.IDENTIFIER)
             self.__expect(TdbparseToken.SQUARE_CLOSE)
             self.__stack.append((base, tok.value()))
@@ -619,7 +615,7 @@ class TdbParser(object):
         ;'''
         self.__identifier()
         self.__expect(TdbparseToken.EQUAL)
-        tok = self.__token[0] # Remember potential string
+        tok = self.__token0 # Remember potential string
         self.__expect(TdbparseToken.STRING)
         self.__stack.append((self.__stack.pop(), tok.value()))
 
@@ -642,11 +638,11 @@ class TdbParser(object):
             ( TdbparseToken.SEMICOLON TdbparseToken.STRING )*
         ;'''
         lis = []
-        tok = self.__token[0] # Remember potential string
+        tok = self.__token0 # Remember potential string
         self.__expect(TdbparseToken.STRING)
         lis.append(tok.value())
         while self.__accept(TdbparseToken.SEMICOLON):
-            tok = self.__token[0] # Remember potential string
+            tok = self.__token0 # Remember potential string
             self.__expect(TdbparseToken.STRING)
             lis.append(tok.value())
         self.__stack.append(lis)
@@ -672,7 +668,7 @@ class TdbParser(object):
             list_of_strings
             TdbparseToken.ANGLE_CLOSE
         ;'''
-        tok = self.__token[0] # Remember potential au token
+        tok = self.__token0 # Remember potential au token
         self.__expect(TdbparseToken.AU)
         self.__expect(TdbparseToken.ANGLE_OPEN)
         self.__list_of_strings()
@@ -724,32 +720,35 @@ class TdbParser(object):
         '''Initializes the parser.
 
         Generic enough for k-lookahead.'''
-        self.__token = [TdbparseToken(TdbparseToken.NONE, 0, 0)]
-        for i in range(TdbParser.LOOKAHEAD):
-            if self.__scanner is None:
-                tok = TdbparseToken(TdbparseToken.NONE, 0, 0)
-            else:
-                tok = self.__scanner.next()
-                if self.__options.tdbparse_echo_tokens: sys.stderr.write(str(tok) + '\n')
-                if tok.type() == TdbparseToken.END_OF_FILE: self.__scanner = None
-            self.__token.append(tok)
+        self.__token0 = TdbparseToken(TdbparseToken.NONE, 0, 0)
+        self.__token1 = TdbparseToken(TdbparseToken.NONE, 0, 0)
+        tok = self.__scanner.next()
+        if self.__options.tdbparse_echo_tokens: sys.stderr.write(str(tok) + '\n')
+        self.__token0 = tok
+        if tok.type() == TdbparseToken.END_OF_FILE:
+            self.__scanner = None
+            return
+        tok = self.__scanner.next()
+        if self.__options.tdbparse_echo_tokens: sys.stderr.write(str(tok) + '\n')
+        self.__token1 = tok
+        if tok.type() == TdbparseToken.END_OF_FILE:
+            self.__scanner = None
+            return
 
     def __advance(self):
-        '''Advances to the next token.
-
-        Generic enough for k-lookahead.'''
+        '''Advances to the next token.'''
         if self.__scanner is None: tok = TdbparseToken(TdbparseToken.NONE, 0, 0)
         else:
             tok = self.__scanner.next()
             if self.__options.tdbparse_echo_tokens: sys.stderr.write(str(tok) + '\n')
             if tok.type() == TdbparseToken.END_OF_FILE: self.__scanner = None
-        self.__token.pop(0)
-        self.__token.append(tok)
+        self.__token0 = self.__token1
+        self.__token1 = tok
 
     def __accept(self, toktyp):
         '''If the given token is next, consumes it and returns True,
         otherwise does not consume a token and returns False.'''
-        if self.__token[0].type() == toktyp:
+        if self.__token0.type() == toktyp:
             self.__advance()
             return True
         return False
@@ -759,9 +758,9 @@ class TdbParser(object):
         TdbparseSyntaxError.'''
         if not self.__accept(toktyp):
             raise TdbparseSyntaxError(
-                'expected %s but got %s' % (TdbparseToken(toktyp, 0, 0).translate(), self.__token[0].translate()), 
-                self.__file_name, self.__token[0].line(),
-                self.__token[0].col())
+                'expected %s but got %s' % (TdbparseToken(toktyp, 0, 0).translate(), self.__token0.translate()), 
+                self.__file_name, self.__token0.line(),
+                self.__token0.col())
 
     def __initialize_data(self):
         self.__tdb = Tdb()
@@ -997,10 +996,11 @@ class TestTdbParser(unittest.TestCase):
   }
 }
 ''', TdbparseSyntaxError('expected 3 implicit assignments but got 4', '<string>', 10, 5))]:
-            parser = TdbParser(TdbScanner(StringIO(src), self.options()), self.options())
             try:
-                parser.parse()
-            except TdbparseSyntaxError, exc:
+              scanner = TdbScanner(StringIO(src), self.options())
+              parser = TdbParser(scanner, self.options())
+              parser.parse()
+            except TdbparseSyntaxError as exc:
                 self.assertEquals(str(mes), str(exc))
 
 if __name__ == '__main__': unittest.main()
