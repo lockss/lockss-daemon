@@ -1,0 +1,51 @@
+{
+  publisher <
+    name = New Zealand Council for Educational Research Press
+  >
+  
+    attr[contract] = 2012
+    plugin = unknown
+    param[base_url] = http://www.nzcer.org.nz/
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+  {
+
+      title <
+        name = Set: Research Information for Teachers ;
+        issn = 0110-6376 ;
+        eissn = 2253-2145
+      >
+
+  }
+
+  {
+
+      title <
+        name = Early Childhood Folio ;
+        issn = 0112-0530 ;
+        eissn = 2253-2137
+      >
+
+  }
+
+  {
+
+      title <
+        name = Curriculum Matters ;
+        issn = 1177-1828 ;
+        eissn = 2253-2129
+      >
+
+  }
+
+  {
+
+      title <
+        name = Assessment Matters ;
+        issn = 1176-7839 ;
+        eissn = 2230-617X
+      >
+
+  }
+
+}
