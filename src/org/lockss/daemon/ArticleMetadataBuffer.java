@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataBuffer.java,v 1.3 2012-08-03 19:26:04 pgust Exp $
+ * $Id: ArticleMetadataBuffer.java,v 1.4 2012-08-06 20:24:11 pgust Exp $
  */
 
 /*
@@ -31,13 +31,14 @@
  */
 package org.lockss.daemon;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
@@ -62,8 +63,8 @@ class ArticleMetadataBuffer {
   private static Logger log = Logger.getLogger("MetadataManager");
 
   File collectedMetadataFile = null;
-  PrintWriter collectedMetadataWriter = null;
-  BufferedReader collectedMetadataReader = null;
+  ObjectOutputStream outstream = null;
+  ObjectInputStream instream = null;
   long infoCount = 0;
   
   /**
@@ -74,7 +75,8 @@ class ArticleMetadataBuffer {
    * @author Philip Gust
    *
    */
-  static class ArticleMetadataInfo {
+  static class ArticleMetadataInfo implements Serializable {
+    private static final long serialVersionUID = -2372571567706061080L;
     final String publisher;
     final String journalTitle;
     final String isbn;
@@ -118,54 +120,6 @@ class ArticleMetadataBuffer {
       authors = getAuthorField(md);
       doi = md.get(MetadataField.FIELD_DOI);
       accessUrl = md.get(MetadataField.FIELD_ACCESS_URL);
-    }
-    
-    /**
-     * Special serialization constructor.
-     * 
-     * @param reader for instance data
-     * @throws IOException if error occurs
-     */
-    ArticleMetadataInfo(BufferedReader reader) throws IOException {
-      String line;
-      publisher = ((line=reader.readLine()).length()==0) ? null : line;
-      journalTitle = ((line=reader.readLine()).length()==0) ? null : line;
-      isbn = ((line=reader.readLine()).length()==0) ? null : line;
-      eisbn = ((line=reader.readLine()).length()==0) ? null : line;
-      issn = ((line=reader.readLine()).length()==0) ? null : line;
-      eissn = ((line=reader.readLine()).length()==0) ? null : line;
-      volume = ((line=reader.readLine()).length()==0) ? null : line;
-      issue = ((line=reader.readLine()).length()==0) ? null : line;
-      startPage = ((line=reader.readLine()).length()==0) ? null : line;
-      pubDate = ((line=reader.readLine()).length()==0) ? null : line;
-      pubYear = ((line=reader.readLine()).length()==0) ? null : line;
-      articleTitle = ((line=reader.readLine()).length()==0) ? null : line;
-      authors = ((line=reader.readLine()).length()==0) ? null : line;
-      doi = ((line=reader.readLine()).length()==0) ? null : line;
-      accessUrl = ((line=reader.readLine()).length()==0) ? null : line;
-    }
-    
-    /**
-     * Special serialization writer.
-     * @param writer writer for serialized instance
-     * @throws IOException if error occurs
-     */
-    void writeInfo(PrintWriter writer) throws IOException{
-      writer.println((publisher==null) ? "" : publisher);
-      writer.println((journalTitle==null) ? "" : journalTitle);
-      writer.println((isbn==null) ? "" : isbn);
-      writer.println((eisbn==null) ? "" : eisbn);
-      writer.println((issn==null) ? "" : issn);
-      writer.println((eissn==null) ? "" : eissn);
-      writer.println((volume==null) ? "" : volume);
-      writer.println((issue==null) ? "" : issue);
-      writer.println((startPage==null) ? "" : startPage);
-      writer.println((pubDate==null) ? "" : pubDate);
-      writer.println((pubYear==null) ? "" : pubYear);
-      writer.println((articleTitle==null) ? "" : articleTitle);
-      writer.println((authors==null) ? "" : authors);
-      writer.println((doi==null) ? "" : doi);
-      writer.println((accessUrl==null) ? "" : accessUrl);
     }
     
     /**
@@ -247,13 +201,13 @@ class ArticleMetadataBuffer {
   }
 
   public ArticleMetadataBuffer()  throws IOException {
-    if (collectedMetadataWriter == null) {
+    if (outstream == null) {
       collectedMetadataFile = 
           FileUtil.createTempFile("MetadataManager", "md");
-      collectedMetadataWriter =
-          new PrintWriter(
-              new BufferedWriter(
-                  new FileWriter(collectedMetadataFile)));
+      outstream =
+          new ObjectOutputStream(
+              new BufferedOutputStream(
+                  new FileOutputStream(collectedMetadataFile)));
     }
   }
 
@@ -266,11 +220,11 @@ class ArticleMetadataBuffer {
    *   because the iterator has already been obtained
    */
   public void add(ArticleMetadata md) throws IOException {
-    if (collectedMetadataWriter == null) {
+    if (outstream == null) {
       throw new IllegalStateException("collectedMetadataOutputStream closed");
     }
     ArticleMetadataInfo mdinfo = new ArticleMetadataInfo(md);
-    mdinfo.writeInfo(collectedMetadataWriter);
+    outstream.writeObject(mdinfo);
     infoCount++;
   }
 
@@ -287,20 +241,20 @@ class ArticleMetadataBuffer {
       throw new IllegalStateException("Buffer is closed");
     }
     
-    if (collectedMetadataReader != null) {
+    if (instream != null) {
       throw new IllegalStateException("Iterator already obtained.");
     }
 
     // buffer is closed for adding once iterator is obtained.
-    IOUtil.safeClose(collectedMetadataWriter);
-    collectedMetadataWriter = null;
+    IOUtil.safeClose(outstream);
+    outstream = null;
 
     return new Iterator<ArticleMetadataInfo>() {
       {
         try {
-          collectedMetadataReader = 
-            new BufferedReader(
-                new InputStreamReader(
+          instream = 
+            new ObjectInputStream(
+                new BufferedInputStream(
                     new DeleteFileOnCloseInputStream(collectedMetadataFile)));
         } catch (IOException ex) {
           log.warning("Error opening input stream", ex);
@@ -309,7 +263,7 @@ class ArticleMetadataBuffer {
       
       @Override
       public boolean hasNext() {
-        return (collectedMetadataReader != null) && (infoCount > 0);
+        return (instream != null) && (infoCount > 0);
       }
       
       @Override
@@ -319,10 +273,14 @@ class ArticleMetadataBuffer {
         }
 
         try {
-          ArticleMetadataInfo info = 
-              new ArticleMetadataInfo(collectedMetadataReader);
+          ArticleMetadataInfo info = (ArticleMetadataInfo)instream.readObject();
           infoCount--;
           return info;
+        } catch (ClassNotFoundException ex) {
+          NoSuchElementException ex2 = 
+              new NoSuchElementException("Error reading next element");
+          ex2.initCause(ex);
+          throw ex2;
         } catch (IOException ex) {
           NoSuchElementException ex2 = 
               new NoSuchElementException("Error reading next element");
@@ -351,10 +309,10 @@ class ArticleMetadataBuffer {
    */
   public void close() {
     // collectedMetadataOutputStream automatically deleted on close 
-    IOUtil.safeClose(collectedMetadataWriter);
-    IOUtil.safeClose(collectedMetadataReader);
-    collectedMetadataWriter = null;
-    collectedMetadataReader = null;
+    IOUtil.safeClose(outstream);
+    IOUtil.safeClose(instream);
+    outstream = null;
+    instream = null;
     collectedMetadataFile = null;
   }
 }
