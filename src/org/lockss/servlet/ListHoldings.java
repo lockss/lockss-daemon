@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.42 2012-08-06 11:42:48 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.43 2012-08-06 17:46:59 pgust Exp $
  */
 
 /*
@@ -585,13 +585,15 @@ public class ListHoldings extends LockssServlet {
           log.debug2("Found bibliographic items: " + items.size());
           titles = new ArrayList<KbartTitle>();
           int i = 0;
-          if (i < items.size()) {
-            for (int j = i+1; j <= items.size(); j++) {
+          int itemsCount = items.size();
+          if (i < itemsCount) {
+            for (int j = i+1; j <= itemsCount; j++) {
               String issni = items.get(i).getIssn();
-              String issnj = items.get(j).getIssn();
+              String issnj = (j<itemsCount) ? items.get(j).getIssn() : null;
+              
               // convert portion of bibliographic items list with same ISSN
               if (   (j == items.size()) 
-                  || (issni!=null && !issni.equals(issnj))) {
+                  || (issni != null && !issni.equals(issnj))) {
                 if (log.isDebug3()) {
                   for (int k = i; k < j; k++) {
                     log.debug3("printIssn: " + items.get(k).getPrintIssn()
