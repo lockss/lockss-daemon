@@ -3138,7 +3138,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jdmdonline.com/
       param[journal_issn] = 2251-6581
 
-      au < manifest ; 2012 ; Journal of Diabetes & Metabolic Disorders Volume 11 ; 11 >
+      au < exists ; 2012 ; Journal of Diabetes & Metabolic Disorders Volume 11 ; 11 >
 
     }
 
