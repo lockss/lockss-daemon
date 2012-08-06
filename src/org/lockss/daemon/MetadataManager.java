@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.51 2012-08-06 02:20:59 pgust Exp $
+ * $Id: MetadataManager.java,v 1.52 2012-08-06 06:32:46 pgust Exp $
  */
 
 /*
@@ -1927,7 +1927,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       }
 
       if (mdinfo.issue != null) {
-        if (mdinfo.pubDate.length() > MAX_DATE_FIELD) {
+        if (mdinfo.issue.length() > MAX_ISSUE_FIELD) {
           throw new ValidationException(  
               "issue too long '" + mdinfo.issue
               + "' for title: '" + mdinfo.journalTitle
