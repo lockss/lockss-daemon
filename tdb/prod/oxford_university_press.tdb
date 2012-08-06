@@ -1468,6 +1468,23 @@
   {
 
     title <
+      name = Astronomy & Geophysics ;
+      issn = 1366-8781 ;
+      eissn = 1468-4004 ;
+      issnl = 1366-8781
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://astrogeo.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume] >
+
+    au < expected ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 >
+
+  }
+  
+  {
+
+    title <
       name = Behavioral Ecology ;
       issn = 1045-2249 ;
       eissn = 1465-7279 ;
@@ -6116,6 +6133,23 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Genome Biology and Evolution Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Genome Biology and Evolution Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Geophysical Journal International ;
+      issn = 0956-540X ;
+      eissn = 1365-246X ;
+      issnl = 0956-540X
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://gji.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < expected ; 2013 ; Geophysical Journal International Volume 191 ; 191 >
 
   }
 
@@ -13375,6 +13409,38 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Molecular Plant Volume 5 ; 5 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Monthly Notices of the Royal Astronomical Society ;
+      issn = 0035-8711 ;
+      eissn = 1365-2966 ;
+      issnl = 0035-8711
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://mnras.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < expected ; 2013 ; Monthly Notices of the Royal Astronomical Society Volume 425 ; 425 >
+
+  }
+
+  {
+
+    title <
+      name = Monthly Notices of the Royal Astronomical Society: Letters ;
+      eissn = 1745-3933 
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://mnrasl.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < expected ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 425 ; 425 >
 
   }
 
