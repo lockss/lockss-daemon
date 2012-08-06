@@ -1552,5 +1552,22 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Theater Volume 44 ; 44 >
 
     } 
-   
+    
+    {
+  
+    title < 
+      name = Tikkun ;
+      issn = 0887-9982 ;
+      eissn = 2164-0041
+  
+>
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://tikkun.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Tikkun Volume 26 ; 26 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Tikkun Volume 27 ; 27 >
+
+
+  }   
      }
