@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.30 2012-07-17 19:13:30 barry409 Exp $
+ * $Id: DebugPanel.java,v 1.31 2012-08-06 03:33:52 tlipkis Exp $
  */
 
 /*
@@ -339,26 +339,13 @@ public class DebugPanel extends LockssServlet {
     ArchivalUnit au = getAu();
     if (au == null) return;
     try {
-      NodeManager nodeMgr = daemon.getNodeManager(au);
-      // Don't call a poll on this if we're already running a V3 poll on it.
-      try {
-	pollManager.checkEligibleForPoll(au);
-      } catch (PollManager.NotEligibleException e) {
-	errMsg = "Ineligible: " + e.getMessage() +
-	  "<br>Click again to force new poll.";
-	showForcePoll = true;
-	return;
-      }
-      // todo(bhayes): This check is duplicated in
-      // PollManager.checkEligibleForPoll. Is it needed in both
-      // places?
-      // Don't poll if never crawled & not down
-      if (!AuUtil.hasCrawled(au) && !AuUtil.isPubDown(au)) {
-	errMsg = "Not crawled yet.  Click again to force new poll.";
-	showForcePoll = true;
-	return;
-      }
       callV3ContentPoll(au);
+    } catch (PollManager.NotEligibleException e) {
+      errMsg = "AU is not eligible for poll: " + e.getMessage();
+//       errMsg = "Ineligible: " + e.getMessage() +
+// 	"<br>Click again to force new poll.";
+//       showForcePoll = true;
+      return;
     } catch (Exception e) {
       log.error("Can't start poll", e);
       errMsg = "Error: " + e.toString();
@@ -376,16 +363,12 @@ public class DebugPanel extends LockssServlet {
     }
   }
 
-  private void callV3ContentPoll(ArchivalUnit au) {
+  private void callV3ContentPoll(ArchivalUnit au)
+      throws PollManager.NotEligibleException {
     log.debug("Enqueuing a V3 Content Poll on " + au.getName());
     PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
-    try {
-      pollManager.enqueueHighPriorityPoll(au, spec);
-      statusMsg = "Enqueued V3 poll for " + au.getName();
-    } catch (PollManager.NotEligibleException e) {
-      errMsg = "Failed to enqueue poll on "
-	+ au.getName() + ": " + e.getMessage();
-    }
+    pollManager.enqueueHighPriorityPoll(au, spec);
+    statusMsg = "Enqueued V3 poll for " + au.getName();
   }
 
   private boolean doFindUrl() throws IOException {
