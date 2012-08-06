@@ -1289,4 +1289,44 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; positions: asia critique Volume 20 ; 20 >
 
 }
+
+    {
+  
+    title < 
+      name = Public Culture ;
+      issn = 0899-2363 ;
+      eissn = 1527-8018
+  
+      >
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://publicculture.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1988 ; Public Culture Volume 1 ; 1 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1989 ; Public Culture Volume 2 ; 2 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1990 ; Public Culture Volume 3 ; 3 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1991 ; Public Culture Volume 4 ; 4 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1992 ; Public Culture Volume 5 ; 5 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1993 ; Public Culture Volume 6 ; 6 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1994 ; Public Culture Volume 7 ; 7 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1995 ; Public Culture Volume 8 ; 8 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1996 ; Public Culture Volume 9 ; 9 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1997 ; Public Culture Volume 10 ; 10 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1998 ; Public Culture Volume 11 ; 11 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999 ; Public Culture Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Public Culture Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Public Culture Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Public Culture Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Public Culture Volume 16 ; 16 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Public Culture Volume 17 ; 17 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Public Culture Volume 18 ; 18 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Public Culture Volume 19 ; 19 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Public Culture Volume 20 ; 20 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Public Culture Volume 21 ; 21 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Public Culture Volume 22 ; 22 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Public Culture Volume 23 ; 23 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Public Culture Volume 24 ; 24 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Public Culture Volume 25 ; 25 >
+
+}
    }
