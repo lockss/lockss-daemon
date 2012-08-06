@@ -9,11 +9,53 @@
   {
   
     title < 
-      name = Placeholder
+      name = Optical Engineering ;
+      issn = 0091-3286 ;
+      eissn = 1560-2303
     >
 
+        
+      plugin = needs.plugin
+      param[base_url] = http://spiedigitallibrary.org/journals/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+    }
     
+    {
+  
+    title < 
+      name = Journal of Electronic Imaging ;
+      issn = 1017-9909 ;
+      eissn = 1560-229X
+  
+>
+          
+          
+    }
     
-  }
+    {
+    
+  
+    title < 
+      name = Journal of Biomedical Optics ;
+      issn = 1083-3668 ;
+      eissn = 1560-2281
+  
+>
+      
+    }
+    
+    {
+  
+    title < 
+      name = Journal of Micro/Nanolithography, MEMS, and MOEMS ;
+      issn = 1932-5150 ;
+      eissn = 1932-5134
+  
+>
+
+
+} 
+    
 
 }
