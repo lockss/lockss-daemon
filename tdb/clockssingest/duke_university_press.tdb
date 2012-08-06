@@ -1436,7 +1436,34 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Social Science History Volume 35 ; 35 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Social Science History Volume 36 ; 36 >
 
-   }
+     }
    
+     {
+  
+    title < 
+      name = Social Text ;
+      issn = 0164-2472 ;
+      eissn = 1527-1951
+  
+      >
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://socialtext.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Social Text Volume 18 ; 18 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Social Text Volume 19 ; 19 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Social Text Volume 20 ; 20 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Social Text Volume 21 ; 21 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Social Text Volume 22 ; 22 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Social Text Volume 23 ; 23 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Social Text Volume 24 ; 24 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Social Text Volume 25 ; 25 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Social Text Volume 26 ; 26 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Social Text Volume 27 ; 27 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Social Text Volume 28 ; 28 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Social Text Volume 29 ; 29 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Social Text Volume 30 ; 30 >
+
+     }  
    
-   }
+     }
