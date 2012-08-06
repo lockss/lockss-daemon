@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.15 2012-08-01 18:55:54 thib_gc Exp $
+# $Id: tdb.py,v 1.16 2012-08-06 20:54:31 thib_gc Exp $
 
 __copyright__ = '''\
 
@@ -29,12 +29,15 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.1'
+__version__ = '0.4.2'
 
 import re
 
+class __Undef: pass
+Undef = __Undef()
+
 class MapError(Exception):
-  pass
+    pass
 
 class Map(object):
 
@@ -93,118 +96,154 @@ class Publisher(Map):
     def __init__(self):
         '''Constructor.'''
         super(Publisher, self).__init__()
+        # Memoized
+        self.__name = None
     
-    def name(self): return self._internal_get(Publisher.NAME)
+    def name(self):
+        ret = self.__name
+        if ret is None: ret = self.__name = self._internal_get(Publisher.NAME)
+        return ret
 
 class Title(Map):
-  '''A TDB Title object.'''
+    '''A TDB Title object.'''
 
-  EISBN = ('eisbn',)
-  EISSN = ('eissn',)
-  ISBN = ('isbn',)
-  ISSN = ('issn',)
-  ISSNL = ('issnl',)
-  NAME = ('name',)
-  PUBLISHER = ('publisher',)
-  TYPE = ('type',)
-  class Type:
-    BOOK = 'book'
-    JOURNAL = 'journal'
-    DEFAULT = JOURNAL
+    EISBN = ('eisbn',)
+    EISSN = ('eissn',)
+    ISBN = ('isbn',)
+    ISSN = ('issn',)
+    ISSNL = ('issnl',)
+    NAME = ('name',)
+    TYPE = ('type',)
+    class Type:
+        BOOK = 'book'
+        JOURNAL = 'journal'
+        DEFAULT = JOURNAL
 
-  def __init__(self):
-    '''Constructor.'''
-    super(Title, self).__init__()
+    def __init__(self):
+        '''Constructor.'''
+        super(Title, self).__init__()
+        # Fixed
+        self.__publisher = None
+        # Memoized
+        self.__eibsn = Undef
+        self.__eissn = Undef
+        self.__isbn = Undef
+        self.__issn = Undef
+        self.__issnl = Undef
+        self.__name = None
+        self.__type = Undef
     
-  def set_publisher(self, publisher): self._internal_set(Title.PUBLISHER, publisher)
+    def set_publisher(self, publisher): self.__publisher = publisher
 
-  def name(self): return self._internal_get(Title.NAME)
-  def eisbn(self): return self._internal_get(Title.EISBN)
-  def eissn(self): return self._internal_get(Title.EISSN)
-  def isbn(self): return self._internal_get(Title.ISBN)
-  def issn(self): return self._internal_get(Title.ISSN)
-  def issnl(self): return self._internal_get(Title.ISSNL)
-  def publisher(self): return self._internal_get(Title.PUBLISHER)
-  def type(self): return self._internal_get(Title.TYPE) or Title.Type.DEFAULT
+    def eisbn(self):
+        ret = self.__eisbn
+        if ret is Undef: ret = self.__eisbn = self._internal_get(Title.EISBN)
+        return ret
+    def eissn(self):
+        ret = self.__eissn
+        if ret is Undef: ret = self.__eissn = self._internal_get(Title.EISSN)
+        return ret
+    def isbn(self):
+        ret = self.__isbn
+        if ret is Undef: ret = self.__isbn = self._internal_get(Title.ISBN)
+        return ret
+    def issn(self):
+        ret = self.__issn
+        if ret is Undef: ret = self.__issn = self._internal_get(Title.ISSN)
+        return ret
+    def issnl(self):
+        ret = self.__issnl
+        if ret is Undef: ret = self.__issnl = self._internal_get(Title.ISSNL)
+        return ret
+    def name(self):
+        ret = self.__name
+        if ret is None: ret = self.__name = self._internal_get(Title.NAME)
+        return ret
+    def publisher(self): return self.__publisher
+    def type(self):
+        ret = self.__type
+        if ret is Undef: ret = self.__type = self._internal_get(Title.TYPE) or Title.Type.DEFAULT
+        return ret
 
 class AU(Map):
-  '''A TDB AU object.'''
+    '''A TDB AU object.'''
 
-  RE_AUIDCHAR = re.compile(r'^[-_*A-Za-z0-9]$')
+    RE_AUIDCHAR = re.compile(r'^[-_*A-Za-z0-9]$')
 
-  class Status:
-    DOES_NOT_EXIST = 'doesNotExist'
-    DO_NOT_PROCESS = 'doNotProcess'
-    EXISTS = 'exists'
-    EXPECTED = 'expected'
-    MANIFEST = 'manifest'
-    WANTED = 'wanted'
-    CRAWLING = 'crawling'
-    TESTING = 'testing'
-    NOT_READY = 'notReady'
-    READY = 'ready'
-    RELEASING = 'releasing'
-    RELEASED = 'released'
-    DOWN = 'down'
-    SUPERSEDED = 'superseded'
-    ZAPPED = 'zapped'
+    class Status:
+        DOES_NOT_EXIST = 'doesNotExist'
+        DO_NOT_PROCESS = 'doNotProcess'
+        EXISTS = 'exists'
+        EXPECTED = 'expected'
+        MANIFEST = 'manifest'
+        WANTED = 'wanted'
+        CRAWLING = 'crawling'
+        TESTING = 'testing'
+        NOT_READY = 'notReady'
+        READY = 'ready'
+        RELEASING = 'releasing'
+        RELEASED = 'released'
+        DOWN = 'down'
+        SUPERSEDED = 'superseded'
+        ZAPPED = 'zapped'
 
-  ATTR = ('attr',)
-  EDITION = ('edition',)
-  EISBN = ('eisbn',)
-  ISBN = ('isbn',)
-  NAME = ('name',)
-  NONDEFPARAM = ('nondefparam',)
-  PARAM = ('param',)
-  PLUGIN = ('plugin',)
-  PLUGIN_PREFIX = ('pluginPrefix',)
-  PLUGIN_SUFFIX = ('pluginSuffix',)
-  PROXY = ('proxy',)
-  RIGHTS = ('rights',)
-  STATUS = ('status',)
-  TITLE = ('title',)
-  YEAR = ('year',)
-  VOLUME = ('volume',)
+    ATTR = ('attr',)
+    EDITION = ('edition',)
+    EISBN = ('eisbn',)
+    ISBN = ('isbn',)
+    NAME = ('name',)
+    NONDEFPARAM = ('nondefparam',)
+    PARAM = ('param',)
+    PLUGIN = ('plugin',)
+    PLUGIN_PREFIX = ('pluginPrefix',)
+    PLUGIN_SUFFIX = ('pluginSuffix',)
+    PROXY = ('proxy',)
+    RIGHTS = ('rights',)
+    STATUS = ('status',)
+    YEAR = ('year',)
+    VOLUME = ('volume',)
     
-  def __init__(self, next=None):
-    '''Constructor.'''
-    super(AU, self).__init__(next)
+    def __init__(self, next=None):
+        '''Constructor.'''
+        super(AU, self).__init__(next)
+        # Fixed
+        self.__title = None
     
-  def set_title(self, title): self._internal_set(AU.TITLE, title)
+    def set_title(self, title): self.__title = title
 
-  def attr(self, attr): return self._internal_get((AU.ATTR[0], attr))
-  def attrs(self): return self._internal_get_prefix(AU.ATTR)
-  def auid(self): return AU.compute_auid(self.plugin(), self.params())
-  def edition(self): return self._internal_get(AU.EDITION)
-  def eisbn(self): return self._internal_get(AU.EISBN)
-  def isbn(self): return self._internal_get(AU.ISBN)
-  def name(self): return self._internal_get(AU.NAME)
-  def nondefparam(self, nondefparam): return self._internal_get((AU.NONDEFPARAM[0], nondefparam))
-  def nondefparams(self): return self._internal_get_prefix(AU.NONDEFPARAM)
-  def param(self, param): return self._internal_get((AU.PARAM[0], param))
-  def params(self): return self._internal_get_prefix(AU.PARAM)
-  def plugin(self): return self._internal_get(AU.PLUGIN) or (self.get(AU.PLUGIN_PREFIX) + self.get(AU.PLUGIN_SUFFIX))
-  def proxy(self):
-    val = self._internal_get(AU.PROXY)
-    if val is None or len(val) == 0: return None
-    else: return val
-  def rights(self): return self._internal_get(AU.RIGHTS)
-  def status(self): return self._internal_get(AU.STATUS)
-  def title(self): return self._internal_get(AU.TITLE)
-  def year(self): return self._internal_get(AU.YEAR)
-  def volume(self): return self._internal_get(AU.VOLUME)
+    def attr(self, attr): return self._internal_get((AU.ATTR[0], attr))
+    def attrs(self): return self._internal_get_prefix(AU.ATTR)
+    def auid(self): return AU.compute_auid(self.plugin(), self.params())
+    def edition(self): return self._internal_get(AU.EDITION)
+    def eisbn(self): return self._internal_get(AU.EISBN)
+    def isbn(self): return self._internal_get(AU.ISBN)
+    def name(self): return self._internal_get(AU.NAME)
+    def nondefparam(self, nondefparam): return self._internal_get((AU.NONDEFPARAM[0], nondefparam))
+    def nondefparams(self): return self._internal_get_prefix(AU.NONDEFPARAM)
+    def param(self, param): return self._internal_get((AU.PARAM[0], param))
+    def params(self): return self._internal_get_prefix(AU.PARAM)
+    def plugin(self): return self._internal_get(AU.PLUGIN) or (self.get(AU.PLUGIN_PREFIX) + self.get(AU.PLUGIN_SUFFIX))
+    def proxy(self):
+        val = self._internal_get(AU.PROXY)
+        if val is None or len(val) == 0: return None
+        else: return val
+    def rights(self): return self._internal_get(AU.RIGHTS)
+    def status(self): return self._internal_get(AU.STATUS)
+    def title(self): return self.__title
+    def year(self): return self._internal_get(AU.YEAR)
+    def volume(self): return self._internal_get(AU.VOLUME)
 
-  @staticmethod
-  def auid_encode(c):
-    if AU.RE_AUIDCHAR.match(c): return c
-    if c == ' ': return '+'
-    return '%' + ('0' if ord(c) < 16 else '') + hex(ord(c))[2:].upper()
+    @staticmethod
+    def auid_encode(c):
+        if AU.RE_AUIDCHAR.match(c): return c
+        if c == ' ': return '+'
+        return '%' + ('0' if ord(c) < 16 else '') + hex(ord(c))[2:].upper()
 
-  @staticmethod
-  def compute_auid(plugin, params):
-    keys = params.keys()
-    keys.sort() # in Java: by iterating over a TreeSet
-    return plugin.replace('.', '|') + '&' + '&'.join(['~'.join([''.join(map(AU.auid_encode, [c for c in s])) for s in [k, params[k]]]) for k in keys])
+    @staticmethod
+    def compute_auid(plugin, params):
+        keys = params.keys()
+        keys.sort() # in Java: by iterating over a TreeSet
+        return plugin.replace('.', '|') + '&' + '&'.join(['~'.join([''.join(map(AU.auid_encode, [c for c in s])) for s in [k, params[k]]]) for k in keys])
 
 class Tdb(object):
 
