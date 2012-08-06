@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.8 2012-08-04 15:02:25 pgust Exp $
+ * $Id: MetadataManagerStatusAccessor.java,v 1.9 2012-08-06 17:02:32 pgust Exp $
  */
 
 /*
@@ -189,12 +189,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
       
       if (startTime == 0) {
         // task hasn't started yet
-        row.put(START_TIME_COL_NAME, "");
-        row.put(INDEX_DURATION_COL_NAME, "");
-        row.put(UPDATE_DURATION_COL_NAME, "");
         row.put(INDEX_STATUS_COL_NAME, "Waiting");
-        row.put(NUM_INDEXED_COL_NAME, "");
-        row.put(NUM_UPDATED_COL_NAME, "");
         // invisible keys for sorting
         row.put(SORT_KEY1, SORT_BASE_WAITING);
         row.put(SORT_KEY2, rowNum);
@@ -202,10 +197,8 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         // task is running but hasn't finished indexing yet
         row.put(START_TIME_COL_NAME, startTime);
         row.put(INDEX_DURATION_COL_NAME, curTime-startTime);
-        row.put(UPDATE_DURATION_COL_NAME, "");
         row.put(INDEX_STATUS_COL_NAME, "Indexing");
         row.put(NUM_INDEXED_COL_NAME, numIndexed);
-        row.put(NUM_UPDATED_COL_NAME, "");
         // invisible keys for sorting
         row.put(SORT_KEY1, SORT_BASE_INDEXING);
         row.put(SORT_KEY2, startTime);
