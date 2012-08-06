@@ -1342,44 +1342,44 @@
       param[base_url] = http://rhr.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1975 ; Radical History Review Volume 1 ; 1  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1976 ; Radical History Review Volume 2 ; 2  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1977 ; Radical History Review Volume 3 ; 3  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1978 ; Radical History Review Volume 4 ; 4  >      
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1979 ; Radical History Review Volume 5 ; 5  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1980 ; Radical History Review Volume 6 ; 6  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1981 ; Radical History Review Volume 7 ; 7  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1982 ; Radical History Review Volume 8 ; 8  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1983 ; Radical History Review Volume 9 ; 9  >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1984 ; Radical History Review Volume 10 ; 10 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1985 ; Radical History Review Volume 11 ; 11 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1986 ; Radical History Review Volume 12 ; 12 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1987 ; Radical History Review Volume 13 ; 13 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1988 ; Radical History Review Volume 14 ; 14 >      
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1989 ; Radical History Review Volume 15 ; 15 >      
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1990 ; Radical History Review Volume 16 ; 16 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1991 ; Radical History Review Volume 17 ; 17 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1992 ; Radical History Review Volume 18 ; 18 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1993 ; Radical History Review Volume 19 ; 19 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1994 ; Radical History Review Volume 20 ; 20 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1995 ; Radical History Review Volume 21 ; 21 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1996 ; Radical History Review Volume 22 ; 22 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1997 ; Radical History Review Volume 23 ; 23 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1998 ; Radical History Review Volume 24 ; 24 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999 ; Radical History Review Volume 25 ; 25 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Radical History Review Volume 26 ; 26 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Radical History Review Volume 27 ; 27 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Radical History Review Volume 28 ; 28 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Radical History Review Volume 29 ; 29 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Radical History Review Volume 30 ; 30 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Radical History Review Volume 31 ; 31 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Radical History Review Volume 32 ; 32 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Radical History Review Volume 33 ; 33 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Radical History Review Volume 34 ; 34 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Radical History Review Volume 35 ; 35 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Radical History Review Volume 36 ; 36 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Radical History Review Volume 37 ; 37 >
-      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Radical History Review Volume 38 ; 38 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1975 ; Radical History Review Volume 9-10 ; 9-10 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1976 ; Radical History Review Volume 11-12 ; 11-12 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1977 ; Radical History Review Volume 13-15 ; 13-15 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1978 ; Radical History Review Volume 17-19 ; 17-19 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1979 ; Radical History Review Volume 20-21 ; 20-21  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1980 ; Radical History Review Volume 22-24 ; 22-24  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1981 ; Radical History Review Volume 25 ; 25  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1982 ; Radical History Review Volume 26 ; 26  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1983 ; Radical History Review Volume 27 ; 27  >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1984 ; Radical History Review Volume 28-31 ; 28-31 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1985 ; Radical History Review Volume 32-33 ; 32-33 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1986 ; Radical History Review Volume 34-36 ; 34-36 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1987 ; Radical History Review Volume 37-39 ; 37-39 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1988 ; Radical History Review Volume 40-42 ; 40-42 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1989 ; Radical History Review Volume 43-45 ; 43-45 >      
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1990 ; Radical History Review Volume 46-48 ; 46-48 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1991 ; Radical History Review Volume 49-51 ; 49-51 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1992 ; Radical History Review Volume 52-54 ; 52-54 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1993 ; Radical History Review Volume 55-57 ; 55-57 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1994 ; Radical History Review Volume 58-60 ; 58-60 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1995 ; Radical History Review Volume 61-63 ; 61-63 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1996 ; Radical History Review Volume 64-66 ; 64-66 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1997 ; Radical History Review Volume 67-69 ; 67-69 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1998 ; Radical History Review Volume 70-72 ; 70-72 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 1999 ; Radical History Review Volume 73-75 ; 73-75 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Radical History Review Volume 76-78 ; 76-78 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Radical History Review Volume 79-81 ; 79-81 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Radical History Review Volume 82-84 ; 82-84 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Radical History Review Volume 85-87 ; 85-87 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Radical History Review Volume 88-90 ; 88-90 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Radical History Review Volume 91-93 ; 91-93 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Radical History Review Volume 94-96 ; 94-96 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Radical History Review Volume 97-99 ; 97-99 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Radical History Review Volume 100-102; 100-102 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Radical History Review Volume 103-105 ; 103-105 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Radical History Review Volume 106-108 ; 106-108 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Radical History Review Volume 109-111 ; 109-111 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Radical History Review Volume 112-113 ; 112-113 >
 
 }
    }
