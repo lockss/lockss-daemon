@@ -699,6 +699,71 @@
 
     }
     
+        {
+  
+    title < 
+      name = The Journal of Mathematics of Kyoto University ;
+      issn = 0023-608X ;
+      eissn = 
+  
+>
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://projecteuclid.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1961-62 ; The Journal of Mathematics of Kyoto University Volume 1 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1962 ; The Journal of Mathematics of Kyoto University Volume 2 ; 2 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1963 ; The Journal of Mathematics of Kyoto University Volume 3 ; 3 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1964 ; The Journal of Mathematics of Kyoto University Volume 4 ; 4 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1965 ; The Journal of Mathematics of Kyoto University Volume 5 ; 5 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1966 ; The Journal of Mathematics of Kyoto University Volume 5 ; 5 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1967 ; The Journal of Mathematics of Kyoto University Volume 7 ; 7 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1968 ; The Journal of Mathematics of Kyoto University Volume 8 ; 8 >      
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1969 ; The Journal of Mathematics of Kyoto University Volume 9 ; 9 >      
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1970 ; The Journal of Mathematics of Kyoto University Volume 10 ; 10 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1971 ; The Journal of Mathematics of Kyoto University Volume 11 ; 11 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1972 ; The Journal of Mathematics of Kyoto University Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1973 ; The Journal of Mathematics of Kyoto University Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1974 ; The Journal of Mathematics of Kyoto University Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1975 ; The Journal of Mathematics of Kyoto University Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1976 ; The Journal of Mathematics of Kyoto University Volume 16 ; 16 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1977 ; The Journal of Mathematics of Kyoto University Volume 17 ; 17 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1978 ; The Journal of Mathematics of Kyoto University Volume 18 ; 18 >      
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1979 ; The Journal of Mathematics of Kyoto University Volume 19 ; 19 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1980 ; The Journal of Mathematics of Kyoto University Volume 20 ; 20 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1981 ; The Journal of Mathematics of Kyoto University Volume 21 ; 21 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1982 ; The Journal of Mathematics of Kyoto University Volume 22 ; 22 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1983 ; The Journal of Mathematics of Kyoto University Volume 23 ; 23 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1984 ; The Journal of Mathematics of Kyoto University Volume 24 ; 24 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1985 ; The Journal of Mathematics of Kyoto University Volume 25 ; 25 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1986 ; The Journal of Mathematics of Kyoto University Volume 26 ; 26 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1987 ; The Journal of Mathematics of Kyoto University Volume 27 ; 27 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1988 ; The Journal of Mathematics of Kyoto University Volume 28 ; 28 >      
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1989 ; The Journal of Mathematics of Kyoto University Volume 29 ; 29 >      
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1990 ; The Journal of Mathematics of Kyoto University Volume 30 ; 30 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1991 ; The Journal of Mathematics of Kyoto University Volume 31 ; 31 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1992 ; The Journal of Mathematics of Kyoto University Volume 32 ; 32 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1993 ; The Journal of Mathematics of Kyoto University Volume 33 ; 33 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1994 ; The Journal of Mathematics of Kyoto University Volume 34 ; 34 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1995 ; The Journal of Mathematics of Kyoto University Volume 35 ; 35 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1996 ; The Journal of Mathematics of Kyoto University Volume 36 ; 36 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1997 ; The Journal of Mathematics of Kyoto University Volume 37 ; 37 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1998 ; The Journal of Mathematics of Kyoto University Volume 38 ; 38 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1999 ; The Journal of Mathematics of Kyoto University Volume 39 ; 39 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2000 ; The Journal of Mathematics of Kyoto University Volume 40 ; 40 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2001 ; The Journal of Mathematics of Kyoto University Volume 41 ; 41 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2002 ; The Journal of Mathematics of Kyoto University Volume 42 ; 42 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2003 ; The Journal of Mathematics of Kyoto University Volume 43 ; 43 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2004 ; The Journal of Mathematics of Kyoto University Volume 44 ; 44 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2005 ; The Journal of Mathematics of Kyoto University Volume 45 ; 45 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2006 ; The Journal of Mathematics of Kyoto University Volume 46 ; 46 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2007 ; The Journal of Mathematics of Kyoto University Volume 47 ; 47 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2008 ; The Journal of Mathematics of Kyoto University Volume 48 ; 48 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2009 ; The Journal of Mathematics of Kyoto University Volume 49 ; 49 >
+      
+    }
+    
     {
   
     title < 
@@ -755,7 +820,28 @@
       au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; Journal of Music Theory Volume 56 ; 56 >
 
     }
+    
+    {
+  
+    title < 
+      name = Kyoto Journal of Mathematics ;
+      issn =  2156-2261 ;
+      eissn = 2154-3321
+  
+      >
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] =  http://ProjectEuclid.org/kjm
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+      comment[0] = formerly The Journal of Mathematics of Kyoto University, 1961-2009
+      comment[1] = formerly Memoirs of the College of Science, University of Kyoto. Series A: Mathematics, 1950-1961
 
+
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2010 ; Kyoto Journal of Mathematics Volume 50 ; 50 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2011 ; Kyoto Journal of Mathematics Volume 51 ; 50 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; Kyoto Journal of Mathematics Volume 52 ; 52 >
+
+
+}
     {
   
     title < 
@@ -824,7 +910,30 @@
       au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2012 ; Mediterranean Quarterly: A Journal of Global Issues Volume 23 ; 23 >
 
 }
+    {
+  
+    title < 
+      name = Memoirs of the College of Science, University of Kyoto. Series A: Mathematics ;
+      issn = 0368-8887 ;
+      eissn = 
+  
+      >
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://ProjectEuclid.org/kjm
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
 
+
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1950-51 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 26 ; 26 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1952-53 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 27 ; 27 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1953-54 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 28 ; 28 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1955 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 29 ; 29 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1956-7 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 30 ; 30 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1958 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 31 ; 31 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1959-60 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 32 ; 32 >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1960-61 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 33 ; 33 >
+    
+    }
+    
     {
   
     title < 
@@ -992,7 +1101,7 @@
       au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1989 ; Nagoya Mathematical Journal Volume 40 ; 40 >      
       au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1990 ; Nagoya Mathematical Journal Volume 41 ; 41 >
       au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1991 ; Nagoya Mathematical Journal Volume 42 ; 42 >
-      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1992 ; Nagoya Mathematical Journal Volume 43 ; 43 >
+      au < ClockssHighWirePrehttps://www.google.com/search?q=+2154-3321&ie=utf-8&oe=utf-8&client=ubuntu&channel=fsssH20Plugin ; exists ; exists ; 1992 ; Nagoya Mathematical Journal Volume 43 ; 43 >
       au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1993 ; Nagoya Mathematical Journal Volume 44 ; 44 >
       au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1994 ; Nagoya Mathematical Journal Volume 45 ; 45 >
       au < ClockssHighWirePressH20Plugin ; exists ; exists ; 1995 ; Nagoya Mathematical Journal Volume 46 ; 46 >
