@@ -708,6 +708,22 @@
   {
 
     title <
+      name = The American Journal of Jurisprudence;
+      issn = 0065-8995 ;
+      eissn = 2049-6494 ;
+      issnl = 0065-8995
+    >
+
+    param[base_url] = http://ajj.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    au < expected ; exists ; 2013 ; The American Journal of Jurisprudence Volume 1 ; 1 ; >
+    
+  }
+
+  {
+
+    title <
       name = American Law and Economics Review ;
       issn = 1465-7252 ;
       eissn = 1465-7260 ;
