@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.27 2012-08-01 20:36:09 thib_gc Exp $
+# $Id: tdbxml.py,v 1.28 2012-08-06 20:54:55 thib_gc Exp $
 
 __copyright__ = '''\
-
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
@@ -30,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.1'
+__version__ = '0.4.2'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -70,6 +69,8 @@ __IMPLICIT_PARAM_ORDER = [
     'issues', 'issue_set', 'issue_range', 'num_issue_range',
     'volume_name', 'volume_str', 'volume'
 ]
+
+__IMPLICIT_PARAM_ORDER_SET = set(__IMPLICIT_PARAM_ORDER)
 
 def __escape(str):
     from xml.sax import saxutils
@@ -154,9 +155,7 @@ def __introduction(tdb, options):
 <lockss-config>
 '''
 
-def __do_param(au, i, param, value=None):
-    if value is None:
-        value = au.param(param)
+def __do_param(au, i, param, value):
     print '''\
    <property name="param.%d">
     <property name="key" value="%s" />
@@ -191,26 +190,25 @@ def __process_au(au, options):
     i = 1
     au_params = au.params()
     for param in __IMPLICIT_PARAM_ORDER:
-        if param in au_params:
-            __do_param(au, i, param)
+        pval = au_params.get(param)
+        if pval is not None:
+            __do_param(au, i, param, pval)
             i = i + 1
-    for param in au_params:
-        if param not in __IMPLICIT_PARAM_ORDER:
-            __do_param(au, i, param)
+    for param, pval in au_params.iteritems():
+        if param not in __IMPLICIT_PARAM_ORDER_SET:
+            __do_param(au, i, param, pval)
             i = i + 1
-    for nondefparam in au.nondefparams():
-        nondefval = au.nondefparam(nondefparam)
+    for nondefparam, nondefval in au.nondefparams().iteritems():
         if nondefval is not None:
-            __do_param(au, i, nondefparam, value=nondefval)
+            __do_param(au, i, nondefparam, nondefval)
             i = i + 1
     au_proxy = au.proxy()
     if au_proxy is not None:
-        __do_param(au, 98, 'crawl_proxy', value=au_proxy)
+        __do_param(au, 98, 'crawl_proxy', au_proxy)
     if not options.no_pub_down and au.status() in [AU.Status.DOWN, AU.Status.SUPERSEDED, AU.Status.ZAPPED]:
-        __do_param(au, 99, 'pub_down', value='true')
-    au_attrs = au.attrs()
-    for attr in au_attrs:
-        __do_attr(au, attr, au_attrs[attr])
+        __do_param(au, 99, 'pub_down', 'true')
+    for attr, attrval in au.attrs().iteritems():
+        __do_attr(au, attr, attrval)
     for val, st in [(au.edition(), 'edition'),
                     (au.eisbn(), 'eisbn'),
                     (au.isbn(), 'isbn'),
