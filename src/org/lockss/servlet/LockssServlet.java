@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.128 2012-07-21 21:12:44 easyonthemayo Exp $
+ * $Id: LockssServlet.java,v 1.129 2012-08-06 03:34:07 tlipkis Exp $
  */
 
 /*
@@ -835,16 +835,24 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   protected String getPageTitle() {
-    String heading = getHeading();
-    String first = "LOCKSS";
+    StringBuilder sb = new StringBuilder();
     if (ServletUtil.isHostNameInTitle()) {
-      first = getMachineName();
-    }
-    if (heading != null) {
-      return first + ": " + heading;
+      sb.append(getMachineName());
     } else {
-      return first;
+      sb.append("LOCKSS");
     }
+    String heading = getTitleHeading();
+    if (heading != null) {
+      sb.append(": ");
+      sb.append(heading);
+    }
+    return sb.toString();
+  }
+
+  /** By default, servlet-specific part of page title is the same as its
+   * page heading. */
+  protected String getTitleHeading() {
+    return getHeading();
   }
 
   /** Return a button that invokes the javascript submit routine with the

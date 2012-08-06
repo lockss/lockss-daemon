@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.89 2012-07-17 08:49:04 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.90 2012-08-06 03:34:07 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public class DaemonStatus extends LockssServlet {
   private String tableName;
   private String tableKey;
   private String sortKey;
+  private StatusTable statTable;
   private StatusService statSvc;
   private int outputFmt;
   private java.util.List rules;
@@ -308,7 +309,6 @@ public class DaemonStatus extends LockssServlet {
   // Build the table, adding elements to page
   private Page doHtmlStatusTable0() throws IOException {
     Page page;
-    StatusTable statTable;
     try {
       statTable = makeTable();
     } catch (StatusService.NoSuchTableException e) {
@@ -403,11 +403,13 @@ public class DaemonStatus extends LockssServlet {
       frm.add(table);
       page.add(frm);
       page.add("<br>");
-      String heading = getHeading();
-      // put table name in page title so appears in browser title & tabs
-      page.title("LOCKSS: " + title0 + " - " + heading);
     }
     return page;
+  }
+
+  /** Prepend table name to servlet-specfici part of page title */
+  protected String getTitleHeading() {
+    return statTable.getTitle() + " - " + super.getTitleHeading();
   }
 
   // Build the table, writing text to wrtr
