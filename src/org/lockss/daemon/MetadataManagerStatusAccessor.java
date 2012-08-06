@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.9 2012-08-06 17:02:32 pgust Exp $
+ * $Id: MetadataManagerStatusAccessor.java,v 1.10 2012-08-06 17:50:31 pgust Exp $
  */
 
 /*
@@ -174,7 +174,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
       long numIndexed = task.getIndexedArticleCount();
       long numUpdated = task.getUpdatedArticleCount();
       boolean isNewAu = task.isNewAu();      
-      long curTime = TimeBase.nowMs();
+      long curTime = System.currentTimeMillis();
       
       Map<String,Object> row = new HashMap<String,Object>();
       row.put(AU_COL_NAME,
