@@ -2912,6 +2912,19 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Iranian Journal of Environmental Health Science & Engineering ;
+        eissn = 1753-2746
+      >
+
+      param[base_url] = http://ijehse.com/
+      param[journal_issn] = 1753-2746
+
+      au < exists ; 2012 ; Iranian Journal of Environmental Health Science & Engineering Volume 9 ; 9 >
+
+    }
+
+    {
+      title <
         name = Irish Veterinary Journal ;
         issn = 0368-0762 ;
         issnl = 0368-0762
@@ -3113,6 +3126,19 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; 2011 ; Journal of Clinical Bioinformatics Volume 1 ; 1 >
       au < manifest ; 2012 ; Journal of Clinical Bioinformatics Volume 2 ; 2 >
+
+    }
+
+    {
+      title >
+        name = Journal of Diabetes & Metabolic Disorders ;
+        eissn = 2251-6581
+      >
+
+      param[base_url] = http://www.jdmdonline.com/
+      param[journal_issn] = 2251-6581
+
+      au < manifest ; 2012 ; Journal of Diabetes & Metabolic Disorders Volume 11 ; 11 >
 
     }
 
@@ -3935,7 +3961,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2008 ; Population Health Metrics Volume 6 ; 6 >
       au < released ; 2009 ; Population Health Metrics Volume 7 ; 7 >
       au < testing ; 2010 ; Population Health Metrics Volume 8 ; 8 >
-      au < testing ; 2011 ; Population Health Metrics Volume 9 ; 9 >
+      au < ready ; 2011 ; Population Health Metrics Volume 9 ; 9 >
       au < manifest ; 2012 ; Population Health Metrics Volume 10 ; 10 >
 
     }
