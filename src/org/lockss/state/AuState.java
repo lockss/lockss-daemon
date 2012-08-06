@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.44 2011-06-20 16:30:32 tlipkis Exp $
+ * $Id: AuState.java,v 1.45 2012-08-06 03:34:46 tlipkis Exp $
  */
 
 /*
@@ -117,6 +117,8 @@ public class AuState implements LockssSerializable {
 	 crawlUrls, null, clockssSubscriptionStatus,
 	 v3Agreement, highestV3Agreement,
 	 SubstanceChecker.State.Unknown,
+	 null,				// substanceFeatureVersion
+	 null,				// metadataFeatureVersion
 	 historyRepo);
   }
 
@@ -132,6 +134,8 @@ public class AuState implements LockssSerializable {
 		 double v3Agreement,
 		 double highestV3Agreement,
 		 SubstanceChecker.State hasSubstance,
+		 String substanceVersion,
+		 String metadataVersion,
 		 HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
@@ -150,6 +154,8 @@ public class AuState implements LockssSerializable {
     this.v3Agreement = v3Agreement;
     this.highestV3Agreement = highestV3Agreement;
     this.hasSubstance = hasSubstance;
+    this.substanceVersion = substanceVersion;
+    this.metadataVersion = metadataVersion;
     this.historyRepo = historyRepo;
   }
 
@@ -366,6 +372,7 @@ public class AuState implements LockssSerializable {
 		       clockssSubscriptionStatus,
 		       v3Agreement, highestV3Agreement,
 		       hasSubstance,
+		       substanceVersion, metadataVersion,
 		       null);
   }
 
@@ -464,8 +471,8 @@ public class AuState implements LockssSerializable {
   /** Get the version string that was last set for the given feature */
   public String getFeatureVersion(Plugin.Feature feat) {
     switch (feat) {
-    case Substance: return substanceVersion;
-    case Metadata: return metadataVersion;
+    case Substance: ;return substanceVersion;
+    case Metadata: ;return metadataVersion;
     default: return null;
     }
   }

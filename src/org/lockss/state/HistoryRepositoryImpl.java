@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.90 2011-11-09 21:36:28 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.91 2012-08-06 03:34:46 tlipkis Exp $
  */
 
 /*
@@ -273,13 +273,10 @@ public class HistoryRepositoryImpl
 				auState.getV3Agreement(),
 				auState.getHighestV3Agreement(),
 				auState.getSubstanceState(),
+				auState.getFeatureVersion(Plugin.Feature.Substance),
+				auState.getFeatureVersion(Plugin.Feature.Metadata),
 				this);
-      res.setFeatureVersion(Plugin.Feature.Substance,
-			    auState.getFeatureVersion(Plugin.Feature.Substance));
-      res.setFeatureVersion(Plugin.Feature.Metadata,
-			    auState.getFeatureVersion(Plugin.Feature.Metadata));
       return res;
-
     }
     catch (SerializationException.FileNotFound fnf) {
       logger.debug2(errorString, fnf);

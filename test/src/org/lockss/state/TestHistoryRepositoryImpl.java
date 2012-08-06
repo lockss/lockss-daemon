@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.78 2011-11-09 21:36:28 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.79 2012-08-06 03:34:46 tlipkis Exp $
  */
 
 /*
@@ -303,9 +303,13 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				    AuState.AccessType.OpenAccess,
 				    2, 1.0, 1.0,
 				    SubstanceChecker.State.Yes,
+				    "SubstVer3", "MetadatVer7",
 				    repository);
-    origState.setFeatureVersion(Plugin.Feature.Substance, "123");
-    origState.setFeatureVersion(Plugin.Feature.Metadata, "456");
+
+    assertEquals("SubstVer3",
+		 origState.getFeatureVersion(Plugin.Feature.Substance));
+    assertEquals("MetadatVer7",
+		 origState.getFeatureVersion(Plugin.Feature.Metadata));
 
     repository.storeAuState(origState);
 
@@ -329,6 +333,10 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(2, loadedState.getClockssSubscriptionStatus());
     assertEquals(AuState.AccessType.OpenAccess, loadedState.getAccessType());
     assertEquals(SubstanceChecker.State.Yes, loadedState.getSubstanceState());
+    assertEquals("SubstVer3",
+		 loadedState.getFeatureVersion(Plugin.Feature.Substance));
+    assertEquals("MetadatVer7",
+		 loadedState.getFeatureVersion(Plugin.Feature.Metadata));
     assertEquals(mau.getAuId(), loadedState.getArchivalUnit().getAuId());
 
     // check crawl urls
@@ -337,11 +345,6 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertTrue(colIter.hasNext());
     assertEquals("test", colIter.next());
     assertFalse(colIter.hasNext());
-
-    assertEquals("123",
-		 loadedState.getFeatureVersion(Plugin.Feature.Substance));
-    assertEquals("456",
-		 loadedState.getFeatureVersion(Plugin.Feature.Metadata));
   }
 
   public void testStoreDamagedNodeSet() throws Exception {
