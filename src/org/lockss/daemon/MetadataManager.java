@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.52 2012-08-06 06:32:46 pgust Exp $
+ * $Id: MetadataManager.java,v 1.53 2012-08-06 20:29:49 pgust Exp $
  */
 
 /*
@@ -81,6 +81,7 @@ import org.lockss.scheduler.TaskCallback;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
+import org.lockss.util.TimeBase;
 import org.lockss.util.TimeInterval;
 import org.lockss.util.StringUtil;
 
@@ -489,41 +490,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     Statement stmt = conn.createStatement();
     ResultSet resultSet = null;
     try {
-      resultSet = stmt.executeQuery("SELECT COUNT(*) FROM "
-          + METADATA_TABLE);
+      resultSet = stmt.executeQuery("SELECT COUNT(*) FROM " + METADATA_TABLE);
       resultSet.next();
       long rowCount = resultSet.getLong(1);
-      return rowCount;
-    } finally {
-      dbManager.safeCloseResultSet(resultSet);
-      stmt.close();
-    }
-  }
-
-  /**
-   * Get the number of articles in the specified AU.
-   * 
-   * @param conn
-   *          the connection
-   * @param au
-   *          the AU
-   * @return the number of articles in the metadatabase for the AU
-   * @throws SQLException
-   *           if error executing the query
-   */
-  public long getArticleCount(Connection conn, String auid) throws SQLException {
-    Statement stmt = conn.createStatement();
-    ResultSet resultSet = null;
-    try {
-      String plugin_id = PluginManager.pluginIdFromAuId(auid);
-      String au_key = PluginManager.auKeyFromAuId(auid);
-      String query = "SELECT COUNT(*) FROM " + METADATA_TABLE + " WHERE "
-          + PLUGIN_ID_FIELD + "='" + plugin_id + "'" + " AND " + AU_KEY_FIELD
-          + "='" + au_key + "'";
-      resultSet = stmt.executeQuery(query);
-      resultSet.next();
-      long rowCount = resultSet.getLong(1);
-      log.debug("Article count for " + query + " = " + rowCount);
       return rowCount;
     } finally {
       dbManager.safeCloseResultSet(resultSet);
@@ -1338,7 +1307,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     private final HashSet<Integer> auLogTable = new HashSet<Integer>();
 
     /** The database connection for this task */
-    private Connection conn;
+//    private Connection conn;
 
     /** The default number of steps for this task */
     private static final int default_steps = 10;
@@ -1399,8 +1368,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
      */
     public ReindexingTask(ArchivalUnit theAu, ArticleMetadataExtractor theAe) {
       // NOTE: estimated window time interval duration not currently used.
-      super(new TimeInterval(System.currentTimeMillis(),
-          System.currentTimeMillis() + Constants.HOUR), 0, /*
+      super(new TimeInterval(TimeBase.nowMs(),
+          TimeBase.nowMs() + Constants.HOUR), 0, /*
                                                             * long
                                                             * estimatedDuration
                                                             */
@@ -1443,9 +1412,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // set task callback after construction to ensure instance is initialized
       callback = new TaskCallback() {
         public void taskEvent(SchedulableTask task, Schedule.EventType type) {
+          Connection conn = null;
           long threadCpuTime = 0;
           long threadUserTime = 0;
-          long currentClockTime = System.currentTimeMillis();
+          long currentClockTime = TimeBase.nowMs();
           if (tmxb.isCurrentThreadCpuTimeSupported()) {
             threadCpuTime = tmxb.getCurrentThreadCpuTime();
             threadUserTime = tmxb.getCurrentThreadUserTime();
@@ -1460,10 +1430,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             try {
               articleMetadataInfoBuffer = new ArticleMetadataBuffer();
 
-              // determine whether this is a new or reindexed AU
-              conn = dbManager.getConnection();
-              long articleCount = getArticleCount(conn, au.getAuId());
-              isNewAu = (articleCount == 0);
+              // determine whether this is a new or reindexed AU;
+              // if AU has Metadata feature version, it is not new
+              String featureVersion =  
+                  AuUtil.getAuState(au).getFeatureVersion(Feature.Metadata);
+              isNewAu = (featureVersion != null);
 
               startCpuTime = threadCpuTime;
               startUserTime = threadUserTime;
@@ -1472,26 +1443,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
               notifyStartReindexingAu(au);
             } catch (IOException ex) {
               log.error(
-                  "Failed to set up to reindex pending au: " + au.getName(), ex);
-              setFinished();
-              if (status == ReindexingStatus.success) {
-                status = ReindexingStatus.rescheduled;
-              }
-            } catch (SQLException ex) {
-              log.error(
-                  "Failed to set up to reindex pending au: " + au.getName(), ex);
+                  "Failed to set up to reindex pending au: "+au.getName(), ex);
               setFinished();
               if (status == ReindexingStatus.success) {
                 status = ReindexingStatus.rescheduled;
               }
             }
 
-            // close connection now, and re-establish it when finished
-            // to avoid database connection timeouts that seem to be
-            // endemic to Derby
-            dbManager.safeRollbackAndClose(conn);
-            conn = null;
- 
           } else if (type == Schedule.EventType.FINISH) {
             log.debug3(  "Finishing reindexing (" + status + ")" 
                        + " for au: " + auName);
@@ -1513,7 +1471,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                       articleMetadataInfoBuffer.iterator();
                   while (mditr.hasNext()) {
                     try {
-                      addMetadata(mditr.next());
+                      addMetadata(conn, mditr.next());
                       updatedArticleCount++;
                     } catch (ValidationException ex) {
                       log.warning(ex.getMessage());
@@ -1592,7 +1550,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
             articleIterator = null;
 
-            endClockTime = System.currentTimeMillis();
+            endClockTime = TimeBase.nowMs();
             if (tmxb.isCurrentThreadCpuTimeSupported()) {
               endCpuTime = tmxb.getCurrentThreadCpuTime();
               endUserTime = tmxb.getCurrentThreadUserTime();
@@ -1975,7 +1933,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
      * @throws SQLException if failed to add rows for metadata
      * @throws ValidationException if ArticleMetadataInfo has invalid data
      */
-    private void addMetadata(ArticleMetadataInfo mdinfo) 
+    private void addMetadata(Connection conn, ArticleMetadataInfo mdinfo) 
       throws SQLException, ValidationException {
 
       // first, validate all metadata info fields
