@@ -1195,5 +1195,34 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 11 ;11 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Pedagogy: Critical Approaches to Teaching Literature, Language, Composition, and Culture Volume 12 ;12 >
       
-}
+    }
+
+    {
+  
+    title < 
+      name = Philosophical Review ;
+      issn = 0031-8108 ;
+      eissn = 1558-1470
+  
+      >
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://philreview.dukejournals.org/
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2000 ; Philosophical Review Volume 109 ; 109 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2001 ; Philosophical Review Volume 110 ; 110 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2002 ; Philosophical Review Volume 111 ; 111 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2003 ; Philosophical Review Volume 112 ; 112 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2004 ; Philosophical Review Volume 113 ; 113 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2005 ; Philosophical Review Volume 114 ; 114 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2006 ; Philosophical Review Volume 115 ; 115 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2007 ; Philosophical Review Volume 116 ; 116 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2008 ; Philosophical Review Volume 117 ; 117 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2009 ; Philosophical Review Volume 118 ; 118 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2010 ; Philosophical Review Volume 119 ; 119 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Philosophical Review Volume 120 ; 120 >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2012 ; Philosophical Review Volume 121 ; 121 >
+
+  }
+  
    }
