@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.72 2012-08-03 19:08:12 barry409 Exp $
+ * $Id: V3Voter.java,v 1.73 2012-08-06 18:52:21 barry409 Exp $
  */
 
 /*
@@ -336,6 +336,8 @@ public class V3Voter extends BasePoll {
     // others?
     this.pollSerializer = new V3VoterSerializer(theDaemon, pollDir);
     this.voterUserData = pollSerializer.loadVoterUserData();
+    this.idManager = theDaemon.getIdentityManager();
+
     this.pollManager = daemon.getPollManager();
     this.scomm = daemon.getStreamCommManager();
     isAsynch = pollManager.isAsynch();
