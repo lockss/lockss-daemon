@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.50 2012-08-05 00:16:00 pgust Exp $
+ * $Id: MetadataManager.java,v 1.51 2012-08-06 02:20:59 pgust Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractor.Emitter;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
+import org.lockss.extractor.MetadataException.ValidationException;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
@@ -79,6 +80,7 @@ import org.lockss.scheduler.StepTask;
 import org.lockss.scheduler.TaskCallback;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
+import org.lockss.util.MetadataUtil;
 import org.lockss.util.TimeInterval;
 import org.lockss.util.StringUtil;
 
@@ -138,6 +140,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Default maximum concurrent reindexing tasks */
   static public final int DEFAULT_MAX_REINDEXING_TASKS = 1;
 
+  /** Disable allowing crawl to interrupt reindexing tasks */
+  static public final String PARAM_DISABLE_CRAWL_RESCHEDULE_TASK = PREFIX
+      + "disableCrawlRescheduleTask";
+
+  /** Default disable allowing crawl to interrupt reindexing tasks */
+  static public final boolean DEFAULT_DISABLE_CRAWL_RESCHEDULE_TASK = false;
+
   /**
    * The maximum number reindexing task history. This property can be changed at
    * runtime
@@ -177,13 +186,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Maximum number of reindexing tasks */
   int maxReindexingTasks = DEFAULT_MAX_REINDEXING_TASKS;
 
+  /** Disable crawl completion rescheduling a running task for same AU */
+  boolean disableCrawlRescheduleTask = DEFAULT_DISABLE_CRAWL_RESCHEDULE_TASK;
+
   /**
    * Maximum size of the reindexing task history list int
    * maxReindexingTaskHistory = DEFAULT_MAX_REINDEXING_TASKS_HISTORY;
    * 
    * /** The number of articles currently in the metadatabase
    */
-  long metadataArticleCount = 0;
+  private long metadataArticleCount = 0;
 
   /** The number of AUs pending for reindexing */
   private long pendingAusCount = 0;
@@ -536,6 +548,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     maxReindexingTasks = config.getInt(PARAM_MAX_REINDEXING_TASKS,
         DEFAULT_MAX_REINDEXING_TASKS);
     maxReindexingTasks = Math.max(0, maxReindexingTasks);
+    disableCrawlRescheduleTask = 
+        config.getBoolean(PARAM_DISABLE_CRAWL_RESCHEDULE_TASK, 
+                          DEFAULT_DISABLE_CRAWL_RESCHEDULE_TASK);
     boolean doEnable = config.getBoolean(PARAM_INDEXING_ENABLED,
         DEFAULT_INDEXING_ENABLED);
     setIndexingEnabled(doEnable);
@@ -1440,7 +1455,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             // article iterator won't be null because only aus
             // with article iterators are queued for processing
             articleIterator = au.getArticleIterator(MetadataTarget.OpenURL);
-            log.debug2("Reindexing task starting for au: " + au.getName()
+            log.debug2("Starting reindexing task for au: " + au.getName()
                 + " has articles? " + articleIterator.hasNext());
             try {
               articleMetadataInfoBuffer = new ArticleMetadataBuffer();
@@ -1478,106 +1493,147 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             conn = null;
  
           } else if (type == Schedule.EventType.FINISH) {
-            if (status == ReindexingStatus.success) {
-              try {
-                // re-establish connection to database
-                conn = dbManager.getConnection();
-                
-                switch (status) {
-                  case success:
-                    // metadata extraction completed successfully,
-                    // so update database tables with extracted metadata
-                    startUpdateCpuTime = threadCpuTime;
-                    startUpdateUserTime = threadUserTime;
-                    startUpdateClockTime = currentClockTime;
+            log.debug3(  "Finishing reindexing (" + status + ")" 
+                       + " for au: " + auName);
+            
+            startUpdateCpuTime = threadCpuTime;
+            startUpdateUserTime = threadUserTime;
+            startUpdateClockTime = currentClockTime;
+            
+            switch (status) {
+              case success:
+                try {
+                  // re-establish connection to database
+                  conn = dbManager.getConnection();
 
-                    // remove old metadata before adding new for AU
-                    removeMetadata(conn, au);
+                  // remove old metadata before adding new for AU
+                  long removedArticleCount = removeMetadata(conn, auid);
 
-                    Iterator<ArticleMetadataInfo> mditr = articleMetadataInfoBuffer
-                        .iterator();
-                    while (mditr.hasNext()) {
+                  Iterator<ArticleMetadataInfo> mditr = 
+                      articleMetadataInfoBuffer.iterator();
+                  while (mditr.hasNext()) {
+                    try {
                       addMetadata(mditr.next());
                       updatedArticleCount++;
+                    } catch (ValidationException ex) {
+                      log.warning(ex.getMessage());
                     }
-                    
-                    // remove the AU just reindexed from the pending list
-                    removeFromPendingAus(conn, au.getAuId());
-                    conn.commit();
+                  }
+                  
+                  // remove the AU just reindexed from the pending list
+                  removeFromPendingAus(conn, auid);
+                  conn.commit();
 
-                    successfulReindexingCount++;
-                    metadataArticleCount = getArticleCount(conn);
+                  successfulReindexingCount++;
+                  
+                  // update total article count
+                  metadataArticleCount += 
+                      updatedArticleCount - removedArticleCount;
+                  
+                  // update AU's feature version to that of the plugin
+                  // so we can test whether it's up-to-date in case of a
+                  // later reload of the plugin
+                  AuUtil.getAuState(au).setFeatureVersion(Feature.Metadata,
+                      au.getPlugin().getFeatureVersion(Feature.Metadata));
 
-                    // update AU's feature version to that of the plugin
-                    // so we can test whether it's up-to-date in case of a
-                    // later reload of the plugin
-                    AuUtil.getAuState(au).setFeatureVersion(Feature.Metadata,
-                        au.getPlugin().getFeatureVersion(Feature.Metadata));
-                    
-                    endClockTime = System.currentTimeMillis();
-                    if (tmxb.isCurrentThreadCpuTimeSupported()) {
-                      endCpuTime = tmxb.getCurrentThreadCpuTime();
-                      endUserTime = tmxb.getCurrentThreadUserTime();
-                    }
+                  break;
 
-                    long elapsedCpuTime = threadCpuTime = startCpuTime;
-                    long elapsedUserTime = threadUserTime - startUserTime;
-                    long elapsedClockTime = currentClockTime - startClockTime;
-                    if (log.isDebug2()) {
-                      log.debug2("Reindexing task finished for au: "
-                          + au.getName() + " CPU time: " + elapsedCpuTime
-                          / 1.0e9 + " (" + endCpuTime / 1.0e9
-                          + "), UserTime: " + elapsedUserTime / 1.0e9 + " ("
-                          + endUserTime / 1.0e9 + ") Clock time: "
-                          + elapsedClockTime / 1.0e3 + " (" + endClockTime
-                          / 1.0e3 + ")");
-                    }
-
-                    break;
-                  case failed:
-                  case rescheduled:
-                    
-                    failedReindexingCount++;
-
-                    // reindexing not successful so, again try later
-                    // if status indicates the operation should be rescheduled
-                    log.debug2("Reindexing task did not finished for au "
-                        + au.getName());
-                    // attempt to move failed AU to end of pending list
-                    removeFromPendingAus(conn, au.getAuId());
-                    if (status == ReindexingStatus.rescheduled) {
-                      log.debug2("Rescheduling reindexing task au "
-                          + au.getName());
-                      addToPendingAus(conn, Collections.singleton(au));
-                    }
-                    conn.commit();
-                    
-                }
-              } catch (SQLException ex) {
-                log.error(
-                    "error finishing processing of pending au: " + au.getName(),
-                    ex);
-                if (status == ReindexingStatus.success) {
+                } catch (SQLException ex) {
+                  log.warning(  "Error updating metadata at FINISH"
+                      + " for " + status + " -- rescheduling", ex);
                   status = ReindexingStatus.rescheduled;
+                  try {
+                    conn.rollback();
+                  } catch (SQLException ex2) {
+                    log.error("Failed to rollback database transaction", ex2);
+                    
+                    // force new database connection
+                    dbManager.safeRollbackAndClose(conn);
+                    conn = null;
+                  }
                 }
-              }
+                
+                // fall through if SQL exception occurred during update
+              case failed:
+              case rescheduled:
+                
+                failedReindexingCount++;
 
-              // release collected metadata info once finished
-              articleMetadataInfoBuffer.close();
-              articleMetadataInfoBuffer = null;
-
-              synchronized (activeReindexingTasks) {
-                activeReindexingTasks.remove(au.getAuId());
-                notifyFinishReindexingAu(au, status);
-
-                // schedule another task if available
-                startReindexing(conn);
-              }
-              dbManager.safeRollbackAndClose(conn);
-              conn = null;
+                // reindexing not successful so, again try later
+                // if status indicates the operation should be rescheduled
+                log.debug2(  "Reindexing task (" + status 
+                           + ") did not finish for au " + au.getName());
+                try {
+                  // re-establish connection to database if necessary
+                  if (conn == null) {
+                    conn = dbManager.getConnection();
+                  }
+                  
+                  // attempt to move failed AU to end of pending list
+                  removeFromPendingAus(conn, au.getAuId());
+                  if (status == ReindexingStatus.rescheduled) {
+                    log.debug2("Rescheduling reindexing task au "
+                        + au.getName());
+                    addToPendingAus(conn, Collections.singleton(au));
+                  }
+                  conn.commit();
+                } catch (SQLException ex) {
+                  log.warning("Error updating pending queue at FINISH" 
+                            + " for " + status, ex);
+                  try {
+                    if (conn != null) {
+                      conn.rollback();
+                    }
+                  } catch (SQLException ex2) {
+                    log.error("Failed to rollback database transaction", ex2);
+                  }
+                }
             }
 
             articleIterator = null;
+
+            endClockTime = System.currentTimeMillis();
+            if (tmxb.isCurrentThreadCpuTimeSupported()) {
+              endCpuTime = tmxb.getCurrentThreadCpuTime();
+              endUserTime = tmxb.getCurrentThreadUserTime();
+            }
+
+            long elapsedCpuTime = threadCpuTime = startCpuTime;
+            long elapsedUserTime = threadUserTime - startUserTime;
+            long elapsedClockTime = currentClockTime - startClockTime;
+            if (log.isDebug2()) {
+              log.debug2("Reindexing task finished (" + status + ")"
+                  + " for au: " + au.getName()
+                  + " CPU time: " + elapsedCpuTime
+                  / 1.0e9 + " (" + endCpuTime / 1.0e9
+                  + "), UserTime: " + elapsedUserTime / 1.0e9 + " ("
+                  + endUserTime / 1.0e9 + ") Clock time: "
+                  + elapsedClockTime / 1.0e3 + " (" + endClockTime
+                  / 1.0e3 + ")");
+            }
+            // release collected metadata info once finished
+            articleMetadataInfoBuffer.close();
+            articleMetadataInfoBuffer = null;
+
+            synchronized (activeReindexingTasks) {
+              activeReindexingTasks.remove(au.getAuId());
+              notifyFinishReindexingAu(au, status);
+              try {
+                if (conn == null) {
+                  conn = dbManager.getConnection();
+                }
+
+                // schedule another task if available
+                startReindexing(conn);
+                
+              } catch (SQLException ex) {
+                  log.error("Cannot restart indexing", ex);
+              }
+            }
+            
+            dbManager.safeRollbackAndClose(conn);
+            conn = null;
+
           }
         }
 
@@ -1783,31 +1839,167 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     /**
+     * Validate metadata info fields.
+     * 
+     * @param mdinfo the ArticleMetadataInfo
+     * @throws ValidationException if field is invalid
+     */
+    private void validateArticleMetadataInfo(ArticleMetadataInfo mdinfo)
+      throws ValidationException {
+      
+      if (mdinfo.accessUrl != null) {
+        if (mdinfo.accessUrl.length() > MAX_ACCESS_URL_FIELD) {
+          throw new ValidationException(  
+              "accessUrl too long '" + mdinfo.accessUrl
+              + "' for title: '" + mdinfo.journalTitle
+              + "' publisher: " + mdinfo.publisher +"'");
+        }
+      }
+
+      if (mdinfo.isbn != null) {
+        if (!MetadataUtil.isIsbn(mdinfo.isbn)) {
+          throw new ValidationException(  
+                "invalid isbn '" + mdinfo.isbn
+                + "' for title: '" + mdinfo.journalTitle
+                + "' publisher: " + mdinfo.publisher
+                + "' accessUrl: " + mdinfo.accessUrl);
+        }
+      }
+      
+      if (mdinfo.eisbn != null) {
+        if (!MetadataUtil.isIsbn(mdinfo.eisbn)) {
+          throw new ValidationException(  
+                "invalid eisbn '" + mdinfo.eisbn
+                + "' for title: '" + mdinfo.journalTitle
+                + "' publisher: " + mdinfo.publisher
+                + "' accessUrl: " + mdinfo.accessUrl);
+        }
+      }
+
+      if (mdinfo.issn != null) {
+        if (!MetadataUtil.isIssn(mdinfo.issn)) {
+          throw new ValidationException(  
+                "invalid issn: '" + mdinfo.issn
+              + "' for title: '" + mdinfo.journalTitle
+              + "' publisher: " + mdinfo.publisher
+              + "' accessUrl: " + mdinfo.accessUrl);
+        }
+      }
+      
+      if (mdinfo.eissn != null) {
+        if (!MetadataUtil.isIssn(mdinfo.eissn)) {
+          throw new ValidationException(  
+                "invalid eissn '" + mdinfo.eissn
+                + "' for title: '" + mdinfo.journalTitle
+                + "' publisher: " + mdinfo.publisher
+                + "' accessUrl: " + mdinfo.accessUrl);
+        }
+      }
+
+      if (mdinfo.doi != null) {
+        if (!MetadataUtil.isDoi(mdinfo.doi)) {
+          throw new ValidationException(  
+              "invalid doi '" + mdinfo.doi
+              + "' for title: '" + mdinfo.journalTitle
+              + "' publisher: " + mdinfo.publisher
+              + "' accessUrl: " + mdinfo.accessUrl);
+        }
+      }
+
+      if (mdinfo.pubDate != null) {
+        if (mdinfo.pubDate.length() > MAX_DATE_FIELD) {
+          throw new ValidationException(  
+              "pubDate too long '" + mdinfo.pubDate
+              + "' for title: '" + mdinfo.journalTitle
+              + "' publisher: " + mdinfo.publisher
+              + "' accessUrl: " + mdinfo.accessUrl);
+        }
+      }
+      
+      if (mdinfo.volume != null) {
+        if (mdinfo.volume.length() > MAX_VOLUME_FIELD) {
+          throw new ValidationException(  
+              "volume too long '" + mdinfo.pubDate
+              + "' for title: '" + mdinfo.journalTitle
+              + "' publisher: " + mdinfo.publisher
+              + "' accessUrl: " + mdinfo.accessUrl);
+        }
+      }
+
+      if (mdinfo.issue != null) {
+        if (mdinfo.pubDate.length() > MAX_DATE_FIELD) {
+          throw new ValidationException(  
+              "issue too long '" + mdinfo.issue
+              + "' for title: '" + mdinfo.journalTitle
+              + "' publisher: " + mdinfo.publisher
+              + "' accessUrl: " + mdinfo.accessUrl);
+        }
+      }
+
+      if (mdinfo.startPage != null) {
+        if (mdinfo.startPage.length() > MAX_STARTPAGE_FIELD) {
+          throw new ValidationException(  
+              "startPage too long '" + mdinfo.startPage
+              + "' for title: '" + mdinfo.journalTitle
+              + "' publisher: " + mdinfo.publisher
+              + "' accessUrl: " + mdinfo.accessUrl);
+        }
+      }
+
+      if (mdinfo.articleTitle != null) {
+        if (mdinfo.articleTitle.length() > MAX_ATITLE_FIELD) {
+          throw new ValidationException(  
+              "article title too long '" + mdinfo.articleTitle
+              + "' for title: '" + mdinfo.journalTitle
+              + "' publisher: " + mdinfo.publisher
+              + "' accessUrl: " + mdinfo.accessUrl);
+        }
+      }
+
+      if (mdinfo.authors != null) {
+        if (mdinfo.authors.length() > MAX_AUTHOR_FIELD) {
+          throw new ValidationException(  
+              "authors too long '" + mdinfo.authors
+              + "' for title: '" + mdinfo.journalTitle
+              + "' publisher: " + mdinfo.publisher
+              + "' accessUrl: " + mdinfo.accessUrl);
+        }
+      }
+    }
+    
+    /**
      * Add metadata for this archival unit.
      * 
-     * @param conn
-     *          the connection
-     * @param md
-     *          the metadata
-     * @throws SQLException
-     *           if failed to add rows for metadata
+     * @param conn the connection
+     * @param md the metadata
+     * @throws SQLException if failed to add rows for metadata
+     * @throws ValidationException if ArticleMetadataInfo has invalid data
      */
-    private void addMetadata(ArticleMetadataInfo mdinfo) throws SQLException {
+    private void addMetadata(ArticleMetadataInfo mdinfo) 
+      throws SQLException, ValidationException {
 
+      // first, validate all metadata info fields
+      validateArticleMetadataInfo(mdinfo);
+      
       HashSet<String> isbns = new HashSet<String>();
-      if (mdinfo.isbn != null)
+      if (mdinfo.isbn != null) {
         isbns.add(mdinfo.isbn);
-      if (mdinfo.eisbn != null)
+      }
+      
+      if (mdinfo.eisbn != null) {
         isbns.add(mdinfo.eisbn);
-
+      }
+      
       HashSet<String> issns = new HashSet<String>();
-      if (mdinfo.issn != null)
+      if (mdinfo.issn != null) {
         issns.add(mdinfo.issn);
-      if (mdinfo.eissn != null)
+      }
+      
+      if (mdinfo.eissn != null) {
         issns.add(mdinfo.eissn);
+      }
 
       // validate data against TDB information
-
       if (tdbau != null) {
         // validate journal title against tdb journal title
         if (tdbauJournalTitle != null) {
@@ -2049,24 +2241,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Remove an AU from the pending Aus table.
-   * 
-   * @param au
-   *          the pending Au
-   * @return the number of articles deleted
-   * @throws SQLException
-   *           if unable to delete pending AU
-   */
-  private int removeMetadata(Connection conn, ArchivalUnit au)
-      throws SQLException {
-    return removeMetadata(conn, au.getAuId());
-  }
-
-  /**
    * Remove all articles for an AU from the pending Aus table.
    * 
-   * @param auId
-   *          the pending AuId
+   * @param auId the pending AuId
    * @return the number of articles deleted
    * @throws SQLException
    *           if unable to delete pending AU
@@ -2091,10 +2268,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /**
    * Notify listeners that an AU has been removed.
    * 
-   * @param auId
-   *          the AuId of the AU that was removed
-   * @param articleCount
-   *          the number of articles deleted
+   * @param auId the AuId of the AU that was removed
+   * @param articleCount the number of articles deleted
    */
   protected void notifyDeletedAu(String auId, int articleCount) {
   }
@@ -2103,8 +2278,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * 
    * Notify listeners that an AU is being reindexed.
    * 
-   * @param au
-   *          the AU
+   * @param au the AU
    */
   protected void notifyStartReindexingAu(ArchivalUnit au) {
   }
@@ -2121,10 +2295,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /**
    * Get list of AuIds that require reindexing.
    * 
-   * @param conn
-   *          the database connection
-   * @param maxAus
-   *          the maximum number of AuIds to return
+   * @param conn the database connection
+   * @param maxAus the maximum number of AuIds to return
    * @return list of AuIds
    */
   List<String> getAuIdsToReindex(Connection conn, int maxAuIds) {
@@ -2162,8 +2334,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * Temporary implementation runs as a LockssRunnable in a thread rather than
    * using the SchedService.
    * 
-   * @param task
-   *          the reindexing task
+   * @param task the reindexing task
    */
   private void runReindexingTask(final ReindexingTask task) {
     /*
@@ -2192,16 +2363,35 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /**
    * Cancel a reindexing task for the specified AU.
    * 
-   * @param auId
-   *          the AU id
+   * @param auId the AU id
+   * @return <code>true</code> if task was canceled
    */
-  private void cancelAuTask(String auId) {
+  private boolean cancelAuTask(String auId) {
     ReindexingTask task = activeReindexingTasks.get(auId);
     if (task != null) {
       // task cancellation will remove task and schedule next one
       log.debug2("Canceling pending reindexing task for auId " + auId);
       task.cancel();
+      return true;
     }
+    return false;
+  }
+
+  /**
+   * Reschedule a reindexing task for the specified AU.
+   * 
+   * @param auId the AU id
+   * @return <code>true</code> if task was rescheduled
+   */
+  private boolean rescheduleAuTask(String auId) {
+    ReindexingTask task = activeReindexingTasks.get(auId);
+    if (task != null) {
+      // task rescheduling will remove task, and cause it to be rescheduled
+      log.debug2("Rescheduling pending reindexing task for auId " + auId);
+      task.reschedule();
+      return true;
+    }
+    return false;
   }
 
   /**
@@ -2302,11 +2492,19 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           return false;
         }
 
-        cancelAuTask(au.getAuId());
-        addToPendingAus(conn, Collections.singleton(au));
-        conn.commit();
-
-        startReindexing(conn);
+        // if disabled crawl completion rescheduling
+        // a running task, have this function report false;
+        if (   disableCrawlRescheduleTask
+            && activeReindexingTasks.containsKey(au.getAuId())) {
+          return false;
+        }
+        
+        // if can't reschedule current task, add AU to pending list
+        if (!rescheduleAuTask(au.getAuId())) {
+          addToPendingAus(conn, Collections.singleton(au));
+          conn.commit();
+          startReindexing(conn);
+        }
         return true;
       } catch (SQLException ex) {
         log.error("Cannot add au to pending AUs: " + au.getName(), ex);
