@@ -30,17 +30,13 @@ package org.lockss.plugin.elsevier;
 
 import java.io.*;
 import java.util.*;
-import java.util.regex.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
 import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.plugin.elsevier.ElsevierTocMetadataExtractorFactory.ElsevierTocMetadataExtractor;
 import org.lockss.plugin.simulated.*;
 
