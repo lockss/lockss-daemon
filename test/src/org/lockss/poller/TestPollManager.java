@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.110 2012-07-25 20:54:57 barry409 Exp $
+ * $Id: TestPollManager.java,v 1.111 2012-08-07 22:59:23 barry409 Exp $
  */
 
 /*
@@ -505,31 +505,6 @@ public class TestPollManager extends LockssTestCase {
       res.add(req.getAu());
     }
     return res;
-  }
-
-  public void testReputaionTransferMap() throws Exception {
-    String p1 = "TCP:[127.0.0.1]:12";
-    String p2 = "TCP:[127.0.0.2]:12";
-    String p3 = "TCP:[127.0.0.3]:12";
-    String p4 = "TCP:[127.0.0.4]:12";
-    String p5 = "TCP:[127.0.0.5]:12";
-  
-    PeerIdentity peer1 = idmanager.stringToPeerIdentity(p1);
-    PeerIdentity peer2 = idmanager.stringToPeerIdentity(p2);
-    PeerIdentity peer3 = idmanager.stringToPeerIdentity(p3);
-    PeerIdentity peer4 = idmanager.stringToPeerIdentity(p4);
-    PeerIdentity peer5 = idmanager.stringToPeerIdentity(p5);
-
-    assertNull(pollmanager.getReputationTransferredFrom(peer1));
-    assertNull(pollmanager.getReputationTransferredFrom(peer2));
-
-    String xfermap = p1 + "," + p2 + ";" + p3 + "," + p4;
-    ConfigurationUtil.addFromArgs(V3Voter.PARAM_REPUTATION_TRANSFER_MAP,
-				  xfermap);
-    assertEquals(peer1, pollmanager.getReputationTransferredFrom(peer2));
-    assertEquals(peer3, pollmanager.getReputationTransferredFrom(peer4));
-    assertNull(pollmanager.getReputationTransferredFrom(peer1));
-    assertNull(pollmanager.getReputationTransferredFrom(peer5));
   }
 
   public void testAtRiskMap() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.252 2012-07-30 21:44:47 barry409 Exp $
+ * $Id: PollManager.java,v 1.253 2012-08-07 22:59:23 barry409 Exp $
  */
 
 /*
@@ -225,7 +225,6 @@ public class PollManager
   public static final long DEFAULT_TOPLEVEL_POLL_INTERVAL = 10 * WEEK;
 
   public static class AuPeersMap extends HashMap<String,Set<PeerIdentity>> {}
-  public static class Peer2PeerMap extends HashMap<PeerIdentity,PeerIdentity> {}
 
   // todo(bhayes): It would be nice to get this class out of the
   // business if knowing about isPollComplete. The behavior before
@@ -659,7 +658,7 @@ public class PollManager
     DEFAULT_INVITATION_WEIGHT_ALREADY_REPAIRABLE;
   private CompoundLinearSlope v3NoAuResetIntervalCurve = null;
   private CompoundLinearSlope v3VoteRetryIntervalDurationCurve = null;
-  private Peer2PeerMap reputationTransferMap;
+  private ReputationTransfers reputationTransfers;
 
   private AuPeersMap atRiskAuInstances = null;
 
@@ -957,11 +956,7 @@ public class PollManager
 		       theIDManager);
     }
 
-    if (config.containsKey(PARAM_REPUTATION_TRANSFER_MAP)) {
-      reputationTransferMap =
-	makeReputationPeerMap(config.getList(PARAM_REPUTATION_TRANSFER_MAP),
-			      theIDManager);
-    }
+    reputationTransfers = new ReputationTransfers(theIDManager);
 
     // register a message handler with the router
     theRouter = theDaemon.getRouterManager();
@@ -1708,13 +1703,10 @@ public class PollManager
 	  makeAuPeersMap(newConfig.getList(PARAM_AT_RISK_AU_INSTANCES),
 			 theIDManager);
       }
-      if (changedKeys.contains(PARAM_REPUTATION_TRANSFER_MAP) &&
-	  theIDManager != null) {
-	reputationTransferMap =
-	  makeReputationPeerMap(newConfig.getList(PARAM_REPUTATION_TRANSFER_MAP),
-				theIDManager);
-    }
-
+      if (reputationTransfers != null) {
+	// todo(bhayes): is null in some unit tests.
+	reputationTransfers.setConfig(newConfig, oldConfig, changedKeys);
+      }
       if (changedKeys.contains(PARAM_INVITATION_WEIGHT_AGE_CURVE)) {
 	v3InvitationWeightAgeCurve =
 	  processWeightCurve("V3 invitation weight age curve",
@@ -1810,34 +1802,6 @@ public class PollManager
     }
   }
 
-  /** Build reputation map backwards (toPid -> fromPid) because it's
-   * accessed to determine whether a repair should be served (as opposed to
-   * when reputation is established), so we need to look up toPid to see if
-   * another peer's reputation should be extended to it.  This implies that
-   * only one peer's reputation may be extended to any other peer */
-  Peer2PeerMap makeReputationPeerMap(Collection<String> peerPairs,
-				     IdentityManager idMgr) {
-    Peer2PeerMap res = new Peer2PeerMap();
-    for (String onePair : peerPairs) {
-      List<String> lst = StringUtil.breakAt(onePair, ',', -1, true, true);
-      if (lst.size() == 2) {
-	try {
-	  PeerIdentity pid1 = idMgr.stringToPeerIdentity(lst.get(0));
-	  PeerIdentity pid2 = idMgr.stringToPeerIdentity(lst.get(1));
-	  res.put(pid2, pid1);
-	  if (theLog.isDebug2()) {
-	    theLog.debug2("Extend reputation from " + pid1 + " to " + pid2);
-	  }
-	} catch (IdentityManager.MalformedIdentityKeyException e) {
-	  theLog.warning("Bad peer id in peer2peer map", e);
-	}
-      } else {
-	theLog.warning("Malformed reputation mapping: " + onePair);
-      }
-    }
-    return res;
-  }
-
   AuPeersMap makeAuPeersMap(Collection<String> auPeersList,
 			    IdentityManager idMgr) {
     AuPeersMap res = new AuPeersMap();
@@ -1882,10 +1846,7 @@ public class PollManager
   }
 
   public PeerIdentity getReputationTransferredFrom(PeerIdentity pid) {
-    if (reputationTransferMap != null) {
-      return reputationTransferMap.get(pid);
-    }
-    return null;
+    return reputationTransfers.getReputationTransferredFrom(pid);
   }
 
   public Set<PeerIdentity> getPeersWithAuAtRisk(ArchivalUnit au) {
