@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbout.py,v 1.12 2011-07-11 15:05:28 thib_gc Exp $
+# $Id: tdbout.py,v 1.13 2012-08-07 23:11:51 aishizaki Exp $
 
 # Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -51,6 +51,10 @@ class TdboutConstants:
     OPTION_AUID = 'auid'
     OPTION_AUID_SHORT = 'a'
     OPTION_AUID_HELP = 'equivalent of \'-%s list -%s auid\'' % (OPTION_STYLE_SHORT, OPTION_FIELDS_SHORT)
+    
+    OPTION_AUIDPLUS = 'auidplus'
+    OPTION_AUIDPLUS_SHORT = 'p'
+    OPTION_AUIDPLUS_HELP = 'equivalent of \'-%s list -%s auidplus\'' % (OPTION_STYLE_SHORT, OPTION_FIELDS_SHORT)
 
     OPTION_CSV = 'csv'
     OPTION_CSV_SHORT = 'c'
@@ -143,6 +147,16 @@ def __option_parser__(parser=None):
                             action='callback',
                             help=TdboutConstants.OPTION_AUID_HELP,
                             callback=__synonym_auid) 
+    def __synonym_auidplus(opt, str, val, par):
+        if getattr(par.values, TdboutConstants.OPTION_STYLE, None): par.error('cannot specify -%s and -%s together' % (TdboutConstants.OPTION_AUIDPLUS_SHORT, TdboutConstants.OPTION_STYLE_SHORT))
+        setattr(par.values, TdboutConstants.OPTION_STYLE, TdboutConstants.OPTION_STYLE_LIST)
+        setattr(par.values, TdboutConstants.OPTION_FIELDS, 'auidplus')
+    tdbout_group.add_option('-' + TdboutConstants.OPTION_AUIDPLUS_SHORT,
+                            '--' + TdboutConstants.OPTION_AUIDPLUS,
+                            type=None,
+                            action='callback',
+                            help=TdboutConstants.OPTION_AUIDPLUS_HELP,
+                            callback=__synonym_auidplus)
     def __synonym_csv(opt, str, val, par):
         if getattr(par.values, TdboutConstants.OPTION_STYLE, None): par.error('cannot specify -%s and -%s together' % (TdboutConstants.OPTION_CSV_SHORT, TdboutConstants.OPTION_STYLE_SHORT))
         setattr(par.values, TdboutConstants.OPTION_STYLE, TdboutConstants.OPTION_STYLE_CSV)
