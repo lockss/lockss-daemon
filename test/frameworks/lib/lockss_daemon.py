@@ -388,15 +388,15 @@ class Client:
 
     def createAu( self, AU ):
         """Create an AU by Manual Journal Configuration."""
-        # Note that this is probably not what you want. This will not
-        # be correct if the AU has nondefinitional parameters. You
+        # Note that this is probably not what you want. You
         # probably want addByAuid, unless the AU isn't in the TDB.
+        # now works with nondef parameters
         self.__execute_AU_post( AU, 'Create' )
 
     def addByAuid( self, AU ):
         """Create an AU by lookup in the TDB."""
         self.__execute_AU_post( AU, 'AddByAuid' )
-
+ 
     def waitAu( self, AU ):
         """Block until the AU appears in the server's status table."""
         if not self.waitForCreateAu( AU ):
@@ -1013,6 +1013,7 @@ class Client:
         if form_data is None:
             form_data = {}
         form_data.update( { 'lockssAction': lockssAction, 'PluginId': AU.pluginId, 'auid': AU.auId } )
+        # Removing from incoming AU's vars- ['pluginId, auId' (etc) were set in the python AU]
         for key in set( vars( AU ) ) - set( ( 'pluginId', 'auId', 'title', 'baseUrl' ) ):
             form_data[ 'lfp.' + key ] = getattr( AU, key )
         self.__execute_post( 'AuConfig', form_data )
@@ -1218,7 +1219,7 @@ class AU:
 
     """
 
-    def __init__( self, auId ):
+    def __init__( self, auId, nonDefParams=None ):
         self.auId = auId.strip()
         try:
             self.pluginId, properties = self.auId.split( '&', 1 )
@@ -1233,36 +1234,47 @@ class AU:
                                ' AU ID "%s"' % ( self.pluginId, self.auId ) )
         self.pluginId = self.pluginId.replace( '|', '.' )
         self.title = urllib.unquote_plus( properties )
+        # first search string for params in auId
+        # then if necessary, search for nondefparams
         for property in properties.split( '&' ):
-            try:
-                key, value = property.split( '~', 1 )
-            except ValueError:
-                raise LockssError( 'Expected to find a ~ character in'
-                                   ' property "%s" in AU ID "%s"' %
-                                   ( property, self.auId ) )
-            # unquote_plus doesn't raise any exceptions.
-            key = urllib.unquote_plus( key )
-            value = urllib.unquote_plus( value )
-
-            if hasattr( self, key ):
-                # This could be a dup or something we use in class AU,
-                # like 'title'.
-
-                # todo: Make properties a dict, not attributes, or
-                # make the internal attribues less likely to collide
-                # with AU properties.
-                raise LockssError( 'Duplicate or illegal key "%s" in' 
-                                   ' property "%s" in AU ID "%s"' %
-                                   ( key, property, self.auId ) )
-            setattr( self, key, value )
+            self._handleProperty(property)    
+        if (nonDefParams) :
+            for property in nonDefParams.split('&'):
+                self._handleProperty(property)
+ 
         if self.pluginId != Simulated_AU.SIMULATED_PLUGIN \
           and not hasattr( self, "base_url" ):
             raise LockssError( 'Failed to find required key "base_url" in'
                                ' AU ID "%s"' % self.auId )
 
+    def _handleProperty(self, property):
+        """ get the key/value parts of the given property, checks for collisions with AU props
+        """
+        try:
+            key, value = property.split( '~', 1 )
+        except ValueError:
+            raise LockssError( 'Expected to find a ~ character in'
+                               ' property "%s" in AU ID "%s"' %
+                               ( property, self.auId ) )
+                
+        # unquote_plus doesn't raise any exceptions.
+        key = urllib.unquote_plus( key )
+        value = urllib.unquote_plus( value )
+
+        if hasattr( self, key ):
+            # This could be a dup or something we use in class AU,
+            # like 'title'.
+
+            # todo: Make properties a dict, not attributes, or
+            # make the internal attribues less likely to collide
+            # with AU properties.
+            raise LockssError( 'Duplicate or illegal key "%s" in' 
+                               ' property "%s" in AU ID "%s"' %
+                               ( key, property, self.auId ) )
+        setattr( self, key, value )
+         
     def __str__( self ):
         return self.title
-
 
 class Simulated_AU( AU ):
     """SimulatedPlugin Archival Unit."""
