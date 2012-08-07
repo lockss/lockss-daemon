@@ -6,7 +6,7 @@
   attr[contract] = 2010
   param[base_url] = https://www.thieme-connect.com/
   plugin = needs.plugin
-  implicit < status ; status2 ; year ; name ; param[year] >
+  implicit < status ; status2 ; name ; year ; param[year] >
   
   
   {
@@ -20,28 +20,28 @@
     param[journal_id] = 10.1055/s-00000001
     comment[years] = 1991-current
     
-    au < exists ; exists ; 1991 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1991 ; 1991 >  
-    au < exists ; exists ; 1992 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1992 ; 1992 >  
-    au < exists ; exists ; 1993 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1993 ; 1993 >  
-    au < exists ; exists ; 1994 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1994 ; 1994 >  
-    au < exists ; exists ; 1995 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1995 ; 1995 >  
-    au < exists ; exists ; 1996 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1996 ; 1996 >  
-    au < exists ; exists ; 1997 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1997 ; 1997 >  
-    au < exists ; exists ; 1998 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1998 ; 1998 >  
-    au < exists ; exists ; 1999 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1999 ; 1999 >  
-    au < exists ; exists ; 2000 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2000 ; 2000 >  
-    au < exists ; exists ; 2001 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2001 ; 2001 >  
-    au < exists ; exists ; 2002 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2002 ; 2002 >  
-    au < exists ; exists ; 2003 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2003 ; 2003 >  
-    au < exists ; exists ; 2004 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2004 ; 2004 >  
-    au < exists ; exists ; 2005 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2005 ; 2005 >  
-    au < exists ; exists ; 2006 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2006 ; 2006 >  
-    au < exists ; exists ; 2007 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2007 ; 2007 >  
-    au < exists ; exists ; 2008 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2008 ; 2008 >  
-    au < exists ; exists ; 2009 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2009 ; 2009 >  
-    au < exists ; exists ; 2010 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2010 ; 2010 > 
-    au < exists ; exists ; 2011 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2011 ; 2011 >  
-    au < exists ; exists ; 2012 ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2012 ; 2012 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1991 ; 1991 ; 1991 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1992 ; 1992 ; 1992 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1993 ; 1993 ; 1993 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1994 ; 1994 ; 1994 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1995 ; 1995 ; 1995 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1996 ; 1996 ; 1996 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1997 ; 1997 ; 1997 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1998 ; 1998 ; 1998 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 1999 ; 1999 ; 1999 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2000 ; 2000 ; 2000 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2001 ; 2001 ; 2001 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2002 ; 2002 ; 2002 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2003 ; 2003 ; 2003 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2004 ; 2004 ; 2004 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2005 ; 2005 ; 2005 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2006 ; 2006 ; 2006 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2007 ; 2007 ; 2007 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2008 ; 2008 ; 2008 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2009 ; 2009 ; 2009 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2011 ; 2011 ; 2011 >  
+    au < exists ; exists ; AINS - Anästhesiologie - Intensivmedizin - Notfallmedizin - Schmerztherapie 2012 ; 2012 ; 2012 >  
   
   }
   
@@ -56,17 +56,17 @@
     comment[years] = 1980-1990
     comment[eissn] = no eissn 1980-1990
     
-    au < exists ; exists ; 1980 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1980 ; 1980 >  
-    au < exists ; exists ; 1981 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1981 ; 1981 >  
-    au < exists ; exists ; 1982 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1982 ; 1982 >  
-    au < exists ; exists ; 1983 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1983 ; 1983 >  
-    au < exists ; exists ; 1984 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1984 ; 1984 >  
-    au < exists ; exists ; 1985 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1985 ; 1985 >  
-    au < exists ; exists ; 1986 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1986 ; 1986 >  
-    au < exists ; exists ; 1987 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1987 ; 1987 >  
-    au < exists ; exists ; 1988 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1988 ; 1988 >  
-    au < exists ; exists ; 1989 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1989 ; 1989 >  
-    au < exists ; exists ; 1990 ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1990 ; 1990 >  
+    au < exists ; exists ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1980 ; 1980 ; 1980 >  
+    au < exists ; exists ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1981 ; 1981 ; 1981 >  
+    au < exists ; exists ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1982 ; 1982 ; 1982 >  
+    au < exists ; exists ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1983 ; 1983 ; 1983 >  
+    au < exists ; exists ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1984 ; 1984 ; 1984 >  
+    au < exists ; exists ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1985 ; 1985 ; 1985 >  
+    au < exists ; exists ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1986 ; 1986 ; 1986 >  
+    au < exists ; exists ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1987 ; 1987 ; 1987 >  
+    au < exists ; exists ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1988 ; 1988 ; 1988 >  
+    au < exists ; exists ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1989 ; 1989 ; 1989 >  
+    au < exists ; exists ; Anästhesiologie, Intensivmedizin, Notfallmedizin  1990 ; 1990 ; 1990 >  
   
   }
   
@@ -80,18 +80,18 @@
     param[journal_id] = 10.1055/s-00000002
     comment[years] = 2001-current
     
-    au < exists ; exists ; 2001 ; Aktuelle Dermatologie 2001 ; 2001 >  
-    au < exists ; exists ; 2002 ; Aktuelle Dermatologie 2002 ; 2002 >  
-    au < exists ; exists ; 2003 ; Aktuelle Dermatologie 2003 ; 2003 >  
-    au < exists ; exists ; 2004 ; Aktuelle Dermatologie 2004 ; 2004 >  
-    au < exists ; exists ; 2005 ; Aktuelle Dermatologie 2005 ; 2005 >  
-    au < exists ; exists ; 2006 ; Aktuelle Dermatologie 2006 ; 2006 >  
-    au < exists ; exists ; 2007 ; Aktuelle Dermatologie 2007 ; 2007 >  
-    au < exists ; exists ; 2008 ; Aktuelle Dermatologie 2008 ; 2008 >  
-    au < exists ; exists ; 2009 ; Aktuelle Dermatologie 2009 ; 2009 >  
-    au < exists ; exists ; 2010 ; Aktuelle Dermatologie 2010 ; 2010 >  
-    au < exists ; exists ; 2011 ; Aktuelle Dermatologie 2011 ; 2011 >  
-    au < exists ; exists ; 2012 ; Aktuelle Dermatologie 2012 ; 2012 >  
+    au < exists ; exists ; Aktuelle Dermatologie 2001 ; 2001 ; 2001 >  
+    au < exists ; exists ; Aktuelle Dermatologie 2002 ; 2002 ; 2002 >  
+    au < exists ; exists ; Aktuelle Dermatologie 2003 ; 2003 ; 2003 >  
+    au < exists ; exists ; Aktuelle Dermatologie 2004 ; 2004 ; 2004 >  
+    au < exists ; exists ; Aktuelle Dermatologie 2005 ; 2005 ; 2005 >  
+    au < exists ; exists ; Aktuelle Dermatologie 2006 ; 2006 ; 2006 >  
+    au < exists ; exists ; Aktuelle Dermatologie 2007 ; 2007 ; 2007 >  
+    au < exists ; exists ; Aktuelle Dermatologie 2008 ; 2008 ; 2008 >  
+    au < exists ; exists ; Aktuelle Dermatologie 2009 ; 2009 ; 2009 >  
+    au < exists ; exists ; Aktuelle Dermatologie 2010 ; 2010 ; 2010 >  
+    au < exists ; exists ; Aktuelle Dermatologie 2011 ; 2011 ; 2011 >  
+    au < exists ; exists ; Aktuelle Dermatologie 2012 ; 2012 ; 2012 >  
     
   } 
   
@@ -105,18 +105,18 @@
     param[journal_id] = 10.1055/s-00000003
     comment[years] = 2001-current
     
-    au < exists ; exists ; 2001 ; Aktuelle Ernährungsmedizin 2001 ; 2001 >  
-    au < exists ; exists ; 2002 ; Aktuelle Ernährungsmedizin 2002 ; 2002 >  
-    au < exists ; exists ; 2003 ; Aktuelle Ernährungsmedizin 2003 ; 2003 >  
-    au < exists ; exists ; 2004 ; Aktuelle Ernährungsmedizin 2004 ; 2004 >  
-    au < exists ; exists ; 2005 ; Aktuelle Ernährungsmedizin 2005 ; 2005 >  
-    au < exists ; exists ; 2006 ; Aktuelle Ernährungsmedizin 2006 ; 2006 >  
-    au < exists ; exists ; 2007 ; Aktuelle Ernährungsmedizin 2007 ; 2007 >  
-    au < exists ; exists ; 2008 ; Aktuelle Ernährungsmedizin 2008 ; 2008 >  
-    au < exists ; exists ; 2009 ; Aktuelle Ernährungsmedizin 2009 ; 2009 >  
-    au < exists ; exists ; 2010 ; Aktuelle Ernährungsmedizin 2010 ; 2010 >  
-    au < exists ; exists ; 2011 ; Aktuelle Ernährungsmedizin 2011 ; 2011 >  
-    au < exists ; exists ; 2012 ; Aktuelle Ernährungsmedizin 2012 ; 2012 >  
+    au < exists ; exists ; Aktuelle Ernährungsmedizin 2001 ; 2001 ; 2001 >  
+    au < exists ; exists ; Aktuelle Ernährungsmedizin 2002 ; 2002 ; 2002 >  
+    au < exists ; exists ; Aktuelle Ernährungsmedizin 2003 ; 2003 ; 2003 >  
+    au < exists ; exists ; Aktuelle Ernährungsmedizin 2004 ; 2004 ; 2004 >  
+    au < exists ; exists ; Aktuelle Ernährungsmedizin 2005 ; 2005 ; 2005 >  
+    au < exists ; exists ; Aktuelle Ernährungsmedizin 2006 ; 2006 ; 2006 >  
+    au < exists ; exists ; Aktuelle Ernährungsmedizin 2007 ; 2007 ; 2007 >  
+    au < exists ; exists ; Aktuelle Ernährungsmedizin 2008 ; 2008 ; 2008 >  
+    au < exists ; exists ; Aktuelle Ernährungsmedizin 2009 ; 2009 ; 2009 >  
+    au < exists ; exists ; Aktuelle Ernährungsmedizin 2010 ; 2010 ; 2010 >  
+    au < exists ; exists ; Aktuelle Ernährungsmedizin 2011 ; 2011 ; 2011 >  
+    au < exists ; exists ; Aktuelle Ernährungsmedizin 2012 ; 2012 ; 2012 >  
       
   }
   
@@ -291,16 +291,16 @@
     param[journal_id] = 10.1055/s-00000008
     comment[years] = 1948-current
     
-    au < exists ; exists ; 1970 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
-    au < exists ; exists ; 1971 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
-    au < exists ; exists ; 1972 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
-    au < exists ; exists ; 1973 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
-    au < exists ; exists ; 1974 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
-    au < exists ; exists ; 1975 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
-    au < exists ; exists ; 1976 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
-    au < exists ; exists ; 1977 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
-    au < exists ; exists ; 1978 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
-    au < exists ; exists ; 1979 ; Allgemeine Homöopathische Zeitung 197 ; 197 >   
+    au < exists ; exists ; 1970 ; Allgemeine Homöopathische Zeitung 1970 ; 197 >   
+    au < exists ; exists ; 1971 ; Allgemeine Homöopathische Zeitung 1971 ; 197 >   
+    au < exists ; exists ; 1972 ; Allgemeine Homöopathische Zeitung 1972 ; 197 >   
+    au < exists ; exists ; 1973 ; Allgemeine Homöopathische Zeitung 1973 ; 197 >   
+    au < exists ; exists ; 1974 ; Allgemeine Homöopathische Zeitung 1974 ; 197 >   
+    au < exists ; exists ; 1975 ; Allgemeine Homöopathische Zeitung 1975 ; 197 >   
+    au < exists ; exists ; 1976 ; Allgemeine Homöopathische Zeitung 1976 ; 197 >   
+    au < exists ; exists ; 1977 ; Allgemeine Homöopathische Zeitung 1977 ; 197 >   
+    au < exists ; exists ; 1978 ; Allgemeine Homöopathische Zeitung 1978 ; 197 >   
+    au < exists ; exists ; 1979 ; Allgemeine Homöopathische Zeitung 1979 ; 197 >   
     au < exists ; exists ; 1980 ; Allgemeine Homöopathische Zeitung 1980 ; 1980 >   
     au < exists ; exists ; 1981 ; Allgemeine Homöopathische Zeitung 1981 ; 1981 >   
     au < exists ; exists ; 1982 ; Allgemeine Homöopathische Zeitung 1982 ; 1982 >   
@@ -363,9 +363,9 @@
       param[journal_id] = 10.1055/s-00000009
       comment[years] = 1983-current
 
-    au < exists ; exists ; American Journal of Perinatology 2010 ;  2010 ; 2010 >   
-    au < exists ; exists ; American Journal of Perinatology 2011 ;  2011 ; 2011 >   
-    au < exists ; exists ; American Journal of Perinatology 2012 ;  2012 ; 2012 >   
+    au < exists ; exists ; 2010 ; American Journal of Perinatology 2010 ; 2010 >   
+    au < exists ; exists ; 2011 ; American Journal of Perinatology 2011 ; 2011 >   
+    au < exists ; exists ; 2012 ; American Journal of Perinatology 2012 ; 2012 >   
         
    }     
   
@@ -396,9 +396,9 @@
     comment[years] = 1999-current  
     comment[0] = includes Arzneimittelforschung Drug Research
     
-    au < exists ; exists ; Arzneimittelforschung 2010 ;  2010 ; 2010 >   
-    au < exists ; exists ; Arzneimittelforschung 2011 ;  2011 ; 2011 >   
-    au < exists ; exists ; Arzneimittelforschung 2012 ;  2012 ; 2012 >   
+    au < exists ; exists ; 2010 ; Arzneimittelforschung 2010 ; 2010 >   
+    au < exists ; exists ; 2011 ; Arzneimittelforschung 2011 ; 2011 >   
+    au < exists ; exists ; 2012 ; Arzneimittelforschung 2012 ; 2012 >   
     
     
    }    
