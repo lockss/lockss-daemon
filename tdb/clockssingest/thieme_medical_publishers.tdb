@@ -422,14 +422,19 @@
     comment[years] = 1999-current  
     comment[0] = includes Arzneimittelforschung Drug Research
     
-    au < exists ; exists ; Arzneimittelforschung 2010 ; 2010 ; 2010 >   
-    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2008 ; 2008 ; 2008 >  
-    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2009 ; 2009 ; 2009 >      
-    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2010 ; 2010 ; 2010 >      
-    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2011 ; 2011 ; 2011 >      
-    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2012 ; 2012 ; 2012 >     
-    au < exists ; exists ; Arzneimittelforschung 2011 ; 2011 ; 2011 >   
-    au < exists ; exists ; Arzneimittelforschung 2012 ; 2012 ; 2012 >   
+    au < exists ; exists ; Arzneimittelforschung 1999 ; 1999 ; 1999 > 
+    au < exists ; exists ; Arzneimittelforschung 2001 ; 2001 ; 2001 > 
+    au < exists ; exists ; Arzneimittelforschung 2002 ; 2002 ; 2002 > 
+    au < exists ; exists ; Arzneimittelforschung 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; Arzneimittelforschung 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; Arzneimittelforschung 2005 ; 2005 ; 2005 >     
+    au < exists ; exists ; Arzneimittelforschung 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Arzneimittelforschung 2007 ; 2007 ; 2007 >     
+    au < exists ; exists ; Arzneimittelforschung 2008 ; 2008 ; 2008 >  
+    au < exists ; exists ; Arzneimittelforschung 2009 ; 2009 ; 2009 >        
+    au < exists ; exists ; Arzneimittelforschung 2010 ; 2010 ; 2010 >      
+    au < exists ; exists ; Arzneimittelforschung 2011 ; 2011 ; 2011 >      
+    au < exists ; exists ; Arzneimittelforschung 2012 ; 2012 ; 2012 >      
     
     
    }    
