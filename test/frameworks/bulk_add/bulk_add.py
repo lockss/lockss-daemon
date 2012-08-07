@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: bulk_add.py,v 1.4 2011-10-19 17:32:13 barry409 Exp $
+# $Id: bulk_add.py,v 1.5 2012-08-07 23:25:13 aishizaki Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -63,6 +63,8 @@ def _parser():
                         help='use Manual Journal Configuration')
     parser.add_option('-t', '--tdb', dest='tdb', action='store_true',
                         default=False, help='use the TDB to find the AU')
+    parser.add_option('-n', '--nondefparams', dest = 'nondef', action='store_true', 
+                      default=False, help='allow nondef params in AUid (from TDB)')
     return parser
 
 
@@ -80,7 +82,7 @@ def _process_args():
     return (options, host, port, auid_files)
 
 
-def _aus(auid_files):
+def _aus(auid_files, options):
     """Read each line of each file and make a list of lockss_daemon.AUs"""
     aus = list()
     for auid_file in auid_files:
@@ -89,7 +91,14 @@ def _aus(auid_files):
         else:
             f = open(auid_file)
         for auid in f.readlines():
-            aus.append(lockss_daemon.AU(auid))
+            if options.nondef :
+                # replacing the '&&&NondefParamsFollow&&&' divider (placed from tdb.py) with 
+                # the more standard '&', before sending to initialize the lockss_daemon.AUs
+                params = auid.partition("&&&NondefParamsFollow&&&")
+                ndp = params[2].replace("&&&NondefParamsFollow&&&", '&')
+                aus.append(lockss_daemon.AU(params[0], ndp))
+            else :
+                aus.append(lockss_daemon.AU(auid))
     return aus
 
 
@@ -98,7 +107,7 @@ def main():
     fix_auth_failure.fix_auth_failure()
     client = lockss_daemon.Client(host, port,
                                   options.user, options.password)
-    aus = _aus(auid_files)
+    aus = _aus(auid_files, options)
     has = list()
     missing = list()
     initial_auIds = client.getListOfAuids()
@@ -124,9 +133,10 @@ def main():
             if not options.verify or \
                     options.verify and \
                     raw_input('create %s [n]? ' % au.title).startswith('y'):
-                if options.tdb:
+                if options.tdb :
                     client.addByAuid(au)
                 else:
+                    # if options.nondef, call createAu in case no tdb available
                     client.createAu(au)
         except lockss_util.LockssError:
             # Failed to create. Print the errors after all creation attempts.
@@ -141,8 +151,7 @@ def main():
 
     if failed:
         print >> sys.stderr, "failed to add"
-        for au in failed:
-            
+        for au in failed:            
             print >> sys.stderr, au.auId
         exit(1)
 
