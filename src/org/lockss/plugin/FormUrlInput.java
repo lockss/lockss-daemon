@@ -39,6 +39,13 @@ public class FormUrlInput implements Comparable<FormUrlInput> {
   private String m_encodedName;
   private String m_encodedValue;
 
+  /**
+   * Create a new name:value pair.
+   * This will convert an encoded name:value pair.  Since we don't know
+   * whether or not the string is encoded we ALWAYS decode.
+   * @param name  the name or key
+   * @param value the value assigned to the name or key
+   */
   public FormUrlInput(String name, String value) {
     if (name == null || name.length() <= 0) {
       m_name = "";
@@ -60,44 +67,77 @@ public class FormUrlInput implements Comparable<FormUrlInput> {
     }
   }
 
+  /**
+   * Get the unencoded name
+   * @return the unencoded name or key
+   */
   public String getRawName() {
     return m_name;
   }
 
+  /**
+   * Get the unencoded value
+   * @return the unencoded value
+   */
   public String getRawValue() {
     return m_value;
   }
 
-  //application/x-www-form-encoded content requires space be converted to a +
-  // .  This will also allow us to match incoming client requests
+  /**
+   * Get the encoded name
+   * @return the encoded name or key
+   */
+  public String getEncodedName() {
+    if (m_encodedName == null)
+      m_encodedName = formEncodeParameter(m_name);
+    return m_encodedName;
+  }
+
+  /**
+   * Get the encoded value
+   * @return the encoded value
+   */
+  public String getEncodedValue() {
+    if (m_encodedValue == null)
+      m_encodedValue = formEncodeParameter(m_value);
+    return m_encodedValue;
+  }
+
+  /**
+   * Return /application/x-www-form-encoded content.  This require ' ' to be
+   * converted to '+'.  This will also allow us to match incoming client
+   * requests.
+   * @param url string in which ' ' space has been replace with a '+'
+   * @return
+   */
   public String formEncodeParameter(String url) {
     //url = StringUtil.replaceString(url, " ", "+");
     String encoded_url = UrlUtil.encodeUrl(url);
     return encoded_url;
   }
 
-  public String getName() {
-    if (m_encodedName == null)
-      m_encodedName = formEncodeParameter(m_name);
-    return m_encodedName;
-  }
 
-  public String getValue() {
-    if (m_encodedValue == null)
-      m_encodedValue = formEncodeParameter(m_value);
-    return m_encodedValue;
-  }
-
-  //default behavior is to behave like a String for GET requests
+  /**
+   * Returns a string in the form 'key=value'. The default behavior is to behave
+   * like a String for GET requests.  The key and value are the encoded values.
+   * @return
+   */
   public String toString() {
-    return getName() + "=" + getValue();
+    return getEncodedName() + "=" + getEncodedValue();
   }
 
-  //using encoded values to match what we see on the other end?
+  /**
+   * Compare to another FormUrlInput.
+   * Using encoded values to match what we see on the other end?
+   * @param b the value to compare to
+   * @return result of name String.compareTo of the name if different or the
+   * result of the value compareTo
+   */
   public int compareTo(FormUrlInput b) {
-    int name_compare = getName().compareTo(b.getName());
+    int name_compare = getEncodedName().compareTo(b.getEncodedName());
     if (name_compare != 0) { return name_compare; }
-    int value_compare = getValue().compareTo(b.getValue());
+    int value_compare = getEncodedValue().compareTo(b.getEncodedValue());
+    //todo: should just return value_compare these are equivalent.
     if (value_compare != 0) { return value_compare; }
     return 0;
   }

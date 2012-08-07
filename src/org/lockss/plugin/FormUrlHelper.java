@@ -43,7 +43,6 @@ public class FormUrlHelper {
   String m_baseUrl;
   ArrayList<FormUrlInput> m_inputs;
   boolean m_valid = false;
-  boolean m_alreadyencoded = false;
   private static final Logger logger = Logger.getLogger("FormUrlHelper");
 
 
@@ -59,7 +58,6 @@ public class FormUrlHelper {
     m_baseUrl = baseUrl;
     m_valid = true;
     m_inputs = new ArrayList<FormUrlInput>();
-    m_alreadyencoded = false;
   }
 
   //add a single key/value pair to the url in order
@@ -125,9 +123,14 @@ public class FormUrlHelper {
     return m_valid;
   }
 
+  /**
+   * Since this is now identical to convertFromString
+   * @deprecated
+   * @param url the url to encode
+   * @return true if the string is valid (encodable) url.
+   */
   public boolean convertFromEncodedString(String url) {
     convertFromString(url);
-    m_alreadyencoded = true;
     return m_valid;
   }
 
@@ -138,12 +141,14 @@ public class FormUrlHelper {
    */
   public String toString() {
     StringBuilder url = new StringBuilder(m_baseUrl);
-    int i = 0;
+    int end_i = m_inputs.size() - 1;
     url.append("?");
-    for (i = 0; i < m_inputs.size(); i++) {
-      url.append(m_inputs.get(i).getRawName() + "=" + m_inputs.get(i)
-          .getRawValue());
-      if (i != m_inputs.size() - 1) {url.append("&");}
+    for (int i = 0; i < m_inputs.size(); i++) {
+      url.append(m_inputs.get(i).getRawName()).append("=");
+      url.append(m_inputs.get(i).getRawValue());
+      if (i != end_i) {
+        url.append("&");
+      }
     }
     return url.toString();
   }
@@ -156,17 +161,22 @@ public class FormUrlHelper {
   public String toEncodedString() {
     //if (m_alreadyencoded) { return toString();}
     StringBuilder url = new StringBuilder(m_baseUrl);
-    int i = 0;
+    int end_i = m_inputs.size() - 1;
     url.append("?");
-    for (i = 0; i < m_inputs.size(); i++) {
-      url.append(m_inputs.get(i).getName() + "=" + m_inputs.get(i).getValue());
-      if (i != m_inputs.size() - 1) {url.append("&");}
+    for (int i = 0; i < m_inputs.size(); i++) {
+      url.append(m_inputs.get(i).getEncodedName()).append("=");
+      url.append(m_inputs.get(i).getEncodedValue());
+      if (i != end_i) {
+        url.append("&");
+      }
     }
     return url.toString();
   }
 
-  /** reorder the keys/values pairs to put them in alphabetically sorted
-   * order. */
+  /**
+   *  Reorder the keys/values pairs to put them in alphabetically key sorted
+   * order.
+   */
   public void sortKeyValues() {
     Collections.sort(m_inputs);
   }

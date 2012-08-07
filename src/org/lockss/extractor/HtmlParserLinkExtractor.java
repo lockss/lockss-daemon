@@ -87,8 +87,8 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
       PREFIX + "statistics_enabled";
   public static final boolean DEFAULT_NORMALIZE_FORM_URLS = false;
 
-  private static final Logger logger = Logger.getLogger
-      ("HtmlParserLinkExtractor");
+  private static final Logger logger =
+      Logger.getLogger("HtmlParserLinkExtractor");
 
   private int m_maxFormUrls;
   private boolean m_statisticsEnabled;
@@ -107,12 +107,12 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
   public HtmlParserLinkExtractor() {
     // set max form urls
     m_maxFormUrls = CurrentConfig.getIntParam(PARAM_MAX_FORM_URLS,
-        DEFAULT_MAX_FORM_URLS);
+                                              DEFAULT_MAX_FORM_URLS);
 
     // set statistics on/off - def off
     m_statisticsEnabled = CurrentConfig.getBooleanParam
         (PARAM_STATISTICS_ENABLED,
-        DEFAULT_STATISTICS_ENABLED);
+         DEFAULT_STATISTICS_ENABLED);
 
     // set the normalization - def off
     m_normalizeFormUrls = CurrentConfig.getBooleanParam
@@ -172,7 +172,7 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
     catch (RuntimeException e) {
       e.printStackTrace();
       logger.warning("Encountered a runtime exception, " +
-          "continuing link extraction with Gosling", e);
+                         "continuing link extraction with Gosling", e);
     }
 
     // For legacy reasons, we want to ensure link extraction using a more
@@ -188,7 +188,7 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
     }
 
     new GoslingHtmlLinkExtractor().extractUrls(au, inCopy, encoding,
-        srcUrl, current_cb);
+                                               srcUrl, current_cb);
     if (m_statisticsEnabled) {
       stats.stopMeasurement();
       stats.compareExtractors("Gosling", "HtmlParser", "AU: " + au.toString()
@@ -779,14 +779,14 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
                 if (url == null) return;
               }
               logger.debug3("Found link (custom callback) after resolver:" +
-                  url);
+                                url);
               //previously, a length check was done here
               // sort form parameters if enabled
               if (m_normalizeFormUrls) {
                 url = m_normalizer.normalizeUrl(url, m_au);
               }
               logger.debug3("Found link (custom callback) after normalizer:"
-                  + url);
+                                + url);
               // emit the processed url
               m_cb.foundLink(url);
             }
@@ -877,7 +877,8 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
             styleTag.getStyleCode()), m_encoding);
         try {
           m_au.getLinkExtractor("text/css").extractUrls(m_au, in,
-              m_encoding, m_srcUrl, m_cb);
+                                                        m_encoding, m_srcUrl,
+                                                        m_cb);
           return;
         }
         catch (IOException e) {
