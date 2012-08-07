@@ -4035,7 +4035,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Saline Systems Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; Saline Systems Volume 5 ; 5 >
       au < crawling ; exists ; 2010 ; Saline Systems Volume 6 ; 6 >
-      au < crawling ; exists ; 2011 ; Saline Systems Volume 7 ; 7 >
+      au < testing ; exists ; 2011 ; Saline Systems Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Saline Systems Volume 8 ; 8 >
 
     }
@@ -4055,7 +4055,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Scoliosis Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; Scoliosis Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Scoliosis Volume 5 ; 5 >
-      au < crawling ; exists ; 2011 ; Scoliosis Volume 6 ; 6 >
+      au < testing ; exists ; 2011 ; Scoliosis Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Scoliosis Volume 7 ; 7 >
 
     }
@@ -4075,7 +4075,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Source Code for Biology and Medicine Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; Source Code for Biology and Medicine Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Source Code for Biology and Medicine Volume 5 ; 5 >
-      au < crawling ; exists ; 2011 ; Source Code for Biology and Medicine Volume 6 ; 6 >
+      au < testing ; exists ; 2011 ; Source Code for Biology and Medicine Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 >
 
     }
@@ -4095,7 +4095,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 >
-      au < crawling ; exists ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
+      au < testing ; exists ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 >
 
 
@@ -4118,7 +4118,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Theoretical Biology and Medical Modelling Volume 5 ; 5 >
       au < manifest ; exists ; 2009 ; Theoretical Biology and Medical Modelling Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; Theoretical Biology and Medical Modelling Volume 7 ; 7 >
-      au < crawling ; exists ; 2011 ; Theoretical Biology and Medical Modelling Volume 8 ; 8 >
+      au < testing ; exists ; 2011 ; Theoretical Biology and Medical Modelling Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Theoretical Biology and Medical Modelling Volume 9 ; 9 >
 
     }
@@ -4141,7 +4141,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Thrombosis Journal Volume 6 ; 6 >
       au < manifest ; exists ; 2009 ; Thrombosis Journal Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Thrombosis Journal Volume 8 ; 8 >
-      au < crawling ; exists ; 2011 ; Thrombosis Journal Volume 9 ; 9 >
+      au < testing ; exists ; 2011 ; Thrombosis Journal Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Thrombosis Journal Volume 10 ; 10 >
 
     }
@@ -4167,7 +4167,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Trials Volume 9 ; 9 >
       au < manifest ; exists ; 2009 ; Trials Volume 10 ; 10 >
       au < crawling ; exists ; 2010 ; Trials Volume 11 ; 11 >
-      au < crawling ; exists ; 2011 ; Trials Volume 12 ; 12 >
+      au < testing ; exists ; 2011 ; Trials Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; Trials Volume 13 ; 13 >
 
     }
@@ -4182,7 +4182,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.veterinaryresearch.org/
       param[journal_issn] = 1297-9716
 
-      au < crawling ; exists ; 2011 ; Veterinary Research Volume 42 ; 42 >
+      au < testing ; exists ; 2011 ; Veterinary Research Volume 42 ; 42 >
       au < crawling ; exists ; 2012 ; Veterinary Research Volume 43 ; 43 >
 
     }
@@ -4204,7 +4204,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Virology Journal Volume 5 ; 5 >
       au < manifest ; exists ; 2009 ; Virology Journal Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; Virology Journal Volume 7 ; 7 >      
-      au < crawling ; exists ; 2011 ; Virology Journal Volume 8 ; 8 >
+      au < testing ; exists ; 2011 ; Virology Journal Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Virology Journal Volume 9 ; 9>
 
     }
@@ -4224,7 +4224,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; World Journal of Emergency Surgery Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; World Journal of Emergency Surgery Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; World Journal of Emergency Surgery Volume 5 ; 5 >
-      au < crawling ; exists ; 2011 ; World Journal of Emergency Surgery Volume 6 ; 6 >
+      au < testing ; exists ; 2011 ; World Journal of Emergency Surgery Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; World Journal of Emergency Surgery Volume 7 ; 7 >
 
     }
@@ -4247,7 +4247,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; World Journal of Surgical Oncology Volume 6 ; 6 >
       au < manifest ; exists ; 2009 ; World Journal of Surgical Oncology Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; World Journal of Surgical Oncology Volume 8 ; 8 >
-      au < crawling ; exists ; 2011 ; World Journal of Surgical Oncology Volume 9 ; 9 >
+      au < testing ; exists ; 2011 ; World Journal of Surgical Oncology Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; World Journal of Surgical Oncology Volume 10 ; 10 >
 
     }
