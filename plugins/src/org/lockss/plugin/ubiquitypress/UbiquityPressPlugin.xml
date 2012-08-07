@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>17</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -36,7 +36,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
     </map>
   </entry>
@@ -53,6 +53,7 @@
       <list>
         <string>&quot;^%sindex\.php/%s/article/view/%s\.[0-9]+/[0-9]+$&quot;, base_url, journal_id, journal_id </string>
         <string>&quot;^%sindex\.php/%s/article/download/%s\.[0-9]+/[0-9]+$&quot;, base_url, journal_id, journal_id </string>
+        <string>&quot;^%s/article/view/[^/]+/[^/]+</string>
       </list>
   </entry>
   <entry>
