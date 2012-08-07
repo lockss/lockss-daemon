@@ -105,31 +105,28 @@
   
     title <
       name = ECS Meeting Abstracts ;
-      issn = 2151-8213 ;
-      eissn = 2151-2043
-    >
-
-    param[base_url] = http://www.electrochem.org/dl/ma/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    au < HighWirePressH20Plugin ; exists ; 2002 ; ECS Meeting Abstracts Volume MA2002-01 ; MA2002-01 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; ECS Meeting Abstracts Volume MA2002-02 ; MA2002-02 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; ECS Meeting Abstracts Volume MA2003-01 ; MA2003-01 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; ECS Meeting Abstracts Volume MA2003-02 ; MA2003-02 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; ECS Meeting Abstracts Volume MA2004-01 ; MA2004-01 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; ECS Meeting Abstracts Volume MA2004-02 ; MA2004-02 >
-
-  }
-
-  {
-  
-    title <
-      name = ECS Meeting Abstracts ;
       issn = 2151-2041 ;
       eissn = 2151-2043 ;
       issnl = 2151-2041
     >
 
+    {
+    
+    param[base_url] = http://www.electrochem.org/dl/ma/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[notReady] = base url is not working properly
+
+    au < HighWirePressH20Plugin ; notReady ; 2002 ; ECS Meeting Abstracts Volume MA2002-01 ; MA2002-01 >
+    au < HighWirePressH20Plugin ; notReady ; 2002 ; ECS Meeting Abstracts Volume MA2002-02 ; MA2002-02 >
+    au < HighWirePressH20Plugin ; notReady ; 2003 ; ECS Meeting Abstracts Volume MA2003-01 ; MA2003-01 >
+    au < HighWirePressH20Plugin ; notReady ; 2003 ; ECS Meeting Abstracts Volume MA2003-02 ; MA2003-02 >
+    au < HighWirePressH20Plugin ; notReady ; 2004 ; ECS Meeting Abstracts Volume MA2004-01 ; MA2004-01 >
+    au < HighWirePressH20Plugin ; notReady ; 2004 ; ECS Meeting Abstracts Volume MA2004-02 ; MA2004-02 >
+
+    }
+
+    {
+  
     param[base_url] = http://ma.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -151,6 +148,8 @@
     au < HighWirePressH20Plugin ; exists ; 2011 ; ECS Meeting Abstracts Volume MA2011-02 ; MA2011-02 >
     au < HighWirePressH20Plugin ; exists ; 2012 ; ECS Meeting Abstracts Volume MA2012-01 ; MA2012-01 >
     au < HighWirePressH20Plugin ; exists ; 2012 ; ECS Meeting Abstracts Volume MA2012-02 ; MA2012-02 >
+    
+    }
     
   }
 
