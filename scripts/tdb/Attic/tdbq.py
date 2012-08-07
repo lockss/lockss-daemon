@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.16 2012-07-26 00:32:09 thib_gc Exp $
+# $Id: tdbq.py,v 1.17 2012-08-07 23:02:34 aishizaki Exp $
 
 __copyright__ = '''\
 
@@ -644,6 +644,7 @@ def str_to_lambda_au(str):
                    ('proxy', lambda au: au.proxy()),
                    ('rights', lambda au: au.rights()),
                    ('auid', lambda au: au.auid()),
+                   ('auidplus', lambda au: au.auidplus()),
                    ('title', lambda au: au.title().name()),
                    ('type', lambda au: au.title().type()),
                    ('isbn', lambda au: au.title().isbn()),
