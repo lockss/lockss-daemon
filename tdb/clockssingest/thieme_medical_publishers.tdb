@@ -487,7 +487,17 @@
     >
     param[journal_id] = 10.1055/s-00000114
     comment[years] = 2001-current 
-  
+
+
+        au < exists ; exists ; Balint Journal 2001 ; 2001 ; 2001 > 
+        au < exists ; exists ; Balint Journal 2002 ; 2002 ; 2002 > 
+        au < exists ; exists ; Balint Journal 2003 ; 2003 ; 2003 > 
+        au < exists ; exists ; Balint Journal 2004 ; 2004 ; 2004 > 
+        au < exists ; exists ; Balint Journal 2005 ; 2005 ; 2005 > 
+        au < exists ; exists ; Balint Journal 2006 ; 2006 ; 2006 > 
+        au < exists ; exists ; Balint Journal 2007 ; 2007 ; 2007 > 
+        au < exists ; exists ; Balint Journal 2008 ; 2008 ; 2008 > 
+        au < exists ; exists ; Balint Journal 2009 ; 2009 ; 2009 > 
         au < exists ; exists ; Balint Journal 2010 ; 2010 ; 2010 > 
         au < exists ; exists ; Balint Journal 2011 ; 2011 ; 2011 > 
         au < exists ; exists ; Balint Journal 2012 ; 2012 ; 2012 > 
@@ -559,7 +569,7 @@
     param[journal_id] = 10.1055/s-00000151
     comment[years] = 2008-current
  
-     au < exists ; exists ; Clinics in Colon and Rectal Surgery 2008 ; 2008 ; 2008 >  
+    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2008 ; 2008 ; 2008 >  
     au < exists ; exists ; Clinics in Colon and Rectal Surgery 2009 ; 2009 ; 2009 >      
     au < exists ; exists ; Clinics in Colon and Rectal Surgery 2010 ; 2010 ; 2010 >      
     au < exists ; exists ; Clinics in Colon and Rectal Surgery 2011 ; 2011 ; 2011 >      
@@ -576,6 +586,11 @@
     >
     param[journal_id] = 10.1055/s-00000176
     comment[years] = 2011-current
+
+   au < exists ; exists ; Deutsche Gesellschaft für Unfallchirurgie - Mitteilungen und Nachrichten 2011 ; 2011 ; 2011 >       
+   au < exists ; exists ; Deutsche Gesellschaft für Unfallchirurgie - Mitteilungen und Nachrichten 2012 ; 2012 ; 2012 >     
+  
+  
   
   }
   
@@ -588,9 +603,18 @@
     >
     param[journal_id] = 10.1055/s-00000135
     comment[years] = 2006-current
-  
+
+
+   au < exists ; exists ; Deutsche Heilpraktiker-Zeitschrift 2006 ; 2006 ; 2006 >     
+   au < exists ; exists ; Deutsche Heilpraktiker-Zeitschrift 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; Deutsche Heilpraktiker-Zeitschrift 2008 ; 2008 ; 2008 >     
+   au < exists ; exists ; Deutsche Heilpraktiker-Zeitschrift 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Deutsche Heilpraktiker-Zeitschrift 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Deutsche Heilpraktiker-Zeitschrift 2011 ; 2011 ; 2011 >       
+   au < exists ; exists ; Deutsche Heilpraktiker-Zeitschrift 2012 ; 2012 ; 2012 >     
   
   }
+  
   {
     title <
       name = Deutsche Zeitschrift für Akupunktur ;
