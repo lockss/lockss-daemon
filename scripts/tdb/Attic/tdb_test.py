@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb_test.py,v 1.2 2012-07-26 00:32:09 thib_gc Exp $
+# $Id: tdb_test.py,v 1.3 2012-08-07 22:55:37 aishizaki Exp $
 
 # Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -110,5 +110,23 @@ class TestAU(unittest.TestCase):
                        ('base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2F&volume_name~123', {'base_url': 'http://www.example.com/', 'volume_name': '123'}),
                        ('base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2F&volume_name~123', {'volume_name': '123', 'base_url': 'http://www.example.com/'})]:
             self.assertEquals('org|lockss|plugin|FooPlugin&' + st, AU.compute_auid('org.lockss.plugin.FooPlugin', par))
-
+    
+    def testAuidPlus(self):
+        # test an auid with nondef params 1) typical, 2) with nothing on the right side of the equal sign, 3) empty ndp argument
+        for st, par, ndp in [('base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2F&volume_name~123', 
+                              {'base_url': 'http://www.example.com/', 'volume_name': '123'},
+                              {'journal_code': 'Delawho'}),
+                             ('base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2F&volume_name~123', 
+                              {'volume_name': '123', 'base_url': 'http://www.example.com/'},
+                              {'issues': ''})]:
+            self.assertEquals('org|lockss|plugin|FooPlugin&' + st +'&&&NondefParamsFollow&&&' + ndp.keys()[0] + '~'+ ndp[ndp.keys()[0]],
+                              AU.compute_auidplus('org.lockss.plugin.FooPlugin', par, ndp))
+        # test an auid with with two nondef params
+        st = 'base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2F&volume_name~123' 
+        par = {'volume_name': '123','base_url': 'http://www.example.com/'}
+        ndp = {'journal_code': 'Delawho','issues': '13'}
+        self.assertEquals('org|lockss|plugin|FooPlugin&' + st +'&&&NondefParamsFollow&&&' + 'issues' + '~'+ ndp['issues']
+                              +'&&&NondefParamsFollow&&&' + 'journal_code' + '~'+ ndp['journal_code'],
+                            AU.compute_auidplus('org.lockss.plugin.FooPlugin', par, ndp))
+                    
 if __name__ == '__main__': unittest.main()
