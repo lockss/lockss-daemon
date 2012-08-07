@@ -244,7 +244,7 @@
       comment[access] = open access triggered CLOCKSS content
       attr[title_url] = http://www.clockss.org/clockss/Graft
 
-      implicit < status ; year ; name ; param[volume_name] ; proxy >
+      implicit < status ; year ; name ; param[volume] ; proxy >
      
       au < manifest ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 ; reingest.lockss.org:80 >
       au < manifest ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 ; reingest.lockss.org:80 >
