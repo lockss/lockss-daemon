@@ -1,10 +1,6 @@
 package org.lockss.plugin;
 
-import org.lockss.plugin.FormUrlInput;
 import org.lockss.test.LockssTestCase;
-import org.lockss.util.UrlUtil;
-
-import junit.framework.TestCase;
 
 
 public class TestFormUrlInput extends LockssTestCase {
@@ -26,8 +22,8 @@ public class TestFormUrlInput extends LockssTestCase {
 	public void testFormUrlInput() {
 		FormUrlInput a = new FormUrlInput("key","value");
 
-		assertEquals(a.getName(),"key");
-		assertEquals(a.getValue(),"value");
+		assertEquals(a.getEncodedName(),"key");
+		assertEquals(a.getEncodedValue(),"value");
 		assertEquals(a.getRawName(),"key");
 		assertEquals(a.getRawValue(),"value");
 	}
@@ -35,7 +31,7 @@ public class TestFormUrlInput extends LockssTestCase {
 	//a null value is converted to the empty string
 	public void testNullValue() {
 		FormUrlInput a = new FormUrlInput("key",null);
-		assertEquals(a.getValue(),"");
+		assertEquals(a.getEncodedValue(),"");
 	}
 	
 	public void testGetRawName() {
@@ -51,7 +47,7 @@ public class TestFormUrlInput extends LockssTestCase {
 	}
 
 	public void testGetValue() {
-		assertEquals(_complex.getValue(), "value%21%40%23%24%25%5E%26*%28%29-%3D+%5B%5D%7B%7D%2C.%2F%60%5C%7C");
+		assertEquals(_complex.getEncodedValue(), "value%21%40%23%24%25%5E%26*%28%29-%3D+%5B%5D%7B%7D%2C.%2F%60%5C%7C");
 	}
  
 	public void testIOP() {
@@ -61,7 +57,7 @@ public class TestFormUrlInput extends LockssTestCase {
 	
 	public void testToString() {
 		assertEquals(_simple.toString(), simple_name+"="+simple_value);
-		assertEquals(_complex.toString(), _complex.getName()+"="+_complex.getValue());
+		assertEquals(_complex.toString(), _complex.getEncodedName()+"="+_complex.getEncodedValue());
 	}
 
 	public void testCompareTo() {
