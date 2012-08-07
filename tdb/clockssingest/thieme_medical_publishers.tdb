@@ -130,38 +130,38 @@
     param[journal_id] = 10.1055/s-00000004
     comment[years] = 1980-current
     
-    au < exists ; exists ; 1981 ; Aktuelle Neurologie 1981 ; 1981 >   
-    au < exists ; exists ; 1982 ; Aktuelle Neurologie 1982 ; 1982 >   
-    au < exists ; exists ; 1983 ; Aktuelle Neurologie 1983 ; 1983 >   
-    au < exists ; exists ; 1984 ; Aktuelle Neurologie 1984 ; 1984 >   
-    au < exists ; exists ; 1985 ; Aktuelle Neurologie 1985 ; 1985 >   
-    au < exists ; exists ; 1986 ; Aktuelle Neurologie 1986 ; 1986 >   
-    au < exists ; exists ; 1987 ; Aktuelle Neurologie 1987 ; 1987 >   
-    au < exists ; exists ; 1988 ; Aktuelle Neurologie 1988 ; 1988 >   
-    au < exists ; exists ; 1989 ; Aktuelle Neurologie 1989 ; 1989 >   
-    au < exists ; exists ; 1990 ; Aktuelle Neurologie 1990 ; 1990 >
-    au < exists ; exists ; 1991 ; Aktuelle Neurologie 1991 ; 1991 >
-    au < exists ; exists ; 1992 ; Aktuelle Neurologie 1992 ; 1992 >
-    au < exists ; exists ; 1993 ; Aktuelle Neurologie 1993 ; 1993 >
-    au < exists ; exists ; 1994 ; Aktuelle Neurologie 1994 ; 1994 >
-    au < exists ; exists ; 1995 ; Aktuelle Neurologie 1995 ; 1995 >
-    au < exists ; exists ; 1996 ; Aktuelle Neurologie 1996 ; 1996 >
-    au < exists ; exists ; 1997 ; Aktuelle Neurologie 1997 ; 1997 >
-    au < exists ; exists ; 1998 ; Aktuelle Neurologie 1998 ; 1998 >
-    au < exists ; exists ; 1999 ; Aktuelle Neurologie 1999 ; 1999 >
-    au < exists ; exists ; 2000 ; Aktuelle Neurologie 2000 ; 2000 >   
-    au < exists ; exists ; 2001 ; Aktuelle Neurologie 2001 ; 2001 >   
-    au < exists ; exists ; 2002 ; Aktuelle Neurologie 2002 ; 2002 >   
-    au < exists ; exists ; 2003 ; Aktuelle Neurologie 2003 ; 2003 >   
-    au < exists ; exists ; 2004 ; Aktuelle Neurologie 2004 ; 2004 >   
-    au < exists ; exists ; 2005 ; Aktuelle Neurologie 2005 ; 2005 >   
-    au < exists ; exists ; 2006 ; Aktuelle Neurologie 2006 ; 2006 >   
-    au < exists ; exists ; 2007 ; Aktuelle Neurologie 2007 ; 2007 >   
-    au < exists ; exists ; 2008 ; Aktuelle Neurologie 2008 ; 2008 >   
-    au < exists ; exists ; 2009 ; Aktuelle Neurologie 2009 ; 2009 >   
-    au < exists ; exists ; 2010 ; Aktuelle Neurologie 2010 ; 2010 >   
-    au < exists ; exists ; 2011 ; Aktuelle Neurologie 2011 ; 2011 >   
-    au < exists ; exists ; 2012 ; Aktuelle Neurologie 2012 ; 2012 >   
+    au < exists ; exists ; Aktuelle Neurologie 1981 ; 1981 ; 1981 >   
+    au < exists ; exists ; Aktuelle Neurologie 1982 ; 1982 ; 1982 >   
+    au < exists ; exists ; Aktuelle Neurologie 1983 ; 1983 ; 1983 >   
+    au < exists ; exists ; Aktuelle Neurologie 1984 ; 1984 ; 1984 >   
+    au < exists ; exists ; Aktuelle Neurologie 1985 ; 1985 ; 1985 >   
+    au < exists ; exists ; Aktuelle Neurologie 1986 ; 1986 ; 1986 >   
+    au < exists ; exists ; Aktuelle Neurologie 1987 ; 1987 ; 1987 >   
+    au < exists ; exists ; Aktuelle Neurologie 1988 ; 1988 ; 1988 >   
+    au < exists ; exists ; Aktuelle Neurologie 1989 ; 1989 ; 1989 >   
+    au < exists ; exists ; Aktuelle Neurologie 1990 ; 1990 ; 1990 >
+    au < exists ; exists ; Aktuelle Neurologie 1991 ; 1991 ; 1991 >
+    au < exists ; exists ; Aktuelle Neurologie 1992 ; 1992 ; 1992 >
+    au < exists ; exists ; Aktuelle Neurologie 1993 ; 1993 ; 1993 >
+    au < exists ; exists ; Aktuelle Neurologie 1994 ; 1994 ; 1994 >
+    au < exists ; exists ; Aktuelle Neurologie 1995 ; 1995 ; 1995 >
+    au < exists ; exists ; Aktuelle Neurologie 1996 ; 1996 ; 1996 >
+    au < exists ; exists ; Aktuelle Neurologie 1997 ; 1997 ; 1997 >
+    au < exists ; exists ; Aktuelle Neurologie 1998 ; 1998 ; 1998 >
+    au < exists ; exists ; Aktuelle Neurologie 1999 ; 1999 ; 1999 >
+    au < exists ; exists ; Aktuelle Neurologie 2000 ; 2000 ; 2000 >   
+    au < exists ; exists ; Aktuelle Neurologie 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; Aktuelle Neurologie 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; Aktuelle Neurologie 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; Aktuelle Neurologie 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Aktuelle Neurologie 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Aktuelle Neurologie 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Aktuelle Neurologie 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Aktuelle Neurologie 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Aktuelle Neurologie 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Aktuelle Neurologie 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Aktuelle Neurologie 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Aktuelle Neurologie 2012 ; 2012 ; 2012 >   
            
   }
   
@@ -175,37 +175,37 @@
     param[journal_id] = 10.1055/s-00000005
     comment[years] = 1980-current
        
-    au < exists ; exists ; 1982 ; Aktuelle Rheumatologie 1982 ; 1982 >   
-    au < exists ; exists ; 1983 ; Aktuelle Rheumatologie 1983 ; 1983 >   
-    au < exists ; exists ; 1984 ; Aktuelle Rheumatologie 1984 ; 1984 >   
-    au < exists ; exists ; 1985 ; Aktuelle Rheumatologie 1985 ; 1985 >   
-    au < exists ; exists ; 1986 ; Aktuelle Rheumatologie 1986 ; 1986 >   
-    au < exists ; exists ; 1987 ; Aktuelle Rheumatologie 1987 ; 1987 >   
-    au < exists ; exists ; 1988 ; Aktuelle Rheumatologie 1988 ; 1988 >   
-    au < exists ; exists ; 1989 ; Aktuelle Rheumatologie 1989 ; 1989 >   
-    au < exists ; exists ; 1990 ; Aktuelle Rheumatologie 1990 ; 1990 >
-    au < exists ; exists ; 1991 ; Aktuelle Rheumatologie 1991 ; 1991 >
-    au < exists ; exists ; 1992 ; Aktuelle Rheumatologie 1992 ; 1992 >
-    au < exists ; exists ; 1993 ; Aktuelle Rheumatologie 1993 ; 1993 >
-    au < exists ; exists ; 1994 ; Aktuelle Rheumatologie 1994 ; 1994 >
-    au < exists ; exists ; 1995 ; Aktuelle Rheumatologie 1995 ; 1995 >
-    au < exists ; exists ; 1996 ; Aktuelle Rheumatologie 1996 ; 1996 >
-    au < exists ; exists ; 1997 ; Aktuelle Rheumatologie 1997 ; 1997 >
-    au < exists ; exists ; 1998 ; Aktuelle Rheumatologie 1998 ; 1998 >
-    au < exists ; exists ; 1999 ; Aktuelle Rheumatologie 1999 ; 1999 >
-    au < exists ; exists ; 2000 ; Aktuelle Rheumatologie 2000 ; 2000 >   
-    au < exists ; exists ; 2001 ; Aktuelle Rheumatologie 2001 ; 2001 >   
-    au < exists ; exists ; 2002 ; Aktuelle Rheumatologie 2002 ; 2002 >   
-    au < exists ; exists ; 2003 ; Aktuelle Rheumatologie 2003 ; 2003 >   
-    au < exists ; exists ; 2004 ; Aktuelle Rheumatologie 2004 ; 2004 >   
-    au < exists ; exists ; 2005 ; Aktuelle Rheumatologie 2005 ; 2005 >   
-    au < exists ; exists ; 2006 ; Aktuelle Rheumatologie 2006 ; 2006 >   
-    au < exists ; exists ; 2007 ; Aktuelle Rheumatologie 2007 ; 2007 >   
-    au < exists ; exists ; 2008 ; Aktuelle Rheumatologie 2008 ; 2008 >   
-    au < exists ; exists ; 2009 ; Aktuelle Rheumatologie 2009 ; 2009 >   
-    au < exists ; exists ; 2010 ; Aktuelle Rheumatologie 2010 ; 2010 >   
-    au < exists ; exists ; 2011 ; Aktuelle Rheumatologie 2011 ; 2011 >   
-    au < exists ; exists ; 2012 ; Aktuelle Rheumatologie 2012 ; 2012 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 1982 ; 1982 ; 1982 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 1983 ; 1983 ; 1983 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 1984 ; 1984 ; 1984 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 1985 ; 1985 ; 1985 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 1986 ; 1986 ; 1986 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 1987 ; 1987 ; 1987 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 1988 ; 1988 ; 1988 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 1989 ; 1989 ; 1989 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 1990 ; 1990 ; 1990 >
+    au < exists ; exists ; Aktuelle Rheumatologie 1991 ; 1991 ; 1991 >
+    au < exists ; exists ; Aktuelle Rheumatologie 1992 ; 1992 ; 1992 >
+    au < exists ; exists ; Aktuelle Rheumatologie 1993 ; 1993 ; 1993 >
+    au < exists ; exists ; Aktuelle Rheumatologie 1994 ; 1994 ; 1994 >
+    au < exists ; exists ; Aktuelle Rheumatologie 1995 ; 1995 ; 1995 >
+    au < exists ; exists ; Aktuelle Rheumatologie 1996 ; 1996 ; 1996 >
+    au < exists ; exists ; Aktuelle Rheumatologie 1997 ; 1997 ; 1997 >
+    au < exists ; exists ; Aktuelle Rheumatologie 1998 ; 1998 ; 1998 >
+    au < exists ; exists ; Aktuelle Rheumatologie 1999 ; 1999 ; 1999 >
+    au < exists ; exists ; Aktuelle Rheumatologie 2000 ; 2000 ; 2000 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Aktuelle Rheumatologie 2012 ; 2012 ; 2012 >   
       
   }
 
@@ -220,18 +220,18 @@
    param[journal_id] = 10.1055/s-00000006
    comment[years] = 2001-current
 
-    au < exists ; exists ; 2001 ; Aktuelle Trauatologie 2001 ; 2001 >   
-    au < exists ; exists ; 2002 ; Aktuelle Trauatologie 2002 ; 2002 >   
-    au < exists ; exists ; 2003 ; Aktuelle Trauatologie 2003 ; 2003 >   
-    au < exists ; exists ; 2004 ; Aktuelle Trauatologie 2004 ; 2004 >   
-    au < exists ; exists ; 2005 ; Aktuelle Trauatologie 2005 ; 2005 >   
-    au < exists ; exists ; 2006 ; Aktuelle Trauatologie 2006 ; 2006 >   
-    au < exists ; exists ; 2007 ; Aktuelle Trauatologie 2007 ; 2007 >   
-    au < exists ; exists ; 2008 ; Aktuelle Trauatologie 2008 ; 2008 >   
-    au < exists ; exists ; 2009 ; Aktuelle Trauatologie 2009 ; 2009 >   
-    au < exists ; exists ; 2010 ; Aktuelle Trauatologie 2010 ; 2010 >   
-    au < exists ; exists ; 2011 ; Aktuelle Trauatologie 2011 ; 2011 >   
-    au < exists ; exists ; 2012 ; Aktuelle Trauatologie 2012 ; 2012 >   
+    au < exists ; exists ; Aktuelle Trauatologie 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; Aktuelle Trauatologie 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; Aktuelle Trauatologie 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; Aktuelle Trauatologie 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Aktuelle Trauatologie 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Aktuelle Trauatologie 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Aktuelle Trauatologie 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Aktuelle Trauatologie 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Aktuelle Trauatologie 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Aktuelle Trauatologie 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Aktuelle Trauatologie 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Aktuelle Trauatologie 2012 ; 2012 ; 2012 >   
    
    }
    
@@ -245,38 +245,38 @@
     param[journal_id] = 10.1055/s-00000007
     comment[years] = 1980-current   
     
-    au < exists ; exists ; 1981 ; Aktuelle Urologie 1981 ; 1981 >   
-    au < exists ; exists ; 1982 ; Aktuelle Urologie 1982 ; 1982 >   
-    au < exists ; exists ; 1983 ; Aktuelle Urologie 1983 ; 1983 >   
-    au < exists ; exists ; 1984 ; Aktuelle Urologie 1984 ; 1984 >   
-    au < exists ; exists ; 1985 ; Aktuelle Urologie 1985 ; 1985 >   
-    au < exists ; exists ; 1986 ; Aktuelle Urologie 1986 ; 1986 >   
-    au < exists ; exists ; 1987 ; Aktuelle Urologie 1987 ; 1987 >   
-    au < exists ; exists ; 1988 ; Aktuelle Urologie 1988 ; 1988 >   
-    au < exists ; exists ; 1989 ; Aktuelle Urologie 1989 ; 1989 >   
-    au < exists ; exists ; 1990 ; Aktuelle Urologie 1990 ; 1990 >
-    au < exists ; exists ; 1991 ; Aktuelle Urologie 1991 ; 1991 >
-    au < exists ; exists ; 1992 ; Aktuelle Urologie 1992 ; 1992 >
-    au < exists ; exists ; 1993 ; Aktuelle Urologie 1993 ; 1993 >
-    au < exists ; exists ; 1994 ; Aktuelle Urologie 1994 ; 1994 >
-    au < exists ; exists ; 1995 ; Aktuelle Urologie 1995 ; 1995 >
-    au < exists ; exists ; 1996 ; Aktuelle Urologie 1996 ; 1996 >
-    au < exists ; exists ; 1997 ; Aktuelle Urologie 1997 ; 1997 >
-    au < exists ; exists ; 1998 ; Aktuelle Urologie 1998 ; 1998 >
-    au < exists ; exists ; 1999 ; Aktuelle Urologie 1999 ; 1999 >
-    au < exists ; exists ; 2000 ; Aktuelle Urologie 2000 ; 2000 >   
-    au < exists ; exists ; 2001 ; Aktuelle Urologie 2001 ; 2001 >   
-    au < exists ; exists ; 2002 ; Aktuelle Urologie 2002 ; 2002 >   
-    au < exists ; exists ; 2003 ; Aktuelle Urologie 2003 ; 2003 >   
-    au < exists ; exists ; 2004 ; Aktuelle Urologie 2004 ; 2004 >   
-    au < exists ; exists ; 2005 ; Aktuelle Urologie 2005 ; 2005 >   
-    au < exists ; exists ; 2006 ; Aktuelle Urologie 2006 ; 2006 >   
-    au < exists ; exists ; 2007 ; Aktuelle Urologie 2007 ; 2007 >   
-    au < exists ; exists ; 2008 ; Aktuelle Urologie 2008 ; 2008 >   
-    au < exists ; exists ; 2009 ; Aktuelle Urologie 2009 ; 2009 >   
-    au < exists ; exists ; 2010 ; Aktuelle Urologie 2010 ; 2010 >   
-    au < exists ; exists ; 2011 ; Aktuelle Urologie 2011 ; 2011 >   
-    au < exists ; exists ; 2012 ; Aktuelle Urologie 2012 ; 2012 >   
+    au < exists ; exists ; Aktuelle Urologie 1981 ; 1981 ; 1981 >   
+    au < exists ; exists ; Aktuelle Urologie 1982 ; 1982 ; 1982 >   
+    au < exists ; exists ; Aktuelle Urologie 1983 ; 1983 ; 1983 >   
+    au < exists ; exists ; Aktuelle Urologie 1984 ; 1984 ; 1984 >   
+    au < exists ; exists ; Aktuelle Urologie 1985 ; 1985 ; 1985 >   
+    au < exists ; exists ; Aktuelle Urologie 1986 ; 1986 ; 1986 >   
+    au < exists ; exists ; Aktuelle Urologie 1987 ; 1987 ; 1987 >   
+    au < exists ; exists ; Aktuelle Urologie 1988 ; 1988 ; 1988 >   
+    au < exists ; exists ; Aktuelle Urologie 1989 ; 1989 ; 1989 >   
+    au < exists ; exists ; Aktuelle Urologie 1990 ; 1990 ; 1990 >
+    au < exists ; exists ; Aktuelle Urologie 1991 ; 1991 ; 1991 >
+    au < exists ; exists ; Aktuelle Urologie 1992 ; 1992 ; 1992 >
+    au < exists ; exists ; Aktuelle Urologie 1993 ; 1993 ; 1993 >
+    au < exists ; exists ; Aktuelle Urologie 1994 ; 1994 ; 1994 >
+    au < exists ; exists ; Aktuelle Urologie 1995 ; 1995 ; 1995 >
+    au < exists ; exists ; Aktuelle Urologie 1996 ; 1996 ; 1996 >
+    au < exists ; exists ; Aktuelle Urologie 1997 ; 1997 ; 1997 >
+    au < exists ; exists ; Aktuelle Urologie 1998 ; 1998 ; 1998 >
+    au < exists ; exists ; Aktuelle Urologie 1999 ; 1999 ; 1999 >
+    au < exists ; exists ; Aktuelle Urologie 2000 ; 2000 ; 2000 >   
+    au < exists ; exists ; Aktuelle Urologie 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; Aktuelle Urologie 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; Aktuelle Urologie 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; Aktuelle Urologie 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Aktuelle Urologie 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Aktuelle Urologie 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Aktuelle Urologie 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Aktuelle Urologie 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Aktuelle Urologie 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Aktuelle Urologie 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Aktuelle Urologie 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Aktuelle Urologie 2012 ; 2012 ; 2012 >   
     
 
    }
@@ -291,49 +291,49 @@
     param[journal_id] = 10.1055/s-00000008
     comment[years] = 1948-current
     
-    au < exists ; exists ; 1970 ; Allgemeine Homöopathische Zeitung 1970 ; 197 >   
-    au < exists ; exists ; 1971 ; Allgemeine Homöopathische Zeitung 1971 ; 197 >   
-    au < exists ; exists ; 1972 ; Allgemeine Homöopathische Zeitung 1972 ; 197 >   
-    au < exists ; exists ; 1973 ; Allgemeine Homöopathische Zeitung 1973 ; 197 >   
-    au < exists ; exists ; 1974 ; Allgemeine Homöopathische Zeitung 1974 ; 197 >   
-    au < exists ; exists ; 1975 ; Allgemeine Homöopathische Zeitung 1975 ; 197 >   
-    au < exists ; exists ; 1976 ; Allgemeine Homöopathische Zeitung 1976 ; 197 >   
-    au < exists ; exists ; 1977 ; Allgemeine Homöopathische Zeitung 1977 ; 197 >   
-    au < exists ; exists ; 1978 ; Allgemeine Homöopathische Zeitung 1978 ; 197 >   
-    au < exists ; exists ; 1979 ; Allgemeine Homöopathische Zeitung 1979 ; 197 >   
-    au < exists ; exists ; 1980 ; Allgemeine Homöopathische Zeitung 1980 ; 1980 >   
-    au < exists ; exists ; 1981 ; Allgemeine Homöopathische Zeitung 1981 ; 1981 >   
-    au < exists ; exists ; 1982 ; Allgemeine Homöopathische Zeitung 1982 ; 1982 >   
-    au < exists ; exists ; 1983 ; Allgemeine Homöopathische Zeitung 1983 ; 1983 >   
-    au < exists ; exists ; 1984 ; Allgemeine Homöopathische Zeitung 1984 ; 1984 >   
-    au < exists ; exists ; 1985 ; Allgemeine Homöopathische Zeitung 1985 ; 1985 >   
-    au < exists ; exists ; 1986 ; Allgemeine Homöopathische Zeitung 1986 ; 1986 >   
-    au < exists ; exists ; 1987 ; Allgemeine Homöopathische Zeitung 1987 ; 1987 >   
-    au < exists ; exists ; 1988 ; Allgemeine Homöopathische Zeitung 1988 ; 1988 >   
-    au < exists ; exists ; 1989 ; Allgemeine Homöopathische Zeitung 1989 ; 1989 >
-    au < exists ; exists ; 1990 ; Allgemeine Homöopathische Zeitung 1990 ; 1990 >   
-    au < exists ; exists ; 1991 ; Allgemeine Homöopathische Zeitung 1991 ; 1991 >   
-    au < exists ; exists ; 1992 ; Allgemeine Homöopathische Zeitung 1992 ; 1992 >   
-    au < exists ; exists ; 1993 ; Allgemeine Homöopathische Zeitung 1993 ; 1993 >   
-    au < exists ; exists ; 1994 ; Allgemeine Homöopathische Zeitung 1994 ; 1994 >   
-    au < exists ; exists ; 1995 ; Allgemeine Homöopathische Zeitung 1995 ; 1995 >   
-    au < exists ; exists ; 1996 ; Allgemeine Homöopathische Zeitung 1996 ; 1996 >   
-    au < exists ; exists ; 1997 ; Allgemeine Homöopathische Zeitung 1997 ; 1997 >   
-    au < exists ; exists ; 1998 ; Allgemeine Homöopathische Zeitung 1998 ; 1998 >   
-    au < exists ; exists ; 1999 ; Allgemeine Homöopathische Zeitung 1999 ; 1999 >   
-    au < exists ; exists ; 2000 ; Allgemeine Homöopathische Zeitung 2000 ; 2000 >   
-    au < exists ; exists ; 2001 ; Allgemeine Homöopathische Zeitung 2001 ; 2001 >   
-    au < exists ; exists ; 2002 ; Allgemeine Homöopathische Zeitung 2002 ; 2002 >   
-    au < exists ; exists ; 2003 ; Allgemeine Homöopathische Zeitung 2003 ; 2003 >   
-    au < exists ; exists ; 2004 ; Allgemeine Homöopathische Zeitung 2004 ; 2004 >   
-    au < exists ; exists ; 2005 ; Allgemeine Homöopathische Zeitung 2005 ; 2005 >   
-    au < exists ; exists ; 2006 ; Allgemeine Homöopathische Zeitung 2006 ; 2006 >   
-    au < exists ; exists ; 2007 ; Allgemeine Homöopathische Zeitung 2007 ; 2007 >   
-    au < exists ; exists ; 2008 ; Allgemeine Homöopathische Zeitung 2008 ; 2008 >   
-    au < exists ; exists ; 2009 ; Allgemeine Homöopathische Zeitung 2009 ; 2009 >   
-    au < exists ; exists ; 2010 ; Allgemeine Homöopathische Zeitung 2010 ; 2010 >   
-    au < exists ; exists ; 2011 ; Allgemeine Homöopathische Zeitung 2011 ; 2011 >   
-    au < exists ; exists ; 2012 ; Allgemeine Homöopathische Zeitung 2012 ; 2012 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1970 ; 1970 ; 1970 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1971 ; 1971 ; 1971 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1972 ; 1972 ; 1972 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1973 ; 1973 ; 1973 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1974 ; 1974 ; 1974 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1975 ; 1975 ; 1975 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1976 ; 1976 ; 1976 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1977 ; 1977 ; 1977 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1978 ; 1978 ; 1978 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1979 ; 1979 ; 1979 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1980 ; 1980 ; 1980 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1981 ; 1981 ; 1981 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1982 ; 1982 ; 1982 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1983 ; 1983 ; 1983 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1984 ; 1984 ; 1984 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1985 ; 1985 ; 1985 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1986 ; 1986 ; 1986 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1987 ; 1987 ; 1987 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1988 ; 1988 ; 1988 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1989 ; 1989 ; 1989 >
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1990 ; 1990 ; 1990 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1991 ; 1991 ; 1991 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1992 ; 1992 ; 1992 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1993 ; 1993 ; 1993 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1994 ; 1994 ; 1994 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1995 ; 1995 ; 1995 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1996 ; 1996 ; 1996 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1997 ; 1997 ; 1997 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1998 ; 1998 ; 1998 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 1999 ; 1999 ; 1999 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2000 ; 2000 ; 2000 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2012 ; 2012 ; 2012 >   
     
     }
     
@@ -347,9 +347,9 @@
      param[journal_id] = 10.1055/s-00000147
      comment[years] = 2007-current  
      
-    au < exists ; exists ; 2010 ; Allgemein- und Viszeralchirurgie up2date 2010 ; 2010 >   
-    au < exists ; exists ; 2011 ; Allgemein- und Viszeralchirurgie up2date 2011 ; 2011 >   
-    au < exists ; exists ; 2012 ; Allgemein- und Viszeralchirurgie up2date 2012 ; 2012 >   
+    au < exists ; exists ; Allgemein- und Viszeralchirurgie up2date 2010 ;2010 ; 2010 >   
+    au < exists ; exists ; Allgemein- und Viszeralchirurgie up2date 2011 ;2011 ; 2011 >   
+    au < exists ; exists ; Allgemein- und Viszeralchirurgie up2date 2012 ;2012 ; 2012 >   
        
    }     
     
@@ -379,9 +379,9 @@
     param[journal_id] = 10.1055/s-00000169
     comment[years] = 2011-current
     
-    au < exists ; exists ; American Journal of Perinatology Reports 2010 ;  2010 ; 2010 >   
-    au < exists ; exists ; American Journal of Perinatology Reports 2011 ;  2011 ; 2011 >   
-    au < exists ; exists ; American Journal of Perinatology Reports 2012 ;  2012 ; 2012 >   
+    au < exists ; exists ; American Journal of Perinatology Reports 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; American Journal of Perinatology Reports 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; American Journal of Perinatology Reports 2012 ; 2012 ; 2012 >   
     
    }
       
@@ -396,9 +396,9 @@
     comment[years] = 1999-current  
     comment[0] = includes Arzneimittelforschung Drug Research
     
-    au < exists ; exists ; 2010 ; Arzneimittelforschung 2010 ; 2010 >   
-    au < exists ; exists ; 2011 ; Arzneimittelforschung 2011 ; 2011 >   
-    au < exists ; exists ; 2012 ; Arzneimittelforschung 2012 ; 2012 >   
+    au < exists ; exists ; Arzneimittelforschung 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Arzneimittelforschung 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Arzneimittelforschung 2012 ; 2012 ; 2012 >   
     
     
    }    
@@ -413,9 +413,9 @@
     param[journal_id] = 10.1055/s-00000174
     comment[years] = 2011-current
   
-    au < exists ; exists ; Augenheilkunde up2date 2010 ;  2010 ; 2010 >   
-    au < exists ; exists ; Augenheilkunde up2date 2011 ;  2011 ; 2011 >   
-    au < exists ; exists ; Augenheilkunde up2date 2012 ;  2012 ; 2012 >   
+    au < exists ; exists ; Augenheilkunde up2date 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Augenheilkunde up2date 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Augenheilkunde up2date 2012 ; 2012 ; 2012 >   
   
   
   }
@@ -431,9 +431,9 @@
     param[journal_id] = 10.1055/s-00000119
     comment[years] =  2004-current
     
-        au < exists ; exists ; B&G Bewegungstherapie und Gesundheitssport 2010 ;  2010 ; 2010 > 
-        au < exists ; exists ; B&G Bewegungstherapie und Gesundheitssport 2011 ;  2011 ; 2011 > 
-        au < exists ; exists ; B&G Bewegungstherapie und Gesundheitssport 2012 ;  2012 ; 2012 > 
+        au < exists ; exists ; B&G Bewegungstherapie und Gesundheitssport 2010 ; 2010 ; 2010 > 
+        au < exists ; exists ; B&G Bewegungstherapie und Gesundheitssport 2011 ; 2011 ; 2011 > 
+        au < exists ; exists ; B&G Bewegungstherapie und Gesundheitssport 2012 ; 2012 ; 2012 > 
   
   }
   
@@ -447,9 +447,9 @@
     param[journal_id] = 10.1055/s-00000114
     comment[years] = 2001-current 
   
-        au < exists ; exists ; Balint Journal 2010 ;  2010 ; 2010 > 
-        au < exists ; exists ; Balint Journal 2011 ;  2011 ; 2011 > 
-        au < exists ; exists ; Balint Journal 2012 ;  2012 ; 2012 > 
+        au < exists ; exists ; Balint Journal 2010 ; 2010 ; 2010 > 
+        au < exists ; exists ; Balint Journal 2011 ; 2011 ; 2011 > 
+        au < exists ; exists ; Balint Journal 2012 ; 2012 ; 2012 > 
   
   
   }
