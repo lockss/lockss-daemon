@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.16 2012-08-06 20:54:31 thib_gc Exp $
+# $Id: tdb.py,v 1.17 2012-08-07 23:19:08 aishizaki Exp $
 
 __copyright__ = '''\
 
@@ -210,10 +210,11 @@ class AU(Map):
         self.__title = None
     
     def set_title(self, title): self.__title = title
-
+ 
     def attr(self, attr): return self._internal_get((AU.ATTR[0], attr))
     def attrs(self): return self._internal_get_prefix(AU.ATTR)
     def auid(self): return AU.compute_auid(self.plugin(), self.params())
+    def auidplus(self): return AU.compute_auidplus(self.plugin(), self.params(), self.nondefparams())
     def edition(self): return self._internal_get(AU.EDITION)
     def eisbn(self): return self._internal_get(AU.EISBN)
     def isbn(self): return self._internal_get(AU.ISBN)
@@ -244,6 +245,20 @@ class AU(Map):
         keys = params.keys()
         keys.sort() # in Java: by iterating over a TreeSet
         return plugin.replace('.', '|') + '&' + '&'.join(['~'.join([''.join(map(AU.auid_encode, [c for c in s])) for s in [k, params[k]]]) for k in keys])
+    
+    @staticmethod
+    def compute_auidplus(plugin, params, nondefparams):
+        ''' Like compute_auid, changes pluginId's '.'s to '|' and params are separated by '&'.
+            In params/nondefparams '=' signs become '~'.  Additionally, nondef params are added
+            to the end, separated by '&&&NondefParamsFollow&&&'
+        '''  
+        p = AU.compute_auid(plugin, params)
+        keys = nondefparams.keys()
+        keys.sort()
+        if( len(keys) > 0) :
+            ndp = '&&&NondefParamsFollow&&&' + '&&&NondefParamsFollow&&&'.join(['~'.join([''.join(map(AU.auid_encode, [c for c in s])) for s in [j, nondefparams[j]]]) for j in keys])
+        else :  ndp = ''
+        return p + ndp
 
 class Tdb(object):
 
