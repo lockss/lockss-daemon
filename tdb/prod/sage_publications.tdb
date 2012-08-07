@@ -16871,6 +16871,10 @@
         param[base_url] = http://joa.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < manifest ; 1995-1996 ; Journal of Advanced Academics Volume 7 ; 7 >
+        au < manifest ; 1996-1997 ; Journal of Advanced Academics Volume 8 ; 8 >
+        au < manifest ; 1997-1998 ; Journal of Advanced Academics Volume 9 ; 9 >
+        au < manifest ; 1998-1999 ; Journal of Advanced Academics Volume 10 ; 10 >
         au < manifest ; 1999-2000 ; Journal of Advanced Academics Volume 11 ; 11 >
         au < manifest ; 2000-2001 ; Journal of Advanced Academics Volume 12 ; 12 >
         au < manifest ; 2001-2002 ; Journal of Advanced Academics Volume 13 ; 13 >
@@ -17905,6 +17909,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
         au < manifest ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 >
         au < manifest ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 >
+        au < manifest ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 >
         
       }
       
