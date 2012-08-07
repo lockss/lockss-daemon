@@ -465,11 +465,24 @@
     param[journal_id] = 10.1055/s-00000110
     comment[years] = 2000-2008
     comment[0] = combined with Journal of Neurological Surgery Part A - Central European Neorosurgery in 2012
-  
-  
-  }
-  
-  {
+    
+    au < exists ; exists ; Central European Neurosurgery - Zentralblatt für Neurochirurgie 2000 ; 2000 ; 2000 >   
+    au < exists ; exists ; Central European Neurosurgery - Zentralblatt für Neurochirurgie 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; Central European Neurosurgery - Zentralblatt für Neurochirurgie 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; Central European Neurosurgery - Zentralblatt für Neurochirurgie 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; Central European Neurosurgery - Zentralblatt für Neurochirurgie 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Central European Neurosurgery - Zentralblatt für Neurochirurgie 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Central European Neurosurgery - Zentralblatt für Neurochirurgie 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Central European Neurosurgery - Zentralblatt für Neurochirurgie 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Central European Neurosurgery - Zentralblatt für Neurochirurgie 2008 ; 2008 ; 2008 >  
+    au < exists ; exists ; Central European Neurosurgery - Zentralblatt für Neurochirurgie 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Central European Neurosurgery - Zentralblatt für Neurochirurgie 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Central European Neurosurgery - Zentralblatt für Neurochirurgie 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Central European Neurosurgery - Zentralblatt für Neurochirurgie 2012 ; 2012 ; 2012 >   
+    
+    }
+    
+    {
   
     title < 
       name = Clinics in Colon and Rectal Surgery ;
@@ -480,6 +493,14 @@
     param[journal_id] = 10.1055/s-00000049
     comment[years] = 2001-current
     
+    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Clinics in Colon and Rectal Surgery 2008 ; 2008 ; 2008 >  
     
   }
   
