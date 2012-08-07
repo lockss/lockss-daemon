@@ -1472,7 +1472,7 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://astrogeo.oxfordjournals.org/
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < expected ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 >
 
