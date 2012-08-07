@@ -667,6 +667,19 @@
     param[journal_id] = 10.1055/s-00000097
     comment[years] = 2000
    
+   au < exists ; exists ; Zeitschrift für Onkologie 2000 ; 2000 ; 2000 >     
+   au < exists ; exists ; Zeitschrift für Onkologie 2001 ; 2001 ; 2001 >     
+   au < exists ; exists ; Zeitschrift für Onkologie 2002 ; 2002 ; 2002 >      
+   au < exists ; exists ; Zeitschrift für Onkologie 2003 ; 2003 ; 2003 >     
+   au < exists ; exists ; Zeitschrift für Onkologie 2004 ; 2004 ; 2004 >     
+   au < exists ; exists ; Zeitschrift für Onkologie 2005 ; 2005 ; 2005 >      
+   au < exists ; exists ; Zeitschrift für Onkologie 2006 ; 2006 ; 2006 >     
+   au < exists ; exists ; Zeitschrift für Onkologie 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; Zeitschrift für Onkologie 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; Zeitschrift für Onkologie 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Zeitschrift für Onkologie 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Zeitschrift für Onkologie 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; Zeitschrift für Onkologie 2012 ; 2012 ; 2012 >
   
   }
   
@@ -679,6 +692,13 @@
     >
     param[journal_id] = 10.1055/s-00000146
     comment[years] = 2007-current  
+    
+   au < exists ; exists ; Diabetes aktuell 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; Diabetes aktuell 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; Diabetes aktuell 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Diabetes aktuell 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Diabetes aktuell 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; Diabetes aktuell 2012 ; 2012 ; 2012 >
   
   }
   
@@ -687,12 +707,18 @@
       name = Diabetologie und Stoffwechsel ;
       issn = 1861-9002 ;
       eissn = 1861-9010
-      
-    
+  
     >
     param[journal_id] = 10.1055/s-00000134
     comment[years] = 2006-current  
-  
+
+   au < exists ; exists ; Diabetologie und Stoffwechsel 2006 ; 2006 ; 2006 >    
+   au < exists ; exists ; Diabetologie und Stoffwechsel 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; Diabetologie und Stoffwechsel 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; Diabetologie und Stoffwechsel 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Diabetologie und Stoffwechsel 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Diabetologie und Stoffwechsel 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; Diabetologie und Stoffwechsel 2012 ; 2012 ; 2012 >
   
   
   }
