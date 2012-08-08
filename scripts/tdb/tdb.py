@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.17 2012-08-07 23:19:08 aishizaki Exp $
+# $Id: tdb.py,v 1.18 2012-08-08 07:08:14 thib_gc Exp $
 
 __copyright__ = '''\
-
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
@@ -29,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.2'
+__version__ = '0.4.3'
 
 import re
 
@@ -208,6 +207,9 @@ class AU(Map):
         super(AU, self).__init__(next)
         # Fixed
         self.__title = None
+        # Memoized
+        self.__plugin = None
+        self.__name = None
     
     def set_title(self, title): self.__title = title
  
@@ -218,12 +220,19 @@ class AU(Map):
     def edition(self): return self._internal_get(AU.EDITION)
     def eisbn(self): return self._internal_get(AU.EISBN)
     def isbn(self): return self._internal_get(AU.ISBN)
-    def name(self): return self._internal_get(AU.NAME)
+    def name(self):
+        ret = self.__name
+        if ret is None: ret = self.__name = self._internal_get(AU.NAME)
+        return ret
     def nondefparam(self, nondefparam): return self._internal_get((AU.NONDEFPARAM[0], nondefparam))
     def nondefparams(self): return self._internal_get_prefix(AU.NONDEFPARAM)
     def param(self, param): return self._internal_get((AU.PARAM[0], param))
     def params(self): return self._internal_get_prefix(AU.PARAM)
-    def plugin(self): return self._internal_get(AU.PLUGIN) or (self.get(AU.PLUGIN_PREFIX) + self.get(AU.PLUGIN_SUFFIX))
+    def plugin(self):
+        ret = self.__plugin
+        if ret is None: ret = self.__plugin = self._internal_get(AU.PLUGIN)
+        if ret is None: ret = self.__plugin = self._internal_get(AU.PLUGIN_PREFIX) + self._internal_get(AU.PLUGIN_SUFFIX)
+        return ret
     def proxy(self):
         val = self._internal_get(AU.PROXY)
         if val is None or len(val) == 0: return None
