@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.11 2012-04-10 23:02:13 akanshab01 Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.12 2012-08-08 19:40:58 pgust Exp $
  */
 
 /*
@@ -75,7 +75,8 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
 
       TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
       TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
-      String isbn = (tdbau == null) ? null : tdbau.getIsbn();
+      String isbn = (tdbau == null) ? null : tdbau.getPrintIsbn();
+      String eisbn = (tdbau == null) ? null : tdbau.getEisbn();
       String issn = (tdbau == null) ? null : tdbau.getPrintIssn();
       String eissn = (tdbau == null) ? null : tdbau.getEissn();
       String year = (tdbau == null) ? null : tdbau.getStartYear();
@@ -85,31 +86,51 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
 
       if (am.get(MetadataField.FIELD_ISSN) == null
           || am.hasInvalidValue(MetadataField.FIELD_ISSN)) {
-        am.put(MetadataField.FIELD_ISSN, issn);
+        if (issn != null) {
+          am.put(MetadataField.FIELD_ISSN, issn);
+        }
       }
       if (am.get(MetadataField.FIELD_EISSN) == null
           || am.hasInvalidValue(MetadataField.FIELD_EISSN)) {
-        am.put(MetadataField.FIELD_EISSN, eissn);
+        if (eissn != null) {
+          am.put(MetadataField.FIELD_EISSN, eissn);
+        }
       }
       if (am.get(MetadataField.FIELD_VOLUME) == null
           || am.hasInvalidValue(MetadataField.FIELD_VOLUME)) {
-        am.put(MetadataField.FIELD_VOLUME, volume);
+        if (volume != null) {
+          am.put(MetadataField.FIELD_VOLUME, volume);
+        }
       }
       if (am.get(MetadataField.FIELD_DATE) == null
           || am.hasInvalidValue(MetadataField.FIELD_DATE)) {
-        am.put(MetadataField.FIELD_DATE, year);
+        if (year != null) {
+          am.put(MetadataField.FIELD_DATE, year);
+        }
       }
       if (am.get(MetadataField.FIELD_ISSUE) == null
           || am.hasInvalidValue(MetadataField.FIELD_ISSUE)) {
-        am.put(MetadataField.FIELD_ISSUE, issue);
+        if (issue != null) {
+          am.put(MetadataField.FIELD_ISSUE, issue);
+        }
       }
       if (am.get(MetadataField.FIELD_ISBN) == null
           || am.hasInvalidValue(MetadataField.FIELD_ISBN)) {
-        am.put(MetadataField.FIELD_ISBN, isbn);
+        if (isbn != null) {
+          am.put(MetadataField.FIELD_ISBN, isbn);
+        }
+      }
+      if (am.get(MetadataField.FIELD_EISBN) == null
+          || am.hasInvalidValue(MetadataField.FIELD_EISBN)) {
+        if (isbn != null) {
+          am.put(MetadataField.FIELD_EISBN, eisbn);
+        }
       }
       if (am.get(MetadataField.FIELD_JOURNAL_TITLE) == null
           || am.hasInvalidValue(MetadataField.FIELD_JOURNAL_TITLE)) {
-        am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
+        if (journalTitle != null) {
+          am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
+        }
       }
       if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL)) {
         am.put(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
