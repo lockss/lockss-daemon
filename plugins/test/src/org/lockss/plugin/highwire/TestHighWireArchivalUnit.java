@@ -1,10 +1,10 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.13 2010-10-02 22:24:21 tlipkis Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.14 2012-08-08 07:19:52 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,10 +55,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    setUpDiskSpace();
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
@@ -224,9 +221,8 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
    * Real tests in TestHighwireArchivalUnit
    */
   public void testCrawlWindowNone() throws Exception {
-    Properties props = new Properties();
-    props.put(BaseArchivalUnit.PARAM_USE_CRAWL_WINDOW, "false");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(BaseArchivalUnit.PARAM_USE_CRAWL_WINDOW,
+				  "false");
 
     DefinableArchivalUnit au =
       makeAu(new URL("http://shadow1.stanford.edu/"), 42);
@@ -235,9 +231,8 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   }
 
   public void testCrawlWindow() throws Exception {
-    Properties props = new Properties();
-    props.put(BaseArchivalUnit.PARAM_USE_CRAWL_WINDOW, "true");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromArgs(BaseArchivalUnit.PARAM_USE_CRAWL_WINDOW,
+				  "true");
 
     DefinableArchivalUnit au =
       makeAu(new URL("http://shadow1.stanford.edu/"), 42);

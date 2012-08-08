@@ -1,10 +1,10 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.15 2011-03-25 13:45:40 pgust Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.16 2012-08-08 07:19:52 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -94,9 +94,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  tempDirPath);
+    String tempDirPath = setUpDiskSpace();
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);

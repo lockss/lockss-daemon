@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -68,9 +68,7 @@ public class TestBioMedCentralPluginMetadataExtractorFactory extends LockssTestC
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-        tempDirPath);
+    String tempDirPath = setUpDiskSpace();
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
