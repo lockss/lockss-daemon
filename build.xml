@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.315 2012-07-30 06:12:59 tlipkis Exp $
+ $Id: build.xml,v 1.316 2012-08-08 07:09:47 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1039,7 +1039,6 @@ The target you have selected requires compiling under JDK 1.7.
 
     <for list="${plnnames}" delimiter=":" param="plnname">
       <sequential>
-        <echo message="calling tdb-pln -Dplnname=@{plnname}" />
 	<antcall target="tdb-pln">
 	  <param name="plnname" value="@{plnname}"/>
 	</antcall>
@@ -1059,6 +1058,7 @@ Must specify PLN name with -Dplnname=name
     <property name="outdir" value="${tdb.xml.dir}/${plnname}"/>
     <mkdir dir="${outdir}" />
 
+    <echo message="Generating tdb xml for ${plnname}" />
     <apply executable="scripts/tdb/tdbxml" dir="${basedir}"
            addsourcefile="true"
            dest="${outdir}"
