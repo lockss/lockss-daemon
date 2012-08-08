@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManagerStatusAccessor.java,v 1.11 2012-08-06 20:26:41 pgust Exp $
+ * $Id: MetadataManagerStatusAccessor.java,v 1.12 2012-08-08 16:47:00 pgust Exp $
  */
 
 /*
@@ -301,10 +301,12 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
       List<StatusTable.Reference> res = new ArrayList<StatusTable.Reference>();
       String s;
       if (metadataMgr.isIndexingEnabled()) {
-        s = StringUtil.numberOfUnits(
-              metadataMgr.getActiveReindexingCount(), 
-              "active metadata indexing operation", 
-              "active metadata index operations");
+        s =   StringUtil.numberOfUnits(
+                metadataMgr.getActiveReindexingCount(), 
+                "active metadata indexing operation", 
+                "active metadata index operations") + ", "
+            + StringUtil.numberOfUnits(
+                metadataMgr.getPendingAusCount(), "pending", "pending");
       } else {
         s = "Metadata Indexing Disabled";
       }
