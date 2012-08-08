@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
     </map>
   </entry>
@@ -101,8 +101,11 @@
     <string>org.lockss.plugin.igiglobal.IgiGlobalLoginPageChecker</string>
   </entry>
   <entry>
-     <string>au_substance_url_pattern</string>
-     <string>&quot;^%s(viewtitle\.aspx\?titleid=|gateway/article/full-text-html/)[0-9]+$&quot;, base_url</string>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%s(viewtitle\.aspx\?titleid=|gateway/article/full-text-html/)[0-9]+$&quot;, base_url</string>
+      <string>&quot;^%s(viewtitle\.aspx\?titleid=|gateway/article/full-text-pdf/)[0-9]+$&quot;, base_url</string>
+    </list>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
