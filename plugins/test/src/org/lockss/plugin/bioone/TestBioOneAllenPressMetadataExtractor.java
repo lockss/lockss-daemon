@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioOneAllenPressMetadataExtractor.java,v 1.6 2012-08-08 07:19:52 tlipkis Exp $
+ * $Id: TestBioOneAllenPressMetadataExtractor.java,v 1.7 2012-08-08 22:39:34 pgust Exp $
  */
 
 /*
@@ -224,6 +224,8 @@ public class TestBioOneAllenPressMetadataExtractor extends LockssTestCase {
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
   }
 
+  String[] badAuthors = new String[] {"David B. Lellinger &amp; Jefferson Prado" };
+  
   // A string representing bad html markup for a bioone article. Metadata from this code should NOT be extracted
   String badContent = 
     "<html>\n" +
@@ -263,12 +265,12 @@ public class TestBioOneAllenPressMetadataExtractor extends LockssTestCase {
     assertNull(md.get(MetadataField.FIELD_START_PAGE));
     //assertNull(md.getEndPage());
     assertNull(md.get(MetadataField.FIELD_ISSN));
-    //assertEquals(goodAuthors, md.get(MetadataField.FIELD_AUTHOR));
+    assertEquals(badAuthors[0], md.get(MetadataField.FIELD_AUTHOR));
     assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertNull(md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertNull(md.get(MetadataField.FIELD_DATE));
     assertNotNull(md.get(MetadataField.FIELD_ACCESS_URL));
-    assertEquals(9, md.size());
+    assertEquals(2, md.size()); // only author and access field
   }
 
   /**
