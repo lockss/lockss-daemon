@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.28 2012-05-30 08:31:29 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.29 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
@@ -80,7 +80,8 @@ public class FuncNewContentCrawler extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
     maxDepth=max;
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+		      tempDirPath);
     // crawlMgr.startService(); below is needed so init happens, this
     // prevents crawl starter thread from doing anything.
     props.setProperty(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "-1");
@@ -88,6 +89,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
     //test that we don't cache a file that is globally excluded
     props.setProperty(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
 		      ".*(branch1/.*){3,}");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -99,7 +101,6 @@ public class FuncNewContentCrawler extends LockssTestCase {
     crawlMgr.initService(theDaemon);
     crawlMgr.startService();
 
-    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     sau =
       (MySimulatedArchivalUnit)

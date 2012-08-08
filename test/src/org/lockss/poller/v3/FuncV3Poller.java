@@ -1,10 +1,10 @@
 /*
- * $Id: FuncV3Poller.java,v 1.20 2011-12-05 22:45:41 barry409 Exp $
+ * $Id: FuncV3Poller.java,v 1.21 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -121,7 +121,7 @@ public class FuncV3Poller extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
     p.setProperty(V3Poller.PARAM_MAX_POLL_DURATION, "6m");
@@ -130,7 +130,6 @@ public class FuncV3Poller extends LockssTestCase {
     p.setProperty(LcapDatagramComm.PARAM_ENABLED, "false");
     p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY,
 		  "TCP:[127.0.0.1]:3456");
-    p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(IdentityManagerImpl.PARAM_INITIAL_PEERS,
                   "TCP:[127.0.0.2]:3456;TCP:[127.0.0.3]:3456;"
                   + "TCP:[127.0.0.4]:3456;TCP:[127.0.0.5]:3456;"

@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchiveMembers.java,v 1.4 2012-03-12 07:06:55 tlipkis Exp $
+ * $Id: TestArchiveMembers.java,v 1.5 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
@@ -65,9 +65,7 @@ public class TestArchiveMembers extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.addFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  tempDirPath);
+    tempDirPath = setUpDiskSpace();
     daemon = getMockLockssDaemon();
     pluginMgr = daemon.getPluginManager();
     pluginMgr.setLoadablePluginsReady(true);

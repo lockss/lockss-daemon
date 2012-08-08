@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedArcContent.java,v 1.7 2012-05-30 08:31:29 tlipkis Exp $
+ * $Id: FuncSimulatedArcContent.java,v 1.8 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
@@ -75,10 +75,10 @@ public class FuncSimulatedArcContent extends LockssTestCase {
     String auIdStr = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
       PropKeyEncoder.encode(tempDirPath);
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
-                      tempDirPath);
+    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+		      tempDirPath);
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doArcFile", "true");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -86,7 +86,6 @@ public class FuncSimulatedArcContent extends LockssTestCase {
     theDaemon.getHashService();
 
     theDaemon.setDaemonInited(true);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon.getPluginManager().startService();
     theDaemon.getHashService().startService();

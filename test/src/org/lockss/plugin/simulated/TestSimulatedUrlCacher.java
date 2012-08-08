@@ -1,10 +1,10 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.29 2012-02-16 10:41:08 tlipkis Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.30 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,7 +57,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 				  tempDirPath);
 
     theDaemon = getMockLockssDaemon();

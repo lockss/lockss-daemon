@@ -1,10 +1,10 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.22 2012-07-31 23:14:03 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.23 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -79,13 +79,19 @@ public class TestOpenUrlResolver extends LockssTestCase {
   Set<String> ausReindexed = new HashSet<String>();
   
   public void setUp() throws Exception {
-	super.setUp();
+    super.setUp();
 
+    String paramIndexingEnabled = 
+      Boolean.toString(!disableMetadataManager && true);
     final String tempDirPath = getTempDir().getAbsolutePath();
+    ConfigurationUtil.setFromArgs(MetadataManager.PARAM_INDEXING_ENABLED, 
+                                  paramIndexingEnabled,
+                                  ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+                                  new File(tempDirPath, "disk").toString());
 
     // set derby database log 
     System.setProperty("derby.stream.error.file", 
-    				   new File(tempDirPath,"derby.log").getAbsolutePath());
+		       new File(tempDirPath,"derby.log").getAbsolutePath());
     
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -95,15 +101,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     pluginManager.startService();
     theDaemon.getCrawlManager();
     
-    String paramIndexingEnabled = 
-      Boolean.toString(!disableMetadataManager && true);
-    Properties props = new Properties();
-    props.setProperty(MetadataManager.PARAM_INDEXING_ENABLED, 
-                      paramIndexingEnabled);
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props.setProperty(DbManager.PARAM_DATASOURCE_ROOTDIR, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = ConfigurationUtil.fromProps(props);
+    // Make a copy of current config so can add tdb
+    Configuration config = ConfigManager.getCurrentConfig().copy();
 
     Tdb tdb = new Tdb();
     

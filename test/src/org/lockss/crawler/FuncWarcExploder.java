@@ -1,5 +1,5 @@
 /*
- * $Id: FuncWarcExploder.java,v 1.4 2012-05-30 08:31:29 tlipkis Exp $
+ * $Id: FuncWarcExploder.java,v 1.5 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
@@ -158,7 +158,8 @@ public class FuncWarcExploder extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
     maxDepth=max;
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+		      tempDirPath);
 
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doWarcFile", "true");
 
@@ -169,6 +170,7 @@ public class FuncWarcExploder extends LockssTestCase {
       "org.lockss.crawler.FuncWarcExploderMockExplodedPlugin";
     props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME, explodedPluginName);
     props.setProperty(Exploder.PARAM_EXPLODED_AU_YEAR, GOOD_YEAR);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -185,8 +187,6 @@ public class FuncWarcExploder extends LockssTestCase {
     pluginMgr.startLoadablePlugins();
     String explodedPluginKey = pluginMgr.pluginKeyFromName(explodedPluginName);
     pluginMgr.ensurePluginLoaded(explodedPluginKey);
-
-    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
 					     simAuConfig(tempDirPath));

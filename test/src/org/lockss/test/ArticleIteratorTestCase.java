@@ -1,10 +1,10 @@
 /*
- * $Id: ArticleIteratorTestCase.java,v 1.1 2011-09-08 23:41:23 tlipkis Exp $
+ * $Id: ArticleIteratorTestCase.java,v 1.2 2012-08-08 07:15:45 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,6 +38,7 @@ import java.net.*;
 import java.util.regex.*;
 
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
@@ -51,7 +52,7 @@ public abstract class ArticleIteratorTestCase extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.addFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 				  tempDirPath);
     MockLockssDaemon daemon = getMockLockssDaemon();
     PluginManager pluginMgr = daemon.getPluginManager();

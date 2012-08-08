@@ -1,10 +1,10 @@
 /*
- * $Id: TestPollUtil.java,v 1.3 2010-02-23 04:55:31 pgust Exp $
+ * $Id: TestPollUtil.java,v 1.4 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
 
- Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -118,14 +118,16 @@ public class TestPollUtil extends LockssTestCase {
     assertEquals(22, schedSvc.events.size());
   }
 
-  public void testGetPollStateRoot() {
-    ConfigurationUtil.setFromArgs(V3Poller.PARAM_STATE_PATH, "/tmp/path");
-    assertEquals(new File("/tmp/path"),
+  public void testGetPollStateRoot() throws IOException {
+    TimeBase.setReal();		    // FileUtil.ensureDirExists() can sleep
+    String tmpdir = getTempDir().toString();
+    ConfigurationUtil.setFromArgs(V3Poller.PARAM_STATE_PATH, tmpdir);
+    assertEquals(new File(tmpdir),
 		 PollUtil.getPollStateRoot());
     ConfigurationUtil.setFromArgs(V3Poller.PARAM_REL_STATE_PATH, "path/2",
 				  ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-				  "/mount/point");
-    assertEquals(new File("/mount/point/path/2"),
+				  tmpdir);
+    assertEquals(new File(tmpdir, "path/2"),
 		 PollUtil.getPollStateRoot());
   }
 

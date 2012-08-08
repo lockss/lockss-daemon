@@ -1,10 +1,10 @@
 /*
- * $Id: TestCuUrl.java,v 1.10 2005-05-12 00:26:25 troberts Exp $
+ * $Id: TestCuUrl.java,v 1.11 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.Properties;
 import org.lockss.plugin.*;
+import org.lockss.config.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.repository.LockssRepositoryImpl;
@@ -54,7 +55,8 @@ public class TestCuUrl extends LockssTestCase {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+		      tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();

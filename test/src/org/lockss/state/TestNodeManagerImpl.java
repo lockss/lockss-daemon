@@ -1,8 +1,8 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.139 2007-06-08 21:18:57 smorabito Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.140 2012-08-08 07:15:45 tlipkis Exp $
  */
 /*
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -57,8 +57,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties p = new Properties();
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
     p.setProperty(NodeManagerManager.PARAM_MAX_PER_AU_CACHE_SIZE, "10");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");

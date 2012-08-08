@@ -1,10 +1,10 @@
 /*
- * $Id: TestTitleSetActiveAus.java,v 1.3 2005-06-02 16:39:40 tlipkis Exp $
+ * $Id: TestTitleSetActiveAus.java,v 1.4 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,6 +55,7 @@ public class TestTitleSetActiveAus extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    setUpDiskSpace();
     daemon = getMockLockssDaemon();
     pluginMgr = new MyPluginManager();
     daemon.setPluginManager(pluginMgr);

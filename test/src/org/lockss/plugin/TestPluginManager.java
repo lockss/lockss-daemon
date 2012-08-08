@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.97 2012-07-30 05:43:58 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.98 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
@@ -143,16 +143,13 @@ public class TestPluginManager extends LockssTestCase {
     p.setProperty(p1a1param+MockPlugin.CONFIG_PROP_2, "val2");
     p.setProperty(p1a2param+MockPlugin.CONFIG_PROP_1, "val1");
     p.setProperty(p1a2param+MockPlugin.CONFIG_PROP_2, "va.l3");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+    p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     ConfigurationUtil.addFromProps(p);
   }
 
   private void minimalConfig() throws Exception {
     // String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.addFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  tempDirPath,
-				  HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 				  tempDirPath);
   }
 

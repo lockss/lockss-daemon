@@ -1,10 +1,10 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.79 2010-06-17 18:49:23 tlipkis Exp $
+ * $Id: FuncSimulatedContent.java,v 1.80 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -84,9 +84,8 @@ public class FuncSimulatedContent extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_DURATION, "1000");
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_BYTE_STEP, "1024");
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
-                      tempDirPath);
+    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+		      tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     pluginMgr = theDaemon.getPluginManager();

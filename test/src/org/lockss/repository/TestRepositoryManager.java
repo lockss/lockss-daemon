@@ -1,9 +1,9 @@
 /*
- * $Id: TestRepositoryManager.java,v 1.8 2007-10-13 03:16:57 tlipkis Exp $
+ * $Id: TestRepositoryManager.java,v 1.9 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,9 @@
 
 package org.lockss.repository;
 
+import java.io.*;
 import java.util.*;
+
 import org.lockss.app.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -106,12 +108,13 @@ public class TestRepositoryManager extends LockssTestCase {
 
   public void testGetRepositoryList() throws Exception {
     assertEmpty(mgr.getRepositoryList());
+    String tempDirPath = setUpDiskSpace();
+    assertEquals(ListUtil.list("local:" + tempDirPath),
+		 mgr.getRepositoryList());
+    String tempdir2 = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.setFromArgs("org.lockss.platform.diskSpacePaths",
-				  "/foo/bar");
-    assertEquals(ListUtil.list("local:/foo/bar"), mgr.getRepositoryList());
-    ConfigurationUtil.setFromArgs("org.lockss.platform.diskSpacePaths",
-				  "/foo/bar;/cache2");
-    assertEquals(ListUtil.list("local:/foo/bar", "local:/cache2"),
+				  tempdir2 + ";" + tempDirPath);
+    assertEquals(ListUtil.list("local:" + tempdir2, "local:" + tempDirPath),
 		 mgr.getRepositoryList());
   }
 

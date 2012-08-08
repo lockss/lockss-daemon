@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedWarcContent.java,v 1.3 2012-05-30 08:31:29 tlipkis Exp $
+ * $Id: FuncSimulatedWarcContent.java,v 1.4 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
@@ -72,8 +72,10 @@ public class FuncSimulatedWarcContent extends LockssTestCase {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+		      tempDirPath);
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doWarcFile", "true");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -81,7 +83,6 @@ public class FuncSimulatedWarcContent extends LockssTestCase {
     theDaemon.getHashService();
 
     theDaemon.setDaemonInited(true);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon.getPluginManager().startService();
     theDaemon.getHashService().startService();

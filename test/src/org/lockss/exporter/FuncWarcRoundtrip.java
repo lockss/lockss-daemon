@@ -1,5 +1,5 @@
 /*
- * $Id: FuncWarcRoundtrip.java,v 1.4 2012-05-30 08:31:29 tlipkis Exp $
+ * $Id: FuncWarcRoundtrip.java,v 1.5 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
@@ -126,8 +126,8 @@ public class FuncWarcRoundtrip extends LockssTestCase {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties props = new Properties();
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+		      tempDirPath);
     props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 

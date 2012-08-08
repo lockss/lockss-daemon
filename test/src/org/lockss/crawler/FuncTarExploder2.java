@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.20 2012-05-30 08:31:29 tlipkis Exp $
+ * $Id: FuncTarExploder2.java,v 1.21 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
@@ -146,7 +146,8 @@ public class FuncTarExploder2 extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
     maxDepth=max;
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+		      tempDirPath);
 
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doTarFile", "true");
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.actualTarFile", "true");
@@ -159,6 +160,7 @@ public class FuncTarExploder2 extends LockssTestCase {
       "org.lockss.plugin.elsevier.ClockssElsevierExplodedPlugin";
     props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME, explodedPluginName);
     props.setProperty(Exploder.PARAM_EXPLODED_AU_YEAR, "1997");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -175,8 +177,6 @@ public class FuncTarExploder2 extends LockssTestCase {
     pluginMgr.startLoadablePlugins();
     String explodedPluginKey = pluginMgr.pluginKeyFromName(explodedPluginName);
     pluginMgr.ensurePluginLoaded(explodedPluginKey);
-
-    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
     ArticleIteratorFactory aif = new ElsevierArticleIteratorFactory();

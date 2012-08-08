@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubTreeArticleIterator.java,v 1.9 2012-03-12 07:06:55 tlipkis Exp $
+ * $Id: TestSubTreeArticleIterator.java,v 1.10 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
@@ -63,9 +63,8 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  tempDirPath);
+    tempDirPath = setUpDiskSpace();
+
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);

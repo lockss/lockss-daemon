@@ -1,10 +1,10 @@
 /*
- * $Id: TestProxyInfo.java,v 1.23 2008-03-29 00:22:08 edwardsb1 Exp $
+ * $Id: TestProxyInfo.java,v 1.24 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,6 +54,7 @@ public class TestProxyInfo extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    setUpDiskSpace();
     pi = new ProxyInfo(HOST);
     plug = new MockPlugin();
     getMockLockssDaemon().getPluginManager().startService();
@@ -63,7 +64,7 @@ public class TestProxyInfo extends LockssTestCase {
     String h = "1.3.4.22";
     Properties p = new Properties();
     p.put(IdentityManager.PARAM_LOCAL_IP, h);
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromProps(p);
     assertEquals(h, new ProxyInfo().getProxyHost());
     assertEquals("foo", new ProxyInfo("foo").getProxyHost());
   }
@@ -74,7 +75,7 @@ public class TestProxyInfo extends LockssTestCase {
     Properties p = new Properties();
     p.put(ConfigManager.PARAM_PLATFORM_FQDN, h);
     p.put(IdentityManager.PARAM_LOCAL_IP, "superseded.by.platform");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromProps(p);
     assertEquals(h, new ProxyInfo().getProxyHost());
     assertEquals("foo", new ProxyInfo("foo").getProxyHost());
   }

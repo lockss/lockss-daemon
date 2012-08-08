@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetInactiveAus.java,v 1.6 2012-07-10 04:35:42 tlipkis Exp $
+ * $Id: TestTitleSetInactiveAus.java,v 1.7 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class TestTitleSetInactiveAus extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    setUpDiskSpace();
     getMockLockssDaemon().setIdentityManager(new org.lockss.protocol.MockIdentityManager());
     pluginMgr = getMockLockssDaemon().getPluginManager();
     pluginMgr.startService();
@@ -64,7 +65,7 @@ public class TestTitleSetInactiveAus extends LockssTestCase {
     Properties props = new Properties();
 
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDir);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromProps(props);
 
     String key = PluginManager.pluginKeyFromName(MockPlugin.class.getName());
     pluginMgr.ensurePluginLoaded(key);

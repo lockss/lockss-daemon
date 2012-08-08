@@ -1,10 +1,10 @@
 /*
- * $Id: TestSqlStoredProcedures.java,v 1.2 2012-01-16 18:04:15 pgust Exp $
+ * $Id: TestSqlStoredProcedures.java,v 1.3 2012-08-08 07:15:45 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -80,6 +80,8 @@ public class TestSqlStoredProcedures extends LockssTestCase {
     super.setUp();
 
     final String tempDirPath = getTempDir().getAbsolutePath();
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  new File(tempDirPath, "disk").toString());
 
     // set derby database log 
     System.setProperty("derby.stream.error.file", 
@@ -94,10 +96,7 @@ public class TestSqlStoredProcedures extends LockssTestCase {
     // need to reset cached plugin manager between runs
     SqlStoredProcedures.setPluginManager(null);
     theDaemon.getCrawlManager();
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = ConfigurationUtil.fromProps(props);
+    Configuration config = ConfigManager.getCurrentConfig().copy();
 
     Tdb tdb = new Tdb();
 

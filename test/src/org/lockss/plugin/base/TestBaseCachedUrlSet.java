@@ -1,10 +1,10 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.15 2012-03-12 07:06:55 tlipkis Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.16 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,7 @@ package org.lockss.plugin.base;
 
 import java.io.*;
 import java.util.*;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
@@ -64,8 +65,8 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+		      tempDirPath);
     props.setProperty(SystemMetrics.PARAM_DEFAULT_HASH_SPEED,
 		      Integer.toString(HASH_SPEED));
     ConfigurationUtil.setCurrentConfigFromProps(props);

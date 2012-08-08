@@ -1,10 +1,10 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.27 2005-10-11 05:49:28 tlipkis Exp $
+ * $Id: TestActivityRegulator.java,v 1.28 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2001-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2001-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,7 @@ import java.util.*;
 import java.io.File;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.repository.LockssRepositoryImpl;
 
@@ -50,7 +51,8 @@ public class TestActivityRegulator extends LockssTestCase {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+		      tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     mau = new MockArchivalUnit();

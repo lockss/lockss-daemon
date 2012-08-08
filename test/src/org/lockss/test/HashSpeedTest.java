@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.34 2012-05-30 08:31:29 tlipkis Exp $
+ * $Id: HashSpeedTest.java,v 1.35 2012-08-08 07:15:45 tlipkis Exp $
  */
 
 /*
@@ -84,7 +84,8 @@ public class HashSpeedTest extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_DURATION, ""+duration);
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_BYTE_STEP, ""+byteStep);
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+		      tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon.getPluginManager();

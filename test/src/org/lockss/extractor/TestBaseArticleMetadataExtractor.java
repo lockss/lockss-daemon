@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArticleMetadataExtractor.java,v 1.5 2012-07-09 07:55:13 tlipkis Exp $
+ * $Id: TestBaseArticleMetadataExtractor.java,v 1.6 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class TestBaseArticleMetadataExtractor<Titleconfig> extends
 
   public void setUp() throws Exception {
     super.setUp();
-    final String tempDirPath = getTempDir().getAbsolutePath();
+    final String tempDirPath = setUpDiskSpace();
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     pluginManager = theDaemon.getPluginManager();
@@ -82,7 +82,6 @@ public class TestBaseArticleMetadataExtractor<Titleconfig> extends
     pluginManager.startService();
     theDaemon.getCrawlManager();
     Boolean.toString(!disableMetadataManager && true);
-    Properties props = new Properties();
 
     String rootPath0 = tempDirPath + "/0";
     String rootPath1 = tempDirPath + "/1";
@@ -90,9 +89,8 @@ public class TestBaseArticleMetadataExtractor<Titleconfig> extends
     String rootPath3 = tempDirPath + "/3";
     String rootPath4 = tempDirPath + "/4";
 
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = ConfigurationUtil.fromProps(props);
+    // Get a copy of the current that we can modify
+    Configuration config = ConfigManager.getCurrentConfig().copy();
     Tdb tdb = new Tdb();
 
     // create Tdb for testing purposes

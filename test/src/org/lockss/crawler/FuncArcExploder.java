@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder.java,v 1.11 2012-05-30 08:31:29 tlipkis Exp $
+ * $Id: FuncArcExploder.java,v 1.12 2012-08-08 07:15:46 tlipkis Exp $
  */
 
 /*
@@ -157,17 +157,16 @@ public class FuncArcExploder extends LockssTestCase {
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties props = new Properties();
+    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+		      tempDirPath);
     props.setProperty(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
     maxDepth=max;
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
 
     props.setProperty("org.lockss.plugin.simulated.SimulatedContentGenerator.doArcFile", "true");
 
     props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
     props.setProperty(FollowLinkCrawler.PARAM_STORE_ARCHIVES, "true");
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
     String explodedPluginName =
       "org.lockss.crawler.FuncTarExploderMockExplodedPlugin";
     props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME, explodedPluginName);
@@ -175,6 +174,7 @@ public class FuncArcExploder extends LockssTestCase {
     props.setProperty(LockssApp.MANAGER_PREFIX + LockssDaemon.PLUGIN_MANAGER,
 		      MyPluginManager.class.getName());
 
+    ConfigurationUtil.setCurrentConfigFromProps(props);
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     pluginMgr = new MyPluginManager();
@@ -191,7 +191,6 @@ public class FuncArcExploder extends LockssTestCase {
     String explodedPluginKey = pluginMgr.pluginKeyFromName(explodedPluginName);
     pluginMgr.ensurePluginLoaded(explodedPluginKey);
 
-    ConfigurationUtil.setCurrentConfigFromProps(props);
 
     sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
 					     simAuConfig(tempDirPath));
