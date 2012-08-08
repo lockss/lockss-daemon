@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.14 2012-08-06 20:54:43 thib_gc Exp $
+# $Id: tdbparse.py,v 1.15 2012-08-08 07:08:30 thib_gc Exp $
 
 __copyright__ = '''\
-
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
@@ -29,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.3'''
+__version__ = '''0.4.4'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -233,9 +232,13 @@ class TdbScanner(object):
         # Skip initial whitespace
         ch = self.__cur[0]
         if ch == ' ' or ch == '\t':
-            match = TdbScanner.RE_WHITE1.match(self.__cur)
-            if match: self.__move(match.end())
-            ch = self.__cur[0]
+            # Don't bother with regex for single whitespace (common)
+            ch = self.__cur[1]
+            if ch == ' ' or ch == '\t':
+                match = TdbScanner.RE_WHITE1.match(self.__cur)
+                if match: self.__move(match.end())
+                ch = self.__cur[0]
+            else: self.__move(1)
         # Strings
         if self.__stringFlag == TdbparseToken.EQUAL or self.__stringFlag == TdbparseToken.SEMICOLON:
             # Empty bare string
@@ -251,9 +254,6 @@ class TdbScanner(object):
             if ch == TdbparseLiteral.QUOTE_DOUBLE: return self.__qstring()
             # Bare string
             return self.__bstring()
-        # Keywords
-        match = TdbScanner.RE_KEYWORD.match(self.__cur)
-        if match: return self.__keyword(match.group(1))
         # Single-character tokens
         if ch == TdbparseLiteral.SEMICOLON:
             if self.__stringFlag == TdbparseToken.AU:
@@ -273,11 +273,14 @@ class TdbScanner(object):
         if ch == TdbparseLiteral.SQUARE_CLOSE: return self.__single(TdbparseToken.SQUARE_CLOSE)
         if ch == TdbparseLiteral.CURLY_OPEN: return self.__single(TdbparseToken.CURLY_OPEN)
         if ch == TdbparseLiteral.CURLY_CLOSE: return self.__single(TdbparseToken.CURLY_CLOSE)
+        # Keywords
+        match = TdbScanner.RE_KEYWORD.match(self.__cur)
+        if match: return self.__keyword(match.group(1))
         # Identifiers
         match = TdbScanner.RE_IDENTIFIER.match(self.__cur)
         if match:
             self.__token(TdbparseToken.IDENTIFIER)
-            self.__tok.set_value(match.group())
+            self.__tok.set_value(match.group(0))
             self.__move(match.end())
             return self.__tok
         # Syntax error
