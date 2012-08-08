@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.43 2012-05-30 08:28:13 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.44 2012-08-08 07:11:11 tlipkis Exp $
  */
 
 /*
@@ -476,22 +476,24 @@ public class TestConfigManager extends LockssTestCase {
   }
 
   public void testPlatformSpace1() throws Exception {
-    Properties props = new Properties();
-    props.put("org.lockss.platform.diskSpacePaths", "/foo/bar");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    String tmpdir = setUpDiskSpace();
     Configuration config = ConfigManager.getCurrentConfig();
-    assertEquals("/foo/bar", config.get("org.lockss.cache.location"));
-    assertEquals("/foo/bar", config.get("org.lockss.history.location"));
+    assertEquals(tmpdir, config.get("org.lockss.cache.location"));
+    assertEquals(tmpdir, config.get("org.lockss.history.location"));
   }
 
   public void testPlatformSpace2() throws Exception {
+    String tmpdir1 = getTempDir().toString();
+    String tmpdir2 = getTempDir().toString();
     Properties props = new Properties();
-    props.put("org.lockss.platform.diskSpacePaths", "/a/b;/foo/bar");
+    props.put("org.lockss.platform.diskSpacePaths",
+	      StringUtil.separatedString(ListUtil.list(tmpdir1, tmpdir2)
+					 , ";"));
     ConfigurationUtil.setCurrentConfigFromProps(props);
     Configuration config = ConfigManager.getCurrentConfig();
-    assertEquals("/a/b", config.get("org.lockss.cache.location"));
-    assertEquals("/a/b", config.get("org.lockss.history.location"));
-    assertEquals(FileUtil.sysDepPath("/a/b/iddb"),
+    assertEquals(tmpdir1, config.get("org.lockss.cache.location"));
+    assertEquals(tmpdir1, config.get("org.lockss.history.location"));
+    assertEquals(FileUtil.sysDepPath(new File(tmpdir1, "iddb").toString()),
 		 config.get("org.lockss.id.database.dir"));
   }
 
@@ -534,6 +536,164 @@ public class TestConfigManager extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(props);
     Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("11", config.get("org.lockss.foo"));
+  }
+
+  public void testFindRelDataDirNoDisks() throws Exception {
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  "");
+    try {
+      mgr.findRelDataDir("rel1", true);
+      fail("findRelDataDir() should throw when " +
+	   ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST + " not set");
+    } catch (RuntimeException e) {
+    }
+  }
+
+  public void testFindRelDataDir1New() throws Exception {
+    String tmpdir = getTempDir().toString();
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tmpdir);
+    File exp = new File(tmpdir, "rel1");
+    assertFalse(exp.exists());
+    File pdir = mgr.findRelDataDir("rel1", true);
+    assertEquals(exp, pdir);
+    assertTrue(exp.exists());
+  }
+
+  public void testFindRelDataDir1Old() throws Exception {
+    String tmpdir = getTempDir().toString();
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tmpdir);
+    File exp = new File(tmpdir, "rel2");
+    assertFalse(exp.exists());
+    assertTrue(FileUtil.ensureDirExists(exp));
+    File pdir = mgr.findRelDataDir("rel2", true);
+    assertEquals(exp, pdir);
+    assertTrue(exp.exists());
+  }
+
+  public void testFindRelDataDirNNew() throws Exception {
+    String tmpdir1 = getTempDir().toString();
+    String tmpdir2 = getTempDir().toString();
+    List<String> both = ListUtil.list(tmpdir2, tmpdir1);
+    assertNotEquals(tmpdir1, tmpdir2);
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  StringUtil.separatedString(both, ";"));
+    assertEquals(both, mgr.getCurrentConfig().getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST));
+    File exp1 = new File(tmpdir1, "rel3");
+    File exp2 = new File(tmpdir2, "rel3");
+    assertFalse(exp1.exists());
+    assertFalse(exp2.exists());
+    File pdir = mgr.findRelDataDir("rel3", true);
+    assertEquals(exp2, pdir);
+    assertTrue(exp2.exists());
+    assertFalse(exp1.exists());
+  }
+
+  public void testFindRelDataDirNOld() throws Exception {
+    String tmpdir1 = getTempDir().toString();
+    String tmpdir2 = getTempDir().toString();
+    List<String> both = ListUtil.list(tmpdir1, tmpdir2);
+    assertNotEquals(tmpdir1, tmpdir2);
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  StringUtil.separatedString(both, ";"));
+    assertEquals(both, mgr.getCurrentConfig().getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST));
+    File exp1 = new File(tmpdir1, "rel4");
+    File exp2 = new File(tmpdir2, "rel4");
+    assertFalse(exp1.exists());
+    assertFalse(exp2.exists());
+    assertTrue(FileUtil.ensureDirExists(exp2));
+    File pdir = mgr.findRelDataDir("rel4", true);
+    assertEquals(exp2, pdir);
+    assertTrue(exp2.exists());
+    assertFalse(exp1.exists());
+  }
+
+  public void testFindConfiguredDataDirAbsNew() throws Exception {
+    String tmpdir = getTempDir().toString();
+    File exp = new File(tmpdir, "rel1");
+    assertTrue(exp.isAbsolute());
+    String param = "o.l.param7";
+    ConfigurationUtil.addFromArgs(param, exp.toString());
+    assertFalse(exp.exists());
+    File pdir = mgr.findConfiguredDataDir(param, "/illegal.abs.path");
+    assertEquals(exp, pdir);
+    assertTrue(exp.exists());
+
+    File exp2 = new File(tmpdir, "other");
+    assertTrue(exp.isAbsolute());
+    assertFalse(exp2.exists());
+    File pdir2 = mgr.findConfiguredDataDir("unset.param", exp2.toString());
+    assertEquals(exp2, pdir2);
+    assertTrue(exp2.exists());
+  }
+
+  public void testFindConfiguredDataDirAbsOld() throws Exception {
+    String tmpdir = getTempDir().toString();
+    File exp = new File(tmpdir, "rel1");
+    assertTrue(exp.isAbsolute());
+    String param = "o.l.param7";
+    ConfigurationUtil.addFromArgs(param, exp.toString());
+    assertFalse(exp.exists());
+    assertTrue(FileUtil.ensureDirExists(exp));
+    assertTrue(exp.exists());
+    File pdir = mgr.findConfiguredDataDir(param, "/illegal.abs.path");
+    assertEquals(exp, pdir);
+    assertTrue(exp.exists());
+
+    File exp2 = new File(tmpdir, "other");
+    assertTrue(exp.isAbsolute());
+    assertFalse(exp2.exists());
+    assertTrue(FileUtil.ensureDirExists(exp2));
+    assertTrue(exp2.exists());
+    File pdir2 = mgr.findConfiguredDataDir("unset.param", exp2.toString());
+    assertEquals(exp2, pdir2);
+    assertTrue(exp2.exists());
+  }
+
+  public void testFindConfiguredDataDirRelNew() throws Exception {
+    String tmpdir1 = getTempDir().toString();
+    String tmpdir2 = getTempDir().toString();
+    List<String> both = ListUtil.list(tmpdir1, tmpdir2);
+    assertNotEquals(tmpdir1, tmpdir2);
+    String param = "o.l.param9";
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  StringUtil.separatedString(both, ";"),
+				  param, "rel5");
+    File exp1 = new File(tmpdir1, "rel5");
+    File exp2 = new File(tmpdir2, "rel5");
+    assertFalse(exp1.exists());
+    assertFalse(exp2.exists());
+    File pdir = mgr.findConfiguredDataDir(param, "other");
+    assertEquals(exp1, pdir);
+    assertTrue(exp1.exists());
+
+    File exp3 = new File(tmpdir1, "other");
+    assertFalse(exp3.exists());
+    File pdir3 = mgr.findConfiguredDataDir("unset.param", exp3.toString());
+    assertEquals(exp3, pdir3);
+    assertTrue(exp3.exists());
+  }
+
+  public void testFindConfiguredDataDirRelOld() throws Exception {
+    String tmpdir1 = getTempDir().toString();
+    String tmpdir2 = getTempDir().toString();
+    List<String> both = ListUtil.list(tmpdir1, tmpdir2);
+    assertNotEquals(tmpdir1, tmpdir2);
+    String param = "o.l.param9";
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  StringUtil.separatedString(both, ";"),
+				  param, "rel5");
+    File exp1 = new File(tmpdir1, "rel5");
+    File exp2 = new File(tmpdir2, "rel5");
+    assertFalse(exp1.exists());
+    assertFalse(exp2.exists());
+    assertTrue(FileUtil.ensureDirExists(exp2));
+    assertTrue(exp2.exists());
+    File pdir = mgr.findConfiguredDataDir(param, "other");
+    assertEquals(exp2, pdir);
+    assertTrue(exp2.exists());
+    assertFalse(exp1.exists());
   }
 
   public void testPlatformConfigDirSetup() throws Exception {
@@ -588,7 +748,7 @@ public class TestConfigManager extends LockssTestCase {
 
   public void testMiscTmpdir() throws Exception {
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_TMPDIR, "/tmp/unlikely");
-    assertEquals("/tmp/unlikely", System.getProperty("java.io.tmpdir"));
+    assertEquals("/tmp/unlikely/dtmp", System.getProperty("java.io.tmpdir"));
   }
 
   public void testConfigVersionProp() {

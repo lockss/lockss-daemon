@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.91 2012-07-10 04:35:07 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.92 2012-08-08 07:11:11 tlipkis Exp $
  */
 
 /*
@@ -337,7 +337,7 @@ public class ConfigManager implements LockssManager {
       }};
 
   /** Disallow keys prohibited in expert config file, defined by {@link
-   * PARAM_EXPERT_ALLOW} and {@link PARAM_EXPERT_DENY} */
+   * #PARAM_EXPERT_ALLOW} and {@link #PARAM_EXPERT_DENY} */
   public KeyPredicate expertConfigKeyPredicate = new KeyPredicate() {
       public boolean evaluate(Object obj) {
 	if (obj instanceof String) {
@@ -1290,9 +1290,14 @@ public class ConfigManager implements LockssManager {
       config.put(PARAM_HASH_SVC, DEFAULT_HASH_SVC);
     }
 
+    // If we were given a temp dir, create a subdir and use that.  This
+    // ensures that * expansion in rundaemon won't exceed the maximum
+    // command length.
+
     String tmpdir = config.get(PARAM_TMPDIR);
     if (!StringUtil.isNullString(tmpdir)) {
-      System.setProperty("java.io.tmpdir", tmpdir);
+      String javaTmpDir = new File(tmpdir, "dtmp").toString();
+      System.setProperty("java.io.tmpdir", javaTmpDir);
     }
 
     String fromParam = LockssDaemon.PARAM_BIND_ADDRS;
@@ -1638,28 +1643,12 @@ public class ConfigManager implements LockssManager {
   private void initCacheConfig(String dspace, String relConfigPath) {
     if (cacheConfigInited) return;
     Vector v = StringUtil.breakAt(dspace, ';');
-    if (!isUnitTesting() && v.size() == 0) {
+    if (v.size() == 0) {
       log.error(PARAM_PLATFORM_DISK_SPACE_LIST +
 		" not specified, not configuring local cache config dir");
       return;
     }
-    for (Iterator iter = v.iterator(); iter.hasNext(); ) {
-      String path = (String)iter.next();
-      File configDir = new File(path, relConfigPath);
-      if (configDir.exists()) {
-	cacheConfigDir = configDir;
-	break;
-      }
-    }
-    if (cacheConfigDir == null) {
-      if (v.size() >= 1) {
-	String path = (String)v.get(0);
-	File dir = new File(path, relConfigPath);
-	if (dir.mkdirs()) {
-	  cacheConfigDir = dir;
-	}
-      }
-    }
+    cacheConfigDir = findRelDataDir(v, relConfigPath, true);
     cacheConfigInited = true;
   }
 
@@ -1711,23 +1700,115 @@ public class ConfigManager implements LockssManager {
   }
 
   /**
-   * <p>Return a directory under the platform disk space list.  Does
-   * not create the directory, client code is expected to handle that.</p>
-   *
-   * <p>This currently only returns directories on the first available
-   * platform disk.</p>
-   *
-   * @param relDir The relative pathname of the directory to request.
+   * Find or create a directory specified by a config param and default.
+   * If value (the param value or default) is an absolute path, that
+   * directory is returned (and created if necessary).  If the value is
+   * relative, it specifies a directory relative to (one of) the paths on
+   * {@value #PARAM_PLATFORM_DISK_SPACE_LIST}.  If one of these directories
+   * exists, it (the first one) is returned, else the directory is created
+   * relative to the first element of {@value
+   * #PARAM_PLATFORM_DISK_SPACE_LIST}
+   * @param dataDirParam Name of config param whose value specifies the
+   * absolute or relative path of the directory
+   * @param dataDirDefault Default absolute or relative path of the
+   * directory
    * @return A File object representing the requested directory.
+   * @throws RuntimeException if neither the config param nor the default
+   * have a non-empty value, or (for relative paths) if {@value
+   * #PARAM_PLATFORM_DISK_SPACE_LIST} is not set, or if a directory can't
+   * be created.
    */
-  public File getPlatformDir(String relDir) {
-    List dspacePaths =
-      ConfigManager.getCurrentConfig().getList(PARAM_PLATFORM_DISK_SPACE_LIST);
-    if (dspacePaths.size() == 0) {
-      throw new RuntimeException("No platform dir available");
+  public File findConfiguredDataDir(String dataDirParam,
+				    String dataDirDefault) {
+    return findConfiguredDataDir(dataDirParam, dataDirDefault, true);
+  }
+
+  /**
+   * Find or create a directory specified by a config param and default.
+   * If value (the param value or default) is an absolute path, that
+   * directory is returned (and created if necessary).  If the value is
+   * relative, it specifies a directory relative to (one of) the paths on
+   * {@value #PARAM_PLATFORM_DISK_SPACE_LIST}.  If one of these directories
+   * exists, it (the first one) is returned, else the directory is created
+   * relative to the first element of {@value
+   * #PARAM_PLATFORM_DISK_SPACE_LIST}
+   * @param dataDirParam Name of config param whose value specifies the
+   * absolute or relative path of the directory
+   * @param dataDirDefault Default absolute or relative path of the
+   * directory
+   * @param create If false and the directory doesn't already exist, the
+   * path to where it would be created is returned, but it is not actually
+   * created.
+   * @return A File object representing the requested directory.
+   * @throws RuntimeException if neither the config param nor the default
+   * have a non-empty value, or (for relative paths) if {@value
+   * #PARAM_PLATFORM_DISK_SPACE_LIST} is not set, or if a directory can't
+   * be created.
+   */
+  public File findConfiguredDataDir(String dataDirParam,
+				    String dataDirDefault,
+				    boolean create) {
+    String dataDirName = getCurrentConfig().get(dataDirParam, dataDirDefault);
+    if (StringUtil.isNullString(dataDirName)) {
+      throw new RuntimeException("No value or default for " + dataDirParam);
     }
-    File dir = new File((String)dspacePaths.get(0), relDir);
-    return dir;
+    File dir = new File(dataDirName);
+    if (dir.isAbsolute()) {
+      if (FileUtil.ensureDirExists(dir)) {
+	return dir;
+      } else {
+	throw new RuntimeException("Could not create data dir: " + dir);
+      }
+    } else {
+      return findRelDataDir(dataDirName, create);
+    }
+  }
+
+  /**
+   * Find or create a directory relative to a path on the platform disk
+   * space list.  If not found, it is created under the first element on
+   * the platform disk space list.
+   *
+   * @param relPath Relative pathname of the directory to find or create.
+   * @return A File object representing the requested directory.
+   * @throws RuntimeException if {@value #PARAM_PLATFORM_DISK_SPACE_LIST}
+   * is not set, or if a directory can't be created.
+   */
+  public File findRelDataDir(String relPath, boolean create) {
+    List<String> diskPaths =
+      getCurrentConfig().getList(PARAM_PLATFORM_DISK_SPACE_LIST);
+    return findRelDataDir(diskPaths, relPath, create);
+  }
+
+  private File findRelDataDir(List<String> diskPaths, String relPath,
+			      boolean create) {
+    if (diskPaths.size() == 0) {
+      throw new RuntimeException("No platform disks specified. " +
+				 PARAM_PLATFORM_DISK_SPACE_LIST +
+				 " must be set.");
+    }
+    File best = null;
+    for (String path : diskPaths) {
+      File candidate = new File(path, relPath);
+      if (candidate.exists()) {
+	if (best == null) {
+	best = candidate;
+	} else {
+	  log.warning("Duplicate data dir found: " +
+		      candidate + ", using " + best);
+	}
+      }
+    }
+    if (best != null) {
+      return best;
+    }
+    File newDir = new File(diskPaths.get(0), relPath);
+    if (create) {
+      if (!FileUtil.ensureDirExists(newDir)) {
+	throw new RuntimeException("Could not create data dir: " + newDir);
+      }
+    }
+    return newDir;
   }
 
   /** Return a map from local config file name (sans dir) to its
