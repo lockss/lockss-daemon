@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.3 2012-08-04 14:40:23 pgust Exp $
+ * $Id: DbManager.java,v 1.4 2012-08-08 07:12:07 tlipkis Exp $
  */
 
 /*
@@ -105,14 +105,6 @@ public class DbManager extends BaseLockssDaemonManager {
   public static final String PARAM_DATASOURCE_PORTNUMBER = DATASOURCE_ROOT
       + ".portNumber";
   public static final String DEFAULT_DATASOURCE_PORTNUMBER = "1527";
-
-  /**
-   * Root directory of the database. Defaults to the daemon temporary directory.
-   * Changes require daemon restart.
-   */
-  public static final String PARAM_DATASOURCE_ROOTDIR = DATASOURCE_ROOT
-      + ".rootDir";
-  public static final String DEFAULT_DATASOURCE_ROOTDIR = "<tmpdir>";
 
   /**
    * Name of the server. Defaults to 'localhost'. Changes require daemon
@@ -500,7 +492,8 @@ public class DbManager extends BaseLockssDaemonManager {
     final String DEBUG_HEADER = "getDataSourceConfig(): ";
 
     // Get the current configuration.
-    Configuration currentConfig = ConfigManager.getCurrentConfig();
+    ConfigManager cfgMgr = ConfigManager.getConfigManager();
+    Configuration currentConfig = cfgMgr.getCurrentConfig();
 
     // Create the datasource configuration.
     Configuration dataSourceConfig = ConfigManager.newConfiguration();
@@ -519,15 +512,12 @@ public class DbManager extends BaseLockssDaemonManager {
     // Check whether the configured datasource database name does not exist.
     if (dataSourceConfig.get("databaseName") == null) {
       // Yes: Get the data source root directory.
-      String datasourceRootDir =
-	  FileUtil.getCanonicalOrAbsolutePath(new File(currentConfig.get(
-	      PARAM_DATASOURCE_ROOTDIR, getDefaultTempDbRootDirectory())));
-
+      File datasourceDir =
+	cfgMgr.findConfiguredDataDir(PARAM_DATASOURCE_DATABASENAME,
+				     DEFAULT_DATASOURCE_DATABASENAME, false);
       // Save the database name.
       dataSourceConfig.put("databaseName", FileUtil
-	  .getCanonicalOrAbsolutePath(new File(datasourceRootDir, currentConfig
-	      .get(PARAM_DATASOURCE_DATABASENAME,
-		  DEFAULT_DATASOURCE_DATABASENAME))));
+	  .getCanonicalOrAbsolutePath(datasourceDir));
       log.debug(DEBUG_HEADER + "datasourceDatabaseName = '"
 	  + dataSourceConfig.get("databaseName") + "'.");
     }
@@ -546,29 +536,6 @@ public class DbManager extends BaseLockssDaemonManager {
     datasourceUser = dataSourceConfig.get("user");
 
     return dataSourceConfig;
-  }
-
-  /**
-   * Provides the default temporary root directory used to create the database
-   * files.
-   * 
-   * @return a String with the root directory
-   */
-  private String getDefaultTempDbRootDirectory() {
-    String defaultTempDbRootDir = null;
-    Configuration config = ConfigManager.getCurrentConfig();
-
-    @SuppressWarnings("unchecked")
-    List<String> dSpaceList =
-	config.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
-
-    if (dSpaceList != null && !dSpaceList.isEmpty()) {
-      defaultTempDbRootDir = dSpaceList.get(0);
-    } else {
-      defaultTempDbRootDir = config.get(ConfigManager.PARAM_TMPDIR);
-    }
-
-    return defaultTempDbRootDir;
   }
 
   /**
