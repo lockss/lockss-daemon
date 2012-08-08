@@ -37,6 +37,10 @@
     </map>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.56.0</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>&quot;Project Muse Plugin, Base URL %s, Journal ID %s, Volume %d&quot;, base_url, journal_dir, volume</string>
   </entry>
