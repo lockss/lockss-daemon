@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.12 2010-09-20 22:16:51 pgust Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.13 2012-08-08 20:46:35 wkwilson Exp $
  */ 
 
 /*
@@ -32,16 +32,29 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ingenta;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.Reader;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.tags.Div;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
 public class IngentaJournalHtmlFilterFactory implements FilterFactory {
-
+	Logger log = Logger.getLogger("IngentaJournalHtmlFilterFactory");
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
@@ -75,11 +88,43 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "[\\?&]exitTargetId="),
         // Filter out <input name="exitTargetId">
         HtmlNodeFilters.tagWithAttribute("input", "name", "exitTargetId"),
+        // Icon on article reference page
+        HtmlNodeFilters.tagWithAttribute("span", "class", "access-icon")
     };
     
-    return new HtmlFilterInputStream(in,
+    HtmlTransform xform = new HtmlTransform() {
+	    @Override
+	    public NodeList transform(NodeList nodeList) throws IOException {
+	      try {
+	        nodeList.visitAllNodesWith(new NodeVisitor() {
+	          @Override
+	          public void visitTag(Tag tag) {
+	            try {
+	              if ("li".equalsIgnoreCase(tag.getTagName()) && tag.getAttribute("class") != null && tag.getAttribute("class").trim().startsWith("rowShade")) {
+	                tag.setAttribute("class", "");
+	              }
+	              else {
+	                super.visitTag(tag);
+	              }
+	            }
+	            catch (Exception exc) {
+	              log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+	            }
+	          }
+	        });
+	      }
+	      catch (ParserException pe) {
+	        log.debug2("Internal error (parser)", pe); // Bail
+	      }
+	      return nodeList;
+	    }
+	  };
+    
+    InputStream filteredStream =  new HtmlFilterInputStream(in,
                                      encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+                                     new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform));
+    
+    return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(filteredStream, encoding)));
   }
 
 }
