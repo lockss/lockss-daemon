@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.15 2012-08-08 07:08:30 thib_gc Exp $
+# $Id: tdbparse.py,v 1.16 2012-08-08 11:36:27 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -1003,7 +1003,7 @@ class TestTdbParser(unittest.TestCase):
               scanner = TdbScanner(StringIO(src), self.options())
               parser = TdbParser(scanner, self.options())
               parser.parse()
-            except TdbparseSyntaxError as exc:
+            except TdbparseSyntaxError, exc:
                 self.assertEquals(str(mes), str(exc))
 
 if __name__ == '__main__': unittest.main()
