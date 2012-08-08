@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.28 2006-05-18 00:14:42 tlipkis Exp $
+ * $Id: TestLogger.java,v 1.29 2012-08-08 07:23:05 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ public class TestLogger extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    setUpDiskSpace();	     // Prevent ConfigManager from logging an error
     Logger.setDefaultTarget();
   }
 
