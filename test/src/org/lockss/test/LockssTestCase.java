@@ -1,10 +1,10 @@
 /*
- * $Id: LockssTestCase.java,v 1.107 2012-07-09 07:54:16 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.108 2012-08-08 07:13:04 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -132,6 +132,20 @@ public class LockssTestCase extends TestCase {
       }
       tmpDirs.add(tmpdir);
     }
+    return tmpdir;
+  }
+
+  /**
+   * Configure the platform disk space list to point to a newly-created
+   * temp dir.
+   * @return The path to the newly created directory (ok for other use by
+   * unit test)
+   * @throws IOException
+   */
+  public String setUpDiskSpace() throws IOException {
+    String tmpdir = getTempDir().getAbsolutePath() + File.separator;
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tmpdir);
     return tmpdir;
   }
 
