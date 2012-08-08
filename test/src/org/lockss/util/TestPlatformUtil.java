@@ -1,10 +1,10 @@
 /*
- * $Id: TestPlatformUtil.java,v 1.9 2011-03-15 20:07:47 tlipkis Exp $
+ * $Id: TestPlatformUtil.java,v 1.10 2012-08-08 07:11:25 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,7 +55,8 @@ public class TestPlatformUtil extends LockssTestCase {
     assertEquals(javatmp, PlatformUtil.getSystemTempDir());
     String parmtmp = "/another/tmp/dir";
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_TMPDIR, parmtmp);
-    assertEquals(parmtmp, PlatformUtil.getSystemTempDir());
+    assertEquals(new File(parmtmp, "dtmp").toString(),
+		 PlatformUtil.getSystemTempDir());
   }
 
   public void testGetCwd() {
