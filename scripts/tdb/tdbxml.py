@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.29 2012-08-08 07:08:40 thib_gc Exp $
+# $Id: tdbxml.py,v 1.30 2012-08-08 19:34:04 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.3'
+__version__ = '0.4.4'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -93,7 +93,7 @@ RE_NONWORD = re.compile(r'\W+')
 
 def __short_au_name(au):
     str = au.name()
-    str = RE_VOLUME.sub('\1', str)
+    str = RE_VOLUME.sub(r'\1', str)
     str = RE_WHITE.sub('', str)
     str = RE_AA.sub('A', str)
     str = RE_A.sub('a', str)
