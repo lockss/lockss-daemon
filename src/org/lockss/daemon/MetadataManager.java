@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.54 2012-08-08 07:11:52 tlipkis Exp $
+ * $Id: MetadataManager.java,v 1.55 2012-08-08 19:34:47 pgust Exp $
  */
 
 /*
@@ -1312,12 +1312,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     /** The default number of steps for this task */
     private static final int default_steps = 10;
 
-    /** The status of the task: successful if true */
-    private ReindexingStatus status = ReindexingStatus.success;
-
-    /** Whether the AU being indexed is new to the index */
-    private boolean isNewAu = true;
-
     // properties of AU and the TdbAu for this task
     private final String auid;
     private final String pluginId;
@@ -1331,23 +1325,29 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     private final String tdbauJournalTitle;
     private final String tdbauName;
 
+    /** Whether the AU being indexed is new to the index */
+    private volatile boolean isNewAu = true;
+
+    /** The status of the task: successful if true */
+    private volatile ReindexingStatus status = ReindexingStatus.success;
+
     /** The number of articles indexed by this task */
-    private long indexedArticleCount = 0;
+    private volatile long indexedArticleCount = 0;
     /** The number of articles updated by this task */
-    private long updatedArticleCount = 0;
+    private volatile long updatedArticleCount = 0;
 
     // ThreadMXBean times
-    long startCpuTime = 0;
-    long startUserTime = 0;
-    long startClockTime = 0;
+    private volatile long startCpuTime = 0;
+    private volatile long startUserTime = 0;
+    private volatile long startClockTime = 0;
 
-    long startUpdateCpuTime = 0;
-    long startUpdateUserTime = 0;
-    long startUpdateClockTime = 0;
+    private volatile long startUpdateCpuTime = 0;
+    private volatile long startUpdateUserTime = 0;
+    private volatile long startUpdateClockTime = 0;
 
-    private long endCpuTime = 0;
-    private long endUserTime = 0;
-    private long endClockTime = 0;
+    private volatile long endCpuTime = 0;
+    private volatile long endUserTime = 0;
+    private volatile long endClockTime = 0;
     
     final String auName;
     final String auId;
@@ -1422,24 +1422,31 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           }
           // TODO: handle task success vs. failure?
           if (type == Schedule.EventType.START) {
+
+            startCpuTime = threadCpuTime;
+            startUserTime = threadUserTime;
+            startClockTime = currentClockTime;
+
+            // determine whether this is a new or reindexed AU;
+            // if AU has Metadata feature version, it is not new
+            String featureVersion =  
+                AuUtil.getAuState(au).getFeatureVersion(Feature.Metadata);
+            isNewAu = StringUtil.isNullString(featureVersion);
+
             // article iterator won't be null because only aus
             // with article iterators are queued for processing
             articleIterator = au.getArticleIterator(MetadataTarget.OpenURL);
-            log.debug2("Starting reindexing task for au: " + au.getName()
-                + " has articles? " + articleIterator.hasNext());
+            if (log.isDebug2()) {
+              boolean hasArticles = articleIterator.hasNext();
+              long articleIteratorInitTime = TimeBase.nowMs()-currentClockTime;
+              log.debug2("Starting reindexing task for au: " + au.getName()
+                + " has articles? " + hasArticles
+                + " initializing iterator took "
+                +  articleIteratorInitTime + "ms");
+            }
+
             try {
               articleMetadataInfoBuffer = new ArticleMetadataBuffer();
-
-              // determine whether this is a new or reindexed AU;
-              // if AU has Metadata feature version, it is not new
-              String featureVersion =  
-                  AuUtil.getAuState(au).getFeatureVersion(Feature.Metadata);
-              isNewAu = (featureVersion != null);
-
-              startCpuTime = threadCpuTime;
-              startUserTime = threadUserTime;
-              startClockTime = currentClockTime;
-
               notifyStartReindexingAu(au);
             } catch (IOException ex) {
               log.error(
@@ -1770,7 +1777,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           log.error(
               " Caught unexpected Throwable for full text URL: "
                   + af.getFullTextUrl(), ex);
-          indexedArticleCount = 0;
+          setFinished();
+          if (status == ReindexingStatus.success) {
+            status = ReindexingStatus.failed;
+            indexedArticleCount = 0;
+          }
         }
       }
 
