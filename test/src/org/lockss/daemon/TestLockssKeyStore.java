@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStore.java,v 1.9 2010-11-29 07:25:09 tlipkis Exp $
+ * $Id: TestLockssKeyStore.java,v 1.10 2012-08-08 18:02:03 tlipkis Exp $
  */
 
 /*
@@ -43,8 +43,6 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 
 import sun.security.x509.*;
-import sun.security.provider.IdentityDatabase;
-import sun.security.provider.SystemSigner;
 
 import static org.lockss.daemon.LockssKeyStore.LocationType;
 

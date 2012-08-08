@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm1.java,v 1.15 2011-01-10 09:14:39 tlipkis Exp $
+ * $Id: TestBlockingSslStreamComm1.java,v 1.16 2012-08-08 18:02:03 tlipkis Exp $
  */
 
 /*
@@ -47,8 +47,6 @@ import org.lockss.util.Queue;
 import org.lockss.test.*;
 
 import sun.security.x509.*;
-import sun.security.provider.IdentityDatabase;
-import sun.security.provider.SystemSigner;
 
 /**
  * This is the test class for org.lockss.protocol.BlockingStreamComm
