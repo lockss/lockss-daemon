@@ -1,10 +1,10 @@
 /*
- * $Id: V3Poller.java,v 1.124 2012-08-03 19:08:12 barry409 Exp $
+ * $Id: V3Poller.java,v 1.125 2012-08-08 07:12:42 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -227,7 +227,6 @@ public class V3Poller extends BasePoll {
    */
   public static final String PARAM_STATE_PATH =
     PREFIX + "statePath";
-  public static final String DEFAULT_STATE_PATH = null;
 
   /** The maximum allowable duration for a V3 poll */
   public static final String PARAM_MAX_POLL_DURATION =

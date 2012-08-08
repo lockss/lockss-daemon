@@ -1,10 +1,10 @@
 /*
- * $Id: PollUtil.java,v 1.11 2008-11-02 21:12:38 tlipkis Exp $
+ * $Id: PollUtil.java,v 1.12 2012-08-08 07:12:42 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -364,29 +364,15 @@ public class PollUtil {
   }
 
   public static File getPollStateRoot() {
-    File stateDir = null;
+    ConfigManager cfgMgr = ConfigManager.getConfigManager();
+    Configuration config = cfgMgr.getCurrentConfig();
+    
+    // Old code has separate abs and rel params.  Abs was checked first, so
+    // use its param name and pass the rel value as the default.
+    String relPath = config.get(V3Poller.PARAM_REL_STATE_PATH,
+				V3Poller.DEFAULT_REL_STATE_PATH);
+    return cfgMgr.findConfiguredDataDir(V3Poller.PARAM_STATE_PATH, relPath);
 
-    Configuration config = ConfigManager.getCurrentConfig();
-    String path = config.get(V3Poller.PARAM_STATE_PATH,
-			     V3Poller.DEFAULT_STATE_PATH);
-    if (!StringUtil.isNullString(path)) {
-      
-      stateDir = new File(path);
-    } else {
-      List<String> dSpaceList =
-	config.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
-
-      String relPath = config.get(V3Poller.PARAM_REL_STATE_PATH,
-				  V3Poller.DEFAULT_REL_STATE_PATH);
-
-      if (dSpaceList == null || dSpaceList.isEmpty()) {
-	log.error(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST +
-		  " not specified, not configuring V3 message dir.");
-      } else {
-	stateDir = new File(dSpaceList.get(0), relPath);
-      }
-    }
-    return stateDir;
   }
 
   public static File ensurePollStateRoot() {
