@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.28 2012-08-06 20:54:55 thib_gc Exp $
+# $Id: tdbxml.py,v 1.29 2012-08-08 07:08:40 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.2'
+__version__ = '0.4.3'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -107,7 +107,8 @@ def __short_au_name(au):
     str = RE_ZZ.sub('Z', str)
     str = RE_Z.sub('z', str)
     str = RE_NONWORD.sub('', str)
-    return au.plugin().split('.')[-1] + __escape(str)
+    plu = au.plugin()
+    return plu[plu.rfind('.') + 1:] + __escape(str)
 
 def __preamble(tdb, options):
     if options.style == TdbxmlConstants.OPTION_STYLE_ENTRIES: return
@@ -162,9 +163,7 @@ def __do_param(au, i, param, value):
     <property name="value" value="%s" />
    </property>''' % ( i, param, value )
 
-def __do_attr(au, attr, value=None):
-    if value is None:
-        value = au.attr(attr)
+def __do_attr(au, attr, value):
     print '''\
    <property name="attributes.%s" value="%s" />''' % ( attr, value )
 
