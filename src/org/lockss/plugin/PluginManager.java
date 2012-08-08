@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.230 2012-07-30 05:43:58 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.231 2012-08-08 07:12:23 tlipkis Exp $
  */
 
 /*
@@ -2246,49 +2246,22 @@ public class PluginManager
       return;
     }
 
-    List dSpaceList =
-      ConfigManager.getCurrentConfig().getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
-    String relPluginPath =
-      ConfigManager.getCurrentConfig().get(PARAM_PLUGIN_LOCATION,
-					   DEFAULT_PLUGIN_LOCATION);
+    File dir = configMgr.findConfiguredDataDir(PARAM_PLUGIN_LOCATION,
+					       DEFAULT_PLUGIN_LOCATION);
 
-    if (dSpaceList == null || dSpaceList.size() == 0) {
-      log.error(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST +
-		" not specified, not configuring plugin dir");
-      return;
-    }
-
-    String pluginDisk = (String)dSpaceList.get(0);
-
-    File dir = new File(new File(pluginDisk), relPluginPath);
-
-    if (dir.exists() && !dir.isDirectory()) {
+    if (dir.isDirectory()) {
+      log.debug("Plugin directory " + dir + " exists.  Cleaning up...");
+      if (!FileUtil.emptyDir(dir)) {
+	log.error("Unable to clean up plugin directory " + dir);
+	return;
+      }
+    } else {
       // This should (hopefully) never ever happen.  Log an error and
       // return for now.
       log.error("Plugin directory " + dir + " cannot be created.  A file " +
 		"already exists with that name!");
       return;
     }
-
-    if (dir.exists() && dir.isDirectory()) {
-      log.debug("Plugin directory " + dir +
-		" already exists.  Cleaning up...");
-
-      File[] dirList = dir.listFiles();
-      for (int ix = 0; ix < dirList.length; ix++) {
-	if (!dirList[ix].delete()) {
-	  log.error("Unable to clean up plugin directory " + dir +
-		    ".  Could not delete " + dirList[ix]);
-	  return;
-	}
-      }
-    } else {
-      if (!dir.mkdirs()) {
-	log.error("Unable to create plugin directory " + dir);
-	return;
-      }
-    }
-
     pluginDir = dir;
   }
 
