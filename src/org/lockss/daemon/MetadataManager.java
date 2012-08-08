@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataManager.java,v 1.53 2012-08-06 20:29:49 pgust Exp $
+ * $Id: MetadataManager.java,v 1.54 2012-08-08 07:11:52 tlipkis Exp $
  */
 
 /*
 
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -358,7 +358,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     try {
       conn = dbManager.getConnection();
     } catch (SQLException ex) {
-      log.error("Cannot connect to database -- service not started");
+      log.error("Cannot connect to database", ex);
       return;
     }
 
