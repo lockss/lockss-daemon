@@ -1,5 +1,5 @@
 /*
- * $Id: ReputationTransfers.java,v 1.1 2012-08-07 22:59:23 barry409 Exp $
+ * $Id: ReputationTransfers.java,v 1.2 2012-08-08 17:52:10 barry409 Exp $
  */
 
 /*
@@ -44,10 +44,10 @@ import org.lockss.util.StringUtil;
 
 /**
  * Extend reputation from old PID to new PID.  Reputation may be
- * extended from and to only one peer.  (E.g., both {A->B, A->C} and
+ * extended from and to only one peer.  E.g., both {A->B, A->C} and
  * {B->A, C->A} are illegal; a warning will be logged, results are
- * unspecified.) Transitive mappings (E.g., {A->B, B->C}) is legal.
- * Cyclic mappings are not be detected.
+ * unspecified.  Transitive mappings (E.g., {A->B, B->C}) are legal.
+ * Cyclic mappings may not be detected.
  *
  * This is for use by PLN admins when changing IP of a node.
  */
@@ -84,6 +84,11 @@ class ReputationTransfers {
 	  try {
 	    PeerIdentity pid1 = idManager.stringToPeerIdentity(list.get(0));
 	    PeerIdentity pid2 = idManager.stringToPeerIdentity(list.get(1));
+	    if (pid1 == pid2) {
+	      log.warning("Trying to extend a peer's reputation to itself: "+
+			  pid1);
+	      continue;
+	    }
 	    if (map.containsKey(pid2)) {
 	      log.warning("Ignoring second transfer from "+pid1+" to "+pid2+
 			  ". Keeping "+pid1+" to "+map.get(pid1)+".");
@@ -110,43 +115,44 @@ class ReputationTransfers {
   }
 
   ReputationTransfers(IdentityManager idManager) {
-    this(ConfigManager.getCurrentConfig(), idManager);
-  }
-
-  ReputationTransfers(Configuration config, IdentityManager idManager) {
-    this(config.getList(PARAM_REPUTATION_TRANSFER_MAP), idManager);
-  }
-
-  ReputationTransfers(Collection<String> peerPairs,
-			IdentityManager idManager) {
-    this(makeMap(peerPairs, idManager), idManager);
-  }
-
-  private ReputationTransfers(Map<PeerIdentity, PeerIdentity> map,
-			      IdentityManager idManager) {
-    this.map = map;
     this.idManager = idManager;
+    // This will make a call to the callback, setting the configured
+    // instance variables.
+    registerConfigurationCallback();
   }
 
-  
+  private Configuration.Callback registerConfigurationCallback() {
+    Configuration.Callback configCallback = new Configuration.Callback() {
+	public void configurationChanged(
+	    Configuration newConfig,
+	    Configuration oldConfig,
+	    Configuration.Differences changedKeys) {
+	  ReputationTransfers.this.configurationChanged(
+	    newConfig, oldConfig, changedKeys);
+	}
+      };
+    ConfigManager.getConfigManager().
+      registerConfigurationCallback(configCallback);
+    return configCallback;
+  }
 
   /**
    * Update from the changed configuration, if needed.
    */
-  public void setConfig(Configuration newConfig,
-			Configuration oldConfig,
-			Configuration.Differences changedKeys) {
-      if (changedKeys.contains(PARAM_REPUTATION_TRANSFER_MAP)) {
-	this.map = makeMap(newConfig.getList(PARAM_REPUTATION_TRANSFER_MAP),
-			   idManager);
-      }
+  private void configurationChanged(Configuration newConfig,
+				    Configuration oldConfig,
+				    Configuration.Differences changedKeys) {
+    if (changedKeys.contains(PARAM_REPUTATION_TRANSFER_MAP)) {
+      this.map = makeMap(newConfig.getList(PARAM_REPUTATION_TRANSFER_MAP),
+			 idManager);
+    }
   }
 
   /**
    * Find the old peer, if any, which was in the transfer map as "old
    * peer, new peer".
    *
-   * @param the PeerIdentity of the new peer.
+   * @param pid the PeerIdentity of the new peer.
    * @return the PeerIdentity that transferred its reputation to pid;
    * null if none exists.
    */

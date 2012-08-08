@@ -86,13 +86,6 @@ public class TestReputationTransfers extends LockssTestCase {
   }
 
   public void testReputationTransfers() throws Exception {
-    String p1 = "TCP:[127.0.0.1]:12";
-    String p2 = "TCP:[127.0.0.2]:12";
-    String p3 = "TCP:[127.0.0.3]:12";
-    String p4 = "TCP:[127.0.0.4]:12";
-    String p5 = "TCP:[127.0.0.5]:12";
-  
-
     String xfermap = p1 + "," + p2 + ";" + p3 + "," + p4;
     ConfigurationUtil.addFromArgs(
       ReputationTransfers.PARAM_REPUTATION_TRANSFER_MAP, xfermap);
@@ -110,7 +103,7 @@ public class TestReputationTransfers extends LockssTestCase {
     assertNull(rpm.getReputationTransferredFrom(peer2));
   }
 
-  public void testSetConfig() throws Exception {
+  public void testConfigChanged() throws Exception {
     ReputationTransfers rpm = new ReputationTransfers(idManager);
     assertNull(rpm.getReputationTransferredFrom(peer1));
     assertNull(rpm.getReputationTransferredFrom(peer2));
@@ -119,8 +112,6 @@ public class TestReputationTransfers extends LockssTestCase {
     String xfermap = p1 + "," + p2;
     ConfigurationUtil.addFromArgs(
       ReputationTransfers.PARAM_REPUTATION_TRANSFER_MAP, xfermap);
-    Configuration newConfig = ConfigManager.getCurrentConfig();
-    rpm.setConfig(newConfig, oldConfig, newConfig.differences(oldConfig));
     assertEquals(peer1, rpm.getReputationTransferredFrom(peer2));
  }
 
@@ -155,19 +146,28 @@ public class TestReputationTransfers extends LockssTestCase {
 
   // todo(bhayes): Need to think about how to deal with this error case.
   /**
-   * Have one peer transfer its reputation to two peers.
+   * Have a cycle of tranfers.
    */
   public void testCycle() throws Exception {
     String xfermap = p1 + "," + p2 + ";" + p2 + "," + p1;
     ConfigurationUtil.addFromArgs(
       ReputationTransfers.PARAM_REPUTATION_TRANSFER_MAP, xfermap);
-    for (String s : (List<String>)ConfigManager.getCurrentConfig().getList(ReputationTransfers.PARAM_REPUTATION_TRANSFER_MAP)) {
-	System.err.println(s);
-      }
     ReputationTransfers rpm = new ReputationTransfers(idManager);
     // Should not be allowed!
     assertEquals(peer1, rpm.getReputationTransferredFrom(peer2));
     assertEquals(peer2, rpm.getReputationTransferredFrom(peer1));
+  }
+
+  // todo(bhayes): Need to think about how to deal with this error case.
+  /**
+   * Have a transfer of a peer to itself.
+   */
+  public void testReflexive() throws Exception {
+    String xfermap = p1 + "," + p1;
+    ConfigurationUtil.addFromArgs(
+      ReputationTransfers.PARAM_REPUTATION_TRANSFER_MAP, xfermap);
+    ReputationTransfers rpm = new ReputationTransfers(idManager);
+    assertEquals(null, rpm.getReputationTransferredFrom(peer1));
   }
 
   private void initRequiredServices() {

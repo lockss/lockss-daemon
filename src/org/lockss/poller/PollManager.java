@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.253 2012-08-07 22:59:23 barry409 Exp $
+ * $Id: PollManager.java,v 1.254 2012-08-08 17:52:10 barry409 Exp $
  */
 
 /*
@@ -1702,10 +1702,6 @@ public class PollManager
 	atRiskAuInstances =
 	  makeAuPeersMap(newConfig.getList(PARAM_AT_RISK_AU_INSTANCES),
 			 theIDManager);
-      }
-      if (reputationTransfers != null) {
-	// todo(bhayes): is null in some unit tests.
-	reputationTransfers.setConfig(newConfig, oldConfig, changedKeys);
       }
       if (changedKeys.contains(PARAM_INVITATION_WEIGHT_AGE_CURVE)) {
 	v3InvitationWeightAgeCurve =
