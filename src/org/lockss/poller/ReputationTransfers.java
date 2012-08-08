@@ -1,5 +1,5 @@
 /*
- * $Id: ReputationTransfers.java,v 1.2 2012-08-08 17:52:10 barry409 Exp $
+ * $Id: ReputationTransfers.java,v 1.3 2012-08-08 18:16:07 barry409 Exp $
  */
 
 /*
@@ -157,6 +157,36 @@ class ReputationTransfers {
    * null if none exists.
    */
   public PeerIdentity getReputationTransferredFrom(PeerIdentity pid) {
+    // todo(bhayes): deprecate this, and pre-calculate the Collections
+    // returned below, rather than just the raw Map?
     return map.get(pid);
+  }
+
+  /**
+   * Return the transitive closure of all the peers which have their
+   * reputation transfered to the "new peer".
+   *
+   * Note: At the moment, this list will never be empty, and will
+   * always include the input PeerIdentity. However, callers should
+   * not rely on this.
+   *
+   * @param pid the PeerIndentity of the new peer.
+   * @return all the peers whose reputation contributes to the
+   * reputation of the "new peer".
+   */
+  public Collection<PeerIdentity>
+      getAllReputationsTransferredFrom(PeerIdentity pid) {
+    Collection<PeerIdentity> pids = new LinkedHashSet<PeerIdentity>();
+    while (pid != null) {
+      pids.add(pid);
+      pid = getReputationTransferredFrom(pid);
+      // Found a loop; stop.
+      if (pids.contains(pid)) {
+	// todo(bhayes): check if it's hit size 10 and break?
+	log.warning("Found cycle: "+pids);
+	break;
+      }
+    }
+    return pids;
   }
 }

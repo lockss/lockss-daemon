@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.254 2012-08-08 17:52:10 barry409 Exp $
+ * $Id: PollManager.java,v 1.255 2012-08-08 18:16:07 barry409 Exp $
  */
 
 /*
@@ -1841,8 +1841,9 @@ public class PollManager
     return res;
   }
 
-  public PeerIdentity getReputationTransferredFrom(PeerIdentity pid) {
-    return reputationTransfers.getReputationTransferredFrom(pid);
+  public Collection<PeerIdentity>
+      getAllReputationsTransferredFrom(PeerIdentity pid) {
+    return reputationTransfers.getAllReputationsTransferredFrom(pid);
   }
 
   public Set<PeerIdentity> getPeersWithAuAtRisk(ArchivalUnit au) {

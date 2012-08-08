@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.73 2012-08-06 18:52:21 barry409 Exp $
+ * $Id: V3Voter.java,v 1.74 2012-08-08 18:16:07 barry409 Exp $
  */
 
 /*
@@ -1231,22 +1231,11 @@ public class V3Voter extends BasePoll {
 				      DEFAULT_REPAIR_ANY_TRUSTED_PEER)) {
       return true;
     }
-    return serveRepairs(pid, au, url, 10);
-  }
-
-  /** Return true if pid is entitled to a repair of url.  If false, see if
-   * another peer's reputation has been extended to pid; if so check that
-   * one. */
-  private boolean serveRepairs(PeerIdentity pid, ArchivalUnit au,
-			       String url, int depth) {
-    if (serveRepairsTo(pid, au, url)) {
-      return true;
-    }
-    if (depth > 0) {
-      PeerIdentity reputationPid =
-	pollManager.getReputationTransferredFrom(pid);
-      if (reputationPid != null) {
-	return serveRepairs(reputationPid, au, url, depth - 1);
+    Collection<PeerIdentity> pids =
+      pollManager.getAllReputationsTransferredFrom(pid);
+    for (PeerIdentity pid0 : pids) {
+      if (serveRepairsTo(pid0, au, url)) {
+	return true;
       }
     }
     return false;

@@ -97,6 +97,30 @@ public class TestReputationTransfers extends LockssTestCase {
     assertNull(rpm.getReputationTransferredFrom(peer5));
   }
 
+  public void testTransitive() throws Exception {
+    String xfermap = p1 + "," + p2 + ";" + p2 + "," + p3;
+    ConfigurationUtil.addFromArgs(
+      ReputationTransfers.PARAM_REPUTATION_TRANSFER_MAP, xfermap);
+
+    ReputationTransfers rpm = new ReputationTransfers(idManager);
+    // This relies on the order being maintained by
+    // ReputationTransfers, which is not part of its contract.
+    assertEquals(ListUtil.list(peer3, peer2, peer1),
+		 ListUtil.fromIterator(
+		   rpm.getAllReputationsTransferredFrom(peer3).iterator()));
+    assertEquals(ListUtil.list(peer2, peer1),
+		 ListUtil.fromIterator(
+		   rpm.getAllReputationsTransferredFrom(peer2).iterator()));
+    assertEquals(ListUtil.list(peer1),
+		 ListUtil.fromIterator(
+		   rpm.getAllReputationsTransferredFrom(peer1).iterator()));
+
+    // No transfer in the param for this peer.
+    assertEquals(ListUtil.list(peer4),
+		 ListUtil.fromIterator(
+		   rpm.getAllReputationsTransferredFrom(peer4).iterator()));
+  }
+
   public void testEmptyMapping() throws Exception {
     ReputationTransfers rpm = new ReputationTransfers(idManager);
     assertNull(rpm.getReputationTransferredFrom(peer1));
@@ -156,6 +180,12 @@ public class TestReputationTransfers extends LockssTestCase {
     // Should not be allowed!
     assertEquals(peer1, rpm.getReputationTransferredFrom(peer2));
     assertEquals(peer2, rpm.getReputationTransferredFrom(peer1));
+    assertEquals(ListUtil.list(peer1, peer2),
+		 ListUtil.fromIterator(
+		   rpm.getAllReputationsTransferredFrom(peer1).iterator()));
+    assertEquals(ListUtil.list(peer2, peer1),
+		 ListUtil.fromIterator(
+		   rpm.getAllReputationsTransferredFrom(peer2).iterator()));
   }
 
   // todo(bhayes): Need to think about how to deal with this error case.
