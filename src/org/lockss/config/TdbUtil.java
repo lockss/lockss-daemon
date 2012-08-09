@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.16 2012-07-23 17:07:13 pgust Exp $
+ * $Id: TdbUtil.java,v 1.17 2012-08-09 22:48:04 pgust Exp $
  */
 
 /*
@@ -117,6 +117,56 @@ public class TdbUtil {
       au = pluginMgr.getAuFromId(auid);
     }
     return au;
+  }
+  
+  /**
+   * Return the title from the title title database that corresponds
+   * to an auid for an AU in that title.
+   * 
+   * @param pluginId the pluginId
+   * @param auKey the AU key
+   * @return the title for the given URL and null otherwise
+   */
+  public static TdbAu getTdbAu(String pluginId, String auKey) {
+    if (StringUtil.isNullString(pluginId) || StringUtil.isNullString(auKey)) {
+      return null;
+    }
+    String auid = PluginManager.generateAuId(pluginId, auKey);
+    return getTdbAu(auid);
+  }
+
+  /**
+   * Get the TdbAu that corresponds to the specified auid.
+   * 
+   * @param auid the AU id
+   * @return the TdbAu or <code>null</code> if no corresponding TdbAU
+   */
+  public static TdbAu getTdbAu(String auid) {
+    PluginManager pluginMgr = LockssDaemon.getLockssDaemon().getPluginManager();
+    String pluginId = PluginManager.pluginNameFromAuId(auid);
+    Plugin plugin = 
+        pluginMgr.getPlugin(PluginManager.pluginKeyFromName(pluginId));
+    if (plugin != null) {
+      Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
+      if (tdb != null) {
+        for (TdbAu.Id id : tdb.getTdbAuIds(pluginId)) {
+          TdbAu tdbau = id.getTdbAu();
+          Properties props = new Properties();
+          for (Map.Entry<String,String> prop : tdbau.getParams().entrySet()) {
+            String key = prop.getKey();
+            ConfigParamDescr descr = plugin.findAuConfigDescr(key);
+            if ((descr != null) && descr.isDefinitional()) {
+              props.put(key, prop.getValue());
+            }
+          }
+          String genauid = PluginManager.generateAuId(pluginId, props);
+          if (auid.equals(genauid)) {
+            return tdbau;
+          }
+        }
+      }
+    }    
+    return null;
   }
   
   /**
