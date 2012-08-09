@@ -4095,7 +4095,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
       au < crawling ; exists ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 >
-      au < testing ; exists ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
+      au < released ; manifest ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 >
 
 
@@ -4118,7 +4118,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Theoretical Biology and Medical Modelling Volume 5 ; 5 >
       au < manifest ; exists ; 2009 ; Theoretical Biology and Medical Modelling Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; Theoretical Biology and Medical Modelling Volume 7 ; 7 >
-      au < testing ; exists ; 2011 ; Theoretical Biology and Medical Modelling Volume 8 ; 8 >
+      au < released ; manifest ; 2011 ; Theoretical Biology and Medical Modelling Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Theoretical Biology and Medical Modelling Volume 9 ; 9 >
 
     }
@@ -4141,7 +4141,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < manifest ; exists ; 2008 ; Thrombosis Journal Volume 6 ; 6 >
       au < manifest ; exists ; 2009 ; Thrombosis Journal Volume 7 ; 7 >
       au < crawling ; exists ; 2010 ; Thrombosis Journal Volume 8 ; 8 >
-      au < testing ; exists ; 2011 ; Thrombosis Journal Volume 9 ; 9 >
+      au < released ; manifest ; 2011 ; Thrombosis Journal Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Thrombosis Journal Volume 10 ; 10 >
 
     }
@@ -4182,7 +4182,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.veterinaryresearch.org/
       param[journal_issn] = 1297-9716
 
-      au < testing ; exists ; 2011 ; Veterinary Research Volume 42 ; 42 >
+      au < released ; manifest ; 2011 ; Veterinary Research Volume 42 ; 42 >
       au < crawling ; exists ; 2012 ; Veterinary Research Volume 43 ; 43 >
 
     }
