@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.30 2012-08-08 19:34:04 thib_gc Exp $
+# $Id: tdbxml.py,v 1.31 2012-08-09 02:09:52 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -29,13 +29,14 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.4'
+__version__ = '0.4.5'
 
 from optparse import OptionGroup, OptionParser
 import re
 import sys
 from tdb import *
 import tdbparse
+from xml.sax import saxutils
 
 class TdbxmlConstants:
     
@@ -73,42 +74,31 @@ __IMPLICIT_PARAM_ORDER = [
 __IMPLICIT_PARAM_ORDER_SET = set(__IMPLICIT_PARAM_ORDER)
 
 def __escape(str):
-    from xml.sax import saxutils
     return saxutils.escape(str).replace('"', '&quot;').decode('utf-8').encode('ascii', 'xmlcharrefreplace')
 
 RE_VOLUME = re.compile(r'Volume\s+(\S+)$')
-RE_WHITE = re.compile(r'\s+')
-RE_AA = re.compile(r'Á|À|Â|Ä|̣Ā')
-RE_A = re.compile(r'á|à|â|ä|ā')
-RE_AE = re.compile(r'æ')
-RE_EE = re.compile(r'É|È|Ê|Ë|Ē')
-RE_E = re.compile(r'é|è|ê|ë|ē')
-RE_II = re.compile(r'Í|Ì|Î|Ï|Ī')
-RE_I = re.compile(r'í|ì|î|ï|ī')
-RE_SS = re.compile(r'Ş')
-RE_S = re.compile(r'ş')
-RE_ZZ = re.compile(r'Ž')
-RE_Z = re.compile(r'ž')
-RE_NONWORD = re.compile(r'\W+')
+REPL = [(re.compile(r'Á|À|Â|Ä|̣Ā'), 'A'),
+        (re.compile(r'á|à|â|ä|ā'), 'a'),
+        (re.compile(r'æ'), 'ae'),
+        (re.compile(r'É|È|Ê|Ë|Ē'), 'E'),
+        (re.compile(r'é|è|ê|ë|ē'), 'e'),
+        (re.compile(r'Í|Ì|Î|Ï|Ī'), 'I'),
+        (re.compile(r'í|ì|î|ï|ī'), 'i'),
+        (re.compile(r'Ş'), 'S'),
+        (re.compile(r'ş'), 's'),
+        (re.compile(r'Ž'), 'Z'),
+        (re.compile(r'ž'), 'z')]
+RE_ANY = re.compile('|'.join([r[0].pattern for r in REPL]))
+RE_WHITENONWORD = re.compile(r'(\s|\W)+')
 
 def __short_au_name(au):
     str = au.name()
     str = RE_VOLUME.sub(r'\1', str)
-    str = RE_WHITE.sub('', str)
-    str = RE_AA.sub('A', str)
-    str = RE_A.sub('a', str)
-    str = RE_AE.sub('ae', str)
-    str = RE_EE.sub('E', str)
-    str = RE_E.sub('e', str)
-    str = RE_II.sub('I', str)
-    str = RE_I.sub('i', str)
-    str = RE_SS.sub('S', str)
-    str = RE_S.sub('s', str)
-    str = RE_ZZ.sub('Z', str)
-    str = RE_Z.sub('z', str)
-    str = RE_NONWORD.sub('', str)
+    if RE_ANY.search(str):
+        for reg, rep in REPL: str = reg.sub(rep, str)
+    str = RE_WHITENONWORD.sub('', str)
     plu = au.plugin()
-    return plu[plu.rfind('.') + 1:] + __escape(str)
+    return plu[plu.rfind('.') + 1:] + str
 
 def __preamble(tdb, options):
     if options.style == TdbxmlConstants.OPTION_STYLE_ENTRIES: return
@@ -157,68 +147,74 @@ def __introduction(tdb, options):
 '''
 
 def __do_param(au, i, param, value):
-    print '''\
+    return '''\
    <property name="param.%d">
     <property name="key" value="%s" />
     <property name="value" value="%s" />
-   </property>''' % ( i, param, value )
+   </property>
+''' % ( i, param, value )
 
 def __do_attr(au, attr, value):
-    print '''\
-   <property name="attributes.%s" value="%s" />''' % ( attr, value )
+    return '''\
+   <property name="attributes.%s" value="%s" />
+''' % ( attr, value )
 
 def __process_au(au, options):
-    print '''\
+    austr = ['''\
   <property name="%s">
    <property name="attributes.publisher" value="%s" />
-   <property name="journalTitle" value="%s" />''' % (
+   <property name="journalTitle" value="%s" />
+''' % (
         __short_au_name(au),
         __escape(au.title().publisher().name()),
-        __escape(au.title().name()) )
+        __escape(au.title().name()) )]
     title = au.title()
     for val, st in [(title.issn(), 'issn'),
                     (title.eissn(), 'eissn'),
                     (title.issnl(), 'issnl')]:
-      if val is not None: print '''\
-   <property name="%s" value="%s" />''' % ( st, val )
-    print '''\
+      if val is not None: austr.append('''\
+   <property name="%s" value="%s" />
+''' % ( st, val ))
+    austr.append('''\
    <property name="title" value="%s" />
-   <property name="plugin" value="%s" />''' % (
+   <property name="plugin" value="%s" />
+''' % (
         __escape(au.name()),
-        au.plugin() )
+        au.plugin() ))
     i = 1
     au_params = au.params()
     for param in __IMPLICIT_PARAM_ORDER:
         pval = au_params.get(param)
         if pval is not None:
-            __do_param(au, i, param, pval)
+            austr.append(__do_param(au, i, param, pval))
             i = i + 1
     for param, pval in au_params.iteritems():
         if param not in __IMPLICIT_PARAM_ORDER_SET:
-            __do_param(au, i, param, pval)
+            austr.append(__do_param(au, i, param, pval))
             i = i + 1
     for nondefparam, nondefval in au.nondefparams().iteritems():
         if nondefval is not None:
-            __do_param(au, i, nondefparam, nondefval)
+            austr.append(__do_param(au, i, nondefparam, nondefval))
             i = i + 1
     au_proxy = au.proxy()
     if au_proxy is not None:
         __do_param(au, 98, 'crawl_proxy', au_proxy)
     if not options.no_pub_down and au.status() in [AU.Status.DOWN, AU.Status.SUPERSEDED, AU.Status.ZAPPED]:
-        __do_param(au, 99, 'pub_down', 'true')
+        austr.append(__do_param(au, 99, 'pub_down', 'true'))
     for attr, attrval in au.attrs().iteritems():
-        __do_attr(au, attr, attrval)
+        austr.append(__do_attr(au, attr, attrval))
     for val, st in [(au.edition(), 'edition'),
                     (au.eisbn(), 'eisbn'),
                     (au.isbn(), 'isbn'),
                     (au.year(), 'year'),
                     (au.volume(), 'volume')]:
-      if val is not None: __do_attr(au, st, val)
+      if val is not None: austr.append(__do_attr(au, st, val))
     if au.rights() == 'openaccess':
-        __do_attr(au, 'rights', 'openaccess')
-    print '''\
+        austr.append(__do_attr(au, 'rights', 'openaccess'))
+    austr.append('''\
   </property>
-'''
+''')
+    print ''.join(austr)
 
 RE_APOS = re.compile(r'\'')
 
