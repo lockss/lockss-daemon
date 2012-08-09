@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.55 2012-08-08 19:34:47 pgust Exp $
+ * $Id: MetadataManager.java,v 1.56 2012-08-09 19:56:08 pgust Exp $
  */
 
 /*
@@ -737,6 +737,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           + "'org.lockss.plugin.PluginManager.generateAuId' "
           + "parameter style java no sql",
 
+        "create function formatIsbn(isbn varchar(17)) "
+            + "returns varchar(17) language java external name "
+            + "'org.lockss.util.MetadataUtil.formatIsbn' "
+            + "parameter style java no sql",
+
+        "create function formatIssn(issn varchar(9)) "
+            + "returns varchar(9) language java external name "
+            + "'org.lockss.util.MetadataUtil.formatIssn' "
+            + "parameter style java no sql",
+
       "create function ingestDateFromAuId(pluginId varchar(128), "
           + "auKey varchar(512)) returns varchar(16) language java external name "
           + "'org.lockss.util.SqlStoredProcedures.getingestDateFromAuId' "
@@ -881,6 +891,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       "drop function eissnFromAuId", "drop function eissnFromUrl",
       "drop function endVolumeFromAuId", "drop function endVolumeFromUrl",
       "drop function endYearFromAuId", "drop function endYearFromUrl",
+      "drop function formatIsbn", "drop function formatIssn",
       "drop function generateAuId", "drop function ingestDateFromAuId",
       "drop function ingestDateFromUrl", "drop function ingestYearFromAuId",
       "drop function ingestYearFromUrl", "drop function isbnFromAuId",

@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.4 2012-07-30 03:11:06 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.5 2012-08-09 19:56:08 pgust Exp $
  */
 
 /*
@@ -232,13 +232,13 @@ final public class MetadataDatabaseUtil {
     sb.append(" coalesce(");
     sb.append("  eISSNFromAuid(plugin_id,au_key),");
     sb.append("  nullif(");
-    sb.append("    (select max(issn) from issn where metadata.md_id=issn.md_id),");
+    sb.append("    (select formatIssn(max(issn)) from issn where metadata.md_id=issn.md_id),");
     sb.append("    printISSNFromAuid(plugin_id,au_key))) as \"eissn\", ");
     sb.append(" printISBNFromAuid(plugin_id,au_key) as \"printisbn\",");
     sb.append(" coalesce(");
     sb.append("  eISBNFromAuid(plugin_id,au_key),");
     sb.append("  nullif(");
-    sb.append("    (select max(isbn) from isbn where metadata.md_id=isbn.md_id),");
+    sb.append("    (select formatIsbn(max(isbn)) from isbn where metadata.md_id=isbn.md_id),");
     sb.append("    printISBNFromAuid(plugin_id,au_key))) as \"eisbn\", ");
     sb.append(" volume,");
     sb.append(" coalesce(");
