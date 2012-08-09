@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.61 2012-08-02 19:58:08 pgust Exp $
+ * $Id: ServeContent.java,v 1.62 2012-08-09 18:02:48 pgust Exp $
  */
 
 /*
@@ -323,6 +323,8 @@ public class ServeContent extends LockssServlet {
       displayNotStarted();
       return;
     }
+    accessLogInfo = null;
+    
     enabledPluginsOnly =
       !"no".equalsIgnoreCase(getParameter("filterPlugins"));
 
@@ -381,6 +383,8 @@ public class ServeContent extends LockssServlet {
       
       url = null;
       if (resolved.getResolvedTo() != ResolvedTo.NONE) {
+        // record type of access for logging
+        accessLogInfo = resolved.getResolvedTo().toString();
         url = resolved.getResolvedUrl();
         handleOpenUrlInfo(resolved);
         return;
@@ -1432,7 +1436,7 @@ public class ServeContent extends LockssServlet {
           ((additionalInfo == null) ? "" : additionalInfo)
         + " Selecting link takes you away from this LOCKSS box."));
       table.newCell();
-      Link link = new Link(url);
+      Link link = new Link(url,url);
       table.add(link);
     }    
   }
