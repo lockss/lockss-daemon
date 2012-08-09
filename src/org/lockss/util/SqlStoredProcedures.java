@@ -1,5 +1,5 @@
 /*
- * $Id: SqlStoredProcedures.java,v 1.8 2012-08-09 19:54:13 pgust Exp $
+ * $Id: SqlStoredProcedures.java,v 1.9 2012-08-09 22:51:39 pgust Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.config.Tdb;
 import org.lockss.config.TdbAu;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
+import org.lockss.config.TdbUtil;
 import org.lockss.daemon.TitleConfig;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
@@ -132,38 +133,6 @@ public class SqlStoredProcedures {
   }
 
   /**
-   * Return the title from the title title database that corresponds
-   * to an auid for an AU in that title.
-   * 
-   * @param pluginId the pluginId
-   * @param auKey the AU key
-   * @return the title for the given URL and null otherwise
-   */
-  static TdbAu getTdbAuFromAuId(String pluginId, String auKey) {
-    if (StringUtil.isNullString(pluginId) || StringUtil.isNullString(auKey)) {
-      return null;
-    }
-    String auId = PluginManager.generateAuId(pluginId, auKey);
-    
-    // get the AU from the Auid
-    ArchivalUnit au = getPluginManager().getAuFromId(auId);
-    if (au == null) {
-      queryLog.debug2(  "No ArchivalUnit for pluginId: " + pluginId 
-                      + " auKey: " + auKey);
-      return null;
-    }
-    
-    // return the TdbAu from the AU
-    TitleConfig tc = au.getTitleConfig();
-    if (tc == null) {
-      queryLog.debug2("no titleconfig for au " + au.toString());
-      return null;
-    }
-
-    return tc.getTdbAu();
-  }
-
-  /**
    * Return the volume title that corresponds to the auid 
    * of a journal or series AU.
    * 
@@ -172,7 +141,7 @@ public class SqlStoredProcedures {
    * @return the publisher for the given auid
    */
   static public String getVolumeTitleFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     return tdbAu == null ? null : tdbAu.getName();
   }
   
@@ -198,7 +167,7 @@ public class SqlStoredProcedures {
    * @return the publisher for the given auid
    */
   static public String getTitleFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     return tdbAu == null ? null : tdbAu.getJournalTitle();
   }
   
@@ -267,7 +236,7 @@ public class SqlStoredProcedures {
    * @return the eISBN for the given auId or null if not available
    */
   static public String getEisbnFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     if (tdbAu == null) {
       queryLog.debug2(  "No TdbAu for pluginId: " + pluginId 
                       + " auKey: " + auKey);
@@ -306,7 +275,7 @@ public class SqlStoredProcedures {
    * @return the print ISBN for the given auId or null if not available
    */
   static public String getPrintIsbnFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     if (tdbAu == null) {
       queryLog.debug2(  "No TdbAu for pluginId: " + pluginId 
                       + " auKey: " + auKey);
@@ -345,7 +314,7 @@ public class SqlStoredProcedures {
    * @return an ISBN for the given auId or null if not available
    */
   static public String getIsbnFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     if (tdbAu == null) {
       queryLog.debug2(  "No TdbAu for pluginId: " + pluginId 
                       + " auKey: " + auKey);
@@ -384,7 +353,7 @@ public class SqlStoredProcedures {
    * @return the eISSN for the given auId or null if not available
    */
   static public String getEissnFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     if (tdbAu == null) {
       queryLog.debug2(  "No TdbAu for pluginId: " + pluginId 
                       + " auKey: " + auKey);
@@ -423,7 +392,7 @@ public class SqlStoredProcedures {
    * @return the ISSN-L for the given auId or null if not available
    */
   static public String getIssnLFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     if (tdbAu == null) {
       return null;
     }
@@ -460,7 +429,7 @@ public class SqlStoredProcedures {
    * @return an ISSN for the given auId or null if not available
    */
   static public String getIssnFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     if (tdbAu == null) {
       queryLog.debug2(  "No TdbAu for pluginId: " + pluginId 
                       + " auKey: " + auKey);
@@ -499,7 +468,7 @@ public class SqlStoredProcedures {
    * @return the print ISSN for the given auId or null if not available
    */
   static public String getPrintIssnFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     if (tdbAu == null) {
       queryLog.debug2(  "No tdbAu for pluginId: " + pluginId 
                       + " auKey: " + auKey);
@@ -723,7 +692,7 @@ public class SqlStoredProcedures {
    * @return the publisher for the given auid
    */
   static public String getPublisherFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     return tdbAu == null ? null : tdbAu.getPublisherName();
   }
   
@@ -802,7 +771,7 @@ public class SqlStoredProcedures {
    * @return the starting volume for the given AU or null if not available
    */
   static public String getStartVolumeFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     return (tdbAu == null) ? null : tdbAu.getStartVolume();
   }
   
@@ -825,7 +794,7 @@ public class SqlStoredProcedures {
    * @return the ending volume for the given AU or null if not available
    */
   static public String getEndVolumeFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     return (tdbAu == null) ? null : tdbAu.getEndVolume();
   }
   
@@ -848,7 +817,7 @@ public class SqlStoredProcedures {
    * @return the starting year for the given AU or null if not available
    */
   static public String getStartYearFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     return (tdbAu == null) ? null : tdbAu.getStartYear();
   }
   
@@ -871,7 +840,7 @@ public class SqlStoredProcedures {
    * @return the ending year for the given AU or null if not available
    */
   static public String getEndYearFromAuId(String pluginId, String auKey) {
-    TdbAu tdbAu = getTdbAuFromAuId(pluginId, auKey);
+    TdbAu tdbAu = TdbUtil.getTdbAu(pluginId, auKey);
     return (tdbAu == null) ? null : tdbAu.getEndYear();
   }
   
