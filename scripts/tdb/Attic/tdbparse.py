@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.16 2012-08-08 11:36:27 thib_gc Exp $
+# $Id: tdbparse.py,v 1.17 2012-08-09 02:09:35 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.4'''
+__version__ = '''0.4.5'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -112,40 +112,55 @@ class TdbparseToken:
     IDENTIFIER = 15
     END_OF_FILE = 16
     
-    def __init__(self, typ, line, col):
+    def __init__(self, typ, line, col, val=None):
         '''Builds a new token of the given type, at the given line and
         column, initially with a value of None.
         
         typ: A token type. See the TdbparseToken class.
         line: A strictly positive line number.
-        col: A strictly positive column number.'''
+        col: A strictly positive column number.
+        cal: A value for the token. Default: None.'''
         object.__init__(self)
         self.__type = typ
         self.__line = line
         self.__col = col
-        self.__value = None
+        self.__value = val
     
-    def set_value(self, value):
-        '''Sets the associated value of this token to the given value.
-        
-        value: This token's value.'''
-        self.__value = value
-
     def type(self):
         '''Returns this token's type.'''
         return self.__type
+    
+    def set_type(self, typ):
+        '''Sets this token's type.'''
+        self.__type = typ
     
     def line(self):
         '''Return this token's line number.'''
         return self.__line
     
+    def set_line(self, line):
+        '''Sets this token's line number.'''
+        self.__line = line
+    
     def col(self):
         '''Return this token's column number.'''
         return self.__col
     
+    def set_col(self, col):
+        '''Sets this token's column number.'''
+        self.__col = col
+    
     def value(self):
         '''Returns this token's associated value (or None).'''
         return self.__value
+
+    def set_value(self, value):
+        '''Sets the associated value of this token to the given value.'''
+        self.__value = value
+
+    def clone(self):
+        '''Returns a clone of this token.'''
+        return TdbparseToken(self.type(), self.line(), self.col(), self.valeu())
 
     def translate(self):
         '''Translates this token's type into a human-readable string.'''
@@ -197,7 +212,8 @@ class TdbScanner(object):
         self.__cur = ''
         self.__line = 0
         self.__col = 0
-        self.__token(TdbparseToken.NONE)
+        self.__tok = TdbparseToken(TdbparseToken.NONE, 0, 0)
+        self.__other_tok = TdbparseToken(TdbparseToken.NONE, 0, 0)
 
     def next(self):
         '''Consumes and returns one token from the input file.
@@ -274,10 +290,11 @@ class TdbScanner(object):
         if ch == TdbparseLiteral.CURLY_OPEN: return self.__single(TdbparseToken.CURLY_OPEN)
         if ch == TdbparseLiteral.CURLY_CLOSE: return self.__single(TdbparseToken.CURLY_CLOSE)
         # Keywords
-        match = TdbScanner.RE_KEYWORD.match(self.__cur)
+        cur = self.__cur
+        match = TdbScanner.RE_KEYWORD.match(cur)
         if match: return self.__keyword(match.group(1))
         # Identifiers
-        match = TdbScanner.RE_IDENTIFIER.match(self.__cur)
+        match = TdbScanner.RE_IDENTIFIER.match(cur)
         if match:
             self.__token(TdbparseToken.IDENTIFIER)
             self.__tok.set_value(match.group(0))
@@ -363,21 +380,22 @@ class TdbScanner(object):
         Semicolons, closing angle brackets, backslashes, and leading
         and trailing spaces must be escaped.'''
         self.__token(TdbparseToken.STRING)
+        cur = self.__cur
         index = 0
-        maxindex = len(self.__cur)
+        maxindex = len(cur)
         escapes = []
         while index < maxindex:
-          ch = self.__cur[index]
+          ch = cur[index]
           if ch == TdbparseLiteral.SEMICOLON or ch == TdbparseLiteral.ANGLE_CLOSE: break
           if ch == '\\':
             escapes.append(index)
             index = index + 1 # Count the backslash
             if index >= maxindex: raise TdbparseSyntaxError('run-on bare string', self.file_name(), self.__tok.line(), self.__tok.col()+index)
-            ch = self.__cur[index]
+            ch = cur[index]
             if not (ch == TdbparseLiteral.SEMICOLON or ch == TdbparseLiteral.ANGLE_CLOSE \
                 or ch == ' ' or ch == '\\'): raise TdbparseSyntaxError('invalid bare string escape: %s' % ch, self.file_name(), self.__line, self.__col-1+index)
           index = index + 1 # Count the character
-        val = self.__cur[0:index].rstrip()
+        val = cur[0:index].rstrip()
         self.__move(index) # Consume the characters
         if len(escapes) > 0:
           val_seq = [c for c in val]
@@ -392,11 +410,15 @@ class TdbScanner(object):
         return self.__tok
 
     def __token(self, typ):
-        '''Creates a token of the given type at the current line and
-        column, and sets the current token to it.
+        '''Sets the current token to one with the given type and gives it
+        the current line and column number.
         
         typ: A token type. See TdbparseToken.'''
-        self.__tok = TdbparseToken(typ, self.__line, self.__col)
+        tok = self.__other_tok
+        tok.set_type(typ)
+        tok.set_line(self.__line)
+        tok.set_col(self.__col)
+        self.__tok, self.__other_tok = tok, self.__tok
         
     def file_name(self):
         if str(self.__file.__class__) == "StringIO.StringIO":
@@ -587,14 +609,14 @@ class TdbParser(object):
             TdbparseToken.IDENTIFIER
             ( TdbparseToken.SQUARE_OPEN TdbparseToken.IDENTIFIER TdbparseToken.SQUARE_CLOSE )?
         ;'''
-        tok = self.__token0 # Remember potential identifier
+        tokval = self.__token0.value() # Remember potential identifier
         self.__expect(TdbparseToken.IDENTIFIER)
-        base = tok.value()
+        base = tokval
         if self.__accept(TdbparseToken.SQUARE_OPEN):
-            tok = self.__token0 # Remember potential identifier
+            tokval = self.__token0.value() # Remember potential identifier
             self.__expect(TdbparseToken.IDENTIFIER)
             self.__expect(TdbparseToken.SQUARE_CLOSE)
-            self.__stack.append((base, tok.value()))
+            self.__stack.append((base, tokval))
         else: self.__stack.append((base,))
 
     def __list_of_identifiers(self):
@@ -618,9 +640,9 @@ class TdbParser(object):
         ;'''
         self.__identifier()
         self.__expect(TdbparseToken.EQUAL)
-        tok = self.__token0 # Remember potential string
+        tokval = self.__token0.value() # Remember potential string
         self.__expect(TdbparseToken.STRING)
-        self.__stack.append((self.__stack.pop(), tok.value()))
+        self.__stack.append((self.__stack.pop(), tokval))
 
     def __list_of_simple_assignments(self):
         '''list_of_simple_assignments :
@@ -641,13 +663,13 @@ class TdbParser(object):
             ( TdbparseToken.SEMICOLON TdbparseToken.STRING )*
         ;'''
         lis = []
-        tok = self.__token0 # Remember potential string
+        tokval = self.__token0.value() # Remember potential string
         self.__expect(TdbparseToken.STRING)
-        lis.append(tok.value())
+        lis.append(tokval)
         while self.__accept(TdbparseToken.SEMICOLON):
-            tok = self.__token0 # Remember potential string
+            tokval = self.__token0.value() # Remember potential string
             self.__expect(TdbparseToken.STRING)
-            lis.append(tok.value())
+            lis.append(tokval)
         self.__stack.append(lis)
 
     def __implicit(self):
@@ -671,7 +693,7 @@ class TdbParser(object):
             list_of_strings
             TdbparseToken.ANGLE_CLOSE
         ;'''
-        tok = self.__token0 # Remember potential au token
+        tokline, tokcol = self.__token0.line(), self.__token0.col() # Remember potential au token
         self.__expect(TdbparseToken.AU)
         self.__expect(TdbparseToken.ANGLE_OPEN)
         self.__list_of_strings()
@@ -681,7 +703,7 @@ class TdbParser(object):
         impl = self.__current_au[-1].get('$implicit')
         vals = self.__stack.pop()
         if len(impl) != len(vals):
-            raise TdbparseSyntaxError('expected %d implicit assignments but got %d' % (len(impl), len(vals)), self.__file_name, tok.line(), tok.col())
+            raise TdbparseSyntaxError('expected %d implicit assignments but got %d' % (len(impl), len(vals)), self.__file_name, tokline, tokcol)
         for key, val in zip(impl, vals):
             au.set(key, val)
         self.__tdb.add_au(au)
@@ -745,8 +767,7 @@ class TdbParser(object):
             tok = self.__scanner.next()
             if self.__options.tdbparse_echo_tokens: sys.stderr.write(str(tok) + '\n')
             if tok.type() == TdbparseToken.END_OF_FILE: self.__scanner = None
-        self.__token0 = self.__token1
-        self.__token1 = tok
+        self.__token0, self.__token1 = self.__token1, tok
 
     def __accept(self, toktyp):
         '''If the given token is next, consumes it and returns True,
