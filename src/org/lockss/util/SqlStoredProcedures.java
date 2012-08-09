@@ -1,5 +1,5 @@
 /*
- * $Id: SqlStoredProcedures.java,v 1.7 2012-06-24 16:47:09 pgust Exp $
+ * $Id: SqlStoredProcedures.java,v 1.8 2012-08-09 19:54:13 pgust Exp $
  */
 
 /*
@@ -156,7 +156,7 @@ public class SqlStoredProcedures {
     // return the TdbAu from the AU
     TitleConfig tc = au.getTitleConfig();
     if (tc == null) {
-      log.debug2("no titleconfig for au " + au.toString());
+      queryLog.debug2("no titleconfig for au " + au.toString());
       return null;
     }
 
