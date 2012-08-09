@@ -38,7 +38,7 @@
     >
 
     param[journal_issn] = 0951-3574
-    comment[notReady] =RU4162
+    comment[notReady] =RU4306
 
     au < released ; 1988 ; Accounting, Auditing & Accountability Journal Volume 1 ; 1 >
     au < released ; 1989 ; Accounting, Auditing & Accountability Journal Volume 2 ; 2 >
@@ -64,7 +64,7 @@
     au < released ; 2009 ; Accounting, Auditing & Accountability Journal Volume 22 ; 22 >
     au < released ; 2010 ; Accounting, Auditing & Accountability Journal Volume 23 ; 23 >
     au < released ; 2011 ; Accounting, Auditing & Accountability Journal Volume 24 ; 24 >
-    au < notReady ; 2012 ; Accounting, Auditing & Accountability Journal Volume 25 ; 25 >
+    au < testing ; 2012 ; Accounting, Auditing & Accountability Journal Volume 25 ; 25 >
 
   }
 
@@ -82,7 +82,7 @@
     au < released ; 2008 ; Advances in Dual Diagnosis Volume 1 ; 1 >
     au < released ; 2009 ; Advances in Dual Diagnosis Volume 2 ; 2 >
     au < released ; 2010 ; Advances in Dual Diagnosis Volume 3 ; 3 >
-    au < manifest ; 2011 ; Advances in Dual Diagnosis Volume 4 ; 4 >
+    au < testing ; 2011 ; Advances in Dual Diagnosis Volume 4 ; 4 >
     au < expected ; 2012 ; Advances in Dual Diagnosis Volume 5 ; 5 >
 
   }
@@ -102,7 +102,7 @@
     au < released ; 2009 ; Advances in Mental Health and Intellectual Disabilities Volume 3 ; 3 >
     au < released ; 2010 ; Advances in Mental Health and Intellectual Disabilities Volume 4 ; 4 >    
     au < released ; 2011 ; Advances in Mental Health and Intellectual Disabilities Volume 5 ; 5 >
-    au < notReady ; 2012 ; Advances in Mental Health and Intellectual Disabilities Volume 6 ; 6 >
+    au < testing ; 2012 ; Advances in Mental Health and Intellectual Disabilities Volume 6 ; 6 >
 
   }
 
@@ -144,7 +144,7 @@
     au < released ; 2009 ; Agricultural Finance Review Volume 69 ; 69 >
     au < released ; 2010 ; Agricultural Finance Review Volume 70 ; 70 >
     au < released ; 2011 ; Agricultural Finance Review Volume 71 ; 71 >
-    au < notReady ; 2012 ; Agricultural Finance Review Volume 72 ; 72 >
+    au < testing ; 2012 ; Agricultural Finance Review Volume 72 ; 72 >
 
   }
 
@@ -240,7 +240,7 @@
     au < released ; 2009 ; Aircraft Engineering and Aerospace Technology Volume 81 ; 81 >
     au < released ; 2010 ; Aircraft Engineering and Aerospace Technology Volume 82 ; 82 >
     au < released ; 2011 ; Aircraft Engineering and Aerospace Technology Volume 83 ; 83 >
-    au < notReady ; 2012 ; Aircraft Engineering and Aerospace Technology Volume 84 ; 84 >
+    au < testing ; 2012 ; Aircraft Engineering and Aerospace Technology Volume 84 ; 84 >
 
   }
 
