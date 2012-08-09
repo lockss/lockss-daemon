@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.12 2012-08-02 12:44:40 pgust Exp $
+ * $Id: MetadataField.java,v 1.13 2012-08-09 17:59:36 pgust Exp $
  */
 
 /*
@@ -34,9 +34,6 @@ package org.lockss.extractor;
 
 import java.util.*;
 
-import org.lockss.extractor.MetadataException.ValidationException;
-import org.lockss.extractor.MetadataField.Extractor;
-import org.lockss.extractor.MetadataField.Splitter;
 import org.lockss.util.*;
 import org.apache.commons.lang.StringUtils;
 import java.util.regex.Matcher;
@@ -144,7 +141,7 @@ public class MetadataField {
   public static final MetadataField FIELD_EISBN = new MetadataField(KEY_EISBN,
       Cardinality.Single,eisbnvalid);
   
-public static final String KEY_PUBLISHER = "publisher";
+  public static final String KEY_PUBLISHER = "publisher";
   public static final MetadataField FIELD_PUBLISHER = new MetadataField(
       KEY_PUBLISHER, Cardinality.Single);
 
