@@ -733,6 +733,12 @@
     param[journal_id] = 10.1055/s-00000145
     comment[years] = 2007-current
   
+   au < exists ; exists ; Dialyse aktuell 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; Dialyse aktuell 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; Dialyse aktuell 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Dialyse aktuell 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Dialyse aktuell 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; Dialyse aktuell 2012 ; 2012 ; 2012 >
   
   
   }
@@ -743,11 +749,148 @@
       issn = 0012-0472 ;
       eissn = 1439-4413
       
-    
     >
     param[journal_id] = 10.1055/s-00000011
     comment[years] = 1875-current  
-  
+
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1875 ; 1875 ; 1875 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1876 ; 1876 ; 1876 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1877 ; 1877 ; 1877 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1878 ; 1878 ; 1898 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1879 ; 1879 ; 1899 >  
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1870 ; 1880 ; 1880 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1881 ; 1881 ; 1881 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1882 ; 1882 ; 1882 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1883 ; 1883 ; 1883 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1884 ; 1884 ; 1884 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1885 ; 1885 ; 1885 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1886 ; 1886 ; 1886 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1887 ; 1887 ; 1887 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1888 ; 1888 ; 1888 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1889 ; 1889 ; 1889 >  
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1890 ; 1890 ; 1890 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1891 ; 1891 ; 1891 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1892 ; 1892 ; 1892 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1893 ; 1893 ; 1893 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1894 ; 1894 ; 1894 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1895 ; 1895 ; 1895 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1896 ; 1896 ; 1896 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1897 ; 1897 ; 1897 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1898 ; 1898 ; 1898 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1899 ; 1899 ; 1899 >   
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1900 ; 1900 ; 1900 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1901 ; 1901 ; 1901 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1902 ; 1902 ; 1902 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1903 ; 1903 ; 1903 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1904 ; 1904 ; 1904 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1905 ; 1905 ; 1905 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1906 ; 1906 ; 1906 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1907 ; 1907 ; 1907 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1908 ; 1908 ; 1908 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1909 ; 1909 ; 1909 >   
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1910 ; 1910 ; 1910 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1911 ; 1911 ; 1911 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1912 ; 1912 ; 1912 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1913 ; 1913 ; 1913 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1914 ; 1914 ; 1914 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1915 ; 1915 ; 1915 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1916 ; 1916 ; 1916 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1917 ; 1917 ; 1917 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1918 ; 1918 ; 1918 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1919 ; 1919 ; 1919 >   
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1920 ; 1920 ; 1920 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1921 ; 1921 ; 1921 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1922 ; 1922 ; 1922 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1923 ; 1923 ; 1923 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1924 ; 1924 ; 1924 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1925 ; 1925 ; 1925 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1926 ; 1926 ; 1926 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1927 ; 1927 ; 1927 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1928 ; 1928 ; 1928 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1929 ; 1929 ; 1929 >   
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1930 ; 1930 ; 1930 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1931 ; 1931 ; 1931 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1932 ; 1932 ; 1932 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1933 ; 1933 ; 1933 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1934 ; 1934 ; 1934 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1935 ; 1935 ; 1935 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1936 ; 1936 ; 1936 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1937 ; 1937 ; 1937 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1938 ; 1938 ; 1938 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1939 ; 1939 ; 1939 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1940 ; 1940 ; 1940 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1941 ; 1941 ; 1941 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1942 ; 1942 ; 1942 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1943 ; 1943 ; 1943 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1944 ; 1944 ; 1944 >    
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1945 ; 1945 ; 1945 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1946 ; 1946 ; 1946 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1947 ; 1947 ; 1947 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1948 ; 1948 ; 1948 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1949 ; 1949 ; 1949 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1950 ; 1950 ; 1950 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1951 ; 1951 ; 1951 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1952 ; 1952 ; 1952 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1953 ; 1953 ; 1953 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1954 ; 1954 ; 1954 >    
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1955 ; 1955 ; 1955 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1956 ; 1956 ; 1956 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1957 ; 1957 ; 1957 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1958 ; 1958 ; 1958 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1959 ; 1959 ; 1959 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1960 ; 1960 ; 1960 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1961 ; 1961 ; 1961 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1962 ; 1962 ; 1962 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1963 ; 1963 ; 1963 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1964 ; 1964 ; 1964 >    
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1965 ; 1965 ; 1965 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1966 ; 1966 ; 1966 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1967 ; 1967 ; 1967 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1968 ; 1968 ; 1968 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1969 ; 1969 ; 1969 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1970 ; 1970 ; 1970 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1971 ; 1971 ; 1971 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1972 ; 1972 ; 1972 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1973 ; 1973 ; 1973 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1974 ; 1974 ; 1974 >    
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1975 ; 1975 ; 1975 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1976 ; 1976 ; 1976 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1977 ; 1977 ; 1977 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1978 ; 1978 ; 1978 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1979 ; 1979 ; 1979 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1980 ; 1980 ; 1980 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1981 ; 1981 ; 1981 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1982 ; 1982 ; 1982 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1983 ; 1983 ; 1983 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1984 ; 1984 ; 1984 >    
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1985 ; 1985 ; 1985 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1986 ; 1986 ; 1986 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1987 ; 1987 ; 1987 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1988 ; 1988 ; 1988 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1989 ; 1989 ; 1989 >   
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1990 ; 1990 ; 1990 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1991 ; 1991 ; 1991 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1992 ; 1992 ; 1992 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1993 ; 1993 ; 1993 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1994 ; 1994 ; 1994 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1995 ; 1995 ; 1995 >     
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1996 ; 1996 ; 1996 >      
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1997 ; 1997 ; 1997 >     
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1998 ; 1998 ; 1998 >     
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 1999 ; 1999 ; 1999 >      
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 2001 ; 2001 ; 2001 >     
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 2002 ; 2002 ; 2002 >      
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 2003 ; 2003 ; 2003 >     
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 2004 ; 2004 ; 2004 >     
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 2005 ; 2005 ; 2005 >      
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; DMW - Deutsche Medizinische Wochenschrift 2012 ; 2012 ; 2012 >
   
   
   }
