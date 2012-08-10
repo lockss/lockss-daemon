@@ -1000,28 +1000,6 @@
    au < exists ; exists ; Endoscopy 2011 ; 2011 ; 2011 > 
    au < exists ; exists ; Endoscopy 2012 ; 2012 ; 2012 >
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
   }
   
@@ -1035,7 +1013,17 @@
     param[journal_id] = 10.1055/s-00000013
     comment[years] = 2002-current
   
-  
+   au < exists ; exists ; Endoscopy heute 2002 ; 2002 ; 2002 > 
+   au < exists ; exists ; Endoscopy heute 2003 ; 2003 ; 2003 > 
+   au < exists ; exists ; Endoscopy heute 2004 ; 2004 ; 2004 > 
+   au < exists ; exists ; Endoscopy heute 2005 ; 2005 ; 2005 > 
+   au < exists ; exists ; Endoscopy heute 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Endoscopy heute 2007 ; 2007 ; 2007 > 
+   au < exists ; exists ; Endoscopy heute 2008 ; 2008 ; 2008 > 
+   au < exists ; exists ; Endoscopy heute 2009 ; 2009 ; 2009 > 
+   au < exists ; exists ; Endoscopy heute 2010 ; 2010 ; 2010 > 
+   au < exists ; exists ; Endoscopy heute 2011 ; 2011 ; 2011 > 
+   au < exists ; exists ; Endoscopy heute 2012 ; 2012 ; 2012 >  
   
   }
   
@@ -1049,6 +1037,19 @@
     param[journal_id] = 10.1055/s-00000014
     comment[years] = 2000-current
   
+   au < exists ; exists ; Erfahrungsheilkunde 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; Erfahrungsheilkunde 2001 ; 2001 ; 2001 > 
+   au < exists ; exists ; Erfahrungsheilkunde 2002 ; 2002 ; 2002 > 
+   au < exists ; exists ; Erfahrungsheilkunde 2003 ; 2003 ; 2003 > 
+   au < exists ; exists ; Erfahrungsheilkunde 2004 ; 2004 ; 2004 > 
+   au < exists ; exists ; Erfahrungsheilkunde 2005 ; 2005 ; 2005 > 
+   au < exists ; exists ; Erfahrungsheilkunde 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Erfahrungsheilkunde 2007 ; 2007 ; 2007 > 
+   au < exists ; exists ; Erfahrungsheilkunde 2008 ; 2008 ; 2008 > 
+   au < exists ; exists ; Erfahrungsheilkunde 2009 ; 2009 ; 2009 > 
+   au < exists ; exists ; Erfahrungsheilkunde 2010 ; 2010 ; 2010 > 
+   au < exists ; exists ; Erfahrungsheilkunde 2011 ; 2011 ; 2011 > 
+   au < exists ; exists ; Erfahrungsheilkunde 2012 ; 2012 ; 2012 >
   
   
   }
@@ -1063,6 +1064,11 @@
     param[journal_id] = 10.1055/s-00000163
     comment[years] = 2008-current  
   
+   au < exists ; exists ; Ergopraxis 2008 ; 2008 ; 2008 > 
+   au < exists ; exists ; Ergopraxis 2009 ; 2009 ; 2009 > 
+   au < exists ; exists ; Ergopraxis 2010 ; 2010 ; 2010 > 
+   au < exists ; exists ; Ergopraxis 2011 ; 2011 ; 2011 > 
+   au < exists ; exists ; Ergopraxis 2012 ; 2012 ; 2012 >
   
   
   }
