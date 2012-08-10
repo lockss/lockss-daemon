@@ -18,7 +18,7 @@
     param[journal_abbr] = lajm
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < manifest ; exists ; 1985 ; Langugae Arts Journal of Michigan Volume 1 ; 1 >
+    au < manifest ; exists ; 1985 ; Language Arts Journal of Michigan Volume 1 ; 1 >
     au < manifest ; exists ; 1986 ; Language Arts Journal of Michigan Volume 2 ; 2 >
     au < manifest ; exists ; 1987 ; Language Arts Journal of Michigan Volume 3 ; 3 >
     au < manifest ; exists ; 1988 ; Language Arts Journal of Michigan Volume 4 ; 4 >
