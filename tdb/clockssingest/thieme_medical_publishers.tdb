@@ -906,18 +906,18 @@
     param[journal_id] = 10.1055/s-00000120
     comment[years] = 2003-current  
   
-   au < exists ; exists ; DMW - Deutsche Zeitschrift für Osteopathie 1952 ; 1952 ; 1952 >     
-   au < exists ; exists ; DMW - Deutsche Zeitschrift für Osteopathie 1988 ; 1988 ; 1988 >      
-   au < exists ; exists ; DMW - Deutsche Zeitschrift für Osteopathie 2003 ; 2003 ; 2003 >     
-   au < exists ; exists ; DMW - Deutsche Zeitschrift für Osteopathie 2004 ; 2004 ; 2004 >     
-   au < exists ; exists ; DMW - Deutsche Zeitschrift für Osteopathie 2005 ; 2005 ; 2005 >      
-   au < exists ; exists ; DMW - Deutsche Zeitschrift für Osteopathie 2006 ; 2006 ; 2006 > 
-   au < exists ; exists ; DMW - Deutsche Zeitschrift für Osteopathie 2007 ; 2007 ; 2007 >     
-   au < exists ; exists ; DMW - Deutsche Zeitschrift für Osteopathie 2008 ; 2008 ; 2008 >      
-   au < exists ; exists ; DMW - Deutsche Zeitschrift für Osteopathie 2009 ; 2009 ; 2009 >     
-   au < exists ; exists ; DMW - Deutsche Zeitschrift für Osteopathie 2010 ; 2010 ; 2010 >     
-   au < exists ; exists ; DMW - Deutsche Zeitschrift für Osteopathie 2011 ; 2011 ; 2011 >      
-   au < exists ; exists ; DMW - Deutsche Zeitschrift für Osteopathie 2012 ; 2012 ; 2012 >
+   au < exists ; exists ; Deutsche Zeitschrift für Osteopathie 1952 ; 1952 ; 1952 >     
+   au < exists ; exists ; Deutsche Zeitschrift für Osteopathie 1988 ; 1988 ; 1988 >      
+   au < exists ; exists ; Deutsche Zeitschrift für Osteopathie 2003 ; 2003 ; 2003 >     
+   au < exists ; exists ; Deutsche Zeitschrift für Osteopathie 2004 ; 2004 ; 2004 >     
+   au < exists ; exists ; Deutsche Zeitschrift für Osteopathie 2005 ; 2005 ; 2005 >      
+   au < exists ; exists ; Deutsche Zeitschrift für Osteopathie 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Deutsche Zeitschrift für Osteopathie 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; Deutsche Zeitschrift für Osteopathie 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; Deutsche Zeitschrift für Osteopathie 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Deutsche Zeitschrift für Osteopathie 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Deutsche Zeitschrift für Osteopathie 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; Deutsche Zeitschrift für Osteopathie 2012 ; 2012 ; 2012 >
   
   
   }
@@ -932,6 +932,13 @@
     param[journal_id] = 10.1055/s-00000136
     comment[years] = 2006-current  
   
+   au < exists ; exists ; Endo-Praxis 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Endo-Praxis 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; Endo-Praxis 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; Endo-Praxis 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Endo-Praxis 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Endo-Praxis 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; Endo-Praxis 2012 ; 2012 ; 2012 >
   
   
   }
@@ -946,6 +953,75 @@
     >
     param[journal_id] = 10.1055/s-00000012
     comment[years] = 1969-current
+
+
+   au < exists ; exists ; Endoscopy 1969 ; 1969 ; 1969 > 
+   au < exists ; exists ; Endoscopy 1970 ; 1970 ; 1970 > 
+   au < exists ; exists ; Endoscopy 1971 ; 1971 ; 1971 > 
+   au < exists ; exists ; Endoscopy 1972 ; 1972 ; 1972 > 
+   au < exists ; exists ; Endoscopy 1973 ; 1973 ; 1973 > 
+   au < exists ; exists ; Endoscopy 1974 ; 1974 ; 1974 > 
+   au < exists ; exists ; Endoscopy 1975 ; 1975 ; 1975 > 
+   au < exists ; exists ; Endoscopy 1976 ; 1976 ; 1976 > 
+   au < exists ; exists ; Endoscopy 1977 ; 1977 ; 1977 > 
+   au < exists ; exists ; Endoscopy 1978 ; 1978 ; 1978 > 
+   au < exists ; exists ; Endoscopy 1979 ; 1979 ; 1979 > 
+   au < exists ; exists ; Endoscopy 1980 ; 1980 ; 1980 > 
+   au < exists ; exists ; Endoscopy 1981 ; 1981 ; 1981 > 
+   au < exists ; exists ; Endoscopy 1982 ; 1982 ; 1982 > 
+   au < exists ; exists ; Endoscopy 1983 ; 1983 ; 1983 > 
+   au < exists ; exists ; Endoscopy 1984 ; 1984 ; 1984 > 
+   au < exists ; exists ; Endoscopy 1985 ; 1985 ; 1985 > 
+   au < exists ; exists ; Endoscopy 1986 ; 1986 ; 1986 > 
+   au < exists ; exists ; Endoscopy 1987 ; 1987 ; 1987 > 
+   au < exists ; exists ; Endoscopy 1988 ; 1988 ; 1988 > 
+   au < exists ; exists ; Endoscopy 1989 ; 1989 ; 1989 > 
+   au < exists ; exists ; Endoscopy 1990 ; 1990 ; 1990 > 
+   au < exists ; exists ; Endoscopy 1991 ; 1991 ; 1991 > 
+   au < exists ; exists ; Endoscopy 1992 ; 1992 ; 1992 > 
+   au < exists ; exists ; Endoscopy 1993 ; 1993 ; 1993 > 
+   au < exists ; exists ; Endoscopy 1994 ; 1994 ; 1994 > 
+   au < exists ; exists ; Endoscopy 1995 ; 1995 ; 1995 > 
+   au < exists ; exists ; Endoscopy 1996 ; 1996 ; 1996 > 
+   au < exists ; exists ; Endoscopy 1997 ; 1997 ; 1997 > 
+   au < exists ; exists ; Endoscopy 1998 ; 1998 ; 1998 > 
+   au < exists ; exists ; Endoscopy 1999 ; 1999 ; 1999 > 
+   au < exists ; exists ; Endoscopy 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; Endoscopy 2001 ; 2001 ; 2001 > 
+   au < exists ; exists ; Endoscopy 2002 ; 2002 ; 2002 > 
+   au < exists ; exists ; Endoscopy 2003 ; 2003 ; 2003 > 
+   au < exists ; exists ; Endoscopy 2004 ; 2004 ; 2004 > 
+   au < exists ; exists ; Endoscopy 2005 ; 2005 ; 2005 > 
+   au < exists ; exists ; Endoscopy 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Endoscopy 2007 ; 2007 ; 2007 > 
+   au < exists ; exists ; Endoscopy 2008 ; 2008 ; 2008 > 
+   au < exists ; exists ; Endoscopy 2009 ; 2009 ; 2009 > 
+   au < exists ; exists ; Endoscopy 2010 ; 2010 ; 2010 > 
+   au < exists ; exists ; Endoscopy 2011 ; 2011 ; 2011 > 
+   au < exists ; exists ; Endoscopy 2012 ; 2012 ; 2012 >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
   }
   
