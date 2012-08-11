@@ -2056,7 +2056,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
-    au < zapped ; zapped ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < zappedCandidate ; zappedCandidate ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8[*] ; 8 ; reingest2.clockss.org:8085 >
 
     }
 
