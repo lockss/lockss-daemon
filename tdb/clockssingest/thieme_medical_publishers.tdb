@@ -1473,6 +1473,9 @@
     >
     param[journal_id] = 10.1055/s-00000177
     comment[years] = 2011-current
+
+   au < exists ; exists ; Global Spine Journal 2011 ; 2011 ; 2011 >
+   au < exists ; exists ; Global Spine Journal 2012 ; 2012 ; 2012 > 
     
   }
   
@@ -1486,6 +1489,20 @@
     param[journal_id] = 10.1055/s-00000023
     comment[years] = 1999-current  
   
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 1999 ; 1999 ; 1999 >
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 2001 ; 2001 ; 2001 >
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 2002 ; 2002 ; 2002 >
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 2003 ; 2003 ; 2003 >
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 2004 ; 2004 ; 2004 >
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 2005 ; 2005 ; 2005 >
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 2006 ; 2006 ; 2006 >
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 2007 ; 2007 ; 2007 >
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 2008 ; 2008 ; 2008 >
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 2009 ; 2009 ; 2009 >
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 2010 ; 2010 ; 2010 >
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 2011 ; 2011 ; 2011 >
+   au < exists ; exists ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie 2012 ; 2012 ; 2012 > 
   
   
   }
@@ -1500,6 +1517,15 @@
     param[journal_id] = 10.1055/s-00000024
     comment[years] = 2004-current
   
+   au < exists ; exists ; Hebamme Die 2004 ; 2004 ; 2004 >
+   au < exists ; exists ; Hebamme Die 2005 ; 2005 ; 2005 >
+   au < exists ; exists ; Hebamme Die 2006 ; 2006 ; 2006 >
+   au < exists ; exists ; Hebamme Die 2007 ; 2007 ; 2007 >
+   au < exists ; exists ; Hebamme Die 2008 ; 2008 ; 2008 >
+   au < exists ; exists ; Hebamme Die 2009 ; 2009 ; 2009 >
+   au < exists ; exists ; Hebamme Die 2010 ; 2010 ; 2010 >
+   au < exists ; exists ; Hebamme Die 2011 ; 2011 ; 2011 >
+   au < exists ; exists ; Hebamme Die 2012 ; 2012 ; 2012 > 
   
   
   }
@@ -1514,7 +1540,8 @@
     param[journal_id] = 10.1055/s-00000130
     comment[years] = 2005 inclusive
   
-  
+   au < exists ; exists ; HNO-Informationen 2005 ; 2005 ; 2005 > 
+ 
   
   }
   
