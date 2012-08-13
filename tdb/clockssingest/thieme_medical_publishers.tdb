@@ -1709,9 +1709,6 @@
     au < manifest ; exists ; intensiv 2011 ; 2011 ; 2011 > 
     au < manifest ; exists ; intensiv 2012 ; 2012 ; 2012 >  
     
-    
-    
-    
   }
   
   {
@@ -1724,6 +1721,14 @@
     param[journal_id] = 10.1055/s-00000126
     comment[years] = 2005-current
   
+    au < manifest ; exists ; Intensivmedizin up2date 2005 ; 2005 ; 2005 >     
+    au < manifest ; exists ; Intensivmedizin up2date 2006 ; 2006 ; 2006 >     
+    au < manifest ; exists ; Intensivmedizin up2date 2007 ; 2007 ; 2007 >     
+    au < manifest ; exists ; Intensivmedizin up2date 2008 ; 2008 ; 2008 > 
+    au < manifest ; exists ; Intensivmedizin up2date 2009 ; 2009 ; 2009 >     
+    au < manifest ; exists ; Intensivmedizin up2date 2010 ; 2010 ; 2010 >     
+    au < manifest ; exists ; Intensivmedizin up2date 2011 ; 2011 ; 2011 > 
+    au < manifest ; exists ; Intensivmedizin up2date 2012 ; 2012 ; 2012 >  
   
   
   }
@@ -1737,7 +1742,33 @@
       
     >
     param[journal_id] = 10.1055/s-00000167
-    comment[years] = 2011-current
+    comment[years] = 1992-current
+    
+   au < exists ; exists ; International Journal of Angiology 1992 ; 1992 ; 1992 > 
+   au < exists ; exists ; International Journal of Angiology 1993 ; 1993 ; 1993 > 
+   au < exists ; exists ; International Journal of Angiology 1994 ; 1994 ; 1994 > 
+   au < exists ; exists ; International Journal of Angiology 1995 ; 1995 ; 1995 > 
+   au < exists ; exists ; International Journal of Angiology 1996 ; 1996 ; 1996 > 
+   au < exists ; exists ; International Journal of Angiology 1997 ; 1997 ; 1997 > 
+   au < exists ; exists ; International Journal of Angiology 1998 ; 1998 ; 1998 > 
+   au < exists ; exists ; International Journal of Angiology 1999 ; 1999 ; 1999 > 
+   au < exists ; exists ; International Journal of Angiology 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; International Journal of Angiology 2001 ; 2001 ; 2001 > 
+   au < exists ; exists ; International Journal of Angiology 2002 ; 2002 ; 2002 > 
+   au < exists ; exists ; International Journal of Angiology 2003 ; 2003 ; 2003 > 
+   au < exists ; exists ; International Journal of Angiology 2004 ; 2004 ; 2004 > 
+   au < exists ; exists ; International Journal of Angiology 2005 ; 2005 ; 2005 > 
+   au < exists ; exists ; International Journal of Angiology 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; International Journal of Angiology 2007 ; 2007 ; 2007 > 
+   au < exists ; exists ; International Journal of Angiology 2008 ; 2008 ; 2008 > 
+   au < exists ; exists ; International Journal of Angiology 2009 ; 2009 ; 2009 > 
+   au < exists ; exists ; International Journal of Angiology 2010 ; 2010 ; 2010 > 
+   au < exists ; exists ; International Journal of Angiology 2011 ; 2011 ; 2011 > 
+   au < exists ; exists ; International Journal of Angiology 2012 ; 2012 ; 2012 >
+    
+    
+    
+    
   }
   
   {
