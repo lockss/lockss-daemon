@@ -2213,7 +2213,13 @@
     param[journal_id] = 10.1055/s-00000137
     comment[years] = 2006-current
   
-  
+    au < exists ; exists ; Krankenhaushygiene up2date 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Krankenhaushygiene up2date 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Krankenhaushygiene up2date 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Krankenhaushygiene up2date 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Krankenhaushygiene up2date 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Krankenhaushygiene up2date 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Krankenhaushygiene up2date 2012 ; 2012 ; 2012 >  
   
   }
   
@@ -2227,7 +2233,19 @@
     param[journal_id] = 10.1055/s-00000035
     comment[years] = 2000-2006
   
-  
+    au < exists ; exists ; Krankenhauspsychiatrie 2000 ; 2000 ; 2000 >
+    au < exists ; exists ; Krankenhauspsychiatrie 2001 ; 2001 ; 2001 > 
+    au < exists ; exists ; Krankenhauspsychiatrie 2002 ; 2002 ; 2002 > 
+    au < exists ; exists ; Krankenhauspsychiatrie 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; Krankenhauspsychiatrie 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; Krankenhauspsychiatrie 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Krankenhauspsychiatrie 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Krankenhauspsychiatrie 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Krankenhauspsychiatrie 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Krankenhauspsychiatrie 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Krankenhauspsychiatrie 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Krankenhauspsychiatrie 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Krankenhauspsychiatrie 2012 ; 2012 ; 2012 >
   
   }
   
@@ -2242,8 +2260,39 @@
     comment[years] = 1980-current
     comment[0] = this journal subsumed Laryngologie, Rhinologie, Otologie und ihre Grenzgebiete
     
-  
-  
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1980 ; 1980 ; 1980 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1981 ; 1981 ; 1981 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1982 ; 1982 ; 1982 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1983 ; 1983 ; 1983 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1984 ; 1984 ; 1984 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1985 ; 1985 ; 1985 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1986 ; 1986 ; 1986 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1987 ; 1987 ; 1987 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1988 ; 1988 ; 1988 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1989 ; 1989 ; 1989 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1990 ; 1990 ; 1990 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1991 ; 1991 ; 1991 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1992 ; 1992 ; 1992 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1993 ; 1993 ; 1993 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1994 ; 1994 ; 1994 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1995 ; 1995 ; 1995 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1996 ; 1996 ; 1996 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1997 ; 1997 ; 1997 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1998 ; 1998 ; 1998 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1999 ; 1999 ; 1999 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2000 ; 2000 ; 2000 >
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2001 ; 2001 ; 2001 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2002 ; 2002 ; 2002 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2012 ; 2012 ; 2012 >
   
   }
   
@@ -2257,7 +2306,8 @@
     param[journal_id] = 10.1055/s-00000168
     comment[years] = 2011-current
   
-  
+    au < exists ; exists ; Lege artis Das Magazin zur ärztlichen Weiterbildung 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Lege artis Das Magazin zur ärztlichen Weiterbildung 2012 ; 2012 ; 2012 >  
   
   }
   
@@ -2271,10 +2321,17 @@
     param[journal_id] = 10.1055/s-00000038
     comment[years] = 2004-current
   
-  
+    au < exists ; exists ; manuelletherapie 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; manuelletherapie 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; manuelletherapie 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; manuelletherapie 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; manuelletherapie 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; manuelletherapie 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; manuelletherapie 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; manuelletherapie 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; manuelletherapie 2012 ; 2012 ; 2012 >  
   
   }
-  
   
   {
   
@@ -2286,6 +2343,42 @@
     >
     param[journal_id] = 10.1055/s-00000041
     comment[years] = 1980-current
+
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1980 ; 1980 ; 1980 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1981 ; 1981 ; 1981 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1982 ; 1982 ; 1982 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1983 ; 1983 ; 1983 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1984 ; 1984 ; 1984 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1985 ; 1985 ; 1985 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1986 ; 1986 ; 1986 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1987 ; 1987 ; 1987 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1988 ; 1988 ; 1988 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1989 ; 1989 ; 1989 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1990 ; 1990 ; 1990 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1991 ; 1991 ; 1991 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1992 ; 1992 ; 1992 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1993 ; 1993 ; 1993 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1994 ; 1994 ; 1994 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1995 ; 1995 ; 1995 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1996 ; 1996 ; 1996 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1997 ; 1997 ; 1997 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1998 ; 1998 ; 1998 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 1999 ; 1999 ; 1999 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2000 ; 2000 ; 2000 >
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2001 ; 2001 ; 2001 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2002 ; 2002 ; 2002 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Laryngo-Rhino-Otologie 2012 ; 2012 ; 2012 >
+
+
     
   }
   
@@ -2300,6 +2393,8 @@
     param[journal_id] = 10.1055/s-00000173
     comment[years] = 2011-current
   
+    au < exists ; exists ; Neuroradiologie Scan 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Neuroradiologie Scan 2012 ; 2012 ; 2012 >
   
   
   }
@@ -2314,6 +2409,10 @@
     param[journal_id] = 10.1055/s-00000160
     comment[years] = 2009-current
   
+    au < exists ; exists ; neuroreha 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; neuroreha 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; neuroreha 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; neuroreha 2012 ; 2012 ; 2012 >
   
   
   }
@@ -2328,6 +2427,20 @@
     param[journal_id] = 10.1055/s-00000043
     comment[years] = 1999-current
   
+    au < exists ; exists ; Notarzt Der 1999 ; 1999 ; 1999 > 
+    au < exists ; exists ; Notarzt Der 2000 ; 2000 ; 2000 >
+    au < exists ; exists ; Notarzt Der 2001 ; 2001 ; 2001 > 
+    au < exists ; exists ; Notarzt Der 2002 ; 2002 ; 2002 > 
+    au < exists ; exists ; Notarzt Der 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; Notarzt Der 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; Notarzt Der 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Notarzt Der 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Notarzt Der 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Notarzt Der 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Notarzt Der 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Notarzt Der 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Notarzt Der 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Notarzt Der 2012 ; 2012 ; 2012 >
   
   
   }
@@ -2342,7 +2455,13 @@
     param[journal_id] = 10.1055/s-00000139
     comment[years] = 2006-current 
   
-  
+    au < exists ; exists ; Notfallmedizin up2date 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Notfallmedizin up2date 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Notfallmedizin up2date 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Notfallmedizin up2date 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Notfallmedizin up2date 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Notfallmedizin up2date 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Notfallmedizin up2date 2012 ; 2012 ; 2012 >  
   
   }
   
@@ -2356,7 +2475,17 @@
     param[journal_id] = 10.1055/s-00000045
     comment[years] = 2002-current
   
-  
+    au < exists ; exists ; Nuklearmediziner Der 2002 ; 2002 ; 2002 > 
+    au < exists ; exists ; Nuklearmediziner Der 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; Nuklearmediziner Der 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; Nuklearmediziner Der 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Nuklearmediziner Der 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Nuklearmediziner Der 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Nuklearmediziner Der 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Nuklearmediziner Der 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Nuklearmediziner Der 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Nuklearmediziner Der 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Nuklearmediziner Der 2012 ; 2012 ; 2012 >  
   
   }
   
@@ -2370,7 +2499,19 @@
     param[journal_id] = 10.1055/s-00000046
     comment[years] = 2000-current
   
-  
+    au < exists ; exists ; OP-Journal 2000 ; 2000 ; 2000 >
+    au < exists ; exists ; OP-Journal 2001 ; 2001 ; 2001 > 
+    au < exists ; exists ; OP-Journal 2002 ; 2002 ; 2002 > 
+    au < exists ; exists ; OP-Journal 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; OP-Journal 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; OP-Journal 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; OP-Journal 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; OP-Journal 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; OP-Journal 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; OP-Journal 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; OP-Journal 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; OP-Journal 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; OP-Journal 2012 ; 2012 ; 2012 >
   
   }
   
@@ -2385,7 +2526,7 @@
     comment[years] = 2012-current
     comment[0] = coming online soon as of July 2012
   
-  
+    au < exists ; exists ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten 2012 ; 2012 ; 2012 >
   
   }
   
