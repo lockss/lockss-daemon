@@ -1928,6 +1928,7 @@
     au < exists ; exists ; Journal of Reconstructive Microsurgery 2010 ; 2010 ; 2010 > 
     au < exists ; exists ; Journal of Reconstructive Microsurgery 2011 ; 2011 ; 2011 > 
     au < exists ; exists ; Journal of Reconstructive Microsurgery 2012 ; 2012 ; 2012 >   
+    
   }
     
   {
@@ -1940,9 +1941,10 @@
     >
     param[journal_id] = 10.500/s.0032.1312044
     comment[years] = 2012-current
+
+    au < exists ; exists ; Journal of Wrist Surgery 2012 ; 2012 ; 2012 >   
     
   }
-    
     
   {
   
@@ -1955,7 +1957,8 @@
     param[journal_id] = 10.1055/s-002-23435
     comment[years] = 2012-current
   
-  
+    au < exists ; exists ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege 2012 ; 2012 ; 2012 >   
+   
   
   }
   
@@ -1969,6 +1972,14 @@
     param[journal_id] = 10.1055/s-00000129
     comment[years] = 2005-current
   
+    au < exists ; exists ; Kardiologie up2date 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Kardiologie up2date 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Kardiologie up2date 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Kardiologie up2date 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Kardiologie up2date 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Kardiologie up2date 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Kardiologie up2date 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Kardiologie up2date 2012 ; 2012 ; 2012 >   
   
   
   }
@@ -1983,6 +1994,12 @@
     param[journal_id] = 10.1055/s-00000143
     comment[years] = 2007-current
   
+    au < exists ; exists ; kleintier konkret 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; kleintier konkret 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; kleintier konkret 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; kleintier konkret 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; kleintier konkret 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; kleintier konkret 2012 ; 2012 ; 2012 >   
   
   
   }
@@ -1996,7 +2013,17 @@
     >
     param[journal_id] = 10.1055/s-00000030
     comment[years] = 2003-current
-  
+
+    au < exists ; exists ; Klinikarzt Der 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; Klinikarzt Der 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; Klinikarzt Der 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Klinikarzt Der 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Klinikarzt Der 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Klinikarzt Der 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Klinikarzt Der 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Klinikarzt Der 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Klinikarzt Der 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Klinikarzt Der 2012 ; 2012 ; 2012 >   
   
   
   }
