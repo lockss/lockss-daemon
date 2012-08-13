@@ -133,7 +133,27 @@
     }
   
   }
+  
+  {
+    title <
+      name = Hospital Pediatrics ;
+      issn = 2154-1663 ;
+      eissn = 2154-1671
+    >
+    
+    param[base_url] = http://hosppeds.aappublications.org/
 
+    {
+    
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
+    
+      au < exists ; exists ; 2012 ; Hospital Pediatrics Volume 1 ; 1 >
+
+    }
+  
+  }
+  
   {
   
     title <
