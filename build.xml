@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.316 2012-08-08 07:09:47 tlipkis Exp $
+ $Id: build.xml,v 1.317 2012-08-13 20:39:27 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -61,6 +61,7 @@ Args:
   -Dlogtarget=Class        Set default log target.
   -Dnonetwork=true         Skip tests that require a working network
   -Dnowarn=true            Turn off compiler warnings.
+  -Dpapersize=latter       The medium to pass to a2ps for index and print.
   -Dshowoutput=yes         With test-one, show System.err output as it happens.
   -Dsuite=suite-name       Specify stf suite name.
   -Dtimeout=msecs          Override the default test failure timeout.
@@ -120,6 +121,7 @@ Args:
   <property name="noqualifier" value="java.*" />
 <!--   <property name="noqualifier" -->
 <!-- 	    value="java.lang:java.io:java.net:java.util:java.text" /> -->
+  <property name="papersize" value="letter" />
 
   <!-- Default heap for junit if none specified in jvmargs -->
   <property name="junit.default.args" value="-Xmx256m" />
@@ -1689,6 +1691,7 @@ published on the Web. http://www.lockss.org
 	     docletpathref="tools.run.classpath"
 	     classpathref="tools.run.classpath"
 	     access="private">
+      <arg value="-J-Xmx512m"/>
       <arg value="-d"/> <arg value="${javadoc}"/>
       <arg value="-o"/> <arg value="paramdoc.html"/>
       <arg value="-h"/> <arg value="${javadoc.header}"/>
@@ -1875,7 +1878,8 @@ published on the Web. http://www.lockss.org
       <arg value="-l"/>
       <arg value="50"/>
       <arg value="--copies=${copies}"/>
-      <arg value="--prologue=matrix"/>
+      <arg value="--prologue=matrix" />
+      <arg value="--medium=${papersize}"/>
 <!--        <arg value="-o"/> -->
 <!--        <arg value="foo.ps"/> -->
       <filelist dir="/" files="${index.file}"/>
@@ -1894,6 +1898,7 @@ published on the Web. http://www.lockss.org
       <arg value="--header="/>
       <arg value="--copies=${copies}"/>
       <arg value="-S Collate:true"/>
+      <arg value="--medium=${papersize}"/>
 <!--        <arg value="-o"/> -->
 <!--        <arg value="foo.ps"/> -->
       <filelist dir="${basedir}" files="${file}"/>
