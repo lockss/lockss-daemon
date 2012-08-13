@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.37 2012-06-06 02:27:03 kendrayee Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.38 2012-08-13 23:26:21 davidecorcoran Exp $
  */
 
 /*
@@ -132,6 +132,17 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("form", "id", "bmj-advanced-search-channel-form"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "status"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "AdSkyscraper"),
+        
+        
+        // The following four filters are needed on jultrasoundmed.org:
+        // Empty and sporadic <div id="fragment-reference-display">
+        // and <div id="cit-extra">
+        HtmlNodeFilters.tagWithAttribute("div", "id", "fragment-reference-display"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "cit-extra"),
+        // "Earn FREE CME Credit" link (wrapped in a list item)
+        HtmlNodeFilters.tagWithText("li", "class=\"dslink-earn-free-cme-credit\""),
+        // Variable list of links to PubMed, Google Scholar, other sites
+        HtmlNodeFilters.tagWithAttribute("div", "class", "cb-section collapsible default-closed")
     };
     
     return new HtmlFilterInputStream(in,

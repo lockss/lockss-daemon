@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.4 2012-06-06 02:30:23 kendrayee Exp $
+ * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.5 2012-08-13 23:26:21 davidecorcoran Exp $
  */
 
 /*
@@ -122,20 +122,37 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
 			+ "<ol>"
 			+ "<li><a href=\"/cgi/alerts/etoc\">Alert me to new issues of The Journal"
 			+ "</a></li>" + "</ol>" + "</div>" + "</div>" + "</div>";
-
-	  private static final String headHtml =
-				"<html><head>Title</head></HTML>";
-	  
-	  private static final String headHtmlFiltered =
-				  "<html></HTML>";
-	
 	private static final String withoutCurrentIssue = "<div class=\"col-3-top sb-div\"></div>";
 
+  private static final String headHtml = "<html><head>Title</head></HTML>";
+  private static final String headHtmlFiltered = "<html></HTML>";
+	  
+  private static final String withSporadicDivs =
+    "<div><div id=\"fragment-reference-display\"></div>" +
+    "<div class=\"cit-extra\">stuff</div></div";
+  private static final String withoutSporadicDivs =
+	  "<div></div>";
+  
+  private static final String withCmeCredit =
+	  "<ol><li><a href=\"/content/28/7/911/suppl/DC1\" rel=\"supplemental-data\"" +
+ 	  "class=\"dslink-earn-free-cme-credit\">Earn FREE CME Credit</a></li></ol>";
+  private static final String withoutCmeCredit = 
+    "<ol></ol>";
+  
+  private static final String withCbSection =
+    "<div><div class=\"cb-section collapsible default-closed\" id=\"cb-art-gs\">Content" +
+    "<h4></h4><ol><li></li></ol></div></div>";
+  private static final String withoutCbSection =
+    "<div></div>";
+
 	public void testFiltering() throws IOException, PluginException {
-		assertFilterToSame(inst1, inst2);
-		assertFilterToSame(withAds, withoutAds);
-	    assertFilterToSame(withCopyright, withoutCopyright);
-	    assertFilterToSame(withCurrentIssue, withoutCurrentIssue);
+    assertFilterToSame(inst1, inst2);
+    assertFilterToSame(withAds, withoutAds);
+	  assertFilterToSame(withCopyright, withoutCopyright);
+	  assertFilterToSame(withCurrentIssue, withoutCurrentIssue);
+	  assertFilterToSame(withSporadicDivs, withoutSporadicDivs);
+	  assertFilterToSame(withCmeCredit, withoutCmeCredit);
+	  assertFilterToSame(withCbSection, withoutCbSection);
 	}
 	
 	private void assertFilterToSame(String str1, String Str2) throws IOException, PluginException {
