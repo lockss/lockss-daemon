@@ -434,6 +434,18 @@
     au < HighWirePressH20Plugin ; manifest ; 2012 ; BMJ Open Volume 2 ; 2 >
 
   }
+  
+  {
+    title <
+      name = BMJ Quality Improvement Report ;
+      eissn = 2050-1315
+   >
+    
+      param[base_url] = http://qir.bmj.com/
+
+      au < HighWireStrVolPlugin ; exists ; 2012 ; BMJ Quality Improvement Report Volume 1 ; 1 >
+      
+    }
 
   {
     title <
@@ -1764,6 +1776,11 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; manifest ; 2012 ; Quality and Safety in Health Care Volume 21 ; 21 >
       
     }
+
+
+
+
+
 
   }
 
