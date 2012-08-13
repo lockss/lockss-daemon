@@ -167,20 +167,20 @@
       param[base_url] = http://pediatrics.aappublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1948 ; Pediatrics Volume 1 ; 1 >
-      au < manifest ; 1948 ; Pediatrics Volume 2 ; 2 >
-      au < manifest ; 1949 ; Pediatrics Volume 3 ; 3 >
-      au < manifest ; 1949 ; Pediatrics Volume 4 ; 4 >
-      au < manifest ; 1950 ; Pediatrics Volume 5 ; 5 >
-      au < manifest ; 1950 ; Pediatrics Volume 6 ; 6 >
-      au < manifest ; 1951 ; Pediatrics Volume 7 ; 7 >
-      au < manifest ; 1951 ; Pediatrics Volume 8 ; 8 >
-      au < manifest ; 1952 ; Pediatrics Volume 9 ; 9 >
-      au < manifest ; 1952 ; Pediatrics Volume 10 ; 10 >
-      au < manifest ; 1953 ; Pediatrics Volume 11 ; 11 >
-      au < manifest ; 1953 ; Pediatrics Volume 12 ; 12 >
-      au < manifest ; 1954 ; Pediatrics Volume 13 ; 13 >
-      au < manifest ; 1954 ; Pediatrics Volume 14 ; 14 >
+      au < testing ; 1948 ; Pediatrics Volume 1 ; 1 >
+      au < testing ; 1948 ; Pediatrics Volume 2 ; 2 >
+      au < testing ; 1949 ; Pediatrics Volume 3 ; 3 >
+      au < testing ; 1949 ; Pediatrics Volume 4 ; 4 >
+      au < testing ; 1950 ; Pediatrics Volume 5 ; 5 >
+      au < testing ; 1950 ; Pediatrics Volume 6 ; 6 >
+      au < testing ; 1951 ; Pediatrics Volume 7 ; 7 >
+      au < testing ; 1951 ; Pediatrics Volume 8 ; 8 >
+      au < testing ; 1952 ; Pediatrics Volume 9 ; 9 >
+      au < testing ; 1952 ; Pediatrics Volume 10 ; 10 >
+      au < testing ; 1953 ; Pediatrics Volume 11 ; 11 >
+      au < testing ; 1953 ; Pediatrics Volume 12 ; 12 >
+      au < testing ; 1954 ; Pediatrics Volume 13 ; 13 >
+      au < testing ; 1954 ; Pediatrics Volume 14 ; 14 >
       au < released ; 1955 ; Pediatrics Volume 15 ; 15 >
       au < released ; 1955 ; Pediatrics Volume 16 ; 16 >
       au < released ; 1956 ; Pediatrics Volume 17 ; 17 >
