@@ -101,6 +101,26 @@
     }
 
   }
+  
+  {
+    title <
+      name = Hospital Pediatrics ;
+      issn = 2154-1663 ;
+      eissn = 2154-1671
+    >
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://hosppeds.aappublications.org/
+      implicit < status ; year ; name ; param[volume_name] >
+      
+    
+      au < exists ; 2012 ; Hospital Pediatrics Volume 1 ; 1 >
+
+    }
+    
+  }
 
   {
     title <
