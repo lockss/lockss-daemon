@@ -1,5 +1,5 @@
 /*
- * $Id: ReputationTransfers.java,v 1.3 2012-08-08 18:16:07 barry409 Exp $
+ * $Id: ReputationTransfers.java,v 1.4 2012-08-13 20:47:28 barry409 Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ import org.lockss.util.StringUtil;
  *
  * This is for use by PLN admins when changing IP of a node.
  */
-class ReputationTransfers {
+public class ReputationTransfers {
   private static final Logger log = Logger.getLogger("ReputationTransfers");
 
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
@@ -59,11 +59,15 @@ class ReputationTransfers {
   public static final String PARAM_REPUTATION_TRANSFER_MAP =
     PREFIX + "reputationTransferMap";
 
-  /** A map, indexed by new PID, of the old PID. */
+  /** A map, indexed by new PID, of the old PID. The value of map will
+   * change when the configuration changes. */
   private Map<PeerIdentity, PeerIdentity> map;
 
   /** The IdentityManager */
-  private IdentityManager idManager;
+  private final IdentityManager idManager;
+
+  /** A callback for subscribing to changes. */
+  private final Configuration.Callback configCallback;
 
   /**
    * Make an unmodifiable view of a HashMap containing the reputation
@@ -114,11 +118,11 @@ class ReputationTransfers {
     }
   }
 
-  ReputationTransfers(IdentityManager idManager) {
+  public ReputationTransfers(IdentityManager idManager) {
     this.idManager = idManager;
     // This will make a call to the callback, setting the configured
     // instance variables.
-    registerConfigurationCallback();
+    this.configCallback = registerConfigurationCallback();
   }
 
   private Configuration.Callback registerConfigurationCallback() {
@@ -134,6 +138,15 @@ class ReputationTransfers {
     ConfigManager.getConfigManager().
       registerConfigurationCallback(configCallback);
     return configCallback;
+  }
+
+  /**
+   * Release any resources.
+   * After this call, results of calls on this object are not defined.
+   */
+  public void release() {
+    ConfigManager.getConfigManager().
+      unregisterConfigurationCallback(configCallback);
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.255 2012-08-08 18:16:07 barry409 Exp $
+ * $Id: PollManager.java,v 1.256 2012-08-13 20:47:28 barry409 Exp $
  */
 
 /*
@@ -605,6 +605,7 @@ public class PollManager
   private static IdentityManager theIDManager;
   private static HashService theHashService;
   private static LcapRouter theRouter = null;
+  private RepairPolicy theRepairPolicy = null;
   private AlertManager theAlertManager = null;
   private PluginManager pluginMgr = null;
   private static SystemMetrics theSystemMetrics = null;
@@ -1009,6 +1010,8 @@ public class PollManager
     // Maintain the state of V3 polls, since these do not use the V1 per-node
     // history mechanism.
     v3Status = new V3PollStatusAccessor();
+
+    theRepairPolicy = new RepairPolicy(theDaemon);
     
     // One time load of an in-memory map of AU IDs to directories. 
     preloadStoredPolls();
@@ -1049,6 +1052,7 @@ public class PollManager
       getDaemon().getPluginManager().unregisterAuEventHandler(auEventHandler);
       auEventHandler = null;
     }
+    theRepairPolicy.release();
     // unregister our status
     StatusService statusServ = getDaemon().getStatusService();
     statusServ.unregisterStatusAccessor(V3PollStatus.POLLER_STATUS_TABLE_NAME);
@@ -1594,6 +1598,13 @@ public class PollManager
 
   HashService getHashService() {
     return theHashService;
+  }
+
+  /**
+   * @return the current RepairPolicy.
+   */
+  public RepairPolicy getRepairPolicy() {
+    return theRepairPolicy;
   }
 
   public void setConfig(Configuration newConfig,

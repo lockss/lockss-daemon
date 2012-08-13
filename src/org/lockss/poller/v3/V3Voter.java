@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.74 2012-08-08 18:16:07 barry409 Exp $
+ * $Id: V3Voter.java,v 1.75 2012-08-13 20:47:28 barry409 Exp $
  */
 
 /*
@@ -104,31 +104,6 @@ public class V3Voter extends BasePoll {
   public static final String PARAM_MAX_SIMULTANEOUS_V3_VOTERS =
     PREFIX + "maxSimultaneousV3Voters";
   public static final int DEFAULT_MAX_SIMULTANEOUS_V3_VOTERS = 60;
-  
-  /**
-   * If false, do not serve any repairs via V3.
-   */
-  public static final String PARAM_ALLOW_V3_REPAIRS =
-    PREFIX + "allowV3Repairs";
-  public static final boolean DEFAULT_ALLOW_V3_REPAIRS = true;
-  
-  /**
-   * If true, serve repairs to any trusted peer.  (A peer is trusted iff we
-   * are communicating with it securely, and its identity has been verified
-   * to match one of the public certs in our LCAP keystore.
-   */
-  public static final String PARAM_REPAIR_ANY_TRUSTED_PEER =
-    PREFIX + "repairAnyTrustedPeer";
-  public static final boolean DEFAULT_REPAIR_ANY_TRUSTED_PEER = false;
-
-  /**
-   * If true, use per-URL agreement to determine whether it's OK to serve
-   * a repair.  If false, rely on partial agreement level for serving
-   * repairs.
-   */
-  public static final String PARAM_ENABLE_PER_URL_AGREEMENT =
-    PREFIX + "enablePerUrlAgreement";
-  public static final boolean DEFAULT_ENABLE_PER_URL_AGREEMENT = false;
   
   /**
    * The minimum percent agreement required before we're willing to serve
@@ -1200,82 +1175,6 @@ public class V3Voter extends BasePoll {
   
   IdentityManager getIdentityManager() {
     return this.idManager;
-  }
-  
-  /**
-   * Returns true if we will serve a repair to the given peer for the
-   * given AU and URL.
-   */
-  boolean serveRepairs(PeerIdentity pid, ArchivalUnit au, String url) {
-    if (idManager == null) {
-      log.warning("serveRepairs called on a possibly closed poll: "
-                  + getKey());
-      return false;
-    }
-    boolean allowRepairs = 
-      CurrentConfig.getBooleanParam(PARAM_ALLOW_V3_REPAIRS,
-                                    DEFAULT_ALLOW_V3_REPAIRS);
-    
-    // Short circuit.
-    if (!allowRepairs) return false;
-    
-    if (!CurrentConfig.getBooleanParam(PARAM_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT,
-				       DEFAULT_OPEN_ACCESS_REPAIR_NEEDS_AGREEMENT)) {
-      AuState aus = AuUtil.getAuState(au);
-      if (aus.isOpenAccess()) {
-	return true;
-      }
-    }
-    if (scomm.isTrustedNetwork() &&
-	CurrentConfig.getBooleanParam(PARAM_REPAIR_ANY_TRUSTED_PEER,
-				      DEFAULT_REPAIR_ANY_TRUSTED_PEER)) {
-      return true;
-    }
-    Collection<PeerIdentity> pids =
-      pollManager.getAllReputationsTransferredFrom(pid);
-    for (PeerIdentity pid0 : pids) {
-      if (serveRepairsTo(pid0, au, url)) {
-	return true;
-      }
-    }
-    return false;
-  }
-
-  private boolean serveRepairsTo(PeerIdentity pid, ArchivalUnit au,
-				 String url) {
-    boolean perUrlAgreement =
-      CurrentConfig.getBooleanParam(PARAM_ENABLE_PER_URL_AGREEMENT,
-                                    DEFAULT_ENABLE_PER_URL_AGREEMENT);
-
-    if (perUrlAgreement) {
-      // Use per-URL agreement.
-      try {
-        RepositoryNode node = AuUtil.getRepositoryNode(au, url);
-        boolean previousAgreement = node.hasAgreement(pid);
-        if (previousAgreement) {
-          log.debug("Previous agreement found for peer " + pid + " on URL "
-                    + url);
-        } else {
-          log.debug("No previous agreement found for peer " + pid + " on URL "
-                    + url);
-        }
-        return previousAgreement;
-      } catch (MalformedURLException ex) {
-        // Log the error, but certainly don't serve the repair.
-        log.error("serveRepairs: The URL " + url + " appears to be malformed. "
-                  + "Cannot serve repairs for this URL.");
-        return false;
-      }
-    } else {
-      // Use per-AU agreement.
-      float percentAgreement = idManager.getHighestPercentAgreement(pid, au);
-      log.debug2("Checking highest percent agreement for au and peer " + pid + ": " 
-                 + percentAgreement);
-      double minPercentForRepair = pollManager.getMinPercentForRepair();
-      log.debug2("Minimum percent agreement required for repair: "
-                 + minPercentForRepair);
-      return (percentAgreement >= minPercentForRepair);
-    }
   }
 
   /**

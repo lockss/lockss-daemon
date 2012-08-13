@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.26 2009-09-17 02:53:38 tlipkis Exp $
+ * $Id: VoterActions.java,v 1.27 2012-08-13 20:47:28 barry409 Exp $
  */
 
 /*
@@ -240,7 +240,8 @@ public class VoterActions {
     String targetUrl = msg.getTargetUrl();
     CachedUrlSet cus = ud.getCachedUrlSet();
     if (cus.containsUrl(targetUrl) &&
-        voter.serveRepairs(msg.getOriginatorId(), voter.getAu(), targetUrl)) {
+	getPollManager(ud).getRepairPolicy().serveRepair(
+	  msg.getOriginatorId(), voter.getAu(), targetUrl)) {
       // I have this repair and I'm willing to serve it.
       log.debug2("Accepting repair request from " + ud.getPollerId() +
                  " for URL: " + targetUrl);
