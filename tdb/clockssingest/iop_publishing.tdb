@@ -2070,7 +2070,30 @@
     au < manifest ; exists ; 1987 ; Journal of the Society for Radiological Protection Volume 7 ; 7 > 
 
   }
-  
+
+  {
+
+    title <
+      name = Laser Physics Letters ;
+      issn = 1612-2011 ;
+      eissn = 1612-202X ;
+      issnl = 1612-2011
+    >
+
+    param[journal_issn] = 1612-2011
+
+    au < exists ; exists ; 2004 ; Laser Physics Letters Volume 1 ; 1 >
+    au < exists ; exists ; 2005 ; Laser Physics Letters Volume 2 ; 2 >
+    au < exists ; exists ; 2006 ; Laser Physics Letters Volume 3 ; 3 >
+    au < exists ; exists ; 2007 ; Laser Physics Letters Volume 4 ; 4 >
+    au < exists ; exists ; 2008 ; Laser Physics Letters Volume 5 ; 5 >
+    au < exists ; exists ; 2009 ; Laser Physics Letters Volume 6 ; 6 >
+    au < exists ; exists ; 2010 ; Laser Physics Letters Volume 7 ; 7 >
+    au < exists ; exists ; 2011 ; Laser Physics Letters Volume 8 ; 8 >
+    au < exists ; exists ; 2012 ; Laser Physics Letters Volume 9 ; 9 >
+
+  }
+
   {
 
     title <
