@@ -19,7 +19,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of the Electrochemical Society Volume 158 ; 158 >
-    au < HighWirePressH20Plugin ; exists ; 2012 ; Journal of the Electrochemical Society Volume 159 ; 159 >
+    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of the Electrochemical Society Volume 159 ; 159 >
     
   }
 
