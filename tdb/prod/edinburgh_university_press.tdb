@@ -526,23 +526,20 @@
   {
 
     title <
-      name = International Journal of Humanities and Arts Computing ;
-      issn = 1753-8548 ;
-      eissn = 1755-1706 ;
-      issnl = 1753-8548 
+      name = History and Computing ;
+      issn = 0957-0144 ;
+      issnl = 0957-0144 
      >
 
     {
-
+    
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
-      
-      {
-      
       param[journal_id] = hac
-      comment[changed_name] = formerly History and Computing until 2002
-      comment[0] = old journal id volumes consolidated with new journal id volumes
       implicit < status ; year ; name ; param[volume_name] >
+      
+      comment[changed_name] = called History and Computing from 1994 to 2002
+      comment[continued_by] = 1753-8548 International Journal of Humanities and Arts Computing
       
       au < ready ; 1994 ; History and Computing Volume 6 (1994) ; 6 >
       au < ready ; 1995 ; History and Computing Volume 7 (1995) ; 7 >
@@ -553,15 +550,29 @@
       au < ready ; 2000 ; History and Computing Volume 12 (2000) ; 12 >
       au < ready ; 2001 ; History and Computing Volume 13 (2001) ; 13 >
       au < ready ; 2002 ; History and Computing Volume 14 (2002) ; 14 >
-      
-      }
+    
+    }
 
-      {
-      
+  }
+
+  {
+
+    title <
+      name = International Journal of Humanities and Arts Computing ;
+      issn = 1753-8548 ;
+      eissn = 1755-1706 ;
+      issnl = 1753-8548 
+     >
+
+    {
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
       param[journal_id] = ijhac
+      implicit < status ; year ; name ; param[volume_name] >
+      
       comment[changed_name] = formerly History and Computing until 2002
       comment[0] = old journal id volumes consolidated with new journal id volumes
-      implicit < status ; year ; name ; param[volume_name] >
       
       au < ready ; 2007 ; International Journal of Humanities and Arts Computing Volume 1 (2007) ; 1 >
       au < ready ; 2008 ; International Journal of Humanities and Arts Computing Volume 2 (2008) ; 2 >
@@ -569,11 +580,9 @@
       au < ready ; 2010 ; International Journal of Humanities and Arts Computing Volume 4 (2010) ; 4 >
       au < ready ; 2011 ; International Journal of Humanities and Arts Computing Volume 5 (2011) ; 5 >
       au < manifest ; 2012 ; International Journal of Humanities and Arts Computing Volume 6 (2012) ; 6 >
-      
-      }
-	
+
     }
-	
+
   }
 
   {
