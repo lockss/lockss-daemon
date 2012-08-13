@@ -4003,7 +4003,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2007 ; Radiation Oncology Volume 2 ; 2 >
       au < released ; 2008 ; Radiation Oncology Volume 3 ; 3 >
       au < released ; 2009 ; Radiation Oncology Volume 4 ; 4 >
-      au < testing ; 2010 ; Radiation Oncology Volume 5 ; 5 >
+      au < ready ; 2010 ; Radiation Oncology Volume 5 ; 5 >
       au < ready ; 2011 ; Radiation Oncology Volume 6 ; 6 >
       au < manifest ; 2012 ; Radiation Oncology Volume 7 ; 7 >
 
@@ -4025,8 +4025,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Reproductive Biology and Endocrinology Volume 4 ; 4 >
       au < released ; 2007 ; Reproductive Biology and Endocrinology Volume 5 ; 5 >
       au < released ; 2008 ; Reproductive Biology and Endocrinology Volume 6 ; 6 >
-      au < manifest ; 2009 ; Reproductive Biology and Endocrinology Volume 7 ; 7 >
-      au < manifest ; 2010 ; Reproductive Biology and Endocrinology Volume 8 ; 8 >
+      au < testing ; 2009 ; Reproductive Biology and Endocrinology Volume 7 ; 7 >
+      au < testing ; 2010 ; Reproductive Biology and Endocrinology Volume 8 ; 8 >
       au < ready ; 2011 ; Reproductive Biology and Endocrinology Volume 9 ; 9 >
       au < manifest ; 2012 ; Reproductive Biology and Endocrinology Volume 10 ; 10 >
 
@@ -4047,8 +4047,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Reproductive Health Volume 3 ; 3 >
       au < released ; 2007 ; Reproductive Health Volume 4 ; 4 >
       au < released ; 2008 ; Reproductive Health Volume 5 ; 5 >
-      au < manifest ; 2009 ; Reproductive Health Volume 6 ; 6 >
-      au < manifest ; 2010 ; Reproductive Health Volume 7 ; 7 >
+      au < testing ; 2009 ; Reproductive Health Volume 6 ; 6 >
+      au < testing ; 2010 ; Reproductive Health Volume 7 ; 7 >
       au < ready ; 2011 ; Reproductive Health Volume 8 ; 8 >
       au < manifest ; 2012 ; Reproductive Health Volume 9 ; 9 >
 
@@ -4069,8 +4069,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Retrovirology Volume 3 ; 3 >
       au < released ; 2007 ; Retrovirology Volume 4 ; 4 >
       au < released ; 2008 ; Retrovirology Volume 5 ; 5 >
-      au < manifest ; 2009 ; Retrovirology Volume 6 ; 6 >
-      au < manifest ; 2010 ; Retrovirology Volume 7 ; 7 >
+      au < testing ; 2009 ; Retrovirology Volume 6 ; 6 >
+      au < testing ; 2010 ; Retrovirology Volume 7 ; 7 >
       au < ready ; 2011 ; Retrovirology Volume 8 ; 8 >
       au < manifest ; 2012 ; Retrovirology Volume 9 ; 9 >
 
@@ -4091,9 +4091,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Saline Systems Volume 2 ; 2 >
       au < released ; 2007 ; Saline Systems Volume 3 ; 3 >
       au < released ; 2008 ; Saline Systems Volume 4 ; 4 >
-      au < manifest ; 2009 ; Saline Systems Volume 5 ; 5 >
-      au < manifest ; 2010 ; Saline Systems Volume 6 ; 6 >
-      au < manifest ; 2011 ; Saline Systems Volume 7 ; 7 >
+      au < testing ; 2009 ; Saline Systems Volume 5 ; 5 >
+      au < testing ; 2010 ; Saline Systems Volume 6 ; 6 >
+      au < testing ; 2011 ; Saline Systems Volume 7 ; 7 >
       au < manifest ; 2012 ; Saline Systems Volume 8 ; 8 >
 
     }
@@ -4111,9 +4111,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Scoliosis Volume 1 ; 1 >
       au < released ; 2007 ; Scoliosis Volume 2 ; 2 >
       au < released ; 2008 ; Scoliosis Volume 3 ; 3 >
-      au < manifest ; 2009 ; Scoliosis Volume 4 ; 4 >
-      au < manifest ; 2010 ; Scoliosis Volume 5 ; 5 >
-      au < manifest ; 2011 ; Scoliosis Volume 6 ; 6 >
+      au < testing ; 2009 ; Scoliosis Volume 4 ; 4 >
+      au < testing ; 2010 ; Scoliosis Volume 5 ; 5 >
+      au < testing ; 2011 ; Scoliosis Volume 6 ; 6 >
       au < manifest ; 2012 ; Scoliosis Volume 7 ; 7 >
 
     }
@@ -4131,9 +4131,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Source Code for Biology and Medicine Volume 1 ; 1 >
       au < released ; 2007 ; Source Code for Biology and Medicine Volume 2 ; 2 >
       au < released ; 2008 ; Source Code for Biology and Medicine Volume 3 ; 3 >
-      au < manifest ; 2009 ; Source Code for Biology and Medicine Volume 4 ; 4 >
-      au < manifest ; 2010 ; Source Code for Biology and Medicine Volume 5 ; 5 >
-      au < manifest ; 2011 ; Source Code for Biology and Medicine Volume 6 ; 6 >
+      au < testing ; 2009 ; Source Code for Biology and Medicine Volume 4 ; 4 >
+      au < testing ; 2010 ; Source Code for Biology and Medicine Volume 5 ; 5 >
+      au < testing ; 2011 ; Source Code for Biology and Medicine Volume 6 ; 6 >
       au < manifest ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 >
 
     }
@@ -4151,9 +4151,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; 2006 ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 >
       au < released ; 2007 ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
       au < released ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
-      au < manifest ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
-      au < manifest ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 >
-      au < manifest ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
+      au < testing ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
+      au < testing ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 >
+      au < testing ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
       au < manifest ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 >
 
 
