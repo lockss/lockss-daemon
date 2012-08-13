@@ -116,7 +116,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       
     
-      au < exists ; 2012 ; Hospital Pediatrics Volume 1 ; 1 >
+      au < exists ;` 2012 ; Hospital Pediatrics Volume 1 ; 1 >
 
     }
     
@@ -214,7 +214,7 @@
       au < ready ; 1970 ; Pediatrics Volume 45 ; 45 >
       au < ready ; 1970 ; Pediatrics Volume 46 ; 46 >
       au < ready ; 1971 ; Pediatrics Volume 47 ; 47 >
-      au < manifest ; 1971 ; Pediatrics Volume 48 ; 48 >
+      au < ready ; 1971 ; Pediatrics Volume 48 ; 48 >
       au < ready ; 1972 ; Pediatrics Volume 49 ; 49 >
       au < released ; 1972 ; Pediatrics Volume 50 ; 50 >
       au < released ; 1973 ; Pediatrics Volume 51 ; 51 >
