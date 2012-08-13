@@ -3200,6 +3200,31 @@
 
   }
 
+    {
+
+      title <
+        name = British Journal of Pain ;
+        issn = 2049-4637 ;
+        eissn = 2049-4645 ;
+        issnl = 2049-4637
+      >
+
+      {
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://bjp.sagepub.com/
+
+        au < exists ; exists ; 2007-2008 ; British Journal of Pine Volume 1 ; 1 ; >
+        au < exists ; exists ; 2008 ; British Journal of Pine Volume 2 ; 2 ; >
+        au < exists ; exists ; 2009 ; British Journal of Pine Volume 3 ; 3 ; >
+        au < exists ; exists ; 2010 ; British Journal of Pine Volume 4 ; 4 ; >
+        au < exists ; exists ; 2011 ; British Journal of Pine Volume 5 ; 5 ; >
+        au < exists ; exists ; 2012 ; British Journal of Pine Volume 6 ; 6 ; >
+
+      }
+      
+    }    
+
   {
   
     title <
@@ -23936,6 +23961,39 @@
     }
 
   }
+
+
+    {
+
+      title <
+        name = Management & Labour Studies ;
+        issn = 0258-042X ;
+        issnl = 0258-042X
+      >
+
+      {
+      
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://mls.sagepub.com/
+
+        au <  exists ; exists ; 1999 ; Management & Labour Studies Volume 24 ; 24 ; >
+        au <  exists ; exists ; 2000 ; Management & Labour Studies Volume 25 ; 25 ; >
+        au <  exists ; exists ; 2001 ; Management & Labour Studies Volume 26 ; 26 ; >
+        au <  exists ; exists ; 2002 ; Management & Labour Studies Volume 27 ; 27 ; >
+        au <  exists ; exists ; 2003 ; Management & Labour Studies Volume 28 ; 28 ; >
+        au <  exists ; exists ; 2004 ; Management & Labour Studies Volume 29 ; 29 ; >
+        au <  exists ; exists ; 2005 ; Management & Labour Studies Volume 30 ; 30 ; >
+        au <  exists ; exists ; 2006 ; Management & Labour Studies Volume 31 ; 31 ; >
+        au <  exists ; exists ; 2007 ; Management & Labour Studies Volume 32 ; 32 ; >
+        au <  exists ; exists ; 2008 ; Management & Labour Studies Volume 33 ; 33 ; >
+        au <  exists ; exists ; 2009 ; Management & Labour Studies Volume 34 ; 34 ; >
+        au <  exists ; exists ; 2010 ; Management & Labour Studies Volume 35 ; 35 ; >
+        au <  exists ; exists ; 2011 ; Management & Labour Studies Volume 36 ; 36 ; >
+        au <  exists ; exists ; 2012 ; Management & Labour Studies Volume 37 ; 37 ; >
+
+      }
+
+    }
 
   {
   
