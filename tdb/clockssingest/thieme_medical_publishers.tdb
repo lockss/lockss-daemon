@@ -4584,7 +4584,7 @@
     au < exists ; exists ; Zeitschrift für Chirurgie 2009 ; 2009 ; 2009 > 
     au < exists ; exists ; Zeitschrift für Chirurgie 2010 ; 2010 ; 2010 > 
     au < exists ; exists ; Zeitschrift für Chirurgie 2011 ; 2011 ; 2011 > 
-    au < exists ; exists ; Zeitschrift für Chirurgie 2012 ; 2012 ; 2012 >    
+    au < exists ; exists ; Zeitschrift für Chirurgie 2012 ; 2012 ; 2012 > 
     
   }
 
@@ -4626,6 +4626,20 @@
     param[journal_id] = 10.1055/s-00000016
     comment[years] = 2000-2002
     
+    au < exists ; exists ; Zeitschrift für Kinderchirurgie 2000 ; 2000 ; 2000 > 
+    au < exists ; exists ; Zeitschrift für Kinderchirurgie 2001 ; 2001 ; 2001 > 
+    au < exists ; exists ; Zeitschrift für Kinderchirurgie 2002 ; 2002 ; 2002 > 
+    au < exists ; exists ; Zeitschrift für Kinderchirurgie 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; Zeitschrift für Kinderchirurgie 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; Zeitschrift für Kinderchirurgie 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Zeitschrift für Kinderchirurgie 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Zeitschrift für Kinderchirurgie 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Zeitschrift für Kinderchirurgie 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Zeitschrift für Kinderchirurgie 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Zeitschrift für Kinderchirurgie 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Zeitschrift für Kinderchirurgie 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Zeitschrift für Kinderchirurgie 2012 ; 2012 ; 2012 > 
+    
   }
 
   {
@@ -4638,6 +4652,17 @@
     >
     param[journal_id] = 10.1055/s-00000111
     comment[years] = 2003-current
+    
+    au < exists ; exists ; Zeitschrift für Allgemeinmedizin 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; Zeitschrift für Allgemeinmedizin 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; Zeitschrift für Allgemeinmedizin 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Zeitschrift für Allgemeinmedizin 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Zeitschrift für Allgemeinmedizin 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Zeitschrift für Allgemeinmedizin 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Zeitschrift für Allgemeinmedizin 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Zeitschrift für Allgemeinmedizin 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Zeitschrift für Allgemeinmedizin 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Zeitschrift für Allgemeinmedizin 2012 ; 2012 ; 2012 >    
     
   }
 
@@ -4652,7 +4677,16 @@
     param[journal_id] = 10.1055/s-00000112
     comment[years] = 2003-current
     
-    
+    au < exists ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2012 ; 2012 ; 2012 >    
   }
   
   }
