@@ -4498,6 +4498,19 @@
     param[journal_id] = 10.1055/s-00000102
     comment[years] = 2000-current
     
+    au < exists ; exists ; Zeitschrift für Palliativmedizin 2000 ; 2000 ; 2000 > 
+    au < exists ; exists ; Zeitschrift für Palliativmedizin 2001 ; 2001 ; 2001 > 
+    au < exists ; exists ; Zeitschrift für Palliativmedizin 2002 ; 2002 ; 2002 > 
+    au < exists ; exists ; Zeitschrift für Palliativmedizin 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; Zeitschrift für Palliativmedizin 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; Zeitschrift für Palliativmedizin 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Zeitschrift für Palliativmedizin 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Zeitschrift für Palliativmedizin 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Zeitschrift für Palliativmedizin 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Zeitschrift für Palliativmedizin 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Zeitschrift für Palliativmedizin 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Zeitschrift für Palliativmedizin 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Zeitschrift für Palliativmedizin 2012 ; 2012 ; 2012 > 
   }
 
   {
@@ -4510,6 +4523,15 @@
     >
     param[journal_id] = 10.1055/s-00000101
     comment[years] = 2005-current
+    
+    au < exists ; exists ; Zeitschrift für Phytotherapie 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Zeitschrift für Phytotherapie 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Zeitschrift für Phytotherapie 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Zeitschrift für Phytotherapie 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Zeitschrift für Phytotherapie 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Zeitschrift für Phytotherapie 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Zeitschrift für Phytotherapie 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Zeitschrift für Phytotherapie 2012 ; 2012 ; 2012 >     
     
   }
 
@@ -4524,6 +4546,19 @@
     param[journal_id] = 10.1055/s-00000103
     comment[years] = 2001-current
     
+    au < exists ; exists ; Zeitschrift für Sexualforschung 2001 ; 2001 ; 2001 > 
+    au < exists ; exists ; Zeitschrift für Sexualforschung 2002 ; 2002 ; 2002 > 
+    au < exists ; exists ; Zeitschrift für Sexualforschung 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; Zeitschrift für Sexualforschung 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; Zeitschrift für Sexualforschung 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Zeitschrift für Sexualforschung 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Zeitschrift für Sexualforschung 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Zeitschrift für Sexualforschung 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Zeitschrift für Sexualforschung 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Zeitschrift für Sexualforschung 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Zeitschrift für Sexualforschung 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Zeitschrift für Sexualforschung 2012 ; 2012 ; 2012 > 
+    
   }
 
   {
@@ -4537,6 +4572,20 @@
     param[journal_id] = 10.1055/s-00000104
     comment[years] = 2000-current
     
+    au < exists ; exists ; Zeitschrift für Chirurgie 2000 ; 2000 ; 2000 > 
+    au < exists ; exists ; Zeitschrift für Chirurgie 2001 ; 2001 ; 2001 > 
+    au < exists ; exists ; Zeitschrift für Chirurgie 2002 ; 2002 ; 2002 > 
+    au < exists ; exists ; Zeitschrift für Chirurgie 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; Zeitschrift für Chirurgie 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; Zeitschrift für Chirurgie 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Zeitschrift für Chirurgie 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Zeitschrift für Chirurgie 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Zeitschrift für Chirurgie 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Zeitschrift für Chirurgie 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Zeitschrift für Chirurgie 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Zeitschrift für Chirurgie 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Zeitschrift für Chirurgie 2012 ; 2012 ; 2012 >    
+    
   }
 
   {
@@ -4549,7 +4598,21 @@
     >
     param[journal_id] = 10.1055/s-00000105
     comment[years] = 2000-2006
-    
+
+    au < exists ; exists ; Zeitschrift für Gynäkologie 2000 ; 2000 ; 2000 > 
+    au < exists ; exists ; Zeitschrift für Gynäkologie 2001 ; 2001 ; 2001 > 
+    au < exists ; exists ; Zeitschrift für Gynäkologie 2002 ; 2002 ; 2002 > 
+    au < exists ; exists ; Zeitschrift für Gynäkologie 2003 ; 2003 ; 2003 > 
+    au < exists ; exists ; Zeitschrift für Gynäkologie 2004 ; 2004 ; 2004 > 
+    au < exists ; exists ; Zeitschrift für Gynäkologie 2005 ; 2005 ; 2005 > 
+    au < exists ; exists ; Zeitschrift für Gynäkologie 2006 ; 2006 ; 2006 > 
+    au < exists ; exists ; Zeitschrift für Gynäkologie 2007 ; 2007 ; 2007 > 
+    au < exists ; exists ; Zeitschrift für Gynäkologie 2008 ; 2008 ; 2008 > 
+    au < exists ; exists ; Zeitschrift für Gynäkologie 2009 ; 2009 ; 2009 > 
+    au < exists ; exists ; Zeitschrift für Gynäkologie 2010 ; 2010 ; 2010 > 
+    au < exists ; exists ; Zeitschrift für Gynäkologie 2011 ; 2011 ; 2011 > 
+    au < exists ; exists ; Zeitschrift für Gynäkologie 2012 ; 2012 ; 2012 > 
+        
   }
 
   {
