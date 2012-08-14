@@ -4,7 +4,8 @@
     name = Libertas Academica
   >
 
-  plugin = org.lockss.plugin.libertasacademica.LibertasAcademicaPlugin
+  attr[contract] = 2011
+  plugin = org.lockss.plugin.libertasacademica.ClockssLibertasAcademicaPlugin
   param[base_url] = http://www.la-press.com/
   implicit < status1 ; status ; year ; name ; param[year] >
 
