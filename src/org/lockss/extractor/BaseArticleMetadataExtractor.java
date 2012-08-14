@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.12 2012-08-08 19:40:58 pgust Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.13 2012-08-14 12:50:54 pgust Exp $
  */
 
 /*
@@ -122,7 +122,7 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
       }
       if (am.get(MetadataField.FIELD_EISBN) == null
           || am.hasInvalidValue(MetadataField.FIELD_EISBN)) {
-        if (isbn != null) {
+        if (eisbn != null) {
           am.put(MetadataField.FIELD_EISBN, eisbn);
         }
       }
