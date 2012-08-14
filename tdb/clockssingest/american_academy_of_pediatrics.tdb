@@ -26,8 +26,8 @@
       au < down ; crawling ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
       au < down ; crawling ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
       au < down ; crawling ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
-      au < down ; crawling ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
-      au < down ; crawling ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
+      au < zapped ; down ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
+      au < zapped ; down ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
 
     }
     
@@ -169,7 +169,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
       au < down ; crawling ; 2008 ; NeoReviews Volume 9 ; 9 >
-      au < down ; crawling ; 2009 ; NeoReviews Volume 10 ; 10 >
+      au < zapped ; down ; 2009 ; NeoReviews Volume 10 ; 10 >
       au < down ; crawling ; 2010 ; NeoReviews Volume 11 ; 11 >
   
     }
@@ -375,8 +375,8 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
       au < down ; crawling ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
-      au < down ; crawling ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
-      au < down ; crawling ; 2010 ; Pediatrics in Review Volume 31 ; 31 >
+      au < zapped ; down ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
+      au < zapped ; down ; 2010 ; Pediatrics in Review Volume 31 ; 31 >
 
     }
 

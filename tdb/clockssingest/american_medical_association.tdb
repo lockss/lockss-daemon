@@ -27,23 +27,23 @@
         pluginSuffix = ClockssHighWirePlugin
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
       
-        au < down ; crawling ; 1920 ; Archives of Dermatology and Syphilology Volume 1 ; 1 ; reingest1.clockss.org:8082 >                                                  
+        au < zapped ; down ; 1920 ; Archives of Dermatology and Syphilology Volume 1 ; 1 ; reingest1.clockss.org:8082 >                                                  
         au < down ; crawling ; 1920 ; Archives of Dermatology and Syphilology Volume 2 ; 2 ; reingest1.clockss.org:8082 >                                                  
         au < down ; crawling ; 1921 ; Archives of Dermatology and Syphilology Volume 3 ; 3 ; reingest2.clockss.org:8085 >                                                  
         au < down ; crawling ; 1921 ; Archives of Dermatology and Syphilology Volume 4 ; 4 ; reingest2.clockss.org:8085 >                                                  
-        au < down ; crawling ; 1922 ; Archives of Dermatology and Syphilology Volume 5 ; 5 ; reingest3.clockss.org:8083 >                                                  
-        au < down ; crawling ; 1922 ; Archives of Dermatology and Syphilology Volume 6 ; 6 ; reingest3.clockss.org:8083 >                                                  
-        au < down ; crawling ; 1923 ; Archives of Dermatology and Syphilology Volume 7 ; 7 ; reingest4.clockss.org:8082 >                                                  
+        au < zapped ; down ; 1922 ; Archives of Dermatology and Syphilology Volume 5 ; 5 ; reingest3.clockss.org:8083 >                                                  
+        au < zapped ; down ; 1922 ; Archives of Dermatology and Syphilology Volume 6 ; 6 ; reingest3.clockss.org:8083 >                                                  
+        au < zapped ; down ; 1923 ; Archives of Dermatology and Syphilology Volume 7 ; 7 ; reingest4.clockss.org:8082 >                                                  
         au < down ; crawling ; 1923 ; Archives of Dermatology and Syphilology Volume 8 ; 8 ; reingest4.clockss.org:8082 >                                                  
         au < down ; crawling ; 1924 ; Archives of Dermatology and Syphilology Volume 9 ; 9 ; reingest1.clockss.org:8082 >                                                  
-        au < down ; crawling ; 1924 ; Archives of Dermatology and Syphilology Volume 10 ; 10 ; reingest1.clockss.org:8082 >                                                
-        au < down ; crawling ; 1925 ; Archives of Dermatology and Syphilology Volume 11 ; 11 ; reingest2.clockss.org:8085 >                                                
-        au < down ; crawling ; 1925 ; Archives of Dermatology and Syphilology Volume 12 ; 12 ; reingest2.clockss.org:8085 >                                                
+        au < zapped ; down ; 1924 ; Archives of Dermatology and Syphilology Volume 10 ; 10 ; reingest1.clockss.org:8082 >                                                
+        au < zapped ; down ; 1925 ; Archives of Dermatology and Syphilology Volume 11 ; 11 ; reingest2.clockss.org:8085 >                                                
+        au < zapped ; down ; 1925 ; Archives of Dermatology and Syphilology Volume 12 ; 12 ; reingest2.clockss.org:8085 >                                                
         au < down ; crawling ; 1926 ; Archives of Dermatology and Syphilology Volume 13 ; 13 ; reingest3.clockss.org:8083 >                                                
         au < down ; crawling ; 1926 ; Archives of Dermatology and Syphilology Volume 14 ; 14 ; reingest3.clockss.org:8083 >                                                
         au < down ; crawling ; 1927 ; Archives of Dermatology and Syphilology Volume 15 ; 15 ; reingest4.clockss.org:8082 >                                                
-        au < down ; crawling ; 1927 ; Archives of Dermatology and Syphilology Volume 16 ; 16 ; reingest4.clockss.org:8082 >                                                
-        au < down ; crawling ; 1928 ; Archives of Dermatology and Syphilology Volume 17 ; 17 ; reingest1.clockss.org:8082 >                                                
+        au < zapped ; down ; 1927 ; Archives of Dermatology and Syphilology Volume 16 ; 16 ; reingest4.clockss.org:8082 >                                                
+        au < zapped ; down ; 1928 ; Archives of Dermatology and Syphilology Volume 17 ; 17 ; reingest1.clockss.org:8082 >                                                
         au < down ; crawling ; 1928 ; Archives of Dermatology and Syphilology Volume 18 ; 18 ; reingest1.clockss.org:8082 >                                                
         au < down ; crawling ; 1929 ; Archives of Dermatology and Syphilology Volume 19 ; 19 ; reingest2.clockss.org:8085 >                                                
         au < down ; crawling ; 1929 ; Archives of Dermatology and Syphilology Volume 20 ; 20 ; reingest2.clockss.org:8085 >                                                
@@ -54,7 +54,7 @@
         au < down ; crawling ; 1932 ; Archives of Dermatology and Syphilology Volume 25 ; 25 ; reingest1.clockss.org:8082 >                                                
         au < down ; crawling ; 1932 ; Archives of Dermatology and Syphilology Volume 26 ; 26 ; reingest1.clockss.org:8082 >                                                
         au < down ; crawling ; 1933 ; Archives of Dermatology and Syphilology Volume 27 ; 27 ; reingest2.clockss.org:8085 >                                                
-        au < down ; crawling ; 1933 ; Archives of Dermatology and Syphilology Volume 28 ; 28 ; reingest2.clockss.org:8085 >                                                
+        au < zapped ; down ; 1933 ; Archives of Dermatology and Syphilology Volume 28 ; 28 ; reingest2.clockss.org:8085 >                                                
         au < down ; crawling ; 1934 ; Archives of Dermatology and Syphilology Volume 29 ; 29 ; reingest3.clockss.org:8083 >                                                
         au < down ; crawling ; 1934 ; Archives of Dermatology and Syphilology Volume 30 ; 30 ; reingest3.clockss.org:8083 >                                                
         au < down ; crawling ; 1935 ; Archives of Dermatology and Syphilology Volume 31 ; 31 ; reingest4.clockss.org:8082 >                                                
@@ -76,11 +76,11 @@
         au < down ; crawling ; 1943 ; Archives of Dermatology and Syphilology Volume 47 ; 47 ; reingest4.clockss.org:8082 >                                                
         au < down ; crawling ; 1943 ; Archives of Dermatology and Syphilology Volume 48 ; 48 ; reingest4.clockss.org:8082 >                                                
         au < down ; crawling ; 1944 ; Archives of Dermatology and Syphilology Volume 49 ; 49 ; reingest1.clockss.org:8082 >                                                
-        au < down ; crawling ; 1944 ; Archives of Dermatology and Syphilology Volume 50 ; 50 ; reingest1.clockss.org:8082 >                                                
+        au < zapped ; down ; 1944 ; Archives of Dermatology and Syphilology Volume 50 ; 50 ; reingest1.clockss.org:8082 >                                                
         au < down ; crawling ; 1945 ; Archives of Dermatology and Syphilology Volume 51 ; 51 ; reingest2.clockss.org:8085 >                                                
         au < down ; crawling ; 1945 ; Archives of Dermatology and Syphilology Volume 52 ; 52 ; reingest2.clockss.org:8085 >                                                
-        au < down ; crawling ; 1946 ; Archives of Dermatology and Syphilology Volume 53 ; 53 ; reingest3.clockss.org:8083 >                                                
-        au < down ; crawling ; 1946 ; Archives of Dermatology and Syphilology Volume 54 ; 54 ; reingest3.clockss.org:8083 >                                                
+        au < zapped ; down ; 1946 ; Archives of Dermatology and Syphilology Volume 53 ; 53 ; reingest3.clockss.org:8083 >                                                
+        au < zapped ; down ; 1946 ; Archives of Dermatology and Syphilology Volume 54 ; 54 ; reingest3.clockss.org:8083 >                                                
         au < down ; crawling ; 1947 ; Archives of Dermatology and Syphilology Volume 55 ; 55 ; reingest4.clockss.org:8082 >                                                
         au < down ; crawling ; 1947 ; Archives of Dermatology and Syphilology Volume 56 ; 56 ; reingest4.clockss.org:8082 >                                                
         au < down ; crawling ; 1948 ; Archives of Dermatology and Syphilology Volume 57 ; 57 ; reingest1.clockss.org:8082 >                                                
@@ -99,7 +99,7 @@
         au < down ; crawling ; 1954 ; AMA Archives of Dermatology and Syphilology Volume 70 ; 70 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1955 ; AMA Archives of Dermatology Volume 71 ; 71 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1955 ; AMA Archives of Dermatology Volume 72 ; 72 ; reingest4.clockss.org:8082 >
-        au < down ; crawling ; 1956 ; AMA Archives of Dermatology Volume 73 ; 73 ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1956 ; AMA Archives of Dermatology Volume 73 ; 73 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1956 ; AMA Archives of Dermatology Volume 74 ; 74 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1957 ; AMA Archives of Dermatology Volume 75 ; 75 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1957 ; AMA Archives of Dermatology Volume 76 ; 76 ; reingest2.clockss.org:8085 >
@@ -112,7 +112,7 @@
         au < down ; crawling ; 1961 ; Archives of Dermatology Volume 83 ; 83 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1961 ; Archives of Dermatology Volume 84 ; 84 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1962 ; Archives of Dermatology Volume 85 ; 85 ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1962 ; Archives of Dermatology Volume 86 ; 86 ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1962 ; Archives of Dermatology Volume 86 ; 86 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1963 ; Archives of Dermatology Volume 87 ; 87 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1963 ; Archives of Dermatology Volume 88 ; 88 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1964 ; Archives of Dermatology Volume 89 ; 89 ; reingest1.clockss.org:8082 >
@@ -146,7 +146,7 @@
         au < down ; crawling ; 1981 ; Archives of Dermatology Volume 117 ; 117 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1982 ; Archives of Dermatology Volume 118 ; 118 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1983 ; Archives of Dermatology Volume 119 ; 119 ; reingest4.clockss.org:8082 >
-        au < down ; crawling ; 1984 ; Archives of Dermatology Volume 120 ; 120 ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1984 ; Archives of Dermatology Volume 120 ; 120 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1985 ; Archives of Dermatology Volume 121 ; 121 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1986 ; Archives of Dermatology Volume 122 ; 122 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1987 ; Archives of Dermatology Volume 123 ; 123 ; reingest4.clockss.org:8082 >
@@ -202,13 +202,13 @@
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
 		comment[0] = ceased publication in 2000
       
-        au < down ; crawling ; 1992 ; Archives of Family Medicine Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1992 ; Archives of Family Medicine Volume 1 ; 1 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1993 ; Archives of Family Medicine Volume 2 ; 2 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1994 ; Archives of Family Medicine Volume 3 ; 3 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1995 ; Archives of Family Medicine Volume 4 ; 4 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1996 ; Archives of Family Medicine Volume 5 ; 5 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1997 ; Archives of Family Medicine Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-        au < down ; crawling ; 1998 ; Archives of Family Medicine Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1998 ; Archives of Family Medicine Volume 7 ; 7 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1999 ; Archives of Family Medicine Volume 8 ; 8 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 2000 ; Archives of Family Medicine Volume 9 ; 9 ; reingest1.clockss.org:8082 >
 
@@ -294,18 +294,18 @@
       
         au < down ; crawling ; 1959 ; AMA Archives of General Psychiatry Volume 1 ; 1 ; reingest4.clockss.org:8082 >                                                                         
         au < down ; crawling ; 1960 ; AMA Archives of General Psychiatry Volume 2 ; 2 ; reingest1.clockss.org:8082 >                                                                     
-        au < down ; crawling ; 1960 ; AMA Archives of General Psychiatry Volume 3 ; 3 ; reingest1.clockss.org:8082 >                                                                     
-        au < down ; crawling ; 1961 ; Archives of General Psychiatry Volume 4 ; 4 ; reingest2.clockss.org:8085 >                                                                         
-        au < down ; crawling ; 1961 ; Archives of General Psychiatry Volume 5 ; 5 ; reingest2.clockss.org:8085 >                                                                         
-        au < down ; crawling ; 1962 ; Archives of General Psychiatry Volume 6 ; 6 ; reingest3.clockss.org:8083 >                                                                         
+        au < zapped ; down ; 1960 ; AMA Archives of General Psychiatry Volume 3 ; 3 ; reingest1.clockss.org:8082 >                                                                     
+        au < zapped ; down ; 1961 ; Archives of General Psychiatry Volume 4 ; 4 ; reingest2.clockss.org:8085 >                                                                         
+        au < zapped ; down ; 1961 ; Archives of General Psychiatry Volume 5 ; 5 ; reingest2.clockss.org:8085 >                                                                         
+        au < zapped ; down ; 1962 ; Archives of General Psychiatry Volume 6 ; 6 ; reingest3.clockss.org:8083 >                                                                         
         au < down ; crawling ; 1962 ; Archives of General Psychiatry Volume 7 ; 7 ; reingest3.clockss.org:8083 >                                                                         
-        au < down ; crawling ; 1963 ; Archives of General Psychiatry Volume 8 ; 8 ; reingest4.clockss.org:8082 >                                                                         
-        au < down ; crawling ; 1963 ; Archives of General Psychiatry Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+        au < zapped ; down ; 1963 ; Archives of General Psychiatry Volume 8 ; 8 ; reingest4.clockss.org:8082 >                                                                         
+        au < zapped ; down ; 1963 ; Archives of General Psychiatry Volume 9 ; 9 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1964 ; Archives of General Psychiatry Volume 10 ; 10 ; reingest1.clockss.org:8082 >
-        au < down ; crawling ; 1964 ; Archives of General Psychiatry Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-        au < down ; crawling ; 1965 ; Archives of General Psychiatry Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-        au < down ; crawling ; 1965 ; Archives of General Psychiatry Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-        au < down ; crawling ; 1966 ; Archives of General Psychiatry Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1964 ; Archives of General Psychiatry Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1965 ; Archives of General Psychiatry Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+        au < zapped ; down ; 1965 ; Archives of General Psychiatry Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+        au < zapped ; down ; 1966 ; Archives of General Psychiatry Volume 14 ; 14 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1966 ; Archives of General Psychiatry Volume 15 ; 15 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1967 ; Archives of General Psychiatry Volume 16 ; 16 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1967 ; Archives of General Psychiatry Volume 17 ; 17 ; reingest4.clockss.org:8082 >
@@ -313,16 +313,16 @@
         au < down ; crawling ; 1968 ; Archives of General Psychiatry Volume 19 ; 19 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1969 ; Archives of General Psychiatry Volume 20 ; 20 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1969 ; Archives of General Psychiatry Volume 21 ; 21 ; reingest2.clockss.org:8085 >
-        au < down ; crawling ; 1970 ; Archives of General Psychiatry Volume 22 ; 22 ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1970 ; Archives of General Psychiatry Volume 23 ; 23 ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1971 ; Archives of General Psychiatry Volume 24 ; 24 ; reingest4.clockss.org:8082 >
-        au < down ; crawling ; 1971 ; Archives of General Psychiatry Volume 25 ; 25 ; reingest4.clockss.org:8082 >    
-        au < down ; crawling ; 1972 ; Archives of General Psychiatry Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1970 ; Archives of General Psychiatry Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1970 ; Archives of General Psychiatry Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1971 ; Archives of General Psychiatry Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+        au < zapped ; down ; 1971 ; Archives of General Psychiatry Volume 25 ; 25 ; reingest4.clockss.org:8082 >    
+        au < zapped ; down ; 1972 ; Archives of General Psychiatry Volume 26 ; 26 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1972 ; Archives of General Psychiatry Volume 27 ; 27 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1973 ; Archives of General Psychiatry Volume 28 ; 28 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1973 ; Archives of General Psychiatry Volume 29 ; 29 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1974 ; Archives of General Psychiatry Volume 30 ; 30 ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1974 ; Archives of General Psychiatry Volume 31 ; 31 ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1974 ; Archives of General Psychiatry Volume 31 ; 31 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1975 ; Archives of General Psychiatry Volume 32 ; 32 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1976 ; Archives of General Psychiatry Volume 33 ; 33 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1977 ; Archives of General Psychiatry Volume 34 ; 34 ; reingest2.clockss.org:8085 >
@@ -388,55 +388,55 @@
         pluginSuffix = ClockssHighWirePlugin
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
       
-        au < down ; crawling ; 1908 ; Archives of Internal Medicine Volume I ; I ; reingest1.clockss.org:8082 >
-        au < down ; crawling ; 1908 ; Archives of Internal Medicine Volume II ; II ; reingest1.clockss.org:8082 >
-        au < down ; crawling ; 1909 ; Archives of Internal Medicine Volume III ; III ; reingest2.clockss.org:8085 >
-        au < down ; crawling ; 1909 ; Archives of Internal Medicine Volume IV ; IV ; reingest2.clockss.org:8085 >
-        au < down ; crawling ; 1910 ; Archives of Internal Medicine Volume V ; V ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1910 ; Archives of Internal Medicine Volume VI ; VI ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1911 ; Archives of Internal Medicine Volume VII ; VII ; reingest4.clockss.org:8082 >
-        au < down ; crawling ; 1911 ; Archives of Internal Medicine Volume VIII ; VIII ; reingest4.clockss.org:8082 >
-        au < down ; crawling ; 1912 ; Archives of Internal Medicine Volume IX ; IX ; reingest1.clockss.org:8082 >
-        au < down ; crawling ; 1912 ; Archives of Internal Medicine Volume X ; X ; reingest1.clockss.org:8082 >
-        au < down ; crawling ; 1913 ; Archives of Internal Medicine Volume XI ; XI ; reingest2.clockss.org:8085 >
-        au < down ; crawling ; 1913 ; Archives of Internal Medicine Volume XII ; XII ; reingest2.clockss.org:8085 >
+        au < zapped ; down ; 1908 ; Archives of Internal Medicine Volume I ; I ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1908 ; Archives of Internal Medicine Volume II ; II ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1909 ; Archives of Internal Medicine Volume III ; III ; reingest2.clockss.org:8085 >
+        au < zapped ; down ; 1909 ; Archives of Internal Medicine Volume IV ; IV ; reingest2.clockss.org:8085 >
+        au < zapped ; down ; 1910 ; Archives of Internal Medicine Volume V ; V ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1910 ; Archives of Internal Medicine Volume VI ; VI ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1911 ; Archives of Internal Medicine Volume VII ; VII ; reingest4.clockss.org:8082 >
+        au < zapped ; down ; 1911 ; Archives of Internal Medicine Volume VIII ; VIII ; reingest4.clockss.org:8082 >
+        au < zapped ; down ; 1912 ; Archives of Internal Medicine Volume IX ; IX ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1912 ; Archives of Internal Medicine Volume X ; X ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1913 ; Archives of Internal Medicine Volume XI ; XI ; reingest2.clockss.org:8085 >
+        au < zapped ; down ; 1913 ; Archives of Internal Medicine Volume XII ; XII ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1914 ; Archives of Internal Medicine Volume XIII ; XIII ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1914 ; Archives of Internal Medicine Volume XIV ; XIV ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1914 ; Archives of Internal Medicine Volume XIV ; XIV ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1915 ; Archives of Internal Medicine Volume XV ; XV ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1915 ; Archives of Internal Medicine Volume XVI ; XVI ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1916 ; Archives of Internal Medicine Volume XVII ; XVII ; reingest1.clockss.org:8082 >
-        au < down ; crawling ; 1916 ; Archives of Internal Medicine Volume XVIII ; XVIII ; reingest1.clockss.org:8082 >
-        au < down ; crawling ; 1917 ; Archives of Internal Medicine Volume XIX ; XIX ; reingest2.clockss.org:8085 >
+        au < zapped ; down ; 1916 ; Archives of Internal Medicine Volume XVIII ; XVIII ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1917 ; Archives of Internal Medicine Volume XIX ; XIX ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1917 ; Archives of Internal Medicine Volume XX ; XX ; reingest2.clockss.org:8085 >
-        au < down ; crawling ; 1918 ; Archives of Internal Medicine Volume XXI ; XXI ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1918 ; Archives of Internal Medicine Volume XXII ; XXII ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1918 ; Archives of Internal Medicine Volume XXI ; XXI ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1918 ; Archives of Internal Medicine Volume XXII ; XXII ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1919 ; Archives of Internal Medicine Volume 23 ; 23 ; reingest4.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1919 ; Archives of Internal Medicine Volume 24 ; 24 ; reingest4.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1920 ; Archives of Internal Medicine Volume 25 ; 25 ; reingest1.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1920 ; Archives of Internal Medicine Volume 26 ; 26 ; reingest1.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1921 ; Archives of Internal Medicine Volume 27 ; 27 ; reingest2.clockss.org:8085 >                                                                    
+        au < zapped ; down ; 1920 ; Archives of Internal Medicine Volume 26 ; 26 ; reingest1.clockss.org:8082 >                                                                    
+        au < zapped ; down ; 1921 ; Archives of Internal Medicine Volume 27 ; 27 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1921 ; Archives of Internal Medicine Volume 28 ; 28 ; reingest2.clockss.org:8085 >                                                                    
-        au < down ; crawling ; 1922 ; Archives of Internal Medicine Volume 29 ; 29 ; reingest3.clockss.org:8083 >                                                                    
-        au < down ; crawling ; 1922 ; Archives of Internal Medicine Volume 30 ; 30 ; reingest3.clockss.org:8083 >                                                                    
+        au < zapped ; down ; 1922 ; Archives of Internal Medicine Volume 29 ; 29 ; reingest3.clockss.org:8083 >                                                                    
+        au < zapped ; down ; 1922 ; Archives of Internal Medicine Volume 30 ; 30 ; reingest3.clockss.org:8083 >                                                                    
         au < down ; crawling ; 1923 ; Archives of Internal Medicine Volume 31 ; 31 ; reingest4.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1923 ; Archives of Internal Medicine Volume 32 ; 32 ; reingest4.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1924 ; Archives of Internal Medicine Volume 33 ; 33 ; reingest1.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1924 ; Archives of Internal Medicine Volume 34 ; 34 ; reingest1.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1925 ; Archives of Internal Medicine Volume 35 ; 35 ; reingest2.clockss.org:8085 >                                                                    
+        au < zapped ; down ; 1924 ; Archives of Internal Medicine Volume 33 ; 33 ; reingest1.clockss.org:8082 >                                                                    
+        au < zapped ; down ; 1924 ; Archives of Internal Medicine Volume 34 ; 34 ; reingest1.clockss.org:8082 >                                                                    
+        au < zapped ; down ; 1925 ; Archives of Internal Medicine Volume 35 ; 35 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1925 ; Archives of Internal Medicine Volume 36 ; 36 ; reingest2.clockss.org:8085 >                                                                    
-        au < down ; crawling ; 1926 ; Archives of Internal Medicine Volume 37 ; 37 ; reingest3.clockss.org:8083 >                                                                    
-        au < down ; crawling ; 1926 ; Archives of Internal Medicine Volume 38 ; 38 ; reingest3.clockss.org:8083 >                                                                    
-        au < down ; crawling ; 1927 ; Archives of Internal Medicine Volume 39 ; 39 ; reingest4.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1927 ; Archives of Internal Medicine Volume 40 ; 40 ; reingest4.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1928 ; Archives of Internal Medicine Volume 41 ; 41 ; reingest1.clockss.org:8082 >                                                                    
+        au < zapped ; down ; 1926 ; Archives of Internal Medicine Volume 37 ; 37 ; reingest3.clockss.org:8083 >                                                                    
+        au < zapped ; down ; 1926 ; Archives of Internal Medicine Volume 38 ; 38 ; reingest3.clockss.org:8083 >                                                                    
+        au < zapped ; down ; 1927 ; Archives of Internal Medicine Volume 39 ; 39 ; reingest4.clockss.org:8082 >                                                                    
+        au < zapped ; down ; 1927 ; Archives of Internal Medicine Volume 40 ; 40 ; reingest4.clockss.org:8082 >                                                                    
+        au < zapped ; down ; 1928 ; Archives of Internal Medicine Volume 41 ; 41 ; reingest1.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1928 ; Archives of Internal Medicine Volume 42 ; 42 ; reingest1.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1929 ; Archives of Internal Medicine Volume 43 ; 43 ; reingest2.clockss.org:8085 >                                                                    
+        au < zapped ; down ; 1929 ; Archives of Internal Medicine Volume 43 ; 43 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1929 ; Archives of Internal Medicine Volume 44 ; 44 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1930 ; Archives of Internal Medicine Volume 45 ; 45 ; reingest3.clockss.org:8083 >                                                                    
         au < down ; crawling ; 1930 ; Archives of Internal Medicine Volume 46 ; 46 ; reingest3.clockss.org:8083 >                                                                    
         au < down ; crawling ; 1931 ; Archives of Internal Medicine Volume 47 ; 47 ; reingest4.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1931 ; Archives of Internal Medicine Volume 48 ; 48 ; reingest4.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1932 ; Archives of Internal Medicine Volume 49 ; 49 ; reingest1.clockss.org:8082 >                                                                    
+        au < zapped ; down ; 1932 ; Archives of Internal Medicine Volume 49 ; 49 ; reingest1.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1932 ; Archives of Internal Medicine Volume 50 ; 50 ; reingest1.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1933 ; Archives of Internal Medicine Volume 51 ; 51 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1933 ; Archives of Internal Medicine Volume 52 ; 52 ; reingest2.clockss.org:8085 >                                                                    
@@ -449,7 +449,7 @@
         au < down ; crawling ; 1937 ; Archives of Internal Medicine Volume 59 ; 59 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1937 ; Archives of Internal Medicine Volume 60 ; 60 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1938 ; Archives of Internal Medicine Volume 61 ; 61 ; reingest3.clockss.org:8083 >                                                                    
-        au < down ; crawling ; 1938 ; Archives of Internal Medicine Volume 62 ; 62 ; reingest3.clockss.org:8083 >                                                                    
+        au < zapped ; down ; 1938 ; Archives of Internal Medicine Volume 62 ; 62 ; reingest3.clockss.org:8083 >                                                                    
         au < down ; crawling ; 1939 ; Archives of Internal Medicine Volume 63 ; 63 ; reingest4.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1939 ; Archives of Internal Medicine Volume 64 ; 64 ; reingest4.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1940 ; Archives of Internal Medicine Volume 65 ; 65 ; reingest1.clockss.org:8082 >                                                                    
@@ -457,20 +457,20 @@
         au < down ; crawling ; 1941 ; Archives of Internal Medicine Volume 67 ; 67 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1941 ; Archives of Internal Medicine Volume 68 ; 68 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1942 ; Archives of Internal Medicine Volume 69 ; 69 ; reingest3.clockss.org:8083 >                                                                    
-        au < down ; crawling ; 1942 ; Archives of Internal Medicine Volume 70 ; 70 ; reingest3.clockss.org:8083 >                                                                    
+        au < zapped ; down ; 1942 ; Archives of Internal Medicine Volume 70 ; 70 ; reingest3.clockss.org:8083 >                                                                    
         au < down ; crawling ; 1943 ; Archives of Internal Medicine Volume 71 ; 71 ; reingest4.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1943 ; Archives of Internal Medicine Volume 72 ; 72 ; reingest4.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1944 ; Archives of Internal Medicine Volume 73 ; 73 ; reingest1.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1944 ; Archives of Internal Medicine Volume 74 ; 74 ; reingest1.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1945 ; Archives of Internal Medicine Volume 75 ; 75 ; reingest2.clockss.org:8085 >                                                                    
-        au < down ; crawling ; 1945 ; Archives of Internal Medicine Volume 76 ; 76 ; reingest2.clockss.org:8085 >                                                                    
-        au < down ; crawling ; 1946 ; Archives of Internal Medicine Volume 77 ; 77 ; reingest3.clockss.org:8083 >                                                                    
-        au < down ; crawling ; 1946 ; Archives of Internal Medicine Volume 78 ; 78 ; reingest3.clockss.org:8083 >                                                                    
+        au < zapped ; down ; 1944 ; Archives of Internal Medicine Volume 73 ; 73 ; reingest1.clockss.org:8082 >                                                                    
+        au < zapped ; down ; 1944 ; Archives of Internal Medicine Volume 74 ; 74 ; reingest1.clockss.org:8082 >                                                                    
+        au < zapped ; down ; 1945 ; Archives of Internal Medicine Volume 75 ; 75 ; reingest2.clockss.org:8085 >                                                                    
+        au < zapped ; down ; 1945 ; Archives of Internal Medicine Volume 76 ; 76 ; reingest2.clockss.org:8085 >                                                                    
+        au < zapped ; down ; 1946 ; Archives of Internal Medicine Volume 77 ; 77 ; reingest3.clockss.org:8083 >                                                                    
+        au < zapped ; down ; 1946 ; Archives of Internal Medicine Volume 78 ; 78 ; reingest3.clockss.org:8083 >                                                                    
         au < down ; crawling ; 1947 ; Archives of Internal Medicine Volume 79 ; 79 ; reingest4.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1947 ; Archives of Internal Medicine Volume 80 ; 80 ; reingest4.clockss.org:8082 >                                                                    
+        au < zapped ; down ; 1947 ; Archives of Internal Medicine Volume 80 ; 80 ; reingest4.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1948 ; Archives of Internal Medicine Volume 81 ; 81 ; reingest1.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1948 ; Archives of Internal Medicine Volume 82 ; 82 ; reingest1.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1949 ; Archives of Internal Medicine Volume 83 ; 83 ; reingest2.clockss.org:8085 >                                                                    
+        au < zapped ; down ; 1949 ; Archives of Internal Medicine Volume 83 ; 83 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1949 ; Archives of Internal Medicine Volume 84 ; 84 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1950 ; Archives of Internal Medicine Volume 85 ; 85 ; reingest3.clockss.org:8083 >                                                                    
         au < down ; crawling ; 1950 ; Archives of Internal Medicine Volume 86 ; 86 ; reingest3.clockss.org:8083 >                                                                    
@@ -592,13 +592,13 @@
         au < down ; crawling ; 1960 ; AMA Archives of Neurology Volume 3 ; 3 ; reingest1.clockss.org:8082 >                                                                          
         au < down ; crawling ; 1961 ; Archives of Neurology Volume 4 ; 4 ; reingest2.clockss.org:8085 >                                                                              
         au < down ; crawling ; 1961 ; Archives of Neurology Volume 5 ; 5 ; reingest2.clockss.org:8085 >                                                                              
-        au < down ; crawling ; 1962 ; Archives of Neurology Volume 6 ; 6 ; reingest3.clockss.org:8083 >                                                                              
+        au < zapped ; down ; 1962 ; Archives of Neurology Volume 6 ; 6 ; reingest3.clockss.org:8083 >                                                                              
         au < down ; crawling ; 1962 ; Archives of Neurology Volume 7 ; 7 ; reingest3.clockss.org:8083 >                                                                              
         au < down ; crawling ; 1963 ; Archives of Neurology Volume 8 ; 8 ; reingest4.clockss.org:8082 >                                                                              
         au < down ; crawling ; 1963 ; Archives of Neurology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-        au < down ; crawling ; 1964 ; Archives of Neurology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1964 ; Archives of Neurology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1964 ; Archives of Neurology Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-        au < down ; crawling ; 1965 ; Archives of Neurology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+        au < zapped ; down ; 1965 ; Archives of Neurology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1965 ; Archives of Neurology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1966 ; Archives of Neurology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1966 ; Archives of Neurology Volume 15 ; 15 ; reingest3.clockss.org:8083 >
@@ -609,14 +609,14 @@
         au < down ; crawling ; 1969 ; Archives of Neurology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1969 ; Archives of Neurology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1970 ; Archives of Neurology Volume 22 ; 22 ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1970 ; Archives of Neurology Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1970 ; Archives of Neurology Volume 23 ; 23 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1971 ; Archives of Neurology Volume 24 ; 24 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1971 ; Archives of Neurology Volume 25 ; 25 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1972 ; Archives of Neurology Volume 26 ; 26 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1972 ; Archives of Neurology Volume 27 ; 27 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1973 ; Archives of Neurology Volume 28 ; 28 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1973 ; Archives of Neurology Volume 29 ; 29 ; reingest2.clockss.org:8085 >
-        au < down ; crawling ; 1974 ; Archives of Neurology Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1974 ; Archives of Neurology Volume 30 ; 30 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1974 ; Archives of Neurology Volume 31 ; 31 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1975 ; Archives of Neurology Volume 32 ; 32 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1976 ; Archives of Neurology Volume 33 ; 33 ; reingest1.clockss.org:8082 >
@@ -783,7 +783,7 @@
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
       
         au < down ; crawling ; 1929 ; Archives of Ophthalmology Volume 1 ; 1 ; reingest2.clockss.org:8085 >                                                                           
-        au < down ; crawling ; 1929 ; Archives of Ophthalmology Volume 2 ; 2 ; reingest2.clockss.org:8085 >                                                                           
+        au < zapped ; down ; 1929 ; Archives of Ophthalmology Volume 2 ; 2 ; reingest2.clockss.org:8085 >                                                                           
         au < down ; crawling ; 1930 ; Archives of Ophthalmology Volume 3 ; 3 ; reingest3.clockss.org:8083 >                                                                           
         au < down ; crawling ; 1930 ; Archives of Ophthalmology Volume 4 ; 4 ; reingest3.clockss.org:8083 >                                                                           
         au < down ; crawling ; 1931 ; Archives of Ophthalmology Volume 5 ; 5 ; reingest4.clockss.org:8082 >                                                                           
@@ -815,13 +815,13 @@
         au < down ; crawling ; 1944 ; Archives of Ophthalmology Volume 31 ; 31 ; reingest1.clockss.org:8082 >                                                                         
         au < down ; crawling ; 1944 ; Archives of Ophthalmology Volume 32 ; 32 ; reingest1.clockss.org:8082 >                                                                         
         au < down ; crawling ; 1945 ; Archives of Ophthalmology Volume 33 ; 33 ; reingest2.clockss.org:8085 >                                                                         
-        au < down ; crawling ; 1945 ; Archives of Ophthalmology Volume 34 ; 34 ; reingest2.clockss.org:8085 >                                                                         
-        au < down ; crawling ; 1946 ; Archives of Ophthalmology Volume 35 ; 35 ; reingest3.clockss.org:8083 >                                                                         
+        au < zapped ; down ; 1945 ; Archives of Ophthalmology Volume 34 ; 34 ; reingest2.clockss.org:8085 >                                                                         
+        au < zapped ; down ; 1946 ; Archives of Ophthalmology Volume 35 ; 35 ; reingest3.clockss.org:8083 >                                                                         
         au < down ; crawling ; 1946 ; Archives of Ophthalmology Volume 36 ; 36 ; reingest3.clockss.org:8083 >                                                                         
         au < down ; crawling ; 1947 ; Archives of Ophthalmology Volume 37 ; 37 ; reingest4.clockss.org:8082 >                                                                         
         au < down ; crawling ; 1947 ; Archives of Ophthalmology Volume 38 ; 38 ; reingest4.clockss.org:8082 >                                                                         
         au < down ; crawling ; 1948 ; Archives of Ophthalmology Volume 39 ; 39 ; reingest1.clockss.org:8082 >                                                                         
-        au < down ; crawling ; 1948 ; Archives of Ophthalmology Volume 40 ; 40 ; reingest1.clockss.org:8082 >                                                                         
+        au < zapped ; down ; 1948 ; Archives of Ophthalmology Volume 40 ; 40 ; reingest1.clockss.org:8082 >                                                                         
         au < down ; crawling ; 1949 ; Archives of Ophthalmology Volume 41 ; 41 ; reingest2.clockss.org:8085 >                                                                         
         au < down ; crawling ; 1949 ; Archives of Ophthalmology Volume 42 ; 42 ; reingest2.clockss.org:8085 >                                                                         
         au < down ; crawling ; 1950 ; Archives of Ophthalmology Volume 43 ; 43 ; reingest3.clockss.org:8083 >                                                                         
@@ -829,7 +829,7 @@
         au < down ; crawling ; 1951 ; AMA Archives of Ophthalmology Volume 45 ; 45 ; reingest4.clockss.org:8082 >                                                                     
         au < down ; crawling ; 1951 ; AMA Archives of Ophthalmology Volume 46 ; 46 ; reingest4.clockss.org:8082 >                                                                     
         au < down ; crawling ; 1952 ; AMA Archives of Ophthalmology Volume 47 ; 47 ; reingest1.clockss.org:8082 >                                                                     
-        au < down ; crawling ; 1952 ; AMA Archives of Ophthalmology Volume 48 ; 48 ; reingest1.clockss.org:8082 >                                                                     
+        au < zapped ; down ; 1952 ; AMA Archives of Ophthalmology Volume 48 ; 48 ; reingest1.clockss.org:8082 >                                                                     
         au < down ; crawling ; 1953 ; AMA Archives of Ophthalmology Volume 49 ; 49 ; reingest2.clockss.org:8085 >                                                                     
         au < down ; crawling ; 1953 ; AMA Archives of Ophthalmology Volume 50 ; 50 ; reingest2.clockss.org:8085 >                                                                     
         au < down ; crawling ; 1954 ; AMA Archives of Ophthalmology Volume 51 ; 51 ; reingest3.clockss.org:8083 >                                                                     
@@ -939,11 +939,11 @@
         pluginSuffix = ClockssHighWirePlugin
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
       
-         au < down ; crawling ; 1925 ; Archives of Otolaryngology Volume 1 ; 1 ; reingest2.clockss.org:8085 >                                                                         
-         au < down ; crawling ; 1925 ; Archives of Otolaryngology Volume 2 ; 2 ; reingest2.clockss.org:8085 >                                                                         
-         au < down ; crawling ; 1926 ; Archives of Otolaryngology Volume 3 ; 3 ; reingest3.clockss.org:8083 >                                                                         
-         au < down ; crawling ; 1926 ; Archives of Otolaryngology Volume 4 ; 4 ; reingest3.clockss.org:8083 >                                                                         
-         au < down ; crawling ; 1927 ; Archives of Otolaryngology Volume 5 ; 5 ; reingest4.clockss.org:8082 >                                                                         
+         au < zapped ; down ; 1925 ; Archives of Otolaryngology Volume 1 ; 1 ; reingest2.clockss.org:8085 >                                                                         
+         au < zapped ; down ; 1925 ; Archives of Otolaryngology Volume 2 ; 2 ; reingest2.clockss.org:8085 >                                                                         
+         au < zapped ; down ; 1926 ; Archives of Otolaryngology Volume 3 ; 3 ; reingest3.clockss.org:8083 >                                                                         
+         au < zapped ; down ; 1926 ; Archives of Otolaryngology Volume 4 ; 4 ; reingest3.clockss.org:8083 >                                                                         
+         au < zapped ; down ; 1927 ; Archives of Otolaryngology Volume 5 ; 5 ; reingest4.clockss.org:8082 >                                                                         
          au < down ; crawling ; 1927 ; Archives of Otolaryngology Volume 6 ; 6 ; reingest4.clockss.org:8082 >                                                                         
          au < down ; crawling ; 1928 ; Archives of Otolaryngology Volume 7 ; 7 ; reingest1.clockss.org:8082 >                                                                         
          au < down ; crawling ; 1928 ; Archives of Otolaryngology Volume 8 ; 8 ; reingest1.clockss.org:8082 >                                                                         
@@ -960,7 +960,7 @@
          au < down ; crawling ; 1934 ; Archives of Otolaryngology Volume 19 ; 19 ; reingest3.clockss.org:8083 >                                                                       
          au < down ; crawling ; 1934 ; Archives of Otolaryngology Volume 20 ; 20 ; reingest3.clockss.org:8083 >                                                                       
          au < down ; crawling ; 1935 ; Archives of Otolaryngology Volume 21 ; 21 ; reingest4.clockss.org:8082 >                                                                       
-         au < down ; crawling ; 1935 ; Archives of Otolaryngology Volume 22 ; 22 ; reingest4.clockss.org:8082 >                                                                       
+         au < zapped ; down ; 1935 ; Archives of Otolaryngology Volume 22 ; 22 ; reingest4.clockss.org:8082 >                                                                       
          au < down ; crawling ; 1936 ; Archives of Otolaryngology Volume 23 ; 23 ; reingest1.clockss.org:8082 >                                                                       
          au < down ; crawling ; 1936 ; Archives of Otolaryngology Volume 24 ; 24 ; reingest1.clockss.org:8082 >                                                                       
          au < down ; crawling ; 1937 ; Archives of Otolaryngology Volume 25 ; 25 ; reingest2.clockss.org:8085 >                                                                       
@@ -979,15 +979,15 @@
          au < down ; crawling ; 1943 ; Archives of Otolaryngology Volume 38 ; 38 ; reingest4.clockss.org:8082 >                                                                       
          au < down ; crawling ; 1944 ; Archives of Otolaryngology Volume 39 ; 39 ; reingest1.clockss.org:8082 >                                                                       
          au < down ; crawling ; 1944 ; Archives of Otolaryngology Volume 40 ; 40 ; reingest1.clockss.org:8082 >                                                                       
-         au < down ; crawling ; 1945 ; Archives of Otolaryngology Volume 41 ; 41 ; reingest2.clockss.org:8085 >                                                                       
-         au < down ; crawling ; 1945 ; Archives of Otolaryngology Volume 42 ; 42 ; reingest2.clockss.org:8085 >                                                                       
+         au < zapped ; down ; 1945 ; Archives of Otolaryngology Volume 41 ; 41 ; reingest2.clockss.org:8085 >                                                                       
+         au < zapped ; down ; 1945 ; Archives of Otolaryngology Volume 42 ; 42 ; reingest2.clockss.org:8085 >                                                                       
          au < down ; crawling ; 1946 ; Archives of Otolaryngology Volume 43 ; 43 ; reingest3.clockss.org:8083 >                                                                       
-         au < down ; crawling ; 1946 ; Archives of Otolaryngology Volume 44 ; 44 ; reingest3.clockss.org:8083 >                                                                       
+         au < zapped ; down ; 1946 ; Archives of Otolaryngology Volume 44 ; 44 ; reingest3.clockss.org:8083 >                                                                       
          au < down ; crawling ; 1947 ; Archives of Otolaryngology Volume 45 ; 45 ; reingest4.clockss.org:8082 >                                                                       
          au < down ; crawling ; 1947 ; Archives of Otolaryngology Volume 46 ; 46 ; reingest4.clockss.org:8082 >                                                                       
          au < down ; crawling ; 1948 ; Archives of Otolaryngology Volume 47 ; 47 ; reingest1.clockss.org:8082 >                                                                       
-         au < down ; crawling ; 1948 ; Archives of Otolaryngology Volume 48 ; 48 ; reingest1.clockss.org:8082 >                                                                       
-         au < down ; crawling ; 1949 ; Archives of Otolaryngology Volume 49 ; 49 ; reingest2.clockss.org:8085 >                                                                       
+         au < zapped ; down ; 1948 ; Archives of Otolaryngology Volume 48 ; 48 ; reingest1.clockss.org:8082 >                                                                       
+         au < zapped ; down ; 1949 ; Archives of Otolaryngology Volume 49 ; 49 ; reingest2.clockss.org:8085 >                                                                       
          au < down ; crawling ; 1949 ; Archives of Otolaryngology Volume 50 ; 50 ; reingest2.clockss.org:8085 >                                                                       
          au < down ; crawling ; 1950 ; Archives of Otolaryngology Volume 51 ; 51 ; reingest3.clockss.org:8083 >                                                                       
          au < down ; crawling ; 1950 ; Archives of Otolaryngology Volume 52 ; 52 ; reingest3.clockss.org:8083 >                                                                       
@@ -1000,9 +1000,9 @@
          au < down ; crawling ; 1954 ; AMA Archives of Otolaryngology Volume 59 ; 59 ; reingest3.clockss.org:8083 >                                                                   
          au < down ; crawling ; 1954 ; AMA Archives of Otolaryngology Volume 60 ; 60 ; reingest3.clockss.org:8083 >                                                                   
          au < down ; crawling ; 1955 ; AMA Archives of Otolaryngology Volume 61 ; 61 ; reingest4.clockss.org:8082 >                                                                   
-         au < down ; crawling ; 1955 ; AMA Archives of Otolaryngology Volume 62 ; 62 ; reingest4.clockss.org:8082 >                                                                   
+         au < zapped ; down ; 1955 ; AMA Archives of Otolaryngology Volume 62 ; 62 ; reingest4.clockss.org:8082 >                                                                   
          au < down ; crawling ; 1956 ; AMA Archives of Otolaryngology Volume 63 ; 63 ; reingest1.clockss.org:8082 >                                                                   
-         au < down ; crawling ; 1956 ; AMA Archives of Otolaryngology Volume 64 ; 64 ; reingest1.clockss.org:8082 >                                                                   
+         au < zapped ; down ; 1956 ; AMA Archives of Otolaryngology Volume 64 ; 64 ; reingest1.clockss.org:8082 >                                                                   
          au < down ; crawling ; 1957 ; AMA Archives of Otolaryngology Volume 65 ; 65 ; reingest2.clockss.org:8085 >                                                                   
          au < down ; crawling ; 1957 ; AMA Archives of Otolaryngology Volume 66 ; 66 ; reingest2.clockss.org:8085 >                                                                   
          au < down ; crawling ; 1958 ; AMA Archives of Otolaryngology Volume 67 ; 67 ; reingest3.clockss.org:8083 >                                                                   
@@ -1015,7 +1015,7 @@
          au < down ; crawling ; 1961 ; Archives of Otolaryngology Volume 74 ; 74 ; reingest2.clockss.org:8085 >                                                                       
          au < down ; crawling ; 1962 ; Archives of Otolaryngology Volume 75 ; 75 ; reingest3.clockss.org:8083 >                                                                       
          au < down ; crawling ; 1962 ; Archives of Otolaryngology Volume 76 ; 76 ; reingest3.clockss.org:8083 >                                                                       
-         au < down ; crawling ; 1963 ; Archives of Otolaryngology Volume 77 ; 77 ; reingest4.clockss.org:8082 >                                                                       
+         au < zapped ; down ; 1963 ; Archives of Otolaryngology Volume 77 ; 77 ; reingest4.clockss.org:8082 >                                                                       
          au < down ; crawling ; 1963 ; Archives of Otolaryngology Volume 78 ; 78 ; reingest4.clockss.org:8082 >
          au < down ; crawling ; 1964 ; Archives of Otolaryngology Volume 79 ; 79 ; reingest1.clockss.org:8082 >
          au < down ; crawling ; 1964 ; Archives of Otolaryngology Volume 80 ; 80 ; reingest1.clockss.org:8082 >
@@ -1104,11 +1104,11 @@
         pluginSuffix = ClockssHighWirePlugin
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
       
-        au < down ; crawling ; 1911 ; American Journal of Diseases of Children Volume I ; I ; reingest4.clockss.org:8082 >
-        au < down ; crawling ; 1911 ; American Journal of Diseases of Children Volume II ; II ; reingest4.clockss.org:8082 >
-        au < down ; crawling ; 1912 ; American Journal of Diseases of Children Volume III ; III ; reingest1.clockss.org:8082 >
-        au < down ; crawling ; 1912 ; American Journal of Diseases of Children Volume IV ; IV ; reingest1.clockss.org:8082 >
-        au < down ; crawling ; 1913 ; American Journal of Diseases of Children Volume V ; V ; reingest2.clockss.org:8085 >
+        au < zapped ; down ; 1911 ; American Journal of Diseases of Children Volume I ; I ; reingest4.clockss.org:8082 >
+        au < zapped ; down ; 1911 ; American Journal of Diseases of Children Volume II ; II ; reingest4.clockss.org:8082 >
+        au < zapped ; down ; 1912 ; American Journal of Diseases of Children Volume III ; III ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1912 ; American Journal of Diseases of Children Volume IV ; IV ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1913 ; American Journal of Diseases of Children Volume V ; V ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1913 ; American Journal of Diseases of Children Volume VI ; VI ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1914 ; American Journal of Diseases of Children Volume VII ; VII ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1914 ; American Journal of Diseases of Children Volume VIII ; VIII ; reingest3.clockss.org:8083 >
@@ -1122,20 +1122,20 @@
         au < down ; crawling ; 1918 ; American Journal of Diseases of Children Volume 16 ; 16 ; reingest3.clockss.org:8083 >                                                         
         au < down ; crawling ; 1919 ; American Journal of Diseases of Children Volume 17 ; 17 ; reingest4.clockss.org:8082 >                                                         
         au < down ; crawling ; 1919 ; American Journal of Diseases of Children Volume 18 ; 18 ; reingest4.clockss.org:8082 >                                                         
-        au < down ; crawling ; 1920 ; American Journal of Diseases of Children Volume 19 ; 19 ; reingest1.clockss.org:8082 >                                                         
-        au < down ; crawling ; 1920 ; American Journal of Diseases of Children Volume 20 ; 20 ; reingest1.clockss.org:8082 >                                                         
-        au < down ; crawling ; 1921 ; American Journal of Diseases of Children Volume 21 ; 21 ; reingest2.clockss.org:8085 >                                                         
-        au < down ; crawling ; 1921 ; American Journal of Diseases of Children Volume 22 ; 22 ; reingest2.clockss.org:8085 >                                                         
-        au < down ; crawling ; 1922 ; American Journal of Diseases of Children Volume 23 ; 23 ; reingest3.clockss.org:8083 >                                                         
-        au < down ; crawling ; 1922 ; American Journal of Diseases of Children Volume 24 ; 24 ; reingest3.clockss.org:8083 >                                                         
-        au < down ; crawling ; 1923 ; American Journal of Diseases of Children Volume 25 ; 25 ; reingest4.clockss.org:8082 >                                                         
-        au < down ; crawling ; 1923 ; American Journal of Diseases of Children Volume 26 ; 26 ; reingest4.clockss.org:8082 >                                                         
+        au < zapped ; down ; 1920 ; American Journal of Diseases of Children Volume 19 ; 19 ; reingest1.clockss.org:8082 >                                                         
+        au < zapped ; down ; 1920 ; American Journal of Diseases of Children Volume 20 ; 20 ; reingest1.clockss.org:8082 >                                                         
+        au < zapped ; down ; 1921 ; American Journal of Diseases of Children Volume 21 ; 21 ; reingest2.clockss.org:8085 >                                                         
+        au < zapped ; down ; 1921 ; American Journal of Diseases of Children Volume 22 ; 22 ; reingest2.clockss.org:8085 >                                                         
+        au < zapped ; down ; 1922 ; American Journal of Diseases of Children Volume 23 ; 23 ; reingest3.clockss.org:8083 >                                                         
+        au < zapped ; down ; 1922 ; American Journal of Diseases of Children Volume 24 ; 24 ; reingest3.clockss.org:8083 >                                                         
+        au < zapped ; down ; 1923 ; American Journal of Diseases of Children Volume 25 ; 25 ; reingest4.clockss.org:8082 >                                                         
+        au < zapped ; down ; 1923 ; American Journal of Diseases of Children Volume 26 ; 26 ; reingest4.clockss.org:8082 >                                                         
         au < down ; crawling ; 1924 ; American Journal of Diseases of Children Volume 27 ; 27 ; reingest1.clockss.org:8082 >                                                         
         au < down ; crawling ; 1924 ; American Journal of Diseases of Children Volume 28 ; 28 ; reingest1.clockss.org:8082 >                                                         
-        au < down ; crawling ; 1925 ; American Journal of Diseases of Children Volume 29 ; 29 ; reingest2.clockss.org:8085 >                                                         
+        au < zapped ; down ; 1925 ; American Journal of Diseases of Children Volume 29 ; 29 ; reingest2.clockss.org:8085 >                                                         
         au < down ; crawling ; 1925 ; American Journal of Diseases of Children Volume 30 ; 30 ; reingest2.clockss.org:8085 >                                                         
         au < down ; crawling ; 1926 ; American Journal of Diseases of Children Volume 31 ; 31 ; reingest3.clockss.org:8083 >                                                         
-        au < down ; crawling ; 1926 ; American Journal of Diseases of Children Volume 32 ; 32 ; reingest3.clockss.org:8083 >                                                         
+        au < zapped ; down ; 1926 ; American Journal of Diseases of Children Volume 32 ; 32 ; reingest3.clockss.org:8083 >                                                         
         au < down ; crawling ; 1927 ; American Journal of Diseases of Children Volume 33 ; 33 ; reingest4.clockss.org:8082 >                                                         
         au < down ; crawling ; 1927 ; American Journal of Diseases of Children Volume 34 ; 34 ; reingest4.clockss.org:8082 >                                                         
         au < down ; crawling ; 1928 ; American Journal of Diseases of Children Volume 35 ; 35 ; reingest1.clockss.org:8082 >                                                         
@@ -1168,20 +1168,20 @@
         au < down ; crawling ; 1941 ; American Journal of Diseases of Children Volume 62 ; 62 ; reingest2.clockss.org:8085 >                                                         
         au < down ; crawling ; 1942 ; American Journal of Diseases of Children Volume 63 ; 63 ; reingest3.clockss.org:8083 >                                                         
         au < down ; crawling ; 1942 ; American Journal of Diseases of Children Volume 64 ; 64 ; reingest3.clockss.org:8083 >                                                         
-        au < down ; crawling ; 1943 ; American Journal of Diseases of Children Volume 65 ; 65 ; reingest4.clockss.org:8082 >                                                         
+        au < zapped ; down ; 1943 ; American Journal of Diseases of Children Volume 65 ; 65 ; reingest4.clockss.org:8082 >                                                         
         au < down ; crawling ; 1943 ; American Journal of Diseases of Children Volume 66 ; 66 ; reingest4.clockss.org:8082 >                                                         
-        au < down ; crawling ; 1944 ; American Journal of Diseases of Children Volume 67 ; 67 ; reingest1.clockss.org:8082 >                                                         
+        au < zapped ; down ; 1944 ; American Journal of Diseases of Children Volume 67 ; 67 ; reingest1.clockss.org:8082 >                                                         
         au < down ; crawling ; 1944 ; American Journal of Diseases of Children Volume 68 ; 68 ; reingest1.clockss.org:8082 >                                                         
-        au < down ; crawling ; 1945 ; American Journal of Diseases of Children Volume 69 ; 69 ; reingest2.clockss.org:8085 >                                                         
-        au < down ; crawling ; 1945 ; American Journal of Diseases of Children Volume 70 ; 70 ; reingest2.clockss.org:8085 >                                                         
-        au < down ; crawling ; 1946 ; American Journal of Diseases of Children Volume 71 ; 71 ; reingest3.clockss.org:8083 >                                                         
-        au < down ; crawling ; 1946 ; American Journal of Diseases of Children Volume 72 ; 72 ; reingest3.clockss.org:8083 >                                                         
-        au < down ; crawling ; 1947 ; American Journal of Diseases of Children Volume 73 ; 73 ; reingest4.clockss.org:8082 >                                                         
-        au < down ; crawling ; 1947 ; American Journal of Diseases of Children Volume 74 ; 74 ; reingest4.clockss.org:8082 >                                                         
-        au < down ; crawling ; 1948 ; American Journal of Diseases of Children Volume 75 ; 75 ; reingest1.clockss.org:8082 >                                                         
-        au < down ; crawling ; 1948 ; American Journal of Diseases of Children Volume 76 ; 76 ; reingest1.clockss.org:8082 >                                                         
+        au < zapped ; down ; 1945 ; American Journal of Diseases of Children Volume 69 ; 69 ; reingest2.clockss.org:8085 >                                                         
+        au < zapped ; down ; 1945 ; American Journal of Diseases of Children Volume 70 ; 70 ; reingest2.clockss.org:8085 >                                                         
+        au < zapped ; down ; 1946 ; American Journal of Diseases of Children Volume 71 ; 71 ; reingest3.clockss.org:8083 >                                                         
+        au < zapped ; down ; 1946 ; American Journal of Diseases of Children Volume 72 ; 72 ; reingest3.clockss.org:8083 >                                                         
+        au < zapped ; down ; 1947 ; American Journal of Diseases of Children Volume 73 ; 73 ; reingest4.clockss.org:8082 >                                                         
+        au < zapped ; down ; 1947 ; American Journal of Diseases of Children Volume 74 ; 74 ; reingest4.clockss.org:8082 >                                                         
+        au < zapped ; down ; 1948 ; American Journal of Diseases of Children Volume 75 ; 75 ; reingest1.clockss.org:8082 >                                                         
+        au < zapped ; down ; 1948 ; American Journal of Diseases of Children Volume 76 ; 76 ; reingest1.clockss.org:8082 >                                                         
         au < down ; crawling ; 1949 ; American Journal of Diseases of Children Volume 77 ; 77 ; reingest2.clockss.org:8085 >                                                         
-        au < down ; crawling ; 1949 ; American Journal of Diseases of Children Volume 78 ; 78 ; reingest2.clockss.org:8085 >                                                         
+        au < zapped ; down ; 1949 ; American Journal of Diseases of Children Volume 78 ; 78 ; reingest2.clockss.org:8085 >                                                         
         au < down ; crawling ; 1950 ; American Journal of Diseases of Children Volume 79 ; 79 ; reingest3.clockss.org:8083 >                                                         
         au < down ; crawling ; 1950 ; American Journal of Diseases of Children Volume 80 ; 80 ; reingest3.clockss.org:8083 >                                                         
         au < down ; crawling ; 1951 ; AMA American Journal of Diseases of Children Volume 81 ; 81 ; reingest4.clockss.org:8082 >                                                     
@@ -1191,12 +1191,12 @@
         au < down ; crawling ; 1953 ; AMA American Journal of Diseases of Children Volume 85 ; 85 ; reingest2.clockss.org:8085 >                                                     
         au < down ; crawling ; 1953 ; AMA American Journal of Diseases of Children Volume 86 ; 86 ; reingest2.clockss.org:8085 >                                                     
         au < down ; crawling ; 1954 ; AMA American Journal of Diseases of Children Volume 87 ; 87 ; reingest3.clockss.org:8083 >                                                     
-        au < down ; crawling ; 1954 ; AMA American Journal of Diseases of Children Volume 88 ; 88 ; reingest3.clockss.org:8083 >                                                     
+        au < zapped ; down ; 1954 ; AMA American Journal of Diseases of Children Volume 88 ; 88 ; reingest3.clockss.org:8083 >                                                     
         au < down ; crawling ; 1955 ; AMA American Journal of Diseases of Children Volume 89 ; 89 ; reingest4.clockss.org:8082 >                                                     
         au < down ; crawling ; 1955 ; AMA American Journal of Diseases of Children Volume 90 ; 90 ; reingest4.clockss.org:8082 >                                                     
         au < down ; crawling ; 1956 ; AMA Journal of Diseases of Children Volume 91 ; 91 ; reingest1.clockss.org:8082 >                                                              
         au < down ; crawling ; 1956 ; AMA Journal of Diseases of Children Volume 92 ; 92 ; reingest1.clockss.org:8082 >                                                              
-        au < down ; crawling ; 1957 ; AMA Journal of Diseases of Children Volume 93 ; 93 ; reingest2.clockss.org:8085 >                                                              
+        au < zapped ; down ; 1957 ; AMA Journal of Diseases of Children Volume 93 ; 93 ; reingest2.clockss.org:8085 >                                                              
         au < down ; crawling ; 1957 ; AMA Journal of Diseases of Children Volume 94 ; 94 ; reingest2.clockss.org:8085 >                                                              
         au < down ; crawling ; 1958 ; AMA Journal of Diseases of Children Volume 95 ; 95 ; reingest3.clockss.org:8083 >                                                              
         au < down ; crawling ; 1958 ; AMA Journal of Diseases of Children Volume 96 ; 96 ; reingest3.clockss.org:8083 >                                                              
@@ -1204,7 +1204,7 @@
         au < down ; crawling ; 1959 ; AMA Journal of Diseases of Children Volume 98 ; 98 ; reingest4.clockss.org:8082 >                                                              
         au < down ; crawling ; 1960 ; AMA Journal of Diseases of Children Volume 99 ; 99 ; reingest1.clockss.org:8082 >                                                              
         au < down ; crawling ; 1960 ; AMA Journal of Diseases of Children Volume 100 ; 100 ; reingest1.clockss.org:8082 >                                                            
-        au < down ; crawling ; 1961 ; American Journal of Diseases of Children Volume 101 ; 101 ; reingest2.clockss.org:8085 >                                                       
+        au < zapped ; down ; 1961 ; American Journal of Diseases of Children Volume 101 ; 101 ; reingest2.clockss.org:8085 >                                                       
         au < down ; crawling ; 1961 ; American Journal of Diseases of Children Volume 102 ; 102 ; reingest2.clockss.org:8085 >                                                       
         au < down ; crawling ; 1962 ; American Journal of Diseases of Children Volume 103 ; 103 ; reingest3.clockss.org:8083 >                                                       
         au < down ; crawling ; 1962 ; American Journal of Diseases of Children Volume 104 ; 104 ; reingest3.clockss.org:8083 >                                                       
@@ -1223,7 +1223,7 @@
         au < down ; crawling ; 1969 ; American Journal of Diseases of Children Volume 117 ; 117 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1969 ; American Journal of Diseases of Children Volume 118 ; 118 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1970 ; American Journal of Diseases of Children Volume 119 ; 119 ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1970 ; American Journal of Diseases of Children Volume 120 ; 120 ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1970 ; American Journal of Diseases of Children Volume 120 ; 120 ; reingest3.clockss.org:8083 >
         au < down ; crawling ; 1971 ; American Journal of Diseases of Children Volume 121 ; 121 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1971 ; American Journal of Diseases of Children Volume 122 ; 122 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1972 ; American Journal of Diseases of Children Volume 123 ; 123 ; reingest1.clockss.org:8082 >
@@ -1248,7 +1248,7 @@
         au < down ; crawling ; 1988 ; American Journal of Diseases of Children Volume 142 ; 142 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1989 ; American Journal of Diseases of Children Volume 143 ; 143 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1990 ; American Journal of Diseases of Children Volume 144 ; 144 ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1991 ; American Journal of Diseases of Children Volume 145 ; 145 ; reingest4.clockss.org:8082 >
+        au < zapped ; down ; 1991 ; American Journal of Diseases of Children Volume 145 ; 145 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1992 ; American Journal of Diseases of Children Volume 146 ; 146 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1993 ; American Journal of Diseases of Children Volume 147 ; 147 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1994 ; Archives of Pediatrics & Adolescent Medicine Volume 148 ; 148 ; reingest3.clockss.org:8083 >
@@ -1297,13 +1297,13 @@
         pluginSuffix = ClockssHighWirePlugin
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
       
-        au < down ; crawling ; 1920 ; Archives of Surgery Volume 1 ; 1 ; reingest1.clockss.org:8082 >                                                                                
-        au < down ; crawling ; 1920 ; Archives of Surgery Volume 2 ; 2 ; reingest1.clockss.org:8082 >                                                                                
-        au < down ; crawling ; 1921 ; Archives of Surgery Volume 3 ; 3 ; reingest2.clockss.org:8085 >                                                                                
+        au < zapped ; down ; 1920 ; Archives of Surgery Volume 1 ; 1 ; reingest1.clockss.org:8082 >                                                                                
+        au < zapped ; down ; 1920 ; Archives of Surgery Volume 2 ; 2 ; reingest1.clockss.org:8082 >                                                                                
+        au < zapped ; down ; 1921 ; Archives of Surgery Volume 3 ; 3 ; reingest2.clockss.org:8085 >                                                                                
         au < down ; crawling ; 1921 ; Archives of Surgery Volume 4 ; 4 ; reingest2.clockss.org:8085 >                                                                                
         au < down ; crawling ; 1922 ; Archives of Surgery Volume 5 ; 5 ; reingest3.clockss.org:8083 >                                                                                
         au < down ; crawling ; 1922 ; Archives of Surgery Volume 6 ; 6 ; reingest3.clockss.org:8083 >                                                                                
-        au < down ; crawling ; 1923 ; Archives of Surgery Volume 7 ; 7 ; reingest4.clockss.org:8082 >                                                                                
+        au < zapped ; down ; 1923 ; Archives of Surgery Volume 7 ; 7 ; reingest4.clockss.org:8082 >                                                                                
         au < down ; crawling ; 1923 ; Archives of Surgery Volume 8 ; 8 ; reingest4.clockss.org:8082 >                                                                                
         au < down ; crawling ; 1924 ; Archives of Surgery Volume 9 ; 9 ; reingest1.clockss.org:8082 >                                                                                
         au < down ; crawling ; 1924 ; Archives of Surgery Volume 10 ; 10 ; reingest1.clockss.org:8082 >                                                                              
@@ -1322,7 +1322,7 @@
         au < down ; crawling ; 1931 ; Archives of Surgery Volume 23 ; 23 ; reingest4.clockss.org:8082 >                                                                              
         au < down ; crawling ; 1931 ; Archives of Surgery Volume 24 ; 24 ; reingest4.clockss.org:8082 >                                                                              
         au < down ; crawling ; 1932 ; Archives of Surgery Volume 25 ; 25 ; reingest1.clockss.org:8082 >                                                                              
-        au < down ; crawling ; 1932 ; Archives of Surgery Volume 26 ; 26 ; reingest1.clockss.org:8082 >                                                                              
+        au < zapped ; down ; 1932 ; Archives of Surgery Volume 26 ; 26 ; reingest1.clockss.org:8082 >                                                                              
         au < down ; crawling ; 1933 ; Archives of Surgery Volume 27 ; 27 ; reingest2.clockss.org:8085 >                                                                              
         au < down ; crawling ; 1933 ; Archives of Surgery Volume 28 ; 28 ; reingest2.clockss.org:8085 >                                                                              
         au < down ; crawling ; 1934 ; Archives of Surgery Volume 29 ; 29 ; reingest3.clockss.org:8083 >                                                                              
@@ -1343,16 +1343,16 @@
         au < down ; crawling ; 1941 ; Archives of Surgery Volume 44 ; 44 ; reingest2.clockss.org:8085 >                                                                              
         au < down ; crawling ; 1942 ; Archives of Surgery Volume 45 ; 45 ; reingest3.clockss.org:8083 >                                                                              
         au < down ; crawling ; 1942 ; Archives of Surgery Volume 46 ; 46 ; reingest3.clockss.org:8083 >                                                                              
-        au < down ; crawling ; 1943 ; Archives of Surgery Volume 47 ; 47 ; reingest4.clockss.org:8082 >                                                                              
+        au < zapped ; down ; 1943 ; Archives of Surgery Volume 47 ; 47 ; reingest4.clockss.org:8082 >                                                                              
         au < down ; crawling ; 1943 ; Archives of Surgery Volume 48 ; 48 ; reingest4.clockss.org:8082 >                                                                              
-        au < down ; crawling ; 1944 ; Archives of Surgery Volume 49 ; 49 ; reingest1.clockss.org:8082 >                                                                              
+        au < zapped ; down ; 1944 ; Archives of Surgery Volume 49 ; 49 ; reingest1.clockss.org:8082 >                                                                              
         au < down ; crawling ; 1944 ; Archives of Surgery Volume 50 ; 50 ; reingest1.clockss.org:8082 >                                                                              
-        au < down ; crawling ; 1945 ; Archives of Surgery Volume 51 ; 51 ; reingest2.clockss.org:8085 >                                                                              
-        au < down ; crawling ; 1945 ; Archives of Surgery Volume 52 ; 52 ; reingest2.clockss.org:8085 >                                                                              
-        au < down ; crawling ; 1946 ; Archives of Surgery Volume 53 ; 53 ; reingest3.clockss.org:8083 >                                                                              
-        au < down ; crawling ; 1946 ; Archives of Surgery Volume 54 ; 54 ; reingest3.clockss.org:8083 >                                                                              
-        au < down ; crawling ; 1947 ; Archives of Surgery Volume 55 ; 55 ; reingest4.clockss.org:8082 >                                                                              
-        au < down ; crawling ; 1947 ; Archives of Surgery Volume 56 ; 56 ; reingest4.clockss.org:8082 >                                                                              
+        au < zapped ; down ; 1945 ; Archives of Surgery Volume 51 ; 51 ; reingest2.clockss.org:8085 >                                                                              
+        au < zapped ; down ; 1945 ; Archives of Surgery Volume 52 ; 52 ; reingest2.clockss.org:8085 >                                                                              
+        au < zapped ; down ; 1946 ; Archives of Surgery Volume 53 ; 53 ; reingest3.clockss.org:8083 >                                                                              
+        au < zapped ; down ; 1946 ; Archives of Surgery Volume 54 ; 54 ; reingest3.clockss.org:8083 >                                                                              
+        au < zapped ; down ; 1947 ; Archives of Surgery Volume 55 ; 55 ; reingest4.clockss.org:8082 >                                                                              
+        au < zapped ; down ; 1947 ; Archives of Surgery Volume 56 ; 56 ; reingest4.clockss.org:8082 >                                                                              
         au < down ; crawling ; 1948 ; Archives of Surgery Volume 57 ; 57 ; reingest1.clockss.org:8082 >                                                                              
         au < down ; crawling ; 1948 ; Archives of Surgery Volume 58 ; 58 ; reingest1.clockss.org:8082 >                                                                              
         au < down ; crawling ; 1949 ; Archives of Surgery Volume 59 ; 59 ; reingest2.clockss.org:8085 >                                                                              
@@ -1409,8 +1409,8 @@
         au < down ; crawling ; 1975 ; Archives of Surgery Volume 110 ; 110 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1976 ; Archives of Surgery Volume 111 ; 111 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1977 ; Archives of Surgery Volume 112 ; 112 ; reingest2.clockss.org:8085 >
-        au < down ; crawling ; 1978 ; Archives of Surgery Volume 113 ; 113 ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1979 ; Archives of Surgery Volume 114 ; 114 ; reingest4.clockss.org:8082 >
+        au < zapped ; down ; 1978 ; Archives of Surgery Volume 113 ; 113 ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 1979 ; Archives of Surgery Volume 114 ; 114 ; reingest4.clockss.org:8082 >
         au < down ; crawling ; 1980 ; Archives of Surgery Volume 115 ; 115 ; reingest1.clockss.org:8082 >
         au < down ; crawling ; 1981 ; Archives of Surgery Volume 116 ; 116 ; reingest2.clockss.org:8085 >
         au < down ; crawling ; 1982 ; Archives of Surgery Volume 117 ; 117 ; reingest3.clockss.org:8083 >
@@ -1493,23 +1493,23 @@
 
         pluginSuffix = ClockssHighWirePlugin
         
-        au < down ; crawling ; 1883 ; Journal of the American Medical Association Volume I ; I ; reingest4.clockss.org:8082 >                                                            
-        au < down ; crawling ; 1884 ; Journal of the American Medical Association Volume II ; II ; reingest1.clockss.org:8082 >                                                          
-        au < down ; crawling ; 1884 ; Journal of the American Medical Association Volume III ; III ; reingest1.clockss.org:8082 >                                                        
-        au < down ; crawling ; 1885 ; Journal of the American Medical Association Volume IV ; IV ; reingest2.clockss.org:8085 >                                                          
-        au < down ; crawling ; 1885 ; Journal of the American Medical Association Volume V ; V ; reingest2.clockss.org:8085 >                                                            
-        au < down ; crawling ; 1886 ; Journal of the American Medical Association Volume VI ; VI ; reingest3.clockss.org:8083 >                                                          
+        au < zapped ; down ; 1883 ; Journal of the American Medical Association Volume I ; I ; reingest4.clockss.org:8082 >                                                            
+        au < zapped ; down ; 1884 ; Journal of the American Medical Association Volume II ; II ; reingest1.clockss.org:8082 >                                                          
+        au < zapped ; down ; 1884 ; Journal of the American Medical Association Volume III ; III ; reingest1.clockss.org:8082 >                                                        
+        au < zapped ; down ; 1885 ; Journal of the American Medical Association Volume IV ; IV ; reingest2.clockss.org:8085 >                                                          
+        au < zapped ; down ; 1885 ; Journal of the American Medical Association Volume V ; V ; reingest2.clockss.org:8085 >                                                            
+        au < zapped ; down ; 1886 ; Journal of the American Medical Association Volume VI ; VI ; reingest3.clockss.org:8083 >                                                          
         au < down ; crawling ; 1886 ; Journal of the American Medical Association Volume VII ; VII ; reingest3.clockss.org:8083 >                                                        
         au < down ; crawling ; 1887 ; Journal of the American Medical Association Volume VIII ; VIII ; reingest4.clockss.org:8082 >                                                    
-        au < down ; crawling ; 1887 ; Journal of the American Medical Association Volume IX ; IX ; reingest4.clockss.org:8082 >                                                          
-        au < down ; crawling ; 1888 ; Journal of the American Medical Association Volume X ; X ; reingest1.clockss.org:8082 >                                                            
-        au < down ; crawling ; 1888 ; Journal of the American Medical Association Volume XI ; XI ; reingest1.clockss.org:8082 >                                                          
-        au < down ; crawling ; 1889 ; Journal of the American Medical Association Volume XII ; XII ; reingest2.clockss.org:8085 >                                                        
+        au < zapped ; down ; 1887 ; Journal of the American Medical Association Volume IX ; IX ; reingest4.clockss.org:8082 >                                                          
+        au < zapped ; down ; 1888 ; Journal of the American Medical Association Volume X ; X ; reingest1.clockss.org:8082 >                                                            
+        au < zapped ; down ; 1888 ; Journal of the American Medical Association Volume XI ; XI ; reingest1.clockss.org:8082 >                                                          
+        au < zapped ; down ; 1889 ; Journal of the American Medical Association Volume XII ; XII ; reingest2.clockss.org:8085 >                                                        
         au < down ; crawling ; 1889 ; Journal of the American Medical Association Volume XIII ; XIII ; reingest2.clockss.org:8085 >                                                    
-        au < down ; crawling ; 1890 ; Journal of the American Medical Association Volume XIV ; XIV ; reingest3.clockss.org:8083 >                                                        
+        au < zapped ; down ; 1890 ; Journal of the American Medical Association Volume XIV ; XIV ; reingest3.clockss.org:8083 >                                                        
         au < down ; crawling ; 1890 ; Journal of the American Medical Association Volume XV ; XV ; reingest3.clockss.org:8083 >                                                          
         au < down ; crawling ; 1891 ; Journal of the American Medical Association Volume XVI ; XVI ; reingest4.clockss.org:8082 >                                                        
-        au < down ; crawling ; 1891 ; Journal of the American Medical Association Volume XVII ; XVII ; reingest4.clockss.org:8082 >                                                    
+        au < zapped ; down ; 1891 ; Journal of the American Medical Association Volume XVII ; XVII ; reingest4.clockss.org:8082 >                                                    
         au < down ; crawling ; 1892 ; Journal of the American Medical Association Volume XVIII ; XVIII ; reingest1.clockss.org:8082 >                                                  
         au < down ; crawling ; 1892 ; Journal of the American Medical Association Volume XIX ; XIX ; reingest1.clockss.org:8082 >                                                        
         au < down ; crawling ; 1893 ; Journal of the American Medical Association Volume XX ; XX ; reingest2.clockss.org:8085 >                                                          
@@ -1571,8 +1571,8 @@
         au < down ; crawling ; 1919 ; Journal of the American Medical Association Volume 73 ; 73 ; reingest4.clockss.org:8082 >                                                                        
         au < down ; crawling ; 1920 ; Journal of the American Medical Association Volume 74 ; 74 ; reingest1.clockss.org:8082 >                                                                        
         au < down ; crawling ; 1920 ; Journal of the American Medical Association Volume 75 ; 75 ; reingest1.clockss.org:8082 >                                                                        
-        au < down ; crawling ; 1921 ; Journal of the American Medical Association Volume 76 ; 76 ; reingest2.clockss.org:8085 >                                                                        
-        au < down ; crawling ; 1921 ; Journal of the American Medical Association Volume 77 ; 77 ; reingest2.clockss.org:8085 >                                                                        
+        au < zapped ; down ; 1921 ; Journal of the American Medical Association Volume 76 ; 76 ; reingest2.clockss.org:8085 >                                                                        
+        au < zapped ; down ; 1921 ; Journal of the American Medical Association Volume 77 ; 77 ; reingest2.clockss.org:8085 >                                                                        
         au < down ; crawling ; 1922 ; Journal of the American Medical Association Volume 78 ; 78 ; reingest3.clockss.org:8083 >                                                                        
         au < down ; crawling ; 1922 ; Journal of the American Medical Association Volume 79 ; 79 ; reingest3.clockss.org:8083 >                                                                        
         au < down ; crawling ; 1923 ; Journal of the American Medical Association Volume 80 ; 80 ; reingest4.clockss.org:8082 >                                                                        
@@ -1583,9 +1583,9 @@
         au < down ; crawling ; 1925 ; Journal of the American Medical Association Volume 85 ; 85 ; reingest2.clockss.org:8085 >                                                                        
         au < down ; crawling ; 1926 ; Journal of the American Medical Association Volume 86 ; 86 ; reingest3.clockss.org:8083 >                                                                        
         au < down ; crawling ; 1926 ; Journal of the American Medical Association Volume 87 ; 87 ; reingest3.clockss.org:8083 >                                                                        
-        au < down ; crawling ; 1927 ; Journal of the American Medical Association Volume 88 ; 88 ; reingest4.clockss.org:8082 >                                                                        
+        au < zapped ; down ; 1927 ; Journal of the American Medical Association Volume 88 ; 88 ; reingest4.clockss.org:8082 >                                                                        
         au < down ; crawling ; 1927 ; Journal of the American Medical Association Volume 89 ; 89 ; reingest4.clockss.org:8082 >                                                                        
-        au < down ; crawling ; 1928 ; Journal of the American Medical Association Volume 90 ; 90 ; reingest1.clockss.org:8082 >                                                                        
+        au < zapped ; down ; 1928 ; Journal of the American Medical Association Volume 90 ; 90 ; reingest1.clockss.org:8082 >                                                                        
         au < down ; crawling ; 1928 ; Journal of the American Medical Association Volume 91 ; 91 ; reingest1.clockss.org:8082 >                                                                        
         au < down ; crawling ; 1929 ; Journal of the American Medical Association Volume 92 ; 92 ; reingest2.clockss.org:8085 >                                                                        
         au < down ; crawling ; 1929 ; Journal of the American Medical Association Volume 93 ; 93 ; reingest2.clockss.org:8085 >                                                                        
@@ -1618,7 +1618,7 @@
         au < down ; crawling ; 1942 ; Journal of the American Medical Association Volume 120 ; 120 ; reingest3.clockss.org:8083 >                                                                    
         au < down ; crawling ; 1943 ; Journal of the American Medical Association Volume 121 ; 121 ; reingest4.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1943 ; Journal of the American Medical Association Volume 122 ; 122 ; reingest4.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1943 ; Journal of the American Medical Association Volume 123 ; 123 ; reingest4.clockss.org:8082 >                                                                    
+        au < zapped ; down ; 1943 ; Journal of the American Medical Association Volume 123 ; 123 ; reingest4.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1944 ; Journal of the American Medical Association Volume 124 ; 124 ; reingest1.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1944 ; Journal of the American Medical Association Volume 125 ; 125 ; reingest1.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1944 ; Journal of the American Medical Association Volume 126 ; 126 ; reingest1.clockss.org:8082 >                                                                    
@@ -1646,7 +1646,7 @@
         au < down ; crawling ; 1952 ; Journal of the American Medical Association Volume 148 ; 148 ; reingest1.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1952 ; Journal of the American Medical Association Volume 149 ; 149 ; reingest1.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1952 ; Journal of the American Medical Association Volume 150 ; 150 ; reingest1.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1953 ; Journal of the American Medical Association Volume 151 ; 151 ; reingest2.clockss.org:8085 >                                                                    
+        au < zapped ; down ; 1953 ; Journal of the American Medical Association Volume 151 ; 151 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1953 ; Journal of the American Medical Association Volume 152 ; 152 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1953 ; Journal of the American Medical Association Volume 153 ; 153 ; reingest2.clockss.org:8085 >                                                                    
         au < down ; crawling ; 1954 ; Journal of the American Medical Association Volume 154 ; 154 ; reingest3.clockss.org:8083 >                                                                    
@@ -1672,10 +1672,10 @@
         au < down ; crawling ; 1960 ; Journal of the American Medical Association Volume 174 ; 174 ; reingest1.clockss.org:8082 >                                                                    
         au < down ; crawling ; 1961 ; JAMA: The Journal of the American Medical Association Volume 175 ; 175 ; reingest2.clockss.org:8085 >                                                        
         au < down ; crawling ; 1961 ; JAMA: The Journal of the American Medical Association Volume 176 ; 176 ; reingest2.clockss.org:8085 >                                                        
-        au < down ; crawling ; 1961 ; JAMA: The Journal of the American Medical Association Volume 177 ; 177 ; reingest2.clockss.org:8085 >                                                        
-        au < down ; crawling ; 1961 ; JAMA: The Journal of the American Medical Association Volume 178 ; 178 ; reingest2.clockss.org:8085 >                                                        
+        au < zapped ; down ; 1961 ; JAMA: The Journal of the American Medical Association Volume 177 ; 177 ; reingest2.clockss.org:8085 >                                                        
+        au < zapped ; down ; 1961 ; JAMA: The Journal of the American Medical Association Volume 178 ; 178 ; reingest2.clockss.org:8085 >                                                        
         au < down ; crawling ; 1962 ; JAMA: The Journal of the American Medical Association Volume 179 ; 179 ; reingest3.clockss.org:8083 >                                                        
-        au < down ; crawling ; 1962 ; JAMA: The Journal of the American Medical Association Volume 180 ; 180 ; reingest3.clockss.org:8083 >                                                        
+        au < zapped ; down ; 1962 ; JAMA: The Journal of the American Medical Association Volume 180 ; 180 ; reingest3.clockss.org:8083 >                                                        
         au < down ; crawling ; 1962 ; JAMA: The Journal of the American Medical Association Volume 181 ; 181 ; reingest3.clockss.org:8083 >                                                        
         au < down ; crawling ; 1962 ; JAMA: The Journal of the American Medical Association Volume 182 ; 182 ; reingest3.clockss.org:8083 >                                                     
         au < down ; crawling ; 1963 ; JAMA: The Journal of the American Medical Association Volume 183 ; 183 ; reingest1.clockss.org:8082 >
@@ -1727,7 +1727,7 @@
         au < down ; crawling ; 1974 ; JAMA: The Journal of the American Medical Association Volume 229 ; 229 ; reingest3.clockss.org:8083 >                                                        
         au < down ; crawling ; 1974 ; JAMA: The Journal of the American Medical Association Volume 230 ; 230 ; reingest3.clockss.org:8083 >                                                        
         au < down ; crawling ; 1975 ; JAMA: The Journal of the American Medical Association Volume 231 ; 231 ; reingest4.clockss.org:8082 >                                                        
-        au < down ; crawling ; 1975 ; JAMA: The Journal of the American Medical Association Volume 232 ; 232 ; reingest4.clockss.org:8082 >                                                        
+        au < zapped ; down ; 1975 ; JAMA: The Journal of the American Medical Association Volume 232 ; 232 ; reingest4.clockss.org:8082 >                                                        
         au < down ; crawling ; 1975 ; JAMA: The Journal of the American Medical Association Volume 233 ; 233 ; reingest4.clockss.org:8082 >                                                        
         au < down ; crawling ; 1975 ; JAMA: The Journal of the American Medical Association Volume 234 ; 234 ; reingest4.clockss.org:8082 >                                                        
         au < down ; crawling ; 1976 ; JAMA: The Journal of the American Medical Association Volume 235 ; 235 ; reingest1.clockss.org:8082 >                                                        
@@ -1770,7 +1770,7 @@
         au < down ; crawling ; 1994 ; JAMA: The Journal of the American Medical Association Volume 272 ; 272 ; reingest3.clockss.org:8083 >                                                        
         au < down ; crawling ; 1995 ; JAMA: The Journal of the American Medical Association Volume 273 ; 273 ; reingest4.clockss.org:8082 >                                                        
         au < down ; crawling ; 1995 ; JAMA: The Journal of the American Medical Association Volume 274 ; 274 ; reingest4.clockss.org:8082 >                                                        
-        au < down ; crawling ; 1996 ; JAMA: The Journal of the American Medical Association Volume 275 ; 275 ; reingest1.clockss.org:8082 >                                                        
+        au < zapped ; down ; 1996 ; JAMA: The Journal of the American Medical Association Volume 275 ; 275 ; reingest1.clockss.org:8082 >                                                        
         au < down ; crawling ; 1996 ; JAMA: The Journal of the American Medical Association Volume 276 ; 276 ; reingest1.clockss.org:8082 >                                                        
         au < down ; crawling ; 1997 ; JAMA: The Journal of the American Medical Association Volume 277 ; 277 ; reingest2.clockss.org:8085 >                                                        
         au < down ; crawling ; 1997 ; JAMA: The Journal of the American Medical Association Volume 278 ; 278 ; reingest2.clockss.org:8085 >
@@ -1857,18 +1857,18 @@
     implicit < status ; status2 ; year ; name ; volume ; param[year] >
     param[base_url] = http://virtualmentor.ama-assn.org/
     
-    au < released ; crawling ; 1999 ; Virtual Mentor Volume 1 ; 1 ; 1999 >
-    au < released ; crawling ; 2000 ; Virtual Mentor Volume 2 ; 2 ; 2000 >
-    au < released ; crawling ; 2001 ; Virtual Mentor Volume 3 ; 3 ; 2001 >
+    au < zapped ; down ; 1999 ; Virtual Mentor Volume 1 ; 1 ; 1999 >
+    au < zapped ; down ; 2000 ; Virtual Mentor Volume 2 ; 2 ; 2000 >
+    au < zapped ; down ; 2001 ; Virtual Mentor Volume 3 ; 3 ; 2001 >
     au < released ; crawling ; 2002 ; Virtual Mentor Volume 4 ; 4 ; 2002 >
-    au < released ; crawling ; 2003 ; Virtual Mentor Volume 5 ; 5 ; 2003 >
-    au < released ; crawling ; 2004 ; Virtual Mentor Volume 6 ; 6 ; 2004 >
-    au < released ; crawling ; 2005 ; Virtual Mentor Volume 7 ; 7 ; 2005 >
-    au < released ; crawling ; 2006 ; Virtual Mentor Volume 8 ; 8 ; 2006 >
-    au < released ; crawling ; 2007 ; Virtual Mentor Volume 9 ; 9 ; 2007 >
-    au < released ; crawling ; 2008 ; Virtual Mentor Volume 10 ; 10 ; 2008 >
+    au < zapped ; down ; 2003 ; Virtual Mentor Volume 5 ; 5 ; 2003 >
+    au < zapped ; down ; 2004 ; Virtual Mentor Volume 6 ; 6 ; 2004 >
+    au < zapped ; down ; 2005 ; Virtual Mentor Volume 7 ; 7 ; 2005 >
+    au < zapped ; down ; 2006 ; Virtual Mentor Volume 8 ; 8 ; 2006 >
+    au < zapped ; down ; 2007 ; Virtual Mentor Volume 9 ; 9 ; 2007 >
+    au < zapped ; down ; 2008 ; Virtual Mentor Volume 10 ; 10 ; 2008 >
     au < released ; crawling ; 2009 ; Virtual Mentor Volume 11 ; 11 ; 2009 >
-    au < released ; crawling ; 2010 ; Virtual Mentor Volume 12 ; 12 ; 2010 >
+    au < zapped ; down ; 2010 ; Virtual Mentor Volume 12 ; 12 ; 2010 >
     au < released ; crawling ; 2011 ; Virtual Mentor Volume 13 ; 13 ; 2011 >
     au < crawling ; exists ; 2012 ; Virtual Mentor Volume 14 ; 14 ; 2012 >
 
