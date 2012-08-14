@@ -2753,9 +2753,31 @@
     param[journal_id] = 10.1055/s-00000056
     comment[years] = 1991-current
   
-  
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 1991 ; 1991 ; 1991 > 
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 1992 ; 1992 ; 1992 > 
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 1993 ; 1993 ; 1993 > 
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 1994 ; 1994 ; 1994 > 
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 1995 ; 1995 ; 1995 >     
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 1996 ; 1996 ; 1996 >      
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 1997 ; 1997 ; 1997 >     
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 1998 ; 1998 ; 1998 >     
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 1999 ; 1999 ; 1999 >      
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2001 ; 2001 ; 2001 >     
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2002 ; 2002 ; 2002 >      
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2003 ; 2003 ; 2003 >     
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2004 ; 2004 ; 2004 >     
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2005 ; 2005 ; 2005 >      
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2012 ; 2012 ; 2012 >      
   
   }
+  
   {
     title <
       name = physiopraxis ;
@@ -2766,7 +2788,9 @@
     param[journal_id] = 10.1055/s-00000162
     comment[years] = 2010-current
   
-  
+   au < exists ; exists ; physiopraxis 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; physiopraxis 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; physiopraxis 2012 ; 2012 ; 2012 >      
   
   }
   
