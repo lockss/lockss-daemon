@@ -33,7 +33,7 @@
     au < exists ; exists ; 2005 ; The Analyst Volume 130 ; 130 ; 2005 >
     au < exists ; exists ; 2006 ; The Analyst Volume 131 ; 131 ; 2006 >
     au < exists ; exists ; 2007 ; The Analyst Volume 132 ; 132 ; 2007 >
-    au < down ; crawling ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 >
+    au < zapped ; down ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 >
     au < down ; crawling ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 >
     au < down ; crawling ; 2010 ; The Analyst Volume 135 ; 135 ; 2010 >
   
@@ -66,8 +66,8 @@
     
     param[journal_code] = ay
     
-    au < down ; crawling ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 >
-    au < down ; crawling ; 2010 ; Analytical Methods Volume 2 ; 2 ; 2010 >
+    au < zapped ; down ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 >
+    au < zapped ; down ; 2010 ; Analytical Methods Volume 2 ; 2 ; 2010 >
   
   }
 
@@ -82,8 +82,8 @@
     param[journal_code] = ic
 
     au < down ; crawling ; 2008 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 104 ; 104 ; 2008 >
-    au < down ; crawling ; 2009 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 105 ; 105 ; 2009 >
-    au < down ; crawling ; 2010 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 106 ; 106 ; 2010 >
+    au < zapped ; down ; 2009 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 105 ; 105 ; 2009 >
+    au < zapped ; down ; 2010 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 106 ; 106 ; 2010 >
   
   }
 
@@ -97,9 +97,9 @@
     
     param[journal_code] = oc
 
-    au < down ; crawling ; 2008 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 104 ; 104 ; 2008 >
-    au < down ; crawling ; 2009 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 105 ; 105 ; 2009 >
-    au < down ; crawling ; 2010 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 106 ; 106 ; 2010 >
+    au < zapped ; down ; 2008 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 104 ; 104 ; 2008 >
+    au < zapped ; down ; 2009 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 105 ; 105 ; 2009 >
+    au < zapped ; down ; 2010 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 106 ; 106 ; 2010 >
   
   }
 
@@ -113,9 +113,9 @@
     
     param[journal_code] = pc
 
-    au < down ; crawling ; 2008 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 104 ; 104 ; 2008 >
-    au < down ; crawling ; 2009 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 105 ; 105 ; 2009 >
-    au < down ; crawling ; 2010 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 106 ; 106 ; 2010 >
+    au < zapped ; down ; 2008 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 104 ; 104 ; 2008 >
+    au < zapped ; down ; 2009 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 105 ; 105 ; 2009 >
+    au < zapped ; down ; 2010 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 106 ; 106 ; 2010 >
   
   }
 
@@ -168,8 +168,8 @@
     au < exists ; exists ; 2005 ; Chemical Society Reviews Volume 34 ; 34 ; 2005 >
     au < exists ; exists ; 2006 ; Chemical Society Reviews Volume 35 ; 35 ; 2006 >
     au < exists ; exists ; 2007 ; Chemical Society Reviews Volume 36 ; 36 ; 2007 >
-    au < down ; crawling ; 2008 ; Chemical Society Reviews Volume 37 ; 37 ; 2008 >
-    au < down ; crawling ; 2009 ; Chemical Society Reviews Volume 38 ; 38 ; 2009 >
+    au < zapped ; down ; 2008 ; Chemical Society Reviews Volume 37 ; 37 ; 2008 >
+    au < zapped ; down ; 2009 ; Chemical Society Reviews Volume 38 ; 38 ; 2009 >
     au < down ; crawling ; 2010 ; Chemical Society Reviews Volume 39 ; 39 ; 2010 >
   
   }
@@ -183,9 +183,9 @@
     
     param[journal_code] = rp
     
-    au < down ; crawling ; 2008 ; Chemistry Education Research and Practice Volume 9 ; 9 ; 2008 >
-    au < down ; crawling ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 >
-    au < down ; crawling ; 2010 ; Chemistry Education Research and Practice Volume 11 ; 11 ; 2010 >
+    au < zapped ; down ; 2008 ; Chemistry Education Research and Practice Volume 9 ; 9 ; 2008 >
+    au < zapped ; down ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 >
+    au < zapped ; down ; 2010 ; Chemistry Education Research and Practice Volume 11 ; 11 ; 2010 >
   
   }
 
@@ -268,9 +268,9 @@
     
     param[journal_code] = ee
     
-    au < down ; crawling ; 2008 ; Energy & Environmental Science Volume 1 ; 1 ; 2008 >
-    au < down ; crawling ; 2009 ; Energy & Environmental Science Volume 2 ; 2 ; 2009 >
-    au < down ; crawling ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
+    au < zapped ; down ; 2008 ; Energy & Environmental Science Volume 1 ; 1 ; 2008 >
+    au < zapped ; down ; 2009 ; Energy & Environmental Science Volume 2 ; 2 ; 2009 >
+    au < zapped ; down ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
   
   }
 
@@ -285,15 +285,15 @@
     
     param[journal_code] = fd
 
-    au < down ; crawling ; 2008 ; Faraday Discussions Volume 137 ; 137 ; 2008 >
-    au < down ; crawling ; 2008 ; Faraday Discussions Volume 138 ; 138 ; 2008 >
-    au < down ; crawling ; 2008 ; Faraday Discussions Volume 139 ; 139 ; 2008 >
-    au < down ; crawling ; 2009 ; Faraday Discussions Volume 140 ; 140 ; 2009 >
-    au < down ; crawling ; 2009 ; Faraday Discussions Volume 141 ; 141 ; 2009 >
-    au < down ; crawling ; 2009 ; Faraday Discussions Volume 142 ; 142 ; 2009 >
-    au < down ; crawling ; 2009 ; Faraday Discussions Volume 143 ; 143 ; 2009 >
-    au < down ; crawling ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 >
-    au < down ; crawling ; 2010 ; Faraday Discussions Volume 145 ; 145 ; 2010 >
+    au < zapped ; down ; 2008 ; Faraday Discussions Volume 137 ; 137 ; 2008 >
+    au < zapped ; down ; 2008 ; Faraday Discussions Volume 138 ; 138 ; 2008 >
+    au < zapped ; down ; 2008 ; Faraday Discussions Volume 139 ; 139 ; 2008 >
+    au < zapped ; down ; 2009 ; Faraday Discussions Volume 140 ; 140 ; 2009 >
+    au < zapped ; down ; 2009 ; Faraday Discussions Volume 141 ; 141 ; 2009 >
+    au < zapped ; down ; 2009 ; Faraday Discussions Volume 142 ; 142 ; 2009 >
+    au < zapped ; down ; 2009 ; Faraday Discussions Volume 143 ; 143 ; 2009 >
+    au < zapped ; down ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 >
+    au < zapped ; down ; 2010 ; Faraday Discussions Volume 145 ; 145 ; 2010 >
   
   }
 
@@ -335,9 +335,9 @@
     au < exists ; exists ; 2005 ; Green Chemistry Volume 7 ; 7 ; 2005 >
     au < exists ; exists ; 2006 ; Green Chemistry Volume 8 ; 8 ; 2006 >
     au < exists ; exists ; 2007 ; Green Chemistry Volume 9 ; 9 ; 2007 >
-    au < down ; crawling ; 2008 ; Green Chemistry Volume 10 ; 10 ; 2008 >
-    au < down ; crawling ; 2009 ; Green Chemistry Volume 11 ; 11 ; 2009 >
-    au < down ; crawling ; 2010 ; Green Chemistry Volume 12 ; 12 ; 2010 >
+    au < zapped ; down ; 2008 ; Green Chemistry Volume 10 ; 10 ; 2008 >
+    au < zapped ; down ; 2009 ; Green Chemistry Volume 11 ; 11 ; 2009 >
+    au < zapped ; down ; 2010 ; Green Chemistry Volume 12 ; 12 ; 2010 >
   
   }
 
@@ -352,8 +352,8 @@
     
     param[journal_code] = ib
     
-    au < down ; crawling ; 2009 ; Integrative Biology Volume 1 ; 1 ; 2009 >
-    au < down ; crawling ; 2010 ; Integrative Biology Volume 2 ; 2 ; 2010 >
+    au < zapped ; down ; 2009 ; Integrative Biology Volume 1 ; 1 ; 2009 >
+    au < zapped ; down ; 2010 ; Integrative Biology Volume 2 ; 2 ; 2010 >
   
   }
 
@@ -378,9 +378,9 @@
     au < exists ; exists ; 2005 ; Journal of Analytical Atomic Spectrometry Volume 20 ; 20 ; 2005 >
     au < exists ; exists ; 2006 ; Journal of Analytical Atomic Spectrometry Volume 21 ; 21 ; 2006 >
     au < exists ; exists ; 2007 ; Journal of Analytical Atomic Spectrometry Volume 22 ; 22 ; 2007 >
-    au < down ; crawling ; 2008 ; Journal of Analytical Atomic Spectrometry Volume 23 ; 23 ; 2008 >
-    au < down ; crawling ; 2009 ; Journal of Analytical Atomic Spectrometry Volume 24 ; 24 ; 2009 >
-    au < down ; crawling ; 2010 ; Journal of Analytical Atomic Spectrometry Volume 25 ; 25 ; 2010 >
+    au < zapped ; down ; 2008 ; Journal of Analytical Atomic Spectrometry Volume 23 ; 23 ; 2008 >
+    au < zapped ; down ; 2009 ; Journal of Analytical Atomic Spectrometry Volume 24 ; 24 ; 2009 >
+    au < zapped ; down ; 2010 ; Journal of Analytical Atomic Spectrometry Volume 25 ; 25 ; 2010 >
   
   }
 
@@ -476,8 +476,8 @@
     au < exists ; exists ; 2005 ; Journal of Environmental Monitoring Volume 7 ; 7 ; 2005 >
     au < exists ; exists ; 2006 ; Journal of Environmental Monitoring Volume 8 ; 8 ; 2006 >
     au < exists ; exists ; 2007 ; Journal of Environmental Monitoring Volume 9 ; 9 ; 2007 >
-    au < down ; crawling ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 >
-    au < down ; crawling ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 >
+    au < zapped ; down ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 >
+    au < zapped ; down ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 >
     au < down ; crawling ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 >
   
   }
@@ -544,8 +544,8 @@
     
     param[journal_code] = mt
     
-    au < down ; crawling ; 2009 ; Metallomics Volume 1 ; 1 ; 2009 >
-    au < down ; crawling ; 2010 ; Metallomics Volume 2 ; 2 ; 2010 >
+    au < zapped ; down ; 2009 ; Metallomics Volume 1 ; 1 ; 2009 >
+    au < zapped ; down ; 2010 ; Metallomics Volume 2 ; 2 ; 2010 >
   
   }
 
@@ -562,9 +562,9 @@
     au < exists ; exists ; 2005 ; Molecular BioSystems Volume 1 ; 1 ; 2005 >
     au < exists ; exists ; 2006 ; Molecular BioSystems Volume 2 ; 2 ; 2006 >
     au < exists ; exists ; 2007 ; Molecular BioSystems Volume 3 ; 3 ; 2007 >
-    au < down ; crawling ; 2008 ; Molecular BioSystems Volume 4 ; 4 ; 2008 >
-    au < down ; crawling ; 2009 ; Molecular BioSystems Volume 5 ; 5 ; 2009 >
-    au < down ; crawling ; 2010 ; Molecular BioSystems Volume 6 ; 6 ; 2010 >
+    au < zapped ; down ; 2008 ; Molecular BioSystems Volume 4 ; 4 ; 2008 >
+    au < zapped ; down ; 2009 ; Molecular BioSystems Volume 5 ; 5 ; 2009 >
+    au < zapped ; down ; 2010 ; Molecular BioSystems Volume 6 ; 6 ; 2010 >
   
   }
 
@@ -579,8 +579,8 @@
     
     param[journal_code] = nr
     
-    au < down ; crawling ; 2009 ; Nanoscale Volume 1 ; 1 ; 2009 >
-    au < down ; crawling ; 2010 ; Nanoscale Volume 2 ; 2 ; 2010 >
+    au < zapped ; down ; 2009 ; Nanoscale Volume 1 ; 1 ; 2009 >
+    au < zapped ; down ; 2010 ; Nanoscale Volume 2 ; 2 ; 2010 >
   
   }
 
@@ -606,8 +606,8 @@
     au < exists ; exists ; 2005 ; Natural Product Reports Volume 22 ; 22 ; 2005 >
     au < exists ; exists ; 2006 ; Natural Product Reports Volume 23 ; 23 ; 2006 >
     au < exists ; exists ; 2007 ; Natural Product Reports Volume 24 ; 24 ; 2007 >
-    au < down ; crawling ; 2008 ; Natural Product Reports Volume 25 ; 25 ; 2008 >
-    au < down ; crawling ; 2009 ; Natural Product Reports Volume 26 ; 26 ; 2009 >
+    au < zapped ; down ; 2008 ; Natural Product Reports Volume 25 ; 25 ; 2008 >
+    au < zapped ; down ; 2009 ; Natural Product Reports Volume 26 ; 26 ; 2009 >
     au < down ; crawling ; 2010 ; Natural Product Reports Volume 27 ; 27 ; 2010 >
   
   }
@@ -633,9 +633,9 @@
     au < exists ; exists ; 2005 ; New Journal of Chemistry Volume 29 ; 29 ; 2005 >
     au < exists ; exists ; 2006 ; New Journal of Chemistry Volume 30 ; 30 ; 2006 >
     au < exists ; exists ; 2007 ; New Journal of Chemistry Volume 31 ; 31 ; 2007 >
-    au < down ; crawling ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 >
+    au < zapped ; down ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 >
     au < down ; crawling ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
-    au < down ; crawling ; 2010 ; New Journal of Chemistry Volume 34 ; 34 ; 2010 >
+    au < zapped ; down ; 2010 ; New Journal of Chemistry Volume 34 ; 34 ; 2010 >
   
   }
 
@@ -694,9 +694,9 @@
     au < exists ; exists ; 2005 ; Photochemical & Photobiological Sciences Volume 4 ; 4 ; 2005 >
     au < exists ; exists ; 2006 ; Photochemical & Photobiological Sciences Volume 5 ; 5 ; 2006 >
     au < exists ; exists ; 2007 ; Photochemical & Photobiological Sciences Volume 6 ; 6 ; 2007 >
-    au < down ; crawling ; 2008 ; Photochemical & Photobiological Sciences Volume 7 ; 7 ; 2008 >
-    au < down ; crawling ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
-    au < down ; crawling ; 2010 ; Photochemical & Photobiological Sciences Volume 9 ; 9 ; 2010 >
+    au < zapped ; down ; 2008 ; Photochemical & Photobiological Sciences Volume 7 ; 7 ; 2008 >
+    au < zapped ; down ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
+    au < zapped ; down ; 2010 ; Photochemical & Photobiological Sciences Volume 9 ; 9 ; 2010 >
   
   }
 
