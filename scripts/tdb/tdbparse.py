@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.17 2012-08-09 02:09:35 thib_gc Exp $
+# $Id: tdbparse.py,v 1.18 2012-08-14 23:23:38 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.5'''
+__version__ = '''0.4.6'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -226,7 +226,7 @@ class TdbScanner(object):
         if self.__file.closed: raise RuntimeError, 'file already closed'
         # Maybe advance to next line or lines
         while TdbScanner.RE_WHITE0EOL.match(self.__cur):
-            # Empty bare string
+            # Empty unquoted string
             if self.__stringFlag == TdbparseToken.EQUAL:
                 self.__stringFlag = None
                 self.__token(TdbparseToken.STRING)
@@ -257,7 +257,7 @@ class TdbScanner(object):
             else: self.__move(1)
         # Strings
         if self.__stringFlag == TdbparseToken.EQUAL or self.__stringFlag == TdbparseToken.SEMICOLON:
-            # Empty bare string
+            # Empty unquoted string
             if ch == TdbparseLiteral.SEMICOLON or ch == TdbparseLiteral.ANGLE_CLOSE:
                 if self.__stringFlag == TdbparseToken.EQUAL:
                     self.__stringFlag = None
@@ -267,9 +267,10 @@ class TdbScanner(object):
                 self.__tok.set_value('')
                 return self.__tok
             # Quoted string
-            if ch == TdbparseLiteral.QUOTE_DOUBLE: return self.__qstring()
-            # Bare string
-            return self.__bstring()
+            if ch == TdbparseLiteral.QUOTE_DOUBLE:
+                raise TdbparseSyntaxError("Quoted strings are no longer legal", self.file_name(), self.__tok.line(), self.__tok.col())
+            # Unquoted string
+            return self.__ustring()
         # Single-character tokens
         if ch == TdbparseLiteral.SEMICOLON:
             if self.__stringFlag == TdbparseToken.AU:
@@ -334,46 +335,8 @@ class TdbScanner(object):
         self.__move(1)
         return self.__tok
 
-    def __qstring(self):
-        '''Consumes a quoted string, starting at the initial double
-        quote and continuing to a matching double quote on the same
-        line.
-
-        Double quotes and backslashes must be escaped.'''
-        # __bstring has been altered to count characters and escape the
-        # string conditionally. The same should be done to __qstring,
-        # but it's called very infrequently.
-        self.__token(TdbparseToken.STRING)
-        val = []
-        maxindex = len(self.__cur)
-        index = 1 # Consume the opening quote
-        if index >= maxindex:
-            raise TdbparseSyntaxError('run-on quoted string', self.file_name(), self.__tok.line(), self.__tok.col())
-        ch = self.__cur[index]
-        while ch != TdbparseLiteral.QUOTE_DOUBLE:
-            if ch == '\\':
-                index = index + 1 # Consume the backslash
-                if index >= maxindex:
-                    raise TdbparseSyntaxError('end-of-line after backslash', self.file_name(), self.__tok.line(), self.__tok.col()+index)
-                ch = self.__cur[index]
-                if ch not in '"\\':
-                    raise TdbparseSyntaxError('invalid quoted string escape: %s' % ch, self.file_name(), self.__line, self.__col-1+index)
-            val.append(ch)
-            index = index + 1 # Consume the character
-            if index >= maxindex:
-                raise TdbparseSyntaxError('run-on quoted string', self.file_name(), self.__tok.line(), self.__tok.col()+index)
-            ch = self.__cur[index]
-        index = index + 1 # Consume the closing quote
-        self.__move(index)
-        self.__tok.set_value(''.join(val))
-        if self.__stringFlag == TdbparseToken.EQUAL:
-            self.__stringFlag = None
-        elif self.__stringFlag == TdbparseToken.SEMICOLON:
-            self.__stringFlag = TdbparseToken.AU
-        return self.__tok
-
-    def __bstring(self):
-        '''Consumes a bare string, starting at the initial non-
+    def __ustring(self):
+        '''Consumes an unquoted string, starting at the initial non-
         whitespace character and continuing to the end of the line,
         a semicolon, or a closing angle bracket.
 
@@ -390,10 +353,10 @@ class TdbScanner(object):
           if ch == '\\':
             escapes.append(index)
             index = index + 1 # Count the backslash
-            if index >= maxindex: raise TdbparseSyntaxError('run-on bare string', self.file_name(), self.__tok.line(), self.__tok.col()+index)
+            if index >= maxindex: raise TdbparseSyntaxError('run-on unquoted string', self.file_name(), self.__tok.line(), self.__tok.col()+index)
             ch = cur[index]
             if not (ch == TdbparseLiteral.SEMICOLON or ch == TdbparseLiteral.ANGLE_CLOSE \
-                or ch == ' ' or ch == '\\'): raise TdbparseSyntaxError('invalid bare string escape: %s' % ch, self.file_name(), self.__line, self.__col-1+index)
+                or ch == ' ' or ch == '\\'): raise TdbparseSyntaxError('invalid unquoted string escape: %s' % ch, self.file_name(), self.__line, self.__col-1+index)
           index = index + 1 # Count the character
         val = cur[0:index].rstrip()
         self.__move(index) # Consume the characters
@@ -836,7 +799,7 @@ class TestTdbScanner(unittest.TestCase):
             title
             au
             implicit
-            < a = "b" ; c = d >
+            < a = b ; c = d >
             {
             }
             [
@@ -880,11 +843,11 @@ class TestTdbScanner(unittest.TestCase):
             self.assertRaises(TdbparseSyntaxError, scanner.next)
 
     def testStrings(self):
+#a = "nothing special"
+#b = "embedded\\\"quote"
+#c = "embedded\\\\backslash"
+#d = ""
         scanner = TdbScanner(StringIO('''\
-a = "nothing special"
-b = "embedded\\\"quote"
-c = "embedded\\\\backslash"
-d = ""
 e = nothing special either
 f =    surrounding whitespace      
 g =    \\ one leading space
@@ -894,10 +857,10 @@ j = embedded\\ space
 k = embedded\\;semicolon
 l = embedded\\>angle'''), self.options())
         tok = scanner.next()
-        for val in ['nothing special',
-                    'embedded"quote',
-                    'embedded\\backslash',
-                    '',
+        for val in [#'nothing special',
+                    #'embedded"quote',
+                    #'embedded\\backslash',
+                    #'',
                     'nothing special either',
                     'surrounding whitespace',
                     ' one leading space',
@@ -984,7 +947,8 @@ class TestTdbParser(unittest.TestCase):
     name = The Publisher
   >
 }
-''', TdbparseSyntaxError('expected } but got publisher', '<string>', 3, 3)),
+''', #TdbparseSyntaxError('expected } but got publisher', '<string>', 3, 3)),
+     TdbparseSyntaxError('Quoted strings are no longer legal', '<string>', 2, 7)),
                          ('''\
 {
   publisher <
