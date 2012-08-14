@@ -3665,7 +3665,6 @@
     au < exists ; exists ; Seminars in Thrombosis and Hemostasis 2011 ; 2011 ; 2011 >   
     au < exists ; exists ; Seminars in Thrombosis and Hemostasis 2012 ; 2012 ; 2012 >   
     
-    
   }
   
   {
@@ -3679,6 +3678,16 @@
     param[journal_id] = 10.1055/s-00000125
     comment[years] = 2004-current
     
+    au < exists ; exists ; Senologie - Zeitschrift für Mammadiagnostik und -therapie 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Senologie - Zeitschrift für Mammadiagnostik und -therapie 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Senologie - Zeitschrift für Mammadiagnostik und -therapie 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Senologie - Zeitschrift für Mammadiagnostik und -therapie 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Senologie - Zeitschrift für Mammadiagnostik und -therapie 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Senologie - Zeitschrift für Mammadiagnostik und -therapie 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Senologie - Zeitschrift für Mammadiagnostik und -therapie 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Senologie - Zeitschrift für Mammadiagnostik und -therapie 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Senologie - Zeitschrift für Mammadiagnostik und -therapie 2012 ; 2012 ; 2012 >   
+     
   }
   
   {
@@ -3692,6 +3701,19 @@
     param[journal_id] = 10.1055/s-00000079
     comment[years] = 2001-current
     
+    au < exists ; exists ; Skull Base 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; Skull Base 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; Skull Base 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; Skull Base 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Skull Base 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Skull Base 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Skull Base 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Skull Base 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Skull Base 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Skull Base 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Skull Base 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Skull Base 2012 ; 2012 ; 2012 >   
+   
   }
   
   {
@@ -3699,24 +3721,42 @@
     title < 
       name = Skull Base Reports ;
       issn = 2157-6971 ;
-      eissn = 2157-698X
+      eissn = includes 2011
       
     >
     param[journal_id] = 10.1055/s-00000170
     comment[years] = 2157-698X
+    comment[1] = published as part of Journal of Neurological Surgery Reports
+    
+    au < exists ; exists ; Skull Base Reports 2011 ; 2011 ; 2011 >   
     
   }
-   {
+  
+  {
   
     title < 
       name = Sleep And Breathing ;
       issn = 1520-9512 ;
       eissn = 1522-1709
       
-      
     >
     param[journal_id] = 10.1055/s-00000080
     comment[years] = 1999-2004
+    
+    au < exists ; exists ; Sleep And Breathing 1999 ; 1999 ; 1999 >   
+    au < exists ; exists ; Sleep And Breathing 2000 ; 2000 ; 2000 >   
+    au < exists ; exists ; Sleep And Breathing 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; Sleep And Breathing 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; Sleep And Breathing 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; Sleep And Breathing 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Sleep And Breathing 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Sleep And Breathing 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Sleep And Breathing 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Sleep And Breathing 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Sleep And Breathing 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Sleep And Breathing 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Sleep And Breathing 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Sleep And Breathing 2012 ; 2012 ; 2012 >       
     
   }
   
