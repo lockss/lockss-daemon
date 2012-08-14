@@ -3041,7 +3041,6 @@
   
   }
 
-
   {
     title <
       name = Psychiatrische Praxis ;                     
@@ -3052,7 +3051,18 @@
     param[journal_id] = 10.1055/s-00000062
     comment[years] = 2001-current 
   
-  
+   au < exists ; exists ; Psychiatrische Praxis 2001 ; 2001 ; 2001 >     
+   au < exists ; exists ; Psychiatrische Praxis 2002 ; 2002 ; 2002 >      
+   au < exists ; exists ; Psychiatrische Praxis 2003 ; 2003 ; 2003 >     
+   au < exists ; exists ; Psychiatrische Praxis 2004 ; 2004 ; 2004 >     
+   au < exists ; exists ; Psychiatrische Praxis 2005 ; 2005 ; 2005 >      
+   au < exists ; exists ; Psychiatrische Praxis 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Psychiatrische Praxis 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; Psychiatrische Praxis 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; Psychiatrische Praxis 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Psychiatrische Praxis 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Psychiatrische Praxis 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; Psychiatrische Praxis 2012 ; 2012 ; 2012 >  
   
   }
 
@@ -3066,36 +3076,16 @@
     param[journal_id] = 10.1055/s-00000063
     comment[years] = 2003-2008
   
-  
-  
-  }
-
-
-  {
-    title <
-      name = Psychiatrische Praxis ;
-      issn = 0303-4259 ;
-      eissn = 1439-0876
-      
-    >
-    param[journal_id] = 10.1055/s-00000062
-    comment[years] = 2001-current
-  
-  
-  
-  }
-
-  {
-    title <
-      name = Psychoneuro - Psychiatrie - Neurologie - Psychotherapie ;                     
-      issn = 1611-9991 ;
-      eissn = 1439-1813
-      
-    >
-    param[journal_id] = 10.1055/s-00000063
-    comment[years] = 2003-2008
-  
-  
+   au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2003 ; 2003 ; 2003 >     
+   au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2004 ; 2004 ; 2004 >     
+   au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2005 ; 2005 ; 2005 >      
+   au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2012 ; 2012 ; 2012 >  
   
   }
 
@@ -3109,11 +3099,20 @@
     param[journal_id] = 10.1055/s-00000118
     comment[years] = 2001-current
   
-  
+   au < exists ; exists ; Radiologie up2date 2001 ; 2001 ; 2001 >     
+   au < exists ; exists ; Radiologie up2date 2002 ; 2002 ; 2002 >      
+   au < exists ; exists ; Radiologie up2date 2003 ; 2003 ; 2003 >     
+   au < exists ; exists ; Radiologie up2date 2004 ; 2004 ; 2004 >     
+   au < exists ; exists ; Radiologie up2date 2005 ; 2005 ; 2005 >      
+   au < exists ; exists ; Radiologie up2date 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Radiologie up2date 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; Radiologie up2date 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; Radiologie up2date 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Radiologie up2date 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Radiologie up2date 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; Radiologie up2date 2012 ; 2012 ; 2012 >  
   
   }
-
-
 
   {
     title <
@@ -3125,7 +3124,11 @@
     param[journal_id] = 10.1055/s-00000159
     comment[years] = 2008-current
   
-  
+   au < exists ; exists ; Radiopraxis 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; Radiopraxis 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Radiopraxis 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Radiopraxis 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; Radiopraxis 2012 ; 2012 ; 2012 >    
   
   }
 
