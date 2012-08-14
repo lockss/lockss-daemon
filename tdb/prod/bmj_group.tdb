@@ -326,21 +326,21 @@
 
     param[base_url] = http://www.bmj.com/
 
-    au < HighWirePressH20Plugin ; down ; 1840-1841 ; BMJ Volume s1-1 (1840-1841) ; s1-1 >
-    au < HighWirePressH20Plugin ; down ; 1841 ; BMJ Volume s1-2 (1841) ; s1-2 >
-    au < HighWirePressH20Plugin ; down ; 1841-1842 ; BMJ Volume s1-3 (1841-1842) ; s1-3 >
-    au < HighWirePressH20Plugin ; down ; 1842 ; BMJ Volume s1-4 (1842) ; s1-4 >
-    au < HighWirePressH20Plugin ; down ; 1842-1843 ; BMJ Volume s1-5 (1842-1843) ; s1-5 >
-    au < HighWirePressH20Plugin ; down ; 1843 ; BMJ Volume s1-6 (1843) ; s1-6 >
-    au < HighWirePressH20Plugin ; down ; 1843-1844 ; BMJ Volume s1-7 (1843-1844) ; s1-7 >
-    au < HighWirePressH20Plugin ; down ; 1844 ; BMJ Volume s1-8 (1844) ; s1-8 >
-    au < HighWirePressH20Plugin ; down ; 1845 ; BMJ Volume s1-9 (1845) ; s1-9 >
-    au < HighWirePressH20Plugin ; down ; 1846 ; BMJ Volume s1-10 (1846) ; s1-10 >
-    au < HighWirePressH20Plugin ; down ; 1847 ; BMJ Volume s1-11 (1847) ; s1-11 >
-    au < HighWirePressH20Plugin ; down ; 1848 ; BMJ Volume s1-12 (1848) ; s1-12 >
-    au < HighWirePressH20Plugin ; down ; 1849 ; BMJ Volume s1-13 (1849) ; s1-13 >
-    au < HighWirePressH20Plugin ; down ; 1850 ; BMJ Volume s1-14 (1850) ; s1-14 >
-    au < HighWirePressH20Plugin ; down ; 1851 ; BMJ Volume s1-15 (1851) ; s1-15 >
+    au < HighWirePressH20Plugin ; exists ; 1840-1841 ; BMJ Volume s1-1 (1840-1841) ; s1-1 >
+    au < HighWirePressH20Plugin ; exists ; 1841 ; BMJ Volume s1-2 (1841) ; s1-2 >
+    au < HighWirePressH20Plugin ; exists ; 1841-1842 ; BMJ Volume s1-3 (1841-1842) ; s1-3 >
+    au < HighWirePressH20Plugin ; exists ; 1842 ; BMJ Volume s1-4 (1842) ; s1-4 >
+    au < HighWirePressH20Plugin ; exists ; 1842-1843 ; BMJ Volume s1-5 (1842-1843) ; s1-5 >
+    au < HighWirePressH20Plugin ; exists ; 1843 ; BMJ Volume s1-6 (1843) ; s1-6 >
+    au < HighWirePressH20Plugin ; exists ; 1843-1844 ; BMJ Volume s1-7 (1843-1844) ; s1-7 >
+    au < HighWirePressH20Plugin ; exists ; 1844 ; BMJ Volume s1-8 (1844) ; s1-8 >
+    au < HighWirePressH20Plugin ; exists ; 1845 ; BMJ Volume s1-9 (1845) ; s1-9 >
+    au < HighWirePressH20Plugin ; exists ; 1846 ; BMJ Volume s1-10 (1846) ; s1-10 >
+    au < HighWirePressH20Plugin ; exists ; 1847 ; BMJ Volume s1-11 (1847) ; s1-11 >
+    au < HighWirePressH20Plugin ; exists ; 1848 ; BMJ Volume s1-12 (1848) ; s1-12 >
+    au < HighWirePressH20Plugin ; exists ; 1849 ; BMJ Volume s1-13 (1849) ; s1-13 >
+    au < HighWirePressH20Plugin ; exists ; 1850 ; BMJ Volume s1-14 (1850) ; s1-14 >
+    au < HighWirePressH20Plugin ; exists ; 1851 ; BMJ Volume s1-15 (1851) ; s1-15 >
     au < HighWirePressH20Plugin ; exists ; 1852 ; BMJ Volume s1-16 (1852) ; s1-16 >
     au < HighWirePressH20Plugin ; exists ; 1849 ; BMJ Volume s2-1 (1849) ; s2-1 >
     au < HighWirePressH20Plugin ; exists ; 1850 ; BMJ Volume s2-2 (1850) ; s2-2 >
@@ -353,69 +353,69 @@
     au < HighWirePressH20Plugin ; exists ; 1857-1960 ; BMJ Volume s4-1 (1857-1960) ; s4-1 >
     au < HighWirePressH20Plugin ; exists ; 1861-1979 ; BMJ Volume 1 (1861-1979, January-June) ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1861-1979 ; BMJ Volume 2 (1861-1979, July-December) ; 2 >
-    au < HighWirePressH20Plugin ; down ; 1980 ; BMJ Volume 280 ; 280 >
-    au < HighWirePressH20Plugin ; down ; 1980 ; BMJ Volume 281 ; 281 >
-    au < HighWirePressH20Plugin ; down ; 1981 ; BMJ Volume 282 ; 282 >
-    au < HighWirePressH20Plugin ; down ; 1981 ; BMJ Volume 283 ; 283 >
-    au < HighWirePressH20Plugin ; down ; 1982 ; BMJ Volume 284 ; 284 >
-    au < HighWirePressH20Plugin ; down ; 1982 ; BMJ Volume 285 ; 285 >
-    au < HighWirePressH20Plugin ; down ; 1983 ; BMJ Volume 286 ; 286 >
-    au < HighWirePressH20Plugin ; down ; 1983 ; BMJ Volume 287 ; 287 >
-    au < HighWirePressH20Plugin ; down ; 1984 ; BMJ Volume 288 ; 288 >
-    au < HighWirePressH20Plugin ; notReady ; 1984 ; BMJ Volume 289 ; 289 >
-    au < HighWirePressH20Plugin ; down ; 1985 ; BMJ Volume 290 ; 290 >
-    au < HighWirePressH20Plugin ; down ; 1985 ; BMJ Volume 291 ; 291 >
-    au < HighWirePressH20Plugin ; down ; 1986 ; BMJ Volume 292 ; 292 >
-    au < HighWirePressH20Plugin ; down ; 1986 ; BMJ Volume 293 ; 293 >
-    au < HighWirePressH20Plugin ; down ; 1987 ; BMJ Volume 294 ; 294 >
-    au < HighWirePressH20Plugin ; down ; 1987 ; BMJ Volume 295 ; 295 >
-    au < HighWirePressH20Plugin ; down ; 1988 ; BMJ Volume 296 ; 296 >
-    au < HighWirePressH20Plugin ; down ; 1988 ; BMJ Volume 297 ; 297 >
-    au < HighWirePressH20Plugin ; down ; 1989 ; BMJ Volume 298 ; 298 >
-    au < HighWirePressH20Plugin ; down ; 1989 ; BMJ Volume 299 ; 299 >
-    au < HighWirePressH20Plugin ; down ; 1990 ; BMJ Volume 300 ; 300 >
-    au < HighWirePressH20Plugin ; down ; 1990 ; BMJ Volume 301 ; 301 >
-    au < HighWirePressH20Plugin ; down ; 1991 ; BMJ Volume 302 ; 302 >
-    au < HighWirePressH20Plugin ; down ; 1991 ; BMJ Volume 303 ; 303 >
-    au < HighWirePressH20Plugin ; down ; 1992 ; BMJ Volume 304 ; 304 >
-    au < HighWirePressH20Plugin ; down ; 1992 ; BMJ Volume 305 ; 305 >
-    au < HighWirePressH20Plugin ; down ; 1993 ; BMJ Volume 306 ; 306 >
-    au < HighWirePressH20Plugin ; down ; 1993 ; BMJ Volume 307 ; 307 >
-    au < HighWirePressH20Plugin ; down ; 1994 ; BMJ Volume 308 ; 308 >
-    au < HighWirePressH20Plugin ; down ; 1994 ; BMJ Volume 309 ; 309 >
-    au < HighWirePressH20Plugin ; down ; 1995 ; BMJ Volume 310 ; 310 >
-    au < HighWirePressH20Plugin ; down ; 1995 ; BMJ Volume 311 ; 311 >
-    au < HighWirePressH20Plugin ; down ; 1996 ; BMJ Volume 312 ; 312 >
-    au < HighWirePressH20Plugin ; down ; 1996 ; BMJ Volume 313 ; 313 >
-    au < HighWirePressH20Plugin ; down ; 1997 ; BMJ Volume 314 ; 314 >
-    au < HighWirePressH20Plugin ; down ; 1997 ; BMJ Volume 315 ; 315 >
-    au < HighWirePressH20Plugin ; down ; 1998 ; BMJ Volume 316 ; 316 >
-    au < HighWirePressH20Plugin ; down ; 1998 ; BMJ Volume 317 ; 317 >
-    au < HighWirePressH20Plugin ; down ; 1999 ; BMJ Volume 318 ; 318 >
-    au < HighWirePressH20Plugin ; down ; 1999 ; BMJ Volume 319 ; 319 >
-    au < HighWirePressH20Plugin ; down ; 2000 ; BMJ Volume 320 ; 320 >
-    au < HighWirePressH20Plugin ; down ; 2000 ; BMJ Volume 321 ; 321 >
-    au < HighWirePressH20Plugin ; down ; 2001 ; BMJ Volume 322 ; 322 >
-    au < HighWirePressH20Plugin ; notReady ; 2001 ; BMJ Volume 323 ; 323 >
-    au < HighWirePressH20Plugin ; down ; 2002 ; BMJ Volume 324 ; 324 >
-    au < HighWirePressH20Plugin ; down ; 2002 ; BMJ Volume 325 ; 325 >
-    au < HighWirePressH20Plugin ; notReady ; 2003 ; BMJ Volume 326 ; 326 >
-    au < HighWirePressH20Plugin ; down ; 2003 ; BMJ Volume 327 ; 327 >
-    au < HighWirePressH20Plugin ; down ; 2004 ; BMJ Volume 328 ; 328 >
-    au < HighWirePressH20Plugin ; down ; 2004 ; BMJ Volume 329 ; 329 >
-    au < HighWirePressH20Plugin ; down ; 2005 ; BMJ Volume 330 ; 330 >
-    au < HighWirePressH20Plugin ; down ; 2005 ; BMJ Volume 331 ; 331 >
-    au < HighWirePressH20Plugin ; down ; 2006 ; BMJ Volume 332 ; 332 >
-    au < HighWirePressH20Plugin ; down ; 2006 ; BMJ Volume 333 ; 333 >
-    au < HighWirePressH20Plugin ; down ; 2007 ; BMJ Volume 334 ; 334 >
-    au < HighWirePressH20Plugin ; notReady ; 2007 ; BMJ Volume 335 ; 335 >
-    au < HighWirePressH20Plugin ; down ; 2008 ; BMJ Volume 336 ; 336 >
-    au < HighWirePressH20Plugin ; down ; 2008 ; BMJ Volume 337 ; 337 >
-    au < HighWirePressH20Plugin ; notReady ; 2009 ; BMJ Volume 338 ; 338 >
-    au < HighWirePressH20Plugin ; notReady ; 2009 ; BMJ Volume 339 ; 339 >
-    au < HighWirePressH20Plugin ; down ; 2010 ; BMJ Volume 340 ; 340 >
-    au < HighWirePressH20Plugin ; down ; 2010 ; BMJ Volume 341 ; 341 >
-    au < HighWirePressH20Plugin ; down ; 2011 ; BMJ Volume 342 ; 342 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; BMJ Volume 280 ; 280 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; BMJ Volume 281 ; 281 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; BMJ Volume 282 ; 282 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; BMJ Volume 283 ; 283 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; BMJ Volume 284 ; 284 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; BMJ Volume 285 ; 285 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; BMJ Volume 286 ; 286 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; BMJ Volume 287 ; 287 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; BMJ Volume 288 ; 288 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; BMJ Volume 289 ; 289 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; BMJ Volume 290 ; 290 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; BMJ Volume 291 ; 291 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; BMJ Volume 292 ; 292 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; BMJ Volume 293 ; 293 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; BMJ Volume 294 ; 294 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; BMJ Volume 295 ; 295 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; BMJ Volume 296 ; 296 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; BMJ Volume 297 ; 297 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; BMJ Volume 298 ; 298 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; BMJ Volume 299 ; 299 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; BMJ Volume 300 ; 300 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; BMJ Volume 301 ; 301 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; BMJ Volume 302 ; 302 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; BMJ Volume 303 ; 303 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; BMJ Volume 304 ; 304 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; BMJ Volume 305 ; 305 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; BMJ Volume 306 ; 306 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; BMJ Volume 307 ; 307 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; BMJ Volume 308 ; 308 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; BMJ Volume 309 ; 309 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; BMJ Volume 310 ; 310 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; BMJ Volume 311 ; 311 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; BMJ Volume 312 ; 312 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; BMJ Volume 313 ; 313 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; BMJ Volume 314 ; 314 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; BMJ Volume 315 ; 315 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; BMJ Volume 316 ; 316 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; BMJ Volume 317 ; 317 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; BMJ Volume 318 ; 318 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; BMJ Volume 319 ; 319 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; BMJ Volume 320 ; 320 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; BMJ Volume 321 ; 321 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; BMJ Volume 322 ; 322 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; BMJ Volume 323 ; 323 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; BMJ Volume 324 ; 324 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; BMJ Volume 325 ; 325 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; BMJ Volume 326 ; 326 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; BMJ Volume 327 ; 327 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; BMJ Volume 328 ; 328 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; BMJ Volume 329 ; 329 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; BMJ Volume 330 ; 330 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; BMJ Volume 331 ; 331 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; BMJ Volume 332 ; 332 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; BMJ Volume 333 ; 333 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; BMJ Volume 334 ; 334 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; BMJ Volume 335 ; 335 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; BMJ Volume 336 ; 336 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; BMJ Volume 337 ; 337 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; BMJ Volume 338 ; 338 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; BMJ Volume 339 ; 339 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; BMJ Volume 340 ; 340 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; BMJ Volume 341 ; 341 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; BMJ Volume 342 ; 342 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; BMJ Volume 343 ; 343 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; BMJ Volume 344 ; 344 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; BMJ Volume 345 ; 345 >
