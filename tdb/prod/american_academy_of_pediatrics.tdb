@@ -167,8 +167,8 @@
       param[base_url] = http://pediatrics.aappublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1948 ; Pediatrics Volume 1 ; 1 >
-      au < testing ; 1948 ; Pediatrics Volume 2 ; 2 >
+      au < ready ; 1948 ; Pediatrics Volume 1 ; 1 >
+      au < ready ; 1948 ; Pediatrics Volume 2 ; 2 >
       au < testing ; 1949 ; Pediatrics Volume 3 ; 3 >
       au < testing ; 1949 ; Pediatrics Volume 4 ; 4 >
       au < testing ; 1950 ; Pediatrics Volume 5 ; 5 >
