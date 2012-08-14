@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.256 2012-08-13 20:47:28 barry409 Exp $
+ * $Id: PollManager.java,v 1.257 2012-08-14 21:27:13 barry409 Exp $
  */
 
 /*
@@ -113,6 +113,12 @@ public class PollManager
     org.lockss.poller.v3.V3PollFactory.PARAM_ENABLE_V3_VOTER;
   public static final boolean DEFAULT_ENABLE_V3_VOTER =
     org.lockss.poller.v3.V3PollFactory.DEFAULT_ENABLE_V3_VOTER;
+  
+  public static final String PARAM_ENABLE_V3_REPAIRER =
+    org.lockss.poller.v3.V3PollFactory.PARAM_ENABLE_V3_REPAIRER;
+  public static final boolean DEFAULT_ENABLE_V3_REPAIRER =
+    org.lockss.poller.v3.V3PollFactory.DEFAULT_ENABLE_V3_REPAIRER;
+  
 
   /** The classes of AUs for which polls should be run.  May be a singleton
    * or list of:
@@ -276,7 +282,7 @@ public class PollManager
      */
     private FixedTimedMap theRecentPolls =
       new FixedTimedMap(DEFAULT_RECENT_EXPIRATION);
-    
+
     private Object pollMapLock = thePolls;
 
     /** Set the time after which recent polls will expire. */
@@ -300,7 +306,9 @@ public class PollManager
 	// todo(bhayes): Should also check under the lock that there's
 	// no V3Poller with this AU [or perhaps AUID] in thePolls;
 	// startPoll checks isPollRunning(), but outside the lock.
-	thePolls.put(poll.getKey(), new PollManagerEntry(poll));
+	if (!(poll instanceof V3Repairer)) {
+	  thePolls.put(poll.getKey(), new PollManagerEntry(poll));
+	}
       }
     }
 
@@ -667,6 +675,11 @@ public class PollManager
   private boolean enablePollers = DEFAULT_ENABLE_V3_POLLER;
   // If true, restore V3 Voters
   private boolean enableVoters = DEFAULT_ENABLE_V3_VOTER;
+
+  // If true, create V3 Repairers
+  private boolean enableRepairers = DEFAULT_ENABLE_V3_REPAIRER;
+  // If true, use V3 Repairers even when there are V3 Voters
+  private boolean preferRepairers = DEFAULT_PREFER_V3_REPAIRER;
 
   private List<String> autoPollAuClassess = DEFAULT_AUTO_POLL_AUS;
   
@@ -1297,6 +1310,21 @@ public class PollManager
 	return;
       }
     }
+    if (enableRepairers && V3Repairer.canStart(msg)) {
+      if (pme == null || preferRepairers) {
+	// todo(bhayes): The control flow here is awful. 
+
+	// Try to do the repair without using a V3Voter, but if it
+	// fails, fall through to the code below, to use a
+	// V3Voter. This will be inappropriate if or when voters are
+	// unable to handle repairs.
+	// todo(bhayes): The current lifetime of a V3Repairer is "one
+	// repair". This needs to be refined.
+	if (handleRepair(msg)) {
+	  return;
+	}
+      }
+    }
     BasePoll p = findPoll(msg);
     if (p != null) {
       p.setMessage(msg);
@@ -1346,6 +1374,31 @@ public class PollManager
   }
 
   /**
+   * Respond to a repair request without calling on an existing V3Voter.
+   * @return true iff the request was consumed; might or might not
+   * have been a successful repair.
+   */
+  boolean handleRepair(LcapMessage msg) throws ProtocolException {
+    // todo(bhayes): If we are prefering V3Repairer, we can end up
+    // with a V3Voter and a V3Repairer, both.
+    String key = msg.getKey();
+    // for now, always honor the request
+    
+    // todo(bhayes): the LcapMessage has a poll spec that includes
+    // only the single URL, so the V3Repairer isn't useful for
+    // anything except this one repair.
+
+    BasePoll repairer = makeV3Repairer((V3LcapMessage)msg);
+    if (repairer == null) {
+      theLog.debug("Failed to make repairer for poll "+key);
+      return false;
+    }
+
+    repairer.receiveMessage(msg);
+    return true;
+  }
+
+  /**
    * make a new poll of the type and version defined by the incoming message.
    * @param msg <code>Message</code> to use for
    * @return a new Poll object of the required type, or null if we don't
@@ -1360,6 +1413,10 @@ public class PollManager
     if (msg instanceof V1LcapMessage) {
       return makeV1Poll((V1LcapMessage)msg);
     } else if (msg instanceof V3LcapMessage) {
+      if (enableRepairers &&
+	  V3Repairer.canStart(msg)) {
+	return makeV3Repairer((V3LcapMessage)msg);
+      }
       return makeV3Voter((V3LcapMessage)msg);
     } else {
       throw new ProtocolException("Unexpected LCAP Message type.");
@@ -1384,6 +1441,27 @@ public class PollManager
 				  " made unexpected kind of poll: "+poll);
     }
     processNewPoll(poll, msg);
+    return poll;
+  }
+
+  /**
+   * Make a V3Repairer.
+   */
+  private BasePoll makeV3Repairer(V3LcapMessage msg) throws ProtocolException {
+    PollSpec spec = new PollSpec(msg);
+    long duration = msg.getDuration();
+    PeerIdentity orig = msg.getOriginatorId();
+    String hashAlg = msg.getHashAlgorithm();
+
+    theLog.debug("Making V3Repairer from: " + spec);
+    PollFactory pollFact = getPollFactory(spec);
+    BasePoll poll = pollFact.createPoll(spec, getDaemon(),
+					orig, duration, hashAlg, msg);
+    if (poll != null && !(poll instanceof V3Repairer)) {
+      throw new ProtocolException("msg "+msg+
+				  " made unexpected kind of poll: "+poll);
+    }
+    processNewV3Repairer(poll, msg);
     return poll;
   }
 
@@ -1445,6 +1523,13 @@ public class PollManager
       // started; PollManager will be ready to handleIncomingMessage
       // from the addPoll.
       entryManager.addPoll(poll);
+      poll.startPoll();
+    }
+  }
+
+  private void processNewV3Repairer(BasePoll poll, LcapMessage msg) {
+    if (poll != null) {
+      poll.setMessage(msg);
       poll.startPoll();
     }
   }
@@ -1622,6 +1707,12 @@ public class PollManager
       
       enableVoters =
         newConfig.getBoolean(PARAM_ENABLE_V3_VOTER, DEFAULT_ENABLE_V3_VOTER);
+      
+      enableRepairers =
+        newConfig.getBoolean(PARAM_ENABLE_V3_REPAIRER, DEFAULT_ENABLE_V3_REPAIRER);
+
+      preferRepairers =
+        newConfig.getBoolean(PARAM_PREFER_V3_REPAIRER, DEFAULT_PREFER_V3_REPAIRER);
       
       autoPollAuClassess = newConfig.getList(PARAM_AUTO_POLL_AUS,
 					     DEFAULT_AUTO_POLL_AUS);

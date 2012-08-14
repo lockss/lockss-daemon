@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.75 2012-08-13 20:47:28 barry409 Exp $
+ * $Id: V3Voter.java,v 1.76 2012-08-14 21:27:13 barry409 Exp $
  */
 
 /*
@@ -581,6 +581,10 @@ public class V3Voter extends BasePoll {
       }
     }, this);
     
+    resumeOrStartStateMachine();
+  }
+
+  protected void resumeOrStartStateMachine() {
     // Resume or start the state machine running.
     if (isAsynch) {
       if (continuedPoll) {
@@ -1223,7 +1227,7 @@ public class V3Voter extends BasePoll {
     stateMachine = null;
   }
 
-  private PsmMachine makeMachine() {
+  protected PsmMachine makeMachine() {
     try {
       PsmMachine.Factory fact = VoterStateMachineFactory.class.newInstance();
       return fact.getMachine(getVoterActionsClass());
