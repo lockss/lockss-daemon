@@ -2804,11 +2804,16 @@
     param[journal_id] = 10.1055/s-00000128
     comment[years] = 2005-current
   
-  
+   au < exists ; exists ; physioscience 2005 ; 2005 ; 2005 >      
+   au < exists ; exists ; physioscience 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; physioscience 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; physioscience 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; physioscience 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; physioscience 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; physioscience 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; physioscience 2012 ; 2012 ; 2012 >        
   
   }
-
- 
 
   {
     title <
@@ -2820,11 +2825,21 @@
     param[journal_id] = 10.1055/s-00000117
     comment[years] = 2000-current
   
-  
+   au < exists ; exists ; PiD - Psychotherapie im Dialog 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; PiD - Psychotherapie im Dialog 2001 ; 2001 ; 2001 >     
+   au < exists ; exists ; PiD - Psychotherapie im Dialog 2002 ; 2002 ; 2002 >      
+   au < exists ; exists ; PiD - Psychotherapie im Dialog 2003 ; 2003 ; 2003 >     
+   au < exists ; exists ; PiD - Psychotherapie im Dialog 2004 ; 2004 ; 2004 >     
+   au < exists ; exists ; PiD - Psychotherapie im Dialog 2005 ; 2005 ; 2005 >      
+   au < exists ; exists ; PiD - Psychotherapie im Dialog 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; PiD - Psychotherapie im Dialog 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; PiD - Psychotherapie im Dialog 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; PiD - Psychotherapie im Dialog 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; PiD - Psychotherapie im Dialog 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; PiD - Psychotherapie im Dialog 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; PiD - Psychotherapie im Dialog 2012 ; 2012 ; 2012 >        
   
   }
-
-
 
   {
   
@@ -2837,11 +2852,23 @@
     param[journal_id] = 10.1055/s-00000057
     comment[years] = 1999-2007
   
-  
+   au < exists ; exists ; Plant Biology 1999 ; 1999 ; 1999 >      
+   au < exists ; exists ; Plant Biology 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; Plant Biology 2001 ; 2001 ; 2001 >     
+   au < exists ; exists ; Plant Biology 2002 ; 2002 ; 2002 >      
+   au < exists ; exists ; Plant Biology 2003 ; 2003 ; 2003 >     
+   au < exists ; exists ; Plant Biology 2004 ; 2004 ; 2004 >     
+   au < exists ; exists ; Plant Biology 2005 ; 2005 ; 2005 >      
+   au < exists ; exists ; Plant Biology 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Plant Biology 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; Plant Biology 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; Plant Biology 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Plant Biology 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Plant Biology 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; Plant Biology 2012 ; 2012 ; 2012 >      
   
   }
 
-  
   {
   
     title < 
