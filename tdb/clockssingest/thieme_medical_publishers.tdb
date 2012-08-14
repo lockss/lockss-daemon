@@ -3771,6 +3771,33 @@
     param[journal_id] = 10.1055/s-00000081
     comment[years] = 1987-current
     
+   au < exists ; exists ; Sportverletzung - Sportschaden 1987 ; 1987 ; 1987 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 1988 ; 1988 ; 1988 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 1989 ; 1989 ; 1989 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 1990 ; 1990 ; 1990 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 1991 ; 1991 ; 1991 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 1992 ; 1992 ; 1992 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 1993 ; 1993 ; 1993 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 1994 ; 1994 ; 1994 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 1995 ; 1995 ; 1995 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 1996 ; 1996 ; 1996 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 1997 ; 1997 ; 1997 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 1998 ; 1998 ; 1998 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 1999 ; 1999 ; 1999 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; Sportverletzung - Sportschaden 2001 ; 2001 ; 2001 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 2002 ; 2002 ; 2002 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 2003 ; 2003 ; 2003 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 2004 ; 2004 ; 2004 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 2005 ; 2005 ; 2005 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 2007 ; 2007 ; 2007 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 2008 ; 2008 ; 2008 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 2009 ; 2009 ; 2009 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 2010 ; 2010 ; 2010 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 2011 ; 2011 ; 2011 > 
+   au < exists ; exists ; Sportverletzung - Sportschaden 2012 ; 2012 ; 2012 >    
+    
    }
   
    {
@@ -3783,6 +3810,20 @@
     >
     param[journal_id] = 10.1055/s-00000082
     comment[years] = 2000-current
+    
+   au < exists ; exists ; Sprache Stimme Gehör 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; Sprache Stimme Gehör 2001 ; 2001 ; 2001 > 
+   au < exists ; exists ; Sprache Stimme Gehör 2002 ; 2002 ; 2002 > 
+   au < exists ; exists ; Sprache Stimme Gehör 2003 ; 2003 ; 2003 > 
+   au < exists ; exists ; Sprache Stimme Gehör 2004 ; 2004 ; 2004 > 
+   au < exists ; exists ; Sprache Stimme Gehör 2005 ; 2005 ; 2005 > 
+   au < exists ; exists ; Sprache Stimme Gehör 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Sprache Stimme Gehör 2007 ; 2007 ; 2007 > 
+   au < exists ; exists ; Sprache Stimme Gehör 2008 ; 2008 ; 2008 > 
+   au < exists ; exists ; Sprache Stimme Gehör 2009 ; 2009 ; 2009 > 
+   au < exists ; exists ; Sprache Stimme Gehör 2010 ; 2010 ; 2010 > 
+   au < exists ; exists ; Sprache Stimme Gehör 2011 ; 2011 ; 2011 > 
+   au < exists ; exists ; Sprache Stimme Gehör 2012 ; 2012 ; 2012 >    
     
   }
   
@@ -3797,6 +3838,20 @@
     param[journal_id] = 10.1055/s-00000115
     comment[years] = 2000-current
     
+   au < exists ; exists ; Suchttherapie 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; Suchttherapie 2001 ; 2001 ; 2001 > 
+   au < exists ; exists ; Suchttherapie 2002 ; 2002 ; 2002 > 
+   au < exists ; exists ; Suchttherapie 2003 ; 2003 ; 2003 > 
+   au < exists ; exists ; Suchttherapie 2004 ; 2004 ; 2004 > 
+   au < exists ; exists ; Suchttherapie 2005 ; 2005 ; 2005 > 
+   au < exists ; exists ; Suchttherapie 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Suchttherapie 2007 ; 2007 ; 2007 > 
+   au < exists ; exists ; Suchttherapie 2008 ; 2008 ; 2008 > 
+   au < exists ; exists ; Suchttherapie 2009 ; 2009 ; 2009 > 
+   au < exists ; exists ; Suchttherapie 2010 ; 2010 ; 2010 > 
+   au < exists ; exists ; Suchttherapie 2011 ; 2011 ; 2011 > 
+   au < exists ; exists ; Suchttherapie 2012 ; 2012 ; 2012 >     
+    
   }
   
   {
@@ -3809,6 +3864,16 @@
     >
     param[journal_id] = 10.1055/s-00000131
     comment[years] = 2005-current
+    
+   au < exists ; exists ; SYNFACTS 2005 ; 2005 ; 2005 > 
+   au < exists ; exists ; SYNFACTS 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; SYNFACTS 2007 ; 2007 ; 2007 > 
+   au < exists ; exists ; SYNFACTS 2008 ; 2008 ; 2008 > 
+   au < exists ; exists ; SYNFACTS 2009 ; 2009 ; 2009 > 
+   au < exists ; exists ; SYNFACTS 2010 ; 2010 ; 2010 > 
+   au < exists ; exists ; SYNFACTS 2011 ; 2011 ; 2011 > 
+   au < exists ; exists ; SYNFACTS 2012 ; 2012 ; 2012 >         
+    
   }
   
   {
@@ -3821,6 +3886,31 @@
     >
     param[journal_id] = 10.1055/s-00000083
     comment[years] = 1989-current
+    
+   au < exists ; exists ; SYNLETT 1989 ; 1989 ; 1989 > 
+   au < exists ; exists ; SYNLETT 1990 ; 1990 ; 1990 > 
+   au < exists ; exists ; SYNLETT 1991 ; 1991 ; 1991 > 
+   au < exists ; exists ; SYNLETT 1992 ; 1992 ; 1992 > 
+   au < exists ; exists ; SYNLETT 1993 ; 1993 ; 1993 > 
+   au < exists ; exists ; SYNLETT 1994 ; 1994 ; 1994 > 
+   au < exists ; exists ; SYNLETT 1995 ; 1995 ; 1995 > 
+   au < exists ; exists ; SYNLETT 1996 ; 1996 ; 1996 > 
+   au < exists ; exists ; SYNLETT 1997 ; 1997 ; 1997 > 
+   au < exists ; exists ; SYNLETT 1998 ; 1998 ; 1998 > 
+   au < exists ; exists ; SYNLETT 1999 ; 1999 ; 1999 > 
+   au < exists ; exists ; SYNLETT 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; SYNLETT 2001 ; 2001 ; 2001 > 
+   au < exists ; exists ; SYNLETT 2002 ; 2002 ; 2002 > 
+   au < exists ; exists ; SYNLETT 2003 ; 2003 ; 2003 > 
+   au < exists ; exists ; SYNLETT 2004 ; 2004 ; 2004 > 
+   au < exists ; exists ; SYNLETT 2005 ; 2005 ; 2005 > 
+   au < exists ; exists ; SYNLETT 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; SYNLETT 2007 ; 2007 ; 2007 > 
+   au < exists ; exists ; SYNLETT 2008 ; 2008 ; 2008 > 
+   au < exists ; exists ; SYNLETT 2009 ; 2009 ; 2009 > 
+   au < exists ; exists ; SYNLETT 2010 ; 2010 ; 2010 > 
+   au < exists ; exists ; SYNLETT 2011 ; 2011 ; 2011 > 
+   au < exists ; exists ; SYNLETT 2012 ; 2012 ; 2012 >    
     
   }
   
@@ -3835,6 +3925,31 @@
     param[journal_id] = 10.1055/s-00000084
     comment[years] = 1989-current
     
+   au < exists ; exists ; SYNTHESIS 1989 ; 1989 ; 1989 > 
+   au < exists ; exists ; SYNTHESIS 1990 ; 1990 ; 1990 > 
+   au < exists ; exists ; SYNTHESIS 1991 ; 1991 ; 1991 > 
+   au < exists ; exists ; SYNTHESIS 1992 ; 1992 ; 1992 > 
+   au < exists ; exists ; SYNTHESIS 1993 ; 1993 ; 1993 > 
+   au < exists ; exists ; SYNTHESIS 1994 ; 1994 ; 1994 > 
+   au < exists ; exists ; SYNTHESIS 1995 ; 1995 ; 1995 > 
+   au < exists ; exists ; SYNTHESIS 1996 ; 1996 ; 1996 > 
+   au < exists ; exists ; SYNTHESIS 1997 ; 1997 ; 1997 > 
+   au < exists ; exists ; SYNTHESIS 1998 ; 1998 ; 1998 > 
+   au < exists ; exists ; SYNTHESIS 1999 ; 1999 ; 1999 > 
+   au < exists ; exists ; SYNTHESIS 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; SYNTHESIS 2001 ; 2001 ; 2001 > 
+   au < exists ; exists ; SYNTHESIS 2002 ; 2002 ; 2002 > 
+   au < exists ; exists ; SYNTHESIS 2003 ; 2003 ; 2003 > 
+   au < exists ; exists ; SYNTHESIS 2004 ; 2004 ; 2004 > 
+   au < exists ; exists ; SYNTHESIS 2005 ; 2005 ; 2005 > 
+   au < exists ; exists ; SYNTHESIS 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; SYNTHESIS 2007 ; 2007 ; 2007 > 
+   au < exists ; exists ; SYNTHESIS 2008 ; 2008 ; 2008 > 
+   au < exists ; exists ; SYNTHESIS 2009 ; 2009 ; 2009 > 
+   au < exists ; exists ; SYNTHESIS 2010 ; 2010 ; 2010 > 
+   au < exists ; exists ; SYNTHESIS 2011 ; 2011 ; 2011 > 
+   au < exists ; exists ; SYNTHESIS 2012 ; 2012 ; 2012 >    
+    
   }
   
   {
@@ -3847,6 +3962,17 @@
     >
     param[journal_id] = 10.1055/s-00000156
     comment[years] = 2003-2009
+    
+   au < exists ; exists ; team spiegel 2003 ; 2003 ; 2003 > 
+   au < exists ; exists ; team spiegel 2004 ; 2004 ; 2004 > 
+   au < exists ; exists ; team spiegel 2005 ; 2005 ; 2005 > 
+   au < exists ; exists ; team spiegel 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; team spiegel 2007 ; 2007 ; 2007 > 
+   au < exists ; exists ; team spiegel 2008 ; 2008 ; 2008 > 
+   au < exists ; exists ; team spiegel 2009 ; 2009 ; 2009 > 
+   au < exists ; exists ; team spiegel 2010 ; 2010 ; 2010 > 
+   au < exists ; exists ; team spiegel 2011 ; 2011 ; 2011 > 
+   au < exists ; exists ; team spiegel 2012 ; 2012 ; 2012 >    
     
   }
   
@@ -3861,6 +3987,10 @@
     param[journal_id] = 10.1055/s-00000164
     comment[years] = 2010-current
     
+   au < exists ; exists ; team-konkret 2010 ; 2010 ; 2010 > 
+   au < exists ; exists ; team-konkret 2011 ; 2011 ; 2011 > 
+   au < exists ; exists ; team-konkret 2012 ; 2012 ; 2012 >    
+    
   }
   
   {
@@ -3873,6 +4003,42 @@
     >
    param[journal_id] = 10.1055/s-00000085
    comment[years] = 1979-current 
+   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1979 ; 1979 ; 1979 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1980 ; 1980 ; 1980 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1981 ; 1981 ; 1981 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1982 ; 1982 ; 1982 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1983 ; 1983 ; 1983 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1984 ; 1984 ; 1984 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1985 ; 1985 ; 1985 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1986 ; 1986 ; 1986 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1987 ; 1987 ; 1987 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1988 ; 1988 ; 1988 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1989 ; 1989 ; 1989 >
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1990 ; 1990 ; 1990 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1991 ; 1991 ; 1991 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1992 ; 1992 ; 1992 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1993 ; 1993 ; 1993 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1994 ; 1994 ; 1994 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1995 ; 1995 ; 1995 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1996 ; 1996 ; 1996 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1997 ; 1997 ; 1997 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1998 ; 1998 ; 1998 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 1999 ; 1999 ; 1999 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2000 ; 2000 ; 2000 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2012 ; 2012 ; 2012 >   
+   
   }  
 
   {
@@ -3887,6 +4053,9 @@
     param[journal_id] = 10.1055/s-00000157
     comment[years] = 2008-2009
     
+    au < exists ; exists ; Tierarzthelfer/in konkret 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Tierarzthelfer/in konkret 2009 ; 2009 ; 2009 >      
+    
   }
   
   {
@@ -3899,6 +4068,9 @@
     >
     param[journal_id] = 10.1055/s-00000172
     comment[years] = 2011-current
+    
+    au < exists ; exists ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie 2012 ; 2012 ; 2012 >       
     
   }
   
@@ -3913,6 +4085,20 @@
     param[journal_id] = 10.1055/s-00000088
     comment[years] = 2000-current
     
+    au < exists ; exists ; TumorDiagnostik & Therapie 2000 ; 2000 ; 2000 >   
+    au < exists ; exists ; TumorDiagnostik & Therapie 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; TumorDiagnostik & Therapie 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; TumorDiagnostik & Therapie 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; TumorDiagnostik & Therapie 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; TumorDiagnostik & Therapie 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; TumorDiagnostik & Therapie 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; TumorDiagnostik & Therapie 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; TumorDiagnostik & Therapie 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; TumorDiagnostik & Therapie 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; TumorDiagnostik & Therapie 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; TumorDiagnostik & Therapie 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; TumorDiagnostik & Therapie 2012 ; 2012 ; 2012 >     
+    
   }
   
   {
@@ -3925,6 +4111,40 @@
     >
     param[journal_id] = 10.1055/s-00000089
     comment[years] = 1980-current
+    
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1980 ; 1980 ; 1980 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1981 ; 1981 ; 1981 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1982 ; 1982 ; 1982 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1983 ; 1983 ; 1983 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1984 ; 1984 ; 1984 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1985 ; 1985 ; 1985 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1986 ; 1986 ; 1986 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1987 ; 1987 ; 1987 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1988 ; 1988 ; 1988 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1989 ; 1989 ; 1989 >
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1990 ; 1990 ; 1990 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1991 ; 1991 ; 1991 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1992 ; 1992 ; 1992 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1993 ; 1993 ; 1993 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1994 ; 1994 ; 1994 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1995 ; 1995 ; 1995 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1996 ; 1996 ; 1996 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1997 ; 1997 ; 1997 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1998 ; 1998 ; 1998 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 1999 ; 1999 ; 1999 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2000 ; 2000 ; 2000 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2012 ; 2012 ; 2012 >   
     
   }
   
@@ -3939,6 +4159,17 @@
     param[journal_id] = 10.1055/s-00000154
     comment[years] = 2003-current
     
+    au < exists ; exists ; veterinär spiegel 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; veterinär spiegel 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; veterinär spiegel 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; veterinär spiegel 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; veterinär spiegel 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; veterinär spiegel 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; veterinär spiegel 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; veterinär spiegel 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; veterinär spiegel 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; veterinär spiegel 2012 ; 2012 ; 2012 >     
+    
   }
   
   {
@@ -3952,6 +4183,12 @@
     param[journal_id] = 10.1055/s-00000158
     comment[years] = 2007-current
     
+    au < exists ; exists ; Via medici 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Via medici 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Via medici 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Via medici 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Via medici 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Via medici 2012 ; 2012 ; 2012 >    
   }
   
   {
@@ -3964,6 +4201,20 @@
     >
     param[journal_id] = 10.1055/s-00000091
     comment[years] = 2000-2007
+    
+    au < exists ; exists ; Viszeralchirurgie 2000 ; 2000 ; 2000 >   
+    au < exists ; exists ; Viszeralchirurgie 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; Viszeralchirurgie 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; Viszeralchirurgie 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; Viszeralchirurgie 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Viszeralchirurgie 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Viszeralchirurgie 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Viszeralchirurgie 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Viszeralchirurgie 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Viszeralchirurgie 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Viszeralchirurgie 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Viszeralchirurgie 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Viszeralchirurgie 2012 ; 2012 ; 2012 >     
     
   }
   
@@ -3978,6 +4229,13 @@
     param[journal_id] = 10.1055/s-00000150
     comment[years] = 2007-current
     
+    au < exists ; exists ; Zahnmedizin up2date 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Zahnmedizin up2date 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Zahnmedizin up2date 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Zahnmedizin up2date 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Zahnmedizin up2date 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Zahnmedizin up2date 2012 ; 2012 ; 2012 >     
+    
   }
   
   {
@@ -3990,6 +4248,13 @@
     >
     param[journal_id] = 10.1055/s-00000149
     comment[years] = 2007-current
+    
+    au < exists ; exists ; Zeitschrift für Ganzheitliche Tiermedizin 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Zeitschrift für Ganzheitliche Tiermedizin 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Zeitschrift für Ganzheitliche Tiermedizin 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Zeitschrift für Ganzheitliche Tiermedizin 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Zeitschrift für Ganzheitliche Tiermedizin 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Zeitschrift für Ganzheitliche Tiermedizin 2012 ; 2012 ; 2012 >    
     
   }
   
@@ -4004,6 +4269,20 @@
     param[journal_id] = 10.1055/s-00000094
     comment[years] = 2000-current
     
+    au < exists ; exists ; Zeitschrift für Gastroenterologie 2000 ; 2000 ; 2000 >   
+    au < exists ; exists ; Zeitschrift für Gastroenterologie 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; Zeitschrift für Gastroenterologie 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; Zeitschrift für Gastroenterologie 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; Zeitschrift für Gastroenterologie 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Zeitschrift für Gastroenterologie 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Zeitschrift für Gastroenterologie 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Zeitschrift für Gastroenterologie 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Zeitschrift für Gastroenterologie 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Zeitschrift für Gastroenterologie 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Zeitschrift für Gastroenterologie 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Zeitschrift für Gastroenterologie 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Zeitschrift für Gastroenterologie 2012 ; 2012 ; 2012 >     
+    
   }
 
   {
@@ -4017,6 +4296,20 @@
     param[journal_id] = 10.1055/s-00000095
     comment[years] = 2000-current
     
+    au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2000 ; 2000 ; 2000 >   
+    au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2001 ; 2001 ; 2001 >   
+    au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2002 ; 2002 ; 2002 >   
+    au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2003 ; 2003 ; 2003 >   
+    au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2004 ; 2004 ; 2004 >   
+    au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2005 ; 2005 ; 2005 >   
+    au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2006 ; 2006 ; 2006 >   
+    au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2007 ; 2007 ; 2007 >   
+    au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2008 ; 2008 ; 2008 >   
+    au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2009 ; 2009 ; 2009 >   
+    au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2010 ; 2010 ; 2010 >   
+    au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2011 ; 2011 ; 2011 >   
+    au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2012 ; 2012 ; 2012 >  
+       
   }
   
   {
@@ -4031,7 +4324,62 @@
     comment[years] = 1957-current
     comment[0] = includes Zeitschrift für klassische Homöopathie und Arzneipotenzierung and Acta homoeopathica
     
-    
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1957 ; 1957 ; 1957 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1958 ; 1958 ; 1958 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1959 ; 1959 ; 1959 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1960 ; 1960 ; 1960 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1961 ; 1961 ; 1961 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1962 ; 1962 ; 1962 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1963 ; 1963 ; 1963 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1964 ; 1964 ; 1964 >    
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1965 ; 1965 ; 1965 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1966 ; 1966 ; 1966 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1967 ; 1967 ; 1967 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1968 ; 1968 ; 1968 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1969 ; 1969 ; 1969 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1970 ; 1970 ; 1970 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1971 ; 1971 ; 1971 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1972 ; 1972 ; 1972 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1973 ; 1973 ; 1973 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1974 ; 1974 ; 1974 >    
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1975 ; 1975 ; 1975 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1976 ; 1976 ; 1976 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1977 ; 1977 ; 1977 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1978 ; 1978 ; 1978 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1979 ; 1979 ; 1979 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1980 ; 1980 ; 1980 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1981 ; 1981 ; 1981 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1982 ; 1982 ; 1982 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1983 ; 1983 ; 1983 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1984 ; 1984 ; 1984 >    
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1985 ; 1985 ; 1985 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1986 ; 1986 ; 1986 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1987 ; 1987 ; 1987 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1988 ; 1988 ; 1988 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1989 ; 1989 ; 1989 >   
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1990 ; 1990 ; 1990 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1991 ; 1991 ; 1991 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1992 ; 1992 ; 1992 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1993 ; 1993 ; 1993 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1994 ; 1994 ; 1994 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1995 ; 1995 ; 1995 >     
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1996 ; 1996 ; 1996 >      
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1997 ; 1997 ; 1997 >     
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1998 ; 1998 ; 1998 >     
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 1999 ; 1999 ; 1999 >      
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2001 ; 2001 ; 2001 >     
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2002 ; 2002 ; 2002 >      
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2003 ; 2003 ; 2003 >     
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2004 ; 2004 ; 2004 >     
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2005 ; 2005 ; 2005 >      
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2006 ; 2006 ; 2006 > 
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2007 ; 2007 ; 2007 >     
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2008 ; 2008 ; 2008 >      
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2009 ; 2009 ; 2009 >     
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2010 ; 2010 ; 2010 >     
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2011 ; 2011 ; 2011 >      
+   au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2012 ; 2012 ; 2012 >    
     
   }
   
