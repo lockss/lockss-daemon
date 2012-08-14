@@ -770,7 +770,6 @@
 
     param[journal_issn] = 1757-899X
     comment[param] = eissn preferred
-    comment[au_start_url] = redirects to issue toc, missing permission statement
 
     au < manifest ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 1 ; 1 > 
     au < manifest ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 2 ; 2 > 
@@ -1546,7 +1545,7 @@
     au < manifest ; exists ; 2005 ; Journal of Physics: Condensed Matter Volume 17 ; 17 > 
     au < manifest ; exists ; 2006 ; Journal of Physics: Condensed Matter Volume 18 ; 18 > 
     au < manifest ; exists ; 2007 ; Journal of Physics: Condensed Matter Volume 19 ; 19 > 
-    au < notReady ; exists ; 2008 ; Journal of Physics: Condensed Matter Volume 20 ; 20 > 
+    au < manifest ; exists ; 2008 ; Journal of Physics: Condensed Matter Volume 20 ; 20 > 
     au < released ; crawling ; 2009 ; Journal of Physics: Condensed Matter Volume 21 ; 21 > 
     au < released ; crawling ; 2010 ; Journal of Physics: Condensed Matter Volume 22 ; 22 > 
     au < released ; crawling ; 2011 ; Journal of Physics: Condensed Matter Volume 23 ; 23 > 
