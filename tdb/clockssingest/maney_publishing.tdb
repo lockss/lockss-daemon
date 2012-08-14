@@ -119,7 +119,7 @@
     au < manifest ; exists ; 2008 ; Ambix Volume 55 ; 55 >
     au < manifest ; exists ; 2009 ; Ambix Volume 56 ; 56 >
     au < crawling ; exists ; 2010 ; Ambix Volume 57 ; 57 >
-    au < crawling ; exists ; 2011 ; Ambix Volume 58 ; 58 >
+    au < testing ; exists ; 2011 ; Ambix Volume 58 ; 58 >
     au < crawling ; exists ; 2012 ; Ambix Volume 59 ; 59 >
 
   }
@@ -254,7 +254,7 @@
     au < manifest ; exists ; 2008 ; Arms & Armour Volume 5 ; 5 > 
     au < manifest ; exists ; 2009 ; Arms & Armour Volume 6 ; 6 > 
     au < crawling ; exists ; 2010 ; Arms & Armour Volume 7 ; 7 > 
-    au < crawling ; exists ; 2011 ; Arms & Armour Volume 8 ; 8 > 
+    au < testing ; exists ; 2011 ; Arms & Armour Volume 8 ; 8 > 
     au < crawling ; exists ; 2012 ; Arms & Armour Volume 9 ; 9 > 
 
   }
@@ -330,7 +330,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[0] = changing name to International Journal of Developmental Disabilities (IJDD) in 2012
     
-    au < crawling ; exists ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
+    au < testing ; exists ; 2011 ; The British Journal of Development Disabilities Volume 57 ; 57 >
 
   }
 
@@ -394,7 +394,7 @@
     au < manifest ; exists ; 2008 ; Bronte Studies Volume 33 ; 33 > 
     au < manifest ; exists ; 2009 ; Bronte Studies Volume 34 ; 34 > 
     au < crawling ; exists ; 2010 ; Bronte Studies Volume 35 ; 35 > 
-    au < crawling ; exists ; 2011 ; Bronte Studies Volume 36 ; 36 > 
+    au < testing ; exists ; 2011 ; Bronte Studies Volume 36 ; 36 > 
     au < crawling ; exists ; 2012 ; Bronte Studies Volume 37 ; 37 > 
 
   }
