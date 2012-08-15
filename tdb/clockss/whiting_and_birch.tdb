@@ -46,12 +46,12 @@
       eissn = 1746-6113 ;
       issnl = 1460-6690
     >
-      
+      comment[continued_by] = 1759-5150
       param[journal_id] = jpthsw                                  
       param[journal_issn] = 1460-6690
 
-      au < manifest ; exists ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 5, No. 2-3 ; 5 >
-      au < manifest ; exists ; 2006 ; The Journal of Practice Teaching in Health and Social Work Volume 6, No. 1-3 ; 6 >
+      au < manifest ; exists ; 2004 ; The Journal of Practice Teaching in Health and Social Work Volume 5, No. 2-3 ; 5 >
+      au < manifest ; exists ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 6, No. 1-3 ; 6 >
       
   }
 
@@ -61,14 +61,14 @@
       name = The Journal of Practice Teaching and Learning ;
       issn = 1759-5150
     >
-   
+   	  comment[continued_from] = 1460-6690
       param[journal_id]=jptl
       param[journal_issn] = 1759-5150
       
-      au < exists ; exists ; 2007 ; The Journal of Practice Teaching and Learning Volume 7, No. 1-3 ; 7 >
-      au < exists ; exists ; 2008 ; The Journal of Practice Teaching and Learning Volume 8, No. 1-3 ; 8 >
-      au < exists ; exists ; 2009 ; The Journal of Practice Teaching and Learning Volume 9, No. 1-3 ; 9 >
-      au < exists ; exists ; 2010-2011 ; The Journal of Practice Teaching and Learning Volume 10, No. 1-3 ; 10 >
+      au < exists ; exists ; 2006 ; The Journal of Practice Teaching and Learning Volume 7 No. 1-3 ; 7 >
+      au < exists ; exists ; 2008 ; The Journal of Practice Teaching and Learning Volume 8 No. 1-3 ; 8 >
+      au < exists ; exists ; 2009 ; The Journal of Practice Teaching and Learning Volume 9 No. 1-3 ; 9 >
+      au < exists ; exists ; 2010-2011 ; The Journal of Practice Teaching and Learning Volume 10 No. 1-3 ; 10 >
     
   }    
   
@@ -89,6 +89,20 @@
       au < manifest ; exists ; 2007-2008 ; Social Work and Social Sciences Review Volume 13, No. 1-3 ; 13 >
       au < manifest ; exists ; 2010-2011 ; Social Work and Social Sciences Review Volume 14, No. 1-3 ; 14 >
       au < manifest ; exists ; 2011-2012 ; Social Work and Social Sciences Review Volume 15, No. 1-2 ; 15 >
+    
+  }
+
+  {
+  
+    title <
+      name = Journal of Social Policy and Social Work in Transition ;
+      issn = 1987-8710 
+      
+    >
+      comment[status] = New journal in production first issue expected 2012
+      param[journal_issn] = 1987-8710
+
+      au < doesNotExist ; doesNotExist ; 0 ; Journal of Social Policy and Social Work in Transition Volume 1 ; 1 >
     
   }
 
