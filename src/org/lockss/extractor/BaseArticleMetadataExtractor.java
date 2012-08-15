@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.13 2012-08-14 12:50:54 pgust Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.14 2012-08-15 03:34:59 tlipkis Exp $
  */
 
 /*
@@ -40,25 +40,87 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
 /**
- * Base class for metadata extractors that return a single ArticleMetadata or
- * null. This was the previous ArticleMetadataExtractor interface.
+ * Performs the "standard" ArticleMetadataExtractor
+ * operations.<ul><li>Apply the appropriate FileMetadataExtractor to a
+ * specified CachedUrl in each ArticleFiles.</li><li>Empty or invalid
+ * fields in emitted ArticleMetadata objects are filled in from the TDB if
+ * available.</li></ul>
  */
 public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
 
   private static Logger log = Logger.getLogger("BaseArticleMetadataExtractor");
 
   protected String cuRole = null;
-  protected boolean emitDefaultIfNone = false;
+  protected boolean isAddTdbDefaults = true;
 
+  /** Create an ArticleMetadataExtractor that applies a
+   * FileMetadataExtractor to the {@link ArticleFiles}'s full text CU.
+   */
   public BaseArticleMetadataExtractor() {
   }
 
+  /** Create an ArticleMetadataExtractor that applies a
+   * FileMetadataExtractor to the CachedUrl associated with a named role.
+   * @param cuRole the role from which to extract file metadata
+   */
   public BaseArticleMetadataExtractor(String cuRole) {
     this.cuRole = cuRole;
   }
 
+  /** Determines whether the emitter will use the TDB to supply values for
+   * ArticleMetadata fields that have no valid value.  This is true by
+   * default.
+   * @param val
+   * @returns this, for chaining
+   */
+  public BaseArticleMetadataExtractor setAddTdbDefaults(boolean val) {
+    isAddTdbDefaults = val;
+    return this;
+  }
+
+  /** Returns the CU associated with the named role, or the full text CU if
+   * no role name.  Override for other behavior.
+   */
   protected CachedUrl getCuToExtract(ArticleFiles af) {
     return cuRole != null ? af.getRoleCu(cuRole) : af.getFullTextCu();
+  }
+
+  /** Return true if TDB defaults should be added to emitted ArticleMetadata.
+   */
+  protected boolean isAddTdbDefaults() {
+    return isAddTdbDefaults;
+  }
+
+  /** For standard bibiographic metadata fields for which the extractor did
+   * not produce a valid value, fill in a value from the TDB if available.
+   * @param af the ArticleFiles on which extract() was called.
+   * @param cu the CachedUrl selected by {@link #getCuToExtract(ArticleFiles)}.
+   * @param am the ArticleMetadata being emitted.
+   */
+  protected void addTdbDefaults(ArticleFiles af,
+				CachedUrl cu, ArticleMetadata am) {
+    log.critical("addTdbDefaults("+af+", "+cu+", "+am+")");
+    TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
+    log.critical("tc; "+tc);
+    TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
+    log.critical("tdbau; "+tdbau);
+    if (tdbau != null) {
+      log.critical("Adding data from " + tdbau + " to " + am);
+      if (log.isDebug3()) {
+	log.debug3("Adding data from " + tdbau + " to " + am);
+      }
+      am.putIfBetter(MetadataField.FIELD_ISBN, tdbau.getPrintIsbn());
+      am.putIfBetter(MetadataField.FIELD_EISBN, tdbau.getEisbn());
+      am.putIfBetter(MetadataField.FIELD_ISSN, tdbau.getPrintIssn());
+      am.putIfBetter(MetadataField.FIELD_EISSN, tdbau.getEissn());
+      am.putIfBetter(MetadataField.FIELD_DATE, tdbau.getStartYear());
+      am.putIfBetter(MetadataField.FIELD_VOLUME, tdbau.getStartVolume());
+      am.putIfBetter(MetadataField.FIELD_ISSUE, tdbau.getStartIssue());
+      am.putIfBetter(MetadataField.FIELD_JOURNAL_TITLE,tdbau.getJournalTitle());
+    }
+    log.critical("adding("+af.getFullTextCu());
+    am.putIfBetter(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
+    log.critical("am: ("+am);
   }
 
   class MyEmitter implements FileMetadataExtractor.Emitter {
@@ -73,104 +135,35 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
 
     public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
 
-      TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
-      TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
-      String isbn = (tdbau == null) ? null : tdbau.getPrintIsbn();
-      String eisbn = (tdbau == null) ? null : tdbau.getEisbn();
-      String issn = (tdbau == null) ? null : tdbau.getPrintIssn();
-      String eissn = (tdbau == null) ? null : tdbau.getEissn();
-      String year = (tdbau == null) ? null : tdbau.getStartYear();
-      String volume = (tdbau == null) ? null : tdbau.getStartVolume();
-      String issue = (tdbau == null) ? null : tdbau.getStartIssue();
-      String journalTitle = (tdbau == null) ? null : tdbau.getJournalTitle();
-
-      if (am.get(MetadataField.FIELD_ISSN) == null
-          || am.hasInvalidValue(MetadataField.FIELD_ISSN)) {
-        if (issn != null) {
-          am.put(MetadataField.FIELD_ISSN, issn);
-        }
-      }
-      if (am.get(MetadataField.FIELD_EISSN) == null
-          || am.hasInvalidValue(MetadataField.FIELD_EISSN)) {
-        if (eissn != null) {
-          am.put(MetadataField.FIELD_EISSN, eissn);
-        }
-      }
-      if (am.get(MetadataField.FIELD_VOLUME) == null
-          || am.hasInvalidValue(MetadataField.FIELD_VOLUME)) {
-        if (volume != null) {
-          am.put(MetadataField.FIELD_VOLUME, volume);
-        }
-      }
-      if (am.get(MetadataField.FIELD_DATE) == null
-          || am.hasInvalidValue(MetadataField.FIELD_DATE)) {
-        if (year != null) {
-          am.put(MetadataField.FIELD_DATE, year);
-        }
-      }
-      if (am.get(MetadataField.FIELD_ISSUE) == null
-          || am.hasInvalidValue(MetadataField.FIELD_ISSUE)) {
-        if (issue != null) {
-          am.put(MetadataField.FIELD_ISSUE, issue);
-        }
-      }
-      if (am.get(MetadataField.FIELD_ISBN) == null
-          || am.hasInvalidValue(MetadataField.FIELD_ISBN)) {
-        if (isbn != null) {
-          am.put(MetadataField.FIELD_ISBN, isbn);
-        }
-      }
-      if (am.get(MetadataField.FIELD_EISBN) == null
-          || am.hasInvalidValue(MetadataField.FIELD_EISBN)) {
-        if (eisbn != null) {
-          am.put(MetadataField.FIELD_EISBN, eisbn);
-        }
-      }
-      if (am.get(MetadataField.FIELD_JOURNAL_TITLE) == null
-          || am.hasInvalidValue(MetadataField.FIELD_JOURNAL_TITLE)) {
-        if (journalTitle != null) {
-          am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
-        }
-      }
-      if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL)) {
-        am.put(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
+      if (isAddTdbDefaults()) {
+	addTdbDefaults(af, cu, am);
       }
       parent.emitMetadata(af, am);
-    }
-
-    void setParentEmitter(Emitter parent) {
-      this.parent = parent;
-    }
-
-    void setEmitDefaultIfNone(boolean val) {
-      emitDefaultIfNone = val;
     }
 
   }
 
   public void extract(MetadataTarget target, ArticleFiles af,
-      ArticleMetadataExtractor.Emitter emitter) throws IOException,
-      PluginException {
+		      ArticleMetadataExtractor.Emitter emitter)
+      throws IOException, PluginException {
 
     MyEmitter myEmitter = new MyEmitter(af, emitter);
     CachedUrl cu = getCuToExtract(af);
-    log.debug3("extract(" + af + ")");
+    log.debug3("extract(" + af + "), cu: " + cu);
     if (cu != null) {
-      FileMetadataExtractor me = null;
       try {
-        me = cu.getFileMetadataExtractor(target);
+	FileMetadataExtractor me = cu.getFileMetadataExtractor(target);
         if (me != null) {
           me.extract(target, cu, myEmitter);
           AuUtil.safeRelease(cu);
           return;
         }
       } catch (IOException ex) {
-        // unable to read input stream or some error during plugin filtering.
-       log.debug3("IO Exception has been caught",ex);
+	log.warning("Error in FileMetadataExtractor", ex);
       }
       // generate default metadata in case of null filemetadataextractor or
-      //IOException.
-      
+      // IOException.
+
       ArticleMetadata am = new ArticleMetadata();
       myEmitter.emitMetadata(cu, am);
       AuUtil.safeRelease(cu);
