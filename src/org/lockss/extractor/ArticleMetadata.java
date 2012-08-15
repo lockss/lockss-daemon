@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.7 2012-02-10 23:59:06 akanshab01 Exp $
+ * $Id: ArticleMetadata.java,v 1.8 2012-08-15 03:34:36 tlipkis Exp $
  */
 
 /*
@@ -214,6 +214,21 @@ public class ArticleMetadata {
     }
   }
 
+  /** Store the value in the ArticleMetadata unless it's null or the field
+   * already has a valid value.  I.e., store the value iff it's better than
+   * the one that's already there.
+   * @param field The MetadataField into which to store
+   * @param val the value to store
+   * @returns true if the value was stored
+   */
+  public boolean putIfBetter(MetadataField field, String value) {
+    if (value != null && !hasValidValue(field)) {
+      put(field, value);
+      return true;
+    }
+    return false;
+  }
+
   private MetadataException put0(MetadataField field, String value) {
     switch (field.getCardinality()) {
     case Single:
@@ -381,7 +396,7 @@ public class ArticleMetadata {
   }
 
   /** Return the value associated with a key, else null if no valid value */
-  private String get(String key) {
+  public String get(String key) {
     return get(key, null);
   }
 

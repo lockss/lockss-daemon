@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleMetadata.java,v 1.3 2011-01-20 08:37:43 tlipkis Exp $
+ * $Id: TestArticleMetadata.java,v 1.4 2012-08-15 03:34:36 tlipkis Exp $
  */
 
 /*
@@ -444,6 +444,31 @@ public class TestArticleMetadata extends LockssTestCase {
     assertEquals(ListUtil.list("valid1", "valid2", "valid1"),
 		 am.getList(field));
   }
+
+  public void testPutIfBetter() {
+    // Don't store null
+    assertFalse(am.putIfBetter(MetadataField.FIELD_VOLUME, null));
+    assertEquals(null, am.get(MetadataField.FIELD_VOLUME));
+    // Store new val
+    assertTrue(am.putIfBetter(MetadataField.FIELD_VOLUME, "17"));
+    assertEquals("17", am.get(MetadataField.FIELD_VOLUME));
+    // Don't replace valid val
+    assertFalse(am.putIfBetter(MetadataField.FIELD_VOLUME, "42"));
+    assertEquals("17", am.get(MetadataField.FIELD_VOLUME));
+    assertFalse(am.putIfBetter(MetadataField.FIELD_VOLUME, null));
+    assertEquals("17", am.get(MetadataField.FIELD_VOLUME));
+
+    // add an invalid value
+    assertFalse(am.put(FIELD_SINGLE, "illegal"));
+    assertTrue(am.hasInvalidValue(FIELD_SINGLE));
+    // Don't store null
+    assertFalse(am.putIfBetter(FIELD_SINGLE, null));
+    assertEquals(null, am.get(FIELD_SINGLE));
+    assertEquals("illegal", am.getInvalid(FIELD_SINGLE).getRawValue());
+    // New val replaces invalid value
+    assertTrue(am.putIfBetter(FIELD_SINGLE, "71"));
+    assertEquals("71", am.get(FIELD_SINGLE));
+  }  
 
   public void testSplit() throws MetadataException {
     MetadataField field = FIELD_SPLIT;
