@@ -1,5 +1,5 @@
 /*
- * $Id: PrunedCachedUrlSetSpec.java,v 1.3 2012-03-15 08:52:03 tlipkis Exp $
+ * $Id: PrunedCachedUrlSetSpec.java,v 1.4 2012-08-15 03:34:19 tlipkis Exp $
  */
 
 /*
@@ -38,8 +38,11 @@ import org.apache.commons.lang.*;
 import org.lockss.util.*;
 
 /**
- * A RangeCachedUrlSetSpec that includes or excludes subtrees that match a
- * pattern
+ * A PrunedCachedUrlSetSpec either includes only subtrees that match a
+ * pattern, or includes only subtrees that do not match a pattern.  In the
+ * include case, paths that are ancestors of the subtree pattern are also
+ * included (so that iterations will proceed down into the included
+ * subtree).
  */
 public class PrunedCachedUrlSetSpec extends RangeCachedUrlSetSpec {
   static Logger log = Logger.getLogger("PCUSS");
@@ -47,16 +50,35 @@ public class PrunedCachedUrlSetSpec extends RangeCachedUrlSetSpec {
   Pattern includePat;
   Pattern excludePat;
 
+  /**
+   * Create a PrunedCachedUrlSetSpec that matches URLs that are within, or
+   * are an ancestor of, the subtree(s) specified by the pattern.
+   * @param urlPrefix Common prefix of URLs in the CachedUrlSetSpec.
+   * @param includePat Pattern specifying the subtree(s) to be included.
+   */
   public static PrunedCachedUrlSetSpec
     includeMatchingSubTrees(String urlPrefix, Pattern includePat) {
     return new PrunedCachedUrlSetSpec(urlPrefix, includePat, null);
   }
 
+  /**
+   * Create a PrunedCachedUrlSetSpec that matches URLs that are not within
+   * the subtree(s) specified by the pattern.
+   * @param urlPrefix Common prefix of URLs in the CachedUrlSetSpec.
+   * @param excludePat Pattern specifying the subtree(s) to be excluded.
+   */
   public static PrunedCachedUrlSetSpec
     excludeMatchingSubTrees(String urlPrefix, Pattern excludePat) {
     return new PrunedCachedUrlSetSpec(urlPrefix, null, excludePat);
   }
 
+  /**
+   * Create a PrunedCachedUrlSetSpec that matches URLs that are within, or
+   * are an ancestor of, the subtree(s) specified by the pattern.
+   * @param urlPrefix Common prefix of URLs in the CachedUrlSetSpec.
+   * @param includePattern Regexp specifying the subtree(s) to be included.
+   * @param flags Compilation flags for the regexp.
+   */
   public static PrunedCachedUrlSetSpec
     includeMatchingSubTrees(String urlPrefix,
 			    String includePattern, int flags) {
@@ -64,13 +86,26 @@ public class PrunedCachedUrlSetSpec extends RangeCachedUrlSetSpec {
     return PrunedCachedUrlSetSpec.includeMatchingSubTrees(urlPrefix, pat);
   }
 
+  /**
+   * Create a PrunedCachedUrlSetSpec that matches URLs that are not within
+   * the subtree(s) specified by the pattern.
+   * @param urlPrefix Common prefix of URLs in the CachedUrlSetSpec.
+   * @param excludePattern Regexp specifying the subtree(s) to be excluded.
+   * @param flags Compilation flags for the regexp.
+   */
   public static PrunedCachedUrlSetSpec
     excludeMatchingSubTrees(String urlPrefix,
-			    String includePattern, int flags) {
-    Pattern pat = Pattern.compile(includePattern, flags);
+			    String excludePattern, int flags) {
+    Pattern pat = Pattern.compile(excludePattern, flags);
     return PrunedCachedUrlSetSpec.excludeMatchingSubTrees(urlPrefix, pat);
   }
 
+  /**
+   * Create a PrunedCachedUrlSetSpec that matches URLs that are within, or
+   * are an ancestor of, the subtree(s) specified by the pattern.
+   * @param urlPrefix Common prefix of URLs in the CachedUrlSetSpec.
+   * @param includePattern Regexp specifying the subtree(s) to be included.
+   */
   public static PrunedCachedUrlSetSpec
     includeMatchingSubTrees(String urlPrefix,
 			    String includePattern) {
@@ -78,6 +113,12 @@ public class PrunedCachedUrlSetSpec extends RangeCachedUrlSetSpec {
 							  includePattern, 0);
   }
 
+  /**
+   * Create a PrunedCachedUrlSetSpec that matches URLs that are not within
+   * the subtree(s) specified by the pattern.
+   * @param urlPrefix Common prefix of URLs in the CachedUrlSetSpec.
+   * @param excludePattern Regexp specifying the subtree(s) to be excluded.
+   */
   public static PrunedCachedUrlSetSpec
     excludeMatchingSubTrees(String urlPrefix,
 			    String excludePattern) {
@@ -87,14 +128,16 @@ public class PrunedCachedUrlSetSpec extends RangeCachedUrlSetSpec {
 
   /**
    * Create a PrunedCachedUrlSetSpec that matches URLs that start with the
-   * prefix and are within the specified range.
+   * prefix and either are or are not within one or mow subtrees specified
+   * by a pattern.
    * @param urlPrefix Common prefix of URLs in the CachedUrlSetSpec.
-   * @param lowerBound lower boundary of the prefix range, inclusive.  If
-   * null, the range is unbounded at the bottom.
-   * @param upperBound upper boundary of the prefix range, inclusive.  If
-   * null, the range is unbounded at the top.
-   * @throws NullPointerException if the prefix is null.
-   * @throws IllegalArgumentException if lower bound is greater than upper.
+   * @param includePat If non-null, the set includes URLs that are "below"
+   * the pattern (i.e., the pattern matches an initial substring of the
+   * URL), or "above" the pattern (i.e., the URL doesn't match only because
+   * it's shorter than the pattern).
+   * @param excludePat If non-null, the set includes URLs that aren't
+   * "below" the pattern (i.e., the pattern does not match an initial
+   * substring of the URL).
    */
   PrunedCachedUrlSetSpec(String urlPrefix,
 			 Pattern includePat, Pattern excludePat) {
@@ -118,18 +161,20 @@ public class PrunedCachedUrlSetSpec extends RangeCachedUrlSetSpec {
     }	
     if (excludePat != null) {
       Matcher mat = excludePat.matcher(url);
-       return !mat.lookingAt();
+      return !mat.lookingAt();
     }	
     return true;
   }
 
+  /** Not supported
+   * @throws UnsupportedOperationException always
+   */
   public boolean isDisjoint(CachedUrlSetSpec spec) {
     throw new UnsupportedOperationException("isDisjoint() not implemented for PrunedCachedUrlSetSpec");
   }
 
-  /**
-   * @param spec the set to test subsumption of
-   * @return true if spec is entirely contained in this one
+  /** Not supported
+   * @throws UnsupportedOperationException always
    */
   public boolean subsumes(CachedUrlSetSpec spec) {
     throw new UnsupportedOperationException("subsumes() not implemented for PrunedCachedUrlSetSpec");
