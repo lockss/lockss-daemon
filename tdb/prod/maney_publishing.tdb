@@ -4712,16 +4712,16 @@
     param[journal_issn] = 0729-2473
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 1983 ; War & Society Volume 1 ; 1 > 
-    au < manifest ; 1984 ; War & Society Volume 2 ; 2 > 
-    au < manifest ; 1985 ; War & Society Volume 3 ; 3 > 
-    au < manifest ; 1986 ; War & Society Volume 4 ; 4 > 
-    au < manifest ; 1987 ; War & Society Volume 5 ; 5 > 
-    au < manifest ; 1988 ; War & Society Volume 6 ; 6 > 
-    au < manifest ; 1989 ; War & Society Volume 7 ; 7 > 
-    au < manifest ; 1990 ; War & Society Volume 8 ; 8 > 
-    au < manifest ; 1991 ; War & Society Volume 9 ; 9 > 
-    au < manifest ; 1992 ; War & Society Volume 10 ; 10 > 
+    au < testing ; 1983 ; War & Society Volume 1 ; 1 > 
+    au < testing ; 1984 ; War & Society Volume 2 ; 2 > 
+    au < testing ; 1985 ; War & Society Volume 3 ; 3 > 
+    au < testing ; 1986 ; War & Society Volume 4 ; 4 > 
+    au < testing ; 1987 ; War & Society Volume 5 ; 5 > 
+    au < testing ; 1988 ; War & Society Volume 6 ; 6 > 
+    au < testing ; 1989 ; War & Society Volume 7 ; 7 > 
+    au < testing ; 1990 ; War & Society Volume 8 ; 8 > 
+    au < testing ; 1991 ; War & Society Volume 9 ; 9 > 
+    au < testing ; 1992 ; War & Society Volume 10 ; 10 > 
     au < manifest ; 1993 ; War & Society Volume 11 ; 11 > 
     au < manifest ; 1994 ; War & Society Volume 12 ; 12 > 
     au < manifest ; 1995 ; War & Society Volume 13 ; 13 > 
