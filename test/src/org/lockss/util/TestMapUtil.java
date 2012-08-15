@@ -1,5 +1,5 @@
 /*
- * $Id: TestMapUtil.java,v 1.2 2011-06-20 07:06:34 tlipkis Exp $
+ * $Id: TestMapUtil.java,v 1.3 2012-08-15 03:35:27 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,31 @@ import junit.framework.TestCase;
 import org.lockss.test.*;
 
 public class TestMapUtil extends LockssTestCase {
+  public void testFromArgs() {
+    Map m1 = MapUtil.map("a", "1", "b", "2", "c", "3", "d", "4", "e", "5",
+			 "f", "6", "g", "7", "h", "8", "j", "9", "k", "10");
+    Map exp = new HashMap();
+    exp.put("a", "1");
+    exp.put("b", "2");
+    exp.put("c", "3");
+    exp.put("d", "4");
+    exp.put("e", "5");
+    exp.put("f", "6");
+    exp.put("g", "7");
+    exp.put("h", "8");
+    exp.put("j", "9");
+    exp.put("k", "10");
+    assertEquals(exp, m1);
+
+
+    try {
+      MapUtil.map("a", "1", "b", "2", "c", "3", "d", "4", "e", "5",
+		  "f", "6", "g", "7", "h", "8", "j", "9", "k");
+      fail("Odd length arg list should throw");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
   public void testFromList1() {
     assertEquals(MapUtil.map(), MapUtil.fromList(ListUtil.list()));
     assertEquals(MapUtil.map("FOO", "bar", "One", "Two"),

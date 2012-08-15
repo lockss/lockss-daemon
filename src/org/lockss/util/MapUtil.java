@@ -1,5 +1,5 @@
 /*
- * $Id: MapUtil.java,v 1.4 2011-06-20 07:06:34 tlipkis Exp $
+ * $Id: MapUtil.java,v 1.5 2012-08-15 03:35:27 tlipkis Exp $
  *
 
  Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
@@ -76,6 +76,20 @@ public class MapUtil {
     return m;
   }
 
+  /**
+   * Create a map from any number of paris of arguments. */
+  public static Map map(Object... elements) {
+    if (elements.length % 2 == 1) {
+      throw new
+	IllegalArgumentException("map() requires an even number of arguments");
+    }
+    Map m = map();
+    for (int ix = 0; ix < elements.length; ) {
+      m.put(elements[ix++], elements[ix++]);
+    }
+    return m;
+  }
+  
   /** Return a map with keys and values taken from alternating list
    * elements (<code>[key1, val1, key2, val2, ...]</code>), or from
    * sublists (<code>[ [key1, val1], [key2, val2], ...]</code>) */
