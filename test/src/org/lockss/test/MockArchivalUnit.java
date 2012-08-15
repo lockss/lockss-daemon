@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.100 2012-07-09 07:52:31 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.101 2012-08-15 03:35:14 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private Configuration config = ConfigManager.EMPTY_CONFIGURATION;
   private CrawlSpec spec;
   private String pluginId = "mock";
+  private TitleConfig tc = null;
   private String auId = null;
   private String defaultAUId = StringUtil.gensym("MockAU_");
   private CachedUrlSet cus = null;
@@ -186,7 +187,11 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public TitleConfig getTitleConfig() {
-    return null;
+    return tc;
+  }
+
+  public void setTitleConfig(TitleConfig tc) {
+    this.tc = tc;
   }
 
   public void setNewContentCrawlUrls(List urls) {
