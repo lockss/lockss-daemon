@@ -61,7 +61,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Adaptation Volume 1 ; 1 ; >
-    au < down ; crawling ; 2009 ; Adaptation Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; Adaptation Volume 2 ; 2 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -225,7 +225,7 @@
     param[base_url] = http://ageing.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Age and Ageing Volume 37 ; 37 ; >
+    au < zapped ; down ; 2008 ; Age and Ageing Volume 37 ; 37 ; >
     au < down ; crawling ; 2009 ; Age and Ageing Volume 38 ; 38 ; reingest3.clockss.org:8083 >
 
     }
@@ -295,7 +295,7 @@
     param[base_url] = http://alcalc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 	
-    au < down ; crawling ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
+    au < zapped ; down ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
     au < notReady ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; reingest3.clockss.org:8083 >
 
     }
@@ -735,8 +735,8 @@
     param[base_url] = http://aler.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; American Law and Economics Review Volume 10 ; 10 ; >
-    au < down ; crawling ; 2009 ; American Law and Economics Review Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2008 ; American Law and Economics Review Volume 10 ; 10 ; >
+    au < zapped ; down ; 2009 ; American Law and Economics Review Volume 11 ; 11 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -756,7 +756,7 @@
     au < manifest ; exists ; 2007 ; American Law and Economics Review Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; American Law and Economics Review Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; American Law and Economics Review Volume 11 ; 11 ; >
-    au < released ; crawling ; 2010 ; American Law and Economics Review Volume 12 ; 12 ; >
+    au < zapped ; down ; 2010 ; American Law and Economics Review Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; American Law and Economics Review Volume 13 ; 13 ; >
     au < crawling ; exists ; 2012 ; American Law and Economics Review Volume 14 ; 14 ; >
 
@@ -778,7 +778,7 @@
     param[base_url] = http://alh.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2009 ; American Literary History Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; American Literary History Volume 21 ; 21 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -1434,7 +1434,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
-    au < down ; crawling ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -1614,8 +1614,8 @@
     param[base_url] = http://biomet.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Biometrika Volume 95 ; 95 ; >
-    au < down ; crawling ; 2009 ; Biometrika Volume 96 ; 96 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; Biometrika Volume 95 ; 95 ; >
+    au < zapped ; down ; 2009 ; Biometrika Volume 96 ; 96 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -1742,7 +1742,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 1 ; 1 ; >
-    au < down ; crawling ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -1775,8 +1775,8 @@
     param[base_url] = http://biostatistics.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Biostatistics Volume 9 ; 9 ; >
-    au < down ; crawling ; 2009 ; Biostatistics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; Biostatistics Volume 9 ; 9 ; >
+    au < zapped ; down ; 2009 ; Biostatistics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -2011,8 +2011,8 @@
     param[base_url] = http://bib.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 ; >
-    au < down ; crawling ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 ; >
+    au < zapped ; down ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -2030,7 +2030,7 @@
     au < manifest ; exists ; 2006 ; Briefings in Bioinformatics Volume 7 ; 7 ; >
     au < manifest ; exists ; 2007 ; Briefings in Bioinformatics Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 ; >
-    au < released ; crawling ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; >
+    au < zapped ; down ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; >
     au < released ; crawling ; 2010 ; Briefings in Bioinformatics Volume 11 ; 11 ; >
     au < released ; crawling ; 2011 ; Briefings in Bioinformatics Volume 12 ; 12 ; >
     au < crawling ; exists ; 2012 ; Briefings in Bioinformatics Volume 13 ; 13 ; >
@@ -2055,7 +2055,7 @@
     param[base_url] = http://bfgp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
+    au < zapped ; down ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
     au < zappedCandidate ; zappedCandidate ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8[*] ; 8 ; reingest2.clockss.org:8085 >
 
     }
@@ -2123,8 +2123,8 @@
     param[base_url] = http://bjaesthetics.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 ; >
-    au < down ; crawling ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 ; >
+    au < zapped ; down ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -2181,8 +2181,8 @@
     au < manifest ; exists ; 2006 ; The British Journal of Aesthetics Volume 46 ; 46 ; >
     au < manifest ; exists ; 2007 ; The British Journal of Aesthetics Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 ; >
-    au < released ; crawling ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; >
-    au < released ; crawling ; 2010 ; The British Journal of Aesthetics Volume 50 ; 50 ; >
+    au < zapped ; down ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; >
+    au < zapped ; down ; 2010 ; The British Journal of Aesthetics Volume 50 ; 50 ; >
     au < released ; crawling ; 2011 ; The British Journal of Aesthetics Volume 51 ; 51 ; >
     au < crawling ; exists ; 2012 ; The British Journal of Aesthetics Volume 52 ; 52 ; >
 
@@ -2333,8 +2333,8 @@
     param[base_url] = http://bjc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The British Journal of Criminology: An International Review of Crime and Society Volume 48 ; 48 ; >
-    au < down ; crawling ; 2009 ; The British Journal of Criminology: An International Review of Crime and Society Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; The British Journal of Criminology: An International Review of Crime and Society Volume 48 ; 48 ; >
+    au < zapped ; down ; 2009 ; The British Journal of Criminology: An International Review of Crime and Society Volume 49 ; 49 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -2391,8 +2391,8 @@
     au < manifest ; exists ; 2006 ; The British Journal of Criminology: An International Review of Crime and Society Volume 46 ; 46 ; >
     au < manifest ; exists ; 2007 ; The British Journal of Criminology: An International Review of Crime and Society Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The British Journal of Criminology: An International Review of Crime and Society Volume 48 ; 48 ; >
-    au < released ; crawling ; 2009 ; The British Journal of Criminology: An International Review of Crime and Society Volume 49 ; 49 ; >
-    au < released ; crawling ; 2010 ; The British Journal of Criminology: An International Review of Crime and Society Volume 50 ; 50 ; >
+    au < zapped ; down ; 2009 ; The British Journal of Criminology: An International Review of Crime and Society Volume 49 ; 49 ; >
+    au < zapped ; down ; 2010 ; The British Journal of Criminology: An International Review of Crime and Society Volume 50 ; 50 ; >
     au < released ; crawling ; 2011 ; The British Journal of Criminology: An International Review of Crime and Society Volume 51 ; 51 ; >
     au < crawling ; exists ; 2012 ; The British Journal of Criminology: An International Review of Crime and Society Volume 52 ; 52 ; >
 
@@ -2414,8 +2414,8 @@
     param[base_url] = http://bjps.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 ; >
-    au < down ; crawling ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 ; >
+    au < zapped ; down ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -2483,7 +2483,7 @@
     au < manifest ; exists ; 2006 ; The British Journal for the Philosophy of Science Volume 57 ; 57 ; >
     au < manifest ; exists ; 2007 ; The British Journal for the Philosophy of Science Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 ; >
-    au < released ; crawling ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; >
+    au < zapped ; down ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; >
     au < released ; crawling ; 2010 ; The British Journal for the Philosophy of Science Volume 61 ; 61 ; >
     au < released ; crawling ; 2011 ; The British Journal for the Philosophy of Science Volume 62 ; 62 ; >
     au < crawling ; exists ; 2012 ; The British Journal for the Philosophy of Science Volume 63 ; 63 ; >
@@ -2507,7 +2507,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The British Journal of Social Work Volume 38 ; 38 ; >
-    au < down ; crawling ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -2554,7 +2554,7 @@
     au < manifest ; exists ; 2006 ; The British Journal of Social Work Volume 36 ; 36 ; >
     au < manifest ; exists ; 2007 ; The British Journal of Social Work Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The British Journal of Social Work Volume 38 ; 38 ; >
-    au < released ; crawling ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; >
+    au < zapped ; down ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; >
     au < released ; crawling ; 2010 ; The British Journal of Social Work Volume 40 ; 40 ; >
     au < released ; crawling ; 2011 ; The British Journal of Social Work Volume 41 ; 41 ; >
     au < crawling ; exists ; 2012 ; The British Journal of Social Work Volume 42 ; 42 ; >
@@ -2581,9 +2581,9 @@
     au < down ; crawling ; 2008 ; British Medical Bulletin Volume 86 ; 86 ; >
     au < down ; crawling ; 2008 ; British Medical Bulletin Volume 87 ; 87 ; >
     au < down ; crawling ; 2008 ; British Medical Bulletin Volume 88 ; 88 ; >
-    au < down ; crawling ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; reingest2.clockss.org:8085 >
     au < down ; crawling ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; reingest2.clockss.org:8085 >
-    au < down ; crawling ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -2675,14 +2675,14 @@
     au < doNotProcess ; doNotProcess ; 2008 ; British Medical Bulletin Volume 86 ; 86 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; British Medical Bulletin Volume 87 ; 87 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; British Medical Bulletin Volume 88 ; 88 ; >
-    au < released ; crawling ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; >
+    au < zapped ; down ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; >
     au < released ; crawling ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; >
     au < released ; crawling ; 2009 ; British Medical Bulletin Volume 92 ; 92 ; >
     au < released ; crawling ; 2010 ; British Medical Bulletin Volume 93 ; 93 ; >
     au < released ; crawling ; 2010 ; British Medical Bulletin Volume 94 ; 94 ; >
     au < released ; crawling ; 2010 ; British Medical Bulletin Volume 95 ; 95 ; >
-    au < released ; crawling ; 2010 ; British Medical Bulletin Volume 96 ; 96 ; >
+    au < zapped ; down ; 2010 ; British Medical Bulletin Volume 96 ; 96 ; >
     au < released ; crawling ; 2011 ; British Medical Bulletin Volume 97 ; 97 ; >
     au < released ; crawling ; 2011 ; British Medical Bulletin Volume 98 ; 98 ; >
     au < released ; crawling ; 2011 ; British Medical Bulletin Volume 99 ; 99 ; >
@@ -2833,7 +2833,7 @@
     param[base_url] = http://cje.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Cambridge Journal of Economics Volume 32 ; 32 ; >
+    au < zapped ; down ; 2008 ; Cambridge Journal of Economics Volume 32 ; 32 ; >
     au < down ; crawling ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; reingest1.clockss.org:8082 >
 
     }
@@ -2876,7 +2876,7 @@
     au < manifest ; exists ; 2007 ; Cambridge Journal of Economics Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Cambridge Journal of Economics Volume 32 ; 32 ; >
     au < released ; crawling ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; >
-    au < released ; crawling ; 2010 ; Cambridge Journal of Economics Volume 34 ; 34 ; >
+    au < zapped ; down ; 2010 ; Cambridge Journal of Economics Volume 34 ; 34 ; >
     au < released ; crawling ; 2011 ; Cambridge Journal of Economics Volume 35 ; 35 ; >
     au < crawling ; exists ; 2012 ; Cambridge Journal of Economics Volume 36 ; 36 ; >
 
@@ -2899,7 +2899,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Cambridge Journal of Regions, Economy and Society Volume 1 ; 1 ; >
-    au < down ; crawling ; 2009 ; Cambridge Journal of Regions, Economy and Society Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Cambridge Journal of Regions, Economy and Society Volume 2 ; 2 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2910,7 +2910,7 @@
 
     au < doNotProcess ; doNotProcess ; 2008 ; Cambridge Journal of Regions, Economy and Society Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Cambridge Journal of Regions, Economy and Society Volume 2 ; 2 ; >
-    au < released ; crawling ; 2010 ; Cambridge Journal of Regions, Economy and Society Volume 3 ; 3 ; >
+    au < zapped ; down ; 2010 ; Cambridge Journal of Regions, Economy and Society Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; Cambridge Journal of Regions, Economy and Society Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; Cambridge Journal of Regions, Economy and Society Volume 5 ; 5 ; >
 
@@ -2932,7 +2932,7 @@
     param[base_url] = http://camqtly.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 ; >
+    au < zapped ; down ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 ; >
     au < down ; crawling ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; reingest1.clockss.org:8082 >
 
     }
@@ -3002,7 +3002,7 @@
     param[base_url] = http://cmlj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Capital Markets Law Journal Volume 3 ; 3 ; >
+    au < zapped ; down ; 2008 ; Capital Markets Law Journal Volume 3 ; 3 ; >
     au < down ; crawling ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; reingest1.clockss.org:8082 >
 
     }
@@ -3016,7 +3016,7 @@
     au < manifest ; exists ; 2007 ; Capital Markets Law Journal Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Capital Markets Law Journal Volume 3 ; 3 ; >
     au < released ; crawling ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; >
-    au < released ; crawling ; 2010 ; Capital Markets Law Journal Volume 5 ; 5 ; >
+    au < zapped ; down ; 2010 ; Capital Markets Law Journal Volume 5 ; 5 ; >
     au < released ; crawling ; 2011 ; Capital Markets Law Journal Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; Capital Markets Law Journal Volume 7 ; 7 ; >
 
@@ -3104,9 +3104,9 @@
     au < down ; crawling ; 2008 ; Cardiovascular Research Volume 78 ; 78 ; >
     au < down ; crawling ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
     au < down ; crawling ; 2008 ; Cardiovascular Research Volume 80 ; 80 ; >
-    au < down ; crawling ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; reingest1.clockss.org:8082 >
-    au < down ; crawling ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; reingest1.clockss.org:8082 >
-    au < down ; crawling ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; reingest1.clockss.org:8082 >
     au < down ; crawling ; 2009 ; Cardiovascular Research Volume 84 ; 84 ; >
 
     }
@@ -3196,9 +3196,9 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 78 ; 78 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Cardiovascular Research Volume 80 ; 80 ; >
-    au < released ; crawling ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; >
-    au < released ; crawling ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; >
-    au < released ; crawling ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; >
+    au < zapped ; down ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; >
+    au < zapped ; down ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; >
+    au < zapped ; down ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Cardiovascular Research Volume 84 ; 84 ; >
     au < released ; crawling ; 2010 ; Cardiovascular Research Volume 85 ; 85 ; >
     au < released ; crawling ; 2010 ; Cardiovascular Research Volume 86 ; 86 ; >
@@ -3282,7 +3282,7 @@
     param[base_url] = http://cesifo.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; CESifo Economic Studies Volume 54 ; 54 ; >
+    au < zapped ; down ; 2008 ; CESifo Economic Studies Volume 54 ; 54 ; >
     au < down ; crawling ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; reingest1.clockss.org:8082 >
 
     }
@@ -3435,7 +3435,7 @@
     param[base_url] = http://chinesejil.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Chinese Journal of International Law Volume 7 ; 7 ; >
+    au < zapped ; down ; 2008 ; Chinese Journal of International Law Volume 7 ; 7 ; >
     au < down ; crawling ; 2009 ; Chinese Journal of International Law Volume 8 ; 8 ; reingest1.clockss.org:8082 >
 
     }
@@ -3508,8 +3508,8 @@
     param[base_url] = http://cb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 14 ; 14 ; >
-    au < down ; crawling ; 2009 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 14 ; 14 ; >
+    au < zapped ; down ; 2009 ; Christian Bioethics: Non-Ecumenical Studies in Medical Morality Volume 15 ; 15 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3649,7 +3649,7 @@
 
     au < doNotProcess ; doNotProcess ; 2008 ; NDT Plus Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; NDT Plus Volume 2 ; 2 ; >
-    au < released ; crawling ; 2010 ; NDT Plus Volume 3 ; 3 ; >
+    au < zapped ; down ; 2010 ; NDT Plus Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; NDT Plus Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; Clinical Kidney Journal Volume 5 ; 5 ; >
 
@@ -3745,7 +3745,7 @@
     param[base_url] = http://comjnl.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The Computer Journal Volume 51 ; 51 ; >
+    au < zapped ; down ; 2008 ; The Computer Journal Volume 51 ; 51 ; >
     au < down ; crawling ; 2009 ; The Computer Journal Volume 52 ; 52 ; reingest3.clockss.org:8083 >
 
     }
@@ -3830,7 +3830,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Contemporary Women's Writing Volume 2 ; 2 ; >
-    au < down ; crawling ; 2009 ; Contemporary Women's Writing Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Contemporary Women's Writing Volume 3 ; 3 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -3865,7 +3865,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 ; >
-    au < down ; crawling ; 2009 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -3905,7 +3905,7 @@
     param[base_url] = http://cpe.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Contributions to Political Economy Volume 27 ; 27 ; >
+    au < zapped ; down ; 2008 ; Contributions to Political Economy Volume 27 ; 27 ; >
     au < down ; crawling ; 2009 ; Contributions to Political Economy Volume 28 ; 28 ; reingest4.clockss.org:8082 >
 
     }
@@ -4019,8 +4019,8 @@
     param[base_url] = http://dnaresearch.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; DNA Research Volume 15 ; 15 ; >
-    au < down ; crawling ; 2009 ; DNA Research Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; DNA Research Volume 15 ; 15 ; >
+    au < zapped ; down ; 2009 ; DNA Research Volume 16 ; 16 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4067,7 +4067,7 @@
     param[base_url] = http://em.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Early Music Volume 36 ; 36 ; >
+    au < zapped ; down ; 2008 ; Early Music Volume 36 ; 36 ; >
     au < down ; crawling ; 2009 ; Early Music Volume 37 ; 37 ; reingest4.clockss.org:8082 >
 
     }
@@ -4359,7 +4359,7 @@
     param[base_url] = http://eltj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; ELT Journal Volume 62 ; 62 ; >
+    au < zapped ; down ; 2008 ; ELT Journal Volume 62 ; 62 ; >
     au < down ; crawling ; 2009 ; ELT Journal Volume 63 ; 63 ; reingest4.clockss.org:8082 >
 
     }
@@ -4454,7 +4454,7 @@
     param[base_url] = http://es.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Enterprise & Society: The International Journal of Business History Volume 9 ; 9 ; >
+    au < zapped ; down ; 2008 ; Enterprise & Society: The International Journal of Business History Volume 9 ; 9 ; >
     au < down ; crawling ; 2009 ; Enterprise & Society: The International Journal of Business History Volume 10 ; 10 ; reingest4.clockss.org:8082 >
 
     }
@@ -4562,7 +4562,7 @@
     param[base_url] = http://epirev.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Epidemiologic Reviews Volume 30 ; 30 ; >
+    au < zapped ; down ; 2008 ; Epidemiologic Reviews Volume 30 ; 30 ; >
 
     }
 
@@ -4626,7 +4626,7 @@
     param[base_url] = http://eshremonographs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; ESHRE Monographs Volume 2008 ; 2008 ; >
+    au < zapped ; down ; 2008 ; ESHRE Monographs Volume 2008 ; 2008 ; >
 
     }
 
@@ -4661,8 +4661,8 @@
     param[base_url] = http://eic.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Essays in Criticism Volume 58 ; 58 ; >
-    au < down ; crawling ; 2009 ; Essays in Criticism Volume 59 ; 59 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; Essays in Criticism Volume 58 ; 58 ; >
+    au < zapped ; down ; 2009 ; Essays in Criticism Volume 59 ; 59 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -5135,8 +5135,8 @@
     param[base_url] = http://ejo.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 ; >
-    au < down ; crawling ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 ; >
+    au < zapped ; down ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -5175,7 +5175,7 @@
     au < manifest ; exists ; 2006 ; European Journal of Orthodontics Volume 28 ; 28 ; >
     au < manifest ; exists ; 2007 ; European Journal of Orthodontics Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 ; >
-    au < released ; crawling ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 ; >
+    au < zapped ; down ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ; >
     au < released ; crawling ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ; >
     au < crawling ; exists ; 2012 ; European Journal of Orthodontics Volume 34 ; 34 ; >
@@ -5198,7 +5198,7 @@
     param[base_url] = http://eurpub.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; European Journal of Public Health Volume 18 ; 18 ; >
+    au < zapped ; down ; 2008 ; European Journal of Public Health Volume 18 ; 18 ; >
     au < down ; crawling ; 2009 ; European Journal of Public Health Volume 19 ; 19 ; reingest2.clockss.org:8085 >
 
     }
@@ -5249,8 +5249,8 @@
     param[base_url] = http://erae.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 ; >
-    au < down ; crawling ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 ; >
+    au < zapped ; down ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -5348,8 +5348,8 @@
     param[base_url] = http://esr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; European Sociological Review Volume 24 ; 24 ; >
-    au < down ; crawling ; 2009 ; European Sociological Review Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; European Sociological Review Volume 24 ; 24 ; >
+    au < zapped ; down ; 2009 ; European Sociological Review Volume 25 ; 25 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -5382,7 +5382,7 @@
     au < manifest ; exists ; 2006 ; European Sociological Review Volume 22 ; 22 ; >
     au < manifest ; exists ; 2007 ; European Sociological Review Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; European Sociological Review Volume 24 ; 24 ; >
-    au < released ; crawling ; 2009 ; European Sociological Review Volume 25 ; 25 ; >
+    au < zapped ; down ; 2009 ; European Sociological Review Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; European Sociological Review Volume 26 ; 26 ; >
     au < released ; crawling ; 2011 ; European Sociological Review Volume 27 ; 27 ; >
     au < crawling ; exists ; 2012 ; European Sociological Review Volume 28 ; 28 ; >
@@ -5407,7 +5407,7 @@
     param[base_url] = http://ecam.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Evidence-based Complementary and Alternative Medicine Volume 5 ; 5 ; >
+    au < zapped ; down ; 2008 ; Evidence-based Complementary and Alternative Medicine Volume 5 ; 5 ; >
     au < down ; crawling ; 2009 ; Evidence-based Complementary and Alternative Medicine Volume 6 ; 6 ; reingest2.clockss.org:8085 >
 
     }
@@ -5428,7 +5428,7 @@
     param[base_url] = http://fampra.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Family Practice Volume 25 ; 25 ; >
+    au < zapped ; down ; 2008 ; Family Practice Volume 25 ; 25 ; >
     au < down ; crawling ; 2009 ; Family Practice Volume 26 ; 26 ; reingest2.clockss.org:8085 >
 
     }
@@ -5539,7 +5539,7 @@
     param[base_url] = http://forestry.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Forestry: An International Journal of Forest Research Volume 81 ; 81 ; >
+    au < zapped ; down ; 2008 ; Forestry: An International Journal of Forest Research Volume 81 ; 81 ; >
     au < down ; crawling ; 2009 ; Forestry: An International Journal of Forest Research Volume 82 ; 82 ; reingest4.clockss.org:8082 >
 
     }
@@ -5653,7 +5653,7 @@
     param[base_url] = http://fmls.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 ; >
+    au < zapped ; down ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 ; >
     au < down ; crawling ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 ; reingest4.clockss.org:8082 >
 
     }
@@ -5730,7 +5730,7 @@
     param[base_url] = http://fh.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; French History Volume 22 ; 22 ; >
+    au < zapped ; down ; 2008 ; French History Volume 22 ; 22 ; >
     au < down ; crawling ; 2009 ; French History Volume 23 ; 23 ; reingest4.clockss.org:8082 >
 
     }
@@ -5965,8 +5965,8 @@
     param[base_url] = http://gh.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; German History Volume 26 ; 26 ; >
-    au < down ; crawling ; 2009 ; German History Volume 27 ; 27 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; German History Volume 26 ; 26 ; >
+    au < zapped ; down ; 2009 ; German History Volume 27 ; 27 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -6024,7 +6024,7 @@
     param[base_url] = http://gerontologist.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2009 ; The Gerontologist Volume 49 ; 49 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; The Gerontologist Volume 49 ; 49 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -6186,7 +6186,7 @@
     param[base_url] = http://her.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Health Education Research Volume 23 ; 23 ; >
+    au < zapped ; down ; 2008 ; Health Education Research Volume 23 ; 23 ; >
     au < down ; crawling ; 2009 ; Health Education Research Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
     }
@@ -6242,7 +6242,7 @@
     param[base_url] = http://heapol.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Health Policy and Planning Volume 23 ; 23 ; >
+    au < zapped ; down ; 2008 ; Health Policy and Planning Volume 23 ; 23 ; >
     au < down ; crawling ; 2009 ; Health Policy and Planning Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
     }
@@ -6298,7 +6298,7 @@
     param[base_url] = http://heapro.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
+    au < zapped ; down ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
     au < down ; crawling ; 2009 ; Health Promotion International Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
     }
@@ -6354,8 +6354,8 @@
     param[base_url] = http://hwj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; History Workshop Journal Volume 65 ; 65 ; >
-    au < down ; crawling ; 2008 ; History Workshop Journal Volume 66 ; 66 ; >
+    au < zapped ; down ; 2008 ; History Workshop Journal Volume 65 ; 65 ; >
+    au < zapped ; down ; 2008 ; History Workshop Journal Volume 66 ; 66 ; >
     au < down ; crawling ; 2009 ; History Workshop Journal Volume 67 ; 67 ; reingest3.clockss.org:8083 >
     au < down ; crawling ; 2009 ; History Workshop Journal Volume 68 ; 68 ; reingest3.clockss.org:8083 >
 
@@ -6453,8 +6453,8 @@
     param[base_url] = http://hgs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 ; >
-    au < down ; crawling ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 ; >
+    au < zapped ; down ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -6559,7 +6559,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
-    au < down ; crawling ; 2009 ; Human Reproduction Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+    au < zapped ; down ; 2009 ; Human Reproduction Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -6592,7 +6592,7 @@
     au < manifest ; exists ; 2006 ; Human Reproduction Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; Human Reproduction Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
-    au < released ; crawling ; 2009 ; Human Reproduction Volume 24 ; 24 ; >
+    au < zapped ; down ; 2009 ; Human Reproduction Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Human Reproduction Volume 25 ; 25 ; >
     au < testing ; exists ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
     au < crawling ; exists ; 2012 ; Human Reproduction Volume 27 ; 27 ; >
@@ -6615,7 +6615,7 @@
     param[base_url] = http://humupd.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Human Reproduction Update Volume 14 ; 14 ; >
+    au < zapped ; down ; 2008 ; Human Reproduction Update Volume 14 ; 14 ; >
     au < down ; crawling ; 2009 ; Human Reproduction Update Volume 15 ; 15 ; reingest3.clockss.org:8083 >
 
     }
@@ -6922,7 +6922,7 @@
     param[base_url] = http://imamat.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; IMA Journal of Applied Mathematics Volume 73 ; 73 ; >
+    au < zapped ; down ; 2008 ; IMA Journal of Applied Mathematics Volume 73 ; 73 ; >
     au < down ; crawling ; 2009 ; IMA Journal of Applied Mathematics Volume 74 ; 74 ; reingest3.clockss.org:8083 >
 
     }
@@ -7028,7 +7028,7 @@
     param[base_url] = http://imaman.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; IMA Journal of Management Mathematics Volume 19 ; 19 ; >
+    au < zapped ; down ; 2008 ; IMA Journal of Management Mathematics Volume 19 ; 19 ; >
     au < down ; crawling ; 2009 ; IMA Journal of Management Mathematics Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
     }
@@ -7138,8 +7138,8 @@
     param[base_url] = http://imajna.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; IMA Journal of Numerical Analysis Volume 28 ; 28 ; >
-    au < down ; crawling ; 2009 ; IMA Journal of Numerical Analysis Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; IMA Journal of Numerical Analysis Volume 28 ; 28 ; >
+    au < zapped ; down ; 2009 ; IMA Journal of Numerical Analysis Volume 29 ; 29 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -7176,7 +7176,7 @@
     au < manifest ; exists ; 2006 ; IMA Journal of Numerical Analysis Volume 26 ; 26 ; >
     au < manifest ; exists ; 2007 ; IMA Journal of Numerical Analysis Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; IMA Journal of Numerical Analysis Volume 28 ; 28 ; >
-    au < released ; crawling ; 2009 ; IMA Journal of Numerical Analysis Volume 29 ; 29 ; >
+    au < zapped ; down ; 2009 ; IMA Journal of Numerical Analysis Volume 29 ; 29 ; >
     au < released ; crawling ; 2010 ; IMA Journal of Numerical Analysis Volume 30 ; 30 ; >
     au < released ; crawling ; 2011 ; IMA Journal of Numerical Analysis Volume 31 ; 31 ; >
     au < crawling ; exists ; 2012 ; IMA Journal of Numerical Analysis Volume 32 ; 32 ; >
@@ -7199,8 +7199,8 @@
     param[base_url] = http://icc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Industrial and Corporate Change Volume 17 ; 17 ; >
-    au < down ; crawling ; 2009 ; Industrial and Corporate Change Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; Industrial and Corporate Change Volume 17 ; 17 ; >
+    au < zapped ; down ; 2009 ; Industrial and Corporate Change Volume 18 ; 18 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -7226,7 +7226,7 @@
     au < manifest ; exists ; 2006 ; Industrial and Corporate Change Volume 15 ; 15 ; >
     au < manifest ; exists ; 2007 ; Industrial and Corporate Change Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Industrial and Corporate Change Volume 17 ; 17 ; >
-    au < released ; crawling ; 2009 ; Industrial and Corporate Change Volume 18 ; 18 ; >
+    au < zapped ; down ; 2009 ; Industrial and Corporate Change Volume 18 ; 18 ; >
     au < released ; crawling ; 2010 ; Industrial and Corporate Change Volume 19 ; 19 ; >
     au < released ; crawling ; 2011 ; Industrial and Corporate Change Volume 20 ; 20 ; >
     au < crawling ; exists ; 2012 ; Industrial and Corporate Change Volume 21 ; 21 ; >
@@ -7249,8 +7249,8 @@
     param[base_url] = http://ilj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Industrial Law Journal Volume 37 ; 37 ; >
-    au < down ; crawling ; 2009 ; Industrial Law Journal Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; Industrial Law Journal Volume 37 ; 37 ; >
+    au < zapped ; down ; 2009 ; Industrial Law Journal Volume 38 ; 38 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -7296,7 +7296,7 @@
     au < manifest ; exists ; 2006 ; Industrial Law Journal Volume 35 ; 35 ; >
     au < manifest ; exists ; 2007 ; Industrial Law Journal Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Industrial Law Journal Volume 37 ; 37 ; >
-    au < released ; crawling ; 2009 ; Industrial Law Journal Volume 38 ; 38 ; >
+    au < zapped ; down ; 2009 ; Industrial Law Journal Volume 38 ; 38 ; >
     au < released ; crawling ; 2010 ; Industrial Law Journal Volume 39 ; 39 ; >
     au < released ; crawling ; 2011 ; Industrial Law Journal Volume 40 ; 40 ; >
     au < crawling ; exists ; 2012 ; Industrial Law Journal Volume 41 ; 41 ; >
@@ -7337,7 +7337,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < notReady ; exists ; 2008 ; InnovAiT Volume 1 ; 1 ; >
-    au < down ; crawling ; 2009 ; InnovAiT Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; InnovAiT Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -7403,8 +7403,8 @@
     param[base_url] = http://icb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Integrative and Comparative Biology Volume 48 ; 48 ; >
-    au < down ; crawling ; 2009 ; Integrative and Comparative Biology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; Integrative and Comparative Biology Volume 48 ; 48 ; >
+    au < zapped ; down ; 2009 ; Integrative and Comparative Biology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -7484,8 +7484,8 @@
     param[base_url] = http://isle.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 ; >
-    au < down ; crawling ; 2009 ; Interdisciplinary Studies in Literature and Environment Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 ; >
+    au < zapped ; down ; 2009 ; Interdisciplinary Studies in Literature and Environment Volume 16 ; 16 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -7609,7 +7609,7 @@
     param[base_url] = http://icon.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; International Journal of Constitutional Law Volume 6 ; 6 ; >
+    au < zapped ; down ; 2008 ; International Journal of Constitutional Law Volume 6 ; 6 ; >
     au < down ; crawling ; 2009 ; International Journal of Constitutional Law Volume 7 ; 7 ; reingest2.clockss.org:8085 >
 
     }
@@ -7718,8 +7718,8 @@
     param[base_url] = http://ijlit.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; International Journal of Law and Information Technology Volume 16 ; 16 ; >
-    au < down ; crawling ; 2009 ; International Journal of Law and Information Technology Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; International Journal of Law and Information Technology Volume 16 ; 16 ; >
+    au < zapped ; down ; 2009 ; International Journal of Law and Information Technology Volume 17 ; 17 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -7768,8 +7768,8 @@
     param[base_url] = http://lawfam.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; International Journal of Law, Policy and the Family Volume 22 ; 22 ; >
-    au < down ; crawling ; 2009 ; International Journal of Law, Policy and the Family Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; International Journal of Law, Policy and the Family Volume 22 ; 22 ; >
+    au < zapped ; down ; 2009 ; International Journal of Law, Policy and the Family Volume 23 ; 23 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -7823,7 +7823,7 @@
     param[base_url] = http://ijl.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; International Journal of Lexicography Volume 21 ; 21 ; >
+    au < zapped ; down ; 2008 ; International Journal of Lexicography Volume 21 ; 21 ; >
     au < down ; crawling ; 2009 ; International Journal of Lexicography Volume 22 ; 22 ; reingest1.clockss.org:8082 >
 
     }
@@ -7855,7 +7855,7 @@
     au < manifest ; exists ; 2007 ; International Journal of Lexicography Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Lexicography Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Lexicography Volume 22 ; 22 ; >
-    au < released ; crawling ; 2010 ; International Journal of Lexicography Volume 23 ; 23 ; >
+    au < zapped ; down ; 2010 ; International Journal of Lexicography Volume 23 ; 23 ; >
     au < released ; crawling ; 2011 ; International Journal of Lexicography Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; International Journal of Lexicography Volume 25 ; 25 ; >
 
@@ -7877,8 +7877,8 @@
     param[base_url] = http://ijlct.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; International Journal of Low-Carbon Technologies Volume 3 ; 3 ; >
-    au < down ; crawling ; 2009 ; International Journal of Low-Carbon Technologies Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; International Journal of Low-Carbon Technologies Volume 3 ; 3 ; >
+    au < zapped ; down ; 2009 ; International Journal of Low-Carbon Technologies Volume 4 ; 4 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -7914,7 +7914,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Journal of Public Opinion Research Volume 20 ; 20 ; >
-    au < down ; crawling ; 2009 ; International Journal of Public Opinion Research Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; International Journal of Public Opinion Research Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -7967,7 +7967,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 ; >
-    au < down ; crawling ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -8019,8 +8019,8 @@
     param[base_url] = http://ijrl.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; International Journal of Refugee Law Volume 20 ; 20 ; >
-    au < down ; crawling ; 2009 ; International Journal of Refugee Law Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; International Journal of Refugee Law Volume 20 ; 20 ; >
+    au < zapped ; down ; 2009 ; International Journal of Refugee Law Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -8072,7 +8072,7 @@
     param[base_url] = http://ijtj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; International Journal of Transitional Justice Volume 2 ; 2 ; >
+    au < zapped ; down ; 2008 ; International Journal of Transitional Justice Volume 2 ; 2 ; >
     au < down ; crawling ; 2009 ; International Journal of Transitional Justice Volume 3 ; 3 ; reingest1.clockss.org:8082 >
 
     }
@@ -8195,8 +8195,8 @@
     param[base_url] = http://irap.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; International Relations of the Asia-Pacific Volume 8 ; 8 ; >
-    au < down ; crawling ; 2009 ; International Relations of the Asia-Pacific Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; International Relations of the Asia-Pacific Volume 8 ; 8 ; >
+    au < zapped ; down ; 2009 ; International Relations of the Asia-Pacific Volume 9 ; 9 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -8213,7 +8213,7 @@
     au < manifest ; exists ; 2006 ; International Relations of the Asia-Pacific Volume 6 ; 6 ; >
     au < manifest ; exists ; 2007 ; International Relations of the Asia-Pacific Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Relations of the Asia-Pacific Volume 8 ; 8 ; >
-    au < released ; crawling ; 2009 ; International Relations of the Asia-Pacific Volume 9 ; 9 ; >
+    au < zapped ; down ; 2009 ; International Relations of the Asia-Pacific Volume 9 ; 9 ; >
     au < released ; crawling ; 2010 ; International Relations of the Asia-Pacific Volume 10 ; 10 ; >
     au < released ; crawling ; 2011 ; International Relations of the Asia-Pacific Volume 11 ; 11 ; >
     au < crawling ; exists ; 2012 ; International Relations of the Asia-Pacific Volume 12 ; 12 ; >
@@ -8236,7 +8236,7 @@
     param[base_url] = http://itnow.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; ITNOW Volume 50 ; 50 ; >
+    au < zapped ; down ; 2008 ; ITNOW Volume 50 ; 50 ; >
     au < down ; crawling ; 2009 ; ITNOW Volume 51 ; 51 ; reingest1.clockss.org:8082 >
 
     }
@@ -8405,7 +8405,7 @@
     param[base_url] = http://jae.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of African Economies Volume 17 ; 17 ; >
+    au < zapped ; down ; 2008 ; Journal of African Economies Volume 17 ; 17 ; >
     au < down ; crawling ; 2009 ; Journal of African Economies Volume 18 ; 18 ; >
 
     }
@@ -8455,8 +8455,8 @@
     param[base_url] = http://jaar.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 ; >
-    au < down ; crawling ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 ; >
+    au < zapped ; down ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 ; >
+    au < zapped ; down ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 ; >
 
     }
 
@@ -8800,8 +8800,8 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Journal of Biochemistry Volume 143 ; 143 ; >
-    au < down ; crawling ; 2008 ; The Journal of Biochemistry Volume 144 ; 144 ; >
-    au < down ; crawling ; 2009 ; The Journal of Biochemistry Volume 145 ; 145 ; >
+    au < zapped ; down ; 2008 ; The Journal of Biochemistry Volume 144 ; 144 ; >
+    au < zapped ; down ; 2009 ; The Journal of Biochemistry Volume 145 ; 145 ; >
     au < down ; crawling ; 2009 ; The Journal of Biochemistry Volume 146 ; 146 ; >
 
     }
@@ -9129,7 +9129,7 @@
     param[base_url] = http://jcle.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
+    au < zapped ; down ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
     au < down ; crawling ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
 
     }
@@ -9258,7 +9258,7 @@
     param[base_url] = http://jdh.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Design History Volume 21 ; 21 ; >
+    au < zapped ; down ; 2008 ; Journal of Design History Volume 21 ; 21 ; >
     au < down ; crawling ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
 
     }
@@ -9353,7 +9353,7 @@
     param[base_url] = http://jmicro.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
+    au < zapped ; down ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
     au < down ; crawling ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
 
     }
@@ -9444,8 +9444,8 @@
     param[base_url] = http://jel.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Environmental Law Volume 20 ; 20 ; >
-    au < down ; crawling ; 2009 ; Journal of Environmental Law Volume 21 ; 21 ; >
+    au < zapped ; down ; 2008 ; Journal of Environmental Law Volume 20 ; 20 ; >
+    au < zapped ; down ; 2009 ; Journal of Environmental Law Volume 21 ; 21 ; >
 
     }
 
@@ -9608,8 +9608,8 @@
     param[base_url] = http://jfec.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Financial Econometrics Volume 6 ; 6 ; >
-    au < down ; crawling ; 2009 ; Journal of Financial Econometrics Volume 7 ; 7 ; >
+    au < zapped ; down ; 2008 ; Journal of Financial Econometrics Volume 6 ; 6 ; >
+    au < zapped ; down ; 2009 ; Journal of Financial Econometrics Volume 7 ; 7 ; >
 
     }
 
@@ -9739,8 +9739,8 @@
     param[base_url] = http://jhered.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Heredity Volume 99 ; 99 ; >
-    au < down ; crawling ; 2009 ; Journal of Heredity Volume 100 ; 100 ; >
+    au < zapped ; down ; 2008 ; Journal of Heredity Volume 99 ; 99 ; >
+    au < zapped ; down ; 2009 ; Journal of Heredity Volume 100 ; 100 ; >
 
     }
 
@@ -9857,8 +9857,8 @@
     au < manifest ; exists ; 2007 ; Journal of Heredity Volume 98 ; 98 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Heredity Volume 99 ; 99 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Heredity Volume 100 ; 100 ; >
-    au < released ; crawling ; 2010 ; Journal of Heredity Volume 101 ; 101 ; >
-    au < released ; crawling ; 2011 ; Journal of Heredity Volume 102 ; 102 ; >
+    au < zapped ; down ; 2010 ; Journal of Heredity Volume 101 ; 101 ; >
+    au < zapped ; down ; 2011 ; Journal of Heredity Volume 102 ; 102 ; >
     au < crawling ; exists ; 2012 ; Journal of Heredity Volume 103 ; 103 ; >
 
     }
@@ -9879,7 +9879,7 @@
     param[base_url] = http://jhs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2009 ; The Journal of Hindu Studies Volume 2 ; 2 ; >
+    au < zapped ; down ; 2009 ; The Journal of Hindu Studies Volume 2 ; 2 ; >
 
     }
 
@@ -9965,8 +9965,8 @@
     param[base_url] = http://jhmas.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 ; >
-    au < down ; crawling ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 ; >
+    au < zapped ; down ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 ; >
+    au < zapped ; down ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 ; >
 
     }
 
@@ -10061,7 +10061,7 @@
     param[base_url] = http://jhrp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2009 ; Journal of Human Rights Practice Volume 1 ; 1 ; >
+    au < zapped ; down ; 2009 ; Journal of Human Rights Practice Volume 1 ; 1 ; >
 
     }
 
@@ -10319,7 +10319,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Intellectual Property Law & Practice Volume 3 ; 3 ; >
-    au < down ; crawling ; 2009 ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 ; >
+    au < zapped ; down ; 2009 ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 ; >
 
     }
 
@@ -10354,7 +10354,7 @@
     param[base_url] = http://jicj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 ; >
+    au < zapped ; down ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 ; >
     au < down ; crawling ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 ; >
 
     }
@@ -10411,8 +10411,8 @@
     param[base_url] = http://jiel.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of International Economic Law Volume 11 ; 11 ; >
-    au < down ; crawling ; 2009 ; Journal of International Economic Law Volume 12 ; 12 ; >
+    au < zapped ; down ; 2008 ; Journal of International Economic Law Volume 11 ; 11 ; >
+    au < zapped ; down ; 2009 ; Journal of International Economic Law Volume 12 ; 12 ; >
 
     }
 
@@ -10456,7 +10456,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 ; >
-    au < down ; crawling ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 ; >
+    au < zapped ; down ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 ; >
 
     }
 
@@ -10507,8 +10507,8 @@
     param[base_url] = http://jleo.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Law, Economics, and Organization Volume 24 ; 24 ; >
-    au < down ; crawling ; 2009 ; Journal of Law, Economics, and Organization Volume 25 ; 25 ; >
+    au < zapped ; down ; 2008 ; Journal of Law, Economics, and Organization Volume 24 ; 24 ; >
+    au < zapped ; down ; 2009 ; Journal of Law, Economics, and Organization Volume 25 ; 25 ; >
 
     }
 
@@ -10639,9 +10639,9 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
-    au < down ; crawling ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
+    au < zapped ; down ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
     au < down ; crawling ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
-    au < down ; crawling ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
+    au < zapped ; down ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
 
     }
 
@@ -10801,7 +10801,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 ; >
-    au < down ; crawling ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 ; >
+    au < zapped ; down ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 ; >
 
     }
 
@@ -10866,7 +10866,7 @@
     param[base_url] = http://jmcb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 ; >
+    au < zapped ; down ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 ; >
 
     }
 
@@ -10898,8 +10898,8 @@
     param[base_url] = http://mollus.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 ; >
-    au < down ; crawling ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 ; >
+    au < zapped ; down ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 ; >
+    au < zapped ; down ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 ; >
 
     }
 
@@ -11060,7 +11060,7 @@
     param[base_url] = http://jicru.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of the ICRU Volume 8 ; 8 ; >
+    au < zapped ; down ; 2008 ; Journal of the ICRU Volume 8 ; 8 ; >
     au < down ; crawling ; 2009 ; Journal of the ICRU Volume 9 ; 9 ; >
 
     }
@@ -11118,8 +11118,8 @@
     param[base_url] = http://jpepsy.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Pediatric Psychology Volume 33 ; 33 ; >
-    au < down ; crawling ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 ; >
+    au < zapped ; down ; 2008 ; Journal of Pediatric Psychology Volume 33 ; 33 ; >
+    au < zapped ; down ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 ; >
 
     }
 
@@ -11353,8 +11353,8 @@
     param[base_url] = http://jpart.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Public Administration Research and Theory Volume 18 ; 18 ; >
-    au < down ; crawling ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 ; >
+    au < zapped ; down ; 2008 ; Journal of Public Administration Research and Theory Volume 18 ; 18 ; >
+    au < zapped ; down ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 ; >
 
     }
 
@@ -11404,7 +11404,7 @@
     param[base_url] = http://jpubhealth.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2009 ; Journal of Public Health Volume 31 ; 31 ; >
+    au < zapped ; down ; 2009 ; Journal of Public Health Volume 31 ; 31 ; >
 
     }
 
@@ -11482,8 +11482,8 @@
     param[base_url] = http://jrs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Refugee Studies Volume 21 ; 21 ; >
-    au < down ; crawling ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 ; >
+    au < zapped ; down ; 2008 ; Journal of Refugee Studies Volume 21 ; 21 ; >
+    au < zapped ; down ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 ; >
 
     }
 
@@ -11536,8 +11536,8 @@
     param[base_url] = http://jos.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Semantics Volume 25 ; 25 ; >
-    au < down ; crawling ; 2009 ; Journal of Semantics Volume 26 ; 26 ; >
+    au < zapped ; down ; 2008 ; Journal of Semantics Volume 25 ; 25 ; >
+    au < zapped ; down ; 2009 ; Journal of Semantics Volume 26 ; 26 ; >
 
     }
 
@@ -11594,8 +11594,8 @@
     param[base_url] = http://jss.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Semitic Studies Volume 53 ; 53 ; >
-    au < down ; crawling ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 ; >
+    au < zapped ; down ; 2008 ; Journal of Semitic Studies Volume 53 ; 53 ; >
+    au < zapped ; down ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 ; >
 
     }
 
@@ -11744,8 +11744,8 @@
     param[base_url] = http://jts.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The Journal of Theological Studies Volume 59 ; 59 ; >
-    au < down ; crawling ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 ; >
+    au < zapped ; down ; 2008 ; The Journal of Theological Studies Volume 59 ; 59 ; >
+    au < zapped ; down ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 ; >
 
     }
 
@@ -11886,8 +11886,8 @@
     param[base_url] = http://jtopol.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Topology Volume 1 ; 1 ; >
-    au < down ; crawling ; 2009 ; Journal of Topology Volume 2 ; 2 ; >
+    au < zapped ; down ; 2008 ; Journal of Topology Volume 1 ; 1 ; >
+    au < zapped ; down ; 2009 ; Journal of Topology Volume 2 ; 2 ; >
 
     }
 
@@ -11920,8 +11920,8 @@
     param[base_url] = http://tropej.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of Tropical Pediatrics Volume 54 ; 54 ; >
-    au < down ; crawling ; 2009 ; Journal of Tropical Pediatrics Volume 55 ; 55 ; >
+    au < zapped ; down ; 2008 ; Journal of Tropical Pediatrics Volume 54 ; 54 ; >
+    au < zapped ; down ; 2009 ; Journal of Tropical Pediatrics Volume 55 ; 55 ; >
 
     }
 
@@ -12007,8 +12007,8 @@
     param[base_url] = http://jwelb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 ; >
-    au < down ; crawling ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 ; >
+    au < zapped ; down ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 ; >
+    au < zapped ; down ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 ; >
 
     }
 
@@ -12041,8 +12041,8 @@
     param[base_url] = http://lpr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Law, Probability and Risk Volume 7 ; 7 ; >
-    au < down ; crawling ; 2009 ; Law, Probability and Risk Volume 8 ; 8 ; >
+    au < zapped ; down ; 2008 ; Law, Probability and Risk Volume 7 ; 7 ; >
+    au < zapped ; down ; 2009 ; Law, Probability and Risk Volume 8 ; 8 ; >
 
     }
 
@@ -12082,7 +12082,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < notReady ; exists ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
-    au < down ; crawling ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
+    au < zapped ; down ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
 
     }
 
@@ -12167,8 +12167,8 @@
     param[base_url] = http://library.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The Library Volume 9 ; 9 ; >
-    au < down ; crawling ; 2009 ; The Library Volume 10 ; 10 ; >
+    au < zapped ; down ; 2008 ; The Library Volume 9 ; 9 ; >
+    au < zapped ; down ; 2009 ; The Library Volume 10 ; 10 ; >
 
     }
 
@@ -12339,8 +12339,8 @@
     param[base_url] = http://llc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 ; >
-    au < down ; crawling ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 ; >
+    au < zapped ; down ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 ; >
+    au < zapped ; down ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 ; >
 
     }
 
@@ -12395,8 +12395,8 @@
     param[base_url] = http://litimag.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Literary Imagination Volume 10 ; 10 ; >
-    au < down ; crawling ; 2009 ; Literary Imagination Volume 11 ; 11 ; >
+    au < zapped ; down ; 2008 ; Literary Imagination Volume 10 ; 10 ; >
+    au < zapped ; down ; 2009 ; Literary Imagination Volume 11 ; 11 ; >
 
     }
 
@@ -12438,8 +12438,8 @@
     param[base_url] = http://litthe.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Literature and Theology Volume 22 ; 22 ; >
-    au < down ; crawling ; 2009 ; Literature and Theology Volume 23 ; 23 ; >
+    au < zapped ; down ; 2008 ; Literature and Theology Volume 22 ; 22 ; >
+    au < zapped ; down ; 2009 ; Literature and Theology Volume 23 ; 23 ; >
 
     }
 
@@ -12600,7 +12600,7 @@
     param[base_url] = http://medlaw.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Medical Law Review Volume 16 ; 16 ; >
+    au < zapped ; down ; 2008 ; Medical Law Review Volume 16 ; 16 ; >
     au < down ; crawling ; 2009 ; Medical Law Review Volume 17 ; 17 ; >
 
     }
@@ -12808,7 +12808,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 ; >
-    au < down ; crawling ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 ; >
+    au < zapped ; down ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 ; >
 
     }
 
@@ -12854,8 +12854,8 @@
     param[base_url] = http://mj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Modern Judaism Volume 28 ; 28 ; >
-    au < down ; crawling ; 2009 ; Modern Judaism Volume 29 ; 29 ; >
+    au < zapped ; down ; 2008 ; Modern Judaism Volume 28 ; 28 ; >
+    au < zapped ; down ; 2009 ; Modern Judaism Volume 29 ; 29 ; >
 
     }
 
@@ -12915,7 +12915,7 @@
     param[base_url] = http://mbe.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 ; >
+    au < zapped ; down ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 ; >
     au < down ; crawling ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 ; >
 
     }
@@ -13045,7 +13045,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Music and Letters Volume 89 ; 89 ; >
-    au < down ; crawling ; 2009 ; Music and Letters Volume 90 ; 90 ; >
+    au < zapped ; down ; 2009 ; Music and Letters Volume 90 ; 90 ; >
 
     }
 
@@ -13282,7 +13282,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Mutagenesis Volume 23 ; 23 ; >
-    au < down ; crawling ; 2009 ; Mutagenesis Volume 24 ; 24 ; >
+    au < zapped ; down ; 2009 ; Mutagenesis Volume 24 ; 24 ; >
 
     }
 
@@ -13446,7 +13446,7 @@
     param[base_url] = http://ntr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Nicotine and Tobacco Research Volume 10 ; 10 ; >
+    au < zapped ; down ; 2008 ; Nicotine and Tobacco Research Volume 10 ; 10 ; >
     au < down ; crawling ; 2009 ; Nicotine and Tobacco Research Volume 11 ; 11 ; >
 
     }
@@ -13490,8 +13490,8 @@
     param[base_url] = http://nq.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Notes and Queries Volume 55 ; 55 ; >
-    au < down ; crawling ; 2009 ; Notes and Queries Volume 56 ; 56 ; >
+    au < zapped ; down ; 2008 ; Notes and Queries Volume 55 ; 55 ; >
+    au < zapped ; down ; 2009 ; Notes and Queries Volume 56 ; 56 ; >
 
     }
 
@@ -13857,8 +13857,8 @@
     param[base_url] = http://nass.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Nucleic Acids Symposium Series Volume 52 ; 52 ; >
-    au < down ; crawling ; 2009 ; Nucleic Acids Symposium Series Volume 53 ; 53 ; >
+    au < zapped ; down ; 2008 ; Nucleic Acids Symposium Series Volume 52 ; 52 ; >
+    au < zapped ; down ; 2009 ; Nucleic Acids Symposium Series Volume 53 ; 53 ; >
 
     }
 
@@ -13943,8 +13943,8 @@
     param[base_url] = http://occmed.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Occupational Medicine Volume 58 ; 58 ; >
-    au < down ; crawling ; 2009 ; Occupational Medicine Volume 59 ; 59 ; >
+    au < zapped ; down ; 2008 ; Occupational Medicine Volume 58 ; 58 ; >
+    au < zapped ; down ; 2009 ; Occupational Medicine Volume 59 ; 59 ; >
 
     }
 
@@ -14083,8 +14083,8 @@
     param[base_url] = http://ohr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The Oral History Review Volume 35 ; 35 ; >
-    au < down ; crawling ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
+    au < zapped ; down ; 2008 ; The Oral History Review Volume 35 ; 35 ; >
+    au < zapped ; down ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
 
     }
 
@@ -14151,8 +14151,8 @@
     param[base_url] = http://oaj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Oxford Art Journal Volume 31 ; 31 ; >
-    au < down ; crawling ; 2009 ; Oxford Art Journal Volume 32 ; 32 ; >
+    au < zapped ; down ; 2008 ; Oxford Art Journal Volume 31 ; 31 ; >
+    au < zapped ; down ; 2009 ; Oxford Art Journal Volume 32 ; 32 ; >
 
     }
 
@@ -14336,8 +14336,8 @@
     param[base_url] = http://ojls.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Oxford Journal of Legal Studies Volume 28 ; 28 ; >
-    au < down ; crawling ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 ; >
+    au < zapped ; down ; 2008 ; Oxford Journal of Legal Studies Volume 28 ; 28 ; >
+    au < zapped ; down ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 ; >
 
     }
 
@@ -14397,8 +14397,8 @@
     param[base_url] = http://oxrep.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Oxford Review of Economic Policy Volume 24 ; 24 ; >
-    au < down ; crawling ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 ; >
+    au < zapped ; down ; 2008 ; Oxford Review of Economic Policy Volume 24 ; 24 ; >
+    au < zapped ; down ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 ; >
 
     }
 
@@ -14454,8 +14454,8 @@
     param[base_url] = http://pa.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Parliamentary Affairs Volume 61 ; 61 ; >
-    au < down ; crawling ; 2009 ; Parliamentary Affairs Volume 62 ; 62 ; >
+    au < zapped ; down ; 2008 ; Parliamentary Affairs Volume 61 ; 61 ; >
+    au < zapped ; down ; 2009 ; Parliamentary Affairs Volume 62 ; 62 ; >
 
     }
 
@@ -14548,12 +14548,12 @@
     param[base_url] = http://past.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Past & Present Volume 198 ; 198 ; >
+    au < zapped ; down ; 2008 ; Past & Present Volume 198 ; 198 ; >
     au < down ; crawling ; 2008 ; Past & Present Volume 199 ; 199 ; >
-    au < down ; crawling ; 2008 ; Past & Present Volume 200 ; 200 ; >
+    au < zapped ; down ; 2008 ; Past & Present Volume 200 ; 200 ; >
     au < down ; crawling ; 2008 ; Past & Present Volume 201 ; 201 ; >
-    au < down ; crawling ; 2009 ; Past & Present Volume 202 ; 202 ; >
-    au < down ; crawling ; 2009 ; Past & Present Volume 203 ; 203 ; >
+    au < zapped ; down ; 2009 ; Past & Present Volume 202 ; 202 ; >
+    au < zapped ; down ; 2009 ; Past & Present Volume 203 ; 203 ; >
 
     }
 
@@ -14798,8 +14798,8 @@
     param[base_url] = http://philmat.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Philosophia Mathematica Volume 16 ; 16 ; >
-    au < down ; crawling ; 2009 ; Philosophia Mathematica Volume 17 ; 17 ; >
+    au < zapped ; down ; 2008 ; Philosophia Mathematica Volume 16 ; 16 ; >
+    au < zapped ; down ; 2009 ; Philosophia Mathematica Volume 17 ; 17 ; >
 
     }
 
@@ -14952,8 +14952,8 @@
     param[base_url] = http://policing.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Policing: A Journal of Policy and Practice Volume 2 ; 2 ; >
-    au < down ; crawling ; 2009 ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
+    au < zapped ; down ; 2008 ; Policing: A Journal of Policy and Practice Volume 2 ; 2 ; >
+    au < zapped ; down ; 2009 ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
 
     }
 
@@ -14987,8 +14987,8 @@
     param[base_url] = http://pan.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Political Analysis Volume 16 ; 16 ; >
-    au < down ; crawling ; 2009 ; Political Analysis Volume 17 ; 17 ; >
+    au < zapped ; down ; 2008 ; Political Analysis Volume 16 ; 16 ; >
+    au < zapped ; down ; 2009 ; Political Analysis Volume 17 ; 17 ; >
 
     }
 
@@ -15036,10 +15036,10 @@
     param[base_url] = http://plms.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Proceedings of the London Mathematical Society Volume 96 ; 96 ; >
-    au < down ; crawling ; 2008 ; Proceedings of the London Mathematical Society Volume 97 ; 97 ; >
+    au < zapped ; down ; 2008 ; Proceedings of the London Mathematical Society Volume 96 ; 96 ; >
+    au < zapped ; down ; 2008 ; Proceedings of the London Mathematical Society Volume 97 ; 97 ; >
     au < down ; crawling ; 2009 ; Proceedings of the London Mathematical Society Volume 98 ; 98 ; >
-    au < down ; crawling ; 2009 ; Proceedings of the London Mathematical Society Volume 99 ; 99 ; >
+    au < zapped ; down ; 2009 ; Proceedings of the London Mathematical Society Volume 99 ; 99 ; >
 
     }
 
@@ -15262,7 +15262,7 @@
     param[base_url] = http://peds.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Protein Engineering, Design & Selection : PEDS Volume 21 ; 21 ; >
+    au < zapped ; down ; 2008 ; Protein Engineering, Design & Selection : PEDS Volume 21 ; 21 ; >
     au < down ; crawling ; 2009 ; Protein Engineering, Design & Selection : PEDS Volume 22 ; 22 ; >
 
     }
@@ -15350,7 +15350,7 @@
     param[base_url] = http://poq.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Public Opinion Quarterly Volume 72 ; 72 ; >
+    au < zapped ; down ; 2008 ; Public Opinion Quarterly Volume 72 ; 72 ; >
     au < down ; crawling ; 2009 ; Public Opinion Quarterly Volume 73 ; 73 ; >
 
     }
@@ -15455,8 +15455,8 @@
     param[base_url] = http://publius.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Publius: The Journal of Federalism Volume 38 ; 38 ; >
-    au < down ; crawling ; 2009 ; Publius: The Journal of Federalism Volume 39 ; 39 ; >
+    au < zapped ; down ; 2008 ; Publius: The Journal of Federalism Volume 38 ; 38 ; >
+    au < zapped ; down ; 2009 ; Publius: The Journal of Federalism Volume 39 ; 39 ; >
 
     }
 
@@ -15684,7 +15684,7 @@
     param[base_url] = http://qjmath.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 ; >
+    au < zapped ; down ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 ; >
     au < down ; crawling ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; >
 
     }
@@ -15896,7 +15896,7 @@
     au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
     au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
     au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
-    au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; reingest2.clockss.org:8085 >
     au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
 
     }
@@ -16040,7 +16040,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
-    au < released ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; >
+    au < zapped ; down ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; >
     au < released ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; >
     au < released ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 137 ; 137 ; >
     au < released ; crawling ; 2010 ; Radiation Protection Dosimetry Volume 138 ; 138 ; >
@@ -16077,7 +16077,7 @@
     param[base_url] = http://rsq.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Refugee Survey Quarterly Volume 27 ; 27 ; >
+    au < zapped ; down ; 2008 ; Refugee Survey Quarterly Volume 27 ; 27 ; >
     au < down ; crawling ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; reingest2.clockss.org:8085 >
 
     }
@@ -16137,8 +16137,8 @@
     param[base_url] = http://rpc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Reports of Patent, Design and Trade Mark Cases Volume 125 ; 125 ; >
-    au < down ; crawling ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; Reports of Patent, Design and Trade Mark Cases Volume 125 ; 125 ; >
+    au < zapped ; down ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -16455,8 +16455,8 @@
     param[base_url] = http://reep.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Review of Environmental Economics and Policy Volume 2 ; 2 ; >
-    au < down ; crawling ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; Review of Environmental Economics and Policy Volume 2 ; 2 ; >
+    au < zapped ; down ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -16467,7 +16467,7 @@
 
     au < manifest ; exists ; 2007 ; Review of Environmental Economics and Policy Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Review of Environmental Economics and Policy Volume 2 ; 2 ; >
-    au < released ; crawling ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; >
+    au < zapped ; down ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; >
     au < released ; crawling ; 2010 ; Review of Environmental Economics and Policy Volume 4 ; 4 ; >
     au < released ; crawling ; 2011 ; Review of Environmental Economics and Policy Volume 5 ; 5 ; >
     au < crawling ; exists ; 2012 ; Review of Environmental Economics and Policy Volume 6 ; 6 ; >
@@ -16490,8 +16490,8 @@
     param[base_url] = http://rof.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Review of Finance Volume 12 ; 12 ; >
-    au < down ; crawling ; 2009 ; Review of Finance Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; Review of Finance Volume 12 ; 12 ; >
+    au < zapped ; down ; 2009 ; Review of Finance Volume 13 ; 13 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -16512,7 +16512,7 @@
     au < manifest ; exists ; 2006 ; Review of Finance Volume 10 ; 10 ; >
     au < manifest ; exists ; 2007 ; Review of Finance Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Review of Finance Volume 12 ; 12 ; >
-    au < released ; crawling ; 2009 ; Review of Finance Volume 13 ; 13 ; >
+    au < zapped ; down ; 2009 ; Review of Finance Volume 13 ; 13 ; >
     au < released ; crawling ; 2010 ; Review of Finance Volume 14 ; 14 ; >
     au < released ; crawling ; 2011 ; Review of Finance Volume 15 ; 15 ; >
     au < crawling ; exists ; 2012 ; Review of Finance Volume 16 ; 16 ; >
@@ -16677,7 +16677,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
-    au < down ; crawling ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -16720,7 +16720,7 @@
     au < manifest ; exists ; 2006 ; Schizophrenia Bulletin Volume 32 ; 32 ; >
     au < manifest ; exists ; 2007 ; Schizophrenia Bulletin Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
-    au < released ; crawling ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; >
+    au < zapped ; down ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; >
     au < released ; crawling ; 2010 ; Schizophrenia Bulletin Volume 36 ; 36 ; >
     au < released ; crawling ; 2011 ; Schizophrenia Bulletin Volume 37 ; 37 ; >
     au < crawling ; exists ; 2012 ; Schizophrenia Bulletin Volume 38 ; 38 ; >
@@ -16760,8 +16760,8 @@
     param[base_url] = http://screen.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Screen Volume 49 ; 49 ; >
-    au < down ; crawling ; 2009 ; Screen Volume 50 ; 50 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; Screen Volume 49 ; 49 ; >
+    au < zapped ; down ; 2009 ; Screen Volume 50 ; 50 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -16810,7 +16810,7 @@
     au < manifest ; exists ; 2006 ; Screen Volume 47 ; 47 ; >
     au < manifest ; exists ; 2007 ; Screen Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Screen Volume 49 ; 49 ; >
-    au < released ; crawling ; 2009 ; Screen Volume 50 ; 50 ; >
+    au < zapped ; down ; 2009 ; Screen Volume 50 ; 50 ; >
     au < released ; crawling ; 2010 ; Screen Volume 51 ; 51 ; >
     au < released ; crawling ; 2011 ; Screen Volume 52 ; 52 ; >
     au < crawling ; exists ; 2012 ; Screen Volume 53 ; 53 ; >
@@ -16834,7 +16834,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
-    au < down ; crawling ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -16846,7 +16846,7 @@
     au < manifest ; exists ; 2006 ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 ; >
     au < manifest ; exists ; 2007 ; Social Cognitive and Affective Neuroscience Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
-    au < released ; crawling ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; >
+    au < zapped ; down ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; >
     au < released ; crawling ; 2010 ; Social Cognitive and Affective Neuroscience Volume 5 ; 5 ; >
     au < released ; crawling ; 2011 ; Social Cognitive and Affective Neuroscience Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; Social Cognitive and Affective Neuroscience Volume 7 ; 7 ; >
@@ -16975,8 +16975,8 @@
     param[base_url] = http://shm.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Social History of Medicine Volume 21 ; 21 ; >
-    au < down ; crawling ; 2009 ; Social History of Medicine Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+    au < zapped ; down ; 2008 ; Social History of Medicine Volume 21 ; 21 ; >
+    au < zapped ; down ; 2009 ; Social History of Medicine Volume 22 ; 22 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -17006,7 +17006,7 @@
     au < manifest ; exists ; 2006 ; Social History of Medicine Volume 19 ; 19 ; >
     au < manifest ; exists ; 2007 ; Social History of Medicine Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Social History of Medicine Volume 21 ; 21 ; >
-    au < released ; crawling ; 2009 ; Social History of Medicine Volume 22 ; 22 ; >
+    au < zapped ; down ; 2009 ; Social History of Medicine Volume 22 ; 22 ; >
     au < released ; crawling ; 2010 ; Social History of Medicine Volume 23 ; 23 ; >
     au < released ; crawling ; 2011 ; Social History of Medicine Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; Social History of Medicine Volume 25 ; 25 ; >
@@ -17029,7 +17029,7 @@
     param[base_url] = http://sp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Social Politics Volume 15 ; 15 ; >
+    au < zapped ; down ; 2008 ; Social Politics Volume 15 ; 15 ; >
     au < down ; crawling ; 2009 ; Social Politics Volume 16 ; 16 ; reingest4.clockss.org:8082 >
 
     }
@@ -17077,7 +17077,7 @@
     param[base_url] = http://ssjj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Social Science Japan Journal Volume 11 ; 11 ; >
+    au < zapped ; down ; 2008 ; Social Science Japan Journal Volume 11 ; 11 ; >
     au < down ; crawling ; 2009 ; Social Science Japan Journal Volume 12 ; 12 ; reingest4.clockss.org:8082 >
 
     }
@@ -17226,7 +17226,7 @@
     param[base_url] = http://ser.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
+    au < zapped ; down ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
     au < down ; crawling ; 2009 ; Socio-Economic Review Volume 7 ; 7 ; reingest4.clockss.org:8082 >
 
     }
@@ -17342,7 +17342,7 @@
     param[base_url] = http://slr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Statute Law Review Volume 29 ; 29 ; >
+    au < zapped ; down ; 2008 ; Statute Law Review Volume 29 ; 29 ; >
     au < down ; crawling ; 2009 ; Statute Law Review Volume 30 ; 30 ; reingest4.clockss.org:8082 >
 
     }
@@ -17404,7 +17404,7 @@
     param[base_url] = http://sysbio.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Systematic Biology Volume 57 ; 57 ; >
+    au < zapped ; down ; 2008 ; Systematic Biology Volume 57 ; 57 ; >
     au < down ; crawling ; 2009 ; Systematic Biology Volume 58 ; 58 ; reingest4.clockss.org:8082 >
 
     }
@@ -17494,7 +17494,7 @@
     param[base_url] = http://teamat.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 27 ; 27 ; >
+    au < zapped ; down ; 2008 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 27 ; 27 ; >
     au < down ; crawling ; 2009 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 28 ; 28 ; reingest4.clockss.org:8082 >
 
     }
@@ -17531,7 +17531,7 @@
     au < manifest ; exists ; 2006 ; Teaching Mathematics and its Applications Volume 25 ; 25 ; >
     au < manifest ; exists ; 2007 ; Teaching Mathematics and its Applications Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Teaching Mathematics and its Applications Volume 27 ; 27 ; >
-    au < released ; crawling ; 2009 ; Teaching Mathematics and its Applications Volume 28 ; 28 ; >
+    au < zapped ; down ; 2009 ; Teaching Mathematics and its Applications Volume 28 ; 28 ; >
     au < released ; crawling ; 2010 ; Teaching Mathematics and its Applications Volume 29 ; 29 ; >
     au < released ; crawling ; 2011 ; Teaching Mathematics and its Applications Volume 30 ; 30 ; >
     au < crawling ; exists ; 2012 ; Teaching Mathematics and its Applications Volume 31 ; 31 ; >
@@ -17557,13 +17557,13 @@
     au < down ; crawling ; 2008 ; Toxicological Sciences Volume 101 ; 101 ; >
     au < down ; crawling ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
     au < down ; crawling ; 2008 ; Toxicological Sciences Volume 103 ; 103 ; >
-    au < down ; crawling ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
+    au < zapped ; down ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
     au < down ; crawling ; 2008 ; Toxicological Sciences Volume 105 ; 105 ; >
-    au < down ; crawling ; 2008 ; Toxicological Sciences Volume 106 ; 106 ; >
-    au < down ; crawling ; 2009 ; Toxicological Sciences Volume 107 ; 107 ; reingest4.clockss.org:8082 >
-    au < down ; crawling ; 2009 ; Toxicological Sciences Volume 108 ; 108 ; reingest4.clockss.org:8082 >
-    au < down ; crawling ; 2009 ; Toxicological Sciences Volume 109 ; 109 ; reingest4.clockss.org:8082 >
-    au < down ; crawling ; 2009 ; Toxicological Sciences Volume 110 ; 110 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; Toxicological Sciences Volume 106 ; 106 ; >
+    au < zapped ; down ; 2009 ; Toxicological Sciences Volume 107 ; 107 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Toxicological Sciences Volume 108 ; 108 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Toxicological Sciences Volume 109 ; 109 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2009 ; Toxicological Sciences Volume 110 ; 110 ; reingest4.clockss.org:8082 >
     au < down ; crawling ; 2009 ; Toxicological Sciences Volume 111 ; 111 ; >
 
     }
@@ -17782,7 +17782,7 @@
     param[base_url] = http://tandt.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
+    au < zapped ; down ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
     au < down ; crawling ; 2009 ; Trusts & Trustees Volume 15 ; 15 ; reingest4.clockss.org:8082 >
 
     }
@@ -17807,7 +17807,7 @@
     au < manifest ; exists ; 2007 ; Trusts & Trustees Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
     au < released ; crawling ; 2009 ; Trusts & Trustees Volume 15 ; 15 ; >
-    au < released ; crawling ; 2010 ; Trusts & Trustees Volume 16 ; 16 ; >
+    au < zapped ; down ; 2010 ; Trusts & Trustees Volume 16 ; 16 ; >
     au < released ; crawling ; 2011 ; Trusts & Trustees Volume 17 ; 17 ; >
     au < crawling ; exists ; 2012 ; Trusts & Trustees Volume 18 ; 18 ; >
 
@@ -17829,8 +17829,8 @@
     param[base_url] = http://tcbh.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
-    au < down ; crawling ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
+    au < zapped ; down ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -17858,7 +17858,7 @@
     au < manifest ; exists ; 2006 ; Twentieth Century British History Volume 17 ; 17 ; >
     au < manifest ; exists ; 2007 ; Twentieth Century British History Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
-    au < released ; crawling ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; >
+    au < zapped ; down ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; >
     au < released ; crawling ; 2010 ; Twentieth Century British History Volume 21 ; 21 ; >
     au < released ; crawling ; 2011 ; Twentieth Century British History Volume 22 ; 22 ; >
     au < crawling ; exists ; 2012 ; Twentieth Century British History Volume 23 ; 23 ; >
@@ -17881,8 +17881,8 @@
     param[base_url] = http://wber.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The World Bank Economic Review Volume 22 ; 22 ; >
-    au < down ; crawling ; 2009 ; The World Bank Economic Review Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+    au < zapped ; down ; 2008 ; The World Bank Economic Review Volume 22 ; 22 ; >
+    au < zapped ; down ; 2009 ; The World Bank Economic Review Volume 23 ; 23 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -17913,7 +17913,7 @@
     au < manifest ; exists ; 2006 ; The World Bank Economic Review Volume 20 ; 20 ; >
     au < manifest ; exists ; 2007 ; The World Bank Economic Review Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The World Bank Economic Review Volume 22 ; 22 ; >
-    au < released ; crawling ; 2009 ; The World Bank Economic Review Volume 23 ; 23 ; >
+    au < zapped ; down ; 2009 ; The World Bank Economic Review Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; The World Bank Economic Review Volume 24 ; 24 ; >
     au < released ; crawling ; 2011 ; The World Bank Economic Review Volume 25 ; 25 ; >
     au < crawling ; exists ; 2012 ; The World Bank Economic Review Volume 26 ; 26 ; >
@@ -17936,7 +17936,7 @@
     param[base_url] = http://wbro.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
+    au < zapped ; down ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
     au < down ; crawling ; 2009 ; The World Bank Research Observer Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
     }
@@ -18076,7 +18076,7 @@
     param[base_url] = http://ywcct.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 ; >
+    au < zapped ; down ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 ; >
     au < down ; crawling ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 ; reingest4.clockss.org:8082 >
 
     }
@@ -18125,7 +18125,7 @@
     param[base_url] = http://ywes.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 ; >
+    au < zapped ; down ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 ; >
 
     }
 
