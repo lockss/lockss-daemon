@@ -12,6 +12,7 @@
       implicit < status ; year ; name ; volume ; param[year] >
       
       param[base_url] = http://www.combinatorics.org/
+      param[journal_id] = eljc
 
       au < exists ; 1994 ; The Electronic Journal of Combinatorics Volume 1 ; 1 ; 1994 >
       au < exists ; 1995 ; The Electronic Journal of Combinatorics Volume 2 ; 2 ; 1995 >
