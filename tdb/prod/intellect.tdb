@@ -1100,9 +1100,12 @@
         issn = 0845-4450 ;
         eissn = 2048-6928  
       >
+      
+      param[journal_id] = 
+      param[journal_issn] = 0845-4450
+
       comment[0] = forthcoming 2012
       
-      au < expected ; 2012 ; PUBLIC: Art, Culture, Ideas Volume 1 ; 1 >
     }
     
     {
