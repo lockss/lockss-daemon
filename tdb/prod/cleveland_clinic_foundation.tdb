@@ -4,7 +4,7 @@
     name = Cleveland Clinic Foundation
   >
 
-  implicit < status ; year ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.ccjm.org/
   plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
 
