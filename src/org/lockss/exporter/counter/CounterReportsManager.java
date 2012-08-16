@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsManager.java,v 1.2 2012-08-16 22:26:17 fergaloy-sf Exp $
+ * $Id: CounterReportsManager.java,v 1.3 2012-08-16 22:34:52 fergaloy-sf Exp $
  */
 
 /*
@@ -223,7 +223,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
   @Override
   public void startService() {
     final String DEBUG_HEADER = "startService(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     // Do nothing more if the configuration failed.
     if (!configure()) {
@@ -252,7 +252,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 
       // Set up the LOCKSS identifier of the aggregation of all books.
       allBooksLockssId = allBooksTitle.getLockssId();
-      log.debug(DEBUG_HEADER + "allBooksLockssId = " + allBooksLockssId);
+      log.debug2(DEBUG_HEADER + "allBooksLockssId = " + allBooksLockssId);
     } catch (Exception e) {
       log.error("Cannot set up the LOCKSS identifier for the book aggregation",
 		e);
@@ -271,7 +271,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 
       // Set up the LOCKSS identifier of the aggregation of all journals.
       allJournalsLockssId = allJournalsTitle.getLockssId();
-      log.debug(DEBUG_HEADER + "allJournalsLockssId = " + allJournalsLockssId);
+      log.debug2(DEBUG_HEADER + "allJournalsLockssId = " + allJournalsLockssId);
     } catch (Exception e) {
       log.error("Cannot set up the LOCKSS identifier for the journal aggregation",
 		e);
@@ -281,7 +281,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     // Schedule the recurring task of aggregating requests data.
     Cron cron = (Cron) LockssDaemon.getManager(LockssDaemon.CRON);
     cron.addTask(new CounterReportsRequestAggregator(getDaemon()).getCronTask());
-    log.debug(DEBUG_HEADER
+    log.debug2(DEBUG_HEADER
 	+ "CounterReportsRequestAggregator task added to cron.");
 
     ready = true;
@@ -302,7 +302,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     reportDir =
 	new File(config.get(PARAM_REPORT_BASEDIR_PATH,
 			    getDefaultTempDbRootDirectory()));
-    log.debug(DEBUG_HEADER + "reportDir = '" + reportDir.getAbsolutePath()
+    log.debug2(DEBUG_HEADER + "reportDir = '" + reportDir.getAbsolutePath()
 	+ "'.");
 
     // Check whether it exists, creating it if necessary.
@@ -312,7 +312,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 	  new File(reportDir, config.get(PARAM_REPORT_OUTPUTDIR,
 					 DEFAULT_REPORT_OUTPUTDIR));
 
-      log.debug(DEBUG_HEADER + "outputDir = '" + outputDir.getAbsolutePath()
+      log.debug2(DEBUG_HEADER + "outputDir = '" + outputDir.getAbsolutePath()
 	  + "'.");
 
       // Check whether it exists, creating it if necessary.
@@ -328,7 +328,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       return false;
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
     return true;
   }
 
@@ -353,7 +353,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       defaultTempDbRootDir = config.get(ConfigManager.PARAM_TMPDIR);
     }
 
-    log.debug(DEBUG_HEADER + "defaultTempDbRootDir = '" + defaultTempDbRootDir
+    log.debug2(DEBUG_HEADER + "defaultTempDbRootDir = '" + defaultTempDbRootDir
 	+ "'.");
     return defaultTempDbRootDir;
   }
@@ -377,7 +377,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 
       // Loop through all the table names.
       for (String tableName : SQL_TABLE_CREATE_QUERIES.keySet()) {
-	log.debug(DEBUG_HEADER + "Checking table = " + tableName);
+	log.debug2(DEBUG_HEADER + "Checking table = " + tableName);
 
 	// Create the table if it does not exist.
 	dbManager.createTableIfMissing(conn, tableName,
@@ -472,7 +472,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       File file = new File(outputDir, fileName);
 
       if (file.exists()) {
-	log.debug(DEBUG_HEADER + "Collision with file '" + fileName + "'.");
+	log.debug2(DEBUG_HEADER + "Collision with file '" + fileName + "'.");
 	return null;
       }
 
@@ -529,7 +529,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     } finally {
       if (success) {
 	conn.commit();
-	log.debug(DEBUG_HEADER + "Successful commit.");
+	log.debug2(DEBUG_HEADER + "Successful commit.");
 	DbManager.safeCloseConnection(conn);
       } else {
 	DbManager.safeRollbackAndClose(conn);

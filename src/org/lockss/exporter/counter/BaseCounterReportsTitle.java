@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCounterReportsTitle.java,v 1.1 2012-08-16 22:19:14 fergaloy-sf Exp $
+ * $Id: BaseCounterReportsTitle.java,v 1.2 2012-08-16 22:34:52 fergaloy-sf Exp $
  */
 
 /*
@@ -386,11 +386,11 @@ public abstract class BaseCounterReportsTitle implements CounterReportsTitle {
    */
   protected void persist(Connection conn) throws SQLException {
     final String DEBUG_HEADER = "persist(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement insertTitle = null;
     String sql = SQL_QUERY_TITLE_INSERT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to persist the record.
@@ -433,7 +433,7 @@ public abstract class BaseCounterReportsTitle implements CounterReportsTitle {
 
       // Insert the record.
       int count = insertTitle.executeUpdate();
-      log.debug(DEBUG_HEADER + "count = " + count);
+      log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot insert title", sqle);
       StringBuilder sb = new StringBuilder();
@@ -446,7 +446,7 @@ public abstract class BaseCounterReportsTitle implements CounterReportsTitle {
       DbManager.safeCloseStatement(insertTitle);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -477,11 +477,11 @@ public abstract class BaseCounterReportsTitle implements CounterReportsTitle {
     calendar.setTime(TimeBase.nowDate());
 
     int requestYear = calendar.get(Calendar.YEAR);
-    log.debug(DEBUG_HEADER + "requestYear = " + requestYear);
+    log.debug2(DEBUG_HEADER + "requestYear = " + requestYear);
     int requestMonth = (calendar.get(Calendar.MONTH) + 1);
-    log.debug(DEBUG_HEADER + "requestMonth = " + requestMonth);
+    log.debug2(DEBUG_HEADER + "requestMonth = " + requestMonth);
     int requestDay = calendar.get(Calendar.DAY_OF_MONTH);
-    log.debug(DEBUG_HEADER + "requestDay = " + requestDay);
+    log.debug2(DEBUG_HEADER + "requestDay = " + requestDay);
 
     // Get the request properties.
     Boolean isHtml = Boolean.FALSE;
@@ -509,14 +509,14 @@ public abstract class BaseCounterReportsTitle implements CounterReportsTitle {
       }
     }
 
-    log.debug(DEBUG_HEADER + "isHtml = " + isHtml);
-    log.debug(DEBUG_HEADER + "isPdf = " + isPdf);
-    log.debug(DEBUG_HEADER + "isPublisherInvolved = " + isPublisherInvolved);
-    log.debug(DEBUG_HEADER + "isSection = " + isSection);
-    log.debug(DEBUG_HEADER + "publicationYear = " + publicationYear);
+    log.debug2(DEBUG_HEADER + "isHtml = " + isHtml);
+    log.debug2(DEBUG_HEADER + "isPdf = " + isPdf);
+    log.debug2(DEBUG_HEADER + "isPublisherInvolved = " + isPublisherInvolved);
+    log.debug2(DEBUG_HEADER + "isSection = " + isSection);
+    log.debug2(DEBUG_HEADER + "publicationYear = " + publicationYear);
 
     String sql = SQL_QUERY_TITLE_REQUEST_INSERT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
     PreparedStatement insertRequest = null;
 
     try {
@@ -558,7 +558,7 @@ public abstract class BaseCounterReportsTitle implements CounterReportsTitle {
 
       // Insert the record.
       int count = insertRequest.executeUpdate();
-      log.debug(DEBUG_HEADER + "count = " + count);
+      log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot persist title request", sqle);
       log.error("LockssId = " + lockssId);

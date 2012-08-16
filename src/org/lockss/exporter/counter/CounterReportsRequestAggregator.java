@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsRequestAggregator.java,v 1.2 2012-08-16 22:26:17 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestAggregator.java,v 1.3 2012-08-16 22:34:52 fergaloy-sf Exp $
  */
 
 /*
@@ -291,7 +291,7 @@ public class CounterReportsRequestAggregator {
 
       // Loop through all the months in the year with requests.
       for (int month : months) {
-	log.debug("Year = " + year + ", Month = " + month);
+	log.debug2("Year = " + year + ", Month = " + month);
 	try {
 	  // Aggregate the month.
 	  persistMonthAggregates(year, month);
@@ -302,7 +302,7 @@ public class CounterReportsRequestAggregator {
       }
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
     return true;
   }
 
@@ -314,14 +314,14 @@ public class CounterReportsRequestAggregator {
    */
   private void markRequestsToAggregate() throws SQLException {
     final String DEBUG_HEADER = "markRequestsToAggregate: ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     DbManager dbManager = daemon.getDbManager();
     Connection conn = null;
     PreparedStatement markRequests = null;
     boolean success = false;
     String sql = SQL_QUERY_MARK_REQUESTS_UPDATE;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Get a connection to the database.
@@ -334,7 +334,7 @@ public class CounterReportsRequestAggregator {
       int count = markRequests.executeUpdate();
 
       success = true;
-      log.debug(DEBUG_HEADER + "count = " + count);
+      log.debug2(DEBUG_HEADER + "count = " + count);
     } finally {
       DbManager.safeCloseStatement(markRequests);
       if (success) {
@@ -345,7 +345,7 @@ public class CounterReportsRequestAggregator {
       }
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -359,7 +359,7 @@ public class CounterReportsRequestAggregator {
   private Map<Integer, List<Integer>> getYearMonthsWithRequests()
       throws SQLException {
     final String DEBUG_HEADER = "getYearMonthsWithRequests(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     DbManager dbManager = daemon.getDbManager();
     Connection conn = null;
@@ -372,7 +372,7 @@ public class CounterReportsRequestAggregator {
     Map<Integer, List<Integer>> yearMonths =
 	new HashMap<Integer, List<Integer>>();
     String sql = SQL_QUERY_YEAR_MONTH_REQUEST_SELECT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Get a connection to the database.
@@ -387,9 +387,9 @@ public class CounterReportsRequestAggregator {
 
       while (resultSet.next()) {
 	year = resultSet.getInt(SQL_COLUMN_REQUEST_YEAR);
-	log.debug(DEBUG_HEADER + "year = " + year);
+	log.debug2(DEBUG_HEADER + "year = " + year);
 	month = resultSet.getInt(SQL_COLUMN_REQUEST_MONTH);
-	log.debug(DEBUG_HEADER + "month = " + month);
+	log.debug2(DEBUG_HEADER + "month = " + month);
 
 	if (yearMonths.containsKey(year)) {
 	  months = yearMonths.get(year);
@@ -397,7 +397,7 @@ public class CounterReportsRequestAggregator {
 	  months = new ArrayList<Integer>();
 	}
 
-	log.debug(DEBUG_HEADER + "months.size() = " + months.size());
+	log.debug2(DEBUG_HEADER + "months.size() = " + months.size());
 
 	months.add(month);
 	yearMonths.put(year, months);
@@ -412,7 +412,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeRollbackAndClose(conn);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
     return yearMonths;
   }
 
@@ -460,7 +460,7 @@ public class CounterReportsRequestAggregator {
   private void persistMonthBookAggregates(int year, int month,
       boolean publisherInvolved) throws SQLException {
     final String DEBUG_HEADER = "persistMonthBookAggregates(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     // Get the identifiers of the books with requests to aggregate.
     List<Long> lockssIds =
@@ -492,10 +492,10 @@ public class CounterReportsRequestAggregator {
 				    conn);
 
 	fullCount = aggregate.get(SQL_COLUMN_FULL_BOOK_REQUESTS);
-	log.debug(DEBUG_HEADER + "fullCount = " + fullCount);
+	log.debug2(DEBUG_HEADER + "fullCount = " + fullCount);
 
 	sectionCount = aggregate.get(SQL_COLUMN_SECTION_BOOK_REQUESTS);
-	log.debug(DEBUG_HEADER + "sectionCount = " + sectionCount);
+	log.debug2(DEBUG_HEADER + "sectionCount = " + sectionCount);
 
 	// Retrieve the previous aggregate of book requests.
 	previousAggregate =
@@ -507,11 +507,11 @@ public class CounterReportsRequestAggregator {
 	  // Yes: Get the previously recorded aggregates.
 	  previousFullCount =
 	      previousAggregate.get(SQL_COLUMN_FULL_BOOK_REQUESTS);
-	  log.debug(DEBUG_HEADER + "previousFullCount = " + previousFullCount);
+	  log.debug2(DEBUG_HEADER + "previousFullCount = " + previousFullCount);
 
 	  previousSectionCount =
 	      previousAggregate.get(SQL_COLUMN_SECTION_BOOK_REQUESTS);
-	  log.debug(DEBUG_HEADER + "previousSectionCount = "
+	  log.debug2(DEBUG_HEADER + "previousSectionCount = "
 	      + previousSectionCount);
 
 	  // Update the existing row in the database.
@@ -549,8 +549,8 @@ public class CounterReportsRequestAggregator {
 	}
       }
 
-      log.debug(DEBUG_HEADER + "allBooksFullCount = " + allBooksFullCount);
-      log.debug(DEBUG_HEADER + "allBooksSectionCount = " + allBooksSectionCount);
+      log.debug2(DEBUG_HEADER + "allBooksFullCount = " + allBooksFullCount);
+      log.debug2(DEBUG_HEADER + "allBooksSectionCount = " + allBooksSectionCount);
 
       // Persist the remaining aggregation accumulation for all the books.
       persistMonthAllBookAggregates(year, month, publisherInvolved,
@@ -571,7 +571,7 @@ public class CounterReportsRequestAggregator {
       }
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -593,7 +593,7 @@ public class CounterReportsRequestAggregator {
   private List<Long> getMonthBooksToAggregate(int year, int month,
       boolean publisherInvolved) throws SQLException {
     final String DEBUG_HEADER = "getMonthBooksToAggregate(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     DbManager dbManager = daemon.getDbManager();
     PreparedStatement statement = null;
@@ -602,7 +602,7 @@ public class CounterReportsRequestAggregator {
     List<Long> lockssIds = new ArrayList<Long>();
 
     String sql = SQL_QUERY_MONTH_TITLE_REQUEST_SELECT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Get a connection to the database.
@@ -643,7 +643,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeRollbackAndClose(conn);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
     return lockssIds;
   }
 
@@ -669,7 +669,7 @@ public class CounterReportsRequestAggregator {
       long lockssId, boolean publisherInvolved, Connection conn)
       throws SQLException {
     final String DEBUG_HEADER = "aggregateMonthBookTypes(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     Map<String, Integer> aggregates = new HashMap<String, Integer>();
 
@@ -683,7 +683,7 @@ public class CounterReportsRequestAggregator {
 		   aggregateMonthBookType(year, month, lockssId,
 					  publisherInvolved, true, conn));
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
     return aggregates;
   }
 
@@ -712,14 +712,14 @@ public class CounterReportsRequestAggregator {
       boolean publisherInvolved, boolean isSection, Connection conn)
       throws SQLException {
     final String DEBUG_HEADER = "aggregateMonthBookType(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement statement = null;
     ResultSet resultSet = null;
     int count = -1;
 
     String sql = SQL_QUERY_MONTH_BOOK_TYPE_REQUEST_COUNT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to get the count of requests.
@@ -746,7 +746,7 @@ public class CounterReportsRequestAggregator {
 
       if (resultSet.next()) {
 	count = resultSet.getInt(1);
-	log.debug(DEBUG_HEADER + "count = " + count);
+	log.debug2(DEBUG_HEADER + "count = " + count);
       }
     } catch (SQLException sqle) {
       log.error("Cannot get the month full book request count", sqle);
@@ -759,7 +759,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeCloseStatement(statement);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
     return count;
   }
 
@@ -788,14 +788,14 @@ public class CounterReportsRequestAggregator {
       int month, long lockssId, boolean publisherInvolved, Connection conn)
       throws SQLException {
     final String DEBUG_HEADER = "getExistingAggregateMonthBookTypes(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement statement = null;
     ResultSet resultSet = null;
     Map<String, Integer> aggregates = null;
 
     String sql = SQL_QUERY_BOOK_TYPE_AGGREGATE_SELECT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to get the existing aggregates.
@@ -821,10 +821,10 @@ public class CounterReportsRequestAggregator {
 	aggregates = new HashMap<String, Integer>();
 
 	int fullCount = resultSet.getInt(SQL_COLUMN_FULL_BOOK_REQUESTS);
-	log.debug(DEBUG_HEADER + "fullCount = " + fullCount);
+	log.debug2(DEBUG_HEADER + "fullCount = " + fullCount);
 
 	int sectionCount = resultSet.getInt(SQL_COLUMN_SECTION_BOOK_REQUESTS);
-	log.debug(DEBUG_HEADER + "sectionCount = " + sectionCount);
+	log.debug2(DEBUG_HEADER + "sectionCount = " + sectionCount);
 
 	aggregates.put(SQL_COLUMN_FULL_BOOK_REQUESTS, fullCount);
 	aggregates.put(SQL_COLUMN_SECTION_BOOK_REQUESTS, sectionCount);
@@ -841,7 +841,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeCloseStatement(statement);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
     return aggregates;
   }
 
@@ -873,11 +873,11 @@ public class CounterReportsRequestAggregator {
       boolean publisherInvolved, int fullCount, int sectionCount,
       Connection conn) throws SQLException {
     final String DEBUG_HEADER = "updateBookTypeAggregate(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement updateAggregate = null;
     String sql = SQL_QUERY_BOOK_TYPE_AGGREGATE_UPDATE;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to persist the record.
@@ -905,7 +905,7 @@ public class CounterReportsRequestAggregator {
 
       // Update the record.
       int count = updateAggregate.executeUpdate();
-      log.debug(DEBUG_HEADER + "count = " + count);
+      log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot update the month book request counts", sqle);
       log.error("Year = " + year + ", Month = " + month);
@@ -916,7 +916,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeCloseStatement(updateAggregate);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -947,11 +947,11 @@ public class CounterReportsRequestAggregator {
       boolean publisherInvolved, int fullCount, int sectionCount,
       Connection conn) throws SQLException {
     final String DEBUG_HEADER = "insertBookTypeAggregate(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement insertAggregate = null;
     String sql = SQL_QUERY_BOOK_TYPE_AGGREGATE_INSERT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to persist the record.
@@ -979,7 +979,7 @@ public class CounterReportsRequestAggregator {
 
       // Insert the record.
       int count = insertAggregate.executeUpdate();
-      log.debug(DEBUG_HEADER + "count = " + count);
+      log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot insert the month book request counts", sqle);
       log.error("Year = " + year + ", Month = " + month);
@@ -990,7 +990,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeCloseStatement(insertAggregate);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -1018,8 +1018,8 @@ public class CounterReportsRequestAggregator {
       boolean publisherInvolved, int fullCount, int sectionCount,
       Connection conn) throws SQLException {
     final String DEBUG_HEADER = "persistMonthAllBookAggregates(): ";
-    log.debug(DEBUG_HEADER + "fullCount = " + fullCount);
-    log.debug(DEBUG_HEADER + "sectionCount = " + sectionCount);
+    log.debug2(DEBUG_HEADER + "fullCount = " + fullCount);
+    log.debug2(DEBUG_HEADER + "sectionCount = " + sectionCount);
 
     CounterReportsManager manager = daemon.getCounterReportsManager();
 
@@ -1034,12 +1034,12 @@ public class CounterReportsRequestAggregator {
       // Yes: Add the previously recorded aggregates for all books.
       int allBooksFullCount =
 	  fullCount + previousAggregate.get(SQL_COLUMN_FULL_BOOK_REQUESTS);
-      log.debug(DEBUG_HEADER + "allBooksFullCount = " + allBooksFullCount);
+      log.debug2(DEBUG_HEADER + "allBooksFullCount = " + allBooksFullCount);
 
       int allBooksSectionCount =
 	  sectionCount
 	      + previousAggregate.get(SQL_COLUMN_SECTION_BOOK_REQUESTS);
-      log.debug(DEBUG_HEADER + "allBooksSectionCount = " + allBooksSectionCount);
+      log.debug2(DEBUG_HEADER + "allBooksSectionCount = " + allBooksSectionCount);
 
       // Update the existing row in the database.
       updateBookTypeAggregate(year, month, manager.getAllBooksLockssId(),
@@ -1051,7 +1051,7 @@ public class CounterReportsRequestAggregator {
 			      publisherInvolved, fullCount, sectionCount, conn);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -1070,7 +1070,7 @@ public class CounterReportsRequestAggregator {
   private void persistMonthJournalAggregates(int year, int month,
       boolean publisherInvolved) throws SQLException {
     final String DEBUG_HEADER = "persistMonthJournalAggregates(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     // Get the identifiers of the journals with requests to aggregate.
     List<Long> lockssIds =
@@ -1107,13 +1107,13 @@ public class CounterReportsRequestAggregator {
 				       publisherInvolved, conn);
 
 	totalCount = typeAggregate.get(SQL_COLUMN_TOTAL_JOURNAL_REQUESTS);
-	log.debug(DEBUG_HEADER + "totalCount = " + totalCount);
+	log.debug2(DEBUG_HEADER + "totalCount = " + totalCount);
 
 	htmlCount = typeAggregate.get(SQL_COLUMN_HTML_JOURNAL_REQUESTS);
-	log.debug(DEBUG_HEADER + "htmlCount = " + htmlCount);
+	log.debug2(DEBUG_HEADER + "htmlCount = " + htmlCount);
 
 	pdfCount = typeAggregate.get(SQL_COLUMN_PDF_JOURNAL_REQUESTS);
-	log.debug(DEBUG_HEADER + "pdfCount = " + pdfCount);
+	log.debug2(DEBUG_HEADER + "pdfCount = " + pdfCount);
 
 	// Retrieve the previous aggregate of journal requests.
 	previousAggregate =
@@ -1125,15 +1125,15 @@ public class CounterReportsRequestAggregator {
 	  // Yes: Get the previously recorded aggregates.
 	  previousTotalCount =
 	      previousAggregate.get(SQL_COLUMN_TOTAL_JOURNAL_REQUESTS);
-	  log.debug(DEBUG_HEADER + "previousTotalCount = " + previousTotalCount);
+	  log.debug2(DEBUG_HEADER + "previousTotalCount = " + previousTotalCount);
 
 	  previousHtmlCount =
 	      previousAggregate.get(SQL_COLUMN_HTML_JOURNAL_REQUESTS);
-	  log.debug(DEBUG_HEADER + "previousHtmlCount = " + previousHtmlCount);
+	  log.debug2(DEBUG_HEADER + "previousHtmlCount = " + previousHtmlCount);
 
 	  previousPdfCount =
 	      previousAggregate.get(SQL_COLUMN_PDF_JOURNAL_REQUESTS);
-	  log.debug(DEBUG_HEADER + "previousPdfCount = " + previousPdfCount);
+	  log.debug2(DEBUG_HEADER + "previousPdfCount = " + previousPdfCount);
 
 	  // Update the existing row in the database.
 	  updateJournalTypeAggregate(year, month, lockssId, publisherInvolved,
@@ -1207,10 +1207,10 @@ public class CounterReportsRequestAggregator {
 	}
       }
 
-      log.debug(DEBUG_HEADER + "allJournalsTotalCount = "
+      log.debug2(DEBUG_HEADER + "allJournalsTotalCount = "
 	  + allJournalsTotalCount);
-      log.debug(DEBUG_HEADER + "allJournalsHtmlCount = " + allJournalsHtmlCount);
-      log.debug(DEBUG_HEADER + "allJournalsPdfCount = " + allJournalsPdfCount);
+      log.debug2(DEBUG_HEADER + "allJournalsHtmlCount = " + allJournalsHtmlCount);
+      log.debug2(DEBUG_HEADER + "allJournalsPdfCount = " + allJournalsPdfCount);
 
       // Persist the all journals accumulations.
       persistMonthAllJournalAggregates(year, month, publisherInvolved,
@@ -1232,7 +1232,7 @@ public class CounterReportsRequestAggregator {
       }
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -1252,7 +1252,7 @@ public class CounterReportsRequestAggregator {
   private List<Long> getMonthJournalsToAggregate(int year, int month,
       boolean publisherInvolved) throws SQLException {
     final String DEBUG_HEADER = "getMonthJournalsToAggregate(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     DbManager dbManager = daemon.getDbManager();
     PreparedStatement statement = null;
@@ -1261,7 +1261,7 @@ public class CounterReportsRequestAggregator {
     List<Long> lockssIds = new ArrayList<Long>();
 
     String sql = SQL_QUERY_MONTH_TITLE_REQUEST_SELECT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Get a connection to the database.
@@ -1302,7 +1302,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeRollbackAndClose(conn);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
     return lockssIds;
   }
 
@@ -1328,7 +1328,7 @@ public class CounterReportsRequestAggregator {
       long lockssId, boolean publisherInvolved, Connection conn)
       throws SQLException {
     final String DEBUG_HEADER = "aggregateMonthJournalTypes(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -1338,7 +1338,7 @@ public class CounterReportsRequestAggregator {
 
     Map<String, Integer> aggregates = new HashMap<String, Integer>();
     String sql = SQL_QUERY_MONTH_TITLE_TOTAL_REQUEST_COUNT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to aggregate the total requests.
@@ -1376,7 +1376,7 @@ public class CounterReportsRequestAggregator {
     }
 
     sql = SQL_QUERY_MONTH_JOURNAL_HTML_REQUEST_COUNT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to aggregate the HTML requests.
@@ -1414,7 +1414,7 @@ public class CounterReportsRequestAggregator {
     }
 
     sql = SQL_QUERY_MONTH_JOURNAL_PDF_REQUEST_COUNT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to aggregate the PDF requests.
@@ -1455,7 +1455,7 @@ public class CounterReportsRequestAggregator {
     aggregates.put(SQL_COLUMN_HTML_JOURNAL_REQUESTS, htmlCount);
     aggregates.put(SQL_COLUMN_PDF_JOURNAL_REQUESTS, pdfCount);
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
     return aggregates;
   }
 
@@ -1484,14 +1484,14 @@ public class CounterReportsRequestAggregator {
       int month, long lockssId, boolean publisherInvolved, Connection conn)
       throws SQLException {
     final String DEBUG_HEADER = "getExistingAggregateMonthJournalTypes(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement statement = null;
     ResultSet resultSet = null;
     Map<String, Integer> aggregates = null;
 
     String sql = SQL_QUERY_JOURNAL_TYPE_AGGREGATE_SELECT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to get the existing aggregations.
@@ -1518,13 +1518,13 @@ public class CounterReportsRequestAggregator {
 	aggregates = new HashMap<String, Integer>();
 
 	int totalCount = resultSet.getInt(SQL_COLUMN_TOTAL_JOURNAL_REQUESTS);
-	log.debug(DEBUG_HEADER + "totalCount = " + totalCount);
+	log.debug2(DEBUG_HEADER + "totalCount = " + totalCount);
 
 	int htmlCount = resultSet.getInt(SQL_COLUMN_HTML_JOURNAL_REQUESTS);
-	log.debug(DEBUG_HEADER + "htmlCount = " + htmlCount);
+	log.debug2(DEBUG_HEADER + "htmlCount = " + htmlCount);
 
 	int pdfCount = resultSet.getInt(SQL_COLUMN_PDF_JOURNAL_REQUESTS);
-	log.debug(DEBUG_HEADER + "pdfCount = " + pdfCount);
+	log.debug2(DEBUG_HEADER + "pdfCount = " + pdfCount);
 
 	aggregates.put(SQL_COLUMN_TOTAL_JOURNAL_REQUESTS, totalCount);
 	aggregates.put(SQL_COLUMN_HTML_JOURNAL_REQUESTS, htmlCount);
@@ -1542,7 +1542,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeCloseStatement(statement);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
     return aggregates;
   }
 
@@ -1577,11 +1577,11 @@ public class CounterReportsRequestAggregator {
       boolean publisherInvolved, int totalCount, int htmlCount, int pdfCount,
       Connection conn) throws SQLException {
     final String DEBUG_HEADER = "updateJournalTypeAggregate(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement updateAggregate = null;
     String sql = SQL_QUERY_JOURNAL_TYPE_AGGREGATE_UPDATE;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to persist the record.
@@ -1612,7 +1612,7 @@ public class CounterReportsRequestAggregator {
 
       // Update the record.
       int count = updateAggregate.executeUpdate();
-      log.debug(DEBUG_HEADER + "count = " + count);
+      log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot update the month journal request counts", sqle);
       log.error("Year = " + year + ", Month = " + month);
@@ -1623,7 +1623,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeCloseStatement(updateAggregate);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -1657,11 +1657,11 @@ public class CounterReportsRequestAggregator {
       boolean publisherInvolved, int totalCount, int htmlCount, int pdfCount,
       Connection conn) throws SQLException {
     final String DEBUG_HEADER = "insertJournalAggregate(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement insertAggregate = null;
     String sql = SQL_QUERY_JOURNAL_TYPE_AGGREGATE_INSERT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to persist the record.
@@ -1692,7 +1692,7 @@ public class CounterReportsRequestAggregator {
 
       // Insert the record.
       int count = insertAggregate.executeUpdate();
-      log.debug(DEBUG_HEADER + "count = " + count);
+      log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot insert the month journal request counts", sqle);
       log.error("Year = " + year + ", Month = " + month);
@@ -1703,7 +1703,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeCloseStatement(insertAggregate);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -1728,14 +1728,14 @@ public class CounterReportsRequestAggregator {
       int month, long lockssId, boolean publisherInvolved, Connection conn)
       throws SQLException {
     final String DEBUG_HEADER = "aggregateMonthJournalPubYears(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement statement = null;
     ResultSet resultSet = null;
 
     Map<Integer, Integer> aggregates = new HashMap<Integer, Integer>();
     String sql = SQL_QUERY_MONTH_TITLE_PUBYEAR_REQUEST_SELECT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to aggregate the requests by publication
@@ -1775,7 +1775,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeCloseStatement(statement);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
     return aggregates;
   }
 
@@ -1806,14 +1806,14 @@ public class CounterReportsRequestAggregator {
       long lockssId, boolean publisherInvolved, int publicationYear,
       Connection conn) throws SQLException {
     final String DEBUG_HEADER = "getExistingAggregateMonthJournalPubYear(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement statement = null;
     ResultSet resultSet = null;
     Integer count = null;
 
     String sql = SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATE_SELECT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to get the existing aggregation.
@@ -1841,7 +1841,7 @@ public class CounterReportsRequestAggregator {
 
       if (resultSet.next()) {
 	count = resultSet.getInt(SQL_COLUMN_REQUEST_COUNT);
-	log.debug(DEBUG_HEADER + "count = " + count);
+	log.debug2(DEBUG_HEADER + "count = " + count);
       }
 
     } catch (SQLException sqle) {
@@ -1856,7 +1856,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeCloseStatement(statement);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
     return count;
   }
 
@@ -1887,11 +1887,11 @@ public class CounterReportsRequestAggregator {
       boolean publisherInvolved, int publicationYear, int requestCount,
       Connection conn) throws SQLException {
     final String DEBUG_HEADER = "updateTitlePubYearAggregate(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement updateAggregate = null;
     String sql = SQL_QUERY_TITLE_PUBYEAR_AGGREGATE_UPDATE;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to persist the record.
@@ -1919,7 +1919,7 @@ public class CounterReportsRequestAggregator {
 
       // Insert the record.
       int count = updateAggregate.executeUpdate();
-      log.debug(DEBUG_HEADER + "count = " + count);
+      log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot update the month journal request counts", sqle);
       log.error("Year = " + year + ", Month = " + month);
@@ -1930,7 +1930,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeCloseStatement(updateAggregate);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -1960,11 +1960,11 @@ public class CounterReportsRequestAggregator {
       boolean publisherInvolved, int publicationYear, int requestCount,
       Connection conn) throws SQLException {
     final String DEBUG_HEADER = "insertTitlePubYearAggregate(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement insertAggregate = null;
     String sql = SQL_QUERY_TITLE_PUBYEAR_AGGREGATE_INSERT;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to persist the record.
@@ -1992,7 +1992,7 @@ public class CounterReportsRequestAggregator {
 
       // Insert the record.
       int count = insertAggregate.executeUpdate();
-      log.debug(DEBUG_HEADER + "count = " + count);
+      log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot insert the month journal request counts", sqle);
       log.error("Year = " + year + ", Month = " + month);
@@ -2003,7 +2003,7 @@ public class CounterReportsRequestAggregator {
       DbManager.safeCloseStatement(insertAggregate);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -2034,9 +2034,9 @@ public class CounterReportsRequestAggregator {
       boolean publisherInvolved, int totalCount, int htmlCount, int pdfCount,
       Connection conn) throws SQLException {
     final String DEBUG_HEADER = "persistMonthAllJournalAggregates(): ";
-    log.debug(DEBUG_HEADER + "totalCount = " + totalCount);
-    log.debug(DEBUG_HEADER + "htmlCount = " + htmlCount);
-    log.debug(DEBUG_HEADER + "pdfCount = " + pdfCount);
+    log.debug2(DEBUG_HEADER + "totalCount = " + totalCount);
+    log.debug2(DEBUG_HEADER + "htmlCount = " + htmlCount);
+    log.debug2(DEBUG_HEADER + "pdfCount = " + pdfCount);
 
     CounterReportsManager manager = daemon.getCounterReportsManager();
 
@@ -2051,16 +2051,16 @@ public class CounterReportsRequestAggregator {
       // Yes: Add the previously recorded aggregates for all journals.
       int allJournalsTotalCount =
 	  totalCount + previousAggregate.get(SQL_COLUMN_TOTAL_JOURNAL_REQUESTS);
-      log.debug(DEBUG_HEADER + "allJournalsTotalCount = "
+      log.debug2(DEBUG_HEADER + "allJournalsTotalCount = "
 	  + allJournalsTotalCount);
 
       int allJournalsHtmlCount =
 	  htmlCount + previousAggregate.get(SQL_COLUMN_HTML_JOURNAL_REQUESTS);
-      log.debug(DEBUG_HEADER + "allJournalsHtmlCount = " + allJournalsHtmlCount);
+      log.debug2(DEBUG_HEADER + "allJournalsHtmlCount = " + allJournalsHtmlCount);
 
       int allJournalsPdfCount =
 	  pdfCount + previousAggregate.get(SQL_COLUMN_PDF_JOURNAL_REQUESTS);
-      log.debug(DEBUG_HEADER + "allJournalsPdfCount = " + allJournalsPdfCount);
+      log.debug2(DEBUG_HEADER + "allJournalsPdfCount = " + allJournalsPdfCount);
 
       // Update the existing row in the database.
       updateJournalTypeAggregate(year, month, manager.getAllJournalsLockssId(),
@@ -2074,7 +2074,7 @@ public class CounterReportsRequestAggregator {
 				 pdfCount, conn);
     }
 
-    log.debug(DEBUG_HEADER + "Done.");
+    log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -2097,11 +2097,11 @@ public class CounterReportsRequestAggregator {
   private void deleteMonthTitleRequests(int year, int month, long lockssId,
       boolean publisherInvolved, Connection conn) throws SQLException {
     final String DEBUG_HEADER = "deleteMonthTitleRequests(): ";
-    log.debug(DEBUG_HEADER + "Starting...");
+    log.debug2(DEBUG_HEADER + "Starting...");
 
     PreparedStatement deleteAggregate = null;
     String sql = SQL_QUERY_TITLE_REQUEST_DELETE;
-    log.debug(DEBUG_HEADER + "SQL = '" + sql + "'.");
+    log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
     try {
       // Prepare the statement used to delete the rows.
@@ -2123,7 +2123,7 @@ public class CounterReportsRequestAggregator {
 
       // Delete the record.
       int count = deleteAggregate.executeUpdate();
-      log.debug(DEBUG_HEADER + "count = " + count);
+      log.debug2(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot delete the title month requests", sqle);
       log.error("Year = " + year + ", Month = " + month);
@@ -2147,8 +2147,8 @@ public class CounterReportsRequestAggregator {
   private long nextTimeA(long lastTime, String frequency) {
     final String DEBUG_HEADER = "nextTime(): ";
 
-    log.debug(DEBUG_HEADER + "lastTime = " + lastTime);
-    log.debug(DEBUG_HEADER + "frequency = '" + frequency + "'.");
+    log.debug2(DEBUG_HEADER + "lastTime = " + lastTime);
+    log.debug2(DEBUG_HEADER + "frequency = '" + frequency + "'.");
 
     if ("hourly".equalsIgnoreCase(frequency)) {
       return Cron.nextHour(lastTime);
