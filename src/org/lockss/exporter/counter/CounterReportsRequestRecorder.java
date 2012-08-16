@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsRequestRecorder.java,v 1.1 2012-08-16 22:19:14 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestRecorder.java,v 1.2 2012-08-16 22:29:56 fergaloy-sf Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class CounterReportsRequestRecorder {
       PublisherContacted contacted, int publisherCode) {
     try {
       final String DEBUG_HEADER = "recordRequest(): ";
-      log.info(DEBUG_HEADER + "url = '" + url + "'.");
+      log.debug2(DEBUG_HEADER + "url = '" + url + "'.");
 
       // Get the metadata identifier of the URL.
       Long mdId = findMatchingFullTextMetadataId(url);
@@ -135,7 +135,7 @@ public class CounterReportsRequestRecorder {
       // Persist the request data.
       LockssDaemon.getLockssDaemon().getCounterReportsManager()
 	  .persistRequest(title, requestData);
-      log.info(DEBUG_HEADER + "Done.");
+      log.debug2(DEBUG_HEADER + "Done.");
     } catch (SQLException sqle) {
       log.error("Cannot persist request - Statistics not collected", sqle);
     } catch (Exception e) {
@@ -153,37 +153,7 @@ public class CounterReportsRequestRecorder {
    *           if there are problems accessing the database.
    */
   private Long findMatchingFullTextMetadataId(String url) throws SQLException {
-    // Try to identify the URL as a full text URL.
-    Long mdId = findUrlMetadataId(url);
-
-    // TODO: Remove once the identification of the full-text URLs is reliable.
-    // Check whether no identifier was found.
-    if (mdId == null) {
-      // Yes: Check whether it ends in a known extension.
-      if (url.endsWith(".pdf")) {
-	// Yes: Try the trimmed URL.
-	mdId = findUrlMetadataId(url.substring(0, url.length() - 9));
-      } else if (url.indexOf("/doi/pdf/") >= 0) {
-	// Yes: Replace with /doi/full
-	// Try the modified URL.
-	mdId = findUrlMetadataId(url.substring(0, url.length() - 9));
-      }
-    }
-
-    return mdId;
-  }
-
-  /**
-   * Provides the metadata identifier of a URL.
-   * 
-   * @param url
-   *          A String with the URL.
-   * @return a Long with the metadata identifier of the URL, if any.
-   * @throws SQLException
-   *           if there are problems accessing the database.
-   */
-  private Long findUrlMetadataId(String url) throws SQLException {
-    final String DEBUG_HEADER = "findUrlMetadataId(): ";
+    final String DEBUG_HEADER = "findMatchingFullTextMetadataId(): ";
 
     Connection conn = null;
     PreparedStatement getUrlMdId = null;
@@ -212,7 +182,7 @@ public class CounterReportsRequestRecorder {
       DbManager.safeRollbackAndClose(conn);
     }
 
-    log.info(DEBUG_HEADER + "mdId = '" + mdId + "'.");
+    log.debug2(DEBUG_HEADER + "mdId = '" + mdId + "'.");
     return mdId;
   }
 
@@ -248,16 +218,16 @@ public class CounterReportsRequestRecorder {
 
     // Get the name of the publisher.
     String publisherName = tdbAu.getPublisherName();
-    log.info(DEBUG_HEADER + "publisherName = '" + publisherName + "'.");
+    log.debug2(DEBUG_HEADER + "publisherName = '" + publisherName + "'.");
 
     // Get the publishing platform.
     String publishingPlatform = au.getPlugin().getPublishingPlatform();
-    log.info(DEBUG_HEADER + "publishingPlatform = '" + publishingPlatform
+    log.debug2(DEBUG_HEADER + "publishingPlatform = '" + publishingPlatform
 	+ "'.");
 
     // Get an indication of whether the publisher is involved in serving the
     // content.
-    log.info("publisherCode = " + publisherCode);
+    log.debug2("publisherCode = " + publisherCode);
     requestData
 	.put(CounterReportsJournal.IS_PUBLISHER_INVOLVED_KEY,
 	     contacted == PublisherContacted.TRUE
@@ -279,7 +249,7 @@ public class CounterReportsRequestRecorder {
 	// Get the content type.
 	contentType =
 	    HeaderUtil.getMimeTypeFromContentType(cu.getContentType());
-	log.info(DEBUG_HEADER + "contentType = '" + contentType + "'.");
+	log.debug2(DEBUG_HEADER + "contentType = '" + contentType + "'.");
       } finally {
 	AuUtil.safeRelease(cu);
       }
@@ -319,25 +289,25 @@ public class CounterReportsRequestRecorder {
 
     // The archival unit name is the title for books.
     String titleName = au.getName();
-    log.info(DEBUG_HEADER + "titleName = '" + titleName + "'.");
+    log.debug2(DEBUG_HEADER + "titleName = '" + titleName + "'.");
 
     // TODO: The DOI.
     String doi = /* tdbAu.getDoi() */null;
-    log.info(DEBUG_HEADER + "DOI = '" + doi + "'.");
+    log.debug2(DEBUG_HEADER + "DOI = '" + doi + "'.");
 
     // TODO: The archival unit identifier is the proprietary identifier.
     String proprietaryId = /* tdbAu.getAuId() */null;
 
     // Get the title ISBN, only applicable to books.
     String isbn = tdbAu.getIsbn();
-    log.info(DEBUG_HEADER + "isbn = '" + isbn + "'.");
+    log.debug2(DEBUG_HEADER + "isbn = '" + isbn + "'.");
 
     // Get the title ISSN, only applicable to books.
     String issn = tdbAu.getIssn();
-    log.info(DEBUG_HEADER + "issn = '" + issn + "'.");
+    log.debug2(DEBUG_HEADER + "issn = '" + issn + "'.");
 
     OpenUrlInfo oui = our.resolveFromUrl(url);
-    log.info(DEBUG_HEADER + "oui.resolvedTo = '" + oui.getResolvedTo() + "'.");
+    log.debug2(DEBUG_HEADER + "oui.resolvedTo = '" + oui.getResolvedTo() + "'.");
 
     // Record whether this is a request for a section of a book.
     requestData.put(CounterReportsBook.IS_SECTION_KEY,
@@ -377,22 +347,22 @@ public class CounterReportsRequestRecorder {
 
     // Get the journal title.
     String titleName = tdbAu.getJournalTitle();
-    log.info(DEBUG_HEADER + "titleName = '" + titleName + "'.");
+    log.debug2(DEBUG_HEADER + "titleName = '" + titleName + "'.");
 
     // TODO: The DOI.
     String doi = /* tdbAu.getJournalDoi() */null;
-    log.info(DEBUG_HEADER + "DOI = '" + doi + "'.");
+    log.debug2(DEBUG_HEADER + "DOI = '" + doi + "'.");
 
     // TODO: The journal identifier is the proprietary identifier.
     String proprietaryId = /* tdbAu.getJournalId() */null;
 
     // Get the title print ISSN, only applicable to articles.
     String printIssn = tdbAu.getPrintIssn();
-    log.info(DEBUG_HEADER + "printIssn = '" + printIssn + "'.");
+    log.debug2(DEBUG_HEADER + "printIssn = '" + printIssn + "'.");
 
     // Get the title online ISSN, only applicable to articles.
     String onlineIssn = tdbAu.getEissn();
-    log.info(DEBUG_HEADER + "onlineIssn = '" + onlineIssn + "'.");
+    log.debug2(DEBUG_HEADER + "onlineIssn = '" + onlineIssn + "'.");
 
     // Get the year of publication of the content.
     requestData

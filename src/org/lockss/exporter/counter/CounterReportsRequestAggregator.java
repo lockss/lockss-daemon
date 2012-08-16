@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsRequestAggregator.java,v 1.1 2012-08-16 22:19:14 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestAggregator.java,v 1.2 2012-08-16 22:26:17 fergaloy-sf Exp $
  */
 
 /*
@@ -39,7 +39,6 @@
 package org.lockss.exporter.counter;
 
 import static org.lockss.exporter.counter.CounterReportsManager.*;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -301,97 +300,6 @@ public class CounterReportsRequestAggregator {
 	  log.error("Year = " + year + ", Month = " + month);
 	}
       }
-    }
-
-    // TODO: Remove after debugging.
-    try {
-      CounterReport crbr1 = new CounterReportsBookReport1(daemon);
-      crbr1.logReport();
-      crbr1.saveCsvReport();
-      crbr1.saveTsvReport();
-
-      crbr1 = new CounterReportsBookReport1(daemon, 1, 2012, 8, 2012);
-      crbr1.logReport();
-      crbr1.saveCsvReport();
-      crbr1.saveTsvReport();
-
-      CounterReport crbr1l = new CounterReportsBookReport1L(daemon);
-      crbr1l.logReport();
-      crbr1l.saveCsvReport();
-      crbr1l.saveTsvReport();
-
-      crbr1l = new CounterReportsBookReport1L(daemon, 1, 2012, 8, 2012);
-      crbr1l.logReport();
-      crbr1l.saveCsvReport();
-      crbr1l.saveTsvReport();
-
-      CounterReport crbr2 = new CounterReportsBookReport2(daemon);
-      crbr2.logReport();
-      crbr2.saveCsvReport();
-      crbr2.saveTsvReport();
-
-      crbr2 = new CounterReportsBookReport2(daemon, 1, 2012, 8, 2012);
-      crbr2.logReport();
-      crbr2.saveCsvReport();
-      crbr2.saveTsvReport();
-
-      CounterReport crbr2l = new CounterReportsBookReport2L(daemon);
-      crbr2l.logReport();
-      crbr2l.saveCsvReport();
-      crbr2l.saveTsvReport();
-
-      crbr2l = new CounterReportsBookReport2L(daemon, 1, 2012, 8, 2012);
-      crbr2l.logReport();
-      crbr2l.saveCsvReport();
-      crbr2l.saveTsvReport();
-
-      CounterReport crjr1 = new CounterReportsJournalReport1(daemon);
-      crjr1.logReport();
-      crjr1.saveCsvReport();
-      crjr1.saveTsvReport();
-
-      crjr1 = new CounterReportsJournalReport1(daemon, 1, 2012, 8, 2012);
-      crjr1.logReport();
-      crjr1.saveCsvReport();
-      crjr1.saveTsvReport();
-
-      CounterReport crjr1l = new CounterReportsJournalReport1L(daemon);
-      crjr1l.logReport();
-      crjr1l.saveCsvReport();
-      crjr1l.saveTsvReport();
-
-      crjr1l = new CounterReportsJournalReport1L(daemon, 1, 2012, 8, 2012);
-      crjr1l.logReport();
-      crjr1l.saveCsvReport();
-      crjr1l.saveTsvReport();
-
-      CounterReport crjr5 = new CounterReportsJournalReport5(daemon);
-      crjr5.logReport();
-      crjr5.saveCsvReport();
-      crjr5.saveTsvReport();
-
-      crjr5 = new CounterReportsJournalReport5(daemon, 1, 2012, 8, 2012);
-      crjr5.logReport();
-      crjr5.saveCsvReport();
-      crjr5.saveTsvReport();
-
-      CounterReport crjr5l = new CounterReportsJournalReport5L(daemon);
-      crjr5l.logReport();
-      crjr5l.saveCsvReport();
-      crjr5l.saveTsvReport();
-
-      crjr5l = new CounterReportsJournalReport5L(daemon, 1, 2012, 8, 2012);
-      crjr5l.logReport();
-      crjr5l.saveCsvReport();
-      crjr5l.saveTsvReport();
-    } catch (IllegalArgumentException iae) {
-      log.error("Caught IllegalArgumentException", iae);
-    } catch (IOException ioe) {
-      log.error("Caught IOException", ioe);
-    } catch (SQLException sqle) {
-      log.error("Caught SQLException", sqle);
-    } catch (Exception e) {
-      log.error("Caught Exception", e);
     }
 
     log.debug(DEBUG_HEADER + "Done.");

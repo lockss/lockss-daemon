@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsManager.java,v 1.1 2012-08-16 22:19:14 fergaloy-sf Exp $
+ * $Id: CounterReportsManager.java,v 1.2 2012-08-16 22:26:17 fergaloy-sf Exp $
  */
 
 /*
@@ -53,11 +53,8 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.Cron;
 import org.lockss.db.DbManager;
-import org.lockss.exporter.counter.CounterReportsRequestAggregator.CounterReportsRequestAggregatorCronTask;
-import org.lockss.util.Deadline;
 import org.lockss.util.FileUtil;
 import org.lockss.util.Logger;
-import org.lockss.util.TimerQueue;
 
 public class CounterReportsManager extends BaseLockssDaemonManager {
   // Prefix for the reporting configuration entries.
@@ -288,12 +285,6 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 	+ "CounterReportsRequestAggregator task added to cron.");
 
     ready = true;
-
-    // TODO: Remove after debugging.
-    TimerQueue.schedule(Deadline.in(60000), 120000, new Alerter(),
-			new CounterReportsRequestAggregator(getDaemon())
-			    .getCronTask());
-    log.debug(DEBUG_HEADER + "CounterReportsRequestAggregator task scheduled.");
   }
 
   /**
@@ -543,18 +534,6 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       } else {
 	DbManager.safeRollbackAndClose(conn);
       }
-    }
-  }
-
-  // TODO: Remove after debugging.
-  public class Alerter implements TimerQueue.Callback {
-    public void timerExpired(Object cookie) {
-      final String DEBUG_HEADER = "timerExpired(): ";
-
-      log.debug(DEBUG_HEADER + "Starting...");
-      ((CounterReportsRequestAggregatorCronTask) cookie).execute();
-
-      log.debug(DEBUG_HEADER + "Done.");
     }
   }
 }
