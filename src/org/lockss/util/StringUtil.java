@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.109 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id: StringUtil.java,v 1.110 2012-08-16 22:17:35 fergaloy-sf Exp $
  */
 
 /*
@@ -33,9 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 import java.util.*;
 import java.io.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.*;
 import java.text.Normalizer.Form;
 import java.lang.reflect.*;
+import java.math.BigInteger;
 import org.apache.oro.text.regex.*;
 import org.apache.commons.lang.StringUtils;
 
@@ -1775,5 +1778,24 @@ public class StringUtil {
     return (Character.toLowerCase(kar1) == Character.toLowerCase(kar2));
   }
 
-
+  /**
+   * Provides a 64-bit hash of a text string.
+   * 
+   * @param payload
+   *          A String for which the hash is to be provided.
+   * @return a long with the 64-bit hash of the text string.
+   * @throws Exception
+   *           if there are problems computing the LOCKSS identifier.
+   */
+  public static long hash64(String payload) {
+    try {
+      byte[] digest =
+	  MessageDigest.getInstance("MD5").digest(payload.getBytes("UTF-8"));
+      return new BigInteger(1, digest).longValue();
+    } catch (NoSuchAlgorithmException nsae) {
+      throw new RuntimeException(nsae);
+    } catch (UnsupportedEncodingException uea) {
+      throw new RuntimeException(uea);
+    }
+  }
 }
