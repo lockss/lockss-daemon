@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.4 2012-08-08 07:12:07 tlipkis Exp $
+ * $Id: DbManager.java,v 1.5 2012-08-16 22:13:57 fergaloy-sf Exp $
  */
 
 /*
@@ -45,11 +45,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.List;
 import javax.sql.DataSource;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.derby.drda.NetworkServerControl;
-import org.apache.derby.jdbc.ClientConnectionPoolDataSource;
 import org.apache.derby.jdbc.ClientDataSource;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.config.ConfigManager;
@@ -208,18 +206,36 @@ public class DbManager extends BaseLockssDaemonManager {
     Connection conn = null;
 
     if (dataSource instanceof javax.sql.ConnectionPoolDataSource) {
-    log.debug("Pooled");
       conn =
 	  ((javax.sql.ConnectionPoolDataSource) dataSource)
 	      .getPooledConnection().getConnection();
     } else {
-      log.debug("Not pooled");
       conn = dataSource.getConnection();
     }
 
     conn.setAutoCommit(false);
 
     return conn;
+  }
+
+  /**
+   * Commits a connection or rolls it back if it's not possible.
+   * 
+   * @param conn
+   *          A connection with the database connection to be committed.
+   * @param logger
+   *          A Logger used to report errors.
+   * @throws SQLException
+   */
+  public static void commitOrRollback(Connection conn, Logger logger)
+      throws SQLException {
+    try {
+      conn.commit();
+    } catch (SQLException sqle) {
+      logger.error("Exception caught committing the connection", sqle);
+      safeRollbackAndClose(conn);
+      throw sqle;
+    }
   }
 
   /**
@@ -368,7 +384,7 @@ public class DbManager extends BaseLockssDaemonManager {
    * @param resultSet
    *          A ResultSet with the database result set to be closed.
    */
-  public void safeCloseResultSet(ResultSet resultSet) {
+  public static void safeCloseResultSet(ResultSet resultSet) {
     if (resultSet != null) {
       try {
 	resultSet.close();
@@ -384,7 +400,7 @@ public class DbManager extends BaseLockssDaemonManager {
    * @param statement
    *          A Statement with the database statement to be closed.
    */
-  public void safeCloseStatement(Statement statement) {
+  public static void safeCloseStatement(Statement statement) {
     if (statement != null) {
       try {
 	statement.close();
@@ -400,10 +416,10 @@ public class DbManager extends BaseLockssDaemonManager {
    * @param conn
    *          A Connection with the database connection to be closed.
    */
-  public void safeCloseConnection(Connection conn) {
+  public static void safeCloseConnection(Connection conn) {
     try {
       if ((conn != null) && !conn.isClosed()) {
-        conn.close();
+	conn.close();
       }
     } catch (SQLException sqle) {
       log.error("Cannot close connection", sqle);
@@ -417,11 +433,11 @@ public class DbManager extends BaseLockssDaemonManager {
    *          A Connection with the database connection to be rolled back and
    *          closed.
    */
-  public void safeRollbackAndClose(Connection conn) {
+  public static void safeRollbackAndClose(Connection conn) {
     // Roll back the connection.
     try {
       if ((conn != null) && !conn.isClosed()) {
-        conn.rollback();
+	conn.rollback();
       }
     } catch (SQLException sqle) {
       log.error("Cannot roll back the connection", sqle);
@@ -492,8 +508,7 @@ public class DbManager extends BaseLockssDaemonManager {
     final String DEBUG_HEADER = "getDataSourceConfig(): ";
 
     // Get the current configuration.
-    ConfigManager cfgMgr = ConfigManager.getConfigManager();
-    Configuration currentConfig = cfgMgr.getCurrentConfig();
+    Configuration currentConfig = ConfigManager.getCurrentConfig();
 
     // Create the datasource configuration.
     Configuration dataSourceConfig = ConfigManager.newConfiguration();
@@ -513,8 +528,10 @@ public class DbManager extends BaseLockssDaemonManager {
     if (dataSourceConfig.get("databaseName") == null) {
       // Yes: Get the data source root directory.
       File datasourceDir =
-	cfgMgr.findConfiguredDataDir(PARAM_DATASOURCE_DATABASENAME,
+	  ConfigManager.getConfigManager()
+	      .findConfiguredDataDir(PARAM_DATASOURCE_DATABASENAME,
 				     DEFAULT_DATASOURCE_DATABASENAME, false);
+
       // Save the database name.
       dataSourceConfig.put("databaseName", FileUtil
 	  .getCanonicalOrAbsolutePath(datasourceDir));
