@@ -14,7 +14,10 @@
     >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    param[base_url] = http://www.i-journals.org/ssy/
+    param[base_url] = http://www.i-journals.org/
+    param[journal_id] = ssy
+    
+    comment[0] = form of url is nonstandard. May need plugin work.
 
     au < exists ; 2011 ; Stochastic Systems Volume 1 ; 1 ; 2011 >
     au < exists ; 2012 ; Stochastic Systems Volume 2 ; 2 ; 2012 >
