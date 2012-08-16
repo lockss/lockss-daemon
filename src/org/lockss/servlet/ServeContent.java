@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.63 2012-08-16 03:35:27 aftran Exp $
+ * $Id: ServeContent.java,v 1.64 2012-08-16 22:21:31 fergaloy-sf Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo.ResolvedTo;
+import org.lockss.exporter.counter.CounterReportsRequestRecorder;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseUrlCacher;
@@ -662,6 +663,9 @@ public class ServeContent extends LockssServlet {
       if (isInCache) {
         serveFromCache();
         logAccess("200 from cache");
+	// Record the necessary information required for COUNTER reports.
+	CounterReportsRequestRecorder.getInstance().recordRequest(url, au,
+	    CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
       } else {
 	/*
 	 * We don't want to redirect to the publisher, so pass KnownDown below
@@ -710,9 +714,10 @@ public class ServeContent extends LockssServlet {
       conn = null;
     }
     
+    int response = 0;
     try {
       if (conn != null) {
-        int response = conn.getResponseCode();
+        response = conn.getResponseCode();
         if (log.isDebug2())
           log.debug2("response: " + response + " " + conn.getResponseMessage());
         if (response == HttpResponse.__200_OK) {
@@ -720,8 +725,13 @@ public class ServeContent extends LockssServlet {
           // XXX Should check for a login page here
           try {
             serveFromPublisher(conn);
-            logAccess(present(isInCache, "200 from publisher"));
-            return;
+	    logAccess(present(isInCache, "200 from publisher"));
+	    // Record the necessary information required for COUNTER reports.
+	    CounterReportsRequestRecorder.getInstance()
+		.recordRequest(url, au,
+		    CounterReportsRequestRecorder.PublisherContacted.TRUE,
+		    response);
+	    return;
           } catch (CacheException.PermissionException ex) {
             logAccess("login exception: " + ex.getMessage());
             pstate = PubState.NoContent;
@@ -739,6 +749,9 @@ public class ServeContent extends LockssServlet {
     if (isInCache) {
       serveFromCache();
       logAccess("present, 200 from cache");
+      // Record the necessary information required for COUNTER reports.
+      CounterReportsRequestRecorder.getInstance().recordRequest(url, au,
+	  CounterReportsRequestRecorder.PublisherContacted.TRUE, response);
     } else {
       log.debug2("No content for: " + url);
       // return 404 with index
