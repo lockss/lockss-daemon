@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.62 2012-08-09 18:02:48 pgust Exp $
+ * $Id: ServeContent.java,v 1.63 2012-08-16 03:35:27 aftran Exp $
  */
 
 /*
@@ -94,6 +94,7 @@ public class ServeContent extends LockssServlet {
    *   <li><tt>AlwaysRedirect</tt>: Respond with a redirect to the
    *     publisher.</li>
    *  </ul>
+   *  This option does not affect requests that contain a version parameter.
    */
   public static final String PARAM_MISSING_FILE_ACTION =
     PREFIX + "missingFileAction";
@@ -187,6 +188,7 @@ public class ServeContent extends LockssServlet {
 
   private ArchivalUnit au;
   private String url;
+  private String versionStr; // non-null iff handling a (possibly-invalid) Memento request
   private CachedUrl cu;
   private boolean enabledPluginsOnly;
   private String accessLogInfo;
@@ -202,6 +204,7 @@ public class ServeContent extends LockssServlet {
     requestType = AccessLogType.None;
     cu = null;
     url = null;
+    versionStr = null;
     au = null;
     super.resetLocals();
   }
@@ -330,8 +333,20 @@ public class ServeContent extends LockssServlet {
 
     url = getParameter("url");
     String auid = getParameter("auid");
+    versionStr = getParameter("version");
+
     if (!StringUtil.isNullString(url)) {
-      if (!StringUtil.isNullString(auid)) {
+      if (StringUtil.isNullString(auid)) {
+        if (isMementoRequest()) {
+
+          // Error, because Memento requests must have auid.
+          resp.sendError(
+              HttpServletResponse.SC_BAD_REQUEST,
+              "Requests containing a \"version\" parameter must also include " +
+              "\"auid\" and \"url\" parameters; \"auid\" is missing.");
+          return;
+        }
+      } else {
         au = pluginMgr.getAuFromId(auid);
       }
       if (log.isDebug3()) log.debug3("Url req, raw: " + url);
@@ -360,7 +375,19 @@ public class ServeContent extends LockssServlet {
       handleUrlRequest();
       return;
     }
-    
+
+    /*
+     * Memento requests must provide URL; OpenURL requests are not Memento
+     * requests, and vice versa.
+     */
+    if (isMementoRequest()) {
+      resp.sendError(
+          HttpServletResponse.SC_BAD_REQUEST,
+          "Requests containing a \"version\" parameter must also include " +
+          "\"auid\" and \"url\" parameters.");
+      return;
+    }
+
     // perform special handling for an OpenUrl
     try {
       OpenUrlInfo resolved = OpenUrlResolver.noOpenUrlInfo;
@@ -403,20 +430,61 @@ public class ServeContent extends LockssServlet {
   }
 
   /**
-   * Handle request for specified publisher URL.  If content
-   * is in cache, use its AU and CU in case content is not
-   * available from the publisher.  Otherwise, redirect to the
-   * publisher URL without rewriting the content.
-   * 
+   * Handle request for specified publisher URL. If the request includes a
+   * version parameter, then serve content from the cache only and don't
+   * rewrite. Otherwise, serve from publisher if possible and allowed by daemon
+   * options, and cache if necessary, rewriting hyperlinks either way.
+   *
    * @throws IOException if cannot handle URL request.
    */
   protected void handleUrlRequest() throws IOException {
     log.debug2("url: " + url);
+    log.debug2("is " + (isMementoRequest() ? "" : "not ") + "a Memento request.");
     try {
       // Get the CachedUrl for the URL, only if it has content.
       if (au != null) {
       	cu = au.makeCachedUrl(url);
-      } else {
+        if (isMementoRequest()) {
+
+          // Replace CU with the historical CU; similar to ViewContent:
+          try {
+            CachedUrl newCu = getHistoricalCu(cu, versionStr);
+            if (newCu != cu) {
+              AuUtil.safeRelease(cu);
+              cu = newCu;
+            }
+
+            // Add the optional Memento-Datetime header.
+            CIProperties props = cu.getProperties();
+            String lastMod   = props.getProperty(cu.PROPERTY_LAST_MODIFIED);
+            String fetchTime = props.getProperty(cu.PROPERTY_FETCH_TIME);
+            resp.setHeader("Memento-Datetime",
+                (StringUtil.isNullString(lastMod)) ? fetchTime
+                                                   : lastMod);
+          } catch (VersionNotFoundException e) {
+	    /*
+	     * 404 error.  Should not use handleMissingUrlRequest, because it
+	     * would tell the user that the URL param is not stored on this
+	     * LOCKSS box, which might not be true, and we don't need to give
+	     * the user a menu in response to a nonexistent version number.
+	     */
+            resp.sendError(HttpServletResponse.SC_NOT_FOUND,
+                "This LOCKSS box does not have a version " + versionStr + " of " + url + " for the requested AU.");
+            AuUtil.safeRelease(cu);
+            logAccess("version not present, 404");
+            return;
+          } catch (NumberFormatException e) {
+
+            // 400 error.
+            String message = "Couldn't parse version string: " + versionStr;
+            logAccess(message);
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST, message);
+            AuUtil.safeRelease(cu);
+            return;
+          } // Not catching RuntimeException, which already results in a 500 response.
+
+        }
+      } else if (!isMementoRequest()) {
       	// Find CU if belongs to any configured AU even if has no content,
       	// so can rewrite from publisher
       	cu = pluginMgr.findCachedUrl(url, false);
@@ -424,7 +492,20 @@ public class ServeContent extends LockssServlet {
       	  au = cu.getArchivalUnit();
           if (log.isDebug3()) log.debug3("cu: " + cu + " au: " + au);
       	}
+      } else {
+	/*
+	 * This is a Memento request, and the AU param was provided, but we
+	 * didn't find an AU with that AU ID. 404 error; should not let this
+	 * pass through to handleMissingURlRequest, because we don't want
+	 * Memento requests to result in redirects to the publisher.
+	 */
+        resp.sendError(HttpServletResponse.SC_NOT_FOUND,
+            "This LOCKSS box does not have (any versions of) the requested AU.");
+        AuUtil.safeRelease(cu);
+        logAccess("AU not present, 404");
+        return;
       }
+
       if (au != null) {
         handleAuRequest();
       } else {
@@ -438,6 +519,36 @@ public class ServeContent extends LockssServlet {
     }
   }
   
+  /**
+   * Given a CachedUrl and a string representation of a version number, returns
+   * that version of the CachedUrl. Has no side effects within this instance.
+   *
+   * @arg cachedUrl the CU that a version of is being requested
+   * @arg verStr string representation of the integer version being requested
+   * @returns the requested version of the given cached URL
+   * @throws NumberFormatException if verStr does not represent an integer
+   * @throws VersionNotFoundException if cachedUrl lacks the requested version
+   * @throws RuntimeException
+   */
+  private static CachedUrl getHistoricalCu(CachedUrl cachedUrl, String verStr)
+    throws NumberFormatException, VersionNotFoundException, RuntimeException {
+    CachedUrl result;
+    int version = Integer.parseInt(verStr);
+    int curVer = cachedUrl.getVersion();
+    if (version == curVer) {
+      result = cachedUrl;
+    } else {
+      CachedUrl verCu = cachedUrl.getCuVersion(version);
+      if (verCu == null || !verCu.hasContent()) {
+        throw new VersionNotFoundException();
+      }
+      result = verCu;
+    }
+    return result;
+  }
+
+  private static class VersionNotFoundException extends Exception {}
+
   /**
    * Redirect to the current URL. Uses response redirection
    * unless the URL has a reference, in which case it does
@@ -533,10 +644,12 @@ public class ServeContent extends LockssServlet {
   }
   
   /**
-   * Handle request for content that belongs to one of our AUs, whether or
-   * not we have content for that URL.  Serve content either from publisher
-   * (if it's up and has newer content than ours) or from cache (if
-   * have content).
+   * Handle request for content that belongs to one of our AUs, whether or not
+   * we have content for that URL.  If this request contains a version param,
+   * serve it from cache with a Memento-Datetime header and no
+   * hyperlink-rewriting. For requests without a version param, rewrite links,
+   * and serve from publisher if publisher provides it and the daemon options
+   * allow it; otherwise, try to serve from cache.
    * 
    * @throws IOException for IO errors
    */
@@ -545,11 +658,16 @@ public class ServeContent extends LockssServlet {
     boolean isInCache = isInCache();
     boolean isHostDown = proxyMgr.isHostDown(host);
 
-    if (isNeverProxyForAu(au)) {
+    if (isNeverProxyForAu(au) || isMementoRequest()) {
       if (isInCache) {
         serveFromCache();
         logAccess("200 from cache");
       } else {
+	/*
+	 * We don't want to redirect to the publisher, so pass KnownDown below
+	 * in order to ensure that. It's true that we might be lying, because
+	 * the publisher might be up.
+	 */
         handleMissingUrlRequest(url, PubState.KnownDown);
       }
       return;
@@ -628,6 +746,13 @@ public class ServeContent extends LockssServlet {
     }
   }
   
+  /**
+   * @return true iff the user is requesting a particular version of the content
+   */
+  private boolean isMementoRequest() {
+    return !StringUtil.isNullString(versionStr);
+  }
+
   /**
    * Serve the content for the specified CU from the cache.
    * 
@@ -1019,7 +1144,7 @@ public class ServeContent extends LockssServlet {
     InputStream rewritten = original;
     OutputStream outStr = null;
     try {
-      if (lrf == null) {
+      if (lrf == null || isMementoRequest()) {
 	// No rewriting, set length and copy
 	setContentLength(length);
 	outStr = resp.getOutputStream();
