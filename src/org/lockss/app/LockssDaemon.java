@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.114 2012-08-02 12:33:20 pgust Exp $
+ * $Id: LockssDaemon.java,v 1.115 2012-08-16 22:20:20 fergaloy-sf Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.util.*;
 import org.lockss.alert.*;
 import org.lockss.daemon.*;
 import org.lockss.db.DbManager;
+import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.account.*;
 import org.lockss.hasher.*;
 import org.lockss.scheduler.*;
@@ -142,6 +143,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String CLOCKSS_PARAMS = "ClockssParams";
   public static final String TRUEZIP_MANAGER = "TrueZipManager";
   public static final String DB_MANAGER = "DbManager";
+  public static final String COUNTER_REPORTS_MANAGER = "CounterReportsManager";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
@@ -215,6 +217,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       }},
     // watchdog last
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
+    // Start the COUNTER reports manager.
+    new ManagerDesc(COUNTER_REPORTS_MANAGER, "org.lockss.exporter.counter.CounterReportsManager"),
   };
 
   // AU-specific manager descriptors.  As each AU is created its managers
@@ -544,6 +548,17 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public DbManager getDbManager() {
     return (DbManager) getManager(DB_MANAGER);
+  }
+
+  /**
+   * Provides the COUNTER reports manager.
+   * 
+   * @return a CounterReportsManager with the COUNTER reports manager.
+   * @throws IllegalArgumentException
+   *           if the manager is not available.
+   */
+  public CounterReportsManager getCounterReportsManager() {
+    return (CounterReportsManager) getManager(COUNTER_REPORTS_MANAGER);
   }
 
   /**
