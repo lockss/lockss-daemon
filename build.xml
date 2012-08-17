@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.317 2012-08-13 20:39:27 tlipkis Exp $
+ $Id: build.xml,v 1.318 2012-08-17 21:13:27 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -2371,11 +2371,23 @@ Test results in ${test.results}
            (Except that there is no space between the $ and Name.)
            The prefix and suffix are removed to yield the actual tag. -->
       <property name="cvs.name.tag" value="$Name: not supported by cvs2svn $"/>
-      <propertyregex property="cvs.co.tag"
+      <propertyregex property="cvs.co.tag0"
          input="${cvs.name.tag}"
          regexp="\$[N]ame: *([^ ]*) *\$"
          replace="\1"
          defaultValue="" />
+      <!-- Eclipse puts "Base" into the Name keyword when Revert to Base is
+           done.  Recognize this and turn it back into the empty string.
+           (This means we can't have a branch named "Base".) -->
+      <if>
+	<equals arg1="${cvs.co.tag0}" arg2="Base" />
+	<then>
+	  <property name="cvs.co.tag" value=""/>
+	</then>
+	<else>
+	  <property name="cvs.co.tag" value="${cvs.co.tag0}"/>
+	</else>
+      </if>
     </then>
     <else>
       <property name="cvs.co.tag" value="${cvstag}"/>
