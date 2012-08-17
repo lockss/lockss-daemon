@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.18 2012-08-08 07:08:14 thib_gc Exp $
+# $Id: tdb.py,v 1.19 2012-08-17 23:44:15 aishizaki Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -259,13 +259,13 @@ class AU(Map):
     def compute_auidplus(plugin, params, nondefparams):
         ''' Like compute_auid, changes pluginId's '.'s to '|' and params are separated by '&'.
             In params/nondefparams '=' signs become '~'.  Additionally, nondef params are added
-            to the end, separated by '&&&NondefParamsFollow&&&'
+            to the end, separated by '@@@NONDEF@@@'
         '''  
         p = AU.compute_auid(plugin, params)
         keys = nondefparams.keys()
         keys.sort()
         if( len(keys) > 0) :
-            ndp = '&&&NondefParamsFollow&&&' + '&&&NondefParamsFollow&&&'.join(['~'.join([''.join(map(AU.auid_encode, [c for c in s])) for s in [j, nondefparams[j]]]) for j in keys])
+            ndp = '@@@NONDEF@@@' + '&'.join(['~'.join([''.join(map(AU.auid_encode, [c for c in s])) for s in [j, nondefparams[j]]]) for j in keys])
         else :  ndp = ''
         return p + ndp
 
