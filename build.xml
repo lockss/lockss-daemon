@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.320 2012-08-17 22:30:11 tlipkis Exp $
+ $Id: build.xml,v 1.321 2012-08-17 22:57:48 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -2376,8 +2376,10 @@ Test results in ${test.results}
          regexp="\$[N]ame: *([^ ]*) *\$"
          replace="\1"
          defaultValue="" />
-      <!-- Eclipse puts "BASE" into the Name keyword when Revert to Base is
-           done.  Recognize this and turn it back into the empty string.) -->
+      <!-- cvs expands the Name keyword to "BASE" when -r BASE is used to
+           revert to the checked out branch.  (Similarly when Revert to
+           Base is used in Eclipse.)  Recognize this and turn it back into
+           the empty string.) -->
       <if>
 	<equals arg1="${cvs.co.tag0}" arg2="BASE" />
 	<then>
