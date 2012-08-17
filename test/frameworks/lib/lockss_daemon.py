@@ -1219,8 +1219,10 @@ class AU:
 
     """
 
-    def __init__( self, auId, nonDefParams=None ):
-        self.auId = auId.strip()
+    def __init__( self, auId):
+        # handle nondef params if they're present
+        params = auId.partition('@@@NONDEF@@@')
+        self.auId = params[0].strip()
         try:
             self.pluginId, properties = self.auId.split( '&', 1 )
         except ValueError:
@@ -1238,8 +1240,9 @@ class AU:
         # then if necessary, search for nondefparams
         for property in properties.split( '&' ):
             self._handleProperty(property)    
-        if (nonDefParams) :
-            for property in nonDefParams.split('&'):
+        if (params[2]) :
+            nondefparams = params[2].strip()
+            for property in nondefparams.split('&'):
                 self._handleProperty(property)
  
         if self.pluginId != Simulated_AU.SIMULATED_PLUGIN \
