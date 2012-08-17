@@ -25,15 +25,15 @@
 
         implicit < status ;  year ; name ; param[volume_name] ; proxy >
 
-        au < testing ; 1992 ; Archives of Family Medicine Volume 1 ; 1 ;  reingest.lockss.org:80 >
-        au < testing ; 1993 ; Archives of Family Medicine Volume 2 ; 2 ;  reingest.lockss.org:80 >
-        au < testing ; 1994 ; Archives of Family Medicine Volume 3 ; 3 ;  reingest.lockss.org:80 >
-        au < testing ; 1995 ; Archives of Family Medicine Volume 4 ; 4 ;  reingest.lockss.org:80 >
-        au < testing ; 1996 ; Archives of Family Medicine Volume 5 ; 5 ;  reingest.lockss.org:80 >
-        au < testing ; 1997 ; Archives of Family Medicine Volume 6 ; 6 ;  reingest.lockss.org:80 >
-        au < testing ; 1998 ; Archives of Family Medicine Volume 7 ; 7 ;  reingest.lockss.org:80 >
-        au < testing ; 1999 ; Archives of Family Medicine Volume 8 ; 8 ;  reingest.lockss.org:80 >
-        au < testing ; 2000 ; Archives of Family Medicine Volume 9 ; 9 ;  reingest.lockss.org:80 >
+        au < ready ; 1992 ; Archives of Family Medicine Volume 1 ; 1 ;  reingest.lockss.org:80 >
+        au < ready ; 1993 ; Archives of Family Medicine Volume 2 ; 2 ;  reingest.lockss.org:80 >
+        au < ready ; 1994 ; Archives of Family Medicine Volume 3 ; 3 ;  reingest.lockss.org:80 >
+        au < ready ; 1995 ; Archives of Family Medicine Volume 4 ; 4 ;  reingest.lockss.org:80 >
+        au < ready ; 1996 ; Archives of Family Medicine Volume 5 ; 5 ;  reingest.lockss.org:80 >
+        au < ready ; 1997 ; Archives of Family Medicine Volume 6 ; 6 ;  reingest.lockss.org:80 >
+        au < ready ; 1998 ; Archives of Family Medicine Volume 7 ; 7 ;  reingest.lockss.org:80 >
+        au < ready ; 1999 ; Archives of Family Medicine Volume 8 ; 8 ;  reingest.lockss.org:80 >
+        au < ready ; 2000 ; Archives of Family Medicine Volume 9 ; 9 ;  reingest.lockss.org:80 >
 
       }
     }
