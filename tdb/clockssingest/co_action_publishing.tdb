@@ -67,9 +67,9 @@
       param[journal_id] = dfa
       comment[0] = includes supplements
 
-      au < manifest ; exists ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
-      au < manifest ; exists ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
-      au < manifest ; exists ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
+      au < crawling ; exists ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
+      au < crawling ; exists ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
+      au < crawling ; exists ; 2012 ; Diabetic Foot & Ankle [including Supplements] Volume 3 ; 3 ; 2012 >
     }
   }
    
@@ -384,9 +384,9 @@
       au < manifest ; exists ; 2007 ; Medical Education Online Volume 12 ; 12 ; 2007 >
       au < manifest ; exists ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
       au < manifest ; exists ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
-      au < manifest ; exists ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
-      au < manifest ; exists ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
-      au < manifest ; exists ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
+      au < crawling ; exists ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
+      au < crawling ; exists ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
+      au < crawling ; exists ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 >
     }
   }
 
@@ -603,7 +603,7 @@
     param[journal_id] = snp
 
     au < released ; crawling ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 >
-    au < manifest ; exists ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 >
+    au < crawling ; exists ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; 2012 >
 
   }
 
