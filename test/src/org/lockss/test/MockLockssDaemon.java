@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.71 2012-07-06 22:55:05 fergaloy-sf Exp $
+ * $Id: MockLockssDaemon.java,v 1.72 2012-08-17 16:12:31 fergaloy-sf Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbManager;
+import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.hasher.HashService;
 import org.lockss.mail.MailService;
 import org.lockss.plugin.*;
@@ -94,6 +95,8 @@ public class MockLockssDaemon extends LockssDaemon {
   IcpManager icpManager = null;
   ClockssParams clockssParams = null;
   DbManager dbManager = null;
+  CounterReportsManager counterReportsManager = null;
+  Cron cron = null;
 
   /** Unit tests that need a MockLockssDaemon should use {@link
    * LockssTestCase#getMockLockssDaemon()} rather than calling this
@@ -144,6 +147,8 @@ public class MockLockssDaemon extends LockssDaemon {
     statusService = null;
     icpManager = null;
     dbManager = null;
+    counterReportsManager = null;
+    cron = null;
 
     //super.stopDaemon();
   }
@@ -508,6 +513,30 @@ public class MockLockssDaemon extends LockssDaemon {
     return dbManager;
   }
 
+  /**
+   * return the COUNTER reports manager instance
+   * @return the CounterReportsManager
+   */
+  public CounterReportsManager getCounterReportsManager() {
+    if (counterReportsManager == null) {
+      counterReportsManager = (CounterReportsManager)newManager(LockssDaemon.COUNTER_REPORTS_MANAGER);
+      managerMap.put(LockssDaemon.COUNTER_REPORTS_MANAGER, counterReportsManager);
+    }
+    return counterReportsManager;
+  }
+
+  /**
+   * return the cron instance
+   * @return the Cron
+   */
+  public Cron getCron() {
+    if (cron == null) {
+      cron = (Cron)newManager(LockssDaemon.CRON);
+      managerMap.put(LockssDaemon.CRON, cron);
+    }
+    return cron;
+  }
+
   public StatusService getStatusService() {
     if (statusService == null) {
       statusService = (StatusService)newManager(LockssDaemon.STATUS_SERVICE);
@@ -759,6 +788,15 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * Set the CounterReportsManager
+   * @param counterReportsMan the new manager
+   */
+  public void setCounterReportsManager(CounterReportsManager counterReportsMan) {
+    counterReportsManager = counterReportsMan;
+    managerMap.put(LockssDaemon.COUNTER_REPORTS_MANAGER, counterReportsManager);
+  }
+
+  /**
    * Set the SystemMetrics
    * @param sysMetrics the new metrics
    */
@@ -774,6 +812,15 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setRemoteApi(RemoteApi sysMetrics) {
     remoteApi = sysMetrics;
     managerMap.put(LockssDaemon.REMOTE_API, sysMetrics);
+  }
+
+  /**
+   * Set the Cron
+   * @param cron the new cron
+   */
+  public void setCron(Cron cron) {
+    this.cron = cron;
+    managerMap.put(LockssDaemon.CRON, cron);
   }
 
   // AU managers
