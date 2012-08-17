@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb_test.py,v 1.3 2012-08-07 22:55:37 aishizaki Exp $
+# $Id: tdb_test.py,v 1.4 2012-08-17 23:45:00 aishizaki Exp $
 
 # Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -119,14 +119,14 @@ class TestAU(unittest.TestCase):
                              ('base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2F&volume_name~123', 
                               {'volume_name': '123', 'base_url': 'http://www.example.com/'},
                               {'issues': ''})]:
-            self.assertEquals('org|lockss|plugin|FooPlugin&' + st +'&&&NondefParamsFollow&&&' + ndp.keys()[0] + '~'+ ndp[ndp.keys()[0]],
+            self.assertEquals('org|lockss|plugin|FooPlugin&' + st +'@@@NONDEF@@@' + ndp.keys()[0] + '~'+ ndp[ndp.keys()[0]],
                               AU.compute_auidplus('org.lockss.plugin.FooPlugin', par, ndp))
         # test an auid with with two nondef params
         st = 'base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2F&volume_name~123' 
         par = {'volume_name': '123','base_url': 'http://www.example.com/'}
         ndp = {'journal_code': 'Delawho','issues': '13'}
-        self.assertEquals('org|lockss|plugin|FooPlugin&' + st +'&&&NondefParamsFollow&&&' + 'issues' + '~'+ ndp['issues']
-                              +'&&&NondefParamsFollow&&&' + 'journal_code' + '~'+ ndp['journal_code'],
+        self.assertEquals('org|lockss|plugin|FooPlugin&' + st +'@@@NONDEF@@@' + 'issues' + '~'+ ndp['issues']
+                              +'&' + 'journal_code' + '~'+ ndp['journal_code'],
                             AU.compute_auidplus('org.lockss.plugin.FooPlugin', par, ndp))
                     
 if __name__ == '__main__': unittest.main()
