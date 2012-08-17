@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.319 2012-08-17 22:11:32 tlipkis Exp $
+ $Id: build.xml,v 1.320 2012-08-17 22:30:11 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -2376,9 +2376,8 @@ Test results in ${test.results}
          regexp="\$[N]ame: *([^ ]*) *\$"
          replace="\1"
          defaultValue="" />
-      <!-- Eclipse puts "Base" into the Name keyword when Revert to Base is
-           done.  Recognize this and turn it back into the empty string.
-           (This means we can't have a branch named "Base".) -->
+      <!-- Eclipse puts "BASE" into the Name keyword when Revert to Base is
+           done.  Recognize this and turn it back into the empty string.) -->
       <if>
 	<equals arg1="${cvs.co.tag0}" arg2="BASE" />
 	<then>
