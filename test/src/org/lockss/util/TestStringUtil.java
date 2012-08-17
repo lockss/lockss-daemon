@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.89 2012-06-13 10:10:35 easyonthemayo Exp $
+ * $Id: TestStringUtil.java,v 1.90 2012-08-17 21:01:54 fergaloy-sf Exp $
  */
 
 /*
@@ -1139,6 +1139,26 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("Na er tiden", StringUtil.toUnaccented("N\u00e5 er tiden"));
     // swedish: Now is the time (small letter 'a' with diaeresis
     assertEquals("Nu ar det dags", StringUtil.toUnaccented("Nu \u00e4r det dags"));
+  }
+
+  public void testHash64NullPayload() {
+    try {
+      StringUtil.hash64(null);
+      fail("Calling hash64 with a null payload should throw");
+    } catch (NullPointerException npe) {
+    }
+  }
+
+  public void testHash64EmptyPayload() {
+    assertEquals(StringUtil.hash64(""), -1621285313438006658L);
+  }
+
+  public void testHash64LOCKSSPayload() {
+    assertEquals(StringUtil.hash64("LOCKSS"), -1302921253488513054L);
+  }
+
+  public void testHash64UnicodePayload() {
+    assertEquals(StringUtil.hash64("Buenos d\u00edas"), -9103326884462245297L);
   }
 
 //   public void testToUnaccentedFast() {
