@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.64 2012-08-16 22:21:31 fergaloy-sf Exp $
+ * $Id: ServeContent.java,v 1.65 2012-08-17 21:36:57 aftran Exp $
  */
 
 /*
@@ -138,6 +138,15 @@ public class ServeContent extends LockssServlet {
     PREFIX + "absoluteLinks";
   public static final boolean DEFAULT_ABSOLUTE_LINKS = true;
 
+  /**
+   * If true, link rewriting in Memento responses will behave the same as link
+   * rewriting in non-Memento responses; if false, links in Memento responses
+   * will not be rewritten.
+   */
+  public static final String PARAM_REWRITE_MEMENTO_RESPONSES =
+    PREFIX + "rewriteMementoResponses";
+  public static final boolean DEFAULT_REWRITE_MEMENTO_RESPONSES = false;
+
   /** If true, the url arg to ServeContent will be normalized before being
    * looked up. */
   public static final String PARAM_NORMALIZE_URL_ARG =
@@ -178,6 +187,7 @@ public class ServeContent extends LockssServlet {
   private static MissingFileAction missingFileAction =
     DEFAULT_MISSING_FILE_ACTION;
   private static boolean absoluteLinks = DEFAULT_ABSOLUTE_LINKS;
+  private static boolean rewriteMementoResponses = DEFAULT_REWRITE_MEMENTO_RESPONSES;
   private static boolean normalizeUrl = DEFAULT_NORMALIZE_URL_ARG;
   private static List<String> excludePlugins = DEFAULT_EXCLUDE_PLUGINS;
   private static List<String> includePlugins = DEFAULT_INCLUDE_PLUGINS;
@@ -254,6 +264,9 @@ public class ServeContent extends LockssServlet {
 				     DEFAULT_NEVER_PROXY);
       maxBufferedRewrite = config.getInt(PARAM_MAX_BUFFERED_REWRITE,
 					 DEFAULT_MAX_BUFFERED_REWRITE);
+      rewriteMementoResponses =
+	config.getBoolean(PARAM_REWRITE_MEMENTO_RESPONSES,
+			  DEFAULT_REWRITE_MEMENTO_RESPONSES);
     }
   }
 
@@ -434,7 +447,7 @@ public class ServeContent extends LockssServlet {
    * Handle request for specified publisher URL. If the request includes a
    * version parameter, then serve content from the cache only and don't
    * rewrite. Otherwise, serve from publisher if possible and allowed by daemon
-   * options, and cache if necessary, rewriting hyperlinks either way.
+   * options, and cache if necessary, rewriting links either way.
    *
    * @throws IOException if cannot handle URL request.
    */
@@ -648,7 +661,7 @@ public class ServeContent extends LockssServlet {
    * Handle request for content that belongs to one of our AUs, whether or not
    * we have content for that URL.  If this request contains a version param,
    * serve it from cache with a Memento-Datetime header and no
-   * hyperlink-rewriting. For requests without a version param, rewrite links,
+   * link-rewriting.  For requests without a version param, rewrite links,
    * and serve from publisher if publisher provides it and the daemon options
    * allow it; otherwise, try to serve from cache.
    * 
@@ -1157,7 +1170,7 @@ public class ServeContent extends LockssServlet {
     InputStream rewritten = original;
     OutputStream outStr = null;
     try {
-      if (lrf == null || isMementoRequest()) {
+      if (lrf == null || (isMementoRequest() && !rewriteMementoResponses)) {
 	// No rewriting, set length and copy
 	setContentLength(length);
 	outStr = resp.getOutputStream();
