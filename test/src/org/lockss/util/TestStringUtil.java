@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.90 2012-08-17 21:01:54 fergaloy-sf Exp $
+ * $Id: TestStringUtil.java,v 1.91 2012-08-17 21:46:28 fergaloy-sf Exp $
  */
 
 /*
@@ -1150,15 +1150,15 @@ public class TestStringUtil extends LockssTestCase {
   }
 
   public void testHash64EmptyPayload() {
-    assertEquals(StringUtil.hash64(""), -1621285313438006658L);
+    assertEquals(-1621285313438006658L, StringUtil.hash64(""));
   }
 
   public void testHash64LOCKSSPayload() {
-    assertEquals(StringUtil.hash64("LOCKSS"), -1302921253488513054L);
+    assertEquals(-1302921253488513054L, StringUtil.hash64("LOCKSS"));
   }
 
   public void testHash64UnicodePayload() {
-    assertEquals(StringUtil.hash64("Buenos d\u00edas"), -9103326884462245297L);
+    assertEquals(-9103326884462245297L, StringUtil.hash64("Buenos d\u00edas"));
   }
 
 //   public void testToUnaccentedFast() {
