@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''Pylorus content validation and ingestion gateway
 Michael R Bax, 2008-2009
-$Id: pylorus.py,v 2.21 2012-05-07 22:48:05 thib_gc Exp $'''
+$Id: pylorus.py,v 2.22 2012-08-18 00:00:00 aishizaki Exp $'''
 
 
 import ConfigParser
@@ -27,7 +27,7 @@ fix_auth_failure.fix_auth_failure()
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.21 $'.split()[ 1 ]
+REVISION = '$Revision: 2.22 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 SERVER_READY_TIMEOUT = 600
@@ -582,11 +582,12 @@ try:
             descriptions.add( content.description )
             processed_content.append( content )
         snapshot_file.close()
-    for description in content_list:
+    for description in content_list: 
         if description not in descriptions:
             descriptions.add( description )
-            if '@' in description:
-                action, filename = description.split( '@', 1 )            
+            # ignore the '@@@NONDEF@@@', a separater for nondef parameters
+            if ('@' in description) and not('@@@NONDEF@@@' in description) :
+                action, filename = description.split( '@', 1 )  
                 content_list += ( action + included_description.strip() for included_description in open( filename ) )
             else:
                 pipeline.append( Content( description ) )
