@@ -397,6 +397,8 @@
     >
 
     comment[0] = forthcoming
+    
+    
 
   }
 
@@ -1856,6 +1858,9 @@
 
     comment[0] = forthcoming in 2012
 	param[journal_issn] = 2160-9845
+	
+	    au < exists ; exists ; 2012 ; International Journal of roductivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
+	
   }
 
   {
