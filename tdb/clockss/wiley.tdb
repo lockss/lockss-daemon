@@ -1,13 +1,15 @@
 {
 
   publisher <
-    name = Wiley
+    name = Wiley-Blackwell
   >
+  
+  attr[contract] = 2008
   
   {
   
     title <
-      name = Wiley Source Content
+      name = Wiley-Blackwell Source Content
     >
     
     plugin = org.lockss.plugin.wiley.ClockssWileySourcePlugin
