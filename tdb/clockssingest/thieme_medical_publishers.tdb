@@ -3722,11 +3722,11 @@
     title < 
       name = Skull Base Reports ;
       issn = 2157-6971 ;
-      eissn = includes 2011
+      eissn = 2157-698X
       
     >
     param[journal_id] = 10.1055/s-00000170
-    comment[years] = 2157-698X
+    comment[years] = includes 2011
     comment[1] = published as part of Journal of Neurological Surgery Reports
     
     au < exists ; exists ; Skull Base Reports 2011 ; 2011 ; 2011 >   
