@@ -85,26 +85,26 @@
     param[base_url] = http://ajplegacy.physiology.org/
     pluginSuffix = HighWirePressH20Plugin
 
-    au < manifest ; 1898 ; American Journal of Physiology Volume 1 ; 1 >
-    au < manifest ; 1898-1899 ; American Journal of Physiology Volume 2 ; 2 >
-    au < manifest ; 1899-1900 ; American Journal of Physiology Volume 3 ; 3 >
-    au < manifest ; 1900-1901 ; American Journal of Physiology Volume 4 ; 4 >
-    au < manifest ; 1901 ; American Journal of Physiology Volume 5 ; 5 >
-    au < manifest ; 1901-1902 ; American Journal of Physiology Volume 6 ; 6 >
-    au < manifest ; 1902 ; American Journal of Physiology Volume 7 ; 7 >
-    au < manifest ; 1902-1903 ; American Journal of Physiology Volume 8 ; 8 >
-    au < manifest ; 1903 ; American Journal of Physiology Volume 9 ; 9 >
-    au < manifest ; 1903-1904 ; American Journal of Physiology Volume 10 ; 10 >
-    au < manifest ; 1904 ; American Journal of Physiology Volume 11 ; 11 >
-    au < manifest ; 1904-1905 ; American Journal of Physiology Volume 12 ; 12 >
-    au < manifest ; 1905 ; American Journal of Physiology Volume 13 ; 13 >
-    au < manifest ; 1905 ; American Journal of Physiology Volume 14 ; 14 >
-    au < manifest ; 1905-1906 ; American Journal of Physiology Volume 15 ; 15 >
-    au < manifest ; 1906 ; American Journal of Physiology Volume 16 ; 16 >
-    au < manifest ; 1906-1907 ; American Journal of Physiology Volume 17 ; 17 >
-    au < manifest ; 1907 ; American Journal of Physiology Volume 18 ; 18 >
-    au < manifest ; 1907 ; American Journal of Physiology Volume 19 ; 19 >
-    au < manifest ; 1907-1908 ; American Journal of Physiology Volume 20 ; 20 >
+    au < testing ; 1898 ; American Journal of Physiology Volume 1 ; 1 >
+    au < testing ; 1898-1899 ; American Journal of Physiology Volume 2 ; 2 >
+    au < testing ; 1899-1900 ; American Journal of Physiology Volume 3 ; 3 >
+    au < testing ; 1900-1901 ; American Journal of Physiology Volume 4 ; 4 >
+    au < testing ; 1901 ; American Journal of Physiology Volume 5 ; 5 >
+    au < testing ; 1901-1902 ; American Journal of Physiology Volume 6 ; 6 >
+    au < testing ; 1902 ; American Journal of Physiology Volume 7 ; 7 >
+    au < testing ; 1902-1903 ; American Journal of Physiology Volume 8 ; 8 >
+    au < testing ; 1903 ; American Journal of Physiology Volume 9 ; 9 >
+    au < testing ; 1903-1904 ; American Journal of Physiology Volume 10 ; 10 >
+    au < testing ; 1904 ; American Journal of Physiology Volume 11 ; 11 >
+    au < testing ; 1904-1905 ; American Journal of Physiology Volume 12 ; 12 >
+    au < testing ; 1905 ; American Journal of Physiology Volume 13 ; 13 >
+    au < testing ; 1905 ; American Journal of Physiology Volume 14 ; 14 >
+    au < testing ; 1905-1906 ; American Journal of Physiology Volume 15 ; 15 >
+    au < testing ; 1906 ; American Journal of Physiology Volume 16 ; 16 >
+    au < testing ; 1906-1907 ; American Journal of Physiology Volume 17 ; 17 >
+    au < testing ; 1907 ; American Journal of Physiology Volume 18 ; 18 >
+    au < testing ; 1907 ; American Journal of Physiology Volume 19 ; 19 >
+    au < testing ; 1907-1908 ; American Journal of Physiology Volume 20 ; 20 >
     au < manifest ; 1908 ; American Journal of Physiology Volume 21 ; 21 >
     au < manifest ; 1908 ; American Journal of Physiology Volume 22 ; 22 >
     au < manifest ; 1908-1909 ; American Journal of Physiology Volume 23 ; 23 >
@@ -378,30 +378,30 @@
     au < manifest ; 1999 ; American Journal of Physiology - Cell Physiology Volume 276 ; 276 >
     au < manifest ; 1999 ; American Journal of Physiology - Cell Physiology Volume 277 ; 277 >
     au < manifest ; 2000 ; American Journal of Physiology - Cell Physiology Volume 278 ; 278 >
-    au < manifest ; 2000 ; American Journal of Physiology - Cell Physiology Volume 279 ; 279 >
-    au < manifest ; 2001 ; American Journal of Physiology - Cell Physiology Volume 280 ; 280 >
-    au < manifest ; 2001 ; American Journal of Physiology - Cell Physiology Volume 281 ; 281 >
-    au < manifest ; 2002 ; American Journal of Physiology - Cell Physiology Volume 282 ; 282 >
-    au < manifest ; 2002 ; American Journal of Physiology - Cell Physiology Volume 283 ; 283 >
-    au < manifest ; 2003 ; American Journal of Physiology - Cell Physiology Volume 284 ; 284 >
-    au < manifest ; 2003 ; American Journal of Physiology - Cell Physiology Volume 285 ; 285 >
-    au < manifest ; 2004 ; American Journal of Physiology - Cell Physiology Volume 286 ; 286 >
-    au < manifest ; 2004 ; American Journal of Physiology - Cell Physiology Volume 287 ; 287 >
-    au < manifest ; 2005 ; American Journal of Physiology - Cell Physiology Volume 288 ; 288 >
-    au < manifest ; 2005 ; American Journal of Physiology - Cell Physiology Volume 289 ; 289 >
-    au < manifest ; 2006 ; American Journal of Physiology - Cell Physiology Volume 290 ; 290 >
-    au < manifest ; 2006 ; American Journal of Physiology - Cell Physiology Volume 291 ; 291 >
-    au < manifest ; 2007 ; American Journal of Physiology - Cell Physiology Volume 292 ; 292 >
-    au < manifest ; 2007 ; American Journal of Physiology - Cell Physiology Volume 293 ; 293 >
-    au < manifest ; 2008 ; American Journal of Physiology - Cell Physiology Volume 294 ; 294 >
-    au < manifest ; 2008 ; American Journal of Physiology - Cell Physiology Volume 295 ; 295 >
-    au < manifest ; 2009 ; American Journal of Physiology - Cell Physiology Volume 296 ; 296 >
-    au < manifest ; 2009 ; American Journal of Physiology - Cell Physiology Volume 297 ; 297 >
-    au < manifest ; 2010 ; American Journal of Physiology - Cell Physiology Volume 298 ; 298 >
-    au < manifest ; 2010 ; American Journal of Physiology - Cell Physiology Volume 299 ; 299 >
+    au < testing ; 2000 ; American Journal of Physiology - Cell Physiology Volume 279 ; 279 >
+    au < testing ; 2001 ; American Journal of Physiology - Cell Physiology Volume 280 ; 280 >
+    au < testing ; 2001 ; American Journal of Physiology - Cell Physiology Volume 281 ; 281 >
+    au < testing ; 2002 ; American Journal of Physiology - Cell Physiology Volume 282 ; 282 >
+    au < testing ; 2002 ; American Journal of Physiology - Cell Physiology Volume 283 ; 283 >
+    au < testing ; 2003 ; American Journal of Physiology - Cell Physiology Volume 284 ; 284 >
+    au < testing ; 2003 ; American Journal of Physiology - Cell Physiology Volume 285 ; 285 >
+    au < testing ; 2004 ; American Journal of Physiology - Cell Physiology Volume 286 ; 286 >
+    au < testing ; 2004 ; American Journal of Physiology - Cell Physiology Volume 287 ; 287 >
+    au < testing ; 2005 ; American Journal of Physiology - Cell Physiology Volume 288 ; 288 >
+    au < testing ; 2005 ; American Journal of Physiology - Cell Physiology Volume 289 ; 289 >
+    au < testing ; 2006 ; American Journal of Physiology - Cell Physiology Volume 290 ; 290 >
+    au < testing ; 2006 ; American Journal of Physiology - Cell Physiology Volume 291 ; 291 >
+    au < testing ; 2007 ; American Journal of Physiology - Cell Physiology Volume 292 ; 292 >
+    au < testing ; 2007 ; American Journal of Physiology - Cell Physiology Volume 293 ; 293 >
+    au < testing ; 2008 ; American Journal of Physiology - Cell Physiology Volume 294 ; 294 >
+    au < testing ; 2008 ; American Journal of Physiology - Cell Physiology Volume 295 ; 295 >
+    au < testing ; 2009 ; American Journal of Physiology - Cell Physiology Volume 296 ; 296 >
+    au < testing ; 2009 ; American Journal of Physiology - Cell Physiology Volume 297 ; 297 >
+    au < testing ; 2010 ; American Journal of Physiology - Cell Physiology Volume 298 ; 298 >
+    au < testing ; 2010 ; American Journal of Physiology - Cell Physiology Volume 299 ; 299 >
     au < released ; 2011 ; American Journal of Physiology - Cell Physiology Volume 300 ; 300 >
     au < released ; 2011 ; American Journal of Physiology - Cell Physiology Volume 301 ; 301 >
-    au < manifest ; 2012 ; American Journal of Physiology - Cell Physiology Volume 302 ; 302 >
+    au < testing ; 2012 ; American Journal of Physiology - Cell Physiology Volume 302 ; 302 >
     au < manifest ; 2012 ; American Journal of Physiology - Cell Physiology Volume 303 ; 303 >
 
   }
@@ -495,13 +495,13 @@
       au < doNotProcess ; 2006 ; American Journal of Physiology - Endocrinology and Metabolism Volume 290 ; 290 >
       au < doNotProcess ; 2006 ; American Journal of Physiology - Endocrinology and Metabolism Volume 291 ; 291 >
       au < doNotProcess ; 2007 ; American Journal of Physiology - Endocrinology and Metabolism Volume 292 ; 292 >
-      au < manifest ; 2007 ; American Journal of Physiology - Endocrinology and Metabolism Volume 293 ; 293 >
-      au < manifest ; 2008 ; American Journal of Physiology - Endocrinology and Metabolism Volume 294 ; 294 >
-      au < manifest ; 2008 ; American Journal of Physiology - Endocrinology and Metabolism Volume 295 ; 295 >
-      au < manifest ; 2009 ; American Journal of Physiology - Endocrinology and Metabolism Volume 296 ; 296 >
-      au < manifest ; 2009 ; American Journal of Physiology - Endocrinology and Metabolism Volume 297 ; 297 >
-      au < manifest ; 2010 ; American Journal of Physiology - Endocrinology and Metabolism Volume 298 ; 298 >
-      au < manifest ; 2010 ; American Journal of Physiology - Endocrinology and Metabolism Volume 299 ; 299 >
+      au < testing ; 2007 ; American Journal of Physiology - Endocrinology and Metabolism Volume 293 ; 293 >
+      au < testing ; 2008 ; American Journal of Physiology - Endocrinology and Metabolism Volume 294 ; 294 >
+      au < testing ; 2008 ; American Journal of Physiology - Endocrinology and Metabolism Volume 295 ; 295 >
+      au < testing ; 2009 ; American Journal of Physiology - Endocrinology and Metabolism Volume 296 ; 296 >
+      au < testing ; 2009 ; American Journal of Physiology - Endocrinology and Metabolism Volume 297 ; 297 >
+      au < testing ; 2010 ; American Journal of Physiology - Endocrinology and Metabolism Volume 298 ; 298 >
+      au < testing ; 2010 ; American Journal of Physiology - Endocrinology and Metabolism Volume 299 ; 299 >
       au < released ; 2011 ; American Journal of Physiology - Endocrinology and Metabolism Volume 300 ; 300 >
       au < released ; 2011 ; American Journal of Physiology - Endocrinology and Metabolism Volume 301 ; 301 >
       au < manifest ; 2012 ; American Journal of Physiology - Endocrinology and Metabolism Volume 302 ; 302 >
@@ -600,13 +600,13 @@
       au < doNotProcess ; 2006 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 290 ; 290 >
       au < doNotProcess ; 2006 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 291 ; 291 >
       au < doNotProcess ; 2007 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 292 ; 292 >
-      au < manifest ; 2007 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 293 ; 293 >
-      au < manifest ; 2008 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294 ; 294 >
-      au < manifest ; 2008 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 295 ; 295 >
-      au < manifest ; 2009 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 296 ; 296 >
-      au < manifest ; 2009 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 297 ; 297 >
-      au < manifest ; 2010 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 298 ; 298 >
-      au < manifest ; 2010 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 299 ; 299 >
+      au < testing ; 2007 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 293 ; 293 >
+      au < testing ; 2008 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294 ; 294 >
+      au < testing ; 2008 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 295 ; 295 >
+      au < testing ; 2009 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 296 ; 296 >
+      au < testing ; 2009 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 297 ; 297 >
+      au < testing ; 2010 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 298 ; 298 >
+      au < testing ; 2010 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 299 ; 299 >
       au < released ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 300 ; 300 >
       au < released ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 301 ; 301 >
       au < manifest ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 302 ; 302 >
@@ -705,13 +705,13 @@
       au < doNotProcess ; 2006 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 290 ; 290 >
       au < doNotProcess ; 2006 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 291 ; 291 >
       au < doNotProcess ; 2007 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 292 ; 292 >
-      au < manifest ; 2007 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 293 ; 293 >
-      au < manifest ; 2008 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 294 ; 294 >
-      au < manifest ; 2008 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 295 ; 295 >
-      au < manifest ; 2009 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 296 ; 296 >
-      au < manifest ; 2009 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 297 ; 297 >
-      au < manifest ; 2010 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 298 ; 298 >
-      au < manifest ; 2010 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 299 ; 299 >
+      au < testing ; 2007 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 293 ; 293 >
+      au < testing ; 2008 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 294 ; 294 >
+      au < testing ; 2008 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 295 ; 295 >
+      au < testing ; 2009 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 296 ; 296 >
+      au < testing ; 2009 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 297 ; 297 >
+      au < testing ; 2010 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 298 ; 298 >
+      au < testing ; 2010 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 299 ; 299 >
       au < released ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 300 ; 300 >
       au < released ; 2011 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 301 ; 301 >
       au < manifest ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 302 ; 302 >
