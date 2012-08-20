@@ -213,7 +213,7 @@
 
       au < exists ; exists ; 1995 ; Notices of the American Mathematical Society Volume 42 ; 42 ; >
       au < exists ; exists ; 1996 ; Notices of the American Mathematical Society Volume 43 ; 43 ; >
-      au < exists ; exists ; 1997 ; Notices of the American Mathematical Society Volume 44 ; 448 ; >
+      au < exists ; exists ; 1997 ; Notices of the American Mathematical Society Volume 44 ; 44 ; >
       au < exists ; exists ; 1998 ; Notices of the American Mathematical Society Volume 45 ; 45 ; >
       au < exists ; exists ; 1999 ; Notices of the American Mathematical Society Volume 46 ; 46 ; >
       au < exists ; exists ; 2000 ; Notices of the American Mathematical Society Volume 47 ; 47 ; >
@@ -252,7 +252,35 @@
       au < exists ; exists ; 2012 ; Proceedings of the American Mathematical Society Volume 140 ; 140 ; >
 
     }
+    
+    {
+  
+    title < 
+      name = Representation Theory - An electronic journal of the AMS ;
+      issn = 1088-4165 
+      
+      >
+      param[base_url] = http://www.ams.org/journals/ert/
 
+      au < exists ; exists ; 1997 ; Notices of the American Mathematical Society Volume 1 ; 1 ; >
+      au < exists ; exists ; 1998 ; Notices of the American Mathematical Society Volume 2 ; 2 ; >
+      au < exists ; exists ; 1999 ; Notices of the American Mathematical Society Volume 3 ; 3 ; >
+      au < exists ; exists ; 2000 ; Notices of the American Mathematical Society Volume 4 ; 4 ; >
+      au < exists ; exists ; 2001 ; Notices of the American Mathematical Society Volume 5 ; 5 ; >
+      au < exists ; exists ; 2002 ; Notices of the American Mathematical Society Volume 6 ; 6 ; >
+      au < exists ; exists ; 2003 ; Notices of the American Mathematical Society Volume 7 ; 7 ; >
+      au < exists ; exists ; 2004 ; Notices of the American Mathematical Society Volume 8 ; 8 ; >
+      au < exists ; exists ; 2005 ; Notices of the American Mathematical Society Volume 9 ; 9 ; >
+      au < exists ; exists ; 2006 ; Notices of the American Mathematical Society Volume 10 ; 10; >
+      au < exists ; exists ; 2007 ; Notices of the American Mathematical Society Volume 11 ; 11; >
+      au < exists ; exists ; 2008 ; Notices of the American Mathematical Society Volume 12 ; 12; >
+      au < exists ; exists ; 2009 ; Notices of the American Mathematical Society Volume 13 ; 13; >
+      au < exists ; exists ; 2010 ; Notices of the American Mathematical Society Volume 14 ; 14; >
+      au < exists ; exists ; 2011 ; Notices of the American Mathematical Society Volume 15 ; 15; >
+      au < exists ; exists ; 2012 ; Notices of the American Mathematical Society Volume 16 ; 16; >
+      
+    }
+    
     {
   
     title < 
