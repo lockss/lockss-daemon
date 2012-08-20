@@ -3214,12 +3214,12 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://bjp.sagepub.com/
 
-        au < exists ; exists ; 2007-2008 ; British Journal of Pine Volume 1 ; 1 ; >
-        au < exists ; exists ; 2008 ; British Journal of Pine Volume 2 ; 2 ; >
-        au < exists ; exists ; 2009 ; British Journal of Pine Volume 3 ; 3 ; >
-        au < exists ; exists ; 2010 ; British Journal of Pine Volume 4 ; 4 ; >
-        au < exists ; exists ; 2011 ; British Journal of Pine Volume 5 ; 5 ; >
-        au < exists ; exists ; 2012 ; British Journal of Pine Volume 6 ; 6 ; >
+        au < exists ; exists ; 2007-2008 ; British Journal of Pain Volume 1 ; 1 ; >
+        au < exists ; exists ; 2008 ; British Journal of Pain Volume 2 ; 2 ; >
+        au < exists ; exists ; 2009 ; British Journal of Pain Volume 3 ; 3 ; >
+        au < exists ; exists ; 2010 ; British Journal of Pain Volume 4 ; 4 ; >
+        au < exists ; exists ; 2011 ; British Journal of Pain Volume 5 ; 5 ; >
+        au < exists ; exists ; 2012 ; British Journal of Pain Volume 6 ; 6 ; >
 
       }
       
@@ -22540,7 +22540,6 @@
         au < manifest ; exists ; 1962 ; Journal of the Institution of Locomotive Engineers Volume 52 ; 52 ; >
         au < manifest ; exists ; 1963 ; Journal of the Institution of Locomotive Engineers Volume 53 ; 53 ; >
         au < manifest ; exists ; 1964 ; Journal of the Institution of Locomotive Engineers Volume 54 ; 54 ; >
-        au < manifest ; exists ; 1965 ; Journal of the Institution of Locomotive Engineers Volume 55 ; 55 ; >
         au < manifest ; exists ; 1965 ; Journal of the Institution of Locomotive Engineers Volume 55 ; 55 ; >
         au < manifest ; exists ; 1966 ; Journal of the Institution of Locomotive Engineers Volume 56 ; 56 ; >
         au < manifest ; exists ; 1967 ; Journal of the Institution of Locomotive Engineers Volume 57 ; 57 ; >
