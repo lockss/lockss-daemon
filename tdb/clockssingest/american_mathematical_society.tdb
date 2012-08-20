@@ -31,7 +31,7 @@
       au < exists ; exists ; 1897 ; Bulletin of the American Mathematical Society Volume 7 ; 7 ; >
       au < exists ; exists ; 1898 ; Bulletin of the American Mathematical Society Volume 8 ; 8 ; >
       au < exists ; exists ; 1899 ; Bulletin of the American Mathematical Society Volume 9 ; 9 ; >
-      au < exists ; exists ; 1900 ; Bulletin of the American Mathematical Society Volume 10 ;10 ; >
+      au < exists ; exists ; 1900 ; Bulletin of the American Mathematical Society Volume 10 ; 10 ; >
       au < exists ; exists ; 1901 ; Bulletin of the American Mathematical Society Volume 11 ; 11 ; >
       au < exists ; exists ; 1902 ; Bulletin of the American Mathematical Society Volume 12 ; 12 ; >
       au < exists ; exists ; 1903 ; Bulletin of the American Mathematical Society Volume 13 ; 13 ; >
@@ -313,15 +313,15 @@
       >
       param[base_url] = http://www.ams.org/journals/tpms/
       
-      au < exists ; exists ; 2004 ; St. Petersburg Mathematical Journal Volume 68-69 ; 68-69 ; >
-      au < exists ; exists ; 2005 ; St. Petersburg Mathematical Journal Volume 70-71 ; 70-71 ; >
-      au < exists ; exists ; 2006 ; St. Petersburg Mathematical Journal Volume 72-73 ; 72-73 ; >
-      au < exists ; exists ; 2007 ; St. Petersburg Mathematical Journal Volume 74-75 ; 74-75 ; >
-      au < exists ; exists ; 2008 ; St. Petersburg Mathematical Journal Volume 76-77 ; 76-77 ; >
-      au < exists ; exists ; 2009 ; St. Petersburg Mathematical Journal Volume 78-79 ; 78-79 ; >
-      au < exists ; exists ; 2010 ; St. Petersburg Mathematical Journal Volume 80-81 ; 80-81 ; >
-      au < exists ; exists ; 2011 ; St. Petersburg Mathematical Journal Volume 82-83 ; 82-83 ; >
-      au < exists ; exists ; 2012 ; St. Petersburg Mathematical Journal Volume 84 ; 84 ; >
+      au < exists ; exists ; 2004 ; Theory of Probability and Mathematical Statistics Volume 68-69 ; 68-69 ; >
+      au < exists ; exists ; 2005 ; Theory of Probability and Mathematical Statistics Volume 70-71 ; 70-71 ; >
+      au < exists ; exists ; 2006 ; Theory of Probability and Mathematical Statistics Volume 72-73 ; 72-73 ; >
+      au < exists ; exists ; 2007 ; Theory of Probability and Mathematical Statistics Volume 74-75 ; 74-75 ; >
+      au < exists ; exists ; 2008 ; Theory of Probability and Mathematical Statistics Volume 76-77 ; 76-77 ; >
+      au < exists ; exists ; 2009 ; Theory of Probability and Mathematical Statistics Volume 78-79 ; 78-79 ; >
+      au < exists ; exists ; 2010 ; Theory of Probability and Mathematical Statistics Volume 80-81 ; 80-81 ; >
+      au < exists ; exists ; 2011 ; Theory of Probability and Mathematical Statistics Volume 82-83 ; 82-83 ; >
+      au < exists ; exists ; 2012 ; Theory of Probability and Mathematical Statistics Volume 84 ; 84 ; >
       
     }   
 
@@ -335,13 +335,37 @@
       >
       param[base_url] = http://www.ams.org/journals/tran/
 
-      au < exists ; exists ; 2007 ; Proceedings of the American Mathematical Society Volume 359 ; 359 ; >
-      au < exists ; exists ; 2008 ; Proceedings of the American Mathematical Society Volume 360 ; 360 ; >
-      au < exists ; exists ; 2009 ; Proceedings of the American Mathematical Society Volume 361 ; 361 ; >
-      au < exists ; exists ; 2010 ; Proceedings of the American Mathematical Society Volume 362 ; 362 ; >
-      au < exists ; exists ; 2011 ; Proceedings of the American Mathematical Society Volume 363 ; 363 ; >
-      au < exists ; exists ; 2012 ; Proceedings of the American Mathematical Society Volume 364 ; 364 ; >
+      au < exists ; exists ; 2007 ; Transactions of the American Mathematical Society Volume 359 ; 359 ; >
+      au < exists ; exists ; 2008 ; Transactions of the American Mathematical Society Volume 360 ; 360 ; >
+      au < exists ; exists ; 2009 ; Transactions of the American Mathematical Society Volume 361 ; 361 ; >
+      au < exists ; exists ; 2010 ; Transactions of the American Mathematical Society Volume 362 ; 362 ; >
+      au < exists ; exists ; 2011 ; Transactions of the American Mathematical Society Volume 363 ; 363 ; >
+      au < exists ; exists ; 2012 ; Transactions of the American Mathematical Society Volume 364 ; 364 ; >
 
     }
    
+    {
+  
+    title < 
+      name = Transactions of the American Mathematical Society ;
+      issn = 0077-1554 ;
+      eissn = 1547-738X
+  
+      >
+      param[base_url] = http://www.ams.org/journals/mosc/
+      
+      au < exists ; exists ; 2004 ; Transactions of the American Mathematical Society Volume 65 ; 65 ; >
+      au < exists ; exists ; 2005 ; Transactions of the American Mathematical Society Volume 66 ; 66 ; >
+      au < exists ; exists ; 2006 ; Transactions of the American Mathematical Society Volume 67 ; 67 ; >
+      au < exists ; exists ; 2007 ; Transactions of the American Mathematical Society Volume 68 ; 68 ; >
+      au < exists ; exists ; 2008 ; Transactions of the American Mathematical Society Volume 69 ; 697 ; >
+      au < exists ; exists ; 2009 ; Transactions of the American Mathematical Society Volume 70 ; 70 ; >
+      au < exists ; exists ; 2010 ; Transactions of the American Mathematical Society Volume 71 ; 71 ; >
+      au < exists ; exists ; 2011 ; Transactions of the American Mathematical Society Volume 72 ; 72 ; >
+      au < expected ; exists ; 2012 ; Transactions of the American Mathematical Society Volume 84 ; 84 ; >
+      
+      
+
+    }
+
 }
