@@ -5,15 +5,167 @@
   >
   
   attr[contract] = 2012
+  
+    {
 
-  {
+    pluginPrefix = needs.plugin
+  
+    
+    {
   
     title < 
-      name = Placeholder
-    >
+      name = Bulletin of the American Mathematical Society ;
+      issn = 0273-0979 ;
+      eissn = 1088-9485
+  
+      >
+      plugin = needs.plugin
+      param[base_url] = http://www.ams.org/journals/bull/
+      
 
+      au < exists ; exists ; 1891 ; Archives of Ophthalmology Volume 1 ; 1 ; >
+      au < exists ; exists ; 1892 ; Archives of Ophthalmology Volume 2 ; 2 ; >
+      au < exists ; exists ; 1893 ; Archives of Ophthalmology Volume 3 ; 3 ; >
+      au < exists ; exists ; 1894 ; Archives of Ophthalmology Volume 4 ; 4 ; >
+      au < exists ; exists ; 1895 ; Archives of Ophthalmology Volume 5 ; 5 ; >
+      au < exists ; exists ; 1896 ; Archives of Ophthalmology Volume 6 ; 6 ; >
+      au < exists ; exists ; 1897 ; Archives of Ophthalmology Volume 7 ; 7 ; >
+      au < exists ; exists ; 1898 ; Archives of Ophthalmology Volume 8 ; 8 ; >
+      au < exists ; exists ; 1899 ; Archives of Ophthalmology Volume 9 ; 9 ; >
+      au < exists ; exists ; 1900 ; Archives of Ophthalmology Volume 10 ;10 ; >
+      au < exists ; exists ; 1901 ; Archives of Ophthalmology Volume 1 ; 1 ; >
+      au < exists ; exists ; 1902 ; Archives of Ophthalmology Volume 2 ; 2 ; >
+      au < exists ; exists ; 1903 ; Archives of Ophthalmology Volume 3 ; 3 ; >
+      au < exists ; exists ; 1904 ; Archives of Ophthalmology Volume 4 ; 4 ; >
+      au < exists ; exists ; 1905 ; Archives of Ophthalmology Volume 5 ; 5 ; >
+      au < exists ; exists ; 1906 ; Archives of Ophthalmology Volume 6 ; 6 ; >
+      au < exists ; exists ; 1907 ; Archives of Ophthalmology Volume 7 ; 7 ; >
+      au < exists ; exists ; 1908 ; Archives of Ophthalmology Volume 8 ; 8 ; >
+      au < exists ; exists ; 1909 ; Archives of Ophthalmology Volume 9 ; 9 ; >
+      au < exists ; exists ; 1910 ; Archives of Ophthalmology Volume 10 ;10 ; >
+     
+    }    
+    
+    {
+  
+    title < 
+      name = Journal of the American Mathematical Society ;
+      issn = 0894-0347 ;
+      eissn = 1088-6834
+  
+      >
+     
+      param[base_url] = http://www.ams.org/journals/jams/
+      
+      
+  
+    {
+    
+   
+   
+   {
+  
+    title < 
+      name = Mathematics of Computation ;
+      issn = 0025-5718 ;
+      eissn = 1088-6842
+  
+      >
+      param[base_url] = http://www.ams.org/journals/mcom/
+      
+      
+
+
+    }
     
     
-  }
+    {
+  
+    title < 
+      name = Memoirs of the American Mathematical Society ;
+      issn = 0065-9266 ;
+      eissn = 1947-6221
+  
+      >
+      param[base_url] = http://www.ams.org/jourcgi/jrnl_toolbar_nav/memo_all
 
+      au < exists ; exists ; 2009 ; Memoirs of the American Mathematical Society Volume 216 ; 216 ; >
+      au < exists ; exists ; 2010 ; Memoirs of the American Mathematical Society Volume 217 ; 217 ; >
+      au < exists ; exists ; 2011 ; Memoirs of the American Mathematical Society Volume 218 ; 218 ; >
+      au < exists ; exists ; 2012 ; Memoirs of the American Mathematical Society Volume 219 ; 219 ; >
+
+    }
+
+    {
+  
+    title < 
+      name = Notices of the American Mathematical Society ;
+      issn = 0002-9920 ;
+      eissn = 1088-9477
+  
+      >
+      param[base_url] = http://www.ams.org/notices/
+
+
+      au < exists ; exists ; 1995 ; Notices of the American Mathematical Society Volume 42 ; 42 ; >
+      au < exists ; exists ; 1996 ; Notices of the American Mathematical Society Volume 43 ; 43 ; >
+      au < exists ; exists ; 1997 ; Notices of the American Mathematical Society Volume 44 ; 448 ; >
+      au < exists ; exists ; 1998 ; Notices of the American Mathematical Society Volume 45 ; 45 ; >
+      au < exists ; exists ; 1999 ; Notices of the American Mathematical Society Volume 46 ; 46 ; >
+      au < exists ; exists ; 2000 ; Notices of the American Mathematical Society Volume 47 ; 47 ; >
+      au < exists ; exists ; 2001 ; Notices of the American Mathematical Society Volume 48 ; 48 ; >
+      au < exists ; exists ; 2002 ; Notices of the American Mathematical Society Volume 49 ; 49 ; >
+      au < exists ; exists ; 2003 ; Notices of the American Mathematical Society Volume 50 ; 50 ; >
+      au < exists ; exists ; 2004 ; Notices of the American Mathematical Society Volume 51 ; 51 ; >
+      au < exists ; exists ; 2005 ; Notices of the American Mathematical Society Volume 52 ; 52 ; >
+      au < exists ; exists ; 2006 ; Notices of the American Mathematical Society Volume 53 ; 53 ; >
+      au < exists ; exists ; 2007 ; Notices of the American Mathematical Society Volume 54 ; 54 ; >
+      au < exists ; exists ; 2008 ; Notices of the American Mathematical Society Volume 55 ; 55 ; >
+      au < exists ; exists ; 2009 ; Notices of the American Mathematical Society Volume 56 ; 56 ; >
+      au < exists ; exists ; 2010 ; Notices of the American Mathematical Society Volume 57 ; 57 ; >
+      au < exists ; exists ; 2011 ; Notices of the American Mathematical Society Volume 58 ; 58 ; >
+      au < exists ; exists ; 2012 ; Notices of the American Mathematical Society Volume 59 ; 59 ; >
+
+
+    }
+   
+    {
+  
+    title < 
+      name = Proceedings of the American Mathematical Society ;
+      issn = 0002-9939 ;
+      eissn = 1088-6826
+  
+      >
+      param[base_url] = http://www.ams.org/journals/proc/
+      
+
+      au < exists ; exists ; 2007 ; Proceedings of the American Mathematical Society Volume 135 ; 135 ; >
+      au < exists ; exists ; 2008 ; Proceedings of the American Mathematical Society Volume 136 ; 136 ; >
+      au < exists ; exists ; 2009 ; Proceedings of the American Mathematical Society Volume 137 ; 137 ; >
+      au < exists ; exists ; 2010 ; Proceedings of the American Mathematical Society Volume 138 ; 138 ; >
+      au < exists ; exists ; 2011 ; Proceedings of the American Mathematical Society Volume 139 ; 139 ; >
+      au < exists ; exists ; 2012 ; Proceedings of the American Mathematical Society Volume 140 ; 140 ; >
+
+    }
+
+    {
+  
+    title < 
+      name = Transactions of the American Mathematical Society ;
+      issn =  0002-9947 ;
+      eissn = 1088-6850
+  
+      >
+      param[base_url] = http://www.ams.org/journals/tran/
+
+      au < exists ; exists ; 2007 ; Proceedings of the American Mathematical Society Volume 359 ; 359 ; >
+      au < exists ; exists ; 2008 ; Proceedings of the American Mathematical Society Volume 360 ; 360 ; >
+      au < exists ; exists ; 2009 ; Proceedings of the American Mathematical Society Volume 361 ; 361 ; >
+      au < exists ; exists ; 2010 ; Proceedings of the American Mathematical Society Volume 362 ; 362 ; >
+      au < exists ; exists ; 2011 ; Proceedings of the American Mathematical Society Volume 363 ; 363 ; >
+      au < exists ; exists ; 2012 ; Proceedings of the American Mathematical Society Volume 364 ; 364 ; >
+
+}
+   
 }
