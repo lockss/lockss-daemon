@@ -7,7 +7,9 @@
   {
   
     title <
-      name = Laser Institute of America Source Content
+      name = Journal of Laser Applications ;
+      issn = 1042-346X
+      
     >
     
     plugin = org.lockss.plugin.laserinstituteofamerica.ClockssLaserInstituteOfAmericaSourcePlugin
@@ -16,8 +18,9 @@
     comment[publishing_platform] = Another publisher on the AIP platform
     implicit < status ; year ; name ; param[year] >
     
-    au < expected ; 2011 ; Laser Institute of America Source Content 2011 ; 2011 >
-    au < expected ; 2012 ; Laser Institute of America Source Content 2012 ; 2012 >
+    au < expected ; 2011 ; Journal of Laser Applications Volume 23 Issue 1-4 ; 2011 >
+    au < expected ; 2012 ; Journal of Laser Applications Volume 24 Issue 1-5 ; 2012 >
+    
 
   }
 
