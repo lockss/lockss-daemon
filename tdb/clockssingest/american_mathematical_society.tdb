@@ -262,25 +262,69 @@
       >
       param[base_url] = http://www.ams.org/journals/ert/
 
-      au < exists ; exists ; 1997 ; Notices of the American Mathematical Society Volume 1 ; 1 ; >
-      au < exists ; exists ; 1998 ; Notices of the American Mathematical Society Volume 2 ; 2 ; >
-      au < exists ; exists ; 1999 ; Notices of the American Mathematical Society Volume 3 ; 3 ; >
-      au < exists ; exists ; 2000 ; Notices of the American Mathematical Society Volume 4 ; 4 ; >
-      au < exists ; exists ; 2001 ; Notices of the American Mathematical Society Volume 5 ; 5 ; >
-      au < exists ; exists ; 2002 ; Notices of the American Mathematical Society Volume 6 ; 6 ; >
-      au < exists ; exists ; 2003 ; Notices of the American Mathematical Society Volume 7 ; 7 ; >
-      au < exists ; exists ; 2004 ; Notices of the American Mathematical Society Volume 8 ; 8 ; >
-      au < exists ; exists ; 2005 ; Notices of the American Mathematical Society Volume 9 ; 9 ; >
-      au < exists ; exists ; 2006 ; Notices of the American Mathematical Society Volume 10 ; 10; >
-      au < exists ; exists ; 2007 ; Notices of the American Mathematical Society Volume 11 ; 11; >
-      au < exists ; exists ; 2008 ; Notices of the American Mathematical Society Volume 12 ; 12; >
-      au < exists ; exists ; 2009 ; Notices of the American Mathematical Society Volume 13 ; 13; >
-      au < exists ; exists ; 2010 ; Notices of the American Mathematical Society Volume 14 ; 14; >
-      au < exists ; exists ; 2011 ; Notices of the American Mathematical Society Volume 15 ; 15; >
-      au < exists ; exists ; 2012 ; Notices of the American Mathematical Society Volume 16 ; 16; >
-      
+      au < exists ; exists ; 1997 ; Representation Theory - An electronic journal of the AMS Volume 1 ; 1 ; >
+      au < exists ; exists ; 1998 ; Representation Theory - An electronic journal of the AMS Volume 2 ; 2 ; >
+      au < exists ; exists ; 1999 ; Representation Theory - An electronic journal of the AMS Volume 3 ; 3 ; >
+      au < exists ; exists ; 2000 ; Representation Theory - An electronic journal of the AMS Volume 4 ; 4 ; >
+      au < exists ; exists ; 2001 ; Representation Theory - An electronic journal of the AMS Volume 5 ; 5 ; >
+      au < exists ; exists ; 2002 ; Representation Theory - An electronic journal of the AMS Volume 6 ; 6 ; >
+      au < exists ; exists ; 2003 ; Representation Theory - An electronic journal of the AMS Volume 7 ; 7 ; >
+      au < exists ; exists ; 2004 ; Representation Theory - An electronic journal of the AMS Volume 8 ; 8 ; >
+      au < exists ; exists ; 2005 ; Representation Theory - An electronic journal of the AMS Volume 9 ; 9 ; >
+      au < exists ; exists ; 2006 ; Representation Theory - An electronic journal of the AMS Volume 10 ; 10; >
+      au < exists ; exists ; 2007 ; Representation Theory - An electronic journal of the AMS Volume 11 ; 11; >
+      au < exists ; exists ; 2008 ; Representation Theory - An electronic journal of the AMS Volume 12 ; 12; >
+      au < exists ; exists ; 2009 ; Representation Theory - An electronic journal of the AMS Volume 13 ; 13; >
+      au < exists ; exists ; 2010 ; Representation Theory - An electronic journal of the AMS Volume 14 ; 14; >
+      au < exists ; exists ; 2011 ; Representation Theory - An electronic journal of the AMS Volume 15 ; 15; >
+      au < exists ; exists ; 2012 ; Representation Theory - An electronic journal of the AMS Volume 16 ; 16; >
+                                    
     }
     
+    {
+  
+    title < 
+      name = St. Petersburg Mathematical Journal ;
+      issn = 1061-0022 ;
+      eissn = 1547-7371
+  
+      >
+      param[base_url] = http://www.ams.org/journals/spmj/
+
+      au < exists ; exists ; 2004 ; St. Petersburg Mathematical Journal Volume 15 ; 15 ; >
+      au < exists ; exists ; 2005 ; St. Petersburg Mathematical Journal Volume 16 ; 16 ; >
+      au < exists ; exists ; 2006 ; St. Petersburg Mathematical Journal Volume 17 ; 17 ; >
+      au < exists ; exists ; 2007 ; St. Petersburg Mathematical Journal Volume 18 ; 18 ; >
+      au < exists ; exists ; 2008 ; St. Petersburg Mathematical Journal Volume 19 ; 19 ; >
+      au < exists ; exists ; 2009 ; St. Petersburg Mathematical Journal Volume 20 ; 20 ; >
+      au < exists ; exists ; 2010 ; St. Petersburg Mathematical Journal Volume 21 ; 21 ; >
+      au < exists ; exists ; 2011 ; St. Petersburg Mathematical Journal Volume 22 ; 22 ; >
+      au < exists ; exists ; 2012 ; St. Petersburg Mathematical Journal Volume 23 ; 23 ; >
+
+    }
+    
+    {
+  
+    title < 
+      name = Theory of Probability and Mathematical Statistics ;
+      issn = 0094-9000 ;
+      eissn = 1547-7363
+  
+      >
+      param[base_url] = http://www.ams.org/journals/tpms/
+      
+      au < exists ; exists ; 2004 ; St. Petersburg Mathematical Journal Volume 68-69 ; 68-69 ; >
+      au < exists ; exists ; 2005 ; St. Petersburg Mathematical Journal Volume 70-71 ; 70-71 ; >
+      au < exists ; exists ; 2006 ; St. Petersburg Mathematical Journal Volume 72-73 ; 72-73 ; >
+      au < exists ; exists ; 2007 ; St. Petersburg Mathematical Journal Volume 74-75 ; 74-75 ; >
+      au < exists ; exists ; 2008 ; St. Petersburg Mathematical Journal Volume 76-77 ; 76-77 ; >
+      au < exists ; exists ; 2009 ; St. Petersburg Mathematical Journal Volume 78-79 ; 78-79 ; >
+      au < exists ; exists ; 2010 ; St. Petersburg Mathematical Journal Volume 80-81 ; 80-81 ; >
+      au < exists ; exists ; 2011 ; St. Petersburg Mathematical Journal Volume 82-83 ; 82-83 ; >
+      au < exists ; exists ; 2012 ; St. Petersburg Mathematical Journal Volume 84 ; 84 ; >
+      
+    }   
+
     {
   
     title < 
@@ -298,6 +342,6 @@
       au < exists ; exists ; 2011 ; Proceedings of the American Mathematical Society Volume 363 ; 363 ; >
       au < exists ; exists ; 2012 ; Proceedings of the American Mathematical Society Volume 364 ; 364 ; >
 
-}
+    }
    
 }
