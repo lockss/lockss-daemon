@@ -19,30 +19,29 @@
       eissn = 1088-9485
   
       >
-      plugin = needs.plugin
       param[base_url] = http://www.ams.org/journals/bull/
       
 
-      au < exists ; exists ; 1891 ; Archives of Ophthalmology Volume 1 ; 1 ; >
-      au < exists ; exists ; 1892 ; Archives of Ophthalmology Volume 2 ; 2 ; >
-      au < exists ; exists ; 1893 ; Archives of Ophthalmology Volume 3 ; 3 ; >
-      au < exists ; exists ; 1894 ; Archives of Ophthalmology Volume 4 ; 4 ; >
-      au < exists ; exists ; 1895 ; Archives of Ophthalmology Volume 5 ; 5 ; >
-      au < exists ; exists ; 1896 ; Archives of Ophthalmology Volume 6 ; 6 ; >
-      au < exists ; exists ; 1897 ; Archives of Ophthalmology Volume 7 ; 7 ; >
-      au < exists ; exists ; 1898 ; Archives of Ophthalmology Volume 8 ; 8 ; >
-      au < exists ; exists ; 1899 ; Archives of Ophthalmology Volume 9 ; 9 ; >
-      au < exists ; exists ; 1900 ; Archives of Ophthalmology Volume 10 ;10 ; >
-      au < exists ; exists ; 1901 ; Archives of Ophthalmology Volume 1 ; 1 ; >
-      au < exists ; exists ; 1902 ; Archives of Ophthalmology Volume 2 ; 2 ; >
-      au < exists ; exists ; 1903 ; Archives of Ophthalmology Volume 3 ; 3 ; >
-      au < exists ; exists ; 1904 ; Archives of Ophthalmology Volume 4 ; 4 ; >
-      au < exists ; exists ; 1905 ; Archives of Ophthalmology Volume 5 ; 5 ; >
-      au < exists ; exists ; 1906 ; Archives of Ophthalmology Volume 6 ; 6 ; >
-      au < exists ; exists ; 1907 ; Archives of Ophthalmology Volume 7 ; 7 ; >
-      au < exists ; exists ; 1908 ; Archives of Ophthalmology Volume 8 ; 8 ; >
-      au < exists ; exists ; 1909 ; Archives of Ophthalmology Volume 9 ; 9 ; >
-      au < exists ; exists ; 1910 ; Archives of Ophthalmology Volume 10 ;10 ; >
+      au < exists ; exists ; 1891 ; Bulletin of the American Mathematical Society Volume 1 ; 1 ; >
+      au < exists ; exists ; 1892 ; Bulletin of the American Mathematical Society Volume 2 ; 2 ; >
+      au < exists ; exists ; 1893 ; Bulletin of the American Mathematical Society Volume 3 ; 3 ; >
+      au < exists ; exists ; 1894 ; Bulletin of the American Mathematical Society Volume 4 ; 4 ; >
+      au < exists ; exists ; 1895 ; Bulletin of the American Mathematical Society Volume 5 ; 5 ; >
+      au < exists ; exists ; 1896 ; Bulletin of the American Mathematical Society Volume 6 ; 6 ; >
+      au < exists ; exists ; 1897 ; Bulletin of the American Mathematical Society Volume 7 ; 7 ; >
+      au < exists ; exists ; 1898 ; Bulletin of the American Mathematical Society Volume 8 ; 8 ; >
+      au < exists ; exists ; 1899 ; Bulletin of the American Mathematical Society Volume 9 ; 9 ; >
+      au < exists ; exists ; 1900 ; Bulletin of the American Mathematical Society Volume 10 ;10 ; >
+      au < exists ; exists ; 1901 ; Bulletin of the American Mathematical Society Volume 11 ; 11 ; >
+      au < exists ; exists ; 1902 ; Bulletin of the American Mathematical Society Volume 12 ; 12 ; >
+      au < exists ; exists ; 1903 ; Bulletin of the American Mathematical Society Volume 13 ; 13 ; >
+      au < exists ; exists ; 1904 ; Bulletin of the American Mathematical Society Volume 14 ; 14 ; >
+      au < exists ; exists ; 1905 ; Bulletin of the American Mathematical Society Volume 15 ; 15 ; >
+      au < exists ; exists ; 1906 ; Bulletin of the American Mathematical Society Volume 16 ; 16 ; >
+      au < exists ; exists ; 1907 ; Bulletin of the American Mathematical Society Volume 17 ; 17 ; >
+      au < exists ; exists ; 1908 ; Bulletin of the American Mathematical Society Volume 18 ; 18 ; >
+      au < exists ; exists ; 1909 ; Bulletin of the American Mathematical Society Volume 19 ; 19 ; >
+      au < exists ; exists ; 1910 ; Bulletin of the American Mathematical Society Volume 20 ; 20 ; >
      
     }    
     
@@ -73,9 +72,33 @@
       eissn = 1088-6834
   
       >
-     
       param[base_url] = http://www.ams.org/journals/jams/
       
+      au < exists ; exists ; 1988 ; Journal of the American Mathematical Society Volume 1 ; 1 ; >
+      au < exists ; exists ; 1989 ; Journal of the American Mathematical Society Volume 2 ; 2 ; >
+      au < exists ; exists ; 1990 ; Journal of the American Mathematical Society Volume 3 ; 3 ; >
+      au < exists ; exists ; 1991 ; Journal of the American Mathematical Society Volume 4 ; 4 ; >
+      au < exists ; exists ; 1992 ; Journal of the American Mathematical Society Volume 5 ; 5 ; >
+      au < exists ; exists ; 1993 ; Journal of the American Mathematical Society Volume 6 ; 6 ; >
+      au < exists ; exists ; 1994 ; Journal of the American Mathematical Society Volume 7 ; 7 ; >
+      au < exists ; exists ; 1995 ; Journal of the American Mathematical Society Volume 8 ; 8 ; >
+      au < exists ; exists ; 1996 ; Journal of the American Mathematical Society Volume 9 ; 9 ; >
+      au < exists ; exists ; 1997 ; Journal of the American Mathematical Society Volume 10 ;10 ; >
+      au < exists ; exists ; 1998 ; Journal of the American Mathematical Society Volume 11 ; 11 ; >
+      au < exists ; exists ; 1999 ; Journal of the American Mathematical Society Volume 12 ; 12 ; >
+      au < exists ; exists ; 2000 ; Journal of the American Mathematical Society Volume 13 ; 13 ; >
+      au < exists ; exists ; 2001 ; Journal of the American Mathematical Society Volume 14 ; 14 ; >
+      au < exists ; exists ; 2002 ; Journal of the American Mathematical Society Volume 15 ; 15 ; >
+      au < exists ; exists ; 2003 ; Journal of the American Mathematical Society Volume 16 ; 16 ; >
+      au < exists ; exists ; 2004 ; Journal of the American Mathematical Society Volume 17 ; 17 ; >
+      au < exists ; exists ; 2005 ; Journal of the American Mathematical Society Volume 18 ; 18 ; >
+      au < exists ; exists ; 2006 ; Journal of the American Mathematical Society Volume 19 ; 19 ; >
+      au < exists ; exists ; 2007 ; Journal of the American Mathematical Society Volume 20 ; 20 ; >
+      au < exists ; exists ; 2008 ; Journal of the American Mathematical Society Volume 21 ; 21 ; >
+      au < exists ; exists ; 2009 ; Journal of the American Mathematical Society Volume 22 ; 22 ; >
+      au < exists ; exists ; 2010 ; Journal of the American Mathematical Society Volume 23 ; 230 ; >
+      au < exists ; exists ; 2011 ; Journal of the American Mathematical Society Volume 24 ; 24 ; >
+      au < exists ; exists ; 2012 ; Journal of the American Mathematical Society Volume 25 ; 25 ; >
       
   
     {
