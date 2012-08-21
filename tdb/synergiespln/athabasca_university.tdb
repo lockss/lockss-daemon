@@ -103,11 +103,11 @@
     param[base_url] = http://jrp.icaap.org/
     param[journal_id] = jrp    
     
-    au < manifest ; 2005 ; Journal of Research Practice Volume 1 ; 2005 >
-    au < manifest ; 2006 ; Journal of Research Practice Volume 2 ; 2006 >
-    au < manifest ; 2007 ; Journal of Research Practice Volume 3 ; 2007 >
-    au < manifest ; 2008 ; Journal of Research Practice Volume 4 ; 2008 >
-    au < manifest ; 2009 ; Journal of Research Practice Volume 5 ; 2009 >    
+    au < manifest ; 2005 ; Journal of Research Practice Volume 1 ; 1 ; 2005 >
+    au < manifest ; 2006 ; Journal of Research Practice Volume 2 ; 2 ; 2006 >
+    au < manifest ; 2007 ; Journal of Research Practice Volume 3 ; 3 ; 2007 >
+    au < manifest ; 2008 ; Journal of Research Practice Volume 4 ; 4 ; 2008 >
+    au < manifest ; 2009 ; Journal of Research Practice Volume 5 ; 5 ; 2009 >    
 
   }  
   
