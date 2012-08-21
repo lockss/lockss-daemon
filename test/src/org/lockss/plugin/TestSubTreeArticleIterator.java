@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubTreeArticleIterator.java,v 1.10 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestSubTreeArticleIterator.java,v 1.11 2012-08-21 08:36:15 tlipkis Exp $
  */
 
 /*
@@ -130,6 +130,8 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 
     doTestIncludeSubTree();
     doTestExcludeSubTree();
+
+    doTestIncludeFilesChangedAfter();
   }
 
   void doTestArticleCounts() {
@@ -181,6 +183,20 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     assertEquals(0, countArticles(new Spec()
 				   .setRootTemplate("\"%sbranch1\",base_url")
 				   .setPattern("^\\.pdf")));
+  }
+
+  void doTestIncludeFilesChangedAfter() {
+    SubTreeArticleIterator.Spec specRec = new SubTreeArticleIterator.Spec()
+      .setTarget(new MetadataTarget().setIncludeFilesChangedAfter(123456))
+      .setVisitArchiveMembers(true);
+
+    MySubTreeArticleIterator iter = new MySubTreeArticleIterator(sau, specRec);
+    Collection<CachedUrlSet> roots = iter.makeRoots();
+    assertEquals(1, roots.size());
+    for (CachedUrlSet cus : roots) {
+      assertEquals(123456,
+		   ((BaseCachedUrlSet)cus).getExcludeFilesUnchangedAfter());
+    }
   }
 
   void doTestCreateArticleFiles() {

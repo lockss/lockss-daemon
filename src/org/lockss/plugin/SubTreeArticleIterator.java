@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.17 2012-03-15 08:52:03 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.18 2012-08-21 08:36:15 tlipkis Exp $
  */
 
 /*
@@ -500,14 +500,25 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     Collection<String> roots = makeRootUrls();
     log.debug2("rootUrls: " + roots);
     if (roots == null || roots.isEmpty()) {
-//       return ListUtil.list(au.getAuCachedUrlSet());
-      return ListUtil.list(au.makeCachedUrlSet(makeCuss(AuCachedUrlSetSpec.URL)));
+      return ListUtil.list(makeCachedUrlSet(makeCuss(AuCachedUrlSetSpec.URL)));
     }
     Collection<CachedUrlSet> res = new ArrayList<CachedUrlSet>();
     for (String root : roots) {
-      res.add(au.makeCachedUrlSet(makeCuss(root)));
+      res.add(makeCachedUrlSet(makeCuss(root)));
     }
     return res;
+  }
+
+  CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
+    CachedUrlSet cus = au.makeCachedUrlSet(cuss);
+    MetadataTarget target = spec.getTarget();
+    if (target != null) {
+      long date = target.getIncludeFilesChangedAfter();
+      if (date > 0) {
+	cus.setExcludeFilesUnchangedAfter(date);
+      }
+    }
+    return cus;
   }
 
   CachedUrlSetSpec makeCuss(String root) {
