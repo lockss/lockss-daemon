@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataTarget.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: MetadataTarget.java,v 1.3 2012-08-21 08:34:57 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,19 +34,35 @@ package org.lockss.extractor;
 
 
 /**
- * Describes the purpose for which metadata is being extracted and the
- * format desired.  Passed to ArticleIterator.
+ * Describes the type, purpose, format, etc. of the metadata the client
+ * would like extracted.  Passed to ArticleIterator and MetadataExtractor
+ * factories.
  */
 public class MetadataTarget {
 
-  /** Use when no knowledge of the particular type of metadata needed. */
+  /** @deprecated Use {@link #isAny()} or {@link #Any()} instead. */
   public static MetadataTarget Any = new MetadataTarget("Any");
+  /** @deprecated Use {@link #isDoi()} or {@link #Doi()} instead. */
   public static MetadataTarget DOI = new MetadataTarget("DOI");
+  /** @deprecated Use {@link #isOpenURL()} or {@link #OpenURL()} instead. */
   public static MetadataTarget OpenURL = new MetadataTarget("OpenURL");
+  /** @deprecated Use {@link #isArticle()} or {@link #Article()} instead. */
   public static MetadataTarget Article = new MetadataTarget("Article");
+
+  /** Use when no knowledge of the particular type of metadata needed. */
+  public static final String PURPOSE_ANY = "Any";
+  /** Extract DOIs. */
+  public static final String PURPOSE_DOI = "DOI";
+  /** Extract DOIs. */
+  public static final String PURPOSE_OPENURL = "OpenURL";
+  /** Extract only the list of article URLs.  (Usually alleviates need to
+   * parse content files.) */
+  public static final String PURPOSE_ARTICLE = "Article";
 
   private String format;
   private String purpose;
+  private long includeAfterDate = 0;
+
 
   public MetadataTarget() {
   }
@@ -72,4 +88,63 @@ public class MetadataTarget {
   public String getPurpose() {
     return purpose;
   }
+
+  /**
+   * Express interest in files that have changed after the specified date.
+   * Allows article iterators to skip over entire archive files, avoid the
+   * (large) expense of expanding them.  There is no guarantee that no
+   * older files will be included; currently, <i>only</i> archive files are
+   * skipped.
+   */
+  public MetadataTarget setIncludeFilesChangedAfter(long date) {
+    this.includeAfterDate = date;
+    return this;
+  }
+
+  public long getIncludeFilesChangedAfter() {
+    return includeAfterDate;
+  }
+
+  /** Return true if the purpose of the metadata extraction is unspecified. */
+  public boolean isAny() {
+    return PURPOSE_ANY.equals(purpose);
+  }
+
+  /** Return true if the purpose of the metadata extraction is to find DOIs. */
+  public boolean isDoi() {
+    return PURPOSE_DOI.equals(purpose);
+  }
+
+  /** Return true if the purpose of the metadata extraction is to find
+   * bibliographic metadata necessary to resolve OpenURLs. */
+  public boolean isOpenURL() {
+    return PURPOSE_OPENURL.equals(purpose);
+  }
+
+  /** Return true if the purpose of the metadata extraction is to find
+   * article URLs. */
+  public boolean isArticle() {
+    return PURPOSE_ARTICLE.equals(purpose);
+  }
+
+  /** Return a new MetadataTarget whose purpose is {@value #PURPOSE_ANY} */
+  public static MetadataTarget Any() {
+    return new MetadataTarget(PURPOSE_ANY);
+  }
+
+  /** Return a new MetadataTarget whose purpose is {@value #PURPOSE_DOI} */
+  public static MetadataTarget Doi() {
+    return new MetadataTarget(PURPOSE_DOI);
+  }
+
+  /** Return a new MetadataTarget whose purpose is {@value #PURPOSE_OPENURL} */
+  public static MetadataTarget OpenURL() {
+    return new MetadataTarget(PURPOSE_OPENURL);
+  }
+
+  /** Return a new MetadataTarget whose purpose is {@value #PURPOSE_ARTICLE} */
+  public static MetadataTarget Article() {
+    return new MetadataTarget(PURPOSE_ARTICLE);
+  }
+
 }
