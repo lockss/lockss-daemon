@@ -1,5 +1,5 @@
 /*
- * $Id: AccountManager.java,v 1.13 2012-07-17 02:33:26 thib_gc Exp $
+ * $Id: AccountManager.java,v 1.14 2012-08-21 08:34:11 tlipkis Exp $
  */
 
 /*
@@ -450,7 +450,7 @@ public class AccountManager
    * The property file maps usernames to password specs followed by
    * an optional comma separated list of role names.
    *
-   * @param config Filename or url of user properties file.
+   * @param propsUrl Filename or url of user properties file.
    * @exception IOException
    */
   public void loadFromProps(String propsUrl) throws IOException {
