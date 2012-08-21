@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>deprecated - replaced by org.lockss.plugin.liberquarterly.LiberQuarterlyPlugin</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>uk.org.lockss.plugin.liberquarterly.LiberQuarterlyPlugin</string>
   </entry>
